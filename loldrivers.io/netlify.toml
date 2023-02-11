@@ -1,7 +1,7 @@
 [build]
 publish = "public"
 #command = "hugo --gc --minify"
-command = "hugo --gc --minify --baseURL https://docs.neuralvibes.com/"
+command = "hugo --gc --minify --baseURL https://loldrivers.io/"
 
 [context.production.environment]
 HUGO_VERSION = "0.109.0"
