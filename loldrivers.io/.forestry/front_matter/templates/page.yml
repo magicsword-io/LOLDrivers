@@ -1,0 +1,23 @@
+---
+label: Page
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: number
+  name: weight
+  label: Page Rank
+  description: Determines the position of the page on the left sidebar <em>(optional)</em>
+- name: description
+  type: text
+  config:
+    required: false
+  label: Summary
+  description: Enter a custom summary <em>(optional)</em>
+- name: draft
+  type: boolean
+  label: Unpublish
+  description: Mark as draft
