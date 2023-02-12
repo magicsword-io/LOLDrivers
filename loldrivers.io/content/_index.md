@@ -8,12 +8,13 @@ fileLink = "content/projects.csv"
 title = "Projects"
 
 +++
-{{< block >}}
-![div](/images/chickens.jpg)
 
+{{< block "grid-2" >}}
+{{< column "mt-1 pt-1">}}
+
+# `` 
 # Living Off the Land Drivers 
-
-Living Off the Land Drivers `LOLDrivers` is a curated list of Windows drivers that malicious actors can use to bypass security and carry out attacks on target systems. These drivers are commonly used by attackers to escalate privileges, disable security controls, and execute malicious code with minimal detection. By listing these drivers and providing relevant details, Living Off the Land Drivers aims to help security professionals and system administrators stay informed and mitigate potential threats. Whether you're a security researcher, incident responder, or IT professional, this project can help you stay ahead of emerging threats and protect your systems against cyber attacks.
+Living Off the Land Drivers `LOLDrivers` is a curated list of Windows drivers used by attackers to bypass security and carry out attacks. The project helps security professionals stay informed and mitigate potential threats.
 
 {{< tip "warning" >}}
 Feel free to open a [PR](https://github.com/magicsword-io/LOLDrivers/pulls), raise an [issue](https://github.com/magicsword-io/LOLDrivers/issues/new/choose "Open a Github Issue")(s) or request new driver(s) be added. 
@@ -24,5 +25,12 @@ You can also get the malicious driver list via [CSV](), [JSON]() or [API]().
 {{< /tip >}}
 
 {{< button "docs/compose/" "List Drivers" >}}
+{{< /column >}}
 
+{{< column >}}
+<video width="640" height="480" controls autoplay loop>
+  <source src="images/chickens.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+{{< /column >}}
 {{< /block >}}
