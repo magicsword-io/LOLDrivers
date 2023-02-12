@@ -3,12 +3,12 @@
 
 uniqueHomePage = true # change to false to add sidebar to homepage
 
-blogDir = "blog" # can be posts, blog e.t.c
+#blogDir = "blog" # can be posts, blog e.t.c
 
 repo = "https://github.com/onweru/compose"
 
-time_format_blog = "Monday, January 02, 2006"
-time_format_default = "January 2, 2006"
+#time_format_blog = "Monday, January 02, 2006"
+#time_format_default = "January 2, 2006"
 enableDarkMode = true # set to false to disable darkmode by default # user will still have the option to use dark mode
 
 # sets the maximum number of lines per codeblock. The codeblock will however be scrollable and expandable.
@@ -24,17 +24,20 @@ otherSearchableFields = ["Tags", "Categories", "CustomField"] # As they appear i
 
 # Site logo
 [logo]
-  lightMode = "images/compose.svg"
-  darkMode = "images/compose-light.svg"
+  #lightMode = "images/compose.svg"
+  #darkMode = "images/compose-light.svg"
+  lightMode = "images/logo.png"
+  darkMode = "images/logo.png"
+
 
 [source]
   name = "GitHub"
   iconLight = "images/GitHubMarkLight.svg"
   iconDark = "images/GitHubMarkDark.svg"
-  url = "https://github.com/onweru/compose/"
+  url = "https://github.com/magicsword-io/LOLDrivers"
 
 # optional
 # attribution. Feel free to delete this
-[author]
-  name = "Weru"
-  url = "https://neuralvibes.com/author/"
+#[author]
+#  name = "magicsword"
+#  url = "https://magicsword.io"
