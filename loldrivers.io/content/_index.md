@@ -13,8 +13,8 @@ title = "Projects"
 {{< column "mt-1 pt-1">}}
 
 # `` 
-# Living Off the Land Drivers 
-Living Off the Land Drivers `LOLDrivers` is a curated list of Windows drivers used by attackers to bypass security and carry out attacks. The project helps security professionals stay informed and mitigate potential threats.
+# Living Off The Land Drivers 
+Living Off The Land Drivers is a curated list of Windows drivers used by adversaries to bypass security controls and carry out attacks. The project helps security professionals stay informed and mitigate potential threats.
 
 {{< tip "warning" >}}
 Feel free to open a [PR](https://github.com/magicsword-io/LOLDrivers/pulls), raise an [issue](https://github.com/magicsword-io/LOLDrivers/issues/new/choose "Open a Github Issue")(s) or request new driver(s) be added. 
