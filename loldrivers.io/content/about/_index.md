@@ -19,7 +19,7 @@ Living Off The Land Drivers is an open-source project that welcomes contribution
 #``
 # [Michael Haag](https://twitter.com/M_haggis)
 {{< picture "michael-headshot.png" "michael-headshot.png" >}}
-Michael Haag is a Senior Threat Researcher at Splunk. Michael has more than a decade of experience in security architecture and operations. His specialties include advanced threat hunting and investigations, testing, and technological evaluations and integrations. Michaels is the co-founder of the [Atomic Red Team](https://github.com/Atomics-on-A-Friday) project and co-host of [Atomics on a Friday](https://www.youtube.com/@atomicsonafriday). Currently at Splunk, Michael enjoys threat research and detection engineering. Formerly at Red Canary, he worked alongside customers to address their organization’s unique security needs with strategic vision, research, and technical expertise.
+Michael Haag is a Senior Threat Researcher at Splunk. Michael has more than a decade of experience in security architecture and operations. His specialties include advanced threat hunting and investigations, atomic testing, and technological evaluations and detection engineering. Michaels is the co-founder of the [Atomic Red Team](https://github.com/Atomics-on-A-Friday) project and co-host of [Atomics on a Friday](https://www.youtube.com/@atomicsonafriday).
 
 
 # [Jose Hernandez](https://twitter.com/_josehelps)
