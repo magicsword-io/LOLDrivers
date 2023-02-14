@@ -1,12 +1,20 @@
 +++
 title = "LOLDrivers"
-[data]
-baseChartOn = 3
-colors = ["#627c62", "#11819b", "#ef7f1a", "#4e1154"]
-columnTitles = ["Section", "Status", "Author"]
-fileLink = "content/projects.csv"
-title = "Projects"
+[dataset1]
+  fileLink = "content/projects.csv"
+  colors = ["#ef7f1a", "#627c62", "#11819b", "#4e1154"] # chart colors
+  columnTitles = ["Verified", "Status", "Author"] # optional if not table will be displayed from dataset
+  baseChartOn = 3 # number of column the chart(s) and graph should be drawn from # can be overridden directly via shortcode parameter # it's therefore optional
+  piechart = true
+  title = "Drivers by Categories"
 
+[dataset2]
+  fileLink = "../drivers.csv" 
+  colors = ["#ef7f1a", "#627c62", "#11819b", "#4e1154"] # chart colors
+  columnTitles = ["Theme", "Latest Version", "Repo Owner"] # Optional if no table will be displayed from dataset
+  baseChartOn = 2 # number of column the chart(s) and graph should be drawn from # can be overridden directly via shortcode parameter # it's therefore optional
+  title = "Drivers by Publisher"
+  bargraph = true
 +++
 
 {{< block "grid-2" >}}
@@ -24,7 +32,7 @@ Feel free to open a [PR](https://github.com/magicsword-io/LOLDrivers/pulls), rai
 You can also get the malicious driver list via [CSV](), [JSON]() or [API]().
 {{< /tip >}}
 
-{{< button "docs/compose/" "List Drivers" >}}
+{{< button "docs/compose/" "Drivers" >}}
 {{< /column >}}
 
 {{< column >}}
@@ -32,5 +40,14 @@ You can also get the malicious driver list via [CSV](), [JSON]() or [API]().
   <source src="images/chickens.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
+{{% chart "dataset1" "pie,table" %}}
+
+| animal | sound |
+|--------|-------|
+| dog    | meow  |
+| cat    | woof  |
+
+
 {{< /column >}}
 {{< /block >}}
