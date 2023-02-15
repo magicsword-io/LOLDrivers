@@ -36,10 +36,7 @@ You can also get the malicious driver list via [CSV](), [JSON]() or [API]().
 {{< /column >}}
 
 {{< column >}}
-<video width="640" height="480" controls autoplay loop>
-  <source src="images/chickens.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+{{< picture "loling.png" "loling.png" "LMAO" >}}
 
 {{% chart "dataset1" "pie,table" %}}
 
