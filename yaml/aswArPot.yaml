@@ -1,0 +1,40 @@
+Name: aswArPot.sys
+Author: Michael Haag
+Created: '2023-01-09'
+Commands:
+  Command: 'sc.exe create aswSP_ArPot2 binPath= C:\windows\temp\aswArPot.sys type=
+    kernel
+
+    sc.exe start aswSP_ArPot2 '
+  Description: "Avast\u2019s \u201CAnti Rootkit\u201D driver (also used by AVG) has\
+    \ been found to be vulnerable to two high severity attacks that could potentially\
+    \ lead to privilege escalation by running code in the kernel from a non-administrator\
+    \ user."
+  Usecase: Elevate privileges
+  Category: elevate
+  Privileges: kernel
+  MitreID: T1068
+  OperatingSystem: Windows 10
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+driver_description: 'CVE-2022-26522, CVE-2022-26523: Both of these vulnerabilities
+  were fixed in version 22.1.'
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownHashes: 4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1
+Metadata:
+  binary: ''
+  Verified: ''
+  Date: '2021-02-01 14:09:00'
+  Publisher: ''
+  Company: AVAST Software
+  Description: Avast Anti Rootkit
+  Product: 'Avast Antivirus
+
+    '
+  ProductVersion: ''
+  FileVersion: 21.1.187.0
+  MachineType: x64
+  OriginalFilename: aswArPot.sys

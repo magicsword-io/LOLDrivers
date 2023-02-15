@@ -1,20 +1,20 @@
 +++
 title = "LOLDrivers"
 [dataset1]
-  fileLink = "content/projects.csv"
+  fileLink = "../drivers.csv"
   colors = ["#ef7f1a", "#627c62", "#11819b", "#4e1154"] # chart colors
   columnTitles = ["Name", "Category", "Privileges", "MitreID"] # optional if not table will be displayed from dataset
-  baseChartOn = 3 # number of column the chart(s) and graph should be drawn from # can be overridden directly via shortcode parameter # it's therefore optional
-  piechart = true
+  baseChartOn = 4 # number of column the chart(s) and graph should be drawn from # can be overridden directly via shortcode parameter # it's therefore optional
+  charts = ["table"]
   title = "Driver List"
 
 [dataset2]
-  fileLink = "../drivers.csv" 
+  fileLink = "content/projects.csv"
   colors = ["#ef7f1a", "#627c62", "#11819b", "#4e1154"] # chart colors
-  columnTitles = ["Theme", "Latest Version", "Repo Owner"] # Optional if no table will be displayed from dataset
-  baseChartOn = 2 # number of column the chart(s) and graph should be drawn from # can be overridden directly via shortcode parameter # it's therefore optional
-  title = "Drivers by Publisher"
-  bargraph = true
+  columnTitles = ["Name", "Category", "Privileges", "MitreID"] # optional if not table will be displayed from dataset
+  baseChartOn = 4 # number of column the chart(s) and graph should be drawn from # can be overridden directly via shortcode parameter # it's therefore optional
+  piechart = true
+  title = "Driver List"
 +++
 
 {{< block "grid-3" >}}
@@ -38,7 +38,7 @@ You can also get the malicious driver list via [CSV](), [JSON]() or [API]().
 {{< /column >}}
 
 {{< column "mt-4">}}
-{{% chart "dataset1" "pie" %}}
+{{% chart "dataset2" "pie" %}}
 
 {{< /column >}}
 {{< /block >}}

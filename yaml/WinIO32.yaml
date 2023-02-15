@@ -1,0 +1,32 @@
+Name: WinIO32.sys
+Author: Michael Haag
+Created: '2023-01-09'
+Commands:
+  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
+    vulnerable Driver"
+  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Usecase: Elevate privileges
+  Category: elevate
+  Privileges: kernel
+  MitreID: T1068
+  OperatingSystem: Windows 10
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+driver_description: https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownHashes: ''
+Metadata:
+  binary: ''
+  Verified: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

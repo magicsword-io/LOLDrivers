@@ -1,0 +1,32 @@
+Name: mhyprot.sys
+Author: Michael Haag
+Created: '2023-01-09'
+Commands:
+  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
+    vulnerable Driver"
+  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Usecase: Elevate privileges
+  Category: elevate
+  Privileges: kernel
+  MitreID: T1068
+  OperatingSystem: Windows 10
+Resources:
+- 'https://github.com/jbaines-r7/dellicious, Link: https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
+driver_description: https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownHashes: ''
+Metadata:
+  binary: ''
+  Verified: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

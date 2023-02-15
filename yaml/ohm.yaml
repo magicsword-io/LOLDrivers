@@ -1,0 +1,32 @@
+Name: ohm.sys
+Author: Michael Haag
+Created: '2023-01-09'
+Commands:
+  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
+    vulnerable Driver"
+  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Usecase: Elevate privileges
+  Category: elevate
+  Privileges: kernel
+  MitreID: T1068
+  OperatingSystem: Windows 10
+Resources:
+- https://eclypsium.com/2019/11/12/mother-of-all-drivers/
+driver_description: https://eclypsium.com/2019/11/12/mother-of-all-drivers/
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownHashes: ''
+Metadata:
+  binary: ''
+  Verified: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
