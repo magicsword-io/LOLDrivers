@@ -23,13 +23,13 @@ def generate_yml_files(csv_file_path, output_folder):
             yaml_data["Name"] = row[0]
             yaml_data["Author"] = row[1]
             yaml_data["Created"] = row[2]
+            yaml_data["MitreID"] = row[9]
+            yaml_data["Category"] = row[7]
             commands_data = dict()
             commands_data["Command"] = row[4]
             commands_data["Description"] = row[5]
             commands_data["Usecase"] = row[6]
-            commands_data["Category"] = row[7]
             commands_data["Privileges"] = row[8]
-            commands_data["MitreID"] = row[9]
             commands_data["OperatingSystem"] = row[10]
             yaml_data["Commands"] = commands_data
             yaml_data["Resources"] = [row[11][6:]]
@@ -75,7 +75,6 @@ def generate(args):
 
 
 def main(args):
-    print("test")
     parser = argparse.ArgumentParser(
     description="loldriver yaml file generator")
     parser.add_argument("-i", "--input", required=False, default="drivers.csv",

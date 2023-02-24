@@ -1,14 +1,14 @@
 Name: ATSZIO.sys
 Author: Michael Haag
 Created: '2023-01-09'
+MitreID: T1068
+Category: elevate
 Commands:
   Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
     vulnerable Driver"
   Description: CapCom.sys is a vulnerable driver that has been abused over the years.
   Usecase: Elevate privileges
-  Category: elevate
   Privileges: kernel
-  MitreID: T1068
   OperatingSystem: Windows 10
 Resources:
 - https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c

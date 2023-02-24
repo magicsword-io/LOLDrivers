@@ -1,14 +1,14 @@
 Name: WinRing0.sys
 Author: Michael Haag
 Created: '2023-01-09'
+MitreID: T1068
+Category: elevate
 Commands:
   Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
     vulnerable Driver"
   Description: CapCom.sys is a vulnerable driver that has been abused over the years.
   Usecase: Elevate privileges
-  Category: elevate
   Privileges: kernel
-  MitreID: T1068
   OperatingSystem: Windows 10
 Resources:
 - https://github.com/namazso/physmem_drivers
