@@ -6,8 +6,40 @@ weight = 10
 
 # {{ driver.Name }}
 
-Created: {{driver.Created}}
-Author: {{driver.Author}}
+#### Description
 
+{{driver.Commands.Description}}
 
+- **Created**: {{driver.Created}}
+- **Author**: {{driver.Author}}
+- **Acknowledgement**: {{driver.Acknowledgement.Person}} | [{{ driver.Acknowledgement.Handle }}](https://twitter.com/{{driver.Acknowledgement.Handle}})
 
+#### Command
+
+```
+{{ driver.Commands.Command|replace("|", "\n|")|safe }}
+```
+
+#### Resources
+
+{% if driver.Resources %}
+{% for resource in driver.Resources -%}
+* [{{ resource }}]({{ resource }})
+{% endfor %}
+{% endif %}
+
+#### Binary Metadata
+
+- binary: {{ driver.Metadata.binary }}
+- Verified: {{ driver.Metadata.verified }}
+- Date: {{ driver.Metadata.date }}
+- Publisher: {{ driver.Metadata.publisher }}
+- Company: {{ driver.Metadata.company }}
+- Description: {{ driver.Metadata.description }}
+- Product: {{ driver.Metadata.product }}
+- ProductVersion: {{ driver.Metadata.productversion }}
+- FileVersion: {{ driver.Metadata.fileversion }}
+- MachineType: {{ driver.Metadata.machinetype }}
+- OriginalFilename: {{ driver.Metadata.originalfilename }}
+
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/{{driver.kind}}/{{ driver.Name | lower | replace (" ", "_") }}.yml)
