@@ -23,7 +23,7 @@ The driver in Micro-Star MSI Afterburner 4.6.2.15658 (aka RTCore64.sys and RTCor
 #### Resources
 
 
-- {&#39; https://github.com/elastic/protections-artifacts/search?q=VulnDriver&#39;}
+<li><a href="{&#39; https://github.com/elastic/protections-artifacts/search?q=VulnDriver&#39;}">{&#39; https://github.com/elastic/protections-artifacts/search?q=VulnDriver&#39;}</a></li>
 
 
 

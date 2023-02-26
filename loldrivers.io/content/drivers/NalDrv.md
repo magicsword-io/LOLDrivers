@@ -23,7 +23,7 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 #### Resources
 
 
-- {&#39; https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c&#39;}
+<li><a href="{&#39; https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c&#39;}">{&#39; https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c&#39;}</a></li>
 
 
 

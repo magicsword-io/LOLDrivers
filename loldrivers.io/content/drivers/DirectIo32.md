@@ -23,7 +23,7 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 #### Resources
 
 
-- {&#39; https://github.com/eset/vulnerability-disclosures/blob/master/CVE-2020-15480/CVE-2020-15480.md&#39;}
+<li><a href="{&#39; https://github.com/eset/vulnerability-disclosures/blob/master/CVE-2020-15480/CVE-2020-15480.md&#39;}">{&#39; https://github.com/eset/vulnerability-disclosures/blob/master/CVE-2020-15480/CVE-2020-15480.md&#39;}</a></li>
 
 
 

@@ -23,7 +23,7 @@ sc create ADV64DRV.sys binpath = c:\temp\ADV64DRV.sys.sys type=kernel start=auto
 #### Resources
 
 
-- {&#39; https://github.com/namazso/physmem_drivers&#39;}
+<li><a href="{&#39; https://github.com/namazso/physmem_drivers&#39;}">{&#39; https://github.com/namazso/physmem_drivers&#39;}</a></li>
 
 
 

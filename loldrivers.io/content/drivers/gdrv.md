@@ -23,9 +23,9 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 #### Resources
 
 
-- {&#39; https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-privilege-vulnerabilities&#39;}
+<li><a href="{&#39; https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-privilege-vulnerabilities&#39;}">{&#39; https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-privilege-vulnerabilities&#39;}</a></li>
 
-- {&#39; https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b&#39;}
+<li><a href="{&#39; https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b&#39;}">{&#39; https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b&#39;}</a></li>
 
 
 

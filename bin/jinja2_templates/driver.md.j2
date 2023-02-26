@@ -23,7 +23,7 @@ weight = 10
 #### Resources
 {% if driver.Resources %}
 {% for resource in driver.Resources %}
-- {{ resource }}
+<li><a href="{{resource}}">{{resource}}</a></li>
 {% endfor %}
 {% endif %}
 

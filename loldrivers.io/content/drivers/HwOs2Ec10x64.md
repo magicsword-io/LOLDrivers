@@ -23,7 +23,7 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 #### Resources
 
 
-- {&#39; https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md&#39;}
+<li><a href="{&#39; https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md&#39;}">{&#39; https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md&#39;}</a></li>
 
 
 
