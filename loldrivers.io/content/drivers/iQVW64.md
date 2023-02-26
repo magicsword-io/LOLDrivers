@@ -35,12 +35,12 @@ weight = 10
 - Verified: 
 - Date: 
 - Publisher: 
-- Company: 
-- Description: 
-- Product: 
+- Company: Intel
+- Description: Intel(R) Network Adapter Diagnostic Driver
+- Product: Intel(R) iQVW64.SYS
 - ProductVersion: 
 - FileVersion: 
 - MachineType: 
-- OriginalFilename: 
+- OriginalFilename: iQVW64.SYS
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iqvw64.sys.yml)

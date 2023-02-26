@@ -34,14 +34,17 @@ gdrv.sys is vulnerable to multiple CVEs: CVE-2018-19320, CVE-2018-19322, CVE-201
 ff6729518a380bf57f1bc6f1ec0aa7f3012e1618b8d9b0f31a61d299ee2b4339) 
 - binary: 
 - Verified: 
-- Date: 
+- Date: 2013-07-03 17:32:00 UTC
+2017-11-30 18:40:00 UTC
 - Publisher: 
 - Company: 
-- Description: 
-- Product: 
+- Description: GIGABYTE Tools
+GIGA-BYTE NonPNP Driver
+- Product: Windows (R) Server 2003 DDK driver
+gdrv64
 - ProductVersion: 
 - FileVersion: 
 - MachineType: 
-- OriginalFilename: 
+- OriginalFilename: gdrv.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gdrv.sys.yml)

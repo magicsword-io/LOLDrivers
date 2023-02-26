@@ -34,14 +34,15 @@ sc.exe start aswSP_ArPot2
 - Known Hashes: [View on VirusTotal](https://www.virustotal.com/gui/file/4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1) 
 - binary: 
 - Verified: 
-- Date: 
+- Date: 2021-02-01 14:09:00
 - Publisher: 
-- Company: 
-- Description: 
-- Product: 
+- Company: AVAST Software
+- Description: Avast Anti Rootkit
+- Product: Avast Antivirus
+
 - ProductVersion: 
 - FileVersion: 
 - MachineType: 
-- OriginalFilename: 
+- OriginalFilename: aswArPot.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/aswarpot.sys.yml)

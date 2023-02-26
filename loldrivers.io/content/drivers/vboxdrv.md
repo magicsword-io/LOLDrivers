@@ -36,8 +36,8 @@ Used by unknown actor in Acid Rain malware.
 - Date: 
 - Publisher: 
 - Company: 
-- Description: 
-- Product: 
+- Description: VirtualBox Support Driver
+- Product: Sun VirtualBox
 - ProductVersion: 
 - FileVersion: 
 - MachineType: 

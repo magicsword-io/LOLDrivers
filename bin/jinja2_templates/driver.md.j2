@@ -32,16 +32,16 @@ weight = 10
 
 
 - Known Hashes: [View on VirusTotal](https://www.virustotal.com/gui/file/{{ driver.KnownHashes }}) 
-- binary: {{ driver.Metadata.binary }}
-- Verified: {{ driver.Metadata.verified }}
-- Date: {{ driver.Metadata.date }}
-- Publisher: {{ driver.Metadata.publisher }}
-- Company: {{ driver.Metadata.company }}
-- Description: {{ driver.Metadata.description }}
-- Product: {{ driver.Metadata.product }}
-- ProductVersion: {{ driver.Metadata.productversion }}
-- FileVersion: {{ driver.Metadata.fileversion }}
-- MachineType: {{ driver.Metadata.machinetype }}
-- OriginalFilename: {{ driver.Metadata.originalfilename }}
+- binary: {{ driver.Metadata.Binary }}
+- Verified: {{ driver.Metadata.Verified }}
+- Date: {{ driver.Metadata.Date }}
+- Publisher: {{ driver.Metadata.Publisher }}
+- Company: {{ driver.Metadata.Company }}
+- Description: {{ driver.Metadata.Description }}
+- Product: {{ driver.Metadata.Product }}
+- ProductVersion: {{ driver.Metadata.Productversion }}
+- FileVersion: {{ driver.Metadata.Fileversion }}
+- MachineType: {{ driver.Metadata.Machinetype }}
+- OriginalFilename: {{ driver.Metadata.OriginalFilename }}
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml{{driver.kind}}/{{ driver.Name | lower | replace (" ", "_") }}.yml)
