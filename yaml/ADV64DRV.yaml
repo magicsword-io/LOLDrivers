@@ -2,7 +2,7 @@ Name: ADV64DRV.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: elevate
+Category: Vulnerable
 Commands:
   Command: sc create ADV64DRV.sys binpath = c:\temp\ADV64DRV.sys.sys type=kernel start=auto
     displayname="ADV64DRV.sys vulnerable Driver"

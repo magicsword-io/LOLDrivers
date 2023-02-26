@@ -2,7 +2,7 @@ Name: aswArPot.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: elevate
+Category: Vulnerable
 Commands:
   Command: 'sc.exe create aswSP_ArPot2 binPath= C:\windows\temp\aswArPot.sys type=
     kernel
@@ -21,7 +21,7 @@ driver_description: 'CVE-2022-26522, CVE-2022-26523: Both of these vulnerabiliti
   were fixed in version 22.1.'
 Acknowledgement:
   Person: ''
-  Handle: ''
+  Handle: '@mattnotmax'
 Detection: []
 KnownHashes: 4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1
 Metadata:

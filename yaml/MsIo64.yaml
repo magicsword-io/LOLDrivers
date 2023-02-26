@@ -2,11 +2,11 @@ Name: MsIo64.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: elevate
+Category: Vulnerable
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: ''
+  Description: The MSI AmbientLink MsIo64 driver 1.0.0.8 has a Buffer Overflow (0x80102040,
+    0x80102044, 0x80102050,and 0x80102054)
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,7 +17,7 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: ''
+KnownHashes: to be found
 Metadata:
   binary: ''
   Verified: ''

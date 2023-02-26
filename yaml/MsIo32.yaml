@@ -2,11 +2,13 @@ Name: MsIo32.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: elevate
+Category: Vulnerable
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: ''
+  Description: The MsIo64.sys and MsIo32.sys drivers in Patriot Viper RGB before 1.1
+    allow local users (including low integrity processes) to read and write to arbitrary
+    memory locations, and consequently gain NT AUTHORITY\SYSTEM privileges, by mapping
+    \Device\PhysicalMemory into the calling process via ZwOpenSection and ZwMapViewOfSection.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,7 +19,7 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: ''
+KnownHashes: 525d9b51a80ca0cd4c5889a96f857e73f3a80da1ffbae59851e0f51bdfb0b6cd
 Metadata:
   binary: ''
   Verified: ''

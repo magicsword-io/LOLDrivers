@@ -2,31 +2,30 @@ Name: vboxdrv.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: elevate
+Category: Vulnerable
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: ''
+  Description: 'Used by unknown actor in Acid Rain malware. '
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
-- 'https://github.com/jbaines-r7/dellicious, Link: https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
-driver_description: https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+- ''
+driver_description: https://unit42.paloaltonetworks.com/acidbox-rare-malware/
 Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: ''
+KnownHashes: 78827fa00ea48d96ac9af8d1c1e317d02ce11793e7f7f6e4c7aac7b5d7dd490f
 Metadata:
   binary: ''
   Verified: ''
   Date: ''
   Publisher: ''
   Company: ''
-  Description: ''
-  Product: ''
+  Description: VirtualBox Support Driver
+  Product: Sun VirtualBox
   ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
+  FileVersion: 2.2.0.r45846
+  MachineType: x64
   OriginalFilename: ''

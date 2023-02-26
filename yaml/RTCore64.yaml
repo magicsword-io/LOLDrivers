@@ -2,11 +2,15 @@ Name: RTCore64.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: elevate
+Category: Vulnerable
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: ''
+  Description: The driver in Micro-Star MSI Afterburner 4.6.2.15658 (aka RTCore64.sys
+    and RTCore32.sys) allows any authenticated user to read and write to arbitrary
+    memory, I/O ports, and MSRs. This can be exploited for privilege escalation, code
+    execution under high privileges, and information disclosure. These signed drivers
+    can also be used to bypass the Microsoft driver-signing policy to deploy malicious
+    code.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,16 +21,20 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: ''
+KnownHashes: '01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd
+
+  CDD2A4575A46BADA4837A6153A79C14D60EE3129830717EF09E0E3EFD9D00812'
 Metadata:
   binary: ''
-  Verified: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
+  Verified: N/A
+  Date: N/A
+  Publisher: N/A
+  Company: N/A
+  Description: N/A
+  Product: N/A
+  ProductVersion: N/A
+  FileVersion: N/A
+  MachineType: 'x64
+
+    x32'
   OriginalFilename: ''

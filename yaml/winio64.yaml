@@ -2,7 +2,7 @@ Name: winio64.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: elevate
+Category: Vulnerable
 Commands:
   Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
     vulnerable Driver"
