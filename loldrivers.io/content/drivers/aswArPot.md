@@ -30,6 +30,8 @@ sc.exe start aswSP_ArPot2
 
 #### Binary Metadata
 
+
+- Known Hashes: [View on VirusTotal](https://www.virustotal.com/gui/file/4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1) 
 - binary: 
 - Verified: 
 - Date: 

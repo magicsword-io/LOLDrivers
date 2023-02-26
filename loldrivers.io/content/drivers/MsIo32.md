@@ -29,6 +29,8 @@ The MsIo64.sys and MsIo32.sys drivers in Patriot Viper RGB before 1.1 allow loca
 
 #### Binary Metadata
 
+
+- Known Hashes: [View on VirusTotal](https://www.virustotal.com/gui/file/525d9b51a80ca0cd4c5889a96f857e73f3a80da1ffbae59851e0f51bdfb0b6cd) 
 - binary: 
 - Verified: 
 - Date: 
