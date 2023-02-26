@@ -23,14 +23,15 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 #### Resources
 
 
-* [https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules](https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules)
+- {&#39; https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules&#39;}
+
+
 
 
 
 #### Binary Metadata
 
-
-- Known Hashes: [View on VirusTotal](https://www.virustotal.com/gui/file/) 
+- Known Hashes: [](https://www.virustotal.com/gui/file/) 
 - binary: 
 - Verified: 
 - Date: 

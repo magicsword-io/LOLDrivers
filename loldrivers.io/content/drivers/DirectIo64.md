@@ -23,14 +23,15 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 #### Resources
 
 
-* [https://github.com/eset/vulnerability-disclosures/blob/master/CVE-2020-15480/CVE-2020-15480.md](https://github.com/eset/vulnerability-disclosures/blob/master/CVE-2020-15480/CVE-2020-15480.md)
+- {&#39; https://github.com/eset/vulnerability-disclosures/blob/master/CVE-2020-15480/CVE-2020-15480.md&#39;}
+
+
 
 
 
 #### Binary Metadata
 
-
-- Known Hashes: [View on VirusTotal](https://www.virustotal.com/gui/file/) 
+- Known Hashes: [](https://www.virustotal.com/gui/file/) 
 - binary: 
 - Verified: 
 - Date: 

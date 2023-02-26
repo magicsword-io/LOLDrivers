@@ -11,7 +11,10 @@ Commands:
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
-- 'https://github.com/jbaines-r7/dellicious, Link: https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
+- !!set
+  ' https://github.com/jbaines-r7/dellicious': null
+- !!set
+  ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/': null
 driver_description: https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
 Acknowledgement:
   Person: ''

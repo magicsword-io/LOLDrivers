@@ -11,7 +11,8 @@ Commands:
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
-- https://raw.githubusercontent.com/SigmaHQ/sigma/master/rules/windows/driver_load/driver_load_vuln_drivers_names.yml
+- !!set
+  ' https://raw.githubusercontent.com/SigmaHQ/sigma/master/rules/windows/driver_load/driver_load_vuln_drivers_names.yml': null
 driver_description: https://raw.githubusercontent.com/SigmaHQ/sigma/master/rules/windows/driver_load/driver_load_vuln_drivers_names.yml
 Acknowledgement:
   Person: ''

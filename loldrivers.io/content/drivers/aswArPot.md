@@ -12,7 +12,7 @@ Avast’s “Anti Rootkit” driver (also used by AVG) has been found to be vuln
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
-- **Acknowledgement**:  | [@mattnotmax](https://twitter.com/@mattnotmax)
+- **Acknowledgement**: MattNotMax | [@mattnotmax](https://twitter.com/@mattnotmax)
 
 #### Command
 
@@ -24,14 +24,15 @@ sc.exe start aswSP_ArPot2
 #### Resources
 
 
-* [https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules](https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules)
+- {&#39; https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules&#39;}
+
+
 
 
 
 #### Binary Metadata
 
-
-- Known Hashes: [View on VirusTotal](https://www.virustotal.com/gui/file/4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1) 
+- Known Hashes: [4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1](https://www.virustotal.com/gui/file/4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1) 
 - binary: 
 - Verified: 
 - Date: 2021-02-01 14:09:00

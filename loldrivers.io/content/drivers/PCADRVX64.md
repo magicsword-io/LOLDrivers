@@ -23,14 +23,15 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 #### Resources
 
 
-* [https://raw.githubusercontent.com/SigmaHQ/sigma/master/rules/windows/driver_load/driver_load_vuln_drivers_names.yml](https://raw.githubusercontent.com/SigmaHQ/sigma/master/rules/windows/driver_load/driver_load_vuln_drivers_names.yml)
+- {&#39; https://raw.githubusercontent.com/SigmaHQ/sigma/master/rules/windows/driver_load/driver_load_vuln_drivers_names.yml&#39;}
+
+
 
 
 
 #### Binary Metadata
 
-
-- Known Hashes: [View on VirusTotal](https://www.virustotal.com/gui/file/) 
+- Known Hashes: [](https://www.virustotal.com/gui/file/) 
 - binary: 
 - Verified: 
 - Date: 

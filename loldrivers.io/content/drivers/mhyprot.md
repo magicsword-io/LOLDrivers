@@ -23,14 +23,17 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 #### Resources
 
 
-* [https://github.com/jbaines-r7/dellicious, Link: https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/](https://github.com/jbaines-r7/dellicious, Link: https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/)
+- {&#39; https://github.com/jbaines-r7/dellicious&#39;}
+
+- {&#39; https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/&#39;}
+
+
 
 
 
 #### Binary Metadata
 
-
-- Known Hashes: [View on VirusTotal](https://www.virustotal.com/gui/file/) 
+- Known Hashes: [](https://www.virustotal.com/gui/file/) 
 - binary: 
 - Verified: 
 - Date: 

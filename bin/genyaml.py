@@ -32,7 +32,13 @@ def generate_yml_files(csv_file_path, output_folder):
             commands_data["Privileges"] = row[8]
             commands_data["OperatingSystem"] = row[10]
             yaml_data["Commands"] = commands_data
-            yaml_data["Resources"] = [row[11][6:]]
+            resources_data = list()
+            for Resource in row[11].split(", "):
+                if Resource.startswith("Link:"):
+                    resources_data.append({
+                        Resource[5:]
+                        })
+            yaml_data["Resources"] = resources_data
             yaml_data["driver_description"] = row[12]
             acknowledgement_data = dict()
             acknowledgement_data["Person"] = row[14]

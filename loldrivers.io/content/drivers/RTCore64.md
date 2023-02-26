@@ -23,14 +23,16 @@ The driver in Micro-Star MSI Afterburner 4.6.2.15658 (aka RTCore64.sys and RTCor
 #### Resources
 
 
-* [https://github.com/elastic/protections-artifacts/search?q=VulnDriver](https://github.com/elastic/protections-artifacts/search?q=VulnDriver)
+- {&#39; https://github.com/elastic/protections-artifacts/search?q=VulnDriver&#39;}
+
+
 
 
 
 #### Binary Metadata
 
-
-- Known Hashes: [View on VirusTotal](https://www.virustotal.com/gui/file/01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd
+- Known Hashes: [01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd
+CDD2A4575A46BADA4837A6153A79C14D60EE3129830717EF09E0E3EFD9D00812](https://www.virustotal.com/gui/file/01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd
 CDD2A4575A46BADA4837A6153A79C14D60EE3129830717EF09E0E3EFD9D00812) 
 - binary: 
 - Verified: N/A

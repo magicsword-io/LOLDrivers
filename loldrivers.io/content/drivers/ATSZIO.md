@@ -23,14 +23,15 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 #### Resources
 
 
-* [https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c](https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c)
+- {&#39; https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c&#39;}
+
+
 
 
 
 #### Binary Metadata
 
-
-- Known Hashes: [View on VirusTotal](https://www.virustotal.com/gui/file/) 
+- Known Hashes: [](https://www.virustotal.com/gui/file/) 
 - binary: 
 - Verified: 
 - Date: 

@@ -21,17 +21,17 @@ weight = 10
 ```
 
 #### Resources
-
 {% if driver.Resources %}
-{% for resource in driver.Resources -%}
-* [{{ resource }}]({{ resource }})
+{% for resource in driver.Resources %}
+- {{ resource }}
 {% endfor %}
 {% endif %}
 
+
+
 #### Binary Metadata
 
-
-- Known Hashes: [View on VirusTotal](https://www.virustotal.com/gui/file/{{ driver.KnownHashes }}) 
+- Known Hashes: [{{ driver.KnownHashes }}](https://www.virustotal.com/gui/file/{{ driver.KnownHashes }}) 
 - binary: {{ driver.Metadata.Binary }}
 - Verified: {{ driver.Metadata.Verified }}
 - Date: {{ driver.Metadata.Date }}

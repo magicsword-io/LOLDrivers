@@ -23,14 +23,11 @@ weight = 10
 #### Resources
 
 
-* []()
-
 
 
 #### Binary Metadata
 
-
-- Known Hashes: [View on VirusTotal](https://www.virustotal.com/gui/file/4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b) 
+- Known Hashes: [4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b](https://www.virustotal.com/gui/file/4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b) 
 - binary: 
 - Verified: 
 - Date: 

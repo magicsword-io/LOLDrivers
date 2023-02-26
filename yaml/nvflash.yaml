@@ -11,7 +11,8 @@ Commands:
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+- !!set
+  ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md': null
 driver_description: https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Acknowledgement:
   Person: ''

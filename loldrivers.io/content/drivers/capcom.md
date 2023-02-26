@@ -23,14 +23,15 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 #### Resources
 
 
-* [https://github.com/elastic/protections-artifacts/search?q=VulnDriver](https://github.com/elastic/protections-artifacts/search?q=VulnDriver)
+- {&#39; https://github.com/elastic/protections-artifacts/search?q=VulnDriver&#39;}
+
+
 
 
 
 #### Binary Metadata
 
-
-- Known Hashes: [View on VirusTotal](https://www.virustotal.com/gui/file/) 
+- Known Hashes: [](https://www.virustotal.com/gui/file/) 
 - binary: 
 - Verified: 
 - Date: 

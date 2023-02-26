@@ -23,14 +23,15 @@ sc create ADV64DRV.sys binpath = c:\temp\ADV64DRV.sys.sys type=kernel start=auto
 #### Resources
 
 
-* [https://github.com/namazso/physmem_drivers](https://github.com/namazso/physmem_drivers)
+- {&#39; https://github.com/namazso/physmem_drivers&#39;}
+
+
 
 
 
 #### Binary Metadata
 
-
-- Known Hashes: [View on VirusTotal](https://www.virustotal.com/gui/file/04A85E359525D662338CAE86C1E59B1D7AA9BD12B920E8067503723DC1E03162) 
+- Known Hashes: [04A85E359525D662338CAE86C1E59B1D7AA9BD12B920E8067503723DC1E03162](https://www.virustotal.com/gui/file/04A85E359525D662338CAE86C1E59B1D7AA9BD12B920E8067503723DC1E03162) 
 - binary: 
 - Verified: TRUE
 - Date: 44896

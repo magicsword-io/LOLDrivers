@@ -11,7 +11,8 @@ Commands:
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+- !!set
+  ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver': null
 driver_description: https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Acknowledgement:
   Person: ''

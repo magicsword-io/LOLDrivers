@@ -23,14 +23,15 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 #### Resources
 
 
-* [https://eclypsium.com/2019/11/12/mother-of-all-drivers/](https://eclypsium.com/2019/11/12/mother-of-all-drivers/)
+- {&#39; https://eclypsium.com/2019/11/12/mother-of-all-drivers/&#39;}
+
+
 
 
 
 #### Binary Metadata
 
-
-- Known Hashes: [View on VirusTotal](https://www.virustotal.com/gui/file/) 
+- Known Hashes: [](https://www.virustotal.com/gui/file/) 
 - binary: 
 - Verified: 
 - Date: 

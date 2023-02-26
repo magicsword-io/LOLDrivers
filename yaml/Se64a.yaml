@@ -11,7 +11,8 @@ Commands:
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
-- https://github.com/namazso/physmem_drivers
+- !!set
+  ' https://github.com/namazso/physmem_drivers': null
 driver_description: https://github.com/namazso/physmem_drivers
 Acknowledgement:
   Person: ''

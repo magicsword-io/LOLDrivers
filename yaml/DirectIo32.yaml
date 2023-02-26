@@ -11,7 +11,8 @@ Commands:
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
-- https://github.com/eset/vulnerability-disclosures/blob/master/CVE-2020-15480/CVE-2020-15480.md
+- !!set
+  ' https://github.com/eset/vulnerability-disclosures/blob/master/CVE-2020-15480/CVE-2020-15480.md': null
 driver_description: https://github.com/eset/vulnerability-disclosures/blob/master/CVE-2020-15480/CVE-2020-15480.md
 Acknowledgement:
   Person: ''
