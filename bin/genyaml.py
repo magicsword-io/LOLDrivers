@@ -84,9 +84,9 @@ def main(args):
     parser = argparse.ArgumentParser(
     description="loldriver yaml file generator")
     parser.add_argument("-i", "--input", required=False, default="drivers.csv",
-                        help="input csv file containing drivers.csv data")
+            help="input csv file containing drivers.csv data, defaults to: drivers.csv")
     parser.add_argument("-o", "--output", required=False, default=".",
-                        help="output folder")
+                        help="output folder, defaults to '.'")
 
     parser.set_defaults(func=generate)
 
