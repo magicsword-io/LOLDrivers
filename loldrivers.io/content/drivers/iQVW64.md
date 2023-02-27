@@ -21,13 +21,20 @@ weight = 10
 ```
 
 #### Resources
+<br>
 
-
+<br>
 
 
 #### Binary Metadata
+<br>
 
-- Known Hashes: [4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b](https://www.virustotal.com/gui/file/4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b) 
+
+
+<li><a href="https://www.virustotal.com/gui/file/4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b">4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
@@ -39,5 +46,5 @@ weight = 10
 - FileVersion: 
 - MachineType: 
 - OriginalFilename: iQVW64.SYS
-
+<br>
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iqvw64.sys.yml)

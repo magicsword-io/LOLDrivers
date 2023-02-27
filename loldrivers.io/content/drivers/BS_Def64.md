@@ -21,17 +21,20 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 ```
 
 #### Resources
+<br>
 
 
 <li><a href=" https://github.com/namazso/physmem_drivers"> https://github.com/namazso/physmem_drivers</a></li>
 
 
-
+<br>
 
 
 #### Binary Metadata
+<br>
 
-- Known Hashes: [](https://www.virustotal.com/gui/file/) 
+
+
 - binary: 
 - Verified: 
 - Date: 
@@ -43,5 +46,5 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 - FileVersion: 
 - MachineType: 
 - OriginalFilename: 
-
+<br>
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_def64.sys.yml)

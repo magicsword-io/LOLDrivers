@@ -21,17 +21,20 @@ The MSI AmbientLink MsIo64 driver 1.0.0.8 has a Buffer Overflow (0x80102040, 0x8
 ```
 
 #### Resources
+<br>
 
 
 <li><a href=" https://github.com/namazso/physmem_drivers"> https://github.com/namazso/physmem_drivers</a></li>
 
 
-
+<br>
 
 
 #### Binary Metadata
+<br>
 
-- Known Hashes: [to be found](https://www.virustotal.com/gui/file/to be found) 
+
+
 - binary: 
 - Verified: 
 - Date: 
@@ -43,5 +46,5 @@ The MSI AmbientLink MsIo64 driver 1.0.0.8 has a Buffer Overflow (0x80102040, 0x8
 - FileVersion: 
 - MachineType: 
 - OriginalFilename: 
-
+<br>
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/msio64.sys.yml)

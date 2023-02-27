@@ -55,7 +55,11 @@ def generate_yml_files(csv_file_path, output_folder):
                         "value": detection[11:]
                     })    
             yaml_data["Detection"] = detection_data
-            yaml_data["KnownHashes"] = row[17]
+            KnownHashes_data = list()
+            for KnownHashes in row[17].split(", "):
+                if KnownHashes.startswith("hash:"):
+                    KnownHashes_data.append(KnownHashes[5:])
+            yaml_data["KnownHashes"] = KnownHashes_data
             metadata = dict()
             metadata["binary"] = row[19]
             metadata["Verified"] = row[20]

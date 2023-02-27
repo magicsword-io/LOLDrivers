@@ -21,17 +21,24 @@ The MsIo64.sys and MsIo32.sys drivers in Patriot Viper RGB before 1.1 allow loca
 ```
 
 #### Resources
+<br>
 
 
 <li><a href=" https://github.com/elastic/protections-artifacts/search?q=VulnDriver"> https://github.com/elastic/protections-artifacts/search?q=VulnDriver</a></li>
 
 
-
+<br>
 
 
 #### Binary Metadata
+<br>
 
-- Known Hashes: [525d9b51a80ca0cd4c5889a96f857e73f3a80da1ffbae59851e0f51bdfb0b6cd](https://www.virustotal.com/gui/file/525d9b51a80ca0cd4c5889a96f857e73f3a80da1ffbae59851e0f51bdfb0b6cd) 
+
+
+<li><a href="https://www.virustotal.com/gui/file/525d9b51a80ca0cd4c5889a96f857e73f3a80da1ffbae59851e0f51bdfb0b6cd">525d9b51a80ca0cd4c5889a96f857e73f3a80da1ffbae59851e0f51bdfb0b6cd</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
@@ -43,5 +50,5 @@ The MsIo64.sys and MsIo32.sys drivers in Patriot Viper RGB before 1.1 allow loca
 - FileVersion: 
 - MachineType: 
 - OriginalFilename: 
-
+<br>
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/msio32.sys.yml)

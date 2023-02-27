@@ -21,7 +21,8 @@ Detection:
   value: https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-block-rules
 - type: IOC
   value: Utilize Windows Event Code 7045 to monitor for new kernel driver installation.
-KnownHashes: 04A85E359525D662338CAE86C1E59B1D7AA9BD12B920E8067503723DC1E03162
+KnownHashes:
+- 04A85E359525D662338CAE86C1E59B1D7AA9BD12B920E8067503723DC1E03162
 Metadata:
   binary: ''
   Verified: 'TRUE'

@@ -21,17 +21,20 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 ```
 
 #### Resources
+<br>
 
 
 <li><a href=" https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules"> https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules</a></li>
 
 
-
+<br>
 
 
 #### Binary Metadata
+<br>
 
-- Known Hashes: [](https://www.virustotal.com/gui/file/) 
+
+
 - binary: 
 - Verified: 
 - Date: 
@@ -43,5 +46,5 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 - FileVersion: 
 - MachineType: 
 - OriginalFilename: 
-
+<br>
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fiddrv64.sys.yml)
