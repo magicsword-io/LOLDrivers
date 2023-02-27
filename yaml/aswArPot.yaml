@@ -16,9 +16,7 @@ Commands:
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
-- !!set
-  ? ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-  : null
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
 driver_description: 'CVE-2022-26522, CVE-2022-26523: Both of these vulnerabilities
   were fixed in version 22.1.'
 Acknowledgement:

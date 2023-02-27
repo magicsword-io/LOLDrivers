@@ -35,9 +35,7 @@ def generate_yml_files(csv_file_path, output_folder):
             resources_data = list()
             for Resource in row[11].split(", "):
                 if Resource.startswith("Link:"):
-                    resources_data.append({
-                        Resource[5:]
-                        })
+                    resources_data.append(Resource[5:])
             yaml_data["Resources"] = resources_data
             yaml_data["driver_description"] = row[12]
             acknowledgement_data = dict()

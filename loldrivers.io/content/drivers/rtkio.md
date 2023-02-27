@@ -23,7 +23,7 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 #### Resources
 
 
-<li><a href="{&#39; https://github.com/elastic/protections-artifacts/search?q=VulnDriver&#39;}">{&#39; https://github.com/elastic/protections-artifacts/search?q=VulnDriver&#39;}</a></li>
+<li><a href=" https://github.com/elastic/protections-artifacts/search?q=VulnDriver"> https://github.com/elastic/protections-artifacts/search?q=VulnDriver</a></li>
 
 
 

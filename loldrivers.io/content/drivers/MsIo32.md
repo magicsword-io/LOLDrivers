@@ -23,7 +23,7 @@ The MsIo64.sys and MsIo32.sys drivers in Patriot Viper RGB before 1.1 allow loca
 #### Resources
 
 
-<li><a href="{&#39; https://github.com/elastic/protections-artifacts/search?q=VulnDriver&#39;}">{&#39; https://github.com/elastic/protections-artifacts/search?q=VulnDriver&#39;}</a></li>
+<li><a href=" https://github.com/elastic/protections-artifacts/search?q=VulnDriver"> https://github.com/elastic/protections-artifacts/search?q=VulnDriver</a></li>
 
 
 

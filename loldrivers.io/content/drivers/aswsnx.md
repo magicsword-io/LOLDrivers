@@ -23,9 +23,9 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 #### Resources
 
 
-<li><a href="{&#39; https://github.com/jbaines-r7/dellicious&#39;}">{&#39; https://github.com/jbaines-r7/dellicious&#39;}</a></li>
+<li><a href=" https://github.com/jbaines-r7/dellicious"> https://github.com/jbaines-r7/dellicious</a></li>
 
-<li><a href="{&#39; https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/&#39;}">{&#39; https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/&#39;}</a></li>
+<li><a href=" https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/"> https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/</a></li>
 
 
 
