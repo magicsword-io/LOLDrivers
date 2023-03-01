@@ -1,8 +1,15 @@
 +++
+
 description = "https://github.com/eset/vulnerability-disclosures/blob/master/CVE-2020-15480/CVE-2020-15480.md"
 title = "DirectIo64.sys"
 weight = 10
+
 +++
+
+
+{{< block "grid-1" >}}
+{{< column "mt-2 pt-1">}}
+
 
 # DirectIo64.sys
 
@@ -45,3 +52,9 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 - OriginalFilename: 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/directio64.sys.yml)
+
+*last_updated:* 2023-02-28
+
+
+{{< /column >}}
+{{< /block >}}

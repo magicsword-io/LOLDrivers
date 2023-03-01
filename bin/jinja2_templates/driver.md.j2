@@ -1,8 +1,15 @@
 +++
+
 description = "{{ driver.driver_description }}"
 title = "{{ driver.Name }}"
 weight = 10
+
 +++
+
+{% raw %}
+{{< block "grid-1" >}}
+{{< column "mt-2 pt-1">}}
+{% endraw %}
 
 # {{ driver.Name }}
 
@@ -45,3 +52,10 @@ weight = 10
 - OriginalFilename: {{ driver.Metadata.OriginalFilename }}
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml{{driver.kind}}/{{ driver.Name | lower | replace (" ", "_") }}.yml)
+
+*last_updated:* {{ time }}
+
+{% raw %}
+{{< /column >}}
+{{< /block >}}
+{% endraw %}

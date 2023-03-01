@@ -1,8 +1,15 @@
 +++
+
 description = "https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/"
 title = "sandra.sys"
 weight = 10
+
 +++
+
+
+{{< block "grid-1" >}}
+{{< column "mt-2 pt-1">}}
+
 
 # sandra.sys
 
@@ -47,3 +54,9 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 - OriginalFilename: 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/sandra.sys.yml)
+
+*last_updated:* 2023-02-28
+
+
+{{< /column >}}
+{{< /block >}}

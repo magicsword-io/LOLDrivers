@@ -1,8 +1,15 @@
 +++
+
 description = "https://github.com/elastic/protections-artifacts/search?q=VulnDriver"
 title = "MsIo32.sys"
 weight = 10
+
 +++
+
+
+{{< block "grid-1" >}}
+{{< column "mt-2 pt-1">}}
+
 
 # MsIo32.sys
 
@@ -45,3 +52,9 @@ The MsIo64.sys and MsIo32.sys drivers in Patriot Viper RGB before 1.1 allow loca
 - OriginalFilename: 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/msio32.sys.yml)
+
+*last_updated:* 2023-02-28
+
+
+{{< /column >}}
+{{< /block >}}

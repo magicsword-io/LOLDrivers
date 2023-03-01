@@ -1,8 +1,15 @@
 +++
+
 description = "https://raw.githubusercontent.com/SigmaHQ/sigma/master/rules/windows/driver_load/driver_load_vuln_drivers_names.yml"
 title = "clfs.sys"
 weight = 10
+
 +++
+
+
+{{< block "grid-1" >}}
+{{< column "mt-2 pt-1">}}
+
 
 # clfs.sys
 
@@ -45,3 +52,9 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 - OriginalFilename: 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/clfs.sys.yml)
+
+*last_updated:* 2023-02-28
+
+
+{{< /column >}}
+{{< /block >}}

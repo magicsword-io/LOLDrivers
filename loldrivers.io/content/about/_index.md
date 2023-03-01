@@ -12,7 +12,7 @@ Living Off The Land Drivers is a community-driven project that provides a curate
 
 Living Off The Land Drivers is an open-source project that welcomes contributions from the security community. By sharing knowledge and expertise, we can help each other stay informed and better defend against emerging threats. Whether you're a researcher, incident responder, or system administrator, we hope that Living Off The Land Drivers will be a valuable resource in your fight against cyber attacks.
 
-{{< button "docs/compose/" "List Drivers" >}}
+{{< button "/" "Drivers" >}}
 {{< /column >}}
 
 {{< column "mt-1 pt-1">}}
@@ -24,6 +24,6 @@ Michael Haag is a Senior Threat Researcher at Splunk. Michael has more than a de
 
 # [Jose Hernandez](https://twitter.com/_josehelps)
 {{< picture "jose-headshot.png" "jose-headshot.png" >}}
-Jose Enrique is a Distinguished Threat Researcher at Laceworks, previously he lead the Splunk Threat Research Team. He started his professional career at Prolexic Technologies (now Akamai), fighting DDoS attacks from “anonymous” and “lulzsec” against Fortune 100 companies. As an engineering co-founder of Zenedge Inc. (acquired by Oracle Inc.), José helped build technologies to fight bots and web-application attacks. Although security information has been the focus of his career, José has found that his true passion is in solving problems and creating solutions.
+Currently, Jose Enrique Hernandez is a Distinguished Cloud Threat Researcher at Laceworks. Previously he founded and lead the  Threat Research team at Splunk (STRT). Jose is known for creating several security-related projects, including: [Splunk Attack Range](https://github.com/splunk/attack_range), [Splunk Security Content](https://github.com/splunk/security_content), [Git-Wild-Hunt](https://github.com/josehelps/git-wild-hunt), [Melting-Cobalt](https://github.com/splunk/melting-cobalt), and [BlackCert](https://github.com/josehelps/blackcert) projects. He also works as  a maintainer to security industry critical repositories such as [Atomic Red Team](atomicredteam.io/) and [lolbas-project.github.io](lolbas-project.github.io/).
 {{< /column >}}
 {{< /block >}}

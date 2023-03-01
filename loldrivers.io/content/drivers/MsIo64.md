@@ -1,8 +1,15 @@
 +++
+
 description = "https://github.com/namazso/physmem_drivers"
 title = "MsIo64.sys"
 weight = 10
+
 +++
+
+
+{{< block "grid-1" >}}
+{{< column "mt-2 pt-1">}}
+
 
 # MsIo64.sys
 
@@ -45,3 +52,9 @@ The MSI AmbientLink MsIo64 driver 1.0.0.8 has a Buffer Overflow (0x80102040, 0x8
 - OriginalFilename: 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/msio64.sys.yml)
+
+*last_updated:* 2023-02-28
+
+
+{{< /column >}}
+{{< /block >}}

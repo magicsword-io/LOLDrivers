@@ -1,8 +1,15 @@
 +++
+
 description = "https://github.com/elastic/protections-artifacts/search?q=VulnDriver"
 title = "RTCore64.sys"
 weight = 10
+
 +++
+
+
+{{< block "grid-1" >}}
+{{< column "mt-2 pt-1">}}
+
 
 # RTCore64.sys
 
@@ -47,3 +54,9 @@ CDD2A4575A46BADA4837A6153A79C14D60EE3129830717EF09E0E3EFD9D00812)
 - OriginalFilename: 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rtcore64.sys.yml)
+
+*last_updated:* 2023-02-28
+
+
+{{< /column >}}
+{{< /block >}}

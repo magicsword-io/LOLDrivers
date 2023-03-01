@@ -1,8 +1,15 @@
 +++
+
 description = "https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules"
 title = "AsrSetupDrv103.sys"
 weight = 10
+
 +++
+
+
+{{< block "grid-1" >}}
+{{< column "mt-2 pt-1">}}
+
 
 # AsrSetupDrv103.sys
 
@@ -45,3 +52,9 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 - OriginalFilename: 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrsetupdrv103.sys.yml)
+
+*last_updated:* 2023-02-28
+
+
+{{< /column >}}
+{{< /block >}}

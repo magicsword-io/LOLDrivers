@@ -1,8 +1,15 @@
 +++
+
 description = "CVE-2022-26522, CVE-2022-26523: Both of these vulnerabilities were fixed in version 22.1."
 title = "aswArPot.sys"
 weight = 10
+
 +++
+
+
+{{< block "grid-1" >}}
+{{< column "mt-2 pt-1">}}
+
 
 # aswArPot.sys
 
@@ -47,3 +54,9 @@ sc.exe start aswSP_ArPot2
 - OriginalFilename: aswArPot.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/aswarpot.sys.yml)
+
+*last_updated:* 2023-02-28
+
+
+{{< /column >}}
+{{< /block >}}

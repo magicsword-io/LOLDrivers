@@ -1,8 +1,15 @@
 +++
+
 description = "https://github.com/elastic/protections-artifacts/search?q=VulnDriver"
 title = "pcdsrvc_x64.pkms"
 weight = 10
+
 +++
+
+
+{{< block "grid-1" >}}
+{{< column "mt-2 pt-1">}}
+
 
 # pcdsrvc_x64.pkms
 
@@ -45,3 +52,9 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 - OriginalFilename: 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/pcdsrvc_x64.pkms.yml)
+
+*last_updated:* 2023-02-28
+
+
+{{< /column >}}
+{{< /block >}}

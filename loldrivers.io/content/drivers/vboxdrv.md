@@ -1,8 +1,15 @@
 +++
+
 description = "https://unit42.paloaltonetworks.com/acidbox-rare-malware/"
 title = "vboxdrv.sys"
 weight = 10
+
 +++
+
+
+{{< block "grid-1" >}}
+{{< column "mt-2 pt-1">}}
+
 
 # vboxdrv.sys
 
@@ -41,3 +48,9 @@ Used by unknown actor in Acid Rain malware.
 - OriginalFilename: 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/vboxdrv.sys.yml)
+
+*last_updated:* 2023-02-28
+
+
+{{< /column >}}
+{{< /block >}}
