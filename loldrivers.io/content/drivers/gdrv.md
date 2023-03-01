@@ -28,6 +28,7 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 ```
 
 #### Resources
+<br>
 
 
 <li><a href=" https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-privilege-vulnerabilities"> https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-privilege-vulnerabilities</a></li>
@@ -35,12 +36,20 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 <li><a href=" https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b"> https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b</a></li>
 
 
-
+<br>
 
 
 #### Binary Metadata
+<br>
 
-- Known Hashes: [31f4cfb4c71da44120752721103a16512444c13c2ac2d857a7e6f13cb679b427, ff6729518a380bf57f1bc6f1ec0aa7f3012e1618b8d9b0f31a61d299ee2b4339](https://www.virustotal.com/gui/file/31f4cfb4c71da44120752721103a16512444c13c2ac2d857a7e6f13cb679b427, ff6729518a380bf57f1bc6f1ec0aa7f3012e1618b8d9b0f31a61d299ee2b4339) 
+
+
+<li><a href="https://www.virustotal.com/gui/file/31f4cfb4c71da44120752721103a16512444c13c2ac2d857a7e6f13cb679b427">31f4cfb4c71da44120752721103a16512444c13c2ac2d857a7e6f13cb679b427</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/ff6729518a380bf57f1bc6f1ec0aa7f3012e1618b8d9b0f31a61d299ee2b4339">ff6729518a380bf57f1bc6f1ec0aa7f3012e1618b8d9b0f31a61d299ee2b4339</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 2013-07-03, 17:32:00 UTC, 2017-11-30 18:40:00 UTC

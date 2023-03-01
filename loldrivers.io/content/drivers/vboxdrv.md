@@ -28,13 +28,20 @@ Used by unknown actor in Acid Rain malware.
 ```
 
 #### Resources
+<br>
 
-
+<br>
 
 
 #### Binary Metadata
+<br>
 
-- Known Hashes: [78827fa00ea48d96ac9af8d1c1e317d02ce11793e7f7f6e4c7aac7b5d7dd490f](https://www.virustotal.com/gui/file/78827fa00ea48d96ac9af8d1c1e317d02ce11793e7f7f6e4c7aac7b5d7dd490f) 
+
+
+<li><a href="https://www.virustotal.com/gui/file/78827fa00ea48d96ac9af8d1c1e317d02ce11793e7f7f6e4c7aac7b5d7dd490f">78827fa00ea48d96ac9af8d1c1e317d02ce11793e7f7f6e4c7aac7b5d7dd490f</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 

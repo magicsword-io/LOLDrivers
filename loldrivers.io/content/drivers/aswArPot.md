@@ -29,17 +29,24 @@ sc.exe start aswSP_ArPot2
 ```
 
 #### Resources
+<br>
 
 
 <li><a href=" https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules"> https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules</a></li>
 
 
-
+<br>
 
 
 #### Binary Metadata
+<br>
 
-- Known Hashes: [4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1](https://www.virustotal.com/gui/file/4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1) 
+
+
+<li><a href="https://www.virustotal.com/gui/file/4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1">4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 2021-02-01 14:09:00
