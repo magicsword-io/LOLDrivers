@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+superbmc.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create superbmc.sys binPath= C:\windows\temp\superbmc.sys type= kernel
+sc.exe start superbmc.sys
 ```
 
 #### Resources
@@ -39,6 +40,10 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 #### Binary Metadata
 <br>
+
+
+
+<li><a href="https://www.virustotal.com/gui/file/f8430bdc6fd01f42217d66d87a3ef6f66cb2700ebb39c4f25c8b851858cc4b35">f8430bdc6fd01f42217d66d87a3ef6f66cb2700ebb39c4f25c8b851858cc4b35</a></li>
 
 
 

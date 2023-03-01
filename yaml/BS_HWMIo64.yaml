@@ -2,11 +2,13 @@ Name: BS_HWMIo64.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create BS_HWMIo64 binPath= C:\windows\temp\BS_HWMIo64.sys type=
+    kernel
+
+    sc.exe start BS_HWMIo64.sys'
+  Description: BS_HWMIo64.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,7 +19,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 60c6f4f34c7319cb3f9ca682e59d92711a05a2688badbae4891b1303cd384813
 Metadata:
   binary: ''
   Verified: ''

@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+AsIO64.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create AsIO64 binPath= C:\windows\temp\AsIO64.sys type= kernel
+sc.exe start AsIO64.sys
 ```
 
 #### Resources
@@ -42,10 +43,14 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/B48A309EE0960DA3CAAAAF1E794E8C409993AEB3A2B64809F36B97AAC8A1E62A">B48A309EE0960DA3CAAAAF1E794E8C409993AEB3A2B64809F36B97AAC8A1E62A</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
-- Publisher: 
+- Publisher: ASUSTeK Computer Inc.
 - Company: 
 - Description: 
 - Product: 

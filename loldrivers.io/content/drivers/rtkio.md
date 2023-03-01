@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+BSMEMx64.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create rtkio binPath= C:\windows\temp\rtkio.sys type= kernel
+sc.exe start rtkio.sys
 ```
 
 #### Resources
@@ -39,6 +40,10 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 #### Binary Metadata
 <br>
+
+
+
+<li><a href="https://www.virustotal.com/gui/file/478917514be37b32d5ccf76e4009f6f952f39f5553953544f1b0688befd95e82">478917514be37b32d5ccf76e4009f6f952f39f5553953544f1b0688befd95e82</a></li>
 
 
 

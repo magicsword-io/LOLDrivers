@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-Used by unknown actor in Acid Rain malware. 
+Used by unknown actor in Acid Rain malware. vboxdrv.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,11 +24,18 @@ Used by unknown actor in Acid Rain malware.
 #### Command
 
 ```
-
+sc.exe create vboxdrv binPath= C:\windows\temp\vboxdrv.sys type= kernel
+sc.exe start vboxdrv.sys
 ```
 
 #### Resources
 <br>
+
+
+<li><a href="https://unit42.paloaltonetworks.com/acidbox-rare-malware/">https://unit42.paloaltonetworks.com/acidbox-rare-malware/</a></li>
+
+<li><a href="https://www.coresecurity.com/core-labs/advisories/virtualbox-privilege-escalation-vulnerability">https://www.coresecurity.com/core-labs/advisories/virtualbox-privilege-escalation-vulnerability</a></li>
+
 
 <br>
 
@@ -39,6 +46,8 @@ Used by unknown actor in Acid Rain malware.
 
 
 <li><a href="https://www.virustotal.com/gui/file/78827fa00ea48d96ac9af8d1c1e317d02ce11793e7f7f6e4c7aac7b5d7dd490f">78827fa00ea48d96ac9af8d1c1e317d02ce11793e7f7f6e4c7aac7b5d7dd490f</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/cf3a7d4285d65bf8688215407bce1b51d7c6b22497f09021f0fce31cbeb78986">cf3a7d4285d65bf8688215407bce1b51d7c6b22497f09021f0fce31cbeb78986</a></li>
 
 
 

@@ -2,11 +2,13 @@ Name: OpenLibSys.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create OpenLibSys binPath= C:\windows\temp\OpenLibSys.sys type=
+    kernel
+
+    sc.exe start OpenLibSys.sys'
+  Description: OpenLibSys.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,7 +19,9 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 91314768DA140999E682D2A290D48B78BB25A35525EA12C1B1F9634D14602B2C
+- F0605DDA1DEF240DC7E14EFA73927D6C6D89988C01EA8647B671667B2B167008
 Metadata:
   binary: ''
   Verified: ''

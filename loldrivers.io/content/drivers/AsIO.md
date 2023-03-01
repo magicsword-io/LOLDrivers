@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+AsIO.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create AsIO binPath= C:\windows\temp\AsIO.sys type= kernel
+sc.exe start AsIO.sys
 ```
 
 #### Resources
@@ -42,10 +43,18 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/2DA330A2088409EFC351118445A824F11EDBE51CF3D653B298053785097FE40E">2DA330A2088409EFC351118445A824F11EDBE51CF3D653B298053785097FE40E</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/436CCAB6F62FA2D29827916E054ADE7ACAE485B3DE1D3E5C6C62D3DEBF1480E7,hash:B4D47EA790920A4531E3DF5A4B4B0721B7FEA6B49A35679F0652F1E590422602">436CCAB6F62FA2D29827916E054ADE7ACAE485B3DE1D3E5C6C62D3DEBF1480E7,hash:B4D47EA790920A4531E3DF5A4B4B0721B7FEA6B49A35679F0652F1E590422602</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/DDE6F28B3F7F2ABBEE59D4864435108791631E9CB4CDFB1F178E5AA9859956D8">DDE6F28B3F7F2ABBEE59D4864435108791631E9CB4CDFB1F178E5AA9859956D8</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
-- Publisher: 
+- Publisher: ASUSTeK Computer Inc.
 - Company: 
 - Description: 
 - Product: 

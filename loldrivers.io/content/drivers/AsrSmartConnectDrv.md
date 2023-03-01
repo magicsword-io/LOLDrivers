@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+AsrSmartConnectDrv.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create AsrSmartConnectDrv binPath= C:\windows\temp\AsrSmartConnectDrv.sys type= kernel
+sc.exe start AsrSmartConnectDrv.sys
 ```
 
 #### Resources
@@ -42,12 +43,16 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/47F08F7D30D824A8F4BB8A98916401A37C0FD8502DB308ABA91FE3112B892DCC">47F08F7D30D824A8F4BB8A98916401A37C0FD8502DB308ABA91FE3112B892DCC</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
-- Publisher: 
+- Publisher: ASROCK Incorporation
 - Company: 
-- Description: 
+- Description: RW-Everything Read &amp; Write Driver
 - Product: 
 - ProductVersion: 
 - FileVersion: 

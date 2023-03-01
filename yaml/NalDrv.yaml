@@ -2,11 +2,12 @@ Name: NalDrv.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create NalDrv binPath= C:\windows\temp\NalDrv.sys type= kernel
+
+    sc.exe start NalDrv.sys'
+  Description: CapCom.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,7 +18,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b
 Metadata:
   binary: ''
   Verified: ''

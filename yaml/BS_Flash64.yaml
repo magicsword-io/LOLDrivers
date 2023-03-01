@@ -2,11 +2,13 @@ Name: BS_Flash64.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create BS_Flash64 binPath= C:\windows\temp\BS_Flash64.sys type=
+    kernel
+
+    sc.exe start BS_Flash64.sys'
+  Description: BS_Flash64.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,7 +19,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 86a8e0aa29a5b52c84921188cc1f0eca9a7904dcfe09544602933d8377720219
 Metadata:
   binary: ''
   Verified: ''

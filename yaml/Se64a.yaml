@@ -2,11 +2,12 @@ Name: Se64a.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create Se64a binPath= C:\windows\temp\Se64a.sys type= kernel
+
+    sc.exe start Se64a.sys'
+  Description: Se64a.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,7 +18,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 6CB51AE871FBD5D07C5AAD6FF8EEA43D34063089528603CA9CEB8B4F52F68DDC
 Metadata:
   binary: ''
   Verified: ''

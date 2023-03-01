@@ -2,11 +2,13 @@ Name: smep_capcom.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create smep_capcom binPath= C:\windows\temp\smep_capcom.sys type=
+    kernel
+
+    sc.exe start smep_capcom.sys'
+  Description: smep_capcom.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,7 +19,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- DB2A9247177E8CDD50FE9433D066B86FFD2A84301AA6B2EB60F361CFFF077004
 Metadata:
   binary: ''
   Verified: ''

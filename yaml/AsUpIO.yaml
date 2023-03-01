@@ -2,11 +2,12 @@ Name: AsUpIO.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create AsUpIO binPath= C:\windows\temp\AsUpIO.sys type= kernel
+
+    sc.exe start AsUpIO.sys'
+  Description: AsUpIO.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,12 +18,13 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- B9A4E40A5D80FEDD1037EAED958F9F9EFED41EB01ADA73D51B5DCD86E27E0CBF
 Metadata:
   binary: ''
   Verified: ''
   Date: ''
-  Publisher: ''
+  Publisher: ASUSTeK Computer Inc.
   Company: ''
   Description: ''
   Product: ''

@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+HOSTNT.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create HOSTNT binPath= C:\windows\temp\HOSTNT.sys type= kernel
+sc.exe start HOSTNT.sys
 ```
 
 #### Resources
@@ -42,12 +43,16 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/07B6D69BAFCFD767F1B63A490A8843C3BB1F8E1BBEA56176109B5743C8F7D357">07B6D69BAFCFD767F1B63A490A8843C3BB1F8E1BBEA56176109B5743C8F7D357</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
-- Publisher: 
+- Publisher: &#34;SafeNet, Inc.&#34;
 - Company: 
-- Description: 
+- Description: Hostnt 64-bit driver
 - Product: 
 - ProductVersion: 
 - FileVersion: 

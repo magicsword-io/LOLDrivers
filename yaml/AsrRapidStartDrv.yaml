@@ -2,11 +2,13 @@ Name: AsrRapidStartDrv.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create AsrRapidStartDrv binPath= C:\windows\temp\AsrRapidStartDrv.sys
+    type= kernel
+
+    sc.exe start AsrRapidStartDrv.sys'
+  Description: AsrRapidStartDrv.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,14 +19,15 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 0AAFA9F47ACF69D46C9542985994FF5321F00842A28DF2396D4A3076776A83CB
 Metadata:
   binary: ''
   Verified: ''
   Date: ''
-  Publisher: ''
+  Publisher: ASROCK Incorporation
   Company: ''
-  Description: ''
+  Description: RW-Everything Read & Write Driver
   Product: ''
   ProductVersion: ''
   FileVersion: ''

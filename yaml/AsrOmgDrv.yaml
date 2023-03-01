@@ -2,11 +2,12 @@ Name: AsrOmgDrv.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create AsrOmgDrv binPath= C:\windows\temp\AsrOmgDrv.sys type= kernel
+
+    sc.exe start AsrOmgDrv.sys'
+  Description: AsrOmgDrv.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,14 +18,15 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 950A4C0C772021CEE26011A92194F0E58D61588F77F2873AA0599DFF52A160C9
 Metadata:
   binary: ''
   Verified: ''
   Date: ''
-  Publisher: ''
+  Publisher: ASROCK Incorporation
   Company: ''
-  Description: ''
+  Description: ASRock IO Driver
   Product: ''
   ProductVersion: ''
   FileVersion: ''

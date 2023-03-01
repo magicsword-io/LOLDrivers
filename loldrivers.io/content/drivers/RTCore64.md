@@ -24,7 +24,8 @@ The driver in Micro-Star MSI Afterburner 4.6.2.15658 (aka RTCore64.sys and RTCor
 #### Command
 
 ```
-
+sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys
 ```
 
 #### Resources
@@ -32,6 +33,8 @@ The driver in Micro-Star MSI Afterburner 4.6.2.15658 (aka RTCore64.sys and RTCor
 
 
 <li><a href=" https://github.com/elastic/protections-artifacts/search?q=VulnDriver"> https://github.com/elastic/protections-artifacts/search?q=VulnDriver</a></li>
+
+<li><a href="https://news.sophos.com/en-us/2022/10/04/blackbyte-ransomware-returns/">https://news.sophos.com/en-us/2022/10/04/blackbyte-ransomware-returns/</a></li>
 
 
 <br>

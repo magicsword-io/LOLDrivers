@@ -2,11 +2,13 @@ Name: WinFlash64.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create WinFlash64 binPath= C:\windows\temp\WinFlash64.sys type=
+    kernel
+
+    sc.exe start WinFlash64.sys'
+  Description: WinFlash64.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,7 +19,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 677c0b1add3990fad51f492553d3533115c50a242a919437ccb145943011d2bf
 Metadata:
   binary: ''
   Verified: ''

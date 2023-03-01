@@ -1,0 +1,35 @@
+Name: daxin_blank1.sys
+Author: Michael Haag
+Created: '2023-02-28'
+MitreID: T1068
+Category: malicious
+Commands:
+  Command: 'sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+
+    sc.exe start AsrDrv103.sys'
+  Description: Driver used in the Daxin malware campaign.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+driver_description: ''
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownHashes:
+- 5bc3994612624da168750455b363f2964e1861dba4f1c305df01b970ac02a7ae
+Metadata:
+  binary: ''
+  Verified: A certificate was explicitly revoked by its issuer.
+  Date: 4:05 AM 2/6/2021
+  Publisher: Fuqing Yuntan Network Tech Co.,Ltd.
+  Company: n/a
+  Description: n/a
+  Product: n/a
+  ProductVersion: n/a
+  FileVersion: n/a
+  MachineType: 64-bit
+  OriginalFilename: ''

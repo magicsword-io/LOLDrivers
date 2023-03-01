@@ -2,11 +2,12 @@ Name: AsIO.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create AsIO binPath= C:\windows\temp\AsIO.sys type= kernel
+
+    sc.exe start AsIO.sys'
+  Description: AsIO.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,12 +18,15 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 2DA330A2088409EFC351118445A824F11EDBE51CF3D653B298053785097FE40E
+- 436CCAB6F62FA2D29827916E054ADE7ACAE485B3DE1D3E5C6C62D3DEBF1480E7,hash:B4D47EA790920A4531E3DF5A4B4B0721B7FEA6B49A35679F0652F1E590422602
+- DDE6F28B3F7F2ABBEE59D4864435108791631E9CB4CDFB1F178E5AA9859956D8
 Metadata:
   binary: ''
   Verified: ''
   Date: ''
-  Publisher: ''
+  Publisher: ASUSTeK Computer Inc.
   Company: ''
   Description: ''
   Product: ''

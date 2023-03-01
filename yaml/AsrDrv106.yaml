@@ -2,10 +2,11 @@ Name: AsrDrv106.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
+  Command: 'sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+
+    sc.exe start AsrDrv103.sys'
   Description: CapCom.sys is a vulnerable driver that has been abused over the years.
   Usecase: Elevate privileges
   Privileges: kernel
@@ -17,7 +18,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 3943a796cc7c5352aa57ccf544295bfd6fb69aae147bc8235a00202dc6ed6838
 Metadata:
   binary: ''
   Verified: ''

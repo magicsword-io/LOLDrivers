@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+elrawdsk.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create elrawdsk binPath= C:\windows\temp\elrawdsk.sys type= kernel
+sc.exe start elrawdsk.sys
 ```
 
 #### Resources
@@ -35,12 +36,22 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 <li><a href=" https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/"> https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/</a></li>
 
+<li><a href="https://securelist.com/shamoon-the-wiper-further-details-part-ii/57784/">https://securelist.com/shamoon-the-wiper-further-details-part-ii/57784/</a></li>
+
+<li><a href="https://github.com/Yara-Rules/rules/blob/master/malware/MALW_Shamoon.yar">https://github.com/Yara-Rules/rules/blob/master/malware/MALW_Shamoon.yar</a></li>
+
 
 <br>
 
 
 #### Binary Metadata
 <br>
+
+
+
+<li><a href="https://www.virustotal.com/gui/file/4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6">4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a">5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a</a></li>
 
 
 

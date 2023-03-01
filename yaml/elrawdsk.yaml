@@ -2,23 +2,28 @@ Name: elrawdsk.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create elrawdsk binPath= C:\windows\temp\elrawdsk.sys type= kernel
+
+    sc.exe start elrawdsk.sys'
+  Description: elrawdsk.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/jbaines-r7/dellicious'
 - ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
+- https://securelist.com/shamoon-the-wiper-further-details-part-ii/57784/
+- https://github.com/Yara-Rules/rules/blob/master/malware/MALW_Shamoon.yar
 driver_description: https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
 Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6
+- 5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a
 Metadata:
   binary: ''
   Verified: ''

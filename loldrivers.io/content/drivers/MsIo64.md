@@ -24,7 +24,8 @@ The MSI AmbientLink MsIo64 driver 1.0.0.8 has a Buffer Overflow (0x80102040, 0x8
 #### Command
 
 ```
-
+sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys
 ```
 
 #### Resources
@@ -33,12 +34,24 @@ The MSI AmbientLink MsIo64 driver 1.0.0.8 has a Buffer Overflow (0x80102040, 0x8
 
 <li><a href=" https://github.com/namazso/physmem_drivers"> https://github.com/namazso/physmem_drivers</a></li>
 
+<li><a href=" https://www.matteomalvica.com/blog/2020/09/24/weaponizing-cve-2020-17382/"> https://www.matteomalvica.com/blog/2020/09/24/weaponizing-cve-2020-17382/</a></li>
+
+<li><a href="https://packetstormsecurity.com/files/159315/MSI-Ambient-Link-Driver-1.0.0.8-Privilege-Escalation.html">https://packetstormsecurity.com/files/159315/MSI-Ambient-Link-Driver-1.0.0.8-Privilege-Escalation.html</a></li>
+
+<li><a href="https://www.coresecurity.com/core-labs/advisories/msi-ambient-link-multiple-vulnerabilities">https://www.coresecurity.com/core-labs/advisories/msi-ambient-link-multiple-vulnerabilities</a></li>
+
+<li><a href="https://github.com/Exploitables/CVE-2020-17382">https://github.com/Exploitables/CVE-2020-17382</a></li>
+
 
 <br>
 
 
 #### Binary Metadata
 <br>
+
+
+
+<li><a href="https://www.virustotal.com/gui/file/43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89">43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89</a></li>
 
 
 

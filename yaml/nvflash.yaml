@@ -2,11 +2,12 @@ Name: nvflash.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create nvflash binPath= C:\windows\temp\nvflash.sys type= kernel
+
+    sc.exe start nvflash.sys'
+  Description: nvflash.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,7 +18,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- afdd66562dea51001c3a9de300f91fc3eb965d6848dfce92ccb9b75853e02508
 Metadata:
   binary: ''
   Verified: ''

@@ -1,250 +1,421 @@
-[MsIo64.sys](drivers/msio64/),Michael Haag,2023-01-09,
-[d3.sys](drivers/d3/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[ellp_service.sys](drivers/ellp_service/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[aswsnx.sys](drivers/aswsnx/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[BS_RCIO.sys](drivers/bs_rcio/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[WinRing0.sys](drivers/winring0/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[WCPU.sys](drivers/wcpu/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[WinFlash64.sys](drivers/winflash64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[BSMIx64.sys](drivers/bsmix64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[dbutil_2_3.sys](drivers/dbutil_2_3/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[hw_sys](drivers/hw_sys/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[nt2.sys](drivers/nt2/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[HwOs2Ec10x64.sys](drivers/hwos2ec10x64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[iQVW64.SYS](drivers/iqvw64/),Michael Haag,2023-01-09,
+[BS_HWMIo64.sys](drivers/bs_hwmio64/),Michael Haag,2023-01-09,"sc.exe create BS_HWMIo64 binPath= C:\windows\temp\BS_HWMIo64.sys type= kernel
+sc.exe start BS_HWMIo64.sys"
+[NCHGBIOS2x64.SYS](drivers/nchgbios2x64/),Michael Haag,2023-01-09,"sc.exe create NCHGBIOS2x64 binPath= C:\windows\temp\NCHGBIOS2x64.SYS type= kernel
+sc.exe start NCHGBIOS2x64.SYS"
+[TmComm.sys](drivers/tmcomm/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[HOSTNT.sys](drivers/hostnt/),Michael Haag,2023-01-09,"sc.exe create HOSTNT binPath= C:\windows\temp\HOSTNT.sys type= kernel
+sc.exe start HOSTNT.sys"
 [WYProxy64.sys](drivers/wyproxy64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[RTCore64.sys](drivers/rtcore64/),Michael Haag,2023-01-09,
-[rtkiow8x64.sys](drivers/rtkiow8x64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[HWiNFO64A.sys](drivers/hwinfo64a/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[t.sys](drivers/t/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[viraglt64.sys](drivers/viraglt64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[kbdcap64.sys](drivers/kbdcap64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[BS_HWMIo64.sys](drivers/bs_hwmio64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[PanMonFlt.sys](drivers/panmonflt/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[Proxy32.sys](drivers/proxy32/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[nvflash.sys](drivers/nvflash/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[AsIO64.sys](drivers/asio64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[ATSZIO.sys](drivers/atszio/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[nicm.sys](drivers/nicm/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[nt3.sys](drivers/nt3/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[nscm.sys](drivers/nscm/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[Agent64.sys](drivers/agent64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[IOMap64.sys](drivers/iomap64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[full.sys](drivers/full/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[WYProxy32.sys](drivers/wyproxy32/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[goad.sys](drivers/goad/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[SmartDashboard.sys](drivers/smartdashboard/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[WinRing0x64.sys](drivers/winring0x64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[smep_capcom.sys](drivers/smep_capcom/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[BlackBoneDrv10.sys](drivers/blackbonedrv10/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[HpPortIox64.sys](drivers/hpportiox64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[WinIO32.sys](drivers/winio32/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[piddrv64.sys](drivers/piddrv64/),Michael Haag,2023-01-09,"sc.exe create piddrv64 binPath= C:\windows\temp\piddrv64.sys type= kernel
+sc.exe start piddrv64.sys"
+[BS_Def64.sys](drivers/bs_def64/),Michael Haag,2023-01-09,"sc.exe create BS_Def64 binPath= C:\windows\temp\BS_Def64.sys type= kernel
+sc.exe start BS_Def64.sys"
+[HwOs2Ec7x64.sys](drivers/hwos2ec7x64/),Michael Haag,2023-01-09,"sc.exe create HwOs2Ec7x64 binPath= C:\windows\temp\HwOs2Ec7x64.sys type= kernel
+sc.exe start HwOs2Ec7x64.sys"
+[HwRwDrv.sys](drivers/hwrwdrv/),Michael Haag,2023-01-09,"sc.exe create HwRwDrv binPath= C:\windows\temp\HwRwDrv.sys type= kernel
+sc.exe start HwRwDrv.sys"
 [fiddrv.sys](drivers/fiddrv/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[c.sys](drivers/c/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[amp.sys](drivers/amp/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[b1.sys](drivers/b1/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[AsUpIO64.sys](drivers/asupio64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[cpupress.sys](drivers/cpupress/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[bwrs.sys](drivers/bwrs/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[physmem.sys](drivers/physmem/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[IObitUnlocker.sys](drivers/iobitunlocker/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[vboxdrv.sys](drivers/vboxdrv/),Michael Haag,2023-01-09,
-[LHA.sys](drivers/lha/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[SystemGauge.sys](drivers/systemgauge/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[piddrv64.sys](drivers/piddrv64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[netfilterdrv.sys](drivers/netfilterdrv/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[cpuz.sys](drivers/cpuz/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[81.sys](drivers/81/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[BSMIXP64.sys](drivers/bsmixp64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[Bs_Def.sys](drivers/bs_def/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[nstrwsk.sys](drivers/nstrwsk/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[AMDRyzenMasterDriver.sys](drivers/amdryzenmasterdriver/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[GameFire.sys](drivers/gamefire/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[kEvP64.sys](drivers/kevp64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[GLCKIO2.sys](drivers/glckio2/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[BS_Flash64.sys](drivers/bs_flash64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[WinIO32B.sys](drivers/winio32b/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[OpenHardwareMonitor.sys](drivers/openhardwaremonitor/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[elrawdsk.sys](drivers/elrawdsk/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[viragt64.sys](drivers/viragt64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[BSMI.sys](drivers/bsmi/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[dbk64.sys](drivers/dbk64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[nvflsh64.sys](drivers/nvflsh64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[HOSTNT.sys](drivers/hostnt/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[pgldqpoc.sys](drivers/pgldqpoc/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[semav6msr.sys](drivers/semav6msr/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[LenovoDiagnosticsDriver.sys](drivers/lenovodiagnosticsdriver/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[NTIOLib.sys](drivers/ntiolib/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[t3.sys](drivers/t3/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[clfs.sys](drivers/clfs/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[dbutil.sys](drivers/dbutil/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[mtcBSv64.sys](drivers/mtcbsv64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[ni.sys](drivers/ni/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[asmmap64.sys](drivers/asmmap64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[b.sys](drivers/b/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[HwOs2Ec7x64.sys](drivers/hwos2ec7x64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[ProtectS.sys](drivers/protects/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[winio64.sys](drivers/winio64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[Phymemx64.sys](drivers/phymemx64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[Dh_Kernel_10.sys](drivers/dh_kernel_10/),Michael Haag,2023-01-09,"sc.exe create ADV64DRV binPath= C:\windows\temp\ADV64DRV.sys type= kernel
+sc.exe start ADV64DRV.sys"
+[Monitor_win10_x64.sys](drivers/monitor_win10_x64/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[pcdsrvc_x64.pkms](drivers/pcdsrvc_x64/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[UCOREW64.SYS](drivers/ucorew64/),Michael Haag,2023-01-09,"sc.exe create UCOREW64 binPath= C:\windows\temp\UCOREW64.SYS type= kernel
+sc.exe start UCOREW64.SYS"
+[iqvw64e.sys](drivers/iqvw64e/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[SmartDashboard.sys](drivers/smartdashboard/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[Dh_Kernel.sys](drivers/dh_kernel/),Michael Haag,2023-01-09,"sc.exe create ADV64DRV binPath= C:\windows\temp\ADV64DRV.sys type= kernel
+sc.exe start ADV64DRV.sys"
 [b4.sys](drivers/b4/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[NalDrv.sys](drivers/naldrv/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[ASIO32.sys](drivers/asio32/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[inpoutx64.sys](drivers/inpoutx64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[AMDPowerProfiler.sys](drivers/amdpowerprofiler/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[driver7-x86-withoutdbg.sys](drivers/driver7-x86-withoutdbg/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[AsrDrv103.sys](drivers/asrdrv103/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[zamguard64.sys](drivers/zamguard64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[BS_RCIO64.sys](drivers/bs_rcio64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[1.sys](drivers/1/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[PhlashNT.sys](drivers/phlashnt/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[AsrIbDrv.sys](drivers/asribdrv/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[EneTechIo64.sys](drivers/enetechio64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[ADV64DRV.sys](drivers/adv64drv/),Michael Haag,2023-01-09,"sc create ADV64DRV.sys binpath = c:\temp\ADV64DRV.sys.sys type=kernel start=auto displayname=""ADV64DRV.sys vulnerable Driver"""
-[rzpnk.sys](drivers/rzpnk/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[WinIo64A.sys](drivers/winio64a/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[nt4.sys](drivers/nt4/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[nt5.sys](drivers/nt5/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[CITMDRV_IA64.sys](drivers/citmdrv_ia64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[d2.sys](drivers/d2/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[superbmc.sys](drivers/superbmc/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[zam64.sys](drivers/zam64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[capcom.sys](drivers/capcom/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[dbutil_2_3.sys](drivers/dbutil_2_3/),Michael Haag,2023-01-09,"sc.exe create ADV64DRV binPath= C:\windows\temp\ADV64DRV.sys type= kernel
+sc.exe start ADV64DRV.sys"
+[Monitor.sys](drivers/monitor/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[nt6.sys](drivers/nt6/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[Black.sys](drivers/black/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[BS_I2cIo.sys](drivers/bs_i2cio/),Michael Haag,2023-01-09,"sc.exe create BS_I2cIo.sys binPath= C:\windows\temp\BS_I2cIo.sys type= kernel
+sc.exe start BS_I2cIo.sys"
+[MsIo.sys](drivers/msio/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[AsrDrv102.sys](drivers/asrdrv102/),Michael Haag,2023-01-09,"sc.exe create AsrDrv102 binPath= C:\windows\temp\AsrDrv102.sys type= kernel
+sc.exe start AsrDrv102.sys"
+[NBIOLib_X64.sys](drivers/nbiolib_x64/),Michael Haag,2023-01-09,"sc.exe create NBIOLib_X64 binPath= C:\windows\temp\NBIOLib_X64.sys type= kernel
+sc.exe start NBIOLib_X64.sys"
+[mtcBSv64.sys](drivers/mtcbsv64/),Michael Haag,2023-01-09,"sc.exe create mtcBSv64 binPath= C:\windows\temp\mtcBSv64.sys type= kernel
+sc.exe start mtcBSv64.sys"
+[BS_I2c64.sys](drivers/bs_i2c64/),Michael Haag,2023-01-09,"sc.exe create BS_I2c64 binPath= C:\windows\temp\BS_I2c64.sys type= kernel
+sc.exe start BS_I2c64.sys"
 [semav6msr64.sys](drivers/semav6msr64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[SystemGaugeX7.sys](drivers/systemgaugex7/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[fidpcidrv.sys](drivers/fidpcidrv/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[DBUtilDrv2.sys](drivers/dbutildrv2/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[TestBone.sys](drivers/testbone/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[mhyprot.sys](drivers/mhyprot/),Michael Haag,2023-01-09,"sc.exe create mhyprot binPath= C:\windows\temp\mhyprot.sys type= kernel
+sc.exe start mhyprot.sys"
+[DirectIo64.sys](drivers/directio64/),Michael Haag,2023-01-09,"sc.exe create DirectIo64 binPath= C:\windows\temp\DirectIo64.sys type= kernel
+sc.exe start DirectIo64.sys"
+[driver7-x64.sys](drivers/driver7-x64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[wantd_4.sys](drivers/wantd_4/),Michael Haag,2023-02-28,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[viraglt64.sys](drivers/viraglt64/),Michael Haag,2023-01-09,"sc.exe create viraglt64 binPath= C:\windows\temp\viraglt64.sys type= kernel
+sc.exe start viraglt64.sys"
+[hw_sys](drivers/hw_sys/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[AMDRyzenMasterDriver.sys](drivers/amdryzenmasterdriver/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[daxin_blank6.sys](drivers/daxin_blank6/),Michael Haag,2023-02-28,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[kprocesshacker.sys](drivers/kprocesshacker/),Michael Haag,2023-01-09,"sc.exe create kprocesshacker binPath= C:\windows\temp\kprocesshacker.sys type= kernel
+sc.exe start kprocesshacker.sys"
+[fiddrv64.sys](drivers/fiddrv64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[aswsnx.sys](drivers/aswsnx/),Michael Haag,2023-01-09,"sc.exe create aswsnx binPath= C:\windows\temp\aswsnx.sys type= kernel
+sc.exe start aswsnx.sys"
+[wantd_5.sys](drivers/wantd_5/),Michael Haag,2023-02-28,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[DirectIo32.sys](drivers/directio32/),Michael Haag,2023-01-09,"sc.exe create DirectIo32 binPath= C:\windows\temp\DirectIo32.sys type= kernel
+sc.exe start DirectIo32.sys"
+[amifldrv64.sys](drivers/amifldrv64/),Michael Haag,2023-01-09,"sc.exe create amifldrv64 binPath= C:\windows\temp\amifldrv64.sys type= kernel
+sc.exe start amifldrv64.sys"
+[libnicm.sys](drivers/libnicm/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[touchpointanalyticsclient.sys](drivers/touchpointanalyticsclient/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[BS_Flash64.sys](drivers/bs_flash64/),Michael Haag,2023-01-09,"sc.exe create BS_Flash64 binPath= C:\windows\temp\BS_Flash64.sys type= kernel
+sc.exe start BS_Flash64.sys"
+[windows7-32.sys](drivers/windows7-32/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[elrawdsk.sys](drivers/elrawdsk/),Michael Haag,2023-01-09,"sc.exe create elrawdsk binPath= C:\windows\temp\elrawdsk.sys type= kernel
+sc.exe start elrawdsk.sys"
+[AsrSetupDrv103.sys](drivers/asrsetupdrv103/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
 [aswArPot.sys](drivers/aswarpot/),Michael Haag,2023-01-09,"sc.exe create aswSP_ArPot2 binPath= C:\windows\temp\aswArPot.sys type= kernel
 sc.exe start aswSP_ArPot2 "
-[PCHunter.sys](drivers/pchunter/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[AsrRapidStartDrv.sys](drivers/asrrapidstartdrv/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[AsUpIO.sys](drivers/asupio/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[OpenHardwareMonitorReport.sys](drivers/openhardwaremonitorreport/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[FairplayKD.sys](drivers/fairplaykd/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[My.sys](drivers/my/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[CorsairLLAccess64.sys](drivers/corsairllaccess64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[gdrv.sys](drivers/gdrv/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[Proxy64.sys](drivers/proxy64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[amifldrv64.sys](drivers/amifldrv64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[procexp.Sys](drivers/procexp/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[WinIo64B.sys](drivers/winio64b/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[ncpl.sys](drivers/ncpl/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[viragt.sys](drivers/viragt/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[TGSafe.sys](drivers/tgsafe/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[Mhyprot2.sys](drivers/mhyprot2/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[d.sys](drivers/d/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[speedfan.sys](drivers/speedfan/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[libnicm.sys](drivers/libnicm/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[windows-xp-64.sys](drivers/windows-xp-64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[smep_namco.sys](drivers/smep_namco/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[iomem64.sys](drivers/iomem64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[AsrDrv106.sys](drivers/asrdrv106/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[mhyprot3.sys](drivers/mhyprot3/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[windows7-32.sys](drivers/windows7-32/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[atillk64.sys](drivers/atillk64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[msrhook.sys](drivers/msrhook/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[Black.sys](drivers/black/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[mhyprot.sys](drivers/mhyprot/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[NetFlt.sys](drivers/netflt/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[LgDCatcher.sys](drivers/lgdcatcher/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[iqvw64e.sys](drivers/iqvw64e/),Michael Haag,2023-01-09,
-[Lurker.sys](drivers/lurker/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[nstr.sys](drivers/nstr/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[2.sys](drivers/2/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[ATSZIO64.sys](drivers/atszio64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[DirectIo32.sys](drivers/directio32/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[hardwareproviders.sys](drivers/hardwareproviders/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[MsIo.sys](drivers/msio/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[BS_Def64.sys](drivers/bs_def64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[VideoNovaServerControllerService.sys](drivers/videonovaservercontrollerservice/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[Dh_Kernel_10.sys](drivers/dh_kernel_10/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[mydrivers.sys](drivers/mydrivers/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[pcdsrvc_x64.pkms](drivers/pcdsrvc_x64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[nt6.sys](drivers/nt6/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[Monitor_win10_x64.sys](drivers/monitor_win10_x64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[PanMonFltX64.sys](drivers/panmonfltx64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[fidpcidrv64.sys](drivers/fidpcidrv64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[touchpointanalyticsclient.sys](drivers/touchpointanalyticsclient/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[WINIODrv.sys](drivers/winiodrv/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[MsIo32.sys](drivers/msio32/),Michael Haag,2023-01-09,
-[Lv561av.sys](drivers/lv561av/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[TmComm.sys](drivers/tmcomm/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[BSMEMx64.sys](drivers/bsmemx64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[otipcibus.sys](drivers/otipcibus/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[gameink.sys](drivers/gameink/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[srvnetbus.sys](drivers/srvnetbus/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[80.sys](drivers/80/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[BS_I2cIo.sys](drivers/bs_i2cio/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[TestBone.sys](drivers/testbone/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[Mslo64.sys](drivers/mslo64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[AsrSmartConnectDrv.sys](drivers/asrsmartconnectdrv/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[d4.sys](drivers/d4/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[SysInfo.sys](drivers/sysinfo/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[PanIO.sys](drivers/panio/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[NCHGBIOS2x64.SYS](drivers/nchgbios2x64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[UCOREW64.SYS](drivers/ucorew64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[AsrDrv102.sys](drivers/asrdrv102/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[magdrvamd64.sys](drivers/magdrvamd64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[AsrSetupDrv103.sys](drivers/asrsetupdrv103/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[windows8-10-32.sys](drivers/windows8-10-32/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[AsrDrv103.sys](drivers/asrdrv103/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[sandra.sys](drivers/sandra/),Michael Haag,2023-01-09,"sc.exe create sandra binPath= C:\windows\temp\sandra.sys type= kernel
+sc.exe start sandra.sys"
 [bw.sys](drivers/bw/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[krpocesshacker.sys](drivers/krpocesshacker/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[BS_I2c64.sys](drivers/bs_i2c64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[Dh_Kernel.sys](drivers/dh_kernel/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[AsrOmgDrv.sys](drivers/asromgdrv/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[cpuz141.sys](drivers/cpuz141/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[fiddrv64.sys](drivers/fiddrv64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[CITMDRV_AMD64.sys](drivers/citmdrv_amd64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[HwRwDrv.sys](drivers/hwrwdrv/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[EneIo64.sys](drivers/eneio64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[CAM_V3.sys](drivers/cam_v3/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[BS_HWMIO64_W10.sys](drivers/bs_hwmio64_w10/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[bwrsh.sys](drivers/bwrsh/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[driver7-x64.sys](drivers/driver7-x64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[sandbox.sys](drivers/sandbox/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[GameTerSafe.sys](drivers/gametersafe/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[procexp152.sys](drivers/procexp152/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[rtkio64.sys](drivers/rtkio64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[bandai.sys](drivers/bandai/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[](drivers//),,,
-[rtkiow10x64.sys](drivers/rtkiow10x64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[OpenLibSys.sys](drivers/openlibsys/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[kprocesshacker.sys](drivers/kprocesshacker/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[b3.sys](drivers/b3/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[sensorsview32_64.sys](drivers/sensorsview32_64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[rwdrv.sys](drivers/rwdrv/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[WinIO32A.sys](drivers/winio32a/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[cpuz_x64.sys](drivers/cpuz_x64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[rtkio.sys](drivers/rtkio/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[Monitor.sys](drivers/monitor/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[ALSysIO64.sys](drivers/alsysio64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[t8.sys](drivers/t8/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[PanIOx64.sys](drivers/paniox64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[AsIO.sys](drivers/asio/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[DirectIo64.sys](drivers/directio64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[OpenHardwareMonitorLib.sys](drivers/openhardwaremonitorlib/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[asrdrv104.sys](drivers/asrdrv104/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[VProEventMonitor.sys](drivers/vproeventmonitor/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[driver7-x86.sys](drivers/driver7-x86/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[gmer.sys](drivers/gmer/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[t7.sys](drivers/t7/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[AsrDrv101.sys](drivers/asrdrv101/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[NTIOLib_X64.sys](drivers/ntiolib_x64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[vmdrv.sys](drivers/vmdrv/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[WiseUnlo.sys](drivers/wiseunlo/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[WinIo64C.sys](drivers/winio64c/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[ohm.sys](drivers/ohm/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[AsrDrv10.sys](drivers/asrdrv10/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[Se64a.sys](drivers/se64a/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[piddrv.sys](drivers/piddrv/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[sandra.sys](drivers/sandra/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[elbycdio.sys](drivers/elbycdio/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[ActiveHealth.sys](drivers/activehealth/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[phymem64.sys](drivers/phymem64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[aswVmm.sys](drivers/aswvmm/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[NetProxyDriver.sys](drivers/netproxydriver/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[Mslo64.sys](drivers/mslo64/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[d4.sys](drivers/d4/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[t.sys](drivers/t/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
 [PCADRVX64.sys](drivers/pcadrvx64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[AsrAutoChkUpdDrv.sys](drivers/asrautochkupddrv/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[GVCIDrv64.sys](drivers/gvcidrv64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[segwindrvx64.sys](drivers/segwindrvx64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
-[NBIOLib_X64.sys](drivers/nbiolib_x64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[vboxdrv.sys](drivers/vboxdrv/),Michael Haag,2023-01-09,"sc.exe create vboxdrv binPath= C:\windows\temp\vboxdrv.sys type= kernel
+sc.exe start vboxdrv.sys"
+[rtkio.sys](drivers/rtkio/),Michael Haag,2023-01-09,"sc.exe create rtkio binPath= C:\windows\temp\rtkio.sys type= kernel
+sc.exe start rtkio.sys"
+[pgldqpoc.sys](drivers/pgldqpoc/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[smep_namco.sys](drivers/smep_namco/),Michael Haag,2023-01-09,"sc.exe create smep_namco binPath= C:\windows\temp\smep_namco.sys type= kernel
+sc.exe start smep_namco.sys"
+[atillk64.sys](drivers/atillk64/),Michael Haag,2023-01-09,"sc.exe create atillk64 binPath= C:\windows\temp\atillk64.sys type= kernel
+sc.exe start atillk64.sys"
+[driver7-x86.sys](drivers/driver7-x86/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[bwrsh.sys](drivers/bwrsh/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[BS_HWMIO64_W10.sys](drivers/bs_hwmio64_w10/),Michael Haag,2023-01-09,"sc.exe create BS_HWMIO64_W10 binPath= C:\windows\temp\BS_HWMIO64_W10.sys type= kernel
+sc.exe start BS_HWMIO64_W10.sys"
+[WCPU.sys](drivers/wcpu/),Michael Haag,2023-01-09,"sc.exe create WCPU binPath= C:\windows\temp\WCPU.sys type= kernel
+sc.exe start WCPU.sys"
+[phymem64.sys](drivers/phymem64/),Michael Haag,2023-01-09,"sc.exe create phymem64 binPath= C:\windows\temp\phymem64.sys type= kernel
+sc.exe start phymem64.sys"
+[ntbios_2.sys](drivers/ntbios_2/),Michael Haag,2023-02-28,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[amp.sys](drivers/amp/),Michael Haag,2023-01-09,"sc.exe create amp binPath= C:\windows\temp\amp.sys type= kernel
+sc.exe start amp.sys"
+[PanIOx64.sys](drivers/paniox64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[WYProxy32.sys](drivers/wyproxy32/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[NTIOLib_X64.sys](drivers/ntiolib_x64/),Michael Haag,2023-01-09,"sc.exe create NTIOLib_X64.sys binPath= C:\windows\temp\NTIOLib_X64.sys type= kernel
+sc.exe start NTIOLib_X64.sys"
+[d3.sys](drivers/d3/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[My.sys](drivers/my/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[PhlashNT.sys](drivers/phlashnt/),Michael Haag,2023-01-09,"sc.exe create PhlashNT binPath= C:\windows\temp\PhlashNT.sys type= kernel
+sc.exe start PhlashNT.sys"
+[asrdrv104.sys](drivers/asrdrv104/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[AsrSmartConnectDrv.sys](drivers/asrsmartconnectdrv/),Michael Haag,2023-01-09,"sc.exe create AsrSmartConnectDrv binPath= C:\windows\temp\AsrSmartConnectDrv.sys type= kernel
+sc.exe start AsrSmartConnectDrv.sys"
+[fidpcidrv.sys](drivers/fidpcidrv/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[capcom.sys](drivers/capcom/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[cpuz.sys](drivers/cpuz/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[OpenHardwareMonitorLib.sys](drivers/openhardwaremonitorlib/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[CorsairLLAccess64.sys](drivers/corsairllaccess64/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[wantd.sys](drivers/wantd/),Michael Haag,2023-02-28,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[krpocesshacker.sys](drivers/krpocesshacker/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[Lv561av.sys](drivers/lv561av/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[wantd_2.sys](drivers/wantd_2/),Michael Haag,2023-02-28,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[rtkiow8x64.sys](drivers/rtkiow8x64/),Michael Haag,2023-01-09,"sc.exe create rtkiow8x64.sys binPath= C:\windows\temp\rtkiow8x64.sys type= kernel
+sc.exe start rtkiow8x64.sys"
+[ndislan.sys](drivers/ndislan/),Michael Haag,2023-02-28,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[gameink.sys](drivers/gameink/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[t7.sys](drivers/t7/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[nscm.sys](drivers/nscm/),Michael Haag,2023-01-09,"sc.exe create nscm binPath= C:\windows\temp\nscm.sys type= kernel
+sc.exe start nscm.sys"
+[VProEventMonitor.sys](drivers/vproeventmonitor/),Michael Haag,2023-01-09,"sc.exe create VProEventMonitor binPath= C:\windows\temp\VProEventMonitor.sys type= kernel
+sc.exe start VProEventMonitor.sys"
+[FairplayKD.sys](drivers/fairplaykd/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[WinIo64A.sys](drivers/winio64a/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[nvflsh64.sys](drivers/nvflsh64/),Michael Haag,2023-01-09,"sc.exe create nvflsh64 binPath= C:\windows\temp\nvflsh64.sys type= kernel
+sc.exe start nvflsh64.sys"
+[superbmc.sys](drivers/superbmc/),Michael Haag,2023-01-09,"sc.exe create superbmc.sys binPath= C:\windows\temp\superbmc.sys type= kernel
+sc.exe start superbmc.sys"
+[Mhyprot2.sys](drivers/mhyprot2/),Michael Haag,2023-01-09,"sc.exe create Mhyprot2 binPath= C:\windows\temp\Mhyprot2.sys type= kernel
+sc.exe start Mhyprot2.sys"
+[AsUpIO.sys](drivers/asupio/),Michael Haag,2023-01-09,"sc.exe create AsUpIO binPath= C:\windows\temp\AsUpIO.sys type= kernel
+sc.exe start AsUpIO.sys"
+[AsrDrv10.sys](drivers/asrdrv10/),Michael Haag,2023-01-09,"sc.exe create AsrDrv10 binPath= C:\windows\temp\AsrDrv10.sys type= kernel
+sc.exe start AsrDrv10.sys"
+[clfs.sys](drivers/clfs/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[1.sys](drivers/1/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[LHA.sys](drivers/lha/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[SysInfo.sys](drivers/sysinfo/),Michael Haag,2023-01-09,"sc.exe create SysInfo binPath= C:\windows\temp\SysInfo.sys type= kernel
+sc.exe start SysInfo.sys"
+[HwOs2Ec10x64.sys](drivers/hwos2ec10x64/),Michael Haag,2023-01-09,"sc.exe create HwOs2Ec10x64 binPath= C:\windows\temp\HwOs2Ec10x64.sys type= kernel
+sc.exe start HwOs2Ec10x64.sys"
+[viragt.sys](drivers/viragt/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[cpuz141.sys](drivers/cpuz141/),Michael Haag,2023-01-09,"sc.exe create cpuz141 binPath= C:\windows\temp\cpuz141.sys type= kernel
+sc.exe start cpuz141.sys"
+[VideoNovaServerControllerService.sys](drivers/videonovaservercontrollerservice/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[mhyprot3.sys](drivers/mhyprot3/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[Agent64.sys](drivers/agent64/),Michael Haag,2023-01-09,"sc.exe create Agent64 binPath= C:\windows\temp\Agent64.sys type= kernel
+sc.exe start Agent64.sys"
+[b3.sys](drivers/b3/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[Lurker.sys](drivers/lurker/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[Bs_Def.sys](drivers/bs_def/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[ALSysIO64.sys](drivers/alsysio64/),Michael Haag,2023-01-09,"sc.exe create ALSysIO64 binPath= C:\windows\temp\ALSysIO64.sys type= kernel
+sc.exe start ALSysIO64.sys"
+[viragt64.sys](drivers/viragt64/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[PanMonFltX64.sys](drivers/panmonfltx64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[nicm.sys](drivers/nicm/),Michael Haag,2023-01-09,"sc.exe create nicm binPath= C:\windows\temp\nicm.sys type= kernel
+sc.exe start nicm.sys"
+[rtkiow10x64.sys](drivers/rtkiow10x64/),Michael Haag,2023-01-09,"sc.exe create rtkiow10x64.sys binPath= C:\windows\temp\rtkiow10x64.sys type= kernel
+sc.exe start rtkiow10x64.sys"
+[windows8-10-32.sys](drivers/windows8-10-32/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[AsrOmgDrv.sys](drivers/asromgdrv/),Michael Haag,2023-01-09,"sc.exe create AsrOmgDrv binPath= C:\windows\temp\AsrOmgDrv.sys type= kernel
+sc.exe start AsrOmgDrv.sys"
+[elbycdio.sys](drivers/elbycdio/),Michael Haag,2023-01-09,"sc.exe create elbycdio binPath= C:\windows\temp\elbycdio.sys type= kernel
+sc.exe start elbycdio.sys"
+[OpenHardwareMonitorReport.sys](drivers/openhardwaremonitorreport/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[AMDPowerProfiler.sys](drivers/amdpowerprofiler/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[NalDrv.sys](drivers/naldrv/),Michael Haag,2023-01-09,"sc.exe create NalDrv binPath= C:\windows\temp\NalDrv.sys type= kernel
+sc.exe start NalDrv.sys"
+[netfilterdrv.sys](drivers/netfilterdrv/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[daxin_blank1.sys](drivers/daxin_blank1/),Michael Haag,2023-02-28,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[wantd_3.sys](drivers/wantd_3/),Michael Haag,2023-02-28,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[PanIO.sys](drivers/panio/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[WinIO32B.sys](drivers/winio32b/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[AsrIbDrv.sys](drivers/asribdrv/),Michael Haag,2023-01-09,"sc.exe create AsrIbDrv binPath= C:\windows\temp\AsrIbDrv.sys type= kernel
+sc.exe start AsrIbDrv.sys"
+[gmer.sys](drivers/gmer/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[EneIo64.sys](drivers/eneio64/),Michael Haag,2023-01-09,"sc.exe create EneIo64 binPath= C:\windows\temp\EneIo64.sys type= kernel
+sc.exe start EneIo64.sys"
+[sandbox.sys](drivers/sandbox/),Michael Haag,2023-01-09,"sc.exe create sandbox binPath= C:\windows\temp\sandbox.sys type= kernel
+sc.exe start sandbox.sys"
+[driver7-x86-withoutdbg.sys](drivers/driver7-x86-withoutdbg/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[bwrs.sys](drivers/bwrs/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[CITMDRV_IA64.sys](drivers/citmdrv_ia64/),Michael Haag,2023-01-09,"sc.exe create CITMDRV_IA64 binPath= C:\windows\temp\CITMDRV_IA64.sys type= kernel
+sc.exe start CITMDRV_IA64.sys"
+[NTIOLib.sys](drivers/ntiolib/),Michael Haag,2023-01-09,"sc.exe create NTIOLib binPath= C:\windows\temp\NTIOLib.sys type= kernel
+sc.exe start NTIOLib.sys"
+[BlackBoneDrv10.sys](drivers/blackbonedrv10/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[d2.sys](drivers/d2/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[ActiveHealth.sys](drivers/activehealth/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[AsIO64.sys](drivers/asio64/),Michael Haag,2023-01-09,"sc.exe create AsIO64 binPath= C:\windows\temp\AsIO64.sys type= kernel
+sc.exe start AsIO64.sys"
+[daxin_blank2.sys](drivers/daxin_blank2/),Michael Haag,2023-02-28,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[WinIO32.sys](drivers/winio32/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[IObitUnlocker.sys](drivers/iobitunlocker/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[LenovoDiagnosticsDriver.sys](drivers/lenovodiagnosticsdriver/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[semav6msr.sys](drivers/semav6msr/),Michael Haag,2023-01-09,"sc.exe create semav6msr.sys binPath= C:\windows\temp\semav6msr.sys type= kernel
+sc.exe start semav6msr.sys"
+[d.sys](drivers/d/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[DBUtilDrv2.sys](drivers/dbutildrv2/),Michael Haag,2023-01-09,"sc.exe create DBUtilDrv2 binPath= C:\windows\temp\DBUtilDrv2.sys type= kernel
+sc.exe start DBUtilDrv2.sys"
+[BS_RCIO64.sys](drivers/bs_rcio64/),Michael Haag,2023-01-09,"sc.exe create BS_RCIO64 binPath= C:\windows\temp\BS_RCIO64.sys type= kernel
+sc.exe start BS_RCIO64.sys"
+[WinIO32A.sys](drivers/winio32a/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[WinFlash64.sys](drivers/winflash64/),Michael Haag,2023-01-09,"sc.exe create WinFlash64 binPath= C:\windows\temp\WinFlash64.sys type= kernel
+sc.exe start WinFlash64.sys"
+[speedfan.sys](drivers/speedfan/),Michael Haag,2023-01-09,"sc.exe create speedfan binPath= C:\windows\temp\speedfan.sys type= kernel
+sc.exe start speedfan.sys"
+[goad.sys](drivers/goad/),Michael Haag,2023-01-09,"sc.exe create goad binPath= C:\windows\temp\goad.sys type= kernel
+sc.exe start goad.sys"
+[Se64a.sys](drivers/se64a/),Michael Haag,2023-01-09,"sc.exe create Se64a binPath= C:\windows\temp\Se64a.sys type= kernel
+sc.exe start Se64a.sys"
+[AsrDrv106.sys](drivers/asrdrv106/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[GameFire.sys](drivers/gamefire/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[WiseUnlo.sys](drivers/wiseunlo/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[iQVW64.SYS](drivers/iqvw64/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[SystemGauge.sys](drivers/systemgauge/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[RTCore64.sys](drivers/rtcore64/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[OpenHardwareMonitor.sys](drivers/openhardwaremonitor/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[smep_capcom.sys](drivers/smep_capcom/),Michael Haag,2023-01-09,"sc.exe create smep_capcom binPath= C:\windows\temp\smep_capcom.sys type= kernel
+sc.exe start smep_capcom.sys"
+[procexp152.sys](drivers/procexp152/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[Phymemx64.sys](drivers/phymemx64/),Michael Haag,2023-01-09,"sc.exe create Phymemx64 binPath= C:\windows\temp\Phymemx64.sys type= kernel
+sc.exe start Phymemx64.sys"
+[aswVmm.sys](drivers/aswvmm/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[ProtectS.sys](drivers/protects/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[nt2.sys](drivers/nt2/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[WINIODrv.sys](drivers/winiodrv/),Michael Haag,2023-01-09,"sc.exe create WINIODrv binPath= C:\windows\temp\WINIODrv.sys type= kernel
+sc.exe start WINIODrv.sys"
+[GLCKIO2.sys](drivers/glckio2/),Michael Haag,2023-01-09,"sc.exe create GLCKIO2 binPath= C:\windows\temp\GLCKIO2.sys type= kernel
+sc.exe start GLCKIO2.sys"
+[asmmap64.sys](drivers/asmmap64/),Michael Haag,2023-01-09,"sc.exe create asmmap64 binPath= C:\windows\temp\asmmap64.sys type= kernel
+sc.exe start asmmap64.sys"
+[AsrRapidStartDrv.sys](drivers/asrrapidstartdrv/),Michael Haag,2023-01-09,"sc.exe create AsrRapidStartDrv binPath= C:\windows\temp\AsrRapidStartDrv.sys type= kernel
+sc.exe start AsrRapidStartDrv.sys"
+[PCHunter.sys](drivers/pchunter/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[procexp.Sys](drivers/procexp/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[WinIo64C.sys](drivers/winio64c/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[sensorsview32_64.sys](drivers/sensorsview32_64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[otipcibus.sys](drivers/otipcibus/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[full.sys](drivers/full/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[physmem.sys](drivers/physmem/),Michael Haag,2023-01-09,"sc.exe create physmem binPath= C:\windows\temp\physmem.sys type= kernel
+sc.exe start physmem.sys"
+[mydrivers.sys](drivers/mydrivers/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[rtkio64.sys](drivers/rtkio64/),Michael Haag,2023-01-09,"sc.exe create rtkio64 binPath= C:\windows\temp\rtkio64.sys type= kernel
+sc.exe start rtkio64.sys"
+[ni.sys](drivers/ni/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[WinIo64B.sys](drivers/winio64b/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[PanMonFlt.sys](drivers/panmonflt/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[b1.sys](drivers/b1/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[nt3.sys](drivers/nt3/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[2.sys](drivers/2/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[ATSZIO64.sys](drivers/atszio64/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[t8.sys](drivers/t8/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[msrhook.sys](drivers/msrhook/),Michael Haag,2023-01-09,"sc.exe create msrhook binPath= C:\windows\temp\msrhook.sys type= kernel
+sc.exe start msrhook.sys"
+[AsrAutoChkUpdDrv.sys](drivers/asrautochkupddrv/),Michael Haag,2023-01-09,"sc.exe create AsrAutoChkUpdDrv.sys binPath= C:\windows\temp\AsrAutoChkUpdDrv.sys type= kernel
+sc.exe start AsrAutoChkUpdDrv.sys"
+[hardwareproviders.sys](drivers/hardwareproviders/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[LgDCatcher.sys](drivers/lgdcatcher/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[GameTerSafe.sys](drivers/gametersafe/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[daxin_blank3.sys](drivers/daxin_blank3/),Michael Haag,2023-02-28,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[vmdrv.sys](drivers/vmdrv/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[ASIO32.sys](drivers/asio32/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[segwindrvx64.sys](drivers/segwindrvx64/),Michael Haag,2023-01-09,"sc.exe create segwindrvx64.sys binPath= C:\windows\temp\segwindrvx64.sys type= kernel
+sc.exe start segwindrvx64.sys"
+[winio64.sys](drivers/winio64/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[ellp_service.sys](drivers/ellp_service/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[piddrv.sys](drivers/piddrv/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[HpPortIox64.sys](drivers/hpportiox64/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[magdrvamd64.sys](drivers/magdrvamd64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[BSMI.sys](drivers/bsmi/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[81.sys](drivers/81/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[IOMap64.sys](drivers/iomap64/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[nt4.sys](drivers/nt4/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[windows-xp-64.sys](drivers/windows-xp-64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[CAM_V3.sys](drivers/cam_v3/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[CITMDRV_AMD64.sys](drivers/citmdrv_amd64/),Michael Haag,2023-01-09,"sc.exe create CITMDRV_AMD64 binPath= C:\windows\temp\CITMDRV_AMD64.sys type= kernel
+sc.exe start CITMDRV_AMD64.sys"
+[ATSZIO.sys](drivers/atszio/),Michael Haag,2023-01-09,"sc.exe create ATSZIO binPath= C:\windows\temp\ATSZIO.sys type= kernel
+sc.exe start ATSZIO.sys"
+[bandai.sys](drivers/bandai/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[BSMEMx64.sys](drivers/bsmemx64/),Michael Haag,2023-01-09,"sc.exe create BSMEMx64 binPath= C:\windows\temp\BSMEMx64.sys type= kernel
+sc.exe start BSMEMx64.sys"
+[ncpl.sys](drivers/ncpl/),Michael Haag,2023-01-09,"sc.exe create ncpl binPath= C:\windows\temp\ncpl.sys type= kernel
+sc.exe start ncpl.sys"
+[EneTechIo64.sys](drivers/enetechio64/),Michael Haag,2023-01-09,"sc.exe create EneTechIo64 binPath= C:\windows\temp\EneTechIo64.sys type= kernel
+sc.exe start EneTechIo64.sys"
+[zam64.sys](drivers/zam64/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[t3.sys](drivers/t3/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[ntbios.sys](drivers/ntbios/),Michael Haag,2023-02-28,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[daxin_blank.sys](drivers/daxin_blank/),Michael Haag,2023-02-28,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[BSMIXP64.sys](drivers/bsmixp64/),Michael Haag,2023-01-09,"sc.exe create BSMIXP64 binPath= C:\windows\temp\BSMIXP64.sys type= kernel
+sc.exe start BSMIXP64.sys"
+[daxin_blank4.sys](drivers/daxin_blank4/),Michael Haag,2023-02-28,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[wantd_6.sys](drivers/wantd_6/),Michael Haag,2023-02-28,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[b.sys](drivers/b/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[rwdrv.sys](drivers/rwdrv/),Michael Haag,2023-01-09,"sc.exe create rwdrv binPath= C:\windows\temp\rwdrv.sys type= kernel
+sc.exe start rwdrv.sys"
+[BS_RCIO.sys](drivers/bs_rcio/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[fidpcidrv64.sys](drivers/fidpcidrv64/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[MsIo64.sys](drivers/msio64/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[NetProxyDriver.sys](drivers/netproxydriver/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[TGSafe.sys](drivers/tgsafe/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[HWiNFO64A.sys](drivers/hwinfo64a/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[Proxy32.sys](drivers/proxy32/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[](drivers//),,,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[kbdcap64.sys](drivers/kbdcap64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[cpuz_x64.sys](drivers/cpuz_x64/),Michael Haag,2023-01-09,"sc.exe create cpuz_x64 binPath= C:\windows\temp\cpuz_x64.sys type= kernel
+sc.exe start cpuz_x64.sys"
+[dbutil.sys](drivers/dbutil/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
 [DirectIo.sys](drivers/directio/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[GVCIDrv64.sys](drivers/gvcidrv64/),Michael Haag,2023-01-09,"sc.exe create GVCIDrv64 binPath= C:\windows\temp\GVCIDrv64.sys type= kernel
+sc.exe start GVCIDrv64.sys"
+[ohm.sys](drivers/ohm/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[ADV64DRV.sys](drivers/adv64drv/),Michael Haag,2023-01-09,"sc.exe create ADV64DRV binPath= C:\windows\temp\ADV64DRV.sys type= kernel
+sc.exe start ADV64DRV.sys"
+[nstr.sys](drivers/nstr/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[SystemGaugeX7.sys](drivers/systemgaugex7/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[AsrDrv101.sys](drivers/asrdrv101/),Michael Haag,2023-01-09,"sc.exe create AsrDrv101 binPath= C:\windows\temp\AsrDrv101.sys type= kernel
+sc.exe start AsrDrv101.sys"
+[Proxy64.sys](drivers/proxy64/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[gdrv.sys](drivers/gdrv/),Michael Haag,2023-01-09,"sc.exe create gdrv binPath= C:\windows\temp\gdrv.sys type= kernel
+sc.exe start gdrv.sys"
+[kEvP64.sys](drivers/kevp64/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[OpenLibSys.sys](drivers/openlibsys/),Michael Haag,2023-01-09,"sc.exe create OpenLibSys binPath= C:\windows\temp\OpenLibSys.sys type= kernel
+sc.exe start OpenLibSys.sys"
+[nvflash.sys](drivers/nvflash/),Michael Haag,2023-01-09,"sc.exe create nvflash binPath= C:\windows\temp\nvflash.sys type= kernel
+sc.exe start nvflash.sys"
+[MsIo32.sys](drivers/msio32/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[zamguard64.sys](drivers/zamguard64/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[srvnetbus.sys](drivers/srvnetbus/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[c.sys](drivers/c/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[daxin_blank5.sys](drivers/daxin_blank5/),Michael Haag,2023-02-28,"sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys"
+[WinRing0.sys](drivers/winring0/),Michael Haag,2023-01-09,"sc.exe create WinRing0 binPath= C:\windows\temp\WinRing0.sys type= kernel
+sc.exe start WinRing0.sys"
+[WinRing0x64.sys](drivers/winring0x64/),Michael Haag,2023-01-09,"sc.exe create WinRing0x64.sys binPath= C:\windows\temp\WinRing0x64.sys type= kernel
+sc.exe start WinRing0x64.sys"
+[AsUpIO64.sys](drivers/asupio64/),Michael Haag,2023-01-09,"sc.exe create AsUpIO64 binPath= C:\windows\temp\AsUpIO64.sys type= kernel
+sc.exe start AsUpIO64.sys"
+[NetFlt.sys](drivers/netflt/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[iomem64.sys](drivers/iomem64/),Michael Haag,2023-01-09,"sc.exe create iomem64 binPath= C:\windows\temp\iomem64.sys type= kernel
+sc.exe start iomem64.sys"
+[rzpnk.sys](drivers/rzpnk/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[BSMIx64.sys](drivers/bsmix64/),Michael Haag,2023-01-09,"sc.exe create BSMIx64 binPath= C:\windows\temp\BSMIx64.sys type= kernel
+sc.exe start BSMIx64.sys"
+[nt5.sys](drivers/nt5/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[cpupress.sys](drivers/cpupress/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[nstrwsk.sys](drivers/nstrwsk/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[dbk64.sys](drivers/dbk64/),Michael Haag,2023-01-09,"sc.exe create dbk64.sys binPath= C:\windows\temp\dbk64.sys type= kernel
+sc.exe start dbk64.sys"
+[80.sys](drivers/80/),Michael Haag,2023-01-09,"sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=""CapCom vulnerable Driver"""
+[AsIO.sys](drivers/asio/),Michael Haag,2023-01-09,"sc.exe create AsIO binPath= C:\windows\temp\AsIO.sys type= kernel
+sc.exe start AsIO.sys"
+[inpoutx64.sys](drivers/inpoutx64/),Michael Haag,2023-01-09,"sc.exe create inpoutx64 binPath= C:\windows\temp\inpoutx64.sys type= kernel
+sc.exe start inpoutx64.sys"

@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+inpoutx64.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create inpoutx64 binPath= C:\windows\temp\inpoutx64.sys type= kernel
+sc.exe start inpoutx64.sys
 ```
 
 #### Resources
@@ -39,6 +40,14 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 #### Binary Metadata
 <br>
+
+
+
+<li><a href="https://www.virustotal.com/gui/file/2D83CCB1AD9839C9F5B3F10B1F856177DF1594C66CBBC7661677D4B462EBF44D">2D83CCB1AD9839C9F5B3F10B1F856177DF1594C66CBBC7661677D4B462EBF44D</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/F581DECC2888EF27EE1EA85EA23BBB5FB2FE6A554266FF5A1476ACD1D29D53AF">F581DECC2888EF27EE1EA85EA23BBB5FB2FE6A554266FF5A1476ACD1D29D53AF</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/F8965FDCE668692C3785AFA3559159F9A18287BC0D53ABB21902895A8ECF221B">F8965FDCE668692C3785AFA3559159F9A18287BC0D53ABB21902895A8ECF221B</a></li>
 
 
 

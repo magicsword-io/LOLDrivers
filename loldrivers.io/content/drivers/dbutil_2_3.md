@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+ADV64DRV.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create ADV64DRV binPath= C:\windows\temp\ADV64DRV.sys type= kernel
+sc.exe start ADV64DRV.sys
 ```
 
 #### Resources
@@ -42,12 +43,18 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/0296E2CE999E67C76352613A718E11516FE1B0EFC3FFDB8918FC999DD76A73A5">0296E2CE999E67C76352613A718E11516FE1B0EFC3FFDB8918FC999DD76A73A5</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/c948ae14761095e4d76b55d9de86412258be7afd">c948ae14761095e4d76b55d9de86412258be7afd</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
-- Publisher: 
+- Publisher: Dell Inc.
 - Company: 
-- Description: 
+- Description: dianhu
 - Product: 
 - ProductVersion: 
 - FileVersion: 

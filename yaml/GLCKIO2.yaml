@@ -2,11 +2,12 @@ Name: GLCKIO2.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create GLCKIO2 binPath= C:\windows\temp\GLCKIO2.sys type= kernel
+
+    sc.exe start GLCKIO2.sys'
+  Description: GLCKIO2.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,12 +18,14 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 3A5EC83FE670E5E23AEF3AFA0A7241053F5B6BE5E6CA01766D6B5F9177183C25
+- 61A1BDDDD3C512E681818DEBB5BEE94DB701768FC25E674FCAD46592A3259BD0
 Metadata:
   binary: ''
   Verified: ''
   Date: ''
-  Publisher: ''
+  Publisher: ASUSTeK Computer Inc.
   Company: ''
   Description: ''
   Product: ''

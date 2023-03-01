@@ -2,11 +2,12 @@ Name: AsrDrv10.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create AsrDrv10 binPath= C:\windows\temp\AsrDrv10.sys type= kernel
+
+    sc.exe start AsrDrv10.sys'
+  Description: AsrDrv10.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,14 +18,15 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- ECE0A900EA089E730741499614C0917432246CEB5E11599EE3A1BB679E24FD2C
 Metadata:
   binary: ''
   Verified: ''
   Date: ''
-  Publisher: ''
+  Publisher: ASROCK Incorporation
   Company: ''
-  Description: ''
+  Description: ASRock IO Driver
   Product: ''
   ProductVersion: ''
   FileVersion: ''

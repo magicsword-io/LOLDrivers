@@ -2,11 +2,12 @@ Name: viraglt64.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create viraglt64 binPath= C:\windows\temp\viraglt64.sys type= kernel
+
+    sc.exe start viraglt64.sys'
+  Description: viraglt64.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -18,7 +19,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 58a74dceb2022cd8a358b92acd1b48a5e01c524c3b0195d7033e4bd55eff4495
 Metadata:
   binary: ''
   Verified: ''

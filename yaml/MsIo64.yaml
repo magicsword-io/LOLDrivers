@@ -2,9 +2,11 @@ Name: MsIo64.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: ''
+  Command: 'sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+
+    sc.exe start AsrDrv103.sys'
   Description: The MSI AmbientLink MsIo64 driver 1.0.0.8 has a Buffer Overflow (0x80102040,
     0x80102044, 0x80102050,and 0x80102054)
   Usecase: Elevate privileges
@@ -12,12 +14,17 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/namazso/physmem_drivers'
+- ' https://www.matteomalvica.com/blog/2020/09/24/weaponizing-cve-2020-17382/'
+- https://packetstormsecurity.com/files/159315/MSI-Ambient-Link-Driver-1.0.0.8-Privilege-Escalation.html
+- https://www.coresecurity.com/core-labs/advisories/msi-ambient-link-multiple-vulnerabilities
+- https://github.com/Exploitables/CVE-2020-17382
 driver_description: https://github.com/namazso/physmem_drivers
 Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89
 Metadata:
   binary: ''
   Verified: ''

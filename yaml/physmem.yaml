@@ -2,11 +2,12 @@ Name: physmem.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create physmem binPath= C:\windows\temp\physmem.sys type= kernel
+
+    sc.exe start physmem.sys'
+  Description: physmem.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -18,7 +19,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 589A7D4DF869395601BA7538A65AFAE8C4616385
 Metadata:
   binary: ''
   Verified: ''

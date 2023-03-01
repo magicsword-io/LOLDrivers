@@ -2,10 +2,11 @@ Name: gdrv.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
+  Command: 'sc.exe create gdrv binPath= C:\windows\temp\gdrv.sys type= kernel
+
+    sc.exe start gdrv.sys'
   Description: 'gdrv.sys is vulnerable to multiple CVEs: CVE-2018-19320, CVE-2018-19322,
     CVE-2018-19323, CVE-2018-19321. Read/Write Physical memory, read/write to/from
     IO ports, exposes ring0 memcpy-like functionality,  read and write Machine Specific
@@ -14,9 +15,11 @@ Commands:
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
-- ' https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-privilege-vulnerabilities'
-- ' https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b'
-driver_description: ''
+- ' https://github.com/hoangprod/DanSpecial'
+- https://github.com/namazso/physmem_drivers
+- https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-privilege-vulnerabilities
+- https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b
+driver_description: https://github.com/namazso/physmem_drivers
 Acknowledgement:
   Person: MattNotMax
   Handle: '@mattnotmax'
@@ -27,7 +30,7 @@ KnownHashes:
 Metadata:
   binary: ''
   Verified: ''
-  Date: 2013-07-03, 17:32:00 UTC, 2017-11-30 18:40:00 UTC
+  Date: 2013-07-03 17:32:00 UTC, 2017-11-30 18:40:00 UTC
   Publisher: ''
   Company: ''
   Description: GIGABYTE Tools, GIGA-BYTE NonPNP Driver

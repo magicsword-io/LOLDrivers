@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+AsrRapidStartDrv.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create AsrRapidStartDrv binPath= C:\windows\temp\AsrRapidStartDrv.sys type= kernel
+sc.exe start AsrRapidStartDrv.sys
 ```
 
 #### Resources
@@ -42,12 +43,16 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/0AAFA9F47ACF69D46C9542985994FF5321F00842A28DF2396D4A3076776A83CB">0AAFA9F47ACF69D46C9542985994FF5321F00842A28DF2396D4A3076776A83CB</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
-- Publisher: 
+- Publisher: ASROCK Incorporation
 - Company: 
-- Description: 
+- Description: RW-Everything Read &amp; Write Driver
 - Product: 
 - ProductVersion: 
 - FileVersion: 

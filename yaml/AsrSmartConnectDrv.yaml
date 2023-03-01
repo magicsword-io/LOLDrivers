@@ -2,11 +2,13 @@ Name: AsrSmartConnectDrv.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create AsrSmartConnectDrv binPath= C:\windows\temp\AsrSmartConnectDrv.sys
+    type= kernel
+
+    sc.exe start AsrSmartConnectDrv.sys'
+  Description: AsrSmartConnectDrv.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,14 +19,15 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 47F08F7D30D824A8F4BB8A98916401A37C0FD8502DB308ABA91FE3112B892DCC
 Metadata:
   binary: ''
   Verified: ''
   Date: ''
-  Publisher: ''
+  Publisher: ASROCK Incorporation
   Company: ''
-  Description: ''
+  Description: RW-Everything Read & Write Driver
   Product: ''
   ProductVersion: ''
   FileVersion: ''

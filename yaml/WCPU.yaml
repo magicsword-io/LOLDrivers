@@ -2,11 +2,12 @@ Name: WCPU.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create WCPU binPath= C:\windows\temp\WCPU.sys type= kernel
+
+    sc.exe start WCPU.sys'
+  Description: WCPU.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,7 +18,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 159E7C5A12157AF92E0D14A0D3EA116F91C09E21A9831486E6DC592C93C10980
 Metadata:
   binary: ''
   Verified: ''

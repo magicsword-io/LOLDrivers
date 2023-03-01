@@ -2,11 +2,12 @@ Name: rtkio.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create rtkio binPath= C:\windows\temp\rtkio.sys type= kernel
+
+    sc.exe start rtkio.sys'
+  Description: BSMEMx64.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,7 +18,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 478917514be37b32d5ccf76e4009f6f952f39f5553953544f1b0688befd95e82
 Metadata:
   binary: ''
   Verified: ''

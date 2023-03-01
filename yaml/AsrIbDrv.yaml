@@ -2,11 +2,12 @@ Name: AsrIbDrv.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create AsrIbDrv binPath= C:\windows\temp\AsrIbDrv.sys type= kernel
+
+    sc.exe start AsrIbDrv.sys'
+  Description: AsrIbDrv.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,14 +18,15 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 2A652DE6B680D5AD92376AD323021850DAB2C653ABF06EDF26120F7714B8E08A
 Metadata:
   binary: ''
   Verified: ''
   Date: ''
-  Publisher: ''
+  Publisher: ASROCK Incorporation
   Company: ''
-  Description: ''
+  Description: RW-Everything Read & Write Driver
   Product: ''
   ProductVersion: ''
   FileVersion: ''

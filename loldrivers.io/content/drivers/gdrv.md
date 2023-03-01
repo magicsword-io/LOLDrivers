@@ -1,6 +1,6 @@
 +++
 
-description = ""
+description = "https://github.com/namazso/physmem_drivers"
 title = "gdrv.sys"
 weight = 10
 
@@ -24,16 +24,21 @@ gdrv.sys is vulnerable to multiple CVEs: CVE-2018-19320, CVE-2018-19322, CVE-201
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create gdrv binPath= C:\windows\temp\gdrv.sys type= kernel
+sc.exe start gdrv.sys
 ```
 
 #### Resources
 <br>
 
 
-<li><a href=" https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-privilege-vulnerabilities"> https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-privilege-vulnerabilities</a></li>
+<li><a href=" https://github.com/hoangprod/DanSpecial"> https://github.com/hoangprod/DanSpecial</a></li>
 
-<li><a href=" https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b"> https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b</a></li>
+<li><a href="https://github.com/namazso/physmem_drivers">https://github.com/namazso/physmem_drivers</a></li>
+
+<li><a href="https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-privilege-vulnerabilities">https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-privilege-vulnerabilities</a></li>
+
+<li><a href="https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b">https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b</a></li>
 
 
 <br>
@@ -52,7 +57,7 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 - binary: 
 - Verified: 
-- Date: 2013-07-03, 17:32:00 UTC, 2017-11-30 18:40:00 UTC
+- Date: 2013-07-03 17:32:00 UTC, 2017-11-30 18:40:00 UTC
 - Publisher: 
 - Company: 
 - Description: GIGABYTE Tools, GIGA-BYTE NonPNP Driver

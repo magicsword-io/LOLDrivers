@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+SysInfo.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create SysInfo binPath= C:\windows\temp\SysInfo.sys type= kernel
+sc.exe start SysInfo.sys
 ```
 
 #### Resources
@@ -39,6 +40,10 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 #### Binary Metadata
 <br>
+
+
+
+<li><a href="https://www.virustotal.com/gui/file/7049F3C939EFE76A5556C2A2C04386DB51DAF61D56B679F4868BB0983C996EBB">7049F3C939EFE76A5556C2A2C04386DB51DAF61D56B679F4868BB0983C996EBB</a></li>
 
 
 

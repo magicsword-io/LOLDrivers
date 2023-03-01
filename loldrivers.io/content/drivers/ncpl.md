@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+ncpl.sys is a vulnerable driver. CVE-2013-3956.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create ncpl binPath= C:\windows\temp\ncpl.sys type= kernel
+sc.exe start ncpl.sys
 ```
 
 #### Resources
@@ -41,6 +42,10 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 #### Binary Metadata
 <br>
+
+
+
+<li><a href="https://www.virustotal.com/gui/file/6c7120e40fc850e4715058b233f5ad4527d1084a909114fd6a36b7b7573c4a44">6c7120e40fc850e4715058b233f5ad4527d1084a909114fd6a36b7b7573c4a44</a></li>
 
 
 

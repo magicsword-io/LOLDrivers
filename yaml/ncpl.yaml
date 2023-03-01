@@ -2,11 +2,12 @@ Name: ncpl.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create ncpl binPath= C:\windows\temp\ncpl.sys type= kernel
+
+    sc.exe start ncpl.sys'
+  Description: ncpl.sys is a vulnerable driver. CVE-2013-3956.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -18,7 +19,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 6c7120e40fc850e4715058b233f5ad4527d1084a909114fd6a36b7b7573c4a44
 Metadata:
   binary: ''
   Verified: ''

@@ -2,9 +2,11 @@ Name: ''
 Author: ''
 Created: ''
 MitreID: ''
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: ''
+  Command: 'sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+
+    sc.exe start AsrDrv103.sys'
   Description: ''
   Usecase: ''
   Privileges: ''

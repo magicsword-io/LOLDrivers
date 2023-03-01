@@ -1,0 +1,70 @@
++++
+
+description = ""
+title = "ntbios.sys"
+weight = 10
+
++++
+
+
+{{< block "grid-1" >}}
+{{< column "mt-2 pt-1">}}
+
+
+# ntbios.sys
+
+#### Description
+
+Driver used in the Daxin malware campaign.
+
+- **Created**: 2023-02-28
+- **Author**: Michael Haag
+- **Acknowledgement**:  | [](https://twitter.com/)
+
+#### Command
+
+```
+sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys
+```
+
+#### Resources
+<br>
+
+
+<li><a href="https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48">https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48</a></li>
+
+<li><a href="https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage">https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage</a></li>
+
+
+<br>
+
+
+#### Binary Metadata
+<br>
+
+
+
+<li><a href="https://www.virustotal.com/gui/file/96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc">96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc</a></li>
+
+
+
+- binary: 
+- Verified: Unsigned
+- Date: 10:26 AM 11/19/2009
+- Publisher: n/a
+- Company: Microsoft Corporation
+- Description: ntbios driver
+- Product:  Microsoft(R) Windows (R) NT Operating System
+- ProductVersion: 
+- FileVersion: 
+- MachineType: 
+- OriginalFilename: 
+
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ntbios.sys.yml)
+
+*last_updated:* 2023-02-28
+
+
+{{< /column >}}
+{{< /block >}}

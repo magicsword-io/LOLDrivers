@@ -2,11 +2,12 @@ Name: nicm.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create nicm binPath= C:\windows\temp\nicm.sys type= kernel
+
+    sc.exe start nicm.sys'
+  Description: nicm.sys is a vulnerable driver. CVE-2013-3956.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -18,7 +19,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- e6056443537d4d2314dabca1b9168f1eaaf17a14eb41f6f5741b6b82b3119790
 Metadata:
   binary: ''
   Verified: ''

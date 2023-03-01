@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+ADV64DRV.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,12 +24,15 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create ADV64DRV binPath= C:\windows\temp\ADV64DRV.sys type= kernel
+sc.exe start ADV64DRV.sys
 ```
 
 #### Resources
 <br>
 
+
+<li><a href=" https://github.com/namazso/physmem_drivers"> https://github.com/namazso/physmem_drivers</a></li>
 
 <li><a href=" https://github.com/namazso/physmem_drivers"> https://github.com/namazso/physmem_drivers</a></li>
 
@@ -42,10 +45,14 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/BB50818A07B0EB1BD317467139B7EB4BAD6CD89053FECDABFEAE111689825955">BB50818A07B0EB1BD317467139B7EB4BAD6CD89053FECDABFEAE111689825955</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
-- Publisher: 
+- Publisher: YY Inc.
 - Company: 
 - Description: 
 - Product: 

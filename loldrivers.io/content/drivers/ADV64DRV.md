@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+ADV64DRV.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create ADV64DRV.sys binpath = c:\temp\ADV64DRV.sys.sys type=kernel start=auto displayname="ADV64DRV.sys vulnerable Driver"
+sc.exe create ADV64DRV binPath= C:\windows\temp\ADV64DRV.sys type= kernel
+sc.exe start ADV64DRV.sys
 ```
 
 #### Resources
@@ -49,10 +50,10 @@ sc create ADV64DRV.sys binpath = c:\temp\ADV64DRV.sys.sys type=kernel start=auto
 - binary: 
 - Verified: TRUE
 - Date: 44896
-- Publisher: Microsoft Corp
-- Company: Microsoft Corp
-- Description: Software Driver
-- Product: NA
+- Publisher: FUJITSU LIMITED
+- Company: 
+- Description: 
+- Product: 
 - ProductVersion: 
 - FileVersion: 
 - MachineType: 

@@ -2,11 +2,12 @@ Name: msrhook.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create msrhook binPath= C:\windows\temp\msrhook.sys type= kernel
+
+    sc.exe start msrhook.sys'
+  Description: msrhook.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,7 +18,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 6DE84CAA2CA18673E01B91AF58220C60AECD5CCCF269725EC3C7F226B2167492
 Metadata:
   binary: ''
   Verified: ''

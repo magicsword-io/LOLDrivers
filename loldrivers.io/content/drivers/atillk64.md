@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+atillk64.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create atillk64 binPath= C:\windows\temp\atillk64.sys type= kernel
+sc.exe start atillk64.sys
 ```
 
 #### Resources
@@ -42,12 +43,16 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/5C04C274A708C9A7D993E33BE3EA9E6119DC29527A767410DBAF93996F87369A">5C04C274A708C9A7D993E33BE3EA9E6119DC29527A767410DBAF93996F87369A</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
-- Publisher: 
+- Publisher: &#34;ATI Technologies, Inc&#34;
 - Company: 
-- Description: 
+- Description: ATI Diagnostics Hardware Abstraction Sys
 - Product: 
 - ProductVersion: 
 - FileVersion: 

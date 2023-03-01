@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+aswsnx.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create aswsnx binPath= C:\windows\temp\aswsnx.sys type= kernel
+sc.exe start aswsnx.sys
 ```
 
 #### Resources
@@ -35,12 +36,18 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 <li><a href=" https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/"> https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/</a></li>
 
+<li><a href="https://artemonsecurity.blogspot.com/2016/10/remsec-driver-analysis-part-3.html?view=sidebar">https://artemonsecurity.blogspot.com/2016/10/remsec-driver-analysis-part-3.html?view=sidebar</a></li>
+
 
 <br>
 
 
 #### Binary Metadata
 <br>
+
+
+
+<li><a href="https://www.virustotal.com/gui/file/"></a></li>
 
 
 

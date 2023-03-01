@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+WinRing0.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create WinRing0 binPath= C:\windows\temp\WinRing0.sys type= kernel
+sc.exe start WinRing0.sys
 ```
 
 #### Resources
@@ -39,6 +40,14 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 #### Binary Metadata
 <br>
+
+
+
+<li><a href="https://www.virustotal.com/gui/file/3EC5AD51E6879464DFBCCB9F4ED76C6325056A42548D5994BA869DA9C4C039A8">3EC5AD51E6879464DFBCCB9F4ED76C6325056A42548D5994BA869DA9C4C039A8</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/47EAEBC920CCF99E09FC9924FEB6B19B8A28589F52783327067C9B09754B5E84">47EAEBC920CCF99E09FC9924FEB6B19B8A28589F52783327067C9B09754B5E84</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/A7B000ABBCC344444A9B00CFADE7AA22AB92CE0CADEC196C30EB1851AE4FA062">A7B000ABBCC344444A9B00CFADE7AA22AB92CE0CADEC196C30EB1851AE4FA062</a></li>
 
 
 

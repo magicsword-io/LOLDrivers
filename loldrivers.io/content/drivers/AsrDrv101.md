@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+AsrDrv101.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create AsrDrv101 binPath= C:\windows\temp\AsrDrv101.sys type= kernel
+sc.exe start AsrDrv101.sys
 ```
 
 #### Resources
@@ -42,12 +43,16 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/F40435488389B4FB3B945CA21A8325A51E1B5F80F045AB019748D0EC66056A8B">F40435488389B4FB3B945CA21A8325A51E1B5F80F045AB019748D0EC66056A8B</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
-- Publisher: 
+- Publisher: ASROCK Incorporation
 - Company: 
-- Description: 
+- Description: ASRock IO Driver
 - Product: 
 - ProductVersion: 
 - FileVersion: 

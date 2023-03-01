@@ -1,0 +1,35 @@
+Name: ntbios.sys
+Author: Michael Haag
+Created: '2023-02-28'
+MitreID: T1068
+Category: malicious
+Commands:
+  Command: 'sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+
+    sc.exe start AsrDrv103.sys'
+  Description: Driver used in the Daxin malware campaign.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+driver_description: ''
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownHashes:
+- 96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc
+Metadata:
+  binary: ''
+  Verified: Unsigned
+  Date: 10:26 AM 11/19/2009
+  Publisher: n/a
+  Company: Microsoft Corporation
+  Description: ntbios driver
+  Product: ' Microsoft(R) Windows (R) NT Operating System'
+  ProductVersion: 5, 0, 2, 1
+  FileVersion: 5, 0, 2, 1
+  MachineType: 32-bit
+  OriginalFilename: ''

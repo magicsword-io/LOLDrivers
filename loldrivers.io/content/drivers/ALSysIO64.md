@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+ALSysIO64.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create ALSysIO64 binPath= C:\windows\temp\ALSysIO64.sys type= kernel
+sc.exe start ALSysIO64.sys
 ```
 
 #### Resources
@@ -42,12 +43,18 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/7196187FB1EF8D108B380D37B2AF8EFDEB3CA1F6EEFD37B5DC114C609147216D">7196187FB1EF8D108B380D37B2AF8EFDEB3CA1F6EEFD37B5DC114C609147216D</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/7F375639A0DF7FE51E5518CF87C3F513C55BC117DB47D28DA8C615642EB18BFA">7F375639A0DF7FE51E5518CF87C3F513C55BC117DB47D28DA8C615642EB18BFA</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
-- Publisher: 
+- Publisher: Artur Liberman
 - Company: 
-- Description: 
+- Description: ALSysIO
 - Product: 
 - ProductVersion: 
 - FileVersion: 

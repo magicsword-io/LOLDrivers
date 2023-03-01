@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+BS_Def64.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create BS_Def64 binPath= C:\windows\temp\BS_Def64.sys type= kernel
+sc.exe start BS_Def64.sys
 ```
 
 #### Resources
@@ -42,12 +43,20 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/0040153302B88BEE27EB4F1ECA6855039E1A057370F5E8C615724FA5215BADA3">0040153302B88BEE27EB4F1ECA6855039E1A057370F5E8C615724FA5215BADA3</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/3326E2D32BBABD69FEB6024809AFC56C7E39241EBE70A53728C77E80995422A5">3326E2D32BBABD69FEB6024809AFC56C7E39241EBE70A53728C77E80995422A5</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/36B9E31240AB0341873C7092B63E2E0F2CAB2962EBF9B25271C3A1216B7669EB">36B9E31240AB0341873C7092B63E2E0F2CAB2962EBF9B25271C3A1216B7669EB</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
-- Publisher: 
+- Publisher: ASUSTeK Computer Inc.
 - Company: 
-- Description: 
+- Description: Default BIOS Flash Driver
 - Product: 
 - ProductVersion: 
 - FileVersion: 

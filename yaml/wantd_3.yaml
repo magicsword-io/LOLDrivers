@@ -1,0 +1,35 @@
+Name: wantd_3.sys
+Author: Michael Haag
+Created: '2023-02-28'
+MitreID: T1068
+Category: malicious
+Commands:
+  Command: 'sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+
+    sc.exe start AsrDrv103.sys'
+  Description: Driver used in the Daxin malware campaign.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+driver_description: ''
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownHashes:
+- 81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1
+Metadata:
+  binary: ''
+  Verified: Unsigned
+  Date: 7:52 AM 4/30/2014
+  Publisher: n/a
+  Company: Microsoft Corporation
+  Description: WAN Transport Driver
+  Product: Microsoft Windows Operating System
+  ProductVersion: 5.2.3790.938
+  FileVersion: 5.2.3790.938
+  MachineType: 32-bit
+  OriginalFilename: ''

@@ -2,23 +2,35 @@ Name: rwdrv.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create rwdrv binPath= C:\windows\temp\rwdrv.sys type= kernel
+
+    sc.exe start rwdrv.sys'
+  Description: 'This utility access almost all the computer hardware, including PCI
+    (PCI Express), PCI Index/Data, Memory, Memory Index/Data, I/O Space, I/O Index/Data,
+    Super I/O, Clock Generator, DIMM SPD, SMBus Device, CPU MSR Registers, ATA/ATAPI
+    Identify Data, Disk Read Write, ACPI Tables Dump (include AML decode), Embedded
+    Controller, USB Information, SMBIOS Structures, PCI Option ROMs, MP Configuration
+    Table, E820, EDID and Remote Access. And also a Command Window is provided to
+    access hardware manually.
+
+
+    '
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/jbaines-r7/dellicious'
 - ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
+- http://rweverything.com/
 driver_description: https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
 Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3
 Metadata:
   binary: ''
   Verified: ''

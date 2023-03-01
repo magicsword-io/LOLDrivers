@@ -2,27 +2,30 @@ Name: Dh_Kernel.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create ADV64DRV binPath= C:\windows\temp\ADV64DRV.sys type= kernel
+
+    sc.exe start ADV64DRV.sys'
+  Description: ADV64DRV.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
+- ' https://github.com/namazso/physmem_drivers'
 - ' https://github.com/namazso/physmem_drivers'
 driver_description: https://github.com/namazso/physmem_drivers
 Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- BB50818A07B0EB1BD317467139B7EB4BAD6CD89053FECDABFEAE111689825955
 Metadata:
   binary: ''
   Verified: ''
   Date: ''
-  Publisher: ''
+  Publisher: YY Inc.
   Company: ''
   Description: ''
   Product: ''

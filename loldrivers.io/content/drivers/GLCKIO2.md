@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+GLCKIO2.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create GLCKIO2 binPath= C:\windows\temp\GLCKIO2.sys type= kernel
+sc.exe start GLCKIO2.sys
 ```
 
 #### Resources
@@ -42,10 +43,16 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/3A5EC83FE670E5E23AEF3AFA0A7241053F5B6BE5E6CA01766D6B5F9177183C25">3A5EC83FE670E5E23AEF3AFA0A7241053F5B6BE5E6CA01766D6B5F9177183C25</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/61A1BDDDD3C512E681818DEBB5BEE94DB701768FC25E674FCAD46592A3259BD0">61A1BDDDD3C512E681818DEBB5BEE94DB701768FC25E674FCAD46592A3259BD0</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
-- Publisher: 
+- Publisher: ASUSTeK Computer Inc.
 - Company: 
 - Description: 
 - Product: 

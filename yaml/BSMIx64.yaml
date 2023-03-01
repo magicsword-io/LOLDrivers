@@ -2,11 +2,12 @@ Name: BSMIx64.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create BSMIx64 binPath= C:\windows\temp\BSMIx64.sys type= kernel
+
+    sc.exe start BSMIx64.sys'
+  Description: BSMIx64.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,7 +18,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 552f70374715e70c4ade591d65177be2539ec60f751223680dfaccb9e0be0ed9
 Metadata:
   binary: ''
   Verified: ''

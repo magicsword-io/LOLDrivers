@@ -2,11 +2,12 @@ Name: HOSTNT.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create HOSTNT binPath= C:\windows\temp\HOSTNT.sys type= kernel
+
+    sc.exe start HOSTNT.sys'
+  Description: HOSTNT.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,14 +18,15 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 07B6D69BAFCFD767F1B63A490A8843C3BB1F8E1BBEA56176109B5743C8F7D357
 Metadata:
   binary: ''
   Verified: ''
   Date: ''
-  Publisher: ''
+  Publisher: '"SafeNet, Inc."'
   Company: ''
-  Description: ''
+  Description: Hostnt 64-bit driver
   Product: ''
   ProductVersion: ''
   FileVersion: ''

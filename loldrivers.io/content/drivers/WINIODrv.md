@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+WINIODrv.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create WINIODrv binPath= C:\windows\temp\WINIODrv.sys type= kernel
+sc.exe start WINIODrv.sys
 ```
 
 #### Resources
@@ -39,6 +40,14 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 #### Binary Metadata
 <br>
+
+
+
+<li><a href="https://www.virustotal.com/gui/file/3243AAB18E273A9B9C4280A57AECEF278E10BFFF19ABB260D7A7820E41739099">3243AAB18E273A9B9C4280A57AECEF278E10BFFF19ABB260D7A7820E41739099</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/7CFA5E10DFF8A99A5D544B011F676BC383991274C693E21E3AF40CF6982ADB8C">7CFA5E10DFF8A99A5D544B011F676BC383991274C693E21E3AF40CF6982ADB8C</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/C9B49B52B493B53CD49C12C3FA9553E57C5394555B64E32D1208F5B96A5B8C6E">C9B49B52B493B53CD49C12C3FA9553E57C5394555B64E32D1208F5B96A5B8C6E</a></li>
 
 
 

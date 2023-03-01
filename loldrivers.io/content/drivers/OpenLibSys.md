@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+OpenLibSys.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create OpenLibSys binPath= C:\windows\temp\OpenLibSys.sys type= kernel
+sc.exe start OpenLibSys.sys
 ```
 
 #### Resources
@@ -39,6 +40,12 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 #### Binary Metadata
 <br>
+
+
+
+<li><a href="https://www.virustotal.com/gui/file/91314768DA140999E682D2A290D48B78BB25A35525EA12C1B1F9634D14602B2C">91314768DA140999E682D2A290D48B78BB25A35525EA12C1B1F9634D14602B2C</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/F0605DDA1DEF240DC7E14EFA73927D6C6D89988C01EA8647B671667B2B167008">F0605DDA1DEF240DC7E14EFA73927D6C6D89988C01EA8647B671667B2B167008</a></li>
 
 
 

@@ -2,11 +2,13 @@ Name: HwOs2Ec10x64.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create HwOs2Ec10x64 binPath= C:\windows\temp\HwOs2Ec10x64.sys type=
+    kernel
+
+    sc.exe start HwOs2Ec10x64.sys'
+  Description: HwOs2Ec10x64.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,7 +19,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- bb1135b51acca8348d285dc5461d10e8f57260e7d0c8cc4a092734d53fc40cbc
 Metadata:
   binary: ''
   Verified: ''

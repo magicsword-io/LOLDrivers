@@ -24,7 +24,8 @@ The MsIo64.sys and MsIo32.sys drivers in Patriot Viper RGB before 1.1 allow loca
 #### Command
 
 ```
-
+sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+sc.exe start AsrDrv103.sys
 ```
 
 #### Resources
@@ -32,6 +33,10 @@ The MsIo64.sys and MsIo32.sys drivers in Patriot Viper RGB before 1.1 allow loca
 
 
 <li><a href=" https://github.com/elastic/protections-artifacts/search?q=VulnDriver"> https://github.com/elastic/protections-artifacts/search?q=VulnDriver</a></li>
+
+<li><a href="https://www.activecyber.us/activelabs/viper-rgb-driver-local-privilege-escalation-cve-2019-18845">https://www.activecyber.us/activelabs/viper-rgb-driver-local-privilege-escalation-cve-2019-18845</a></li>
+
+<li><a href="http://blog.rewolf.pl/blog/?p=1630">http://blog.rewolf.pl/blog/?p=1630</a></li>
 
 
 <br>

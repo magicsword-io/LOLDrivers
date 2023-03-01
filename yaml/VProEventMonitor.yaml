@@ -2,11 +2,13 @@ Name: VProEventMonitor.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create VProEventMonitor binPath= C:\windows\temp\VProEventMonitor.sys
+    type= kernel
+
+    sc.exe start VProEventMonitor.sys'
+  Description: VProEventMonitor.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,7 +19,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 7877C1B0E7429453B750218CA491C2825DAE684AD9616642EFF7B41715C70ACA
 Metadata:
   binary: ''
   Verified: ''

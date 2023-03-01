@@ -2,11 +2,12 @@ Name: SysInfo.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create SysInfo binPath= C:\windows\temp\SysInfo.sys type= kernel
+
+    sc.exe start SysInfo.sys'
+  Description: SysInfo.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,7 +18,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 7049F3C939EFE76A5556C2A2C04386DB51DAF61D56B679F4868BB0983C996EBB
 Metadata:
   binary: ''
   Verified: ''

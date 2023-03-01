@@ -2,11 +2,12 @@ Name: ADV64DRV.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create ADV64DRV.sys binpath = c:\temp\ADV64DRV.sys.sys type=kernel start=auto
-    displayname="ADV64DRV.sys vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create ADV64DRV binPath= C:\windows\temp\ADV64DRV.sys type= kernel
+
+    sc.exe start ADV64DRV.sys'
+  Description: ADV64DRV.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -27,11 +28,11 @@ Metadata:
   binary: ''
   Verified: 'TRUE'
   Date: '44896'
-  Publisher: Microsoft Corp
-  Company: Microsoft Corp
-  Description: Software Driver
-  Product: NA
-  ProductVersion: 1.0.2
-  FileVersion: '4.3'
-  MachineType: x64
+  Publisher: FUJITSU LIMITED
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
   OriginalFilename: ''

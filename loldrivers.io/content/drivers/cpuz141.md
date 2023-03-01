@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+cpuz141.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create cpuz141 binPath= C:\windows\temp\cpuz141.sys type= kernel
+sc.exe start cpuz141.sys
 ```
 
 #### Resources
@@ -42,12 +43,16 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/DED2927F9A4E64EEFD09D0CABA78E94F309E3A6292841AE81D5528CAB109F95D">DED2927F9A4E64EEFD09D0CABA78E94F309E3A6292841AE81D5528CAB109F95D</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
-- Publisher: 
+- Publisher: CPUID
 - Company: 
-- Description: 
+- Description: CPUID Driver
 - Product: 
 - ProductVersion: 
 - FileVersion: 

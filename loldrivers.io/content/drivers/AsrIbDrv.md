@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+AsrIbDrv.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create AsrIbDrv binPath= C:\windows\temp\AsrIbDrv.sys type= kernel
+sc.exe start AsrIbDrv.sys
 ```
 
 #### Resources
@@ -42,12 +43,16 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/2A652DE6B680D5AD92376AD323021850DAB2C653ABF06EDF26120F7714B8E08A">2A652DE6B680D5AD92376AD323021850DAB2C653ABF06EDF26120F7714B8E08A</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
-- Publisher: 
+- Publisher: ASROCK Incorporation
 - Company: 
-- Description: 
+- Description: RW-Everything Read &amp; Write Driver
 - Product: 
 - ProductVersion: 
 - FileVersion: 

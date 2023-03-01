@@ -2,11 +2,12 @@ Name: HwRwDrv.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: 'sc.exe create HwRwDrv binPath= C:\windows\temp\HwRwDrv.sys type= kernel
+
+    sc.exe start HwRwDrv.sys'
+  Description: HwRwDrv.sys is a vulnerable driver.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,14 +18,15 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 21CCDD306B5183C00ECFD0475B3152E7D94B921E858E59B68A03E925D1715F21
 Metadata:
   binary: ''
   Verified: ''
   Date: ''
-  Publisher: ''
+  Publisher: Shuttle Inc.
   Company: ''
-  Description: ''
+  Description: Hardware read & write driver
   Product: ''
   ProductVersion: ''
   FileVersion: ''

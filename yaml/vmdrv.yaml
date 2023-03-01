@@ -2,10 +2,11 @@ Name: vmdrv.sys
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
-Category: Vulnerable
+Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
+  Command: 'sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
+
+    sc.exe start AsrDrv103.sys'
   Description: CapCom.sys is a vulnerable driver that has been abused over the years.
   Usecase: Elevate privileges
   Privileges: kernel
@@ -17,7 +18,8 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 32cccc4f249499061c0afa18f534c825d01034a1f6815f5506bf4c4ff55d1351
 Metadata:
   binary: ''
   Verified: ''

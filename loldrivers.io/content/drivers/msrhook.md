@@ -15,7 +15,7 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+msrhook.sys is a vulnerable driver.
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -24,7 +24,8 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 #### Command
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create msrhook binPath= C:\windows\temp\msrhook.sys type= kernel
+sc.exe start msrhook.sys
 ```
 
 #### Resources
@@ -39,6 +40,10 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 #### Binary Metadata
 <br>
+
+
+
+<li><a href="https://www.virustotal.com/gui/file/6DE84CAA2CA18673E01B91AF58220C60AECD5CCCF269725EC3C7F226B2167492">6DE84CAA2CA18673E01B91AF58220C60AECD5CCCF269725EC3C7F226B2167492</a></li>
 
 
 
