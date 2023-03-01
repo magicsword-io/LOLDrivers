@@ -8,44 +8,8 @@ import json
 import datetime
 import jinja2
 import csv
-from stix2 import FileSystemSource, Filter
 
-
-def get_mitre_enrichment_new(attack, mitre_attack_id):
-    for technique in attack:
-        if mitre_attack_id == technique["external_references"][0]["external_id"]:
-            mitre_attack = mitre_attack_object(technique, attack)
-            return mitre_attack
-    return []
-
-def get_all_techniques(projects_path):
-    path_cti = os.path.join(projects_path,'cti/enterprise-attack')
-    fs = FileSystemSource(path_cti)
-    all_techniques = get_techniques(fs)
-    return all_techniques
-
-def get_techniques(src):
-    filt = [Filter('type', '=', 'attack-pattern')]
-    return src.query(filt)
-
-def mitre_attack_object(technique, attack):
-    mitre_attack = dict()
-    mitre_attack['technique_id'] = technique["external_references"][0]["external_id"]
-    mitre_attack['technique'] = technique["name"]
-    mitre_attack['technique_description'] = technique['description']
-
-    # process tactics
-    tactics = []
-    if 'kill_chain_phases' in technique:
-        for tactic in technique['kill_chain_phases']:
-            if tactic['kill_chain_name'] == 'mitre-attack':
-                tactic = tactic['phase_name'].replace('-', ' ')
-                tactics.append(tactic.title())
-
-    mitre_attack['tactic'] = tactics
-    return mitre_attack
-
-def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, attack, messages, VERBOSE):
+def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE):
     manifest_files = []
     for root, dirs, files in os.walk(REPO_PATH):
         for file in files:
@@ -67,12 +31,7 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, attack, messages,
                 print(exc)
                 print("Error reading {0}".format(manifest_file))
                 sys.exit(1)
-        driver = object
-
-        # enrich the mitre object
-        mitre_attacks = []
-        driver['mitre_attack'] = get_mitre_enrichment_new(attack, driver['MitreID'])
-        drivers.append(driver)
+        drivers.append(object)
 
     # write markdowns
     j2_env = jinja2.Environment(loader=jinja2.FileSystemLoader(TEMPLATE_PATH), trim_blocks=False, autoescape=True, lstrip_blocks=True)
@@ -136,9 +95,6 @@ if __name__ == "__main__":
 
 
     TEMPLATE_PATH = os.path.join(REPO_PATH, '../bin/jinja2_templates')
-    if VERBOSE:
-        print("getting mitre enrichment data from cti")
-    techniques = get_all_techniques('.')
 
     if VERBOSE:
         print("wiping the {0}/content/drivers/ folder".format(OUTPUT_DIR))
@@ -162,7 +118,7 @@ if __name__ == "__main__":
 
 
     messages = []
-    drivers, messages = generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, techniques, messages, VERBOSE)
+    drivers, messages = generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE)
 
     # print all the messages from generation
     for m in messages:
