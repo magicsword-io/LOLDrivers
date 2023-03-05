@@ -14,7 +14,7 @@ Living Off The Land Drivers
 * `poetry shell`
 * `cd loldrivers.io && hugo serve`
 
-# Build site from csv
+# Build yamls from csv
 
 To build all the yamls from the `drivers.csv` file using `bin/genyaml.py`. To do this run:
 
