@@ -15,16 +15,19 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+
+WinIO32A.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create WinIO32A.sys binPath= C:\windows\temp\WinIO32A.sys type= kernel
+sc.exe start WinIO32A.sys
 ```
 
 #### Resources
@@ -42,6 +45,10 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/01779ee53f999464465ed690d823d160f73f10e7">01779ee53f999464465ed690d823d160f73f10e7</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
@@ -56,7 +63,7 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio32a.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

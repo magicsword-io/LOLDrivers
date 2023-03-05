@@ -15,17 +15,19 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+
+zamguard64.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
-sc.exe start AsrDrv103.sys
+sc.exe create zamguard64.sys binPath= C:\windows\temp\zamguard64.sys type= kernel
+sc.exe start zamguard64.sys
 ```
 
 #### Resources
@@ -61,7 +63,7 @@ sc.exe start AsrDrv103.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/zamguard64.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

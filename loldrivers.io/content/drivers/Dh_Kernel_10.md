@@ -15,17 +15,19 @@ weight = 10
 
 #### Description
 
-ADV64DRV.sys is a vulnerable driver.
+
+Dh_Kernel_10.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create ADV64DRV binPath= C:\windows\temp\ADV64DRV.sys type= kernel
-sc.exe start ADV64DRV.sys
+sc.exe create Dh_Kernel_10.sys binPath= C:\windows\temp\Dh_Kernel_10.sys type= kernel
+sc.exe start Dh_Kernel_10.sys
 ```
 
 #### Resources
@@ -61,7 +63,7 @@ sc.exe start ADV64DRV.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dh_kernel_10.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

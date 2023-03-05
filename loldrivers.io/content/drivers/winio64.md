@@ -15,17 +15,19 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+
+winio64.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
-sc.exe start AsrDrv103.sys
+sc.exe create winio64.sys binPath= C:\windows\temp\winio64.sys type= kernel
+sc.exe start winio64.sys
 ```
 
 #### Resources
@@ -43,6 +45,10 @@ sc.exe start AsrDrv103.sys
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/e1980c6592e6d2d92c1a65acad8f1071b6a404097bb6fcce494f3c8ac31385cf,hash:9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374">e1980c6592e6d2d92c1a65acad8f1071b6a404097bb6fcce494f3c8ac31385cf,hash:9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
@@ -57,7 +63,7 @@ sc.exe start AsrDrv103.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio64.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

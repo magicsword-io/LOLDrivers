@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
-iomem64.sys is a vulnerable driver.
+
+iomem64.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create iomem64 binPath= C:\windows\temp\iomem64.sys type= kernel
+sc.exe create iomem64.sys binPath= C:\windows\temp\iomem64.sys type= kernel
 sc.exe start iomem64.sys
 ```
 
@@ -63,7 +65,7 @@ sc.exe start iomem64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iomem64.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

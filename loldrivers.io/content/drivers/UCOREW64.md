@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
-UCOREW64.SYS is a vulnerable driver.
+
+UCOREW64.SYS is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create UCOREW64 binPath= C:\windows\temp\UCOREW64.SYS type= kernel
+sc.exe create UCOREW64.SYS binPath= C:\windows\temp\UCOREW64.SYS type= kernel
 sc.exe start UCOREW64.SYS
 ```
 
@@ -61,7 +63,7 @@ sc.exe start UCOREW64.SYS
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ucorew64.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

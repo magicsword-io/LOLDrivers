@@ -1,6 +1,6 @@
 +++
 
-description = "https://github.com/elastic/protections-artifacts/search?q=VulnDriver"
+description = ""
 title = "FairplayKD.sys"
 weight = 10
 
@@ -15,24 +15,28 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+
+FairplayKD.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
-sc.exe start AsrDrv103.sys
+sc.exe create FairplayKD.sys binPath= C:\windows\temp\FairplayKD.sys type= kernel
+sc.exe start FairplayKD.sys
 ```
 
 #### Resources
 <br>
 
 
-<li><a href=" https://github.com/elastic/protections-artifacts/search?q=VulnDriver"> https://github.com/elastic/protections-artifacts/search?q=VulnDriver</a></li>
+<li><a href="https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html">https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html</a></li>
+
+<li><a href="https://www.unknowncheats.me/forum/anti-cheat-bypass/244386-mta-fairplaykd-driver-reversed-exploited-rpm.html">https://www.unknowncheats.me/forum/anti-cheat-bypass/244386-mta-fairplaykd-driver-reversed-exploited-rpm.html</a></li>
 
 
 <br>
@@ -40,6 +44,10 @@ sc.exe start AsrDrv103.sys
 
 #### Binary Metadata
 <br>
+
+
+
+<li><a href="https://www.virustotal.com/gui/file/9f4ce6ab5e8d44f355426d9a6ab79833709f39b300733b5b251a0766e895e0e5">9f4ce6ab5e8d44f355426d9a6ab79833709f39b300733b5b251a0766e895e0e5</a></li>
 
 
 
@@ -57,7 +65,7 @@ sc.exe start AsrDrv103.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fairplaykd.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

@@ -4,10 +4,8 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create mhyprot binPath= C:\windows\temp\mhyprot.sys type= kernel
-
-    sc.exe start mhyprot.sys'
-  Description: mhyprot.sys is a vulnerable driver.
+  Command: ''
+  Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10

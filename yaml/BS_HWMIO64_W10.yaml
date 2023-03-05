@@ -4,11 +4,8 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create BS_HWMIO64_W10 binPath= C:\windows\temp\BS_HWMIO64_W10.sys
-    type= kernel
-
-    sc.exe start BS_HWMIO64_W10.sys'
-  Description: BS_HWMIO64_W10.sys is a vulnerable driver.
+  Command: ''
+  Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10

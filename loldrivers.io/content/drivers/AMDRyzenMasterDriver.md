@@ -15,17 +15,19 @@ weight = 10
 
 #### Description
 
-BSMEMx64.sys is a vulnerable driver.
+
+AMDRyzenMasterDriver.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
-sc.exe start AsrDrv103.sys
+sc.exe create AMDRyzenMasterDriver.sys binPath= C:\windows\temp\AMDRyzenMasterDriver.sys type= kernel
+sc.exe start AMDRyzenMasterDriver.sys
 ```
 
 #### Resources
@@ -61,7 +63,7 @@ sc.exe start AsrDrv103.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amdryzenmasterdriver.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

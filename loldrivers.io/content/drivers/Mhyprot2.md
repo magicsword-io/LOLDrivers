@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
-Mhyprot2.sys is a vulnerable driver.
+
+Mhyprot2.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create Mhyprot2 binPath= C:\windows\temp\Mhyprot2.sys type= kernel
+sc.exe create Mhyprot2.sys binPath= C:\windows\temp\Mhyprot2.sys type= kernel
 sc.exe start Mhyprot2.sys
 ```
 
@@ -61,7 +63,7 @@ sc.exe start Mhyprot2.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mhyprot2.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

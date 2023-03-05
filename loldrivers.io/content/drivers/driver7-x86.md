@@ -15,16 +15,19 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+
+driver7-x86.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create driver7-x86.sys binPath= C:\windows\temp\driver7-x86.sys type= kernel
+sc.exe start driver7-x86.sys
 ```
 
 #### Resources
@@ -42,6 +45,10 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/42851A01469BA97CDC38939B10CF9EA13237AA1F6C37B1AC84904C5A12A81FA0">42851A01469BA97CDC38939B10CF9EA13237AA1F6C37B1AC84904C5A12A81FA0</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
@@ -56,7 +63,7 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/driver7-x86.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

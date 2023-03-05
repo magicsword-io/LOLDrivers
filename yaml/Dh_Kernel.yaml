@@ -4,10 +4,8 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create ADV64DRV binPath= C:\windows\temp\ADV64DRV.sys type= kernel
-
-    sc.exe start ADV64DRV.sys'
-  Description: ADV64DRV.sys is a vulnerable driver.
+  Command: ''
+  Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10

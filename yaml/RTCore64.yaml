@@ -4,9 +4,7 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
-
-    sc.exe start AsrDrv103.sys'
+  Command: ''
   Description: The driver in Micro-Star MSI Afterburner 4.6.2.15658 (aka RTCore64.sys
     and RTCore32.sys) allows any authenticated user to read and write to arbitrary
     memory, I/O ports, and MSRs. This can be exploited for privilege escalation, code

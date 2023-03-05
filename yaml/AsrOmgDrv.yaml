@@ -4,10 +4,8 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create AsrOmgDrv binPath= C:\windows\temp\AsrOmgDrv.sys type= kernel
-
-    sc.exe start AsrOmgDrv.sys'
-  Description: AsrOmgDrv.sys is a vulnerable driver.
+  Command: ''
+  Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10

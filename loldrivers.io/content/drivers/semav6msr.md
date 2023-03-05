@@ -15,13 +15,15 @@ weight = 10
 
 #### Description
 
-semav6msr.sys is a vulnerable driver.
+
+semav6msr.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
 sc.exe create semav6msr.sys binPath= C:\windows\temp\semav6msr.sys type= kernel
@@ -61,7 +63,7 @@ sc.exe start semav6msr.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/semav6msr.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

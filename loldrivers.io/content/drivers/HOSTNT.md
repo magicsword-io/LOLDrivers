@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
-HOSTNT.sys is a vulnerable driver.
+
+HOSTNT.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create HOSTNT binPath= C:\windows\temp\HOSTNT.sys type= kernel
+sc.exe create HOSTNT.sys binPath= C:\windows\temp\HOSTNT.sys type= kernel
 sc.exe start HOSTNT.sys
 ```
 
@@ -61,7 +63,7 @@ sc.exe start HOSTNT.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hostnt.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

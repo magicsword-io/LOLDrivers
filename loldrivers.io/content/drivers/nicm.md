@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
+
 nicm.sys is a vulnerable driver. CVE-2013-3956.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create nicm binPath= C:\windows\temp\nicm.sys type= kernel
+sc.exe create nicm.sys binPath= C:\windows\temp\nicm.sys type= kernel
 sc.exe start nicm.sys
 ```
 
@@ -63,7 +65,7 @@ sc.exe start nicm.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nicm.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

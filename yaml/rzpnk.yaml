@@ -4,20 +4,25 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: ''
+  Description: A vulnerability exists in the latest version of Razer Synapse (v2.20.15.1104
+    as of the day of disclosure) which can be leveraged locally by a malicious application
+    to elevate its privileges to those of NT_AUTHORITY\SYSTEM. The vulnerability lies
+    in a specific IOCTL handler in the rzpnk.sys driver that passes a PID specified
+    by the user to ZwOpenProcess. CVE-2017-9769.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-driver_description: https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+- https://github.com/nomi-sec/PoC-in-GitHub/blob/2a85c15ed806287861a7adec6545c85aec618e3b/2017/CVE-2017-9769.json#L13
+- https://www.rapid7.com/db/modules/exploit/windows/local/razer_zwopenprocess/
+driver_description: ''
 Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- 93d873cdf23d5edc622b74f9544cac7fe247d7a68e1e2a7bf2879fad97a3ae63
 Metadata:
   binary: ''
   Verified: ''

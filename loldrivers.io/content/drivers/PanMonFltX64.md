@@ -15,16 +15,19 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+
+PanMonFltX64.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create PanMonFltX64.sys binPath= C:\windows\temp\PanMonFltX64.sys type= kernel
+sc.exe start PanMonFltX64.sys
 ```
 
 #### Resources
@@ -42,6 +45,10 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/06508aacb4ed0a1398a2b0da5fa2dbf7da435b56da76fd83c759a50a51c75caf">06508aacb4ed0a1398a2b0da5fa2dbf7da435b56da76fd83c759a50a51c75caf</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
@@ -56,7 +63,7 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/panmonfltx64.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

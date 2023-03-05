@@ -15,17 +15,19 @@ weight = 10
 
 #### Description
 
+
 CapCom.sys is a vulnerable driver that has been abused over the years.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
-sc.exe start AsrDrv103.sys
+sc.exe create pcdsrvc_x64.pkms binPath= C:\windows\temp\pcdsrvc_x64.pkms type= kernel
+sc.exe start pcdsrvc_x64.pkms
 ```
 
 #### Resources
@@ -57,7 +59,7 @@ sc.exe start AsrDrv103.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/pcdsrvc_x64.pkms.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

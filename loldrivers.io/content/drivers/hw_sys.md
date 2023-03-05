@@ -15,16 +15,19 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+
+hw_sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create hw_sys binPath= C:\windows\temp\hw_sys type= kernel
+sc.exe start hw_sys
 ```
 
 #### Resources
@@ -42,6 +45,10 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8">4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
@@ -56,7 +63,7 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hw_sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

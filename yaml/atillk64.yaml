@@ -4,10 +4,8 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create atillk64 binPath= C:\windows\temp\atillk64.sys type= kernel
-
-    sc.exe start atillk64.sys'
-  Description: atillk64.sys is a vulnerable driver.
+  Command: ''
+  Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10

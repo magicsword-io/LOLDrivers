@@ -15,16 +15,19 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+
+bwrsh.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create bwrsh.sys binPath= C:\windows\temp\bwrsh.sys type= kernel
+sc.exe start bwrsh.sys
 ```
 
 #### Resources
@@ -42,6 +45,10 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/37DDE6BD8A7A36111C3AC57E0AC20BBB93CE3374D0852BCACC9A2C8C8C30079E">37DDE6BD8A7A36111C3AC57E0AC20BBB93CE3374D0852BCACC9A2C8C8C30079E</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
@@ -56,7 +63,7 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bwrsh.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

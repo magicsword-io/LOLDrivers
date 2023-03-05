@@ -15,16 +15,19 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+
+fidpcidrv.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create fidpcidrv.sys binPath= C:\windows\temp\fidpcidrv.sys type= kernel
+sc.exe start fidpcidrv.sys
 ```
 
 #### Resources
@@ -42,6 +45,16 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/08596732304351B311970FF96B21F451F23B1E25">08596732304351B311970FF96B21F451F23B1E25</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/7838FB56FDAB816BC1900A4720EEA2FC9972EF7A">7838FB56FDAB816BC1900A4720EEA2FC9972EF7A</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/4789B910023A667BEE70FF1F1A8F369CFFB10FE8">4789B910023A667BEE70FF1F1A8F369CFFB10FE8</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/EEFF4EC4EBC12C6ACD2C930DC2EAAF877CFEC7EC">EEFF4EC4EBC12C6ACD2C930DC2EAAF877CFEC7EC</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
@@ -56,7 +69,7 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fidpcidrv.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

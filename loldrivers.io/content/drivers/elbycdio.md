@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
+
 elbycdio.sys is a vulnerable driver. CVE-2009-0824.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create elbycdio binPath= C:\windows\temp\elbycdio.sys type= kernel
+sc.exe create elbycdio.sys binPath= C:\windows\temp\elbycdio.sys type= kernel
 sc.exe start elbycdio.sys
 ```
 
@@ -65,7 +67,7 @@ sc.exe start elbycdio.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/elbycdio.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

@@ -4,10 +4,8 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create viraglt64 binPath= C:\windows\temp\viraglt64.sys type= kernel
-
-    sc.exe start viraglt64.sys'
-  Description: viraglt64.sys is a vulnerable driver.
+  Command: ''
+  Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10

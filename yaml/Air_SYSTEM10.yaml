@@ -1,0 +1,32 @@
+Name: Air_SYSTEM10.sys
+Author: Michael Haag
+Created: '2023-03-03'
+MitreID: T1068
+Category: malicious
+Commands:
+  Command: ''
+  Description: Driver categorized as POORTRY by Mandiant.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+driver_description: ''
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownHashes:
+- 1f2888e57fdd6aee466962c25ba7d62d
+Metadata:
+  binary: ''
+  Verified: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

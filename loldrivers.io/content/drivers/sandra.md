@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
-sandra.sys is a vulnerable driver.
+
+sandra.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create sandra binPath= C:\windows\temp\sandra.sys type= kernel
+sc.exe create sandra.sys binPath= C:\windows\temp\sandra.sys type= kernel
 sc.exe start sandra.sys
 ```
 
@@ -63,7 +65,7 @@ sc.exe start sandra.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/sandra.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

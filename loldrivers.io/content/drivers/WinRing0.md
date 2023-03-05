@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
-WinRing0.sys is a vulnerable driver.
+
+WinRing0.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create WinRing0 binPath= C:\windows\temp\WinRing0.sys type= kernel
+sc.exe create WinRing0.sys binPath= C:\windows\temp\WinRing0.sys type= kernel
 sc.exe start WinRing0.sys
 ```
 
@@ -65,7 +67,7 @@ sc.exe start WinRing0.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winring0.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

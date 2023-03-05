@@ -15,13 +15,15 @@ weight = 10
 
 #### Description
 
-BS_I2cIo.sys is a vulnerable driver.
+
+BS_I2cIo.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
 sc.exe create BS_I2cIo.sys binPath= C:\windows\temp\BS_I2cIo.sys type= kernel
@@ -63,7 +65,7 @@ sc.exe start BS_I2cIo.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_i2cio.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

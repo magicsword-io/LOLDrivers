@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
-VProEventMonitor.sys is a vulnerable driver.
+
+VProEventMonitor.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create VProEventMonitor binPath= C:\windows\temp\VProEventMonitor.sys type= kernel
+sc.exe create VProEventMonitor.sys binPath= C:\windows\temp\VProEventMonitor.sys type= kernel
 sc.exe start VProEventMonitor.sys
 ```
 
@@ -61,7 +63,7 @@ sc.exe start VProEventMonitor.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/vproeventmonitor.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

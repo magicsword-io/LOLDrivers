@@ -15,16 +15,19 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver that has been abused over the years.
+
+AsrSetupDrv103.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom vulnerable Driver"
+sc.exe create AsrSetupDrv103.sys binPath= C:\windows\temp\AsrSetupDrv103.sys type= kernel
+sc.exe start AsrSetupDrv103.sys
 ```
 
 #### Resources
@@ -42,6 +45,16 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/0B6EC2AEDC518849A1C61A70B1F9FB068EDE2BC3">0B6EC2AEDC518849A1C61A70B1F9FB068EDE2BC3</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/461882BD59887617CADC1C7B2B22D0A45458C070">461882BD59887617CADC1C7B2B22D0A45458C070</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/A7948A4E9A3A1A9ED0E4E41350E422464D8313CD">A7948A4E9A3A1A9ED0E4E41350E422464D8313CD</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/F3CCE7E79AB5BD055F311BB3AC44A838779270B6">F3CCE7E79AB5BD055F311BB3AC44A838779270B6</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 
@@ -56,7 +69,7 @@ sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrsetupdrv103.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

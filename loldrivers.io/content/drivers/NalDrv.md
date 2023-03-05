@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver.
+
+NalDrv.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create NalDrv binPath= C:\windows\temp\NalDrv.sys type= kernel
+sc.exe create NalDrv.sys binPath= C:\windows\temp\NalDrv.sys type= kernel
 sc.exe start NalDrv.sys
 ```
 
@@ -61,7 +63,7 @@ sc.exe start NalDrv.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/naldrv.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

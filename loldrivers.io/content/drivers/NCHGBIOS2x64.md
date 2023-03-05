@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
-NCHGBIOS2x64.SYS is a vulnerable driver.
+
+NCHGBIOS2x64.SYS is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create NCHGBIOS2x64 binPath= C:\windows\temp\NCHGBIOS2x64.SYS type= kernel
+sc.exe create NCHGBIOS2x64.SYS binPath= C:\windows\temp\NCHGBIOS2x64.SYS type= kernel
 sc.exe start NCHGBIOS2x64.SYS
 ```
 
@@ -61,7 +63,7 @@ sc.exe start NCHGBIOS2x64.SYS
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nchgbios2x64.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

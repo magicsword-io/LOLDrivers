@@ -4,11 +4,8 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create DirectIo32 binPath= C:\windows\temp\DirectIo32.sys type=
-    kernel
-
-    sc.exe start DirectIo32.sys'
-  Description: DirectIo32.sys is a vulnerable driver.
+  Command: ''
+  Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10

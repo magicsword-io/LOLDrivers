@@ -15,13 +15,15 @@ weight = 10
 
 #### Description
 
-superbmc.sys is a vulnerable driver.
+
+superbmc.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
 sc.exe create superbmc.sys binPath= C:\windows\temp\superbmc.sys type= kernel
@@ -61,7 +63,7 @@ sc.exe start superbmc.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/superbmc.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

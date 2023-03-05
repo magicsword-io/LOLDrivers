@@ -4,10 +4,8 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create WinRing0 binPath= C:\windows\temp\WinRing0.sys type= kernel
-
-    sc.exe start WinRing0.sys'
-  Description: WinRing0.sys is a vulnerable driver.
+  Command: ''
+  Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10

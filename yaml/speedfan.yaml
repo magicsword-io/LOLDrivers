@@ -4,9 +4,7 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create speedfan binPath= C:\windows\temp\speedfan.sys type= kernel
-
-    sc.exe start speedfan.sys'
+  Command: ''
   Description: speedfan.sys is a vulnerable driver. CVE-2007-5633.
   Usecase: Elevate privileges
   Privileges: kernel

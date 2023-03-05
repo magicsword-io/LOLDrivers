@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
-OpenLibSys.sys is a vulnerable driver.
+
+OpenLibSys.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create OpenLibSys binPath= C:\windows\temp\OpenLibSys.sys type= kernel
+sc.exe create OpenLibSys.sys binPath= C:\windows\temp\OpenLibSys.sys type= kernel
 sc.exe start OpenLibSys.sys
 ```
 
@@ -63,7 +65,7 @@ sc.exe start OpenLibSys.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/openlibsys.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

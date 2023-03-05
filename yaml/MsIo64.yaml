@@ -4,9 +4,7 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
-
-    sc.exe start AsrDrv103.sys'
+  Command: ''
   Description: The MSI AmbientLink MsIo64 driver 1.0.0.8 has a Buffer Overflow (0x80102040,
     0x80102044, 0x80102050,and 0x80102054)
   Usecase: Elevate privileges

@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
+
 Used by unknown actor in Acid Rain malware. vboxdrv.sys is a vulnerable driver.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create vboxdrv binPath= C:\windows\temp\vboxdrv.sys type= kernel
+sc.exe create vboxdrv.sys binPath= C:\windows\temp\vboxdrv.sys type= kernel
 sc.exe start vboxdrv.sys
 ```
 
@@ -65,7 +67,7 @@ sc.exe start vboxdrv.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/vboxdrv.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

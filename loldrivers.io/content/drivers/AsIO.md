@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
-AsIO.sys is a vulnerable driver.
+
+AsIO.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create AsIO binPath= C:\windows\temp\AsIO.sys type= kernel
+sc.exe create AsIO.sys binPath= C:\windows\temp\AsIO.sys type= kernel
 sc.exe start AsIO.sys
 ```
 
@@ -65,7 +67,7 @@ sc.exe start AsIO.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asio.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

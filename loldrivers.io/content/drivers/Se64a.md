@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
-Se64a.sys is a vulnerable driver.
+
+Se64a.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create Se64a binPath= C:\windows\temp\Se64a.sys type= kernel
+sc.exe create Se64a.sys binPath= C:\windows\temp\Se64a.sys type= kernel
 sc.exe start Se64a.sys
 ```
 
@@ -61,7 +63,7 @@ sc.exe start Se64a.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/se64a.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

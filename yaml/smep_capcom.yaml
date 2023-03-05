@@ -4,11 +4,8 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create smep_capcom binPath= C:\windows\temp\smep_capcom.sys type=
-    kernel
-
-    sc.exe start smep_capcom.sys'
-  Description: smep_capcom.sys is a vulnerable driver.
+  Command: ''
+  Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10

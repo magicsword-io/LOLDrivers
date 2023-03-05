@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
-goad.sys is a vulnerable driver.
+
+goad.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create goad binPath= C:\windows\temp\goad.sys type= kernel
+sc.exe create goad.sys binPath= C:\windows\temp\goad.sys type= kernel
 sc.exe start goad.sys
 ```
 
@@ -63,7 +65,7 @@ sc.exe start goad.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/goad.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

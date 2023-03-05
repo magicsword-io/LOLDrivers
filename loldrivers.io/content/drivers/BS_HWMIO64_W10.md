@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
-BS_HWMIO64_W10.sys is a vulnerable driver.
+
+BS_HWMIO64_W10.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create BS_HWMIO64_W10 binPath= C:\windows\temp\BS_HWMIO64_W10.sys type= kernel
+sc.exe create BS_HWMIO64_W10.sys binPath= C:\windows\temp\BS_HWMIO64_W10.sys type= kernel
 sc.exe start BS_HWMIO64_W10.sys
 ```
 
@@ -61,7 +63,7 @@ sc.exe start BS_HWMIO64_W10.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_hwmio64_w10.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

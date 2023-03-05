@@ -4,10 +4,7 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create aswSP_ArPot2 binPath= C:\windows\temp\aswArPot.sys type=
-    kernel
-
-    sc.exe start aswSP_ArPot2 '
+  Command: ''
   Description: "Avast\u2019s \u201CAnti Rootkit\u201D driver (also used by AVG) has\
     \ been found to be vulnerable to two high severity attacks that could potentially\
     \ lead to privilege escalation by running code in the kernel from a non-administrator\

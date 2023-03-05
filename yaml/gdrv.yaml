@@ -4,9 +4,7 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create gdrv binPath= C:\windows\temp\gdrv.sys type= kernel
-
-    sc.exe start gdrv.sys'
+  Command: ''
   Description: 'gdrv.sys is vulnerable to multiple CVEs: CVE-2018-19320, CVE-2018-19322,
     CVE-2018-19323, CVE-2018-19321. Read/Write Physical memory, read/write to/from
     IO ports, exposes ring0 memcpy-like functionality,  read and write Machine Specific

@@ -15,17 +15,19 @@ weight = 10
 
 #### Description
 
-ADV64DRV.sys is a vulnerable driver.
+
+dbutil_2_3.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create ADV64DRV binPath= C:\windows\temp\ADV64DRV.sys type= kernel
-sc.exe start ADV64DRV.sys
+sc.exe create dbutil_2_3.sys binPath= C:\windows\temp\dbutil_2_3.sys type= kernel
+sc.exe start dbutil_2_3.sys
 ```
 
 #### Resources
@@ -63,7 +65,7 @@ sc.exe start ADV64DRV.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbutil_2_3.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

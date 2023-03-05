@@ -4,10 +4,8 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create WINIODrv binPath= C:\windows\temp\WINIODrv.sys type= kernel
-
-    sc.exe start WINIODrv.sys'
-  Description: WINIODrv.sys is a vulnerable driver.
+  Command: ''
+  Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10

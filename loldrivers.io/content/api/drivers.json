@@ -6,8 +6,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create BS_HWMIo64 binPath= C:\\windows\\temp\\BS_HWMIo64.sys type= kernel\nsc.exe start BS_HWMIo64.sys",
-            "Description": "BS_HWMIo64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -45,8 +45,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create NCHGBIOS2x64 binPath= C:\\windows\\temp\\NCHGBIOS2x64.SYS type= kernel\nsc.exe start NCHGBIOS2x64.SYS",
-            "Description": "NCHGBIOS2x64.SYS is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -84,8 +84,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "BSMEMx64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -123,8 +123,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create HOSTNT binPath= C:\\windows\\temp\\HOSTNT.sys type= kernel\nsc.exe start HOSTNT.sys",
-            "Description": "HOSTNT.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -162,8 +162,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -177,7 +177,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "FAFA1BB36F0AC34B762A10E9F327DCAB2152A6D0B16A19697362D49A31E7F566"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -199,8 +201,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create piddrv64 binPath= C:\\windows\\temp\\piddrv64.sys type= kernel\nsc.exe start piddrv64.sys",
-            "Description": "piddrv64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -238,8 +240,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create BS_Def64 binPath= C:\\windows\\temp\\BS_Def64.sys type= kernel\nsc.exe start BS_Def64.sys",
-            "Description": "BS_Def64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -279,8 +281,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create HwOs2Ec7x64 binPath= C:\\windows\\temp\\HwOs2Ec7x64.sys type= kernel\nsc.exe start HwOs2Ec7x64.sys",
-            "Description": "HwOs2Ec7x64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -318,8 +320,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create HwRwDrv binPath= C:\\windows\\temp\\HwRwDrv.sys type= kernel\nsc.exe start HwRwDrv.sys",
-            "Description": "HwRwDrv.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -357,8 +359,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -372,7 +374,10 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "8CC8974A05E81678E3D28ACFE434E7804ABD019C",
+            "282BB241BDA5C4C1B8EB9BF56D018896649CA0E1"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -394,8 +399,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create ADV64DRV binPath= C:\\windows\\temp\\ADV64DRV.sys type= kernel\nsc.exe start ADV64DRV.sys",
-            "Description": "ADV64DRV.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -433,14 +438,15 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "CVE-2018-16712",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
         },
         "Resources": [
-            " https://github.com/elastic/protections-artifacts/search?q=VulnDriver"
+            "https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html",
+            "https://www.unknowncheats.me/forum/anti-cheat-bypass/244386-mta-fairplaykd-driver-reversed-exploited-rpm.html"
         ],
         "driver_description": "https://github.com/elastic/protections-artifacts/search?q=VulnDriver",
         "Acknowledgement": {
@@ -448,7 +454,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "e4a7da2cf59a4a21fc42b611df1d59cae75051925a7ddf42bf216cc1a026eadb"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -507,8 +515,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create UCOREW64 binPath= C:\\windows\\temp\\UCOREW64.SYS type= kernel\nsc.exe start UCOREW64.SYS",
-            "Description": "UCOREW64.SYS is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -546,7 +554,7 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "(1) IQVW32.sys before 1.3.1.0 and (2) IQVW64.sys before 1.3.1.0 in the Intel Ethernet diagnostics driver for Windows allows local users to cause a denial of service or possibly execute arbitrary code with kernel privileges via a crafted (a) 0x80862013, (b) 0x8086200B, (c) 0x8086200F, or (d) 0x80862007 IOCTL call.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -626,8 +634,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create ADV64DRV binPath= C:\\windows\\temp\\ADV64DRV.sys type= kernel\nsc.exe start ADV64DRV.sys",
-            "Description": "ADV64DRV.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -666,8 +674,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -681,7 +689,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "DEC8A933DBA04463ED9BB7D53338FF87F2C23CFB79E0E988449FC631252C9DCC"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -703,8 +713,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create ADV64DRV binPath= C:\\windows\\temp\\ADV64DRV.sys type= kernel\nsc.exe start ADV64DRV.sys",
-            "Description": "ADV64DRV.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -780,8 +790,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -795,7 +805,48 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "15C53EB3A0EA44BBD2901A45A6EBEAE29BB123F9C1115C38DFB2CDBEC0642229"
+        ],
+        "Metadata": {
+            "binary": "",
+            "Verified": "",
+            "Date": "",
+            "Publisher": "",
+            "Company": "",
+            "Description": "",
+            "Product": "",
+            "ProductVersion": "",
+            "FileVersion": "",
+            "MachineType": "",
+            "OriginalFilename": ""
+        }
+    },
+    {
+        "Name": "7.sys",
+        "Author": "Michael Haag",
+        "Created": "2023-03-04",
+        "MitreID": "T1068",
+        "Category": "malicious",
+        "Commands": {
+            "Command": "",
+            "Description": "Driver categorized as POORTRY by Mandiant.",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware"
+        ],
+        "driver_description": "",
+        "Acknowledgement": {
+            "Person": "",
+            "Handle": ""
+        },
+        "Detection": [],
+        "KnownHashes": [
+            "dc564bac7258e16627b9de0ce39fae25"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -817,8 +868,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -832,7 +883,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "D5562FB90B0B3DEB633AB335BCBD82CE10953466A428B3F27CB5B226B453EAF3"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -854,8 +907,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create BS_I2cIo.sys binPath= C:\\windows\\temp\\BS_I2cIo.sys type= kernel\nsc.exe start BS_I2cIo.sys",
-            "Description": "BS_I2cIo.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -931,8 +984,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv102 binPath= C:\\windows\\temp\\AsrDrv102.sys type= kernel\nsc.exe start AsrDrv102.sys",
-            "Description": "AsrDrv102.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -970,8 +1023,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create NBIOLib_X64 binPath= C:\\windows\\temp\\NBIOLib_X64.sys type= kernel\nsc.exe start NBIOLib_X64.sys",
-            "Description": "NBIOLib_X64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1009,8 +1062,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create mtcBSv64 binPath= C:\\windows\\temp\\mtcBSv64.sys type= kernel\nsc.exe start mtcBSv64.sys",
-            "Description": "mtcBSv64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1048,8 +1101,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create BS_I2c64 binPath= C:\\windows\\temp\\BS_I2c64.sys type= kernel\nsc.exe start BS_I2c64.sys",
-            "Description": "BS_I2c64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1087,8 +1140,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1102,7 +1155,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "9f1229cd8dd9092c27a01f5d56e3c0d59c2bb9f0139abf042e56f343637fda33"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -1124,8 +1179,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1139,7 +1194,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "0DE4247E72D378713BCF22D5C5D3874D079203BB4364E25F67A90D5570BDCCE8"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -1161,8 +1218,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create mhyprot binPath= C:\\windows\\temp\\mhyprot.sys type= kernel\nsc.exe start mhyprot.sys",
-            "Description": "mhyprot.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1202,8 +1259,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create DirectIo64 binPath= C:\\windows\\temp\\DirectIo64.sys type= kernel\nsc.exe start DirectIo64.sys",
-            "Description": "DirectIo64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1240,8 +1297,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1255,7 +1312,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "771A8D05F1AF6214E0EF0886662BE500EE910AB99F0154227067FDDCFE08A3DD"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -1277,7 +1336,7 @@
         "MitreID": "T1068",
         "Category": "malicious",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -1317,8 +1376,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create viraglt64 binPath= C:\\windows\\temp\\viraglt64.sys type= kernel\nsc.exe start viraglt64.sys",
-            "Description": "viraglt64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1357,8 +1416,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1372,7 +1431,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -1394,8 +1455,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "BSMEMx64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1433,7 +1494,7 @@
         "MitreID": "T1068",
         "Category": "malicious",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -1473,8 +1534,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create kprocesshacker binPath= C:\\windows\\temp\\kprocesshacker.sys type= kernel\nsc.exe start kprocesshacker.sys",
-            "Description": "kprocesshacker.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1513,8 +1574,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1528,7 +1589,10 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "10E15BA8FF8ED926DDD3636CEC66A0F08C9860A4",
+            "E4436C8C42BA5FFABD58A3B2256F6E86CCC907AB"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -1550,8 +1614,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create aswsnx binPath= C:\\windows\\temp\\aswsnx.sys type= kernel\nsc.exe start aswsnx.sys",
-            "Description": "aswsnx.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1591,7 +1655,7 @@
         "MitreID": "T1068",
         "Category": "malicious",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -1631,8 +1695,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create DirectIo32 binPath= C:\\windows\\temp\\DirectIo32.sys type= kernel\nsc.exe start DirectIo32.sys",
-            "Description": "DirectIo32.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1669,8 +1733,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create amifldrv64 binPath= C:\\windows\\temp\\amifldrv64.sys type= kernel\nsc.exe start amifldrv64.sys",
-            "Description": "amifldrv64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1708,8 +1772,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1784,8 +1848,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create BS_Flash64 binPath= C:\\windows\\temp\\BS_Flash64.sys type= kernel\nsc.exe start BS_Flash64.sys",
-            "Description": "BS_Flash64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1823,8 +1887,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1838,7 +1902,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "4941C4298F4560FC1E59D0F16F84BAB5C060793700B82BE2FD7C63735F1657A8"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -1860,8 +1926,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create elrawdsk binPath= C:\\windows\\temp\\elrawdsk.sys type= kernel\nsc.exe start elrawdsk.sys",
-            "Description": "elrawdsk.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1903,8 +1969,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -1918,7 +1984,12 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "0B6EC2AEDC518849A1C61A70B1F9FB068EDE2BC3",
+            "461882BD59887617CADC1C7B2B22D0A45458C070",
+            "A7948A4E9A3A1A9ED0E4E41350E422464D8313CD",
+            "F3CCE7E79AB5BD055F311BB3AC44A838779270B6"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -1940,7 +2011,7 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create aswSP_ArPot2 binPath= C:\\windows\\temp\\aswArPot.sys type= kernel\nsc.exe start aswSP_ArPot2 ",
+            "Command": "",
             "Description": "Avast’s “Anti Rootkit” driver (also used by AVG) has been found to be vulnerable to two high severity attacks that could potentially lead to privilege escalation by running code in the kernel from a non-administrator user.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -1977,8 +2048,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "AsrDrv103.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2016,8 +2087,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create sandra binPath= C:\\windows\\temp\\sandra.sys type= kernel\nsc.exe start sandra.sys",
-            "Description": "sandra.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2056,8 +2127,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2071,7 +2142,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "0EBAEF662B14410C198395B13347E1D175334EC67919709AD37D65EBA013ADFF"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -2093,14 +2166,14 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "This has been referenced as a vulnerable driver, but no hash has been found.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
         },
         "Resources": [
-            " https://github.com/elastic/protections-artifacts/search?q=VulnDriver"
+            "https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html"
         ],
         "driver_description": "https://github.com/elastic/protections-artifacts/search?q=VulnDriver",
         "Acknowledgement": {
@@ -2130,8 +2203,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2145,7 +2218,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "823DA894B2C73FFCD39E77366B6F1ABF0AE9604D9B20140A54E6D55053AADEBA"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -2167,8 +2242,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2182,7 +2257,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "146D77E80CA70EA5CB17BFC9A5CEA92334F809CBDC87A51C2D10B8579A4B9C88"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -2204,8 +2281,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2241,7 +2318,7 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create vboxdrv binPath= C:\\windows\\temp\\vboxdrv.sys type= kernel\nsc.exe start vboxdrv.sys",
+            "Command": "",
             "Description": "Used by unknown actor in Acid Rain malware. vboxdrv.sys is a vulnerable driver.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -2282,8 +2359,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create rtkio binPath= C:\\windows\\temp\\rtkio.sys type= kernel\nsc.exe start rtkio.sys",
-            "Description": "BSMEMx64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2321,16 +2398,17 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "This has been referenced as a vulnerable driver, but no hash has been found.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
         },
         "Resources": [
-            " https://github.com/elastic/protections-artifacts/search?q=VulnDriver"
+            "https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html",
+            "https://www.unknowncheats.me/forum/anti-cheat-bypass/244386-mta-fairplaykd-driver-reversed-exploited-rpm.html"
         ],
-        "driver_description": "https://github.com/elastic/protections-artifacts/search?q=VulnDriver",
+        "driver_description": "",
         "Acknowledgement": {
             "Person": "",
             "Handle": ""
@@ -2358,8 +2436,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create smep_namco binPath= C:\\windows\\temp\\smep_namco.sys type= kernel\nsc.exe start smep_namco.sys",
-            "Description": "smep_namco.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2397,8 +2475,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create atillk64 binPath= C:\\windows\\temp\\atillk64.sys type= kernel\nsc.exe start atillk64.sys",
-            "Description": "atillk64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2436,8 +2514,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2451,7 +2529,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "42851A01469BA97CDC38939B10CF9EA13237AA1F6C37B1AC84904C5A12A81FA0"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -2473,8 +2553,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2488,7 +2568,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "37DDE6BD8A7A36111C3AC57E0AC20BBB93CE3374D0852BCACC9A2C8C8C30079E"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -2510,8 +2592,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create BS_HWMIO64_W10 binPath= C:\\windows\\temp\\BS_HWMIO64_W10.sys type= kernel\nsc.exe start BS_HWMIO64_W10.sys",
-            "Description": "BS_HWMIO64_W10.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2549,8 +2631,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create WCPU binPath= C:\\windows\\temp\\WCPU.sys type= kernel\nsc.exe start WCPU.sys",
-            "Description": "WCPU.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2588,8 +2670,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create phymem64 binPath= C:\\windows\\temp\\phymem64.sys type= kernel\nsc.exe start phymem64.sys",
-            "Description": "phymem64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2627,7 +2709,7 @@
         "MitreID": "T1068",
         "Category": "malicious",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -2667,8 +2749,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create amp binPath= C:\\windows\\temp\\amp.sys type= kernel\nsc.exe start amp.sys",
-            "Description": "amp.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2700,14 +2782,53 @@
         }
     },
     {
+        "Name": "POORTRY.sys",
+        "Author": "Michael Haag",
+        "Created": "2023-03-04",
+        "MitreID": "T1068",
+        "Category": "malicious",
+        "Commands": {
+            "Command": "",
+            "Description": "Driver categorized as POORTRY by Mandiant.",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware"
+        ],
+        "driver_description": "",
+        "Acknowledgement": {
+            "Person": "",
+            "Handle": ""
+        },
+        "Detection": [],
+        "KnownHashes": [
+            "7f9309f5e4defec132b622fadbcad511"
+        ],
+        "Metadata": {
+            "binary": "",
+            "Verified": "",
+            "Date": "",
+            "Publisher": "",
+            "Company": "",
+            "Description": "",
+            "Product": "",
+            "ProductVersion": "",
+            "FileVersion": "",
+            "MachineType": "",
+            "OriginalFilename": ""
+        }
+    },
+    {
         "Name": "PanIOx64.sys",
         "Author": "Michael Haag",
         "Created": "2023-01-09",
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2721,7 +2842,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "6b830ea0db6546a044c9900d3f335e7820c2a80e147b0751641899d1a5aa8f74"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -2743,8 +2866,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2758,7 +2881,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "DE6BF572D39E2611773E7A01F0388F84FB25DA6CBA2F1F8B9B36FFBA467DE6FA"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -2780,8 +2905,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create NTIOLib_X64.sys binPath= C:\\windows\\temp\\NTIOLib_X64.sys type= kernel\nsc.exe start NTIOLib_X64.sys",
-            "Description": "NTIOLib_X64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2819,8 +2944,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2834,7 +2959,48 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "36875562E747136313EC5DB58174E5FAB870997A054CA8D3987D181599C7DB6A"
+        ],
+        "Metadata": {
+            "binary": "",
+            "Verified": "",
+            "Date": "",
+            "Publisher": "",
+            "Company": "",
+            "Description": "",
+            "Product": "",
+            "ProductVersion": "",
+            "FileVersion": "",
+            "MachineType": "",
+            "OriginalFilename": ""
+        }
+    },
+    {
+        "Name": "PcieCubed.sys",
+        "Author": "Michael Haag",
+        "Created": "2023-03-04",
+        "MitreID": "T1068",
+        "Category": "malicious",
+        "Commands": {
+            "Command": "",
+            "Description": "Driver categorized as POORTRY by Mandiant.",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware"
+        ],
+        "driver_description": "",
+        "Acknowledgement": {
+            "Person": "",
+            "Handle": ""
+        },
+        "Detection": [],
+        "KnownHashes": [
+            "22949977ce5cd96ba674b403a9c81285"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -2856,8 +3022,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2871,7 +3037,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "D25904FBF907E19F366D54962FF543D9F53B8FDFD2416C8B9796B6A8DD430E26"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -2893,8 +3061,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create PhlashNT binPath= C:\\windows\\temp\\PhlashNT.sys type= kernel\nsc.exe start PhlashNT.sys",
-            "Description": "PhlashNT.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2932,8 +3100,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -2947,7 +3115,15 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "6C1BB3A72EBFB5359B9E22CA44D0A1FF825A68F2",
+            "E039C9DD21494DBD073B4823FC3A17FBB951EC6C",
+            "7EEC3A1EDF3B021883A4B5DA450DB63F7C0AFEEB",
+            "E5021A98E55D514E2376AA573D143631E5EE1C13",
+            "729A8675665C61824F22F06C7B954BE4D14B52C4",
+            "2B4D0DEAD4C1A7CC95543748B3565CFA802E5256",
+            "4A7D66874A0472A47087FABAA033A85D47413379"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -2969,8 +3145,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrSmartConnectDrv binPath= C:\\windows\\temp\\AsrSmartConnectDrv.sys type= kernel\nsc.exe start AsrSmartConnectDrv.sys",
-            "Description": "AsrSmartConnectDrv.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -3008,8 +3184,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -3023,7 +3199,12 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "08596732304351B311970FF96B21F451F23B1E25",
+            "7838FB56FDAB816BC1900A4720EEA2FC9972EF7A",
+            "4789B910023A667BEE70FF1F1A8F369CFFB10FE8",
+            "EEFF4EC4EBC12C6ACD2C930DC2EAAF877CFEC7EC"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -3045,8 +3226,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -3060,7 +3241,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "da6ca1fb539f825ca0f012ed6976baf57ef9c70143b7a1e88b4650bf7a925e24"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -3082,8 +3265,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "BSMEMx64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -3158,8 +3341,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -3197,7 +3380,7 @@
         "MitreID": "T1068",
         "Category": "malicious",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -3237,14 +3420,15 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
         },
         "Resources": [
-            " https://github.com/elastic/protections-artifacts/search?q=VulnDriver"
+            "https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html",
+            "https://www.unknowncheats.me/forum/anti-cheat-bypass/312791-bypaph-process-hackers-bypass-read-write-process-virtual-memory-kernel-mem.html#post2315763"
         ],
         "driver_description": "https://github.com/elastic/protections-artifacts/search?q=VulnDriver",
         "Acknowledgement": {
@@ -3252,7 +3436,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "c725919e6357126d512c638f993cf572112f323da359645e4088f789eb4c7b8c"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -3274,8 +3460,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -3289,7 +3475,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "e86cb77de7b6a8025f9a546f6c45d135f471e664963cf70b381bee2dfd0fdef4"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -3311,7 +3499,7 @@
         "MitreID": "T1068",
         "Category": "malicious",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -3351,8 +3539,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create rtkiow8x64.sys binPath= C:\\windows\\temp\\rtkiow8x64.sys type= kernel\nsc.exe start rtkiow8x64.sys",
-            "Description": "rtkiow8x64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -3390,7 +3578,7 @@
         "MitreID": "T1068",
         "Category": "malicious",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -3430,8 +3618,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -3445,7 +3633,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "3AE56AB63230D6D9552360845B4A37B5801CC5EA"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -3467,8 +3657,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -3482,7 +3672,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "BE03E9541F56AC6ED1E81407DCD7CC85C0FFC538C3C2C2C8A9C747EDBCF13100"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -3504,7 +3696,7 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create nscm binPath= C:\\windows\\temp\\nscm.sys type= kernel\nsc.exe start nscm.sys",
+            "Command": "",
             "Description": "nscm.sys is a vulnerable driver. CVE-2013-3956.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -3544,8 +3736,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create VProEventMonitor binPath= C:\\windows\\temp\\VProEventMonitor.sys type= kernel\nsc.exe start VProEventMonitor.sys",
-            "Description": "VProEventMonitor.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -3583,22 +3775,25 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
         },
         "Resources": [
-            " https://github.com/elastic/protections-artifacts/search?q=VulnDriver"
+            "https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html",
+            "https://www.unknowncheats.me/forum/anti-cheat-bypass/244386-mta-fairplaykd-driver-reversed-exploited-rpm.html"
         ],
-        "driver_description": "https://github.com/elastic/protections-artifacts/search?q=VulnDriver",
+        "driver_description": "",
         "Acknowledgement": {
             "Person": "",
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "9f4ce6ab5e8d44f355426d9a6ab79833709f39b300733b5b251a0766e895e0e5"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -3620,8 +3815,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -3635,7 +3830,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "0c74d09da7baf7c05360346e4c3512d0cd433d59"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -3657,8 +3854,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create nvflsh64 binPath= C:\\windows\\temp\\nvflsh64.sys type= kernel\nsc.exe start nvflsh64.sys",
-            "Description": "nvflsh64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -3696,8 +3893,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create superbmc.sys binPath= C:\\windows\\temp\\superbmc.sys type= kernel\nsc.exe start superbmc.sys",
-            "Description": "superbmc.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -3735,8 +3932,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create Mhyprot2 binPath= C:\\windows\\temp\\Mhyprot2.sys type= kernel\nsc.exe start Mhyprot2.sys",
-            "Description": "Mhyprot2.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -3774,8 +3971,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsUpIO binPath= C:\\windows\\temp\\AsUpIO.sys type= kernel\nsc.exe start AsUpIO.sys",
-            "Description": "AsUpIO.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -3813,8 +4010,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv10 binPath= C:\\windows\\temp\\AsrDrv10.sys type= kernel\nsc.exe start AsrDrv10.sys",
-            "Description": "AsrDrv10.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -3852,8 +4049,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -3889,8 +4086,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -3904,7 +4101,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "64F9E664BC6D4B8F5F68616DD50AE819C3E60452EFD5E589D6604B9356841B57"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -3926,8 +4125,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "BSMEMx64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -3965,8 +4164,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create SysInfo binPath= C:\\windows\\temp\\SysInfo.sys type= kernel\nsc.exe start SysInfo.sys",
-            "Description": "SysInfo.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4004,8 +4203,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create HwOs2Ec10x64 binPath= C:\\windows\\temp\\HwOs2Ec10x64.sys type= kernel\nsc.exe start HwOs2Ec10x64.sys",
-            "Description": "HwOs2Ec10x64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4043,8 +4242,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4076,14 +4275,92 @@
         }
     },
     {
+        "Name": "POORTRY2.sys",
+        "Author": "Michael Haag",
+        "Created": "2023-03-04",
+        "MitreID": "T1068",
+        "Category": "malicious",
+        "Commands": {
+            "Command": "",
+            "Description": "Driver categorized as POORTRY by Mandiant.",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware"
+        ],
+        "driver_description": "",
+        "Acknowledgement": {
+            "Person": "",
+            "Handle": ""
+        },
+        "Detection": [],
+        "KnownHashes": [
+            "b164daf106566f444dfb280d743bc2f7"
+        ],
+        "Metadata": {
+            "binary": "",
+            "Verified": "",
+            "Date": "",
+            "Publisher": "",
+            "Company": "",
+            "Description": "",
+            "Product": "",
+            "ProductVersion": "",
+            "FileVersion": "",
+            "MachineType": "",
+            "OriginalFilename": ""
+        }
+    },
+    {
+        "Name": "LcTkA.sys",
+        "Author": "Michael Haag",
+        "Created": "2023-03-04",
+        "MitreID": "T1068",
+        "Category": "malicious",
+        "Commands": {
+            "Command": "",
+            "Description": "SentinelOne has observed prominent threat actors abusing legitimately signed Microsoft drivers in active intrusions into telecommunication, BPO, MSSP, and financial services businesses.\nInvestigations into these intrusions led to the discovery of POORTRY and STONESTOP malware, part of a small toolkit designed to terminate AV and EDR processes.\nWe first reported our discovery to Microsoft’s Security Response Center (MSRC) in October 2022 and received an official case number (75361). Today, MSRC released an associated advisory under ADV220005.\nThis research is being released alongside Mandiant, a SentinelOne technology and incident response partner. ",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://www.sentinelone.com/labs/driving-through-defenses-targeted-attacks-leverage-signed-malicious-microsoft-drivers/"
+        ],
+        "driver_description": "",
+        "Acknowledgement": {
+            "Person": "",
+            "Handle": ""
+        },
+        "Detection": [],
+        "KnownHashes": [
+            "c8f9e1ad7b8cce62fba349a00bc168c849d42cfb2ca5b2c6cc4b51d054e0c497"
+        ],
+        "Metadata": {
+            "binary": "",
+            "Verified": "",
+            "Date": "",
+            "Publisher": "",
+            "Company": "",
+            "Description": "",
+            "Product": "",
+            "ProductVersion": "",
+            "FileVersion": "",
+            "MachineType": "",
+            "OriginalFilename": ""
+        }
+    },
+    {
         "Name": "cpuz141.sys",
         "Author": "Michael Haag",
         "Created": "2023-01-09",
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create cpuz141 binPath= C:\\windows\\temp\\cpuz141.sys type= kernel\nsc.exe start cpuz141.sys",
-            "Description": "cpuz141.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4158,8 +4435,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4173,7 +4450,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "475E5016C9C0F5A127896F9179A1B1577A67B357F399AB5A1E68AAB07134729A"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -4195,8 +4474,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create Agent64 binPath= C:\\windows\\temp\\Agent64.sys type= kernel\nsc.exe start Agent64.sys",
-            "Description": "Agent64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4238,8 +4517,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4253,7 +4532,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "708016FBE22C813A251098F8F992B177B476BD1BBC48C2ED4A122FF74910A965"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -4275,8 +4556,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4290,7 +4571,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "0FD2DF82341BF5EBB8A53682E60D08978100C01ACB0BED7B6CE2876ADA80F670"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -4312,8 +4595,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4349,8 +4632,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create ALSysIO64 binPath= C:\\windows\\temp\\ALSysIO64.sys type= kernel\nsc.exe start ALSysIO64.sys",
-            "Description": "ALSysIO64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4389,8 +4672,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4428,8 +4711,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4443,7 +4726,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "06508aacb4ed0a1398a2b0da5fa2dbf7da435b56da76fd83c759a50a51c75caf"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -4465,7 +4750,7 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create nicm binPath= C:\\windows\\temp\\nicm.sys type= kernel\nsc.exe start nicm.sys",
+            "Command": "",
             "Description": "nicm.sys is a vulnerable driver. CVE-2013-3956.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -4505,8 +4790,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create rtkiow10x64.sys binPath= C:\\windows\\temp\\rtkiow10x64.sys type= kernel\nsc.exe start rtkiow10x64.sys",
-            "Description": "rtkiow10x64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4544,8 +4829,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4559,7 +4844,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "5B9623DA9BA8E5C80C49473F40FFE7AD315DCADFFC3230AFDC9D9226D60A715A"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -4581,8 +4868,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrOmgDrv binPath= C:\\windows\\temp\\AsrOmgDrv.sys type= kernel\nsc.exe start AsrOmgDrv.sys",
-            "Description": "AsrOmgDrv.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4620,7 +4907,7 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create elbycdio binPath= C:\\windows\\temp\\elbycdio.sys type= kernel\nsc.exe start elbycdio.sys",
+            "Command": "",
             "Description": "elbycdio.sys is a vulnerable driver. CVE-2009-0824.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -4698,8 +4985,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4737,8 +5024,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create NalDrv binPath= C:\\windows\\temp\\NalDrv.sys type= kernel\nsc.exe start NalDrv.sys",
-            "Description": "CapCom.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4776,8 +5063,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4791,7 +5078,10 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "E74B6DDA8BC53BC687FC21218BD34062A78D8467",
+            "2C27ABBBBCF10DFB75AD79557E30ACE5ED314DF8"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -4813,7 +5103,7 @@
         "MitreID": "T1068",
         "Category": "malicious",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -4853,7 +5143,7 @@
         "MitreID": "T1068",
         "Category": "malicious",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -4893,8 +5183,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4908,7 +5198,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "f596e64f4c5d7c37a00493728d8756b243cfdc11e3372d6d6dfeffc13c9ab960"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -4930,8 +5222,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -4945,7 +5237,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "f1c8c3926d0370459a1b7f0cf3d17b22ff9d0c7f"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -4967,8 +5261,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrIbDrv binPath= C:\\windows\\temp\\AsrIbDrv.sys type= kernel\nsc.exe start AsrIbDrv.sys",
-            "Description": "AsrIbDrv.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5006,8 +5300,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5043,8 +5337,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create EneIo64 binPath= C:\\windows\\temp\\EneIo64.sys type= kernel\nsc.exe start EneIo64.sys",
-            "Description": "EneIo64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5082,8 +5376,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create sandbox binPath= C:\\windows\\temp\\sandbox.sys type= kernel\nsc.exe start sandbox.sys",
-            "Description": "sandbox.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5120,8 +5414,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5135,7 +5429,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "927C2A580D51A598177FA54C65E9D2610F5F212F1B6CB2FBF2740B64368F010A"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -5157,8 +5453,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5172,7 +5468,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "221DFBC74BBB255B0879360CCC71A74B756B2E0F16E9386B38A9CE9D4E2E34F9"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -5194,8 +5492,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create CITMDRV_IA64 binPath= C:\\windows\\temp\\CITMDRV_IA64.sys type= kernel\nsc.exe start CITMDRV_IA64.sys",
-            "Description": "CITMDRV_IA64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5246,14 +5544,53 @@
         }
     },
     {
+        "Name": "Air_SYSTEM10.sys",
+        "Author": "Michael Haag",
+        "Created": "2023-03-03",
+        "MitreID": "T1068",
+        "Category": "malicious",
+        "Commands": {
+            "Command": "",
+            "Description": "Driver categorized as POORTRY by Mandiant.",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware"
+        ],
+        "driver_description": "",
+        "Acknowledgement": {
+            "Person": "",
+            "Handle": ""
+        },
+        "Detection": [],
+        "KnownHashes": [
+            "1f2888e57fdd6aee466962c25ba7d62d"
+        ],
+        "Metadata": {
+            "binary": "",
+            "Verified": "",
+            "Date": "",
+            "Publisher": "",
+            "Company": "",
+            "Description": "",
+            "Product": "",
+            "ProductVersion": "",
+            "FileVersion": "",
+            "MachineType": "",
+            "OriginalFilename": ""
+        }
+    },
+    {
         "Name": "NTIOLib.sys",
         "Author": "Michael Haag",
         "Created": "2023-01-09",
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create NTIOLib binPath= C:\\windows\\temp\\NTIOLib.sys type= kernel\nsc.exe start NTIOLib.sys",
-            "Description": "NTIOLib.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5332,8 +5669,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5347,7 +5684,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "f51bdb0ad924178131c21e39a8ccd191e46b5512b0f2e1cc8486f63e84e5d960"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -5369,8 +5708,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5384,7 +5723,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "CB57F3A7FE9E1F8E63332C563B0A319B26C944BE839EABC03E9A3277756BA612"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -5406,8 +5747,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5443,8 +5784,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsIO64 binPath= C:\\windows\\temp\\AsIO64.sys type= kernel\nsc.exe start AsIO64.sys",
-            "Description": "AsIO64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5482,7 +5823,7 @@
         "MitreID": "T1068",
         "Category": "malicious",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -5522,8 +5863,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5537,7 +5878,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "8fb149fc476cf5bf18dc575334edad7caf210996"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -5559,8 +5902,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5574,7 +5917,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "f85cca4badff17d1aa90752153ccec77a68ad282b69e3985fdc4743eaea85004"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -5596,8 +5941,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5611,7 +5956,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "f05b1ee9e2f6ab704b8919d5071becbce6f9d0f9d0ba32a460c41d5272134abe"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -5633,8 +5980,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create semav6msr.sys binPath= C:\\windows\\temp\\semav6msr.sys type= kernel\nsc.exe start semav6msr.sys",
-            "Description": "semav6msr.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5672,8 +6019,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5687,7 +6034,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "c1c4310e5d467d24e864177bdbfc57cb5d29aac697481bfa9c11ddbeebfd4cc8"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -5709,8 +6058,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create DBUtilDrv2 binPath= C:\\windows\\temp\\DBUtilDrv2.sys type= kernel\nsc.exe start DBUtilDrv2.sys",
-            "Description": "DBUtilDrv2.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5750,8 +6099,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create BS_RCIO64 binPath= C:\\windows\\temp\\BS_RCIO64.sys type= kernel\nsc.exe start BS_RCIO64.sys",
-            "Description": "BS_RCIO64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5791,8 +6140,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5806,7 +6155,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "01779ee53f999464465ed690d823d160f73f10e7"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -5828,8 +6179,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create WinFlash64 binPath= C:\\windows\\temp\\WinFlash64.sys type= kernel\nsc.exe start WinFlash64.sys",
-            "Description": "WinFlash64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5867,7 +6218,7 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create speedfan binPath= C:\\windows\\temp\\speedfan.sys type= kernel\nsc.exe start speedfan.sys",
+            "Command": "",
             "Description": "speedfan.sys is a vulnerable driver. CVE-2007-5633.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -5907,8 +6258,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create goad binPath= C:\\windows\\temp\\goad.sys type= kernel\nsc.exe start goad.sys",
-            "Description": "goad.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5947,8 +6298,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create Se64a binPath= C:\\windows\\temp\\Se64a.sys type= kernel\nsc.exe start Se64a.sys",
-            "Description": "Se64a.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -5986,8 +6337,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6025,8 +6376,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6062,8 +6413,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6077,7 +6428,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "358ac54be252673841a1d65bfc2fb6d549c1a4c877fa7f5e1bfa188f30375d69"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -6099,7 +6452,7 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "(1) IQVW32.sys before 1.3.1.0 and (2) IQVW64.sys before 1.3.1.0 in the Intel Ethernet diagnostics driver for Windows allows local users to cause a denial of service or possibly execute arbitrary code with kernel privileges via a crafted (a) 0x80862013, (b) 0x8086200B, (c) 0x8086200F, or (d) 0x80862007 IOCTL call.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -6177,7 +6530,7 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "The driver in Micro-Star MSI Afterburner 4.6.2.15658 (aka RTCore64.sys and RTCore32.sys) allows any authenticated user to read and write to arbitrary memory, I/O ports, and MSRs. This can be exploited for privilege escalation, code execution under high privileges, and information disclosure. These signed drivers can also be used to bypass the Microsoft driver-signing policy to deploy malicious code.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -6255,8 +6608,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create smep_capcom binPath= C:\\windows\\temp\\smep_capcom.sys type= kernel\nsc.exe start smep_capcom.sys",
-            "Description": "smep_capcom.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6332,8 +6685,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create Phymemx64 binPath= C:\\windows\\temp\\Phymemx64.sys type= kernel\nsc.exe start Phymemx64.sys",
-            "Description": "Phymemx64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6365,20 +6718,60 @@
         }
     },
     {
+        "Name": "POORTRY1.sys",
+        "Author": "Michael Haag",
+        "Created": "2023-03-04",
+        "MitreID": "T1068",
+        "Category": "malicious",
+        "Commands": {
+            "Command": "",
+            "Description": "Driver categorized as POORTRY by Mandiant.",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware"
+        ],
+        "driver_description": "",
+        "Acknowledgement": {
+            "Person": "",
+            "Handle": ""
+        },
+        "Detection": [],
+        "KnownHashes": [
+            "acac842a46f3501fe407b1db1b247a0b"
+        ],
+        "Metadata": {
+            "binary": "",
+            "Verified": "",
+            "Date": "",
+            "Publisher": "",
+            "Company": "",
+            "Description": "",
+            "Product": "",
+            "ProductVersion": "",
+            "FileVersion": "",
+            "MachineType": "",
+            "OriginalFilename": ""
+        }
+    },
+    {
         "Name": "aswVmm.sys",
         "Author": "Michael Haag",
         "Created": "2023-01-09",
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
         },
         "Resources": [
-            " https://github.com/elastic/protections-artifacts/search?q=VulnDriver"
+            " https://github.com/elastic/protections-artifacts/search?q=VulnDriver",
+            "https://github.com/tanduRE/AvastHV"
         ],
         "driver_description": "https://github.com/elastic/protections-artifacts/search?q=VulnDriver",
         "Acknowledgement": {
@@ -6386,7 +6779,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "36505921af5a09175395ebaea29c72b2a69a3a9204384a767a5be8a721f31b10"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -6408,8 +6803,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6423,7 +6818,10 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "9D58F640C7295952B71BDCB456CAE37213BACCDCD3032C1E3AEB54E79081F395",
+            "4A9093E8DBCB867E1B97A0A67CE99A8511900658F5201C34FFB8035881F2DBBE"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -6445,8 +6843,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6460,7 +6858,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "CB9890D4E303A4C03095D7BC176C42DEE1B47D8AA58E2F442EC1514C8F9E3CEC"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -6482,8 +6882,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create WINIODrv binPath= C:\\windows\\temp\\WINIODrv.sys type= kernel\nsc.exe start WINIODrv.sys",
-            "Description": "WINIODrv.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6523,8 +6923,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create GLCKIO2 binPath= C:\\windows\\temp\\GLCKIO2.sys type= kernel\nsc.exe start GLCKIO2.sys",
-            "Description": "GLCKIO2.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6563,8 +6963,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create asmmap64 binPath= C:\\windows\\temp\\asmmap64.sys type= kernel\nsc.exe start asmmap64.sys",
-            "Description": "asmmap64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6602,8 +7002,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrRapidStartDrv binPath= C:\\windows\\temp\\AsrRapidStartDrv.sys type= kernel\nsc.exe start AsrRapidStartDrv.sys",
-            "Description": "AsrRapidStartDrv.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6641,8 +7041,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6656,7 +7056,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "1b7fb154a7b7903a3c81f12f4b094f24a3c60a6a8cffca894c67c264ab7545fa"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -6678,8 +7080,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6717,8 +7119,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6732,7 +7134,10 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "b242b0332b9c9e8e17ec27ef10d75503d20d97b6",
+            "a65fabaf64aa1934314aae23f25cdf215cbaa4b6"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -6791,8 +7196,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6806,7 +7211,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "4e3eb5b9bce2fd9f6878ae36288211f0997f6149aa8c290ed91228ba4cdfae80"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -6828,8 +7235,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6843,7 +7250,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "4B8C0445075F09AEEF542AB1C86E5DE6B06E91A3"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -6865,8 +7274,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create physmem binPath= C:\\windows\\temp\\physmem.sys type= kernel\nsc.exe start physmem.sys",
-            "Description": "physmem.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6905,8 +7314,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6920,7 +7329,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -6942,8 +7353,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create rtkio64 binPath= C:\\windows\\temp\\rtkio64.sys type= kernel\nsc.exe start rtkio64.sys",
-            "Description": "rtkio64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6981,8 +7392,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -6996,7 +7407,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "AE79E760C739D6214C1E314728A78A6CB6060CCE206FDE2440A69735D639A0A2"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -7018,8 +7431,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7033,7 +7446,48 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "f18e669127c041431cde8f2d03b15cfc20696056"
+        ],
+        "Metadata": {
+            "binary": "",
+            "Verified": "",
+            "Date": "",
+            "Publisher": "",
+            "Company": "",
+            "Description": "",
+            "Product": "",
+            "ProductVersion": "",
+            "FileVersion": "",
+            "MachineType": "",
+            "OriginalFilename": ""
+        }
+    },
+    {
+        "Name": "Sense5Ext.sys",
+        "Author": "",
+        "Created": "2023-03-04",
+        "MitreID": "T1068",
+        "Category": "malicious",
+        "Commands": {
+            "Command": "",
+            "Description": "Driver categorized as POORTRY by Mandiant.",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware"
+        ],
+        "driver_description": "",
+        "Acknowledgement": {
+            "Person": "",
+            "Handle": ""
+        },
+        "Detection": [],
+        "KnownHashes": [
+            "f9844524fb0009e5b784c21c7bad4220"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -7055,8 +7509,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7070,7 +7524,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "7e0124fcc7c95fdc34408cf154cb41e654dade8b898c71ad587b2090b1da30d7"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -7092,8 +7548,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7107,7 +7563,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "A3E507E713F11901017FC328186AE98E23DE7CEA5594687480229F77D45848D8"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -7129,8 +7587,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7144,7 +7602,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "7D8937C18D6E11A0952E53970A0934CF0E65515637AC24D6CA52CCF4B93D385F"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -7162,26 +7622,28 @@
     {
         "Name": "2.sys",
         "Author": "Michael Haag",
-        "Created": "2023-01-09",
+        "Created": "2023-03-04",
         "MitreID": "T1068",
-        "Category": "vulnerable driver",
+        "Category": "malicious",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "Driver categorized as POORTRY by Mandiant.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
         },
         "Resources": [
-            " https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules"
+            "https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware"
         ],
-        "driver_description": "https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules",
+        "driver_description": "",
         "Acknowledgement": {
             "Person": "",
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "bd25be845c151370ff177509d95d5add"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -7203,8 +7665,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7218,7 +7680,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -7240,8 +7704,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7255,7 +7719,48 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "258359A7FA3D975620C9810DAB3A6493972876A024135FEAF3AC8482179B2E79"
+        ],
+        "Metadata": {
+            "binary": "",
+            "Verified": "",
+            "Date": "",
+            "Publisher": "",
+            "Company": "",
+            "Description": "",
+            "Product": "",
+            "ProductVersion": "",
+            "FileVersion": "",
+            "MachineType": "",
+            "OriginalFilename": ""
+        }
+    },
+    {
+        "Name": "NodeDriver.sys",
+        "Author": "Michael Haag",
+        "Created": "2023-03-02",
+        "MitreID": "T1068",
+        "Category": "malicious",
+        "Commands": {
+            "Command": "",
+            "Description": "Driver categorized as POORTRY by Mandiant.",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware"
+        ],
+        "driver_description": "",
+        "Acknowledgement": {
+            "Person": "",
+            "Handle": ""
+        },
+        "Detection": [],
+        "KnownHashes": [
+            "ee6b1a79cb6641aa44c762ee90786fe0"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -7277,8 +7782,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create msrhook binPath= C:\\windows\\temp\\msrhook.sys type= kernel\nsc.exe start msrhook.sys",
-            "Description": "msrhook.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7316,8 +7821,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrAutoChkUpdDrv.sys binPath= C:\\windows\\temp\\AsrAutoChkUpdDrv.sys type= kernel\nsc.exe start AsrAutoChkUpdDrv.sys",
-            "Description": "AsrAutoChkUpdDrv.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7392,8 +7897,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7407,7 +7912,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "58c071cfe72e9ee867bba85cbd0abe72eb223d27978d6f0650d0103553839b59"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -7429,8 +7936,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7444,7 +7951,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "3E9B62D2EA2BE50A2DA670746C4DBE807DB9601980AF3A1014BCD72D0248D84C"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -7466,7 +7975,7 @@
         "MitreID": "T1068",
         "Category": "malicious",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -7506,8 +8015,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7545,8 +8054,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7560,7 +8069,14 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "D569D4BAB86E70EFBCDFDAC9D822139D6F477B7C",
+            "80FA962BDFB76DFCB9E5D13EFC38BB3D392F2E77",
+            "5A7DD0DA0AEE0BDEDC14C1B7831B9CE9178A0346",
+            "1ACC7A486B52C5EE6619DBDC3B4210B5F48B936F",
+            "55AB7E27412ECA433D76513EDC7E6E03BCDD7EDA",
+            "1E7C241B9A9EA79061B50FB19B3D141DEE175C27"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -7582,8 +8098,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create segwindrvx64.sys binPath= C:\\windows\\temp\\segwindrvx64.sys type= kernel\nsc.exe start segwindrvx64.sys",
-            "Description": "segwindrvx64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7621,8 +8137,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7636,7 +8152,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "e1980c6592e6d2d92c1a65acad8f1071b6a404097bb6fcce494f3c8ac31385cf,hash:9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -7695,8 +8213,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7710,7 +8228,10 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "A7D827A41B2C4B7638495CD1D77926F1BA902978",
+            " 877C6C36A155109888FE1F9797B93CB30B4957EF"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -7732,8 +8253,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7771,22 +8292,24 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
         },
         "Resources": [
-            " https://github.com/elastic/protections-artifacts/search?q=VulnDriver"
+            "https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html"
         ],
-        "driver_description": "https://github.com/elastic/protections-artifacts/search?q=VulnDriver",
+        "driver_description": "",
         "Acknowledgement": {
             "Person": "",
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "be54f7279e69fb7651f98e91d24069dbc7c4c67e65850e486622ccbdc44d9a57"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -7808,8 +8331,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "BSMEMx64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7847,8 +8370,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7862,7 +8385,50 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "FAA870B0CB15C9AC2B9BBA5D0470BD501CCD4326",
+            "ACA8E53483B40A06DFDEE81BB364B1622F9156FE",
+            "05AC1C64CA16AB0517FE85D4499D08199E63DF26"
+        ],
+        "Metadata": {
+            "binary": "",
+            "Verified": "",
+            "Date": "",
+            "Publisher": "",
+            "Company": "",
+            "Description": "",
+            "Product": "",
+            "ProductVersion": "",
+            "FileVersion": "",
+            "MachineType": "",
+            "OriginalFilename": ""
+        }
+    },
+    {
+        "Name": "gftkyj64.sys",
+        "Author": "Michael Haag",
+        "Created": "2023-03-04",
+        "MitreID": "T1068",
+        "Category": "malicious",
+        "Commands": {
+            "Command": "",
+            "Description": "SentinelOne has observed prominent threat actors abusing legitimately signed Microsoft drivers in active intrusions into telecommunication, BPO, MSSP, and financial services businesses.\nInvestigations into these intrusions led to the discovery of POORTRY and STONESTOP malware, part of a small toolkit designed to terminate AV and EDR processes.\nWe first reported our discovery to Microsoft’s Security Response Center (MSRC) in October 2022 and received an official case number (75361). Today, MSRC released an associated advisory under ADV220005.\nThis research is being released alongside Mandiant, a SentinelOne technology and incident response partner. ",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://www.sentinelone.com/labs/driving-through-defenses-targeted-attacks-leverage-signed-malicious-microsoft-drivers/"
+        ],
+        "driver_description": "",
+        "Acknowledgement": {
+            "Person": "",
+            "Handle": ""
+        },
+        "Detection": [],
+        "KnownHashes": [
+            "9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c\n"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -7884,8 +8450,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7899,7 +8465,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -7921,8 +8489,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7936,7 +8504,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "D7BC7306CB489FE4C285BBEDDC6D1A09E814EF55CF30BD5B8DAF87A52396F102"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -7958,8 +8528,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -7973,7 +8543,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "DFAEFD06B680F9EA837E7815FC1CC7D1F4CC375641AC850667AB20739F46AD22"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -7995,8 +8567,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -8032,8 +8604,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create CITMDRV_AMD64 binPath= C:\\windows\\temp\\CITMDRV_AMD64.sys type= kernel\nsc.exe start CITMDRV_AMD64.sys",
-            "Description": "CITMDRV_AMD64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -8086,8 +8658,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create ATSZIO binPath= C:\\windows\\temp\\ATSZIO.sys type= kernel\nsc.exe start ATSZIO.sys",
-            "Description": "CapCom.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -8125,8 +8697,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -8140,7 +8712,10 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "0F780B7ADA5DD8464D9F2CC537D973F5AC804E9C",
+            "EA360A9F23BB7CF67F08B88E6A185A699F0C5410"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -8162,8 +8737,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create BSMEMx64 binPath= C:\\windows\\temp\\BSMEMx64.sys type= kernel\nsc.exe start BSMEMx64.sys",
-            "Description": "BSMEMx64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -8201,7 +8776,7 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create ncpl binPath= C:\\windows\\temp\\ncpl.sys type= kernel\nsc.exe start ncpl.sys",
+            "Command": "",
             "Description": "ncpl.sys is a vulnerable driver. CVE-2013-3956.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -8241,8 +8816,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create EneTechIo64 binPath= C:\\windows\\temp\\EneTechIo64.sys type= kernel\nsc.exe start EneTechIo64.sys",
-            "Description": "EneTechIo64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -8281,8 +8856,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -8320,8 +8895,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -8335,7 +8910,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "4CFF6E53430B81ECC4FAE453E59A0353BCFE73DD5780ABFC35F299C16A97998E"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -8357,7 +8934,7 @@
         "MitreID": "T1068",
         "Category": "malicious",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -8397,7 +8974,7 @@
         "MitreID": "T1068",
         "Category": "malicious",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -8437,8 +9014,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create BSMIXP64 binPath= C:\\windows\\temp\\BSMIXP64.sys type= kernel\nsc.exe start BSMIXP64.sys",
-            "Description": "BSMIXP64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -8476,7 +9053,7 @@
         "MitreID": "T1068",
         "Category": "malicious",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -8516,7 +9093,7 @@
         "MitreID": "T1068",
         "Category": "malicious",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -8556,8 +9133,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -8571,7 +9148,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "84DF20B1D9D87E305C92E5FFAE21B10B325609D59D835A954DBD8750EF5DABF4"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -8593,7 +9172,7 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create rwdrv binPath= C:\\windows\\temp\\rwdrv.sys type= kernel\nsc.exe start rwdrv.sys",
+            "Command": "",
             "Description": "This utility access almost all the computer hardware, including PCI (PCI Express), PCI Index/Data, Memory, Memory Index/Data, I/O Space, I/O Index/Data, Super I/O, Clock Generator, DIMM SPD, SMBus Device, CPU MSR Registers, ATA/ATAPI Identify Data, Disk Read Write, ACPI Tables Dump (include AML decode), Embedded Controller, USB Information, SMBIOS Structures, PCI Option ROMs, MP Configuration Table, E820, EDID and Remote Access. And also a Command Window is provided to access hardware manually.\n\n",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -8634,8 +9213,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -8649,7 +9228,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "362c4f3dadc9c393682664a139d65d80e32caa2a97b6e0361dfd713a73267ecc"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -8671,8 +9252,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -8710,7 +9291,7 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "The MSI AmbientLink MsIo64 driver 1.0.0.8 has a Buffer Overflow (0x80102040, 0x80102044, 0x80102050,and 0x80102054)",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -8753,8 +9334,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -8768,7 +9349,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "8111085022BDA87E5F6AA4C195E743CC6DD6A3A6D41ADD475D267DC6B105A69F"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -8790,8 +9373,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -8805,7 +9388,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "3A95CC82173032B82A0FFC7D2E438DF64C13BC16B4574214C9FE3BE37250925E"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -8827,16 +9412,14 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "CVE-2018-8061",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
         },
-        "Resources": [
-            " https://github.com/elastic/protections-artifacts/search?q=VulnDriver"
-        ],
-        "driver_description": "https://github.com/elastic/protections-artifacts/search?q=VulnDriver",
+        "Resources": [],
+        "driver_description": "",
         "Acknowledgement": {
             "Person": "",
             "Handle": ""
@@ -8864,8 +9447,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -8879,7 +9462,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "49ED27460730B62403C1D2E4930573121AB0C86C442854BC0A62415CA445A810"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -8936,8 +9521,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -8951,7 +9536,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "72B99147839BCFB062D29014EC09FE20A8F261748B5925B00171EF3CB849A4C1"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -8973,8 +9560,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create cpuz_x64 binPath= C:\\windows\\temp\\cpuz_x64.sys type= kernel\nsc.exe start cpuz_x64.sys",
-            "Description": "cpuz_x64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -9012,8 +9599,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -9027,7 +9614,12 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "485C0B9710A196C7177B99EE95E5DDB35B26DDD1",
+            " 50E2BC41F0186FDCE970B80E2A2CB296353AF586",
+            " E3C1DD569AA4758552566B0213EE4D1FE6382C4B",
+            " E09B5E80805B8FE853EA27D8773E31BFF262E3F7"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -9049,8 +9641,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -9064,7 +9656,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "4422851a0a102f654e95d3b79c357ae3af1b096d7d1576663c027cfbc04abaf9"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -9086,8 +9680,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create GVCIDrv64 binPath= C:\\windows\\temp\\GVCIDrv64.sys type= kernel\nsc.exe start GVCIDrv64.sys",
-            "Description": "GVCIDrv64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -9162,8 +9756,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create ADV64DRV binPath= C:\\windows\\temp\\ADV64DRV.sys type= kernel\nsc.exe start ADV64DRV.sys",
-            "Description": "ADV64DRV.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -9192,15 +9786,15 @@
         "Metadata": {
             "binary": "",
             "Verified": "TRUE",
-            "Date": "44896",
+            "Date": "01:30 AM 08/29/2006",
             "Publisher": "FUJITSU LIMITED",
             "Company": "",
             "Description": "",
             "Product": "",
             "ProductVersion": "",
-            "FileVersion": "",
+            "FileVersion": "2, 0, 0, 0",
             "MachineType": "",
-            "OriginalFilename": ""
+            "OriginalFilename": "ADV64DRV.sys"
         }
     },
     {
@@ -9210,8 +9804,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -9225,7 +9819,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "455BC98BA32ADAB8B47D2D89BDBADCA4910F91C182AB2FC3211BA07D3784537B"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -9284,8 +9880,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv101 binPath= C:\\windows\\temp\\AsrDrv101.sys type= kernel\nsc.exe start AsrDrv101.sys",
-            "Description": "AsrDrv101.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -9323,8 +9919,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -9338,7 +9934,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "C60FCFF9C8E5243BBB22EC94618B9DCB02C59BB49B90C04D7D6AB3EBBD58DC3A"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -9360,7 +9958,7 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create gdrv binPath= C:\\windows\\temp\\gdrv.sys type= kernel\nsc.exe start gdrv.sys",
+            "Command": "",
             "Description": "gdrv.sys is vulnerable to multiple CVEs: CVE-2018-19320, CVE-2018-19322, CVE-2018-19323, CVE-2018-19321. Read/Write Physical memory, read/write to/from IO ports, exposes ring0 memcpy-like functionality,  read and write Machine Specific Registers (MSRs).",
             "Usecase": "Elevate privileges, tamper with PPL or system processes",
             "Privileges": "kernel",
@@ -9403,8 +10001,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "BSMEMx64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -9442,8 +10040,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create OpenLibSys binPath= C:\\windows\\temp\\OpenLibSys.sys type= kernel\nsc.exe start OpenLibSys.sys",
-            "Description": "OpenLibSys.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -9482,8 +10080,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create nvflash binPath= C:\\windows\\temp\\nvflash.sys type= kernel\nsc.exe start nvflash.sys",
-            "Description": "nvflash.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -9521,7 +10119,7 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "The MsIo64.sys and MsIo32.sys drivers in Patriot Viper RGB before 1.1 allow local users (including low integrity processes) to read and write to arbitrary memory locations, and consequently gain NT AUTHORITY\\SYSTEM privileges, by mapping \\Device\\PhysicalMemory into the calling process via ZwOpenSection and ZwMapViewOfSection.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -9562,8 +10160,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -9601,15 +10199,13 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "This has been referenced as a vulnerable driver, but no hash has been found.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
         },
-        "Resources": [
-            " https://github.com/elastic/protections-artifacts/search?q=VulnDriver"
-        ],
+        "Resources": [],
         "driver_description": "https://github.com/elastic/protections-artifacts/search?q=VulnDriver",
         "Acknowledgement": {
             "Person": "",
@@ -9638,8 +10234,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -9653,7 +10249,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "CC383AD11E9D06047A1558ED343F389492DA3AC2B84B71462AEE502A2FA616C8"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -9675,7 +10273,7 @@
         "MitreID": "T1068",
         "Category": "malicious",
         "Commands": {
-            "Command": "sc.exe create AsrDrv103 binPath= C:\\windows\\temp\\AsrDrv103.sys type= kernel\nsc.exe start AsrDrv103.sys",
+            "Command": "",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -9715,8 +10313,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create WinRing0 binPath= C:\\windows\\temp\\WinRing0.sys type= kernel\nsc.exe start WinRing0.sys",
-            "Description": "WinRing0.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -9756,8 +10354,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create WinRing0x64.sys binPath= C:\\windows\\temp\\WinRing0x64.sys type= kernel\nsc.exe start WinRing0x64.sys",
-            "Description": "WinRing0x64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -9795,8 +10393,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsUpIO64 binPath= C:\\windows\\temp\\AsUpIO64.sys type= kernel\nsc.exe start AsUpIO64.sys",
-            "Description": "AsUpIO64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -9834,8 +10432,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -9849,7 +10447,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "F8886A9C759E0426E08D55E410B02C5B05AF3C287B15970175E4874316FFAF13"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -9871,8 +10471,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create iomem64 binPath= C:\\windows\\temp\\iomem64.sys type= kernel\nsc.exe start iomem64.sys",
-            "Description": "iomem64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -9911,22 +10511,25 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "A vulnerability exists in the latest version of Razer Synapse (v2.20.15.1104 as of the day of disclosure) which can be leveraged locally by a malicious application to elevate its privileges to those of NT_AUTHORITY\\SYSTEM. The vulnerability lies in a specific IOCTL handler in the rzpnk.sys driver that passes a PID specified by the user to ZwOpenProcess. CVE-2017-9769.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
         },
         "Resources": [
-            " https://github.com/elastic/protections-artifacts/search?q=VulnDriver"
+            "https://github.com/nomi-sec/PoC-in-GitHub/blob/2a85c15ed806287861a7adec6545c85aec618e3b/2017/CVE-2017-9769.json#L13",
+            "https://www.rapid7.com/db/modules/exploit/windows/local/razer_zwopenprocess/"
         ],
-        "driver_description": "https://github.com/elastic/protections-artifacts/search?q=VulnDriver",
+        "driver_description": "",
         "Acknowledgement": {
             "Person": "",
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "93d873cdf23d5edc622b74f9544cac7fe247d7a68e1e2a7bf2879fad97a3ae63"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -9948,8 +10551,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create BSMIx64 binPath= C:\\windows\\temp\\BSMIx64.sys type= kernel\nsc.exe start BSMIx64.sys",
-            "Description": "BSMIx64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -9987,8 +10590,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -10002,7 +10605,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "FD33FB2735CC5EF466A54807D3436622407287E325276FCD3ED1290C98BD0533"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -10024,8 +10629,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -10039,7 +10644,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "FCDFE570E6DC6E768EF75138033D9961F78045ADCA53BEB6FDB520F6417E0DF1"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -10061,8 +10668,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -10076,7 +10683,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "3390919BB28D5C36CC348F9EF23BE5FA49BFD81263EB7740826E4437CBE904CD"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -10098,8 +10707,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create dbk64.sys binPath= C:\\windows\\temp\\dbk64.sys type= kernel\nsc.exe start dbk64.sys",
-            "Description": "dbk64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -10131,14 +10740,53 @@
         }
     },
     {
+        "Name": "4.sys",
+        "Author": "Michael Haag",
+        "Created": "2023-03-04",
+        "MitreID": "T1068",
+        "Category": "malicious",
+        "Commands": {
+            "Command": "",
+            "Description": "SentinelOne has observed prominent threat actors abusing legitimately signed Microsoft drivers in active intrusions into telecommunication, BPO, MSSP, and financial services businesses.\nInvestigations into these intrusions led to the discovery of POORTRY and STONESTOP malware, part of a small toolkit designed to terminate AV and EDR processes.\nWe first reported our discovery to Microsoft’s Security Response Center (MSRC) in October 2022 and received an official case number (75361). Today, MSRC released an associated advisory under ADV220005.\nThis research is being released alongside Mandiant, a SentinelOne technology and incident response partner. ",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://www.sentinelone.com/labs/driving-through-defenses-targeted-attacks-leverage-signed-malicious-microsoft-drivers/"
+        ],
+        "driver_description": "",
+        "Acknowledgement": {
+            "Person": "",
+            "Handle": ""
+        },
+        "Detection": [],
+        "KnownHashes": [
+            "8e035beb02a411f8a9e92d4cf184ad34f52bbd0a81a50c222cdd4706e4e45104"
+        ],
+        "Metadata": {
+            "binary": "",
+            "Verified": "",
+            "Date": "",
+            "Publisher": "",
+            "Company": "",
+            "Description": "",
+            "Product": "",
+            "ProductVersion": "",
+            "FileVersion": "",
+            "MachineType": "",
+            "OriginalFilename": ""
+        }
+    },
+    {
         "Name": "80.sys",
         "Author": "Michael Haag",
         "Created": "2023-01-09",
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc create CapCom binpath = c:\\temp\\capcom.sys type=kernel start=auto displayname=\"CapCom vulnerable Driver\"",
-            "Description": "CapCom.sys is a vulnerable driver that has been abused over the years.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -10152,7 +10800,9 @@
             "Handle": ""
         },
         "Detection": [],
-        "KnownHashes": [],
+        "KnownHashes": [
+            "BC2F3850C7B858340D7ED27B90E63B036881FD6C"
+        ],
         "Metadata": {
             "binary": "",
             "Verified": "",
@@ -10174,8 +10824,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create AsIO binPath= C:\\windows\\temp\\AsIO.sys type= kernel\nsc.exe start AsIO.sys",
-            "Description": "AsIO.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -10215,8 +10865,8 @@
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Commands": {
-            "Command": "sc.exe create inpoutx64 binPath= C:\\windows\\temp\\inpoutx64.sys type= kernel\nsc.exe start inpoutx64.sys",
-            "Description": "inpoutx64.sys is a vulnerable driver.",
+            "Command": "",
+            "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"

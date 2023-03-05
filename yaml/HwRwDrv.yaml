@@ -4,10 +4,8 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create HwRwDrv binPath= C:\windows\temp\HwRwDrv.sys type= kernel
-
-    sc.exe start HwRwDrv.sys'
-  Description: HwRwDrv.sys is a vulnerable driver.
+  Command: ''
+  Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10

@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
-CapCom.sys is a vulnerable driver.
+
+ATSZIO.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create ATSZIO binPath= C:\windows\temp\ATSZIO.sys type= kernel
+sc.exe create ATSZIO.sys binPath= C:\windows\temp\ATSZIO.sys type= kernel
 sc.exe start ATSZIO.sys
 ```
 
@@ -61,7 +63,7 @@ sc.exe start ATSZIO.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/atszio.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

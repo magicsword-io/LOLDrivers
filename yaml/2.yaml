@@ -1,23 +1,23 @@
 Name: 2.sys
 Author: Michael Haag
-Created: '2023-01-09'
+Created: '2023-03-04'
 MitreID: T1068
-Category: vulnerable driver
+Category: malicious
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: ''
+  Description: Driver categorized as POORTRY by Mandiant.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-driver_description: https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+driver_description: ''
 Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- bd25be845c151370ff177509d95d5add
 Metadata:
   binary: ''
   Verified: ''

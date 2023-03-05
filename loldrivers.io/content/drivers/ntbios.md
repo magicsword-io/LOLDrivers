@@ -15,17 +15,19 @@ weight = 10
 
 #### Description
 
+
 Driver used in the Daxin malware campaign.
+
 
 - **Created**: 2023-02-28
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
-sc.exe start AsrDrv103.sys
+sc.exe create ntbios.sys binPath= C:\windows\temp\ntbios.sys type= kernel
+sc.exe start ntbios.sys
 ```
 
 #### Resources
@@ -63,7 +65,7 @@ sc.exe start AsrDrv103.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ntbios.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

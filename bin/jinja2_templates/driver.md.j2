@@ -15,16 +15,21 @@ weight = 10
 
 #### Description
 
+{% if driver.Commands.Description %}
 {{driver.Commands.Description}}
+{% else %}
+{{ driver.Name }} is a vulnerable driver and more information will be added as found.
+{% endif %}
 
 - **Created**: {{driver.Created}}
 - **Author**: {{driver.Author}}
 - **Acknowledgement**: {{driver.Acknowledgement.Person}} | [{{ driver.Acknowledgement.Handle }}](https://twitter.com/{{driver.Acknowledgement.Handle}})
 
-#### Command
+#### Testing
 
 ```
-{{ driver.Commands.Command|replace("|", "\n|")|safe }}
+sc.exe create {{ driver.Name }} binPath= C:\windows\temp\{{ driver.Name }} type= kernel
+sc.exe start {{ driver.Name }}
 ```
 
 #### Resources

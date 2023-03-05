@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
-ADV64DRV.sys is a vulnerable driver.
+
+ADV64DRV.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create ADV64DRV binPath= C:\windows\temp\ADV64DRV.sys type= kernel
+sc.exe create ADV64DRV.sys binPath= C:\windows\temp\ADV64DRV.sys type= kernel
 sc.exe start ADV64DRV.sys
 ```
 
@@ -49,7 +51,7 @@ sc.exe start ADV64DRV.sys
 
 - binary: 
 - Verified: TRUE
-- Date: 44896
+- Date: 01:30 AM 08/29/2006
 - Publisher: FUJITSU LIMITED
 - Company: 
 - Description: 
@@ -57,11 +59,11 @@ sc.exe start ADV64DRV.sys
 - ProductVersion: 
 - FileVersion: 
 - MachineType: 
-- OriginalFilename: 
+- OriginalFilename: ADV64DRV.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/adv64drv.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

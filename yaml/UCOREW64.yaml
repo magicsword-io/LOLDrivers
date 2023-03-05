@@ -4,10 +4,8 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create UCOREW64 binPath= C:\windows\temp\UCOREW64.SYS type= kernel
-
-    sc.exe start UCOREW64.SYS'
-  Description: UCOREW64.SYS is a vulnerable driver.
+  Command: ''
+  Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10

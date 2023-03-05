@@ -4,15 +4,13 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
-
-    sc.exe start AsrDrv103.sys'
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: ''
+  Description: This has been referenced as a vulnerable driver, but no hash has been
+    found.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
+Resources: []
 driver_description: https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Acknowledgement:
   Person: ''

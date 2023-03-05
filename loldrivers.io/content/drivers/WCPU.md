@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
-WCPU.sys is a vulnerable driver.
+
+WCPU.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create WCPU binPath= C:\windows\temp\WCPU.sys type= kernel
+sc.exe create WCPU.sys binPath= C:\windows\temp\WCPU.sys type= kernel
 sc.exe start WCPU.sys
 ```
 
@@ -61,7 +63,7 @@ sc.exe start WCPU.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wcpu.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

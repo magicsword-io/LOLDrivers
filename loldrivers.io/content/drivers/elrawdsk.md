@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
-elrawdsk.sys is a vulnerable driver.
+
+elrawdsk.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create elrawdsk binPath= C:\windows\temp\elrawdsk.sys type= kernel
+sc.exe create elrawdsk.sys binPath= C:\windows\temp\elrawdsk.sys type= kernel
 sc.exe start elrawdsk.sys
 ```
 
@@ -69,7 +71,7 @@ sc.exe start elrawdsk.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/elrawdsk.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

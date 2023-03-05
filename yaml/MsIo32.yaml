@@ -4,9 +4,7 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create AsrDrv103 binPath= C:\windows\temp\AsrDrv103.sys type= kernel
-
-    sc.exe start AsrDrv103.sys'
+  Command: ''
   Description: The MsIo64.sys and MsIo32.sys drivers in Patriot Viper RGB before 1.1
     allow local users (including low integrity processes) to read and write to arbitrary
     memory locations, and consequently gain NT AUTHORITY\SYSTEM privileges, by mapping

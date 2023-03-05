@@ -4,10 +4,8 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create dbk64.sys binPath= C:\windows\temp\dbk64.sys type= kernel
-
-    sc.exe start dbk64.sys'
-  Description: dbk64.sys is a vulnerable driver.
+  Command: ''
+  Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10

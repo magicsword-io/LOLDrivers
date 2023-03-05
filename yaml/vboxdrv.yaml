@@ -4,9 +4,7 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create vboxdrv binPath= C:\windows\temp\vboxdrv.sys type= kernel
-
-    sc.exe start vboxdrv.sys'
+  Command: ''
   Description: Used by unknown actor in Acid Rain malware. vboxdrv.sys is a vulnerable
     driver.
   Usecase: Elevate privileges

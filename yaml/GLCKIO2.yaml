@@ -4,10 +4,8 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create GLCKIO2 binPath= C:\windows\temp\GLCKIO2.sys type= kernel
-
-    sc.exe start GLCKIO2.sys'
-  Description: GLCKIO2.sys is a vulnerable driver.
+  Command: ''
+  Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10

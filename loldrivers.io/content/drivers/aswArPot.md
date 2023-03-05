@@ -15,17 +15,19 @@ weight = 10
 
 #### Description
 
+
 Avast’s “Anti Rootkit” driver (also used by AVG) has been found to be vulnerable to two high severity attacks that could potentially lead to privilege escalation by running code in the kernel from a non-administrator user.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [@mattnotmax](https://twitter.com/@mattnotmax)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create aswSP_ArPot2 binPath= C:\windows\temp\aswArPot.sys type= kernel
-sc.exe start aswSP_ArPot2 
+sc.exe create aswArPot.sys binPath= C:\windows\temp\aswArPot.sys type= kernel
+sc.exe start aswArPot.sys
 ```
 
 #### Resources
@@ -58,7 +60,7 @@ sc.exe start aswSP_ArPot2
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/aswarpot.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

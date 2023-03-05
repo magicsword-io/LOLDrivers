@@ -4,11 +4,8 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create CITMDRV_AMD64 binPath= C:\windows\temp\CITMDRV_AMD64.sys
-    type= kernel
-
-    sc.exe start CITMDRV_AMD64.sys'
-  Description: CITMDRV_AMD64.sys is a vulnerable driver.
+  Command: ''
+  Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10

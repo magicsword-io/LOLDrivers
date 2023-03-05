@@ -15,16 +15,18 @@ weight = 10
 
 #### Description
 
+
 nscm.sys is a vulnerable driver. CVE-2013-3956.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
-sc.exe create nscm binPath= C:\windows\temp\nscm.sys type= kernel
+sc.exe create nscm.sys binPath= C:\windows\temp\nscm.sys type= kernel
 sc.exe start nscm.sys
 ```
 
@@ -63,7 +65,7 @@ sc.exe start nscm.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nscm.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

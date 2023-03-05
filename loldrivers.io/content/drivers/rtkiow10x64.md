@@ -15,13 +15,15 @@ weight = 10
 
 #### Description
 
-rtkiow10x64.sys is a vulnerable driver.
+
+rtkiow10x64.sys is a vulnerable driver and more information will be added as found.
+
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Command
+#### Testing
 
 ```
 sc.exe create rtkiow10x64.sys binPath= C:\windows\temp\rtkiow10x64.sys type= kernel
@@ -61,7 +63,7 @@ sc.exe start rtkiow10x64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rtkiow10x64.sys.yml)
 
-*last_updated:* 2023-02-28
+*last_updated:* 2023-03-04
 
 
 {{< /column >}}

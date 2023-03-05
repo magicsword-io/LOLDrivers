@@ -4,9 +4,8 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname="CapCom
-    vulnerable Driver"
-  Description: CapCom.sys is a vulnerable driver that has been abused over the years.
+  Command: ''
+  Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -17,7 +16,10 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes: []
+KnownHashes:
+- FAA870B0CB15C9AC2B9BBA5D0470BD501CCD4326
+- ACA8E53483B40A06DFDEE81BB364B1622F9156FE
+- 05AC1C64CA16AB0517FE85D4499D08199E63DF26
 Metadata:
   binary: ''
   Verified: ''

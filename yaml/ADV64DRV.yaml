@@ -4,10 +4,8 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create ADV64DRV binPath= C:\windows\temp\ADV64DRV.sys type= kernel
-
-    sc.exe start ADV64DRV.sys'
-  Description: ADV64DRV.sys is a vulnerable driver.
+  Command: ''
+  Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -27,12 +25,12 @@ KnownHashes:
 Metadata:
   binary: ''
   Verified: 'TRUE'
-  Date: '44896'
+  Date: 01:30 AM 08/29/2006
   Publisher: FUJITSU LIMITED
   Company: ''
   Description: ''
   Product: ''
   ProductVersion: ''
-  FileVersion: ''
+  FileVersion: 2, 0, 0, 0
   MachineType: ''
-  OriginalFilename: ''
+  OriginalFilename: ADV64DRV.sys

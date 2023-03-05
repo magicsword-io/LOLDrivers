@@ -4,11 +4,8 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: 'sc.exe create NBIOLib_X64 binPath= C:\windows\temp\NBIOLib_X64.sys type=
-    kernel
-
-    sc.exe start NBIOLib_X64.sys'
-  Description: NBIOLib_X64.sys is a vulnerable driver.
+  Command: ''
+  Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
