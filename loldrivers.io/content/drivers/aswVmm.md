@@ -11,9 +11,19 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# aswVmm.sys
 
-#### Description
+
+# aswVmm.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
+
+
+
+### Description
 
 
 aswVmm.sys is a vulnerable driver and more information will be added as found.
@@ -23,14 +33,18 @@ aswVmm.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Testing
+### Commands
+
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
 
 ```
-sc.exe create aswVmm.sys binPath= C:\windows\temp\aswVmm.sys type= kernel
+sc.exe create aswVmm.sys binPath=C:\windows\temp\aswVmm.sys type=kernel
 sc.exe start aswVmm.sys
 ```
 
-#### Resources
+### Resources
 <br>
 
 
@@ -42,7 +56,7 @@ sc.exe start aswVmm.sys
 <br>
 
 
-#### Binary Metadata
+### Binary Metadata
 <br>
 
 
@@ -65,7 +79,7 @@ sc.exe start aswVmm.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/aswvmm.sys.yml)
 
-*last_updated:* 2023-03-04
+*last_updated:* 2023-03-06
 
 
 {{< /column >}}

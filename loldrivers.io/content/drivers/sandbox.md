@@ -11,9 +11,19 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# sandbox.sys
 
-#### Description
+
+# sandbox.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
+
+
+
+### Description
 
 
 sandbox.sys is a vulnerable driver and more information will be added as found.
@@ -23,14 +33,18 @@ sandbox.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Testing
+### Commands
+
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
 
 ```
-sc.exe create sandbox.sys binPath= C:\windows\temp\sandbox.sys type= kernel
+sc.exe create sandbox.sys binPath=C:\windows\temp\sandbox.sys type=kernel
 sc.exe start sandbox.sys
 ```
 
-#### Resources
+### Resources
 <br>
 
 
@@ -42,7 +56,7 @@ sc.exe start sandbox.sys
 <br>
 
 
-#### Binary Metadata
+### Binary Metadata
 <br>
 
 
@@ -61,7 +75,7 @@ sc.exe start sandbox.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/sandbox.sys.yml)
 
-*last_updated:* 2023-03-04
+*last_updated:* 2023-03-06
 
 
 {{< /column >}}

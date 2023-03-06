@@ -11,9 +11,19 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# rzpnk.sys
 
-#### Description
+
+# rzpnk.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
+
+
+
+### Description
 
 
 A vulnerability exists in the latest version of Razer Synapse (v2.20.15.1104 as of the day of disclosure) which can be leveraged locally by a malicious application to elevate its privileges to those of NT_AUTHORITY\SYSTEM. The vulnerability lies in a specific IOCTL handler in the rzpnk.sys driver that passes a PID specified by the user to ZwOpenProcess. CVE-2017-9769.
@@ -23,14 +33,18 @@ A vulnerability exists in the latest version of Razer Synapse (v2.20.15.1104 as 
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Testing
+### Commands
+
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
 
 ```
-sc.exe create rzpnk.sys binPath= C:\windows\temp\rzpnk.sys type= kernel
+sc.exe create rzpnk.sys binPath=C:\windows\temp\rzpnk.sys type=kernel
 sc.exe start rzpnk.sys
 ```
 
-#### Resources
+### Resources
 <br>
 
 
@@ -42,7 +56,7 @@ sc.exe start rzpnk.sys
 <br>
 
 
-#### Binary Metadata
+### Binary Metadata
 <br>
 
 
@@ -65,7 +79,7 @@ sc.exe start rzpnk.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rzpnk.sys.yml)
 
-*last_updated:* 2023-03-04
+*last_updated:* 2023-03-06
 
 
 {{< /column >}}

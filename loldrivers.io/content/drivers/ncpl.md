@@ -11,9 +11,19 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# ncpl.sys
 
-#### Description
+
+# ncpl.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
+
+
+
+### Description
 
 
 ncpl.sys is a vulnerable driver. CVE-2013-3956.
@@ -23,14 +33,18 @@ ncpl.sys is a vulnerable driver. CVE-2013-3956.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Testing
+### Commands
+
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
 
 ```
-sc.exe create ncpl.sys binPath= C:\windows\temp\ncpl.sys type= kernel
+sc.exe create ncpl.sys binPath=C:\windows\temp\ncpl.sys type=kernel
 sc.exe start ncpl.sys
 ```
 
-#### Resources
+### Resources
 <br>
 
 
@@ -42,7 +56,7 @@ sc.exe start ncpl.sys
 <br>
 
 
-#### Binary Metadata
+### Binary Metadata
 <br>
 
 
@@ -65,7 +79,7 @@ sc.exe start ncpl.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ncpl.sys.yml)
 
-*last_updated:* 2023-03-04
+*last_updated:* 2023-03-06
 
 
 {{< /column >}}

@@ -4,7 +4,9 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: ''
+  Command: 'sc.exe create Mslo64.sys binPath=C:\windows\temp\Mslo64.sys type=kernel
+
+    sc.exe start Mslo64.sys'
   Description: This has been referenced as a vulnerable driver, but no hash has been
     found.
   Usecase: Elevate privileges

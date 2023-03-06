@@ -4,7 +4,9 @@ Created: '2023-03-04'
 MitreID: T1068
 Category: malicious
 Commands:
-  Command: ''
+  Command: 'sc.exe create 7.sys binPath=C:\windows\temp\7.sys type=kernel
+
+    sc.exe start 7.sys'
   Description: Driver categorized as POORTRY by Mandiant.
   Usecase: Elevate privileges
   Privileges: kernel

@@ -11,9 +11,19 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# MsIo.sys
 
-#### Description
+
+# MsIo.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
+
+
+
+### Description
 
 
 CapCom.sys is a vulnerable driver that has been abused over the years.
@@ -23,14 +33,17 @@ CapCom.sys is a vulnerable driver that has been abused over the years.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Testing
+### Commands
+
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
 
 ```
-sc.exe create MsIo.sys binPath= C:\windows\temp\MsIo.sys type= kernel
-sc.exe start MsIo.sys
+sc create CapCom binpath = c:\temp\capcom.sys type=kernel start=auto displayname=&#34;CapCom vulnerable Driver&#34;
 ```
 
-#### Resources
+### Resources
 <br>
 
 
@@ -40,7 +53,7 @@ sc.exe start MsIo.sys
 <br>
 
 
-#### Binary Metadata
+### Binary Metadata
 <br>
 
 
@@ -59,7 +72,7 @@ sc.exe start MsIo.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/msio.sys.yml)
 
-*last_updated:* 2023-03-04
+*last_updated:* 2023-03-06
 
 
 {{< /column >}}

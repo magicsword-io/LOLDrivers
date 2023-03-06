@@ -11,9 +11,13 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# ADV64DRV.sys
 
-#### Description
+
+# ADV64DRV.sys ![:inline](/images/twitter_verified.png) 
+
+
+
+### Description
 
 
 ADV64DRV.sys is a vulnerable driver and more information will be added as found.
@@ -23,14 +27,18 @@ ADV64DRV.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Testing
+### Commands
+
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
 
 ```
-sc.exe create ADV64DRV.sys binPath= C:\windows\temp\ADV64DRV.sys type= kernel
+sc.exe create ADV64DRV.sys binPath=C:\windows\temp\ADV64DRV.sys type=kernel
 sc.exe start ADV64DRV.sys
 ```
 
-#### Resources
+### Resources
 <br>
 
 
@@ -40,7 +48,7 @@ sc.exe start ADV64DRV.sys
 <br>
 
 
-#### Binary Metadata
+### Binary Metadata
 <br>
 
 
@@ -63,7 +71,7 @@ sc.exe start ADV64DRV.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/adv64drv.sys.yml)
 
-*last_updated:* 2023-03-04
+*last_updated:* 2023-03-06
 
 
 {{< /column >}}

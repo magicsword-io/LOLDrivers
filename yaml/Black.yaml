@@ -4,7 +4,9 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: ''
+  Command: 'sc.exe create Black.sys binPath=C:\windows\temp\Black.sys type=kernel
+
+    sc.exe start Black.sys'
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel

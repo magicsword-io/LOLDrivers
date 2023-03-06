@@ -27,6 +27,10 @@ def generate_yml_files(csv_file_path, output_folder):
             yaml_data["Category"] = row[7]
             commands_data = dict()
             commands_data["Command"] = row[4]
+            if commands_data["Command"] == '':
+                sc_example = "sc.exe create " + yaml_data['Name'] + " binPath=C:\\windows\\temp\\" + yaml_data['Name'] + " type=kernel" \
+                    + "\nsc.exe start " + yaml_data['Name']
+                commands_data["Command"] = sc_example
             commands_data["Description"] = row[5]
             commands_data["Usecase"] = row[6]
             commands_data["Privileges"] = row[8]

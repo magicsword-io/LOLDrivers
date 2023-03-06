@@ -4,7 +4,9 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: ''
+  Command: 'sc.exe create physmem.sys binPath=C:\windows\temp\physmem.sys type=kernel
+
+    sc.exe start physmem.sys'
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel

@@ -4,7 +4,10 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: ''
+  Command: 'sc.exe create IObitUnlocker.sys binPath=C:\windows\temp\IObitUnlocker.sys
+    type=kernel
+
+    sc.exe start IObitUnlocker.sys'
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel

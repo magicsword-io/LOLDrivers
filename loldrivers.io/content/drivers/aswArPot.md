@@ -11,9 +11,19 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# aswArPot.sys
 
-#### Description
+
+# aswArPot.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
+
+
+
+### Description
 
 
 Avast’s “Anti Rootkit” driver (also used by AVG) has been found to be vulnerable to two high severity attacks that could potentially lead to privilege escalation by running code in the kernel from a non-administrator user.
@@ -23,14 +33,18 @@ Avast’s “Anti Rootkit” driver (also used by AVG) has been found to be vuln
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [@mattnotmax](https://twitter.com/@mattnotmax)
 
-#### Testing
+### Commands
+
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
 
 ```
-sc.exe create aswArPot.sys binPath= C:\windows\temp\aswArPot.sys type= kernel
+sc.exe create aswArPot.sys binPath=C:\windows\temp\aswArPot.sys type=kernel
 sc.exe start aswArPot.sys
 ```
 
-#### Resources
+### Resources
 <br>
 
 
@@ -40,7 +54,7 @@ sc.exe start aswArPot.sys
 <br>
 
 
-#### Binary Metadata
+### Binary Metadata
 <br>
 
 
@@ -60,7 +74,7 @@ sc.exe start aswArPot.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/aswarpot.sys.yml)
 
-*last_updated:* 2023-03-04
+*last_updated:* 2023-03-06
 
 
 {{< /column >}}

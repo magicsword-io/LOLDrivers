@@ -11,9 +11,19 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# HWiNFO64A.sys
 
-#### Description
+
+# HWiNFO64A.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
+
+
+
+### Description
 
 
 CVE-2018-8061
@@ -23,20 +33,24 @@ CVE-2018-8061
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Testing
+### Commands
+
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
 
 ```
-sc.exe create HWiNFO64A.sys binPath= C:\windows\temp\HWiNFO64A.sys type= kernel
+sc.exe create HWiNFO64A.sys binPath=C:\windows\temp\HWiNFO64A.sys type=kernel
 sc.exe start HWiNFO64A.sys
 ```
 
-#### Resources
+### Resources
 <br>
 
 <br>
 
 
-#### Binary Metadata
+### Binary Metadata
 <br>
 
 
@@ -55,7 +69,7 @@ sc.exe start HWiNFO64A.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hwinfo64a.sys.yml)
 
-*last_updated:* 2023-03-04
+*last_updated:* 2023-03-06
 
 
 {{< /column >}}

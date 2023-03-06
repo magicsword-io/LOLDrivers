@@ -11,9 +11,19 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# EneTechIo64.sys
 
-#### Description
+
+# EneTechIo64.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
+
+
+
+### Description
 
 
 EneTechIo64.sys is a vulnerable driver and more information will be added as found.
@@ -23,14 +33,18 @@ EneTechIo64.sys is a vulnerable driver and more information will be added as fou
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Testing
+### Commands
+
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
 
 ```
-sc.exe create EneTechIo64.sys binPath= C:\windows\temp\EneTechIo64.sys type= kernel
+sc.exe create EneTechIo64.sys binPath=C:\windows\temp\EneTechIo64.sys type=kernel
 sc.exe start EneTechIo64.sys
 ```
 
-#### Resources
+### Resources
 <br>
 
 
@@ -42,7 +56,7 @@ sc.exe start EneTechIo64.sys
 <br>
 
 
-#### Binary Metadata
+### Binary Metadata
 <br>
 
 
@@ -65,7 +79,7 @@ sc.exe start EneTechIo64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/enetechio64.sys.yml)
 
-*last_updated:* 2023-03-04
+*last_updated:* 2023-03-06
 
 
 {{< /column >}}

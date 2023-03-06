@@ -4,7 +4,9 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: ''
+  Command: 'sc.exe create nt3.sys binPath=C:\windows\temp\nt3.sys type=kernel
+
+    sc.exe start nt3.sys'
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel

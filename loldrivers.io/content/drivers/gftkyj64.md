@@ -11,9 +11,19 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# gftkyj64.sys
 
-#### Description
+
+# gftkyj64.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
+
+
+
+### Description
 
 
 SentinelOne has observed prominent threat actors abusing legitimately signed Microsoft drivers in active intrusions into telecommunication, BPO, MSSP, and financial services businesses.
@@ -26,14 +36,18 @@ This research is being released alongside Mandiant, a SentinelOne technology and
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Testing
+### Commands
+
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
 
 ```
-sc.exe create gftkyj64.sys binPath= C:\windows\temp\gftkyj64.sys type= kernel
+sc.exe create gftkyj64.sys binPath=C:\windows\temp\gftkyj64.sys type=kernel
 sc.exe start gftkyj64.sys
 ```
 
-#### Resources
+### Resources
 <br>
 
 
@@ -43,7 +57,7 @@ sc.exe start gftkyj64.sys
 <br>
 
 
-#### Binary Metadata
+### Binary Metadata
 <br>
 
 
@@ -68,7 +82,7 @@ sc.exe start gftkyj64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gftkyj64.sys.yml)
 
-*last_updated:* 2023-03-04
+*last_updated:* 2023-03-06
 
 
 {{< /column >}}

@@ -4,7 +4,9 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: ''
+  Command: 'sc.exe create UCOREW64.SYS binPath=C:\windows\temp\UCOREW64.SYS type=kernel
+
+    sc.exe start UCOREW64.SYS'
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel

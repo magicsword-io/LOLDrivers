@@ -11,9 +11,19 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# MsIo32.sys
 
-#### Description
+
+# MsIo32.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
+
+
+
+### Description
 
 
 The MsIo64.sys and MsIo32.sys drivers in Patriot Viper RGB before 1.1 allow local users (including low integrity processes) to read and write to arbitrary memory locations, and consequently gain NT AUTHORITY\SYSTEM privileges, by mapping \Device\PhysicalMemory into the calling process via ZwOpenSection and ZwMapViewOfSection.
@@ -23,14 +33,18 @@ The MsIo64.sys and MsIo32.sys drivers in Patriot Viper RGB before 1.1 allow loca
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Testing
+### Commands
+
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
 
 ```
-sc.exe create MsIo32.sys binPath= C:\windows\temp\MsIo32.sys type= kernel
+sc.exe create MsIo32.sys binPath=C:\windows\temp\MsIo32.sys type=kernel
 sc.exe start MsIo32.sys
 ```
 
-#### Resources
+### Resources
 <br>
 
 
@@ -44,7 +58,7 @@ sc.exe start MsIo32.sys
 <br>
 
 
-#### Binary Metadata
+### Binary Metadata
 <br>
 
 
@@ -67,7 +81,7 @@ sc.exe start MsIo32.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/msio32.sys.yml)
 
-*last_updated:* 2023-03-04
+*last_updated:* 2023-03-06
 
 
 {{< /column >}}

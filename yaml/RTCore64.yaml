@@ -4,7 +4,9 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: ''
+  Command: 'sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel
+
+    sc.exe start RTCore64.sys'
   Description: The driver in Micro-Star MSI Afterburner 4.6.2.15658 (aka RTCore64.sys
     and RTCore32.sys) allows any authenticated user to read and write to arbitrary
     memory, I/O ports, and MSRs. This can be exploited for privilege escalation, code

@@ -4,7 +4,10 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: ''
+  Command: 'sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys
+    type=kernel
+
+    sc.exe start segwindrvx64.sys'
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel

@@ -11,9 +11,19 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# Bs_Def.sys
 
-#### Description
+
+# Bs_Def.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
+
+
+
+### Description
 
 
 Bs_Def.sys is a vulnerable driver and more information will be added as found.
@@ -23,14 +33,18 @@ Bs_Def.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Testing
+### Commands
+
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
 
 ```
-sc.exe create Bs_Def.sys binPath= C:\windows\temp\Bs_Def.sys type= kernel
+sc.exe create Bs_Def.sys binPath=C:\windows\temp\Bs_Def.sys type=kernel
 sc.exe start Bs_Def.sys
 ```
 
-#### Resources
+### Resources
 <br>
 
 
@@ -40,7 +54,7 @@ sc.exe start Bs_Def.sys
 <br>
 
 
-#### Binary Metadata
+### Binary Metadata
 <br>
 
 
@@ -59,7 +73,7 @@ sc.exe start Bs_Def.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_def.sys.yml)
 
-*last_updated:* 2023-03-04
+*last_updated:* 2023-03-06
 
 
 {{< /column >}}

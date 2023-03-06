@@ -4,7 +4,10 @@ Created: '2023-03-03'
 MitreID: T1068
 Category: malicious
 Commands:
-  Command: ''
+  Command: 'sc.exe create Air_SYSTEM10.sys binPath=C:\windows\temp\Air_SYSTEM10.sys
+    type=kernel
+
+    sc.exe start Air_SYSTEM10.sys'
   Description: Driver categorized as POORTRY by Mandiant.
   Usecase: Elevate privileges
   Privileges: kernel

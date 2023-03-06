@@ -4,7 +4,9 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: ''
+  Command: 'sc.exe create LHA.sys binPath=C:\windows\temp\LHA.sys type=kernel
+
+    sc.exe start LHA.sys'
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel

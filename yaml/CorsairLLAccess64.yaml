@@ -4,7 +4,10 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: ''
+  Command: 'sc.exe create CorsairLLAccess64.sys binPath=C:\windows\temp\CorsairLLAccess64.sys
+    type=kernel
+
+    sc.exe start CorsairLLAccess64.sys'
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel

@@ -11,9 +11,22 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 {% endraw %}
 
-# {{ driver.Name }}
 
-#### Description
+{% if driver.Metadata.Verified == 'TRUE' %}
+# {{ driver.Name }} ![:inline](/images/twitter_verified.png) 
+
+{% else %}
+# {{ driver.Name }} 
+
+{% raw %}
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+{% endraw %}
+
+{% endif %}
+
+### Description
 
 {% if driver.Commands.Description %}
 {{driver.Commands.Description}}
@@ -25,14 +38,17 @@ weight = 10
 - **Author**: {{driver.Author}}
 - **Acknowledgement**: {{driver.Acknowledgement.Person}} | [{{ driver.Acknowledgement.Handle }}](https://twitter.com/{{driver.Acknowledgement.Handle}})
 
-#### Testing
+### Commands
+
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| {{ driver.Commands.Usecase }} | {{ driver.Commands.Privileges }} | {{ driver.Commands.OperatingSystem }} |
 
 ```
-sc.exe create {{ driver.Name }} binPath= C:\windows\temp\{{ driver.Name }} type= kernel
-sc.exe start {{ driver.Name }}
+{{ driver.Commands.Command }}
 ```
 
-#### Resources
+### Resources
 <br>
 {% if driver.Resources %}
 {% for resource in driver.Resources %}
@@ -42,7 +58,7 @@ sc.exe start {{ driver.Name }}
 <br>
 
 
-#### Binary Metadata
+### Binary Metadata
 <br>
 
 {% if driver.KnownHashes %}

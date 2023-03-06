@@ -11,9 +11,19 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# gdrv.sys
 
-#### Description
+
+# gdrv.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
+
+
+
+### Description
 
 
 gdrv.sys is vulnerable to multiple CVEs: CVE-2018-19320, CVE-2018-19322, CVE-2018-19323, CVE-2018-19321. Read/Write Physical memory, read/write to/from IO ports, exposes ring0 memcpy-like functionality,  read and write Machine Specific Registers (MSRs).
@@ -23,14 +33,18 @@ gdrv.sys is vulnerable to multiple CVEs: CVE-2018-19320, CVE-2018-19322, CVE-201
 - **Author**: Michael Haag
 - **Acknowledgement**: MattNotMax | [@mattnotmax](https://twitter.com/@mattnotmax)
 
-#### Testing
+### Commands
+
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges, tamper with PPL or system processes | kernel | Windows 10 |
 
 ```
-sc.exe create gdrv.sys binPath= C:\windows\temp\gdrv.sys type= kernel
+sc.exe create gdrv.sys binPath=C:\windows\temp\gdrv.sys type=kernel
 sc.exe start gdrv.sys
 ```
 
-#### Resources
+### Resources
 <br>
 
 
@@ -46,7 +60,7 @@ sc.exe start gdrv.sys
 <br>
 
 
-#### Binary Metadata
+### Binary Metadata
 <br>
 
 
@@ -71,7 +85,7 @@ sc.exe start gdrv.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gdrv.sys.yml)
 
-*last_updated:* 2023-03-04
+*last_updated:* 2023-03-06
 
 
 {{< /column >}}

@@ -11,9 +11,19 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# BSMIx64.sys
 
-#### Description
+
+# BSMIx64.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
+
+
+
+### Description
 
 
 BSMIx64.sys is a vulnerable driver and more information will be added as found.
@@ -23,14 +33,18 @@ BSMIx64.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Testing
+### Commands
+
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
 
 ```
-sc.exe create BSMIx64.sys binPath= C:\windows\temp\BSMIx64.sys type= kernel
+sc.exe create BSMIx64.sys binPath=C:\windows\temp\BSMIx64.sys type=kernel
 sc.exe start BSMIx64.sys
 ```
 
-#### Resources
+### Resources
 <br>
 
 
@@ -40,7 +54,7 @@ sc.exe start BSMIx64.sys
 <br>
 
 
-#### Binary Metadata
+### Binary Metadata
 <br>
 
 
@@ -63,7 +77,7 @@ sc.exe start BSMIx64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bsmix64.sys.yml)
 
-*last_updated:* 2023-03-04
+*last_updated:* 2023-03-06
 
 
 {{< /column >}}

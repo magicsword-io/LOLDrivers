@@ -11,9 +11,19 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# WinRing0.sys
 
-#### Description
+
+# WinRing0.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
+
+
+
+### Description
 
 
 WinRing0.sys is a vulnerable driver and more information will be added as found.
@@ -23,14 +33,18 @@ WinRing0.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Testing
+### Commands
+
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
 
 ```
-sc.exe create WinRing0.sys binPath= C:\windows\temp\WinRing0.sys type= kernel
+sc.exe create WinRing0.sys binPath=C:\windows\temp\WinRing0.sys type=kernel
 sc.exe start WinRing0.sys
 ```
 
-#### Resources
+### Resources
 <br>
 
 
@@ -40,7 +54,7 @@ sc.exe start WinRing0.sys
 <br>
 
 
-#### Binary Metadata
+### Binary Metadata
 <br>
 
 
@@ -67,7 +81,7 @@ sc.exe start WinRing0.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winring0.sys.yml)
 
-*last_updated:* 2023-03-04
+*last_updated:* 2023-03-06
 
 
 {{< /column >}}

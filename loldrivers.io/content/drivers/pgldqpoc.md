@@ -11,9 +11,19 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# pgldqpoc.sys
 
-#### Description
+
+# pgldqpoc.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
+
+
+
+### Description
 
 
 This has been referenced as a vulnerable driver, but no hash has been found.
@@ -23,14 +33,18 @@ This has been referenced as a vulnerable driver, but no hash has been found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Testing
+### Commands
+
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
 
 ```
-sc.exe create pgldqpoc.sys binPath= C:\windows\temp\pgldqpoc.sys type= kernel
+sc.exe create pgldqpoc.sys binPath=C:\windows\temp\pgldqpoc.sys type=kernel
 sc.exe start pgldqpoc.sys
 ```
 
-#### Resources
+### Resources
 <br>
 
 
@@ -42,7 +56,7 @@ sc.exe start pgldqpoc.sys
 <br>
 
 
-#### Binary Metadata
+### Binary Metadata
 <br>
 
 
@@ -61,7 +75,7 @@ sc.exe start pgldqpoc.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/pgldqpoc.sys.yml)
 
-*last_updated:* 2023-03-04
+*last_updated:* 2023-03-06
 
 
 {{< /column >}}

@@ -11,9 +11,19 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# iQVW64.SYS
 
-#### Description
+
+# iQVW64.SYS 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
+
+
+
+### Description
 
 
 (1) IQVW32.sys before 1.3.1.0 and (2) IQVW64.sys before 1.3.1.0 in the Intel Ethernet diagnostics driver for Windows allows local users to cause a denial of service or possibly execute arbitrary code with kernel privileges via a crafted (a) 0x80862013, (b) 0x8086200B, (c) 0x8086200F, or (d) 0x80862007 IOCTL call.
@@ -23,14 +33,18 @@ weight = 10
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-#### Testing
+### Commands
+
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
 
 ```
-sc.exe create iQVW64.SYS binPath= C:\windows\temp\iQVW64.SYS type= kernel
+sc.exe create iQVW64.SYS binPath=C:\windows\temp\iQVW64.SYS type=kernel
 sc.exe start iQVW64.SYS
 ```
 
-#### Resources
+### Resources
 <br>
 
 
@@ -48,7 +62,7 @@ sc.exe start iQVW64.SYS
 <br>
 
 
-#### Binary Metadata
+### Binary Metadata
 <br>
 
 
@@ -67,7 +81,7 @@ sc.exe start iQVW64.SYS
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iqvw64.sys.yml)
 
-*last_updated:* 2023-03-04
+*last_updated:* 2023-03-06
 
 
 {{< /column >}}
