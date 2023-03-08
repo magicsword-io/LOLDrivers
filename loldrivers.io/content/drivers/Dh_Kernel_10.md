@@ -77,7 +77,7 @@ sc.exe start Dh_Kernel_10.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dh_kernel_10.sys.yml)
 
-*last_updated:* 2023-03-06
+*last_updated:* 2023-03-07
 
 
 {{< /column >}}

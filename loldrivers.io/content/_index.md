@@ -3,24 +3,23 @@ title = "LOLDrivers"
 [dataset1]
   fileLink = "content/drivers_table.csv"
   colors = ["#ef7f1a", "#627c62", "#11819b", "#4e1154"] # chart colors
-  columnTitles = ['Name','Author','Created','Testing'] # optional if not table will be displayed from dataset
+  columnTitles = ['Name','Author','Created','Command'] # optional if not table will be displayed from dataset
   baseChartOn = 4 # number of column the chart(s) and graph should be drawn from # can be overridden directly via shortcode parameter # it's therefore optional
   charts = ["table"]
   title = "Driver List"
 
 [dataset2]
-  fileLink = "content/projects.csv"
-  colors = ["#ef7f1a", "#627c62", "#11819b", "#4e1154"] # chart colors
-  columnTitles = ["Name", "Category", "Privileges", "MitreID"] # optional if not table will be displayed from dataset
-  baseChartOn = 4 # number of column the chart(s) and graph should be drawn from # can be overridden directly via shortcode parameter # it's therefore optional
+  fileLink = "content/drivers_top_10_publishers.csv"
+  colors = ["#ef7f1a", "#627c62", "#11819b", "#4e1154", "#a1c9a2", "#38a9d9", "#f9b34c", "#824da4", "#e0c7c2", "#c2c2a3"] # chart colors
+  columnTitles = ["Count", "Name"] # optional if not table will be displayed from dataset
+  baseChartOn = 2 # number of column the chart(s) and graph should be drawn from # can be overridden directly via shortcode parameter # it's therefore optional
   piechart = true
   title = "Driver List"
 +++
 
 {{< block "grid-2" >}}
-{{< column "mt-2 pt-1">}}
+{{< column "mt-4">}}
 
-# `` 
 # Living Off The Land Drivers 
 Living Off The Land Drivers is a curated list of Windows drivers used by adversaries to bypass security controls and carry out attacks. The project helps security professionals stay informed and mitigate potential threats.
 
@@ -34,6 +33,7 @@ You can also get the malicious driver list via **API** using [CSV](api/drivers.c
 {{< /column >}}
 
 {{< column "mt-4">}}
+# Top 10 Publishers
 {{% chart "dataset2" "pie" %}}
 
 {{< /column >}}

@@ -70,10 +70,51 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
     # write listing csv
     with open(OUTPUT_DIR + '/content/' + 'drivers_table.csv', 'w') as f:
         writer = csv.writer(f)
-        # write rows
         for driver in drivers:
             link = '[' + driver['Name'] + '](drivers/' + os.path.splitext(driver["Name"])[0].lower() + '/)'
             writer.writerow([link, driver['Author'], driver['Created'], driver['Commands']['Command']])
+
+    # write top 10 publishers
+    publishers = []
+    counted_publishers = []
+
+    # write top 10 publishers
+    all_publishers = []
+    # counted_publishers = []
+    for driver in drivers:
+        if driver['Metadata']['Publisher']:
+            p = dict()
+            p['name'] = driver['Name']
+            p['publisher'] = driver['Metadata']['Publisher']
+            all_publishers.append(p)
+
+
+    for driver in drivers:
+        if driver['Metadata']['Publisher']:
+            if driver['Metadata']['Publisher'] in publishers:
+                pass
+            else:
+                publishers.append(driver['Metadata']['Publisher'])
+
+    for p in publishers:
+        count = 0
+        for driver in drivers:
+            if p == driver['Metadata']['Publisher']:
+                count += 1
+        publisher = dict()
+        publisher['name'] = p
+        publisher['count'] = count
+        counted_publishers.append(publisher)
+
+    counted_sorted_publishers_top_10 = sorted(counted_publishers, key = lambda x : x['count'], reverse = True)[:10]
+
+
+
+    with open(OUTPUT_DIR + '/content/' + 'drivers_top_10_publishers.csv', 'w') as f:
+        writer = csv.writer(f)
+        for p in counted_sorted_publishers_top_10:
+            for i in range(p['count']): 
+                writer.writerow([p['count'], p['name']])
 
     return drivers, messages
 

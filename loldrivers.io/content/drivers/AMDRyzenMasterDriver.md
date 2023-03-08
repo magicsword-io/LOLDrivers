@@ -77,7 +77,7 @@ sc.exe start AMDRyzenMasterDriver.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amdryzenmasterdriver.sys.yml)
 
-*last_updated:* 2023-03-06
+*last_updated:* 2023-03-07
 
 
 {{< /column >}}

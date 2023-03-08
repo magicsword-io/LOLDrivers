@@ -79,7 +79,7 @@ sc.exe start BS_I2cIo.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_i2cio.sys.yml)
 
-*last_updated:* 2023-03-06
+*last_updated:* 2023-03-07
 
 
 {{< /column >}}
