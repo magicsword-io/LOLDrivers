@@ -13,13 +13,7 @@ weight = 10
 
 
 
-# semav6msr.sys 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
-
+# semav6msr.sys ![:inline](/images/twitter_verified.png) 
 
 
 

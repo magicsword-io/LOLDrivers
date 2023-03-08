@@ -13,13 +13,7 @@ weight = 10
 
 
 
-# Dh_Kernel_10.sys 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
-
+# Dh_Kernel_10.sys ![:inline](/images/twitter_verified.png) 
 
 
 

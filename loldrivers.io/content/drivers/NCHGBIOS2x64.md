@@ -13,13 +13,7 @@ weight = 10
 
 
 
-# NCHGBIOS2x64.SYS 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
-
+# NCHGBIOS2x64.SYS ![:inline](/images/twitter_verified.png) 
 
 
 

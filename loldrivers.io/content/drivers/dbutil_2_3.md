@@ -13,13 +13,7 @@ weight = 10
 
 
 
-# dbutil_2_3.sys 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
-
+# dbutil_2_3.sys ![:inline](/images/twitter_verified.png) 
 
 
 

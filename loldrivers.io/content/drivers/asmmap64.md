@@ -13,13 +13,7 @@ weight = 10
 
 
 
-# asmmap64.sys 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
-
+# asmmap64.sys ![:inline](/images/twitter_verified.png) 
 
 
 

@@ -58,7 +58,7 @@ sc.exe start ADV64DRV.sys
 
 
 - binary: 
-- Verified: TRUE
+- Verified: 
 - Date: 01:30 AM 08/29/2006
 - Publisher: FUJITSU LIMITED
 - Company: 

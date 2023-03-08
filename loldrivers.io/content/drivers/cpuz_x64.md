@@ -13,13 +13,7 @@ weight = 10
 
 
 
-# cpuz_x64.sys 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
-
+# cpuz_x64.sys ![:inline](/images/twitter_verified.png) 
 
 
 

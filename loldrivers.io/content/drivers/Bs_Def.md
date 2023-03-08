@@ -59,6 +59,10 @@ sc.exe start Bs_Def.sys
 
 
 
+<li><a href="https://www.virustotal.com/gui/file/5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be">5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be</a></li>
+
+
+
 - binary: 
 - Verified: 
 - Date: 

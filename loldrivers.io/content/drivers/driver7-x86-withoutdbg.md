@@ -13,13 +13,7 @@ weight = 10
 
 
 
-# driver7-x86-withoutdbg.sys 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
-
+# driver7-x86-withoutdbg.sys ![:inline](/images/twitter_verified.png) 
 
 
 

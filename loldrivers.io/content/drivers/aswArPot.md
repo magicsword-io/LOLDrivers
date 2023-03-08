@@ -13,13 +13,7 @@ weight = 10
 
 
 
-# aswArPot.sys 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
-
+# aswArPot.sys ![:inline](/images/twitter_verified.png) 
 
 
 
@@ -56,6 +50,10 @@ sc.exe start aswArPot.sys
 
 ### Binary Metadata
 <br>
+
+
+
+<li><a href="https://www.virustotal.com/gui/file/4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1">4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1</a></li>
 
 
 

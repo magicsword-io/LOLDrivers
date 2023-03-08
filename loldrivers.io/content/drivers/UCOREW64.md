@@ -13,13 +13,7 @@ weight = 10
 
 
 
-# UCOREW64.SYS 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
-
+# UCOREW64.SYS ![:inline](/images/twitter_verified.png) 
 
 
 

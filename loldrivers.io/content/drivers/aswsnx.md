@@ -63,10 +63,6 @@ sc.exe start aswsnx.sys
 
 
 
-<li><a href="https://www.virustotal.com/gui/file/"></a></li>
-
-
-
 - binary: 
 - Verified: 
 - Date: 

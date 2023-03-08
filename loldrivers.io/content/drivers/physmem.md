@@ -13,13 +13,7 @@ weight = 10
 
 
 
-# physmem.sys 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
-
+# physmem.sys ![:inline](/images/twitter_verified.png) 
 
 
 

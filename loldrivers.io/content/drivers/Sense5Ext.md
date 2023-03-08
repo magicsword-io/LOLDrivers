@@ -13,13 +13,7 @@ weight = 10
 
 
 
-# Sense5Ext.sys 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
-
+# Sense5Ext.sys ![:inline](/images/twitter_verified.png) 
 
 
 
@@ -30,7 +24,7 @@ Driver categorized as POORTRY by Mandiant.
 
 
 - **Created**: 2023-03-04
-- **Author**: 
+- **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
 ### Commands

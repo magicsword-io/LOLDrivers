@@ -13,13 +13,7 @@ weight = 10
 
 
 
-# winio64.sys 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
-
+# winio64.sys ![:inline](/images/twitter_verified.png) 
 
 
 
@@ -59,7 +53,9 @@ sc.exe start winio64.sys
 
 
 
-<li><a href="https://www.virustotal.com/gui/file/e1980c6592e6d2d92c1a65acad8f1071b6a404097bb6fcce494f3c8ac31385cf,hash:9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374">e1980c6592e6d2d92c1a65acad8f1071b6a404097bb6fcce494f3c8ac31385cf,hash:9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374</a></li>
+<li><a href="https://www.virustotal.com/gui/file/e1980c6592e6d2d92c1a65acad8f1071b6a404097bb6fcce494f3c8ac31385cf">e1980c6592e6d2d92c1a65acad8f1071b6a404097bb6fcce494f3c8ac31385cf</a></li>
+
+<li><a href="https://www.virustotal.com/gui/file/9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374">9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374</a></li>
 
 
 

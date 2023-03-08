@@ -13,13 +13,7 @@ weight = 10
 
 
 
-# elrawdsk.sys 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
-
+# elrawdsk.sys ![:inline](/images/twitter_verified.png) 
 
 
 
