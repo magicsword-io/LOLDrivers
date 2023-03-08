@@ -17,7 +17,7 @@ title = "LOLDrivers"
   title = "Driver List"
 +++
 
-{{< block "grid-2" >}}
+{{< block "grid-3" >}}
 {{< column "mt-4">}}
 
 # Living Off The Land Drivers 
@@ -35,8 +35,13 @@ You can also get the malicious driver list via **API** using [CSV](api/drivers.c
 {{< column "mt-4">}}
 # Top 10 Publishers
 {{% chart "dataset2" "pie" %}}
-
 {{< /column >}}
+
+{{< column "mt-4">}}
+# Top 10 Products
+{{% chart "dataset2" "bar" %}}
+{{< /column >}}
+
 {{< /block >}}
 
 {{< block "grid-1" >}}
