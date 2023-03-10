@@ -5,11 +5,8 @@ name: Hash List Generator
 
 on: # yamllint disable-line rule:truthy
   push:
-    branches:
-      - "*"
-  pull_request:
-    branches:
-      - master
+    branches: [ main ]
+    paths: ["yaml/**.yaml"]
 
 jobs:
   #yaml-lint:
