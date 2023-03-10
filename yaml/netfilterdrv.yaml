@@ -19,9 +19,15 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes:
-- E74B6DDA8BC53BC687FC21218BD34062A78D8467
-- 2C27ABBBBCF10DFB75AD79557E30ACE5ED314DF8
+KnownVulnerableSamples:
+- Filename: netfilterdrv.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: E74B6DDA8BC53BC687FC21218BD34062A78D8467
+- Filename: netfilterdrv.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 2C27ABBBBCF10DFB75AD79557E30ACE5ED314DF8
 Metadata:
   binary: ''
   Verified: ''
@@ -34,4 +40,3 @@ Metadata:
   FileVersion: ''
   MachineType: ''
   OriginalFilename: ''
-  driver_verified: 'FALSE'

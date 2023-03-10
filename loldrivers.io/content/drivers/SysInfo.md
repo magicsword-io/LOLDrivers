@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# SysInfo.sys ![:inline](/images/twitter_verified.png) 
+# SysInfo.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start SysInfo.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: SysInfo.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;SysInfo.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;7049F3C939EFE76A5556C2A2C04386DB51DAF61D56B679F4868BB0983C996EBB&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;SysInfo.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;7049F3C939EFE76A5556C2A2C04386DB51DAF61D56B679F4868BB0983C996EBB&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;SysInfo.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;7049F3C939EFE76A5556C2A2C04386DB51DAF61D56B679F4868BB0983C996EBB&#39;}">7049F3C939EFE76A5556C2A2C04386DB51DAF61D56B679F4868BB0983C996EBB</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/7049F3C939EFE76A5556C2A2C04386DB51DAF61D56B679F4868BB0983C996EBB">7049F3C939EFE76A5556C2A2C04386DB51DAF61D56B679F4868BB0983C996EBB</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start SysInfo.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/sysinfo.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

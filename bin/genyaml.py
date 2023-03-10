@@ -62,8 +62,14 @@ def generate_yml_files(csv_file_path, output_folder):
             KnownHashes_data = list()
             for KnownHashes in row[17].split(", "):
                 if KnownHashes.startswith("hash:"):
-                    KnownHashes_data.append(KnownHashes[5:])
-            yaml_data["KnownHashes"] = KnownHashes_data
+                    hash = dict()
+                    hash['Filename'] = row[0]
+                    hash['MD5'] = ''
+                    hash['SHA1'] = ''
+                    hash['SHA256'] = KnownHashes[5:]
+                    KnownHashes_data.append(hash)
+            yaml_data["KnownVulnerableSamples"] = KnownHashes_data
+
             metadata = dict()
             metadata["binary"] = row[19]
             metadata["Verified"] = row[20]
@@ -76,7 +82,6 @@ def generate_yml_files(csv_file_path, output_folder):
             metadata["FileVersion"] = row[27]
             metadata["MachineType"] = row[28]
             metadata["OriginalFilename"] = row[29]
-            metadata["driver_verified"] = row[30]
             yaml_data["Metadata"] = metadata
 
             file_name = os.path.splitext(yaml_data["Name"])[0] + '.yaml'

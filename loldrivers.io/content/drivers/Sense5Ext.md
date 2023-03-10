@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# Sense5Ext.sys ![:inline](/images/twitter_verified.png) 
+# Sense5Ext.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start Sense5Ext.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: Sense5Ext.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Sense5Ext.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;f9844524fb0009e5b784c21c7bad4220&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Sense5Ext.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;f9844524fb0009e5b784c21c7bad4220&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Sense5Ext.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;f9844524fb0009e5b784c21c7bad4220&#39;}">f9844524fb0009e5b784c21c7bad4220</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/f9844524fb0009e5b784c21c7bad4220">f9844524fb0009e5b784c21c7bad4220</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start Sense5Ext.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/sense5ext.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# Monitor_win10_x64.sys ![:inline](/images/twitter_verified.png) 
+# Monitor_win10_x64.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -50,14 +56,19 @@ sc.exe start Monitor_win10_x64.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: Monitor_win10_x64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Monitor_win10_x64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;e4a7da2cf59a4a21fc42b611df1d59cae75051925a7ddf42bf216cc1a026eadb&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Monitor_win10_x64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;e4a7da2cf59a4a21fc42b611df1d59cae75051925a7ddf42bf216cc1a026eadb&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Monitor_win10_x64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;e4a7da2cf59a4a21fc42b611df1d59cae75051925a7ddf42bf216cc1a026eadb&#39;}">e4a7da2cf59a4a21fc42b611df1d59cae75051925a7ddf42bf216cc1a026eadb</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/e4a7da2cf59a4a21fc42b611df1d59cae75051925a7ddf42bf216cc1a026eadb">e4a7da2cf59a4a21fc42b611df1d59cae75051925a7ddf42bf216cc1a026eadb</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -73,7 +84,7 @@ sc.exe start Monitor_win10_x64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/monitor_win10_x64.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

@@ -54,20 +54,37 @@ sc.exe start dbutil.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: dbutil.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;dbutil.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;485C0B9710A196C7177B99EE95E5DDB35B26DDD1&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;dbutil.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;485C0B9710A196C7177B99EE95E5DDB35B26DDD1&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;dbutil.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;485C0B9710A196C7177B99EE95E5DDB35B26DDD1&#39;}">485C0B9710A196C7177B99EE95E5DDB35B26DDD1</a>|
+
+| Filename: dbutil.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;dbutil.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39; 50E2BC41F0186FDCE970B80E2A2CB296353AF586&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;dbutil.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39; 50E2BC41F0186FDCE970B80E2A2CB296353AF586&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;dbutil.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39; 50E2BC41F0186FDCE970B80E2A2CB296353AF586&#39;}"> 50E2BC41F0186FDCE970B80E2A2CB296353AF586</a>|
+
+| Filename: dbutil.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;dbutil.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39; E3C1DD569AA4758552566B0213EE4D1FE6382C4B&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;dbutil.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39; E3C1DD569AA4758552566B0213EE4D1FE6382C4B&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;dbutil.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39; E3C1DD569AA4758552566B0213EE4D1FE6382C4B&#39;}"> E3C1DD569AA4758552566B0213EE4D1FE6382C4B</a>|
+
+| Filename: dbutil.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;dbutil.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39; E09B5E80805B8FE853EA27D8773E31BFF262E3F7&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;dbutil.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39; E09B5E80805B8FE853EA27D8773E31BFF262E3F7&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;dbutil.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39; E09B5E80805B8FE853EA27D8773E31BFF262E3F7&#39;}"> E09B5E80805B8FE853EA27D8773E31BFF262E3F7</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/485C0B9710A196C7177B99EE95E5DDB35B26DDD1">485C0B9710A196C7177B99EE95E5DDB35B26DDD1</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/ 50E2BC41F0186FDCE970B80E2A2CB296353AF586"> 50E2BC41F0186FDCE970B80E2A2CB296353AF586</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/ E3C1DD569AA4758552566B0213EE4D1FE6382C4B"> E3C1DD569AA4758552566B0213EE4D1FE6382C4B</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/ E09B5E80805B8FE853EA27D8773E31BFF262E3F7"> E09B5E80805B8FE853EA27D8773E31BFF262E3F7</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -83,7 +100,7 @@ sc.exe start dbutil.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbutil.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

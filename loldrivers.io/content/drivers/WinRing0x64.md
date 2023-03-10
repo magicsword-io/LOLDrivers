@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# WinRing0x64.sys ![:inline](/images/twitter_verified.png) 
+# WinRing0x64.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start WinRing0x64.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: WinRing0x64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinRing0x64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinRing0x64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinRing0x64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5&#39;}">11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5">11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start WinRing0x64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winring0x64.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

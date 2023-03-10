@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# msrhook.sys ![:inline](/images/twitter_verified.png) 
+# msrhook.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start msrhook.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: msrhook.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;msrhook.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;6DE84CAA2CA18673E01B91AF58220C60AECD5CCCF269725EC3C7F226B2167492&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;msrhook.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;6DE84CAA2CA18673E01B91AF58220C60AECD5CCCF269725EC3C7F226B2167492&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;msrhook.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;6DE84CAA2CA18673E01B91AF58220C60AECD5CCCF269725EC3C7F226B2167492&#39;}">6DE84CAA2CA18673E01B91AF58220C60AECD5CCCF269725EC3C7F226B2167492</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/6DE84CAA2CA18673E01B91AF58220C60AECD5CCCF269725EC3C7F226B2167492">6DE84CAA2CA18673E01B91AF58220C60AECD5CCCF269725EC3C7F226B2167492</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start msrhook.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/msrhook.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

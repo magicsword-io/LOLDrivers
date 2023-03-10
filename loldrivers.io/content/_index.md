@@ -10,11 +10,22 @@ title = "LOLDrivers"
 
 [dataset2]
   fileLink = "content/drivers_top_10_publishers.csv"
-  colors = ["#ef7f1a", "#627c62", "#11819b", "#4e1154", "#a1c9a2", "#38a9d9", "#f9b34c", "#824da4", "#e0c7c2", "#c2c2a3"] # chart colors
+  colors = ["#ef7f1a", "#627c62", "#11819b", "#4e1154", "#a1c9a2", "#38a9d9", "#f9b34c", "#824da4", "#e0c7c2", "#c2c2a3", "#d6a994", "#f2c057"] # chart colors
   columnTitles = ["Count", "Name"] # optional if not table will be displayed from dataset
   baseChartOn = 2 # number of column the chart(s) and graph should be drawn from # can be overridden directly via shortcode parameter # it's therefore optional
   piechart = true
-  title = "Driver List"
+  barchart = true
+  title = "Top 10 Products"
+
+
+[dataset3]
+  fileLink = "content/drivers_top_10_publishers.csv"
+  colors = ["#ef7f1a", "#627c62", "#11819b", "#4e1154", "#a1c9a2", "#38a9d9", "#f9b34c", "#824da4", "#e0c7c2", "#c2c2a3", "#d6a994", "#f2c057"] # chart colors
+  columnTitles = ["Count", "Name"] # optional if not table will be displayed from dataset
+  baseChartOn = 2 # number of column the chart(s) and graph should be drawn from # can be overridden directly via shortcode parameter # it's therefore optional
+  piechart = true
+  barchart = true
+  title = "Top 10 Publishers"
 +++
 
 {{< block "grid-3" >}}
@@ -33,13 +44,12 @@ You can also get the malicious driver list via **API** using [CSV](api/drivers.c
 {{< /column >}}
 
 {{< column "mt-4">}}
-# Top 10 Publishers
+# Top Products
 {{% chart "dataset2" "pie" %}}
 {{< /column >}}
 
 {{< column "mt-4">}}
-# Top 10 Products
-{{% chart "dataset2" "bar" %}}
+{{% chart "dataset3" "bar" %}}
 {{< /column >}}
 
 {{< /block >}}

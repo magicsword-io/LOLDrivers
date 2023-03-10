@@ -54,14 +54,19 @@ sc.exe start bw.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: bw.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;bw.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;0EBAEF662B14410C198395B13347E1D175334EC67919709AD37D65EBA013ADFF&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;bw.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;0EBAEF662B14410C198395B13347E1D175334EC67919709AD37D65EBA013ADFF&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;bw.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;0EBAEF662B14410C198395B13347E1D175334EC67919709AD37D65EBA013ADFF&#39;}">0EBAEF662B14410C198395B13347E1D175334EC67919709AD37D65EBA013ADFF</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/0EBAEF662B14410C198395B13347E1D175334EC67919709AD37D65EBA013ADFF">0EBAEF662B14410C198395B13347E1D175334EC67919709AD37D65EBA013ADFF</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -77,7 +82,7 @@ sc.exe start bw.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bw.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

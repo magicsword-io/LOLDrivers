@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# Air_SYSTEM10.sys ![:inline](/images/twitter_verified.png) 
+# Air_SYSTEM10.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start Air_SYSTEM10.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: Air_SYSTEM10.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Air_SYSTEM10.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;1f2888e57fdd6aee466962c25ba7d62d&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Air_SYSTEM10.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;1f2888e57fdd6aee466962c25ba7d62d&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Air_SYSTEM10.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;1f2888e57fdd6aee466962c25ba7d62d&#39;}">1f2888e57fdd6aee466962c25ba7d62d</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/1f2888e57fdd6aee466962c25ba7d62d">1f2888e57fdd6aee466962c25ba7d62d</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start Air_SYSTEM10.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/air_system10.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

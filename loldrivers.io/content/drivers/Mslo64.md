@@ -54,10 +54,10 @@ sc.exe start Mslo64.sys
 <br>
 
 
+
+
 ### Binary Metadata
 <br>
-
-
 
 - binary: 
 - Verified: 
@@ -73,7 +73,7 @@ sc.exe start Mslo64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mslo64.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# elrawdsk.sys ![:inline](/images/twitter_verified.png) 
+# elrawdsk.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -54,16 +60,25 @@ sc.exe start elrawdsk.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: elrawdsk.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;elrawdsk.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;elrawdsk.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;elrawdsk.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6&#39;}">4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6</a>|
+
+| Filename: elrawdsk.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;elrawdsk.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;elrawdsk.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;elrawdsk.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a&#39;}">5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6">4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a">5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -79,7 +94,7 @@ sc.exe start elrawdsk.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/elrawdsk.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

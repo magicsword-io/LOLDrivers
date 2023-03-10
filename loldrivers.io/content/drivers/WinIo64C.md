@@ -54,16 +54,25 @@ sc.exe start WinIo64C.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: WinIo64C.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinIo64C.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;b242b0332b9c9e8e17ec27ef10d75503d20d97b6&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinIo64C.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;b242b0332b9c9e8e17ec27ef10d75503d20d97b6&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinIo64C.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;b242b0332b9c9e8e17ec27ef10d75503d20d97b6&#39;}">b242b0332b9c9e8e17ec27ef10d75503d20d97b6</a>|
+
+| Filename: WinIo64C.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinIo64C.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;a65fabaf64aa1934314aae23f25cdf215cbaa4b6&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinIo64C.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;a65fabaf64aa1934314aae23f25cdf215cbaa4b6&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinIo64C.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;a65fabaf64aa1934314aae23f25cdf215cbaa4b6&#39;}">a65fabaf64aa1934314aae23f25cdf215cbaa4b6</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/b242b0332b9c9e8e17ec27ef10d75503d20d97b6">b242b0332b9c9e8e17ec27ef10d75503d20d97b6</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/a65fabaf64aa1934314aae23f25cdf215cbaa4b6">a65fabaf64aa1934314aae23f25cdf215cbaa4b6</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -79,7 +88,7 @@ sc.exe start WinIo64C.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio64c.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

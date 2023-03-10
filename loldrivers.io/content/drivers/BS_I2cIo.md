@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# BS_I2cIo.sys ![:inline](/images/twitter_verified.png) 
+# BS_I2cIo.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -50,14 +56,19 @@ sc.exe start BS_I2cIo.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: BS_I2cIo.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BS_I2cIo.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BS_I2cIo.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BS_I2cIo.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a&#39;}">55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a">55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -73,7 +84,7 @@ sc.exe start BS_I2cIo.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_i2cio.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

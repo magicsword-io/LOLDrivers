@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# ATSZIO64.sys ![:inline](/images/twitter_verified.png) 
+# ATSZIO64.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start ATSZIO64.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: ATSZIO64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ATSZIO64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ATSZIO64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ATSZIO64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece&#39;}">01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece">01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start ATSZIO64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/atszio64.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

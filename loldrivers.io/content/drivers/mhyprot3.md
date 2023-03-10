@@ -54,14 +54,19 @@ sc.exe start mhyprot3.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: mhyprot3.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;mhyprot3.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;475E5016C9C0F5A127896F9179A1B1577A67B357F399AB5A1E68AAB07134729A&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;mhyprot3.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;475E5016C9C0F5A127896F9179A1B1577A67B357F399AB5A1E68AAB07134729A&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;mhyprot3.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;475E5016C9C0F5A127896F9179A1B1577A67B357F399AB5A1E68AAB07134729A&#39;}">475E5016C9C0F5A127896F9179A1B1577A67B357F399AB5A1E68AAB07134729A</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/475E5016C9C0F5A127896F9179A1B1577A67B357F399AB5A1E68AAB07134729A">475E5016C9C0F5A127896F9179A1B1577A67B357F399AB5A1E68AAB07134729A</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -77,7 +82,7 @@ sc.exe start mhyprot3.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mhyprot3.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

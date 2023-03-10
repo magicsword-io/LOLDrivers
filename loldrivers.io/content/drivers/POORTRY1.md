@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# POORTRY1.sys ![:inline](/images/twitter_verified.png) 
+# POORTRY1.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start POORTRY1.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: POORTRY1.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;POORTRY1.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;acac842a46f3501fe407b1db1b247a0b&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;POORTRY1.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;acac842a46f3501fe407b1db1b247a0b&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;POORTRY1.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;acac842a46f3501fe407b1db1b247a0b&#39;}">acac842a46f3501fe407b1db1b247a0b</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/acac842a46f3501fe407b1db1b247a0b">acac842a46f3501fe407b1db1b247a0b</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start POORTRY1.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/poortry1.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# iomem64.sys ![:inline](/images/twitter_verified.png) 
+# iomem64.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,16 +54,25 @@ sc.exe start iomem64.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: iomem64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;iomem64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3D23BDBAF9905259D858DF5BF991EB23D2DC9F4ECDA7F9F77839691ACEF1B8C4&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;iomem64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3D23BDBAF9905259D858DF5BF991EB23D2DC9F4ECDA7F9F77839691ACEF1B8C4&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;iomem64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3D23BDBAF9905259D858DF5BF991EB23D2DC9F4ECDA7F9F77839691ACEF1B8C4&#39;}">3D23BDBAF9905259D858DF5BF991EB23D2DC9F4ECDA7F9F77839691ACEF1B8C4</a>|
+
+| Filename: iomem64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;iomem64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;DD4A1253D47DE14EF83F1BC8B40816A86CCF90D1E624C5ADF9203AE9D51D4097&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;iomem64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;DD4A1253D47DE14EF83F1BC8B40816A86CCF90D1E624C5ADF9203AE9D51D4097&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;iomem64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;DD4A1253D47DE14EF83F1BC8B40816A86CCF90D1E624C5ADF9203AE9D51D4097&#39;}">DD4A1253D47DE14EF83F1BC8B40816A86CCF90D1E624C5ADF9203AE9D51D4097</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/3D23BDBAF9905259D858DF5BF991EB23D2DC9F4ECDA7F9F77839691ACEF1B8C4">3D23BDBAF9905259D858DF5BF991EB23D2DC9F4ECDA7F9F77839691ACEF1B8C4</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/DD4A1253D47DE14EF83F1BC8B40816A86CCF90D1E624C5ADF9203AE9D51D4097">DD4A1253D47DE14EF83F1BC8B40816A86CCF90D1E624C5ADF9203AE9D51D4097</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -73,7 +88,7 @@ sc.exe start iomem64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iomem64.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

@@ -54,14 +54,19 @@ sc.exe start BlackBoneDrv10.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: BlackBoneDrv10.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BlackBoneDrv10.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;f51bdb0ad924178131c21e39a8ccd191e46b5512b0f2e1cc8486f63e84e5d960&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BlackBoneDrv10.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;f51bdb0ad924178131c21e39a8ccd191e46b5512b0f2e1cc8486f63e84e5d960&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BlackBoneDrv10.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;f51bdb0ad924178131c21e39a8ccd191e46b5512b0f2e1cc8486f63e84e5d960&#39;}">f51bdb0ad924178131c21e39a8ccd191e46b5512b0f2e1cc8486f63e84e5d960</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/f51bdb0ad924178131c21e39a8ccd191e46b5512b0f2e1cc8486f63e84e5d960">f51bdb0ad924178131c21e39a8ccd191e46b5512b0f2e1cc8486f63e84e5d960</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -77,7 +82,7 @@ sc.exe start BlackBoneDrv10.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/blackbonedrv10.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

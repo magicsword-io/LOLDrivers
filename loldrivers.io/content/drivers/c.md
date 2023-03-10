@@ -54,14 +54,19 @@ sc.exe start c.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: c.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;c.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;CC383AD11E9D06047A1558ED343F389492DA3AC2B84B71462AEE502A2FA616C8&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;c.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;CC383AD11E9D06047A1558ED343F389492DA3AC2B84B71462AEE502A2FA616C8&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;c.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;CC383AD11E9D06047A1558ED343F389492DA3AC2B84B71462AEE502A2FA616C8&#39;}">CC383AD11E9D06047A1558ED343F389492DA3AC2B84B71462AEE502A2FA616C8</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/CC383AD11E9D06047A1558ED343F389492DA3AC2B84B71462AEE502A2FA616C8">CC383AD11E9D06047A1558ED343F389492DA3AC2B84B71462AEE502A2FA616C8</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -77,7 +82,7 @@ sc.exe start c.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/c.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

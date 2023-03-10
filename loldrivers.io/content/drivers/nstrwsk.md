@@ -54,14 +54,19 @@ sc.exe start nstrwsk.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: nstrwsk.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;nstrwsk.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3390919BB28D5C36CC348F9EF23BE5FA49BFD81263EB7740826E4437CBE904CD&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;nstrwsk.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3390919BB28D5C36CC348F9EF23BE5FA49BFD81263EB7740826E4437CBE904CD&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;nstrwsk.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3390919BB28D5C36CC348F9EF23BE5FA49BFD81263EB7740826E4437CBE904CD&#39;}">3390919BB28D5C36CC348F9EF23BE5FA49BFD81263EB7740826E4437CBE904CD</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/3390919BB28D5C36CC348F9EF23BE5FA49BFD81263EB7740826E4437CBE904CD">3390919BB28D5C36CC348F9EF23BE5FA49BFD81263EB7740826E4437CBE904CD</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -77,7 +82,7 @@ sc.exe start nstrwsk.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nstrwsk.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

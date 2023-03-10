@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# cpuz.sys ![:inline](/images/twitter_verified.png) 
+# cpuz.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start cpuz.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: cpuz.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;cpuz.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;8c95d28270a4a314299cf50f05dcbe63033b2a555195d2ad2f678e09e00393e6&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;cpuz.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;8c95d28270a4a314299cf50f05dcbe63033b2a555195d2ad2f678e09e00393e6&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;cpuz.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;8c95d28270a4a314299cf50f05dcbe63033b2a555195d2ad2f678e09e00393e6&#39;}">8c95d28270a4a314299cf50f05dcbe63033b2a555195d2ad2f678e09e00393e6</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/8c95d28270a4a314299cf50f05dcbe63033b2a555195d2ad2f678e09e00393e6">8c95d28270a4a314299cf50f05dcbe63033b2a555195d2ad2f678e09e00393e6</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start cpuz.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cpuz.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

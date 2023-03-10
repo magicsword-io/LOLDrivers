@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# NBIOLib_X64.sys ![:inline](/images/twitter_verified.png) 
+# NBIOLib_X64.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start NBIOLib_X64.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: NBIOLib_X64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;NBIOLib_X64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3f2fda9a7a9c57b7138687bbce49a2e156d6095dddabb3454ea09737e02c3fa5&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;NBIOLib_X64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3f2fda9a7a9c57b7138687bbce49a2e156d6095dddabb3454ea09737e02c3fa5&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;NBIOLib_X64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3f2fda9a7a9c57b7138687bbce49a2e156d6095dddabb3454ea09737e02c3fa5&#39;}">3f2fda9a7a9c57b7138687bbce49a2e156d6095dddabb3454ea09737e02c3fa5</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/3f2fda9a7a9c57b7138687bbce49a2e156d6095dddabb3454ea09737e02c3fa5">3f2fda9a7a9c57b7138687bbce49a2e156d6095dddabb3454ea09737e02c3fa5</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start NBIOLib_X64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nbiolib_x64.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# WinRing0.sys ![:inline](/images/twitter_verified.png) 
+# WinRing0.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,18 +54,31 @@ sc.exe start WinRing0.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: WinRing0.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinRing0.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3EC5AD51E6879464DFBCCB9F4ED76C6325056A42548D5994BA869DA9C4C039A8&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinRing0.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3EC5AD51E6879464DFBCCB9F4ED76C6325056A42548D5994BA869DA9C4C039A8&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinRing0.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3EC5AD51E6879464DFBCCB9F4ED76C6325056A42548D5994BA869DA9C4C039A8&#39;}">3EC5AD51E6879464DFBCCB9F4ED76C6325056A42548D5994BA869DA9C4C039A8</a>|
+
+| Filename: WinRing0.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinRing0.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;47EAEBC920CCF99E09FC9924FEB6B19B8A28589F52783327067C9B09754B5E84&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinRing0.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;47EAEBC920CCF99E09FC9924FEB6B19B8A28589F52783327067C9B09754B5E84&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinRing0.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;47EAEBC920CCF99E09FC9924FEB6B19B8A28589F52783327067C9B09754B5E84&#39;}">47EAEBC920CCF99E09FC9924FEB6B19B8A28589F52783327067C9B09754B5E84</a>|
+
+| Filename: WinRing0.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinRing0.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;A7B000ABBCC344444A9B00CFADE7AA22AB92CE0CADEC196C30EB1851AE4FA062&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinRing0.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;A7B000ABBCC344444A9B00CFADE7AA22AB92CE0CADEC196C30EB1851AE4FA062&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinRing0.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;A7B000ABBCC344444A9B00CFADE7AA22AB92CE0CADEC196C30EB1851AE4FA062&#39;}">A7B000ABBCC344444A9B00CFADE7AA22AB92CE0CADEC196C30EB1851AE4FA062</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/3EC5AD51E6879464DFBCCB9F4ED76C6325056A42548D5994BA869DA9C4C039A8">3EC5AD51E6879464DFBCCB9F4ED76C6325056A42548D5994BA869DA9C4C039A8</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/47EAEBC920CCF99E09FC9924FEB6B19B8A28589F52783327067C9B09754B5E84">47EAEBC920CCF99E09FC9924FEB6B19B8A28589F52783327067C9B09754B5E84</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/A7B000ABBCC344444A9B00CFADE7AA22AB92CE0CADEC196C30EB1851AE4FA062">A7B000ABBCC344444A9B00CFADE7AA22AB92CE0CADEC196C30EB1851AE4FA062</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -75,7 +94,7 @@ sc.exe start WinRing0.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winring0.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

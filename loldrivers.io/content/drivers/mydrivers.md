@@ -54,14 +54,19 @@ sc.exe start mydrivers.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: mydrivers.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;mydrivers.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;mydrivers.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;mydrivers.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6&#39;}">08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6">08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -77,7 +82,7 @@ sc.exe start mydrivers.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mydrivers.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

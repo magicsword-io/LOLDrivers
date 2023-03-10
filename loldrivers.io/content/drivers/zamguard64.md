@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# zamguard64.sys ![:inline](/images/twitter_verified.png) 
+# zamguard64.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start zamguard64.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: zamguard64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;zamguard64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;543991ca8d1c65113dff039b85ae3f9a87f503daec30f46929fd454bc57e5a91&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;zamguard64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;543991ca8d1c65113dff039b85ae3f9a87f503daec30f46929fd454bc57e5a91&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;zamguard64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;543991ca8d1c65113dff039b85ae3f9a87f503daec30f46929fd454bc57e5a91&#39;}">543991ca8d1c65113dff039b85ae3f9a87f503daec30f46929fd454bc57e5a91</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/543991ca8d1c65113dff039b85ae3f9a87f503daec30f46929fd454bc57e5a91">543991ca8d1c65113dff039b85ae3f9a87f503daec30f46929fd454bc57e5a91</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start zamguard64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/zamguard64.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

@@ -57,15 +57,20 @@ We were not able to verify the hash of this driver successfully, it has not been
 {% endif %}
 <br>
 
+{% if driver.KnownVulnerableSamples %}
+### Known Vulnerable Samples
+{% for hash in driver.KnownVulnerableSamples %}
+| Filename: {{ hash.Filename }} |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{{hash}}">{{hash.MD5}}</a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{{hash}}">{{hash.SHA1}}</a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{{hash}}">{{hash.SHA256}}</a>|
+{% endfor %}
+{% endif %}
+
 
 ### Binary Metadata
 <br>
-
-{% if driver.KnownHashes %}
-{% for hash in driver.KnownHashes %}
-<li><a href="https://www.virustotal.com/gui/file/{{hash}}">{{hash}}</a></li>
-{% endfor %}
-{% endif %}
 
 - binary: {{ driver.Metadata.Binary }}
 - Verified: {{ driver.Metadata.Verified }}

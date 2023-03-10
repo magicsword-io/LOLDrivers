@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# AMDRyzenMasterDriver.sys ![:inline](/images/twitter_verified.png) 
+# AMDRyzenMasterDriver.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start AMDRyzenMasterDriver.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: AMDRyzenMasterDriver.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;AMDRyzenMasterDriver.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;a13054f349b7baa8c8a3fcbd31789807a493cc52224bbff5e412eb2bd52a6433&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;AMDRyzenMasterDriver.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;a13054f349b7baa8c8a3fcbd31789807a493cc52224bbff5e412eb2bd52a6433&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;AMDRyzenMasterDriver.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;a13054f349b7baa8c8a3fcbd31789807a493cc52224bbff5e412eb2bd52a6433&#39;}">a13054f349b7baa8c8a3fcbd31789807a493cc52224bbff5e412eb2bd52a6433</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/a13054f349b7baa8c8a3fcbd31789807a493cc52224bbff5e412eb2bd52a6433">a13054f349b7baa8c8a3fcbd31789807a493cc52224bbff5e412eb2bd52a6433</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start AMDRyzenMasterDriver.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amdryzenmasterdriver.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

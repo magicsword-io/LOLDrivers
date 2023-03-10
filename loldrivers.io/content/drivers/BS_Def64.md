@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# BS_Def64.sys ![:inline](/images/twitter_verified.png) 
+# BS_Def64.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,18 +54,31 @@ sc.exe start BS_Def64.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: BS_Def64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BS_Def64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;0040153302B88BEE27EB4F1ECA6855039E1A057370F5E8C615724FA5215BADA3&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BS_Def64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;0040153302B88BEE27EB4F1ECA6855039E1A057370F5E8C615724FA5215BADA3&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BS_Def64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;0040153302B88BEE27EB4F1ECA6855039E1A057370F5E8C615724FA5215BADA3&#39;}">0040153302B88BEE27EB4F1ECA6855039E1A057370F5E8C615724FA5215BADA3</a>|
+
+| Filename: BS_Def64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BS_Def64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3326E2D32BBABD69FEB6024809AFC56C7E39241EBE70A53728C77E80995422A5&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BS_Def64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3326E2D32BBABD69FEB6024809AFC56C7E39241EBE70A53728C77E80995422A5&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BS_Def64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3326E2D32BBABD69FEB6024809AFC56C7E39241EBE70A53728C77E80995422A5&#39;}">3326E2D32BBABD69FEB6024809AFC56C7E39241EBE70A53728C77E80995422A5</a>|
+
+| Filename: BS_Def64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BS_Def64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;36B9E31240AB0341873C7092B63E2E0F2CAB2962EBF9B25271C3A1216B7669EB&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BS_Def64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;36B9E31240AB0341873C7092B63E2E0F2CAB2962EBF9B25271C3A1216B7669EB&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BS_Def64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;36B9E31240AB0341873C7092B63E2E0F2CAB2962EBF9B25271C3A1216B7669EB&#39;}">36B9E31240AB0341873C7092B63E2E0F2CAB2962EBF9B25271C3A1216B7669EB</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/0040153302B88BEE27EB4F1ECA6855039E1A057370F5E8C615724FA5215BADA3">0040153302B88BEE27EB4F1ECA6855039E1A057370F5E8C615724FA5215BADA3</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/3326E2D32BBABD69FEB6024809AFC56C7E39241EBE70A53728C77E80995422A5">3326E2D32BBABD69FEB6024809AFC56C7E39241EBE70A53728C77E80995422A5</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/36B9E31240AB0341873C7092B63E2E0F2CAB2962EBF9B25271C3A1216B7669EB">36B9E31240AB0341873C7092B63E2E0F2CAB2962EBF9B25271C3A1216B7669EB</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -75,7 +94,7 @@ sc.exe start BS_Def64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_def64.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

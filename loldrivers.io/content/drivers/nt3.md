@@ -54,14 +54,19 @@ sc.exe start nt3.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: nt3.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;nt3.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;7D8937C18D6E11A0952E53970A0934CF0E65515637AC24D6CA52CCF4B93D385F&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;nt3.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;7D8937C18D6E11A0952E53970A0934CF0E65515637AC24D6CA52CCF4B93D385F&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;nt3.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;7D8937C18D6E11A0952E53970A0934CF0E65515637AC24D6CA52CCF4B93D385F&#39;}">7D8937C18D6E11A0952E53970A0934CF0E65515637AC24D6CA52CCF4B93D385F</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/7D8937C18D6E11A0952E53970A0934CF0E65515637AC24D6CA52CCF4B93D385F">7D8937C18D6E11A0952E53970A0934CF0E65515637AC24D6CA52CCF4B93D385F</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -77,7 +82,7 @@ sc.exe start nt3.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nt3.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

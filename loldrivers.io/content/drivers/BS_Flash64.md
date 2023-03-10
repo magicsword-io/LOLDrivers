@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# BS_Flash64.sys ![:inline](/images/twitter_verified.png) 
+# BS_Flash64.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start BS_Flash64.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: BS_Flash64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BS_Flash64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;86a8e0aa29a5b52c84921188cc1f0eca9a7904dcfe09544602933d8377720219&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BS_Flash64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;86a8e0aa29a5b52c84921188cc1f0eca9a7904dcfe09544602933d8377720219&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BS_Flash64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;86a8e0aa29a5b52c84921188cc1f0eca9a7904dcfe09544602933d8377720219&#39;}">86a8e0aa29a5b52c84921188cc1f0eca9a7904dcfe09544602933d8377720219</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/86a8e0aa29a5b52c84921188cc1f0eca9a7904dcfe09544602933d8377720219">86a8e0aa29a5b52c84921188cc1f0eca9a7904dcfe09544602933d8377720219</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start BS_Flash64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_flash64.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# iqvw64e.sys ![:inline](/images/twitter_verified.png) 
+# iqvw64e.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -56,14 +62,19 @@ sc.exe start iqvw64e.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: iqvw64e.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;iqvw64e.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;iqvw64e.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;iqvw64e.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b&#39;}">4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b">4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -79,7 +90,7 @@ sc.exe start iqvw64e.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iqvw64e.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

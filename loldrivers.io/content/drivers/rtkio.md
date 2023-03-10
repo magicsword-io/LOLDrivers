@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# rtkio.sys ![:inline](/images/twitter_verified.png) 
+# rtkio.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start rtkio.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: rtkio.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;rtkio.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;478917514be37b32d5ccf76e4009f6f952f39f5553953544f1b0688befd95e82&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;rtkio.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;478917514be37b32d5ccf76e4009f6f952f39f5553953544f1b0688befd95e82&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;rtkio.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;478917514be37b32d5ccf76e4009f6f952f39f5553953544f1b0688befd95e82&#39;}">478917514be37b32d5ccf76e4009f6f952f39f5553953544f1b0688befd95e82</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/478917514be37b32d5ccf76e4009f6f952f39f5553953544f1b0688befd95e82">478917514be37b32d5ccf76e4009f6f952f39f5553953544f1b0688befd95e82</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start rtkio.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rtkio.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# dbutil_2_3.sys ![:inline](/images/twitter_verified.png) 
+# dbutil_2_3.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,16 +54,25 @@ sc.exe start dbutil_2_3.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: dbutil_2_3.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;dbutil_2_3.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;0296E2CE999E67C76352613A718E11516FE1B0EFC3FFDB8918FC999DD76A73A5&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;dbutil_2_3.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;0296E2CE999E67C76352613A718E11516FE1B0EFC3FFDB8918FC999DD76A73A5&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;dbutil_2_3.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;0296E2CE999E67C76352613A718E11516FE1B0EFC3FFDB8918FC999DD76A73A5&#39;}">0296E2CE999E67C76352613A718E11516FE1B0EFC3FFDB8918FC999DD76A73A5</a>|
+
+| Filename: dbutil_2_3.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;dbutil_2_3.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;c948ae14761095e4d76b55d9de86412258be7afd&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;dbutil_2_3.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;c948ae14761095e4d76b55d9de86412258be7afd&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;dbutil_2_3.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;c948ae14761095e4d76b55d9de86412258be7afd&#39;}">c948ae14761095e4d76b55d9de86412258be7afd</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/0296E2CE999E67C76352613A718E11516FE1B0EFC3FFDB8918FC999DD76A73A5">0296E2CE999E67C76352613A718E11516FE1B0EFC3FFDB8918FC999DD76A73A5</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/c948ae14761095e4d76b55d9de86412258be7afd">c948ae14761095e4d76b55d9de86412258be7afd</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -73,7 +88,7 @@ sc.exe start dbutil_2_3.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbutil_2_3.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

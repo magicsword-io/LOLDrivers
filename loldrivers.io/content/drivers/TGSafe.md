@@ -54,14 +54,19 @@ sc.exe start TGSafe.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: TGSafe.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;TGSafe.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3A95CC82173032B82A0FFC7D2E438DF64C13BC16B4574214C9FE3BE37250925E&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;TGSafe.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3A95CC82173032B82A0FFC7D2E438DF64C13BC16B4574214C9FE3BE37250925E&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;TGSafe.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3A95CC82173032B82A0FFC7D2E438DF64C13BC16B4574214C9FE3BE37250925E&#39;}">3A95CC82173032B82A0FFC7D2E438DF64C13BC16B4574214C9FE3BE37250925E</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/3A95CC82173032B82A0FFC7D2E438DF64C13BC16B4574214C9FE3BE37250925E">3A95CC82173032B82A0FFC7D2E438DF64C13BC16B4574214C9FE3BE37250925E</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -77,7 +82,7 @@ sc.exe start TGSafe.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/tgsafe.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

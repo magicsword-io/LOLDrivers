@@ -54,14 +54,19 @@ sc.exe start NetFlt.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: NetFlt.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;NetFlt.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;F8886A9C759E0426E08D55E410B02C5B05AF3C287B15970175E4874316FFAF13&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;NetFlt.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;F8886A9C759E0426E08D55E410B02C5B05AF3C287B15970175E4874316FFAF13&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;NetFlt.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;F8886A9C759E0426E08D55E410B02C5B05AF3C287B15970175E4874316FFAF13&#39;}">F8886A9C759E0426E08D55E410B02C5B05AF3C287B15970175E4874316FFAF13</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/F8886A9C759E0426E08D55E410B02C5B05AF3C287B15970175E4874316FFAF13">F8886A9C759E0426E08D55E410B02C5B05AF3C287B15970175E4874316FFAF13</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -77,7 +82,7 @@ sc.exe start NetFlt.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/netflt.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# wantd.sys ![:inline](/images/twitter_verified.png) 
+# wantd.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -50,14 +56,19 @@ sc.exe start wantd.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: wantd.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;wantd.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;wantd.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;wantd.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4&#39;}">06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4">06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4</a></li>
-
-
 
 - binary: 
 - Verified: A required certificate is not within its validity period when verifying against the current system clock or the timestamp in the signed file.
@@ -73,7 +84,7 @@ sc.exe start wantd.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

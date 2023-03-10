@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# BS_RCIO64.sys ![:inline](/images/twitter_verified.png) 
+# BS_RCIO64.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -52,14 +58,19 @@ sc.exe start BS_RCIO64.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: BS_RCIO64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BS_RCIO64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;d205286bffdf09bc033c09e95c519c1c267b40c2ee8bab703c6a2d86741ccd3e&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BS_RCIO64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;d205286bffdf09bc033c09e95c519c1c267b40c2ee8bab703c6a2d86741ccd3e&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;BS_RCIO64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;d205286bffdf09bc033c09e95c519c1c267b40c2ee8bab703c6a2d86741ccd3e&#39;}">d205286bffdf09bc033c09e95c519c1c267b40c2ee8bab703c6a2d86741ccd3e</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/d205286bffdf09bc033c09e95c519c1c267b40c2ee8bab703c6a2d86741ccd3e">d205286bffdf09bc033c09e95c519c1c267b40c2ee8bab703c6a2d86741ccd3e</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -75,7 +86,7 @@ sc.exe start BS_RCIO64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_rcio64.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

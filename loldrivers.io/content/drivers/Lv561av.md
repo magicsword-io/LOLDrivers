@@ -54,14 +54,19 @@ sc.exe start Lv561av.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: Lv561av.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Lv561av.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;e86cb77de7b6a8025f9a546f6c45d135f471e664963cf70b381bee2dfd0fdef4&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Lv561av.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;e86cb77de7b6a8025f9a546f6c45d135f471e664963cf70b381bee2dfd0fdef4&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Lv561av.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;e86cb77de7b6a8025f9a546f6c45d135f471e664963cf70b381bee2dfd0fdef4&#39;}">e86cb77de7b6a8025f9a546f6c45d135f471e664963cf70b381bee2dfd0fdef4</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/e86cb77de7b6a8025f9a546f6c45d135f471e664963cf70b381bee2dfd0fdef4">e86cb77de7b6a8025f9a546f6c45d135f471e664963cf70b381bee2dfd0fdef4</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -77,7 +82,7 @@ sc.exe start Lv561av.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lv561av.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

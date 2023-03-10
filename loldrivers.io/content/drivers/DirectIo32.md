@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# DirectIo32.sys ![:inline](/images/twitter_verified.png) 
+# DirectIo32.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -50,10 +56,10 @@ sc.exe start DirectIo32.sys
 <br>
 
 
+
+
 ### Binary Metadata
 <br>
-
-
 
 - binary: 
 - Verified: 
@@ -69,7 +75,7 @@ sc.exe start DirectIo32.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/directio32.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

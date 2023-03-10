@@ -54,10 +54,10 @@ sc.exe start clfs.sys
 <br>
 
 
+
+
 ### Binary Metadata
 <br>
-
-
 
 - binary: 
 - Verified: 
@@ -73,7 +73,7 @@ sc.exe start clfs.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/clfs.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

@@ -54,16 +54,25 @@ sc.exe start fiddrv64.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: fiddrv64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fiddrv64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;10E15BA8FF8ED926DDD3636CEC66A0F08C9860A4&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fiddrv64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;10E15BA8FF8ED926DDD3636CEC66A0F08C9860A4&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fiddrv64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;10E15BA8FF8ED926DDD3636CEC66A0F08C9860A4&#39;}">10E15BA8FF8ED926DDD3636CEC66A0F08C9860A4</a>|
+
+| Filename: fiddrv64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fiddrv64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;E4436C8C42BA5FFABD58A3B2256F6E86CCC907AB&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fiddrv64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;E4436C8C42BA5FFABD58A3B2256F6E86CCC907AB&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fiddrv64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;E4436C8C42BA5FFABD58A3B2256F6E86CCC907AB&#39;}">E4436C8C42BA5FFABD58A3B2256F6E86CCC907AB</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/10E15BA8FF8ED926DDD3636CEC66A0F08C9860A4">10E15BA8FF8ED926DDD3636CEC66A0F08C9860A4</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/E4436C8C42BA5FFABD58A3B2256F6E86CCC907AB">E4436C8C42BA5FFABD58A3B2256F6E86CCC907AB</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -79,7 +88,7 @@ sc.exe start fiddrv64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fiddrv64.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

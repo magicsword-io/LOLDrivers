@@ -54,14 +54,19 @@ sc.exe start Black.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: Black.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Black.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;D5562FB90B0B3DEB633AB335BCBD82CE10953466A428B3F27CB5B226B453EAF3&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Black.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;D5562FB90B0B3DEB633AB335BCBD82CE10953466A428B3F27CB5B226B453EAF3&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Black.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;D5562FB90B0B3DEB633AB335BCBD82CE10953466A428B3F27CB5B226B453EAF3&#39;}">D5562FB90B0B3DEB633AB335BCBD82CE10953466A428B3F27CB5B226B453EAF3</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/D5562FB90B0B3DEB633AB335BCBD82CE10953466A428B3F27CB5B226B453EAF3">D5562FB90B0B3DEB633AB335BCBD82CE10953466A428B3F27CB5B226B453EAF3</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -77,7 +82,7 @@ sc.exe start Black.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/black.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

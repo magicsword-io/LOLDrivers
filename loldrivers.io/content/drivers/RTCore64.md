@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# RTCore64.sys ![:inline](/images/twitter_verified.png) 
+# RTCore64.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -50,16 +56,25 @@ sc.exe start RTCore64.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: RTCore64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;RTCore64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;RTCore64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;RTCore64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd&#39;}">01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd</a>|
+
+| Filename: RTCore64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;RTCore64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;CDD2A4575A46BADA4837A6153A79C14D60EE3129830717EF09E0E3EFD9D00812&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;RTCore64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;CDD2A4575A46BADA4837A6153A79C14D60EE3129830717EF09E0E3EFD9D00812&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;RTCore64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;CDD2A4575A46BADA4837A6153A79C14D60EE3129830717EF09E0E3EFD9D00812&#39;}">CDD2A4575A46BADA4837A6153A79C14D60EE3129830717EF09E0E3EFD9D00812</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd">01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/CDD2A4575A46BADA4837A6153A79C14D60EE3129830717EF09E0E3EFD9D00812">CDD2A4575A46BADA4837A6153A79C14D60EE3129830717EF09E0E3EFD9D00812</a></li>
-
-
 
 - binary: 
 - Verified: N/A
@@ -75,7 +90,7 @@ sc.exe start RTCore64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rtcore64.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# AsrOmgDrv.sys ![:inline](/images/twitter_verified.png) 
+# AsrOmgDrv.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start AsrOmgDrv.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: AsrOmgDrv.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;AsrOmgDrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;950A4C0C772021CEE26011A92194F0E58D61588F77F2873AA0599DFF52A160C9&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;AsrOmgDrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;950A4C0C772021CEE26011A92194F0E58D61588F77F2873AA0599DFF52A160C9&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;AsrOmgDrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;950A4C0C772021CEE26011A92194F0E58D61588F77F2873AA0599DFF52A160C9&#39;}">950A4C0C772021CEE26011A92194F0E58D61588F77F2873AA0599DFF52A160C9</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/950A4C0C772021CEE26011A92194F0E58D61588F77F2873AA0599DFF52A160C9">950A4C0C772021CEE26011A92194F0E58D61588F77F2873AA0599DFF52A160C9</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start AsrOmgDrv.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asromgdrv.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

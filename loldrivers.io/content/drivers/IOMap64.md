@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# IOMap64.sys ![:inline](/images/twitter_verified.png) 
+# IOMap64.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start IOMap64.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: IOMap64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;IOMap64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;IOMap64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;IOMap64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41&#39;}">ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41">ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start IOMap64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iomap64.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

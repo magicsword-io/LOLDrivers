@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# AsIO64.sys ![:inline](/images/twitter_verified.png) 
+# AsIO64.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start AsIO64.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: AsIO64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;AsIO64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;B48A309EE0960DA3CAAAAF1E794E8C409993AEB3A2B64809F36B97AAC8A1E62A&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;AsIO64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;B48A309EE0960DA3CAAAAF1E794E8C409993AEB3A2B64809F36B97AAC8A1E62A&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;AsIO64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;B48A309EE0960DA3CAAAAF1E794E8C409993AEB3A2B64809F36B97AAC8A1E62A&#39;}">B48A309EE0960DA3CAAAAF1E794E8C409993AEB3A2B64809F36B97AAC8A1E62A</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/B48A309EE0960DA3CAAAAF1E794E8C409993AEB3A2B64809F36B97AAC8A1E62A">B48A309EE0960DA3CAAAAF1E794E8C409993AEB3A2B64809F36B97AAC8A1E62A</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start AsIO64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asio64.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

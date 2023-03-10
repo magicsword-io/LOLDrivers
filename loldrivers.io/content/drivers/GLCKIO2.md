@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# GLCKIO2.sys ![:inline](/images/twitter_verified.png) 
+# GLCKIO2.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,16 +54,25 @@ sc.exe start GLCKIO2.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: GLCKIO2.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;GLCKIO2.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3A5EC83FE670E5E23AEF3AFA0A7241053F5B6BE5E6CA01766D6B5F9177183C25&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;GLCKIO2.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3A5EC83FE670E5E23AEF3AFA0A7241053F5B6BE5E6CA01766D6B5F9177183C25&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;GLCKIO2.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;3A5EC83FE670E5E23AEF3AFA0A7241053F5B6BE5E6CA01766D6B5F9177183C25&#39;}">3A5EC83FE670E5E23AEF3AFA0A7241053F5B6BE5E6CA01766D6B5F9177183C25</a>|
+
+| Filename: GLCKIO2.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;GLCKIO2.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;61A1BDDDD3C512E681818DEBB5BEE94DB701768FC25E674FCAD46592A3259BD0&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;GLCKIO2.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;61A1BDDDD3C512E681818DEBB5BEE94DB701768FC25E674FCAD46592A3259BD0&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;GLCKIO2.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;61A1BDDDD3C512E681818DEBB5BEE94DB701768FC25E674FCAD46592A3259BD0&#39;}">61A1BDDDD3C512E681818DEBB5BEE94DB701768FC25E674FCAD46592A3259BD0</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/3A5EC83FE670E5E23AEF3AFA0A7241053F5B6BE5E6CA01766D6B5F9177183C25">3A5EC83FE670E5E23AEF3AFA0A7241053F5B6BE5E6CA01766D6B5F9177183C25</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/61A1BDDDD3C512E681818DEBB5BEE94DB701768FC25E674FCAD46592A3259BD0">61A1BDDDD3C512E681818DEBB5BEE94DB701768FC25E674FCAD46592A3259BD0</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -73,7 +88,7 @@ sc.exe start GLCKIO2.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/glckio2.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

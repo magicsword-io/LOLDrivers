@@ -54,16 +54,25 @@ sc.exe start fiddrv.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: fiddrv.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fiddrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;8CC8974A05E81678E3D28ACFE434E7804ABD019C&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fiddrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;8CC8974A05E81678E3D28ACFE434E7804ABD019C&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fiddrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;8CC8974A05E81678E3D28ACFE434E7804ABD019C&#39;}">8CC8974A05E81678E3D28ACFE434E7804ABD019C</a>|
+
+| Filename: fiddrv.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fiddrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;282BB241BDA5C4C1B8EB9BF56D018896649CA0E1&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fiddrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;282BB241BDA5C4C1B8EB9BF56D018896649CA0E1&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fiddrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;282BB241BDA5C4C1B8EB9BF56D018896649CA0E1&#39;}">282BB241BDA5C4C1B8EB9BF56D018896649CA0E1</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/8CC8974A05E81678E3D28ACFE434E7804ABD019C">8CC8974A05E81678E3D28ACFE434E7804ABD019C</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/282BB241BDA5C4C1B8EB9BF56D018896649CA0E1">282BB241BDA5C4C1B8EB9BF56D018896649CA0E1</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -79,7 +88,7 @@ sc.exe start fiddrv.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fiddrv.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

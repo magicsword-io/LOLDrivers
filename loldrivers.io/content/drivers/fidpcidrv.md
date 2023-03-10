@@ -54,20 +54,37 @@ sc.exe start fidpcidrv.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: fidpcidrv.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fidpcidrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;08596732304351B311970FF96B21F451F23B1E25&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fidpcidrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;08596732304351B311970FF96B21F451F23B1E25&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fidpcidrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;08596732304351B311970FF96B21F451F23B1E25&#39;}">08596732304351B311970FF96B21F451F23B1E25</a>|
+
+| Filename: fidpcidrv.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fidpcidrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;7838FB56FDAB816BC1900A4720EEA2FC9972EF7A&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fidpcidrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;7838FB56FDAB816BC1900A4720EEA2FC9972EF7A&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fidpcidrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;7838FB56FDAB816BC1900A4720EEA2FC9972EF7A&#39;}">7838FB56FDAB816BC1900A4720EEA2FC9972EF7A</a>|
+
+| Filename: fidpcidrv.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fidpcidrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;4789B910023A667BEE70FF1F1A8F369CFFB10FE8&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fidpcidrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;4789B910023A667BEE70FF1F1A8F369CFFB10FE8&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fidpcidrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;4789B910023A667BEE70FF1F1A8F369CFFB10FE8&#39;}">4789B910023A667BEE70FF1F1A8F369CFFB10FE8</a>|
+
+| Filename: fidpcidrv.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fidpcidrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;EEFF4EC4EBC12C6ACD2C930DC2EAAF877CFEC7EC&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fidpcidrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;EEFF4EC4EBC12C6ACD2C930DC2EAAF877CFEC7EC&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;fidpcidrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;EEFF4EC4EBC12C6ACD2C930DC2EAAF877CFEC7EC&#39;}">EEFF4EC4EBC12C6ACD2C930DC2EAAF877CFEC7EC</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/08596732304351B311970FF96B21F451F23B1E25">08596732304351B311970FF96B21F451F23B1E25</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/7838FB56FDAB816BC1900A4720EEA2FC9972EF7A">7838FB56FDAB816BC1900A4720EEA2FC9972EF7A</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/4789B910023A667BEE70FF1F1A8F369CFFB10FE8">4789B910023A667BEE70FF1F1A8F369CFFB10FE8</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/EEFF4EC4EBC12C6ACD2C930DC2EAAF877CFEC7EC">EEFF4EC4EBC12C6ACD2C930DC2EAAF877CFEC7EC</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -83,7 +100,7 @@ sc.exe start fidpcidrv.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fidpcidrv.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

@@ -24,9 +24,15 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes:
-- 01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd
-- CDD2A4575A46BADA4837A6153A79C14D60EE3129830717EF09E0E3EFD9D00812
+KnownVulnerableSamples:
+- Filename: RTCore64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd
+- Filename: RTCore64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: CDD2A4575A46BADA4837A6153A79C14D60EE3129830717EF09E0E3EFD9D00812
 Metadata:
   binary: ''
   Verified: N/A
@@ -41,4 +47,3 @@ Metadata:
 
     x32'
   OriginalFilename: ''
-  driver_verified: 'TRUE'

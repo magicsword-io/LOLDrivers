@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# NCHGBIOS2x64.SYS ![:inline](/images/twitter_verified.png) 
+# NCHGBIOS2x64.SYS 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start NCHGBIOS2x64.SYS
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: NCHGBIOS2x64.SYS |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;NCHGBIOS2x64.SYS&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;NCHGBIOS2x64.SYS&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;NCHGBIOS2x64.SYS&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073&#39;}">314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073">314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start NCHGBIOS2x64.SYS
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nchgbios2x64.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

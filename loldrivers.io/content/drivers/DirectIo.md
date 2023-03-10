@@ -54,14 +54,19 @@ sc.exe start DirectIo.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: DirectIo.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;DirectIo.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;4422851a0a102f654e95d3b79c357ae3af1b096d7d1576663c027cfbc04abaf9&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;DirectIo.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;4422851a0a102f654e95d3b79c357ae3af1b096d7d1576663c027cfbc04abaf9&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;DirectIo.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;4422851a0a102f654e95d3b79c357ae3af1b096d7d1576663c027cfbc04abaf9&#39;}">4422851a0a102f654e95d3b79c357ae3af1b096d7d1576663c027cfbc04abaf9</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/4422851a0a102f654e95d3b79c357ae3af1b096d7d1576663c027cfbc04abaf9">4422851a0a102f654e95d3b79c357ae3af1b096d7d1576663c027cfbc04abaf9</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -77,7 +82,7 @@ sc.exe start DirectIo.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/directio.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# nscm.sys ![:inline](/images/twitter_verified.png) 
+# nscm.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -50,14 +56,19 @@ sc.exe start nscm.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: nscm.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;nscm.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;nscm.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;nscm.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22&#39;}">76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22">76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -73,7 +84,7 @@ sc.exe start nscm.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nscm.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

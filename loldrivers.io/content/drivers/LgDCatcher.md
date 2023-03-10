@@ -54,14 +54,19 @@ sc.exe start LgDCatcher.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: LgDCatcher.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;LgDCatcher.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;58c071cfe72e9ee867bba85cbd0abe72eb223d27978d6f0650d0103553839b59&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;LgDCatcher.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;58c071cfe72e9ee867bba85cbd0abe72eb223d27978d6f0650d0103553839b59&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;LgDCatcher.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;58c071cfe72e9ee867bba85cbd0abe72eb223d27978d6f0650d0103553839b59&#39;}">58c071cfe72e9ee867bba85cbd0abe72eb223d27978d6f0650d0103553839b59</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/58c071cfe72e9ee867bba85cbd0abe72eb223d27978d6f0650d0103553839b59">58c071cfe72e9ee867bba85cbd0abe72eb223d27978d6f0650d0103553839b59</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -77,7 +82,7 @@ sc.exe start LgDCatcher.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lgdcatcher.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

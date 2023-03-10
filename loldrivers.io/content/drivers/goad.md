@@ -56,14 +56,19 @@ sc.exe start goad.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: goad.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;goad.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;312E31851E0FC2072DBF9A128557D6EF&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;goad.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;312E31851E0FC2072DBF9A128557D6EF&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;goad.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;312E31851E0FC2072DBF9A128557D6EF&#39;}">312E31851E0FC2072DBF9A128557D6EF</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/312E31851E0FC2072DBF9A128557D6EF">312E31851E0FC2072DBF9A128557D6EF</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -79,7 +84,7 @@ sc.exe start goad.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/goad.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

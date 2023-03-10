@@ -54,24 +54,49 @@ sc.exe start ASIO32.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: ASIO32.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ASIO32.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;D569D4BAB86E70EFBCDFDAC9D822139D6F477B7C&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ASIO32.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;D569D4BAB86E70EFBCDFDAC9D822139D6F477B7C&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ASIO32.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;D569D4BAB86E70EFBCDFDAC9D822139D6F477B7C&#39;}">D569D4BAB86E70EFBCDFDAC9D822139D6F477B7C</a>|
+
+| Filename: ASIO32.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ASIO32.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;80FA962BDFB76DFCB9E5D13EFC38BB3D392F2E77&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ASIO32.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;80FA962BDFB76DFCB9E5D13EFC38BB3D392F2E77&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ASIO32.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;80FA962BDFB76DFCB9E5D13EFC38BB3D392F2E77&#39;}">80FA962BDFB76DFCB9E5D13EFC38BB3D392F2E77</a>|
+
+| Filename: ASIO32.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ASIO32.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;5A7DD0DA0AEE0BDEDC14C1B7831B9CE9178A0346&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ASIO32.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;5A7DD0DA0AEE0BDEDC14C1B7831B9CE9178A0346&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ASIO32.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;5A7DD0DA0AEE0BDEDC14C1B7831B9CE9178A0346&#39;}">5A7DD0DA0AEE0BDEDC14C1B7831B9CE9178A0346</a>|
+
+| Filename: ASIO32.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ASIO32.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;1ACC7A486B52C5EE6619DBDC3B4210B5F48B936F&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ASIO32.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;1ACC7A486B52C5EE6619DBDC3B4210B5F48B936F&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ASIO32.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;1ACC7A486B52C5EE6619DBDC3B4210B5F48B936F&#39;}">1ACC7A486B52C5EE6619DBDC3B4210B5F48B936F</a>|
+
+| Filename: ASIO32.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ASIO32.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;55AB7E27412ECA433D76513EDC7E6E03BCDD7EDA&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ASIO32.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;55AB7E27412ECA433D76513EDC7E6E03BCDD7EDA&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ASIO32.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;55AB7E27412ECA433D76513EDC7E6E03BCDD7EDA&#39;}">55AB7E27412ECA433D76513EDC7E6E03BCDD7EDA</a>|
+
+| Filename: ASIO32.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ASIO32.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;1E7C241B9A9EA79061B50FB19B3D141DEE175C27&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ASIO32.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;1E7C241B9A9EA79061B50FB19B3D141DEE175C27&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ASIO32.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;1E7C241B9A9EA79061B50FB19B3D141DEE175C27&#39;}">1E7C241B9A9EA79061B50FB19B3D141DEE175C27</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/D569D4BAB86E70EFBCDFDAC9D822139D6F477B7C">D569D4BAB86E70EFBCDFDAC9D822139D6F477B7C</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/80FA962BDFB76DFCB9E5D13EFC38BB3D392F2E77">80FA962BDFB76DFCB9E5D13EFC38BB3D392F2E77</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/5A7DD0DA0AEE0BDEDC14C1B7831B9CE9178A0346">5A7DD0DA0AEE0BDEDC14C1B7831B9CE9178A0346</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/1ACC7A486B52C5EE6619DBDC3B4210B5F48B936F">1ACC7A486B52C5EE6619DBDC3B4210B5F48B936F</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/55AB7E27412ECA433D76513EDC7E6E03BCDD7EDA">55AB7E27412ECA433D76513EDC7E6E03BCDD7EDA</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/1E7C241B9A9EA79061B50FB19B3D141DEE175C27">1E7C241B9A9EA79061B50FB19B3D141DEE175C27</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -87,7 +112,7 @@ sc.exe start ASIO32.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asio32.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

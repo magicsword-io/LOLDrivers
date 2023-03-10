@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# wantd_2.sys ![:inline](/images/twitter_verified.png) 
+# wantd_2.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -50,14 +56,19 @@ sc.exe start wantd_2.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: wantd_2.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;wantd_2.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;6908ebf52eb19c6719a0b508d1e2128f198d10441551cbfb9f4031d382f5229f&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;wantd_2.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;6908ebf52eb19c6719a0b508d1e2128f198d10441551cbfb9f4031d382f5229f&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;wantd_2.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;6908ebf52eb19c6719a0b508d1e2128f198d10441551cbfb9f4031d382f5229f&#39;}">6908ebf52eb19c6719a0b508d1e2128f198d10441551cbfb9f4031d382f5229f</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/6908ebf52eb19c6719a0b508d1e2128f198d10441551cbfb9f4031d382f5229f">6908ebf52eb19c6719a0b508d1e2128f198d10441551cbfb9f4031d382f5229f</a></li>
-
-
 
 - binary: 
 - Verified: Signed
@@ -73,7 +84,7 @@ sc.exe start wantd_2.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd_2.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

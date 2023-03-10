@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# ADV64DRV.sys ![:inline](/images/twitter_verified.png) 
+# ADV64DRV.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start ADV64DRV.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: ADV64DRV.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ADV64DRV.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;04A85E359525D662338CAE86C1E59B1D7AA9BD12B920E8067503723DC1E03162&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ADV64DRV.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;04A85E359525D662338CAE86C1E59B1D7AA9BD12B920E8067503723DC1E03162&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ADV64DRV.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;04A85E359525D662338CAE86C1E59B1D7AA9BD12B920E8067503723DC1E03162&#39;}">04A85E359525D662338CAE86C1E59B1D7AA9BD12B920E8067503723DC1E03162</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/04A85E359525D662338CAE86C1E59B1D7AA9BD12B920E8067503723DC1E03162">04A85E359525D662338CAE86C1E59B1D7AA9BD12B920E8067503723DC1E03162</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start ADV64DRV.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/adv64drv.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

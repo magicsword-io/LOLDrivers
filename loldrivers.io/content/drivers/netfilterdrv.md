@@ -54,16 +54,25 @@ sc.exe start netfilterdrv.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: netfilterdrv.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;netfilterdrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;E74B6DDA8BC53BC687FC21218BD34062A78D8467&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;netfilterdrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;E74B6DDA8BC53BC687FC21218BD34062A78D8467&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;netfilterdrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;E74B6DDA8BC53BC687FC21218BD34062A78D8467&#39;}">E74B6DDA8BC53BC687FC21218BD34062A78D8467</a>|
+
+| Filename: netfilterdrv.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;netfilterdrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;2C27ABBBBCF10DFB75AD79557E30ACE5ED314DF8&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;netfilterdrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;2C27ABBBBCF10DFB75AD79557E30ACE5ED314DF8&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;netfilterdrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;2C27ABBBBCF10DFB75AD79557E30ACE5ED314DF8&#39;}">2C27ABBBBCF10DFB75AD79557E30ACE5ED314DF8</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/E74B6DDA8BC53BC687FC21218BD34062A78D8467">E74B6DDA8BC53BC687FC21218BD34062A78D8467</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/2C27ABBBBCF10DFB75AD79557E30ACE5ED314DF8">2C27ABBBBCF10DFB75AD79557E30ACE5ED314DF8</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -79,7 +88,7 @@ sc.exe start netfilterdrv.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/netfilterdrv.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

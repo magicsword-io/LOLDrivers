@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# PcieCubed.sys ![:inline](/images/twitter_verified.png) 
+# PcieCubed.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start PcieCubed.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: PcieCubed.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;PcieCubed.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;22949977ce5cd96ba674b403a9c81285&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;PcieCubed.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;22949977ce5cd96ba674b403a9c81285&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;PcieCubed.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;22949977ce5cd96ba674b403a9c81285&#39;}">22949977ce5cd96ba674b403a9c81285</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/22949977ce5cd96ba674b403a9c81285">22949977ce5cd96ba674b403a9c81285</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start PcieCubed.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/pciecubed.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

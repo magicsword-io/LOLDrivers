@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# wantd_5.sys ![:inline](/images/twitter_verified.png) 
+# wantd_5.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -50,14 +56,19 @@ sc.exe start wantd_5.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: wantd_5.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;wantd_5.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;b9dad0131c51e2645e761b74a71ebad2bf175645fa9f42a4ab0e6921b83306e3&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;wantd_5.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;b9dad0131c51e2645e761b74a71ebad2bf175645fa9f42a4ab0e6921b83306e3&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;wantd_5.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;b9dad0131c51e2645e761b74a71ebad2bf175645fa9f42a4ab0e6921b83306e3&#39;}">b9dad0131c51e2645e761b74a71ebad2bf175645fa9f42a4ab0e6921b83306e3</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/b9dad0131c51e2645e761b74a71ebad2bf175645fa9f42a4ab0e6921b83306e3">b9dad0131c51e2645e761b74a71ebad2bf175645fa9f42a4ab0e6921b83306e3</a></li>
-
-
 
 - binary: 
 - Verified: The digital signature of the object did not verify.
@@ -73,7 +84,7 @@ sc.exe start wantd_5.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd_5.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

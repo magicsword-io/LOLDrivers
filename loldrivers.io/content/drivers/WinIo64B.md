@@ -54,14 +54,19 @@ sc.exe start WinIo64B.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: WinIo64B.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinIo64B.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;f18e669127c041431cde8f2d03b15cfc20696056&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinIo64B.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;f18e669127c041431cde8f2d03b15cfc20696056&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinIo64B.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;f18e669127c041431cde8f2d03b15cfc20696056&#39;}">f18e669127c041431cde8f2d03b15cfc20696056</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/f18e669127c041431cde8f2d03b15cfc20696056">f18e669127c041431cde8f2d03b15cfc20696056</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -77,7 +82,7 @@ sc.exe start WinIo64B.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio64b.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

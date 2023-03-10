@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# smep_capcom.sys ![:inline](/images/twitter_verified.png) 
+# smep_capcom.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start smep_capcom.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: smep_capcom.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;smep_capcom.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;DB2A9247177E8CDD50FE9433D066B86FFD2A84301AA6B2EB60F361CFFF077004&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;smep_capcom.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;DB2A9247177E8CDD50FE9433D066B86FFD2A84301AA6B2EB60F361CFFF077004&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;smep_capcom.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;DB2A9247177E8CDD50FE9433D066B86FFD2A84301AA6B2EB60F361CFFF077004&#39;}">DB2A9247177E8CDD50FE9433D066B86FFD2A84301AA6B2EB60F361CFFF077004</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/DB2A9247177E8CDD50FE9433D066B86FFD2A84301AA6B2EB60F361CFFF077004">DB2A9247177E8CDD50FE9433D066B86FFD2A84301AA6B2EB60F361CFFF077004</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start smep_capcom.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/smep_capcom.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

@@ -54,14 +54,19 @@ sc.exe start Bs_Def.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: Bs_Def.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Bs_Def.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Bs_Def.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Bs_Def.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be&#39;}">5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be">5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -77,7 +82,7 @@ sc.exe start Bs_Def.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_def.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

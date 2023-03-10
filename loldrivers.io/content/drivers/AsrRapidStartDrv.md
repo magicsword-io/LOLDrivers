@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# AsrRapidStartDrv.sys ![:inline](/images/twitter_verified.png) 
+# AsrRapidStartDrv.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start AsrRapidStartDrv.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: AsrRapidStartDrv.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;AsrRapidStartDrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;0AAFA9F47ACF69D46C9542985994FF5321F00842A28DF2396D4A3076776A83CB&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;AsrRapidStartDrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;0AAFA9F47ACF69D46C9542985994FF5321F00842A28DF2396D4A3076776A83CB&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;AsrRapidStartDrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;0AAFA9F47ACF69D46C9542985994FF5321F00842A28DF2396D4A3076776A83CB&#39;}">0AAFA9F47ACF69D46C9542985994FF5321F00842A28DF2396D4A3076776A83CB</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/0AAFA9F47ACF69D46C9542985994FF5321F00842A28DF2396D4A3076776A83CB">0AAFA9F47ACF69D46C9542985994FF5321F00842A28DF2396D4A3076776A83CB</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start AsrRapidStartDrv.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrrapidstartdrv.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

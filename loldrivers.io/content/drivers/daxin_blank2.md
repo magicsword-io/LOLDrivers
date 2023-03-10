@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# daxin_blank2.sys ![:inline](/images/twitter_verified.png) 
+# daxin_blank2.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -50,14 +56,19 @@ sc.exe start daxin_blank2.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: daxin_blank2.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;daxin_blank2.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;5c1585b1a1c956c7755429544f3596515dfdf928373620c51b0606a520c6245a&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;daxin_blank2.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;5c1585b1a1c956c7755429544f3596515dfdf928373620c51b0606a520c6245a&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;daxin_blank2.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;5c1585b1a1c956c7755429544f3596515dfdf928373620c51b0606a520c6245a&#39;}">5c1585b1a1c956c7755429544f3596515dfdf928373620c51b0606a520c6245a</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/5c1585b1a1c956c7755429544f3596515dfdf928373620c51b0606a520c6245a">5c1585b1a1c956c7755429544f3596515dfdf928373620c51b0606a520c6245a</a></li>
-
-
 
 - binary: 
 - Verified: A certificate was explicitly revoked by its issuer.
@@ -73,7 +84,7 @@ sc.exe start daxin_blank2.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank2.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

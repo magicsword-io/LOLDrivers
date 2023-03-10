@@ -54,14 +54,19 @@ sc.exe start TestBone.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: TestBone.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;TestBone.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;0DE4247E72D378713BCF22D5C5D3874D079203BB4364E25F67A90D5570BDCCE8&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;TestBone.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;0DE4247E72D378713BCF22D5C5D3874D079203BB4364E25F67A90D5570BDCCE8&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;TestBone.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;0DE4247E72D378713BCF22D5C5D3874D079203BB4364E25F67A90D5570BDCCE8&#39;}">0DE4247E72D378713BCF22D5C5D3874D079203BB4364E25F67A90D5570BDCCE8</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/0DE4247E72D378713BCF22D5C5D3874D079203BB4364E25F67A90D5570BDCCE8">0DE4247E72D378713BCF22D5C5D3874D079203BB4364E25F67A90D5570BDCCE8</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -77,7 +82,7 @@ sc.exe start TestBone.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/testbone.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

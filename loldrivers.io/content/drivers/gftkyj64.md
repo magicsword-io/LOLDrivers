@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# gftkyj64.sys ![:inline](/images/twitter_verified.png) 
+# gftkyj64.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -51,16 +57,20 @@ sc.exe start gftkyj64.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: gftkyj64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;gftkyj64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c\n&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;gftkyj64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c\n&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;gftkyj64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c\n&#39;}">9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c
+</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c
-">9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c
-</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -76,7 +86,7 @@ sc.exe start gftkyj64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gftkyj64.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

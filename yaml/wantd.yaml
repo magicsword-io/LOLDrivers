@@ -19,8 +19,11 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes:
-- 06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4
+KnownVulnerableSamples:
+- Filename: wantd.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4
 Metadata:
   binary: ''
   Verified: A required certificate is not within its validity period when verifying
@@ -34,4 +37,3 @@ Metadata:
   FileVersion: 6.1.7600.1172
   MachineType: 64-bit
   OriginalFilename: ''
-  driver_verified: 'TRUE'

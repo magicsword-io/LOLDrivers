@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# ncpl.sys ![:inline](/images/twitter_verified.png) 
+# ncpl.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -50,14 +56,19 @@ sc.exe start ncpl.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: ncpl.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ncpl.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;6c7120e40fc850e4715058b233f5ad4527d1084a909114fd6a36b7b7573c4a44&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ncpl.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;6c7120e40fc850e4715058b233f5ad4527d1084a909114fd6a36b7b7573c4a44&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ncpl.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;6c7120e40fc850e4715058b233f5ad4527d1084a909114fd6a36b7b7573c4a44&#39;}">6c7120e40fc850e4715058b233f5ad4527d1084a909114fd6a36b7b7573c4a44</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/6c7120e40fc850e4715058b233f5ad4527d1084a909114fd6a36b7b7573c4a44">6c7120e40fc850e4715058b233f5ad4527d1084a909114fd6a36b7b7573c4a44</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -73,7 +84,7 @@ sc.exe start ncpl.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ncpl.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

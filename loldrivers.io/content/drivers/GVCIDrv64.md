@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# GVCIDrv64.sys ![:inline](/images/twitter_verified.png) 
+# GVCIDrv64.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start GVCIDrv64.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: GVCIDrv64.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;GVCIDrv64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;42f0b036687cbd7717c9efed6991c00d4e3e7b032dc965a2556c02177dfdad0f&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;GVCIDrv64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;42f0b036687cbd7717c9efed6991c00d4e3e7b032dc965a2556c02177dfdad0f&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;GVCIDrv64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;42f0b036687cbd7717c9efed6991c00d4e3e7b032dc965a2556c02177dfdad0f&#39;}">42f0b036687cbd7717c9efed6991c00d4e3e7b032dc965a2556c02177dfdad0f</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/42f0b036687cbd7717c9efed6991c00d4e3e7b032dc965a2556c02177dfdad0f">42f0b036687cbd7717c9efed6991c00d4e3e7b032dc965a2556c02177dfdad0f</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start GVCIDrv64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gvcidrv64.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

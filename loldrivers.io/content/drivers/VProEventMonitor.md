@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# VProEventMonitor.sys ![:inline](/images/twitter_verified.png) 
+# VProEventMonitor.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start VProEventMonitor.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: VProEventMonitor.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;VProEventMonitor.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;7877C1B0E7429453B750218CA491C2825DAE684AD9616642EFF7B41715C70ACA&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;VProEventMonitor.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;7877C1B0E7429453B750218CA491C2825DAE684AD9616642EFF7B41715C70ACA&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;VProEventMonitor.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;7877C1B0E7429453B750218CA491C2825DAE684AD9616642EFF7B41715C70ACA&#39;}">7877C1B0E7429453B750218CA491C2825DAE684AD9616642EFF7B41715C70ACA</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/7877C1B0E7429453B750218CA491C2825DAE684AD9616642EFF7B41715C70ACA">7877C1B0E7429453B750218CA491C2825DAE684AD9616642EFF7B41715C70ACA</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start VProEventMonitor.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/vproeventmonitor.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

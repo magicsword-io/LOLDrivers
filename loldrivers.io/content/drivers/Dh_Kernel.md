@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# Dh_Kernel.sys ![:inline](/images/twitter_verified.png) 
+# Dh_Kernel.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -50,14 +56,19 @@ sc.exe start Dh_Kernel.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: Dh_Kernel.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Dh_Kernel.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;BB50818A07B0EB1BD317467139B7EB4BAD6CD89053FECDABFEAE111689825955&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Dh_Kernel.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;BB50818A07B0EB1BD317467139B7EB4BAD6CD89053FECDABFEAE111689825955&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;Dh_Kernel.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;BB50818A07B0EB1BD317467139B7EB4BAD6CD89053FECDABFEAE111689825955&#39;}">BB50818A07B0EB1BD317467139B7EB4BAD6CD89053FECDABFEAE111689825955</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/BB50818A07B0EB1BD317467139B7EB4BAD6CD89053FECDABFEAE111689825955">BB50818A07B0EB1BD317467139B7EB4BAD6CD89053FECDABFEAE111689825955</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -73,7 +84,7 @@ sc.exe start Dh_Kernel.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dh_kernel.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

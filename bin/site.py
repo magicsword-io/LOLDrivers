@@ -54,11 +54,17 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
                          ,'Handle','Detection','KnownHashes','Binary','Verified','Date','Publisher','Company','Description','Product','Product Version','File Version','Machine Type','Original Filename'])
 
         # write rows
+
         for driver in drivers:
+            #get hashes
+            hashes = []
+            for s in driver['KnownVulnerableSamples']:
+                hashes.append(s['SHA256'])
+            # get link
             link = '[' + driver['Name'] + '](drivers/' + os.path.splitext(driver["Name"])[0].lower() + '/)'
             writer.writerow([link, driver['Author'], driver['Created'], driver['Commands']['Command'], driver['Commands']['Description'], driver['Commands']['Usecase'], driver['Category'], \
                              driver['Commands']['Privileges'],driver['MitreID'],driver['Commands']['OperatingSystem'],driver['Resources'],driver['driver_description'],driver['Acknowledgement']['Person'] \
-                             ,driver['Acknowledgement']['Handle'],driver['Detection'],driver['KnownHashes'],driver['Metadata']['binary'],driver['Metadata']['Verified'],driver['Metadata']['Date'], \
+                             ,driver['Acknowledgement']['Handle'],driver['Detection'],hashes,driver['Metadata']['binary'],driver['Metadata']['Verified'],driver['Metadata']['Date'], \
                                 driver['Metadata']['Publisher'],driver['Metadata']['Company'],driver['Metadata']['Description'],driver['Metadata']['Product'],driver['Metadata']['ProductVersion'], \
                                     driver['Metadata']['FileVersion'],driver['Metadata']['MachineType'],driver['Metadata']['OriginalFilename']])
 

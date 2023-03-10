@@ -19,8 +19,11 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes:
-- 96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc
+KnownVulnerableSamples:
+- Filename: ntbios.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc
 Metadata:
   binary: ''
   Verified: Unsigned
@@ -33,4 +36,3 @@ Metadata:
   FileVersion: 5, 0, 2, 1
   MachineType: 32-bit
   OriginalFilename: ''
-  driver_verified: 'TRUE'

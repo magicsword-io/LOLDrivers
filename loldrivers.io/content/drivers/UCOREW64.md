@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# UCOREW64.SYS ![:inline](/images/twitter_verified.png) 
+# UCOREW64.SYS 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,14 +54,19 @@ sc.exe start UCOREW64.SYS
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: UCOREW64.SYS |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;UCOREW64.SYS&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;a7c8f4faf3cbb088cac7753d81f8ec4c38ccb97cd9da817741f49272e8d01200&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;UCOREW64.SYS&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;a7c8f4faf3cbb088cac7753d81f8ec4c38ccb97cd9da817741f49272e8d01200&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;UCOREW64.SYS&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;a7c8f4faf3cbb088cac7753d81f8ec4c38ccb97cd9da817741f49272e8d01200&#39;}">a7c8f4faf3cbb088cac7753d81f8ec4c38ccb97cd9da817741f49272e8d01200</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/a7c8f4faf3cbb088cac7753d81f8ec4c38ccb97cd9da817741f49272e8d01200">a7c8f4faf3cbb088cac7753d81f8ec4c38ccb97cd9da817741f49272e8d01200</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -71,7 +82,7 @@ sc.exe start UCOREW64.SYS
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ucorew64.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

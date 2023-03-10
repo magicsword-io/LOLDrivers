@@ -54,14 +54,19 @@ sc.exe start full.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: full.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;full.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;4B8C0445075F09AEEF542AB1C86E5DE6B06E91A3&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;full.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;4B8C0445075F09AEEF542AB1C86E5DE6B06E91A3&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;full.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;4B8C0445075F09AEEF542AB1C86E5DE6B06E91A3&#39;}">4B8C0445075F09AEEF542AB1C86E5DE6B06E91A3</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/4B8C0445075F09AEEF542AB1C86E5DE6B06E91A3">4B8C0445075F09AEEF542AB1C86E5DE6B06E91A3</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -77,7 +82,7 @@ sc.exe start full.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/full.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}

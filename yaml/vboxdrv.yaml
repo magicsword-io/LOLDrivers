@@ -20,9 +20,15 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
-KnownHashes:
-- 78827fa00ea48d96ac9af8d1c1e317d02ce11793e7f7f6e4c7aac7b5d7dd490f
-- cf3a7d4285d65bf8688215407bce1b51d7c6b22497f09021f0fce31cbeb78986
+KnownVulnerableSamples:
+- Filename: vboxdrv.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 78827fa00ea48d96ac9af8d1c1e317d02ce11793e7f7f6e4c7aac7b5d7dd490f
+- Filename: vboxdrv.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: cf3a7d4285d65bf8688215407bce1b51d7c6b22497f09021f0fce31cbeb78986
 Metadata:
   binary: ''
   Verified: ''
@@ -35,4 +41,3 @@ Metadata:
   FileVersion: 2.2.0.r45846
   MachineType: x64
   OriginalFilename: ''
-  driver_verified: 'TRUE'

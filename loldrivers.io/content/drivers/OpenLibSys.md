@@ -13,7 +13,13 @@ weight = 10
 
 
 
-# OpenLibSys.sys ![:inline](/images/twitter_verified.png) 
+# OpenLibSys.sys 
+
+
+{{< tip "warning" >}}
+We were not able to verify the hash of this driver successfully, it has not been confirmed.
+{{< /tip >}}
+
 
 
 
@@ -48,16 +54,25 @@ sc.exe start OpenLibSys.sys
 <br>
 
 
+##### Known Vulnerable Samples
+
+| Filename: OpenLibSys.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;OpenLibSys.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;91314768DA140999E682D2A290D48B78BB25A35525EA12C1B1F9634D14602B2C&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;OpenLibSys.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;91314768DA140999E682D2A290D48B78BB25A35525EA12C1B1F9634D14602B2C&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;OpenLibSys.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;91314768DA140999E682D2A290D48B78BB25A35525EA12C1B1F9634D14602B2C&#39;}">91314768DA140999E682D2A290D48B78BB25A35525EA12C1B1F9634D14602B2C</a>|
+
+| Filename: OpenLibSys.sys |
+|:---- |
+|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;OpenLibSys.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;F0605DDA1DEF240DC7E14EFA73927D6C6D89988C01EA8647B671667B2B167008&#39;}"></a>|
+|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;OpenLibSys.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;F0605DDA1DEF240DC7E14EFA73927D6C6D89988C01EA8647B671667B2B167008&#39;}"></a>|
+|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;OpenLibSys.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;F0605DDA1DEF240DC7E14EFA73927D6C6D89988C01EA8647B671667B2B167008&#39;}">F0605DDA1DEF240DC7E14EFA73927D6C6D89988C01EA8647B671667B2B167008</a>|
+
+
+
+
 ### Binary Metadata
 <br>
-
-
-
-<li><a href="https://www.virustotal.com/gui/file/91314768DA140999E682D2A290D48B78BB25A35525EA12C1B1F9634D14602B2C">91314768DA140999E682D2A290D48B78BB25A35525EA12C1B1F9634D14602B2C</a></li>
-
-<li><a href="https://www.virustotal.com/gui/file/F0605DDA1DEF240DC7E14EFA73927D6C6D89988C01EA8647B671667B2B167008">F0605DDA1DEF240DC7E14EFA73927D6C6D89988C01EA8647B671667B2B167008</a></li>
-
-
 
 - binary: 
 - Verified: 
@@ -73,7 +88,7 @@ sc.exe start OpenLibSys.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/openlibsys.sys.yml)
 
-*last_updated:* 2023-03-07
+*last_updated:* 2023-03-10
 
 
 {{< /column >}}
