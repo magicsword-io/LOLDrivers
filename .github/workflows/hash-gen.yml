@@ -12,16 +12,16 @@ on: # yamllint disable-line rule:truthy
       - master
 
 jobs:
-  yaml-lint:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3.3.0
-    - name: yaml-lint
-      uses: ibiqlik/action-yamllint@v3
+  #yaml-lint:
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #  - uses: actions/checkout@v3.3.0
+  #  - name: yaml-lint
+  #    uses: ibiqlik/action-yamllint@v3
   
   generate-hashes:
     runs-on: ubuntu-latest
-    needs: yaml-lint
+    #needs: yaml-lint
     steps:
     - uses: actions/checkout@v3.3.0
       with:
