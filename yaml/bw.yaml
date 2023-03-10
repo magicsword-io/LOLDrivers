@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'FALSE'
 Commands:
   Command: 'sc.exe create bw.sys binPath=C:\windows\temp\bw.sys type=kernel
 
@@ -23,9 +24,7 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 0EBAEF662B14410C198395B13347E1D175334EC67919709AD37D65EBA013ADFF
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: ''

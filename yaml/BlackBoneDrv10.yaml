@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'FALSE'
 Commands:
   Command: 'sc.exe create BlackBoneDrv10.sys binPath=C:\windows\temp\BlackBoneDrv10.sys
     type=kernel
@@ -24,9 +25,7 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: f51bdb0ad924178131c21e39a8ccd191e46b5512b0f2e1cc8486f63e84e5d960
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: ''

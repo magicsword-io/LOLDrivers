@@ -11,23 +11,12 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-
-
-# NCHGBIOS2x64.SYS 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
-
-
+# NCHGBIOS2x64.SYS ![:inline](/images/twitter_verified.png) 
 
 
 ### Description
 
-
 NCHGBIOS2x64.SYS is a vulnerable driver and more information will be added as found.
-
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -35,54 +24,49 @@ NCHGBIOS2x64.SYS is a vulnerable driver and more information will be added as fo
 
 ### Commands
 
-| Use Case | Privilages | Operating System | 
-|:---- | ---- | ---- |
-| Elevate privileges | kernel | Windows 10 |
-
 ```
 sc.exe create NCHGBIOS2x64.SYS binPath=C:\windows\temp\NCHGBIOS2x64.SYS type=kernel
 sc.exe start NCHGBIOS2x64.SYS
 ```
 
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
+
 ### Resources
 <br>
-
-
 <li><a href=" https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md"> https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md</a></li>
-
-
 <br>
 
+### Known Vulnerable Samples
 
-##### Known Vulnerable Samples
+| Filename | NCHGBIOS2x64.SYS |
+|:---- | ---- | 
+| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073">314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073</a> |
+| Publisher |  |
+| Signature |  |
+| Date |  |
+| Company |  |
+| Description |  |
+| Product |  |
+| ProductVersion |  |
+| FileVersion |  |
+| MachineType |  |
+| SOriginalFilename |  |
 
-| Filename: NCHGBIOS2x64.SYS |
-|:---- |
-|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;NCHGBIOS2x64.SYS&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073&#39;}"></a>|
-|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;NCHGBIOS2x64.SYS&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073&#39;}"></a>|
-|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;NCHGBIOS2x64.SYS&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073&#39;}">314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073</a>|
 
-
-
-
-### Binary Metadata
-<br>
-
-- binary: 
-- Verified: 
-- Date: 
-- Publisher: 
-- Company: 
-- Description: 
-- Product: 
-- ProductVersion: 
-- FileVersion: 
-- MachineType: 
-- OriginalFilename: 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nchgbios2x64.sys.yml)
 
 *last_updated:* 2023-03-10
+
+
+
+
+
+
 
 
 {{< /column >}}

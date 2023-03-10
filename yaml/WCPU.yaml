@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create WCPU.sys binPath=C:\windows\temp\WCPU.sys type=kernel
 
@@ -23,9 +24,7 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 159E7C5A12157AF92E0D14A0D3EA116F91C09E21A9831486E6DC592C93C10980
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: ''

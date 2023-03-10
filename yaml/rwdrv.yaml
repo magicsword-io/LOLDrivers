@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create rwdrv.sys binPath=C:\windows\temp\rwdrv.sys type=kernel
 
@@ -34,9 +35,7 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: ''

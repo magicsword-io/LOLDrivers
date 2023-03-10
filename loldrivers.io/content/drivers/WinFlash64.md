@@ -11,23 +11,12 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-
-
-# WinFlash64.sys 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
-
-
+# WinFlash64.sys ![:inline](/images/twitter_verified.png) 
 
 
 ### Description
 
-
 WinFlash64.sys is a vulnerable driver and more information will be added as found.
-
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -35,54 +24,49 @@ WinFlash64.sys is a vulnerable driver and more information will be added as foun
 
 ### Commands
 
-| Use Case | Privilages | Operating System | 
-|:---- | ---- | ---- |
-| Elevate privileges | kernel | Windows 10 |
-
 ```
 sc.exe create WinFlash64.sys binPath=C:\windows\temp\WinFlash64.sys type=kernel
 sc.exe start WinFlash64.sys
 ```
 
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
+
 ### Resources
 <br>
-
-
 <li><a href=" https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md"> https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md</a></li>
-
-
 <br>
 
+### Known Vulnerable Samples
 
-##### Known Vulnerable Samples
+| Filename | WinFlash64.sys |
+|:---- | ---- | 
+| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/677c0b1add3990fad51f492553d3533115c50a242a919437ccb145943011d2bf">677c0b1add3990fad51f492553d3533115c50a242a919437ccb145943011d2bf</a> |
+| Publisher |  |
+| Signature |  |
+| Date |  |
+| Company |  |
+| Description |  |
+| Product |  |
+| ProductVersion |  |
+| FileVersion |  |
+| MachineType |  |
+| SOriginalFilename |  |
 
-| Filename: WinFlash64.sys |
-|:---- |
-|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinFlash64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;677c0b1add3990fad51f492553d3533115c50a242a919437ccb145943011d2bf&#39;}"></a>|
-|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinFlash64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;677c0b1add3990fad51f492553d3533115c50a242a919437ccb145943011d2bf&#39;}"></a>|
-|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;WinFlash64.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;677c0b1add3990fad51f492553d3533115c50a242a919437ccb145943011d2bf&#39;}">677c0b1add3990fad51f492553d3533115c50a242a919437ccb145943011d2bf</a>|
 
-
-
-
-### Binary Metadata
-<br>
-
-- binary: 
-- Verified: 
-- Date: 
-- Publisher: 
-- Company: 
-- Description: 
-- Product: 
-- ProductVersion: 
-- FileVersion: 
-- MachineType: 
-- OriginalFilename: 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winflash64.sys.yml)
 
 *last_updated:* 2023-03-10
+
+
+
+
+
+
 
 
 {{< /column >}}

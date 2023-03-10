@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create iqvw64e.sys binPath=C:\windows\temp\iqvw64e.sys type=kernel
 
@@ -31,9 +32,7 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: Intel

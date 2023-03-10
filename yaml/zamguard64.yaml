@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create zamguard64.sys binPath=C:\windows\temp\zamguard64.sys type=kernel
 
@@ -23,9 +24,7 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 543991ca8d1c65113dff039b85ae3f9a87f503daec30f46929fd454bc57e5a91
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: ''

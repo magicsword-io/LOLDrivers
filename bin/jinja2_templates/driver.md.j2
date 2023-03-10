@@ -12,7 +12,7 @@ weight = 10
 {% endraw %}
 
 
-{% if driver.Metadata.driver_verified == 'TRUE' %}
+{% if driver.Verified == 'TRUE' %}
 # {{ driver.Name }} ![:inline](/images/twitter_verified.png) 
 
 {% else %}
@@ -40,13 +40,13 @@ We were not able to verify the hash of this driver successfully, it has not been
 
 ### Commands
 
-| Use Case | Privilages | Operating System | 
-|:---- | ---- | ---- |
-| {{ driver.Commands.Usecase }} | {{ driver.Commands.Privileges }} | {{ driver.Commands.OperatingSystem }} |
-
 ```
 {{ driver.Commands.Command }}
 ```
+
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| {{ driver.Commands.Usecase }} | {{ driver.Commands.Privileges }} | {{ driver.Commands.OperatingSystem }} |
 
 ### Resources
 <br>
@@ -59,34 +59,36 @@ We were not able to verify the hash of this driver successfully, it has not been
 
 {% if driver.KnownVulnerableSamples %}
 ### Known Vulnerable Samples
+
 {% for hash in driver.KnownVulnerableSamples %}
-| Filename: {{ hash.Filename }} |
-|:---- |
-|MD5: <a href="https://www.virustotal.com/gui/file/{{hash}}">{{hash.MD5}}</a>|
-|SHA1: <a href="https://www.virustotal.com/gui/file/{{hash}}">{{hash.SHA1}}</a>|
-|SHA256: <a href="https://www.virustotal.com/gui/file/{{hash}}">{{hash.SHA256}}</a>|
-{% endfor %}
+| Filename | {{ hash.Filename }} |
+|:---- | ---- | 
+| MD5 | <a href="https://www.virustotal.com/gui/file/{{hash.MD5}}">{{ hash.MD5 }}</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/{{hash.SHA1}}">{{hash.SHA1}}</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/{{hash.SHA256}}">{{hash.SHA256}}</a> |
+| Publisher | {{ hash.Publisher }} |
+| Signature | {{ hash.Signature }} |
+| Date | {{ hash.Date }} |
+| Company | {{ hash.Company }} |
+| Description | {{ hash.Description }} |
+| Product | {{ hash.Product }} |
+| ProductVersion | {{ hash.Productversion }} |
+| FileVersion | {{ hash.Fileversion }} |
+| MachineType | {{ hash.Machinetype }} |
+| SOriginalFilename | {{ hash.OriginalFilename }} |
+{% endfor +%}
 {% endif %}
 
-
-### Binary Metadata
-<br>
-
-- binary: {{ driver.Metadata.Binary }}
-- Verified: {{ driver.Metadata.Verified }}
-- Date: {{ driver.Metadata.Date }}
-- Publisher: {{ driver.Metadata.Publisher }}
-- Company: {{ driver.Metadata.Company }}
-- Description: {{ driver.Metadata.Description }}
-- Product: {{ driver.Metadata.Product }}
-- ProductVersion: {{ driver.Metadata.Productversion }}
-- FileVersion: {{ driver.Metadata.Fileversion }}
-- MachineType: {{ driver.Metadata.Machinetype }}
-- OriginalFilename: {{ driver.Metadata.OriginalFilename }}
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml{{driver.kind}}/{{ driver.Name | lower | replace (" ", "_") }}.yml)
 
 *last_updated:* {{ time }}
+
+
+
+
+
+
 
 {% raw %}
 {{< /column >}}

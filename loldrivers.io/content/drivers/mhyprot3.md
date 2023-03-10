@@ -11,8 +11,6 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-
-
 # mhyprot3.sys 
 
 
@@ -21,13 +19,9 @@ We were not able to verify the hash of this driver successfully, it has not been
 {{< /tip >}}
 
 
-
-
 ### Description
 
-
 mhyprot3.sys is a vulnerable driver and more information will be added as found.
-
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -35,54 +29,49 @@ mhyprot3.sys is a vulnerable driver and more information will be added as found.
 
 ### Commands
 
-| Use Case | Privilages | Operating System | 
-|:---- | ---- | ---- |
-| Elevate privileges | kernel | Windows 10 |
-
 ```
 sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel
 sc.exe start mhyprot3.sys
 ```
 
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
+
 ### Resources
 <br>
-
-
 <li><a href=" https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules"> https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules</a></li>
-
-
 <br>
 
+### Known Vulnerable Samples
 
-##### Known Vulnerable Samples
+| Filename | mhyprot3.sys |
+|:---- | ---- | 
+| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/475E5016C9C0F5A127896F9179A1B1577A67B357F399AB5A1E68AAB07134729A">475E5016C9C0F5A127896F9179A1B1577A67B357F399AB5A1E68AAB07134729A</a> |
+| Publisher |  |
+| Signature |  |
+| Date |  |
+| Company |  |
+| Description |  |
+| Product |  |
+| ProductVersion |  |
+| FileVersion |  |
+| MachineType |  |
+| SOriginalFilename |  |
 
-| Filename: mhyprot3.sys |
-|:---- |
-|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;mhyprot3.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;475E5016C9C0F5A127896F9179A1B1577A67B357F399AB5A1E68AAB07134729A&#39;}"></a>|
-|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;mhyprot3.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;475E5016C9C0F5A127896F9179A1B1577A67B357F399AB5A1E68AAB07134729A&#39;}"></a>|
-|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;mhyprot3.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;475E5016C9C0F5A127896F9179A1B1577A67B357F399AB5A1E68AAB07134729A&#39;}">475E5016C9C0F5A127896F9179A1B1577A67B357F399AB5A1E68AAB07134729A</a>|
 
-
-
-
-### Binary Metadata
-<br>
-
-- binary: 
-- Verified: 
-- Date: 
-- Publisher: 
-- Company: 
-- Description: 
-- Product: 
-- ProductVersion: 
-- FileVersion: 
-- MachineType: 
-- OriginalFilename: 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mhyprot3.sys.yml)
 
 *last_updated:* 2023-03-10
+
+
+
+
+
+
 
 
 {{< /column >}}

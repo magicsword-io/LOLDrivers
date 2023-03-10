@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create winio64.sys binPath=C:\windows\temp\winio64.sys type=kernel
 
@@ -23,13 +24,21 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: e1980c6592e6d2d92c1a65acad8f1071b6a404097bb6fcce494f3c8ac31385cf
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
 - Filename: winio64.sys
   MD5: ''
   SHA1: ''
   SHA256: 9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: ''

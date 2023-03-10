@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create dbutil_2_3.sys binPath=C:\windows\temp\dbutil_2_3.sys type=kernel
 
@@ -23,13 +24,21 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 0296E2CE999E67C76352613A718E11516FE1B0EFC3FFDB8918FC999DD76A73A5
+  Signature: ''
+  Date: ''
+  Publisher: Dell Inc.
+  Company: ''
+  Description: dianhu
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
 - Filename: dbutil_2_3.sys
   MD5: ''
   SHA1: ''
   SHA256: c948ae14761095e4d76b55d9de86412258be7afd
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: Dell Inc.
   Company: ''

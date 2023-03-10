@@ -11,8 +11,6 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-
-
 # b.sys 
 
 
@@ -21,13 +19,9 @@ We were not able to verify the hash of this driver successfully, it has not been
 {{< /tip >}}
 
 
-
-
 ### Description
 
-
 b.sys is a vulnerable driver and more information will be added as found.
-
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -35,54 +29,49 @@ b.sys is a vulnerable driver and more information will be added as found.
 
 ### Commands
 
-| Use Case | Privilages | Operating System | 
-|:---- | ---- | ---- |
-| Elevate privileges | kernel | Windows 10 |
-
 ```
 sc.exe create b.sys binPath=C:\windows\temp\b.sys type=kernel
 sc.exe start b.sys
 ```
 
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
+
 ### Resources
 <br>
-
-
 <li><a href=" https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules"> https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules</a></li>
-
-
 <br>
 
+### Known Vulnerable Samples
 
-##### Known Vulnerable Samples
+| Filename | b.sys |
+|:---- | ---- | 
+| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/84DF20B1D9D87E305C92E5FFAE21B10B325609D59D835A954DBD8750EF5DABF4">84DF20B1D9D87E305C92E5FFAE21B10B325609D59D835A954DBD8750EF5DABF4</a> |
+| Publisher |  |
+| Signature |  |
+| Date |  |
+| Company |  |
+| Description |  |
+| Product |  |
+| ProductVersion |  |
+| FileVersion |  |
+| MachineType |  |
+| SOriginalFilename |  |
 
-| Filename: b.sys |
-|:---- |
-|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;b.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;84DF20B1D9D87E305C92E5FFAE21B10B325609D59D835A954DBD8750EF5DABF4&#39;}"></a>|
-|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;b.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;84DF20B1D9D87E305C92E5FFAE21B10B325609D59D835A954DBD8750EF5DABF4&#39;}"></a>|
-|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;b.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;84DF20B1D9D87E305C92E5FFAE21B10B325609D59D835A954DBD8750EF5DABF4&#39;}">84DF20B1D9D87E305C92E5FFAE21B10B325609D59D835A954DBD8750EF5DABF4</a>|
 
-
-
-
-### Binary Metadata
-<br>
-
-- binary: 
-- Verified: 
-- Date: 
-- Publisher: 
-- Company: 
-- Description: 
-- Product: 
-- ProductVersion: 
-- FileVersion: 
-- MachineType: 
-- OriginalFilename: 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/b.sys.yml)
 
 *last_updated:* 2023-03-10
+
+
+
+
+
+
 
 
 {{< /column >}}

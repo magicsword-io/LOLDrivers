@@ -11,23 +11,12 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-
-
-# AsrDrv102.sys 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
-
-
+# AsrDrv102.sys ![:inline](/images/twitter_verified.png) 
 
 
 ### Description
 
-
 AsrDrv102.sys is a vulnerable driver and more information will be added as found.
-
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -35,54 +24,49 @@ AsrDrv102.sys is a vulnerable driver and more information will be added as found
 
 ### Commands
 
-| Use Case | Privilages | Operating System | 
-|:---- | ---- | ---- |
-| Elevate privileges | kernel | Windows 10 |
-
 ```
 sc.exe create AsrDrv102.sys binPath=C:\windows\temp\AsrDrv102.sys type=kernel
 sc.exe start AsrDrv102.sys
 ```
 
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
+
 ### Resources
 <br>
-
-
 <li><a href=" https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md"> https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md</a></li>
-
-
 <br>
 
+### Known Vulnerable Samples
 
-##### Known Vulnerable Samples
+| Filename | AsrDrv102.sys |
+|:---- | ---- | 
+| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/a7c2e7910942dd5e43e2f4eb159bcd2b4e71366e34a68109548b9fb12ac0f7cc">a7c2e7910942dd5e43e2f4eb159bcd2b4e71366e34a68109548b9fb12ac0f7cc</a> |
+| Publisher |  |
+| Signature |  |
+| Date |  |
+| Company |  |
+| Description |  |
+| Product |  |
+| ProductVersion |  |
+| FileVersion |  |
+| MachineType |  |
+| SOriginalFilename |  |
 
-| Filename: AsrDrv102.sys |
-|:---- |
-|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;AsrDrv102.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;a7c2e7910942dd5e43e2f4eb159bcd2b4e71366e34a68109548b9fb12ac0f7cc&#39;}"></a>|
-|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;AsrDrv102.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;a7c2e7910942dd5e43e2f4eb159bcd2b4e71366e34a68109548b9fb12ac0f7cc&#39;}"></a>|
-|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;AsrDrv102.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;a7c2e7910942dd5e43e2f4eb159bcd2b4e71366e34a68109548b9fb12ac0f7cc&#39;}">a7c2e7910942dd5e43e2f4eb159bcd2b4e71366e34a68109548b9fb12ac0f7cc</a>|
 
-
-
-
-### Binary Metadata
-<br>
-
-- binary: 
-- Verified: 
-- Date: 
-- Publisher: 
-- Company: 
-- Description: 
-- Product: 
-- ProductVersion: 
-- FileVersion: 
-- MachineType: 
-- OriginalFilename: 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv102.sys.yml)
 
 *last_updated:* 2023-03-10
+
+
+
+
+
+
 
 
 {{< /column >}}

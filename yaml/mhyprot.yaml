@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create mhyprot.sys binPath=C:\windows\temp\mhyprot.sys type=kernel
 
@@ -25,9 +26,7 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 509628b6d16d2428031311d7bd2add8d5f5160e9ecc0cd909f1e82bbbb3234d6
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: ''

@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create nscm.sys binPath=C:\windows\temp\nscm.sys type=kernel
 
@@ -24,9 +25,7 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: ''

@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create inpoutx64.sys binPath=C:\windows\temp\inpoutx64.sys type=kernel
 
@@ -23,17 +24,35 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 2D83CCB1AD9839C9F5B3F10B1F856177DF1594C66CBBC7661677D4B462EBF44D
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
 - Filename: inpoutx64.sys
   MD5: ''
   SHA1: ''
   SHA256: F581DECC2888EF27EE1EA85EA23BBB5FB2FE6A554266FF5A1476ACD1D29D53AF
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
 - Filename: inpoutx64.sys
   MD5: ''
   SHA1: ''
   SHA256: F8965FDCE668692C3785AFA3559159F9A18287BC0D53ABB21902895A8ECF221B
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: ''

@@ -34,7 +34,7 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
         drivers.append(object)
 
     # write markdowns
-    j2_env = jinja2.Environment(loader=jinja2.FileSystemLoader(TEMPLATE_PATH), trim_blocks=False, autoescape=True, lstrip_blocks=True)
+    j2_env = jinja2.Environment(loader=jinja2.FileSystemLoader(TEMPLATE_PATH), trim_blocks=True, autoescape=True, lstrip_blocks=False)
     d = datetime.datetime.now()
     template = j2_env.get_template('driver.md.j2')
     for driver in drivers:
@@ -51,7 +51,7 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
 
         # header
         writer.writerow(['Name','Author','Created','Command','Description','Usecase','Category','Privileges','MitreID','OperatingSystem','Resources','Driver Description','Person' \
-                         ,'Handle','Detection','KnownHashes','Binary','Verified','Date','Publisher','Company','Description','Product','Product Version','File Version','Machine Type','Original Filename'])
+                         ,'Handle','Detection','KnownVulnerableSamples_SHA256'])
 
         # write rows
 
@@ -64,9 +64,7 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
             link = '[' + driver['Name'] + '](drivers/' + os.path.splitext(driver["Name"])[0].lower() + '/)'
             writer.writerow([link, driver['Author'], driver['Created'], driver['Commands']['Command'], driver['Commands']['Description'], driver['Commands']['Usecase'], driver['Category'], \
                              driver['Commands']['Privileges'],driver['MitreID'],driver['Commands']['OperatingSystem'],driver['Resources'],driver['driver_description'],driver['Acknowledgement']['Person'] \
-                             ,driver['Acknowledgement']['Handle'],driver['Detection'],hashes,driver['Metadata']['binary'],driver['Metadata']['Verified'],driver['Metadata']['Date'], \
-                                driver['Metadata']['Publisher'],driver['Metadata']['Company'],driver['Metadata']['Description'],driver['Metadata']['Product'],driver['Metadata']['ProductVersion'], \
-                                    driver['Metadata']['FileVersion'],driver['Metadata']['MachineType'],driver['Metadata']['OriginalFilename']])
+                             ,driver['Acknowledgement']['Handle'],driver['Detection'],hashes])
 
 
     # write api json
@@ -88,25 +86,27 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
     all_publishers = []
     # counted_publishers = []
     for driver in drivers:
-        if driver['Metadata']['Publisher']:
-            p = dict()
-            p['name'] = driver['Name']
-            p['publisher'] = driver['Metadata']['Publisher']
-            all_publishers.append(p)
+        for hash in driver['KnownVulnerableSamples']:
+            if hash['Publisher']:
+                p = dict()
+                p['name'] = driver['Name']
+                p['publisher'] = hash['Publisher']
+                all_publishers.append(p)
 
 
     for driver in drivers:
-        if driver['Metadata']['Publisher']:
-            if driver['Metadata']['Publisher'] in publishers:
+        for hash in driver['KnownVulnerableSamples']:
+            if hash['Publisher'] in publishers:
                 pass
             else:
-                publishers.append(driver['Metadata']['Publisher'])
+                publishers.append(hash['Publisher'])
 
     for p in publishers:
         count = 0
         for driver in drivers:
-            if p == driver['Metadata']['Publisher']:
-                count += 1
+            for hash in driver['KnownVulnerableSamples']:
+                if p == hash['Publisher']:
+                    count += 1
         publisher = dict()
         publisher['name'] = p
         publisher['count'] = count

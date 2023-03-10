@@ -11,23 +11,12 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-
-
-# HwRwDrv.sys 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
-
-
+# HwRwDrv.sys ![:inline](/images/twitter_verified.png) 
 
 
 ### Description
 
-
 HwRwDrv.sys is a vulnerable driver and more information will be added as found.
-
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -35,54 +24,49 @@ HwRwDrv.sys is a vulnerable driver and more information will be added as found.
 
 ### Commands
 
-| Use Case | Privilages | Operating System | 
-|:---- | ---- | ---- |
-| Elevate privileges | kernel | Windows 10 |
-
 ```
 sc.exe create HwRwDrv.sys binPath=C:\windows\temp\HwRwDrv.sys type=kernel
 sc.exe start HwRwDrv.sys
 ```
 
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
+
 ### Resources
 <br>
-
-
 <li><a href=" https://github.com/namazso/physmem_drivers"> https://github.com/namazso/physmem_drivers</a></li>
-
-
 <br>
 
+### Known Vulnerable Samples
 
-##### Known Vulnerable Samples
+| Filename | HwRwDrv.sys |
+|:---- | ---- | 
+| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/21CCDD306B5183C00ECFD0475B3152E7D94B921E858E59B68A03E925D1715F21">21CCDD306B5183C00ECFD0475B3152E7D94B921E858E59B68A03E925D1715F21</a> |
+| Publisher | Shuttle Inc. |
+| Signature |  |
+| Date |  |
+| Company |  |
+| Description | Hardware read &amp; write driver |
+| Product |  |
+| ProductVersion |  |
+| FileVersion |  |
+| MachineType |  |
+| SOriginalFilename |  |
 
-| Filename: HwRwDrv.sys |
-|:---- |
-|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;HwRwDrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;21CCDD306B5183C00ECFD0475B3152E7D94B921E858E59B68A03E925D1715F21&#39;}"></a>|
-|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;HwRwDrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;21CCDD306B5183C00ECFD0475B3152E7D94B921E858E59B68A03E925D1715F21&#39;}"></a>|
-|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;HwRwDrv.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;21CCDD306B5183C00ECFD0475B3152E7D94B921E858E59B68A03E925D1715F21&#39;}">21CCDD306B5183C00ECFD0475B3152E7D94B921E858E59B68A03E925D1715F21</a>|
 
-
-
-
-### Binary Metadata
-<br>
-
-- binary: 
-- Verified: 
-- Date: 
-- Publisher: Shuttle Inc.
-- Company: 
-- Description: Hardware read &amp; write driver
-- Product: 
-- ProductVersion: 
-- FileVersion: 
-- MachineType: 
-- OriginalFilename: 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hwrwdrv.sys.yml)
 
 *last_updated:* 2023-03-10
+
+
+
+
+
+
 
 
 {{< /column >}}

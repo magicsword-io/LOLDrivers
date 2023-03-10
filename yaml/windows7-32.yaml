@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'FALSE'
 Commands:
   Command: 'sc.exe create windows7-32.sys binPath=C:\windows\temp\windows7-32.sys
     type=kernel
@@ -24,9 +25,7 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 4941C4298F4560FC1E59D0F16F84BAB5C060793700B82BE2FD7C63735F1657A8
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: ''

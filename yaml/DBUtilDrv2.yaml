@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create DBUtilDrv2.sys binPath=C:\windows\temp\DBUtilDrv2.sys type=kernel
 
@@ -24,13 +25,21 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 90a76945fd2fa45fab2b7bcfdaf6563595f94891
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
 - Filename: DBUtilDrv2.sys
   MD5: ''
   SHA1: ''
   SHA256: b03b1996a40bfea72e4584b82f6b845c503a9748
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: ''

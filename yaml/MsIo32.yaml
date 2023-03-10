@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create MsIo32.sys binPath=C:\windows\temp\MsIo32.sys type=kernel
 
@@ -28,9 +29,7 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 525d9b51a80ca0cd4c5889a96f857e73f3a80da1ffbae59851e0f51bdfb0b6cd
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: ''

@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel
 
@@ -29,13 +30,23 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd
+  Signature: N/A
+  Date: N/A
+  Publisher: N/A
+  Company: N/A
+  Description: N/A
+  Product: N/A
+  ProductVersion: N/A
+  FileVersion: N/A
+  MachineType: 'x64
+
+    x32'
+  OriginalFilename: ''
 - Filename: RTCore64.sys
   MD5: ''
   SHA1: ''
   SHA256: CDD2A4575A46BADA4837A6153A79C14D60EE3129830717EF09E0E3EFD9D00812
-Metadata:
-  binary: ''
-  Verified: N/A
+  Signature: N/A
   Date: N/A
   Publisher: N/A
   Company: N/A

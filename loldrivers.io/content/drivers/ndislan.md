@@ -11,23 +11,12 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-
-
-# ndislan.sys 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
-
-
+# ndislan.sys ![:inline](/images/twitter_verified.png) 
 
 
 ### Description
 
-
 Driver used in the Daxin malware campaign.
-
 
 - **Created**: 2023-02-28
 - **Author**: Michael Haag
@@ -35,56 +24,50 @@ Driver used in the Daxin malware campaign.
 
 ### Commands
 
-| Use Case | Privilages | Operating System | 
-|:---- | ---- | ---- |
-| Elevate privileges | kernel | Windows 10 |
-
 ```
 sc.exe create ndislan.sys binPath=C:\windows\temp\ndislan.sys type=kernel
 sc.exe start ndislan.sys
 ```
 
+| Use Case | Privilages | Operating System | 
+|:---- | ---- | ---- |
+| Elevate privileges | kernel | Windows 10 |
+
 ### Resources
 <br>
-
-
 <li><a href="https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48">https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48</a></li>
-
 <li><a href="https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage">https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage</a></li>
-
-
 <br>
 
+### Known Vulnerable Samples
 
-##### Known Vulnerable Samples
+| Filename | ndislan.sys |
+|:---- | ---- | 
+| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/b0eb4d999e4e0e7c2e33ff081e847c87b49940eb24a9e0794c6aa9516832c427">b0eb4d999e4e0e7c2e33ff081e847c87b49940eb24a9e0794c6aa9516832c427</a> |
+| Publisher | Anhua Xinda (Beijing) Technology Co., Ltd. |
+| Signature | A required certificate is not within its validity period when verifying against the current system clock or the timestamp in the signed file. |
+| Date | 4:49 PM 10/12/2012 |
+| Company | Microsoft Corporation |
+| Description | MS LAN Driver |
+| Product | Microsoft« Windows« Operating System |
+| ProductVersion |  |
+| FileVersion |  |
+| MachineType |  |
+| SOriginalFilename |  |
 
-| Filename: ndislan.sys |
-|:---- |
-|MD5: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ndislan.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;b0eb4d999e4e0e7c2e33ff081e847c87b49940eb24a9e0794c6aa9516832c427&#39;}"></a>|
-|SHA1: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ndislan.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;b0eb4d999e4e0e7c2e33ff081e847c87b49940eb24a9e0794c6aa9516832c427&#39;}"></a>|
-|SHA256: <a href="https://www.virustotal.com/gui/file/{&#39;Filename&#39;: &#39;ndislan.sys&#39;, &#39;MD5&#39;: &#39;&#39;, &#39;SHA1&#39;: &#39;&#39;, &#39;SHA256&#39;: &#39;b0eb4d999e4e0e7c2e33ff081e847c87b49940eb24a9e0794c6aa9516832c427&#39;}">b0eb4d999e4e0e7c2e33ff081e847c87b49940eb24a9e0794c6aa9516832c427</a>|
 
-
-
-
-### Binary Metadata
-<br>
-
-- binary: 
-- Verified: A required certificate is not within its validity period when verifying against the current system clock or the timestamp in the signed file.
-- Date: 4:49 PM 10/12/2012
-- Publisher: Anhua Xinda (Beijing) Technology Co., Ltd.
-- Company: Microsoft Corporation
-- Description: MS LAN Driver
-- Product: Microsoft« Windows« Operating System
-- ProductVersion: 
-- FileVersion: 
-- MachineType: 
-- OriginalFilename: 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ndislan.sys.yml)
 
 *last_updated:* 2023-03-10
+
+
+
+
+
+
 
 
 {{< /column >}}

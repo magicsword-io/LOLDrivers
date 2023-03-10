@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'FALSE'
 Commands:
   Command: 'sc.exe create fiddrv.sys binPath=C:\windows\temp\fiddrv.sys type=kernel
 
@@ -23,13 +24,21 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 8CC8974A05E81678E3D28ACFE434E7804ABD019C
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
 - Filename: fiddrv.sys
   MD5: ''
   SHA1: ''
   SHA256: 282BB241BDA5C4C1B8EB9BF56D018896649CA0E1
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: ''

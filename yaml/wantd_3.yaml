@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-02-28'
 MitreID: T1068
 Category: malicious
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create wantd_3.sys binPath=C:\windows\temp\wantd_3.sys type=kernel
 
@@ -24,9 +25,7 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1
-Metadata:
-  binary: ''
-  Verified: Unsigned
+  Signature: Unsigned
   Date: 7:52 AM 4/30/2014
   Publisher: n/a
   Company: Microsoft Corporation

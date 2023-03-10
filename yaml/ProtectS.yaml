@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'FALSE'
 Commands:
   Command: 'sc.exe create ProtectS.sys binPath=C:\windows\temp\ProtectS.sys type=kernel
 
@@ -23,13 +24,21 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 9D58F640C7295952B71BDCB456CAE37213BACCDCD3032C1E3AEB54E79081F395
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
 - Filename: ProtectS.sys
   MD5: ''
   SHA1: ''
   SHA256: 4A9093E8DBCB867E1B97A0A67CE99A8511900658F5201C34FFB8035881F2DBBE
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: ''

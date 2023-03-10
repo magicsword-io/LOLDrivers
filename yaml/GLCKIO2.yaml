@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create GLCKIO2.sys binPath=C:\windows\temp\GLCKIO2.sys type=kernel
 
@@ -23,13 +24,21 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 3A5EC83FE670E5E23AEF3AFA0A7241053F5B6BE5E6CA01766D6B5F9177183C25
+  Signature: ''
+  Date: ''
+  Publisher: ASUSTeK Computer Inc.
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
 - Filename: GLCKIO2.sys
   MD5: ''
   SHA1: ''
   SHA256: 61A1BDDDD3C512E681818DEBB5BEE94DB701768FC25E674FCAD46592A3259BD0
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ASUSTeK Computer Inc.
   Company: ''

@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'FALSE'
 Commands:
   Command: 'sc.exe create 81.sys binPath=C:\windows\temp\81.sys type=kernel
 
@@ -23,17 +24,35 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: FAA870B0CB15C9AC2B9BBA5D0470BD501CCD4326
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
 - Filename: 81.sys
   MD5: ''
   SHA1: ''
   SHA256: ACA8E53483B40A06DFDEE81BB364B1622F9156FE
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
 - Filename: 81.sys
   MD5: ''
   SHA1: ''
   SHA256: 05AC1C64CA16AB0517FE85D4499D08199E63DF26
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: ''

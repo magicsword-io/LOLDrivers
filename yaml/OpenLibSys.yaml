@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create OpenLibSys.sys binPath=C:\windows\temp\OpenLibSys.sys type=kernel
 
@@ -23,13 +24,21 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 91314768DA140999E682D2A290D48B78BB25A35525EA12C1B1F9634D14602B2C
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
 - Filename: OpenLibSys.sys
   MD5: ''
   SHA1: ''
   SHA256: F0605DDA1DEF240DC7E14EFA73927D6C6D89988C01EA8647B671667B2B167008
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: ''

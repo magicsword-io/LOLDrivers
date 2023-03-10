@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-02-28'
 MitreID: T1068
 Category: malicious
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create daxin_blank.sys binPath=C:\windows\temp\daxin_blank.sys
     type=kernel
@@ -25,9 +26,7 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 49c827cf48efb122a9d6fd87b426482b7496ccd4a2dbca31ebbf6b2b80c98530
-Metadata:
-  binary: ''
-  Verified: Signed
+  Signature: Signed
   Date: 7:07 AM 1/23/2013
   Publisher: Anhua Xinda (Beijing) Technology Co., Ltd.
   Company: n/a

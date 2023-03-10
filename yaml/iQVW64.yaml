@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create iQVW64.SYS binPath=C:\windows\temp\iQVW64.SYS type=kernel
 
@@ -27,15 +28,3 @@ Acknowledgement:
   Handle: ''
 Detection: []
 KnownVulnerableSamples: []
-Metadata:
-  binary: ''
-  Verified: ''
-  Date: ''
-  Publisher: ''
-  Company: Intel
-  Description: Intel(R) Network Adapter Diagnostic Driver
-  Product: Intel(R) iQVW64.SYS
-  ProductVersion: ''
-  FileVersion: '1.03.0.7 built by: WinDDK'
-  MachineType: x64
-  OriginalFilename: iQVW64.SYS

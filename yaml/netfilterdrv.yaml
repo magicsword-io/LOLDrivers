@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'FALSE'
 Commands:
   Command: 'sc.exe create netfilterdrv.sys binPath=C:\windows\temp\netfilterdrv.sys
     type=kernel
@@ -24,13 +25,21 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: E74B6DDA8BC53BC687FC21218BD34062A78D8467
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
 - Filename: netfilterdrv.sys
   MD5: ''
   SHA1: ''
   SHA256: 2C27ABBBBCF10DFB75AD79557E30ACE5ED314DF8
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: ''

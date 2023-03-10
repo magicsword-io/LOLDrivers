@@ -25,6 +25,7 @@ def generate_yml_files(csv_file_path, output_folder):
             yaml_data["Created"] = row[2]
             yaml_data["MitreID"] = row[9]
             yaml_data["Category"] = row[7]
+            yaml_data["Verified"] = row[30]
             commands_data = dict()
             commands_data["Command"] = row[4]
             if commands_data["Command"] == '':
@@ -67,22 +68,18 @@ def generate_yml_files(csv_file_path, output_folder):
                     hash['MD5'] = ''
                     hash['SHA1'] = ''
                     hash['SHA256'] = KnownHashes[5:]
+                    hash["Signature"] = row[20]
+                    hash["Date"] = row[21]
+                    hash["Publisher"] = row[22]
+                    hash["Company"] = row[23]
+                    hash["Description"] = row[24]
+                    hash["Product"] = row[25]
+                    hash["ProductVersion"] = row[26]
+                    hash["FileVersion"] = row[27]
+                    hash["MachineType"] = row[28]
+                    hash["OriginalFilename"] = row[29]
                     KnownHashes_data.append(hash)
             yaml_data["KnownVulnerableSamples"] = KnownHashes_data
-
-            metadata = dict()
-            metadata["binary"] = row[19]
-            metadata["Verified"] = row[20]
-            metadata["Date"] = row[21]
-            metadata["Publisher"] = row[22]
-            metadata["Company"] = row[23]
-            metadata["Description"] = row[24]
-            metadata["Product"] = row[25]
-            metadata["ProductVersion"] = row[26]
-            metadata["FileVersion"] = row[27]
-            metadata["MachineType"] = row[28]
-            metadata["OriginalFilename"] = row[29]
-            yaml_data["Metadata"] = metadata
 
             file_name = os.path.splitext(yaml_data["Name"])[0] + '.yaml'
             writeYmlFile(os.path.join('yaml/' + output_folder, file_name), yaml_data)               

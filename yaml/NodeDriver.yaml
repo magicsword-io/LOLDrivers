@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-03-02'
 MitreID: T1068
 Category: malicious
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create NodeDriver.sys binPath=C:\windows\temp\NodeDriver.sys type=kernel
 
@@ -23,9 +24,7 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: ee6b1a79cb6641aa44c762ee90786fe0
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: ''

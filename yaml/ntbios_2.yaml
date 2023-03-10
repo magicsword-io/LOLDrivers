@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-02-28'
 MitreID: T1068
 Category: malicious
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create ntbios_2.sys binPath=C:\windows\temp\ntbios_2.sys type=kernel
 
@@ -24,9 +25,7 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: c0d88db11d0f529754d290ed5f4c34b4dba8c4f2e5c4148866daabeab0d25f9c
-Metadata:
-  binary: ''
-  Verified: Unsigned
+  Signature: Unsigned
   Date: 3:04 AM 5/18/2009
   Publisher: n/a
   Company: Microsoft Corporation

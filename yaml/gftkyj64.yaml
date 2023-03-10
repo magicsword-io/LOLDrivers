@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-03-04'
 MitreID: T1068
 Category: malicious
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create gftkyj64.sys binPath=C:\windows\temp\gftkyj64.sys type=kernel
 
@@ -33,9 +34,7 @@ KnownVulnerableSamples:
   SHA256: '9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c
 
     '
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ''
   Company: ''

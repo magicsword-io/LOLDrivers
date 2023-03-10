@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create BS_Def64.sys binPath=C:\windows\temp\BS_Def64.sys type=kernel
 
@@ -23,17 +24,35 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 0040153302B88BEE27EB4F1ECA6855039E1A057370F5E8C615724FA5215BADA3
+  Signature: ''
+  Date: ''
+  Publisher: ASUSTeK Computer Inc.
+  Company: ''
+  Description: Default BIOS Flash Driver
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
 - Filename: BS_Def64.sys
   MD5: ''
   SHA1: ''
   SHA256: 3326E2D32BBABD69FEB6024809AFC56C7E39241EBE70A53728C77E80995422A5
+  Signature: ''
+  Date: ''
+  Publisher: ASUSTeK Computer Inc.
+  Company: ''
+  Description: Default BIOS Flash Driver
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
 - Filename: BS_Def64.sys
   MD5: ''
   SHA1: ''
   SHA256: 36B9E31240AB0341873C7092B63E2E0F2CAB2962EBF9B25271C3A1216B7669EB
-Metadata:
-  binary: ''
-  Verified: ''
+  Signature: ''
   Date: ''
   Publisher: ASUSTeK Computer Inc.
   Company: ''

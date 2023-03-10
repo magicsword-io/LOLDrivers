@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
+Verified: 'FALSE'
 Commands:
   Command: 'sc.exe create CAM_V3.sys binPath=C:\windows\temp\CAM_V3.sys type=kernel
 
@@ -19,15 +20,3 @@ Acknowledgement:
   Handle: ''
 Detection: []
 KnownVulnerableSamples: []
-Metadata:
-  binary: ''
-  Verified: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''

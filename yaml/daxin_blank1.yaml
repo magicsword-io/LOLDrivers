@@ -3,6 +3,7 @@ Author: Michael Haag
 Created: '2023-02-28'
 MitreID: T1068
 Category: malicious
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create daxin_blank1.sys binPath=C:\windows\temp\daxin_blank1.sys
     type=kernel
@@ -25,9 +26,7 @@ KnownVulnerableSamples:
   MD5: ''
   SHA1: ''
   SHA256: 5bc3994612624da168750455b363f2964e1861dba4f1c305df01b970ac02a7ae
-Metadata:
-  binary: ''
-  Verified: A certificate was explicitly revoked by its issuer.
+  Signature: A certificate was explicitly revoked by its issuer.
   Date: 4:05 AM 2/6/2021
   Publisher: Fuqing Yuntan Network Tech Co.,Ltd.
   Company: n/a
