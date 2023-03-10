@@ -65,9 +65,21 @@ def generate_yml_files(csv_file_path, output_folder):
                 if KnownHashes.startswith("hash:"):
                     hash = dict()
                     hash['Filename'] = row[0]
-                    hash['MD5'] = ''
-                    hash['SHA1'] = ''
-                    hash['SHA256'] = KnownHashes[5:]
+                    
+                    hash_ = KnownHashes[5:].lstrip().strip()
+                    if len(hash) == 32:
+                        hash['MD5'] = hash_
+                    else:
+                        hash['MD5'] = ''
+                    if len(hash) == 40:
+                        hash['SHA1'] = hash_
+                    else:
+                        hash['SHA1'] = ''
+                    if len(hash) == 64:
+                        hash['SHA256'] = hash_
+                    else:
+                        hash['SHA256'] = ''
+                    
                     hash["Signature"] = row[20]
                     hash["Date"] = row[21]
                     hash["Publisher"] = row[22]
