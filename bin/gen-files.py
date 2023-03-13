@@ -68,7 +68,7 @@ def gen_sysmon_config(md5_list, sha1_list, sha256_list):
     """
         Generates sysmon configuration
     """
-    with open("../hashes/include_vulnerable_hashes.xml", "w") as f:
+    with open("hashes/sysmon_config_vulnerable_hashes.xml", "w") as f:
         f.write("<Sysmon schemaversion=\"4.30\">\n")
         f.write("	<EventFiltering>\n")
         f.write("		<RuleGroup name=\"\" groupRelation=\"or\">\n")
