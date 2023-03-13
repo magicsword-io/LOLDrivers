@@ -35,7 +35,7 @@ title = "LOLDrivers"
 Living Off The Land Drivers is a curated list of Windows drivers used by adversaries to bypass security controls and carry out attacks. The project helps security professionals stay informed and mitigate potential threats.
 
 {{< tip "warning" >}}
-Feel free to open a [PR](https://github.com/magicsword-io/LOLDrivers/pulls), raise an [issue](https://github.com/magicsword-io/LOLDrivers/issues/new/choose "Open a Github Issue")(s) or request new driver(s) be added. 
+Feel free to open a [PR](https://github.com/magicsword-io/LOLDrivers/pulls), raise an [issue](https://github.com/magicsword-io/LOLDrivers/issues/new/choose "Open a Github Issue")(s) or request new driver(s) be added.
 {{< /tip >}}
 
 {{< tip >}}
@@ -59,5 +59,3 @@ You can also get the malicious driver list via **API** using [CSV](api/drivers.c
 {{% chart "dataset1" "table" %}}
 {{< /column >}}
 {{< /block >}}
-
-
