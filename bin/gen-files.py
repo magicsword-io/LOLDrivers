@@ -25,7 +25,10 @@ def get_yaml(file_path: str) -> dict:
     return data
 
 
-def gen_hashes():
+def gen_hashes_lists():
+    """
+        Generates lists of hashes
+    """
     md5_list = []
     sha1_list = []
     sha256_list = []
@@ -39,7 +42,13 @@ def gen_hashes():
                     sha1_list.append(i['SHA1'])
                 if i['SHA256']:
                     sha256_list.append(i['SHA256'])
+    
+    return md5_list, sha1_list, sha256_list
 
+def gen_hashes_files(md5_list, sha1_list, sha256_list):
+    """
+        Generates hash samples files
+    """
     if md5_list:
         with open('hashes/samples.md5', 'w') as f: 
             for i in md5_list:
@@ -54,7 +63,36 @@ def gen_hashes():
         with open('hashes/samples.sha256', 'w') as f:
             for i in sha256_list:
                 f.write(i + "\n")
+
+def gen_sysmon_config(md5_list, sha1_list, sha256_list):
+    """
+        Generates sysmon configuration
+    """
+    with open("../hashes/include_vulnerable_hashes.xml", "w") as f:
+        f.write("<Sysmon schemaversion=\"4.30\">\n")
+        f.write("	<EventFiltering>\n")
+        f.write("		<RuleGroup name=\"\" groupRelation=\"or\">\n")
+        f.write("			<ImageLoad onmatch=\"include\">\n")
+
+        if md5_list:
+            for i in md5_list:
+                f.write("                <Hashes condition=\"contains\">MD5=" + i + "</Hashes>\n")
+        
+        if sha1_list:
+            for i in sha1_list:
+                f.write("                <Hashes condition=\"contains\">SHA1=" + i + "</Hashes>\n")
+        
+        if sha256_list:
+            for i in sha256_list:
+                f.write("                <Hashes condition=\"contains\">SHA256=" + i + "</Hashes>\n")
+
+        f.write("			</ImageLoad>\n")
+        f.write("		</RuleGroup>\n")
+        f.write("	</EventFiltering>\n")
+        f.write("</Sysmon>\n")
     
 
 if __name__ == "__main__":
-    gen_hashes()
+    md5_list, sha1_list, sha256_list = gen_hashes_lists()
+    gen_hashes_files(md5_list, sha1_list, sha256_list)
+    gen_sysmon_config(md5_list, sha1_list, sha256_list)
