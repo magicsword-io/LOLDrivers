@@ -27,12 +27,10 @@ jobs:
     - name: Run Site Generation 
       run: poetry run python bin/gen-files.py
     - name: Set up Git
-      env:
-        GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
       run: |
           git config --global user.name "Github Actions"
           git config --global user.email "robot@noreply.github.com"
-          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/magicsword-io/LOLDrivers.git"
+          git remote set-url origin "https://x-access-token:${{ secrets.PUSH_TOKEN}}@github.com/magicsword-io/LOLDrivers.git"
     - name: Commit Generated Data
       run: |
           git add .
