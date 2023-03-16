@@ -1,5 +1,7 @@
 import yaml
 import os
+from datetime import date
+
 
 path_to_yml = "../yaml"
 path_to_yml = os.path.join(os.path.dirname(os.path.realpath(__file__)), path_to_yml)
@@ -43,6 +45,11 @@ def gen_hashes_lists():
                 if i['SHA256']:
                     sha256_list.append(i['SHA256'])
     
+    # Remove leading and trailing spaces as well as any duplicates
+    md5_list = list(set([i.lstrip().strip().lower() for i in md5_list]))
+    sha1_list = list(set([i.lstrip().strip().lower() for i in sha1_list]))
+    sha256_list = list(set([i.lstrip().strip().lower() for i in sha256_list]))
+
     return md5_list, sha1_list, sha256_list
 
 def gen_hashes_files(md5_list, sha1_list, sha256_list):
@@ -90,9 +97,69 @@ def gen_sysmon_config(md5_list, sha1_list, sha256_list):
         f.write("		</RuleGroup>\n")
         f.write("	</EventFiltering>\n")
         f.write("</Sysmon>\n")
+
+def gen_sigma_rule(md5_list, sha1_list, sha256_list):
+    """
+        Generates SIGMA rule
+    """
+    with open("hashes/driver_load_win_vuln_drivers.yml", "w") as f:
+        f.write("title: Vulnerable Driver Load\n")
+        f.write("id: 7aaaf4b8-e47c-4295-92ee-6ed40a6f60c8\n")
+        f.write("status: experimental\n")
+        f.write("description: Detects the load of known vulnerable drivers by hash value\n")
+        f.write("references:\n")
+        f.write("    - https://loldrivers.io/\n")
+        f.write("author: Nasreddine Bencherchali (Nextron Systems)\n")
+        f.write("date: 2022/08/18\n")
+        f.write("modified: " + date.today().strftime('%Y/%m/%d') + "\n")
+        f.write("tags:\n")
+        f.write("    - attack.privilege_escalation\n")
+        f.write("    - attack.t1543.003\n")
+        f.write("    - attack.t1068\n")
+        f.write("logsource:\n")
+        f.write("    product: windows\n")
+        f.write("    category: driver_load\n")
+        f.write("detection:\n")
+        f.write("    selection_sysmon:\n")
+        f.write("        Hashes|contains:\n")
+
+        if md5_list:
+            for i in md5_list:
+                f.write("            - 'MD5=" + i + "'\n")
+        
+        if sha1_list:
+            for i in sha1_list:
+                f.write("            - 'SHA1=" + i + "'\n")
+        
+        if sha256_list:
+            for i in sha256_list:
+                f.write("            - 'SHA256=" + i + "'\n")
+        
+        f.write("    selection_other:\n")
+
+        if md5_list:
+            f.write("        - md5:\n")
+            for i in md5_list:
+                f.write("            - '" + i + "'\n")
+        
+        if sha1_list:
+            f.write("        - sha1:\n")
+            for i in sha1_list:
+                f.write("            - '" + i + "'\n")
+        
+        if sha256_list:
+            f.write("        - sha256:\n")
+            for i in sha256_list:
+                f.write("            - '" + i + "'\n")
+
+        f.write("    condition: 1 of selection_*\n")
+        f.write("falsepositives:\n")
+        f.write("    - Unknown\n")
+        f.write("level: high\n")
     
 
 if __name__ == "__main__":
     md5_list, sha1_list, sha256_list = gen_hashes_lists()
     gen_hashes_files(md5_list, sha1_list, sha256_list)
     gen_sysmon_config(md5_list, sha1_list, sha256_list)
+    gen_sigma_rule(md5_list, sha1_list, sha256_list)
