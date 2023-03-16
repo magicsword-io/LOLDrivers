@@ -1,14 +1,14 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: File Generator
+name: Generate Site
 
 on: # yamllint disable-line rule:truthy
   push:
     branches: [ main ]
 
 jobs:
-  generate-hashes:
+  generate-site:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3.3.0
@@ -18,15 +18,14 @@ jobs:
       uses: actions/setup-python@v4.5.0
       with:
         python-version: 3.11
-    - name: Generating Files
-      run: |
-        python bin/gen-files.py
     - name: Install Poetry
       run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
     - name: Install dependencies with Poetry
       run: poetry install
     - name: Run Site Generation 
       run: poetry run python bin/site.py
+    - name: Run Site Generation 
+      run: poetry run python bin/gen-files.py
     - name: Commit Generated Data
       run: |
           git config --global user.name 'Github Actions';
