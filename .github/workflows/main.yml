@@ -11,7 +11,7 @@ jobs:
   generate-site:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3.3.0
+    - uses: actions/checkout@v2
       with:
         submodules: true
     - name: Set up Python 3.11
