@@ -28,7 +28,7 @@ jobs:
       run: poetry run python bin/gen-files.py
     - name: Set up Git
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
       run: |
           git config --global user.name "Github Actions"
           git config --global user.email "robot@noreply.github.com"
