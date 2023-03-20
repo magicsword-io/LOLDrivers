@@ -62,20 +62,22 @@ def generate_yml_files(csv_file_path, output_folder):
             yaml_data["Detection"] = detection_data
             KnownHashes_data = list()
             for KnownHashes in row[17].split(", "):
+
                 if KnownHashes.startswith("hash:"):
                     hash = dict()
                     hash['Filename'] = row[0]
                     
-                    hash_ = KnownHashes[5:].lstrip().strip()
-                    if len(hash) == 32:
+                    hash_ = KnownHashes[5:].lstrip().strip().lower()
+                    
+                    if len(hash_) == 32:
                         hash['MD5'] = hash_
                     else:
                         hash['MD5'] = ''
-                    if len(hash) == 40:
+                    if len(hash_) == 40:
                         hash['SHA1'] = hash_
                     else:
                         hash['SHA1'] = ''
-                    if len(hash) == 64:
+                    if len(hash_) == 64:
                         hash['SHA256'] = hash_
                     else:
                         hash['SHA256'] = ''
