@@ -3025,31 +3025,6 @@
         ]
     },
     {
-        "Name": "PCADRVX64.sys",
-        "Author": "Michael Haag",
-        "Created": "2023-01-09",
-        "MitreID": "T1068",
-        "Category": "vulnerable driver",
-        "Verified": "FALSE",
-        "Commands": {
-            "Command": "sc.exe create PCADRVX64.sys binPath=C:\\windows\\temp\\PCADRVX64.sys type=kernel\nsc.exe start PCADRVX64.sys",
-            "Description": "",
-            "Usecase": "Elevate privileges",
-            "Privileges": "kernel",
-            "OperatingSystem": "Windows 10"
-        },
-        "Resources": [
-            " https://raw.githubusercontent.com/SigmaHQ/sigma/master/rules/windows/driver_load/driver_load_vuln_drivers_names.yml"
-        ],
-        "driver_description": "https://raw.githubusercontent.com/SigmaHQ/sigma/master/rules/windows/driver_load/driver_load_vuln_drivers_names.yml",
-        "Acknowledgement": {
-            "Person": "",
-            "Handle": ""
-        },
-        "Detection": [],
-        "KnownVulnerableSamples": []
-    },
-    {
         "Name": "TmComm.sys",
         "Author": "Michael Haag",
         "Created": "2023-01-09",
@@ -3132,31 +3107,6 @@
                 "OriginalFilename": ""
             }
         ]
-    },
-    {
-        "Name": "CAM_V3.sys",
-        "Author": "Michael Haag",
-        "Created": "2023-01-09",
-        "MitreID": "T1068",
-        "Category": "vulnerable driver",
-        "Verified": "FALSE",
-        "Commands": {
-            "Command": "sc.exe create CAM_V3.sys binPath=C:\\windows\\temp\\CAM_V3.sys type=kernel\nsc.exe start CAM_V3.sys",
-            "Description": "",
-            "Usecase": "Elevate privileges",
-            "Privileges": "kernel",
-            "OperatingSystem": "Windows 10"
-        },
-        "Resources": [
-            " https://eclypsium.com/2019/11/12/mother-of-all-drivers/"
-        ],
-        "driver_description": "https://eclypsium.com/2019/11/12/mother-of-all-drivers/",
-        "Acknowledgement": {
-            "Person": "",
-            "Handle": ""
-        },
-        "Detection": [],
-        "KnownVulnerableSamples": []
     },
     {
         "Name": "NTIOLib.sys",
@@ -3939,31 +3889,6 @@
                 "OriginalFilename": ""
             }
         ]
-    },
-    {
-        "Name": "ActiveHealth.sys",
-        "Author": "Michael Haag",
-        "Created": "2023-01-09",
-        "MitreID": "T1068",
-        "Category": "vulnerable driver",
-        "Verified": "FALSE",
-        "Commands": {
-            "Command": "sc.exe create ActiveHealth.sys binPath=C:\\windows\\temp\\ActiveHealth.sys type=kernel\nsc.exe start ActiveHealth.sys",
-            "Description": "",
-            "Usecase": "Elevate privileges",
-            "Privileges": "kernel",
-            "OperatingSystem": "Windows 10"
-        },
-        "Resources": [
-            " https://eclypsium.com/2019/11/12/mother-of-all-drivers/"
-        ],
-        "driver_description": "https://eclypsium.com/2019/11/12/mother-of-all-drivers/",
-        "Acknowledgement": {
-            "Person": "",
-            "Handle": ""
-        },
-        "Detection": [],
-        "KnownVulnerableSamples": []
     },
     {
         "Name": "daxin_blank.sys",
@@ -5412,31 +5337,6 @@
         ]
     },
     {
-        "Name": "Mslo64.sys",
-        "Author": "Michael Haag",
-        "Created": "2023-01-09",
-        "MitreID": "T1068",
-        "Category": "vulnerable driver",
-        "Verified": "FALSE",
-        "Commands": {
-            "Command": "sc.exe create Mslo64.sys binPath=C:\\windows\\temp\\Mslo64.sys type=kernel\nsc.exe start Mslo64.sys",
-            "Description": "This has been referenced as a vulnerable driver, but no hash has been found.",
-            "Usecase": "Elevate privileges",
-            "Privileges": "kernel",
-            "OperatingSystem": "Windows 10"
-        },
-        "Resources": [
-            "https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html"
-        ],
-        "driver_description": "https://github.com/elastic/protections-artifacts/search?q=VulnDriver",
-        "Acknowledgement": {
-            "Person": "",
-            "Handle": ""
-        },
-        "Detection": [],
-        "KnownVulnerableSamples": []
-    },
-    {
         "Name": "AMDRyzenMasterDriver.sys",
         "Author": "Michael Haag",
         "Created": "2023-01-09",
@@ -5793,29 +5693,6 @@
                 "OriginalFilename": ""
             }
         ]
-    },
-    {
-        "Name": "srvnetbus.sys",
-        "Author": "Michael Haag",
-        "Created": "2023-01-09",
-        "MitreID": "T1068",
-        "Category": "vulnerable driver",
-        "Verified": "FALSE",
-        "Commands": {
-            "Command": "sc.exe create srvnetbus.sys binPath=C:\\windows\\temp\\srvnetbus.sys type=kernel\nsc.exe start srvnetbus.sys",
-            "Description": "This has been referenced as a vulnerable driver, but no hash has been found.",
-            "Usecase": "Elevate privileges",
-            "Privileges": "kernel",
-            "OperatingSystem": "Windows 10"
-        },
-        "Resources": [],
-        "driver_description": "https://github.com/elastic/protections-artifacts/search?q=VulnDriver",
-        "Acknowledgement": {
-            "Person": "",
-            "Handle": ""
-        },
-        "Detection": [],
-        "KnownVulnerableSamples": []
     },
     {
         "Name": "Black.sys",
@@ -6528,57 +6405,6 @@
         ]
     },
     {
-        "Name": "gmer.sys",
-        "Author": "Michael Haag",
-        "Created": "2023-01-09",
-        "MitreID": "T1068",
-        "Category": "vulnerable driver",
-        "Verified": "FALSE",
-        "Commands": {
-            "Command": "sc.exe create gmer.sys binPath=C:\\windows\\temp\\gmer.sys type=kernel\nsc.exe start gmer.sys",
-            "Description": "",
-            "Usecase": "Elevate privileges",
-            "Privileges": "kernel",
-            "OperatingSystem": "Windows 10"
-        },
-        "Resources": [
-            " https://raw.githubusercontent.com/SigmaHQ/sigma/master/rules/windows/driver_load/driver_load_vuln_drivers_names.yml"
-        ],
-        "driver_description": "https://raw.githubusercontent.com/SigmaHQ/sigma/master/rules/windows/driver_load/driver_load_vuln_drivers_names.yml",
-        "Acknowledgement": {
-            "Person": "",
-            "Handle": ""
-        },
-        "Detection": [],
-        "KnownVulnerableSamples": []
-    },
-    {
-        "Name": "sandbox.sys",
-        "Author": "Michael Haag",
-        "Created": "2023-01-09",
-        "MitreID": "T1068",
-        "Category": "vulnerable driver",
-        "Verified": "FALSE",
-        "Commands": {
-            "Command": "sc.exe create sandbox.sys binPath=C:\\windows\\temp\\sandbox.sys type=kernel\nsc.exe start sandbox.sys",
-            "Description": "",
-            "Usecase": "Elevate privileges",
-            "Privileges": "kernel",
-            "OperatingSystem": "Windows 10"
-        },
-        "Resources": [
-            " https://github.com/jbaines-r7/dellicious",
-            " https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/"
-        ],
-        "driver_description": "https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/",
-        "Acknowledgement": {
-            "Person": "",
-            "Handle": ""
-        },
-        "Detection": [],
-        "KnownVulnerableSamples": []
-    },
-    {
         "Name": "POORTRY2.sys",
         "Author": "Michael Haag",
         "Created": "2023-03-04",
@@ -7153,32 +6979,6 @@
                 "OriginalFilename": ""
             }
         ]
-    },
-    {
-        "Name": "DirectIo64.sys",
-        "Author": "Michael Haag",
-        "Created": "2023-01-09",
-        "MitreID": "T1068",
-        "Category": "vulnerable driver",
-        "Verified": "TRUE",
-        "Commands": {
-            "Command": "sc.exe create DirectIo64.sys binPath=C:\\windows\\temp\\DirectIo64.sys type=kernel\nsc.exe start DirectIo64.sys",
-            "Description": "",
-            "Usecase": "Elevate privileges",
-            "Privileges": "kernel",
-            "OperatingSystem": "Windows 10"
-        },
-        "Resources": [
-            "https://github.com/eset/vulnerability-disclosures/blob/master/CVE-2020-15480/CVE-2020-15480.md",
-            "https://www.welivesecurity.com/2022/01/11/signed-kernel-drivers-unguarded-gateway-windows-core/"
-        ],
-        "driver_description": "https://github.com/eset/vulnerability-disclosures/blob/master/CVE-2020-15480/CVE-2020-15480.md",
-        "Acknowledgement": {
-            "Person": "",
-            "Handle": ""
-        },
-        "Detection": [],
-        "KnownVulnerableSamples": []
     },
     {
         "Name": "Lv561av.sys",
@@ -8544,29 +8344,6 @@
         ]
     },
     {
-        "Name": "HWiNFO64A.sys",
-        "Author": "Michael Haag",
-        "Created": "2023-01-09",
-        "MitreID": "T1068",
-        "Category": "vulnerable driver",
-        "Verified": "TRUE",
-        "Commands": {
-            "Command": "sc.exe create HWiNFO64A.sys binPath=C:\\windows\\temp\\HWiNFO64A.sys type=kernel\nsc.exe start HWiNFO64A.sys",
-            "Description": "CVE-2018-8061",
-            "Usecase": "Elevate privileges",
-            "Privileges": "kernel",
-            "OperatingSystem": "Windows 10"
-        },
-        "Resources": [],
-        "driver_description": "",
-        "Acknowledgement": {
-            "Person": "",
-            "Handle": ""
-        },
-        "Detection": [],
-        "KnownVulnerableSamples": []
-    },
-    {
         "Name": "t7.sys",
         "Author": "Michael Haag",
         "Created": "2023-01-09",
@@ -8767,32 +8544,6 @@
                 "OriginalFilename": ""
             }
         ]
-    },
-    {
-        "Name": "pgldqpoc.sys",
-        "Author": "Michael Haag",
-        "Created": "2023-01-09",
-        "MitreID": "T1068",
-        "Category": "vulnerable driver",
-        "Verified": "FALSE",
-        "Commands": {
-            "Command": "sc.exe create pgldqpoc.sys binPath=C:\\windows\\temp\\pgldqpoc.sys type=kernel\nsc.exe start pgldqpoc.sys",
-            "Description": "This has been referenced as a vulnerable driver, but no hash has been found.",
-            "Usecase": "Elevate privileges",
-            "Privileges": "kernel",
-            "OperatingSystem": "Windows 10"
-        },
-        "Resources": [
-            "https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html",
-            "https://www.unknowncheats.me/forum/anti-cheat-bypass/244386-mta-fairplaykd-driver-reversed-exploited-rpm.html"
-        ],
-        "driver_description": "",
-        "Acknowledgement": {
-            "Person": "",
-            "Handle": ""
-        },
-        "Detection": [],
-        "KnownVulnerableSamples": []
     },
     {
         "Name": "winio64.sys",
@@ -9150,31 +8901,6 @@
         ]
     },
     {
-        "Name": "GameFire.sys",
-        "Author": "Michael Haag",
-        "Created": "2023-01-09",
-        "MitreID": "T1068",
-        "Category": "vulnerable driver",
-        "Verified": "FALSE",
-        "Commands": {
-            "Command": "sc.exe create GameFire.sys binPath=C:\\windows\\temp\\GameFire.sys type=kernel\nsc.exe start GameFire.sys",
-            "Description": "",
-            "Usecase": "Elevate privileges",
-            "Privileges": "kernel",
-            "OperatingSystem": "Windows 10"
-        },
-        "Resources": [
-            " https://eclypsium.com/2019/11/12/mother-of-all-drivers/"
-        ],
-        "driver_description": "https://eclypsium.com/2019/11/12/mother-of-all-drivers/",
-        "Acknowledgement": {
-            "Person": "",
-            "Handle": ""
-        },
-        "Detection": [],
-        "KnownVulnerableSamples": []
-    },
-    {
         "Name": "NBIOLib_X64.sys",
         "Author": "Michael Haag",
         "Created": "2023-01-09",
@@ -9215,35 +8941,6 @@
                 "OriginalFilename": ""
             }
         ]
-    },
-    {
-        "Name": "iQVW64.SYS",
-        "Author": "Michael Haag",
-        "Created": "2023-01-09",
-        "MitreID": "T1068",
-        "Category": "vulnerable driver",
-        "Verified": "TRUE",
-        "Commands": {
-            "Command": "sc.exe create iQVW64.SYS binPath=C:\\windows\\temp\\iQVW64.SYS type=kernel\nsc.exe start iQVW64.SYS",
-            "Description": "(1) IQVW32.sys before 1.3.1.0 and (2) IQVW64.sys before 1.3.1.0 in the Intel Ethernet diagnostics driver for Windows allows local users to cause a denial of service or possibly execute arbitrary code with kernel privileges via a crafted (a) 0x80862013, (b) 0x8086200B, (c) 0x8086200F, or (d) 0x80862007 IOCTL call.",
-            "Usecase": "Elevate privileges",
-            "Privileges": "kernel",
-            "OperatingSystem": "Windows 10"
-        },
-        "Resources": [
-            "https://www.crowdstrike.com/blog/scattered-spider-attempts-to-avoid-detection-with-bring-your-own-vulnerable-driver-tactic/",
-            "https://expel.com/blog/well-that-escalated-quickly-how-a-red-team-went-from-domain-user-to-kernel-memory/",
-            "https://github.com/Exploitables/CVE-2015-2291",
-            "https://github.com/Tare05/Intel-CVE-2015-2291",
-            "https://github.com/TheCruZ/kdmapper"
-        ],
-        "driver_description": "",
-        "Acknowledgement": {
-            "Person": "",
-            "Handle": ""
-        },
-        "Detection": [],
-        "KnownVulnerableSamples": []
     },
     {
         "Name": "kbdcap64.sys",
@@ -10089,32 +9786,6 @@
                 "OriginalFilename": ""
             }
         ]
-    },
-    {
-        "Name": "DirectIo32.sys",
-        "Author": "Michael Haag",
-        "Created": "2023-01-09",
-        "MitreID": "T1068",
-        "Category": "vulnerable driver",
-        "Verified": "TRUE",
-        "Commands": {
-            "Command": "sc.exe create DirectIo32.sys binPath=C:\\windows\\temp\\DirectIo32.sys type=kernel\nsc.exe start DirectIo32.sys",
-            "Description": "",
-            "Usecase": "Elevate privileges",
-            "Privileges": "kernel",
-            "OperatingSystem": "Windows 10"
-        },
-        "Resources": [
-            "https://github.com/eset/vulnerability-disclosures/blob/master/CVE-2020-15480/CVE-2020-15480.md",
-            "https://www.welivesecurity.com/2022/01/11/signed-kernel-drivers-unguarded-gateway-windows-core/"
-        ],
-        "driver_description": "https://github.com/eset/vulnerability-disclosures/blob/master/CVE-2020-15480/CVE-2020-15480.md",
-        "Acknowledgement": {
-            "Person": "",
-            "Handle": ""
-        },
-        "Detection": [],
-        "KnownVulnerableSamples": []
     },
     {
         "Name": "Proxy64.sys",
@@ -12666,31 +12337,6 @@
                 "OriginalFilename": ""
             }
         ]
-    },
-    {
-        "Name": "clfs.sys",
-        "Author": "Michael Haag",
-        "Created": "2023-01-09",
-        "MitreID": "T1068",
-        "Category": "vulnerable driver",
-        "Verified": "FALSE",
-        "Commands": {
-            "Command": "sc.exe create clfs.sys binPath=C:\\windows\\temp\\clfs.sys type=kernel\nsc.exe start clfs.sys",
-            "Description": "",
-            "Usecase": "Elevate privileges",
-            "Privileges": "kernel",
-            "OperatingSystem": "Windows 10"
-        },
-        "Resources": [
-            " https://raw.githubusercontent.com/SigmaHQ/sigma/master/rules/windows/driver_load/driver_load_vuln_drivers_names.yml"
-        ],
-        "driver_description": "https://raw.githubusercontent.com/SigmaHQ/sigma/master/rules/windows/driver_load/driver_load_vuln_drivers_names.yml",
-        "Acknowledgement": {
-            "Person": "",
-            "Handle": ""
-        },
-        "Detection": [],
-        "KnownVulnerableSamples": []
     },
     {
         "Name": "GLCKIO2.sys",
