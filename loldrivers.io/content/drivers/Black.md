@@ -49,7 +49,7 @@ sc.exe start Black.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/D5562FB90B0B3DEB633AB335BCBD82CE10953466A428B3F27CB5B226B453EAF3">D5562FB90B0B3DEB633AB335BCBD82CE10953466A428B3F27CB5B226B453EAF3</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/d5562fb90b0b3deb633ab335bcbd82ce10953466a428b3f27cb5b226b453eaf3">d5562fb90b0b3deb633ab335bcbd82ce10953466a428b3f27cb5b226b453eaf3</a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -59,13 +59,13 @@ sc.exe start Black.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/black.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

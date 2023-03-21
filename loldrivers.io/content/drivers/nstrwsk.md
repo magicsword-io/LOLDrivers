@@ -49,7 +49,7 @@ sc.exe start nstrwsk.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/3390919BB28D5C36CC348F9EF23BE5FA49BFD81263EB7740826E4437CBE904CD">3390919BB28D5C36CC348F9EF23BE5FA49BFD81263EB7740826E4437CBE904CD</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/3390919bb28d5c36cc348f9ef23be5fa49bfd81263eb7740826e4437cbe904cd">3390919bb28d5c36cc348f9ef23be5fa49bfd81263eb7740826e4437cbe904cd</a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -59,13 +59,13 @@ sc.exe start nstrwsk.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nstrwsk.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

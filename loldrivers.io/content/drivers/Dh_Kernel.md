@@ -45,7 +45,7 @@ sc.exe start Dh_Kernel.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/BB50818A07B0EB1BD317467139B7EB4BAD6CD89053FECDABFEAE111689825955">BB50818A07B0EB1BD317467139B7EB4BAD6CD89053FECDABFEAE111689825955</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955">bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955</a> |
 | Publisher | YY Inc. |
 | Signature |  |
 | Date |  |
@@ -55,13 +55,13 @@ sc.exe start Dh_Kernel.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dh_kernel.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

@@ -48,8 +48,8 @@ sc.exe start fidpcidrv.sys
 | Filename | fidpcidrv.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/08596732304351B311970FF96B21F451F23B1E25">08596732304351B311970FF96B21F451F23B1E25</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/08596732304351b311970ff96b21f451f23b1e25">08596732304351b311970ff96b21f451f23b1e25</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -59,12 +59,12 @@ sc.exe start fidpcidrv.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | fidpcidrv.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/7838FB56FDAB816BC1900A4720EEA2FC9972EF7A">7838FB56FDAB816BC1900A4720EEA2FC9972EF7A</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/7838fb56fdab816bc1900a4720eea2fc9972ef7a">7838fb56fdab816bc1900a4720eea2fc9972ef7a</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -74,12 +74,12 @@ sc.exe start fidpcidrv.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | fidpcidrv.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/4789B910023A667BEE70FF1F1A8F369CFFB10FE8">4789B910023A667BEE70FF1F1A8F369CFFB10FE8</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/4789b910023a667bee70ff1f1a8f369cffb10fe8">4789b910023a667bee70ff1f1a8f369cffb10fe8</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -89,12 +89,12 @@ sc.exe start fidpcidrv.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | fidpcidrv.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/EEFF4EC4EBC12C6ACD2C930DC2EAAF877CFEC7EC">EEFF4EC4EBC12C6ACD2C930DC2EAAF877CFEC7EC</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/eeff4ec4ebc12c6acd2c930dc2eaaf877cfec7ec">eeff4ec4ebc12c6acd2c930dc2eaaf877cfec7ec</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -104,13 +104,13 @@ sc.exe start fidpcidrv.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fidpcidrv.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

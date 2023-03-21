@@ -44,7 +44,7 @@ sc.exe start WinRing0.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/3EC5AD51E6879464DFBCCB9F4ED76C6325056A42548D5994BA869DA9C4C039A8">3EC5AD51E6879464DFBCCB9F4ED76C6325056A42548D5994BA869DA9C4C039A8</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/3ec5ad51e6879464dfbccb9f4ed76c6325056a42548d5994ba869da9c4c039a8">3ec5ad51e6879464dfbccb9f4ed76c6325056a42548d5994ba869da9c4c039a8</a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -54,12 +54,12 @@ sc.exe start WinRing0.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | WinRing0.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/47EAEBC920CCF99E09FC9924FEB6B19B8A28589F52783327067C9B09754B5E84">47EAEBC920CCF99E09FC9924FEB6B19B8A28589F52783327067C9B09754B5E84</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/47eaebc920ccf99e09fc9924feb6b19b8a28589f52783327067c9b09754b5e84">47eaebc920ccf99e09fc9924feb6b19b8a28589f52783327067c9b09754b5e84</a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -69,12 +69,12 @@ sc.exe start WinRing0.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | WinRing0.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/A7B000ABBCC344444A9B00CFADE7AA22AB92CE0CADEC196C30EB1851AE4FA062">A7B000ABBCC344444A9B00CFADE7AA22AB92CE0CADEC196C30EB1851AE4FA062</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/a7b000abbcc344444a9b00cfade7aa22ab92ce0cadec196c30eb1851ae4fa062">a7b000abbcc344444a9b00cfade7aa22ab92ce0cadec196c30eb1851ae4fa062</a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -84,13 +84,13 @@ sc.exe start WinRing0.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winring0.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

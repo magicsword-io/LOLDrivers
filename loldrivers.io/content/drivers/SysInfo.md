@@ -44,7 +44,7 @@ sc.exe start SysInfo.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/7049F3C939EFE76A5556C2A2C04386DB51DAF61D56B679F4868BB0983C996EBB">7049F3C939EFE76A5556C2A2C04386DB51DAF61D56B679F4868BB0983C996EBB</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/7049f3c939efe76a5556c2a2c04386db51daf61d56b679f4868bb0983c996ebb">7049f3c939efe76a5556c2a2c04386db51daf61d56b679f4868bb0983c996ebb</a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -54,13 +54,13 @@ sc.exe start SysInfo.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/sysinfo.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

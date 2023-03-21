@@ -46,7 +46,7 @@ sc.exe start srvnetbus.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/srvnetbus.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

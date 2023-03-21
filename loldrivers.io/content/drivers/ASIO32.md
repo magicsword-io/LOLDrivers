@@ -48,8 +48,8 @@ sc.exe start ASIO32.sys
 | Filename | ASIO32.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/D569D4BAB86E70EFBCDFDAC9D822139D6F477B7C">D569D4BAB86E70EFBCDFDAC9D822139D6F477B7C</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/d569d4bab86e70efbcdfdac9d822139d6f477b7c">d569d4bab86e70efbcdfdac9d822139d6f477b7c</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -59,12 +59,12 @@ sc.exe start ASIO32.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | ASIO32.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/80FA962BDFB76DFCB9E5D13EFC38BB3D392F2E77">80FA962BDFB76DFCB9E5D13EFC38BB3D392F2E77</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/80fa962bdfb76dfcb9e5d13efc38bb3d392f2e77">80fa962bdfb76dfcb9e5d13efc38bb3d392f2e77</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -74,12 +74,12 @@ sc.exe start ASIO32.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | ASIO32.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/5A7DD0DA0AEE0BDEDC14C1B7831B9CE9178A0346">5A7DD0DA0AEE0BDEDC14C1B7831B9CE9178A0346</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/5a7dd0da0aee0bdedc14c1b7831b9ce9178a0346">5a7dd0da0aee0bdedc14c1b7831b9ce9178a0346</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -89,12 +89,12 @@ sc.exe start ASIO32.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | ASIO32.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/1ACC7A486B52C5EE6619DBDC3B4210B5F48B936F">1ACC7A486B52C5EE6619DBDC3B4210B5F48B936F</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/1acc7a486b52c5ee6619dbdc3b4210b5f48b936f">1acc7a486b52c5ee6619dbdc3b4210b5f48b936f</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -104,12 +104,12 @@ sc.exe start ASIO32.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | ASIO32.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/55AB7E27412ECA433D76513EDC7E6E03BCDD7EDA">55AB7E27412ECA433D76513EDC7E6E03BCDD7EDA</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/55ab7e27412eca433d76513edc7e6e03bcdd7eda">55ab7e27412eca433d76513edc7e6e03bcdd7eda</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -119,12 +119,12 @@ sc.exe start ASIO32.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | ASIO32.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/1E7C241B9A9EA79061B50FB19B3D141DEE175C27">1E7C241B9A9EA79061B50FB19B3D141DEE175C27</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/1e7c241b9a9ea79061b50fb19b3d141dee175c27">1e7c241b9a9ea79061b50fb19b3d141dee175c27</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -134,13 +134,13 @@ sc.exe start ASIO32.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asio32.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

@@ -44,7 +44,7 @@ sc.exe start driver7-x86-withoutdbg.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/927C2A580D51A598177FA54C65E9D2610F5F212F1B6CB2FBF2740B64368F010A">927C2A580D51A598177FA54C65E9D2610F5F212F1B6CB2FBF2740B64368F010A</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/927c2a580d51a598177fa54c65e9d2610f5f212f1b6cb2fbf2740b64368f010a">927c2a580d51a598177fa54c65e9d2610f5f212f1b6cb2fbf2740b64368f010a</a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -54,13 +54,13 @@ sc.exe start driver7-x86-withoutdbg.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/driver7-x86-withoutdbg.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

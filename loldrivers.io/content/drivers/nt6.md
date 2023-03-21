@@ -49,7 +49,7 @@ sc.exe start nt6.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/15C53EB3A0EA44BBD2901A45A6EBEAE29BB123F9C1115C38DFB2CDBEC0642229">15C53EB3A0EA44BBD2901A45A6EBEAE29BB123F9C1115C38DFB2CDBEC0642229</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/15c53eb3a0ea44bbd2901a45a6ebeae29bb123f9c1115c38dfb2cdbec0642229">15c53eb3a0ea44bbd2901a45a6ebeae29bb123f9c1115c38dfb2cdbec0642229</a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -59,13 +59,13 @@ sc.exe start nt6.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nt6.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

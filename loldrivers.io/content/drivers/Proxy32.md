@@ -49,7 +49,7 @@ sc.exe start Proxy32.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/49ED27460730B62403C1D2E4930573121AB0C86C442854BC0A62415CA445A810">49ED27460730B62403C1D2E4930573121AB0C86C442854BC0A62415CA445A810</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/49ed27460730b62403c1d2e4930573121ab0c86c442854bc0a62415ca445a810">49ed27460730b62403c1d2e4930573121ab0c86c442854bc0a62415ca445a810</a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -59,13 +59,13 @@ sc.exe start Proxy32.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/proxy32.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

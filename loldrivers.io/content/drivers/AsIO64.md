@@ -44,7 +44,7 @@ sc.exe start AsIO64.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/B48A309EE0960DA3CAAAAF1E794E8C409993AEB3A2B64809F36B97AAC8A1E62A">B48A309EE0960DA3CAAAAF1E794E8C409993AEB3A2B64809F36B97AAC8A1E62A</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/b48a309ee0960da3caaaaf1e794e8c409993aeb3a2b64809f36b97aac8a1e62a">b48a309ee0960da3caaaaf1e794e8c409993aeb3a2b64809f36b97aac8a1e62a</a> |
 | Publisher | ASUSTeK Computer Inc. |
 | Signature |  |
 | Date |  |
@@ -60,7 +60,7 @@ sc.exe start AsIO64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asio64.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

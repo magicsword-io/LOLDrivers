@@ -44,7 +44,7 @@ sc.exe start HOSTNT.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/07B6D69BAFCFD767F1B63A490A8843C3BB1F8E1BBEA56176109B5743C8F7D357">07B6D69BAFCFD767F1B63A490A8843C3BB1F8E1BBEA56176109B5743C8F7D357</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/07b6d69bafcfd767f1b63a490a8843c3bb1f8e1bbea56176109b5743c8f7d357">07b6d69bafcfd767f1b63a490a8843c3bb1f8e1bbea56176109b5743c8f7d357</a> |
 | Publisher | &#34;SafeNet, Inc.&#34; |
 | Signature |  |
 | Date |  |
@@ -54,13 +54,13 @@ sc.exe start HOSTNT.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hostnt.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

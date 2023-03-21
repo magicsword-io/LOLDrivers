@@ -49,7 +49,7 @@ sc.exe start TGSafe.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/3A95CC82173032B82A0FFC7D2E438DF64C13BC16B4574214C9FE3BE37250925E">3A95CC82173032B82A0FFC7D2E438DF64C13BC16B4574214C9FE3BE37250925E</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/3a95cc82173032b82a0ffc7d2e438df64c13bc16b4574214c9fe3be37250925e">3a95cc82173032b82a0ffc7d2e438df64c13bc16b4574214c9fe3be37250925e</a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -59,13 +59,13 @@ sc.exe start TGSafe.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/tgsafe.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

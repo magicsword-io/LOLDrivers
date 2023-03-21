@@ -44,7 +44,7 @@ sc.exe start Se64a.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/6CB51AE871FBD5D07C5AAD6FF8EEA43D34063089528603CA9CEB8B4F52F68DDC">6CB51AE871FBD5D07C5AAD6FF8EEA43D34063089528603CA9CEB8B4F52F68DDC</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/6cb51ae871fbd5d07c5aad6ff8eea43d34063089528603ca9ceb8b4f52f68ddc">6cb51ae871fbd5d07c5aad6ff8eea43d34063089528603ca9ceb8b4f52f68ddc</a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -54,13 +54,13 @@ sc.exe start Se64a.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/se64a.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

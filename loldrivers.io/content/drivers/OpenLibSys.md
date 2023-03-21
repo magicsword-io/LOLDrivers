@@ -44,7 +44,7 @@ sc.exe start OpenLibSys.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/91314768DA140999E682D2A290D48B78BB25A35525EA12C1B1F9634D14602B2C">91314768DA140999E682D2A290D48B78BB25A35525EA12C1B1F9634D14602B2C</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/91314768da140999e682d2a290d48b78bb25a35525ea12c1b1f9634d14602b2c">91314768da140999e682d2a290d48b78bb25a35525ea12c1b1f9634d14602b2c</a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -54,12 +54,12 @@ sc.exe start OpenLibSys.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | OpenLibSys.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/F0605DDA1DEF240DC7E14EFA73927D6C6D89988C01EA8647B671667B2B167008">F0605DDA1DEF240DC7E14EFA73927D6C6D89988C01EA8647B671667B2B167008</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/f0605dda1def240dc7e14efa73927d6c6d89988c01ea8647b671667b2b167008">f0605dda1def240dc7e14efa73927d6c6d89988c01ea8647b671667b2b167008</a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -69,13 +69,13 @@ sc.exe start OpenLibSys.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/openlibsys.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

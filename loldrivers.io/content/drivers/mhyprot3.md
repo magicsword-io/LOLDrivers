@@ -49,7 +49,7 @@ sc.exe start mhyprot3.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/475E5016C9C0F5A127896F9179A1B1577A67B357F399AB5A1E68AAB07134729A">475E5016C9C0F5A127896F9179A1B1577A67B357F399AB5A1E68AAB07134729A</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/475e5016c9c0f5a127896f9179a1b1577a67b357f399ab5a1e68aab07134729a">475e5016c9c0f5a127896f9179a1b1577a67b357f399ab5a1e68aab07134729a</a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -59,13 +59,13 @@ sc.exe start mhyprot3.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mhyprot3.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

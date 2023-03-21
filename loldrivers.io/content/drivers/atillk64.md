@@ -44,7 +44,7 @@ sc.exe start atillk64.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/5C04C274A708C9A7D993E33BE3EA9E6119DC29527A767410DBAF93996F87369A">5C04C274A708C9A7D993E33BE3EA9E6119DC29527A767410DBAF93996F87369A</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/5c04c274a708c9a7d993e33be3ea9e6119dc29527a767410dbaf93996f87369a">5c04c274a708c9a7d993e33be3ea9e6119dc29527a767410dbaf93996f87369a</a> |
 | Publisher | &#34;ATI Technologies, Inc&#34; |
 | Signature |  |
 | Date |  |
@@ -54,13 +54,13 @@ sc.exe start atillk64.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/atillk64.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

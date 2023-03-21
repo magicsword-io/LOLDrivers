@@ -44,7 +44,7 @@ sc.exe start BS_Def64.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/0040153302B88BEE27EB4F1ECA6855039E1A057370F5E8C615724FA5215BADA3">0040153302B88BEE27EB4F1ECA6855039E1A057370F5E8C615724FA5215BADA3</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/0040153302b88bee27eb4f1eca6855039e1a057370f5e8c615724fa5215bada3">0040153302b88bee27eb4f1eca6855039e1a057370f5e8c615724fa5215bada3</a> |
 | Publisher | ASUSTeK Computer Inc. |
 | Signature |  |
 | Date |  |
@@ -54,12 +54,12 @@ sc.exe start BS_Def64.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | BS_Def64.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/3326E2D32BBABD69FEB6024809AFC56C7E39241EBE70A53728C77E80995422A5">3326E2D32BBABD69FEB6024809AFC56C7E39241EBE70A53728C77E80995422A5</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/3326e2d32bbabd69feb6024809afc56c7e39241ebe70a53728c77e80995422a5">3326e2d32bbabd69feb6024809afc56c7e39241ebe70a53728c77e80995422a5</a> |
 | Publisher | ASUSTeK Computer Inc. |
 | Signature |  |
 | Date |  |
@@ -69,12 +69,12 @@ sc.exe start BS_Def64.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | BS_Def64.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/36B9E31240AB0341873C7092B63E2E0F2CAB2962EBF9B25271C3A1216B7669EB">36B9E31240AB0341873C7092B63E2E0F2CAB2962EBF9B25271C3A1216B7669EB</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/36b9e31240ab0341873c7092b63e2e0f2cab2962ebf9b25271c3a1216b7669eb">36b9e31240ab0341873c7092b63e2e0f2cab2962ebf9b25271c3a1216b7669eb</a> |
 | Publisher | ASUSTeK Computer Inc. |
 | Signature |  |
 | Date |  |
@@ -84,13 +84,13 @@ sc.exe start BS_Def64.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_def64.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

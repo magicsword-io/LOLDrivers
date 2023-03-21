@@ -48,8 +48,8 @@ sc.exe start dbutil.sys
 | Filename | dbutil.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/485C0B9710A196C7177B99EE95E5DDB35B26DDD1">485C0B9710A196C7177B99EE95E5DDB35B26DDD1</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/485c0b9710a196c7177b99ee95e5ddb35b26ddd1">485c0b9710a196c7177b99ee95e5ddb35b26ddd1</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -59,12 +59,12 @@ sc.exe start dbutil.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | dbutil.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/ 50E2BC41F0186FDCE970B80E2A2CB296353AF586"> 50E2BC41F0186FDCE970B80E2A2CB296353AF586</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/50e2bc41f0186fdce970b80e2a2cb296353af586">50e2bc41f0186fdce970b80e2a2cb296353af586</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -74,12 +74,12 @@ sc.exe start dbutil.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | dbutil.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/ E3C1DD569AA4758552566B0213EE4D1FE6382C4B"> E3C1DD569AA4758552566B0213EE4D1FE6382C4B</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/e3c1dd569aa4758552566b0213ee4d1fe6382c4b">e3c1dd569aa4758552566b0213ee4d1fe6382c4b</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -89,12 +89,12 @@ sc.exe start dbutil.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | dbutil.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/ E09B5E80805B8FE853EA27D8773E31BFF262E3F7"> E09B5E80805B8FE853EA27D8773E31BFF262E3F7</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/e09b5e80805b8fe853ea27d8773e31bff262e3f7">e09b5e80805b8fe853ea27d8773e31bff262e3f7</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -104,13 +104,13 @@ sc.exe start dbutil.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbutil.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

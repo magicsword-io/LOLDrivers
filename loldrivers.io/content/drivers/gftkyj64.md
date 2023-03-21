@@ -47,9 +47,7 @@ sc.exe start gftkyj64.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c
-">9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c
-</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c">9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c</a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -59,13 +57,13 @@ sc.exe start gftkyj64.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gftkyj64.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

@@ -57,7 +57,7 @@ sc.exe start gdrv.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename | gdrv.sys |
+| OriginalFilename | gdrv.sys |
 | Filename | gdrv.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
@@ -72,13 +72,13 @@ sc.exe start gdrv.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename | gdrv.sys |
+| OriginalFilename | gdrv.sys |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gdrv.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

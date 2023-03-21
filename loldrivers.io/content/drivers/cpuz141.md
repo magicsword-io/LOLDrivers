@@ -44,7 +44,7 @@ sc.exe start cpuz141.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/DED2927F9A4E64EEFD09D0CABA78E94F309E3A6292841AE81D5528CAB109F95D">DED2927F9A4E64EEFD09D0CABA78E94F309E3A6292841AE81D5528CAB109F95D</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/ded2927f9a4e64eefd09d0caba78e94f309e3a6292841ae81d5528cab109f95d">ded2927f9a4e64eefd09d0caba78e94f309e3a6292841ae81d5528cab109f95d</a> |
 | Publisher | CPUID |
 | Signature |  |
 | Date |  |
@@ -54,13 +54,13 @@ sc.exe start cpuz141.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cpuz141.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

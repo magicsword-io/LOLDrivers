@@ -44,7 +44,7 @@ sc.exe start asmmap64.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/025E7BE9FCEFD6A83F4471BBA0C11F1C11BD5047047D26626DA24EE9A419CDC4">025E7BE9FCEFD6A83F4471BBA0C11F1C11BD5047047D26626DA24EE9A419CDC4</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/025e7be9fcefd6a83f4471bba0c11f1c11bd5047047d26626da24ee9a419cdc4">025e7be9fcefd6a83f4471bba0c11f1c11bd5047047d26626da24ee9a419cdc4</a> |
 | Publisher | ASUSTeK Computer Inc. |
 | Signature |  |
 | Date |  |
@@ -54,13 +54,13 @@ sc.exe start asmmap64.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asmmap64.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

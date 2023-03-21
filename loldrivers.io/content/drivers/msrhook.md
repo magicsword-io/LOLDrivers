@@ -44,7 +44,7 @@ sc.exe start msrhook.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/6DE84CAA2CA18673E01B91AF58220C60AECD5CCCF269725EC3C7F226B2167492">6DE84CAA2CA18673E01B91AF58220C60AECD5CCCF269725EC3C7F226B2167492</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/6de84caa2ca18673e01b91af58220c60aecd5cccf269725ec3c7f226b2167492">6de84caa2ca18673e01b91af58220c60aecd5cccf269725ec3c7f226b2167492</a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -54,13 +54,13 @@ sc.exe start msrhook.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/msrhook.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

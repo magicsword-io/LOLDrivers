@@ -55,12 +55,12 @@ sc.exe start RTCore64.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | RTCore64.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/CDD2A4575A46BADA4837A6153A79C14D60EE3129830717EF09E0E3EFD9D00812">CDD2A4575A46BADA4837A6153A79C14D60EE3129830717EF09E0E3EFD9D00812</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/cdd2a4575a46bada4837a6153a79c14d60ee3129830717ef09e0e3efd9d00812">cdd2a4575a46bada4837a6153a79c14d60ee3129830717ef09e0e3efd9d00812</a> |
 | Publisher | N/A |
 | Signature | N/A |
 | Date | N/A |
@@ -70,13 +70,13 @@ sc.exe start RTCore64.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rtcore64.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

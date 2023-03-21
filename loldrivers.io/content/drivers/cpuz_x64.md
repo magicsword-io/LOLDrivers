@@ -44,7 +44,7 @@ sc.exe start cpuz_x64.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/3871E16758A1778907667F78589359734F7F62F9DC953EC558946DCDBE6951E3">3871E16758A1778907667F78589359734F7F62F9DC953EC558946DCDBE6951E3</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/3871e16758a1778907667f78589359734f7f62f9dc953ec558946dcdbe6951e3">3871e16758a1778907667f78589359734f7f62f9dc953ec558946dcdbe6951e3</a> |
 | Publisher | CPUID |
 | Signature |  |
 | Date |  |
@@ -54,13 +54,13 @@ sc.exe start cpuz_x64.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cpuz_x64.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

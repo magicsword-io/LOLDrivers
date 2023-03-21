@@ -48,8 +48,8 @@ sc.exe start WinIo64A.sys
 | Filename | WinIo64A.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/0c74d09da7baf7c05360346e4c3512d0cd433d59">0c74d09da7baf7c05360346e4c3512d0cd433d59</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/0c74d09da7baf7c05360346e4c3512d0cd433d59">0c74d09da7baf7c05360346e4c3512d0cd433d59</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -59,13 +59,13 @@ sc.exe start WinIo64A.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio64a.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

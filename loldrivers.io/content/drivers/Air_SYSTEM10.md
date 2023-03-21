@@ -42,9 +42,9 @@ sc.exe start Air_SYSTEM10.sys
 
 | Filename | Air_SYSTEM10.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/1f2888e57fdd6aee466962c25ba7d62d">1f2888e57fdd6aee466962c25ba7d62d</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/1f2888e57fdd6aee466962c25ba7d62d">1f2888e57fdd6aee466962c25ba7d62d</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -54,13 +54,13 @@ sc.exe start Air_SYSTEM10.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/air_system10.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

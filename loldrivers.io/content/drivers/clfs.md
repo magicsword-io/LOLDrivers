@@ -47,7 +47,7 @@ sc.exe start clfs.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/clfs.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

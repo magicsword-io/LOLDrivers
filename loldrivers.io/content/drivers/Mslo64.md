@@ -47,7 +47,7 @@ sc.exe start Mslo64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mslo64.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

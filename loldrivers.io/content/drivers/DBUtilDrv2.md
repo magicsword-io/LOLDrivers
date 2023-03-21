@@ -44,8 +44,8 @@ sc.exe start DBUtilDrv2.sys
 | Filename | DBUtilDrv2.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/90a76945fd2fa45fab2b7bcfdaf6563595f94891">90a76945fd2fa45fab2b7bcfdaf6563595f94891</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/90a76945fd2fa45fab2b7bcfdaf6563595f94891">90a76945fd2fa45fab2b7bcfdaf6563595f94891</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -55,12 +55,12 @@ sc.exe start DBUtilDrv2.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | DBUtilDrv2.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/b03b1996a40bfea72e4584b82f6b845c503a9748">b03b1996a40bfea72e4584b82f6b845c503a9748</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/b03b1996a40bfea72e4584b82f6b845c503a9748">b03b1996a40bfea72e4584b82f6b845c503a9748</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -70,13 +70,13 @@ sc.exe start DBUtilDrv2.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbutildrv2.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

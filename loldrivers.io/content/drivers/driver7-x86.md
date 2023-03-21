@@ -44,7 +44,7 @@ sc.exe start driver7-x86.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/42851A01469BA97CDC38939B10CF9EA13237AA1F6C37B1AC84904C5A12A81FA0">42851A01469BA97CDC38939B10CF9EA13237AA1F6C37B1AC84904C5A12A81FA0</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/42851a01469ba97cdc38939b10cf9ea13237aa1f6c37b1ac84904c5a12a81fa0">42851a01469ba97cdc38939b10cf9ea13237aa1f6c37b1ac84904c5a12a81fa0</a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -54,13 +54,13 @@ sc.exe start driver7-x86.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/driver7-x86.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

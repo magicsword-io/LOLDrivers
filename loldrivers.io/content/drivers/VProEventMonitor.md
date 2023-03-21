@@ -44,7 +44,7 @@ sc.exe start VProEventMonitor.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/7877C1B0E7429453B750218CA491C2825DAE684AD9616642EFF7B41715C70ACA">7877C1B0E7429453B750218CA491C2825DAE684AD9616642EFF7B41715C70ACA</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/7877c1b0e7429453b750218ca491c2825dae684ad9616642eff7b41715c70aca">7877c1b0e7429453b750218ca491c2825dae684ad9616642eff7b41715c70aca</a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -54,13 +54,13 @@ sc.exe start VProEventMonitor.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/vproeventmonitor.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

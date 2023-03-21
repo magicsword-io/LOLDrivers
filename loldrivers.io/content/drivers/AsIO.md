@@ -44,7 +44,7 @@ sc.exe start AsIO.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/2DA330A2088409EFC351118445A824F11EDBE51CF3D653B298053785097FE40E">2DA330A2088409EFC351118445A824F11EDBE51CF3D653B298053785097FE40E</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/2da330a2088409efc351118445a824f11edbe51cf3d653b298053785097fe40e">2da330a2088409efc351118445a824f11edbe51cf3d653b298053785097fe40e</a> |
 | Publisher | ASUSTeK Computer Inc. |
 | Signature |  |
 | Date |  |
@@ -54,12 +54,12 @@ sc.exe start AsIO.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | AsIO.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/436CCAB6F62FA2D29827916E054ADE7ACAE485B3DE1D3E5C6C62D3DEBF1480E7">436CCAB6F62FA2D29827916E054ADE7ACAE485B3DE1D3E5C6C62D3DEBF1480E7</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/436ccab6f62fa2d29827916e054ade7acae485b3de1d3e5c6c62d3debf1480e7">436ccab6f62fa2d29827916e054ade7acae485b3de1d3e5c6c62d3debf1480e7</a> |
 | Publisher | ASUSTeK Computer Inc. |
 | Signature |  |
 | Date |  |
@@ -69,12 +69,12 @@ sc.exe start AsIO.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | AsIO.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/B4D47EA790920A4531E3DF5A4B4B0721B7FEA6B49A35679F0652F1E590422602">B4D47EA790920A4531E3DF5A4B4B0721B7FEA6B49A35679F0652F1E590422602</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/b4d47ea790920a4531e3df5a4b4b0721b7fea6b49a35679f0652f1e590422602">b4d47ea790920a4531e3df5a4b4b0721b7fea6b49a35679f0652f1e590422602</a> |
 | Publisher | ASUSTeK Computer Inc. |
 | Signature |  |
 | Date |  |
@@ -84,12 +84,12 @@ sc.exe start AsIO.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | AsIO.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/DDE6F28B3F7F2ABBEE59D4864435108791631E9CB4CDFB1F178E5AA9859956D8">DDE6F28B3F7F2ABBEE59D4864435108791631E9CB4CDFB1F178E5AA9859956D8</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/dde6f28b3f7f2abbee59d4864435108791631e9cb4cdfb1f178e5aa9859956d8">dde6f28b3f7f2abbee59d4864435108791631e9cb4cdfb1f178e5aa9859956d8</a> |
 | Publisher | ASUSTeK Computer Inc. |
 | Signature |  |
 | Date |  |
@@ -99,13 +99,13 @@ sc.exe start AsIO.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asio.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

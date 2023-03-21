@@ -44,7 +44,7 @@ sc.exe start HwRwDrv.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/21CCDD306B5183C00ECFD0475B3152E7D94B921E858E59B68A03E925D1715F21">21CCDD306B5183C00ECFD0475B3152E7D94B921E858E59B68A03E925D1715F21</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/21ccdd306b5183c00ecfd0475b3152e7d94b921e858e59b68a03e925d1715f21">21ccdd306b5183c00ecfd0475b3152e7d94b921e858e59b68a03e925d1715f21</a> |
 | Publisher | Shuttle Inc. |
 | Signature |  |
 | Date |  |
@@ -54,13 +54,13 @@ sc.exe start HwRwDrv.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hwrwdrv.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

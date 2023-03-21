@@ -44,7 +44,7 @@ sc.exe start GLCKIO2.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/3A5EC83FE670E5E23AEF3AFA0A7241053F5B6BE5E6CA01766D6B5F9177183C25">3A5EC83FE670E5E23AEF3AFA0A7241053F5B6BE5E6CA01766D6B5F9177183C25</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/3a5ec83fe670e5e23aef3afa0a7241053f5b6be5e6ca01766d6b5f9177183c25">3a5ec83fe670e5e23aef3afa0a7241053f5b6be5e6ca01766d6b5f9177183c25</a> |
 | Publisher | ASUSTeK Computer Inc. |
 | Signature |  |
 | Date |  |
@@ -54,12 +54,12 @@ sc.exe start GLCKIO2.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | GLCKIO2.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/61A1BDDDD3C512E681818DEBB5BEE94DB701768FC25E674FCAD46592A3259BD0">61A1BDDDD3C512E681818DEBB5BEE94DB701768FC25E674FCAD46592A3259BD0</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/61a1bdddd3c512e681818debb5bee94db701768fc25e674fcad46592a3259bd0">61a1bdddd3c512e681818debb5bee94db701768fc25e674fcad46592a3259bd0</a> |
 | Publisher | ASUSTeK Computer Inc. |
 | Signature |  |
 | Date |  |
@@ -69,13 +69,13 @@ sc.exe start GLCKIO2.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/glckio2.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

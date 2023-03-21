@@ -44,7 +44,7 @@ sc.exe start AsrRapidStartDrv.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/0AAFA9F47ACF69D46C9542985994FF5321F00842A28DF2396D4A3076776A83CB">0AAFA9F47ACF69D46C9542985994FF5321F00842A28DF2396D4A3076776A83CB</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/0aafa9f47acf69d46c9542985994ff5321f00842a28df2396d4a3076776a83cb">0aafa9f47acf69d46c9542985994ff5321f00842a28df2396d4a3076776a83cb</a> |
 | Publisher | ASROCK Incorporation |
 | Signature |  |
 | Date |  |
@@ -54,13 +54,13 @@ sc.exe start AsrRapidStartDrv.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrrapidstartdrv.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

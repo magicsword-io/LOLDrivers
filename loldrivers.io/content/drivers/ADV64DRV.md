@@ -44,7 +44,7 @@ sc.exe start ADV64DRV.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/04A85E359525D662338CAE86C1E59B1D7AA9BD12B920E8067503723DC1E03162">04A85E359525D662338CAE86C1E59B1D7AA9BD12B920E8067503723DC1E03162</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/04a85e359525d662338cae86c1e59b1d7aa9bd12b920e8067503723dc1e03162">04a85e359525d662338cae86c1e59b1d7aa9bd12b920e8067503723dc1e03162</a> |
 | Publisher | FUJITSU LIMITED |
 | Signature |  |
 | Date | 01:30 AM 08/29/2006 |
@@ -54,13 +54,13 @@ sc.exe start ADV64DRV.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename | ADV64DRV.sys |
+| OriginalFilename | ADV64DRV.sys |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/adv64drv.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

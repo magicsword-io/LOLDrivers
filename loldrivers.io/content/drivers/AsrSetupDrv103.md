@@ -48,8 +48,8 @@ sc.exe start AsrSetupDrv103.sys
 | Filename | AsrSetupDrv103.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/0B6EC2AEDC518849A1C61A70B1F9FB068EDE2BC3">0B6EC2AEDC518849A1C61A70B1F9FB068EDE2BC3</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/0b6ec2aedc518849a1c61a70b1f9fb068ede2bc3">0b6ec2aedc518849a1c61a70b1f9fb068ede2bc3</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -59,12 +59,12 @@ sc.exe start AsrSetupDrv103.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | AsrSetupDrv103.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/461882BD59887617CADC1C7B2B22D0A45458C070">461882BD59887617CADC1C7B2B22D0A45458C070</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/461882bd59887617cadc1c7b2b22d0a45458c070">461882bd59887617cadc1c7b2b22d0a45458c070</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -74,12 +74,12 @@ sc.exe start AsrSetupDrv103.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | AsrSetupDrv103.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/A7948A4E9A3A1A9ED0E4E41350E422464D8313CD">A7948A4E9A3A1A9ED0E4E41350E422464D8313CD</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/a7948a4e9a3a1a9ed0e4e41350e422464d8313cd">a7948a4e9a3a1a9ed0e4e41350e422464d8313cd</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -89,12 +89,12 @@ sc.exe start AsrSetupDrv103.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | AsrSetupDrv103.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/F3CCE7E79AB5BD055F311BB3AC44A838779270B6">F3CCE7E79AB5BD055F311BB3AC44A838779270B6</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/f3cce7e79ab5bd055f311bb3ac44a838779270b6">f3cce7e79ab5bd055f311bb3ac44a838779270b6</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -104,13 +104,13 @@ sc.exe start AsrSetupDrv103.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrsetupdrv103.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

@@ -49,7 +49,7 @@ sc.exe start windows-xp-64.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/DFAEFD06B680F9EA837E7815FC1CC7D1F4CC375641AC850667AB20739F46AD22">DFAEFD06B680F9EA837E7815FC1CC7D1F4CC375641AC850667AB20739F46AD22</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/dfaefd06b680f9ea837e7815fc1cc7d1f4cc375641ac850667ab20739f46ad22">dfaefd06b680f9ea837e7815fc1cc7d1f4cc375641ac850667ab20739f46ad22</a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -59,13 +59,13 @@ sc.exe start windows-xp-64.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/windows-xp-64.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

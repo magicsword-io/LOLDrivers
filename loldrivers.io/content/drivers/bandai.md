@@ -48,8 +48,8 @@ sc.exe start bandai.sys
 | Filename | bandai.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/0F780B7ADA5DD8464D9F2CC537D973F5AC804E9C">0F780B7ADA5DD8464D9F2CC537D973F5AC804E9C</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/0f780b7ada5dd8464d9f2cc537d973f5ac804e9c">0f780b7ada5dd8464d9f2cc537d973f5ac804e9c</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -59,12 +59,12 @@ sc.exe start bandai.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | bandai.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/EA360A9F23BB7CF67F08B88E6A185A699F0C5410">EA360A9F23BB7CF67F08B88E6A185A699F0C5410</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/ea360a9f23bb7cf67f08b88e6a185a699f0c5410">ea360a9f23bb7cf67f08b88e6a185a699f0c5410</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -74,13 +74,13 @@ sc.exe start bandai.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bandai.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

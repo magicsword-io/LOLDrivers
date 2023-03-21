@@ -48,8 +48,8 @@ sc.exe start netfilterdrv.sys
 | Filename | netfilterdrv.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/E74B6DDA8BC53BC687FC21218BD34062A78D8467">E74B6DDA8BC53BC687FC21218BD34062A78D8467</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/e74b6dda8bc53bc687fc21218bd34062a78d8467">e74b6dda8bc53bc687fc21218bd34062a78d8467</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -59,12 +59,12 @@ sc.exe start netfilterdrv.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 | Filename | netfilterdrv.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/2C27ABBBBCF10DFB75AD79557E30ACE5ED314DF8">2C27ABBBBCF10DFB75AD79557E30ACE5ED314DF8</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/2c27abbbbcf10dfb75ad79557e30ace5ed314df8">2c27abbbbcf10dfb75ad79557e30ace5ed314df8</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | Publisher |  |
 | Signature |  |
 | Date |  |
@@ -74,13 +74,13 @@ sc.exe start netfilterdrv.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/netfilterdrv.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

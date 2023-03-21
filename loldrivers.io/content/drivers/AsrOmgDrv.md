@@ -44,7 +44,7 @@ sc.exe start AsrOmgDrv.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/950A4C0C772021CEE26011A92194F0E58D61588F77F2873AA0599DFF52A160C9">950A4C0C772021CEE26011A92194F0E58D61588F77F2873AA0599DFF52A160C9</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/950a4c0c772021cee26011a92194f0e58d61588f77f2873aa0599dff52a160c9">950a4c0c772021cee26011a92194f0e58d61588f77f2873aa0599dff52a160c9</a> |
 | Publisher | ASROCK Incorporation |
 | Signature |  |
 | Date |  |
@@ -54,13 +54,13 @@ sc.exe start AsrOmgDrv.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asromgdrv.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

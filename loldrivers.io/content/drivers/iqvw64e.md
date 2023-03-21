@@ -58,13 +58,13 @@ sc.exe start iqvw64e.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename | iQVW64.SYS |
+| OriginalFilename | iQVW64.SYS |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iqvw64e.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

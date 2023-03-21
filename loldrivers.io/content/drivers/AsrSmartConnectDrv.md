@@ -44,7 +44,7 @@ sc.exe start AsrSmartConnectDrv.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/47F08F7D30D824A8F4BB8A98916401A37C0FD8502DB308ABA91FE3112B892DCC">47F08F7D30D824A8F4BB8A98916401A37C0FD8502DB308ABA91FE3112B892DCC</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/47f08f7d30d824a8f4bb8a98916401a37c0fd8502db308aba91fe3112b892dcc">47f08f7d30d824a8f4bb8a98916401a37c0fd8502db308aba91fe3112b892dcc</a> |
 | Publisher | ASROCK Incorporation |
 | Signature |  |
 | Date |  |
@@ -54,13 +54,13 @@ sc.exe start AsrSmartConnectDrv.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrsmartconnectdrv.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 

@@ -44,7 +44,7 @@ sc.exe start AsrDrv101.sys
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/F40435488389B4FB3B945CA21A8325A51E1B5F80F045AB019748D0EC66056A8B">F40435488389B4FB3B945CA21A8325A51E1B5F80F045AB019748D0EC66056A8B</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/f40435488389b4fb3b945ca21a8325a51e1b5f80f045ab019748d0ec66056a8b">f40435488389b4fb3b945ca21a8325a51e1b5f80f045ab019748d0ec66056a8b</a> |
 | Publisher | ASROCK Incorporation |
 | Signature |  |
 | Date |  |
@@ -54,13 +54,13 @@ sc.exe start AsrDrv101.sys
 | ProductVersion |  |
 | FileVersion |  |
 | MachineType |  |
-| SOriginalFilename |  |
+| OriginalFilename |  |
 
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv101.sys.yml)
 
-*last_updated:* 2023-03-10
+*last_updated:* 2023-03-21
 
 
 
