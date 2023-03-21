@@ -85,33 +85,6 @@
         ]
     },
     {
-        "Name": "aswsnx.sys",
-        "Author": "Michael Haag",
-        "Created": "2023-01-09",
-        "MitreID": "T1068",
-        "Category": "vulnerable driver",
-        "Verified": "FALSE",
-        "Commands": {
-            "Command": "sc.exe create aswsnx.sys binPath=C:\\windows\\temp\\aswsnx.sys type=kernel\nsc.exe start aswsnx.sys",
-            "Description": "",
-            "Usecase": "Elevate privileges",
-            "Privileges": "kernel",
-            "OperatingSystem": "Windows 10"
-        },
-        "Resources": [
-            " https://github.com/jbaines-r7/dellicious",
-            " https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/",
-            "https://artemonsecurity.blogspot.com/2016/10/remsec-driver-analysis-part-3.html?view=sidebar"
-        ],
-        "driver_description": "https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/",
-        "Acknowledgement": {
-            "Person": "",
-            "Handle": ""
-        },
-        "Detection": [],
-        "KnownVulnerableSamples": []
-    },
-    {
         "Name": "GVCIDrv64.sys",
         "Author": "Michael Haag",
         "Created": "2023-01-09",
