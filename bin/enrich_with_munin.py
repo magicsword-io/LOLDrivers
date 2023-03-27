@@ -20,26 +20,32 @@ for file_name in os.listdir('yaml'):
         # Load the YAML data from the file
         with open(file_path, 'r') as f:
             yaml_data = yaml.load(f, Loader=yaml.FullLoader)
-        # Loop through each known vulnerable sample in the YAML data
-        enriched = False
-        for index, sample in enumerate(yaml_data['KnownVulnerableSamples']):
-            # Add/update the missing hashes, signer, and vendor results in the YAML data
-            for item in data:
-                if sample.get('SHA256') == item.get('sha256', '') or sample.get('SHA1') == item.get('sha1', '') or sample.get('MD5') == item.get('md5', ''):
-                    sample['SHA256'] = sample.get('SHA256', item.get('sha256', ''))
-                    sample['SHA1'] = sample.get('SHA1', item.get('sha1', ''))
-                    sample['MD5'] = sample.get('MD5', item.get('md5', ''))
-                    sample['Signature'] = sample.get('Signature', item.get('signer', ''))
-                    sample['VendorResults'] = sample.get('VendorResults', item.get('vendor_results', {}))
-                    enriched = True
-                    # Update the sample in the yaml_data
-                    yaml_data['KnownVulnerableSamples'][index] = sample
-                    break
 
-        if args.verbose and enriched:
-            print(f"Enriched: {file_path}")
+        # Check and update hashes in YAML data
+        updated = False
+        for entry in yaml_data['KnownVulnerableSamples']:
+            for vt_data in data:
+                # Check if hashes match and update the missing fields accordingly
+                hash_match = (
+                    entry.get('SHA256') == vt_data['sha256']
+                    or entry.get('SHA1') == vt_data['sha1']
+                    or entry.get('MD5') == vt_data['md5']
+                )
+                if hash_match:
+                    updated = True
+                    if args.verbose:
+                        print(f"Updating file: {file_path}")
+                    if 'MD5' not in entry or not entry['MD5']:
+                        entry['MD5'] = vt_data['md5']
+                    if 'SHA1' not in entry or not entry['SHA1']:
+                        entry['SHA1'] = vt_data['sha1']
+                    if 'SHA256' not in entry or not entry['SHA256']:
+                        entry['SHA256'] = vt_data['sha256']
+                    if 'Signature' not in entry or not entry['Signature']:
+                        entry['Signature'] = vt_data['signer']
 
-        # Save the updated YAML data to the file
-        with open(file_path, 'w') as f:
-            yaml.dump(yaml_data, f)
+        # Save the updated YAML data back to the file
+        if updated:
+            with open(file_path, 'w') as f:
+                yaml.dump(yaml_data, f, sort_keys=False)
 
