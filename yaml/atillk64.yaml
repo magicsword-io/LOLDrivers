@@ -1,36 +1,36 @@
-Name: atillk64.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create atillk64.sys binPath=C:\windows\temp\atillk64.sys type=kernel
 
     sc.exe start atillk64.sys'
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-driver_description: https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
 KnownVulnerableSamples:
-- Filename: atillk64.sys
+- Company: ''
+  Date: ''
+  Description: ATI Diagnostics Hardware Abstraction Sys
+  FileVersion: ''
+  Filename: atillk64.sys
   MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: '"ATI Technologies, Inc"'
   SHA1: ''
   SHA256: 5c04c274a708c9a7d993e33be3ea9e6119dc29527a767410dbaf93996f87369a
   Signature: ''
-  Date: ''
-  Publisher: '"ATI Technologies, Inc"'
-  Company: ''
-  Description: ATI Diagnostics Hardware Abstraction Sys
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+MitreID: T1068
+Name: atillk64.sys
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+Verified: 'TRUE'
+driver_description: https://github.com/namazso/physmem_drivers

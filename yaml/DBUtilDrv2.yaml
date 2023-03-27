@@ -1,51 +1,73 @@
-Name: DBUtilDrv2.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create DBUtilDrv2.sys binPath=C:\windows\temp\DBUtilDrv2.sys type=kernel
 
     sc.exe start DBUtilDrv2.sys'
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/jbaines-r7/dellicious'
-- ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
-driver_description: https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
 KnownVulnerableSamples:
-- Filename: DBUtilDrv2.sys
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: DBUtilDrv2.sys
   MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: 90a76945fd2fa45fab2b7bcfdaf6563595f94891
   SHA256: ''
   Signature: ''
+  VendorResults:
+    CrowdStrike: '-'
+    ESET-NOD32: '-'
+    F-Secure: '-'
+    GData: '-'
+    Kaspersky: '-'
+    McAfee: '-'
+    Microsoft: '-'
+    Sophos: '-'
+    Symantec: '-'
+    TrendMicro: '-'
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: DBUtilDrv2.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: DBUtilDrv2.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: b03b1996a40bfea72e4584b82f6b845c503a9748
   SHA256: ''
   Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+  VendorResults:
+    CrowdStrike: '-'
+    ESET-NOD32: '-'
+    F-Secure: '-'
+    GData: '-'
+    Kaspersky: '-'
+    McAfee: '-'
+    Microsoft: '-'
+    Sophos: '-'
+    Symantec: '-'
+    TrendMicro: '-'
+MitreID: T1068
+Name: DBUtilDrv2.sys
+Resources:
+- ' https://github.com/jbaines-r7/dellicious'
+- ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
+Verified: 'TRUE'
+driver_description: https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/

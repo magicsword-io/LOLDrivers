@@ -1,50 +1,50 @@
-Name: ALSysIO64.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create ALSysIO64.sys binPath=C:\windows\temp\ALSysIO64.sys type=kernel
 
     sc.exe start ALSysIO64.sys'
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-driver_description: https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
 KnownVulnerableSamples:
-- Filename: ALSysIO64.sys
+- Company: ''
+  Date: ''
+  Description: ALSysIO
+  FileVersion: ''
+  Filename: ALSysIO64.sys
   MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: Artur Liberman
   SHA1: ''
   SHA256: 7196187fb1ef8d108b380d37b2af8efdeb3ca1f6eefd37b5dc114c609147216d
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: Artur Liberman
-  Company: ''
   Description: ALSysIO
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: ALSysIO64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: ALSysIO64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: Artur Liberman
   SHA1: ''
   SHA256: 7f375639a0df7fe51e5518cf87c3f513c55bc117db47d28da8c615642eb18bfa
   Signature: ''
-  Date: ''
-  Publisher: Artur Liberman
-  Company: ''
-  Description: ALSysIO
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+MitreID: T1068
+Name: ALSysIO64.sys
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+Verified: 'TRUE'
+driver_description: https://github.com/namazso/physmem_drivers

@@ -1,38 +1,38 @@
-Name: ndislan.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-02-28'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create ndislan.sys binPath=C:\windows\temp\ndislan.sys type=kernel
 
     sc.exe start ndislan.sys'
   Description: Driver used in the Daxin malware campaign.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
-- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
-driver_description: ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-02-28'
 Detection: []
 KnownVulnerableSamples:
-- Filename: ndislan.sys
+- Company: Microsoft Corporation
+  Date: 4:49 PM 10/12/2012
+  Description: MS LAN Driver
+  FileVersion: 6.1.7600.1421
+  Filename: ndislan.sys
   MD5: ''
+  MachineType: 64-bit
+  OriginalFilename: ''
+  Product: "Microsoft\xAB Windows\xAB Operating System"
+  ProductVersion: 6.1.7600.1421
+  Publisher: Anhua Xinda (Beijing) Technology Co., Ltd.
   SHA1: ''
   SHA256: b0eb4d999e4e0e7c2e33ff081e847c87b49940eb24a9e0794c6aa9516832c427
   Signature: A required certificate is not within its validity period when verifying
     against the current system clock or the timestamp in the signed file.
-  Date: 4:49 PM 10/12/2012
-  Publisher: Anhua Xinda (Beijing) Technology Co., Ltd.
-  Company: Microsoft Corporation
-  Description: MS LAN Driver
-  Product: "Microsoft\xAB Windows\xAB Operating System"
-  ProductVersion: 6.1.7600.1421
-  FileVersion: 6.1.7600.1421
-  MachineType: 64-bit
-  OriginalFilename: ''
+MitreID: T1068
+Name: ndislan.sys
+Resources:
+- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+Verified: 'TRUE'
+driver_description: ''

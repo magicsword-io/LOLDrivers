@@ -1,36 +1,36 @@
-Name: AsrDrv101.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create AsrDrv101.sys binPath=C:\windows\temp\AsrDrv101.sys type=kernel
 
     sc.exe start AsrDrv101.sys'
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-driver_description: https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
 KnownVulnerableSamples:
-- Filename: AsrDrv101.sys
+- Company: ''
+  Date: ''
+  Description: ASRock IO Driver
+  FileVersion: ''
+  Filename: AsrDrv101.sys
   MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ASROCK Incorporation
   SHA1: ''
   SHA256: f40435488389b4fb3b945ca21a8325a51e1b5f80f045ab019748d0ec66056a8b
   Signature: ''
-  Date: ''
-  Publisher: ASROCK Incorporation
-  Company: ''
-  Description: ASRock IO Driver
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+MitreID: T1068
+Name: AsrDrv101.sys
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+Verified: 'TRUE'
+driver_description: https://github.com/namazso/physmem_drivers

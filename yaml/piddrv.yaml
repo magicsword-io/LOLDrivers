@@ -1,50 +1,52 @@
-Name: piddrv.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: 'sc.exe create piddrv.sys binPath=C:\windows\temp\piddrv.sys type=kernel
 
     sc.exe start piddrv.sys'
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-driver_description: https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
 KnownVulnerableSamples:
-- Filename: piddrv.sys
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: piddrv.sys
   MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: a7d827a41b2c4b7638495cd1d77926f1ba902978
   SHA256: ''
   Signature: ''
+  VendorResults: {}
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: piddrv.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: piddrv.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: 877c6c36a155109888fe1f9797b93cb30b4957ef
   SHA256: ''
   Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+  VendorResults: {}
+MitreID: T1068
+Name: piddrv.sys
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+Verified: 'FALSE'
+driver_description: https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules

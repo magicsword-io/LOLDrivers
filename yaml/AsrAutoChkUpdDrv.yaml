@@ -1,37 +1,37 @@
-Name: AsrAutoChkUpdDrv.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create AsrAutoChkUpdDrv.sys binPath=C:\windows\temp\AsrAutoChkUpdDrv.sys
     type=kernel
 
     sc.exe start AsrAutoChkUpdDrv.sys'
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-driver_description: https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
 KnownVulnerableSamples:
-- Filename: AsrAutoChkUpdDrv.sys
+- Company: ''
+  Date: ''
+  Description: AsrAutoChkUpdDrv Driver
+  FileVersion: ''
+  Filename: AsrAutoChkUpdDrv.sys
   MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ASROCK Incorporation
   SHA1: ''
   SHA256: 2aa1b08f47fbb1e2bd2e4a492f5d616968e703e1359a921f62b38b8e4662f0c4
   Signature: ''
-  Date: ''
-  Publisher: ASROCK Incorporation
-  Company: ''
-  Description: AsrAutoChkUpdDrv Driver
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+MitreID: T1068
+Name: AsrAutoChkUpdDrv.sys
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+Verified: 'TRUE'
+driver_description: https://github.com/namazso/physmem_drivers

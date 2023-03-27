@@ -1,9 +1,8 @@
-Name: gftkyj64.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-03-04'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create gftkyj64.sys binPath=C:\windows\temp\gftkyj64.sys type=kernel
 
@@ -17,28 +16,29 @@ Commands:
     \ number (75361). Today, MSRC released an associated advisory under ADV220005.\n\
     This research is being released alongside Mandiant, a SentinelOne technology and\
     \ incident response partner. "
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.sentinelone.com/labs/driving-through-defenses-targeted-attacks-leverage-signed-malicious-microsoft-drivers/
-driver_description: ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-03-04'
 Detection: []
 KnownVulnerableSamples:
-- Filename: gftkyj64.sys
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: gftkyj64.sys
   MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: ''
   SHA256: 9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c
   Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+MitreID: T1068
+Name: gftkyj64.sys
+Resources:
+- https://www.sentinelone.com/labs/driving-through-defenses-targeted-attacks-leverage-signed-malicious-microsoft-drivers/
+Verified: 'TRUE'
+driver_description: ''

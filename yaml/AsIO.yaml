@@ -1,78 +1,78 @@
-Name: AsIO.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create AsIO.sys binPath=C:\windows\temp\AsIO.sys type=kernel
 
     sc.exe start AsIO.sys'
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-driver_description: https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
 KnownVulnerableSamples:
-- Filename: AsIO.sys
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: AsIO.sys
   MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ASUSTeK Computer Inc.
   SHA1: ''
   SHA256: 2da330a2088409efc351118445a824f11edbe51cf3d653b298053785097fe40e
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: ASUSTeK Computer Inc.
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: AsIO.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: AsIO.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ASUSTeK Computer Inc.
   SHA1: ''
   SHA256: 436ccab6f62fa2d29827916e054ade7acae485b3de1d3e5c6c62d3debf1480e7
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: ASUSTeK Computer Inc.
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: AsIO.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: AsIO.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ASUSTeK Computer Inc.
   SHA1: ''
   SHA256: b4d47ea790920a4531e3df5a4b4b0721b7fea6b49a35679f0652f1e590422602
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: ASUSTeK Computer Inc.
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: AsIO.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: AsIO.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ASUSTeK Computer Inc.
   SHA1: ''
   SHA256: dde6f28b3f7f2abbee59d4864435108791631e9cb4cdfb1f178e5aa9859956d8
   Signature: ''
-  Date: ''
-  Publisher: ASUSTeK Computer Inc.
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+MitreID: T1068
+Name: AsIO.sys
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+Verified: 'TRUE'
+driver_description: https://github.com/namazso/physmem_drivers

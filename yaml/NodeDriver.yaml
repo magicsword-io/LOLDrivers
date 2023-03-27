@@ -1,36 +1,60 @@
-Name: NodeDriver.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-03-02'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create NodeDriver.sys binPath=C:\windows\temp\NodeDriver.sys type=kernel
 
     sc.exe start NodeDriver.sys'
   Description: Driver categorized as POORTRY by Mandiant.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-driver_description: ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-03-02'
 Detection: []
 KnownVulnerableSamples:
-- Filename: NodeDriver.sys
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: NodeDriver.sys
   MD5: ee6b1a79cb6641aa44c762ee90786fe0
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: ''
   SHA256: ''
   Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+  VendorResults:
+    CrowdStrike: win/malicious_confidence_100% (W)
+    ESET-NOD32: a variant of Win64/Rootkit.Agent.CM.gen
+    F-Secure: '-'
+    GData: '-'
+    Kaspersky: HEUR:Trojan.Win64.MalDrv.gen
+    McAfee: '-'
+    Microsoft: Trojan:Win64/RootkitDrv!MSR
+    Sophos: '-'
+    Symantec: '-'
+    TrendMicro: TROJ_FRS.VSNTLH22
+MitreID: T1068
+Name: NodeDriver.sys
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+Signer: Microsoft Windows Hardware Compatibility Publisher; Microsoft Windows Third
+  Party Component CA 2014; Microsoft Root Certificate Authority 2010
+VendorResults:
+  CrowdStrike: win/malicious_confidence_100% (W)
+  ESET-NOD32: a variant of Win64/Rootkit.Agent.CM.gen
+  F-Secure: '-'
+  GData: '-'
+  Kaspersky: HEUR:Trojan.Win64.MalDrv.gen
+  McAfee: '-'
+  Microsoft: Trojan:Win64/RootkitDrv!MSR
+  Sophos: '-'
+  Symantec: '-'
+  TrendMicro: TROJ_FRS.VSNTLH22
+Verified: 'TRUE'
+driver_description: ''

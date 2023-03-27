@@ -1,120 +1,137 @@
-Name: asrdrv104.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: 'sc.exe create asrdrv104.sys binPath=C:\windows\temp\asrdrv104.sys type=kernel
 
     sc.exe start asrdrv104.sys'
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-driver_description: https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
 KnownVulnerableSamples:
-- Filename: asrdrv104.sys
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: asrdrv104.sys
   MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: 6c1bb3a72ebfb5359b9e22ca44d0a1ff825a68f2
   SHA256: ''
   Signature: ''
+  VendorResults: {}
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: asrdrv104.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: asrdrv104.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: e039c9dd21494dbd073b4823fc3a17fbb951ec6c
   SHA256: ''
   Signature: ''
+  VendorResults: {}
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: asrdrv104.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: asrdrv104.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: 7eec3a1edf3b021883a4b5da450db63f7c0afeeb
   SHA256: ''
   Signature: ''
+  VendorResults: {}
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: asrdrv104.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: asrdrv104.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: e5021a98e55d514e2376aa573d143631e5ee1c13
   SHA256: ''
   Signature: ''
+  VendorResults: {}
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: asrdrv104.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: asrdrv104.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: 729a8675665c61824f22f06c7b954be4d14b52c4
   SHA256: ''
   Signature: ''
+  VendorResults:
+    CrowdStrike: '-'
+    ESET-NOD32: '-'
+    F-Secure: '-'
+    GData: '-'
+    Kaspersky: '-'
+    McAfee: '-'
+    Microsoft: '-'
+    Sophos: '-'
+    Symantec: '-'
+    TrendMicro: '-'
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: asrdrv104.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: asrdrv104.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: 2b4d0dead4c1a7cc95543748b3565cfa802e5256
   SHA256: ''
   Signature: ''
+  VendorResults: {}
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: asrdrv104.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: asrdrv104.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: 4a7d66874a0472a47087fabaa033a85d47413379
   SHA256: ''
   Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+  VendorResults: {}
+MitreID: T1068
+Name: asrdrv104.sys
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+Verified: 'FALSE'
+driver_description: https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules

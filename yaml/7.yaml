@@ -1,36 +1,60 @@
-Name: 7.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-03-04'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create 7.sys binPath=C:\windows\temp\7.sys type=kernel
 
     sc.exe start 7.sys'
   Description: Driver categorized as POORTRY by Mandiant.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-driver_description: ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-03-04'
 Detection: []
 KnownVulnerableSamples:
-- Filename: 7.sys
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: 7.sys
   MD5: dc564bac7258e16627b9de0ce39fae25
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: ''
   SHA256: ''
   Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+  VendorResults:
+    CrowdStrike: win/malicious_confidence_100% (W)
+    ESET-NOD32: a variant of Win32/Packed.VMProtect.ACR
+    F-Secure: '-'
+    GData: Trojan.Agent.GBTY
+    Kaspersky: HEUR:Trojan.Win64.MalDrv.gen
+    McAfee: Artemis!DC564BAC7258
+    Microsoft: Trojan:Win64/RootkitDrv!MSR
+    Sophos: Troj/Rootkit-VE
+    Symantec: Trojan.Certbypass
+    TrendMicro: TROJ_GEN.R002C0DKO22
+MitreID: T1068
+Name: 7.sys
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+Signer: Microsoft Windows Hardware Compatibility Publisher; Microsoft Windows Third
+  Party Component CA 2014; Microsoft Root Certificate Authority 2010
+VendorResults:
+  CrowdStrike: win/malicious_confidence_100% (W)
+  ESET-NOD32: a variant of Win32/Packed.VMProtect.ACR
+  F-Secure: '-'
+  GData: Trojan.Agent.GBTY
+  Kaspersky: HEUR:Trojan.Win64.MalDrv.gen
+  McAfee: Artemis!DC564BAC7258
+  Microsoft: Trojan:Win64/RootkitDrv!MSR
+  Sophos: Troj/Rootkit-VE
+  Symantec: Trojan.Certbypass
+  TrendMicro: TROJ_GEN.R002C0DKO22
+Verified: 'TRUE'
+driver_description: ''

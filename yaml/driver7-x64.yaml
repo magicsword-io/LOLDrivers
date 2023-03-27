@@ -1,37 +1,37 @@
-Name: driver7-x64.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create driver7-x64.sys binPath=C:\windows\temp\driver7-x64.sys
     type=kernel
 
     sc.exe start driver7-x64.sys'
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/Chigusa0w0/AsusDriversPrivEscala'
-driver_description: https://github.com/Chigusa0w0/AsusDriversPrivEscala
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
 KnownVulnerableSamples:
-- Filename: driver7-x64.sys
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: driver7-x64.sys
   MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: ''
   SHA256: 771a8d05f1af6214e0ef0886662be500ee910ab99f0154227067fddcfe08a3dd
   Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+MitreID: T1068
+Name: driver7-x64.sys
+Resources:
+- ' https://github.com/Chigusa0w0/AsusDriversPrivEscala'
+Verified: 'TRUE'
+driver_description: https://github.com/Chigusa0w0/AsusDriversPrivEscala

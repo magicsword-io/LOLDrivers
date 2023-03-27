@@ -1,38 +1,38 @@
-Name: wantd.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-02-28'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create wantd.sys binPath=C:\windows\temp\wantd.sys type=kernel
 
     sc.exe start wantd.sys'
   Description: Driver used in the Daxin malware campaign.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
-- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
-driver_description: ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-02-28'
 Detection: []
 KnownVulnerableSamples:
-- Filename: wantd.sys
+- Company: Microsoft Corporation
+  Date: 11:59 PM 11/27/2013
+  Description: WAN Transport Driver
+  FileVersion: 6.1.7600.1172
+  Filename: wantd.sys
   MD5: ''
+  MachineType: 64-bit
+  OriginalFilename: ''
+  Product: Microsoft Windows Operating System
+  ProductVersion: 6.1.7600.1172
+  Publisher: Anhua Xinda (Beijing) Technology Co., Ltd.
   SHA1: ''
   SHA256: 06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4
   Signature: A required certificate is not within its validity period when verifying
     against the current system clock or the timestamp in the signed file.
-  Date: 11:59 PM 11/27/2013
-  Publisher: Anhua Xinda (Beijing) Technology Co., Ltd.
-  Company: Microsoft Corporation
-  Description: WAN Transport Driver
-  Product: Microsoft Windows Operating System
-  ProductVersion: 6.1.7600.1172
-  FileVersion: 6.1.7600.1172
-  MachineType: 64-bit
-  OriginalFilename: ''
+MitreID: T1068
+Name: wantd.sys
+Resources:
+- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+Verified: 'TRUE'
+driver_description: ''

@@ -1,36 +1,36 @@
-Name: ATSZIO.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create ATSZIO.sys binPath=C:\windows\temp\ATSZIO.sys type=kernel
 
     sc.exe start ATSZIO.sys'
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c'
-driver_description: https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
 KnownVulnerableSamples:
-- Filename: ATSZIO.sys
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: ATSZIO.sys
   MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: ''
   SHA256: 01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece
   Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+MitreID: T1068
+Name: ATSZIO.sys
+Resources:
+- ' https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c'
+Verified: 'TRUE'
+driver_description: https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c

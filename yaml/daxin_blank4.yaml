@@ -1,38 +1,38 @@
-Name: daxin_blank4.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-02-28'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create daxin_blank4.sys binPath=C:\windows\temp\daxin_blank4.sys
     type=kernel
 
     sc.exe start daxin_blank4.sys'
   Description: Driver used in the Daxin malware campaign.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
-- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
-driver_description: ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-02-28'
 Detection: []
 KnownVulnerableSamples:
-- Filename: daxin_blank4.sys
+- Company: n/a
+  Date: 8:42 AM 4/20/2010
+  Description: n/a
+  FileVersion: n/a
+  Filename: daxin_blank4.sys
   MD5: ''
+  MachineType: 32-bit
+  OriginalFilename: ''
+  Product: n/a
+  ProductVersion: n/a
+  Publisher: n/a
   SHA1: ''
   SHA256: 8dafe5f3d0527b66f6857559e3c81872699003e0f2ffda9202a1b5e29db2002e
   Signature: Unsigned
-  Date: 8:42 AM 4/20/2010
-  Publisher: n/a
-  Company: n/a
-  Description: n/a
-  Product: n/a
-  ProductVersion: n/a
-  FileVersion: n/a
-  MachineType: 32-bit
-  OriginalFilename: ''
+MitreID: T1068
+Name: daxin_blank4.sys
+Resources:
+- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+Verified: 'TRUE'
+driver_description: ''

@@ -1,36 +1,60 @@
-Name: POORTRY2.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-03-04'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create POORTRY2.sys binPath=C:\windows\temp\POORTRY2.sys type=kernel
 
     sc.exe start POORTRY2.sys'
   Description: Driver categorized as POORTRY by Mandiant.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-driver_description: ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-03-04'
 Detection: []
 KnownVulnerableSamples:
-- Filename: POORTRY2.sys
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: POORTRY2.sys
   MD5: b164daf106566f444dfb280d743bc2f7
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: ''
   SHA256: ''
   Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+  VendorResults:
+    CrowdStrike: win/malicious_confidence_100% (W)
+    ESET-NOD32: Win32/Rootkit.Agent.OED
+    F-Secure: '-'
+    GData: Trojan.Agent.GBUF
+    Kaspersky: HEUR:Trojan.Win64.MalDrv.gen
+    McAfee: '-'
+    Microsoft: Trojan:Win32/RootkitDrv!MSR
+    Sophos: Mal/Generic-R
+    Symantec: '-'
+    TrendMicro: TROJ_GEN.R03BC0DKR22
+MitreID: T1068
+Name: POORTRY2.sys
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+Signer: Microsoft Windows Hardware Compatibility Publisher; Microsoft Windows Third
+  Party Component CA 2014; Microsoft Root Certificate Authority 2010
+VendorResults:
+  CrowdStrike: win/malicious_confidence_100% (W)
+  ESET-NOD32: Win32/Rootkit.Agent.OED
+  F-Secure: '-'
+  GData: Trojan.Agent.GBUF
+  Kaspersky: HEUR:Trojan.Win64.MalDrv.gen
+  McAfee: '-'
+  Microsoft: Trojan:Win32/RootkitDrv!MSR
+  Sophos: Mal/Generic-R
+  Symantec: '-'
+  TrendMicro: TROJ_GEN.R03BC0DKR22
+Verified: 'TRUE'
+driver_description: ''

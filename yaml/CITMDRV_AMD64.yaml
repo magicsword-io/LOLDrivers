@@ -1,247 +1,247 @@
-Name: CITMDRV_AMD64.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys
     type=kernel
 
     sc.exe start CITMDRV_AMD64.sys'
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-driver_description: https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
 KnownVulnerableSamples:
-- Filename: CITMDRV_AMD64.sys
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: CITMDRV_AMD64.sys
   MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: IBM Polska Sp. z o.o.
   SHA1: ''
   SHA256: 29e0062a017a93b2f2f5207a608a96df4d554c5de976bd0276c2590a03bd3e94
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: IBM Polska Sp. z o.o.
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: CITMDRV_AMD64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: CITMDRV_AMD64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: IBM Polska Sp. z o.o.
   SHA1: ''
   SHA256: 45abdbcd4c0916b7d9faaf1cd08543a3a5178871074628e0126a6eda890d26e0
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: IBM Polska Sp. z o.o.
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: CITMDRV_AMD64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: CITMDRV_AMD64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: IBM Polska Sp. z o.o.
   SHA1: ''
   SHA256: 50db5480d0392a7dd6ab5df98389dc24d1ed1e9c98c9c35964b19dabcd6dc67f
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: IBM Polska Sp. z o.o.
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: CITMDRV_AMD64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: CITMDRV_AMD64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: IBM Polska Sp. z o.o.
   SHA1: ''
   SHA256: 607dc4c75ac7aef82ae0616a453866b3b358c6cf5c8f9d29e4d37f844306b97c
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: IBM Polska Sp. z o.o.
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: CITMDRV_AMD64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: CITMDRV_AMD64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: IBM Polska Sp. z o.o.
   SHA1: ''
   SHA256: 61d6e40601fa368800980801a662a5b3b36e3c23296e8ae1c85726a56ef18cc8
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: IBM Polska Sp. z o.o.
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: CITMDRV_AMD64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: CITMDRV_AMD64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: IBM Polska Sp. z o.o.
   SHA1: ''
   SHA256: 74a846c61adc53692d3040aff4c1916f32987ad72b07fe226e9e7dbeff1036c4
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: IBM Polska Sp. z o.o.
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: CITMDRV_AMD64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: CITMDRV_AMD64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: IBM Polska Sp. z o.o.
   SHA1: ''
   SHA256: 76fb4deaee57ef30e56c382c92abffe2cf616d08dbecb3368c8ee6b02e59f303
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: IBM Polska Sp. z o.o.
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: CITMDRV_AMD64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: CITMDRV_AMD64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: IBM Polska Sp. z o.o.
   SHA1: ''
   SHA256: 81939e5c12bd627ff268e9887d6fb57e95e6049f28921f3437898757e7f21469
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: IBM Polska Sp. z o.o.
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: CITMDRV_AMD64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: CITMDRV_AMD64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: IBM Polska Sp. z o.o.
   SHA1: ''
   SHA256: 9790a7b9d624b2b18768bb655dda4a05a9929633cef0b1521e79e40d7de0a05b
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: IBM Polska Sp. z o.o.
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: CITMDRV_AMD64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: CITMDRV_AMD64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: IBM Polska Sp. z o.o.
   SHA1: ''
   SHA256: 9a1d66036b0868bbb1b2823209fedea61a301d5dd245f8e7d390bd31e52d663e
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: IBM Polska Sp. z o.o.
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: CITMDRV_AMD64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: CITMDRV_AMD64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: IBM Polska Sp. z o.o.
   SHA1: ''
   SHA256: aa9ab1195dc866270e984f1bed5e1358d6ef24c515dfdb6c2a92d1e1b94bf608
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: IBM Polska Sp. z o.o.
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: CITMDRV_AMD64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: CITMDRV_AMD64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: IBM Polska Sp. z o.o.
   SHA1: ''
   SHA256: af095de15a16255ca1b2c27dad365dff9ac32d2a75e8e288f5a1307680781685
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: IBM Polska Sp. z o.o.
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: CITMDRV_AMD64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: CITMDRV_AMD64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: IBM Polska Sp. z o.o.
   SHA1: ''
   SHA256: d5586dc1e61796a9ae5e5d1ced397874753056c3df2eb963a8916287e1929a71
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: IBM Polska Sp. z o.o.
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: CITMDRV_AMD64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: CITMDRV_AMD64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: IBM Polska Sp. z o.o.
   SHA1: ''
   SHA256: d8459f7d707c635e2c04d6d6d47b63f73ba3f6629702c7a6e0df0462f6478ae2
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: IBM Polska Sp. z o.o.
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: CITMDRV_AMD64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: CITMDRV_AMD64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: IBM Polska Sp. z o.o.
   SHA1: ''
   SHA256: e81230217988f3e7ec6f89a06d231ec66039bdba340fd8ebb2bbb586506e3293
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: IBM Polska Sp. z o.o.
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: CITMDRV_AMD64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: CITMDRV_AMD64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: IBM Polska Sp. z o.o.
   SHA1: ''
   SHA256: f88ebb633406a086d9cca6bc8b66a4ea940c5476529f9033a9e0463512a23a57
   Signature: ''
-  Date: ''
-  Publisher: IBM Polska Sp. z o.o.
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+MitreID: T1068
+Name: CITMDRV_AMD64.sys
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+Verified: 'TRUE'
+driver_description: https://github.com/namazso/physmem_drivers

@@ -1,37 +1,37 @@
-Name: AsrRapidStartDrv.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create AsrRapidStartDrv.sys binPath=C:\windows\temp\AsrRapidStartDrv.sys
     type=kernel
 
     sc.exe start AsrRapidStartDrv.sys'
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-driver_description: https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
 KnownVulnerableSamples:
-- Filename: AsrRapidStartDrv.sys
+- Company: ''
+  Date: ''
+  Description: RW-Everything Read & Write Driver
+  FileVersion: ''
+  Filename: AsrRapidStartDrv.sys
   MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ASROCK Incorporation
   SHA1: ''
   SHA256: 0aafa9f47acf69d46c9542985994ff5321f00842a28df2396d4a3076776a83cb
   Signature: ''
-  Date: ''
-  Publisher: ASROCK Incorporation
-  Company: ''
-  Description: RW-Everything Read & Write Driver
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+MitreID: T1068
+Name: AsrRapidStartDrv.sys
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+Verified: 'TRUE'
+driver_description: https://github.com/namazso/physmem_drivers

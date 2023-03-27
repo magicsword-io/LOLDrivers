@@ -1,9 +1,8 @@
-Name: RTCore64.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel
 
@@ -14,47 +13,48 @@ Commands:
     execution under high privileges, and information disclosure. These signed drivers
     can also be used to bypass the Microsoft driver-signing policy to deploy malicious
     code.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://news.sophos.com/en-us/2022/10/04/blackbyte-ransomware-returns/
-driver_description: https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
 KnownVulnerableSamples:
-- Filename: RTCore64.sys
+- Company: N/A
+  Date: N/A
+  Description: N/A
+  FileVersion: N/A
+  Filename: RTCore64.sys
   MD5: ''
+  MachineType: 'x64
+
+    x32'
+  OriginalFilename: ''
+  Product: N/A
+  ProductVersion: N/A
+  Publisher: N/A
   SHA1: ''
   SHA256: 01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd
   Signature: N/A
+- Company: N/A
   Date: N/A
-  Publisher: N/A
-  Company: N/A
   Description: N/A
-  Product: N/A
-  ProductVersion: N/A
   FileVersion: N/A
+  Filename: RTCore64.sys
+  MD5: ''
   MachineType: 'x64
 
     x32'
   OriginalFilename: ''
-- Filename: RTCore64.sys
-  MD5: ''
+  Product: N/A
+  ProductVersion: N/A
+  Publisher: N/A
   SHA1: ''
   SHA256: cdd2a4575a46bada4837a6153a79c14d60ee3129830717ef09e0e3efd9d00812
   Signature: N/A
-  Date: N/A
-  Publisher: N/A
-  Company: N/A
-  Description: N/A
-  Product: N/A
-  ProductVersion: N/A
-  FileVersion: N/A
-  MachineType: 'x64
-
-    x32'
-  OriginalFilename: ''
+MitreID: T1068
+Name: RTCore64.sys
+Resources:
+- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
+- https://news.sophos.com/en-us/2022/10/04/blackbyte-ransomware-returns/
+Verified: 'TRUE'
+driver_description: https://github.com/elastic/protections-artifacts/search?q=VulnDriver

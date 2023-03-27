@@ -1,38 +1,38 @@
-Name: EneTechIo64.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create EneTechIo64.sys binPath=C:\windows\temp\EneTechIo64.sys
     type=kernel
 
     sc.exe start EneTechIo64.sys'
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c'
-- https://github.com/hfiref0x/KDU/releases/tag/v1.2.0
-driver_description: https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
 KnownVulnerableSamples:
-- Filename: EneTechIo64.sys
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: EneTechIo64.sys
   MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: ''
   SHA256: 06bda5a1594f7121acd2efe38ccb617fbc078bb9a70b665a5f5efd70e3013f50
   Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+MitreID: T1068
+Name: EneTechIo64.sys
+Resources:
+- ' https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c'
+- https://github.com/hfiref0x/KDU/releases/tag/v1.2.0
+Verified: 'TRUE'
+driver_description: https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c

@@ -1,50 +1,50 @@
-Name: GLCKIO2.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create GLCKIO2.sys binPath=C:\windows\temp\GLCKIO2.sys type=kernel
 
     sc.exe start GLCKIO2.sys'
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-driver_description: https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
 KnownVulnerableSamples:
-- Filename: GLCKIO2.sys
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: GLCKIO2.sys
   MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ASUSTeK Computer Inc.
   SHA1: ''
   SHA256: 3a5ec83fe670e5e23aef3afa0a7241053f5b6be5e6ca01766d6b5f9177183c25
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: ASUSTeK Computer Inc.
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: GLCKIO2.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: GLCKIO2.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ASUSTeK Computer Inc.
   SHA1: ''
   SHA256: 61a1bdddd3c512e681818debb5bee94db701768fc25e674fcad46592a3259bd0
   Signature: ''
-  Date: ''
-  Publisher: ASUSTeK Computer Inc.
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+MitreID: T1068
+Name: GLCKIO2.sys
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+Verified: 'TRUE'
+driver_description: https://github.com/namazso/physmem_drivers

@@ -1,9 +1,8 @@
-Name: aswArPot.sys
+Acknowledgement:
+  Handle: '@mattnotmax'
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create aswArPot.sys binPath=C:\windows\temp\aswArPot.sys type=kernel
 
@@ -12,31 +11,32 @@ Commands:
     \ been found to be vulnerable to two high severity attacks that could potentially\
     \ lead to privilege escalation by running code in the kernel from a non-administrator\
     \ user."
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-driver_description: 'CVE-2022-26522, CVE-2022-26523: Both of these vulnerabilities
-  were fixed in version 22.1.'
-Acknowledgement:
-  Person: ''
-  Handle: '@mattnotmax'
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
 KnownVulnerableSamples:
-- Filename: aswArPot.sys
-  MD5: ''
-  SHA1: ''
-  SHA256: 4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1
-  Signature: ''
+- Company: AVAST Software
   Date: '2021-02-01 14:09:00'
-  Publisher: ''
-  Company: AVAST Software
   Description: Avast Anti Rootkit
+  FileVersion: 21.1.187.0
+  Filename: aswArPot.sys
+  MD5: ''
+  MachineType: x64
+  OriginalFilename: aswArPot.sys
   Product: 'Avast Antivirus
 
     '
   ProductVersion: ''
-  FileVersion: 21.1.187.0
-  MachineType: x64
-  OriginalFilename: aswArPot.sys
+  Publisher: ''
+  SHA1: ''
+  SHA256: 4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1
+  Signature: ''
+MitreID: T1068
+Name: aswArPot.sys
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+Verified: 'TRUE'
+driver_description: 'CVE-2022-26522, CVE-2022-26523: Both of these vulnerabilities
+  were fixed in version 22.1.'

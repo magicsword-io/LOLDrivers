@@ -1,9 +1,8 @@
-Name: MsIo32.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create MsIo32.sys binPath=C:\windows\temp\MsIo32.sys type=kernel
 
@@ -12,30 +11,31 @@ Commands:
     allow local users (including low integrity processes) to read and write to arbitrary
     memory locations, and consequently gain NT AUTHORITY\SYSTEM privileges, by mapping
     \Device\PhysicalMemory into the calling process via ZwOpenSection and ZwMapViewOfSection.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
+Detection: []
+KnownVulnerableSamples:
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: MsIo32.sys
+  MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: ''
+  SHA256: 525d9b51a80ca0cd4c5889a96f857e73f3a80da1ffbae59851e0f51bdfb0b6cd
+  Signature: ''
+MitreID: T1068
+Name: MsIo32.sys
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
 - https://www.activecyber.us/activelabs/viper-rgb-driver-local-privilege-escalation-cve-2019-18845
 - http://blog.rewolf.pl/blog/?p=1630
+Verified: 'TRUE'
 driver_description: https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Acknowledgement:
-  Person: ''
-  Handle: ''
-Detection: []
-KnownVulnerableSamples:
-- Filename: MsIo32.sys
-  MD5: ''
-  SHA1: ''
-  SHA256: 525d9b51a80ca0cd4c5889a96f857e73f3a80da1ffbae59851e0f51bdfb0b6cd
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''

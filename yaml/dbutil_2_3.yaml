@@ -1,50 +1,62 @@
-Name: dbutil_2_3.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create dbutil_2_3.sys binPath=C:\windows\temp\dbutil_2_3.sys type=kernel
 
     sc.exe start dbutil_2_3.sys'
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-driver_description: https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
 KnownVulnerableSamples:
-- Filename: dbutil_2_3.sys
+- Company: ''
+  Date: ''
+  Description: dianhu
+  FileVersion: ''
+  Filename: dbutil_2_3.sys
   MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: Dell Inc.
   SHA1: ''
   SHA256: 0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5
   Signature: ''
+  VendorResults: &id001
+    CrowdStrike: '-'
+    ESET-NOD32: '-'
+    F-Secure: '-'
+    GData: '-'
+    Kaspersky: '-'
+    McAfee: '-'
+    Microsoft: '-'
+    Sophos: '-'
+    Symantec: '-'
+    TrendMicro: '-'
+- Company: ''
   Date: ''
-  Publisher: Dell Inc.
-  Company: ''
   Description: dianhu
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: dbutil_2_3.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: dbutil_2_3.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: Dell Inc.
   SHA1: c948ae14761095e4d76b55d9de86412258be7afd
   SHA256: ''
   Signature: ''
-  Date: ''
-  Publisher: Dell Inc.
-  Company: ''
-  Description: dianhu
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+  VendorResults: *id001
+MitreID: T1068
+Name: dbutil_2_3.sys
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+Verified: 'TRUE'
+driver_description: https://github.com/namazso/physmem_drivers

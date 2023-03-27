@@ -1,92 +1,92 @@
-Name: Agent64.sys
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create Agent64.sys binPath=C:\windows\temp\Agent64.sys type=kernel
 
     sc.exe start Agent64.sys'
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-driver_description: https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
 KnownVulnerableSamples:
-- Filename: Agent64.sys
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: Agent64.sys
   MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
   SHA1: ''
   SHA256: 05f052c64d192cf69a462a5ec16dda0d43ca5d0245900c9fcb9201685a2e7748
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: Agent64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: Agent64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
   SHA1: ''
   SHA256: 4045ae77859b1dbf13972451972eaaf6f3c97bea423e9e78f1c2f14330cd47ca
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: Agent64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: Agent64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
   SHA1: ''
   SHA256: 6948480954137987a0be626c24cf594390960242cd75f094cd6aaa5c2e7a54fa
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: Agent64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: Agent64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
   SHA1: ''
   SHA256: 8cb62c5d41148de416014f80bd1fd033fd4d2bd504cb05b90eeb6992a382d58f
   Signature: ''
+- Company: ''
   Date: ''
-  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: Agent64.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: Agent64.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
   SHA1: ''
   SHA256: b1d96233235a62dbb21b8dbe2d1ae333199669f67664b107bff1ad49b41d9414
   Signature: ''
-  Date: ''
-  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+MitreID: T1068
+Name: Agent64.sys
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+Verified: 'TRUE'
+driver_description: https://github.com/namazso/physmem_drivers
