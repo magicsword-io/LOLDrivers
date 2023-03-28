@@ -96,20 +96,23 @@ class TestRules(unittest.TestCase):
             if known_vuln_samples:
                 for i in known_vuln_samples:
                     if i['MD5']:
-                        if len(i['MD5']) != 32:
-                              print( Fore.RED + "YAML {} has an invalid MD5 hash".format(file))
-                              if file not in faulty_yaml_list:
-                                    faulty_yaml_list.append(file)      
+                        if i['MD5'] != "-":
+                            if len(i['MD5']) != 32:
+                                print( Fore.RED + "YAML {} has an invalid MD5 hash".format(file))
+                                if file not in faulty_yaml_list:
+                                        faulty_yaml_list.append(file)      
                     if i['SHA1']:
-                        if len(i['SHA1']) != 40:
-                              print( Fore.RED + "YAML {} has an invalid SHA1 hash".format(file))
-                              if file not in faulty_yaml_list:
-                                    faulty_yaml_list.append(file)  
+                        if i['SHA1'] != "-":
+                            if len(i['SHA1']) != 40:
+                                print( Fore.RED + "YAML {} has an invalid SHA1 hash".format(file))
+                                if file not in faulty_yaml_list:
+                                        faulty_yaml_list.append(file)  
                     if i['SHA256']:
-                        if len(i['SHA256']) != 64:
-                              print( Fore.RED + "YAML {} has an invalid SHA256 hash".format(file))
-                              if file not in faulty_yaml_list:
-                                    faulty_yaml_list.append(file)  
+                        if i['SHA256'] != "-":
+                            if len(i['SHA256']) != 64:
+                                print( Fore.RED + "YAML {} has an invalid SHA256 hash".format(file))
+                                if file not in faulty_yaml_list:
+                                        faulty_yaml_list.append(file)  
 
         self.assertEqual(faulty_yaml_list, [], Fore.RED + "There are YAML documents with incorrect hashes")
 
