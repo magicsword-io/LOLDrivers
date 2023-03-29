@@ -29,6 +29,7 @@ title = "LOLDrivers"
 +++
 
 {{< block "grid-3" >}}
+
 {{< column "mt-4">}}
 
 # Living Off The Land Drivers 
@@ -41,15 +42,21 @@ Feel free to open a [PR](https://github.com/magicsword-io/LOLDrivers/pulls), rai
 {{< tip >}}
 You can also get the malicious driver list via **API** using [CSV](api/drivers.csv) or [JSON](api/drivers.json). If you are a Sysmon user check out the pre-built [config](https://github.com/magicsword-io/LOLDrivers/blob/main/hashes/sysmon_config_vulnerable_hashes.xml). 
 {{< /tip >}}
+
 {{< /column >}}
 
 {{< column "mt-4">}}
+
 # Top Products
+
 {{% chart "dataset2" "pie" %}}
+
 {{< /column >}}
 
 {{< column "mt-4">}}
+
 {{% chart "dataset3" "bar" %}}
+
 {{< /column >}}
 
 {{< /block >}}
