@@ -47,11 +47,11 @@ sc.exe start semav6msr64.sys
 
 | Filename | semav6msr64.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/07f83829e7429e60298440cd1e601a6a">07f83829e7429e60298440cd1e601a6a</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/643383938d5e0d4fd30d302af3e9293a4798e392">643383938d5e0d4fd30d302af3e9293a4798e392</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/9f1229cd8dd9092c27a01f5d56e3c0d59c2bb9f0139abf042e56f343637fda33">9f1229cd8dd9092c27a01f5d56e3c0d59c2bb9f0139abf042e56f343637fda33</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | Intel(R) Code Signing External, Intel External Basic Issuing CA 3B, Intel External Basic Policy CA, Sectigo (AddTrust)   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -65,7 +65,7 @@ sc.exe start semav6msr64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/semav6msr64.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

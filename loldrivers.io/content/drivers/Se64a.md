@@ -42,11 +42,11 @@ sc.exe start Se64a.sys
 
 | Filename | Se64a.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/0a6a1c9a7f80a2a5dcced5c4c0473765">0a6a1c9a7f80a2a5dcced5c4c0473765</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/33285b2e97a0aeb317166cce91f6733cf9c1ad53">33285b2e97a0aeb317166cce91f6733cf9c1ad53</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/6cb51ae871fbd5d07c5aad6ff8eea43d34063089528603ca9ceb8b4f52f68ddc">6cb51ae871fbd5d07c5aad6ff8eea43d34063089528603ca9ceb8b4f52f68ddc</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | EnTech Taiwan, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start Se64a.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/se64a.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

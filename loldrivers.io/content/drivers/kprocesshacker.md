@@ -43,11 +43,11 @@ sc.exe start kprocesshacker.sys
 
 | Filename | kprocesshacker.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/1b5c3c458e31bede55145d0644e88d75">1b5c3c458e31bede55145d0644e88d75</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/a21c84c6bf2e21d69fa06daaf19b4cc34b589347">a21c84c6bf2e21d69fa06daaf19b4cc34b589347</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/70211a3f90376bbc61f49c22a63075d1d4ddd53f0aefa976216c46e6ba39a9f4">70211a3f90376bbc61f49c22a63075d1d4ddd53f0aefa976216c46e6ba39a9f4</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | Wen Jia Liu, DigiCert High Assurance Code Signing CA-1, DigiCert   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -61,7 +61,7 @@ sc.exe start kprocesshacker.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/kprocesshacker.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

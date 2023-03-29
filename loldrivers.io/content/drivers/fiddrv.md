@@ -47,11 +47,11 @@ sc.exe start fiddrv.sys
 
 | Filename | fiddrv.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/8cc8974a05e81678e3d28acfe434e7804abd019c">8cc8974a05e81678e3d28acfe434e7804abd019c</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -62,11 +62,11 @@ sc.exe start fiddrv.sys
 | OriginalFilename |  |
 | Filename | fiddrv.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/282bb241bda5c4c1b8eb9bf56d018896649ca0e1">282bb241bda5c4c1b8eb9bf56d018896649ca0e1</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -80,7 +80,7 @@ sc.exe start fiddrv.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fiddrv.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

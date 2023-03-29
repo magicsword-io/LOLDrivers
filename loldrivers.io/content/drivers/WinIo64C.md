@@ -47,11 +47,11 @@ sc.exe start WinIo64C.sys
 
 | Filename | WinIo64C.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/b242b0332b9c9e8e17ec27ef10d75503d20d97b6">b242b0332b9c9e8e17ec27ef10d75503d20d97b6</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -62,11 +62,11 @@ sc.exe start WinIo64C.sys
 | OriginalFilename |  |
 | Filename | WinIo64C.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/a65fabaf64aa1934314aae23f25cdf215cbaa4b6">a65fabaf64aa1934314aae23f25cdf215cbaa4b6</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -80,7 +80,7 @@ sc.exe start WinIo64C.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio64c.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

@@ -47,11 +47,11 @@ sc.exe start d.sys
 
 | Filename | d.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/a60c9173563b940203cf4ad38ccf2082">a60c9173563b940203cf4ad38ccf2082</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/a3636986cdcd1d1cb8ab540f3d5c29dcc90bb8f0">a3636986cdcd1d1cb8ab540f3d5c29dcc90bb8f0</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/c1c4310e5d467d24e864177bdbfc57cb5d29aac697481bfa9c11ddbeebfd4cc8">c1c4310e5d467d24e864177bdbfc57cb5d29aac697481bfa9c11ddbeebfd4cc8</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -65,7 +65,7 @@ sc.exe start d.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/d.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

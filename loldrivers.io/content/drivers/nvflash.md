@@ -42,11 +42,11 @@ sc.exe start nvflash.sys
 
 | Filename | nvflash.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/84fb76ee319073e77fb364bbbbff5461">84fb76ee319073e77fb364bbbbff5461</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/a4b2c56c12799855162ca3b004b4b2078c6ecf77">a4b2c56c12799855162ca3b004b4b2078c6ecf77</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/afdd66562dea51001c3a9de300f91fc3eb965d6848dfce92ccb9b75853e02508">afdd66562dea51001c3a9de300f91fc3eb965d6848dfce92ccb9b75853e02508</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | NVIDIA Corporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start nvflash.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nvflash.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

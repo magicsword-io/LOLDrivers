@@ -42,11 +42,11 @@ sc.exe start AMDPowerProfiler.sys
 
 | Filename | AMDPowerProfiler.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/e4266262a77fffdea2584283f6c4f51d">e4266262a77fffdea2584283f6c4f51d</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/b480c54391a2a2f917a44f91a5e9e4590648b332">b480c54391a2a2f917a44f91a5e9e4590648b332</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/0af5ccb3d33a9ba92071c9637be6254030d61998733a5eb3583e865e17844e05">0af5ccb3d33a9ba92071c9637be6254030d61998733a5eb3583e865e17844e05</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | Advanced Micro Devices Inc., Sectigo RSA Code Signing CA, USERTrust RSA Certification Authority, Sectigo (AAA)   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start AMDPowerProfiler.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amdpowerprofiler.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

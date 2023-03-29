@@ -42,11 +42,11 @@ sc.exe start BS_HWMIo64.sys
 
 | Filename | BS_HWMIo64.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/338a98e1c27bc76f09331fcd7ae413a5">338a98e1c27bc76f09331fcd7ae413a5</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/9c24dd75e4074041dbe03bf21f050c77d748b8e9">9c24dd75e4074041dbe03bf21f050c77d748b8e9</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/60c6f4f34c7319cb3f9ca682e59d92711a05a2688badbae4891b1303cd384813">60c6f4f34c7319cb3f9ca682e59d92711a05a2688badbae4891b1303cd384813</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | BIOSTAR MICROTECH INT&#39;L CORP, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start BS_HWMIo64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_hwmio64.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

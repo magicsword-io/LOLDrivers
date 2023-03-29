@@ -1,0 +1,41 @@
+# YML-Template.yml
+# Use this template to create similar YAML files
+
+Name: FILENAME.sys
+Author: Your Name
+Created: 'YYYY-MM-DD'
+MitreID: TXXXX
+Category: vulnerable driver
+Verified: 'TRUE or FALSE'
+Commands:
+  Command: 'sc.exe create FILENAME.sys binPath=C:\windows\temp\FILENAME.sys type=kernel
+    sc.exe start FILENAME.sys'
+  Description: ''
+  Usecase: Use case description
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- ' Resource URL'
+driver_description: Driver description URL
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection:
+- type: BlockRule
+  value: Block rule URL
+- type: IOC
+  value: Detection method description
+KnownVulnerableSamples:
+- Filename: FILENAME.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: Your SHA256 hash
+  Signature: ''
+  Date: Time and Date of the file
+  Publisher: File publisher
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: X, X, X, X
+  MachineType: ''

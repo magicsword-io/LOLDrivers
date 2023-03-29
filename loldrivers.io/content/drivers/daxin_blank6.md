@@ -43,11 +43,11 @@ sc.exe start daxin_blank6.sys
 
 | Filename | daxin_blank6.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/0ae30291c6cbfa7be39320badd6e8de0">0ae30291c6cbfa7be39320badd6e8de0</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/c257aa4094539719a3c7b7950598ef872dbf9518">c257aa4094539719a3c7b7950598ef872dbf9518</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/e6a7b0bc01a627a7d0ffb07faddb3a4dd96b6f5208ac26107bdaeb3ab1ec8217">e6a7b0bc01a627a7d0ffb07faddb3a4dd96b6f5208ac26107bdaeb3ab1ec8217</a> |
 | Publisher | n/a |
-| Signature | Unsigned |
+| Signature | U, n, s, i, g, n, e, d   |
 | Date | 2:44 AM 3/26/2009 |
 | Company | n/a |
 | Description | n/a |
@@ -61,7 +61,7 @@ sc.exe start daxin_blank6.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank6.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

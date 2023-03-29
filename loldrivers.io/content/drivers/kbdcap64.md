@@ -47,11 +47,11 @@ sc.exe start kbdcap64.sys
 
 | Filename | kbdcap64.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/72b99147839bcfb062d29014ec09fe20a8f261748b5925b00171ef3cb849a4c1">72b99147839bcfb062d29014ec09fe20a8f261748b5925b00171ef3cb849a4c1</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -65,7 +65,7 @@ sc.exe start kbdcap64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/kbdcap64.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

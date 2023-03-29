@@ -46,11 +46,11 @@ sc.exe start MsIo64.sys
 
 | Filename | MsIo64.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/dc943bf367ae77016ae399df8e71d38a">dc943bf367ae77016ae399df8e71d38a</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/6b54f8f137778c1391285fee6150dfa58a8120b1">6b54f8f137778c1391285fee6150dfa58a8120b1</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89">43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -64,7 +64,7 @@ sc.exe start MsIo64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/msio64.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

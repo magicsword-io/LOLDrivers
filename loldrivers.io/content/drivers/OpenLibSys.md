@@ -42,11 +42,11 @@ sc.exe start OpenLibSys.sys
 
 | Filename | OpenLibSys.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/ccf523b951afaa0147f22e2a7aae4976">ccf523b951afaa0147f22e2a7aae4976</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/ac600a2bc06b312d92e649b7b55e3e91e9d63451">ac600a2bc06b312d92e649b7b55e3e91e9d63451</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/91314768da140999e682d2a290d48b78bb25a35525ea12c1b1f9634d14602b2c">91314768da140999e682d2a290d48b78bb25a35525ea12c1b1f9634d14602b2c</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | Noriyuki MIYAZAKI, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -57,11 +57,11 @@ sc.exe start OpenLibSys.sys
 | OriginalFilename |  |
 | Filename | OpenLibSys.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/96421b56dbda73e9b965f027a3bda7ba">96421b56dbda73e9b965f027a3bda7ba</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/da9cea92f996f938f699902482ac5313d5e8b28e">da9cea92f996f938f699902482ac5313d5e8b28e</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/f0605dda1def240dc7e14efa73927d6c6d89988c01ea8647b671667b2b167008">f0605dda1def240dc7e14efa73927d6c6d89988c01ea8647b671667b2b167008</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | Noriyuki MIYAZAKI, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -75,7 +75,7 @@ sc.exe start OpenLibSys.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/openlibsys.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

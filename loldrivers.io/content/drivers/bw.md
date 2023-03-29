@@ -47,11 +47,11 @@ sc.exe start bw.sys
 
 | Filename | bw.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/0ebaef662b14410c198395b13347e1d175334ec67919709ad37d65eba013adff">0ebaef662b14410c198395b13347e1d175334ec67919709ad37d65eba013adff</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -65,7 +65,7 @@ sc.exe start bw.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bw.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

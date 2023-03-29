@@ -47,11 +47,11 @@ sc.exe start windows7-32.sys
 
 | Filename | windows7-32.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/4941c4298f4560fc1e59d0f16f84bab5c060793700b82be2fd7c63735f1657a8">4941c4298f4560fc1e59d0f16f84bab5c060793700b82be2fd7c63735f1657a8</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -65,7 +65,7 @@ sc.exe start windows7-32.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/windows7-32.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

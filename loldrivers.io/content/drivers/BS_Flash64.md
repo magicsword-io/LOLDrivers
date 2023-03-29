@@ -42,11 +42,11 @@ sc.exe start BS_Flash64.sys
 
 | Filename | BS_Flash64.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/f5051c756035ef5de9c4c48bacb0612b">f5051c756035ef5de9c4c48bacb0612b</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/e83458c4a6383223759cd8024e60c17be4e7c85f">e83458c4a6383223759cd8024e60c17be4e7c85f</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/86a8e0aa29a5b52c84921188cc1f0eca9a7904dcfe09544602933d8377720219">86a8e0aa29a5b52c84921188cc1f0eca9a7904dcfe09544602933d8377720219</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | BIOSTAR MICROTECH INT&#39;L CORP, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start BS_Flash64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_flash64.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

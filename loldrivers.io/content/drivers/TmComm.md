@@ -42,11 +42,11 @@ sc.exe start TmComm.sys
 
 | Filename | TmComm.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/2e1f8a2a80221deb93496a861693c565">2e1f8a2a80221deb93496a861693c565</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/a00e444120449e35641d58e62ed64bb9c9f518d2">a00e444120449e35641d58e62ed64bb9c9f518d2</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/cc687fe3741bbde1dd142eac0ef59fd1d4457daee43cdde23bb162ef28d04e64">cc687fe3741bbde1dd142eac0ef59fd1d4457daee43cdde23bb162ef28d04e64</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | Trend Micro, Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start TmComm.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/tmcomm.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

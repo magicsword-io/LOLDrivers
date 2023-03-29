@@ -47,11 +47,11 @@ sc.exe start ProtectS.sys
 
 | Filename | ProtectS.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/9d58f640c7295952b71bdcb456cae37213baccdcd3032c1e3aeb54e79081f395">9d58f640c7295952b71bdcb456cae37213baccdcd3032c1e3aeb54e79081f395</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -62,11 +62,11 @@ sc.exe start ProtectS.sys
 | OriginalFilename |  |
 | Filename | ProtectS.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/4a9093e8dbcb867e1b97a0a67ce99a8511900658f5201c34ffb8035881f2dbbe">4a9093e8dbcb867e1b97a0a67ce99a8511900658f5201c34ffb8035881f2dbbe</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -80,7 +80,7 @@ sc.exe start ProtectS.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/protects.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

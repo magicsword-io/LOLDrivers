@@ -42,11 +42,11 @@ sc.exe start HpPortIox64.sys
 
 | Filename | HpPortIox64.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/a641e3dccba765a10718c9cb0da7879e">a641e3dccba765a10718c9cb0da7879e</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/8c377ab4eebc5f4d8dd7bb3f90c0187dfdd3349f">8c377ab4eebc5f4d8dd7bb3f90c0187dfdd3349f</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/c5050a2017490fff7aa53c73755982b339ddb0fd7cef2cde32c81bc9834331c5">c5050a2017490fff7aa53c73755982b339ddb0fd7cef2cde32c81bc9834331c5</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | HP Inc., DigiCert SHA2 Assured ID Code Signing CA, DigiCert   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start HpPortIox64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hpportiox64.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

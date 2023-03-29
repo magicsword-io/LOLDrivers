@@ -42,11 +42,11 @@ sc.exe start AsrOmgDrv.sys
 
 | Filename | AsrOmgDrv.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/4f27c09cc8680e06b04d6a9c34ca1e08">4f27c09cc8680e06b04d6a9c34ca1e08</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/400f833dcc2ef0a122dd0e0b1ec4ec929340d90e">400f833dcc2ef0a122dd0e0b1ec4ec929340d90e</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/950a4c0c772021cee26011a92194f0e58d61588f77f2873aa0599dff52a160c9">950a4c0c772021cee26011a92194f0e58d61588f77f2873aa0599dff52a160c9</a> |
 | Publisher | ASROCK Incorporation |
-| Signature |  |
+| Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 | Date |  |
 | Company |  |
 | Description | ASRock IO Driver |
@@ -60,7 +60,7 @@ sc.exe start AsrOmgDrv.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asromgdrv.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

@@ -47,11 +47,11 @@ sc.exe start WinIO32B.sys
 
 | Filename | WinIO32B.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/f1c8c3926d0370459a1b7f0cf3d17b22ff9d0c7f">f1c8c3926d0370459a1b7f0cf3d17b22ff9d0c7f</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -65,7 +65,7 @@ sc.exe start WinIO32B.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio32b.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

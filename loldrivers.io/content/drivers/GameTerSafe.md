@@ -47,11 +47,11 @@ sc.exe start GameTerSafe.sys
 
 | Filename | GameTerSafe.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/3e9b62d2ea2be50a2da670746c4dbe807db9601980af3a1014bcd72d0248d84c">3e9b62d2ea2be50a2da670746c4dbe807db9601980af3a1014bcd72d0248d84c</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -65,7 +65,7 @@ sc.exe start GameTerSafe.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gametersafe.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

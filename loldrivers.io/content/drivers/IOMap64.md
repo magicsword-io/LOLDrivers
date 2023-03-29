@@ -42,11 +42,11 @@ sc.exe start IOMap64.sys
 
 | Filename | IOMap64.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/a01c412699b6f21645b2885c2bae4454">a01c412699b6f21645b2885c2bae4454</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/2fc6845047abcf2a918fce89ab99e4955d08e72c">2fc6845047abcf2a918fce89ab99e4955d08e72c</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41">ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start IOMap64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iomap64.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

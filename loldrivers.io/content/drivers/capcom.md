@@ -42,11 +42,11 @@ sc.exe start capcom.sys
 
 | Filename | capcom.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/73c98438ac64a68e88b7b0afd11ba140">73c98438ac64a68e88b7b0afd11ba140</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/c1d5cf8c43e7679b782630e93f5e6420ca1749a7">c1d5cf8c43e7679b782630e93f5e6420ca1749a7</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/da6ca1fb539f825ca0f012ed6976baf57ef9c70143b7a1e88b4650bf7a925e24">da6ca1fb539f825ca0f012ed6976baf57ef9c70143b7a1e88b4650bf7a925e24</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | CAPCOM Co.,Ltd., Symantec Class 3 SHA256 Code Signing CA, VeriSign   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start capcom.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/capcom.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

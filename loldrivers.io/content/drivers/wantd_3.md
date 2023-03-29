@@ -43,11 +43,11 @@ sc.exe start wantd_3.sys
 
 | Filename | wantd_3.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/fb7c61ef427f9b2fdff3574ee6b1819b">fb7c61ef427f9b2fdff3574ee6b1819b</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/1f25f54e9b289f76604e81e98483309612c5a471">1f25f54e9b289f76604e81e98483309612c5a471</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1">81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1</a> |
 | Publisher | n/a |
-| Signature | Unsigned |
+| Signature | U, n, s, i, g, n, e, d   |
 | Date | 7:52 AM 4/30/2014 |
 | Company | Microsoft Corporation |
 | Description | WAN Transport Driver |
@@ -61,7 +61,7 @@ sc.exe start wantd_3.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd_3.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

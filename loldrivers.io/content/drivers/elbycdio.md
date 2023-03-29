@@ -44,11 +44,11 @@ sc.exe start elbycdio.sys
 
 | Filename | elbycdio.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/ae5eb2759305402821aeddc52ba9a6d6">ae5eb2759305402821aeddc52ba9a6d6</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/3599ea2ac1fa78f423423a4cf90106ea0938dde8">3599ea2ac1fa78f423423a4cf90106ea0938dde8</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/eea53103e7a5a55dc1df79797395a2a3e96123ebd71cdd2db4b1be80e7b3f02b">eea53103e7a5a55dc1df79797395a2a3e96123ebd71cdd2db4b1be80e7b3f02b</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | Elaborate Bytes AG, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -62,7 +62,7 @@ sc.exe start elbycdio.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/elbycdio.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

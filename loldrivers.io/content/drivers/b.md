@@ -47,11 +47,11 @@ sc.exe start b.sys
 
 | Filename | b.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/84df20b1d9d87e305c92e5ffae21b10b325609d59d835a954dbd8750ef5dabf4">84df20b1d9d87e305c92e5ffae21b10b325609d59d835a954dbd8750ef5dabf4</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -65,7 +65,7 @@ sc.exe start b.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/b.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 
