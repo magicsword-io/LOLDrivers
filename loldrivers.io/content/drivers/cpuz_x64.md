@@ -42,11 +42,11 @@ sc.exe start cpuz_x64.sys
 
 | Filename | cpuz_x64.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/7d46d0ddaf8c7e1776a70c220bf47524">7d46d0ddaf8c7e1776a70c220bf47524</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/d2e6fc9259420f0c9b6b1769be3b1f63eb36dc57">d2e6fc9259420f0c9b6b1769be3b1f63eb36dc57</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/3871e16758a1778907667f78589359734f7f62f9dc953ec558946dcdbe6951e3">3871e16758a1778907667f78589359734f7f62f9dc953ec558946dcdbe6951e3</a> |
 | Publisher | CPUID |
-| Signature |  |
+| Signature | CPUID, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
 | Date |  |
 | Company |  |
 | Description | CPUID Driver |
@@ -60,7 +60,7 @@ sc.exe start cpuz_x64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cpuz_x64.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

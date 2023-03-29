@@ -42,11 +42,11 @@ sc.exe start viragt64.sys
 
 | Filename | viragt64.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/43830326cd5fae66f5508e27cbec39a0">43830326cd5fae66f5508e27cbec39a0</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/05c0c49e8bcf11b883d41441ce87a2ee7a3aba1d">05c0c49e8bcf11b883d41441ce87a2ee7a3aba1d</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/58a74dceb2022cd8a358b92acd1b48a5e01c524c3b0195d7033e4bd55eff4495">58a74dceb2022cd8a358b92acd1b48a5e01c524c3b0195d7033e4bd55eff4495</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | TG Soft S.a.s. Di Tonello Gianfranco e C., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start viragt64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/viragt64.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

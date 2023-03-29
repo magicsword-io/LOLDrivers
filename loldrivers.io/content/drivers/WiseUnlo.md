@@ -47,11 +47,11 @@ sc.exe start WiseUnlo.sys
 
 | Filename | WiseUnlo.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/356bda2bf0f6899a2c08b2da3ec69f13">356bda2bf0f6899a2c08b2da3ec69f13</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/b9807b8840327c6d7fbdde45fc27de921f1f1a82">b9807b8840327c6d7fbdde45fc27de921f1f1a82</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/358ac54be252673841a1d65bfc2fb6d549c1a4c877fa7f5e1bfa188f30375d69">358ac54be252673841a1d65bfc2fb6d549c1a4c877fa7f5e1bfa188f30375d69</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | Lespeed Technology Co., Ltd, COMODO RSA Extended Validation Code Signing CA, Sectigo (formerly Comodo CA)   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -65,7 +65,7 @@ sc.exe start WiseUnlo.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wiseunlo.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

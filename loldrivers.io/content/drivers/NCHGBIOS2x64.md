@@ -42,11 +42,11 @@ sc.exe start NCHGBIOS2x64.SYS
 
 | Filename | NCHGBIOS2x64.SYS |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/d9ce18960c23f38706ae9c6584d9ac90">d9ce18960c23f38706ae9c6584d9ac90</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/d0d39e1061f30946141b6ecfa0957f8cc3ddeb63">d0d39e1061f30946141b6ecfa0957f8cc3ddeb63</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073">314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | TOSHIBA CORPORATION, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start NCHGBIOS2x64.SYS
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nchgbios2x64.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

@@ -43,11 +43,11 @@ sc.exe start daxin_blank.sys
 
 | Filename | daxin_blank.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/62c18d61ed324088f963510bae43b831">62c18d61ed324088f963510bae43b831</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/8302802b709ad242a81b939b6c90b3230e1a1f1e">8302802b709ad242a81b939b6c90b3230e1a1f1e</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/49c827cf48efb122a9d6fd87b426482b7496ccd4a2dbca31ebbf6b2b80c98530">49c827cf48efb122a9d6fd87b426482b7496ccd4a2dbca31ebbf6b2b80c98530</a> |
 | Publisher | Anhua Xinda (Beijing) Technology Co., Ltd. |
-| Signature | Signed |
+| Signature | S, i, g, n, e, d   |
 | Date | 7:07 AM 1/23/2013 |
 | Company | n/a |
 | Description | n/a |
@@ -61,7 +61,7 @@ sc.exe start daxin_blank.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

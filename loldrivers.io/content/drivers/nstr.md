@@ -47,11 +47,11 @@ sc.exe start nstr.sys
 
 | Filename | nstr.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/455bc98ba32adab8b47d2d89bdbadca4910f91c182ab2fc3211ba07d3784537b">455bc98ba32adab8b47d2d89bdbadca4910f91c182ab2fc3211ba07d3784537b</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -65,7 +65,7 @@ sc.exe start nstr.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nstr.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

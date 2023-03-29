@@ -47,11 +47,11 @@ sc.exe start windows8-10-32.sys
 
 | Filename | windows8-10-32.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/5b9623da9ba8e5c80c49473f40ffe7ad315dcadffc3230afdc9d9226d60a715a">5b9623da9ba8e5c80c49473f40ffe7ad315dcadffc3230afdc9d9226d60a715a</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -65,7 +65,7 @@ sc.exe start windows8-10-32.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/windows8-10-32.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

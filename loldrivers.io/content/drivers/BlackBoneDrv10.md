@@ -47,11 +47,11 @@ sc.exe start BlackBoneDrv10.sys
 
 | Filename | BlackBoneDrv10.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/f7393fb917aed182e4cbef25ce8af950">f7393fb917aed182e4cbef25ce8af950</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/3ee2fd08137e9262d2e911158090e4a7c7427ea0">3ee2fd08137e9262d2e911158090e4a7c7427ea0</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/f51bdb0ad924178131c21e39a8ccd191e46b5512b0f2e1cc8486f63e84e5d960">f51bdb0ad924178131c21e39a8ccd191e46b5512b0f2e1cc8486f63e84e5d960</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | Nanjing Zhixiao Information Technology Co.,Ltd, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -65,7 +65,7 @@ sc.exe start BlackBoneDrv10.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/blackbonedrv10.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

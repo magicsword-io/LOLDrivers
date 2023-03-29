@@ -47,11 +47,11 @@ sc.exe start bandai.sys
 
 | Filename | bandai.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/0f780b7ada5dd8464d9f2cc537d973f5ac804e9c">0f780b7ada5dd8464d9f2cc537d973f5ac804e9c</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -62,11 +62,11 @@ sc.exe start bandai.sys
 | OriginalFilename |  |
 | Filename | bandai.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/ea360a9f23bb7cf67f08b88e6a185a699f0c5410">ea360a9f23bb7cf67f08b88e6a185a699f0c5410</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -80,7 +80,7 @@ sc.exe start bandai.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bandai.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

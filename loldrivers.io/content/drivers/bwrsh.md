@@ -47,11 +47,11 @@ sc.exe start bwrsh.sys
 
 | Filename | bwrsh.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/37dde6bd8a7a36111c3ac57e0ac20bbb93ce3374d0852bcacc9a2c8c8c30079e">37dde6bd8a7a36111c3ac57e0ac20bbb93ce3374d0852bcacc9a2c8c8c30079e</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -65,7 +65,7 @@ sc.exe start bwrsh.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bwrsh.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

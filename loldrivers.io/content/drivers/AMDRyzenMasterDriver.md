@@ -42,11 +42,11 @@ sc.exe start AMDRyzenMasterDriver.sys
 
 | Filename | AMDRyzenMasterDriver.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/13ee349c15ee5d6cf640b3d0111ffc0e">13ee349c15ee5d6cf640b3d0111ffc0e</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/4f7a8e26a97980544be634b26899afbefb0a833c">4f7a8e26a97980544be634b26899afbefb0a833c</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/a13054f349b7baa8c8a3fcbd31789807a493cc52224bbff5e412eb2bd52a6433">a13054f349b7baa8c8a3fcbd31789807a493cc52224bbff5e412eb2bd52a6433</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | Advanced Micro Devices INC., Symantec Class 3 SHA256 Code Signing CA, VeriSign   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start AMDRyzenMasterDriver.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amdryzenmasterdriver.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

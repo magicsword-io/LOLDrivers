@@ -42,11 +42,11 @@ sc.exe start AsrAutoChkUpdDrv.sys
 
 | Filename | AsrAutoChkUpdDrv.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/75d6c3469347de1cdfa3b1b9f1544208">75d6c3469347de1cdfa3b1b9f1544208</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/6523b3fd87de39eb5db1332e4523ce99556077dc">6523b3fd87de39eb5db1332e4523ce99556077dc</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/2aa1b08f47fbb1e2bd2e4a492f5d616968e703e1359a921f62b38b8e4662f0c4">2aa1b08f47fbb1e2bd2e4a492f5d616968e703e1359a921f62b38b8e4662f0c4</a> |
 | Publisher | ASROCK Incorporation |
-| Signature |  |
+| Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 | Date |  |
 | Company |  |
 | Description | AsrAutoChkUpdDrv Driver |
@@ -60,7 +60,7 @@ sc.exe start AsrAutoChkUpdDrv.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrautochkupddrv.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

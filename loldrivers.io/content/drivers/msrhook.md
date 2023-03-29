@@ -42,11 +42,11 @@ sc.exe start msrhook.sys
 
 | Filename | msrhook.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/c49a1956a6a25ffc25ad97d6762b0989">c49a1956a6a25ffc25ad97d6762b0989</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/89909fa481ff67d7449ee90d24c167b17b0612f1">89909fa481ff67d7449ee90d24c167b17b0612f1</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/6de84caa2ca18673e01b91af58220c60aecd5cccf269725ec3c7f226b2167492">6de84caa2ca18673e01b91af58220c60aecd5cccf269725ec3c7f226b2167492</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | ID TECH, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start msrhook.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/msrhook.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

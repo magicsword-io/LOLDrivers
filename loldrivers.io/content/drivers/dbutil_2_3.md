@@ -42,11 +42,11 @@ sc.exe start dbutil_2_3.sys
 
 | Filename | dbutil_2_3.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/c996d7971c49252c582171d9380360f2">c996d7971c49252c582171d9380360f2</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/c948ae14761095e4d76b55d9de86412258be7afd">c948ae14761095e4d76b55d9de86412258be7afd</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5">0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5</a> |
 | Publisher | Dell Inc. |
-| Signature |  |
+| Signature | Dell Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
 | Date |  |
 | Company |  |
 | Description | dianhu |
@@ -57,11 +57,11 @@ sc.exe start dbutil_2_3.sys
 | OriginalFilename |  |
 | Filename | dbutil_2_3.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/c996d7971c49252c582171d9380360f2">c996d7971c49252c582171d9380360f2</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/c948ae14761095e4d76b55d9de86412258be7afd">c948ae14761095e4d76b55d9de86412258be7afd</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5">0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5</a> |
 | Publisher | Dell Inc. |
-| Signature |  |
+| Signature | Dell Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
 | Date |  |
 | Company |  |
 | Description | dianhu |
@@ -75,7 +75,7 @@ sc.exe start dbutil_2_3.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbutil_2_3.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

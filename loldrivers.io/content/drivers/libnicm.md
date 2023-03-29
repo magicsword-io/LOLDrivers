@@ -42,11 +42,11 @@ sc.exe start libnicm.sys
 
 | Filename | libnicm.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/c1fce7aac4e9dd7a730997e2979fa1e2">c1fce7aac4e9dd7a730997e2979fa1e2</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/25d812a5ece19ea375178ef9d60415841087726e">25d812a5ece19ea375178ef9d60415841087726e</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/95d50c69cdbf10c9c9d61e64fe864ac91e6f6caa637d128eb20e1d3510e776d3">95d50c69cdbf10c9c9d61e64fe864ac91e6f6caa637d128eb20e1d3510e776d3</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start libnicm.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/libnicm.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

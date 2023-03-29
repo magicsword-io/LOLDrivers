@@ -42,11 +42,11 @@ sc.exe start asmmap64.sys
 
 | Filename | asmmap64.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/4c016fd76ed5c05e84ca8cab77993961">4c016fd76ed5c05e84ca8cab77993961</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/00a442a4305c62cefa8105c0b4c4a9a5f4d1e93b">00a442a4305c62cefa8105c0b4c4a9a5f4d1e93b</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/025e7be9fcefd6a83f4471bba0c11f1c11bd5047047d26626da24ee9a419cdc4">025e7be9fcefd6a83f4471bba0c11f1c11bd5047047d26626da24ee9a419cdc4</a> |
 | Publisher | ASUSTeK Computer Inc. |
-| Signature |  |
+| Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
 | Date |  |
 | Company |  |
 | Description | Memory mapping Driver |
@@ -60,7 +60,7 @@ sc.exe start asmmap64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asmmap64.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

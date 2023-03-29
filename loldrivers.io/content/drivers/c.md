@@ -47,11 +47,11 @@ sc.exe start c.sys
 
 | Filename | c.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/cc383ad11e9d06047a1558ed343f389492da3ac2b84b71462aee502a2fa616c8">cc383ad11e9d06047a1558ed343f389492da3ac2b84b71462aee502a2fa616c8</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -65,7 +65,7 @@ sc.exe start c.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/c.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

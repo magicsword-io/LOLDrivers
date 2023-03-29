@@ -42,11 +42,11 @@ sc.exe start dbk64.sys
 
 | Filename | dbk64.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/1c294146fc77565030603878fd0106f9">1c294146fc77565030603878fd0106f9</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/6053d258096bccb07cb0057d700fe05233ab1fbb">6053d258096bccb07cb0057d700fe05233ab1fbb</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/18e1707b319c279c7e0204074088cc39286007a1cf6cb6e269d5067d8d0628c6">18e1707b319c279c7e0204074088cc39286007a1cf6cb6e269d5067d8d0628c6</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | Cheat Engine, GlobalSign Extended Validation CodeSigning CA - SHA256 - G3, GlobalSign, GlobalSign Root CA - R1   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start dbk64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbk64.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

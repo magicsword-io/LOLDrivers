@@ -42,11 +42,11 @@ sc.exe start aswArPot.sys
 
 | Filename | aswArPot.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/a179c4093d05a3e1ee73f6ff07f994aa">a179c4093d05a3e1ee73f6ff07f994aa</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/5d6b9e80e12bfc595d4d26f6afb099b3cb471dd4">5d6b9e80e12bfc595d4d26f6afb099b3cb471dd4</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1">4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | Avast Software s.r.o., DigiCert High Assurance Code Signing CA-1, DigiCert   |
 | Date | 2021-02-01 14:09:00 |
 | Company | AVAST Software |
 | Description | Avast Anti Rootkit |
@@ -61,7 +61,7 @@ sc.exe start aswArPot.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/aswarpot.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

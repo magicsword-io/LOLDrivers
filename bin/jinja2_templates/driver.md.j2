@@ -67,7 +67,7 @@ We were not able to verify the hash of this driver successfully, it has not been
 | SHA1 | <a href="https://www.virustotal.com/gui/file/{{hash.SHA1}}">{{hash.SHA1}}</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/{{hash.SHA256}}">{{hash.SHA256}}</a> |
 | Publisher | {{ hash.Publisher }} |
-| Signature | {{ hash.Signature }} |
+| Signature | {{ hash.Signature |join(', ') }}   |
 | Date | {{ hash.Date }} |
 | Company | {{ hash.Company }} |
 | Description | {{ hash.Description }} |

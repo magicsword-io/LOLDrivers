@@ -21,10 +21,13 @@ Acknowledgement:
 Detection: []
 KnownVulnerableSamples:
 - Filename: cpuz.sys
-  MD5: ''
-  SHA1: ''
+  MD5: c2eb4539a4f6ab6edd01bdc191619975
+  SHA1: 4d41248078181c7f61e6e4906aa96bbdea320dc2
   SHA256: 8c95d28270a4a314299cf50f05dcbe63033b2a555195d2ad2f678e09e00393e6
-  Signature: ''
+  Signature:
+  - CPUID
+  - VeriSign Class 3 Code Signing 2004 CA
+  - VeriSign Class 3 Public Primary CA
   Date: ''
   Publisher: ''
   Company: ''

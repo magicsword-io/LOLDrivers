@@ -43,10 +43,10 @@ sc.exe start PcieCubed.sys
 | Filename | PcieCubed.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/22949977ce5cd96ba674b403a9c81285">22949977ce5cd96ba674b403a9c81285</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/745335bcdf02fb42df7d890a24858e16094f48fd">745335bcdf02fb42df7d890a24858e16094f48fd</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/fd223833abffa9cd6cc1848d77599673643585925a7ee51259d67c44d361cce8">fd223833abffa9cd6cc1848d77599673643585925a7ee51259d67c44d361cce8</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start PcieCubed.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/pciecubed.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

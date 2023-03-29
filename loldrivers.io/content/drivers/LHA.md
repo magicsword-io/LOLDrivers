@@ -42,11 +42,11 @@ sc.exe start LHA.sys
 
 | Filename | LHA.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/748cf64b95ca83abc35762ad2c25458f">748cf64b95ca83abc35762ad2c25458f</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/fcd615df88645d1f57ff5702bd6758b77efea6d0">fcd615df88645d1f57ff5702bd6758b77efea6d0</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/e75714f8e0ff45605f6fc7689a1a89c7dcd34aab66c6131c63fefaca584539cf">e75714f8e0ff45605f6fc7689a1a89c7dcd34aab66c6131c63fefaca584539cf</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start LHA.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lha.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

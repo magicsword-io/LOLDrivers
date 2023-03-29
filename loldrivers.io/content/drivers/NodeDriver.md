@@ -43,10 +43,10 @@ sc.exe start NodeDriver.sys
 | Filename | NodeDriver.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/ee6b1a79cb6641aa44c762ee90786fe0">ee6b1a79cb6641aa44c762ee90786fe0</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/3ef30c95e40a854cc4ded94fc503d0c3dc3e620e">3ef30c95e40a854cc4ded94fc503d0c3dc3e620e</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/05b146a48a69dd62a02759487e769bd30d39f16374bc76c86453b4ae59e7ffa4">05b146a48a69dd62a02759487e769bd30d39f16374bc76c86453b4ae59e7ffa4</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start NodeDriver.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nodedriver.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

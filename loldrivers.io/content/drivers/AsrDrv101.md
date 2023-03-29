@@ -42,11 +42,11 @@ sc.exe start AsrDrv101.sys
 
 | Filename | AsrDrv101.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/1a234f4643f5658bab07bfa611282267">1a234f4643f5658bab07bfa611282267</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/57511ef5ff8162a9d793071b5bf7ebe8371759de">57511ef5ff8162a9d793071b5bf7ebe8371759de</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/f40435488389b4fb3b945ca21a8325a51e1b5f80f045ab019748d0ec66056a8b">f40435488389b4fb3b945ca21a8325a51e1b5f80f045ab019748d0ec66056a8b</a> |
 | Publisher | ASROCK Incorporation |
-| Signature |  |
+| Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 | Date |  |
 | Company |  |
 | Description | ASRock IO Driver |
@@ -60,7 +60,7 @@ sc.exe start AsrDrv101.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv101.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

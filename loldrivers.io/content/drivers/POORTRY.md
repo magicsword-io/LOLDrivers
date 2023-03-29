@@ -43,10 +43,10 @@ sc.exe start POORTRY.sys
 | Filename | POORTRY.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/7f9309f5e4defec132b622fadbcad511">7f9309f5e4defec132b622fadbcad511</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/a3ed5cbfbc17b58243289f3cf575bf04be49591d">a3ed5cbfbc17b58243289f3cf575bf04be49591d</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/6b5cf41512255237064e9274ca8f8a3fef820c45aa6067c9c6a0e6f5751a0421">6b5cf41512255237064e9274ca8f8a3fef820c45aa6067c9c6a0e6f5751a0421</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start POORTRY.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/poortry.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

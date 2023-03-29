@@ -43,11 +43,11 @@ sc.exe start nicm.sys
 
 | Filename | nicm.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/22823fed979903f8dfe3b5d28537eb47">22823fed979903f8dfe3b5d28537eb47</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/d098600152e5ee6a8238d414d2a77a34da8afaaa">d098600152e5ee6a8238d414d2a77a34da8afaaa</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/e6056443537d4d2314dabca1b9168f1eaaf17a14eb41f6f5741b6b82b3119790">e6056443537d4d2314dabca1b9168f1eaaf17a14eb41f6f5741b6b82b3119790</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | Novell, Inc., VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -61,7 +61,7 @@ sc.exe start nicm.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nicm.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

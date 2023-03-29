@@ -42,11 +42,11 @@ sc.exe start amp.sys
 
 | Filename | amp.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/c533d6d64b474ffc3169a0e0fc0a701a">c533d6d64b474ffc3169a0e0fc0a701a</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/3f223581409492172a1e875f130f3485b90fbe5f">3f223581409492172a1e875f130f3485b90fbe5f</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/cbb8239a765bf5b2c1b6a5c8832d2cab8fef5deacadfb65d8ed43ef56d291ab6">cbb8239a765bf5b2c1b6a5c8832d2cab8fef5deacadfb65d8ed43ef56d291ab6</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start amp.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amp.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

@@ -42,7 +42,7 @@ for file_name in os.listdir('yaml'):
                     if 'SHA256' not in entry or not entry['SHA256']:
                         entry['SHA256'] = vt_data['sha256']
                     if 'Signature' not in entry or not entry['Signature']:
-                        entry['Signature'] = vt_data['signer']
+                        entry['Signature'] = vt_data['signer'].split("; ")
 
         # Save the updated YAML data back to the file
         if updated:

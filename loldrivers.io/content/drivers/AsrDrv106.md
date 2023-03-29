@@ -42,11 +42,11 @@ sc.exe start AsrDrv106.sys
 
 | Filename | AsrDrv106.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/12908c285b9d68ee1f39186110df0f1e">12908c285b9d68ee1f39186110df0f1e</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/b0032b8d8e6f4bd19a31619ce38d8e010f29a816">b0032b8d8e6f4bd19a31619ce38d8e010f29a816</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/3943a796cc7c5352aa57ccf544295bfd6fb69aae147bc8235a00202dc6ed6838">3943a796cc7c5352aa57ccf544295bfd6fb69aae147bc8235a00202dc6ed6838</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | ASROCK INC., GlobalSign GCC R45 EV CodeSigning CA 2020, GlobalSign Code Signing Root R45, GlobalSign, GlobalSign Root CA - R1   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -60,7 +60,7 @@ sc.exe start AsrDrv106.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv106.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 

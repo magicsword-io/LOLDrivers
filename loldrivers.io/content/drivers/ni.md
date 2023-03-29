@@ -47,11 +47,11 @@ sc.exe start ni.sys
 
 | Filename | ni.sys |
 |:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/"></a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/"></a> |
+| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/ae79e760c739d6214c1e314728a78a6cb6060cce206fde2440a69735d639a0a2">ae79e760c739d6214c1e314728a78a6cb6060cce206fde2440a69735d639a0a2</a> |
 | Publisher |  |
-| Signature |  |
+| Signature | -   |
 | Date |  |
 | Company |  |
 | Description |  |
@@ -65,7 +65,7 @@ sc.exe start ni.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ni.sys.yml)
 
-*last_updated:* 2023-03-21
+*last_updated:* 2023-03-29
 
 
 
