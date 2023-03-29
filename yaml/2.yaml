@@ -1,61 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: 2.sys
 Author: Michael Haag
+Created: '2023-03-04'
+MitreID: T1068
 Category: malicious
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create 2.sys binPath=C:\windows\temp\2.sys type=kernel
 
     sc.exe start 2.sys'
   Description: Driver categorized as POORTRY by Mandiant.
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-03-04'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: 2.sys
-  MD5: bd25be845c151370ff177509d95d5add
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 10115219e3595b93204c70eec6db3e68a93f3144
-  SHA256: 88076e98d45ed3adf0c5355411fe8ca793eb7cec1a1c61f5e1ec337eae267463
-  Signature: Microsoft Windows Hardware Compatibility Publisher; Microsoft Windows
-    Third Party Component CA 2014; Microsoft Root Certificate Authority 2010
-  VendorResults:
-    CrowdStrike: win/malicious_confidence_100% (W)
-    ESET-NOD32: a variant of Win64/Rootkit.Agent.BU
-    F-Secure: '-'
-    GData: Trojan.Agent.GBUC
-    Kaspersky: HEUR:Trojan.Win64.MalDrv.gen
-    McAfee: Artemis!BD25BE845C15
-    Microsoft: Trojan:Win64/RootkitDrv!MSR
-    Sophos: Mal/Generic-R
-    Symantec: '-'
-    TrendMicro: TROJ_GEN.R06BC0DL222
-MitreID: T1068
-Name: 2.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-Signer: Microsoft Windows Hardware Compatibility Publisher; Microsoft Windows Third
-  Party Component CA 2014; Microsoft Root Certificate Authority 2010
-VendorResults:
-  CrowdStrike: win/malicious_confidence_100% (W)
-  ESET-NOD32: a variant of Win64/Rootkit.Agent.BU
-  F-Secure: '-'
-  GData: Trojan.Agent.GBUC
-  Kaspersky: HEUR:Trojan.Win64.MalDrv.gen
-  McAfee: Artemis!BD25BE845C15
-  Microsoft: Trojan:Win64/RootkitDrv!MSR
-  Sophos: Mal/Generic-R
-  Symantec: '-'
-  TrendMicro: TROJ_GEN.R06BC0DL222
-Verified: 'TRUE'
 driver_description: ''
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: 2.sys
+  MD5: bd25be845c151370ff177509d95d5add
+  SHA1: ''
+  SHA256: ''
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

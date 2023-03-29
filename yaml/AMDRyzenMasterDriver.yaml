@@ -1,38 +1,37 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: AMDRyzenMasterDriver.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create AMDRyzenMasterDriver.sys binPath=C:\windows\temp\AMDRyzenMasterDriver.sys
     type=kernel
 
     sc.exe start AMDRyzenMasterDriver.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: AMDRyzenMasterDriver.sys
-  MD5: 13ee349c15ee5d6cf640b3d0111ffc0e
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 4f7a8e26a97980544be634b26899afbefb0a833c
-  SHA256: a13054f349b7baa8c8a3fcbd31789807a493cc52224bbff5e412eb2bd52a6433
-  Signature: Advanced Micro Devices INC.; Symantec Class 3 SHA256 Code Signing CA;
-    VeriSign
-MitreID: T1068
-Name: AMDRyzenMasterDriver.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-Verified: 'TRUE'
 driver_description: https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: AMDRyzenMasterDriver.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: a13054f349b7baa8c8a3fcbd31789807a493cc52224bbff5e412eb2bd52a6433
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

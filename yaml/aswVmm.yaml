@@ -1,37 +1,37 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: aswVmm.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create aswVmm.sys binPath=C:\windows\temp\aswVmm.sys type=kernel
 
     sc.exe start aswVmm.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: aswVmm.sys
-  MD5: a5f637d61719d37a5b4868c385e363c0
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 34c85afe6d84cd3deec02c0a72e5abfa7a2886c3
-  SHA256: 36505921af5a09175395ebaea29c72b2a69a3a9204384a767a5be8a721f31b10
-  Signature: AVAST Software; VeriSign Class 3 Code Signing 2010 CA; VeriSign
-MitreID: T1068
-Name: aswVmm.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
 - https://github.com/tanduRE/AvastHV
-Verified: 'TRUE'
 driver_description: https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: aswVmm.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 36505921af5a09175395ebaea29c72b2a69a3a9204384a767a5be8a721f31b10
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

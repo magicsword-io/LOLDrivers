@@ -1,37 +1,37 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: AsrSmartConnectDrv.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create AsrSmartConnectDrv.sys binPath=C:\windows\temp\AsrSmartConnectDrv.sys
     type=kernel
 
     sc.exe start AsrSmartConnectDrv.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: RW-Everything Read & Write Driver
-  FileVersion: ''
-  Filename: AsrSmartConnectDrv.sys
-  MD5: 56a515173b211832e20fbc64e5a0447c
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ASROCK Incorporation
-  SHA1: 1d0df45ee3fa758f0470e055915004e6eae54c95
-  SHA256: 47f08f7d30d824a8f4bb8a98916401a37c0fd8502db308aba91fe3112b892dcc
-  Signature: ASROCK Incorporation; VeriSign Class 3 Code Signing 2010 CA; VeriSign
-MitreID: T1068
-Name: AsrSmartConnectDrv.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/namazso/physmem_drivers'
-Verified: 'TRUE'
 driver_description: https://github.com/namazso/physmem_drivers
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: AsrSmartConnectDrv.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 47f08f7d30d824a8f4bb8a98916401a37c0fd8502db308aba91fe3112b892dcc
+  Signature: ''
+  Date: ''
+  Publisher: ASROCK Incorporation
+  Company: ''
+  Description: RW-Everything Read & Write Driver
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

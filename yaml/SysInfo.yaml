@@ -1,37 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: SysInfo.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create SysInfo.sys binPath=C:\windows\temp\SysInfo.sys type=kernel
 
     sc.exe start SysInfo.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: SysInfo.sys
-  MD5: 5228b7a738dc90a06ae4f4a7412cb1e9
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: f0c463d29a5914b01e4607889094f1b7d95e7aaf
-  SHA256: 7049f3c939efe76a5556c2a2c04386db51daf61d56b679f4868bb0983c996ebb
-  Signature: Noriyuki MIYAZAKI; GlobalSign ObjectSign CA; GlobalSign Primary Object
-    Publishing CA; GlobalSign Root CA - R1
-MitreID: T1068
-Name: SysInfo.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/namazso/physmem_drivers'
-Verified: 'TRUE'
 driver_description: https://github.com/namazso/physmem_drivers
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: SysInfo.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 7049f3c939efe76a5556c2a2c04386db51daf61d56b679f4868bb0983c996ebb
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

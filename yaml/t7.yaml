@@ -1,36 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: t7.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'FALSE'
 Commands:
   Command: 'sc.exe create t7.sys binPath=C:\windows\temp\t7.sys type=kernel
 
     sc.exe start t7.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: t7.sys
-  MD5: '-'
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: '-'
-  SHA256: be03e9541f56ac6ed1e81407dcd7cc85c0ffc538c3c2c2c8a9c747edbcf13100
-  Signature: '-'
-MitreID: T1068
-Name: t7.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-Verified: 'FALSE'
 driver_description: https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: t7.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: be03e9541f56ac6ed1e81407dcd7cc85c0ffc538c3c2c2c8a9c747edbcf13100
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

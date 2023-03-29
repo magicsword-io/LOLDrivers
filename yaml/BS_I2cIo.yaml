@@ -1,38 +1,37 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: BS_I2cIo.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create BS_I2cIo.sys binPath=C:\windows\temp\BS_I2cIo.sys type=kernel
 
     sc.exe start BS_I2cIo.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: BS_I2cIo.sys
-  MD5: 83601bbe5563d92c1fdb4e960d84dc77
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: dc55217b6043d819eadebd423ff07704ee103231
-  SHA256: 55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a
-  Signature: BIOSTAR MICROTECH INT'L CORP; VeriSign Class 3 Code Signing 2004 CA;
-    VeriSign Class 3 Public Primary CA
-MitreID: T1068
-Name: BS_I2cIo.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
 - https://github.com/elastic/protections-artifacts/blob/932baf346cc8a743f1963ad3d4565b42ed17bebe/yara/rules/Windows_VulnDriver_Biostar.yar#L30
-Verified: 'TRUE'
 driver_description: https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: BS_I2cIo.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

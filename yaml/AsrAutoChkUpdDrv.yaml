@@ -1,37 +1,37 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: AsrAutoChkUpdDrv.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create AsrAutoChkUpdDrv.sys binPath=C:\windows\temp\AsrAutoChkUpdDrv.sys
     type=kernel
 
     sc.exe start AsrAutoChkUpdDrv.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: AsrAutoChkUpdDrv Driver
-  FileVersion: ''
-  Filename: AsrAutoChkUpdDrv.sys
-  MD5: 75d6c3469347de1cdfa3b1b9f1544208
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ASROCK Incorporation
-  SHA1: 6523b3fd87de39eb5db1332e4523ce99556077dc
-  SHA256: 2aa1b08f47fbb1e2bd2e4a492f5d616968e703e1359a921f62b38b8e4662f0c4
-  Signature: ASROCK Incorporation; VeriSign Class 3 Code Signing 2010 CA; VeriSign
-MitreID: T1068
-Name: AsrAutoChkUpdDrv.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/namazso/physmem_drivers'
-Verified: 'TRUE'
 driver_description: https://github.com/namazso/physmem_drivers
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: AsrAutoChkUpdDrv.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 2aa1b08f47fbb1e2bd2e4a492f5d616968e703e1359a921f62b38b8e4662f0c4
+  Signature: ''
+  Date: ''
+  Publisher: ASROCK Incorporation
+  Company: ''
+  Description: AsrAutoChkUpdDrv Driver
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

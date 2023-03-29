@@ -1,37 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: Bs_Def.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'FALSE'
 Commands:
   Command: 'sc.exe create Bs_Def.sys binPath=C:\windows\temp\Bs_Def.sys type=kernel
 
     sc.exe start Bs_Def.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: Bs_Def.sys
-  MD5: a9f220b1507a3c9a327a99995ff99c82
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 2c5ff272bd345962ed41ab8869aef41da0dfe697
-  SHA256: 5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be
-  Signature: ASUSTeK Computer Inc.; VeriSign Class 3 Code Signing 2004 CA; VeriSign
-    Class 3 Public Primary CA
-MitreID: T1068
-Name: Bs_Def.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-Verified: 'FALSE'
 driver_description: https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: Bs_Def.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

@@ -1,37 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: dbk64.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create dbk64.sys binPath=C:\windows\temp\dbk64.sys type=kernel
 
     sc.exe start dbk64.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: dbk64.sys
-  MD5: 1c294146fc77565030603878fd0106f9
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 6053d258096bccb07cb0057d700fe05233ab1fbb
-  SHA256: 18e1707b319c279c7e0204074088cc39286007a1cf6cb6e269d5067d8d0628c6
-  Signature: Cheat Engine; GlobalSign Extended Validation CodeSigning CA - SHA256
-    - G3; GlobalSign; GlobalSign Root CA - R1
-MitreID: T1068
-Name: dbk64.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-Verified: 'TRUE'
 driver_description: https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: dbk64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 18e1707b319c279c7e0204074088cc39286007a1cf6cb6e269d5067d8d0628c6
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

@@ -1,61 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: NodeDriver.sys
 Author: Michael Haag
+Created: '2023-03-02'
+MitreID: T1068
 Category: malicious
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create NodeDriver.sys binPath=C:\windows\temp\NodeDriver.sys type=kernel
 
     sc.exe start NodeDriver.sys'
   Description: Driver categorized as POORTRY by Mandiant.
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-03-02'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: NodeDriver.sys
-  MD5: ee6b1a79cb6641aa44c762ee90786fe0
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 3ef30c95e40a854cc4ded94fc503d0c3dc3e620e
-  SHA256: 05b146a48a69dd62a02759487e769bd30d39f16374bc76c86453b4ae59e7ffa4
-  Signature: Microsoft Windows Hardware Compatibility Publisher; Microsoft Windows
-    Third Party Component CA 2014; Microsoft Root Certificate Authority 2010
-  VendorResults:
-    CrowdStrike: win/malicious_confidence_100% (W)
-    ESET-NOD32: a variant of Win64/Rootkit.Agent.CM.gen
-    F-Secure: '-'
-    GData: '-'
-    Kaspersky: HEUR:Trojan.Win64.MalDrv.gen
-    McAfee: '-'
-    Microsoft: Trojan:Win64/RootkitDrv!MSR
-    Sophos: '-'
-    Symantec: '-'
-    TrendMicro: TROJ_FRS.VSNTLH22
-MitreID: T1068
-Name: NodeDriver.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-Signer: Microsoft Windows Hardware Compatibility Publisher; Microsoft Windows Third
-  Party Component CA 2014; Microsoft Root Certificate Authority 2010
-VendorResults:
-  CrowdStrike: win/malicious_confidence_100% (W)
-  ESET-NOD32: a variant of Win64/Rootkit.Agent.CM.gen
-  F-Secure: '-'
-  GData: '-'
-  Kaspersky: HEUR:Trojan.Win64.MalDrv.gen
-  McAfee: '-'
-  Microsoft: Trojan:Win64/RootkitDrv!MSR
-  Sophos: '-'
-  Symantec: '-'
-  TrendMicro: TROJ_FRS.VSNTLH22
-Verified: 'TRUE'
 driver_description: ''
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: NodeDriver.sys
+  MD5: ee6b1a79cb6641aa44c762ee90786fe0
+  SHA1: ''
+  SHA256: ''
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

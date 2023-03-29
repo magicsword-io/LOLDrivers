@@ -1,38 +1,37 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: CorsairLLAccess64.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create CorsairLLAccess64.sys binPath=C:\windows\temp\CorsairLLAccess64.sys
     type=kernel
 
     sc.exe start CorsairLLAccess64.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: CorsairLLAccess64.sys
-  MD5: 803a371a78d528a44ef8777f67443b16
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 5fb9421be8a8b08ec395d05e00fd45eb753b593a
-  SHA256: 000547560fea0dd4b477eb28bf781ea67bf83c748945ce8923f90fdd14eb7a4b
-  Signature: Microsoft Windows Hardware Compatibility Publisher; Microsoft Windows
-    Third Party Component CA 2014; Microsoft Root Certificate Authority 2010
-MitreID: T1068
-Name: CorsairLLAccess64.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-Verified: 'TRUE'
 driver_description: https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: CorsairLLAccess64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 000547560fea0dd4b477eb28bf781ea67bf83c748945ce8923f90fdd14eb7a4b
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

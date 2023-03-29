@@ -1,38 +1,37 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: magdrvamd64.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys
     type=kernel
 
     sc.exe start magdrvamd64.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: magdrvamd64.sys
-  MD5: 49938383844ceec33dba794fb751c9a5
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: e22495d92ac3dcae5eeb1980549a9ead8155f98a
-  SHA256: be54f7279e69fb7651f98e91d24069dbc7c4c67e65850e486622ccbdc44d9a57
-  Signature: Samsung Electronics Co., Ltd.; GlobalSign CodeSigning CA - G2; GlobalSign
-    Root CA - R1
-MitreID: T1068
-Name: magdrvamd64.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html
-Verified: 'TRUE'
 driver_description: ''
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: magdrvamd64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: be54f7279e69fb7651f98e91d24069dbc7c4c67e65850e486622ccbdc44d9a57
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

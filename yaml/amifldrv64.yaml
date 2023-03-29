@@ -1,36 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: amifldrv64.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create amifldrv64.sys binPath=C:\windows\temp\amifldrv64.sys type=kernel
 
     sc.exe start amifldrv64.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: amifldrv64.sys
-  MD5: 6ab7b8ef0c44e7d2d5909fdb58d37fa5
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: '"American Megatrends, Inc."'
-  SHA1: bb962c9a8dda93e94fef504c4159de881e4706fe
-  SHA256: 42579a759f3f95f20a2c51d5ac2047a2662a2675b3fb9f46c1ed7f23393a0f00
-  Signature: American Megatrends, Inc.; VeriSign Class 3 Code Signing 2010 CA; VeriSign
-MitreID: T1068
-Name: amifldrv64.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/namazso/physmem_drivers'
-Verified: 'TRUE'
 driver_description: https://github.com/namazso/physmem_drivers
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: amifldrv64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 42579a759f3f95f20a2c51d5ac2047a2662a2675b3fb9f46c1ed7f23393a0f00
+  Signature: ''
+  Date: ''
+  Publisher: '"American Megatrends, Inc."'
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

@@ -1,38 +1,37 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: ncpl.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create ncpl.sys binPath=C:\windows\temp\ncpl.sys type=kernel
 
     sc.exe start ncpl.sys'
   Description: ncpl.sys is a vulnerable driver. CVE-2013-3956.
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: ncpl.sys
-  MD5: a26e600652c33dd054731b4693bf5b01
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: bbc1e5fd826961d93b76abd161314cb3592c4436
-  SHA256: 6c7120e40fc850e4715058b233f5ad4527d1084a909114fd6a36b7b7573c4a44
-  Signature: Novell, Inc.; VeriSign Class 3 Code Signing 2009-2 CA; VeriSign Class
-    3 Public Primary CA
-MitreID: T1068
-Name: ncpl.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/jbaines-r7/dellicious'
 - ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
-Verified: 'TRUE'
 driver_description: https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: ncpl.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 6c7120e40fc850e4715058b233f5ad4527d1084a909114fd6a36b7b7573c4a44
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

@@ -1,37 +1,37 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: VProEventMonitor.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create VProEventMonitor.sys binPath=C:\windows\temp\VProEventMonitor.sys
     type=kernel
 
     sc.exe start VProEventMonitor.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: VProEventMonitor.sys
-  MD5: cd9f0fcecf1664facb3671c0130dc8bb
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 0c26ab1299adcd9a385b541ef1653728270aa23e
-  SHA256: 7877c1b0e7429453b750218ca491c2825dae684ad9616642eff7b41715c70aca
-  Signature: Symantec Corporation; VeriSign Class 3 Code Signing 2010 CA; VeriSign
-MitreID: T1068
-Name: VProEventMonitor.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/namazso/physmem_drivers'
-Verified: 'TRUE'
 driver_description: https://github.com/namazso/physmem_drivers
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: VProEventMonitor.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 7877c1b0e7429453b750218ca491c2825dae684ad9616642eff7b41715c70aca
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

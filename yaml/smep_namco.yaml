@@ -1,37 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: smep_namco.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create smep_namco.sys binPath=C:\windows\temp\smep_namco.sys type=kernel
 
     sc.exe start smep_namco.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: smep_namco.sys
-  MD5: 02198692732722681f246c1b33f7a9d9
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: f052dc35b74a1a6246842fbb35eb481577537826
-  SHA256: 7ec93f34eb323823eb199fbf8d06219086d517d0e8f4b9e348d7afd41ec9fd5d
-  Signature: NAMCO BANDAI Online Inc.; GlobalSign CodeSigning CA - G2; GlobalSign
-    Root CA - R1
-MitreID: T1068
-Name: smep_namco.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/namazso/physmem_drivers'
-Verified: 'TRUE'
 driver_description: https://github.com/namazso/physmem_drivers
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: smep_namco.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 7ec93f34eb323823eb199fbf8d06219086d517d0e8f4b9e348d7afd41ec9fd5d
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

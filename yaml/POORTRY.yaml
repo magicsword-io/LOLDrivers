@@ -1,61 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: POORTRY.sys
 Author: Michael Haag
+Created: '2023-03-04'
+MitreID: T1068
 Category: malicious
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create POORTRY.sys binPath=C:\windows\temp\POORTRY.sys type=kernel
 
     sc.exe start POORTRY.sys'
   Description: Driver categorized as POORTRY by Mandiant.
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-03-04'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: POORTRY.sys
-  MD5: 7f9309f5e4defec132b622fadbcad511
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: a3ed5cbfbc17b58243289f3cf575bf04be49591d
-  SHA256: 6b5cf41512255237064e9274ca8f8a3fef820c45aa6067c9c6a0e6f5751a0421
-  Signature: Microsoft Windows Hardware Compatibility Publisher; Microsoft Windows
-    Third Party Component CA 2014; Microsoft Root Certificate Authority 2010
-  VendorResults:
-    CrowdStrike: win/malicious_confidence_100% (W)
-    ESET-NOD32: Win64/Rootkit.Agent.CG
-    F-Secure: '-'
-    GData: Win64.Trojan.Agent.FF6GZE
-    Kaspersky: HEUR:Trojan.Win64.MalDrv.gen
-    McAfee: '-'
-    Microsoft: Trojan:Win64/RootkitDrv!MSR
-    Sophos: Mal/Generic-R
-    Symantec: '-'
-    TrendMicro: TROJ_GEN.R002C0DL122
-MitreID: T1068
-Name: POORTRY.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-Signer: Microsoft Windows Hardware Compatibility Publisher; Microsoft Windows Third
-  Party Component CA 2014; Microsoft Root Certificate Authority 2010
-VendorResults:
-  CrowdStrike: win/malicious_confidence_100% (W)
-  ESET-NOD32: Win64/Rootkit.Agent.CG
-  F-Secure: '-'
-  GData: Win64.Trojan.Agent.FF6GZE
-  Kaspersky: HEUR:Trojan.Win64.MalDrv.gen
-  McAfee: '-'
-  Microsoft: Trojan:Win64/RootkitDrv!MSR
-  Sophos: Mal/Generic-R
-  Symantec: '-'
-  TrendMicro: TROJ_GEN.R002C0DL122
-Verified: 'TRUE'
 driver_description: ''
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: POORTRY.sys
+  MD5: 7f9309f5e4defec132b622fadbcad511
+  SHA1: ''
+  SHA256: ''
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

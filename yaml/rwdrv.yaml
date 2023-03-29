@@ -1,8 +1,9 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: rwdrv.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create rwdrv.sys binPath=C:\windows\temp\rwdrv.sys type=kernel
 
@@ -17,31 +18,30 @@ Commands:
 
 
     '
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: rwdrv.sys
-  MD5: 257483d5d8b268d0d679956c7acdf02d
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: fbf8b0613a2f7039aeb9fa09bd3b40c8ff49ded2
-  SHA256: ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3
-  Signature: ChongKim Chan; GlobalSign CodeSigning CA - G2; GlobalSign Root CA - R1
-MitreID: T1068
-Name: rwdrv.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/jbaines-r7/dellicious'
 - ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
 - http://rweverything.com/
-Verified: 'TRUE'
 driver_description: https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: rwdrv.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

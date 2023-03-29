@@ -1,37 +1,37 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: windows7-32.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'FALSE'
 Commands:
   Command: 'sc.exe create windows7-32.sys binPath=C:\windows\temp\windows7-32.sys
     type=kernel
 
     sc.exe start windows7-32.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: windows7-32.sys
-  MD5: '-'
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: '-'
-  SHA256: 4941c4298f4560fc1e59d0f16f84bab5c060793700b82be2fd7c63735f1657a8
-  Signature: '-'
-MitreID: T1068
-Name: windows7-32.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-Verified: 'FALSE'
 driver_description: https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: windows7-32.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 4941c4298f4560fc1e59d0f16f84bab5c060793700b82be2fd7c63735f1657a8
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

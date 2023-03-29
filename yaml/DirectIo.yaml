@@ -1,37 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: DirectIo.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'FALSE'
 Commands:
   Command: 'sc.exe create DirectIo.sys binPath=C:\windows\temp\DirectIo.sys type=kernel
 
     sc.exe start DirectIo.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: DirectIo.sys
-  MD5: a785b3bc4309d2eb111911c1b55e793f
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 19f3343bfad0ef3595f41d60272d21746c92ffca
-  SHA256: 4422851a0a102f654e95d3b79c357ae3af1b096d7d1576663c027cfbc04abaf9
-  Signature: PassMark Software Pty Ltd; VeriSign Class 3 Code Signing 2009-2 CA; VeriSign
-    Class 3 Public Primary CA
-MitreID: T1068
-Name: DirectIo.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-Verified: 'FALSE'
 driver_description: https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: DirectIo.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 4422851a0a102f654e95d3b79c357ae3af1b096d7d1576663c027cfbc04abaf9
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

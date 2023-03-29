@@ -1,61 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: POORTRY1.sys
 Author: Michael Haag
+Created: '2023-03-04'
+MitreID: T1068
 Category: malicious
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create POORTRY1.sys binPath=C:\windows\temp\POORTRY1.sys type=kernel
 
     sc.exe start POORTRY1.sys'
   Description: Driver categorized as POORTRY by Mandiant.
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-03-04'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: POORTRY1.sys
-  MD5: acac842a46f3501fe407b1db1b247a0b
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 31fac347aa26e92db4d8c9e1ba37a7c7a2234f08
-  SHA256: 575e58b62afab094c20c296604dc3b7dd2e1a50f5978d8ee24b7dca028e97316
-  Signature: Microsoft Windows Hardware Compatibility Publisher; Microsoft Windows
-    Third Party Component CA 2014; Microsoft Root Certificate Authority 2010
-  VendorResults:
-    CrowdStrike: win/malicious_confidence_100% (W)
-    ESET-NOD32: a variant of Win64/Rootkit.Agent.BU
-    F-Secure: '-'
-    GData: '-'
-    Kaspersky: HEUR:Trojan.Win64.MalDrv.gen
-    McAfee: '-'
-    Microsoft: Trojan:Win64/RootkitDrv!MSR
-    Sophos: '-'
-    Symantec: '-'
-    TrendMicro: Rootkit.Win64.MALDRV.A
-MitreID: T1068
-Name: POORTRY1.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-Signer: Microsoft Windows Hardware Compatibility Publisher; Microsoft Windows Third
-  Party Component CA 2014; Microsoft Root Certificate Authority 2010
-VendorResults:
-  CrowdStrike: win/malicious_confidence_100% (W)
-  ESET-NOD32: a variant of Win64/Rootkit.Agent.BU
-  F-Secure: '-'
-  GData: '-'
-  Kaspersky: HEUR:Trojan.Win64.MalDrv.gen
-  McAfee: '-'
-  Microsoft: Trojan:Win64/RootkitDrv!MSR
-  Sophos: '-'
-  Symantec: '-'
-  TrendMicro: Rootkit.Win64.MALDRV.A
-Verified: 'TRUE'
 driver_description: ''
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: POORTRY1.sys
+  MD5: acac842a46f3501fe407b1db1b247a0b
+  SHA1: ''
+  SHA256: ''
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

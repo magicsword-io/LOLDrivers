@@ -1,36 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: rtkio64.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create rtkio64.sys binPath=C:\windows\temp\rtkio64.sys type=kernel
 
     sc.exe start rtkio64.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: rtkio64.sys
-  MD5: 70dcd07d38017b43f710061f37cb4a91
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 99201c9555e5faf6e8d82da793b148311f8aa4b8
-  SHA256: 7133a461aeb03b4d69d43f3d26cd1a9e3ee01694e97a0645a3d8aa1a44c39129
-  Signature: Realtek Semiconductor Corp.; DigiCert EV Code Signing CA; DigiCert
-MitreID: T1068
-Name: rtkio64.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-Verified: 'TRUE'
 driver_description: https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: rtkio64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 7133a461aeb03b4d69d43f3d26cd1a9e3ee01694e97a0645a3d8aa1a44c39129
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

@@ -1,37 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: cpuz.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create cpuz.sys binPath=C:\windows\temp\cpuz.sys type=kernel
 
     sc.exe start cpuz.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: cpuz.sys
-  MD5: c2eb4539a4f6ab6edd01bdc191619975
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 4d41248078181c7f61e6e4906aa96bbdea320dc2
-  SHA256: 8c95d28270a4a314299cf50f05dcbe63033b2a555195d2ad2f678e09e00393e6
-  Signature: CPUID; VeriSign Class 3 Code Signing 2004 CA; VeriSign Class 3 Public
-    Primary CA
-MitreID: T1068
-Name: cpuz.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-Verified: 'TRUE'
 driver_description: https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: cpuz.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 8c95d28270a4a314299cf50f05dcbe63033b2a555195d2ad2f678e09e00393e6
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

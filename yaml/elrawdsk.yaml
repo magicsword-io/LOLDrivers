@@ -1,55 +1,53 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: elrawdsk.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create elrawdsk.sys binPath=C:\windows\temp\elrawdsk.sys type=kernel
 
     sc.exe start elrawdsk.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: elrawdsk.sys
-  MD5: 1493d342e7a36553c56b2adea150949e
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: ce549714a11bd43b52be709581c6e144957136ec
-  SHA256: 4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6
-  Signature: EldoS Corporation; GlobalSign ObjectSign CA; GlobalSign Primary Object
-    Publishing CA; GlobalSign Root CA - R1
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: elrawdsk.sys
-  MD5: 76c643ab29d497317085e5db8c799960
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 1292c7dd60214d96a71e7705e519006b9de7968f
-  SHA256: 5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a
-  Signature: EldoS Corporation; GlobalSign ObjectSign CA; GlobalSign Primary Object
-    Publishing CA; GlobalSign Root CA - R1
-MitreID: T1068
-Name: elrawdsk.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/jbaines-r7/dellicious'
 - ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
 - https://securelist.com/shamoon-the-wiper-further-details-part-ii/57784/
 - https://github.com/Yara-Rules/rules/blob/master/malware/MALW_Shamoon.yar
-Verified: 'TRUE'
 driver_description: https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: elrawdsk.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+- Filename: elrawdsk.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

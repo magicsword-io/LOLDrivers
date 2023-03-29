@@ -1,37 +1,37 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: smep_capcom.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create smep_capcom.sys binPath=C:\windows\temp\smep_capcom.sys
     type=kernel
 
     sc.exe start smep_capcom.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: smep_capcom.sys
-  MD5: f406c5536bcf9bacbeb7ce8a3c383bfa
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 21edff2937eb5cd6f6b0acb7ee5247681f624260
-  SHA256: db2a9247177e8cdd50fe9433d066b86ffd2a84301aa6b2eb60f361cfff077004
-  Signature: CAPCOM Co.,Ltd.; Symantec Class 3 SHA256 Code Signing CA; VeriSign
-MitreID: T1068
-Name: smep_capcom.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/namazso/physmem_drivers'
-Verified: 'TRUE'
 driver_description: https://github.com/namazso/physmem_drivers
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: smep_capcom.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: db2a9247177e8cdd50fe9433d066b86ffd2a84301aa6b2eb60f361cfff077004
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

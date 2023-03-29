@@ -1,37 +1,37 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: wantd_4.sys
 Author: Michael Haag
+Created: '2023-02-28'
+MitreID: T1068
 Category: malicious
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create wantd_4.sys binPath=C:\windows\temp\wantd_4.sys type=kernel
 
     sc.exe start wantd_4.sys'
   Description: Driver used in the Daxin malware campaign.
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-02-28'
-Detection: []
-KnownVulnerableSamples:
-- Company: Microsoft Corporation
-  Date: 8:23 PM 2/28/2022
-  Description: WAN Transport Driver
-  FileVersion: 6.1.7600.1172
-  Filename: wantd_4.sys
-  MD5: 79df0eabbf2895e4e2dae15a4772868c
-  MachineType: 64-bit
-  OriginalFilename: ''
-  Product: Microsoft Windows Operating System
-  ProductVersion: 6.1.7600.1172
-  Publisher: Anhua Xinda (Beijing) Technology Co., Ltd.
-  SHA1: d02403f85be6f243054395a873b41ef8a17ea279
-  SHA256: 8d9a2363b757d3f127b9c6ed8f7b8b018e652369bc070aa3500b3a978feaa6ce
-  Signature: The digital signature of the object did not verify.
-MitreID: T1068
-Name: wantd_4.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
 - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
-Verified: 'TRUE'
 driver_description: ''
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: wantd_4.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 8d9a2363b757d3f127b9c6ed8f7b8b018e652369bc070aa3500b3a978feaa6ce
+  Signature: The digital signature of the object did not verify.
+  Date: 8:23 PM 2/28/2022
+  Publisher: Anhua Xinda (Beijing) Technology Co., Ltd.
+  Company: Microsoft Corporation
+  Description: WAN Transport Driver
+  Product: Microsoft Windows Operating System
+  ProductVersion: 6.1.7600.1172
+  FileVersion: 6.1.7600.1172
+  MachineType: 64-bit
+  OriginalFilename: ''

@@ -1,37 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: PanIO.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'FALSE'
 Commands:
   Command: 'sc.exe create PanIO.sys binPath=C:\windows\temp\PanIO.sys type=kernel
 
     sc.exe start PanIO.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: PanIO.sys
-  MD5: 9a9dbf5107848c254381be67a4c1b1dd
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 291b4a88ffd2ac1d6bf812ecaedc2d934dc503cb
-  SHA256: f596e64f4c5d7c37a00493728d8756b243cfdc11e3372d6d6dfeffc13c9ab960
-  Signature: PAN YAZILIM BILISIM TEKNOLOJILERI TICARET LTD. STI.; GlobalSign CodeSigning
-    CA - G2; GlobalSign
-MitreID: T1068
-Name: PanIO.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-Verified: 'FALSE'
 driver_description: https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: PanIO.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: f596e64f4c5d7c37a00493728d8756b243cfdc11e3372d6d6dfeffc13c9ab960
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

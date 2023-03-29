@@ -1,37 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: asmmap64.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create asmmap64.sys binPath=C:\windows\temp\asmmap64.sys type=kernel
 
     sc.exe start asmmap64.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: Memory mapping Driver
-  FileVersion: ''
-  Filename: asmmap64.sys
-  MD5: 4c016fd76ed5c05e84ca8cab77993961
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ASUSTeK Computer Inc.
-  SHA1: 00a442a4305c62cefa8105c0b4c4a9a5f4d1e93b
-  SHA256: 025e7be9fcefd6a83f4471bba0c11f1c11bd5047047d26626da24ee9a419cdc4
-  Signature: ASUSTeK Computer Inc.; VeriSign Class 3 Code Signing 2004 CA; VeriSign
-    Class 3 Public Primary CA
-MitreID: T1068
-Name: asmmap64.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/namazso/physmem_drivers'
-Verified: 'TRUE'
 driver_description: https://github.com/namazso/physmem_drivers
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: asmmap64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 025e7be9fcefd6a83f4471bba0c11f1c11bd5047047d26626da24ee9a419cdc4
+  Signature: ''
+  Date: ''
+  Publisher: ASUSTeK Computer Inc.
+  Company: ''
+  Description: Memory mapping Driver
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

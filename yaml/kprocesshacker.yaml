@@ -1,38 +1,38 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: kprocesshacker.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create kprocesshacker.sys binPath=C:\windows\temp\kprocesshacker.sys
     type=kernel
 
     sc.exe start kprocesshacker.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: kprocesshacker.sys
-  MD5: 1b5c3c458e31bede55145d0644e88d75
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: a21c84c6bf2e21d69fa06daaf19b4cc34b589347
-  SHA256: 70211a3f90376bbc61f49c22a63075d1d4ddd53f0aefa976216c46e6ba39a9f4
-  Signature: Wen Jia Liu; DigiCert High Assurance Code Signing CA-1; DigiCert
-MitreID: T1068
-Name: kprocesshacker.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/jbaines-r7/dellicious'
 - ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
-Verified: 'TRUE'
 driver_description: https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: kprocesshacker.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 70211a3f90376bbc61f49c22a63075d1d4ddd53f0aefa976216c46e6ba39a9f4
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

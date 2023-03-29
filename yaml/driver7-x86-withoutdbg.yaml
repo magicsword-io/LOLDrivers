@@ -1,37 +1,37 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: driver7-x86-withoutdbg.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create driver7-x86-withoutdbg.sys binPath=C:\windows\temp\driver7-x86-withoutdbg.sys
     type=kernel
 
     sc.exe start driver7-x86-withoutdbg.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: driver7-x86-withoutdbg.sys
-  MD5: 4f191abc652d8f7442ca2636725e1ed6
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 4243dbbf6e5719d723f24d0f862afd0fcb40bc35
-  SHA256: 927c2a580d51a598177fa54c65e9d2610f5f212f1b6cb2fbf2740b64368f010a
-  Signature: ASUSTeK Computer Inc.; VeriSign Class 3 Code Signing 2010 CA; VeriSign
-MitreID: T1068
-Name: driver7-x86-withoutdbg.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/Chigusa0w0/AsusDriversPrivEscala'
-Verified: 'TRUE'
 driver_description: https://github.com/Chigusa0w0/AsusDriversPrivEscala
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: driver7-x86-withoutdbg.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 927c2a580d51a598177fa54c65e9d2610f5f212f1b6cb2fbf2740b64368f010a
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

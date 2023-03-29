@@ -1,52 +1,50 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: iomem64.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create iomem64.sys binPath=C:\windows\temp\iomem64.sys type=kernel
 
     sc.exe start iomem64.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: iomem64.sys
-  MD5: 0898af0888d8f7a9544ef56e5e16354e
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 4b009e91bae8d27b160dc195f10c095f8a2441e1
-  SHA256: 3d23bdbaf9905259d858df5bf991eb23d2dc9f4ecda7f9f77839691acef1b8c4
-  Signature: DT RESEARCH, INC. TAIWAN BRANCH; VeriSign Class 3 Code Signing 2010 CA;
-    VeriSign
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: iomem64.sys
-  MD5: f1e054333cc40f79cfa78e5fbf3b54c2
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 6003184788cd3d2fc624ca801df291ccc4e225ee
-  SHA256: dd4a1253d47de14ef83f1bc8b40816a86ccf90d1e624c5adf9203ae9d51d4097
-  Signature: DT RESEARCH, INC. TAIWAN BRANCH; VeriSign Class 3 Code Signing 2010 CA;
-    VeriSign
-MitreID: T1068
-Name: iomem64.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/namazso/physmem_drivers'
-Verified: 'TRUE'
 driver_description: https://github.com/namazso/physmem_drivers
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: iomem64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 3d23bdbaf9905259d858df5bf991eb23d2dc9f4ecda7f9f77839691acef1b8c4
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+- Filename: iomem64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: dd4a1253d47de14ef83f1bc8b40816a86ccf90d1e624c5adf9203ae9d51d4097
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

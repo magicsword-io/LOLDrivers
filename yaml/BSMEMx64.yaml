@@ -1,37 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: BSMEMx64.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create BSMEMx64.sys binPath=C:\windows\temp\BSMEMx64.sys type=kernel
 
     sc.exe start BSMEMx64.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: BSMEMx64.sys
-  MD5: 49fe3d1f3d5c2e50a0df0f6e8436d778
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 9d07df024ec457168bf0be7e0009619f6ac4f13c
-  SHA256: f929bead59e9424ab90427b379dcdd63fbfe0c4fb5e1792e3a1685541cd5ec65
-  Signature: BIOSTAR MICROTECH INT'L CORP; VeriSign Class 3 Code Signing 2009-2 CA;
-    VeriSign Class 3 Public Primary CA
-MitreID: T1068
-Name: BSMEMx64.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-Verified: 'TRUE'
 driver_description: https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: BSMEMx64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: f929bead59e9424ab90427b379dcdd63fbfe0c4fb5e1792e3a1685541cd5ec65
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

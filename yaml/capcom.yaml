@@ -1,36 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: capcom.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create capcom.sys binPath=C:\windows\temp\capcom.sys type=kernel
 
     sc.exe start capcom.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: capcom.sys
-  MD5: 73c98438ac64a68e88b7b0afd11ba140
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: c1d5cf8c43e7679b782630e93f5e6420ca1749a7
-  SHA256: da6ca1fb539f825ca0f012ed6976baf57ef9c70143b7a1e88b4650bf7a925e24
-  Signature: CAPCOM Co.,Ltd.; Symantec Class 3 SHA256 Code Signing CA; VeriSign
-MitreID: T1068
-Name: capcom.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-Verified: 'TRUE'
 driver_description: https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: capcom.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: da6ca1fb539f825ca0f012ed6976baf57ef9c70143b7a1e88b4650bf7a925e24
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

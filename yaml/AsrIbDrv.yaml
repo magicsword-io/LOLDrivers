@@ -1,36 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: AsrIbDrv.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create AsrIbDrv.sys binPath=C:\windows\temp\AsrIbDrv.sys type=kernel
 
     sc.exe start AsrIbDrv.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: RW-Everything Read & Write Driver
-  FileVersion: ''
-  Filename: AsrIbDrv.sys
-  MD5: 5bab40019419a2713298a5c9173e5d30
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ASROCK Incorporation
-  SHA1: 2d503a2457a787014a1fdd48a2ece2e6cbe98ea7
-  SHA256: 2a652de6b680d5ad92376ad323021850dab2c653abf06edf26120f7714b8e08a
-  Signature: ASROCK Incorporation; VeriSign Class 3 Code Signing 2010 CA; VeriSign
-MitreID: T1068
-Name: AsrIbDrv.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/namazso/physmem_drivers'
-Verified: 'TRUE'
 driver_description: https://github.com/namazso/physmem_drivers
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: AsrIbDrv.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 2a652de6b680d5ad92376ad323021850dab2c653abf06edf26120f7714b8e08a
+  Signature: ''
+  Date: ''
+  Publisher: ASROCK Incorporation
+  Company: ''
+  Description: RW-Everything Read & Write Driver
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

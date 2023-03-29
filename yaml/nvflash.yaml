@@ -1,36 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: nvflash.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create nvflash.sys binPath=C:\windows\temp\nvflash.sys type=kernel
 
     sc.exe start nvflash.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: nvflash.sys
-  MD5: 84fb76ee319073e77fb364bbbbff5461
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: a4b2c56c12799855162ca3b004b4b2078c6ecf77
-  SHA256: afdd66562dea51001c3a9de300f91fc3eb965d6848dfce92ccb9b75853e02508
-  Signature: NVIDIA Corporation; VeriSign Class 3 Code Signing 2010 CA; VeriSign
-MitreID: T1068
-Name: nvflash.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-Verified: 'TRUE'
 driver_description: https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: nvflash.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: afdd66562dea51001c3a9de300f91fc3eb965d6848dfce92ccb9b75853e02508
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

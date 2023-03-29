@@ -1,37 +1,37 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: NCHGBIOS2x64.SYS
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create NCHGBIOS2x64.SYS binPath=C:\windows\temp\NCHGBIOS2x64.SYS
     type=kernel
 
     sc.exe start NCHGBIOS2x64.SYS'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: NCHGBIOS2x64.SYS
-  MD5: d9ce18960c23f38706ae9c6584d9ac90
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: d0d39e1061f30946141b6ecfa0957f8cc3ddeb63
-  SHA256: 314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073
-  Signature: TOSHIBA CORPORATION; VeriSign Class 3 Code Signing 2010 CA; VeriSign
-MitreID: T1068
-Name: NCHGBIOS2x64.SYS
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-Verified: 'TRUE'
 driver_description: https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: NCHGBIOS2x64.SYS
+  MD5: ''
+  SHA1: ''
+  SHA256: 314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

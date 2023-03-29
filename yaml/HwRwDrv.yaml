@@ -1,36 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: HwRwDrv.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create HwRwDrv.sys binPath=C:\windows\temp\HwRwDrv.sys type=kernel
 
     sc.exe start HwRwDrv.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: Hardware read & write driver
-  FileVersion: ''
-  Filename: HwRwDrv.sys
-  MD5: dbc415304403be25ac83047c170b0ec2
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: Shuttle Inc.
-  SHA1: 2b0bb408ff0e66bcdf6574f1ca52cbf4015b257b
-  SHA256: 21ccdd306b5183c00ecfd0475b3152e7d94b921e858e59b68a03e925d1715f21
-  Signature: Shuttle Inc.; VeriSign Class 3 Code Signing 2010 CA; VeriSign
-MitreID: T1068
-Name: HwRwDrv.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/namazso/physmem_drivers'
-Verified: 'TRUE'
 driver_description: https://github.com/namazso/physmem_drivers
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: HwRwDrv.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 21ccdd306b5183c00ecfd0475b3152e7d94b921e858e59b68a03e925d1715f21
+  Signature: ''
+  Date: ''
+  Publisher: Shuttle Inc.
+  Company: ''
+  Description: Hardware read & write driver
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

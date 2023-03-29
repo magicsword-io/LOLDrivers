@@ -1,36 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: amp.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create amp.sys binPath=C:\windows\temp\amp.sys type=kernel
 
     sc.exe start amp.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: amp.sys
-  MD5: c533d6d64b474ffc3169a0e0fc0a701a
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 3f223581409492172a1e875f130f3485b90fbe5f
-  SHA256: cbb8239a765bf5b2c1b6a5c8832d2cab8fef5deacadfb65d8ed43ef56d291ab6
-  Signature: '-'
-MitreID: T1068
-Name: amp.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c'
-Verified: 'TRUE'
 driver_description: https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: amp.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: cbb8239a765bf5b2c1b6a5c8832d2cab8fef5deacadfb65d8ed43ef56d291ab6
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

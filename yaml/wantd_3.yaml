@@ -1,37 +1,37 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: wantd_3.sys
 Author: Michael Haag
+Created: '2023-02-28'
+MitreID: T1068
 Category: malicious
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create wantd_3.sys binPath=C:\windows\temp\wantd_3.sys type=kernel
 
     sc.exe start wantd_3.sys'
   Description: Driver used in the Daxin malware campaign.
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-02-28'
-Detection: []
-KnownVulnerableSamples:
-- Company: Microsoft Corporation
-  Date: 7:52 AM 4/30/2014
-  Description: WAN Transport Driver
-  FileVersion: 5.2.3790.938
-  Filename: wantd_3.sys
-  MD5: fb7c61ef427f9b2fdff3574ee6b1819b
-  MachineType: 32-bit
-  OriginalFilename: ''
-  Product: Microsoft Windows Operating System
-  ProductVersion: 5.2.3790.938
-  Publisher: n/a
-  SHA1: 1f25f54e9b289f76604e81e98483309612c5a471
-  SHA256: 81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1
-  Signature: Unsigned
-MitreID: T1068
-Name: wantd_3.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
 - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
-Verified: 'TRUE'
 driver_description: ''
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: wantd_3.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1
+  Signature: Unsigned
+  Date: 7:52 AM 4/30/2014
+  Publisher: n/a
+  Company: Microsoft Corporation
+  Description: WAN Transport Driver
+  Product: Microsoft Windows Operating System
+  ProductVersion: 5.2.3790.938
+  FileVersion: 5.2.3790.938
+  MachineType: 32-bit
+  OriginalFilename: ''

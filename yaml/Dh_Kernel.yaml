@@ -1,37 +1,37 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: Dh_Kernel.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create Dh_Kernel.sys binPath=C:\windows\temp\Dh_Kernel.sys type=kernel
 
     sc.exe start Dh_Kernel.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: Dh_Kernel.sys
-  MD5: 98763a3dee3cf03de334f00f95fc071a
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: YY Inc.
-  SHA1: 745bad097052134548fe159f158c04be5616afc2
-  SHA256: bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955
-  Signature: YY Inc.; VeriSign Class 3 Code Signing 2010 CA; VeriSign
-MitreID: T1068
-Name: Dh_Kernel.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/namazso/physmem_drivers'
 - ' https://github.com/namazso/physmem_drivers'
-Verified: 'TRUE'
 driver_description: https://github.com/namazso/physmem_drivers
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: Dh_Kernel.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955
+  Signature: ''
+  Date: ''
+  Publisher: YY Inc.
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

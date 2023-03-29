@@ -1,37 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: LgDCatcher.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'FALSE'
 Commands:
   Command: 'sc.exe create LgDCatcher.sys binPath=C:\windows\temp\LgDCatcher.sys type=kernel
 
     sc.exe start LgDCatcher.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: LgDCatcher.sys
-  MD5: ed6348707f177629739df73b97ba1b6e
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 806832983bb8cb1e26001e60ea3b7c3ade4d3471
-  SHA256: 58c071cfe72e9ee867bba85cbd0abe72eb223d27978d6f0650d0103553839b59
-  Signature: "\u96F7\u795E\uFF08\u6B66\u6C49\uFF09\u4FE1\u606F\u6280\u672F\u6709\u9650\
-    \u516C\u53F8; DigiCert SHA2 Assured ID Code Signing CA; DigiCert"
-MitreID: T1068
-Name: LgDCatcher.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-Verified: 'FALSE'
 driver_description: https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: LgDCatcher.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 58c071cfe72e9ee867bba85cbd0abe72eb223d27978d6f0650d0103553839b59
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

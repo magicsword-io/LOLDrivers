@@ -1,38 +1,37 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: nicm.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create nicm.sys binPath=C:\windows\temp\nicm.sys type=kernel
 
     sc.exe start nicm.sys'
   Description: nicm.sys is a vulnerable driver. CVE-2013-3956.
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: nicm.sys
-  MD5: 22823fed979903f8dfe3b5d28537eb47
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: d098600152e5ee6a8238d414d2a77a34da8afaaa
-  SHA256: e6056443537d4d2314dabca1b9168f1eaaf17a14eb41f6f5741b6b82b3119790
-  Signature: Novell, Inc.; VeriSign Class 3 Code Signing 2009-2 CA; VeriSign Class
-    3 Public Primary CA
-MitreID: T1068
-Name: nicm.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/jbaines-r7/dellicious'
 - ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
-Verified: 'TRUE'
 driver_description: https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: nicm.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: e6056443537d4d2314dabca1b9168f1eaaf17a14eb41f6f5741b6b82b3119790
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

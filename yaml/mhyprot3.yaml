@@ -1,36 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: mhyprot3.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'FALSE'
 Commands:
   Command: 'sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel
 
     sc.exe start mhyprot3.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: mhyprot3.sys
-  MD5: 5cc5c26fc99175997d84fe95c61ab2c2
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: a197a02025946aca96d6e74746f84774df31249e
-  SHA256: 475e5016c9c0f5a127896f9179a1b1577a67b357f399ab5a1e68aab07134729a
-  Signature: miHoYo Co.,Ltd.; DigiCert SHA2 Assured ID Code Signing CA; DigiCert
-MitreID: T1068
-Name: mhyprot3.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-Verified: 'FALSE'
 driver_description: https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: mhyprot3.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 475e5016c9c0f5a127896f9179a1b1577a67b357f399ab5a1e68aab07134729a
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

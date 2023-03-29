@@ -1,37 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: HOSTNT.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create HOSTNT.sys binPath=C:\windows\temp\HOSTNT.sys type=kernel
 
     sc.exe start HOSTNT.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: Hostnt 64-bit driver
-  FileVersion: ''
-  Filename: HOSTNT.sys
-  MD5: e8ebba56ea799e1e62748c59e1a4c586
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: '"SafeNet, Inc."'
-  SHA1: ac13941f436139b909d105ad55637e1308f49d9a
-  SHA256: 07b6d69bafcfd767f1b63a490a8843c3bb1f8e1bbea56176109b5743c8f7d357
-  Signature: SafeNet, Inc.; VeriSign Class 3 Code Signing 2004 CA; VeriSign Class
-    3 Public Primary CA
-MitreID: T1068
-Name: HOSTNT.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/namazso/physmem_drivers'
-Verified: 'TRUE'
 driver_description: https://github.com/namazso/physmem_drivers
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: HOSTNT.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 07b6d69bafcfd767f1b63a490a8843c3bb1f8e1bbea56176109b5743c8f7d357
+  Signature: ''
+  Date: ''
+  Publisher: '"SafeNet, Inc."'
+  Company: ''
+  Description: Hostnt 64-bit driver
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

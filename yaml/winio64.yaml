@@ -1,52 +1,50 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: winio64.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create winio64.sys binPath=C:\windows\temp\winio64.sys type=kernel
 
     sc.exe start winio64.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: winio64.sys
-  MD5: 97221e16e7a99a00592ca278c49ffbfc
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 943593e880b4d340f2548548e6e673ef6f61eed3
-  SHA256: e1980c6592e6d2d92c1a65acad8f1071b6a404097bb6fcce494f3c8ac31385cf
-  Signature: Exacq Technologies, Inc.; StartCom Class 3 Primary Intermediate Object
-    CA; StartCom Certification Authority
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: winio64.sys
-  MD5: 11fb599312cb1cf43ca5e879ed6fb71e
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: b4d014b5edd6e19ce0e8395a64faedf49688ecb5
-  SHA256: 9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374
-  Signature: Microsoft Windows Hardware Compatibility Publisher; Microsoft Windows
-    Third Party Component CA 2014; Microsoft Root Certificate Authority 2010
-MitreID: T1068
-Name: winio64.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-Verified: 'TRUE'
 driver_description: https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: winio64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: e1980c6592e6d2d92c1a65acad8f1071b6a404097bb6fcce494f3c8ac31385cf
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+- Filename: winio64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

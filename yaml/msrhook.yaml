@@ -1,36 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: msrhook.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create msrhook.sys binPath=C:\windows\temp\msrhook.sys type=kernel
 
     sc.exe start msrhook.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: msrhook.sys
-  MD5: c49a1956a6a25ffc25ad97d6762b0989
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 89909fa481ff67d7449ee90d24c167b17b0612f1
-  SHA256: 6de84caa2ca18673e01b91af58220c60aecd5cccf269725ec3c7f226b2167492
-  Signature: ID TECH; VeriSign Class 3 Code Signing 2010 CA; VeriSign
-MitreID: T1068
-Name: msrhook.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/namazso/physmem_drivers'
-Verified: 'TRUE'
 driver_description: https://github.com/namazso/physmem_drivers
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: msrhook.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 6de84caa2ca18673e01b91af58220c60aecd5cccf269725ec3c7f226b2167492
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

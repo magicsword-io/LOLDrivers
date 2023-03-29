@@ -1,37 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: GVCIDrv64.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create GVCIDrv64.sys binPath=C:\windows\temp\GVCIDrv64.sys type=kernel
 
     sc.exe start GVCIDrv64.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: GVCIDrv64.sys
-  MD5: 8b287636041792f640f92e77e560725e
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: e92817a8744ebc4e4fa5383cdce2b2977f01ecd4
-  SHA256: 42f0b036687cbd7717c9efed6991c00d4e3e7b032dc965a2556c02177dfdad0f
-  Signature: GIGA-BYTE TECHNOLOGY CO., LTD.; Symantec Class 3 SHA256 Code Signing
-    CA; VeriSign
-MitreID: T1068
-Name: GVCIDrv64.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-Verified: 'TRUE'
 driver_description: https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: GVCIDrv64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 42f0b036687cbd7717c9efed6991c00d4e3e7b032dc965a2556c02177dfdad0f
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

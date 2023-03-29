@@ -1,61 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: Sense5Ext.sys
 Author: Michael Haag
+Created: '2023-03-04'
+MitreID: T1068
 Category: malicious
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create Sense5Ext.sys binPath=C:\windows\temp\Sense5Ext.sys type=kernel
 
     sc.exe start Sense5Ext.sys'
   Description: Driver categorized as POORTRY by Mandiant.
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-03-04'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: Sense5Ext.sys
-  MD5: f9844524fb0009e5b784c21c7bad4220
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: e6765d8866cad6193df1507c18f31fa7f723ca3e
-  SHA256: 7f4555a940ce1156c9bcea9a2a0b801f9a5e44ec9400b61b14a7b1a6404ffdf6
-  Signature: Microsoft Windows Hardware Compatibility Publisher; Microsoft Windows
-    Third Party Component CA 2014; Microsoft Root Certificate Authority 2010
-  VendorResults:
-    CrowdStrike: '-'
-    ESET-NOD32: a variant of Win64/Riskware.Sense.A
-    F-Secure: '-'
-    GData: Trojan.Agent.GBUB
-    Kaspersky: HEUR:Trojan.Win64.MalDrv.gen
-    McAfee: Artemis!F9844524FB00
-    Microsoft: Trojan:Win64/RootkitDrv!MSR
-    Sophos: Mal/Rootkit-VC
-    Symantec: Trojan.Certbypass
-    TrendMicro: TROJ_GEN.R002C0DKN22
-MitreID: T1068
-Name: Sense5Ext.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-Signer: Microsoft Windows Hardware Compatibility Publisher; Microsoft Windows Third
-  Party Component CA 2014; Microsoft Root Certificate Authority 2010
-VendorResults:
-  CrowdStrike: '-'
-  ESET-NOD32: a variant of Win64/Riskware.Sense.A
-  F-Secure: '-'
-  GData: Trojan.Agent.GBUB
-  Kaspersky: HEUR:Trojan.Win64.MalDrv.gen
-  McAfee: Artemis!F9844524FB00
-  Microsoft: Trojan:Win64/RootkitDrv!MSR
-  Sophos: Mal/Rootkit-VC
-  Symantec: Trojan.Certbypass
-  TrendMicro: TROJ_GEN.R002C0DKN22
-Verified: 'TRUE'
 driver_description: ''
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: Sense5Ext.sys
+  MD5: f9844524fb0009e5b784c21c7bad4220
+  SHA1: ''
+  SHA256: ''
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

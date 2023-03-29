@@ -1,37 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: vmdrv.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel
 
     sc.exe start vmdrv.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: vmdrv.sys
-  MD5: d5db81974ffda566fa821400419f59be
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 4c18754dca481f107f0923fb8ef5e149d128525d
-  SHA256: 32cccc4f249499061c0afa18f534c825d01034a1f6815f5506bf4c4ff55d1351
-  Signature: Voicemod Sociedad Limitada; DigiCert Global G3 Code Signing ECC SHA384
-    2021 CA1; DigiCert Global Root G3
-MitreID: T1068
-Name: vmdrv.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-Verified: 'TRUE'
 driver_description: https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: vmdrv.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 32cccc4f249499061c0afa18f534c825d01034a1f6815f5506bf4c4ff55d1351
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

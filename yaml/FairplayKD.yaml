@@ -1,37 +1,37 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: FairplayKD.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'FALSE'
 Commands:
   Command: 'sc.exe create FairplayKD.sys binPath=C:\windows\temp\FairplayKD.sys type=kernel
 
     sc.exe start FairplayKD.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: FairplayKD.sys
-  MD5: 4e90cd77509738d30d3181a4d0880bfa
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: b4dcdbd97f38b24d729b986f84a9cdb3fc34d59f
-  SHA256: 9f4ce6ab5e8d44f355426d9a6ab79833709f39b300733b5b251a0766e895e0e5
-  Signature: Hans Roes; Thawte Code Signing CA - G2; thawte
-MitreID: T1068
-Name: FairplayKD.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html
 - https://www.unknowncheats.me/forum/anti-cheat-bypass/244386-mta-fairplaykd-driver-reversed-exploited-rpm.html
-Verified: 'FALSE'
 driver_description: ''
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: FairplayKD.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 9f4ce6ab5e8d44f355426d9a6ab79833709f39b300733b5b251a0766e895e0e5
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

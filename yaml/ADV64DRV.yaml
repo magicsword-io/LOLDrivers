@@ -1,41 +1,40 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: ADV64DRV.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create ADV64DRV.sys binPath=C:\windows\temp\ADV64DRV.sys type=kernel
 
     sc.exe start ADV64DRV.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+driver_description: https://github.com/namazso/physmem_drivers
+Acknowledgement:
+  Person: ''
+  Handle: ''
 Detection:
 - type: BlockRule
   value: https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-block-rules
 - type: IOC
   value: Utilize Windows Event Code 7045 to monitor for new kernel driver installation.
 KnownVulnerableSamples:
-- Company: ''
+- Filename: ADV64DRV.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 04a85e359525d662338cae86c1e59b1d7aa9bd12b920e8067503723dc1e03162
+  Signature: ''
   Date: 01:30 AM 08/29/2006
+  Publisher: FUJITSU LIMITED
+  Company: ''
   Description: ''
-  FileVersion: 2, 0, 0, 0
-  Filename: ADV64DRV.sys
-  MD5: 778b7feea3c750d44745d3bf294bd4ce
-  MachineType: ''
-  OriginalFilename: ADV64DRV.sys
   Product: ''
   ProductVersion: ''
-  Publisher: FUJITSU LIMITED
-  SHA1: 2261198385d62d2117f50f631652eded0ecc71db
-  SHA256: 04a85e359525d662338cae86c1e59b1d7aa9bd12b920e8067503723dc1e03162
-  Signature: FUJITSU LIMITED ; VeriSign Class 3 Code Signing 2004 CA; VeriSign Class
-    3 Public Primary CA
-MitreID: T1068
-Name: ADV64DRV.sys
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-Verified: 'TRUE'
-driver_description: https://github.com/namazso/physmem_drivers
+  FileVersion: 2, 0, 0, 0
+  MachineType: ''
+  OriginalFilename: ADV64DRV.sys

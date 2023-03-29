@@ -1,37 +1,37 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: segwindrvx64.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys
     type=kernel
 
     sc.exe start segwindrvx64.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: segwindrvx64.sys
-  MD5: 4ae55080ec8aed49343e40d08370195c
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: d702d88b12233be9413446c445f22fda4a92a1d9
-  SHA256: 65329dad28e92f4bcc64de15c552b6ef424494028b18875b7dba840053bc0cdd
-  Signature: Insyde Software Corp.; VeriSign Class 3 Code Signing 2010 CA; VeriSign
-MitreID: T1068
-Name: segwindrvx64.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-Verified: 'TRUE'
 driver_description: https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: segwindrvx64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 65329dad28e92f4bcc64de15c552b6ef424494028b18875b7dba840053bc0cdd
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

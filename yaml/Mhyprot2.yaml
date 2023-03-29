@@ -1,36 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: Mhyprot2.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create Mhyprot2.sys binPath=C:\windows\temp\Mhyprot2.sys type=kernel
 
     sc.exe start Mhyprot2.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: Mhyprot2.sys
-  MD5: 4b817d0e7714b9d43db43ae4a22a161e
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 0466e90bf0e83b776ca8716e01d35a8a2e5f96d3
-  SHA256: 509628b6d16d2428031311d7bd2add8d5f5160e9ecc0cd909f1e82bbbb3234d6
-  Signature: miHoYo Co.,Ltd.; DigiCert Assured ID Code Signing CA-1; DigiCert
-MitreID: T1068
-Name: Mhyprot2.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/namazso/physmem_drivers'
-Verified: 'TRUE'
 driver_description: https://github.com/namazso/physmem_drivers
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: Mhyprot2.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 509628b6d16d2428031311d7bd2add8d5f5160e9ecc0cd909f1e82bbbb3234d6
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

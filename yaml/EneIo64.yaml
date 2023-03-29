@@ -1,37 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: EneIo64.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create EneIo64.sys binPath=C:\windows\temp\EneIo64.sys type=kernel
 
     sc.exe start EneIo64.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: EneIo64.sys
-  MD5: 11fb599312cb1cf43ca5e879ed6fb71e
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: b4d014b5edd6e19ce0e8395a64faedf49688ecb5
-  SHA256: 9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374
-  Signature: Microsoft Windows Hardware Compatibility Publisher; Microsoft Windows
-    Third Party Component CA 2014; Microsoft Root Certificate Authority 2010
-MitreID: T1068
-Name: EneIo64.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c'
-Verified: 'TRUE'
 driver_description: https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: EneIo64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

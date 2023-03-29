@@ -1,37 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: BS_Flash64.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create BS_Flash64.sys binPath=C:\windows\temp\BS_Flash64.sys type=kernel
 
     sc.exe start BS_Flash64.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: BS_Flash64.sys
-  MD5: f5051c756035ef5de9c4c48bacb0612b
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: e83458c4a6383223759cd8024e60c17be4e7c85f
-  SHA256: 86a8e0aa29a5b52c84921188cc1f0eca9a7904dcfe09544602933d8377720219
-  Signature: BIOSTAR MICROTECH INT'L CORP; VeriSign Class 3 Code Signing 2004 CA;
-    VeriSign Class 3 Public Primary CA
-MitreID: T1068
-Name: BS_Flash64.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-Verified: 'TRUE'
 driver_description: https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: BS_Flash64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 86a8e0aa29a5b52c84921188cc1f0eca9a7904dcfe09544602933d8377720219
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

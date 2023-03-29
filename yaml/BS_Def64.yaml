@@ -1,67 +1,64 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: BS_Def64.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create BS_Def64.sys binPath=C:\windows\temp\BS_Def64.sys type=kernel
 
     sc.exe start BS_Def64.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: Default BIOS Flash Driver
-  FileVersion: ''
-  Filename: BS_Def64.sys
-  MD5: 8abbb12e61045984eda19e2dc77b235e
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ASUSTeK Computer Inc.
-  SHA1: 609fa1efcf61e26d64a5ceb13b044175ab2b3a13
-  SHA256: 0040153302b88bee27eb4f1eca6855039e1a057370f5e8c615724fa5215bada3
-  Signature: ASUSTeK Computer Inc.; VeriSign Class 3 Code Signing 2004 CA; VeriSign
-    Class 3 Public Primary CA
-- Company: ''
-  Date: ''
-  Description: Default BIOS Flash Driver
-  FileVersion: ''
-  Filename: BS_Def64.sys
-  MD5: c9a293762319d73c8ee84bcaaf81b7b3
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ASUSTeK Computer Inc.
-  SHA1: 7d7c03e22049a725ace2a9812c72b53a66c2548b
-  SHA256: 3326e2d32bbabd69feb6024809afc56c7e39241ebe70a53728c77e80995422a5
-  Signature: ASUSTeK Computer Inc.; VeriSign Class 3 Code Signing 2004 CA; VeriSign
-    Class 3 Public Primary CA
-- Company: ''
-  Date: ''
-  Description: Default BIOS Flash Driver
-  FileVersion: ''
-  Filename: BS_Def64.sys
-  MD5: 120b5bbb9d2eb35ff4f62d79507ea63a
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ASUSTeK Computer Inc.
-  SHA1: f9519d033d75e1ab6b82b2e156eafe9607edbcfb
-  SHA256: 36b9e31240ab0341873c7092b63e2e0f2cab2962ebf9b25271c3a1216b7669eb
-  Signature: ASUSTeK Computer Inc.; VeriSign Class 3 Code Signing 2004 CA; VeriSign
-    Class 3 Public Primary CA
-MitreID: T1068
-Name: BS_Def64.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/namazso/physmem_drivers'
-Verified: 'TRUE'
 driver_description: https://github.com/namazso/physmem_drivers
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: BS_Def64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 0040153302b88bee27eb4f1eca6855039e1a057370f5e8c615724fa5215bada3
+  Signature: ''
+  Date: ''
+  Publisher: ASUSTeK Computer Inc.
+  Company: ''
+  Description: Default BIOS Flash Driver
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+- Filename: BS_Def64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 3326e2d32bbabd69feb6024809afc56c7e39241ebe70a53728c77e80995422a5
+  Signature: ''
+  Date: ''
+  Publisher: ASUSTeK Computer Inc.
+  Company: ''
+  Description: Default BIOS Flash Driver
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+- Filename: BS_Def64.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: 36b9e31240ab0341873c7092b63e2e0f2cab2962ebf9b25271c3a1216b7669eb
+  Signature: ''
+  Date: ''
+  Publisher: ASUSTeK Computer Inc.
+  Company: ''
+  Description: Default BIOS Flash Driver
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''

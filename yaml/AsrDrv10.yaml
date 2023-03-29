@@ -1,36 +1,36 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Name: AsrDrv10.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
   Command: 'sc.exe create AsrDrv10.sys binPath=C:\windows\temp\AsrDrv10.sys type=kernel
 
     sc.exe start AsrDrv10.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ASRock IO Driver
-  FileVersion: ''
-  Filename: AsrDrv10.sys
-  MD5: 9b91a44a488e4d539f2e55476b216024
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ASROCK Incorporation
-  SHA1: 72966ca845759d239d09da0de7eebe3abe86fee3
-  SHA256: ece0a900ea089e730741499614c0917432246ceb5e11599ee3a1bb679e24fd2c
-  Signature: ASROCK Incorporation; VeriSign Class 3 Code Signing 2010 CA; VeriSign
-MitreID: T1068
-Name: AsrDrv10.sys
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - ' https://github.com/namazso/physmem_drivers'
-Verified: 'TRUE'
 driver_description: https://github.com/namazso/physmem_drivers
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: AsrDrv10.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: ece0a900ea089e730741499614c0917432246ceb5e11599ee3a1bb679e24fd2c
+  Signature: ''
+  Date: ''
+  Publisher: ASROCK Incorporation
+  Company: ''
+  Description: ASRock IO Driver
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
