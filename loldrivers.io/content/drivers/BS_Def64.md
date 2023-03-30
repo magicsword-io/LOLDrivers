@@ -90,7 +90,7 @@ sc.exe start BS_Def64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_def64.sys.yml)
 
-*last_updated:* 2023-03-29
+*last_updated:* 2023-03-30
 
 
 

@@ -60,7 +60,7 @@ sc.exe start POORTRY.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/poortry.sys.yml)
 
-*last_updated:* 2023-03-29
+*last_updated:* 2023-03-30
 
 
 

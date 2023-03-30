@@ -60,7 +60,7 @@ sc.exe start NBIOLib_X64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nbiolib_x64.sys.yml)
 
-*last_updated:* 2023-03-29
+*last_updated:* 2023-03-30
 
 
 

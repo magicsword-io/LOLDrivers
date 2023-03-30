@@ -65,7 +65,7 @@ sc.exe start GameTerSafe.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gametersafe.sys.yml)
 
-*last_updated:* 2023-03-29
+*last_updated:* 2023-03-30
 
 
 
