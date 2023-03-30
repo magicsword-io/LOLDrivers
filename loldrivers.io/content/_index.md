@@ -40,7 +40,7 @@ Feel free to open a [PR](https://github.com/magicsword-io/LOLDrivers/pulls), rai
 {{< /tip >}}
 
 {{< tip >}}
-You can also get the malicious driver list via **API** using [CSV](api/drivers.csv) or [JSON](api/drivers.json). If you are a Sysmon user check out the pre-built [config](https://github.com/magicsword-io/LOLDrivers/blob/main/hashes/sysmon_config_vulnerable_hashes.xml). 
+You can also get the malicious driver list via **API** using [CSV](api/drivers.csv) or [JSON](api/drivers.json). If you are a Sysmon user check out the pre-built [config](https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml).
 {{< /tip >}}
 
 {{< /column >}}

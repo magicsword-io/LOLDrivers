@@ -39,11 +39,14 @@ def gen_hashes_lists():
         if known_vuln_samples:
             for i in known_vuln_samples:
                 if i['MD5']:
-                    md5_list.append(i['MD5'])
+                    if i['MD5'] != "-":
+                        md5_list.append(i['MD5'])
                 if i['SHA1']:
-                    sha1_list.append(i['SHA1'])
+                    if i['SHA1'] != "-":
+                        sha1_list.append(i['SHA1'])
                 if i['SHA256']:
-                    sha256_list.append(i['SHA256'])
+                    if i['SHA256'] != "-":
+                        sha256_list.append(i['SHA256'])
     
     # Remove leading and trailing spaces as well as any duplicates
     md5_list = list(set([i.lstrip().strip().lower() for i in md5_list]))
@@ -56,26 +59,37 @@ def gen_hashes_files(md5_list, sha1_list, sha256_list):
     """
         Generates hash samples files
     """
+    
     if md5_list:
-        with open('hashes/samples.md5', 'w') as f: 
+        with open('detections/hashes/samples.md5', 'w') as f: 
             for i in md5_list:
-                f.write(i + "\n")
+                if i != "-":
+                    f.write(i + "\n")
     
     if sha1_list:
-        with open('hashes/samples.sha1', 'w') as f: 
+        with open('detections/hashes/samples.sha1', 'w') as f: 
             for i in sha1_list:
-                f.write(i + "\n")
+                if i != "-":
+                    f.write(i + "\n")
     
     if sha256_list:
-        with open('hashes/samples.sha256', 'w') as f:
+        with open('detections/hashes/samples.sha256', 'w') as f:
             for i in sha256_list:
-                f.write(i + "\n")
+                if i != "-":
+                    f.write(i + "\n")
+
+    all_hashes = list(set(md5_list + sha1_list + sha256_list))
+    if all_hashes:
+        with open('detections/hashes/samples.all', 'w') as f:
+            for i in all_hashes:
+                if i != "-":
+                    f.write(i + "\n")
 
 def gen_sysmon_config(md5_list, sha1_list, sha256_list):
     """
         Generates sysmon configuration
     """
-    with open("hashes/sysmon_config_vulnerable_hashes.xml", "w") as f:
+    with open("detections/sysmon/sysmon_config_vulnerable_hashes.xml", "w") as f:
         f.write("<Sysmon schemaversion=\"4.30\">\n")
         f.write("	<EventFiltering>\n")
         f.write("		<RuleGroup name=\"\" groupRelation=\"or\">\n")
@@ -83,15 +97,18 @@ def gen_sysmon_config(md5_list, sha1_list, sha256_list):
 
         if md5_list:
             for i in md5_list:
-                f.write("                <Hashes condition=\"contains\">MD5=" + i + "</Hashes>\n")
+                if i != "-":
+                    f.write("                <Hashes condition=\"contains\">MD5=" + i + "</Hashes>\n")
         
         if sha1_list:
             for i in sha1_list:
-                f.write("                <Hashes condition=\"contains\">SHA1=" + i + "</Hashes>\n")
+                if i != "-":
+                    f.write("                <Hashes condition=\"contains\">SHA1=" + i + "</Hashes>\n")
         
         if sha256_list:
             for i in sha256_list:
-                f.write("                <Hashes condition=\"contains\">SHA256=" + i + "</Hashes>\n")
+                if i != "-":
+                    f.write("                <Hashes condition=\"contains\">SHA256=" + i + "</Hashes>\n")
 
         f.write("			</ImageLoad>\n")
         f.write("		</RuleGroup>\n")
@@ -102,7 +119,7 @@ def gen_sigma_rule(md5_list, sha1_list, sha256_list):
     """
         Generates SIGMA rule
     """
-    with open("hashes/driver_load_win_vuln_drivers.yml", "w") as f:
+    with open("detections/sigma/driver_load_win_vuln_drivers.yml", "w") as f:
         f.write("title: Vulnerable Driver Load\n")
         f.write("id: 7aaaf4b8-e47c-4295-92ee-6ed40a6f60c8\n")
         f.write("status: experimental\n")
