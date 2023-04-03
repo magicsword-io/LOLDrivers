@@ -1,5 +1,7 @@
 # LOLDrivers - Living Off The Land Drivers 🚗💨
 
+![CI build](https://github.com/magicsword-io/LOLDrivers/actions/workflows/yaml-tests.yml/badge.svg)
+
 Welcome to LOLDrivers (Living Off The Land Drivers), an exciting open-source project that brings together vulnerable, malicious, and known malicious Windows drivers in one comprehensive repository. Our mission is to empower organizations of all sizes with the knowledge and tools to understand and address driver-related security risks, making their systems safer and more reliable.
 
 ## Key Features
@@ -87,8 +89,6 @@ python bin/site.py
 ```
 cd loldrivers.io && hugo serve
 ```
-
-
 
 ## 🚨 Sigma and Sysmon Detection
 
