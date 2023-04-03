@@ -27,7 +27,7 @@ jobs:
           uses: actions/configure-pages@v3
         - name: Install Node.js dependencies
           run: |
-            cd LOLDrivers/loldrivers.io
+            cd loldrivers.io/
             [[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true
         - name: Build with Hugo
           env:
@@ -35,7 +35,7 @@ jobs:
             HUGO_ENVIRONMENT: production
             HUGO_ENV: production
           run: |
-            cd LOLDrivers/loldrivers.io
+            cd loldrivers.io/
             hugo \
               --gc \
               --minify \
@@ -43,7 +43,7 @@ jobs:
         - name: Upload artifact
           uses: actions/upload-pages-artifact@v1
           with:
-            path: ./LOLDrivers/loldrivers.io/public
+            path: ./loldrivers.io/public
   
     # Deployment job
     deploy:
