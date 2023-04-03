@@ -9,6 +9,86 @@ import datetime
 import jinja2
 import csv
 
+def write_drivers_csv(drivers, output_dir):
+    with open(os.path.join(output_dir, 'content', 'api', 'drivers.csv'), 'w') as f:
+        writer = csv.writer(f)
+
+        # header
+        writer.writerow(['Name', 'Author', 'Created', 'Command', 'Description', 'Usecase', 'Category', 'Privileges', 'MitreID', 'OperatingSystem', 'Resources', 'Driver Description', 'Person',
+                         'Handle', 'Detection', 'KnownVulnerableSamples_SHA256'])
+
+        # write rows
+        for driver in drivers:
+            # get hashes
+            hashes = [s['SHA256'] for s in driver['KnownVulnerableSamples']]
+
+            # get link
+            link = '[' + driver['Name'] + '](drivers/' + os.path.splitext(driver["Name"])[0].lower() + '/)'
+            writer.writerow([link, driver['Author'], driver['Created'], driver['Commands']['Command'], driver['Commands']['Description'], driver['Commands']['Usecase'], driver['Category'],
+                             driver['Commands']['Privileges'], driver['MitreID'], driver['Commands']['OperatingSystem'], driver['Resources'], driver['driver_description'], driver['Acknowledgement']['Person'],
+                             driver['Acknowledgement']['Handle'], driver['Detection'], hashes])
+
+
+def write_top_products(drivers, output_dir, top_n=5):
+    products_count = {}
+
+    for driver in drivers:
+        for hash_info in driver['KnownVulnerableSamples']:
+            product_name = hash_info['Product']
+
+            if not product_name:
+                continue
+
+            product_name = product_name.strip().replace(',', '')
+
+            if product_name.lower() == 'n/a' or product_name.isspace():
+                continue
+
+            if product_name not in products_count:
+                products_count[product_name] = 0
+
+            products_count[product_name] += 1
+
+    sorted_products = sorted(products_count.items(), key=lambda x: x[1], reverse=True)[:top_n]
+
+    with open(f"{output_dir}/content/drivers_top_{top_n}_products.csv", "w") as f:
+        writer = csv.writer(f)
+
+        for product, count in sorted_products:
+            for _ in range(count):
+                writer.writerow([count, product])
+
+def write_top_publishers(drivers, output_dir, top_n=5):
+    publishers_count = {}
+
+    for driver in drivers:
+        for hash_info in driver['KnownVulnerableSamples']:
+            publisher_str = hash_info['Publisher']
+
+            if not publisher_str:
+                continue
+
+            publishers = re.split(',(?![^"]*"(?:(?:[^"]*"){2})*[^"]*$)', publisher_str)
+            for publisher in publishers:
+                publisher = publisher.strip().replace(',', '')
+
+                if publisher.lower() == 'n/a' or publisher.isspace():
+                    continue
+
+                if publisher not in publishers_count:
+                    publishers_count[publisher] = 0
+
+                publishers_count[publisher] += 1
+
+    sorted_publishers = sorted(publishers_count.items(), key=lambda x: x[1], reverse=True)[:top_n]
+
+    with open(f"{output_dir}/content/drivers_top_{top_n}_publishers.csv", "w") as f:
+        writer = csv.writer(f)
+
+        for publisher, count in sorted_publishers:
+            for _ in range(count):
+                writer.writerow([count, publisher])
+
 def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE):
     manifest_files = []
     for root, dirs, files in os.walk(REPO_PATH):
@@ -46,30 +126,13 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
     messages.append("site_gen.py wrote {0} drivers markdown to: {1}".format(len(drivers),OUTPUT_DIR + '/content/drivers/'))
 
     # write api csv
-    with open(OUTPUT_DIR + '/content/api/' + 'drivers.csv', 'w') as f:
-        writer = csv.writer(f)
-
-        # header
-        writer.writerow(['Name','Author','Created','Command','Description','Usecase','Category','Privileges','MitreID','OperatingSystem','Resources','Driver Description','Person' \
-                         ,'Handle','Detection','KnownVulnerableSamples_SHA256'])
-
-        # write rows
-
-        for driver in drivers:
-            #get hashes
-            hashes = []
-            for s in driver['KnownVulnerableSamples']:
-                hashes.append(s['SHA256'])
-            # get link
-            link = '[' + driver['Name'] + '](drivers/' + os.path.splitext(driver["Name"])[0].lower() + '/)'
-            writer.writerow([link, driver['Author'], driver['Created'], driver['Commands']['Command'], driver['Commands']['Description'], driver['Commands']['Usecase'], driver['Category'], \
-                             driver['Commands']['Privileges'],driver['MitreID'],driver['Commands']['OperatingSystem'],driver['Resources'],driver['driver_description'],driver['Acknowledgement']['Person'] \
-                             ,driver['Acknowledgement']['Handle'],driver['Detection'],hashes])
-
+    write_drivers_csv(drivers, OUTPUT_DIR)
+    messages.append("site_gen.py wrote drivers CSV to: {0}".format(OUTPUT_DIR + '/content/api/drivers.csv'))
 
     # write api json
     with open(OUTPUT_DIR + '/content/api/' + 'drivers.json', 'w', encoding='utf-8') as f:
         json.dump(drivers, f, ensure_ascii=False, indent=4)
+    messages.append("site_gen.py wrote drivers JSON to: {0}".format(OUTPUT_DIR + '/content/api/drivers.json'))
 
     # write listing csv
     with open(OUTPUT_DIR + '/content/' + 'drivers_table.csv', 'w') as f:
@@ -77,50 +140,15 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
         for driver in drivers:
             link = '[' + driver['Name'] + '](drivers/' + os.path.splitext(driver["Name"])[0].lower() + '/)'
             writer.writerow([link, driver['Author'], driver['Created'], driver['Commands']['Command']])
+    messages.append("site_gen.py wrote drivers table to: {0}".format(OUTPUT_DIR + '/content/drivers_table.json'))
 
-    # write top 10 publishers
-    publishers = []
-    counted_publishers = []
+    # write top 5 publishers
+    write_top_publishers(drivers, OUTPUT_DIR)
+    messages.append("site_gen.py wrote drivers publishers to: {0}".format(OUTPUT_DIR + '/content/drivers_top_n_publishers.csv'))
 
-    # write top 10 publishers
-    all_publishers = []
-    # counted_publishers = []
-    for driver in drivers:
-        for hash in driver['KnownVulnerableSamples']:
-            if hash['Publisher']:
-                p = dict()
-                p['name'] = driver['Name']
-                p['publisher'] = hash['Publisher']
-                all_publishers.append(p)
-
-
-    for driver in drivers:
-        for hash in driver['KnownVulnerableSamples']:
-            if hash['Publisher'] in publishers:
-                pass
-            else:
-                publishers.append(hash['Publisher'])
-
-    for p in publishers:
-        count = 0
-        for driver in drivers:
-            for hash in driver['KnownVulnerableSamples']:
-                if p == hash['Publisher']:
-                    count += 1
-        publisher = dict()
-        publisher['name'] = p
-        publisher['count'] = count
-        counted_publishers.append(publisher)
-
-    counted_sorted_publishers_top_10 = sorted(counted_publishers, key = lambda x : x['count'], reverse = True)[:10]
-
-
-
-    with open(OUTPUT_DIR + '/content/' + 'drivers_top_10_publishers.csv', 'w') as f:
-        writer = csv.writer(f)
-        for p in counted_sorted_publishers_top_10:
-            for i in range(p['count']): 
-                writer.writerow([p['count'], p['name']])
+    # write top 5 products
+    write_top_products(drivers, OUTPUT_DIR)
+    messages.append("site_gen.py wrote drivers products to: {0}".format(OUTPUT_DIR + '/content/drivers_top_n_products.csv'))
 
     return drivers, messages
 

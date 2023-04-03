@@ -55,7 +55,7 @@ sc.exe start Bs_Def.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_def.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-02
 
 
 

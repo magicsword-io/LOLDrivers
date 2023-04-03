@@ -70,7 +70,7 @@ sc.exe start AsrSetupDrv103.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrsetupdrv103.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-02
 
 
 

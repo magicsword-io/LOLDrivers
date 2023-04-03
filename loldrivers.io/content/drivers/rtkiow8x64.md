@@ -50,7 +50,7 @@ sc.exe start rtkiow8x64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rtkiow8x64.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-02
 
 
 

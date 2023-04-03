@@ -51,7 +51,7 @@ sc.exe start wantd.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-02
 
 
 
