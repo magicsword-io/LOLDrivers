@@ -50,22 +50,12 @@ sc.exe start WinIO32A.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/01779ee53f999464465ed690d823d160f73f10e7">01779ee53f999464465ed690d823d160f73f10e7</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Publisher |  |
 | Signature | -   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio32a.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

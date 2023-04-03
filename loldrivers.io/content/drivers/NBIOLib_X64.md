@@ -45,22 +45,12 @@ sc.exe start NBIOLib_X64.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/f2f728d2f69765f5dfda913d407783d2">f2f728d2f69765f5dfda913d407783d2</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/35829e096a15e559fcbabf3441d99e580ca3b26e">35829e096a15e559fcbabf3441d99e580ca3b26e</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/3f2fda9a7a9c57b7138687bbce49a2e156d6095dddabb3454ea09737e02c3fa5">3f2fda9a7a9c57b7138687bbce49a2e156d6095dddabb3454ea09737e02c3fa5</a> |
-| Publisher |  |
 | Signature | MICRO-STAR INTERNATIONAL CO., LTD., GlobalSign CodeSigning CA - G2, GlobalSign Root CA - R1   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nbiolib_x64.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

@@ -45,22 +45,12 @@ sc.exe start superbmc.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/3473faea65fba5d4fbe54c0898a3c044">3473faea65fba5d4fbe54c0898a3c044</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/910cb12aa49e9f35ecc4907e8304adf0dcca8cf1">910cb12aa49e9f35ecc4907e8304adf0dcca8cf1</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/f8430bdc6fd01f42217d66d87a3ef6f66cb2700ebb39c4f25c8b851858cc4b35">f8430bdc6fd01f42217d66d87a3ef6f66cb2700ebb39c4f25c8b851858cc4b35</a> |
-| Publisher |  |
 | Signature | Super Micro Computer, Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/superbmc.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

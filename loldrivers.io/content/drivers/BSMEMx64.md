@@ -45,22 +45,12 @@ sc.exe start BSMEMx64.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/49fe3d1f3d5c2e50a0df0f6e8436d778">49fe3d1f3d5c2e50a0df0f6e8436d778</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/9d07df024ec457168bf0be7e0009619f6ac4f13c">9d07df024ec457168bf0be7e0009619f6ac4f13c</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/f929bead59e9424ab90427b379dcdd63fbfe0c4fb5e1792e3a1685541cd5ec65">f929bead59e9424ab90427b379dcdd63fbfe0c4fb5e1792e3a1685541cd5ec65</a> |
-| Publisher |  |
 | Signature | BIOSTAR MICROTECH INT&#39;L CORP, VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bsmemx64.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

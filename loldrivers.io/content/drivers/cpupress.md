@@ -50,22 +50,12 @@ sc.exe start cpupress.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/fcdfe570e6dc6e768ef75138033d9961f78045adca53beb6fdb520f6417e0df1">fcdfe570e6dc6e768ef75138033d9961f78045adca53beb6fdb520f6417e0df1</a> |
-| Publisher |  |
 | Signature | -   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cpupress.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

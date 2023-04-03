@@ -50,22 +50,12 @@ sc.exe start TestBone.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/0de4247e72d378713bcf22d5c5d3874d079203bb4364e25f67a90d5570bdcce8">0de4247e72d378713bcf22d5c5d3874d079203bb4364e25f67a90d5570bdcce8</a> |
-| Publisher |  |
 | Signature | -   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/testbone.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

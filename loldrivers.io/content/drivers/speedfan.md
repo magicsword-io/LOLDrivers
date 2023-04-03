@@ -46,22 +46,12 @@ sc.exe start speedfan.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/5f9785e7535f8f602cb294a54962c9e7">5f9785e7535f8f602cb294a54962c9e7</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/bfe55cacc7c56c9f7bd75bdb4b352c0b745d071b">bfe55cacc7c56c9f7bd75bdb4b352c0b745d071b</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/22be050955347661685a4343c51f11c7811674e030386d2264cd12ecbf544b7c">22be050955347661685a4343c51f11c7811674e030386d2264cd12ecbf544b7c</a> |
-| Publisher |  |
 | Signature | Sokno S.R.L., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/speedfan.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

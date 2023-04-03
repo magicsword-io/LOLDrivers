@@ -46,22 +46,12 @@ sc.exe start aswVmm.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/a5f637d61719d37a5b4868c385e363c0">a5f637d61719d37a5b4868c385e363c0</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/34c85afe6d84cd3deec02c0a72e5abfa7a2886c3">34c85afe6d84cd3deec02c0a72e5abfa7a2886c3</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/36505921af5a09175395ebaea29c72b2a69a3a9204384a767a5be8a721f31b10">36505921af5a09175395ebaea29c72b2a69a3a9204384a767a5be8a721f31b10</a> |
-| Publisher |  |
 | Signature | AVAST Software, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/aswvmm.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

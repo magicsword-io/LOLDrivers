@@ -45,22 +45,12 @@ sc.exe start VProEventMonitor.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/cd9f0fcecf1664facb3671c0130dc8bb">cd9f0fcecf1664facb3671c0130dc8bb</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/0c26ab1299adcd9a385b541ef1653728270aa23e">0c26ab1299adcd9a385b541ef1653728270aa23e</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/7877c1b0e7429453b750218ca491c2825dae684ad9616642eff7b41715c70aca">7877c1b0e7429453b750218ca491c2825dae684ad9616642eff7b41715c70aca</a> |
-| Publisher |  |
 | Signature | Symantec Corporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/vproeventmonitor.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

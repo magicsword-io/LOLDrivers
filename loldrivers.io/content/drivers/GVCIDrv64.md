@@ -45,22 +45,12 @@ sc.exe start GVCIDrv64.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/8b287636041792f640f92e77e560725e">8b287636041792f640f92e77e560725e</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/e92817a8744ebc4e4fa5383cdce2b2977f01ecd4">e92817a8744ebc4e4fa5383cdce2b2977f01ecd4</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/42f0b036687cbd7717c9efed6991c00d4e3e7b032dc965a2556c02177dfdad0f">42f0b036687cbd7717c9efed6991c00d4e3e7b032dc965a2556c02177dfdad0f</a> |
-| Publisher |  |
 | Signature | GIGA-BYTE TECHNOLOGY CO., LTD., Symantec Class 3 SHA256 Code Signing CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gvcidrv64.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

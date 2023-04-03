@@ -50,22 +50,12 @@ sc.exe start full.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/4b8c0445075f09aeef542ab1c86e5de6b06e91a3">4b8c0445075f09aeef542ab1c86e5de6b06e91a3</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Publisher |  |
 | Signature | -   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/full.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

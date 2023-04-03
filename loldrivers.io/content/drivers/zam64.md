@@ -45,22 +45,12 @@ sc.exe start zam64.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/21e13f2cb269defeae5e1d09887d47bb">21e13f2cb269defeae5e1d09887d47bb</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/16d7ecf09fc98798a6170e4cef2745e0bee3f5c7">16d7ecf09fc98798a6170e4cef2745e0bee3f5c7</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/543991ca8d1c65113dff039b85ae3f9a87f503daec30f46929fd454bc57e5a91">543991ca8d1c65113dff039b85ae3f9a87f503daec30f46929fd454bc57e5a91</a> |
-| Publisher |  |
 | Signature | Zemana Ltd., DigiCert High Assurance Code Signing CA-1, DigiCert   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/zam64.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

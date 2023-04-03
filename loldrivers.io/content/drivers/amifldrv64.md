@@ -45,22 +45,12 @@ sc.exe start amifldrv64.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/6ab7b8ef0c44e7d2d5909fdb58d37fa5">6ab7b8ef0c44e7d2d5909fdb58d37fa5</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/bb962c9a8dda93e94fef504c4159de881e4706fe">bb962c9a8dda93e94fef504c4159de881e4706fe</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/42579a759f3f95f20a2c51d5ac2047a2662a2675b3fb9f46c1ed7f23393a0f00">42579a759f3f95f20a2c51d5ac2047a2662a2675b3fb9f46c1ed7f23393a0f00</a> |
-| Publisher | &#34;American Megatrends, Inc.&#34; |
-| Signature | American Megatrends, Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
+| Publisher | &#34;American Megatrends, Inc.&#34; || Signature | American Megatrends, Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amifldrv64.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

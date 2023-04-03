@@ -45,22 +45,12 @@ sc.exe start Air_SYSTEM10.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/1f2888e57fdd6aee466962c25ba7d62d">1f2888e57fdd6aee466962c25ba7d62d</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/c23eeb6f18f626ce1fd840227f351fa7543bb167">c23eeb6f18f626ce1fd840227f351fa7543bb167</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/f461414a2596555cece5cfee65a3c22648db0082ca211f6238af8230e41b3212">f461414a2596555cece5cfee65a3c22648db0082ca211f6238af8230e41b3212</a> |
-| Publisher |  |
 | Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/air_system10.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

@@ -45,22 +45,12 @@ sc.exe start cpuz141.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/db72def618cbc3c5f9aa82f091b54250">db72def618cbc3c5f9aa82f091b54250</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/f5696fb352a3fbd14fb1a89ad21a71776027f9ab">f5696fb352a3fbd14fb1a89ad21a71776027f9ab</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/ded2927f9a4e64eefd09d0caba78e94f309e3a6292841ae81d5528cab109f95d">ded2927f9a4e64eefd09d0caba78e94f309e3a6292841ae81d5528cab109f95d</a> |
-| Publisher | CPUID |
-| Signature | CPUID, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description | CPUID Driver |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
+| Publisher | CPUID || Signature | CPUID, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Description | CPUID Driver |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cpuz141.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

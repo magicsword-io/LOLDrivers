@@ -46,22 +46,12 @@ sc.exe start Dh_Kernel.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/98763a3dee3cf03de334f00f95fc071a">98763a3dee3cf03de334f00f95fc071a</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/745bad097052134548fe159f158c04be5616afc2">745bad097052134548fe159f158c04be5616afc2</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955">bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955</a> |
-| Publisher | YY Inc. |
-| Signature | YY Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
+| Publisher | YY Inc. || Signature | YY Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dh_kernel.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

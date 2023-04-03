@@ -66,16 +66,16 @@ We were not able to verify the hash of this driver successfully, it has not been
 | MD5 | <a href="https://www.virustotal.com/gui/file/{{hash.MD5}}">{{ hash.MD5 }}</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/{{hash.SHA1}}">{{hash.SHA1}}</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/{{hash.SHA256}}">{{hash.SHA256}}</a> |
-| Publisher | {{ hash.Publisher }} |
-| Signature | {{ hash.Signature |join(', ') }}   |
-| Date | {{ hash.Date }} |
-| Company | {{ hash.Company }} |
-| Description | {{ hash.Description }} |
-| Product | {{ hash.Product }} |
-| ProductVersion | {{ hash.Productversion }} |
-| FileVersion | {{ hash.Fileversion }} |
-| MachineType | {{ hash.Machinetype }} |
-| OriginalFilename | {{ hash.OriginalFilename }} |
+{% if hash.Publisher %}| Publisher | {{ hash.Publisher }} |{% endif %}
+{% if hash.Signature %}| Signature | {{ hash.Signature | join(', ') }}   |{% endif %}
+{% if hash.Date %}| Date | {{ hash.Date }} |{% endif %}
+{% if hash.Company %}| Company | {{ hash.Company }} |{% endif %}
+{% if hash.Description %}| Description | {{ hash.Description }} |{% endif %}
+{% if hash.Product %}| Product | {{ hash.Product }} |{% endif %}
+{% if hash.Productversion %}| ProductVersion | {{ hash.Productversion }} |{% endif %}
+{% if hash.Fileversion %}| FileVersion | {{ hash.Fileversion }} |{% endif %}
+{% if hash.Machinetype %}| MachineType | {{ hash.Machinetype }} |{% endif %}
+{% if hash.OriginalFilename %}| OriginalFilename | {{ hash.OriginalFilename }} |{% endif %}
 {% endfor +%}
 {% endif %}
 

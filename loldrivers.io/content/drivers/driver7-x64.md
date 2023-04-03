@@ -45,22 +45,12 @@ sc.exe start driver7-x64.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/715f8efab1d1c660e4188055c4b28eed">715f8efab1d1c660e4188055c4b28eed</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/7ba19a701c8af76988006d616a5f77484c13cb0a">7ba19a701c8af76988006d616a5f77484c13cb0a</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/771a8d05f1af6214e0ef0886662be500ee910ab99f0154227067fddcfe08a3dd">771a8d05f1af6214e0ef0886662be500ee910ab99f0154227067fddcfe08a3dd</a> |
-| Publisher |  |
 | Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/driver7-x64.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

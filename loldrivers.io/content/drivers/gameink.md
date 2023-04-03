@@ -50,22 +50,12 @@ sc.exe start gameink.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/3ae56ab63230d6d9552360845b4a37b5801cc5ea">3ae56ab63230d6d9552360845b4a37b5801cc5ea</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Publisher |  |
 | Signature | -   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gameink.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

@@ -50,22 +50,12 @@ sc.exe start LgDCatcher.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/ed6348707f177629739df73b97ba1b6e">ed6348707f177629739df73b97ba1b6e</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/806832983bb8cb1e26001e60ea3b7c3ade4d3471">806832983bb8cb1e26001e60ea3b7c3ade4d3471</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/58c071cfe72e9ee867bba85cbd0abe72eb223d27978d6f0650d0103553839b59">58c071cfe72e9ee867bba85cbd0abe72eb223d27978d6f0650d0103553839b59</a> |
-| Publisher |  |
 | Signature | 雷神（武汉）信息技术有限公司, DigiCert SHA2 Assured ID Code Signing CA, DigiCert   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lgdcatcher.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

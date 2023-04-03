@@ -50,22 +50,12 @@ sc.exe start NetProxyDriver.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/8111085022bda87e5f6aa4c195e743cc6dd6a3a6d41add475d267dc6b105a69f">8111085022bda87e5f6aa4c195e743cc6dd6a3a6d41add475d267dc6b105a69f</a> |
-| Publisher |  |
 | Signature | -   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/netproxydriver.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 
