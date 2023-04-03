@@ -140,7 +140,7 @@ sc.exe start ASIO32.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asio32.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

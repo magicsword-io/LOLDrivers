@@ -64,7 +64,7 @@ sc.exe start iqvw64e.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iqvw64e.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 
