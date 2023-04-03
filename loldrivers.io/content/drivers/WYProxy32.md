@@ -50,17 +50,7 @@ sc.exe start WYProxy32.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/de6bf572d39e2611773e7a01f0388f84fb25da6cba2f1f8b9b36ffba467de6fa">de6bf572d39e2611773e7a01f0388f84fb25da6cba2f1f8b9b36ffba467de6fa</a> |
-| Publisher |  |
 | Signature | -   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wyproxy32.sys.yml)

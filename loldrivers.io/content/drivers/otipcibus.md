@@ -50,17 +50,7 @@ sc.exe start otipcibus.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/d5a642329cce4df94b8dc1ba9660ae34">d5a642329cce4df94b8dc1ba9660ae34</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/ccdd3a1ebe9a1c8f8a72af20a05a10f11da1d308">ccdd3a1ebe9a1c8f8a72af20a05a10f11da1d308</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/4e3eb5b9bce2fd9f6878ae36288211f0997f6149aa8c290ed91228ba4cdfae80">4e3eb5b9bce2fd9f6878ae36288211f0997f6149aa8c290ed91228ba4cdfae80</a> |
-| Publisher |  |
 | Signature | Ours Technology Inc., Symantec Class 3 SHA256 Code Signing CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/otipcibus.sys.yml)

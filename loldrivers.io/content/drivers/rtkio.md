@@ -45,17 +45,7 @@ sc.exe start rtkio.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/daf800da15b33bf1a84ee7afc59f0656">daf800da15b33bf1a84ee7afc59f0656</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/166759fd511613414d3213942fe2575b926a6226">166759fd511613414d3213942fe2575b926a6226</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/478917514be37b32d5ccf76e4009f6f952f39f5553953544f1b0688befd95e82">478917514be37b32d5ccf76e4009f6f952f39f5553953544f1b0688befd95e82</a> |
-| Publisher |  |
 | Signature | Realtek Semiconductor Corp., DigiCert EV Code Signing CA, DigiCert   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rtkio.sys.yml)

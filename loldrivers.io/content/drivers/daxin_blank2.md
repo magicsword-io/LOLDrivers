@@ -46,17 +46,7 @@ sc.exe start daxin_blank2.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/1cd158a64f3d886357535382a6fdad75">1cd158a64f3d886357535382a6fdad75</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/a48aa80942fc8e0699f518de4fd6512e341d4196">a48aa80942fc8e0699f518de4fd6512e341d4196</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/5c1585b1a1c956c7755429544f3596515dfdf928373620c51b0606a520c6245a">5c1585b1a1c956c7755429544f3596515dfdf928373620c51b0606a520c6245a</a> |
-| Publisher | Fuqing Yuntan Network Tech Co.,Ltd. |
-| Signature | A,  , c, e, r, t, i, f, i, c, a, t, e,  , w, a, s,  , e, x, p, l, i, c, i, t, l, y,  , r, e, v, o, k, e, d,  , b, y,  , i, t, s,  , i, s, s, u, e, r, .   |
-| Date | 4:05 AM 2/6/2021 |
-| Company | n/a |
-| Description | n/a |
-| Product | n/a |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
+| Publisher | Fuqing Yuntan Network Tech Co.,Ltd. || Signature | A,  , c, e, r, t, i, f, i, c, a, t, e,  , w, a, s,  , e, x, p, l, i, c, i, t, l, y,  , r, e, v, o, k, e, d,  , b, y,  , i, t, s,  , i, s, s, u, e, r, .   || Date | 4:05 AM 2/6/2021 || Company | n/a || Description | n/a || Product | n/a |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank2.sys.yml)

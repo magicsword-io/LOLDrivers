@@ -50,17 +50,7 @@ sc.exe start nstrwsk.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/3390919bb28d5c36cc348f9ef23be5fa49bfd81263eb7740826e4437cbe904cd">3390919bb28d5c36cc348f9ef23be5fa49bfd81263eb7740826e4437cbe904cd</a> |
-| Publisher |  |
 | Signature | -   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nstrwsk.sys.yml)

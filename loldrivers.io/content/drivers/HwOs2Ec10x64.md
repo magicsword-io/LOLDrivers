@@ -45,17 +45,7 @@ sc.exe start HwOs2Ec10x64.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/37086ae5244442ba552803984a11d6cb">37086ae5244442ba552803984a11d6cb</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/dc0e97adb756c0f30b41840a59b85218cbdd198f">dc0e97adb756c0f30b41840a59b85218cbdd198f</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/bb1135b51acca8348d285dc5461d10e8f57260e7d0c8cc4a092734d53fc40cbc">bb1135b51acca8348d285dc5461d10e8f57260e7d0c8cc4a092734d53fc40cbc</a> |
-| Publisher |  |
 | Signature | Huawei Technologies Co., Ltd., Symantec Class 3 Extended Validation Code Signing CA - G2, VeriSign   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hwos2ec10x64.sys.yml)

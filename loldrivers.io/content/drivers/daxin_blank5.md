@@ -46,17 +46,7 @@ sc.exe start daxin_blank5.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/f242cffd9926c0ccf94af3bf16b6e527">f242cffd9926c0ccf94af3bf16b6e527</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/53f776d9a183c42b93960b270dddeafba74eb3fb">53f776d9a183c42b93960b270dddeafba74eb3fb</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/9c2f3e9811f7d0c7463eaa1ee6f39c23f902f3797b80891590b43bbe0fdf0e51">9c2f3e9811f7d0c7463eaa1ee6f39c23f902f3797b80891590b43bbe0fdf0e51</a> |
-| Publisher | n/a |
-| Signature | U, n, s, i, g, n, e, d   |
-| Date | 1:29 AM 7/18/2008 |
-| Company | n/a |
-| Description | n/a |
-| Product | n/a |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
+| Publisher | n/a || Signature | U, n, s, i, g, n, e, d   || Date | 1:29 AM 7/18/2008 || Company | n/a || Description | n/a || Product | n/a |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank5.sys.yml)

@@ -45,17 +45,7 @@ sc.exe start AsrSmartConnectDrv.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/56a515173b211832e20fbc64e5a0447c">56a515173b211832e20fbc64e5a0447c</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/1d0df45ee3fa758f0470e055915004e6eae54c95">1d0df45ee3fa758f0470e055915004e6eae54c95</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/47f08f7d30d824a8f4bb8a98916401a37c0fd8502db308aba91fe3112b892dcc">47f08f7d30d824a8f4bb8a98916401a37c0fd8502db308aba91fe3112b892dcc</a> |
-| Publisher | ASROCK Incorporation |
-| Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description | RW-Everything Read &amp; Write Driver |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
+| Publisher | ASROCK Incorporation || Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Description | RW-Everything Read &amp; Write Driver |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrsmartconnectdrv.sys.yml)

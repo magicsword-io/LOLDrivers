@@ -50,32 +50,12 @@ sc.exe start fiddrv64.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/10e15ba8ff8ed926ddd3636cec66a0f08c9860a4">10e15ba8ff8ed926ddd3636cec66a0f08c9860a4</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Publisher |  |
-| Signature | -   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-| Filename | fiddrv64.sys |
+| Signature | -   || Filename | fiddrv64.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/e4436c8c42ba5ffabd58a3b2256f6e86ccc907ab">e4436c8c42ba5ffabd58a3b2256f6e86ccc907ab</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Publisher |  |
 | Signature | -   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fiddrv64.sys.yml)

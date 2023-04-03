@@ -45,17 +45,7 @@ sc.exe start HwRwDrv.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/dbc415304403be25ac83047c170b0ec2">dbc415304403be25ac83047c170b0ec2</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/2b0bb408ff0e66bcdf6574f1ca52cbf4015b257b">2b0bb408ff0e66bcdf6574f1ca52cbf4015b257b</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/21ccdd306b5183c00ecfd0475b3152e7d94b921e858e59b68a03e925d1715f21">21ccdd306b5183c00ecfd0475b3152e7d94b921e858e59b68a03e925d1715f21</a> |
-| Publisher | Shuttle Inc. |
-| Signature | Shuttle Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description | Hardware read &amp; write driver |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
+| Publisher | Shuttle Inc. || Signature | Shuttle Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Description | Hardware read &amp; write driver |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hwrwdrv.sys.yml)

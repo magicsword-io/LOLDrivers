@@ -50,17 +50,7 @@ sc.exe start nt3.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/7d8937c18d6e11a0952e53970a0934cf0e65515637ac24d6ca52ccf4b93d385f">7d8937c18d6e11a0952e53970a0934cf0e65515637ac24d6ca52ccf4b93d385f</a> |
-| Publisher |  |
 | Signature | -   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nt3.sys.yml)

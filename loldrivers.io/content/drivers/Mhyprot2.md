@@ -45,17 +45,7 @@ sc.exe start Mhyprot2.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/4b817d0e7714b9d43db43ae4a22a161e">4b817d0e7714b9d43db43ae4a22a161e</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/0466e90bf0e83b776ca8716e01d35a8a2e5f96d3">0466e90bf0e83b776ca8716e01d35a8a2e5f96d3</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/509628b6d16d2428031311d7bd2add8d5f5160e9ecc0cd909f1e82bbbb3234d6">509628b6d16d2428031311d7bd2add8d5f5160e9ecc0cd909f1e82bbbb3234d6</a> |
-| Publisher |  |
 | Signature | miHoYo Co.,Ltd., DigiCert Assured ID Code Signing CA-1, DigiCert   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mhyprot2.sys.yml)

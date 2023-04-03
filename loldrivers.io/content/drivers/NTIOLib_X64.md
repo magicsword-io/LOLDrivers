@@ -45,17 +45,7 @@ sc.exe start NTIOLib_X64.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/c02f70960fa934b8defa16a03d7f6556">c02f70960fa934b8defa16a03d7f6556</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/3805e4e08ad342d224973ecdade8b00c40ed31be">3805e4e08ad342d224973ecdade8b00c40ed31be</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/d8b58f6a89a7618558e37afc360cd772b6731e3ba367f8d58734ecee2244a530">d8b58f6a89a7618558e37afc360cd772b6731e3ba367f8d58734ecee2244a530</a> |
-| Publisher |  |
 | Signature | Micro-Star Int&#39;l Co. Ltd., GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ntiolib_x64.sys.yml)

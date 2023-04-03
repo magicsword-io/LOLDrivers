@@ -46,17 +46,7 @@ sc.exe start wantd_5.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/6d131a7462e568213b44ef69156f10a5">6d131a7462e568213b44ef69156f10a5</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/25bf4e30a94df9b8f8ab900d1a43fd056d285c9d">25bf4e30a94df9b8f8ab900d1a43fd056d285c9d</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/b9dad0131c51e2645e761b74a71ebad2bf175645fa9f42a4ab0e6921b83306e3">b9dad0131c51e2645e761b74a71ebad2bf175645fa9f42a4ab0e6921b83306e3</a> |
-| Publisher | Anhua Xinda (Beijing) Technology Co., Ltd. |
-| Signature | T, h, e,  , d, i, g, i, t, a, l,  , s, i, g, n, a, t, u, r, e,  , o, f,  , t, h, e,  , o, b, j, e, c, t,  , d, i, d,  , n, o, t,  , v, e, r, i, f, y, .   |
-| Date | 8:23 PM 2/28/2022 |
-| Company | Microsoft Corporation |
-| Description | WAN Transport Driver |
-| Product | Microsoft Windows Operating System |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
+| Publisher | Anhua Xinda (Beijing) Technology Co., Ltd. || Signature | T, h, e,  , d, i, g, i, t, a, l,  , s, i, g, n, a, t, u, r, e,  , o, f,  , t, h, e,  , o, b, j, e, c, t,  , d, i, d,  , n, o, t,  , v, e, r, i, f, y, .   || Date | 8:23 PM 2/28/2022 || Company | Microsoft Corporation || Description | WAN Transport Driver || Product | Microsoft Windows Operating System |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd_5.sys.yml)

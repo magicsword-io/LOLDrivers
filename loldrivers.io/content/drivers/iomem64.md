@@ -45,32 +45,12 @@ sc.exe start iomem64.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/0898af0888d8f7a9544ef56e5e16354e">0898af0888d8f7a9544ef56e5e16354e</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/4b009e91bae8d27b160dc195f10c095f8a2441e1">4b009e91bae8d27b160dc195f10c095f8a2441e1</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/3d23bdbaf9905259d858df5bf991eb23d2dc9f4ecda7f9f77839691acef1b8c4">3d23bdbaf9905259d858df5bf991eb23d2dc9f4ecda7f9f77839691acef1b8c4</a> |
-| Publisher |  |
-| Signature | DT RESEARCH, INC. TAIWAN BRANCH, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-| Filename | iomem64.sys |
+| Signature | DT RESEARCH, INC. TAIWAN BRANCH, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Filename | iomem64.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/f1e054333cc40f79cfa78e5fbf3b54c2">f1e054333cc40f79cfa78e5fbf3b54c2</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/6003184788cd3d2fc624ca801df291ccc4e225ee">6003184788cd3d2fc624ca801df291ccc4e225ee</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/dd4a1253d47de14ef83f1bc8b40816a86ccf90d1e624c5adf9203ae9d51d4097">dd4a1253d47de14ef83f1bc8b40816a86ccf90d1e624c5adf9203ae9d51d4097</a> |
-| Publisher |  |
 | Signature | DT RESEARCH, INC. TAIWAN BRANCH, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iomem64.sys.yml)

@@ -51,17 +51,7 @@ sc.exe start goad.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/312e31851e0fc2072dbf9a128557d6ef">312e31851e0fc2072dbf9a128557d6ef</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Publisher |  |
 | Signature | -   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/goad.sys.yml)

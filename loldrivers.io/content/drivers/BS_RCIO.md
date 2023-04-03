@@ -50,17 +50,7 @@ sc.exe start BS_RCIO.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/ab53d07f18a9697139ddc825b466f696">ab53d07f18a9697139ddc825b466f696</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/213ba055863d4226da26a759e8a254062ea77814">213ba055863d4226da26a759e8a254062ea77814</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/362c4f3dadc9c393682664a139d65d80e32caa2a97b6e0361dfd713a73267ecc">362c4f3dadc9c393682664a139d65d80e32caa2a97b6e0361dfd713a73267ecc</a> |
-| Publisher |  |
 | Signature | Biostar Microtech Int&#39;l Corp, DigiCert EV Code Signing CA, DigiCert   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_rcio.sys.yml)

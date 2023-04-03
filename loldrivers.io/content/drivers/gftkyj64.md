@@ -48,17 +48,7 @@ sc.exe start gftkyj64.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/04a88f5974caa621cee18f34300fc08a">04a88f5974caa621cee18f34300fc08a</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/a804ebec7e341b4d98d9e94f6e4860a55ea1638d">a804ebec7e341b4d98d9e94f6e4860a55ea1638d</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c">9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c</a> |
-| Publisher |  |
 | Signature | 北京东方海达网络科技有限责任公司, Sectigo Public Code Signing CA R36, Sectigo Public Code Signing Root R46, Sectigo (AAA)   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gftkyj64.sys.yml)

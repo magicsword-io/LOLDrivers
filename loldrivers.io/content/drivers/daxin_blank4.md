@@ -46,17 +46,7 @@ sc.exe start daxin_blank4.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/491aec2249ad8e2020f9f9b559ab68a8">491aec2249ad8e2020f9f9b559ab68a8</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/8692274681e8d10c26ddf2b993f31974b04f5bf0">8692274681e8d10c26ddf2b993f31974b04f5bf0</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/8dafe5f3d0527b66f6857559e3c81872699003e0f2ffda9202a1b5e29db2002e">8dafe5f3d0527b66f6857559e3c81872699003e0f2ffda9202a1b5e29db2002e</a> |
-| Publisher | n/a |
-| Signature | U, n, s, i, g, n, e, d   |
-| Date | 8:42 AM 4/20/2010 |
-| Company | n/a |
-| Description | n/a |
-| Product | n/a |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
+| Publisher | n/a || Signature | U, n, s, i, g, n, e, d   || Date | 8:42 AM 4/20/2010 || Company | n/a || Description | n/a || Product | n/a |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank4.sys.yml)

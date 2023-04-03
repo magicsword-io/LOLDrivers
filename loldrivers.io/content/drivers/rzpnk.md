@@ -46,17 +46,7 @@ sc.exe start rzpnk.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/4cc3ddd5ae268d9a154a426af2c23ef9">4cc3ddd5ae268d9a154a426af2c23ef9</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/684786de4b3b3f53816eae9df5f943a22c89601f">684786de4b3b3f53816eae9df5f943a22c89601f</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/93d873cdf23d5edc622b74f9544cac7fe247d7a68e1e2a7bf2879fad97a3ae63">93d873cdf23d5edc622b74f9544cac7fe247d7a68e1e2a7bf2879fad97a3ae63</a> |
-| Publisher |  |
 | Signature | Razer USA Ltd., Symantec Class 3 SHA256 Code Signing CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rzpnk.sys.yml)

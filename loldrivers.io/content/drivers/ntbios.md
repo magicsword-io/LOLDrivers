@@ -46,17 +46,7 @@ sc.exe start ntbios.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/14580bd59c55185115fd3abe73b016a2">14580bd59c55185115fd3abe73b016a2</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/71469dce9c2f38d0e0243a289f915131bf6dd2a8">71469dce9c2f38d0e0243a289f915131bf6dd2a8</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc">96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc</a> |
-| Publisher | n/a |
-| Signature | U, n, s, i, g, n, e, d   |
-| Date | 10:26 AM 11/19/2009 |
-| Company | Microsoft Corporation |
-| Description | ntbios driver |
-| Product |  Microsoft(R) Windows (R) NT Operating System |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
+| Publisher | n/a || Signature | U, n, s, i, g, n, e, d   || Date | 10:26 AM 11/19/2009 || Company | Microsoft Corporation || Description | ntbios driver || Product |  Microsoft(R) Windows (R) NT Operating System |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ntbios.sys.yml)

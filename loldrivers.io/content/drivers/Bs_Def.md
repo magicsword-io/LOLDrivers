@@ -50,17 +50,7 @@ sc.exe start Bs_Def.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/a9f220b1507a3c9a327a99995ff99c82">a9f220b1507a3c9a327a99995ff99c82</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/2c5ff272bd345962ed41ab8869aef41da0dfe697">2c5ff272bd345962ed41ab8869aef41da0dfe697</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be">5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be</a> |
-| Publisher |  |
 | Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_def.sys.yml)

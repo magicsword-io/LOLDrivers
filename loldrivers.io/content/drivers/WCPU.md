@@ -45,17 +45,7 @@ sc.exe start WCPU.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/c1d063c9422a19944cdaa6714623f2ec">c1d063c9422a19944cdaa6714623f2ec</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/f36a47edfacd85e0c6d4d22133dd386aee4eec15">f36a47edfacd85e0c6d4d22133dd386aee4eec15</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/159e7c5a12157af92e0d14a0d3ea116f91c09e21a9831486e6dc592c93c10980">159e7c5a12157af92e0d14a0d3ea116f91c09e21a9831486e6dc592c93c10980</a> |
-| Publisher |  |
 | Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wcpu.sys.yml)

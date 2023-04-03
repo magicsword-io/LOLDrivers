@@ -45,17 +45,7 @@ sc.exe start rtkiow10x64.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/b5ada7fd226d20ec6634fc24768f9e22">b5ada7fd226d20ec6634fc24768f9e22</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/947db58d6f36a8df9fa2a1057f3a7f653ccbc42e">947db58d6f36a8df9fa2a1057f3a7f653ccbc42e</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/32e1a8513eee746d17eb5402fb9d8ff9507fb6e1238e7ff06f7a5c50ff3df993">32e1a8513eee746d17eb5402fb9d8ff9507fb6e1238e7ff06f7a5c50ff3df993</a> |
-| Publisher |  |
 | Signature | Realtek Semiconductor Corp., DigiCert EV Code Signing CA, DigiCert   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rtkiow10x64.sys.yml)
