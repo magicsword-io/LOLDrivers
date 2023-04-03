@@ -45,52 +45,22 @@ sc.exe start WinRing0.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/828bb9cb1dd449cd65a29b18ec46055f">828bb9cb1dd449cd65a29b18ec46055f</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/558aad879b6a47d94a968f39d0a4e3a3aaef1ef1">558aad879b6a47d94a968f39d0a4e3a3aaef1ef1</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/3ec5ad51e6879464dfbccb9f4ed76c6325056a42548d5994ba869da9c4c039a8">3ec5ad51e6879464dfbccb9f4ed76c6325056a42548d5994ba869da9c4c039a8</a> |
-| Publisher |  |
-| Signature | TOSHIBA AMERICA INFORMATION SYSTEMS, INC., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-| Filename | WinRing0.sys |
+| Signature | TOSHIBA AMERICA INFORMATION SYSTEMS, INC., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Filename | WinRing0.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/12cecc3c14160f32b21279c1a36b8338">12cecc3c14160f32b21279c1a36b8338</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/7fb52290883a6b69a96d480f2867643396727e83">7fb52290883a6b69a96d480f2867643396727e83</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/47eaebc920ccf99e09fc9924feb6b19b8a28589f52783327067c9b09754b5e84">47eaebc920ccf99e09fc9924feb6b19b8a28589f52783327067c9b09754b5e84</a> |
-| Publisher |  |
-| Signature | Noriyuki MIYAZAKI, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-| Filename | WinRing0.sys |
+| Signature | Noriyuki MIYAZAKI, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   || Filename | WinRing0.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/27bcbeec8a466178a6057b64bef66512">27bcbeec8a466178a6057b64bef66512</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/012db3a80faf1f7f727b538cbe5d94064e7159de">012db3a80faf1f7f727b538cbe5d94064e7159de</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/a7b000abbcc344444a9b00cfade7aa22ab92ce0cadec196c30eb1851ae4fa062">a7b000abbcc344444a9b00cfade7aa22ab92ce0cadec196c30eb1851ae4fa062</a> |
-| Publisher |  |
 | Signature | EVGA, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winring0.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

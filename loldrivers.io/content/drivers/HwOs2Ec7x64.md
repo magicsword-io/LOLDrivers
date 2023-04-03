@@ -45,22 +45,12 @@ sc.exe start HwOs2Ec7x64.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/bae1f127c4ff21d8fe45e2bbfc59c180">bae1f127c4ff21d8fe45e2bbfc59c180</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/26c4a7b392d7e7bd7f0a2a758534e45c0d9a56ab">26c4a7b392d7e7bd7f0a2a758534e45c0d9a56ab</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/b179e1ab6dc0b1aee783adbcad4ad6bb75a8a64cb798f30c0dd2ee8aaf43e6de">b179e1ab6dc0b1aee783adbcad4ad6bb75a8a64cb798f30c0dd2ee8aaf43e6de</a> |
-| Publisher |  |
 | Signature | Huawei Technologies Co.,Ltd., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hwos2ec7x64.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

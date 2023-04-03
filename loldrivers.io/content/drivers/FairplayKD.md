@@ -51,22 +51,12 @@ sc.exe start FairplayKD.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/4e90cd77509738d30d3181a4d0880bfa">4e90cd77509738d30d3181a4d0880bfa</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/b4dcdbd97f38b24d729b986f84a9cdb3fc34d59f">b4dcdbd97f38b24d729b986f84a9cdb3fc34d59f</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/9f4ce6ab5e8d44f355426d9a6ab79833709f39b300733b5b251a0766e895e0e5">9f4ce6ab5e8d44f355426d9a6ab79833709f39b300733b5b251a0766e895e0e5</a> |
-| Publisher |  |
 | Signature | Hans Roes, Thawte Code Signing CA - G2, thawte   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fairplaykd.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

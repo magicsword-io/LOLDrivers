@@ -45,22 +45,12 @@ sc.exe start smep_capcom.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/f406c5536bcf9bacbeb7ce8a3c383bfa">f406c5536bcf9bacbeb7ce8a3c383bfa</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/21edff2937eb5cd6f6b0acb7ee5247681f624260">21edff2937eb5cd6f6b0acb7ee5247681f624260</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/db2a9247177e8cdd50fe9433d066b86ffd2a84301aa6b2eb60f361cfff077004">db2a9247177e8cdd50fe9433d066b86ffd2a84301aa6b2eb60f361cfff077004</a> |
-| Publisher |  |
 | Signature | CAPCOM Co.,Ltd., Symantec Class 3 SHA256 Code Signing CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/smep_capcom.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

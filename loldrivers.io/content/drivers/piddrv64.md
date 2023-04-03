@@ -45,22 +45,12 @@ sc.exe start piddrv64.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/fd7de498a72b2daf89f321d23948c3c4">fd7de498a72b2daf89f321d23948c3c4</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/c4ed28fdfba7b8a8dfe39e591006f25d39990f07">c4ed28fdfba7b8a8dfe39e591006f25d39990f07</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/b03f26009de2e8eabfcf6152f49b02a55c5e5d0f73e01d48f5a745f93ce93a29">b03f26009de2e8eabfcf6152f49b02a55c5e5d0f73e01d48f5a745f93ce93a29</a> |
-| Publisher |  |
 | Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2012, Microsoft Root Certificate Authority 2010   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/piddrv64.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

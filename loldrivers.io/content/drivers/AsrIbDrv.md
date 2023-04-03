@@ -45,22 +45,12 @@ sc.exe start AsrIbDrv.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/5bab40019419a2713298a5c9173e5d30">5bab40019419a2713298a5c9173e5d30</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/2d503a2457a787014a1fdd48a2ece2e6cbe98ea7">2d503a2457a787014a1fdd48a2ece2e6cbe98ea7</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/2a652de6b680d5ad92376ad323021850dab2c653abf06edf26120f7714b8e08a">2a652de6b680d5ad92376ad323021850dab2c653abf06edf26120f7714b8e08a</a> |
-| Publisher | ASROCK Incorporation |
-| Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description | RW-Everything Read &amp; Write Driver |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
+| Publisher | ASROCK Incorporation || Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Description | RW-Everything Read &amp; Write Driver |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asribdrv.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

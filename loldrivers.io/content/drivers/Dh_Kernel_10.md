@@ -45,22 +45,12 @@ sc.exe start Dh_Kernel_10.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/51207adb8dab983332d6b22c29fe8129">51207adb8dab983332d6b22c29fe8129</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/ddbe809b731a0962e404a045ab9e65a0b64917ad">ddbe809b731a0962e404a045ab9e65a0b64917ad</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/80cbba9f404df3e642f22c476664d63d7c229d45d34f5cd0e19c65eb41becec3">80cbba9f404df3e642f22c476664d63d7c229d45d34f5cd0e19c65eb41becec3</a> |
-| Publisher | YY Inc. |
-| Signature | YY Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description | dianhu |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
+| Publisher | YY Inc. || Signature | YY Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Description | dianhu |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dh_kernel_10.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

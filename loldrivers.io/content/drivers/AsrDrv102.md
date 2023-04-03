@@ -45,22 +45,12 @@ sc.exe start AsrDrv102.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/76bb1a4332666222a8e3e1339e267179">76bb1a4332666222a8e3e1339e267179</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/9923c8f1e565a05b3c738d283cf5c0ed61a0b90f">9923c8f1e565a05b3c738d283cf5c0ed61a0b90f</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/a7c2e7910942dd5e43e2f4eb159bcd2b4e71366e34a68109548b9fb12ac0f7cc">a7c2e7910942dd5e43e2f4eb159bcd2b4e71366e34a68109548b9fb12ac0f7cc</a> |
-| Publisher |  |
 | Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv102.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

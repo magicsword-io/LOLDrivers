@@ -46,22 +46,12 @@ sc.exe start daxin_blank3.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/bd5b0514f3b40f139d8079138d01b5f6">bd5b0514f3b40f139d8079138d01b5f6</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/73bac306292b4e9107147db94d0d836fdb071e33">73bac306292b4e9107147db94d0d836fdb071e33</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/7a7e8df7173387aec593e4fe2b45520ea3156c5f810d2bb1b2784efd1c922376">7a7e8df7173387aec593e4fe2b45520ea3156c5f810d2bb1b2784efd1c922376</a> |
-| Publisher | n/a |
-| Signature | U, n, s, i, g, n, e, d   |
-| Date | 12:54 AM 11/18/2009 |
-| Company | n/a |
-| Description | n/a |
-| Product | n/a |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
+| Publisher | n/a || Signature | U, n, s, i, g, n, e, d   || Date | 12:54 AM 11/18/2009 || Company | n/a || Description | n/a || Product | n/a |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank3.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

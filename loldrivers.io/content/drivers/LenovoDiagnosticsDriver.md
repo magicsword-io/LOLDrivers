@@ -50,22 +50,12 @@ sc.exe start LenovoDiagnosticsDriver.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/b941c8364308990ee4cc6eadf7214e0f">b941c8364308990ee4cc6eadf7214e0f</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/b89a8eef5aeae806af5ba212a8068845cafdab6f">b89a8eef5aeae806af5ba212a8068845cafdab6f</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/f05b1ee9e2f6ab704b8919d5071becbce6f9d0f9d0ba32a460c41d5272134abe">f05b1ee9e2f6ab704b8919d5071becbce6f9d0f9d0ba32a460c41d5272134abe</a> |
-| Publisher |  |
 | Signature | Lenovo, DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1, DigiCert Trusted Root G4   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lenovodiagnosticsdriver.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

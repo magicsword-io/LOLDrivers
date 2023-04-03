@@ -50,22 +50,12 @@ sc.exe start PanIO.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/9a9dbf5107848c254381be67a4c1b1dd">9a9dbf5107848c254381be67a4c1b1dd</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/291b4a88ffd2ac1d6bf812ecaedc2d934dc503cb">291b4a88ffd2ac1d6bf812ecaedc2d934dc503cb</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/f596e64f4c5d7c37a00493728d8756b243cfdc11e3372d6d6dfeffc13c9ab960">f596e64f4c5d7c37a00493728d8756b243cfdc11e3372d6d6dfeffc13c9ab960</a> |
-| Publisher |  |
 | Signature | PAN YAZILIM BILISIM TEKNOLOJILERI TICARET LTD. STI., GlobalSign CodeSigning CA - G2, GlobalSign   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/panio.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

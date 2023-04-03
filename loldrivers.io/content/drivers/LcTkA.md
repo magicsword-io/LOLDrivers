@@ -48,22 +48,12 @@ sc.exe start LcTkA.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/909f3fc221acbe999483c87d9ead024a">909f3fc221acbe999483c87d9ead024a</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/b2f955b3e6107f831ebe67997f8586d4fe9f3e98">b2f955b3e6107f831ebe67997f8586d4fe9f3e98</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/c8f9e1ad7b8cce62fba349a00bc168c849d42cfb2ca5b2c6cc4b51d054e0c497">c8f9e1ad7b8cce62fba349a00bc168c849d42cfb2ca5b2c6cc4b51d054e0c497</a> |
-| Publisher |  |
 | Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lctka.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

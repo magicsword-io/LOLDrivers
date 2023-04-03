@@ -45,22 +45,12 @@ sc.exe start magdrvamd64.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/49938383844ceec33dba794fb751c9a5">49938383844ceec33dba794fb751c9a5</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/e22495d92ac3dcae5eeb1980549a9ead8155f98a">e22495d92ac3dcae5eeb1980549a9ead8155f98a</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/be54f7279e69fb7651f98e91d24069dbc7c4c67e65850e486622ccbdc44d9a57">be54f7279e69fb7651f98e91d24069dbc7c4c67e65850e486622ccbdc44d9a57</a> |
-| Publisher |  |
 | Signature | Samsung Electronics Co., Ltd., GlobalSign CodeSigning CA - G2, GlobalSign Root CA - R1   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/magdrvamd64.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

@@ -46,22 +46,12 @@ sc.exe start EneTechIo64.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/d6e9f6c67d9b3d790d592557a7d57c3c">d6e9f6c67d9b3d790d592557a7d57c3c</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/a87d6eac2d70a3fbc04e59412326b28001c179de">a87d6eac2d70a3fbc04e59412326b28001c179de</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/06bda5a1594f7121acd2efe38ccb617fbc078bb9a70b665a5f5efd70e3013f50">06bda5a1594f7121acd2efe38ccb617fbc078bb9a70b665a5f5efd70e3013f50</a> |
-| Publisher |  |
 | Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/enetechio64.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

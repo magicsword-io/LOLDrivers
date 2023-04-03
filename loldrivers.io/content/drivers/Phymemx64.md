@@ -45,22 +45,12 @@ sc.exe start Phymemx64.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/715572dfe6fb10b16f980bfa242f3fa5">715572dfe6fb10b16f980bfa242f3fa5</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/f42f28d164205d9f6dab9317c9fecad54c38d5d2">f42f28d164205d9f6dab9317c9fecad54c38d5d2</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/19a212e6fc324f4cb9ee5eba60f5c1fc0191799a4432265cbeaa3307c76a7fc0">19a212e6fc324f4cb9ee5eba60f5c1fc0191799a4432265cbeaa3307c76a7fc0</a> |
-| Publisher |  |
 | Signature | Huawei Technologies Co.,Ltd., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/phymemx64.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

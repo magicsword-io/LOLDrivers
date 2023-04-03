@@ -45,22 +45,12 @@ sc.exe start AsrDrv10.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/9b91a44a488e4d539f2e55476b216024">9b91a44a488e4d539f2e55476b216024</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/72966ca845759d239d09da0de7eebe3abe86fee3">72966ca845759d239d09da0de7eebe3abe86fee3</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/ece0a900ea089e730741499614c0917432246ceb5e11599ee3a1bb679e24fd2c">ece0a900ea089e730741499614c0917432246ceb5e11599ee3a1bb679e24fd2c</a> |
-| Publisher | ASROCK Incorporation |
-| Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
-| Date |  |
-| Company |  |
-| Description | ASRock IO Driver |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
+| Publisher | ASROCK Incorporation || Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Description | ASRock IO Driver |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv10.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

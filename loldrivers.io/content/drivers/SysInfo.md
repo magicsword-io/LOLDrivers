@@ -45,22 +45,12 @@ sc.exe start SysInfo.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/5228b7a738dc90a06ae4f4a7412cb1e9">5228b7a738dc90a06ae4f4a7412cb1e9</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/f0c463d29a5914b01e4607889094f1b7d95e7aaf">f0c463d29a5914b01e4607889094f1b7d95e7aaf</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/7049f3c939efe76a5556c2a2c04386db51daf61d56b679f4868bb0983c996ebb">7049f3c939efe76a5556c2a2c04386db51daf61d56b679f4868bb0983c996ebb</a> |
-| Publisher |  |
 | Signature | Noriyuki MIYAZAKI, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/sysinfo.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 

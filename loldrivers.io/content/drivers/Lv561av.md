@@ -50,22 +50,12 @@ sc.exe start Lv561av.sys
 | MD5 | <a href="https://www.virustotal.com/gui/file/b47dee29b5e6e1939567a926c7a3e6a4">b47dee29b5e6e1939567a926c7a3e6a4</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/351cbd352b3ec0d5f4f58c84af732a0bf41b4463">351cbd352b3ec0d5f4f58c84af732a0bf41b4463</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/e86cb77de7b6a8025f9a546f6c45d135f471e664963cf70b381bee2dfd0fdef4">e86cb77de7b6a8025f9a546f6c45d135f471e664963cf70b381bee2dfd0fdef4</a> |
-| Publisher |  |
 | Signature | Logitech Inc, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
-| Date |  |
-| Company |  |
-| Description |  |
-| Product |  |
-| ProductVersion |  |
-| FileVersion |  |
-| MachineType |  |
-| OriginalFilename |  |
-
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lv561av.sys.yml)
 
-*last_updated:* 2023-03-30
+*last_updated:* 2023-04-02
 
 
 
