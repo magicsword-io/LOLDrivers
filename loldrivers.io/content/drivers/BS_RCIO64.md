@@ -52,7 +52,7 @@ sc.exe start BS_RCIO64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_rcio64.sys.yml)
 
-*last_updated:* 2023-04-02
+*last_updated:* 2023-04-03
 
 
 

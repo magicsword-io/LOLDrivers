@@ -50,7 +50,7 @@ sc.exe start NCHGBIOS2x64.SYS
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nchgbios2x64.sys.yml)
 
-*last_updated:* 2023-04-02
+*last_updated:* 2023-04-03
 
 
 
