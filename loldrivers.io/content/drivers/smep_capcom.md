@@ -50,7 +50,7 @@ sc.exe start smep_capcom.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/smep_capcom.sys.yml)
 
-*last_updated:* 2023-04-02
+*last_updated:* 2023-04-03
 
 
 

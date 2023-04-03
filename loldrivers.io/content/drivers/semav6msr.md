@@ -50,7 +50,7 @@ sc.exe start semav6msr.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/semav6msr.sys.yml)
 
-*last_updated:* 2023-04-02
+*last_updated:* 2023-04-03
 
 
 

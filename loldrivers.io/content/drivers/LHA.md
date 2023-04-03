@@ -50,7 +50,7 @@ sc.exe start LHA.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lha.sys.yml)
 
-*last_updated:* 2023-04-02
+*last_updated:* 2023-04-03
 
 
 
