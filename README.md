@@ -42,6 +42,12 @@ If you'd like to contribute, please follow these steps:
 
 For more detailed instructions, please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file. To create a new YAML file for a driver, use the provided [YML-Template](YML-Template.yml).
 
+## 🚨 Sigma and Sysmon Detection
+
+LOLDrivers includes Sigma and Sysmon detection rules to help you identify potential threats. Check out the [sigma](detections/sigma/driver_load_win_vuln_drivers.yml) and [sysmon](detections/sysmon/sysmon_config_vulnerable_hashes.xml) files under the detection folder for more information.
+
+Happy hunting! 🕵️‍♂️
+
 
 ##  🏗️ Building and Testing Locally
 
@@ -89,9 +95,3 @@ python bin/site.py
 ```
 cd loldrivers.io && hugo serve
 ```
-
-## 🚨 Sigma and Sysmon Detection
-
-LOLDrivers includes Sigma and Sysmon detection rules to help you identify potential threats. Check out the [sigma](detections/sigma/driver_load_win_vuln_drivers.yml) and [sysmon](detections/sysmon/sysmon_config_vulnerable_hashes.xml) files under the detection folder for more information.
-
-Happy hunting! 🕵️‍♂️
