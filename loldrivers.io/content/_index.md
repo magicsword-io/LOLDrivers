@@ -33,14 +33,14 @@ title = "LOLDrivers"
 {{< column "mt-4">}}
 
 # Living Off The Land Drivers 
-Living Off The Land Drivers is a curated list of Windows drivers used by adversaries to bypass security controls and carry out attacks. The project helps security professionals stay informed and mitigate potential threats.
+Living Off The Land Drivers is a curated list of Windows drivers used by adversaries to bypass security controls and carry out attacks. The project helps security professionals stay informed and mitigate potential threats. 
 
 {{< tip "warning" >}}
 Feel free to open a [PR](https://github.com/magicsword-io/LOLDrivers/pulls), raise an [issue](https://github.com/magicsword-io/LOLDrivers/issues/new/choose "Open a Github Issue")(s) or request new driver(s) be added.
 {{< /tip >}}
 
 {{< tip >}}
-You can also get the malicious driver list via **API** using [CSV](api/drivers.csv) or [JSON](api/drivers.json). Sysmon users check out the pre-built [config](https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml). There is a also a [Sigma rule](https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml) for SIEMs.
+You can also get the malicious driver list via **API** using [CSV](api/drivers.csv) or [JSON](api/drivers.json). Sysmon users check out the pre-built [config](https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml). There is a also a [Sigma rule](https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml) for SIEMs. If enjoyed this project you are going to love our sister project [LOLBAS](lolbas-project.github.io/), check them out! 
 {{< /tip >}}
 
 {{< /column >}}

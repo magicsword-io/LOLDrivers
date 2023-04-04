@@ -29,7 +29,7 @@ Currently, Jose Enrique Hernandez is a Distinguished Cloud Threat Researcher at 
 {{< picture "nas-headshot.png" "nas-headshot.png" >}}
 Currently, Nasreddine Bencherchali is a Threat Researcher at Nextron Systems, with a focus in Detection Engineering and Threat Hunting. Nasreddine is also currently one of the maintainers of the SIGMA project and the co-founder of the [EVTX-ETW-Resources project](https://github.com/nasbench/EVTX-ETW-Resources/), he also write a blog about [Detection and other security topics](https://nasbench.medium.com)
 
-Honorable mentions, [Florian](https://twitter.com/cyb3rops) for all their help getting the idea and the project off the ground!
+Honorable mentions, [Florian](https://twitter.com/cyb3rops)  and [Patrick](https://twitter.com/bareiss_patrick) for all their help getting the idea and the project off the ground!
 {{< /column >}}
 {{< /block >}}
 
