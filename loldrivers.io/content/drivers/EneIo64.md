@@ -50,7 +50,7 @@ sc.exe start EneIo64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/eneio64.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-04
 
 
 

@@ -56,7 +56,7 @@ sc.exe start FairplayKD.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fairplaykd.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-04
 
 
 

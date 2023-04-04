@@ -50,7 +50,7 @@ sc.exe start Air_SYSTEM10.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/air_system10.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-04
 
 
 
