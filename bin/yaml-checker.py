@@ -16,11 +16,17 @@ class TestRules(unittest.TestCase):
                     yield os.path.join(root, file)
 
     def get_yaml_part(self, file_path: str, part_name: str):
-            yaml_dicts = self.get_yaml(file_path)
-            for yaml_part in yaml_dicts:
-                if part_name in yaml_part.keys():
-                    return yaml_part[part_name]
+        yaml_dicts = self.get_yaml(file_path)
+        yaml_parts = []
+        for yaml_part in yaml_dicts:
+            if part_name in yaml_part.keys():
+                yaml_parts.append(yaml_part[part_name])
+        if not yaml_parts:
             return None
+        if len(yaml_parts) == 1:
+            return yaml_parts
+        return yaml_parts
+
 
     def get_yaml(self, file_path: str) -> dict:
         data = []
