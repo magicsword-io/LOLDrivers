@@ -49,7 +49,7 @@ sc.exe start AsUpIO64.sys
 | Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asupio64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asupio64.yaml)
 
 *last_updated:* 2023-04-05
 

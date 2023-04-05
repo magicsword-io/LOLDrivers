@@ -144,7 +144,7 @@ sc.exe start CITMDRV_IA64.sys
 | Publisher | IBM Polska Sp. z o.o. || Signature | IBM Polska Sp. z o.o., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/citmdrv_ia64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/citmdrv_ia64.yaml)
 
 *last_updated:* 2023-04-05
 

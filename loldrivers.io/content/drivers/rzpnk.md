@@ -50,7 +50,7 @@ sc.exe start rzpnk.sys
 | Signature | Razer USA Ltd., Symantec Class 3 SHA256 Code Signing CA, VeriSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rzpnk.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rzpnk.yaml)
 
 *last_updated:* 2023-04-05
 

@@ -49,7 +49,7 @@ sc.exe start AMDRyzenMasterDriver.sys
 | Signature | Advanced Micro Devices INC., Symantec Class 3 SHA256 Code Signing CA, VeriSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amdryzenmasterdriver.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amdryzenmasterdriver.yaml)
 
 *last_updated:* 2023-04-05
 

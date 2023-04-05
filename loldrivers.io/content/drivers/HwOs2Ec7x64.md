@@ -49,7 +49,7 @@ sc.exe start HwOs2Ec7x64.sys
 | Signature | Huawei Technologies Co.,Ltd., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hwos2ec7x64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hwos2ec7x64.yaml)
 
 *last_updated:* 2023-04-05
 

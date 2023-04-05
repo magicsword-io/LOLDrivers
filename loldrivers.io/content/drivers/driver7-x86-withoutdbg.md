@@ -49,7 +49,7 @@ sc.exe start driver7-x86-withoutdbg.sys
 | Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/driver7-x86-withoutdbg.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/driver7-x86-withoutdbg.yaml)
 
 *last_updated:* 2023-04-05
 

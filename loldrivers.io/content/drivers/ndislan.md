@@ -50,7 +50,7 @@ sc.exe start ndislan.sys
 | Publisher | Anhua Xinda (Beijing) Technology Co., Ltd. || Signature | A,  , r, e, q, u, i, r, e, d,  , c, e, r, t, i, f, i, c, a, t, e,  , i, s,  , n, o, t,  , w, i, t, h, i, n,  , i, t, s,  , v, a, l, i, d, i, t, y,  , p, e, r, i, o, d,  , w, h, e, n,  , v, e, r, i, f, y, i, n, g,  , a, g, a, i, n, s, t,  , t, h, e,  , c, u, r, r, e, n, t,  , s, y, s, t, e, m,  , c, l, o, c, k,  , o, r,  , t, h, e,  , t, i, m, e, s, t, a, m, p,  , i, n,  , t, h, e,  , s, i, g, n, e, d,  , f, i, l, e, .   || Date | 4:49 PM 10/12/2012 || Company | Microsoft Corporation || Description | MS LAN Driver || Product | Microsoft« Windows« Operating System |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ndislan.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ndislan.yaml)
 
 *last_updated:* 2023-04-05
 

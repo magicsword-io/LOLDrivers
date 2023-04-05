@@ -49,7 +49,7 @@ sc.exe start amp.sys
 | Signature | -   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amp.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amp.yaml)
 
 *last_updated:* 2023-04-05
 

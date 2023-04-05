@@ -49,7 +49,7 @@ sc.exe start atillk64.sys
 | Publisher | &#34;ATI Technologies, Inc&#34; || Signature | ATI Technologies, Inc, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Description | ATI Diagnostics Hardware Abstraction Sys |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/atillk64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/atillk64.yaml)
 
 *last_updated:* 2023-04-05
 

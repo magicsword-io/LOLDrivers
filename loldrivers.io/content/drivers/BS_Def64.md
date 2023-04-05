@@ -59,7 +59,7 @@ sc.exe start BS_Def64.sys
 | Publisher | ASUSTeK Computer Inc. || Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Description | Default BIOS Flash Driver |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_def64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_def64.yaml)
 
 *last_updated:* 2023-04-05
 

@@ -50,7 +50,7 @@ sc.exe start speedfan.sys
 | Signature | Sokno S.R.L., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/speedfan.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/speedfan.yaml)
 
 *last_updated:* 2023-04-05
 

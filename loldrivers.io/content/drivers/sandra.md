@@ -50,7 +50,7 @@ sc.exe start sandra.sys
 | Signature | SiSoftware Ltd, GeoTrust TrustCenter CodeSigning CA I, GeoTrust   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/sandra.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/sandra.yaml)
 
 *last_updated:* 2023-04-05
 

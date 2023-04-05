@@ -54,7 +54,7 @@ sc.exe start OpenLibSys.sys
 | Signature | Noriyuki MIYAZAKI, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/openlibsys.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/openlibsys.yaml)
 
 *last_updated:* 2023-04-05
 

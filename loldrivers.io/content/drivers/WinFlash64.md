@@ -49,7 +49,7 @@ sc.exe start WinFlash64.sys
 | Signature | Phoenix Technology Ltd., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winflash64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winflash64.yaml)
 
 *last_updated:* 2023-04-05
 

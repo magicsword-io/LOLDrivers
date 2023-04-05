@@ -53,7 +53,7 @@ sc.exe start rwdrv.sys
 | Signature | ChongKim Chan, GlobalSign CodeSigning CA - G2, GlobalSign Root CA - R1   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rwdrv.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rwdrv.yaml)
 
 *last_updated:* 2023-04-05
 

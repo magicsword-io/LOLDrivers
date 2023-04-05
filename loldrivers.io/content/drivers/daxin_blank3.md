@@ -50,7 +50,7 @@ sc.exe start daxin_blank3.sys
 | Publisher | n/a || Signature | U, n, s, i, g, n, e, d   || Date | 12:54 AM 11/18/2009 || Company | n/a || Description | n/a || Product | n/a |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank3.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank3.yaml)
 
 *last_updated:* 2023-04-05
 

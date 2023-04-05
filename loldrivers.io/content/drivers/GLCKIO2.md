@@ -54,7 +54,7 @@ sc.exe start GLCKIO2.sys
 | Publisher | ASUSTeK Computer Inc. || Signature | ASUSTeK Computer Inc., DigiCert SHA2 High Assurance Code Signing CA, DigiCert   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/glckio2.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/glckio2.yaml)
 
 *last_updated:* 2023-04-05
 

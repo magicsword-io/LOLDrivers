@@ -49,7 +49,7 @@ sc.exe start HwRwDrv.sys
 | Publisher | Shuttle Inc. || Signature | Shuttle Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Description | Hardware read &amp; write driver |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hwrwdrv.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hwrwdrv.yaml)
 
 *last_updated:* 2023-04-05
 

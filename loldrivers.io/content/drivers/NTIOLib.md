@@ -254,7 +254,7 @@ sc.exe start NTIOLib.sys
 | Signature | Micro-Star Int&#39;l Co. Ltd., GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ntiolib.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ntiolib.yaml)
 
 *last_updated:* 2023-04-05
 

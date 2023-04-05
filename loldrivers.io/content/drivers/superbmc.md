@@ -49,7 +49,7 @@ sc.exe start superbmc.sys
 | Signature | Super Micro Computer, Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/superbmc.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/superbmc.yaml)
 
 *last_updated:* 2023-04-05
 

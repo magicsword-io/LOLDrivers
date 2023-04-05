@@ -49,7 +49,7 @@ sc.exe start dbk64.sys
 | Signature | Cheat Engine, GlobalSign Extended Validation CodeSigning CA - SHA256 - G3, GlobalSign, GlobalSign Root CA - R1   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbk64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbk64.yaml)
 
 *last_updated:* 2023-04-05
 

@@ -124,7 +124,7 @@ sc.exe start CITMDRV_AMD64.sys
 | Publisher | IBM Polska Sp. z o.o. || Signature | IBM Polska Sp. z o.o., Symantec Class 3 SHA256 Code Signing CA, VeriSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/citmdrv_amd64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/citmdrv_amd64.yaml)
 
 *last_updated:* 2023-04-05
 

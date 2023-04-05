@@ -57,7 +57,7 @@ sc.exe start gdrv.sys
 | Signature | GIGA-BYTE TECHNOLOGY CO., LTD., Symantec Class 3 SHA256 Code Signing CA, VeriSign   || Date | 2013-07-03 17:32:00 UTC, 2017-11-30 18:40:00 UTC || Description | GIGABYTE Tools, GIGA-BYTE NonPNP Driver || Product | Windows (R) Server 2003 DDK driver, gdrv64 || OriginalFilename | gdrv.sys |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gdrv.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gdrv.yaml)
 
 *last_updated:* 2023-04-05
 

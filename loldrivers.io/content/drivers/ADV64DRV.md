@@ -49,7 +49,7 @@ sc.exe start ADV64DRV.sys
 | Publisher | FUJITSU LIMITED || Signature | FUJITSU LIMITED , VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Date | 01:30 AM 08/29/2006 || OriginalFilename | ADV64DRV.sys |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/adv64drv.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/adv64drv.yaml)
 
 *last_updated:* 2023-04-05
 

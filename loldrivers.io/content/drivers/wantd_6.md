@@ -50,7 +50,7 @@ sc.exe start wantd_6.sys
 | Publisher | Anhua Xinda (Beijing) Technology Co., Ltd. || Signature | T, h, e,  , d, i, g, i, t, a, l,  , s, i, g, n, a, t, u, r, e,  , o, f,  , t, h, e,  , o, b, j, e, c, t,  , d, i, d,  , n, o, t,  , v, e, r, i, f, y, .   || Date | 8:23 PM 2/28/2022 || Company | Microsoft Corporation || Description | WAN Transport Driver || Product | Microsoft Windows Operating System |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd_6.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd_6.yaml)
 
 *last_updated:* 2023-04-05
 

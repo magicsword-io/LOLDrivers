@@ -49,7 +49,7 @@ sc.exe start AMDPowerProfiler.sys
 | Signature | Advanced Micro Devices Inc., Sectigo RSA Code Signing CA, USERTrust RSA Certification Authority, Sectigo (AAA)   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amdpowerprofiler.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amdpowerprofiler.yaml)
 
 *last_updated:* 2023-04-05
 

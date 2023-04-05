@@ -54,7 +54,7 @@ sc.exe start BlackBoneDrv10.sys
 | Signature | Nanjing Zhixiao Information Technology Co.,Ltd, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/blackbonedrv10.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/blackbonedrv10.yaml)
 
 *last_updated:* 2023-04-05
 

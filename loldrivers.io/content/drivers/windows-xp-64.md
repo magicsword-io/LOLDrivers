@@ -54,7 +54,7 @@ sc.exe start windows-xp-64.sys
 | Signature | -   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/windows-xp-64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/windows-xp-64.yaml)
 
 *last_updated:* 2023-04-05
 

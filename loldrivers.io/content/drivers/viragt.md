@@ -49,7 +49,7 @@ sc.exe start viragt.sys
 | Signature | TG Soft S.a.s. Di Tonello Gianfranco e C., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/viragt.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/viragt.yaml)
 
 *last_updated:* 2023-04-05
 

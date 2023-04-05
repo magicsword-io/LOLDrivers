@@ -57,7 +57,7 @@ sc.exe start elrawdsk.sys
 | Signature | EldoS Corporation, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/elrawdsk.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/elrawdsk.yaml)
 
 *last_updated:* 2023-04-05
 

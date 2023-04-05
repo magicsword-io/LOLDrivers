@@ -49,7 +49,7 @@ sc.exe start BS_Flash64.sys
 | Signature | BIOSTAR MICROTECH INT&#39;L CORP, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_flash64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_flash64.yaml)
 
 *last_updated:* 2023-04-05
 

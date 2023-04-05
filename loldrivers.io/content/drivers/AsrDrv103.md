@@ -49,7 +49,7 @@ sc.exe start AsrDrv103.sys
 | Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv103.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv103.yaml)
 
 *last_updated:* 2023-04-05
 

@@ -50,7 +50,7 @@ sc.exe start wantd_2.sys
 | Publisher | Anhua Xinda (Beijing) Technology Co., Ltd. || Signature | S, i, g, n, e, d   || Date | 7:52 AM 4/30/2014 || Company | Microsoft Corporation || Description | WAN Transport Driver || Product | Microsoft Windows Operating System |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd_2.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd_2.yaml)
 
 *last_updated:* 2023-04-05
 

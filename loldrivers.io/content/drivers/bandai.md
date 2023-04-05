@@ -59,7 +59,7 @@ sc.exe start bandai.sys
 | Signature | -   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bandai.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bandai.yaml)
 
 *last_updated:* 2023-04-05
 

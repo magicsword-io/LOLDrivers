@@ -54,7 +54,7 @@ sc.exe start t.sys
 | Signature | -   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/t.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/t.yaml)
 
 *last_updated:* 2023-04-05
 

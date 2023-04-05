@@ -54,7 +54,7 @@ sc.exe start bw.sys
 | Signature | -   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bw.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bw.yaml)
 
 *last_updated:* 2023-04-05
 

@@ -49,7 +49,7 @@ sc.exe start NalDrv.sys
 | Signature | Intel Corporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/naldrv.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/naldrv.yaml)
 
 *last_updated:* 2023-04-05
 

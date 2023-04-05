@@ -54,7 +54,7 @@ sc.exe start dbutil_2_3.sys
 | Publisher | Dell Inc. || Signature | Dell Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Description | dianhu |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbutil_2_3.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbutil_2_3.yaml)
 
 *last_updated:* 2023-04-05
 

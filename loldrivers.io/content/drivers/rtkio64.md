@@ -49,7 +49,7 @@ sc.exe start rtkio64.sys
 | Signature | Realtek Semiconductor Corp., DigiCert EV Code Signing CA, DigiCert   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rtkio64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rtkio64.yaml)
 
 *last_updated:* 2023-04-05
 

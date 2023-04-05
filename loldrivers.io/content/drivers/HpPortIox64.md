@@ -49,7 +49,7 @@ sc.exe start HpPortIox64.sys
 | Signature | HP Inc., DigiCert SHA2 Assured ID Code Signing CA, DigiCert   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hpportiox64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hpportiox64.yaml)
 
 *last_updated:* 2023-04-05
 

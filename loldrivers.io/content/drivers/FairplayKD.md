@@ -55,7 +55,7 @@ sc.exe start FairplayKD.sys
 | Signature | Hans Roes, Thawte Code Signing CA - G2, thawte   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fairplaykd.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fairplaykd.yaml)
 
 *last_updated:* 2023-04-05
 

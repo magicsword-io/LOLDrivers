@@ -54,7 +54,7 @@ sc.exe start IObitUnlocker.sys
 | Signature | IObit CO., LTD, DigiCert EV Code Signing CA, DigiCert   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iobitunlocker.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iobitunlocker.yaml)
 
 *last_updated:* 2023-04-05
 

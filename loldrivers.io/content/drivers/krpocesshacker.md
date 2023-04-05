@@ -50,7 +50,7 @@ sc.exe start krpocesshacker.sys
 | Signature | Wen Jia Liu, DigiCert High Assurance Code Signing CA-1, DigiCert   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/krpocesshacker.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/krpocesshacker.yaml)
 
 *last_updated:* 2023-04-05
 

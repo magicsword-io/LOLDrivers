@@ -49,7 +49,7 @@ sc.exe start fidpcidrv64.sys
 | Signature | Intel(R) Processor Identification Utility, Intel External Basic Issuing CA 3A, Intel External Basic Policy CA, GeoTrust   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fidpcidrv64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fidpcidrv64.yaml)
 
 *last_updated:* 2023-04-05
 

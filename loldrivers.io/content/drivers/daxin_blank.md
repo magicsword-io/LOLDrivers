@@ -50,7 +50,7 @@ sc.exe start daxin_blank.sys
 | Publisher | Anhua Xinda (Beijing) Technology Co., Ltd. || Signature | S, i, g, n, e, d   || Date | 7:07 AM 1/23/2013 || Company | n/a || Description | n/a || Product | n/a |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank.yaml)
 
 *last_updated:* 2023-04-05
 

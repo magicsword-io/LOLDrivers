@@ -69,7 +69,7 @@ sc.exe start Agent64.sys
 | Publisher | &#34;eSupport.com, Inc.&#34;, Phoenix Technologies Ltd, &#34;eSupport.com, Inc&#34;  || Signature | eSupport.com, Inc., GlobalSign Extended Validation CodeSigning CA - SHA256 - G2, GlobalSign, GlobalSign Root CA - R1   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/agent64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/agent64.yaml)
 
 *last_updated:* 2023-04-05
 

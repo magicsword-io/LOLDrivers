@@ -54,7 +54,7 @@ sc.exe start BS_RCIO.sys
 | Signature | Biostar Microtech Int&#39;l Corp, DigiCert EV Code Signing CA, DigiCert   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_rcio.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_rcio.yaml)
 
 *last_updated:* 2023-04-05
 

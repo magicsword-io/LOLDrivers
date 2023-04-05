@@ -51,7 +51,7 @@ sc.exe start elbycdio.sys
 | Signature | Elaborate Bytes AG, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/elbycdio.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/elbycdio.yaml)
 
 *last_updated:* 2023-04-05
 

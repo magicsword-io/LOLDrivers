@@ -50,7 +50,7 @@ sc.exe start wantd_3.sys
 | Publisher | n/a || Signature | U, n, s, i, g, n, e, d   || Date | 7:52 AM 4/30/2014 || Company | Microsoft Corporation || Description | WAN Transport Driver || Product | Microsoft Windows Operating System |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd_3.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd_3.yaml)
 
 *last_updated:* 2023-04-05
 

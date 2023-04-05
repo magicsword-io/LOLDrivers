@@ -54,7 +54,7 @@ sc.exe start bwrs.sys
 | Signature | -   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bwrs.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bwrs.yaml)
 
 *last_updated:* 2023-04-05
 

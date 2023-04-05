@@ -55,7 +55,7 @@ sc.exe start DBUtilDrv2.sys
 | Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2012, Microsoft Root Certificate Authority 2010   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbutildrv2.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbutildrv2.yaml)
 
 *last_updated:* 2023-04-05
 

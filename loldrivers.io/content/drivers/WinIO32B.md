@@ -54,7 +54,7 @@ sc.exe start WinIO32B.sys
 | Signature | -   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio32b.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio32b.yaml)
 
 *last_updated:* 2023-04-05
 

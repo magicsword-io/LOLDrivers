@@ -54,7 +54,7 @@ sc.exe start iomem64.sys
 | Signature | DT RESEARCH, INC. TAIWAN BRANCH, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iomem64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iomem64.yaml)
 
 *last_updated:* 2023-04-05
 

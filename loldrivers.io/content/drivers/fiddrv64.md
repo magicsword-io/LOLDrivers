@@ -59,7 +59,7 @@ sc.exe start fiddrv64.sys
 | Signature | -   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fiddrv64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fiddrv64.yaml)
 
 *last_updated:* 2023-04-05
 

@@ -50,7 +50,7 @@ sc.exe start daxin_blank2.sys
 | Publisher | Fuqing Yuntan Network Tech Co.,Ltd. || Signature | A,  , c, e, r, t, i, f, i, c, a, t, e,  , w, a, s,  , e, x, p, l, i, c, i, t, l, y,  , r, e, v, o, k, e, d,  , b, y,  , i, t, s,  , i, s, s, u, e, r, .   || Date | 4:05 AM 2/6/2021 || Company | n/a || Description | n/a || Product | n/a |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank2.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank2.yaml)
 
 *last_updated:* 2023-04-05
 

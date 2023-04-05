@@ -49,7 +49,7 @@ sc.exe start mtcBSv64.sys
 | Signature | Mitac Technology Corporation, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mtcbsv64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mtcbsv64.yaml)
 
 *last_updated:* 2023-04-05
 

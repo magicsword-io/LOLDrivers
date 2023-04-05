@@ -54,7 +54,7 @@ sc.exe start LgDCatcher.sys
 | Signature | 雷神（武汉）信息技术有限公司, DigiCert SHA2 Assured ID Code Signing CA, DigiCert   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lgdcatcher.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lgdcatcher.yaml)
 
 *last_updated:* 2023-04-05
 
