@@ -1,6 +1,6 @@
 +++
 
-description = "CVE-2022-26522, CVE-2022-26523: Both of these vulnerabilities were fixed in version 22.1."
+description = ""
 title = "aswArPot.sys"
 weight = 10
 
@@ -36,6 +36,7 @@ sc.exe start aswArPot.sys
 ### Resources
 <br>
 <li><a href=" https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules"> https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules</a></li>
+<li><a href="CVE-2022-26522, CVE-2022-26523: Both of these vulnerabilities were fixed in version 22.1.">CVE-2022-26522, CVE-2022-26523: Both of these vulnerabilities were fixed in version 22.1.</a></li>
 <br>
 
 ### Known Vulnerable Samples
@@ -51,7 +52,7 @@ sc.exe start aswArPot.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/aswarpot.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-04
 
 
 

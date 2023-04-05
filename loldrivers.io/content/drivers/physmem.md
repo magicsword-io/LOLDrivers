@@ -1,6 +1,6 @@
 +++
 
-description = "https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/"
+description = ""
 title = "physmem.sys"
 weight = 10
 
@@ -37,6 +37,7 @@ sc.exe start physmem.sys
 <br>
 <li><a href=" https://github.com/jbaines-r7/dellicious"> https://github.com/jbaines-r7/dellicious</a></li>
 <li><a href=" https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/"> https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/</a></li>
+<li><a href="https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/">https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/</a></li>
 <br>
 
 ### Known Vulnerable Samples
@@ -51,7 +52,7 @@ sc.exe start physmem.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/physmem.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-04
 
 
 

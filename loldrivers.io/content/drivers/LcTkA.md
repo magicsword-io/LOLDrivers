@@ -39,6 +39,7 @@ sc.exe start LcTkA.sys
 ### Resources
 <br>
 <li><a href="https://www.sentinelone.com/labs/driving-through-defenses-targeted-attacks-leverage-signed-malicious-microsoft-drivers/">https://www.sentinelone.com/labs/driving-through-defenses-targeted-attacks-leverage-signed-malicious-microsoft-drivers/</a></li>
+<li><a href=""></a></li>
 <br>
 
 ### Known Vulnerable Samples
@@ -53,7 +54,7 @@ sc.exe start LcTkA.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lctka.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-04
 
 
 

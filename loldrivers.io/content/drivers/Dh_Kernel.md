@@ -1,6 +1,6 @@
 +++
 
-description = "https://github.com/namazso/physmem_drivers"
+description = ""
 title = "Dh_Kernel.sys"
 weight = 10
 
@@ -37,6 +37,7 @@ sc.exe start Dh_Kernel.sys
 <br>
 <li><a href=" https://github.com/namazso/physmem_drivers"> https://github.com/namazso/physmem_drivers</a></li>
 <li><a href=" https://github.com/namazso/physmem_drivers"> https://github.com/namazso/physmem_drivers</a></li>
+<li><a href="https://github.com/namazso/physmem_drivers">https://github.com/namazso/physmem_drivers</a></li>
 <br>
 
 ### Known Vulnerable Samples
@@ -51,7 +52,7 @@ sc.exe start Dh_Kernel.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dh_kernel.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-04
 
 
 

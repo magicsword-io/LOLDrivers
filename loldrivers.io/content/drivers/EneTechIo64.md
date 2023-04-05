@@ -1,6 +1,6 @@
 +++
 
-description = "https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c"
+description = ""
 title = "EneTechIo64.sys"
 weight = 10
 
@@ -37,6 +37,7 @@ sc.exe start EneTechIo64.sys
 <br>
 <li><a href=" https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c"> https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c</a></li>
 <li><a href="https://github.com/hfiref0x/KDU/releases/tag/v1.2.0">https://github.com/hfiref0x/KDU/releases/tag/v1.2.0</a></li>
+<li><a href="https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c">https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c</a></li>
 <br>
 
 ### Known Vulnerable Samples
@@ -51,7 +52,7 @@ sc.exe start EneTechIo64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/enetechio64.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-04
 
 
 

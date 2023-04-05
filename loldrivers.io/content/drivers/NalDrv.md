@@ -1,6 +1,6 @@
 +++
 
-description = "https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c"
+description = ""
 title = "NalDrv.sys"
 weight = 10
 
@@ -36,6 +36,7 @@ sc.exe start NalDrv.sys
 ### Resources
 <br>
 <li><a href=" https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c"> https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c</a></li>
+<li><a href="https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c">https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c</a></li>
 <br>
 
 ### Known Vulnerable Samples
@@ -50,7 +51,7 @@ sc.exe start NalDrv.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/naldrv.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-04
 
 
 

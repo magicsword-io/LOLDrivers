@@ -1,6 +1,6 @@
 +++
 
-description = "https://unit42.paloaltonetworks.com/acidbox-rare-malware/"
+description = ""
 title = "vboxdrv.sys"
 weight = 10
 
@@ -37,6 +37,7 @@ sc.exe start vboxdrv.sys
 <br>
 <li><a href="https://unit42.paloaltonetworks.com/acidbox-rare-malware/">https://unit42.paloaltonetworks.com/acidbox-rare-malware/</a></li>
 <li><a href="https://www.coresecurity.com/core-labs/advisories/virtualbox-privilege-escalation-vulnerability">https://www.coresecurity.com/core-labs/advisories/virtualbox-privilege-escalation-vulnerability</a></li>
+<li><a href="https://unit42.paloaltonetworks.com/acidbox-rare-malware/">https://unit42.paloaltonetworks.com/acidbox-rare-malware/</a></li>
 <br>
 
 ### Known Vulnerable Samples
@@ -56,7 +57,7 @@ sc.exe start vboxdrv.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/vboxdrv.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-04
 
 
 

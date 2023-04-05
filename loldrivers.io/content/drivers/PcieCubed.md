@@ -36,6 +36,7 @@ sc.exe start PcieCubed.sys
 ### Resources
 <br>
 <li><a href="https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware">https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware</a></li>
+<li><a href=""></a></li>
 <br>
 
 ### Known Vulnerable Samples
@@ -50,7 +51,7 @@ sc.exe start PcieCubed.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/pciecubed.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-04
 
 
 

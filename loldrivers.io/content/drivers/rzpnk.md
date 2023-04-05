@@ -37,6 +37,7 @@ sc.exe start rzpnk.sys
 <br>
 <li><a href="https://github.com/nomi-sec/PoC-in-GitHub/blob/2a85c15ed806287861a7adec6545c85aec618e3b/2017/CVE-2017-9769.json#L13">https://github.com/nomi-sec/PoC-in-GitHub/blob/2a85c15ed806287861a7adec6545c85aec618e3b/2017/CVE-2017-9769.json#L13</a></li>
 <li><a href="https://www.rapid7.com/db/modules/exploit/windows/local/razer_zwopenprocess/">https://www.rapid7.com/db/modules/exploit/windows/local/razer_zwopenprocess/</a></li>
+<li><a href=""></a></li>
 <br>
 
 ### Known Vulnerable Samples
@@ -51,7 +52,7 @@ sc.exe start rzpnk.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rzpnk.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-04
 
 
 

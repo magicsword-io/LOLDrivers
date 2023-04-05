@@ -1,6 +1,6 @@
 +++
 
-description = "https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md"
+description = ""
 title = "UCOREW64.SYS"
 weight = 10
 
@@ -36,6 +36,7 @@ sc.exe start UCOREW64.SYS
 ### Resources
 <br>
 <li><a href=" https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md"> https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md</a></li>
+<li><a href="https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md">https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md</a></li>
 <br>
 
 ### Known Vulnerable Samples
@@ -50,7 +51,7 @@ sc.exe start UCOREW64.SYS
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ucorew64.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-04
 
 
 

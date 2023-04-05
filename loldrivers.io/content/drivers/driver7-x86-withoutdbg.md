@@ -1,6 +1,6 @@
 +++
 
-description = "https://github.com/Chigusa0w0/AsusDriversPrivEscala"
+description = ""
 title = "driver7-x86-withoutdbg.sys"
 weight = 10
 
@@ -36,6 +36,7 @@ sc.exe start driver7-x86-withoutdbg.sys
 ### Resources
 <br>
 <li><a href=" https://github.com/Chigusa0w0/AsusDriversPrivEscala"> https://github.com/Chigusa0w0/AsusDriversPrivEscala</a></li>
+<li><a href="https://github.com/Chigusa0w0/AsusDriversPrivEscala">https://github.com/Chigusa0w0/AsusDriversPrivEscala</a></li>
 <br>
 
 ### Known Vulnerable Samples
@@ -50,7 +51,7 @@ sc.exe start driver7-x86-withoutdbg.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/driver7-x86-withoutdbg.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-04
 
 
 

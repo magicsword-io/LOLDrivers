@@ -25,7 +25,7 @@ def write_drivers_csv(drivers, output_dir):
             # get link
             link = '[' + driver['Name'] + '](drivers/' + os.path.splitext(driver["Name"])[0].lower() + '/)'
             writer.writerow([link, driver['Author'], driver['Created'], driver['Commands']['Command'], driver['Commands']['Description'], driver['Commands']['Usecase'], driver['Category'],
-                             driver['Commands']['Privileges'], driver['MitreID'], driver['Commands']['OperatingSystem'], driver['Resources'], driver['driver_description'], driver['Acknowledgement']['Person'],
+                             driver['Commands']['Privileges'], driver['MitreID'], driver['Commands']['OperatingSystem'], driver['Resources'], driver['Acknowledgement']['Person'],
                              driver['Acknowledgement']['Handle'], driver['Detection'], hashes])
 
 

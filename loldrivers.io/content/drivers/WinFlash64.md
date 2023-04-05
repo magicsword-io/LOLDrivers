@@ -1,6 +1,6 @@
 +++
 
-description = "https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md"
+description = ""
 title = "WinFlash64.sys"
 weight = 10
 
@@ -36,6 +36,7 @@ sc.exe start WinFlash64.sys
 ### Resources
 <br>
 <li><a href=" https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md"> https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md</a></li>
+<li><a href="https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md">https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md</a></li>
 <br>
 
 ### Known Vulnerable Samples
@@ -50,7 +51,7 @@ sc.exe start WinFlash64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winflash64.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-04
 
 
 

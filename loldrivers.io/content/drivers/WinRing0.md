@@ -1,6 +1,6 @@
 +++
 
-description = "https://github.com/namazso/physmem_drivers"
+description = ""
 title = "WinRing0.sys"
 weight = 10
 
@@ -36,6 +36,7 @@ sc.exe start WinRing0.sys
 ### Resources
 <br>
 <li><a href=" https://github.com/namazso/physmem_drivers"> https://github.com/namazso/physmem_drivers</a></li>
+<li><a href="https://github.com/namazso/physmem_drivers">https://github.com/namazso/physmem_drivers</a></li>
 <br>
 
 ### Known Vulnerable Samples
@@ -60,7 +61,7 @@ sc.exe start WinRing0.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winring0.sys.yml)
 
-*last_updated:* 2023-04-03
+*last_updated:* 2023-04-04
 
 
 
