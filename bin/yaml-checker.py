@@ -17,16 +17,14 @@ class TestRules(unittest.TestCase):
 
     def get_yaml_part(self, file_path: str, part_name: str):
         yaml_dicts = self.get_yaml(file_path)
-        yaml_parts = []
         for yaml_part in yaml_dicts:
             if part_name in yaml_part.keys():
-                yaml_parts.append(yaml_part[part_name])
-        if not yaml_parts:
-            return None
-        if len(yaml_parts) == 1:
-            return yaml_parts
-        return yaml_parts
-
+                yaml_data = yaml_part[part_name]
+                if isinstance(yaml_data, list):
+                    return yaml_data
+                else:
+                    return [yaml_data]
+        return None
 
     def get_yaml(self, file_path: str) -> dict:
         data = []
