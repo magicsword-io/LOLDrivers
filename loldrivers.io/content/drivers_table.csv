@@ -1,490 +1,490 @@
-[gameink.sys](drivers/gameink/),Michael Haag,2023-01-09,"sc.exe create gameink.sys binPath=C:\windows\temp\gameink.sys type=kernel
-sc.exe start gameink.sys"
-[krpocesshacker.sys](drivers/krpocesshacker/),Michael Haag,2023-01-09,"sc.exe create krpocesshacker.sys binPath=C:\windows\temp\krpocesshacker.sys type=kernel
-sc.exe start krpocesshacker.sys"
-[GVCIDrv64.sys](drivers/gvcidrv64/),Michael Haag,2023-01-09,"sc.exe create GVCIDrv64.sys binPath=C:\windows\temp\GVCIDrv64.sys type=kernel
-sc.exe start GVCIDrv64.sys"
-[asmmap64.sys](drivers/asmmap64/),Michael Haag,2023-01-09,"sc.exe create asmmap64.sys binPath=C:\windows\temp\asmmap64.sys type=kernel
-sc.exe start asmmap64.sys"
-[BS_RCIO64.sys](drivers/bs_rcio64/),Michael Haag,2023-01-09,"sc.exe create BS_RCIO64.sys binPath=C:\windows\temp\BS_RCIO64.sys type=kernel
-sc.exe start BS_RCIO64.sys"
-[msrhook.sys](drivers/msrhook/),Michael Haag,2023-01-09,"sc.exe create msrhook.sys binPath=C:\windows\temp\msrhook.sys type=kernel
-sc.exe start msrhook.sys"
-[segwindrvx64.sys](drivers/segwindrvx64/),Michael Haag,2023-01-09,"sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys type=kernel
-sc.exe start segwindrvx64.sys"
-[AsrDrv102.sys](drivers/asrdrv102/),Michael Haag,2023-01-09,"sc.exe create AsrDrv102.sys binPath=C:\windows\temp\AsrDrv102.sys type=kernel
-sc.exe start AsrDrv102.sys"
-[wantd_4.sys](drivers/wantd_4/),Michael Haag,2023-02-28,"sc.exe create wantd_4.sys binPath=C:\windows\temp\wantd_4.sys type=kernel
-sc.exe start wantd_4.sys"
-[DirectIo.sys](drivers/directio/),Michael Haag,2023-01-09,"sc.exe create DirectIo.sys binPath=C:\windows\temp\DirectIo.sys type=kernel
-sc.exe start DirectIo.sys"
-[GameTerSafe.sys](drivers/gametersafe/),Michael Haag,2023-01-09,"sc.exe create GameTerSafe.sys binPath=C:\windows\temp\GameTerSafe.sys type=kernel
-sc.exe start GameTerSafe.sys"
-[AsrAutoChkUpdDrv.sys](drivers/asrautochkupddrv/),Michael Haag,2023-01-09,"sc.exe create AsrAutoChkUpdDrv.sys binPath=C:\windows\temp\AsrAutoChkUpdDrv.sys type=kernel
-sc.exe start AsrAutoChkUpdDrv.sys"
-[PCHunter.sys](drivers/pchunter/),Michael Haag,2023-01-09,"sc.exe create PCHunter.sys binPath=C:\windows\temp\PCHunter.sys type=kernel
-sc.exe start PCHunter.sys"
-[AsUpIO64.sys](drivers/asupio64/),Michael Haag,2023-01-09,"sc.exe create AsUpIO64.sys binPath=C:\windows\temp\AsUpIO64.sys type=kernel
-sc.exe start AsUpIO64.sys"
 [LenovoDiagnosticsDriver.sys](drivers/lenovodiagnosticsdriver/),Michael Haag,2023-01-09,"sc.exe create LenovoDiagnosticsDriver.sys binPath=C:\windows\temp\LenovoDiagnosticsDriver.sys type=kernel
 sc.exe start LenovoDiagnosticsDriver.sys"
-[viragt64.sys](drivers/viragt64/),Michael Haag,2023-01-09,"sc.exe create viragt64.sys binPath=C:\windows\temp\viragt64.sys type=kernel
-sc.exe start viragt64.sys"
-[physmem.sys](drivers/physmem/),Michael Haag,2023-01-09,"sc.exe create physmem.sys binPath=C:\windows\temp\physmem.sys type=kernel
-sc.exe start physmem.sys"
-[2.sys](drivers/2/),Michael Haag,2023-03-04,"sc.exe create 2.sys binPath=C:\windows\temp\2.sys type=kernel
-sc.exe start 2.sys"
-[7.sys](drivers/7/),Michael Haag,2023-03-04,"sc.exe create 7.sys binPath=C:\windows\temp\7.sys type=kernel
-sc.exe start 7.sys"
-[AsrSmartConnectDrv.sys](drivers/asrsmartconnectdrv/),Michael Haag,2023-01-09,"sc.exe create AsrSmartConnectDrv.sys binPath=C:\windows\temp\AsrSmartConnectDrv.sys type=kernel
-sc.exe start AsrSmartConnectDrv.sys"
-[nt6.sys](drivers/nt6/),Michael Haag,2023-01-09,"sc.exe create nt6.sys binPath=C:\windows\temp\nt6.sys type=kernel
-sc.exe start nt6.sys"
-[iomem64.sys](drivers/iomem64/),Michael Haag,2023-01-09,"sc.exe create iomem64.sys binPath=C:\windows\temp\iomem64.sys type=kernel
-sc.exe start iomem64.sys"
-[BSMIXP64.sys](drivers/bsmixp64/),Michael Haag,2023-01-09,"sc.exe create BSMIXP64.sys binPath=C:\windows\temp\BSMIXP64.sys type=kernel
-sc.exe start BSMIXP64.sys"
-[phymem64.sys](drivers/phymem64/),Michael Haag,2023-01-09,"sc.exe create phymem64.sys binPath=C:\windows\temp\phymem64.sys type=kernel
-sc.exe start phymem64.sys"
-[Sense5Ext.sys](drivers/sense5ext/),Michael Haag,2023-03-04,"sc.exe create Sense5Ext.sys binPath=C:\windows\temp\Sense5Ext.sys type=kernel
-sc.exe start Sense5Ext.sys"
-[ATSZIO.sys](drivers/atszio/),Michael Haag,2023-01-09,"sc.exe create ATSZIO.sys binPath=C:\windows\temp\ATSZIO.sys type=kernel
-sc.exe start ATSZIO.sys"
-[kprocesshacker.sys](drivers/kprocesshacker/),Michael Haag,2023-01-09,"sc.exe create kprocesshacker.sys binPath=C:\windows\temp\kprocesshacker.sys type=kernel
-sc.exe start kprocesshacker.sys"
-[PanIO.sys](drivers/panio/),Michael Haag,2023-01-09,"sc.exe create PanIO.sys binPath=C:\windows\temp\PanIO.sys type=kernel
-sc.exe start PanIO.sys"
-[AsrDrv103.sys](drivers/asrdrv103/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103.sys binPath=C:\windows\temp\AsrDrv103.sys type=kernel
-sc.exe start AsrDrv103.sys"
-[BS_I2c64.sys](drivers/bs_i2c64/),Michael Haag,2023-01-09,"sc.exe create BS_I2c64.sys binPath=C:\windows\temp\BS_I2c64.sys type=kernel
-sc.exe start BS_I2c64.sys"
-[WINIODrv.sys](drivers/winiodrv/),Michael Haag,2023-01-09,"sc.exe create WINIODrv.sys binPath=C:\windows\temp\WINIODrv.sys type=kernel
-sc.exe start WINIODrv.sys"
-[d4.sys](drivers/d4/),Michael Haag,2023-01-09,"sc.exe create d4.sys binPath=C:\windows\temp\d4.sys type=kernel
-sc.exe start d4.sys"
-[VProEventMonitor.sys](drivers/vproeventmonitor/),Michael Haag,2023-01-09,"sc.exe create VProEventMonitor.sys binPath=C:\windows\temp\VProEventMonitor.sys type=kernel
-sc.exe start VProEventMonitor.sys"
-[smep_namco.sys](drivers/smep_namco/),Michael Haag,2023-01-09,"sc.exe create smep_namco.sys binPath=C:\windows\temp\smep_namco.sys type=kernel
-sc.exe start smep_namco.sys"
-[dbutil_2_3.sys](drivers/dbutil_2_3/),Michael Haag,2023-01-09,"sc.exe create dbutil_2_3.sys binPath=C:\windows\temp\dbutil_2_3.sys type=kernel
-sc.exe start dbutil_2_3.sys"
-[EneTechIo64.sys](drivers/enetechio64/),Michael Haag,2023-01-09,"sc.exe create EneTechIo64.sys binPath=C:\windows\temp\EneTechIo64.sys type=kernel
-sc.exe start EneTechIo64.sys"
-[rtkio.sys](drivers/rtkio/),Michael Haag,2023-01-09,"sc.exe create rtkio.sys binPath=C:\windows\temp\rtkio.sys type=kernel
-sc.exe start rtkio.sys"
-[full.sys](drivers/full/),Michael Haag,2023-01-09,"sc.exe create full.sys binPath=C:\windows\temp\full.sys type=kernel
-sc.exe start full.sys"
-[hw_sys](drivers/hw_sys/),Michael Haag,2023-01-09,"sc.exe create hw_sys binPath=C:\windows\temp\hw_sys type=kernel
-sc.exe start hw_sys"
-[b1.sys](drivers/b1/),Michael Haag,2023-01-09,"sc.exe create b1.sys binPath=C:\windows\temp\b1.sys type=kernel
-sc.exe start b1.sys"
-[cpuz141.sys](drivers/cpuz141/),Michael Haag,2023-01-09,"sc.exe create cpuz141.sys binPath=C:\windows\temp\cpuz141.sys type=kernel
-sc.exe start cpuz141.sys"
-[bwrs.sys](drivers/bwrs/),Michael Haag,2023-01-09,"sc.exe create bwrs.sys binPath=C:\windows\temp\bwrs.sys type=kernel
-sc.exe start bwrs.sys"
-[speedfan.sys](drivers/speedfan/),Michael Haag,2023-01-09,"sc.exe create speedfan.sys binPath=C:\windows\temp\speedfan.sys type=kernel
-sc.exe start speedfan.sys"
-[HwOs2Ec7x64.sys](drivers/hwos2ec7x64/),Michael Haag,2023-01-09,"sc.exe create HwOs2Ec7x64.sys binPath=C:\windows\temp\HwOs2Ec7x64.sys type=kernel
-sc.exe start HwOs2Ec7x64.sys"
-[daxin_blank6.sys](drivers/daxin_blank6/),Michael Haag,2023-02-28,"sc.exe create daxin_blank6.sys binPath=C:\windows\temp\daxin_blank6.sys type=kernel
-sc.exe start daxin_blank6.sys"
-[inpoutx64.sys](drivers/inpoutx64/),Michael Haag,2023-01-09,"sc.exe create inpoutx64.sys binPath=C:\windows\temp\inpoutx64.sys type=kernel
-sc.exe start inpoutx64.sys"
-[piddrv64.sys](drivers/piddrv64/),Michael Haag,2023-01-09,"sc.exe create piddrv64.sys binPath=C:\windows\temp\piddrv64.sys type=kernel
-sc.exe start piddrv64.sys"
-[NalDrv.sys](drivers/naldrv/),Michael Haag,2023-01-09,"sc.exe create NalDrv.sys binPath=C:\windows\temp\NalDrv.sys type=kernel
-sc.exe start NalDrv.sys"
-[bwrsh.sys](drivers/bwrsh/),Michael Haag,2023-01-09,"sc.exe create bwrsh.sys binPath=C:\windows\temp\bwrsh.sys type=kernel
-sc.exe start bwrsh.sys"
-[Proxy32.sys](drivers/proxy32/),Michael Haag,2023-01-09,"sc.exe create Proxy32.sys binPath=C:\windows\temp\Proxy32.sys type=kernel
-sc.exe start Proxy32.sys"
-[wantd_6.sys](drivers/wantd_6/),Michael Haag,2023-02-28,"sc.exe create wantd_6.sys binPath=C:\windows\temp\wantd_6.sys type=kernel
-sc.exe start wantd_6.sys"
-[aswArPot.sys](drivers/aswarpot/),Michael Haag,2023-01-09,"sc.exe create aswArPot.sys binPath=C:\windows\temp\aswArPot.sys type=kernel
-sc.exe start aswArPot.sys"
-[AsrDrv10.sys](drivers/asrdrv10/),Michael Haag,2023-01-09,"sc.exe create AsrDrv10.sys binPath=C:\windows\temp\AsrDrv10.sys type=kernel
-sc.exe start AsrDrv10.sys"
-[4.sys](drivers/4/),Michael Haag,2023-03-04,"sc.exe create 4.sys binPath=C:\windows\temp\4.sys type=kernel
-sc.exe start 4.sys"
-[capcom.sys](drivers/capcom/),Michael Haag,2023-01-09,"sc.exe create capcom.sys binPath=C:\windows\temp\capcom.sys type=kernel
-sc.exe start capcom.sys"
-[1.sys](drivers/1/),Michael Haag,2023-01-09,"sc.exe create 1.sys binPath=C:\windows\temp\1.sys type=kernel
-sc.exe start 1.sys"
-[Phymemx64.sys](drivers/phymemx64/),Michael Haag,2023-01-09,"sc.exe create Phymemx64.sys binPath=C:\windows\temp\Phymemx64.sys type=kernel
-sc.exe start Phymemx64.sys"
-[POORTRY.sys](drivers/poortry/),Michael Haag,2023-03-04,"sc.exe create POORTRY.sys binPath=C:\windows\temp\POORTRY.sys type=kernel
-sc.exe start POORTRY.sys"
-[FairplayKD.sys](drivers/fairplaykd/),Michael Haag,2023-01-09,"sc.exe create FairplayKD.sys binPath=C:\windows\temp\FairplayKD.sys type=kernel
-sc.exe start FairplayKD.sys"
-[goad.sys](drivers/goad/),Michael Haag,2023-01-09,"sc.exe create goad.sys binPath=C:\windows\temp\goad.sys type=kernel
-sc.exe start goad.sys"
-[d2.sys](drivers/d2/),Michael Haag,2023-01-09,"sc.exe create d2.sys binPath=C:\windows\temp\d2.sys type=kernel
-sc.exe start d2.sys"
-[t3.sys](drivers/t3/),Michael Haag,2023-01-09,"sc.exe create t3.sys binPath=C:\windows\temp\t3.sys type=kernel
-sc.exe start t3.sys"
-[rwdrv.sys](drivers/rwdrv/),Michael Haag,2023-01-09,"sc.exe create rwdrv.sys binPath=C:\windows\temp\rwdrv.sys type=kernel
-sc.exe start rwdrv.sys"
-[viraglt64.sys](drivers/viraglt64/),Michael Haag,2023-01-09,"sc.exe create viraglt64.sys binPath=C:\windows\temp\viraglt64.sys type=kernel
-sc.exe start viraglt64.sys"
-[AsrRapidStartDrv.sys](drivers/asrrapidstartdrv/),Michael Haag,2023-01-09,"sc.exe create AsrRapidStartDrv.sys binPath=C:\windows\temp\AsrRapidStartDrv.sys type=kernel
-sc.exe start AsrRapidStartDrv.sys"
-[AsrDrv101.sys](drivers/asrdrv101/),Michael Haag,2023-01-09,"sc.exe create AsrDrv101.sys binPath=C:\windows\temp\AsrDrv101.sys type=kernel
-sc.exe start AsrDrv101.sys"
 [WinRing0x64.sys](drivers/winring0x64/),Michael Haag,2023-01-09,"sc.exe create WinRing0x64.sys binPath=C:\windows\temp\WinRing0x64.sys type=kernel
 sc.exe start WinRing0x64.sys"
-[ni.sys](drivers/ni/),Michael Haag,2023-01-09,"sc.exe create ni.sys binPath=C:\windows\temp\ni.sys type=kernel
-sc.exe start ni.sys"
-[bandai.sys](drivers/bandai/),Michael Haag,2023-01-09,"sc.exe create bandai.sys binPath=C:\windows\temp\bandai.sys type=kernel
-sc.exe start bandai.sys"
-[TmComm.sys](drivers/tmcomm/),Michael Haag,2023-01-09,"sc.exe create TmComm.sys binPath=C:\windows\temp\TmComm.sys type=kernel
-sc.exe start TmComm.sys"
-[Lurker.sys](drivers/lurker/),Michael Haag,2023-01-09,"sc.exe create Lurker.sys binPath=C:\windows\temp\Lurker.sys type=kernel
-sc.exe start Lurker.sys"
-[NTIOLib.sys](drivers/ntiolib/),Michael Haag,2023-01-09,"sc.exe create NTIOLib.sys binPath=C:\windows\temp\NTIOLib.sys type=kernel
-sc.exe start NTIOLib.sys"
-[SysInfo.sys](drivers/sysinfo/),Michael Haag,2023-01-09,"sc.exe create SysInfo.sys binPath=C:\windows\temp\SysInfo.sys type=kernel
-sc.exe start SysInfo.sys"
-[superbmc.sys](drivers/superbmc/),Michael Haag,2023-01-09,"sc.exe create superbmc.sys binPath=C:\windows\temp\superbmc.sys type=kernel
-sc.exe start superbmc.sys"
-[daxin_blank.sys](drivers/daxin_blank/),Michael Haag,2023-02-28,"sc.exe create daxin_blank.sys binPath=C:\windows\temp\daxin_blank.sys type=kernel
-sc.exe start daxin_blank.sys"
-[otipcibus.sys](drivers/otipcibus/),Michael Haag,2023-01-09,"sc.exe create otipcibus.sys binPath=C:\windows\temp\otipcibus.sys type=kernel
-sc.exe start otipcibus.sys"
-[Dh_Kernel_10.sys](drivers/dh_kernel_10/),Michael Haag,2023-01-09,"sc.exe create Dh_Kernel_10.sys binPath=C:\windows\temp\Dh_Kernel_10.sys type=kernel
-sc.exe start Dh_Kernel_10.sys"
-[ATSZIO64.sys](drivers/atszio64/),Michael Haag,2023-01-09,"sc.exe create ATSZIO64.sys binPath=C:\windows\temp\ATSZIO64.sys type=kernel
-sc.exe start ATSZIO64.sys"
-[windows8-10-32.sys](drivers/windows8-10-32/),Michael Haag,2023-01-09,"sc.exe create windows8-10-32.sys binPath=C:\windows\temp\windows8-10-32.sys type=kernel
-sc.exe start windows8-10-32.sys"
-[smep_capcom.sys](drivers/smep_capcom/),Michael Haag,2023-01-09,"sc.exe create smep_capcom.sys binPath=C:\windows\temp\smep_capcom.sys type=kernel
-sc.exe start smep_capcom.sys"
-[BlackBoneDrv10.sys](drivers/blackbonedrv10/),Michael Haag,2023-01-09,"sc.exe create BlackBoneDrv10.sys binPath=C:\windows\temp\BlackBoneDrv10.sys type=kernel
-sc.exe start BlackBoneDrv10.sys"
-[ndislan.sys](drivers/ndislan/),Michael Haag,2023-02-28,"sc.exe create ndislan.sys binPath=C:\windows\temp\ndislan.sys type=kernel
-sc.exe start ndislan.sys"
-[ProtectS.sys](drivers/protects/),Michael Haag,2023-01-09,"sc.exe create ProtectS.sys binPath=C:\windows\temp\ProtectS.sys type=kernel
-sc.exe start ProtectS.sys"
-[atillk64.sys](drivers/atillk64/),Michael Haag,2023-01-09,"sc.exe create atillk64.sys binPath=C:\windows\temp\atillk64.sys type=kernel
-sc.exe start atillk64.sys"
-[amifldrv64.sys](drivers/amifldrv64/),Michael Haag,2023-01-09,"sc.exe create amifldrv64.sys binPath=C:\windows\temp\amifldrv64.sys type=kernel
-sc.exe start amifldrv64.sys"
-[windows7-32.sys](drivers/windows7-32/),Michael Haag,2023-01-09,"sc.exe create windows7-32.sys binPath=C:\windows\temp\windows7-32.sys type=kernel
-sc.exe start windows7-32.sys"
-[nscm.sys](drivers/nscm/),Michael Haag,2023-01-09,"sc.exe create nscm.sys binPath=C:\windows\temp\nscm.sys type=kernel
-sc.exe start nscm.sys"
-[LHA.sys](drivers/lha/),Michael Haag,2023-01-09,"sc.exe create LHA.sys binPath=C:\windows\temp\LHA.sys type=kernel
-sc.exe start LHA.sys"
-[amp.sys](drivers/amp/),Michael Haag,2023-01-09,"sc.exe create amp.sys binPath=C:\windows\temp\amp.sys type=kernel
-sc.exe start amp.sys"
-[fiddrv.sys](drivers/fiddrv/),Michael Haag,2023-01-09,"sc.exe create fiddrv.sys binPath=C:\windows\temp\fiddrv.sys type=kernel
-sc.exe start fiddrv.sys"
-[BS_HWMIo64.sys](drivers/bs_hwmio64/),Michael Haag,2023-01-09,"sc.exe create BS_HWMIo64.sys binPath=C:\windows\temp\BS_HWMIo64.sys type=kernel
-sc.exe start BS_HWMIo64.sys"
-[aswVmm.sys](drivers/aswvmm/),Michael Haag,2023-01-09,"sc.exe create aswVmm.sys binPath=C:\windows\temp\aswVmm.sys type=kernel
-sc.exe start aswVmm.sys"
-[windows-xp-64.sys](drivers/windows-xp-64/),Michael Haag,2023-01-09,"sc.exe create windows-xp-64.sys binPath=C:\windows\temp\windows-xp-64.sys type=kernel
-sc.exe start windows-xp-64.sys"
-[mhyprot.sys](drivers/mhyprot/),Michael Haag,2023-01-09,"sc.exe create mhyprot.sys binPath=C:\windows\temp\mhyprot.sys type=kernel
-sc.exe start mhyprot.sys"
-[HwRwDrv.sys](drivers/hwrwdrv/),Michael Haag,2023-01-09,"sc.exe create HwRwDrv.sys binPath=C:\windows\temp\HwRwDrv.sys type=kernel
-sc.exe start HwRwDrv.sys"
-[LgDCatcher.sys](drivers/lgdcatcher/),Michael Haag,2023-01-09,"sc.exe create LgDCatcher.sys binPath=C:\windows\temp\LgDCatcher.sys type=kernel
-sc.exe start LgDCatcher.sys"
-[My.sys](drivers/my/),Michael Haag,2023-01-09,"sc.exe create My.sys binPath=C:\windows\temp\My.sys type=kernel
-sc.exe start My.sys"
-[HwOs2Ec10x64.sys](drivers/hwos2ec10x64/),Michael Haag,2023-01-09,"sc.exe create HwOs2Ec10x64.sys binPath=C:\windows\temp\HwOs2Ec10x64.sys type=kernel
-sc.exe start HwOs2Ec10x64.sys"
-[gdrv.sys](drivers/gdrv/),Michael Haag,2023-01-09,"sc.exe create gdrv.sys binPath=C:\windows\temp\gdrv.sys type=kernel
-sc.exe start gdrv.sys"
 [daxin_blank5.sys](drivers/daxin_blank5/),Michael Haag,2023-02-28,"sc.exe create daxin_blank5.sys binPath=C:\windows\temp\daxin_blank5.sys type=kernel
 sc.exe start daxin_blank5.sys"
-[b4.sys](drivers/b4/),Michael Haag,2023-01-09,"sc.exe create b4.sys binPath=C:\windows\temp\b4.sys type=kernel
-sc.exe start b4.sys"
-[WCPU.sys](drivers/wcpu/),Michael Haag,2023-01-09,"sc.exe create WCPU.sys binPath=C:\windows\temp\WCPU.sys type=kernel
-sc.exe start WCPU.sys"
-[WinIo64B.sys](drivers/winio64b/),Michael Haag,2023-01-09,"sc.exe create WinIo64B.sys binPath=C:\windows\temp\WinIo64B.sys type=kernel
-sc.exe start WinIo64B.sys"
-[BS_Flash64.sys](drivers/bs_flash64/),Michael Haag,2023-01-09,"sc.exe create BS_Flash64.sys binPath=C:\windows\temp\BS_Flash64.sys type=kernel
-sc.exe start BS_Flash64.sys"
-[wantd.sys](drivers/wantd/),Michael Haag,2023-02-28,"sc.exe create wantd.sys binPath=C:\windows\temp\wantd.sys type=kernel
-sc.exe start wantd.sys"
-[PcieCubed.sys](drivers/pciecubed/),Michael Haag,2023-03-04,"sc.exe create PcieCubed.sys binPath=C:\windows\temp\PcieCubed.sys type=kernel
-sc.exe start PcieCubed.sys"
-[daxin_blank1.sys](drivers/daxin_blank1/),Michael Haag,2023-02-28,"sc.exe create daxin_blank1.sys binPath=C:\windows\temp\daxin_blank1.sys type=kernel
-sc.exe start daxin_blank1.sys"
-[AMDRyzenMasterDriver.sys](drivers/amdryzenmasterdriver/),Michael Haag,2023-01-09,"sc.exe create AMDRyzenMasterDriver.sys binPath=C:\windows\temp\AMDRyzenMasterDriver.sys type=kernel
-sc.exe start AMDRyzenMasterDriver.sys"
-[WinIO32B.sys](drivers/winio32b/),Michael Haag,2023-01-09,"sc.exe create WinIO32B.sys binPath=C:\windows\temp\WinIO32B.sys type=kernel
-sc.exe start WinIO32B.sys"
-[libnicm.sys](drivers/libnicm/),Michael Haag,2023-01-09,"sc.exe create libnicm.sys binPath=C:\windows\temp\libnicm.sys type=kernel
-sc.exe start libnicm.sys"
+[cpuz141.sys](drivers/cpuz141/),Michael Haag,2023-01-09,"sc.exe create cpuz141.sys binPath=C:\windows\temp\cpuz141.sys type=kernel
+sc.exe start cpuz141.sys"
+[AsrAutoChkUpdDrv.sys](drivers/asrautochkupddrv/),Michael Haag,2023-01-09,"sc.exe create AsrAutoChkUpdDrv.sys binPath=C:\windows\temp\AsrAutoChkUpdDrv.sys type=kernel
+sc.exe start AsrAutoChkUpdDrv.sys"
 [driver7-x64.sys](drivers/driver7-x64/),Michael Haag,2023-01-09,"sc.exe create driver7-x64.sys binPath=C:\windows\temp\driver7-x64.sys type=kernel
 sc.exe start driver7-x64.sys"
-[Agent64.sys](drivers/agent64/),Michael Haag,2023-01-09,"sc.exe create Agent64.sys binPath=C:\windows\temp\Agent64.sys type=kernel
-sc.exe start Agent64.sys"
-[b.sys](drivers/b/),Michael Haag,2023-01-09,"sc.exe create b.sys binPath=C:\windows\temp\b.sys type=kernel
-sc.exe start b.sys"
-[NCHGBIOS2x64.SYS](drivers/nchgbios2x64/),Michael Haag,2023-01-09,"sc.exe create NCHGBIOS2x64.SYS binPath=C:\windows\temp\NCHGBIOS2x64.SYS type=kernel
-sc.exe start NCHGBIOS2x64.SYS"
-[Black.sys](drivers/black/),Michael Haag,2023-01-09,"sc.exe create Black.sys binPath=C:\windows\temp\Black.sys type=kernel
-sc.exe start Black.sys"
-[nt3.sys](drivers/nt3/),Michael Haag,2023-01-09,"sc.exe create nt3.sys binPath=C:\windows\temp\nt3.sys type=kernel
-sc.exe start nt3.sys"
-[ALSysIO64.sys](drivers/alsysio64/),Michael Haag,2023-01-09,"sc.exe create ALSysIO64.sys binPath=C:\windows\temp\ALSysIO64.sys type=kernel
-sc.exe start ALSysIO64.sys"
-[cpuz.sys](drivers/cpuz/),Michael Haag,2023-01-09,"sc.exe create cpuz.sys binPath=C:\windows\temp\cpuz.sys type=kernel
-sc.exe start cpuz.sys"
-[PanMonFlt.sys](drivers/panmonflt/),Michael Haag,2023-01-09,"sc.exe create PanMonFlt.sys binPath=C:\windows\temp\PanMonFlt.sys type=kernel
-sc.exe start PanMonFlt.sys"
-[WinIo64C.sys](drivers/winio64c/),Michael Haag,2023-01-09,"sc.exe create WinIo64C.sys binPath=C:\windows\temp\WinIo64C.sys type=kernel
-sc.exe start WinIo64C.sys"
-[wantd_3.sys](drivers/wantd_3/),Michael Haag,2023-02-28,"sc.exe create wantd_3.sys binPath=C:\windows\temp\wantd_3.sys type=kernel
-sc.exe start wantd_3.sys"
-[vmdrv.sys](drivers/vmdrv/),Michael Haag,2023-01-09,"sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel
-sc.exe start vmdrv.sys"
-[NTIOLib_X64.sys](drivers/ntiolib_x64/),Michael Haag,2023-01-09,"sc.exe create NTIOLib_X64.sys binPath=C:\windows\temp\NTIOLib_X64.sys type=kernel
-sc.exe start NTIOLib_X64.sys"
-[cpuz_x64.sys](drivers/cpuz_x64/),Michael Haag,2023-01-09,"sc.exe create cpuz_x64.sys binPath=C:\windows\temp\cpuz_x64.sys type=kernel
-sc.exe start cpuz_x64.sys"
-[BSMI.sys](drivers/bsmi/),Michael Haag,2023-01-09,"sc.exe create BSMI.sys binPath=C:\windows\temp\BSMI.sys type=kernel
-sc.exe start BSMI.sys"
-[nstr.sys](drivers/nstr/),Michael Haag,2023-01-09,"sc.exe create nstr.sys binPath=C:\windows\temp\nstr.sys type=kernel
-sc.exe start nstr.sys"
-[ncpl.sys](drivers/ncpl/),Michael Haag,2023-01-09,"sc.exe create ncpl.sys binPath=C:\windows\temp\ncpl.sys type=kernel
-sc.exe start ncpl.sys"
-[MsIo64.sys](drivers/msio64/),Michael Haag,2023-01-09,"sc.exe create MsIo64.sys binPath=C:\windows\temp\MsIo64.sys type=kernel
-sc.exe start MsIo64.sys"
-[AsUpIO.sys](drivers/asupio/),Michael Haag,2023-01-09,"sc.exe create AsUpIO.sys binPath=C:\windows\temp\AsUpIO.sys type=kernel
-sc.exe start AsUpIO.sys"
-[Air_SYSTEM10.sys](drivers/air_system10/),Michael Haag,2023-03-03,"sc.exe create Air_SYSTEM10.sys binPath=C:\windows\temp\Air_SYSTEM10.sys type=kernel
-sc.exe start Air_SYSTEM10.sys"
-[POORTRY2.sys](drivers/poortry2/),Michael Haag,2023-03-04,"sc.exe create POORTRY2.sys binPath=C:\windows\temp\POORTRY2.sys type=kernel
-sc.exe start POORTRY2.sys"
-[HpPortIox64.sys](drivers/hpportiox64/),Michael Haag,2023-01-09,"sc.exe create HpPortIox64.sys binPath=C:\windows\temp\HpPortIox64.sys type=kernel
-sc.exe start HpPortIox64.sys"
-[AsrIbDrv.sys](drivers/asribdrv/),Michael Haag,2023-01-09,"sc.exe create AsrIbDrv.sys binPath=C:\windows\temp\AsrIbDrv.sys type=kernel
-sc.exe start AsrIbDrv.sys"
-[CITMDRV_AMD64.sys](drivers/citmdrv_amd64/),Michael Haag,2023-01-09,"sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys type=kernel
-sc.exe start CITMDRV_AMD64.sys"
-[nvflsh64.sys](drivers/nvflsh64/),Michael Haag,2023-01-09,"sc.exe create nvflsh64.sys binPath=C:\windows\temp\nvflsh64.sys type=kernel
-sc.exe start nvflsh64.sys"
-[driver7-x86.sys](drivers/driver7-x86/),Michael Haag,2023-01-09,"sc.exe create driver7-x86.sys binPath=C:\windows\temp\driver7-x86.sys type=kernel
-sc.exe start driver7-x86.sys"
-[IOMap64.sys](drivers/iomap64/),Michael Haag,2023-01-09,"sc.exe create IOMap64.sys binPath=C:\windows\temp\IOMap64.sys type=kernel
-sc.exe start IOMap64.sys"
-[WinIO32A.sys](drivers/winio32a/),Michael Haag,2023-01-09,"sc.exe create WinIO32A.sys binPath=C:\windows\temp\WinIO32A.sys type=kernel
-sc.exe start WinIO32A.sys"
-[Lv561av.sys](drivers/lv561av/),Michael Haag,2023-01-09,"sc.exe create Lv561av.sys binPath=C:\windows\temp\Lv561av.sys type=kernel
-sc.exe start Lv561av.sys"
-[dbk64.sys](drivers/dbk64/),Michael Haag,2023-01-09,"sc.exe create dbk64.sys binPath=C:\windows\temp\dbk64.sys type=kernel
-sc.exe start dbk64.sys"
-[Bs_Def.sys](drivers/bs_def/),Michael Haag,2023-01-09,"sc.exe create Bs_Def.sys binPath=C:\windows\temp\Bs_Def.sys type=kernel
-sc.exe start Bs_Def.sys"
-[t.sys](drivers/t/),Michael Haag,2023-01-09,"sc.exe create t.sys binPath=C:\windows\temp\t.sys type=kernel
-sc.exe start t.sys"
-[HOSTNT.sys](drivers/hostnt/),Michael Haag,2023-01-09,"sc.exe create HOSTNT.sys binPath=C:\windows\temp\HOSTNT.sys type=kernel
-sc.exe start HOSTNT.sys"
-[netfilterdrv.sys](drivers/netfilterdrv/),Michael Haag,2023-01-09,"sc.exe create netfilterdrv.sys binPath=C:\windows\temp\netfilterdrv.sys type=kernel
-sc.exe start netfilterdrv.sys"
-[elbycdio.sys](drivers/elbycdio/),Michael Haag,2023-01-09,"sc.exe create elbycdio.sys binPath=C:\windows\temp\elbycdio.sys type=kernel
-sc.exe start elbycdio.sys"
-[UCOREW64.SYS](drivers/ucorew64/),Michael Haag,2023-01-09,"sc.exe create UCOREW64.SYS binPath=C:\windows\temp\UCOREW64.SYS type=kernel
-sc.exe start UCOREW64.SYS"
-[WinIo64A.sys](drivers/winio64a/),Michael Haag,2023-01-09,"sc.exe create WinIo64A.sys binPath=C:\windows\temp\WinIo64A.sys type=kernel
-sc.exe start WinIo64A.sys"
-[WYProxy64.sys](drivers/wyproxy64/),Michael Haag,2023-01-09,"sc.exe create WYProxy64.sys binPath=C:\windows\temp\WYProxy64.sys type=kernel
-sc.exe start WYProxy64.sys"
-[PanIOx64.sys](drivers/paniox64/),Michael Haag,2023-01-09,"sc.exe create PanIOx64.sys binPath=C:\windows\temp\PanIOx64.sys type=kernel
-sc.exe start PanIOx64.sys"
-[zam64.sys](drivers/zam64/),Michael Haag,2023-01-09,"sc.exe create zam64.sys binPath=C:\windows\temp\zam64.sys type=kernel
-sc.exe start zam64.sys"
-[TestBone.sys](drivers/testbone/),Michael Haag,2023-01-09,"sc.exe create TestBone.sys binPath=C:\windows\temp\TestBone.sys type=kernel
-sc.exe start TestBone.sys"
-[cpupress.sys](drivers/cpupress/),Michael Haag,2023-01-09,"sc.exe create cpupress.sys binPath=C:\windows\temp\cpupress.sys type=kernel
-sc.exe start cpupress.sys"
-[IObitUnlocker.sys](drivers/iobitunlocker/),Michael Haag,2023-01-09,"sc.exe create IObitUnlocker.sys binPath=C:\windows\temp\IObitUnlocker.sys type=kernel
-sc.exe start IObitUnlocker.sys"
-[vboxdrv.sys](drivers/vboxdrv/),Michael Haag,2023-01-09,"sc.exe create vboxdrv.sys binPath=C:\windows\temp\vboxdrv.sys type=kernel
-sc.exe start vboxdrv.sys"
 [CorsairLLAccess64.sys](drivers/corsairllaccess64/),Michael Haag,2023-01-09,"sc.exe create CorsairLLAccess64.sys binPath=C:\windows\temp\CorsairLLAccess64.sys type=kernel
 sc.exe start CorsairLLAccess64.sys"
-[WinRing0.sys](drivers/winring0/),Michael Haag,2023-01-09,"sc.exe create WinRing0.sys binPath=C:\windows\temp\WinRing0.sys type=kernel
-sc.exe start WinRing0.sys"
-[81.sys](drivers/81/),Michael Haag,2023-01-09,"sc.exe create 81.sys binPath=C:\windows\temp\81.sys type=kernel
-sc.exe start 81.sys"
-[TGSafe.sys](drivers/tgsafe/),Michael Haag,2023-01-09,"sc.exe create TGSafe.sys binPath=C:\windows\temp\TGSafe.sys type=kernel
-sc.exe start TGSafe.sys"
-[EneIo64.sys](drivers/eneio64/),Michael Haag,2023-01-09,"sc.exe create EneIo64.sys binPath=C:\windows\temp\EneIo64.sys type=kernel
-sc.exe start EneIo64.sys"
-[gftkyj64.sys](drivers/gftkyj64/),Michael Haag,2023-03-04,"sc.exe create gftkyj64.sys binPath=C:\windows\temp\gftkyj64.sys type=kernel
-sc.exe start gftkyj64.sys"
-[rtkiow10x64.sys](drivers/rtkiow10x64/),Michael Haag,2023-01-09,"sc.exe create rtkiow10x64.sys binPath=C:\windows\temp\rtkiow10x64.sys type=kernel
-sc.exe start rtkiow10x64.sys"
-[wantd_2.sys](drivers/wantd_2/),Michael Haag,2023-02-28,"sc.exe create wantd_2.sys binPath=C:\windows\temp\wantd_2.sys type=kernel
-sc.exe start wantd_2.sys"
-[driver7-x86-withoutdbg.sys](drivers/driver7-x86-withoutdbg/),Michael Haag,2023-01-09,"sc.exe create driver7-x86-withoutdbg.sys binPath=C:\windows\temp\driver7-x86-withoutdbg.sys type=kernel
-sc.exe start driver7-x86-withoutdbg.sys"
-[NetProxyDriver.sys](drivers/netproxydriver/),Michael Haag,2023-01-09,"sc.exe create NetProxyDriver.sys binPath=C:\windows\temp\NetProxyDriver.sys type=kernel
-sc.exe start NetProxyDriver.sys"
-[MsIo32.sys](drivers/msio32/),Michael Haag,2023-01-09,"sc.exe create MsIo32.sys binPath=C:\windows\temp\MsIo32.sys type=kernel
-sc.exe start MsIo32.sys"
-[WinFlash64.sys](drivers/winflash64/),Michael Haag,2023-01-09,"sc.exe create WinFlash64.sys binPath=C:\windows\temp\WinFlash64.sys type=kernel
-sc.exe start WinFlash64.sys"
-[Mhyprot2.sys](drivers/mhyprot2/),Michael Haag,2023-01-09,"sc.exe create Mhyprot2.sys binPath=C:\windows\temp\Mhyprot2.sys type=kernel
-sc.exe start Mhyprot2.sys"
-[ntbios.sys](drivers/ntbios/),Michael Haag,2023-02-28,"sc.exe create ntbios.sys binPath=C:\windows\temp\ntbios.sys type=kernel
-sc.exe start ntbios.sys"
-[t7.sys](drivers/t7/),Michael Haag,2023-01-09,"sc.exe create t7.sys binPath=C:\windows\temp\t7.sys type=kernel
-sc.exe start t7.sys"
-[piddrv.sys](drivers/piddrv/),Michael Haag,2023-01-09,"sc.exe create piddrv.sys binPath=C:\windows\temp\piddrv.sys type=kernel
-sc.exe start piddrv.sys"
-[sandra.sys](drivers/sandra/),Michael Haag,2023-01-09,"sc.exe create sandra.sys binPath=C:\windows\temp\sandra.sys type=kernel
-sc.exe start sandra.sys"
-[RTCore64.sys](drivers/rtcore64/),Michael Haag,2023-01-09,"sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel
-sc.exe start RTCore64.sys"
-[winio64.sys](drivers/winio64/),Michael Haag,2023-01-09,"sc.exe create winio64.sys binPath=C:\windows\temp\winio64.sys type=kernel
-sc.exe start winio64.sys"
-[magdrvamd64.sys](drivers/magdrvamd64/),Michael Haag,2023-01-09,"sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys type=kernel
-sc.exe start magdrvamd64.sys"
-[daxin_blank4.sys](drivers/daxin_blank4/),Michael Haag,2023-02-28,"sc.exe create daxin_blank4.sys binPath=C:\windows\temp\daxin_blank4.sys type=kernel
-sc.exe start daxin_blank4.sys"
-[WiseUnlo.sys](drivers/wiseunlo/),Michael Haag,2023-01-09,"sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel
-sc.exe start WiseUnlo.sys"
-[nicm.sys](drivers/nicm/),Michael Haag,2023-01-09,"sc.exe create nicm.sys binPath=C:\windows\temp\nicm.sys type=kernel
-sc.exe start nicm.sys"
-[mydrivers.sys](drivers/mydrivers/),Michael Haag,2023-01-09,"sc.exe create mydrivers.sys binPath=C:\windows\temp\mydrivers.sys type=kernel
-sc.exe start mydrivers.sys"
-[rtkio64.sys](drivers/rtkio64/),Michael Haag,2023-01-09,"sc.exe create rtkio64.sys binPath=C:\windows\temp\rtkio64.sys type=kernel
-sc.exe start rtkio64.sys"
-[wantd_5.sys](drivers/wantd_5/),Michael Haag,2023-02-28,"sc.exe create wantd_5.sys binPath=C:\windows\temp\wantd_5.sys type=kernel
-sc.exe start wantd_5.sys"
-[NBIOLib_X64.sys](drivers/nbiolib_x64/),Michael Haag,2023-01-09,"sc.exe create NBIOLib_X64.sys binPath=C:\windows\temp\NBIOLib_X64.sys type=kernel
-sc.exe start NBIOLib_X64.sys"
-[kbdcap64.sys](drivers/kbdcap64/),Michael Haag,2023-01-09,"sc.exe create kbdcap64.sys binPath=C:\windows\temp\kbdcap64.sys type=kernel
-sc.exe start kbdcap64.sys"
-[NodeDriver.sys](drivers/nodedriver/),Michael Haag,2023-03-02,"sc.exe create NodeDriver.sys binPath=C:\windows\temp\NodeDriver.sys type=kernel
-sc.exe start NodeDriver.sys"
-[NetFlt.sys](drivers/netflt/),Michael Haag,2023-01-09,"sc.exe create NetFlt.sys binPath=C:\windows\temp\NetFlt.sys type=kernel
-sc.exe start NetFlt.sys"
-[procexp.Sys](drivers/procexp/),Michael Haag,2023-01-09,"sc.exe create procexp.Sys binPath=C:\windows\temp\procexp.Sys type=kernel
-sc.exe start procexp.Sys"
-[AsrOmgDrv.sys](drivers/asromgdrv/),Michael Haag,2023-01-09,"sc.exe create AsrOmgDrv.sys binPath=C:\windows\temp\AsrOmgDrv.sys type=kernel
-sc.exe start AsrOmgDrv.sys"
-[Se64a.sys](drivers/se64a/),Michael Haag,2023-01-09,"sc.exe create Se64a.sys binPath=C:\windows\temp\Se64a.sys type=kernel
-sc.exe start Se64a.sys"
-[BSMIx64.sys](drivers/bsmix64/),Michael Haag,2023-01-09,"sc.exe create BSMIx64.sys binPath=C:\windows\temp\BSMIx64.sys type=kernel
-sc.exe start BSMIx64.sys"
-[AsrDrv106.sys](drivers/asrdrv106/),Michael Haag,2023-01-09,"sc.exe create AsrDrv106.sys binPath=C:\windows\temp\AsrDrv106.sys type=kernel
-sc.exe start AsrDrv106.sys"
-[nt4.sys](drivers/nt4/),Michael Haag,2023-01-09,"sc.exe create nt4.sys binPath=C:\windows\temp\nt4.sys type=kernel
-sc.exe start nt4.sys"
-[iqvw64e.sys](drivers/iqvw64e/),Michael Haag,2023-01-09,"sc.exe create iqvw64e.sys binPath=C:\windows\temp\iqvw64e.sys type=kernel
-sc.exe start iqvw64e.sys"
-[WYProxy32.sys](drivers/wyproxy32/),Michael Haag,2023-01-09,"sc.exe create WYProxy32.sys binPath=C:\windows\temp\WYProxy32.sys type=kernel
-sc.exe start WYProxy32.sys"
-[WinIO32.sys](drivers/winio32/),Michael Haag,2023-01-09,"sc.exe create WinIO32.sys binPath=C:\windows\temp\WinIO32.sys type=kernel
-sc.exe start WinIO32.sys"
+[4.sys](drivers/4/),Michael Haag,2023-03-04,"sc.exe create 4.sys binPath=C:\windows\temp\4.sys type=kernel
+sc.exe start 4.sys"
+[fiddrv.sys](drivers/fiddrv/),Michael Haag,2023-01-09,"sc.exe create fiddrv.sys binPath=C:\windows\temp\fiddrv.sys type=kernel
+sc.exe start fiddrv.sys"
 [BSMEMx64.sys](drivers/bsmemx64/),Michael Haag,2023-01-09,"sc.exe create BSMEMx64.sys binPath=C:\windows\temp\BSMEMx64.sys type=kernel
 sc.exe start BSMEMx64.sys"
-[daxin_blank2.sys](drivers/daxin_blank2/),Michael Haag,2023-02-28,"sc.exe create daxin_blank2.sys binPath=C:\windows\temp\daxin_blank2.sys type=kernel
-sc.exe start daxin_blank2.sys"
-[d.sys](drivers/d/),Michael Haag,2023-01-09,"sc.exe create d.sys binPath=C:\windows\temp\d.sys type=kernel
-sc.exe start d.sys"
-[b3.sys](drivers/b3/),Michael Haag,2023-01-09,"sc.exe create b3.sys binPath=C:\windows\temp\b3.sys type=kernel
-sc.exe start b3.sys"
-[bw.sys](drivers/bw/),Michael Haag,2023-01-09,"sc.exe create bw.sys binPath=C:\windows\temp\bw.sys type=kernel
-sc.exe start bw.sys"
-[PhlashNT.sys](drivers/phlashnt/),Michael Haag,2023-01-09,"sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel
-sc.exe start PhlashNT.sys"
-[zamguard64.sys](drivers/zamguard64/),Michael Haag,2023-01-09,"sc.exe create zamguard64.sys binPath=C:\windows\temp\zamguard64.sys type=kernel
-sc.exe start zamguard64.sys"
-[viragt.sys](drivers/viragt/),Michael Haag,2023-01-09,"sc.exe create viragt.sys binPath=C:\windows\temp\viragt.sys type=kernel
-sc.exe start viragt.sys"
-[Proxy64.sys](drivers/proxy64/),Michael Haag,2023-01-09,"sc.exe create Proxy64.sys binPath=C:\windows\temp\Proxy64.sys type=kernel
-sc.exe start Proxy64.sys"
-[dbutil.sys](drivers/dbutil/),Michael Haag,2023-01-09,"sc.exe create dbutil.sys binPath=C:\windows\temp\dbutil.sys type=kernel
-sc.exe start dbutil.sys"
-[d3.sys](drivers/d3/),Michael Haag,2023-01-09,"sc.exe create d3.sys binPath=C:\windows\temp\d3.sys type=kernel
-sc.exe start d3.sys"
-[80.sys](drivers/80/),Michael Haag,2023-01-09,"sc.exe create 80.sys binPath=C:\windows\temp\80.sys type=kernel
-sc.exe start 80.sys"
-[AsIO.sys](drivers/asio/),Michael Haag,2023-01-09,"sc.exe create AsIO.sys binPath=C:\windows\temp\AsIO.sys type=kernel
-sc.exe start AsIO.sys"
-[elrawdsk.sys](drivers/elrawdsk/),Michael Haag,2023-01-09,"sc.exe create elrawdsk.sys binPath=C:\windows\temp\elrawdsk.sys type=kernel
-sc.exe start elrawdsk.sys"
-[BS_Def64.sys](drivers/bs_def64/),Michael Haag,2023-01-09,"sc.exe create BS_Def64.sys binPath=C:\windows\temp\BS_Def64.sys type=kernel
-sc.exe start BS_Def64.sys"
-[nstrwsk.sys](drivers/nstrwsk/),Michael Haag,2023-01-09,"sc.exe create nstrwsk.sys binPath=C:\windows\temp\nstrwsk.sys type=kernel
-sc.exe start nstrwsk.sys"
-[CITMDRV_IA64.sys](drivers/citmdrv_ia64/),Michael Haag,2023-01-09,"sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys type=kernel
-sc.exe start CITMDRV_IA64.sys"
-[BS_I2cIo.sys](drivers/bs_i2cio/),Michael Haag,2023-01-09,"sc.exe create BS_I2cIo.sys binPath=C:\windows\temp\BS_I2cIo.sys type=kernel
-sc.exe start BS_I2cIo.sys"
-[Monitor_win10_x64.sys](drivers/monitor_win10_x64/),Michael Haag,2023-01-09,"sc.exe create Monitor_win10_x64.sys binPath=C:\windows\temp\Monitor_win10_x64.sys type=kernel
-sc.exe start Monitor_win10_x64.sys"
-[rzpnk.sys](drivers/rzpnk/),Michael Haag,2023-01-09,"sc.exe create rzpnk.sys binPath=C:\windows\temp\rzpnk.sys type=kernel
-sc.exe start rzpnk.sys"
-[semav6msr.sys](drivers/semav6msr/),Michael Haag,2023-01-09,"sc.exe create semav6msr.sys binPath=C:\windows\temp\semav6msr.sys type=kernel
-sc.exe start semav6msr.sys"
-[t8.sys](drivers/t8/),Michael Haag,2023-01-09,"sc.exe create t8.sys binPath=C:\windows\temp\t8.sys type=kernel
-sc.exe start t8.sys"
-[LcTkA.sys](drivers/lctka/),Michael Haag,2023-03-04,"sc.exe create LcTkA.sys binPath=C:\windows\temp\LcTkA.sys type=kernel
-sc.exe start LcTkA.sys"
-[PanMonFltX64.sys](drivers/panmonfltx64/),Michael Haag,2023-01-09,"sc.exe create PanMonFltX64.sys binPath=C:\windows\temp\PanMonFltX64.sys type=kernel
-sc.exe start PanMonFltX64.sys"
+[Lurker.sys](drivers/lurker/),Michael Haag,2023-01-09,"sc.exe create Lurker.sys binPath=C:\windows\temp\Lurker.sys type=kernel
+sc.exe start Lurker.sys"
+[AsrDrv106.sys](drivers/asrdrv106/),Michael Haag,2023-01-09,"sc.exe create AsrDrv106.sys binPath=C:\windows\temp\AsrDrv106.sys type=kernel
+sc.exe start AsrDrv106.sys"
+[inpoutx64.sys](drivers/inpoutx64/),Michael Haag,2023-01-09,"sc.exe create inpoutx64.sys binPath=C:\windows\temp\inpoutx64.sys type=kernel
+sc.exe start inpoutx64.sys"
 [AsIO64.sys](drivers/asio64/),Michael Haag,2023-01-09,"sc.exe create AsIO64.sys binPath=C:\windows\temp\AsIO64.sys type=kernel
 sc.exe start AsIO64.sys"
-[BS_RCIO.sys](drivers/bs_rcio/),Michael Haag,2023-01-09,"sc.exe create BS_RCIO.sys binPath=C:\windows\temp\BS_RCIO.sys type=kernel
-sc.exe start BS_RCIO.sys"
-[c.sys](drivers/c/),Michael Haag,2023-01-09,"sc.exe create c.sys binPath=C:\windows\temp\c.sys type=kernel
-sc.exe start c.sys"
-[DBUtilDrv2.sys](drivers/dbutildrv2/),Michael Haag,2023-01-09,"sc.exe create DBUtilDrv2.sys binPath=C:\windows\temp\DBUtilDrv2.sys type=kernel
-sc.exe start DBUtilDrv2.sys"
-[mtcBSv64.sys](drivers/mtcbsv64/),Michael Haag,2023-01-09,"sc.exe create mtcBSv64.sys binPath=C:\windows\temp\mtcBSv64.sys type=kernel
-sc.exe start mtcBSv64.sys"
-[ADV64DRV.sys](drivers/adv64drv/),Michael Haag,2023-01-09,"sc.exe create ADV64DRV.sys binPath=C:\windows\temp\ADV64DRV.sys type=kernel
-sc.exe start ADV64DRV.sys"
-[nt5.sys](drivers/nt5/),Michael Haag,2023-01-09,"sc.exe create nt5.sys binPath=C:\windows\temp\nt5.sys type=kernel
-sc.exe start nt5.sys"
-[nt2.sys](drivers/nt2/),Michael Haag,2023-01-09,"sc.exe create nt2.sys binPath=C:\windows\temp\nt2.sys type=kernel
-sc.exe start nt2.sys"
-[AsrSetupDrv103.sys](drivers/asrsetupdrv103/),Michael Haag,2023-01-09,"sc.exe create AsrSetupDrv103.sys binPath=C:\windows\temp\AsrSetupDrv103.sys type=kernel
-sc.exe start AsrSetupDrv103.sys"
-[AMDPowerProfiler.sys](drivers/amdpowerprofiler/),Michael Haag,2023-01-09,"sc.exe create AMDPowerProfiler.sys binPath=C:\windows\temp\AMDPowerProfiler.sys type=kernel
-sc.exe start AMDPowerProfiler.sys"
-[kEvP64.sys](drivers/kevp64/),Michael Haag,2023-01-09,"sc.exe create kEvP64.sys binPath=C:\windows\temp\kEvP64.sys type=kernel
-sc.exe start kEvP64.sys"
-[POORTRY1.sys](drivers/poortry1/),Michael Haag,2023-03-04,"sc.exe create POORTRY1.sys binPath=C:\windows\temp\POORTRY1.sys type=kernel
-sc.exe start POORTRY1.sys"
-[daxin_blank3.sys](drivers/daxin_blank3/),Michael Haag,2023-02-28,"sc.exe create daxin_blank3.sys binPath=C:\windows\temp\daxin_blank3.sys type=kernel
-sc.exe start daxin_blank3.sys"
-[fidpcidrv64.sys](drivers/fidpcidrv64/),Michael Haag,2023-01-09,"sc.exe create fidpcidrv64.sys binPath=C:\windows\temp\fidpcidrv64.sys type=kernel
-sc.exe start fidpcidrv64.sys"
-[OpenLibSys.sys](drivers/openlibsys/),Michael Haag,2023-01-09,"sc.exe create OpenLibSys.sys binPath=C:\windows\temp\OpenLibSys.sys type=kernel
-sc.exe start OpenLibSys.sys"
-[asrdrv104.sys](drivers/asrdrv104/),Michael Haag,2023-01-09,"sc.exe create asrdrv104.sys binPath=C:\windows\temp\asrdrv104.sys type=kernel
-sc.exe start asrdrv104.sys"
-[semav6msr64.sys](drivers/semav6msr64/),Michael Haag,2023-01-09,"sc.exe create semav6msr64.sys binPath=C:\windows\temp\semav6msr64.sys type=kernel
-sc.exe start semav6msr64.sys"
-[Dh_Kernel.sys](drivers/dh_kernel/),Michael Haag,2023-01-09,"sc.exe create Dh_Kernel.sys binPath=C:\windows\temp\Dh_Kernel.sys type=kernel
-sc.exe start Dh_Kernel.sys"
-[ASIO32.sys](drivers/asio32/),Michael Haag,2023-01-09,"sc.exe create ASIO32.sys binPath=C:\windows\temp\ASIO32.sys type=kernel
-sc.exe start ASIO32.sys"
-[fidpcidrv.sys](drivers/fidpcidrv/),Michael Haag,2023-01-09,"sc.exe create fidpcidrv.sys binPath=C:\windows\temp\fidpcidrv.sys type=kernel
-sc.exe start fidpcidrv.sys"
-[fiddrv64.sys](drivers/fiddrv64/),Michael Haag,2023-01-09,"sc.exe create fiddrv64.sys binPath=C:\windows\temp\fiddrv64.sys type=kernel
-sc.exe start fiddrv64.sys"
-[rtkiow8x64.sys](drivers/rtkiow8x64/),Michael Haag,2023-01-09,"sc.exe create rtkiow8x64.sys binPath=C:\windows\temp\rtkiow8x64.sys type=kernel
-sc.exe start rtkiow8x64.sys"
-[mhyprot3.sys](drivers/mhyprot3/),Michael Haag,2023-01-09,"sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel
-sc.exe start mhyprot3.sys"
-[nvflash.sys](drivers/nvflash/),Michael Haag,2023-01-09,"sc.exe create nvflash.sys binPath=C:\windows\temp\nvflash.sys type=kernel
-sc.exe start nvflash.sys"
+[piddrv.sys](drivers/piddrv/),Michael Haag,2023-01-09,"sc.exe create piddrv.sys binPath=C:\windows\temp\piddrv.sys type=kernel
+sc.exe start piddrv.sys"
+[Se64a.sys](drivers/se64a/),Michael Haag,2023-01-09,"sc.exe create Se64a.sys binPath=C:\windows\temp\Se64a.sys type=kernel
+sc.exe start Se64a.sys"
+[iomem64.sys](drivers/iomem64/),Michael Haag,2023-01-09,"sc.exe create iomem64.sys binPath=C:\windows\temp\iomem64.sys type=kernel
+sc.exe start iomem64.sys"
+[NetFlt.sys](drivers/netflt/),Michael Haag,2023-01-09,"sc.exe create NetFlt.sys binPath=C:\windows\temp\NetFlt.sys type=kernel
+sc.exe start NetFlt.sys"
+[viraglt64.sys](drivers/viraglt64/),Michael Haag,2023-01-09,"sc.exe create viraglt64.sys binPath=C:\windows\temp\viraglt64.sys type=kernel
+sc.exe start viraglt64.sys"
+[AsIO.sys](drivers/asio/),Michael Haag,2023-01-09,"sc.exe create AsIO.sys binPath=C:\windows\temp\AsIO.sys type=kernel
+sc.exe start AsIO.sys"
+[ndislan.sys](drivers/ndislan/),Michael Haag,2023-02-28,"sc.exe create ndislan.sys binPath=C:\windows\temp\ndislan.sys type=kernel
+sc.exe start ndislan.sys"
+[d2.sys](drivers/d2/),Michael Haag,2023-01-09,"sc.exe create d2.sys binPath=C:\windows\temp\d2.sys type=kernel
+sc.exe start d2.sys"
+[MsIo64.sys](drivers/msio64/),Michael Haag,2023-01-09,"sc.exe create MsIo64.sys binPath=C:\windows\temp\MsIo64.sys type=kernel
+sc.exe start MsIo64.sys"
 [ntbios_2.sys](drivers/ntbios_2/),Michael Haag,2023-02-28,"sc.exe create ntbios_2.sys binPath=C:\windows\temp\ntbios_2.sys type=kernel
 sc.exe start ntbios_2.sys"
-[BS_HWMIO64_W10.sys](drivers/bs_hwmio64_w10/),Michael Haag,2023-01-09,"sc.exe create BS_HWMIO64_W10.sys binPath=C:\windows\temp\BS_HWMIO64_W10.sys type=kernel
-sc.exe start BS_HWMIO64_W10.sys"
-[blacklotus_driver.sys](drivers/blacklotus_driver/),Michael Haag,2023-04-05,"sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sys type=kernel
-sc.exe start blacklotus_driver.sys"
+[DirectIo.sys](drivers/directio/),Michael Haag,2023-01-09,"sc.exe create DirectIo.sys binPath=C:\windows\temp\DirectIo.sys type=kernel
+sc.exe start DirectIo.sys"
+[WinIo64B.sys](drivers/winio64b/),Michael Haag,2023-01-09,"sc.exe create WinIo64B.sys binPath=C:\windows\temp\WinIo64B.sys type=kernel
+sc.exe start WinIo64B.sys"
+[mydrivers.sys](drivers/mydrivers/),Michael Haag,2023-01-09,"sc.exe create mydrivers.sys binPath=C:\windows\temp\mydrivers.sys type=kernel
+sc.exe start mydrivers.sys"
+[PanMonFlt.sys](drivers/panmonflt/),Michael Haag,2023-01-09,"sc.exe create PanMonFlt.sys binPath=C:\windows\temp\PanMonFlt.sys type=kernel
+sc.exe start PanMonFlt.sys"
+[AMDRyzenMasterDriver.sys](drivers/amdryzenmasterdriver/),Michael Haag,2023-01-09,"sc.exe create AMDRyzenMasterDriver.sys binPath=C:\windows\temp\AMDRyzenMasterDriver.sys type=kernel
+sc.exe start AMDRyzenMasterDriver.sys"
+[winio64.sys](drivers/winio64/),Michael Haag,2023-01-09,"sc.exe create winio64.sys binPath=C:\windows\temp\winio64.sys type=kernel
+sc.exe start winio64.sys"
+[HOSTNT.sys](drivers/hostnt/),Michael Haag,2023-01-09,"sc.exe create HOSTNT.sys binPath=C:\windows\temp\HOSTNT.sys type=kernel
+sc.exe start HOSTNT.sys"
+[BS_Flash64.sys](drivers/bs_flash64/),Michael Haag,2023-01-09,"sc.exe create BS_Flash64.sys binPath=C:\windows\temp\BS_Flash64.sys type=kernel
+sc.exe start BS_Flash64.sys"
+[kEvP64.sys](drivers/kevp64/),Michael Haag,2023-01-09,"sc.exe create kEvP64.sys binPath=C:\windows\temp\kEvP64.sys type=kernel
+sc.exe start kEvP64.sys"
+[atillk64.sys](drivers/atillk64/),Michael Haag,2023-01-09,"sc.exe create atillk64.sys binPath=C:\windows\temp\atillk64.sys type=kernel
+sc.exe start atillk64.sys"
+[NalDrv.sys](drivers/naldrv/),Michael Haag,2023-01-09,"sc.exe create NalDrv.sys binPath=C:\windows\temp\NalDrv.sys type=kernel
+sc.exe start NalDrv.sys"
+[nvflash.sys](drivers/nvflash/),Michael Haag,2023-01-09,"sc.exe create nvflash.sys binPath=C:\windows\temp\nvflash.sys type=kernel
+sc.exe start nvflash.sys"
+[AsrRapidStartDrv.sys](drivers/asrrapidstartdrv/),Michael Haag,2023-01-09,"sc.exe create AsrRapidStartDrv.sys binPath=C:\windows\temp\AsrRapidStartDrv.sys type=kernel
+sc.exe start AsrRapidStartDrv.sys"
+[HwRwDrv.sys](drivers/hwrwdrv/),Michael Haag,2023-01-09,"sc.exe create HwRwDrv.sys binPath=C:\windows\temp\HwRwDrv.sys type=kernel
+sc.exe start HwRwDrv.sys"
+[ProtectS.sys](drivers/protects/),Michael Haag,2023-01-09,"sc.exe create ProtectS.sys binPath=C:\windows\temp\ProtectS.sys type=kernel
+sc.exe start ProtectS.sys"
+[b3.sys](drivers/b3/),Michael Haag,2023-01-09,"sc.exe create b3.sys binPath=C:\windows\temp\b3.sys type=kernel
+sc.exe start b3.sys"
+[NCHGBIOS2x64.SYS](drivers/nchgbios2x64/),Michael Haag,2023-01-09,"sc.exe create NCHGBIOS2x64.SYS binPath=C:\windows\temp\NCHGBIOS2x64.SYS type=kernel
+sc.exe start NCHGBIOS2x64.SYS"
+[PanIOx64.sys](drivers/paniox64/),Michael Haag,2023-01-09,"sc.exe create PanIOx64.sys binPath=C:\windows\temp\PanIOx64.sys type=kernel
+sc.exe start PanIOx64.sys"
+[81.sys](drivers/81/),Michael Haag,2023-01-09,"sc.exe create 81.sys binPath=C:\windows\temp\81.sys type=kernel
+sc.exe start 81.sys"
+[UCOREW64.SYS](drivers/ucorew64/),Michael Haag,2023-01-09,"sc.exe create UCOREW64.SYS binPath=C:\windows\temp\UCOREW64.SYS type=kernel
+sc.exe start UCOREW64.SYS"
+[Proxy32.sys](drivers/proxy32/),Michael Haag,2023-01-09,"sc.exe create Proxy32.sys binPath=C:\windows\temp\Proxy32.sys type=kernel
+sc.exe start Proxy32.sys"
+[Black.sys](drivers/black/),Michael Haag,2023-01-09,"sc.exe create Black.sys binPath=C:\windows\temp\Black.sys type=kernel
+sc.exe start Black.sys"
+[nscm.sys](drivers/nscm/),Michael Haag,2023-01-09,"sc.exe create nscm.sys binPath=C:\windows\temp\nscm.sys type=kernel
+sc.exe start nscm.sys"
+[EneIo64.sys](drivers/eneio64/),Michael Haag,2023-01-09,"sc.exe create EneIo64.sys binPath=C:\windows\temp\EneIo64.sys type=kernel
+sc.exe start EneIo64.sys"
+[wantd_3.sys](drivers/wantd_3/),Michael Haag,2023-02-28,"sc.exe create wantd_3.sys binPath=C:\windows\temp\wantd_3.sys type=kernel
+sc.exe start wantd_3.sys"
+[netfilterdrv.sys](drivers/netfilterdrv/),Michael Haag,2023-01-09,"sc.exe create netfilterdrv.sys binPath=C:\windows\temp\netfilterdrv.sys type=kernel
+sc.exe start netfilterdrv.sys"
+[POORTRY.sys](drivers/poortry/),Michael Haag,2023-03-04,"sc.exe create POORTRY.sys binPath=C:\windows\temp\POORTRY.sys type=kernel
+sc.exe start POORTRY.sys"
+[Sense5Ext.sys](drivers/sense5ext/),Michael Haag,2023-03-04,"sc.exe create Sense5Ext.sys binPath=C:\windows\temp\Sense5Ext.sys type=kernel
+sc.exe start Sense5Ext.sys"
+[dbutil.sys](drivers/dbutil/),Michael Haag,2023-01-09,"sc.exe create dbutil.sys binPath=C:\windows\temp\dbutil.sys type=kernel
+sc.exe start dbutil.sys"
+[OpenLibSys.sys](drivers/openlibsys/),Michael Haag,2023-01-09,"sc.exe create OpenLibSys.sys binPath=C:\windows\temp\OpenLibSys.sys type=kernel
+sc.exe start OpenLibSys.sys"
+[daxin_blank.sys](drivers/daxin_blank/),Michael Haag,2023-02-28,"sc.exe create daxin_blank.sys binPath=C:\windows\temp\daxin_blank.sys type=kernel
+sc.exe start daxin_blank.sys"
+[Mhyprot2.sys](drivers/mhyprot2/),Michael Haag,2023-01-09,"sc.exe create Mhyprot2.sys binPath=C:\windows\temp\Mhyprot2.sys type=kernel
+sc.exe start Mhyprot2.sys"
+[segwindrvx64.sys](drivers/segwindrvx64/),Michael Haag,2023-01-09,"sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys type=kernel
+sc.exe start segwindrvx64.sys"
+[cpuz_x64.sys](drivers/cpuz_x64/),Michael Haag,2023-01-09,"sc.exe create cpuz_x64.sys binPath=C:\windows\temp\cpuz_x64.sys type=kernel
+sc.exe start cpuz_x64.sys"
+[magdrvamd64.sys](drivers/magdrvamd64/),Michael Haag,2023-01-09,"sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys type=kernel
+sc.exe start magdrvamd64.sys"
+[t7.sys](drivers/t7/),Michael Haag,2023-01-09,"sc.exe create t7.sys binPath=C:\windows\temp\t7.sys type=kernel
+sc.exe start t7.sys"
+[cpuz.sys](drivers/cpuz/),Michael Haag,2023-01-09,"sc.exe create cpuz.sys binPath=C:\windows\temp\cpuz.sys type=kernel
+sc.exe start cpuz.sys"
+[asmmap64.sys](drivers/asmmap64/),Michael Haag,2023-01-09,"sc.exe create asmmap64.sys binPath=C:\windows\temp\asmmap64.sys type=kernel
+sc.exe start asmmap64.sys"
+[BS_I2c64.sys](drivers/bs_i2c64/),Michael Haag,2023-01-09,"sc.exe create BS_I2c64.sys binPath=C:\windows\temp\BS_I2c64.sys type=kernel
+sc.exe start BS_I2c64.sys"
+[windows7-32.sys](drivers/windows7-32/),Michael Haag,2023-01-09,"sc.exe create windows7-32.sys binPath=C:\windows\temp\windows7-32.sys type=kernel
+sc.exe start windows7-32.sys"
+[PcieCubed.sys](drivers/pciecubed/),Michael Haag,2023-03-04,"sc.exe create PcieCubed.sys binPath=C:\windows\temp\PcieCubed.sys type=kernel
+sc.exe start PcieCubed.sys"
+[daxin_blank3.sys](drivers/daxin_blank3/),Michael Haag,2023-02-28,"sc.exe create daxin_blank3.sys binPath=C:\windows\temp\daxin_blank3.sys type=kernel
+sc.exe start daxin_blank3.sys"
+[wantd_5.sys](drivers/wantd_5/),Michael Haag,2023-02-28,"sc.exe create wantd_5.sys binPath=C:\windows\temp\wantd_5.sys type=kernel
+sc.exe start wantd_5.sys"
+[d3.sys](drivers/d3/),Michael Haag,2023-01-09,"sc.exe create d3.sys binPath=C:\windows\temp\d3.sys type=kernel
+sc.exe start d3.sys"
+[WinFlash64.sys](drivers/winflash64/),Michael Haag,2023-01-09,"sc.exe create WinFlash64.sys binPath=C:\windows\temp\WinFlash64.sys type=kernel
+sc.exe start WinFlash64.sys"
+[WYProxy32.sys](drivers/wyproxy32/),Michael Haag,2023-01-09,"sc.exe create WYProxy32.sys binPath=C:\windows\temp\WYProxy32.sys type=kernel
+sc.exe start WYProxy32.sys"
 [GLCKIO2.sys](drivers/glckio2/),Michael Haag,2023-01-09,"sc.exe create GLCKIO2.sys binPath=C:\windows\temp\GLCKIO2.sys type=kernel
 sc.exe start GLCKIO2.sys"
+[ncpl.sys](drivers/ncpl/),Michael Haag,2023-01-09,"sc.exe create ncpl.sys binPath=C:\windows\temp\ncpl.sys type=kernel
+sc.exe start ncpl.sys"
+[piddrv64.sys](drivers/piddrv64/),Michael Haag,2023-01-09,"sc.exe create piddrv64.sys binPath=C:\windows\temp\piddrv64.sys type=kernel
+sc.exe start piddrv64.sys"
+[kbdcap64.sys](drivers/kbdcap64/),Michael Haag,2023-01-09,"sc.exe create kbdcap64.sys binPath=C:\windows\temp\kbdcap64.sys type=kernel
+sc.exe start kbdcap64.sys"
+[amp.sys](drivers/amp/),Michael Haag,2023-01-09,"sc.exe create amp.sys binPath=C:\windows\temp\amp.sys type=kernel
+sc.exe start amp.sys"
+[HwOs2Ec7x64.sys](drivers/hwos2ec7x64/),Michael Haag,2023-01-09,"sc.exe create HwOs2Ec7x64.sys binPath=C:\windows\temp\HwOs2Ec7x64.sys type=kernel
+sc.exe start HwOs2Ec7x64.sys"
+[b1.sys](drivers/b1/),Michael Haag,2023-01-09,"sc.exe create b1.sys binPath=C:\windows\temp\b1.sys type=kernel
+sc.exe start b1.sys"
+[WinRing0.sys](drivers/winring0/),Michael Haag,2023-01-09,"sc.exe create WinRing0.sys binPath=C:\windows\temp\WinRing0.sys type=kernel
+sc.exe start WinRing0.sys"
+[NBIOLib_X64.sys](drivers/nbiolib_x64/),Michael Haag,2023-01-09,"sc.exe create NBIOLib_X64.sys binPath=C:\windows\temp\NBIOLib_X64.sys type=kernel
+sc.exe start NBIOLib_X64.sys"
+[dbk64.sys](drivers/dbk64/),Michael Haag,2023-01-09,"sc.exe create dbk64.sys binPath=C:\windows\temp\dbk64.sys type=kernel
+sc.exe start dbk64.sys"
+[viragt.sys](drivers/viragt/),Michael Haag,2023-01-09,"sc.exe create viragt.sys binPath=C:\windows\temp\viragt.sys type=kernel
+sc.exe start viragt.sys"
+[bandai.sys](drivers/bandai/),Michael Haag,2023-01-09,"sc.exe create bandai.sys binPath=C:\windows\temp\bandai.sys type=kernel
+sc.exe start bandai.sys"
+[WinIo64C.sys](drivers/winio64c/),Michael Haag,2023-01-09,"sc.exe create WinIo64C.sys binPath=C:\windows\temp\WinIo64C.sys type=kernel
+sc.exe start WinIo64C.sys"
+[2.sys](drivers/2/),Michael Haag,2023-03-04,"sc.exe create 2.sys binPath=C:\windows\temp\2.sys type=kernel
+sc.exe start 2.sys"
+[MsIo32.sys](drivers/msio32/),Michael Haag,2023-01-09,"sc.exe create MsIo32.sys binPath=C:\windows\temp\MsIo32.sys type=kernel
+sc.exe start MsIo32.sys"
+[WinIo64A.sys](drivers/winio64a/),Michael Haag,2023-01-09,"sc.exe create WinIo64A.sys binPath=C:\windows\temp\WinIo64A.sys type=kernel
+sc.exe start WinIo64A.sys"
+[PhlashNT.sys](drivers/phlashnt/),Michael Haag,2023-01-09,"sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel
+sc.exe start PhlashNT.sys"
+[daxin_blank1.sys](drivers/daxin_blank1/),Michael Haag,2023-02-28,"sc.exe create daxin_blank1.sys binPath=C:\windows\temp\daxin_blank1.sys type=kernel
+sc.exe start daxin_blank1.sys"
+[CITMDRV_IA64.sys](drivers/citmdrv_ia64/),Michael Haag,2023-01-09,"sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys type=kernel
+sc.exe start CITMDRV_IA64.sys"
+[rtkiow10x64.sys](drivers/rtkiow10x64/),Michael Haag,2023-01-09,"sc.exe create rtkiow10x64.sys binPath=C:\windows\temp\rtkiow10x64.sys type=kernel
+sc.exe start rtkiow10x64.sys"
+[nvflsh64.sys](drivers/nvflsh64/),Michael Haag,2023-01-09,"sc.exe create nvflsh64.sys binPath=C:\windows\temp\nvflsh64.sys type=kernel
+sc.exe start nvflsh64.sys"
+[PCHunter.sys](drivers/pchunter/),Michael Haag,2023-01-09,"sc.exe create PCHunter.sys binPath=C:\windows\temp\PCHunter.sys type=kernel
+sc.exe start PCHunter.sys"
+[physmem.sys](drivers/physmem/),Michael Haag,2023-01-09,"sc.exe create physmem.sys binPath=C:\windows\temp\physmem.sys type=kernel
+sc.exe start physmem.sys"
+[amifldrv64.sys](drivers/amifldrv64/),Michael Haag,2023-01-09,"sc.exe create amifldrv64.sys binPath=C:\windows\temp\amifldrv64.sys type=kernel
+sc.exe start amifldrv64.sys"
+[ADV64DRV.sys](drivers/adv64drv/),Michael Haag,2023-01-09,"sc.exe create ADV64DRV.sys binPath=C:\windows\temp\ADV64DRV.sys type=kernel
+sc.exe start ADV64DRV.sys"
+[BS_RCIO.sys](drivers/bs_rcio/),Michael Haag,2023-01-09,"sc.exe create BS_RCIO.sys binPath=C:\windows\temp\BS_RCIO.sys type=kernel
+sc.exe start BS_RCIO.sys"
+[ni.sys](drivers/ni/),Michael Haag,2023-01-09,"sc.exe create ni.sys binPath=C:\windows\temp\ni.sys type=kernel
+sc.exe start ni.sys"
+[Monitor_win10_x64.sys](drivers/monitor_win10_x64/),Michael Haag,2023-01-09,"sc.exe create Monitor_win10_x64.sys binPath=C:\windows\temp\Monitor_win10_x64.sys type=kernel
+sc.exe start Monitor_win10_x64.sys"
+[WYProxy64.sys](drivers/wyproxy64/),Michael Haag,2023-01-09,"sc.exe create WYProxy64.sys binPath=C:\windows\temp\WYProxy64.sys type=kernel
+sc.exe start WYProxy64.sys"
+[b4.sys](drivers/b4/),Michael Haag,2023-01-09,"sc.exe create b4.sys binPath=C:\windows\temp\b4.sys type=kernel
+sc.exe start b4.sys"
+[gameink.sys](drivers/gameink/),Michael Haag,2023-01-09,"sc.exe create gameink.sys binPath=C:\windows\temp\gameink.sys type=kernel
+sc.exe start gameink.sys"
+[goad.sys](drivers/goad/),Michael Haag,2023-01-09,"sc.exe create goad.sys binPath=C:\windows\temp\goad.sys type=kernel
+sc.exe start goad.sys"
+[zam64.sys](drivers/zam64/),Michael Haag,2023-01-09,"sc.exe create zam64.sys binPath=C:\windows\temp\zam64.sys type=kernel
+sc.exe start zam64.sys"
+[POORTRY2.sys](drivers/poortry2/),Michael Haag,2023-03-04,"sc.exe create POORTRY2.sys binPath=C:\windows\temp\POORTRY2.sys type=kernel
+sc.exe start POORTRY2.sys"
+[asrdrv104.sys](drivers/asrdrv104/),Michael Haag,2023-01-09,"sc.exe create asrdrv104.sys binPath=C:\windows\temp\asrdrv104.sys type=kernel
+sc.exe start asrdrv104.sys"
+[AsrSetupDrv103.sys](drivers/asrsetupdrv103/),Michael Haag,2023-01-09,"sc.exe create AsrSetupDrv103.sys binPath=C:\windows\temp\AsrSetupDrv103.sys type=kernel
+sc.exe start AsrSetupDrv103.sys"
+[nicm.sys](drivers/nicm/),Michael Haag,2023-01-09,"sc.exe create nicm.sys binPath=C:\windows\temp\nicm.sys type=kernel
+sc.exe start nicm.sys"
+[mhyprot.sys](drivers/mhyprot/),Michael Haag,2023-01-09,"sc.exe create mhyprot.sys binPath=C:\windows\temp\mhyprot.sys type=kernel
+sc.exe start mhyprot.sys"
+[BS_HWMIO64_W10.sys](drivers/bs_hwmio64_w10/),Michael Haag,2023-01-09,"sc.exe create BS_HWMIO64_W10.sys binPath=C:\windows\temp\BS_HWMIO64_W10.sys type=kernel
+sc.exe start BS_HWMIO64_W10.sys"
+[PanMonFltX64.sys](drivers/panmonfltx64/),Michael Haag,2023-01-09,"sc.exe create PanMonFltX64.sys binPath=C:\windows\temp\PanMonFltX64.sys type=kernel
+sc.exe start PanMonFltX64.sys"
+[PanIO.sys](drivers/panio/),Michael Haag,2023-01-09,"sc.exe create PanIO.sys binPath=C:\windows\temp\PanIO.sys type=kernel
+sc.exe start PanIO.sys"
+[krpocesshacker.sys](drivers/krpocesshacker/),Michael Haag,2023-01-09,"sc.exe create krpocesshacker.sys binPath=C:\windows\temp\krpocesshacker.sys type=kernel
+sc.exe start krpocesshacker.sys"
+[daxin_blank2.sys](drivers/daxin_blank2/),Michael Haag,2023-02-28,"sc.exe create daxin_blank2.sys binPath=C:\windows\temp\daxin_blank2.sys type=kernel
+sc.exe start daxin_blank2.sys"
+[AMDPowerProfiler.sys](drivers/amdpowerprofiler/),Michael Haag,2023-01-09,"sc.exe create AMDPowerProfiler.sys binPath=C:\windows\temp\AMDPowerProfiler.sys type=kernel
+sc.exe start AMDPowerProfiler.sys"
+[nt2.sys](drivers/nt2/),Michael Haag,2023-01-09,"sc.exe create nt2.sys binPath=C:\windows\temp\nt2.sys type=kernel
+sc.exe start nt2.sys"
+[GVCIDrv64.sys](drivers/gvcidrv64/),Michael Haag,2023-01-09,"sc.exe create GVCIDrv64.sys binPath=C:\windows\temp\GVCIDrv64.sys type=kernel
+sc.exe start GVCIDrv64.sys"
+[d4.sys](drivers/d4/),Michael Haag,2023-01-09,"sc.exe create d4.sys binPath=C:\windows\temp\d4.sys type=kernel
+sc.exe start d4.sys"
+[ASIO32.sys](drivers/asio32/),Michael Haag,2023-01-09,"sc.exe create ASIO32.sys binPath=C:\windows\temp\ASIO32.sys type=kernel
+sc.exe start ASIO32.sys"
+[SysInfo.sys](drivers/sysinfo/),Michael Haag,2023-01-09,"sc.exe create SysInfo.sys binPath=C:\windows\temp\SysInfo.sys type=kernel
+sc.exe start SysInfo.sys"
+[AsrDrv10.sys](drivers/asrdrv10/),Michael Haag,2023-01-09,"sc.exe create AsrDrv10.sys binPath=C:\windows\temp\AsrDrv10.sys type=kernel
+sc.exe start AsrDrv10.sys"
+[bwrsh.sys](drivers/bwrsh/),Michael Haag,2023-01-09,"sc.exe create bwrsh.sys binPath=C:\windows\temp\bwrsh.sys type=kernel
+sc.exe start bwrsh.sys"
+[superbmc.sys](drivers/superbmc/),Michael Haag,2023-01-09,"sc.exe create superbmc.sys binPath=C:\windows\temp\superbmc.sys type=kernel
+sc.exe start superbmc.sys"
+[TGSafe.sys](drivers/tgsafe/),Michael Haag,2023-01-09,"sc.exe create TGSafe.sys binPath=C:\windows\temp\TGSafe.sys type=kernel
+sc.exe start TGSafe.sys"
+[fidpcidrv64.sys](drivers/fidpcidrv64/),Michael Haag,2023-01-09,"sc.exe create fidpcidrv64.sys binPath=C:\windows\temp\fidpcidrv64.sys type=kernel
+sc.exe start fidpcidrv64.sys"
+[windows8-10-32.sys](drivers/windows8-10-32/),Michael Haag,2023-01-09,"sc.exe create windows8-10-32.sys binPath=C:\windows\temp\windows8-10-32.sys type=kernel
+sc.exe start windows8-10-32.sys"
+[rtkio.sys](drivers/rtkio/),Michael Haag,2023-01-09,"sc.exe create rtkio.sys binPath=C:\windows\temp\rtkio.sys type=kernel
+sc.exe start rtkio.sys"
+[dbutil_2_3.sys](drivers/dbutil_2_3/),Michael Haag,2023-01-09,"sc.exe create dbutil_2_3.sys binPath=C:\windows\temp\dbutil_2_3.sys type=kernel
+sc.exe start dbutil_2_3.sys"
+[smep_namco.sys](drivers/smep_namco/),Michael Haag,2023-01-09,"sc.exe create smep_namco.sys binPath=C:\windows\temp\smep_namco.sys type=kernel
+sc.exe start smep_namco.sys"
+[ALSysIO64.sys](drivers/alsysio64/),Michael Haag,2023-01-09,"sc.exe create ALSysIO64.sys binPath=C:\windows\temp\ALSysIO64.sys type=kernel
+sc.exe start ALSysIO64.sys"
+[BSMIXP64.sys](drivers/bsmixp64/),Michael Haag,2023-01-09,"sc.exe create BSMIXP64.sys binPath=C:\windows\temp\BSMIXP64.sys type=kernel
+sc.exe start BSMIXP64.sys"
+[sandra.sys](drivers/sandra/),Michael Haag,2023-01-09,"sc.exe create sandra.sys binPath=C:\windows\temp\sandra.sys type=kernel
+sc.exe start sandra.sys"
+[daxin_blank6.sys](drivers/daxin_blank6/),Michael Haag,2023-02-28,"sc.exe create daxin_blank6.sys binPath=C:\windows\temp\daxin_blank6.sys type=kernel
+sc.exe start daxin_blank6.sys"
+[TestBone.sys](drivers/testbone/),Michael Haag,2023-01-09,"sc.exe create TestBone.sys binPath=C:\windows\temp\TestBone.sys type=kernel
+sc.exe start TestBone.sys"
+[7.sys](drivers/7/),Michael Haag,2023-03-04,"sc.exe create 7.sys binPath=C:\windows\temp\7.sys type=kernel
+sc.exe start 7.sys"
+[t.sys](drivers/t/),Michael Haag,2023-01-09,"sc.exe create t.sys binPath=C:\windows\temp\t.sys type=kernel
+sc.exe start t.sys"
+[iqvw64e.sys](drivers/iqvw64e/),Michael Haag,2023-01-09,"sc.exe create iqvw64e.sys binPath=C:\windows\temp\iqvw64e.sys type=kernel
+sc.exe start iqvw64e.sys"
+[Air_SYSTEM10.sys](drivers/air_system10/),Michael Haag,2023-03-03,"sc.exe create Air_SYSTEM10.sys binPath=C:\windows\temp\Air_SYSTEM10.sys type=kernel
+sc.exe start Air_SYSTEM10.sys"
+[mhyprot3.sys](drivers/mhyprot3/),Michael Haag,2023-01-09,"sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel
+sc.exe start mhyprot3.sys"
+[HpPortIox64.sys](drivers/hpportiox64/),Michael Haag,2023-01-09,"sc.exe create HpPortIox64.sys binPath=C:\windows\temp\HpPortIox64.sys type=kernel
+sc.exe start HpPortIox64.sys"
+[WinIO32B.sys](drivers/winio32b/),Michael Haag,2023-01-09,"sc.exe create WinIO32B.sys binPath=C:\windows\temp\WinIO32B.sys type=kernel
+sc.exe start WinIO32B.sys"
+[NetProxyDriver.sys](drivers/netproxydriver/),Michael Haag,2023-01-09,"sc.exe create NetProxyDriver.sys binPath=C:\windows\temp\NetProxyDriver.sys type=kernel
+sc.exe start NetProxyDriver.sys"
+[WinIO32.sys](drivers/winio32/),Michael Haag,2023-01-09,"sc.exe create WinIO32.sys binPath=C:\windows\temp\WinIO32.sys type=kernel
+sc.exe start WinIO32.sys"
+[speedfan.sys](drivers/speedfan/),Michael Haag,2023-01-09,"sc.exe create speedfan.sys binPath=C:\windows\temp\speedfan.sys type=kernel
+sc.exe start speedfan.sys"
+[wantd_4.sys](drivers/wantd_4/),Michael Haag,2023-02-28,"sc.exe create wantd_4.sys binPath=C:\windows\temp\wantd_4.sys type=kernel
+sc.exe start wantd_4.sys"
+[zamguard64.sys](drivers/zamguard64/),Michael Haag,2023-01-09,"sc.exe create zamguard64.sys binPath=C:\windows\temp\zamguard64.sys type=kernel
+sc.exe start zamguard64.sys"
+[AsrDrv102.sys](drivers/asrdrv102/),Michael Haag,2023-01-09,"sc.exe create AsrDrv102.sys binPath=C:\windows\temp\AsrDrv102.sys type=kernel
+sc.exe start AsrDrv102.sys"
+[vmdrv.sys](drivers/vmdrv/),Michael Haag,2023-01-09,"sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel
+sc.exe start vmdrv.sys"
+[rtkio64.sys](drivers/rtkio64/),Michael Haag,2023-01-09,"sc.exe create rtkio64.sys binPath=C:\windows\temp\rtkio64.sys type=kernel
+sc.exe start rtkio64.sys"
+[1.sys](drivers/1/),Michael Haag,2023-01-09,"sc.exe create 1.sys binPath=C:\windows\temp\1.sys type=kernel
+sc.exe start 1.sys"
+[BlackBoneDrv10.sys](drivers/blackbonedrv10/),Michael Haag,2023-01-09,"sc.exe create BlackBoneDrv10.sys binPath=C:\windows\temp\BlackBoneDrv10.sys type=kernel
+sc.exe start BlackBoneDrv10.sys"
+[HwOs2Ec10x64.sys](drivers/hwos2ec10x64/),Michael Haag,2023-01-09,"sc.exe create HwOs2Ec10x64.sys binPath=C:\windows\temp\HwOs2Ec10x64.sys type=kernel
+sc.exe start HwOs2Ec10x64.sys"
+[vboxdrv.sys](drivers/vboxdrv/),Michael Haag,2023-01-09,"sc.exe create vboxdrv.sys binPath=C:\windows\temp\vboxdrv.sys type=kernel
+sc.exe start vboxdrv.sys"
+[wantd.sys](drivers/wantd/),Michael Haag,2023-02-28,"sc.exe create wantd.sys binPath=C:\windows\temp\wantd.sys type=kernel
+sc.exe start wantd.sys"
+[fiddrv64.sys](drivers/fiddrv64/),Michael Haag,2023-01-09,"sc.exe create fiddrv64.sys binPath=C:\windows\temp\fiddrv64.sys type=kernel
+sc.exe start fiddrv64.sys"
+[VProEventMonitor.sys](drivers/vproeventmonitor/),Michael Haag,2023-01-09,"sc.exe create VProEventMonitor.sys binPath=C:\windows\temp\VProEventMonitor.sys type=kernel
+sc.exe start VProEventMonitor.sys"
+[Dh_Kernel.sys](drivers/dh_kernel/),Michael Haag,2023-01-09,"sc.exe create Dh_Kernel.sys binPath=C:\windows\temp\Dh_Kernel.sys type=kernel
+sc.exe start Dh_Kernel.sys"
+[LcTkA.sys](drivers/lctka/),Michael Haag,2023-03-04,"sc.exe create LcTkA.sys binPath=C:\windows\temp\LcTkA.sys type=kernel
+sc.exe start LcTkA.sys"
+[libnicm.sys](drivers/libnicm/),Michael Haag,2023-01-09,"sc.exe create libnicm.sys binPath=C:\windows\temp\libnicm.sys type=kernel
+sc.exe start libnicm.sys"
+[elbycdio.sys](drivers/elbycdio/),Michael Haag,2023-01-09,"sc.exe create elbycdio.sys binPath=C:\windows\temp\elbycdio.sys type=kernel
+sc.exe start elbycdio.sys"
+[Agent64.sys](drivers/agent64/),Michael Haag,2023-01-09,"sc.exe create Agent64.sys binPath=C:\windows\temp\Agent64.sys type=kernel
+sc.exe start Agent64.sys"
+[nstr.sys](drivers/nstr/),Michael Haag,2023-01-09,"sc.exe create nstr.sys binPath=C:\windows\temp\nstr.sys type=kernel
+sc.exe start nstr.sys"
+[NodeDriver.sys](drivers/nodedriver/),Michael Haag,2023-03-02,"sc.exe create NodeDriver.sys binPath=C:\windows\temp\NodeDriver.sys type=kernel
+sc.exe start NodeDriver.sys"
+[aswVmm.sys](drivers/aswvmm/),Michael Haag,2023-01-09,"sc.exe create aswVmm.sys binPath=C:\windows\temp\aswVmm.sys type=kernel
+sc.exe start aswVmm.sys"
+[viragt64.sys](drivers/viragt64/),Michael Haag,2023-01-09,"sc.exe create viragt64.sys binPath=C:\windows\temp\viragt64.sys type=kernel
+sc.exe start viragt64.sys"
+[AsrIbDrv.sys](drivers/asribdrv/),Michael Haag,2023-01-09,"sc.exe create AsrIbDrv.sys binPath=C:\windows\temp\AsrIbDrv.sys type=kernel
+sc.exe start AsrIbDrv.sys"
+[ntbios.sys](drivers/ntbios/),Michael Haag,2023-02-28,"sc.exe create ntbios.sys binPath=C:\windows\temp\ntbios.sys type=kernel
+sc.exe start ntbios.sys"
+[kprocesshacker.sys](drivers/kprocesshacker/),Michael Haag,2023-01-09,"sc.exe create kprocesshacker.sys binPath=C:\windows\temp\kprocesshacker.sys type=kernel
+sc.exe start kprocesshacker.sys"
+[nt3.sys](drivers/nt3/),Michael Haag,2023-01-09,"sc.exe create nt3.sys binPath=C:\windows\temp\nt3.sys type=kernel
+sc.exe start nt3.sys"
+[NTIOLib_X64.sys](drivers/ntiolib_x64/),Michael Haag,2023-01-09,"sc.exe create NTIOLib_X64.sys binPath=C:\windows\temp\NTIOLib_X64.sys type=kernel
+sc.exe start NTIOLib_X64.sys"
+[Dh_Kernel_10.sys](drivers/dh_kernel_10/),Michael Haag,2023-01-09,"sc.exe create Dh_Kernel_10.sys binPath=C:\windows\temp\Dh_Kernel_10.sys type=kernel
+sc.exe start Dh_Kernel_10.sys"
+[Phymemx64.sys](drivers/phymemx64/),Michael Haag,2023-01-09,"sc.exe create Phymemx64.sys binPath=C:\windows\temp\Phymemx64.sys type=kernel
+sc.exe start Phymemx64.sys"
+[IOMap64.sys](drivers/iomap64/),Michael Haag,2023-01-09,"sc.exe create IOMap64.sys binPath=C:\windows\temp\IOMap64.sys type=kernel
+sc.exe start IOMap64.sys"
+[WiseUnlo.sys](drivers/wiseunlo/),Michael Haag,2023-01-09,"sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel
+sc.exe start WiseUnlo.sys"
+[phymem64.sys](drivers/phymem64/),Michael Haag,2023-01-09,"sc.exe create phymem64.sys binPath=C:\windows\temp\phymem64.sys type=kernel
+sc.exe start phymem64.sys"
+[Proxy64.sys](drivers/proxy64/),Michael Haag,2023-01-09,"sc.exe create Proxy64.sys binPath=C:\windows\temp\Proxy64.sys type=kernel
+sc.exe start Proxy64.sys"
+[AsrDrv101.sys](drivers/asrdrv101/),Michael Haag,2023-01-09,"sc.exe create AsrDrv101.sys binPath=C:\windows\temp\AsrDrv101.sys type=kernel
+sc.exe start AsrDrv101.sys"
+[fidpcidrv.sys](drivers/fidpcidrv/),Michael Haag,2023-01-09,"sc.exe create fidpcidrv.sys binPath=C:\windows\temp\fidpcidrv.sys type=kernel
+sc.exe start fidpcidrv.sys"
+[RTCore64.sys](drivers/rtcore64/),Michael Haag,2023-01-09,"sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel
+sc.exe start RTCore64.sys"
+[My.sys](drivers/my/),Michael Haag,2023-01-09,"sc.exe create My.sys binPath=C:\windows\temp\My.sys type=kernel
+sc.exe start My.sys"
+[ATSZIO64.sys](drivers/atszio64/),Michael Haag,2023-01-09,"sc.exe create ATSZIO64.sys binPath=C:\windows\temp\ATSZIO64.sys type=kernel
+sc.exe start ATSZIO64.sys"
+[Lv561av.sys](drivers/lv561av/),Michael Haag,2023-01-09,"sc.exe create Lv561av.sys binPath=C:\windows\temp\Lv561av.sys type=kernel
+sc.exe start Lv561av.sys"
+[AsrSmartConnectDrv.sys](drivers/asrsmartconnectdrv/),Michael Haag,2023-01-09,"sc.exe create AsrSmartConnectDrv.sys binPath=C:\windows\temp\AsrSmartConnectDrv.sys type=kernel
+sc.exe start AsrSmartConnectDrv.sys"
+[rzpnk.sys](drivers/rzpnk/),Michael Haag,2023-01-09,"sc.exe create rzpnk.sys binPath=C:\windows\temp\rzpnk.sys type=kernel
+sc.exe start rzpnk.sys"
+[BS_I2cIo.sys](drivers/bs_i2cio/),Michael Haag,2023-01-09,"sc.exe create BS_I2cIo.sys binPath=C:\windows\temp\BS_I2cIo.sys type=kernel
+sc.exe start BS_I2cIo.sys"
+[smep_capcom.sys](drivers/smep_capcom/),Michael Haag,2023-01-09,"sc.exe create smep_capcom.sys binPath=C:\windows\temp\smep_capcom.sys type=kernel
+sc.exe start smep_capcom.sys"
+[semav6msr64.sys](drivers/semav6msr64/),Michael Haag,2023-01-09,"sc.exe create semav6msr64.sys binPath=C:\windows\temp\semav6msr64.sys type=kernel
+sc.exe start semav6msr64.sys"
+[nstrwsk.sys](drivers/nstrwsk/),Michael Haag,2023-01-09,"sc.exe create nstrwsk.sys binPath=C:\windows\temp\nstrwsk.sys type=kernel
+sc.exe start nstrwsk.sys"
+[AsUpIO.sys](drivers/asupio/),Michael Haag,2023-01-09,"sc.exe create AsUpIO.sys binPath=C:\windows\temp\AsUpIO.sys type=kernel
+sc.exe start AsUpIO.sys"
+[NTIOLib.sys](drivers/ntiolib/),Michael Haag,2023-01-09,"sc.exe create NTIOLib.sys binPath=C:\windows\temp\NTIOLib.sys type=kernel
+sc.exe start NTIOLib.sys"
+[msrhook.sys](drivers/msrhook/),Michael Haag,2023-01-09,"sc.exe create msrhook.sys binPath=C:\windows\temp\msrhook.sys type=kernel
+sc.exe start msrhook.sys"
+[DBUtilDrv2.sys](drivers/dbutildrv2/),Michael Haag,2023-01-09,"sc.exe create DBUtilDrv2.sys binPath=C:\windows\temp\DBUtilDrv2.sys type=kernel
+sc.exe start DBUtilDrv2.sys"
+[FairplayKD.sys](drivers/fairplaykd/),Michael Haag,2023-01-09,"sc.exe create FairplayKD.sys binPath=C:\windows\temp\FairplayKD.sys type=kernel
+sc.exe start FairplayKD.sys"
+[rtkiow8x64.sys](drivers/rtkiow8x64/),Michael Haag,2023-01-09,"sc.exe create rtkiow8x64.sys binPath=C:\windows\temp\rtkiow8x64.sys type=kernel
+sc.exe start rtkiow8x64.sys"
+[POORTRY1.sys](drivers/poortry1/),Michael Haag,2023-03-04,"sc.exe create POORTRY1.sys binPath=C:\windows\temp\POORTRY1.sys type=kernel
+sc.exe start POORTRY1.sys"
+[AsrOmgDrv.sys](drivers/asromgdrv/),Michael Haag,2023-01-09,"sc.exe create AsrOmgDrv.sys binPath=C:\windows\temp\AsrOmgDrv.sys type=kernel
+sc.exe start AsrOmgDrv.sys"
+[d.sys](drivers/d/),Michael Haag,2023-01-09,"sc.exe create d.sys binPath=C:\windows\temp\d.sys type=kernel
+sc.exe start d.sys"
+[BSMI.sys](drivers/bsmi/),Michael Haag,2023-01-09,"sc.exe create BSMI.sys binPath=C:\windows\temp\BSMI.sys type=kernel
+sc.exe start BSMI.sys"
+[hw_sys](drivers/hw_sys/),Michael Haag,2023-01-09,"sc.exe create hw_sys binPath=C:\windows\temp\hw_sys type=kernel
+sc.exe start hw_sys"
+[EneTechIo64.sys](drivers/enetechio64/),Michael Haag,2023-01-09,"sc.exe create EneTechIo64.sys binPath=C:\windows\temp\EneTechIo64.sys type=kernel
+sc.exe start EneTechIo64.sys"
+[BSMIx64.sys](drivers/bsmix64/),Michael Haag,2023-01-09,"sc.exe create BSMIx64.sys binPath=C:\windows\temp\BSMIx64.sys type=kernel
+sc.exe start BSMIx64.sys"
+[WCPU.sys](drivers/wcpu/),Michael Haag,2023-01-09,"sc.exe create WCPU.sys binPath=C:\windows\temp\WCPU.sys type=kernel
+sc.exe start WCPU.sys"
+[aswArPot.sys](drivers/aswarpot/),Michael Haag,2023-01-09,"sc.exe create aswArPot.sys binPath=C:\windows\temp\aswArPot.sys type=kernel
+sc.exe start aswArPot.sys"
+[otipcibus.sys](drivers/otipcibus/),Michael Haag,2023-01-09,"sc.exe create otipcibus.sys binPath=C:\windows\temp\otipcibus.sys type=kernel
+sc.exe start otipcibus.sys"
+[elrawdsk.sys](drivers/elrawdsk/),Michael Haag,2023-01-09,"sc.exe create elrawdsk.sys binPath=C:\windows\temp\elrawdsk.sys type=kernel
+sc.exe start elrawdsk.sys"
+[AsUpIO64.sys](drivers/asupio64/),Michael Haag,2023-01-09,"sc.exe create AsUpIO64.sys binPath=C:\windows\temp\AsUpIO64.sys type=kernel
+sc.exe start AsUpIO64.sys"
+[LgDCatcher.sys](drivers/lgdcatcher/),Michael Haag,2023-01-09,"sc.exe create LgDCatcher.sys binPath=C:\windows\temp\LgDCatcher.sys type=kernel
+sc.exe start LgDCatcher.sys"
+[gdrv.sys](drivers/gdrv/),Michael Haag,2023-01-09,"sc.exe create gdrv.sys binPath=C:\windows\temp\gdrv.sys type=kernel
+sc.exe start gdrv.sys"
+[daxin_blank4.sys](drivers/daxin_blank4/),Michael Haag,2023-02-28,"sc.exe create daxin_blank4.sys binPath=C:\windows\temp\daxin_blank4.sys type=kernel
+sc.exe start daxin_blank4.sys"
+[procexp.Sys](drivers/procexp/),Michael Haag,2023-01-09,"sc.exe create procexp.Sys binPath=C:\windows\temp\procexp.Sys type=kernel
+sc.exe start procexp.Sys"
+[BS_Def64.sys](drivers/bs_def64/),Michael Haag,2023-01-09,"sc.exe create BS_Def64.sys binPath=C:\windows\temp\BS_Def64.sys type=kernel
+sc.exe start BS_Def64.sys"
+[nt4.sys](drivers/nt4/),Michael Haag,2023-01-09,"sc.exe create nt4.sys binPath=C:\windows\temp\nt4.sys type=kernel
+sc.exe start nt4.sys"
+[AsrDrv103.sys](drivers/asrdrv103/),Michael Haag,2023-01-09,"sc.exe create AsrDrv103.sys binPath=C:\windows\temp\AsrDrv103.sys type=kernel
+sc.exe start AsrDrv103.sys"
+[bw.sys](drivers/bw/),Michael Haag,2023-01-09,"sc.exe create bw.sys binPath=C:\windows\temp\bw.sys type=kernel
+sc.exe start bw.sys"
+[capcom.sys](drivers/capcom/),Michael Haag,2023-01-09,"sc.exe create capcom.sys binPath=C:\windows\temp\capcom.sys type=kernel
+sc.exe start capcom.sys"
+[wantd_2.sys](drivers/wantd_2/),Michael Haag,2023-02-28,"sc.exe create wantd_2.sys binPath=C:\windows\temp\wantd_2.sys type=kernel
+sc.exe start wantd_2.sys"
+[driver7-x86.sys](drivers/driver7-x86/),Michael Haag,2023-01-09,"sc.exe create driver7-x86.sys binPath=C:\windows\temp\driver7-x86.sys type=kernel
+sc.exe start driver7-x86.sys"
+[GameTerSafe.sys](drivers/gametersafe/),Michael Haag,2023-01-09,"sc.exe create GameTerSafe.sys binPath=C:\windows\temp\GameTerSafe.sys type=kernel
+sc.exe start GameTerSafe.sys"
+[driver7-x86-withoutdbg.sys](drivers/driver7-x86-withoutdbg/),Michael Haag,2023-01-09,"sc.exe create driver7-x86-withoutdbg.sys binPath=C:\windows\temp\driver7-x86-withoutdbg.sys type=kernel
+sc.exe start driver7-x86-withoutdbg.sys"
+[IObitUnlocker.sys](drivers/iobitunlocker/),Michael Haag,2023-01-09,"sc.exe create IObitUnlocker.sys binPath=C:\windows\temp\IObitUnlocker.sys type=kernel
+sc.exe start IObitUnlocker.sys"
+[ATSZIO.sys](drivers/atszio/),Michael Haag,2023-01-09,"sc.exe create ATSZIO.sys binPath=C:\windows\temp\ATSZIO.sys type=kernel
+sc.exe start ATSZIO.sys"
+[wantd_6.sys](drivers/wantd_6/),Michael Haag,2023-02-28,"sc.exe create wantd_6.sys binPath=C:\windows\temp\wantd_6.sys type=kernel
+sc.exe start wantd_6.sys"
+[windows-xp-64.sys](drivers/windows-xp-64/),Michael Haag,2023-01-09,"sc.exe create windows-xp-64.sys binPath=C:\windows\temp\windows-xp-64.sys type=kernel
+sc.exe start windows-xp-64.sys"
+[bwrs.sys](drivers/bwrs/),Michael Haag,2023-01-09,"sc.exe create bwrs.sys binPath=C:\windows\temp\bwrs.sys type=kernel
+sc.exe start bwrs.sys"
+[nt6.sys](drivers/nt6/),Michael Haag,2023-01-09,"sc.exe create nt6.sys binPath=C:\windows\temp\nt6.sys type=kernel
+sc.exe start nt6.sys"
+[t8.sys](drivers/t8/),Michael Haag,2023-01-09,"sc.exe create t8.sys binPath=C:\windows\temp\t8.sys type=kernel
+sc.exe start t8.sys"
+[WinIO32A.sys](drivers/winio32a/),Michael Haag,2023-01-09,"sc.exe create WinIO32A.sys binPath=C:\windows\temp\WinIO32A.sys type=kernel
+sc.exe start WinIO32A.sys"
+[b.sys](drivers/b/),Michael Haag,2023-01-09,"sc.exe create b.sys binPath=C:\windows\temp\b.sys type=kernel
+sc.exe start b.sys"
+[mtcBSv64.sys](drivers/mtcbsv64/),Michael Haag,2023-01-09,"sc.exe create mtcBSv64.sys binPath=C:\windows\temp\mtcBSv64.sys type=kernel
+sc.exe start mtcBSv64.sys"
+[full.sys](drivers/full/),Michael Haag,2023-01-09,"sc.exe create full.sys binPath=C:\windows\temp\full.sys type=kernel
+sc.exe start full.sys"
+[WINIODrv.sys](drivers/winiodrv/),Michael Haag,2023-01-09,"sc.exe create WINIODrv.sys binPath=C:\windows\temp\WINIODrv.sys type=kernel
+sc.exe start WINIODrv.sys"
+[rwdrv.sys](drivers/rwdrv/),Michael Haag,2023-01-09,"sc.exe create rwdrv.sys binPath=C:\windows\temp\rwdrv.sys type=kernel
+sc.exe start rwdrv.sys"
+[BS_RCIO64.sys](drivers/bs_rcio64/),Michael Haag,2023-01-09,"sc.exe create BS_RCIO64.sys binPath=C:\windows\temp\BS_RCIO64.sys type=kernel
+sc.exe start BS_RCIO64.sys"
+[t3.sys](drivers/t3/),Michael Haag,2023-01-09,"sc.exe create t3.sys binPath=C:\windows\temp\t3.sys type=kernel
+sc.exe start t3.sys"
+[cpupress.sys](drivers/cpupress/),Michael Haag,2023-01-09,"sc.exe create cpupress.sys binPath=C:\windows\temp\cpupress.sys type=kernel
+sc.exe start cpupress.sys"
+[nt5.sys](drivers/nt5/),Michael Haag,2023-01-09,"sc.exe create nt5.sys binPath=C:\windows\temp\nt5.sys type=kernel
+sc.exe start nt5.sys"
+[BS_HWMIo64.sys](drivers/bs_hwmio64/),Michael Haag,2023-01-09,"sc.exe create BS_HWMIo64.sys binPath=C:\windows\temp\BS_HWMIo64.sys type=kernel
+sc.exe start BS_HWMIo64.sys"
+[blacklotus_driver.sys](drivers/blacklotus_driver/),Michael Haag,2023-04-05,"sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sys type=kernel
+sc.exe start blacklotus_driver.sys"
+[semav6msr.sys](drivers/semav6msr/),Michael Haag,2023-01-09,"sc.exe create semav6msr.sys binPath=C:\windows\temp\semav6msr.sys type=kernel
+sc.exe start semav6msr.sys"
+[LHA.sys](drivers/lha/),Michael Haag,2023-01-09,"sc.exe create LHA.sys binPath=C:\windows\temp\LHA.sys type=kernel
+sc.exe start LHA.sys"
+[gftkyj64.sys](drivers/gftkyj64/),Michael Haag,2023-03-04,"sc.exe create gftkyj64.sys binPath=C:\windows\temp\gftkyj64.sys type=kernel
+sc.exe start gftkyj64.sys"
+[Bs_Def.sys](drivers/bs_def/),Michael Haag,2023-01-09,"sc.exe create Bs_Def.sys binPath=C:\windows\temp\Bs_Def.sys type=kernel
+sc.exe start Bs_Def.sys"
+[c.sys](drivers/c/),Michael Haag,2023-01-09,"sc.exe create c.sys binPath=C:\windows\temp\c.sys type=kernel
+sc.exe start c.sys"
+[CITMDRV_AMD64.sys](drivers/citmdrv_amd64/),Michael Haag,2023-01-09,"sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys type=kernel
+sc.exe start CITMDRV_AMD64.sys"
+[80.sys](drivers/80/),Michael Haag,2023-01-09,"sc.exe create 80.sys binPath=C:\windows\temp\80.sys type=kernel
+sc.exe start 80.sys"
+[TmComm.sys](drivers/tmcomm/),Michael Haag,2023-01-09,"sc.exe create TmComm.sys binPath=C:\windows\temp\TmComm.sys type=kernel
+sc.exe start TmComm.sys"
