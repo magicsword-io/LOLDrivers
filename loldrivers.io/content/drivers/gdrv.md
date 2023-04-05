@@ -19,7 +19,7 @@ weight = 10
 gdrv.sys is vulnerable to multiple CVEs: CVE-2018-19320, CVE-2018-19322, CVE-2018-19323, CVE-2018-19321. Read/Write Physical memory, read/write to/from IO ports, exposes ring0 memcpy-like functionality,  read and write Machine Specific Registers (MSRs).
 
 - **Created**: 2023-01-09
-- **Author**: Michael Haag
+- **Author**: Michael Haag, rasta-mouse
 - **Acknowledgement**: MattNotMax | [@mattnotmax](https://twitter.com/@mattnotmax)
 
 ### Commands
@@ -35,7 +35,7 @@ sc.exe start gdrv.sys
 
 ### Resources
 <br>
-<li><a href=" https://github.com/hoangprod/DanSpecial"> https://github.com/hoangprod/DanSpecial</a></li>
+<li><a href="https://github.com/hoangprod/DanSpecial">https://github.com/hoangprod/DanSpecial</a></li>
 <li><a href="https://github.com/namazso/physmem_drivers">https://github.com/namazso/physmem_drivers</a></li>
 <li><a href="https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-privilege-vulnerabilities">https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-privilege-vulnerabilities</a></li>
 <li><a href="https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b">https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b</a></li>
