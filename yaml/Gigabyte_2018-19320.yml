@@ -1,0 +1,39 @@
+Name: gdrv.sys
+Author: Rasta Mouse
+Created: '2023-04-05'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: 'sc.exe create gdrv binPath= C:\windows\temp\gdrv.sys type=kernel
+
+    sc.exe start gdrv'
+  Description: ''
+  Usecase: Arbitrary ring0 read/write
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- 'https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-of-privilege-vulnerabilities/'
+- 'https://cve.mitre.org/cgi-bin/cvename.cgi?name=2018-19320'
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: gdrv.sys
+  MD5: '1CFF7B947F8C3DEA1D34DC791FC78CDC'
+  SHA1: '8D59FD14A445C8F3F0F7991FA6CD717D466B3754'
+  SHA256: 'FF6729518A380BF57F1BC6F1EC0AA7F3012E1618B8D9B0F31A61D299EE2B4339'
+  Signature:
+   - 'Symantec Class 3 SHA256 Code Signing CA'
+   - 'Symantec Trust Network'
+   - 'Symantec Corporation'
+   - 'US'
+  Date: ''
+  Publisher: ''
+  Company: 'GIGABYTE'
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
