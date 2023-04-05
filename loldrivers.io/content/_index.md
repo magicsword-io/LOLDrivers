@@ -40,7 +40,7 @@ Feel free to open a [PR](https://github.com/magicsword-io/LOLDrivers/pulls), rai
 {{< /tip >}}
 
 {{< tip >}}
-You can also get the malicious driver list via **API** using [CSV](api/drivers.csv) or [JSON](api/drivers.json). Sysmon users check out the pre-built [config](https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml). There is a also a [Sigma rule](https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml) for SIEMs. If enjoyed this project you are going to love our sister project [LOLBAS](lolbas-project.github.io/), check them out! 
+You can also get the malicious driver list via **API** using [CSV](api/drivers.csv) or [JSON](api/drivers.json). Sysmon users check out the pre-built [config](https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml). There is a [Sigma rule](https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml) for SIEMs. If you've found this project valuable, you'll absolutely love our sister project, [LOLBAS](lolbas-project.github.io) and [GTFOBins](https://gtfobins.github.io), check them out!  
 {{< /tip >}}
 
 {{< /column >}}

@@ -56,6 +56,6 @@ If you find any errors or gaps in the documentation, or if you have suggestions 
 
 ## 📜 Code of Conduct
 
-By participating in this project, you agree to abide by the [Code of Conduct](CODE_OF_CONDUCT.md). Please report any unacceptable behavior to [email@example.com](mailto:email@example.com).
+By participating in this project, you agree to abide by the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 Thank you for contributing to LOLDrivers! 🚀
