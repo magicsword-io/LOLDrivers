@@ -484,5 +484,7 @@ sc.exe start nvflash.sys"
 sc.exe start ntbios_2.sys"
 [BS_HWMIO64_W10.sys](drivers/bs_hwmio64_w10/),Michael Haag,2023-01-09,"sc.exe create BS_HWMIO64_W10.sys binPath=C:\windows\temp\BS_HWMIO64_W10.sys type=kernel
 sc.exe start BS_HWMIO64_W10.sys"
+[blacklotus_driver.sys](drivers/blacklotus_driver/),Michael Haag,2023-04-05,"sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sys type=kernel
+sc.exe start blacklotus_driver.sys"
 [GLCKIO2.sys](drivers/glckio2/),Michael Haag,2023-01-09,"sc.exe create GLCKIO2.sys binPath=C:\windows\temp\GLCKIO2.sys type=kernel
 sc.exe start GLCKIO2.sys"
