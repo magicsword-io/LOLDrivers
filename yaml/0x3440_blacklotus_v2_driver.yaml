@@ -1,0 +1,36 @@
+Name: 0x3440_blacklotus_v2_driver.sys
+Author: Michael Haag
+Created: '2023-04-05'
+MitreID: T1068
+Category: malicious
+Verified: 'TRUE'
+Commands:
+  Command: 'sc.exe create 0x3440_blacklotus_v2_driver.sys binPath=C:\windows\temp\0x3440_blacklotus_v2_driver.sys type=kernel 
+
+    sc.exe start 0x3440_blacklotus_v2_driver.sys'
+  Description: The first in-the-wild UEFI bootkit bypassing UEFI Secure Boot on fully updated UEFI systems is now a reality. Once the persistence is configured, the BlackLotus bootkit is executed on every system start. The bootkits goal is to deploy a kernel driver and a final user-mode component.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/
+Acknowledgement:
+  Person: 'Martin Smolár, ESET'
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+  Filename: 0x3440_blacklotus_v2_driver.sys
+  MD5: 4ad8fd9e83d7200bd7f8d0d4a9abfb11
+  SHA1: 17fa047c1f979b180644906fe9265f21af5b0509
+  SHA256: 749b0e8c8c8b7dda8c2063c708047cfe95afa0a4d86886b31a12f3018396e67c
+  Signature:
+  - '-'
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
