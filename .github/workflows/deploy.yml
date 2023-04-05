@@ -1,8 +1,9 @@
 name: Deploy Site
 
-on: 
-    push:
-      branches: [ main ]
+on:
+  workflow_run:
+    workflows: [Generate Site]
+    types: [completed]
 
 jobs:
     # Build job
