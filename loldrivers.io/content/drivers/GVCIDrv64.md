@@ -49,7 +49,7 @@ sc.exe start GVCIDrv64.sys
 | Signature | GIGA-BYTE TECHNOLOGY CO., LTD., Symantec Class 3 SHA256 Code Signing CA, VeriSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gvcidrv64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gvcidrv64.yaml)
 
 *last_updated:* 2023-04-05
 

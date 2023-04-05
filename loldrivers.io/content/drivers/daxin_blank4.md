@@ -50,7 +50,7 @@ sc.exe start daxin_blank4.sys
 | Publisher | n/a || Signature | U, n, s, i, g, n, e, d   || Date | 8:42 AM 4/20/2010 || Company | n/a || Description | n/a || Product | n/a |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank4.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank4.yaml)
 
 *last_updated:* 2023-04-05
 

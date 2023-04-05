@@ -54,7 +54,7 @@ sc.exe start nt6.sys
 | Signature | -   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nt6.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nt6.yaml)
 
 *last_updated:* 2023-04-05
 

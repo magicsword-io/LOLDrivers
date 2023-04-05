@@ -54,7 +54,7 @@ sc.exe start mydrivers.sys
 | Signature | Beijing Kingsoft Security software Co.,Ltd, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mydrivers.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mydrivers.yaml)
 
 *last_updated:* 2023-04-05
 

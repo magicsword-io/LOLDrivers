@@ -49,7 +49,7 @@ sc.exe start SysInfo.sys
 | Signature | Noriyuki MIYAZAKI, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/sysinfo.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/sysinfo.yaml)
 
 *last_updated:* 2023-04-05
 

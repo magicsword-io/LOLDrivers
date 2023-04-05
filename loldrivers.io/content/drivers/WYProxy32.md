@@ -54,7 +54,7 @@ sc.exe start WYProxy32.sys
 | Signature | -   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wyproxy32.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wyproxy32.yaml)
 
 *last_updated:* 2023-04-05
 

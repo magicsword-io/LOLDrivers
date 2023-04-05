@@ -50,7 +50,7 @@ sc.exe start nicm.sys
 | Signature | Novell, Inc., VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nicm.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nicm.yaml)
 
 *last_updated:* 2023-04-05
 

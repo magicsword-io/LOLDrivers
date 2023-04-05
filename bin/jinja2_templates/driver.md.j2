@@ -80,7 +80,8 @@ We were not able to verify the hash of this driver successfully, it has not been
 {% endif %}
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml{{driver.kind}}/{{ driver.Name | lower | replace (" ", "_") }}.yml)
+{% set driver_name = driver.Name.split('.') %}
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml{{driver.kind}}/{{ driver_name[0] | lower | replace (" ", "_") }}.yaml)
 
 *last_updated:* {{ time }}
 

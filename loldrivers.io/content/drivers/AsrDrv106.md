@@ -49,7 +49,7 @@ sc.exe start AsrDrv106.sys
 | Signature | ASROCK INC., GlobalSign GCC R45 EV CodeSigning CA 2020, GlobalSign Code Signing Root R45, GlobalSign, GlobalSign Root CA - R1   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv106.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv106.yaml)
 
 *last_updated:* 2023-04-05
 

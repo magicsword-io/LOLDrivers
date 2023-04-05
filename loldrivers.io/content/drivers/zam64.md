@@ -49,7 +49,7 @@ sc.exe start zam64.sys
 | Signature | Zemana Ltd., DigiCert High Assurance Code Signing CA-1, DigiCert   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/zam64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/zam64.yaml)
 
 *last_updated:* 2023-04-05
 

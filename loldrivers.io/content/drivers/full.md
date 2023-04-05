@@ -54,7 +54,7 @@ sc.exe start full.sys
 | Signature | -   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/full.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/full.yaml)
 
 *last_updated:* 2023-04-05
 

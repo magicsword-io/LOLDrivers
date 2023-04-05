@@ -49,7 +49,7 @@ sc.exe start AsrIbDrv.sys
 | Publisher | ASROCK Incorporation || Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Description | RW-Everything Read &amp; Write Driver |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asribdrv.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asribdrv.yaml)
 
 *last_updated:* 2023-04-05
 

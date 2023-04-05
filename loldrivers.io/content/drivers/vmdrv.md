@@ -49,7 +49,7 @@ sc.exe start vmdrv.sys
 | Signature | Voicemod Sociedad Limitada, DigiCert Global G3 Code Signing ECC SHA384 2021 CA1, DigiCert Global Root G3   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/vmdrv.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/vmdrv.yaml)
 
 *last_updated:* 2023-04-05
 

@@ -50,7 +50,7 @@ sc.exe start ntbios_2.sys
 | Publisher | n/a || Signature | U, n, s, i, g, n, e, d   || Date | 3:04 AM 5/18/2009 || Company | Microsoft Corporation || Description | ntbios driver || Product |  Microsoft(R) Windows (R) NT Operating System |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ntbios_2.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ntbios_2.yaml)
 
 *last_updated:* 2023-04-05
 

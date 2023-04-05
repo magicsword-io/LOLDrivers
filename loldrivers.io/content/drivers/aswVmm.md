@@ -50,7 +50,7 @@ sc.exe start aswVmm.sys
 | Signature | AVAST Software, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/aswvmm.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/aswvmm.yaml)
 
 *last_updated:* 2023-04-05
 

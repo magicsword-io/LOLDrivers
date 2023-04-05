@@ -54,7 +54,7 @@ sc.exe start WiseUnlo.sys
 | Signature | Lespeed Technology Co., Ltd, COMODO RSA Extended Validation Code Signing CA, Sectigo (formerly Comodo CA)   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wiseunlo.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wiseunlo.yaml)
 
 *last_updated:* 2023-04-05
 

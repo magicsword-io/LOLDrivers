@@ -49,7 +49,7 @@ sc.exe start magdrvamd64.sys
 | Signature | Samsung Electronics Co., Ltd., GlobalSign CodeSigning CA - G2, GlobalSign Root CA - R1   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/magdrvamd64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/magdrvamd64.yaml)
 
 *last_updated:* 2023-04-05
 

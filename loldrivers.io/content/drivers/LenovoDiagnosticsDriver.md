@@ -54,7 +54,7 @@ sc.exe start LenovoDiagnosticsDriver.sys
 | Signature | Lenovo, DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1, DigiCert Trusted Root G4   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lenovodiagnosticsdriver.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lenovodiagnosticsdriver.yaml)
 
 *last_updated:* 2023-04-05
 

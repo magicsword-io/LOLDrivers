@@ -54,7 +54,7 @@ sc.exe start ni.sys
 | Signature | -   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ni.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ni.yaml)
 
 *last_updated:* 2023-04-05
 

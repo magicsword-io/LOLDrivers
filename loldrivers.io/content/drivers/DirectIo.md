@@ -54,7 +54,7 @@ sc.exe start DirectIo.sys
 | Signature | PassMark Software Pty Ltd, VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/directio.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/directio.yaml)
 
 *last_updated:* 2023-04-05
 

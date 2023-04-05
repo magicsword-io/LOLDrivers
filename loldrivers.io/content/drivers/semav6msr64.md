@@ -54,7 +54,7 @@ sc.exe start semav6msr64.sys
 | Signature | Intel(R) Code Signing External, Intel External Basic Issuing CA 3B, Intel External Basic Policy CA, Sectigo (AddTrust)   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/semav6msr64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/semav6msr64.yaml)
 
 *last_updated:* 2023-04-05
 

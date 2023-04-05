@@ -54,7 +54,7 @@ sc.exe start PanMonFltX64.sys
 | Signature | PAN YAZILIM BILISIM TEKNOLOJILERI TICARET LTD. STI., GlobalSign CodeSigning CA - G2, GlobalSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/panmonfltx64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/panmonfltx64.yaml)
 
 *last_updated:* 2023-04-05
 

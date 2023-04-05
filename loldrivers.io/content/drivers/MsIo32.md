@@ -51,7 +51,7 @@ sc.exe start MsIo32.sys
 | Signature | MICSYS Technology Co., Ltd., Symantec Class 3 Extended Validation Code Signing CA - G2, VeriSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/msio32.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/msio32.yaml)
 
 *last_updated:* 2023-04-05
 

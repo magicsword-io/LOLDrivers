@@ -54,7 +54,7 @@ sc.exe start gameink.sys
 | Signature | -   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gameink.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gameink.yaml)
 
 *last_updated:* 2023-04-05
 

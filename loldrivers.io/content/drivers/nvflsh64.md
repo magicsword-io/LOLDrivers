@@ -49,7 +49,7 @@ sc.exe start nvflsh64.sys
 | Signature | NVIDIA Corporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nvflsh64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nvflsh64.yaml)
 
 *last_updated:* 2023-04-05
 

@@ -53,7 +53,7 @@ sc.exe start iqvw64e.sys
 | Signature | Intel Corporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | Intel || Description | Intel(R) Network Adapter Diagnostic Driver || Product | Intel(R) iQVW64.SYS || OriginalFilename | iQVW64.SYS |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iqvw64e.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iqvw64e.yaml)
 
 *last_updated:* 2023-04-05
 

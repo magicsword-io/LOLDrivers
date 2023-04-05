@@ -55,7 +55,7 @@ sc.exe start vboxdrv.sys
 | Signature | innotek GmbH, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   || Description | VirtualBox Support Driver || Product | Sun VirtualBox |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/vboxdrv.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/vboxdrv.yaml)
 
 *last_updated:* 2023-04-05
 

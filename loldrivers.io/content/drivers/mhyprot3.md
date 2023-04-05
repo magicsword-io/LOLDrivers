@@ -54,7 +54,7 @@ sc.exe start mhyprot3.sys
 | Signature | miHoYo Co.,Ltd., DigiCert SHA2 Assured ID Code Signing CA, DigiCert   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mhyprot3.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mhyprot3.yaml)
 
 *last_updated:* 2023-04-05
 

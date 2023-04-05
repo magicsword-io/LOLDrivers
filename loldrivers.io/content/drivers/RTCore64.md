@@ -55,7 +55,7 @@ sc.exe start RTCore64.sys
 | Publisher | N/A || Signature | N, /, A   || Date | N/A || Company | N/A || Description | N/A || Product | N/A |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rtcore64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rtcore64.yaml)
 
 *last_updated:* 2023-04-05
 

@@ -49,7 +49,7 @@ sc.exe start EneIo64.sys
 | Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/eneio64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/eneio64.yaml)
 
 *last_updated:* 2023-04-05
 

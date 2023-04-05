@@ -49,7 +49,7 @@ sc.exe start HOSTNT.sys
 | Publisher | &#34;SafeNet, Inc.&#34; || Signature | SafeNet, Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Description | Hostnt 64-bit driver |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hostnt.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hostnt.yaml)
 
 *last_updated:* 2023-04-05
 

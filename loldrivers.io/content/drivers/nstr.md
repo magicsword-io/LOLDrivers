@@ -54,7 +54,7 @@ sc.exe start nstr.sys
 | Signature | -   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nstr.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nstr.yaml)
 
 *last_updated:* 2023-04-05
 

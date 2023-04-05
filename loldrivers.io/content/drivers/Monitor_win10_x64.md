@@ -50,7 +50,7 @@ sc.exe start Monitor_win10_x64.sys
 | Signature | IObit Information Technology, Symantec Class 3 SHA256 Code Signing CA, VeriSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/monitor_win10_x64.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/monitor_win10_x64.yaml)
 
 *last_updated:* 2023-04-05
 

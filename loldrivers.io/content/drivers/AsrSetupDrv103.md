@@ -69,7 +69,7 @@ sc.exe start AsrSetupDrv103.sys
 | Signature | -   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrsetupdrv103.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrsetupdrv103.yaml)
 
 *last_updated:* 2023-04-05
 

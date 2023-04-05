@@ -49,7 +49,7 @@ sc.exe start Dh_Kernel_10.sys
 | Publisher | YY Inc. || Signature | YY Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Description | dianhu |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dh_kernel_10.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dh_kernel_10.yaml)
 
 *last_updated:* 2023-04-05
 

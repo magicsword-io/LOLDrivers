@@ -54,7 +54,7 @@ sc.exe start NetProxyDriver.sys
 | Signature | -   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/netproxydriver.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/netproxydriver.yaml)
 
 *last_updated:* 2023-04-05
 

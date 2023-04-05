@@ -54,7 +54,7 @@ sc.exe start GameTerSafe.sys
 | Signature | -   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gametersafe.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gametersafe.yaml)
 
 *last_updated:* 2023-04-05
 

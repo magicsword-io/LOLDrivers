@@ -49,7 +49,7 @@ sc.exe start smep_namco.sys
 | Signature | NAMCO BANDAI Online Inc., GlobalSign CodeSigning CA - G2, GlobalSign Root CA - R1   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/smep_namco.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/smep_namco.yaml)
 
 *last_updated:* 2023-04-05
 

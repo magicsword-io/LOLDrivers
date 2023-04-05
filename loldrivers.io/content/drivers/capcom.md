@@ -49,7 +49,7 @@ sc.exe start capcom.sys
 | Signature | CAPCOM Co.,Ltd., Symantec Class 3 SHA256 Code Signing CA, VeriSign   |
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/capcom.sys.yml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/capcom.yaml)
 
 *last_updated:* 2023-04-05
 
