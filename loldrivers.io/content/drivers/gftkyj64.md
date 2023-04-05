@@ -39,6 +39,7 @@ sc.exe start gftkyj64.sys
 ### Resources
 <br>
 <li><a href="https://www.sentinelone.com/labs/driving-through-defenses-targeted-attacks-leverage-signed-malicious-microsoft-drivers/">https://www.sentinelone.com/labs/driving-through-defenses-targeted-attacks-leverage-signed-malicious-microsoft-drivers/</a></li>
+<li><a href=""></a></li>
 <br>
 
 ### Known Vulnerable Samples

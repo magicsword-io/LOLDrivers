@@ -1,6 +1,6 @@
 +++
 
-description = "https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c"
+description = ""
 title = "EneIo64.sys"
 weight = 10
 
@@ -36,6 +36,7 @@ sc.exe start EneIo64.sys
 ### Resources
 <br>
 <li><a href=" https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c"> https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c</a></li>
+<li><a href="https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c">https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c</a></li>
 <br>
 
 ### Known Vulnerable Samples

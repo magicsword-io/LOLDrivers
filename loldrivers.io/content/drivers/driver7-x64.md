@@ -1,6 +1,6 @@
 +++
 
-description = "https://github.com/Chigusa0w0/AsusDriversPrivEscala"
+description = ""
 title = "driver7-x64.sys"
 weight = 10
 
@@ -36,6 +36,7 @@ sc.exe start driver7-x64.sys
 ### Resources
 <br>
 <li><a href=" https://github.com/Chigusa0w0/AsusDriversPrivEscala"> https://github.com/Chigusa0w0/AsusDriversPrivEscala</a></li>
+<li><a href="https://github.com/Chigusa0w0/AsusDriversPrivEscala">https://github.com/Chigusa0w0/AsusDriversPrivEscala</a></li>
 <br>
 
 ### Known Vulnerable Samples

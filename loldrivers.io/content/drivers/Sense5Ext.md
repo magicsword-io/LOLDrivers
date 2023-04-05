@@ -36,6 +36,7 @@ sc.exe start Sense5Ext.sys
 ### Resources
 <br>
 <li><a href="https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware">https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware</a></li>
+<li><a href=""></a></li>
 <br>
 
 ### Known Vulnerable Samples

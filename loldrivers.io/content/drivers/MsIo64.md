@@ -1,6 +1,6 @@
 +++
 
-description = "https://github.com/namazso/physmem_drivers"
+description = ""
 title = "MsIo64.sys"
 weight = 10
 
@@ -40,6 +40,7 @@ sc.exe start MsIo64.sys
 <li><a href="https://packetstormsecurity.com/files/159315/MSI-Ambient-Link-Driver-1.0.0.8-Privilege-Escalation.html">https://packetstormsecurity.com/files/159315/MSI-Ambient-Link-Driver-1.0.0.8-Privilege-Escalation.html</a></li>
 <li><a href="https://www.coresecurity.com/core-labs/advisories/msi-ambient-link-multiple-vulnerabilities">https://www.coresecurity.com/core-labs/advisories/msi-ambient-link-multiple-vulnerabilities</a></li>
 <li><a href="https://github.com/Exploitables/CVE-2020-17382">https://github.com/Exploitables/CVE-2020-17382</a></li>
+<li><a href="https://github.com/namazso/physmem_drivers">https://github.com/namazso/physmem_drivers</a></li>
 <br>
 
 ### Known Vulnerable Samples

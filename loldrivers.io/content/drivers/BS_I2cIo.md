@@ -1,6 +1,6 @@
 +++
 
-description = "https://github.com/elastic/protections-artifacts/search?q=VulnDriver"
+description = ""
 title = "BS_I2cIo.sys"
 weight = 10
 
@@ -37,6 +37,7 @@ sc.exe start BS_I2cIo.sys
 <br>
 <li><a href=" https://github.com/elastic/protections-artifacts/search?q=VulnDriver"> https://github.com/elastic/protections-artifacts/search?q=VulnDriver</a></li>
 <li><a href="https://github.com/elastic/protections-artifacts/blob/932baf346cc8a743f1963ad3d4565b42ed17bebe/yara/rules/Windows_VulnDriver_Biostar.yar#L30">https://github.com/elastic/protections-artifacts/blob/932baf346cc8a743f1963ad3d4565b42ed17bebe/yara/rules/Windows_VulnDriver_Biostar.yar#L30</a></li>
+<li><a href="https://github.com/elastic/protections-artifacts/search?q=VulnDriver">https://github.com/elastic/protections-artifacts/search?q=VulnDriver</a></li>
 <br>
 
 ### Known Vulnerable Samples

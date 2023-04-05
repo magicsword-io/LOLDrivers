@@ -1,6 +1,6 @@
 +++
 
-description = "https://github.com/namazso/physmem_drivers"
+description = ""
 title = "BS_Def64.sys"
 weight = 10
 
@@ -36,6 +36,7 @@ sc.exe start BS_Def64.sys
 ### Resources
 <br>
 <li><a href=" https://github.com/namazso/physmem_drivers"> https://github.com/namazso/physmem_drivers</a></li>
+<li><a href="https://github.com/namazso/physmem_drivers">https://github.com/namazso/physmem_drivers</a></li>
 <br>
 
 ### Known Vulnerable Samples

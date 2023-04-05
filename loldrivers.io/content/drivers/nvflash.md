@@ -1,6 +1,6 @@
 +++
 
-description = "https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md"
+description = ""
 title = "nvflash.sys"
 weight = 10
 
@@ -36,6 +36,7 @@ sc.exe start nvflash.sys
 ### Resources
 <br>
 <li><a href=" https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md"> https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md</a></li>
+<li><a href="https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md">https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md</a></li>
 <br>
 
 ### Known Vulnerable Samples

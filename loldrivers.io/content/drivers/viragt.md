@@ -1,6 +1,6 @@
 +++
 
-description = "https://github.com/elastic/protections-artifacts/search?q=VulnDriver"
+description = ""
 title = "viragt.sys"
 weight = 10
 
@@ -36,6 +36,7 @@ sc.exe start viragt.sys
 ### Resources
 <br>
 <li><a href=" https://github.com/elastic/protections-artifacts/search?q=VulnDriver"> https://github.com/elastic/protections-artifacts/search?q=VulnDriver</a></li>
+<li><a href="https://github.com/elastic/protections-artifacts/search?q=VulnDriver">https://github.com/elastic/protections-artifacts/search?q=VulnDriver</a></li>
 <br>
 
 ### Known Vulnerable Samples
