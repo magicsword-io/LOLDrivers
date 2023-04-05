@@ -52,7 +52,7 @@ sc.exe start speedfan.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/speedfan.sys.yml)
 
-*last_updated:* 2023-04-04
+*last_updated:* 2023-04-05
 
 
 

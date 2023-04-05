@@ -61,7 +61,7 @@ sc.exe start WinIo64C.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio64c.sys.yml)
 
-*last_updated:* 2023-04-04
+*last_updated:* 2023-04-05
 
 
 

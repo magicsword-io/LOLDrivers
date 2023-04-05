@@ -61,7 +61,7 @@ sc.exe start ProtectS.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/protects.sys.yml)
 
-*last_updated:* 2023-04-04
+*last_updated:* 2023-04-05
 
 
 

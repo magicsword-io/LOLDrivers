@@ -51,7 +51,7 @@ sc.exe start PhlashNT.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/phlashnt.sys.yml)
 
-*last_updated:* 2023-04-04
+*last_updated:* 2023-04-05
 
 
 
