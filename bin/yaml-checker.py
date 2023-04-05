@@ -103,19 +103,26 @@ class TestRules(unittest.TestCase):
                     
                     if i['MD5'] and i['MD5'] != "-" and len(i['MD5']) == 32:
                         valid_hashes += 1
+                        print(Fore.GREEN + "Valid MD5 hash found in {}".format(file))
 
                     if i['SHA1'] and i['SHA1'] != "-" and len(i['SHA1']) == 40:
                         valid_hashes += 1
+                        print(Fore.GREEN + "Valid SHA1 hash found in {}".format(file))
                         
                     if i['SHA256'] and i['SHA256'] != "-" and len(i['SHA256']) == 64:
                         valid_hashes += 1
+                        print(Fore.GREEN + "Valid SHA256 hash found in {}".format(file))
                     
-                    if valid_hashes < 1:
-                        print(Fore.RED + "YAML {} has no valid hash values".format(file))
-                        if file not in faulty_yaml_list:
-                            faulty_yaml_list.append(file)
+                    # If at least one valid hash is found, continue to the next dictionary
+                    if valid_hashes >= 1:
+                        continue
+
+                    print(Fore.RED + "YAML {} has no valid hash values".format(file))
+                    if file not in faulty_yaml_list:
+                        faulty_yaml_list.append(file)
 
         self.assertEqual(faulty_yaml_list, [], Fore.RED + "There are YAML documents with incorrect hashes")
+
 
 
 if __name__ == "__main__":
