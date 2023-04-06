@@ -51,7 +51,7 @@ sc.exe start BS_HWMIo64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_hwmio64.yaml)
 
-*last_updated:* 2023-04-05
+*last_updated:* 2023-04-06
 
 
 

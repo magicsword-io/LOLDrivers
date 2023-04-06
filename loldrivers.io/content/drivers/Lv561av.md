@@ -56,7 +56,7 @@ sc.exe start Lv561av.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lv561av.yaml)
 
-*last_updated:* 2023-04-05
+*last_updated:* 2023-04-06
 
 
 

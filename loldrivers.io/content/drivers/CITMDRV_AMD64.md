@@ -126,7 +126,7 @@ sc.exe start CITMDRV_AMD64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/citmdrv_amd64.yaml)
 
-*last_updated:* 2023-04-05
+*last_updated:* 2023-04-06
 
 
 

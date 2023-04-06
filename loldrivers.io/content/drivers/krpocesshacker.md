@@ -52,7 +52,7 @@ sc.exe start krpocesshacker.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/krpocesshacker.yaml)
 
-*last_updated:* 2023-04-05
+*last_updated:* 2023-04-06
 
 
 

@@ -80,7 +80,7 @@ sc.exe start blacklotus_driver.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/blacklotus_driver.yaml)
 
-*last_updated:* 2023-04-05
+*last_updated:* 2023-04-06
 
 
 

@@ -56,7 +56,7 @@ sc.exe start PanIOx64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/paniox64.yaml)
 
-*last_updated:* 2023-04-05
+*last_updated:* 2023-04-06
 
 
 
