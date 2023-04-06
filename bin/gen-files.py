@@ -26,6 +26,20 @@ def get_yaml(file_path: str) -> dict:
             data.append(part)
     return data
 
+def gen_names_list():
+    """
+        Generates list of driver names
+    """
+    names_list = []
+    for file in yield_next_rule_file_path(path_to_yml):
+        driver_name = get_yaml_part(file_path=file, part_name="Name")
+        if driver_name:
+            names_list.append(driver_name)
+    
+    # Remove leading and trailing spaces as well as any duplicates
+    names_list = list(set([i.lstrip().strip().lower() for i in names_list]))
+
+    return names_list
 
 def gen_hashes_lists():
     """
@@ -115,68 +129,109 @@ def gen_sysmon_config(md5_list, sha1_list, sha256_list):
         f.write("	</EventFiltering>\n")
         f.write("</Sysmon>\n")
 
-def gen_sigma_rule(md5_list, sha1_list, sha256_list):
+def gen_sigma_rule_hashes(md5_list, sha1_list, sha256_list):
     """
-        Generates SIGMA rule
+        Generates DriverLoad SIGMA rule based on driver hashes
     """
-    with open("detections/sigma/driver_load_win_vuln_drivers.yml", "w") as f:
-        f.write("title: Vulnerable Driver Load\n")
-        f.write("id: 7aaaf4b8-e47c-4295-92ee-6ed40a6f60c8\n")
-        f.write("status: experimental\n")
-        f.write("description: Detects the load of known vulnerable drivers by hash value\n")
-        f.write("references:\n")
-        f.write("    - https://loldrivers.io/\n")
-        f.write("author: Nasreddine Bencherchali (Nextron Systems)\n")
-        f.write("date: 2022/08/18\n")
-        f.write("modified: " + date.today().strftime('%Y/%m/%d') + "\n")
-        f.write("tags:\n")
-        f.write("    - attack.privilege_escalation\n")
-        f.write("    - attack.t1543.003\n")
-        f.write("    - attack.t1068\n")
-        f.write("logsource:\n")
-        f.write("    product: windows\n")
-        f.write("    category: driver_load\n")
-        f.write("detection:\n")
-        f.write("    selection_sysmon:\n")
-        f.write("        Hashes|contains:\n")
+    if md5_list or sha1_list or sha256_list:
+        with open("detections/sigma/driver_load_win_vuln_drivers.yml", "w") as f:
+            f.write("title: Vulnerable Driver Load\n")
+            f.write("id: 7aaaf4b8-e47c-4295-92ee-6ed40a6f60c8\n")
+            f.write("status: experimental\n")
+            f.write("description: Detects the load of known vulnerable drivers by hash value\n")
+            f.write("references:\n")
+            f.write("    - https://loldrivers.io/\n")
+            f.write("author: Nasreddine Bencherchali (Nextron Systems)\n")
+            f.write("date: 2022/08/18\n")
+            f.write("modified: " + date.today().strftime('%Y/%m/%d') + "\n")
+            f.write("tags:\n")
+            f.write("    - attack.privilege_escalation\n")
+            f.write("    - attack.t1543.003\n")
+            f.write("    - attack.t1068\n")
+            f.write("logsource:\n")
+            f.write("    product: windows\n")
+            f.write("    category: driver_load\n")
+            f.write("detection:\n")
+            f.write("    selection_sysmon:\n")
+            f.write("        Hashes|contains:\n")
 
-        if md5_list:
-            for i in md5_list:
-                f.write("            - 'MD5=" + i + "'\n")
-        
-        if sha1_list:
-            for i in sha1_list:
-                f.write("            - 'SHA1=" + i + "'\n")
-        
-        if sha256_list:
-            for i in sha256_list:
-                f.write("            - 'SHA256=" + i + "'\n")
-        
-        f.write("    selection_other:\n")
+            if md5_list:
+                for i in md5_list:
+                    f.write("            - 'MD5=" + i + "'\n")
+            
+            if sha1_list:
+                for i in sha1_list:
+                    f.write("            - 'SHA1=" + i + "'\n")
+            
+            if sha256_list:
+                for i in sha256_list:
+                    f.write("            - 'SHA256=" + i + "'\n")
+            
+            f.write("    selection_other:\n")
 
-        if md5_list:
-            f.write("        - md5:\n")
-            for i in md5_list:
-                f.write("            - '" + i + "'\n")
-        
-        if sha1_list:
-            f.write("        - sha1:\n")
-            for i in sha1_list:
-                f.write("            - '" + i + "'\n")
-        
-        if sha256_list:
-            f.write("        - sha256:\n")
-            for i in sha256_list:
-                f.write("            - '" + i + "'\n")
+            if md5_list:
+                f.write("        - md5:\n")
+                for i in md5_list:
+                    f.write("            - '" + i + "'\n")
+            
+            if sha1_list:
+                f.write("        - sha1:\n")
+                for i in sha1_list:
+                    f.write("            - '" + i + "'\n")
+            
+            if sha256_list:
+                f.write("        - sha256:\n")
+                for i in sha256_list:
+                    f.write("            - '" + i + "'\n")
 
-        f.write("    condition: 1 of selection_*\n")
-        f.write("falsepositives:\n")
-        f.write("    - Unknown\n")
-        f.write("level: high\n")
+            f.write("    condition: 1 of selection_*\n")
+            f.write("falsepositives:\n")
+            f.write("    - Unknown\n")
+            f.write("level: high\n")
+
+def gen_sigma_rule_names(names_list):
+    """
+        Generates DriverLoad SIGMA rule based on driver names
+    """
+    if names_list:
+        with open("detections/sigma/driver_load_win_vuln_drivers_names.yml", "w") as f:
+            f.write("title: Vulnerable Driver Load\n")
+            f.write("id: c316eac1-f3d8-42da-ad1c-66dcec5ca787\n")
+            f.write("related:\n")
+            f.write("    - id: 7aaaf4b8-e47c-4295-92ee-6ed40a6f60c8\n")
+            f.write("      type: derived\n")
+            f.write("status: experimental\n")
+            f.write("description: Detects the load of known vulnerable drivers via their names only.\n")
+            f.write("references:\n")
+            f.write("    - https://loldrivers.io/\n")
+            f.write("author: Nasreddine Bencherchali (Nextron Systems)\n")
+            f.write("date: 2022/10/03\n")
+            f.write("modified: " + date.today().strftime('%Y/%m/%d') + "\n")
+            f.write("tags:\n")
+            f.write("    - attack.privilege_escalation\n")
+            f.write("    - attack.t1543.003\n")
+            f.write("    - attack.t1068\n")
+            f.write("logsource:\n")
+            f.write("    product: windows\n")
+            f.write("    category: driver_load\n")
+            f.write("detection:\n")
+            f.write("    selection:\n")
+            f.write("        ImageLoaded|endswith:\n")
+
+            for i in names_list:
+                f.write("            - '\\" + i + "'\n")
+        
+            f.write("    condition: selection\n")
+            f.write("falsepositives:\n")
+            f.write("    - False positives may occur if one of the vulnerable driver names mentioned above didn't change its name between versions. So always make sure that the driver being loaded is the legitimate one and the non vulnerable version.\n")
+            f.write("    - If you experience a lot of FP you could comment the driver name or its exact known legitimate location (when possible)\n")
+            f.write("level: medium\n")
     
 
 if __name__ == "__main__":
     md5_list, sha1_list, sha256_list = gen_hashes_lists()
+    names_list = gen_names_list()
     gen_hashes_files(md5_list, sha1_list, sha256_list)
     gen_sysmon_config(md5_list, sha1_list, sha256_list)
-    gen_sigma_rule(md5_list, sha1_list, sha256_list)
+    gen_sigma_rule_hashes(md5_list, sha1_list, sha256_list)
+    gen_sigma_rule_names(names_list)
