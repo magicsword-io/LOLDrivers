@@ -34,7 +34,7 @@ sc.exe create PCHunter.sys binPath=C:\windows\temp\PCHunter.sys type=kernel
 sc.exe start PCHunter.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

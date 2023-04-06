@@ -29,7 +29,7 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys type=ker
 sc.exe start CITMDRV_IA64.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

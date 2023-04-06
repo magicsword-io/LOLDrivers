@@ -34,7 +34,7 @@ sc.exe create BS_RCIO.sys binPath=C:\windows\temp\BS_RCIO.sys type=kernel
 sc.exe start BS_RCIO.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

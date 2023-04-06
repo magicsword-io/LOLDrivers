@@ -29,7 +29,7 @@ sc.exe create TmComm.sys binPath=C:\windows\temp\TmComm.sys type=kernel
 sc.exe start TmComm.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

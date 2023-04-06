@@ -29,7 +29,7 @@ sc.exe create asmmap64.sys binPath=C:\windows\temp\asmmap64.sys type=kernel
 sc.exe start asmmap64.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

@@ -29,7 +29,7 @@ sc.exe create NTIOLib.sys binPath=C:\windows\temp\NTIOLib.sys type=kernel
 sc.exe start NTIOLib.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

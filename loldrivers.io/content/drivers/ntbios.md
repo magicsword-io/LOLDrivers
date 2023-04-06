@@ -29,7 +29,7 @@ sc.exe create ntbios.sys binPath=C:\windows\temp\ntbios.sys type=kernel
 sc.exe start ntbios.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

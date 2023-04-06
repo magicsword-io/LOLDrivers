@@ -29,7 +29,7 @@ sc.exe create BS_Def64.sys binPath=C:\windows\temp\BS_Def64.sys type=kernel
 sc.exe start BS_Def64.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

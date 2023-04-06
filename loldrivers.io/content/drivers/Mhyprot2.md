@@ -29,7 +29,7 @@ sc.exe create Mhyprot2.sys binPath=C:\windows\temp\Mhyprot2.sys type=kernel
 sc.exe start Mhyprot2.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

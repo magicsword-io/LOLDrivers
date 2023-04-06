@@ -34,7 +34,7 @@ sc.exe create Black.sys binPath=C:\windows\temp\Black.sys type=kernel
 sc.exe start Black.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

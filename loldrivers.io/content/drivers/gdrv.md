@@ -29,7 +29,7 @@ sc.exe create gdrv.sys binPath=C:\windows\temp\gdrv.sys type=kernel
 sc.exe start gdrv.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges, tamper with PPL or system processes | kernel | Windows 10 |
 

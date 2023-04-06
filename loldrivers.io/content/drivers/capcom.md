@@ -29,7 +29,7 @@ sc.exe create capcom.sys binPath=C:\windows\temp\capcom.sys type=kernel
 sc.exe start capcom.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

@@ -34,7 +34,7 @@ sc.exe create WinIO32.sys binPath=C:\windows\temp\WinIO32.sys type=kernel
 sc.exe start WinIO32.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

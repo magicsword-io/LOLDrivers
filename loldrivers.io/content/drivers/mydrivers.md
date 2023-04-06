@@ -34,7 +34,7 @@ sc.exe create mydrivers.sys binPath=C:\windows\temp\mydrivers.sys type=kernel
 sc.exe start mydrivers.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

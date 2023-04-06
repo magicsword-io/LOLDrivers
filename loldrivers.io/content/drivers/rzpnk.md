@@ -29,7 +29,7 @@ sc.exe create rzpnk.sys binPath=C:\windows\temp\rzpnk.sys type=kernel
 sc.exe start rzpnk.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

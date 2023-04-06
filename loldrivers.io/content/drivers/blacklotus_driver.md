@@ -29,7 +29,7 @@ sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sy
 sc.exe start blacklotus_driver.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

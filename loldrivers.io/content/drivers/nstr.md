@@ -34,7 +34,7 @@ sc.exe create nstr.sys binPath=C:\windows\temp\nstr.sys type=kernel
 sc.exe start nstr.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

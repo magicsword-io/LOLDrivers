@@ -29,7 +29,7 @@ sc.exe create NalDrv.sys binPath=C:\windows\temp\NalDrv.sys type=kernel
 sc.exe start NalDrv.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

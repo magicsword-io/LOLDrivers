@@ -34,7 +34,7 @@ sc.exe create semav6msr64.sys binPath=C:\windows\temp\semav6msr64.sys type=kerne
 sc.exe start semav6msr64.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

@@ -34,7 +34,7 @@ sc.exe create GameTerSafe.sys binPath=C:\windows\temp\GameTerSafe.sys type=kerne
 sc.exe start GameTerSafe.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

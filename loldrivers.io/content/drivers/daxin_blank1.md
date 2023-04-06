@@ -29,7 +29,7 @@ sc.exe create daxin_blank1.sys binPath=C:\windows\temp\daxin_blank1.sys type=ker
 sc.exe start daxin_blank1.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

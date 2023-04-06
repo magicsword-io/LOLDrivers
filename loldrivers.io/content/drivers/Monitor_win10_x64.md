@@ -29,7 +29,7 @@ sc.exe create Monitor_win10_x64.sys binPath=C:\windows\temp\Monitor_win10_x64.sy
 sc.exe start Monitor_win10_x64.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

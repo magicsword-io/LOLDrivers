@@ -29,7 +29,7 @@ sc.exe create HpPortIox64.sys binPath=C:\windows\temp\HpPortIox64.sys type=kerne
 sc.exe start HpPortIox64.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

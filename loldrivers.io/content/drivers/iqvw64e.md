@@ -29,7 +29,7 @@ sc.exe create iqvw64e.sys binPath=C:\windows\temp\iqvw64e.sys type=kernel
 sc.exe start iqvw64e.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

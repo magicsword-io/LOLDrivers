@@ -34,7 +34,7 @@ sc.exe create hw_sys binPath=C:\windows\temp\hw_sys type=kernel
 sc.exe start hw_sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

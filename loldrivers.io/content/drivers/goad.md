@@ -34,7 +34,7 @@ sc.exe create goad.sys binPath=C:\windows\temp\goad.sys type=kernel
 sc.exe start goad.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

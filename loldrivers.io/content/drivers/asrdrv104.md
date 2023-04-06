@@ -34,7 +34,7 @@ sc.exe create asrdrv104.sys binPath=C:\windows\temp\asrdrv104.sys type=kernel
 sc.exe start asrdrv104.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

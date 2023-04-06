@@ -29,7 +29,7 @@ sc.exe create VProEventMonitor.sys binPath=C:\windows\temp\VProEventMonitor.sys 
 sc.exe start VProEventMonitor.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

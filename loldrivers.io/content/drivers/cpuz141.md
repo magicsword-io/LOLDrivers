@@ -29,7 +29,7 @@ sc.exe create cpuz141.sys binPath=C:\windows\temp\cpuz141.sys type=kernel
 sc.exe start cpuz141.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

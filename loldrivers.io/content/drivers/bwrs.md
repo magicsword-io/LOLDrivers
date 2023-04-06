@@ -34,7 +34,7 @@ sc.exe create bwrs.sys binPath=C:\windows\temp\bwrs.sys type=kernel
 sc.exe start bwrs.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

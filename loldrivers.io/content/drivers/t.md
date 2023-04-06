@@ -34,7 +34,7 @@ sc.exe create t.sys binPath=C:\windows\temp\t.sys type=kernel
 sc.exe start t.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

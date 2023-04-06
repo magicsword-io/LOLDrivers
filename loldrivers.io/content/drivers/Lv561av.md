@@ -34,7 +34,7 @@ sc.exe create Lv561av.sys binPath=C:\windows\temp\Lv561av.sys type=kernel
 sc.exe start Lv561av.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

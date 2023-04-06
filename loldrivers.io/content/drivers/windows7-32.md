@@ -34,7 +34,7 @@ sc.exe create windows7-32.sys binPath=C:\windows\temp\windows7-32.sys type=kerne
 sc.exe start windows7-32.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

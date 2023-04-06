@@ -34,7 +34,7 @@ sc.exe create fiddrv.sys binPath=C:\windows\temp\fiddrv.sys type=kernel
 sc.exe start fiddrv.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

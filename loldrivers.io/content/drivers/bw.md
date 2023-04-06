@@ -34,7 +34,7 @@ sc.exe create bw.sys binPath=C:\windows\temp\bw.sys type=kernel
 sc.exe start bw.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

@@ -29,7 +29,7 @@ sc.exe create elrawdsk.sys binPath=C:\windows\temp\elrawdsk.sys type=kernel
 sc.exe start elrawdsk.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

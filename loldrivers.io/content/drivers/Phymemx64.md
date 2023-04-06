@@ -29,7 +29,7 @@ sc.exe create Phymemx64.sys binPath=C:\windows\temp\Phymemx64.sys type=kernel
 sc.exe start Phymemx64.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

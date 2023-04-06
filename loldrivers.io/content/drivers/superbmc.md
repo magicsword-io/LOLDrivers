@@ -29,7 +29,7 @@ sc.exe create superbmc.sys binPath=C:\windows\temp\superbmc.sys type=kernel
 sc.exe start superbmc.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

@@ -34,7 +34,7 @@ sc.exe create Proxy32.sys binPath=C:\windows\temp\Proxy32.sys type=kernel
 sc.exe start Proxy32.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

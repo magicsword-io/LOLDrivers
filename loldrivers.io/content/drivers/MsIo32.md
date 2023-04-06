@@ -29,7 +29,7 @@ sc.exe create MsIo32.sys binPath=C:\windows\temp\MsIo32.sys type=kernel
 sc.exe start MsIo32.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

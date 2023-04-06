@@ -29,7 +29,7 @@ sc.exe create nscm.sys binPath=C:\windows\temp\nscm.sys type=kernel
 sc.exe start nscm.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

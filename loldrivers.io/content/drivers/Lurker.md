@@ -34,7 +34,7 @@ sc.exe create Lurker.sys binPath=C:\windows\temp\Lurker.sys type=kernel
 sc.exe start Lurker.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

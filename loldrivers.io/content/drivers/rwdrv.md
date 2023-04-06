@@ -31,7 +31,7 @@ sc.exe create rwdrv.sys binPath=C:\windows\temp\rwdrv.sys type=kernel
 sc.exe start rwdrv.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

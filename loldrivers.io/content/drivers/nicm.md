@@ -29,7 +29,7 @@ sc.exe create nicm.sys binPath=C:\windows\temp\nicm.sys type=kernel
 sc.exe start nicm.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

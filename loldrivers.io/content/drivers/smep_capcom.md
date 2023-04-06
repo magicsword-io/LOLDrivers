@@ -29,7 +29,7 @@ sc.exe create smep_capcom.sys binPath=C:\windows\temp\smep_capcom.sys type=kerne
 sc.exe start smep_capcom.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

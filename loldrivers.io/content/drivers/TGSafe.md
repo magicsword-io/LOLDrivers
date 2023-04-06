@@ -34,7 +34,7 @@ sc.exe create TGSafe.sys binPath=C:\windows\temp\TGSafe.sys type=kernel
 sc.exe start TGSafe.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

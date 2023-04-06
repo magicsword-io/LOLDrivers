@@ -29,7 +29,7 @@ sc.exe create smep_namco.sys binPath=C:\windows\temp\smep_namco.sys type=kernel
 sc.exe start smep_namco.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

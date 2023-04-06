@@ -29,7 +29,7 @@ sc.exe create elbycdio.sys binPath=C:\windows\temp\elbycdio.sys type=kernel
 sc.exe start elbycdio.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

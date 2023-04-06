@@ -34,7 +34,7 @@ sc.exe create dbutil.sys binPath=C:\windows\temp\dbutil.sys type=kernel
 sc.exe start dbutil.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

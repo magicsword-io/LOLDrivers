@@ -34,7 +34,7 @@ sc.exe create otipcibus.sys binPath=C:\windows\temp\otipcibus.sys type=kernel
 sc.exe start otipcibus.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

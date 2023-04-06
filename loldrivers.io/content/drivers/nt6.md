@@ -34,7 +34,7 @@ sc.exe create nt6.sys binPath=C:\windows\temp\nt6.sys type=kernel
 sc.exe start nt6.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

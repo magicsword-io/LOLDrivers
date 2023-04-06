@@ -29,7 +29,7 @@ sc.exe create WinRing0x64.sys binPath=C:\windows\temp\WinRing0x64.sys type=kerne
 sc.exe start WinRing0x64.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

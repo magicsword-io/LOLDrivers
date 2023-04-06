@@ -29,7 +29,7 @@ sc.exe create wantd_5.sys binPath=C:\windows\temp\wantd_5.sys type=kernel
 sc.exe start wantd_5.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

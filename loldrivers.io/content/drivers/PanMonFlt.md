@@ -34,7 +34,7 @@ sc.exe create PanMonFlt.sys binPath=C:\windows\temp\PanMonFlt.sys type=kernel
 sc.exe start PanMonFlt.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

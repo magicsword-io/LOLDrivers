@@ -29,7 +29,7 @@ sc.exe create mtcBSv64.sys binPath=C:\windows\temp\mtcBSv64.sys type=kernel
 sc.exe start mtcBSv64.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

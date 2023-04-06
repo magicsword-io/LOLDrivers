@@ -34,7 +34,7 @@ sc.exe create gameink.sys binPath=C:\windows\temp\gameink.sys type=kernel
 sc.exe start gameink.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

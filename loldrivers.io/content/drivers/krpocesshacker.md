@@ -29,7 +29,7 @@ sc.exe create krpocesshacker.sys binPath=C:\windows\temp\krpocesshacker.sys type
 sc.exe start krpocesshacker.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

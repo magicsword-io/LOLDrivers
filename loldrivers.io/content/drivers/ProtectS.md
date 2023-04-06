@@ -34,7 +34,7 @@ sc.exe create ProtectS.sys binPath=C:\windows\temp\ProtectS.sys type=kernel
 sc.exe start ProtectS.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

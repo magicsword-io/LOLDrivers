@@ -29,7 +29,7 @@ sc.exe create viragt64.sys binPath=C:\windows\temp\viragt64.sys type=kernel
 sc.exe start viragt64.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

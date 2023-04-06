@@ -34,7 +34,7 @@ sc.exe create WYProxy32.sys binPath=C:\windows\temp\WYProxy32.sys type=kernel
 sc.exe start WYProxy32.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

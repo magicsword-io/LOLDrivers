@@ -29,7 +29,7 @@ sc.exe create Se64a.sys binPath=C:\windows\temp\Se64a.sys type=kernel
 sc.exe start Se64a.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

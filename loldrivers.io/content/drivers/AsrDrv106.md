@@ -29,7 +29,7 @@ sc.exe create AsrDrv106.sys binPath=C:\windows\temp\AsrDrv106.sys type=kernel
 sc.exe start AsrDrv106.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

@@ -34,7 +34,7 @@ sc.exe create windows8-10-32.sys binPath=C:\windows\temp\windows8-10-32.sys type
 sc.exe start windows8-10-32.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

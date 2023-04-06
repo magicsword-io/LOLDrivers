@@ -34,7 +34,7 @@ sc.exe create nt2.sys binPath=C:\windows\temp\nt2.sys type=kernel
 sc.exe start nt2.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

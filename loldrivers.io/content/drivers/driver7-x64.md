@@ -29,7 +29,7 @@ sc.exe create driver7-x64.sys binPath=C:\windows\temp\driver7-x64.sys type=kerne
 sc.exe start driver7-x64.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

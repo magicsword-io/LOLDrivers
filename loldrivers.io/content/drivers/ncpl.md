@@ -29,7 +29,7 @@ sc.exe create ncpl.sys binPath=C:\windows\temp\ncpl.sys type=kernel
 sc.exe start ncpl.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

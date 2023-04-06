@@ -34,7 +34,7 @@ sc.exe create nt4.sys binPath=C:\windows\temp\nt4.sys type=kernel
 sc.exe start nt4.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

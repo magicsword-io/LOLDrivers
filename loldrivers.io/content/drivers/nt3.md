@@ -34,7 +34,7 @@ sc.exe create nt3.sys binPath=C:\windows\temp\nt3.sys type=kernel
 sc.exe start nt3.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

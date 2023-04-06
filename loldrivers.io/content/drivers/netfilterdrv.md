@@ -34,7 +34,7 @@ sc.exe create netfilterdrv.sys binPath=C:\windows\temp\netfilterdrv.sys type=ker
 sc.exe start netfilterdrv.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

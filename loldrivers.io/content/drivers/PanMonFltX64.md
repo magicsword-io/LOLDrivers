@@ -34,7 +34,7 @@ sc.exe create PanMonFltX64.sys binPath=C:\windows\temp\PanMonFltX64.sys type=ker
 sc.exe start PanMonFltX64.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

@@ -34,7 +34,7 @@ sc.exe create LenovoDiagnosticsDriver.sys binPath=C:\windows\temp\LenovoDiagnost
 sc.exe start LenovoDiagnosticsDriver.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

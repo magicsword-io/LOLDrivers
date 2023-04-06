@@ -29,7 +29,7 @@ sc.exe create procexp.Sys binPath=C:\windows\temp\procexp.Sys type=kernel
 sc.exe start procexp.Sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

@@ -29,7 +29,7 @@ sc.exe create WCPU.sys binPath=C:\windows\temp\WCPU.sys type=kernel
 sc.exe start WCPU.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

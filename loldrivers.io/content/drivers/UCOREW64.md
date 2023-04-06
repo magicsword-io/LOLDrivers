@@ -29,7 +29,7 @@ sc.exe create UCOREW64.SYS binPath=C:\windows\temp\UCOREW64.SYS type=kernel
 sc.exe start UCOREW64.SYS
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

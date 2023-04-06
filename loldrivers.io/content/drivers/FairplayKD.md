@@ -34,7 +34,7 @@ sc.exe create FairplayKD.sys binPath=C:\windows\temp\FairplayKD.sys type=kernel
 sc.exe start FairplayKD.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

@@ -29,7 +29,7 @@ sc.exe create driver7-x86-withoutdbg.sys binPath=C:\windows\temp\driver7-x86-wit
 sc.exe start driver7-x86-withoutdbg.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 

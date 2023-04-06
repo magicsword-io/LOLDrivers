@@ -34,7 +34,7 @@ sc.exe create kbdcap64.sys binPath=C:\windows\temp\kbdcap64.sys type=kernel
 sc.exe start kbdcap64.sys
 ```
 
-| Use Case | Privilages | Operating System | 
+| Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 
