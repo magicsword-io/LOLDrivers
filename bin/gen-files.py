@@ -93,7 +93,7 @@ def gen_sysmon_config(md5_list, sha1_list, sha256_list):
         f.write("<Sysmon schemaversion=\"4.30\">\n")
         f.write("	<EventFiltering>\n")
         f.write("		<RuleGroup name=\"\" groupRelation=\"or\">\n")
-        f.write("			<ImageLoad onmatch=\"include\">\n")
+        f.write("			<DriverLoad onmatch=\"include\">\n")
 
         if md5_list:
             for i in md5_list:
@@ -110,7 +110,7 @@ def gen_sysmon_config(md5_list, sha1_list, sha256_list):
                 if i != "-":
                     f.write("                <Hashes condition=\"contains\">SHA256=" + i + "</Hashes>\n")
 
-        f.write("			</ImageLoad>\n")
+        f.write("			</DriverLoad>\n")
         f.write("		</RuleGroup>\n")
         f.write("	</EventFiltering>\n")
         f.write("</Sysmon>\n")
