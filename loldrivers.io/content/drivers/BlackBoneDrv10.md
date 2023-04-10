@@ -30,8 +30,7 @@ BlackBoneDrv10.sys is a vulnerable driver and more information will be added as 
 ### Commands
 
 ```
-sc.exe create BlackBoneDrv10.sys binPath=C:\windows\temp\BlackBoneDrv10.sys type=kernel
-sc.exe start BlackBoneDrv10.sys
+sc.exe create BlackBoneDrv10.sys binPath=C:\windows\temp\BlackBoneDrv10.sys     type=kernel type=kernel &amp;&amp; sc.exe start BlackBoneDrv10.sys
 ```
 
 | Use Case | Privileges | Operating System | 

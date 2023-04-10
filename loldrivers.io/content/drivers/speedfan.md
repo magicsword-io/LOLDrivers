@@ -25,8 +25,7 @@ speedfan.sys is a vulnerable driver. CVE-2007-5633.
 ### Commands
 
 ```
-sc.exe create speedfan.sys binPath=C:\windows\temp\speedfan.sys type=kernel
-sc.exe start speedfan.sys
+sc.exe create speedfan.sys binPath=C:\windows\temp\speedfan.sys type=kernel &amp;&amp; sc.exe start speedfan.sys
 ```
 
 | Use Case | Privileges | Operating System | 

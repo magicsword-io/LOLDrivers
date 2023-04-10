@@ -25,8 +25,7 @@ Driver used in the Daxin malware campaign.
 ### Commands
 
 ```
-sc.exe create ndislan.sys binPath=C:\windows\temp\ndislan.sys type=kernel
-sc.exe start ndislan.sys
+sc.exe create ndislan.sys binPath=C:\windows\temp \n \n \n  dislan.sys type=kernel &amp;&amp; sc.exe start ndislan.sys
 ```
 
 | Use Case | Privileges | Operating System | 

@@ -25,8 +25,7 @@ viragt64.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create viragt64.sys binPath=C:\windows\temp\viragt64.sys type=kernel
-sc.exe start viragt64.sys
+sc.exe create viragt64.sys binPath=C:\windows\temp\viragt64.sys type=kernel &amp;&amp; sc.exe start viragt64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

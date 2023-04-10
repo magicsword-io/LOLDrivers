@@ -30,8 +30,7 @@ bwrs.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create bwrs.sys binPath=C:\windows\temp\bwrs.sys type=kernel
-sc.exe start bwrs.sys
+sc.exe create bwrs.sys binPath=C:\windows\temp\bwrs.sys type=kernel &amp;&amp; sc.exe start bwrs.sys
 ```
 
 | Use Case | Privileges | Operating System | 

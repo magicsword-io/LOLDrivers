@@ -5,9 +5,8 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
-  Command: 'sc.exe create ncpl.sys binPath=C:\windows\temp\ncpl.sys type=kernel
-
-    sc.exe start ncpl.sys'
+  Command: 'sc.exe create ncpl.sys binPath=C:\windows\temp \n \n \n  cpl.sys type=kernel 
+ && sc.exe start ncpl.sys'
   Description: ncpl.sys is a vulnerable driver. CVE-2013-3956.
   Usecase: Elevate privileges
   Privileges: kernel
@@ -38,3 +37,4 @@ KnownVulnerableSamples:
   FileVersion: ''
   MachineType: ''
   OriginalFilename: ''
+

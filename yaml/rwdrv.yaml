@@ -5,9 +5,8 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
-  Command: 'sc.exe create rwdrv.sys binPath=C:\windows\temp\rwdrv.sys type=kernel
-
-    sc.exe start rwdrv.sys'
+  Command: 'sc.exe create rwdrv.sys binPath=C:\windows\temp\rwdrv.sys type=kernel 
+ && sc.exe start rwdrv.sys'
   Description: 'This utility access almost all the computer hardware, including PCI
     (PCI Express), PCI Index/Data, Memory, Memory Index/Data, I/O Space, I/O Index/Data,
     Super I/O, Clock Generator, DIMM SPD, SMBus Device, CPU MSR Registers, ATA/ATAPI
@@ -15,7 +14,6 @@ Commands:
     Controller, USB Information, SMBIOS Structures, PCI Option ROMs, MP Configuration
     Table, E820, EDID and Remote Access. And also a Command Window is provided to
     access hardware manually.
-
 
     '
   Usecase: Elevate privileges
@@ -48,3 +46,4 @@ KnownVulnerableSamples:
   FileVersion: ''
   MachineType: ''
   OriginalFilename: ''
+

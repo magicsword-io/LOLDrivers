@@ -25,8 +25,7 @@ The MsIo64.sys and MsIo32.sys drivers in Patriot Viper RGB before 1.1 allow loca
 ### Commands
 
 ```
-sc.exe create MsIo32.sys binPath=C:\windows\temp\MsIo32.sys type=kernel
-sc.exe start MsIo32.sys
+sc.exe create MsIo32.sys binPath=C:\windows\temp\MsIo32.sys type=kernel &amp;&amp; sc.exe start MsIo32.sys
 ```
 
 | Use Case | Privileges | Operating System | 

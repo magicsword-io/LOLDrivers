@@ -30,8 +30,7 @@ ProtectS.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create ProtectS.sys binPath=C:\windows\temp\ProtectS.sys type=kernel
-sc.exe start ProtectS.sys
+sc.exe create ProtectS.sys binPath=C:\windows\temp\ProtectS.sys type=kernel &amp;&amp; sc.exe start ProtectS.sys
 ```
 
 | Use Case | Privileges | Operating System | 

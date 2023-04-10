@@ -25,8 +25,7 @@ PhlashNT.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel
-sc.exe start PhlashNT.sys
+sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp;&amp; sc.exe start PhlashNT.sys
 ```
 
 | Use Case | Privileges | Operating System | 

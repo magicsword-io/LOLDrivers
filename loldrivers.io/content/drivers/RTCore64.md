@@ -25,8 +25,7 @@ The driver in Micro-Star MSI Afterburner 4.6.2.15658 (aka RTCore64.sys and RTCor
 ### Commands
 
 ```
-sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel
-sc.exe start RTCore64.sys
+sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp;&amp; sc.exe start RTCore64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

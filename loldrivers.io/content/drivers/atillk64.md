@@ -25,8 +25,7 @@ atillk64.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create atillk64.sys binPath=C:\windows\temp\atillk64.sys type=kernel
-sc.exe start atillk64.sys
+sc.exe create atillk64.sys binPath=C:\windows\temp\atillk64.sys type=kernel &amp;&amp; sc.exe start atillk64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

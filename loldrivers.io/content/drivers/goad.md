@@ -30,8 +30,7 @@ goad.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create goad.sys binPath=C:\windows\temp\goad.sys type=kernel
-sc.exe start goad.sys
+sc.exe create goad.sys binPath=C:\windows\temp\goad.sys type=kernel &amp;&amp; sc.exe start goad.sys
 ```
 
 | Use Case | Privileges | Operating System | 

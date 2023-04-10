@@ -30,8 +30,7 @@ windows8-10-32.sys is a vulnerable driver and more information will be added as 
 ### Commands
 
 ```
-sc.exe create windows8-10-32.sys binPath=C:\windows\temp\windows8-10-32.sys type=kernel
-sc.exe start windows8-10-32.sys
+sc.exe create windows8-10-32.sys binPath=C:\windows\temp\windows8-10-32.sys     type=kernel type=kernel &amp;&amp; sc.exe start windows8-10-32.sys
 ```
 
 | Use Case | Privileges | Operating System | 

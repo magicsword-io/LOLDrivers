@@ -25,8 +25,7 @@ AsIO.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create AsIO.sys binPath=C:\windows\temp\AsIO.sys type=kernel
-sc.exe start AsIO.sys
+sc.exe create AsIO.sys binPath=C:\windows\temp\AsIO.sys type=kernel &amp;&amp; sc.exe start AsIO.sys
 ```
 
 | Use Case | Privileges | Operating System | 

@@ -30,8 +30,7 @@ bwrsh.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create bwrsh.sys binPath=C:\windows\temp\bwrsh.sys type=kernel
-sc.exe start bwrsh.sys
+sc.exe create bwrsh.sys binPath=C:\windows\temp\bwrsh.sys type=kernel &amp;&amp; sc.exe start bwrsh.sys
 ```
 
 | Use Case | Privileges | Operating System | 

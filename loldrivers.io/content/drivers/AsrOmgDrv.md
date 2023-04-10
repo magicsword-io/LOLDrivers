@@ -25,8 +25,7 @@ AsrOmgDrv.sys is a vulnerable driver and more information will be added as found
 ### Commands
 
 ```
-sc.exe create AsrOmgDrv.sys binPath=C:\windows\temp\AsrOmgDrv.sys type=kernel
-sc.exe start AsrOmgDrv.sys
+sc.exe create AsrOmgDrv.sys binPath=C:\windows\temp\AsrOmgDrv.sys type=kernel &amp;&amp; sc.exe start AsrOmgDrv.sys
 ```
 
 | Use Case | Privileges | Operating System | 

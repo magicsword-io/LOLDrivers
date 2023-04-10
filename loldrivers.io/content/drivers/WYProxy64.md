@@ -30,8 +30,7 @@ WYProxy64.sys is a vulnerable driver and more information will be added as found
 ### Commands
 
 ```
-sc.exe create WYProxy64.sys binPath=C:\windows\temp\WYProxy64.sys type=kernel
-sc.exe start WYProxy64.sys
+sc.exe create WYProxy64.sys binPath=C:\windows\temp\WYProxy64.sys type=kernel &amp;&amp; sc.exe start WYProxy64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

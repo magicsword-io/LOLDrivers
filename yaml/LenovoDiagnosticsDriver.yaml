@@ -5,10 +5,9 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'FALSE'
 Commands:
-  Command: 'sc.exe create LenovoDiagnosticsDriver.sys binPath=C:\windows\temp\LenovoDiagnosticsDriver.sys
-    type=kernel
-
-    sc.exe start LenovoDiagnosticsDriver.sys'
+  Command: 'sc.exe create LenovoDiagnosticsDriver.sys binPath=C:\windows\temp\LenovoDiagnosticsDriver.sys     type=kernel
+type=kernel
+ && sc.exe start LenovoDiagnosticsDriver.sys'
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
@@ -41,3 +40,4 @@ KnownVulnerableSamples:
   FileVersion: '1.0.4.0'
   MachineType: ''
   OriginalFilename: 'LenovoDiagnosticsDriver.sys'
+

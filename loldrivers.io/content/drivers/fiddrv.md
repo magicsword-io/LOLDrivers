@@ -30,8 +30,7 @@ fiddrv.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create fiddrv.sys binPath=C:\windows\temp\fiddrv.sys type=kernel
-sc.exe start fiddrv.sys
+sc.exe create fiddrv.sys binPath=C:\windows\temp\fiddrv.sys type=kernel &amp;&amp; sc.exe start fiddrv.sys
 ```
 
 | Use Case | Privileges | Operating System | 

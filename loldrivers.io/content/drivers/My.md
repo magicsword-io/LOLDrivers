@@ -30,8 +30,7 @@ My.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create My.sys binPath=C:\windows\temp\My.sys type=kernel
-sc.exe start My.sys
+sc.exe create My.sys binPath=C:\windows\temp\My.sys type=kernel &amp;&amp; sc.exe start My.sys
 ```
 
 | Use Case | Privileges | Operating System | 

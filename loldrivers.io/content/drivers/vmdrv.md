@@ -25,8 +25,7 @@ vmdrv.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel
-sc.exe start vmdrv.sys
+sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &amp;&amp; sc.exe start vmdrv.sys
 ```
 
 | Use Case | Privileges | Operating System | 

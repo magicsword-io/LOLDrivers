@@ -25,8 +25,7 @@ WINIODrv.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create WINIODrv.sys binPath=C:\windows\temp\WINIODrv.sys type=kernel
-sc.exe start WINIODrv.sys
+sc.exe create WINIODrv.sys binPath=C:\windows\temp\WINIODrv.sys type=kernel &amp;&amp; sc.exe start WINIODrv.sys
 ```
 
 | Use Case | Privileges | Operating System | 

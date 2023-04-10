@@ -30,8 +30,7 @@ d.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create d.sys binPath=C:\windows\temp\d.sys type=kernel
-sc.exe start d.sys
+sc.exe create d.sys binPath=C:\windows\temp\d.sys type=kernel &amp;&amp; sc.exe start d.sys
 ```
 
 | Use Case | Privileges | Operating System | 

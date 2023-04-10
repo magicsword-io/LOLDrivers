@@ -25,8 +25,7 @@ elbycdio.sys is a vulnerable driver. CVE-2009-0824.
 ### Commands
 
 ```
-sc.exe create elbycdio.sys binPath=C:\windows\temp\elbycdio.sys type=kernel
-sc.exe start elbycdio.sys
+sc.exe create elbycdio.sys binPath=C:\windows\temp\elbycdio.sys type=kernel &amp;&amp; sc.exe start elbycdio.sys
 ```
 
 | Use Case | Privileges | Operating System | 

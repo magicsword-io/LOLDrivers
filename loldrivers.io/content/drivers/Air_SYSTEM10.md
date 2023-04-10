@@ -25,8 +25,7 @@ Driver categorized as POORTRY by Mandiant.
 ### Commands
 
 ```
-sc.exe create Air_SYSTEM10.sys binPath=C:\windows\temp\Air_SYSTEM10.sys type=kernel
-sc.exe start Air_SYSTEM10.sys
+sc.exe create Air_SYSTEM10.sys binPath=C:\windows\temp\Air_SYSTEM10.sys     type=kernel type=kernel &amp;&amp; sc.exe start Air_SYSTEM10.sys
 ```
 
 | Use Case | Privileges | Operating System | 

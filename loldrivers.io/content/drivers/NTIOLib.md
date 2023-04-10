@@ -25,8 +25,7 @@ NTIOLib.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create NTIOLib.sys binPath=C:\windows\temp\NTIOLib.sys type=kernel
-sc.exe start NTIOLib.sys
+sc.exe create NTIOLib.sys binPath=C:\windows\temp\NTIOLib.sys type=kernel &amp;&amp; sc.exe start NTIOLib.sys
 ```
 
 | Use Case | Privileges | Operating System | 

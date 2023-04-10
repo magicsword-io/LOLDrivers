@@ -30,8 +30,7 @@ WinIo64A.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create WinIo64A.sys binPath=C:\windows\temp\WinIo64A.sys type=kernel
-sc.exe start WinIo64A.sys
+sc.exe create WinIo64A.sys binPath=C:\windows\temp\WinIo64A.sys type=kernel &amp;&amp; sc.exe start WinIo64A.sys
 ```
 
 | Use Case | Privileges | Operating System | 

@@ -25,8 +25,7 @@ fidpcidrv64.sys is a vulnerable driver and more information will be added as fou
 ### Commands
 
 ```
-sc.exe create fidpcidrv64.sys binPath=C:\windows\temp\fidpcidrv64.sys type=kernel
-sc.exe start fidpcidrv64.sys
+sc.exe create fidpcidrv64.sys binPath=C:\windows\temp\fidpcidrv64.sys     type=kernel type=kernel &amp;&amp; sc.exe start fidpcidrv64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

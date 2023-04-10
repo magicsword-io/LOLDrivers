@@ -25,8 +25,7 @@ CITMDRV_AMD64.sys is a vulnerable driver and more information will be added as f
 ### Commands
 
 ```
-sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys type=kernel
-sc.exe start CITMDRV_AMD64.sys
+sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     type=kernel type=kernel &amp;&amp; sc.exe start CITMDRV_AMD64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

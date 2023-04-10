@@ -25,8 +25,7 @@ smep_namco.sys is a vulnerable driver and more information will be added as foun
 ### Commands
 
 ```
-sc.exe create smep_namco.sys binPath=C:\windows\temp\smep_namco.sys type=kernel
-sc.exe start smep_namco.sys
+sc.exe create smep_namco.sys binPath=C:\windows\temp\smep_namco.sys type=kernel &amp;&amp; sc.exe start smep_namco.sys
 ```
 
 | Use Case | Privileges | Operating System | 

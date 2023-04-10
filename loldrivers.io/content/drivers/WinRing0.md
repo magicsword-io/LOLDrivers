@@ -25,8 +25,7 @@ WinRing0.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create WinRing0.sys binPath=C:\windows\temp\WinRing0.sys type=kernel
-sc.exe start WinRing0.sys
+sc.exe create WinRing0.sys binPath=C:\windows\temp\WinRing0.sys type=kernel &amp;&amp; sc.exe start WinRing0.sys
 ```
 
 | Use Case | Privileges | Operating System | 

@@ -25,8 +25,7 @@ sandra.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create sandra.sys binPath=C:\windows\temp\sandra.sys type=kernel
-sc.exe start sandra.sys
+sc.exe create sandra.sys binPath=C:\windows\temp\sandra.sys type=kernel &amp;&amp; sc.exe start sandra.sys
 ```
 
 | Use Case | Privileges | Operating System | 

@@ -30,8 +30,7 @@ WYProxy32.sys is a vulnerable driver and more information will be added as found
 ### Commands
 
 ```
-sc.exe create WYProxy32.sys binPath=C:\windows\temp\WYProxy32.sys type=kernel
-sc.exe start WYProxy32.sys
+sc.exe create WYProxy32.sys binPath=C:\windows\temp\WYProxy32.sys type=kernel &amp;&amp; sc.exe start WYProxy32.sys
 ```
 
 | Use Case | Privileges | Operating System | 

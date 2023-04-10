@@ -25,8 +25,7 @@ driver7-x86-withoutdbg.sys is a vulnerable driver and more information will be a
 ### Commands
 
 ```
-sc.exe create driver7-x86-withoutdbg.sys binPath=C:\windows\temp\driver7-x86-withoutdbg.sys type=kernel
-sc.exe start driver7-x86-withoutdbg.sys
+sc.exe create driver7-x86-withoutdbg.sys binPath=C:\windows\temp\driver7-x86-withoutdbg.sys     type=kernel type=kernel &amp;&amp; sc.exe start driver7-x86-withoutdbg.sys
 ```
 
 | Use Case | Privileges | Operating System | 

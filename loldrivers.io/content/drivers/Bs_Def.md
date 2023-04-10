@@ -30,8 +30,7 @@ Bs_Def.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create Bs_Def.sys binPath=C:\windows\temp\Bs_Def.sys type=kernel
-sc.exe start Bs_Def.sys
+sc.exe create Bs_Def.sys binPath=C:\windows\temp\Bs_Def.sys type=kernel &amp;&amp; sc.exe start Bs_Def.sys
 ```
 
 | Use Case | Privileges | Operating System | 

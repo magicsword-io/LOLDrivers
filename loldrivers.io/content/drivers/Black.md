@@ -30,8 +30,7 @@ Black.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create Black.sys binPath=C:\windows\temp\Black.sys type=kernel
-sc.exe start Black.sys
+sc.exe create Black.sys binPath=C:\windows\temp\Black.sys type=kernel &amp;&amp; sc.exe start Black.sys
 ```
 
 | Use Case | Privileges | Operating System | 

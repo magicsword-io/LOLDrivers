@@ -25,8 +25,7 @@ segwindrvx64.sys is a vulnerable driver and more information will be added as fo
 ### Commands
 
 ```
-sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys type=kernel
-sc.exe start segwindrvx64.sys
+sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type=kernel type=kernel &amp;&amp; sc.exe start segwindrvx64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

@@ -30,8 +30,7 @@ PanIO.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create PanIO.sys binPath=C:\windows\temp\PanIO.sys type=kernel
-sc.exe start PanIO.sys
+sc.exe create PanIO.sys binPath=C:\windows\temp\PanIO.sys type=kernel &amp;&amp; sc.exe start PanIO.sys
 ```
 
 | Use Case | Privileges | Operating System | 

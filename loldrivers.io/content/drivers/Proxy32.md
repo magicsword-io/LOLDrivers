@@ -30,8 +30,7 @@ Proxy32.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create Proxy32.sys binPath=C:\windows\temp\Proxy32.sys type=kernel
-sc.exe start Proxy32.sys
+sc.exe create Proxy32.sys binPath=C:\windows\temp\Proxy32.sys type=kernel &amp;&amp; sc.exe start Proxy32.sys
 ```
 
 | Use Case | Privileges | Operating System | 

@@ -25,8 +25,7 @@ Driver used in the Daxin malware campaign.
 ### Commands
 
 ```
-sc.exe create ntbios_2.sys binPath=C:\windows\temp\ntbios_2.sys type=kernel
-sc.exe start ntbios_2.sys
+sc.exe create ntbios_2.sys binPath=C:\windows\temp \n \n \n  tbios_2.sys type=kernel &amp;&amp; sc.exe start ntbios_2.sys
 ```
 
 | Use Case | Privileges | Operating System | 

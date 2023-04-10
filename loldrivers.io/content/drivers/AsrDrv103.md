@@ -25,8 +25,7 @@ AsrDrv103.sys is a vulnerable driver and more information will be added as found
 ### Commands
 
 ```
-sc.exe create AsrDrv103.sys binPath=C:\windows\temp\AsrDrv103.sys type=kernel
-sc.exe start AsrDrv103.sys
+sc.exe create AsrDrv103.sys binPath=C:\windows\temp\AsrDrv103.sys type=kernel &amp;&amp; sc.exe start AsrDrv103.sys
 ```
 
 | Use Case | Privileges | Operating System | 

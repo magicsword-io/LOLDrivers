@@ -25,8 +25,7 @@ WCPU.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create WCPU.sys binPath=C:\windows\temp\WCPU.sys type=kernel
-sc.exe start WCPU.sys
+sc.exe create WCPU.sys binPath=C:\windows\temp\WCPU.sys type=kernel &amp;&amp; sc.exe start WCPU.sys
 ```
 
 | Use Case | Privileges | Operating System | 

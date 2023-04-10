@@ -5,9 +5,8 @@ MitreID: T1068
 Category: malicious
 Verified: 'TRUE'
 Commands:
-  Command: 'sc.exe create NodeDriver.sys binPath=C:\windows\temp\NodeDriver.sys type=kernel
-
-    sc.exe start NodeDriver.sys'
+  Command: 'sc.exe create NodeDriver.sys binPath=C:\windows\temp\NodeDriver.sys type=kernel 
+ && sc.exe start NodeDriver.sys'
   Description: Driver categorized as POORTRY by Mandiant.
   Usecase: Elevate privileges
   Privileges: kernel
@@ -37,3 +36,4 @@ KnownVulnerableSamples:
   FileVersion: ''
   MachineType: ''
   OriginalFilename: ''
+

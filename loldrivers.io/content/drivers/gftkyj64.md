@@ -28,8 +28,7 @@ This research is being released alongside Mandiant, a SentinelOne technology and
 ### Commands
 
 ```
-sc.exe create gftkyj64.sys binPath=C:\windows\temp\gftkyj64.sys type=kernel
-sc.exe start gftkyj64.sys
+sc.exe create gftkyj64.sys binPath=C:\windows\temp\gftkyj64.sys type=kernel &amp;&amp; sc.exe start gftkyj64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

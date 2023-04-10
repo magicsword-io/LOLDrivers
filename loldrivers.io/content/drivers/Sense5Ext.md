@@ -25,8 +25,7 @@ Driver categorized as POORTRY by Mandiant.
 ### Commands
 
 ```
-sc.exe create Sense5Ext.sys binPath=C:\windows\temp\Sense5Ext.sys type=kernel
-sc.exe start Sense5Ext.sys
+sc.exe create Sense5Ext.sys binPath=C:\windows\temp\Sense5Ext.sys type=kernel &amp;&amp; sc.exe start Sense5Ext.sys
 ```
 
 | Use Case | Privileges | Operating System | 

@@ -25,8 +25,7 @@ nvflash.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create nvflash.sys binPath=C:\windows\temp\nvflash.sys type=kernel
-sc.exe start nvflash.sys
+sc.exe create nvflash.sys binPath=C:\windows\temp \n \n \n  vflash.sys type=kernel &amp;&amp; sc.exe start nvflash.sys
 ```
 
 | Use Case | Privileges | Operating System | 

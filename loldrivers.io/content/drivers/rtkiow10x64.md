@@ -25,8 +25,7 @@ rtkiow10x64.sys is a vulnerable driver and more information will be added as fou
 ### Commands
 
 ```
-sc.exe create rtkiow10x64.sys binPath=C:\windows\temp\rtkiow10x64.sys type=kernel
-sc.exe start rtkiow10x64.sys
+sc.exe create rtkiow10x64.sys binPath=C:\windows\temp\rtkiow10x64.sys     type=kernel type=kernel &amp;&amp; sc.exe start rtkiow10x64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

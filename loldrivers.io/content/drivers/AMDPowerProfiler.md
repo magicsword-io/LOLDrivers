@@ -25,8 +25,7 @@ AMDPowerProfiler.sys is a vulnerable driver and more information will be added a
 ### Commands
 
 ```
-sc.exe create AMDPowerProfiler.sys binPath=C:\windows\temp\AMDPowerProfiler.sys type=kernel
-sc.exe start AMDPowerProfiler.sys
+sc.exe create AMDPowerProfiler.sys binPath=C:\windows\temp\AMDPowerProfiler.sys     type=kernel type=kernel &amp;&amp; sc.exe start AMDPowerProfiler.sys
 ```
 
 | Use Case | Privileges | Operating System | 

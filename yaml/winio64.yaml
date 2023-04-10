@@ -5,9 +5,8 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
-  Command: 'sc.exe create winio64.sys binPath=C:\windows\temp\winio64.sys type=kernel
-
-    sc.exe start winio64.sys'
+  Command: 'sc.exe create winio64.sys binPath=C:\windows\temp\winio64.sys type=kernel 
+ && sc.exe start winio64.sys'
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
@@ -54,3 +53,4 @@ KnownVulnerableSamples:
   FileVersion: ''
   MachineType: ''
   OriginalFilename: ''
+

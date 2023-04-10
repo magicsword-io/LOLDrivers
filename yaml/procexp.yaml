@@ -5,9 +5,8 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
-  Command: 'sc.exe create procexp.Sys binPath=C:\windows\temp\procexp.Sys type=kernel
-
-    sc.exe start procexp.Sys'
+  Command: 'sc.exe create procexp.Sys binPath=C:\windows\temp\procexp.Sys type=kernel 
+ && sc.exe start procexp.Sys'
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
@@ -37,3 +36,4 @@ KnownVulnerableSamples:
   FileVersion: ''
   MachineType: ''
   OriginalFilename: ''
+

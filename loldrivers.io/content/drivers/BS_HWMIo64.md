@@ -25,8 +25,7 @@ BS_HWMIo64.sys is a vulnerable driver and more information will be added as foun
 ### Commands
 
 ```
-sc.exe create BS_HWMIo64.sys binPath=C:\windows\temp\BS_HWMIo64.sys type=kernel
-sc.exe start BS_HWMIo64.sys
+sc.exe create BS_HWMIo64.sys binPath=C:\windows\temp\BS_HWMIo64.sys type=kernel &amp;&amp; sc.exe start BS_HWMIo64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

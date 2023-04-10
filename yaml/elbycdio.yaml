@@ -5,9 +5,8 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
-  Command: 'sc.exe create elbycdio.sys binPath=C:\windows\temp\elbycdio.sys type=kernel
-
-    sc.exe start elbycdio.sys'
+  Command: 'sc.exe create elbycdio.sys binPath=C:\windows\temp\elbycdio.sys type=kernel 
+ && sc.exe start elbycdio.sys'
   Description: elbycdio.sys is a vulnerable driver. CVE-2009-0824.
   Usecase: Elevate privileges
   Privileges: kernel
@@ -40,3 +39,4 @@ KnownVulnerableSamples:
   FileVersion: ''
   MachineType: ''
   OriginalFilename: ''
+

@@ -25,8 +25,7 @@ BS_I2cIo.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create BS_I2cIo.sys binPath=C:\windows\temp\BS_I2cIo.sys type=kernel
-sc.exe start BS_I2cIo.sys
+sc.exe create BS_I2cIo.sys binPath=C:\windows\temp\BS_I2cIo.sys type=kernel &amp;&amp; sc.exe start BS_I2cIo.sys
 ```
 
 | Use Case | Privileges | Operating System | 

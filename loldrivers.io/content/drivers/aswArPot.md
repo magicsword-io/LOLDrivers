@@ -25,8 +25,7 @@ Avast’s “Anti Rootkit” driver (also used by AVG) has been found to be vuln
 ### Commands
 
 ```
-sc.exe create aswArPot.sys binPath=C:\windows\temp\aswArPot.sys type=kernel
-sc.exe start aswArPot.sys
+sc.exe create aswArPot.sys binPath=C:\windows\temp\aswArPot.sys type=kernel &amp;&amp; sc.exe start aswArPot.sys
 ```
 
 | Use Case | Privileges | Operating System | 

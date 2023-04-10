@@ -5,9 +5,8 @@ MitreID: T1068
 Category: malicious
 Verified: 'TRUE'
 Commands:
-  Command: 'sc.exe create wantd.sys binPath=C:\windows\temp\wantd.sys type=kernel
-
-    sc.exe start wantd.sys'
+  Command: 'sc.exe create wantd.sys binPath=C:\windows\temp\wantd.sys type=kernel 
+ && sc.exe start wantd.sys'
   Description: Driver used in the Daxin malware campaign.
   Usecase: Elevate privileges
   Privileges: kernel
@@ -36,3 +35,4 @@ KnownVulnerableSamples:
   FileVersion: 6.1.7600.1172
   MachineType: 64-bit
   OriginalFilename: ''
+

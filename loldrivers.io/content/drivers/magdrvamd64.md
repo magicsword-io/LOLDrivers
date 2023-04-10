@@ -25,8 +25,7 @@ magdrvamd64.sys is a vulnerable driver and more information will be added as fou
 ### Commands
 
 ```
-sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys type=kernel
-sc.exe start magdrvamd64.sys
+sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=kernel type=kernel &amp;&amp; sc.exe start magdrvamd64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

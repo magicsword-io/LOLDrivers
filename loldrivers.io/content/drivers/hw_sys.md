@@ -30,8 +30,7 @@ hw_sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create hw_sys binPath=C:\windows\temp\hw_sys type=kernel
-sc.exe start hw_sys
+sc.exe create hw_sys binPath=C:\windows\temp\hw_sys type=kernel &amp;&amp; sc.exe start hw_sys
 ```
 
 | Use Case | Privileges | Operating System | 

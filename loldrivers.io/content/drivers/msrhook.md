@@ -25,8 +25,7 @@ msrhook.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create msrhook.sys binPath=C:\windows\temp\msrhook.sys type=kernel
-sc.exe start msrhook.sys
+sc.exe create msrhook.sys binPath=C:\windows\temp\msrhook.sys type=kernel &amp;&amp; sc.exe start msrhook.sys
 ```
 
 | Use Case | Privileges | Operating System | 

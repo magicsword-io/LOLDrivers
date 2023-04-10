@@ -25,8 +25,7 @@ nscm.sys is a vulnerable driver. CVE-2013-3956.
 ### Commands
 
 ```
-sc.exe create nscm.sys binPath=C:\windows\temp\nscm.sys type=kernel
-sc.exe start nscm.sys
+sc.exe create nscm.sys binPath=C:\windows\temp \n \n \n  scm.sys type=kernel &amp;&amp; sc.exe start nscm.sys
 ```
 
 | Use Case | Privileges | Operating System | 

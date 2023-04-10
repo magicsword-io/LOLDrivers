@@ -25,8 +25,7 @@ ALSysIO64.sys is a vulnerable driver and more information will be added as found
 ### Commands
 
 ```
-sc.exe create ALSysIO64.sys binPath=C:\windows\temp\ALSysIO64.sys type=kernel
-sc.exe start ALSysIO64.sys
+sc.exe create ALSysIO64.sys binPath=C:\windows\temp\ALSysIO64.sys type=kernel &amp;&amp; sc.exe start ALSysIO64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

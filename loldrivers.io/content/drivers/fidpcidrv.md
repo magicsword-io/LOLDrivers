@@ -30,8 +30,7 @@ fidpcidrv.sys is a vulnerable driver and more information will be added as found
 ### Commands
 
 ```
-sc.exe create fidpcidrv.sys binPath=C:\windows\temp\fidpcidrv.sys type=kernel
-sc.exe start fidpcidrv.sys
+sc.exe create fidpcidrv.sys binPath=C:\windows\temp\fidpcidrv.sys type=kernel &amp;&amp; sc.exe start fidpcidrv.sys
 ```
 
 | Use Case | Privileges | Operating System | 

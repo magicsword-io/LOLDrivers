@@ -25,8 +25,7 @@ smep_capcom.sys is a vulnerable driver and more information will be added as fou
 ### Commands
 
 ```
-sc.exe create smep_capcom.sys binPath=C:\windows\temp\smep_capcom.sys type=kernel
-sc.exe start smep_capcom.sys
+sc.exe create smep_capcom.sys binPath=C:\windows\temp\smep_capcom.sys     type=kernel type=kernel &amp;&amp; sc.exe start smep_capcom.sys
 ```
 
 | Use Case | Privileges | Operating System | 

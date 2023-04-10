@@ -25,8 +25,7 @@ kprocesshacker.sys is a vulnerable driver and more information will be added as 
 ### Commands
 
 ```
-sc.exe create kprocesshacker.sys binPath=C:\windows\temp\kprocesshacker.sys type=kernel
-sc.exe start kprocesshacker.sys
+sc.exe create kprocesshacker.sys binPath=C:\windows\temp\kprocesshacker.sys     type=kernel type=kernel &amp;&amp; sc.exe start kprocesshacker.sys
 ```
 
 | Use Case | Privileges | Operating System | 

@@ -30,8 +30,7 @@ PanMonFlt.sys is a vulnerable driver and more information will be added as found
 ### Commands
 
 ```
-sc.exe create PanMonFlt.sys binPath=C:\windows\temp\PanMonFlt.sys type=kernel
-sc.exe start PanMonFlt.sys
+sc.exe create PanMonFlt.sys binPath=C:\windows\temp\PanMonFlt.sys type=kernel &amp;&amp; sc.exe start PanMonFlt.sys
 ```
 
 | Use Case | Privileges | Operating System | 

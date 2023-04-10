@@ -25,8 +25,7 @@ WinFlash64.sys is a vulnerable driver and more information will be added as foun
 ### Commands
 
 ```
-sc.exe create WinFlash64.sys binPath=C:\windows\temp\WinFlash64.sys type=kernel
-sc.exe start WinFlash64.sys
+sc.exe create WinFlash64.sys binPath=C:\windows\temp\WinFlash64.sys type=kernel &amp;&amp; sc.exe start WinFlash64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

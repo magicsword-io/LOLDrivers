@@ -25,8 +25,7 @@ krpocesshacker.sys is a vulnerable driver and more information will be added as 
 ### Commands
 
 ```
-sc.exe create krpocesshacker.sys binPath=C:\windows\temp\krpocesshacker.sys type=kernel
-sc.exe start krpocesshacker.sys
+sc.exe create krpocesshacker.sys binPath=C:\windows\temp\krpocesshacker.sys     type=kernel type=kernel &amp;&amp; sc.exe start krpocesshacker.sys
 ```
 
 | Use Case | Privileges | Operating System | 

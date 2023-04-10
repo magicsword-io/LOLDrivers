@@ -25,8 +25,7 @@ viragt.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create viragt.sys binPath=C:\windows\temp\viragt.sys type=kernel
-sc.exe start viragt.sys
+sc.exe create viragt.sys binPath=C:\windows\temp\viragt.sys type=kernel &amp;&amp; sc.exe start viragt.sys
 ```
 
 | Use Case | Privileges | Operating System | 

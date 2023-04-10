@@ -25,8 +25,7 @@ superbmc.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create superbmc.sys binPath=C:\windows\temp\superbmc.sys type=kernel
-sc.exe start superbmc.sys
+sc.exe create superbmc.sys binPath=C:\windows\temp\superbmc.sys type=kernel &amp;&amp; sc.exe start superbmc.sys
 ```
 
 | Use Case | Privileges | Operating System | 

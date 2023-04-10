@@ -30,8 +30,7 @@ IObitUnlocker.sys is a vulnerable driver and more information will be added as f
 ### Commands
 
 ```
-sc.exe create IObitUnlocker.sys binPath=C:\windows\temp\IObitUnlocker.sys type=kernel
-sc.exe start IObitUnlocker.sys
+sc.exe create IObitUnlocker.sys binPath=C:\windows\temp\IObitUnlocker.sys     type=kernel type=kernel &amp;&amp; sc.exe start IObitUnlocker.sys
 ```
 
 | Use Case | Privileges | Operating System | 

@@ -25,8 +25,7 @@ ATSZIO.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create ATSZIO.sys binPath=C:\windows\temp\ATSZIO.sys type=kernel
-sc.exe start ATSZIO.sys
+sc.exe create ATSZIO.sys binPath=C:\windows\temp\ATSZIO.sys type=kernel &amp;&amp; sc.exe start ATSZIO.sys
 ```
 
 | Use Case | Privileges | Operating System | 

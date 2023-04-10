@@ -30,8 +30,7 @@ full.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create full.sys binPath=C:\windows\temp\full.sys type=kernel
-sc.exe start full.sys
+sc.exe create full.sys binPath=C:\windows\temp\full.sys type=kernel &amp;&amp; sc.exe start full.sys
 ```
 
 | Use Case | Privileges | Operating System | 

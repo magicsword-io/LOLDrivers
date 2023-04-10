@@ -25,8 +25,7 @@ NCHGBIOS2x64.SYS is a vulnerable driver and more information will be added as fo
 ### Commands
 
 ```
-sc.exe create NCHGBIOS2x64.SYS binPath=C:\windows\temp\NCHGBIOS2x64.SYS type=kernel
-sc.exe start NCHGBIOS2x64.SYS
+sc.exe create NCHGBIOS2x64.SYS binPath=C:\windows\temp\NCHGBIOS2x64.SYS     type=kernel type=kernel &amp;&amp; sc.exe start NCHGBIOS2x64.SYS
 ```
 
 | Use Case | Privileges | Operating System | 

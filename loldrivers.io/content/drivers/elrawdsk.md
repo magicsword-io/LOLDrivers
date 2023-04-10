@@ -25,8 +25,7 @@ elrawdsk.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create elrawdsk.sys binPath=C:\windows\temp\elrawdsk.sys type=kernel
-sc.exe start elrawdsk.sys
+sc.exe create elrawdsk.sys binPath=C:\windows\temp\elrawdsk.sys type=kernel &amp;&amp; sc.exe start elrawdsk.sys
 ```
 
 | Use Case | Privileges | Operating System | 

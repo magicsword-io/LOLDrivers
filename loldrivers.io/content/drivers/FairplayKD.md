@@ -30,8 +30,7 @@ FairplayKD.sys is a vulnerable driver and more information will be added as foun
 ### Commands
 
 ```
-sc.exe create FairplayKD.sys binPath=C:\windows\temp\FairplayKD.sys type=kernel
-sc.exe start FairplayKD.sys
+sc.exe create FairplayKD.sys binPath=C:\windows\temp\FairplayKD.sys type=kernel &amp;&amp; sc.exe start FairplayKD.sys
 ```
 
 | Use Case | Privileges | Operating System | 

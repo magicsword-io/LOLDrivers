@@ -30,8 +30,7 @@ asrdrv104.sys is a vulnerable driver and more information will be added as found
 ### Commands
 
 ```
-sc.exe create asrdrv104.sys binPath=C:\windows\temp\asrdrv104.sys type=kernel
-sc.exe start asrdrv104.sys
+sc.exe create asrdrv104.sys binPath=C:\windows\temp\asrdrv104.sys type=kernel &amp;&amp; sc.exe start asrdrv104.sys
 ```
 
 | Use Case | Privileges | Operating System | 

@@ -25,8 +25,7 @@ HwOs2Ec10x64.sys is a vulnerable driver and more information will be added as fo
 ### Commands
 
 ```
-sc.exe create HwOs2Ec10x64.sys binPath=C:\windows\temp\HwOs2Ec10x64.sys type=kernel
-sc.exe start HwOs2Ec10x64.sys
+sc.exe create HwOs2Ec10x64.sys binPath=C:\windows\temp\HwOs2Ec10x64.sys     type=kernel type=kernel &amp;&amp; sc.exe start HwOs2Ec10x64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

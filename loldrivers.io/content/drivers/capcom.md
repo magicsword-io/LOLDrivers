@@ -25,8 +25,7 @@ capcom.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create capcom.sys binPath=C:\windows\temp\capcom.sys type=kernel
-sc.exe start capcom.sys
+sc.exe create capcom.sys binPath=C:\windows\temp\capcom.sys type=kernel &amp;&amp; sc.exe start capcom.sys
 ```
 
 | Use Case | Privileges | Operating System | 

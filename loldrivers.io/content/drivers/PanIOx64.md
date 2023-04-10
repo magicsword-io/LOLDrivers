@@ -30,8 +30,7 @@ PanIOx64.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create PanIOx64.sys binPath=C:\windows\temp\PanIOx64.sys type=kernel
-sc.exe start PanIOx64.sys
+sc.exe create PanIOx64.sys binPath=C:\windows\temp\PanIOx64.sys type=kernel &amp;&amp; sc.exe start PanIOx64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

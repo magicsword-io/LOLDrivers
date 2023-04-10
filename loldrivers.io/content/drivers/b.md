@@ -30,8 +30,7 @@ b.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create b.sys binPath=C:\windows\temp\b.sys type=kernel
-sc.exe start b.sys
+sc.exe create b.sys binPath=C:\windows\temp\b.sys type=kernel &amp;&amp; sc.exe start b.sys
 ```
 
 | Use Case | Privileges | Operating System | 

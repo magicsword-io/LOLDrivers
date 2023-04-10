@@ -30,8 +30,7 @@ cpupress.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create cpupress.sys binPath=C:\windows\temp\cpupress.sys type=kernel
-sc.exe start cpupress.sys
+sc.exe create cpupress.sys binPath=C:\windows\temp\cpupress.sys type=kernel &amp;&amp; sc.exe start cpupress.sys
 ```
 
 | Use Case | Privileges | Operating System | 

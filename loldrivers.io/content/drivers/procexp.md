@@ -25,8 +25,7 @@ procexp.Sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create procexp.Sys binPath=C:\windows\temp\procexp.Sys type=kernel
-sc.exe start procexp.Sys
+sc.exe create procexp.Sys binPath=C:\windows\temp\procexp.Sys type=kernel &amp;&amp; sc.exe start procexp.Sys
 ```
 
 | Use Case | Privileges | Operating System | 

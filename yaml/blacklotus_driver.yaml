@@ -5,9 +5,8 @@ MitreID: T1068
 Category: malicious
 Verified: 'TRUE'
 Commands:
-  Command: 'sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sys type=kernel 
-
-    sc.exe start blacklotus_driver.sys'
+  Command: 'sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sys type=kernel  
+ && sc.exe start blacklotus_driver.sys'
   Description: The first in-the-wild UEFI bootkit bypassing UEFI Secure Boot on fully updated UEFI systems is now a reality. Once the persistence is configured, the BlackLotus bootkit is executed on every system start. The bootkits goal is to deploy a kernel driver and a final user-mode component.
   Usecase: Elevate privileges
   Privileges: kernel
@@ -124,3 +123,4 @@ KnownVulnerableSamples:
   FileVersion: ''
   MachineType: ''
   OriginalFilename: ''
+

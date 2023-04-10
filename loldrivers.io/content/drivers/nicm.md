@@ -25,8 +25,7 @@ nicm.sys is a vulnerable driver. CVE-2013-3956.
 ### Commands
 
 ```
-sc.exe create nicm.sys binPath=C:\windows\temp\nicm.sys type=kernel
-sc.exe start nicm.sys
+sc.exe create nicm.sys binPath=C:\windows\temp \n \n \n  icm.sys type=kernel &amp;&amp; sc.exe start nicm.sys
 ```
 
 | Use Case | Privileges | Operating System | 

@@ -25,8 +25,7 @@ Se64a.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create Se64a.sys binPath=C:\windows\temp\Se64a.sys type=kernel
-sc.exe start Se64a.sys
+sc.exe create Se64a.sys binPath=C:\windows\temp\Se64a.sys type=kernel &amp;&amp; sc.exe start Se64a.sys
 ```
 
 | Use Case | Privileges | Operating System | 

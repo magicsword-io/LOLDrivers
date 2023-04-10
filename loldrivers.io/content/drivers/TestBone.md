@@ -30,8 +30,7 @@ TestBone.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create TestBone.sys binPath=C:\windows\temp\TestBone.sys type=kernel
-sc.exe start TestBone.sys
+sc.exe create TestBone.sys binPath=C:\windows\temp\TestBone.sys type=kernel &amp;&amp; sc.exe start TestBone.sys
 ```
 
 | Use Case | Privileges | Operating System | 

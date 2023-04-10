@@ -25,8 +25,7 @@ Dh_Kernel.sys is a vulnerable driver and more information will be added as found
 ### Commands
 
 ```
-sc.exe create Dh_Kernel.sys binPath=C:\windows\temp\Dh_Kernel.sys type=kernel
-sc.exe start Dh_Kernel.sys
+sc.exe create Dh_Kernel.sys binPath=C:\windows\temp\Dh_Kernel.sys type=kernel &amp;&amp; sc.exe start Dh_Kernel.sys
 ```
 
 | Use Case | Privileges | Operating System | 

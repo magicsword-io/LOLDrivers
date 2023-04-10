@@ -25,8 +25,7 @@ ADV64DRV.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create ADV64DRV.sys binPath=C:\windows\temp\ADV64DRV.sys type=kernel
-sc.exe start ADV64DRV.sys
+sc.exe create ADV64DRV.sys binPath=C:\windows\temp\ADV64DRV.sys type=kernel &amp;&amp; sc.exe start ADV64DRV.sys
 ```
 
 | Use Case | Privileges | Operating System | 

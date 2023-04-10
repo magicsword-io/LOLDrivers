@@ -30,8 +30,7 @@ ni.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create ni.sys binPath=C:\windows\temp\ni.sys type=kernel
-sc.exe start ni.sys
+sc.exe create ni.sys binPath=C:\windows\temp \n \n \n  i.sys type=kernel &amp;&amp; sc.exe start ni.sys
 ```
 
 | Use Case | Privileges | Operating System | 

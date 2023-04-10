@@ -30,8 +30,7 @@ WiseUnlo.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel
-sc.exe start WiseUnlo.sys
+sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp;&amp; sc.exe start WiseUnlo.sys
 ```
 
 | Use Case | Privileges | Operating System | 

@@ -25,8 +25,7 @@ GLCKIO2.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create GLCKIO2.sys binPath=C:\windows\temp\GLCKIO2.sys type=kernel
-sc.exe start GLCKIO2.sys
+sc.exe create GLCKIO2.sys binPath=C:\windows\temp\GLCKIO2.sys type=kernel &amp;&amp; sc.exe start GLCKIO2.sys
 ```
 
 | Use Case | Privileges | Operating System | 

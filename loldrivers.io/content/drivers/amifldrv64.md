@@ -25,8 +25,7 @@ amifldrv64.sys is a vulnerable driver and more information will be added as foun
 ### Commands
 
 ```
-sc.exe create amifldrv64.sys binPath=C:\windows\temp\amifldrv64.sys type=kernel
-sc.exe start amifldrv64.sys
+sc.exe create amifldrv64.sys binPath=C:\windows\temp\amifldrv64.sys type=kernel &amp;&amp; sc.exe start amifldrv64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

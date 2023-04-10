@@ -25,8 +25,7 @@ AsrAutoChkUpdDrv.sys is a vulnerable driver and more information will be added a
 ### Commands
 
 ```
-sc.exe create AsrAutoChkUpdDrv.sys binPath=C:\windows\temp\AsrAutoChkUpdDrv.sys type=kernel
-sc.exe start AsrAutoChkUpdDrv.sys
+sc.exe create AsrAutoChkUpdDrv.sys binPath=C:\windows\temp\AsrAutoChkUpdDrv.sys     type=kernel type=kernel &amp;&amp; sc.exe start AsrAutoChkUpdDrv.sys
 ```
 
 | Use Case | Privileges | Operating System | 

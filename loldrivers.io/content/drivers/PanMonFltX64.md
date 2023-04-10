@@ -30,8 +30,7 @@ PanMonFltX64.sys is a vulnerable driver and more information will be added as fo
 ### Commands
 
 ```
-sc.exe create PanMonFltX64.sys binPath=C:\windows\temp\PanMonFltX64.sys type=kernel
-sc.exe start PanMonFltX64.sys
+sc.exe create PanMonFltX64.sys binPath=C:\windows\temp\PanMonFltX64.sys     type=kernel type=kernel &amp;&amp; sc.exe start PanMonFltX64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

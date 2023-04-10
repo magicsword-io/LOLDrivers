@@ -25,8 +25,7 @@ CorsairLLAccess64.sys is a vulnerable driver and more information will be added 
 ### Commands
 
 ```
-sc.exe create CorsairLLAccess64.sys binPath=C:\windows\temp\CorsairLLAccess64.sys type=kernel
-sc.exe start CorsairLLAccess64.sys
+sc.exe create CorsairLLAccess64.sys binPath=C:\windows\temp\CorsairLLAccess64.sys     type=kernel type=kernel &amp;&amp; sc.exe start CorsairLLAccess64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

@@ -25,8 +25,7 @@ dbutil_2_3.sys is a vulnerable driver and more information will be added as foun
 ### Commands
 
 ```
-sc.exe create dbutil_2_3.sys binPath=C:\windows\temp\dbutil_2_3.sys type=kernel
-sc.exe start dbutil_2_3.sys
+sc.exe create dbutil_2_3.sys binPath=C:\windows\temp\dbutil_2_3.sys type=kernel &amp;&amp; sc.exe start dbutil_2_3.sys
 ```
 
 | Use Case | Privileges | Operating System | 

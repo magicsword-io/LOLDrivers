@@ -25,8 +25,7 @@ inpoutx64.sys is a vulnerable driver and more information will be added as found
 ### Commands
 
 ```
-sc.exe create inpoutx64.sys binPath=C:\windows\temp\inpoutx64.sys type=kernel
-sc.exe start inpoutx64.sys
+sc.exe create inpoutx64.sys binPath=C:\windows\temp\inpoutx64.sys type=kernel &amp;&amp; sc.exe start inpoutx64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

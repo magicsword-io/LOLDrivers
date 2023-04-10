@@ -25,8 +25,7 @@ ncpl.sys is a vulnerable driver. CVE-2013-3956.
 ### Commands
 
 ```
-sc.exe create ncpl.sys binPath=C:\windows\temp\ncpl.sys type=kernel
-sc.exe start ncpl.sys
+sc.exe create ncpl.sys binPath=C:\windows\temp \n \n \n  cpl.sys type=kernel &amp;&amp; sc.exe start ncpl.sys
 ```
 
 | Use Case | Privileges | Operating System | 

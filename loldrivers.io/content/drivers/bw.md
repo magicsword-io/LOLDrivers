@@ -30,8 +30,7 @@ bw.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create bw.sys binPath=C:\windows\temp\bw.sys type=kernel
-sc.exe start bw.sys
+sc.exe create bw.sys binPath=C:\windows\temp\bw.sys type=kernel &amp;&amp; sc.exe start bw.sys
 ```
 
 | Use Case | Privileges | Operating System | 

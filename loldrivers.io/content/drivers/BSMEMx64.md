@@ -25,8 +25,7 @@ BSMEMx64.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create BSMEMx64.sys binPath=C:\windows\temp\BSMEMx64.sys type=kernel
-sc.exe start BSMEMx64.sys
+sc.exe create BSMEMx64.sys binPath=C:\windows\temp\BSMEMx64.sys type=kernel &amp;&amp; sc.exe start BSMEMx64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

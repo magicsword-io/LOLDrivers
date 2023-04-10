@@ -25,8 +25,7 @@ nvflsh64.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create nvflsh64.sys binPath=C:\windows\temp\nvflsh64.sys type=kernel
-sc.exe start nvflsh64.sys
+sc.exe create nvflsh64.sys binPath=C:\windows\temp \n \n \n  vflsh64.sys type=kernel &amp;&amp; sc.exe start nvflsh64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

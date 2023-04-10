@@ -30,8 +30,7 @@ Lv561av.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create Lv561av.sys binPath=C:\windows\temp\Lv561av.sys type=kernel
-sc.exe start Lv561av.sys
+sc.exe create Lv561av.sys binPath=C:\windows\temp\Lv561av.sys type=kernel &amp;&amp; sc.exe start Lv561av.sys
 ```
 
 | Use Case | Privileges | Operating System | 

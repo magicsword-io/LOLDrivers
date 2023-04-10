@@ -30,8 +30,7 @@ windows-xp-64.sys is a vulnerable driver and more information will be added as f
 ### Commands
 
 ```
-sc.exe create windows-xp-64.sys binPath=C:\windows\temp\windows-xp-64.sys type=kernel
-sc.exe start windows-xp-64.sys
+sc.exe create windows-xp-64.sys binPath=C:\windows\temp\windows-xp-64.sys     type=kernel type=kernel &amp;&amp; sc.exe start windows-xp-64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

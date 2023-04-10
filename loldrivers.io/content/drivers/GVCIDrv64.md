@@ -25,8 +25,7 @@ GVCIDrv64.sys is a vulnerable driver and more information will be added as found
 ### Commands
 
 ```
-sc.exe create GVCIDrv64.sys binPath=C:\windows\temp\GVCIDrv64.sys type=kernel
-sc.exe start GVCIDrv64.sys
+sc.exe create GVCIDrv64.sys binPath=C:\windows\temp\GVCIDrv64.sys type=kernel &amp;&amp; sc.exe start GVCIDrv64.sys
 ```
 
 | Use Case | Privileges | Operating System | 
