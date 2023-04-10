@@ -54,7 +54,7 @@ sc.exe start gftkyj64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gftkyj64.yaml)
 
-*last_updated:* 2023-04-06
+*last_updated:* 2023-04-10
 
 
 

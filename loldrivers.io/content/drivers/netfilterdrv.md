@@ -61,7 +61,7 @@ sc.exe start netfilterdrv.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/netfilterdrv.yaml)
 
-*last_updated:* 2023-04-06
+*last_updated:* 2023-04-10
 
 
 

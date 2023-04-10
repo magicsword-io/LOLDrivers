@@ -52,7 +52,7 @@ sc.exe start nscm.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nscm.yaml)
 
-*last_updated:* 2023-04-06
+*last_updated:* 2023-04-10
 
 
 

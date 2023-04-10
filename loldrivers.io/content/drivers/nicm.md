@@ -52,7 +52,7 @@ sc.exe start nicm.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nicm.yaml)
 
-*last_updated:* 2023-04-06
+*last_updated:* 2023-04-10
 
 
 

@@ -52,7 +52,7 @@ sc.exe start physmem.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/physmem.yaml)
 
-*last_updated:* 2023-04-06
+*last_updated:* 2023-04-10
 
 
 

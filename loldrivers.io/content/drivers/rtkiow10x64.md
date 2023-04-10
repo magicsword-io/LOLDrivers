@@ -51,7 +51,7 @@ sc.exe start rtkiow10x64.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rtkiow10x64.yaml)
 
-*last_updated:* 2023-04-06
+*last_updated:* 2023-04-10
 
 
 

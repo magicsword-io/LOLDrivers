@@ -15,11 +15,14 @@
         },
         "Resources": [
             " https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules",
-            "https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules"
+            "https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules",
+            "https://nephosec.com/cve-2022-3699-lenovo-diagnostics-driver-eop-arbitrary-r-w/",
+            "https://github.com/alfarom256/CVE-2022-3699",
+            "https://support.lenovo.com/us/en/product_security/LEN-94532"
         ],
         "Acknowledgement": {
-            "Person": "",
-            "Handle": ""
+            "Person": "Mike Alfaro",
+            "Handle": "alfarom256"
         },
         "Detection": [],
         "KnownVulnerableSamples": [
@@ -35,13 +38,13 @@
                 ],
                 "Date": "",
                 "Publisher": "",
-                "Company": "",
-                "Description": "",
-                "Product": "",
-                "ProductVersion": "",
-                "FileVersion": "",
+                "Company": "Lenovo Group Limited (R)",
+                "Description": "Lenovo Diagnostics Driver for Windows 10 and later.",
+                "Product": "Lenovo Diagnostics",
+                "ProductVersion": "1.0.4.0",
+                "FileVersion": "1.0.4.0",
                 "MachineType": "",
-                "OriginalFilename": ""
+                "OriginalFilename": "LenovoDiagnosticsDriver.sys"
             }
         ]
     },
