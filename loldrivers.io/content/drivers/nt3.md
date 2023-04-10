@@ -30,8 +30,7 @@ nt3.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create nt3.sys binPath=C:\windows\temp\nt3.sys type=kernel
-sc.exe start nt3.sys
+sc.exe create nt3.sys binPath=C:\windows\temp \n \n \n  t3.sys type=kernel &amp;&amp; sc.exe start nt3.sys
 ```
 
 | Use Case | Privileges | Operating System | 

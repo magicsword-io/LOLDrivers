@@ -28,8 +28,7 @@ This research is being released alongside Mandiant, a SentinelOne technology and
 ### Commands
 
 ```
-sc.exe create LcTkA.sys binPath=C:\windows\temp\LcTkA.sys type=kernel
-sc.exe start LcTkA.sys
+sc.exe create LcTkA.sys binPath=C:\windows\temp\LcTkA.sys type=kernel &amp;&amp; sc.exe start LcTkA.sys
 ```
 
 | Use Case | Privileges | Operating System | 

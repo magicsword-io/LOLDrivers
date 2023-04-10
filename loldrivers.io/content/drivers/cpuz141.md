@@ -25,8 +25,7 @@ cpuz141.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create cpuz141.sys binPath=C:\windows\temp\cpuz141.sys type=kernel
-sc.exe start cpuz141.sys
+sc.exe create cpuz141.sys binPath=C:\windows\temp\cpuz141.sys type=kernel &amp;&amp; sc.exe start cpuz141.sys
 ```
 
 | Use Case | Privileges | Operating System | 

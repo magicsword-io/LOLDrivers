@@ -25,8 +25,7 @@ weight = 10
 ### Commands
 
 ```
-sc.exe create iqvw64e.sys binPath=C:\windows\temp\iqvw64e.sys type=kernel
-sc.exe start iqvw64e.sys
+sc.exe create iqvw64e.sys binPath=C:\windows\temp\iqvw64e.sys type=kernel &amp;&amp; sc.exe start iqvw64e.sys
 ```
 
 | Use Case | Privileges | Operating System | 

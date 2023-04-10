@@ -25,8 +25,7 @@ Used by unknown actor in Acid Rain malware. vboxdrv.sys is a vulnerable driver.
 ### Commands
 
 ```
-sc.exe create vboxdrv.sys binPath=C:\windows\temp\vboxdrv.sys type=kernel
-sc.exe start vboxdrv.sys
+sc.exe create vboxdrv.sys binPath=C:\windows\temp\vboxdrv.sys type=kernel &amp;&amp; sc.exe start vboxdrv.sys
 ```
 
 | Use Case | Privileges | Operating System | 

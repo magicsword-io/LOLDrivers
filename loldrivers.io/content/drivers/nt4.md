@@ -30,8 +30,7 @@ nt4.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create nt4.sys binPath=C:\windows\temp\nt4.sys type=kernel
-sc.exe start nt4.sys
+sc.exe create nt4.sys binPath=C:\windows\temp \n \n \n  t4.sys type=kernel &amp;&amp; sc.exe start nt4.sys
 ```
 
 | Use Case | Privileges | Operating System | 

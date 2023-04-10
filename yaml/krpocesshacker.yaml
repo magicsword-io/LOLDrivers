@@ -5,10 +5,9 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
-  Command: 'sc.exe create krpocesshacker.sys binPath=C:\windows\temp\krpocesshacker.sys
-    type=kernel
-
-    sc.exe start krpocesshacker.sys'
+  Command: 'sc.exe create krpocesshacker.sys binPath=C:\windows\temp\krpocesshacker.sys     type=kernel
+type=kernel
+ && sc.exe start krpocesshacker.sys'
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
@@ -39,3 +38,4 @@ KnownVulnerableSamples:
   FileVersion: ''
   MachineType: ''
   OriginalFilename: ''
+

@@ -30,8 +30,7 @@ nt2.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create nt2.sys binPath=C:\windows\temp\nt2.sys type=kernel
-sc.exe start nt2.sys
+sc.exe create nt2.sys binPath=C:\windows\temp \n \n \n  t2.sys type=kernel &amp;&amp; sc.exe start nt2.sys
 ```
 
 | Use Case | Privileges | Operating System | 

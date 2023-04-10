@@ -25,8 +25,7 @@ Agent64.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create Agent64.sys binPath=C:\windows\temp\Agent64.sys type=kernel
-sc.exe start Agent64.sys
+sc.exe create Agent64.sys binPath=C:\windows\temp\Agent64.sys type=kernel &amp;&amp; sc.exe start Agent64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

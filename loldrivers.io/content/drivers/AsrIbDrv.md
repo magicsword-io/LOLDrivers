@@ -25,8 +25,7 @@ AsrIbDrv.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create AsrIbDrv.sys binPath=C:\windows\temp\AsrIbDrv.sys type=kernel
-sc.exe start AsrIbDrv.sys
+sc.exe create AsrIbDrv.sys binPath=C:\windows\temp\AsrIbDrv.sys type=kernel &amp;&amp; sc.exe start AsrIbDrv.sys
 ```
 
 | Use Case | Privileges | Operating System | 

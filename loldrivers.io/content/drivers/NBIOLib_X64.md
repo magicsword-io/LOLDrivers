@@ -25,8 +25,7 @@ NBIOLib_X64.sys is a vulnerable driver and more information will be added as fou
 ### Commands
 
 ```
-sc.exe create NBIOLib_X64.sys binPath=C:\windows\temp\NBIOLib_X64.sys type=kernel
-sc.exe start NBIOLib_X64.sys
+sc.exe create NBIOLib_X64.sys binPath=C:\windows\temp\NBIOLib_X64.sys     type=kernel type=kernel &amp;&amp; sc.exe start NBIOLib_X64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

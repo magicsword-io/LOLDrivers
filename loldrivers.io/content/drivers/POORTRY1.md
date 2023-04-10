@@ -25,8 +25,7 @@ Driver categorized as POORTRY by Mandiant.
 ### Commands
 
 ```
-sc.exe create POORTRY1.sys binPath=C:\windows\temp\POORTRY1.sys type=kernel
-sc.exe start POORTRY1.sys
+sc.exe create POORTRY1.sys binPath=C:\windows\temp\POORTRY1.sys type=kernel &amp;&amp; sc.exe start POORTRY1.sys
 ```
 
 | Use Case | Privileges | Operating System | 

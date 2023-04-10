@@ -25,8 +25,7 @@ HOSTNT.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create HOSTNT.sys binPath=C:\windows\temp\HOSTNT.sys type=kernel
-sc.exe start HOSTNT.sys
+sc.exe create HOSTNT.sys binPath=C:\windows\temp\HOSTNT.sys type=kernel &amp;&amp; sc.exe start HOSTNT.sys
 ```
 
 | Use Case | Privileges | Operating System | 

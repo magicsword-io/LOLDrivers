@@ -30,8 +30,7 @@ t.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create t.sys binPath=C:\windows\temp\t.sys type=kernel
-sc.exe start t.sys
+sc.exe create t.sys binPath=C:\windows\temp\t.sys type=kernel &amp;&amp; sc.exe start t.sys
 ```
 
 | Use Case | Privileges | Operating System | 

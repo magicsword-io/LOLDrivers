@@ -30,8 +30,7 @@ WinIo64C.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create WinIo64C.sys binPath=C:\windows\temp\WinIo64C.sys type=kernel
-sc.exe start WinIo64C.sys
+sc.exe create WinIo64C.sys binPath=C:\windows\temp\WinIo64C.sys type=kernel &amp;&amp; sc.exe start WinIo64C.sys
 ```
 
 | Use Case | Privileges | Operating System | 

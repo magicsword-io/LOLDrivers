@@ -25,8 +25,7 @@ Driver categorized as POORTRY by Mandiant.
 ### Commands
 
 ```
-sc.exe create PcieCubed.sys binPath=C:\windows\temp\PcieCubed.sys type=kernel
-sc.exe start PcieCubed.sys
+sc.exe create PcieCubed.sys binPath=C:\windows\temp\PcieCubed.sys type=kernel &amp;&amp; sc.exe start PcieCubed.sys
 ```
 
 | Use Case | Privileges | Operating System | 

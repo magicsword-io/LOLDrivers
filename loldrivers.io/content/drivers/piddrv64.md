@@ -25,8 +25,7 @@ piddrv64.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create piddrv64.sys binPath=C:\windows\temp\piddrv64.sys type=kernel
-sc.exe start piddrv64.sys
+sc.exe create piddrv64.sys binPath=C:\windows\temp\piddrv64.sys type=kernel &amp;&amp; sc.exe start piddrv64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

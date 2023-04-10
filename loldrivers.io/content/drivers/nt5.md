@@ -30,8 +30,7 @@ nt5.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create nt5.sys binPath=C:\windows\temp\nt5.sys type=kernel
-sc.exe start nt5.sys
+sc.exe create nt5.sys binPath=C:\windows\temp \n \n \n  t5.sys type=kernel &amp;&amp; sc.exe start nt5.sys
 ```
 
 | Use Case | Privileges | Operating System | 

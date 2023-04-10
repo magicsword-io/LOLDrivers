@@ -30,8 +30,7 @@ GameTerSafe.sys is a vulnerable driver and more information will be added as fou
 ### Commands
 
 ```
-sc.exe create GameTerSafe.sys binPath=C:\windows\temp\GameTerSafe.sys type=kernel
-sc.exe start GameTerSafe.sys
+sc.exe create GameTerSafe.sys binPath=C:\windows\temp\GameTerSafe.sys     type=kernel type=kernel &amp;&amp; sc.exe start GameTerSafe.sys
 ```
 
 | Use Case | Privileges | Operating System | 

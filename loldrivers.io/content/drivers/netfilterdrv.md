@@ -30,8 +30,7 @@ netfilterdrv.sys is a vulnerable driver and more information will be added as fo
 ### Commands
 
 ```
-sc.exe create netfilterdrv.sys binPath=C:\windows\temp\netfilterdrv.sys type=kernel
-sc.exe start netfilterdrv.sys
+sc.exe create netfilterdrv.sys binPath=C:\windows\temp \n \n \n  etfilterdrv.sys     type=kernel type=kernel &amp;&amp; sc.exe start netfilterdrv.sys
 ```
 
 | Use Case | Privileges | Operating System | 

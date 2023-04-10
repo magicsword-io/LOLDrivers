@@ -30,8 +30,7 @@ LgDCatcher.sys is a vulnerable driver and more information will be added as foun
 ### Commands
 
 ```
-sc.exe create LgDCatcher.sys binPath=C:\windows\temp\LgDCatcher.sys type=kernel
-sc.exe start LgDCatcher.sys
+sc.exe create LgDCatcher.sys binPath=C:\windows\temp\LgDCatcher.sys type=kernel &amp;&amp; sc.exe start LgDCatcher.sys
 ```
 
 | Use Case | Privileges | Operating System | 

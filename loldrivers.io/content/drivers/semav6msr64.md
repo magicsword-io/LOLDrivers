@@ -30,8 +30,7 @@ semav6msr64.sys is a vulnerable driver and more information will be added as fou
 ### Commands
 
 ```
-sc.exe create semav6msr64.sys binPath=C:\windows\temp\semav6msr64.sys type=kernel
-sc.exe start semav6msr64.sys
+sc.exe create semav6msr64.sys binPath=C:\windows\temp\semav6msr64.sys     type=kernel type=kernel &amp;&amp; sc.exe start semav6msr64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

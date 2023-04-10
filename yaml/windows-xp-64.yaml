@@ -5,10 +5,9 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'FALSE'
 Commands:
-  Command: 'sc.exe create windows-xp-64.sys binPath=C:\windows\temp\windows-xp-64.sys
-    type=kernel
-
-    sc.exe start windows-xp-64.sys'
+  Command: 'sc.exe create windows-xp-64.sys binPath=C:\windows\temp\windows-xp-64.sys     type=kernel
+type=kernel
+ && sc.exe start windows-xp-64.sys'
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
@@ -36,3 +35,4 @@ KnownVulnerableSamples:
   FileVersion: ''
   MachineType: ''
   OriginalFilename: ''
+

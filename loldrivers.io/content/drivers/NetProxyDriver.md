@@ -30,8 +30,7 @@ NetProxyDriver.sys is a vulnerable driver and more information will be added as 
 ### Commands
 
 ```
-sc.exe create NetProxyDriver.sys binPath=C:\windows\temp\NetProxyDriver.sys type=kernel
-sc.exe start NetProxyDriver.sys
+sc.exe create NetProxyDriver.sys binPath=C:\windows\temp\NetProxyDriver.sys     type=kernel type=kernel &amp;&amp; sc.exe start NetProxyDriver.sys
 ```
 
 | Use Case | Privileges | Operating System | 

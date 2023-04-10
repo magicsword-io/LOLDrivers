@@ -25,8 +25,7 @@ Driver used in the Daxin malware campaign.
 ### Commands
 
 ```
-sc.exe create daxin_blank1.sys binPath=C:\windows\temp\daxin_blank1.sys type=kernel
-sc.exe start daxin_blank1.sys
+sc.exe create daxin_blank1.sys binPath=C:\windows\temp\daxin_blank1.sys     type=kernel type=kernel &amp;&amp; sc.exe start daxin_blank1.sys
 ```
 
 | Use Case | Privileges | Operating System | 

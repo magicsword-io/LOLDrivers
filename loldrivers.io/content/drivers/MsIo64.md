@@ -25,8 +25,7 @@ The MSI AmbientLink MsIo64 driver 1.0.0.8 has a Buffer Overflow (0x80102040, 0x8
 ### Commands
 
 ```
-sc.exe create MsIo64.sys binPath=C:\windows\temp\MsIo64.sys type=kernel
-sc.exe start MsIo64.sys
+sc.exe create MsIo64.sys binPath=C:\windows\temp\MsIo64.sys type=kernel &amp;&amp; sc.exe start MsIo64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

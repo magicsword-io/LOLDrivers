@@ -25,8 +25,7 @@ Phymemx64.sys is a vulnerable driver and more information will be added as found
 ### Commands
 
 ```
-sc.exe create Phymemx64.sys binPath=C:\windows\temp\Phymemx64.sys type=kernel
-sc.exe start Phymemx64.sys
+sc.exe create Phymemx64.sys binPath=C:\windows\temp\Phymemx64.sys type=kernel &amp;&amp; sc.exe start Phymemx64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

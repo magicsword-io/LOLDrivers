@@ -25,8 +25,7 @@ zamguard64.sys is a vulnerable driver and more information will be added as foun
 ### Commands
 
 ```
-sc.exe create zamguard64.sys binPath=C:\windows\temp\zamguard64.sys type=kernel
-sc.exe start zamguard64.sys
+sc.exe create zamguard64.sys binPath=C:\windows\temp\zamguard64.sys type=kernel &amp;&amp; sc.exe start zamguard64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

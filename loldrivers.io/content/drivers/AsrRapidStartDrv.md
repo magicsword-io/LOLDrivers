@@ -25,8 +25,7 @@ AsrRapidStartDrv.sys is a vulnerable driver and more information will be added a
 ### Commands
 
 ```
-sc.exe create AsrRapidStartDrv.sys binPath=C:\windows\temp\AsrRapidStartDrv.sys type=kernel
-sc.exe start AsrRapidStartDrv.sys
+sc.exe create AsrRapidStartDrv.sys binPath=C:\windows\temp\AsrRapidStartDrv.sys     type=kernel type=kernel &amp;&amp; sc.exe start AsrRapidStartDrv.sys
 ```
 
 | Use Case | Privileges | Operating System | 

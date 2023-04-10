@@ -30,8 +30,7 @@ WinIO32B.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create WinIO32B.sys binPath=C:\windows\temp\WinIO32B.sys type=kernel
-sc.exe start WinIO32B.sys
+sc.exe create WinIO32B.sys binPath=C:\windows\temp\WinIO32B.sys type=kernel &amp;&amp; sc.exe start WinIO32B.sys
 ```
 
 | Use Case | Privileges | Operating System | 

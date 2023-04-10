@@ -25,8 +25,7 @@ BS_Def64.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create BS_Def64.sys binPath=C:\windows\temp\BS_Def64.sys type=kernel
-sc.exe start BS_Def64.sys
+sc.exe create BS_Def64.sys binPath=C:\windows\temp\BS_Def64.sys type=kernel &amp;&amp; sc.exe start BS_Def64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

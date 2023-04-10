@@ -25,8 +25,7 @@ zam64.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create zam64.sys binPath=C:\windows\temp\zam64.sys type=kernel
-sc.exe start zam64.sys
+sc.exe create zam64.sys binPath=C:\windows\temp\zam64.sys type=kernel &amp;&amp; sc.exe start zam64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

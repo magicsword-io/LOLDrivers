@@ -30,8 +30,7 @@ windows7-32.sys is a vulnerable driver and more information will be added as fou
 ### Commands
 
 ```
-sc.exe create windows7-32.sys binPath=C:\windows\temp\windows7-32.sys type=kernel
-sc.exe start windows7-32.sys
+sc.exe create windows7-32.sys binPath=C:\windows\temp\windows7-32.sys     type=kernel type=kernel &amp;&amp; sc.exe start windows7-32.sys
 ```
 
 | Use Case | Privileges | Operating System | 

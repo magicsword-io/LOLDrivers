@@ -19,7 +19,6 @@ weight = 10
 This utility access almost all the computer hardware, including PCI (PCI Express), PCI Index/Data, Memory, Memory Index/Data, I/O Space, I/O Index/Data, Super I/O, Clock Generator, DIMM SPD, SMBus Device, CPU MSR Registers, ATA/ATAPI Identify Data, Disk Read Write, ACPI Tables Dump (include AML decode), Embedded Controller, USB Information, SMBIOS Structures, PCI Option ROMs, MP Configuration Table, E820, EDID and Remote Access. And also a Command Window is provided to access hardware manually.
 
 
-
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
@@ -27,8 +26,7 @@ This utility access almost all the computer hardware, including PCI (PCI Express
 ### Commands
 
 ```
-sc.exe create rwdrv.sys binPath=C:\windows\temp\rwdrv.sys type=kernel
-sc.exe start rwdrv.sys
+sc.exe create rwdrv.sys binPath=C:\windows\temp\rwdrv.sys type=kernel &amp;&amp; sc.exe start rwdrv.sys
 ```
 
 | Use Case | Privileges | Operating System | 

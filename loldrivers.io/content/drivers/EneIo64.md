@@ -25,8 +25,7 @@ EneIo64.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create EneIo64.sys binPath=C:\windows\temp\EneIo64.sys type=kernel
-sc.exe start EneIo64.sys
+sc.exe create EneIo64.sys binPath=C:\windows\temp\EneIo64.sys type=kernel &amp;&amp; sc.exe start EneIo64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

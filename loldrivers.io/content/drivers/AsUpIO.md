@@ -25,8 +25,7 @@ AsUpIO.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create AsUpIO.sys binPath=C:\windows\temp\AsUpIO.sys type=kernel
-sc.exe start AsUpIO.sys
+sc.exe create AsUpIO.sys binPath=C:\windows\temp\AsUpIO.sys type=kernel &amp;&amp; sc.exe start AsUpIO.sys
 ```
 
 | Use Case | Privileges | Operating System | 

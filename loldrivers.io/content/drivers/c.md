@@ -30,8 +30,7 @@ c.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create c.sys binPath=C:\windows\temp\c.sys type=kernel
-sc.exe start c.sys
+sc.exe create c.sys binPath=C:\windows\temp\c.sys type=kernel &amp;&amp; sc.exe start c.sys
 ```
 
 | Use Case | Privileges | Operating System | 

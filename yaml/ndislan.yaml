@@ -5,9 +5,8 @@ MitreID: T1068
 Category: malicious
 Verified: 'TRUE'
 Commands:
-  Command: 'sc.exe create ndislan.sys binPath=C:\windows\temp\ndislan.sys type=kernel
-
-    sc.exe start ndislan.sys'
+  Command: 'sc.exe create ndislan.sys binPath=C:\windows\temp \n \n \n  dislan.sys type=kernel 
+ && sc.exe start ndislan.sys'
   Description: Driver used in the Daxin malware campaign.
   Usecase: Elevate privileges
   Privileges: kernel
@@ -36,3 +35,4 @@ KnownVulnerableSamples:
   FileVersion: 6.1.7600.1421
   MachineType: 64-bit
   OriginalFilename: ''
+

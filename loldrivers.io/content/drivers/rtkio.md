@@ -25,8 +25,7 @@ rtkio.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create rtkio.sys binPath=C:\windows\temp\rtkio.sys type=kernel
-sc.exe start rtkio.sys
+sc.exe create rtkio.sys binPath=C:\windows\temp\rtkio.sys type=kernel &amp;&amp; sc.exe start rtkio.sys
 ```
 
 | Use Case | Privileges | Operating System | 

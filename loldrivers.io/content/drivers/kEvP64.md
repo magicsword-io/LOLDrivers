@@ -25,8 +25,7 @@ kEvP64.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create kEvP64.sys binPath=C:\windows\temp\kEvP64.sys type=kernel
-sc.exe start kEvP64.sys
+sc.exe create kEvP64.sys binPath=C:\windows\temp\kEvP64.sys type=kernel &amp;&amp; sc.exe start kEvP64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

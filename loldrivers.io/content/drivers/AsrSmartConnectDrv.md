@@ -25,8 +25,7 @@ AsrSmartConnectDrv.sys is a vulnerable driver and more information will be added
 ### Commands
 
 ```
-sc.exe create AsrSmartConnectDrv.sys binPath=C:\windows\temp\AsrSmartConnectDrv.sys type=kernel
-sc.exe start AsrSmartConnectDrv.sys
+sc.exe create AsrSmartConnectDrv.sys binPath=C:\windows\temp\AsrSmartConnectDrv.sys     type=kernel type=kernel &amp;&amp; sc.exe start AsrSmartConnectDrv.sys
 ```
 
 | Use Case | Privileges | Operating System | 

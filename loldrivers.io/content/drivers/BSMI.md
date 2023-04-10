@@ -25,8 +25,7 @@ BSMI.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create BSMI.sys binPath=C:\windows\temp\BSMI.sys type=kernel
-sc.exe start BSMI.sys
+sc.exe create BSMI.sys binPath=C:\windows\temp\BSMI.sys type=kernel &amp;&amp; sc.exe start BSMI.sys
 ```
 
 | Use Case | Privileges | Operating System | 

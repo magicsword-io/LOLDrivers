@@ -30,8 +30,7 @@ WinIO32A.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create WinIO32A.sys binPath=C:\windows\temp\WinIO32A.sys type=kernel
-sc.exe start WinIO32A.sys
+sc.exe create WinIO32A.sys binPath=C:\windows\temp\WinIO32A.sys type=kernel &amp;&amp; sc.exe start WinIO32A.sys
 ```
 
 | Use Case | Privileges | Operating System | 

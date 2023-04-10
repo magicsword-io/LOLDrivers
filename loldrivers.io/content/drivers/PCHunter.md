@@ -30,8 +30,7 @@ PCHunter.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create PCHunter.sys binPath=C:\windows\temp\PCHunter.sys type=kernel
-sc.exe start PCHunter.sys
+sc.exe create PCHunter.sys binPath=C:\windows\temp\PCHunter.sys type=kernel &amp;&amp; sc.exe start PCHunter.sys
 ```
 
 | Use Case | Privileges | Operating System | 

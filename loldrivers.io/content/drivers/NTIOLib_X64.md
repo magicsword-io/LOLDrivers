@@ -25,8 +25,7 @@ NTIOLib_X64.sys is a vulnerable driver and more information will be added as fou
 ### Commands
 
 ```
-sc.exe create NTIOLib_X64.sys binPath=C:\windows\temp\NTIOLib_X64.sys type=kernel
-sc.exe start NTIOLib_X64.sys
+sc.exe create NTIOLib_X64.sys binPath=C:\windows\temp\NTIOLib_X64.sys     type=kernel type=kernel &amp;&amp; sc.exe start NTIOLib_X64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

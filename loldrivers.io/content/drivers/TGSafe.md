@@ -30,8 +30,7 @@ TGSafe.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create TGSafe.sys binPath=C:\windows\temp\TGSafe.sys type=kernel
-sc.exe start TGSafe.sys
+sc.exe create TGSafe.sys binPath=C:\windows\temp\TGSafe.sys type=kernel &amp;&amp; sc.exe start TGSafe.sys
 ```
 
 | Use Case | Privileges | Operating System | 

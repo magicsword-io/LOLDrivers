@@ -25,8 +25,7 @@ AsrDrv102.sys is a vulnerable driver and more information will be added as found
 ### Commands
 
 ```
-sc.exe create AsrDrv102.sys binPath=C:\windows\temp\AsrDrv102.sys type=kernel
-sc.exe start AsrDrv102.sys
+sc.exe create AsrDrv102.sys binPath=C:\windows\temp\AsrDrv102.sys type=kernel &amp;&amp; sc.exe start AsrDrv102.sys
 ```
 
 | Use Case | Privileges | Operating System | 

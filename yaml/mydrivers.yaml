@@ -5,9 +5,8 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'FALSE'
 Commands:
-  Command: 'sc.exe create mydrivers.sys binPath=C:\windows\temp\mydrivers.sys type=kernel
-
-    sc.exe start mydrivers.sys'
+  Command: 'sc.exe create mydrivers.sys binPath=C:\windows\temp\mydrivers.sys type=kernel 
+ && sc.exe start mydrivers.sys'
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
@@ -37,3 +36,4 @@ KnownVulnerableSamples:
   FileVersion: ''
   MachineType: ''
   OriginalFilename: ''
+

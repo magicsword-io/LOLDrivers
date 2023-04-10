@@ -25,8 +25,7 @@ CVE-2018-16712
 ### Commands
 
 ```
-sc.exe create Monitor_win10_x64.sys binPath=C:\windows\temp\Monitor_win10_x64.sys type=kernel
-sc.exe start Monitor_win10_x64.sys
+sc.exe create Monitor_win10_x64.sys binPath=C:\windows\temp\Monitor_win10_x64.sys     type=kernel type=kernel &amp;&amp; sc.exe start Monitor_win10_x64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

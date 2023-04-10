@@ -25,8 +25,7 @@ driver7-x64.sys is a vulnerable driver and more information will be added as fou
 ### Commands
 
 ```
-sc.exe create driver7-x64.sys binPath=C:\windows\temp\driver7-x64.sys type=kernel
-sc.exe start driver7-x64.sys
+sc.exe create driver7-x64.sys binPath=C:\windows\temp\driver7-x64.sys     type=kernel type=kernel &amp;&amp; sc.exe start driver7-x64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

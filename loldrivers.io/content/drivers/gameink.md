@@ -30,8 +30,7 @@ gameink.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create gameink.sys binPath=C:\windows\temp\gameink.sys type=kernel
-sc.exe start gameink.sys
+sc.exe create gameink.sys binPath=C:\windows\temp\gameink.sys type=kernel &amp;&amp; sc.exe start gameink.sys
 ```
 
 | Use Case | Privileges | Operating System | 

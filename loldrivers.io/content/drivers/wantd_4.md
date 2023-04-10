@@ -25,8 +25,7 @@ Driver used in the Daxin malware campaign.
 ### Commands
 
 ```
-sc.exe create wantd_4.sys binPath=C:\windows\temp\wantd_4.sys type=kernel
-sc.exe start wantd_4.sys
+sc.exe create wantd_4.sys binPath=C:\windows\temp\wantd_4.sys type=kernel &amp;&amp; sc.exe start wantd_4.sys
 ```
 
 | Use Case | Privileges | Operating System | 

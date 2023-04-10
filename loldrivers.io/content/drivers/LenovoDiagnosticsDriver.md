@@ -30,8 +30,7 @@ LenovoDiagnosticsDriver.sys is a vulnerable driver and more information will be 
 ### Commands
 
 ```
-sc.exe create LenovoDiagnosticsDriver.sys binPath=C:\windows\temp\LenovoDiagnosticsDriver.sys type=kernel
-sc.exe start LenovoDiagnosticsDriver.sys
+sc.exe create LenovoDiagnosticsDriver.sys binPath=C:\windows\temp\LenovoDiagnosticsDriver.sys     type=kernel type=kernel &amp;&amp; sc.exe start LenovoDiagnosticsDriver.sys
 ```
 
 | Use Case | Privileges | Operating System | 

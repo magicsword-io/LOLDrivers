@@ -25,8 +25,7 @@ iomem64.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create iomem64.sys binPath=C:\windows\temp\iomem64.sys type=kernel
-sc.exe start iomem64.sys
+sc.exe create iomem64.sys binPath=C:\windows\temp\iomem64.sys type=kernel &amp;&amp; sc.exe start iomem64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

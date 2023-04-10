@@ -25,8 +25,7 @@ OpenLibSys.sys is a vulnerable driver and more information will be added as foun
 ### Commands
 
 ```
-sc.exe create OpenLibSys.sys binPath=C:\windows\temp\OpenLibSys.sys type=kernel
-sc.exe start OpenLibSys.sys
+sc.exe create OpenLibSys.sys binPath=C:\windows\temp\OpenLibSys.sys type=kernel &amp;&amp; sc.exe start OpenLibSys.sys
 ```
 
 | Use Case | Privileges | Operating System | 

@@ -25,8 +25,7 @@ CITMDRV_IA64.sys is a vulnerable driver and more information will be added as fo
 ### Commands
 
 ```
-sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys type=kernel
-sc.exe start CITMDRV_IA64.sys
+sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type=kernel type=kernel &amp;&amp; sc.exe start CITMDRV_IA64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

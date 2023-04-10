@@ -25,8 +25,7 @@ LHA.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create LHA.sys binPath=C:\windows\temp\LHA.sys type=kernel
-sc.exe start LHA.sys
+sc.exe create LHA.sys binPath=C:\windows\temp\LHA.sys type=kernel &amp;&amp; sc.exe start LHA.sys
 ```
 
 | Use Case | Privileges | Operating System | 

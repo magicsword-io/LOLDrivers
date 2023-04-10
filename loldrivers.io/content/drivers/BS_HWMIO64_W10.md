@@ -25,8 +25,7 @@ BS_HWMIO64_W10.sys is a vulnerable driver and more information will be added as 
 ### Commands
 
 ```
-sc.exe create BS_HWMIO64_W10.sys binPath=C:\windows\temp\BS_HWMIO64_W10.sys type=kernel
-sc.exe start BS_HWMIO64_W10.sys
+sc.exe create BS_HWMIO64_W10.sys binPath=C:\windows\temp\BS_HWMIO64_W10.sys     type=kernel type=kernel &amp;&amp; sc.exe start BS_HWMIO64_W10.sys
 ```
 
 | Use Case | Privileges | Operating System | 

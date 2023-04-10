@@ -5,9 +5,8 @@ MitreID: T1068
 Category: malicious
 Verified: 'TRUE'
 Commands:
-  Command: 'sc.exe create 4.sys binPath=C:\windows\temp\4.sys type=kernel
-
-    sc.exe start 4.sys'
+  Command: 'sc.exe create 4.sys binPath=C:\windows\temp\4.sys type=kernel 
+ && sc.exe start 4.sys'
   Description: "SentinelOne has observed prominent threat actors abusing legitimately\
     \ signed Microsoft drivers in active intrusions into telecommunication, BPO, MSSP,\
     \ and financial services businesses.\nInvestigations into these intrusions led\
@@ -45,3 +44,4 @@ KnownVulnerableSamples:
   FileVersion: ''
   MachineType: ''
   OriginalFilename: ''
+

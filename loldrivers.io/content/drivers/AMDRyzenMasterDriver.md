@@ -25,8 +25,7 @@ AMDRyzenMasterDriver.sys is a vulnerable driver and more information will be add
 ### Commands
 
 ```
-sc.exe create AMDRyzenMasterDriver.sys binPath=C:\windows\temp\AMDRyzenMasterDriver.sys type=kernel
-sc.exe start AMDRyzenMasterDriver.sys
+sc.exe create AMDRyzenMasterDriver.sys binPath=C:\windows\temp\AMDRyzenMasterDriver.sys     type=kernel type=kernel &amp;&amp; sc.exe start AMDRyzenMasterDriver.sys
 ```
 
 | Use Case | Privileges | Operating System | 

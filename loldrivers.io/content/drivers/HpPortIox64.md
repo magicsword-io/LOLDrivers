@@ -25,8 +25,7 @@ HpPortIox64.sys is a vulnerable driver and more information will be added as fou
 ### Commands
 
 ```
-sc.exe create HpPortIox64.sys binPath=C:\windows\temp\HpPortIox64.sys type=kernel
-sc.exe start HpPortIox64.sys
+sc.exe create HpPortIox64.sys binPath=C:\windows\temp\HpPortIox64.sys     type=kernel type=kernel &amp;&amp; sc.exe start HpPortIox64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

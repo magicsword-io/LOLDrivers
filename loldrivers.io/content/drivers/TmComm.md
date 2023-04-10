@@ -25,8 +25,7 @@ TmComm.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create TmComm.sys binPath=C:\windows\temp\TmComm.sys type=kernel
-sc.exe start TmComm.sys
+sc.exe create TmComm.sys binPath=C:\windows\temp\TmComm.sys type=kernel &amp;&amp; sc.exe start TmComm.sys
 ```
 
 | Use Case | Privileges | Operating System | 

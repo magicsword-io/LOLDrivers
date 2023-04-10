@@ -30,8 +30,7 @@ mhyprot3.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel
-sc.exe start mhyprot3.sys
+sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp;&amp; sc.exe start mhyprot3.sys
 ```
 
 | Use Case | Privileges | Operating System | 

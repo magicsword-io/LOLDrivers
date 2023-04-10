@@ -25,8 +25,7 @@ Dh_Kernel_10.sys is a vulnerable driver and more information will be added as fo
 ### Commands
 
 ```
-sc.exe create Dh_Kernel_10.sys binPath=C:\windows\temp\Dh_Kernel_10.sys type=kernel
-sc.exe start Dh_Kernel_10.sys
+sc.exe create Dh_Kernel_10.sys binPath=C:\windows\temp\Dh_Kernel_10.sys     type=kernel type=kernel &amp;&amp; sc.exe start Dh_Kernel_10.sys
 ```
 
 | Use Case | Privileges | Operating System | 

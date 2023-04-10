@@ -25,8 +25,7 @@ gdrv.sys is vulnerable to multiple CVEs: CVE-2018-19320, CVE-2018-19322, CVE-201
 ### Commands
 
 ```
-sc.exe create gdrv.sys binPath=C:\windows\temp\gdrv.sys type=kernel
-sc.exe start gdrv.sys
+sc.exe create gdrv.sys binPath=C:\windows\temp\gdrv.sys type=kernel &amp;&amp; sc.exe start gdrv.sys
 ```
 
 | Use Case | Privileges | Operating System | 

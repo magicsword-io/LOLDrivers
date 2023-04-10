@@ -30,8 +30,7 @@ otipcibus.sys is a vulnerable driver and more information will be added as found
 ### Commands
 
 ```
-sc.exe create otipcibus.sys binPath=C:\windows\temp\otipcibus.sys type=kernel
-sc.exe start otipcibus.sys
+sc.exe create otipcibus.sys binPath=C:\windows\temp\otipcibus.sys type=kernel &amp;&amp; sc.exe start otipcibus.sys
 ```
 
 | Use Case | Privileges | Operating System | 

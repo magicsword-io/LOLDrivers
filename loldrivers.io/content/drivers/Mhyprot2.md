@@ -25,8 +25,7 @@ Mhyprot2.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create Mhyprot2.sys binPath=C:\windows\temp\Mhyprot2.sys type=kernel
-sc.exe start Mhyprot2.sys
+sc.exe create Mhyprot2.sys binPath=C:\windows\temp\Mhyprot2.sys type=kernel &amp;&amp; sc.exe start Mhyprot2.sys
 ```
 
 | Use Case | Privileges | Operating System | 

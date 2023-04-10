@@ -30,8 +30,7 @@ AsrSetupDrv103.sys is a vulnerable driver and more information will be added as 
 ### Commands
 
 ```
-sc.exe create AsrSetupDrv103.sys binPath=C:\windows\temp\AsrSetupDrv103.sys type=kernel
-sc.exe start AsrSetupDrv103.sys
+sc.exe create AsrSetupDrv103.sys binPath=C:\windows\temp\AsrSetupDrv103.sys     type=kernel type=kernel &amp;&amp; sc.exe start AsrSetupDrv103.sys
 ```
 
 | Use Case | Privileges | Operating System | 

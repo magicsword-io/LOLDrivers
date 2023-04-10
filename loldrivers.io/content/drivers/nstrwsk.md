@@ -30,8 +30,7 @@ nstrwsk.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create nstrwsk.sys binPath=C:\windows\temp\nstrwsk.sys type=kernel
-sc.exe start nstrwsk.sys
+sc.exe create nstrwsk.sys binPath=C:\windows\temp \n \n \n  strwsk.sys type=kernel &amp;&amp; sc.exe start nstrwsk.sys
 ```
 
 | Use Case | Privileges | Operating System | 

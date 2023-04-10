@@ -25,8 +25,7 @@ HwRwDrv.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create HwRwDrv.sys binPath=C:\windows\temp\HwRwDrv.sys type=kernel
-sc.exe start HwRwDrv.sys
+sc.exe create HwRwDrv.sys binPath=C:\windows\temp\HwRwDrv.sys type=kernel &amp;&amp; sc.exe start HwRwDrv.sys
 ```
 
 | Use Case | Privileges | Operating System | 

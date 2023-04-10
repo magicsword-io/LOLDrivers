@@ -25,8 +25,7 @@ The first in-the-wild UEFI bootkit bypassing UEFI Secure Boot on fully updated U
 ### Commands
 
 ```
-sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sys type=kernel
-sc.exe start blacklotus_driver.sys
+sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sys type=kernel &amp;&amp; sc.exe start blacklotus_driver.sys
 ```
 
 | Use Case | Privileges | Operating System | 

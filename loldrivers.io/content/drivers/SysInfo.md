@@ -25,8 +25,7 @@ SysInfo.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create SysInfo.sys binPath=C:\windows\temp\SysInfo.sys type=kernel
-sc.exe start SysInfo.sys
+sc.exe create SysInfo.sys binPath=C:\windows\temp\SysInfo.sys type=kernel &amp;&amp; sc.exe start SysInfo.sys
 ```
 
 | Use Case | Privileges | Operating System | 

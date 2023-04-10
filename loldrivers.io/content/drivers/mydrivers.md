@@ -30,8 +30,7 @@ mydrivers.sys is a vulnerable driver and more information will be added as found
 ### Commands
 
 ```
-sc.exe create mydrivers.sys binPath=C:\windows\temp\mydrivers.sys type=kernel
-sc.exe start mydrivers.sys
+sc.exe create mydrivers.sys binPath=C:\windows\temp\mydrivers.sys type=kernel &amp;&amp; sc.exe start mydrivers.sys
 ```
 
 | Use Case | Privileges | Operating System | 

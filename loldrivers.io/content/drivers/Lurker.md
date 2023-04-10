@@ -30,8 +30,7 @@ Lurker.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create Lurker.sys binPath=C:\windows\temp\Lurker.sys type=kernel
-sc.exe start Lurker.sys
+sc.exe create Lurker.sys binPath=C:\windows\temp\Lurker.sys type=kernel &amp;&amp; sc.exe start Lurker.sys
 ```
 
 | Use Case | Privileges | Operating System | 

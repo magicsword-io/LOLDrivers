@@ -25,8 +25,7 @@ VProEventMonitor.sys is a vulnerable driver and more information will be added a
 ### Commands
 
 ```
-sc.exe create VProEventMonitor.sys binPath=C:\windows\temp\VProEventMonitor.sys type=kernel
-sc.exe start VProEventMonitor.sys
+sc.exe create VProEventMonitor.sys binPath=C:\windows\temp\VProEventMonitor.sys     type=kernel type=kernel &amp;&amp; sc.exe start VProEventMonitor.sys
 ```
 
 | Use Case | Privileges | Operating System | 

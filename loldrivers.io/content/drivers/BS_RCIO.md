@@ -30,8 +30,7 @@ BS_RCIO.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create BS_RCIO.sys binPath=C:\windows\temp\BS_RCIO.sys type=kernel
-sc.exe start BS_RCIO.sys
+sc.exe create BS_RCIO.sys binPath=C:\windows\temp\BS_RCIO.sys type=kernel &amp;&amp; sc.exe start BS_RCIO.sys
 ```
 
 | Use Case | Privileges | Operating System | 

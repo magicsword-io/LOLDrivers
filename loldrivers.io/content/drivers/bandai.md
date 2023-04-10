@@ -30,8 +30,7 @@ bandai.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create bandai.sys binPath=C:\windows\temp\bandai.sys type=kernel
-sc.exe start bandai.sys
+sc.exe create bandai.sys binPath=C:\windows\temp\bandai.sys type=kernel &amp;&amp; sc.exe start bandai.sys
 ```
 
 | Use Case | Privileges | Operating System | 

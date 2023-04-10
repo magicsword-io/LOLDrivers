@@ -25,8 +25,7 @@ Driver categorized as POORTRY by Mandiant.
 ### Commands
 
 ```
-sc.exe create NodeDriver.sys binPath=C:\windows\temp\NodeDriver.sys type=kernel
-sc.exe start NodeDriver.sys
+sc.exe create NodeDriver.sys binPath=C:\windows\temp\NodeDriver.sys type=kernel &amp;&amp; sc.exe start NodeDriver.sys
 ```
 
 | Use Case | Privileges | Operating System | 

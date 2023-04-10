@@ -25,8 +25,7 @@ aswVmm.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create aswVmm.sys binPath=C:\windows\temp\aswVmm.sys type=kernel
-sc.exe start aswVmm.sys
+sc.exe create aswVmm.sys binPath=C:\windows\temp\aswVmm.sys type=kernel &amp;&amp; sc.exe start aswVmm.sys
 ```
 
 | Use Case | Privileges | Operating System | 

@@ -30,8 +30,7 @@ nstr.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create nstr.sys binPath=C:\windows\temp\nstr.sys type=kernel
-sc.exe start nstr.sys
+sc.exe create nstr.sys binPath=C:\windows\temp \n \n \n  str.sys type=kernel &amp;&amp; sc.exe start nstr.sys
 ```
 
 | Use Case | Privileges | Operating System | 

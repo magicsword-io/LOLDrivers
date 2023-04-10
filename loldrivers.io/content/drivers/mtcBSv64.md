@@ -25,8 +25,7 @@ mtcBSv64.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create mtcBSv64.sys binPath=C:\windows\temp\mtcBSv64.sys type=kernel
-sc.exe start mtcBSv64.sys
+sc.exe create mtcBSv64.sys binPath=C:\windows\temp\mtcBSv64.sys type=kernel &amp;&amp; sc.exe start mtcBSv64.sys
 ```
 
 | Use Case | Privileges | Operating System | 

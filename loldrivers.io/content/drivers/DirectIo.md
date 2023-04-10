@@ -30,8 +30,7 @@ DirectIo.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create DirectIo.sys binPath=C:\windows\temp\DirectIo.sys type=kernel
-sc.exe start DirectIo.sys
+sc.exe create DirectIo.sys binPath=C:\windows\temp\DirectIo.sys type=kernel &amp;&amp; sc.exe start DirectIo.sys
 ```
 
 | Use Case | Privileges | Operating System | 

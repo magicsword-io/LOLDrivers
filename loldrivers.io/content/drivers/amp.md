@@ -25,8 +25,7 @@ amp.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create amp.sys binPath=C:\windows\temp\amp.sys type=kernel
-sc.exe start amp.sys
+sc.exe create amp.sys binPath=C:\windows\temp\amp.sys type=kernel &amp;&amp; sc.exe start amp.sys
 ```
 
 | Use Case | Privileges | Operating System | 

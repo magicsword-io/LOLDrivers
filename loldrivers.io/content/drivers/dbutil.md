@@ -30,8 +30,7 @@ dbutil.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create dbutil.sys binPath=C:\windows\temp\dbutil.sys type=kernel
-sc.exe start dbutil.sys
+sc.exe create dbutil.sys binPath=C:\windows\temp\dbutil.sys type=kernel &amp;&amp; sc.exe start dbutil.sys
 ```
 
 | Use Case | Privileges | Operating System | 

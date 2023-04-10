@@ -30,8 +30,7 @@ ASIO32.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create ASIO32.sys binPath=C:\windows\temp\ASIO32.sys type=kernel
-sc.exe start ASIO32.sys
+sc.exe create ASIO32.sys binPath=C:\windows\temp\ASIO32.sys type=kernel &amp;&amp; sc.exe start ASIO32.sys
 ```
 
 | Use Case | Privileges | Operating System | 

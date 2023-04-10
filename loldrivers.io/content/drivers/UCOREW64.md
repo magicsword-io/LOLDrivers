@@ -25,8 +25,7 @@ UCOREW64.SYS is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create UCOREW64.SYS binPath=C:\windows\temp\UCOREW64.SYS type=kernel
-sc.exe start UCOREW64.SYS
+sc.exe create UCOREW64.SYS binPath=C:\windows\temp\UCOREW64.SYS type=kernel &amp;&amp; sc.exe start UCOREW64.SYS
 ```
 
 | Use Case | Privileges | Operating System | 

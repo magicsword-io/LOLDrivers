@@ -25,8 +25,7 @@ A vulnerability exists in the latest version of Razer Synapse (v2.20.15.1104 as 
 ### Commands
 
 ```
-sc.exe create rzpnk.sys binPath=C:\windows\temp\rzpnk.sys type=kernel
-sc.exe start rzpnk.sys
+sc.exe create rzpnk.sys binPath=C:\windows\temp\rzpnk.sys type=kernel &amp;&amp; sc.exe start rzpnk.sys
 ```
 
 | Use Case | Privileges | Operating System | 

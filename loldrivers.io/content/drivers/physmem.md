@@ -25,8 +25,7 @@ physmem.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create physmem.sys binPath=C:\windows\temp\physmem.sys type=kernel
-sc.exe start physmem.sys
+sc.exe create physmem.sys binPath=C:\windows\temp\physmem.sys type=kernel &amp;&amp; sc.exe start physmem.sys
 ```
 
 | Use Case | Privileges | Operating System | 

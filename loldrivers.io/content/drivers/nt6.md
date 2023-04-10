@@ -30,8 +30,7 @@ nt6.sys is a vulnerable driver and more information will be added as found.
 ### Commands
 
 ```
-sc.exe create nt6.sys binPath=C:\windows\temp\nt6.sys type=kernel
-sc.exe start nt6.sys
+sc.exe create nt6.sys binPath=C:\windows\temp \n \n \n  t6.sys type=kernel &amp;&amp; sc.exe start nt6.sys
 ```
 
 | Use Case | Privileges | Operating System | 

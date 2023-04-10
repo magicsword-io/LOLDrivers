@@ -25,8 +25,7 @@ WinRing0x64.sys is a vulnerable driver and more information will be added as fou
 ### Commands
 
 ```
-sc.exe create WinRing0x64.sys binPath=C:\windows\temp\WinRing0x64.sys type=kernel
-sc.exe start WinRing0x64.sys
+sc.exe create WinRing0x64.sys binPath=C:\windows\temp\WinRing0x64.sys     type=kernel type=kernel &amp;&amp; sc.exe start WinRing0x64.sys
 ```
 
 | Use Case | Privileges | Operating System | 
