@@ -5,8 +5,8 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'FALSE'
 Commands:
-  Command: 'sc.exe create mydrivers.sys binPath=C:\windows\temp\mydrivers.sys type=kernel 
- && sc.exe start mydrivers.sys'
+  Command: sc.exe create mydrivers.sys binPath=C:\windows\temp\mydrivers.sys type=kernel
+    && sc.exe start mydrivers.sys
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
@@ -29,11 +29,87 @@ KnownVulnerableSamples:
   - VeriSign
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
-
+  Company: MyDrivers.com
+  Description: DriverGenius Hardware monitor
+  Product: DriverGenius
+  ProductVersion: 2016.7.7.1214
+  FileVersion: 9.2.707.1214
+  MachineType: I386
+  OriginalFilename: mydrivers.sys
+  Authentihash:
+    MD5: 74a1e675b4fd736298bc24d082684b0e
+    SHA1: c57e38ce02ba45c3ad886faff98fe346560b1f5e
+    SHA256: a689804c4e6e9aa07d48f9c99b7a1be6b05cba1c632b1a083b8031f6e1651c28
+  InternalName: HWM
+  Copyright: Copyright MyDrivers.com all right
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WRITE_REGISTER_BUFFER_USHORT
+  - WRITE_REGISTER_BUFFER_ULONG
+  - IofCompleteRequest
+  - WRITE_REGISTER_BUFFER_UCHAR
+  - IoCreateDevice
+  - KeTickCount
+  - MmMapIoSpace
+  - READ_REGISTER_BUFFER_ULONG
+  - READ_REGISTER_BUFFER_USHORT
+  - READ_REGISTER_BUFFER_UCHAR
+  - MmUnmapIoSpace
+  - RtlInitUnicodeString
+  - IoDeleteSymbolicLink
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - RtlUnwind
+  - KeBugCheckEx
+  - HalGetBusDataByOffset
+  - WRITE_PORT_ULONG
+  - WRITE_PORT_USHORT
+  - WRITE_PORT_UCHAR
+  - READ_PORT_ULONG
+  - READ_PORT_USHORT
+  - READ_PORT_UCHAR
+  - HalSetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=CN, ST=BeiJing, L=BeiJing, O=Beijing Kingsoft Security software Co.,Ltd,
+        OU=OPS, CN=Beijing Kingsoft Security software Co.,Ltd
+      ValidFrom: '2015-12-22 00:00:00'
+      ValidTo: '2017-02-19 23:59:59'
+      Signature: 4eddc641407750a5260530bf6d19afcce9c2b4f8aef8a03486e9622e51669745b3d7d5120b61abac108ede47697e58e0dd0b0d5d688831194584a6a1f3c97096a911e4a1aac543bdb073d20de64425e940f6311a69578bffae7f7499e857c990e07be4126efca2d85f12b01760e6225d1c9e364d8dca8863975c164d84a07716d738ec322c7b37a3945bbf3c5667c71ef27c44da856356f606c067811a11da51647286c76b0519dfa117193d7f9556a8f0a186bafa4755f4eb5b598e04e6756952b7d0a8147f8cc70219bc4ec419cb2af59c3dcff5f935749c6079e6ab47cc7a4008b630c2ece745f71b8767668afaabd57a8706e4500ca53838d7ab098d38b9
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    Signer:
+    - SerialNumber: 6e744ece6b39ec11594755543471d551
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA

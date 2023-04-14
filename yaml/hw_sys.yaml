@@ -5,8 +5,8 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'FALSE'
 Commands:
-  Command: 'sc.exe create hw_sys binPath=C:\windows\temp\hw_sys type=kernel 
- && sc.exe start hw_sys'
+  Command: sc.exe create hw_sys binPath=C:\windows\temp\hw_sys type=kernel && sc.exe
+    start hw_sys
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
@@ -30,11 +30,127 @@ KnownVulnerableSamples:
   - GlobalSign Root CA - R1
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
-
+  Company: Marvin Test Solutions, Inc.
+  Description: HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI
+    access
+  Product: HW
+  ProductVersion: 4.9.8.0
+  FileVersion: 4.9.8.0
+  MachineType: I386
+  OriginalFilename: HW.sys
+  Authentihash:
+    MD5: 6eafc9b68f2047adf6879e955d3b69e8
+    SHA1: 8a6d85617bc601b818ddf1b8e8d5db6cf7ae31c1
+    SHA256: 615a7c647eba3f2dcea463d5705d5d59ca70b4250f895ad20ce6876076a8fa28
+  InternalName: Hw.sys
+  Copyright: "Copyright \xA9 1996-2021 Marvin Test Solutions, Inc. All Rights Reserved."
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - PsGetCurrentProcessId
+  - KeInitializeDpc
+  - MmGetSystemRoutineAddress
+  - IoDeleteDevice
+  - IoCreateSymbolicLink
+  - KeInitializeMutex
+  - IoCreateDevice
+  - IoDeleteSymbolicLink
+  - memcpy
+  - PsGetVersion
+  - ZwUnmapViewOfSection
+  - ZwMapViewOfSection
+  - ObReferenceObjectByHandle
+  - ZwOpenSection
+  - IoFreeMdl
+  - MmMapLockedPages
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - MmMapIoSpace
+  - MmUnmapLockedPages
+  - MmUnmapIoSpace
+  - IoGetDmaAdapter
+  - IofCallDriver
+  - IoBuildSynchronousFsdRequest
+  - ZwOpenProcess
+  - KeInitializeEvent
+  - ObfDereferenceObject
+  - ExAllocatePoolWithTag
+  - ObReferenceObjectByName
+  - IoDriverObjectType
+  - IofCompleteRequest
+  - WRITE_REGISTER_BUFFER_ULONG
+  - WRITE_REGISTER_BUFFER_USHORT
+  - WRITE_REGISTER_BUFFER_UCHAR
+  - WRITE_REGISTER_ULONG
+  - WRITE_REGISTER_USHORT
+  - WRITE_REGISTER_UCHAR
+  - READ_REGISTER_BUFFER_ULONG
+  - READ_REGISTER_BUFFER_USHORT
+  - READ_REGISTER_BUFFER_UCHAR
+  - READ_REGISTER_ULONG
+  - READ_REGISTER_USHORT
+  - READ_REGISTER_UCHAR
+  - IoConnectInterrupt
+  - IoDisconnectInterrupt
+  - KeReleaseInterruptSpinLock
+  - KeAcquireInterruptSpinLock
+  - ExEventObjectType
+  - KeDelayExecutionThread
+  - KeInsertQueueDpc
+  - ZwClose
+  - KeSetEvent
+  - IoCreateNotificationEvent
+  - KeClearEvent
+  - RtlQueryRegistryValues
+  - RtlAppendUnicodeStringToString
+  - RtlInitUnicodeString
+  - memset
+  - ExFreePoolWithTag
+  - IoGetDeviceProperty
+  - ExAllocatePool
+  - READ_PORT_UCHAR
+  - READ_PORT_USHORT
+  - READ_PORT_ULONG
+  - READ_PORT_BUFFER_UCHAR
+  - READ_PORT_BUFFER_USHORT
+  - READ_PORT_BUFFER_ULONG
+  - WRITE_PORT_UCHAR
+  - WRITE_PORT_USHORT
+  - WRITE_PORT_ULONG
+  - WRITE_PORT_BUFFER_UCHAR
+  - WRITE_PORT_BUFFER_USHORT
+  - WRITE_PORT_BUFFER_ULONG
+  - HalAssignSlotResources
+  - HalTranslateBusAddress
+  - HalGetBusDataByOffset
+  - HalGetInterruptVector
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: OU=GlobalSign Root CA , R3, O=GlobalSign, CN=GlobalSign
+      ValidFrom: '2018-09-19 00:00:00'
+      ValidTo: '2028-01-28 12:00:00'
+      Signature: 2370e9cfe2bef559ae94426fc44333aacd3f3ab96417f262064b48f140880617a1feabd15f3cc633f2f38edd1f1d3ecc1a6099820bacc7fc7e9a872aa57d0fa657eeac3b6a85d6debd4063f8ada6c888b012fcf641df0f09971e38ea539fbe05f43eead39f501276be098bc20b487d1e2e51f68d53d3ab1f401b8a8eed7dfb4f7956705f0cd38e1bb3a7700d372b9795abdae0126b1c40cec5c77eedc26258ec77ed7322c28af5864388adea136efdd8fe422fb97d5ead18ef9490ca3d27ab26949975c7cbd37bf7ca4cd3af5121925b847d2b9f153f74cb51e89e830e166f1be746ce23bdf9e4a28bd2396baa791c912ce261242d8e2a487090c41ec5e8e070
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
+        CA , SHA256 , G3
+      ValidFrom: '2016-06-15 00:00:00'
+      ValidTo: '2024-06-15 00:00:00'
+      Signature: 7609c4cc2fd9ef1e4ba9f857f3403921ca4c3c1d9e292b20d42b44d288ce1a0d05cf8381bbeb69bc318d2ac4c744cc6060941ccfa1e102240ead5bbe2cc2271e67b7e8281f3251e339f398dfb89f2e8b2ab47b0a03bcbd36048fc9d09c4fa3022799b0f045e934dfe43aa3b70637d86f2a7990d4d44e5871ec53a96198f73969e0129c575872862729a51de532f32b99975abf2bb03cb406ea0e64ecb7cd65802417c2d937f5b1261035477b9a02ba54a24593ff79bf1a8cc59fb59fdf78e76b50f14794694b24b8da05e80c9d4f06ec4a31207e4f5d86842f35a3cd9cc184571f1fadc0e2a4b1ef296b2197a6d4feed0337b0fcf58d2abcdc8483e3dec3e75f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    - Subject: ??=Private Organization, serialNumber=2147696, ??=US, ??=DELAWARE,
+        C=US, ST=CA, L=Irvine, ??=1770 Kettering, O=Marvin Test Solutions, Inc., CN=Marvin
+        Test Solutions, Inc.
+      ValidFrom: '2019-07-29 13:20:49'
+      ValidTo: '2022-07-29 13:20:49'
+      Signature: 278a08ea60d9c1c18b2b6f4f1913860edab3f46bc0945c57e099d37309bab4bbf99feec663d1dc2ef68152baa6e95b0da0e4fdb7793c2c7e779dd7206ad76432f28af41448200c079a9ffe26c8355134d71fb598f08e3864416a1925d5253f2344208a90d8b42790191581c112c3145e23fa979ec06f41cb559ad4e4d60cf549598f3746673c745a3a82e2525c9704adaa59d987ddf6a89641378a558686ca78f920cf1c975508f3943ff6df3aae70f9c5fb1db61134ad5b8d0f455e8483ad250403160b984a4fef6b0baed3cb129c953451c23a4bb9a37c762f286e8bb57049c50c4e06fb17e3fc2e6fcd4dffde6e3ee0ad173b19a9862bae7c921c8976344b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    Signer:
+    - SerialNumber: 716ef836a8ceb23aeaf9174e
+      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
+        CA , SHA256 , G3

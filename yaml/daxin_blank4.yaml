@@ -5,9 +5,8 @@ MitreID: T1068
 Category: malicious
 Verified: 'TRUE'
 Commands:
-  Command: 'sc.exe create daxin_blank4.sys binPath=C:\windows\temp\daxin_blank4.sys     type=kernel
-type=kernel
- && sc.exe start daxin_blank4.sys'
+  Command: sc.exe create daxin_blank4.sys binPath=C:\windows\temp\daxin_blank4.sys     type=kernel
+    type=kernel && sc.exe start daxin_blank4.sys
   Description: Driver used in the Daxin malware campaign.
   Usecase: Elevate privileges
   Privileges: kernel
@@ -28,11 +27,117 @@ KnownVulnerableSamples:
   Signature: Unsigned
   Date: 8:42 AM 4/20/2010
   Publisher: n/a
-  Company: n/a
-  Description: n/a
-  Product: n/a
-  ProductVersion: n/a
-  FileVersion: n/a
-  MachineType: 32-bit
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: I386
   OriginalFilename: ''
-
+  Authentihash:
+    MD5: f66f4d6b97b9e7b0e467daed2ed69bed
+    SHA1: c8f227b45d27c43db4b661ef610efbfacfda8a75
+    SHA256: 15b081ec83a89182b5bb0a642d56513f40810b5b0a42e904ab6d3fa8f34c0446
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - NTOSKRNL.EXE
+  - HAL.DLL
+  - ntoskrnl.exe
+  - NDIS.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - strlen
+  - IoFreeMdl
+  - MmMapLockedPagesSpecifyCache
+  - ZwClose
+  - IofCompleteRequest
+  - KeResetEvent
+  - InterlockedIncrement
+  - KeSetEvent
+  - InterlockedDecrement
+  - RtlUnicodeStringToInteger
+  - RtlInitUnicodeString
+  - KeInitializeEvent
+  - wcsncmp
+  - wcscat
+  - wcslen
+  - wcscpy
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - strncmp
+  - MmMapLockedPages
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - MmUnmapLockedPages
+  - RtlFreeUnicodeString
+  - ZwWriteFile
+  - ZwCreateFile
+  - RtlAnsiStringToUnicodeString
+  - strcat
+  - ZwReadFile
+  - ZwQueryInformationFile
+  - _wcsnicmp
+  - strcmp
+  - _stricmp
+  - MmGetSystemRoutineAddress
+  - ZwQueryValueKey
+  - ZwOpenKey
+  - IoCreateFile
+  - KeWaitForMultipleObjects
+  - strcpy
+  - RtlUnwind
+  - vsprintf
+  - KeWaitForSingleObject
+  - KeDelayExecutionThread
+  - PsTerminateSystemThread
+  - PsCreateSystemThread
+  - ObReferenceObjectByHandle
+  - ExFreePool
+  - KeInitializeSpinLock
+  - KeTickCount
+  - memset
+  - memcpy
+  - RtlCompareUnicodeString
+  - ExAllocatePoolWithTag
+  - KfAcquireSpinLock
+  - KfReleaseSpinLock
+  - PsGetVersion
+  - ZwTerminateProcess
+  - ZwOpenProcess
+  - RtlSetDaclSecurityDescriptor
+  - RtlAddAccessAllowedAce
+  - RtlCreateAcl
+  - RtlLengthSid
+  - RtlCreateSecurityDescriptor
+  - ZwWaitForSingleObject
+  - NtFsControlFile
+  - NtWriteFile
+  - NtReadFile
+  - RtlLengthRequiredSid
+  - RtlImageDirectoryEntryToData
+  - ZwQueryInformationProcess
+  - ZwQuerySystemInformation
+  - PsLookupProcessByProcessId
+  - KeAttachProcess
+  - KeDetachProcess
+  - PsLookupThreadByThreadId
+  - KeInitializeApc
+  - KeInsertQueueApc
+  - ZwOpenFile
+  - ZwDeviceIoControlFile
+  - PsThreadType
+  - NtQuerySystemInformation
+  - NdisAllocateMemory
+  - NdisAllocatePacket
+  - NdisCopyFromPacketToPacket
+  - NdisFreePacket
+  - NdisAllocateBuffer
+  - NdisDeregisterProtocol
+  - NdisRegisterProtocol
+  - NdisAllocateBufferPool
+  - NdisAllocatePacketPool
+  - NdisFreeBufferPool
+  - NdisFreePacketPool
+  - NdisFreeMemory
+  Signatures: {}

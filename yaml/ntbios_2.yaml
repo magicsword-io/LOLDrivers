@@ -5,8 +5,8 @@ MitreID: T1068
 Category: malicious
 Verified: 'TRUE'
 Commands:
-  Command: 'sc.exe create ntbios_2.sys binPath=C:\windows\temp \n \n \n  tbios_2.sys type=kernel 
- && sc.exe start ntbios_2.sys'
+  Command: sc.exe create ntbios_2.sys binPath=C:\windows\temp \n \n \n  tbios_2.sys
+    type=kernel && sc.exe start ntbios_2.sys
   Description: Driver used in the Daxin malware campaign.
   Usecase: Elevate privileges
   Privileges: kernel
@@ -32,6 +32,80 @@ KnownVulnerableSamples:
   Product: ' Microsoft(R) Windows (R) NT Operating System'
   ProductVersion: 5, 0, 2, 1
   FileVersion: 5, 0, 2, 1
-  MachineType: 32-bit
-  OriginalFilename: ''
-
+  MachineType: I386
+  OriginalFilename: ntbios.sys
+  Authentihash:
+    MD5: a8e3b56b72814a842b557bfb6638b484
+    SHA1: 50231e21b8d8b2916d0fd53f3f58c6314473de1f
+    SHA256: 59177fb7a0b11837368af1cc115f0d011ea19551070bd153795204ae1bd12e52
+  InternalName: ntbio.sys
+  Copyright: "\u7248\u6743\u6240\u6709 (C) 2003"
+  Imports:
+  - NTOSKRNL.EXE
+  - HAL.DLL
+  - ntoskrnl.exe
+  - NDIS.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmUnlockPages
+  - MmProbeAndLockPages
+  - IoAllocateMdl
+  - IoQueueWorkItem
+  - IoAllocateWorkItem
+  - IoGetCurrentProcess
+  - _stricmp
+  - IoFreeWorkItem
+  - RtlFreeUnicodeString
+  - ZwClose
+  - ZwWriteFile
+  - ZwCreateFile
+  - RtlAnsiStringToUnicodeString
+  - _strnicmp
+  - RtlUnwind
+  - RtlCopyUnicodeString
+  - wcsncmp
+  - swprintf
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - KeInitializeSpinLock
+  - ExfInterlockedInsertTailList
+  - RtlInitUnicodeString
+  - MmMapLockedPagesSpecifyCache
+  - IoFreeMdl
+  - InterlockedDecrement
+  - InterlockedIncrement
+  - InterlockedExchange
+  - IoDeleteSymbolicLink
+  - IoDeleteDevice
+  - ExfInterlockedRemoveHeadList
+  - IofCompleteRequest
+  - ExAllocatePoolWithTag
+  - strncmp
+  - ExFreePool
+  - KfAcquireSpinLock
+  - KfReleaseSpinLock
+  - KeInitializeApc
+  - KeInsertQueueApc
+  - KeAttachProcess
+  - KeDetachProcess
+  - NtQuerySystemInformation
+  - NdisAllocatePacket
+  - NdisCopyFromPacketToPacket
+  - NdisAllocateMemory
+  - NdisFreePacket
+  - NdisAllocateBuffer
+  - NdisSetEvent
+  - NdisResetEvent
+  - NdisFreeBufferPool
+  - NdisFreePacketPool
+  - NdisFreeMemory
+  - NdisWaitEvent
+  - NdisQueryAdapterInstanceName
+  - NdisOpenAdapter
+  - NdisInitializeEvent
+  - NdisAllocatePacketPool
+  - NdisRegisterProtocol
+  - NdisAllocateBufferPool
+  - NdisCloseAdapter
+  - NdisDeregisterProtocol
+  Signatures: {}
