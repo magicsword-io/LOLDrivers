@@ -5,9 +5,8 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
-  Command: 'sc.exe create AMDPowerProfiler.sys binPath=C:\windows\temp\AMDPowerProfiler.sys     type=kernel
-type=kernel
- && sc.exe start AMDPowerProfiler.sys'
+  Command: sc.exe create AMDPowerProfiler.sys binPath=C:\windows\temp\AMDPowerProfiler.sys     type=kernel
+    type=kernel && sc.exe start AMDPowerProfiler.sys
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
@@ -31,11 +30,150 @@ KnownVulnerableSamples:
   - Sectigo (AAA)
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
-
+  Company: Advanced Micro Devices, Inc.
+  Description: AMD Power Profiling Driver
+  Product: AMD uProf
+  ProductVersion: 3.4.493.0
+  FileVersion: 6.1.0.0
+  MachineType: AMD64
+  OriginalFilename: AMDPowerProfiler.sys
+  Authentihash:
+    MD5: 7ed9c787e267b2606441010b65767771
+    SHA1: 07a5aac8abb0a85822bf792607b9e90914b454dc
+    SHA256: e1d3963c55c7ffa96d16e47ec4bbb4e171f828650ce853eb0b83c90ae9c6265a
+  InternalName: AMDPowerProfiler.sys
+  Copyright: "\xA9 2021 AMD Inc. All rights reserved."
+  Imports:
+  - AMDPCore.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - PcoreRemoveAllConfigurations
+  - PcoreIsLoaded
+  - PcoreAddConfiguration
+  - PcoreUnregister
+  - PcoreVersion
+  - PcoreRegister
+  - PcoreGetResourceCount
+  - KeGetProcessorNumberFromIndex
+  - KeInitializeDpc
+  - KeSetTargetProcessorDpcEx
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - KeQueryActiveGroupCount
+  - KeSetEvent
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - KeInitializeEvent
+  - KeWaitForSingleObject
+  - KeQueryActiveProcessorCountEx
+  - ExSystemTimeToLocalTime
+  - KeGetCurrentProcessorNumberEx
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - RtlGetVersion
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - MmUnlockPages
+  - PsRemoveLoadImageNotifyRoutine
+  - ZwOpenSection
+  - ZwUnmapViewOfSection
+  - MmProbeAndLockPages
+  - PsSetLoadImageNotifyRoutine
+  - ObfDereferenceObject
+  - IoAllocateMdl
+  - PsRemoveCreateThreadNotifyRoutine
+  - ZwMapViewOfSection
+  - ObReferenceObjectByHandle
+  - IoFreeMdl
+  - MmIsAddressValid
+  - PsSetCreateThreadNotifyRoutine
+  - PsSetCreateProcessNotifyRoutine
+  - ZwClose
+  - IoSizeofWorkItem
+  - ZwQueryVolumeInformationFile
+  - IoQueryFileDosDeviceName
+  - IoInitializeWorkItem
+  - IoQueueWorkItemEx
+  - ObfReferenceObject
+  - IoUninitializeWorkItem
+  - ZwOpenFile
+  - IoIs32bitProcess
+  - MmGetSystemRoutineAddress
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - ObOpenObjectByPointer
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - _wcsnicmp
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - ZwOpenKey
+  - ZwSetValueKey
+  - ZwQueryValueKey
+  - ZwCreateKey
+  - RtlFreeUnicodeString
+  - KeBugCheckEx
+  - KeInsertQueueDpc
+  - KeSetImportanceDpc
+  - DbgPrint
+  - MmMapLockedPagesSpecifyCache
+  - RtlIsNtDdiVersionAvailable
+  - ZwCreateFile
+  - ZwWriteFile
+  - __C_specific_handler
+  - strcmp
+  - KeQueryPerformanceCounter
+  - HalAllocateHardwareCounters
+  - HalFreeHardwareCounters
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2021
+      ValidFrom: '2021-01-01 00:00:00'
+      ValidTo: '2031-01-06 00:00:00'
+      Signature: 481cdcb5e99a23bce71ae7200e8e6746fd427251740a2347a3ab92d225c47059be14a0e52781a54d1415190779f0d104c386d93bbdfe4402664ded69a40ff6b870cf62e8f5514a7879367a27b7f3e7529f93a7ed439e7be7b4dd412289fb87a246034efcf4feb76477635f2352698382fa1a53ed90cc8da117730df4f36539704bf39cd67a7bda0cbc3d32d01bcbf561fc75080076bc810ef8c0e15ccfc41172e71b6449d8229a751542f52d323881daf460a2bab452fb5ce06124254fb2dfc929a8734351dabd63d61f5b9bf72e1b4f131df74a0d717e97b7f43f84ebc1e3a349a1facea7bf56cfba597661895f7ea7b48e6778f93698e1cb28da5b87a68a2f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Timestamping CA
+      ValidFrom: '2016-01-07 12:00:00'
+      ValidTo: '2031-01-07 12:00:00'
+      Signature: 719512e951875669cdefddda7caa637ab378cf06374084ef4b84bfcacf0302fdc5a7c30e20422caf77f32b1f0c215a2ab705341d6aae99f827a266bf09aa60df76a43a930ff8b2d1d87c1962e85e82251ec4ba1c7b2c21e2d65b2c1435430468b2db7502e072c798d63c64e51f4810185f8938614d62462487638c91522caf2989e5781fd60b14a580d7124770b375d59385937eb69267fb536189a8f56b96c0f458690d7cc801b1b92875b7996385228c61ca79947e59fc8c0fe36fb50126b66ca5ee875121e458609bba0c2d2b6da2c47ebbc4252b4702087c49ae13b6e17c424228c61856cf4134b6665db6747bf55633222f2236b24ba24a95d8f5a68e52
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    - Subject: C=US, ST=California, L=Santa Clara, O=Advanced Micro Devices Inc.,
+        CN=Advanced Micro Devices Inc.
+      ValidFrom: '2021-05-11 00:00:00'
+      ValidTo: '2024-05-10 23:59:59'
+      Signature: 8444e268ff381c9148985f408e5cc1453a560c9dd94d2a6cfa01dd7f2adc8af633053d2c79027db4f185f477b0d5db8b362b37dbd0d258823831ace7058baf3feb80a9eb2de9dd886bcf390fae9b586fc833e63db5c6a07019f35a9fce6899502852737b32d25ea7832c3786df0642d21622e56c0b0171e96f9520d07f73950376ff555bcf9c8a55bf4f86c088b58e2cb625a0ef4680ed7281f09a40c7be9f69cba77a6967030e39b2cfa46692698ced9e5347dd7056b476545c3442f934cb2c30cb986afabd29a9a9e2eb28c5bd6ee47dabf5ef587f850ea49b124eb868aac68de949616d08f875192b93388549c7327a3ef085e287d5a743810c151b250c64
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    - Subject: C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust
+        RSA Certification Authority
+      ValidFrom: '2019-03-12 00:00:00'
+      ValidTo: '2028-12-31 23:59:59'
+      Signature: 188751dc74213d9c8ae027b733d02eccecf0e6cb5e11de226f9b758e9e72fee4d6feaa1f9c962def034a7eaef48d6f723c433bc03febb8df5caaa9c6aef2fcd8eea37b43f686367c14e0cdf4f73ffedeb8b48af09196fefd43647efdccd201a17d7df81919c9422b13bf588bbaa4a266047688914e0c8914cea24dc932b3bae8141abc71f15bf0410b98000a220310e50cb1f9cd923719ed3bf1e43ab6f945132675afbbaaef3f7b773bd2c402913d1900d3175c39db3f7b180d45cd9385962f5ddf59164f3f51bdd545183fed4a8ee80661742316b50d50732744477f105d892a6b853114c4e8a96a4c80bc6a78cfb87f8e7672990c9dfed7910816a1a35f95
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Code Signing CA
+      ValidFrom: '2018-11-02 00:00:00'
+      ValidTo: '2030-12-31 23:59:59'
+      Signature: 4d6350ed47344a61a4dbde6a2a8c9bf100001e1d627b3ad732c2f6b3e063b3fb6100889a1b6d1007044fbeb8ea897822eb0f46ecf3465e40468912f40b775a9c2a413afcd6f4ebe7f7159533c3a18328b7de2fe494f78533832d4a4048bf9ac24f4ab18f24f4b38137d3b764b0a6236a596852425fff04ebe174657908f5a993de6b71409996ba78f1b9c8e2c30816b1ab635ac815806d745e4a757ea5b8c36cb5cfdf4a79875cc7404d6335f630d3cfb50a0e0b047fa04baebba3a5d08400933e535d34a50035696cbe9f2025100d19fb509061be398f7a8e4df69f0e1efe075112668326194895ce4ac9c17ff33a059bf96fdf887fc0239ed21e437a4531c19c4da9f059b25919e86a8d290402777c4b4bcd70be3ab2555a783ebcbb6f0310257715348af936cc4392e4ba4ff1629328255729fb5119c7a125406a8457c6b29db1bc1c0ada7c677e7d2ee9284c187ec47b3141719a4b29ec0b3d5750d2caddfd9e0551e54478dd01deb175980d5424fdf04ee3e2f883bd72bacb3d3aeef05e1792686dc861f9a6f12a0a0ba5b9f49eee983205859eebf98329d3c62c7dbd3a772e8b3742a06a82ed3b4aaa9410a4e10df817c5b65a79331892e3b575f8a1e98e0a251ee41ef19f5a8723ff9fa4519efb398011cddbb5c4a7a8806fe553d4e0e3a2c2d25b1afa32262d6a57701c3ca4582ea3f35b4b07dc3259f387a71a6d58
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+    Signer:
+    - SerialNumber: 535091e6cab13af393b51ead0825f627
+      Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Code Signing CA
