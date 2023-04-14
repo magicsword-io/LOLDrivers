@@ -55,7 +55,7 @@ sc.exe create PanIOx64.sys binPath=C:\windows\temp\PanIOx64.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/paniox64.yaml)
 
-*last_updated:* 2023-04-10
+*last_updated:* 2023-04-14
 
 
 

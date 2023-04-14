@@ -50,7 +50,7 @@ sc.exe create NTIOLib_X64.sys binPath=C:\windows\temp\NTIOLib_X64.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ntiolib_x64.yaml)
 
-*last_updated:* 2023-04-10
+*last_updated:* 2023-04-14
 
 
 

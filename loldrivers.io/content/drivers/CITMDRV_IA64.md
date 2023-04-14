@@ -145,7 +145,7 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/citmdrv_ia64.yaml)
 
-*last_updated:* 2023-04-10
+*last_updated:* 2023-04-14
 
 
 

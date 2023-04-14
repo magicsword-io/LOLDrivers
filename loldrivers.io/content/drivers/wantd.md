@@ -51,7 +51,7 @@ sc.exe create wantd.sys binPath=C:\windows\temp\wantd.sys type=kernel &amp;&amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd.yaml)
 
-*last_updated:* 2023-04-10
+*last_updated:* 2023-04-14
 
 
 

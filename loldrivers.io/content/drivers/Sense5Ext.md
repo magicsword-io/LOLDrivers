@@ -50,7 +50,7 @@ sc.exe create Sense5Ext.sys binPath=C:\windows\temp\Sense5Ext.sys type=kernel &a
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/sense5ext.yaml)
 
-*last_updated:* 2023-04-10
+*last_updated:* 2023-04-14
 
 
 

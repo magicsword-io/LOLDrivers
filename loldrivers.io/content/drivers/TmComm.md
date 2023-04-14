@@ -50,7 +50,7 @@ sc.exe create TmComm.sys binPath=C:\windows\temp\TmComm.sys type=kernel &amp;&am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/tmcomm.yaml)
 
-*last_updated:* 2023-04-10
+*last_updated:* 2023-04-14
 
 
 

@@ -55,7 +55,7 @@ sc.exe create full.sys binPath=C:\windows\temp\full.sys type=kernel &amp;&amp; s
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/full.yaml)
 
-*last_updated:* 2023-04-10
+*last_updated:* 2023-04-14
 
 
 

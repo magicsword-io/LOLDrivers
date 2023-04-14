@@ -56,7 +56,7 @@ sc.exe create DBUtilDrv2.sys binPath=C:\windows\temp\DBUtilDrv2.sys type=kernel 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbutildrv2.yaml)
 
-*last_updated:* 2023-04-10
+*last_updated:* 2023-04-14
 
 
 

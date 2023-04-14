@@ -50,7 +50,7 @@ sc.exe create POORTRY.sys binPath=C:\windows\temp\POORTRY.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/poortry.yaml)
 
-*last_updated:* 2023-04-10
+*last_updated:* 2023-04-14
 
 
 

@@ -56,7 +56,7 @@ sc.exe create vboxdrv.sys binPath=C:\windows\temp\vboxdrv.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/vboxdrv.yaml)
 
-*last_updated:* 2023-04-10
+*last_updated:* 2023-04-14
 
 
 

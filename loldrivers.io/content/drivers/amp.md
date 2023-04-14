@@ -50,7 +50,7 @@ sc.exe create amp.sys binPath=C:\windows\temp\amp.sys type=kernel &amp;&amp; sc.
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amp.yaml)
 
-*last_updated:* 2023-04-10
+*last_updated:* 2023-04-14
 
 
 

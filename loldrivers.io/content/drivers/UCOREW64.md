@@ -50,7 +50,7 @@ sc.exe create UCOREW64.SYS binPath=C:\windows\temp\UCOREW64.SYS type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ucorew64.yaml)
 
-*last_updated:* 2023-04-10
+*last_updated:* 2023-04-14
 
 
 

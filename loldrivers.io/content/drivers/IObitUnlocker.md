@@ -55,7 +55,7 @@ sc.exe create IObitUnlocker.sys binPath=C:\windows\temp\IObitUnlocker.sys     ty
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iobitunlocker.yaml)
 
-*last_updated:* 2023-04-10
+*last_updated:* 2023-04-14
 
 
 

@@ -255,7 +255,7 @@ sc.exe create NTIOLib.sys binPath=C:\windows\temp\NTIOLib.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ntiolib.yaml)
 
-*last_updated:* 2023-04-10
+*last_updated:* 2023-04-14
 
 
 

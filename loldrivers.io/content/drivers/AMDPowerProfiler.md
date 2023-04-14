@@ -50,7 +50,7 @@ sc.exe create AMDPowerProfiler.sys binPath=C:\windows\temp\AMDPowerProfiler.sys 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amdpowerprofiler.yaml)
 
-*last_updated:* 2023-04-10
+*last_updated:* 2023-04-14
 
 
 

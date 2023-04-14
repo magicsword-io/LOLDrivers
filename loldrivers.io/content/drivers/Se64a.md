@@ -50,7 +50,7 @@ sc.exe create Se64a.sys binPath=C:\windows\temp\Se64a.sys type=kernel &amp;&amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/se64a.yaml)
 
-*last_updated:* 2023-04-10
+*last_updated:* 2023-04-14
 
 
 
