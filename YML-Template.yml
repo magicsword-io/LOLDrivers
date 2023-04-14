@@ -8,8 +8,7 @@ MitreID: TXXXX
 Category: vulnerable driver
 Verified: 'TRUE or FALSE'
 Commands:
-  Command: 'sc.exe create FILENAME.sys binPath=C:\windows\temp\FILENAME.sys type=kernel
-    sc.exe start FILENAME.sys'
+  Command: 'sc.exe create FILENAME.sys binPath=C:\windows\temp\FILENAME.sys type=kernel && sc.exe start FILENAME.sys'
   Description: ''
   Usecase: Use case description
   Privileges: kernel
