@@ -5,8 +5,8 @@ MitreID: T1068
 Category: malicious
 Verified: 'TRUE'
 Commands:
-  Command: sc.exe create ntbios.sys binPath=C:\windows\temp \n \n \n  tbios.sys type=kernel
-    && sc.exe start ntbios.sys
+  Command: 'sc.exe create ntbios.sys binPath=C:\windows\temp \n \n \n  tbios.sys type=kernel 
+ && sc.exe start ntbios.sys'
   Description: Driver used in the Daxin malware campaign.
   Usecase: Elevate privileges
   Privileges: kernel
@@ -32,80 +32,6 @@ KnownVulnerableSamples:
   Product: ' Microsoft(R) Windows (R) NT Operating System'
   ProductVersion: 5, 0, 2, 1
   FileVersion: 5, 0, 2, 1
-  MachineType: I386
-  OriginalFilename: ntbios.sys
-  Authentihash:
-    MD5: dd3f6fe14dadb95f5d8c963006dec9d7
-    SHA1: 2374491565e5798dccd4db2dc2af7e9bbefafd5b
-    SHA256: 50f9323eaf7c49cfca5890c6c46d729574d0caca89f7acc9f608c8226f54a975
-  InternalName: ntbio.sys
-  Copyright: "\u7248\u6743\u6240\u6709 (C) 2003"
-  Imports:
-  - NTOSKRNL.EXE
-  - HAL.DLL
-  - ntoskrnl.exe
-  - NDIS.SYS
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - MmUnlockPages
-  - MmProbeAndLockPages
-  - IoAllocateMdl
-  - IoQueueWorkItem
-  - IoAllocateWorkItem
-  - IoGetCurrentProcess
-  - _stricmp
-  - IoFreeWorkItem
-  - RtlFreeUnicodeString
-  - ZwClose
-  - ZwWriteFile
-  - ZwCreateFile
-  - RtlAnsiStringToUnicodeString
-  - _strnicmp
-  - RtlUnwind
-  - RtlCopyUnicodeString
-  - wcsncmp
-  - swprintf
-  - IoCreateDevice
-  - IoCreateSymbolicLink
-  - KeInitializeSpinLock
-  - ExfInterlockedInsertTailList
-  - RtlInitUnicodeString
-  - MmMapLockedPagesSpecifyCache
-  - IoFreeMdl
-  - InterlockedDecrement
-  - InterlockedIncrement
-  - InterlockedExchange
-  - IoDeleteSymbolicLink
-  - IoDeleteDevice
-  - ExfInterlockedRemoveHeadList
-  - IofCompleteRequest
-  - ExAllocatePoolWithTag
-  - strncmp
-  - ExFreePool
-  - KfAcquireSpinLock
-  - KfReleaseSpinLock
-  - KeInitializeApc
-  - KeInsertQueueApc
-  - KeAttachProcess
-  - KeDetachProcess
-  - NtQuerySystemInformation
-  - NdisAllocatePacket
-  - NdisCopyFromPacketToPacket
-  - NdisAllocateMemory
-  - NdisFreePacket
-  - NdisAllocateBuffer
-  - NdisSetEvent
-  - NdisResetEvent
-  - NdisFreeBufferPool
-  - NdisFreePacketPool
-  - NdisFreeMemory
-  - NdisWaitEvent
-  - NdisQueryAdapterInstanceName
-  - NdisOpenAdapter
-  - NdisInitializeEvent
-  - NdisAllocatePacketPool
-  - NdisRegisterProtocol
-  - NdisAllocateBufferPool
-  - NdisCloseAdapter
-  - NdisDeregisterProtocol
-  Signatures: {}
+  MachineType: 32-bit
+  OriginalFilename: ''
+

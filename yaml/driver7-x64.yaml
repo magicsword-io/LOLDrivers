@@ -5,8 +5,9 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
-  Command: sc.exe create driver7-x64.sys binPath=C:\windows\temp\driver7-x64.sys     type=kernel
-    type=kernel && sc.exe start driver7-x64.sys
+  Command: 'sc.exe create driver7-x64.sys binPath=C:\windows\temp\driver7-x64.sys     type=kernel
+type=kernel
+ && sc.exe start driver7-x64.sys'
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
@@ -29,89 +30,11 @@ KnownVulnerableSamples:
   - VeriSign
   Date: ''
   Publisher: ''
-  Company: ASUStek
-  Description: The driver for the ECtool driver-based tools
-  Product: EC tool
-  ProductVersion: '2.5'
-  FileVersion: 2.5.0.2
-  MachineType: AMD64
-  OriginalFilename: Driver7
-  Authentihash:
-    MD5: 7f66b6e24dc4f3af2f19ad9a95b1e9fa
-    SHA1: 5ad545cf58d644be2fc3382881cc07f0f7edfeba
-    SHA256: d8f7ddf5de213c6dc0356dc83b6307ec596e66c33c3cdd826a612c12004ba9dc
-  InternalName: Driver7.sys
-  Copyright: 'Copyright '
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - ExFreePoolWithTag
-  - IoWMIQueryAllData
-  - ZwMapViewOfSection
-  - RtlInitUnicodeString
-  - IoWMIOpenBlock
-  - MmGetPhysicalAddress
-  - ZwUnmapViewOfSection
-  - ZwClose
-  - ExAllocatePoolWithTag
-  - ObReferenceObjectByHandle
-  - ObfDereferenceObject
-  - RtlAssert
-  - ZwOpenSection
-  - IoDeleteSymbolicLink
-  - IoDeleteDevice
-  - IoCreateSymbolicLink
-  - IoCreateDevice
-  - KeBugCheckEx
-  - IofCompleteRequest
-  - DbgPrint
-  - HalTranslateBusAddress
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
-        , G2
-      ValidFrom: '2012-12-21 00:00:00'
-      ValidTo: '2020-12-30 23:59:59'
-      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
-        , G4
-      ValidFrom: '2012-10-18 00:00:00'
-      ValidTo: '2020-12-29 23:59:59'
-      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
-        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
-        Authority , G5
-      ValidFrom: '2006-11-08 00:00:00'
-      ValidTo: '2021-11-07 23:59:59'
-      Signature: 1302ddf8e88600f25af8f8200c59886207cecef74ef9bb59a198e5e138dd4ebc6618d3adeb18f20dc96d3e4a9420c33cbabd6554c6af44b310ad2c6b3eabd707b6b88163c5f95e2ee52a67cecd330c2ad7895603231fb3bee83a0859b4ec4535f78a5bff66cf50afc66d578d1978b7b9a2d157ea1f9a4bafbac98e127ec6bdff
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-    - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
-      ValidFrom: '2006-05-23 17:01:29'
-      ValidTo: '2016-05-23 17:11:29'
-      Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-    - Subject: C=TW, ST=Taiwan, L=Taipei / Peitou, O=ASUSTeK Computer Inc., OU=Digital
-        ID Class 3 , Microsoft Software Validation v2, OU=Quality Testing Department,
-        CN=ASUSTeK Computer Inc.
-      ValidFrom: '2012-07-31 00:00:00'
-      ValidTo: '2015-08-03 23:59:59'
-      Signature: 03cd161c1960e13d0b06441f08fdfc9df8319f8d87a83ecc865bc20767841d4087e40dc9d770bdc5c0fe6ccb9cf3e08bee7364451b03fb3130356761cae54417e8a282ed7cd33b0becd72e8799b616a2766976a7172a1cc299e8321ebeb479f592e03f425da4b2ea6a0cd0b5cc32b9bdeec80aa3ef0a62d6e16b72765301d53ef883ab9210a4b868ff2e2724e37804feb5277d3e26da8ba9d0b6ef61769d1c0f62a78757779d7134a63320b1a692584f12162d3fa20ec6e1b038b1a8d7afc2fad7b692759c6a000159714271f40d608fed3c08213b757fa75baf4674380f5aea46b7125f17532c636876c1f3e0d4b0350822f2a640001fda794b969e2cc681c2
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
-        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
-        CA
-      ValidFrom: '2010-02-08 00:00:00'
-      ValidTo: '2020-02-07 23:59:59'
-      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-    Signer:
-    - SerialNumber: 7d08d9bc130726de26ee4ef28e133084
-      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
-        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
-        CA
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+
