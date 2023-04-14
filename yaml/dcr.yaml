@@ -1,0 +1,34 @@
+Name: dcr.sys
+Author: Michael Haag
+Created: '2023-04-14'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create dcr.sys binPath=C:\windows\temp\dcr.sys type=kernel && sc.exe
+    start dcr.sys
+  Description: DriveCrypt Dcr.sys vulnerability exploit for bypassing x64 DSE
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/wjcsharp/DriveCrypt
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+  Filename: ''
+  MD5: ''
+  SHA1: ''
+  SHA256: 3c6f9917418e991ed41540d8d882c8ca51d582a82fd01bff6cdf26591454faf5
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
