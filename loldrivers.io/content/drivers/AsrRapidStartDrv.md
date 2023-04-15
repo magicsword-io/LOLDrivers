@@ -45,12 +45,12 @@ sc.exe create AsrRapidStartDrv.sys binPath=C:\windows\temp\AsrRapidStartDrv.sys 
 | MD5 | <a href="https://www.virustotal.com/gui/file/31469f1313871690e8dc2e8ee4799b22">31469f1313871690e8dc2e8ee4799b22</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/89cd760e8cb19d29ee08c430fb17a5fd4455c741">89cd760e8cb19d29ee08c430fb17a5fd4455c741</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/0aafa9f47acf69d46c9542985994ff5321f00842a28df2396d4a3076776a83cb">0aafa9f47acf69d46c9542985994ff5321f00842a28df2396d4a3076776a83cb</a> |
-| Publisher | ASROCK Incorporation || Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Description | RW-Everything Read &amp; Write Driver |
+| Publisher | ASROCK Incorporation || Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | RW-Everything || Description | RW-Everything Read &amp; Write Driver || Product | RW-Everything Read &amp; Write Driver || OriginalFilename | RwDrv.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrrapidstartdrv.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

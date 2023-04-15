@@ -50,12 +50,12 @@ sc.exe create PCHunter.sys binPath=C:\windows\temp\PCHunter.sys type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/c2c1b8c00b99e913d992a870ed478a24">c2c1b8c00b99e913d992a870ed478a24</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/a64354aac2d68b4fa74b5829a9d42d90d83b040c">a64354aac2d68b4fa74b5829a9d42d90d83b040c</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/1b7fb154a7b7903a3c81f12f4b094f24a3c60a6a8cffca894c67c264ab7545fa">1b7fb154a7b7903a3c81f12f4b094f24a3c60a6a8cffca894c67c264ab7545fa</a> |
-| Signature | -   |
+| Signature | -   || Company | 一普明为（北京）信息技术有限公司 || Description | Epoolsoft Windows Information View Tools || Product | PCHunter || OriginalFilename | PCHunter.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/pchunter.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

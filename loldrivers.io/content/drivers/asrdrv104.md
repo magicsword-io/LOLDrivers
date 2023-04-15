@@ -70,7 +70,7 @@ sc.exe create asrdrv104.sys binPath=C:\windows\temp\asrdrv104.sys type=kernel &a
 | MD5 | <a href="https://www.virustotal.com/gui/file/de1cc5c266140bff9d964fab87a29421">de1cc5c266140bff9d964fab87a29421</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/729a8675665c61824f22f06c7b954be4d14b52c4">729a8675665c61824f22f06c7b954be4d14b52c4</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/6ed35f310c96920a271c59a097b382da07856e40179c2a4239f8daa04eef38e7">6ed35f310c96920a271c59a097b382da07856e40179c2a4239f8daa04eef38e7</a> |
-| Signature | -   || Filename | asrdrv104.sys |
+| Signature | -   || Company | ASRock Incorporation || Description | ASRock IO Driver || Product | ASRock IO Driver || OriginalFilename | AsrDrv.sys || Filename | asrdrv104.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/2b4d0dead4c1a7cc95543748b3565cfa802e5256">2b4d0dead4c1a7cc95543748b3565cfa802e5256</a> |
@@ -85,7 +85,7 @@ sc.exe create asrdrv104.sys binPath=C:\windows\temp\asrdrv104.sys type=kernel &a
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv104.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

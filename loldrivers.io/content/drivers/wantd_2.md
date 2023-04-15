@@ -46,12 +46,12 @@ sc.exe create wantd_2.sys binPath=C:\windows\temp\wantd_2.sys type=kernel &amp;&
 | MD5 | <a href="https://www.virustotal.com/gui/file/8636fe3724f2bcba9399daffd6ef3c7e">8636fe3724f2bcba9399daffd6ef3c7e</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/3b6b35bca1b05fafbfc883a844df6d52af44ccdc">3b6b35bca1b05fafbfc883a844df6d52af44ccdc</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/6908ebf52eb19c6719a0b508d1e2128f198d10441551cbfb9f4031d382f5229f">6908ebf52eb19c6719a0b508d1e2128f198d10441551cbfb9f4031d382f5229f</a> |
-| Publisher | Anhua Xinda (Beijing) Technology Co., Ltd. || Signature | S, i, g, n, e, d   || Date | 7:52 AM 4/30/2014 || Company | Microsoft Corporation || Description | WAN Transport Driver || Product | Microsoft Windows Operating System |
+| Publisher | Anhua Xinda (Beijing) Technology Co., Ltd. || Signature | S, i, g, n, e, d   || Date | 7:52 AM 4/30/2014 || Company | Microsoft Corporation || Description | WAN Transport Driver || Product | Microsoft Windows Operating System || OriginalFilename | wantd.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd_2.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

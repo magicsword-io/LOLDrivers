@@ -45,12 +45,12 @@ sc.exe create driver7-x64.sys binPath=C:\windows\temp\driver7-x64.sys     type=k
 | MD5 | <a href="https://www.virustotal.com/gui/file/715f8efab1d1c660e4188055c4b28eed">715f8efab1d1c660e4188055c4b28eed</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/7ba19a701c8af76988006d616a5f77484c13cb0a">7ba19a701c8af76988006d616a5f77484c13cb0a</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/771a8d05f1af6214e0ef0886662be500ee910ab99f0154227067fddcfe08a3dd">771a8d05f1af6214e0ef0886662be500ee910ab99f0154227067fddcfe08a3dd</a> |
-| Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | ASUStek || Description | The driver for the ECtool driver-based tools || Product | EC tool || OriginalFilename | Driver7 |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/driver7-x64.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

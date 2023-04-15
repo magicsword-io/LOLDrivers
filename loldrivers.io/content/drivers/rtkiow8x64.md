@@ -45,12 +45,12 @@ sc.exe create rtkiow8x64.sys binPath=C:\windows\temp\rtkiow8x64.sys type=kernel 
 | MD5 | <a href="https://www.virustotal.com/gui/file/b8b6686324f7aa77f570bc019ec214e6">b8b6686324f7aa77f570bc019ec214e6</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/6a3d3b9ab3d201cd6b0316a7f9c3fb4d34d0f403">6a3d3b9ab3d201cd6b0316a7f9c3fb4d34d0f403</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/082c39fe2e3217004206535e271ebd45c11eb072efde4cc9885b25ba5c39f91d">082c39fe2e3217004206535e271ebd45c11eb072efde4cc9885b25ba5c39f91d</a> |
-| Signature | Realtek Semiconductor Corp., DigiCert EV Code Signing CA, DigiCert   |
+| Signature | Realtek Semiconductor Corp., DigiCert EV Code Signing CA, DigiCert   || Company | Realtek                                             || Description | Realtek IO Driver || Product | Realtek IO Driver                       || OriginalFilename | rtkiow8x64.sys  |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rtkiow8x64.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

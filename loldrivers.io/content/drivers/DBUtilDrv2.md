@@ -51,12 +51,12 @@ sc.exe create DBUtilDrv2.sys binPath=C:\windows\temp\DBUtilDrv2.sys type=kernel 
 | MD5 | <a href="https://www.virustotal.com/gui/file/d104621c93213942b7b43d65b5d8d33e">d104621c93213942b7b43d65b5d8d33e</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/b03b1996a40bfea72e4584b82f6b845c503a9748">b03b1996a40bfea72e4584b82f6b845c503a9748</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/71fe5af0f1564dc187eea8d59c0fbc897712afa07d18316d2080330ba17cf009">71fe5af0f1564dc187eea8d59c0fbc897712afa07d18316d2080330ba17cf009</a> |
-| Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2012, Microsoft Root Certificate Authority 2010   |
+| Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2012, Microsoft Root Certificate Authority 2010   || Company | Dell || Description | DBUtil || Product | DBUtil |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbutildrv2.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

@@ -50,7 +50,7 @@ sc.exe create smep_namco.sys binPath=C:\windows\temp\smep_namco.sys type=kernel 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/smep_namco.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

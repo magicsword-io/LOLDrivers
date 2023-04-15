@@ -45,12 +45,12 @@ sc.exe create WinRing0x64.sys binPath=C:\windows\temp\WinRing0x64.sys     type=k
 | MD5 | <a href="https://www.virustotal.com/gui/file/0c0195c48b6b8582fa6f6373032118da">0c0195c48b6b8582fa6f6373032118da</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/d25340ae8e92a6d29f599fef426a2bc1b5217299">d25340ae8e92a6d29f599fef426a2bc1b5217299</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5">11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5</a> |
-| Signature | Noriyuki MIYAZAKI, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   |
+| Signature | Noriyuki MIYAZAKI, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   || Company | OpenLibSys.org || Description | WinRing0 || Product | WinRing0 || OriginalFilename | WinRing0.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winring0x64.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

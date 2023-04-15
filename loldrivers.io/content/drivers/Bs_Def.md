@@ -50,12 +50,12 @@ sc.exe create Bs_Def.sys binPath=C:\windows\temp\Bs_Def.sys type=kernel &amp;&am
 | MD5 | <a href="https://www.virustotal.com/gui/file/a9f220b1507a3c9a327a99995ff99c82">a9f220b1507a3c9a327a99995ff99c82</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/2c5ff272bd345962ed41ab8869aef41da0dfe697">2c5ff272bd345962ed41ab8869aef41da0dfe697</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be">5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be</a> |
-| Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
+| Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | AsusTek Computer Inc. || Description | Default BIOS Flash Driver || Product | Support SST39SF020,SST29EE020,AT49F002T,AT29C020,AM29F002NT,AM29F002NB,V29C51002T,V29C51002B,M29F002T,W29C020. || OriginalFilename | Bs_Def64.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_def.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

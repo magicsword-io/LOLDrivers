@@ -45,12 +45,12 @@ sc.exe create BS_I2c64.sys binPath=C:\windows\temp\BS_I2c64.sys type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/83601bbe5563d92c1fdb4e960d84dc77">83601bbe5563d92c1fdb4e960d84dc77</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/dc55217b6043d819eadebd423ff07704ee103231">dc55217b6043d819eadebd423ff07704ee103231</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a">55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a</a> |
-| Signature | BIOSTAR MICROTECH INT&#39;L CORP, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
+| Signature | BIOSTAR MICROTECH INT&#39;L CORP, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | BIOSTAR Group || Description | I/O Interface driver file || Product | BIOSTAR I/O driver fle || OriginalFilename | BS_I2cIo.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_i2c64.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

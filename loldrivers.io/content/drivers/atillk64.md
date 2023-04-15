@@ -45,12 +45,12 @@ sc.exe create atillk64.sys binPath=C:\windows\temp\atillk64.sys type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/62f02339fe267dc7438f603bfb5431a1">62f02339fe267dc7438f603bfb5431a1</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/c52cef5b9e1d4a78431b7af56a6fdb6aa1bcad65">c52cef5b9e1d4a78431b7af56a6fdb6aa1bcad65</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/5c04c274a708c9a7d993e33be3ea9e6119dc29527a767410dbaf93996f87369a">5c04c274a708c9a7d993e33be3ea9e6119dc29527a767410dbaf93996f87369a</a> |
-| Publisher | &#34;ATI Technologies, Inc&#34; || Signature | ATI Technologies, Inc, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Description | ATI Diagnostics Hardware Abstraction Sys |
+| Publisher | &#34;ATI Technologies, Inc&#34; || Signature | ATI Technologies, Inc, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | ATI Technologies Inc. || Description | ATI Diagnostics Hardware Abstraction Sys || Product | ATI Diagnostics || OriginalFilename | atillk64.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/atillk64.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

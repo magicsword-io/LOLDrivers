@@ -45,12 +45,12 @@ sc.exe create NalDrv.sys binPath=C:\windows\temp\NalDrv.sys type=kernel &amp;&am
 | MD5 | <a href="https://www.virustotal.com/gui/file/1898ceda3247213c084f43637ef163b3">1898ceda3247213c084f43637ef163b3</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/d04e5db5b6c848a29732bfd52029001f23c3da75">d04e5db5b6c848a29732bfd52029001f23c3da75</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b">4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b</a> |
-| Signature | Intel Corporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Signature | Intel Corporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | Intel Corporation  || Description | Intel(R) Network Adapter Diagnostic Driver || Product | Intel(R) iQVW64.SYS || OriginalFilename | iQVW64.SYS |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/naldrv.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

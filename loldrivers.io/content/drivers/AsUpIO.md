@@ -50,7 +50,7 @@ sc.exe create AsUpIO.sys binPath=C:\windows\temp\AsUpIO.sys type=kernel &amp;&am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asupio.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

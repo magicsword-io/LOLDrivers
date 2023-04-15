@@ -50,12 +50,12 @@ sc.exe create hw_sys binPath=C:\windows\temp\hw_sys type=kernel &amp;&amp; sc.ex
 | MD5 | <a href="https://www.virustotal.com/gui/file/3247014ba35d406475311a2eab0c4657">3247014ba35d406475311a2eab0c4657</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/74e4e3006b644392f5fcea4a9bae1d9d84714b57">74e4e3006b644392f5fcea4a9bae1d9d84714b57</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8">4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8</a> |
-| Signature | Marvin Test Solutions, Inc., GlobalSign Extended Validation CodeSigning CA - SHA256 - G3, GlobalSign, GlobalSign Root CA - R1   |
+| Signature | Marvin Test Solutions, Inc., GlobalSign Extended Validation CodeSigning CA - SHA256 - G3, GlobalSign, GlobalSign Root CA - R1   || Company | Marvin Test Solutions, Inc. || Description | HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI access || Product | HW || OriginalFilename | HW.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hw_sys.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

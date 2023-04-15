@@ -55,7 +55,7 @@ sc.exe create nt5.sys binPath=C:\windows\temp \n \n \n  t5.sys type=kernel &amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nt5.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

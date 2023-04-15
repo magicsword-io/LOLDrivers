@@ -45,12 +45,12 @@ sc.exe create NCHGBIOS2x64.SYS binPath=C:\windows\temp\NCHGBIOS2x64.SYS     type
 | MD5 | <a href="https://www.virustotal.com/gui/file/d9ce18960c23f38706ae9c6584d9ac90">d9ce18960c23f38706ae9c6584d9ac90</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/d0d39e1061f30946141b6ecfa0957f8cc3ddeb63">d0d39e1061f30946141b6ecfa0957f8cc3ddeb63</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073">314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073</a> |
-| Signature | TOSHIBA CORPORATION, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Signature | TOSHIBA CORPORATION, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | TOSHIBA Corporation || Description | BIOS Update Driver For Windows x64 Edition || Product | TOSHIBA BIOS Package || OriginalFilename | NCHGBIOS2x64.SYS |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nchgbios2x64.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

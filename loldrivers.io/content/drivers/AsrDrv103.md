@@ -45,12 +45,12 @@ sc.exe create AsrDrv103.sys binPath=C:\windows\temp\AsrDrv103.sys type=kernel &a
 | MD5 | <a href="https://www.virustotal.com/gui/file/7c72a7e1d42b0790773efd8700e24952">7c72a7e1d42b0790773efd8700e24952</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/15d1a6a904c8409fb47a82aefa42f8c3c7d8c370">15d1a6a904c8409fb47a82aefa42f8c3c7d8c370</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/2003b478b9fd1b3d76ec5bf4172c2e8915babbbee7ad1783794acbf8d4c2519d">2003b478b9fd1b3d76ec5bf4172c2e8915babbbee7ad1783794acbf8d4c2519d</a> |
-| Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | ASRock Incorporation || Description | ASRock IO Driver || Product | ASRock IO Driver || OriginalFilename | AsrDrv.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv103.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

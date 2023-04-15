@@ -45,17 +45,17 @@ sc.exe create dbutil_2_3.sys binPath=C:\windows\temp\dbutil_2_3.sys type=kernel 
 | MD5 | <a href="https://www.virustotal.com/gui/file/c996d7971c49252c582171d9380360f2">c996d7971c49252c582171d9380360f2</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/c948ae14761095e4d76b55d9de86412258be7afd">c948ae14761095e4d76b55d9de86412258be7afd</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5">0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5</a> |
-| Publisher | Dell Inc. || Signature | Dell Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Description | dianhu || Filename | dbutil_2_3.sys |
+| Publisher | Dell Inc. || Signature | Dell Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Filename | dbutil_2_3.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/c996d7971c49252c582171d9380360f2">c996d7971c49252c582171d9380360f2</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/c948ae14761095e4d76b55d9de86412258be7afd">c948ae14761095e4d76b55d9de86412258be7afd</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5">0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5</a> |
-| Publisher | Dell Inc. || Signature | Dell Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Description | dianhu |
+| Publisher | Dell Inc. || Signature | Dell Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbutil_2_3.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

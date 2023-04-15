@@ -45,12 +45,12 @@ sc.exe create mtcBSv64.sys binPath=C:\windows\temp\mtcBSv64.sys type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/9dfd73dadb2f1c7e9c9d2542981aaa63">9dfd73dadb2f1c7e9c9d2542981aaa63</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/29a190727140f40cea9514a6420f5a195e36386b">29a190727140f40cea9514a6420f5a195e36386b</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/c9cf1d627078f63a36bbde364cd0d5f2be1714124d186c06db5bcdf549a109f8">c9cf1d627078f63a36bbde364cd0d5f2be1714124d186c06db5bcdf549a109f8</a> |
-| Signature | Mitac Technology Corporation, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
+| Signature | Mitac Technology Corporation, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | MiTAC Technology Corporation || Description | MiTAC System Service Provider || Product | MiTAC System Service Provider || OriginalFilename | mtcBSv64.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mtcbsv64.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

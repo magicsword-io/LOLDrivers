@@ -45,12 +45,12 @@ sc.exe create PcieCubed.sys binPath=C:\windows\temp\PcieCubed.sys type=kernel &a
 | MD5 | <a href="https://www.virustotal.com/gui/file/22949977ce5cd96ba674b403a9c81285">22949977ce5cd96ba674b403a9c81285</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/745335bcdf02fb42df7d890a24858e16094f48fd">745335bcdf02fb42df7d890a24858e16094f48fd</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/fd223833abffa9cd6cc1848d77599673643585925a7ee51259d67c44d361cce8">fd223833abffa9cd6cc1848d77599673643585925a7ee51259d67c44d361cce8</a> |
-| Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
+| Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   || Company | Legal Corp. || Description | PCIe Video Capture || Product | PCI Express Video Capture || OriginalFilename | PcieCubed.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/pciecubed.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

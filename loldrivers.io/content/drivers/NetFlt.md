@@ -55,7 +55,7 @@ sc.exe create NetFlt.sys binPath=C:\windows\temp\NetFlt.sys type=kernel &amp;&am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/netflt.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

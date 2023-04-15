@@ -45,12 +45,12 @@ sc.exe create phymem64.sys binPath=C:\windows\temp\phymem64.sys type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/2c54859a67306e20bfdc8887b537de72">2c54859a67306e20bfdc8887b537de72</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/d7f7594ff084201c0d9fa2f4ef1626635b67bce5">d7f7594ff084201c0d9fa2f4ef1626635b67bce5</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/1963d5a0e512b72353953aadbe694f73a9a576f0241a988378fa40bf574eda52">1963d5a0e512b72353953aadbe694f73a9a576f0241a988378fa40bf574eda52</a> |
-| Signature | Super Micro Computer, Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Signature | Super Micro Computer, Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | Super Micro Computer, Inc. || Description | phymem Application || Product | phymem || OriginalFilename | phymem.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/phymem64.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

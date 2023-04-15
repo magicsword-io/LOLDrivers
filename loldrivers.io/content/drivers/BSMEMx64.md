@@ -45,12 +45,12 @@ sc.exe create BSMEMx64.sys binPath=C:\windows\temp\BSMEMx64.sys type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/49fe3d1f3d5c2e50a0df0f6e8436d778">49fe3d1f3d5c2e50a0df0f6e8436d778</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/9d07df024ec457168bf0be7e0009619f6ac4f13c">9d07df024ec457168bf0be7e0009619f6ac4f13c</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/f929bead59e9424ab90427b379dcdd63fbfe0c4fb5e1792e3a1685541cd5ec65">f929bead59e9424ab90427b379dcdd63fbfe0c4fb5e1792e3a1685541cd5ec65</a> |
-| Signature | BIOSTAR MICROTECH INT&#39;L CORP, VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   |
+| Signature | BIOSTAR MICROTECH INT&#39;L CORP, VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   || Company | BIOSTAR Group || Description | I/O Interface driver file || Product | BIOSTAR I/O driver fle || OriginalFilename | BS_I2cIo.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bsmemx64.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

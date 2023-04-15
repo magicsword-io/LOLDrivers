@@ -46,17 +46,17 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/2d8e4f38b36c334d0a32a7324832501d">2d8e4f38b36c334d0a32a7324832501d</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/f6f11ad2cd2b0cf95ed42324876bee1d83e01775">f6f11ad2cd2b0cf95ed42324876bee1d83e01775</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd">01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd</a> |
-| Publisher | N/A || Signature | N, /, A   || Date | N/A || Company | N/A || Description | N/A || Product | N/A || Filename | RTCore64.sys |
+| Publisher | N/A || Signature | N, /, A   || Date | N/A || Filename | RTCore64.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/0ec361f2fba49c73260af351c39ff9cb">0ec361f2fba49c73260af351c39ff9cb</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/af50109b112995f8c82be8ef3a88be404510cdde">af50109b112995f8c82be8ef3a88be404510cdde</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/cdd2a4575a46bada4837a6153a79c14d60ee3129830717ef09e0e3efd9d00812">cdd2a4575a46bada4837a6153a79c14d60ee3129830717ef09e0e3efd9d00812</a> |
-| Publisher | N/A || Signature | N, /, A   || Date | N/A || Company | N/A || Description | N/A || Product | N/A |
+| Publisher | N/A || Signature | N, /, A   || Date | N/A |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rtcore64.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

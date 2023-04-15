@@ -48,12 +48,12 @@ sc.exe create rwdrv.sys binPath=C:\windows\temp\rwdrv.sys type=kernel &amp;&amp;
 | MD5 | <a href="https://www.virustotal.com/gui/file/257483d5d8b268d0d679956c7acdf02d">257483d5d8b268d0d679956c7acdf02d</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/fbf8b0613a2f7039aeb9fa09bd3b40c8ff49ded2">fbf8b0613a2f7039aeb9fa09bd3b40c8ff49ded2</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3">ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3</a> |
-| Signature | ChongKim Chan, GlobalSign CodeSigning CA - G2, GlobalSign Root CA - R1   |
+| Signature | ChongKim Chan, GlobalSign CodeSigning CA - G2, GlobalSign Root CA - R1   || Company | RW-Everything || Description | RwDrv Driver || Product | RwDrv Driver || OriginalFilename | RwDrv.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rwdrv.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

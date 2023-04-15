@@ -46,12 +46,12 @@ sc.exe create Dh_Kernel.sys binPath=C:\windows\temp\Dh_Kernel.sys type=kernel &a
 | MD5 | <a href="https://www.virustotal.com/gui/file/98763a3dee3cf03de334f00f95fc071a">98763a3dee3cf03de334f00f95fc071a</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/745bad097052134548fe159f158c04be5616afc2">745bad097052134548fe159f158c04be5616afc2</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955">bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955</a> |
-| Publisher | YY Inc. || Signature | YY Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Publisher | YY Inc. || Signature | YY Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | YY Inc. || Description | dianhu || Product | dianhu |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dh_kernel.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

@@ -47,12 +47,12 @@ sc.exe create BS_RCIO64.sys binPath=C:\windows\temp\BS_RCIO64.sys type=kernel &a
 | MD5 | <a href="https://www.virustotal.com/gui/file/b10b210c5944965d0dc85e70a0b19a42">b10b210c5944965d0dc85e70a0b19a42</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/5db61d00a001fd493591dc919f69b14713889fc5">5db61d00a001fd493591dc919f69b14713889fc5</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/d205286bffdf09bc033c09e95c519c1c267b40c2ee8bab703c6a2d86741ccd3e">d205286bffdf09bc033c09e95c519c1c267b40c2ee8bab703c6a2d86741ccd3e</a> |
-| Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
+| Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   || Company | BIOSTAR Group || Description | I/O Interface driver file || Product | BIOSTAR I/O driver || OriginalFilename | BS_RCIO64.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_rcio64.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

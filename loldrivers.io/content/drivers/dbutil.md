@@ -70,7 +70,7 @@ sc.exe create dbutil.sys binPath=C:\windows\temp\dbutil.sys type=kernel &amp;&am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbutil.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

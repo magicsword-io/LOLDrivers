@@ -46,12 +46,12 @@ sc.exe create Monitor_win10_x64.sys binPath=C:\windows\temp\Monitor_win10_x64.sy
 | MD5 | <a href="https://www.virustotal.com/gui/file/988dabdcf990b134b0ac1e00512c30c4">988dabdcf990b134b0ac1e00512c30c4</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/ef80da613442047697bec35ea228cde477c09a3d">ef80da613442047697bec35ea228cde477c09a3d</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/e4a7da2cf59a4a21fc42b611df1d59cae75051925a7ddf42bf216cc1a026eadb">e4a7da2cf59a4a21fc42b611df1d59cae75051925a7ddf42bf216cc1a026eadb</a> |
-| Signature | IObit Information Technology, Symantec Class 3 SHA256 Code Signing CA, VeriSign   |
+| Signature | IObit Information Technology, Symantec Class 3 SHA256 Code Signing CA, VeriSign   || Company | IObit || Description | IObit Temperature Monitor || Product | Advanced SystemCare || OriginalFilename | Monitor.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/monitor_win10_x64.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

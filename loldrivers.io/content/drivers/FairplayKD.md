@@ -51,12 +51,12 @@ sc.exe create FairplayKD.sys binPath=C:\windows\temp\FairplayKD.sys type=kernel 
 | MD5 | <a href="https://www.virustotal.com/gui/file/4e90cd77509738d30d3181a4d0880bfa">4e90cd77509738d30d3181a4d0880bfa</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/b4dcdbd97f38b24d729b986f84a9cdb3fc34d59f">b4dcdbd97f38b24d729b986f84a9cdb3fc34d59f</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/9f4ce6ab5e8d44f355426d9a6ab79833709f39b300733b5b251a0766e895e0e5">9f4ce6ab5e8d44f355426d9a6ab79833709f39b300733b5b251a0766e895e0e5</a> |
-| Signature | Hans Roes, Thawte Code Signing CA - G2, thawte   |
+| Signature | Hans Roes, Thawte Code Signing CA - G2, thawte   || Company | Multi Theft Auto || Description | Multi Theft Auto patch driver || Product | MTA San Andreas |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fairplaykd.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

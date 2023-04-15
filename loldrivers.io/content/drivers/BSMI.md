@@ -45,12 +45,12 @@ sc.exe create BSMI.sys binPath=C:\windows\temp\BSMI.sys type=kernel &amp;&amp; s
 | MD5 | <a href="https://www.virustotal.com/gui/file/fac8eb49e2fd541b81fcbdeb98a199cb">fac8eb49e2fd541b81fcbdeb98a199cb</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/9a35ae9a1f95ce4be64adc604c80079173e4a676">9a35ae9a1f95ce4be64adc604c80079173e4a676</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/59626cac380d8fe0b80a6d4c4406d62ba0683a2f0f68d50ad506ca1b1cf25347">59626cac380d8fe0b80a6d4c4406d62ba0683a2f0f68d50ad506ca1b1cf25347</a> |
-| Signature | BIOSTAR MICROTECH INT&#39;L CORP, VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   |
+| Signature | BIOSTAR MICROTECH INT&#39;L CORP, VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   || Description | SMI Driver || OriginalFilename | BSMI.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bsmi.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

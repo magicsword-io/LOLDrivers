@@ -45,12 +45,12 @@ sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &amp;&amp;
 | MD5 | <a href="https://www.virustotal.com/gui/file/d5db81974ffda566fa821400419f59be">d5db81974ffda566fa821400419f59be</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/4c18754dca481f107f0923fb8ef5e149d128525d">4c18754dca481f107f0923fb8ef5e149d128525d</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/32cccc4f249499061c0afa18f534c825d01034a1f6815f5506bf4c4ff55d1351">32cccc4f249499061c0afa18f534c825d01034a1f6815f5506bf4c4ff55d1351</a> |
-| Signature | Voicemod Sociedad Limitada, DigiCert Global G3 Code Signing ECC SHA384 2021 CA1, DigiCert Global Root G3   |
+| Signature | Voicemod Sociedad Limitada, DigiCert Global G3 Code Signing ECC SHA384 2021 CA1, DigiCert Global Root G3   || Company | Windows (R) Win 7 DDK provider || Description | Voicemod Virtual Audio Device (WDM) || Product | Windows (R) Win 7 DDK driver || OriginalFilename | vmdrv.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/vmdrv.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

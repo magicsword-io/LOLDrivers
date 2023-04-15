@@ -50,12 +50,12 @@ sc.exe create IObitUnlocker.sys binPath=C:\windows\temp\IObitUnlocker.sys     ty
 | MD5 | <a href="https://www.virustotal.com/gui/file/2391fb461b061d0e5fccb050d4af7941">2391fb461b061d0e5fccb050d4af7941</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/7c6cad6a268230f6e08417d278dda4d66bb00d13">7c6cad6a268230f6e08417d278dda4d66bb00d13</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/f85cca4badff17d1aa90752153ccec77a68ad282b69e3985fdc4743eaea85004">f85cca4badff17d1aa90752153ccec77a68ad282b69e3985fdc4743eaea85004</a> |
-| Signature | IObit CO., LTD, DigiCert EV Code Signing CA, DigiCert   |
+| Signature | IObit CO., LTD, DigiCert EV Code Signing CA, DigiCert   || Company | IObit Information Technology || Description | Unlocker Driver || Product | Unlocker || OriginalFilename | IObitUnlocker.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iobitunlocker.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

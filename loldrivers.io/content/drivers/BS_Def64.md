@@ -45,22 +45,22 @@ sc.exe create BS_Def64.sys binPath=C:\windows\temp\BS_Def64.sys type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/8abbb12e61045984eda19e2dc77b235e">8abbb12e61045984eda19e2dc77b235e</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/609fa1efcf61e26d64a5ceb13b044175ab2b3a13">609fa1efcf61e26d64a5ceb13b044175ab2b3a13</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/0040153302b88bee27eb4f1eca6855039e1a057370f5e8c615724fa5215bada3">0040153302b88bee27eb4f1eca6855039e1a057370f5e8c615724fa5215bada3</a> |
-| Publisher | ASUSTeK Computer Inc. || Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Description | Default BIOS Flash Driver || Filename | BS_Def64.sys |
+| Publisher | ASUSTeK Computer Inc. || Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | AsusTek Computer Inc. || Description | Default BIOS Flash Driver || Product | Support SST39SF020,SST29EE020,AT49F002T,AT29C020,AM29F002NT,AM29F002NB,V29C51002T,V29C51002B,M29F002T,W29C020. || OriginalFilename | Bs_Def64.sys || Filename | BS_Def64.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/c9a293762319d73c8ee84bcaaf81b7b3">c9a293762319d73c8ee84bcaaf81b7b3</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/7d7c03e22049a725ace2a9812c72b53a66c2548b">7d7c03e22049a725ace2a9812c72b53a66c2548b</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/3326e2d32bbabd69feb6024809afc56c7e39241ebe70a53728c77e80995422a5">3326e2d32bbabd69feb6024809afc56c7e39241ebe70a53728c77e80995422a5</a> |
-| Publisher | ASUSTeK Computer Inc. || Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Description | Default BIOS Flash Driver || Filename | BS_Def64.sys |
+| Publisher | ASUSTeK Computer Inc. || Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | AsusTek Computer Inc. || Description | Default BIOS Flash Driver || Product | Support SST39SF020,SST29EE020,AT49F002T,AT29C020,AM29F002NT,AM29F002NB,V29C51002T,V29C51002B,M29F002T,W29C020. || OriginalFilename | Bs_Def64.sys || Filename | BS_Def64.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/120b5bbb9d2eb35ff4f62d79507ea63a">120b5bbb9d2eb35ff4f62d79507ea63a</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/f9519d033d75e1ab6b82b2e156eafe9607edbcfb">f9519d033d75e1ab6b82b2e156eafe9607edbcfb</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/36b9e31240ab0341873c7092b63e2e0f2cab2962ebf9b25271c3a1216b7669eb">36b9e31240ab0341873c7092b63e2e0f2cab2962ebf9b25271c3a1216b7669eb</a> |
-| Publisher | ASUSTeK Computer Inc. || Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Description | Default BIOS Flash Driver |
+| Publisher | ASUSTeK Computer Inc. || Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | AsusTek Computer Inc. || Description | Default BIOS Flash Driver || Product | Support SST39SF020,SST29EE020,AT49F002T,AT29C020,AM29F002NT,AM29F002NB,V29C51002T,V29C51002B,M29F002T,W29C020. || OriginalFilename | Bs_Def64.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_def64.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

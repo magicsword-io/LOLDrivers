@@ -45,12 +45,12 @@ sc.exe create cpuz.sys binPath=C:\windows\temp\cpuz.sys type=kernel &amp;&amp; s
 | MD5 | <a href="https://www.virustotal.com/gui/file/c2eb4539a4f6ab6edd01bdc191619975">c2eb4539a4f6ab6edd01bdc191619975</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/4d41248078181c7f61e6e4906aa96bbdea320dc2">4d41248078181c7f61e6e4906aa96bbdea320dc2</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/8c95d28270a4a314299cf50f05dcbe63033b2a555195d2ad2f678e09e00393e6">8c95d28270a4a314299cf50f05dcbe63033b2a555195d2ad2f678e09e00393e6</a> |
-| Signature | CPUID, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
+| Signature | CPUID, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | CPUID || Description | CPUID Driver || Product | CPUID service || OriginalFilename | cpuz.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cpuz.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

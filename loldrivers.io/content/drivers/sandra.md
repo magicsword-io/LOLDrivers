@@ -46,12 +46,12 @@ sc.exe create sandra.sys binPath=C:\windows\temp\sandra.sys type=kernel &amp;&am
 | MD5 | <a href="https://www.virustotal.com/gui/file/9a237fa07ce3ed06ea924a9bed4a6b99">9a237fa07ce3ed06ea924a9bed4a6b99</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/82ba5513c33e056c3f54152c8555abf555f3e745">82ba5513c33e056c3f54152c8555abf555f3e745</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/1aaf4c1e3cb6774857e2eef27c17e68dc1ae577112e4769665f516c2e8c4e27b">1aaf4c1e3cb6774857e2eef27c17e68dc1ae577112e4769665f516c2e8c4e27b</a> |
-| Signature | SiSoftware Ltd, GeoTrust TrustCenter CodeSigning CA I, GeoTrust   |
+| Signature | SiSoftware Ltd, GeoTrust TrustCenter CodeSigning CA I, GeoTrust   || Company | SiSoftware || Description | Sandra Device Driver (Win64 x64)(Unicode) || Product | SiSoftware Sandra || OriginalFilename | SANDRA |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/sandra.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

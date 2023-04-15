@@ -45,12 +45,12 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/e9e786bdba458b8b4f9e93d034f73d00">e9e786bdba458b8b4f9e93d034f73d00</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/c6d349823bbb1f5b44bae91357895dba653c5861">c6d349823bbb1f5b44bae91357895dba653c5861</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/65db1b259e305a52042e07e111f4fa4af16542c8bacd33655f753ef642228890">65db1b259e305a52042e07e111f4fa4af16542c8bacd33655f753ef642228890</a> |
-| Signature | Phoenix Technology Ltd., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
+| Signature | Phoenix Technology Ltd., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | Phoenix Technologies, Ltd. || Description | SWinFlash Driver for Windows NT || Product | WinPhlash || OriginalFilename | PHLASHNT.SYS |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/phlashnt.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

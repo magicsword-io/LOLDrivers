@@ -50,12 +50,12 @@ sc.exe create mydrivers.sys binPath=C:\windows\temp\mydrivers.sys type=kernel &a
 | MD5 | <a href="https://www.virustotal.com/gui/file/507a649eb585d8d0447eab0532ef0c73">507a649eb585d8d0447eab0532ef0c73</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/7859e75580570e23a1ef7208b9a76f81738043d5">7859e75580570e23a1ef7208b9a76f81738043d5</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6">08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6</a> |
-| Signature | Beijing Kingsoft Security software Co.,Ltd, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Signature | Beijing Kingsoft Security software Co.,Ltd, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | MyDrivers.com || Description | DriverGenius Hardware monitor || Product | DriverGenius || OriginalFilename | mydrivers.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mydrivers.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

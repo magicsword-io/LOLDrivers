@@ -70,7 +70,7 @@ sc.exe create AsrSetupDrv103.sys binPath=C:\windows\temp\AsrSetupDrv103.sys     
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrsetupdrv103.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

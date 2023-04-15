@@ -49,7 +49,7 @@ sc.exe create dcr.sys binPath=C:\windows\temp\dcr.sys type=kernel &amp;&amp; sc.
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dcr.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

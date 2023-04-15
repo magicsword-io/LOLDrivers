@@ -55,7 +55,7 @@ sc.exe create nstr.sys binPath=C:\windows\temp \n \n \n  str.sys type=kernel &am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nstr.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

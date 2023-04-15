@@ -45,12 +45,12 @@ sc.exe create BS_HWMIO64_W10.sys binPath=C:\windows\temp\BS_HWMIO64_W10.sys     
 | MD5 | <a href="https://www.virustotal.com/gui/file/d2588631d8aae2a3e54410eaf54f0679">d2588631d8aae2a3e54410eaf54f0679</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/cb3de54667548a5c9abf5d8fa47db4097fcee9f1">cb3de54667548a5c9abf5d8fa47db4097fcee9f1</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/1d0397c263d51e9fc95bcc8baf98d1a853e1c0401cd0e27c7bf5da3fba1c93a8">1d0397c263d51e9fc95bcc8baf98d1a853e1c0401cd0e27c7bf5da3fba1c93a8</a> |
-| Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
+| Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   || Company | BIOSTAR Group || Description | I/O Interface driver file || Product | BIOSTAR I/O driver || OriginalFilename | BS_HWMIO64_W10.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_hwmio64_w10.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 

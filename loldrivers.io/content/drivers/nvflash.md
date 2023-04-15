@@ -45,12 +45,12 @@ sc.exe create nvflash.sys binPath=C:\windows\temp \n \n \n  vflash.sys type=kern
 | MD5 | <a href="https://www.virustotal.com/gui/file/84fb76ee319073e77fb364bbbbff5461">84fb76ee319073e77fb364bbbbff5461</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/a4b2c56c12799855162ca3b004b4b2078c6ecf77">a4b2c56c12799855162ca3b004b4b2078c6ecf77</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/afdd66562dea51001c3a9de300f91fc3eb965d6848dfce92ccb9b75853e02508">afdd66562dea51001c3a9de300f91fc3eb965d6848dfce92ccb9b75853e02508</a> |
-| Signature | NVIDIA Corporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Signature | NVIDIA Corporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | NVIDIA Corporation || Description | NVIDIA Flash Driver, Version 1.8.0 || Product | NVIDIA Flash Driver || OriginalFilename | nvflash.sys |
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nvflash.yaml)
 
-*last_updated:* 2023-04-14
+*last_updated:* 2023-04-15
 
 
 
