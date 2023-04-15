@@ -5,9 +5,8 @@ MitreID: T1068
 Category: malicious
 Verified: 'TRUE'
 Commands:
-  Command: 'sc.exe create daxin_blank6.sys binPath=C:\windows\temp\daxin_blank6.sys     type=kernel
-type=kernel
- && sc.exe start daxin_blank6.sys'
+  Command: sc.exe create daxin_blank6.sys binPath=C:\windows\temp\daxin_blank6.sys     type=kernel
+    type=kernel && sc.exe start daxin_blank6.sys
   Description: Driver used in the Daxin malware campaign.
   Usecase: Elevate privileges
   Privileges: kernel
@@ -28,11 +27,85 @@ KnownVulnerableSamples:
   Signature: Unsigned
   Date: 2:44 AM 3/26/2009
   Publisher: n/a
-  Company: n/a
-  Description: n/a
-  Product: n/a
-  ProductVersion: n/a
-  FileVersion: n/a
-  MachineType: 32-bit
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: I386
   OriginalFilename: ''
-
+  Authentihash:
+    MD5: d59fbf4aa759286d1dd9abb40733f7b2
+    SHA1: 3c34c7c5916b987420fbfb4f3e3fef7400471831
+    SHA256: a8c558e74ebe35a095a5b79d4bb26c10b18f8ebb449365e742f856d4e032555c
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - NTOSKRNL.EXE
+  - HAL.DLL
+  - ntoskrnl.exe
+  - NDIS.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmUnlockPages
+  - MmProbeAndLockPages
+  - IoAllocateMdl
+  - IoQueueWorkItem
+  - IoAllocateWorkItem
+  - IoGetCurrentProcess
+  - _stricmp
+  - IoFreeWorkItem
+  - RtlFreeUnicodeString
+  - ZwClose
+  - ZwWriteFile
+  - ZwCreateFile
+  - RtlAnsiStringToUnicodeString
+  - _strnicmp
+  - RtlUnwind
+  - RtlCopyUnicodeString
+  - wcsncmp
+  - swprintf
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - KeInitializeSpinLock
+  - ExfInterlockedInsertTailList
+  - RtlInitUnicodeString
+  - MmMapLockedPagesSpecifyCache
+  - IoFreeMdl
+  - InterlockedDecrement
+  - InterlockedIncrement
+  - InterlockedExchange
+  - IoDeleteSymbolicLink
+  - IoDeleteDevice
+  - ExfInterlockedRemoveHeadList
+  - IofCompleteRequest
+  - ExAllocatePoolWithTag
+  - strncmp
+  - ExFreePool
+  - KfAcquireSpinLock
+  - KfReleaseSpinLock
+  - KeInitializeApc
+  - KeInsertQueueApc
+  - KeAttachProcess
+  - KeDetachProcess
+  - NtQuerySystemInformation
+  - NdisAllocatePacket
+  - NdisCopyFromPacketToPacket
+  - NdisAllocateMemory
+  - NdisFreePacket
+  - NdisAllocateBuffer
+  - NdisSetEvent
+  - NdisResetEvent
+  - NdisFreeBufferPool
+  - NdisFreePacketPool
+  - NdisFreeMemory
+  - NdisWaitEvent
+  - NdisQueryAdapterInstanceName
+  - NdisOpenAdapter
+  - NdisInitializeEvent
+  - NdisAllocatePacketPool
+  - NdisRegisterProtocol
+  - NdisAllocateBufferPool
+  - NdisCloseAdapter
+  - NdisDeregisterProtocol
+  Signatures: {}

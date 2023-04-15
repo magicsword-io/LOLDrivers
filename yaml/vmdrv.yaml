@@ -5,8 +5,8 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
-  Command: 'sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel 
- && sc.exe start vmdrv.sys'
+  Command: sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &&
+    sc.exe start vmdrv.sys
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
@@ -29,11 +29,80 @@ KnownVulnerableSamples:
   - DigiCert Global Root G3
   Date: ''
   Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
-
+  Company: Windows (R) Win 7 DDK provider
+  Description: Voicemod Virtual Audio Device (WDM)
+  Product: Windows (R) Win 7 DDK driver
+  ProductVersion: 10.0.10011.16384
+  FileVersion: 10.0.10011.16384
+  MachineType: AMD64
+  OriginalFilename: vmdrv.sys
+  Authentihash:
+    MD5: 681bb8e9713477839a1ee8d87b498630
+    SHA1: 68cdcd073e57f650c5d6173cd79af3a3526052f6
+    SHA256: 99ddeba6bcdc79e52e3ff8afc63dbe4b299161cf0f5558a2d7630c2a18daf2c6
+  InternalName: vmdrv.sys
+  Copyright: Copyright (C) Voicemod S.L.2010-2020
+  Imports:
+  - ntoskrnl.exe
+  - portcls.sys
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - KeClearEvent
+  - KeSetEvent
+  - ExFreePool
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - ObReferenceObjectByHandle
+  - ObfDereferenceObject
+  - ExEventObjectType
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ExSystemTimeToLocalTime
+  - _purecall
+  - KeInitializeDpc
+  - KeFlushQueuedDpcs
+  - KeInitializeMutex
+  - KeReleaseMutex
+  - KeInitializeTimerEx
+  - KeCancelTimer
+  - KeSetTimerEx
+  - KeWaitForSingleObject
+  - KeInitializeSpinLock
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - IoAllocateWorkItem
+  - IoFreeWorkItem
+  - IoQueueWorkItem
+  - RtlIsNtDdiVersionAvailable
+  - PcInitializeAdapterDriver
+  - PcDispatchIrp
+  - PcAddAdapterDevice
+  - PcRegisterAdapterPowerManagement
+  - PcNewServiceGroup
+  - PcRegisterSubdevice
+  - PcRegisterPhysicalConnection
+  - PcNewPort
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Global G3 Code Signing ECC SHA384
+        2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3065023078bd4995657101d0465768650e68a9dc3608c1eefdd48edb40653f0dff93afc2ae6386a37ecbb4915a78ec070367077c023100e79f1ff1075bac34c638bcb5a550cee6ea387e3e7990e4a45bab020de807fc56a65a8addb350b2ddf2fa66749ed01663
+      SignatureAlgorithmOID: 1.2.840.10045.4.3.3
+    - Subject: ??=Private Organization, ??=ES, ??=Valencia, serialNumber=B98657844,
+        C=ES, L=Valencia, O=Voicemod Sociedad Limitada, CN=Voicemod Sociedad Limitada
+      ValidFrom: '2021-10-21 00:00:00'
+      ValidTo: '2023-01-19 23:59:59'
+      Signature: 3066023100fd8a9d376bf4399c7cb947c5fbb2e90bb3fdbcb37cab257ef47db016f1898e2d129241a757f039f8e7112b05a48632a60231009b75d4e2623fb9f54ce9ffc6ba7a661a5d2d54b096ddf6c510b2f6063981c15846e282779e9febffa39e5c9fad429646
+      SignatureAlgorithmOID: 1.2.840.10045.4.3.3
+    Signer:
+    - SerialNumber: 014d8930c6a3fceb0f4021734d5ed508
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Global G3 Code Signing ECC SHA384
+        2021 CA1

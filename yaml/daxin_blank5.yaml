@@ -5,9 +5,8 @@ MitreID: T1068
 Category: malicious
 Verified: 'TRUE'
 Commands:
-  Command: 'sc.exe create daxin_blank5.sys binPath=C:\windows\temp\daxin_blank5.sys     type=kernel
-type=kernel
- && sc.exe start daxin_blank5.sys'
+  Command: sc.exe create daxin_blank5.sys binPath=C:\windows\temp\daxin_blank5.sys     type=kernel
+    type=kernel && sc.exe start daxin_blank5.sys
   Description: Driver used in the Daxin malware campaign.
   Usecase: Elevate privileges
   Privileges: kernel
@@ -28,11 +27,82 @@ KnownVulnerableSamples:
   Signature: Unsigned
   Date: 1:29 AM 7/18/2008
   Publisher: n/a
-  Company: n/a
-  Description: n/a
-  Product: n/a
-  ProductVersion: n/a
-  FileVersion: n/a
-  MachineType: 32-bit
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: I386
   OriginalFilename: ''
-
+  Authentihash:
+    MD5: da0d70a9fd3a61a2802af4a07bed29d4
+    SHA1: 99a969b2deded8b2d403268cd49139463c06b484
+    SHA256: 954789c665098cf491a9bdf4e04886bad8992a393f91ccbca239bff40cc6dca6
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - NDIS.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmUnlockPages
+  - KeInsertQueueApc
+  - strncmp
+  - KeInitializeApc
+  - MmProbeAndLockPages
+  - IoAllocateMdl
+  - _except_handler3
+  - IoQueueWorkItem
+  - KeAttachProcess
+  - KeDetachProcess
+  - IoGetCurrentProcess
+  - IoFreeWorkItem
+  - RtlFreeUnicodeString
+  - ZwClose
+  - ZwWriteFile
+  - ZwCreateFile
+  - RtlAnsiStringToUnicodeString
+  - IofCompleteRequest
+  - ExFreePool
+  - ExAllocatePoolWithTag
+  - InterlockedDecrement
+  - MmMapLockedPagesSpecifyCache
+  - IoFreeMdl
+  - InterlockedExchange
+  - InterlockedIncrement
+  - swprintf
+  - RtlCopyUnicodeString
+  - ExfInterlockedInsertTailList
+  - wcsncmp
+  - IoCreateSymbolicLink
+  - RtlInitUnicodeString
+  - IoCreateDevice
+  - IoDeleteSymbolicLink
+  - KeInitializeSpinLock
+  - IoDeleteDevice
+  - _strnicmp
+  - ExfInterlockedRemoveHeadList
+  - IoAllocateWorkItem
+  - KfAcquireSpinLock
+  - KfReleaseSpinLock
+  - NdisAllocateMemory
+  - NdisFreePacket
+  - NdisAllocatePacket
+  - NdisResetEvent
+  - NdisCloseAdapter
+  - NdisAllocateBuffer
+  - NdisInitializeEvent
+  - NdisOpenAdapter
+  - NdisFreeMemory
+  - NdisQueryAdapterInstanceName
+  - NdisDeregisterProtocol
+  - NdisSetEvent
+  - NdisFreeBufferPool
+  - NdisAllocatePacketPool
+  - NdisFreePacketPool
+  - NdisRegisterProtocol
+  - NdisWaitEvent
+  - NdisAllocateBufferPool
+  - NdisCopyFromPacketToPacket
+  Signatures: {}
