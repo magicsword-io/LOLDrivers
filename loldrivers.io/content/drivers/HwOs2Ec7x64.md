@@ -22,6 +22,13 @@ HwOs2Ec7x64.sys is a vulnerable driver and more information will be added as fou
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -45,7 +52,80 @@ sc.exe create HwOs2Ec7x64.sys binPath=C:\windows\temp\HwOs2Ec7x64.sys     type=k
 | MD5 | <a href="https://www.virustotal.com/gui/file/bae1f127c4ff21d8fe45e2bbfc59c180">bae1f127c4ff21d8fe45e2bbfc59c180</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/26c4a7b392d7e7bd7f0a2a758534e45c0d9a56ab">26c4a7b392d7e7bd7f0a2a758534e45c0d9a56ab</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/b179e1ab6dc0b1aee783adbcad4ad6bb75a8a64cb798f30c0dd2ee8aaf43e6de">b179e1ab6dc0b1aee783adbcad4ad6bb75a8a64cb798f30c0dd2ee8aaf43e6de</a> |
-| Signature | Huawei Technologies Co.,Ltd., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | Huawei || Description | HwOs2Ec || Product | Huawei MateBook || OriginalFilename | HwOs2Ec.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%9a0c8745f43136476aa78ea77af67a0a">9a0c8745f43136476aa78ea77af67a0a</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%dcfc27b5aac3e1911c0617d6c1823e65267c09a3">dcfc27b5aac3e1911c0617d6c1823e65267c09a3</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%b78cb190a4968d06f2cdab65ea0106bc47eefdaffc871ba5dd2c2dccadb1e403">b78cb190a4968d06f2cdab65ea0106bc47eefdaffc871ba5dd2c2dccadb1e403</a> || Signature | Huawei Technologies Co.,Ltd., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | Huawei || Description | HwOs2Ec || Product | Huawei MateBook || OriginalFilename | HwOs2Ec.sys |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* DbgPrint
+* IofCompleteRequest
+* IoCreateDevice
+* IoCreateSymbolicLink
+* IoDeleteDevice
+* IoDeleteSymbolicLink
+* IoGetCurrentProcess
+* InitSafeBootMode
+* memcpy_s
+* RtlInitUnicodeString
+* RtlEqualUnicodeString
+* RtlCopyUnicodeString
+* RtlAppendUnicodeToString
+* ExAllocatePool
+* ExFreePoolWithTag
+* MmProbeAndLockPages
+* MmMapLockedPagesSpecifyCache
+* MmUnmapLockedPages
+* IoAllocateMdl
+* IoFreeMdl
+* ObReferenceObjectByHandle
+* ObfDereferenceObject
+* ZwClose
+* PsSetCreateProcessNotifyRoutine
+* ZwOpenProcess
+* ZwQuerySystemInformation
+* ZwAllocateVirtualMemory
+* ZwFreeVirtualMemory
+* KeInitializeApc
+* ZwOpenThread
+* KeInsertQueueApc
+* PsGetProcessPeb
+* RtlImageDirectoryEntryToData
+* KeStackAttachProcess
+* KeUnstackDetachProcess
+* __C_specific_handler
+* PsProcessType
+* PsThreadType
+* PsGetThreadId
+* PsGetThreadProcessId
+* RtlGetVersion
+* ExAllocatePoolWithTag
+* MmGetSystemRoutineAddress
+* ZwTerminateProcess
+* KeInitializeEvent
+* ExAcquireFastMutex
+* ExReleaseFastMutex
+* KeSetEvent
+* KeWaitForMultipleObjects
+* KeWaitForSingleObject
+* PsCreateSystemThread
+* PsTerminateSystemThread
+* RtlCompareUnicodeStrings
+* wcscpy_s
+* _wcsnicmp
+* RtlCompareUnicodeString
+* RtlAppendUnicodeStringToString
+* ZwCreateFile
+* ZwOpenKey
+* ZwQueryValueKey
+* ZwQueryInformationProcess
+* ObOpenObjectByPointer
+* ObQueryNameString
+* IoFileObjectType
+* KeBugCheckEx
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hwos2ec7x64.yaml)

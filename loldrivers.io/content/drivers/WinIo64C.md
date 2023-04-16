@@ -27,6 +27,13 @@ WinIo64C.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -50,12 +57,26 @@ sc.exe create WinIo64C.sys binPath=C:\windows\temp\WinIo64C.sys type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/b242b0332b9c9e8e17ec27ef10d75503d20d97b6">b242b0332b9c9e8e17ec27ef10d75503d20d97b6</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   || Filename | WinIo64C.sys |
+| Signature | -   |
+#### Imports
+{{< details "Expand" >}}{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+| Filename | WinIo64C.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/a65fabaf64aa1934314aae23f25cdf215cbaa4b6">a65fabaf64aa1934314aae23f25cdf215cbaa4b6</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | Signature | -   |
+#### Imports
+{{< details "Expand" >}}{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio64c.yaml)

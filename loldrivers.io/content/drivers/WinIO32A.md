@@ -27,6 +27,13 @@ WinIO32A.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -51,6 +58,13 @@ sc.exe create WinIO32A.sys binPath=C:\windows\temp\WinIO32A.sys type=kernel &amp
 | SHA1 | <a href="https://www.virustotal.com/gui/file/01779ee53f999464465ed690d823d160f73f10e7">01779ee53f999464465ed690d823d160f73f10e7</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | Signature | -   |
+#### Imports
+{{< details "Expand" >}}{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio32a.yaml)

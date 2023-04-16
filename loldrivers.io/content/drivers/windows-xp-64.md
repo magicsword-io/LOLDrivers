@@ -27,6 +27,13 @@ windows-xp-64.sys is a vulnerable driver and more information will be added as f
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -51,6 +58,13 @@ sc.exe create windows-xp-64.sys binPath=C:\windows\temp\windows-xp-64.sys     ty
 | SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/dfaefd06b680f9ea837e7815fc1cc7d1f4cc375641ac850667ab20739f46ad22">dfaefd06b680f9ea837e7815fc1cc7d1f4cc375641ac850667ab20739f46ad22</a> |
 | Signature | -   |
+#### Imports
+{{< details "Expand" >}}{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/windows-xp-64.yaml)

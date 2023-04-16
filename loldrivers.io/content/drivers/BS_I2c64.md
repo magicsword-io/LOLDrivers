@@ -22,6 +22,13 @@ BS_I2c64.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -45,7 +52,32 @@ sc.exe create BS_I2c64.sys binPath=C:\windows\temp\BS_I2c64.sys type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/83601bbe5563d92c1fdb4e960d84dc77">83601bbe5563d92c1fdb4e960d84dc77</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/dc55217b6043d819eadebd423ff07704ee103231">dc55217b6043d819eadebd423ff07704ee103231</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a">55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a</a> |
-| Signature | BIOSTAR MICROTECH INT&#39;L CORP, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | BIOSTAR Group || Description | I/O Interface driver file || Product | BIOSTAR I/O driver fle || OriginalFilename | BS_I2cIo.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%bcc1ae726001fdbabb8159e3b333f3fd">bcc1ae726001fdbabb8159e3b333f3fd</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%7885fb33d8800fa3c036252af70e0a8391ab367d">7885fb33d8800fa3c036252af70e0a8391ab367d</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%85ac17aec836d5125db7407d2dc3af8e5b01241fea781b2fd55aae796b3912b4">85ac17aec836d5125db7407d2dc3af8e5b01241fea781b2fd55aae796b3912b4</a> || Signature | BIOSTAR MICROTECH INT&#39;L CORP, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | BIOSTAR Group || Description | I/O Interface driver file || Product | BIOSTAR I/O driver fle || OriginalFilename | BS_I2cIo.sys |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+* HAL.dll
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* IoDeleteSymbolicLink
+* IoStartNextPacket
+* IoReleaseCancelSpinLock
+* IoAcquireCancelSpinLock
+* MmUnmapIoSpace
+* RtlInitUnicodeString
+* KeRemoveEntryDeviceQueue
+* IofCompleteRequest
+* IoStartPacket
+* IoCreateDevice
+* IoCreateSymbolicLink
+* MmMapIoSpace
+* IoDeleteDevice
+* HalSetBusDataByOffset
+* HalTranslateBusAddress
+* HalGetBusDataByOffset
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_i2c64.yaml)

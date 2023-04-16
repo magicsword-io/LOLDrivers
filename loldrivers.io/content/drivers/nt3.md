@@ -27,6 +27,13 @@ nt3.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -51,6 +58,13 @@ sc.exe create nt3.sys binPath=C:\windows\temp \n \n \n  t3.sys type=kernel &amp;
 | SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/7d8937c18d6e11a0952e53970a0934cf0e65515637ac24d6ca52ccf4b93d385f">7d8937c18d6e11a0952e53970a0934cf0e65515637ac24d6ca52ccf4b93d385f</a> |
 | Signature | -   |
+#### Imports
+{{< details "Expand" >}}{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nt3.yaml)

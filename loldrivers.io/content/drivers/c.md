@@ -27,6 +27,13 @@ c.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -51,6 +58,13 @@ sc.exe create c.sys binPath=C:\windows\temp\c.sys type=kernel &amp;&amp; sc.exe 
 | SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/cc383ad11e9d06047a1558ed343f389492da3ac2b84b71462aee502a2fa616c8">cc383ad11e9d06047a1558ed343f389492da3ac2b84b71462aee502a2fa616c8</a> |
 | Signature | -   |
+#### Imports
+{{< details "Expand" >}}{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/c.yaml)

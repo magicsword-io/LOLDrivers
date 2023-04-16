@@ -22,6 +22,13 @@ Driver categorized as POORTRY by Mandiant.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -45,7 +52,33 @@ sc.exe create POORTRY1.sys binPath=C:\windows\temp\POORTRY1.sys type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/acac842a46f3501fe407b1db1b247a0b">acac842a46f3501fe407b1db1b247a0b</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/31fac347aa26e92db4d8c9e1ba37a7c7a2234f08">31fac347aa26e92db4d8c9e1ba37a7c7a2234f08</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/575e58b62afab094c20c296604dc3b7dd2e1a50f5978d8ee24b7dca028e97316">575e58b62afab094c20c296604dc3b7dd2e1a50f5978d8ee24b7dca028e97316</a> |
-| Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%887c566bdc8ed5231f45a37845d5ee89">887c566bdc8ed5231f45a37845d5ee89</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%e6ab2bbad89502d8985381b33d7351eb97cb2b78">e6ab2bbad89502d8985381b33d7351eb97cb2b78</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%565733b6e6d8f7b9661f04a3b4f29372f5dec080512551204b92ac4916a144cb">565733b6e6d8f7b9661f04a3b4f29372f5dec080512551204b92ac4916a144cb</a> || Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* ExAllocatePoolWithTag
+* IoDeleteSymbolicLink
+* ExFreePoolWithTag
+* RtlAnsiStringToUnicodeString
+* RtlInitUnicodeString
+* IoDeleteDevice
+* IoCreateFile
+* RtlInitString
+* RtlFreeUnicodeString
+* ZwQueryDirectoryFile
+* ZwClose
+* IofCompleteRequest
+* IoIsWdmVersionAvailable
+* IoCreateSymbolicLink
+* IoCreateDevice
+* DbgPrint
+* KeBugCheckEx
+* __chkstk
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/poortry1.yaml)

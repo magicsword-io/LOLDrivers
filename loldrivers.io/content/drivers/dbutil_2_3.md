@@ -22,6 +22,13 @@ dbutil_2_3.sys is a vulnerable driver and more information will be added as foun
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -45,12 +52,60 @@ sc.exe create dbutil_2_3.sys binPath=C:\windows\temp\dbutil_2_3.sys type=kernel 
 | MD5 | <a href="https://www.virustotal.com/gui/file/c996d7971c49252c582171d9380360f2">c996d7971c49252c582171d9380360f2</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/c948ae14761095e4d76b55d9de86412258be7afd">c948ae14761095e4d76b55d9de86412258be7afd</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5">0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5</a> |
-| Publisher | Dell Inc. || Signature | Dell Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Filename | dbutil_2_3.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%e593dd14a41fd9a6cb42fdae324c3092">e593dd14a41fd9a6cb42fdae324c3092</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%e3c1dd569aa4758552566b0213ee4d1fe6382c4b">e3c1dd569aa4758552566b0213ee4d1fe6382c4b</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%fe4270a61dbed978c28b2915fcc2826d011148dcb7533fa8bd072ddce5944cef">fe4270a61dbed978c28b2915fcc2826d011148dcb7533fa8bd072ddce5944cef</a> || Publisher | Dell Inc. || Signature | Dell Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* KeSetImportanceDpc
+* KeSetTargetProcessorDpc
+* MmFreeContiguousMemorySpecifyCache
+* KeSetPriorityThread
+* RtlInitUnicodeString
+* IoDeleteDevice
+* KeInitializeDpc
+* MmUnmapIoSpace
+* MmGetPhysicalAddress
+* MmMapIoSpace
+* KeInsertQueueDpc
+* IofCompleteRequest
+* IoCreateSymbolicLink
+* IoCreateDevice
+* MmAllocateContiguousMemorySpecifyCache
+* KeBugCheckEx
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+| Filename | dbutil_2_3.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/c996d7971c49252c582171d9380360f2">c996d7971c49252c582171d9380360f2</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/c948ae14761095e4d76b55d9de86412258be7afd">c948ae14761095e4d76b55d9de86412258be7afd</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5">0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5</a> |
-| Publisher | Dell Inc. || Signature | Dell Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%e593dd14a41fd9a6cb42fdae324c3092">e593dd14a41fd9a6cb42fdae324c3092</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%e3c1dd569aa4758552566b0213ee4d1fe6382c4b">e3c1dd569aa4758552566b0213ee4d1fe6382c4b</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%fe4270a61dbed978c28b2915fcc2826d011148dcb7533fa8bd072ddce5944cef">fe4270a61dbed978c28b2915fcc2826d011148dcb7533fa8bd072ddce5944cef</a> || Publisher | Dell Inc. || Signature | Dell Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* KeSetImportanceDpc
+* KeSetTargetProcessorDpc
+* MmFreeContiguousMemorySpecifyCache
+* KeSetPriorityThread
+* RtlInitUnicodeString
+* IoDeleteDevice
+* KeInitializeDpc
+* MmUnmapIoSpace
+* MmGetPhysicalAddress
+* MmMapIoSpace
+* KeInsertQueueDpc
+* IofCompleteRequest
+* IoCreateSymbolicLink
+* IoCreateDevice
+* MmAllocateContiguousMemorySpecifyCache
+* KeBugCheckEx
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbutil_2_3.yaml)

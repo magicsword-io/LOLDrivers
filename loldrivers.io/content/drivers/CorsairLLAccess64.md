@@ -22,6 +22,13 @@ CorsairLLAccess64.sys is a vulnerable driver and more information will be added 
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -45,7 +52,46 @@ sc.exe create CorsairLLAccess64.sys binPath=C:\windows\temp\CorsairLLAccess64.sy
 | MD5 | <a href="https://www.virustotal.com/gui/file/803a371a78d528a44ef8777f67443b16">803a371a78d528a44ef8777f67443b16</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/5fb9421be8a8b08ec395d05e00fd45eb753b593a">5fb9421be8a8b08ec395d05e00fd45eb753b593a</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/000547560fea0dd4b477eb28bf781ea67bf83c748945ce8923f90fdd14eb7a4b">000547560fea0dd4b477eb28bf781ea67bf83c748945ce8923f90fdd14eb7a4b</a> |
-| Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   || Company | Corsair Memory, Inc. || Description | Corsair LL Access || Product | Corsair LL Access || OriginalFilename | Corsair LL Access |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%daa859bc87e256d7cbf1d86285d96f9b">daa859bc87e256d7cbf1d86285d96f9b</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%d29d73b2add87a7daf3c626d593599ef6b9560ca">d29d73b2add87a7daf3c626d593599ef6b9560ca</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%e4ac5c7fbb41ee988029b27d8b6be574725689fd1365f5a56f5a12d9120f86c6">e4ac5c7fbb41ee988029b27d8b6be574725689fd1365f5a56f5a12d9120f86c6</a> || Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   || Company | Corsair Memory, Inc. || Description | Corsair LL Access || Product | Corsair LL Access || OriginalFilename | Corsair LL Access |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+* HAL.dll
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* RtlInitUnicodeString
+* RtlGetVersion
+* KeInitializeMutex
+* KeReleaseMutex
+* KeWaitForSingleObject
+* ExQueryDepthSList
+* ExpInterlockedPopEntrySList
+* ExpInterlockedPushEntrySList
+* ExInitializeNPagedLookasideList
+* ExDeleteNPagedLookasideList
+* MmBuildMdlForNonPagedPool
+* MmMapLockedPagesSpecifyCache
+* wcsncmp
+* MmMapIoSpace
+* MmUnmapIoSpace
+* IoAllocateMdl
+* IofCompleteRequest
+* IoCreateDevice
+* IoCreateSymbolicLink
+* IoDeleteDevice
+* IoDeleteSymbolicLink
+* IoFreeMdl
+* IoGetRequestorProcessId
+* __C_specific_handler
+* KeBugCheckEx
+* wcsncat_s
+* MmUnmapLockedPages
+* wcscpy_s
+* HalSetBusDataByOffset
+* HalGetBusDataByOffset
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/corsairllaccess64.yaml)

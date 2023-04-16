@@ -22,6 +22,13 @@ HOSTNT.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -45,7 +52,29 @@ sc.exe create HOSTNT.sys binPath=C:\windows\temp\HOSTNT.sys type=kernel &amp;&am
 | MD5 | <a href="https://www.virustotal.com/gui/file/e8ebba56ea799e1e62748c59e1a4c586">e8ebba56ea799e1e62748c59e1a4c586</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/ac13941f436139b909d105ad55637e1308f49d9a">ac13941f436139b909d105ad55637e1308f49d9a</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/07b6d69bafcfd767f1b63a490a8843c3bb1f8e1bbea56176109b5743c8f7d357">07b6d69bafcfd767f1b63a490a8843c3bb1f8e1bbea56176109b5743c8f7d357</a> |
-| Publisher | &#34;SafeNet, Inc.&#34; || Signature | SafeNet, Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | SafeNet, Inc. || Description | Hostnt 64-bit driver || Product | Hostnt || OriginalFilename | Hostnt.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%143dd36b65e3550323812614f6952d95">143dd36b65e3550323812614f6952d95</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%925f076cef081c0c2f6dded10c1349b4e65f7dde">925f076cef081c0c2f6dded10c1349b4e65f7dde</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%8920dedd3c5488ecc1db2ace55b2000d4cebf899c5e591b429d3f7767eee2216">8920dedd3c5488ecc1db2ace55b2000d4cebf899c5e591b429d3f7767eee2216</a> || Publisher | &#34;SafeNet, Inc.&#34; || Signature | SafeNet, Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | SafeNet, Inc. || Description | Hostnt 64-bit driver || Product | Hostnt || OriginalFilename | Hostnt.sys |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+* HAL.dll
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* IoDeleteDevice
+* ZwUnmapViewOfSection
+* ZwClose
+* IofCompleteRequest
+* ObReferenceObjectByHandle
+* RtlInitUnicodeString
+* IoCreateDevice
+* ZwOpenSection
+* IoDeleteSymbolicLink
+* KeBugCheckEx
+* IoCreateSymbolicLink
+* ZwMapViewOfSection
+* HalTranslateBusAddress
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hostnt.yaml)

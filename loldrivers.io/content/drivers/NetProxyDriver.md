@@ -27,6 +27,13 @@ NetProxyDriver.sys is a vulnerable driver and more information will be added as 
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -51,6 +58,13 @@ sc.exe create NetProxyDriver.sys binPath=C:\windows\temp\NetProxyDriver.sys     
 | SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/8111085022bda87e5f6aa4c195e743cc6dd6a3a6d41add475d267dc6b105a69f">8111085022bda87e5f6aa4c195e743cc6dd6a3a6d41add475d267dc6b105a69f</a> |
 | Signature | -   |
+#### Imports
+{{< details "Expand" >}}{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/netproxydriver.yaml)

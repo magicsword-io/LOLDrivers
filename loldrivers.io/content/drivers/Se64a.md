@@ -22,6 +22,13 @@ Se64a.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -45,7 +52,33 @@ sc.exe create Se64a.sys binPath=C:\windows\temp\Se64a.sys type=kernel &amp;&amp;
 | MD5 | <a href="https://www.virustotal.com/gui/file/0a6a1c9a7f80a2a5dcced5c4c0473765">0a6a1c9a7f80a2a5dcced5c4c0473765</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/33285b2e97a0aeb317166cce91f6733cf9c1ad53">33285b2e97a0aeb317166cce91f6733cf9c1ad53</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/6cb51ae871fbd5d07c5aad6ff8eea43d34063089528603ca9ceb8b4f52f68ddc">6cb51ae871fbd5d07c5aad6ff8eea43d34063089528603ca9ceb8b4f52f68ddc</a> |
-| Signature | EnTech Taiwan, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   || Company | EnTech Taiwan || Description | EnTech softEngine x64 kernel-mode driver || Product | softEngine-x64 || OriginalFilename | se64a.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%46f46abcb9e3ba747c2a2904babe38c0">46f46abcb9e3ba747c2a2904babe38c0</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%a4e8e3268569acc0a0b3f6eada713c0fa8825463">a4e8e3268569acc0a0b3f6eada713c0fa8825463</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%04cfb452e1ac73fb2f3b8a80d9f27e19a344a6bf0f74c7f9cae3ae82d3770195">04cfb452e1ac73fb2f3b8a80d9f27e19a344a6bf0f74c7f9cae3ae82d3770195</a> || Signature | EnTech Taiwan, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   || Company | EnTech Taiwan || Description | EnTech softEngine x64 kernel-mode driver || Product | softEngine-x64 || OriginalFilename | se64a.sys |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+* HAL.dll
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* ZwOpenSection
+* RtlInitUnicodeString
+* DbgPrint
+* IofCompleteRequest
+* ZwUnmapViewOfSection
+* RtlCopyMemory
+* ObReferenceObjectByHandle
+* KeEnterCriticalRegion
+* IoDeleteDevice
+* IoDeleteSymbolicLink
+* IoCreateSymbolicLink
+* IoCreateDevice
+* ZwMapViewOfSection
+* KeLeaveCriticalRegion
+* ZwClose
+* HalTranslateBusAddress
+* HalGetBusDataByOffset
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/se64a.yaml)

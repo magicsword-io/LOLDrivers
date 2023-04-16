@@ -23,6 +23,13 @@ This utility access almost all the computer hardware, including PCI (PCI Express
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -48,7 +55,54 @@ sc.exe create rwdrv.sys binPath=C:\windows\temp\rwdrv.sys type=kernel &amp;&amp;
 | MD5 | <a href="https://www.virustotal.com/gui/file/257483d5d8b268d0d679956c7acdf02d">257483d5d8b268d0d679956c7acdf02d</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/fbf8b0613a2f7039aeb9fa09bd3b40c8ff49ded2">fbf8b0613a2f7039aeb9fa09bd3b40c8ff49ded2</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3">ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3</a> |
-| Signature | ChongKim Chan, GlobalSign CodeSigning CA - G2, GlobalSign Root CA - R1   || Company | RW-Everything || Description | RwDrv Driver || Product | RwDrv Driver || OriginalFilename | RwDrv.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%3cd1454d2308cee5c59b45d5f952e70b">3cd1454d2308cee5c59b45d5f952e70b</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%2c3b01ff8ce024f70f9daad31ea6c78de54f239b">2c3b01ff8ce024f70f9daad31ea6c78de54f239b</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%acb65f96f1d5c986b52d980a1c5ea009292ff472087fdd8a98a485404948f585">acb65f96f1d5c986b52d980a1c5ea009292ff472087fdd8a98a485404948f585</a> || Signature | ChongKim Chan, GlobalSign CodeSigning CA - G2, GlobalSign Root CA - R1   || Company | RW-Everything || Description | RwDrv Driver || Product | RwDrv Driver || OriginalFilename | RwDrv.sys |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+* HAL.dll
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* ObfDereferenceObject
+* IoUnregisterPlugPlayNotification
+* ExFreePoolWithTag
+* MmUnmapIoSpace
+* MmMapIoSpace
+* RtlCompareMemory
+* ExAllocatePoolWithTag
+* memcpy
+* memset
+* MmGetPhysicalAddress
+* MmAllocateContiguousMemorySpecifyCache
+* MmFreeContiguousMemorySpecifyCache
+* IoFreeIrp
+* IoFreeMdl
+* MmUnlockPages
+* RtlInitUnicodeString
+* IoBuildAsynchronousFsdRequest
+* KeWaitForSingleObject
+* IoBuildDeviceIoControlRequest
+* KeInitializeEvent
+* RtlQueryRegistryValues
+* IoFreeWorkItem
+* IoGetDeviceObjectPointer
+* ExfInterlockedInsertTailList
+* IoQueueWorkItem
+* IoAllocateWorkItem
+* RtlCopyUnicodeString
+* IoRegisterPlugPlayNotification
+* IoCreateSymbolicLink
+* IoCreateDevice
+* KeTickCount
+* IoDeleteSymbolicLink
+* IoDeleteDevice
+* IofCallDriver
+* IofCompleteRequest
+* KfReleaseSpinLock
+* KeStallExecutionProcessor
+* KfAcquireSpinLock
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rwdrv.yaml)

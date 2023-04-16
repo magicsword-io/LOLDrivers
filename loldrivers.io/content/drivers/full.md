@@ -27,6 +27,13 @@ full.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -51,6 +58,13 @@ sc.exe create full.sys binPath=C:\windows\temp\full.sys type=kernel &amp;&amp; s
 | SHA1 | <a href="https://www.virustotal.com/gui/file/4b8c0445075f09aeef542ab1c86e5de6b06e91a3">4b8c0445075f09aeef542ab1c86e5de6b06e91a3</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | Signature | -   |
+#### Imports
+{{< details "Expand" >}}{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/full.yaml)

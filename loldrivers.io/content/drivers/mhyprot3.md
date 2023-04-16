@@ -27,6 +27,13 @@ mhyprot3.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -50,7 +57,123 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/5cc5c26fc99175997d84fe95c61ab2c2">5cc5c26fc99175997d84fe95c61ab2c2</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/a197a02025946aca96d6e74746f84774df31249e">a197a02025946aca96d6e74746f84774df31249e</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/475e5016c9c0f5a127896f9179a1b1577a67b357f399ab5a1e68aab07134729a">475e5016c9c0f5a127896f9179a1b1577a67b357f399ab5a1e68aab07134729a</a> |
-| Signature | miHoYo Co.,Ltd., DigiCert SHA2 Assured ID Code Signing CA, DigiCert   |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%7ce959fb5b40f1ba40bcac22c8d95c75">7ce959fb5b40f1ba40bcac22c8d95c75</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%82fe9b69f358ef5851eeaa26a9a03f2e1b231358">82fe9b69f358ef5851eeaa26a9a03f2e1b231358</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%aac86a3143de3e18dea6eab813b285da0718e9fb6bc0bbb46c6e7638476061d8">aac86a3143de3e18dea6eab813b285da0718e9fb6bc0bbb46c6e7638476061d8</a> || Signature | miHoYo Co.,Ltd., DigiCert SHA2 Assured ID Code Signing CA, DigiCert   |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+* WDFLDR.SYS
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* ExReleaseFastMutex
+* ObfDereferenceObject
+* PsLookupProcessByProcessId
+* NtQuerySystemInformation
+* RtlInitUnicodeString
+* KeSetEvent
+* KeEnterCriticalRegion
+* KeLeaveCriticalRegion
+* KeWaitForSingleObject
+* ExAllocatePoolWithTag
+* ExInitializeResourceLite
+* ExAcquireResourceExclusiveLite
+* ExReleaseResourceLite
+* IofCompleteRequest
+* IoCreateDevice
+* IoCreateSymbolicLink
+* IoDeleteDevice
+* IoDeleteSymbolicLink
+* IoGetCurrentProcess
+* ObReferenceObjectByHandle
+* ZwClose
+* ZwOpenSection
+* ZwMapViewOfSection
+* MmIsAddressValid
+* PsGetCurrentProcessId
+* MmCopyVirtualMemory
+* vsprintf_s
+* swprintf_s
+* ExEventObjectType
+* _wcsicmp
+* RtlInitString
+* RtlAnsiStringToUnicodeString
+* RtlFreeUnicodeString
+* IoGetDeviceObjectPointer
+* ZwOpenDirectoryObject
+* ZwQueryDirectoryObject
+* ObReferenceObjectByName
+* ZwQuerySystemInformation
+* __C_specific_handler
+* MmHighestUserAddress
+* IoDriverObjectType
+* KeQueryTimeIncrement
+* KeStackAttachProcess
+* KeUnstackDetachProcess
+* PsGetProcessWow64Process
+* PsGetProcessPeb
+* MmUnlockPages
+* ExAcquireFastMutex
+* MmUnmapLockedPages
+* IoFreeMdl
+* ZwTerminateProcess
+* PsGetProcessImageFileName
+* ZwQueryObject
+* ObOpenObjectByPointer
+* PsReferenceProcessFilePointer
+* IoQueryFileDosDeviceName
+* MmProbeAndLockPages
+* MmBuildMdlForNonPagedPool
+* MmMapLockedPagesSpecifyCache
+* IoAllocateMdl
+* KeClearEvent
+* MmMapLockedPages
+* PsSetCreateProcessNotifyRoutineEx
+* PsSetCreateThreadNotifyRoutine
+* PsRemoveCreateThreadNotifyRoutine
+* PsSetLoadImageNotifyRoutine
+* PsRemoveLoadImageNotifyRoutine
+* RtlUpcaseUnicodeChar
+* DbgPrint
+* ObRegisterCallbacks
+* ObUnRegisterCallbacks
+* ObGetFilterVersion
+* PsGetProcessId
+* IoThreadToProcess
+* strcmp
+* PsProcessType
+* PsThreadType
+* RtlEqualUnicodeString
+* RtlGetVersion
+* ObfReferenceObject
+* ObGetObjectType
+* ExEnumHandleTable
+* ExfUnblockPushLock
+* PsAcquireProcessExitSynchronization
+* PsReleaseProcessExitSynchronization
+* _snprintf
+* ZwCreateFile
+* ZwWriteFile
+* PsLookupThreadByThreadId
+* NtQueryInformationThread
+* PsGetThreadProcess
+* KeDelayExecutionThread
+* KdDisableDebugger
+* KdChangeOption
+* PsCreateSystemThread
+* PsTerminateSystemThread
+* KdDebuggerEnabled
+* PsGetVersion
+* RtlCopyUnicodeString
+* ExFreePoolWithTag
+* ExAllocatePool
+* KeInitializeEvent
+* MmGetSystemRoutineAddress
+* WdfVersionBindClass
+* WdfVersionBind
+* WdfVersionUnbind
+* WdfVersionUnbindClass
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mhyprot3.yaml)

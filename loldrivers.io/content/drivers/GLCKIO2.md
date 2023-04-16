@@ -22,6 +22,13 @@ GLCKIO2.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -45,12 +52,60 @@ sc.exe create GLCKIO2.sys binPath=C:\windows\temp\GLCKIO2.sys type=kernel &amp;&
 | MD5 | <a href="https://www.virustotal.com/gui/file/e700a820f117f65e813b216fccbf78c9">e700a820f117f65e813b216fccbf78c9</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/2dfcb799b3c42ecb0472e27c19b24ac7532775ce">2dfcb799b3c42ecb0472e27c19b24ac7532775ce</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/3a5ec83fe670e5e23aef3afa0a7241053f5b6be5e6ca01766d6b5f9177183c25">3a5ec83fe670e5e23aef3afa0a7241053f5b6be5e6ca01766d6b5f9177183c25</a> |
-| Publisher | ASUSTeK Computer Inc. || Signature | ASUSTeK Computer Inc., DigiCert SHA2 High Assurance Code Signing CA, DigiCert   || Filename | GLCKIO2.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%505c5b85b442f9159ba715d4867f9ac4">505c5b85b442f9159ba715d4867f9ac4</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%83644f9ece6d6ef3517e1829595c52380922ed35">83644f9ece6d6ef3517e1829595c52380922ed35</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%25a0854ef48a4dfbc7f04e94d2b11757e3613b241d39d46a19cb389ce42887e4">25a0854ef48a4dfbc7f04e94d2b11757e3613b241d39d46a19cb389ce42887e4</a> || Publisher | ASUSTeK Computer Inc. || Signature | ASUSTeK Computer Inc., DigiCert SHA2 High Assurance Code Signing CA, DigiCert   |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+* HAL.dll
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* IofCompleteRequest
+* IoCreateDevice
+* IoCreateSymbolicLink
+* IoDeleteDevice
+* IoDeleteSymbolicLink
+* MmGetSystemRoutineAddress
+* ObfDereferenceObject
+* ZwClose
+* ZwOpenSection
+* ZwMapViewOfSection
+* ZwUnmapViewOfSection
+* KeBugCheckEx
+* ObReferenceObjectByHandle
+* RtlInitUnicodeString
+* HalTranslateBusAddress
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+| Filename | GLCKIO2.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/d253c19194a18030296ae62a10821640">d253c19194a18030296ae62a10821640</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/cc51be79ae56bc97211f6b73cc905c3492da8f9d">cc51be79ae56bc97211f6b73cc905c3492da8f9d</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/61a1bdddd3c512e681818debb5bee94db701768fc25e674fcad46592a3259bd0">61a1bdddd3c512e681818debb5bee94db701768fc25e674fcad46592a3259bd0</a> |
-| Publisher | ASUSTeK Computer Inc. || Signature | ASUSTeK Computer Inc., DigiCert SHA2 High Assurance Code Signing CA, DigiCert   |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%86b5239d6b6fe0d6fad286f809d7571a">86b5239d6b6fe0d6fad286f809d7571a</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%d99b80b3269d735cac43af5e43483e64ca7961c3">d99b80b3269d735cac43af5e43483e64ca7961c3</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%47dba240967fd0088be618163672dfbddf0138178cccd45b54037f622b221220">47dba240967fd0088be618163672dfbddf0138178cccd45b54037f622b221220</a> || Publisher | ASUSTeK Computer Inc. || Signature | ASUSTeK Computer Inc., DigiCert SHA2 High Assurance Code Signing CA, DigiCert   |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+* HAL.dll
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* IofCompleteRequest
+* IoCreateDevice
+* IoCreateSymbolicLink
+* IoDeleteDevice
+* IoDeleteSymbolicLink
+* MmGetSystemRoutineAddress
+* ObfDereferenceObject
+* ZwClose
+* ZwOpenSection
+* ZwMapViewOfSection
+* ZwUnmapViewOfSection
+* KeBugCheckEx
+* ObReferenceObjectByHandle
+* RtlInitUnicodeString
+* HalTranslateBusAddress
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/glckio2.yaml)

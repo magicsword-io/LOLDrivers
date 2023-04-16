@@ -22,6 +22,13 @@ UCOREW64.SYS is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -45,7 +52,40 @@ sc.exe create UCOREW64.SYS binPath=C:\windows\temp\UCOREW64.SYS type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/a17c58c0582ee560c72f60764ed63224">a17c58c0582ee560c72f60764ed63224</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/bbc0b9fd67c8f4cefa3d76fcb29ff3cef996b825">bbc0b9fd67c8f4cefa3d76fcb29ff3cef996b825</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/a7c8f4faf3cbb088cac7753d81f8ec4c38ccb97cd9da817741f49272e8d01200">a7c8f4faf3cbb088cac7753d81f8ec4c38ccb97cd9da817741f49272e8d01200</a> |
-| Signature | American Megatrends, Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%6957cb828dd243621e2e67c948171264">6957cb828dd243621e2e67c948171264</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%c55173b926235b8678bddb9b49a1a8b9a92a1ada">c55173b926235b8678bddb9b49a1a8b9a92a1ada</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%f9c290ffc007e94fb61aecff42d267c1e626ec7939025b1a7d7285441d1c490d">f9c290ffc007e94fb61aecff42d267c1e626ec7939025b1a7d7285441d1c490d</a> || Signature | American Megatrends, Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+* HAL.dll
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* MmMapLockedPages
+* MmBuildMdlForNonPagedPool
+* IoAllocateMdl
+* MmGetPhysicalAddress
+* MmIsAddressValid
+* MmAllocateContiguousMemory
+* DbgPrint
+* MmUnmapLockedPages
+* MmMapIoSpace
+* MmUnmapIoSpace
+* IoFreeMdl
+* ZwMapViewOfSection
+* ObReferenceObjectByHandle
+* ZwOpenSection
+* RtlInitUnicodeString
+* ZwUnmapViewOfSection
+* IoDeleteDevice
+* IoDeleteSymbolicLink
+* IofCompleteRequest
+* IoCreateSymbolicLink
+* IoCreateDevice
+* ZwClose
+* MmFreeContiguousMemory
+* HalTranslateBusAddress
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ucorew64.yaml)

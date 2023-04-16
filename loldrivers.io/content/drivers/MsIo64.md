@@ -22,6 +22,13 @@ The MSI AmbientLink MsIo64 driver 1.0.0.8 has a Buffer Overflow (0x80102040, 0x8
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -49,7 +56,30 @@ sc.exe create MsIo64.sys binPath=C:\windows\temp\MsIo64.sys type=kernel &amp;&am
 | MD5 | <a href="https://www.virustotal.com/gui/file/dc943bf367ae77016ae399df8e71d38a">dc943bf367ae77016ae399df8e71d38a</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/6b54f8f137778c1391285fee6150dfa58a8120b1">6b54f8f137778c1391285fee6150dfa58a8120b1</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89">43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89</a> |
-| Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   || Company | MICSYS Technology Co., LTd || Description | MICSYS driver || Product | MsIo64 Driver Version 1.1 || OriginalFilename | MsIo64.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%9bb721ac0afc94a499a238ae32418d51">9bb721ac0afc94a499a238ae32418d51</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%04a903f13528536f1d0b1751886754d9aa5cdafa">04a903f13528536f1d0b1751886754d9aa5cdafa</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%5bf00eff58e5bbe4cf578ec37b9e13c8fa74511fb2644352fcc091347153a709">5bf00eff58e5bbe4cf578ec37b9e13c8fa74511fb2644352fcc091347153a709</a> || Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   || Company | MICSYS Technology Co., LTd || Description | MICSYS driver || Product | MsIo64 Driver Version 1.1 || OriginalFilename | MsIo64.sys |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+* HAL.dll
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* RtlInitUnicodeString
+* DbgPrint
+* ZwClose
+* ZwMapViewOfSection
+* ObReferenceObjectByHandle
+* ZwOpenSection
+* IoDeleteSymbolicLink
+* ZwUnmapViewOfSection
+* IofCompleteRequest
+* IoCreateSymbolicLink
+* IoCreateDevice
+* ObfDereferenceObject
+* IoDeleteDevice
+* HalTranslateBusAddress
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/msio64.yaml)

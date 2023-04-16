@@ -22,6 +22,13 @@ AsrDrv103.sys is a vulnerable driver and more information will be added as found
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -45,7 +52,70 @@ sc.exe create AsrDrv103.sys binPath=C:\windows\temp\AsrDrv103.sys type=kernel &a
 | MD5 | <a href="https://www.virustotal.com/gui/file/7c72a7e1d42b0790773efd8700e24952">7c72a7e1d42b0790773efd8700e24952</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/15d1a6a904c8409fb47a82aefa42f8c3c7d8c370">15d1a6a904c8409fb47a82aefa42f8c3c7d8c370</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/2003b478b9fd1b3d76ec5bf4172c2e8915babbbee7ad1783794acbf8d4c2519d">2003b478b9fd1b3d76ec5bf4172c2e8915babbbee7ad1783794acbf8d4c2519d</a> |
-| Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | ASRock Incorporation || Description | ASRock IO Driver || Product | ASRock IO Driver || OriginalFilename | AsrDrv.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%bb59340eceecb279389290775536523a">bb59340eceecb279389290775536523a</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%b3410021ea5a46818d9ff05a96c2809a9abe8e4a">b3410021ea5a46818d9ff05a96c2809a9abe8e4a</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%b6bf2460e023b1005cc60e107b14a3cfdf9284cc378a086d92e5dcdf6e432e2c">b6bf2460e023b1005cc60e107b14a3cfdf9284cc378a086d92e5dcdf6e432e2c</a> || Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | ASRock Incorporation || Description | ASRock IO Driver || Product | ASRock IO Driver || OriginalFilename | AsrDrv.sys |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+* HAL.dll
+* cng.sys
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* RtlQueryRegistryValues
+* MmUnmapIoSpace
+* IoFreeMdl
+* MmGetPhysicalAddress
+* IoBuildAsynchronousFsdRequest
+* MmMapIoSpace
+* IofCompleteRequest
+* IoFreeIrp
+* RtlCompareMemory
+* MmUnlockPages
+* IoCreateSymbolicLink
+* MmAllocateContiguousMemorySpecifyCache
+* IofCallDriver
+* KeBugCheckEx
+* IoDeleteDevice
+* MmGetSystemRoutineAddress
+* IoCreateDevice
+* ZwClose
+* ObOpenObjectByPointer
+* ZwSetSecurityObject
+* IoDeviceObjectType
+* _snwprintf
+* RtlLengthSecurityDescriptor
+* SeCaptureSecurityDescriptor
+* RtlCreateSecurityDescriptor
+* RtlSetDaclSecurityDescriptor
+* RtlAbsoluteToSelfRelativeSD
+* IoIsWdmVersionAvailable
+* SeExports
+* wcschr
+* _wcsnicmp
+* RtlLengthSid
+* RtlAddAccessAllowedAce
+* RtlGetSaclSecurityDescriptor
+* RtlGetDaclSecurityDescriptor
+* RtlGetGroupSecurityDescriptor
+* RtlGetOwnerSecurityDescriptor
+* ZwOpenKey
+* ZwCreateKey
+* ZwQueryValueKey
+* ZwSetValueKey
+* RtlFreeUnicodeString
+* RtlInitUnicodeString
+* MmFreeContiguousMemorySpecifyCache
+* ExFreePoolWithTag
+* IoDeleteSymbolicLink
+* ExAllocatePoolWithTag
+* KeStallExecutionProcessor
+* BCryptCloseAlgorithmProvider
+* BCryptGenerateSymmetricKey
+* BCryptOpenAlgorithmProvider
+* BCryptDecrypt
+* BCryptDestroyKey
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv103.yaml)

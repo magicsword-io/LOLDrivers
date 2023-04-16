@@ -22,6 +22,13 @@ smep_capcom.sys is a vulnerable driver and more information will be added as fou
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -45,7 +52,22 @@ sc.exe create smep_capcom.sys binPath=C:\windows\temp\smep_capcom.sys     type=k
 | MD5 | <a href="https://www.virustotal.com/gui/file/f406c5536bcf9bacbeb7ce8a3c383bfa">f406c5536bcf9bacbeb7ce8a3c383bfa</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/21edff2937eb5cd6f6b0acb7ee5247681f624260">21edff2937eb5cd6f6b0acb7ee5247681f624260</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/db2a9247177e8cdd50fe9433d066b86ffd2a84301aa6b2eb60f361cfff077004">db2a9247177e8cdd50fe9433d066b86ffd2a84301aa6b2eb60f361cfff077004</a> |
-| Signature | CAPCOM Co.,Ltd., Symantec Class 3 SHA256 Code Signing CA, VeriSign   |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%37458813b5115cbf06552da28fefbbbb">37458813b5115cbf06552da28fefbbbb</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%1d1cafc73c97c6bcd2331f8777d90fdca57125a3">1d1cafc73c97c6bcd2331f8777d90fdca57125a3</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%faa08cb609a5b7be6bfdb61f1e4a5e8adf2f5a1d2492f262483df7326934f5d4">faa08cb609a5b7be6bfdb61f1e4a5e8adf2f5a1d2492f262483df7326934f5d4</a> || Signature | CAPCOM Co.,Ltd., Symantec Class 3 SHA256 Code Signing CA, VeriSign   |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* IoDeleteSymbolicLink
+* RtlInitUnicodeString
+* IofCompleteRequest
+* MmGetSystemRoutineAddress
+* IoCreateSymbolicLink
+* IoCreateDevice
+* IoDeleteDevice
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/smep_capcom.yaml)

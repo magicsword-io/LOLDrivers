@@ -22,6 +22,13 @@ elrawdsk.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -48,12 +55,159 @@ sc.exe create elrawdsk.sys binPath=C:\windows\temp\elrawdsk.sys type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/1493d342e7a36553c56b2adea150949e">1493d342e7a36553c56b2adea150949e</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/ce549714a11bd43b52be709581c6e144957136ec">ce549714a11bd43b52be709581c6e144957136ec</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6">4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6</a> |
-| Signature | EldoS Corporation, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   || Company | EldoS Corporation || Description | RawDisk Driver. Allows write access to files and raw disk sectors for user mode applications in Windows 2000 and later. || Product | RawDisk || OriginalFilename | elrawdsk.sys || Filename | elrawdsk.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%20f14b58e9548b6ea99b35006f631197">20f14b58e9548b6ea99b35006f631197</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%174bd2e0965b996cff4a26ac511e551788fbc894">174bd2e0965b996cff4a26ac511e551788fbc894</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%98a55dc61046f4509d2465cbc373a9391c07125e5f4a242d2f475f14f32e5430">98a55dc61046f4509d2465cbc373a9391c07125e5f4a242d2f475f14f32e5430</a> || Signature | EldoS Corporation, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   || Company | EldoS Corporation || Description | RawDisk Driver. Allows write access to files and raw disk sectors for user mode applications in Windows 2000 and later. || Product | RawDisk || OriginalFilename | elrawdsk.sys |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+* HAL.dll
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* MmUnlockPages
+* KeSetEvent
+* IoDeleteDevice
+* IoDeleteSymbolicLink
+* RtlInitUnicodeString
+* RtlPrefixUnicodeString
+* FsRtlIsNtstatusExpected
+* MmProbeAndLockPages
+* ExRaiseStatus
+* IoAllocateMdl
+* MmMapLockedPagesSpecifyCache
+* KeWaitForSingleObject
+* IofCallDriver
+* IoBuildDeviceIoControlRequest
+* KeInitializeEvent
+* ExAllocatePoolWithTag
+* memcpy
+* ZwClose
+* ObfDereferenceObject
+* ObQueryNameString
+* ObReferenceObjectByHandle
+* IoFileObjectType
+* ZwOpenFile
+* RtlAppendUnicodeStringToString
+* KeUnstackDetachProcess
+* MmSystemRangeStart
+* KeStackAttachProcess
+* ZwQueryInformationProcess
+* ObOpenObjectByPointer
+* PsLookupProcessByProcessId
+* IoBuildAsynchronousFsdRequest
+* IoBuildSynchronousFsdRequest
+* IoFreeMdl
+* PsGetCurrentProcessId
+* KeQuerySystemTime
+* RtlFreeAnsiString
+* RtlUnicodeStringToAnsiString
+* PsGetVersion
+* MmGetSystemRoutineAddress
+* IoCreateSymbolicLink
+* IoCreateDevice
+* ObfReferenceObject
+* IoGetAttachedDevice
+* memset
+* KeLeaveCriticalRegion
+* ExReleaseFastMutexUnsafe
+* IoGetRelatedDeviceObject
+* ExAcquireFastMutexUnsafe
+* KeEnterCriticalRegion
+* KeGetCurrentThread
+* ZwCreateFile
+* IoAllocateIrp
+* IoReuseIrp
+* KeResetEvent
+* CcPurgeCacheSection
+* ExReleaseResourceLite
+* ExAcquireResourceExclusiveLite
+* CcFlushCache
+* _allrem
+* RtlCompareMemory
+* MmUnmapIoSpace
+* MmMapIoSpace
+* KeTickCount
+* ExFreePoolWithTag
+* IoFreeIrp
+* RtlCompareUnicodeString
+* IofCompleteRequest
+* RtlUnwind
+* KeBugCheckEx
+* KeGetCurrentIrql
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+| Filename | elrawdsk.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/76c643ab29d497317085e5db8c799960">76c643ab29d497317085e5db8c799960</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/1292c7dd60214d96a71e7705e519006b9de7968f">1292c7dd60214d96a71e7705e519006b9de7968f</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a">5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a</a> |
-| Signature | EldoS Corporation, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   || Company | EldoS Corporation || Description | RawDisk Driver. Allows write access to files and raw disk sectors for user mode applications in Windows 2000 and later. || Product | RawDisk || OriginalFilename | elrawdsk.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%c1afcba807a13aa25a0b363a22c760d6">c1afcba807a13aa25a0b363a22c760d6</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%8422fb53e48b27a42cc7595ca7c7ae0597168db6">8422fb53e48b27a42cc7595ca7c7ae0597168db6</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%29a2ae6439381ea2aa3116df7025cbb5c6c7c07cc8d19508e6021e4d6177a565">29a2ae6439381ea2aa3116df7025cbb5c6c7c07cc8d19508e6021e4d6177a565</a> || Signature | EldoS Corporation, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   || Company | EldoS Corporation || Description | RawDisk Driver. Allows write access to files and raw disk sectors for user mode applications in Windows 2000 and later. || Product | RawDisk || OriginalFilename | elrawdsk.sys |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* MmSystemRangeStart
+* ExAllocatePoolWithTag
+* ExRaiseStatus
+* IoBuildDeviceIoControlRequest
+* IoDeleteSymbolicLink
+* ExFreePoolWithTag
+* PsLookupProcessByProcessId
+* IoBuildSynchronousFsdRequest
+* RtlInitUnicodeString
+* IoDeleteDevice
+* KeSetEvent
+* MmGetSystemRoutineAddress
+* KeInitializeEvent
+* RtlUnicodeStringToAnsiString
+* IoFreeMdl
+* KeUnstackDetachProcess
+* MmMapLockedPagesSpecifyCache
+* IoBuildAsynchronousFsdRequest
+* RtlPrefixUnicodeString
+* ZwClose
+* IofCompleteRequest
+* ObReferenceObjectByHandle
+* KeWaitForSingleObject
+* IoFreeIrp
+* RtlFreeAnsiString
+* MmProbeAndLockPages
+* PsGetVersion
+* RtlCompareUnicodeString
+* MmUnlockPages
+* ZwQueryInformationProcess
+* IoCreateSymbolicLink
+* PsGetCurrentProcessId
+* ObfDereferenceObject
+* IoCreateDevice
+* ZwOpenFile
+* FsRtlIsNtstatusExpected
+* ObOpenObjectByPointer
+* KeStackAttachProcess
+* IoAllocateMdl
+* IofCallDriver
+* ExReleaseFastMutexUnsafe
+* KeLeaveCriticalRegion
+* IoGetAttachedDevice
+* IoGetRelatedDeviceObject
+* KeEnterCriticalRegion
+* ExAcquireFastMutexUnsafe
+* ObfReferenceObject
+* ExAcquireResourceExclusiveLite
+* IoReuseIrp
+* KeResetEvent
+* CcPurgeCacheSection
+* CcFlushCache
+* ZwCreateFile
+* ExReleaseResourceLite
+* IoAllocateIrp
+* RtlCompareMemory
+* MmUnmapIoSpace
+* MmMapIoSpace
+* KeBugCheckEx
+* __C_specific_handler
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/elrawdsk.yaml)

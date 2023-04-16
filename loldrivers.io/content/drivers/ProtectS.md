@@ -27,6 +27,13 @@ ProtectS.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -50,12 +57,26 @@ sc.exe create ProtectS.sys binPath=C:\windows\temp\ProtectS.sys type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/9d58f640c7295952b71bdcb456cae37213baccdcd3032c1e3aeb54e79081f395">9d58f640c7295952b71bdcb456cae37213baccdcd3032c1e3aeb54e79081f395</a> |
-| Signature | -   || Filename | ProtectS.sys |
+| Signature | -   |
+#### Imports
+{{< details "Expand" >}}{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+| Filename | ProtectS.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/4a9093e8dbcb867e1b97a0a67ce99a8511900658f5201c34ffb8035881f2dbbe">4a9093e8dbcb867e1b97a0a67ce99a8511900658f5201c34ffb8035881f2dbbe</a> |
 | Signature | -   |
+#### Imports
+{{< details "Expand" >}}{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/protects.yaml)

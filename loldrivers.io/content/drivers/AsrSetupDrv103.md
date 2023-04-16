@@ -27,6 +27,13 @@ AsrSetupDrv103.sys is a vulnerable driver and more information will be added as 
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -50,22 +57,50 @@ sc.exe create AsrSetupDrv103.sys binPath=C:\windows\temp\AsrSetupDrv103.sys     
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/0b6ec2aedc518849a1c61a70b1f9fb068ede2bc3">0b6ec2aedc518849a1c61a70b1f9fb068ede2bc3</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   || Filename | AsrSetupDrv103.sys |
+| Signature | -   |
+#### Imports
+{{< details "Expand" >}}{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+| Filename | AsrSetupDrv103.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/461882bd59887617cadc1c7b2b22d0a45458c070">461882bd59887617cadc1c7b2b22d0a45458c070</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   || Filename | AsrSetupDrv103.sys |
+| Signature | -   |
+#### Imports
+{{< details "Expand" >}}{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+| Filename | AsrSetupDrv103.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/a7948a4e9a3a1a9ed0e4e41350e422464d8313cd">a7948a4e9a3a1a9ed0e4e41350e422464d8313cd</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   || Filename | AsrSetupDrv103.sys |
+| Signature | -   |
+#### Imports
+{{< details "Expand" >}}{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+| Filename | AsrSetupDrv103.sys |
 |:---- | ---- | 
 | MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/f3cce7e79ab5bd055f311bb3ac44a838779270b6">f3cce7e79ab5bd055f311bb3ac44a838779270b6</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | Signature | -   |
+#### Imports
+{{< details "Expand" >}}{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrsetupdrv103.yaml)

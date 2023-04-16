@@ -22,6 +22,13 @@ Driver categorized as POORTRY by Mandiant.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -45,7 +52,82 @@ sc.exe create POORTRY.sys binPath=C:\windows\temp\POORTRY.sys type=kernel &amp;&
 | MD5 | <a href="https://www.virustotal.com/gui/file/7f9309f5e4defec132b622fadbcad511">7f9309f5e4defec132b622fadbcad511</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/a3ed5cbfbc17b58243289f3cf575bf04be49591d">a3ed5cbfbc17b58243289f3cf575bf04be49591d</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/6b5cf41512255237064e9274ca8f8a3fef820c45aa6067c9c6a0e6f5751a0421">6b5cf41512255237064e9274ca8f8a3fef820c45aa6067c9c6a0e6f5751a0421</a> |
-| Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%103f3c1ce174dff5dfc79a428d4bf385">103f3c1ce174dff5dfc79a428d4bf385</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%b4d007b0c6ae6b4cfd96aab617f239cd8ebc8afb">b4d007b0c6ae6b4cfd96aab617f239cd8ebc8afb</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%45b9eee68266d1128bc252087f4a8ae18dbb0e0b6317e28bc248b25ca2431a56">45b9eee68266d1128bc252087f4a8ae18dbb0e0b6317e28bc248b25ca2431a56</a> || Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
+#### Imports
+{{< details "Expand" >}}* NETIO.SYS
+* ntoskrnl.exe
+* WDFLDR.SYS
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* WskCaptureProviderNPI
+* WskReleaseProviderNPI
+* WskDeregister
+* WskRegister
+* RtlDeleteElementGenericTableAvl
+* vsprintf_s
+* RtlEqualUnicodeString
+* MmBuildMdlForNonPagedPool
+* ObfDereferenceObject
+* IoAllocateMdl
+* ZwCreateSection
+* ExAcquireResourceExclusiveLite
+* ObCloseHandle
+* IoCreateFileEx
+* RtlInitUnicodeString
+* RtlLookupElementGenericTableAvl
+* ObReferenceObjectByHandleWithTag
+* ZwQueryVirtualMemory
+* IoFileObjectType
+* KeStackAttachProcess
+* ZwAllocateVirtualMemory
+* PsLookupProcessByProcessId
+* RtlImageNtHeader
+* ZwMapViewOfSection
+* RtlInitAnsiString
+* RtlCaptureContext
+* ExReleaseResourceLite
+* _vsnprintf_s
+* KeCapturePersistentThreadState
+* IoFreeMdl
+* wcsstr
+* RtlCompareString
+* ZwSetSystemInformation
+* MmGetSystemRoutineAddress
+* _stricmp
+* ZwDeleteFile
+* ExFreePoolWithTag
+* ZwOpenFile
+* ObReferenceObjectByName
+* MmUnmapLockedPages
+* IoDriverObjectType
+* MmFlushImageSection
+* ZwClose
+* KeUnstackDetachProcess
+* MmMapLockedPages
+* __C_specific_handler
+* MmIsAddressValid
+* MmUnlockPages
+* MmProbeAndLockPages
+* IoFreeIrp
+* KeSetEvent
+* IoAllocateIrp
+* KeInitializeEvent
+* KeWaitForSingleObject
+* ZwReadFile
+* RtlCopyUnicodeString
+* ZwUnmapViewOfSection
+* ZwQuerySystemInformation
+* ExAllocatePool
+* RtlGetVersion
+* __chkstk
+* WdfVersionBindClass
+* WdfVersionBind
+* WdfVersionUnbind
+* WdfVersionUnbindClass
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/poortry.yaml)

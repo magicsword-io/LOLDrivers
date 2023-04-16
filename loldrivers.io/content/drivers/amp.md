@@ -22,6 +22,13 @@ amp.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -45,7 +52,142 @@ sc.exe create amp.sys binPath=C:\windows\temp\amp.sys type=kernel &amp;&amp; sc.
 | MD5 | <a href="https://www.virustotal.com/gui/file/c533d6d64b474ffc3169a0e0fc0a701a">c533d6d64b474ffc3169a0e0fc0a701a</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/3f223581409492172a1e875f130f3485b90fbe5f">3f223581409492172a1e875f130f3485b90fbe5f</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/cbb8239a765bf5b2c1b6a5c8832d2cab8fef5deacadfb65d8ed43ef56d291ab6">cbb8239a765bf5b2c1b6a5c8832d2cab8fef5deacadfb65d8ed43ef56d291ab6</a> |
-| Signature | -   || Company | CYREN Inc. || Description | AMP Minifilter || Product | CYREN AMP 5 || OriginalFilename | amp.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%74ee74d20c3afc42d7722a88aacf3671">74ee74d20c3afc42d7722a88aacf3671</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%87a84133f5e4c12d2d4a42fcc3be84b43a6202b5">87a84133f5e4c12d2d4a42fcc3be84b43a6202b5</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%a37371c4e62f106e7da03fd5bdd6f12ecdf7fcaf1195dbf9fb7ef6eb456a7506">a37371c4e62f106e7da03fd5bdd6f12ecdf7fcaf1195dbf9fb7ef6eb456a7506</a> || Signature | -   || Company | CYREN Inc. || Description | AMP Minifilter || Product | CYREN AMP 5 || OriginalFilename | amp.sys |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+* FLTMGR.SYS
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* ObfDereferenceObject
+* ObQueryNameString
+* RtlIntegerToUnicodeString
+* IoGetCurrentProcess
+* _strnicmp
+* MmIsAddressValid
+* _strupr
+* MmGetSystemRoutineAddress
+* PsGetVersion
+* ExInitializeResourceLite
+* ExDeleteResourceLite
+* KeEnterCriticalRegion
+* ExAcquireResourceSharedLite
+* ExReleaseResourceForThreadLite
+* KeLeaveCriticalRegion
+* ExAcquireResourceExclusiveLite
+* wcschr
+* wcsrchr
+* ZwQueryInformationFile
+* ZwSetInformationFile
+* ZwReadFile
+* ZwWriteFile
+* ExUuidCreate
+* ObReferenceObjectByHandle
+* _wcsupr
+* wcsncmp
+* IoGetTopLevelIrp
+* IoSetTopLevelIrp
+* IoGetStackLimits
+* ObfReferenceObject
+* ZwOpenDirectoryObject
+* ZwOpenSymbolicLinkObject
+* ZwQuerySymbolicLinkObject
+* RtlFreeUnicodeString
+* KeSetEvent
+* RtlTimeToTimeFields
+* swprintf
+* _wcsicmp
+* ExSystemTimeToLocalTime
+* KeWaitForMultipleObjects
+* KeResetEvent
+* PsTerminateSystemThread
+* PsGetCurrentProcessId
+* wcsncpy
+* PsCreateSystemThread
+* PsGetCurrentThreadId
+* ZwOpenProcess
+* ZwQueryInformationProcess
+* IoAllocateErrorLogEntry
+* IoWriteErrorLogEntry
+* IoAllocateWorkItem
+* IoQueueWorkItem
+* IoFreeWorkItem
+* ExReleaseResourceLite
+* ZwCreateKey
+* ZwSetValueKey
+* ZwQueryValueKey
+* RtlInitAnsiString
+* RtlAnsiStringToUnicodeString
+* RtlUnicodeStringToAnsiString
+* RtlCopyUnicodeString
+* IoGetDeviceObjectPointer
+* IoBuildDeviceIoControlRequest
+* KeWaitForSingleObject
+* IofCallDriver
+* KeInitializeEvent
+* RtlCompareString
+* RtlInitString
+* ExAllocatePoolWithTag
+* KeDelayExecutionThread
+* IofCompleteRequest
+* IoIs32bitProcess
+* ZwLoadDriver
+* ZwUnloadDriver
+* RtlInitUnicodeString
+* IoCreateSymbolicLink
+* IoCreateDevice
+* IoDeleteDevice
+* IoDeleteSymbolicLink
+* ZwClose
+* ExAllocatePool
+* ZwCreateFile
+* ExFreePool
+* RtlUnicodeStringToInteger
+* strncmp
+* _wcsnicmp
+* strchr
+* KeReleaseSpinLock
+* KeAcquireSpinLockRaiseToDpc
+* ExInitializeNPagedLookasideList
+* ExpInterlockedPushEntrySList
+* ExpInterlockedPopEntrySList
+* ExDeletePagedLookasideList
+* ExQueryDepthSList
+* ExInitializePagedLookasideList
+* ExDeleteNPagedLookasideList
+* __C_specific_handler
+* _local_unwind
+* FltGetVolumeFromInstance
+* FltSetCallbackDataDirty
+* FltGetFileNameInformation
+* FltReleaseFileNameInformation
+* FltGetVolumeProperties
+* FltStartFiltering
+* FltRegisterFilter
+* FltGetRoutineAddress
+* FltGetDiskDeviceObject
+* FltUnregisterFilter
+* FltGetTunneledName
+* FltGetDestinationFileNameInformation
+* FltGetStreamHandleContext
+* FltSetStreamHandleContext
+* FltCancelFileOpen
+* FltCreateFile
+* FltObjectReference
+* FltReleaseContext
+* FltSetInstanceContext
+* FltAllocateContext
+* FltGetInstanceContext
+* FltEnumerateInstances
+* FltGetVolumeFromName
+* FltObjectDereference
+* FltGetFileNameInformationUnsafe
+* FltQueryInformationFile
+* FltClose
+* FltFlushBuffers
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amp.yaml)

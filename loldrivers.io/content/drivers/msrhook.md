@@ -22,6 +22,13 @@ msrhook.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
+
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -45,7 +52,43 @@ sc.exe create msrhook.sys binPath=C:\windows\temp\msrhook.sys type=kernel &amp;&
 | MD5 | <a href="https://www.virustotal.com/gui/file/c49a1956a6a25ffc25ad97d6762b0989">c49a1956a6a25ffc25ad97d6762b0989</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/89909fa481ff67d7449ee90d24c167b17b0612f1">89909fa481ff67d7449ee90d24c167b17b0612f1</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/6de84caa2ca18673e01b91af58220c60aecd5cccf269725ec3c7f226b2167492">6de84caa2ca18673e01b91af58220c60aecd5cccf269725ec3c7f226b2167492</a> |
-| Signature | ID TECH, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%172df59ed493cc10ccca27239ff3b4e3">172df59ed493cc10ccca27239ff3b4e3</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%ccce82f52142229c88746b06b198ea5c5e058961">ccce82f52142229c88746b06b198ea5c5e058961</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%37e33b54de1bbe4cf86fa58aeec39084afb35e0cbe5f69c763ecaec1d352daa0">37e33b54de1bbe4cf86fa58aeec39084afb35e0cbe5f69c763ecaec1d352daa0</a> || Signature | ID TECH, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+* HAL.dll
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* KeInitializeEvent
+* KeDelayExecutionThread
+* KeSetPriorityThread
+* KeInitializeSpinLock
+* KeAcquireSpinLockRaiseToDpc
+* KeReleaseSpinLock
+* KeQueryTimeIncrement
+* PsCreateSystemThread
+* PsTerminateSystemThread
+* IoAttachDeviceToDeviceStack
+* IofCallDriver
+* IofCompleteRequest
+* DbgPrint
+* IoCreateSymbolicLink
+* IoDeleteDevice
+* IoDeleteSymbolicLink
+* IoDetachDevice
+* PoCallDriver
+* PoStartNextPowerIrp
+* ObfDereferenceObject
+* ZwClose
+* ObReferenceObjectByName
+* __C_specific_handler
+* IoDriverObjectType
+* IoCreateDevice
+* RtlInitUnicodeString
+* KeStallExecutionProcessor
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/msrhook.yaml)
