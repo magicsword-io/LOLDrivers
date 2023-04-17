@@ -27,6 +27,11 @@ GameTerSafe.sys is a vulnerable driver and more information will be added as fou
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/-.bin" "Download" >}}
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -51,11 +56,18 @@ sc.exe create GameTerSafe.sys binPath=C:\windows\temp\GameTerSafe.sys     type=k
 | SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/3e9b62d2ea2be50a2da670746c4dbe807db9601980af3a1014bcd72d0248d84c">3e9b62d2ea2be50a2da670746c4dbe807db9601980af3a1014bcd72d0248d84c</a> |
 | Signature | -   |
+#### Imports
+{{< details "Expand" >}}{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gametersafe.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

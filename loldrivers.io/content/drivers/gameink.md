@@ -27,6 +27,11 @@ gameink.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/-.bin" "Download" >}}
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -51,11 +56,18 @@ sc.exe create gameink.sys binPath=C:\windows\temp\gameink.sys type=kernel &amp;&
 | SHA1 | <a href="https://www.virustotal.com/gui/file/3ae56ab63230d6d9552360845b4a37b5801cc5ea">3ae56ab63230d6d9552360845b4a37b5801cc5ea</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
 | Signature | -   |
+#### Imports
+{{< details "Expand" >}}{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gameink.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

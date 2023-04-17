@@ -22,6 +22,11 @@ sandra.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/9a237fa07ce3ed06ea924a9bed4a6b99.bin" "Download" >}}
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -46,12 +51,56 @@ sc.exe create sandra.sys binPath=C:\windows\temp\sandra.sys type=kernel &amp;&am
 | MD5 | <a href="https://www.virustotal.com/gui/file/9a237fa07ce3ed06ea924a9bed4a6b99">9a237fa07ce3ed06ea924a9bed4a6b99</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/82ba5513c33e056c3f54152c8555abf555f3e745">82ba5513c33e056c3f54152c8555abf555f3e745</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/1aaf4c1e3cb6774857e2eef27c17e68dc1ae577112e4769665f516c2e8c4e27b">1aaf4c1e3cb6774857e2eef27c17e68dc1ae577112e4769665f516c2e8c4e27b</a> |
-| Signature | SiSoftware Ltd, GeoTrust TrustCenter CodeSigning CA I, GeoTrust   || Company | SiSoftware || Description | Sandra Device Driver (Win64 x64)(Unicode) || Product | SiSoftware Sandra || OriginalFilename | SANDRA |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A6f72f204305c65af27c9f97fe4296b54">6f72f204305c65af27c9f97fe4296b54</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ab785192962dd159acd960c8f8f9f211747c83610">b785192962dd159acd960c8f8f9f211747c83610</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ab9661dd0dcf81d2ee8e5eb3b728c907b4eb861806971051ad772f7fe4d09eb6a">b9661dd0dcf81d2ee8e5eb3b728c907b4eb861806971051ad772f7fe4d09eb6a</a> || Signature | SiSoftware Ltd, GeoTrust TrustCenter CodeSigning CA I, GeoTrust   || Company | SiSoftware || Description | Sandra Device Driver (Win64 x64)(Unicode) || Product | SiSoftware Sandra || OriginalFilename | SANDRA |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+* HAL.dll
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* ZwSetValueKey
+* NtQueryInformationProcess
+* ZwClose
+* MmMapIoSpace
+* MmUnmapIoSpace
+* IoQueryDeviceDescription
+* ZwSetInformationThread
+* RtlUnicodeStringToAnsiString
+* IoAllocateMdl
+* MmBuildMdlForNonPagedPool
+* MmMapLockedPagesSpecifyCache
+* MmUnmapLockedPages
+* IoFreeMdl
+* ZwCreateKey
+* MmResetDriverPaging
+* KeAcquireSpinLockRaiseToDpc
+* KeReleaseSpinLock
+* IofCompleteRequest
+* MmPageEntireDriver
+* IoUnregisterShutdownNotification
+* IoDeleteSymbolicLink
+* IoDeleteDevice
+* RtlQueryRegistryValues
+* IoCreateDevice
+* IoCreateSymbolicLink
+* IoRegisterShutdownNotification
+* KeBugCheckEx
+* RtlAppendUnicodeToString
+* IoReportResourceUsage
+* RtlInitUnicodeString
+* __C_specific_handler
+* HalSetBusDataByOffset
+* HalGetBusDataByOffset
+* HalTranslateBusAddress
+* KeStallExecutionProcessor
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/sandra.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

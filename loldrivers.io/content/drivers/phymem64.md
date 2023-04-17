@@ -22,6 +22,11 @@ phymem64.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/2c54859a67306e20bfdc8887b537de72.bin" "Download" >}}
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -45,12 +50,43 @@ sc.exe create phymem64.sys binPath=C:\windows\temp\phymem64.sys type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/2c54859a67306e20bfdc8887b537de72">2c54859a67306e20bfdc8887b537de72</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/d7f7594ff084201c0d9fa2f4ef1626635b67bce5">d7f7594ff084201c0d9fa2f4ef1626635b67bce5</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/1963d5a0e512b72353953aadbe694f73a9a576f0241a988378fa40bf574eda52">1963d5a0e512b72353953aadbe694f73a9a576f0241a988378fa40bf574eda52</a> |
-| Signature | Super Micro Computer, Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | Super Micro Computer, Inc. || Description | phymem Application || Product | phymem || OriginalFilename | phymem.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aaa43aa9f88e2fed984077a8852d85a4f">aa43aa9f88e2fed984077a8852d85a4f</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A52a8cd44646973b59c244b5f7b04b33a412634a2">52a8cd44646973b59c244b5f7b04b33a412634a2</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A6ed3379d7ac1ad8bcfd13cd2502420569088ee7f1e04522ada48481d9a545a08">6ed3379d7ac1ad8bcfd13cd2502420569088ee7f1e04522ada48481d9a545a08</a> || Signature | Super Micro Computer, Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | Super Micro Computer, Inc. || Description | phymem Application || Product | phymem || OriginalFilename | phymem.sys |
+#### Imports
+{{< details "Expand" >}}* NTOSKRNL.exe
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* KeWaitForSingleObject
+* IofCallDriver
+* IoBuildSynchronousFsdRequest
+* KeInitializeEvent
+* IoDeleteDevice
+* IoCreateSymbolicLink
+* IoCreateDevice
+* RtlInitUnicodeString
+* ExAllocatePool
+* IofCompleteRequest
+* ExFreePoolWithTag
+* IoFreeMdl
+* MmUnmapLockedPages
+* MmUnmapIoSpace
+* ExReleaseFastMutex
+* ExAcquireFastMutex
+* MmMapLockedPages
+* MmBuildMdlForNonPagedPool
+* IoAllocateMdl
+* MmMapIoSpace
+* IoDeleteSymbolicLink
+* MmMapLockedPagesSpecifyCache
+* IoGetDeviceObjectPointer
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/phymem64.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

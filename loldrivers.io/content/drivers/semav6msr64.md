@@ -27,6 +27,11 @@ semav6msr64.sys is a vulnerable driver and more information will be added as fou
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/07f83829e7429e60298440cd1e601a6a.bin" "Download" >}}
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -50,12 +55,36 @@ sc.exe create semav6msr64.sys binPath=C:\windows\temp\semav6msr64.sys     type=k
 | MD5 | <a href="https://www.virustotal.com/gui/file/07f83829e7429e60298440cd1e601a6a">07f83829e7429e60298440cd1e601a6a</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/643383938d5e0d4fd30d302af3e9293a4798e392">643383938d5e0d4fd30d302af3e9293a4798e392</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/9f1229cd8dd9092c27a01f5d56e3c0d59c2bb9f0139abf042e56f343637fda33">9f1229cd8dd9092c27a01f5d56e3c0d59c2bb9f0139abf042e56f343637fda33</a> |
-| Signature | Intel(R) Code Signing External, Intel External Basic Issuing CA 3B, Intel External Basic Policy CA, Sectigo (AddTrust)   |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A79553d83580570e382d3b9c7e101df2b">79553d83580570e382d3b9c7e101df2b</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ae3dbe2aa03847df621591a4cad69a5609de5c237">e3dbe2aa03847df621591a4cad69a5609de5c237</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aeb71a8ecef692e74ae356e8cb734029b233185ee5c2ccb6cc87cc6b36bea65cf">eb71a8ecef692e74ae356e8cb734029b233185ee5c2ccb6cc87cc6b36bea65cf</a> || Signature | Intel(R) Code Signing External, Intel External Basic Issuing CA 3B, Intel External Basic Policy CA, Sectigo (AddTrust)   |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* KeQueryActiveProcessors
+* KeQueryActiveProcessorCount
+* IoDeleteSymbolicLink
+* KeSetSystemAffinityThreadEx
+* RtlInitUnicodeString
+* IoDeleteDevice
+* MmUnmapIoSpace
+* MmMapIoSpace
+* IofCompleteRequest
+* KeRevertToUserAffinityThreadEx
+* IoCreateSymbolicLink
+* IoCreateDevice
+* RtlAssert
+* DbgPrint
+* KeBugCheckEx
+* __C_specific_handler
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/semav6msr64.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

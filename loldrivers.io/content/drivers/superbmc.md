@@ -22,6 +22,11 @@ superbmc.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/3473faea65fba5d4fbe54c0898a3c044.bin" "Download" >}}
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -45,12 +50,60 @@ sc.exe create superbmc.sys binPath=C:\windows\temp\superbmc.sys type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/3473faea65fba5d4fbe54c0898a3c044">3473faea65fba5d4fbe54c0898a3c044</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/910cb12aa49e9f35ecc4907e8304adf0dcca8cf1">910cb12aa49e9f35ecc4907e8304adf0dcca8cf1</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/f8430bdc6fd01f42217d66d87a3ef6f66cb2700ebb39c4f25c8b851858cc4b35">f8430bdc6fd01f42217d66d87a3ef6f66cb2700ebb39c4f25c8b851858cc4b35</a> |
-| Signature | Super Micro Computer, Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | Super Micro Computer, Inc. || Description | superbmc || Product | superbmc || OriginalFilename | superbmc.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A70f41d3749f4608b64902dd2c1f1e14f">70f41d3749f4608b64902dd2c1f1e14f</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ac6609cad7208669e4c34f71f682af1a6bcddc11f">c6609cad7208669e4c34f71f682af1a6bcddc11f</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A9c4ffe4815b5755d2609be21ba53c9157e8f71137f06fe35044406b968b80320">9c4ffe4815b5755d2609be21ba53c9157e8f71137f06fe35044406b968b80320</a> || Signature | Super Micro Computer, Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | Super Micro Computer, Inc. || Description | superbmc || Product | superbmc || OriginalFilename | superbmc.sys |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+* HAL.dll
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* KeClearEvent
+* IoCreateNotificationEvent
+* IoRegisterShutdownNotification
+* PsCreateSystemThread
+* IoDeleteDevice
+* IoCreateSymbolicLink
+* KeInitializeDpc
+* KeInitializeTimer
+* KeInitializeSemaphore
+* IoCreateDevice
+* RtlAppendUnicodeToString
+* ExAllocatePool
+* RtlInitUnicodeString
+* IoDeleteSymbolicLink
+* ZwClose
+* IoUnregisterShutdownNotification
+* ObfDereferenceObject
+* KeWaitForSingleObject
+* IoAllocateErrorLogEntry
+* ObReferenceObjectByHandle
+* IofCompleteRequest
+* ExInterlockedInsertTailList
+* ZwUnmapViewOfSection
+* KeResetEvent
+* ExInterlockedRemoveHeadList
+* PsTerminateSystemThread
+* KeSetPriorityThread
+* KeSetTimer
+* KeCancelTimer
+* KeDelayExecutionThread
+* ExSetTimerResolution
+* KeInitializeEvent
+* KeSetEvent
+* ZwMapViewOfSection
+* ZwOpenSection
+* KeBugCheckEx
+* KeReleaseSemaphore
+* ExFreePoolWithTag
+* HalTranslateBusAddress
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/superbmc.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

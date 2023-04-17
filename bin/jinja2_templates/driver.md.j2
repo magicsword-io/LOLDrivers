@@ -38,6 +38,15 @@ We were not able to verify the hash of this driver successfully, it has not been
 - **Author**: {{driver.Author}}
 - **Acknowledgement**: {{driver.Acknowledgement.Person}} | [{{ driver.Acknowledgement.Handle }}](https://twitter.com/{{driver.Acknowledgement.Handle}})
 
+{% if driver.KnownVulnerableSamples %}
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/{% endraw %}{{ driver.KnownVulnerableSamples[0].MD5 }}{% raw %}.bin" "Download" >}}{% endraw %}
+{% raw %}
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+{% endraw %}
+{% endif %}
+
 ### Commands
 
 ```
@@ -66,6 +75,9 @@ We were not able to verify the hash of this driver successfully, it has not been
 | MD5 | <a href="https://www.virustotal.com/gui/file/{{hash.MD5}}">{{ hash.MD5 }}</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/{{hash.SHA1}}">{{hash.SHA1}}</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/{{hash.SHA256}}">{{hash.SHA256}}</a> |
+{% if hash.Authentihash %}| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A{{ hash.Authentihash.MD5 }}">{{ hash.Authentihash.MD5 }}</a> |{% endif %}
+{% if hash.Authentihash %}| Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A{{ hash.Authentihash.SHA1 }}">{{ hash.Authentihash.SHA1 }}</a> |{% endif %}
+{% if hash.Authentihash %}| Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A{{ hash.Authentihash.SHA256 }}">{{ hash.Authentihash.SHA256 }}</a> |{% endif %}
 {% if hash.Publisher %}| Publisher | {{ hash.Publisher }} |{% endif %}
 {% if hash.Signature %}| Signature | {{ hash.Signature | join(', ') }}   |{% endif %}
 {% if hash.Date %}| Date | {{ hash.Date }} |{% endif %}
@@ -76,6 +88,28 @@ We were not able to verify the hash of this driver successfully, it has not been
 {% if hash.Fileversion %}| FileVersion | {{ hash.Fileversion }} |{% endif %}
 {% if hash.Machinetype %}| MachineType | {{ hash.Machinetype }} |{% endif %}
 {% if hash.OriginalFilename %}| OriginalFilename | {{ hash.OriginalFilename }} |{% endif %}
+
+#### Imports
+{% raw %}{{< details "Expand" >}}{% endraw %}
+{% for import in hash.Imports %}
+* {{ import }}
+{% endfor %}
+{% raw %}{{< /details >}}{% endraw %}
+
+#### ImportedFunctions
+{% raw %}{{< details "Expand" >}}{% endraw %}
+{% for import in hash.ImportedFunctions %}
+* {{ import }}
+{% endfor %}
+{% raw %}{{< /details >}}{% endraw %}
+
+#### ExportedFunctions
+{% raw %}{{< details "Expand" >}}{% endraw %}
+{% for export in hash.ExportedFunctions %}
+* {{ export }}
+{% endfor %}
+{% raw %}{{< /details >}}{% endraw %}
+
 {% endfor +%}
 {% endif %}
 

@@ -22,6 +22,11 @@ Dh_Kernel_10.sys is a vulnerable driver and more information will be added as fo
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/51207adb8dab983332d6b22c29fe8129.bin" "Download" >}}
+{{< tip "warning" >}}
+This download link contains the malcious driver!
+{{< /tip >}}
+
 ### Commands
 
 ```
@@ -45,12 +50,55 @@ sc.exe create Dh_Kernel_10.sys binPath=C:\windows\temp\Dh_Kernel_10.sys     type
 | MD5 | <a href="https://www.virustotal.com/gui/file/51207adb8dab983332d6b22c29fe8129">51207adb8dab983332d6b22c29fe8129</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/ddbe809b731a0962e404a045ab9e65a0b64917ad">ddbe809b731a0962e404a045ab9e65a0b64917ad</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/80cbba9f404df3e642f22c476664d63d7c229d45d34f5cd0e19c65eb41becec3">80cbba9f404df3e642f22c476664d63d7c229d45d34f5cd0e19c65eb41becec3</a> |
-| Publisher | YY Inc. || Signature | YY Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | YY Inc. || Description | dianhu || Product | dianhu |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Adf4f1e566667e15b3d81c5c3e50e97ca">df4f1e566667e15b3d81c5c3e50e97ca</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ab92959042d232605abba254bc0368b87ec047079">b92959042d232605abba254bc0368b87ec047079</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ac786f3ca229da18b2806af4d57ecad603859ee548549b19f71a623f477fc740e">c786f3ca229da18b2806af4d57ecad603859ee548549b19f71a623f477fc740e</a> || Publisher | YY Inc. || Signature | YY Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | YY Inc. || Description | dianhu || Product | dianhu |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+* WDFLDR.SYS
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* ExAllocatePool
+* ExAllocatePoolWithTag
+* ExFreePoolWithTag
+* ProbeForRead
+* MmProbeAndLockPages
+* MmBuildMdlForNonPagedPool
+* MmMapLockedPages
+* MmUnmapLockedPages
+* MmCreateMdl
+* IofCompleteRequest
+* IoCreateDevice
+* IoCreateSymbolicLink
+* IoDeleteDevice
+* IoDeleteSymbolicLink
+* KeInitializeSpinLock
+* ObfDereferenceObject
+* MmIsAddressValid
+* KeAttachProcess
+* KeDetachProcess
+* KeStackAttachProcess
+* KeUnstackDetachProcess
+* PsLookupProcessByProcessId
+* PsGetProcessSectionBaseAddress
+* __C_specific_handler
+* RtlCopyUnicodeString
+* DbgPrintEx
+* MmGetSystemRoutineAddress
+* RtlInitUnicodeString
+* IoFreeMdl
+* _stricmp
+* WdfVersionBindClass
+* WdfVersionUnbind
+* WdfVersionBind
+* WdfVersionUnbindClass
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dh_kernel_10.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 
