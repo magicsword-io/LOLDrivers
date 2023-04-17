@@ -22,9 +22,7 @@ HwOs2Ec10x64.sys is a vulnerable driver and more information will be added as fo
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/37086ae5244442ba552803984a11d6cb.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -52,7 +50,7 @@ sc.exe create HwOs2Ec10x64.sys binPath=C:\windows\temp\HwOs2Ec10x64.sys     type
 | MD5 | <a href="https://www.virustotal.com/gui/file/37086ae5244442ba552803984a11d6cb">37086ae5244442ba552803984a11d6cb</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/dc0e97adb756c0f30b41840a59b85218cbdd198f">dc0e97adb756c0f30b41840a59b85218cbdd198f</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/bb1135b51acca8348d285dc5461d10e8f57260e7d0c8cc4a092734d53fc40cbc">bb1135b51acca8348d285dc5461d10e8f57260e7d0c8cc4a092734d53fc40cbc</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%20be6af18d3b97968b2a8d5a9513caaa">20be6af18d3b97968b2a8d5a9513caaa</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%b6a4ef3babbd79479723b8586ea0e8c7a33d1661">b6a4ef3babbd79479723b8586ea0e8c7a33d1661</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%ab494aba56e9ea7b6055ac437f6b678e7239b0fda54bf28019480565a098a6e3">ab494aba56e9ea7b6055ac437f6b678e7239b0fda54bf28019480565a098a6e3</a> || Signature | Huawei Technologies Co., Ltd., Symantec Class 3 Extended Validation Code Signing CA - G2, VeriSign   || Company | Huawei || Description | HwOs2Ec || Product | Huawei MateBook || OriginalFilename | HwOs2Ec.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A20be6af18d3b97968b2a8d5a9513caaa">20be6af18d3b97968b2a8d5a9513caaa</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ab6a4ef3babbd79479723b8586ea0e8c7a33d1661">b6a4ef3babbd79479723b8586ea0e8c7a33d1661</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aab494aba56e9ea7b6055ac437f6b678e7239b0fda54bf28019480565a098a6e3">ab494aba56e9ea7b6055ac437f6b678e7239b0fda54bf28019480565a098a6e3</a> || Signature | Huawei Technologies Co., Ltd., Symantec Class 3 Extended Validation Code Signing CA - G2, VeriSign   || Company | Huawei || Description | HwOs2Ec || Product | Huawei MateBook || OriginalFilename | HwOs2Ec.sys |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 * HAL.dll
@@ -149,7 +147,7 @@ sc.exe create HwOs2Ec10x64.sys binPath=C:\windows\temp\HwOs2Ec10x64.sys     type
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hwos2ec10x64.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

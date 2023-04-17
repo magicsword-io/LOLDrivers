@@ -27,9 +27,7 @@ BlackBoneDrv10.sys is a vulnerable driver and more information will be added as 
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/f7393fb917aed182e4cbef25ce8af950.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -57,7 +55,7 @@ sc.exe create BlackBoneDrv10.sys binPath=C:\windows\temp\BlackBoneDrv10.sys     
 | MD5 | <a href="https://www.virustotal.com/gui/file/f7393fb917aed182e4cbef25ce8af950">f7393fb917aed182e4cbef25ce8af950</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/3ee2fd08137e9262d2e911158090e4a7c7427ea0">3ee2fd08137e9262d2e911158090e4a7c7427ea0</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/f51bdb0ad924178131c21e39a8ccd191e46b5512b0f2e1cc8486f63e84e5d960">f51bdb0ad924178131c21e39a8ccd191e46b5512b0f2e1cc8486f63e84e5d960</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%068d02b18a4c87366e8d54200f319e50">068d02b18a4c87366e8d54200f319e50</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%79ef55ea5d6cab924abb722d501e9b950fdae904">79ef55ea5d6cab924abb722d501e9b950fdae904</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%a4ac619fb531793945ad4c72bdd809ebd38512fc234aa452cb8364ee05465a7b">a4ac619fb531793945ad4c72bdd809ebd38512fc234aa452cb8364ee05465a7b</a> || Signature | Nanjing Zhixiao Information Technology Co.,Ltd, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A068d02b18a4c87366e8d54200f319e50">068d02b18a4c87366e8d54200f319e50</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A79ef55ea5d6cab924abb722d501e9b950fdae904">79ef55ea5d6cab924abb722d501e9b950fdae904</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aa4ac619fb531793945ad4c72bdd809ebd38512fc234aa452cb8364ee05465a7b">a4ac619fb531793945ad4c72bdd809ebd38512fc234aa452cb8364ee05465a7b</a> || Signature | Nanjing Zhixiao Information Technology Co.,Ltd, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 {{< /details >}}
@@ -170,7 +168,7 @@ sc.exe create BlackBoneDrv10.sys binPath=C:\windows\temp\BlackBoneDrv10.sys     
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/blackbonedrv10.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

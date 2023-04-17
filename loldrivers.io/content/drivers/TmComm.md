@@ -22,9 +22,7 @@ TmComm.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/2e1f8a2a80221deb93496a861693c565.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -52,7 +50,7 @@ sc.exe create TmComm.sys binPath=C:\windows\temp\TmComm.sys type=kernel &amp;&am
 | MD5 | <a href="https://www.virustotal.com/gui/file/2e1f8a2a80221deb93496a861693c565">2e1f8a2a80221deb93496a861693c565</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/a00e444120449e35641d58e62ed64bb9c9f518d2">a00e444120449e35641d58e62ed64bb9c9f518d2</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/cc687fe3741bbde1dd142eac0ef59fd1d4457daee43cdde23bb162ef28d04e64">cc687fe3741bbde1dd142eac0ef59fd1d4457daee43cdde23bb162ef28d04e64</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%2d7f04ca689981b18fb8a4488e029843">2d7f04ca689981b18fb8a4488e029843</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%6c0af836a89234e9a69363495719b686fbad8d7d">6c0af836a89234e9a69363495719b686fbad8d7d</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%d580349730ace5170e7c33850bdcb37cbf16b70d0d1adc2568fdd223c2a55a77">d580349730ace5170e7c33850bdcb37cbf16b70d0d1adc2568fdd223c2a55a77</a> || Signature | Trend Micro, Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | Trend Micro Inc. || Description | TrendMicro Common Module || Product | Trend Micro Eyes || OriginalFilename | TmComm.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A2d7f04ca689981b18fb8a4488e029843">2d7f04ca689981b18fb8a4488e029843</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A6c0af836a89234e9a69363495719b686fbad8d7d">6c0af836a89234e9a69363495719b686fbad8d7d</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ad580349730ace5170e7c33850bdcb37cbf16b70d0d1adc2568fdd223c2a55a77">d580349730ace5170e7c33850bdcb37cbf16b70d0d1adc2568fdd223c2a55a77</a> || Signature | Trend Micro, Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | Trend Micro Inc. || Description | TrendMicro Common Module || Product | Trend Micro Eyes || OriginalFilename | TmComm.sys |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 {{< /details >}}
@@ -771,7 +769,7 @@ sc.exe create TmComm.sys binPath=C:\windows\temp\TmComm.sys type=kernel &amp;&am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/tmcomm.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

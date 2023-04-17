@@ -22,9 +22,7 @@ nvflash.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/84fb76ee319073e77fb364bbbbff5461.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -52,7 +50,7 @@ sc.exe create nvflash.sys binPath=C:\windows\temp \n \n \n  vflash.sys type=kern
 | MD5 | <a href="https://www.virustotal.com/gui/file/84fb76ee319073e77fb364bbbbff5461">84fb76ee319073e77fb364bbbbff5461</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/a4b2c56c12799855162ca3b004b4b2078c6ecf77">a4b2c56c12799855162ca3b004b4b2078c6ecf77</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/afdd66562dea51001c3a9de300f91fc3eb965d6848dfce92ccb9b75853e02508">afdd66562dea51001c3a9de300f91fc3eb965d6848dfce92ccb9b75853e02508</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%aa2051841a882c7080ddf6b224f838da">aa2051841a882c7080ddf6b224f838da</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%ee9073dedb3f05797de41f79be5cc2e5e5028b61">ee9073dedb3f05797de41f79be5cc2e5e5028b61</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%1c8cb72b9a011b60b1b9caea508b26fbbd95a1e3634af66082417381fe6544fb">1c8cb72b9a011b60b1b9caea508b26fbbd95a1e3634af66082417381fe6544fb</a> || Signature | NVIDIA Corporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | NVIDIA Corporation || Description | NVIDIA Flash Driver, Version 1.8.0 || Product | NVIDIA Flash Driver || OriginalFilename | nvflash.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aaa2051841a882c7080ddf6b224f838da">aa2051841a882c7080ddf6b224f838da</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aee9073dedb3f05797de41f79be5cc2e5e5028b61">ee9073dedb3f05797de41f79be5cc2e5e5028b61</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A1c8cb72b9a011b60b1b9caea508b26fbbd95a1e3634af66082417381fe6544fb">1c8cb72b9a011b60b1b9caea508b26fbbd95a1e3634af66082417381fe6544fb</a> || Signature | NVIDIA Corporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | NVIDIA Corporation || Description | NVIDIA Flash Driver, Version 1.8.0 || Product | NVIDIA Flash Driver || OriginalFilename | nvflash.sys |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 * HAL.dll
@@ -110,7 +108,7 @@ sc.exe create nvflash.sys binPath=C:\windows\temp \n \n \n  vflash.sys type=kern
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nvflash.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

@@ -22,9 +22,7 @@ Driver used in the Daxin malware campaign.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/f242cffd9926c0ccf94af3bf16b6e527.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -53,7 +51,7 @@ sc.exe create daxin_blank5.sys binPath=C:\windows\temp\daxin_blank5.sys     type
 | MD5 | <a href="https://www.virustotal.com/gui/file/f242cffd9926c0ccf94af3bf16b6e527">f242cffd9926c0ccf94af3bf16b6e527</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/53f776d9a183c42b93960b270dddeafba74eb3fb">53f776d9a183c42b93960b270dddeafba74eb3fb</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/9c2f3e9811f7d0c7463eaa1ee6f39c23f902f3797b80891590b43bbe0fdf0e51">9c2f3e9811f7d0c7463eaa1ee6f39c23f902f3797b80891590b43bbe0fdf0e51</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%da0d70a9fd3a61a2802af4a07bed29d4">da0d70a9fd3a61a2802af4a07bed29d4</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%99a969b2deded8b2d403268cd49139463c06b484">99a969b2deded8b2d403268cd49139463c06b484</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%954789c665098cf491a9bdf4e04886bad8992a393f91ccbca239bff40cc6dca6">954789c665098cf491a9bdf4e04886bad8992a393f91ccbca239bff40cc6dca6</a> || Publisher | n/a || Signature | U, n, s, i, g, n, e, d   || Date | 1:29 AM 7/18/2008 |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ada0d70a9fd3a61a2802af4a07bed29d4">da0d70a9fd3a61a2802af4a07bed29d4</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A99a969b2deded8b2d403268cd49139463c06b484">99a969b2deded8b2d403268cd49139463c06b484</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A954789c665098cf491a9bdf4e04886bad8992a393f91ccbca239bff40cc6dca6">954789c665098cf491a9bdf4e04886bad8992a393f91ccbca239bff40cc6dca6</a> || Publisher | n/a || Signature | U, n, s, i, g, n, e, d   || Date | 1:29 AM 7/18/2008 |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 * HAL.dll
@@ -127,7 +125,7 @@ sc.exe create daxin_blank5.sys binPath=C:\windows\temp\daxin_blank5.sys     type
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank5.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

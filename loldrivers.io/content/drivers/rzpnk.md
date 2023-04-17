@@ -22,9 +22,7 @@ A vulnerability exists in the latest version of Razer Synapse (v2.20.15.1104 as 
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/4cc3ddd5ae268d9a154a426af2c23ef9.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -53,7 +51,7 @@ sc.exe create rzpnk.sys binPath=C:\windows\temp\rzpnk.sys type=kernel &amp;&amp;
 | MD5 | <a href="https://www.virustotal.com/gui/file/4cc3ddd5ae268d9a154a426af2c23ef9">4cc3ddd5ae268d9a154a426af2c23ef9</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/684786de4b3b3f53816eae9df5f943a22c89601f">684786de4b3b3f53816eae9df5f943a22c89601f</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/93d873cdf23d5edc622b74f9544cac7fe247d7a68e1e2a7bf2879fad97a3ae63">93d873cdf23d5edc622b74f9544cac7fe247d7a68e1e2a7bf2879fad97a3ae63</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%76934be6e996e801ea4d68c504d427c3">76934be6e996e801ea4d68c504d427c3</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%b2e03d9e602a6026f45c08b686c6810abd43bfac">b2e03d9e602a6026f45c08b686c6810abd43bfac</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%982ad43111d8b7a7900df652c8873eeb6aa485bb429dee6c2ad44acf598bb5e6">982ad43111d8b7a7900df652c8873eeb6aa485bb429dee6c2ad44acf598bb5e6</a> || Signature | Razer USA Ltd., Symantec Class 3 SHA256 Code Signing CA, VeriSign   || Company | Razer, Inc. || Description | Razer Overlay Support || Product | Rzpnk || OriginalFilename | Rzpnk.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A76934be6e996e801ea4d68c504d427c3">76934be6e996e801ea4d68c504d427c3</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ab2e03d9e602a6026f45c08b686c6810abd43bfac">b2e03d9e602a6026f45c08b686c6810abd43bfac</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A982ad43111d8b7a7900df652c8873eeb6aa485bb429dee6c2ad44acf598bb5e6">982ad43111d8b7a7900df652c8873eeb6aa485bb429dee6c2ad44acf598bb5e6</a> || Signature | Razer USA Ltd., Symantec Class 3 SHA256 Code Signing CA, VeriSign   || Company | Razer, Inc. || Description | Razer Overlay Support || Product | Rzpnk || OriginalFilename | Rzpnk.sys |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 * HAL.dll
@@ -127,7 +125,7 @@ sc.exe create rzpnk.sys binPath=C:\windows\temp\rzpnk.sys type=kernel &amp;&amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rzpnk.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

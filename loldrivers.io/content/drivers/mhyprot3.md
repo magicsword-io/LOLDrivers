@@ -27,9 +27,7 @@ mhyprot3.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/5cc5c26fc99175997d84fe95c61ab2c2.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -57,7 +55,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/5cc5c26fc99175997d84fe95c61ab2c2">5cc5c26fc99175997d84fe95c61ab2c2</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/a197a02025946aca96d6e74746f84774df31249e">a197a02025946aca96d6e74746f84774df31249e</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/475e5016c9c0f5a127896f9179a1b1577a67b357f399ab5a1e68aab07134729a">475e5016c9c0f5a127896f9179a1b1577a67b357f399ab5a1e68aab07134729a</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%7ce959fb5b40f1ba40bcac22c8d95c75">7ce959fb5b40f1ba40bcac22c8d95c75</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%82fe9b69f358ef5851eeaa26a9a03f2e1b231358">82fe9b69f358ef5851eeaa26a9a03f2e1b231358</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%aac86a3143de3e18dea6eab813b285da0718e9fb6bc0bbb46c6e7638476061d8">aac86a3143de3e18dea6eab813b285da0718e9fb6bc0bbb46c6e7638476061d8</a> || Signature | miHoYo Co.,Ltd., DigiCert SHA2 Assured ID Code Signing CA, DigiCert   |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A7ce959fb5b40f1ba40bcac22c8d95c75">7ce959fb5b40f1ba40bcac22c8d95c75</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A82fe9b69f358ef5851eeaa26a9a03f2e1b231358">82fe9b69f358ef5851eeaa26a9a03f2e1b231358</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aaac86a3143de3e18dea6eab813b285da0718e9fb6bc0bbb46c6e7638476061d8">aac86a3143de3e18dea6eab813b285da0718e9fb6bc0bbb46c6e7638476061d8</a> || Signature | miHoYo Co.,Ltd., DigiCert SHA2 Assured ID Code Signing CA, DigiCert   |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 * WDFLDR.SYS
@@ -178,7 +176,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mhyprot3.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

@@ -22,9 +22,7 @@ Driver used in the Daxin malware campaign.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/14580bd59c55185115fd3abe73b016a2.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -53,7 +51,7 @@ sc.exe create ntbios.sys binPath=C:\windows\temp \n \n \n  tbios.sys type=kernel
 | MD5 | <a href="https://www.virustotal.com/gui/file/14580bd59c55185115fd3abe73b016a2">14580bd59c55185115fd3abe73b016a2</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/71469dce9c2f38d0e0243a289f915131bf6dd2a8">71469dce9c2f38d0e0243a289f915131bf6dd2a8</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc">96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%dd3f6fe14dadb95f5d8c963006dec9d7">dd3f6fe14dadb95f5d8c963006dec9d7</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%2374491565e5798dccd4db2dc2af7e9bbefafd5b">2374491565e5798dccd4db2dc2af7e9bbefafd5b</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%50f9323eaf7c49cfca5890c6c46d729574d0caca89f7acc9f608c8226f54a975">50f9323eaf7c49cfca5890c6c46d729574d0caca89f7acc9f608c8226f54a975</a> || Publisher | n/a || Signature | U, n, s, i, g, n, e, d   || Date | 10:26 AM 11/19/2009 || Company | Microsoft Corporation || Description | ntbios driver || Product |  Microsoft(R) Windows (R) NT Operating System || OriginalFilename | ntbios.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Add3f6fe14dadb95f5d8c963006dec9d7">dd3f6fe14dadb95f5d8c963006dec9d7</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A2374491565e5798dccd4db2dc2af7e9bbefafd5b">2374491565e5798dccd4db2dc2af7e9bbefafd5b</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A50f9323eaf7c49cfca5890c6c46d729574d0caca89f7acc9f608c8226f54a975">50f9323eaf7c49cfca5890c6c46d729574d0caca89f7acc9f608c8226f54a975</a> || Publisher | n/a || Signature | U, n, s, i, g, n, e, d   || Date | 10:26 AM 11/19/2009 || Company | Microsoft Corporation || Description | ntbios driver || Product |  Microsoft(R) Windows (R) NT Operating System || OriginalFilename | ntbios.sys |
 #### Imports
 {{< details "Expand" >}}* NTOSKRNL.EXE
 * HAL.DLL
@@ -130,7 +128,7 @@ sc.exe create ntbios.sys binPath=C:\windows\temp \n \n \n  tbios.sys type=kernel
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ntbios.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

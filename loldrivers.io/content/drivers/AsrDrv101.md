@@ -22,9 +22,7 @@ AsrDrv101.sys is a vulnerable driver and more information will be added as found
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/1a234f4643f5658bab07bfa611282267.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -52,7 +50,7 @@ sc.exe create AsrDrv101.sys binPath=C:\windows\temp\AsrDrv101.sys type=kernel &a
 | MD5 | <a href="https://www.virustotal.com/gui/file/1a234f4643f5658bab07bfa611282267">1a234f4643f5658bab07bfa611282267</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/57511ef5ff8162a9d793071b5bf7ebe8371759de">57511ef5ff8162a9d793071b5bf7ebe8371759de</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/f40435488389b4fb3b945ca21a8325a51e1b5f80f045ab019748d0ec66056a8b">f40435488389b4fb3b945ca21a8325a51e1b5f80f045ab019748d0ec66056a8b</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%236e9dd83b6d3ae6d23a57590b68fb5e">236e9dd83b6d3ae6d23a57590b68fb5e</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%d0580bfc31faefb7e017798121c5b8a4e68155f9">d0580bfc31faefb7e017798121c5b8a4e68155f9</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%fee4560f2160a951d83344857eb4587ab10c1cfd8c5cfc23b6f06bef8ebcd984">fee4560f2160a951d83344857eb4587ab10c1cfd8c5cfc23b6f06bef8ebcd984</a> || Publisher | ASROCK Incorporation || Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | ASRock Incorporation || Description | ASRock IO Driver || Product | ASRock IO Driver || OriginalFilename | AsrDrv.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A236e9dd83b6d3ae6d23a57590b68fb5e">236e9dd83b6d3ae6d23a57590b68fb5e</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ad0580bfc31faefb7e017798121c5b8a4e68155f9">d0580bfc31faefb7e017798121c5b8a4e68155f9</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Afee4560f2160a951d83344857eb4587ab10c1cfd8c5cfc23b6f06bef8ebcd984">fee4560f2160a951d83344857eb4587ab10c1cfd8c5cfc23b6f06bef8ebcd984</a> || Publisher | ASROCK Incorporation || Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | ASRock Incorporation || Description | ASRock IO Driver || Product | ASRock IO Driver || OriginalFilename | AsrDrv.sys |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 * HAL.dll
@@ -88,7 +86,7 @@ sc.exe create AsrDrv101.sys binPath=C:\windows\temp\AsrDrv101.sys type=kernel &a
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv101.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

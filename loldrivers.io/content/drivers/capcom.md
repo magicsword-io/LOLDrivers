@@ -22,9 +22,7 @@ capcom.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/73c98438ac64a68e88b7b0afd11ba140.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -52,7 +50,7 @@ sc.exe create capcom.sys binPath=C:\windows\temp\capcom.sys type=kernel &amp;&am
 | MD5 | <a href="https://www.virustotal.com/gui/file/73c98438ac64a68e88b7b0afd11ba140">73c98438ac64a68e88b7b0afd11ba140</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/c1d5cf8c43e7679b782630e93f5e6420ca1749a7">c1d5cf8c43e7679b782630e93f5e6420ca1749a7</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/da6ca1fb539f825ca0f012ed6976baf57ef9c70143b7a1e88b4650bf7a925e24">da6ca1fb539f825ca0f012ed6976baf57ef9c70143b7a1e88b4650bf7a925e24</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%37458813b5115cbf06552da28fefbbbb">37458813b5115cbf06552da28fefbbbb</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%1d1cafc73c97c6bcd2331f8777d90fdca57125a3">1d1cafc73c97c6bcd2331f8777d90fdca57125a3</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%faa08cb609a5b7be6bfdb61f1e4a5e8adf2f5a1d2492f262483df7326934f5d4">faa08cb609a5b7be6bfdb61f1e4a5e8adf2f5a1d2492f262483df7326934f5d4</a> || Signature | CAPCOM Co.,Ltd., Symantec Class 3 SHA256 Code Signing CA, VeriSign   |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A37458813b5115cbf06552da28fefbbbb">37458813b5115cbf06552da28fefbbbb</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A1d1cafc73c97c6bcd2331f8777d90fdca57125a3">1d1cafc73c97c6bcd2331f8777d90fdca57125a3</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Afaa08cb609a5b7be6bfdb61f1e4a5e8adf2f5a1d2492f262483df7326934f5d4">faa08cb609a5b7be6bfdb61f1e4a5e8adf2f5a1d2492f262483df7326934f5d4</a> || Signature | CAPCOM Co.,Ltd., Symantec Class 3 SHA256 Code Signing CA, VeriSign   |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 {{< /details >}}
@@ -72,7 +70,7 @@ sc.exe create capcom.sys binPath=C:\windows\temp\capcom.sys type=kernel &amp;&am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/capcom.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

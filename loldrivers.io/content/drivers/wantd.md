@@ -22,9 +22,7 @@ Driver used in the Daxin malware campaign.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/b0770094c3c64250167b55e4db850c04.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -53,7 +51,7 @@ sc.exe create wantd.sys binPath=C:\windows\temp\wantd.sys type=kernel &amp;&amp;
 | MD5 | <a href="https://www.virustotal.com/gui/file/b0770094c3c64250167b55e4db850c04">b0770094c3c64250167b55e4db850c04</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/6abbc3003c7aa69ce79cbbcd2e3210b07f21d202">6abbc3003c7aa69ce79cbbcd2e3210b07f21d202</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4">06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%1ed42c05e43c14ab16d16fbe8eaed870">1ed42c05e43c14ab16d16fbe8eaed870</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%68cb54489a0556594a28f5f1410cc64d74a1c182">68cb54489a0556594a28f5f1410cc64d74a1c182</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%a47b9af109988e8e033886638edc84964968eecd0d24483eafaad6a6d68005ea">a47b9af109988e8e033886638edc84964968eecd0d24483eafaad6a6d68005ea</a> || Publisher | Anhua Xinda (Beijing) Technology Co., Ltd. || Signature | A,  , r, e, q, u, i, r, e, d,  , c, e, r, t, i, f, i, c, a, t, e,  , i, s,  , n, o, t,  , w, i, t, h, i, n,  , i, t, s,  , v, a, l, i, d, i, t, y,  , p, e, r, i, o, d,  , w, h, e, n,  , v, e, r, i, f, y, i, n, g,  , a, g, a, i, n, s, t,  , t, h, e,  , c, u, r, r, e, n, t,  , s, y, s, t, e, m,  , c, l, o, c, k,  , o, r,  , t, h, e,  , t, i, m, e, s, t, a, m, p,  , i, n,  , t, h, e,  , s, i, g, n, e, d,  , f, i, l, e, .   || Date | 11:59 PM 11/27/2013 || Company | Microsoft Corporation || Description | WAN Transport Driver || Product | Microsoft Windows Operating System || OriginalFilename | wantd.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A1ed42c05e43c14ab16d16fbe8eaed870">1ed42c05e43c14ab16d16fbe8eaed870</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A68cb54489a0556594a28f5f1410cc64d74a1c182">68cb54489a0556594a28f5f1410cc64d74a1c182</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aa47b9af109988e8e033886638edc84964968eecd0d24483eafaad6a6d68005ea">a47b9af109988e8e033886638edc84964968eecd0d24483eafaad6a6d68005ea</a> || Publisher | Anhua Xinda (Beijing) Technology Co., Ltd. || Signature | A,  , r, e, q, u, i, r, e, d,  , c, e, r, t, i, f, i, c, a, t, e,  , i, s,  , n, o, t,  , w, i, t, h, i, n,  , i, t, s,  , v, a, l, i, d, i, t, y,  , p, e, r, i, o, d,  , w, h, e, n,  , v, e, r, i, f, y, i, n, g,  , a, g, a, i, n, s, t,  , t, h, e,  , c, u, r, r, e, n, t,  , s, y, s, t, e, m,  , c, l, o, c, k,  , o, r,  , t, h, e,  , t, i, m, e, s, t, a, m, p,  , i, n,  , t, h, e,  , s, i, g, n, e, d,  , f, i, l, e, .   || Date | 11:59 PM 11/27/2013 || Company | Microsoft Corporation || Description | WAN Transport Driver || Product | Microsoft Windows Operating System || OriginalFilename | wantd.sys |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 * NDIS.SYS
@@ -150,7 +148,7 @@ sc.exe create wantd.sys binPath=C:\windows\temp\wantd.sys type=kernel &amp;&amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

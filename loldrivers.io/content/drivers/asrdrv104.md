@@ -27,9 +27,7 @@ asrdrv104.sys is a vulnerable driver and more information will be added as found
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/-.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -105,7 +103,7 @@ sc.exe create asrdrv104.sys binPath=C:\windows\temp\asrdrv104.sys type=kernel &a
 | MD5 | <a href="https://www.virustotal.com/gui/file/de1cc5c266140bff9d964fab87a29421">de1cc5c266140bff9d964fab87a29421</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/729a8675665c61824f22f06c7b954be4d14b52c4">729a8675665c61824f22f06c7b954be4d14b52c4</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/6ed35f310c96920a271c59a097b382da07856e40179c2a4239f8daa04eef38e7">6ed35f310c96920a271c59a097b382da07856e40179c2a4239f8daa04eef38e7</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%6b214126743cbf8efdfae0a4fb7d78eb">6b214126743cbf8efdfae0a4fb7d78eb</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%efc91a1317eb086196fa1a2f94fbf96258b5ec2e">efc91a1317eb086196fa1a2f94fbf96258b5ec2e</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%5b08d996938a0ab9a3b7a65e3049482dff819028102d41f7c5924af467b0a3e4">5b08d996938a0ab9a3b7a65e3049482dff819028102d41f7c5924af467b0a3e4</a> || Signature | -   || Company | ASRock Incorporation || Description | ASRock IO Driver || Product | ASRock IO Driver || OriginalFilename | AsrDrv.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A6b214126743cbf8efdfae0a4fb7d78eb">6b214126743cbf8efdfae0a4fb7d78eb</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aefc91a1317eb086196fa1a2f94fbf96258b5ec2e">efc91a1317eb086196fa1a2f94fbf96258b5ec2e</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A5b08d996938a0ab9a3b7a65e3049482dff819028102d41f7c5924af467b0a3e4">5b08d996938a0ab9a3b7a65e3049482dff819028102d41f7c5924af467b0a3e4</a> || Signature | -   || Company | ASRock Incorporation || Description | ASRock IO Driver || Product | ASRock IO Driver || OriginalFilename | AsrDrv.sys |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 * HAL.dll
@@ -200,7 +198,7 @@ sc.exe create asrdrv104.sys binPath=C:\windows\temp\asrdrv104.sys type=kernel &a
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv104.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

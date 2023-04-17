@@ -38,14 +38,14 @@ We were not able to verify the hash of this driver successfully, it has not been
 - **Author**: {{driver.Author}}
 - **Acknowledgement**: {{driver.Acknowledgement.Person}} | [{{ driver.Acknowledgement.Handle }}](https://twitter.com/{{driver.Acknowledgement.Handle}})
 
-{% raw %}
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-{% endraw %}
+{% if driver.KnownVulnerableSamples %}
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/{% endraw %}{{ driver.KnownVulnerableSamples[0].MD5 }}{% raw %}.bin" "Download" >}}{% endraw %}
 {% raw %}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
 {% endraw %}
+{% endif %}
 
 ### Commands
 
@@ -75,9 +75,9 @@ This download link contains the malcious driver!
 | MD5 | <a href="https://www.virustotal.com/gui/file/{{hash.MD5}}">{{ hash.MD5 }}</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/{{hash.SHA1}}">{{hash.SHA1}}</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/{{hash.SHA256}}">{{hash.SHA256}}</a> |
-{% if hash.Authentihash %}| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%{{ hash.Authentihash.MD5 }}">{{ hash.Authentihash.MD5 }}</a> |{% endif %}
-{% if hash.Authentihash %}| Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%{{ hash.Authentihash.SHA1 }}">{{ hash.Authentihash.SHA1 }}</a> |{% endif %}
-{% if hash.Authentihash %}| Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%{{ hash.Authentihash.SHA256 }}">{{ hash.Authentihash.SHA256 }}</a> |{% endif %}
+{% if hash.Authentihash %}| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A{{ hash.Authentihash.MD5 }}">{{ hash.Authentihash.MD5 }}</a> |{% endif %}
+{% if hash.Authentihash %}| Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A{{ hash.Authentihash.SHA1 }}">{{ hash.Authentihash.SHA1 }}</a> |{% endif %}
+{% if hash.Authentihash %}| Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A{{ hash.Authentihash.SHA256 }}">{{ hash.Authentihash.SHA256 }}</a> |{% endif %}
 {% if hash.Publisher %}| Publisher | {{ hash.Publisher }} |{% endif %}
 {% if hash.Signature %}| Signature | {{ hash.Signature | join(', ') }}   |{% endif %}
 {% if hash.Date %}| Date | {{ hash.Date }} |{% endif %}

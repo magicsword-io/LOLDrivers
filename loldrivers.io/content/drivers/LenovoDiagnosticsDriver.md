@@ -27,9 +27,7 @@ LenovoDiagnosticsDriver.sys is a vulnerable driver and more information will be 
 - **Author**: Michael Haag
 - **Acknowledgement**: Mike Alfaro | [alfarom256](https://twitter.com/alfarom256)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/b941c8364308990ee4cc6eadf7214e0f.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -60,7 +58,7 @@ sc.exe create LenovoDiagnosticsDriver.sys binPath=C:\windows\temp\LenovoDiagnost
 | MD5 | <a href="https://www.virustotal.com/gui/file/b941c8364308990ee4cc6eadf7214e0f">b941c8364308990ee4cc6eadf7214e0f</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/b89a8eef5aeae806af5ba212a8068845cafdab6f">b89a8eef5aeae806af5ba212a8068845cafdab6f</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/f05b1ee9e2f6ab704b8919d5071becbce6f9d0f9d0ba32a460c41d5272134abe">f05b1ee9e2f6ab704b8919d5071becbce6f9d0f9d0ba32a460c41d5272134abe</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%56b6144e389ce3b1e2a0a96a954aa7d8">56b6144e389ce3b1e2a0a96a954aa7d8</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%6d9543725aca0c9c8f403425952692ccc1d2d7f2">6d9543725aca0c9c8f403425952692ccc1d2d7f2</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%34e6a56c60746c51034b45a7b2a36617205b598d0bbcc695f92404605a0975d5">34e6a56c60746c51034b45a7b2a36617205b598d0bbcc695f92404605a0975d5</a> || Signature | Lenovo, DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1, DigiCert Trusted Root G4   || Company | Lenovo Group Limited (R) || Description | Lenovo Diagnostics Driver for Windows 10 and later. || Product | Lenovo Diagnostics || OriginalFilename | LenovoDiagnosticsDriver.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A56b6144e389ce3b1e2a0a96a954aa7d8">56b6144e389ce3b1e2a0a96a954aa7d8</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A6d9543725aca0c9c8f403425952692ccc1d2d7f2">6d9543725aca0c9c8f403425952692ccc1d2d7f2</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A34e6a56c60746c51034b45a7b2a36617205b598d0bbcc695f92404605a0975d5">34e6a56c60746c51034b45a7b2a36617205b598d0bbcc695f92404605a0975d5</a> || Signature | Lenovo, DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1, DigiCert Trusted Root G4   || Company | Lenovo Group Limited (R) || Description | Lenovo Diagnostics Driver for Windows 10 and later. || Product | Lenovo Diagnostics || OriginalFilename | LenovoDiagnosticsDriver.sys |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 * HAL.dll
@@ -114,7 +112,7 @@ sc.exe create LenovoDiagnosticsDriver.sys binPath=C:\windows\temp\LenovoDiagnost
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lenovodiagnosticsdriver.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

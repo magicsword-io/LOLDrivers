@@ -27,9 +27,7 @@ Lv561av.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/b47dee29b5e6e1939567a926c7a3e6a4.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -57,7 +55,7 @@ sc.exe create Lv561av.sys binPath=C:\windows\temp\Lv561av.sys type=kernel &amp;&
 | MD5 | <a href="https://www.virustotal.com/gui/file/b47dee29b5e6e1939567a926c7a3e6a4">b47dee29b5e6e1939567a926c7a3e6a4</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/351cbd352b3ec0d5f4f58c84af732a0bf41b4463">351cbd352b3ec0d5f4f58c84af732a0bf41b4463</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/e86cb77de7b6a8025f9a546f6c45d135f471e664963cf70b381bee2dfd0fdef4">e86cb77de7b6a8025f9a546f6c45d135f471e664963cf70b381bee2dfd0fdef4</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%92a9fa0ebbb45b600397611e247710b1">92a9fa0ebbb45b600397611e247710b1</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%ed3e97c7290768216c5b3abbd4a29dde856eb3c7">ed3e97c7290768216c5b3abbd4a29dde856eb3c7</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%c54ffa9a32cd99972ca905dcf99e20f8429e3cfd45bc1ddf4f9af8b3ed688c88">c54ffa9a32cd99972ca905dcf99e20f8429e3cfd45bc1ddf4f9af8b3ed688c88</a> || Signature | Logitech Inc, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | Logitech Inc. || Description | Logitech Video Driver || Product | Logitech Webcam Software || OriginalFilename | Lv561av.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A92a9fa0ebbb45b600397611e247710b1">92a9fa0ebbb45b600397611e247710b1</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aed3e97c7290768216c5b3abbd4a29dde856eb3c7">ed3e97c7290768216c5b3abbd4a29dde856eb3c7</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ac54ffa9a32cd99972ca905dcf99e20f8429e3cfd45bc1ddf4f9af8b3ed688c88">c54ffa9a32cd99972ca905dcf99e20f8429e3cfd45bc1ddf4f9af8b3ed688c88</a> || Signature | Logitech Inc, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | Logitech Inc. || Description | Logitech Video Driver || Product | Logitech Webcam Software || OriginalFilename | Lv561av.sys |
 #### Imports
 {{< details "Expand" >}}* NTOSKRNL.exe
 * ntoskrnl.exe
@@ -193,7 +191,7 @@ sc.exe create Lv561av.sys binPath=C:\windows\temp\Lv561av.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lv561av.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

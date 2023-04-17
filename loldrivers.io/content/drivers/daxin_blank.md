@@ -22,9 +22,7 @@ Driver used in the Daxin malware campaign.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/62c18d61ed324088f963510bae43b831.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -53,7 +51,7 @@ sc.exe create daxin_blank.sys binPath=C:\windows\temp\daxin_blank.sys     type=k
 | MD5 | <a href="https://www.virustotal.com/gui/file/62c18d61ed324088f963510bae43b831">62c18d61ed324088f963510bae43b831</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/8302802b709ad242a81b939b6c90b3230e1a1f1e">8302802b709ad242a81b939b6c90b3230e1a1f1e</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/49c827cf48efb122a9d6fd87b426482b7496ccd4a2dbca31ebbf6b2b80c98530">49c827cf48efb122a9d6fd87b426482b7496ccd4a2dbca31ebbf6b2b80c98530</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253bde63495fa4f995a6debae44e598e">253bde63495fa4f995a6debae44e598e</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%57391d4c4e30f91e3e780d5242fd98a178ec67ac">57391d4c4e30f91e3e780d5242fd98a178ec67ac</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%a000d211840cb8fbcbf95c334b1d04eadb45ba03b0413c96472e47e9e22413ff">a000d211840cb8fbcbf95c334b1d04eadb45ba03b0413c96472e47e9e22413ff</a> || Publisher | Anhua Xinda (Beijing) Technology Co., Ltd. || Signature | S, i, g, n, e, d   || Date | 7:07 AM 1/23/2013 |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A253bde63495fa4f995a6debae44e598e">253bde63495fa4f995a6debae44e598e</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A57391d4c4e30f91e3e780d5242fd98a178ec67ac">57391d4c4e30f91e3e780d5242fd98a178ec67ac</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aa000d211840cb8fbcbf95c334b1d04eadb45ba03b0413c96472e47e9e22413ff">a000d211840cb8fbcbf95c334b1d04eadb45ba03b0413c96472e47e9e22413ff</a> || Publisher | Anhua Xinda (Beijing) Technology Co., Ltd. || Signature | S, i, g, n, e, d   || Date | 7:07 AM 1/23/2013 |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 * NDIS.SYS
@@ -149,7 +147,7 @@ sc.exe create daxin_blank.sys binPath=C:\windows\temp\daxin_blank.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

@@ -22,9 +22,7 @@ Driver used in the Daxin malware campaign.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -53,7 +51,7 @@ sc.exe create daxin_blank6.sys binPath=C:\windows\temp\daxin_blank6.sys     type
 | MD5 | <a href="https://www.virustotal.com/gui/file/0ae30291c6cbfa7be39320badd6e8de0">0ae30291c6cbfa7be39320badd6e8de0</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/c257aa4094539719a3c7b7950598ef872dbf9518">c257aa4094539719a3c7b7950598ef872dbf9518</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/e6a7b0bc01a627a7d0ffb07faddb3a4dd96b6f5208ac26107bdaeb3ab1ec8217">e6a7b0bc01a627a7d0ffb07faddb3a4dd96b6f5208ac26107bdaeb3ab1ec8217</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%d59fbf4aa759286d1dd9abb40733f7b2">d59fbf4aa759286d1dd9abb40733f7b2</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%3c34c7c5916b987420fbfb4f3e3fef7400471831">3c34c7c5916b987420fbfb4f3e3fef7400471831</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%a8c558e74ebe35a095a5b79d4bb26c10b18f8ebb449365e742f856d4e032555c">a8c558e74ebe35a095a5b79d4bb26c10b18f8ebb449365e742f856d4e032555c</a> || Publisher | n/a || Signature | U, n, s, i, g, n, e, d   || Date | 2:44 AM 3/26/2009 |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ad59fbf4aa759286d1dd9abb40733f7b2">d59fbf4aa759286d1dd9abb40733f7b2</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A3c34c7c5916b987420fbfb4f3e3fef7400471831">3c34c7c5916b987420fbfb4f3e3fef7400471831</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aa8c558e74ebe35a095a5b79d4bb26c10b18f8ebb449365e742f856d4e032555c">a8c558e74ebe35a095a5b79d4bb26c10b18f8ebb449365e742f856d4e032555c</a> || Publisher | n/a || Signature | U, n, s, i, g, n, e, d   || Date | 2:44 AM 3/26/2009 |
 #### Imports
 {{< details "Expand" >}}* NTOSKRNL.EXE
 * HAL.DLL
@@ -130,7 +128,7 @@ sc.exe create daxin_blank6.sys binPath=C:\windows\temp\daxin_blank6.sys     type
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank6.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

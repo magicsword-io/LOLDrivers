@@ -22,9 +22,7 @@ Driver used in the Daxin malware campaign.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/fb7c61ef427f9b2fdff3574ee6b1819b.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -53,7 +51,7 @@ sc.exe create wantd_3.sys binPath=C:\windows\temp\wantd_3.sys type=kernel &amp;&
 | MD5 | <a href="https://www.virustotal.com/gui/file/fb7c61ef427f9b2fdff3574ee6b1819b">fb7c61ef427f9b2fdff3574ee6b1819b</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/1f25f54e9b289f76604e81e98483309612c5a471">1f25f54e9b289f76604e81e98483309612c5a471</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1">81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%cbb18883d7893156620f084ff40b2fbf">cbb18883d7893156620f084ff40b2fbf</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%df59532dbae676b3fb2653a1bbd9cd5f1cd3ba78">df59532dbae676b3fb2653a1bbd9cd5f1cd3ba78</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%a1ee0b8a7974f3d11c10241027c0e7171c798a28589aae9ff8c5a86228642af7">a1ee0b8a7974f3d11c10241027c0e7171c798a28589aae9ff8c5a86228642af7</a> || Publisher | n/a || Signature | U, n, s, i, g, n, e, d   || Date | 7:52 AM 4/30/2014 || Company | Microsoft Corporation || Description | WAN Transport Driver || Product | Microsoft Windows Operating System || OriginalFilename | wantd.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Acbb18883d7893156620f084ff40b2fbf">cbb18883d7893156620f084ff40b2fbf</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Adf59532dbae676b3fb2653a1bbd9cd5f1cd3ba78">df59532dbae676b3fb2653a1bbd9cd5f1cd3ba78</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aa1ee0b8a7974f3d11c10241027c0e7171c798a28589aae9ff8c5a86228642af7">a1ee0b8a7974f3d11c10241027c0e7171c798a28589aae9ff8c5a86228642af7</a> || Publisher | n/a || Signature | U, n, s, i, g, n, e, d   || Date | 7:52 AM 4/30/2014 || Company | Microsoft Corporation || Description | WAN Transport Driver || Product | Microsoft Windows Operating System || OriginalFilename | wantd.sys |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 * HAL.dll
@@ -159,7 +157,7 @@ sc.exe create wantd_3.sys binPath=C:\windows\temp\wantd_3.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd_3.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

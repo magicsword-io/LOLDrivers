@@ -22,9 +22,7 @@ krpocesshacker.sys is a vulnerable driver and more information will be added as 
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/bbbc9a6cc488cfb0f6c6934b193891eb.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -53,7 +51,7 @@ sc.exe create krpocesshacker.sys binPath=C:\windows\temp\krpocesshacker.sys     
 | MD5 | <a href="https://www.virustotal.com/gui/file/bbbc9a6cc488cfb0f6c6934b193891eb">bbbc9a6cc488cfb0f6c6934b193891eb</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/d8498707f295082f6a95fd9d32c9782951f5a082">d8498707f295082f6a95fd9d32c9782951f5a082</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/c725919e6357126d512c638f993cf572112f323da359645e4088f789eb4c7b8c">c725919e6357126d512c638f993cf572112f323da359645e4088f789eb4c7b8c</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%a9ccdbae433c4377abce8f514e4fe43e">a9ccdbae433c4377abce8f514e4fe43e</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%61b55bb7c111f93bd3ea9ac71591e1a6b89feee1">61b55bb7c111f93bd3ea9ac71591e1a6b89feee1</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%c7b1bb39dcd7f0331989f16fcc7cd29a9ae126bee47746a4be385160da3c5a29">c7b1bb39dcd7f0331989f16fcc7cd29a9ae126bee47746a4be385160da3c5a29</a> || Signature | Wen Jia Liu, DigiCert High Assurance Code Signing CA-1, DigiCert   || Company | wj32 || Description | KProcessHacker || Product | KProcessHacker || OriginalFilename | kprocesshacker.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aa9ccdbae433c4377abce8f514e4fe43e">a9ccdbae433c4377abce8f514e4fe43e</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A61b55bb7c111f93bd3ea9ac71591e1a6b89feee1">61b55bb7c111f93bd3ea9ac71591e1a6b89feee1</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ac7b1bb39dcd7f0331989f16fcc7cd29a9ae126bee47746a4be385160da3c5a29">c7b1bb39dcd7f0331989f16fcc7cd29a9ae126bee47746a4be385160da3c5a29</a> || Signature | Wen Jia Liu, DigiCert High Assurance Code Signing CA-1, DigiCert   || Company | wj32 || Description | KProcessHacker || Product | KProcessHacker || OriginalFilename | kprocesshacker.sys |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 {{< /details >}}
@@ -137,7 +135,7 @@ sc.exe create krpocesshacker.sys binPath=C:\windows\temp\krpocesshacker.sys     
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/krpocesshacker.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

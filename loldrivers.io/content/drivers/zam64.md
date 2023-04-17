@@ -22,9 +22,7 @@ zam64.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/21e13f2cb269defeae5e1d09887d47bb.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -52,7 +50,7 @@ sc.exe create zam64.sys binPath=C:\windows\temp\zam64.sys type=kernel &amp;&amp;
 | MD5 | <a href="https://www.virustotal.com/gui/file/21e13f2cb269defeae5e1d09887d47bb">21e13f2cb269defeae5e1d09887d47bb</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/16d7ecf09fc98798a6170e4cef2745e0bee3f5c7">16d7ecf09fc98798a6170e4cef2745e0bee3f5c7</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/543991ca8d1c65113dff039b85ae3f9a87f503daec30f46929fd454bc57e5a91">543991ca8d1c65113dff039b85ae3f9a87f503daec30f46929fd454bc57e5a91</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%3f2771b22553380efcee72a27dc4d96c">3f2771b22553380efcee72a27dc4d96c</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%0d15b7de0f1129b540f48d7a3cba2c6bf5d44112">0d15b7de0f1129b540f48d7a3cba2c6bf5d44112</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%ceb1bf90d8652dac481fba362e5c3a6548a116897e729733f2be27f4edc5fc1f">ceb1bf90d8652dac481fba362e5c3a6548a116897e729733f2be27f4edc5fc1f</a> || Signature | Zemana Ltd., DigiCert High Assurance Code Signing CA-1, DigiCert   || Company | Zemana Ltd. || Description | ZAM || Product | ZAM |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A3f2771b22553380efcee72a27dc4d96c">3f2771b22553380efcee72a27dc4d96c</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A0d15b7de0f1129b540f48d7a3cba2c6bf5d44112">0d15b7de0f1129b540f48d7a3cba2c6bf5d44112</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aceb1bf90d8652dac481fba362e5c3a6548a116897e729733f2be27f4edc5fc1f">ceb1bf90d8652dac481fba362e5c3a6548a116897e729733f2be27f4edc5fc1f</a> || Signature | Zemana Ltd., DigiCert High Assurance Code Signing CA-1, DigiCert   || Company | Zemana Ltd. || Description | ZAM || Product | ZAM |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 * FLTMGR.SYS
@@ -201,7 +199,7 @@ sc.exe create zam64.sys binPath=C:\windows\temp\zam64.sys type=kernel &amp;&amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/zam64.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

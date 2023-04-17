@@ -22,9 +22,7 @@ gdrv.sys is vulnerable to multiple CVEs: CVE-2018-19320, CVE-2018-19322, CVE-201
 - **Author**: Michael Haag, rasta-mouse
 - **Acknowledgement**: MattNotMax | [@mattnotmax](https://twitter.com/@mattnotmax)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/9ab9f3b75a2eb87fafb1b7361be9dfb3.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -55,7 +53,7 @@ sc.exe create gdrv.sys binPath=C:\windows\temp\gdrv.sys type=kernel &amp;&amp; s
 | MD5 | <a href="https://www.virustotal.com/gui/file/9ab9f3b75a2eb87fafb1b7361be9dfb3">9ab9f3b75a2eb87fafb1b7361be9dfb3</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/fe10018af723986db50701c8532df5ed98b17c39">fe10018af723986db50701c8532df5ed98b17c39</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/31f4cfb4c71da44120752721103a16512444c13c2ac2d857a7e6f13cb679b427">31f4cfb4c71da44120752721103a16512444c13c2ac2d857a7e6f13cb679b427</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%b18b1bff521337695d2d6a0768340252">b18b1bff521337695d2d6a0768340252</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%0f5034fcf5b34be22a72d2ecc29e348e93b6f00f">0f5034fcf5b34be22a72d2ecc29e348e93b6f00f</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%9c0e80958b907c8df345ec2f8d711acefb4951ee3e6e84892ecd429f5e1f3acb">9c0e80958b907c8df345ec2f8d711acefb4951ee3e6e84892ecd429f5e1f3acb</a> || Signature | Giga-Byte Technology, VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   || Date | 2013-07-03 17:32:00 UTC, 2017-11-30 18:40:00 UTC || Company | Windows (R) Server 2003 DDK provider || Description | GIGABYTE Tools || Product | Windows (R) Server 2003 DDK driver || OriginalFilename | gdrv.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ab18b1bff521337695d2d6a0768340252">b18b1bff521337695d2d6a0768340252</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A0f5034fcf5b34be22a72d2ecc29e348e93b6f00f">0f5034fcf5b34be22a72d2ecc29e348e93b6f00f</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A9c0e80958b907c8df345ec2f8d711acefb4951ee3e6e84892ecd429f5e1f3acb">9c0e80958b907c8df345ec2f8d711acefb4951ee3e6e84892ecd429f5e1f3acb</a> || Signature | Giga-Byte Technology, VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   || Date | 2013-07-03 17:32:00 UTC, 2017-11-30 18:40:00 UTC || Company | Windows (R) Server 2003 DDK provider || Description | GIGABYTE Tools || Product | Windows (R) Server 2003 DDK driver || OriginalFilename | gdrv.sys |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 * HAL.dll
@@ -97,7 +95,7 @@ sc.exe create gdrv.sys binPath=C:\windows\temp\gdrv.sys type=kernel &amp;&amp; s
 | MD5 | <a href="https://www.virustotal.com/gui/file/1cff7b947f8c3dea1d34dc791fc78cdc">1cff7b947f8c3dea1d34dc791fc78cdc</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/8d59fd14a445c8f3f0f7991fa6cd717d466b3754">8d59fd14a445c8f3f0f7991fa6cd717d466b3754</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/ff6729518a380bf57f1bc6f1ec0aa7f3012e1618b8d9b0f31a61d299ee2b4339">ff6729518a380bf57f1bc6f1ec0aa7f3012e1618b8d9b0f31a61d299ee2b4339</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%bf45a5d10968424666abede02113a509">bf45a5d10968424666abede02113a509</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%5c26f130f6a5ad8bdd2eed29140542dae0885b17">5c26f130f6a5ad8bdd2eed29140542dae0885b17</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%34da66774ba09c4a8fc59349401ca1fefaaf4e66a9c620c7782c072a16089ba3">34da66774ba09c4a8fc59349401ca1fefaaf4e66a9c620c7782c072a16089ba3</a> || Signature | GIGA-BYTE TECHNOLOGY CO., LTD., Symantec Class 3 SHA256 Code Signing CA, VeriSign   || Date | 2013-07-03 17:32:00 UTC, 2017-11-30 18:40:00 UTC || Company | GIGA-BYTE TECHNOLOGY CO., LTD. || Description | GIGA-BYTE NonPNP Driver || Product | gdrv64 || OriginalFilename | gdrv.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Abf45a5d10968424666abede02113a509">bf45a5d10968424666abede02113a509</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A5c26f130f6a5ad8bdd2eed29140542dae0885b17">5c26f130f6a5ad8bdd2eed29140542dae0885b17</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A34da66774ba09c4a8fc59349401ca1fefaaf4e66a9c620c7782c072a16089ba3">34da66774ba09c4a8fc59349401ca1fefaaf4e66a9c620c7782c072a16089ba3</a> || Signature | GIGA-BYTE TECHNOLOGY CO., LTD., Symantec Class 3 SHA256 Code Signing CA, VeriSign   || Date | 2013-07-03 17:32:00 UTC, 2017-11-30 18:40:00 UTC || Company | GIGA-BYTE TECHNOLOGY CO., LTD. || Description | GIGA-BYTE NonPNP Driver || Product | gdrv64 || OriginalFilename | gdrv.sys |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 * HAL.dll
@@ -140,7 +138,7 @@ sc.exe create gdrv.sys binPath=C:\windows\temp\gdrv.sys type=kernel &amp;&amp; s
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gdrv.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

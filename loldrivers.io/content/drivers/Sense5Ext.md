@@ -22,9 +22,7 @@ Driver categorized as POORTRY by Mandiant.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/f9844524fb0009e5b784c21c7bad4220.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -52,7 +50,7 @@ sc.exe create Sense5Ext.sys binPath=C:\windows\temp\Sense5Ext.sys type=kernel &a
 | MD5 | <a href="https://www.virustotal.com/gui/file/f9844524fb0009e5b784c21c7bad4220">f9844524fb0009e5b784c21c7bad4220</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/e6765d8866cad6193df1507c18f31fa7f723ca3e">e6765d8866cad6193df1507c18f31fa7f723ca3e</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/7f4555a940ce1156c9bcea9a2a0b801f9a5e44ec9400b61b14a7b1a6404ffdf6">7f4555a940ce1156c9bcea9a2a0b801f9a5e44ec9400b61b14a7b1a6404ffdf6</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%0b2ce413f69677a0bf78a40ed0d081a7">0b2ce413f69677a0bf78a40ed0d081a7</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%af83d2f800c68099976dcf75ee31681708d32ed9">af83d2f800c68099976dcf75ee31681708d32ed9</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%13cd99ff2120d9fd651814d826b6c8481d549f684a8fbfb2d8775c9faa1c27f5">13cd99ff2120d9fd651814d826b6c8481d549f684a8fbfb2d8775c9faa1c27f5</a> || Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   || Company | Sense5 CORP || Description | Sense5 Driver |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A0b2ce413f69677a0bf78a40ed0d081a7">0b2ce413f69677a0bf78a40ed0d081a7</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aaf83d2f800c68099976dcf75ee31681708d32ed9">af83d2f800c68099976dcf75ee31681708d32ed9</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A13cd99ff2120d9fd651814d826b6c8481d549f684a8fbfb2d8775c9faa1c27f5">13cd99ff2120d9fd651814d826b6c8481d549f684a8fbfb2d8775c9faa1c27f5</a> || Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   || Company | Sense5 CORP || Description | Sense5 Driver |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 * ntoskrnl.exe
@@ -162,7 +160,7 @@ sc.exe create Sense5Ext.sys binPath=C:\windows\temp\Sense5Ext.sys type=kernel &a
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/sense5ext.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

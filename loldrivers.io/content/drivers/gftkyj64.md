@@ -25,9 +25,7 @@ This research is being released alongside Mandiant, a SentinelOne technology and
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/04a88f5974caa621cee18f34300fc08a.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -55,7 +53,7 @@ sc.exe create gftkyj64.sys binPath=C:\windows\temp\gftkyj64.sys type=kernel &amp
 | MD5 | <a href="https://www.virustotal.com/gui/file/04a88f5974caa621cee18f34300fc08a">04a88f5974caa621cee18f34300fc08a</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/a804ebec7e341b4d98d9e94f6e4860a55ea1638d">a804ebec7e341b4d98d9e94f6e4860a55ea1638d</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c">9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%4252d83e18ad41f0cea7ac168218d95b">4252d83e18ad41f0cea7ac168218d95b</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%cf9cb05c9b725efca68c4b7d6f53c8e233217ac4">cf9cb05c9b725efca68c4b7d6f53c8e233217ac4</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%cd66e893300e7e59a749fe4e1b1706f8ccb5ae140254def9f5a614648e2da36f">cd66e893300e7e59a749fe4e1b1706f8ccb5ae140254def9f5a614648e2da36f</a> || Signature | 北京东方海达网络科技有限责任公司, Sectigo Public Code Signing CA R36, Sectigo Public Code Signing Root R46, Sectigo (AAA)   |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A4252d83e18ad41f0cea7ac168218d95b">4252d83e18ad41f0cea7ac168218d95b</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Acf9cb05c9b725efca68c4b7d6f53c8e233217ac4">cf9cb05c9b725efca68c4b7d6f53c8e233217ac4</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Acd66e893300e7e59a749fe4e1b1706f8ccb5ae140254def9f5a614648e2da36f">cd66e893300e7e59a749fe4e1b1706f8ccb5ae140254def9f5a614648e2da36f</a> || Signature | 北京东方海达网络科技有限责任公司, Sectigo Public Code Signing CA R36, Sectigo Public Code Signing Root R46, Sectigo (AAA)   |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 {{< /details >}}
@@ -94,7 +92,7 @@ sc.exe create gftkyj64.sys binPath=C:\windows\temp\gftkyj64.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gftkyj64.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

@@ -22,9 +22,7 @@ Used by unknown actor in Acid Rain malware. vboxdrv.sys is a vulnerable driver.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/bce7f34912ff59a3926216b206deb09f.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -53,7 +51,7 @@ sc.exe create vboxdrv.sys binPath=C:\windows\temp\vboxdrv.sys type=kernel &amp;&
 | MD5 | <a href="https://www.virustotal.com/gui/file/bce7f34912ff59a3926216b206deb09f">bce7f34912ff59a3926216b206deb09f</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/696d68bdbe1d684029aaad2861c49af56694473a">696d68bdbe1d684029aaad2861c49af56694473a</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/78827fa00ea48d96ac9af8d1c1e317d02ce11793e7f7f6e4c7aac7b5d7dd490f">78827fa00ea48d96ac9af8d1c1e317d02ce11793e7f7f6e4c7aac7b5d7dd490f</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%368a4f14c62575191a0f1f3464513964">368a4f14c62575191a0f1f3464513964</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%3ce88266cfc41e8980d4c185235fd55999f5a67a">3ce88266cfc41e8980d4c185235fd55999f5a67a</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%a5a2fe8ab935cf47f21e0c5e0de11a98271054109827dc930293b947d3b05079">a5a2fe8ab935cf47f21e0c5e0de11a98271054109827dc930293b947d3b05079</a> || Signature | Sun Microsystems, Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | Sun Microsystems, Inc. || Description | VirtualBox Support Driver || Product | Sun VirtualBox || OriginalFilename | VBoxDrv.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A368a4f14c62575191a0f1f3464513964">368a4f14c62575191a0f1f3464513964</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A3ce88266cfc41e8980d4c185235fd55999f5a67a">3ce88266cfc41e8980d4c185235fd55999f5a67a</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aa5a2fe8ab935cf47f21e0c5e0de11a98271054109827dc930293b947d3b05079">a5a2fe8ab935cf47f21e0c5e0de11a98271054109827dc930293b947d3b05079</a> || Signature | Sun Microsystems, Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | Sun Microsystems, Inc. || Description | VirtualBox Support Driver || Product | Sun VirtualBox || OriginalFilename | VBoxDrv.sys |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 {{< /details >}}
@@ -318,7 +316,7 @@ sc.exe create vboxdrv.sys binPath=C:\windows\temp\vboxdrv.sys type=kernel &amp;&
 | MD5 | <a href="https://www.virustotal.com/gui/file/eaea9ccb40c82af8f3867cd0f4dd5e9d">eaea9ccb40c82af8f3867cd0f4dd5e9d</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/7c1b25518dee1e30b5a6eaa1ea8e4a3780c24d0c">7c1b25518dee1e30b5a6eaa1ea8e4a3780c24d0c</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/cf3a7d4285d65bf8688215407bce1b51d7c6b22497f09021f0fce31cbeb78986">cf3a7d4285d65bf8688215407bce1b51d7c6b22497f09021f0fce31cbeb78986</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%d146876f270e848875465ed081396d3b">d146876f270e848875465ed081396d3b</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%c54fe31ff5c3cfe1937b7b0906882a1786f453b6">c54fe31ff5c3cfe1937b7b0906882a1786f453b6</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%597e7d5feb149d9087888926d1454dc06f1078ab18c948b44f090910da8645f8">597e7d5feb149d9087888926d1454dc06f1078ab18c948b44f090910da8645f8</a> || Signature | innotek GmbH, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ad146876f270e848875465ed081396d3b">d146876f270e848875465ed081396d3b</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ac54fe31ff5c3cfe1937b7b0906882a1786f453b6">c54fe31ff5c3cfe1937b7b0906882a1786f453b6</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A597e7d5feb149d9087888926d1454dc06f1078ab18c948b44f090910da8645f8">597e7d5feb149d9087888926d1454dc06f1078ab18c948b44f090910da8645f8</a> || Signature | innotek GmbH, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 {{< /details >}}
@@ -479,7 +477,7 @@ sc.exe create vboxdrv.sys binPath=C:\windows\temp\vboxdrv.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/vboxdrv.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

@@ -22,9 +22,7 @@ OpenLibSys.sys is a vulnerable driver and more information will be added as foun
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/ccf523b951afaa0147f22e2a7aae4976.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -52,7 +50,7 @@ sc.exe create OpenLibSys.sys binPath=C:\windows\temp\OpenLibSys.sys type=kernel 
 | MD5 | <a href="https://www.virustotal.com/gui/file/ccf523b951afaa0147f22e2a7aae4976">ccf523b951afaa0147f22e2a7aae4976</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/ac600a2bc06b312d92e649b7b55e3e91e9d63451">ac600a2bc06b312d92e649b7b55e3e91e9d63451</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/91314768da140999e682d2a290d48b78bb25a35525ea12c1b1f9634d14602b2c">91314768da140999e682d2a290d48b78bb25a35525ea12c1b1f9634d14602b2c</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%1244664c7917f03f2b43b30e132f64b5">1244664c7917f03f2b43b30e132f64b5</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%d6f015693e56a3ebba725a6591cc07443d0e1661">d6f015693e56a3ebba725a6591cc07443d0e1661</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%db68a9cbe22b22cba782592eef76e63e080ee8d30943be6da694701f44b6c33e">db68a9cbe22b22cba782592eef76e63e080ee8d30943be6da694701f44b6c33e</a> || Signature | Noriyuki MIYAZAKI, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   || Company | OpenLibSys.org || Description | OpenLibSys || Product | OpenLibSys || OriginalFilename | OpenLibSys.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A1244664c7917f03f2b43b30e132f64b5">1244664c7917f03f2b43b30e132f64b5</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ad6f015693e56a3ebba725a6591cc07443d0e1661">d6f015693e56a3ebba725a6591cc07443d0e1661</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Adb68a9cbe22b22cba782592eef76e63e080ee8d30943be6da694701f44b6c33e">db68a9cbe22b22cba782592eef76e63e080ee8d30943be6da694701f44b6c33e</a> || Signature | Noriyuki MIYAZAKI, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   || Company | OpenLibSys.org || Description | OpenLibSys || Product | OpenLibSys || OriginalFilename | OpenLibSys.sys |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 * HAL.dll
@@ -78,7 +76,7 @@ sc.exe create OpenLibSys.sys binPath=C:\windows\temp\OpenLibSys.sys type=kernel 
 | MD5 | <a href="https://www.virustotal.com/gui/file/96421b56dbda73e9b965f027a3bda7ba">96421b56dbda73e9b965f027a3bda7ba</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/da9cea92f996f938f699902482ac5313d5e8b28e">da9cea92f996f938f699902482ac5313d5e8b28e</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/f0605dda1def240dc7e14efa73927d6c6d89988c01ea8647b671667b2b167008">f0605dda1def240dc7e14efa73927d6c6d89988c01ea8647b671667b2b167008</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%bd94d3a0abc78f87147bf8ea41aad734">bd94d3a0abc78f87147bf8ea41aad734</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%7ecbd5098c4161b95dd7e674003dd53069374f3e">7ecbd5098c4161b95dd7e674003dd53069374f3e</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%6f3937451f0170a0aec3033cadceeb86ab30ee3c67add3926e116ccc20c0d9a7">6f3937451f0170a0aec3033cadceeb86ab30ee3c67add3926e116ccc20c0d9a7</a> || Signature | Noriyuki MIYAZAKI, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   || Company | OpenLibSys.org || Description | OpenLibSys || Product | OpenLibSys || OriginalFilename | OpenLibSys.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Abd94d3a0abc78f87147bf8ea41aad734">bd94d3a0abc78f87147bf8ea41aad734</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A7ecbd5098c4161b95dd7e674003dd53069374f3e">7ecbd5098c4161b95dd7e674003dd53069374f3e</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A6f3937451f0170a0aec3033cadceeb86ab30ee3c67add3926e116ccc20c0d9a7">6f3937451f0170a0aec3033cadceeb86ab30ee3c67add3926e116ccc20c0d9a7</a> || Signature | Noriyuki MIYAZAKI, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   || Company | OpenLibSys.org || Description | OpenLibSys || Product | OpenLibSys || OriginalFilename | OpenLibSys.sys |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 * HAL.dll
@@ -104,7 +102,7 @@ sc.exe create OpenLibSys.sys binPath=C:\windows\temp\OpenLibSys.sys type=kernel 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/openlibsys.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 

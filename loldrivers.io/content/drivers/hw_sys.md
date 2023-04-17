@@ -27,9 +27,7 @@ hw_sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ae30291c6cbfa7be39320badd6e8de0.bin" "Download" >}}
-
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/3247014ba35d406475311a2eab0c4657.bin" "Download" >}}
 {{< tip "warning" >}}
 This download link contains the malcious driver!
 {{< /tip >}}
@@ -57,7 +55,7 @@ sc.exe create hw_sys binPath=C:\windows\temp\hw_sys type=kernel &amp;&amp; sc.ex
 | MD5 | <a href="https://www.virustotal.com/gui/file/3247014ba35d406475311a2eab0c4657">3247014ba35d406475311a2eab0c4657</a> |
 | SHA1 | <a href="https://www.virustotal.com/gui/file/74e4e3006b644392f5fcea4a9bae1d9d84714b57">74e4e3006b644392f5fcea4a9bae1d9d84714b57</a> |
 | SHA256 | <a href="https://www.virustotal.com/gui/file/4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8">4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%6eafc9b68f2047adf6879e955d3b69e8">6eafc9b68f2047adf6879e955d3b69e8</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%8a6d85617bc601b818ddf1b8e8d5db6cf7ae31c1">8a6d85617bc601b818ddf1b8e8d5db6cf7ae31c1</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%615a7c647eba3f2dcea463d5705d5d59ca70b4250f895ad20ce6876076a8fa28">615a7c647eba3f2dcea463d5705d5d59ca70b4250f895ad20ce6876076a8fa28</a> || Signature | Marvin Test Solutions, Inc., GlobalSign Extended Validation CodeSigning CA - SHA256 - G3, GlobalSign, GlobalSign Root CA - R1   || Company | Marvin Test Solutions, Inc. || Description | HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI access || Product | HW || OriginalFilename | HW.sys |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A6eafc9b68f2047adf6879e955d3b69e8">6eafc9b68f2047adf6879e955d3b69e8</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A8a6d85617bc601b818ddf1b8e8d5db6cf7ae31c1">8a6d85617bc601b818ddf1b8e8d5db6cf7ae31c1</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A615a7c647eba3f2dcea463d5705d5d59ca70b4250f895ad20ce6876076a8fa28">615a7c647eba3f2dcea463d5705d5d59ca70b4250f895ad20ce6876076a8fa28</a> || Signature | Marvin Test Solutions, Inc., GlobalSign Extended Validation CodeSigning CA - SHA256 - G3, GlobalSign, GlobalSign Root CA - R1   || Company | Marvin Test Solutions, Inc. || Description | HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI access || Product | HW || OriginalFilename | HW.sys |
 #### Imports
 {{< details "Expand" >}}* ntoskrnl.exe
 * HAL.dll
@@ -150,7 +148,7 @@ sc.exe create hw_sys binPath=C:\windows\temp\hw_sys type=kernel &amp;&amp; sc.ex
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hw_sys.yaml)
 
-*last_updated:* 2023-04-15
+*last_updated:* 2023-04-16
 
 
 
