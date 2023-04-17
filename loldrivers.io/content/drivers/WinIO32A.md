@@ -67,7 +67,7 @@ sc.exe create WinIO32A.sys binPath=C:\windows\temp\WinIO32A.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio32a.yaml)
 
-*last_updated:* 2023-04-16
+*last_updated:* 2023-04-17
 
 
 

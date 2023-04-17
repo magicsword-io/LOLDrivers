@@ -107,7 +107,7 @@ sc.exe create iqvw64e.sys binPath=C:\windows\temp\iqvw64e.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iqvw64e.yaml)
 
-*last_updated:* 2023-04-16
+*last_updated:* 2023-04-17
 
 
 

@@ -100,7 +100,7 @@ sc.exe create sandra.sys binPath=C:\windows\temp\sandra.sys type=kernel &amp;&am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/sandra.yaml)
 
-*last_updated:* 2023-04-16
+*last_updated:* 2023-04-17
 
 
 

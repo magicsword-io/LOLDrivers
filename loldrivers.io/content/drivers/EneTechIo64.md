@@ -80,7 +80,7 @@ sc.exe create EneTechIo64.sys binPath=C:\windows\temp\EneTechIo64.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/enetechio64.yaml)
 
-*last_updated:* 2023-04-16
+*last_updated:* 2023-04-17
 
 
 

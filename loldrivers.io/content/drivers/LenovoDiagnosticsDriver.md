@@ -112,7 +112,7 @@ sc.exe create LenovoDiagnosticsDriver.sys binPath=C:\windows\temp\LenovoDiagnost
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lenovodiagnosticsdriver.yaml)
 
-*last_updated:* 2023-04-16
+*last_updated:* 2023-04-17
 
 
 

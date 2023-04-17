@@ -80,7 +80,7 @@ sc.exe create MsIo32.sys binPath=C:\windows\temp\MsIo32.sys type=kernel &amp;&am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/msio32.yaml)
 
-*last_updated:* 2023-04-16
+*last_updated:* 2023-04-17
 
 
 

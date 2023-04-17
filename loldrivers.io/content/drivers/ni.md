@@ -67,7 +67,7 @@ sc.exe create ni.sys binPath=C:\windows\temp \n \n \n  i.sys type=kernel &amp;&a
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ni.yaml)
 
-*last_updated:* 2023-04-16
+*last_updated:* 2023-04-17
 
 
 

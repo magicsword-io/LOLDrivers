@@ -67,7 +67,7 @@ sc.exe create TGSafe.sys binPath=C:\windows\temp\TGSafe.sys type=kernel &amp;&am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/tgsafe.yaml)
 
-*last_updated:* 2023-04-16
+*last_updated:* 2023-04-17
 
 
 

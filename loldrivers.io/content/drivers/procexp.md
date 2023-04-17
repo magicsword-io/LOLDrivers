@@ -126,7 +126,7 @@ sc.exe create procexp.Sys binPath=C:\windows\temp\procexp.Sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/procexp.yaml)
 
-*last_updated:* 2023-04-16
+*last_updated:* 2023-04-17
 
 
 

@@ -128,7 +128,7 @@ sc.exe create WinRing0.sys binPath=C:\windows\temp\WinRing0.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winring0.yaml)
 
-*last_updated:* 2023-04-16
+*last_updated:* 2023-04-17
 
 
 

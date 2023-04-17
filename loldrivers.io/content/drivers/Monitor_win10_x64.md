@@ -77,7 +77,7 @@ sc.exe create Monitor_win10_x64.sys binPath=C:\windows\temp\Monitor_win10_x64.sy
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/monitor_win10_x64.yaml)
 
-*last_updated:* 2023-04-16
+*last_updated:* 2023-04-17
 
 
 

@@ -136,7 +136,7 @@ sc.exe create nicm.sys binPath=C:\windows\temp \n \n \n  icm.sys type=kernel &am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nicm.yaml)
 
-*last_updated:* 2023-04-16
+*last_updated:* 2023-04-17
 
 
 

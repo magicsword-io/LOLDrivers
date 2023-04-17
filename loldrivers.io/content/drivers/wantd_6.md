@@ -148,7 +148,7 @@ sc.exe create wantd_6.sys binPath=C:\windows\temp\wantd_6.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd_6.yaml)
 
-*last_updated:* 2023-04-16
+*last_updated:* 2023-04-17
 
 
 

@@ -70,7 +70,7 @@ sc.exe create smep_capcom.sys binPath=C:\windows\temp\smep_capcom.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/smep_capcom.yaml)
 
-*last_updated:* 2023-04-16
+*last_updated:* 2023-04-17
 
 
 

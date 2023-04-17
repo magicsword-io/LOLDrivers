@@ -170,7 +170,7 @@ sc.exe create AsIO.sys binPath=C:\windows\temp\AsIO.sys type=kernel &amp;&amp; s
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asio.yaml)
 
-*last_updated:* 2023-04-16
+*last_updated:* 2023-04-17
 
 
 

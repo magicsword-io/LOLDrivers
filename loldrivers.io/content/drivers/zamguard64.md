@@ -199,7 +199,7 @@ sc.exe create zamguard64.sys binPath=C:\windows\temp\zamguard64.sys type=kernel 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/zamguard64.yaml)
 
-*last_updated:* 2023-04-16
+*last_updated:* 2023-04-17
 
 
 
