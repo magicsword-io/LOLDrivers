@@ -3,11 +3,10 @@ Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
+Verified: 'TRUE'
 Commands:
-  Command: sc.exe create LenovoDiagnosticsDriver.sys binPath=C:\windows\temp\LenovoDiagnosticsDriver.sys     type=kernel
-    type=kernel && sc.exe start LenovoDiagnosticsDriver.sys
-  Description: ''
+  Command: sc.exe create LenovoDiagnosticsDriver.sys binPath=C:\windows\temp\LenovoDiagnosticsDriver.sys type=kernel && sc.exe start LenovoDiagnosticsDriver.sys
+  Description: 'The aforementioned driver has been identified as vulnerable to CVE-2022-3699'
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
