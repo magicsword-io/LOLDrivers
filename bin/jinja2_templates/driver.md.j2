@@ -42,7 +42,11 @@ We were not able to verify the hash of this driver successfully, it has not been
 {% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/{% endraw %}{{ driver.KnownVulnerableSamples[0].MD5 }}{% raw %}.bin" "Download" >}}{% endraw %}
 {% raw %}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 {% endraw %}
 {% endif %}

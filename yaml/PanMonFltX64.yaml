@@ -5,8 +5,7 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'FALSE'
 Commands:
-  Command: sc.exe create PanMonFltX64.sys binPath=C:\windows\temp\PanMonFltX64.sys     type=kernel
-    type=kernel && sc.exe start PanMonFltX64.sys
+  Command: sc.exe create PanMonFltX64.sys binPath=C:\windows\temp\PanMonFltX64.sys     type=kernel && sc.exe start PanMonFltX64.sys
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
