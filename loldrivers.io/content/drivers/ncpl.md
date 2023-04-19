@@ -24,11 +24,8 @@ ncpl.sys is a vulnerable driver. CVE-2013-3956.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/a26e600652c33dd054731b4693bf5b01.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

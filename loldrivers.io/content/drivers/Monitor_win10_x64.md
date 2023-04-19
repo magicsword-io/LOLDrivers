@@ -24,11 +24,8 @@ CVE-2018-16712
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/988dabdcf990b134b0ac1e00512c30c4.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

@@ -24,11 +24,8 @@ weight = 10
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/1898ceda3247213c084f43637ef163b3.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

@@ -24,11 +24,8 @@ speedfan.sys is a vulnerable driver. CVE-2007-5633.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/5f9785e7535f8f602cb294a54962c9e7.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

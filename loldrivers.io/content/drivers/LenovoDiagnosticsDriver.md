@@ -24,11 +24,8 @@ The aforementioned driver has been identified as vulnerable to CVE-2022-3699
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/b941c8364308990ee4cc6eadf7214e0f.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

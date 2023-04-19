@@ -24,11 +24,8 @@ krpocesshacker.sys is a vulnerable driver and more information will be added as 
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/bbbc9a6cc488cfb0f6c6934b193891eb.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

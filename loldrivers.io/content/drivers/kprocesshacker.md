@@ -24,11 +24,8 @@ kprocesshacker.sys is a vulnerable driver and more information will be added as 
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/1b5c3c458e31bede55145d0644e88d75.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

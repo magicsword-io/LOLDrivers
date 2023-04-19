@@ -24,11 +24,8 @@ CorsairLLAccess64.sys is a vulnerable driver and more information will be added 
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/803a371a78d528a44ef8777f67443b16.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

@@ -27,11 +27,8 @@ This research is being released alongside Mandiant, a SentinelOne technology and
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/04a88f5974caa621cee18f34300fc08a.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
-This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
 This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

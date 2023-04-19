@@ -24,11 +24,8 @@ elbycdio.sys is a vulnerable driver. CVE-2009-0824.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/ae5eb2759305402821aeddc52ba9a6d6.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands
