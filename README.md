@@ -5,12 +5,14 @@
 Welcome to LOLDrivers (Living Off The Land Drivers), an exciting open-source project that brings together vulnerable, malicious, and known malicious Windows drivers in one comprehensive repository. Our mission is to empower organizations of all sizes with the knowledge and tools to understand and address driver-related security risks, making their systems safer and more reliable.
 
 ## Key Features
+
 - An extensive and well-organized collection of vulnerable and malicious Windows drivers
 - Continuously updated with the latest information on driver vulnerabilities and threats
 - Easy-to-navigate categories and indices for quick access to relevant information
 - Seamless integration with Sigma for proactive defense using hash prevention
 
 ## How LOLDrivers Can Help Your Organization
+
 - Enhance visibility into vulnerable drivers within your infrastructure, fostering a stronger security posture
 - Stay ahead of the curve by being informed about the latest driver-related threats and vulnerabilities
 - Swiftly identify and address risks associated with driver vulnerabilities, minimizing potential damages
@@ -22,8 +24,8 @@ To begin your journey with LOLDrivers, simply check out the [LOLDrivers.io](http
 
 To assist in speeding up the creating of a yaml file, check out [loldrivers.streamlit.app](https://loldrivers.streamlit.app)
 
-
 ## Support 📞
+
 Please use the [GitHub issue tracker](https://github.com/magicsword-io/LOLDrivers/issues) to submit bugs or request features.
 
 ## 🤝 Contributing & Making PRs
@@ -44,16 +46,15 @@ For more detailed instructions, please refer to the [CONTRIBUTING.md](CONTRIBUTI
 
 ## 🚨 Sigma and Sysmon Detection
 
-LOLDrivers includes Sigma and Sysmon detection rules to help you identify potential threats. Check out the [sigma](detections/sigma/driver_load_win_vuln_drivers.yml) and [sysmon](detections/sysmon/sysmon_config_vulnerable_hashes.xml) files under the detection folder for more information.
+LOLDrivers includes Sigma and Sysmon detection rules to help you identify potential threats. Check out the [sigma](detections/sigma/) and [sysmon](detections/sysmon/) files under the detection folder for more information.
 
 Happy hunting! 🕵️‍♂️
 
-
-##  🏗️ Building and Testing Locally
+## 🏗️ Building and Testing Locally
 
 ### Requirements
 
-* python 3.10
+* [Python 3.10](https://www.python.org/downloads/)
 * [Poetry](https://python-poetry.org/docs/#installation)
 * [Golang](https://go.dev/dl/)
 * [Hugo](https://gohugo.io/)

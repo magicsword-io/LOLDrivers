@@ -99,9 +99,9 @@ def gen_hashes_files(md5_list, sha1_list, sha256_list):
                 if i != "-":
                     f.write(i + "\n")
 
-def gen_sysmon_config(md5_list, sha1_list, sha256_list):
+def gen_sysmon_driver_load_config(md5_list, sha1_list, sha256_list):
     """
-        Generates sysmon configuration
+        Generates sysmon driver load configuration
     """
     with open("detections/sysmon/sysmon_config_vulnerable_hashes.xml", "w") as f:
         f.write("<Sysmon schemaversion=\"4.30\">\n")
@@ -125,6 +125,36 @@ def gen_sysmon_config(md5_list, sha1_list, sha256_list):
                     f.write("                <Hashes condition=\"contains\">SHA256=" + i + "</Hashes>\n")
 
         f.write("			</DriverLoad>\n")
+        f.write("		</RuleGroup>\n")
+        f.write("	</EventFiltering>\n")
+        f.write("</Sysmon>\n")
+
+def gen_sysmon_block_config(md5_list, sha1_list, sha256_list):
+    """
+        Generates sysmon blocking configuration
+    """
+    with open("detections/sysmon/sysmon_config_vulnerable_hashes_block.xml", "w") as f:
+        f.write("<Sysmon schemaversion=\"4.82\">\n")
+        f.write("	<EventFiltering>\n")
+        f.write("		<RuleGroup name=\"\" groupRelation=\"or\">\n")
+        f.write("			<FileBlockExecutable onmatch=\"include\">\n")
+
+        if md5_list:
+            for i in md5_list:
+                if i != "-":
+                    f.write("                <Hashes condition=\"contains\">MD5=" + i + "</Hashes>\n")
+        
+        if sha1_list:
+            for i in sha1_list:
+                if i != "-":
+                    f.write("                <Hashes condition=\"contains\">SHA1=" + i + "</Hashes>\n")
+        
+        if sha256_list:
+            for i in sha256_list:
+                if i != "-":
+                    f.write("                <Hashes condition=\"contains\">SHA256=" + i + "</Hashes>\n")
+
+        f.write("			</FileBlockExecutable>\n")
         f.write("		</RuleGroup>\n")
         f.write("	</EventFiltering>\n")
         f.write("</Sysmon>\n")
@@ -195,7 +225,7 @@ def gen_sigma_rule_names(names_list):
     """
     if names_list:
         with open("detections/sigma/driver_load_win_vuln_drivers_names.yml", "w") as f:
-            f.write("title: Vulnerable Driver Load\n")
+            f.write("title: Vulnerable Driver Load By Name\n")
             f.write("id: c316eac1-f3d8-42da-ad1c-66dcec5ca787\n")
             f.write("related:\n")
             f.write("    - id: 7aaaf4b8-e47c-4295-92ee-6ed40a6f60c8\n")
@@ -232,6 +262,7 @@ if __name__ == "__main__":
     md5_list, sha1_list, sha256_list = gen_hashes_lists()
     names_list = gen_names_list()
     gen_hashes_files(md5_list, sha1_list, sha256_list)
-    gen_sysmon_config(md5_list, sha1_list, sha256_list)
+    gen_sysmon_driver_load_config(md5_list, sha1_list, sha256_list)
+    gen_sysmon_block_config(md5_list, sha1_list, sha256_list)
     gen_sigma_rule_hashes(md5_list, sha1_list, sha256_list)
     gen_sigma_rule_names(names_list)
