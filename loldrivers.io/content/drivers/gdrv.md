@@ -24,11 +24,8 @@ gdrv.sys is vulnerable to multiple CVEs: CVE-2018-19320, CVE-2018-19322, CVE-201
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/9ab9f3b75a2eb87fafb1b7361be9dfb3.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

@@ -24,11 +24,8 @@ The first in-the-wild UEFI bootkit bypassing UEFI Secure Boot on fully updated U
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/4ad8fd9e83d7200bd7f8d0d4a9abfb11.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
-This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
 This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

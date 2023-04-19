@@ -24,11 +24,8 @@ AsIO64.sys is a vulnerable driver and more information will be added as found.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/8065a7659562005127673ac52898675f.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

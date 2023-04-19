@@ -29,11 +29,8 @@ WiseUnlo.sys is a vulnerable driver and more information will be added as found.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/356bda2bf0f6899a2c08b2da3ec69f13.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

@@ -24,11 +24,8 @@ AsrDrv102.sys is a vulnerable driver and more information will be added as found
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/76bb1a4332666222a8e3e1339e267179.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

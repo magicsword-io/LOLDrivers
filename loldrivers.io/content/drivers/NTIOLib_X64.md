@@ -24,11 +24,8 @@ NTIOLib_X64.sys is a vulnerable driver and more information will be added as fou
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/c02f70960fa934b8defa16a03d7f6556.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

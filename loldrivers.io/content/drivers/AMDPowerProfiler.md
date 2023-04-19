@@ -24,11 +24,8 @@ AMDPowerProfiler.sys is a vulnerable driver and more information will be added a
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/e4266262a77fffdea2584283f6c4f51d.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

@@ -24,11 +24,8 @@ AsIO.sys is a vulnerable driver and more information will be added as found.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/1dc94a6a82697c62a04e461d7a94d0b0.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

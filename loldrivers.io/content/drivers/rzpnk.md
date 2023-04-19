@@ -24,11 +24,8 @@ A vulnerability exists in the latest version of Razer Synapse (v2.20.15.1104 as 
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/4cc3ddd5ae268d9a154a426af2c23ef9.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

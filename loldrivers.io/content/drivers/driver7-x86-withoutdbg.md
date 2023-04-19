@@ -24,11 +24,8 @@ driver7-x86-withoutdbg.sys is a vulnerable driver and more information will be a
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/4f191abc652d8f7442ca2636725e1ed6.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

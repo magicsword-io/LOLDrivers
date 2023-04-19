@@ -29,11 +29,8 @@ LgDCatcher.sys is a vulnerable driver and more information will be added as foun
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/ed6348707f177629739df73b97ba1b6e.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

@@ -24,11 +24,8 @@ driver7-x64.sys is a vulnerable driver and more information will be added as fou
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/715f8efab1d1c660e4188055c4b28eed.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

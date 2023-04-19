@@ -24,11 +24,8 @@ HwOs2Ec10x64.sys is a vulnerable driver and more information will be added as fo
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/37086ae5244442ba552803984a11d6cb.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

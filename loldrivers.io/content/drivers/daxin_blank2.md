@@ -24,11 +24,8 @@ Driver used in the Daxin malware campaign.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/1cd158a64f3d886357535382a6fdad75.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
-This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
 This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

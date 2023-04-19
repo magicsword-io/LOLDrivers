@@ -24,11 +24,8 @@ nicm.sys is a vulnerable driver. CVE-2013-3956.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/22823fed979903f8dfe3b5d28537eb47.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

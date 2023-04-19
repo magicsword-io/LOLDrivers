@@ -25,11 +25,8 @@ This utility access almost all the computer hardware, including PCI (PCI Express
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/257483d5d8b268d0d679956c7acdf02d.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

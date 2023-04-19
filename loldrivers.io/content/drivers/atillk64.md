@@ -24,11 +24,8 @@ atillk64.sys is a vulnerable driver and more information will be added as found.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/62f02339fe267dc7438f603bfb5431a1.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

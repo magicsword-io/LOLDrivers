@@ -24,11 +24,8 @@ BS_Flash64.sys is a vulnerable driver and more information will be added as foun
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/f5051c756035ef5de9c4c48bacb0612b.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

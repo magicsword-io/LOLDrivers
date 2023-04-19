@@ -24,11 +24,8 @@ Avast’s “Anti Rootkit” driver (also used by AVG) has been found to be vuln
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/a179c4093d05a3e1ee73f6ff07f994aa.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

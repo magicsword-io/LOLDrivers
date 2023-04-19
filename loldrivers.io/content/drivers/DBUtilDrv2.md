@@ -24,11 +24,8 @@ DBUtilDrv2.sys is a vulnerable driver and more information will be added as foun
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/dacb62578b3ea191ea37486d15f4f83c.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

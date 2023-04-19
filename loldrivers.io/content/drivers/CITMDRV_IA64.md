@@ -24,11 +24,8 @@ CITMDRV_IA64.sys is a vulnerable driver and more information will be added as fo
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/c7a57cd4bea07dadba2e2fb914379910.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

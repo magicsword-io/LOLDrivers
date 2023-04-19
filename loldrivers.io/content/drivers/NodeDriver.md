@@ -24,11 +24,8 @@ Driver categorized as POORTRY by Mandiant.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/ee6b1a79cb6641aa44c762ee90786fe0.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
-This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
 This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

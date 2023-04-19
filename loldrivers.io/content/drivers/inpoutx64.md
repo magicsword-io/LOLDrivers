@@ -24,11 +24,8 @@ inpoutx64.sys is a vulnerable driver and more information will be added as found
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/4d487f77be4471900d6ccbc47242cc25.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

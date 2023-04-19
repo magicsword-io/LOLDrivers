@@ -24,11 +24,8 @@ NCHGBIOS2x64.SYS is a vulnerable driver and more information will be added as fo
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/d9ce18960c23f38706ae9c6584d9ac90.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

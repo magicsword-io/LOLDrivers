@@ -29,11 +29,8 @@ DirectIo.sys is a vulnerable driver and more information will be added as found.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/a785b3bc4309d2eb111911c1b55e793f.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

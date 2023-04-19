@@ -24,11 +24,8 @@ Used by unknown actor in Acid Rain malware. vboxdrv.sys is a vulnerable driver.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/bce7f34912ff59a3926216b206deb09f.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

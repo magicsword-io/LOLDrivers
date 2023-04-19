@@ -29,11 +29,8 @@ IObitUnlocker.sys is a vulnerable driver and more information will be added as f
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/2391fb461b061d0e5fccb050d4af7941.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

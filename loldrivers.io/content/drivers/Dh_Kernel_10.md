@@ -24,11 +24,8 @@ Dh_Kernel_10.sys is a vulnerable driver and more information will be added as fo
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/51207adb8dab983332d6b22c29fe8129.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands

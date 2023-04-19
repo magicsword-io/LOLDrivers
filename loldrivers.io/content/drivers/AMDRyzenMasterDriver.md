@@ -24,11 +24,8 @@ AMDRyzenMasterDriver.sys is a vulnerable driver and more information will be add
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/13ee349c15ee5d6cf640b3d0111ffc0e.bin" "Download" >}}
 {{< tip "warning" >}}
-{% if driver.Category == "vulnerable driver" %}
 This download link contains the vulnerable driver!
-{% elif driver.Category == "malicious" %}
-This download link contains the malicious driver!
-{% endif %}
+
 {{< /tip >}}
 
 ### Commands
