@@ -24,7 +24,11 @@ Driver used in the Daxin malware campaign.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/47e6ac52431ca47da17248d80bf71389.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
@@ -95,7 +99,7 @@ sc.exe create ndislan.sys binPath=C:\windows\temp \n \n \n  dislan.sys type=kern
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ndislan.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

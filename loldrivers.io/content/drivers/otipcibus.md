@@ -29,7 +29,11 @@ otipcibus.sys is a vulnerable driver and more information will be added as found
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/d5a642329cce4df94b8dc1ba9660ae34.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
@@ -95,7 +99,7 @@ sc.exe create otipcibus.sys binPath=C:\windows\temp\otipcibus.sys type=kernel &a
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/otipcibus.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

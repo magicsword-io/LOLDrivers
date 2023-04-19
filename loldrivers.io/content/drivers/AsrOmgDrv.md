@@ -24,7 +24,11 @@ AsrOmgDrv.sys is a vulnerable driver and more information will be added as found
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/4f27c09cc8680e06b04d6a9c34ca1e08.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
@@ -86,7 +90,7 @@ sc.exe create AsrOmgDrv.sys binPath=C:\windows\temp\AsrOmgDrv.sys type=kernel &a
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asromgdrv.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

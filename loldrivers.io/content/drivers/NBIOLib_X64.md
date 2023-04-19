@@ -24,13 +24,17 @@ NBIOLib_X64.sys is a vulnerable driver and more information will be added as fou
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/f2f728d2f69765f5dfda913d407783d2.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create NBIOLib_X64.sys binPath=C:\windows\temp\NBIOLib_X64.sys     type=kernel type=kernel &amp;&amp; sc.exe start NBIOLib_X64.sys
+sc.exe create NBIOLib_X64.sys binPath=C:\windows\temp\NBIOLib_X64.sys     type=kernel &amp;&amp; sc.exe start NBIOLib_X64.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -76,7 +80,7 @@ sc.exe create NBIOLib_X64.sys binPath=C:\windows\temp\NBIOLib_X64.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nbiolib_x64.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

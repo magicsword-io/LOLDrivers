@@ -29,7 +29,11 @@ DirectIo.sys is a vulnerable driver and more information will be added as found.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/a785b3bc4309d2eb111911c1b55e793f.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
@@ -121,7 +125,7 @@ sc.exe create DirectIo.sys binPath=C:\windows\temp\DirectIo.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/directio.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

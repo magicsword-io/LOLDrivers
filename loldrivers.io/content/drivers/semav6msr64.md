@@ -29,13 +29,17 @@ semav6msr64.sys is a vulnerable driver and more information will be added as fou
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/07f83829e7429e60298440cd1e601a6a.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create semav6msr64.sys binPath=C:\windows\temp\semav6msr64.sys     type=kernel type=kernel &amp;&amp; sc.exe start semav6msr64.sys
+sc.exe create semav6msr64.sys binPath=C:\windows\temp\semav6msr64.sys     type=kernel &amp;&amp; sc.exe start semav6msr64.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -84,7 +88,7 @@ sc.exe create semav6msr64.sys binPath=C:\windows\temp\semav6msr64.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/semav6msr64.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

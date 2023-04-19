@@ -24,7 +24,11 @@ The first in-the-wild UEFI bootkit bypassing UEFI Secure Boot on fully updated U
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/4ad8fd9e83d7200bd7f8d0d4a9abfb11.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
@@ -136,7 +140,7 @@ sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sy
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/blacklotus_driver.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

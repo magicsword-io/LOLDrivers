@@ -24,7 +24,11 @@ The MsIo64.sys and MsIo32.sys drivers in Patriot Viper RGB before 1.1 allow loca
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/d9e7e5bcc5b01915dbcef7762a7fc329.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
@@ -80,7 +84,7 @@ sc.exe create MsIo32.sys binPath=C:\windows\temp\MsIo32.sys type=kernel &amp;&am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/msio32.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

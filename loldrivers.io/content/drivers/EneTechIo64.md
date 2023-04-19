@@ -24,13 +24,17 @@ EneTechIo64.sys is a vulnerable driver and more information will be added as fou
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/d6e9f6c67d9b3d790d592557a7d57c3c.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create EneTechIo64.sys binPath=C:\windows\temp\EneTechIo64.sys     type=kernel type=kernel &amp;&amp; sc.exe start EneTechIo64.sys
+sc.exe create EneTechIo64.sys binPath=C:\windows\temp\EneTechIo64.sys     type=kernel &amp;&amp; sc.exe start EneTechIo64.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -80,7 +84,7 @@ sc.exe create EneTechIo64.sys binPath=C:\windows\temp\EneTechIo64.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/enetechio64.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

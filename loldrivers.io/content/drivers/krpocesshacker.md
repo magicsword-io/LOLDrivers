@@ -24,13 +24,17 @@ krpocesshacker.sys is a vulnerable driver and more information will be added as 
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/bbbc9a6cc488cfb0f6c6934b193891eb.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create krpocesshacker.sys binPath=C:\windows\temp\krpocesshacker.sys     type=kernel type=kernel &amp;&amp; sc.exe start krpocesshacker.sys
+sc.exe create krpocesshacker.sys binPath=C:\windows\temp\krpocesshacker.sys     type=kernel &amp;&amp; sc.exe start krpocesshacker.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -135,7 +139,7 @@ sc.exe create krpocesshacker.sys binPath=C:\windows\temp\krpocesshacker.sys     
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/krpocesshacker.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

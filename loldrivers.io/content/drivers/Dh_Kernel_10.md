@@ -24,13 +24,17 @@ Dh_Kernel_10.sys is a vulnerable driver and more information will be added as fo
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/51207adb8dab983332d6b22c29fe8129.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create Dh_Kernel_10.sys binPath=C:\windows\temp\Dh_Kernel_10.sys     type=kernel type=kernel &amp;&amp; sc.exe start Dh_Kernel_10.sys
+sc.exe create Dh_Kernel_10.sys binPath=C:\windows\temp\Dh_Kernel_10.sys     type=kernel &amp;&amp; sc.exe start Dh_Kernel_10.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -98,7 +102,7 @@ sc.exe create Dh_Kernel_10.sys binPath=C:\windows\temp\Dh_Kernel_10.sys     type
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dh_kernel_10.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

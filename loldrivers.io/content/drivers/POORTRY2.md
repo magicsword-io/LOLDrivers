@@ -24,7 +24,11 @@ Driver categorized as POORTRY by Mandiant.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/b164daf106566f444dfb280d743bc2f7.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
@@ -128,7 +132,7 @@ sc.exe create POORTRY2.sys binPath=C:\windows\temp\POORTRY2.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/poortry2.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

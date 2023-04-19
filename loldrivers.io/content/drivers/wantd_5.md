@@ -24,7 +24,11 @@ Driver used in the Daxin malware campaign.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/6d131a7462e568213b44ef69156f10a5.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
@@ -148,7 +152,7 @@ sc.exe create wantd_5.sys binPath=C:\windows\temp\wantd_5.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd_5.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

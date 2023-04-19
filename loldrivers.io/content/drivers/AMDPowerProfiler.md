@@ -24,13 +24,17 @@ AMDPowerProfiler.sys is a vulnerable driver and more information will be added a
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/e4266262a77fffdea2584283f6c4f51d.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create AMDPowerProfiler.sys binPath=C:\windows\temp\AMDPowerProfiler.sys     type=kernel type=kernel &amp;&amp; sc.exe start AMDPowerProfiler.sys
+sc.exe create AMDPowerProfiler.sys binPath=C:\windows\temp\AMDPowerProfiler.sys     type=kernel &amp;&amp; sc.exe start AMDPowerProfiler.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -156,7 +160,7 @@ sc.exe create AMDPowerProfiler.sys binPath=C:\windows\temp\AMDPowerProfiler.sys 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amdpowerprofiler.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

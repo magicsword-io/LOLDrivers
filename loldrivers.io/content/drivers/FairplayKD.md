@@ -29,7 +29,11 @@ FairplayKD.sys is a vulnerable driver and more information will be added as foun
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/4e90cd77509738d30d3181a4d0880bfa.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
@@ -101,7 +105,7 @@ sc.exe create FairplayKD.sys binPath=C:\windows\temp\FairplayKD.sys type=kernel 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fairplaykd.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

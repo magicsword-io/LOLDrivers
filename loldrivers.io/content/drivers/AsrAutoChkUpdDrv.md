@@ -24,13 +24,17 @@ AsrAutoChkUpdDrv.sys is a vulnerable driver and more information will be added a
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/75d6c3469347de1cdfa3b1b9f1544208.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create AsrAutoChkUpdDrv.sys binPath=C:\windows\temp\AsrAutoChkUpdDrv.sys     type=kernel type=kernel &amp;&amp; sc.exe start AsrAutoChkUpdDrv.sys
+sc.exe create AsrAutoChkUpdDrv.sys binPath=C:\windows\temp\AsrAutoChkUpdDrv.sys     type=kernel &amp;&amp; sc.exe start AsrAutoChkUpdDrv.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -86,7 +90,7 @@ sc.exe create AsrAutoChkUpdDrv.sys binPath=C:\windows\temp\AsrAutoChkUpdDrv.sys 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrautochkupddrv.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

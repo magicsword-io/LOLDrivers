@@ -24,13 +24,17 @@ AMDRyzenMasterDriver.sys is a vulnerable driver and more information will be add
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/13ee349c15ee5d6cf640b3d0111ffc0e.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create AMDRyzenMasterDriver.sys binPath=C:\windows\temp\AMDRyzenMasterDriver.sys     type=kernel type=kernel &amp;&amp; sc.exe start AMDRyzenMasterDriver.sys
+sc.exe create AMDRyzenMasterDriver.sys binPath=C:\windows\temp\AMDRyzenMasterDriver.sys     type=kernel &amp;&amp; sc.exe start AMDRyzenMasterDriver.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -119,7 +123,7 @@ sc.exe create AMDRyzenMasterDriver.sys binPath=C:\windows\temp\AMDRyzenMasterDri
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amdryzenmasterdriver.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

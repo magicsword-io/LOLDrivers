@@ -24,13 +24,17 @@ Driver categorized as POORTRY by Mandiant.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/1f2888e57fdd6aee466962c25ba7d62d.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create Air_SYSTEM10.sys binPath=C:\windows\temp\Air_SYSTEM10.sys     type=kernel type=kernel &amp;&amp; sc.exe start Air_SYSTEM10.sys
+sc.exe create Air_SYSTEM10.sys binPath=C:\windows\temp\Air_SYSTEM10.sys     type=kernel &amp;&amp; sc.exe start Air_SYSTEM10.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -124,7 +128,7 @@ sc.exe create Air_SYSTEM10.sys binPath=C:\windows\temp\Air_SYSTEM10.sys     type
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/air_system10.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

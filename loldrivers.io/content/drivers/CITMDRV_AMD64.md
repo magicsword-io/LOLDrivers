@@ -24,13 +24,17 @@ CITMDRV_AMD64.sys is a vulnerable driver and more information will be added as f
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/e076dadf37dd43a6b36aeed957abee9e.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     type=kernel type=kernel &amp;&amp; sc.exe start CITMDRV_AMD64.sys
+sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     type=kernel &amp;&amp; sc.exe start CITMDRV_AMD64.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -594,7 +598,7 @@ sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     ty
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/citmdrv_amd64.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

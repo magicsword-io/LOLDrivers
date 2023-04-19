@@ -24,13 +24,17 @@ driver7-x86-withoutdbg.sys is a vulnerable driver and more information will be a
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/4f191abc652d8f7442ca2636725e1ed6.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create driver7-x86-withoutdbg.sys binPath=C:\windows\temp\driver7-x86-withoutdbg.sys     type=kernel type=kernel &amp;&amp; sc.exe start driver7-x86-withoutdbg.sys
+sc.exe create driver7-x86-withoutdbg.sys binPath=C:\windows\temp\driver7-x86-withoutdbg.sys     type=kernel &amp;&amp; sc.exe start driver7-x86-withoutdbg.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -95,7 +99,7 @@ sc.exe create driver7-x86-withoutdbg.sys binPath=C:\windows\temp\driver7-x86-wit
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/driver7-x86-withoutdbg.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

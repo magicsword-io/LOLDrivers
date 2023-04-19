@@ -24,7 +24,11 @@ amifldrv64.sys is a vulnerable driver and more information will be added as foun
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/6ab7b8ef0c44e7d2d5909fdb58d37fa5.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
@@ -89,7 +93,7 @@ sc.exe create amifldrv64.sys binPath=C:\windows\temp\amifldrv64.sys type=kernel 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amifldrv64.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

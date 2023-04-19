@@ -29,13 +29,17 @@ PanMonFltX64.sys is a vulnerable driver and more information will be added as fo
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0067c788e1cb174f008c325ebde56c22.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create PanMonFltX64.sys binPath=C:\windows\temp\PanMonFltX64.sys     type=kernel type=kernel &amp;&amp; sc.exe start PanMonFltX64.sys
+sc.exe create PanMonFltX64.sys binPath=C:\windows\temp\PanMonFltX64.sys     type=kernel &amp;&amp; sc.exe start PanMonFltX64.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -104,7 +108,7 @@ sc.exe create PanMonFltX64.sys binPath=C:\windows\temp\PanMonFltX64.sys     type
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/panmonfltx64.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

@@ -24,13 +24,17 @@ BS_HWMIO64_W10.sys is a vulnerable driver and more information will be added as 
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/d2588631d8aae2a3e54410eaf54f0679.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create BS_HWMIO64_W10.sys binPath=C:\windows\temp\BS_HWMIO64_W10.sys     type=kernel type=kernel &amp;&amp; sc.exe start BS_HWMIO64_W10.sys
+sc.exe create BS_HWMIO64_W10.sys binPath=C:\windows\temp\BS_HWMIO64_W10.sys     type=kernel &amp;&amp; sc.exe start BS_HWMIO64_W10.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -91,7 +95,7 @@ sc.exe create BS_HWMIO64_W10.sys binPath=C:\windows\temp\BS_HWMIO64_W10.sys     
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_hwmio64_w10.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

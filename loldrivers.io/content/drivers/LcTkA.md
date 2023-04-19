@@ -27,7 +27,11 @@ This research is being released alongside Mandiant, a SentinelOne technology and
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/909f3fc221acbe999483c87d9ead024a.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
@@ -84,7 +88,7 @@ sc.exe create LcTkA.sys binPath=C:\windows\temp\LcTkA.sys type=kernel &amp;&amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lctka.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

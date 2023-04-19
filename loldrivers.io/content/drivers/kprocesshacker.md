@@ -24,13 +24,17 @@ kprocesshacker.sys is a vulnerable driver and more information will be added as 
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/1b5c3c458e31bede55145d0644e88d75.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create kprocesshacker.sys binPath=C:\windows\temp\kprocesshacker.sys     type=kernel type=kernel &amp;&amp; sc.exe start kprocesshacker.sys
+sc.exe create kprocesshacker.sys binPath=C:\windows\temp\kprocesshacker.sys     type=kernel &amp;&amp; sc.exe start kprocesshacker.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -148,7 +152,7 @@ sc.exe create kprocesshacker.sys binPath=C:\windows\temp\kprocesshacker.sys     
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/kprocesshacker.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

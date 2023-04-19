@@ -29,13 +29,17 @@ IObitUnlocker.sys is a vulnerable driver and more information will be added as f
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/2391fb461b061d0e5fccb050d4af7941.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create IObitUnlocker.sys binPath=C:\windows\temp\IObitUnlocker.sys     type=kernel type=kernel &amp;&amp; sc.exe start IObitUnlocker.sys
+sc.exe create IObitUnlocker.sys binPath=C:\windows\temp\IObitUnlocker.sys     type=kernel &amp;&amp; sc.exe start IObitUnlocker.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -124,7 +128,7 @@ sc.exe create IObitUnlocker.sys binPath=C:\windows\temp\IObitUnlocker.sys     ty
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iobitunlocker.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

@@ -5,10 +5,10 @@
         "Created": "2023-01-09",
         "MitreID": "T1068",
         "Category": "vulnerable driver",
-        "Verified": "FALSE",
+        "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create LenovoDiagnosticsDriver.sys binPath=C:\\windows\\temp\\LenovoDiagnosticsDriver.sys     type=kernel type=kernel && sc.exe start LenovoDiagnosticsDriver.sys",
-            "Description": "",
+            "Command": "sc.exe create LenovoDiagnosticsDriver.sys binPath=C:\\windows\\temp\\LenovoDiagnosticsDriver.sys type=kernel && sc.exe start LenovoDiagnosticsDriver.sys",
+            "Description": "The aforementioned driver has been identified as vulnerable to CVE-2022-3699",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -138,7 +138,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create WinRing0x64.sys binPath=C:\\windows\\temp\\WinRing0x64.sys     type=kernel type=kernel && sc.exe start WinRing0x64.sys",
+            "Command": "sc.exe create WinRing0x64.sys binPath=C:\\windows\\temp\\WinRing0x64.sys     type=kernel && sc.exe start WinRing0x64.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -267,7 +267,7 @@
         "Category": "malicious",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create daxin_blank5.sys binPath=C:\\windows\\temp\\daxin_blank5.sys     type=kernel type=kernel && sc.exe start daxin_blank5.sys",
+            "Command": "sc.exe create daxin_blank5.sys binPath=C:\\windows\\temp\\daxin_blank5.sys     type=kernel && sc.exe start daxin_blank5.sys",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -514,7 +514,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create AsrAutoChkUpdDrv.sys binPath=C:\\windows\\temp\\AsrAutoChkUpdDrv.sys     type=kernel type=kernel && sc.exe start AsrAutoChkUpdDrv.sys",
+            "Command": "sc.exe create AsrAutoChkUpdDrv.sys binPath=C:\\windows\\temp\\AsrAutoChkUpdDrv.sys     type=kernel && sc.exe start AsrAutoChkUpdDrv.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -652,7 +652,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create driver7-x64.sys binPath=C:\\windows\\temp\\driver7-x64.sys     type=kernel type=kernel && sc.exe start driver7-x64.sys",
+            "Command": "sc.exe create driver7-x64.sys binPath=C:\\windows\\temp\\driver7-x64.sys     type=kernel && sc.exe start driver7-x64.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -789,7 +789,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create CorsairLLAccess64.sys binPath=C:\\windows\\temp\\CorsairLLAccess64.sys     type=kernel type=kernel && sc.exe start CorsairLLAccess64.sys",
+            "Command": "sc.exe create CorsairLLAccess64.sys binPath=C:\\windows\\temp\\CorsairLLAccess64.sys     type=kernel && sc.exe start CorsairLLAccess64.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -3815,7 +3815,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create AMDRyzenMasterDriver.sys binPath=C:\\windows\\temp\\AMDRyzenMasterDriver.sys     type=kernel type=kernel && sc.exe start AMDRyzenMasterDriver.sys",
+            "Command": "sc.exe create AMDRyzenMasterDriver.sys binPath=C:\\windows\\temp\\AMDRyzenMasterDriver.sys     type=kernel && sc.exe start AMDRyzenMasterDriver.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -5059,7 +5059,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create AsrRapidStartDrv.sys binPath=C:\\windows\\temp\\AsrRapidStartDrv.sys     type=kernel type=kernel && sc.exe start AsrRapidStartDrv.sys",
+            "Command": "sc.exe create AsrRapidStartDrv.sys binPath=C:\\windows\\temp\\AsrRapidStartDrv.sys     type=kernel && sc.exe start AsrRapidStartDrv.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -5424,7 +5424,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create NCHGBIOS2x64.SYS binPath=C:\\windows\\temp\\NCHGBIOS2x64.SYS     type=kernel type=kernel && sc.exe start NCHGBIOS2x64.SYS",
+            "Command": "sc.exe create NCHGBIOS2x64.SYS binPath=C:\\windows\\temp\\NCHGBIOS2x64.SYS     type=kernel && sc.exe start NCHGBIOS2x64.SYS",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -7102,7 +7102,7 @@
         "Category": "malicious",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create daxin_blank.sys binPath=C:\\windows\\temp\\daxin_blank.sys     type=kernel type=kernel && sc.exe start daxin_blank.sys",
+            "Command": "sc.exe create daxin_blank.sys binPath=C:\\windows\\temp\\daxin_blank.sys     type=kernel && sc.exe start daxin_blank.sys",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -7492,7 +7492,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create segwindrvx64.sys binPath=C:\\windows\\temp\\segwindrvx64.sys     type=kernel type=kernel && sc.exe start segwindrvx64.sys",
+            "Command": "sc.exe create segwindrvx64.sys binPath=C:\\windows\\temp\\segwindrvx64.sys     type=kernel && sc.exe start segwindrvx64.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -7750,7 +7750,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create magdrvamd64.sys binPath=C:\\windows\\temp\\magdrvamd64.sys     type=kernel type=kernel && sc.exe start magdrvamd64.sys",
+            "Command": "sc.exe create magdrvamd64.sys binPath=C:\\windows\\temp\\magdrvamd64.sys     type=kernel && sc.exe start magdrvamd64.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -8520,7 +8520,7 @@
         "Category": "malicious",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create daxin_blank3.sys binPath=C:\\windows\\temp\\daxin_blank3.sys     type=kernel type=kernel && sc.exe start daxin_blank3.sys",
+            "Command": "sc.exe create daxin_blank3.sys binPath=C:\\windows\\temp\\daxin_blank3.sys     type=kernel && sc.exe start daxin_blank3.sys",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -9862,7 +9862,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create HwOs2Ec7x64.sys binPath=C:\\windows\\temp\\HwOs2Ec7x64.sys     type=kernel type=kernel && sc.exe start HwOs2Ec7x64.sys",
+            "Command": "sc.exe create HwOs2Ec7x64.sys binPath=C:\\windows\\temp\\HwOs2Ec7x64.sys     type=kernel && sc.exe start HwOs2Ec7x64.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -10391,7 +10391,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create NBIOLib_X64.sys binPath=C:\\windows\\temp\\NBIOLib_X64.sys     type=kernel type=kernel && sc.exe start NBIOLib_X64.sys",
+            "Command": "sc.exe create NBIOLib_X64.sys binPath=C:\\windows\\temp\\NBIOLib_X64.sys     type=kernel && sc.exe start NBIOLib_X64.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -11482,7 +11482,7 @@
         "Category": "malicious",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create daxin_blank1.sys binPath=C:\\windows\\temp\\daxin_blank1.sys     type=kernel type=kernel && sc.exe start daxin_blank1.sys",
+            "Command": "sc.exe create daxin_blank1.sys binPath=C:\\windows\\temp\\daxin_blank1.sys     type=kernel && sc.exe start daxin_blank1.sys",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -11591,7 +11591,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create CITMDRV_IA64.sys binPath=C:\\windows\\temp\\CITMDRV_IA64.sys     type=kernel type=kernel && sc.exe start CITMDRV_IA64.sys",
+            "Command": "sc.exe create CITMDRV_IA64.sys binPath=C:\\windows\\temp\\CITMDRV_IA64.sys     type=kernel && sc.exe start CITMDRV_IA64.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -13599,7 +13599,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create rtkiow10x64.sys binPath=C:\\windows\\temp\\rtkiow10x64.sys     type=kernel type=kernel && sc.exe start rtkiow10x64.sys",
+            "Command": "sc.exe create rtkiow10x64.sys binPath=C:\\windows\\temp\\rtkiow10x64.sys     type=kernel && sc.exe start rtkiow10x64.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -14729,7 +14729,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create Monitor_win10_x64.sys binPath=C:\\windows\\temp\\Monitor_win10_x64.sys     type=kernel type=kernel && sc.exe start Monitor_win10_x64.sys",
+            "Command": "sc.exe create Monitor_win10_x64.sys binPath=C:\\windows\\temp\\Monitor_win10_x64.sys     type=kernel && sc.exe start Monitor_win10_x64.sys",
             "Description": "CVE-2018-16712",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -16187,7 +16187,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create BS_HWMIO64_W10.sys binPath=C:\\windows\\temp\\BS_HWMIO64_W10.sys     type=kernel type=kernel && sc.exe start BS_HWMIO64_W10.sys",
+            "Command": "sc.exe create BS_HWMIO64_W10.sys binPath=C:\\windows\\temp\\BS_HWMIO64_W10.sys     type=kernel && sc.exe start BS_HWMIO64_W10.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -16302,7 +16302,7 @@
         "Category": "vulnerable driver",
         "Verified": "FALSE",
         "Commands": {
-            "Command": "sc.exe create PanMonFltX64.sys binPath=C:\\windows\\temp\\PanMonFltX64.sys     type=kernel type=kernel && sc.exe start PanMonFltX64.sys",
+            "Command": "sc.exe create PanMonFltX64.sys binPath=C:\\windows\\temp\\PanMonFltX64.sys     type=kernel && sc.exe start PanMonFltX64.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -16577,7 +16577,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create krpocesshacker.sys binPath=C:\\windows\\temp\\krpocesshacker.sys     type=kernel type=kernel && sc.exe start krpocesshacker.sys",
+            "Command": "sc.exe create krpocesshacker.sys binPath=C:\\windows\\temp\\krpocesshacker.sys     type=kernel && sc.exe start krpocesshacker.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -16757,7 +16757,7 @@
         "Category": "malicious",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create daxin_blank2.sys binPath=C:\\windows\\temp\\daxin_blank2.sys     type=kernel type=kernel && sc.exe start daxin_blank2.sys",
+            "Command": "sc.exe create daxin_blank2.sys binPath=C:\\windows\\temp\\daxin_blank2.sys     type=kernel && sc.exe start daxin_blank2.sys",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -16862,7 +16862,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create AMDPowerProfiler.sys binPath=C:\\windows\\temp\\AMDPowerProfiler.sys     type=kernel type=kernel && sc.exe start AMDPowerProfiler.sys",
+            "Command": "sc.exe create AMDPowerProfiler.sys binPath=C:\\windows\\temp\\AMDPowerProfiler.sys     type=kernel && sc.exe start AMDPowerProfiler.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -17929,7 +17929,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create fidpcidrv64.sys binPath=C:\\windows\\temp\\fidpcidrv64.sys     type=kernel type=kernel && sc.exe start fidpcidrv64.sys",
+            "Command": "sc.exe create fidpcidrv64.sys binPath=C:\\windows\\temp\\fidpcidrv64.sys     type=kernel && sc.exe start fidpcidrv64.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -19094,7 +19094,7 @@
         "Category": "malicious",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create daxin_blank6.sys binPath=C:\\windows\\temp\\daxin_blank6.sys     type=kernel type=kernel && sc.exe start daxin_blank6.sys",
+            "Command": "sc.exe create daxin_blank6.sys binPath=C:\\windows\\temp\\daxin_blank6.sys     type=kernel && sc.exe start daxin_blank6.sys",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -19566,7 +19566,7 @@
         "Category": "malicious",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create Air_SYSTEM10.sys binPath=C:\\windows\\temp\\Air_SYSTEM10.sys     type=kernel type=kernel && sc.exe start Air_SYSTEM10.sys",
+            "Command": "sc.exe create Air_SYSTEM10.sys binPath=C:\\windows\\temp\\Air_SYSTEM10.sys     type=kernel && sc.exe start Air_SYSTEM10.sys",
             "Description": "Driver categorized as POORTRY by Mandiant.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -19930,7 +19930,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create HpPortIox64.sys binPath=C:\\windows\\temp\\HpPortIox64.sys     type=kernel type=kernel && sc.exe start HpPortIox64.sys",
+            "Command": "sc.exe create HpPortIox64.sys binPath=C:\\windows\\temp\\HpPortIox64.sys     type=kernel && sc.exe start HpPortIox64.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -21179,7 +21179,7 @@
         "Category": "vulnerable driver",
         "Verified": "FALSE",
         "Commands": {
-            "Command": "sc.exe create BlackBoneDrv10.sys binPath=C:\\windows\\temp\\BlackBoneDrv10.sys     type=kernel type=kernel && sc.exe start BlackBoneDrv10.sys",
+            "Command": "sc.exe create BlackBoneDrv10.sys binPath=C:\\windows\\temp\\BlackBoneDrv10.sys     type=kernel && sc.exe start BlackBoneDrv10.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -21373,7 +21373,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create HwOs2Ec10x64.sys binPath=C:\\windows\\temp\\HwOs2Ec10x64.sys     type=kernel type=kernel && sc.exe start HwOs2Ec10x64.sys",
+            "Command": "sc.exe create HwOs2Ec10x64.sys binPath=C:\\windows\\temp\\HwOs2Ec10x64.sys     type=kernel && sc.exe start HwOs2Ec10x64.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -22431,7 +22431,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create VProEventMonitor.sys binPath=C:\\windows\\temp\\VProEventMonitor.sys     type=kernel type=kernel && sc.exe start VProEventMonitor.sys",
+            "Command": "sc.exe create VProEventMonitor.sys binPath=C:\\windows\\temp\\VProEventMonitor.sys     type=kernel && sc.exe start VProEventMonitor.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -24619,7 +24619,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create kprocesshacker.sys binPath=C:\\windows\\temp\\kprocesshacker.sys     type=kernel type=kernel && sc.exe start kprocesshacker.sys",
+            "Command": "sc.exe create kprocesshacker.sys binPath=C:\\windows\\temp\\kprocesshacker.sys     type=kernel && sc.exe start kprocesshacker.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -24856,7 +24856,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create NTIOLib_X64.sys binPath=C:\\windows\\temp\\NTIOLib_X64.sys     type=kernel type=kernel && sc.exe start NTIOLib_X64.sys",
+            "Command": "sc.exe create NTIOLib_X64.sys binPath=C:\\windows\\temp\\NTIOLib_X64.sys     type=kernel && sc.exe start NTIOLib_X64.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -24971,7 +24971,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create Dh_Kernel_10.sys binPath=C:\\windows\\temp\\Dh_Kernel_10.sys     type=kernel type=kernel && sc.exe start Dh_Kernel_10.sys",
+            "Command": "sc.exe create Dh_Kernel_10.sys binPath=C:\\windows\\temp\\Dh_Kernel_10.sys     type=kernel && sc.exe start Dh_Kernel_10.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -26488,7 +26488,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create AsrSmartConnectDrv.sys binPath=C:\\windows\\temp\\AsrSmartConnectDrv.sys     type=kernel type=kernel && sc.exe start AsrSmartConnectDrv.sys",
+            "Command": "sc.exe create AsrSmartConnectDrv.sys binPath=C:\\windows\\temp\\AsrSmartConnectDrv.sys     type=kernel && sc.exe start AsrSmartConnectDrv.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -26908,7 +26908,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create smep_capcom.sys binPath=C:\\windows\\temp\\smep_capcom.sys     type=kernel type=kernel && sc.exe start smep_capcom.sys",
+            "Command": "sc.exe create smep_capcom.sys binPath=C:\\windows\\temp\\smep_capcom.sys     type=kernel && sc.exe start smep_capcom.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -27023,7 +27023,7 @@
         "Category": "vulnerable driver",
         "Verified": "FALSE",
         "Commands": {
-            "Command": "sc.exe create semav6msr64.sys binPath=C:\\windows\\temp\\semav6msr64.sys     type=kernel type=kernel && sc.exe start semav6msr64.sys",
+            "Command": "sc.exe create semav6msr64.sys binPath=C:\\windows\\temp\\semav6msr64.sys     type=kernel && sc.exe start semav6msr64.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -32610,7 +32610,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create EneTechIo64.sys binPath=C:\\windows\\temp\\EneTechIo64.sys     type=kernel type=kernel && sc.exe start EneTechIo64.sys",
+            "Command": "sc.exe create EneTechIo64.sys binPath=C:\\windows\\temp\\EneTechIo64.sys     type=kernel && sc.exe start EneTechIo64.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -34264,7 +34264,7 @@
         "Category": "malicious",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create daxin_blank4.sys binPath=C:\\windows\\temp\\daxin_blank4.sys     type=kernel type=kernel && sc.exe start daxin_blank4.sys",
+            "Command": "sc.exe create daxin_blank4.sys binPath=C:\\windows\\temp\\daxin_blank4.sys     type=kernel && sc.exe start daxin_blank4.sys",
             "Description": "Driver used in the Daxin malware campaign.",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -35492,7 +35492,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create driver7-x86.sys binPath=C:\\windows\\temp\\driver7-x86.sys     type=kernel type=kernel && sc.exe start driver7-x86.sys",
+            "Command": "sc.exe create driver7-x86.sys binPath=C:\\windows\\temp\\driver7-x86.sys     type=kernel && sc.exe start driver7-x86.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -35681,7 +35681,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create driver7-x86-withoutdbg.sys binPath=C:\\windows\\temp\\driver7-x86-withoutdbg.sys     type=kernel type=kernel && sc.exe start driver7-x86-withoutdbg.sys",
+            "Command": "sc.exe create driver7-x86-withoutdbg.sys binPath=C:\\windows\\temp\\driver7-x86-withoutdbg.sys     type=kernel && sc.exe start driver7-x86-withoutdbg.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -35828,7 +35828,7 @@
         "Category": "vulnerable driver",
         "Verified": "FALSE",
         "Commands": {
-            "Command": "sc.exe create IObitUnlocker.sys binPath=C:\\windows\\temp\\IObitUnlocker.sys     type=kernel type=kernel && sc.exe start IObitUnlocker.sys",
+            "Command": "sc.exe create IObitUnlocker.sys binPath=C:\\windows\\temp\\IObitUnlocker.sys     type=kernel && sc.exe start IObitUnlocker.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",
@@ -38359,7 +38359,7 @@
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
-            "Command": "sc.exe create CITMDRV_AMD64.sys binPath=C:\\windows\\temp\\CITMDRV_AMD64.sys     type=kernel type=kernel && sc.exe start CITMDRV_AMD64.sys",
+            "Command": "sc.exe create CITMDRV_AMD64.sys binPath=C:\\windows\\temp\\CITMDRV_AMD64.sys     type=kernel && sc.exe start CITMDRV_AMD64.sys",
             "Description": "",
             "Usecase": "Elevate privileges",
             "Privileges": "kernel",

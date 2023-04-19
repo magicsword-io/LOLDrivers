@@ -24,7 +24,11 @@ DriveCrypt Dcr.sys vulnerability exploit for bypassing x64 DSE
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/c24800c382b38707e556af957e9e94fd.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
@@ -126,7 +130,7 @@ sc.exe create dcr.sys binPath=C:\windows\temp\dcr.sys type=kernel &amp;&amp; sc.
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dcr.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

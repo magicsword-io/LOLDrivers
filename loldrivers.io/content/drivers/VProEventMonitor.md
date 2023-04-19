@@ -24,13 +24,17 @@ VProEventMonitor.sys is a vulnerable driver and more information will be added a
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/cd9f0fcecf1664facb3671c0130dc8bb.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create VProEventMonitor.sys binPath=C:\windows\temp\VProEventMonitor.sys     type=kernel type=kernel &amp;&amp; sc.exe start VProEventMonitor.sys
+sc.exe create VProEventMonitor.sys binPath=C:\windows\temp\VProEventMonitor.sys     type=kernel &amp;&amp; sc.exe start VProEventMonitor.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -91,7 +95,7 @@ sc.exe create VProEventMonitor.sys binPath=C:\windows\temp\VProEventMonitor.sys 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/vproeventmonitor.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

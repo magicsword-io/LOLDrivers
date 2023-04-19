@@ -24,7 +24,11 @@ elbycdio.sys is a vulnerable driver. CVE-2009-0824.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/ae5eb2759305402821aeddc52ba9a6d6.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
@@ -108,7 +112,7 @@ sc.exe create elbycdio.sys binPath=C:\windows\temp\elbycdio.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/elbycdio.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

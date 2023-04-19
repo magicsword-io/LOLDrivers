@@ -24,7 +24,11 @@ A vulnerability exists in the latest version of Razer Synapse (v2.20.15.1104 as 
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/4cc3ddd5ae268d9a154a426af2c23ef9.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
@@ -125,7 +129,7 @@ sc.exe create rzpnk.sys binPath=C:\windows\temp\rzpnk.sys type=kernel &amp;&amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rzpnk.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

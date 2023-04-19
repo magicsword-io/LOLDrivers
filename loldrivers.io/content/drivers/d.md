@@ -29,7 +29,11 @@ d.sys is a vulnerable driver and more information will be added as found.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/a60c9173563b940203cf4ad38ccf2082.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
@@ -131,7 +135,7 @@ sc.exe create d.sys binPath=C:\windows\temp\d.sys type=kernel &amp;&amp; sc.exe 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/d.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

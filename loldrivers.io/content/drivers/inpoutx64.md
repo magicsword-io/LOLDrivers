@@ -24,7 +24,11 @@ inpoutx64.sys is a vulnerable driver and more information will be added as found
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/4d487f77be4471900d6ccbc47242cc25.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
@@ -131,7 +135,7 @@ sc.exe create inpoutx64.sys binPath=C:\windows\temp\inpoutx64.sys type=kernel &a
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/inpoutx64.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

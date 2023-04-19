@@ -24,13 +24,17 @@ AsrRapidStartDrv.sys is a vulnerable driver and more information will be added a
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/31469f1313871690e8dc2e8ee4799b22.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create AsrRapidStartDrv.sys binPath=C:\windows\temp\AsrRapidStartDrv.sys     type=kernel type=kernel &amp;&amp; sc.exe start AsrRapidStartDrv.sys
+sc.exe create AsrRapidStartDrv.sys binPath=C:\windows\temp\AsrRapidStartDrv.sys     type=kernel &amp;&amp; sc.exe start AsrRapidStartDrv.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -86,7 +90,7 @@ sc.exe create AsrRapidStartDrv.sys binPath=C:\windows\temp\AsrRapidStartDrv.sys 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrrapidstartdrv.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

@@ -24,13 +24,17 @@ Driver used in the Daxin malware campaign.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/a6e9d6505f6d2326a8a9214667c61c67.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create daxin_blank1.sys binPath=C:\windows\temp\daxin_blank1.sys     type=kernel type=kernel &amp;&amp; sc.exe start daxin_blank1.sys
+sc.exe create daxin_blank1.sys binPath=C:\windows\temp\daxin_blank1.sys     type=kernel &amp;&amp; sc.exe start daxin_blank1.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -82,7 +86,7 @@ sc.exe create daxin_blank1.sys binPath=C:\windows\temp\daxin_blank1.sys     type
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank1.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

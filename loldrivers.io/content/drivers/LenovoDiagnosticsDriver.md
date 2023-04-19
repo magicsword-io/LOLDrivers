@@ -11,17 +11,12 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# LenovoDiagnosticsDriver.sys 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
+# LenovoDiagnosticsDriver.sys ![:inline](/images/twitter_verified.png) 
 
 
 ### Description
 
-LenovoDiagnosticsDriver.sys is a vulnerable driver and more information will be added as found.
+The aforementioned driver has been identified as vulnerable to CVE-2022-3699
 
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
@@ -29,13 +24,17 @@ LenovoDiagnosticsDriver.sys is a vulnerable driver and more information will be 
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/b941c8364308990ee4cc6eadf7214e0f.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create LenovoDiagnosticsDriver.sys binPath=C:\windows\temp\LenovoDiagnosticsDriver.sys     type=kernel type=kernel &amp;&amp; sc.exe start LenovoDiagnosticsDriver.sys
+sc.exe create LenovoDiagnosticsDriver.sys binPath=C:\windows\temp\LenovoDiagnosticsDriver.sys type=kernel &amp;&amp; sc.exe start LenovoDiagnosticsDriver.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -112,7 +111,7 @@ sc.exe create LenovoDiagnosticsDriver.sys binPath=C:\windows\temp\LenovoDiagnost
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lenovodiagnosticsdriver.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

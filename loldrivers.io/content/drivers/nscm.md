@@ -24,7 +24,11 @@ nscm.sys is a vulnerable driver. CVE-2013-3956.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/4a23e0f2c6f926a41b28d574cbc6ac30.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
@@ -94,7 +98,7 @@ sc.exe create nscm.sys binPath=C:\windows\temp \n \n \n  scm.sys type=kernel &am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nscm.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

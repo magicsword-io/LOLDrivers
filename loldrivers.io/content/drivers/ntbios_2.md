@@ -24,7 +24,11 @@ Driver used in the Daxin malware campaign.
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/50b39072d0ee9af5ef4824eca34be6e3.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
@@ -128,7 +132,7 @@ sc.exe create ntbios_2.sys binPath=C:\windows\temp \n \n \n  tbios_2.sys type=ke
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ntbios_2.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 

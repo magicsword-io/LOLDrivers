@@ -24,13 +24,17 @@ driver7-x86.sys is a vulnerable driver and more information will be added as fou
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/1f950cfd5ed8dd9de3de004f5416fe20.bin" "Download" >}}
 {{< tip "warning" >}}
-This download link contains the malcious driver!
+{% if driver.Category == "vulnerable driver" %}
+This download link contains the vulnerable driver!
+{% elif driver.Category == "malicious" %}
+This download link contains the malicious driver!
+{% endif %}
 {{< /tip >}}
 
 ### Commands
 
 ```
-sc.exe create driver7-x86.sys binPath=C:\windows\temp\driver7-x86.sys     type=kernel type=kernel &amp;&amp; sc.exe start driver7-x86.sys
+sc.exe create driver7-x86.sys binPath=C:\windows\temp\driver7-x86.sys     type=kernel &amp;&amp; sc.exe start driver7-x86.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -93,7 +97,7 @@ sc.exe create driver7-x86.sys binPath=C:\windows\temp\driver7-x86.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/driver7-x86.yaml)
 
-*last_updated:* 2023-04-17
+*last_updated:* 2023-04-19
 
 
 
