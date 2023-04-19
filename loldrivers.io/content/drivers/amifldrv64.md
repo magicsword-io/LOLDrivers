@@ -46,18 +46,28 @@ sc.exe create amifldrv64.sys binPath=C:\windows\temp\amifldrv64.sys type=kernel 
 
 ### Known Vulnerable Samples
 
-| Filename | amifldrv64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/6ab7b8ef0c44e7d2d5909fdb58d37fa5">6ab7b8ef0c44e7d2d5909fdb58d37fa5</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/bb962c9a8dda93e94fef504c4159de881e4706fe">bb962c9a8dda93e94fef504c4159de881e4706fe</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/42579a759f3f95f20a2c51d5ac2047a2662a2675b3fb9f46c1ed7f23393a0f00">42579a759f3f95f20a2c51d5ac2047a2662a2675b3fb9f46c1ed7f23393a0f00</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Afc9e48051c2b957ed1cc7b69a29a66c8">fc9e48051c2b957ed1cc7b69a29a66c8</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A716bce2ce697883eba0c051ed487de6304d73cd3">716bce2ce697883eba0c051ed487de6304d73cd3</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ad7841ee6dac956cc0923368d6722063a19c9fa131e55c6f3b7484cce78d826f0">d7841ee6dac956cc0923368d6722063a19c9fa131e55c6f3b7484cce78d826f0</a> || Publisher | &#34;American Megatrends, Inc.&#34; || Signature | American Megatrends, Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | amifldrv64.sys |
+| MD5                | [6ab7b8ef0c44e7d2d5909fdb58d37fa5](https://www.virustotal.com/gui/file/6ab7b8ef0c44e7d2d5909fdb58d37fa5) |
+| SHA1               | [bb962c9a8dda93e94fef504c4159de881e4706fe](https://www.virustotal.com/gui/file/bb962c9a8dda93e94fef504c4159de881e4706fe) |
+| SHA256             | [42579a759f3f95f20a2c51d5ac2047a2662a2675b3fb9f46c1ed7f23393a0f00](https://www.virustotal.com/gui/file/42579a759f3f95f20a2c51d5ac2047a2662a2675b3fb9f46c1ed7f23393a0f00) |
+| Authentihash MD5   | [fc9e48051c2b957ed1cc7b69a29a66c8](https://www.virustotal.com/gui/search/authentihash%253Afc9e48051c2b957ed1cc7b69a29a66c8) |
+| Authentihash SHA1  | [716bce2ce697883eba0c051ed487de6304d73cd3](https://www.virustotal.com/gui/search/authentihash%253A716bce2ce697883eba0c051ed487de6304d73cd3) |
+| Authentihash SHA256| [d7841ee6dac956cc0923368d6722063a19c9fa131e55c6f3b7484cce78d826f0](https://www.virustotal.com/gui/search/authentihash%253Ad7841ee6dac956cc0923368d6722063a19c9fa131e55c6f3b7484cce78d826f0) |
+| Publisher         | &#34;American Megatrends, Inc.&#34; |
+| Signature         | American Megatrends, Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* ZwClose
+{{< details "Expand" >}}
+* ZwClose
 * ZwMapViewOfSection
 * ObReferenceObjectByHandle
 * ZwOpenSection
@@ -82,10 +92,12 @@ sc.exe create amifldrv64.sys binPath=C:\windows\temp\amifldrv64.sys type=kernel 
 * MmBuildMdlForNonPagedPool
 * MmMapIoSpace
 * HalTranslateBusAddress
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amifldrv64.yaml)

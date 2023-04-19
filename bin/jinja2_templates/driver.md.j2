@@ -76,46 +76,65 @@ This download link contains the malicious driver!
 ### Known Vulnerable Samples
 
 {% for hash in driver.KnownVulnerableSamples %}
-| Filename | {{ hash.Filename }} |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/{{hash.MD5}}">{{ hash.MD5 }}</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/{{hash.SHA1}}">{{hash.SHA1}}</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/{{hash.SHA256}}">{{hash.SHA256}}</a> |
-{% if hash.Authentihash %}| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A{{ hash.Authentihash.MD5 }}">{{ hash.Authentihash.MD5 }}</a> |{% endif %}
-{% if hash.Authentihash %}| Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A{{ hash.Authentihash.SHA1 }}">{{ hash.Authentihash.SHA1 }}</a> |{% endif %}
-{% if hash.Authentihash %}| Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A{{ hash.Authentihash.SHA256 }}">{{ hash.Authentihash.SHA256 }}</a> |{% endif %}
-{% if hash.Publisher %}| Publisher | {{ hash.Publisher }} |{% endif %}
-{% if hash.Signature %}| Signature | {{ hash.Signature | join(', ') }}   |{% endif %}
-{% if hash.Date %}| Date | {{ hash.Date }} |{% endif %}
-{% if hash.Company %}| Company | {{ hash.Company }} |{% endif %}
-{% if hash.Description %}| Description | {{ hash.Description }} |{% endif %}
-{% if hash.Product %}| Product | {{ hash.Product }} |{% endif %}
-{% if hash.Productversion %}| ProductVersion | {{ hash.Productversion }} |{% endif %}
-{% if hash.Fileversion %}| FileVersion | {{ hash.Fileversion }} |{% endif %}
-{% if hash.Machinetype %}| MachineType | {{ hash.Machinetype }} |{% endif %}
-{% if hash.OriginalFilename %}| OriginalFilename | {{ hash.OriginalFilename }} |{% endif %}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | {{ hash.Filename }} |
+| MD5                | [{{ hash.MD5 }}](https://www.virustotal.com/gui/file/{{hash.MD5}}) |
+| SHA1               | [{{ hash.SHA1 }}](https://www.virustotal.com/gui/file/{{hash.SHA1}}) |
+| SHA256             | [{{ hash.SHA256 }}](https://www.virustotal.com/gui/file/{{hash.SHA256}}) |
+{% if hash.Authentihash %}
+| Authentihash MD5   | [{{ hash.Authentihash.MD5 }}](https://www.virustotal.com/gui/search/authentihash%253A{{ hash.Authentihash.MD5 }}) |
+| Authentihash SHA1  | [{{ hash.Authentihash.SHA1 }}](https://www.virustotal.com/gui/search/authentihash%253A{{ hash.Authentihash.SHA1 }}) |
+| Authentihash SHA256| [{{ hash.Authentihash.SHA256 }}](https://www.virustotal.com/gui/search/authentihash%253A{{ hash.Authentihash.SHA256 }}) |
+{% endif %}
+{% if hash.Publisher %}| Publisher         | {{ hash.Publisher }} |
+{% endif %}
+{% if hash.Signature %}| Signature         | {{ hash.Signature | join(', ') }}   |
+{% endif %}
+{% if hash.Date %}| Date                | {{ hash.Date }} |
+{% endif %}
+{% if hash.Company %}| Company           | {{ hash.Company }} |
+{% endif %}
+{% if hash.Description %}| Description       | {{ hash.Description }} |
+{% endif %}
+{% if hash.Product %}| Product           | {{ hash.Product }} |
+{% endif %}
+{% if hash.Productversion %}| ProductVersion    | {{ hash.Productversion }} |
+{% endif %}
+{% if hash.Fileversion %}| FileVersion       | {{ hash.Fileversion }} |
+{% endif %}
+{% if hash.Machinetype %}| MachineType       | {{ hash.Machinetype }} |
+{% endif %}
+{% if hash.OriginalFilename %}| OriginalFilename  | {{ hash.OriginalFilename }} |
+{% endif %}
+
 
 #### Imports
 {% raw %}{{< details "Expand" >}}{% endraw %}
+
 {% for import in hash.Imports %}
 * {{ import }}
 {% endfor %}
+
 {% raw %}{{< /details >}}{% endraw %}
 
 #### ImportedFunctions
 {% raw %}{{< details "Expand" >}}{% endraw %}
+
 {% for import in hash.ImportedFunctions %}
 * {{ import }}
 {% endfor %}
+
 {% raw %}{{< /details >}}{% endraw %}
 
 #### ExportedFunctions
 {% raw %}{{< details "Expand" >}}{% endraw %}
+
 {% for export in hash.ExportedFunctions %}
 * {{ export }}
 {% endfor %}
-{% raw %}{{< /details >}}{% endraw %}
 
+{% raw %}{{< /details >}}{% endraw %}
 {% endfor +%}
 {% endif %}
 

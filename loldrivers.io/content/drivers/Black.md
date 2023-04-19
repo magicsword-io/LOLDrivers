@@ -51,19 +51,27 @@ sc.exe create Black.sys binPath=C:\windows\temp\Black.sys type=kernel &amp;&amp;
 
 ### Known Vulnerable Samples
 
-| Filename | Black.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/d5562fb90b0b3deb633ab335bcbd82ce10953466a428b3f27cb5b226b453eaf3">d5562fb90b0b3deb633ab335bcbd82ce10953466a428b3f27cb5b226b453eaf3</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | Black.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [-](https://www.virustotal.com/gui/file/-) |
+| SHA256             | [d5562fb90b0b3deb633ab335bcbd82ce10953466a428b3f27cb5b226b453eaf3](https://www.virustotal.com/gui/file/d5562fb90b0b3deb633ab335bcbd82ce10953466a428b3f27cb5b226b453eaf3) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/black.yaml)

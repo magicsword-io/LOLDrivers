@@ -46,18 +46,32 @@ sc.exe create AsrDrv10.sys binPath=C:\windows\temp\AsrDrv10.sys type=kernel &amp
 
 ### Known Vulnerable Samples
 
-| Filename | AsrDrv10.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/9b91a44a488e4d539f2e55476b216024">9b91a44a488e4d539f2e55476b216024</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/72966ca845759d239d09da0de7eebe3abe86fee3">72966ca845759d239d09da0de7eebe3abe86fee3</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/ece0a900ea089e730741499614c0917432246ceb5e11599ee3a1bb679e24fd2c">ece0a900ea089e730741499614c0917432246ceb5e11599ee3a1bb679e24fd2c</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ae3a0cecf1427722f291347941edc9b81">e3a0cecf1427722f291347941edc9b81</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A2e6d61fa32e12fe4abf7b7d87aa6824f5f528000">2e6d61fa32e12fe4abf7b7d87aa6824f5f528000</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ac767a5895119154467ac3fce8e82c20e6538a4e54f6c109001c61f8abd58f9f8">c767a5895119154467ac3fce8e82c20e6538a4e54f6c109001c61f8abd58f9f8</a> || Publisher | ASROCK Incorporation || Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | ASRock Incorporation || Description | ASRock IO Driver || Product | ASRock IO Driver || OriginalFilename | AsrDrv.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | AsrDrv10.sys |
+| MD5                | [9b91a44a488e4d539f2e55476b216024](https://www.virustotal.com/gui/file/9b91a44a488e4d539f2e55476b216024) |
+| SHA1               | [72966ca845759d239d09da0de7eebe3abe86fee3](https://www.virustotal.com/gui/file/72966ca845759d239d09da0de7eebe3abe86fee3) |
+| SHA256             | [ece0a900ea089e730741499614c0917432246ceb5e11599ee3a1bb679e24fd2c](https://www.virustotal.com/gui/file/ece0a900ea089e730741499614c0917432246ceb5e11599ee3a1bb679e24fd2c) |
+| Authentihash MD5   | [e3a0cecf1427722f291347941edc9b81](https://www.virustotal.com/gui/search/authentihash%253Ae3a0cecf1427722f291347941edc9b81) |
+| Authentihash SHA1  | [2e6d61fa32e12fe4abf7b7d87aa6824f5f528000](https://www.virustotal.com/gui/search/authentihash%253A2e6d61fa32e12fe4abf7b7d87aa6824f5f528000) |
+| Authentihash SHA256| [c767a5895119154467ac3fce8e82c20e6538a4e54f6c109001c61f8abd58f9f8](https://www.virustotal.com/gui/search/authentihash%253Ac767a5895119154467ac3fce8e82c20e6538a4e54f6c109001c61f8abd58f9f8) |
+| Publisher         | ASROCK Incorporation |
+| Signature         | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Company           | ASRock Incorporation |
+| Description       | ASRock IO Driver |
+| Product           | ASRock IO Driver |
+| OriginalFilename  | AsrDrv.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* IoDeleteSymbolicLink
+{{< details "Expand" >}}
+* IoDeleteSymbolicLink
 * ExFreePoolWithTag
 * MmFreeContiguousMemorySpecifyCache
 * RtlInitUnicodeString
@@ -79,10 +93,12 @@ sc.exe create AsrDrv10.sys binPath=C:\windows\temp\AsrDrv10.sys type=kernel &amp
 * KeBugCheckEx
 * ExAllocatePoolWithTag
 * KeStallExecutionProcessor
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv10.yaml)

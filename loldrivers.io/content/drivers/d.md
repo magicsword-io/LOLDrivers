@@ -51,18 +51,27 @@ sc.exe create d.sys binPath=C:\windows\temp\d.sys type=kernel &amp;&amp; sc.exe 
 
 ### Known Vulnerable Samples
 
-| Filename | d.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/a60c9173563b940203cf4ad38ccf2082">a60c9173563b940203cf4ad38ccf2082</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/a3636986cdcd1d1cb8ab540f3d5c29dcc90bb8f0">a3636986cdcd1d1cb8ab540f3d5c29dcc90bb8f0</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/c1c4310e5d467d24e864177bdbfc57cb5d29aac697481bfa9c11ddbeebfd4cc8">c1c4310e5d467d24e864177bdbfc57cb5d29aac697481bfa9c11ddbeebfd4cc8</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A19dd018ebddfa9044b05fbb9ddffd7f9">19dd018ebddfa9044b05fbb9ddffd7f9</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A80111a99c4f127cca12f1902ca241b3e65f339ff">80111a99c4f127cca12f1902ca241b3e65f339ff</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aa4ca4a0932afa09e8df3469768f5ac6feaff2b7ae27ac208a218288fc4fbf102">a4ca4a0932afa09e8df3469768f5ac6feaff2b7ae27ac208a218288fc4fbf102</a> || Signature | -   |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | d.sys |
+| MD5                | [a60c9173563b940203cf4ad38ccf2082](https://www.virustotal.com/gui/file/a60c9173563b940203cf4ad38ccf2082) |
+| SHA1               | [a3636986cdcd1d1cb8ab540f3d5c29dcc90bb8f0](https://www.virustotal.com/gui/file/a3636986cdcd1d1cb8ab540f3d5c29dcc90bb8f0) |
+| SHA256             | [c1c4310e5d467d24e864177bdbfc57cb5d29aac697481bfa9c11ddbeebfd4cc8](https://www.virustotal.com/gui/file/c1c4310e5d467d24e864177bdbfc57cb5d29aac697481bfa9c11ddbeebfd4cc8) |
+| Authentihash MD5   | [19dd018ebddfa9044b05fbb9ddffd7f9](https://www.virustotal.com/gui/search/authentihash%253A19dd018ebddfa9044b05fbb9ddffd7f9) |
+| Authentihash SHA1  | [80111a99c4f127cca12f1902ca241b3e65f339ff](https://www.virustotal.com/gui/search/authentihash%253A80111a99c4f127cca12f1902ca241b3e65f339ff) |
+| Authentihash SHA256| [a4ca4a0932afa09e8df3469768f5ac6feaff2b7ae27ac208a218288fc4fbf102](https://www.virustotal.com/gui/search/authentihash%253Aa4ca4a0932afa09e8df3469768f5ac6feaff2b7ae27ac208a218288fc4fbf102) |
+| Signature         | -   |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* KeInitializeEvent
+{{< details "Expand" >}}
+* KeInitializeEvent
 * ObReferenceObjectByHandle
 * ZwClose
 * ObfDereferenceObject
@@ -124,10 +133,12 @@ sc.exe create d.sys binPath=C:\windows\temp\d.sys type=kernel &amp;&amp; sc.exe 
 * ExReleaseFastMutex
 * KfAcquireSpinLock
 * KfReleaseSpinLock
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/d.yaml)

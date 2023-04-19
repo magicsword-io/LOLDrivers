@@ -47,18 +47,33 @@ sc.exe create wantd_6.sys binPath=C:\windows\temp\wantd_6.sys type=kernel &amp;&
 
 ### Known Vulnerable Samples
 
-| Filename | wantd_6.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/4b058945c9f2b8d8ebc485add1101ba5">4b058945c9f2b8d8ebc485add1101ba5</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/37e6450c7cd6999d080da94b867ba23faa8c32fe">37e6450c7cd6999d080da94b867ba23faa8c32fe</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/e7af7bcb86bd6bab1835f610671c3921441965a839673ac34444cf0ce7b2164e">e7af7bcb86bd6bab1835f610671c3921441965a839673ac34444cf0ce7b2164e</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A3bfdb46b5ad5fa267b992a2350a6518a">3bfdb46b5ad5fa267b992a2350a6518a</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Acb65c6f9f411892d13ffe8ba1cb5e9c4be2c0a25">cb65c6f9f411892d13ffe8ba1cb5e9c4be2c0a25</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Abd243e33fa80f4bd6010c23ecdf94b6008fee30df248255dcfe014c91f2ce2af">bd243e33fa80f4bd6010c23ecdf94b6008fee30df248255dcfe014c91f2ce2af</a> || Publisher | Anhua Xinda (Beijing) Technology Co., Ltd. || Signature | T, h, e,  , d, i, g, i, t, a, l,  , s, i, g, n, a, t, u, r, e,  , o, f,  , t, h, e,  , o, b, j, e, c, t,  , d, i, d,  , n, o, t,  , v, e, r, i, f, y, .   || Date | 8:23 PM 2/28/2022 || Company | Microsoft Corporation || Description | WAN Transport Driver || Product | Microsoft Windows Operating System || OriginalFilename | wantd.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | wantd_6.sys |
+| MD5                | [4b058945c9f2b8d8ebc485add1101ba5](https://www.virustotal.com/gui/file/4b058945c9f2b8d8ebc485add1101ba5) |
+| SHA1               | [37e6450c7cd6999d080da94b867ba23faa8c32fe](https://www.virustotal.com/gui/file/37e6450c7cd6999d080da94b867ba23faa8c32fe) |
+| SHA256             | [e7af7bcb86bd6bab1835f610671c3921441965a839673ac34444cf0ce7b2164e](https://www.virustotal.com/gui/file/e7af7bcb86bd6bab1835f610671c3921441965a839673ac34444cf0ce7b2164e) |
+| Authentihash MD5   | [3bfdb46b5ad5fa267b992a2350a6518a](https://www.virustotal.com/gui/search/authentihash%253A3bfdb46b5ad5fa267b992a2350a6518a) |
+| Authentihash SHA1  | [cb65c6f9f411892d13ffe8ba1cb5e9c4be2c0a25](https://www.virustotal.com/gui/search/authentihash%253Acb65c6f9f411892d13ffe8ba1cb5e9c4be2c0a25) |
+| Authentihash SHA256| [bd243e33fa80f4bd6010c23ecdf94b6008fee30df248255dcfe014c91f2ce2af](https://www.virustotal.com/gui/search/authentihash%253Abd243e33fa80f4bd6010c23ecdf94b6008fee30df248255dcfe014c91f2ce2af) |
+| Publisher         | Anhua Xinda (Beijing) Technology Co., Ltd. |
+| Signature         | T, h, e,  , d, i, g, i, t, a, l,  , s, i, g, n, a, t, u, r, e,  , o, f,  , t, h, e,  , o, b, j, e, c, t,  , d, i, d,  , n, o, t,  , v, e, r, i, f, y, .   |
+| Date                | 8:23 PM 2/28/2022 |
+| Company           | Microsoft Corporation |
+| Description       | WAN Transport Driver |
+| Product           | Microsoft Windows Operating System |
+| OriginalFilename  | wantd.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * NDIS.SYS
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* wcsncmp
+{{< details "Expand" >}}
+* wcsncmp
 * IoAllocateMdl
 * _stricmp
 * sprintf
@@ -141,10 +156,12 @@ sc.exe create wantd_6.sys binPath=C:\windows\temp\wantd_6.sys type=kernel &amp;&
 * NdisFreeNetBufferListPool
 * NdisFreeNetBufferList
 * NdisSendNetBufferLists
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd_6.yaml)

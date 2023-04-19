@@ -51,19 +51,27 @@ sc.exe create windows-xp-64.sys binPath=C:\windows\temp\windows-xp-64.sys     ty
 
 ### Known Vulnerable Samples
 
-| Filename | windows-xp-64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/dfaefd06b680f9ea837e7815fc1cc7d1f4cc375641ac850667ab20739f46ad22">dfaefd06b680f9ea837e7815fc1cc7d1f4cc375641ac850667ab20739f46ad22</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | windows-xp-64.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [-](https://www.virustotal.com/gui/file/-) |
+| SHA256             | [dfaefd06b680f9ea837e7815fc1cc7d1f4cc375641ac850667ab20739f46ad22](https://www.virustotal.com/gui/file/dfaefd06b680f9ea837e7815fc1cc7d1f4cc375641ac850667ab20739f46ad22) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/windows-xp-64.yaml)

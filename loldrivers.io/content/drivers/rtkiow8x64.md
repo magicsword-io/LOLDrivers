@@ -46,18 +46,31 @@ sc.exe create rtkiow8x64.sys binPath=C:\windows\temp\rtkiow8x64.sys type=kernel 
 
 ### Known Vulnerable Samples
 
-| Filename | rtkiow8x64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/b8b6686324f7aa77f570bc019ec214e6">b8b6686324f7aa77f570bc019ec214e6</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/6a3d3b9ab3d201cd6b0316a7f9c3fb4d34d0f403">6a3d3b9ab3d201cd6b0316a7f9c3fb4d34d0f403</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/082c39fe2e3217004206535e271ebd45c11eb072efde4cc9885b25ba5c39f91d">082c39fe2e3217004206535e271ebd45c11eb072efde4cc9885b25ba5c39f91d</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ad2914b13c253d24728fade34df3d91df">d2914b13c253d24728fade34df3d91df</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Afa7fbb04748088557085ef3060b5fdb65a7b6b10">fa7fbb04748088557085ef3060b5fdb65a7b6b10</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aed68f30f8246730c2b57495ed1db1480350d879b01d070999d35f38630865f5c">ed68f30f8246730c2b57495ed1db1480350d879b01d070999d35f38630865f5c</a> || Signature | Realtek Semiconductor Corp., DigiCert EV Code Signing CA, DigiCert   || Company | Realtek                                             || Description | Realtek IO Driver || Product | Realtek IO Driver                       || OriginalFilename | rtkiow8x64.sys  |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | rtkiow8x64.sys |
+| MD5                | [b8b6686324f7aa77f570bc019ec214e6](https://www.virustotal.com/gui/file/b8b6686324f7aa77f570bc019ec214e6) |
+| SHA1               | [6a3d3b9ab3d201cd6b0316a7f9c3fb4d34d0f403](https://www.virustotal.com/gui/file/6a3d3b9ab3d201cd6b0316a7f9c3fb4d34d0f403) |
+| SHA256             | [082c39fe2e3217004206535e271ebd45c11eb072efde4cc9885b25ba5c39f91d](https://www.virustotal.com/gui/file/082c39fe2e3217004206535e271ebd45c11eb072efde4cc9885b25ba5c39f91d) |
+| Authentihash MD5   | [d2914b13c253d24728fade34df3d91df](https://www.virustotal.com/gui/search/authentihash%253Ad2914b13c253d24728fade34df3d91df) |
+| Authentihash SHA1  | [fa7fbb04748088557085ef3060b5fdb65a7b6b10](https://www.virustotal.com/gui/search/authentihash%253Afa7fbb04748088557085ef3060b5fdb65a7b6b10) |
+| Authentihash SHA256| [ed68f30f8246730c2b57495ed1db1480350d879b01d070999d35f38630865f5c](https://www.virustotal.com/gui/search/authentihash%253Aed68f30f8246730c2b57495ed1db1480350d879b01d070999d35f38630865f5c) |
+| Signature         | Realtek Semiconductor Corp., DigiCert EV Code Signing CA, DigiCert   |
+| Company           | Realtek                                             |
+| Description       | Realtek IO Driver |
+| Product           | Realtek IO Driver                       |
+| OriginalFilename  | rtkiow8x64.sys  |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* KfRaiseIrql
+{{< details "Expand" >}}
+* KfRaiseIrql
 * MmMapIoSpace
 * MmUnmapIoSpace
 * RtlInitUnicodeString
@@ -91,10 +104,12 @@ sc.exe create rtkiow8x64.sys binPath=C:\windows\temp\rtkiow8x64.sys type=kernel 
 * MmUnmapLockedPages
 * _vsnprintf
 * KeStallExecutionProcessor
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rtkiow8x64.yaml)

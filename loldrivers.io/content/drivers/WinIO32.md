@@ -51,19 +51,27 @@ sc.exe create WinIO32.sys binPath=C:\windows\temp\WinIO32.sys type=kernel &amp;&
 
 ### Known Vulnerable Samples
 
-| Filename | WinIO32.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/8fb149fc476cf5bf18dc575334edad7caf210996">8fb149fc476cf5bf18dc575334edad7caf210996</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | WinIO32.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [8fb149fc476cf5bf18dc575334edad7caf210996](https://www.virustotal.com/gui/file/8fb149fc476cf5bf18dc575334edad7caf210996) |
+| SHA256             | [-](https://www.virustotal.com/gui/file/-) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio32.yaml)

@@ -51,19 +51,27 @@ sc.exe create kbdcap64.sys binPath=C:\windows\temp\kbdcap64.sys type=kernel &amp
 
 ### Known Vulnerable Samples
 
-| Filename | kbdcap64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/72b99147839bcfb062d29014ec09fe20a8f261748b5925b00171ef3cb849a4c1">72b99147839bcfb062d29014ec09fe20a8f261748b5925b00171ef3cb849a4c1</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | kbdcap64.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [-](https://www.virustotal.com/gui/file/-) |
+| SHA256             | [72b99147839bcfb062d29014ec09fe20a8f261748b5925b00171ef3cb849a4c1](https://www.virustotal.com/gui/file/72b99147839bcfb062d29014ec09fe20a8f261748b5925b00171ef3cb849a4c1) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/kbdcap64.yaml)

@@ -46,18 +46,27 @@ sc.exe create POORTRY2.sys binPath=C:\windows\temp\POORTRY2.sys type=kernel &amp
 
 ### Known Vulnerable Samples
 
-| Filename | POORTRY2.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/b164daf106566f444dfb280d743bc2f7">b164daf106566f444dfb280d743bc2f7</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/7e836dadc2e149a0b758c7e22c989cbfcce18684">7e836dadc2e149a0b758c7e22c989cbfcce18684</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/9bb09752cf3a464455422909edef518ac18fe63cf5e1e8d9d6c2e68db62e0c87">9bb09752cf3a464455422909edef518ac18fe63cf5e1e8d9d6c2e68db62e0c87</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Affbbaeada1f7507faca4ef59c6e3e577">ffbbaeada1f7507faca4ef59c6e3e577</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A56f9aa37f099409170b4656079edbf52e464b700">56f9aa37f099409170b4656079edbf52e464b700</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A29bf8618816bce5fa2845409d98b7b96915e0763bb04719535ca885e4713cfaf">29bf8618816bce5fa2845409d98b7b96915e0763bb04719535ca885e4713cfaf</a> || Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | POORTRY2.sys |
+| MD5                | [b164daf106566f444dfb280d743bc2f7](https://www.virustotal.com/gui/file/b164daf106566f444dfb280d743bc2f7) |
+| SHA1               | [7e836dadc2e149a0b758c7e22c989cbfcce18684](https://www.virustotal.com/gui/file/7e836dadc2e149a0b758c7e22c989cbfcce18684) |
+| SHA256             | [9bb09752cf3a464455422909edef518ac18fe63cf5e1e8d9d6c2e68db62e0c87](https://www.virustotal.com/gui/file/9bb09752cf3a464455422909edef518ac18fe63cf5e1e8d9d6c2e68db62e0c87) |
+| Authentihash MD5   | [ffbbaeada1f7507faca4ef59c6e3e577](https://www.virustotal.com/gui/search/authentihash%253Affbbaeada1f7507faca4ef59c6e3e577) |
+| Authentihash SHA1  | [56f9aa37f099409170b4656079edbf52e464b700](https://www.virustotal.com/gui/search/authentihash%253A56f9aa37f099409170b4656079edbf52e464b700) |
+| Authentihash SHA256| [29bf8618816bce5fa2845409d98b7b96915e0763bb04719535ca885e4713cfaf](https://www.virustotal.com/gui/search/authentihash%253A29bf8618816bce5fa2845409d98b7b96915e0763bb04719535ca885e4713cfaf) |
+| Signature         | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * FLTMGR.SYS
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* RtlTimeToTimeFields
+{{< details "Expand" >}}
+* RtlTimeToTimeFields
 * ExAllocatePoolWithTag
 * ZwCreateKey
 * ExFreePoolWithTag
@@ -121,10 +130,12 @@ sc.exe create POORTRY2.sys binPath=C:\windows\temp\POORTRY2.sys type=kernel &amp
 * FltFreeSecurityDescriptor
 * FltCreateCommunicationPort
 * FltCloseClientPort
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/poortry2.yaml)

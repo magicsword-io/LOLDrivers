@@ -46,18 +46,27 @@ sc.exe create EneIo64.sys binPath=C:\windows\temp\EneIo64.sys type=kernel &amp;&
 
 ### Known Vulnerable Samples
 
-| Filename | EneIo64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/11fb599312cb1cf43ca5e879ed6fb71e">11fb599312cb1cf43ca5e879ed6fb71e</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/b4d014b5edd6e19ce0e8395a64faedf49688ecb5">b4d014b5edd6e19ce0e8395a64faedf49688ecb5</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374">9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A198111fd73515aa7fe4387612f027f0f">198111fd73515aa7fe4387612f027f0f</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A651b953cb03928e41424ad59f21d4978d6f4952e">651b953cb03928e41424ad59f21d4978d6f4952e</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aebbaa44277a3ec6e20ad3f6aef5399fdc398306eb4c13aa96e45c9a281820a12">ebbaa44277a3ec6e20ad3f6aef5399fdc398306eb4c13aa96e45c9a281820a12</a> || Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | EneIo64.sys |
+| MD5                | [11fb599312cb1cf43ca5e879ed6fb71e](https://www.virustotal.com/gui/file/11fb599312cb1cf43ca5e879ed6fb71e) |
+| SHA1               | [b4d014b5edd6e19ce0e8395a64faedf49688ecb5](https://www.virustotal.com/gui/file/b4d014b5edd6e19ce0e8395a64faedf49688ecb5) |
+| SHA256             | [9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374](https://www.virustotal.com/gui/file/9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374) |
+| Authentihash MD5   | [198111fd73515aa7fe4387612f027f0f](https://www.virustotal.com/gui/search/authentihash%253A198111fd73515aa7fe4387612f027f0f) |
+| Authentihash SHA1  | [651b953cb03928e41424ad59f21d4978d6f4952e](https://www.virustotal.com/gui/search/authentihash%253A651b953cb03928e41424ad59f21d4978d6f4952e) |
+| Authentihash SHA256| [ebbaa44277a3ec6e20ad3f6aef5399fdc398306eb4c13aa96e45c9a281820a12](https://www.virustotal.com/gui/search/authentihash%253Aebbaa44277a3ec6e20ad3f6aef5399fdc398306eb4c13aa96e45c9a281820a12) |
+| Signature         | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* RtlInitUnicodeString
+{{< details "Expand" >}}
+* RtlInitUnicodeString
 * IoDeleteDevice
 * ZwUnmapViewOfSection
 * ZwClose
@@ -73,10 +82,12 @@ sc.exe create EneIo64.sys binPath=C:\windows\temp\EneIo64.sys type=kernel &amp;&
 * IoCreateSymbolicLink
 * IoDeleteSymbolicLink
 * HalTranslateBusAddress
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/eneio64.yaml)

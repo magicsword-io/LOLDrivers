@@ -46,18 +46,31 @@ sc.exe create NalDrv.sys binPath=C:\windows\temp\NalDrv.sys type=kernel &amp;&am
 
 ### Known Vulnerable Samples
 
-| Filename | NalDrv.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/1898ceda3247213c084f43637ef163b3">1898ceda3247213c084f43637ef163b3</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/d04e5db5b6c848a29732bfd52029001f23c3da75">d04e5db5b6c848a29732bfd52029001f23c3da75</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b">4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A1789a16d20ca2b55f491ad71848166a2">1789a16d20ca2b55f491ad71848166a2</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A2cbfe4ad0e1231ff3e19c19ca9311d952ce170b7">2cbfe4ad0e1231ff3e19c19ca9311d952ce170b7</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A785e87bc23a1353fe0726554fd009aca69c320a98445a604a64e23ab45108087">785e87bc23a1353fe0726554fd009aca69c320a98445a604a64e23ab45108087</a> || Signature | Intel Corporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | Intel Corporation  || Description | Intel(R) Network Adapter Diagnostic Driver || Product | Intel(R) iQVW64.SYS || OriginalFilename | iQVW64.SYS |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | NalDrv.sys |
+| MD5                | [1898ceda3247213c084f43637ef163b3](https://www.virustotal.com/gui/file/1898ceda3247213c084f43637ef163b3) |
+| SHA1               | [d04e5db5b6c848a29732bfd52029001f23c3da75](https://www.virustotal.com/gui/file/d04e5db5b6c848a29732bfd52029001f23c3da75) |
+| SHA256             | [4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b](https://www.virustotal.com/gui/file/4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b) |
+| Authentihash MD5   | [1789a16d20ca2b55f491ad71848166a2](https://www.virustotal.com/gui/search/authentihash%253A1789a16d20ca2b55f491ad71848166a2) |
+| Authentihash SHA1  | [2cbfe4ad0e1231ff3e19c19ca9311d952ce170b7](https://www.virustotal.com/gui/search/authentihash%253A2cbfe4ad0e1231ff3e19c19ca9311d952ce170b7) |
+| Authentihash SHA256| [785e87bc23a1353fe0726554fd009aca69c320a98445a604a64e23ab45108087](https://www.virustotal.com/gui/search/authentihash%253A785e87bc23a1353fe0726554fd009aca69c320a98445a604a64e23ab45108087) |
+| Signature         | Intel Corporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Company           | Intel Corporation  |
+| Description       | Intel(R) Network Adapter Diagnostic Driver |
+| Product           | Intel(R) iQVW64.SYS |
+| OriginalFilename  | iQVW64.SYS |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* IoCreateSymbolicLink
+{{< details "Expand" >}}
+* IoCreateSymbolicLink
 * IoCreateDevice
 * IofCompleteRequest
 * ExAllocatePoolWithTag
@@ -96,10 +109,12 @@ sc.exe create NalDrv.sys binPath=C:\windows\temp\NalDrv.sys type=kernel &amp;&am
 * IoDeleteDevice
 * KeStallExecutionProcessor
 * KeQueryPerformanceCounter
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/naldrv.yaml)

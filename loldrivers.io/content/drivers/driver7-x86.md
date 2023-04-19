@@ -46,18 +46,31 @@ sc.exe create driver7-x86.sys binPath=C:\windows\temp\driver7-x86.sys     type=k
 
 ### Known Vulnerable Samples
 
-| Filename | driver7-x86.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/1f950cfd5ed8dd9de3de004f5416fe20">1f950cfd5ed8dd9de3de004f5416fe20</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/00b4e8b7644d1bf93f5ddb5740b444b445e81b02">00b4e8b7644d1bf93f5ddb5740b444b445e81b02</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/42851a01469ba97cdc38939b10cf9ea13237aa1f6c37b1ac84904c5a12a81fa0">42851a01469ba97cdc38939b10cf9ea13237aa1f6c37b1ac84904c5a12a81fa0</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ac5d6296b11390f68dc48dcec40990676">c5d6296b11390f68dc48dcec40990676</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A7a3c1908302851a032d45a73e67c4a3e699807a5">7a3c1908302851a032d45a73e67c4a3e699807a5</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ac67c6f1e03a466dc660bcad6051fc38eb6e9004a4e252abe52c6155f5768ad90">c67c6f1e03a466dc660bcad6051fc38eb6e9004a4e252abe52c6155f5768ad90</a> || Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | ASUStek || Description | The driver for the ECtool driver-based tools || Product | EC tool || OriginalFilename | Driver7 |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | driver7-x86.sys |
+| MD5                | [1f950cfd5ed8dd9de3de004f5416fe20](https://www.virustotal.com/gui/file/1f950cfd5ed8dd9de3de004f5416fe20) |
+| SHA1               | [00b4e8b7644d1bf93f5ddb5740b444b445e81b02](https://www.virustotal.com/gui/file/00b4e8b7644d1bf93f5ddb5740b444b445e81b02) |
+| SHA256             | [42851a01469ba97cdc38939b10cf9ea13237aa1f6c37b1ac84904c5a12a81fa0](https://www.virustotal.com/gui/file/42851a01469ba97cdc38939b10cf9ea13237aa1f6c37b1ac84904c5a12a81fa0) |
+| Authentihash MD5   | [c5d6296b11390f68dc48dcec40990676](https://www.virustotal.com/gui/search/authentihash%253Ac5d6296b11390f68dc48dcec40990676) |
+| Authentihash SHA1  | [7a3c1908302851a032d45a73e67c4a3e699807a5](https://www.virustotal.com/gui/search/authentihash%253A7a3c1908302851a032d45a73e67c4a3e699807a5) |
+| Authentihash SHA256| [c67c6f1e03a466dc660bcad6051fc38eb6e9004a4e252abe52c6155f5768ad90](https://www.virustotal.com/gui/search/authentihash%253Ac67c6f1e03a466dc660bcad6051fc38eb6e9004a4e252abe52c6155f5768ad90) |
+| Signature         | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Company           | ASUStek |
+| Description       | The driver for the ECtool driver-based tools |
+| Product           | EC tool |
+| OriginalFilename  | Driver7 |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* ExFreePoolWithTag
+{{< details "Expand" >}}
+* ExFreePoolWithTag
 * MmGetPhysicalAddress
 * ExAllocatePoolWithTag
 * memcpy
@@ -86,10 +99,12 @@ sc.exe create driver7-x86.sys binPath=C:\windows\temp\driver7-x86.sys     type=k
 * WRITE_PORT_UCHAR
 * READ_PORT_UCHAR
 * READ_PORT_ULONG
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/driver7-x86.yaml)

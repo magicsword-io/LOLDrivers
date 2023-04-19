@@ -46,65 +46,89 @@ sc.exe create dbutil_2_3.sys binPath=C:\windows\temp\dbutil_2_3.sys type=kernel 
 
 ### Known Vulnerable Samples
 
-| Filename | dbutil_2_3.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/c996d7971c49252c582171d9380360f2">c996d7971c49252c582171d9380360f2</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/c948ae14761095e4d76b55d9de86412258be7afd">c948ae14761095e4d76b55d9de86412258be7afd</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5">0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ae593dd14a41fd9a6cb42fdae324c3092">e593dd14a41fd9a6cb42fdae324c3092</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ae3c1dd569aa4758552566b0213ee4d1fe6382c4b">e3c1dd569aa4758552566b0213ee4d1fe6382c4b</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Afe4270a61dbed978c28b2915fcc2826d011148dcb7533fa8bd072ddce5944cef">fe4270a61dbed978c28b2915fcc2826d011148dcb7533fa8bd072ddce5944cef</a> || Publisher | Dell Inc. || Signature | Dell Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
-#### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
-{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}* KeSetImportanceDpc
-* KeSetTargetProcessorDpc
-* MmFreeContiguousMemorySpecifyCache
-* KeSetPriorityThread
-* RtlInitUnicodeString
-* IoDeleteDevice
-* KeInitializeDpc
-* MmUnmapIoSpace
-* MmGetPhysicalAddress
-* MmMapIoSpace
-* KeInsertQueueDpc
-* IofCompleteRequest
-* IoCreateSymbolicLink
-* IoCreateDevice
-* MmAllocateContiguousMemorySpecifyCache
-* KeBugCheckEx
-{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-| Filename | dbutil_2_3.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/c996d7971c49252c582171d9380360f2">c996d7971c49252c582171d9380360f2</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/c948ae14761095e4d76b55d9de86412258be7afd">c948ae14761095e4d76b55d9de86412258be7afd</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5">0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ae593dd14a41fd9a6cb42fdae324c3092">e593dd14a41fd9a6cb42fdae324c3092</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ae3c1dd569aa4758552566b0213ee4d1fe6382c4b">e3c1dd569aa4758552566b0213ee4d1fe6382c4b</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Afe4270a61dbed978c28b2915fcc2826d011148dcb7533fa8bd072ddce5944cef">fe4270a61dbed978c28b2915fcc2826d011148dcb7533fa8bd072ddce5944cef</a> || Publisher | Dell Inc. || Signature | Dell Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
-#### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
-{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}* KeSetImportanceDpc
-* KeSetTargetProcessorDpc
-* MmFreeContiguousMemorySpecifyCache
-* KeSetPriorityThread
-* RtlInitUnicodeString
-* IoDeleteDevice
-* KeInitializeDpc
-* MmUnmapIoSpace
-* MmGetPhysicalAddress
-* MmMapIoSpace
-* KeInsertQueueDpc
-* IofCompleteRequest
-* IoCreateSymbolicLink
-* IoCreateDevice
-* MmAllocateContiguousMemorySpecifyCache
-* KeBugCheckEx
-{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | dbutil_2_3.sys |
+| MD5                | [c996d7971c49252c582171d9380360f2](https://www.virustotal.com/gui/file/c996d7971c49252c582171d9380360f2) |
+| SHA1               | [c948ae14761095e4d76b55d9de86412258be7afd](https://www.virustotal.com/gui/file/c948ae14761095e4d76b55d9de86412258be7afd) |
+| SHA256             | [0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5](https://www.virustotal.com/gui/file/0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5) |
+| Authentihash MD5   | [e593dd14a41fd9a6cb42fdae324c3092](https://www.virustotal.com/gui/search/authentihash%253Ae593dd14a41fd9a6cb42fdae324c3092) |
+| Authentihash SHA1  | [e3c1dd569aa4758552566b0213ee4d1fe6382c4b](https://www.virustotal.com/gui/search/authentihash%253Ae3c1dd569aa4758552566b0213ee4d1fe6382c4b) |
+| Authentihash SHA256| [fe4270a61dbed978c28b2915fcc2826d011148dcb7533fa8bd072ddce5944cef](https://www.virustotal.com/gui/search/authentihash%253Afe4270a61dbed978c28b2915fcc2826d011148dcb7533fa8bd072ddce5944cef) |
+| Publisher         | Dell Inc. |
+| Signature         | Dell Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
 
+
+#### Imports
+{{< details "Expand" >}}
+* ntoskrnl.exe
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+* KeSetImportanceDpc
+* KeSetTargetProcessorDpc
+* MmFreeContiguousMemorySpecifyCache
+* KeSetPriorityThread
+* RtlInitUnicodeString
+* IoDeleteDevice
+* KeInitializeDpc
+* MmUnmapIoSpace
+* MmGetPhysicalAddress
+* MmMapIoSpace
+* KeInsertQueueDpc
+* IofCompleteRequest
+* IoCreateSymbolicLink
+* IoCreateDevice
+* MmAllocateContiguousMemorySpecifyCache
+* KeBugCheckEx
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}| Property           | Value |
+|:-------------------|:------|
+| Filename           | dbutil_2_3.sys |
+| MD5                | [c996d7971c49252c582171d9380360f2](https://www.virustotal.com/gui/file/c996d7971c49252c582171d9380360f2) |
+| SHA1               | [c948ae14761095e4d76b55d9de86412258be7afd](https://www.virustotal.com/gui/file/c948ae14761095e4d76b55d9de86412258be7afd) |
+| SHA256             | [0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5](https://www.virustotal.com/gui/file/0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5) |
+| Authentihash MD5   | [e593dd14a41fd9a6cb42fdae324c3092](https://www.virustotal.com/gui/search/authentihash%253Ae593dd14a41fd9a6cb42fdae324c3092) |
+| Authentihash SHA1  | [e3c1dd569aa4758552566b0213ee4d1fe6382c4b](https://www.virustotal.com/gui/search/authentihash%253Ae3c1dd569aa4758552566b0213ee4d1fe6382c4b) |
+| Authentihash SHA256| [fe4270a61dbed978c28b2915fcc2826d011148dcb7533fa8bd072ddce5944cef](https://www.virustotal.com/gui/search/authentihash%253Afe4270a61dbed978c28b2915fcc2826d011148dcb7533fa8bd072ddce5944cef) |
+| Publisher         | Dell Inc. |
+| Signature         | Dell Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
+
+
+#### Imports
+{{< details "Expand" >}}
+* ntoskrnl.exe
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+* KeSetImportanceDpc
+* KeSetTargetProcessorDpc
+* MmFreeContiguousMemorySpecifyCache
+* KeSetPriorityThread
+* RtlInitUnicodeString
+* IoDeleteDevice
+* KeInitializeDpc
+* MmUnmapIoSpace
+* MmGetPhysicalAddress
+* MmMapIoSpace
+* KeInsertQueueDpc
+* IofCompleteRequest
+* IoCreateSymbolicLink
+* IoCreateDevice
+* MmAllocateContiguousMemorySpecifyCache
+* KeBugCheckEx
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbutil_2_3.yaml)

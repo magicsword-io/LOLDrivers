@@ -52,19 +52,27 @@ sc.exe create goad.sys binPath=C:\windows\temp\goad.sys type=kernel &amp;&amp; s
 
 ### Known Vulnerable Samples
 
-| Filename | goad.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/312e31851e0fc2072dbf9a128557d6ef">312e31851e0fc2072dbf9a128557d6ef</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | goad.sys |
+| MD5                | [312e31851e0fc2072dbf9a128557d6ef](https://www.virustotal.com/gui/file/312e31851e0fc2072dbf9a128557d6ef) |
+| SHA1               | [-](https://www.virustotal.com/gui/file/-) |
+| SHA256             | [-](https://www.virustotal.com/gui/file/-) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/goad.yaml)

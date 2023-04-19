@@ -51,31 +51,47 @@ sc.exe create bandai.sys binPath=C:\windows\temp\bandai.sys type=kernel &amp;&am
 
 ### Known Vulnerable Samples
 
-| Filename | bandai.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/0f780b7ada5dd8464d9f2cc537d973f5ac804e9c">0f780b7ada5dd8464d9f2cc537d973f5ac804e9c</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-| Filename | bandai.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/ea360a9f23bb7cf67f08b88e6a185a699f0c5410">ea360a9f23bb7cf67f08b88e6a185a699f0c5410</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | bandai.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [0f780b7ada5dd8464d9f2cc537d973f5ac804e9c](https://www.virustotal.com/gui/file/0f780b7ada5dd8464d9f2cc537d973f5ac804e9c) |
+| SHA256             | [-](https://www.virustotal.com/gui/file/-) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}| Property           | Value |
+|:-------------------|:------|
+| Filename           | bandai.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [ea360a9f23bb7cf67f08b88e6a185a699f0c5410](https://www.virustotal.com/gui/file/ea360a9f23bb7cf67f08b88e6a185a699f0c5410) |
+| SHA256             | [-](https://www.virustotal.com/gui/file/-) |
+| Signature         | -   |
+
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bandai.yaml)

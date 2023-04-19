@@ -46,19 +46,32 @@ sc.exe create kEvP64.sys binPath=C:\windows\temp\kEvP64.sys type=kernel &amp;&am
 
 ### Known Vulnerable Samples
 
-| Filename | kEvP64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/20125794b807116617d43f02b616e092">20125794b807116617d43f02b616e092</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/f3db629cfe37a73144d5258e64d9dd8b38084cf4">f3db629cfe37a73144d5258e64d9dd8b38084cf4</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/1aaa9aef39cb3c0a854ecb4ca7d3b213458f302025e0ec5bfbdef973cca9111c">1aaa9aef39cb3c0a854ecb4ca7d3b213458f302025e0ec5bfbdef973cca9111c</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A89184d56336f62fecc67f644b1ec4219">89184d56336f62fecc67f644b1ec4219</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Acd773a4b5aef78bda651069b9304e4d5e2033cb9">cd773a4b5aef78bda651069b9304e4d5e2033cb9</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ac7ba2720675aada538c47fa9e8950a81b6df23f63fa181680e6232651abffbef">c7ba2720675aada538c47fa9e8950a81b6df23f63fa181680e6232651abffbef</a> || Signature | 北京华林保软件技术有限公司, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | PowerTool || Description | PowerTool || Product | PowerTool || OriginalFilename | kEvP64.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | kEvP64.sys |
+| MD5                | [20125794b807116617d43f02b616e092](https://www.virustotal.com/gui/file/20125794b807116617d43f02b616e092) |
+| SHA1               | [f3db629cfe37a73144d5258e64d9dd8b38084cf4](https://www.virustotal.com/gui/file/f3db629cfe37a73144d5258e64d9dd8b38084cf4) |
+| SHA256             | [1aaa9aef39cb3c0a854ecb4ca7d3b213458f302025e0ec5bfbdef973cca9111c](https://www.virustotal.com/gui/file/1aaa9aef39cb3c0a854ecb4ca7d3b213458f302025e0ec5bfbdef973cca9111c) |
+| Authentihash MD5   | [89184d56336f62fecc67f644b1ec4219](https://www.virustotal.com/gui/search/authentihash%253A89184d56336f62fecc67f644b1ec4219) |
+| Authentihash SHA1  | [cd773a4b5aef78bda651069b9304e4d5e2033cb9](https://www.virustotal.com/gui/search/authentihash%253Acd773a4b5aef78bda651069b9304e4d5e2033cb9) |
+| Authentihash SHA256| [c7ba2720675aada538c47fa9e8950a81b6df23f63fa181680e6232651abffbef](https://www.virustotal.com/gui/search/authentihash%253Ac7ba2720675aada538c47fa9e8950a81b6df23f63fa181680e6232651abffbef) |
+| Signature         | 北京华林保软件技术有限公司, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Company           | PowerTool |
+| Description       | PowerTool |
+| Product           | PowerTool |
+| OriginalFilename  | kEvP64.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
 * FLTMGR.SYS
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* ProbeForRead
+{{< details "Expand" >}}
+* ProbeForRead
 * KeClearEvent
 * PsProcessType
 * IoReuseIrp
@@ -165,10 +178,12 @@ sc.exe create kEvP64.sys binPath=C:\windows\temp\kEvP64.sys type=kernel &amp;&am
 * FltEnumerateFilters
 * FltObjectDereference
 * FltRegisterFilter
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/kevp64.yaml)

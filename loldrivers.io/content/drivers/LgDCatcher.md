@@ -51,20 +51,29 @@ sc.exe create LgDCatcher.sys binPath=C:\windows\temp\LgDCatcher.sys type=kernel 
 
 ### Known Vulnerable Samples
 
-| Filename | LgDCatcher.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/ed6348707f177629739df73b97ba1b6e">ed6348707f177629739df73b97ba1b6e</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/806832983bb8cb1e26001e60ea3b7c3ade4d3471">806832983bb8cb1e26001e60ea3b7c3ade4d3471</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/58c071cfe72e9ee867bba85cbd0abe72eb223d27978d6f0650d0103553839b59">58c071cfe72e9ee867bba85cbd0abe72eb223d27978d6f0650d0103553839b59</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A0011ec462e11bd6288e1dc38def9be06">0011ec462e11bd6288e1dc38def9be06</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ac6f2e631f12737a5fa96db2e18c8ebf950d64eb6">c6f2e631f12737a5fa96db2e18c8ebf950d64eb6</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A3ba724dd78864cd527a99673fde1bf7f9f85f2415c91708e7380fbe5e2c085dd">3ba724dd78864cd527a99673fde1bf7f9f85f2415c91708e7380fbe5e2c085dd</a> || Signature | 雷神（武汉）信息技术有限公司, DigiCert SHA2 Assured ID Code Signing CA, DigiCert   |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | LgDCatcher.sys |
+| MD5                | [ed6348707f177629739df73b97ba1b6e](https://www.virustotal.com/gui/file/ed6348707f177629739df73b97ba1b6e) |
+| SHA1               | [806832983bb8cb1e26001e60ea3b7c3ade4d3471](https://www.virustotal.com/gui/file/806832983bb8cb1e26001e60ea3b7c3ade4d3471) |
+| SHA256             | [58c071cfe72e9ee867bba85cbd0abe72eb223d27978d6f0650d0103553839b59](https://www.virustotal.com/gui/file/58c071cfe72e9ee867bba85cbd0abe72eb223d27978d6f0650d0103553839b59) |
+| Authentihash MD5   | [0011ec462e11bd6288e1dc38def9be06](https://www.virustotal.com/gui/search/authentihash%253A0011ec462e11bd6288e1dc38def9be06) |
+| Authentihash SHA1  | [c6f2e631f12737a5fa96db2e18c8ebf950d64eb6](https://www.virustotal.com/gui/search/authentihash%253Ac6f2e631f12737a5fa96db2e18c8ebf950d64eb6) |
+| Authentihash SHA256| [3ba724dd78864cd527a99673fde1bf7f9f85f2415c91708e7380fbe5e2c085dd](https://www.virustotal.com/gui/search/authentihash%253A3ba724dd78864cd527a99673fde1bf7f9f85f2415c91708e7380fbe5e2c085dd) |
+| Signature         | 雷神（武汉）信息技术有限公司, DigiCert SHA2 Assured ID Code Signing CA, DigiCert   |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * fwpkclnt.sys
 * NDIS.SYS
 * WDFLDR.SYS
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* ExpInterlockedPushEntrySList
+{{< details "Expand" >}}
+* ExpInterlockedPushEntrySList
 * ExInitializeNPagedLookasideList
 * ExDeleteNPagedLookasideList
 * MmBuildMdlForNonPagedPool
@@ -135,10 +144,12 @@ sc.exe create LgDCatcher.sys binPath=C:\windows\temp\LgDCatcher.sys type=kernel 
 * WdfVersionBind
 * WdfVersionBindClass
 * WdfVersionUnbindClass
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lgdcatcher.yaml)

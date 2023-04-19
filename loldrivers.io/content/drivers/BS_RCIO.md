@@ -51,18 +51,27 @@ sc.exe create BS_RCIO.sys binPath=C:\windows\temp\BS_RCIO.sys type=kernel &amp;&
 
 ### Known Vulnerable Samples
 
-| Filename | BS_RCIO.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/ab53d07f18a9697139ddc825b466f696">ab53d07f18a9697139ddc825b466f696</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/213ba055863d4226da26a759e8a254062ea77814">213ba055863d4226da26a759e8a254062ea77814</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/362c4f3dadc9c393682664a139d65d80e32caa2a97b6e0361dfd713a73267ecc">362c4f3dadc9c393682664a139d65d80e32caa2a97b6e0361dfd713a73267ecc</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A8284660345377a69dd99b25fdf397314">8284660345377a69dd99b25fdf397314</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A3311e4e94e8a6dd81859719fbe0fcbf187f0bd8a">3311e4e94e8a6dd81859719fbe0fcbf187f0bd8a</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Af67e60228084151fdcb84e94a48693db864cf606b65faef5a1d829175380dbfa">f67e60228084151fdcb84e94a48693db864cf606b65faef5a1d829175380dbfa</a> || Signature | Biostar Microtech Int&#39;l Corp, DigiCert EV Code Signing CA, DigiCert   |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | BS_RCIO.sys |
+| MD5                | [ab53d07f18a9697139ddc825b466f696](https://www.virustotal.com/gui/file/ab53d07f18a9697139ddc825b466f696) |
+| SHA1               | [213ba055863d4226da26a759e8a254062ea77814](https://www.virustotal.com/gui/file/213ba055863d4226da26a759e8a254062ea77814) |
+| SHA256             | [362c4f3dadc9c393682664a139d65d80e32caa2a97b6e0361dfd713a73267ecc](https://www.virustotal.com/gui/file/362c4f3dadc9c393682664a139d65d80e32caa2a97b6e0361dfd713a73267ecc) |
+| Authentihash MD5   | [8284660345377a69dd99b25fdf397314](https://www.virustotal.com/gui/search/authentihash%253A8284660345377a69dd99b25fdf397314) |
+| Authentihash SHA1  | [3311e4e94e8a6dd81859719fbe0fcbf187f0bd8a](https://www.virustotal.com/gui/search/authentihash%253A3311e4e94e8a6dd81859719fbe0fcbf187f0bd8a) |
+| Authentihash SHA256| [f67e60228084151fdcb84e94a48693db864cf606b65faef5a1d829175380dbfa](https://www.virustotal.com/gui/search/authentihash%253Af67e60228084151fdcb84e94a48693db864cf606b65faef5a1d829175380dbfa) |
+| Signature         | Biostar Microtech Int&#39;l Corp, DigiCert EV Code Signing CA, DigiCert   |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* KeWaitForSingleObject
+{{< details "Expand" >}}
+* KeWaitForSingleObject
 * memcpy
 * KeDelayExecutionThread
 * PsTerminateSystemThread
@@ -99,10 +108,12 @@ sc.exe create BS_RCIO.sys binPath=C:\windows\temp\BS_RCIO.sys type=kernel &amp;&
 * READ_PORT_USHORT
 * READ_PORT_ULONG
 * KfLowerIrql
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_rcio.yaml)

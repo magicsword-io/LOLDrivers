@@ -51,31 +51,47 @@ sc.exe create netfilterdrv.sys binPath=C:\windows\temp \n \n \n  etfilterdrv.sys
 
 ### Known Vulnerable Samples
 
-| Filename | netfilterdrv.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/e74b6dda8bc53bc687fc21218bd34062a78d8467">e74b6dda8bc53bc687fc21218bd34062a78d8467</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-| Filename | netfilterdrv.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/2c27abbbbcf10dfb75ad79557e30ace5ed314df8">2c27abbbbcf10dfb75ad79557e30ace5ed314df8</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | netfilterdrv.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [e74b6dda8bc53bc687fc21218bd34062a78d8467](https://www.virustotal.com/gui/file/e74b6dda8bc53bc687fc21218bd34062a78d8467) |
+| SHA256             | [-](https://www.virustotal.com/gui/file/-) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}| Property           | Value |
+|:-------------------|:------|
+| Filename           | netfilterdrv.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [2c27abbbbcf10dfb75ad79557e30ace5ed314df8](https://www.virustotal.com/gui/file/2c27abbbbcf10dfb75ad79557e30ace5ed314df8) |
+| SHA256             | [-](https://www.virustotal.com/gui/file/-) |
+| Signature         | -   |
+
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/netfilterdrv.yaml)
