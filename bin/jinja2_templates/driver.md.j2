@@ -134,8 +134,9 @@ This download link contains the malicious driver!
 * {{ export }}
 {% endfor %}
 
-{% raw %}{{< /details >}}{% endraw %}
-{% endfor +%}
+{% raw %}{{< /details >}}{%+ endraw +%}
+-----
+{%+ endfor +%}
 {% endif %}
 
 
