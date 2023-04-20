@@ -46,19 +46,28 @@ sc.exe create piddrv64.sys binPath=C:\windows\temp\piddrv64.sys type=kernel &amp
 
 ### Known Vulnerable Samples
 
-| Filename | piddrv64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/fd7de498a72b2daf89f321d23948c3c4">fd7de498a72b2daf89f321d23948c3c4</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/c4ed28fdfba7b8a8dfe39e591006f25d39990f07">c4ed28fdfba7b8a8dfe39e591006f25d39990f07</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/b03f26009de2e8eabfcf6152f49b02a55c5e5d0f73e01d48f5a745f93ce93a29">b03f26009de2e8eabfcf6152f49b02a55c5e5d0f73e01d48f5a745f93ce93a29</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aa6200c0995103391120e3561971560a6">a6200c0995103391120e3561971560a6</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A0c2599d738d01a82ec91725f499acebbcfb47cc9">0c2599d738d01a82ec91725f499acebbcfb47cc9</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ab97f870c501714fa453cf18ae8a30c87d08ff1e6d784afdbb0121aea3da2dc28">b97f870c501714fa453cf18ae8a30c87d08ff1e6d784afdbb0121aea3da2dc28</a> || Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2012, Microsoft Root Certificate Authority 2010   |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | piddrv64.sys |
+| MD5                | [fd7de498a72b2daf89f321d23948c3c4](https://www.virustotal.com/gui/file/fd7de498a72b2daf89f321d23948c3c4) |
+| SHA1               | [c4ed28fdfba7b8a8dfe39e591006f25d39990f07](https://www.virustotal.com/gui/file/c4ed28fdfba7b8a8dfe39e591006f25d39990f07) |
+| SHA256             | [b03f26009de2e8eabfcf6152f49b02a55c5e5d0f73e01d48f5a745f93ce93a29](https://www.virustotal.com/gui/file/b03f26009de2e8eabfcf6152f49b02a55c5e5d0f73e01d48f5a745f93ce93a29) |
+| Authentihash MD5   | [a6200c0995103391120e3561971560a6](https://www.virustotal.com/gui/search/authentihash%253Aa6200c0995103391120e3561971560a6) |
+| Authentihash SHA1  | [0c2599d738d01a82ec91725f499acebbcfb47cc9](https://www.virustotal.com/gui/search/authentihash%253A0c2599d738d01a82ec91725f499acebbcfb47cc9) |
+| Authentihash SHA256| [b97f870c501714fa453cf18ae8a30c87d08ff1e6d784afdbb0121aea3da2dc28](https://www.virustotal.com/gui/search/authentihash%253Ab97f870c501714fa453cf18ae8a30c87d08ff1e6d784afdbb0121aea3da2dc28) |
+| Signature         | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2012, Microsoft Root Certificate Authority 2010   |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
 * WDFLDR.SYS
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* MmGetSystemRoutineAddress
+{{< details "Expand" >}}
+* MmGetSystemRoutineAddress
 * IoBuildSynchronousFsdRequest
 * IofCallDriver
 * IofCompleteRequest
@@ -91,10 +100,12 @@ sc.exe create piddrv64.sys binPath=C:\windows\temp\piddrv64.sys type=kernel &amp
 * WdfVersionBind
 * WdfVersionBindClass
 * WdfVersionUnbindClass
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/piddrv64.yaml)

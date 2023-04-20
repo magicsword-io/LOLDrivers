@@ -46,18 +46,32 @@ sc.exe create AsrAutoChkUpdDrv.sys binPath=C:\windows\temp\AsrAutoChkUpdDrv.sys 
 
 ### Known Vulnerable Samples
 
-| Filename | AsrAutoChkUpdDrv.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/75d6c3469347de1cdfa3b1b9f1544208">75d6c3469347de1cdfa3b1b9f1544208</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/6523b3fd87de39eb5db1332e4523ce99556077dc">6523b3fd87de39eb5db1332e4523ce99556077dc</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/2aa1b08f47fbb1e2bd2e4a492f5d616968e703e1359a921f62b38b8e4662f0c4">2aa1b08f47fbb1e2bd2e4a492f5d616968e703e1359a921f62b38b8e4662f0c4</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A18d039cb3a6ac52395a74fb8189c4110">18d039cb3a6ac52395a74fb8189c4110</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A2eaa89604fa6e129825219b0debb59e775949672">2eaa89604fa6e129825219b0debb59e775949672</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ad3d601c77d4bb367ab3105920ca8435aa775448a49c1eda6ac6f46ee5d8709cb">d3d601c77d4bb367ab3105920ca8435aa775448a49c1eda6ac6f46ee5d8709cb</a> || Publisher | ASROCK Incorporation || Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | ASRock Incorporation || Description | AsrAutoChkUpdDrv Driver || Product | AsrAutoChkUpdDrv Driver || OriginalFilename | AsrAutoChkUpdDrv.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | AsrAutoChkUpdDrv.sys |
+| MD5                | [75d6c3469347de1cdfa3b1b9f1544208](https://www.virustotal.com/gui/file/75d6c3469347de1cdfa3b1b9f1544208) |
+| SHA1               | [6523b3fd87de39eb5db1332e4523ce99556077dc](https://www.virustotal.com/gui/file/6523b3fd87de39eb5db1332e4523ce99556077dc) |
+| SHA256             | [2aa1b08f47fbb1e2bd2e4a492f5d616968e703e1359a921f62b38b8e4662f0c4](https://www.virustotal.com/gui/file/2aa1b08f47fbb1e2bd2e4a492f5d616968e703e1359a921f62b38b8e4662f0c4) |
+| Authentihash MD5   | [18d039cb3a6ac52395a74fb8189c4110](https://www.virustotal.com/gui/search/authentihash%253A18d039cb3a6ac52395a74fb8189c4110) |
+| Authentihash SHA1  | [2eaa89604fa6e129825219b0debb59e775949672](https://www.virustotal.com/gui/search/authentihash%253A2eaa89604fa6e129825219b0debb59e775949672) |
+| Authentihash SHA256| [d3d601c77d4bb367ab3105920ca8435aa775448a49c1eda6ac6f46ee5d8709cb](https://www.virustotal.com/gui/search/authentihash%253Ad3d601c77d4bb367ab3105920ca8435aa775448a49c1eda6ac6f46ee5d8709cb) |
+| Publisher         | ASROCK Incorporation |
+| Signature         | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Company           | ASRock Incorporation |
+| Description       | AsrAutoChkUpdDrv Driver |
+| Product           | AsrAutoChkUpdDrv Driver |
+| OriginalFilename  | AsrAutoChkUpdDrv.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* IoDeleteSymbolicLink
+{{< details "Expand" >}}
+* IoDeleteSymbolicLink
 * ExFreePoolWithTag
 * MmFreeContiguousMemorySpecifyCache
 * RtlInitUnicodeString
@@ -79,10 +93,12 @@ sc.exe create AsrAutoChkUpdDrv.sys binPath=C:\windows\temp\AsrAutoChkUpdDrv.sys 
 * KeBugCheckEx
 * ExAllocatePoolWithTag
 * KeStallExecutionProcessor
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrautochkupddrv.yaml)

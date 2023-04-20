@@ -46,18 +46,31 @@ sc.exe create NTIOLib_X64.sys binPath=C:\windows\temp\NTIOLib_X64.sys     type=k
 
 ### Known Vulnerable Samples
 
-| Filename | NTIOLib_X64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/c02f70960fa934b8defa16a03d7f6556">c02f70960fa934b8defa16a03d7f6556</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/3805e4e08ad342d224973ecdade8b00c40ed31be">3805e4e08ad342d224973ecdade8b00c40ed31be</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/d8b58f6a89a7618558e37afc360cd772b6731e3ba367f8d58734ecee2244a530">d8b58f6a89a7618558e37afc360cd772b6731e3ba367f8d58734ecee2244a530</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ac6830e904e56ea951005ea7639eedd35">c6830e904e56ea951005ea7639eedd35</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ac57c0dd18135bca5fdb094858a70033c006cd281">c57c0dd18135bca5fdb094858a70033c006cd281</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A4a05ad47cd63932b3df2d0f1f42617321729772211bec651fe061140d3e75957">4a05ad47cd63932b3df2d0f1f42617321729772211bec651fe061140d3e75957</a> || Signature | Micro-Star Int&#39;l Co. Ltd., GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   || Company | MSI || Description | NTIOLib || Product | NTIOLib || OriginalFilename | NTIOLib.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | NTIOLib_X64.sys |
+| MD5                | [c02f70960fa934b8defa16a03d7f6556](https://www.virustotal.com/gui/file/c02f70960fa934b8defa16a03d7f6556) |
+| SHA1               | [3805e4e08ad342d224973ecdade8b00c40ed31be](https://www.virustotal.com/gui/file/3805e4e08ad342d224973ecdade8b00c40ed31be) |
+| SHA256             | [d8b58f6a89a7618558e37afc360cd772b6731e3ba367f8d58734ecee2244a530](https://www.virustotal.com/gui/file/d8b58f6a89a7618558e37afc360cd772b6731e3ba367f8d58734ecee2244a530) |
+| Authentihash MD5   | [c6830e904e56ea951005ea7639eedd35](https://www.virustotal.com/gui/search/authentihash%253Ac6830e904e56ea951005ea7639eedd35) |
+| Authentihash SHA1  | [c57c0dd18135bca5fdb094858a70033c006cd281](https://www.virustotal.com/gui/search/authentihash%253Ac57c0dd18135bca5fdb094858a70033c006cd281) |
+| Authentihash SHA256| [4a05ad47cd63932b3df2d0f1f42617321729772211bec651fe061140d3e75957](https://www.virustotal.com/gui/search/authentihash%253A4a05ad47cd63932b3df2d0f1f42617321729772211bec651fe061140d3e75957) |
+| Signature         | Micro-Star Int&#39;l Co. Ltd., GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   |
+| Company           | MSI |
+| Description       | NTIOLib |
+| Product           | NTIOLib |
+| OriginalFilename  | NTIOLib.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* MmUnmapIoSpace
+{{< details "Expand" >}}
+* MmUnmapIoSpace
 * MmMapIoSpace
 * IofCompleteRequest
 * IoDeleteDevice
@@ -69,10 +82,12 @@ sc.exe create NTIOLib_X64.sys binPath=C:\windows\temp\NTIOLib_X64.sys     type=k
 * __C_specific_handler
 * HalSetBusDataByOffset
 * HalGetBusDataByOffset
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ntiolib_x64.yaml)

@@ -49,18 +49,31 @@ sc.exe create rwdrv.sys binPath=C:\windows\temp\rwdrv.sys type=kernel &amp;&amp;
 
 ### Known Vulnerable Samples
 
-| Filename | rwdrv.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/257483d5d8b268d0d679956c7acdf02d">257483d5d8b268d0d679956c7acdf02d</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/fbf8b0613a2f7039aeb9fa09bd3b40c8ff49ded2">fbf8b0613a2f7039aeb9fa09bd3b40c8ff49ded2</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3">ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A3cd1454d2308cee5c59b45d5f952e70b">3cd1454d2308cee5c59b45d5f952e70b</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A2c3b01ff8ce024f70f9daad31ea6c78de54f239b">2c3b01ff8ce024f70f9daad31ea6c78de54f239b</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aacb65f96f1d5c986b52d980a1c5ea009292ff472087fdd8a98a485404948f585">acb65f96f1d5c986b52d980a1c5ea009292ff472087fdd8a98a485404948f585</a> || Signature | ChongKim Chan, GlobalSign CodeSigning CA - G2, GlobalSign Root CA - R1   || Company | RW-Everything || Description | RwDrv Driver || Product | RwDrv Driver || OriginalFilename | RwDrv.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | rwdrv.sys |
+| MD5                | [257483d5d8b268d0d679956c7acdf02d](https://www.virustotal.com/gui/file/257483d5d8b268d0d679956c7acdf02d) |
+| SHA1               | [fbf8b0613a2f7039aeb9fa09bd3b40c8ff49ded2](https://www.virustotal.com/gui/file/fbf8b0613a2f7039aeb9fa09bd3b40c8ff49ded2) |
+| SHA256             | [ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3](https://www.virustotal.com/gui/file/ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3) |
+| Authentihash MD5   | [3cd1454d2308cee5c59b45d5f952e70b](https://www.virustotal.com/gui/search/authentihash%253A3cd1454d2308cee5c59b45d5f952e70b) |
+| Authentihash SHA1  | [2c3b01ff8ce024f70f9daad31ea6c78de54f239b](https://www.virustotal.com/gui/search/authentihash%253A2c3b01ff8ce024f70f9daad31ea6c78de54f239b) |
+| Authentihash SHA256| [acb65f96f1d5c986b52d980a1c5ea009292ff472087fdd8a98a485404948f585](https://www.virustotal.com/gui/search/authentihash%253Aacb65f96f1d5c986b52d980a1c5ea009292ff472087fdd8a98a485404948f585) |
+| Signature         | ChongKim Chan, GlobalSign CodeSigning CA - G2, GlobalSign Root CA - R1   |
+| Company           | RW-Everything |
+| Description       | RwDrv Driver |
+| Product           | RwDrv Driver |
+| OriginalFilename  | RwDrv.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* ObfDereferenceObject
+{{< details "Expand" >}}
+* ObfDereferenceObject
 * IoUnregisterPlugPlayNotification
 * ExFreePoolWithTag
 * MmUnmapIoSpace
@@ -98,10 +111,12 @@ sc.exe create rwdrv.sys binPath=C:\windows\temp\rwdrv.sys type=kernel &amp;&amp;
 * KfReleaseSpinLock
 * KeStallExecutionProcessor
 * KfAcquireSpinLock
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rwdrv.yaml)

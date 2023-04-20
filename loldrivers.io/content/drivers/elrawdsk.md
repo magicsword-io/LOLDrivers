@@ -49,18 +49,31 @@ sc.exe create elrawdsk.sys binPath=C:\windows\temp\elrawdsk.sys type=kernel &amp
 
 ### Known Vulnerable Samples
 
-| Filename | elrawdsk.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/1493d342e7a36553c56b2adea150949e">1493d342e7a36553c56b2adea150949e</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/ce549714a11bd43b52be709581c6e144957136ec">ce549714a11bd43b52be709581c6e144957136ec</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6">4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A20f14b58e9548b6ea99b35006f631197">20f14b58e9548b6ea99b35006f631197</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A174bd2e0965b996cff4a26ac511e551788fbc894">174bd2e0965b996cff4a26ac511e551788fbc894</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A98a55dc61046f4509d2465cbc373a9391c07125e5f4a242d2f475f14f32e5430">98a55dc61046f4509d2465cbc373a9391c07125e5f4a242d2f475f14f32e5430</a> || Signature | EldoS Corporation, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   || Company | EldoS Corporation || Description | RawDisk Driver. Allows write access to files and raw disk sectors for user mode applications in Windows 2000 and later. || Product | RawDisk || OriginalFilename | elrawdsk.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | elrawdsk.sys |
+| MD5                | [1493d342e7a36553c56b2adea150949e](https://www.virustotal.com/gui/file/1493d342e7a36553c56b2adea150949e) |
+| SHA1               | [ce549714a11bd43b52be709581c6e144957136ec](https://www.virustotal.com/gui/file/ce549714a11bd43b52be709581c6e144957136ec) |
+| SHA256             | [4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6](https://www.virustotal.com/gui/file/4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6) |
+| Authentihash MD5   | [20f14b58e9548b6ea99b35006f631197](https://www.virustotal.com/gui/search/authentihash%253A20f14b58e9548b6ea99b35006f631197) |
+| Authentihash SHA1  | [174bd2e0965b996cff4a26ac511e551788fbc894](https://www.virustotal.com/gui/search/authentihash%253A174bd2e0965b996cff4a26ac511e551788fbc894) |
+| Authentihash SHA256| [98a55dc61046f4509d2465cbc373a9391c07125e5f4a242d2f475f14f32e5430](https://www.virustotal.com/gui/search/authentihash%253A98a55dc61046f4509d2465cbc373a9391c07125e5f4a242d2f475f14f32e5430) |
+| Signature         | EldoS Corporation, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   |
+| Company           | EldoS Corporation |
+| Description       | RawDisk Driver. Allows write access to files and raw disk sectors for user mode applications in Windows 2000 and later. |
+| Product           | RawDisk |
+| OriginalFilename  | elrawdsk.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* MmUnlockPages
+{{< details "Expand" >}}
+* MmUnlockPages
 * KeSetEvent
 * IoDeleteDevice
 * IoDeleteSymbolicLink
@@ -130,20 +143,35 @@ sc.exe create elrawdsk.sys binPath=C:\windows\temp\elrawdsk.sys type=kernel &amp
 * RtlUnwind
 * KeBugCheckEx
 * KeGetCurrentIrql
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-| Filename | elrawdsk.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/76c643ab29d497317085e5db8c799960">76c643ab29d497317085e5db8c799960</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/1292c7dd60214d96a71e7705e519006b9de7968f">1292c7dd60214d96a71e7705e519006b9de7968f</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a">5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ac1afcba807a13aa25a0b363a22c760d6">c1afcba807a13aa25a0b363a22c760d6</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A8422fb53e48b27a42cc7595ca7c7ae0597168db6">8422fb53e48b27a42cc7595ca7c7ae0597168db6</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A29a2ae6439381ea2aa3116df7025cbb5c6c7c07cc8d19508e6021e4d6177a565">29a2ae6439381ea2aa3116df7025cbb5c6c7c07cc8d19508e6021e4d6177a565</a> || Signature | EldoS Corporation, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   || Company | EldoS Corporation || Description | RawDisk Driver. Allows write access to files and raw disk sectors for user mode applications in Windows 2000 and later. || Product | RawDisk || OriginalFilename | elrawdsk.sys |
+{{< details "Expand" >}}
+
+{{< /details >}}| Property           | Value |
+|:-------------------|:------|
+| Filename           | elrawdsk.sys |
+| MD5                | [76c643ab29d497317085e5db8c799960](https://www.virustotal.com/gui/file/76c643ab29d497317085e5db8c799960) |
+| SHA1               | [1292c7dd60214d96a71e7705e519006b9de7968f](https://www.virustotal.com/gui/file/1292c7dd60214d96a71e7705e519006b9de7968f) |
+| SHA256             | [5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a](https://www.virustotal.com/gui/file/5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a) |
+| Authentihash MD5   | [c1afcba807a13aa25a0b363a22c760d6](https://www.virustotal.com/gui/search/authentihash%253Ac1afcba807a13aa25a0b363a22c760d6) |
+| Authentihash SHA1  | [8422fb53e48b27a42cc7595ca7c7ae0597168db6](https://www.virustotal.com/gui/search/authentihash%253A8422fb53e48b27a42cc7595ca7c7ae0597168db6) |
+| Authentihash SHA256| [29a2ae6439381ea2aa3116df7025cbb5c6c7c07cc8d19508e6021e4d6177a565](https://www.virustotal.com/gui/search/authentihash%253A29a2ae6439381ea2aa3116df7025cbb5c6c7c07cc8d19508e6021e4d6177a565) |
+| Signature         | EldoS Corporation, GlobalSign ObjectSign CA, GlobalSign Primary Object Publishing CA, GlobalSign Root CA - R1   |
+| Company           | EldoS Corporation |
+| Description       | RawDisk Driver. Allows write access to files and raw disk sectors for user mode applications in Windows 2000 and later. |
+| Product           | RawDisk |
+| OriginalFilename  | elrawdsk.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* MmSystemRangeStart
+{{< details "Expand" >}}
+* MmSystemRangeStart
 * ExAllocatePoolWithTag
 * ExRaiseStatus
 * IoBuildDeviceIoControlRequest
@@ -203,10 +231,12 @@ sc.exe create elrawdsk.sys binPath=C:\windows\temp\elrawdsk.sys type=kernel &amp
 * MmMapIoSpace
 * KeBugCheckEx
 * __C_specific_handler
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/elrawdsk.yaml)

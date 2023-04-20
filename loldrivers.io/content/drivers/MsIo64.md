@@ -50,18 +50,31 @@ sc.exe create MsIo64.sys binPath=C:\windows\temp\MsIo64.sys type=kernel &amp;&am
 
 ### Known Vulnerable Samples
 
-| Filename | MsIo64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/dc943bf367ae77016ae399df8e71d38a">dc943bf367ae77016ae399df8e71d38a</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/6b54f8f137778c1391285fee6150dfa58a8120b1">6b54f8f137778c1391285fee6150dfa58a8120b1</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89">43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A9bb721ac0afc94a499a238ae32418d51">9bb721ac0afc94a499a238ae32418d51</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A04a903f13528536f1d0b1751886754d9aa5cdafa">04a903f13528536f1d0b1751886754d9aa5cdafa</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A5bf00eff58e5bbe4cf578ec37b9e13c8fa74511fb2644352fcc091347153a709">5bf00eff58e5bbe4cf578ec37b9e13c8fa74511fb2644352fcc091347153a709</a> || Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   || Company | MICSYS Technology Co., LTd || Description | MICSYS driver || Product | MsIo64 Driver Version 1.1 || OriginalFilename | MsIo64.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | MsIo64.sys |
+| MD5                | [dc943bf367ae77016ae399df8e71d38a](https://www.virustotal.com/gui/file/dc943bf367ae77016ae399df8e71d38a) |
+| SHA1               | [6b54f8f137778c1391285fee6150dfa58a8120b1](https://www.virustotal.com/gui/file/6b54f8f137778c1391285fee6150dfa58a8120b1) |
+| SHA256             | [43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89](https://www.virustotal.com/gui/file/43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89) |
+| Authentihash MD5   | [9bb721ac0afc94a499a238ae32418d51](https://www.virustotal.com/gui/search/authentihash%253A9bb721ac0afc94a499a238ae32418d51) |
+| Authentihash SHA1  | [04a903f13528536f1d0b1751886754d9aa5cdafa](https://www.virustotal.com/gui/search/authentihash%253A04a903f13528536f1d0b1751886754d9aa5cdafa) |
+| Authentihash SHA256| [5bf00eff58e5bbe4cf578ec37b9e13c8fa74511fb2644352fcc091347153a709](https://www.virustotal.com/gui/search/authentihash%253A5bf00eff58e5bbe4cf578ec37b9e13c8fa74511fb2644352fcc091347153a709) |
+| Signature         | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
+| Company           | MICSYS Technology Co., LTd |
+| Description       | MICSYS driver |
+| Product           | MsIo64 Driver Version 1.1 |
+| OriginalFilename  | MsIo64.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* RtlInitUnicodeString
+{{< details "Expand" >}}
+* RtlInitUnicodeString
 * DbgPrint
 * ZwClose
 * ZwMapViewOfSection
@@ -75,10 +88,12 @@ sc.exe create MsIo64.sys binPath=C:\windows\temp\MsIo64.sys type=kernel &amp;&am
 * ObfDereferenceObject
 * IoDeleteDevice
 * HalTranslateBusAddress
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/msio64.yaml)

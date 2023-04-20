@@ -46,19 +46,32 @@ sc.exe create AMDPowerProfiler.sys binPath=C:\windows\temp\AMDPowerProfiler.sys 
 
 ### Known Vulnerable Samples
 
-| Filename | AMDPowerProfiler.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/e4266262a77fffdea2584283f6c4f51d">e4266262a77fffdea2584283f6c4f51d</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/b480c54391a2a2f917a44f91a5e9e4590648b332">b480c54391a2a2f917a44f91a5e9e4590648b332</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/0af5ccb3d33a9ba92071c9637be6254030d61998733a5eb3583e865e17844e05">0af5ccb3d33a9ba92071c9637be6254030d61998733a5eb3583e865e17844e05</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A7ed9c787e267b2606441010b65767771">7ed9c787e267b2606441010b65767771</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A07a5aac8abb0a85822bf792607b9e90914b454dc">07a5aac8abb0a85822bf792607b9e90914b454dc</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ae1d3963c55c7ffa96d16e47ec4bbb4e171f828650ce853eb0b83c90ae9c6265a">e1d3963c55c7ffa96d16e47ec4bbb4e171f828650ce853eb0b83c90ae9c6265a</a> || Signature | Advanced Micro Devices Inc., Sectigo RSA Code Signing CA, USERTrust RSA Certification Authority, Sectigo (AAA)   || Company | Advanced Micro Devices, Inc. || Description | AMD Power Profiling Driver || Product | AMD uProf || OriginalFilename | AMDPowerProfiler.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | AMDPowerProfiler.sys |
+| MD5                | [e4266262a77fffdea2584283f6c4f51d](https://www.virustotal.com/gui/file/e4266262a77fffdea2584283f6c4f51d) |
+| SHA1               | [b480c54391a2a2f917a44f91a5e9e4590648b332](https://www.virustotal.com/gui/file/b480c54391a2a2f917a44f91a5e9e4590648b332) |
+| SHA256             | [0af5ccb3d33a9ba92071c9637be6254030d61998733a5eb3583e865e17844e05](https://www.virustotal.com/gui/file/0af5ccb3d33a9ba92071c9637be6254030d61998733a5eb3583e865e17844e05) |
+| Authentihash MD5   | [7ed9c787e267b2606441010b65767771](https://www.virustotal.com/gui/search/authentihash%253A7ed9c787e267b2606441010b65767771) |
+| Authentihash SHA1  | [07a5aac8abb0a85822bf792607b9e90914b454dc](https://www.virustotal.com/gui/search/authentihash%253A07a5aac8abb0a85822bf792607b9e90914b454dc) |
+| Authentihash SHA256| [e1d3963c55c7ffa96d16e47ec4bbb4e171f828650ce853eb0b83c90ae9c6265a](https://www.virustotal.com/gui/search/authentihash%253Ae1d3963c55c7ffa96d16e47ec4bbb4e171f828650ce853eb0b83c90ae9c6265a) |
+| Signature         | Advanced Micro Devices Inc., Sectigo RSA Code Signing CA, USERTrust RSA Certification Authority, Sectigo (AAA)   |
+| Company           | Advanced Micro Devices, Inc. |
+| Description       | AMD Power Profiling Driver |
+| Product           | AMD uProf |
+| OriginalFilename  | AMDPowerProfiler.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* AMDPCore.SYS
+{{< details "Expand" >}}
+* AMDPCore.SYS
 * ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* PcoreRemoveAllConfigurations
+{{< details "Expand" >}}
+* PcoreRemoveAllConfigurations
 * PcoreIsLoaded
 * PcoreAddConfiguration
 * PcoreUnregister
@@ -149,10 +162,12 @@ sc.exe create AMDPowerProfiler.sys binPath=C:\windows\temp\AMDPowerProfiler.sys 
 * KeQueryPerformanceCounter
 * HalAllocateHardwareCounters
 * HalFreeHardwareCounters
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amdpowerprofiler.yaml)

@@ -49,17 +49,26 @@ sc.exe create gftkyj64.sys binPath=C:\windows\temp\gftkyj64.sys type=kernel &amp
 
 ### Known Vulnerable Samples
 
-| Filename | gftkyj64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/04a88f5974caa621cee18f34300fc08a">04a88f5974caa621cee18f34300fc08a</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/a804ebec7e341b4d98d9e94f6e4860a55ea1638d">a804ebec7e341b4d98d9e94f6e4860a55ea1638d</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c">9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A4252d83e18ad41f0cea7ac168218d95b">4252d83e18ad41f0cea7ac168218d95b</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Acf9cb05c9b725efca68c4b7d6f53c8e233217ac4">cf9cb05c9b725efca68c4b7d6f53c8e233217ac4</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Acd66e893300e7e59a749fe4e1b1706f8ccb5ae140254def9f5a614648e2da36f">cd66e893300e7e59a749fe4e1b1706f8ccb5ae140254def9f5a614648e2da36f</a> || Signature | 北京东方海达网络科技有限责任公司, Sectigo Public Code Signing CA R36, Sectigo Public Code Signing Root R46, Sectigo (AAA)   |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | gftkyj64.sys |
+| MD5                | [04a88f5974caa621cee18f34300fc08a](https://www.virustotal.com/gui/file/04a88f5974caa621cee18f34300fc08a) |
+| SHA1               | [a804ebec7e341b4d98d9e94f6e4860a55ea1638d](https://www.virustotal.com/gui/file/a804ebec7e341b4d98d9e94f6e4860a55ea1638d) |
+| SHA256             | [9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c](https://www.virustotal.com/gui/file/9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c) |
+| Authentihash MD5   | [4252d83e18ad41f0cea7ac168218d95b](https://www.virustotal.com/gui/search/authentihash%253A4252d83e18ad41f0cea7ac168218d95b) |
+| Authentihash SHA1  | [cf9cb05c9b725efca68c4b7d6f53c8e233217ac4](https://www.virustotal.com/gui/search/authentihash%253Acf9cb05c9b725efca68c4b7d6f53c8e233217ac4) |
+| Authentihash SHA256| [cd66e893300e7e59a749fe4e1b1706f8ccb5ae140254def9f5a614648e2da36f](https://www.virustotal.com/gui/search/authentihash%253Acd66e893300e7e59a749fe4e1b1706f8ccb5ae140254def9f5a614648e2da36f) |
+| Signature         | 北京东方海达网络科技有限责任公司, Sectigo Public Code Signing CA R36, Sectigo Public Code Signing Root R46, Sectigo (AAA)   |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* rand
+{{< details "Expand" >}}
+* rand
 * srand
 * RtlInitUnicodeString
 * RtlGetVersion
@@ -85,10 +94,12 @@ sc.exe create gftkyj64.sys binPath=C:\windows\temp\gftkyj64.sys type=kernel &amp
 * PsIsSystemThread
 * ObOpenObjectByPointerWithTag
 * KeBugCheckEx
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gftkyj64.yaml)

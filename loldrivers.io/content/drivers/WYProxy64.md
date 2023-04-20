@@ -51,19 +51,27 @@ sc.exe create WYProxy64.sys binPath=C:\windows\temp\WYProxy64.sys type=kernel &a
 
 ### Known Vulnerable Samples
 
-| Filename | WYProxy64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/fafa1bb36f0ac34b762a10e9f327dcab2152a6d0b16a19697362d49a31e7f566">fafa1bb36f0ac34b762a10e9f327dcab2152a6d0b16a19697362d49a31e7f566</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | WYProxy64.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [-](https://www.virustotal.com/gui/file/-) |
+| SHA256             | [fafa1bb36f0ac34b762a10e9f327dcab2152a6d0b16a19697362d49a31e7f566](https://www.virustotal.com/gui/file/fafa1bb36f0ac34b762a10e9f327dcab2152a6d0b16a19697362d49a31e7f566) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wyproxy64.yaml)

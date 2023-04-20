@@ -46,18 +46,31 @@ sc.exe create CorsairLLAccess64.sys binPath=C:\windows\temp\CorsairLLAccess64.sy
 
 ### Known Vulnerable Samples
 
-| Filename | CorsairLLAccess64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/803a371a78d528a44ef8777f67443b16">803a371a78d528a44ef8777f67443b16</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/5fb9421be8a8b08ec395d05e00fd45eb753b593a">5fb9421be8a8b08ec395d05e00fd45eb753b593a</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/000547560fea0dd4b477eb28bf781ea67bf83c748945ce8923f90fdd14eb7a4b">000547560fea0dd4b477eb28bf781ea67bf83c748945ce8923f90fdd14eb7a4b</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Adaa859bc87e256d7cbf1d86285d96f9b">daa859bc87e256d7cbf1d86285d96f9b</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ad29d73b2add87a7daf3c626d593599ef6b9560ca">d29d73b2add87a7daf3c626d593599ef6b9560ca</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ae4ac5c7fbb41ee988029b27d8b6be574725689fd1365f5a56f5a12d9120f86c6">e4ac5c7fbb41ee988029b27d8b6be574725689fd1365f5a56f5a12d9120f86c6</a> || Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   || Company | Corsair Memory, Inc. || Description | Corsair LL Access || Product | Corsair LL Access || OriginalFilename | Corsair LL Access |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | CorsairLLAccess64.sys |
+| MD5                | [803a371a78d528a44ef8777f67443b16](https://www.virustotal.com/gui/file/803a371a78d528a44ef8777f67443b16) |
+| SHA1               | [5fb9421be8a8b08ec395d05e00fd45eb753b593a](https://www.virustotal.com/gui/file/5fb9421be8a8b08ec395d05e00fd45eb753b593a) |
+| SHA256             | [000547560fea0dd4b477eb28bf781ea67bf83c748945ce8923f90fdd14eb7a4b](https://www.virustotal.com/gui/file/000547560fea0dd4b477eb28bf781ea67bf83c748945ce8923f90fdd14eb7a4b) |
+| Authentihash MD5   | [daa859bc87e256d7cbf1d86285d96f9b](https://www.virustotal.com/gui/search/authentihash%253Adaa859bc87e256d7cbf1d86285d96f9b) |
+| Authentihash SHA1  | [d29d73b2add87a7daf3c626d593599ef6b9560ca](https://www.virustotal.com/gui/search/authentihash%253Ad29d73b2add87a7daf3c626d593599ef6b9560ca) |
+| Authentihash SHA256| [e4ac5c7fbb41ee988029b27d8b6be574725689fd1365f5a56f5a12d9120f86c6](https://www.virustotal.com/gui/search/authentihash%253Ae4ac5c7fbb41ee988029b27d8b6be574725689fd1365f5a56f5a12d9120f86c6) |
+| Signature         | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
+| Company           | Corsair Memory, Inc. |
+| Description       | Corsair LL Access |
+| Product           | Corsair LL Access |
+| OriginalFilename  | Corsair LL Access |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* RtlInitUnicodeString
+{{< details "Expand" >}}
+* RtlInitUnicodeString
 * RtlGetVersion
 * KeInitializeMutex
 * KeReleaseMutex
@@ -87,10 +100,12 @@ sc.exe create CorsairLLAccess64.sys binPath=C:\windows\temp\CorsairLLAccess64.sy
 * wcscpy_s
 * HalSetBusDataByOffset
 * HalGetBusDataByOffset
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/corsairllaccess64.yaml)

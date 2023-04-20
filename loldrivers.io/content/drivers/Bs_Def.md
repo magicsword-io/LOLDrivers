@@ -51,18 +51,31 @@ sc.exe create Bs_Def.sys binPath=C:\windows\temp\Bs_Def.sys type=kernel &amp;&am
 
 ### Known Vulnerable Samples
 
-| Filename | Bs_Def.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/a9f220b1507a3c9a327a99995ff99c82">a9f220b1507a3c9a327a99995ff99c82</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/2c5ff272bd345962ed41ab8869aef41da0dfe697">2c5ff272bd345962ed41ab8869aef41da0dfe697</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be">5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Af27b347b5124473a3a9a46986889e408">f27b347b5124473a3a9a46986889e408</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A69ca963ec00bdd2a92a9777e91d0174bbe97e29c">69ca963ec00bdd2a92a9777e91d0174bbe97e29c</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A410f02303292798ab2a8b3e7d253938b466e83071b15e7d3aaa25f4995b27187">410f02303292798ab2a8b3e7d253938b466e83071b15e7d3aaa25f4995b27187</a> || Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | AsusTek Computer Inc. || Description | Default BIOS Flash Driver || Product | Support SST39SF020,SST29EE020,AT49F002T,AT29C020,AM29F002NT,AM29F002NB,V29C51002T,V29C51002B,M29F002T,W29C020. || OriginalFilename | Bs_Def64.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | Bs_Def.sys |
+| MD5                | [a9f220b1507a3c9a327a99995ff99c82](https://www.virustotal.com/gui/file/a9f220b1507a3c9a327a99995ff99c82) |
+| SHA1               | [2c5ff272bd345962ed41ab8869aef41da0dfe697](https://www.virustotal.com/gui/file/2c5ff272bd345962ed41ab8869aef41da0dfe697) |
+| SHA256             | [5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be](https://www.virustotal.com/gui/file/5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be) |
+| Authentihash MD5   | [f27b347b5124473a3a9a46986889e408](https://www.virustotal.com/gui/search/authentihash%253Af27b347b5124473a3a9a46986889e408) |
+| Authentihash SHA1  | [69ca963ec00bdd2a92a9777e91d0174bbe97e29c](https://www.virustotal.com/gui/search/authentihash%253A69ca963ec00bdd2a92a9777e91d0174bbe97e29c) |
+| Authentihash SHA256| [410f02303292798ab2a8b3e7d253938b466e83071b15e7d3aaa25f4995b27187](https://www.virustotal.com/gui/search/authentihash%253A410f02303292798ab2a8b3e7d253938b466e83071b15e7d3aaa25f4995b27187) |
+| Signature         | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
+| Company           | AsusTek Computer Inc. |
+| Description       | Default BIOS Flash Driver |
+| Product           | Support SST39SF020,SST29EE020,AT49F002T,AT29C020,AM29F002NT,AM29F002NB,V29C51002T,V29C51002B,M29F002T,W29C020. |
+| OriginalFilename  | Bs_Def64.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* MmBuildMdlForNonPagedPool
+{{< details "Expand" >}}
+* MmBuildMdlForNonPagedPool
 * IoAllocateMdl
 * MmGetPhysicalAddress
 * MmAllocateContiguousMemory
@@ -93,10 +106,12 @@ sc.exe create Bs_Def.sys binPath=C:\windows\temp\Bs_Def.sys type=kernel &amp;&am
 * RtlInitUnicodeString
 * MmFreeContiguousMemory
 * HalTranslateBusAddress
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_def.yaml)

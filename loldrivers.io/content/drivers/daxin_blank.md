@@ -47,18 +47,29 @@ sc.exe create daxin_blank.sys binPath=C:\windows\temp\daxin_blank.sys     type=k
 
 ### Known Vulnerable Samples
 
-| Filename | daxin_blank.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/62c18d61ed324088f963510bae43b831">62c18d61ed324088f963510bae43b831</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/8302802b709ad242a81b939b6c90b3230e1a1f1e">8302802b709ad242a81b939b6c90b3230e1a1f1e</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/49c827cf48efb122a9d6fd87b426482b7496ccd4a2dbca31ebbf6b2b80c98530">49c827cf48efb122a9d6fd87b426482b7496ccd4a2dbca31ebbf6b2b80c98530</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A253bde63495fa4f995a6debae44e598e">253bde63495fa4f995a6debae44e598e</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A57391d4c4e30f91e3e780d5242fd98a178ec67ac">57391d4c4e30f91e3e780d5242fd98a178ec67ac</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aa000d211840cb8fbcbf95c334b1d04eadb45ba03b0413c96472e47e9e22413ff">a000d211840cb8fbcbf95c334b1d04eadb45ba03b0413c96472e47e9e22413ff</a> || Publisher | Anhua Xinda (Beijing) Technology Co., Ltd. || Signature | S, i, g, n, e, d   || Date | 7:07 AM 1/23/2013 |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | daxin_blank.sys |
+| MD5                | [62c18d61ed324088f963510bae43b831](https://www.virustotal.com/gui/file/62c18d61ed324088f963510bae43b831) |
+| SHA1               | [8302802b709ad242a81b939b6c90b3230e1a1f1e](https://www.virustotal.com/gui/file/8302802b709ad242a81b939b6c90b3230e1a1f1e) |
+| SHA256             | [49c827cf48efb122a9d6fd87b426482b7496ccd4a2dbca31ebbf6b2b80c98530](https://www.virustotal.com/gui/file/49c827cf48efb122a9d6fd87b426482b7496ccd4a2dbca31ebbf6b2b80c98530) |
+| Authentihash MD5   | [253bde63495fa4f995a6debae44e598e](https://www.virustotal.com/gui/search/authentihash%253A253bde63495fa4f995a6debae44e598e) |
+| Authentihash SHA1  | [57391d4c4e30f91e3e780d5242fd98a178ec67ac](https://www.virustotal.com/gui/search/authentihash%253A57391d4c4e30f91e3e780d5242fd98a178ec67ac) |
+| Authentihash SHA256| [a000d211840cb8fbcbf95c334b1d04eadb45ba03b0413c96472e47e9e22413ff](https://www.virustotal.com/gui/search/authentihash%253Aa000d211840cb8fbcbf95c334b1d04eadb45ba03b0413c96472e47e9e22413ff) |
+| Publisher         | Anhua Xinda (Beijing) Technology Co., Ltd. |
+| Signature         | S, i, g, n, e, d   |
+| Date                | 7:07 AM 1/23/2013 |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * NDIS.SYS
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* wcsncmp
+{{< details "Expand" >}}
+* wcsncmp
 * DbgPrint
 * IoAllocateMdl
 * _stricmp
@@ -140,10 +151,12 @@ sc.exe create daxin_blank.sys binPath=C:\windows\temp\daxin_blank.sys     type=k
 * NdisFreeNetBufferListPool
 * NdisFreeNetBufferList
 * NdisSendNetBufferLists
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank.yaml)

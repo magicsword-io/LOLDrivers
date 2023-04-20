@@ -51,19 +51,27 @@ sc.exe create nstr.sys binPath=C:\windows\temp \n \n \n  str.sys type=kernel &am
 
 ### Known Vulnerable Samples
 
-| Filename | nstr.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/455bc98ba32adab8b47d2d89bdbadca4910f91c182ab2fc3211ba07d3784537b">455bc98ba32adab8b47d2d89bdbadca4910f91c182ab2fc3211ba07d3784537b</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | nstr.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [-](https://www.virustotal.com/gui/file/-) |
+| SHA256             | [455bc98ba32adab8b47d2d89bdbadca4910f91c182ab2fc3211ba07d3784537b](https://www.virustotal.com/gui/file/455bc98ba32adab8b47d2d89bdbadca4910f91c182ab2fc3211ba07d3784537b) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nstr.yaml)

@@ -51,19 +51,27 @@ sc.exe create WinIo64A.sys binPath=C:\windows\temp\WinIo64A.sys type=kernel &amp
 
 ### Known Vulnerable Samples
 
-| Filename | WinIo64A.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/0c74d09da7baf7c05360346e4c3512d0cd433d59">0c74d09da7baf7c05360346e4c3512d0cd433d59</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | WinIo64A.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [0c74d09da7baf7c05360346e4c3512d0cd433d59](https://www.virustotal.com/gui/file/0c74d09da7baf7c05360346e4c3512d0cd433d59) |
+| SHA256             | [-](https://www.virustotal.com/gui/file/-) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio64a.yaml)

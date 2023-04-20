@@ -51,19 +51,27 @@ sc.exe create bwrsh.sys binPath=C:\windows\temp\bwrsh.sys type=kernel &amp;&amp;
 
 ### Known Vulnerable Samples
 
-| Filename | bwrsh.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/37dde6bd8a7a36111c3ac57e0ac20bbb93ce3374d0852bcacc9a2c8c8c30079e">37dde6bd8a7a36111c3ac57e0ac20bbb93ce3374d0852bcacc9a2c8c8c30079e</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | bwrsh.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [-](https://www.virustotal.com/gui/file/-) |
+| SHA256             | [37dde6bd8a7a36111c3ac57e0ac20bbb93ce3374d0852bcacc9a2c8c8c30079e](https://www.virustotal.com/gui/file/37dde6bd8a7a36111c3ac57e0ac20bbb93ce3374d0852bcacc9a2c8c8c30079e) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bwrsh.yaml)

@@ -51,31 +51,47 @@ sc.exe create WinIo64C.sys binPath=C:\windows\temp\WinIo64C.sys type=kernel &amp
 
 ### Known Vulnerable Samples
 
-| Filename | WinIo64C.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/b242b0332b9c9e8e17ec27ef10d75503d20d97b6">b242b0332b9c9e8e17ec27ef10d75503d20d97b6</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-| Filename | WinIo64C.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/a65fabaf64aa1934314aae23f25cdf215cbaa4b6">a65fabaf64aa1934314aae23f25cdf215cbaa4b6</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | WinIo64C.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [b242b0332b9c9e8e17ec27ef10d75503d20d97b6](https://www.virustotal.com/gui/file/b242b0332b9c9e8e17ec27ef10d75503d20d97b6) |
+| SHA256             | [-](https://www.virustotal.com/gui/file/-) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}| Property           | Value |
+|:-------------------|:------|
+| Filename           | WinIo64C.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [a65fabaf64aa1934314aae23f25cdf215cbaa4b6](https://www.virustotal.com/gui/file/a65fabaf64aa1934314aae23f25cdf215cbaa4b6) |
+| SHA256             | [-](https://www.virustotal.com/gui/file/-) |
+| Signature         | -   |
+
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio64c.yaml)

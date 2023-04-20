@@ -46,18 +46,27 @@ sc.exe create Air_SYSTEM10.sys binPath=C:\windows\temp\Air_SYSTEM10.sys     type
 
 ### Known Vulnerable Samples
 
-| Filename | Air_SYSTEM10.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/1f2888e57fdd6aee466962c25ba7d62d">1f2888e57fdd6aee466962c25ba7d62d</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/c23eeb6f18f626ce1fd840227f351fa7543bb167">c23eeb6f18f626ce1fd840227f351fa7543bb167</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/f461414a2596555cece5cfee65a3c22648db0082ca211f6238af8230e41b3212">f461414a2596555cece5cfee65a3c22648db0082ca211f6238af8230e41b3212</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A6f562fc03c72abd6ff33c6df23df0219">6f562fc03c72abd6ff33c6df23df0219</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A7435b3f4c67217bfcdcfa9d940b12e5d5d6a22da">7435b3f4c67217bfcdcfa9d940b12e5d5d6a22da</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A9c31a9fbf833b732b5f3f06c31e200994a65ce187260e66eff62278660dba4ef">9c31a9fbf833b732b5f3f06c31e200994a65ce187260e66eff62278660dba4ef</a> || Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | Air_SYSTEM10.sys |
+| MD5                | [1f2888e57fdd6aee466962c25ba7d62d](https://www.virustotal.com/gui/file/1f2888e57fdd6aee466962c25ba7d62d) |
+| SHA1               | [c23eeb6f18f626ce1fd840227f351fa7543bb167](https://www.virustotal.com/gui/file/c23eeb6f18f626ce1fd840227f351fa7543bb167) |
+| SHA256             | [f461414a2596555cece5cfee65a3c22648db0082ca211f6238af8230e41b3212](https://www.virustotal.com/gui/file/f461414a2596555cece5cfee65a3c22648db0082ca211f6238af8230e41b3212) |
+| Authentihash MD5   | [6f562fc03c72abd6ff33c6df23df0219](https://www.virustotal.com/gui/search/authentihash%253A6f562fc03c72abd6ff33c6df23df0219) |
+| Authentihash SHA1  | [7435b3f4c67217bfcdcfa9d940b12e5d5d6a22da](https://www.virustotal.com/gui/search/authentihash%253A7435b3f4c67217bfcdcfa9d940b12e5d5d6a22da) |
+| Authentihash SHA256| [9c31a9fbf833b732b5f3f06c31e200994a65ce187260e66eff62278660dba4ef](https://www.virustotal.com/gui/search/authentihash%253A9c31a9fbf833b732b5f3f06c31e200994a65ce187260e66eff62278660dba4ef) |
+| Signature         | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
+
+
 #### Imports
-{{< details "Expand" >}}* FLTMGR.SYS
+{{< details "Expand" >}}
+* FLTMGR.SYS
 * ntoskrnl.exe
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* FltRegisterFilter
+{{< details "Expand" >}}
+* FltRegisterFilter
 * FltUnregisterFilter
 * FltStartFiltering
 * FltGetFileNameInformation
@@ -117,10 +126,12 @@ sc.exe create Air_SYSTEM10.sys binPath=C:\windows\temp\Air_SYSTEM10.sys     type
 * MmCopyVirtualMemory
 * PsGetProcessPeb
 * ZwQuerySystemInformation
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/air_system10.yaml)

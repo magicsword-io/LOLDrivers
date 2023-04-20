@@ -46,18 +46,27 @@ sc.exe create BS_HWMIo64.sys binPath=C:\windows\temp\BS_HWMIo64.sys type=kernel 
 
 ### Known Vulnerable Samples
 
-| Filename | BS_HWMIo64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/338a98e1c27bc76f09331fcd7ae413a5">338a98e1c27bc76f09331fcd7ae413a5</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/9c24dd75e4074041dbe03bf21f050c77d748b8e9">9c24dd75e4074041dbe03bf21f050c77d748b8e9</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/60c6f4f34c7319cb3f9ca682e59d92711a05a2688badbae4891b1303cd384813">60c6f4f34c7319cb3f9ca682e59d92711a05a2688badbae4891b1303cd384813</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ad6f9dc5cd435d1c210cd4053886b9f36">d6f9dc5cd435d1c210cd4053886b9f36</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A3281135748c9c7a9ddace55c648c720af810475f">3281135748c9c7a9ddace55c648c720af810475f</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A3de51a3102db7297d96b4de5b60aca5f3a07e8577bbbed7f755f1de9a9c38e75">3de51a3102db7297d96b4de5b60aca5f3a07e8577bbbed7f755f1de9a9c38e75</a> || Signature | BIOSTAR MICROTECH INT&#39;L CORP, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | BS_HWMIo64.sys |
+| MD5                | [338a98e1c27bc76f09331fcd7ae413a5](https://www.virustotal.com/gui/file/338a98e1c27bc76f09331fcd7ae413a5) |
+| SHA1               | [9c24dd75e4074041dbe03bf21f050c77d748b8e9](https://www.virustotal.com/gui/file/9c24dd75e4074041dbe03bf21f050c77d748b8e9) |
+| SHA256             | [60c6f4f34c7319cb3f9ca682e59d92711a05a2688badbae4891b1303cd384813](https://www.virustotal.com/gui/file/60c6f4f34c7319cb3f9ca682e59d92711a05a2688badbae4891b1303cd384813) |
+| Authentihash MD5   | [d6f9dc5cd435d1c210cd4053886b9f36](https://www.virustotal.com/gui/search/authentihash%253Ad6f9dc5cd435d1c210cd4053886b9f36) |
+| Authentihash SHA1  | [3281135748c9c7a9ddace55c648c720af810475f](https://www.virustotal.com/gui/search/authentihash%253A3281135748c9c7a9ddace55c648c720af810475f) |
+| Authentihash SHA256| [3de51a3102db7297d96b4de5b60aca5f3a07e8577bbbed7f755f1de9a9c38e75](https://www.virustotal.com/gui/search/authentihash%253A3de51a3102db7297d96b4de5b60aca5f3a07e8577bbbed7f755f1de9a9c38e75) |
+| Signature         | BIOSTAR MICROTECH INT&#39;L CORP, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* KeInitializeSemaphore
+{{< details "Expand" >}}
+* KeInitializeSemaphore
 * IoCreateSymbolicLink
 * IoCreateDevice
 * KeSetEvent
@@ -84,10 +93,12 @@ sc.exe create BS_HWMIo64.sys binPath=C:\windows\temp\BS_HWMIo64.sys type=kernel 
 * IoDeleteSymbolicLink
 * HalSetBusDataByOffset
 * HalGetBusDataByOffset
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_hwmio64.yaml)

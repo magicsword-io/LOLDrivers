@@ -51,31 +51,47 @@ sc.exe create fiddrv64.sys binPath=C:\windows\temp\fiddrv64.sys type=kernel &amp
 
 ### Known Vulnerable Samples
 
-| Filename | fiddrv64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/10e15ba8ff8ed926ddd3636cec66a0f08c9860a4">10e15ba8ff8ed926ddd3636cec66a0f08c9860a4</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-| Filename | fiddrv64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/e4436c8c42ba5ffabd58a3b2256f6e86ccc907ab">e4436c8c42ba5ffabd58a3b2256f6e86ccc907ab</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | fiddrv64.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [10e15ba8ff8ed926ddd3636cec66a0f08c9860a4](https://www.virustotal.com/gui/file/10e15ba8ff8ed926ddd3636cec66a0f08c9860a4) |
+| SHA256             | [-](https://www.virustotal.com/gui/file/-) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}| Property           | Value |
+|:-------------------|:------|
+| Filename           | fiddrv64.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [e4436c8c42ba5ffabd58a3b2256f6e86ccc907ab](https://www.virustotal.com/gui/file/e4436c8c42ba5ffabd58a3b2256f6e86ccc907ab) |
+| SHA256             | [-](https://www.virustotal.com/gui/file/-) |
+| Signature         | -   |
+
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fiddrv64.yaml)

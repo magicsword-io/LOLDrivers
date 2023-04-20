@@ -51,19 +51,27 @@ sc.exe create b.sys binPath=C:\windows\temp\b.sys type=kernel &amp;&amp; sc.exe 
 
 ### Known Vulnerable Samples
 
-| Filename | b.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/84df20b1d9d87e305c92e5ffae21b10b325609d59d835a954dbd8750ef5dabf4">84df20b1d9d87e305c92e5ffae21b10b325609d59d835a954dbd8750ef5dabf4</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | b.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [-](https://www.virustotal.com/gui/file/-) |
+| SHA256             | [84df20b1d9d87e305c92e5ffae21b10b325609d59d835a954dbd8750ef5dabf4](https://www.virustotal.com/gui/file/84df20b1d9d87e305c92e5ffae21b10b325609d59d835a954dbd8750ef5dabf4) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/b.yaml)
