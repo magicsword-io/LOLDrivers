@@ -184,6 +184,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mhyprot3.yaml)

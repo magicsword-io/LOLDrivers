@@ -72,6 +72,8 @@ sc.exe create nstrwsk.sys binPath=C:\windows\temp \n \n \n  strwsk.sys type=kern
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nstrwsk.yaml)

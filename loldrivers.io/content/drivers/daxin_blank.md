@@ -157,6 +157,8 @@ sc.exe create daxin_blank.sys binPath=C:\windows\temp\daxin_blank.sys     type=k
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank.yaml)

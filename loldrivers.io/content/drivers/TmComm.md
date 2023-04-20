@@ -781,6 +781,8 @@ sc.exe create TmComm.sys binPath=C:\windows\temp\TmComm.sys type=kernel &amp;&am
 * _UtilDosPathNameToNtPathName
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/tmcomm.yaml)

@@ -91,7 +91,9 @@ sc.exe create winio64.sys binPath=C:\windows\temp\winio64.sys type=kernel &amp;&
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | winio64.sys |
 | MD5                | [11fb599312cb1cf43ca5e879ed6fb71e](https://www.virustotal.com/gui/file/11fb599312cb1cf43ca5e879ed6fb71e) |
@@ -133,6 +135,8 @@ sc.exe create winio64.sys binPath=C:\windows\temp\winio64.sys type=kernel &amp;&
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio64.yaml)

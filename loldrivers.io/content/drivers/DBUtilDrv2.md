@@ -92,7 +92,9 @@ sc.exe create DBUtilDrv2.sys binPath=C:\windows\temp\DBUtilDrv2.sys type=kernel 
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | DBUtilDrv2.sys |
 | MD5                | [d104621c93213942b7b43d65b5d8d33e](https://www.virustotal.com/gui/file/d104621c93213942b7b43d65b5d8d33e) |
@@ -137,6 +139,8 @@ sc.exe create DBUtilDrv2.sys binPath=C:\windows\temp\DBUtilDrv2.sys type=kernel 
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbutildrv2.yaml)

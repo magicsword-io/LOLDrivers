@@ -87,7 +87,9 @@ sc.exe create dbutil_2_3.sys binPath=C:\windows\temp\dbutil_2_3.sys type=kernel 
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | dbutil_2_3.sys |
 | MD5                | [c996d7971c49252c582171d9380360f2](https://www.virustotal.com/gui/file/c996d7971c49252c582171d9380360f2) |
@@ -129,6 +131,8 @@ sc.exe create dbutil_2_3.sys binPath=C:\windows\temp\dbutil_2_3.sys type=kernel 
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbutil_2_3.yaml)

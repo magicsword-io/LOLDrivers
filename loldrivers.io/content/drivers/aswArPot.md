@@ -242,6 +242,8 @@ sc.exe create aswArPot.sys binPath=C:\windows\temp\aswArPot.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/aswarpot.yaml)

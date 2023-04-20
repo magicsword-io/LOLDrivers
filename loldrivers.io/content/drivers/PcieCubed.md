@@ -161,6 +161,8 @@ sc.exe create PcieCubed.sys binPath=C:\windows\temp\PcieCubed.sys type=kernel &a
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/pciecubed.yaml)

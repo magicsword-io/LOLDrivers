@@ -87,7 +87,9 @@ sc.exe create WinRing0.sys binPath=C:\windows\temp\WinRing0.sys type=kernel &amp
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | WinRing0.sys |
 | MD5                | [12cecc3c14160f32b21279c1a36b8338](https://www.virustotal.com/gui/file/12cecc3c14160f32b21279c1a36b8338) |
@@ -128,7 +130,9 @@ sc.exe create WinRing0.sys binPath=C:\windows\temp\WinRing0.sys type=kernel &amp
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | WinRing0.sys |
 | MD5                | [27bcbeec8a466178a6057b64bef66512](https://www.virustotal.com/gui/file/27bcbeec8a466178a6057b64bef66512) |
@@ -170,6 +174,8 @@ sc.exe create WinRing0.sys binPath=C:\windows\temp\WinRing0.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winring0.yaml)

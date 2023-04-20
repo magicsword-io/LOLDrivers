@@ -71,7 +71,9 @@ sc.exe create fidpcidrv.sys binPath=C:\windows\temp\fidpcidrv.sys type=kernel &a
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | fidpcidrv.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -91,7 +93,9 @@ sc.exe create fidpcidrv.sys binPath=C:\windows\temp\fidpcidrv.sys type=kernel &a
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | fidpcidrv.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -111,7 +115,9 @@ sc.exe create fidpcidrv.sys binPath=C:\windows\temp\fidpcidrv.sys type=kernel &a
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | fidpcidrv.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -132,6 +138,8 @@ sc.exe create fidpcidrv.sys binPath=C:\windows\temp\fidpcidrv.sys type=kernel &a
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fidpcidrv.yaml)

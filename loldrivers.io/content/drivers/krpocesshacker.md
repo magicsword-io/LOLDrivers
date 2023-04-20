@@ -147,6 +147,8 @@ sc.exe create krpocesshacker.sys binPath=C:\windows\temp\krpocesshacker.sys     
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/krpocesshacker.yaml)

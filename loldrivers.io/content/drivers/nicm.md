@@ -148,6 +148,8 @@ sc.exe create nicm.sys binPath=C:\windows\temp \n \n \n  icm.sys type=kernel &am
 * XTComRegisterClassFactory
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nicm.yaml)

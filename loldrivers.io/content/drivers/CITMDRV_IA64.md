@@ -93,7 +93,9 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_IA64.sys |
 | MD5                | [6909b5e86e00b4033fedfca1775b0e33](https://www.virustotal.com/gui/file/6909b5e86e00b4033fedfca1775b0e33) |
@@ -140,7 +142,9 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_IA64.sys |
 | MD5                | [fa173832dca1b1faeba095e5c82a1559](https://www.virustotal.com/gui/file/fa173832dca1b1faeba095e5c82a1559) |
@@ -187,7 +191,9 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_IA64.sys |
 | MD5                | [bbe4f5f8b0c0f32f384a83ae31f49a00](https://www.virustotal.com/gui/file/bbe4f5f8b0c0f32f384a83ae31f49a00) |
@@ -234,7 +240,9 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_IA64.sys |
 | MD5                | [c5f5d109f11aadebae94c77b27cb026f](https://www.virustotal.com/gui/file/c5f5d109f11aadebae94c77b27cb026f) |
@@ -281,7 +289,9 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_IA64.sys |
 | MD5                | [40bc58b7615d00eb55ad9ba700c340c1](https://www.virustotal.com/gui/file/40bc58b7615d00eb55ad9ba700c340c1) |
@@ -328,7 +338,9 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_IA64.sys |
 | MD5                | [839cbbc86453960e9eb6db814b776a40](https://www.virustotal.com/gui/file/839cbbc86453960e9eb6db814b776a40) |
@@ -375,7 +387,9 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_IA64.sys |
 | MD5                | [42f7cc4be348c3efd98b0f1233cf2d69](https://www.virustotal.com/gui/file/42f7cc4be348c3efd98b0f1233cf2d69) |
@@ -422,7 +436,9 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_IA64.sys |
 | MD5                | [2128e6c044ee86f822d952a261af0b48](https://www.virustotal.com/gui/file/2128e6c044ee86f822d952a261af0b48) |
@@ -469,7 +485,9 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_IA64.sys |
 | MD5                | [fd81af62964f5dd5eb4a828543a33dcf](https://www.virustotal.com/gui/file/fd81af62964f5dd5eb4a828543a33dcf) |
@@ -516,7 +534,9 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_IA64.sys |
 | MD5                | [010c0e5ac584e3ab97a2daf84cf436f5](https://www.virustotal.com/gui/file/010c0e5ac584e3ab97a2daf84cf436f5) |
@@ -563,7 +583,9 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_IA64.sys |
 | MD5                | [ff7b31fa6e9ab923bce8af31d1be5bb2](https://www.virustotal.com/gui/file/ff7b31fa6e9ab923bce8af31d1be5bb2) |
@@ -610,7 +632,9 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_IA64.sys |
 | MD5                | [7bd840ff7f15df79a9a71fec7db1243e](https://www.virustotal.com/gui/file/7bd840ff7f15df79a9a71fec7db1243e) |
@@ -657,7 +681,9 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_IA64.sys |
 | MD5                | [fa222bed731713904320723b9c085b11](https://www.virustotal.com/gui/file/fa222bed731713904320723b9c085b11) |
@@ -704,7 +730,9 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_IA64.sys |
 | MD5                | [f778489c7105a63e9e789a02412aaa5f](https://www.virustotal.com/gui/file/f778489c7105a63e9e789a02412aaa5f) |
@@ -751,7 +779,9 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_IA64.sys |
 | MD5                | [ed07f1a8038596574184e09211dfc30f](https://www.virustotal.com/gui/file/ed07f1a8038596574184e09211dfc30f) |
@@ -798,7 +828,9 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_IA64.sys |
 | MD5                | [14eead4d42728e9340ec8399a225c124](https://www.virustotal.com/gui/file/14eead4d42728e9340ec8399a225c124) |
@@ -845,7 +877,9 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_IA64.sys |
 | MD5                | [825703c494e0d270f797f1ecf070f698](https://www.virustotal.com/gui/file/825703c494e0d270f797f1ecf070f698) |
@@ -892,7 +926,9 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_IA64.sys |
 | MD5                | [9007c94c9d91ccff8d7f5d4cdddcc403](https://www.virustotal.com/gui/file/9007c94c9d91ccff8d7f5d4cdddcc403) |
@@ -939,7 +975,9 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_IA64.sys |
 | MD5                | [9b359b722ac80c4e0a5235264e1e0156](https://www.virustotal.com/gui/file/9b359b722ac80c4e0a5235264e1e0156) |
@@ -987,6 +1025,8 @@ sc.exe create CITMDRV_IA64.sys binPath=C:\windows\temp\CITMDRV_IA64.sys     type
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/citmdrv_ia64.yaml)

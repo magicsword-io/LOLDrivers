@@ -69,7 +69,9 @@ sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sy
 {{< details "Expand" >}}
 * restore
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | 0x3040_blacklotus_beta_driver.sys |
 | MD5                | [a42249a046182aaaf3a7a7db98bfa69d](https://www.virustotal.com/gui/file/a42249a046182aaaf3a7a7db98bfa69d) |
@@ -93,7 +95,9 @@ sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sy
 {{< details "Expand" >}}
 * restore
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | 0x3040_blacklotus_beta_driver.sys |
 | MD5                | [a42249a046182aaaf3a7a7db98bfa69d](https://www.virustotal.com/gui/file/a42249a046182aaaf3a7a7db98bfa69d) |
@@ -117,7 +121,9 @@ sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sy
 {{< details "Expand" >}}
 * restore
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | blacklotus_beta_driver.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -137,7 +143,9 @@ sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sy
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | blacklotus_beta_driver_2.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -157,7 +165,9 @@ sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sy
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | blacklotus_beta_driver_3.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -177,7 +187,9 @@ sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sy
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | blacklotus_beta_driver_4.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -198,6 +210,8 @@ sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sy
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/blacklotus_driver.yaml)

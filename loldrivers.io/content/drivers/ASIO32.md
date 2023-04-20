@@ -71,7 +71,9 @@ sc.exe create ASIO32.sys binPath=C:\windows\temp\ASIO32.sys type=kernel &amp;&am
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | ASIO32.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -91,7 +93,9 @@ sc.exe create ASIO32.sys binPath=C:\windows\temp\ASIO32.sys type=kernel &amp;&am
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | ASIO32.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -111,7 +115,9 @@ sc.exe create ASIO32.sys binPath=C:\windows\temp\ASIO32.sys type=kernel &amp;&am
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | ASIO32.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -131,7 +137,9 @@ sc.exe create ASIO32.sys binPath=C:\windows\temp\ASIO32.sys type=kernel &amp;&am
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | ASIO32.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -151,7 +159,9 @@ sc.exe create ASIO32.sys binPath=C:\windows\temp\ASIO32.sys type=kernel &amp;&am
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | ASIO32.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -172,6 +182,8 @@ sc.exe create ASIO32.sys binPath=C:\windows\temp\ASIO32.sys type=kernel &amp;&am
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asio32.yaml)

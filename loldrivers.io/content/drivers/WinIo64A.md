@@ -72,6 +72,8 @@ sc.exe create WinIo64A.sys binPath=C:\windows\temp\WinIo64A.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio64a.yaml)

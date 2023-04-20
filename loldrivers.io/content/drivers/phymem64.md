@@ -98,6 +98,8 @@ sc.exe create phymem64.sys binPath=C:\windows\temp\phymem64.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/phymem64.yaml)

@@ -112,6 +112,8 @@ sc.exe create FairplayKD.sys binPath=C:\windows\temp\FairplayKD.sys type=kernel 
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fairplaykd.yaml)

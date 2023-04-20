@@ -71,7 +71,9 @@ sc.exe create WinIo64C.sys binPath=C:\windows\temp\WinIo64C.sys type=kernel &amp
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | WinIo64C.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -92,6 +94,8 @@ sc.exe create WinIo64C.sys binPath=C:\windows\temp\WinIo64C.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio64c.yaml)

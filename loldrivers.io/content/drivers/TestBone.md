@@ -72,6 +72,8 @@ sc.exe create TestBone.sys binPath=C:\windows\temp\TestBone.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/testbone.yaml)

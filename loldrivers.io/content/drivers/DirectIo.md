@@ -129,6 +129,8 @@ sc.exe create DirectIo.sys binPath=C:\windows\temp\DirectIo.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/directio.yaml)

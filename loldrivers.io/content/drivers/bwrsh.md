@@ -72,6 +72,8 @@ sc.exe create bwrsh.sys binPath=C:\windows\temp\bwrsh.sys type=kernel &amp;&amp;
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bwrsh.yaml)

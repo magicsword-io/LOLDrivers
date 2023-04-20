@@ -72,6 +72,8 @@ sc.exe create c.sys binPath=C:\windows\temp\c.sys type=kernel &amp;&amp; sc.exe 
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/c.yaml)

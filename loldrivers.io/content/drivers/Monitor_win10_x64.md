@@ -89,6 +89,8 @@ sc.exe create Monitor_win10_x64.sys binPath=C:\windows\temp\Monitor_win10_x64.sy
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/monitor_win10_x64.yaml)

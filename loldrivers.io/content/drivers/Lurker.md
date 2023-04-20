@@ -72,6 +72,8 @@ sc.exe create Lurker.sys binPath=C:\windows\temp\Lurker.sys type=kernel &amp;&am
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lurker.yaml)

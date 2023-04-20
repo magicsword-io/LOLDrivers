@@ -87,7 +87,9 @@ sc.exe create GLCKIO2.sys binPath=C:\windows\temp\GLCKIO2.sys type=kernel &amp;&
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | GLCKIO2.sys |
 | MD5                | [d253c19194a18030296ae62a10821640](https://www.virustotal.com/gui/file/d253c19194a18030296ae62a10821640) |
@@ -129,6 +131,8 @@ sc.exe create GLCKIO2.sys binPath=C:\windows\temp\GLCKIO2.sys type=kernel &amp;&
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/glckio2.yaml)

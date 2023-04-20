@@ -72,6 +72,8 @@ sc.exe create gameink.sys binPath=C:\windows\temp\gameink.sys type=kernel &amp;&
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gameink.yaml)

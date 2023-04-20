@@ -120,6 +120,8 @@ sc.exe create elbycdio.sys binPath=C:\windows\temp\elbycdio.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/elbycdio.yaml)

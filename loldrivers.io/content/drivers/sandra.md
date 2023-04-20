@@ -112,6 +112,8 @@ sc.exe create sandra.sys binPath=C:\windows\temp\sandra.sys type=kernel &amp;&am
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/sandra.yaml)

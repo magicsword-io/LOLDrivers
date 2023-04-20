@@ -144,6 +144,8 @@ sc.exe create viraglt64.sys binPath=C:\windows\temp\viraglt64.sys type=kernel &a
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/viraglt64.yaml)

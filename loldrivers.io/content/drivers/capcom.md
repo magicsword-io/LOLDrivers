@@ -78,6 +78,8 @@ sc.exe create capcom.sys binPath=C:\windows\temp\capcom.sys type=kernel &amp;&am
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/capcom.yaml)

@@ -109,6 +109,8 @@ sc.exe create ndislan.sys binPath=C:\windows\temp \n \n \n  dislan.sys type=kern
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ndislan.yaml)

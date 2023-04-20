@@ -89,6 +89,8 @@ sc.exe create POORTRY1.sys binPath=C:\windows\temp\POORTRY1.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/poortry1.yaml)

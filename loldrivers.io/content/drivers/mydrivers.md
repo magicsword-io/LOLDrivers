@@ -106,6 +106,8 @@ sc.exe create mydrivers.sys binPath=C:\windows\temp\mydrivers.sys type=kernel &a
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mydrivers.yaml)

@@ -107,7 +107,9 @@ sc.exe create gdrv.sys binPath=C:\windows\temp\gdrv.sys type=kernel &amp;&amp; s
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | gdrv.sys |
 | MD5                | [1cff7b947f8c3dea1d34dc791fc78cdc](https://www.virustotal.com/gui/file/1cff7b947f8c3dea1d34dc791fc78cdc) |
@@ -167,6 +169,8 @@ sc.exe create gdrv.sys binPath=C:\windows\temp\gdrv.sys type=kernel &amp;&amp; s
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gdrv.yaml)

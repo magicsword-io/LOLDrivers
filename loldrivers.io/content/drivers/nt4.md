@@ -72,6 +72,8 @@ sc.exe create nt4.sys binPath=C:\windows\temp \n \n \n  t4.sys type=kernel &amp;
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nt4.yaml)

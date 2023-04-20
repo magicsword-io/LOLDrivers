@@ -112,6 +112,8 @@ sc.exe create Bs_Def.sys binPath=C:\windows\temp\Bs_Def.sys type=kernel &amp;&am
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_def.yaml)

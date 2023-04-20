@@ -72,6 +72,8 @@ sc.exe create GameTerSafe.sys binPath=C:\windows\temp\GameTerSafe.sys     type=k
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gametersafe.yaml)

@@ -92,7 +92,9 @@ sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     ty
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_AMD64.sys |
 | MD5                | [aa1ed3917928f04d97d8a217fe9b5cb1](https://www.virustotal.com/gui/file/aa1ed3917928f04d97d8a217fe9b5cb1) |
@@ -138,7 +140,9 @@ sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     ty
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_AMD64.sys |
 | MD5                | [dd39a86852b498b891672ffbcd071c03](https://www.virustotal.com/gui/file/dd39a86852b498b891672ffbcd071c03) |
@@ -184,7 +188,9 @@ sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     ty
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_AMD64.sys |
 | MD5                | [708ac9f7b12b6ca4553fd8d0c7299296](https://www.virustotal.com/gui/file/708ac9f7b12b6ca4553fd8d0c7299296) |
@@ -230,7 +236,9 @@ sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     ty
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_AMD64.sys |
 | MD5                | [7a16fca3d56c6038c692ec75b2bfee15](https://www.virustotal.com/gui/file/7a16fca3d56c6038c692ec75b2bfee15) |
@@ -276,7 +284,9 @@ sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     ty
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_AMD64.sys |
 | MD5                | [5970e8de1b337ca665114511b9d10806](https://www.virustotal.com/gui/file/5970e8de1b337ca665114511b9d10806) |
@@ -322,7 +332,9 @@ sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     ty
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_AMD64.sys |
 | MD5                | [2509a71a02296aa65a3428ddfac22180](https://www.virustotal.com/gui/file/2509a71a02296aa65a3428ddfac22180) |
@@ -368,7 +380,9 @@ sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     ty
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_AMD64.sys |
 | MD5                | [296bde4d0ed32c6069eb90c502187d0d](https://www.virustotal.com/gui/file/296bde4d0ed32c6069eb90c502187d0d) |
@@ -414,7 +428,9 @@ sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     ty
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_AMD64.sys |
 | MD5                | [d1bac75205c389d6d5d6418f0457c29b](https://www.virustotal.com/gui/file/d1bac75205c389d6d5d6418f0457c29b) |
@@ -460,7 +476,9 @@ sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     ty
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_AMD64.sys |
 | MD5                | [b2a9ac0600b12ec9819e049d7a6a0b75](https://www.virustotal.com/gui/file/b2a9ac0600b12ec9819e049d7a6a0b75) |
@@ -506,7 +524,9 @@ sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     ty
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_AMD64.sys |
 | MD5                | [79f7e6f98a5d3ab6601622be4471027f](https://www.virustotal.com/gui/file/79f7e6f98a5d3ab6601622be4471027f) |
@@ -552,7 +572,9 @@ sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     ty
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_AMD64.sys |
 | MD5                | [2d465b4487dc81effaa84f122b71c24f](https://www.virustotal.com/gui/file/2d465b4487dc81effaa84f122b71c24f) |
@@ -598,7 +620,9 @@ sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     ty
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_AMD64.sys |
 | MD5                | [4d17b32be70ef39eae5d5edeb5e89877](https://www.virustotal.com/gui/file/4d17b32be70ef39eae5d5edeb5e89877) |
@@ -644,7 +668,9 @@ sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     ty
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_AMD64.sys |
 | MD5                | [c1d3a6bb423739a5e781f7eee04c9cfd](https://www.virustotal.com/gui/file/c1d3a6bb423739a5e781f7eee04c9cfd) |
@@ -690,7 +716,9 @@ sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     ty
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_AMD64.sys |
 | MD5                | [054299e09cea38df2b84e6b29348b418](https://www.virustotal.com/gui/file/054299e09cea38df2b84e6b29348b418) |
@@ -736,7 +764,9 @@ sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     ty
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | CITMDRV_AMD64.sys |
 | MD5                | [0ba6afe0ea182236f98365bd977adfdf](https://www.virustotal.com/gui/file/0ba6afe0ea182236f98365bd977adfdf) |
@@ -783,6 +813,8 @@ sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     ty
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/citmdrv_amd64.yaml)

@@ -98,6 +98,8 @@ sc.exe create AsrDrv102.sys binPath=C:\windows\temp\AsrDrv102.sys type=kernel &a
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv102.yaml)

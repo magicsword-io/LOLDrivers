@@ -99,6 +99,8 @@ sc.exe create msrhook.sys binPath=C:\windows\temp\msrhook.sys type=kernel &amp;&
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/msrhook.yaml)

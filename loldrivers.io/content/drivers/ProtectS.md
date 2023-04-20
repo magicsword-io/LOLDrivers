@@ -71,7 +71,9 @@ sc.exe create ProtectS.sys binPath=C:\windows\temp\ProtectS.sys type=kernel &amp
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | ProtectS.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -92,6 +94,8 @@ sc.exe create ProtectS.sys binPath=C:\windows\temp\ProtectS.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/protects.yaml)

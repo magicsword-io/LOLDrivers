@@ -92,6 +92,8 @@ sc.exe create atillk64.sys binPath=C:\windows\temp\atillk64.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/atillk64.yaml)

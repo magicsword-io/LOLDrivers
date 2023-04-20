@@ -148,6 +148,8 @@ sc.exe create PCHunter.sys binPath=C:\windows\temp\PCHunter.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/pchunter.yaml)

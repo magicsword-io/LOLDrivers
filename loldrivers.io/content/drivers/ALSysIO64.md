@@ -103,7 +103,9 @@ sc.exe create ALSysIO64.sys binPath=C:\windows\temp\ALSysIO64.sys type=kernel &a
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | ALSysIO64.sys |
 | MD5                | [ba5f0f6347780c2ed911bbf888e75bef](https://www.virustotal.com/gui/file/ba5f0f6347780c2ed911bbf888e75bef) |
@@ -161,6 +163,8 @@ sc.exe create ALSysIO64.sys binPath=C:\windows\temp\ALSysIO64.sys type=kernel &a
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/alsysio64.yaml)

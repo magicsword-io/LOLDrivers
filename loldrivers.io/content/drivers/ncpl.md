@@ -148,6 +148,8 @@ sc.exe create ncpl.sys binPath=C:\windows\temp \n \n \n  cpl.sys type=kernel &am
 * XTCOM_Table
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ncpl.yaml)

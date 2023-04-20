@@ -116,6 +116,8 @@ sc.exe create PanMonFltX64.sys binPath=C:\windows\temp\PanMonFltX64.sys     type
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/panmonfltx64.yaml)

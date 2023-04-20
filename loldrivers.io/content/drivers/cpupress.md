@@ -72,6 +72,8 @@ sc.exe create cpupress.sys binPath=C:\windows\temp\cpupress.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cpupress.yaml)

@@ -87,7 +87,9 @@ sc.exe create OpenLibSys.sys binPath=C:\windows\temp\OpenLibSys.sys type=kernel 
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | OpenLibSys.sys |
 | MD5                | [96421b56dbda73e9b965f027a3bda7ba](https://www.virustotal.com/gui/file/96421b56dbda73e9b965f027a3bda7ba) |
@@ -129,6 +131,8 @@ sc.exe create OpenLibSys.sys binPath=C:\windows\temp\OpenLibSys.sys type=kernel 
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/openlibsys.yaml)

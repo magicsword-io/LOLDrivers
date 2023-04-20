@@ -72,6 +72,8 @@ sc.exe create bwrs.sys binPath=C:\windows\temp\bwrs.sys type=kernel &amp;&amp; s
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bwrs.yaml)

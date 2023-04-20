@@ -89,6 +89,8 @@ sc.exe create HwRwDrv.sys binPath=C:\windows\temp\HwRwDrv.sys type=kernel &amp;&
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hwrwdrv.yaml)

@@ -114,6 +114,8 @@ sc.exe create BS_RCIO.sys binPath=C:\windows\temp\BS_RCIO.sys type=kernel &amp;&
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_rcio.yaml)

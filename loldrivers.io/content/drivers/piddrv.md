@@ -71,7 +71,9 @@ sc.exe create piddrv.sys binPath=C:\windows\temp\piddrv.sys type=kernel &amp;&am
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | piddrv.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -92,6 +94,8 @@ sc.exe create piddrv.sys binPath=C:\windows\temp\piddrv.sys type=kernel &amp;&am
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/piddrv.yaml)

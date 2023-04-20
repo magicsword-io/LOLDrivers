@@ -104,6 +104,8 @@ sc.exe create rtkio.sys binPath=C:\windows\temp\rtkio.sys type=kernel &amp;&amp;
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rtkio.yaml)

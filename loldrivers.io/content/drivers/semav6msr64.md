@@ -92,6 +92,8 @@ sc.exe create semav6msr64.sys binPath=C:\windows\temp\semav6msr64.sys     type=k
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/semav6msr64.yaml)

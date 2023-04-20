@@ -78,6 +78,8 @@ sc.exe create smep_capcom.sys binPath=C:\windows\temp\smep_capcom.sys     type=k
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/smep_capcom.yaml)

@@ -142,6 +142,8 @@ sc.exe create ntbios.sys binPath=C:\windows\temp \n \n \n  tbios.sys type=kernel
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ntbios.yaml)

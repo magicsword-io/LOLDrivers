@@ -72,6 +72,8 @@ sc.exe create windows-xp-64.sys binPath=C:\windows\temp\windows-xp-64.sys     ty
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/windows-xp-64.yaml)

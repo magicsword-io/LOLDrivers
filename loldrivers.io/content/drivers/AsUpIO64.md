@@ -88,6 +88,8 @@ sc.exe create AsUpIO64.sys binPath=C:\windows\temp\AsUpIO64.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asupio64.yaml)

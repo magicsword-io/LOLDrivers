@@ -103,6 +103,8 @@ sc.exe create PanIO.sys binPath=C:\windows\temp\PanIO.sys type=kernel &amp;&amp;
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/panio.yaml)

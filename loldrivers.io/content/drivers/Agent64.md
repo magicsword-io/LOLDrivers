@@ -112,7 +112,9 @@ sc.exe create Agent64.sys binPath=C:\windows\temp\Agent64.sys type=kernel &amp;&
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | Agent64.sys |
 | MD5                | [1ed08a6264c5c92099d6d1dae5e8f530](https://www.virustotal.com/gui/file/1ed08a6264c5c92099d6d1dae5e8f530) |
@@ -178,7 +180,9 @@ sc.exe create Agent64.sys binPath=C:\windows\temp\Agent64.sys type=kernel &amp;&
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | Agent64.sys |
 | MD5                | [ddc2ffe0ab3fcd48db898ab13c38d88d](https://www.virustotal.com/gui/file/ddc2ffe0ab3fcd48db898ab13c38d88d) |
@@ -244,7 +248,9 @@ sc.exe create Agent64.sys binPath=C:\windows\temp\Agent64.sys type=kernel &amp;&
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | Agent64.sys |
 | MD5                | [29ccff428e5eb70ae429c3da8968e1ec](https://www.virustotal.com/gui/file/29ccff428e5eb70ae429c3da8968e1ec) |
@@ -310,7 +316,9 @@ sc.exe create Agent64.sys binPath=C:\windows\temp\Agent64.sys type=kernel &amp;&
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | Agent64.sys |
 | MD5                | [a57b47489febc552515778dd0fd1e51c](https://www.virustotal.com/gui/file/a57b47489febc552515778dd0fd1e51c) |
@@ -377,6 +385,8 @@ sc.exe create Agent64.sys binPath=C:\windows\temp\Agent64.sys type=kernel &amp;&
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/agent64.yaml)

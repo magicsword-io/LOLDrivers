@@ -198,6 +198,8 @@ sc.exe create dbk64.sys binPath=C:\windows\temp\dbk64.sys type=kernel &amp;&amp;
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbk64.yaml)

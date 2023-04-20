@@ -78,6 +78,8 @@ sc.exe create smep_namco.sys binPath=C:\windows\temp\smep_namco.sys type=kernel 
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/smep_namco.yaml)

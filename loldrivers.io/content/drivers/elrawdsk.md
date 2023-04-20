@@ -148,7 +148,9 @@ sc.exe create elrawdsk.sys binPath=C:\windows\temp\elrawdsk.sys type=kernel &amp
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | elrawdsk.sys |
 | MD5                | [76c643ab29d497317085e5db8c799960](https://www.virustotal.com/gui/file/76c643ab29d497317085e5db8c799960) |
@@ -237,6 +239,8 @@ sc.exe create elrawdsk.sys binPath=C:\windows\temp\elrawdsk.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/elrawdsk.yaml)

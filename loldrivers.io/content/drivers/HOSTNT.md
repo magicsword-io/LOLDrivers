@@ -90,6 +90,8 @@ sc.exe create HOSTNT.sys binPath=C:\windows\temp\HOSTNT.sys type=kernel &amp;&am
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hostnt.yaml)

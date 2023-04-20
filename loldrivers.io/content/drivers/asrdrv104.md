@@ -71,7 +71,9 @@ sc.exe create asrdrv104.sys binPath=C:\windows\temp\asrdrv104.sys type=kernel &a
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | asrdrv104.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -91,7 +93,9 @@ sc.exe create asrdrv104.sys binPath=C:\windows\temp\asrdrv104.sys type=kernel &a
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | asrdrv104.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -111,7 +115,9 @@ sc.exe create asrdrv104.sys binPath=C:\windows\temp\asrdrv104.sys type=kernel &a
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | asrdrv104.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -131,7 +137,9 @@ sc.exe create asrdrv104.sys binPath=C:\windows\temp\asrdrv104.sys type=kernel &a
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | asrdrv104.sys |
 | MD5                | [de1cc5c266140bff9d964fab87a29421](https://www.virustotal.com/gui/file/de1cc5c266140bff9d964fab87a29421) |
@@ -217,7 +225,9 @@ sc.exe create asrdrv104.sys binPath=C:\windows\temp\asrdrv104.sys type=kernel &a
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | asrdrv104.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -237,7 +247,9 @@ sc.exe create asrdrv104.sys binPath=C:\windows\temp\asrdrv104.sys type=kernel &a
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | asrdrv104.sys |
 | MD5                | [-](https://www.virustotal.com/gui/file/-) |
@@ -258,6 +270,8 @@ sc.exe create asrdrv104.sys binPath=C:\windows\temp\asrdrv104.sys type=kernel &a
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv104.yaml)

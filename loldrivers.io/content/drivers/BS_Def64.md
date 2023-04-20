@@ -106,7 +106,9 @@ sc.exe create BS_Def64.sys binPath=C:\windows\temp\BS_Def64.sys type=kernel &amp
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | BS_Def64.sys |
 | MD5                | [c9a293762319d73c8ee84bcaaf81b7b3](https://www.virustotal.com/gui/file/c9a293762319d73c8ee84bcaaf81b7b3) |
@@ -166,7 +168,9 @@ sc.exe create BS_Def64.sys binPath=C:\windows\temp\BS_Def64.sys type=kernel &amp
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | BS_Def64.sys |
 | MD5                | [120b5bbb9d2eb35ff4f62d79507ea63a](https://www.virustotal.com/gui/file/120b5bbb9d2eb35ff4f62d79507ea63a) |
@@ -227,6 +231,8 @@ sc.exe create BS_Def64.sys binPath=C:\windows\temp\BS_Def64.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_def64.yaml)

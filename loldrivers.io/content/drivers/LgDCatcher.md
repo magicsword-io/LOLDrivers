@@ -150,6 +150,8 @@ sc.exe create LgDCatcher.sys binPath=C:\windows\temp\LgDCatcher.sys type=kernel 
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lgdcatcher.yaml)

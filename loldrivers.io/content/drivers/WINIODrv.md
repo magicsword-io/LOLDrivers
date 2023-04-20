@@ -84,7 +84,9 @@ sc.exe create WINIODrv.sys binPath=C:\windows\temp\WINIODrv.sys type=kernel &amp
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | WINIODrv.sys |
 | MD5                | [ad22a7b010de6f9c6f39c350a471a440](https://www.virustotal.com/gui/file/ad22a7b010de6f9c6f39c350a471a440) |
@@ -122,7 +124,9 @@ sc.exe create WINIODrv.sys binPath=C:\windows\temp\WINIODrv.sys type=kernel &amp
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | WINIODrv.sys |
 | MD5                | [0761c357aed5f591142edaefdf0c89c8](https://www.virustotal.com/gui/file/0761c357aed5f591142edaefdf0c89c8) |
@@ -161,6 +165,8 @@ sc.exe create WINIODrv.sys binPath=C:\windows\temp\WINIODrv.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winiodrv.yaml)

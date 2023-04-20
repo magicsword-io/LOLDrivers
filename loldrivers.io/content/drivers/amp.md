@@ -202,6 +202,8 @@ sc.exe create amp.sys binPath=C:\windows\temp\amp.sys type=kernel &amp;&amp; sc.
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amp.yaml)

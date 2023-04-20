@@ -327,7 +327,9 @@ sc.exe create vboxdrv.sys binPath=C:\windows\temp\vboxdrv.sys type=kernel &amp;&
 * g_szRTAssertMsg1
 * g_szRTAssertMsg2
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | vboxdrv.sys |
 | MD5                | [eaea9ccb40c82af8f3867cd0f4dd5e9d](https://www.virustotal.com/gui/file/eaea9ccb40c82af8f3867cd0f4dd5e9d) |
@@ -500,6 +502,8 @@ sc.exe create vboxdrv.sys binPath=C:\windows\temp\vboxdrv.sys type=kernel &amp;&
 * SUPR0UnlockMem
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/vboxdrv.yaml)

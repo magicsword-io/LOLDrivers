@@ -73,6 +73,8 @@ sc.exe create goad.sys binPath=C:\windows\temp\goad.sys type=kernel &amp;&amp; s
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/goad.yaml)

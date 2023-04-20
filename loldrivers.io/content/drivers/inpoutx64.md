@@ -88,7 +88,9 @@ sc.exe create inpoutx64.sys binPath=C:\windows\temp\inpoutx64.sys type=kernel &a
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | inpoutx64.sys |
 | MD5                | [5ca1922ed5ee2b533b5f3dd9be20fd9a](https://www.virustotal.com/gui/file/5ca1922ed5ee2b533b5f3dd9be20fd9a) |
@@ -130,7 +132,9 @@ sc.exe create inpoutx64.sys binPath=C:\windows\temp\inpoutx64.sys type=kernel &a
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | inpoutx64.sys |
 | MD5                | [9321a61a25c7961d9f36852ecaa86f55](https://www.virustotal.com/gui/file/9321a61a25c7961d9f36852ecaa86f55) |
@@ -173,6 +177,8 @@ sc.exe create inpoutx64.sys binPath=C:\windows\temp\inpoutx64.sys type=kernel &a
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/inpoutx64.yaml)

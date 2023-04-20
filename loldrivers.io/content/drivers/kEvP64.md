@@ -184,6 +184,8 @@ sc.exe create kEvP64.sys binPath=C:\windows\temp\kEvP64.sys type=kernel &amp;&am
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/kevp64.yaml)

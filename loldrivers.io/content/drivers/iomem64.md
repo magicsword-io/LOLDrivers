@@ -90,7 +90,9 @@ sc.exe create iomem64.sys binPath=C:\windows\temp\iomem64.sys type=kernel &amp;&
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | iomem64.sys |
 | MD5                | [f1e054333cc40f79cfa78e5fbf3b54c2](https://www.virustotal.com/gui/file/f1e054333cc40f79cfa78e5fbf3b54c2) |
@@ -135,6 +137,8 @@ sc.exe create iomem64.sys binPath=C:\windows\temp\iomem64.sys type=kernel &amp;&
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iomem64.yaml)

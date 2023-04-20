@@ -89,6 +89,8 @@ sc.exe create cpuz_x64.sys binPath=C:\windows\temp\cpuz_x64.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cpuz_x64.yaml)

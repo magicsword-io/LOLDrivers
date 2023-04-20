@@ -88,7 +88,9 @@ sc.exe create AsIO.sys binPath=C:\windows\temp\AsIO.sys type=kernel &amp;&amp; s
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | AsIO.sys |
 | MD5                | [798de15f187c1f013095bbbeb6fb6197](https://www.virustotal.com/gui/file/798de15f187c1f013095bbbeb6fb6197) |
@@ -130,7 +132,9 @@ sc.exe create AsIO.sys binPath=C:\windows\temp\AsIO.sys type=kernel &amp;&amp; s
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | AsIO.sys |
 | MD5                | [1392b92179b07b672720763d9b1028a5](https://www.virustotal.com/gui/file/1392b92179b07b672720763d9b1028a5) |
@@ -172,7 +176,9 @@ sc.exe create AsIO.sys binPath=C:\windows\temp\AsIO.sys type=kernel &amp;&amp; s
 #### ExportedFunctions
 {{< details "Expand" >}}
 
-{{< /details >}}| Property           | Value |
+{{< /details >}}
+-----
+| Property           | Value |
 |:-------------------|:------|
 | Filename           | AsIO.sys |
 | MD5                | [fef9dd9ea587f8886ade43c1befbdafe](https://www.virustotal.com/gui/file/fef9dd9ea587f8886ade43c1befbdafe) |
@@ -215,6 +221,8 @@ sc.exe create AsIO.sys binPath=C:\windows\temp\AsIO.sys type=kernel &amp;&amp; s
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asio.yaml)

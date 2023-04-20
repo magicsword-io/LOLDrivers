@@ -87,6 +87,8 @@ sc.exe create speedfan.sys binPath=C:\windows\temp\speedfan.sys type=kernel &amp
 {{< details "Expand" >}}
 
 {{< /details >}}
+-----
+
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/speedfan.yaml)
