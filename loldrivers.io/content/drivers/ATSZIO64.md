@@ -46,18 +46,31 @@ sc.exe create ATSZIO64.sys binPath=C:\windows\temp\ATSZIO64.sys type=kernel &amp
 
 ### Known Vulnerable Samples
 
-| Filename | ATSZIO64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/b12d1630fd50b2a21fd91e45d522ba3a">b12d1630fd50b2a21fd91e45d522ba3a</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/490109fa6739f114651f4199196c5121d1c6bdf2">490109fa6739f114651f4199196c5121d1c6bdf2</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece">01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A69a92cb6ac87c99f10b24eefa13f0b10">69a92cb6ac87c99f10b24eefa13f0b10</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ab66bf2b1b07f8f2bab1418131ae66b0a55265f73">b66bf2b1b07f8f2bab1418131ae66b0a55265f73</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A0ff8bcc7f938ec71ee33fbe089d38e40a8190603558d4765c47b1b09e1dd764a">0ff8bcc7f938ec71ee33fbe089d38e40a8190603558d4765c47b1b09e1dd764a</a> || Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | ASUSTek Computer Inc. || Description | ATSZIO Driver || Product | ATSZIO Driver || OriginalFilename | ATSZIO.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | ATSZIO64.sys |
+| MD5                | [b12d1630fd50b2a21fd91e45d522ba3a](https://www.virustotal.com/gui/file/b12d1630fd50b2a21fd91e45d522ba3a) |
+| SHA1               | [490109fa6739f114651f4199196c5121d1c6bdf2](https://www.virustotal.com/gui/file/490109fa6739f114651f4199196c5121d1c6bdf2) |
+| SHA256             | [01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece](https://www.virustotal.com/gui/file/01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece) |
+| Authentihash MD5   | [69a92cb6ac87c99f10b24eefa13f0b10](https://www.virustotal.com/gui/search/authentihash%253A69a92cb6ac87c99f10b24eefa13f0b10) |
+| Authentihash SHA1  | [b66bf2b1b07f8f2bab1418131ae66b0a55265f73](https://www.virustotal.com/gui/search/authentihash%253Ab66bf2b1b07f8f2bab1418131ae66b0a55265f73) |
+| Authentihash SHA256| [0ff8bcc7f938ec71ee33fbe089d38e40a8190603558d4765c47b1b09e1dd764a](https://www.virustotal.com/gui/search/authentihash%253A0ff8bcc7f938ec71ee33fbe089d38e40a8190603558d4765c47b1b09e1dd764a) |
+| Signature         | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Company           | ASUSTek Computer Inc. |
+| Description       | ATSZIO Driver |
+| Product           | ATSZIO Driver |
+| OriginalFilename  | ATSZIO.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* KeWaitForSingleObject
+{{< details "Expand" >}}
+* KeWaitForSingleObject
 * ExAllocatePool
 * ExFreePoolWithTag
 * MmAllocateContiguousMemory
@@ -80,15 +93,17 @@ sc.exe create ATSZIO64.sys binPath=C:\windows\temp\ATSZIO64.sys type=kernel &amp
 * RtlInitUnicodeString
 * HalSetBusDataByOffset
 * HalGetBusDataByOffset
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/atszio64.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

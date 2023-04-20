@@ -47,20 +47,35 @@ sc.exe create ntbios_2.sys binPath=C:\windows\temp \n \n \n  tbios_2.sys type=ke
 
 ### Known Vulnerable Samples
 
-| Filename | ntbios_2.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/50b39072d0ee9af5ef4824eca34be6e3">50b39072d0ee9af5ef4824eca34be6e3</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/064de88dbbea67c149e779aac05228e5405985c7">064de88dbbea67c149e779aac05228e5405985c7</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/c0d88db11d0f529754d290ed5f4c34b4dba8c4f2e5c4148866daabeab0d25f9c">c0d88db11d0f529754d290ed5f4c34b4dba8c4f2e5c4148866daabeab0d25f9c</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aa8e3b56b72814a842b557bfb6638b484">a8e3b56b72814a842b557bfb6638b484</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A50231e21b8d8b2916d0fd53f3f58c6314473de1f">50231e21b8d8b2916d0fd53f3f58c6314473de1f</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A59177fb7a0b11837368af1cc115f0d011ea19551070bd153795204ae1bd12e52">59177fb7a0b11837368af1cc115f0d011ea19551070bd153795204ae1bd12e52</a> || Publisher | n/a || Signature | U, n, s, i, g, n, e, d   || Date | 3:04 AM 5/18/2009 || Company | Microsoft Corporation || Description | ntbios driver || Product |  Microsoft(R) Windows (R) NT Operating System || OriginalFilename | ntbios.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | ntbios_2.sys |
+| MD5                | [50b39072d0ee9af5ef4824eca34be6e3](https://www.virustotal.com/gui/file/50b39072d0ee9af5ef4824eca34be6e3) |
+| SHA1               | [064de88dbbea67c149e779aac05228e5405985c7](https://www.virustotal.com/gui/file/064de88dbbea67c149e779aac05228e5405985c7) |
+| SHA256             | [c0d88db11d0f529754d290ed5f4c34b4dba8c4f2e5c4148866daabeab0d25f9c](https://www.virustotal.com/gui/file/c0d88db11d0f529754d290ed5f4c34b4dba8c4f2e5c4148866daabeab0d25f9c) |
+| Authentihash MD5   | [a8e3b56b72814a842b557bfb6638b484](https://www.virustotal.com/gui/search/authentihash%253Aa8e3b56b72814a842b557bfb6638b484) |
+| Authentihash SHA1  | [50231e21b8d8b2916d0fd53f3f58c6314473de1f](https://www.virustotal.com/gui/search/authentihash%253A50231e21b8d8b2916d0fd53f3f58c6314473de1f) |
+| Authentihash SHA256| [59177fb7a0b11837368af1cc115f0d011ea19551070bd153795204ae1bd12e52](https://www.virustotal.com/gui/search/authentihash%253A59177fb7a0b11837368af1cc115f0d011ea19551070bd153795204ae1bd12e52) |
+| Publisher         | n/a |
+| Signature         | U, n, s, i, g, n, e, d   |
+| Date                | 3:04 AM 5/18/2009 |
+| Company           | Microsoft Corporation |
+| Description       | ntbios driver |
+| Product           |  Microsoft(R) Windows (R) NT Operating System |
+| OriginalFilename  | ntbios.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* NTOSKRNL.EXE
+{{< details "Expand" >}}
+* NTOSKRNL.EXE
 * HAL.DLL
 * ntoskrnl.exe
 * NDIS.SYS
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* MmUnlockPages
+{{< details "Expand" >}}
+* MmUnlockPages
 * MmProbeAndLockPages
 * IoAllocateMdl
 * IoQueueWorkItem
@@ -121,15 +136,17 @@ sc.exe create ntbios_2.sys binPath=C:\windows\temp \n \n \n  tbios_2.sys type=ke
 * NdisAllocateBufferPool
 * NdisCloseAdapter
 * NdisDeregisterProtocol
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ntbios_2.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

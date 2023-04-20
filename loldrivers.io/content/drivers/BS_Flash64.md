@@ -46,17 +46,26 @@ sc.exe create BS_Flash64.sys binPath=C:\windows\temp\BS_Flash64.sys type=kernel 
 
 ### Known Vulnerable Samples
 
-| Filename | BS_Flash64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/f5051c756035ef5de9c4c48bacb0612b">f5051c756035ef5de9c4c48bacb0612b</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/e83458c4a6383223759cd8024e60c17be4e7c85f">e83458c4a6383223759cd8024e60c17be4e7c85f</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/86a8e0aa29a5b52c84921188cc1f0eca9a7904dcfe09544602933d8377720219">86a8e0aa29a5b52c84921188cc1f0eca9a7904dcfe09544602933d8377720219</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Acf428ad377e1fd1a045e058b896fcee2">cf428ad377e1fd1a045e058b896fcee2</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A5107438a02164e1bcedd556a786f37f59cd04231">5107438a02164e1bcedd556a786f37f59cd04231</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A543c3f024e4affd0aafa3a229fa19dbe7a70972bb18ed6347d3492dd174edac5">543c3f024e4affd0aafa3a229fa19dbe7a70972bb18ed6347d3492dd174edac5</a> || Signature | BIOSTAR MICROTECH INT&#39;L CORP, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | BS_Flash64.sys |
+| MD5                | [f5051c756035ef5de9c4c48bacb0612b](https://www.virustotal.com/gui/file/f5051c756035ef5de9c4c48bacb0612b) |
+| SHA1               | [e83458c4a6383223759cd8024e60c17be4e7c85f](https://www.virustotal.com/gui/file/e83458c4a6383223759cd8024e60c17be4e7c85f) |
+| SHA256             | [86a8e0aa29a5b52c84921188cc1f0eca9a7904dcfe09544602933d8377720219](https://www.virustotal.com/gui/file/86a8e0aa29a5b52c84921188cc1f0eca9a7904dcfe09544602933d8377720219) |
+| Authentihash MD5   | [cf428ad377e1fd1a045e058b896fcee2](https://www.virustotal.com/gui/search/authentihash%253Acf428ad377e1fd1a045e058b896fcee2) |
+| Authentihash SHA1  | [5107438a02164e1bcedd556a786f37f59cd04231](https://www.virustotal.com/gui/search/authentihash%253A5107438a02164e1bcedd556a786f37f59cd04231) |
+| Authentihash SHA256| [543c3f024e4affd0aafa3a229fa19dbe7a70972bb18ed6347d3492dd174edac5](https://www.virustotal.com/gui/search/authentihash%253A543c3f024e4affd0aafa3a229fa19dbe7a70972bb18ed6347d3492dd174edac5) |
+| Signature         | BIOSTAR MICROTECH INT&#39;L CORP, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* IoDeleteDevice
+{{< details "Expand" >}}
+* IoDeleteDevice
 * RtlFreeUnicodeString
 * IoCreateSymbolicLink
 * IoCreateDevice
@@ -71,15 +80,17 @@ sc.exe create BS_Flash64.sys binPath=C:\windows\temp\BS_Flash64.sys type=kernel 
 * MmUnmapIoSpace
 * MmMapIoSpace
 * KeBugCheckEx
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bs_flash64.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

@@ -51,24 +51,32 @@ sc.exe create cpupress.sys binPath=C:\windows\temp\cpupress.sys type=kernel &amp
 
 ### Known Vulnerable Samples
 
-| Filename | cpupress.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/fcdfe570e6dc6e768ef75138033d9961f78045adca53beb6fdb520f6417e0df1">fcdfe570e6dc6e768ef75138033d9961f78045adca53beb6fdb520f6417e0df1</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | cpupress.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [-](https://www.virustotal.com/gui/file/-) |
+| SHA256             | [fcdfe570e6dc6e768ef75138033d9961f78045adca53beb6fdb520f6417e0df1](https://www.virustotal.com/gui/file/fcdfe570e6dc6e768ef75138033d9961f78045adca53beb6fdb520f6417e0df1) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cpupress.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

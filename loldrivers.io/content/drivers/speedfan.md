@@ -47,17 +47,30 @@ sc.exe create speedfan.sys binPath=C:\windows\temp\speedfan.sys type=kernel &amp
 
 ### Known Vulnerable Samples
 
-| Filename | speedfan.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/5f9785e7535f8f602cb294a54962c9e7">5f9785e7535f8f602cb294a54962c9e7</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/bfe55cacc7c56c9f7bd75bdb4b352c0b745d071b">bfe55cacc7c56c9f7bd75bdb4b352c0b745d071b</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/22be050955347661685a4343c51f11c7811674e030386d2264cd12ecbf544b7c">22be050955347661685a4343c51f11c7811674e030386d2264cd12ecbf544b7c</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aaf368f76c059d1e07aa884e86d29bbab">af368f76c059d1e07aa884e86d29bbab</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A9c08d169b0f59a411c5b51f481622bc78bdf9c84">9c08d169b0f59a411c5b51f481622bc78bdf9c84</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A641490e28b2a1ee223238f5d969b5abf60a1089afe597c4251b285449e6b3b04">641490e28b2a1ee223238f5d969b5abf60a1089afe597c4251b285449e6b3b04</a> || Signature | Sokno S.R.L., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | Windows (R) Server 2003 DDK provider || Description | SpeedFan Device Driver || Product | Windows (R) Server 2003 DDK driver || OriginalFilename | speedfan.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | speedfan.sys |
+| MD5                | [5f9785e7535f8f602cb294a54962c9e7](https://www.virustotal.com/gui/file/5f9785e7535f8f602cb294a54962c9e7) |
+| SHA1               | [bfe55cacc7c56c9f7bd75bdb4b352c0b745d071b](https://www.virustotal.com/gui/file/bfe55cacc7c56c9f7bd75bdb4b352c0b745d071b) |
+| SHA256             | [22be050955347661685a4343c51f11c7811674e030386d2264cd12ecbf544b7c](https://www.virustotal.com/gui/file/22be050955347661685a4343c51f11c7811674e030386d2264cd12ecbf544b7c) |
+| Authentihash MD5   | [af368f76c059d1e07aa884e86d29bbab](https://www.virustotal.com/gui/search/authentihash%253Aaf368f76c059d1e07aa884e86d29bbab) |
+| Authentihash SHA1  | [9c08d169b0f59a411c5b51f481622bc78bdf9c84](https://www.virustotal.com/gui/search/authentihash%253A9c08d169b0f59a411c5b51f481622bc78bdf9c84) |
+| Authentihash SHA256| [641490e28b2a1ee223238f5d969b5abf60a1089afe597c4251b285449e6b3b04](https://www.virustotal.com/gui/search/authentihash%253A641490e28b2a1ee223238f5d969b5abf60a1089afe597c4251b285449e6b3b04) |
+| Signature         | Sokno S.R.L., VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
+| Company           | Windows (R) Server 2003 DDK provider |
+| Description       | SpeedFan Device Driver |
+| Product           | Windows (R) Server 2003 DDK driver |
+| OriginalFilename  | speedfan.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* MmUnmapIoSpace
+{{< details "Expand" >}}
+* MmUnmapIoSpace
 * MmMapIoSpace
 * IofCompleteRequest
 * IoDeleteDevice
@@ -68,15 +81,17 @@ sc.exe create speedfan.sys binPath=C:\windows\temp\speedfan.sys type=kernel &amp
 * IoCreateDevice
 * RtlUnwindEx
 * KeBugCheckEx
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/speedfan.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

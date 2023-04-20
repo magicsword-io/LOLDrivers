@@ -46,17 +46,26 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
 
 ### Known Vulnerable Samples
 
-| Filename | magdrvamd64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/49938383844ceec33dba794fb751c9a5">49938383844ceec33dba794fb751c9a5</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/e22495d92ac3dcae5eeb1980549a9ead8155f98a">e22495d92ac3dcae5eeb1980549a9ead8155f98a</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/be54f7279e69fb7651f98e91d24069dbc7c4c67e65850e486622ccbdc44d9a57">be54f7279e69fb7651f98e91d24069dbc7c4c67e65850e486622ccbdc44d9a57</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A4bc9c678b740fdbb6da3da4af3444c09">4bc9c678b740fdbb6da3da4af3444c09</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A592989e3e6942baf38127b50e39dd732b323a92d">592989e3e6942baf38127b50e39dd732b323a92d</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A911e01544557544de4ad59b374f1234513821c50a00c7afa62a8fcca07385b2f">911e01544557544de4ad59b374f1234513821c50a00c7afa62a8fcca07385b2f</a> || Signature | Samsung Electronics Co., Ltd., GlobalSign CodeSigning CA - G2, GlobalSign Root CA - R1   |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | magdrvamd64.sys |
+| MD5                | [49938383844ceec33dba794fb751c9a5](https://www.virustotal.com/gui/file/49938383844ceec33dba794fb751c9a5) |
+| SHA1               | [e22495d92ac3dcae5eeb1980549a9ead8155f98a](https://www.virustotal.com/gui/file/e22495d92ac3dcae5eeb1980549a9ead8155f98a) |
+| SHA256             | [be54f7279e69fb7651f98e91d24069dbc7c4c67e65850e486622ccbdc44d9a57](https://www.virustotal.com/gui/file/be54f7279e69fb7651f98e91d24069dbc7c4c67e65850e486622ccbdc44d9a57) |
+| Authentihash MD5   | [4bc9c678b740fdbb6da3da4af3444c09](https://www.virustotal.com/gui/search/authentihash%253A4bc9c678b740fdbb6da3da4af3444c09) |
+| Authentihash SHA1  | [592989e3e6942baf38127b50e39dd732b323a92d](https://www.virustotal.com/gui/search/authentihash%253A592989e3e6942baf38127b50e39dd732b323a92d) |
+| Authentihash SHA256| [911e01544557544de4ad59b374f1234513821c50a00c7afa62a8fcca07385b2f](https://www.virustotal.com/gui/search/authentihash%253A911e01544557544de4ad59b374f1234513821c50a00c7afa62a8fcca07385b2f) |
+| Signature         | Samsung Electronics Co., Ltd., GlobalSign CodeSigning CA - G2, GlobalSign Root CA - R1   |
+
+
 #### Imports
-{{< details "Expand" >}}* NTOSKRNL.exe
+{{< details "Expand" >}}
+* NTOSKRNL.exe
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* IoDeleteDevice
+{{< details "Expand" >}}
+* IoDeleteDevice
 * IoCreateSymbolicLink
 * IoCreateDevice
 * RtlInitUnicodeString
@@ -64,15 +73,17 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
 * IoDeleteSymbolicLink
 * MmUnmapIoSpace
 * MmMapIoSpace
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/magdrvamd64.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

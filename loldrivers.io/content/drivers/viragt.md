@@ -46,18 +46,31 @@ sc.exe create viragt.sys binPath=C:\windows\temp\viragt.sys type=kernel &amp;&am
 
 ### Known Vulnerable Samples
 
-| Filename | viragt.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/e79c91c27df3eaf82fb7bd1280172517">e79c91c27df3eaf82fb7bd1280172517</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/cb22723faa5ae2809476e5c5e9b9a597b26cab9b">cb22723faa5ae2809476e5c5e9b9a597b26cab9b</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/e05eeb2b8c18ad2cb2d1038c043d770a0d51b96b748bc34be3e7fc6f3790ce53">e05eeb2b8c18ad2cb2d1038c043d770a0d51b96b748bc34be3e7fc6f3790ce53</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A333822355a23fbdfb2599a909b3bbc60">333822355a23fbdfb2599a909b3bbc60</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A72886a692656ebe64592a43273d3f59432cfbf9a">72886a692656ebe64592a43273d3f59432cfbf9a</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A9f86fc8a6eaa3b38f33be4a0d552c184e575afa50a60df7383c06a394e3926d8">9f86fc8a6eaa3b38f33be4a0d552c184e575afa50a60df7383c06a394e3926d8</a> || Signature | TG Soft S.a.s. Di Tonello Gianfranco e C., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | TG Soft S.a.s. || Description | VirIT Agent System || Product | VirIT Agent System || OriginalFilename | viragt.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | viragt.sys |
+| MD5                | [e79c91c27df3eaf82fb7bd1280172517](https://www.virustotal.com/gui/file/e79c91c27df3eaf82fb7bd1280172517) |
+| SHA1               | [cb22723faa5ae2809476e5c5e9b9a597b26cab9b](https://www.virustotal.com/gui/file/cb22723faa5ae2809476e5c5e9b9a597b26cab9b) |
+| SHA256             | [e05eeb2b8c18ad2cb2d1038c043d770a0d51b96b748bc34be3e7fc6f3790ce53](https://www.virustotal.com/gui/file/e05eeb2b8c18ad2cb2d1038c043d770a0d51b96b748bc34be3e7fc6f3790ce53) |
+| Authentihash MD5   | [333822355a23fbdfb2599a909b3bbc60](https://www.virustotal.com/gui/search/authentihash%253A333822355a23fbdfb2599a909b3bbc60) |
+| Authentihash SHA1  | [72886a692656ebe64592a43273d3f59432cfbf9a](https://www.virustotal.com/gui/search/authentihash%253A72886a692656ebe64592a43273d3f59432cfbf9a) |
+| Authentihash SHA256| [9f86fc8a6eaa3b38f33be4a0d552c184e575afa50a60df7383c06a394e3926d8](https://www.virustotal.com/gui/search/authentihash%253A9f86fc8a6eaa3b38f33be4a0d552c184e575afa50a60df7383c06a394e3926d8) |
+| Signature         | TG Soft S.a.s. Di Tonello Gianfranco e C., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Company           | TG Soft S.a.s. |
+| Description       | VirIT Agent System |
+| Product           | VirIT Agent System |
+| OriginalFilename  | viragt.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* RtlInitAnsiString
+{{< details "Expand" >}}
+* RtlInitAnsiString
 * wcstombs
 * ZwOpenKey
 * ZwSetValueKey
@@ -163,15 +176,17 @@ sc.exe create viragt.sys binPath=C:\windows\temp\viragt.sys type=kernel &amp;&am
 * READ_PORT_UCHAR
 * READ_PORT_BUFFER_UCHAR
 * KeStallExecutionProcessor
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/viragt.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

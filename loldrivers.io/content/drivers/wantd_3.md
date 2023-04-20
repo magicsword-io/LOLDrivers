@@ -47,19 +47,34 @@ sc.exe create wantd_3.sys binPath=C:\windows\temp\wantd_3.sys type=kernel &amp;&
 
 ### Known Vulnerable Samples
 
-| Filename | wantd_3.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/fb7c61ef427f9b2fdff3574ee6b1819b">fb7c61ef427f9b2fdff3574ee6b1819b</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/1f25f54e9b289f76604e81e98483309612c5a471">1f25f54e9b289f76604e81e98483309612c5a471</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1">81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Acbb18883d7893156620f084ff40b2fbf">cbb18883d7893156620f084ff40b2fbf</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Adf59532dbae676b3fb2653a1bbd9cd5f1cd3ba78">df59532dbae676b3fb2653a1bbd9cd5f1cd3ba78</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aa1ee0b8a7974f3d11c10241027c0e7171c798a28589aae9ff8c5a86228642af7">a1ee0b8a7974f3d11c10241027c0e7171c798a28589aae9ff8c5a86228642af7</a> || Publisher | n/a || Signature | U, n, s, i, g, n, e, d   || Date | 7:52 AM 4/30/2014 || Company | Microsoft Corporation || Description | WAN Transport Driver || Product | Microsoft Windows Operating System || OriginalFilename | wantd.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | wantd_3.sys |
+| MD5                | [fb7c61ef427f9b2fdff3574ee6b1819b](https://www.virustotal.com/gui/file/fb7c61ef427f9b2fdff3574ee6b1819b) |
+| SHA1               | [1f25f54e9b289f76604e81e98483309612c5a471](https://www.virustotal.com/gui/file/1f25f54e9b289f76604e81e98483309612c5a471) |
+| SHA256             | [81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1](https://www.virustotal.com/gui/file/81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1) |
+| Authentihash MD5   | [cbb18883d7893156620f084ff40b2fbf](https://www.virustotal.com/gui/search/authentihash%253Acbb18883d7893156620f084ff40b2fbf) |
+| Authentihash SHA1  | [df59532dbae676b3fb2653a1bbd9cd5f1cd3ba78](https://www.virustotal.com/gui/search/authentihash%253Adf59532dbae676b3fb2653a1bbd9cd5f1cd3ba78) |
+| Authentihash SHA256| [a1ee0b8a7974f3d11c10241027c0e7171c798a28589aae9ff8c5a86228642af7](https://www.virustotal.com/gui/search/authentihash%253Aa1ee0b8a7974f3d11c10241027c0e7171c798a28589aae9ff8c5a86228642af7) |
+| Publisher         | n/a |
+| Signature         | U, n, s, i, g, n, e, d   |
+| Date                | 7:52 AM 4/30/2014 |
+| Company           | Microsoft Corporation |
+| Description       | WAN Transport Driver |
+| Product           | Microsoft Windows Operating System |
+| OriginalFilename  | wantd.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
 * NDIS.SYS
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* IofCompleteRequest
+{{< details "Expand" >}}
+* IofCompleteRequest
 * KeResetEvent
 * InterlockedIncrement
 * KeSetEvent
@@ -150,15 +165,17 @@ sc.exe create wantd_3.sys binPath=C:\windows\temp\wantd_3.sys type=kernel &amp;&
 * NdisFreeBufferPool
 * NdisCopyFromPacketToPacket
 * NdisFreePacketPool
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wantd_3.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

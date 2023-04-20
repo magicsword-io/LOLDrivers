@@ -46,19 +46,32 @@ sc.exe create AsrDrv106.sys binPath=C:\windows\temp\AsrDrv106.sys type=kernel &a
 
 ### Known Vulnerable Samples
 
-| Filename | AsrDrv106.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/12908c285b9d68ee1f39186110df0f1e">12908c285b9d68ee1f39186110df0f1e</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/b0032b8d8e6f4bd19a31619ce38d8e010f29a816">b0032b8d8e6f4bd19a31619ce38d8e010f29a816</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/3943a796cc7c5352aa57ccf544295bfd6fb69aae147bc8235a00202dc6ed6838">3943a796cc7c5352aa57ccf544295bfd6fb69aae147bc8235a00202dc6ed6838</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Af67b148a13ad3caa51c3c2ef142791ea">f67b148a13ad3caa51c3c2ef142791ea</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Af621633290173daac18bb14ca3f52bc027cd2721">f621633290173daac18bb14ca3f52bc027cd2721</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aac7b3c3b74e6e282c7f50c17a6213b81b181f779cd7c0c78e3cb426c427a98db">ac7b3c3b74e6e282c7f50c17a6213b81b181f779cd7c0c78e3cb426c427a98db</a> || Signature | ASROCK INC., GlobalSign GCC R45 EV CodeSigning CA 2020, GlobalSign Code Signing Root R45, GlobalSign, GlobalSign Root CA - R1   || Company | ASRock Incorporation || Description | ASRock IO Driver || Product | ASRock IO Driver || OriginalFilename | AsrDrv.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | AsrDrv106.sys |
+| MD5                | [12908c285b9d68ee1f39186110df0f1e](https://www.virustotal.com/gui/file/12908c285b9d68ee1f39186110df0f1e) |
+| SHA1               | [b0032b8d8e6f4bd19a31619ce38d8e010f29a816](https://www.virustotal.com/gui/file/b0032b8d8e6f4bd19a31619ce38d8e010f29a816) |
+| SHA256             | [3943a796cc7c5352aa57ccf544295bfd6fb69aae147bc8235a00202dc6ed6838](https://www.virustotal.com/gui/file/3943a796cc7c5352aa57ccf544295bfd6fb69aae147bc8235a00202dc6ed6838) |
+| Authentihash MD5   | [f67b148a13ad3caa51c3c2ef142791ea](https://www.virustotal.com/gui/search/authentihash%253Af67b148a13ad3caa51c3c2ef142791ea) |
+| Authentihash SHA1  | [f621633290173daac18bb14ca3f52bc027cd2721](https://www.virustotal.com/gui/search/authentihash%253Af621633290173daac18bb14ca3f52bc027cd2721) |
+| Authentihash SHA256| [ac7b3c3b74e6e282c7f50c17a6213b81b181f779cd7c0c78e3cb426c427a98db](https://www.virustotal.com/gui/search/authentihash%253Aac7b3c3b74e6e282c7f50c17a6213b81b181f779cd7c0c78e3cb426c427a98db) |
+| Signature         | ASROCK INC., GlobalSign GCC R45 EV CodeSigning CA 2020, GlobalSign Code Signing Root R45, GlobalSign, GlobalSign Root CA - R1   |
+| Company           | ASRock Incorporation |
+| Description       | ASRock IO Driver |
+| Product           | ASRock IO Driver |
+| OriginalFilename  | AsrDrv.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
 * cng.sys
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* RtlQueryRegistryValues
+{{< details "Expand" >}}
+* RtlQueryRegistryValues
 * MmUnmapIoSpace
 * IoFreeMdl
 * MmGetPhysicalAddress
@@ -111,15 +124,17 @@ sc.exe create AsrDrv106.sys binPath=C:\windows\temp\AsrDrv106.sys type=kernel &a
 * BCryptOpenAlgorithmProvider
 * BCryptDecrypt
 * BCryptDestroyKey
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv106.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

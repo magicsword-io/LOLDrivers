@@ -51,18 +51,31 @@ sc.exe create mydrivers.sys binPath=C:\windows\temp\mydrivers.sys type=kernel &a
 
 ### Known Vulnerable Samples
 
-| Filename | mydrivers.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/507a649eb585d8d0447eab0532ef0c73">507a649eb585d8d0447eab0532ef0c73</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/7859e75580570e23a1ef7208b9a76f81738043d5">7859e75580570e23a1ef7208b9a76f81738043d5</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6">08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A74a1e675b4fd736298bc24d082684b0e">74a1e675b4fd736298bc24d082684b0e</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ac57e38ce02ba45c3ad886faff98fe346560b1f5e">c57e38ce02ba45c3ad886faff98fe346560b1f5e</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aa689804c4e6e9aa07d48f9c99b7a1be6b05cba1c632b1a083b8031f6e1651c28">a689804c4e6e9aa07d48f9c99b7a1be6b05cba1c632b1a083b8031f6e1651c28</a> || Signature | Beijing Kingsoft Security software Co.,Ltd, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | MyDrivers.com || Description | DriverGenius Hardware monitor || Product | DriverGenius || OriginalFilename | mydrivers.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | mydrivers.sys |
+| MD5                | [507a649eb585d8d0447eab0532ef0c73](https://www.virustotal.com/gui/file/507a649eb585d8d0447eab0532ef0c73) |
+| SHA1               | [7859e75580570e23a1ef7208b9a76f81738043d5](https://www.virustotal.com/gui/file/7859e75580570e23a1ef7208b9a76f81738043d5) |
+| SHA256             | [08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6](https://www.virustotal.com/gui/file/08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6) |
+| Authentihash MD5   | [74a1e675b4fd736298bc24d082684b0e](https://www.virustotal.com/gui/search/authentihash%253A74a1e675b4fd736298bc24d082684b0e) |
+| Authentihash SHA1  | [c57e38ce02ba45c3ad886faff98fe346560b1f5e](https://www.virustotal.com/gui/search/authentihash%253Ac57e38ce02ba45c3ad886faff98fe346560b1f5e) |
+| Authentihash SHA256| [a689804c4e6e9aa07d48f9c99b7a1be6b05cba1c632b1a083b8031f6e1651c28](https://www.virustotal.com/gui/search/authentihash%253Aa689804c4e6e9aa07d48f9c99b7a1be6b05cba1c632b1a083b8031f6e1651c28) |
+| Signature         | Beijing Kingsoft Security software Co.,Ltd, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Company           | MyDrivers.com |
+| Description       | DriverGenius Hardware monitor |
+| Product           | DriverGenius |
+| OriginalFilename  | mydrivers.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* WRITE_REGISTER_BUFFER_USHORT
+{{< details "Expand" >}}
+* WRITE_REGISTER_BUFFER_USHORT
 * WRITE_REGISTER_BUFFER_ULONG
 * IofCompleteRequest
 * WRITE_REGISTER_BUFFER_UCHAR
@@ -87,15 +100,17 @@ sc.exe create mydrivers.sys binPath=C:\windows\temp\mydrivers.sys type=kernel &a
 * READ_PORT_USHORT
 * READ_PORT_UCHAR
 * HalSetBusDataByOffset
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mydrivers.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

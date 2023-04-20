@@ -46,18 +46,27 @@ sc.exe create msrhook.sys binPath=C:\windows\temp\msrhook.sys type=kernel &amp;&
 
 ### Known Vulnerable Samples
 
-| Filename | msrhook.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/c49a1956a6a25ffc25ad97d6762b0989">c49a1956a6a25ffc25ad97d6762b0989</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/89909fa481ff67d7449ee90d24c167b17b0612f1">89909fa481ff67d7449ee90d24c167b17b0612f1</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/6de84caa2ca18673e01b91af58220c60aecd5cccf269725ec3c7f226b2167492">6de84caa2ca18673e01b91af58220c60aecd5cccf269725ec3c7f226b2167492</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A172df59ed493cc10ccca27239ff3b4e3">172df59ed493cc10ccca27239ff3b4e3</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Accce82f52142229c88746b06b198ea5c5e058961">ccce82f52142229c88746b06b198ea5c5e058961</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A37e33b54de1bbe4cf86fa58aeec39084afb35e0cbe5f69c763ecaec1d352daa0">37e33b54de1bbe4cf86fa58aeec39084afb35e0cbe5f69c763ecaec1d352daa0</a> || Signature | ID TECH, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | msrhook.sys |
+| MD5                | [c49a1956a6a25ffc25ad97d6762b0989](https://www.virustotal.com/gui/file/c49a1956a6a25ffc25ad97d6762b0989) |
+| SHA1               | [89909fa481ff67d7449ee90d24c167b17b0612f1](https://www.virustotal.com/gui/file/89909fa481ff67d7449ee90d24c167b17b0612f1) |
+| SHA256             | [6de84caa2ca18673e01b91af58220c60aecd5cccf269725ec3c7f226b2167492](https://www.virustotal.com/gui/file/6de84caa2ca18673e01b91af58220c60aecd5cccf269725ec3c7f226b2167492) |
+| Authentihash MD5   | [172df59ed493cc10ccca27239ff3b4e3](https://www.virustotal.com/gui/search/authentihash%253A172df59ed493cc10ccca27239ff3b4e3) |
+| Authentihash SHA1  | [ccce82f52142229c88746b06b198ea5c5e058961](https://www.virustotal.com/gui/search/authentihash%253Accce82f52142229c88746b06b198ea5c5e058961) |
+| Authentihash SHA256| [37e33b54de1bbe4cf86fa58aeec39084afb35e0cbe5f69c763ecaec1d352daa0](https://www.virustotal.com/gui/search/authentihash%253A37e33b54de1bbe4cf86fa58aeec39084afb35e0cbe5f69c763ecaec1d352daa0) |
+| Signature         | ID TECH, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* KeInitializeEvent
+{{< details "Expand" >}}
+* KeInitializeEvent
 * KeDelayExecutionThread
 * KeSetPriorityThread
 * KeInitializeSpinLock
@@ -84,15 +93,17 @@ sc.exe create msrhook.sys binPath=C:\windows\temp\msrhook.sys type=kernel &amp;&
 * IoCreateDevice
 * RtlInitUnicodeString
 * KeStallExecutionProcessor
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/msrhook.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

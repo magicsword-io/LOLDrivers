@@ -47,18 +47,31 @@ sc.exe create Dh_Kernel.sys binPath=C:\windows\temp\Dh_Kernel.sys type=kernel &a
 
 ### Known Vulnerable Samples
 
-| Filename | Dh_Kernel.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/98763a3dee3cf03de334f00f95fc071a">98763a3dee3cf03de334f00f95fc071a</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/745bad097052134548fe159f158c04be5616afc2">745bad097052134548fe159f158c04be5616afc2</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955">bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A2d03bf608f236ee1f4654e06857a3062">2d03bf608f236ee1f4654e06857a3062</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A508c1a26486188aa1268d6c23c65e57b8efe71f6">508c1a26486188aa1268d6c23c65e57b8efe71f6</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Af5215f83138901ca7ade60c2222446fa3dd7e8900a745bd339f8a596cb29356c">f5215f83138901ca7ade60c2222446fa3dd7e8900a745bd339f8a596cb29356c</a> || Publisher | YY Inc. || Signature | YY Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | YY Inc. || Description | dianhu || Product | dianhu |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | Dh_Kernel.sys |
+| MD5                | [98763a3dee3cf03de334f00f95fc071a](https://www.virustotal.com/gui/file/98763a3dee3cf03de334f00f95fc071a) |
+| SHA1               | [745bad097052134548fe159f158c04be5616afc2](https://www.virustotal.com/gui/file/745bad097052134548fe159f158c04be5616afc2) |
+| SHA256             | [bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955](https://www.virustotal.com/gui/file/bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955) |
+| Authentihash MD5   | [2d03bf608f236ee1f4654e06857a3062](https://www.virustotal.com/gui/search/authentihash%253A2d03bf608f236ee1f4654e06857a3062) |
+| Authentihash SHA1  | [508c1a26486188aa1268d6c23c65e57b8efe71f6](https://www.virustotal.com/gui/search/authentihash%253A508c1a26486188aa1268d6c23c65e57b8efe71f6) |
+| Authentihash SHA256| [f5215f83138901ca7ade60c2222446fa3dd7e8900a745bd339f8a596cb29356c](https://www.virustotal.com/gui/search/authentihash%253Af5215f83138901ca7ade60c2222446fa3dd7e8900a745bd339f8a596cb29356c) |
+| Publisher         | YY Inc. |
+| Signature         | YY Inc., VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Company           | YY Inc. |
+| Description       | dianhu |
+| Product           | dianhu |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * WDFLDR.SYS
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* ExFreePoolWithTag
+{{< details "Expand" >}}
+* ExFreePoolWithTag
 * ProbeForRead
 * MmProbeAndLockPages
 * MmBuildMdlForNonPagedPool
@@ -92,15 +105,17 @@ sc.exe create Dh_Kernel.sys binPath=C:\windows\temp\Dh_Kernel.sys type=kernel &a
 * WdfVersionBind
 * WdfVersionUnbind
 * WdfVersionUnbindClass
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dh_kernel.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

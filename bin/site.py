@@ -1,4 +1,3 @@
-import glob
 import yaml
 import argparse
 import sys
@@ -67,12 +66,12 @@ def write_top_publishers(drivers, output_dir, top_n=5):
 
             if not publisher_str:
                 continue
+            
+            publishers = re.findall(r'\"(.*?)\"|([^,]+)', publisher_str)
+            for publisher_tuple in publishers:
+                publisher = next(filter(None, publisher_tuple)).strip()
 
-            publishers = re.split(',(?![^"]*"(?:(?:[^"]*"){2})*[^"]*$)', publisher_str)
-            for publisher in publishers:
-                publisher = publisher.strip().replace(',', '')
-
-                if publisher.lower() == 'n/a' or publisher.isspace():
+                if publisher.lower() == 'n/a' or publisher.isspace() or publisher.lower() == 'ltd.':
                     continue
 
                 if publisher not in publishers_count:
@@ -88,6 +87,7 @@ def write_top_publishers(drivers, output_dir, top_n=5):
         for publisher, count in sorted_publishers:
             for _ in range(count):
                 writer.writerow([count, publisher])
+
 
 def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE):
     manifest_files = []

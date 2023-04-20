@@ -46,19 +46,28 @@ sc.exe create dbk64.sys binPath=C:\windows\temp\dbk64.sys type=kernel &amp;&amp;
 
 ### Known Vulnerable Samples
 
-| Filename | dbk64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/1c294146fc77565030603878fd0106f9">1c294146fc77565030603878fd0106f9</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/6053d258096bccb07cb0057d700fe05233ab1fbb">6053d258096bccb07cb0057d700fe05233ab1fbb</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/18e1707b319c279c7e0204074088cc39286007a1cf6cb6e269d5067d8d0628c6">18e1707b319c279c7e0204074088cc39286007a1cf6cb6e269d5067d8d0628c6</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A50dadd183094b8711a4f00a198972e6b">50dadd183094b8711a4f00a198972e6b</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ad7512b033d7332edd747631f9d1ccc9276dadbe4">d7512b033d7332edd747631f9d1ccc9276dadbe4</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A71dc8d678e0749599d3db144c93741f64def1b8b0efb98bef963d2215ebb4992">71dc8d678e0749599d3db144c93741f64def1b8b0efb98bef963d2215ebb4992</a> || Signature | Cheat Engine, GlobalSign Extended Validation CodeSigning CA - SHA256 - G3, GlobalSign, GlobalSign Root CA - R1   |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | dbk64.sys |
+| MD5                | [1c294146fc77565030603878fd0106f9](https://www.virustotal.com/gui/file/1c294146fc77565030603878fd0106f9) |
+| SHA1               | [6053d258096bccb07cb0057d700fe05233ab1fbb](https://www.virustotal.com/gui/file/6053d258096bccb07cb0057d700fe05233ab1fbb) |
+| SHA256             | [18e1707b319c279c7e0204074088cc39286007a1cf6cb6e269d5067d8d0628c6](https://www.virustotal.com/gui/file/18e1707b319c279c7e0204074088cc39286007a1cf6cb6e269d5067d8d0628c6) |
+| Authentihash MD5   | [50dadd183094b8711a4f00a198972e6b](https://www.virustotal.com/gui/search/authentihash%253A50dadd183094b8711a4f00a198972e6b) |
+| Authentihash SHA1  | [d7512b033d7332edd747631f9d1ccc9276dadbe4](https://www.virustotal.com/gui/search/authentihash%253Ad7512b033d7332edd747631f9d1ccc9276dadbe4) |
+| Authentihash SHA256| [71dc8d678e0749599d3db144c93741f64def1b8b0efb98bef963d2215ebb4992](https://www.virustotal.com/gui/search/authentihash%253A71dc8d678e0749599d3db144c93741f64def1b8b0efb98bef963d2215ebb4992) |
+| Signature         | Cheat Engine, GlobalSign Extended Validation CodeSigning CA - SHA256 - G3, GlobalSign, GlobalSign Root CA - R1   |
+
+
 #### Imports
-{{< details "Expand" >}}* ksecdd.sys
+{{< details "Expand" >}}
+* ksecdd.sys
 * ntoskrnl.exe
 * WDFLDR.SYS
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* BCryptVerifySignature
+{{< details "Expand" >}}
+* BCryptVerifySignature
 * BCryptCreateHash
 * BCryptDestroyKey
 * BCryptFinishHash
@@ -183,15 +192,17 @@ sc.exe create dbk64.sys binPath=C:\windows\temp\dbk64.sys type=kernel &amp;&amp;
 * WdfVersionBindClass
 * WdfVersionUnbindClass
 * WdfVersionUnbind
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dbk64.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

@@ -51,24 +51,32 @@ sc.exe create NetProxyDriver.sys binPath=C:\windows\temp\NetProxyDriver.sys     
 
 ### Known Vulnerable Samples
 
-| Filename | NetProxyDriver.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/8111085022bda87e5f6aa4c195e743cc6dd6a3a6d41add475d267dc6b105a69f">8111085022bda87e5f6aa4c195e743cc6dd6a3a6d41add475d267dc6b105a69f</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | NetProxyDriver.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [-](https://www.virustotal.com/gui/file/-) |
+| SHA256             | [8111085022bda87e5f6aa4c195e743cc6dd6a3a6d41add475d267dc6b105a69f](https://www.virustotal.com/gui/file/8111085022bda87e5f6aa4c195e743cc6dd6a3a6d41add475d267dc6b105a69f) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/netproxydriver.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

@@ -47,17 +47,30 @@ sc.exe create nicm.sys binPath=C:\windows\temp \n \n \n  icm.sys type=kernel &am
 
 ### Known Vulnerable Samples
 
-| Filename | nicm.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/22823fed979903f8dfe3b5d28537eb47">22823fed979903f8dfe3b5d28537eb47</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/d098600152e5ee6a8238d414d2a77a34da8afaaa">d098600152e5ee6a8238d414d2a77a34da8afaaa</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/e6056443537d4d2314dabca1b9168f1eaaf17a14eb41f6f5741b6b82b3119790">e6056443537d4d2314dabca1b9168f1eaaf17a14eb41f6f5741b6b82b3119790</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A4f9030161d60cde6099483f6763e75db">4f9030161d60cde6099483f6763e75db</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A6ec1c1cd8c38de77cb35260deeb491e563b5c721">6ec1c1cd8c38de77cb35260deeb491e563b5c721</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aaa0a1de59d8697c5f39937edeb778fde7c596b71d64d3427c80fe4c060488990">aa0a1de59d8697c5f39937edeb778fde7c596b71d64d3427c80fe4c060488990</a> || Signature | Novell, Inc., VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   || Company | Novell, Inc. || Description | Novell XTCOM Services Driver || Product | Novell XTier || OriginalFilename | libnicm.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | nicm.sys |
+| MD5                | [22823fed979903f8dfe3b5d28537eb47](https://www.virustotal.com/gui/file/22823fed979903f8dfe3b5d28537eb47) |
+| SHA1               | [d098600152e5ee6a8238d414d2a77a34da8afaaa](https://www.virustotal.com/gui/file/d098600152e5ee6a8238d414d2a77a34da8afaaa) |
+| SHA256             | [e6056443537d4d2314dabca1b9168f1eaaf17a14eb41f6f5741b6b82b3119790](https://www.virustotal.com/gui/file/e6056443537d4d2314dabca1b9168f1eaaf17a14eb41f6f5741b6b82b3119790) |
+| Authentihash MD5   | [4f9030161d60cde6099483f6763e75db](https://www.virustotal.com/gui/search/authentihash%253A4f9030161d60cde6099483f6763e75db) |
+| Authentihash SHA1  | [6ec1c1cd8c38de77cb35260deeb491e563b5c721](https://www.virustotal.com/gui/search/authentihash%253A6ec1c1cd8c38de77cb35260deeb491e563b5c721) |
+| Authentihash SHA256| [aa0a1de59d8697c5f39937edeb778fde7c596b71d64d3427c80fe4c060488990](https://www.virustotal.com/gui/search/authentihash%253Aaa0a1de59d8697c5f39937edeb778fde7c596b71d64d3427c80fe4c060488990) |
+| Signature         | Novell, Inc., VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   |
+| Company           | Novell, Inc. |
+| Description       | Novell XTCOM Services Driver |
+| Product           | Novell XTier |
+| OriginalFilename  | libnicm.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* ExAcquireResourceExclusiveLite
+{{< details "Expand" >}}
+* ExAcquireResourceExclusiveLite
 * ExAllocatePoolWithTag
 * ExFreePoolWithTag
 * strstr
@@ -118,9 +131,11 @@ sc.exe create nicm.sys binPath=C:\windows\temp \n \n \n  icm.sys type=kernel &am
 * ZwOpenKey
 * KeBugCheckEx
 * __C_specific_handler
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}* NicmCreateInstance
+{{< details "Expand" >}}
+* NicmCreateInstance
 * NicmDeregisterClassFactory
 * NicmGetVersion
 * NicmRegisterClassFactory
@@ -131,13 +146,13 @@ sc.exe create nicm.sys binPath=C:\windows\temp \n \n \n  icm.sys type=kernel &am
 * XTComGetVersion
 * XTComInitialize
 * XTComRegisterClassFactory
-{{< /details >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nicm.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

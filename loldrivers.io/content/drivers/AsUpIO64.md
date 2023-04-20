@@ -46,18 +46,27 @@ sc.exe create AsUpIO64.sys binPath=C:\windows\temp\AsUpIO64.sys type=kernel &amp
 
 ### Known Vulnerable Samples
 
-| Filename | AsUpIO64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/1392b92179b07b672720763d9b1028a5">1392b92179b07b672720763d9b1028a5</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/8b6aa5b2bff44766ef7afbe095966a71bc4183fa">8b6aa5b2bff44766ef7afbe095966a71bc4183fa</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/b4d47ea790920a4531e3df5a4b4b0721b7fea6b49a35679f0652f1e590422602">b4d47ea790920a4531e3df5a4b4b0721b7fea6b49a35679f0652f1e590422602</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A1e97ead4c5049f8fefe2b72edd5fa90e">1e97ead4c5049f8fefe2b72edd5fa90e</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A2a95f882dd9bafcc57f144a2708a7ec67dd7844c">2a95f882dd9bafcc57f144a2708a7ec67dd7844c</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A7f75d91844b0c162eeb24d14bcf63b7f230e111daa7b0a26eaa489eeb22d9057">7f75d91844b0c162eeb24d14bcf63b7f230e111daa7b0a26eaa489eeb22d9057</a> || Signature | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | AsUpIO64.sys |
+| MD5                | [1392b92179b07b672720763d9b1028a5](https://www.virustotal.com/gui/file/1392b92179b07b672720763d9b1028a5) |
+| SHA1               | [8b6aa5b2bff44766ef7afbe095966a71bc4183fa](https://www.virustotal.com/gui/file/8b6aa5b2bff44766ef7afbe095966a71bc4183fa) |
+| SHA256             | [b4d47ea790920a4531e3df5a4b4b0721b7fea6b49a35679f0652f1e590422602](https://www.virustotal.com/gui/file/b4d47ea790920a4531e3df5a4b4b0721b7fea6b49a35679f0652f1e590422602) |
+| Authentihash MD5   | [1e97ead4c5049f8fefe2b72edd5fa90e](https://www.virustotal.com/gui/search/authentihash%253A1e97ead4c5049f8fefe2b72edd5fa90e) |
+| Authentihash SHA1  | [2a95f882dd9bafcc57f144a2708a7ec67dd7844c](https://www.virustotal.com/gui/search/authentihash%253A2a95f882dd9bafcc57f144a2708a7ec67dd7844c) |
+| Authentihash SHA256| [7f75d91844b0c162eeb24d14bcf63b7f230e111daa7b0a26eaa489eeb22d9057](https://www.virustotal.com/gui/search/authentihash%253A7f75d91844b0c162eeb24d14bcf63b7f230e111daa7b0a26eaa489eeb22d9057) |
+| Signature         | ASUSTeK Computer Inc., VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* ZwMapViewOfSection
+{{< details "Expand" >}}
+* ZwMapViewOfSection
 * ObReferenceObjectByHandle
 * ZwOpenSection
 * RtlInitUnicodeString
@@ -73,15 +82,17 @@ sc.exe create AsUpIO64.sys binPath=C:\windows\temp\AsUpIO64.sys type=kernel &amp
 * IofCompleteRequest
 * KeDelayExecutionThread
 * HalTranslateBusAddress
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asupio64.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

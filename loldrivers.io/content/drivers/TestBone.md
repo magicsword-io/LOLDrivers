@@ -51,24 +51,32 @@ sc.exe create TestBone.sys binPath=C:\windows\temp\TestBone.sys type=kernel &amp
 
 ### Known Vulnerable Samples
 
-| Filename | TestBone.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/0de4247e72d378713bcf22d5c5d3874d079203bb4364e25f67a90d5570bdcce8">0de4247e72d378713bcf22d5c5d3874d079203bb4364e25f67a90d5570bdcce8</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | TestBone.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [-](https://www.virustotal.com/gui/file/-) |
+| SHA256             | [0de4247e72d378713bcf22d5c5d3874d079203bb4364e25f67a90d5570bdcce8](https://www.virustotal.com/gui/file/0de4247e72d378713bcf22d5c5d3874d079203bb4364e25f67a90d5570bdcce8) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/testbone.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

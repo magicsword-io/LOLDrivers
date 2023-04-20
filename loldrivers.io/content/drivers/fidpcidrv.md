@@ -51,60 +51,92 @@ sc.exe create fidpcidrv.sys binPath=C:\windows\temp\fidpcidrv.sys type=kernel &a
 
 ### Known Vulnerable Samples
 
-| Filename | fidpcidrv.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/08596732304351b311970ff96b21f451f23b1e25">08596732304351b311970ff96b21f451f23b1e25</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-| Filename | fidpcidrv.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/7838fb56fdab816bc1900a4720eea2fc9972ef7a">7838fb56fdab816bc1900a4720eea2fc9972ef7a</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-| Filename | fidpcidrv.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/4789b910023a667bee70ff1f1a8f369cffb10fe8">4789b910023a667bee70ff1f1a8f369cffb10fe8</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-| Filename | fidpcidrv.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/eeff4ec4ebc12c6acd2c930dc2eaaf877cfec7ec">eeff4ec4ebc12c6acd2c930dc2eaaf877cfec7ec</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | fidpcidrv.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [08596732304351b311970ff96b21f451f23b1e25](https://www.virustotal.com/gui/file/08596732304351b311970ff96b21f451f23b1e25) |
+| SHA256             | [-](https://www.virustotal.com/gui/file/-) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}| Property           | Value |
+|:-------------------|:------|
+| Filename           | fidpcidrv.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [7838fb56fdab816bc1900a4720eea2fc9972ef7a](https://www.virustotal.com/gui/file/7838fb56fdab816bc1900a4720eea2fc9972ef7a) |
+| SHA256             | [-](https://www.virustotal.com/gui/file/-) |
+| Signature         | -   |
+
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}| Property           | Value |
+|:-------------------|:------|
+| Filename           | fidpcidrv.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [4789b910023a667bee70ff1f1a8f369cffb10fe8](https://www.virustotal.com/gui/file/4789b910023a667bee70ff1f1a8f369cffb10fe8) |
+| SHA256             | [-](https://www.virustotal.com/gui/file/-) |
+| Signature         | -   |
+
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}| Property           | Value |
+|:-------------------|:------|
+| Filename           | fidpcidrv.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [eeff4ec4ebc12c6acd2c930dc2eaaf877cfec7ec](https://www.virustotal.com/gui/file/eeff4ec4ebc12c6acd2c930dc2eaaf877cfec7ec) |
+| SHA256             | [-](https://www.virustotal.com/gui/file/-) |
+| Signature         | -   |
+
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fidpcidrv.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

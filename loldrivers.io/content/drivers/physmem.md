@@ -47,24 +47,32 @@ sc.exe create physmem.sys binPath=C:\windows\temp\physmem.sys type=kernel &amp;&
 
 ### Known Vulnerable Samples
 
-| Filename | physmem.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/589a7d4df869395601ba7538a65afae8c4616385">589a7d4df869395601ba7538a65afae8c4616385</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | physmem.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [589a7d4df869395601ba7538a65afae8c4616385](https://www.virustotal.com/gui/file/589a7d4df869395601ba7538a65afae8c4616385) |
+| SHA256             | [-](https://www.virustotal.com/gui/file/-) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/physmem.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

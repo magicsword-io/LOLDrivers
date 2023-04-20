@@ -47,19 +47,30 @@ sc.exe create daxin_blank5.sys binPath=C:\windows\temp\daxin_blank5.sys     type
 
 ### Known Vulnerable Samples
 
-| Filename | daxin_blank5.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/f242cffd9926c0ccf94af3bf16b6e527">f242cffd9926c0ccf94af3bf16b6e527</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/53f776d9a183c42b93960b270dddeafba74eb3fb">53f776d9a183c42b93960b270dddeafba74eb3fb</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/9c2f3e9811f7d0c7463eaa1ee6f39c23f902f3797b80891590b43bbe0fdf0e51">9c2f3e9811f7d0c7463eaa1ee6f39c23f902f3797b80891590b43bbe0fdf0e51</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ada0d70a9fd3a61a2802af4a07bed29d4">da0d70a9fd3a61a2802af4a07bed29d4</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A99a969b2deded8b2d403268cd49139463c06b484">99a969b2deded8b2d403268cd49139463c06b484</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A954789c665098cf491a9bdf4e04886bad8992a393f91ccbca239bff40cc6dca6">954789c665098cf491a9bdf4e04886bad8992a393f91ccbca239bff40cc6dca6</a> || Publisher | n/a || Signature | U, n, s, i, g, n, e, d   || Date | 1:29 AM 7/18/2008 |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | daxin_blank5.sys |
+| MD5                | [f242cffd9926c0ccf94af3bf16b6e527](https://www.virustotal.com/gui/file/f242cffd9926c0ccf94af3bf16b6e527) |
+| SHA1               | [53f776d9a183c42b93960b270dddeafba74eb3fb](https://www.virustotal.com/gui/file/53f776d9a183c42b93960b270dddeafba74eb3fb) |
+| SHA256             | [9c2f3e9811f7d0c7463eaa1ee6f39c23f902f3797b80891590b43bbe0fdf0e51](https://www.virustotal.com/gui/file/9c2f3e9811f7d0c7463eaa1ee6f39c23f902f3797b80891590b43bbe0fdf0e51) |
+| Authentihash MD5   | [da0d70a9fd3a61a2802af4a07bed29d4](https://www.virustotal.com/gui/search/authentihash%253Ada0d70a9fd3a61a2802af4a07bed29d4) |
+| Authentihash SHA1  | [99a969b2deded8b2d403268cd49139463c06b484](https://www.virustotal.com/gui/search/authentihash%253A99a969b2deded8b2d403268cd49139463c06b484) |
+| Authentihash SHA256| [954789c665098cf491a9bdf4e04886bad8992a393f91ccbca239bff40cc6dca6](https://www.virustotal.com/gui/search/authentihash%253A954789c665098cf491a9bdf4e04886bad8992a393f91ccbca239bff40cc6dca6) |
+| Publisher         | n/a |
+| Signature         | U, n, s, i, g, n, e, d   |
+| Date                | 1:29 AM 7/18/2008 |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
 * NDIS.SYS
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* MmUnlockPages
+{{< details "Expand" >}}
+* MmUnlockPages
 * KeInsertQueueApc
 * strncmp
 * KeInitializeApc
@@ -118,15 +129,17 @@ sc.exe create daxin_blank5.sys binPath=C:\windows\temp\daxin_blank5.sys     type
 * NdisWaitEvent
 * NdisAllocateBufferPool
 * NdisCopyFromPacketToPacket
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/daxin_blank5.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

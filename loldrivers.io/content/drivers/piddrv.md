@@ -51,36 +51,52 @@ sc.exe create piddrv.sys binPath=C:\windows\temp\piddrv.sys type=kernel &amp;&am
 
 ### Known Vulnerable Samples
 
-| Filename | piddrv.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/a7d827a41b2c4b7638495cd1d77926f1ba902978">a7d827a41b2c4b7638495cd1d77926f1ba902978</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-| Filename | piddrv.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/877c6c36a155109888fe1f9797b93cb30b4957ef">877c6c36a155109888fe1f9797b93cb30b4957ef</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | piddrv.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [a7d827a41b2c4b7638495cd1d77926f1ba902978](https://www.virustotal.com/gui/file/a7d827a41b2c4b7638495cd1d77926f1ba902978) |
+| SHA256             | [-](https://www.virustotal.com/gui/file/-) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}| Property           | Value |
+|:-------------------|:------|
+| Filename           | piddrv.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [877c6c36a155109888fe1f9797b93cb30b4957ef](https://www.virustotal.com/gui/file/877c6c36a155109888fe1f9797b93cb30b4957ef) |
+| SHA256             | [-](https://www.virustotal.com/gui/file/-) |
+| Signature         | -   |
+
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/piddrv.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

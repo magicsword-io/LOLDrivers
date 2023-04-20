@@ -51,24 +51,32 @@ sc.exe create nt5.sys binPath=C:\windows\temp \n \n \n  t5.sys type=kernel &amp;
 
 ### Known Vulnerable Samples
 
-| Filename | nt5.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/fd33fb2735cc5ef466a54807d3436622407287e325276fcd3ed1290c98bd0533">fd33fb2735cc5ef466a54807d3436622407287e325276fcd3ed1290c98bd0533</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | nt5.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [-](https://www.virustotal.com/gui/file/-) |
+| SHA256             | [fd33fb2735cc5ef466a54807d3436622407287e325276fcd3ed1290c98bd0533](https://www.virustotal.com/gui/file/fd33fb2735cc5ef466a54807d3436622407287e325276fcd3ed1290c98bd0533) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nt5.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

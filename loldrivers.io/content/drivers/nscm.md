@@ -47,18 +47,31 @@ sc.exe create nscm.sys binPath=C:\windows\temp \n \n \n  scm.sys type=kernel &am
 
 ### Known Vulnerable Samples
 
-| Filename | nscm.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/4a23e0f2c6f926a41b28d574cbc6ac30">4a23e0f2c6f926a41b28d574cbc6ac30</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/64e4ac8b9ea2f050933b7ec76a55dd04e97773b4">64e4ac8b9ea2f050933b7ec76a55dd04e97773b4</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22">76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A0d1a4e506e7c928f1683a9cf38eb0835">0d1a4e506e7c928f1683a9cf38eb0835</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A50471608c91621cb84ba646974311da0abf6b3e9">50471608c91621cb84ba646974311da0abf6b3e9</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A0e291148da43ea6a491b8b94bdf573365087940c9b90f6a15a4e589da86a518d">0e291148da43ea6a491b8b94bdf573365087940c9b90f6a15a4e589da86a518d</a> || Signature | Novell, Inc., VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   || Company | Novell, Inc. || Description | Novell XTier Session Manager || Product | Novell XTier || OriginalFilename | nscm.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | nscm.sys |
+| MD5                | [4a23e0f2c6f926a41b28d574cbc6ac30](https://www.virustotal.com/gui/file/4a23e0f2c6f926a41b28d574cbc6ac30) |
+| SHA1               | [64e4ac8b9ea2f050933b7ec76a55dd04e97773b4](https://www.virustotal.com/gui/file/64e4ac8b9ea2f050933b7ec76a55dd04e97773b4) |
+| SHA256             | [76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22](https://www.virustotal.com/gui/file/76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22) |
+| Authentihash MD5   | [0d1a4e506e7c928f1683a9cf38eb0835](https://www.virustotal.com/gui/search/authentihash%253A0d1a4e506e7c928f1683a9cf38eb0835) |
+| Authentihash SHA1  | [50471608c91621cb84ba646974311da0abf6b3e9](https://www.virustotal.com/gui/search/authentihash%253A50471608c91621cb84ba646974311da0abf6b3e9) |
+| Authentihash SHA256| [0e291148da43ea6a491b8b94bdf573365087940c9b90f6a15a4e589da86a518d](https://www.virustotal.com/gui/search/authentihash%253A0e291148da43ea6a491b8b94bdf573365087940c9b90f6a15a4e589da86a518d) |
+| Signature         | Novell, Inc., VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   |
+| Company           | Novell, Inc. |
+| Description       | Novell XTier Session Manager |
+| Product           | Novell XTier |
+| OriginalFilename  | nscm.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * nicm.sys
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* ExAllocatePoolWithTag
+{{< details "Expand" >}}
+* ExAllocatePoolWithTag
 * ExFreePoolWithTag
 * KeInitializeMutex
 * IoQueueWorkItemEx
@@ -85,17 +98,19 @@ sc.exe create nscm.sys binPath=C:\windows\temp \n \n \n  scm.sys type=kernel &am
 * KeReleaseMutex
 * NicmCreateInstance
 * NicmDeregisterClassFactory
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}* DllGetClassObject
+{{< details "Expand" >}}
+* DllGetClassObject
 * XTCOM_Table
-{{< /details >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nscm.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

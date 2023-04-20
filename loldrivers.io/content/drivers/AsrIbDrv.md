@@ -46,18 +46,32 @@ sc.exe create AsrIbDrv.sys binPath=C:\windows\temp\AsrIbDrv.sys type=kernel &amp
 
 ### Known Vulnerable Samples
 
-| Filename | AsrIbDrv.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/5bab40019419a2713298a5c9173e5d30">5bab40019419a2713298a5c9173e5d30</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/2d503a2457a787014a1fdd48a2ece2e6cbe98ea7">2d503a2457a787014a1fdd48a2ece2e6cbe98ea7</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/2a652de6b680d5ad92376ad323021850dab2c653abf06edf26120f7714b8e08a">2a652de6b680d5ad92376ad323021850dab2c653abf06edf26120f7714b8e08a</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aa2bb232491925c750971c731b5fe0769">a2bb232491925c750971c731b5fe0769</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Add71b95f82ae2c31008da781c4de64d6059c5fca">dd71b95f82ae2c31008da781c4de64d6059c5fca</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ab8d748834fb982fa033cd2671843de727999b21fad30979ac4acc4828910ef8b">b8d748834fb982fa033cd2671843de727999b21fad30979ac4acc4828910ef8b</a> || Publisher | ASROCK Incorporation || Signature | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   || Company | RW-Everything || Description | RW-Everything Read &amp; Write Driver || Product | RW-Everything Read &amp; Write Driver || OriginalFilename | RwDrv.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | AsrIbDrv.sys |
+| MD5                | [5bab40019419a2713298a5c9173e5d30](https://www.virustotal.com/gui/file/5bab40019419a2713298a5c9173e5d30) |
+| SHA1               | [2d503a2457a787014a1fdd48a2ece2e6cbe98ea7](https://www.virustotal.com/gui/file/2d503a2457a787014a1fdd48a2ece2e6cbe98ea7) |
+| SHA256             | [2a652de6b680d5ad92376ad323021850dab2c653abf06edf26120f7714b8e08a](https://www.virustotal.com/gui/file/2a652de6b680d5ad92376ad323021850dab2c653abf06edf26120f7714b8e08a) |
+| Authentihash MD5   | [a2bb232491925c750971c731b5fe0769](https://www.virustotal.com/gui/search/authentihash%253Aa2bb232491925c750971c731b5fe0769) |
+| Authentihash SHA1  | [dd71b95f82ae2c31008da781c4de64d6059c5fca](https://www.virustotal.com/gui/search/authentihash%253Add71b95f82ae2c31008da781c4de64d6059c5fca) |
+| Authentihash SHA256| [b8d748834fb982fa033cd2671843de727999b21fad30979ac4acc4828910ef8b](https://www.virustotal.com/gui/search/authentihash%253Ab8d748834fb982fa033cd2671843de727999b21fad30979ac4acc4828910ef8b) |
+| Publisher         | ASROCK Incorporation |
+| Signature         | ASROCK Incorporation, VeriSign Class 3 Code Signing 2010 CA, VeriSign   |
+| Company           | RW-Everything |
+| Description       | RW-Everything Read &amp; Write Driver |
+| Product           | RW-Everything Read &amp; Write Driver |
+| OriginalFilename  | RwDrv.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* IoDeleteSymbolicLink
+{{< details "Expand" >}}
+* IoDeleteSymbolicLink
 * ExFreePoolWithTag
 * MmFreeContiguousMemorySpecifyCache
 * RtlInitUnicodeString
@@ -79,15 +93,17 @@ sc.exe create AsrIbDrv.sys binPath=C:\windows\temp\AsrIbDrv.sys type=kernel &amp
 * KeBugCheckEx
 * ExAllocatePoolWithTag
 * KeStallExecutionProcessor
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asribdrv.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

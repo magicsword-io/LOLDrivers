@@ -46,18 +46,31 @@ sc.exe create amp.sys binPath=C:\windows\temp\amp.sys type=kernel &amp;&amp; sc.
 
 ### Known Vulnerable Samples
 
-| Filename | amp.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/c533d6d64b474ffc3169a0e0fc0a701a">c533d6d64b474ffc3169a0e0fc0a701a</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/3f223581409492172a1e875f130f3485b90fbe5f">3f223581409492172a1e875f130f3485b90fbe5f</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/cbb8239a765bf5b2c1b6a5c8832d2cab8fef5deacadfb65d8ed43ef56d291ab6">cbb8239a765bf5b2c1b6a5c8832d2cab8fef5deacadfb65d8ed43ef56d291ab6</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A74ee74d20c3afc42d7722a88aacf3671">74ee74d20c3afc42d7722a88aacf3671</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A87a84133f5e4c12d2d4a42fcc3be84b43a6202b5">87a84133f5e4c12d2d4a42fcc3be84b43a6202b5</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Aa37371c4e62f106e7da03fd5bdd6f12ecdf7fcaf1195dbf9fb7ef6eb456a7506">a37371c4e62f106e7da03fd5bdd6f12ecdf7fcaf1195dbf9fb7ef6eb456a7506</a> || Signature | -   || Company | CYREN Inc. || Description | AMP Minifilter || Product | CYREN AMP 5 || OriginalFilename | amp.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | amp.sys |
+| MD5                | [c533d6d64b474ffc3169a0e0fc0a701a](https://www.virustotal.com/gui/file/c533d6d64b474ffc3169a0e0fc0a701a) |
+| SHA1               | [3f223581409492172a1e875f130f3485b90fbe5f](https://www.virustotal.com/gui/file/3f223581409492172a1e875f130f3485b90fbe5f) |
+| SHA256             | [cbb8239a765bf5b2c1b6a5c8832d2cab8fef5deacadfb65d8ed43ef56d291ab6](https://www.virustotal.com/gui/file/cbb8239a765bf5b2c1b6a5c8832d2cab8fef5deacadfb65d8ed43ef56d291ab6) |
+| Authentihash MD5   | [74ee74d20c3afc42d7722a88aacf3671](https://www.virustotal.com/gui/search/authentihash%253A74ee74d20c3afc42d7722a88aacf3671) |
+| Authentihash SHA1  | [87a84133f5e4c12d2d4a42fcc3be84b43a6202b5](https://www.virustotal.com/gui/search/authentihash%253A87a84133f5e4c12d2d4a42fcc3be84b43a6202b5) |
+| Authentihash SHA256| [a37371c4e62f106e7da03fd5bdd6f12ecdf7fcaf1195dbf9fb7ef6eb456a7506](https://www.virustotal.com/gui/search/authentihash%253Aa37371c4e62f106e7da03fd5bdd6f12ecdf7fcaf1195dbf9fb7ef6eb456a7506) |
+| Signature         | -   |
+| Company           | CYREN Inc. |
+| Description       | AMP Minifilter |
+| Product           | CYREN AMP 5 |
+| OriginalFilename  | amp.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * FLTMGR.SYS
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* ObfDereferenceObject
+{{< details "Expand" >}}
+* ObfDereferenceObject
 * ObQueryNameString
 * RtlIntegerToUnicodeString
 * IoGetCurrentProcess
@@ -183,15 +196,17 @@ sc.exe create amp.sys binPath=C:\windows\temp\amp.sys type=kernel &amp;&amp; sc.
 * FltQueryInformationFile
 * FltClose
 * FltFlushBuffers
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amp.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

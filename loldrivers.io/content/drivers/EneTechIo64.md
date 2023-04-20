@@ -47,18 +47,27 @@ sc.exe create EneTechIo64.sys binPath=C:\windows\temp\EneTechIo64.sys     type=k
 
 ### Known Vulnerable Samples
 
-| Filename | EneTechIo64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/d6e9f6c67d9b3d790d592557a7d57c3c">d6e9f6c67d9b3d790d592557a7d57c3c</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/a87d6eac2d70a3fbc04e59412326b28001c179de">a87d6eac2d70a3fbc04e59412326b28001c179de</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/06bda5a1594f7121acd2efe38ccb617fbc078bb9a70b665a5f5efd70e3013f50">06bda5a1594f7121acd2efe38ccb617fbc078bb9a70b665a5f5efd70e3013f50</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A0765c07a666231285972c3487acfc7b2">0765c07a666231285972c3487acfc7b2</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A6b60825564b2dccff3a4f904b71541bfe94136c9">6b60825564b2dccff3a4f904b71541bfe94136c9</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A865e4bc7290fc3b380e266ccd98c2d4e965beb711d7efd090d052e8326accdd2">865e4bc7290fc3b380e266ccd98c2d4e965beb711d7efd090d052e8326accdd2</a> || Signature | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | EneTechIo64.sys |
+| MD5                | [d6e9f6c67d9b3d790d592557a7d57c3c](https://www.virustotal.com/gui/file/d6e9f6c67d9b3d790d592557a7d57c3c) |
+| SHA1               | [a87d6eac2d70a3fbc04e59412326b28001c179de](https://www.virustotal.com/gui/file/a87d6eac2d70a3fbc04e59412326b28001c179de) |
+| SHA256             | [06bda5a1594f7121acd2efe38ccb617fbc078bb9a70b665a5f5efd70e3013f50](https://www.virustotal.com/gui/file/06bda5a1594f7121acd2efe38ccb617fbc078bb9a70b665a5f5efd70e3013f50) |
+| Authentihash MD5   | [0765c07a666231285972c3487acfc7b2](https://www.virustotal.com/gui/search/authentihash%253A0765c07a666231285972c3487acfc7b2) |
+| Authentihash SHA1  | [6b60825564b2dccff3a4f904b71541bfe94136c9](https://www.virustotal.com/gui/search/authentihash%253A6b60825564b2dccff3a4f904b71541bfe94136c9) |
+| Authentihash SHA256| [865e4bc7290fc3b380e266ccd98c2d4e965beb711d7efd090d052e8326accdd2](https://www.virustotal.com/gui/search/authentihash%253A865e4bc7290fc3b380e266ccd98c2d4e965beb711d7efd090d052e8326accdd2) |
+| Signature         | Microsoft Windows Hardware Compatibility Publisher, Microsoft Windows Third Party Component CA 2014, Microsoft Root Certificate Authority 2010   |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* IoCreateDevice
+{{< details "Expand" >}}
+* IoCreateDevice
 * IoCreateSymbolicLink
 * IoDeleteDevice
 * IoDeleteSymbolicLink
@@ -73,15 +82,17 @@ sc.exe create EneTechIo64.sys binPath=C:\windows\temp\EneTechIo64.sys     type=k
 * ObfDereferenceObject
 * RtlInitUnicodeString
 * HalTranslateBusAddress
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/enetechio64.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

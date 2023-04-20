@@ -46,17 +46,30 @@ sc.exe create mtcBSv64.sys binPath=C:\windows\temp\mtcBSv64.sys type=kernel &amp
 
 ### Known Vulnerable Samples
 
-| Filename | mtcBSv64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/9dfd73dadb2f1c7e9c9d2542981aaa63">9dfd73dadb2f1c7e9c9d2542981aaa63</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/29a190727140f40cea9514a6420f5a195e36386b">29a190727140f40cea9514a6420f5a195e36386b</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/c9cf1d627078f63a36bbde364cd0d5f2be1714124d186c06db5bcdf549a109f8">c9cf1d627078f63a36bbde364cd0d5f2be1714124d186c06db5bcdf549a109f8</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ac467ed521f199f0d5c1c3705dabf2896">c467ed521f199f0d5c1c3705dabf2896</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A8533994513c4f65feb48806b36f42ec9fe21a4c3">8533994513c4f65feb48806b36f42ec9fe21a4c3</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ada8945bd5c693c0593c9d0e3bda49bb1c6007cb25643c95708c6b10bef7c136a">da8945bd5c693c0593c9d0e3bda49bb1c6007cb25643c95708c6b10bef7c136a</a> || Signature | Mitac Technology Corporation, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   || Company | MiTAC Technology Corporation || Description | MiTAC System Service Provider || Product | MiTAC System Service Provider || OriginalFilename | mtcBSv64.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | mtcBSv64.sys |
+| MD5                | [9dfd73dadb2f1c7e9c9d2542981aaa63](https://www.virustotal.com/gui/file/9dfd73dadb2f1c7e9c9d2542981aaa63) |
+| SHA1               | [29a190727140f40cea9514a6420f5a195e36386b](https://www.virustotal.com/gui/file/29a190727140f40cea9514a6420f5a195e36386b) |
+| SHA256             | [c9cf1d627078f63a36bbde364cd0d5f2be1714124d186c06db5bcdf549a109f8](https://www.virustotal.com/gui/file/c9cf1d627078f63a36bbde364cd0d5f2be1714124d186c06db5bcdf549a109f8) |
+| Authentihash MD5   | [c467ed521f199f0d5c1c3705dabf2896](https://www.virustotal.com/gui/search/authentihash%253Ac467ed521f199f0d5c1c3705dabf2896) |
+| Authentihash SHA1  | [8533994513c4f65feb48806b36f42ec9fe21a4c3](https://www.virustotal.com/gui/search/authentihash%253A8533994513c4f65feb48806b36f42ec9fe21a4c3) |
+| Authentihash SHA256| [da8945bd5c693c0593c9d0e3bda49bb1c6007cb25643c95708c6b10bef7c136a](https://www.virustotal.com/gui/search/authentihash%253Ada8945bd5c693c0593c9d0e3bda49bb1c6007cb25643c95708c6b10bef7c136a) |
+| Signature         | Mitac Technology Corporation, VeriSign Class 3 Code Signing 2004 CA, VeriSign Class 3 Public Primary CA   |
+| Company           | MiTAC Technology Corporation |
+| Description       | MiTAC System Service Provider |
+| Product           | MiTAC System Service Provider |
+| OriginalFilename  | mtcBSv64.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* ExAllocatePoolWithTag
+{{< details "Expand" >}}
+* ExAllocatePoolWithTag
 * KeClearEvent
 * IoDeleteSymbolicLink
 * ExFreePoolWithTag
@@ -91,15 +104,17 @@ sc.exe create mtcBSv64.sys binPath=C:\windows\temp\mtcBSv64.sys type=kernel &amp
 * RtlTimeToTimeFields
 * KeBugCheckEx
 * RtlUnicodeToMultiByteN
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/mtcbsv64.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

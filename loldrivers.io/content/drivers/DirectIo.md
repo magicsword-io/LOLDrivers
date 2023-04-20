@@ -51,18 +51,27 @@ sc.exe create DirectIo.sys binPath=C:\windows\temp\DirectIo.sys type=kernel &amp
 
 ### Known Vulnerable Samples
 
-| Filename | DirectIo.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/a785b3bc4309d2eb111911c1b55e793f">a785b3bc4309d2eb111911c1b55e793f</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/19f3343bfad0ef3595f41d60272d21746c92ffca">19f3343bfad0ef3595f41d60272d21746c92ffca</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/4422851a0a102f654e95d3b79c357ae3af1b096d7d1576663c027cfbc04abaf9">4422851a0a102f654e95d3b79c357ae3af1b096d7d1576663c027cfbc04abaf9</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ac6fbe703bcefd3a5a191dce9cd2bf71d">c6fbe703bcefd3a5a191dce9cd2bf71d</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A7d24a5e3a9bb0eba2a4cf19f516384c7a0c95eb7">7d24a5e3a9bb0eba2a4cf19f516384c7a0c95eb7</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A129fa1795cffca9973f59df59f880a9f2bdb3aa9873363f8e2f598ccc6e32542">129fa1795cffca9973f59df59f880a9f2bdb3aa9873363f8e2f598ccc6e32542</a> || Signature | PassMark Software Pty Ltd, VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | DirectIo.sys |
+| MD5                | [a785b3bc4309d2eb111911c1b55e793f](https://www.virustotal.com/gui/file/a785b3bc4309d2eb111911c1b55e793f) |
+| SHA1               | [19f3343bfad0ef3595f41d60272d21746c92ffca](https://www.virustotal.com/gui/file/19f3343bfad0ef3595f41d60272d21746c92ffca) |
+| SHA256             | [4422851a0a102f654e95d3b79c357ae3af1b096d7d1576663c027cfbc04abaf9](https://www.virustotal.com/gui/file/4422851a0a102f654e95d3b79c357ae3af1b096d7d1576663c027cfbc04abaf9) |
+| Authentihash MD5   | [c6fbe703bcefd3a5a191dce9cd2bf71d](https://www.virustotal.com/gui/search/authentihash%253Ac6fbe703bcefd3a5a191dce9cd2bf71d) |
+| Authentihash SHA1  | [7d24a5e3a9bb0eba2a4cf19f516384c7a0c95eb7](https://www.virustotal.com/gui/search/authentihash%253A7d24a5e3a9bb0eba2a4cf19f516384c7a0c95eb7) |
+| Authentihash SHA256| [129fa1795cffca9973f59df59f880a9f2bdb3aa9873363f8e2f598ccc6e32542](https://www.virustotal.com/gui/search/authentihash%253A129fa1795cffca9973f59df59f880a9f2bdb3aa9873363f8e2f598ccc6e32542) |
+| Signature         | PassMark Software Pty Ltd, VeriSign Class 3 Code Signing 2009-2 CA, VeriSign Class 3 Public Primary CA   |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* ZwMapViewOfSection
+{{< details "Expand" >}}
+* ZwMapViewOfSection
 * ObReferenceObjectByHandle
 * ZwOpenSection
 * ZwUnmapViewOfSection
@@ -114,15 +123,17 @@ sc.exe create DirectIo.sys binPath=C:\windows\temp\DirectIo.sys type=kernel &amp
 * WRITE_PORT_UCHAR
 * KeGetCurrentIrql
 * READ_PORT_ULONG
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/directio.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

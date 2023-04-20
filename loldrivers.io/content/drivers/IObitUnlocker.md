@@ -51,17 +51,30 @@ sc.exe create IObitUnlocker.sys binPath=C:\windows\temp\IObitUnlocker.sys     ty
 
 ### Known Vulnerable Samples
 
-| Filename | IObitUnlocker.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/2391fb461b061d0e5fccb050d4af7941">2391fb461b061d0e5fccb050d4af7941</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/7c6cad6a268230f6e08417d278dda4d66bb00d13">7c6cad6a268230f6e08417d278dda4d66bb00d13</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/f85cca4badff17d1aa90752153ccec77a68ad282b69e3985fdc4743eaea85004">f85cca4badff17d1aa90752153ccec77a68ad282b69e3985fdc4743eaea85004</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253A751c91ae91cb43aadaeaa1bb187c593a">751c91ae91cb43aadaeaa1bb187c593a</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253Add220acea885a954085e614b94da2b5bba5c0cc3">dd220acea885a954085e614b94da2b5bba5c0cc3</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253Ae0aff24a54400fe9f86564b8ce9f874e7ff51e96085ff950baff05844cff2bd1">e0aff24a54400fe9f86564b8ce9f874e7ff51e96085ff950baff05844cff2bd1</a> || Signature | IObit CO., LTD, DigiCert EV Code Signing CA, DigiCert   || Company | IObit Information Technology || Description | Unlocker Driver || Product | Unlocker || OriginalFilename | IObitUnlocker.sys |
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | IObitUnlocker.sys |
+| MD5                | [2391fb461b061d0e5fccb050d4af7941](https://www.virustotal.com/gui/file/2391fb461b061d0e5fccb050d4af7941) |
+| SHA1               | [7c6cad6a268230f6e08417d278dda4d66bb00d13](https://www.virustotal.com/gui/file/7c6cad6a268230f6e08417d278dda4d66bb00d13) |
+| SHA256             | [f85cca4badff17d1aa90752153ccec77a68ad282b69e3985fdc4743eaea85004](https://www.virustotal.com/gui/file/f85cca4badff17d1aa90752153ccec77a68ad282b69e3985fdc4743eaea85004) |
+| Authentihash MD5   | [751c91ae91cb43aadaeaa1bb187c593a](https://www.virustotal.com/gui/search/authentihash%253A751c91ae91cb43aadaeaa1bb187c593a) |
+| Authentihash SHA1  | [dd220acea885a954085e614b94da2b5bba5c0cc3](https://www.virustotal.com/gui/search/authentihash%253Add220acea885a954085e614b94da2b5bba5c0cc3) |
+| Authentihash SHA256| [e0aff24a54400fe9f86564b8ce9f874e7ff51e96085ff950baff05844cff2bd1](https://www.virustotal.com/gui/search/authentihash%253Ae0aff24a54400fe9f86564b8ce9f874e7ff51e96085ff950baff05844cff2bd1) |
+| Signature         | IObit CO., LTD, DigiCert EV Code Signing CA, DigiCert   |
+| Company           | IObit Information Technology |
+| Description       | Unlocker Driver |
+| Product           | Unlocker |
+| OriginalFilename  | IObitUnlocker.sys |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* ExAllocatePoolWithTag
+{{< details "Expand" >}}
+* ExAllocatePoolWithTag
 * IoDeleteSymbolicLink
 * ExFreePoolWithTag
 * IoDeleteDevice
@@ -117,15 +130,17 @@ sc.exe create IObitUnlocker.sys binPath=C:\windows\temp\IObitUnlocker.sys     ty
 * KeStackAttachProcess
 * KeBugCheckEx
 * __C_specific_handler
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iobitunlocker.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

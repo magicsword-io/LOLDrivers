@@ -51,24 +51,32 @@ sc.exe create Lurker.sys binPath=C:\windows\temp\Lurker.sys type=kernel &amp;&am
 
 ### Known Vulnerable Samples
 
-| Filename | Lurker.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/-">-</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/0fd2df82341bf5ebb8a53682e60d08978100c01acb0bed7b6ce2876ada80f670">0fd2df82341bf5ebb8a53682e60d08978100c01acb0bed7b6ce2876ada80f670</a> |
-| Signature | -   |
-#### Imports
-{{< details "Expand" >}}{{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-#### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | Lurker.sys |
+| MD5                | [-](https://www.virustotal.com/gui/file/-) |
+| SHA1               | [-](https://www.virustotal.com/gui/file/-) |
+| SHA256             | [0fd2df82341bf5ebb8a53682e60d08978100c01acb0bed7b6ce2876ada80f670](https://www.virustotal.com/gui/file/0fd2df82341bf5ebb8a53682e60d08978100c01acb0bed7b6ce2876ada80f670) |
+| Signature         | -   |
 
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lurker.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 
