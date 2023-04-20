@@ -1,7 +1,7 @@
-<Sysmon schemaversion="4.30">
+<Sysmon schemaversion="4.82">
 	<EventFiltering>
 		<RuleGroup name="" groupRelation="or">
-			<DriverLoad onmatch="include">
+			<FileBlockExecutable onmatch="include">
                 <Hashes condition="contains">MD5=dbc415304403be25ac83047c170b0ec2</Hashes>
                 <Hashes condition="contains">MD5=c7a57cd4bea07dadba2e2fb914379910</Hashes>
                 <Hashes condition="contains">MD5=1493d342e7a36553c56b2adea150949e</Hashes>
@@ -923,7 +923,7 @@
                 <Hashes condition="contains">SHA256=1b7fb154a7b7903a3c81f12f4b094f24a3c60a6a8cffca894c67c264ab7545fa</Hashes>
                 <Hashes condition="contains">SHA256=3a95cc82173032b82a0ffc7d2e438df64c13bc16b4574214c9fe3be37250925e</Hashes>
                 <Hashes condition="contains">SHA256=455bc98ba32adab8b47d2d89bdbadca4910f91c182ab2fc3211ba07d3784537b</Hashes>
-			</DriverLoad>
+			</FileBlockExecutable>
 		</RuleGroup>
 	</EventFiltering>
 </Sysmon>

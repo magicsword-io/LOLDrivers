@@ -1,6 +1,6 @@
 # Contributor Code of Conduct
 
-Welcome to the [LOLDrivers online community](https://loldrivers.io/). Our goal is to foster an open, safe, and welcoming environment. As a collective, we—as contributors, maintainers, and the Open Source Projects team of MagicSword—pledge to encourage our project and community to be a harassment-free space. We invite you to collaborate, exchange thoughts or information, and engage with one another. LOLDrivers is meant for everyone, regardless of age, personal appearance, body size, disability, nationality, race, ethnicity, gender identity and expression, level of experience or academics, religion, or sexual identity and orientation. 
+Welcome to the [LOLDrivers online community](https://loldrivers.io/). Our goal is to foster an open, safe, and welcoming environment. As a collective, we—as contributors, maintainers, and the Open Source Projects team of MagicSword—pledge to encourage our project and community to be a harassment-free space. We invite you to collaborate, exchange thoughts or information, and engage with one another. LOLDrivers is meant for everyone, regardless of age, personal appearance, body size, disability, nationality, race, ethnicity, gender identity and expression, level of experience or academics, religion, or sexual identity and orientation.
 
 ## Our Guidelines
 
@@ -14,7 +14,7 @@ Welcome to the [LOLDrivers online community](https://loldrivers.io/). Our goal i
 
 ### Unacceptable Behavior
 
-* Unacceptable behaviors include: [intimidating, harassive, abusive, discriminatory, derogatory or demeaning conduct](https://www.doi.gov/employees/anti-harassment/definitions) by any one in the community
+* Unacceptable behaviors include: [intimidating, harassing, abusive, discriminatory, derogatory or demeaning conduct](https://www.doi.gov/employees/anti-harassment/definitions) by any one in the community
   * Harassment includes: offensive verbal comments related to (but not limited to) age, personal appearance, body size, disability, nationality, race, ethnicity, gender identity and expression, level of experience or academics, religion, or sexual identity and orientation, or other protected category; inappropriate deliberate intimidation, stalking or following; inappropriate direct messages, and unwelcome sexual attention, imagery, or language
 * Written, verbal or other abuse, [trolling](https://dictionary.cambridge.org/us/dictionary/english/trolling), intimidation, threats, annoyance, harassment, stalking, and/or spamming against any person, which in any way creates a disturbance that is disruptive or dangerous, or creates apprehension in a person
 * Harassing individuals in a public or private form.
@@ -27,7 +27,7 @@ If you see anything that you believe breaks our community guidelines, no matter 
 
 ## Enforcement & Consequences
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the Community Manager. Unacceptable behavior will not be tolerated by community members, maintainers, and MagicSword team members.  The LOLDriver Community Manager and maintainers will review and investigate all complaints. 
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the Community Manager. Unacceptable behavior will not be tolerated by community members, maintainers, and MagicSword team members.  The LOLDriver Community Manager and maintainers will review and investigate all complaints.
 
 Anyone asked to stop unacceptable behavior is expected to comply immediately. If an LOLDriver community member (anyone contributing to our [GitHub Repo](https://github.com/magicsword-io/LOLDrivers) engages in unacceptable behavior, the Community Manager may take any temporary or permanent action they deem appropriate, up to and including immediate expulsion from the LOLDriver community without warning.
 
@@ -47,7 +47,6 @@ This Code of Conduct applies to all of the LOLDriver project spaces, including p
 
 * [LOLDriver GitHub](https://github.com/magicsword-io/LOLDrivers)
 
- 
 ## Attribution
 
 This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4, available at [http://contributor-covenant.org/version/1/4][version]

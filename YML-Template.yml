@@ -1,6 +1,6 @@
 # YML-Template.yml
 # Use this template to create similar YAML files
-# Note that our enrichment process will fill everything from line 30 and under.
+# Note that our enrichment process will fill everything within the KnownVulnerableSamples section.
 
 Name: FILENAME.sys # Example: ADV64DRV.sys
 Author: Your Name # Example: John Doe
@@ -48,6 +48,4 @@ KnownVulnerableSamples:
   - Imported libraries # Example: ntoskrnl.exe
   ExportedFunctions: Exported functions # Example: DriverEntry, UnloadDriver
   PDBPath: PDB file path # Example: c:\symbols\FILENAME.pdb
-
-
 

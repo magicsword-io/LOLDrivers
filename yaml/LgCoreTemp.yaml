@@ -1,0 +1,93 @@
+Name: LgCoreTemp.sys
+Author: Nasreddine Bencherchali
+Created: '2023-04-15'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create LgCoreTemp.sys binPath=C:\windows\temp\LgCoreTemp.sys     type=kernel
+    && sc.exe start LgCoreTemp.sys
+  Description: ''
+  Usecase: Denial of Service
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/VoidSec/Exploit-Development/tree/b82b6d3ac1cce66221101d3e0f4634aa64cb4ca7/windows/x64/kernel/logitech_v.9.02.65_DoS
+Acknowledgement:
+  Person: Paolo Stagno
+  Handle: Void_Sec
+Detection: []
+KnownVulnerableSamples:
+- Filename: LgCoreTemp.sys
+  MD5: 2d7f1c02b94d6f0f3e10107e5ea8e141
+  SHA1: 471ca4b5bb5fe68543264dd52acb99fddd7b3c6d
+  SHA256: 93b266f38c3c3eaab475d81597abbd7cc07943035068bb6fd670dbbe15de0131
+  Signature: N/A
+  Date: N/A
+  Publisher: N/A
+  Company: Logitech
+  Description: CPU Core Temperature Monitor
+  Product: LgCoreTemp
+  ProductVersion: 1.0.0.1
+  FileVersion: 1.0.0.1
+  MachineType: AMD64
+  OriginalFilename: LgCoreTemp.sys
+  Authentihash:
+    MD5: a4c810e750095e71c0288c1ce6669115
+    SHA1: e05304325b24fc9f76c106de27ffbef2d7eb3315
+    SHA256: 7f0eef1ed4c1278372348cb52e27dc3aa2f51a8b6a62db39d2af75031e55a8db
+  InternalName: LgCoreTemp.sys
+  Copyright: "Copyright \xA9 Logitech, Inc"
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IofCompleteRequest
+  - IoCreateDevice
+  - KeSetSystemAffinityThread
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - __C_specific_handler
+  - KeRevertToUserAffinityThread
+  - IoCreateSymbolicLink
+  - RtlInitUnicodeString
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, ST=California, L=Newark, O=Logitech, CN=Logitech
+      ValidFrom: '2015-04-16 00:00:00'
+      ValidTo: '2017-06-14 23:59:59'
+      Signature: 8b12188765bda73964384c2644835bbd9b46b11b98230aca9ae6d31a2288244f75d3c6d06fae2ef7625676d2a3a0b4c2e978302d461ba5e165ec71a0a7a25c2c99972c0e8bb0194efab03034f581974934fcf3e2536a264de077493370531dd394429d692ca13a84d69d0aaf561d561f73c87b9f6fded706a759d2a1095789596a295795b686c90674ea1a3b582e32e5f5d0a08c685639ee5e9d8381ec102352a6bb4774fd8af770d88bc14abba20c5bcfe543ac7d71937873dbc033e68f81a1220571b348ac80c9b3ce8036252a6d5b4ebcfb381e540d0c4f7eaa4e1978056e261997a70a7b063ff7b3902985db8063e45664f59e7b5a583448883873b7de53
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    Signer:
+    - SerialNumber: 6f20ba7d552fb9c436caf4cc7cbea4b3
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA

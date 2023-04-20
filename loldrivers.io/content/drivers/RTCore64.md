@@ -40,9 +40,10 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 
 ### Resources
 <br>
-<li><a href=" https://github.com/elastic/protections-artifacts/search?q=VulnDriver"> https://github.com/elastic/protections-artifacts/search?q=VulnDriver</a></li>
+<li><a href="https://github.com/elastic/protections-artifacts/search?q=VulnDriver">https://github.com/elastic/protections-artifacts/search?q=VulnDriver</a></li>
 <li><a href="https://news.sophos.com/en-us/2022/10/04/blackbyte-ransomware-returns/">https://news.sophos.com/en-us/2022/10/04/blackbyte-ransomware-returns/</a></li>
 <li><a href="https://github.com/elastic/protections-artifacts/search?q=VulnDriver">https://github.com/elastic/protections-artifacts/search?q=VulnDriver</a></li>
+<li><a href="https://github.com/VoidSec/Exploit-Development/tree/b82b6d3ac1cce66221101d3e0f4634aa64cb4ca7/windows/x64/kernel/RTCore64_MSI_Afterburner_v.4.6.4.16117">https://github.com/VoidSec/Exploit-Development/tree/b82b6d3ac1cce66221101d3e0f4634aa64cb4ca7/windows/x64/kernel/RTCore64_MSI_Afterburner_v.4.6.4.16117</a></li>
 <br>
 
 ### Known Vulnerable Samples
@@ -134,7 +135,66 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}
+{{< details "Expand" >}}{{< /details >}}
+| Filename | RTCore64.sys |
+|:---- | ---- | 
+| MD5 | <a href="https://www.virustotal.com/gui/file/0a2ec9e3e236698185978a5fc76e74e6">0a2ec9e3e236698185978a5fc76e74e6</a> |
+| SHA1 | <a href="https://www.virustotal.com/gui/file/4fe873544c34243826489997a5ff14ed39dd090d">4fe873544c34243826489997a5ff14ed39dd090d</a> |
+| SHA256 | <a href="https://www.virustotal.com/gui/file/f1c8ca232789c2f11a511c8cd95a9f3830dd719cad5aa22cb7c3539ab8cb4dc3">f1c8ca232789c2f11a511c8cd95a9f3830dd719cad5aa22cb7c3539ab8cb4dc3</a> |
+| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Abcd9f192e2f9321ed549c722f30206e5">bcd9f192e2f9321ed549c722f30206e5</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A8498265d4ca81b83ec1454d9ec013d7a9c0c87bf">8498265d4ca81b83ec1454d9ec013d7a9c0c87bf</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A606beced7746cdb684d3a44f41e48713c6bbe5bfb1486c52b5cca815e99d31b4">606beced7746cdb684d3a44f41e48713c6bbe5bfb1486c52b5cca815e99d31b4</a> || Publisher | N/A || Signature | N, /, A   || Date | N/A |
+#### Imports
+{{< details "Expand" >}}* ntoskrnl.exe
+* HAL.dll
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}* MmUnmapIoSpace
+* ZwUnmapViewOfSection
+* MmMapIoSpace
+* ZwClose
+* IoDeleteDevice
+* ObReferenceObjectByHandle
+* IoCreateSymbolicLink
+* ZwOpenSection
+* KeBugCheckEx
+* RtlInitUnicodeString
+* ZwMapViewOfSection
+* IofCompleteRequest
+* IoDeleteSymbolicLink
+* MmGetSystemRoutineAddress
+* IoCreateDevice
+* ObOpenObjectByPointer
+* ZwSetSecurityObject
+* IoDeviceObjectType
+* _snwprintf
+* RtlLengthSecurityDescriptor
+* SeCaptureSecurityDescriptor
+* ExFreePoolWithTag
+* RtlCreateSecurityDescriptor
+* RtlSetDaclSecurityDescriptor
+* RtlAbsoluteToSelfRelativeSD
+* IoIsWdmVersionAvailable
+* SeExports
+* wcschr
+* _wcsnicmp
+* ExAllocatePoolWithTag
+* RtlLengthSid
+* RtlAddAccessAllowedAce
+* RtlGetSaclSecurityDescriptor
+* RtlGetDaclSecurityDescriptor
+* RtlGetGroupSecurityDescriptor
+* RtlGetOwnerSecurityDescriptor
+* ZwOpenKey
+* ZwCreateKey
+* ZwQueryValueKey
+* ZwSetValueKey
+* RtlFreeUnicodeString
+* __C_specific_handler
+* HalGetBusDataByOffset
+* HalSetBusDataByOffset
+* HalTranslateBusAddress
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}{{< /details >}}
 
 {{< /details >}}
 

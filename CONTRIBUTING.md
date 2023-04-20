@@ -37,7 +37,6 @@ git commit -m "Your commit message"
 git push origin your-feature-branch
 ```
 
-
 5. Create a new Pull Request (PR) against the upstream repository:
 
 * Go to the [LOLDrivers repository](https://github.com/magicsword-io/LOLDrivers) on GitHub
@@ -48,7 +47,7 @@ git push origin your-feature-branch
 
 ## 📚 Adding or Updating YAML Files
 
-To create a new YAML file for a driver or update an existing one, use the provided [YML-Template](YML-Template.md) and follow the guidelines in the template.
+To create a new YAML file for a driver or update an existing one, use the provided [YML-Template](YML-Template.yml) and follow the guidelines in the template.
 
 ## 📖 Updating Documentation
 
