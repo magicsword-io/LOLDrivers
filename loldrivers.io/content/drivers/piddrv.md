@@ -96,7 +96,7 @@ sc.exe create piddrv.sys binPath=C:\windows\temp\piddrv.sys type=kernel &amp;&am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/piddrv.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

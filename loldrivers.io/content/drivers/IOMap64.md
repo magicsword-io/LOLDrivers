@@ -99,7 +99,7 @@ sc.exe create IOMap64.sys binPath=C:\windows\temp\IOMap64.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/iomap64.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

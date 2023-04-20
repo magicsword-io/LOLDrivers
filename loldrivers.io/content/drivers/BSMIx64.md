@@ -89,7 +89,7 @@ sc.exe create BSMIx64.sys binPath=C:\windows\temp\BSMIx64.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bsmix64.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

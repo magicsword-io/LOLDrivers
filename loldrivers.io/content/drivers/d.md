@@ -143,7 +143,7 @@ sc.exe create d.sys binPath=C:\windows\temp\d.sys type=kernel &amp;&amp; sc.exe 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/d.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

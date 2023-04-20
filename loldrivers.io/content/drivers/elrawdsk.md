@@ -241,7 +241,7 @@ sc.exe create elrawdsk.sys binPath=C:\windows\temp\elrawdsk.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/elrawdsk.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

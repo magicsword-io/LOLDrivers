@@ -202,7 +202,7 @@ sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sy
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/blacklotus_driver.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

@@ -93,7 +93,7 @@ sc.exe create WCPU.sys binPath=C:\windows\temp\WCPU.sys type=kernel &amp;&amp; s
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wcpu.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

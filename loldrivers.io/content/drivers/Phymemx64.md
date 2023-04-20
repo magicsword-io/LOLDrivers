@@ -96,7 +96,7 @@ sc.exe create Phymemx64.sys binPath=C:\windows\temp\Phymemx64.sys type=kernel &a
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/phymemx64.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

@@ -91,7 +91,7 @@ sc.exe create semav6msr.sys binPath=C:\windows\temp\semav6msr.sys type=kernel &a
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/semav6msr.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

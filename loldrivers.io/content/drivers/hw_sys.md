@@ -164,7 +164,7 @@ sc.exe create hw_sys binPath=C:\windows\temp\hw_sys type=kernel &amp;&amp; sc.ex
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hw_sys.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

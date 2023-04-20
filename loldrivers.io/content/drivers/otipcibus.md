@@ -111,7 +111,7 @@ sc.exe create otipcibus.sys binPath=C:\windows\temp\otipcibus.sys type=kernel &a
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/otipcibus.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

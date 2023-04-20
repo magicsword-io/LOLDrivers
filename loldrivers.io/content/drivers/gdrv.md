@@ -171,7 +171,7 @@ sc.exe create gdrv.sys binPath=C:\windows\temp\gdrv.sys type=kernel &amp;&amp; s
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/gdrv.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

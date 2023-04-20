@@ -96,7 +96,7 @@ sc.exe create LcTkA.sys binPath=C:\windows\temp\LcTkA.sys type=kernel &amp;&amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lctka.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

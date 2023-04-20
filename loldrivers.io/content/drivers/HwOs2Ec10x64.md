@@ -163,7 +163,7 @@ sc.exe create HwOs2Ec10x64.sys binPath=C:\windows\temp\HwOs2Ec10x64.sys     type
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hwos2ec10x64.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

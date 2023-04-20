@@ -76,7 +76,7 @@ sc.exe create bw.sys binPath=C:\windows\temp\bw.sys type=kernel &amp;&amp; sc.ex
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bw.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

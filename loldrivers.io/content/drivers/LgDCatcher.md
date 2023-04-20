@@ -154,7 +154,7 @@ sc.exe create LgDCatcher.sys binPath=C:\windows\temp\LgDCatcher.sys type=kernel 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lgdcatcher.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

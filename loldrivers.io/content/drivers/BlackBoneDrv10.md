@@ -180,7 +180,7 @@ sc.exe create BlackBoneDrv10.sys binPath=C:\windows\temp\BlackBoneDrv10.sys     
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/blackbonedrv10.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

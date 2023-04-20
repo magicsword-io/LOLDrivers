@@ -93,7 +93,7 @@ sc.exe create SysInfo.sys binPath=C:\windows\temp\SysInfo.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/sysinfo.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

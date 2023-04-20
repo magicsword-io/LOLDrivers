@@ -76,7 +76,7 @@ sc.exe create windows7-32.sys binPath=C:\windows\temp\windows7-32.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/windows7-32.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

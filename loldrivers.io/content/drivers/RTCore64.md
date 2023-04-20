@@ -135,19 +135,31 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
-| Filename | RTCore64.sys |
-|:---- | ---- | 
-| MD5 | <a href="https://www.virustotal.com/gui/file/0a2ec9e3e236698185978a5fc76e74e6">0a2ec9e3e236698185978a5fc76e74e6</a> |
-| SHA1 | <a href="https://www.virustotal.com/gui/file/4fe873544c34243826489997a5ff14ed39dd090d">4fe873544c34243826489997a5ff14ed39dd090d</a> |
-| SHA256 | <a href="https://www.virustotal.com/gui/file/f1c8ca232789c2f11a511c8cd95a9f3830dd719cad5aa22cb7c3539ab8cb4dc3">f1c8ca232789c2f11a511c8cd95a9f3830dd719cad5aa22cb7c3539ab8cb4dc3</a> |
-| Authentihash MD5 | <a href="https://www.virustotal.com/gui/search/authentihash%253Abcd9f192e2f9321ed549c722f30206e5">bcd9f192e2f9321ed549c722f30206e5</a> || Authentihash SHA1 | <a href="https://www.virustotal.com/gui/search/authentihash%253A8498265d4ca81b83ec1454d9ec013d7a9c0c87bf">8498265d4ca81b83ec1454d9ec013d7a9c0c87bf</a> || Authentihash SHA256 | <a href="https://www.virustotal.com/gui/search/authentihash%253A606beced7746cdb684d3a44f41e48713c6bbe5bfb1486c52b5cca815e99d31b4">606beced7746cdb684d3a44f41e48713c6bbe5bfb1486c52b5cca815e99d31b4</a> || Publisher | N/A || Signature | N, /, A   || Date | N/A |
+{{< details "Expand" >}}
+
+{{< /details >}}| Property           | Value |
+|:-------------------|:------|
+| Filename           | RTCore64.sys |
+| MD5                | [0a2ec9e3e236698185978a5fc76e74e6](https://www.virustotal.com/gui/file/0a2ec9e3e236698185978a5fc76e74e6) |
+| SHA1               | [4fe873544c34243826489997a5ff14ed39dd090d](https://www.virustotal.com/gui/file/4fe873544c34243826489997a5ff14ed39dd090d) |
+| SHA256             | [f1c8ca232789c2f11a511c8cd95a9f3830dd719cad5aa22cb7c3539ab8cb4dc3](https://www.virustotal.com/gui/file/f1c8ca232789c2f11a511c8cd95a9f3830dd719cad5aa22cb7c3539ab8cb4dc3) |
+| Authentihash MD5   | [bcd9f192e2f9321ed549c722f30206e5](https://www.virustotal.com/gui/search/authentihash%253Abcd9f192e2f9321ed549c722f30206e5) |
+| Authentihash SHA1  | [8498265d4ca81b83ec1454d9ec013d7a9c0c87bf](https://www.virustotal.com/gui/search/authentihash%253A8498265d4ca81b83ec1454d9ec013d7a9c0c87bf) |
+| Authentihash SHA256| [606beced7746cdb684d3a44f41e48713c6bbe5bfb1486c52b5cca815e99d31b4](https://www.virustotal.com/gui/search/authentihash%253A606beced7746cdb684d3a44f41e48713c6bbe5bfb1486c52b5cca815e99d31b4) |
+| Publisher         | N/A |
+| Signature         | N, /, A   |
+| Date                | N/A |
+
+
 #### Imports
-{{< details "Expand" >}}* ntoskrnl.exe
+{{< details "Expand" >}}
+* ntoskrnl.exe
 * HAL.dll
+
 {{< /details >}}
 #### ImportedFunctions
-{{< details "Expand" >}}* MmUnmapIoSpace
+{{< details "Expand" >}}
+* MmUnmapIoSpace
 * ZwUnmapViewOfSection
 * MmMapIoSpace
 * ZwClose
@@ -192,16 +204,17 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 * HalGetBusDataByOffset
 * HalSetBusDataByOffset
 * HalTranslateBusAddress
+
 {{< /details >}}
 #### ExportedFunctions
-{{< details "Expand" >}}{{< /details >}}
+{{< details "Expand" >}}
 
 {{< /details >}}
 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rtcore64.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

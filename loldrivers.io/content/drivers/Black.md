@@ -76,7 +76,7 @@ sc.exe create Black.sys binPath=C:\windows\temp\Black.sys type=kernel &amp;&amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/black.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

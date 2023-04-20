@@ -133,7 +133,7 @@ sc.exe create OpenLibSys.sys binPath=C:\windows\temp\OpenLibSys.sys type=kernel 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/openlibsys.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

@@ -102,7 +102,7 @@ sc.exe create fidpcidrv64.sys binPath=C:\windows\temp\fidpcidrv64.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fidpcidrv64.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

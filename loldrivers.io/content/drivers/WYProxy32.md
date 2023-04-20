@@ -76,7 +76,7 @@ sc.exe create WYProxy32.sys binPath=C:\windows\temp\WYProxy32.sys type=kernel &a
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/wyproxy32.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 

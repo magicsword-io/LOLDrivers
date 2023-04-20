@@ -119,7 +119,7 @@ sc.exe create superbmc.sys binPath=C:\windows\temp\superbmc.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/superbmc.yaml)
 
-*last_updated:* 2023-04-19
+*last_updated:* 2023-04-20
 
 
 
