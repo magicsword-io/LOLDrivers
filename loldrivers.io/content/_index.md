@@ -3,7 +3,7 @@ title = "LOLDrivers"
 [dataset1]
   fileLink = "content/drivers_table.csv"
   colors = ["#ef7f1a", "#627c62", "#11819b", "#4e1154"] # chart colors
-  columnTitles = ['Name','Created'] # optional if not table will be displayed from dataset
+  columnTitles = ['Name','SHA256','Created'] # optional if not table will be displayed from dataset
   baseChartOn = 4 # number of column the chart(s) and graph should be drawn from # can be overridden directly via shortcode parameter # it's therefore optional
   charts = ["table"]
   title = "Driver List"

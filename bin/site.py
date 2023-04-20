@@ -139,7 +139,11 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
         writer = csv.writer(f)
         for driver in drivers:
             link = '[' + driver['Name'] + '](drivers/' + os.path.splitext(driver["Name"])[0].lower() + '/)'
-            writer.writerow([link, driver['Created']])
+            if driver['KnownVulnerableSamples'][0]['SHA256'] is None or driver['KnownVulnerableSamples'][0]['SHA256'] == "-" :
+                sha256='not available '
+            else:
+                sha256='[' + driver['KnownVulnerableSamples'][0]['SHA256'] + '](drivers/' + os.path.splitext(driver["Name"])[0].lower() + '/)'
+            writer.writerow([link, sha256, driver['Created']])
     messages.append("site_gen.py wrote drivers table to: {0}".format(OUTPUT_DIR + '/content/drivers_table.json'))
 
     # write top 5 publishers
