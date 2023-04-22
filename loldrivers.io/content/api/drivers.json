@@ -18102,6 +18102,48 @@
         ]
     },
     {
+        "Name": "bedaisy.sys",
+        "Author": "Wack0",
+        "Created": "2023-04-22",
+        "MitreID": "T1068",
+        "Category": "vulnerable driver",
+        "Verified": "TRUE",
+        "Commands": {
+            "Command": "sc.exe create BEDaisy.sys binPath=C:\\windows\\temp\\BEDaisy.sys type=kernel && sc.exe start BEDaisy.sys",
+            "Description": "BattlEye Anti-Cheat BEDAISY.SYS PPL privesc.",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://github.com/magicsword-io/LOLDrivers/issues/23",
+            "https://infosec.exchange/@Rairii/109310279380973806"
+        ],
+        "Acknowledgement": {
+            "Person": "Wack0",
+            "Handle": "Wack0"
+        },
+        "Detection": [],
+        "KnownVulnerableSamples": [
+            {
+                "Filename": "BEDAISY.SYS",
+                "MD5": "7475bfea6ea1cd54029208ed59b96c6b",
+                "SHA1": "fff7ee0febb8c93539220ca49d4206616e15c666",
+                "SHA256": "2b120de80a5462f8395cfb7153c86dfd44f29f0776ea156ec4a34fa64e5c4797",
+                "Signature": "",
+                "Date": "",
+                "Publisher": "",
+                "Company": "",
+                "Description": "",
+                "Product": "",
+                "ProductVersion": "",
+                "FileVersion": "",
+                "MachineType": "",
+                "OriginalFilename": ""
+            }
+        ]
+    },
+    {
         "Name": "TGSafe.sys",
         "Author": "Michael Haag",
         "Created": "2023-01-09",
