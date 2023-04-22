@@ -34180,14 +34180,14 @@
     },
     {
         "Name": "gdrv.sys",
-        "Author": "Michael Haag, rasta-mouse",
+        "Author": "Michael Haag, rasta-mouse, goosvorbook",
         "Created": "2023-01-09",
         "MitreID": "T1068",
         "Category": "vulnerable driver",
         "Verified": "TRUE",
         "Commands": {
             "Command": "sc.exe create gdrv.sys binPath=C:\\windows\\temp\\gdrv.sys type=kernel && sc.exe start gdrv.sys",
-            "Description": "gdrv.sys is vulnerable to multiple CVEs: CVE-2018-19320, CVE-2018-19322, CVE-2018-19323, CVE-2018-19321. Read/Write Physical memory, read/write to/from IO ports, exposes ring0 memcpy-like functionality,  read and write Machine Specific Registers (MSRs).",
+            "Description": "gdrv.sys is vulnerable to multiple CVEs: CVE-2018-19320, CVE-2018-19322, CVE-2018-19323, CVE-2018-19321. Read/Write Physical memory, read/write to/from IO ports, exposes ring0 memcpy-like functionality,  read and write Machine Specific Registers (MSRs). Affected versions: GIGABYTE APP Center v1.05.21 and previous, AORUS GRAPHICS ENGINE v1.33 and previous, XTREME GAMING ENGINE v1.25 and previous, OC GURU II v2.08",
             "Usecase": "Elevate privileges, tamper with PPL or system processes",
             "Privileges": "kernel",
             "OperatingSystem": "Windows 10"
@@ -34197,7 +34197,8 @@
             "https://github.com/namazso/physmem_drivers",
             "https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-privilege-vulnerabilities",
             "https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b",
-            "https://github.com/namazso/physmem_drivers"
+            "https://github.com/namazso/physmem_drivers",
+            "https://github.com/hmnthabit/CVE-2018-19320-LPE"
         ],
         "Acknowledgement": {
             "Person": "MattNotMax",

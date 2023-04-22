@@ -16,10 +16,10 @@ weight = 10
 
 ### Description
 
-gdrv.sys is vulnerable to multiple CVEs: CVE-2018-19320, CVE-2018-19322, CVE-2018-19323, CVE-2018-19321. Read/Write Physical memory, read/write to/from IO ports, exposes ring0 memcpy-like functionality,  read and write Machine Specific Registers (MSRs).
+gdrv.sys is vulnerable to multiple CVEs: CVE-2018-19320, CVE-2018-19322, CVE-2018-19323, CVE-2018-19321. Read/Write Physical memory, read/write to/from IO ports, exposes ring0 memcpy-like functionality,  read and write Machine Specific Registers (MSRs). Affected versions: GIGABYTE APP Center v1.05.21 and previous, AORUS GRAPHICS ENGINE v1.33 and previous, XTREME GAMING ENGINE v1.25 and previous, OC GURU II v2.08
 
 - **Created**: 2023-01-09
-- **Author**: Michael Haag, rasta-mouse
+- **Author**: Michael Haag, rasta-mouse, goosvorbook
 - **Acknowledgement**: MattNotMax | [@mattnotmax](https://twitter.com/@mattnotmax)
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/9ab9f3b75a2eb87fafb1b7361be9dfb3.bin" "Download" >}}
@@ -45,6 +45,7 @@ sc.exe create gdrv.sys binPath=C:\windows\temp\gdrv.sys type=kernel &amp;&amp; s
 <li><a href="https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-privilege-vulnerabilities">https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-privilege-vulnerabilities</a></li>
 <li><a href="https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b">https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b</a></li>
 <li><a href="https://github.com/namazso/physmem_drivers">https://github.com/namazso/physmem_drivers</a></li>
+<li><a href="https://github.com/hmnthabit/CVE-2018-19320-LPE">https://github.com/hmnthabit/CVE-2018-19320-LPE</a></li>
 <br>
 
 ### Known Vulnerable Samples
