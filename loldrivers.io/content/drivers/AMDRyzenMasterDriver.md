@@ -137,7 +137,7 @@ sc.exe create AMDRyzenMasterDriver.sys binPath=C:\windows\temp\AMDRyzenMasterDri
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/amdryzenmasterdriver.yaml)
 
-*last_updated:* 2023-04-20
+*last_updated:* 2023-04-22
 
 
 

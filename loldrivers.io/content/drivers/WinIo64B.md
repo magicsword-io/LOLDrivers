@@ -78,7 +78,7 @@ sc.exe create WinIo64B.sys binPath=C:\windows\temp\WinIo64B.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winio64b.yaml)
 
-*last_updated:* 2023-04-20
+*last_updated:* 2023-04-22
 
 
 

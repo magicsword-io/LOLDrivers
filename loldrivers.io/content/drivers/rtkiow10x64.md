@@ -116,7 +116,7 @@ sc.exe create rtkiow10x64.sys binPath=C:\windows\temp\rtkiow10x64.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/rtkiow10x64.yaml)
 
-*last_updated:* 2023-04-20
+*last_updated:* 2023-04-22
 
 
 

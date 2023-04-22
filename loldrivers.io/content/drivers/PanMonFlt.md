@@ -126,7 +126,7 @@ sc.exe create PanMonFlt.sys binPath=C:\windows\temp\PanMonFlt.sys type=kernel &a
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/panmonflt.yaml)
 
-*last_updated:* 2023-04-20
+*last_updated:* 2023-04-22
 
 
 

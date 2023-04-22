@@ -391,7 +391,7 @@ sc.exe create Agent64.sys binPath=C:\windows\temp\Agent64.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/agent64.yaml)
 
-*last_updated:* 2023-04-20
+*last_updated:* 2023-04-22
 
 
 

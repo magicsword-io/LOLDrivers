@@ -113,7 +113,7 @@ sc.exe create driver7-x86-withoutdbg.sys binPath=C:\windows\temp\driver7-x86-wit
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/driver7-x86-withoutdbg.yaml)
 
-*last_updated:* 2023-04-20
+*last_updated:* 2023-04-22
 
 
 

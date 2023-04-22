@@ -100,7 +100,7 @@ sc.exe create bandai.sys binPath=C:\windows\temp\bandai.sys type=kernel &amp;&am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/bandai.yaml)
 
-*last_updated:* 2023-04-20
+*last_updated:* 2023-04-22
 
 
 

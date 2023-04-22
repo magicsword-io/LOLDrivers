@@ -112,7 +112,7 @@ sc.exe create CorsairLLAccess64.sys binPath=C:\windows\temp\CorsairLLAccess64.sy
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/corsairllaccess64.yaml)
 
-*last_updated:* 2023-04-20
+*last_updated:* 2023-04-22
 
 
 

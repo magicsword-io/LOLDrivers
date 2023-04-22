@@ -95,7 +95,7 @@ sc.exe create NodeDriver.sys binPath=C:\windows\temp\NodeDriver.sys type=kernel 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nodedriver.yaml)
 
-*last_updated:* 2023-04-20
+*last_updated:* 2023-04-22
 
 
 

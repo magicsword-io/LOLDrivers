@@ -121,7 +121,7 @@ sc.exe create NalDrv.sys binPath=C:\windows\temp\NalDrv.sys type=kernel &amp;&am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/naldrv.yaml)
 
-*last_updated:* 2023-04-20
+*last_updated:* 2023-04-22
 
 
 

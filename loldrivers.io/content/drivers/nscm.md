@@ -112,7 +112,7 @@ sc.exe create nscm.sys binPath=C:\windows\temp \n \n \n  scm.sys type=kernel &am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nscm.yaml)
 
-*last_updated:* 2023-04-20
+*last_updated:* 2023-04-22
 
 
 

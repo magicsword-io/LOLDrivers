@@ -1,7 +1,7 @@
 +++
 
 description = ""
-title = "hw_sys"
+title = "hw.sys"
 weight = 10
 
 +++
@@ -11,20 +11,15 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# hw_sys 
-
-
-{{< tip "warning" >}}
-We were not able to verify the hash of this driver successfully, it has not been confirmed.
-{{< /tip >}}
+# hw.sys ![:inline](/images/twitter_verified.png) 
 
 
 ### Description
 
-hw_sys is a vulnerable driver and more information will be added as found.
+hw.sys is a vulnerable driver and more information will be added as found.
 
 - **Created**: 2023-01-09
-- **Author**: Michael Haag
+- **Author**: Guus Verbeek
 - **Acknowledgement**:  | [](https://twitter.com/)
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/3247014ba35d406475311a2eab0c4657.bin" "Download" >}}
@@ -36,7 +31,7 @@ This download link contains the vulnerable driver!
 ### Commands
 
 ```
-sc.exe create hw_sys binPath=C:\windows\temp\hw_sys type=kernel &amp;&amp; sc.exe start hw_sys
+sc.exe create hw_sys binPath=C:\windows\temp\hw.sys type=kernel &amp;&amp; sc.exe start hw.sys
 ```
 
 | Use Case | Privileges | Operating System | 
@@ -45,15 +40,16 @@ sc.exe create hw_sys binPath=C:\windows\temp\hw_sys type=kernel &amp;&amp; sc.ex
 
 ### Resources
 <br>
-<li><a href=" https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules"> https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules</a></li>
 <li><a href="https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules">https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules</a></li>
+<li><a href="https://decoded.avast.io/janvojtesek/the-return-of-candiru-zero-days-in-the-middle-east/">https://decoded.avast.io/janvojtesek/the-return-of-candiru-zero-days-in-the-middle-east/</a></li>
+<li><a href="https://www.virustotal.com/gui/file/6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5/detection">https://www.virustotal.com/gui/file/6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5/detection</a></li>
 <br>
 
 ### Known Vulnerable Samples
 
 | Property           | Value |
 |:-------------------|:------|
-| Filename           | hw_sys |
+| Filename           | hw.sys |
 | MD5                | [3247014ba35d406475311a2eab0c4657](https://www.virustotal.com/gui/file/3247014ba35d406475311a2eab0c4657) |
 | SHA1               | [74e4e3006b644392f5fcea4a9bae1d9d84714b57](https://www.virustotal.com/gui/file/74e4e3006b644392f5fcea4a9bae1d9d84714b57) |
 | SHA256             | [4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8](https://www.virustotal.com/gui/file/4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8) |
@@ -161,12 +157,37 @@ sc.exe create hw_sys binPath=C:\windows\temp\hw_sys type=kernel &amp;&amp; sc.ex
 
 {{< /details >}}
 -----
+| Property           | Value |
+|:-------------------|:------|
+| Filename           | HW.sys |
+| MD5                | [45c2d133d41d2732f3653ed615a745c8](https://www.virustotal.com/gui/file/45c2d133d41d2732f3653ed615a745c8) |
+| SHA1               | [4e56e0b1d12664c05615c69697a2f5c5d893058a](https://www.virustotal.com/gui/file/4e56e0b1d12664c05615c69697a2f5c5d893058a) |
+| SHA256             | [6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5](https://www.virustotal.com/gui/file/6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5) |
+| Company           | Marvin Test Solutions, Inc. |
+| Description       | HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI access |
+| Product           | HW |
+| OriginalFilename  | HW.sys |
+
+
+#### Imports
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ImportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### ExportedFunctions
+{{< details "Expand" >}}
+
+{{< /details >}}
+-----
 
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hw_sys.yaml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hw.yaml)
 
-*last_updated:* 2023-04-20
+*last_updated:* 2023-04-22
 
 
 

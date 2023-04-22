@@ -89,7 +89,7 @@ sc.exe create SSPORT.sys binPath=C:\windows\temp\SSPORT.sys     type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ssport.yaml)
 
-*last_updated:* 2023-04-20
+*last_updated:* 2023-04-22
 
 
 
