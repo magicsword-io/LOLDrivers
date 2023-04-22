@@ -1,25 +1,26 @@
-Name: hw_sys
-Author: Michael Haag
+Name: hw.sys
+Author: Guus Verbeek
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
+Verified: 'TRUE'
 Commands:
-  Command: sc.exe create hw_sys binPath=C:\windows\temp\hw_sys type=kernel && sc.exe
-    start hw_sys
+  Command: sc.exe create hw_sys binPath=C:\windows\temp\hw.sys type=kernel && sc.exe
+    start hw.sys
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+- 'https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- 'https://decoded.avast.io/janvojtesek/the-return-of-candiru-zero-days-in-the-middle-east/'
+- 'https://www.virustotal.com/gui/file/6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5/detection'
 Acknowledgement:
   Person: ''
   Handle: ''
 Detection: []
 KnownVulnerableSamples:
-- Filename: hw_sys
+- Filename: hw.sys
   MD5: 3247014ba35d406475311a2eab0c4657
   SHA1: 74e4e3006b644392f5fcea4a9bae1d9d84714b57
   SHA256: 4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8
@@ -154,3 +155,17 @@ KnownVulnerableSamples:
     - SerialNumber: 716ef836a8ceb23aeaf9174e
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
         CA , SHA256 , G3
+- Filename: HW.sys
+  MD5: 45c2d133d41d2732f3653ed615a745c8
+  SHA1: 4e56e0b1d12664c05615c69697a2f5c5d893058a
+  SHA256: 6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5 
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Marvin Test Solutions, Inc.
+  Description: HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI access
+  Product: HW
+  ProductVersion: ''
+  FileVersion: 4.8.2.0
+  MachineType: ''
+  OriginalFilename: HW.sys
