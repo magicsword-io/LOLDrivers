@@ -19095,6 +19095,81 @@
         ]
     },
     {
+        "Name": "windbg.sys",
+        "Author": "Michael Haag",
+        "Created": "2023-04-22",
+        "MitreID": "T1068",
+        "Category": "malicious",
+        "Verified": "TRUE",
+        "Commands": {
+            "Command": "sc.exe create windbg.sys binPath=C:\\windows\\temp\\windbg.sys type=kernel && sc.exe start windbg.sys",
+            "Description": "Kernel driver seen in a recent CopperStealer campaign.",
+            "Usecase": "Elevate privileges",
+            "Privileges": "kernel",
+            "OperatingSystem": "Windows 10"
+        },
+        "Resources": [
+            "https://www.proofpoint.com/us/blog/threat-insight/now-you-see-it-now-you-dont-copperstealer-performs-widespread-theft",
+            "https://twitter.com/jaydinbas/status/1642898531445886978?s=20",
+            "https://twitter.com/jaydinbas/status/1646475092006785027?s=20"
+        ],
+        "Acknowledgement": {
+            "Person": "",
+            "Handle": ""
+        },
+        "Detection": [],
+        "KnownVulnerableSamples": [
+            {
+                "Filename": "windbg.sys",
+                "MD5": "88bea56ae9257b40063785cf47546024",
+                "SHA1": "b5a8e2104d76dbb04cd9ffe86784113585822375",
+                "SHA256": "e1cb86386757b947b39086cc8639da988f6e8018ca9995dd669bdc03c8d39d7d",
+                "Signature": "",
+                "Date": "",
+                "Publisher": "",
+                "Company": "",
+                "Description": "",
+                "Product": "",
+                "ProductVersion": "",
+                "FileVersion": "",
+                "MachineType": "",
+                "OriginalFilename": ""
+            },
+            {
+                "Filename": "windbg.sys",
+                "MD5": "b6b530dd25c5eb66499968ec82e8791e",
+                "SHA1": "9c1c9032aa1e33461f35dbf79b6f2d061bfc6774",
+                "SHA256": "fa9abb3e7e06f857be191a1e049dd37642ec41fb2520c105df2227fcac3de5d5",
+                "Signature": "",
+                "Date": "",
+                "Publisher": "",
+                "Company": "",
+                "Description": "",
+                "Product": "",
+                "ProductVersion": "",
+                "FileVersion": "",
+                "MachineType": "",
+                "OriginalFilename": ""
+            },
+            {
+                "Filename": "windbg.sys",
+                "MD5": "40b968ecdbe9e967d92c5da51c390eee",
+                "SHA1": "b8b123a413b7bccfa8433deba4f88669c969b543",
+                "SHA256": "06c5ebd0371342d18bc81a96f5e5ce28de64101e3c2fd0161d0b54d8368d2f1f",
+                "Signature": "",
+                "Date": "",
+                "Publisher": "",
+                "Company": "",
+                "Description": "",
+                "Product": "",
+                "ProductVersion": "",
+                "FileVersion": "",
+                "MachineType": "",
+                "OriginalFilename": ""
+            }
+        ]
+    },
+    {
         "Name": "BSMIXP64.sys",
         "Author": "Michael Haag",
         "Created": "2023-01-09",

@@ -94,7 +94,7 @@ sc.exe create AsIO64.sys binPath=C:\windows\temp\AsIO64.sys type=kernel &amp;&am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asio64.yaml)
 
-*last_updated:* 2023-04-22
+*last_updated:* 2023-04-26
 
 
 

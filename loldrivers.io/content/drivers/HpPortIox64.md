@@ -120,7 +120,7 @@ sc.exe create HpPortIox64.sys binPath=C:\windows\temp\HpPortIox64.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/hpportiox64.yaml)
 
-*last_updated:* 2023-04-22
+*last_updated:* 2023-04-26
 
 
 

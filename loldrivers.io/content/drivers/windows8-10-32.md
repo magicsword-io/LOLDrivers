@@ -78,7 +78,7 @@ sc.exe create windows8-10-32.sys binPath=C:\windows\temp\windows8-10-32.sys     
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/windows8-10-32.yaml)
 
-*last_updated:* 2023-04-22
+*last_updated:* 2023-04-26
 
 
 

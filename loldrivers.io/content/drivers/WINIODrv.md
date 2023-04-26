@@ -171,7 +171,7 @@ sc.exe create WINIODrv.sys binPath=C:\windows\temp\WINIODrv.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winiodrv.yaml)
 
-*last_updated:* 2023-04-22
+*last_updated:* 2023-04-26
 
 
 

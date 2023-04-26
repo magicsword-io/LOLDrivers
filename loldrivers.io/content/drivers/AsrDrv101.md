@@ -105,7 +105,7 @@ sc.exe create AsrDrv101.sys binPath=C:\windows\temp\AsrDrv101.sys type=kernel &a
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrdrv101.yaml)
 
-*last_updated:* 2023-04-22
+*last_updated:* 2023-04-26
 
 
 

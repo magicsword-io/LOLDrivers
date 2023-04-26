@@ -94,7 +94,7 @@ sc.exe create nvflsh64.sys binPath=C:\windows\temp \n \n \n  vflsh64.sys type=ke
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nvflsh64.yaml)
 
-*last_updated:* 2023-04-22
+*last_updated:* 2023-04-26
 
 
 

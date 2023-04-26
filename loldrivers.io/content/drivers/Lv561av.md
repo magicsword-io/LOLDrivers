@@ -209,7 +209,7 @@ sc.exe create Lv561av.sys binPath=C:\windows\temp\Lv561av.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lv561av.yaml)
 
-*last_updated:* 2023-04-22
+*last_updated:* 2023-04-26
 
 
 

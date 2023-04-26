@@ -819,7 +819,7 @@ sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     ty
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/citmdrv_amd64.yaml)
 
-*last_updated:* 2023-04-22
+*last_updated:* 2023-04-26
 
 
 

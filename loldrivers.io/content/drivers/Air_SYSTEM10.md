@@ -138,7 +138,7 @@ sc.exe create Air_SYSTEM10.sys binPath=C:\windows\temp\Air_SYSTEM10.sys     type
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/air_system10.yaml)
 
-*last_updated:* 2023-04-22
+*last_updated:* 2023-04-26
 
 
 

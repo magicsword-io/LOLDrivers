@@ -94,7 +94,7 @@ sc.exe create EneIo64.sys binPath=C:\windows\temp\EneIo64.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/eneio64.yaml)
 
-*last_updated:* 2023-04-22
+*last_updated:* 2023-04-26
 
 
 
