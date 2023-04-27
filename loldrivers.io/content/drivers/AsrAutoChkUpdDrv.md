@@ -105,7 +105,7 @@ sc.exe create AsrAutoChkUpdDrv.sys binPath=C:\windows\temp\AsrAutoChkUpdDrv.sys 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrautochkupddrv.yaml)
 
-*last_updated:* 2023-04-26
+*last_updated:* 2023-04-27
 
 
 

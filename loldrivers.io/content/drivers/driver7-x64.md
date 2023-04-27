@@ -103,7 +103,7 @@ sc.exe create driver7-x64.sys binPath=C:\windows\temp\driver7-x64.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/driver7-x64.yaml)
 
-*last_updated:* 2023-04-26
+*last_updated:* 2023-04-27
 
 
 

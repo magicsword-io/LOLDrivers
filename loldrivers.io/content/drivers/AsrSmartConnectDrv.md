@@ -105,7 +105,7 @@ sc.exe create AsrSmartConnectDrv.sys binPath=C:\windows\temp\AsrSmartConnectDrv.
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/asrsmartconnectdrv.yaml)
 
-*last_updated:* 2023-04-26
+*last_updated:* 2023-04-27
 
 
 

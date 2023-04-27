@@ -78,7 +78,7 @@ sc.exe create nt6.sys binPath=C:\windows\temp \n \n \n  t6.sys type=kernel &amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nt6.yaml)
 
-*last_updated:* 2023-04-26
+*last_updated:* 2023-04-27
 
 
 

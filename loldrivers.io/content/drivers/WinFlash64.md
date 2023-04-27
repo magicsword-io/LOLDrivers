@@ -92,7 +92,7 @@ sc.exe create WinFlash64.sys binPath=C:\windows\temp\WinFlash64.sys type=kernel 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/winflash64.yaml)
 
-*last_updated:* 2023-04-26
+*last_updated:* 2023-04-27
 
 
 

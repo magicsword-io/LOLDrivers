@@ -105,7 +105,7 @@ sc.exe create ATSZIO.sys binPath=C:\windows\temp\ATSZIO.sys type=kernel &amp;&am
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/atszio.yaml)
 
-*last_updated:* 2023-04-26
+*last_updated:* 2023-04-27
 
 
 
