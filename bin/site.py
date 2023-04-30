@@ -13,7 +13,7 @@ def write_drivers_csv(drivers, output_dir):
         writer = csv.writer(f)
 
         # header
-        writer.writerow(['Name', 'Author', 'Created', 'Command', 'Description', 'Usecase', 'Category', 'Privileges', 'MitreID', 'OperatingSystem', 'Resources', 'Driver Description', 'Person',
+        writer.writerow(['Id', 'Author', 'Created', 'Command', 'Description', 'Usecase', 'Category', 'Privileges', 'MitreID', 'OperatingSystem', 'Resources', 'Driver Description', 'Person',
                          'Handle', 'Detection', 'KnownVulnerableSamples_SHA256'])
 
         # write rows
@@ -22,7 +22,7 @@ def write_drivers_csv(drivers, output_dir):
             hashes = [s['SHA256'] for s in driver['KnownVulnerableSamples']]
 
             # get link
-            link = '[' + driver['Name'] + '](drivers/' + os.path.splitext(driver["Name"])[0].lower() + '/)'
+            link = '[' + driver['Id'] + '](drivers/' + driver["Id"] + '/)'
             writer.writerow([link, driver['Author'], driver['Created'], driver['Commands']['Command'], driver['Commands']['Description'], driver['Commands']['Usecase'], driver['Category'],
                              driver['Commands']['Privileges'], driver['MitreID'], driver['Commands']['OperatingSystem'], driver['Resources'], driver['Acknowledgement']['Person'],
                              driver['Acknowledgement']['Handle'], driver['Detection'], hashes])
@@ -118,7 +118,7 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
     d = datetime.datetime.now()
     template = j2_env.get_template('driver.md.j2')
     for driver in drivers:
-        file_name = os.path.splitext(driver["Name"])[0] + '.md'
+        file_name = driver["Id"] + '.md'
         output_path = os.path.join(OUTPUT_DIR + '/content/drivers/' + file_name)
         output = template.render(driver=driver, time=str(d.strftime("%Y-%m-%d")))
         with open(output_path, 'w', encoding="utf-8") as f:
@@ -138,13 +138,13 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
     with open(OUTPUT_DIR + '/content/' + 'drivers_table.csv', 'w') as f:
         writer = csv.writer(f)
         for driver in drivers:
-            link = '[' + driver['Name'] + '](drivers/' + os.path.splitext(driver["Name"])[0].lower() + '/)'
+            link = '[' + driver['Id'] + '](drivers/' + driver["Id"] + '/)'
             if driver['KnownVulnerableSamples'][0]['SHA256'] is None or driver['KnownVulnerableSamples'][0]['SHA256'] == "-" :
                 sha256='not available '
             else:
-                sha256='[' + driver['KnownVulnerableSamples'][0]['SHA256'] + '](drivers/' + os.path.splitext(driver["Name"])[0].lower() + '/)'
+                sha256='[' + driver['KnownVulnerableSamples'][0]['SHA256'] + '](drivers/' + driver["Id"]+ '/)'
             writer.writerow([link, sha256, driver['Created']])
-    messages.append("site_gen.py wrote drivers table to: {0}".format(OUTPUT_DIR + '/content/drivers_table.json'))
+    messages.append("site_gen.py wrote drivers table to: {0}".format(OUTPUT_DIR + '/content/drivers_table.csv'))
 
     # write top 5 publishers
     write_top_publishers(drivers, OUTPUT_DIR)

@@ -1,0 +1,38 @@
+Id: 90e8600a-9b5c-4153-bb06-1d8fbe0ef232
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'FALSE'
+Commands:
+  Command: sc.exe create nstr.sys binPath=C:\windows\temp \n \n \n  str.sys type=kernel
+    && sc.exe start nstr.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: nstr.sys
+  MD5: '-'
+  SHA1: '-'
+  SHA256: 455bc98ba32adab8b47d2d89bdbadca4910f91c182ab2fc3211ba07d3784537b
+  Signature:
+  - '-'
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+Tags:
+- nstr.sys

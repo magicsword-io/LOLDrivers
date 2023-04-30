@@ -1,0 +1,112 @@
+Id: 7a7630d6-d007-4d84-a17d-81236d9693e1
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'FALSE'
+Commands:
+  Command: sc.exe create d.sys binPath=C:\windows\temp\d.sys type=kernel && sc.exe
+    start d.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: d.sys
+  MD5: a60c9173563b940203cf4ad38ccf2082
+  SHA1: a3636986cdcd1d1cb8ab540f3d5c29dcc90bb8f0
+  SHA256: c1c4310e5d467d24e864177bdbfc57cb5d29aac697481bfa9c11ddbeebfd4cc8
+  Signature:
+  - '-'
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: I386
+  OriginalFilename: ''
+  Authentihash:
+    MD5: 19dd018ebddfa9044b05fbb9ddffd7f9
+    SHA1: 80111a99c4f127cca12f1902ca241b3e65f339ff
+    SHA256: a4ca4a0932afa09e8df3469768f5ac6feaff2b7ae27ac208a218288fc4fbf102
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - KeInitializeEvent
+  - ObReferenceObjectByHandle
+  - ZwClose
+  - ObfDereferenceObject
+  - PsCreateSystemThread
+  - IoGetCurrentProcess
+  - _stricmp
+  - strchr
+  - ZwCreateFile
+  - RtlInitUnicodeString
+  - ZwReadFile
+  - ZwQueryInformationFile
+  - KeDetachProcess
+  - ProbeForRead
+  - ZwQueryInformationProcess
+  - KeAttachProcess
+  - KeLeaveCriticalRegion
+  - KeEnterCriticalRegion
+  - ObOpenObjectByName
+  - KeServiceDescriptorTable
+  - KeAddSystemServiceTable
+  - PsGetCurrentProcessId
+  - ProbeForWrite
+  - wcsstr
+  - ObQueryNameString
+  - IoFileObjectType
+  - SeSinglePrivilegeCheck
+  - KeGetPreviousMode
+  - KeDelayExecutionThread
+  - ZwAllocateVirtualMemory
+  - ZwQuerySection
+  - ExfInterlockedInsertTailList
+  - ExFreePoolWithTag
+  - sprintf
+  - RtlVolumeDeviceToDosName
+  - IoGetDeviceObjectPointer
+  - MmSectionObjectType
+  - strstr
+  - _strlwr
+  - PsProcessType
+  - PsSetCreateProcessNotifyRoutine
+  - KeInitializeSpinLock
+  - PsThreadType
+  - PsTerminateSystemThread
+  - vsprintf
+  - KeQuerySystemTime
+  - ExfInterlockedRemoveHeadList
+  - NtBuildNumber
+  - ExAllocatePoolWithTag
+  - ZwOpenKey
+  - ZwEnumerateKey
+  - ZwDeleteKey
+  - _except_handler3
+  - swprintf
+  - _wcsnicmp
+  - ZwQuerySystemInformation
+  - PsLookupProcessByProcessId
+  - wcstombs
+  - ExAcquireFastMutex
+  - ExReleaseFastMutex
+  - KfAcquireSpinLock
+  - KfReleaseSpinLock
+  Signatures: {}
+Tags:
+- d.sys

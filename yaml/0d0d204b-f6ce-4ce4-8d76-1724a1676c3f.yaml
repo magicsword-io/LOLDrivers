@@ -1,0 +1,38 @@
+Id: 0d0d204b-f6ce-4ce4-8d76-1724a1676c3f
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'FALSE'
+Commands:
+  Command: sc.exe create Proxy32.sys binPath=C:\windows\temp\Proxy32.sys type=kernel
+    && sc.exe start Proxy32.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: Proxy32.sys
+  MD5: '-'
+  SHA1: '-'
+  SHA256: 49ed27460730b62403c1d2e4930573121ab0c86c442854bc0a62415ca445a810
+  Signature:
+  - '-'
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+Tags:
+- Proxy32.sys

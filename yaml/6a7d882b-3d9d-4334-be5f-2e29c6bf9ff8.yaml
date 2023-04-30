@@ -1,0 +1,38 @@
+Id: 6a7d882b-3d9d-4334-be5f-2e29c6bf9ff8
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'FALSE'
+Commands:
+  Command: sc.exe create kbdcap64.sys binPath=C:\windows\temp\kbdcap64.sys type=kernel
+    && sc.exe start kbdcap64.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: kbdcap64.sys
+  MD5: '-'
+  SHA1: '-'
+  SHA256: 72b99147839bcfb062d29014ec09fe20a8f261748b5925b00171ef3cb849a4c1
+  Signature:
+  - '-'
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+Tags:
+- kbdcap64.sys

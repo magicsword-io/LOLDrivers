@@ -1,0 +1,38 @@
+Id: 30d6c39c-1d93-4101-8dd3-322ff0ab7fb3
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'FALSE'
+Commands:
+  Command: sc.exe create NetFlt.sys binPath=C:\windows\temp\NetFlt.sys type=kernel
+    && sc.exe start NetFlt.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: NetFlt.sys
+  MD5: '-'
+  SHA1: '-'
+  SHA256: f8886a9c759e0426e08d55e410b02c5b05af3c287b15970175e4874316ffaf13
+  Signature:
+  - '-'
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+Tags:
+- NetFlt.sys
