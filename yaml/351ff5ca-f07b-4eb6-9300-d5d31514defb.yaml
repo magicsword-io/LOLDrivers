@@ -1,0 +1,120 @@
+Id: 351ff5ca-f07b-4eb6-9300-d5d31514defb
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create nscm.sys binPath=C:\windows\temp \n \n \n  scm.sys type=kernel
+    && sc.exe start nscm.sys
+  Description: nscm.sys is a vulnerable driver. CVE-2013-3956.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- ' https://github.com/jbaines-r7/dellicious'
+- ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
+- https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: nscm.sys
+  MD5: 4a23e0f2c6f926a41b28d574cbc6ac30
+  SHA1: 64e4ac8b9ea2f050933b7ec76a55dd04e97773b4
+  SHA256: 76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22
+  Signature:
+  - Novell, Inc.
+  - VeriSign Class 3 Code Signing 2009-2 CA
+  - VeriSign Class 3 Public Primary CA
+  Date: ''
+  Publisher: ''
+  Company: Novell, Inc.
+  Description: Novell XTier Session Manager
+  Product: Novell XTier
+  ProductVersion: 3.1.11
+  FileVersion: 3.1.11.0
+  MachineType: AMD64
+  OriginalFilename: nscm.sys
+  Authentihash:
+    MD5: 0d1a4e506e7c928f1683a9cf38eb0835
+    SHA1: 50471608c91621cb84ba646974311da0abf6b3e9
+    SHA256: 0e291148da43ea6a491b8b94bdf573365087940c9b90f6a15a4e589da86a518d
+  InternalName: ''
+  Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
+  Imports:
+  - ntoskrnl.exe
+  - nicm.sys
+  ExportedFunctions:
+  - DllGetClassObject
+  - XTCOM_Table
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - KeInitializeMutex
+  - IoQueueWorkItemEx
+  - IoDeleteDevice
+  - IoFreeWorkItem
+  - RtlEqualUnicodeString
+  - ZwOpenProcessTokenEx
+  - IoAllocateWorkItem
+  - ZwClose
+  - ZwOpenProcess
+  - DbgPrint
+  - PsGetCurrentProcessId
+  - IoCreateDevice
+  - ZwQueryInformationToken
+  - PsSetCreateProcessNotifyRoutine
+  - SeRegisterLogonSessionTerminatedRoutine
+  - SeUnregisterLogonSessionTerminatedRoutine
+  - ZwOpenThreadTokenEx
+  - IoGetCurrentProcess
+  - SeMarkLogonSessionForTerminationNotification
+  - KeBugCheckEx
+  - KeWaitForSingleObject
+  - ZwQueryInformationProcess
+  - KeReleaseMutex
+  - NicmCreateInstance
+  - NicmDeregisterClassFactory
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
+        CA
+      ValidFrom: '2009-05-21 00:00:00'
+      ValidTo: '2019-05-20 23:59:59'
+      Signature: 8b03c0dd94d841a26169b015a878c730c6903c7e42f724b6e4837317047f04109ca1e2fa812febc0ca44e772e050b6551020836e9692e49a516ab43731dca52deb8c00c71d4fe74d32ba85f84ebefa675565f06abe7aca64381a101078457631f3867a030f60c2b35d9df68b6676821b59e183e5bd49a53856e5de41770e580f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
+        Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
+      ValidFrom: '2010-04-03 00:00:00'
+      ValidTo: '2013-04-26 23:59:59'
+      Signature: 2d2eec4636a0c1f359ef30a107e6c2301ad12c09ab9fdac02211aaef81323d1daee3a14a150bf9f4c7d0d788d5f486ea75e40abeb502a2267171be53030fe7614af7a2015eabd4c26e887ec9220beb3666fc68158d2b8dd659e3fe55245821c10e37ddeebac63eb1848512c64a543a13ba6735b156c6dc13395890e8003e03e7c2613e2c1de1dfadfe072cd7655e3b4166fe973233b4f81ecf810541382d67c92f29d76e220543a7179b606011b932cee250f99f260b29e79236cec10b67e0e0e48cb74593a7ce2e3cfafb6c58ac7ae5c10a591037c380b5f7516cac8f4ec695b020ca2445cb9bf97eb56c09d4a62618871b482ef97c5894349e10f62e2ee68b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
+      ValidFrom: '2006-05-23 17:01:29'
+      ValidTo: '2016-05-23 17:11:29'
+      Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    Signer:
+    - SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
+        CA
+Tags:
+- nscm.sys

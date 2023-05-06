@@ -1,0 +1,71 @@
+Id: e6338692-90e0-41b1-9481-a47e0df144ad
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'FALSE'
+Commands:
+  Command: sc.exe create fidpcidrv.sys binPath=C:\windows\temp\fidpcidrv.sys type=kernel
+    && sc.exe start fidpcidrv.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: fidpcidrv.sys
+  SHA1: 08596732304351b311970ff96b21f451f23b1e25
+  Signature: []
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+- Filename: fidpcidrv.sys
+  SHA1: 7838fb56fdab816bc1900a4720eea2fc9972ef7a
+  Signature: []
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+- Filename: fidpcidrv.sys
+  SHA1: 4789b910023a667bee70ff1f1a8f369cffb10fe8
+  Signature: []
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+- Filename: fidpcidrv.sys
+  SHA1: eeff4ec4ebc12c6acd2c930dc2eaaf877cfec7ec
+  Signature: []
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+Tags:
+- fidpcidrv.sys
