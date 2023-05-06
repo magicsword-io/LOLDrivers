@@ -11,13 +11,13 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# a4aa80bc-4ecd-49ab-bc0f-0f49b07fdd7f ![:inline](/images/twitter_verified.png) 
+# segwindrvx64.sys ![:inline](/images/twitter_verified.png) 
 
 
 ### Description
 
 a4aa80bc-4ecd-49ab-bc0f-0f49b07fdd7f is a vulnerable driver and more information will be added as found.
-- **Tags**: segwindrvx64.sys
+- **UUID**: a4aa80bc-4ecd-49ab-bc0f-0f49b07fdd7f
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
@@ -110,7 +110,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/a4aa80bc-4ecd-49ab-bc0f-0f49b07fdd7f.yaml)
 
-*last_updated:* 2023-04-30
+*last_updated:* 2023-05-06
 
 
 

@@ -11,13 +11,13 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# be3e49ea-095e-4fdb-9529-f4c2dbb9a9fc ![:inline](/images/twitter_verified.png) 
+# PhlashNT.sys ![:inline](/images/twitter_verified.png) 
 
 
 ### Description
 
 be3e49ea-095e-4fdb-9529-f4c2dbb9a9fc is a vulnerable driver and more information will be added as found.
-- **Tags**: PhlashNT.sys
+- **UUID**: be3e49ea-095e-4fdb-9529-f4c2dbb9a9fc
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
@@ -94,7 +94,7 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/be3e49ea-095e-4fdb-9529-f4c2dbb9a9fc.yaml)
 
-*last_updated:* 2023-04-30
+*last_updated:* 2023-05-06
 
 
 

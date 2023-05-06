@@ -11,13 +11,13 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# e32bc3da-4db1-4858-a62c-6fbe4db6afbd ![:inline](/images/twitter_verified.png) 
+# RTCore64.sys ![:inline](/images/twitter_verified.png) 
 
 
 ### Description
 
 The driver in Micro-Star MSI Afterburner 4.6.2.15658 (aka RTCore64.sys and RTCore32.sys) allows any authenticated user to read and write to arbitrary memory, I/O ports, and MSRs. This can be exploited for privilege escalation, code execution under high privileges, and information disclosure. These signed drivers can also be used to bypass the Microsoft driver-signing policy to deploy malicious code.
-- **Tags**: RTCore64.sys
+- **UUID**: e32bc3da-4db1-4858-a62c-6fbe4db6afbd
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
@@ -57,9 +57,6 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Authentihash MD5   | [538e5e595c61d2ea8defb7b047784734](https://www.virustotal.com/gui/search/authentihash%253A538e5e595c61d2ea8defb7b047784734) |
 | Authentihash SHA1  | [4a68c2d7a4c471e062a32c83a36eedb45a619683](https://www.virustotal.com/gui/search/authentihash%253A4a68c2d7a4c471e062a32c83a36eedb45a619683) |
 | Authentihash SHA256| [478c36f8af7844a80e24c1822507beef6314519185717ec7ae224a0e04b2f330](https://www.virustotal.com/gui/search/authentihash%253A478c36f8af7844a80e24c1822507beef6314519185717ec7ae224a0e04b2f330) |
-| Publisher         | N/A |
-| Signature         | N, /, A   |
-| Date                | N/A |
 
 
 #### Imports
@@ -103,9 +100,6 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Authentihash MD5   | [63fd0d800cac53db02638349cea2f8e7](https://www.virustotal.com/gui/search/authentihash%253A63fd0d800cac53db02638349cea2f8e7) |
 | Authentihash SHA1  | [3856e573765f090afbbb9e5be4c886653402f755](https://www.virustotal.com/gui/search/authentihash%253A3856e573765f090afbbb9e5be4c886653402f755) |
 | Authentihash SHA256| [ff8d17761c1645bdd1f0eccc69024907bbbfbe5c60679402b7d02f95b16310fe](https://www.virustotal.com/gui/search/authentihash%253Aff8d17761c1645bdd1f0eccc69024907bbbfbe5c60679402b7d02f95b16310fe) |
-| Publisher         | N/A |
-| Signature         | N, /, A   |
-| Date                | N/A |
 
 
 #### Imports
@@ -150,9 +144,6 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Authentihash MD5   | [bcd9f192e2f9321ed549c722f30206e5](https://www.virustotal.com/gui/search/authentihash%253Abcd9f192e2f9321ed549c722f30206e5) |
 | Authentihash SHA1  | [8498265d4ca81b83ec1454d9ec013d7a9c0c87bf](https://www.virustotal.com/gui/search/authentihash%253A8498265d4ca81b83ec1454d9ec013d7a9c0c87bf) |
 | Authentihash SHA256| [606beced7746cdb684d3a44f41e48713c6bbe5bfb1486c52b5cca815e99d31b4](https://www.virustotal.com/gui/search/authentihash%253A606beced7746cdb684d3a44f41e48713c6bbe5bfb1486c52b5cca815e99d31b4) |
-| Publisher         | N/A |
-| Signature         | N, /, A   |
-| Date                | N/A |
 
 
 #### Imports
@@ -220,7 +211,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/e32bc3da-4db1-4858-a62c-6fbe4db6afbd.yaml)
 
-*last_updated:* 2023-04-30
+*last_updated:* 2023-05-06
 
 
 

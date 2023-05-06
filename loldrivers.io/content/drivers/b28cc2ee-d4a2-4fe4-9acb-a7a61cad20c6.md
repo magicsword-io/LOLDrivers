@@ -11,7 +11,7 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# b28cc2ee-d4a2-4fe4-9acb-a7a61cad20c6 
+# WiseUnlo.sys} 
 
 
 {{< tip "warning" >}}
@@ -22,7 +22,7 @@ We were not able to verify the hash of this driver successfully, it has not been
 ### Description
 
 b28cc2ee-d4a2-4fe4-9acb-a7a61cad20c6 is a vulnerable driver and more information will be added as found.
-- **Tags**: WiseUnlo.sys
+- **UUID**: b28cc2ee-d4a2-4fe4-9acb-a7a61cad20c6
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
@@ -105,7 +105,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/b28cc2ee-d4a2-4fe4-9acb-a7a61cad20c6.yaml)
 
-*last_updated:* 2023-04-30
+*last_updated:* 2023-05-06
 
 
 
