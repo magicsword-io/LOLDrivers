@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "Name": {"type": "string", "example": "FILENAME.sys"},
+    "Author": {"type": "string", "example": "Your Name"},
+    "Created": {"type": "string", "format": "date", "example": "2023-04-15"},
+    "MitreID": {"type": "string", "example": "TXXXX"},
+    "Category": {"type": "string", "example": "Category Name"},
+    "Verified": {"type": "string", "example": "TRUE"},
+    "Commands": {
+      "type": "object",
+      "properties": {
+        "Command": {"type": "string", "example": "Command example"},
+        "Description": {"type": "string", "example": "Command description"},
+        "Usecase": {"type": "string", "example": "Use case description"},
+        "Privileges": {"type": "string", "example": "Required privileges"},
+        "OperatingSystem": {"type": "string", "example": "Operating system"}
+      },
+      "required": ["Command", "Description", "Usecase", "Privileges", "OperatingSystem"]
+    },
+    "Resources": {
+      "type": "array",
+      "items": {"type": "string", "example": "Resource URL"}
+    },
+    "Acknowledgement": {
+      "type": "object",
+      "properties": {
+        "Person": {"type": "string", "example": "Person name"},
+        "Handle": {"type": "string", "example": "Handle name"}
+      },
+      "required": ["Person", "Handle"]
+    },
+    "Detection": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {"type": "string", "example": "Detection Type"},
+          "value": {"type": "string", "example": "Detection method description"}
+        },
+        "required": ["type", "value"]
+      }
+    },
+    "KnownVulnerableSamples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Filename": {"type": "string", "example": "FILENAME.sys"},
+          "MD5": {"type": "string", "example": "778b7feea3c750d44745d3bf294bd4ce"},
+          "SHA1": {"type": "string", "example": "2261198385d62d2117f50f631652eded0ecc71db"},
+          "SHA256": {"type": "string", "example": "04a85e359525d662338cae86c1e59b1d7aa9bd12b920e8067503723dc1e03162"},
+          "Signature": {
+            "type": "array",
+            "items": {"type": "string", "example": "Signature example"}
+          },
+          "Date": {"type": "string", "example": "01:30 AM 08/29/2006"},
+          "Publisher": {"type": "string", "example": "FUJITSU LIMITED"},
+          "Company": {"type": "string", "example": "FUJITSU LIMITED."},
+          "Description": {"type": "string", "example": "Kernel driver"},
+          "Product": {"type": "string", "example": "MicrosoftR WindowsR Operating System"},
+          "ProductVersion": {"type": "string", "example": "2, 0, 0, 0"},
+          "FileVersion": {"type": "string", "example": "2, 0, 0, 0"},
+          "MachineType": {"type": "string", "example": "AMD64"},
+          "OriginalFilename": {"type": "string", "example": "ADV64DRV.sys"},
+          "Authentihash": {
+            "type": "object",
+            "properties": {
+              "MD5": {"type": "string", "example": "e1c188570d8720f9c35e194e17a7fd36"},
+              "SHA1": {"type": "string", "example": "ca6b0d932e5ac9dbe1242aca48ba93a14cf9d151"},
+              "SHA256": {"type": "string", "example": "b2b37ef379ada79d2abe78375312bfcd4b518139bc525a522c2a6329ba097cc4"}
+            },
+            "required": ["MD5", "SHA1", "SHA256"]
+          },
+          "InternalName": {"type": "string", "example": "ADV64DRV.sys"},
+          "Copyright": {"type": "string", "example": "Copyright(C) FUJITSU LIMITED 2005"},
+          "Imports": {
+            "type": "array",
+            "items": {"type": "string", "example": "ntoskrnl.exe"}
+          },
+          "ExportedFunctions": {"type": "string", "example": "DriverEntry, UnloadDriver"},
+          "PDBPath": {"type": "string", "example": "c:\\symbols\\FILENAME.pdb"}
+        },
+        "required": ["Filename", "MD5"]        
+      }
+    }
+  }
+}
+        
