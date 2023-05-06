@@ -138,7 +138,7 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
     with open(OUTPUT_DIR + '/content/' + 'drivers_table.csv', 'w') as f:
         writer = csv.writer(f)
         for driver in drivers:
-            link = '[' + driver['Id'] + '](drivers/' + driver["Id"] + '/)'
+            link = '[' + driver['Tags'][0] + '](drivers/' + driver["Id"] + '/)'
             if ('SHA256' not in driver['KnownVulnerableSamples'][0]) or (driver['KnownVulnerableSamples'][0]['SHA256'] is None ) or (driver['KnownVulnerableSamples'][0]['SHA256'] == ''):
                 sha256='not available '
             else:
