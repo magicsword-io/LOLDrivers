@@ -8,7 +8,7 @@ import datetime
 import jinja2
 import csv
 
-def write_drivers_csv(drivers, output_dir):
+def write_drivers_csv(drivers, output_dir, VERBOSE):
     with open(os.path.join(output_dir, 'content', 'api', 'drivers.csv'), 'w') as f:
         writer = csv.writer(f)
 
@@ -18,15 +18,18 @@ def write_drivers_csv(drivers, output_dir):
 
         # write rows
         for driver in drivers:
-            # get hashes
-            hashes = [s['SHA256'] for s in driver['KnownVulnerableSamples']]
-
-            # get link
-            link = '[' + driver['Id'] + '](drivers/' + driver["Id"] + '/)'
-            writer.writerow([link, driver['Author'], driver['Created'], driver['Commands']['Command'], driver['Commands']['Description'], driver['Commands']['Usecase'], driver['Category'],
-                             driver['Commands']['Privileges'], driver['MitreID'], driver['Commands']['OperatingSystem'], driver['Resources'], driver['Acknowledgement']['Person'],
-                             driver['Acknowledgement']['Handle'], driver['Detection'], hashes])
-
+            if VERBOSE:
+                print("Writing driver:", driver['Id'])  # Add this line to display the current driver
+            hashes = [s['SHA256'] for s in driver['KnownVulnerableSamples'] if 'SHA256' in s]  # Add the condition here
+            writer.writerow({
+                'Id': driver['Id'],
+                'Author': driver['Author'],
+                'Created': driver['Created'],
+                'MitreID': driver['MitreID'],
+                'Category': driver['Category'],
+                'Verified': driver['Verified'],
+                'SHA256': ', '.join(hashes),
+            })
 
 def write_top_products(drivers, output_dir, top_n=5):
     products_count = {}
@@ -93,9 +96,6 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
     manifest_files = []
     for root, dirs, files in os.walk(REPO_PATH):
         for file in files:
-            if file.endswith(".yaml"):
-                if VERBOSE:
-                    messages.append("reading yaml: {0}".format(file))
                 manifest_files.append((os.path.join(root, file)))
 
     drivers = []
@@ -126,7 +126,7 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
     messages.append("site_gen.py wrote {0} drivers markdown to: {1}".format(len(drivers),OUTPUT_DIR + '/content/drivers/'))
 
     # write api csv
-    write_drivers_csv(drivers, OUTPUT_DIR)
+    write_drivers_csv(drivers, OUTPUT_DIR, VERBOSE)
     messages.append("site_gen.py wrote drivers CSV to: {0}".format(OUTPUT_DIR + '/content/api/drivers.csv'))
 
     # write api json
@@ -139,7 +139,7 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
         writer = csv.writer(f)
         for driver in drivers:
             link = '[' + driver['Id'] + '](drivers/' + driver["Id"] + '/)'
-            if driver['KnownVulnerableSamples'][0]['SHA256'] is None or driver['KnownVulnerableSamples'][0]['SHA256'] == "-" :
+            if ('SHA256' not in driver['KnownVulnerableSamples'][0]) or (driver['KnownVulnerableSamples'][0]['SHA256'] is None ) or (driver['KnownVulnerableSamples'][0]['SHA256'] == ''):
                 sha256='not available '
             else:
                 sha256='[' + driver['KnownVulnerableSamples'][0]['SHA256'] + '](drivers/' + driver["Id"]+ '/)'

@@ -1,9 +1,6 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
-
 name: Validate YAMLs
 
-on: # yamllint disable-line rule:truthy
+on: 
   push:
     branches:
       - "*"
@@ -26,4 +23,4 @@ jobs:
     - name: Install dependencies with Poetry
       run: poetry install
     - name: Run YAML Checks
-      run: poetry run python bin/yaml-checker.py
+      run: poetry run python bin/validate.py

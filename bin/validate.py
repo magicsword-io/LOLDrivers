@@ -19,8 +19,8 @@ def check_md5_length(object):
     known_vulnerable_samples = object.get('KnownVulnerableSamples', [])
     for sample in known_vulnerable_samples:
         md5 = sample.get('MD5', '')
-        if len(md5) != md5_len:
-            return f"ERROR: MD5 length is not {md5_len} characters for object: {object['Name']}"
+        if md5 and len(md5) != md5_len:
+            return f"ERROR: MD5 length is not {md5_len} characters for object: {object['Id']}"
     return None
 
 def check_sha1_length(object):
@@ -28,8 +28,8 @@ def check_sha1_length(object):
     known_vulnerable_samples = object.get('KnownVulnerableSamples', [])
     for sample in known_vulnerable_samples:
         sha1 = sample.get('SHA1', '')
-        if len(sha1) != sha1_len:
-            return f"ERROR: SHA1 length is not {sha1_len} characters for object: {object['Name']}"
+        if sha1 and len(sha1) != sha1_len:
+            return f"ERROR: SHA1 length is not {sha1_len} characters for object: {object['Id']}"
     return None
 
 def check_sha256_length(object):
@@ -37,8 +37,8 @@ def check_sha256_length(object):
     known_vulnerable_samples = object.get('KnownVulnerableSamples', [])
     for sample in known_vulnerable_samples:
         sha256 = sample.get('SHA256', '')
-        if len(sha256) != sha256_len:
-            return f"ERROR: SHA256 length is not {sha256_len} characters for object: {object['Name']}"
+        if sha256 and len(sha256) != sha256_len:
+            return f"ERROR: SHA256 length is not {sha256_len} characters for object: {object['Id']}"
     return None
 
 
@@ -71,7 +71,7 @@ def validate_schema(yaml_dir, schema_file, verbose):
 
         validator = jsonschema.Draft7Validator(schema, format_checker=jsonschema.FormatChecker())
         for schema_error in validator.iter_errors(yaml_data):
-            errors.append("ERROR: {0} at:\n\t{1}".format(json.dumps(schema_error.message), yaml_file))
+            errors.append("ERROR: {0} at file {1}:\n\t{2}".format(json.dumps(schema_error.message), yaml_file, schema_error.path))
             error = True
 
         # Additional YAML checks
