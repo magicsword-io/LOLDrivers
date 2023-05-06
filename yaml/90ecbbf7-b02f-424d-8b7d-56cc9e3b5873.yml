@@ -1,0 +1,194 @@
+Id: 90ecbbf7-b02f-424d-8b7d-56cc9e3b5873
+Author: Nasreddine Bencherchali
+Created: '2023-05-06'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'FALSE'
+Commands: 'Command: sc.exe create NASBENCH binPath=C:\windows\temp\eneio64.sys type=kernel
+  && sc.exe start eneio64.sys'
+Description: []
+Usecase: Elevate privileges
+Privileges: kernel
+OperatingSystem: Windows 10
+Resources:
+- Internal Research
+Acknowledgement:
+  Person: []
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- FileName: eneio64.sys
+  MD5: 66066d9852bc65988fb4777f0ff3fbb4
+  SHA1: 24343ec4dfec11796a8800a3059b630e8be89070
+  SHA256: 38c18db050b0b2b07f657c03db1c9595febae0319c746c3eede677e21cd238b0
+  Authentihash:
+    MD5: 2a99d8330fe122a45ba45dcf897c1bf9
+    SHA1: b4afe8a5554e68bf22994725cf096b77430a9cf1
+    SHA256: b45d78a6780f125143dbd198ac2439be78424e7ae37a4234541ecb327dc190c1
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - ObReferenceObjectByHandle
+  - DbgPrint
+  - ZwClose
+  - ZwOpenSection
+  - ZwMapViewOfSection
+  - ZwUnmapViewOfSection
+  - KeBugCheckEx
+  - ObfDereferenceObject
+  - RtlInitUnicodeString
+  - HalTranslateBusAddress
+  Signatures:
+  - CertificatesInfo: []
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2006-11-08 00:00:00'
+      ValidTo: '2021-11-07 23:59:59'
+      Signature: 1302ddf8e88600f25af8f8200c59886207cecef74ef9bb59a198e5e138dd4ebc6618d3adeb18f20dc96d3e4a9420c33cbabd6554c6af44b310ad2c6b3eabd707b6b88163c5f95e2ee52a67cecd330c2ad7895603231fb3bee83a0859b4ec4535f78a5bff66cf50afc66d578d1978b7b9a2d157ea1f9a4bafbac98e127ec6bdff
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
+      ValidFrom: '2006-05-23 17:01:29'
+      ValidTo: '2016-05-23 17:11:29'
+      Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=TW, ST=Taiwan, L=Taipei / Peitou, O=ASUSTeK Computer Inc., OU=Digital
+        ID Class 3 , Microsoft Software Validation v2, OU=Quality Testing Department,
+        CN=ASUSTeK Computer Inc.
+      ValidFrom: '2012-07-31 00:00:00'
+      ValidTo: '2015-08-03 23:59:59'
+      Signature: 03cd161c1960e13d0b06441f08fdfc9df8319f8d87a83ecc865bc20767841d4087e40dc9d770bdc5c0fe6ccb9cf3e08bee7364451b03fb3130356761cae54417e8a282ed7cd33b0becd72e8799b616a2766976a7172a1cc299e8321ebeb479f592e03f425da4b2ea6a0cd0b5cc32b9bdeec80aa3ef0a62d6e16b72765301d53ef883ab9210a4b868ff2e2724e37804feb5277d3e26da8ba9d0b6ef61769d1c0f62a78757779d7134a63320b1a692584f12162d3fa20ec6e1b038b1a8d7afc2fad7b692759c6a000159714271f40d608fed3c08213b757fa75baf4674380f5aea46b7125f17532c636876c1f3e0d4b0350822f2a640001fda794b969e2cc681c2
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    Signer:
+    - SerialNumber: 7d08d9bc130726de26ee4ef28e133084
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+- FileName: EneIo64.sys
+  MD5: 86fd54c56dcafe2de918c36f8dfda67e
+  SHA1: 0b01c4c1f18d72eb622be2553114f32edfe7b7aa
+  SHA256: 9ee33ffd80611a13779df6286c1e04d3c151f1e2f65e3d664a08997fcd098ef3
+  Authentihash:
+    MD5: 6055cbe0b4c535baa8c15473fc97e61a
+    SHA1: ce280412dd778cafbe6dbb05b8cab42e98d3ae56
+    SHA256: 795e5774aefd74200d552bf7ede17491c254fa7a73e2a00eb0e1462f18211ff5
+  Description: ''
+  Company: ''
+  InternalName: ''
+  OriginalFilename: ''
+  FileVersion: ''
+  Product: ''
+  ProductVersion: ''
+  Copyright: ''
+  MachineType: AMD64
+  Imports:
+  - cng.sys
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - BCryptCloseAlgorithmProvider
+  - BCryptGetProperty
+  - BCryptDecrypt
+  - BCryptImportKey
+  - BCryptDestroyKey
+  - BCryptSetProperty
+  - BCryptOpenAlgorithmProvider
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - wcsstr
+  - ObfDereferenceObject
+  - ZwClose
+  - ZwOpenSection
+  - ZwMapViewOfSection
+  - ZwUnmapViewOfSection
+  - PsSetLoadImageNotifyRoutine
+  - PsRemoveLoadImageNotifyRoutine
+  - PsGetCurrentProcessId
+  - RtlTimeToSecondsSince1970
+  - __C_specific_handler
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - RtlInitUnicodeString
+  - KeBugCheckEx
+  - ObReferenceObjectByHandle
+  - HalTranslateBusAddress
+  Signatures:
+  - CertificatesInfo: []
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root
+        G4
+      ValidFrom: '2022-06-09 00:00:00'
+      ValidTo: '2031-11-09 23:59:59'
+      Signature: 9a1602a501ef81fb0db458b278ada82319d97337da609e51d7cbf82f40b9a31f7c404e333e903ce789017585e8627b1d56e071bade5ec637bc795c62004df8497a514d0632f3c5d2002a2720ea892e1539e02c3ef8757c2c824161350f23d0ed3595d288952943cbe0a658107c538e9f45c9203714c0ed19ba7e7739d25496c7a611df3433f67552424b1c9d8d96d5956c471214245f2641fa1a46bddeb0e5914703ac1808cbcbdb66897f2b9c65bfbe374ebe2df39d4ac3cccc475ec89595add1cbbb2a0620f93f72ea36eb4572927a297b14033cfb4dd648717a10118a0874cd6c1b045cd28a950376515053d62ef74a46c3ae102c714cb087b62737446044
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping
+        CA
+      ValidFrom: '2022-03-23 00:00:00'
+      ValidTo: '2037-03-22 23:59:59'
+      Signature: 7d598ec093b66f98a94422017e66d6d82142e1b0182e104d13cf3053cebf18fbc7505de24b29fb708a0daa2969fc69c1cf1d07e93e60c8d80be55c5bd76d87fa842025343167cdb612966fc4504c621d0c0882a816bda956cf15738d012225ce95693f4777fb727414d7ffab4f8a2c7aab85cd435fed60b6aa4f91669e2c9ee08aace5fd8cbc6426876c92bd9d7cd0700a7cefa8bc754fba5af7a910b25de9ff285489f0d58a717665daccf072a323fac0278244ae99271bab241e26c1b7de2aebf69eb1799981a35686ab0a45c9dfc48da0e798fbfba69d72afc4c7c1c16a71d9c6138009c4b69fcd878724bb4fa349b9776691f1729ce94b0252a7377e9353ac3b1d08490f94cd397addff256399272c3d3f6ba7f166c341cd4fb6409b212140d0b71324cddc1d783ae49eade5347192d7266be43873aba6014fbd3f3b78ad4cadfbc4957bed0a5f33398741787a38e99ce1dd23fd1d28d3c7f9e8f1985ffb2bd87ef2469d752c1e272c26db6f157b1e198b36b893d4e6f2179959ca70f037bf9800df20164f27fb606716a166badd55c03a2986b098a02bed9541b73ad5159831b462090f0abd81d913febfa4d1f357d9bc04fa82de32df0489f000cd5dc2f9d0237f000be4760226d9f0657642a6298709472be67f1aa4850ffc9896f655542b1f80fac0f20e2be5d6fba92f44154ae7130e1ddb37381aa12bf6edd67cfc
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+      ValidFrom: '2021-04-29 00:00:00'
+      ValidTo: '2036-04-28 23:59:59'
+      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2022 , 2
+      ValidFrom: '2022-03-29 00:00:00'
+      ValidTo: '2033-03-14 23:59:59'
+      Signature: 0d2d2374a6d1f5f8ea4b993f01e4f60ce4af169dd9b38c9782299c436f012dab38b57011bf84198b3f5de5864fbe933ade2a395a394ed88459a5bc1b98aae86cefd1486919385bcf89391d7070d94edf23226cd5dff659cba1c2ea4c76caa1dca12b96b89b55a91a6b7dd1f502094f82d6a57388c49880dfee4995b7b3ccc5a7ee0ee1ef1e388a9fef11c9314a58b6df387ccbfa5cf7e453bf6e0a7c7ed7de98d52965890fa29cc065f4012265c7ea5e74a65b3592507cf417a687644f3e46891663206bcbf27bd035e34a7048a9b6e71d60bd04221525700672a9443b694711d3eee9c7a03e4f10b93036e4f3aa6909a88b7e64a2659411fb6e32f1f5bb38adcdc09311d532784a4b372a4cf35cdcb685c0bb70305578d698fe546d7f71a9481a78dd46772e1b7ac0338af84a288c12a873cf2df9d323f29e19e00d9428a0ebdb1a51a095828e286ba4ce9d76dea973aa486a5943ae5feaf80f06429ddf066896fe2aa0745b6366de6b2cb878aa4d706df02cf107157e35b4e6b50ca299a5d7156b350e85d6e02ccce00c24b87c520b1e997cefc8c8c58c5869afab3de1cfcc7d15ae14bf8a71dfca97b1d847ea1c85e0454e121c142958cc6fd37fcbbec10e4a6f209caed973325908e72d92a11a11fe3298a65d2b97e08bd39ccc6db50dae47633847175b6f13da6a106e1f49b7445bb4080a875a59047611a1a77702131c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    - Subject: ??=Private Organization, ??=TW, serialNumber=16505809, C=TW, L=HSINCHU
+        CITY, O=ENE TECHNOLOGY INC., CN=ENE TECHNOLOGY INC.
+      ValidFrom: '2021-07-06 00:00:00'
+      ValidTo: '2024-08-29 23:59:59'
+      Signature: 1c799045dbfc1da5f1dfdadef58c38978109600b513226a29abbc20ec9b30e03e9a0c7679f1b7d388009015a1edc77a4bbd817838d7b17c62493514bf6c095ff9d6d1ae40f761678be2b04ced07db70e5f6a58be33016c1de06f7bf2008b1040c2f8677a62667b4b110e5fe57816934686086bdf2941c980fc79945950338e2e9dbe37e24e8cb745f6f54a0f6b26feca8b6894545afd98da94e45ab6574b16043ad7458e750834b853a57c0ece0114268a0a099f9178ef3939b8871218f6376f0b870a49e29d0c83bae3fcf4444e04b7eda9453813e65de04312e0e6311616bc9b9d90f4bc784b9a5fc1a4ede394a5c742564ba9ed93f0a517bc4888e08a0a37cb74e40c86de9cc01de3dcd5dd30d6f76773f933812fa246c439380cf61a4d31d390da3c6b067b7b8628f9059a1160cc72c47d1bf593cde1ddfabcea0ddec96bc2953e0354765744be490ec3223488075bbbabb4a800016b076e26319da7901e01083c46dd90fc51aa08d7038600801043b46db5d5e992a7bb8682f7cf4b2598740159e69e83e8c47f9998316abc1c02385ed99c16bb9dbd11789023c7c16ffe832fa802142b8c4c34856a60062802e24a230cd118c1926be1dcc155cd06dd75f6eabd6be9be0eeddf3efe9bd342d2cc4687d4e9527120e4843ddd295647d8a2a0c88327dac8df1a0ccd94eaef279629eecedf87a23c60cd2355deabb77b8b06
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    Signer:
+    - SerialNumber: 0d6403ef47571a33435fc827ccefc858
+      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+        SHA384 2021 CA1
+Tags:
+- eneio64.sys

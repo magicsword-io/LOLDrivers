@@ -52,20 +52,20 @@ def gen_hashes_lists():
         known_vuln_samples = get_yaml_part(file_path=file, part_name="KnownVulnerableSamples")
         if known_vuln_samples:
             for i in known_vuln_samples:
-                if i['MD5']:
+                if 'MD5' in i:
                     if i['MD5'] != "-":
                         md5_list.append(i['MD5'])
-                if i['SHA1']:
+                if 'SHA1' in i:
                     if i['SHA1'] != "-":
                         sha1_list.append(i['SHA1'])
-                if i['SHA256']:
+                if 'SHA256' in i:
                     if i['SHA256'] != "-":
                         sha256_list.append(i['SHA256'])
     
     # Remove leading and trailing spaces as well as any duplicates
-    md5_list = list(set([i.lstrip().strip().lower() for i in md5_list]))
-    sha1_list = list(set([i.lstrip().strip().lower() for i in sha1_list]))
-    sha256_list = list(set([i.lstrip().strip().lower() for i in sha256_list]))
+    md5_list = list(filter(None,list(set([i.lstrip().strip().lower() for i in md5_list]))))
+    sha1_list = list(filter(None,list(set([i.lstrip().strip().lower() for i in sha1_list]))))
+    sha256_list = list(filter(None,list(set([i.lstrip().strip().lower() for i in sha256_list]))))
 
     return md5_list, sha1_list, sha256_list
 
@@ -104,26 +104,26 @@ def gen_hashes_files(md5_list, sha1_list, sha256_list):
     """
     
     if md5_list:
-        with open('detections/hashes/samples.md5', 'w') as f: 
+        with open('../detections/hashes/samples.md5', 'w') as f: 
             for i in md5_list:
                 if i != "-":
                     f.write(i + "\n")
     
     if sha1_list:
-        with open('detections/hashes/samples.sha1', 'w') as f: 
+        with open('../detections/hashes/samples.sha1', 'w') as f: 
             for i in sha1_list:
                 if i != "-":
                     f.write(i + "\n")
     
     if sha256_list:
-        with open('detections/hashes/samples.sha256', 'w') as f:
+        with open('../detections/hashes/samples.sha256', 'w') as f:
             for i in sha256_list:
                 if i != "-":
                     f.write(i + "\n")
 
     all_hashes = list(set(md5_list + sha1_list + sha256_list))
     if all_hashes:
-        with open('detections/hashes/samples.all', 'w') as f:
+        with open('../detections/hashes/samples.all', 'w') as f:
             for i in all_hashes:
                 if i != "-":
                     f.write(i + "\n")
@@ -134,26 +134,26 @@ def gen_authentihash_file(authentihash_md5_list, authentihash_sha1_list, authent
     """
     
     if authentihash_md5_list:
-        with open('detections/hashes/authentihash_samples.md5', 'w') as f: 
+        with open('../detections/hashes/authentihash_samples.md5', 'w') as f: 
             for i in authentihash_md5_list:
                 if i != "-":
                     f.write(i + "\n")
     
     if authentihash_sha1_list:
-        with open('detections/hashes/authentihash_samples.sha1', 'w') as f: 
+        with open('../detections/hashes/authentihash_samples.sha1', 'w') as f: 
             for i in authentihash_sha1_list:
                 if i != "-":
                     f.write(i + "\n")
     
     if authentihash_sha256_list:
-        with open('detections/hashes/authentihash_samples.sha256', 'w') as f:
+        with open('../detections/hashes/authentihash_samples.sha256', 'w') as f:
             for i in authentihash_sha256_list:
                 if i != "-":
                     f.write(i + "\n")
 
     all_hashes = list(set(authentihash_md5_list + authentihash_sha1_list + authentihash_sha256_list))
     if all_hashes:
-        with open('detections/hashes/authentihash_samples.all', 'w') as f:
+        with open('../detections/hashes/authentihash_samples.all', 'w') as f:
             for i in all_hashes:
                 if i != "-":
                     f.write(i + "\n")
@@ -162,7 +162,7 @@ def gen_sysmon_driver_load_config(md5_list, sha1_list, sha256_list):
     """
         Generates sysmon driver load configuration
     """
-    with open("detections/sysmon/sysmon_config_vulnerable_hashes.xml", "w") as f:
+    with open("../detections/sysmon/sysmon_config_vulnerable_hashes.xml", "w") as f:
         f.write("<Sysmon schemaversion=\"4.30\">\n")
         f.write("	<EventFiltering>\n")
         f.write("		<RuleGroup name=\"\" groupRelation=\"or\">\n")
@@ -192,7 +192,7 @@ def gen_sysmon_block_config(md5_list, sha1_list, sha256_list):
     """
         Generates sysmon blocking configuration
     """
-    with open("detections/sysmon/sysmon_config_vulnerable_hashes_block.xml", "w") as f:
+    with open("../detections/sysmon/sysmon_config_vulnerable_hashes_block.xml", "w") as f:
         f.write("<Sysmon schemaversion=\"4.82\">\n")
         f.write("	<EventFiltering>\n")
         f.write("		<RuleGroup name=\"\" groupRelation=\"or\">\n")
@@ -223,7 +223,7 @@ def gen_sigma_rule_hashes(md5_list, sha1_list, sha256_list):
         Generates DriverLoad SIGMA rule based on driver hashes
     """
     if md5_list or sha1_list or sha256_list:
-        with open("detections/sigma/driver_load_win_vuln_drivers.yml", "w") as f:
+        with open("../detections/sigma/driver_load_win_vuln_drivers.yml", "w") as f:
             f.write("title: Vulnerable Driver Load\n")
             f.write("id: 7aaaf4b8-e47c-4295-92ee-6ed40a6f60c8\n")
             f.write("status: experimental\n")
@@ -283,7 +283,7 @@ def gen_sigma_rule_names(names_list):
         Generates DriverLoad SIGMA rule based on driver names
     """
     if names_list:
-        with open("detections/sigma/driver_load_win_vuln_drivers_names.yml", "w") as f:
+        with open("../detections/sigma/driver_load_win_vuln_drivers_names.yml", "w") as f:
             f.write("title: Vulnerable Driver Load By Name\n")
             f.write("id: c316eac1-f3d8-42da-ad1c-66dcec5ca787\n")
             f.write("related:\n")
@@ -314,7 +314,7 @@ def gen_sigma_rule_names(names_list):
             f.write("falsepositives:\n")
             f.write("    - False positives may occur if one of the vulnerable driver names mentioned above didn't change its name between versions. So always make sure that the driver being loaded is the legitimate one and the non vulnerable version.\n")
             f.write("    - If you experience a lot of FP you could comment the driver name or its exact known legitimate location (when possible)\n")
-            f.write("level: medium\n")
+            f.write("level: low\n")
     
 
 if __name__ == "__main__":
