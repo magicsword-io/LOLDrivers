@@ -13,10 +13,10 @@ weight = 10
 
 
 {% if driver.Verified == 'TRUE' %}
-# {{ driver.Id }} ![:inline](/images/twitter_verified.png) 
+# {{driver.Tags[0]}} ![:inline](/images/twitter_verified.png) 
 
 {% else %}
-# {{ driver.Id }} 
+# {{driver.Tags[0]}}} 
 
 {% raw %}
 {{< tip "warning" >}}
@@ -33,7 +33,7 @@ We were not able to verify the hash of this driver successfully, it has not been
 {% else %}
 {{ driver.Id }} is a vulnerable driver and more information will be added as found.
 {% endif %}
-- **Tags**: {{driver.Tags | join(', ')}}
+- **UUID**: {{ driver.Id }}
 - **Created**: {{driver.Created}}
 - **Author**: {{driver.Author}}
 - **Acknowledgement**: {{driver.Acknowledgement.Person}} | [{{ driver.Acknowledgement.Handle }}](https://twitter.com/{{driver.Acknowledgement.Handle}})
