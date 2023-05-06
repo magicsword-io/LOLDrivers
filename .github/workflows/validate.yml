@@ -23,4 +23,4 @@ jobs:
     - name: Install dependencies with Poetry
       run: poetry install
     - name: Run YAML Checks
-      run: poetry run python bin/validate.py
+      run: poetry run python bin/validate.py -v
