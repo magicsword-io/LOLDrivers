@@ -93,7 +93,7 @@ sc.exe create LgCoreTemp.sys binPath=C:\windows\temp\LgCoreTemp.sys     type=ker
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lgcoretemp.yaml)
 
-*last_updated:* 2023-04-27
+*last_updated:* 2023-05-06
 
 
 

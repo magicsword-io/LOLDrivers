@@ -96,7 +96,7 @@ sc.exe create ADV64DRV.sys binPath=C:\windows\temp\ADV64DRV.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/adv64drv.yaml)
 
-*last_updated:* 2023-04-27
+*last_updated:* 2023-05-06
 
 
 

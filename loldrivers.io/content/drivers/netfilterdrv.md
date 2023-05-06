@@ -100,7 +100,7 @@ sc.exe create netfilterdrv.sys binPath=C:\windows\temp \n \n \n  etfilterdrv.sys
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/netfilterdrv.yaml)
 
-*last_updated:* 2023-04-27
+*last_updated:* 2023-05-06
 
 
 

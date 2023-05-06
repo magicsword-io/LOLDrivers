@@ -135,7 +135,7 @@ sc.exe create LHA.sys binPath=C:\windows\temp\LHA.sys type=kernel &amp;&amp; sc.
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/lha.yaml)
 
-*last_updated:* 2023-04-27
+*last_updated:* 2023-05-06
 
 
 

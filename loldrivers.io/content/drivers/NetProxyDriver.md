@@ -78,7 +78,7 @@ sc.exe create NetProxyDriver.sys binPath=C:\windows\temp\NetProxyDriver.sys     
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/netproxydriver.yaml)
 
-*last_updated:* 2023-04-27
+*last_updated:* 2023-05-06
 
 
 

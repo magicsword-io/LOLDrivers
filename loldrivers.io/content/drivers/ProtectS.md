@@ -100,7 +100,7 @@ sc.exe create ProtectS.sys binPath=C:\windows\temp\ProtectS.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/protects.yaml)
 
-*last_updated:* 2023-04-27
+*last_updated:* 2023-05-06
 
 
 

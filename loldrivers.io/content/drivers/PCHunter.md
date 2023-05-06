@@ -154,7 +154,7 @@ sc.exe create PCHunter.sys binPath=C:\windows\temp\PCHunter.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/pchunter.yaml)
 
-*last_updated:* 2023-04-27
+*last_updated:* 2023-05-06
 
 
 

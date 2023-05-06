@@ -126,7 +126,7 @@ sc.exe create nvflash.sys binPath=C:\windows\temp \n \n \n  vflash.sys type=kern
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/nvflash.yaml)
 
-*last_updated:* 2023-04-27
+*last_updated:* 2023-05-06
 
 
 

@@ -166,7 +166,7 @@ sc.exe create kprocesshacker.sys binPath=C:\windows\temp\kprocesshacker.sys     
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/kprocesshacker.yaml)
 
-*last_updated:* 2023-04-27
+*last_updated:* 2023-05-06
 
 
 
