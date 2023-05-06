@@ -1,0 +1,35 @@
+Id: d1441172-cc15-4a96-b782-f440bfb681e1
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'FALSE'
+Commands:
+  Command: sc.exe create b4.sys binPath=C:\windows\temp\b4.sys type=kernel && sc.exe
+    start b4.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: b4.sys
+  SHA256: dec8a933dba04463ed9bb7d53338ff87f2c23cfb79e0e988449fc631252c9dcc
+  Signature: []
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+Tags:
+- b4.sys

@@ -1,7 +1,7 @@
 +++
 
 description = "{{ driver.driver_description }}"
-title = "{{ driver.Name }}"
+title = "{{ driver.Id }}"
 weight = 10
 
 +++
@@ -13,10 +13,10 @@ weight = 10
 
 
 {% if driver.Verified == 'TRUE' %}
-# {{ driver.Name }} ![:inline](/images/twitter_verified.png) 
+# {{ driver.Id }} ![:inline](/images/twitter_verified.png) 
 
 {% else %}
-# {{ driver.Name }} 
+# {{ driver.Id }} 
 
 {% raw %}
 {{< tip "warning" >}}
@@ -31,9 +31,9 @@ We were not able to verify the hash of this driver successfully, it has not been
 {% if driver.Commands.Description %}
 {{driver.Commands.Description}}
 {% else %}
-{{ driver.Name }} is a vulnerable driver and more information will be added as found.
+{{ driver.Id }} is a vulnerable driver and more information will be added as found.
 {% endif %}
-
+- **Tags**: {{driver.Tags | join(', ')}}
 - **Created**: {{driver.Created}}
 - **Author**: {{driver.Author}}
 - **Acknowledgement**: {{driver.Acknowledgement.Person}} | [{{ driver.Acknowledgement.Handle }}](https://twitter.com/{{driver.Acknowledgement.Handle}})
@@ -140,8 +140,7 @@ This download link contains the malicious driver!
 {% endif %}
 
 
-{% set driver_name = driver.Name.split('.') %}
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml{{driver.kind}}/{{ driver_name[0] | lower | replace (" ", "_") }}.yaml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml{{driver.kind}}/{{ driver.Id }}.yaml)
 
 *last_updated:* {{ time }}
 

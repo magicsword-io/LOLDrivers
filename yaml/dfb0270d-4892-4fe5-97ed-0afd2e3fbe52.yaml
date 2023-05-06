@@ -1,0 +1,223 @@
+Id: dfb0270d-4892-4fe5-97ed-0afd2e3fbe52
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create zamguard64.sys binPath=C:\windows\temp\zamguard64.sys type=kernel
+    && sc.exe start zamguard64.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: zamguard64.sys
+  MD5: 21e13f2cb269defeae5e1d09887d47bb
+  SHA1: 16d7ecf09fc98798a6170e4cef2745e0bee3f5c7
+  SHA256: 543991ca8d1c65113dff039b85ae3f9a87f503daec30f46929fd454bc57e5a91
+  Signature:
+  - Zemana Ltd.
+  - DigiCert High Assurance Code Signing CA-1
+  - DigiCert
+  Date: ''
+  Publisher: ''
+  Company: Zemana Ltd.
+  Description: ZAM
+  Product: ZAM
+  ProductVersion: 2.21.63
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: 3f2771b22553380efcee72a27dc4d96c
+    SHA1: 0d15b7de0f1129b540f48d7a3cba2c6bf5d44112
+    SHA256: ceb1bf90d8652dac481fba362e5c3a6548a116897e729733f2be27f4edc5fc1f
+  InternalName: ''
+  Copyright: Zemana Ltd. All rights reserved.
+  Imports:
+  - ntoskrnl.exe
+  - FLTMGR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - FsRtlIsNameInExpression
+  - PsGetProcessImageFileName
+  - ZwQueryInformationProcess
+  - __C_specific_handler
+  - strchr
+  - RtlAppendUnicodeToString
+  - KeInitializeSemaphore
+  - KeReleaseSemaphore
+  - KeWaitForSingleObject
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - ZwQueryInformationFile
+  - ZwWriteFile
+  - PsGetCurrentThreadId
+  - ZwDeleteFile
+  - _vsnprintf
+  - PsThreadType
+  - PsSetCreateProcessNotifyRoutine
+  - PsGetProcessSessionId
+  - RtlAppendUnicodeStringToString
+  - ZwDeleteValueKey
+  - ZwSetValueKey
+  - towupper
+  - RtlIntegerToUnicodeString
+  - KeInitializeEvent
+  - KeSetEvent
+  - KeAcquireSpinLockAtDpcLevel
+  - KeReleaseSpinLockFromDpcLevel
+  - MmProbeAndLockPages
+  - IoAllocateIrp
+  - IoAllocateMdl
+  - IofCallDriver
+  - IoFreeIrp
+  - IoFreeMdl
+  - IoGetDeviceObjectPointer
+  - IoGetRelatedDeviceObject
+  - ObCloseHandle
+  - ObfReferenceObject
+  - ZwSetInformationFile
+  - ZwReadFile
+  - ZwOpenSymbolicLinkObject
+  - ZwQuerySymbolicLinkObject
+  - IoCreateFileSpecifyDeviceObjectHint
+  - IoGetDeviceAttachmentBaseRef
+  - FsRtlGetFileSize
+  - ObQueryNameString
+  - IoFileObjectType
+  - KeReadStateEvent
+  - ExQueueWorkItem
+  - ExGetPreviousMode
+  - MmGetSystemRoutineAddress
+  - NtOpenProcess
+  - ZwCreateEvent
+  - ZwWaitForSingleObject
+  - ZwSetEvent
+  - NtQuerySystemInformation
+  - ExEventObjectType
+  - NtBuildNumber
+  - ZwDeleteKey
+  - ObReferenceObjectByName
+  - IoDriverObjectType
+  - MmIsDriverVerifying
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - RtlSetDaclSecurityDescriptor
+  - MmMapLockedPagesSpecifyCache
+  - PsGetProcessId
+  - IoThreadToProcess
+  - PsGetCurrentProcessSessionId
+  - ZwTerminateProcess
+  - KeStackAttachProcess
+  - KeUnstackDetachProcess
+  - ZwOpenThread
+  - PsProcessType
+  - ExInterlockedInsertHeadList
+  - ExInterlockedRemoveHeadList
+  - CmRegisterCallback
+  - CmUnRegisterCallback
+  - RtlCreateRegistryKey
+  - ZwOpenKey
+  - ZwEnumerateKey
+  - ZwQueryKey
+  - ZwQueryValueKey
+  - RtlUnicodeStringToAnsiString
+  - RtlFreeAnsiString
+  - ProbeForWrite
+  - PsSetLoadImageNotifyRoutine
+  - PsRemoveLoadImageNotifyRoutine
+  - PsGetProcessSectionBaseAddress
+  - MmSystemRangeStart
+  - KeBugCheckEx
+  - PsLookupProcessByProcessId
+  - ZwOpenProcess
+  - PsGetCurrentProcessId
+  - RtlUpcaseUnicodeString
+  - RtlUpperString
+  - ZwClose
+  - ZwCreateFile
+  - ObfDereferenceObject
+  - ObReferenceObjectByHandle
+  - ProbeForRead
+  - ExFreePoolWithTag
+  - ExAllocatePoolWithTag
+  - KeDelayExecutionThread
+  - RtlGetVersion
+  - DbgPrint
+  - RtlCopyUnicodeString
+  - RtlInitUnicodeString
+  - wcsstr
+  - ZwQuerySystemInformation
+  - strstr
+  - FltSendMessage
+  - FltCloseCommunicationPort
+  - FltCreateCommunicationPort
+  - FltReleaseContext
+  - FltGetStreamHandleContext
+  - FltSetStreamHandleContext
+  - FltAllocateContext
+  - FltCancelFileOpen
+  - FltQueryInformationFile
+  - FltReadFile
+  - FltParseFileNameInformation
+  - FltReleaseFileNameInformation
+  - FltGetFileNameInformation
+  - FltFreePoolAlignedWithTag
+  - FltAllocatePoolAlignedWithTag
+  - FltStartFiltering
+  - FltUnregisterFilter
+  - FltRegisterFilter
+  - FltBuildDefaultSecurityDescriptor
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=TR, L=Edirne, O=Zemana Ltd., CN=Zemana Ltd.
+      ValidFrom: '2014-12-16 00:00:00'
+      ValidTo: '2017-12-20 12:00:00'
+      Signature: 8a60d49cf93c42e609a5fc51877e8caee77cdc7848d3db41a9556d186c795f8f20e825c3be29056670c4414f35dc24e538606c0b1404c9b751e1fad91e2c136a5970c3c0edbb5a2391c47bb1d2782ff673636c6ec7bc2a69d06011f07dc957039835f50b6d5f342e75e00564be8edc0035aa4ae92d412dd38f347abff1d8ec9059ef25af4f5d1e20d6c5b2a5e69c7cba53c0f88901f7db044f11724be5a04b0d689c4f4fccef40d4a654954b67d5ecacf272c48a3d81ac0056c1d252f42bb403291f674642bd001d99b3846f0270b070d1487ef42e939193c949feb162e29ca5ad41d8d195b8e8f6e4c8dd79c46f27b06f9e15906df8f8fd9a850ba28f169468
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        Code Signing CA,1
+      ValidFrom: '2011-02-11 12:00:00'
+      ValidTo: '2026-02-10 12:00:00'
+      Signature: 49eb7c60beaeefc97cb3c5ba4b64df1669e286fa29d9de98857d406626332f4455aaaa90e935700a34bed3ae542e8e6500d67a32203e6c26b898a939b1bc95c7aae9f5ee4666c6b3e812f8b3979dff74588234997550ac448fe892ce7d8b0f3196c7dcd31130987416c6e56b4576a39401cd33007a48f66f8631c9562b3322d5f801b644ce8cb4ca88d2e416e3e7f6e23ee109c09d7943437f555c05ad9310c62c0d6bc09eea78e5d277d6b8da9a987fba4c922b9dbda488b1ddafc34cd2979b03c6ae5f1b440f333715e3cbff2f56d316a45b55679da2cadb346c0c734ab57ba4b6b3e935027870ec007acbfc4b4f2236bb1484c98f91dd0f3c758cca0b88e7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    Signer:
+    - SerialNumber: 0210230fd364b469091b8a4440145e18
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        Code Signing CA,1
+Tags:
+- zamguard64.sys

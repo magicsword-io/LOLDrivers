@@ -1,0 +1,295 @@
+Id: 205721b7-b83b-414a-b4b5-8bacb4a37777
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create elrawdsk.sys binPath=C:\windows\temp\elrawdsk.sys type=kernel
+    && sc.exe start elrawdsk.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- ' https://github.com/jbaines-r7/dellicious'
+- ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
+- https://securelist.com/shamoon-the-wiper-further-details-part-ii/57784/
+- https://github.com/Yara-Rules/rules/blob/master/malware/MALW_Shamoon.yar
+- https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: elrawdsk.sys
+  MD5: 1493d342e7a36553c56b2adea150949e
+  SHA1: ce549714a11bd43b52be709581c6e144957136ec
+  SHA256: 4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6
+  Signature:
+  - EldoS Corporation
+  - GlobalSign ObjectSign CA
+  - GlobalSign Primary Object Publishing CA
+  - GlobalSign Root CA - R1
+  Date: ''
+  Publisher: ''
+  Company: EldoS Corporation
+  Description: RawDisk Driver. Allows write access to files and raw disk sectors for
+    user mode applications in Windows 2000 and later.
+  Product: RawDisk
+  ProductVersion: 2, 1, 27, 0
+  FileVersion: 2, 1, 27, 106
+  MachineType: I386
+  OriginalFilename: elrawdsk.sys
+  Authentihash:
+    MD5: 20f14b58e9548b6ea99b35006f631197
+    SHA1: 174bd2e0965b996cff4a26ac511e551788fbc894
+    SHA256: 98a55dc61046f4509d2465cbc373a9391c07125e5f4a242d2f475f14f32e5430
+  InternalName: elrawdsk.sys
+  Copyright: 'Copyright (C) 2007-2011, EldoS Corporation '
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmUnlockPages
+  - KeSetEvent
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - RtlPrefixUnicodeString
+  - FsRtlIsNtstatusExpected
+  - MmProbeAndLockPages
+  - ExRaiseStatus
+  - IoAllocateMdl
+  - MmMapLockedPagesSpecifyCache
+  - KeWaitForSingleObject
+  - IofCallDriver
+  - IoBuildDeviceIoControlRequest
+  - KeInitializeEvent
+  - ExAllocatePoolWithTag
+  - memcpy
+  - ZwClose
+  - ObfDereferenceObject
+  - ObQueryNameString
+  - ObReferenceObjectByHandle
+  - IoFileObjectType
+  - ZwOpenFile
+  - RtlAppendUnicodeStringToString
+  - KeUnstackDetachProcess
+  - MmSystemRangeStart
+  - KeStackAttachProcess
+  - ZwQueryInformationProcess
+  - ObOpenObjectByPointer
+  - PsLookupProcessByProcessId
+  - IoBuildAsynchronousFsdRequest
+  - IoBuildSynchronousFsdRequest
+  - IoFreeMdl
+  - PsGetCurrentProcessId
+  - KeQuerySystemTime
+  - RtlFreeAnsiString
+  - RtlUnicodeStringToAnsiString
+  - PsGetVersion
+  - MmGetSystemRoutineAddress
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - ObfReferenceObject
+  - IoGetAttachedDevice
+  - memset
+  - KeLeaveCriticalRegion
+  - ExReleaseFastMutexUnsafe
+  - IoGetRelatedDeviceObject
+  - ExAcquireFastMutexUnsafe
+  - KeEnterCriticalRegion
+  - KeGetCurrentThread
+  - ZwCreateFile
+  - IoAllocateIrp
+  - IoReuseIrp
+  - KeResetEvent
+  - CcPurgeCacheSection
+  - ExReleaseResourceLite
+  - ExAcquireResourceExclusiveLite
+  - CcFlushCache
+  - _allrem
+  - RtlCompareMemory
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - KeTickCount
+  - ExFreePoolWithTag
+  - IoFreeIrp
+  - RtlCompareUnicodeString
+  - IofCompleteRequest
+  - RtlUnwind
+  - KeBugCheckEx
+  - KeGetCurrentIrql
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=VG, O=EldoS Corporation, CN=EldoS Corporation, emailAddress=info@eldos.com
+      ValidFrom: '2010-01-11 14:19:26'
+      ValidTo: '2013-01-11 14:19:23'
+      Signature: 02e496d4ad814ccf3a1e36f654112f8d27e3f3d9f1a76d22a2d90a15831a2721855c856b0d4b0da22f4e7a457089388ae61fbf0c016ded274f670b0f8a87ebc99dc124971ed3238238af3eaa8b408829e24fb20741c463d2bcff0695b323a7fb8653e02a3617823b33edbed0bae42aa0a3b986c97ef215d05658743164fd3b9758d3d6c52d06f644b15f9429be0d070fcc8390cc800d2a25fc0847389839edf162d11715a2d9d75e48553f76a06256a43e29635f8ef9a9051afb7b4fbf7b3ce6bb6318b37ce0339a84aec6d190ae791a1c91337cf31562728b9ca303e2d36e3cc6a0d1b9e4ae5f01b9b87ca4b6e739e8c47240513767ca0ffd538f7f657166b6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
+        Primary Object Publishing CA
+      ValidFrom: '1999-01-28 13:00:00'
+      ValidTo: '2017-01-27 12:00:00'
+      Signature: b578a6a27c04b77fc97f7d6abc71fa293060c2f4621efe7f431e9b6ee2b21f730b85765b7df54e49062fd4fab79140efed6f8d8e138354c52a023d0aa4dc990b7abd772fcc40c18ff3c48c4e72ba107ce6ff642bc7ce6ca7fcd79a7c8e468d01834d423bdb9c3f9f326157d717b0b33666f0b3fd446f8137b1944ea7562589f58ad66d116262795c42900218d39c23fc08e86445b92d7e805b4eafc38a299283781f914134af85c5fd07994e2c5cfec7fd17bb2525314d72b5b5294b489a376f13c7114e4a451e7e2f319cabe852afd6679734885f0e276a6652d15ac7ac302c2038dd2bff3aebce104582a27b1ba12073569b2a93e60451066c1bdc2f899493
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: OU=Timestamping CA, O=GlobalSign, CN=GlobalSign Timestamping CA
+      ValidFrom: '2009-03-18 11:00:00'
+      ValidTo: '2028-01-28 12:00:00'
+      Signature: 5df6cb2b0d0140849f857a43706ae0c5e7aa0600d76713c9089131654f14a8a905dc389e6aa0300abd8dc78028ee4245ca94f3de5845a9803204f5595c6a70003927944df5b44634e81c5331b2b35416e9cc42abd5d959301cfb462725b88723b1e8758824831ec876377b01494548a4ede25dd27c9ca2dc2dba105a126265abae00c710343bcb72bd14240cdcc37627b4a7fee15829f20e169f91391d89a6e60f1c878ce258ac927e243eaaec14e73a33348bc63bac83ab0f14627aba1a2d4d4b1bc530f00b92797d3c78e0f8e6d215965999392b3061e8b8f8c0a1e9221411787dc4dc89bec0bb94e172aeebb540404fef171e585ed0a88996ac9228e9babf
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
+      ValidFrom: '2009-12-21 09:32:56'
+      ValidTo: '2020-12-22 09:32:56'
+      Signature: bc89ecfee63655935c79d4117a86808f17b693b26d9b91a1561811c655eaf608edad9b9ef52b81c8bbdd607b1b47991e6d403e1d80c213d58e04052fdbe7ae529e688472a1e54a603cf89bd52f46d8c3b2b79353ac9b6c432424d1f1fce9562e3411581843eaefff34746ca0c06c7fad031969881e9560cabbbd0cbb76efc724b081c63831cf36ad0c38b89020849b2e8f28b99ff6ca9427cdac396157e0e3955a9c769230f5dea6973d721c2a6032a8334d8635338a5cf3a4fdf7062ce16b4b30f5cbd34362f841b9de7d20cb058c8e2cf65f35fd338d42896508362ca389f45a858bb0b97bdb6ccba1f8d20e1bbb977cd12779be9d7c3be6a75634d8c991a9
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
+        CA
+      ValidFrom: '2004-01-22 10:00:00'
+      ValidTo: '2017-01-27 10:00:00'
+      Signature: 1e6af36df48ea922fe7008652ea15dab3330dd6c78fa4beaadc58dec107a6ac55897396b92f391e20ca7281cd15d768e8b077c136fadc43643b3c1bc3159cf1838d8a33bceffca6758bfe0f1ac613ea23b1ebc025b41ac446bf526f3ed5ea865f6ca65a63fcaf577eba5862a582956f8be161040e9d2fc572c636137662539202e0703a036032594bd7ceb7ed3a3c2c57616753092b9ff7641352168d10e5e5c8ec30360e68040fcc05da2546e6e9267a7811287a2a32bdbb74dffe4d5c7e505e6d5f1aefccd661821f33e47c9e59542612c9d2680b20fa83d0ec9a778df6e748c2c46f672e93c646b2855c44b6433cb78541338f0d57106d43e0d0a350ee0b3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      ValidFrom: '2006-05-23 17:00:51'
+      ValidTo: '2016-05-23 17:10:51'
+      Signature: 13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    Signer:
+    - SerialNumber: 010000000001261dec28f7
+      Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
+        CA
+- Filename: elrawdsk.sys
+  MD5: 76c643ab29d497317085e5db8c799960
+  SHA1: 1292c7dd60214d96a71e7705e519006b9de7968f
+  SHA256: 5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a
+  Signature:
+  - EldoS Corporation
+  - GlobalSign ObjectSign CA
+  - GlobalSign Primary Object Publishing CA
+  - GlobalSign Root CA - R1
+  Date: ''
+  Publisher: ''
+  Company: EldoS Corporation
+  Description: RawDisk Driver. Allows write access to files and raw disk sectors for
+    user mode applications in Windows 2000 and later.
+  Product: RawDisk
+  ProductVersion: 2, 1, 27, 0
+  FileVersion: 2, 1, 27, 106
+  MachineType: AMD64
+  OriginalFilename: elrawdsk.sys
+  Authentihash:
+    MD5: c1afcba807a13aa25a0b363a22c760d6
+    SHA1: 8422fb53e48b27a42cc7595ca7c7ae0597168db6
+    SHA256: 29a2ae6439381ea2aa3116df7025cbb5c6c7c07cc8d19508e6021e4d6177a565
+  InternalName: elrawdsk.sys
+  Copyright: 'Copyright (C) 2007-2011, EldoS Corporation '
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmSystemRangeStart
+  - ExAllocatePoolWithTag
+  - ExRaiseStatus
+  - IoBuildDeviceIoControlRequest
+  - IoDeleteSymbolicLink
+  - ExFreePoolWithTag
+  - PsLookupProcessByProcessId
+  - IoBuildSynchronousFsdRequest
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - KeSetEvent
+  - MmGetSystemRoutineAddress
+  - KeInitializeEvent
+  - RtlUnicodeStringToAnsiString
+  - IoFreeMdl
+  - KeUnstackDetachProcess
+  - MmMapLockedPagesSpecifyCache
+  - IoBuildAsynchronousFsdRequest
+  - RtlPrefixUnicodeString
+  - ZwClose
+  - IofCompleteRequest
+  - ObReferenceObjectByHandle
+  - KeWaitForSingleObject
+  - IoFreeIrp
+  - RtlFreeAnsiString
+  - MmProbeAndLockPages
+  - PsGetVersion
+  - RtlCompareUnicodeString
+  - MmUnlockPages
+  - ZwQueryInformationProcess
+  - IoCreateSymbolicLink
+  - PsGetCurrentProcessId
+  - ObfDereferenceObject
+  - IoCreateDevice
+  - ZwOpenFile
+  - FsRtlIsNtstatusExpected
+  - ObOpenObjectByPointer
+  - KeStackAttachProcess
+  - IoAllocateMdl
+  - IofCallDriver
+  - ExReleaseFastMutexUnsafe
+  - KeLeaveCriticalRegion
+  - IoGetAttachedDevice
+  - IoGetRelatedDeviceObject
+  - KeEnterCriticalRegion
+  - ExAcquireFastMutexUnsafe
+  - ObfReferenceObject
+  - ExAcquireResourceExclusiveLite
+  - IoReuseIrp
+  - KeResetEvent
+  - CcPurgeCacheSection
+  - CcFlushCache
+  - ZwCreateFile
+  - ExReleaseResourceLite
+  - IoAllocateIrp
+  - RtlCompareMemory
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - KeBugCheckEx
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=VG, O=EldoS Corporation, CN=EldoS Corporation, emailAddress=info@eldos.com
+      ValidFrom: '2010-01-11 14:19:26'
+      ValidTo: '2013-01-11 14:19:23'
+      Signature: 02e496d4ad814ccf3a1e36f654112f8d27e3f3d9f1a76d22a2d90a15831a2721855c856b0d4b0da22f4e7a457089388ae61fbf0c016ded274f670b0f8a87ebc99dc124971ed3238238af3eaa8b408829e24fb20741c463d2bcff0695b323a7fb8653e02a3617823b33edbed0bae42aa0a3b986c97ef215d05658743164fd3b9758d3d6c52d06f644b15f9429be0d070fcc8390cc800d2a25fc0847389839edf162d11715a2d9d75e48553f76a06256a43e29635f8ef9a9051afb7b4fbf7b3ce6bb6318b37ce0339a84aec6d190ae791a1c91337cf31562728b9ca303e2d36e3cc6a0d1b9e4ae5f01b9b87ca4b6e739e8c47240513767ca0ffd538f7f657166b6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
+        Primary Object Publishing CA
+      ValidFrom: '1999-01-28 13:00:00'
+      ValidTo: '2017-01-27 12:00:00'
+      Signature: b578a6a27c04b77fc97f7d6abc71fa293060c2f4621efe7f431e9b6ee2b21f730b85765b7df54e49062fd4fab79140efed6f8d8e138354c52a023d0aa4dc990b7abd772fcc40c18ff3c48c4e72ba107ce6ff642bc7ce6ca7fcd79a7c8e468d01834d423bdb9c3f9f326157d717b0b33666f0b3fd446f8137b1944ea7562589f58ad66d116262795c42900218d39c23fc08e86445b92d7e805b4eafc38a299283781f914134af85c5fd07994e2c5cfec7fd17bb2525314d72b5b5294b489a376f13c7114e4a451e7e2f319cabe852afd6679734885f0e276a6652d15ac7ac302c2038dd2bff3aebce104582a27b1ba12073569b2a93e60451066c1bdc2f899493
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: OU=Timestamping CA, O=GlobalSign, CN=GlobalSign Timestamping CA
+      ValidFrom: '2009-03-18 11:00:00'
+      ValidTo: '2028-01-28 12:00:00'
+      Signature: 5df6cb2b0d0140849f857a43706ae0c5e7aa0600d76713c9089131654f14a8a905dc389e6aa0300abd8dc78028ee4245ca94f3de5845a9803204f5595c6a70003927944df5b44634e81c5331b2b35416e9cc42abd5d959301cfb462725b88723b1e8758824831ec876377b01494548a4ede25dd27c9ca2dc2dba105a126265abae00c710343bcb72bd14240cdcc37627b4a7fee15829f20e169f91391d89a6e60f1c878ce258ac927e243eaaec14e73a33348bc63bac83ab0f14627aba1a2d4d4b1bc530f00b92797d3c78e0f8e6d215965999392b3061e8b8f8c0a1e9221411787dc4dc89bec0bb94e172aeebb540404fef171e585ed0a88996ac9228e9babf
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
+      ValidFrom: '2009-12-21 09:32:56'
+      ValidTo: '2020-12-22 09:32:56'
+      Signature: bc89ecfee63655935c79d4117a86808f17b693b26d9b91a1561811c655eaf608edad9b9ef52b81c8bbdd607b1b47991e6d403e1d80c213d58e04052fdbe7ae529e688472a1e54a603cf89bd52f46d8c3b2b79353ac9b6c432424d1f1fce9562e3411581843eaefff34746ca0c06c7fad031969881e9560cabbbd0cbb76efc724b081c63831cf36ad0c38b89020849b2e8f28b99ff6ca9427cdac396157e0e3955a9c769230f5dea6973d721c2a6032a8334d8635338a5cf3a4fdf7062ce16b4b30f5cbd34362f841b9de7d20cb058c8e2cf65f35fd338d42896508362ca389f45a858bb0b97bdb6ccba1f8d20e1bbb977cd12779be9d7c3be6a75634d8c991a9
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
+        CA
+      ValidFrom: '2004-01-22 10:00:00'
+      ValidTo: '2017-01-27 10:00:00'
+      Signature: 1e6af36df48ea922fe7008652ea15dab3330dd6c78fa4beaadc58dec107a6ac55897396b92f391e20ca7281cd15d768e8b077c136fadc43643b3c1bc3159cf1838d8a33bceffca6758bfe0f1ac613ea23b1ebc025b41ac446bf526f3ed5ea865f6ca65a63fcaf577eba5862a582956f8be161040e9d2fc572c636137662539202e0703a036032594bd7ceb7ed3a3c2c57616753092b9ff7641352168d10e5e5c8ec30360e68040fcc05da2546e6e9267a7811287a2a32bdbb74dffe4d5c7e505e6d5f1aefccd661821f33e47c9e59542612c9d2680b20fa83d0ec9a778df6e748c2c46f672e93c646b2855c44b6433cb78541338f0d57106d43e0d0a350ee0b3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      ValidFrom: '2006-05-23 17:00:51'
+      ValidTo: '2016-05-23 17:10:51'
+      Signature: 13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    Signer:
+    - SerialNumber: 010000000001261dec28f7
+      Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
+        CA
+Tags:
+- elrawdsk.sys

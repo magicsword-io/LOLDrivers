@@ -1,0 +1,35 @@
+Id: 65660363-0080-4432-abd9-64368dac0283
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'FALSE'
+Commands:
+  Command: sc.exe create t.sys binPath=C:\windows\temp\t.sys type=kernel && sc.exe
+    start t.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: t.sys
+  SHA256: 146d77e80ca70ea5cb17bfc9a5cea92334f809cbdc87a51c2d10b8579a4b9c88
+  Signature: []
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+Tags:
+- t.sys
