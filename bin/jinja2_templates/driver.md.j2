@@ -89,8 +89,6 @@ This download link contains the malicious driver!
 {% endif %}
 {% if hash.Publisher %}| Publisher         | {{ hash.Publisher }} |
 {% endif %}
-{% if hash.Signature %}| Signature         | {{ hash.Signature | join(', ') }}   |
-{% endif %}
 {% if hash.Date %}| Date                | {{ hash.Date }} |
 {% endif %}
 {% if hash.Company %}| Company           | {{ hash.Company }} |
@@ -137,11 +135,12 @@ This download link contains the malicious driver!
 {% raw %}{{< /details >}}{%+ endraw +%}
 
 #### Signature
-
 {% raw %}{{< details "Expand" >}}{% endraw %}
 
-{% for signature in driver.KnownVulnerableSamples[0].Signature %}
-* {{ signature }}
+{% for signature in driver.KnownVulnerableSamples[0].Signatures %}
+```
+{{ signature | tojson(indent=2)}}
+```
 {% endfor %}
 
 {% raw %}{{< /details >}}{% endraw %}
