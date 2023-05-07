@@ -135,6 +135,17 @@ This download link contains the malicious driver!
 {% endfor %}
 
 {% raw %}{{< /details >}}{%+ endraw +%}
+
+#### Signature
+
+{% raw %}{{< details "Expand" >}}{% endraw %}
+
+{% for signature in driver.KnownVulnerableSamples[0].Signature %}
+* {{ signature }}
+{% endfor %}
+
+{% raw %}{{< /details >}}{% endraw %}
+
 -----
 {%+ endfor +%}
 {% endif %}
