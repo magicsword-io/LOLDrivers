@@ -1,11 +1,9 @@
 name: Publish a Release 
 on:
   push:
-      tags:
-        - 'v*.*.*'
-
+    tags:
+      - 'v*.*.*'
 jobs:
-
   validate-yaml:
     runs-on: ubuntu-latest
     steps:
