@@ -65,11 +65,11 @@ def write_top_publishers(drivers, output_dir, top_n=5):
 
     for driver in drivers:
         for hash_info in driver['KnownVulnerableSamples']:
-            publisher_str = hash_info['Publisher']
+            publisher_str = hash_info.get('Publisher')  # Use the `get()` method here
 
             if not publisher_str:
                 continue
-            
+
             publishers = re.findall(r'\"(.*?)\"|([^,]+)', publisher_str)
             for publisher_tuple in publishers:
                 publisher = next(filter(None, publisher_tuple)).strip()
@@ -90,6 +90,7 @@ def write_top_publishers(drivers, output_dir, top_n=5):
         for publisher, count in sorted_publishers:
             for _ in range(count):
                 writer.writerow([count, publisher])
+
 
 
 def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE):
