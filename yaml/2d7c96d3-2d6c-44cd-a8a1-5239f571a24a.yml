@@ -3,8 +3,8 @@ Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
-Commands: 'Command: sc.exe create NASBENCH binPath=C:\windows\temp\HW.sys type=kernel
+Verified: 'TRUE'
+Commands: 'sc.exe create HW.sys binPath=C:\windows\temp\HW.sys type=kernel
   && sc.exe start HW.sys'
 Description: []
 Usecase: Elevate privileges

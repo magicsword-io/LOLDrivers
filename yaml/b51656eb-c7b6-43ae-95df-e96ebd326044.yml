@@ -3,8 +3,8 @@ Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
-Commands: 'Command: sc.exe create NASBENCH binPath=C:\windows\temp\segwindrvx64.sys
+Verified: 'TRUE'
+Commands: 'sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys
   type=kernel && sc.exe start segwindrvx64.sys'
 Description: []
 Usecase: Elevate privileges

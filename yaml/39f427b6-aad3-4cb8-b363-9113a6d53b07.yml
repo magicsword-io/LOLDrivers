@@ -3,8 +3,8 @@ Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
-Commands: 'Command: sc.exe create NASBENCH binPath=C:\windows\temp\BS_RCIOW1064.sys
+Verified: 'TRUE'
+Commands: 'sc.exe create BS_RCIOW1064.sys binPath=C:\windows\temp\BS_RCIOW1064.sys
   type=kernel && sc.exe start BS_RCIOW1064.sys'
 Description: []
 Usecase: Elevate privileges

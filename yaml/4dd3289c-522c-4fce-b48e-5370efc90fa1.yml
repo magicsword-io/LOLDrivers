@@ -3,8 +3,8 @@ Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
-Commands: 'Command: sc.exe create NASBENCH binPath=C:\windows\temp\iQVW64.SYS type=kernel
+Verified: 'TRUE'
+Commands: 'sc.exe create iQVW64.sys binPath=C:\windows\temp\iQVW64.SYS type=kernel
   && sc.exe start iQVW64.SYS'
 Description: []
 Usecase: Elevate privileges

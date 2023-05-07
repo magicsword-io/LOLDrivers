@@ -3,8 +3,8 @@ Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
-Commands: 'Command: sc.exe create NASBENCH binPath=C:\windows\temp\SANDRA type=kernel
+Verified: 'TRUE'
+Commands: 'sc.exe create SANDRA binPath=C:\windows\temp\SANDRA type=kernel
   && sc.exe start SANDRA'
 Description: []
 Usecase: Elevate privileges
