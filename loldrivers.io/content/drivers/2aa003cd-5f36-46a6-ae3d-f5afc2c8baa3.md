@@ -11,7 +11,7 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# 2aa003cd-5f36-46a6-ae3d-f5afc2c8baa3 
+# mhyprot3.sys} 
 
 
 {{< tip "warning" >}}
@@ -22,7 +22,7 @@ We were not able to verify the hash of this driver successfully, it has not been
 ### Description
 
 2aa003cd-5f36-46a6-ae3d-f5afc2c8baa3 is a vulnerable driver and more information will be added as found.
-- **Tags**: mhyprot3.sys
+- **UUID**: 2aa003cd-5f36-46a6-ae3d-f5afc2c8baa3
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
@@ -190,7 +190,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/2aa003cd-5f36-46a6-ae3d-f5afc2c8baa3.yaml)
 
-*last_updated:* 2023-04-30
+*last_updated:* 2023-05-06
 
 
 
