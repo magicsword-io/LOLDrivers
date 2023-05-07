@@ -8,6 +8,10 @@ import argparse
 import hashlib
 import yaml
 
+# Issue in PyYAML resolved with this class https://ttl255.com/yaml-anchors-and-aliases-and-how-to-disable-them/
+class NoAliasDumper(yaml.Dumper):
+    def ignore_aliases(self, data):
+        return True
 # Disable the logger globally 
 # READ MORE: https://lief-project.github.io/doc/stable/api/python/index.html#logging
 lief.logging.disable()
@@ -148,20 +152,21 @@ def enrich_yaml(file_path_, metadata_md5, metadata_sha1, metadata_sha256):
             for sample in driver_yaml['KnownVulnerableSamples']:
                 enrich = False
                 metadata_ = ''
-                if sample['MD5'] or sample['SHA1'] or sample['SHA256']:
-                    if sample['MD5'] != "-":
+                #if sample['MD5'] or sample['SHA1'] or sample['SHA256']:
+                if "MD5" in sample or "SHA1" in sample or "SHA256" in sample:
+                    if sample.get('MD5', None) != "-":
                         try:
                             metadata_ = metadata_md5[sample['MD5']]
                             enrich = True
                         except KeyError:
                             pass
-                    if sample['SHA1'] != "-":
+                    if sample.get('SHA1', None) != "-":
                         try:
                             metadata_ = metadata_sha1[sample['SHA1']]
                             enrich = True
                         except KeyError:
                             pass
-                    if sample['SHA256'] != "-":
+                    if sample.get('SHA256', None) != "-":
                         try:
                             metadata_ = metadata_sha256[sample['SHA256']]
                             enrich = True
@@ -195,7 +200,7 @@ def enrich_yaml(file_path_, metadata_md5, metadata_sha1, metadata_sha256):
 
     if global_enrich:
         with open(file_path_, 'w') as outfile:
-            yaml.dump(driver_yaml, outfile, default_flow_style=False, sort_keys=False)
+            yaml.dump(driver_yaml, outfile, default_flow_style=False, sort_keys=False, Dumper=NoAliasDumper)
             print(f"    [*] NOTICE - The File {file_path_} Was Enriched")
     else:
         print(f"    [*] NOTICE - No enrichment was performed on {file_path_}")

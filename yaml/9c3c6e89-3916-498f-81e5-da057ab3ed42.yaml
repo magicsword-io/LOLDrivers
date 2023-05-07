@@ -1,0 +1,461 @@
+Id: 9c3c6e89-3916-498f-81e5-da057ab3ed42
+Author: Michael Haag
+Created: '2023-04-22'
+MitreID: T1068
+Category: malicious
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create windbg.sys binPath=C:\windows\temp\windbg.sys type=kernel
+    && sc.exe start windbg.sys
+  Description: Kernel driver seen in a recent CopperStealer campaign.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://www.proofpoint.com/us/blog/threat-insight/now-you-see-it-now-you-dont-copperstealer-performs-widespread-theft
+- https://twitter.com/jaydinbas/status/1642898531445886978?s=20
+- https://twitter.com/jaydinbas/status/1646475092006785027?s=20
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: windbg.sys
+  MD5: 88bea56ae9257b40063785cf47546024
+  SHA1: b5a8e2104d76dbb04cd9ffe86784113585822375
+  SHA256: e1cb86386757b947b39086cc8639da988f6e8018ca9995dd669bdc03c8d39d7d
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Microsoft Corporation
+  Description: Windows GUI symbolic debugger
+  Product: Microsoft? Windows? Operating System
+  ProductVersion: 10.0.19041.685
+  FileVersion: 10.0.19041.685 (WinBuild.160101.0800)
+  MachineType: I386
+  OriginalFilename: windbg.sys
+  Authentihash:
+    MD5: 265462dbda175886e0c02257f2385753
+    SHA1: 0e45b675fec76249e64f8a2d4bd5483886b91169
+    SHA256: 37a1a3fa4dc148924c1bfb60c88ffef082ee58cd0ee804d2de0f1d22c1e7802c
+  InternalName: windbg.sys
+  Copyright: '? Microsoft Corporation. All rights reserved.'
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteDevice
+  - IoDetachDevice
+  - memcpy
+  - memset
+  - ZwClose
+  - ExFreePoolWithTag
+  - ExAllocatePoolWithTag
+  - ObOpenObjectByPointer
+  - PsProcessType
+  - PsLookupProcessByProcessId
+  - MmGetSystemRoutineAddress
+  - RtlInitUnicodeString
+  - IofCallDriver
+  - PsGetCurrentProcessId
+  - IoGetLowerDeviceObject
+  - ObfDereferenceObject
+  - IoGetAttachedDeviceReference
+  - IoUnregisterShutdownNotification
+  - KeDelayExecutionThread
+  - IoAttachDeviceToDeviceStackSafe
+  - IoCreateDevice
+  - IoEnumerateDeviceObjectList
+  - IoRegisterShutdownNotification
+  - IoUnregisterFsRegistrationChange
+  - IoRegisterFsRegistrationChange
+  - _vsnwprintf
+  - PsGetVersion
+  - ZwAllocateVirtualMemory
+  - MmUnmapLockedPages
+  - IoFreeMdl
+  - MmMapLockedPages
+  - MmBuildMdlForNonPagedPool
+  - MmCreateMdl
+  - ZwReadFile
+  - ZwQueryInformationFile
+  - IoCreateFile
+  - _wcsicmp
+  - _wcsnicmp
+  - RtlEqualUnicodeString
+  - ZwWriteFile
+  - ZwFlushKey
+  - ZwSetValueKey
+  - ZwQueryValueKey
+  - RtlRandom
+  - KeQuerySystemTime
+  - ZwDeleteKey
+  - ZwOpenKey
+  - ZwEnumerateKey
+  - IoFreeIrp
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - KeGetCurrentThread
+  - KeInitializeEvent
+  - IoAllocateIrp
+  - IoGetRelatedDeviceObject
+  - ObReferenceObjectByHandle
+  - IoFileObjectType
+  - ObQueryNameString
+  - RtlCopyUnicodeString
+  - MmIsAddressValid
+  - PsGetProcessPeb
+  - RtlCreateUnicodeString
+  - ZwDeleteValueKey
+  - ZwCreateKey
+  - RtlFreeUnicodeString
+  - ZwDeleteFile
+  - PsRemoveLoadImageNotifyRoutine
+  - CmUnRegisterCallback
+  - PsSetLoadImageNotifyRoutine
+  - CmRegisterCallback
+  - ObReferenceObjectByName
+  - ZwFreeVirtualMemory
+  - ZwWaitForSingleObject
+  - KeUnstackDetachProcess
+  - KeStackAttachProcess
+  - ZwDuplicateObject
+  - PsGetProcessSessionId
+  - _strnicmp
+  - RtlSubAuthoritySid
+  - RtlSubAuthorityCountSid
+  - ZwQueryInformationToken
+  - ZwOpenProcessTokenEx
+  - PsTerminateSystemThread
+  - PsThreadType
+  - PsCreateSystemThread
+  - KeTickCount
+  - KeBugCheckEx
+  - _vsnprintf
+  - strncmp
+  - strchr
+  - strncpy
+  - strstr
+  - ExAllocatePool
+  - _stricmp
+  - rand
+  - ZwCreateFile
+  - IoBuildDeviceIoControlRequest
+  - MmProbeAndLockPages
+  - IoAllocateMdl
+  - _allshl
+  - RtlUnwind
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: ??=CN, ??=?????????, ??=??????????????????????????????, ??=Private
+        Organization, serialNumber=91420100MA4KN92W72, C=CN, ST=?????????, L=?????????,
+        O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia Yiyong Technology
+        Co., Ltd.
+      ValidFrom: '2020-11-17 00:00:00'
+      ValidTo: '2023-11-12 23:59:59'
+      Signature: 9451eb3eee03a01f0c66d87dc537eb17f37bc157ec9037c05a55ee4a3d0c207c67b981841c2b642084bca0a3c65f8e8eb5413f3e897b267aad91044c4098319a1f703fa995afdc53896d20245af8c2829e80081d36135ac1acb414bf966fd0af157b3fc2dac8f616f2b794a76b0fb7b300db0c579f093e31dd739b43f09fb7a73c6c914d8453032ea14950246e80abfc7fbaff2597ab68b6f03d30d97edbee25c0e2786040a1770e26661867920f3b01132c4ac5dc9ef97ae59e7baad68fe1b2b12acc7ed54697e9d4025ced62ac9dca82104ac7dd8219b331fcbed72aab33b95fed0ef6a1f9831c8b68457be6b080ae3c9ae15df500a53b7b2a198ee71abd1b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 9e5b963a2e1288acab016da49f75e40187a3a532d7bcbaa97ea3d61417f7c2136b7c738f2b6ae50f265968b08e259b6ceffa6c939208c14dcf459e9c46d61e74a19b14a3fa012f4ab101e1724048111368b9369d914bd7c2391210c1c4dcbb6214142a615d4f387c661fc61bffadbe4f7f945b7343000f4d73b751cf0ef677c05bcd348cd96313aa0e6111d6f28e27fcb47bb8b91120918678ea0ed428ff2ad52438e837b2ec96bb9fbc4a1650e15ebf517d23a032c7c1949e7ac9c026a2cc2587a0127e749f2d8db1c8e784beb9d1e9debb6a4e887371e12238cb2487e9737e51b2ff98eb4e7e2fe0ca0efab35ed1ba0542a8489f83f63fc4caa8df68a05061
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    Signer:
+    - SerialNumber: 012eab44fa8853d913e7107c89406432
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+- Filename: windbg.sys
+  MD5: b6b530dd25c5eb66499968ec82e8791e
+  SHA1: 9c1c9032aa1e33461f35dbf79b6f2d061bfc6774
+  SHA256: fa9abb3e7e06f857be191a1e049dd37642ec41fb2520c105df2227fcac3de5d5
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Microsoft Corporation
+  Description: Windows GUI symbolic debugger
+  Product: Microsoft? Windows? Operating System
+  ProductVersion: 10.0.19041.685
+  FileVersion: 10.0.19041.685 (WinBuild.160101.0800)
+  MachineType: I386
+  OriginalFilename: windbg.sys
+  Authentihash:
+    MD5: dbc72430b48b0ca636a84b9e5ed0d534
+    SHA1: 58ca196bfd54c6166aae0f8000fa8a1a66a0073e
+    SHA256: 45b969ae1b381716a29cd509622470b5b20b70c7efe4c9b7c0568faa298605ff
+  InternalName: windbg.sys
+  Copyright: '? Microsoft Corporation. All rights reserved.'
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoDeleteDevice
+  - IoDetachDevice
+  - memcpy
+  - memset
+  - ZwClose
+  - ExFreePoolWithTag
+  - ExAllocatePoolWithTag
+  - ObOpenObjectByPointer
+  - PsProcessType
+  - PsLookupProcessByProcessId
+  - MmGetSystemRoutineAddress
+  - RtlInitUnicodeString
+  - IofCallDriver
+  - PsGetCurrentProcessId
+  - IoGetLowerDeviceObject
+  - ObfDereferenceObject
+  - IoGetAttachedDeviceReference
+  - IoUnregisterShutdownNotification
+  - KeDelayExecutionThread
+  - IoAttachDeviceToDeviceStackSafe
+  - IoCreateDevice
+  - IoEnumerateDeviceObjectList
+  - IoRegisterShutdownNotification
+  - IoUnregisterFsRegistrationChange
+  - IoRegisterFsRegistrationChange
+  - _vsnwprintf
+  - PsGetVersion
+  - ZwAllocateVirtualMemory
+  - MmUnmapLockedPages
+  - IoFreeMdl
+  - MmMapLockedPages
+  - MmBuildMdlForNonPagedPool
+  - MmCreateMdl
+  - ZwReadFile
+  - ZwQueryInformationFile
+  - IoCreateFile
+  - _wcsicmp
+  - _wcsnicmp
+  - RtlEqualUnicodeString
+  - ZwWriteFile
+  - ZwFlushKey
+  - ZwSetValueKey
+  - ZwQueryValueKey
+  - RtlRandom
+  - KeQuerySystemTime
+  - ZwDeleteKey
+  - ZwOpenKey
+  - ZwEnumerateKey
+  - IoFreeIrp
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - KeGetCurrentThread
+  - KeInitializeEvent
+  - IoAllocateIrp
+  - IoGetRelatedDeviceObject
+  - ObReferenceObjectByHandle
+  - IoFileObjectType
+  - ObQueryNameString
+  - RtlCopyUnicodeString
+  - MmIsAddressValid
+  - PsGetProcessPeb
+  - RtlCreateUnicodeString
+  - ZwDeleteValueKey
+  - ZwCreateKey
+  - RtlFreeUnicodeString
+  - ZwDeleteFile
+  - PsRemoveLoadImageNotifyRoutine
+  - CmUnRegisterCallback
+  - PsSetLoadImageNotifyRoutine
+  - CmRegisterCallback
+  - ObReferenceObjectByName
+  - ZwFreeVirtualMemory
+  - ZwWaitForSingleObject
+  - KeUnstackDetachProcess
+  - KeStackAttachProcess
+  - ZwDuplicateObject
+  - PsGetProcessSessionId
+  - _strnicmp
+  - RtlSubAuthoritySid
+  - RtlSubAuthorityCountSid
+  - ZwQueryInformationToken
+  - ZwOpenProcessTokenEx
+  - PsTerminateSystemThread
+  - PsThreadType
+  - PsCreateSystemThread
+  - KeTickCount
+  - KeBugCheckEx
+  - _vsnprintf
+  - strncmp
+  - strchr
+  - strncpy
+  - strstr
+  - ExAllocatePool
+  - _stricmp
+  - rand
+  - ZwCreateFile
+  - IoBuildDeviceIoControlRequest
+  - MmProbeAndLockPages
+  - IoAllocateMdl
+  - _allshl
+  - RtlUnwind
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2023-01-12 19:14:51'
+      ValidTo: '2023-12-15 19:14:51'
+      Signature: 04d1261b735b38b551b427cf9a295d4eb18edd92de14079aa33a10511ee6d262938b29ae208f96be64a80e2967fb8d7aa5750613901a9da6a82935398175482096430c9acecb55ee2c5468d119f467378c18251a8fe01e9d7b79bce903ccb7afb227e2d0abee00bd9fd6bbbbd67c014888dc46f3efa912d4576f7ca9980957609cd21fbd51815cb11bee95fa780498d905e866bc1a604e407ee0d97a105bcc8e600200b19b9c3a56cb3918047f21ba9ee2228b46b8e5c8b456ba65e6f0c40d28294b654761660e9d14948866c3f0f65f028e47641059d3f195812e871362128bcefb901d5aeace862e3d683b291d65c138138ea1335fe3552f4c46a7f7b0c6e5
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      ValidFrom: '2012-04-18 23:48:38'
+      ValidTo: '2027-04-18 23:58:38'
+      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    Signer:
+    - SerialNumber: 33000000f3158ea57d1c559f290000000000f3
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+- Filename: windbg.sys
+  MD5: 40b968ecdbe9e967d92c5da51c390eee
+  SHA1: b8b123a413b7bccfa8433deba4f88669c969b543
+  SHA256: 06c5ebd0371342d18bc81a96f5e5ce28de64101e3c2fd0161d0b54d8368d2f1f
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Microsoft Corporation
+  Description: Windows GUI symbolic debugger
+  Product: Microsoft? Windows? Operating System
+  ProductVersion: 10.0.19041.685
+  FileVersion: 10.0.19041.685 (WinBuild.160101.0800)
+  MachineType: AMD64
+  OriginalFilename: windbg.sys
+  Authentihash:
+    MD5: 98a3ab2b723de48256701b417ff87a65
+    SHA1: ff80d6663a92ff454526e88847cbb4d9bd00e21e
+    SHA256: 79278979d9300670d1084493bbc03ae374efc5ab02850941e85753885fa88e47
+  InternalName: windbg.sys
+  Copyright: '? Microsoft Corporation. All rights reserved.'
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - PsProcessType
+  - IoGetLowerDeviceObject
+  - ExFreePoolWithTag
+  - IoRegisterShutdownNotification
+  - IoAttachDeviceToDeviceStackSafe
+  - PsLookupProcessByProcessId
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - MmGetSystemRoutineAddress
+  - IoDetachDevice
+  - KeDelayExecutionThread
+  - IoUnregisterShutdownNotification
+  - ZwClose
+  - IoGetAttachedDeviceReference
+  - PsGetCurrentProcessId
+  - ObfDereferenceObject
+  - IoCreateDevice
+  - IoEnumerateDeviceObjectList
+  - IoUnregisterFsRegistrationChange
+  - ObOpenObjectByPointer
+  - IoRegisterFsRegistrationChange
+  - IofCallDriver
+  - MmUnmapLockedPages
+  - _wcsicmp
+  - PsGetProcessPeb
+  - ZwCreateKey
+  - RtlCreateUnicodeString
+  - MmMapLockedPages
+  - PsSetLoadImageNotifyRoutine
+  - _wcsnicmp
+  - ZwReadFile
+  - IoGetRelatedDeviceObject
+  - KeSetEvent
+  - IoCreateFile
+  - KeInitializeEvent
+  - ZwDeleteValueKey
+  - ZwSetValueKey
+  - RtlEqualUnicodeString
+  - MmBuildMdlForNonPagedPool
+  - IoFreeMdl
+  - RtlFreeUnicodeString
+  - ObQueryNameString
+  - IoFileObjectType
+  - ZwQueryValueKey
+  - _vsnwprintf
+  - RtlRandom
+  - ObReferenceObjectByHandle
+  - KeWaitForSingleObject
+  - PsRemoveLoadImageNotifyRoutine
+  - ZwFlushKey
+  - MmCreateMdl
+  - IoFreeIrp
+  - ZwDeleteFile
+  - PsGetVersion
+  - IoAllocateIrp
+  - CmRegisterCallback
+  - RtlCopyUnicodeString
+  - MmIsAddressValid
+  - CmUnRegisterCallback
+  - ZwQueryInformationFile
+  - ZwWriteFile
+  - ZwDeleteKey
+  - ZwEnumerateKey
+  - ZwAllocateVirtualMemory
+  - ZwOpenKey
+  - KeUnstackDetachProcess
+  - ZwWaitForSingleObject
+  - ZwFreeVirtualMemory
+  - PsGetProcessSessionId
+  - ZwDuplicateObject
+  - ObReferenceObjectByName
+  - KeStackAttachProcess
+  - RtlSubAuthoritySid
+  - _strnicmp
+  - ZwOpenProcessTokenEx
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - PsThreadType
+  - RtlSubAuthorityCountSid
+  - ZwQueryInformationToken
+  - KeBugCheckEx
+  - strncmp
+  - strstr
+  - strchr
+  - strncpy
+  - _vsnprintf
+  - rand
+  - _stricmp
+  - ExAllocatePool
+  - IoBuildDeviceIoControlRequest
+  - ZwCreateFile
+  - MmProbeAndLockPages
+  - IoAllocateMdl
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2023-01-12 19:14:52'
+      ValidTo: '2023-12-15 19:14:52'
+      Signature: 5548d9042f4a8d4776b5fccbacda2e58d5161fb7932287aa5da1c9afaca15c230908ed96adeb0f6a86dc3972a85de00fb4d4db0a52394116887998fd673f57a0520fa1e39806b348e555cfe5a419c501a0fbfbdb79e88d37656735fa6cd56d5c465fe3871f5157e357d73956d4586bd50508522be7e24d2357d7ab53e3ae46d2d168e52d0d15761eaab962c36ee0791cabd33869f11f9512772261cda6249f16f85772116cc0585975600e5fe949e1a2bb85820ddf901b9e48ee805aacd1c826a1304916e2180de5d3ecc2fc0375d3a877ab8a058dda7e05aa91727523e579d17ce0dce414612d9b638b1ff5ad74d654c5b7e638a3cca372c5f51db638794ed6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      ValidFrom: '2012-04-18 23:48:38'
+      ValidTo: '2027-04-18 23:58:38'
+      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    Signer:
+    - SerialNumber: 33000000f5e8773b206b1ccd610000000000f5
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+Tags:
+- windbg.sys

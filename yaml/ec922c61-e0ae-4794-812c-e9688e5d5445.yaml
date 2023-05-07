@@ -7,13 +7,19 @@ Verified: 'TRUE'
 Commands:
   Command: sc.exe create procexp.Sys binPath=C:\windows\temp\procexp.Sys type=kernel
     && sc.exe start procexp.Sys
-  Description: ''
+  Description: "The method of abusing the Process Explorer driver to bypass EDR systems\
+    \ isn\u2019t new; it was implemented in the open-source tool Backstab, first published\
+    \ in June 2021. AuKill drops a driver named PROCEXP.SYS (from the release version\
+    \ 16.32 of process Explorer) into the C:\\Windows\\System32\\drivers path. The\
+    \ legitimate Process Explorer driver is named PROCEXP152.sys, and normally is\
+    \ found in the same location."
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
 - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+- https://github.com/Yaxser/Backstab/blob/master/resources/PROCEXP.sys
+- https://news.sophos.com/en-us/2023/04/19/aukill-edr-killer-malware-abuses-process-explorer-driver/
 Acknowledgement:
   Person: ''
   Handle: ''
@@ -129,5 +135,19 @@ KnownVulnerableSamples:
     - SerialNumber: 33000000b20f9ad86794f322f60000000000b2
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
+- Filename: procexp.sys
+  MD5: b79475c4783efdd8122694c6b5669a79
+  SHA1: d612165251d5f1dcfb1f1a762c88d956f49ce344
+  SHA256: cdfbe62ef515546f1728189260d0bdf77167063b6dbb77f1db6ed8b61145a2bc
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
 Tags:
 - procexp.Sys
