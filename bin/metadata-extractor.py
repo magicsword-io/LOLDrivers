@@ -148,20 +148,21 @@ def enrich_yaml(file_path_, metadata_md5, metadata_sha1, metadata_sha256):
             for sample in driver_yaml['KnownVulnerableSamples']:
                 enrich = False
                 metadata_ = ''
-                if sample['MD5'] or sample['SHA1'] or sample['SHA256']:
-                    if sample['MD5'] != "-":
+                #if sample['MD5'] or sample['SHA1'] or sample['SHA256']:
+                if "MD5" in sample or "SHA1" in sample or "SHA256" in sample:
+                    if sample.get('MD5', None) != "-":
                         try:
                             metadata_ = metadata_md5[sample['MD5']]
                             enrich = True
                         except KeyError:
                             pass
-                    if sample['SHA1'] != "-":
+                    if sample.get('SHA1', None) != "-":
                         try:
                             metadata_ = metadata_sha1[sample['SHA1']]
                             enrich = True
                         except KeyError:
                             pass
-                    if sample['SHA256'] != "-":
+                    if sample.get('SHA256', None) != "-":
                         try:
                             metadata_ = metadata_sha256[sample['SHA256']]
                             enrich = True
