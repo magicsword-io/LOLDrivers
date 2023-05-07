@@ -8,6 +8,10 @@ import argparse
 import hashlib
 import yaml
 
+# Issue in PyYAML resolved with this class https://ttl255.com/yaml-anchors-and-aliases-and-how-to-disable-them/
+class NoAliasDumper(yaml.Dumper):
+    def ignore_aliases(self, data):
+        return True
 # Disable the logger globally 
 # READ MORE: https://lief-project.github.io/doc/stable/api/python/index.html#logging
 lief.logging.disable()
@@ -196,7 +200,7 @@ def enrich_yaml(file_path_, metadata_md5, metadata_sha1, metadata_sha256):
 
     if global_enrich:
         with open(file_path_, 'w') as outfile:
-            yaml.dump(driver_yaml, outfile, default_flow_style=False, sort_keys=False)
+            yaml.dump(driver_yaml, outfile, default_flow_style=False, sort_keys=False, Dumper=NoAliasDumper)
             print(f"    [*] NOTICE - The File {file_path_} Was Enriched")
     else:
         print(f"    [*] NOTICE - No enrichment was performed on {file_path_}")

@@ -66,11 +66,11 @@ KnownVulnerableSamples:
     SHA256: 265010deb10af80885726edc450867fa69acbde449b51d13bf891322ff5c1c2d
   InternalName: ''
   Copyright: ''
-  Imports: &id001 []
-  ExportedFunctions: &id002
+  Imports: []
+  ExportedFunctions:
   - restore
   ImportedFunctions: ''
-  Signatures: &id003 {}
+  Signatures: {}
 - Filename: 0x3040_blacklotus_beta_driver.sys
   MD5: a42249a046182aaaf3a7a7db98bfa69d
   SHA1: 1f3799fed3cf43254fe30dcdfdb8dc02d82e662b
@@ -91,10 +91,11 @@ KnownVulnerableSamples:
     SHA256: 265010deb10af80885726edc450867fa69acbde449b51d13bf891322ff5c1c2d
   InternalName: ''
   Copyright: ''
-  Imports: *id001
-  ExportedFunctions: *id002
+  Imports: []
+  ExportedFunctions:
+  - restore
   ImportedFunctions: ''
-  Signatures: *id003
+  Signatures: {}
 - Filename: blacklotus_beta_driver.sys
   SHA1: 4B882748FAF2C6C360884C6812DD5BCBCE75EBFF
   Signature: []
