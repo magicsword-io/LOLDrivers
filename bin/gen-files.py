@@ -52,20 +52,20 @@ def gen_hashes_lists():
         known_vuln_samples = get_yaml_part(file_path=file, part_name="KnownVulnerableSamples")
         if known_vuln_samples:
             for i in known_vuln_samples:
-                if i['MD5']:
+                if 'MD5' in i:
                     if i['MD5'] != "-":
                         md5_list.append(i['MD5'])
-                if i['SHA1']:
+                if 'SHA1' in i:
                     if i['SHA1'] != "-":
                         sha1_list.append(i['SHA1'])
-                if i['SHA256']:
+                if 'SHA256' in i:
                     if i['SHA256'] != "-":
                         sha256_list.append(i['SHA256'])
     
     # Remove leading and trailing spaces as well as any duplicates
-    md5_list = list(set([i.lstrip().strip().lower() for i in md5_list]))
-    sha1_list = list(set([i.lstrip().strip().lower() for i in sha1_list]))
-    sha256_list = list(set([i.lstrip().strip().lower() for i in sha256_list]))
+    md5_list = list(filter(None,list(set([i.lstrip().strip().lower() for i in md5_list]))))
+    sha1_list = list(filter(None,list(set([i.lstrip().strip().lower() for i in sha1_list]))))
+    sha256_list = list(filter(None,list(set([i.lstrip().strip().lower() for i in sha256_list]))))
 
     return md5_list, sha1_list, sha256_list
 
@@ -314,7 +314,7 @@ def gen_sigma_rule_names(names_list):
             f.write("falsepositives:\n")
             f.write("    - False positives may occur if one of the vulnerable driver names mentioned above didn't change its name between versions. So always make sure that the driver being loaded is the legitimate one and the non vulnerable version.\n")
             f.write("    - If you experience a lot of FP you could comment the driver name or its exact known legitimate location (when possible)\n")
-            f.write("level: medium\n")
+            f.write("level: low\n")
     
 
 if __name__ == "__main__":
