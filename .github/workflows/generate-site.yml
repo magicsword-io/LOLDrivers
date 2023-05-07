@@ -24,7 +24,7 @@ jobs:
     - name: Install dependencies with Poetry
       run: poetry install
     - name: Run Site Generation 
-      run: poetry run python bin/site.py
+      run: poetry run python bin/site.py -v
     - name: Run Site Generation 
       run: poetry run python bin/gen-files.py
     - name: Commit Generated Data
