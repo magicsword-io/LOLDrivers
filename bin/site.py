@@ -9,27 +9,61 @@ import jinja2
 import csv
 
 def write_drivers_csv(drivers, output_dir, VERBOSE):
-    with open(os.path.join(output_dir, 'content', 'api', 'drivers.csv'), 'w') as f:
-        writer = csv.writer(f)
+    output_file = os.path.join(output_dir, 'content', 'api', 'drivers.csv')
+    
+    header = ['Id', 'Author', 'Created', 'Command', 'Description', 'Usecase', 'Category', 'Privileges', 'MitreID',
+              'OperatingSystem', 'Resources', 'Driver Description', 'Person', 'Handle', 'Detection',
+              'KnownVulnerableSamples_MD5', 'KnownVulnerableSamples_SHA1', 'KnownVulnerableSamples_SHA256',
+              'KnownVulnerableSamples_Publisher', 'KnownVulnerableSamples_Date',
+              'KnownVulnerableSamples_Company', 'KnownVulnerableSamples_Description', 'Verified']
 
-        # header
-        writer.writerow(['Id', 'Author', 'Created', 'Command', 'Description', 'Usecase', 'Category', 'Privileges', 'MitreID', 'OperatingSystem', 'Resources', 'Driver Description', 'Person',
-                         'Handle', 'Detection', 'KnownVulnerableSamples_SHA256'])
+    with open(output_file, 'w', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=header)
+        writer.writeheader()
 
-        # write rows
         for driver in drivers:
             if VERBOSE:
-                print("Writing driver:", driver['Id'])  # Add this line to display the current driver
-            hashes = [s['SHA256'] for s in driver['KnownVulnerableSamples'] if 'SHA256' in s]  # Add the condition here
-            writer.writerow({
-                'Id': driver['Id'],
-                'Author': driver['Author'],
-                'Created': driver['Created'],
-                'MitreID': driver['MitreID'],
-                'Category': driver['Category'],
-                'Verified': driver['Verified'],
-                'SHA256': ', '.join(hashes),
-            })
+                print(f"Writing driver CSV: {driver['Id']}")
+
+            md5s = [s['MD5'] for s in driver['KnownVulnerableSamples'] if 'MD5' in s]
+            sha1s = [s['SHA1'] for s in driver['KnownVulnerableSamples'] if 'SHA1' in s]
+            sha256s = [s['SHA256'] for s in driver['KnownVulnerableSamples'] if 'SHA256' in s]
+            publishers = [s['Publisher'] for s in driver['KnownVulnerableSamples'] if 'Publisher' in s]
+            dates = [s['Date'] for s in driver['KnownVulnerableSamples'] if 'Date' in s]
+            companies = [s['Company'] for s in driver['KnownVulnerableSamples'] if 'Company' in s]
+            descriptions = [s['Description'] for s in driver['KnownVulnerableSamples'] if 'Description' in s]
+
+            row = {
+                'Id': driver.get('Id', ''),
+                'Author': driver.get('Author', ''),
+                'Created': driver.get('Created', ''),
+                'Command': driver.get('Command', ''),
+                'Description': driver.get('Description', ''),
+                'Usecase': driver.get('Usecase', ''),
+                'Category': driver.get('Category', ''),
+                'Privileges': driver.get('Privileges', ''),
+                'MitreID': driver.get('MitreID', ''),
+                'OperatingSystem': driver.get('OperatingSystem', ''),
+                'Resources': driver.get('Resources', ''),
+                'Driver Description': driver.get('Driver Description', ''),
+                'Person': driver.get('Person', ''),
+                'Handle': driver.get('Handle', ''),
+                'Detection': driver.get('Detection', ''),
+                'KnownVulnerableSamples_MD5': ', '.join(str(md5) for md5 in md5s),
+                'KnownVulnerableSamples_SHA1': ', '.join(str(sha1) for sha1 in sha1s),
+                'KnownVulnerableSamples_SHA256': ', '.join(str(sha256) for sha256 in sha256s),
+                'KnownVulnerableSamples_Publisher': ', '.join(str(publisher) for publisher in publishers),
+                'KnownVulnerableSamples_Date': ', '.join(str(date) for date in dates),
+                'KnownVulnerableSamples_Company': ', '.join(str(company) for company in companies),
+                'KnownVulnerableSamples_Description': ', '.join(str(description) for description in descriptions),
+                'Verified': driver.get('Verified', '')
+            }
+
+            writer.writerow(row)
+
+
+
+
 
 def write_top_products(drivers, output_dir, top_n=5):
     products_count = {}
