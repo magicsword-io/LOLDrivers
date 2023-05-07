@@ -11,7 +11,7 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# nt2.sys} 
+# nt2.sys
 
 
 {{< tip "warning" >}}
@@ -77,7 +77,7 @@ sc.exe create nt2.sys binPath=C:\windows\temp \n \n \n  t2.sys type=kernel &amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cacc48e6-6ed8-431c-abee-88ee6c2dc3c1.yaml)
 
-*last_updated:* 2023-05-06
+*last_updated:* 2023-05-07
 
 
 

@@ -11,7 +11,7 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# WiseUnlo.sys} 
+# WiseUnlo.sys
 
 
 {{< tip "warning" >}}
@@ -105,7 +105,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/b28cc2ee-d4a2-4fe4-9acb-a7a61cad20c6.yaml)
 
-*last_updated:* 2023-05-06
+*last_updated:* 2023-05-07
 
 
 

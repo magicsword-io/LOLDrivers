@@ -94,7 +94,7 @@ sc.exe create WinRing0x64.sys binPath=C:\windows\temp\WinRing0x64.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/f0fd5bc6-9ebd-4eb0-93ce-9256a5b9abf9.yaml)
 
-*last_updated:* 2023-05-06
+*last_updated:* 2023-05-07
 
 
 
