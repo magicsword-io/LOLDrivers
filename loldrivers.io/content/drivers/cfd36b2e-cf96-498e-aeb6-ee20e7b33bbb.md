@@ -11,13 +11,13 @@ weight = 10
 {{< column "mt-2 pt-1">}}
 
 
-# cfd36b2e-cf96-498e-aeb6-ee20e7b33bbb ![:inline](/images/twitter_verified.png) 
+# magdrvamd64.sys ![:inline](/images/twitter_verified.png) 
 
 
 ### Description
 
 cfd36b2e-cf96-498e-aeb6-ee20e7b33bbb is a vulnerable driver and more information will be added as found.
-- **Tags**: magdrvamd64.sys
+- **UUID**: cfd36b2e-cf96-498e-aeb6-ee20e7b33bbb
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
@@ -85,7 +85,7 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cfd36b2e-cf96-498e-aeb6-ee20e7b33bbb.yaml)
 
-*last_updated:* 2023-04-30
+*last_updated:* 2023-05-06
 
 
 
