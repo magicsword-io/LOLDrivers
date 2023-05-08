@@ -16,7 +16,7 @@ weight = 10
 
 ### Description
 
-50cfaec9-55f8-49df-aa3e-b9ec3f4f4ff3 is a vulnerable driver and more information will be added as found.
+mhyprot.sys is a vulnerable driver and more information will be added as found.
 - **UUID**: 50cfaec9-55f8-49df-aa3e-b9ec3f4f4ff3
 - **Created**: 2023-01-09
 - **Author**: Michael Haag

@@ -16,7 +16,7 @@ weight = 10
 
 ### Description
 
-be3e49ea-095e-4fdb-9529-f4c2dbb9a9fc is a vulnerable driver and more information will be added as found.
+PhlashNT.sys is a vulnerable driver and more information will be added as found.
 - **UUID**: be3e49ea-095e-4fdb-9529-f4c2dbb9a9fc
 - **Created**: 2023-01-09
 - **Author**: Michael Haag

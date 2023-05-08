@@ -16,7 +16,7 @@ weight = 10
 
 ### Description
 
-cfd36b2e-cf96-498e-aeb6-ee20e7b33bbb is a vulnerable driver and more information will be added as found.
+magdrvamd64.sys is a vulnerable driver and more information will be added as found.
 - **UUID**: cfd36b2e-cf96-498e-aeb6-ee20e7b33bbb
 - **Created**: 2023-01-09
 - **Author**: Michael Haag

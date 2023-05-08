@@ -16,7 +16,7 @@ weight = 10
 
 ### Description
 
-a4aa80bc-4ecd-49ab-bc0f-0f49b07fdd7f is a vulnerable driver and more information will be added as found.
+segwindrvx64.sys is a vulnerable driver and more information will be added as found.
 - **UUID**: a4aa80bc-4ecd-49ab-bc0f-0f49b07fdd7f
 - **Created**: 2023-01-09
 - **Author**: Michael Haag

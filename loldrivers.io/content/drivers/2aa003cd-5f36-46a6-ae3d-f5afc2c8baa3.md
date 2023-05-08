@@ -21,7 +21,7 @@ We were not able to verify the hash of this driver successfully, it has not been
 
 ### Description
 
-2aa003cd-5f36-46a6-ae3d-f5afc2c8baa3 is a vulnerable driver and more information will be added as found.
+mhyprot3.sys is a vulnerable driver and more information will be added as found.
 - **UUID**: 2aa003cd-5f36-46a6-ae3d-f5afc2c8baa3
 - **Created**: 2023-01-09
 - **Author**: Michael Haag

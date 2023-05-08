@@ -16,7 +16,7 @@ weight = 10
 
 ### Description
 
-fab98aaa-e4e7-4c4a-af65-c00d35cf66e9 is a vulnerable driver and more information will be added as found.
+cpuz141.sys is a vulnerable driver and more information will be added as found.
 - **UUID**: fab98aaa-e4e7-4c4a-af65-c00d35cf66e9
 - **Created**: 2023-01-09
 - **Author**: Michael Haag

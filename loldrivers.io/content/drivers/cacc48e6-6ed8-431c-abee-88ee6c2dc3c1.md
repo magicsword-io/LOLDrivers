@@ -21,7 +21,7 @@ We were not able to verify the hash of this driver successfully, it has not been
 
 ### Description
 
-cacc48e6-6ed8-431c-abee-88ee6c2dc3c1 is a vulnerable driver and more information will be added as found.
+nt2.sys is a vulnerable driver and more information will be added as found.
 - **UUID**: cacc48e6-6ed8-431c-abee-88ee6c2dc3c1
 - **Created**: 2023-01-09
 - **Author**: Michael Haag

@@ -16,7 +16,7 @@ weight = 10
 
 ### Description
 
-2ea12acc-95b6-4f91-afb7-8ded7a2fe9d9 is a vulnerable driver and more information will be added as found.
+vmdrv.sys is a vulnerable driver and more information will be added as found.
 - **UUID**: 2ea12acc-95b6-4f91-afb7-8ded7a2fe9d9
 - **Created**: 2023-05-06
 - **Author**: Nasreddine Bencherchali

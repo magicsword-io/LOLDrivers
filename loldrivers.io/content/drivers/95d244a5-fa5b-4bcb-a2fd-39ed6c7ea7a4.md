@@ -16,7 +16,7 @@ weight = 10
 
 ### Description
 
-95d244a5-fa5b-4bcb-a2fd-39ed6c7ea7a4 is a vulnerable driver and more information will be added as found.
+rtkio64.sys is a vulnerable driver and more information will be added as found.
 - **UUID**: 95d244a5-fa5b-4bcb-a2fd-39ed6c7ea7a4
 - **Created**: 2023-01-09
 - **Author**: Michael Haag

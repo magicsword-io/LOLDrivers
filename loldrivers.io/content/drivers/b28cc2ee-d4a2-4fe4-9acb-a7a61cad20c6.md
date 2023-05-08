@@ -21,7 +21,7 @@ We were not able to verify the hash of this driver successfully, it has not been
 
 ### Description
 
-b28cc2ee-d4a2-4fe4-9acb-a7a61cad20c6 is a vulnerable driver and more information will be added as found.
+WiseUnlo.sys is a vulnerable driver and more information will be added as found.
 - **UUID**: b28cc2ee-d4a2-4fe4-9acb-a7a61cad20c6
 - **Created**: 2023-01-09
 - **Author**: Michael Haag

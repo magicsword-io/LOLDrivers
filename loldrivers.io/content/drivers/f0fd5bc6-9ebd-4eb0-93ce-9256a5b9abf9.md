@@ -16,7 +16,7 @@ weight = 10
 
 ### Description
 
-f0fd5bc6-9ebd-4eb0-93ce-9256a5b9abf9 is a vulnerable driver and more information will be added as found.
+WinRing0x64.sys is a vulnerable driver and more information will be added as found.
 - **UUID**: f0fd5bc6-9ebd-4eb0-93ce-9256a5b9abf9
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
