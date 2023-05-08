@@ -31,7 +31,7 @@ We were not able to verify the hash of this driver successfully, it has not been
 {% if driver.Commands.Description %}
 {{driver.Commands.Description}}
 {% else %}
-{{ driver.Id }} is a vulnerable driver and more information will be added as found.
+{{ driver.Tags[0] }} is a vulnerable driver and more information will be added as found.
 {% endif %}
 - **UUID**: {{ driver.Id }}
 - **Created**: {{driver.Created}}
