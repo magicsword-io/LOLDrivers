@@ -101,32 +101,19 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-
+  
     - name: Build drivers.zip
       run: |
         mkdir build
         cp -r drivers/ build/drivers
         cd build
         zip -r drivers.zip drivers/
-
-    - name: Create GitHub Release
-      id: create_release
-      uses: actions/create-release@v1
+  
+    - name: Create Release and Upload drivers.zip
+      uses: softprops/action-gh-release@v1
+      with:
+        files: build/drivers.zip
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        draft: false
-        prerelease: false
-
-    - name: Upload drivers.zip as Release Asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: build/drivers.zip
-        asset_name: drivers.zip
-        asset_content_type: application/zip
+        
 
