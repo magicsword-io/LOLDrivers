@@ -101,13 +101,17 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+      with:
+        lfs: true
   
     - name: Build drivers.zip
       run: |
-        mkdir build
+        mkdir -p build/metadata
+        mkdir -p build/drivers
+        cp -r yamls/ build/metadata
         cp -r drivers/ build/drivers
         cd build
-        zip -r drivers.zip drivers/
+        zip -r drivers.zip metadata/ drivers/
   
     - name: Create Release and Upload drivers.zip
       uses: softprops/action-gh-release@v1
@@ -115,5 +119,6 @@ jobs:
         files: build/drivers.zip
       env:
         GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
+        
         
 
