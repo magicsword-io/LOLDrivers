@@ -15,7 +15,7 @@ def write_drivers_csv(drivers, output_dir, VERBOSE):
               'OperatingSystem', 'Resources', 'Driver Description', 'Person', 'Handle', 'Detection',
               'KnownVulnerableSamples_MD5', 'KnownVulnerableSamples_SHA1', 'KnownVulnerableSamples_SHA256',
               'KnownVulnerableSamples_Publisher', 'KnownVulnerableSamples_Date',
-              'KnownVulnerableSamples_Company', 'KnownVulnerableSamples_Description', 'Verified']
+              'KnownVulnerableSamples_Company', 'KnownVulnerableSamples_Description', 'Verified', 'Tags']
 
     with open(output_file, 'w', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=header)
@@ -32,7 +32,9 @@ def write_drivers_csv(drivers, output_dir, VERBOSE):
             dates = [s['Date'] for s in driver['KnownVulnerableSamples'] if 'Date' in s]
             companies = [s['Company'] for s in driver['KnownVulnerableSamples'] if 'Company' in s]
             descriptions = [s['Description'] for s in driver['KnownVulnerableSamples'] if 'Description' in s]
-
+            
+            
+            
             row = {
                 'Id': driver.get('Id', ''),
                 'Author': driver.get('Author', ''),
@@ -56,7 +58,8 @@ def write_drivers_csv(drivers, output_dir, VERBOSE):
                 'KnownVulnerableSamples_Date': ', '.join(str(date) for date in dates),
                 'KnownVulnerableSamples_Company': ', '.join(str(company) for company in companies),
                 'KnownVulnerableSamples_Description': ', '.join(str(description) for description in descriptions),
-                'Verified': driver.get('Verified', '')
+                'Verified': driver.get('Verified', ''),
+                'Tags': ', '.join(str(tag) for tag in driver['Tags'])                                  
             }
 
             writer.writerow(row)
