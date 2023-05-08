@@ -108,7 +108,7 @@ jobs:
       run: |
         mkdir -p build/metadata
         mkdir -p build/drivers
-        cp -r yamls/ build/metadata
+        cp -r yaml/ build/metadata
         cp -r drivers/ build/drivers
         cd build
         zip -r drivers.zip metadata/ drivers/
