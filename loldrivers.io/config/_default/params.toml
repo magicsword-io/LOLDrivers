@@ -20,7 +20,7 @@ showLineNumbers = false
 # By default the template will look for icons under the icons directory. In some situations you might wanna change that. edit the line below
 # iconsPath = 'icons/'
 
-otherSearchableFields = ["Tags", "Categories", "CustomField"] # As they appear in frontmatter
+otherSearchableFields = ["Tags"] # As they appear in frontmatter
 
 # Site logo
 [logo]
@@ -36,8 +36,11 @@ otherSearchableFields = ["Tags", "Categories", "CustomField"] # As they appear i
   iconDark = "images/GitHubMarkDark.svg"
   url = "https://github.com/magicsword-io/LOLDrivers"
 
-# optional
-# attribution. Feel free to delete this
 [author]  
   name = "With ♥️ from Magicsword"
   url = "https://loldrivers.io/about"
+
+[search]
+on = true
+global = false
+
