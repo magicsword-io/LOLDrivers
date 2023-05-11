@@ -373,7 +373,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/e32bc3da-4db1-4858-a62c-6fbe4db6afbd.yaml)
 
-*last_updated:* 2023-05-09
+*last_updated:* 2023-05-11
 
 
 
