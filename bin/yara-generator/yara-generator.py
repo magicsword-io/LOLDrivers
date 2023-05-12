@@ -6,23 +6,23 @@
 # Florian Roth
 # May 2023
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 __author__ = "Florian Roth"
 
 import argparse
-from datetime import datetime
+import binascii
 import hashlib
 import logging
+import math
 import os
 import platform
 import pprint
 import string
 import traceback
+from datetime import datetime
 
 import pefile
 import shortuuid
-import binascii
-
 
 YARA_RULE_TEMPLATE = '''
 rule $$$RULENAME$$$ {
@@ -32,11 +32,11 @@ rule $$$RULENAME$$$ {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "$$$HASH$$$"
 		date = "$$$DATE$$$"
-		score = 70
+		score = 50
 	strings:
 		$ = $$$STRINGS$$$
 	condition:
-		all of them
+		$$$STRICT$$$all of them
 }
 '''
 
@@ -78,6 +78,7 @@ def process_files(input_files, debug):
 			Log.info("Couldn't extract any PE header infos for file %s and thus cannot generate a YARA rule for it" % f)
 			continue
 		Log.debug("Extracted VersionInfo: %s" % string_version_info)
+
 		# Generate a hash value for the file
 		sha256_hash = ""
 		m = hashlib.sha256()
@@ -85,10 +86,16 @@ def process_files(input_files, debug):
 			bytes = fh.read() # read entire file as bytes
 			sha256_hash = hashlib.sha256(bytes).hexdigest();
 			Log.debug("Calculate hash for file %s which is %s" % (f, sha256_hash))
+		
+		# Get the file size
+		file_stats = os.stat(f)
+		file_size = int(math.ceil((file_stats.st_size / 1024) / 100.0)) * 100
+		
 		# Generate a dictionary that serves as an input for the YARA rule generation
 		yara_rule_infos = {
 			'file_name': os.path.basename(f),
 			'sha256': sha256_hash,
+			'file_size': file_size,
 			'version_info': {
 				'FileDescription': get_version_info(string_version_info, 'FileDescription'),
 				'CompanyName': get_version_info(string_version_info, 'CompanyName'),
@@ -104,7 +111,7 @@ def process_files(input_files, debug):
 	return header_infos
 
 
-def generate_yara_rules(header_infos, debug):
+def generate_yara_rules(header_infos, strict, debug):
 	rules = list()
 	rule_names = []
 	# Loop over the header infos 
@@ -122,6 +129,11 @@ def generate_yara_rules(header_infos, debug):
 			Log.info("Number of extracted PE version info values is empty or not big enough - YARA rule generation skipped for %s" % hi['file_name'])
 			continue
 		new_rule = new_rule.replace('$$$STRINGS$$$', "\n\t\t$ = ".join(string_values))
+		# Condition
+		if strict:
+			new_rule = new_rule.replace('$$$STRICT$$$', "uint16(0) == 0x5a4d and filesize < %dKB and " % hi['file_size'])
+		else:
+			new_rule = new_rule.replace('$$$STRICT$$$', '')
 		Log.debug(new_rule)
 		# Append rule to the list
 		rules.append(new_rule)
@@ -188,6 +200,7 @@ if __name__ == '__main__':
 	  help='Path to input directory (can be used multiple times)', 
 	  metavar='driver-files')
 	parser.add_argument('-o', help="Output file", metavar='output-folder', default='./yara-rules.yar')
+	parser.add_argument('--strict', action='store_true', default=False, help='Include magic header and filesize to make the rule more strict')
 	parser.add_argument('--debug', action='store_true', default=False, help='Debug output')
 
 	args = parser.parse_args()
@@ -210,11 +223,11 @@ if __name__ == '__main__':
 
 	# Process each file and extract the header info need for the YARA rules
 	Log.info("[+] Processing %d sample files" % len(file_paths))
-	header_infos = process_files(file_paths, args.debug)
+	file_infos = process_files(file_paths, args.debug)
 
 	# Generate YARA rules and return them as list of their string representation
-	Log.info("[+] Generating YARA rules from %d header infos" % len(header_infos))
-	yara_rules = generate_yara_rules(header_infos, args.debug)
+	Log.info("[+] Generating YARA rules from %d header infos" % len(file_infos))
+	yara_rules = generate_yara_rules(file_infos, args.strict, args.debug)
 
 	# Write the output file
 	with open(args.o, 'w') as fh:
