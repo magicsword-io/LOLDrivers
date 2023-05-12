@@ -165,6 +165,7 @@ def generate_rule_name(version_info):
 	else:
 		custom_rule_string = "_".join(custom_rule_part)
 	rule_name = "%s_%s_%s" % (prefix, custom_rule_string, rid)
+	rule_name = rule_name.replace('__', '_')
 	return rule_name
 
 
