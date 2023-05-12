@@ -232,5 +232,5 @@ if __name__ == '__main__':
 	# Write the output file
 	with open(args.o, 'w') as fh:
 		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules), args.o))
-		fh.write("\n\n".join(yara_rules))
+		fh.write("\n".join(yara_rules))
 	
