@@ -1,11 +1,14 @@
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_6BbB {
+rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_7VAs {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 22ca5fe8fb0e5e22e6fb0848108c03f4.bin, e747f164fc89566f934f9ec5627cd8c3.bin, ce57844fb185d0cdd9d3ce9e5b6a891d.bin, c516acb873c7f8c24a0431df8287756e.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "34bee22c18ddbddbe115cf1ab55cabf0e482aba1eb2c343153577fb24b7226d3"
-		date = "2023-05-12"
+		hash = "5177a3b7393fb5855b2ec0a45d4c91660b958ee077e76e5a7d0669f2e04bcf02"
+		hash = "ee45fd2d7315fd039f3585a66e7855ba4af9d4721e1448e602623de14e932bbe"
+		hash = "bac709c49ddee363c8e59e515f2f632324a0359e932b7d8cb1ce2d52a95981aa"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
@@ -17,17 +20,17 @@ rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_6BbB {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310037002000430050005500490044 } /* LegalCopyright Copyright(C) 2017 CPUID */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_6q5Y {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_s4tw {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - d4a10447fdaff7a001715191c1f914b6.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d7e091e0d478c34232e8479b950c5513077b3a69309885cee4c61063e5f74ac0"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -37,17 +40,18 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_6q5Y {
 		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005a0041004d } /* ProductName ZAM */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]005a0065006d0061006e00610020004c00740064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Zemana Ltd. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_EldoSCorporation_elrawdsksys_RawDisk_32zF {
+rule PUA_VULN_Driver_EldoSCorporation_elrawdsksys_RawDisk_4Kki {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 1493d342e7a36553c56b2adea150949e.bin, 76c643ab29d497317085e5db8c799960.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6"
-		date = "2023-05-12"
+		hash = "5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200610077004400690073006b0020004400720069007600650072002e00200041006c006c006f00770073002000770072006900740065002000610063006300650073007300200074006f002000660069006c0065007300200061006e006400200072006100770020006400690073006b00200073006500630074006f0072007300200066006f0072002000750073006500720020006d006f006400650020006100700070006c00690063006100740069006f006e007300200069006e002000570069006e0064006f007700730020003200300030003000200061006e00640020006c0061007400650072002e } /* FileDescription RawDisk Driver. Allows write access to files and raw disk sectors for user mode applications in Windows 2000 and later. */
@@ -59,17 +63,17 @@ rule PUA_VULN_Driver_EldoSCorporation_elrawdsksys_RawDisk_32zF {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0065006c00720061007700640073006b002e007300790073 } /* OriginalFilename elrawdsk.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300037002d0032003000310031002c00200045006c0064006f005300200043006f00720070006f0072006100740069006f006e0020 } /* LegalCopyright Copyright (C) 2007-2011, EldoS Corporation  */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_58r5 {
+rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_493h {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 4e093256b034925ecd6b29473ff16858.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "81aafae4c4158d0b9a6431aff0410745a0f6a43fb20a9ab316ffeb8c2e2ccac0"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041002d00420059005400450020004e006f006e0050006e00500020004400720069007600650072 } /* FileDescription GIGA-BYTE NonPnP Driver */
@@ -81,17 +85,17 @@ rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_58r5
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0067006400720076002e007300790073 } /* OriginalFilename gdrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310037 } /* LegalCopyright Copyright (C) 2017 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_4jWG {
+rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_5BCS {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 0490f5961e0980792f5cb5aedf081dd7.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f6cd7353cb6e86e98d387473ed6340f9b44241867508e209e944f548b9db1d5f"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d0044002000520079007a0065006e0020004d00610073007400650072002000530065007200760069006300650020004400720069007600650072 } /* FileDescription AMD Ryzen Master Service Driver */
@@ -103,17 +107,17 @@ rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMaster
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0041004d004400520079007a0065006e004d00610073007400650072004400720069007600650072002e007300790073 } /* OriginalFilename AMDRyzenMasterDriver.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a90020003200300031003700200041004d0044002c00200049006e0063002e } /* LegalCopyright Copyright © 2017 AMD, Inc. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_8hyA {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_4m7q {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 88d5fc86f0dd3a8b42463f8d5503a570.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2594b3ef3675ca3a7b465b8ed4962e3251364bab13b12af00ebba7fa2211abb2"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVG anti rootkit */
@@ -125,17 +129,23 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310038002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2018 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_4Eti {
+rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_3TLP {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - f60a9b88c6ff07d4990d8653d0025683.bin, 8741e6df191c805028b92cec44b1ba88.bin, 21be10f66bb65c1d406407faa0b9ba95.bin, e323413de3caec7f7730b43c551f26a0.bin, f310b453ac562f2c53d30aa6e35506bb.bin, e425c66663c96d5a9f030b0ad4d219a8.bin, 5212e0957468d3f94d90fa7a0f06b58f.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6befa481e8cca8084d9ec3a1925782cd3c28ef7a3e4384e034d48deaabb96b63"
-		date = "2023-05-12"
+		hash = "8cf0cbbdc43f9b977f0fb79e0a0dd0e1adabe08a67d0f40d727c717c747de775"
+		hash = "2101d5e80e92c55ecfd8c24fcf2202a206a4fd70195a1378f88c4cc04d336f22"
+		hash = "45c3d607cb57a1714c1c604a25cbadf2779f4734855d0e43aa394073b6966b26"
+		hash = "600a2119657973112025db3c0eeab2e69d528bccfeed75f40c6ef50b059ec8a0"
+		hash = "deecbcd260849178de421d8e2f177dce5c63cf67a48abb23a0e3cf3aa3e00578"
+		hash = "955dac77a0148e9f9ed744f5d341cb9c9118261e52fe622ac6213965f2bc4cad"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
@@ -147,17 +157,21 @@ rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_4Eti {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310034002000430050005500490044 } /* LegalCopyright Copyright(C) 2014 CPUID */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_RWEverything_RwDrvsys_RwDrvDriver_9e7k {
+rule PUA_VULN_Driver_RWEverything_RwDrvsys_RwDrvDriver_rJL3 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 903c149851e9929ec45daefc544fcd99.bin, c2585e2696e21e25c05122e37e75a947.bin, 60e84516c6ec6dfdae7b422d1f7cab06.bin, f853abe0dc162601e66e4a346faed854.bin, 257483d5d8b268d0d679956c7acdf02d.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "45ba688a4bded8a7e78a4f5b0dc21004e951ddceb014bb92f51a3301d2fbc56a"
-		date = "2023-05-12"
+		hash = "3279593db91bb7ad5b489a01808c645eafafda6cc9c39f50d10ccc30203f2ddf"
+		hash = "d969845ef6acc8e5d3421a7ce7e244f419989710871313b04148f9b322751e5d"
+		hash = "1e0eb0811a7cf1bdaf29d3d2cab373ca51eb8d8b58889ab7728e2d3aed244abe"
+		hash = "ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200770044007200760020004400720069007600650072 } /* FileDescription RwDrv Driver */
@@ -169,17 +183,19 @@ rule PUA_VULN_Driver_RWEverything_RwDrvsys_RwDrvDriver_9e7k {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00520077004400720076002e007300790073 } /* OriginalFilename RwDrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310031002000520057002d00450076006500720079007400680069006e0067 } /* LegalCopyright Copyright (C) 2011 RW-Everything */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_vmdrvsys_WindowsRWinDDKdriver_8Ney {
+rule PUA_VULN_Driver_WindowsRWinDDKprovider_vmdrvsys_WindowsRWinDDKdriver_75Sq {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 6d67da13cf84f15f6797ed929dd8cf5d.bin, d5db81974ffda566fa821400419f59be.bin, 0e625b7a7c3f75524e307b160f8db337.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5c0b429e5935814457934fa9c10ac7a88e19068fa1bd152879e4e9b89c103921"
-		date = "2023-05-12"
+		hash = "32cccc4f249499061c0afa18f534c825d01034a1f6815f5506bf4c4ff55d1351"
+		hash = "d884ca8cc4ef1826ca3ab03eb3c2d8f356ba25f2d20db0a7d9fc251c565be7f3"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0056006f006900630065006d006f00640020005600690072007400750061006c00200041007500640069006f00200044006500760069006300650020002800570044004d0029 } /* FileDescription Voicemod Virtual Audio Device (WDM) */
@@ -191,17 +207,18 @@ rule PUA_VULN_Driver_WindowsRWinDDKprovider_vmdrvsys_WindowsRWinDDKdriver_8Ney {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0076006d006400720076002e007300790073 } /* OriginalFilename vmdrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200056006f006900630065006d006f006400200053002e004c002e0032003000310030002d0032003000320030 } /* LegalCopyright Copyright (C) Voicemod S.L.2010-2020 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_4bK2 {
+rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_3Qfr {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 13ee349c15ee5d6cf640b3d0111ffc0e.bin, f16b44cca74d3c3645e4c0a6bb5c0cb9.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a13054f349b7baa8c8a3fcbd31789807a493cc52224bbff5e412eb2bd52a6433"
-		date = "2023-05-12"
+		hash = "7e81beae78e1ddbf6c150e15667e1f18783f9b0ab7fbe52c7ab63e754135948d"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d0044002000520079007a0065006e0020004d00610073007400650072002000530065007200760069006300650020004400720069007600650072 } /* FileDescription AMD Ryzen Master Service Driver */
@@ -213,17 +230,17 @@ rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMaster
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0041004d004400520079007a0065006e004d00610073007400650072004400720069007600650072002e007300790073 } /* OriginalFilename AMDRyzenMasterDriver.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a90020003200300031003800200041004d0044002c00200049006e0063002e } /* LegalCopyright Copyright © 2018 AMD, Inc. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_8itq {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_3YHn {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 14add4f16d80595e6e816abf038141e5.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5bd41a29cbba0d24e639f49d1f201b9bd119b11f5e3b8a5fefa3a5c6f1e7692c"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AVG Anti Rootkit */
@@ -235,17 +252,27 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_8it
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000320030002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2020 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_87d6 {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_5fig {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cec257dcac9e708cefb17f8984dd0a70.bin, 9b9d367cb53df0a2e0850760c840d016.bin, bf74d0706f5ab9c34067192260f4efb0.bin, 6ff59faea912903af0ba8e80e58612bc.bin, 318e309e11199ec69d8928c46a4d901b.bin, c69c292e0b76b25a5fa0e16136770e11.bin, 9beecfb3146f19400880da61476ef940.bin, f9d04e99e4cab90973226a4555bc6d57.bin, ad03f225247b58a57584b40a4d1746d3.bin, 9982da703f13140997e137b1e745a2e3.bin, 2e219df70fccb79351f0452cba86623e.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "88e2e6a705d3fb71b966d9fb46dc5a4b015548daf585fb54dfcd81dc0bd3ebdc"
-		date = "2023-05-12"
+		hash = "f29073dc99cb52fa890aae80037b48a172138f112474a1aecddae21179c93478"
+		hash = "89b9823ed974a5b71de8468324d45b7e9d6dc914f93615ba86c6209b25b3cbf7"
+		hash = "3503ea284b6819f9cb43b3e94c0bb1bf5945ccb37be6a898387e215197a4792a"
+		hash = "d6827cd3a8f273a66ecc33bb915df6c7dea5cc1b8134b0c348303ef50db33476"
+		hash = "e07211224b02aaf68a5e4b73fc1049376623793509d9581cdaee9e601020af06"
+		hash = "c089a31ac95d41ed02d1e4574962f53376b36a9e60ff87769d221dc7d1a3ecfa"
+		hash = "6e944ae1bfe43a8a7cd2ea65e518a30172ce8f31223bdfd39701b2cb41d8a9e7"
+		hash = "59b09bd69923c0b3de3239e73205b1846a5f69043546d471b259887bb141d879"
+		hash = "e3f2ee22dec15061919583e4beb8abb3b29b283e2bcb46badf2bfde65f5ea8dd"
+		hash = "9d5ebd0f4585ec20a5fe3c5276df13ece5a2645d3d6f70cedcda979bd1248fc2"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
@@ -257,17 +284,23 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_8
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d00610072006b002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000310034 } /* LegalCopyright Copyright (C) Mark Russinovich 1996-2014 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_cpuzsys_WindowsRWinDDKdriver_5j6H {
+rule PUA_VULN_Driver_WindowsRWinDDKprovider_cpuzsys_WindowsRWinDDKdriver_4yXh {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 17719a7f571d4cd08223f0b30f71b8b8.bin, 641243746597fbd650e5000d95811ea3.bin, 743c403d20a89db5ed84c874768b7119.bin, 4a85754636c694572ca9f440d254f5ce.bin, 549e5148be5e7be17f9d416d8a0e333e.bin, 2f8653034a35526df88ea0c62b035a42.bin, aa69b4255e786d968adbd75ba5cf3e93.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1f4d4db4abe26e765a33afb2501ac134d14cadeaa74ae8a0fae420e4ecf58e0c"
-		date = "2023-05-12"
+		hash = "c3e150eb7e7292f70299d3054ed429156a4c32b1f7466a706a2b99249022979e"
+		hash = "2a9d481ffdc5c1e2cb50cf078be32be06b21f6e2b38e90e008edfc8c4f2a9c4e"
+		hash = "8688e43d94b41eeca2ed458b8fc0d02f74696a918e375ecd3842d8627e7a8f2b"
+		hash = "592f56b13e7dcaa285da64a0b9a48be7562bd9b0a190208b7c8b7d8de427cf6c"
+		hash = "4d19ee789e101e5a76834fb411aadf8229f08b3ece671343ad57a6576a525036"
+		hash = "60b163776e7b95e0c2280d04476304d0c943b484909131f340e3ce6045a49289"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
@@ -279,17 +312,18 @@ rule PUA_VULN_Driver_WindowsRWinDDKprovider_cpuzsys_WindowsRWinDDKdriver_5j6H {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_8hNX {
+rule PUA_VULN_Driver_NovellInc_NovellXTier_6MvD {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 0809f48fd30845d983d569b847fa83cf.bin, cfad9185ffcf5850b5810c28b24d5fc8.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b50ffc60eaa4fb7429fdbb67c0aba0c7085f5129564d0a113fec231c5f8ff62e"
-		date = "2023-05-12"
+		hash = "b37b3c6877b70289c0f43aeb71349f7344b06063996e6347c3c18d8c5de77f3b"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c0020005800540043004f004d0020005300650072007600690063006500730020004400720069007600650072 } /* FileDescription Novell XTCOM Services Driver */
@@ -300,17 +334,18 @@ rule PUA_VULN_Driver_NovellInc_NovellXTier_8hNX {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006c00690062006e00690063006d002e007300790073 } /* OriginalFilename libnicm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200043006f007000790072006900670068007400200032003000300030002d0032003000300038002c0020004e006f00760065006c006c002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_OpenLibSysorg_WinRingsys_WinRing_8Vpy {
+rule PUA_VULN_Driver_OpenLibSysorg_WinRingsys_WinRing_8cnC {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 0c0195c48b6b8582fa6f6373032118da.bin, 27bcbeec8a466178a6057b64bef66512.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5"
-		date = "2023-05-12"
+		hash = "a7b000abbcc344444a9b00cfade7aa22ab92ce0cadec196c30eb1851ae4fa062"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069006e00520069006e00670030 } /* FileDescription WinRing0 */
@@ -322,17 +357,17 @@ rule PUA_VULN_Driver_OpenLibSysorg_WinRingsys_WinRing_8Vpy {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00570069006e00520069006e00670030002e007300790073 } /* OriginalFilename WinRing0.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300037002d00320030003000380020004f00700065006e004c00690062005300790073002e006f00720067002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2007-2008 OpenLibSys.org. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Windowswinowsdriverkitsprovider_HwRwDrvsys_Hardwarereadwritedriver_7bBh {
+rule PUA_VULN_Driver_Windowswinowsdriverkitsprovider_HwRwDrvsys_Hardwarereadwritedriver_3VYg {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - dbc415304403be25ac83047c170b0ec2.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "21ccdd306b5183c00ecfd0475b3152e7d94b921e858e59b68a03e925d1715f21"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0048006100720064007700610072006500200072006500610064002000260020007700720069007400650020006400720069007600650072 } /* FileDescription Hardware read & write driver */
@@ -344,17 +379,17 @@ rule PUA_VULN_Driver_Windowswinowsdriverkitsprovider_HwRwDrvsys_Hardwarereadwrit
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0048007700520077004400720076002e007300790073 } /* OriginalFilename HwRwDrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright© Microsoft Corporation. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_yUaU {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_rHJU {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 991230087394738976dbd44f92516cae.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ad8ffccfde782bc287241152cf24245a8bf21c2530d81c57e17631b3c4adb833"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription Avast Anti Rootkit */
@@ -366,17 +401,17 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_yUaU {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300032003000200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2020 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_64Vn {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_7FVg {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 63e333d64a8716e1ae59f914cb686ae8.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3124b0411b8077605db2a9b7909d8240e0d554496600e2706e531c93c931e1b5"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c0069006200200066006f00720020004d00530049004600720065007100750065006e00630079005f00430043 } /* FileDescription NTIOLib for MSIFrequency_CC */
@@ -388,17 +423,17 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_64Vn {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_IObit_Monitorsys_AdvancedSystemCare_5oJn {
+rule PUA_VULN_Driver_IObit_Monitorsys_AdvancedSystemCare_5RHr {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 988dabdcf990b134b0ac1e00512c30c4.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e4a7da2cf59a4a21fc42b611df1d59cae75051925a7ddf42bf216cc1a026eadb"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049004f006200690074002000540065006d007000650072006100740075007200650020004d006f006e00690074006f0072 } /* FileDescription IObit Temperature Monitor */
@@ -410,17 +445,17 @@ rule PUA_VULN_Driver_IObit_Monitorsys_AdvancedSystemCare_5oJn {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004d006f006e00690074006f0072002e007300790073 } /* OriginalFilename Monitor.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a900200049004f006200690074002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © IObit. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_PhoenixTechnologiesLtd_PHLASHNT_WinPhlash_8oBb {
+rule PUA_VULN_Driver_PhoenixTechnologiesLtd_PHLASHNT_WinPhlash_8tD2 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - e9e786bdba458b8b4f9e93d034f73d00.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "65db1b259e305a52042e07e111f4fa4af16542c8bacd33655f753ef642228890"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005300570069006e0046006c006100730068002000440072006900760065007200200066006f0072002000570069006e0064006f007700730020004e0054 } /* FileDescription SWinFlash Driver for Windows NT */
@@ -432,17 +467,17 @@ rule PUA_VULN_Driver_PhoenixTechnologiesLtd_PHLASHNT_WinPhlash_8oBb {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00500048004c004100530048004e0054002e005300590053 } /* OriginalFilename PHLASHNT.SYS */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]002800630029002000500068006f0065006e0069007800200054006500630068006e006f006c006f0067006900650073002c0020004c00740064002e00200032003000300030002d0032003000300033 } /* LegalCopyright (c) Phoenix Technologies, Ltd. 2000-2003 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ArthurLiberman_ALSysIOsys_ALSysIO_5ALd {
+rule PUA_VULN_Driver_ArthurLiberman_ALSysIOsys_ALSysIO_3e5C {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 13dda15ef67eb265869fc371c72d6ef0.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7196187fb1ef8d108b380d37b2af8efdeb3ca1f6eefd37b5dc114c609147216d"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004c0053007900730049004f } /* FileDescription ALSysIO */
@@ -454,17 +489,17 @@ rule PUA_VULN_Driver_ArthurLiberman_ALSysIOsys_ALSysIO_5ALd {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0041004c0053007900730049004f002e007300790073 } /* OriginalFilename ALSysIO.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300033002d003200300030003900200041007200740068007500720020004c0069006200650072006d0061006e } /* LegalCopyright Copyright (C) 2003-2009 Arthur Liberman */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_8Eo6 {
+rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_7DiK {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 3c55092900343d3d28564e2d34e7be2c.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "133e542842656197c5d22429bd56d57aa33c9522897fdf29853a6d321033c743"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041002d00420059005400450020004e006f006e0050006e00500020004400720069007600650072 } /* FileDescription GIGA-BYTE NonPnP Driver */
@@ -476,17 +511,28 @@ rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_8Eo6
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0067006400720076002e007300790073 } /* OriginalFilename gdrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310037 } /* LegalCopyright Copyright (C) 2017 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_8Vti {
+rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_6gzq {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - a89ca92145fc330adced0dd005421183.bin, c08063f052308b6f5882482615387f30.bin, ccb09eb78e047c931708149992c2e435.bin, 56b54823a79a53747cbe11f8c4db7b1e.bin, c2eb4539a4f6ab6edd01bdc191619975.bin, 262969a3fab32b9e17e63e2d17a57744.bin, d0c2caa17c7b6d2200e1b5aa9d07135e.bin, 3411fdf098aa20193eee5ffa36ba43b2.bin, 0283b43c6bc965175a1c92b255d39556.bin, 75dbd5db9892d7451d0429bec1aabe1a.bin, 8f5b84350bfc4fe3a65d921b4bd0e737.bin, 26ce59f9fc8639fd7fed53ce3b785015.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0d3790af5f8e5c945410929e31d06144a471ac82f828afe89a4758a5bbeb7f9f"
-		date = "2023-05-12"
+		hash = "523d1d43e896077f32cd9acaa8e85b513bfb7b013a625e56f0d4e9675d9822ba"
+		hash = "df0dcfb3971829af79629efd036b8e1c6e2127481b3644ccc6e2ddd387489a15"
+		hash = "9a523854fe84f15efc1635d7f5d3e71812c45d6a4d2c99c29fdc4b4d9c84954c"
+		hash = "8c95d28270a4a314299cf50f05dcbe63033b2a555195d2ad2f678e09e00393e6"
+		hash = "1ee59eb28688e73d10838c66e0d8e011c8df45b6b43a4ac5d0b75795ca3eb512"
+		hash = "5b3705b47dc15f2b61ca3821b883b9cd114d83fcc3344d11eb1d3df495d75abe"
+		hash = "67734c7c0130dd66c964f76965f09a2290da4b14c94412c0056046e700654bdc"
+		hash = "80eeb8c2890f3535ed14f5881baf2f2226e6763be099d09fb8aadaba5b4474c1"
+		hash = "19696fb0db3fcae22f705ae1eb1e9f1151c823f3ff5d8857e90f2a4a6fdc5758"
+		hash = "e58bbf3251906ff722aa63415bf169618e78be85cb92c8263d3715c260491e90"
+		hash = "11d258e05b850dcc9ecfacccc9486e54bd928aaa3d5e9942696c323fdbd3481b"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
@@ -498,17 +544,19 @@ rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_8Vti {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310030002000430050005500490044 } /* LegalCopyright Copyright(C) 2010 CPUID */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ASUStek_Driversys_ECtool_8mKm {
+rule PUA_VULN_Driver_ASUStek_Driversys_ECtool_8WXH {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 4f191abc652d8f7442ca2636725e1ed6.bin, 1f950cfd5ed8dd9de3de004f5416fe20.bin, 715f8efab1d1c660e4188055c4b28eed.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "927c2a580d51a598177fa54c65e9d2610f5f212f1b6cb2fbf2740b64368f010a"
-		date = "2023-05-12"
+		hash = "42851a01469ba97cdc38939b10cf9ea13237aa1f6c37b1ac84904c5a12a81fa0"
+		hash = "771a8d05f1af6214e0ef0886662be500ee910ab99f0154227067fddcfe08a3dd"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400680065002000640072006900760065007200200066006f007200200074006800650020004500430074006f006f006c0020006400720069007600650072002d0062006100730065006400200074006f006f006c0073 } /* FileDescription The driver for the ECtool driver-based tools */
@@ -520,17 +568,17 @@ rule PUA_VULN_Driver_ASUStek_Driversys_ECtool_8mKm {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0044007200690076006500720037 } /* OriginalFilename Driver7 */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020 } /* LegalCopyright Copyright  */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_8Dbh {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_8ZXA {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 95e4c7b0384da89dce8ea6f31c3613d9.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cf4b5fa853ce809f1924df3a3ae3c4e191878c4ea5248d8785dc7e51807a512b"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c0069006200200066006f00720020004d005300490043006c006f0063006b005f00430043 } /* FileDescription NTIOLib for MSIClock_CC */
@@ -542,17 +590,17 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_8Dbh {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_SenseCORP__8yHG {
+rule PUA_VULN_Driver_SenseCORP__8ip9 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 4e1f656001af3677856f664e96282a6f.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "42b22faa489b5de936db33f12184f6233198bdf851a18264d31210207827ba25"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530065006e0073006500350020004400720069007600650072 } /* FileDescription Sense5 Driver */
@@ -561,17 +609,17 @@ rule PUA_VULN_Driver_SenseCORP__8yHG {
 		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0032002e0035002e0030002e0030 } /* ProductVersion 2.5.0.0 */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000320032 } /* LegalCopyright Copyright (C) 2022 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 4400KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5rVD {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6qhb {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - d79b8b7bed8d30387c22663b24e8c191.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d783ace822f8fe4e25d5387e5dd249cb72e62f62079023216dc436f1853a150f"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -583,17 +631,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5rVD {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000320020002d002000320030003100320020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002 - 2012 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_7R5m {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_6h64 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - a179c4093d05a3e1ee73f6ff07f994aa.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription Avast Anti Rootkit */
@@ -605,17 +653,19 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_7R5m {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300032003100200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2021 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriverfle_xzLu {
+rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriverfle_6ei3 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 3c4154866f3d483fdc9f4f64ef868888.bin, 49fe3d1f3d5c2e50a0df0f6e8436d778.bin, 83601bbe5563d92c1fdb4e960d84dc77.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "42e170a7ab1d2c160d60abfc906872f9cfd0c2ee169ed76f6acb3f83b3eeefdb"
-		date = "2023-05-12"
+		hash = "f929bead59e9424ab90427b379dcdd63fbfe0c4fb5e1792e3a1685541cd5ec65"
+		hash = "55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049002f004f00200049006e00740065007200660061006300650020006400720069007600650072002000660069006c0065 } /* FileDescription I/O Interface driver file */
@@ -627,17 +677,17 @@ rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriverfle_xzLu {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00420053005f0049003200630049006f002e007300790073 } /* OriginalFilename BS_I2cIo.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280063002900200032003000300032002d0032003000300036002000420049004f0053005400410052002000470072006f00750070 } /* LegalCopyright Copyright (c) 2002-2006 BIOSTAR Group */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MiTACTechnologyCorporation_mtcBSvsys_MiTACSystemServiceProvider_7iku {
+rule PUA_VULN_Driver_MiTACTechnologyCorporation_mtcBSvsys_MiTACSystemServiceProvider_3gbF {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 9dfd73dadb2f1c7e9c9d2542981aaa63.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c9cf1d627078f63a36bbde364cd0d5f2be1714124d186c06db5bcdf549a109f8"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d0069005400410043002000530079007300740065006d00200053006500720076006900630065002000500072006f00760069006400650072 } /* FileDescription MiTAC System Service Provider */
@@ -649,17 +699,17 @@ rule PUA_VULN_Driver_MiTACTechnologyCorporation_mtcBSvsys_MiTACSystemServiceProv
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006d0074006300420053007600360034002e007300790073 } /* OriginalFilename mtcBSv64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000370020004d006900540041004300200054006500630068006e006f006c006f0067007900200043006f00720070006f0072006100740069006f006e } /* LegalCopyright Copyright (C) 2007 MiTAC Technology Corporation */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_3ALW {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_ivm9 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - b32497762d916dba6c827e31205b67dd.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5f6547e9823f94c5b94af1fb69a967c4902f72b6e0c783804835e6ce27f887b0"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
@@ -671,17 +721,17 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_3ALW {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300031003700200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2017 Intel Corporation All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_4Pn4 {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_6oNV {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 43830326cd5fae66f5508e27cbec39a0.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "58a74dceb2022cd8a358b92acd1b48a5e01c524c3b0195d7033e4bd55eff4495"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirIT Agent System */
@@ -693,17 +743,17 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_4Pn4 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00760069007200610067007400360034002e007300790073 } /* OriginalFilename viragt64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200054004700200053006f0066007400200053002e0061002e0073002e00200032003000310031002c002000320030003100360020002d0020007700770077002e007400670073006f00660074002e00690074 } /* LegalCopyright Copyright (C) TG Soft S.a.s. 2011, 2016 - www.tgsoft.it */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanMonFltXsys_PanCafeManager_8Znv {
+rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanMonFltXsys_PanCafeManager_3pyW {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 0067c788e1cb174f008c325ebde56c22.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "06508aacb4ed0a1398a2b0da5fa2dbf7da435b56da76fd83c759a50a51c75caf"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500061006e00430061006600650020004d0061006e0061006700650072002000460069006c00650020004d006f006e00690074006f0072 } /* FileDescription PanCafe Manager File Monitor */
@@ -715,17 +765,17 @@ rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanMonFltXsys_PanCa
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00500061006e004d006f006e0046006c0074005800360034002e007300790073 } /* OriginalFilename PanMonFltX64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280063002900200032003000310032002d0032003000310034002000500061006e002000590061007a0131006c0131006d002000420069006c006900730069006d002000540065006b006e006f006c006f006a0069006c0065007200690020005400690063002e0020004c00740064002e0020005300740069002e } /* LegalCopyright Copyright (c) 2012-2014 Pan Yazılım Bilisim Teknolojileri Tic. Ltd. Sti. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_7GHU {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_5Sgh {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 25190f667f31318dd9a2e36383d5709f.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0f17e5cfc5bdd74aff91bfb1a836071345ba2b5d1b47b0d5bf8e7e0d4d5e2dbf"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avast anti rootkit */
@@ -737,17 +787,18 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_7GHU {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300031003900200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2019 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_3XYM {
+rule PUA_VULN_Driver_NovellInc_NovellXTier_5kNL {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - a26e600652c33dd054731b4693bf5b01.bin, 52b7cd123f6d1b9ed76b08f2ee7d9433.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6c7120e40fc850e4715058b233f5ad4527d1084a909114fd6a36b7b7573c4a44"
-		date = "2023-05-12"
+		hash = "3a65d14fd3b1b5981084cdbd293dc6f4558911ea18dd80177d1e5b54d85bcaa0"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c00200043006c00690065006e007400200050006f00720074006100620069006c0069007400790020004c0061007900650072 } /* FileDescription Novell Client Portability Layer */
@@ -758,17 +809,18 @@ rule PUA_VULN_Driver_NovellInc_NovellXTier_3XYM {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00490043004d002e005300590053 } /* OriginalFilename NICM.SYS */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200043006f007000790072006900670068007400200032003000300030002d0032003000310033002c0020004e006f00760065006c006c002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_BSMIsys__4KZo {
+rule PUA_VULN_Driver_BSMIsys__7RvH {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - fac8eb49e2fd541b81fcbdeb98a199cb.bin, 444f538daa9f7b340cfd43974ed43690.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "59626cac380d8fe0b80a6d4c4406d62ba0683a2f0f68d50ad506ca1b1cf25347"
-		date = "2023-05-12"
+		hash = "552f70374715e70c4ade591d65177be2539ec60f751223680dfaccb9e0be0ed9"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0053004d00490020004400720069007600650072 } /* FileDescription SMI Driver */
@@ -778,17 +830,47 @@ rule PUA_VULN_Driver_BSMIsys__4KZo {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00420053004d0049002e007300790073 } /* OriginalFilename BSMI.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000420049004f005300540041005200200043006f00720070002e00200032003000310031 } /* LegalCopyright Copyright (C) BIOSTAR Corp. 2011 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_4oj2 {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_8HY9 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 1b32c54b95121ab1683c7b83b2db4b96.bin, 0395b4e0eb21693590ad1cfdf7044b8b.bin, 2f1ebc14bd8a29b89896737ca4076002.bin, c3fea895fe95ea7a57d9f4d7abed5e71.bin, b0baac4d6cbac384a633c71858b35a2e.bin, 3f39f013168428c8e505a7b9e6cba8a2.bin, dd04cd3de0c19bede84e9c95a86b3ca8.bin, c02f70960fa934b8defa16a03d7f6556.bin, f2f728d2f69765f5dfda913d407783d2.bin, f66b96aa7ae430b56289409241645099.bin, 64efbffaa153b0d53dc1bccda4279299.bin, 7b43dfd84de5e81162ebcfafb764b769.bin, f7cbbb5eb263ec9a35a1042f52e82ca4.bin, 1c4acf27317a2b5eaedff3ce6094794d.bin, 0752f113d983030939b4ab98b0812cf0.bin, 4d99d02f49e027332a0a9c31c674e13b.bin, 2e5f016ff9378be41fe98fa62f99b12d.bin, 1ed043249c21ab201edccb37f1d40af9.bin, 6d97ee5b3300d0f7fa359f2712834c40.bin, c6f8983dd3d75640c072a8459b8fa55a.bin, 23cf3da010497eb2bf39a5c5a57e437c.bin, 96b463b6fa426ae42c414177af550ba2.bin, 490b1f404c4f31f4538b36736c990136.bin, 300c5b1795c9b6cc1bc4d7d55c7bbe85.bin, 2da209dde8188076a9579bd256dc90d0.bin, 3dbf69f935ea48571ea6b0f5a2878896.bin, b89b097b8b8aecb8341d05136f334ebb.bin, a711e6ab17802fabf2e69e0cd57c54cd.bin, 992ded5b623be3c228f32edb4ca3f2d2.bin, 79483cb29a0c428e1362ec8642109eee.bin, 361a598d8bb92c13b18abb7cac850b01.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "99f4994a0e5bd1bf6e3f637d3225c69ff4cd620557e23637533e7f18d7d6cba1"
-		date = "2023-05-12"
+		hash = "56a3c9ac137d862a85b4004f043d46542a1b61c6acb438098a9640469e2d80e7"
+		hash = "c2a4ddcc9c3b339d752c48925d62fc4cc5adbf6fae8fedef74cdd47e88da01f8"
+		hash = "50d5eaa168c077ce5b7f15b3f2c43bd2b86b07b1e926c1b332f8cb13bd2e0793"
+		hash = "9c10e2ec4f9ef591415f9a784b93dc9c9cdafa7c69602c0dc860c5b62222e449"
+		hash = "6f1ff29e2e710f6d064dc74e8e011331d807c32cc2a622cbe507fd4b4d43f8f4"
+		hash = "cd4a249c3ef65af285d0f8f30a8a96e83688486aab515836318a2559757a89bb"
+		hash = "d8b58f6a89a7618558e37afc360cd772b6731e3ba367f8d58734ecee2244a530"
+		hash = "3f2fda9a7a9c57b7138687bbce49a2e156d6095dddabb3454ea09737e02c3fa5"
+		hash = "fd8669794c67b396c12fc5f08e9c004fdf851a82faf302846878173e4fbecb03"
+		hash = "9529efb1837b1005e5e8f477773752078e0a46500c748bc30c9b5084d04082e6"
+		hash = "f088b2ba27dacd5c28f8ee428f1350dca4bc7c6606309c287c801b2e1da1a53d"
+		hash = "131d5490ceb9a5b2324d8e927fea5becfc633015661de2f4c2f2375a3a3b64c6"
+		hash = "e3936d3356573ce2e472495cd3ce769f49a613e453b010433dafce5ea498ddc2"
+		hash = "89b0017bc30cc026e32b758c66a1af88bd54c6a78e11ec2908ff854e00ac46be"
+		hash = "18776682fcc0c6863147143759a8d4050a4115a8ede0136e49a7cf885c8a4805"
+		hash = "7893307df2fdde25371645a924f0333e1b2de31b6bc839d8e2a908d7830c6504"
+		hash = "79e2d37632c417138970b4feba91b7e10c2ea251c5efe3d1fc6fa0190f176b57"
+		hash = "952199c28332bc90cfd74530a77ee237967ed32b3c71322559c59f7a42187dc4"
+		hash = "101402d4f5d1ae413ded499c78a5fcbbc7e3bae9b000d64c1dd64e3c48c37558"
+		hash = "39cfde7d401efce4f550e0a9461f5fc4d71fa07235e1336e4f0b4882bd76550e"
+		hash = "85866e8c25d82c1ec91d7a8076c7d073cccf421cf57d9c83d80d63943a4edd94"
+		hash = "b7a20b5f15e1871b392782c46ebcc897929443d82073ee4dcb3874b6a5976b5d"
+		hash = "d92eab70bcece4432258c9c9a914483a2267f6ab5ce2630048d3a99e8cb1b482"
+		hash = "984a77e5424c6d099051441005f2938ae92b31b5ad8f6521c6b001932862add7"
+		hash = "e005e8d183e853a27ad3bb56f25489f369c11b0d47e3d4095aad9291b3343bf1"
+		hash = "a961f5939088238d76757669a9a81905e33f247c9c635b908daac146ae063499"
+		hash = "a9706e320179993dade519a83061477ace195daa1b788662825484813001f526"
+		hash = "47f0cdaa2359a63ad1389ef4a635f1f6eee1f63bdf6ef177f114bdcdadc2e005"
+		hash = "38fa0c663c8689048726666f1c5e019feaa9da8278f1df6ff62da33961891d2a"
+		hash = "ef86c4e5ee1dbc4f81cd864e8cd2f4a2a85ee4475b9a9ab698a4ae1cc71fbeb0"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
@@ -800,17 +882,19 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_4oj2 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_46mb {
+rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_8YFz {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 4885e1bf1971c8fa9e7686fd5199f500.bin, 3ab94fba7196e84a97e83b15f7bcb270.bin, a453083b8f4ca7cb60cac327e97edbe2.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "26e3bfef255efd052a84c3c43994c73222b14c95db9a4b1fc2e98f1a5cb26e43"
-		date = "2023-05-12"
+		hash = "3e07bb866d329a2f9aaa4802bad04fdac9163de9bf9cfa1d035f5ca610b4b9bf"
+		hash = "c50f8ab8538c557963252b702c1bd3cee4604b5fc2497705d2a6a3fd87e3cc26"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
@@ -822,39 +906,20 @@ rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_46mb {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310033002000430050005500490044 } /* LegalCopyright Copyright(C) 2013 CPUID */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_6jxG {
+rule PUA_VULN_Driver_AsusTekComputerInc_BsDefsys_SupportSSTSFSSTEEATFTATCAMFNTAMFNBVCTVCBMFTWC_8HR3 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "56a3c9ac137d862a85b4004f043d46542a1b61c6acb438098a9640469e2d80e7"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AsusTekComputerInc_BsDefsys_SupportSSTSFSSTEEATFTATCAMFNTAMFNBVCTVCBMFTWC_8a5t {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - a9f220b1507a3c9a327a99995ff99c82.bin, c9a293762319d73c8ee84bcaaf81b7b3.bin, 8abbb12e61045984eda19e2dc77b235e.bin, 120b5bbb9d2eb35ff4f62d79507ea63a.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be"
-		date = "2023-05-12"
+		hash = "3326e2d32bbabd69feb6024809afc56c7e39241ebe70a53728c77e80995422a5"
+		hash = "0040153302b88bee27eb4f1eca6855039e1a057370f5e8c615724fa5215bada3"
+		hash = "36b9e31240ab0341873c7092b63e2e0f2cab2962ebf9b25271c3a1216b7669eb"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00440065006600610075006c0074002000420049004f005300200046006c0061007300680020004400720069007600650072 } /* FileDescription Default BIOS Flash Driver */
@@ -866,17 +931,17 @@ rule PUA_VULN_Driver_AsusTekComputerInc_BsDefsys_SupportSSTSFSSTEEATFTATCAMFNTAM
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00420073005f00440065006600360034002e007300790073 } /* OriginalFilename Bs_Def64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004100730075007300540065006b00200043006f006d00700075007400650072002e00200031003900390032002d0032003000300034 } /* LegalCopyright Copyright (C) AsusTek Computer. 1992-2004 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanIOxsys_PanIOLibrary_5nTY {
+rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanIOxsys_PanIOLibrary_5NJX {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 0d6fef14f8e1ce5753424bd22c46b1ce.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6b830ea0db6546a044c9900d3f335e7820c2a80e147b0751641899d1a5aa8f74"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00540065006d0070006500720061007400750072006500200061006e0064002000730079007300740065006d00200069006e0066006f0072006d006100740069006f006e0020006400720069007600650072 } /* FileDescription Temperature and system information driver */
@@ -888,17 +953,19 @@ rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanIOxsys_PanIOLibr
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00500061006e0049004f007800360034002e007300790073 } /* OriginalFilename PanIOx64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280063002900200032003000310032002d0032003000310034002000500061006e002000590061007a0069006c0069006d002000420069006c006900730069006d002000540065006b006e006f006c006f006a0069006c0065007200690020005400690063002e0020004c00740064002e0020005300740069002e } /* LegalCopyright Copyright (c) 2012-2014 Pan Yazilim Bilisim Teknolojileri Tic. Ltd. Sti. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_5fDe {
+rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_7fZy {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ab4ee84e09b09012ac86d3a875af9d43.bin, fe820a5f99b092c3660762c6fc6c64e0.bin, 557fd33ee99db6fe263cfcb82b7866b3.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2a6db9facf9e13d35c37dd468be04bae5f70c6127a9aee76daebddbdec95d486"
-		date = "2023-05-12"
+		hash = "1e16a01ef44e4c56e87abfbe03b2989b0391b172c3ec162783ad640be65ab961"
+		hash = "aebcbfca180e372a048b682a4859fd520c98b5b63f6e3a627c626cb35adc0399"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
@@ -910,17 +977,17 @@ rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_5fDe {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310032002000430050005500490044 } /* LegalCopyright Copyright(C) 2012 CPUID */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_QPbr {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_Se3R {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - d21fba3d09e5b060bd08796916166218.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "82fbcb371d53b8a76a25fbbafaae31147c0d1f6b9f26b3ea45262c2267386989"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCD Windows NT/2000/XP I/O driver */
@@ -932,17 +999,17 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_QPbr {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0045006c00620079004300440049004f002e007300790073 } /* OriginalFilename ElbyCDIO.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000300020002d0020003200300030003700200045006c00610062006f0072006100740065002000420079007400650073002000410047 } /* LegalCopyright Copyright (C) 2000 - 2007 Elaborate Bytes AG */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_EnTechTaiwan_seasys_softEnginex_QJ6H {
+rule PUA_VULN_Driver_EnTechTaiwan_seasys_softEnginex_3f5N {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 0a6a1c9a7f80a2a5dcced5c4c0473765.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6cb51ae871fbd5d07c5aad6ff8eea43d34063089528603ca9ceb8b4f52f68ddc"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006e005400650063006800200073006f006600740045006e00670069006e006500200078003600340020006b00650072006e0065006c002d006d006f006400650020006400720069007600650072 } /* FileDescription EnTech softEngine x64 kernel-mode driver */
@@ -954,17 +1021,17 @@ rule PUA_VULN_Driver_EnTechTaiwan_seasys_softEnginex_QJ6H {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00730065003600340061002e007300790073 } /* OriginalFilename se64a.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280063002900200045006e0054006500630068002000540061006900770061006e002c00200032003000300034002d0032003000300036002e } /* LegalCopyright Copyright (c) EnTech Taiwan, 2004-2006. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_5gzE {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_3Xcj {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 56a9e9b5334f8698a0ede27c64140982.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0b542e47248611a1895018ec4f4033ea53464f259c74eb014d018b19ad818917"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AVG Anti Rootkit */
@@ -976,17 +1043,17 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_5gz
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000320030002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2020 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_5hR3 {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_4hQm {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 595363661db3e50acc4de05b0215cc6f.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1273b74c3c1553eaa92e844fbd51f716356cc19cf77c2c780d4899ec7738fbd1"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avast anti rootkit */
@@ -998,17 +1065,18 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_5hR3 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300031003800200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2018 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8U7c {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6AHX {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 85e606523ce390f7fcd8370d5f4b812a.bin, 9af5ae780b6a9ea485fa15f28ddb20a7.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "385485e643aa611e97ceae6590c6a8c47155886123dbb9de1e704d0d1624d039"
-		date = "2023-05-12"
+		hash = "b773511fdb2e370dec042530910a905472fcc2558eb108b246fd3200171b04d3"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -1020,17 +1088,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8U7c {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000200028004300290020002000320030003100370020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright  (C)  2017 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 500KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_7okf {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_67RZ {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 9e0659d443a2b9d1afc75a160f500605.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8fe9828bea83adc8b1429394db7a556a17f79846ad0bfb7f242084a5c96edf2a"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -1039,39 +1107,20 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_7okf {
 		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005a0041004d } /* ProductName ZAM */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]005a0065006d0061006e00610020004c00740064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Zemana Ltd. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriverfle_7dG7 {
+rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_cpuzsys_WindowsRCodenameLonghornDDKdriver_3S9R {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "f929bead59e9424ab90427b379dcdd63fbfe0c4fb5e1792e3a1685541cd5ec65"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049002f004f00200049006e00740065007200660061006300650020006400720069007600650072002000660069006c0065 } /* FileDescription I/O Interface driver file */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00420049004f0053005400410052002000470072006f00750070 } /* CompanyName BIOSTAR Group */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002c00200031002c00200030002c00200030 } /* FileVersion 1, 1, 0, 0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002c00200031002c00200030002c00200030 } /* ProductVersion 1, 1, 0, 0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0049002f004f0020006400720069007600650072 } /* InternalName I/O driver */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00420049004f005300540041005200200049002f004f002000640072006900760065007200200066006c0065 } /* ProductName BIOSTAR I/O driver fle */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00420053005f0049003200630049006f002e007300790073 } /* OriginalFilename BS_I2cIo.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280063002900200032003000300032002d0032003000300036002000420049004f0053005400410052002000470072006f00750070 } /* LegalCopyright Copyright (c) 2002-2006 BIOSTAR Group */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_cpuzsys_WindowsRCodenameLonghornDDKdriver_5ur5 {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - c9c25778efe890baa4087e32937016a0.bin, e0bfbdf3793ea2742c03f5a82cb305a5.bin, 07493c774aa406478005e8fe52c788b2.bin, 94ccef76fda12ab0b8270f9b2980552b.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "49329fa09f584d1960b09c1b15df18c0bc1c4fdb90bf48b6b5703e872040b668"
-		date = "2023-05-12"
+		hash = "2ef7df384e93951893b65500dac6ee09da6b8fe9128326caad41b8be4da49a1e"
+		hash = "dbb457ae1bd07a945a1466ce4a206c625e590aee3922fa7d86fbe956beccfc98"
+		hash = "8e5aef7c66c0e92dfc037ee29ade1c8484b8d7fadebdcf521d2763b1d8215126"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
@@ -1083,17 +1132,17 @@ rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_cpuzsys_WindowsRCodenam
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3skQ {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_5LiJ {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 9638f265b1ddd5da6ecdf5c0619dcbe6.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3d9e83b189fcf5c3541c62d1f54a0da0a4e5b62c3243d2989afc46644056c8e3"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c0069006200200046006f00720020004e00540049004f004c00690062005f00450043004f } /* FileDescription NTIOLib For NTIOLib_ECO */
@@ -1105,39 +1154,18 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3skQ {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310031002d00320030003100320020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2011-2012 MSI. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_EldoSCorporation_elrawdsksys_RawDisk_4wzU {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_mDNC {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200610077004400690073006b0020004400720069007600650072002e00200041006c006c006f00770073002000770072006900740065002000610063006300650073007300200074006f002000660069006c0065007300200061006e006400200072006100770020006400690073006b00200073006500630074006f0072007300200066006f0072002000750073006500720020006d006f006400650020006100700070006c00690063006100740069006f006e007300200069006e002000570069006e0064006f007700730020003200300030003000200061006e00640020006c0061007400650072002e } /* FileDescription RawDisk Driver. Allows write access to files and raw disk sectors for user mode applications in Windows 2000 and later. */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0045006c0064006f005300200043006f00720070006f0072006100740069006f006e } /* CompanyName EldoS Corporation */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0032002c00200031002c002000320037002c0020003100300036 } /* FileVersion 2, 1, 27, 106 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0032002c00200031002c002000320037002c00200030 } /* ProductVersion 2, 1, 27, 0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0065006c00720061007700640073006b002e007300790073 } /* InternalName elrawdsk.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005200610077004400690073006b } /* ProductName RawDisk */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0065006c00720061007700640073006b002e007300790073 } /* OriginalFilename elrawdsk.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300037002d0032003000310031002c00200045006c0064006f005300200043006f00720070006f0072006100740069006f006e0020 } /* LegalCopyright Copyright (C) 2007-2011, EldoS Corporation  */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3uvo {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 736c4b85ce346ddf3b49b1e3abb4e72a.bin, 8d63e1a9ff4cafee1af179c0c544365c.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2bbe65cbec3bb069e92233924f7ee1f95ffa16173fceb932c34f68d862781250"
-		date = "2023-05-12"
+		hash = "e68d453d333854787f8470c8baef3e0d082f26df5aa19c0493898bcf3401e39a"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c0069006200200046006f00720020004d0053004900530069006d0070006c0065005f004f0043 } /* FileDescription NTIOLib For MSISimple_OC */
@@ -1149,17 +1177,18 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3uvo {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310031002d00320030003100320020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2011-2012 MSI. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_LGZv {
+rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_5wrY {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - b0954711c133d284a171dd560c8f492a.bin, 043d5a1fc66662a3f91b8a9c027f9be9.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "092d04284fdeb6762e65e6ac5b813920d6c69a5e99d110769c5c1a78e11c5ba0"
-		date = "2023-05-12"
+		hash = "0ce40a2cdd3f45c7632b858e8089ddfdd12d9acb286f2015a4b1b0c0346a572c"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041002d00420059005400450020004e006f006e0050006e00500020004400720069007600650072 } /* FileDescription GIGA-BYTE NonPnP Driver */
@@ -1171,17 +1200,18 @@ rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_LGZv
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0067006400720076002e007300790073 } /* OriginalFilename gdrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310037 } /* LegalCopyright Copyright (C) 2017 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5unE {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7ioa {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 42132c7a755064f94314b01afb80e73c.bin, d6b259b2dfe80bdf4d026063accd752c.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "62f5e13b2edc00128716cb93e6a9eddffea67ce83d2bb426f18f5be08ead89e0"
-		date = "2023-05-12"
+		hash = "ee3ff12943ced401e2b6df9e66e8a0be8e449fa9326cab241f471b2d8ffefdd7"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -1193,17 +1223,18 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5unE {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000200028004300290020002000320030003100360020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright  (C)  2016 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 400KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_YYInc_dianhu_5boU {
+rule PUA_VULN_Driver_YYInc_dianhu_6U6G {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 51207adb8dab983332d6b22c29fe8129.bin, 98763a3dee3cf03de334f00f95fc071a.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "80cbba9f404df3e642f22c476664d63d7c229d45d34f5cd0e19c65eb41becec3"
-		date = "2023-05-12"
+		hash = "bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]006400690061006e00680075 } /* FileDescription dianhu */
@@ -1213,17 +1244,18 @@ rule PUA_VULN_Driver_YYInc_dianhu_5boU {
 		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]006400690061006e00680075 } /* ProductName dianhu */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a900200032003000300037002d003200300031003700200059005900200049006e0063002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright © 2007-2017 YY Inc. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_6xsi {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_8SsA {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - b5326548762bfaae7a42d5b0898dfeac.bin, f141db170bb4c6e088f30ddc58404ad3.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8f68ca89910ebe9da3d02ec82d935de1814d79c44f36cd30ea02fa49ae488f00"
-		date = "2023-05-12"
+		hash = "c8eaa5e6d3230b93c126d2d58e32409e4aeeb23ccf0dd047a17f1ef552f92fe9"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCD Windows NT/2000/XP I/O driver */
@@ -1235,39 +1267,17 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_6xsi {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0045006c00620079004300440049004f002e007300790073 } /* OriginalFilename ElbyCDIO.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000300020002d0020003200300030003600200045006c00610062006f0072006100740065002000420079007400650073002000410047 } /* LegalCopyright Copyright (C) 2000 - 2006 Elaborate Bytes AG */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_6hcR {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_4icY {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "8cf0cbbdc43f9b977f0fb79e0a0dd0e1adabe08a67d0f40d727c717c747de775"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310034002000430050005500490044 } /* LegalCopyright Copyright(C) 2014 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_5XkJ {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 300d6ac47a146eb8eb159f51bc13f7cf.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a5a50449e2cc4d0dbc80496f757935ae38bf8a1bebdd6555a3495d8c219df2ad"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avast anti rootkit */
@@ -1279,17 +1289,17 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_5XkJ {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300031003800200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2018 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_8uW5 {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_7VNi {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 68dde686d6999ad2e5d182b20403240b.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "591bd5e92dfa0117b3daa29750e73e2db25baa717c31217539d30ffb1f7f3a52"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c0069006200200046006f00720020004d005300490052006100740069006f005f00430043 } /* FileDescription NTIOLib For MSIRatio_CC */
@@ -1301,17 +1311,18 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_8uW5 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_OpenLibSysorg_WinRingsys_WinRing_3KhV {
+rule PUA_VULN_Driver_OpenLibSysorg_WinRingsys_WinRing_6iDF {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 12cecc3c14160f32b21279c1a36b8338.bin, 828bb9cb1dd449cd65a29b18ec46055f.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "47eaebc920ccf99e09fc9924feb6b19b8a28589f52783327067c9b09754b5e84"
-		date = "2023-05-12"
+		hash = "3ec5ad51e6879464dfbccb9f4ed76c6325056a42548d5994ba869da9c4c039a8"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069006e00520069006e00670030 } /* FileDescription WinRing0 */
@@ -1323,17 +1334,17 @@ rule PUA_VULN_Driver_OpenLibSysorg_WinRingsys_WinRing_3KhV {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00570069006e00520069006e00670030002e007300790073 } /* OriginalFilename WinRing0.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000370020004f00700065006e004c00690062005300790073002e006f00720067002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2007 OpenLibSys.org. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_InsydeSoftwareCorp_segwindrvxsys_SEGWindowsDriverx_88L9 {
+rule PUA_VULN_Driver_InsydeSoftwareCorp_segwindrvxsys_SEGWindowsDriverx_7x25 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 4ae55080ec8aed49343e40d08370195c.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "65329dad28e92f4bcc64de15c552b6ef424494028b18875b7dba840053bc0cdd"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005300450047002000570069006e0064006f0077007300200044007200690076006500720020007800360034 } /* FileDescription SEG Windows Driver x64 */
@@ -1345,17 +1356,17 @@ rule PUA_VULN_Driver_InsydeSoftwareCorp_segwindrvxsys_SEGWindowsDriverx_88L9 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00730065006700770069006e006400720076007800360034002e007300790073 } /* OriginalFilename segwindrvx64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800630029002000320030003100320020002d00200032003000310035002c00200049006e007300790064006500200053006f00660074007700610072006500200043006f00720070002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (c) 2012 - 2015, Insyde Software Corp. All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_4iXg {
+rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_qneP {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 130c5aec46bdec8d534df7222d160fdb.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "909de5f21837ea2b13fdc4e5763589e6bdedb903f7c04e1d0b08776639774880"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d0044002000520079007a0065006e0020004d00610073007400650072002000530065007200760069006300650020004400720069007600650072 } /* FileDescription AMD Ryzen Master Service Driver */
@@ -1367,17 +1378,19 @@ rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMaster
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0041004d004400520079007a0065006e004d00610073007400650072004400720069007600650072002e007300790073 } /* OriginalFilename AMDRyzenMasterDriver.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a90020003200300032003000200041004d0044002c00200049006e0063002e } /* LegalCopyright Copyright © 2020 AMD, Inc. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ATITechnologiesInc_atillksys_ATIDiagnostics_34GE {
+rule PUA_VULN_Driver_ATITechnologiesInc_atillksys_ATIDiagnostics_8d4A {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 26d973d6d9a0d133dfda7d8c1adc04b7.bin, 27d21eeff199ed555a29ca0ea4453cfb.bin, 62f02339fe267dc7438f603bfb5431a1.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ad40e6d0f77c0e579fb87c5106bf6de3d1a9f30ee2fbf8c9c011f377fa05f173"
-		date = "2023-05-12"
+		hash = "38bb9751a3a1f072d518afe6921a66ee6d5cf6d25bc50af49e1925f20d75d4d7"
+		hash = "5c04c274a708c9a7d993e33be3ea9e6119dc29527a767410dbaf93996f87369a"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410054004900200044006900610067006e006f007300740069006300730020004800610072006400770061007200650020004100620073007400720061006300740069006f006e0020005300790073 } /* FileDescription ATI Diagnostics Hardware Abstraction Sys */
@@ -1389,17 +1402,17 @@ rule PUA_VULN_Driver_ATITechnologiesInc_atillksys_ATIDiagnostics_34GE {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100740069006c006c006b00360034002e007300790073 } /* OriginalFilename atillk64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000410054004900200054006500630068006e006f006c006f006700690065007300200049006e0063002e002c00200032003000300033 } /* LegalCopyright Copyright (C) ATI Technologies Inc., 2003 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_LegalCorp_PCIExpressVideoCapture_84gx {
+rule PUA_VULN_Driver_LegalCorp_PCIExpressVideoCapture_wx3i {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 22949977ce5cd96ba674b403a9c81285.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fd223833abffa9cd6cc1848d77599673643585925a7ee51259d67c44d361cce8"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005000430049006500200056006900640065006f00200043006100700074007500720065 } /* FileDescription PCIe Video Capture */
@@ -1410,39 +1423,17 @@ rule PUA_VULN_Driver_LegalCorp_PCIExpressVideoCapture_84gx {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]005000630069006500430075006200650064002e007300790073 } /* OriginalFilename PcieCubed.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00320030003100360020004c006500670061006c } /* LegalCopyright 2016 Legal */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 600KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_43xM {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_97zL {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "5177a3b7393fb5855b2ec0a45d4c91660b958ee077e76e5a7d0669f2e04bcf02"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310037002000430050005500490044 } /* LegalCopyright Copyright(C) 2017 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_38Tm {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 94999245e9580c6228b22ac44c66044c.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0cd4ca335155062182608cad9ef5c8351a715bce92049719dd09c76422cd7b0c"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AVG Anti Rootkit */
@@ -1454,17 +1445,20 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_38T
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000320030002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2020 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_5YWL {
+rule PUA_VULN_Driver_NovellInc_NovellXTier_5KyK {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 34a7fab63a4ed5a0b61eb204828e08e5.bin, 22823fed979903f8dfe3b5d28537eb47.bin, 7a6a6d6921cd1a4e1d61f9672a4560d6.bin, 6ae9d25e02b54367a4e93c2492b8b02e.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e16dc51c51b2df88c474feb52ce884d152b3511094306a289623de69dedfdf48"
-		date = "2023-05-12"
+		hash = "e6056443537d4d2314dabca1b9168f1eaaf17a14eb41f6f5741b6b82b3119790"
+		hash = "ab0925398f3fa69a67eacee2bbb7b34ac395bb309df7fc7a9a9b8103ef41ed7a"
+		hash = "da11e9598eef033722b97873d1c046270dd039d0e3ee6cd37911e2dc2eb2608d"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c0020005800540043004f004d0020005300650072007600690063006500730020004400720069007600650072 } /* FileDescription Novell XTCOM Services Driver */
@@ -1475,17 +1469,17 @@ rule PUA_VULN_Driver_NovellInc_NovellXTier_5YWL {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006c00690062006e00690063006d002e007300790073 } /* OriginalFilename libnicm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200043006f007000790072006900670068007400200032003000300030002d0032003000310033002c0020004e006f00760065006c006c002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_8kN7 {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_8bMh {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - dd9596c18818288845423c68f3f39800.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3fa6379951f08ed3cb87eeba9cf0c5f5e1d0317dcfcf003b810df9d795eeb73e"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -1497,17 +1491,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_8kN7 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300035002d00320030003000390020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2005-2009 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_RDqb {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3FoR {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ad866d83b4f0391aecceb4e507011831.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3e1d47a497babbfd1c83905777b517ec87c65742bee7eb57a2273eca825d2272"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -1519,17 +1513,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_RDqb {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300035002d00320030003100310020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2005-2011 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_6nzK {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_7fnW {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 11dc5523bb559f8d2ce637f6a2b70dea.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6fb5bc9c51f6872de116c7db8a2134461743908efc306373f6de59a0646c4f5d"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVG anti rootkit */
@@ -1541,17 +1535,23 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310039002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2019 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ASRockIncorporation_AsrDrvsys_ASRockIODriver_95FN {
+rule PUA_VULN_Driver_ASRockIncorporation_AsrDrvsys_ASRockIODriver_3kMB {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 12908c285b9d68ee1f39186110df0f1e.bin, 4f27c09cc8680e06b04d6a9c34ca1e08.bin, 7c72a7e1d42b0790773efd8700e24952.bin, de1cc5c266140bff9d964fab87a29421.bin, 9b91a44a488e4d539f2e55476b216024.bin, 1a234f4643f5658bab07bfa611282267.bin, 76bb1a4332666222a8e3e1339e267179.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3943a796cc7c5352aa57ccf544295bfd6fb69aae147bc8235a00202dc6ed6838"
-		date = "2023-05-12"
+		hash = "950a4c0c772021cee26011a92194f0e58d61588f77f2873aa0599dff52a160c9"
+		hash = "2003b478b9fd1b3d76ec5bf4172c2e8915babbbee7ad1783794acbf8d4c2519d"
+		hash = "6ed35f310c96920a271c59a097b382da07856e40179c2a4239f8daa04eef38e7"
+		hash = "ece0a900ea089e730741499614c0917432246ceb5e11599ee3a1bb679e24fd2c"
+		hash = "f40435488389b4fb3b945ca21a8325a51e1b5f80f045ab019748d0ec66056a8b"
+		hash = "a7c2e7910942dd5e43e2f4eb159bcd2b4e71366e34a68109548b9fb12ac0f7cc"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100530052006f0063006b00200049004f0020004400720069007600650072 } /* FileDescription ASRock IO Driver */
@@ -1563,17 +1563,17 @@ rule PUA_VULN_Driver_ASRockIncorporation_AsrDrvsys_ASRockIODriver_95FN {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100730072004400720076002e007300790073 } /* OriginalFilename AsrDrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100320020004100530052006f0063006b00200049006e0063006f00720070006f0072006100740069006f006e } /* LegalCopyright Copyright (C) 2012 ASRock Incorporation */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_HPDevelopmentCompany_etdsuppsys_HPETDiDriverDLL_3e4Y {
+rule PUA_VULN_Driver_HPDevelopmentCompany_etdsuppsys_HPETDiDriverDLL_95uZ {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - a92bf3c219a5fa82087b6c31bdf36ff3.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f744abb99c97d98e4cd08072a897107829d6d8481aee96c22443f626d00f4145"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004500540044006900200053007500700070006f007200740020004400720069007600650072 } /* FileDescription ETDi Support Driver */
@@ -1585,61 +1585,17 @@ rule PUA_VULN_Driver_HPDevelopmentCompany_etdsuppsys_HPETDiDriverDLL_3e4Y {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0065007400640073007500700070002e007300790073 } /* OriginalFilename etdsupp.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200043006f007000790072006900670068007400200031003900390031002d00320030003200320020004800650077006c006500740074002d005000610063006b00610072006400200044006500760065006c006f0070006d0065006e007400200043006f006d00700061006e0079002c0020004c002e0050002e } /* LegalCopyright (C) Copyright 1991-2022 Hewlett-Packard Development Company, L.P. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_6uuP {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_4s5f {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "1e16a01ef44e4c56e87abfbe03b2989b0391b172c3ec162783ad640be65ab961"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310032002000430050005500490044 } /* LegalCopyright Copyright(C) 2012 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_vmdrvsys_WindowsRWinDDKdriver_68i6 {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "32cccc4f249499061c0afa18f534c825d01034a1f6815f5506bf4c4ff55d1351"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0056006f006900630065006d006f00640020005600690072007400750061006c00200041007500640069006f00200044006500760069006300650020002800570044004d0029 } /* FileDescription Voicemod Virtual Audio Device (WDM) */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b002000700072006f00760069006400650072 } /* CompanyName Windows (R) Win 7 DDK provider */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310030002e0030002e00310030003000310031002e00310036003300380034 } /* FileVersion 10.0.10011.16384 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310030002e0030002e00310030003000310031002e00310036003300380034 } /* ProductVersion 10.0.10011.16384 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0076006d006400720076002e007300790073 } /* InternalName vmdrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b0020006400720069007600650072 } /* ProductName Windows (R) Win 7 DDK driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0076006d006400720076002e007300790073 } /* OriginalFilename vmdrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200056006f006900630065006d006f006400200053002e004c002e0032003000310030002d0032003000320030 } /* LegalCopyright Copyright (C) Voicemod S.L.2010-2020 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_3ACy {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - f7d963c14a691a022301afa31de9ecef.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1f8168036d636aad1680dd0f577ef9532dbb2dad3591d63e752b0ba3ee6fd501"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
@@ -1651,17 +1607,21 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_3ACy {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300031003800200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2018 Intel Corporation All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_PhoenixTechnologies_Agentsys_DriverAgent_72g4 {
+rule PUA_VULN_Driver_PhoenixTechnologies_Agentsys_DriverAgent_xDvd {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 1ed08a6264c5c92099d6d1dae5e8f530.bin, 29ccff428e5eb70ae429c3da8968e1ec.bin, ddc2ffe0ab3fcd48db898ab13c38d88d.bin, a57b47489febc552515778dd0fd1e51c.bin, 8407ddfab85ae664e507c30314090385.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4045ae77859b1dbf13972451972eaaf6f3c97bea423e9e78f1c2f14330cd47ca"
-		date = "2023-05-12"
+		hash = "8cb62c5d41148de416014f80bd1fd033fd4d2bd504cb05b90eeb6992a382d58f"
+		hash = "6948480954137987a0be626c24cf594390960242cd75f094cd6aaa5c2e7a54fa"
+		hash = "b1d96233235a62dbb21b8dbe2d1ae333199669f67664b107bff1ad49b41d9414"
+		hash = "05f052c64d192cf69a462a5ec16dda0d43ca5d0245900c9fcb9201685a2e7748"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004400720069007600650072004100670065006e0074002000440069007200650063007400200049002f004f00200066006f0072002000360034002d006200690074002000570069006e0064006f00770073 } /* FileDescription DriverAgent Direct I/O for 64-bit Windows */
@@ -1673,17 +1633,17 @@ rule PUA_VULN_Driver_PhoenixTechnologies_Agentsys_DriverAgent_72g4 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100670065006e007400360034002e007300790073 } /* OriginalFilename Agent64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0045006e0054006500630068002000540061006900770061006e002c00200031003900390037002d0032003000300039 } /* LegalCopyright EnTech Taiwan, 1997-2009 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_3uAk {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_6SB8 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 3d5164e85d740bce0391e2b81d49d308.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d0e25b879d830e4f867b09d6540a664b6f88bad353cd14494c33b31a8091f605"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirIT Agent System */
@@ -1695,17 +1655,18 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_3uAk {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]007600690072006100670074002e007300790073 } /* OriginalFilename viragt.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200054004700200053006f0066007400200053002e0061002e0073002e00200032003000300036002c002000320030003100310020002d0020007700770077002e007400670073006f00660074002e00690074 } /* LegalCopyright Copyright (C) TG Soft S.a.s. 2006, 2011 - www.tgsoft.it */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_3Teg {
+rule PUA_VULN_Driver_NovellInc_NovellXTier_Mxox {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - f690bfc0799e51a626ba3931960c3173.bin, 3bf217f8ef018ca5ea20947bfdfc0a4d.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "904e0f7d485a98e8497d5ec6dd6e6e1cf0b8d8e067fb64a9e09790af3c8c9d5a"
-		date = "2023-05-12"
+		hash = "cf3180f5308af002ac5d6fd5b75d1340878c375f0aebc3157e3bcad6322b7190"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c00200043006c00690065006e007400200050006f00720074006100620069006c0069007400790020004c0061007900650072 } /* FileDescription Novell Client Portability Layer */
@@ -1716,17 +1677,17 @@ rule PUA_VULN_Driver_NovellInc_NovellXTier_3Teg {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00490043004d002e005300590053 } /* OriginalFilename NICM.SYS */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200043006f007000790072006900670068007400200032003000300030002d0032003000300038002c0020004e006f00760065006c006c002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_OpenLibSysorg_OpenLibSyssys_OpenLibSys_W4xs {
+rule PUA_VULN_Driver_OpenLibSysorg_OpenLibSyssys_OpenLibSys_828q {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 96421b56dbda73e9b965f027a3bda7ba.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f0605dda1def240dc7e14efa73927d6c6d89988c01ea8647b671667b2b167008"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004f00700065006e004c00690062005300790073 } /* FileDescription OpenLibSys */
@@ -1738,17 +1699,22 @@ rule PUA_VULN_Driver_OpenLibSysorg_OpenLibSyssys_OpenLibSys_W4xs {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004f00700065006e004c00690062005300790073002e007300790073 } /* OriginalFilename OpenLibSys.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000370020004f00700065006e004c00690062005300790073002e006f00720067 } /* LegalCopyright Copyright (C) 2007 OpenLibSys.org */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_RWEverything_RwDrvsys_RWEverythingReadWriteDriver_8HGy {
+rule PUA_VULN_Driver_RWEverything_RwDrvsys_RWEverythingReadWriteDriver_rBGB {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 5bab40019419a2713298a5c9173e5d30.bin, 7437d4070b5c018e05354c179f1d5e2a.bin, 4ad30223df1361726ff64417f8515272.bin, 56a515173b211832e20fbc64e5a0447c.bin, 31469f1313871690e8dc2e8ee4799b22.bin, 969f1d19449dc5c2535dd5786093f651.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2a652de6b680d5ad92376ad323021850dab2c653abf06edf26120f7714b8e08a"
-		date = "2023-05-12"
+		hash = "3384f4a892f7aa72c43280ff682d85c8e3936f37a68d978d307a9461149192de"
+		hash = "2470fd1b733314c9b0afa19fd39c5d19aa1b36db598b5ebbe93445caa545da5f"
+		hash = "47f08f7d30d824a8f4bb8a98916401a37c0fd8502db308aba91fe3112b892dcc"
+		hash = "0aafa9f47acf69d46c9542985994ff5321f00842a28df2396d4a3076776a83cb"
+		hash = "2bf29a2df52110ed463d51376562afceac0e80fbb1033284cf50edd86c406b14"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520057002d00450076006500720079007400680069006e006700200052006500610064002000260020005700720069007400650020004400720069007600650072 } /* FileDescription RW-Everything Read & Write Driver */
@@ -1760,39 +1726,17 @@ rule PUA_VULN_Driver_RWEverything_RwDrvsys_RWEverythingReadWriteDriver_8HGy {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00520077004400720076002e007300790073 } /* OriginalFilename RwDrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002000520057002d00450076006500720079007400680069006e0067 } /* LegalCopyright Copyright (C) 2008 RW-Everything */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ASRockIncorporation_AsrDrvsys_ASRockIODriver_ht5K {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7HP5 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "950a4c0c772021cee26011a92194f0e58d61588f77f2873aa0599dff52a160c9"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100530052006f0063006b00200049004f0020004400720069007600650072 } /* FileDescription ASRock IO Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004100530052006f0063006b00200049006e0063006f00720070006f0072006100740069006f006e } /* CompanyName ASRock Incorporation */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300030002e00300030002e00300030003000300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.00.00.0000 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300030002e00300030002e0030003000300030 } /* ProductVersion 1.00.00.0000 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004100730072004400720076002e007300790073 } /* InternalName AsrDrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004100530052006f0063006b00200049004f0020004400720069007600650072 } /* ProductName ASRock IO Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100730072004400720076002e007300790073 } /* OriginalFilename AsrDrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100320020004100530052006f0063006b00200049006e0063006f00720070006f0072006100740069006f006e } /* LegalCopyright Copyright (C) 2012 ASRock Incorporation */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7MrL {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 8580165a2803591e007380db9097bbcc.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5027fce41ed60906a0e76b97c95c2a5a83d57a2d1cd42de232a21f26c0d58e48"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -1804,17 +1748,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7MrL {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000320020002d002000320030003100320020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002 - 2012 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_3Gnr {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_8YuL {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - f83c61adbb154d46dd8f77923aa7e9c3.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "19d0fc91b70d7a719f7a28b4ad929f114bf1de94a4c7cba5ad821285a4485da0"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AVG Anti Rootkit */
@@ -1826,17 +1770,17 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_3Gn
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000320030002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2020 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_7cB3 {
+rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_5U7H {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 013719e840e955c2e4cd9d18c94a2625.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9b1ac756e35f795dd91adbc841e78db23cb7165280f8d4a01df663128b66d194"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d0044002000520079007a0065006e0020004d00610073007400650072002000530065007200760069006300650020004400720069007600650072 } /* FileDescription AMD Ryzen Master Service Driver */
@@ -1848,17 +1792,17 @@ rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMaster
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0041004d004400520079007a0065006e004d00610073007400650072004400720069007600650072002e007300790073 } /* OriginalFilename AMDRyzenMasterDriver.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a90020003200300031003700200041004d0044002c00200049006e0063002e } /* LegalCopyright Copyright © 2017 AMD, Inc. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanMonFltsys_PanCafeManager_3oYr {
+rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanMonFltsys_PanCafeManager_3jwm {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 2850608430dd089f24386f3336c84729.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7e0124fcc7c95fdc34408cf154cb41e654dade8b898c71ad587b2090b1da30d7"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500061006e00430061006600650020004d0061006e0061006700650072002000460069006c00650020004d006f006e00690074006f0072 } /* FileDescription PanCafe Manager File Monitor */
@@ -1870,39 +1814,17 @@ rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanMonFltsys_PanCaf
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00500061006e004d006f006e0046006c0074002e007300790073 } /* OriginalFilename PanMonFlt.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280063002900200032003000310032002d0032003000310034002000500061006e002000590061007a0131006c0131006d002000420069006c006900730069006d002000540065006b006e006f006c006f006a0069006c0065007200690020005400690063002e0020004c00740064002e0020005300740069002e } /* LegalCopyright Copyright (c) 2012-2014 Pan Yazılım Bilisim Teknolojileri Tic. Ltd. Sti. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_PhoenixTechnologies_Agentsys_DriverAgent_3sGs {
+rule PUA_VULN_Driver_LenovoGroupLimitedR_LenovoDiagnosticsDriversys_LenovoDiagnostics_68Hk {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "8cb62c5d41148de416014f80bd1fd033fd4d2bd504cb05b90eeb6992a382d58f"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004400720069007600650072004100670065006e0074002000440069007200650063007400200049002f004f00200066006f0072002000360034002d006200690074002000570069006e0064006f00770073 } /* FileDescription DriverAgent Direct I/O for 64-bit Windows */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00500068006f0065006e0069007800200054006500630068006e006f006c006f0067006900650073 } /* CompanyName Phoenix Technologies */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0030 } /* FileVersion 6.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0030 } /* ProductVersion 6.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004100670065006e007400360034002e007300790073 } /* InternalName Agent64.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004400720069007600650072004100670065006e0074 } /* ProductName DriverAgent */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100670065006e007400360034002e007300790073 } /* OriginalFilename Agent64.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0045006e0054006500630068002000540061006900770061006e002c00200031003900390037002d0032003000300039 } /* LegalCopyright EnTech Taiwan, 1997-2009 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_LenovoGroupLimitedR_LenovoDiagnosticsDriversys_LenovoDiagnostics_5Nkb {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - b941c8364308990ee4cc6eadf7214e0f.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f05b1ee9e2f6ab704b8919d5071becbce6f9d0f9d0ba32a460c41d5272134abe"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c0065006e006f0076006f00200044006900610067006e006f00730074006900630073002000440072006900760065007200200066006f0072002000570069006e0064006f0077007300200031003000200061006e00640020006c0061007400650072002e } /* FileDescription Lenovo Diagnostics Driver for Windows 10 and later. */
@@ -1914,17 +1836,17 @@ rule PUA_VULN_Driver_LenovoGroupLimitedR_LenovoDiagnosticsDriversys_LenovoDiagno
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004c0065006e006f0076006f0044006900610067006e006f00730074006900630073004400720069007600650072002e007300790073 } /* OriginalFilename LenovoDiagnosticsDriver.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a9002000320030003200310020004c0065006e006f0076006f002000470072006f007500700020004c0069006d0069007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © 2021 Lenovo Group Limited. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Dell_DBUtil_6dim {
+rule PUA_VULN_Driver_Dell_DBUtil_MUQo {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - d104621c93213942b7b43d65b5d8d33e.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "71fe5af0f1564dc187eea8d59c0fbc897712afa07d18316d2080330ba17cf009"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00440042005500740069006c } /* FileDescription DBUtil */
@@ -1933,17 +1855,18 @@ rule PUA_VULN_Driver_Dell_DBUtil_6dim {
 		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00440042005500740069006c } /* ProductName DBUtil */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a900200032003000320031002000440065006c006c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e0020 } /* LegalCopyright © 2021 Dell Inc. All Rights Reserved.  */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ATSZIO_ATSZIODriver_4F8z {
+rule PUA_VULN_Driver_ATSZIO_ATSZIODriver_TXgR {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - f84da507b3067f019c340b737cd68d32.bin, 030c8432981e4d41b191624b3e07afe2.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "673bcec3d53fab5efd6e3bac25ac9d6cc51f6bbdf8336e38aade2713dc1ae11b"
-		date = "2023-05-12"
+		hash = "31d8fc6f5fb837d5eb29db828d13ba8ee11867d86a90b2c2483a578e1d0ec43a"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100540053005a0049004f0020004400720069007600650072 } /* FileDescription ATSZIO Driver */
@@ -1954,17 +1877,17 @@ rule PUA_VULN_Driver_ATSZIO_ATSZIODriver_4F8z {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100540053005a0049004f002e007300790073 } /* OriginalFilename ATSZIO.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310030 } /* LegalCopyright Copyright (C) 2010 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ASUS_asmmapsys_ATKGenericFunctionService_86FM {
+rule PUA_VULN_Driver_ASUS_asmmapsys_ATKGenericFunctionService_6gqt {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 4c016fd76ed5c05e84ca8cab77993961.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "025e7be9fcefd6a83f4471bba0c11f1c11bd5047047d26626da24ee9a419cdc4"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d0065006d006f007200790020006d0061007000700069006e00670020004400720069007600650072 } /* FileDescription Memory mapping Driver */
@@ -1976,39 +1899,19 @@ rule PUA_VULN_Driver_ASUS_asmmapsys_ATKGenericFunctionService_86FM {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00610073006d006d00610070002e007300790073 } /* OriginalFilename asmmap.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300039 } /* LegalCopyright Copyright (C) 2009 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_RWEverything_RwDrvsys_RWEverythingReadWriteDriver_4aMr {
+rule PUA_VULN_Driver_NovellInc_NovellXTier_563B {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "3384f4a892f7aa72c43280ff682d85c8e3936f37a68d978d307a9461149192de"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520057002d00450076006500720079007400680069006e006700200052006500610064002000260020005700720069007400650020004400720069007600650072 } /* FileDescription RW-Everything Read & Write Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00520057002d00450076006500720079007400680069006e0067 } /* CompanyName RW-Everything */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300030002e00300030002e00300030003000300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.00.00.0000 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300030002e00300030002e0030003000300030 } /* ProductVersion 1.00.00.0000 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00520077004400720076002e007300790073 } /* InternalName RwDrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00520057002d00450076006500720079007400680069006e006700200052006500610064002000260020005700720069007400650020004400720069007600650072 } /* ProductName RW-Everything Read & Write Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00520077004400720076002e007300790073 } /* OriginalFilename RwDrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002000520057002d00450076006500720079007400680069006e0067 } /* LegalCopyright Copyright (C) 2008 RW-Everything */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_NovellInc_NovellXTier_8dwr {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - bd5d4d07ae09e9f418d6b4ac6d9f2ed5.bin, 4a23e0f2c6f926a41b28d574cbc6ac30.bin, 4c76554d9a72653c6156ca0024d21a8e.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fb81b5f8bf69637dbdf050181499088a67d24577587bc520de94b5ee8996240f"
-		date = "2023-05-12"
+		hash = "76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22"
+		hash = "2e665962c827ce0adbd29fe6bcf09bbb1d7a7022075d162ff9b65d0af9794ac0"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c002000580054006900650072002000530065007300730069006f006e0020004d0061006e0061006700650072 } /* FileDescription Novell XTier Session Manager */
@@ -2019,17 +1922,17 @@ rule PUA_VULN_Driver_NovellInc_NovellXTier_8dwr {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006e00730063006d002e007300790073 } /* OriginalFilename nscm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200043006f007000790072006900670068007400200032003000300030002d0032003000310033002c0020004e006f00760065006c006c002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Realtek_rtkiosys_RealtekIODriver_7gqt {
+rule PUA_VULN_Driver_Realtek_rtkiosys_RealtekIODriver_6nAz {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 70dcd07d38017b43f710061f37cb4a91.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7133a461aeb03b4d69d43f3d26cd1a9e3ee01694e97a0645a3d8aa1a44c39129"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f0020004400720069007600650072 } /* FileDescription Realtek IO Driver */
@@ -2041,61 +1944,18 @@ rule PUA_VULN_Driver_Realtek_rtkiosys_RealtekIODriver_7gqt {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00720074006b0069006f00360034002e0073007900730020 } /* OriginalFilename rtkio64.sys  */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100370020005200650061006c00740065006b002000530065006d00690063006f006e0064007500630074006f007200200043006f00720070006f0072006100740069006f006e002e00200041006c006c002000520069006700680074002000520065007300650072007600650064002e002000200020002000200020002000200020002000200020 } /* LegalCopyright Copyright (C) 2017 Realtek Semiconductor Corporation. All Right Reserved.             */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_72eD {
+rule PUA_VULN_Driver_LGElectronicsInc_LHAsys_MicrosoftWindowsOperatingSystem_7583 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "2101d5e80e92c55ecfd8c24fcf2202a206a4fd70195a1378f88c4cc04d336f22"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310034002000430050005500490044 } /* LegalCopyright Copyright(C) 2014 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_4e2s {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "c2a4ddcc9c3b339d752c48925d62fc4cc5adbf6fae8fedef74cdd47e88da01f8"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_LGElectronicsInc_LHAsys_MicrosoftWindowsOperatingSystem_72dp {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 1d768959aaa194d60e4524ce47708377.bin, 748cf64b95ca83abc35762ad2c25458f.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "23ba19352b1e71a965260bf4d5120f0200709ee8657ed381043bec9a938a1ade"
-		date = "2023-05-12"
+		hash = "e75714f8e0ff45605f6fc7689a1a89c7dcd34aab66c6131c63fefaca584539cf"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c00480041 } /* FileDescription LHA */
@@ -2107,17 +1967,17 @@ rule PUA_VULN_Driver_LGElectronicsInc_LHAsys_MicrosoftWindowsOperatingSystem_72d
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004c00480041002e007300790073 } /* OriginalFilename LHA.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0075006c00740072006100620069006f007300400068006f0074006d00610069006c002e0063006f006d } /* LegalCopyright ultrabios@hotmail.com */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_LogMeInInc_LMIinfosys_LogMeIn_4ibs {
+rule PUA_VULN_Driver_LogMeInInc_LMIinfosys_LogMeIn_4rwx {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - d4f7c14e92b36c341c41ae93159407dd.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "453be8f63cc6b116e2049659e081d896491cf1a426e3d5f029f98146a3f44233"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c006f0067004d00650049006e0020004b00650072006e0065006c00200049006e0066006f0072006d006100740069006f006e002000500072006f00760069006400650072 } /* FileDescription LogMeIn Kernel Information Provider */
@@ -2129,83 +1989,17 @@ rule PUA_VULN_Driver_LogMeInInc_LMIinfosys_LogMeIn_4ibs {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004c004d00490069006e0066006f002e007300790073 } /* OriginalFilename LMIinfo.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a900200032003000300033002d00320030003100370020004c006f0067004d00650049006e002c00200049006e0063002e00200050006100740065006e00740065006400200061006e006400200070006100740065006e00740073002000700065006e00640069006e0067002e } /* LegalCopyright Copyright © 2003-2017 LogMeIn, Inc. Patented and patents pending. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_8xyi {
+rule PUA_VULN_Driver_InsydeSoftwareCorp_segwindrvxsys_SEGWindowsDriverx_34gH {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "523d1d43e896077f32cd9acaa8e85b513bfb7b013a625e56f0d4e9675d9822ba"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310030002000430050005500490044 } /* LegalCopyright Copyright(C) 2010 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_7VtZ {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "50d5eaa168c077ce5b7f15b3f2c43bd2b86b07b1e926c1b332f8cb13bd2e0793"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_7SnH {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "45c3d607cb57a1714c1c604a25cbadf2779f4734855d0e43aa394073b6966b26"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310034002000430050005500490044 } /* LegalCopyright Copyright(C) 2014 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_InsydeSoftwareCorp_segwindrvxsys_SEGWindowsDriverx_6n9q {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - bdc3b6b83dde7111d5d6b9a2aadf233f.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c628cda1ef43defc00af45b79949675a8422490d32b080b3a8bb9434242bdbf2"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005300450047002000570069006e0064006f0077007300200044007200690076006500720020007800360034 } /* FileDescription SEG Windows Driver x64 */
@@ -2217,17 +2011,17 @@ rule PUA_VULN_Driver_InsydeSoftwareCorp_segwindrvxsys_SEGWindowsDriverx_6n9q {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00730065006700770069006e006400720076007800360034002e007300790073 } /* OriginalFilename segwindrvx64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800630029002000320030003100320020002d00200032003000310034002c00200049006e007300790064006500200053006f00660074007700610072006500200043006f00720070002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (c) 2012 - 2014, Insyde Software Corp. All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_3D86 {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_4FdY {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 945ef111161bae49075107e5bc11a23f.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2fbbc276737047cb9b3ba5396756d28c1737342d89dce1b64c23a9c4513ae445"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCD Windows NT/2000/XP I/O driver */
@@ -2239,17 +2033,17 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_3D86 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0045006c00620079004300440049004f002e007300790073 } /* OriginalFilename ElbyCDIO.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000300020002d0020003200300030003700200045006c00610062006f0072006100740065002000420079007400650073002000410047 } /* LegalCopyright Copyright (C) 2000 - 2007 Elaborate Bytes AG */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_93qo {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_42NB {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 0ef05030abd55ba6b02faa2c0970f67f.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "bced04bdefad6a08c763265d6993f07aa2feb57d33ed057f162a947cf0e6668f"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
@@ -2261,39 +2055,17 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_9
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d002e002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000300035 } /* LegalCopyright Copyright (C) M. Russinovich 1996-2005 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_7fzy {
+rule PUA_VULN_Driver_Realtek_rtkiowxsys_RealtekIODriver_cnA9 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "600a2119657973112025db3c0eeab2e69d528bccfeed75f40c6ef50b059ec8a0"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310034002000430050005500490044 } /* LegalCopyright Copyright(C) 2014 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_Realtek_rtkiowxsys_RealtekIODriver_3zzv {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - b8b6686324f7aa77f570bc019ec214e6.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "082c39fe2e3217004206535e271ebd45c11eb072efde4cc9885b25ba5c39f91d"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f0020004400720069007600650072 } /* FileDescription Realtek IO Driver */
@@ -2305,61 +2077,17 @@ rule PUA_VULN_Driver_Realtek_rtkiowxsys_RealtekIODriver_3zzv {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00720074006b0069006f00770038007800360034002e0073007900730020 } /* OriginalFilename rtkiow8x64.sys  */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100370020005200650061006c00740065006b002000530065006d00690063006f006e0064007500630074006f007200200043006f00720070006f0072006100740069006f006e002e00200041006c006c002000520069006700680074002000520065007300650072007600650064002e002000200020002000200020002000200020002000200020 } /* LegalCopyright Copyright (C) 2017 Realtek Semiconductor Corporation. All Right Reserved.             */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_7UQT {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_6NYK {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "9c10e2ec4f9ef591415f9a784b93dc9c9cdafa7c69602c0dc860c5b62222e449"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_ATITechnologiesInc_atillksys_ATIDiagnostics_7Hm6 {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "38bb9751a3a1f072d518afe6921a66ee6d5cf6d25bc50af49e1925f20d75d4d7"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410054004900200044006900610067006e006f007300740069006300730020004800610072006400770061007200650020004100620073007400720061006300740069006f006e0020005300790073 } /* FileDescription ATI Diagnostics Hardware Abstraction Sys */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00410054004900200054006500630068006e006f006c006f006700690065007300200049006e0063002e } /* CompanyName ATI Technologies Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0035002e00310031002e0039002e0030 } /* FileVersion 5.11.9.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0035002e00310031002e0039002e0030 } /* ProductVersion 5.11.9.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006100740069006c006c006b00360034002e007300790073 } /* InternalName atillk64.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00410054004900200044006900610067006e006f00730074006900630073 } /* ProductName ATI Diagnostics */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100740069006c006c006b00360034002e007300790073 } /* OriginalFilename atillk64.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000410054004900200054006500630068006e006f006c006f006700690065007300200049006e0063002e002c00200032003000300033 } /* LegalCopyright Copyright (C) ATI Technologies Inc., 2003 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_7tC7 {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 2cc65e805757cfc4f87889cdceb546cd.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d1f4949f76d8ac9f2fa844d16b1b45fb1375d149d46e414e4a4c9424dc66c91f"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
@@ -2371,17 +2099,17 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_7tC7 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300031003500200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2015 Intel Corporation All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_5A98 {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_ymvN {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 1c61eb82f1269d8d6be8de2411133811.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7cb497abc44aad09a38160d6a071db499e05ff5871802ccc45d565d242026ee7"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
@@ -2393,17 +2121,17 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_5A98 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300031003900200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2019 Intel Corporation All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_SafeNetInc_Hostnt_Hostnt_6xH4 {
+rule PUA_VULN_Driver_SafeNetInc_Hostnt_Hostnt_exJa {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - e8ebba56ea799e1e62748c59e1a4c586.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "07b6d69bafcfd767f1b63a490a8843c3bb1f8e1bbea56176109b5743c8f7d357"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0048006f00730074006e0074002000360034002d0062006900740020006400720069007600650072 } /* FileDescription Hostnt 64-bit driver */
@@ -2415,17 +2143,17 @@ rule PUA_VULN_Driver_SafeNetInc_Hostnt_Hostnt_6xH4 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0048006f00730074006e0074002e007300790073 } /* OriginalFilename Hostnt.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000200053006100660065004e00650074002c00200049006e0063002e } /* LegalCopyright Copyright (C)  SafeNet, Inc. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_7DQj {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_5tum {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 707ab1170389eba44ffd4cfad01b5969.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7cb594af6a3655daebc9fad9c8abf2417b00ba31dcd118707824e5316fc0cc21"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -2435,17 +2163,17 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_7DQj {
 		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005a0041004d } /* ProductName ZAM */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]005a0065006d0061006e00610020004c00740064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Zemana Ltd. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ASRockIncorporation_AsrAutoChkUpdDrvsys_AsrAutoChkUpdDrvDriver_Pe8o {
+rule PUA_VULN_Driver_ASRockIncorporation_AsrAutoChkUpdDrvsys_AsrAutoChkUpdDrvDriver_7rmj {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 75d6c3469347de1cdfa3b1b9f1544208.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2aa1b08f47fbb1e2bd2e4a492f5d616968e703e1359a921f62b38b8e4662f0c4"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100730072004100750074006f00430068006b0055007000640044007200760020004400720069007600650072 } /* FileDescription AsrAutoChkUpdDrv Driver */
@@ -2457,17 +2185,18 @@ rule PUA_VULN_Driver_ASRockIncorporation_AsrAutoChkUpdDrvsys_AsrAutoChkUpdDrvDri
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100730072004100750074006f00430068006b005500700064004400720076002e007300790073 } /* OriginalFilename AsrAutoChkUpdDrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100320020004100530052006f0063006b00200049006e0063006f00720070006f0072006100740069006f006e } /* LegalCopyright Copyright (C) 2012 ASRock Incorporation */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6kBk {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5EJc {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 46edb648c1b5c3abd76bd5e912dac026.bin, f33c3f08536f988aac84d72d83b139a6.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "97b32ddf83f75637e3ba934df117081dd6a1c57d47a4c9700d35e736da11d5bd"
-		date = "2023-05-12"
+		hash = "89108a15f009b285db4ef94250b889d5b11b96b4aa7b190784a6d1396e893e10"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -2479,39 +2208,18 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6kBk {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000320020002d002000320030003100320020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002 - 2012 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_PhoenixTechnologies_Agentsys_DriverAgent_94Z3 {
+rule PUA_VULN_Driver_NovellInc_NovellXTier_8pHU {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "6948480954137987a0be626c24cf594390960242cd75f094cd6aaa5c2e7a54fa"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004400720069007600650072004100670065006e0074002000440069007200650063007400200049002f004f00200066006f0072002000360034002d006200690074002000570069006e0064006f00770073 } /* FileDescription DriverAgent Direct I/O for 64-bit Windows */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00500068006f0065006e0069007800200054006500630068006e006f006c006f0067006900650073 } /* CompanyName Phoenix Technologies */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0030 } /* FileVersion 6.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0030 } /* ProductVersion 6.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004100670065006e007400360034002e007300790073 } /* InternalName Agent64.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004400720069007600650072004100670065006e0074 } /* ProductName DriverAgent */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100670065006e007400360034002e007300790073 } /* OriginalFilename Agent64.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0045006e0054006500630068002000540061006900770061006e002c00200031003900390037002d0032003000300039 } /* LegalCopyright EnTech Taiwan, 1997-2009 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_NovellInc_NovellXTier_7QGa {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ba2c0fa201c74621cddd8638497b3c70.bin, a1547e8b2ca0516d0d9191a55b8536c0.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "28999af32b55ddb7dcfc26376a244aa2fe297233ce7abe4919a1aef2f7e2cee7"
-		date = "2023-05-12"
+		hash = "ce23c2dae4cca4771ea50ec737093dfafac06c64db0f924a1ccbbf687e33f5a2"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c002000580054006900650072002000530065007300730069006f006e0020004d0061006e0061006700650072 } /* FileDescription Novell XTier Session Manager */
@@ -2522,61 +2230,17 @@ rule PUA_VULN_Driver_NovellInc_NovellXTier_7QGa {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006e00730063006d002e007300790073 } /* OriginalFilename nscm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200043006f007000790072006900670068007400200032003000300030002d0032003000300038002c0020004e006f00760065006c006c002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_4B8H {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6fqd {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "f29073dc99cb52fa890aae80037b48a172138f112474a1aecddae21179c93478"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0053007900730069006e007400650072006e0061006c00730020002d0020007700770077002e0073007900730069006e007400650072006e0061006c0073002e0063006f006d } /* CompanyName Sysinternals - www.sysinternals.com */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310035002e00300030 } /* FileVersion 15.00 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310035002e00300030 } /* ProductVersion 15.00 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00700072006f0063006500780070002e007300790073 } /* InternalName procexp.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* ProductName Process Explorer */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d00610072006b002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000310034 } /* LegalCopyright Copyright (C) Mark Russinovich 1996-2014 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_RWEverything_RwDrvsys_RwDrvDriver_8XmG {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "3279593db91bb7ad5b489a01808c645eafafda6cc9c39f50d10ccc30203f2ddf"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200770044007200760020004400720069007600650072 } /* FileDescription RwDrv Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00520057002d00450076006500720079007400680069006e0067 } /* CompanyName RW-Everything */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300030002e00300030002e00300030003000300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.00.00.0000 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300030002e00300030002e0030003000300030 } /* ProductVersion 1.00.00.0000 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00520077004400720076002e007300790073 } /* InternalName RwDrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005200770044007200760020004400720069007600650072 } /* ProductName RwDrv Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00520077004400720076002e007300790073 } /* OriginalFilename RwDrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310031002000520057002d00450076006500720079007400680069006e0067 } /* LegalCopyright Copyright (C) 2011 RW-Everything */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5S29 {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 1db988eb9ac5f99756c33b91830a9cf6.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "818e396595d08d724666803cd29dac566dc7db23bf50e9919d04b33afa988c01"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -2588,105 +2252,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5S29 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000200028004300290020002000320030003100370020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright  (C)  2017 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 500KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_cpuzsys_WindowsRWinDDKdriver_6Zh9 {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3aQ8 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "c3e150eb7e7292f70299d3054ed429156a4c32b1f7466a706a2b99249022979e"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b002000700072006f00760069006400650072 } /* CompanyName Windows (R) Win 7 DDK provider */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b0020006400720069007600650072 } /* ProductName Windows (R) Win 7 DDK driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AsusTekComputerInc_BsDefsys_SupportSSTSFSSTEEATFTATCAMFNTAMFNBVCTVCBMFTWC_6dHJ {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "3326e2d32bbabd69feb6024809afc56c7e39241ebe70a53728c77e80995422a5"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00440065006600610075006c0074002000420049004f005300200046006c0061007300680020004400720069007600650072 } /* FileDescription Default BIOS Flash Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004100730075007300540065006b00200043006f006d0070007500740065007200200049006e0063002e } /* CompanyName AsusTek Computer Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e003200340020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.24 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00320034 } /* ProductVersion 1.24 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00420073005f00440065006600360034002e007300790073 } /* InternalName Bs_Def64.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0053007500700070006f0072007400200053005300540033003900530046003000320030002c0053005300540032003900450045003000320030002c004100540034003900460030003000320054002c00410054003200390043003000320030002c0041004d003200390046003000300032004e0054002c0041004d003200390046003000300032004e0042002c0056003200390043003500310030003000320054002c0056003200390043003500310030003000320042002c004d0032003900460030003000320054002c0057003200390043003000320030002e } /* ProductName Support SST39SF020,SST29EE020,AT49F002T,AT29C020,AM29F002NT,AM29F002NB,V29C51002T,V29C51002B,M29F002T,W29C020. */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00420073005f00440065006600360034002e007300790073 } /* OriginalFilename Bs_Def64.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004100730075007300540065006b00200043006f006d00700075007400650072002e00200031003900390032002d0032003000300034 } /* LegalCopyright Copyright (C) AsusTek Computer. 1992-2004 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_4JSQ {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "89b9823ed974a5b71de8468324d45b7e9d6dc914f93615ba86c6209b25b3cbf7"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0053007900730069006e007400650072006e0061006c00730020002d0020007700770077002e0073007900730069006e007400650072006e0061006c0073002e0063006f006d } /* CompanyName Sysinternals - www.sysinternals.com */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310035002e00300030 } /* FileVersion 15.00 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310035002e00300030 } /* ProductVersion 15.00 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00700072006f0063006500780070002e007300790073 } /* InternalName procexp.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* ProductName Process Explorer */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d00610072006b002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000310034 } /* LegalCopyright Copyright (C) Mark Russinovich 1996-2014 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_7vJi {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "6f1ff29e2e710f6d064dc74e8e011331d807c32cc2a622cbe507fd4b4d43f8f4"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4hSV {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - a31246180e61140ad7ff9dd7edf1f6a1.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6ffdde6bc6784c13c601442e47157062941c47015891e7139c2aaba676ab59cc"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c00650020004e006f00540072006100700020004200750069006c0064 } /* FileDescription TrendMicro Common Module NoTrap Build */
@@ -2698,17 +2274,20 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4hSV {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300035002d00320030003100310020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2005-2011 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_6VqB {
+rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_4rHy {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - c046ca4da48db1524ddf3a49a8d02b65.bin, bf581e9eb91bace0b02a2c5a54bf1419.bin, 9b157f1261a8a42e4ef5ec23dd4cda9e.bin, 8ad9dfc971df71cd43788ade6acf8e7d.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "771015b2620942919bb2e0683476635b7a09db55216d6fbf03534cb18513b20c"
-		date = "2023-05-12"
+		hash = "8d57e416ea4bb855b78a2ff3c80de1dfbb5dc5ee9bfbdddb23e46bd8619287e2"
+		hash = "900dd68ccc72d73774a347b3290c4b6153ae496a81de722ebb043e2e99496f88"
+		hash = "f74ffd6916333662900cbecb90aca2d6475a714ce410adf9c5c3264abbe5732c"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
@@ -2720,17 +2299,17 @@ rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_6VqB {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310035002000430050005500490044 } /* LegalCopyright Copyright(C) 2015 CPUID */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_WindowsRServerDDKprovider_speedfansys_WindowsRServerDDKdriver_8f5i {
+rule PUA_VULN_Driver_WindowsRServerDDKprovider_speedfansys_WindowsRServerDDKdriver_3yZd {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 5f9785e7535f8f602cb294a54962c9e7.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "22be050955347661685a4343c51f11c7811674e030386d2264cd12ecbf544b7c"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0053007000650065006400460061006e00200044006500760069006300650020004400720069007600650072 } /* FileDescription SpeedFan Device Driver */
@@ -2742,17 +2321,17 @@ rule PUA_VULN_Driver_WindowsRServerDDKprovider_speedfansys_WindowsRServerDDKdriv
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0073007000650065006400660061006e002e007300790073 } /* OriginalFilename speedfan.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_OpenLibSysorg_OpenLibSyssys_OpenLibSys_3jTU {
+rule PUA_VULN_Driver_OpenLibSysorg_OpenLibSyssys_OpenLibSys_7cPK {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ccf523b951afaa0147f22e2a7aae4976.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "91314768da140999e682d2a290d48b78bb25a35525ea12c1b1f9634d14602b2c"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004f00700065006e004c00690062005300790073 } /* FileDescription OpenLibSys */
@@ -2764,39 +2343,17 @@ rule PUA_VULN_Driver_OpenLibSysorg_OpenLibSyssys_OpenLibSys_3jTU {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004f00700065006e004c00690062005300790073002e007300790073 } /* OriginalFilename OpenLibSys.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000370020004f00700065006e004c00690062005300790073002e006f00720067 } /* LegalCopyright Copyright (C) 2007 OpenLibSys.org */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_RWEverything_RwDrvsys_RWEverythingReadWriteDriver_8D6g {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_5hLJ {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "2470fd1b733314c9b0afa19fd39c5d19aa1b36db598b5ebbe93445caa545da5f"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520057002d00450076006500720079007400680069006e006700200052006500610064002000260020005700720069007400650020004400720069007600650072 } /* FileDescription RW-Everything Read & Write Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00520057002d00450076006500720079007400680069006e0067 } /* CompanyName RW-Everything */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300030002e00300030002e00300030003000300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.00.00.0000 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300030002e00300030002e0030003000300030 } /* ProductVersion 1.00.00.0000 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00520077004400720076002e007300790073 } /* InternalName RwDrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00520057002d00450076006500720079007400680069006e006700200052006500610064002000260020005700720069007400650020004400720069007600650072 } /* ProductName RW-Everything Read & Write Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00520077004400720076002e007300790073 } /* OriginalFilename RwDrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002000520057002d00450076006500720079007400680069006e0067 } /* LegalCopyright Copyright (C) 2008 RW-Everything */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_5Fnf {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 3ad7b36a584504b3c70b5f552ba33015.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e4eca7db365929ff7c5c785e2eab04ef8ec67ea9edcf7392f2b74eccd9449148"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirIT Agent System */
@@ -2808,17 +2365,17 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_5Fnf {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]007600690072006100670074002e007300790073 } /* OriginalFilename viragt.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200054004700200053006f0066007400200053002e0061002e0073002e00200032003000300036002c002000320030003100310020002d0020007700770077002e007400670073006f00660074002e00690074 } /* LegalCopyright Copyright (C) TG Soft S.a.s. 2006, 2011 - www.tgsoft.it */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_5yup {
+rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_8dEJ {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 6682176866d6bd6b4ea3c8e398bd3aae.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fb6b0d304433bf88cc7d57728683dbb4b9833459dc33528918ead09b3907ff22"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100540053005a0049004f0020004400720069007600650072 } /* FileDescription ATSZIO Driver */
@@ -2830,17 +2387,18 @@ rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_5yup {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100540053005a0049004f002e007300790073 } /* OriginalFilename ATSZIO.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310032 } /* LegalCopyright Copyright (C) 2012 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_4LJ4 {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_4vrn {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - e6cb1728c50bd020e531d19a14904e1c.bin, b79475c4783efdd8122694c6b5669a79.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "075de997497262a9d105afeadaaefc6348b25ce0e0126505c24aa9396c251e85"
-		date = "2023-05-12"
+		hash = "cdfbe62ef515546f1728189260d0bdf77167063b6dbb77f1db6ed8b61145a2bc"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
@@ -2852,17 +2410,19 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_4
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d00610072006b002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000320030 } /* LegalCopyright Copyright (C) Mark Russinovich 1996-2020 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_4FLk {
+rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_8mK5 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 55a7c51dc2aa959c41e391db8f6b8b4f.bin, 61b068b10abfa0776f3b96a208d75bf9.bin, 88a6d84f4f1cc188741271ac1999a4e9.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ae42afa9be9aa6f6a5ae09fa9c05cd2dfb7861dc72d4fd8e0130e5843756c471"
-		date = "2023-05-12"
+		hash = "d636c011b8b2896572f5de260eb997182cc6955449b044a739bd19cbe6fdabd2"
+		hash = "0f035948848432bc243704041739e49b528f35c82a5be922d9e3b8a4c44398ff"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d0049004300530059005300200049004f0020006400720069007600650072 } /* FileDescription MICSYS IO driver */
@@ -2874,39 +2434,17 @@ rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_4FLk {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004d00730049006f00360034002e007300790073 } /* OriginalFilename MsIo64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800630029002000320030003200310020004d00490043005300590053 } /* LegalCopyright Copyright (c) 2021 MICSYS */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_838Z {
+rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublic_4Kqb {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "8d57e416ea4bb855b78a2ff3c80de1dfbb5dc5ee9bfbdddb23e46bd8619287e2"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310035002000430050005500490044 } /* LegalCopyright Copyright(C) 2015 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublic_6wvE {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 02a1d77ef13bd41cad04abcce896d0b9.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3724b39e97936bb20ada51c6119aded04530ed86f6b8d6b45fbfb2f3b9a4114b"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200053007500700070006f007200740020004400720069007600650072 } /* FileDescription VirtualBox Support Driver */
@@ -2918,17 +2456,17 @@ rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublic_6wvE {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00560042006f0078004400720076002e007300790073 } /* OriginalFilename VBoxDrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300039002d00320030003100390020004f007200610063006c006500200043006f00720070006f0072006100740069006f006e } /* LegalCopyright Copyright (C) 2009-2019 Oracle Corporation */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 400KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_7jDU {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_349i {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 702d5606cf2199e0edea6f0e0d27cd10.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "238046cfe126a1f8ab96d8b62f6aa5ec97bab830e2bae5b1b6ab2d31894c79e4"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f00770073002000780036003400200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCD Windows x64 I/O driver */
@@ -2940,17 +2478,18 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_7jDU {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0045006c00620079004300440049004f002e007300790073 } /* OriginalFilename ElbyCDIO.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000300020002d0020003200300030003900200045006c00610062006f0072006100740065002000420079007400650073002000410047 } /* LegalCopyright Copyright (C) 2000 - 2009 Elaborate Bytes AG */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibXsys_NTIOLibX_8bv8 {
+rule PUA_VULN_Driver_MSI_NTIOLibXsys_NTIOLibX_5eYP {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 3651a6990fe38711ebb285143f867a43.bin, 34069a15ae3aa0e879cd0d81708e4bcc.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1e8b0c1966e566a523d652e00f7727d8b0663f1dfdce3b9a09b9adfaef48d8ee"
-		date = "2023-05-12"
+		hash = "5d530e111400785d183057113d70623e17af32931668ab7c7fc826f0fd4f91a3"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062005f005800360034 } /* FileDescription NTIOLib_X64 */
@@ -2962,39 +2501,19 @@ rule PUA_VULN_Driver_MSI_NTIOLibXsys_NTIOLibX_8bv8 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062005f005800360034002e007300790073 } /* OriginalFilename NTIOLib_X64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100340020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2014 MSI. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_RWEverything_RwDrvsys_RWEverythingReadWriteDriver_6ieQ {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_67iW {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "47f08f7d30d824a8f4bb8a98916401a37c0fd8502db308aba91fe3112b892dcc"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520057002d00450076006500720079007400680069006e006700200052006500610064002000260020005700720069007400650020004400720069007600650072 } /* FileDescription RW-Everything Read & Write Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00520057002d00450076006500720079007400680069006e0067 } /* CompanyName RW-Everything */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300030002e00300030002e00300030003000300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.00.00.0000 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300030002e00300030002e0030003000300030 } /* ProductVersion 1.00.00.0000 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00520077004400720076002e007300790073 } /* InternalName RwDrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00520057002d00450076006500720079007400680069006e006700200052006500610064002000260020005700720069007400650020004400720069007600650072 } /* ProductName RW-Everything Read & Write Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00520077004400720076002e007300790073 } /* OriginalFilename RwDrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002000520057002d00450076006500720079007400680069006e0067 } /* LegalCopyright Copyright (C) 2008 RW-Everything */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_7ZAU {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 90f8c1b76f786814d03ef4c51d4abb6d.bin, 8e78ab9b9709bafb11695a0a6eddeff9.bin, e4a0bba88605d4c07b58a2cc3fac0fe9.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6bfc0f425de9f4e7480aa2d1f2e08892d0553ed0df1c31e9bf3d8d702f38fa2e"
-		date = "2023-05-12"
+		hash = "3c7e5b25a33a7805c999d318a9523fcae46695a89f55bbdb8bb9087360323dfc"
+		hash = "46621554728bc55438c7c241137af401250f062edef6e7efecf1a6f0f6d0c1f7"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
@@ -3006,17 +2525,17 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_7
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d002e002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000310031 } /* LegalCopyright Copyright (C) M. Russinovich 1996-2011 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_3Gxn {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_QbxF {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - da6f7407c4656a2dbaf16a407aff1a38.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7a48f92a9c2d95a72e18055cac28c1e7e6cad5f47aa735cbea5c3b82813ccfaf"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
@@ -3028,17 +2547,17 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_3
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d00610072006b002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000320031 } /* LegalCopyright Copyright (C) Mark Russinovich 1996-2021 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_ja69 {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_7DHf {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 99c131567c10c25589e741e69a8f8aa3.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "45f42c5d874369d6be270ea27a5511efcca512aeac7977f83a51b7c4dee6b5ef"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -3047,17 +2566,24 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_ja69 {
 		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005a0041004d } /* ProductName ZAM */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]005a0065006d0061006e00610020004c00740064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Zemana Ltd. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_5B3b {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_8w93 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - de4001f89ed139d1ed6ae5586d48997a.bin, 349fa788a4a7b57e37e426aca9b736d5.bin, ce67e51b8c0370d1bfe421b79fa8b656.bin, 477e02a8e31cde2e76a8fb020df095c2.bin, cebf532d1e3c109418687cb9207516ad.bin, 31a4631d77b2357ac9618e2a60021f11.bin, 5adebdb94abb4c76dad2b7ecb1384a9d.bin, e1ebc6c5257a277115a7e61ee3e5e42f.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4d0580c20c1ba74cf90d44c82d040f0039542eea96e4bbff3996e6760f457cee"
-		date = "2023-05-12"
+		hash = "77c5e95b872b1d815d6d3ed28b399ca39f3427eeb0143f49982120ff732285a9"
+		hash = "cff9aa9046bdfd781d34f607d901a431a51bb7e5f48f4f681cc743b2cdedc98c"
+		hash = "b51ddcf8309c80384986dda9b11bf7856b030e3e885b0856efdb9e84064917e5"
+		hash = "ff115cefe624b6ca0b3878a86f6f8b352d1915b65fbbdc33ae15530a96ebdaa7"
+		hash = "a566af57d88f37fa033e64b1d8abbd3ffdacaba260475fbbc8dab846a824eff5"
+		hash = "57a389da784269bb2cc0a258500f6dfbf4f6269276e1192619ce439ec77f4572"
+		hash = "d74755311d127d0eb7454e56babc2db8dbaa814bc4ba8e2a7754d3e0224778e1"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
@@ -3069,39 +2595,17 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_5B3b {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300030003600200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2006 Intel Corporation All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_7mHd {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_uBVx {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "df0dcfb3971829af79629efd036b8e1c6e2127481b3644ccc6e2ddd387489a15"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310030002000430050005500490044 } /* LegalCopyright Copyright(C) 2010 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_74QA {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 700d6a0331befd4ed9cfbb3234b335e7.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "86a1b1bacc0c51332c9979e6aad84b5fba335df6b9a096ccb7681ab0779a8882"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avast anti rootkit */
@@ -3113,17 +2617,17 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_74QA {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300031003800200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2018 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_8hba {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_7P96 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 08bac71557df8a9b1381c8c165f64520.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "61befeef14783eb0fed679fca179d2f5c33eb2dcbd40980669ca2ebeb3bf11cf"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -3135,39 +2639,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_8hba {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300035002d00320030003000380020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2005-2008 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3p76 {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_5HJk {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "cd4a249c3ef65af285d0f8f30a8a96e83688486aab515836318a2559757a89bb"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_8uqL {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 259381daae0357fbfefe1d92188c496a.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "be8dd2d39a527649e34dc77ef8bc07193a4234b38597b8f51e519dadc5479ec2"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avast anti rootkit */
@@ -3179,17 +2661,17 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_8uqL {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300031003800200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2018 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_7Ft4 {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_8do8 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 4a06bcd96ef0b90a1753a805b4235f28.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "30706f110725199e338e9cc1c940d9a644d19a14f0eb8847712cba4cacda67ab"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d0053004900200043006f006d00430065006e00530065007200760069006300650020004400720069007600650072 } /* FileDescription MSI ComCenService Driver */
@@ -3201,17 +2683,17 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_7Ft4 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100330020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2013 MSI. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3gWP {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_6dTV {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 6f5d54ab483659ac78672440422ae3f1.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cc586254e9e89e88334adee44e332166119307e79c2f18f6c2ab90ce8ba7fc9b"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
@@ -3223,17 +2705,19 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3gWP {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062005f005800360034002e007300790073 } /* OriginalFilename NTIOLib_X64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100350020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2015 MSI. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_rtkiosys_WindowsRCodenameLonghornDDKdriver_DNW4 {
+rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_rtkiosys_WindowsRCodenameLonghornDDKdriver_B55M {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ffd0c87d9bf894af26823fbde94c71b6.bin, 664ad9cf500916c94fc2c0020660ac4e.bin, daf800da15b33bf1a84ee7afc59f0656.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "916c535957a3b8cbf3336b63b2260ea4055163a9e6b214f2a7005d6d36a4a677"
-		date = "2023-05-12"
+		hash = "caa85c44eb511377ea7426ff10df00a701c07ffb384eef8287636a4bca0b53ab"
+		hash = "478917514be37b32d5ccf76e4009f6f952f39f5553953544f1b0688befd95e82"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f004400720069007600650072 } /* FileDescription Realtek IODriver */
@@ -3245,17 +2729,17 @@ rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_rtkiosys_WindowsRCodena
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00720074006b0069006f002e007300790073 } /* OriginalFilename rtkio.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_Xxsg {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8CNm {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 8cb2ffb8bb0bbf8cd0dd685611854637.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e4d9f037411284e996a002b15b49bc227d085ee869ae1cd91ba54ff7c244f036"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -3267,38 +2751,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_Xxsg {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100350020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2015 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_3EwW {
+rule PUA_VULN_Driver_WindowsRWinDDKprovider_CupFixerxsys_WindowsRWinDDKdriver_s6ES {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c002000580054006900650072002000530065007300730069006f006e0020004d0061006e0061006700650072 } /* FileDescription Novell XTier Session Manager */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004e006f00760065006c006c002c00200049006e0063002e } /* CompanyName Novell, Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0033002e0031002e00310031002e0030 } /* FileVersion 3.1.11.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0033002e0031002e00310031 } /* ProductVersion 3.1.11 */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e006f00760065006c006c002000580054006900650072 } /* ProductName Novell XTier */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006e00730063006d002e007300790073 } /* OriginalFilename nscm.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200043006f007000790072006900670068007400200032003000300030002d0032003000310033002c0020004e006f00760065006c006c002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_CupFixerxsys_WindowsRWinDDKdriver_3JwT {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 2b3e0db4f00d4b3d0b4d178234b02e72.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8c748ae5dcc10614cc134064c99367d28f3131d1f1dda0c9c29e99279dc1bdd9"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530069006e0063006500790020004300750070002000460069007800650072 } /* FileDescription Sincey Cup Fixer */
@@ -3310,17 +2773,17 @@ rule PUA_VULN_Driver_WindowsRWinDDKprovider_CupFixerxsys_WindowsRWinDDKdriver_3J
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00430075007000460069007800650072007800360034002e007300790073 } /* OriginalFilename CupFixerx64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7eY5 {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7dJr {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 5a615f4641287e5e88968f5455627d45.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2afdb3278a7b57466a103024aef9ff7f41c73a19bab843a8ebf3d3c4d4e82b30"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -3332,17 +2795,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7eY5 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100360020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2016 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 400KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ASUSTeKComputerInc_IOMapsys_ASUSKernelModeDriverforNT_6mk3 {
+rule PUA_VULN_Driver_ASUSTeKComputerInc_IOMapsys_ASUSKernelModeDriverforNT_8Neg {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - a01c412699b6f21645b2885c2bae4454.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410053005500530020004b00650072006e0065006c0020004d006f00640065002000440072006900760065007200200066006f00720020004e00540020 } /* FileDescription ASUS Kernel Mode Driver for NT  */
@@ -3354,17 +2817,17 @@ rule PUA_VULN_Driver_ASUSTeKComputerInc_IOMapsys_ASUSKernelModeDriverforNT_6mk3 
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0049004f004d00610070002e007300790073 } /* OriginalFilename IOMap.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000320030003100300020004100530055005300540065004b00200043006f006d0070007500740065007200200049006e0063002e } /* LegalCopyright Copyright 2010 ASUSTeK Computer Inc. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_6yxH {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_6HHs {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - e79c91c27df3eaf82fb7bd1280172517.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e05eeb2b8c18ad2cb2d1038c043d770a0d51b96b748bc34be3e7fc6f3790ce53"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirIT Agent System */
@@ -3376,17 +2839,17 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_6yxH {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]007600690072006100670074002e007300790073 } /* OriginalFilename viragt.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200054004700200053006f0066007400200053002e0061002e0073002e00200032003000300036002c002000320030003100330020002d0020007700770077002e007400670073006f00660074002e00690074 } /* LegalCopyright Copyright (C) TG Soft S.a.s. 2006, 2013 - www.tgsoft.it */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_7neo {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_3Pki {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 7fbd3b4488a12eab56c54e7bb91516f3.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e4522e2cfa0b1f5d258a3cf85b87681d6969e0572f668024c465d635c236b5d9"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVG anti rootkit */
@@ -3398,17 +2861,18 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310038002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2018 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MicrosoftCorporation_ntbiosys_MicrosoftRWindowsRNTOperatingSystem_7tca {
+rule PUA_VULN_Driver_MicrosoftCorporation_ntbiosys_MicrosoftRWindowsRNTOperatingSystem_7eTu {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 50b39072d0ee9af5ef4824eca34be6e3.bin, 14580bd59c55185115fd3abe73b016a2.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c0d88db11d0f529754d290ed5f4c34b4dba8c4f2e5c4148866daabeab0d25f9c"
-		date = "2023-05-12"
+		hash = "96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]006e007400620069006f00730020006400720069007600650072 } /* FileDescription ntbios driver */
@@ -3420,17 +2884,18 @@ rule PUA_VULN_Driver_MicrosoftCorporation_ntbiosys_MicrosoftRWindowsRNTOperating
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006e007400620069006f0073002e007300790073 } /* OriginalFilename ntbios.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]7248674362406709002000280043002900200032003000300033 } /* LegalCopyright 版权所有 (C) 2003 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MarvinTestSolutionsInc_Hwsys_HW_6JH8 {
+rule PUA_VULN_Driver_MarvinTestSolutionsInc_Hwsys_HW_4vee {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 376b1e8957227a3639ec1482900d9b97.bin, 3247014ba35d406475311a2eab0c4657.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "55963284bbd5a3297f39f12f0d8a01ed99fe59d008561e3537bcd4db4b4268fa"
-		date = "2023-05-12"
+		hash = "4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570020002d002000570069006e0064006f007700730020004e0054002d003100300020002800330032002f00360034002000620069007400290020006b00650072006e0065006c0020006d006f00640065002000640072006900760065007200200066006f007200200050004300200070006f007200740073002f006d0065006d006f00720079002f0050004300490020006100630063006500730073 } /* FileDescription HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI access */
@@ -3442,39 +2907,17 @@ rule PUA_VULN_Driver_MarvinTestSolutionsInc_Hwsys_HW_6JH8 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00480057002e007300790073 } /* OriginalFilename HW.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a900200031003900390036002d00320030003200310020004d0061007200760069006e0020005400650073007400200053006f006c007500740069006f006e0073002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright © 1996-2021 Marvin Test Solutions, Inc. All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_uZQZ {
+rule PUA_VULN_Driver_MyDriverscom_HWM_DriverGenius_3x8s {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "d8b58f6a89a7618558e37afc360cd772b6731e3ba367f8d58734ecee2244a530"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MyDriverscom_HWM_DriverGenius_8rDp {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 507a649eb585d8d0447eab0532ef0c73.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00440072006900760065007200470065006e0069007500730020004800610072006400770061007200650020006d006f006e00690074006f0072 } /* FileDescription DriverGenius Hardware monitor */
@@ -3486,39 +2929,17 @@ rule PUA_VULN_Driver_MyDriverscom_HWM_DriverGenius_8rDp {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006d00790064007200690076006500720073002e007300790073 } /* OriginalFilename mydrivers.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020004d00790044007200690076006500720073002e0063006f006d00200061006c006c002000720069006700680074 } /* LegalCopyright Copyright MyDrivers.com all right */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_4SHD {
+rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_5kBr {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "3f2fda9a7a9c57b7138687bbce49a2e156d6095dddabb3454ea09737e02c3fa5"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_88Ax {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - c842827d4704a5ef53a809463254e1cc.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3e274df646f191d2705c0beaa35eeea84808593c3b333809f13632782e27ad75"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530061006e006400720061002000440065007600690063006500200044007200690076006500720020002800570069006e003600340020007800360034002900280055006e00690063006f006400650029 } /* FileDescription Sandra Device Driver (Win64 x64)(Unicode) */
@@ -3530,39 +2951,19 @@ rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_88Ax {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00530041004e004400520041 } /* OriginalFilename SANDRA */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a90020005300690053006f0066007400770061007200650020004c0074006400200031003900390035002d0032003000300037002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright © SiSoftware Ltd 1995-2007. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_cpuzsys_WindowsRCodenameLonghornDDKdriver_4C6F {
+rule PUA_VULN_Driver_PowerTool_kEvPsys_PowerTool_6Q4L {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "2ef7df384e93951893b65500dac6ee09da6b8fe9128326caad41b8be4da49a1e"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00570069006e0064006f00770073002000280052002900200043006f00640065006e0061006d00650020004c006f006e00670068006f0072006e002000440044004b002000700072006f00760069006400650072 } /* CompanyName Windows (R) Codename Longhorn DDK provider */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0030002e0036003000300030002e003100360033003800360020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.0.6000.16386 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0030002e0036003000300030002e00310036003300380036 } /* ProductVersion 6.0.6000.16386 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00570069006e0064006f00770073002000280052002900200043006f00640065006e0061006d00650020004c006f006e00670068006f0072006e002000440044004b0020006400720069007600650072 } /* ProductName Windows (R) Codename Longhorn DDK driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_PowerTool_kEvPsys_PowerTool_5dpS {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 7e7e3f5532b6af24dcc252ac4b240311.bin, 4ff880566f22919ed94ffae215d39da5.bin, 20125794b807116617d43f02b616e092.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8e6363a6393eb4234667c6f614b2072e33512866b3204f8395bbe01530d63f2f"
-		date = "2023-05-12"
+		hash = "09b0e07af8b17db1d896b78da4dd3f55db76738ee1f4ced083a97d737334a184"
+		hash = "1aaa9aef39cb3c0a854ecb4ca7d3b213458f302025e0ec5bfbdef973cca9111c"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0050006f0077006500720054006f006f006c } /* FileDescription PowerTool */
@@ -3574,17 +2975,17 @@ rule PUA_VULN_Driver_PowerTool_kEvPsys_PowerTool_5dpS {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006b00450076005000360034002e007300790073 } /* OriginalFilename kEvP64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0050006f0077006500720054006f006f006c } /* LegalCopyright PowerTool */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_4Hpj {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_37r3 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - d0a5b98788e480c12afc65ad3e6d4478.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3b6e85c8fed9e39b21b2eab0b69bc464272b2c92961510c36e2e2df7aa39861b"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription Avast Anti Rootkit */
@@ -3596,17 +2997,18 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_4Hpj {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300032003000200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2020 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5gw8 {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_78jo {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 58a92520dda53166e322118ee0503364.bin, 996ded363410dfd38af50c76bd5b4fbc.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7c731c0ea7f28671ab7787800db69739ea5cd6be16ea21045b4580cf95cbf73b"
-		date = "2023-05-12"
+		hash = "fca10cde7d331b7f614118682d834d46125a65888e97bd9fda2df3f15797166c"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -3618,39 +3020,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5gw8 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000200028004300290020002000320030003200300020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright  (C)  2020 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 400KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_PowerTool_kEvPsys_PowerTool_5fU3 {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_nuMj {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "09b0e07af8b17db1d896b78da4dd3f55db76738ee1f4ced083a97d737334a184"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0050006f0077006500720054006f006f006c } /* FileDescription PowerTool */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0050006f0077006500720054006f006f006c } /* CompanyName PowerTool */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0031002e00300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.0.1.0 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0031002e0030 } /* ProductVersion 1.0.1.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006b00450076005000360034002e007300790073 } /* InternalName kEvP64.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0050006f0077006500720054006f006f006c } /* ProductName PowerTool */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006b00450076005000360034002e007300790073 } /* OriginalFilename kEvP64.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0050006f0077006500720054006f006f006c } /* LegalCopyright PowerTool */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_5cjV {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - a3af4a4fa6cba27284f8289436c2f074.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1a42ebde59e8f63804eaa404f79ee93a16bb33d27fb158c6bfbe6143226899a0"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avast anti rootkit */
@@ -3662,17 +3042,17 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_5cjV {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300031003900200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2019 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4DJm {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8yuu {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 59f6320772a2e6b0b3587536be4cc022.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ec5fac0b6bb267a2bd10fc80c8cca6718439d56e82e053d3ff799ce5f3475db5"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -3684,17 +3064,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4DJm {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100350020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2015 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 400KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_7Gf3 {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_92tt {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 66e0db8a5b0425459d0430547ecbb3db.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "34e0364a4952d914f23f271d36e11161fb6bb7b64aea22ff965a967825a4a4bf"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AVG Anti Rootkit */
@@ -3706,17 +3086,17 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_7Gf
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000320030002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2020 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_6SGa {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_7YRo {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 9aa7ed7809eec0d8bc6c545a1d18107a.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d0bd1ae72aeb5f3eabf1531a635f990e5eaae7fdd560342f915f723766c80889"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
@@ -3728,81 +3108,17 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_6SGa {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100360020004d006900630072006f002d005300740061007200200049004e00540027004c00200043004f002e002c0020004c00540044002e } /* LegalCopyright Copyright (C) 2016 Micro-Star INT'L CO., LTD. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_YYInc_dianhu_5aCJ {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_8xtk {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]006400690061006e00680075 } /* FileDescription dianhu */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0059005900200049006e0063002e } /* CompanyName YY Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e00390039 } /* FileVersion 1.0.99 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e00390039 } /* ProductVersion 1.0.99 */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]006400690061006e00680075 } /* ProductName dianhu */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a900200032003000300037002d003200300031003700200059005900200049006e0063002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright © 2007-2017 YY Inc. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_4pjT {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "3e07bb866d329a2f9aaa4802bad04fdac9163de9bf9cfa1d035f5ca610b4b9bf"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310033002000430050005500490044 } /* LegalCopyright Copyright(C) 2013 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_65pD {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "fd8669794c67b396c12fc5f08e9c004fdf851a82faf302846878173e4fbecb03"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_7csx {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - db46c56849bbce9a55a03283efc8c280.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3c18ae965fba56d09a65770b4d8da54ccd7801f979d3ebd283397bc99646004b"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -3811,17 +3127,17 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_7csx {
 		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005a0041004d } /* ProductName ZAM */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]005a0065006d0061006e00610020004c00740064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Zemana Ltd. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_3vZy {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_555A {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 3467b0d996251dc56a72fc51a536dd6b.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2b4c7d3820fe08400a7791e2556132b902a9bbadc1942de57077ecb9d21bf47a"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirIT Agent System */
@@ -3833,17 +3149,17 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_3vZy {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]007600690072006100670074002e007300790073 } /* OriginalFilename viragt.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200054004700200053006f0066007400200053002e0061002e0073002e00200032003000300036002c002000320030003100330020002d0020007700770077002e007400670073006f00660074002e00690074 } /* LegalCopyright Copyright (C) TG Soft S.a.s. 2006, 2013 - www.tgsoft.it */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_DTResearchInc_iomemsys_iomemsys_3tZU {
+rule PUA_VULN_Driver_DTResearchInc_iomemsys_iomemsys_Ap7c {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 0898af0888d8f7a9544ef56e5e16354e.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3d23bdbaf9905259d858df5bf991eb23d2dc9f4ecda7f9f77839691acef1b8c4"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0044005400520020004b00650072006e0065006c0020006d006f006400650020006400720069007600650072 } /* FileDescription DTR Kernel mode driver */
@@ -3855,17 +3171,17 @@ rule PUA_VULN_Driver_DTResearchInc_iomemsys_iomemsys_3tZU {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0069006f006d0065006d002e007300790073 } /* OriginalFilename iomem.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0044005400200052006500730065006100720063006800200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright DT Research Inc. All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_4RfC {
+rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_7RRz {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 84b17daba8715089542641990c1ea3c2.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "496f4a4021226fb0f1b5f71a7634c84114c29faa308746a12c2414adb6b2a40b"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530061006e006400720061002000440065007600690063006500200044007200690076006500720020002800570069006e003600340020007800360034002900280055006e00690063006f006400650029 } /* FileDescription Sandra Device Driver (Win64 x64)(Unicode) */
@@ -3877,17 +3193,18 @@ rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_4RfC {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00530041004e004400520041 } /* OriginalFilename SANDRA */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a90020005300690053006f0066007400770061007200650020004c0074006400200031003900390035002d0032003000300036002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright © SiSoftware Ltd 1995-2006. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_6fyR {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_4GHK {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - eeb8e039f6d942538eb4b0252117899a.bin, 880686bceaf66bfde3c80569eb1ebfa7.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1b00d6e5d40b1b84ca63da0e99246574cdd2a533122bc83746f06c0d66e63a6e"
-		date = "2023-05-12"
+		hash = "51e91dd108d974ae809e5fc23f6fbd16e13f672f86aa594dae4a5c4bc629b0b5"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
@@ -3899,60 +3216,17 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_6
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d002e002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000310030 } /* LegalCopyright Copyright (C) M. Russinovich 1996-2010 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_LGElectronicsInc_LHAsys_MicrosoftWindowsOperatingSystem_4WZV {
+rule PUA_VULN_Driver_MultiTheftAuto_MTASanAndreas_8Fnp {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "e75714f8e0ff45605f6fc7689a1a89c7dcd34aab66c6131c63fefaca584539cf"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c00480041 } /* FileDescription LHA */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004c004700200045006c0065006300740072006f006e00690063007300200049006e0063002e } /* CompanyName LG Electronics Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004c00480041002e007300790073 } /* InternalName LHA.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004d006900630072006f0073006f0066007400ae002000570069006e0064006f0077007300ae0020004f007000650072006100740069006e0067002000530079007300740065006d } /* ProductName Microsoft® Windows® Operating System */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004c00480041002e007300790073 } /* OriginalFilename LHA.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0075006c00740072006100620069006f007300400068006f0074006d00610069006c002e0063006f006d } /* LegalCopyright ultrabios@hotmail.com */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_NovellInc_NovellXTier_7ZYv {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "2e665962c827ce0adbd29fe6bcf09bbb1d7a7022075d162ff9b65d0af9794ac0"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c002000580054006900650072002000530065007300730069006f006e0020004d0061006e0061006700650072 } /* FileDescription Novell XTier Session Manager */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004e006f00760065006c006c002c00200049006e0063002e } /* CompanyName Novell, Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0033002e0031002e00310031002e0030 } /* FileVersion 3.1.11.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0033002e0031002e00310031 } /* ProductVersion 3.1.11 */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e006f00760065006c006c002000580054006900650072 } /* ProductName Novell XTier */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006e00730063006d002e007300790073 } /* OriginalFilename nscm.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200043006f007000790072006900670068007400200032003000300030002d0032003000310033002c0020004e006f00760065006c006c002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MultiTheftAuto_MTASanAndreas_66Xt {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 4e90cd77509738d30d3181a4d0880bfa.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9f4ce6ab5e8d44f355426d9a6ab79833709f39b300733b5b251a0766e895e0e5"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d0075006c007400690020005400680065006600740020004100750074006f0020007000610074006300680020006400720069007600650072 } /* FileDescription Multi Theft Auto patch driver */
@@ -3962,17 +3236,17 @@ rule PUA_VULN_Driver_MultiTheftAuto_MTASanAndreas_66Xt {
 		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004d00540041002000530061006e00200041006e00640072006500610073 } /* ProductName MTA San Andreas */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]002800430029002000320030003000330020002d002000320030003100370020004d0075006c007400690020005400680065006600740020004100750074006f } /* LegalCopyright (C) 2003 - 2017 Multi Theft Auto */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_7Ukf {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_3rNS {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - e4d4a22cbf94e6b0a92fc36d46741f56.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2732050a7d836ae0bdc5c0aea4cdf8ce205618c3e7f613b8139c176e86476d0c"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avast anti rootkit */
@@ -3984,39 +3258,17 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_7Ukf {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300031003800200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2018 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_494A {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_8Bq5 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "77c5e95b872b1d815d6d3ed28b399ca39f3427eeb0143f49982120ff732285a9"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0049006e00740065006c00200043006f00720070006f0072006100740069006f006e0020 } /* CompanyName Intel Corporation  */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300033002e0030002e00340020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.03.0.4 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300033002e0030002e0034 } /* ProductVersion 1.03.0.4 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* InternalName iQVW64.SYS */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0049006e00740065006c0028005200290020006900510056005700360034002e005300590053 } /* ProductName Intel(R) iQVW64.SYS */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300030003600200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2006 Intel Corporation All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_6m6q {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 08e06b839499cb4b752347399db41b57.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ef6d3c00f9d0aa31a218094480299ef73fc85146adf62fd0c2f4f88972c5c850"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirIT Agent System */
@@ -4028,83 +3280,17 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_6m6q {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]007600690072006100670074002e007300790073 } /* OriginalFilename viragt.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200054004700200053006f0066007400200053002e0061002e0073002e00200032003000300036002c002000320030003100360020002d0020007700770077002e007400670073006f00660074002e00690074 } /* LegalCopyright Copyright (C) TG Soft S.a.s. 2006, 2016 - www.tgsoft.it */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_7sGT {
+rule PUA_VULN_Driver_MicroFocus_MicroFocusXTier_65CA {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "3503ea284b6819f9cb43b3e94c0bb1bf5945ccb37be6a898387e215197a4792a"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0053007900730069006e007400650072006e0061006c00730020002d0020007700770077002e0073007900730069006e007400650072006e0061006c0073002e0063006f006d } /* CompanyName Sysinternals - www.sysinternals.com */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310035002e00300030 } /* FileVersion 15.00 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310035002e00300030 } /* ProductVersion 15.00 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00700072006f0063006500780070002e007300790073 } /* InternalName procexp.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* ProductName Process Explorer */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d00610072006b002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000310034 } /* LegalCopyright Copyright (C) Mark Russinovich 1996-2014 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_6FDk {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "9529efb1837b1005e5e8f477773752078e0a46500c748bc30c9b5084d04082e6"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_7EkL {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "c8eaa5e6d3230b93c126d2d58e32409e4aeeb23ccf0dd047a17f1ef552f92fe9"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCD Windows NT/2000/XP I/O driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0045006c00610062006f0072006100740065002000420079007400650073002000410047 } /* CompanyName Elaborate Bytes AG */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002c00200030002c00200030002c00200031 } /* FileVersion 6, 0, 0, 1 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002c00200030002c00200030002c00200030 } /* ProductVersion 6, 0, 0, 0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0045006c00620079004300440049004f } /* InternalName ElbyCDIO */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043004400520054006f006f006c0073 } /* ProductName CDRTools */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0045006c00620079004300440049004f002e007300790073 } /* OriginalFilename ElbyCDIO.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000300020002d0020003200300030003600200045006c00610062006f0072006100740065002000420079007400650073002000410047 } /* LegalCopyright Copyright (C) 2000 - 2006 Elaborate Bytes AG */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MicroFocus_MicroFocusXTier_6Nu7 {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - c1fce7aac4e9dd7a730997e2979fa1e2.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "95d50c69cdbf10c9c9d61e64fe864ac91e6f6caa637d128eb20e1d3510e776d3"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0058005400690065007200200043004f004d0020005300650072007600690063006500730020004400720069007600650072 } /* FileDescription XTier COM Services Driver */
@@ -4115,17 +3301,17 @@ rule PUA_VULN_Driver_MicroFocus_MicroFocusXTier_6Nu7 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006c00690062006e00690063006d002e007300790073 } /* OriginalFilename libnicm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200043006f007000790072006900670068007400200032003000300030002d0032003000310037002c0020004d006900630072006f00200046006f006300750073002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright (C) Copyright 2000-2017, Micro Focus. All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6BRD {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4X7Q {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 62eed4173c566a248531fb6f20a5900d.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e3eff841ea0f2786e5e0fed2744c0829719ad711fc9258eeaf81ed65a52a8918"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -4137,39 +3323,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6BRD {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000200028004300290020002000320030003100360020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright  (C)  2016 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 500KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_64Cr {
+rule PUA_VULN_Driver_ArthurLiberman_ALSysIOsys_ALSysIO_8yiF {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "9a523854fe84f15efc1635d7f5d3e71812c45d6a4d2c99c29fdc4b4d9c84954c"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310030002000430050005500490044 } /* LegalCopyright Copyright(C) 2010 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_ArthurLiberman_ALSysIOsys_ALSysIO_3f3i {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ba5f0f6347780c2ed911bbf888e75bef.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7f375639a0df7fe51e5518cf87c3f513c55bc117db47d28da8c615642eb18bfa"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004c0053007900730049004f } /* FileDescription ALSysIO */
@@ -4181,17 +3345,17 @@ rule PUA_VULN_Driver_ArthurLiberman_ALSysIOsys_ALSysIO_3f3i {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0041004c0053007900730049004f002e007300790073 } /* OriginalFilename ALSysIO.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300033002d003200300030003900200041007200740068007500720020004c0069006200650072006d0061006e } /* LegalCopyright Copyright (C) 2003-2009 Arthur Liberman */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanIOsys_PanIOLibrary_ZaKY {
+rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanIOsys_PanIOLibrary_8qzv {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 9a9dbf5107848c254381be67a4c1b1dd.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f596e64f4c5d7c37a00493728d8756b243cfdc11e3372d6d6dfeffc13c9ab960"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00540065006d0070006500720061007400750072006500200061006e0064002000730079007300740065006d00200069006e0066006f0072006d006100740069006f006e0020006400720069007600650072 } /* FileDescription Temperature and system information driver */
@@ -4203,17 +3367,17 @@ rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanIOsys_PanIOLibra
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00500061006e0049004f002e007300790073 } /* OriginalFilename PanIO.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280063002900200032003000310032002d0032003000310034002000500061006e002000590061007a0069006c0069006d002000420069006c006900730069006d002000540065006b006e006f006c006f006a0069006c0065007200690020005400690063002e0020004c00740064002e0020005300740069002e } /* LegalCopyright Copyright (c) 2012-2014 Pan Yazilim Bilisim Teknolojileri Tic. Ltd. Sti. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_8P7m {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_6fWu {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cc8855fe30a9cdef895177a4cf1a3dad.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "17687cba00ec2c9036dd3cb5430aa1f4851e64990dafb4c8f06d88de5283d6ca"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription Avast Anti Rootkit */
@@ -4225,37 +3389,20 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_8P7m {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300032003000200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2020 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_BSMIsys__6Tgd {
+rule PUA_VULN_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_74vi {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "552f70374715e70c4ade591d65177be2539ec60f751223680dfaccb9e0be0ed9"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0053004d00490020004400720069007600650072 } /* FileDescription SMI Driver */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0033 } /* FileVersion 1.0.0.3 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0033 } /* ProductVersion 1.0.0.3 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00420053004d0049002e007300790073 } /* InternalName BSMI.sys */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00420053004d0049002e007300790073 } /* OriginalFilename BSMI.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000420049004f005300540041005200200043006f00720070002e00200032003000310031 } /* LegalCopyright Copyright (C) BIOSTAR Corp. 2011 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_98qG {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 4b058945c9f2b8d8ebc485add1101ba5.bin, 6d131a7462e568213b44ef69156f10a5.bin, 79df0eabbf2895e4e2dae15a4772868c.bin, b0770094c3c64250167b55e4db850c04.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e7af7bcb86bd6bab1835f610671c3921441965a839673ac34444cf0ce7b2164e"
-		date = "2023-05-12"
+		hash = "b9dad0131c51e2645e761b74a71ebad2bf175645fa9f42a4ab0e6921b83306e3"
+		hash = "8d9a2363b757d3f127b9c6ed8f7b8b018e652369bc070aa3500b3a978feaa6ce"
+		hash = "06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570041004e0020005400720061006e00730070006f007200740020004400720069007600650072 } /* FileDescription WAN Transport Driver */
@@ -4267,17 +3414,17 @@ rule PUA_VULN_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSyst
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00770061006e00740064002e007300790073 } /* OriginalFilename wantd.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Microsoft Corporation. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_6dcW {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_CwrT {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ceac1347acae9ad9496d4b0593256522.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9a54ef5cfbe6db599322967ee2c84db7daabcb468be10a3ccfcaa0f64d9173c7"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVG anti rootkit */
@@ -4289,17 +3436,17 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310038002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2018 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_OTi_otipcibussys_KernelModeDriverToAccessPhysicalMemoryAndPorts_6kML {
+rule PUA_VULN_Driver_OTi_otipcibussys_KernelModeDriverToAccessPhysicalMemoryAndPorts_5C8c {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - d5a642329cce4df94b8dc1ba9660ae34.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4e3eb5b9bce2fd9f6878ae36288211f0997f6149aa8c290ed91228ba4cdfae80"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0048006100720064007700610072006500200041006300630065007300730020004400720069007600650072 } /* FileDescription Hardware Access Driver */
@@ -4310,17 +3457,17 @@ rule PUA_VULN_Driver_OTi_otipcibussys_KernelModeDriverToAccessPhysicalMemoryAndP
 		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004b00650072006e0065006c0020004d006f00640065002000440072006900760065007200200054006f002000410063006300650073007300200050006800790073006900630061006c0020004d0065006d006f0072007900200041006e006400200050006f007200740073 } /* ProductName Kernel Mode Driver To Access Physical Memory And Ports */
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006f0074006900700063006900620075007300360034002e007300790073 } /* OriginalFilename otipcibus64.sys */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_5zho {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_4Jfq {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 0e207ef80361b3d047a2358d0e2206b4.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "dcb815eb8e9016608d0d917101b6af8c84b96fb709dc0344bceed02cbc4ed258"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avast anti rootkit */
@@ -4332,127 +3479,17 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_5zho {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300031003900200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2019 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriverfle_5hXQ {
+rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_7Hqn {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049002f004f00200049006e00740065007200660061006300650020006400720069007600650072002000660069006c0065 } /* FileDescription I/O Interface driver file */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00420049004f0053005400410052002000470072006f00750070 } /* CompanyName BIOSTAR Group */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002c00200031002c00200030002c00200030 } /* FileVersion 1, 1, 0, 0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002c00200031002c00200030002c00200030 } /* ProductVersion 1, 1, 0, 0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0049002f004f0020006400720069007600650072 } /* InternalName I/O driver */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00420049004f005300540041005200200049002f004f002000640072006900760065007200200066006c0065 } /* ProductName BIOSTAR I/O driver fle */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00420053005f0049003200630049006f002e007300790073 } /* OriginalFilename BS_I2cIo.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280063002900200032003000300032002d0032003000300036002000420049004f0053005400410052002000470072006f00750070 } /* LegalCopyright Copyright (c) 2002-2006 BIOSTAR Group */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_6NM4 {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "d6827cd3a8f273a66ecc33bb915df6c7dea5cc1b8134b0c348303ef50db33476"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0053007900730069006e007400650072006e0061006c00730020002d0020007700770077002e0073007900730069006e007400650072006e0061006c0073002e0063006f006d } /* CompanyName Sysinternals - www.sysinternals.com */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310035002e00300030 } /* FileVersion 15.00 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310035002e00300030 } /* ProductVersion 15.00 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00700072006f0063006500780070002e007300790073 } /* InternalName procexp.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* ProductName Process Explorer */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d00610072006b002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000310034 } /* LegalCopyright Copyright (C) Mark Russinovich 1996-2014 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_7kHW {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "3c7e5b25a33a7805c999d318a9523fcae46695a89f55bbdb8bb9087360323dfc"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0053007900730069006e007400650072006e0061006c00730020002d0020007700770077002e0073007900730069006e007400650072006e0061006c0073002e0063006f006d } /* CompanyName Sysinternals - www.sysinternals.com */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310035002e00300030 } /* FileVersion 15.00 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310035002e00300030 } /* ProductVersion 15.00 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00700072006f0063006500780070002e007300790073 } /* InternalName procexp.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* ProductName Process Explorer */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d002e002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000310031 } /* LegalCopyright Copyright (C) M. Russinovich 1996-2011 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_ShFX {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "b9dad0131c51e2645e761b74a71ebad2bf175645fa9f42a4ab0e6921b83306e3"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570041004e0020005400720061006e00730070006f007200740020004400720069007600650072 } /* FileDescription WAN Transport Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e } /* CompanyName Microsoft Corporation */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e0031003100370032 } /* FileVersion 6.1.7600.1172 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e0031003100370032 } /* ProductVersion 6.1.7600.1172 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00770061006e00740064002e007300790073 } /* InternalName wantd.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004d006900630072006f0073006f00660074002000570069006e0064006f007700730020004f007000650072006100740069006e0067002000530079007300740065006d } /* ProductName Microsoft Windows Operating System */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00770061006e00740064002e007300790073 } /* OriginalFilename wantd.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Microsoft Corporation. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AsusTekComputerInc_BsDefsys_SupportSSTSFSSTEEATFTATCAMFNTAMFNBVCTVCBMFTWC_8BpY {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "0040153302b88bee27eb4f1eca6855039e1a057370f5e8c615724fa5215bada3"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00440065006600610075006c0074002000420049004f005300200046006c0061007300680020004400720069007600650072 } /* FileDescription Default BIOS Flash Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004100730075007300540065006b00200043006f006d0070007500740065007200200049006e0063002e } /* CompanyName AsusTek Computer Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e003200340020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.24 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00320034 } /* ProductVersion 1.24 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00420073005f00440065006600360034002e007300790073 } /* InternalName Bs_Def64.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0053007500700070006f0072007400200053005300540033003900530046003000320030002c0053005300540032003900450045003000320030002c004100540034003900460030003000320054002c00410054003200390043003000320030002c0041004d003200390046003000300032004e0054002c0041004d003200390046003000300032004e0042002c0056003200390043003500310030003000320054002c0056003200390043003500310030003000320042002c004d0032003900460030003000320054002c0057003200390043003000320030002e } /* ProductName Support SST39SF020,SST29EE020,AT49F002T,AT29C020,AM29F002NT,AM29F002NB,V29C51002T,V29C51002B,M29F002T,W29C020. */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00420073005f00440065006600360034002e007300790073 } /* OriginalFilename Bs_Def64.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004100730075007300540065006b00200043006f006d00700075007400650072002e00200031003900390032002d0032003000300034 } /* LegalCopyright Copyright (C) AsusTek Computer. 1992-2004 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_8acY {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - de711decdd763a73098372f752bf5a1c.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cfcf32f5662791f1f22a77acb6dddfbc970fe6e99506969b3ea67c03f67687ab"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d0049004300530059005300200049004f0020006400720069007600650072 } /* FileDescription MICSYS IO driver */
@@ -4464,61 +3501,17 @@ rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_8acY {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004d00730049006f00360034002e007300790073 } /* OriginalFilename MsIo64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800630029002000320030003100390020004d00490043005300590053 } /* LegalCopyright Copyright (c) 2019 MICSYS */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_PhoenixTechnologies_Agentsys_DriverAgent_3wCH {
+rule PUA_VULN_Driver_DTResearchInc_iomemsys_iomemsys_7eN3 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "b1d96233235a62dbb21b8dbe2d1ae333199669f67664b107bff1ad49b41d9414"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004400720069007600650072004100670065006e0074002000440069007200650063007400200049002f004f00200066006f0072002000360034002d006200690074002000570069006e0064006f00770073 } /* FileDescription DriverAgent Direct I/O for 64-bit Windows */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00500068006f0065006e0069007800200054006500630068006e006f006c006f0067006900650073 } /* CompanyName Phoenix Technologies */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0030 } /* FileVersion 6.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0030 } /* ProductVersion 6.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004100670065006e007400360034002e007300790073 } /* InternalName Agent64.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004400720069007600650072004100670065006e0074 } /* ProductName DriverAgent */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100670065006e007400360034002e007300790073 } /* OriginalFilename Agent64.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0045006e0054006500630068002000540061006900770061006e002c00200031003900390037002d0032003000300039 } /* LegalCopyright EnTech Taiwan, 1997-2009 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_5rpu {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "0ce40a2cdd3f45c7632b858e8089ddfdd12d9acb286f2015a4b1b0c0346a572c"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041002d00420059005400450020004e006f006e0050006e00500020004400720069007600650072 } /* FileDescription GIGA-BYTE NonPnP Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0047004900470041002d004200590054004500200054004500430048004e004f004c004f0047005900200043004f002e002c0020004c00540044002e } /* CompanyName GIGA-BYTE TECHNOLOGY CO., LTD. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0031002e0031 } /* FileVersion 1.0.1.1 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0031 } /* ProductVersion 1.0.0.1 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0067006400720076002e007300790073 } /* InternalName gdrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0047004900470041002d004200590054004500200053006f0066007400770061007200650020006400720069007600650072 } /* ProductName GIGA-BYTE Software driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0067006400720076002e007300790073 } /* OriginalFilename gdrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310037 } /* LegalCopyright Copyright (C) 2017 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_DTResearchInc_iomemsys_iomemsys_6kUy {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - f1e054333cc40f79cfa78e5fbf3b54c2.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "dd4a1253d47de14ef83f1bc8b40816a86ccf90d1e624c5adf9203ae9d51d4097"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0044005400520020004b00650072006e0065006c0020006d006f006400650020006400720069007600650072 } /* FileDescription DTR Kernel mode driver */
@@ -4530,17 +3523,17 @@ rule PUA_VULN_Driver_DTResearchInc_iomemsys_iomemsys_6kUy {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0069006f006d0065006d002e007300790073 } /* OriginalFilename iomem.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0044005400200052006500730065006100720063006800200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright DT Research Inc. All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_PCHuntersys_PCHunter_4F59 {
+rule PUA_VULN_Driver_PCHuntersys_PCHunter_7BNq {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - c2c1b8c00b99e913d992a870ed478a24.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1b7fb154a7b7903a3c81f12f4b094f24a3c60a6a8cffca894c67c264ab7545fa"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00450070006f006f006c0073006f00660074002000570069006e0064006f0077007300200049006e0066006f0072006d006100740069006f006e0020005600690065007700200054006f006f006c0073 } /* FileDescription Epoolsoft Windows Information View Tools */
@@ -4552,17 +3545,17 @@ rule PUA_VULN_Driver_PCHuntersys_PCHunter_4F59 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0050004300480075006e007400650072002e007300790073 } /* OriginalFilename PCHunter.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200032003000310033002d0032003000310036002000450070006f006f006c0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright (C) 2013-2016 Epoolsoft Corporation. All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 800KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_8S4t {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_7zdh {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 53bb10742e10991af4ad280fcb134151.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "65008817eb97635826a8708a6411d7b50f762bab81304e457119d669382944c3"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avast anti rootkit */
@@ -4574,17 +3567,17 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_8S4t {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300031003900200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2019 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_svMh {
+rule PUA_VULN_Driver_NovellInc_NovellXTier_3ZEg {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - f56f30ac68c35dd4680054cdfd8f3f00.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8e88cb80328c3dbaa2752591692e74a2fae7e146d7d8aabc9b9ac9a6fe561e6c"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c002000580054006900650072002000530065007300730069006f006e0020004d0061006e0061006700650072 } /* FileDescription Novell XTier Session Manager */
@@ -4595,17 +3588,17 @@ rule PUA_VULN_Driver_NovellInc_NovellXTier_svMh {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006e00730063006d002e007300790073 } /* OriginalFilename nscm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200043006f007000790072006900670068007400200032003000300030002d0032003000310031002c0020004e006f00760065006c006c002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_7xRG {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_6bk4 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 5054083cf29649a76c94658ba7ff5bce.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e428ddf9afc9b2d11e2271f0a67a2d6638b860c2c12d4b8cc63d33f3349ee93f"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -4614,17 +3607,17 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_7xRG {
 		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005a0041004d } /* ProductName ZAM */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]005a0065006d0061006e00610020004c00740064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Zemana Ltd. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8jDe {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8rUo {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 34686a4b10f239d781772e9e94486c1a.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0909005d625866ef8ccd8ae8af5745a469f4f70561b644d6e38b80bccb53eb06"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -4636,39 +3629,18 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8jDe {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000200028004300290020002000320030003100370020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright  (C)  2017 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 400KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_vmdrvsys_WindowsRWinDDKdriver_42Y5 {
+rule PUA_VULN_Driver_Huawei_HwOsEc_HuaweiMateBook_8GAN {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "d884ca8cc4ef1826ca3ab03eb3c2d8f356ba25f2d20db0a7d9fc251c565be7f3"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0056006f006900630065006d006f00640020005600690072007400750061006c00200041007500640069006f00200044006500760069006300650020002800570044004d0029 } /* FileDescription Voicemod Virtual Audio Device (WDM) */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b002000700072006f00760069006400650072 } /* CompanyName Windows (R) Win 7 DDK provider */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310030002e0030002e00310030003000310031002e00310036003300380034 } /* FileVersion 10.0.10011.16384 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310030002e0030002e00310030003000310031002e00310036003300380034 } /* ProductVersion 10.0.10011.16384 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0076006d006400720076002e007300790073 } /* InternalName vmdrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b0020006400720069007600650072 } /* ProductName Windows (R) Win 7 DDK driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0076006d006400720076002e007300790073 } /* OriginalFilename vmdrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200056006f006900630065006d006f006400200053002e004c002e0032003000310030002d0032003000320030 } /* LegalCopyright Copyright (C) Voicemod S.L.2010-2020 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_Huawei_HwOsEc_HuaweiMateBook_4qtA {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - bae1f127c4ff21d8fe45e2bbfc59c180.bin, 37086ae5244442ba552803984a11d6cb.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b179e1ab6dc0b1aee783adbcad4ad6bb75a8a64cb798f30c0dd2ee8aaf43e6de"
-		date = "2023-05-12"
+		hash = "bb1135b51acca8348d285dc5461d10e8f57260e7d0c8cc4a092734d53fc40cbc"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00480077004f0073003200450063 } /* FileDescription HwOs2Ec */
@@ -4680,81 +3652,17 @@ rule PUA_VULN_Driver_Huawei_HwOsEc_HuaweiMateBook_4qtA {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00480077004f0073003200450063002e007300790073 } /* OriginalFilename HwOs2Ec.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310036 } /* LegalCopyright Copyright (C) 2016 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ATSZIO_ATSZIODriver_3QXV {
+rule PUA_VULN_Driver_HPInc_HpPortIoxsys_HpPortIo_4ky9 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "31d8fc6f5fb837d5eb29db828d13ba8ee11867d86a90b2c2483a578e1d0ec43a"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100540053005a0049004f0020004400720069007600650072 } /* FileDescription ATSZIO Driver */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0030002c00200032002c00200031002c00200032 } /* FileVersion 0, 2, 1, 2 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0030002c00200032002c00200031002c00200032 } /* ProductVersion 0, 2, 1, 2 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004100540053005a0049004f } /* InternalName ATSZIO */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004100540053005a0049004f0020004400720069007600650072 } /* ProductName ATSZIO Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100540053005a0049004f002e007300790073 } /* OriginalFilename ATSZIO.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310030 } /* LegalCopyright Copyright (C) 2010 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_NovellInc_NovellXTier_5tUU {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "b37b3c6877b70289c0f43aeb71349f7344b06063996e6347c3c18d8c5de77f3b"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c0020005800540043004f004d0020005300650072007600690063006500730020004400720069007600650072 } /* FileDescription Novell XTCOM Services Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004e006f00760065006c006c002c00200049006e0063002e } /* CompanyName Novell, Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0033002e0031002e0036002e0030 } /* FileVersion 3.1.6.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0033002e0031002e0036 } /* ProductVersion 3.1.6 */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e006f00760065006c006c002000580054006900650072 } /* ProductName Novell XTier */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006c00690062006e00690063006d002e007300790073 } /* OriginalFilename libnicm.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200043006f007000790072006900670068007400200032003000300030002d0032003000300038002c0020004e006f00760065006c006c002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_RWEverything_RwDrvsys_RWEverythingReadWriteDriver_8KJQ {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "0aafa9f47acf69d46c9542985994ff5321f00842a28df2396d4a3076776a83cb"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520057002d00450076006500720079007400680069006e006700200052006500610064002000260020005700720069007400650020004400720069007600650072 } /* FileDescription RW-Everything Read & Write Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00520057002d00450076006500720079007400680069006e0067 } /* CompanyName RW-Everything */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300030002e00300030002e00300030003000300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.00.00.0000 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300030002e00300030002e0030003000300030 } /* ProductVersion 1.00.00.0000 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00520077004400720076002e007300790073 } /* InternalName RwDrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00520057002d00450076006500720079007400680069006e006700200052006500610064002000260020005700720069007400650020004400720069007600650072 } /* ProductName RW-Everything Read & Write Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00520077004400720076002e007300790073 } /* OriginalFilename RwDrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002000520057002d00450076006500720079007400680069006e0067 } /* LegalCopyright Copyright (C) 2008 RW-Everything */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_HPInc_HpPortIoxsys_HpPortIo_4MZS {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 7b9e1e5e8ff4f18f84108bb9f7b5d108.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a4680fabf606d6580893434e81c130ff7ec9467a15e6534692443465f264d3c9"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800700050006f007200740049006f } /* FileDescription HpPortIo */
@@ -4765,17 +3673,17 @@ rule PUA_VULN_Driver_HPInc_HpPortIoxsys_HpPortIo_4MZS {
 		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004800700050006f007200740049006f } /* ProductName HpPortIo */
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004800700050006f007200740049006f007800360034002e007300790073 } /* OriginalFilename HpPortIox64.sys */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_3B2q {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_5mgN {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - e5f8fcdfb52155ed4dffd8a205b3d091.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "76614f2e372f33100a8d92bf372cdbc1e183930ca747eed0b0cf2501293b990a"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -4784,17 +3692,17 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_3B2q {
 		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005a0041004d } /* ProductName ZAM */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]005a0065006d0061006e00610020004c00740064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Zemana Ltd. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_4Dha {
+rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_5oC5 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 1549e6cbce408acaddeb4d24796f2eaf.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8b92cdb91a2e2fab3881d54f5862e723826b759749f837a11c9e9d85d52095a2"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041002d00420059005400450020004e006f006e0050006e00500020004400720069007600650072 } /* FileDescription GIGA-BYTE NonPnP Driver */
@@ -4806,39 +3714,17 @@ rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_4Dha
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0067006400720076002e007300790073 } /* OriginalFilename gdrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310037 } /* LegalCopyright Copyright (C) 2017 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ASRockIncorporation_AsrDrvsys_ASRockIODriver_cewQ {
+rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_3L5L {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "2003b478b9fd1b3d76ec5bf4172c2e8915babbbee7ad1783794acbf8d4c2519d"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100530052006f0063006b00200049004f0020004400720069007600650072 } /* FileDescription ASRock IO Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004100530052006f0063006b00200049006e0063006f00720070006f0072006100740069006f006e } /* CompanyName ASRock Incorporation */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300030002e00300030002e00300030003000300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.00.00.0000 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300030002e00300030002e0030003000300030 } /* ProductVersion 1.00.00.0000 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004100730072004400720076002e007300790073 } /* InternalName AsrDrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004100530052006f0063006b00200049004f0020004400720069007600650072 } /* ProductName ASRock IO Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100730072004400720076002e007300790073 } /* OriginalFilename AsrDrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100320020004100530052006f0063006b00200049006e0063006f00720070006f0072006100740069006f006e } /* LegalCopyright Copyright (C) 2012 ASRock Incorporation */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_SSpb {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - e36f6f7401ae11e11f69d744703914db.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "881bca6dc2dafe1ae18aeb59216af939a3ac37248c13ed42ad0e1048a3855461"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530061006e006400720061002000440065007600690063006500200044007200690076006500720020002800570069006e003600340020007800360034002900280055006e00690063006f006400650029 } /* FileDescription Sandra Device Driver (Win64 x64)(Unicode) */
@@ -4850,17 +3736,17 @@ rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_SSpb {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00530041004e004400520041 } /* OriginalFilename SANDRA */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a90020005300690053006f0066007400770061007200650020004c0074006400200031003900390035002d0032003000300035002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright © SiSoftware Ltd 1995-2005. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_fHc4 {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4c2z {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 085d3423f3c12a17119920f1a293ab4d.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5192ec4501d0fe0b1c8f7bf9b778f7524a7a70a26bbbb66e5dab8480f6fdbb8b"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -4872,39 +3758,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_fHc4 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100350020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2015 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 400KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MarvinTestSolutionsInc_Hwsys_HW_7cim {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7dPS {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570020002d002000570069006e0064006f007700730020004e0054002d003100300020002800330032002f00360034002000620069007400290020006b00650072006e0065006c0020006d006f00640065002000640072006900760065007200200066006f007200200050004300200070006f007200740073002f006d0065006d006f00720079002f0050004300490020006100630063006500730073 } /* FileDescription HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI access */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d0061007200760069006e0020005400650073007400200053006f006c007500740069006f006e0073002c00200049006e0063002e } /* CompanyName Marvin Test Solutions, Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0034002e0039002e0038002e0030 } /* FileVersion 4.9.8.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0034002e0039002e0038002e0030 } /* ProductVersion 4.9.8.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00480077002e007300790073 } /* InternalName Hw.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00480057 } /* ProductName HW */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00480057002e007300790073 } /* OriginalFilename HW.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a900200031003900390036002d00320030003200310020004d0061007200760069006e0020005400650073007400200053006f006c007500740069006f006e0073002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright © 1996-2021 Marvin Test Solutions, Inc. All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4BQK {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 4c6d311e0b13c4f469f717db4ab4d0e7.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "80a59ca71fc20961ccafc0686051e86ae4afbbd4578cb26ad4570b9207651085"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -4916,17 +3780,19 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4BQK {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100330020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2013 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MicrosoftCorporation_windbgsys_MicrosoftWindowsOperatingSystem_aEvS {
+rule PUA_VULN_Driver_MicrosoftCorporation_windbgsys_MicrosoftWindowsOperatingSystem_iAKJ {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 40b968ecdbe9e967d92c5da51c390eee.bin, b6b530dd25c5eb66499968ec82e8791e.bin, 88bea56ae9257b40063785cf47546024.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "06c5ebd0371342d18bc81a96f5e5ce28de64101e3c2fd0161d0b54d8368d2f1f"
-		date = "2023-05-12"
+		hash = "fa9abb3e7e06f857be191a1e049dd37642ec41fb2520c105df2227fcac3de5d5"
+		hash = "e1cb86386757b947b39086cc8639da988f6e8018ca9995dd669bdc03c8d39d7d"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069006e0064006f007700730020004700550049002000730079006d0062006f006c00690063002000640065006200750067006700650072 } /* FileDescription Windows GUI symbolic debugger */
@@ -4938,17 +3804,17 @@ rule PUA_VULN_Driver_MicrosoftCorporation_windbgsys_MicrosoftWindowsOperatingSys
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00770069006e006400620067002e007300790073 } /* OriginalFilename windbg.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]003f0020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright ? Microsoft Corporation. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 1200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MicroFocus_MicroFocusXTier_6wVi {
+rule PUA_VULN_Driver_MicroFocus_MicroFocusXTier_7X7a {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 5f4a232d92480a1bebbe025ef64dc760.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5351c81b4ec5a0d79c39d24bac7600d10eac30c13546fde43d23636b3f421e7c"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0058005400690065007200200053006500630075007200690074007900200043006f006e00740065007800740020004d0061006e0061006700650072 } /* FileDescription XTier Security Context Manager */
@@ -4959,17 +3825,18 @@ rule PUA_VULN_Driver_MicroFocus_MicroFocusXTier_6wVi {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006e00730063006d002e007300790073 } /* OriginalFilename nscm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200043006f007000790072006900670068007400200032003000300030002d0032003000310037002c0020004d006900630072006f00200046006f006300750073002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright (C) Copyright 2000-2017, Micro Focus. All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_99if {
+rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_4aug {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - bce7f34912ff59a3926216b206deb09f.bin, e3bdb307b32b13b8f7e621e8d5cc8cd3.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "78827fa00ea48d96ac9af8d1c1e317d02ce11793e7f7f6e4c7aac7b5d7dd490f"
-		date = "2023-05-12"
+		hash = "c26b51b4c37330800cff8519252e110116c3aaade94ceb9894ec5bfb1b8f9924"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200053007500700070006f007200740020004400720069007600650072 } /* FileDescription VirtualBox Support Driver */
@@ -4981,39 +3848,18 @@ rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_99if {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00560042006f0078004400720076002e007300790073 } /* OriginalFilename VBoxDrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300039002000530075006e0020004d006900630072006f00730079007300740065006d0073002c00200049006e0063002e } /* LegalCopyright Copyright (C) 2009 Sun Microsystems, Inc. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_RWEverything_RwDrvsys_RwDrvDriver_8ccF {
+rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_McdY {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "d969845ef6acc8e5d3421a7ce7e244f419989710871313b04148f9b322751e5d"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200770044007200760020004400720069007600650072 } /* FileDescription RwDrv Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00520057002d00450076006500720079007400680069006e0067 } /* CompanyName RW-Everything */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300030002e00300030002e00300030003000300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.00.00.0000 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300030002e00300030002e0030003000300030 } /* ProductVersion 1.00.00.0000 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00520077004400720076002e007300790073 } /* InternalName RwDrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005200770044007200760020004400720069007600650072 } /* ProductName RwDrv Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00520077004400720076002e007300790073 } /* OriginalFilename RwDrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310031002000520057002d00450076006500720079007400680069006e0067 } /* LegalCopyright Copyright (C) 2011 RW-Everything */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_Zksk {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 3b9698a9ee85f0b4edf150deef790ccd.bin, b34361d151c793415ef92ee5d368c053.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5fad3775feb8b6f6dcbd1642ae6b6a565ff7b64eadfc9bf9777918b51696ab36"
-		date = "2023-05-12"
+		hash = "29a90ae1dcee66335ece4287a06482716530509912be863c85a2a03a6450a5b6"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0043006f007200730061006900720020004c004c0020004100630063006500730073 } /* FileDescription Corsair LL Access */
@@ -5025,17 +3871,19 @@ rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_Zksk {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0043006f007200730061006900720020004c004c0020004100630063006500730073 } /* OriginalFilename Corsair LL Access */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007200730061006900720020004d0065006d006f00720079002c00200049006e0063002e002000280063002900200032003000310039002c00200041006c006c0020007200690067006800740073002000720065007300650072007600650064 } /* LegalCopyright Corsair Memory, Inc. (c) 2019, All rights reserved */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_55Fx {
+rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_7Aup {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 29872c7376c42e2a64fa838dad98aa11.bin, 43bfc857406191963f4f3d9f1b76a7bf.bin, db72def618cbc3c5f9aa82f091b54250.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a072197177aad26c31960694e38e2cae85afbab070929e67e331b99d3a418cf4"
-		date = "2023-05-12"
+		hash = "e0b5a5f8333fc1213791af5c5814d7a99615b3951361ca75f8aa5022c9cfbc2b"
+		hash = "ded2927f9a4e64eefd09d0caba78e94f309e3a6292841ae81d5528cab109f95d"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
@@ -5047,39 +3895,17 @@ rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_55Fx {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310036002000430050005500490044 } /* LegalCopyright Copyright(C) 2016 CPUID */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_5SSN {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_8MaX {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "7e81beae78e1ddbf6c150e15667e1f18783f9b0ab7fbe52c7ab63e754135948d"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d0044002000520079007a0065006e0020004d00610073007400650072002000530065007200760069006300650020004400720069007600650072 } /* FileDescription AMD Ryzen Master Service Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0041006400760061006e0063006500640020004d006900630072006f00200044006500760069006300650073 } /* CompanyName Advanced Micro Devices */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0033002e0030002e0030 } /* FileVersion 1.3.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0033002e0030002e0030 } /* ProductVersion 1.3.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0041004d004400520079007a0065006e004d00610073007400650072004400720069007600650072002e007300790073 } /* InternalName AMDRyzenMasterDriver.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0041004d0044002000520079007a0065006e0020004d00610073007400650072002000530065007200760069006300650020004400720069007600650072 } /* ProductName AMD Ryzen Master Service Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0041004d004400520079007a0065006e004d00610073007400650072004400720069007600650072002e007300790073 } /* OriginalFilename AMDRyzenMasterDriver.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a90020003200300031003800200041004d0044002c00200049006e0063002e } /* LegalCopyright Copyright © 2018 AMD, Inc. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_5H2b {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 650f6531db6fb0ed25d7fc70be35a4da.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2a6212f3b68a6f263e96420b3607b31cfdfe51afff516f3c87d27bf8a89721e8"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirIT Agent System */
@@ -5091,17 +3917,17 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_5H2b {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]007600690072006100670074002e007300790073 } /* OriginalFilename viragt.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200054004700200053006f0066007400200053002e0061002e0073002e00200032003000300036002c002000320030003100320020002d0020007700770077002e007400670073006f00660074002e00690074 } /* LegalCopyright Copyright (C) TG Soft S.a.s. 2006, 2012 - www.tgsoft.it */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_4hLf {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_6mpf {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - dcd966874b4c8c952662d2d16ddb4d7c.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "aaa3459bcac25423f78ed72dbae4d7ef19e7c5c65770cbe5210b14e33cd1816c"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avast anti rootkit */
@@ -5113,17 +3939,17 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_4hLf {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300031003800200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2018 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswVmmsys_avastAntivirus_4beD {
+rule PUA_VULN_Driver_AVASTSoftware_aswVmmsys_avastAntivirus_8p9R {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - a5f637d61719d37a5b4868c385e363c0.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "36505921af5a09175395ebaea29c72b2a69a3a9204384a767a5be8a721f31b10"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00610076006100730074002100200056004d0020004d006f006e00690074006f0072 } /* FileDescription avast! VM Monitor */
@@ -5135,17 +3961,19 @@ rule PUA_VULN_Driver_AVASTSoftware_aswVmmsys_avastAntivirus_4beD {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0061007300770056006d006d002e007300790073 } /* OriginalFilename aswVmm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300031003300200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2013 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_WindowsRServerDDKprovider_gdrvsys_WindowsRServerDDKdriver_6kAJ {
+rule PUA_VULN_Driver_WindowsRServerDDKprovider_gdrvsys_WindowsRServerDDKdriver_8bdF {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 9ab9f3b75a2eb87fafb1b7361be9dfb3.bin, 31f34de4374a6ed0e70a022a0efa2570.bin, 7907e14f9bcf3a4689c9a74a1a873cb6.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "31f4cfb4c71da44120752721103a16512444c13c2ac2d857a7e6f13cb679b427"
-		date = "2023-05-12"
+		hash = "6f1fc8287dd8d724972d7a165683f2b2ad6837e16f09fe292714e8e38ecd1e38"
+		hash = "17927b93b2d6ab4271c158f039cae2d60591d6a14458f5a5690aec86f5d54229"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041004200590054004500200054006f006f006c0073 } /* FileDescription GIGABYTE Tools */
@@ -5157,17 +3985,17 @@ rule PUA_VULN_Driver_WindowsRServerDDKprovider_gdrvsys_WindowsRServerDDKdriver_6
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0067006400720076002e007300790073 } /* OriginalFilename gdrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_gdrv_3Dki {
+rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_gdrv_96B5 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 1cff7b947f8c3dea1d34dc791fc78cdc.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ff6729518a380bf57f1bc6f1ec0aa7f3012e1618b8d9b0f31a61d299ee2b4339"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041002d00420059005400450020004e006f006e0050004e00500020004400720069007600650072 } /* FileDescription GIGA-BYTE NonPNP Driver */
@@ -5179,17 +4007,17 @@ rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_gdrv_3Dki {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0067006400720076002e007300790073 } /* OriginalFilename gdrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310037 } /* LegalCopyright Copyright (C) 2017 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_7fbn {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_6j92 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 97e3a44ec4ae58c8cc38eefc613e950e.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "440883cd9d6a76db5e53517d0ec7fe13d5a50d2f6a7f91ecfc863bc3490e4f5c"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
@@ -5201,61 +4029,17 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_7
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d00610072006b002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000320031 } /* LegalCopyright Copyright (C) Mark Russinovich 1996-2021 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_3sgy {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_93PP {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "cff9aa9046bdfd781d34f607d901a431a51bb7e5f48f4f681cc743b2cdedc98c"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0049006e00740065006c00200043006f00720070006f0072006100740069006f006e0020 } /* CompanyName Intel Corporation  */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300033002e0030002e00340020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.03.0.4 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300033002e0030002e0034 } /* ProductVersion 1.03.0.4 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* InternalName iQVW64.SYS */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0049006e00740065006c0028005200290020006900510056005700360034002e005300590053 } /* ProductName Intel(R) iQVW64.SYS */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300030003600200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2006 Intel Corporation All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_WindowsRServerDDKprovider_gdrvsys_WindowsRServerDDKdriver_7HR3 {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "6f1fc8287dd8d724972d7a165683f2b2ad6837e16f09fe292714e8e38ecd1e38"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041004200590054004500200054006f006f006c0073 } /* FileDescription GIGABYTE Tools */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000530065007200760065007200200032003000300033002000440044004b002000700072006f00760069006400650072 } /* CompanyName Windows (R) Server 2003 DDK provider */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0035002e0032002e0033003700390030002e00310038003300300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 5.2.3790.1830 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0035002e0032002e0033003700390030002e0031003800330030 } /* ProductVersion 5.2.3790.1830 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0067006400720076002e007300790073 } /* InternalName gdrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000530065007200760065007200200032003000300033002000440044004b0020006400720069007600650072 } /* ProductName Windows (R) Server 2003 DDK driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0067006400720076002e007300790073 } /* OriginalFilename gdrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_VAUf {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 949ef0df929a71d6cc77494dfcb1ddeb.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ed2f33452ec32830ffef2d5dc832985db9600c306ed890c47f3f33ccbb335c39"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -5267,17 +4051,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_VAUf {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300035002d00320030003000390020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2005-2009 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibXsys_NTIOLib_6XaL {
+rule PUA_VULN_Driver_MSI_NTIOLibXsys_NTIOLib_8EUz {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 6126065af2fc2639473d12ee3c0c198e.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "09bedbf7a41e0f8dabe4f41d331db58373ce15b2e9204540873a1884f38bdde1"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
@@ -5289,17 +4073,17 @@ rule PUA_VULN_Driver_MSI_NTIOLibXsys_NTIOLib_6XaL {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062005f005800360034002e007300790073 } /* OriginalFilename NTIOLib_X64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100360020004d006900630072006f002d005300740061007200200049004e00540027004c00200043004f002e002c0020004c00540044002e } /* LegalCopyright Copyright (C) 2016 Micro-Star INT'L CO., LTD. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_5aid {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_3dis {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 2ddd3c0e23bc0fd63702910c597298b4.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a8027daa6facf1ff81405daf6763249e9acf232a1a191b6bf106711630e6188e"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -5311,17 +4095,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_5aid {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300035002d00320030003000380020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2005-2008 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_3jn2 {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_3Zv3 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 93a23503e26773c27ed1da06bb79e7a4.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0f016c80c4938fbcd47a47409969b3925f54292eba2ce01a8e45222ce8615eb8"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVG anti rootkit */
@@ -5333,39 +4117,17 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310038002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2018 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3vMJ {
+rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_4wFY {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "f088b2ba27dacd5c28f8ee428f1350dca4bc7c6606309c287c801b2e1da1a53d"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_4gDM {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 962a33a191dbe56915fd196e3a868cf0.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7539157df91923d4575f7f57c8eb8b0fd87f064c919c1db85e73eebb2910b60c"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200053007500700070006f007200740020004400720069007600650072 } /* FileDescription VirtualBox Support Driver */
@@ -5377,17 +4139,17 @@ rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_4gDM {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00560042006f0078004400720076002e007300790073 } /* OriginalFilename VBoxDrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300039002000530075006e0020004d006900630072006f00730079007300740065006d0073002c00200049006e0063002e } /* LegalCopyright Copyright (C) 2009 Sun Microsystems, Inc. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3Toa {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_f6bS {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 3e796eb95aca7e620d6a0c2118d6871b.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "478d855b648ef4501d3b08b3b10e94076ac67546b0ce86b454324f1bf9a78aa0"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -5399,39 +4161,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3Toa {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000200028004300290020002000320030003100390020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright  (C)  2019 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 400KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_OpenLibSysorg_WinRingsys_WinRing_4dBg {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_ActiveClean_5Qr4 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "3ec5ad51e6879464dfbccb9f4ed76c6325056a42548d5994ba869da9c4c039a8"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069006e00520069006e00670030 } /* FileDescription WinRing0 */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004f00700065006e004c00690062005300790073002e006f00720067 } /* CompanyName OpenLibSys.org */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0031002e0032 } /* FileVersion 1.0.1.2 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0031002e0032 } /* ProductVersion 1.0.1.2 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00570069006e00520069006e00670030002e007300790073 } /* InternalName WinRing0.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00570069006e00520069006e00670030 } /* ProductName WinRing0 */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00570069006e00520069006e00670030002e007300790073 } /* OriginalFilename WinRing0.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000370020004f00700065006e004c00690062005300790073002e006f00720067002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2007 OpenLibSys.org. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_ActiveClean_7p5T {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 3e4a1384a27013ab7b767a88b8a1bd34.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a903f329b70f0078197cb7683aae1bb432eaf58572fe572f7cb4bc2080042d7e"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -5443,17 +4183,18 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_ActiveClean_7p5T {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300035002d00320030003000370020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2005-2007 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_3tzc {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_kVyS {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - a91a1bc393971a662a3210dac8c17dfd.bin, 6b3abe55c4d39e305a11b4d1091dfaac.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3ff39728f1c11d1108f65ec5eb3d722fd1a1279c530d79712e0d32b34880baaa"
-		date = "2023-05-12"
+		hash = "86721ee8161096348ed3dbe1ccbf933ae004c315b1691745a8af4a0df9fed675"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
@@ -5465,61 +4206,17 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_3
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d002e002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000310030 } /* LegalCopyright Copyright (C) M. Russinovich 1996-2010 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_486K {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_96KP {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "131d5490ceb9a5b2324d8e927fea5becfc633015661de2f4c2f2375a3a3b64c6"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_ASRockIncorporation_AsrDrvsys_ASRockIODriver_4VMh {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "6ed35f310c96920a271c59a097b382da07856e40179c2a4239f8daa04eef38e7"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100530052006f0063006b00200049004f0020004400720069007600650072 } /* FileDescription ASRock IO Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004100530052006f0063006b00200049006e0063006f00720070006f0072006100740069006f006e } /* CompanyName ASRock Incorporation */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300030002e00300030002e00300030003000300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.00.00.0000 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300030002e00300030002e0030003000300030 } /* ProductVersion 1.00.00.0000 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004100730072004400720076002e007300790073 } /* InternalName AsrDrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004100530052006f0063006b00200049004f0020004400720069007600650072 } /* ProductName ASRock IO Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100730072004400720076002e007300790073 } /* OriginalFilename AsrDrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100320020004100530052006f0063006b00200049006e0063006f00720070006f0072006100740069006f006e } /* LegalCopyright Copyright (C) 2012 ASRock Incorporation */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_6xUJ {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - b7ca4c32c844df9b61634052ae276387.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "bdbceca41e576841cad2f2b38ee6dbf92fd77fbbfdfe6ecf99f0623d44ef182c"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
@@ -5531,82 +4228,17 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_6
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d002e002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000300037 } /* LegalCopyright Copyright (C) M. Russinovich 1996-2007 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_naRS {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3mXF {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "e6056443537d4d2314dabca1b9168f1eaaf17a14eb41f6f5741b6b82b3119790"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c0020005800540043004f004d0020005300650072007600690063006500730020004400720069007600650072 } /* FileDescription Novell XTCOM Services Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004e006f00760065006c006c002c00200049006e0063002e } /* CompanyName Novell, Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0033002e0031002e00310031002e0030 } /* FileVersion 3.1.11.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0033002e0031002e00310031 } /* ProductVersion 3.1.11 */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e006f00760065006c006c002000580054006900650072 } /* ProductName Novell XTier */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006c00690062006e00690063006d002e007300790073 } /* OriginalFilename libnicm.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200043006f007000790072006900670068007400200032003000300030002d0032003000310033002c0020004e006f00760065006c006c002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7u5M {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "b773511fdb2e370dec042530910a905472fcc2558eb108b246fd3200171b04d3"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]005400720065006e00640020004d006900630072006f00200049006e0063002e } /* CompanyName Trend Micro Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0037002e00330030002e0030002e0031003000360035 } /* FileVersion 7.30.0.1065 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0037002e00330030 } /* ProductVersion 7.30 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* InternalName TmComm.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005400720065006e00640020004d006900630072006f00200045007900650073 } /* ProductName Trend Micro Eyes */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000200028004300290020002000320030003100370020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright  (C)  2017 Trend Micro Incorporated. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 400KB and all of them
-}
-
-
-rule PUA_VULN_Driver_Huawei_HwOsEc_HuaweiMateBook_6Ex6 {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "bb1135b51acca8348d285dc5461d10e8f57260e7d0c8cc4a092734d53fc40cbc"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00480077004f0073003200450063 } /* FileDescription HwOs2Ec */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004800750061007700650069 } /* CompanyName Huawei */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0031 } /* FileVersion 1.0.0.1 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0031 } /* ProductVersion 1.0.0.1 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00480077004f0073003200450063 } /* InternalName HwOs2Ec */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0048007500610077006500690020004d0061007400650042006f006f006b } /* ProductName Huawei MateBook */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00480077004f0073003200450063002e007300790073 } /* OriginalFilename HwOs2Ec.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310036 } /* LegalCopyright Copyright (C) 2016 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5dFJ {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - df9953fa93e1793456a8d428ba7e5700.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7837cb350338c4958968d06b105466da6518f5bb522a6e70e87c0cad85128408"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -5618,39 +4250,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5dFJ {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100360020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2016 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 400KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ASUStek_Driversys_ECtool_3g5f {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_4m8h {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "42851a01469ba97cdc38939b10cf9ea13237aa1f6c37b1ac84904c5a12a81fa0"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400680065002000640072006900760065007200200066006f007200200074006800650020004500430074006f006f006c0020006400720069007600650072002d0062006100730065006400200074006f006f006c0073 } /* FileDescription The driver for the ECtool driver-based tools */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004100530055005300740065006b } /* CompanyName ASUStek */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0032002e0035002e0030002e0032 } /* FileVersion 2.5.0.2 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0032002e0035 } /* ProductVersion 2.5 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0044007200690076006500720037002e007300790073 } /* InternalName Driver7.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0045004300200074006f006f006c } /* ProductName EC tool */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0044007200690076006500720037 } /* OriginalFilename Driver7 */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020 } /* LegalCopyright Copyright  */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_4CSm {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - c61876aaca6ce822be18adb9d9bd4260.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0b2ad05939b0aabbdc011082fad7960baa0c459ec16a2b29f37c1fa31795a46d"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVG anti rootkit */
@@ -5662,39 +4272,17 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310038002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2018 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_73Hk {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_6VJF {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "e3936d3356573ce2e472495cd3ce769f49a613e453b010433dafce5ea498ddc2"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_89yo {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ae5eb2759305402821aeddc52ba9a6d6.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "eea53103e7a5a55dc1df79797395a2a3e96123ebd71cdd2db4b1be80e7b3f02b"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCD Windows NT/2000/XP I/O driver */
@@ -5706,39 +4294,17 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_89yo {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0045006c00620079004300440049004f002e007300790073 } /* OriginalFilename ElbyCDIO.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000300020002d0020003200300030003900200045006c00610062006f0072006100740065002000420079007400650073002000410047 } /* LegalCopyright Copyright (C) 2000 - 2009 Elaborate Bytes AG */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_RWEverything_RwDrvsys_RwDrvDriver_YXb7 {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_MQQS {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "1e0eb0811a7cf1bdaf29d3d2cab373ca51eb8d8b58889ab7728e2d3aed244abe"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200770044007200760020004400720069007600650072 } /* FileDescription RwDrv Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00520057002d00450076006500720079007400680069006e0067 } /* CompanyName RW-Everything */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300030002e00300030002e00300030003000300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.00.00.0000 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300030002e00300030002e0030003000300030 } /* ProductVersion 1.00.00.0000 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00520077004400720076002e007300790073 } /* InternalName RwDrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005200770044007200760020004400720069007600650072 } /* ProductName RwDrv Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00520077004400720076002e007300790073 } /* OriginalFilename RwDrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310031002000520057002d00450076006500720079007400680069006e0067 } /* LegalCopyright Copyright (C) 2011 RW-Everything */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_7b9H {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 73a40e29f61e5d142c8f42b28a351190.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2d2c7ee9547738a8a676ab785c151e8b48ed40fe7cf6174650814c7f5f58513b"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
@@ -5750,39 +4316,17 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_7b9H {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300031003200200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2012 Intel Corporation All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_3Bs9 {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_829Y {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "e07211224b02aaf68a5e4b73fc1049376623793509d9581cdaee9e601020af06"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0053007900730069006e007400650072006e0061006c00730020002d0020007700770077002e0073007900730069006e007400650072006e0061006c0073002e0063006f006d } /* CompanyName Sysinternals - www.sysinternals.com */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310035002e00300030 } /* FileVersion 15.00 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310035002e00300030 } /* ProductVersion 15.00 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00700072006f0063006500780070002e007300790073 } /* InternalName procexp.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* ProductName Process Explorer */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d00610072006b002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000310034 } /* LegalCopyright Copyright (C) Mark Russinovich 1996-2014 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_7yrb {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 24fe18891c173a7c76426d08d2b0630e.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5cfad3d473961763306d72c12bd5ae14183a1a5778325c9acacca764b79ca185"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCD Windows NT/2000/XP I/O driver */
@@ -5794,83 +4338,17 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_7yrb {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0045006c00620079004300440049004f002e007300790073 } /* OriginalFilename ElbyCDIO.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000300020002d0020003200300030003800200045006c00610062006f0072006100740065002000420079007400650073002000410047 } /* LegalCopyright Copyright (C) 2000 - 2008 Elaborate Bytes AG */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3CMx {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_6eNy {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "89b0017bc30cc026e32b758c66a1af88bd54c6a78e11ec2908ff854e00ac46be"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_rtkiosys_WindowsRCodenameLonghornDDKdriver_82mY {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "caa85c44eb511377ea7426ff10df00a701c07ffb384eef8287636a4bca0b53ab"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f004400720069007600650072 } /* FileDescription Realtek IODriver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00570069006e0064006f00770073002000280052002900200043006f00640065006e0061006d00650020004c006f006e00670068006f0072006e002000440044004b002000700072006f00760069006400650072 } /* CompanyName Windows (R) Codename Longhorn DDK provider */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0030002e0036003000300030002e003100360033003800360020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.0.6000.16386 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0030002e0036003000300030002e00310036003300380036 } /* ProductVersion 6.0.6000.16386 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00720074006b0069006f002e007300790073 } /* InternalName rtkio.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00570069006e0064006f00770073002000280052002900200043006f00640065006e0061006d00650020004c006f006e00670068006f0072006e002000440044004b0020006400720069007600650072 } /* ProductName Windows (R) Codename Longhorn DDK driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00720074006b0069006f002e007300790073 } /* OriginalFilename rtkio.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_PhoenixTechnologies_Agentsys_DriverAgent_4T9i {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "05f052c64d192cf69a462a5ec16dda0d43ca5d0245900c9fcb9201685a2e7748"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004400720069007600650072004100670065006e0074002000440069007200650063007400200049002f004f00200066006f0072002000360034002d006200690074002000570069006e0064006f00770073 } /* FileDescription DriverAgent Direct I/O for 64-bit Windows */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00500068006f0065006e0069007800200054006500630068006e006f006c006f0067006900650073 } /* CompanyName Phoenix Technologies */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0030 } /* FileVersion 6.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0030 } /* ProductVersion 6.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004100670065006e007400360034002e007300790073 } /* InternalName Agent64.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004400720069007600650072004100670065006e0074 } /* ProductName DriverAgent */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100670065006e007400360034002e007300790073 } /* OriginalFilename Agent64.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0045006e0054006500630068002000540061006900770061006e002c00200031003900390037002d0032003000300039 } /* LegalCopyright EnTech Taiwan, 1997-2009 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_3ZSn {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 25ebe6f757129adbe78ec312a5f1800b.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "263e8f1e20612849aea95272da85773f577fd962a7a6d525b53f43407aa7ad24"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirIT Agent System */
@@ -5882,60 +4360,17 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_3ZSn {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]007600690072006100670074002e007300790073 } /* OriginalFilename viragt.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200054004700200053006f0066007400200053002e0061002e0073002e00200032003000300036002c002000320030003100300020002d0020007700770077002e007400670073006f00660074002e00690074 } /* LegalCopyright Copyright (C) TG Soft S.a.s. 2006, 2010 - www.tgsoft.it */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_96Nj {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_5eGf {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "b51ddcf8309c80384986dda9b11bf7856b030e3e885b0856efdb9e84064917e5"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0049006e00740065006c00200043006f00720070006f0072006100740069006f006e0020 } /* CompanyName Intel Corporation  */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300033002e0030002e00340020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.03.0.4 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300033002e0030002e0034 } /* ProductVersion 1.03.0.4 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* InternalName iQVW64.SYS */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0049006e00740065006c0028005200290020006900510056005700360034002e005300590053 } /* ProductName Intel(R) iQVW64.SYS */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300030003600200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2006 Intel Corporation All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_NovellInc_NovellXTier_4hwb {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "ab0925398f3fa69a67eacee2bbb7b34ac395bb309df7fc7a9a9b8103ef41ed7a"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c0020005800540043004f004d0020005300650072007600690063006500730020004400720069007600650072 } /* FileDescription Novell XTCOM Services Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004e006f00760065006c006c002c00200049006e0063002e } /* CompanyName Novell, Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0033002e0031002e00310031002e0030 } /* FileVersion 3.1.11.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0033002e0031002e00310031 } /* ProductVersion 3.1.11 */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e006f00760065006c006c002000580054006900650072 } /* ProductName Novell XTier */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006c00690062006e00690063006d002e007300790073 } /* OriginalFilename libnicm.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200043006f007000790072006900670068007400200032003000300030002d0032003000310033002c0020004e006f00760065006c006c002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_7H7D {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - e9a30edef1105b8a64218f892b2e56ed.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e83908eba2501a00ef9e74e7d1c8b4ff1279f1cd6051707fd51824f87e4378fa"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c0069006200200066006f00720020004d00530049004300500055005f00430043 } /* FileDescription NTIOLib for MSICPU_CC */
@@ -5947,17 +4382,17 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_7H7D {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_55ex {
+rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_5MJc {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aa12c1cb47c443c6108bfe7fc1a34d98.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "af1011c76a22af7be97a0b3e0ce11aca0509820c59fa7c8eeaaa1b2c0225f75a"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d0044002000520079007a0065006e0020004d00610073007400650072002000530065007200760069006300650020004400720069007600650072 } /* FileDescription AMD Ryzen Master Service Driver */
@@ -5969,17 +4404,17 @@ rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMaster
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0041004d004400520079007a0065006e004d00610073007400650072004400720069007600650072002e007300790073 } /* OriginalFilename AMDRyzenMasterDriver.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a90020003200300031003700200041004d0044002c00200049006e0063002e } /* LegalCopyright Copyright © 2017 AMD, Inc. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_4Tmd {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_8Lxo {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 28cb0b64134ad62c2acf77db8501a619.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ada4e42bf5ef58ef1aad94435441003b1cc1fcaa5d38bfdbe1a3d736dc451d47"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCD Windows NT/2000/XP I/O driver */
@@ -5991,17 +4426,17 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_4Tmd {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0045006c00620079004300440049004f002e007300790073 } /* OriginalFilename ElbyCDIO.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000300020002d0020003200300030003800200045006c00610062006f0072006100740065002000420079007400650073002000410047 } /* LegalCopyright Copyright (C) 2000 - 2008 Elaborate Bytes AG */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_Rhno {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_6oEF {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 688a10e87af9bcf0e40277d927923a00.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9b2f051ac901ab47d0012a1002cb8b2db28c14e9480c0dd55e1ac11c81ba9285"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirIT Agent System */
@@ -6013,61 +4448,17 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_Rhno {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00760069007200610067007400360034002e007300790073 } /* OriginalFilename viragt64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200054004700200053006f0066007400200053002e0061002e0073002e00200032003000310031002c002000320030003100330020002d0020007700770077002e007400670073006f00660074002e00690074 } /* LegalCopyright Copyright (C) TG Soft S.a.s. 2011, 2013 - www.tgsoft.it */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_779U {
+rule PUA_VULN_Driver_CYRENInc_AMP_CYRENAMP_3fPc {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "fca10cde7d331b7f614118682d834d46125a65888e97bd9fda2df3f15797166c"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]005400720065006e00640020004d006900630072006f00200049006e0063002e } /* CompanyName Trend Micro Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e00370030002e0030002e0031003100320039 } /* FileVersion 6.70.0.1129 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e00370030 } /* ProductVersion 6.70 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* InternalName TmComm.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005400720065006e00640020004d006900630072006f00200045007900650073 } /* ProductName Trend Micro Eyes */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000200028004300290020002000320030003200300020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright  (C)  2020 Trend Micro Incorporated. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 400KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_QrpA {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "18776682fcc0c6863147143759a8d4050a4115a8ede0136e49a7cf885c8a4805"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_CYRENInc_AMP_CYRENAMP_72eN {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - c533d6d64b474ffc3169a0e0fc0a701a.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cbb8239a765bf5b2c1b6a5c8832d2cab8fef5deacadfb65d8ed43ef56d291ab6"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d00500020004d0069006e006900660069006c007400650072 } /* FileDescription AMP Minifilter */
@@ -6079,83 +4470,17 @@ rule PUA_VULN_Driver_CYRENInc_AMP_CYRENAMP_72eN {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0061006d0070002e007300790073 } /* OriginalFilename amp.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a9002000310039003900390020002d00200032003000310034002e00200043005900520045004e00200049006e0063002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright © 1999 - 2014. CYREN Inc. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_5M4s {
+rule PUA_VULN_Driver_SuperMicroComputerInc_superbmc_superbmc_6qXu {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "46621554728bc55438c7c241137af401250f062edef6e7efecf1a6f0f6d0c1f7"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0053007900730069006e007400650072006e0061006c00730020002d0020007700770077002e0073007900730069006e007400650072006e0061006c0073002e0063006f006d } /* CompanyName Sysinternals - www.sysinternals.com */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310035002e00300030 } /* FileVersion 15.00 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310035002e00300030 } /* ProductVersion 15.00 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00700072006f0063006500780070002e007300790073 } /* InternalName procexp.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* ProductName Process Explorer */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d002e002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000310031 } /* LegalCopyright Copyright (C) M. Russinovich 1996-2011 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_6RwY {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "8c95d28270a4a314299cf50f05dcbe63033b2a555195d2ad2f678e09e00393e6"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310030002000430050005500490044 } /* LegalCopyright Copyright(C) 2010 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_6npN {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "7893307df2fdde25371645a924f0333e1b2de31b6bc839d8e2a908d7830c6504"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_SuperMicroComputerInc_superbmc_superbmc_7kvg {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 3473faea65fba5d4fbe54c0898a3c044.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f8430bdc6fd01f42217d66d87a3ef6f66cb2700ebb39c4f25c8b851858cc4b35"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]007300750070006500720062006d0063 } /* FileDescription superbmc */
@@ -6167,61 +4492,17 @@ rule PUA_VULN_Driver_SuperMicroComputerInc_superbmc_superbmc_7kvg {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]007300750070006500720062006d0063002e007300790073 } /* OriginalFilename superbmc.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280063002900200031003900390033002d00320030003100350020005300750070006500720020004d006900630072006f00200043006f006d00700075007400650072002c00200049006e0063002e } /* LegalCopyright Copyright(c) 1993-2015 Super Micro Computer, Inc. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_4cnD {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_8EyL {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "e0b5a5f8333fc1213791af5c5814d7a99615b3951361ca75f8aa5022c9cfbc2b"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310036002000430050005500490044 } /* LegalCopyright Copyright(C) 2016 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_rtkiosys_WindowsRCodenameLonghornDDKdriver_6n9u {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "478917514be37b32d5ccf76e4009f6f952f39f5553953544f1b0688befd95e82"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f004400720069007600650072 } /* FileDescription Realtek IODriver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00570069006e0064006f00770073002000280052002900200043006f00640065006e0061006d00650020004c006f006e00670068006f0072006e002000440044004b002000700072006f00760069006400650072 } /* CompanyName Windows (R) Codename Longhorn DDK provider */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0030002e0036003000300030002e003100360033003800360020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.0.6000.16386 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0030002e0036003000300030002e00310036003300380036 } /* ProductVersion 6.0.6000.16386 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00720074006b0069006f002e007300790073 } /* InternalName rtkio.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00570069006e0064006f00770073002000280052002900200043006f00640065006e0061006d00650020004c006f006e00670068006f0072006e002000440044004b0020006400720069007600650072 } /* ProductName Windows (R) Codename Longhorn DDK driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00720074006b0069006f002e007300790073 } /* OriginalFilename rtkio.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_7zMW {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - e7273e17ac85dc4272c4c4400091a19e.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1023dcd4c80db19e9f82f95b1c5e1ddb60db7ac034848dd5cc1c78104a6350f4"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVG anti rootkit */
@@ -6233,61 +4514,18 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310038002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2018 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_3TtF {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_6NKw {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "c089a31ac95d41ed02d1e4574962f53376b36a9e60ff87769d221dc7d1a3ecfa"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0053007900730069006e007400650072006e0061006c00730020002d0020007700770077002e0073007900730069006e007400650072006e0061006c0073002e0063006f006d } /* CompanyName Sysinternals - www.sysinternals.com */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310035002e00300030 } /* FileVersion 15.00 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310035002e00300030 } /* ProductVersion 15.00 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00700072006f0063006500780070002e007300790073 } /* InternalName procexp.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* ProductName Process Explorer */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d00610072006b002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000310034 } /* LegalCopyright Copyright (C) Mark Russinovich 1996-2014 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_cpuzsys_WindowsRWinDDKdriver_ciRL {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "2a9d481ffdc5c1e2cb50cf078be32be06b21f6e2b38e90e008edfc8c4f2a9c4e"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b002000700072006f00760069006400650072 } /* CompanyName Windows (R) Win 7 DDK provider */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b0020006400720069007600650072 } /* ProductName Windows (R) Win 7 DDK driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_86Km {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - d0a5f9ace1f0c459cef714156db1de02.bin, edbf206c27c3aa7d1890899dffcc03ec.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f877296e8506e6a1acbdacdc5085b18c6842320a2775a329d286bac796f08d54"
-		date = "2023-05-12"
+		hash = "de3597ae7196ca8c0750dce296a8a4f58893774f764455a125464766fcc9b3b5"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
@@ -6299,17 +4537,17 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_86Km {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300031003500200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2015 Intel Corporation All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_6myf {
+rule PUA_VULN_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_4fid {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 8636fe3724f2bcba9399daffd6ef3c7e.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6908ebf52eb19c6719a0b508d1e2128f198d10441551cbfb9f4031d382f5229f"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570041004e0020005400720061006e00730070006f007200740020004400720069007600650072 } /* FileDescription WAN Transport Driver */
@@ -6321,17 +4559,17 @@ rule PUA_VULN_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSyst
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00770061006e00740064002e007300790073 } /* OriginalFilename wantd.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Microsoft Corporation. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AlmicoSoftware_sfdrvxsys_SpeedFan_X_LsFH {
+rule PUA_VULN_Driver_AlmicoSoftware_sfdrvxsys_SpeedFan_X_7qHc {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 9f70cd5edcc4efc48ae21e04fb03be9d.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ad23d77a38655acb71216824e363df8ac41a48a1a0080f35a0d23aa14b54460b"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530070006500650064002000460061006e00200078003300320020004400720069007600650072 } /* FileDescription Speed Fan x32 Driver */
@@ -6343,127 +4581,21 @@ rule PUA_VULN_Driver_AlmicoSoftware_sfdrvxsys_SpeedFan_X_LsFH {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00730066006400720076007800330032002e007300790073 } /* OriginalFilename sfdrvx32.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a900200041006c006d00690063006f00200053006f00660074007700610072006500200032003000300031002d0032003000310030 } /* LegalCopyright Copyright © Almico Software 2001-2010 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7cJp {
+rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_6Qg7 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "89108a15f009b285db4ef94250b889d5b11b96b4aa7b190784a6d1396e893e10"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]005400720065006e00640020004d006900630072006f00200049006e0063002e } /* CompanyName Trend Micro Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0035002e00350030002e0030002e0031003000370030 } /* FileVersion 5.50.0.1070 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0035002e00350030 } /* ProductVersion 5.50 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* InternalName TmComm.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005400720065006e00640020004d006900630072006f00200045007900650073 } /* ProductName Trend Micro Eyes */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000320020002d002000320030003100320020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002 - 2012 Trend Micro Incorporated. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MicrosoftCorporation_windbgsys_MicrosoftWindowsOperatingSystem_j6tU {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "fa9abb3e7e06f857be191a1e049dd37642ec41fb2520c105df2227fcac3de5d5"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069006e0064006f007700730020004700550049002000730079006d0062006f006c00690063002000640065006200750067006700650072 } /* FileDescription Windows GUI symbolic debugger */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e } /* CompanyName Microsoft Corporation */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310030002e0030002e00310039003000340031002e0036003800350020002800570069006e004200750069006c0064002e003100360030003100300031002e00300038003000300029 } /* FileVersion 10.0.19041.685 (WinBuild.160101.0800) */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310030002e0030002e00310039003000340031002e003600380035 } /* ProductVersion 10.0.19041.685 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00770069006e006400620067002e007300790073 } /* InternalName windbg.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004d006900630072006f0073006f00660074003f002000570069006e0064006f00770073003f0020004f007000650072006100740069006e0067002000530079007300740065006d } /* ProductName Microsoft? Windows? Operating System */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00770069006e006400620067002e007300790073 } /* OriginalFilename windbg.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]003f0020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright ? Microsoft Corporation. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 1000KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MicrosoftCorporation_ntbiosys_MicrosoftRWindowsRNTOperatingSystem_6jXy {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]006e007400620069006f00730020006400720069007600650072 } /* FileDescription ntbios driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e } /* CompanyName Microsoft Corporation */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0035002c00200030002c00200032002c00200031 } /* FileVersion 5, 0, 2, 1 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0035002c00200030002c00200032002c00200031 } /* ProductVersion 5, 0, 2, 1 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006e007400620069006f002e007300790073 } /* InternalName ntbio.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0020004d006900630072006f0073006f00660074002800520029002000570069006e0064006f0077007300200028005200290020004e00540020004f007000650072006100740069006e0067002000530079007300740065006d } /* ProductName  Microsoft(R) Windows (R) NT Operating System */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006e007400620069006f0073002e007300790073 } /* OriginalFilename ntbios.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]7248674362406709002000280043002900200032003000300033 } /* LegalCopyright 版权所有 (C) 2003 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_5hfE {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "d636c011b8b2896572f5de260eb997182cc6955449b044a739bd19cbe6fdabd2"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d0049004300530059005300200049004f0020006400720069007600650072 } /* FileDescription MICSYS IO driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d0049004300530059005300200054006500630068006e006f006c006f0067007900200043006f002e002c0020004c00540064 } /* CompanyName MICSYS Technology Co., LTd */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e003300200078003600340020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.3 x64 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00330020007800360034 } /* ProductVersion 1.3 x64 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004d00730049006f00360034002e007300790073 } /* InternalName MsIo64.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004d00730049006f003600340020004400720069007600650072002000560065007200730069006f006e00200031002e0033 } /* ProductName MsIo64 Driver Version 1.3 */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004d00730049006f00360034002e007300790073 } /* OriginalFilename MsIo64.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800630029002000320030003200310020004d00490043005300590053 } /* LegalCopyright Copyright (c) 2021 MICSYS */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_8NYg {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "1ee59eb28688e73d10838c66e0d8e011c8df45b6b43a4ac5d0b75795ca3eb512"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310030002000430050005500490044 } /* LegalCopyright Copyright(C) 2010 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_6UKz {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 7ee0c884e7d282958c5b3a9e47f23e13.bin, 17b97fbe2e8834d7ad30211635e1b271.bin, dbf11f3fad1db3eb08e2ee24b5ebfb95.bin, b12d1630fd50b2a21fd91e45d522ba3a.bin, 5a1ee9e6a177f305765f09b0ae6ac1c5.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1a4f7d7926efc3e3488758ce318246ea78a061bde759ec6c906ff005dd8213e5"
-		date = "2023-05-12"
+		hash = "0da746e49fd662be910d0e366934a7e02898714eaaa577e261ab40eb44222b5c"
+		hash = "e32ab30d01dcff6418544d93f99ae812d2ce6396e809686620547bea05074f6f"
+		hash = "01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece"
+		hash = "ecfc52a22e4a41bf53865b0e28309411c60af34a44e31a5c53cdc8c5733e8282"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100540053005a0049004f0020004400720069007600650072 } /* FileDescription ATSZIO Driver */
@@ -6475,61 +4607,17 @@ rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_6UKz {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100540053005a0049004f002e007300790073 } /* OriginalFilename ATSZIO.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310032 } /* LegalCopyright Copyright (C) 2012 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_cpuzsys_WindowsRWinDDKdriver_8xGS {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5yWb {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "8688e43d94b41eeca2ed458b8fc0d02f74696a918e375ecd3842d8627e7a8f2b"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b002000700072006f00760069006400650072 } /* CompanyName Windows (R) Win 7 DDK provider */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b0020006400720069007600650072 } /* ProductName Windows (R) Win 7 DDK driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_4v5F {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "79e2d37632c417138970b4feba91b7e10c2ea251c5efe3d1fc6fa0190f176b57"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_44Ts {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 09927915aba84c8acd91efdaac674b86.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "bcfc2c9883e6c1b8429be44cc4db988a9eecb544988fbd756d18cfca6201876f"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -6541,17 +4629,18 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_44Ts {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000200028004300290020002000320030003100370020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright  (C)  2017 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 500KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_WindowsRDDKprovider_gdrvsys_WindowsRDDKdriver_92Y8 {
+rule PUA_VULN_Driver_WindowsRDDKprovider_gdrvsys_WindowsRDDKdriver_5S6Q {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - d556cb79967e92b5cc69686d16c1d846.bin, c832a4313ff082258240b61b88efa025.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f4ff679066269392f6b7c3ba6257fc60dd609e4f9c491b00e1a16e4c405b0b9b"
-		date = "2023-05-12"
+		hash = "cfc5c585dd4e592dd1a08887ded28b92d9a5820587b6f4f8fa4f56d60289259b"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041004200590054004500200054006f006f006c0073 } /* FileDescription GIGABYTE Tools */
@@ -6563,17 +4652,17 @@ rule PUA_VULN_Driver_WindowsRDDKprovider_gdrvsys_WindowsRDDKdriver_92Y8 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0067006400720076002e007300790073 } /* OriginalFilename gdrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d006900630072006f0073006f0066007400200043006f00720070002e00200031003900380031002d0031003900390039 } /* LegalCopyright Copyright (C) Microsoft Corp. 1981-1999 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_583G {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4ixB {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - e28ce623e3e5fa1d2fe16c721efad4c2.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "dbc604b4e01362a3e51357af4a87686834fe913852a4e0a8c0d4c1a0f7d076ed"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -6585,17 +4674,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_583G {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100340020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2014 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_4FxB {
+rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_3Vkn {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - f042e8318cf20957c2339d96690c3186.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f15ae970e222ce06dbf3752b223270d0e726fb78ebec3598b4f8225b5a0880b1"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0043006f007200730061006900720020004c004c0020004100630063006500730073 } /* FileDescription Corsair LL Access */
@@ -6607,39 +4696,17 @@ rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_4FxB {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0043006f007200730061006900720020004c004c0020004100630063006500730073 } /* OriginalFilename Corsair LL Access */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007200730061006900720020004d0065006d006f00720079002c00200049006e0063002e002000280063002900200032003000310039002c00200041006c006c0020007200690067006800740073002000720065007300650072007600650064 } /* LegalCopyright Corsair Memory, Inc. (c) 2019, All rights reserved */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_ow74 {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5J3w {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "ff115cefe624b6ca0b3878a86f6f8b352d1915b65fbbdc33ae15530a96ebdaa7"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0049006e00740065006c00200043006f00720070006f0072006100740069006f006e0020 } /* CompanyName Intel Corporation  */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300033002e0030002e00340020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.03.0.4 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300033002e0030002e0034 } /* ProductVersion 1.03.0.4 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* InternalName iQVW64.SYS */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0049006e00740065006c0028005200290020006900510056005700360034002e005300590053 } /* ProductName Intel(R) iQVW64.SYS */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300030003600200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2006 Intel Corporation All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5qGu {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 29122f970a9e766ef01a73e0616d68b3.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4e37592a2a415f520438330c32cfbdbd6af594deef5290b2fa4b9722b898ff69"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -6651,38 +4718,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5qGu {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000200028004300290020002000320030003200310020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright  (C)  2021 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_85Zo {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7btP {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "ce23c2dae4cca4771ea50ec737093dfafac06c64db0f924a1ccbbf687e33f5a2"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c002000580054006900650072002000530065007300730069006f006e0020004d0061006e0061006700650072 } /* FileDescription Novell XTier Session Manager */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004e006f00760065006c006c002c00200049006e0063002e } /* CompanyName Novell, Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0033002e0031002e0036002e0030 } /* FileVersion 3.1.6.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0033002e0031002e0036 } /* ProductVersion 3.1.6 */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e006f00760065006c006c002000580054006900650072 } /* ProductName Novell XTier */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006e00730063006d002e007300790073 } /* OriginalFilename nscm.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200043006f007000790072006900670068007400200032003000300030002d0032003000300038002c0020004e006f00760065006c006c002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6BzB {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - c006d1844f20b91d0ea52bf32d611f30.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ecd07df7ad6fee9269a9e9429eb199bf3e24cf672aa1d013b7e8d90d75324566"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -6694,39 +4740,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6BzB {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000200028004300290020002000320030003100390020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright  (C)  2019 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 400KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_XFAk {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_8cm3 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "952199c28332bc90cfd74530a77ee237967ed32b3c71322559c59f7a42187dc4"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_87eF {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cb31f1b637056a3d374e22865c41e6d9.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "36e3127f045ef1fa7426a3ff8c441092d3b66923d2b69826034e48306609e289"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription Avast Anti Rootkit */
@@ -6738,39 +4762,17 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_87eF {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300032003000200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2020 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_9asJ {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8mii {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "101402d4f5d1ae413ded499c78a5fcbbc7e3bae9b000d64c1dd64e3c48c37558"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8txN {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 148bd10da8c8d64928a213c7bf1f2fca.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fda93c6e41212e86af07f57ca95db841161f00b08dae6304a51b467056e56280"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -6782,17 +4784,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8txN {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000200028004300290020002000320030003100390020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright  (C)  2019 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 400KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriver_4HSz {
+rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriver_4Exz {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - b10b210c5944965d0dc85e70a0b19a42.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d205286bffdf09bc033c09e95c519c1c267b40c2ee8bab703c6a2d86741ccd3e"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049002f004f00200049006e00740065007200660061006300650020006400720069007600650072002000660069006c0065 } /* FileDescription I/O Interface driver file */
@@ -6804,17 +4806,18 @@ rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriver_4HSz {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00420053005f005200430049004f00360034002e007300790073 } /* OriginalFilename BS_RCIO64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280063002900200032003000310038002d0032003000310039002000420049004f0053005400410052002000470072006f00750070 } /* LegalCopyright Copyright (c) 2018-2019 BIOSTAR Group */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_amifldrvsys_WindowsRWinDDKdriver_3XTg {
+rule PUA_VULN_Driver_WindowsRWinDDKprovider_amifldrvsys_WindowsRWinDDKdriver_95w3 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 119f0656ab4bb872f79ee5d421e2b9f9.bin, 7b9717c608a5f5a1c816128a609e9575.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "38d87b51f4b69ba2dae1477684a1415f1a3b578eee5e1126673b1beaefee9a20"
-		date = "2023-05-12"
+		hash = "ffc72f0bde21ba20aa97bee99d9e96870e5aa40cce9884e44c612757f939494f"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d0049002000470065006e00650072006900630020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription AMI Generic Utility Driver */
@@ -6826,39 +4829,19 @@ rule PUA_VULN_Driver_WindowsRWinDDKprovider_amifldrvsys_WindowsRWinDDKdriver_3XT
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0061006d00690066006c006400720076002e007300790073 } /* OriginalFilename amifldrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ASRockIncorporation_AsrDrvsys_ASRockIODriver_tV9S {
+rule PUA_VULN_Driver_HighresolutionEnterpriseswwwhighrezcouk_inpoutxsys_inpoutxDriverVersion_x_3w29 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "ece0a900ea089e730741499614c0917432246ceb5e11599ee3a1bb679e24fd2c"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100530052006f0063006b00200049004f0020004400720069007600650072 } /* FileDescription ASRock IO Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004100530052006f0063006b00200049006e0063006f00720070006f0072006100740069006f006e } /* CompanyName ASRock Incorporation */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300030002e00300030002e00300030003000300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.00.00.0000 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300030002e00300030002e0030003000300030 } /* ProductVersion 1.00.00.0000 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004100730072004400720076002e007300790073 } /* InternalName AsrDrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004100530052006f0063006b00200049004f0020004400720069007600650072 } /* ProductName ASRock IO Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100730072004400720076002e007300790073 } /* OriginalFilename AsrDrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100320020004100530052006f0063006b00200049006e0063006f00720070006f0072006100740069006f006e } /* LegalCopyright Copyright (C) 2012 ASRock Incorporation */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_HighresolutionEnterpriseswwwhighrezcouk_inpoutxsys_inpoutxDriverVersion_x_8uEJ {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 5ca1922ed5ee2b533b5f3dd9be20fd9a.bin, 9321a61a25c7961d9f36852ecaa86f55.bin, 4d487f77be4471900d6ccbc47242cc25.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f581decc2888ef27ee1ea85ea23bbb5fb2fe6a554266ff5a1476acd1d29d53af"
-		date = "2023-05-12"
+		hash = "f8965fdce668692c3785afa3559159f9a18287bc0d53abb21902895a8ecf221b"
+		hash = "2d83ccb1ad9839c9f5b3f10b1f856177df1594c66cbbc7661677d4b462ebf44d"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004b00650072006e0065006c0020006c006500760065006c00200070006f0072007400200061006300630065007300730020006400720069007600650072 } /* FileDescription Kernel level port access driver */
@@ -6870,17 +4853,17 @@ rule PUA_VULN_Driver_HighresolutionEnterpriseswwwhighrezcouk_inpoutxsys_inpoutxD
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0069006e0070006f00750074007800360034002e007300790073 } /* OriginalFilename inpoutx64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300030003800200048006900670068007200650073006f006c007500740069006f006e00200045006e007400650072007000720069007300650073002e00200050006f007200740069006f006e007300200043006f007000790072006900670068007400200028006300290020004c006f00670069007800340075 } /* LegalCopyright Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c) Logix4u */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5H8X {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3fPi {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 28d6b138adc174a86c0f6248d8a88275.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "12eda8b65ed8c1d80464a0c535ea099dffdb4981c134294cb0fa424efc85ee56"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -6892,39 +4875,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5H8X {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000200028004300290020002000320030003100390020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright  (C)  2019 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 400KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_96Xt {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_7MPa {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "39cfde7d401efce4f550e0a9461f5fc4d71fa07235e1336e4f0b4882bd76550e"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_izBk {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 65e6718a547495c692e090d7887d247b.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ebe2e9ec6d5d94c2d58fbcc9d78c5f0ee7a2f2c1aed6d1b309f383186d11dfa3"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avast anti rootkit */
@@ -6936,193 +4897,18 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_izBk {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300031003900200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2019 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_8t6A {
+rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_4LYq {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "0da746e49fd662be910d0e366934a7e02898714eaaa577e261ab40eb44222b5c"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100540053005a0049004f0020004400720069007600650072 } /* FileDescription ATSZIO Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004100530055005300540065006b00200043006f006d0070007500740065007200200049006e0063002e } /* CompanyName ASUSTek Computer Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0030002e0032002e0031002e0037 } /* FileVersion 0.2.1.7 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0030002e0032002e0031002e0037 } /* ProductVersion 0.2.1.7 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004100540053005a0049004f002e007300790073 } /* InternalName ATSZIO.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004100540053005a0049004f0020004400720069007600650072 } /* ProductName ATSZIO Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100540053005a0049004f002e007300790073 } /* OriginalFilename ATSZIO.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310032 } /* LegalCopyright Copyright (C) 2012 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_5Y9w {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "85866e8c25d82c1ec91d7a8076c7d073cccf421cf57d9c83d80d63943a4edd94"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_cpuzsys_WindowsRCodenameLonghornDDKdriver_4GGV {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "dbb457ae1bd07a945a1466ce4a206c625e590aee3922fa7d86fbe956beccfc98"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00570069006e0064006f00770073002000280052002900200043006f00640065006e0061006d00650020004c006f006e00670068006f0072006e002000440044004b002000700072006f00760069006400650072 } /* CompanyName Windows (R) Codename Longhorn DDK provider */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0030002e0036003000300030002e003100360033003800360020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.0.6000.16386 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0030002e0036003000300030002e00310036003300380036 } /* ProductVersion 6.0.6000.16386 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00570069006e0064006f00770073002000280052002900200043006f00640065006e0061006d00650020004c006f006e00670068006f0072006e002000440044004b0020006400720069007600650072 } /* ProductName Windows (R) Codename Longhorn DDK driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MicrosoftCorporation_windbgsys_MicrosoftWindowsOperatingSystem_7HJp {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "e1cb86386757b947b39086cc8639da988f6e8018ca9995dd669bdc03c8d39d7d"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069006e0064006f007700730020004700550049002000730079006d0062006f006c00690063002000640065006200750067006700650072 } /* FileDescription Windows GUI symbolic debugger */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e } /* CompanyName Microsoft Corporation */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310030002e0030002e00310039003000340031002e0036003800350020002800570069006e004200750069006c0064002e003100360030003100300031002e00300038003000300029 } /* FileVersion 10.0.19041.685 (WinBuild.160101.0800) */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310030002e0030002e00310039003000340031002e003600380035 } /* ProductVersion 10.0.19041.685 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00770069006e006400620067002e007300790073 } /* InternalName windbg.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004d006900630072006f0073006f00660074003f002000570069006e0064006f00770073003f0020004f007000650072006100740069006e0067002000530079007300740065006d } /* ProductName Microsoft? Windows? Operating System */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00770069006e006400620067002e007300790073 } /* OriginalFilename windbg.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]003f0020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright ? Microsoft Corporation. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 1000KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_8VMq {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "b7a20b5f15e1871b392782c46ebcc897929443d82073ee4dcb3874b6a5976b5d"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_8GMx {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "ee45fd2d7315fd039f3585a66e7855ba4af9d4721e1448e602623de14e932bbe"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310037002000430050005500490044 } /* LegalCopyright Copyright(C) 2017 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_BZdM {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "deecbcd260849178de421d8e2f177dce5c63cf67a48abb23a0e3cf3aa3e00578"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310034002000430050005500490044 } /* LegalCopyright Copyright(C) 2014 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_ASRockIncorporation_AsrDrvsys_ASRockIODriver_5JDX {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "f40435488389b4fb3b945ca21a8325a51e1b5f80f045ab019748d0ec66056a8b"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100530052006f0063006b00200049004f0020004400720069007600650072 } /* FileDescription ASRock IO Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004100530052006f0063006b00200049006e0063006f00720070006f0072006100740069006f006e } /* CompanyName ASRock Incorporation */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300030002e00300030002e00300030003000300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.00.00.0000 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300030002e00300030002e0030003000300030 } /* ProductVersion 1.00.00.0000 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004100730072004400720076002e007300790073 } /* InternalName AsrDrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004100530052006f0063006b00200049004f0020004400720069007600650072 } /* ProductName ASRock IO Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100730072004400720076002e007300790073 } /* OriginalFilename AsrDrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100320020004100530052006f0063006b00200049006e0063006f00720070006f0072006100740069006f006e } /* LegalCopyright Copyright (C) 2012 ASRock Incorporation */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_8ewN {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 30efb7d485fc9c28fe82a97deac29626.bin, 803a371a78d528a44ef8777f67443b16.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a334bdf0c0ab07803380eb6ef83eefe7c147d6962595dd9c943a6a76f2200b0d"
-		date = "2023-05-12"
+		hash = "000547560fea0dd4b477eb28bf781ea67bf83c748945ce8923f90fdd14eb7a4b"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0043006f007200730061006900720020004c004c0020004100630063006500730073 } /* FileDescription Corsair LL Access */
@@ -7134,17 +4920,17 @@ rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_8ewN {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0043006f007200730061006900720020004c004c0020004100630063006500730073 } /* OriginalFilename Corsair LL Access */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007200730061006900720020004d0065006d006f00720079002c00200049006e0063002e002000280063002900200032003000310039002c00200041006c006c0020007200690067006800740073002000720065007300650072007600650064 } /* LegalCopyright Corsair Memory, Inc. (c) 2019, All rights reserved */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8obD {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4Tsv {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - e3aaa0c1c3a5e99eb9970ebe4b5a3183.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1c1251784e6f61525d0082882a969cb8a0c5d5359be22f5a73e3b0cd38b51687"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -7156,17 +4942,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8obD {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100350020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2015 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_74ov {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_fE9G {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - f4b7b84a6828d2f9205b55cf8cfc7742.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4bc0921ffd4acc865525d3faf98961e8decc5aec4974552cbbf2ae8d5a569de4"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -7178,17 +4964,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_74ov {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300035002d00320030003100300020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2005-2010 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_IObitInformationTechnology_IObitUnlockersys_Unlocker_6p7S {
+rule PUA_VULN_Driver_IObitInformationTechnology_IObitUnlockersys_Unlocker_5TBq {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 2391fb461b061d0e5fccb050d4af7941.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f85cca4badff17d1aa90752153ccec77a68ad282b69e3985fdc4743eaea85004"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0055006e006c006f0063006b006500720020004400720069007600650072 } /* FileDescription Unlocker Driver */
@@ -7200,17 +4986,17 @@ rule PUA_VULN_Driver_IObitInformationTechnology_IObitUnlockersys_Unlocker_6p7S {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0049004f0062006900740055006e006c006f0063006b00650072002e007300790073 } /* OriginalFilename IObitUnlocker.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a900200049004f006200690074002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © IObit. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_RazerInc_Rzpnk_Rzpnk_3mUm {
+rule PUA_VULN_Driver_RazerInc_Rzpnk_Rzpnk_4s6S {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 4cc3ddd5ae268d9a154a426af2c23ef9.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "93d873cdf23d5edc622b74f9544cac7fe247d7a68e1e2a7bf2879fad97a3ae63"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520061007a006500720020004f007600650072006c0061007900200053007500700070006f00720074 } /* FileDescription Razer Overlay Support */
@@ -7222,39 +5008,17 @@ rule PUA_VULN_Driver_RazerInc_Rzpnk_Rzpnk_3mUm {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0052007a0070006e006b002e007300790073 } /* OriginalFilename Rzpnk.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310030002d0032003000310037002e002000520061007a00650072002c00200049006e0063002e } /* LegalCopyright Copyright (C) 2010-2017. Razer, Inc. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_6o9B {
+rule PUA_VULN_Driver_WiseCleanercom_WiseUnlosys_WiseUnlo_7Mud {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "8d9a2363b757d3f127b9c6ed8f7b8b018e652369bc070aa3500b3a978feaa6ce"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570041004e0020005400720061006e00730070006f007200740020004400720069007600650072 } /* FileDescription WAN Transport Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e } /* CompanyName Microsoft Corporation */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e0031003100370032 } /* FileVersion 6.1.7600.1172 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e0031003100370032 } /* ProductVersion 6.1.7600.1172 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00770061006e00740064002e007300790073 } /* InternalName wantd.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004d006900630072006f0073006f00660074002000570069006e0064006f007700730020004f007000650072006100740069006e0067002000530079007300740065006d } /* ProductName Microsoft Windows Operating System */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00770061006e00740064002e007300790073 } /* OriginalFilename wantd.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Microsoft Corporation. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_WiseCleanercom_WiseUnlosys_WiseUnlo_8RWF {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 356bda2bf0f6899a2c08b2da3ec69f13.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "358ac54be252673841a1d65bfc2fb6d549c1a4c877fa7f5e1bfa188f30375d69"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069007300650055006e006c006f } /* FileDescription WiseUnlo */
@@ -7266,17 +5030,17 @@ rule PUA_VULN_Driver_WiseCleanercom_WiseUnlosys_WiseUnlo_8RWF {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00570069007300650055006e006c006f002e007300790073 } /* OriginalFilename WiseUnlo.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a900200032003000310035 } /* LegalCopyright Copyright © 2015 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_8hU4 {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_5wXJ {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - f0aeb731d83f7ab6008c92c97faf6233.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7d43769b353d63093228a59eb19bba87ce6b552d7e1a99bf34a54eee641aa0ea"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVG anti rootkit */
@@ -7288,17 +5052,17 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310034002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2014 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_8UGP {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_3dpY {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - f65e545771fd922693f0ec68b2141012.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "adc10de960f40fa9f6e28449748250fa9ddfd331115b77a79809a50c606753ee"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -7310,39 +5074,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_8UGP {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300035002d00320030003000380020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2005-2008 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_cpuzsys_WindowsRWinDDKdriver_8MMY {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_6ryn {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "592f56b13e7dcaa285da64a0b9a48be7562bd9b0a190208b7c8b7d8de427cf6c"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b002000700072006f00760069006400650072 } /* CompanyName Windows (R) Win 7 DDK provider */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b0020006400720069007600650072 } /* ProductName Windows (R) Win 7 DDK driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_7Yf5 {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 9496585198d726000ea505abc39dbfe9.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "94911fe6f2aba9683b10353094caf71ee4a882de63b4620797629d79f18feec5"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AVG Anti Rootkit */
@@ -7354,39 +5096,17 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_7Yf
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000320030002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2020 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_764y {
+rule PUA_VULN_Driver_FUJITSULIMITED_ADVDRVsys_MicrosoftRWindowsROperatingSystem_86YZ {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "d92eab70bcece4432258c9c9a914483a2267f6ab5ce2630048d3a99e8cb1b482"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_FUJITSULIMITED_ADVDRVsys_MicrosoftRWindowsROperatingSystem_85Vt {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 778b7feea3c750d44745d3bf294bd4ce.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "04a85e359525d662338cae86c1e59b1d7aa9bd12b920e8067503723dc1e03162"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00460055004a00490054005300550020004c0049004d0049005400450044002e } /* CompanyName FUJITSU LIMITED. */
@@ -7397,61 +5117,17 @@ rule PUA_VULN_Driver_FUJITSULIMITED_ADVDRVsys_MicrosoftRWindowsROperatingSystem_
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00410044005600360034004400520056002e007300790073 } /* OriginalFilename ADV64DRV.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002800430029002000460055004a00490054005300550020004c0049004d004900540045004400200032003000300035 } /* LegalCopyright Copyright(C) FUJITSU LIMITED 2005 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_6ur5 {
+rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_8dD4 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "6e944ae1bfe43a8a7cd2ea65e518a30172ce8f31223bdfd39701b2cb41d8a9e7"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0053007900730069006e007400650072006e0061006c00730020002d0020007700770077002e0073007900730069006e007400650072006e0061006c0073002e0063006f006d } /* CompanyName Sysinternals - www.sysinternals.com */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310035002e00300030 } /* FileVersion 15.00 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310035002e00300030 } /* ProductVersion 15.00 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00700072006f0063006500780070002e007300790073 } /* InternalName procexp.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* ProductName Process Explorer */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d00610072006b002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000310034 } /* LegalCopyright Copyright (C) Mark Russinovich 1996-2014 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_HighresolutionEnterpriseswwwhighrezcouk_inpoutxsys_inpoutxDriverVersion_x_6qcE {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "f8965fdce668692c3785afa3559159f9a18287bc0d53abb21902895a8ecf221b"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004b00650072006e0065006c0020006c006500760065006c00200070006f0072007400200061006300630065007300730020006400720069007600650072 } /* FileDescription Kernel level port access driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0048006900670068007200650073006f006c007500740069006f006e00200045006e0074006500720070007200690073006500730020005b007700770077002e006800690067006800720065007a002e0063006f002e0075006b005d } /* CompanyName Highresolution Enterprises [www.highrez.co.uk] */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e003200200078003600340020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.2 x64 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00320020007800360034 } /* ProductVersion 1.2 x64 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0069006e0070006f00750074007800360034002e007300790073 } /* InternalName inpoutx64.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0069006e0070006f007500740078003600340020004400720069007600650072002000560065007200730069006f006e00200031002e0032 } /* ProductName inpoutx64 Driver Version 1.2 */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0069006e0070006f00750074007800360034002e007300790073 } /* OriginalFilename inpoutx64.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300030003800200048006900670068007200650073006f006c007500740069006f006e00200045006e007400650072007000720069007300650073002e00200050006f007200740069006f006e007300200043006f007000790072006900670068007400200028006300290020004c006f00670069007800340075 } /* LegalCopyright Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c) Logix4u */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_3yUN {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 0be5c6476dd58072c93af4fca62ee4b3.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ff9623317287358440ec67da9ba79994d9b17b99ffdd709ec836478fe1fc22a5"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d0044002000520079007a0065006e0020004d00610073007400650072002000530065007200760069006300650020004400720069007600650072 } /* FileDescription AMD Ryzen Master Service Driver */
@@ -7463,38 +5139,17 @@ rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMaster
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0041004d004400520079007a0065006e004d00610073007400650072004400720069007600650072002e007300790073 } /* OriginalFilename AMDRyzenMasterDriver.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a90020003200300031003900200041004d0044002c00200049006e0063002e } /* LegalCopyright Copyright © 2019 AMD, Inc. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_796Z {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys__5L2U {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "da11e9598eef033722b97873d1c046270dd039d0e3ee6cd37911e2dc2eb2608d"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c0020005800540043004f004d0020005300650072007600690063006500730020004400720069007600650072 } /* FileDescription Novell XTCOM Services Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004e006f00760065006c006c002c00200049006e0063002e } /* CompanyName Novell, Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0033002e0031002e00310031002e0030 } /* FileVersion 3.1.11.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0033002e0031002e00310031 } /* ProductVersion 3.1.11 */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e006f00760065006c006c002000580054006900650072 } /* ProductName Novell XTier */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006c00690062006e00690063006d002e007300790073 } /* OriginalFilename libnicm.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200043006f007000790072006900670068007400200032003000300030002d0032003000310033002c0020004e006f00760065006c006c002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
-}
-
-
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys__5yzT {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 659a59d7e26b7730361244e12201378e.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "77950e2a40ac0447ae7ee1ee3ef1242ce22796a157074e6f04e345b1956e143c"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0020002000200020002000200020002000200020002000200020002000200020 } /* FileDescription                  */
@@ -7506,17 +5161,17 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys__5yzT {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d00610072006b002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000310034 } /* LegalCopyright Copyright (C) Mark Russinovich 1996-2014 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_6Nwh {
+rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_4254 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 1610342659cb8eb4a0361dbc047a2221.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b019ebd77ac19cdd72bba3318032752649bd56a7576723a8ae1cccd70ee1e61a"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530061006e006400720061002000440065007600690063006500200044007200690076006500720020002800570069006e003300320020007800380036002900280055006e00690063006f006400650029 } /* FileDescription Sandra Device Driver (Win32 x86)(Unicode) */
@@ -7528,39 +5183,17 @@ rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_6Nwh {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00530041004e004400520041 } /* OriginalFilename SANDRA */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a90020005300690053006f0066007400770061007200650020004c0074006400200031003900390035002d0032003000300037002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright © SiSoftware Ltd 1995-2007. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3EK4 {
+rule PUA_VULN_Driver_AdvancedMicroDevicesInc_AMDPowerProfilersys_AMDuProf_7ZRm {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "ee3ff12943ced401e2b6df9e66e8a0be8e449fa9326cab241f471b2d8ffefdd7"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]005400720065006e00640020004d006900630072006f00200049006e0063002e } /* CompanyName Trend Micro Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0037002e0030002e0030002e0031003000390039 } /* FileVersion 7.0.0.1099 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0037002e0030 } /* ProductVersion 7.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* InternalName TmComm.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005400720065006e00640020004d006900630072006f00200045007900650073 } /* ProductName Trend Micro Eyes */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000200028004300290020002000320030003100360020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright  (C)  2016 Trend Micro Incorporated. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 500KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AdvancedMicroDevicesInc_AMDPowerProfilersys_AMDuProf_76EE {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - e4266262a77fffdea2584283f6c4f51d.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0af5ccb3d33a9ba92071c9637be6254030d61998733a5eb3583e865e17844e05"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d004400200050006f007700650072002000500072006f00660069006c0069006e00670020004400720069007600650072 } /* FileDescription AMD Power Profiling Driver */
@@ -7572,39 +5205,17 @@ rule PUA_VULN_Driver_AdvancedMicroDevicesInc_AMDPowerProfilersys_AMDuProf_76EE {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0041004d00440050006f00770065007200500072006f00660069006c00650072002e007300790073 } /* OriginalFilename AMDPowerProfiler.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020003200300032003100200041004d004400200049006e0063002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © 2021 AMD Inc. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_7UDZ {
+rule PUA_VULN_Driver_Realtek_rtkiosys_RealtekIODriver_5JwS {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "59b09bd69923c0b3de3239e73205b1846a5f69043546d471b259887bb141d879"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0053007900730069006e007400650072006e0061006c00730020002d0020007700770077002e0073007900730069006e007400650072006e0061006c0073002e0063006f006d } /* CompanyName Sysinternals - www.sysinternals.com */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310035002e00300030 } /* FileVersion 15.00 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310035002e00300030 } /* ProductVersion 15.00 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00700072006f0063006500780070002e007300790073 } /* InternalName procexp.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* ProductName Process Explorer */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d00610072006b002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000310034 } /* LegalCopyright Copyright (C) Mark Russinovich 1996-2014 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_Realtek_rtkiosys_RealtekIODriver_5Zvt {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 7aa34cd9ea5649c24a814e292b270b6f.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "074ae477c8c7ae76c6f2b0bf77ac17935a8e8ee51b52155d2821d93ab30f3761"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f0020004400720069007600650072 } /* FileDescription Realtek IO Driver */
@@ -7616,39 +5227,17 @@ rule PUA_VULN_Driver_Realtek_rtkiosys_RealtekIODriver_5Zvt {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00720074006b0069006f00360034002e0073007900730020 } /* OriginalFilename rtkio64.sys  */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100370020005200650061006c00740065006b002000530065006d00690063006f006e0064007500630074006f007200200043006f00720070006f0072006100740069006f006e002e00200041006c006c002000520069006700680074002000520065007300650072007600650064002e002000200020002000200020002000200020002000200020 } /* LegalCopyright Copyright (C) 2017 Realtek Semiconductor Corporation. All Right Reserved.             */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_cpuzsys_WindowsRCodenameLonghornDDKdriver_4fkE {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3X6v {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "8e5aef7c66c0e92dfc037ee29ade1c8484b8d7fadebdcf521d2763b1d8215126"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00570069006e0064006f00770073002000280052002900200043006f00640065006e0061006d00650020004c006f006e00670068006f0072006e002000440044004b002000700072006f00760069006400650072 } /* CompanyName Windows (R) Codename Longhorn DDK provider */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0030002e0036003000300030002e003100360033003800360020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.0.6000.16386 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0030002e0036003000300030002e00310036003300380036 } /* ProductVersion 6.0.6000.16386 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00570069006e0064006f00770073002000280052002900200043006f00640065006e0061006d00650020004c006f006e00670068006f0072006e002000440044004b0020006400720069007600650072 } /* ProductName Windows (R) Codename Longhorn DDK driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_8HXr {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 84ba7af6ada1b3ea5efb9871a0613fc6.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "98b734dda78c16ebcaa4afeb31007926542b63b2f163b2f733fa0d00dbb344d8"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c0069006200200066006f0072002000440065006200750067004c00450044 } /* FileDescription NTIOLib for DebugLED */
@@ -7660,17 +5249,17 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_8HXr {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100330020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2013 MSI. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_9BEv {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_ZUJN {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 51e7b58f6e9b776568ffbd4dd9972a60.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9a95a70f68144980f2d684e96c79bdc93ebca1587f46afae6962478631e85d0c"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -7679,17 +5268,17 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_9BEv {
 		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005a0041004d } /* ProductName ZAM */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]005a0065006d0061006e00610020004c00740064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Zemana Ltd. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_5Xsy {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_5uAk {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - c796a92a66ec725b7b7febbdc13dc69b.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "19bf0d0f55d2ad33ef2d105520bde8fb4286f00e9d7a721e3c9587b9408a0775"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
@@ -7701,17 +5290,17 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_5Xsy {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300031003100200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2011 Intel Corporation All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_8Tbb {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_3tma {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 2a3ce41bb2a7894d939fbd1b20dae5a0.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2bbc6b9dd5e6d0327250b32305be20c89b19b56d33a096522ee33f22d8c82ff1"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -7720,61 +5309,17 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_8Tbb {
 		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005a0041004d } /* ProductName ZAM */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]005a0065006d0061006e00610020004c00740064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Zemana Ltd. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibXsys_NTIOLibX_39JJ {
+rule PUA_VULN_Driver_LogitechInc_Lvavsys_LogitechWebcamSoftware_4KAq {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "5d530e111400785d183057113d70623e17af32931668ab7c7fc826f0fd4f91a3"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062005f005800360034 } /* FileDescription NTIOLib_X64 */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0031 } /* FileVersion 1.0.0.1 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0031 } /* ProductVersion 1.0.0.1 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062005f005800360034002e007300790073 } /* InternalName NTIOLib_X64.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062005f005800360034 } /* ProductName NTIOLib_X64 */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062005f005800360034002e007300790073 } /* OriginalFilename NTIOLib_X64.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100340020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2014 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_cpuzsys_WindowsRWinDDKdriver_3E7U {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "4d19ee789e101e5a76834fb411aadf8229f08b3ece671343ad57a6576a525036"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b002000700072006f00760069006400650072 } /* CompanyName Windows (R) Win 7 DDK provider */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b0020006400720069007600650072 } /* ProductName Windows (R) Win 7 DDK driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_LogitechInc_Lvavsys_LogitechWebcamSoftware_5ruQ {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - b47dee29b5e6e1939567a926c7a3e6a4.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e86cb77de7b6a8025f9a546f6c45d135f471e664963cf70b381bee2dfd0fdef4"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c006f00670069007400650063006800200056006900640065006f0020004400720069007600650072 } /* FileDescription Logitech Video Driver */
@@ -7786,17 +5331,17 @@ rule PUA_VULN_Driver_LogitechInc_Lvavsys_LogitechWebcamSoftware_5ruQ {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004c007600350036003100610076002e007300790073 } /* OriginalFilename Lv561av.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280063002900200031003900390036002d00320030003000390020004c006f006700690074006500630068002e002000200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright (c) 1996-2009 Logitech.  All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 600KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_HPInc_HpPortIoxsys_HpPortIo_HfMq {
+rule PUA_VULN_Driver_HPInc_HpPortIoxsys_HpPortIo_8UNr {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - a641e3dccba765a10718c9cb0da7879e.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c5050a2017490fff7aa53c73755982b339ddb0fd7cef2cde32c81bc9834331c5"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800700050006f007200740049006f } /* FileDescription HpPortIo */
@@ -7808,17 +5353,17 @@ rule PUA_VULN_Driver_HPInc_HpPortIoxsys_HpPortIo_HfMq {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004800700050006f007200740049006f007800360034002e007300790073 } /* OriginalFilename HpPortIox64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000320030002d003200300032003100200048005000200049006e0063002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2020-2021 HP Inc. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Realtek_rtkiowxsys_RealtekIODriver_6AFt {
+rule PUA_VULN_Driver_Realtek_rtkiowxsys_RealtekIODriver_84tb {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 96a8b535b5e14b582ca5679a3e2a5946.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ab8f2217e59319b88080e052782e559a706fa4fb7b8b708f709ff3617124da89"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f0020004400720069007600650072 } /* FileDescription Realtek IO Driver */
@@ -7830,17 +5375,17 @@ rule PUA_VULN_Driver_Realtek_rtkiowxsys_RealtekIODriver_6AFt {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00720074006b0069006f007700310030007800360034002e0073007900730020 } /* OriginalFilename rtkiow10x64.sys  */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003200300020005200650061006c00740065006b002000530065006d00690063006f006e0064007500630074006f007200200043006f00720070006f0072006100740069006f006e002e00200041006c006c002000520069006700680074002000520065007300650072007600650064002e002000200020002000200020002000200020002000200020 } /* LegalCopyright Copyright (C) 2020 Realtek Semiconductor Corporation. All Right Reserved.             */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_7vqq {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_5oiE {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - a22626febc924eb219a953f1ee2b9600.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2ce81759bfa236913bbbb9b2cbc093140b099486fd002910b18e2c6e31fdc4f1"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AVG Anti Rootkit */
@@ -7852,17 +5397,17 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_7vq
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000320030002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2020 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_5Dtf {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_7BoV {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 6cce5bb9c8c2a8293df2d3b1897941a2.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9254f012009d55f555418ff85f7d93b184ab7cb0e37aecdfdab62cfe94dea96b"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c0069006200200066006f00720020004d00530049004400440052005f00430043 } /* FileDescription NTIOLib for MSIDDR_CC */
@@ -7874,82 +5419,18 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_5Dtf {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_4cPd {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_4mSY {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "a566af57d88f37fa033e64b1d8abbd3ffdacaba260475fbbc8dab846a824eff5"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0049006e00740065006c00200043006f00720070006f0072006100740069006f006e0020 } /* CompanyName Intel Corporation  */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300033002e0030002e00340020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.03.0.4 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300033002e0030002e0034 } /* ProductVersion 1.03.0.4 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* InternalName iQVW64.SYS */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0049006e00740065006c0028005200290020006900510056005700360034002e005300590053 } /* ProductName Intel(R) iQVW64.SYS */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300030003600200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2006 Intel Corporation All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_7R7q {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "5b3705b47dc15f2b61ca3821b883b9cd114d83fcc3344d11eb1d3df495d75abe"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310030002000430050005500490044 } /* LegalCopyright Copyright(C) 2010 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_NovellInc_NovellXTier_8zqT {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "cf3180f5308af002ac5d6fd5b75d1340878c375f0aebc3157e3bcad6322b7190"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c00200043006c00690065006e007400200050006f00720074006100620069006c0069007400790020004c0061007900650072 } /* FileDescription Novell Client Portability Layer */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004e006f00760065006c006c002c00200049006e0063002e } /* CompanyName Novell, Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0033002e0031002e0036002e0030 } /* FileVersion 3.1.6.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0033002e0031002e0036 } /* ProductVersion 3.1.6 */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e006f00760065006c006c002000580054006900650072 } /* ProductName Novell XTier */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00490043004d002e005300590053 } /* OriginalFilename NICM.SYS */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200043006f007000790072006900670068007400200032003000300030002d0032003000300038002c0020004e006f00760065006c006c002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_4ioZ {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 1898ceda3247213c084f43637ef163b3.bin, 7c22b7686c75a2bb7409b3c392cc791a.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b"
-		date = "2023-05-12"
+		hash = "a59c40e7470b7003e8adfee37c77606663e78d7e3f2ebb8d60910af19924d8df"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
@@ -7961,17 +5442,17 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_4ioZ {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300031003300200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2013 Intel Corporation All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Realtek_rtkiowxsys_RealtekIODriver_4jwN {
+rule PUA_VULN_Driver_Realtek_rtkiowxsys_RealtekIODriver_8zsz {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - b5ada7fd226d20ec6634fc24768f9e22.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "32e1a8513eee746d17eb5402fb9d8ff9507fb6e1238e7ff06f7a5c50ff3df993"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f0020004400720069007600650072 } /* FileDescription Realtek IO Driver */
@@ -7983,39 +5464,17 @@ rule PUA_VULN_Driver_Realtek_rtkiowxsys_RealtekIODriver_4jwN {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00720074006b0069006f007700310030007800360034002e0073007900730020 } /* OriginalFilename rtkiow10x64.sys  */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100370020005200650061006c00740065006b002000530065006d00690063006f006e0064007500630074006f007200200043006f00720070006f0072006100740069006f006e002e00200041006c006c002000520069006700680074002000520065007300650072007600650064002e002000200020002000200020002000200020002000200020 } /* LegalCopyright Copyright (C) 2017 Realtek Semiconductor Corporation. All Right Reserved.             */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_3RyR {
+rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_dHNF {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "c26b51b4c37330800cff8519252e110116c3aaade94ceb9894ec5bfb1b8f9924"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200053007500700070006f007200740020004400720069007600650072 } /* FileDescription VirtualBox Support Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00530075006e0020004d006900630072006f00730079007300740065006d0073002c00200049006e0063002e } /* CompanyName Sun Microsystems, Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0032002e0032002e0030002e007200340035003800340036 } /* FileVersion 2.2.0.r45846 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0032002e0032002e0030002e007200340035003800340036 } /* ProductVersion 2.2.0.r45846 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00560042006f0078004400720076002e007300790073 } /* InternalName VBoxDrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00530075006e0020005600690072007400750061006c0042006f0078 } /* ProductName Sun VirtualBox */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00560042006f0078004400720076002e007300790073 } /* OriginalFilename VBoxDrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300039002000530075006e0020004d006900630072006f00730079007300740065006d0073002c00200049006e0063002e } /* LegalCopyright Copyright (C) 2009 Sun Microsystems, Inc. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_4bvB {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - dc943bf367ae77016ae399df8e71d38a.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d004900430053005900530020006400720069007600650072 } /* FileDescription MICSYS driver */
@@ -8027,39 +5486,17 @@ rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_4bvB {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004d00730049006f00360034002e007300790073 } /* OriginalFilename MsIo64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800630029002000320030003100390020004d00490043005300590053 } /* LegalCopyright Copyright (c) 2019 MICSYS */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_WindowsRDDKprovider_gdrvsys_WindowsRDDKdriver_6Kn8 {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_4W3e {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "cfc5c585dd4e592dd1a08887ded28b92d9a5820587b6f4f8fa4f56d60289259b"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041004200590054004500200054006f006f006c0073 } /* FileDescription GIGABYTE Tools */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00570069006e0064006f00770073002000280052002900200032003000300030002000440044004b002000700072006f00760069006400650072 } /* CompanyName Windows (R) 2000 DDK provider */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0035002e00300030002e0032003100390035002e0031003600320030 } /* FileVersion 5.00.2195.1620 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0035002e00300030002e0032003100390035002e0031003600320030 } /* ProductVersion 5.00.2195.1620 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0067006400720076002e007300790073 } /* InternalName gdrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00570069006e0064006f00770073002000280052002900200032003000300030002000440044004b0020006400720069007600650072 } /* ProductName Windows (R) 2000 DDK driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0067006400720076002e007300790073 } /* OriginalFilename gdrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d006900630072006f0073006f0066007400200043006f00720070002e00200031003900380031002d0031003900390039 } /* LegalCopyright Copyright (C) Microsoft Corp. 1981-1999 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_8L3G {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 812e960977116bf6d6c1ccf8b5dd351f.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1078af0c70e03ac17c7b8aa5ee03593f5decfef2f536716646a4ded1e98c153c"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVG anti rootkit */
@@ -8071,17 +5508,17 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310039002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2019 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_8NYm {
+rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_7Ztw {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - a72e10ecea2fdeb8b9d4f45d0294086b.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "26c28746e947389856543837aa59a5b1f4697e5721a04d00aa28151a2659b097"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041002d00420059005400450020004e006f006e0050006e00500020004400720069007600650072 } /* FileDescription GIGA-BYTE NonPnP Driver */
@@ -8093,104 +5530,17 @@ rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_8NYm
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0067006400720076002e007300790073 } /* OriginalFilename gdrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310037 } /* LegalCopyright Copyright (C) 2017 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_7vnh {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4VD3 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "984a77e5424c6d099051441005f2938ae92b31b5ad8f6521c6b001932862add7"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_8nz4 {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "900dd68ccc72d73774a347b3290c4b6153ae496a81de722ebb043e2e99496f88"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310035002000430050005500490044 } /* LegalCopyright Copyright(C) 2015 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_uZCW {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "e3f2ee22dec15061919583e4beb8abb3b29b283e2bcb46badf2bfde65f5ea8dd"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0053007900730069006e007400650072006e0061006c00730020002d0020007700770077002e0073007900730069006e007400650072006e0061006c0073002e0063006f006d } /* CompanyName Sysinternals - www.sysinternals.com */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310035002e00300030 } /* FileVersion 15.00 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310035002e00300030 } /* ProductVersion 15.00 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00700072006f0063006500780070002e007300790073 } /* InternalName procexp.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* ProductName Process Explorer */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d00610072006b002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000310034 } /* LegalCopyright Copyright (C) Mark Russinovich 1996-2014 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_NovellInc_NovellXTier_8F98 {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "3a65d14fd3b1b5981084cdbd293dc6f4558911ea18dd80177d1e5b54d85bcaa0"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c00200043006c00690065006e007400200050006f00720074006100620069006c0069007400790020004c0061007900650072 } /* FileDescription Novell Client Portability Layer */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004e006f00760065006c006c002c00200049006e0063002e } /* CompanyName Novell, Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0033002e0031002e00310031002e0030 } /* FileVersion 3.1.11.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0033002e0031002e00310031 } /* ProductVersion 3.1.11 */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e006f00760065006c006c002000580054006900650072 } /* ProductName Novell XTier */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00490043004d002e005300590053 } /* OriginalFilename NICM.SYS */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00280043002900200043006f007000790072006900670068007400200032003000300030002d0032003000310033002c0020004e006f00760065006c006c002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_qwik {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 2e1f8a2a80221deb93496a861693c565.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cc687fe3741bbde1dd142eac0ef59fd1d4457daee43cdde23bb162ef28d04e64"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -8202,39 +5552,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_qwik {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000200028004300290020002000320030003100380020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright  (C)  2018 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 500KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_7mGA {
+rule PUA_VULN_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_V665 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "e32ab30d01dcff6418544d93f99ae812d2ce6396e809686620547bea05074f6f"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100540053005a0049004f0020004400720069007600650072 } /* FileDescription ATSZIO Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004100530055005300540065006b00200043006f006d0070007500740065007200200049006e0063002e } /* CompanyName ASUSTek Computer Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0030002e0032002e0031002e0037 } /* FileVersion 0.2.1.7 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0030002e0032002e0031002e0037 } /* ProductVersion 0.2.1.7 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004100540053005a0049004f002e007300790073 } /* InternalName ATSZIO.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004100540053005a0049004f0020004400720069007600650072 } /* ProductName ATSZIO Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100540053005a0049004f002e007300790073 } /* OriginalFilename ATSZIO.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310032 } /* LegalCopyright Copyright (C) 2012 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_3jJ6 {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - fb7c61ef427f9b2fdff3574ee6b1819b.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570041004e0020005400720061006e00730070006f007200740020004400720069007600650072 } /* FileDescription WAN Transport Driver */
@@ -8246,17 +5574,17 @@ rule PUA_VULN_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSyst
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00770061006e00740064002e007300790073 } /* OriginalFilename wantd.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Microsoft Corporation. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_CPUDriver_WindowsRCodenameLonghornDDKdriver_tCz7 {
+rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_CPUDriver_WindowsRCodenameLonghornDDKdriver_qTes {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - c1d063c9422a19944cdaa6714623f2eC.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "159e7c5a12157af92e0d14a0d3ea116f91c09e21a9831486e6dc592c93c10980"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041005300550053002000540044004500200043005000550020004400720069007600650072 } /* FileDescription ASUS TDE CPU Driver */
@@ -8268,61 +5596,17 @@ rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_CPUDriver_WindowsRCoden
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0043005000550020004400720069007600650072 } /* OriginalFilename CPU Driver */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020006200790020004100530055005300540065006b00200043004f004d0050005500540045005200200049004e0043002e00200032003000300036 } /* LegalCopyright Copyright by ASUSTek COMPUTER INC. 2006 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_amifldrvsys_WindowsRWinDDKdriver_4f5K {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_6F6u {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "ffc72f0bde21ba20aa97bee99d9e96870e5aa40cce9884e44c612757f939494f"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d0049002000470065006e00650072006900630020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription AMI Generic Utility Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b002000700072006f00760069006400650072 } /* CompanyName Windows (R) Win 7 DDK provider */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310030002e0030002e00310030003000310031002e00310036003300380034 } /* FileVersion 10.0.10011.16384 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310030002e0030002e00310030003000310031002e00310036003300380034 } /* ProductVersion 10.0.10011.16384 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0061006d00690066006c006400720076002e007300790073 } /* InternalName amifldrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b0020006400720069007600650072 } /* ProductName Windows (R) Win 7 DDK driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0061006d00690066006c006400720076002e007300790073 } /* OriginalFilename amifldrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_3h85 {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "0f035948848432bc243704041739e49b528f35c82a5be922d9e3b8a4c44398ff"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d0049004300530059005300200049004f0020006400720069007600650072 } /* FileDescription MICSYS IO driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d0049004300530059005300200054006500630068006e006f006c006f0067007900200043006f002e002c0020004c00540064 } /* CompanyName MICSYS Technology Co., LTd */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e003300200078003600340020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.3 x64 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00330020007800360034 } /* ProductVersion 1.3 x64 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004d00730049006f00360034002e007300790073 } /* InternalName MsIo64.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004d00730049006f003600340020004400720069007600650072002000560065007200730069006f006e00200031002e0033 } /* ProductName MsIo64 Driver Version 1.3 */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004d00730049006f00360034002e007300790073 } /* OriginalFilename MsIo64.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800630029002000320030003200310020004d00490043005300590053 } /* LegalCopyright Copyright (c) 2021 MICSYS */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_5Q5q {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 7ed6030f14e66e743241f2c1fa783e69.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1ddfe4756f5db9fb319d6c6da9c41c588a729d9e7817190b027b38e9c076d219"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
@@ -8334,17 +5618,17 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_5Q5q {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100360020004d006900630072006f002d005300740061007200200049004e00540027004c00200043004f002e002c0020004c00540044002e } /* LegalCopyright Copyright (C) 2016 Micro-Star INT'L CO., LTD. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_jVpC {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7pTe {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - f51065667fb127cf6de984daea2f6b24.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "654c5ba47f74008c8f49cbb97988017eec8c898adc3bb851bc6e1fdf9dcf54ad"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -8356,17 +5640,18 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_jVpC {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100330020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2013 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MarvinTestSolutionsInc_Hwsys_HW_7L6M {
+rule PUA_VULN_Driver_MarvinTestSolutionsInc_Hwsys_HW_4PDC {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 3cf7a55ec897cc938aebb8161cb8e74f.bin, 45c2d133d41d2732f3653ed615a745c8.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fd388cf1df06d419b14dedbeb24c6f4dff37bea26018775f09d56b3067f0de2c"
-		date = "2023-05-12"
+		hash = "6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570020002d002000570069006e0064006f007700730020004e0054002d00380020002800330032002f00360034002000620069007400290020006b00650072006e0065006c0020006d006f00640065002000640072006900760065007200200066006f007200200050004300200070006f007200740073002f006d0065006d006f00720079002f0050004300490020006100630063006500730073 } /* FileDescription HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI access */
@@ -8378,83 +5663,17 @@ rule PUA_VULN_Driver_MarvinTestSolutionsInc_Hwsys_HW_7L6M {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00480057002e007300790073 } /* OriginalFilename HW.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a900200031003900390036002d00320030003100350020004d0061007200760069006e0020005400650073007400200053006f006c007500740069006f006e0073002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright © 1996-2015 Marvin Test Solutions, Inc. All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_4DjT {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_4Dad {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "cdfbe62ef515546f1728189260d0bdf77167063b6dbb77f1db6ed8b61145a2bc"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0053007900730069006e007400650072006e0061006c00730020002d0020007700770077002e0073007900730069006e007400650072006e0061006c0073002e0063006f006d } /* CompanyName Sysinternals - www.sysinternals.com */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310036002e00330032 } /* FileVersion 16.32 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310036002e00330032 } /* ProductVersion 16.32 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00700072006f0063006500780070002e007300790073 } /* InternalName procexp.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* ProductName Process Explorer */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d00610072006b002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000320030 } /* LegalCopyright Copyright (C) Mark Russinovich 1996-2020 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_8SXW {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570041004e0020005400720061006e00730070006f007200740020004400720069007600650072 } /* FileDescription WAN Transport Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e } /* CompanyName Microsoft Corporation */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e0031003100370032 } /* FileVersion 6.1.7600.1172 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e0031003100370032 } /* ProductVersion 6.1.7600.1172 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00770061006e00740064002e007300790073 } /* InternalName wantd.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004d006900630072006f0073006f00660074002000570069006e0064006f007700730020004f007000650072006100740069006e0067002000530079007300740065006d } /* ProductName Microsoft Windows Operating System */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00770061006e00740064002e007300790073 } /* OriginalFilename wantd.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Microsoft Corporation. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_ATITechnologiesInc_atillksys_ATIDiagnostics_zTPY {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "5c04c274a708c9a7d993e33be3ea9e6119dc29527a767410dbaf93996f87369a"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410054004900200044006900610067006e006f007300740069006300730020004800610072006400770061007200650020004100620073007400720061006300740069006f006e0020005300790073 } /* FileDescription ATI Diagnostics Hardware Abstraction Sys */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00410054004900200054006500630068006e006f006c006f006700690065007300200049006e0063002e } /* CompanyName ATI Technologies Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0035002e00310031002e0039002e0030 } /* FileVersion 5.11.9.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0035002e00310031002e0039002e0030 } /* ProductVersion 5.11.9.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006100740069006c006c006b00360034002e007300790073 } /* InternalName atillk64.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00410054004900200044006900610067006e006f00730074006900630073 } /* ProductName ATI Diagnostics */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100740069006c006c006b00360034002e007300790073 } /* OriginalFilename atillk64.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000410054004900200054006500630068006e006f006c006f006700690065007300200049006e0063002e002c00200032003000300033 } /* LegalCopyright Copyright (C) ATI Technologies Inc., 2003 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_8ZUg {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 045ef7a39288ba1f4b8d6eca43def44f.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6e0aa67cfdbe27a059cbd066443337f81c5b6d37444d14792d1c765d9d122dcf"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVG anti rootkit */
@@ -8466,39 +5685,17 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310039002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2019 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_6MAp {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_7Ej7 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "e68d453d333854787f8470c8baef3e0d082f26df5aa19c0493898bcf3401e39a"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c0069006200200046006f00720020004d0053004900530069006d0070006c0065005f004f0043 } /* FileDescription NTIOLib For MSISimple_OC */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0032 } /* FileVersion 1.0.0.2 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0032 } /* ProductVersion 1.0.0.2 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310031002d00320030003100320020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2011-2012 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_5cQQ {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 35c8fdf881909fa28c92b1c2741ac60b.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a2f45d95d54f4e110b577e621fefa0483fa0e3dcca14c500c298fb9209e491c1"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVG anti rootkit */
@@ -8510,127 +5707,17 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310039002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2019 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_6Du7 {
+rule PUA_VULN_Driver_NVIDIACorporation_nvflash_NVIDIAFlashDriver_886y {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "000547560fea0dd4b477eb28bf781ea67bf83c748945ce8923f90fdd14eb7a4b"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0043006f007200730061006900720020004c004c0020004100630063006500730073 } /* FileDescription Corsair LL Access */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0043006f007200730061006900720020004d0065006d006f00720079002c00200049006e0063002e } /* CompanyName Corsair Memory, Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e00310038002e0030 } /* FileVersion 1.0.18.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e00310038002e0030 } /* ProductVersion 1.0.18.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0043006f007200730061006900720020004c004c0020004100630063006500730073 } /* InternalName Corsair LL Access */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043006f007200730061006900720020004c004c0020004100630063006500730073 } /* ProductName Corsair LL Access */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0043006f007200730061006900720020004c004c0020004100630063006500730073 } /* OriginalFilename Corsair LL Access */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007200730061006900720020004d0065006d006f00720079002c00200049006e0063002e002000280063002900200032003000310039002c00200041006c006c0020007200690067006800740073002000720065007300650072007600650064 } /* LegalCopyright Corsair Memory, Inc. (c) 2019, All rights reserved */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_7JNV {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "67734c7c0130dd66c964f76965f09a2290da4b14c94412c0056046e700654bdc"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310030002000430050005500490044 } /* LegalCopyright Copyright(C) 2010 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_ASRockIncorporation_AsrDrvsys_ASRockIODriver_7BsQ {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "a7c2e7910942dd5e43e2f4eb159bcd2b4e71366e34a68109548b9fb12ac0f7cc"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100530052006f0063006b00200049004f0020004400720069007600650072 } /* FileDescription ASRock IO Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004100530052006f0063006b00200049006e0063006f00720070006f0072006100740069006f006e } /* CompanyName ASRock Incorporation */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300030002e00300030002e00300030003000300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.00.00.0000 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300030002e00300030002e0030003000300030 } /* ProductVersion 1.00.00.0000 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004100730072004400720076002e007300790073 } /* InternalName AsrDrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004100530052006f0063006b00200049004f0020004400720069007600650072 } /* ProductName ASRock IO Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100730072004400720076002e007300790073 } /* OriginalFilename AsrDrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100320020004100530052006f0063006b00200049006e0063006f00720070006f0072006100740069006f006e } /* LegalCopyright Copyright (C) 2012 ASRock Incorporation */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_8Cix {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "c50f8ab8538c557963252b702c1bd3cee4604b5fc2497705d2a6a3fd87e3cc26"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310033002000430050005500490044 } /* LegalCopyright Copyright(C) 2013 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_7WDi {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "ded2927f9a4e64eefd09d0caba78e94f309e3a6292841ae81d5528cab109f95d"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310036002000430050005500490044 } /* LegalCopyright Copyright(C) 2016 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_NVIDIACorporation_nvflash_NVIDIAFlashDriver_4miz {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 84fb76ee319073e77fb364bbbbff5461.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "afdd66562dea51001c3a9de300f91fc3eb965d6848dfce92ccb9b75853e02508"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e0056004900440049004100200046006c0061007300680020004400720069007600650072002c002000560065007200730069006f006e00200031002e0038002e0030 } /* FileDescription NVIDIA Flash Driver, Version 1.8.0 */
@@ -8642,17 +5729,17 @@ rule PUA_VULN_Driver_NVIDIACorporation_nvflash_NVIDIAFlashDriver_4miz {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006e00760066006c006100730068002e007300790073 } /* OriginalFilename nvflash.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]002800430029002000320030003100370020004e0056004900440049004100200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright (C) 2017 NVIDIA Corporation. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_3FXQ {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_hrm4 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 0634299fc837b47b531e4762d946b2ae.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f85eb576acb5db0d2f48e5f09a7244165a876fa1ca8697ebb773e4d7071d4439"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCD Windows NT/2000/XP I/O driver */
@@ -8664,17 +5751,17 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_3FXQ {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0045006c00620079004300440049004f002e007300790073 } /* OriginalFilename ElbyCDIO.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000300020002d0020003200300030003700200045006c00610062006f0072006100740065002000420079007400650073002000410047 } /* LegalCopyright Copyright (C) 2000 - 2007 Elaborate Bytes AG */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublicbyVektorTrev_8JQK {
+rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublicbyVektorTrev_4YBU {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - b1b8e6b85dd03c7f1290b1a071fc79c1.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "26f41e4268be59f5de07552b51fa52d18d88be94f8895eb4a16de0f3940cf712"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200053007500700070006f007200740020004400720069007600650072 } /* FileDescription VirtualBox Support Driver */
@@ -8686,17 +5773,17 @@ rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublicbyVektorTrev
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00560042006f0078004400720076002e007300790073 } /* OriginalFilename VBoxDrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300039002d00320030003100380020004f007200610063006c006500200043006f00720070006f0072006100740069006f006e } /* LegalCopyright Copyright (C) 2009-2018 Oracle Corporation */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 400KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4YQh {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7T2u {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 6e25148bb384469f3d5386dc5217548a.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3c4207c90c97733fae2a08679d63fbbe94dfcf96fdfdf88406aa7ab3f80ea78f"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -8708,61 +5795,18 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4YQh {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000200028004300290020002000320030003200300020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright  (C)  2020 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 400KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_7otL {
+rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_7Qci {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "f74ffd6916333662900cbecb90aca2d6475a714ce410adf9c5c3264abbe5732c"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310035002000430050005500490044 } /* LegalCopyright Copyright(C) 2015 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_RWEverything_RwDrvsys_RWEverythingReadWriteDriver_4Gsw {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "2bf29a2df52110ed463d51376562afceac0e80fbb1033284cf50edd86c406b14"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520057002d00450076006500720079007400680069006e006700200052006500610064002000260020005700720069007400650020004400720069007600650072 } /* FileDescription RW-Everything Read & Write Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00520057002d00450076006500720079007400680069006e0067 } /* CompanyName RW-Everything */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300030002e00300030002e00300030003000300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.00.00.0000 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300030002e00300030002e0030003000300030 } /* ProductVersion 1.00.00.0000 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00520077004400720076002e007300790073 } /* InternalName RwDrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00520057002d00450076006500720079007400680069006e006700200052006500610064002000260020005700720069007400650020004400720069007600650072 } /* ProductName RW-Everything Read & Write Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00520077004400720076002e007300790073 } /* OriginalFilename RwDrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002000520057002d00450076006500720079007400680069006e0067 } /* LegalCopyright Copyright (C) 2008 RW-Everything */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_63Bb {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 715ac0756234a203cb7ce8524b6ddc0d.bin, 4814205270caa80d35569eee8081838e.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "55a1535e173c998fbbc978009b02d36ca0c737340d84ac2a8da73dfc2f450ef9"
-		date = "2023-05-12"
+		hash = "c64d4ac416363c7a1aa828929544d1c1d78cf032b39769943b851cfc4c0faafc"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100540053005a0049004f0020004400720069007600650072 } /* FileDescription ATSZIO Driver */
@@ -8774,61 +5818,17 @@ rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_63Bb {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100540053005a0049004f002e007300790073 } /* OriginalFilename ATSZIO.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310032 } /* LegalCopyright Copyright (C) 2012 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_Q5ug {
+rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_3AXY {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "80eeb8c2890f3535ed14f5881baf2f2226e6763be099d09fb8aadaba5b4474c1"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310030002000430050005500490044 } /* LegalCopyright Copyright(C) 2010 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_7LCb {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "19696fb0db3fcae22f705ae1eb1e9f1151c823f3ff5d8857e90f2a4a6fdc5758"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310030002000430050005500490044 } /* LegalCopyright Copyright(C) 2010 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_53jy {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 9a237fa07ce3ed06ea924a9bed4a6b99.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1aaf4c1e3cb6774857e2eef27c17e68dc1ae577112e4769665f516c2e8c4e27b"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530061006e006400720061002000440065007600690063006500200044007200690076006500720020002800570069006e003600340020007800360034002900280055006e00690063006f006400650029 } /* FileDescription Sandra Device Driver (Win64 x64)(Unicode) */
@@ -8840,39 +5840,17 @@ rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_53jy {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00530041004e004400520041 } /* OriginalFilename SANDRA */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a90020005300690053006f0066007400770061007200650020004c0074006400200031003900390035002d0032003000300038002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright © SiSoftware Ltd 1995-2008. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_3rzK {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_6gWN {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "57a389da784269bb2cc0a258500f6dfbf4f6269276e1192619ce439ec77f4572"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0049006e00740065006c00200043006f00720070006f0072006100740069006f006e0020 } /* CompanyName Intel Corporation  */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300033002e0030002e00340020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.03.0.4 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300033002e0030002e0034 } /* ProductVersion 1.03.0.4 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* InternalName iQVW64.SYS */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0049006e00740065006c0028005200290020006900510056005700360034002e005300590053 } /* ProductName Intel(R) iQVW64.SYS */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300030003600200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2006 Intel Corporation All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_4hqr {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - c42caa9cdcc50c01cb2fed985a03fe23.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c9014b03866bf37faa8fdb16b6af7cfec976aaef179fd5797d0c0bf8079d3a8c"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -8884,39 +5862,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_4hqr {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300035002d00320030003000370020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2005-2007 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MarvinTestSolutionsInc_Hwsys_HW_7cH7 {
+rule PUA_VULN_Driver_SymantecCorporation_VProEventMonitorSys_SymantecEventMonitorsDriverDevelopmentEdition_4CDd {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570020002d002000570069006e0064006f007700730020004e0054002d00380020002800330032002f00360034002000620069007400290020006b00650072006e0065006c0020006d006f00640065002000640072006900760065007200200066006f007200200050004300200070006f007200740073002f006d0065006d006f00720079002f0050004300490020006100630063006500730073 } /* FileDescription HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI access */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d0061007200760069006e0020005400650073007400200053006f006c007500740069006f006e0073002c00200049006e0063002e } /* CompanyName Marvin Test Solutions, Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0034002e0038002e0032002e0030 } /* FileVersion 4.8.2.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0034002e0038002e0032002e0030 } /* ProductVersion 4.8.2.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00480077002e007300790073 } /* InternalName Hw.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00480057 } /* ProductName HW */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00480057002e007300790073 } /* OriginalFilename HW.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a900200031003900390036002d00320030003100350020004d0061007200760069006e0020005400650073007400200053006f006c007500740069006f006e0073002c00200049006e0063002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright © 1996-2015 Marvin Test Solutions, Inc. All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_SymantecCorporation_VProEventMonitorSys_SymantecEventMonitorsDriverDevelopmentEdition_7UGt {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cd9f0fcecf1664facb3671c0130dc8bb.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7877c1b0e7429453b750218ca491c2825dae684ad9616642eff7b41715c70aca"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600500072006f004500760065006e0074004d006f006e00690074006f0072002e0053007900730020002d0020004500760065006e00740020004d006f006e00690074006f00720069006e00670020006400720069007600650072 } /* FileDescription VProEventMonitor.Sys - Event Monitoring driver */
@@ -8928,61 +5884,17 @@ rule PUA_VULN_Driver_SymantecCorporation_VProEventMonitorSys_SymantecEventMonito
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]005600500072006f004500760065006e0074004d006f006e00690074006f0072002e005300790073 } /* OriginalFilename VProEventMonitor.Sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000a900200032003000300037002d0032003000300038002000530079006d0061006e00740065006300200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright © 2007-2008 Symantec Corporation. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3h3N {
+rule PUA_VULN_Driver_wj_KProcessHacker_4Gi3 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "e005e8d183e853a27ad3bb56f25489f369c11b0d47e3d4095aad9291b3343bf1"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_82oK {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100540053005a0049004f0020004400720069007600650072 } /* FileDescription ATSZIO Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004100530055005300540065006b00200043006f006d0070007500740065007200200049006e0063002e } /* CompanyName ASUSTek Computer Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0030002e0032002e0031002e0037 } /* FileVersion 0.2.1.7 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0030002e0032002e0031002e0037 } /* ProductVersion 0.2.1.7 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004100540053005a0049004f002e007300790073 } /* InternalName ATSZIO.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004100540053005a0049004f0020004400720069007600650072 } /* ProductName ATSZIO Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100540053005a0049004f002e007300790073 } /* OriginalFilename ATSZIO.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310032 } /* LegalCopyright Copyright (C) 2012 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_wj_KProcessHacker_M7z9 {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - bbbc9a6cc488cfb0f6c6934b193891eb.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c725919e6357126d512c638f993cf572112f323da359645e4088f789eb4c7b8c"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004b00500072006f0063006500730073004800610063006b00650072 } /* FileDescription KProcessHacker */
@@ -8993,17 +5905,17 @@ rule PUA_VULN_Driver_wj_KProcessHacker_M7z9 {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006b00700072006f0063006500730073006800610063006b00650072002e007300790073 } /* OriginalFilename kprocesshacker.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]004c006900630065006e00730065006400200075006e006400650072002000740068006500200047004e0055002000470050004c002c002000760033002e } /* LegalCopyright Licensed under the GNU GPL, v3. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_5q8W {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_3aLG {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 9f3b5de6fe46429bed794813c6ae8421.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7ad0ab23023bc500c3b46f414a8b363c5f8700861bc4745cecc14dd34bcee9ed"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription Avast Anti Rootkit */
@@ -9015,83 +5927,17 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_5q8W {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300032003000200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2020 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3YZN {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_UEYq {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "a961f5939088238d76757669a9a81905e33f247c9c635b908daac146ae063499"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_8YfP {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "aebcbfca180e372a048b682a4859fd520c98b5b63f6e3a627c626cb35adc0399"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310032002000430050005500490044 } /* LegalCopyright Copyright(C) 2012 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_3w5e {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "a59c40e7470b7003e8adfee37c77606663e78d7e3f2ebb8d60910af19924d8df"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0049006e00740065006c00200043006f00720070006f0072006100740069006f006e0020 } /* CompanyName Intel Corporation  */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300033002e0030002e00370020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.03.0.7 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300033002e0030002e0037 } /* ProductVersion 1.03.0.7 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* InternalName iQVW64.SYS */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0049006e00740065006c0028005200290020006900510056005700360034002e005300590053 } /* ProductName Intel(R) iQVW64.SYS */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300031003300200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2013 Intel Corporation All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_95Vr {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 113056ec5c679b6f74c9556339ebf962.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c082514317bf80a2f5129d84a5a55e411a95e32d03a4df1274537704c80e41dd"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -9103,39 +5949,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_95Vr {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000200028004300290020002000320030003200300020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright  (C)  2020 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 400KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_wxBV {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_riB5 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "a9706e320179993dade519a83061477ace195daa1b788662825484813001f526"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_7GhJ {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 6212832f13b296ddbc85b24e22edb5ec.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "14adbf0bc43414a7700e5403100cff7fc6ade50bebfab16a17acf2fdda5a9da8"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avast anti rootkit */
@@ -9147,39 +5971,17 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_7GhJ {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300031003400200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2014 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ASUStek_Driversys_ECtool_8hhg {
+rule PUA_VULN_Driver_WindowsRServerDDKprovider_cpuzsys_WindowsRServerDDKdriver_NUsX {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "771a8d05f1af6214e0ef0886662be500ee910ab99f0154227067fddcfe08a3dd"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400680065002000640072006900760065007200200066006f007200200074006800650020004500430074006f006f006c0020006400720069007600650072002d0062006100730065006400200074006f006f006c0073 } /* FileDescription The driver for the ECtool driver-based tools */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004100530055005300740065006b } /* CompanyName ASUStek */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0032002e0035002e0030002e0032 } /* FileVersion 2.5.0.2 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0032002e0035 } /* ProductVersion 2.5 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0044007200690076006500720037002e007300790073 } /* InternalName Driver7.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0045004300200074006f006f006c } /* ProductName EC tool */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0044007200690076006500720037 } /* OriginalFilename Driver7 */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020 } /* LegalCopyright Copyright  */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_WindowsRServerDDKprovider_cpuzsys_WindowsRServerDDKdriver_6rVh {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 7d46d0ddaf8c7e1776a70c220bf47524.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3871e16758a1778907667f78589359734f7f62f9dc953ec558946dcdbe6951e3"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
@@ -9191,61 +5993,17 @@ rule PUA_VULN_Driver_WindowsRServerDDKprovider_cpuzsys_WindowsRServerDDKdriver_6
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_7ZFL {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_4x4V {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "47f0cdaa2359a63ad1389ef4a635f1f6eee1f63bdf6ef177f114bdcdadc2e005"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_PowerTool_kEvPsys_PowerTool_xnGi {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "1aaa9aef39cb3c0a854ecb4ca7d3b213458f302025e0ec5bfbdef973cca9111c"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0050006f0077006500720054006f006f006c } /* FileDescription PowerTool */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0050006f0077006500720054006f006f006c } /* CompanyName PowerTool */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0031002e00300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.0.1.0 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0031002e0030 } /* ProductVersion 1.0.1.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006b00450076005000360034002e007300790073 } /* InternalName kEvP64.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0050006f0077006500720054006f006f006c } /* ProductName PowerTool */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006b00450076005000360034002e007300790073 } /* OriginalFilename kEvP64.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0050006f0077006500720054006f006f006c } /* LegalCopyright PowerTool */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
-}
-
-
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_8sGW {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 69ba501a268f09f694ff0e8e208aa20e.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "37c637a74bf20d7630281581a8fae124200920df11ad7cd68c14c26cc12c5ec9"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
@@ -9257,17 +6015,17 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_8sGW {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300031003800200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2018 Intel Corporation All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TOSHIBACorporation_NCHGBIOSxSYS_TOSHIBABIOSPackage_7Uko {
+rule PUA_VULN_Driver_TOSHIBACorporation_NCHGBIOSxSYS_TOSHIBABIOSPackage_5jAi {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - d9ce18960c23f38706ae9c6584d9ac90.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00420049004f00530020005500700064006100740065002000440072006900760065007200200046006f0072002000570069006e0064006f007700730020007800360034002000450064006900740069006f006e } /* FileDescription BIOS Update Driver For Windows x64 Edition */
@@ -9279,17 +6037,18 @@ rule PUA_VULN_Driver_TOSHIBACorporation_NCHGBIOSxSYS_TOSHIBABIOSPackage_7Uko {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00430048004700420049004f00530032007800360034002e005300590053 } /* OriginalFilename NCHGBIOS2x64.SYS */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200031003900390039002d003200300031003200200054004f0053004800490042004100200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 1999-2012 TOSHIBA Corporation. All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_6JPH {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_3JnB {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 21e13f2cb269defeae5e1d09887d47bb.bin, 06897b431c07886454e0681723dd53e6.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "543991ca8d1c65113dff039b85ae3f9a87f503daec30f46929fd454bc57e5a91"
-		date = "2023-05-12"
+		hash = "ab2632a4d93a7f3b7598c06a9fdc773a1b1b69a7dd926bdb7cf578992628e9dd"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -9298,61 +6057,17 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_6JPH {
 		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005a0041004d } /* ProductName ZAM */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]005a0065006d0061006e00610020004c00740064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Zemana Ltd. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_RWEverything_RwDrvsys_RwDrvDriver_EjUN {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_3VZk {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200770044007200760020004400720069007600650072 } /* FileDescription RwDrv Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00520057002d00450076006500720079007400680069006e0067 } /* CompanyName RW-Everything */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300030002e00300030002e00300030003000300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.00.00.0000 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300030002e00300030002e0030003000300030 } /* ProductVersion 1.00.00.0000 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00520077004400720076002e007300790073 } /* InternalName RwDrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005200770044007200760020004400720069007600650072 } /* ProductName RwDrv Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00520077004400720076002e007300790073 } /* OriginalFilename RwDrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310031002000520057002d00450076006500720079007400680069006e0067 } /* LegalCopyright Copyright (C) 2011 RW-Everything */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_6SNv {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "de3597ae7196ca8c0750dce296a8a4f58893774f764455a125464766fcc9b3b5"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0049006e00740065006c00200043006f00720070006f0072006100740069006f006e0020 } /* CompanyName Intel Corporation  */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300033002e0031002e00300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.03.1.0 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300033002e0031002e0030 } /* ProductVersion 1.03.1.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* InternalName iQVW64.SYS */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0049006e00740065006c0028005200290020006900510056005700360034002e005300590053 } /* ProductName Intel(R) iQVW64.SYS */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300031003500200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2015 Intel Corporation All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_7gVY {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - c56a9ed0192c5a2b39691e54f2132a2f.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "30abc0cc700fdebc74e62d574addc08f6227f9c7177d9eaa8cbc37d5c017c9bb"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
@@ -9364,17 +6079,17 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_7
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d002e002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000300038 } /* LegalCopyright Copyright (C) M. Russinovich 1996-2008 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_7k8a {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_jfe8 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 75e50ae2e0f783e0caf912f45e15248a.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "de8f8006d8ee429b5f333503defa54b25447f4ed6aeade5e4219e23f3473ef1c"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -9383,39 +6098,17 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_7k8a {
 		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005a0041004d } /* ProductName ZAM */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]005a0065006d0061006e00610020004c00740064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Zemana Ltd. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_5gkq {
+rule PUA_VULN_Driver_SuperMicroComputerInc_phymem_phymem_4ZEf {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "955dac77a0148e9f9ed744f5d341cb9c9118261e52fe622ac6213965f2bc4cad"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310034002000430050005500490044 } /* LegalCopyright Copyright(C) 2014 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_SuperMicroComputerInc_phymem_phymem_8uoo {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 2c54859a67306e20bfdc8887b537de72.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1963d5a0e512b72353953aadbe694f73a9a576f0241a988378fa40bf574eda52"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]007000680079006d0065006d0020004100700070006c00690063006100740069006f006e } /* FileDescription phymem Application */
@@ -9427,17 +6120,18 @@ rule PUA_VULN_Driver_SuperMicroComputerInc_phymem_phymem_8uoo {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]007000680079006d0065006d002e007300790073 } /* OriginalFilename phymem.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280063002900200031003900390033002d00320030003100350020005300750070006500720020004d006900630072006f00200043006f006d00700075007400650072002c00200049006e0063002e } /* LegalCopyright Copyright(c) 1993-2015 Super Micro Computer, Inc. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_3Skc {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_52KP {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - fea9319d67177ed6f36438d2bd9392fb.bin, 92927c47d6ff139c9b19674c9d0088f6.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "16a2e578bc8683f17a175480fea4f53c838cfae965f1d4caa47eaf9e0b3415c1"
-		date = "2023-05-12"
+		hash = "98a123b314cba2de65f899cdbfa386532f178333389e0f0fbd544aff85be02eb"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
@@ -9449,39 +6143,17 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_3
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d00610072006b002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000320031 } /* LegalCopyright Copyright (C) Mark Russinovich 1996-2021 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_37QM {
+rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublic_4gGM {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "29a90ae1dcee66335ece4287a06482716530509912be863c85a2a03a6450a5b6"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0043006f007200730061006900720020004c004c0020004100630063006500730073 } /* FileDescription Corsair LL Access */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0043006f007200730061006900720020004d0065006d006f00720079002c00200049006e0063002e } /* CompanyName Corsair Memory, Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e00310036002e0030 } /* FileVersion 1.0.16.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e00310036002e0030 } /* ProductVersion 1.0.16.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0043006f007200730061006900720020004c004c0020004100630063006500730073 } /* InternalName Corsair LL Access */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043006f007200730061006900720020004c004c0020004100630063006500730073 } /* ProductName Corsair LL Access */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0043006f007200730061006900720020004c004c0020004100630063006500730073 } /* OriginalFilename Corsair LL Access */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007200730061006900720020004d0065006d006f00720079002c00200049006e0063002e002000280063002900200032003000310039002c00200041006c006c0020007200690067006800740073002000720065007300650072007600650064 } /* LegalCopyright Corsair Memory, Inc. (c) 2019, All rights reserved */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublic_97fk {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 6beb1d8146f5a4aaa2f7b8c0c9bced30.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cfb7af8ac67a379e7869289aeee21837c448ea6f8ab6c93988e7aa423653bd40"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200053007500700070006f007200740020004400720069007600650072 } /* FileDescription VirtualBox Support Driver */
@@ -9493,83 +6165,17 @@ rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublic_97fk {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00560042006f0078004400720076002e007300790073 } /* OriginalFilename VBoxDrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300039002d00320030003100390020004f007200610063006c006500200043006f00720070006f0072006100740069006f006e } /* LegalCopyright Copyright (C) 2009-2019 Oracle Corporation */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 400KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_KYAo {
+rule PUA_VULN_Driver_SenseCORP__8WUM {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "38fa0c663c8689048726666f1c5e019feaa9da8278f1df6ff62da33961891d2a"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_4pjK {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "ecfc52a22e4a41bf53865b0e28309411c60af34a44e31a5c53cdc8c5733e8282"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100540053005a0049004f0020004400720069007600650072 } /* FileDescription ATSZIO Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004100530055005300540065006b00200043006f006d0070007500740065007200200049006e0063002e } /* CompanyName ASUSTek Computer Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0030002e0032002e0031002e0037 } /* FileVersion 0.2.1.7 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0030002e0032002e0031002e0037 } /* ProductVersion 0.2.1.7 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004100540053005a0049004f002e007300790073 } /* InternalName ATSZIO.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004100540053005a0049004f0020004400720069007600650072 } /* ProductName ATSZIO Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100540053005a0049004f002e007300790073 } /* OriginalFilename ATSZIO.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310032 } /* LegalCopyright Copyright (C) 2012 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_3Mj7 {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "bac709c49ddee363c8e59e515f2f632324a0359e932b7d8cb1ce2d52a95981aa"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310037002000430050005500490044 } /* LegalCopyright Copyright(C) 2017 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_SenseCORP__3PDW {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - f9844524fb0009e5b784c21c7bad4220.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7f4555a940ce1156c9bcea9a2a0b801f9a5e44ec9400b61b14a7b1a6404ffdf6"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530065006e0073006500350020004400720069007600650072 } /* FileDescription Sense5 Driver */
@@ -9578,17 +6184,17 @@ rule PUA_VULN_Driver_SenseCORP__3PDW {
 		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0032002e0036002e0030002e0030 } /* ProductVersion 2.6.0.0 */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000320032 } /* LegalCopyright Copyright (C) 2022 */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 4500KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MicrosoftCorporation_ndislansys_MicrosoftWindowsOperatingSystem_8VZj {
+rule PUA_VULN_Driver_MicrosoftCorporation_ndislansys_MicrosoftWindowsOperatingSystem_8cAj {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 47e6ac52431ca47da17248d80bf71389.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b0eb4d999e4e0e7c2e33ff081e847c87b49940eb24a9e0794c6aa9516832c427"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d00530020004c0041004e0020004400720069007600650072 } /* FileDescription MS LAN Driver */
@@ -9600,39 +6206,17 @@ rule PUA_VULN_Driver_MicrosoftCorporation_ndislansys_MicrosoftWindowsOperatingSy
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006e006400690073006c0061006e002e007300790073 } /* OriginalFilename ndislan.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_697Z {
+rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_44nE {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "d74755311d127d0eb7454e56babc2db8dbaa814bc4ba8e2a7754d3e0224778e1"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0049006e00740065006c00200043006f00720070006f0072006100740069006f006e0020 } /* CompanyName Intel Corporation  */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e00300033002e0030002e00340020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.03.0.4 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00300033002e0030002e0034 } /* ProductVersion 1.03.0.4 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* InternalName iQVW64.SYS */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0049006e00740065006c0028005200290020006900510056005700360034002e005300590053 } /* ProductName Intel(R) iQVW64.SYS */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300030003600200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2006 Intel Corporation All Rights Reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_3tWn {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 443689645455987cb347154b391f734d.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c8940e2e9b069ec94f9f711150b313b437f8429f78d522810601b6ee8b52bada"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200053007500700070006f007200740020004400720069007600650072 } /* FileDescription VirtualBox Support Driver */
@@ -9644,17 +6228,17 @@ rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_3tWn {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00560042006f0078004400720076002e007300790073 } /* OriginalFilename VBoxDrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300039002000530075006e0020004d006900630072006f00730079007300740065006d0073002c00200049006e0063002e } /* LegalCopyright Copyright (C) 2009 Sun Microsystems, Inc. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_PinduoduoLtdCorp_VBoxDrv_PinduoduoSecureVDI_5dnd {
+rule PUA_VULN_Driver_PinduoduoLtdCorp_VBoxDrv_PinduoduoSecureVDI_84aY {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 3e87e3346441539d3a90278a120766df.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9dab4b6fddc8e1ec0a186aa8382b184a5d52cfcabaaf04ff9e3767021eb09cf4"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200053007500700070006f007200740020004400720069007600650072 } /* FileDescription VirtualBox Support Driver */
@@ -9666,17 +6250,17 @@ rule PUA_VULN_Driver_PinduoduoLtdCorp_VBoxDrv_PinduoduoSecureVDI_5dnd {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00560042006f0078004400720076002e007300790073 } /* OriginalFilename VBoxDrv.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310035002d0032003000320031002000500069006e00640075006f00640075006f00200043006f00720070006f0072006100740069006f006e } /* LegalCopyright Copyright (C) 2015-2021 Pinduoduo Corporation */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 1000KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_6DYw {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_6iZ2 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 779af226b7b72ff9d78ce1f03d4a3389.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "18deed37f60b6aa8634dda2565a0485452487d7bce88afb49301a7352db4e506"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirIT Agent System */
@@ -9688,17 +6272,17 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_6DYw {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00760069007200610067007400360034002e007300790073 } /* OriginalFilename viragt64.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200054004700200053006f0066007400200053002e0061002e0073002e00200032003000310031002c002000320030003100320020002d0020007700770077002e007400670073006f00660074002e00690074 } /* LegalCopyright Copyright (C) TG Soft S.a.s. 2011, 2012 - www.tgsoft.it */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_85Fr {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_4Mga {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 9eb524c5f92e5b80374b8261292fdeb5.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8cfd5b2102fbc77018c7fe6019ec15f07da497f6d73c32a31f4ba07e67ec85d9"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVG anti rootkit */
@@ -9710,39 +6294,17 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310039002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2019 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_HighresolutionEnterpriseswwwhighrezcouk_inpoutxsys_inpoutxDriverVersion_x_8XsG {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_8J7X {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "2d83ccb1ad9839c9f5b3f10b1f856177df1594c66cbbc7661677d4b462ebf44d"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004b00650072006e0065006c0020006c006500760065006c00200070006f0072007400200061006300630065007300730020006400720069007600650072 } /* FileDescription Kernel level port access driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0048006900670068007200650073006f006c007500740069006f006e00200045006e0074006500720070007200690073006500730020005b007700770077002e006800690067006800720065007a002e0063006f002e0075006b005d } /* CompanyName Highresolution Enterprises [www.highrez.co.uk] */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e003200200078003600340020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.2 x64 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00320020007800360034 } /* ProductVersion 1.2 x64 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0069006e0070006f00750074007800360034002e007300790073 } /* InternalName inpoutx64.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0069006e0070006f007500740078003600340020004400720069007600650072002000560065007200730069006f006e00200031002e0032 } /* ProductName inpoutx64 Driver Version 1.2 */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0069006e0070006f00750074007800360034002e007300790073 } /* OriginalFilename inpoutx64.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300030003800200048006900670068007200650073006f006c007500740069006f006e00200045006e007400650072007000720069007300650073002e00200050006f007200740069006f006e007300200043006f007000790072006900670068007400200028006300290020004c006f00670069007800340075 } /* LegalCopyright Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c) Logix4u */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_6JMz {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 16472fca75ab4b5647c99de608949cde.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d5c4ff35eaa74ccdb80c7197d3d113c9cd38561070f2aa69c0affe8ed84a77c9"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avast anti rootkit */
@@ -9754,39 +6316,17 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_6JMz {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300031003800200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2018 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_4sT9 {
+rule PUA_VULN_Driver_wj_KProcessHacker_6TJu {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "98a123b314cba2de65f899cdbfa386532f178333389e0f0fbd544aff85be02eb"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0053007900730069006e007400650072006e0061006c00730020002d0020007700770077002e0073007900730069006e007400650072006e0061006c0073002e0063006f006d } /* CompanyName Sysinternals - www.sysinternals.com */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310036002e00340032 } /* FileVersion 16.42 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310036002e00340032 } /* ProductVersion 16.42 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00700072006f0063006500780070002e007300790073 } /* InternalName procexp.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* ProductName Process Explorer */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d00610072006b002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000320031 } /* LegalCopyright Copyright (C) Mark Russinovich 1996-2021 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_wj_KProcessHacker_82ma {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 1b5c3c458e31bede55145d0644e88d75.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "70211a3f90376bbc61f49c22a63075d1d4ddd53f0aefa976216c46e6ba39a9f4"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004b00500072006f0063006500730073004800610063006b00650072 } /* FileDescription KProcessHacker */
@@ -9797,17 +6337,17 @@ rule PUA_VULN_Driver_wj_KProcessHacker_82ma {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006b00700072006f0063006500730073006800610063006b00650072002e007300790073 } /* OriginalFilename kprocesshacker.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]004c006900630065006e00730065006400200075006e006400650072002000740068006500200047004e0055002000470050004c002c002000760033002e } /* LegalCopyright Licensed under the GNU GPL, v3. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_G8mS {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3Yoo {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 569676d3d45b0964ac6dd0815be8ff8c.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "76e807b6c0214e66455f09a8de8faad40b738982ca84470f0043de0290449524"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */
@@ -9819,17 +6359,17 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_G8mS {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0054006d0043006f006d006d002e007300790073 } /* OriginalFilename TmComm.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003100330020005400720065006e00640020004d006900630072006f00200049006e0063006f00720070006f00720061007400650064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2013 Trend Micro Incorporated. All rights reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriver_5CfW {
+rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriver_Mccv {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - d2588631d8aae2a3e54410eaf54f0679.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1d0397c263d51e9fc95bcc8baf98d1a853e1c0401cd0e27c7bf5da3fba1c93a8"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049002f004f00200049006e00740065007200660061006300650020006400720069007600650072002000660069006c0065 } /* FileDescription I/O Interface driver file */
@@ -9841,58 +6381,17 @@ rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriver_5CfW {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00420053005f00480057004d0049004f00360034005f005700310030002e007300790073 } /* OriginalFilename BS_HWMIO64_W10.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280063002900200032003000310038002d0032003000310039002000420049004f0053005400410052002000470072006f00750070 } /* LegalCopyright Copyright (c) 2018-2019 BIOSTAR Group */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_cpuzsys_WindowsRWinDDKdriver_5QXY {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_5Z5t {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "60b163776e7b95e0c2280d04476304d0c943b484909131f340e3ce6045a49289"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b002000700072006f00760069006400650072 } /* CompanyName Windows (R) Win 7 DDK provider */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000570069006e00200037002000440044004b0020006400720069007600650072 } /* ProductName Windows (R) Win 7 DDK driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_TCfs {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "ab2632a4d93a7f3b7598c06a9fdc773a1b1b69a7dd926bdb7cf578992628e9dd"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]005a0065006d0061006e00610020004c00740064002e } /* CompanyName Zemana Ltd. */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0032002e00320031002e00360033 } /* ProductVersion 2.21.63 */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]005a0041004d } /* ProductName ZAM */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]005a0065006d0061006e00610020004c00740064002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Zemana Ltd. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_88fj {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - a4531040276080441974d9e00d8d4cfa.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e2e79f1e696f27fa70d72f97e448081b1fa14d59cbb89bb4a40428534dd5c6f6"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVG anti rootkit */
@@ -9904,39 +6403,17 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310039002000410056004700200054006500630068006e006f006c006f006700690065007300200043005a002c00200073002e0072002e006f002e } /* LegalCopyright Copyright (C) 2019 AVG Technologies CZ, s.r.o. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 300KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_3L57 {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_378g {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "86721ee8161096348ed3dbe1ccbf933ae004c315b1691745a8af4a0df9fed675"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0053007900730069006e007400650072006e0061006c00730020002d0020007700770077002e0073007900730069006e007400650072006e0061006c0073002e0063006f006d } /* CompanyName Sysinternals - www.sysinternals.com */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310031002e00340030 } /* FileVersion 11.40 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310031002e00340030 } /* ProductVersion 11.40 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00700072006f0063006500780070002e007300790073 } /* InternalName procexp.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* ProductName Process Explorer */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d002e002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000310030 } /* LegalCopyright Copyright (C) M. Russinovich 1996-2010 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_4fEs {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ca6931fcbc1492d7283aa9dc0149032e.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5f69d6b167a1eeca3f6ac64785c3c01976ee7303171faf998d65852056988683"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */
@@ -9948,105 +6425,17 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_4fEs {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006900510056005700360034002e005300590053 } /* OriginalFilename iQVW64.SYS */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300032002d003200300031003600200049006e00740065006c00200043006f00720070006f0072006100740069006f006e00200041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2002-2016 Intel Corporation All Rights Reserved. */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_OpenLibSysorg_WinRingsys_WinRing_7qcr {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_5uSS {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "a7b000abbcc344444a9b00cfade7aa22ab92ce0cadec196c30eb1851ae4fa062"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069006e00520069006e00670030 } /* FileDescription WinRing0 */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004f00700065006e004c00690062005300790073002e006f00720067 } /* CompanyName OpenLibSys.org */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0032002e0030002e0035 } /* FileVersion 1.2.0.5 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0032002e0030002e0035 } /* ProductVersion 1.2.0.5 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00570069006e00520069006e00670030002e007300790073 } /* InternalName WinRing0.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00570069006e00520069006e00670030 } /* ProductName WinRing0 */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00570069006e00520069006e00670030002e007300790073 } /* OriginalFilename WinRing0.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300037002d00320030003000380020004f00700065006e004c00690062005300790073002e006f00720067002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2007-2008 OpenLibSys.org. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_WindowsRServerDDKprovider_gdrvsys_WindowsRServerDDKdriver_44Bh {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "17927b93b2d6ab4271c158f039cae2d60591d6a14458f5a5690aec86f5d54229"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041004200590054004500200054006f006f006c0073 } /* FileDescription GIGABYTE Tools */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000530065007200760065007200200032003000300033002000440044004b002000700072006f00760069006400650072 } /* CompanyName Windows (R) Server 2003 DDK provider */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0035002e0032002e0033003700390030002e00310038003300300020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 5.2.3790.1830 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0035002e0032002e0033003700390030002e0031003800330030 } /* ProductVersion 5.2.3790.1830 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]0067006400720076002e007300790073 } /* InternalName gdrv.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00570069006e0064006f007700730020002800520029002000530065007200760065007200200032003000300033002000440044004b0020006400720069007600650072 } /* ProductName Windows (R) Server 2003 DDK driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0067006400720076002e007300790073 } /* OriginalFilename gdrv.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]00a90020004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright © Microsoft Corporation. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_5HiJ {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "e58bbf3251906ff722aa63415bf169618e78be85cb92c8263d3715c260491e90"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310030002000430050005500490044 } /* LegalCopyright Copyright(C) 2010 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_7gi6 {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "11d258e05b850dcc9ecfacccc9486e54bd928aaa3d5e9942696c323fdbd3481b"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00430050005500490044 } /* CompanyName CPUID */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e003100360033003800350020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 6.1.7600.16385 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0036002e0031002e0037003600300030002e00310036003300380035 } /* ProductVersion 6.1.7600.16385 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]006300700075007a002e007300790073 } /* InternalName cpuz.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0043005000550049004400200073006500720076006900630065 } /* ProductName CPUID service */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006300700075007a002e007300790073 } /* OriginalFilename cpuz.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400280043002900200032003000310030002000430050005500490044 } /* LegalCopyright Copyright(C) 2010 CPUID */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_Hk6o {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - e9ccb6bac8715918a2ac35d8f0b4e1e6.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9679758455c69877fce866267d60c39d108b495dca183954e4af869902965b3d"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f00770073002000780036003400200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCD Windows x64 I/O driver */
@@ -10058,17 +6447,17 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_Hk6o {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0045006c00620079004300440049004f002e007300790073 } /* OriginalFilename ElbyCDIO.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000300020002d0020003200300030003800200045006c00610062006f0072006100740065002000420079007400650073002000410047 } /* LegalCopyright Copyright (C) 2000 - 2008 Elaborate Bytes AG */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_GseH {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_47Y8 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aaa8999a169e39fb8b48ae49cd6ac30a.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8137ce22d0d0fc5ea5b174d6ad3506a4949506477b1325da2ccb76511f4c4f60"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCD Windows NT/2000/XP I/O driver */
@@ -10080,83 +6469,17 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_GseH {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]0045006c00620079004300440049004f002e007300790073 } /* OriginalFilename ElbyCDIO.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f00700079007200690067006800740020002800430029002000320030003000300020002d0020003200300030003700200045006c00610062006f0072006100740065002000420079007400650073002000410047 } /* LegalCopyright Copyright (C) 2000 - 2007 Elaborate Bytes AG */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_4qaU {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_3we5 {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "ef86c4e5ee1dbc4f81cd864e8cd2f4a2a85ee4475b9a9ab698a4ae1cc71fbeb0"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d00530049 } /* CompanyName MSI */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* FileVersion 1.0.0.0 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e0030002e0030002e0030 } /* ProductVersion 1.0.0.0 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* InternalName NTIOLib.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004e00540049004f004c00690062 } /* ProductName NTIOLib */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004e00540049004f004c00690062002e007300790073 } /* OriginalFilename NTIOLib.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000300038002d00320030003000390020004d00530049002e00200041006c006c0020007200690067006800740073002000720065007300650072007600650064002e } /* LegalCopyright Copyright (C) 2008-2009 MSI. All rights reserved. */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_7aUs {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "51e91dd108d974ae809e5fc23f6fbd16e13f672f86aa594dae4a5c4bc629b0b5"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0053007900730069006e007400650072006e0061006c00730020002d0020007700770077002e0073007900730069006e007400650072006e0061006c0073002e0063006f006d } /* CompanyName Sysinternals - www.sysinternals.com */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310032002e00300030 } /* FileVersion 12.00 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310032002e00300030 } /* ProductVersion 12.00 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00700072006f0063006500780070002e007300790073 } /* InternalName procexp.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* ProductName Process Explorer */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d002e002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000310030 } /* LegalCopyright Copyright (C) M. Russinovich 1996-2010 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AsusTekComputerInc_BsDefsys_SupportSSTSFSSTEEATFTATCAMFNTAMFNBVCTVCBMFTWC_6qBg {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "36b9e31240ab0341873c7092b63e2e0f2cab2962ebf9b25271c3a1216b7669eb"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00440065006600610075006c0074002000420049004f005300200046006c0061007300680020004400720069007600650072 } /* FileDescription Default BIOS Flash Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004100730075007300540065006b00200043006f006d0070007500740065007200200049006e0063002e } /* CompanyName AsusTek Computer Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0031002e003200340020006200750069006c0074002000620079003a002000570069006e00440044004b } /* FileVersion 1.24 built by: WinDDK */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0031002e00320034 } /* ProductVersion 1.24 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00420073005f00440065006600360034002e007300790073 } /* InternalName Bs_Def64.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]0053007500700070006f0072007400200053005300540033003900530046003000320030002c0053005300540032003900450045003000320030002c004100540034003900460030003000320054002c00410054003200390043003000320030002c0041004d003200390046003000300032004e0054002c0041004d003200390046003000300032004e0042002c0056003200390043003500310030003000320054002c0056003200390043003500310030003000320042002c004d0032003900460030003000320054002c0057003200390043003000320030002e } /* ProductName Support SST39SF020,SST29EE020,AT49F002T,AT29C020,AM29F002NT,AM29F002NB,V29C51002T,V29C51002B,M29F002T,W29C020. */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00420073005f00440065006600360034002e007300790073 } /* OriginalFilename Bs_Def64.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004100730075007300540065006b00200043006f006d00700075007400650072002e00200031003900390032002d0032003000300034 } /* LegalCopyright Copyright (C) AsusTek Computer. 1992-2004 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_M2ev {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 84c4d8ae023ca9bb60694fa467141247.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4da08c0681fbe028b60a1eaf5cb8890bd3eba4d0e6a8b976495ddcd315e147ba"
-		date = "2023-05-12"
+		date = "2023-05-13"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avast anti rootkit */
@@ -10168,49 +6491,5 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_M2ev {
 		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]006100730077004100720050006f0074002e007300790073 } /* OriginalFilename aswArPot.sys */
 		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028006300290020003200300031003800200041005600410053005400200053006f006600740077006100720065 } /* LegalCopyright Copyright (c) 2018 AVAST Software */
 	condition:
-		uint16(0) == 0x5a4d and filesize < 200KB and all of them
-}
-
-
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_wiX5 {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "9d5ebd0f4585ec20a5fe3c5276df13ece5a2645d3d6f70cedcda979bd1248fc2"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0053007900730069006e007400650072006e0061006c00730020002d0020007700770077002e0073007900730069006e007400650072006e0061006c0073002e0063006f006d } /* CompanyName Sysinternals - www.sysinternals.com */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]00310035002e00300030 } /* FileVersion 15.00 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]00310035002e00300030 } /* ProductVersion 15.00 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]00700072006f0063006500780070002e007300790073 } /* InternalName procexp.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* ProductName Process Explorer */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]00700072006f0063006500780070002e005300790073 } /* OriginalFilename procexp.Sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200028004300290020004d00610072006b002000520075007300730069006e006f007600690063006800200031003900390036002d0032003000310034 } /* LegalCopyright Copyright (C) Mark Russinovich 1996-2014 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
-}
-
-
-rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_jePS {
-	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "c64d4ac416363c7a1aa828929544d1c1d78cf032b39769943b851cfc4c0faafc"
-		date = "2023-05-12"
-		score = 50
-	strings:
-		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100540053005a0049004f0020004400720069007600650072 } /* FileDescription ATSZIO Driver */
-		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004100530055005300540065006b00200043006f006d0070007500740065007200200049006e0063002e } /* CompanyName ASUSTek Computer Inc. */
-		$ = { 00460069006c006500560065007200730069006f006e[1-8]0030002e0032002e0031002e0036 } /* FileVersion 0.2.1.6 */
-		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0030002e0032002e0031002e0036 } /* ProductVersion 0.2.1.6 */
-		$ = { 0049006e007400650072006e0061006c004e0061006d0065[1-8]004100540053005a0049004f002e007300790073 } /* InternalName ATSZIO.sys */
-		$ = { 00500072006f0064007500630074004e0061006d0065[1-8]004100540053005a0049004f0020004400720069007600650072 } /* ProductName ATSZIO Driver */
-		$ = { 004f0072006900670069006e0061006c00460069006c0065006e0061006d0065[1-8]004100540053005a0049004f002e007300790073 } /* OriginalFilename ATSZIO.sys */
-		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f0070007900720069006700680074002000280043002900200032003000310032 } /* LegalCopyright Copyright (C) 2012 */
-	condition:
-		uint16(0) == 0x5a4d and filesize < 100KB and all of them
+		all of them
 }

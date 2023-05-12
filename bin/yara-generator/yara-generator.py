@@ -9,6 +9,7 @@
 __version__ = "0.2.0"
 __author__ = "Florian Roth"
 
+import sys
 import argparse
 import binascii
 import hashlib
@@ -27,7 +28,7 @@ import shortuuid
 YARA_RULE_TEMPLATE = '''
 rule $$$RULENAME$$$ {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - $$$FILENAMES$$$"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "$$$HASH$$$"
@@ -63,6 +64,7 @@ def process_files(input_files, debug):
 			pe = pefile.PE(f)
 		except pefile.PEFormatError as e:
 			Log.error("Cannot process file: %s" % f)
+			continue
 			# Log.debug("Failed to process file %s with error: " % traceback.print_exc())
 		# Getting the Version info values used for the YARA rules
 		string_version_info = {}
@@ -93,9 +95,9 @@ def process_files(input_files, debug):
 		
 		# Generate a dictionary that serves as an input for the YARA rule generation
 		yara_rule_infos = {
-			'file_name': os.path.basename(f),
-			'sha256': sha256_hash,
-			'file_size': file_size,
+			'file_names': [os.path.basename(f)],
+			'sha256': [sha256_hash],
+			'file_sizes': [file_size],
 			'version_info': {
 				'FileDescription': get_version_info(string_version_info, 'FileDescription'),
 				'CompanyName': get_version_info(string_version_info, 'CompanyName'),
@@ -107,7 +109,22 @@ def process_files(input_files, debug):
 				'LegalCopyright': get_version_info(string_version_info, 'LegalCopyright'),
 			}
 		}
-		header_infos.append(yara_rule_infos)
+
+		# Check if the VersionInfo is the same as found in another file (avoid duplicates)
+		is_duplicate = False
+		for hi in header_infos:
+			shared_items = {k: yara_rule_infos['version_info'][k] for k in yara_rule_infos['version_info'] if k in hi['version_info'] and yara_rule_infos['version_info'][k] == hi['version_info'][k]}
+			if len(yara_rule_infos['version_info']) == len(shared_items):
+				Log.debug("Duplicate found %s - duplicates: %s" % (f, hi['file_names']))
+				is_duplicate = True
+				hi['file_names'].append(os.path.basename(f))
+				hi['sha256'].append(sha256_hash)
+				hi['file_sizes'].append(file_size)
+
+		#pprint.pprint(header_infos)
+		if not is_duplicate:
+			header_infos.append(yara_rule_infos)
+	
 	return header_infos
 
 
@@ -119,19 +136,20 @@ def generate_yara_rules(header_infos, strict, debug):
 		# Generate Rule
 		new_rule = YARA_RULE_TEMPLATE
 		rule_name = generate_rule_name(hi['version_info'])
-		Log.info("Generating YARA rule for %s - rule name %s" % (hi['file_name'], rule_name))
+		Log.info("Generating YARA rule for %s - rule name %s" % (hi['file_names'], rule_name))
 		new_rule = new_rule.replace('$$$RULENAME$$$', rule_name)
-		new_rule = new_rule.replace('$$$HASH$$$', hi['sha256'])
+		new_rule = new_rule.replace('$$$HASH$$$', '"\n\t\thash = "'.join(hi['sha256']))
 		new_rule = new_rule.replace('$$$DATE$$$', datetime.today().strftime('%Y-%m-%d'))
+		new_rule = new_rule.replace('$$$FILENAMES$$$', ", ".join(hi['file_names']))
 		string_values = generate_string_values(hi['version_info'])
 		# if string values is empty or too small
 		if len(string_values) < 3:
-			Log.info("Number of extracted PE version info values is empty or not big enough - YARA rule generation skipped for %s" % hi['file_name'])
+			Log.info("Number of extracted PE version info values is empty or not big enough - YARA rule generation skipped for %s" % hi['file_names'])
 			continue
 		new_rule = new_rule.replace('$$$STRINGS$$$', "\n\t\t$ = ".join(string_values))
 		# Condition
 		if strict:
-			new_rule = new_rule.replace('$$$STRICT$$$', "uint16(0) == 0x5a4d and filesize < %dKB and " % hi['file_size'])
+			new_rule = new_rule.replace('$$$STRICT$$$', "uint16(0) == 0x5a4d and filesize < %dKB and " % max(hi['file_sizes']))
 		else:
 			new_rule = new_rule.replace('$$$STRICT$$$', '')
 		Log.debug(new_rule)
@@ -200,7 +218,7 @@ if __name__ == '__main__':
 	  help='Path to input directory (can be used multiple times)', 
 	  metavar='driver-files')
 	parser.add_argument('-o', help="Output file", metavar='output-folder', default='./yara-rules.yar')
-	parser.add_argument('--strict', action='store_true', default=False, help='Include magic header and filesize to make the rule more strict')
+	parser.add_argument('--strict', action='store_true', default=False, help='Include magic header and filesize to make the rule more strict (less false positives)')
 	parser.add_argument('--debug', action='store_true', default=False, help='Debug output')
 
 	args = parser.parse_args()
