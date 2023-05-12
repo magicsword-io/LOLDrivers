@@ -2,7 +2,7 @@
 
 This YARA rule generator creates YARA rules for the vulnerable / malicious drivers collected in the LOLDrivers project.
 
-## How does it work? 
+## How does it work?
 
 The generator processes the input samples and extract specific 'VersionInfo' values from the driver's PE headers. This includes e.g., the company name, file version, product version, description and other values. It then creates YARA rules that look for these specific values and uses a condition that's very permissive (`all of them`). This allows us to detect the drivers even if they are embedded in another file or loaded into memory.
 
@@ -29,6 +29,8 @@ optional arguments:
 
 ## Examples
 
+### Working on Linux / macOS
+
 Generate the YARA rules and then use the command line tool YARA to scan the home folder using these rules:
 
 ```sh
@@ -46,6 +48,27 @@ Use a custom output file
 
 ```sh
 python yara-generator.py -d ../../drivers/ -o my-yara-output.yar
+```
+
+### Working on Windows
+
+Generate the YARA rules and then use the command line tool YARA to scan the drive C: using these rules:
+
+```sh
+python yara-generator.py -d ..\..\drivers\
+yara -r yara-rules.yar C:\
+```
+
+Show debug output while generating the rules
+
+```sh
+python yara-generator.py -d ..\..\drivers\ --debug
+```
+
+Use a custom output file
+
+```sh
+python yara-generator.py -d ..\..\drivers\ -o my-yara-output.yar
 ```
 
 ## Example Output
