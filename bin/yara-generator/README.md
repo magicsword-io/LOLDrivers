@@ -15,7 +15,7 @@ pip install -r requirements.txt
 ## Usage
 
 ```sh
-usage: yara-generator.py [-h] [-d driver-files [driver-files ...]] [-o output-folder] [--debug]
+usage: yara-generator.py [-h] [-d driver-files [driver-files ...]] [-o output-folder] [--strict] [--debug]
 
 YARA Rule Generator for PE Header Info
 
@@ -24,6 +24,7 @@ optional arguments:
   -d driver-files [driver-files ...]
                         Path to input directory (can be used multiple times)
   -o output-folder      Output file
+  --strict              Include magic header and file size to make the rule more strict
   --debug               Debug output
 ```
 
@@ -34,20 +35,26 @@ optional arguments:
 Generate the YARA rules and then use the command line tool YARA to scan the home folder using these rules:
 
 ```sh
-python yara-generator.py -d ../../drivers/
+python yara-generator.py -d ../../drivers/ --strict
 yara -r yara-rules.yar ~/
 ```
 
 Show debug output while generating the rules
 
 ```sh
-python yara-generator.py -d ../../drivers/ --debug
+python yara-generator.py -d ../../drivers/ --strict --debug
 ```
 
 Use a custom output file
 
 ```sh
-python yara-generator.py -d ../../drivers/ -o my-yara-output.yar
+python yara-generator.py -d ../../drivers/ --strict -o my-yara-output.yar
+```
+
+Create rules that would detect the vulnerable drivers even if packaged with other files (e.g., in malware / as overlay) or to be used for in-memory detection (no magic header check, no file size limitation).
+
+```sh
+python yara-generator.py -d ../../drivers/
 ```
 
 ### Working on Windows
