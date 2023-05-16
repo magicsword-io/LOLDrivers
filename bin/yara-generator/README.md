@@ -6,10 +6,23 @@ This YARA rule generator creates YARA rules for the vulnerable / malicious drive
 
 The generator processes the input samples and extract specific 'VersionInfo' values from the driver's PE headers. This includes e.g., the company name, file version, product version, description and other values. It then creates YARA rules that look for these specific values and uses a condition that's very permissive (`all of them`). This allows us to detect the drivers even if they are embedded in another file or loaded into memory.
 
+## Requirements
+
+* [Python 3.10](https://www.python.org/downloads/)
+* [Poetry](https://python-poetry.org/docs/#installation)
+
 ## Setup
 
-```sh
-pip install -r requirements.txt
+1. Install dependencies:
+
+```
+poetry install
+```
+
+2. Activate the virtual environment:
+
+```
+poetry shell
 ```
 
 ## Usage

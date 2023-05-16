@@ -214,9 +214,9 @@ def removeNonAsciiDrop(s):
 if __name__ == '__main__':
 	# Parse Arguments
 	parser = argparse.ArgumentParser(description='YARA Rule Generator for PE Header Info')
-	parser.add_argument('-d', action='append', nargs='+', 
-	  help='Path to input directory (can be used multiple times)', 
-	  metavar='driver-files')
+	parser.add_argument('-d', nargs='*', action='append',
+                    help='Path to input directory (can be used multiple times)',
+                    metavar='driver-files', default=[['drivers/']])
 	parser.add_argument('-o', help="Output file", metavar='output-folder', default='./yara-rules.yar')
 	parser.add_argument('--strict', action='store_true', default=False, help='Include magic header and filesize to make the rule more strict (less false positives)')
 	parser.add_argument('--debug', action='store_true', default=False, help='Debug output')
