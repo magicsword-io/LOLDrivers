@@ -46,7 +46,7 @@ For more detailed instructions, please refer to the [CONTRIBUTING.md](CONTRIBUTI
 
 ## 🚨 Sigma and Sysmon Detection
 
-LOLDrivers includes Sigma and Sysmon detection rules to help you identify potential threats. Check out the [sigma](detections/sigma/) and [sysmon](detections/sysmon/) files under the detection folder for more information.
+LOLDrivers includes Sigma and Sysmon detection rules to help you identify potential threats. Check out the [sigma](detections/sigma/) and [sysmon](detections/sysmon/) files under the detection folder for more information. There are also [script](https://gist.github.com/IISResetMe/1a8353ae57710868b31b0e8d41683b95) (thank you [@Oddvarmoe](https://twitter.com/Oddvarmoe), [@M_haggis](https://twitter.com/M_haggis) and [IISResetMe](https://twitter.com/IISResetMe) to quickly scan your local Windows driver directories. 
 
 Happy hunting! 🕵️‍♂️
 
