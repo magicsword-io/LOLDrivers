@@ -46,15 +46,19 @@ For more detailed instructions, please refer to the [CONTRIBUTING.md](CONTRIBUTI
 
 ## 🚨 Sigma and Sysmon Detection
 
-LOLDrivers provides comprehensive Sigma and Sysmon detection rules to help you effectively detect potential threats. To explore these rules in detail, navigate to the [sigma](detections/sigma/) and [sysmon](detections/sysmon/) directories under the detection folder. Additionally, we have a PowerShell [script](https://gist.github.com/IISResetMe/1a8353ae57710868b31b0e8d41683b95) available, courtesy of [@Oddvarmoe](https://twitter.com/Oddvarmoe), [@M_haggis](https://twitter.com/M_haggis), and [IISResetMe](https://twitter.com/IISResetMe), that allows you to scan a Windows folder for potentially malicious drivers. We recommend trying it on directories such as:
+LOLDrivers provides comprehensive Sigma and Sysmon detection rules to help you effectively detect potential threats. To explore these rules in detail, navigate to the [sigma](detections/sigma/) and [sysmon](detections/sysmon/) directories under the detection folder.
+
+Happy hunting! 🕵️‍♂️
+
+## 🔎 Windows Folder Scanning
+
+We have also a useful Windows folder scanning script courtesy of [@Oddvarmoe](https://twitter.com/Oddvarmoe), [@M_haggis](https://twitter.com/M_haggis), and [IISResetMe](https://twitter.com/IISResetMe), that can help you identify potentially malicious drivers. The script, available [here](https://gist.github.com/IISResetMe/1a8353ae57710868b31b0e8d41683b95), allows you to scan a specified Windows folder for any suspicious files. We recommend running the script on directories such as:
 
 ```
 C:\WINDOWS\inf
 C:\WINDOWS\System32\drivers
 C:\WINDOWS\System32\DriverStore\FileRepository
 ```
-
-Happy hunting! 🕵️‍♂️
 
 ## 🏗️ Building and Testing Locally
 
