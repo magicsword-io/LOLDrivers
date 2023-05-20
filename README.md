@@ -52,7 +52,7 @@ Happy hunting! 🕵️‍♂️
 
 ## 🔎 Windows Folder Scanning
 
-We have also a useful Windows folder scanning script courtesy of [@Oddvarmoe](https://twitter.com/Oddvarmoe), [@M_haggis](https://twitter.com/M_haggis), and [IISResetMe](https://twitter.com/IISResetMe), that can help you identify potentially malicious drivers. The script, available [here](https://gist.github.com/IISResetMe/1a8353ae57710868b31b0e8d41683b95), allows you to scan a specified Windows folder for any suspicious files. We recommend running the script on directories such as:
+The community has also created a PowerShell LOLDriver scanner courtesy of [@Oddvarmoe](https://twitter.com/Oddvarmoe), [@M_haggis](https://twitter.com/M_haggis), and [IISResetMe](https://twitter.com/IISResetMe), that can help you identify potentially malicious drivers. The script, available [here](https://gist.github.com/IISResetMe/1a8353ae57710868b31b0e8d41683b95), allows you to scan a specified Windows folder for any suspicious files. We recommend running the script on directories such as:
 
 ```
 C:\WINDOWS\inf
