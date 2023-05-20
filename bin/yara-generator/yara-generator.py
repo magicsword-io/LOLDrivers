@@ -6,7 +6,7 @@
 # Florian Roth
 # May 2023
 
-__version__ = "0.2.0"
+__version__ = "0.2.2"
 __author__ = "Florian Roth"
 
 import sys
@@ -214,10 +214,10 @@ def removeNonAsciiDrop(s):
 if __name__ == '__main__':
 	# Parse Arguments
 	parser = argparse.ArgumentParser(description='YARA Rule Generator for PE Header Info')
-	parser.add_argument('-d', nargs='*', action='append',
+	parser.add_argument('-d', nargs='*', 
                     help='Path to input directory (can be used multiple times)',
-                    metavar='driver-files', default=[['drivers/']])
-	parser.add_argument('-o', help="Output file", metavar='output-folder', default='./yara-rules.yar')
+                    metavar='driver-files', default=[['../../drivers/']])
+	parser.add_argument('-o', help="Output file", metavar='output-folder', default='../../detections/yara/yara-rules.yar')
 	parser.add_argument('--strict', action='store_true', default=False, help='Include magic header and filesize to make the rule more strict (less false positives)')
 	parser.add_argument('--debug', action='store_true', default=False, help='Debug output')
 
@@ -237,7 +237,7 @@ if __name__ == '__main__':
 
 	# Walk the folders and get a list of all input files
 	Log.info("[+] Processing %d input paths" % len(args.d[0]))
-	file_paths = process_folders(args.d[0], args.debug)
+	file_paths = process_folders(args.d, args.debug)
 
 	# Process each file and extract the header info need for the YARA rules
 	Log.info("[+] Processing %d sample files" % len(file_paths))
