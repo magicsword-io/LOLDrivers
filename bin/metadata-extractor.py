@@ -142,7 +142,7 @@ def get_metadata(driver):
     else:
         metadata['Signatures'] = {}
 
-    return metadata, md5, sha1, sha256
+    return metadata, md5.lower(), sha1.lower(), sha256.lower()
 
 def enrich_yaml(file_path_, metadata_md5, metadata_sha1, metadata_sha256):
     global_enrich = False
@@ -156,19 +156,19 @@ def enrich_yaml(file_path_, metadata_md5, metadata_sha1, metadata_sha256):
                 if "MD5" in sample or "SHA1" in sample or "SHA256" in sample:
                     if sample.get('MD5', None) != "-":
                         try:
-                            metadata_ = metadata_md5[sample['MD5']]
+                            metadata_ = metadata_md5[sample['MD5'].lower()]
                             enrich = True
                         except KeyError:
                             pass
                     if sample.get('SHA1', None) != "-":
                         try:
-                            metadata_ = metadata_sha1[sample['SHA1']]
+                            metadata_ = metadata_sha1[sample['SHA1'].lower()]
                             enrich = True
                         except KeyError:
                             pass
                     if sample.get('SHA256', None) != "-":
                         try:
-                            metadata_ = metadata_sha256[sample['SHA256']]
+                            metadata_ = metadata_sha256[sample['SHA256'].lower()]
                             enrich = True
                         except KeyError:
                             pass
