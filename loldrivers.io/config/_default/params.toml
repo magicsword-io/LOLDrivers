@@ -5,7 +5,7 @@ uniqueHomePage = true # change to false to add sidebar to homepage
 
 #blogDir = "blog" # can be posts, blog e.t.c
 
-repo = "https://github.com/onweru/compose"
+repo = "https://github.com/josehelps/compose"
 
 #time_format_blog = "Monday, January 02, 2006"
 #time_format_default = "January 2, 2006"
@@ -21,6 +21,10 @@ showLineNumbers = false
 # iconsPath = 'icons/'
 
 otherSearchableFields = ["Tags"] # As they appear in frontmatter
+[search]
+  on = false
+  global = false
+
 
 # Site logo
 [logo]
@@ -39,8 +43,4 @@ otherSearchableFields = ["Tags"] # As they appear in frontmatter
 [author]  
   name = "With ♥️ from Magicsword"
   url = "https://loldrivers.io/about"
-
-[search]
-on = false
-global = false
 
