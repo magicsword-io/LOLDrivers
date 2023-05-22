@@ -15,7 +15,8 @@ def write_drivers_csv(drivers, output_dir, VERBOSE):
               'OperatingSystem', 'Resources', 'Driver Description', 'Person', 'Handle', 'Detection',
               'KnownVulnerableSamples_MD5', 'KnownVulnerableSamples_SHA1', 'KnownVulnerableSamples_SHA256',
               'KnownVulnerableSamples_Publisher', 'KnownVulnerableSamples_Date',
-              'KnownVulnerableSamples_Company', 'KnownVulnerableSamples_Description', 'Verified', 'Tags']
+              'KnownVulnerableSamples_Company', 'KnownVulnerableSamples_Description', 
+              'KnownVulnerableSamples_Authentihash_MD5', 'KnownVulnerableSamples_Authentihash_SHA1', 'KnownVulnerableSamples_Authentihash_SHA256', 'Verified', 'Tags']
 
     with open(output_file, 'w', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=header)
@@ -32,9 +33,11 @@ def write_drivers_csv(drivers, output_dir, VERBOSE):
             dates = [s['Date'] for s in driver['KnownVulnerableSamples'] if 'Date' in s]
             companies = [s['Company'] for s in driver['KnownVulnerableSamples'] if 'Company' in s]
             descriptions = [s['Description'] for s in driver['KnownVulnerableSamples'] if 'Description' in s]
-            
-            
-            
+            authentihash_md5s = [s['Authentihash']['MD5'] for s in driver['KnownVulnerableSamples'] if 'Authentihash' in s]
+            authentihash_sha1s = [s['Authentihash']['SHA1'] for s in driver['KnownVulnerableSamples'] if 'Authentihash' in s]
+            authentihash_sha256s = [s['Authentihash']['SHA256'] for s in driver['KnownVulnerableSamples'] if 'Authentihash' in s]
+
+        
             row = {
                 'Id': driver.get('Id', ''),
                 'Author': driver.get('Author', ''),
@@ -58,6 +61,9 @@ def write_drivers_csv(drivers, output_dir, VERBOSE):
                 'KnownVulnerableSamples_Date': ', '.join(str(date) for date in dates),
                 'KnownVulnerableSamples_Company': ', '.join(str(company) for company in companies),
                 'KnownVulnerableSamples_Description': ', '.join(str(description) for description in descriptions),
+                'KnownVulnerableSamples_Authentihash_MD5': ', '.join(str(md5) for md5 in authentihash_md5s),
+                'KnownVulnerableSamples_Authentihash_SHA1': ', '.join(str(sha1) for sha1 in authentihash_sha1s),
+                'KnownVulnerableSamples_Authentihash_SHA256': ', '.join(str(sha256) for sha256 in authentihash_sha256s),
                 'Verified': driver.get('Verified', ''),
                 'Tags': ', '.join(str(tag) for tag in driver['Tags'])                                  
             }
