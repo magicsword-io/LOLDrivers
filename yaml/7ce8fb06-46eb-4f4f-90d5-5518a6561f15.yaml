@@ -7,7 +7,7 @@ Verified: 'TRUE'
 Commands:
   Command: sc.exe create gmer64.sys binPath=C:\windows\temp\gmer64.sys type=kernel
     && sc.exe start gmer64.sys
-  Description: Malicious driver found in https://github.com/hfiref0x/KDU.
+  Description: Driver used by the GMER application. Which is an application that detects and removes rootkits
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
