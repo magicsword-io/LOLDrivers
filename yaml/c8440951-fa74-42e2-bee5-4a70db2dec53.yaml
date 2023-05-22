@@ -1,0 +1,69 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- Black Lotus Microsoft Windows 8.1
+Category: Revoked Bootloaders
+Commands:
+  Command: ''
+  Description: This was provided by Microsoft and revoked May-23
+  OperatingSystem: 64-bit
+  Privileges: ''
+  Usecase: Persistence
+Created: '2023-05-22'
+Detection:
+- type: ''
+  value: ''
+Id: c8440951-fa74-42e2-bee5-4a70db2dec53
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: 450c5929a254f83c3fcfa056b9ecb5f9
+    SHA1: 3f62302d8c036c7d2d4ae6a47fc8439028871808
+    SHA256: 84d75f7a8913d66db946eaf1480eaddec3063d27a6f625f040b406718abcac44
+  Company: Microsoft Corporation
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
+  Date: ''
+  Description: Boot Manager
+  ExportedFunctions: ''
+  FileVersion: 6.3.9600.18639 (winblue_ltsb.170325-0600)
+  Filename: bootmgfw.efi
+  Imports: []
+  InternalName: bootmgr.exe
+  MD5: 958ceee3668f4eff01fb29d03518b49e
+  MachineType: AMD64
+  OriginalFilename: bootmgr.exe
+  PDBPath: ''
+  Product: "Microsoft\xAE Windows\xAE Operating System"
+  ProductVersion: 6.3.9600.18639
+  Publisher: ''
+  SHA1: 0213406b236ee5c1f1e4fbf0101d24cc10ab7e24
+  SHA256: fe26e6c2bc5ac4357e6657624180ca1e946d6dabe79cdb098d7b8b4e440851aa
+  Signature: ''
+  ImportedFunctions: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows
+      ValidFrom: '2016-10-11 20:39:31'
+      ValidTo: '2018-01-11 20:39:31'
+      Signature: bd80b589ac202a8c57028b505da374963d49e555f4d7fba7ec9c9b645e2c3cc1b869ca054fce40a3953a4cae404cf07bc8f52e9408afa7cf74f03c131aa37e26eea21fe524bc06fe6bf59c1d510cc505cae5e385344eb27a4500ac119b30d5a54c5ae9c249665539cbf51fb8680a5311ee884d3d4a2c38a8e6e170f7c9f94aa821f889f4ef7733ca24c6ecc56105ec5b39f8609dc897a2e7deca1c32d696208e8b92a92419b386e3714c104f01a54b619de5afb79db9618e7f90852b33228d4ae67d6e74b3c55ad9f6f41b86952aed4d73efe4e09f36d2ce97679ce82ca30d073a1dc401342b1b255abaa86b506d8344fa287e2a1214e2d3b98dfdb9c6d85fda
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Production PCA 2011
+      ValidFrom: '2011-10-19 18:41:42'
+      ValidTo: '2026-10-19 18:51:42'
+      Signature: 14fc7c7151a579c26eb2ef393ebc3c520f6e2b3f101373fea868d048a6344d8a960526ee3146906179d6ff382e456bf4c0e528b8da1d8f8adb09d71ac74c0a36666a8cec1bd70490a81817a49bb9e240323676c4c15ac6bfe404c0ea16d3acc368ef62acdd546c503058a6eb7cfe94a74e8ef4ec7c867357c2522173345af3a38a56c804da0709edf88be3cef47e8eaef0f60b8a08fb3fc91d727f53b8ebbe63e0e33d3165b081e5f2accd16a49f3da8b19bc242d090845f541dff89eaba1d47906fb0734e419f409f5fe5a12ab21191738a2128f0cede73395f3eab5c60ecdf0310a8d309e9f4f69685b67f51886647198da2b0123d812a680577bb914c627bb6c107c7ba7a8734030e4b627a99e9cafcce4a37c92da4577c1cfe3ddcb80f5afad6c4b30285023aeab3d96ee4692137de81d1f675190567d393575e291b39c8ee2de1cde445735bd0d2ce7aab1619824658d05e9d81b367af6c35f2bce53f24e235a20a7506f6185699d4782cd1051bebd088019daa10f105dfba7e2c63b7069b2321c4f9786ce2581706362b911203cca4d9f22dbaf9949d40ed1845f1ce8a5c6b3eab03d370182a0a6ae05f47d1d5630a32f2afd7361f2a705ae5425908714b57ba7e8381f0213cf41cc1c5b990930e88459386e9b12099be98cbc595a45d62d6a0630820bd7510777d3df345b99f979fcb57806f33a904cf77a4621c597e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    Signer:
+    - SerialNumber: 33000001066ec325c431c9180e000000000106
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Production PCA 2011
+MitreID: T1542
+Resources:
+- https://uefi.org/revocationlistfile
+Tags:
+- bootmgfw.efi
+Verified: 'TRUE'

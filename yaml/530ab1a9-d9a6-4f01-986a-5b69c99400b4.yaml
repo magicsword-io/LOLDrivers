@@ -1,0 +1,49 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- CVE-2022-34303
+Category: Revoked Bootloaders
+Commands:
+  Command: ''
+  Description: This was provided by CPSD and revoked Aug-22
+  OperatingSystem: 64-bit
+  Privileges: ''
+  Usecase: Persistence
+Created: '2023-05-22'
+Detection:
+- type: ''
+  value: ''
+Id: 530ab1a9-d9a6-4f01-986a-5b69c99400b4
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256:
+    - 284153E7D04A9F187E5C3DBFE17B2672AD2FBDD119F27BEC789417B7919853EC
+  Company: ''
+  Copyright: ''
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: shim.efi
+  Imports: ''
+  InternalName: ''
+  MD5: ''
+  MachineType: 64-bit
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: ''
+  SHA256: 51BD59697B4E1DF61DF32AD57CEBE394BE54E3E9DBFEB8DC00A3A176D13A5767
+  Signature: ''
+MitreID: T1542
+Resources:
+- https://uefi.org/revocationlistfile
+Tags:
+- shim.efi
+Verified: 'TRUE'

@@ -1,0 +1,76 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- CVE-2020-10713
+- CVE-2020-14308
+- CVE-2020-14309
+- CVE-2020-14310
+- CVE-2020-14311
+- CVE-2020-15705
+- CVE-2020-15706
+- CVE-2020-15707
+Category: Revoked Bootloaders
+Commands:
+  Command: ''
+  Description: This was provided by Intel Corporation and revoked Jul-20
+  OperatingSystem: 64-bit
+  Privileges: ''
+  Usecase: Persistence
+Created: '2023-05-22'
+Detection:
+- type: ''
+  value: ''
+Id: 3c5c1c32-6c09-4fea-863a-2e5cb48bb099
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: e599f74cf93986aafae680c20c7b3723
+    SHA1: 36a6e60b2512bfd940eadb7ff3fdba23fa970a8c
+    SHA256: 9fa4d5023fd43ecaff4200ba7e8d4353259d2b7e5e72b5096eff8027d66d1043
+  Company: ''
+  Copyright: ''
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: HfiPcieGen3
+  Imports: []
+  InternalName: ''
+  MD5: ffa0df6d1cb927f4cde2741d63c7125b
+  MachineType: AMD64
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: a2c8bf15abcb90da814748bb150d66f842f23a38
+  SHA256: 98acba206e9f3843a4a7e07c66ead4366fbe7976653b65ed0c311d4efae878ab
+  Signature: ''
+  ImportedFunctions: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, OU=MOPR, CN=Microsoft
+        Windows UEFI Driver Publisher
+      ValidFrom: '2016-11-17 22:05:37'
+      ValidTo: '2018-02-17 22:05:37'
+      Signature: 0141873b6d85a37b5ac2a306448d73b6be76f7682ad14efef7ce4b377f0f7a5fbefd76377d59dc2caccd28d1be3eb180a8b66ab19a853bd14c7d5e955e8f07bc2ee0686ac3a2c9e997bd9f58de6dc9b93900c6b7824f64bf415ac51ebaa3dcfe8ad4fc2a41ad95b372c421c4f87835a59867c244e1c8df142abc4b23579f57431565eb8de6a7a0318b2fd17f93876a335c9450d2531f6a877baf43a569f83703a68e49987ca3c6dd42a595827f5be49151d3b79ea262e38ef5b37bda5b1be3462baa6ccb313193cdba21ea3cb1e9bbc751a769f354d63a0d1de3158c67d47b765b92d580ed5f1f1cdb5f61774c4b66c7deb15f4c71d605106064f33a17d31ca6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Corporation UEFI CA 2011
+      ValidFrom: '2011-06-27 21:22:45'
+      ValidTo: '2026-06-27 21:32:45'
+      Signature: 350842ff30cccef7760cad1068583529463276277cef124127421b4aaa6d813848591355f3e95834a6160b82aa5dad82da808341068fb41df203b9f31a5d1bf15090f9b3558442281c20bdb2ae5114c5c0ac9795211c90db0ffc779e95739188cabdbd52b905500ddf579ea061ed0de56d25d9400f1740c8cea34ac24daf9a121d08548fbdc7bcb92b3d492b1f32fc6a21694f9bc87e4234fc3606178b8f2040c0b39a257527cdc903a3f65dd1e736547ab950b5d312d107bfbb74dfdc1e8f80d5ed18f42f14166b2fde668cb023e5c784d8edeac13382ad564b182df1689507cdcff072f0aebbdd8685982c214c332bf00f4af06887b592553275a16a826a3ca32511a4edadd704aecbd84059a084d1954c6291221a741d8c3d470e44a6e4b09b3435b1fab653a82c81eca40571c89db8bae81b4466e447540e8e567fb39f1698b286d0683e9023b52f5e8f50858dc68d825f41a1f42e0de099d26c75e4b669b52186fa07d1f6e24dd1daad2c77531e253237c76c52729586b0f135616a19f5b23b815056a6322dfea289f94286271855a182ca5a9bf830985414a64796252fc826e441941a5c023fe596e3855b3c3e3fbb47167255e22522b1d97be703062aa3f71e9046c3000dd61989e30e352762037115a6efd027a0a0593760f83894b8e07870f8ba4c868794f6e0ae0245ee65c2b6a37e69167507929bf5a6bc598358
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    Signer:
+    - SerialNumber: 330000001e0d8474951a966ce400010000001e
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Corporation UEFI CA 2011
+MitreID: T1542
+Resources:
+- https://uefi.org/revocationlistfile
+Tags:
+- HfiPcieGen3
+Verified: 'TRUE'
