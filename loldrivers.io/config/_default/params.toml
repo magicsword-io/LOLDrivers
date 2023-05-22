@@ -20,10 +20,14 @@ showLineNumbers = false
 # By default the template will look for icons under the icons directory. In some situations you might wanna change that. edit the line below
 # iconsPath = 'icons/'
 
-otherSearchableFields = ["Tags"] # As they appear in frontmatter
+# otherSearchableFields = ["Tags"] # As they appear in frontmatter
+enableSearch = false
+
 [search]
-  on = false
-  global = false
+on = false
+global = false
+[search.algolia]
+enable = false
 
 
 # Site logo
