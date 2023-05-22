@@ -1,0 +1,118 @@
+Id: 8a162702-b043-4108-bb6c-1488751a4a32
+Author: Will BushidoToken
+Created: '2023-05-22'
+MitreID: T1068
+Category: malicious
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create dkrTK.sys binPath=C:\windows\temp\dkrTK.sys type=kernel &&
+    sc.exe start dkrTK.sys
+  Description: "The User Agent tjr.exe, which is protected via a virtual machine,\
+    \ drops the kernel driver to the user temporary directory C:\\%User%\\AppData\\\
+    Local\\Temp\\Ktgn.sys. It then installs the dropped driver with the name ktgn\
+    \ and the start value = System (to start when the system restarts). From our analysis\
+    \ of what occurs when a user interfaces with this driver, we observed that it\
+    \ only uses one of the exposed Device Input and Output Control (IOCTL) code \u2014\
+    \ Kill Process, which is used to kill security agent processes installed on the\
+    \ system."
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://www.trendmicro.com/content/dam/trendmicro/global/en/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver/indicators-blackcat-ransomware-deploys-new-signed-kernel-driver.txt
+- https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
+Acknowledgement:
+  Person: BushidoToken
+  Handle: BushidoToken
+Detection: []
+KnownVulnerableSamples:
+- Filename: dkrTK.sys
+  MD5: a837302307dace2a00d07202b661bce2
+  SHA1: 91568d7a82cc7677f6b13f11bea5c40cf12d281b
+  SHA256: 52d5c35325ce701516f8b04380c9fbdb78ec6bcc13b444f758fdb03d545b0677
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Authentihash:
+    MD5: 233c2815720d7aa90838780dc482ddb9
+    SHA1: 6271a84b349debb9a1bf7a5a164e91ef6cb9f869
+    SHA256: 24395b622d4fd48864a50978ffd2b82fdded5189741a6deea9293cc075cd0c6b
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - rand
+  - srand
+  - RtlInitUnicodeString
+  - RtlGetVersion
+  - KeDelayExecutionThread
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ExSystemTimeToLocalTime
+  - MmGetSystemRoutineAddress
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoGetCurrentProcess
+  - ObReferenceObjectByHandleWithTag
+  - ObfDereferenceObject
+  - ObfDereferenceObjectWithTag
+  - MmIsAddressValid
+  - PsGetProcessExitStatus
+  - PsIsThreadTerminating
+  - PsLookupProcessByProcessId
+  - PsLookupThreadByThreadId
+  - PsGetThreadProcess
+  - PsIsSystemThread
+  - ObOpenObjectByPointerWithTag
+  - KeBugCheckEx
+  - ExAllocatePool
+  - NtQuerySystemInformation
+  - ExFreePoolWithTag
+  - IoAllocateMdl
+  - MmProbeAndLockPages
+  - MmMapLockedPagesSpecifyCache
+  - MmUnlockPages
+  - IoFreeMdl
+  - KeQueryActiveProcessors
+  - KeSetSystemAffinityThread
+  - KeRevertToUserAffinityThread
+  - DbgPrint
+  - KeQueryPerformanceCounter
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=CN, ST=Shandong, L=Zaozhuang, O=Bopsoft, CN=Bopsoft
+      ValidFrom: '2018-03-02 00:00:00'
+      ValidTo: '2018-11-28 23:59:59'
+      Signature: 261c8eec3489c246498e8f65d4f68bd4f1e569760f9653601c877ad5f755bdd0ff729e81ced79aa051ea3ad404a74ba13cfeba87cc44b1960463280c5e44162713038f4d63e5737afe06427b934e403eb31fe76ae672575dc7fc72dd9fb199680d9fc4a8dcb31662b45423e6e738418066d9e14968a0d3e85c3c8e820692d6bcc203e675079a773681d8ddb91b81a808c2f1be43fba6343d82403ea067bbc6a3fe28a67de9a82707dfbbd8e1e06e977676242b32467bd02351843eefe183b603c04af960d6777e2958b7d88d6512190b3af858188be9e9bc3cd1e2fe92adbec1bca5885ab6d021a048f258b55a0ff5b7d55d94db1694840771f54b63862a9cd2
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: 56fe535ce1c79ebca7ed7e536d6a144b518c405e805faaa4e82fef38c804c9ca3ecfdf3a584eb0d4b663c52957fa02059a454d68db2a1bd4343d9f00c35acb9549a56ee1b0c5fc414d414a6fd377c8d7388de419de18f31f1565836d450c53f90a9a2ea55dbf6f32811892196a5500ad631c52067e55d92968ae4a7c189a79886b2323d827382a298776cafbc7b662231fed7a564cdd9c325bf53d0c4618953b2a2368836441d9006d0f1924156872bdc571676eac4cdb90eb51a51a6207d0be6a00473c722fec4f613e7385ce5a0ab7bac01c1375e3223928dd6d1d09469d4fbae8408191c6a4ce94721b01cf2a6e15679589ae7db7b7cdf90a3d75b66b3c25
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, O=thawte, Inc., OU=Certification Services Division, OU=(c) 2006
+        thawte, Inc. , For authorized use only, CN=thawte Primary Root CA
+      ValidFrom: '2011-02-22 19:31:57'
+      ValidTo: '2021-02-22 19:41:57'
+      Signature: 2dcc71b5e8ba94ff5ee64467007b6afc412c3ee70e41855ab12a932ba95b89f2f72b499c8003f297b8e760a80ed7fd5de545467594f4ed1c9de166228b61fb29f2c6a8bdf387c98f7f47e1c058b64a1aa2e7f718606969e083069e26c775c40c0d79da746b52b9fae8ea3359b9bb18dd291a14dfd36a37277a9da0dacffffc22c4faf009ff33e93e17ba1cc742cfce2743d30c0c5581303db96060ce02ece19ee81ddc852ce0a18d966d95ac17a4713ea16741b6281d2ce3b615e5b7e5a2f6256d86e320acf9f8314f8e629b9833376d6af735523e90feb03b5fc5b852a9e06ea0479a279e97aea24a9e531939ec357ec659de3ae0aaf533f06abda0821812dea18c4570ca2bd62e959145995a5c240049bd23b30ceca43df5b9e1d1b1825a38eea3fba1ab483a8c5dffa065223fd3d3fe4990db1446a3852e8a554b09ab38b2ab63a008d1fdad48e273d812bcc26ca516fad09ac05e38383a2b718e553aac42197a1f0d4220e7ab5d8c6880524ca1c0d488d02321fb901309007b4937afa9df486022abf4f6c2363bf8513c34bbc586e43ae19f4b90fe5461024b159c34176aa94b8d4cb69d2326c83af1d6b805cdda1d6240183a2f1b41cd3a993a0aa9d1d77eb8c4aff7b8c980105ed55df6ce7a9a02c50f6381efb564e9fc5bd8d2619a68c37cf9c78df91e87d5fa2cf816ae9dab068fc86dc741cda14e84e3dac26ebcfb
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    Signer:
+    - SerialNumber: 38de06b8be15187f107e04f8b1138977
+      Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
+Tags:
+- dkrTK.sys
