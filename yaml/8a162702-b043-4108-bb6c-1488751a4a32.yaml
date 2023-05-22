@@ -7,14 +7,14 @@ Verified: 'TRUE'
 Commands:
   Command: sc.exe create dkrTK.sys binPath=C:\windows\temp\dkrTK.sys type=kernel &&
     sc.exe start dkrTK.sys
-  Description: "\u201CThe User Agent tjr.exe, which is protected via a virtual machine,\
+  Description: "The User Agent tjr.exe, which is protected via a virtual machine,\
     \ drops the kernel driver to the user temporary directory C:\\%User%\\AppData\\\
     Local\\Temp\\Ktgn.sys. It then installs the dropped driver with the name ktgn\
     \ and the start value = System (to start when the system restarts). From our analysis\
     \ of what occurs when a user interfaces with this driver, we observed that it\
     \ only uses one of the exposed Device Input and Output Control (IOCTL) code \u2014\
     \ Kill Process, which is used to kill security agent processes installed on the\
-    \ system.\u201D"
+    \ system."
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
