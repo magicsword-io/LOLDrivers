@@ -181,7 +181,7 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
                 sha256='not available '
             else:
                 sha256='[' + driver['KnownVulnerableSamples'][0]['SHA256'] + '](drivers/' + driver["Id"]+ '/)'
-            writer.writerow([link, sha256, driver['Created']])
+            writer.writerow([link, sha256, driver['Category'].capitalize(), driver['Created']])
     messages.append("site_gen.py wrote drivers table to: {0}".format(OUTPUT_DIR + '/content/drivers_table.csv'))
 
     # write top 5 publishers
