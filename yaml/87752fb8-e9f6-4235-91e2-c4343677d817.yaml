@@ -7,7 +7,7 @@ Verified: 'TRUE'
 Commands:
   Command: sc.exe create mimidrv.sys binPath=C:\windows\temp\mimidrv.sys type=kernel
     && sc.exe start mimidrv.sys
-  Description: Malicious driver found in https://github.com/hfiref0x/KDU.
+  Description: Mimidrv is a signed Windows Driver Model WDM kernel mode software driver meant to be used with the standard Mimikatz executable.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
