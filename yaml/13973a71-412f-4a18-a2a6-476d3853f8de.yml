@@ -4,8 +4,8 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create AMDRyzenMasterDriver.sys binPath=C:\windows\temp\AMDRyzenMasterDriver.sys
-  type=kernel && sc.exe start AMDRyzenMasterDriver.sys'
+Commands: sc.exe create AMDRyzenMasterDriver.sys binPath=C:\windows\temp\AMDRyzenMasterDriver.sys
+  type=kernel && sc.exe start AMDRyzenMasterDriver.sys
 Description: []
 Usecase: Elevate privileges
 Privileges: kernel
@@ -719,5 +719,122 @@ KnownVulnerableSamples:
     - SerialNumber: 1885b7e188d8fafd38a43d48967d7488
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
+- Filename: AMDRyzenMasterDriver.sys
+  MD5: 067166e788da08b77219430484563388
+  SHA1: cec887f20ab468caa1c99fcbe7fbdfab25fadf39
+  SHA256: 77955af8a8bcea8998f4046c2f8534f6fb1959c71de049ca2f4298ba47d8f23a
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Advanced Micro Devices
+  Description: AMD Ryzen Master Service Driver
+  Product: AMD Ryzen Master Service Driver
+  ProductVersion: 2.0.0.0
+  FileVersion: 2.0.0.0
+  MachineType: AMD64
+  OriginalFilename: AMDRyzenMasterDriver.sys
+  Authentihash:
+    MD5: 45f319f266b7bb1892bbaa157cebb6bc
+    SHA1: e37c6aa2630fa3ccb3ee7d219a7332cce95fa11f
+    SHA256: a076e66065161bdca4680f0f3a3d0767a25c344fa25cc64473f4ef4f926898ef
+  InternalName: AMDRyzenMasterDriver.sys
+  Copyright: "Copyright \xA9 2022 AMD, Inc."
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - KeLeaveCriticalRegion
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoGetCurrentProcess
+  - PsGetCurrentProcessId
+  - PsGetProcessImageFileName
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - KeEnterCriticalRegion
+  - ZwClose
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - ObOpenObjectByPointer
+  - RtlGetDaclSecurityDescriptor
+  - KeDelayExecutionThread
+  - RtlGetOwnerSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - _wcsnicmp
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - ZwOpenKey
+  - ZwSetValueKey
+  - ZwQueryValueKey
+  - ZwCreateKey
+  - RtlFreeUnicodeString
+  - RtlGetVersion
+  - DbgPrint
+  - MmGetSystemRoutineAddress
+  - RtlCopyUnicodeString
+  - DbgPrintEx
+  - RtlInitUnicodeString
+  - strncmp
+  - RtlGetGroupSecurityDescriptor
+  - strcpy_s
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  - WdfVersionBind
+  - WdfVersionUnbind
+  - WdfVersionUnbindClass
+  - WdfVersionBindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=California, L=Santa Clara, O=Advanced Micro Devices Inc.,
+        CN=Advanced Micro Devices Inc.
+      ValidFrom: '2021-05-11 00:00:00'
+      ValidTo: '2024-05-10 23:59:59'
+      Signature: 8444e268ff381c9148985f408e5cc1453a560c9dd94d2a6cfa01dd7f2adc8af633053d2c79027db4f185f477b0d5db8b362b37dbd0d258823831ace7058baf3feb80a9eb2de9dd886bcf390fae9b586fc833e63db5c6a07019f35a9fce6899502852737b32d25ea7832c3786df0642d21622e56c0b0171e96f9520d07f73950376ff555bcf9c8a55bf4f86c088b58e2cb625a0ef4680ed7281f09a40c7be9f69cba77a6967030e39b2cfa46692698ced9e5347dd7056b476545c3442f934cb2c30cb986afabd29a9a9e2eb28c5bd6ee47dabf5ef587f850ea49b124eb868aac68de949616d08f875192b93388549c7327a3ef085e287d5a743810c151b250c64
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Code Signing CA
+      ValidFrom: '2018-11-02 00:00:00'
+      ValidTo: '2030-12-31 23:59:59'
+      Signature: 4d6350ed47344a61a4dbde6a2a8c9bf100001e1d627b3ad732c2f6b3e063b3fb6100889a1b6d1007044fbeb8ea897822eb0f46ecf3465e40468912f40b775a9c2a413afcd6f4ebe7f7159533c3a18328b7de2fe494f78533832d4a4048bf9ac24f4ab18f24f4b38137d3b764b0a6236a596852425fff04ebe174657908f5a993de6b71409996ba78f1b9c8e2c30816b1ab635ac815806d745e4a757ea5b8c36cb5cfdf4a79875cc7404d6335f630d3cfb50a0e0b047fa04baebba3a5d08400933e535d34a50035696cbe9f2025100d19fb509061be398f7a8e4df69f0e1efe075112668326194895ce4ac9c17ff33a059bf96fdf887fc0239ed21e437a4531c19c4da9f059b25919e86a8d290402777c4b4bcd70be3ab2555a783ebcbb6f0310257715348af936cc4392e4ba4ff1629328255729fb5119c7a125406a8457c6b29db1bc1c0ada7c677e7d2ee9284c187ec47b3141719a4b29ec0b3d5750d2caddfd9e0551e54478dd01deb175980d5424fdf04ee3e2f883bd72bacb3d3aeef05e1792686dc861f9a6f12a0a0ba5b9f49eee983205859eebf98329d3c62c7dbd3a772e8b3742a06a82ed3b4aaa9410a4e10df817c5b65a79331892e3b575f8a1e98e0a251ee41ef19f5a8723ff9fa4519efb398011cddbb5c4a7a8806fe553d4e0e3a2c2d25b1afa32262d6a57701c3ca4582ea3f35b4b07dc3259f387a71a6d58
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+    - Subject: C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust
+        RSA Certification Authority
+      ValidFrom: '2015-07-22 21:03:49'
+      ValidTo: '2025-07-22 21:03:49'
+      Signature: 6b22933c3d395471646b0ef2e43c3011c5204a4b860f92f1ff33793ad9e498a70e40a022807e61b2e0a719cf2695312a65d46a4f3186eac0c62ec5648c3d4859cd0b2f743d9426131042d49798275e3c76d278691d1a64e7057275e0eb6640439f8f0c46ff9760a6c867ad10089b62a6e9be3a8ad3074d9f729325bc0611e02c90383e671cfd19d79e90ce3dc2e0e761acc0e504f51e99540c910d01567137ae27d49e4322a5c927cd4de571123924a5415687ffbc55140f25ca89eec797e5d213ff3d7e1aa08f3fc82cd7a370d0c760c0fcd83e51e797c63e3bedcf78be8acae3c4f2a7a7ed9eae08028fa052db721ed53bc34d9f8efa9b70c7f8e3bf6c3f929be4373eec6a8c29f9c1a2bf8b3e1a6966fb1c634f2601c902c43ed2ffc343a81bfd99fad4bca5b9e2932f3b01c5d1f43a2f68c3e064b75a955e46cc078369bb3c05925673357345984e7cd812a5b742e9a263f642601870d13b6f31c087c7e671e1f34616e9f5b872b3e96d1f622649a3498bdd68c78b6856f7defcfa8724b80381178fe5f1676a1daed374f78ca55db30b8e422996ce49c4777e667c01171a6c1424c3b0177705d81a40b7866bd8e47b40ac7edf4e6f24f92080828c33e7e5fa29d89dda8b705d2bc91d824c0b67cb84419ee7067e1183442d8a19eef47f9add791c37191e9f3f8c29ba0d5c1086376c48cd455dcd70bcbcd14d5dd8c5b876
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping
+        CA
+      ValidFrom: '2022-03-23 00:00:00'
+      ValidTo: '2037-03-22 23:59:59'
+      Signature: 7d598ec093b66f98a94422017e66d6d82142e1b0182e104d13cf3053cebf18fbc7505de24b29fb708a0daa2969fc69c1cf1d07e93e60c8d80be55c5bd76d87fa842025343167cdb612966fc4504c621d0c0882a816bda956cf15738d012225ce95693f4777fb727414d7ffab4f8a2c7aab85cd435fed60b6aa4f91669e2c9ee08aace5fd8cbc6426876c92bd9d7cd0700a7cefa8bc754fba5af7a910b25de9ff285489f0d58a717665daccf072a323fac0278244ae99271bab241e26c1b7de2aebf69eb1799981a35686ab0a45c9dfc48da0e798fbfba69d72afc4c7c1c16a71d9c6138009c4b69fcd878724bb4fa349b9776691f1729ce94b0252a7377e9353ac3b1d08490f94cd397addff256399272c3d3f6ba7f166c341cd4fb6409b212140d0b71324cddc1d783ae49eade5347192d7266be43873aba6014fbd3f3b78ad4cadfbc4957bed0a5f33398741787a38e99ce1dd23fd1d28d3c7f9e8f1985ffb2bd87ef2469d752c1e272c26db6f157b1e198b36b893d4e6f2179959ca70f037bf9800df20164f27fb606716a166badd55c03a2986b098a02bed9541b73ad5159831b462090f0abd81d913febfa4d1f357d9bc04fa82de32df0489f000cd5dc2f9d0237f000be4760226d9f0657642a6298709472be67f1aa4850ffc9896f655542b1f80fac0f20e2be5d6fba92f44154ae7130e1ddb37381aa12bf6edd67cfc
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2022 , 2
+      ValidFrom: '2022-03-29 00:00:00'
+      ValidTo: '2033-03-14 23:59:59'
+      Signature: 0d2d2374a6d1f5f8ea4b993f01e4f60ce4af169dd9b38c9782299c436f012dab38b57011bf84198b3f5de5864fbe933ade2a395a394ed88459a5bc1b98aae86cefd1486919385bcf89391d7070d94edf23226cd5dff659cba1c2ea4c76caa1dca12b96b89b55a91a6b7dd1f502094f82d6a57388c49880dfee4995b7b3ccc5a7ee0ee1ef1e388a9fef11c9314a58b6df387ccbfa5cf7e453bf6e0a7c7ed7de98d52965890fa29cc065f4012265c7ea5e74a65b3592507cf417a687644f3e46891663206bcbf27bd035e34a7048a9b6e71d60bd04221525700672a9443b694711d3eee9c7a03e4f10b93036e4f3aa6909a88b7e64a2659411fb6e32f1f5bb38adcdc09311d532784a4b372a4cf35cdcb685c0bb70305578d698fe546d7f71a9481a78dd46772e1b7ac0338af84a288c12a873cf2df9d323f29e19e00d9428a0ebdb1a51a095828e286ba4ce9d76dea973aa486a5943ae5feaf80f06429ddf066896fe2aa0745b6366de6b2cb878aa4d706df02cf107157e35b4e6b50ca299a5d7156b350e85d6e02ccce00c24b87c520b1e997cefc8c8c58c5869afab3de1cfcc7d15ae14bf8a71dfca97b1d847ea1c85e0454e121c142958cc6fd37fcbbec10e4a6f209caed973325908e72d92a11a11fe3298a65d2b97e08bd39ccc6db50dae47633847175b6f13da6a106e1f49b7445bb4080a875a59047611a1a77702131c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    Signer:
+    - SerialNumber: 535091e6cab13af393b51ead0825f627
+      Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Code Signing CA
 Tags:
 - AMDRyzenMasterDriver.sys
