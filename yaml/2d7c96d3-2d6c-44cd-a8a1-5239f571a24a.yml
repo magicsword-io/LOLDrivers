@@ -4,8 +4,8 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: sc.exe create HW.sys binPath=C:\windows\temp\HW.sys type=kernel && sc.exe
-  start HW.sys
+Commands: 'sc.exe create HW.sys binPath=C:\windows\temp\HW.sys type=kernel
+  && sc.exe start HW.sys'
 Description: []
 Usecase: Elevate privileges
 Privileges: kernel
@@ -89,7 +89,7 @@ KnownVulnerableSamples:
   - ExAllocatePool
   - HalGetBusDataByOffset
   Signatures:
-  - CertificatesInfo: ''
+  - CertificatesInfo: []
     SignerInfo: ''
     Certificates:
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Timestamping CA , G2
