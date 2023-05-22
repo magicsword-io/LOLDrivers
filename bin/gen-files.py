@@ -32,7 +32,7 @@ def gen_names_list():
     """
     names_list = []
     for file in yield_next_rule_file_path(path_to_yml):
-        driver_name = get_yaml_part(file_path=file, part_name="Name")
+        driver_name = get_yaml_part(file_path=file, part_name="Tags")[0]
         if driver_name:
             names_list.append(driver_name)
     

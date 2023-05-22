@@ -1,0 +1,113 @@
+Id: f654ad84-c61d-477c-a0b2-d153b927dfcc
+Author: Michael Haag
+Created: '2023-05-20'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create EIO.sys binPath=C:\windows\temp\EIO.sys type=kernel && sc.exe
+    start EIO.sys
+  Description: This is a vulnerable driver per Microsoft.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: EIO.sys
+  MD5: be9eeea2a8cac5f6cd92c97f234e2fe1
+  SHA1: 585df373a9c56072ab6074afee8f1ec3778d70f8
+  SHA256: b17507a3246020fa0052a172485d7b3567e0161747927f2edf27c40e310852e0
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ASUSTeK Computer Inc.
+  Description: ASUS VGA Kernel Mode Driver
+  Product: ASUS VGA Kernel Mode Driver
+  ProductVersion: '1.96'
+  FileVersion: '1.96'
+  MachineType: AMD64
+  OriginalFilename: EIO.sys
+  Authentihash:
+    MD5: ff6c5b1f92372186d4f9879e00e42fcf
+    SHA1: 200be5a696990ee97b4c3176234cde46c3ebc2ce
+    SHA256: 72b36c64f0b349d7816c8e5e2d1a7f59807de0c87d3f071a04dbc56bec9c00db
+  InternalName: EIO.sys
+  Copyright: Copyright 2007 ASUSTeK Computer Inc.
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - ExAllocatePoolWithTag
+  - IofCallDriver
+  - IoDeleteSymbolicLink
+  - KeInitializeMutex
+  - IoAttachDeviceToDeviceStack
+  - IoDeleteDevice
+  - IoDetachDevice
+  - MmUnmapIoSpace
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - KeBugCheckEx
+  - IofCompleteRequest
+  - RtlInitUnicodeString
+  - MmMapIoSpace
+  - KeStallExecutionProcessor
+  - HalTranslateBusAddress
+  Signatures: {}
+- Filename: EIO.sys
+  MD5: 343ada10d948db29251f2d9c809af204
+  SHA1: 3f17ff83dc8a5f875fb1b3a5d3b9fcbe407a99f0
+  SHA256: cf69704755ec2643dfd245ae1d4e15d77f306aeb1a576ffa159453de1a7345cb
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ASUSTeK Computer Inc.
+  Description: ASUS VGA Kernel Mode Driver
+  Product: ASUS VGA Kernel Mode Driver
+  ProductVersion: '1.97'
+  FileVersion: '1.97'
+  MachineType: AMD64
+  OriginalFilename: EIO.sys
+  Authentihash:
+    MD5: 5af6b25eec77fec510803a229944c8ad
+    SHA1: ed54e23998978f8124bd1f97c265f708ddba1de0
+    SHA256: d4e7335a177e47688d68ad89940c272f82728c882623f1630e7fd2e03e16f003
+  InternalName: EIO.sys
+  Copyright: Copyright 2004 ASUSTeK Computer Inc.
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - KeInitializeMutex
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IoDetachDevice
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - PoStartNextPowerIrp
+  - IofCompleteRequest
+  - ExFreePoolWithTag
+  - PoCallDriver
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - IofCallDriver
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - KeBugCheckEx
+  - IoDeleteSymbolicLink
+  - IoAttachDeviceToDeviceStack
+  - ExAllocatePoolWithTag
+  - KeStallExecutionProcessor
+  - HalTranslateBusAddress
+  Signatures: {}
+Tags:
+- EIO.sys

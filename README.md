@@ -46,9 +46,19 @@ For more detailed instructions, please refer to the [CONTRIBUTING.md](CONTRIBUTI
 
 ## 🚨 Sigma and Sysmon Detection
 
-LOLDrivers includes Sigma and Sysmon detection rules to help you identify potential threats. Check out the [sigma](detections/sigma/) and [sysmon](detections/sysmon/) files under the detection folder for more information.
+LOLDrivers provides comprehensive Sigma and Sysmon detection rules to help you effectively detect potential threats. To explore these rules in detail, navigate to the [sigma](detections/sigma/) and [sysmon](detections/sysmon/) directories under the detection folder.
 
 Happy hunting! 🕵️‍♂️
+
+## 🔎 Windows Folder Scanning
+
+The community has also created a PowerShell LOLDriver scanner courtesy of [@Oddvarmoe](https://twitter.com/Oddvarmoe), [@M_haggis](https://twitter.com/M_haggis), and [IISResetMe](https://twitter.com/IISResetMe), that can help you identify potentially malicious drivers. The script, available [here](https://gist.github.com/IISResetMe/1a8353ae57710868b31b0e8d41683b95), allows you to scan a specified Windows folder for any suspicious files. We recommend running the script on directories such as:
+
+```
+C:\WINDOWS\inf
+C:\WINDOWS\System32\drivers
+C:\WINDOWS\System32\DriverStore\FileRepository
+```
 
 ## 🏗️ Building and Testing Locally
 
