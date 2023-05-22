@@ -1,0 +1,58 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- CVE-2020-10713
+- CVE-2020-14308
+- CVE-2020-14309
+- CVE-2020-14310
+- CVE-2020-14311
+- CVE-2020-15705
+- CVE-2020-15706
+- CVE-2020-15707
+Category: Revoked Bootloaders
+Commands:
+  Command: ''
+  Description: This was provided by Intel Corporation and revoked Jul-20
+  OperatingSystem: 64-bit
+  Privileges: ''
+  Usecase:
+  - Persistence
+  - Defense Evasion
+Created: ''
+Detection:
+- type: ''
+  value: ''
+Id: d08217b3-72f1-4d53-b76a-8808128c5fe8
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256:
+    - 5D1E9ACBBB4A7D024B6852DF025970E2CED66FF622EE019CD0ED7FD841CCAD02
+  Company: ''
+  Copyright: ''
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
+  Imports: ''
+  InternalName: ''
+  MD5: ''
+  MachineType: 64-bit
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: ''
+  SHA256: 5875DB0835E08A9189F23833B21774FDD1C4C3BD4C5D3459471A49B85CFFD1E1
+  Signature: ''
+MitreID: T1542
+Resources:
+- https://uefi.org/revocationlistfile
+Tags:
+- ''
+Verified: 'TRUE'

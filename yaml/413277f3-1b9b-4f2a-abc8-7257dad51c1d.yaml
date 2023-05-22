@@ -1,0 +1,58 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- CVE-2020-14372
+- CVE-2020-25632
+- CVE-2020-25647
+- CVE-2020-27749
+- CVE-2020-27779
+- CVE-2021-3418
+- CVE-2021-20225
+- CVE-2021-20233
+Category: Revoked Bootloaders
+Commands:
+  Command: ''
+  Description: This was provided by Red Hat, Inc. and revoked Apr-21
+  OperatingSystem: 64-bit
+  Privileges: ''
+  Usecase:
+  - Persistence
+  - Defense Evasion
+Created: ''
+Detection:
+- type: ''
+  value: ''
+Id: 413277f3-1b9b-4f2a-abc8-7257dad51c1d
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256:
+    - 4F0214FCE4FA8897D0C80A46D6DAB4124726D136FC2492EFD01BFEDFA3887A9C
+  Company: ''
+  Copyright: ''
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: centos-8.3-shim-20200726-shim64-bit.efi
+  Imports: ''
+  InternalName: ''
+  MD5: ''
+  MachineType: 64-bit
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: ''
+  SHA256: D662EF94388DB203CE52DF9902D77E9E5EFB25A202B5B096351D604FD3E63080
+  Signature: ''
+MitreID: T1542
+Resources:
+- https://uefi.org/revocationlistfile
+Tags:
+- centos-8.3-shim-20200726-shim64-bit.efi
+Verified: 'TRUE'

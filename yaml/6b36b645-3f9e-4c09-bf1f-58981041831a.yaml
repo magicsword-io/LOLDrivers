@@ -1,0 +1,51 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- Black Lotus Microsoft Windows 8.1
+Category: Revoked Bootloaders
+Commands:
+  Command: ''
+  Description: This was provided by Microsoft and revoked May-23
+  OperatingSystem: 32-bit ARM
+  Privileges: ''
+  Usecase:
+  - Persistence
+  - Defense Evasion
+Created: ''
+Detection:
+- type: ''
+  value: ''
+Id: 6b36b645-3f9e-4c09-bf1f-58981041831a
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256:
+    - 731A31CC36C5A7D7445F9644CE4E850E99CC7962EF6E2DE98721447A1438D805
+  Company: ''
+  Copyright: ''
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: bootarm.efi
+  Imports: ''
+  InternalName: ''
+  MD5: ''
+  MachineType: 32-bit ARM
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: ''
+  SHA256: AC390194D59EC41A1A01BD96417CFE79E833CD6BBCA820B5FCB35CC3FE99653B
+  Signature: ''
+MitreID: T1542
+Resources:
+- https://uefi.org/revocationlistfile
+Tags:
+- bootarm.efi
+Verified: 'TRUE'

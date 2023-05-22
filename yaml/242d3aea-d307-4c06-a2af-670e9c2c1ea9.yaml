@@ -1,0 +1,58 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- CVE-2020-14372
+- CVE-2020-25632
+- CVE-2020-25647
+- CVE-2020-27749
+- CVE-2020-27779
+- CVE-2021-3418
+- CVE-2021-20225
+- CVE-2021-20233
+Category: Revoked Bootloaders
+Commands:
+  Command: ''
+  Description: This was provided by Red Hat, Inc. and revoked Apr-21
+  OperatingSystem: 32-bit
+  Privileges: ''
+  Usecase:
+  - Persistence
+  - Defense Evasion
+Created: ''
+Detection:
+- type: ''
+  value: ''
+Id: 242d3aea-d307-4c06-a2af-670e9c2c1ea9
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256:
+    - 2B7A7A4DAFC35E49D03CBE7118E6BA4582401E1776B9C18A2597725B05A605F1
+  Company: ''
+  Copyright: ''
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: rhel-7.9-20200909-shimia32.efi
+  Imports: ''
+  InternalName: ''
+  MD5: ''
+  MachineType: 32-bit
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: ''
+  SHA256: FE924700AC79DC4689ADD5F7C6761E0D60E665A65F9572B43915010881B0BFBC
+  Signature: ''
+MitreID: T1542
+Resources:
+- https://uefi.org/revocationlistfile
+Tags:
+- rhel-7.9-20200909-shimia32.efi
+Verified: 'TRUE'

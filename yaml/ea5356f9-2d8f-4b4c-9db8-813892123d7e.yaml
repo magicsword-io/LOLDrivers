@@ -1,0 +1,58 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- CVE-2020-14372
+- CVE-2020-25632
+- CVE-2020-25647
+- CVE-2020-27749
+- CVE-2020-27779
+- CVE-2021-3418
+- CVE-2021-20225
+- CVE-2021-20233
+Category: Revoked Bootloaders
+Commands:
+  Command: ''
+  Description: This was provided by Red Hat, Inc. and revoked Apr-21
+  OperatingSystem: 32-bit
+  Privileges: ''
+  Usecase:
+  - Persistence
+  - Defense Evasion
+Created: ''
+Detection:
+- type: ''
+  value: ''
+Id: ea5356f9-2d8f-4b4c-9db8-813892123d7e
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256:
+    - F5D396FC5AD8B7EAC22652129D56449DC30B6965CE3E41F5D76590E3B1ECFE62
+  Company: ''
+  Copyright: ''
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: cent-8.3-20200730-shimia32.efi
+  Imports: ''
+  InternalName: ''
+  MD5: ''
+  MachineType: 32-bit
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: ''
+  SHA256: 5E9D231F7BC2F98E9CBFBE65DA29F7B663A1E84FEE090250BD0976D65DB3FC0A
+  Signature: ''
+MitreID: T1542
+Resources:
+- https://uefi.org/revocationlistfile
+Tags:
+- cent-8.3-20200730-shimia32.efi
+Verified: 'TRUE'

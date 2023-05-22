@@ -1,0 +1,59 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- CVE-2020-10713
+- CVE-2020-14308
+- CVE-2020-14309
+- CVE-2020-14310
+- CVE-2020-14311
+- CVE-2020-15705
+- CVE-2020-15706
+- CVE-2020-15707
+Category: Revoked Bootloaders
+Commands:
+  Command: ''
+  Description: This was provided by Canonical and revoked Jul-20
+  OperatingSystem: 64-bit
+  Privileges: ''
+  Usecase:
+  - Persistence
+  - Defense Evasion
+Created: ''
+Detection:
+- type: ''
+  value: ''
+Id: 33fc3575-e87e-4080-80f5-67198d7ae724
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: cba477486346b0fad728f78e3542e00e
+    SHA1: cecc72f2d1a431149d9bc47f8e21b655e980e9f2
+    SHA256: 804e354c6368bb27a90fae8e498a57052b293418259a019c4f53a2007254490f
+  Company: ''
+  Copyright: ''
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: grubnetx64.efi
+  Imports: []
+  InternalName: ''
+  MD5: f383b5c1f0cb8806742c8df990bc7803
+  MachineType: AMD64
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: c1f26b124fcfb2c73ec9c9cfafe3fcfbc269d4e7
+  SHA256: 8e8addb29426d845a0101c2c1f26c2e7fe8c78128ab04f16cfcb4e06461b0101
+  Signature: ''
+  ImportedFunctions: ''
+  Signatures: {}
+MitreID: T1542
+Resources:
+- https://uefi.org/revocationlistfile
+Tags:
+- grubnetx64.efi
+Verified: 'TRUE'
