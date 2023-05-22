@@ -1,0 +1,56 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- CVE-2020-10713
+- CVE-2020-14308
+- CVE-2020-14309
+- CVE-2020-14310
+- CVE-2020-14311
+- CVE-2020-15705
+- CVE-2020-15706
+- CVE-2020-15707
+Category: Revoked Bootloaders
+Commands:
+  Command: ''
+  Description: This was provided by SUSE Linux and revoked Jul-20
+  OperatingSystem: 64-bit
+  Privileges: ''
+  Usecase: Persistence
+Created: '2023-05-22'
+Detection:
+- type: ''
+  value: ''
+Id: add3eacb-c3b2-4adc-ba76-49ddb1af2ae3
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256:
+    - EE83A566496109A74F6AC6E410DF00BB29A290E0021516AE3B8A23288E7E2E72
+  Company: ''
+  Copyright: ''
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
+  Imports: ''
+  InternalName: ''
+  MD5: ''
+  MachineType: 64-bit
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: ''
+  SHA256: FCCC2A01967926437DC0F5F49C6ACEED4DC67EBD7E99169023B5F89A7264CB98
+  Signature: ''
+MitreID: T1542
+Resources:
+- https://uefi.org/revocationlistfile
+Tags:
+- ''
+Verified: 'TRUE'

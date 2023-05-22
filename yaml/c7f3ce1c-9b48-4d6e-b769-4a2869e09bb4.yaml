@@ -1,0 +1,49 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- Black Lotus Microsoft Windows 8.1
+Category: Revoked Bootloaders
+Commands:
+  Command: ''
+  Description: This was provided by Microsoft and revoked May-23
+  OperatingSystem: 32-bit
+  Privileges: ''
+  Usecase: Persistence
+Created: '2023-05-22'
+Detection:
+- type: ''
+  value: ''
+Id: c7f3ce1c-9b48-4d6e-b769-4a2869e09bb4
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256:
+    - F02174BB75BC774DF2D7A63A0B0F7A040C9907399F97F642743DA97DF30104C7
+  Company: ''
+  Copyright: ''
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: bootmgfw.efi
+  Imports: ''
+  InternalName: ''
+  MD5: ''
+  MachineType: 32-bit
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: ''
+  SHA256: 642296E7342D651FE2FE547C1F08329777CCD44DC4F11C75FEC1F037A9B4B9B4
+  Signature: ''
+MitreID: T1542
+Resources:
+- https://uefi.org/revocationlistfile
+Tags:
+- bootmgfw.efi
+Verified: 'TRUE'

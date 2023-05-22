@@ -1,0 +1,49 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- Black Lotus Microsoft Windows 10 version 1507
+Category: Revoked Bootloaders
+Commands:
+  Command: ''
+  Description: This was provided by Microsoft and revoked May-23
+  OperatingSystem: 32-bit ARM
+  Privileges: ''
+  Usecase: Persistence
+Created: '2023-05-22'
+Detection:
+- type: ''
+  value: ''
+Id: 0c015961-2a7d-4fc2-99ca-5cfccf2de27f
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256:
+    - 4A9B1C438BC8F114BFAA82F5D533DA31CC610C276711422C74A167B8AEED7C82
+  Company: ''
+  Copyright: ''
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: 'bootarm.efi '
+  Imports: ''
+  InternalName: ''
+  MD5: ''
+  MachineType: 32-bit ARM
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: ''
+  SHA256: F50D0AAA4875B0B609D0F796AACB77D582E0246D3FC544F76ADB73B67A156626
+  Signature: ''
+MitreID: T1542
+Resources:
+- https://uefi.org/revocationlistfile
+Tags:
+- 'bootarm.efi '
+Verified: 'TRUE'

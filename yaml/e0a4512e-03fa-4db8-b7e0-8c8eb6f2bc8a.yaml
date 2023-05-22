@@ -1,0 +1,56 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- CVE-2020-10713
+- CVE-2020-14308
+- CVE-2020-14309
+- CVE-2020-14310
+- CVE-2020-14311
+- CVE-2020-15705
+- CVE-2020-15706
+- CVE-2020-15707
+Category: Revoked Bootloaders
+Commands:
+  Command: ''
+  Description: This was provided by Oracle Corporation and revoked Jul-20
+  OperatingSystem: 64-bit
+  Privileges: ''
+  Usecase: Persistence
+Created: '2023-05-22'
+Detection:
+- type: ''
+  value: ''
+Id: e0a4512e-03fa-4db8-b7e0-8c8eb6f2bc8a
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256:
+    - 37A480374DAF6202CE790C318A2BB8AA3797311261160A8E30558B7DEA78C7A6
+  Company: ''
+  Copyright: ''
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
+  Imports: ''
+  InternalName: ''
+  MD5: ''
+  MachineType: 64-bit
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: ''
+  SHA256: 7C2FDA323F09B9BE6269BA979A620438413EBA4A93B2BA34F9B39998268AD9CD
+  Signature: ''
+MitreID: T1542
+Resources:
+- https://uefi.org/revocationlistfile
+Tags:
+- ''
+Verified: 'TRUE'

@@ -1,0 +1,76 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- CVE-2020-10713
+- CVE-2020-14308
+- CVE-2020-14309
+- CVE-2020-14310
+- CVE-2020-14311
+- CVE-2020-15705
+- CVE-2020-15706
+- CVE-2020-15707
+Category: Revoked Bootloaders
+Commands:
+  Command: ''
+  Description: This was provided by Miray Software AG and revoked Jul-20
+  OperatingSystem: 64-bit
+  Privileges: ''
+  Usecase: Persistence
+Created: '2023-05-22'
+Detection:
+- type: ''
+  value: ''
+Id: 5efb08ce-213c-49be-8c2b-0ae849f64b3c
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: 9e12eb37ae8b46c4010ec3e1b7201f21
+    SHA1: 90a6b60c5051a3b00d779c03ac1e07f5df376347
+    SHA256: f277af4f9bdc918ae89fa35cc1b34e34984c04ae9765322c3cb049574d36509c
+  Company: ''
+  Copyright: ''
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: bootx64.efi
+  Imports: []
+  InternalName: ''
+  MD5: 077432d8b1ae0ceea719297360357320
+  MachineType: AMD64
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: d537e7c393d18329197e079601678b9b476247d3
+  SHA256: 4e371dd0448f1de869ee087b59ff88d11865463715272bcc6c29b0d5e21dbd82
+  Signature: ''
+  ImportedFunctions: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows UEFI Driver Publisher
+      ValidFrom: '2017-08-11 20:20:00'
+      ValidTo: '2018-08-11 20:20:00'
+      Signature: 47f27d2f6c0691c8e54b4403f9ec6c6b4423a43467cca7e8cf8afe60457f3b5703cde9d840ac3dd35567d791af1d1146376ba1fba9a8a502b5c9601232f24349ca5c324d1806150540cc5823d7dd777b3166268a26734c21b32862e300c8ca42856ec161633c1a076f4213c4c2a63e2ffd0ee16a301ae0c6dba732bc500a5986742520022ce33746f96c4ea8641b2a68a902872a41a8e6701e96158ab91c54c6695bc736fa047ec57b40d732abeb61e34414454e6702ef7bc5518a0d77ab42ed5efc23b01683b5c3c95c4aeb564b6f76cdae4d2e33ac59fca4cfdeb4c215549e1f43b64fd3eb9ba35171be9dab9375a1a94107dd4f95bbf88e9c239136619e20
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Corporation UEFI CA 2011
+      ValidFrom: '2011-06-27 21:22:45'
+      ValidTo: '2026-06-27 21:32:45'
+      Signature: 350842ff30cccef7760cad1068583529463276277cef124127421b4aaa6d813848591355f3e95834a6160b82aa5dad82da808341068fb41df203b9f31a5d1bf15090f9b3558442281c20bdb2ae5114c5c0ac9795211c90db0ffc779e95739188cabdbd52b905500ddf579ea061ed0de56d25d9400f1740c8cea34ac24daf9a121d08548fbdc7bcb92b3d492b1f32fc6a21694f9bc87e4234fc3606178b8f2040c0b39a257527cdc903a3f65dd1e736547ab950b5d312d107bfbb74dfdc1e8f80d5ed18f42f14166b2fde668cb023e5c784d8edeac13382ad564b182df1689507cdcff072f0aebbdd8685982c214c332bf00f4af06887b592553275a16a826a3ca32511a4edadd704aecbd84059a084d1954c6291221a741d8c3d470e44a6e4b09b3435b1fab653a82c81eca40571c89db8bae81b4466e447540e8e567fb39f1698b286d0683e9023b52f5e8f50858dc68d825f41a1f42e0de099d26c75e4b669b52186fa07d1f6e24dd1daad2c77531e253237c76c52729586b0f135616a19f5b23b815056a6322dfea289f94286271855a182ca5a9bf830985414a64796252fc826e441941a5c023fe596e3855b3c3e3fbb47167255e22522b1d97be703062aa3f71e9046c3000dd61989e30e352762037115a6efd027a0a0593760f83894b8e07870f8ba4c868794f6e0ae0245ee65c2b6a37e69167507929bf5a6bc598358
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    Signer:
+    - SerialNumber: 3300000024c1fb0e65d9747386000100000024
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Corporation UEFI CA 2011
+MitreID: T1542
+Resources:
+- https://uefi.org/revocationlistfile
+Tags:
+- bootx64.efi
+Verified: 'TRUE'

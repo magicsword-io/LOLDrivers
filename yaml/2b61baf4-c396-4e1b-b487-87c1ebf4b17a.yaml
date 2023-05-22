@@ -1,0 +1,57 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- CVE-2020-10713
+- CVE-2020-14308
+- CVE-2020-14309
+- CVE-2020-14310
+- CVE-2020-14311
+- CVE-2020-15705
+- CVE-2020-15706
+- CVE-2020-15707
+Category: Revoked Bootloaders
+Commands:
+  Command: ''
+  Description: This was provided by Canonical and revoked Jul-20
+  OperatingSystem: 64-bit
+  Privileges: ''
+  Usecase: Persistence
+Created: '2023-05-22'
+Detection:
+- type: ''
+  value: ''
+Id: 2b61baf4-c396-4e1b-b487-87c1ebf4b17a
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: 379f249742bb47ea2d7cec2b9d3fb1b7
+    SHA1: b678307ce3a2c6d5a2f988e7ec068590edbf1c50
+    SHA256: 7eac80a915c84cd4afec638904d94eb168a8557951a4d539b0713028552b6b8c
+  Company: ''
+  Copyright: ''
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: grubx64.efi
+  Imports: []
+  InternalName: ''
+  MD5: c3f1acb15ea4dd4002d43c5941d1a64e
+  MachineType: AMD64
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: 31a862d073e46ffc608cfc93ffc8e18c38dfed8f
+  SHA256: 3d23947c39680b9fcf22b092b97c9d38edcc02f7ad13d3a925d1ee0b62797e73
+  Signature: ''
+  ImportedFunctions: ''
+  Signatures: {}
+MitreID: T1542
+Resources:
+- https://uefi.org/revocationlistfile
+Tags:
+- grubx64.efi
+Verified: 'TRUE'

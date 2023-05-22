@@ -1,0 +1,56 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- CVE-2020-14372
+- CVE-2020-25632
+- CVE-2020-25647
+- CVE-2020-27749
+- CVE-2020-27779
+- CVE-2021-3418
+- CVE-2021-20225
+- CVE-2021-20233
+Category: Revoked Bootloaders
+Commands:
+  Command: ''
+  Description: This was provided by Canonical Ltd and revoked Apr-21
+  OperatingSystem: 64-bit ARM
+  Privileges: ''
+  Usecase: Persistence
+Created: '2023-05-22'
+Detection:
+- type: ''
+  value: ''
+Id: 2e98c935-fda6-4fc9-b635-47a7d9157a02
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256:
+    - A48B5E31477DA248680A8935D1E5E630E6FDE22277F9635DA7D6F7F9AA17E34A
+  Company: ''
+  Copyright: ''
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: shim-15+1552672080.a4a1fbe-0ubuntu1/shimaa64.efi
+  Imports: ''
+  InternalName: ''
+  MD5: ''
+  MachineType: 64-bit ARM
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: ''
+  SHA256: B6F807D4488F132AB873DCDE8EDAD2875961895E503F263B86BA34958A290618
+  Signature: ''
+MitreID: T1542
+Resources:
+- https://uefi.org/revocationlistfile
+Tags:
+- shim-15+1552672080.a4a1fbe-0ubuntu1/shimaa64.efi
+Verified: 'TRUE'

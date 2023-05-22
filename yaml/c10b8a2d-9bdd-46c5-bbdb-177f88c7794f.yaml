@@ -1,0 +1,49 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- N/A
+Category: Revoked Bootloaders
+Commands:
+  Command: ''
+  Description: This was provided by vmware and revoked Aug-22
+  OperatingSystem: 64-bit ARM
+  Privileges: ''
+  Usecase: Persistence
+Created: '2023-05-22'
+Detection:
+- type: ''
+  value: ''
+Id: c10b8a2d-9bdd-46c5-bbdb-177f88c7794f
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256:
+    - F4DC5A40D2A9DBDAB210BAE0C508E053AE986C4DA42D68760A1655D6FBAEC051
+  Company: ''
+  Copyright: ''
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: mboot-official_arm64.efi
+  Imports: ''
+  InternalName: ''
+  MD5: ''
+  MachineType: 64-bit ARM
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: ''
+  SHA256: 8CC2B48C79FBF5654B28B7BEEC51A3266E4CBB4FBE3A84F843EA0957683A1E93
+  Signature: ''
+MitreID: T1542
+Resources:
+- https://uefi.org/revocationlistfile
+Tags:
+- mboot-official_arm64.efi
+Verified: 'TRUE'

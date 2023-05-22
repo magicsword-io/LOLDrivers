@@ -1,0 +1,49 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- CVE-2022-34303
+Category: Revoked Bootloaders
+Commands:
+  Command: ''
+  Description: This was provided by CPSD and revoked Aug-22
+  OperatingSystem: 64-bit
+  Privileges: ''
+  Usecase: Persistence
+Created: '2023-05-22'
+Detection:
+- type: ''
+  value: ''
+Id: 82bfbd61-4cd5-490f-853a-3486090e0d3e
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256:
+    - 90AEC5C4995674A849C1D1384463F3B02B5AA625A5C320FC4FE7D9BB58A62398
+  Company: ''
+  Copyright: ''
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: miniloader.efi
+  Imports: ''
+  InternalName: ''
+  MD5: ''
+  MachineType: 64-bit
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: ''
+  SHA256: 61F2D843B99AC93FA2ED40A50E5C3F0EAD7C75894BB92C32DF33052804CFB77C
+  Signature: ''
+MitreID: T1542
+Resources:
+- https://uefi.org/revocationlistfile
+Tags:
+- miniloader.efi
+Verified: 'TRUE'
