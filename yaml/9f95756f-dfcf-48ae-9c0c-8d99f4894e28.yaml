@@ -6,7 +6,8 @@ CVE:
 - Black Lotus Microsoft Windows 10 version 1507
 Category: Revoked Bootloaders
 Commands:
-  Command: ''
+  Command: bcdedit /copy "{current}" /d "LOLDrivers" | {% if ($_ -match '{\S+}') {
+    bcdedit /set $matches[0] path \windows\temp\bootmgfw.efi } }
   Description: This was provided by Microsoft and revoked May-23
   OperatingSystem: 64-bit
   Privileges: ''
@@ -22,45 +23,45 @@ KnownVulnerableSamples:
     SHA1: 23760cf7521a929e9bfcaa5591ad186a18f91f87
     SHA256: ce65c29521cd8498fad962e5f70d55c5044366ec09c761a60cc7c4a2001776a4
   Company: Microsoft Corporation
-  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
+  Copyright: © Microsoft Corporation. All rights reserved.
   Date: ''
   Description: Boot Manager
   ExportedFunctions: ''
   FileVersion: 6.4.9820.0 (fbl_sec(dlinsley).140425-1038)
   Filename: bootmgfw.efi
+  ImportedFunctions: ''
   Imports: []
   InternalName: bootmgr.exe
   MD5: 8000831e91c318757fa911d4c879dc02
   MachineType: AMD64
   OriginalFilename: bootmgr.exe
   PDBPath: ''
-  Product: "Microsoft\xAE Windows\xAE Operating System"
+  Product: Microsoft® Windows® Operating System
   ProductVersion: 6.4.9820.0
   Publisher: ''
   SHA1: d88ac2154cd473d25c41be40bcca918158badf94
   SHA256: 59e4fa86b1c3bb7df3cdb79a17ec36af9ad12e153172f6d8e662fcfb9dbb37d5
   Signature: ''
-  ImportedFunctions: ''
   Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+  - Certificates:
+    - Signature: 8207b0c79e3b96e7317cd1aac9ab45fb52f1a2c847cda4bed6ff0b366566c6046976257890a79270765662a04b0f6d958c1fbba688b7717f77e10137107f8ccde9ce066d0c99e9fabfa3d669e2eac822a81d86f620828a018738e290f15370886c689af9399fad45f38e2e0fd6e31fcdf1b295ddc015164e757e2c630b05d1c103735e452ea9e3ca1b44e776277a030aa473094499bdfad51ebcdc61c8694148123c150811230bab24f1fb3ca64f018ac37d5cbb61173055b20dd07fbf8955909696be8de608979541932fd0257f932db6f6975b4bc82bd393a432a4ef01d88fc9652cc0d4eede46df519df8488353bfbf4dbc8358efc8dc3215c5538ebbd03e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows
       ValidFrom: '2014-07-01 20:32:01'
       ValidTo: '2015-10-01 20:32:01'
-      Signature: 8207b0c79e3b96e7317cd1aac9ab45fb52f1a2c847cda4bed6ff0b366566c6046976257890a79270765662a04b0f6d958c1fbba688b7717f77e10137107f8ccde9ce066d0c99e9fabfa3d669e2eac822a81d86f620828a018738e290f15370886c689af9399fad45f38e2e0fd6e31fcdf1b295ddc015164e757e2c630b05d1c103735e452ea9e3ca1b44e776277a030aa473094499bdfad51ebcdc61c8694148123c150811230bab24f1fb3ca64f018ac37d5cbb61173055b20dd07fbf8955909696be8de608979541932fd0257f932db6f6975b4bc82bd393a432a4ef01d88fc9652cc0d4eede46df519df8488353bfbf4dbc8358efc8dc3215c5538ebbd03e
+    - Signature: 14fc7c7151a579c26eb2ef393ebc3c520f6e2b3f101373fea868d048a6344d8a960526ee3146906179d6ff382e456bf4c0e528b8da1d8f8adb09d71ac74c0a36666a8cec1bd70490a81817a49bb9e240323676c4c15ac6bfe404c0ea16d3acc368ef62acdd546c503058a6eb7cfe94a74e8ef4ec7c867357c2522173345af3a38a56c804da0709edf88be3cef47e8eaef0f60b8a08fb3fc91d727f53b8ebbe63e0e33d3165b081e5f2accd16a49f3da8b19bc242d090845f541dff89eaba1d47906fb0734e419f409f5fe5a12ab21191738a2128f0cede73395f3eab5c60ecdf0310a8d309e9f4f69685b67f51886647198da2b0123d812a680577bb914c627bb6c107c7ba7a8734030e4b627a99e9cafcce4a37c92da4577c1cfe3ddcb80f5afad6c4b30285023aeab3d96ee4692137de81d1f675190567d393575e291b39c8ee2de1cde445735bd0d2ce7aab1619824658d05e9d81b367af6c35f2bce53f24e235a20a7506f6185699d4782cd1051bebd088019daa10f105dfba7e2c63b7069b2321c4f9786ce2581706362b911203cca4d9f22dbaf9949d40ed1845f1ce8a5c6b3eab03d370182a0a6ae05f47d1d5630a32f2afd7361f2a705ae5425908714b57ba7e8381f0213cf41cc1c5b990930e88459386e9b12099be98cbc595a45d62d6a0630820bd7510777d3df345b99f979fcb57806f33a904cf77a4621c597e
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+      Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Production PCA 2011
       ValidFrom: '2011-10-19 18:41:42'
       ValidTo: '2026-10-19 18:51:42'
-      Signature: 14fc7c7151a579c26eb2ef393ebc3c520f6e2b3f101373fea868d048a6344d8a960526ee3146906179d6ff382e456bf4c0e528b8da1d8f8adb09d71ac74c0a36666a8cec1bd70490a81817a49bb9e240323676c4c15ac6bfe404c0ea16d3acc368ef62acdd546c503058a6eb7cfe94a74e8ef4ec7c867357c2522173345af3a38a56c804da0709edf88be3cef47e8eaef0f60b8a08fb3fc91d727f53b8ebbe63e0e33d3165b081e5f2accd16a49f3da8b19bc242d090845f541dff89eaba1d47906fb0734e419f409f5fe5a12ab21191738a2128f0cede73395f3eab5c60ecdf0310a8d309e9f4f69685b67f51886647198da2b0123d812a680577bb914c627bb6c107c7ba7a8734030e4b627a99e9cafcce4a37c92da4577c1cfe3ddcb80f5afad6c4b30285023aeab3d96ee4692137de81d1f675190567d393575e291b39c8ee2de1cde445735bd0d2ce7aab1619824658d05e9d81b367af6c35f2bce53f24e235a20a7506f6185699d4782cd1051bebd088019daa10f105dfba7e2c63b7069b2321c4f9786ce2581706362b911203cca4d9f22dbaf9949d40ed1845f1ce8a5c6b3eab03d370182a0a6ae05f47d1d5630a32f2afd7361f2a705ae5425908714b57ba7e8381f0213cf41cc1c5b990930e88459386e9b12099be98cbc595a45d62d6a0630820bd7510777d3df345b99f979fcb57806f33a904cf77a4621c597e
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    CertificatesInfo: ''
     Signer:
-    - SerialNumber: 330000004ea1d80770a9bbe94400000000004e
-      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+    - Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Production PCA 2011
+      SerialNumber: 330000004ea1d80770a9bbe94400000000004e
+    SignerInfo: ''
 MitreID: T1542
 Resources:
 - https://uefi.org/revocationlistfile

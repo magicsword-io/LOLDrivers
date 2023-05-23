@@ -13,7 +13,8 @@ CVE:
 - CVE-2021-20233
 Category: Revoked Bootloaders
 Commands:
-  Command: ''
+  Command: bcdedit /copy "{current}" /d "LOLDrivers" | {% if ($_ -match '{\S+}') {
+    bcdedit /set $matches[0] path \windows\temp\shimia32.efi } }
   Description: This was provided by Oracle America, Inc. and revoked Apr-21
   OperatingSystem: 32-bit
   Privileges: ''

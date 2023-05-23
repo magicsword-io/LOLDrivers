@@ -13,7 +13,8 @@ CVE:
 - CVE-2020-15707
 Category: Revoked Bootloaders
 Commands:
-  Command: ''
+  Command: bcdedit /copy "{current}" /d "LOLDrivers" | {% if ($_ -match '{\S+}') {
+    bcdedit /set $matches[0] path \windows\temp\grubnetx64.efi } }
   Description: This was provided by Canonical and revoked Jul-20
   OperatingSystem: 64-bit
   Privileges: ''
@@ -35,6 +36,7 @@ KnownVulnerableSamples:
   ExportedFunctions: ''
   FileVersion: ''
   Filename: grubnetx64.efi
+  ImportedFunctions: ''
   Imports: []
   InternalName: ''
   MD5: f383b5c1f0cb8806742c8df990bc7803
@@ -47,7 +49,6 @@ KnownVulnerableSamples:
   SHA1: c1f26b124fcfb2c73ec9c9cfafe3fcfbc269d4e7
   SHA256: 8e8addb29426d845a0101c2c1f26c2e7fe8c78128ab04f16cfcb4e06461b0101
   Signature: ''
-  ImportedFunctions: ''
   Signatures: {}
 MitreID: T1542
 Resources:

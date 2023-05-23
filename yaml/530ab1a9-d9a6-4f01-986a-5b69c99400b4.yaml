@@ -6,7 +6,8 @@ CVE:
 - CVE-2022-34303
 Category: Revoked Bootloaders
 Commands:
-  Command: ''
+  Command: bcdedit /copy "{current}" /d "LOLDrivers" | {% if ($_ -match '{\S+}') {
+    bcdedit /set $matches[0] path \windows\temp\shim.efi } }
   Description: This was provided by CPSD and revoked Aug-22
   OperatingSystem: 64-bit
   Privileges: ''
