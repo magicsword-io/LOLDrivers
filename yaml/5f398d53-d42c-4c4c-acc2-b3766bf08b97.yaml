@@ -13,7 +13,8 @@ CVE:
 - CVE-2020-15707
 Category: Revoked Bootloaders
 Commands:
-  Command: ''
+  Command: bcdedit /copy "{current}" /d "LOLDrivers" | {% if ($_ -match '{\S+}') {
+    bcdedit /set $matches[0] path \windows\temp\gcdx64.efi } }
   Description: This was provided by Canonical and revoked Jul-20
   OperatingSystem: 64-bit
   Privileges: ''
@@ -35,6 +36,7 @@ KnownVulnerableSamples:
   ExportedFunctions: ''
   FileVersion: ''
   Filename: gcdx64.efi
+  ImportedFunctions: ''
   Imports: []
   InternalName: ''
   MD5: 4a7dcdd069fcdf8d7319ea5e135403fb
@@ -47,7 +49,6 @@ KnownVulnerableSamples:
   SHA1: f48de3320923666bd1a9690f993a6d83ed420c24
   SHA256: 0ac2943abf5ef953b939247b74331fb2c437e405a81dd5569d9cff1d6183d53a
   Signature: ''
-  ImportedFunctions: ''
   Signatures: {}
 MitreID: T1542
 Resources:

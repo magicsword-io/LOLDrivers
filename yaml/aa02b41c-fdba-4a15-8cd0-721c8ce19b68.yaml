@@ -6,7 +6,8 @@ CVE:
 - CVE-2022-34301
 Category: Revoked Bootloaders
 Commands:
-  Command: ''
+  Command: bcdedit /copy "{current}" /d "LOLDrivers" | {% if ($_ -match '{\S+}') {
+    bcdedit /set $matches[0] path \windows\temp\esdiags.efi } }
   Description: This was provided by Eurosoft and revoked Aug-22
   OperatingSystem: 64-bit
   Privileges: ''
@@ -28,6 +29,7 @@ KnownVulnerableSamples:
   ExportedFunctions: ''
   FileVersion: ''
   Filename: esdiags.efi
+  ImportedFunctions: ''
   Imports: []
   InternalName: ''
   MD5: 77164588c1c1207395ca4a64dca19f85
@@ -40,27 +42,26 @@ KnownVulnerableSamples:
   SHA1: b1d0f26d6c2ada8828889a9208529ce96b6312e4
   SHA256: 1e918f170a796b4b0b1400bb9bdae75be1cf86705c2d0fc8fb9dd0c5016b933b
   Signature: ''
-  ImportedFunctions: ''
   Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: ??=GB, ??=Private Organization, serialNumber=01488751, C=GB, L=Bournemouth,
+  - Certificates:
+    - Signature: 4ad23e049278de3e46ea9bacb4869b3b787d3fb0306e9cb33621ad3ec283bca093d68b08bea449dfee9bdf1819f0bd95ce2724761856a5e2225eb38bb958c363fc54a6c47b3097894cc42d8cea7e553062f1ed7ccd15cedc0eb3a3316597ca1ac7954546f73325a8ccd9cfbf02dde71cef4684c23b22307ef3839ca5f8f7cbdbc2c6038e2ba37e8b0281de8653718a28163567d1c3617c40b1ba453b6177f31c73b515838a22871c59e8d15f9235dff874ad7a73ef0b8b10e3a123cfb7f3ac7b74fa306f21589ec29ad06f297549d387ddc369aa59e48fad5ea5ed7ec9051fa0ec96247ecb48b31a534e2ae9ad020ed0cdf25ae65cee5affec49f5ec44b5fcb7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      Subject: ??=GB, ??=Private Organization, serialNumber=01488751, C=GB, L=Bournemouth,
         O=Eurosoft (UK) Ltd, CN=Eurosoft (UK) Ltd
       ValidFrom: '2019-04-05 00:00:00'
       ValidTo: '2022-04-13 12:00:00'
-      Signature: 4ad23e049278de3e46ea9bacb4869b3b787d3fb0306e9cb33621ad3ec283bca093d68b08bea449dfee9bdf1819f0bd95ce2724761856a5e2225eb38bb958c363fc54a6c47b3097894cc42d8cea7e553062f1ed7ccd15cedc0eb3a3316597ca1ac7954546f73325a8ccd9cfbf02dde71cef4684c23b22307ef3839ca5f8f7cbdbc2c6038e2ba37e8b0281de8653718a28163567d1c3617c40b1ba453b6177f31c73b515838a22871c59e8d15f9235dff874ad7a73ef0b8b10e3a123cfb7f3ac7b74fa306f21589ec29ad06f297549d387ddc369aa59e48fad5ea5ed7ec9051fa0ec96247ecb48b31a534e2ae9ad020ed0cdf25ae65cee5affec49f5ec44b5fcb7
+    - Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+      Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       ValidFrom: '2012-04-18 12:00:00'
       ValidTo: '2027-04-18 12:00:00'
-      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+    CertificatesInfo: ''
     Signer:
-    - SerialNumber: 09d2ecf1e18290f1ea3bf27dd1cbeb62
-      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+    - Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
+      SerialNumber: 09d2ecf1e18290f1ea3bf27dd1cbeb62
+    SignerInfo: ''
 MitreID: T1542
 Resources:
 - https://uefi.org/revocationlistfile

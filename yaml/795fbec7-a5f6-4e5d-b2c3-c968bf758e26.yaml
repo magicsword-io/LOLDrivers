@@ -13,7 +13,8 @@ CVE:
 - CVE-2021-20233
 Category: Revoked Bootloaders
 Commands:
-  Command: ''
+  Command: bcdedit /copy "{current}" /d "LOLDrivers" | {% if ($_ -match '{\S+}') {
+    bcdedit /set $matches[0] path \windows\temp\shim-sles.efi } }
   Description: This was provided by SUSE Linux Products GmbH and revoked Apr-21
   OperatingSystem: 64-bit
   Privileges: ''

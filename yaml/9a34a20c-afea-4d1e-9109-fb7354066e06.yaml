@@ -6,7 +6,8 @@ CVE:
 - Black Lotus Microsoft Windows 10 version 1507
 Category: Revoked Bootloaders
 Commands:
-  Command: ''
+  Command: bcdedit /copy "{current}" /d "LOLDrivers" | {% if ($_ -match '{\S+}') {
+    bcdedit /set $matches[0] path \windows\temp\bootmgfw.efi } }
   Description: This was provided by Microsoft and revoked May-23
   OperatingSystem: 32-bit
   Privileges: ''
@@ -39,7 +40,7 @@ KnownVulnerableSamples:
   ProductVersion: ''
   Publisher: ''
   SHA1: ''
-  SHA256: '79193EAE46F687D00B90B3EBA361B35802BD42E2891A8A8C286B4C00119F9F94'
+  SHA256: 79193EAE46F687D00B90B3EBA361B35802BD42E2891A8A8C286B4C00119F9F94
   Signature: ''
 MitreID: T1542
 Resources:

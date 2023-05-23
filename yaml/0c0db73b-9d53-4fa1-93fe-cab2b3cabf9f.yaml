@@ -6,7 +6,8 @@ CVE:
 - N/A
 Category: Revoked Bootloaders
 Commands:
-  Command: ''
+  Command: bcdedit /copy "{current}" /d "LOLDrivers" | {% if ($_ -match '{\S+}') {
+    bcdedit /set $matches[0] path \windows\temp\mboot-official_em64t.efi } }
   Description: This was provided by vmware and revoked Aug-22
   OperatingSystem: 64-bit
   Privileges: ''

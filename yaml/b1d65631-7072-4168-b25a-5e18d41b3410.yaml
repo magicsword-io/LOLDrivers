@@ -13,7 +13,9 @@ CVE:
 - CVE-2021-20233
 Category: Revoked Bootloaders
 Commands:
-  Command: ''
+  Command: bcdedit /copy "{current}" /d "LOLDrivers" | {% if ($_ -match '{\S+}') {
+    bcdedit /set $matches[0] path \windows\temp\shim-13-0ubuntu2/shim64-bit.efi }
+    }
   Description: This was provided by Canonical Ltd and revoked Apr-21
   OperatingSystem: 64-bit
   Privileges: ''
@@ -35,6 +37,7 @@ KnownVulnerableSamples:
   ExportedFunctions: ''
   FileVersion: ''
   Filename: shim-13-0ubuntu2/shim64-bit.efi
+  ImportedFunctions: ''
   Imports: []
   InternalName: ''
   MD5: a27c33dada320aff0672ce32f953ffbc
@@ -47,7 +50,6 @@ KnownVulnerableSamples:
   SHA1: 412391ed50bdc33f24da222c7d79c00dcafbaddb
   SHA256: 9be93e365a8240a03b05db26684b708b46d7585be325a3e22170cd5b324e0cb0
   Signature: ''
-  ImportedFunctions: ''
   Signatures: {}
 MitreID: T1542
 Resources:

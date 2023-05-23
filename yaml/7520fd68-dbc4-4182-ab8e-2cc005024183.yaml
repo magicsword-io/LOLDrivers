@@ -13,7 +13,8 @@ CVE:
 - CVE-2021-20233
 Category: Revoked Bootloaders
 Commands:
-  Command: ''
+  Command: bcdedit /copy "{current}" /d "LOLDrivers" | {% if ($_ -match '{\S+}') {
+    bcdedit /set $matches[0] path \windows\temp\rhel-8.3-20200917-shimia32.efi } }
   Description: This was provided by Red Hat, Inc. and revoked Apr-21
   OperatingSystem: 32-bit
   Privileges: ''

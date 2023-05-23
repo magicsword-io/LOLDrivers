@@ -6,7 +6,8 @@ CVE:
 - CVE-2023-28005
 Category: Revoked Bootloaders
 Commands:
-  Command: ''
+  Command: bcdedit /copy "{current}" /d "LOLDrivers" | {% if ($_ -match '{\S+}') {
+    bcdedit /set $matches[0] path \windows\temp\bootx64.efi } }
   Description: This was provided by Trend Micro and revoked Mar-23
   OperatingSystem: 64-bit
   Privileges: ''

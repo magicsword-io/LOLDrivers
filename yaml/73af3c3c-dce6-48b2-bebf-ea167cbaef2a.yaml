@@ -13,7 +13,8 @@ CVE:
 - CVE-2020-15707
 Category: Revoked Bootloaders
 Commands:
-  Command: ''
+  Command: bcdedit /copy "{current}" /d "LOLDrivers" | {% if ($_ -match '{\S+}') {
+    bcdedit /set $matches[0] path \windows\temp\ } }
   Description: This was provided by HP and revoked Jul-20
   OperatingSystem: 64-bit
   Privileges: ''
