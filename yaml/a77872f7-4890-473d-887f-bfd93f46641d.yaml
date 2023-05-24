@@ -23,7 +23,7 @@ KnownVulnerableSamples:
     SHA1: 45e97d3cfb90ad162fa8f5a14ad8e5b4710a748a
     SHA256: f74947590a87a005023e9ef89cdf0c38d8d582ca4173f8201cebc443ef796790
   Company: Microsoft Corporation
-  Copyright: © Microsoft Corporation. All rights reserved.
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
   Date: ''
   Description: Boot Manager
   ExportedFunctions: ''
@@ -36,7 +36,7 @@ KnownVulnerableSamples:
   MachineType: AMD64
   OriginalFilename: bootmgr.exe
   PDBPath: ''
-  Product: Microsoft® Windows® Operating System
+  Product: "Microsoft\xAE Windows\xAE Operating System"
   ProductVersion: 6.3.9600.17031
   Publisher: ''
   SHA1: c3f69560b62f619f851df687c0adb2fa35cc0160
