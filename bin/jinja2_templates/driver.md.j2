@@ -72,6 +72,14 @@ This download link contains the malicious driver!
 {% endif %}
 <br>
 
+{% if driver.CVE %}
+### CVE
+
+{% for cve in driver.CVE %}
+<li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name={{cve}}">{{cve}}</a></li>
+{% endfor %}
+{% endif %}
+
 {% if driver.KnownVulnerableSamples %}
 ### Known Vulnerable Samples
 
