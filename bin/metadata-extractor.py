@@ -1,5 +1,6 @@
 # Author(s): Nasreddine Bencherchali (@nas_bench) / Michael Haag (@M_haggis)
-# Version: 0.4
+# Date: 27/05/2023
+# Version: 0.5
 
 import lief
 from  datetime import datetime
@@ -7,6 +8,7 @@ import os
 import argparse
 import hashlib
 import yaml
+from cryptography import x509
 
 # Issue in PyYAML resolved with this class https://ttl255.com/yaml-anchors-and-aliases-and-how-to-disable-them/
 class NoAliasDumper(yaml.Dumper):
@@ -15,6 +17,31 @@ class NoAliasDumper(yaml.Dumper):
 # Disable the logger globally 
 # READ MORE: https://lief-project.github.io/doc/stable/api/python/index.html#logging
 lief.logging.disable()
+
+# Calculate Rich Header hash based on https://github.com/lief-project/LIEF/issues/587
+def get_rich_header_hash(pe):
+    clear_rich = ""
+    for entry in pe.rich_header.entries:
+        rich_header_hex = f"{entry.build_id.to_bytes(2, byteorder='little').hex()}{entry.id.to_bytes(2, byteorder='little').hex()}"
+        clear_rich = f"{rich_header_hex}{entry.count.to_bytes(4, byteorder='little').hex()}{clear_rich}"
+    clear_rich = bytes.fromhex(f"44616e53{'0'*24}{clear_rich}")
+
+    md5 = hashlib.md5(clear_rich).hexdigest()
+    sha1 = hashlib.sha1(clear_rich).hexdigest()
+    sha256 = hashlib.sha256(clear_rich).hexdigest()
+    
+    return md5, sha1, sha256
+
+def get_sections(pe):
+    sections_info = {}
+    for section in pe.sections:
+        # TODO: Add offset, content, characteristics etc.
+        sections_info[section.name] = {
+            'Entropy': section.entropy,
+            'Virtual Size': hex(section.virtual_size)
+            
+        }
+    return sections_info
 
 def get_hashes(driver_):
     md5 = hashlib.md5()
@@ -78,10 +105,20 @@ def get_metadata(driver):
     metadata["SHA256"] = sha256
 
     metadata['Machine'] = pe.header.machine.name
+    metadata['MagicHeader'] = " ".join([hex(i)[2:] for i in pe.header.signature])
+    metadata['CreationTimestamp'] = str(datetime.fromtimestamp(pe.header.time_date_stamps))
+
+    rich_md5, rich_sha1, rich_sha256 = get_rich_header_hash(pe)
+
+    metadata['RichPEHeaderMD5'] = rich_md5
+    metadata['RichPEHeaderSHA1'] = rich_sha1
+    metadata['RichPEHeaderSHA256'] = rich_sha256
 
     metadata['AuthentihashMD5'] = pe.authentihash_md5.hex()
     metadata['AuthentihashSHA1'] = pe.authentihash_sha1.hex()
     metadata['AuthentihashSHA256'] = pe.authentihash_sha256.hex()
+
+    metadata['Sections'] = get_sections(pe)
 
     try:
         version_info = pe.resources_manager.version.string_file_info.langcode_items[0].items
@@ -124,6 +161,17 @@ def get_metadata(driver):
                     tmp_cert_dict['ValidTo'] = str(datetime.fromisoformat("-".join([str(i) if i >= 10 else '0'+str(i) for i in cert.valid_to[0:3]]) + " " + ":".join([str(i) if i >= 10 else '0'+str(i) for i in cert.valid_to[3:]])))
                     tmp_cert_dict['Signature'] = cert.signature.hex()
                     tmp_cert_dict['SignatureAlgorithmOID'] = cert.signature_algorithm
+                    tmp_cert_dict['IsCertificateAuthority'] = cert.is_ca
+                    tmp_cert_dict['SerialNumber'] = cert.serial_number.hex()
+                    tmp_cert_dict['Version'] = cert.version
+
+                    # Calculate TBS Hashes // Thanks @yarden_shafir - https://twitter.com/yarden_shafir
+                    raw_cert = x509.load_der_x509_certificate(cert.raw)
+                    tmp_cert_dict['TBS'] = {
+                        "MD5": hashlib.md5(raw_cert.tbs_certificate_bytes).hexdigest(),
+                        "SHA1": hashlib.sha1(raw_cert.tbs_certificate_bytes).hexdigest(),
+                        "SHA256": hashlib.sha256(raw_cert.tbs_certificate_bytes).hexdigest()
+                    }
 
                     sig_info['Certificates'].append(tmp_cert_dict)
 
@@ -134,6 +182,7 @@ def get_metadata(driver):
                     tmp_signer_dict = {}
                     tmp_signer_dict['SerialNumber'] = signer.serial_number.hex()
                     tmp_signer_dict['Issuer'] = signer.issuer.replace('\\', '').replace('-', ',') # We remove these special character for YAML
+                    tmp_signer_dict['Version'] = signer.version
 
                     sig_info['Signer'].append(tmp_signer_dict)
 
@@ -182,6 +231,15 @@ def enrich_yaml(file_path_, metadata_md5, metadata_sha1, metadata_sha256):
                         'SHA1': metadata_['AuthentihashSHA1'],
                         'SHA256': metadata_['AuthentihashSHA256']
                     }
+                    sample['RichPEHeaderHash'] = {
+                        'MD5':metadata_['RichPEHeaderMD5'],
+                        'SHA1': metadata_['RichPEHeaderSHA1'],
+                        'SHA256': metadata_['RichPEHeaderSHA256']
+                    }
+
+                    sample['Sections'] = metadata_['Sections']
+                    sample['MagicHeader'] = metadata_['MagicHeader']
+                    sample['CreationTimestamp'] = metadata_['CreationTimestamp']
                     sample['Description'] = metadata_['FileDescription']
                     sample['Company'] = metadata_['CompanyName']
                     sample['InternalName'] = metadata_['InternalName']
