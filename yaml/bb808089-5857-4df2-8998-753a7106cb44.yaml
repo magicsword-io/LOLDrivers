@@ -78,16 +78,59 @@ KnownVulnerableSamples:
       ValidTo: '2020-06-03 18:06:32'
       Signature: 11f64665e99ee9a3212a8317075cf2122256a6cd5452564366da4b3e890c7a94b167d27a0cb1e962de146f371429f531349fc359cccece5f32fa84cd25231f892e44c4676b5ff4008ce6b3f3d9a2690a956a2a6a9e982ba8ebd4256971437156136a25b2e5184e11550aecb83f5ec8ae5467e866d6bbf44b9e8642c8bd5e316a4a494f676aa15eefad41893dd0a7187c881fa235b45f1a0696a8ad2d5c1531eed442d7281290b84f976f9ca241027378c241157a326739b2e8305adbfcef5005f5ccec402c1ab03d6e28c36987ae0d07cd12e41a348098d846f57c3225dbfed0c1b809ad311770854d368d150ee7767676c39a3d148f05cf7c2dcea5f1f7c6f2
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 33000000857f83dc2a6ca979b8000000000085
+      Version: 3
+      TBS:
+        MD5: 85e8c40624a19ac2076dd91f49d8fb53
+        SHA1: 621756d2a4e10231e34677a3c0f2a8d1fb0fb7ca
+        SHA256: 442ba2fb3fc8ab1b1b3c71a45f6ea08ce00cea7eae124ef915d4c17622eb336a
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
       ValidTo: '2027-04-18 23:58:38'
       Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 610baac1000000000009
+      Version: 3
+      TBS:
+        MD5: a569061297e8e824767dbc3184a69bea
+        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
     Signer:
     - SerialNumber: 33000000857f83dc2a6ca979b8000000000085
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 7f1debacbafd3f259d7a213425c71b5f
+    SHA1: 9f5421410b697087e15bde4d688b7f33370f386f
+    SHA256: cefbbb88c4a69bad4c4a1698a8713d367f533be903326056cfa6fdbf4303e736
+  Sections:
+    .text:
+      Entropy: 6.269072098215991
+      Virtual Size: '0x1cb9'
+    .rdata:
+      Entropy: 4.66637534411376
+      Virtual Size: '0x798'
+    .data:
+      Entropy: 0.8066631169807633
+      Virtual Size: '0x390'
+    .pdata:
+      Entropy: 4.010875946168034
+      Virtual Size: '0x1c8'
+    PAGE:
+      Entropy: 6.06807405800903
+      Virtual Size: '0x9fc'
+    INIT:
+      Entropy: 5.661977650254811
+      Virtual Size: '0x4d8'
+    .reloc:
+      Entropy: 3.1733593135475084
+      Virtual Size: '0x2c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2019-11-19 11:14:20'
 - Filename: DBUtilDrv2.sys
   MD5: d104621c93213942b7b43d65b5d8d33e
   SHA1: b03b1996a40bfea72e4584b82f6b845c503a9748
@@ -142,15 +185,61 @@ KnownVulnerableSamples:
       ValidTo: '2021-12-02 22:15:33'
       Signature: 0d2d53cd15a8feddcb17e2df1bf7dc1aef21e98c6cd220f58b593824849c134a0f1add59ce42ef80ddf47860273013604d9568ec5894a797bd4e571432a9aaf10ab04dd1c038b26ab7c5ca3a9c88d009267fab56254525546a0a055fb37b9cd8029c7d501809fc8b11482c7a4347b3ad29f35427c9570e87117db52cc94864259274b9e2e758f918a3af1fdb9f9d40ffa3ae2e2ae012fb97a436258642a2a4223dc6690db88103a6e5220646bd8afb3d12eb894ac28b527396a1965408487f6ab878b3c474b8c960842861ae8e799a3d2a8d6f918f50f8e26bb1ed6ced47be36e447574e8568582964ff31cd288b9c7f8d7e6a46d6c3d92f5c101fe1522a720c
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
+      Version: 3
+      TBS:
+        MD5: a0dd89c33c4973bf6758331e200fb6de
+        SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
+        SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
       ValidTo: '2027-04-18 23:58:38'
       Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 610baac1000000000009
+      Version: 3
+      TBS:
+        MD5: a569061297e8e824767dbc3184a69bea
+        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
     Signer:
     - SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 55da99917deafbd2428eba37ab352764
+    SHA1: 72420433a55e6c3b3dd02e90ad238c5f5f632344
+    SHA256: 7c8e32c30b6f8a981e4b54696e979a23cc9662b6440c2c8833494bc6d17cd9fe
+  Sections:
+    .text:
+      Entropy: 6.230478937617782
+      Virtual Size: '0x1039'
+    .rdata:
+      Entropy: 4.642223343654196
+      Virtual Size: '0x754'
+    .data:
+      Entropy: 0.808730421176234
+      Virtual Size: '0xfe0'
+    .pdata:
+      Entropy: 3.9589762468524823
+      Virtual Size: '0x1bc'
+    PAGE:
+      Entropy: 6.243717098384845
+      Virtual Size: '0x118c'
+    INIT:
+      Entropy: 5.874007861559603
+      Virtual Size: '0x47a'
+    .rsrc:
+      Entropy: 3.174963077143067
+      Virtual Size: '0x2c0'
+    .reloc:
+      Entropy: 3.2464393446710145
+      Virtual Size: '0x28'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-05-06 17:20:18'
 Tags:
 - DBUtilDrv2.sys

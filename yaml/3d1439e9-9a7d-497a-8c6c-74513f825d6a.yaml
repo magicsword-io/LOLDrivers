@@ -109,5 +109,27 @@ KnownVulnerableSamples:
   - NdisCloseAdapter
   - NdisDeregisterProtocol
   Signatures: {}
+  RichPEHeaderHash:
+    MD5: 909f63d34ab6d10273023d528b1722a0
+    SHA1: 2e7dbeb35bb60bf672f840375926888760d4ad58
+    SHA256: 64d9f0289f8d52b49a1beb95e9248e2e08d06e94c9d2fc86b3b85536cf7697c1
+  Sections:
+    .text:
+      Entropy: 6.395124735617589
+      Virtual Size: '0x3968'
+    .rdata:
+      Entropy: 4.136188883876631
+      Virtual Size: '0x221'
+    .data:
+      Entropy: 1.9267671732967222
+      Virtual Size: '0x4eb9c'
+    INIT:
+      Entropy: 5.1775498523671
+      Virtual Size: '0x67c'
+    .reloc:
+      Entropy: 4.179055975760782
+      Virtual Size: '0x752'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2009-03-25 20:44:42'
 Tags:
 - daxin_blank6.sys

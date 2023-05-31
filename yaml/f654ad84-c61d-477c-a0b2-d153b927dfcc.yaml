@@ -62,6 +62,31 @@ KnownVulnerableSamples:
   - KeStallExecutionProcessor
   - HalTranslateBusAddress
   Signatures: {}
+  RichPEHeaderHash:
+    MD5: 631b52d0fb39bc8beb7c0d3d3f514da3
+    SHA1: 5e80e96c8a5ad4e5dc7564392e3b173f48801a97
+    SHA256: bf9303b65e432a0cf45638587d9df6f824fe37ca3920f35cc3d5c3553d54556f
+  Sections:
+    .text:
+      Entropy: 6.372645817931939
+      Virtual Size: '0x2940'
+    .rdata:
+      Entropy: 4.601458654378137
+      Virtual Size: '0x238'
+    .data:
+      Entropy: 0.30140680731160896
+      Virtual Size: '0x268'
+    .pdata:
+      Entropy: 3.8604464008584847
+      Virtual Size: '0x150'
+    INIT:
+      Entropy: 4.888514779635871
+      Virtual Size: '0x2d6'
+    .rsrc:
+      Entropy: 3.312382528187867
+      Virtual Size: '0x3f8'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2007-10-16 07:54:18'
 - Filename: EIO.sys
   MD5: 343ada10d948db29251f2d9c809af204
   SHA1: 3f17ff83dc8a5f875fb1b3a5d3b9fcbe407a99f0
@@ -109,5 +134,30 @@ KnownVulnerableSamples:
   - KeStallExecutionProcessor
   - HalTranslateBusAddress
   Signatures: {}
+  RichPEHeaderHash:
+    MD5: 9e879414ec72529ec97c71019ff54ff0
+    SHA1: 9f70178044e7de72a85ee75901f03bacfd277c05
+    SHA256: 769dd395a70eb58e4a9b4bac925874290f3a688367a35aa5a392d93b0fc1fe47
+  Sections:
+    .text:
+      Entropy: 6.344394733228123
+      Virtual Size: '0x2af0'
+    .rdata:
+      Entropy: 4.547262034696364
+      Virtual Size: '0x28c'
+    .data:
+      Entropy: 0.30140680731160896
+      Virtual Size: '0x2e8'
+    .pdata:
+      Entropy: 3.922304177151045
+      Virtual Size: '0x18c'
+    INIT:
+      Entropy: 5.040059459826639
+      Virtual Size: '0x348'
+    .rsrc:
+      Entropy: 3.309188519823855
+      Virtual Size: '0x3f8'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2009-07-21 20:34:42'
 Tags:
 - EIO.sys

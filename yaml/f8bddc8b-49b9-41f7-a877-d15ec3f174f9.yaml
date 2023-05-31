@@ -141,5 +141,33 @@ KnownVulnerableSamples:
   - NdisFreePacketPool
   - NdisFreeMemory
   Signatures: {}
+  RichPEHeaderHash:
+    MD5: 1381b25bf0ced4095e632696cc69b688
+    SHA1: 430cd24c4929262cae66fffe4f3aea3e2f1a7d4e
+    SHA256: 8fa76d4c6994c56e80ca822d3f346cbd3934333a2dfa1ea7c7800023b27efe04
+  Sections:
+    .text:
+      Entropy: 6.0195250267284255
+      Virtual Size: '0x9786'
+    .rdata:
+      Entropy: 5.526837662527405
+      Virtual Size: '0x4e8'
+    .data:
+      Entropy: 3.0844180409640822
+      Virtual Size: '0xc2300'
+    INIT:
+      Entropy: 5.443407835301055
+      Virtual Size: '0x954'
+    .vmp0:
+      Entropy: 3.0924132037589103
+      Virtual Size: '0xebe'
+    .vmp1:
+      Entropy: 7.965990900452569
+      Virtual Size: '0x211c'
+    .reloc:
+      Entropy: 6.615348924620848
+      Virtual Size: '0x88c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2010-04-20 02:42:35'
 Tags:
 - daxin_blank4.sys
