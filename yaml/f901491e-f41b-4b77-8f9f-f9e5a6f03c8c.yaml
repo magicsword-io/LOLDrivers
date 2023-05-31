@@ -51,6 +51,40 @@ KnownVulnerableSamples:
   SHA256: 8844d9b3aea1568a7ff298e6dc12564c422dafae6510db377454ca6072861dde
   Signature: ''
   Signatures: {}
+  RichPEHeaderHash:
+    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
+    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
+    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
+  Sections:
+    /4:
+      Entropy: 4.859622277775737
+      Virtual Size: '0x1f018'
+    .text:
+      Entropy: 5.636421874643909
+      Virtual Size: '0xa0075'
+    .reloc:
+      Entropy: 1.7709505944546688
+      Virtual Size: '0xa'
+    /14:
+      Entropy: 5.1485772576861875
+      Virtual Size: '0x84'
+    .data:
+      Entropy: 4.618421307458241
+      Virtual Size: '0x2f6d8'
+    /26:
+      Entropy: 7.322772708526002
+      Virtual Size: '0x449'
+    .dynamic:
+      Entropy: 0.8630797231656377
+      Virtual Size: '0x100'
+    .rela:
+      Entropy: 2.6716229722395415
+      Virtual Size: '0x1c6c8'
+    .dynsym:
+      Entropy: 3.2098335666907074
+      Virtual Size: '0xf2e8'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '1969-12-31 17:00:00'
 MitreID: T1542
 Resources:
 - https://uefi.org/revocationlistfile

@@ -119,5 +119,30 @@ KnownVulnerableSamples:
   - NdisCloseAdapter
   - NdisDeregisterProtocol
   Signatures: {}
+  RichPEHeaderHash:
+    MD5: ebd225fe8cf34907033d6b6123047339
+    SHA1: 642936e6d95c6231c8427a1c7a76dd99910fc635
+    SHA256: b04e0a7d507b0838174bb9df686e4ce60c5b81e183867441ed5951a5d3555510
+  Sections:
+    .text:
+      Entropy: 6.406428066873703
+      Virtual Size: '0x39b8'
+    .rdata:
+      Entropy: 4.157708038266207
+      Virtual Size: '0x221'
+    .data:
+      Entropy: 1.9267671732967222
+      Virtual Size: '0x4eb9c'
+    INIT:
+      Entropy: 5.1775498523671
+      Virtual Size: '0x67c'
+    .rsrc:
+      Entropy: 3.325586936369158
+      Virtual Size: '0x370'
+    .reloc:
+      Entropy: 4.172193963992313
+      Virtual Size: '0x768'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2009-11-19 03:26:14'
 Tags:
 - ntbios.sys

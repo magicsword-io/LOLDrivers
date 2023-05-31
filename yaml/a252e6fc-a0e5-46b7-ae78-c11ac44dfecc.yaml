@@ -43,25 +43,62 @@ KnownVulnerableSamples:
   SHA256: 3927727eb2435b28d2cf0ce1757e72ce3e92a86362b87120040c744c1c08bce9
   Signature: ''
   Signatures:
-  - Certificates:
-    - Signature: 7aa4402e28e909a6f7ff198a87c8f546fd868da5adf65529e8ced9b8ff16f56d03704671b64454a21437cdc6b47d83ea130e55b30ed223fda526676f6034a0d649e924cdf96d3c26386378d2ab91da329e3ddecbfe21c7f32764df6409a7f82f67c90ab5d9d7c167376487b3579fc1d99201098d2124f91f6558fb03285a49159fcc6d6ff6f8bbbc51f5209689963bebbc504c08089fa7c13e3bbae4f3c77a3a083548f8c95a1504b66fd5cfa658f9353ca231fd085e94f9bdb9bf68e302cae1bb6d483f97b5d4a2d26486fcab72ebe5fd0b555066edd3d894531f836130e309ccf4e98d1b44950efb0812a2190d4b0df3c5bf7ee8123a1d57410cd797dc0ccf
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows
       ValidFrom: '2022-05-05 19:23:15'
       ValidTo: '2023-05-04 19:23:15'
-    - Signature: 14fc7c7151a579c26eb2ef393ebc3c520f6e2b3f101373fea868d048a6344d8a960526ee3146906179d6ff382e456bf4c0e528b8da1d8f8adb09d71ac74c0a36666a8cec1bd70490a81817a49bb9e240323676c4c15ac6bfe404c0ea16d3acc368ef62acdd546c503058a6eb7cfe94a74e8ef4ec7c867357c2522173345af3a38a56c804da0709edf88be3cef47e8eaef0f60b8a08fb3fc91d727f53b8ebbe63e0e33d3165b081e5f2accd16a49f3da8b19bc242d090845f541dff89eaba1d47906fb0734e419f409f5fe5a12ab21191738a2128f0cede73395f3eab5c60ecdf0310a8d309e9f4f69685b67f51886647198da2b0123d812a680577bb914c627bb6c107c7ba7a8734030e4b627a99e9cafcce4a37c92da4577c1cfe3ddcb80f5afad6c4b30285023aeab3d96ee4692137de81d1f675190567d393575e291b39c8ee2de1cde445735bd0d2ce7aab1619824658d05e9d81b367af6c35f2bce53f24e235a20a7506f6185699d4782cd1051bebd088019daa10f105dfba7e2c63b7069b2321c4f9786ce2581706362b911203cca4d9f22dbaf9949d40ed1845f1ce8a5c6b3eab03d370182a0a6ae05f47d1d5630a32f2afd7361f2a705ae5425908714b57ba7e8381f0213cf41cc1c5b990930e88459386e9b12099be98cbc595a45d62d6a0630820bd7510777d3df345b99f979fcb57806f33a904cf77a4621c597e
+      Signature: 7aa4402e28e909a6f7ff198a87c8f546fd868da5adf65529e8ced9b8ff16f56d03704671b64454a21437cdc6b47d83ea130e55b30ed223fda526676f6034a0d649e924cdf96d3c26386378d2ab91da329e3ddecbfe21c7f32764df6409a7f82f67c90ab5d9d7c167376487b3579fc1d99201098d2124f91f6558fb03285a49159fcc6d6ff6f8bbbc51f5209689963bebbc504c08089fa7c13e3bbae4f3c77a3a083548f8c95a1504b66fd5cfa658f9353ca231fd085e94f9bdb9bf68e302cae1bb6d483f97b5d4a2d26486fcab72ebe5fd0b555066edd3d894531f836130e309ccf4e98d1b44950efb0812a2190d4b0df3c5bf7ee8123a1d57410cd797dc0ccf
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+      IsCertificateAuthority: false
+      SerialNumber: 330000038db0bfe1b0ca33b3d400000000038d
+      Version: 3
+      TBS:
+        MD5: 74a1035aa6d38ec0a7a35a6d143cc612
+        SHA1: 62c5627f7d38759edce84eace5ae41fc7a54d6f8
+        SHA256: b6319137740477c564fb2beb1d50929a333f092aa362ce5129085a2c9d4bf489
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Production PCA 2011
       ValidFrom: '2011-10-19 18:41:42'
       ValidTo: '2026-10-19 18:51:42'
-    CertificatesInfo: ''
+      Signature: 14fc7c7151a579c26eb2ef393ebc3c520f6e2b3f101373fea868d048a6344d8a960526ee3146906179d6ff382e456bf4c0e528b8da1d8f8adb09d71ac74c0a36666a8cec1bd70490a81817a49bb9e240323676c4c15ac6bfe404c0ea16d3acc368ef62acdd546c503058a6eb7cfe94a74e8ef4ec7c867357c2522173345af3a38a56c804da0709edf88be3cef47e8eaef0f60b8a08fb3fc91d727f53b8ebbe63e0e33d3165b081e5f2accd16a49f3da8b19bc242d090845f541dff89eaba1d47906fb0734e419f409f5fe5a12ab21191738a2128f0cede73395f3eab5c60ecdf0310a8d309e9f4f69685b67f51886647198da2b0123d812a680577bb914c627bb6c107c7ba7a8734030e4b627a99e9cafcce4a37c92da4577c1cfe3ddcb80f5afad6c4b30285023aeab3d96ee4692137de81d1f675190567d393575e291b39c8ee2de1cde445735bd0d2ce7aab1619824658d05e9d81b367af6c35f2bce53f24e235a20a7506f6185699d4782cd1051bebd088019daa10f105dfba7e2c63b7069b2321c4f9786ce2581706362b911203cca4d9f22dbaf9949d40ed1845f1ce8a5c6b3eab03d370182a0a6ae05f47d1d5630a32f2afd7361f2a705ae5425908714b57ba7e8381f0213cf41cc1c5b990930e88459386e9b12099be98cbc595a45d62d6a0630820bd7510777d3df345b99f979fcb57806f33a904cf77a4621c597e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: '61077656000000000008'
+      Version: 3
+      TBS:
+        MD5: 30a3f0b64324ed7f465e7fc618cb69e7
+        SHA1: 002de3561519b662c5e3f5faba1b92c403fb7c41
+        SHA256: 4e80be107c860de896384b3eff50504dc2d76ac7151df3102a4450637a032146
     Signer:
-    - Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+    - SerialNumber: 330000038db0bfe1b0ca33b3d400000000038d
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Production PCA 2011
-      SerialNumber: 330000038db0bfe1b0ca33b3d400000000038d
-    SignerInfo: ''
+      Version: 1
+  RichPEHeaderHash:
+    MD5: aaf18af925d829095e017c505f1a0039
+    SHA1: c3d13f7d96127a3b16c7a8c0a3dd98fd9f22c3cf
+    SHA256: 05367ecae4cf78cc575048fb931468b1d210df8c38ff8ca05481124b1a1a6917
+  Sections:
+    .text:
+      Entropy: 6.493463299563896
+      Virtual Size: '0x16e004'
+    .data:
+      Entropy: 5.4138887164260945
+      Virtual Size: '0x6c850'
+    .pdata:
+      Entropy: 6.087141441925473
+      Virtual Size: '0xa740'
+    .rsrc:
+      Entropy: 3.472769777929499
+      Virtual Size: '0xfd40'
+    .reloc:
+      Entropy: 5.408759919158508
+      Virtual Size: '0x998'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2022-12-14 23:34:14'
 MitreID: T1542
 Resources:
 - https://uefi.org/revocationlistfile

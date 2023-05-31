@@ -50,25 +50,74 @@ KnownVulnerableSamples:
   SHA256: 3f8f266488f3b888eb77b8df43582fa8124366b7d0670ed78926410f9c9f411f
   Signature: ''
   Signatures:
-  - Certificates:
-    - Signature: 54b771f3cef2a39bed4a43589d904c162be7f81b194f02873b74d01ca889553330964be53fdd5f76d346d229e26a5c8e5385e4bb316ffc07317bbe9e1eb58c26b69b793c48801a67c75ae9110e6b0d5704e194f01485478ad0894ea7bdfd053a54bc4d7179b910290bd32006e1d3e670e62c901fcf688f5831d145ddc4acc827c2ede6a6fef612534cdf453c0fca315e1c7c6d9f1a7418eddd53996657e0b0caccaaee5e57c54b07ce33b85447f7dee99fc222785c4c4597dda90599daeb46af237bb2c9714f8b39ca7326d1ceb5757d125034b649befcbf1f666c6e1246bfd2daae96b62ecaa94225e0e4b26133b98fd10d4c81fdfdefbad67ffb645290ddae
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows UEFI Driver Publisher
       ValidFrom: '2018-07-03 20:53:01'
       ValidTo: '2019-07-26 20:53:01'
-    - Signature: 350842ff30cccef7760cad1068583529463276277cef124127421b4aaa6d813848591355f3e95834a6160b82aa5dad82da808341068fb41df203b9f31a5d1bf15090f9b3558442281c20bdb2ae5114c5c0ac9795211c90db0ffc779e95739188cabdbd52b905500ddf579ea061ed0de56d25d9400f1740c8cea34ac24daf9a121d08548fbdc7bcb92b3d492b1f32fc6a21694f9bc87e4234fc3606178b8f2040c0b39a257527cdc903a3f65dd1e736547ab950b5d312d107bfbb74dfdc1e8f80d5ed18f42f14166b2fde668cb023e5c784d8edeac13382ad564b182df1689507cdcff072f0aebbdd8685982c214c332bf00f4af06887b592553275a16a826a3ca32511a4edadd704aecbd84059a084d1954c6291221a741d8c3d470e44a6e4b09b3435b1fab653a82c81eca40571c89db8bae81b4466e447540e8e567fb39f1698b286d0683e9023b52f5e8f50858dc68d825f41a1f42e0de099d26c75e4b669b52186fa07d1f6e24dd1daad2c77531e253237c76c52729586b0f135616a19f5b23b815056a6322dfea289f94286271855a182ca5a9bf830985414a64796252fc826e441941a5c023fe596e3855b3c3e3fbb47167255e22522b1d97be703062aa3f71e9046c3000dd61989e30e352762037115a6efd027a0a0593760f83894b8e07870f8ba4c868794f6e0ae0245ee65c2b6a37e69167507929bf5a6bc598358
+      Signature: 54b771f3cef2a39bed4a43589d904c162be7f81b194f02873b74d01ca889553330964be53fdd5f76d346d229e26a5c8e5385e4bb316ffc07317bbe9e1eb58c26b69b793c48801a67c75ae9110e6b0d5704e194f01485478ad0894ea7bdfd053a54bc4d7179b910290bd32006e1d3e670e62c901fcf688f5831d145ddc4acc827c2ede6a6fef612534cdf453c0fca315e1c7c6d9f1a7418eddd53996657e0b0caccaaee5e57c54b07ce33b85447f7dee99fc222785c4c4597dda90599daeb46af237bb2c9714f8b39ca7326d1ceb5757d125034b649befcbf1f666c6e1246bfd2daae96b62ecaa94225e0e4b26133b98fd10d4c81fdfdefbad67ffb645290ddae
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+      IsCertificateAuthority: false
+      SerialNumber: 330000002b4b79b3694d12118700010000002b
+      Version: 3
+      TBS:
+        MD5: 8d8a1f204c9c80213bd427fa58b387e2
+        SHA1: 8d78e1742b948f0c8298e560dd71fe1594020386
+        SHA256: 1bb427b8e9fe460f567310886852fded2aeec70819123b815daab17d1601bca0
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Corporation UEFI CA 2011
       ValidFrom: '2011-06-27 21:22:45'
       ValidTo: '2026-06-27 21:32:45'
-    CertificatesInfo: ''
+      Signature: 350842ff30cccef7760cad1068583529463276277cef124127421b4aaa6d813848591355f3e95834a6160b82aa5dad82da808341068fb41df203b9f31a5d1bf15090f9b3558442281c20bdb2ae5114c5c0ac9795211c90db0ffc779e95739188cabdbd52b905500ddf579ea061ed0de56d25d9400f1740c8cea34ac24daf9a121d08548fbdc7bcb92b3d492b1f32fc6a21694f9bc87e4234fc3606178b8f2040c0b39a257527cdc903a3f65dd1e736547ab950b5d312d107bfbb74dfdc1e8f80d5ed18f42f14166b2fde668cb023e5c784d8edeac13382ad564b182df1689507cdcff072f0aebbdd8685982c214c332bf00f4af06887b592553275a16a826a3ca32511a4edadd704aecbd84059a084d1954c6291221a741d8c3d470e44a6e4b09b3435b1fab653a82c81eca40571c89db8bae81b4466e447540e8e567fb39f1698b286d0683e9023b52f5e8f50858dc68d825f41a1f42e0de099d26c75e4b669b52186fa07d1f6e24dd1daad2c77531e253237c76c52729586b0f135616a19f5b23b815056a6322dfea289f94286271855a182ca5a9bf830985414a64796252fc826e441941a5c023fe596e3855b3c3e3fbb47167255e22522b1d97be703062aa3f71e9046c3000dd61989e30e352762037115a6efd027a0a0593760f83894b8e07870f8ba4c868794f6e0ae0245ee65c2b6a37e69167507929bf5a6bc598358
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 6108d3c4000000000004
+      Version: 3
+      TBS:
+        MD5: 1f23e75a000f0b6db92650dc26ac98e1
+        SHA1: bc477f73f16f0a5ae09e8ce4745c0a79c0e9a39d
+        SHA256: 9589b8c95168f79243f61922faa5990de0a4866de928736fed658ea7bff1a5e2
     Signer:
-    - Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+    - SerialNumber: 330000002b4b79b3694d12118700010000002b
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Corporation UEFI CA 2011
-      SerialNumber: 330000002b4b79b3694d12118700010000002b
-    SignerInfo: ''
+      Version: 1
+  RichPEHeaderHash:
+    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
+    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
+    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
+  Sections:
+    /4:
+      Entropy: 4.862207156121677
+      Virtual Size: '0x187d0'
+    .text:
+      Entropy: 5.644091890418596
+      Virtual Size: '0x9599e'
+    .reloc:
+      Entropy: 1.7709505944546688
+      Virtual Size: '0xa'
+    /14:
+      Entropy: 4.946577948119573
+      Virtual Size: '0x62'
+    .data:
+      Entropy: 4.510419511401317
+      Virtual Size: '0x2aad8'
+    /26:
+      Entropy: 7.20273225550972
+      Virtual Size: '0xb79'
+    .dynamic:
+      Entropy: 0.7842520391300999
+      Virtual Size: '0xf0'
+    .rela:
+      Entropy: 2.652342087574957
+      Virtual Size: '0x1b0d8'
+    .dynsym:
+      Entropy: 3.2106323395732113
+      Virtual Size: '0xdd10'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '1969-12-31 17:00:00'
 MitreID: T1542
 Resources:
 - https://uefi.org/revocationlistfile

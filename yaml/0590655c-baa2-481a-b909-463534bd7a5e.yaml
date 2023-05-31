@@ -106,5 +106,27 @@ KnownVulnerableSamples:
   - NdisAllocateBufferPool
   - NdisCopyFromPacketToPacket
   Signatures: {}
+  RichPEHeaderHash:
+    MD5: 6c5319c52cabf708cac1121ed7df420b
+    SHA1: 4d9f5c969d83ff20b202263d6d4a38aed8deb9f3
+    SHA256: cb3c84a0789027aef0c0aef452da254f600b2f17ed53054a5a68765f708302d4
+  Sections:
+    .text:
+      Entropy: 6.333612663607225
+      Virtual Size: '0x3146'
+    .rdata:
+      Entropy: 3.9544250034604453
+      Virtual Size: '0x104'
+    .data:
+      Entropy: 2.1263450977868867
+      Virtual Size: '0x4ec9c'
+    INIT:
+      Entropy: 5.2278974725553775
+      Virtual Size: '0x62e'
+    .reloc:
+      Entropy: 4.026524390647434
+      Virtual Size: '0x724'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2008-07-17 19:29:43'
 Tags:
 - daxin_blank5.sys
