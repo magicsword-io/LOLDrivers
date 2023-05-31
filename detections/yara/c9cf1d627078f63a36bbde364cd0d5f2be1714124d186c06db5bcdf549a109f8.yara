@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_MiTACTechnologyCorporation_mtcBSvsys_MiTACSystemServiceProvider_5arJ {
+rule PUA_VULN_Driver_MiTACTechnologyCorporation_mtcBSvsys_MiTACSystemServiceProvider_7xV2 {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 9dfd73dadb2f1c7e9c9d2542981aaa63.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c9cf1d627078f63a36bbde364cd0d5f2be1714124d186c06db5bcdf549a109f8"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d0069005400410043002000530079007300740065006d00200053006500720076006900630065002000500072006f00760069006400650072 } /* FileDescription MiTAC System Service Provider */

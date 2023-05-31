@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_LegalCorp_PCIExpressVideoCapture_8wux {
+rule PUA_VULN_Driver_LegalCorp_PCIExpressVideoCapture_8YQF {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 22949977ce5cd96ba674b403a9c81285.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fd223833abffa9cd6cc1848d77599673643585925a7ee51259d67c44d361cce8"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005000430049006500200056006900640065006f00200043006100700074007500720065 } /* FileDescription PCIe Video Capture */

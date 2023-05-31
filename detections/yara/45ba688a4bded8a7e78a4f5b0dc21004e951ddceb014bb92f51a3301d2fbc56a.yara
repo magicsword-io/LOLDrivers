@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_RWEverything_RwDrvsys_RwDrvDriver_mDK2 {
+rule PUA_VULN_Driver_RWEverything_RwDrvsys_RwDrvDriver_3Cvk {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 903c149851e9929ec45daefc544fcd99.bin, c2585e2696e21e25c05122e37e75a947.bin, 60e84516c6ec6dfdae7b422d1f7cab06.bin, f853abe0dc162601e66e4a346faed854.bin, 257483d5d8b268d0d679956c7acdf02d.bin"
 		author = "Florian Roth"
@@ -9,7 +9,7 @@ rule PUA_VULN_Driver_RWEverything_RwDrvsys_RwDrvDriver_mDK2 {
 		hash = "d969845ef6acc8e5d3421a7ce7e244f419989710871313b04148f9b322751e5d"
 		hash = "1e0eb0811a7cf1bdaf29d3d2cab373ca51eb8d8b58889ab7728e2d3aed244abe"
 		hash = "ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200770044007200760020004400720069007600650072 } /* FileDescription RwDrv Driver */

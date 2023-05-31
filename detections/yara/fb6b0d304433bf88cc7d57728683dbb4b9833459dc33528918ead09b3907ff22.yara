@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_3NSB {
+rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_4UZb {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 6682176866d6bd6b4ea3c8e398bd3aae.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fb6b0d304433bf88cc7d57728683dbb4b9833459dc33528918ead09b3907ff22"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100540053005a0049004f0020004400720069007600650072 } /* FileDescription ATSZIO Driver */

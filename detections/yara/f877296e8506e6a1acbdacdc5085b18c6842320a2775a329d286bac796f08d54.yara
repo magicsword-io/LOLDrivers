@@ -1,12 +1,12 @@
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_6FfD {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_YvNh {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - d0a5f9ace1f0c459cef714156db1de02.bin, edbf206c27c3aa7d1890899dffcc03ec.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f877296e8506e6a1acbdacdc5085b18c6842320a2775a329d286bac796f08d54"
 		hash = "de3597ae7196ca8c0750dce296a8a4f58893774f764455a125464766fcc9b3b5"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */

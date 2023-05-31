@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_CupFixerxsys_WindowsRWinDDKdriver_7LX2 {
+rule PUA_VULN_Driver_WindowsRWinDDKprovider_CupFixerxsys_WindowsRWinDDKdriver_54rx {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 2b3e0db4f00d4b3d0b4d178234b02e72.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8c748ae5dcc10614cc134064c99367d28f3131d1f1dda0c9c29e99279dc1bdd9"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530069006e0063006500790020004300750070002000460069007800650072 } /* FileDescription Sincey Cup Fixer */

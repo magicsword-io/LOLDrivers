@@ -17,7 +17,12 @@ Resources:
 Acknowledgement:
   Person: ''
   Handle: ''
-Detection: []
+Detection:
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4e3eb5b9bce2fd9f6878ae36288211f0997f6149aa8c290ed91228ba4cdfae80.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - Filename: otipcibus.sys
   MD5: d5a642329cce4df94b8dc1ba9660ae34

@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_AsusTekComputerInc_BsDefsys_SupportSSTSFSSTEEATFTATCAMFNTAMFNBVCTVCBMFTWC_3mUv {
+rule PUA_VULN_Driver_AsusTekComputerInc_BsDefsys_SupportSSTSFSSTEEATFTATCAMFNTAMFNBVCTVCBMFTWC_866d {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - a9f220b1507a3c9a327a99995ff99c82.bin, c9a293762319d73c8ee84bcaaf81b7b3.bin, 8abbb12e61045984eda19e2dc77b235e.bin, 120b5bbb9d2eb35ff4f62d79507ea63a.bin"
 		author = "Florian Roth"
@@ -8,7 +8,7 @@ rule PUA_VULN_Driver_AsusTekComputerInc_BsDefsys_SupportSSTSFSSTEEATFTATCAMFNTAM
 		hash = "3326e2d32bbabd69feb6024809afc56c7e39241ebe70a53728c77e80995422a5"
 		hash = "0040153302b88bee27eb4f1eca6855039e1a057370f5e8c615724fa5215bada3"
 		hash = "36b9e31240ab0341873c7092b63e2e0f2cab2962ebf9b25271c3a1216b7669eb"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00440065006600610075006c0074002000420049004f005300200046006c0061007300680020004400720069007600650072 } /* FileDescription Default BIOS Flash Driver */

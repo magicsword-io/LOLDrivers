@@ -15,7 +15,18 @@ Resources:
 Acknowledgement:
   Person: []
   Handle: ''
-Detection: []
+Detection:
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/7e81beae78e1ddbf6c150e15667e1f18783f9b0ab7fbe52c7ab63e754135948d.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/909de5f21837ea2b13fdc4e5763589e6bdedb903f7c04e1d0b08776639774880.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/9b1ac756e35f795dd91adbc841e78db23cb7165280f8d4a01df663128b66d194.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/af1011c76a22af7be97a0b3e0ce11aca0509820c59fa7c8eeaaa1b2c0225f75a.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/f6cd7353cb6e86e98d387473ed6340f9b44241867508e209e944f548b9db1d5f.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ff9623317287358440ec67da9ba79994d9b17b99ffdd709ec836478fe1fc22a5.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/77955af8a8bcea8998f4046c2f8534f6fb1959c71de049ca2f4298ba47d8f23a.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - FileName: AMDRyzenMasterDriver.sys
   MD5: f16b44cca74d3c3645e4c0a6bb5c0cb9

@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanMonFltXsys_PanCafeManager_7MPM {
+rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanMonFltXsys_PanCafeManager_3Jmx {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 0067c788e1cb174f008c325ebde56c22.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "06508aacb4ed0a1398a2b0da5fa2dbf7da435b56da76fd83c759a50a51c75caf"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500061006e00430061006600650020004d0061006e0061006700650072002000460069006c00650020004d006f006e00690074006f0072 } /* FileDescription PanCafe Manager File Monitor */

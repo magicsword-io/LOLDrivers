@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_ASUStek_Driversys_ECtool_FCDD {
+rule PUA_VULN_Driver_ASUStek_Driversys_ECtool_94be {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 4f191abc652d8f7442ca2636725e1ed6.bin, 1f950cfd5ed8dd9de3de004f5416fe20.bin, 715f8efab1d1c660e4188055c4b28eed.bin"
 		author = "Florian Roth"
@@ -7,7 +7,7 @@ rule PUA_VULN_Driver_ASUStek_Driversys_ECtool_FCDD {
 		hash = "927c2a580d51a598177fa54c65e9d2610f5f212f1b6cb2fbf2740b64368f010a"
 		hash = "42851a01469ba97cdc38939b10cf9ea13237aa1f6c37b1ac84904c5a12a81fa0"
 		hash = "771a8d05f1af6214e0ef0886662be500ee910ab99f0154227067fddcfe08a3dd"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400680065002000640072006900760065007200200066006f007200200074006800650020004500430074006f006f006c0020006400720069007600650072002d0062006100730065006400200074006f006f006c0073 } /* FileDescription The driver for the ECtool driver-based tools */

@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_HPInc_HpPortIoxsys_HpPortIo_7MXn {
+rule PUA_VULN_Driver_HPInc_HpPortIoxsys_HpPortIo_4gUv {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 7b9e1e5e8ff4f18f84108bb9f7b5d108.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a4680fabf606d6580893434e81c130ff7ec9467a15e6534692443465f264d3c9"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800700050006f007200740049006f } /* FileDescription HpPortIo */

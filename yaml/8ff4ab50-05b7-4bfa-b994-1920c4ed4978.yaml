@@ -18,7 +18,12 @@ Resources:
 Acknowledgement:
   Person: ''
   Handle: ''
-Detection: []
+Detection:
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6c7120e40fc850e4715058b233f5ad4527d1084a909114fd6a36b7b7573c4a44.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - Filename: ncpl.sys
   MD5: a26e600652c33dd054731b4693bf5b01

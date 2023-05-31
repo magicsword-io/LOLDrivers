@@ -1,12 +1,12 @@
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_5rSC {
+rule PUA_VULN_Driver_NovellInc_NovellXTier_5L2i {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - a26e600652c33dd054731b4693bf5b01.bin, 52b7cd123f6d1b9ed76b08f2ee7d9433.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6c7120e40fc850e4715058b233f5ad4527d1084a909114fd6a36b7b7573c4a44"
 		hash = "3a65d14fd3b1b5981084cdbd293dc6f4558911ea18dd80177d1e5b54d85bcaa0"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c00200043006c00690065006e007400200050006f00720074006100620069006c0069007400790020004c0061007900650072 } /* FileDescription Novell Client Portability Layer */

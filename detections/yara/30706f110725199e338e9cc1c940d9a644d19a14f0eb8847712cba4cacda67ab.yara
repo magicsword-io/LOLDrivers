@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_8AbE {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_8a58 {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 4a06bcd96ef0b90a1753a805b4235f28.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "30706f110725199e338e9cc1c940d9a644d19a14f0eb8847712cba4cacda67ab"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d0053004900200043006f006d00430065006e00530065007200760069006300650020004400720069007600650072 } /* FileDescription MSI ComCenService Driver */

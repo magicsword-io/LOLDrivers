@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_SenseCORP__6ZBT {
+rule PUA_VULN_Driver_SenseCORP__6GAA {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - f9844524fb0009e5b784c21c7bad4220.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7f4555a940ce1156c9bcea9a2a0b801f9a5e44ec9400b61b14a7b1a6404ffdf6"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530065006e0073006500350020004400720069007600650072 } /* FileDescription Sense5 Driver */

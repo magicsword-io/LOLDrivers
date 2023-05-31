@@ -1,12 +1,12 @@
 
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_amifldrvsys_WindowsRWinDDKdriver_5hEi {
+rule PUA_VULN_Driver_WindowsRWinDDKprovider_amifldrvsys_WindowsRWinDDKdriver_eySY {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 119f0656ab4bb872f79ee5d421e2b9f9.bin, 7b9717c608a5f5a1c816128a609e9575.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "38d87b51f4b69ba2dae1477684a1415f1a3b578eee5e1126673b1beaefee9a20"
 		hash = "ffc72f0bde21ba20aa97bee99d9e96870e5aa40cce9884e44c612757f939494f"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d0049002000470065006e00650072006900630020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription AMI Generic Utility Driver */

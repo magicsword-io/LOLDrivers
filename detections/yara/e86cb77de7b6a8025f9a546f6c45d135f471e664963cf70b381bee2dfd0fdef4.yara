@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_LogitechInc_Lvavsys_LogitechWebcamSoftware_4Q4w {
+rule PUA_VULN_Driver_LogitechInc_Lvavsys_LogitechWebcamSoftware_5mpT {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - b47dee29b5e6e1939567a926c7a3e6a4.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e86cb77de7b6a8025f9a546f6c45d135f471e664963cf70b381bee2dfd0fdef4"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c006f00670069007400650063006800200056006900640065006f0020004400720069007600650072 } /* FileDescription Logitech Video Driver */

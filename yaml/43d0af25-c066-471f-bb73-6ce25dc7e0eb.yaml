@@ -18,7 +18,12 @@ Resources:
 Acknowledgement:
   Person: ''
   Handle: ''
-Detection: []
+Detection:
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - Filename: Dh_Kernel.sys
   MD5: 98763a3dee3cf03de334f00f95fc071a

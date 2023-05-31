@@ -1,12 +1,12 @@
 
-rule PUA_VULN_Driver_MicrosoftCorporation_ntbiosys_MicrosoftRWindowsRNTOperatingSystem_3Rzf {
+rule PUA_VULN_Driver_MicrosoftCorporation_ntbiosys_MicrosoftRWindowsRNTOperatingSystem_6fD7 {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 50b39072d0ee9af5ef4824eca34be6e3.bin, 14580bd59c55185115fd3abe73b016a2.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c0d88db11d0f529754d290ed5f4c34b4dba8c4f2e5c4148866daabeab0d25f9c"
 		hash = "96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]006e007400620069006f00730020006400720069007600650072 } /* FileDescription ntbios driver */

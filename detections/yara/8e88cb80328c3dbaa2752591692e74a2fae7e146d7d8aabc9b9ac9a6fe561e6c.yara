@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_7eqv {
+rule PUA_VULN_Driver_NovellInc_NovellXTier_4JSr {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - f56f30ac68c35dd4680054cdfd8f3f00.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8e88cb80328c3dbaa2752591692e74a2fae7e146d7d8aabc9b9ac9a6fe561e6c"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c002000580054006900650072002000530065007300730069006f006e0020004d0061006e0061006700650072 } /* FileDescription Novell XTier Session Manager */

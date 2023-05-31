@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublic_4e9g {
+rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublic_ZyfV {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 02a1d77ef13bd41cad04abcce896d0b9.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3724b39e97936bb20ada51c6119aded04530ed86f6b8d6b45fbfb2f3b9a4114b"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200053007500700070006f007200740020004400720069007600650072 } /* FileDescription VirtualBox Support Driver */

@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_rtkiosys_WindowsRCodenameLonghornDDKdriver_3att {
+rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_rtkiosys_WindowsRCodenameLonghornDDKdriver_36BF {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ffd0c87d9bf894af26823fbde94c71b6.bin, 664ad9cf500916c94fc2c0020660ac4e.bin, daf800da15b33bf1a84ee7afc59f0656.bin"
 		author = "Florian Roth"
@@ -7,7 +7,7 @@ rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_rtkiosys_WindowsRCodena
 		hash = "916c535957a3b8cbf3336b63b2260ea4055163a9e6b214f2a7005d6d36a4a677"
 		hash = "caa85c44eb511377ea7426ff10df00a701c07ffb384eef8287636a4bca0b53ab"
 		hash = "478917514be37b32d5ccf76e4009f6f952f39f5553953544f1b0688befd95e82"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f004400720069007600650072 } /* FileDescription Realtek IODriver */

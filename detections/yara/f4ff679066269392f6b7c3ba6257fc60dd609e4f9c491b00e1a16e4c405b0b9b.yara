@@ -1,12 +1,12 @@
 
-rule PUA_VULN_Driver_WindowsRDDKprovider_gdrvsys_WindowsRDDKdriver_3FmD {
+rule PUA_VULN_Driver_WindowsRDDKprovider_gdrvsys_WindowsRDDKdriver_5cjq {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - d556cb79967e92b5cc69686d16c1d846.bin, c832a4313ff082258240b61b88efa025.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f4ff679066269392f6b7c3ba6257fc60dd609e4f9c491b00e1a16e4c405b0b9b"
 		hash = "cfc5c585dd4e592dd1a08887ded28b92d9a5820587b6f4f8fa4f56d60289259b"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041004200590054004500200054006f006f006c0073 } /* FileDescription GIGABYTE Tools */

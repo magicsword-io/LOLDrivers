@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_wj_KProcessHacker_6nCf {
+rule PUA_VULN_Driver_wj_KProcessHacker_8hJ3 {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - bbbc9a6cc488cfb0f6c6934b193891eb.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c725919e6357126d512c638f993cf572112f323da359645e4088f789eb4c7b8c"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004b00500072006f0063006500730073004800610063006b00650072 } /* FileDescription KProcessHacker */

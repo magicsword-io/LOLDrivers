@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_Dell_DBUtil_wqFq {
+rule PUA_VULN_Driver_Dell_DBUtil_5w37 {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - d104621c93213942b7b43d65b5d8d33e.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "71fe5af0f1564dc187eea8d59c0fbc897712afa07d18316d2080330ba17cf009"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00440042005500740069006c } /* FileDescription DBUtil */

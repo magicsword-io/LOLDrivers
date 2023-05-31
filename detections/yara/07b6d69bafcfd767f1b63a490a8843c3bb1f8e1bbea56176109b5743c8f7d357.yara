@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_SafeNetInc_Hostnt_Hostnt_8SMY {
+rule PUA_VULN_Driver_SafeNetInc_Hostnt_Hostnt_4PCY {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - e8ebba56ea799e1e62748c59e1a4c586.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "07b6d69bafcfd767f1b63a490a8843c3bb1f8e1bbea56176109b5743c8f7d357"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0048006f00730074006e0074002000360034002d0062006900740020006400720069007600650072 } /* FileDescription Hostnt 64-bit driver */

@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_CYRENInc_AMP_CYRENAMP_4avs {
+rule PUA_VULN_Driver_CYRENInc_AMP_CYRENAMP_8Fms {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - c533d6d64b474ffc3169a0e0fc0a701a.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cbb8239a765bf5b2c1b6a5c8832d2cab8fef5deacadfb65d8ed43ef56d291ab6"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d00500020004d0069006e006900660069006c007400650072 } /* FileDescription AMP Minifilter */

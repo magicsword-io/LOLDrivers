@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_AlmicoSoftware_sfdrvxsys_SpeedFan_X_38tH {
+rule PUA_VULN_Driver_AlmicoSoftware_sfdrvxsys_SpeedFan_X_5F55 {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 9f70cd5edcc4efc48ae21e04fb03be9d.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ad23d77a38655acb71216824e363df8ac41a48a1a0080f35a0d23aa14b54460b"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530070006500650064002000460061006e00200078003300320020004400720069007600650072 } /* FileDescription Speed Fan x32 Driver */

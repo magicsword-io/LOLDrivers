@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_Windowswinowsdriverkitsprovider_HwRwDrvsys_Hardwarereadwritedriver_3DaS {
+rule PUA_VULN_Driver_Windowswinowsdriverkitsprovider_HwRwDrvsys_Hardwarereadwritedriver_8Uos {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - dbc415304403be25ac83047c170b0ec2.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "21ccdd306b5183c00ecfd0475b3152e7d94b921e858e59b68a03e925d1715f21"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0048006100720064007700610072006500200072006500610064002000260020007700720069007400650020006400720069007600650072 } /* FileDescription Hardware read & write driver */

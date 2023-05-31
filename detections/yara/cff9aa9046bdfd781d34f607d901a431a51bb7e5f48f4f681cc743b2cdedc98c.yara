@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_56s6 {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_rF26 {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - de4001f89ed139d1ed6ae5586d48997a.bin, 349fa788a4a7b57e37e426aca9b736d5.bin, ce67e51b8c0370d1bfe421b79fa8b656.bin, 477e02a8e31cde2e76a8fb020df095c2.bin, cebf532d1e3c109418687cb9207516ad.bin, 31a4631d77b2357ac9618e2a60021f11.bin, 5adebdb94abb4c76dad2b7ecb1384a9d.bin, e1ebc6c5257a277115a7e61ee3e5e42f.bin"
 		author = "Florian Roth"
@@ -12,7 +12,7 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_56s6 {
 		hash = "a566af57d88f37fa033e64b1d8abbd3ffdacaba260475fbbc8dab846a824eff5"
 		hash = "57a389da784269bb2cc0a258500f6dfbf4f6269276e1192619ce439ec77f4572"
 		hash = "d74755311d127d0eb7454e56babc2db8dbaa814bc4ba8e2a7754d3e0224778e1"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription Intel(R) Network Adapter Diagnostic Driver */

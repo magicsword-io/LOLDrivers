@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_GMER_gmersys_GMER_8iej {
+rule PUA_VULN_Driver_GMER_gmersys_GMER_3gKw {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - a822b9e6eedf69211013e192967bf523.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "18c909a2b8c5e16821d6ef908f56881aa0ecceeaccb5fa1e54995935fcfd12f7"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004d00450052002000440072006900760065007200200068007400740070003a002f002f007700770077002e0067006d00650072002e006e00650074 } /* FileDescription GMER Driver http://www.gmer.net */

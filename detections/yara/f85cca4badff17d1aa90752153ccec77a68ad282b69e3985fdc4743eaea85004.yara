@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_IObitInformationTechnology_IObitUnlockersys_Unlocker_44Ly {
+rule PUA_VULN_Driver_IObitInformationTechnology_IObitUnlockersys_Unlocker_MkUQ {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 2391fb461b061d0e5fccb050d4af7941.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f85cca4badff17d1aa90752153ccec77a68ad282b69e3985fdc4743eaea85004"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0055006e006c006f0063006b006500720020004400720069007600650072 } /* FileDescription Unlocker Driver */

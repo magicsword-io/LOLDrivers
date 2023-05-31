@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_OpenLibSysorg_OpenLibSyssys_OpenLibSys_4XJG {
+rule PUA_VULN_Driver_OpenLibSysorg_OpenLibSyssys_OpenLibSys_7Wqh {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 96421b56dbda73e9b965f027a3bda7ba.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f0605dda1def240dc7e14efa73927d6c6d89988c01ea8647b671667b2b167008"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004f00700065006e004c00690062005300790073 } /* FileDescription OpenLibSys */

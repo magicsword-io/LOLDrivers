@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriverfle_4Gs7 {
+rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriverfle_5f6m {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 3c4154866f3d483fdc9f4f64ef868888.bin, 49fe3d1f3d5c2e50a0df0f6e8436d778.bin, 83601bbe5563d92c1fdb4e960d84dc77.bin"
 		author = "Florian Roth"
@@ -7,7 +7,7 @@ rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriverfle_4Gs7 {
 		hash = "42e170a7ab1d2c160d60abfc906872f9cfd0c2ee169ed76f6acb3f83b3eeefdb"
 		hash = "f929bead59e9424ab90427b379dcdd63fbfe0c4fb5e1792e3a1685541cd5ec65"
 		hash = "55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049002f004f00200049006e00740065007200660061006300650020006400720069007600650072002000660069006c0065 } /* FileDescription I/O Interface driver file */

@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_vmdrvsys_WindowsRWinDDKdriver_7VyJ {
+rule PUA_VULN_Driver_WindowsRWinDDKprovider_vmdrvsys_WindowsRWinDDKdriver_7qRL {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 6d67da13cf84f15f6797ed929dd8cf5d.bin, d5db81974ffda566fa821400419f59be.bin, 0e625b7a7c3f75524e307b160f8db337.bin"
 		author = "Florian Roth"
@@ -7,7 +7,7 @@ rule PUA_VULN_Driver_WindowsRWinDDKprovider_vmdrvsys_WindowsRWinDDKdriver_7VyJ {
 		hash = "5c0b429e5935814457934fa9c10ac7a88e19068fa1bd152879e4e9b89c103921"
 		hash = "32cccc4f249499061c0afa18f534c825d01034a1f6815f5506bf4c4ff55d1351"
 		hash = "d884ca8cc4ef1826ca3ab03eb3c2d8f356ba25f2d20db0a7d9fc251c565be7f3"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0056006f006900630065006d006f00640020005600690072007400750061006c00200041007500640069006f00200044006500760069006300650020002800570044004d0029 } /* FileDescription Voicemod Virtual Audio Device (WDM) */

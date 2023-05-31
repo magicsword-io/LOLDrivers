@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_PhoenixTechnologies_Agentsys_DriverAgent_KgUA {
+rule PUA_VULN_Driver_PhoenixTechnologies_Agentsys_DriverAgent_3ecM {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 1ed08a6264c5c92099d6d1dae5e8f530.bin, 29ccff428e5eb70ae429c3da8968e1ec.bin, ddc2ffe0ab3fcd48db898ab13c38d88d.bin, a57b47489febc552515778dd0fd1e51c.bin, 8407ddfab85ae664e507c30314090385.bin"
 		author = "Florian Roth"
@@ -9,7 +9,7 @@ rule PUA_VULN_Driver_PhoenixTechnologies_Agentsys_DriverAgent_KgUA {
 		hash = "6948480954137987a0be626c24cf594390960242cd75f094cd6aaa5c2e7a54fa"
 		hash = "b1d96233235a62dbb21b8dbe2d1ae333199669f67664b107bff1ad49b41d9414"
 		hash = "05f052c64d192cf69a462a5ec16dda0d43ca5d0245900c9fcb9201685a2e7748"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004400720069007600650072004100670065006e0074002000440069007200650063007400200049002f004f00200066006f0072002000360034002d006200690074002000570069006e0064006f00770073 } /* FileDescription DriverAgent Direct I/O for 64-bit Windows */

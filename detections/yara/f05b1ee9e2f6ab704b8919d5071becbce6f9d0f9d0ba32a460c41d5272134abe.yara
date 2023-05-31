@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_LenovoGroupLimitedR_LenovoDiagnosticsDriversys_LenovoDiagnostics_95sC {
+rule PUA_VULN_Driver_LenovoGroupLimitedR_LenovoDiagnosticsDriversys_LenovoDiagnostics_4qKG {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - b941c8364308990ee4cc6eadf7214e0f.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f05b1ee9e2f6ab704b8919d5071becbce6f9d0f9d0ba32a460c41d5272134abe"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c0065006e006f0076006f00200044006900610067006e006f00730074006900630073002000440072006900760065007200200066006f0072002000570069006e0064006f0077007300200031003000200061006e00640020006c0061007400650072002e } /* FileDescription Lenovo Diagnostics Driver for Windows 10 and later. */

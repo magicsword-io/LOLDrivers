@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3Ftu {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_5iek {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 1b32c54b95121ab1683c7b83b2db4b96.bin, 0395b4e0eb21693590ad1cfdf7044b8b.bin, 2f1ebc14bd8a29b89896737ca4076002.bin, c3fea895fe95ea7a57d9f4d7abed5e71.bin, b0baac4d6cbac384a633c71858b35a2e.bin, 3f39f013168428c8e505a7b9e6cba8a2.bin, dd04cd3de0c19bede84e9c95a86b3ca8.bin, c02f70960fa934b8defa16a03d7f6556.bin, f2f728d2f69765f5dfda913d407783d2.bin, f66b96aa7ae430b56289409241645099.bin, 64efbffaa153b0d53dc1bccda4279299.bin, 7b43dfd84de5e81162ebcfafb764b769.bin, f7cbbb5eb263ec9a35a1042f52e82ca4.bin, 1c4acf27317a2b5eaedff3ce6094794d.bin, 0752f113d983030939b4ab98b0812cf0.bin, 4d99d02f49e027332a0a9c31c674e13b.bin, 2e5f016ff9378be41fe98fa62f99b12d.bin, 1ed043249c21ab201edccb37f1d40af9.bin, 6d97ee5b3300d0f7fa359f2712834c40.bin, c6f8983dd3d75640c072a8459b8fa55a.bin, 23cf3da010497eb2bf39a5c5a57e437c.bin, 96b463b6fa426ae42c414177af550ba2.bin, 490b1f404c4f31f4538b36736c990136.bin, 300c5b1795c9b6cc1bc4d7d55c7bbe85.bin, 2da209dde8188076a9579bd256dc90d0.bin, 3dbf69f935ea48571ea6b0f5a2878896.bin, b89b097b8b8aecb8341d05136f334ebb.bin, a711e6ab17802fabf2e69e0cd57c54cd.bin, 992ded5b623be3c228f32edb4ca3f2d2.bin, 79483cb29a0c428e1362ec8642109eee.bin, 361a598d8bb92c13b18abb7cac850b01.bin"
 		author = "Florian Roth"
@@ -35,7 +35,7 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3Ftu {
 		hash = "47f0cdaa2359a63ad1389ef4a635f1f6eee1f63bdf6ef177f114bdcdadc2e005"
 		hash = "38fa0c663c8689048726666f1c5e019feaa9da8278f1df6ff62da33961891d2a"
 		hash = "ef86c4e5ee1dbc4f81cd864e8cd2f4a2a85ee4475b9a9ab698a4ae1cc71fbeb0"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */

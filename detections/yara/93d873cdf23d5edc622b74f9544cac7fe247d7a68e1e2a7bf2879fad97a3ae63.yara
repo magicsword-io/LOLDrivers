@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_RazerInc_Rzpnk_Rzpnk_4TnT {
+rule PUA_VULN_Driver_RazerInc_Rzpnk_Rzpnk_4yJD {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 4cc3ddd5ae268d9a154a426af2c23ef9.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "93d873cdf23d5edc622b74f9544cac7fe247d7a68e1e2a7bf2879fad97a3ae63"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520061007a006500720020004f007600650072006c0061007900200053007500700070006f00720074 } /* FileDescription Razer Overlay Support */

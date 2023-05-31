@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_5NbJ {
+rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_7eLd {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - c842827d4704a5ef53a809463254e1cc.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3e274df646f191d2705c0beaa35eeea84808593c3b333809f13632782e27ad75"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530061006e006400720061002000440065007600690063006500200044007200690076006500720020002800570069006e003600340020007800360034002900280055006e00690063006f006400650029 } /* FileDescription Sandra Device Driver (Win64 x64)(Unicode) */

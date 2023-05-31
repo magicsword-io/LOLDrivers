@@ -1,12 +1,12 @@
 
-rule PUA_VULN_Driver_Huawei_HwOsEc_HuaweiMateBook_8R8M {
+rule PUA_VULN_Driver_Huawei_HwOsEc_HuaweiMateBook_3X89 {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - bae1f127c4ff21d8fe45e2bbfc59c180.bin, 37086ae5244442ba552803984a11d6cb.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b179e1ab6dc0b1aee783adbcad4ad6bb75a8a64cb798f30c0dd2ee8aaf43e6de"
 		hash = "bb1135b51acca8348d285dc5461d10e8f57260e7d0c8cc4a092734d53fc40cbc"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00480077004f0073003200450063 } /* FileDescription HwOs2Ec */

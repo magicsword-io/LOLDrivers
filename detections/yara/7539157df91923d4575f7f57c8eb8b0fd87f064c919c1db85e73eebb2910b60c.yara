@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_6eek {
+rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_6X5p {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 962a33a191dbe56915fd196e3a868cf0.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7539157df91923d4575f7f57c8eb8b0fd87f064c919c1db85e73eebb2910b60c"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200053007500700070006f007200740020004400720069007600650072 } /* FileDescription VirtualBox Support Driver */

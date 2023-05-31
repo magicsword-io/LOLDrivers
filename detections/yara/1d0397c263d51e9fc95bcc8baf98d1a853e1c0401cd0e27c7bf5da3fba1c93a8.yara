@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriver_8bFK {
+rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriver_J94K {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - d2588631d8aae2a3e54410eaf54f0679.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1d0397c263d51e9fc95bcc8baf98d1a853e1c0401cd0e27c7bf5da3fba1c93a8"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049002f004f00200049006e00740065007200660061006300650020006400720069007600650072002000660069006c0065 } /* FileDescription I/O Interface driver file */

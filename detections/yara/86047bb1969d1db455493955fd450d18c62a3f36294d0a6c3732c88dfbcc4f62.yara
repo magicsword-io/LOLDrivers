@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_MicrosoftCorporation_windbgsys_MicrosoftWindowsOperatingSystem_BPSH {
+rule PUA_VULN_Driver_MicrosoftCorporation_windbgsys_MicrosoftWindowsOperatingSystem_5vpA {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 844af8c877f5da723c1b82cf6e213fc1.bin, 093a2a635c3a27aac50efd6463f4efa1.bin, 0bdd51cc33e88b5265dfb7d88c5dc8d6.bin, 77a7ed4798d02ef6636cd0fd07fc382a.bin, 2ec877e425bd7eddb663627216e3491e.bin, c71be7b112059d2dc84c0f952e04e6cc.bin, e8eac6642b882a6196555539149c73f2.bin, 40b968ecdbe9e967d92c5da51c390eee.bin, 3f11a94f1ac5efdd19767c6976da9ba4.bin, f69b06ca7c34d16f26ea1c6861edf62a.bin, 0023ca0ca16a62d93ef51f3df98b2f94.bin, 0ea8389589c603a8b05146bd06020597.bin, b6b530dd25c5eb66499968ec82e8791e.bin, 40f35792e7565aa047796758a3ce1b77.bin, 88bea56ae9257b40063785cf47546024.bin, 19bdd9b799e3c2c54c0d7fff68b31c20.bin, 5ebfc0af031130ba9de1d5d3275734b3.bin"
 		author = "Florian Roth"
@@ -21,7 +21,7 @@ rule PUA_VULN_Driver_MicrosoftCorporation_windbgsys_MicrosoftWindowsOperatingSys
 		hash = "e1cb86386757b947b39086cc8639da988f6e8018ca9995dd669bdc03c8d39d7d"
 		hash = "e6f764c3b5580cd1675cbf184938ad5a201a8c096607857869bd7c3399df0d12"
 		hash = "bb2422e96ea993007f25c71d55b2eddfa1e940c89e895abb50dd07d7c17ca1df"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069006e0064006f007700730020004700550049002000730079006d0062006f006c00690063002000640065006200750067006700650072 } /* FileDescription Windows GUI symbolic debugger */

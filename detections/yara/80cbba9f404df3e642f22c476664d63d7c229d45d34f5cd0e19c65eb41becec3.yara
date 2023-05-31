@@ -1,12 +1,12 @@
 
-rule PUA_VULN_Driver_YYInc_dianhu_7ut2 {
+rule PUA_VULN_Driver_YYInc_dianhu_8py7 {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 51207adb8dab983332d6b22c29fe8129.bin, 98763a3dee3cf03de334f00f95fc071a.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "80cbba9f404df3e642f22c476664d63d7c229d45d34f5cd0e19c65eb41becec3"
 		hash = "bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]006400690061006e00680075 } /* FileDescription dianhu */

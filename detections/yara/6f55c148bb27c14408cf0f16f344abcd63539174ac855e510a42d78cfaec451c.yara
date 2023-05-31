@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_Copyright_AdvancedMalwareProtection_4o2K {
+rule PUA_VULN_Driver_Copyright_AdvancedMalwareProtection_6WWH {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - eb525d99a31eb4fff09814e83593a494.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6f55c148bb27c14408cf0f16f344abcd63539174ac855e510a42d78cfaec451c"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041006400760061006e0063006500640020004d0061006c0077006100720065002000500072006f00740065006300740069006f006e } /* FileDescription Advanced Malware Protection */

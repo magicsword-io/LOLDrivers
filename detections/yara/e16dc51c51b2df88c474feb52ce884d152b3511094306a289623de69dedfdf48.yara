@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_5toC {
+rule PUA_VULN_Driver_NovellInc_NovellXTier_8ihC {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 34a7fab63a4ed5a0b61eb204828e08e5.bin, 22823fed979903f8dfe3b5d28537eb47.bin, 7a6a6d6921cd1a4e1d61f9672a4560d6.bin, 6ae9d25e02b54367a4e93c2492b8b02e.bin"
 		author = "Florian Roth"
@@ -8,7 +8,7 @@ rule PUA_VULN_Driver_NovellInc_NovellXTier_5toC {
 		hash = "e6056443537d4d2314dabca1b9168f1eaaf17a14eb41f6f5741b6b82b3119790"
 		hash = "ab0925398f3fa69a67eacee2bbb7b34ac395bb309df7fc7a9a9b8103ef41ed7a"
 		hash = "da11e9598eef033722b97873d1c046270dd039d0e3ee6cd37911e2dc2eb2608d"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c0020005800540043004f004d0020005300650072007600690063006500730020004400720069007600650072 } /* FileDescription Novell XTCOM Services Driver */

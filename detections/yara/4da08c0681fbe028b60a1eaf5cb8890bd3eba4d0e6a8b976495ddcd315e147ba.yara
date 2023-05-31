@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_8FF9 {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_38cp {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 84c4d8ae023ca9bb60694fa467141247.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4da08c0681fbe028b60a1eaf5cb8890bd3eba4d0e6a8b976495ddcd315e147ba"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avast anti rootkit */

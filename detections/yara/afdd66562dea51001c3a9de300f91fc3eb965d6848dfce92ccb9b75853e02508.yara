@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_NVIDIACorporation_nvflash_NVIDIAFlashDriver_4vnk {
+rule PUA_VULN_Driver_NVIDIACorporation_nvflash_NVIDIAFlashDriver_34Ct {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 84fb76ee319073e77fb364bbbbff5461.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "afdd66562dea51001c3a9de300f91fc3eb965d6848dfce92ccb9b75853e02508"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e0056004900440049004100200046006c0061007300680020004400720069007600650072002c002000560065007200730069006f006e00200031002e0038002e0030 } /* FileDescription NVIDIA Flash Driver, Version 1.8.0 */

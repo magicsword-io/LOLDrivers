@@ -1,12 +1,12 @@
 
-rule PUA_VULN_Driver_BSMIsys__5VkY {
+rule PUA_VULN_Driver_BSMIsys__3ECo {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - fac8eb49e2fd541b81fcbdeb98a199cb.bin, 444f538daa9f7b340cfd43974ed43690.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "59626cac380d8fe0b80a6d4c4406d62ba0683a2f0f68d50ad506ca1b1cf25347"
 		hash = "552f70374715e70c4ade591d65177be2539ec60f751223680dfaccb9e0be0ed9"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0053004d00490020004400720069007600650072 } /* FileDescription SMI Driver */

@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_7JrJ {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_87RT {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - db46c56849bbce9a55a03283efc8c280.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3c18ae965fba56d09a65770b4d8da54ccd7801f979d3ebd283397bc99646004b"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */

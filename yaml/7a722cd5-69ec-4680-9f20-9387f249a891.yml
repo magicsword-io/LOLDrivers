@@ -4,8 +4,8 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create ElbyCDIO.sys binPath=C:\windows\temp\ElbyCDIO.sys type=kernel
-  && sc.exe start ElbyCDIO.sys'
+Commands: sc.exe create ElbyCDIO.sys binPath=C:\windows\temp\ElbyCDIO.sys type=kernel
+  && sc.exe start ElbyCDIO.sys
 Description: []
 Usecase: Elevate privileges
 Privileges: kernel
@@ -15,7 +15,21 @@ Resources:
 Acknowledgement:
   Person: []
   Handle: ''
-Detection: []
+Detection:
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/238046cfe126a1f8ab96d8b62f6aa5ec97bab830e2bae5b1b6ab2d31894c79e4.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/2fbbc276737047cb9b3ba5396756d28c1737342d89dce1b64c23a9c4513ae445.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/5cfad3d473961763306d72c12bd5ae14183a1a5778325c9acacca764b79ca185.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/8137ce22d0d0fc5ea5b174d6ad3506a4949506477b1325da2ccb76511f4c4f60.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/82fbcb371d53b8a76a25fbbafaae31147c0d1f6b9f26b3ea45262c2267386989.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/8f68ca89910ebe9da3d02ec82d935de1814d79c44f36cd30ea02fa49ae488f00.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/9679758455c69877fce866267d60c39d108b495dca183954e4af869902965b3d.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ada4e42bf5ef58ef1aad94435441003b1cc1fcaa5d38bfdbe1a3d736dc451d47.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c8eaa5e6d3230b93c126d2d58e32409e4aeeb23ccf0dd047a17f1ef552f92fe9.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/f85eb576acb5db0d2f48e5f09a7244165a876fa1ca8697ebb773e4d7071d4439.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - FileName: ElbyCDIO.sys
   MD5: 702d5606cf2199e0edea6f0e0d27cd10

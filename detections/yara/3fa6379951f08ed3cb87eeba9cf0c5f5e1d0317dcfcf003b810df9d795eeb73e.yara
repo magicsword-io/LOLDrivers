@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_4qe6 {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_47vt {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - dd9596c18818288845423c68f3f39800.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3fa6379951f08ed3cb87eeba9cf0c5f5e1d0317dcfcf003b810df9d795eeb73e"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicro Common Module */

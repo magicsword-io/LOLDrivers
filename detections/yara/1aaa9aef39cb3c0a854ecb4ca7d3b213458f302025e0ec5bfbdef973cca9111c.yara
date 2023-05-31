@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_PowerTool_kEvPsys_PowerTool_6gRo {
+rule PUA_VULN_Driver_PowerTool_kEvPsys_PowerTool_35tT {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 7e7e3f5532b6af24dcc252ac4b240311.bin, 4ff880566f22919ed94ffae215d39da5.bin, 20125794b807116617d43f02b616e092.bin"
 		author = "Florian Roth"
@@ -7,7 +7,7 @@ rule PUA_VULN_Driver_PowerTool_kEvPsys_PowerTool_6gRo {
 		hash = "8e6363a6393eb4234667c6f614b2072e33512866b3204f8395bbe01530d63f2f"
 		hash = "09b0e07af8b17db1d896b78da4dd3f55db76738ee1f4ced083a97d737334a184"
 		hash = "1aaa9aef39cb3c0a854ecb4ca7d3b213458f302025e0ec5bfbdef973cca9111c"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0050006f0077006500720054006f006f006c } /* FileDescription PowerTool */

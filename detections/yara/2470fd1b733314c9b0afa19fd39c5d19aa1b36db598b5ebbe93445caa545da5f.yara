@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_RWEverything_RwDrvsys_RWEverythingReadWriteDriver_59yi {
+rule PUA_VULN_Driver_RWEverything_RwDrvsys_RWEverythingReadWriteDriver_8mwk {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 5bab40019419a2713298a5c9173e5d30.bin, 7437d4070b5c018e05354c179f1d5e2a.bin, 4ad30223df1361726ff64417f8515272.bin, 56a515173b211832e20fbc64e5a0447c.bin, 31469f1313871690e8dc2e8ee4799b22.bin, 969f1d19449dc5c2535dd5786093f651.bin"
 		author = "Florian Roth"
@@ -10,7 +10,7 @@ rule PUA_VULN_Driver_RWEverything_RwDrvsys_RWEverythingReadWriteDriver_59yi {
 		hash = "47f08f7d30d824a8f4bb8a98916401a37c0fd8502db308aba91fe3112b892dcc"
 		hash = "0aafa9f47acf69d46c9542985994ff5321f00842a28df2396d4a3076776a83cb"
 		hash = "2bf29a2df52110ed463d51376562afceac0e80fbb1033284cf50edd86c406b14"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520057002d00450076006500720079007400680069006e006700200052006500610064002000260020005700720069007400650020004400720069007600650072 } /* FileDescription RW-Everything Read & Write Driver */

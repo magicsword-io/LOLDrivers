@@ -1,12 +1,12 @@
 
-rule PUA_VULN_Driver_LGElectronicsInc_LHAsys_MicrosoftWindowsOperatingSystem_3Hfb {
+rule PUA_VULN_Driver_LGElectronicsInc_LHAsys_MicrosoftWindowsOperatingSystem_82Gn {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 1d768959aaa194d60e4524ce47708377.bin, 748cf64b95ca83abc35762ad2c25458f.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "23ba19352b1e71a965260bf4d5120f0200709ee8657ed381043bec9a938a1ade"
 		hash = "e75714f8e0ff45605f6fc7689a1a89c7dcd34aab66c6131c63fefaca584539cf"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c00480041 } /* FileDescription LHA */

@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_6KPL {
+rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_6h24 {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 0490f5961e0980792f5cb5aedf081dd7.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f6cd7353cb6e86e98d387473ed6340f9b44241867508e209e944f548b9db1d5f"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d0044002000520079007a0065006e0020004d00610073007400650072002000530065007200760069006300650020004400720069007600650072 } /* FileDescription AMD Ryzen Master Service Driver */

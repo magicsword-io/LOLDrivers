@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_ArthurLiberman_ALSysIOsys_ALSysIO_xoQU {
+rule PUA_VULN_Driver_ArthurLiberman_ALSysIOsys_ALSysIO_7UcE {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - afc2448b4080f695e76e059a96958cab.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "119c48b79735fda0ecd973d77d9bdc6b329960caed09b38ab454236ca039d280"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004c0053007900730049004f00360034 } /* FileDescription ALSysIO64 */

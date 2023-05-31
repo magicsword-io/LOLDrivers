@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_54Hs {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_pG5s {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - e9ccb6bac8715918a2ac35d8f0b4e1e6.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9679758455c69877fce866267d60c39d108b495dca183954e4af869902965b3d"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f00770073002000780036003400200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCD Windows x64 I/O driver */

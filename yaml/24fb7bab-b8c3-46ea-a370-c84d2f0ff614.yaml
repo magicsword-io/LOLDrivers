@@ -22,6 +22,11 @@ Detection:
   value: https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-block-rules
 - type: IOC
   value: Utilize Windows Event Code 7045 to monitor for new kernel driver installation.
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/04a85e359525d662338cae86c1e59b1d7aa9bd12b920e8067503723dc1e03162.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - Filename: ADV64DRV.sys
   MD5: 778b7feea3c750d44745d3bf294bd4ce

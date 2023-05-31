@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_cpuzsys_WindowsRWinDDKdriver_4cYc {
+rule PUA_VULN_Driver_WindowsRWinDDKprovider_cpuzsys_WindowsRWinDDKdriver_urQw {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 17719a7f571d4cd08223f0b30f71b8b8.bin, 641243746597fbd650e5000d95811ea3.bin, 743c403d20a89db5ed84c874768b7119.bin, 4a85754636c694572ca9f440d254f5ce.bin, 549e5148be5e7be17f9d416d8a0e333e.bin, 2f8653034a35526df88ea0c62b035a42.bin, aa69b4255e786d968adbd75ba5cf3e93.bin"
 		author = "Florian Roth"
@@ -11,7 +11,7 @@ rule PUA_VULN_Driver_WindowsRWinDDKprovider_cpuzsys_WindowsRWinDDKdriver_4cYc {
 		hash = "592f56b13e7dcaa285da64a0b9a48be7562bd9b0a190208b7c8b7d8de427cf6c"
 		hash = "4d19ee789e101e5a76834fb411aadf8229f08b3ece671343ad57a6576a525036"
 		hash = "60b163776e7b95e0c2280d04476304d0c943b484909131f340e3ce6045a49289"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */

@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanIOxsys_PanIOLibrary_87L2 {
+rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanIOxsys_PanIOLibrary_8VCg {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 0d6fef14f8e1ce5753424bd22c46b1ce.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6b830ea0db6546a044c9900d3f335e7820c2a80e147b0751641899d1a5aa8f74"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00540065006d0070006500720061007400750072006500200061006e0064002000730079007300740065006d00200069006e0066006f0072006d006100740069006f006e0020006400720069007600650072 } /* FileDescription Temperature and system information driver */

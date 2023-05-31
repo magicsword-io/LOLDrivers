@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_SSmartSoftwareSolutionsGmbH_SysDrvS_SysDrvS_3b95 {
+rule PUA_VULN_Driver_SSmartSoftwareSolutionsGmbH_SysDrvS_SysDrvS_6EbQ {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 31eca8c0b32135850d5a50aee11fec87.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0e53b58415fa68552928622118d5b8a3a851b2fc512709a90b63ba46acda8b6b"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530079007300440072007600330053 } /* FileDescription SysDrv3S */

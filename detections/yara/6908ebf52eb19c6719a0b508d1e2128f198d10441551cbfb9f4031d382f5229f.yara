@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_nSyX {
+rule PUA_VULN_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_54rw {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 8636fe3724f2bcba9399daffd6ef3c7e.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6908ebf52eb19c6719a0b508d1e2128f198d10441551cbfb9f4031d382f5229f"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570041004e0020005400720061006e00730070006f007200740020004400720069007600650072 } /* FileDescription WAN Transport Driver */

@@ -1,12 +1,12 @@
 
-rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_84fK {
+rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_7pmA {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 30efb7d485fc9c28fe82a97deac29626.bin, 803a371a78d528a44ef8777f67443b16.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a334bdf0c0ab07803380eb6ef83eefe7c147d6962595dd9c943a6a76f2200b0d"
 		hash = "000547560fea0dd4b477eb28bf781ea67bf83c748945ce8923f90fdd14eb7a4b"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0043006f007200730061006900720020004c004c0020004100630063006500730073 } /* FileDescription Corsair LL Access */

@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_8xBJ {
+rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_3aA3 {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - dc943bf367ae77016ae399df8e71d38a.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d004900430053005900530020006400720069007600650072 } /* FileDescription MICSYS driver */

@@ -1,12 +1,12 @@
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_9364 {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_39rm {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - fea9319d67177ed6f36438d2bd9392fb.bin, 92927c47d6ff139c9b19674c9d0088f6.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "16a2e578bc8683f17a175480fea4f53c838cfae965f1d4caa47eaf9e0b3415c1"
 		hash = "98a123b314cba2de65f899cdbfa386532f178333389e0f0fbd544aff85be02eb"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription Process Explorer */

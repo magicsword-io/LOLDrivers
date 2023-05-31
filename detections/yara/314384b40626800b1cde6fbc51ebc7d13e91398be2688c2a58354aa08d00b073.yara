@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_TOSHIBACorporation_NCHGBIOSxSYS_TOSHIBABIOSPackage_478B {
+rule PUA_VULN_Driver_TOSHIBACorporation_NCHGBIOSxSYS_TOSHIBABIOSPackage_6W2b {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - d9ce18960c23f38706ae9c6584d9ac90.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00420049004f00530020005500700064006100740065002000440072006900760065007200200046006f0072002000570069006e0064006f007700730020007800360034002000450064006900740069006f006e } /* FileDescription BIOS Update Driver For Windows x64 Edition */

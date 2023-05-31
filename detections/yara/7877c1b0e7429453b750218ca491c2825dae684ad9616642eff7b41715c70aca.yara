@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_SymantecCorporation_VProEventMonitorSys_SymantecEventMonitorsDriverDevelopmentEdition_3Wqs {
+rule PUA_VULN_Driver_SymantecCorporation_VProEventMonitorSys_SymantecEventMonitorsDriverDevelopmentEdition_8SPu {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cd9f0fcecf1664facb3671c0130dc8bb.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7877c1b0e7429453b750218ca491c2825dae684ad9616642eff7b41715c70aca"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600500072006f004500760065006e0074004d006f006e00690074006f0072002e0053007900730020002d0020004500760065006e00740020004d006f006e00690074006f00720069006e00670020006400720069007600650072 } /* FileDescription VProEventMonitor.Sys - Event Monitoring driver */

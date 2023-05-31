@@ -4,8 +4,8 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create gdrv.sys binPath=C:\windows\temp\gdrv.sys type=kernel
-  && sc.exe start gdrv.sys'
+Commands: sc.exe create gdrv.sys binPath=C:\windows\temp\gdrv.sys type=kernel && sc.exe
+  start gdrv.sys
 Description: []
 Usecase: Elevate privileges
 Privileges: kernel
@@ -15,7 +15,21 @@ Resources:
 Acknowledgement:
   Person: []
   Handle: ''
-Detection: []
+Detection:
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/092d04284fdeb6762e65e6ac5b813920d6c69a5e99d110769c5c1a78e11c5ba0.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/0ce40a2cdd3f45c7632b858e8089ddfdd12d9acb286f2015a4b1b0c0346a572c.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/133e542842656197c5d22429bd56d57aa33c9522897fdf29853a6d321033c743.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/17927b93b2d6ab4271c158f039cae2d60591d6a14458f5a5690aec86f5d54229.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/26c28746e947389856543837aa59a5b1f4697e5721a04d00aa28151a2659b097.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6f1fc8287dd8d724972d7a165683f2b2ad6837e16f09fe292714e8e38ecd1e38.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/81aafae4c4158d0b9a6431aff0410745a0f6a43fb20a9ab316ffeb8c2e2ccac0.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/8b92cdb91a2e2fab3881d54f5862e723826b759749f837a11c9e9d85d52095a2.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/cfc5c585dd4e592dd1a08887ded28b92d9a5820587b6f4f8fa4f56d60289259b.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/f4ff679066269392f6b7c3ba6257fc60dd609e4f9c491b00e1a16e4c405b0b9b.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - FileName: gdrv.sys
   MD5: b0954711c133d284a171dd560c8f492a

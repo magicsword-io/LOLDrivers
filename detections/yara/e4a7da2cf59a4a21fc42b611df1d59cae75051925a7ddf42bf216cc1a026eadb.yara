@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_IObit_Monitorsys_AdvancedSystemCare_3zY8 {
+rule PUA_VULN_Driver_IObit_Monitorsys_AdvancedSystemCare_7dyD {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 988dabdcf990b134b0ac1e00512c30c4.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e4a7da2cf59a4a21fc42b611df1d59cae75051925a7ddf42bf216cc1a026eadb"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049004f006200690074002000540065006d007000650072006100740075007200650020004d006f006e00690074006f0072 } /* FileDescription IObit Temperature Monitor */

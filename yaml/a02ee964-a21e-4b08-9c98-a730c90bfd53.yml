@@ -4,8 +4,8 @@ Created: '2023-05-11'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create LMIinfo binPath=C:\windows\temp\LMIinfo.sys type=kernel
-  && sc.exe start LMIinfo.sys'
+Commands: sc.exe create LMIinfo binPath=C:\windows\temp\LMIinfo.sys type=kernel &&
+  sc.exe start LMIinfo.sys
 Description: []
 Usecase: Elevate privileges
 Privileges: kernel
@@ -13,9 +13,14 @@ OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
-  Person: 'Michael Alfaro'
+  Person: Michael Alfaro
   Handle: '@_mmpte_software'
-Detection: []
+Detection:
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/453be8f63cc6b116e2049659e081d896491cf1a426e3d5f029f98146a3f44233.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - FileName: LMIinfo.sys
   MD5: d4f7c14e92b36c341c41ae93159407dd

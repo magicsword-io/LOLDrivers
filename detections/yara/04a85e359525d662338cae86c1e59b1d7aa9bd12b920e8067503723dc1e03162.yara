@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_FUJITSULIMITED_ADVDRVsys_MicrosoftRWindowsROperatingSystem_4AJi {
+rule PUA_VULN_Driver_FUJITSULIMITED_ADVDRVsys_MicrosoftRWindowsROperatingSystem_8VZs {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 778b7feea3c750d44745d3bf294bd4ce.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "04a85e359525d662338cae86c1e59b1d7aa9bd12b920e8067503723dc1e03162"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00460055004a00490054005300550020004c0049004d0049005400450044002e } /* CompanyName FUJITSU LIMITED. */

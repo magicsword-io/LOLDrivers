@@ -4,8 +4,8 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create NTIOLib.sys binPath=C:\windows\temp\NTIOLib.sys type=kernel
-  && sc.exe start NTIOLib.sys'
+Commands: sc.exe create NTIOLib.sys binPath=C:\windows\temp\NTIOLib.sys type=kernel
+  && sc.exe start NTIOLib.sys
 Description: []
 Usecase: Elevate privileges
 Privileges: kernel
@@ -15,7 +15,16 @@ Resources:
 Acknowledgement:
   Person: []
   Handle: ''
-Detection: []
+Detection:
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/18776682fcc0c6863147143759a8d4050a4115a8ede0136e49a7cf885c8a4805.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/7893307df2fdde25371645a924f0333e1b2de31b6bc839d8e2a908d7830c6504.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/952199c28332bc90cfd74530a77ee237967ed32b3c71322559c59f7a42187dc4.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c2a4ddcc9c3b339d752c48925d62fc4cc5adbf6fae8fedef74cdd47e88da01f8.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e3936d3356573ce2e472495cd3ce769f49a613e453b010433dafce5ea498ddc2.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - FileName: NTIOLib.sys
   MD5: 4d99d02f49e027332a0a9c31c674e13b

@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_gdrv_7hXZ {
+rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_gdrv_7HzG {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 1cff7b947f8c3dea1d34dc791fc78cdc.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ff6729518a380bf57f1bc6f1ec0aa7f3012e1618b8d9b0f31a61d299ee2b4339"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041002d00420059005400450020004e006f006e0050004e00500020004400720069007600650072 } /* FileDescription GIGA-BYTE NonPNP Driver */

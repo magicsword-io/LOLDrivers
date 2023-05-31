@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_5L5H {
+rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_3tvE {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ab4ee84e09b09012ac86d3a875af9d43.bin, fe820a5f99b092c3660762c6fc6c64e0.bin, 557fd33ee99db6fe263cfcb82b7866b3.bin"
 		author = "Florian Roth"
@@ -7,7 +7,7 @@ rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_5L5H {
 		hash = "2a6db9facf9e13d35c37dd468be04bae5f70c6127a9aee76daebddbdec95d486"
 		hash = "1e16a01ef44e4c56e87abfbe03b2989b0391b172c3ec162783ad640be65ab961"
 		hash = "aebcbfca180e372a048b682a4859fd520c98b5b63f6e3a627c626cb35adc0399"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */

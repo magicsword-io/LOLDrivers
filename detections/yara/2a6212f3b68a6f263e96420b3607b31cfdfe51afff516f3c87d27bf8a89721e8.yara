@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_8YtC {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_eQ4d {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 650f6531db6fb0ed25d7fc70be35a4da.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2a6212f3b68a6f263e96420b3607b31cfdfe51afff516f3c87d27bf8a89721e8"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirIT Agent System */

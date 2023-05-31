@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_PCHuntersys_PCHunter_3Tac {
+rule PUA_VULN_Driver_PCHuntersys_PCHunter_38Eq {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - c2c1b8c00b99e913d992a870ed478a24.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1b7fb154a7b7903a3c81f12f4b094f24a3c60a6a8cffca894c67c264ab7545fa"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00450070006f006f006c0073006f00660074002000570069006e0064006f0077007300200049006e0066006f0072006d006100740069006f006e0020005600690065007700200054006f006f006c0073 } /* FileDescription Epoolsoft Windows Information View Tools */

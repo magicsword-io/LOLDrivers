@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_AdvancedMicroDevicesInc_AMDPowerProfilersys_AMDuProf_32BZ {
+rule PUA_VULN_Driver_AdvancedMicroDevicesInc_AMDPowerProfilersys_AMDuProf_6biR {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - e4266262a77fffdea2584283f6c4f51d.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0af5ccb3d33a9ba92071c9637be6254030d61998733a5eb3583e865e17844e05"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d004400200050006f007700650072002000500072006f00660069006c0069006e00670020004400720069007600650072 } /* FileDescription AMD Power Profiling Driver */

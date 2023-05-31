@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_WindowsRServerDDKprovider_cpuzsys_WindowsRServerDDKdriver_92L6 {
+rule PUA_VULN_Driver_WindowsRServerDDKprovider_cpuzsys_WindowsRServerDDKdriver_4fXc {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 7d46d0ddaf8c7e1776a70c220bf47524.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3871e16758a1778907667f78589359734f7f62f9dc953ec558946dcdbe6951e3"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */

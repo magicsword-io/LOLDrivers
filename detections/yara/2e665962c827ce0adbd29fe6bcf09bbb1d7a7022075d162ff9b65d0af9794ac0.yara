@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_33Fp {
+rule PUA_VULN_Driver_NovellInc_NovellXTier_akPA {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - bd5d4d07ae09e9f418d6b4ac6d9f2ed5.bin, 4a23e0f2c6f926a41b28d574cbc6ac30.bin, 4c76554d9a72653c6156ca0024d21a8e.bin"
 		author = "Florian Roth"
@@ -7,7 +7,7 @@ rule PUA_VULN_Driver_NovellInc_NovellXTier_33Fp {
 		hash = "fb81b5f8bf69637dbdf050181499088a67d24577587bc520de94b5ee8996240f"
 		hash = "76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22"
 		hash = "2e665962c827ce0adbd29fe6bcf09bbb1d7a7022075d162ff9b65d0af9794ac0"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c002000580054006900650072002000530065007300730069006f006e0020004d0061006e0061006700650072 } /* FileDescription Novell XTier Session Manager */

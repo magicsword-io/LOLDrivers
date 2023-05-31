@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_cpuzsys_WindowsRCodenameLonghornDDKdriver_6T36 {
+rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_cpuzsys_WindowsRCodenameLonghornDDKdriver_34xe {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - c9c25778efe890baa4087e32937016a0.bin, e0bfbdf3793ea2742c03f5a82cb305a5.bin, 07493c774aa406478005e8fe52c788b2.bin, 94ccef76fda12ab0b8270f9b2980552b.bin"
 		author = "Florian Roth"
@@ -8,7 +8,7 @@ rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_cpuzsys_WindowsRCodenam
 		hash = "2ef7df384e93951893b65500dac6ee09da6b8fe9128326caad41b8be4da49a1e"
 		hash = "dbb457ae1bd07a945a1466ce4a206c625e590aee3922fa7d86fbe956beccfc98"
 		hash = "8e5aef7c66c0e92dfc037ee29ade1c8484b8d7fadebdcf521d2763b1d8215126"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUID Driver */

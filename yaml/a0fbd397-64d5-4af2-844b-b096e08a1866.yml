@@ -4,8 +4,8 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create libnicm.sys binPath=C:\windows\temp\libnicm.sys type=kernel
-  && sc.exe start libnicm.sys'
+Commands: sc.exe create libnicm.sys binPath=C:\windows\temp\libnicm.sys type=kernel
+  && sc.exe start libnicm.sys
 Description: []
 Usecase: Elevate privileges
 Privileges: kernel
@@ -15,7 +15,16 @@ Resources:
 Acknowledgement:
   Person: []
   Handle: ''
-Detection: []
+Detection:
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ab0925398f3fa69a67eacee2bbb7b34ac395bb309df7fc7a9a9b8103ef41ed7a.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/b37b3c6877b70289c0f43aeb71349f7344b06063996e6347c3c18d8c5de77f3b.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/b50ffc60eaa4fb7429fdbb67c0aba0c7085f5129564d0a113fec231c5f8ff62e.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/da11e9598eef033722b97873d1c046270dd039d0e3ee6cd37911e2dc2eb2608d.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e16dc51c51b2df88c474feb52ce884d152b3511094306a289623de69dedfdf48.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - FileName: libnicm.sys
   MD5: 7a6a6d6921cd1a4e1d61f9672a4560d6

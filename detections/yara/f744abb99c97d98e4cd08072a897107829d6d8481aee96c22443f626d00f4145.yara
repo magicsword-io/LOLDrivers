@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_HPDevelopmentCompany_etdsuppsys_HPETDiDriverDLL_7Kdr {
+rule PUA_VULN_Driver_HPDevelopmentCompany_etdsuppsys_HPETDiDriverDLL_5DAo {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - a92bf3c219a5fa82087b6c31bdf36ff3.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f744abb99c97d98e4cd08072a897107829d6d8481aee96c22443f626d00f4145"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004500540044006900200053007500700070006f007200740020004400720069007600650072 } /* FileDescription ETDi Support Driver */

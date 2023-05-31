@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_ATITechnologiesInc_atillksys_ATIDiagnostics_4Mxc {
+rule PUA_VULN_Driver_ATITechnologiesInc_atillksys_ATIDiagnostics_3tbh {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 26d973d6d9a0d133dfda7d8c1adc04b7.bin, 27d21eeff199ed555a29ca0ea4453cfb.bin, 62f02339fe267dc7438f603bfb5431a1.bin"
 		author = "Florian Roth"
@@ -7,7 +7,7 @@ rule PUA_VULN_Driver_ATITechnologiesInc_atillksys_ATIDiagnostics_4Mxc {
 		hash = "ad40e6d0f77c0e579fb87c5106bf6de3d1a9f30ee2fbf8c9c011f377fa05f173"
 		hash = "38bb9751a3a1f072d518afe6921a66ee6d5cf6d25bc50af49e1925f20d75d4d7"
 		hash = "5c04c274a708c9a7d993e33be3ea9e6119dc29527a767410dbaf93996f87369a"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410054004900200044006900610067006e006f007300740069006300730020004800610072006400770061007200650020004100620073007400720061006300740069006f006e0020005300790073 } /* FileDescription ATI Diagnostics Hardware Abstraction Sys */

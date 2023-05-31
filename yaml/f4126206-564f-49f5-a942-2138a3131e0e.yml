@@ -4,8 +4,8 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create NICM.sys binPath=C:\windows\temp\NICM.SYS type=kernel
-  && sc.exe start NICM.SYS'
+Commands: sc.exe create NICM.sys binPath=C:\windows\temp\NICM.SYS type=kernel && sc.exe
+  start NICM.SYS
 Description: []
 Usecase: Elevate privileges
 Privileges: kernel
@@ -15,7 +15,14 @@ Resources:
 Acknowledgement:
   Person: []
   Handle: ''
-Detection: []
+Detection:
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/3a65d14fd3b1b5981084cdbd293dc6f4558911ea18dd80177d1e5b54d85bcaa0.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/904e0f7d485a98e8497d5ec6dd6e6e1cf0b8d8e067fb64a9e09790af3c8c9d5a.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/cf3180f5308af002ac5d6fd5b75d1340878c375f0aebc3157e3bcad6322b7190.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - FileName: NICM.SYS
   MD5: 52b7cd123f6d1b9ed76b08f2ee7d9433

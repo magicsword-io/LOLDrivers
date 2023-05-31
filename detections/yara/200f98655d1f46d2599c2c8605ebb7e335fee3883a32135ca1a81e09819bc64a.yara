@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_gentilkiwiBenjaminDELPY_mimidrv_mimidrvmimikatz_6z4R {
+rule PUA_VULN_Driver_gentilkiwiBenjaminDELPY_mimidrv_mimidrvmimikatz_8L3K {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 29e03f4811b64969e48a99300978f58c.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "200f98655d1f46d2599c2c8605ebb7e335fee3883a32135ca1a81e09819bc64a"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]006d0069006d006900640072007600200066006f0072002000570069006e0064006f0077007300200028006d0069006d0069006b00610074007a0029 } /* FileDescription mimidrv for Windows (mimikatz) */

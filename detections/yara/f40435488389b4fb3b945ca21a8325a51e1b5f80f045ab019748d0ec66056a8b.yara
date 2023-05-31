@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_ASRockIncorporation_AsrDrvsys_ASRockIODriver_NcEb {
+rule PUA_VULN_Driver_ASRockIncorporation_AsrDrvsys_ASRockIODriver_4u9Z {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 12908c285b9d68ee1f39186110df0f1e.bin, 4f27c09cc8680e06b04d6a9c34ca1e08.bin, 7c72a7e1d42b0790773efd8700e24952.bin, de1cc5c266140bff9d964fab87a29421.bin, 9b91a44a488e4d539f2e55476b216024.bin, 1a234f4643f5658bab07bfa611282267.bin, 76bb1a4332666222a8e3e1339e267179.bin"
 		author = "Florian Roth"
@@ -11,7 +11,7 @@ rule PUA_VULN_Driver_ASRockIncorporation_AsrDrvsys_ASRockIODriver_NcEb {
 		hash = "ece0a900ea089e730741499614c0917432246ceb5e11599ee3a1bb679e24fd2c"
 		hash = "f40435488389b4fb3b945ca21a8325a51e1b5f80f045ab019748d0ec66056a8b"
 		hash = "a7c2e7910942dd5e43e2f4eb159bcd2b4e71366e34a68109548b9fb12ac0f7cc"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100530052006f0063006b00200049004f0020004400720069007600650072 } /* FileDescription ASRock IO Driver */

@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_WindowsRServerDDKprovider_speedfansys_WindowsRServerDDKdriver_97wT {
+rule PUA_VULN_Driver_WindowsRServerDDKprovider_speedfansys_WindowsRServerDDKdriver_4v4t {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 5f9785e7535f8f602cb294a54962c9e7.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "22be050955347661685a4343c51f11c7811674e030386d2264cd12ecbf544b7c"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0053007000650065006400460061006e00200044006500760069006300650020004400720069007600650072 } /* FileDescription SpeedFan Device Driver */

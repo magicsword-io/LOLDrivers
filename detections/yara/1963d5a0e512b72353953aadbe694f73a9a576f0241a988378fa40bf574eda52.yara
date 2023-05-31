@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_SuperMicroComputerInc_phymem_phymem_5dqK {
+rule PUA_VULN_Driver_SuperMicroComputerInc_phymem_phymem_5R5H {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 2c54859a67306e20bfdc8887b537de72.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1963d5a0e512b72353953aadbe694f73a9a576f0241a988378fa40bf574eda52"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]007000680079006d0065006d0020004100700070006c00690063006100740069006f006e } /* FileDescription phymem Application */

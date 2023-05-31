@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_WindowsRServerDDKprovider_gdrvsys_WindowsRServerDDKdriver_7Bg6 {
+rule PUA_VULN_Driver_WindowsRServerDDKprovider_gdrvsys_WindowsRServerDDKdriver_4No6 {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 9ab9f3b75a2eb87fafb1b7361be9dfb3.bin, 31f34de4374a6ed0e70a022a0efa2570.bin, 7907e14f9bcf3a4689c9a74a1a873cb6.bin"
 		author = "Florian Roth"
@@ -7,7 +7,7 @@ rule PUA_VULN_Driver_WindowsRServerDDKprovider_gdrvsys_WindowsRServerDDKdriver_7
 		hash = "31f4cfb4c71da44120752721103a16512444c13c2ac2d857a7e6f13cb679b427"
 		hash = "6f1fc8287dd8d724972d7a165683f2b2ad6837e16f09fe292714e8e38ecd1e38"
 		hash = "17927b93b2d6ab4271c158f039cae2d60591d6a14458f5a5690aec86f5d54229"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041004200590054004500200054006f006f006c0073 } /* FileDescription GIGABYTE Tools */

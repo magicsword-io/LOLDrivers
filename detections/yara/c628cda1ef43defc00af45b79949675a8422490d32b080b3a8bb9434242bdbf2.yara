@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_InsydeSoftwareCorp_segwindrvxsys_SEGWindowsDriverx_8WUM {
+rule PUA_VULN_Driver_InsydeSoftwareCorp_segwindrvxsys_SEGWindowsDriverx_6hd4 {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - bdc3b6b83dde7111d5d6b9a2aadf233f.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c628cda1ef43defc00af45b79949675a8422490d32b080b3a8bb9434242bdbf2"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005300450047002000570069006e0064006f0077007300200044007200690076006500720020007800360034 } /* FileDescription SEG Windows Driver x64 */

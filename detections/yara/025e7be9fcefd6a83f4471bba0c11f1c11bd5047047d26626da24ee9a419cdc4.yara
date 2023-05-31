@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_ASUS_asmmapsys_ATKGenericFunctionService_57ZP {
+rule PUA_VULN_Driver_ASUS_asmmapsys_ATKGenericFunctionService_89BA {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 4c016fd76ed5c05e84ca8cab77993961.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "025e7be9fcefd6a83f4471bba0c11f1c11bd5047047d26626da24ee9a419cdc4"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d0065006d006f007200790020006d0061007000700069006e00670020004400720069007600650072 } /* FileDescription Memory mapping Driver */

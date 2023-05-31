@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_PhoenixTechnologiesLtd_PHLASHNT_WinPhlash_4vS2 {
+rule PUA_VULN_Driver_PhoenixTechnologiesLtd_PHLASHNT_WinPhlash_6EqA {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - e9e786bdba458b8b4f9e93d034f73d00.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "65db1b259e305a52042e07e111f4fa4af16542c8bacd33655f753ef642228890"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005300570069006e0046006c006100730068002000440072006900760065007200200066006f0072002000570069006e0064006f007700730020004e0054 } /* FileDescription SWinFlash Driver for Windows NT */

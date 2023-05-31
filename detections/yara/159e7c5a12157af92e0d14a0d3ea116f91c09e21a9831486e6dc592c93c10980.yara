@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_CPUDriver_WindowsRCodenameLonghornDDKdriver_7ucK {
+rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_CPUDriver_WindowsRCodenameLonghornDDKdriver_44ZA {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - c1d063c9422a19944cdaa6714623f2eC.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "159e7c5a12157af92e0d14a0d3ea116f91c09e21a9831486e6dc592c93c10980"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041005300550053002000540044004500200043005000550020004400720069007600650072 } /* FileDescription ASUS TDE CPU Driver */

@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_ASUSTeKComputerInc_IOMapsys_ASUSKernelModeDriverforNT_M5Cs {
+rule PUA_VULN_Driver_ASUSTeKComputerInc_IOMapsys_ASUSKernelModeDriverforNT_6h3E {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - a01c412699b6f21645b2885c2bae4454.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410053005500530020004b00650072006e0065006c0020004d006f00640065002000440072006900760065007200200066006f00720020004e00540020 } /* FileDescription ASUS Kernel Mode Driver for NT  */

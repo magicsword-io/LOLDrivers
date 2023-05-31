@@ -1,12 +1,12 @@
 
-rule PUA_VULN_Driver_MarvinTestSolutionsInc_Hwsys_HW_58ti {
+rule PUA_VULN_Driver_MarvinTestSolutionsInc_Hwsys_HW_3ijT {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 3cf7a55ec897cc938aebb8161cb8e74f.bin, 45c2d133d41d2732f3653ed615a745c8.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fd388cf1df06d419b14dedbeb24c6f4dff37bea26018775f09d56b3067f0de2c"
 		hash = "6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570020002d002000570069006e0064006f007700730020004e0054002d00380020002800330032002f00360034002000620069007400290020006b00650072006e0065006c0020006d006f00640065002000640072006900760065007200200066006f007200200050004300200070006f007200740073002f006d0065006d006f00720079002f0050004300490020006100630063006500730073 } /* FileDescription HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI access */

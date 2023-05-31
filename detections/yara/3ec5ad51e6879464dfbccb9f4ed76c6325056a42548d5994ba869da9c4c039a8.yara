@@ -1,12 +1,12 @@
 
-rule PUA_VULN_Driver_OpenLibSysorg_WinRingsys_WinRing_87oR {
+rule PUA_VULN_Driver_OpenLibSysorg_WinRingsys_WinRing_5zrM {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 12cecc3c14160f32b21279c1a36b8338.bin, 828bb9cb1dd449cd65a29b18ec46055f.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "47eaebc920ccf99e09fc9924feb6b19b8a28589f52783327067c9b09754b5e84"
 		hash = "3ec5ad51e6879464dfbccb9f4ed76c6325056a42548d5994ba869da9c4c039a8"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069006e00520069006e00670030 } /* FileDescription WinRing0 */

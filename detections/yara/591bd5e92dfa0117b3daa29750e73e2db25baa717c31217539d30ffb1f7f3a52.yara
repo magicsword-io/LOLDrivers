@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_694t {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_6AbX {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 68dde686d6999ad2e5d182b20403240b.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "591bd5e92dfa0117b3daa29750e73e2db25baa717c31217539d30ffb1f7f3a52"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c0069006200200046006f00720020004d005300490052006100740069006f005f00430043 } /* FileDescription NTIOLib For MSIRatio_CC */

@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_ASRockIncorporation_AsrAutoChkUpdDrvsys_AsrAutoChkUpdDrvDriver_8xqF {
+rule PUA_VULN_Driver_ASRockIncorporation_AsrAutoChkUpdDrvsys_AsrAutoChkUpdDrvDriver_4V9P {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 75d6c3469347de1cdfa3b1b9f1544208.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2aa1b08f47fbb1e2bd2e4a492f5d616968e703e1359a921f62b38b8e4662f0c4"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100730072004100750074006f00430068006b0055007000640044007200760020004400720069007600650072 } /* FileDescription AsrAutoChkUpdDrv Driver */

@@ -1,5 +1,5 @@
 
-rule PUA_VULN_Driver_HighresolutionEnterpriseswwwhighrezcouk_inpoutxsys_inpoutxDriverVersion_x_3bjB {
+rule PUA_VULN_Driver_HighresolutionEnterpriseswwwhighrezcouk_inpoutxsys_inpoutxDriverVersion_x_8ZtT {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - 5ca1922ed5ee2b533b5f3dd9be20fd9a.bin, 9321a61a25c7961d9f36852ecaa86f55.bin, 4d487f77be4471900d6ccbc47242cc25.bin"
 		author = "Florian Roth"
@@ -7,7 +7,7 @@ rule PUA_VULN_Driver_HighresolutionEnterpriseswwwhighrezcouk_inpoutxsys_inpoutxD
 		hash = "f581decc2888ef27ee1ea85ea23bbb5fb2fe6a554266ff5a1476acd1d29d53af"
 		hash = "f8965fdce668692c3785afa3559159f9a18287bc0d53abb21902895a8ecf221b"
 		hash = "2d83ccb1ad9839c9f5b3f10b1f856177df1594c66cbbc7661677d4b462ebf44d"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004b00650072006e0065006c0020006c006500760065006c00200070006f0072007400200061006300630065007300730020006400720069007600650072 } /* FileDescription Kernel level port access driver */

@@ -4,8 +4,8 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create HpPortIox64.sys binPath=C:\windows\temp\HpPortIox64.sys
-  type=kernel && sc.exe start HpPortIox64.sys'
+Commands: sc.exe create HpPortIox64.sys binPath=C:\windows\temp\HpPortIox64.sys type=kernel
+  && sc.exe start HpPortIox64.sys
 Description: []
 Usecase: Elevate privileges
 Privileges: kernel
@@ -15,7 +15,12 @@ Resources:
 Acknowledgement:
   Person: []
   Handle: ''
-Detection: []
+Detection:
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/a4680fabf606d6580893434e81c130ff7ec9467a15e6534692443465f264d3c9.yara
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - FileName: HpPortIox64.sys
   MD5: 7b9e1e5e8ff4f18f84108bb9f7b5d108

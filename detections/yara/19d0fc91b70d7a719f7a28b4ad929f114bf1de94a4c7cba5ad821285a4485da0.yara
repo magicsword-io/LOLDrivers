@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_3NCL {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_5pCi {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - f83c61adbb154d46dd8f77923aa7e9c3.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "19d0fc91b70d7a719f7a28b4ad929f114bf1de94a4c7cba5ad821285a4485da0"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AVG Anti Rootkit */

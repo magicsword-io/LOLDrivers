@@ -1,11 +1,11 @@
 
-rule PUA_VULN_Driver_DTResearchInc_iomemsys_iomemsys_oXoQ {
+rule PUA_VULN_Driver_DTResearchInc_iomemsys_iomemsys_8mqN {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - f1e054333cc40f79cfa78e5fbf3b54c2.bin"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "dd4a1253d47de14ef83f1bc8b40816a86ccf90d1e624c5adf9203ae9d51d4097"
-		date = "2023-05-23"
+		date = "2023-05-31"
 		score = 50
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0044005400520020004b00650072006e0065006c0020006d006f006400650020006400720069007600650072 } /* FileDescription DTR Kernel mode driver */
