@@ -40,7 +40,7 @@ sc.exe create rtkio64.sys binPath=C:\windows\temp\rtkio64.sys type=kernel &amp;&
 
 
 ### Detections
-{{< button "https://github.com/magicsword-io/LOLDrivers/blob/yara_detections/detections/yara/7133a461aeb03b4d69d43f3d26cd1a9e3ee01694e97a0645a3d8aa1a44c39129.yara" "YARA" "btn-danger" >}}
+
 ### Resources
 <br>
 <li><a href=" https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md"> https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md</a></li>
@@ -172,7 +172,7 @@ sc.exe create rtkio64.sys binPath=C:\windows\temp\rtkio64.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/95d244a5-fa5b-4bcb-a2fd-39ed6c7ea7a4.yaml)
 
-*last_updated:* 2023-06-02
+*last_updated:* 2023-06-01
 
 
 

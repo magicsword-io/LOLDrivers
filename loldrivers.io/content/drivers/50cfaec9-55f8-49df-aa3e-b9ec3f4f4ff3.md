@@ -40,7 +40,7 @@ sc.exe create mhyprot.sys binPath=C:\windows\temp\mhyprot.sys type=kernel &amp;&
 
 
 ### Detections
-{{< button "https://github.com/magicsword-io/LOLDrivers/blob/yara_detections/detections/yara/509628b6d16d2428031311d7bd2add8d5f5160e9ecc0cd909f1e82bbbb3234d6.yara" "YARA" "btn-danger" >}}
+
 ### Resources
 <br>
 <li><a href=" https://github.com/jbaines-r7/dellicious"> https://github.com/jbaines-r7/dellicious</a></li>
@@ -229,7 +229,7 @@ sc.exe create mhyprot.sys binPath=C:\windows\temp\mhyprot.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/50cfaec9-55f8-49df-aa3e-b9ec3f4f4ff3.yaml)
 
-*last_updated:* 2023-06-02
+*last_updated:* 2023-06-01
 
 
 

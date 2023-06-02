@@ -45,7 +45,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 
 
 ### Detections
-{{< button "https://github.com/magicsword-io/LOLDrivers/blob/yara_detections/detections/yara/358ac54be252673841a1d65bfc2fb6d549c1a4c877fa7f5e1bfa188f30375d69.yara" "YARA" "btn-danger" >}}
+
 ### Resources
 <br>
 <li><a href=" https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules"> https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules</a></li>
@@ -147,7 +147,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/b28cc2ee-d4a2-4fe4-9acb-a7a61cad20c6.yaml)
 
-*last_updated:* 2023-06-02
+*last_updated:* 2023-06-01
 
 
 

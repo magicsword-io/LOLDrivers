@@ -40,7 +40,7 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 
 
 ### Detections
-{{< button "https://github.com/magicsword-io/LOLDrivers/blob/yara_detections/detections/yara/0e53b58415fa68552928622118d5b8a3a851b2fc512709a90b63ba46acda8b6b.yara" "YARA" "btn-danger" >}}
+
 ### Resources
 <br>
 <li><a href="https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951">https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951</a></li>
@@ -167,7 +167,7 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cf49f43c-d7b4-4c1a-a40d-1be36ea64bff.yaml)
 
-*last_updated:* 2023-06-02
+*last_updated:* 2023-06-01
 
 
 

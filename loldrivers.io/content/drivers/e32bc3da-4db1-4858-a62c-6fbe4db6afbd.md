@@ -40,7 +40,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 
 
 ### Detections
-{{< button "https://github.com/magicsword-io/LOLDrivers/blob/yara_detections/detections/yara/01aa278b07b58dc46c84bd0b1b5c8e9ee4e62ea0bf7a695862444af32e87f1fd.yara" "YARA" "btn-danger" >}}
+
 ### Resources
 <br>
 <li><a href="https://github.com/elastic/protections-artifacts/search?q=VulnDriver">https://github.com/elastic/protections-artifacts/search?q=VulnDriver</a></li>
@@ -376,7 +376,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/e32bc3da-4db1-4858-a62c-6fbe4db6afbd.yaml)
 
-*last_updated:* 2023-06-02
+*last_updated:* 2023-06-01
 
 
 

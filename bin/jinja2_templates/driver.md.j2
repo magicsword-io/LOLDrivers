@@ -65,7 +65,9 @@ This download link contains the malicious driver!
 
 
 ### Detections
-{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/blob/yara_detections/detections/yara/{% endraw %}{{ driver.KnownVulnerableSamples[0].SHA256 }}{% raw %}.yara" "YARA" "btn-danger" >}}{% endraw %}
+{% if driver.yara %}
+    {% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/{% endraw %}{{ driver.KnownVulnerableSamples[0].SHA256 }}{% raw %}.yara" "YARA" "btn-danger" >}}{% endraw %}
+{% endif %}
 
 ### Resources
 <br>

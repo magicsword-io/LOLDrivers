@@ -40,7 +40,7 @@ sc.exe create WinRing0x64.sys binPath=C:\windows\temp\WinRing0x64.sys     type=k
 
 
 ### Detections
-{{< button "https://github.com/magicsword-io/LOLDrivers/blob/yara_detections/detections/yara/11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5.yara" "YARA" "btn-danger" >}}
+
 ### Resources
 <br>
 <li><a href=" https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md"> https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md</a></li>
@@ -157,7 +157,7 @@ sc.exe create WinRing0x64.sys binPath=C:\windows\temp\WinRing0x64.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/f0fd5bc6-9ebd-4eb0-93ce-9256a5b9abf9.yaml)
 
-*last_updated:* 2023-06-02
+*last_updated:* 2023-06-01
 
 
 

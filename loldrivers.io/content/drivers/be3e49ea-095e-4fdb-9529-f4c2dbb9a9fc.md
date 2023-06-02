@@ -40,7 +40,7 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
 
 
 ### Detections
-{{< button "https://github.com/magicsword-io/LOLDrivers/blob/yara_detections/detections/yara/65db1b259e305a52042e07e111f4fa4af16542c8bacd33655f753ef642228890.yara" "YARA" "btn-danger" >}}
+
 ### Resources
 <br>
 <li><a href=" https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md"> https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md</a></li>
@@ -150,7 +150,7 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/be3e49ea-095e-4fdb-9529-f4c2dbb9a9fc.yaml)
 
-*last_updated:* 2023-06-02
+*last_updated:* 2023-06-01
 
 
 

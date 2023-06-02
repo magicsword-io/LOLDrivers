@@ -40,7 +40,7 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
 
 
 ### Detections
-{{< button "https://github.com/magicsword-io/LOLDrivers/blob/yara_detections/detections/yara/be54f7279e69fb7651f98e91d24069dbc7c4c67e65850e486622ccbdc44d9a57.yara" "YARA" "btn-danger" >}}
+
 ### Resources
 <br>
 <li><a href="https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html">https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html</a></li>
@@ -134,7 +134,7 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cfd36b2e-cf96-498e-aeb6-ee20e7b33bbb.yaml)
 
-*last_updated:* 2023-06-02
+*last_updated:* 2023-06-01
 
 
 

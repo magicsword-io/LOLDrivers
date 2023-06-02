@@ -45,7 +45,7 @@ sc.exe create nt2.sys binPath=C:\windows\temp \n \n \n  t2.sys type=kernel &amp;
 
 
 ### Detections
-{{< button "https://github.com/magicsword-io/LOLDrivers/blob/yara_detections/detections/yara/cb9890d4e303a4c03095d7bc176c42dee1b47d8aa58e2f442ec1514c8f9e3cec.yara" "YARA" "btn-danger" >}}
+
 ### Resources
 <br>
 <li><a href=" https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules"> https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules</a></li>
@@ -85,7 +85,7 @@ sc.exe create nt2.sys binPath=C:\windows\temp \n \n \n  t2.sys type=kernel &amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cacc48e6-6ed8-431c-abee-88ee6c2dc3c1.yaml)
 
-*last_updated:* 2023-06-02
+*last_updated:* 2023-06-01
 
 
 

@@ -40,7 +40,7 @@ This download link contains the vulnerable driver!
 
 
 ### Detections
-{{< button "https://github.com/magicsword-io/LOLDrivers/blob/yara_detections/detections/yara/5c0b429e5935814457934fa9c10ac7a88e19068fa1bd152879e4e9b89c103921.yara" "YARA" "btn-danger" >}}
+
 ### Resources
 <br>
 <li><a href="Internal Research">Internal Research</a></li>
@@ -271,7 +271,7 @@ This download link contains the vulnerable driver!
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/2ea12acc-95b6-4f91-afb7-8ded7a2fe9d9.yaml)
 
-*last_updated:* 2023-06-02
+*last_updated:* 2023-06-01
 
 
 
