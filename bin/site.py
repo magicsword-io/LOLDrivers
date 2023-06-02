@@ -159,9 +159,9 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
         # Check if 'SHA256' key exists in the first item of 'KnownVulnerableSamples'
         if 'SHA256' in object['KnownVulnerableSamples'][0]:
             yara_file_path = os.path.join(REPO_PATH, '../detections/yara', object['KnownVulnerableSamples'][0]['SHA256'] + '.yara')
-            driver['yara'] = os.path.isfile(yara_file_path)
+            object['yara'] = os.path.isfile(yara_file_path)
         else:
-            driver['yara'] = False
+            object['yara'] = False
 
         drivers.append(object)
 
