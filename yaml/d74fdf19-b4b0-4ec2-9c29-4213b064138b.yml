@@ -4,8 +4,9 @@ Created: '2023-05-11'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create irec binPath=C:\windows\temp\irec.sys type=kernel
-  && sc.exe start irec.sys'
+Commands:
+  Command: sc.exe create irec binPath=C:\windows\temp\irec.sys type=kernel
+    && sc.exe start irec.sys
 Description: []
 Usecase: Elevate privileges
 Privileges: kernel
