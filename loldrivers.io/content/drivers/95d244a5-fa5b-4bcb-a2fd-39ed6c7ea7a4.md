@@ -172,7 +172,7 @@ sc.exe create rtkio64.sys binPath=C:\windows\temp\rtkio64.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/95d244a5-fa5b-4bcb-a2fd-39ed6c7ea7a4.yaml)
 
-*last_updated:* 2023-06-01
+*last_updated:* 2023-06-02
 
 
 
