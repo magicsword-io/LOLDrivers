@@ -4,40 +4,19 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: sc.exe create RwDrv.sys binPath=C:\windows\temp\RwDrv.sys type=kernel &&
-  sc.exe start RwDrv.sys
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create RwDrv.sys binPath=C:\windows\temp\RwDrv.sys type=kernel
+    && sc.exe start RwDrv.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
   Person: []
   Handle: ''
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/1e0eb0811a7cf1bdaf29d3d2cab373ca51eb8d8b58889ab7728e2d3aed244abe.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/2470fd1b733314c9b0afa19fd39c5d19aa1b36db598b5ebbe93445caa545da5f.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/2bf29a2df52110ed463d51376562afceac0e80fbb1033284cf50edd86c406b14.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/3279593db91bb7ad5b489a01808c645eafafda6cc9c39f50d10ccc30203f2ddf.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/3384f4a892f7aa72c43280ff682d85c8e3936f37a68d978d307a9461149192de.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/45ba688a4bded8a7e78a4f5b0dc21004e951ddceb014bb92f51a3301d2fbc56a.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/d969845ef6acc8e5d3421a7ce7e244f419989710871313b04148f9b322751e5d.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Detection: []
 KnownVulnerableSamples:
 - FileName: RwDrv.sys
   MD5: f853abe0dc162601e66e4a346faed854

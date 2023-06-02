@@ -7,10 +7,10 @@ Verified: 'TRUE'
 Commands:
   Command: sc.exe create irec binPath=C:\windows\temp\irec.sys type=kernel
     && sc.exe start irec.sys
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - https://github.com/alfarom256/HPHardwareDiagnostics-PoC
 Acknowledgement:

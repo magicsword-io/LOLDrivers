@@ -7,10 +7,10 @@ Verified: 'TRUE'
 Commands:
   Command: sc.exe create procexp.sys binPath=C:\windows\temp\procexp.Sys type=kernel
     && sc.exe start procexp.Sys
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 - https://malware.news/t/lazarus-group-attack-case-using-vulnerability-of-certificate-software-commonly-used-by-public-institutions-and-universities/67715

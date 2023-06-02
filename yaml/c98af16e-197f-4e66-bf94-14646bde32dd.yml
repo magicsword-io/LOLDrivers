@@ -4,28 +4,19 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: sc.exe create CupFixerx64.sys binPath=C:\windows\temp\CupFixerx64.sys type=kernel
-  && sc.exe start CupFixerx64.sys
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create CupFixerx64.sys binPath=C:\windows\temp\CupFixerx64.sys type=kernel
+    && sc.exe start CupFixerx64.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
   Person: []
   Handle: ''
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/8c748ae5dcc10614cc134064c99367d28f3131d1f1dda0c9c29e99279dc1bdd9.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Detection: []
 KnownVulnerableSamples:
 - FileName: CupFixerx64.sys
   MD5: 2b3e0db4f00d4b3d0b4d178234b02e72

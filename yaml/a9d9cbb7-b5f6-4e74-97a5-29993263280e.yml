@@ -4,34 +4,19 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: sc.exe create CorsairLLAccess64.sys binPath=C:\windows\temp\CorsairLLAccess64.sys
-  type=kernel && sc.exe start CorsairLLAccess64.sys
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create CorsairLLAccess64.sys binPath=C:\windows\temp\CorsairLLAccess64.sys type=kernel
+    && sc.exe start CorsairLLAccess64.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
   Person: []
   Handle: ''
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/29a90ae1dcee66335ece4287a06482716530509912be863c85a2a03a6450a5b6.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/5fad3775feb8b6f6dcbd1642ae6b6a565ff7b64eadfc9bf9777918b51696ab36.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/a334bdf0c0ab07803380eb6ef83eefe7c147d6962595dd9c943a6a76f2200b0d.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/f15ae970e222ce06dbf3752b223270d0e726fb78ebec3598b4f8225b5a0880b1.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Detection: []
 KnownVulnerableSamples:
 - FileName: CorsairLLAccess64.sys
   MD5: b34361d151c793415ef92ee5d368c053

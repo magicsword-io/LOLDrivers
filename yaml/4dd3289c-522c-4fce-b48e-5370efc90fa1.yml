@@ -4,64 +4,19 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: sc.exe create iQVW64.sys binPath=C:\windows\temp\iQVW64.SYS type=kernel
-  && sc.exe start iQVW64.SYS
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create iQVW64.sys binPath=C:\windows\temp\iQVW64.SYS type=kernel
+    && sc.exe start iQVW64.SYS
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
   Person: []
   Handle: ''
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/19bf0d0f55d2ad33ef2d105520bde8fb4286f00e9d7a721e3c9587b9408a0775.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/1f8168036d636aad1680dd0f577ef9532dbb2dad3591d63e752b0ba3ee6fd501.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/2d2c7ee9547738a8a676ab785c151e8b48ed40fe7cf6174650814c7f5f58513b.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/37c637a74bf20d7630281581a8fae124200920df11ad7cd68c14c26cc12c5ec9.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4d0580c20c1ba74cf90d44c82d040f0039542eea96e4bbff3996e6760f457cee.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/57a389da784269bb2cc0a258500f6dfbf4f6269276e1192619ce439ec77f4572.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/5f6547e9823f94c5b94af1fb69a967c4902f72b6e0c783804835e6ce27f887b0.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/5f69d6b167a1eeca3f6ac64785c3c01976ee7303171faf998d65852056988683.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/77c5e95b872b1d815d6d3ed28b399ca39f3427eeb0143f49982120ff732285a9.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/7cb497abc44aad09a38160d6a071db499e05ff5871802ccc45d565d242026ee7.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/a566af57d88f37fa033e64b1d8abbd3ffdacaba260475fbbc8dab846a824eff5.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/a59c40e7470b7003e8adfee37c77606663e78d7e3f2ebb8d60910af19924d8df.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/b51ddcf8309c80384986dda9b11bf7856b030e3e885b0856efdb9e84064917e5.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/cff9aa9046bdfd781d34f607d901a431a51bb7e5f48f4f681cc743b2cdedc98c.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/d1f4949f76d8ac9f2fa844d16b1b45fb1375d149d46e414e4a4c9424dc66c91f.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/d74755311d127d0eb7454e56babc2db8dbaa814bc4ba8e2a7754d3e0224778e1.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/de3597ae7196ca8c0750dce296a8a4f58893774f764455a125464766fcc9b3b5.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/f877296e8506e6a1acbdacdc5085b18c6842320a2775a329d286bac796f08d54.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ff115cefe624b6ca0b3878a86f6f8b352d1915b65fbbdc33ae15530a96ebdaa7.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Detection: []
 KnownVulnerableSamples:
 - FileName: iQVW64.SYS
   MD5: c796a92a66ec725b7b7febbdc13dc69b
