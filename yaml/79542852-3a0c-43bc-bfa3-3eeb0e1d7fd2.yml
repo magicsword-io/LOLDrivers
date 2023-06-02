@@ -4,8 +4,8 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create VBoxDrv.sys binPath=C:\windows\temp\VBoxDrv.sys type=kernel
-  && sc.exe start VBoxDrv.sys'
+Commands: sc.exe create VBoxDrv.sys binPath=C:\windows\temp\VBoxDrv.sys type=kernel
+  && sc.exe start VBoxDrv.sys
 Description: []
 Usecase: Elevate privileges
 Privileges: kernel
@@ -15,7 +15,29 @@ Resources:
 Acknowledgement:
   Person: []
   Handle: ''
-Detection: []
+Detection:
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/26f41e4268be59f5de07552b51fa52d18d88be94f8895eb4a16de0f3940cf712.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/3724b39e97936bb20ada51c6119aded04530ed86f6b8d6b45fbfb2f3b9a4114b.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/7539157df91923d4575f7f57c8eb8b0fd87f064c919c1db85e73eebb2910b60c.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/9dab4b6fddc8e1ec0a186aa8382b184a5d52cfcabaaf04ff9e3767021eb09cf4.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c26b51b4c37330800cff8519252e110116c3aaade94ceb9894ec5bfb1b8f9924.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c8940e2e9b069ec94f9f711150b313b437f8429f78d522810601b6ee8b52bada.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/cfb7af8ac67a379e7869289aeee21837c448ea6f8ab6c93988e7aa423653bd40.yara
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - FileName: VBoxDrv.sys
   MD5: b1b8e6b85dd03c7f1290b1a071fc79c1

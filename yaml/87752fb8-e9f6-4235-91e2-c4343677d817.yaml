@@ -7,7 +7,8 @@ Verified: 'TRUE'
 Commands:
   Command: sc.exe create mimidrv.sys binPath=C:\windows\temp\mimidrv.sys type=kernel
     && sc.exe start mimidrv.sys
-  Description: Mimidrv is a signed Windows Driver Model WDM kernel mode software driver meant to be used with the standard Mimikatz executable.
+  Description: Mimidrv is a signed Windows Driver Model WDM kernel mode software driver
+    meant to be used with the standard Mimikatz executable.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -19,7 +20,17 @@ Resources:
 Acknowledgement:
   Person: hfiref0x
   Handle: hfiref0x
-Detection: []
+Detection:
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/200f98655d1f46d2599c2c8605ebb7e335fee3883a32135ca1a81e09819bc64a.yara
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - Filename: mimidrv.sys
   MD5: 29e03f4811b64969e48a99300978f58c

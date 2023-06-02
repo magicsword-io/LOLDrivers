@@ -128,9 +128,9 @@ def process_files(input_files, debug):
 	return header_infos
 
 
-def generate_yara_rules(header_infos, strict, debug):
+def generate_yara_rules(header_infos, strict, debug, output_folder):
 	rules = list()
-	rule_names = []
+
 	# Loop over the header infos 
 	for hi in header_infos:
 		# Generate Rule
@@ -152,6 +152,13 @@ def generate_yara_rules(header_infos, strict, debug):
 			new_rule = new_rule.replace('$$$STRICT$$$', "uint16(0) == 0x5a4d and filesize < %dKB and " % max(hi['file_sizes']))
 		else:
 			new_rule = new_rule.replace('$$$STRICT$$$', '')
+
+		# write individual rule to file
+		for s in hi["sha256"]:
+			rule_file_name = f'{output_folder}{s}.yara'
+			with open(rule_file_name, 'w') as rule_file:
+				rule_file.write(new_rule)
+
 		Log.debug(new_rule)
 		# Append rule to the list
 		rules.append(new_rule)
@@ -216,8 +223,9 @@ if __name__ == '__main__':
 	parser = argparse.ArgumentParser(description='YARA Rule Generator for PE Header Info')
 	parser.add_argument('-d', nargs='*', 
                     help='Path to input directory (can be used multiple times)',
-                    metavar='driver-files', default=[['../../drivers/']])
-	parser.add_argument('-o', help="Output file", metavar='output-folder', default='../../detections/yara/yara-rules.yar')
+                    metavar='driver-files', default=['drivers/'], required=False)
+	
+	parser.add_argument('-o', help="Output directory", metavar='output-directory', default='detections/yara/')
 	parser.add_argument('--strict', action='store_true', default=False, help='Include magic header and filesize to make the rule more strict (less false positives)')
 	parser.add_argument('--debug', action='store_true', default=False, help='Debug output')
 
@@ -237,6 +245,7 @@ if __name__ == '__main__':
 
 	# Walk the folders and get a list of all input files
 	Log.info("[+] Processing %d input paths" % len(args.d[0]))
+	print(args.d)
 	file_paths = process_folders(args.d, args.debug)
 
 	# Process each file and extract the header info need for the YARA rules
@@ -245,10 +254,10 @@ if __name__ == '__main__':
 
 	# Generate YARA rules and return them as list of their string representation
 	Log.info("[+] Generating YARA rules from %d header infos" % len(file_infos))
-	yara_rules = generate_yara_rules(file_infos, args.strict, args.debug)
+	yara_rules = generate_yara_rules(file_infos, args.strict, args.debug, args.o)
 
 	# Write the output file
-	with open(args.o, 'w') as fh:
-		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules), args.o))
+	with open(args.o + 'yara-rules.yar', 'w') as fh:
+		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules), args.o + 'yara-rules.yar'))
 		fh.write("\n".join(yara_rules))
 	

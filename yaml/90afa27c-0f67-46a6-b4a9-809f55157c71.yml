@@ -4,8 +4,8 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create nscm.sys binPath=C:\windows\temp\nscm.sys type=kernel
-  && sc.exe start nscm.sys'
+Commands: sc.exe create nscm.sys binPath=C:\windows\temp\nscm.sys type=kernel && sc.exe
+  start nscm.sys
 Description: []
 Usecase: Elevate privileges
 Privileges: kernel
@@ -15,7 +15,27 @@ Resources:
 Acknowledgement:
   Person: []
   Handle: ''
-Detection: []
+Detection:
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/28999af32b55ddb7dcfc26376a244aa2fe297233ce7abe4919a1aef2f7e2cee7.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/2e665962c827ce0adbd29fe6bcf09bbb1d7a7022075d162ff9b65d0af9794ac0.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/5351c81b4ec5a0d79c39d24bac7600d10eac30c13546fde43d23636b3f421e7c.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/8e88cb80328c3dbaa2752591692e74a2fae7e146d7d8aabc9b9ac9a6fe561e6c.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ce23c2dae4cca4771ea50ec737093dfafac06c64db0f924a1ccbbf687e33f5a2.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/fb81b5f8bf69637dbdf050181499088a67d24577587bc520de94b5ee8996240f.yara
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - FileName: nscm.sys
   MD5: ba2c0fa201c74621cddd8638497b3c70

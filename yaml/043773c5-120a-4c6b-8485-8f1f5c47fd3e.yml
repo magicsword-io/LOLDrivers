@@ -4,8 +4,8 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create aswArPot.sys binPath=C:\windows\temp\aswArPot.sys type=kernel
-  && sc.exe start aswArPot.sys'
+Commands: sc.exe create aswArPot.sys binPath=C:\windows\temp\aswArPot.sys type=kernel
+  && sc.exe start aswArPot.sys
 Description: []
 Usecase: Elevate privileges
 Privileges: kernel
@@ -15,7 +15,93 @@ Resources:
 Acknowledgement:
   Person: []
   Handle: ''
-Detection: []
+Detection:
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/0b2ad05939b0aabbdc011082fad7960baa0c459ec16a2b29f37c1fa31795a46d.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/0b542e47248611a1895018ec4f4033ea53464f259c74eb014d018b19ad818917.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/0cd4ca335155062182608cad9ef5c8351a715bce92049719dd09c76422cd7b0c.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/0f016c80c4938fbcd47a47409969b3925f54292eba2ce01a8e45222ce8615eb8.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/0f17e5cfc5bdd74aff91bfb1a836071345ba2b5d1b47b0d5bf8e7e0d4d5e2dbf.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/1023dcd4c80db19e9f82f95b1c5e1ddb60db7ac034848dd5cc1c78104a6350f4.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/1078af0c70e03ac17c7b8aa5ee03593f5decfef2f536716646a4ded1e98c153c.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/1273b74c3c1553eaa92e844fbd51f716356cc19cf77c2c780d4899ec7738fbd1.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/14adbf0bc43414a7700e5403100cff7fc6ade50bebfab16a17acf2fdda5a9da8.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/17687cba00ec2c9036dd3cb5430aa1f4851e64990dafb4c8f06d88de5283d6ca.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/19d0fc91b70d7a719f7a28b4ad929f114bf1de94a4c7cba5ad821285a4485da0.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/1a42ebde59e8f63804eaa404f79ee93a16bb33d27fb158c6bfbe6143226899a0.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/2594b3ef3675ca3a7b465b8ed4962e3251364bab13b12af00ebba7fa2211abb2.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/2732050a7d836ae0bdc5c0aea4cdf8ce205618c3e7f613b8139c176e86476d0c.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/2ce81759bfa236913bbbb9b2cbc093140b099486fd002910b18e2c6e31fdc4f1.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/34e0364a4952d914f23f271d36e11161fb6bb7b64aea22ff965a967825a4a4bf.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/36e3127f045ef1fa7426a3ff8c441092d3b66923d2b69826034e48306609e289.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/3b6e85c8fed9e39b21b2eab0b69bc464272b2c92961510c36e2e2df7aa39861b.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4da08c0681fbe028b60a1eaf5cb8890bd3eba4d0e6a8b976495ddcd315e147ba.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/5bd41a29cbba0d24e639f49d1f201b9bd119b11f5e3b8a5fefa3a5c6f1e7692c.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/65008817eb97635826a8708a6411d7b50f762bab81304e457119d669382944c3.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6e0aa67cfdbe27a059cbd066443337f81c5b6d37444d14792d1c765d9d122dcf.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6fb5bc9c51f6872de116c7db8a2134461743908efc306373f6de59a0646c4f5d.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/7ad0ab23023bc500c3b46f414a8b363c5f8700861bc4745cecc14dd34bcee9ed.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/7d43769b353d63093228a59eb19bba87ce6b552d7e1a99bf34a54eee641aa0ea.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/86a1b1bacc0c51332c9979e6aad84b5fba335df6b9a096ccb7681ab0779a8882.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/8cfd5b2102fbc77018c7fe6019ec15f07da497f6d73c32a31f4ba07e67ec85d9.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/94911fe6f2aba9683b10353094caf71ee4a882de63b4620797629d79f18feec5.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/9a54ef5cfbe6db599322967ee2c84db7daabcb468be10a3ccfcaa0f64d9173c7.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/a2f45d95d54f4e110b577e621fefa0483fa0e3dcca14c500c298fb9209e491c1.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/a5a50449e2cc4d0dbc80496f757935ae38bf8a1bebdd6555a3495d8c219df2ad.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/aaa3459bcac25423f78ed72dbae4d7ef19e7c5c65770cbe5210b14e33cd1816c.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ad8ffccfde782bc287241152cf24245a8bf21c2530d81c57e17631b3c4adb833.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/be8dd2d39a527649e34dc77ef8bc07193a4234b38597b8f51e519dadc5479ec2.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/d5c4ff35eaa74ccdb80c7197d3d113c9cd38561070f2aa69c0affe8ed84a77c9.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/dcb815eb8e9016608d0d917101b6af8c84b96fb709dc0344bceed02cbc4ed258.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e2e79f1e696f27fa70d72f97e448081b1fa14d59cbb89bb4a40428534dd5c6f6.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e4522e2cfa0b1f5d258a3cf85b87681d6969e0572f668024c465d635c236b5d9.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ebe2e9ec6d5d94c2d58fbcc9d78c5f0ee7a2f2c1aed6d1b309f383186d11dfa3.yara
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - FileName: aswArPot.sys
   MD5: c61876aaca6ce822be18adb9d9bd4260

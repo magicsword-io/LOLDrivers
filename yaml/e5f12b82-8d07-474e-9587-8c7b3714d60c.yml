@@ -4,8 +4,8 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create zam64.sys binPath=C:\windows\temp\zam64.sys type=kernel
-  && sc.exe start zam64.sys'
+Commands: sc.exe create zam64.sys binPath=C:\windows\temp\zam64.sys type=kernel &&
+  sc.exe start zam64.sys
 Description: []
 Usecase: Elevate privileges
 Privileges: kernel
@@ -15,7 +15,37 @@ Resources:
 Acknowledgement:
   Person: []
   Handle: ''
-Detection: []
+Detection:
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/2bbc6b9dd5e6d0327250b32305be20c89b19b56d33a096522ee33f22d8c82ff1.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/3c18ae965fba56d09a65770b4d8da54ccd7801f979d3ebd283397bc99646004b.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/45f42c5d874369d6be270ea27a5511efcca512aeac7977f83a51b7c4dee6b5ef.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/76614f2e372f33100a8d92bf372cdbc1e183930ca747eed0b0cf2501293b990a.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/7cb594af6a3655daebc9fad9c8abf2417b00ba31dcd118707824e5316fc0cc21.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/8fe9828bea83adc8b1429394db7a556a17f79846ad0bfb7f242084a5c96edf2a.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/9a95a70f68144980f2d684e96c79bdc93ebca1587f46afae6962478631e85d0c.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ab2632a4d93a7f3b7598c06a9fdc773a1b1b69a7dd926bdb7cf578992628e9dd.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/d7e091e0d478c34232e8479b950c5513077b3a69309885cee4c61063e5f74ac0.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/de8f8006d8ee429b5f333503defa54b25447f4ed6aeade5e4219e23f3473ef1c.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e428ddf9afc9b2d11e2271f0a67a2d6638b860c2c12d4b8cc63d33f3349ee93f.yara
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - FileName: zam64.sys
   MD5: 2a3ce41bb2a7894d939fbd1b20dae5a0
