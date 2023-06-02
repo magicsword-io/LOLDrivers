@@ -39,12 +39,13 @@ This download link contains the vulnerable driver!
 sc.exe create nt2.sys binPath=C:\windows\temp \n \n \n  t2.sys type=kernel &amp;&amp; sc.exe start nt2.sys
 ```
 
+
 | Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 
 
-### Detections
+
 
 ### Resources
 <br>

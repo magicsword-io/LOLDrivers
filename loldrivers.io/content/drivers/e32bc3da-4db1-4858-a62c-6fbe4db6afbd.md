@@ -34,12 +34,13 @@ This download link contains the vulnerable driver!
 sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp;&amp; sc.exe start RTCore64.sys
 ```
 
+
 | Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 
 
-### Detections
+
 
 ### Resources
 <br>

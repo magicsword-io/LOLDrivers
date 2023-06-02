@@ -34,12 +34,13 @@ This download link contains the vulnerable driver!
 sc.exe create mhyprot.sys binPath=C:\windows\temp\mhyprot.sys type=kernel &amp;&amp; sc.exe start mhyprot.sys
 ```
 
+
 | Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 
 
-### Detections
+
 
 ### Resources
 <br>

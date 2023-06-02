@@ -34,12 +34,15 @@ This download link contains the vulnerable driver!
 sc.exe create WinRing0x64.sys binPath=C:\windows\temp\WinRing0x64.sys     type=kernel &amp;&amp; sc.exe start WinRing0x64.sys
 ```
 
+
 | Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 
 
 ### Detections
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5.yara" "YARA" >}}
 
 ### Resources
 <br>

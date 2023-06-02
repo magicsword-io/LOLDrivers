@@ -34,12 +34,15 @@ This download link contains the vulnerable driver!
 sc.exe create cpuz141.sys binPath=C:\windows\temp\cpuz141.sys type=kernel &amp;&amp; sc.exe start cpuz141.sys
 ```
 
+
 | Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 
 
 ### Detections
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/ded2927f9a4e64eefd09d0caba78e94f309e3a6292841ae81d5528cab109f95d.yara" "YARA" >}}
 
 ### Resources
 <br>

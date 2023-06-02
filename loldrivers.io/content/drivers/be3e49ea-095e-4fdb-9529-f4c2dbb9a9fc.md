@@ -34,12 +34,15 @@ This download link contains the vulnerable driver!
 sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp;&amp; sc.exe start PhlashNT.sys
 ```
 
+
 | Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
 
 
 ### Detections
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/65db1b259e305a52042e07e111f4fa4af16542c8bacd33655f753ef642228890.yara" "YARA" >}}
 
 ### Resources
 <br>
