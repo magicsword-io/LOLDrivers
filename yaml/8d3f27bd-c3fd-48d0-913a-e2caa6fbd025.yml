@@ -36,7 +36,7 @@ Detection:
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
-- FileName: rtkio64.sys
+- Filename: rtkio64.sys
   MD5: 7aa34cd9ea5649c24a814e292b270b6f
   SHA1: b21cba198d721737aabd882ada6c91295a5975ed
   SHA256: 074ae477c8c7ae76c6f2b0bf77ac17935a8e8ee51b52155d2821d93ab30f3761
@@ -194,7 +194,7 @@ KnownVulnerableSamples:
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2017-01-18 01:48:25'
-- FileName: rtkio.sys
+- Filename: rtkio.sys
   MD5: ffd0c87d9bf894af26823fbde94c71b6
   SHA1: eacfc73f5f45f229867ee8b2eb1f9649b5dd422e
   SHA256: 916c535957a3b8cbf3336b63b2260ea4055163a9e6b214f2a7005d6d36a4a677
@@ -283,7 +283,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
-- FileName: rtkiow10x64.sys
+- Filename: rtkiow10x64.sys
   MD5: 96a8b535b5e14b582ca5679a3e2a5946
   SHA1: f6b3577ea4b1a5641ae3421151a26268434c3db8
   SHA256: ab8f2217e59319b88080e052782e559a706fa4fb7b8b708f709ff3617124da89
@@ -396,7 +396,7 @@ KnownVulnerableSamples:
     - SerialNumber: 04df4d56733ae38d598ea004dd2d9c51
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
-- FileName: rtkio.sys
+- Filename: rtkio.sys
   MD5: 664ad9cf500916c94fc2c0020660ac4e
   SHA1: 444f96d8943aec21d26f665203f3fb80b9a2a260
   SHA256: caa85c44eb511377ea7426ff10df00a701c07ffb384eef8287636a4bca0b53ab

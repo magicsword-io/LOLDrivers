@@ -28,7 +28,7 @@ Detection:
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
-- FileName: LHA.sys
+- Filename: LHA.sys
   MD5: 1d768959aaa194d60e4524ce47708377
   SHA1: 3fd55927d5997d33f5449e9a355eb5c0452e0de3
   SHA256: 23ba19352b1e71a965260bf4d5120f0200709ee8657ed381043bec9a938a1ade
