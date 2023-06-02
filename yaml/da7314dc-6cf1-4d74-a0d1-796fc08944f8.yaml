@@ -22,27 +22,48 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection:
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/139f8412a7c6fdc43dcfbbcdba256ee55654eb36a40f338249d5162a1f69b988.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/5b932eab6c67f62f097a3249477ac46d80ddccdc52654f8674060b4ddf638e5d.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6994b32e3f3357f4a1d0abe81e8b62dd54e36b17816f2f1a80018584200a1b77.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/32882949ea084434a376451ff8364243a50485a3b4af2f2240bb5f20c164543d.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/50819a1add4c81c0d53203592d6803f022443440935ff8260ff3b6d5253c0c76.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/770f33259d6fb10f4a32d8a57d0d12953e8455c72bb7b60cb39ce505c507013a.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/86047bb1969d1db455493955fd450d18c62a3f36294d0a6c3732c88dfbcc4f62.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/bb2422e96ea993007f25c71d55b2eddfa1e940c89e895abb50dd07d7c17ca1df.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/06c5ebd0371342d18bc81a96f5e5ce28de64101e3c2fd0161d0b54d8368d2f1f.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6661320f779337b95bbbe1943ee64afb2101c92f92f3d1571c1bf4201c38c724.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/f9f2091fccb289bcf6a945f6b38676ec71dedb32f3674262928ccaf840ca131a.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e6f764c3b5580cd1675cbf184938ad5a201a8c096607857869bd7c3399df0d12.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e1cb86386757b947b39086cc8639da988f6e8018ca9995dd669bdc03c8d39d7d.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4734a0a5d88f44a4939b8d812364cab6ca5f611b9b8ceebe27df6c1ed3a6d8a4.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ea50f22daade04d3ca06dedb497b905215cba31aae7b4cab4b533fda0c5be620.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/fa9abb3e7e06f857be191a1e049dd37642ec41fb2520c105df2227fcac3de5d5.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/f936ec4c8164cbd31add659b61c16cb3a717eac90e74d89c47afb96b60120280.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/139f8412a7c6fdc43dcfbbcdba256ee55654eb36a40f338249d5162a1f69b988.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/5b932eab6c67f62f097a3249477ac46d80ddccdc52654f8674060b4ddf638e5d.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6994b32e3f3357f4a1d0abe81e8b62dd54e36b17816f2f1a80018584200a1b77.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/32882949ea084434a376451ff8364243a50485a3b4af2f2240bb5f20c164543d.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/50819a1add4c81c0d53203592d6803f022443440935ff8260ff3b6d5253c0c76.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/770f33259d6fb10f4a32d8a57d0d12953e8455c72bb7b60cb39ce505c507013a.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/86047bb1969d1db455493955fd450d18c62a3f36294d0a6c3732c88dfbcc4f62.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/bb2422e96ea993007f25c71d55b2eddfa1e940c89e895abb50dd07d7c17ca1df.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/06c5ebd0371342d18bc81a96f5e5ce28de64101e3c2fd0161d0b54d8368d2f1f.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6661320f779337b95bbbe1943ee64afb2101c92f92f3d1571c1bf4201c38c724.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/f9f2091fccb289bcf6a945f6b38676ec71dedb32f3674262928ccaf840ca131a.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e6f764c3b5580cd1675cbf184938ad5a201a8c096607857869bd7c3399df0d12.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e1cb86386757b947b39086cc8639da988f6e8018ca9995dd669bdc03c8d39d7d.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4734a0a5d88f44a4939b8d812364cab6ca5f611b9b8ceebe27df6c1ed3a6d8a4.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ea50f22daade04d3ca06dedb497b905215cba31aae7b4cab4b533fda0c5be620.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/fa9abb3e7e06f857be191a1e049dd37642ec41fb2520c105df2227fcac3de5d5.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/f936ec4c8164cbd31add659b61c16cb3a717eac90e74d89c47afb96b60120280.yara
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - Filename: windbg.sys
   MD5: 40f35792e7565aa047796758a3ce1b77

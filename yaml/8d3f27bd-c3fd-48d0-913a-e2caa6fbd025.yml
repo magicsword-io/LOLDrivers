@@ -16,14 +16,22 @@ Acknowledgement:
   Person: []
   Handle: ''
 Detection:
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/074ae477c8c7ae76c6f2b0bf77ac17935a8e8ee51b52155d2821d93ab30f3761.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/916c535957a3b8cbf3336b63b2260ea4055163a9e6b214f2a7005d6d36a4a677.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ab8f2217e59319b88080e052782e559a706fa4fb7b8b708f709ff3617124da89.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/caa85c44eb511377ea7426ff10df00a701c07ffb384eef8287636a4bca0b53ab.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/074ae477c8c7ae76c6f2b0bf77ac17935a8e8ee51b52155d2821d93ab30f3761.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/916c535957a3b8cbf3336b63b2260ea4055163a9e6b214f2a7005d6d36a4a677.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ab8f2217e59319b88080e052782e559a706fa4fb7b8b708f709ff3617124da89.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/caa85c44eb511377ea7426ff10df00a701c07ffb384eef8287636a4bca0b53ab.yara
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - FileName: rtkio64.sys
   MD5: 7aa34cd9ea5649c24a814e292b270b6f

@@ -18,15 +18,24 @@ Acknowledgement:
   Person: ''
   Handle: ''
 Detection:
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/05f052c64d192cf69a462a5ec16dda0d43ca5d0245900c9fcb9201685a2e7748.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4045ae77859b1dbf13972451972eaaf6f3c97bea423e9e78f1c2f14330cd47ca.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6948480954137987a0be626c24cf594390960242cd75f094cd6aaa5c2e7a54fa.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/8cb62c5d41148de416014f80bd1fd033fd4d2bd504cb05b90eeb6992a382d58f.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/b1d96233235a62dbb21b8dbe2d1ae333199669f67664b107bff1ad49b41d9414.yara
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/05f052c64d192cf69a462a5ec16dda0d43ca5d0245900c9fcb9201685a2e7748.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4045ae77859b1dbf13972451972eaaf6f3c97bea423e9e78f1c2f14330cd47ca.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6948480954137987a0be626c24cf594390960242cd75f094cd6aaa5c2e7a54fa.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/8cb62c5d41148de416014f80bd1fd033fd4d2bd504cb05b90eeb6992a382d58f.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/b1d96233235a62dbb21b8dbe2d1ae333199669f67664b107bff1ad49b41d9414.yara
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - Filename: Agent64.sys
   MD5: 8407ddfab85ae664e507c30314090385

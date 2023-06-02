@@ -10,12 +10,12 @@ args = parser.parse_args()
 # Define the base URL for the GitHub repository and the full URLs for specific sigma and sysmon rules
 base_url = "https://github.com/magicsword-io/LOLDrivers/blob/main/"
 sigma_rules = [
-    base_url + "detections/sigma/driver_load_win_vuln_drivers.yml",
-    base_url + "detections/sigma/driver_load_win_vuln_drivers_names.yml"
+    {"type": "sigma_hash", "value": base_url + "detections/sigma/driver_load_win_vuln_drivers.yml"},
+    {"type": "sigma_names", "value": base_url + "detections/sigma/driver_load_win_vuln_drivers_names.yml"}
 ]
 sysmon_rules = [
-    base_url + "detections/sysmon/sysmon_config_vulnerable_hashes.xml",
-    base_url + "detections/sysmon/sysmon_config_vulnerable_hashes_block.xml"
+    {"type": "sysmon_hash_detect", "value": base_url + "detections/sysmon/sysmon_config_vulnerable_hashes.xml"},
+    {"type": "sysmon_hash_block", "value": base_url + "detections/sysmon/sysmon_config_vulnerable_hashes_block.xml"}
 ]
 
 # Loop through each YAML file in the directory
@@ -37,7 +37,7 @@ for file_name in os.listdir('yaml'):
                     updated = True
                     if args.verbose:
                         print(f"Updating file: {file_path}")
-                    yaml_data['Detection'].append(base_url + yara_file_path)
+                    yaml_data['Detection'].append({"type": "yara_signature", "value": base_url + yara_file_path})
 
         # Add specific sigma and sysmon rules to detections
         yaml_data['Detection'].extend(sigma_rules)
@@ -47,3 +47,4 @@ for file_name in os.listdir('yaml'):
         if updated:
             with open(file_path, 'w') as f:
                 yaml.dump(yaml_data, f, sort_keys=False)
+
