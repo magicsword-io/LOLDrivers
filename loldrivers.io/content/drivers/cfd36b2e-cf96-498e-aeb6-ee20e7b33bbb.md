@@ -3,7 +3,7 @@
 description = ""
 title = "cfd36b2e-cf96-498e-aeb6-ee20e7b33bbb"
 weight = 10
-
+displayTitle = "magdrvamd64.sys"
 +++
 
 
@@ -135,7 +135,7 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cfd36b2e-cf96-498e-aeb6-ee20e7b33bbb.yaml)
 
-*last_updated:* 2023-06-02
+*last_updated:* 2023-06-03
 
 
 
