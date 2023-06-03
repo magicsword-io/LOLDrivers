@@ -4,12 +4,13 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: sc.exe create directio64.sys binPath=C:\windows\temp\directio64.sys type=kernel
-  && sc.exe start directio64.sys
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create directio64.sys binPath=C:\windows\temp\directio64.sys type=kernel
+    && sc.exe start directio64.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
@@ -17,7 +18,7 @@ Acknowledgement:
   Handle: ''
 Detection: []
 KnownVulnerableSamples:
-- FileName: directio64.sys
+- Filename: directio64.sys
   MD5: 537e2c3020b1d48b125da593e66508ec
   SHA1: e702221d059b86d49ed11395adffa82ef32a1bce
   SHA256: 092349aebdac28294dbad1656759d8461f362d1a36b01054dccf861d97beadf0
@@ -123,7 +124,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
-- FileName: DirectIo64.sys
+- Filename: DirectIo64.sys
   MD5: 8fbb1ffc6f13f9d5ee8480b36baffc52
   SHA1: 3c9c86c0b215ecbab0eeb4479c204dba65258b8e
   SHA256: 0bc3685b0b8adc97931b5d31348da235cd7581a67edf6d79913e6a5709866135
@@ -228,7 +229,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
-- FileName: DirectIo64.sys
+- Filename: DirectIo64.sys
   MD5: 76d1d4d285f74059f32b8ad19a146d0c
   SHA1: 3f338ab65bac9550b8749bb1208edb0f7d7bcb81
   SHA256: 4324f3d1e4007f6499a3d0f0102cd92ed9f554332bc0b633305cd7b957ff16c8
@@ -347,7 +348,7 @@ KnownVulnerableSamples:
     Signer:
     - SerialNumber: 6ec5060c23b767aa5eb4fe5ddad4af2d
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
-- FileName: DirectIo64.sys
+- Filename: DirectIo64.sys
   MD5: f41eea88057d3dd1a56027c4174eed22
   SHA1: 13572d36428ef32cfed3af7a8bb011ee756302b0
   SHA256: 72c0d2d699d0440db17cb7cbbc06a253eaafd21465f14bb0fed8b85ae73153d1
@@ -466,7 +467,7 @@ KnownVulnerableSamples:
     Signer:
     - SerialNumber: 6ec5060c23b767aa5eb4fe5ddad4af2d
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
-- FileName: DirectIo64.sys
+- Filename: DirectIo64.sys
   MD5: c4f5619ce04d4bee38024d08513c77fd
   SHA1: 4c6ec22bc10947d089167b19d83a26bdd69f0dd1
   SHA256: 79e87b93fbed84ec09261b3a0145c935f7dfe4d4805edfb563b2f971a0d51463
@@ -585,7 +586,7 @@ KnownVulnerableSamples:
     Signer:
     - SerialNumber: 6ec5060c23b767aa5eb4fe5ddad4af2d
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
-- FileName: DirectIo64.sys
+- Filename: DirectIo64.sys
   MD5: 5093f38d597532d59d4df9018056f0d1
   SHA1: 0904b8fa4654197eefd6380c81bbb2149ffe0634
   SHA256: 8939116df1d6c8fd0ebd14b2d37b3dec38a8820aa666ecd487bc1bb794f2a587
@@ -710,7 +711,7 @@ KnownVulnerableSamples:
     Signer:
     - SerialNumber: 5ece8cdb4d508efee821a7cfff5b8016
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
-- FileName: DirectIo64.sys
+- Filename: DirectIo64.sys
   MD5: 790ccca8341919bb8bb49262a21fca0e
   SHA1: 61f5904e9ff0d7e83ad89f0e7a3741e7f2fbf799
   SHA256: 9778136d2441439dc470861d15d96fa21dc9f16225232cd05b76791a5e0fde6f
@@ -829,7 +830,7 @@ KnownVulnerableSamples:
     Signer:
     - SerialNumber: 5ece8cdb4d508efee821a7cfff5b8016
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
-- FileName: DirectIo64.sys
+- Filename: DirectIo64.sys
   MD5: 7978d858168fadd05c17779da5f4695a
   SHA1: 2db49bdf8029fdcda0a2f722219ae744eae918b0
   SHA256: ac63c26ca43701dddaa7fb1aea535d42190f88752900a03040fd5aaa24991e25
@@ -995,7 +996,7 @@ KnownVulnerableSamples:
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2020-08-11 23:44:52'
-- FileName: DirectIo64.sys
+- Filename: DirectIo64.sys
   MD5: d660fc7255646d5014d45c3bca9c6e20
   SHA1: 01b95ae502aa09aabc69a0482fcc8198f7765950
   SHA256: b2ba6efeff1860614b150916a77c9278f19d51e459e67a069ccd15f985cbc0e1
@@ -1147,7 +1148,7 @@ KnownVulnerableSamples:
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2022-06-27 22:21:07'
-- FileName: DirectIo64.sys
+- Filename: DirectIo64.sys
   MD5: b3424a229d845a88340045c29327c529
   SHA1: ffabdf33635bdc1ed1714bc8bbfd7b73ef78a37c
   SHA256: bda99629ec6c522c3efcbcc9ca33688d31903146f05b37d0d3b43db81bfb3961

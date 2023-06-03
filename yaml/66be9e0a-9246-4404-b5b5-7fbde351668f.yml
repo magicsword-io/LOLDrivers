@@ -4,12 +4,13 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create BS_I2cIo.sys binPath=C:\windows\temp\BS_I2cIo.sys type=kernel
-  && sc.exe start BS_I2cIo.sys'
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create BS_I2cIo.sys binPath=C:\windows\temp\BS_I2cIo.sys type=kernel
+    && sc.exe start BS_I2cIo.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
@@ -17,7 +18,7 @@ Acknowledgement:
   Handle: ''
 Detection: []
 KnownVulnerableSamples:
-- FileName: BS_I2cIo.sys
+- Filename: BS_I2cIo.sys
   MD5: 3c4154866f3d483fdc9f4f64ef868888
   SHA1: f7ce71891738a976cd8d4b516c8d7a8e2f6b0ad6
   SHA256: 42e170a7ab1d2c160d60abfc906872f9cfd0c2ee169ed76f6acb3f83b3eeefdb

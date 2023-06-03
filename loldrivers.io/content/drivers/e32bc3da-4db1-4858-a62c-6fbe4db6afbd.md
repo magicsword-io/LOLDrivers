@@ -34,9 +34,13 @@ This download link contains the vulnerable driver!
 sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp;&amp; sc.exe start RTCore64.sys
 ```
 
+
 | Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
+
+
+
 
 ### Resources
 <br>
@@ -373,7 +377,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/e32bc3da-4db1-4858-a62c-6fbe4db6afbd.yaml)
 
-*last_updated:* 2023-05-22
+*last_updated:* 2023-06-02
 
 
 

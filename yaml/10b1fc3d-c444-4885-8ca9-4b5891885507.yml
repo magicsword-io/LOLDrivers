@@ -15,9 +15,23 @@ Resources:
 Acknowledgement:
   Person: []
   Handle: ''
-Detection: []
+Detection:
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/38bb9751a3a1f072d518afe6921a66ee6d5cf6d25bc50af49e1925f20d75d4d7.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ad40e6d0f77c0e579fb87c5106bf6de3d1a9f30ee2fbf8c9c011f377fa05f173.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ad40e6d0f77c0e579fb87c5106bf6de3d1a9f30ee2fbf8c9c011f377fa05f173.yara
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
-- FileName: atillk64.sys
+- Filename: atillk64.sys
   MD5: 27d21eeff199ed555a29ca0ea4453cfb
   SHA1: 1045c63eccb54c8aee9fd83ffe48306dc7fe272c
   SHA256: 38bb9751a3a1f072d518afe6921a66ee6d5cf6d25bc50af49e1925f20d75d4d7
@@ -97,7 +111,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: atillk64.sys
+- Filename: atillk64.sys
   MD5: 26d973d6d9a0d133dfda7d8c1adc04b7
   SHA1: eb0d45aa6f537f5b2f90f3ad99013606eafcd162
   SHA256: ad40e6d0f77c0e579fb87c5106bf6de3d1a9f30ee2fbf8c9c011f377fa05f173

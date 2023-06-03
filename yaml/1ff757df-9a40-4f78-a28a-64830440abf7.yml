@@ -4,12 +4,13 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create winio64.sys binPath=C:\windows\temp\winio64.sys type=kernel
-  && sc.exe start winio64.sys'
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create winio64.sys binPath=C:\windows\temp\winio64.sys type=kernel
+    && sc.exe start winio64.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
@@ -17,7 +18,7 @@ Acknowledgement:
   Handle: ''
 Detection: []
 KnownVulnerableSamples:
-- FileName: winio64.sys
+- Filename: winio64.sys
   MD5: 8fc6cafd4e63a3271edf6a1897a892ae
   SHA1: f8d7369527cc6976283cc73cd761f93bd1cec49d
   SHA256: 15fb486b6b8c2a2f1b067f48fba10c2f164638fe5e6cee618fb84463578ecac9
@@ -97,7 +98,7 @@ KnownVulnerableSamples:
     - SerialNumber: 0f69
       Issuer: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom
         Class 3 Primary Intermediate Object CA
-- FileName: WinIo64.sys
+- Filename: WinIo64.sys
   MD5: 7c0b186d1912686cfcb8cd9cdebabe58
   SHA1: 6bb68e1894bfbc1ac86bcdc048f7fe7743de2f92
   SHA256: dbe9f17313e1164f06401234b875fbc7f71d41dc7271de643865af1358841fef

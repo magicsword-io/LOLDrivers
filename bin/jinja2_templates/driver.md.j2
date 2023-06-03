@@ -53,15 +53,28 @@ This download link contains the malicious driver!
 {% endraw %}
 {% endif %}
 
+{% if driver.Commands.Command %}
 ### Commands
 
 ```
 {{ driver.Commands.Command }}
 ```
+{% endif %}
 
+
+{% if driver.Commands.Usecase or driver.Commands.Privileges or driver.Commands.OperatingSystem %}
 | Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | {{ driver.Commands.Usecase }} | {{ driver.Commands.Privileges }} | {{ driver.Commands.OperatingSystem }} |
+{% endif %}
+
+
+{% if driver.yara %}
+### Detections
+
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/{% endraw %}{{ driver.KnownVulnerableSamples[0].SHA256 }}{% raw %}.yara" "YARA" >}}{% endraw %}
+{% endif %}
+
 
 ### Resources
 <br>

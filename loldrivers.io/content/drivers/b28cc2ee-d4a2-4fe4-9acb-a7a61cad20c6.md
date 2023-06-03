@@ -39,9 +39,15 @@ This download link contains the vulnerable driver!
 sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp;&amp; sc.exe start WiseUnlo.sys
 ```
 
+
 | Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
+
+
+### Detections
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/358ac54be252673841a1d65bfc2fb6d549c1a4c877fa7f5e1bfa188f30375d69.yara" "YARA" >}}
 
 ### Resources
 <br>
@@ -144,7 +150,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/b28cc2ee-d4a2-4fe4-9acb-a7a61cad20c6.yaml)
 
-*last_updated:* 2023-05-22
+*last_updated:* 2023-06-02
 
 
 

@@ -34,9 +34,13 @@ This download link contains the vulnerable driver!
 sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=kernel &amp;&amp; sc.exe start magdrvamd64.sys
 ```
 
+
 | Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
+
+
+
 
 ### Resources
 <br>
@@ -131,7 +135,7 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cfd36b2e-cf96-498e-aeb6-ee20e7b33bbb.yaml)
 
-*last_updated:* 2023-05-22
+*last_updated:* 2023-06-02
 
 
 
