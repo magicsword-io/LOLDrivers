@@ -6,7 +6,7 @@
 # Florian Roth
 # May 2023
 
-__version__ = "0.2.2"
+__version__ = "0.3.0"
 __author__ = "Florian Roth"
 
 import sys
@@ -19,6 +19,7 @@ import os
 import platform
 import pprint
 import string
+import yaml
 import traceback
 from datetime import datetime
 
@@ -41,8 +42,39 @@ rule $$$RULENAME$$$ {
 }
 '''
 
+YARA_RULE_RENAMED_TEMPLATE = '''
+rule $$$RULENAME$$$ {
+	meta:
+		description = "Detects renamed vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - $$$FILENAMES$$$"
+		author = "Florian Roth"
+		reference = "https://github.com/magicsword-io/LOLDrivers"
+		hash = "$$$HASH$$$"
+		date = "$$$DATE$$$"
+		score = 70
+	strings:
+		$ = $$$STRINGS$$$
+	condition:
+		$$$STRICT$$$all of them
+}
+'''
+
 
 def process_folders(input_folders, debug):
+	input_files = []
+	# print(input_folders)
+	for d in input_folders:
+		if not os.path.exists(d):
+			Log.error("[E] Error: input directory '%s' doesn't exist" % d)
+		else:
+			for dirpath, dirnames, files in os.walk(d):
+				for f in files:
+					# if ".sys" in f:
+					input_files.append(os.path.join(dirpath, f))
+	return input_files
+
+
+
+def process_yaml_files(input_folders, debug):
 	input_files = []
 	# print(input_folders)
 	for d in input_folders:
@@ -215,9 +247,13 @@ if __name__ == '__main__':
 	# Parse Arguments
 	parser = argparse.ArgumentParser(description='YARA Rule Generator for PE Header Info')
 	parser.add_argument('-d', nargs='*', 
-                    help='Path to input directory (can be used multiple times)',
+                    help='Path to driver directories (can be used multiple times)',
                     metavar='driver-files', default=[['../../drivers/']])
-	parser.add_argument('-o', help="Output file", metavar='output-folder', default='../../detections/yara/yara-rules.yar')
+	parser.add_argument('-y', nargs='*', 
+                    help='Path to YAML files with information on the drivers (can be used multiple times)',
+                    metavar='yaml-files', default=[['../../yaml/']])
+	parser.add_argument('-o', help="Output file for simple rules", metavar='output-folder', default='../../detections/yara/vuln-drivers.yar')
+	parser.add_argument('-a', help="Output file for anomaly detection rules", metavar='output-folder', default='../../detections/yara/vuln-driver-anomalies.yar')
 	parser.add_argument('--strict', action='store_true', default=False, help='Include magic header and filesize to make the rule more strict (less false positives)')
 	parser.add_argument('--debug', action='store_true', default=False, help='Debug output')
 
@@ -236,8 +272,12 @@ if __name__ == '__main__':
 	Log.addHandler(consoleHandler)
 
 	# Walk the folders and get a list of all input files
-	Log.info("[+] Processing %d input paths" % len(args.d[0]))
+	Log.info("[+] Processing %d driver locations" % len(args.d[0]))
 	file_paths = process_folders(args.d, args.debug)
+
+	# Walk the YAML information folders and get a dictionary with meta data
+	Log.info("[+] Processing %d YAML files" % len(args.d[0]))
+	yaml_info = process_yaml_files(args.y, args.debug)
 
 	# Process each file and extract the header info need for the YARA rules
 	Log.info("[+] Processing %d sample files" % len(file_paths))
