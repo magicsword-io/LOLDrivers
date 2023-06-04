@@ -3,7 +3,7 @@
 description = ""
 title = "50cfaec9-55f8-49df-aa3e-b9ec3f4f4ff3"
 weight = 10
-
+displayTitle = "mhyprot.sys"
 +++
 
 
@@ -34,9 +34,13 @@ This download link contains the vulnerable driver!
 sc.exe create mhyprot.sys binPath=C:\windows\temp\mhyprot.sys type=kernel &amp;&amp; sc.exe start mhyprot.sys
 ```
 
+
 | Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
+
+
+
 
 ### Resources
 <br>
@@ -226,7 +230,7 @@ sc.exe create mhyprot.sys binPath=C:\windows\temp\mhyprot.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/50cfaec9-55f8-49df-aa3e-b9ec3f4f4ff3.yaml)
 
-*last_updated:* 2023-05-22
+*last_updated:* 2023-06-03
 
 
 

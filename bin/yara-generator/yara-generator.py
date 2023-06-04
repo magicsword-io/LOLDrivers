@@ -160,9 +160,9 @@ def process_files(input_files, debug):
 	return header_infos
 
 
-def generate_yara_rules(header_infos, strict, debug):
+def generate_yara_rules(header_infos, strict, debug, output_folder):
 	rules = list()
-	rule_names = []
+
 	# Loop over the header infos 
 	for hi in header_infos:
 		# Generate Rule
@@ -184,6 +184,13 @@ def generate_yara_rules(header_infos, strict, debug):
 			new_rule = new_rule.replace('$$$STRICT$$$', "uint16(0) == 0x5a4d and filesize < %dKB and " % max(hi['file_sizes']))
 		else:
 			new_rule = new_rule.replace('$$$STRICT$$$', '')
+
+		# write individual rule to file
+		for s in hi["sha256"]:
+			rule_file_name = f'{output_folder}{s}.yara'
+			with open(rule_file_name, 'w') as rule_file:
+				rule_file.write(new_rule)
+
 		Log.debug(new_rule)
 		# Append rule to the list
 		rules.append(new_rule)
@@ -272,7 +279,7 @@ if __name__ == '__main__':
 	Log.addHandler(consoleHandler)
 
 	# Walk the folders and get a list of all input files
-	Log.info("[+] Processing %d driver locations" % len(args.d[0]))
+	Log.info("[+] Processing %d input paths" % len(args.d[0]))
 	file_paths = process_folders(args.d, args.debug)
 
 	# Walk the YAML information folders and get a dictionary with meta data
@@ -285,10 +292,10 @@ if __name__ == '__main__':
 
 	# Generate YARA rules and return them as list of their string representation
 	Log.info("[+] Generating YARA rules from %d header infos" % len(file_infos))
-	yara_rules = generate_yara_rules(file_infos, args.strict, args.debug)
+	yara_rules = generate_yara_rules(file_infos, args.strict, args.debug, args.o)
 
 	# Write the output file
-	with open(args.o, 'w') as fh:
-		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules), args.o))
+	with open(args.o + 'yara-rules.yar', 'w') as fh:
+		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules), args.o + 'yara-rules.yar'))
 		fh.write("\n".join(yara_rules))
 	

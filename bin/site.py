@@ -155,6 +155,14 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
                 print(exc)
                 print("Error reading {0}".format(manifest_file))
                 sys.exit(1)
+
+        # Check if 'SHA256' key exists in the first item of 'KnownVulnerableSamples'
+        if 'SHA256' in object['KnownVulnerableSamples'][0]:
+            yara_file_path = os.path.join(REPO_PATH, '../detections/yara', object['KnownVulnerableSamples'][0]['SHA256'] + '.yara')
+            object['yara'] = os.path.isfile(yara_file_path)
+        else:
+            object['yara'] = False
+
         drivers.append(object)
 
     # write markdowns

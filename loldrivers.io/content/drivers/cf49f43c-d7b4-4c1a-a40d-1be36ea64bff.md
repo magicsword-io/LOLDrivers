@@ -3,7 +3,7 @@
 description = ""
 title = "cf49f43c-d7b4-4c1a-a40d-1be36ea64bff"
 weight = 10
-
+displayTitle = "SysDrv3S.sys"
 +++
 
 
@@ -34,9 +34,15 @@ This download link contains the vulnerable driver!
 sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp;&amp; sc.exe start SysDrv3S.sys
 ```
 
+
 | Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
+
+
+### Detections
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/0e53b58415fa68552928622118d5b8a3a851b2fc512709a90b63ba46acda8b6b.yara" "YARA" >}}
 
 ### Resources
 <br>
@@ -164,7 +170,7 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cf49f43c-d7b4-4c1a-a40d-1be36ea64bff.yaml)
 
-*last_updated:* 2023-05-22
+*last_updated:* 2023-06-03
 
 
 

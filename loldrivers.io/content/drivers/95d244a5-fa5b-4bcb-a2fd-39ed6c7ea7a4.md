@@ -3,7 +3,7 @@
 description = ""
 title = "95d244a5-fa5b-4bcb-a2fd-39ed6c7ea7a4"
 weight = 10
-
+displayTitle = "rtkio64.sys"
 +++
 
 
@@ -34,9 +34,15 @@ This download link contains the vulnerable driver!
 sc.exe create rtkio64.sys binPath=C:\windows\temp\rtkio64.sys type=kernel &amp;&amp; sc.exe start rtkio64.sys
 ```
 
+
 | Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
+
+
+### Detections
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/7133a461aeb03b4d69d43f3d26cd1a9e3ee01694e97a0645a3d8aa1a44c39129.yara" "YARA" >}}
 
 ### Resources
 <br>
@@ -169,7 +175,7 @@ sc.exe create rtkio64.sys binPath=C:\windows\temp\rtkio64.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/95d244a5-fa5b-4bcb-a2fd-39ed6c7ea7a4.yaml)
 
-*last_updated:* 2023-05-22
+*last_updated:* 2023-06-03
 
 
 

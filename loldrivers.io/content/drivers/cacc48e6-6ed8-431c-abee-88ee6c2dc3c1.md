@@ -3,7 +3,7 @@
 description = ""
 title = "cacc48e6-6ed8-431c-abee-88ee6c2dc3c1"
 weight = 10
-
+displayTitle = "nt2.sys"
 +++
 
 
@@ -39,9 +39,13 @@ This download link contains the vulnerable driver!
 sc.exe create nt2.sys binPath=C:\windows\temp \n \n \n  t2.sys type=kernel &amp;&amp; sc.exe start nt2.sys
 ```
 
+
 | Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
+
+
+
 
 ### Resources
 <br>
@@ -82,7 +86,7 @@ sc.exe create nt2.sys binPath=C:\windows\temp \n \n \n  t2.sys type=kernel &amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cacc48e6-6ed8-431c-abee-88ee6c2dc3c1.yaml)
 
-*last_updated:* 2023-05-22
+*last_updated:* 2023-06-03
 
 
 

@@ -3,7 +3,7 @@
 description = ""
 title = "a4aa80bc-4ecd-49ab-bc0f-0f49b07fdd7f"
 weight = 10
-
+displayTitle = "segwindrvx64.sys"
 +++
 
 
@@ -34,9 +34,15 @@ This download link contains the vulnerable driver!
 sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type=kernel &amp;&amp; sc.exe start segwindrvx64.sys
 ```
 
+
 | Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
 | Elevate privileges | kernel | Windows 10 |
+
+
+### Detections
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/65329dad28e92f4bcc64de15c552b6ef424494028b18875b7dba840053bc0cdd.yara" "YARA" >}}
 
 ### Resources
 <br>
@@ -163,7 +169,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/a4aa80bc-4ecd-49ab-bc0f-0f49b07fdd7f.yaml)
 
-*last_updated:* 2023-05-22
+*last_updated:* 2023-06-03
 
 
 
