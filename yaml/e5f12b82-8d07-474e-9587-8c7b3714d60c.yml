@@ -7,8 +7,8 @@ CVE:
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
-  Command: sc.exe create zam64.sys binPath=C:\windows\temp\zam64.sys type=kernel
-    && sc.exe start zam64.sys
+  Command: sc.exe create zam64.sys binPath=C:\windows\temp\zam64.sys type=kernel &&
+    sc.exe start zam64.sys
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
@@ -18,6 +18,7 @@ Resources:
 - https://www.reddit.com/r/crowdstrike/comments/13wjrgn/20230531_situational_awareness_spyboy_defense/
 - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 - https://www.trendmicro.com/en_us/research/23/e/attack-on-security-titans-earth-longzhi-returns-with-new-tricks.html
+- https://github.com/ZeroMemoryEx/Terminator
 Acknowledgement:
   Person: []
   Handle: ''
