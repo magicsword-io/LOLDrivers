@@ -132,6 +132,45 @@ This download link contains the malicious driver!
 {% if hash.OriginalFilename %}| OriginalFilename  | {{ hash.OriginalFilename }} |
 {% endif %}
 
+{% if hash.Signatures %}
+{% for signature in hash.Signatures %}
+{% if signature.Certificates %}
+#### Certificates
+
+{% raw %}{{< details "Expand" >}}{% endraw %}
+
+{% for certificate in signature.Certificates %}
+{% if certificate.TBS %}
+###### Certificate {{ certificate.SerialNumber }}
+| Field                             | Value                      |
+|-----------------------------------|----------------------------|
+| ToBeSigned (TBS) MD5              | {{ certificate.TBS.MD5 }}  |
+| ToBeSigned (TBS) SHA1             | {{ certificate.TBS.SHA1 }} |
+| ToBeSigned (TBS) SHA256           | {{ certificate.TBS.SHA256 }} |
+| Subject                           | {{ certificate.Subject }} |
+| ValidFrom                         | {{ certificate.ValidFrom }} |
+| ValidTo                           | {{ certificate.ValidTo }} |
+| Signature                         | {{ certificate.Signature }} |
+| SignatureAlgorithmOID             | {{ certificate.SignatureAlgorithmOID }} |
+| IsCertificateAuthority            | {{ certificate.IsCertificateAuthority }} |
+| SerialNumber                      | {{ certificate.SerialNumber }} |
+| Version                           | {{ certificate.Version }} |
+{% endif %}
+{% endfor %}
+
+{% raw %}{{< /details >}}{% endraw %}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+#### Imports
+{% raw %}{{< details "Expand" >}}{% endraw %}
+
+{% for import in hash.Imports %}
+* {{ import }}
+{% endfor %}
+
+{% raw %}{{< /details >}}{% endraw %}
 
 #### Imports
 {% raw %}{{< details "Expand" >}}{% endraw %}
