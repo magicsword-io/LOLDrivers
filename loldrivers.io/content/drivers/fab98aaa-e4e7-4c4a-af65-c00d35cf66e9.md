@@ -3,7 +3,7 @@
 description = ""
 title = "fab98aaa-e4e7-4c4a-af65-c00d35cf66e9"
 weight = 10
-
+displayTitle = "cpuz141.sys"
 +++
 
 
@@ -162,7 +162,7 @@ sc.exe create cpuz141.sys binPath=C:\windows\temp\cpuz141.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fab98aaa-e4e7-4c4a-af65-c00d35cf66e9.yaml)
 
-*last_updated:* 2023-06-02
+*last_updated:* 2023-06-05
 
 
 
