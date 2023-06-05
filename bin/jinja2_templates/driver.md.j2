@@ -108,6 +108,11 @@ This download link contains the malicious driver!
 | Authentihash SHA1  | [{{ hash.Authentihash.SHA1 }}](https://www.virustotal.com/gui/search/authentihash%253A{{ hash.Authentihash.SHA1 }}) |
 | Authentihash SHA256| [{{ hash.Authentihash.SHA256 }}](https://www.virustotal.com/gui/search/authentihash%253A{{ hash.Authentihash.SHA256 }}) |
 {% endif %}
+{% if hash.RichPEHeaderHash %}
+| RichPEHeaderHash MD5   | [{{ hash.RichPEHeaderHash.MD5 }}](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A{{ hash.RichPEHeaderHash.MD5 }}) |
+| RichPEHeaderHash SHA1  | [{{ hash.RichPEHeaderHash.SHA1 }}](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A{{ hash.RichPEHeaderHash.SHA1 }}) |
+| RichPEHeaderHash SHA256| [{{ hash.RichPEHeaderHash.SHA256 }}](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A{{ hash.RichPEHeaderHash.SHA256 }}) |
+{% endif %}
 {% if hash.Publisher %}| Publisher         | {{ hash.Publisher }} |
 {% endif %}
 {% if hash.Date %}| Date                | {{ hash.Date }} |

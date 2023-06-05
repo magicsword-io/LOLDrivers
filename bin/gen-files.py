@@ -108,6 +108,8 @@ def gen_hashes_files(md5_list, sha1_list, sha256_list, name):
     """
         Generates hash samples files
     """
+    directory = 'detections/hashes/'
+    os.makedirs(directory, exist_ok=True)  # Create the directory if it doesn't exist
     
     if md5_list:
         with open(f'detections/hashes/{name}.md5', 'w') as f: 
@@ -168,6 +170,9 @@ def gen_sysmon_driver_load_config(md5_list, sha1_list, sha256_list, name):
     """
         Generates sysmon driver load configuration
     """
+    directory = 'detections/sysmon/'
+    os.makedirs(directory, exist_ok=True)  # Create the directory if it doesn't exist
+
     with open(f"detections/sysmon/{name}.xml", "w") as f:
         f.write("<Sysmon schemaversion=\"4.30\">\n")
         f.write("	<EventFiltering>\n")
@@ -228,6 +233,8 @@ def gen_sigma_rule_hashes(md5_list, sha1_list, sha256_list, name, uuid, title, d
     """
         Generates DriverLoad SIGMA rule based on driver hashes
     """
+    directory = 'detections/sigma/'
+    os.makedirs(directory, exist_ok=True)  # Create the directory if it doesn't exist
     if md5_list or sha1_list or sha256_list:
         with open(f"detections/sigma/{name}.yml", "w") as f:
             f.write(f"title: {title}\n")
