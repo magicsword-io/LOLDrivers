@@ -17,7 +17,7 @@ import logging
 import math
 import os
 import platform
-import pprint
+from pprint import pprint
 import string
 import yaml
 import traceback
@@ -61,7 +61,7 @@ rule $$$RULENAME$$$ {
 
 def process_folders(input_folders, debug):
 	input_files = []
-	# print(input_folders)
+	print(input_folders)
 	for d in input_folders:
 		if not os.path.exists(d):
 			Log.error("[E] Error: input directory '%s' doesn't exist" % d)
@@ -71,22 +71,19 @@ def process_folders(input_folders, debug):
 					# if ".sys" in f:
 					input_files.append(os.path.join(dirpath, f))
 	return input_files
-
-
 
 def process_yaml_files(input_folders, debug):
 	input_files = []
 	# print(input_folders)
-	for d in input_folders:
-		if not os.path.exists(d):
-			Log.error("[E] Error: input directory '%s' doesn't exist" % d)
-		else:
-			for dirpath, dirnames, files in os.walk(d):
-				for f in files:
-					# if ".sys" in f:
-					input_files.append(os.path.join(dirpath, f))
-	return input_files
-
+	yaml_data_list = []
+	for yaml_folder in input_folders:
+		for filename in os.listdir(yaml_folder):
+			if filename.endswith('.yaml') or filename.endswith('.yml'):
+				file_path = os.path.join(yaml_folder, filename)
+				with open(file_path, 'r') as file:
+					yaml_data = yaml.safe_load(file)
+					yaml_data_list.append(yaml_data)
+	return yaml_data_list
 
 def process_files(input_files, debug):
 	header_infos = []
@@ -153,7 +150,7 @@ def process_files(input_files, debug):
 				hi['sha256'].append(sha256_hash)
 				hi['file_sizes'].append(file_size)
 
-		#pprint.pprint(header_infos)
+		#pprint(header_infos)
 		if not is_duplicate:
 			header_infos.append(yara_rule_infos)
 	
@@ -255,10 +252,10 @@ if __name__ == '__main__':
 	parser = argparse.ArgumentParser(description='YARA Rule Generator for PE Header Info')
 	parser.add_argument('-d', nargs='*', 
                     help='Path to driver directories (can be used multiple times)',
-                    metavar='driver-files', default=[['../../drivers/']])
+                    metavar='driver-files', default=['../../drivers/'])
 	parser.add_argument('-y', nargs='*', 
                     help='Path to YAML files with information on the drivers (can be used multiple times)',
-                    metavar='yaml-files', default=[['../../yaml/']])
+                    metavar='yaml-files', default=['../../yaml/'])
 	parser.add_argument('-o', help="Output file for simple rules", metavar='output-folder', default='../../detections/yara/vuln-drivers.yar')
 	parser.add_argument('-a', help="Output file for anomaly detection rules", metavar='output-folder', default='../../detections/yara/vuln-driver-anomalies.yar')
 	parser.add_argument('--strict', action='store_true', default=False, help='Include magic header and filesize to make the rule more strict (less false positives)')
@@ -279,12 +276,14 @@ if __name__ == '__main__':
 	Log.addHandler(consoleHandler)
 
 	# Walk the folders and get a list of all input files
-	Log.info("[+] Processing %d input paths" % len(args.d[0]))
+	Log.info("[+] Processing %d driver folders" % len(args.d))
 	file_paths = process_folders(args.d, args.debug)
 
 	# Walk the YAML information folders and get a dictionary with meta data
-	Log.info("[+] Processing %d YAML files" % len(args.d[0]))
+	Log.info("[+] Processing %d YAML folders" % len(args.y))
 	yaml_info = process_yaml_files(args.y, args.debug)
+	pprint(yaml_info[0])
+	sys.exit(1)
 
 	# Process each file and extract the header info need for the YARA rules
 	Log.info("[+] Processing %d sample files" % len(file_paths))
