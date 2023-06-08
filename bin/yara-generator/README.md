@@ -6,6 +6,18 @@ This YARA rule generator creates YARA rules for the vulnerable / malicious drive
 
 The generator processes the input samples and extract specific 'VersionInfo' values from the driver's PE headers. This includes e.g., the company name, file version, product version, description and other values. It then creates YARA rules that look for these specific values and uses a condition that's very permissive (`all of them`). This allows us to detect the drivers even if they are embedded in another file or loaded into memory.
 
+The rule generator in version 0.4 generates five output files:
+
+| File Name | Description | Score | 
+| --- | --- | --- |
+| yara-rules_vulnerable_drivers.yar | Contains rules to detect the vulnerable drivers without magic header and file size restrictions (possible false positives or malware that embeds them) | 50 |
+| yara-rules_malicious_drivers.yar | Contains rules to detect the malicious drivers without magic header and file size restrictions (possible false positives or malware that embeds them) | 75 |
+| yara-rules_vulnerable_drivers_strict.yar | Contains rules to detect the vulnerable drivers with magic header and file size restrictions  (less false positives) | 50 |
+| yara-rules_malicious_drivers_strict.yar | Contains rules to detect the malicious drivers with magic header and file size restrictions (less false positives) | 85 |
+| yara-rules_vulnerable_drivers_strict_renamed.yar | Contains rules to detect the vulnerable drivers with magic header and file size restrictions and filename checks (a renamed vulnerable driver is much more suspicious)[^1] | 70 |
+
+[^1]: WARNING: these rules use the external variable `filename` which isn't available in every tool that uses YARA. It is e.g. used in [LOKI](https://github.com/Neo23x0/Loki/) and [THOR](https://www.nextron-systems.com/thor-lite/). 
+
 ## Requirements
 
 * [Python 3.10](https://www.python.org/downloads/)
@@ -28,16 +40,16 @@ poetry shell
 ## Usage
 
 ```sh
-usage: yara-generator.py [-h] [-d driver-files [driver-files ...]] [-o output-folder] [--strict] [--debug]
+usage: yara-generator.py [-h] [-d [driver-files ...]] [-y [yaml-files ...]] [-o output-folder] [--debug]
 
 YARA Rule Generator for PE Header Info
 
-optional arguments:
+options:
   -h, --help            show this help message and exit
-  -d driver-files [driver-files ...]
-                        Path to input directory (can be used multiple times)
-  -o output-folder      Output file
-  --strict              Include magic header and file size to make the rule more strict
+  -d [driver-files ...]
+                        Path to driver directories (can be used multiple times)
+  -y [yaml-files ...]   Path to YAML files with information on the drivers (can be used multiple times)
+  -o output-folder      Output folder for rules
   --debug               Debug output
 ```
 
@@ -48,26 +60,13 @@ optional arguments:
 Generate the YARA rules and then use the command line tool YARA to scan the home folder using these rules:
 
 ```sh
-python yara-generator.py -d ../../drivers/ --strict
-yara -r yara-rules.yar ~/
+python yara-generator.py -d ../../drivers/
 ```
 
 Show debug output while generating the rules
 
 ```sh
-python yara-generator.py -d ../../drivers/ --strict --debug
-```
-
-Use a custom output file
-
-```sh
-python yara-generator.py -d ../../drivers/ --strict -o my-yara-output.yar
-```
-
-Create rules that would detect the vulnerable drivers even if packaged with other files (e.g., in malware / as overlay) or to be used for in-memory detection (no magic header check, no file size limitation).
-
-```sh
-python yara-generator.py -d ../../drivers/
+python yara-generator.py -d ../../drivers/ --debug
 ```
 
 ### Working on Windows
@@ -76,19 +75,12 @@ Generate the YARA rules and then use the command line tool YARA to scan the driv
 
 ```sh
 python yara-generator.py -d ..\..\drivers\
-yara -r yara-rules.yar C:\
 ```
 
 Show debug output while generating the rules
 
 ```sh
 python yara-generator.py -d ..\..\drivers\ --debug
-```
-
-Use a custom output file
-
-```sh
-python yara-generator.py -d ..\..\drivers\ -o my-yara-output.yar
 ```
 
 ## Example Output

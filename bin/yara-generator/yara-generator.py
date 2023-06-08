@@ -4,9 +4,9 @@
 #
 # Generates YARA rules for a usable subset of the known vulnerable / malicious drivers
 # Florian Roth
-# May 2023
+# june 2023
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 __author__ = "Florian Roth"
 
 import sys
@@ -29,35 +29,18 @@ import shortuuid
 YARA_RULE_TEMPLATE = '''
 rule $$$RULENAME$$$ {
 	meta:
-		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - $$$FILENAMES$$$"
+		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - $$$FILENAMES$$$"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "$$$HASH$$$"
 		date = "$$$DATE$$$"
-		score = 50
+		score = $$$SCORE$$$
 	strings:
 		$ = $$$STRINGS$$$
 	condition:
-		$$$STRICT$$$all of them
+		$$$STRICT$$$all of them$$$RENAMED$$$
 }
 '''
-
-YARA_RULE_RENAMED_TEMPLATE = '''
-rule $$$RULENAME$$$ {
-	meta:
-		description = "Detects renamed vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - $$$FILENAMES$$$"
-		author = "Florian Roth"
-		reference = "https://github.com/magicsword-io/LOLDrivers"
-		hash = "$$$HASH$$$"
-		date = "$$$DATE$$$"
-		score = 70
-	strings:
-		$ = $$$STRINGS$$$
-	condition:
-		$$$STRICT$$$all of them
-}
-'''
-
 
 def process_folders(input_folders, debug):
 	input_files = []
@@ -157,19 +140,48 @@ def process_files(input_files, debug):
 	return header_infos
 
 
-def generate_yara_rules(header_infos, strict, debug, output_folder):
+def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, renamed):
 	rules = list()
 
 	# Loop over the header infos 
 	for hi in header_infos:
+		# Get YAML info to determine the type of rule
+		yaml_info = get_yaml_info_for_sample(hi['sha256'][0], yaml_infos)
+		# Category and values
+		type_driver = "vulnerable driver"
+		type_string = "PUA_VULN"
+		type_desc = "vulnerable"
+		type_score = 50
+		if renamed:
+			type_score = 70
+		# for malicious drivers
+		if 'Category' in yaml_info:
+			#print(yaml_info['Category'])
+			if yaml_info['Category'] == "malicious":
+				type_driver = "malicious"
+				type_string = "MAL_"
+				type_desc = "malicious"
+				type_score = 75
+				if strict:
+					type_score = 85
+		# File names (use the file names in field 'Tags' otherwise use the driver file names)
+		file_names = hi['file_names']
+		if 'Tags' in yaml_info:
+			file_names = yaml_info['Tags']
+		# Apply filter
+		if driver_filter is not type_driver:
+			continue
+
 		# Generate Rule
 		new_rule = YARA_RULE_TEMPLATE
-		rule_name = generate_rule_name(hi['version_info'])
+		rule_name = generate_rule_name(hi['version_info'], type_string)
 		Log.info("Generating YARA rule for %s - rule name %s" % (hi['file_names'], rule_name))
 		new_rule = new_rule.replace('$$$RULENAME$$$', rule_name)
 		new_rule = new_rule.replace('$$$HASH$$$', '"\n\t\thash = "'.join(hi['sha256']))
 		new_rule = new_rule.replace('$$$DATE$$$', datetime.today().strftime('%Y-%m-%d'))
-		new_rule = new_rule.replace('$$$FILENAMES$$$', ", ".join(hi['file_names']))
+		new_rule = new_rule.replace('$$$FILENAMES$$$', ", ".join(file_names))
+		new_rule = new_rule.replace('$$$SCORE$$$', str(type_score))
+		new_rule = new_rule.replace('$$$TYPE$$$', type_desc)
 		string_values = generate_string_values(hi['version_info'])
 		# if string values is empty or too small
 		if len(string_values) < 3:
@@ -181,17 +193,34 @@ def generate_yara_rules(header_infos, strict, debug, output_folder):
 			new_rule = new_rule.replace('$$$STRICT$$$', "uint16(0) == 0x5a4d and filesize < %dKB and " % max(hi['file_sizes']))
 		else:
 			new_rule = new_rule.replace('$$$STRICT$$$', '')
-
-		# write individual rule to file
-		for s in hi["sha256"]:
-			rule_file_name = f'{output_folder}{s}.yara'
-			with open(rule_file_name, 'w') as rule_file:
-				rule_file.write(new_rule)
+		if 'Tags' in yaml_info:
+			if renamed and len(yaml_info['Tags']) > 0:
+				filename_string = generate_filename_string(yaml_info['Tags'])
+				new_rule = new_rule.replace('$$$RENAMED$$$', filename_string)
+			else:
+				new_rule = new_rule.replace('$$$RENAMED$$$', '') 
+		else:
+			new_rule = new_rule.replace('$$$RENAMED$$$', '') 
 
 		Log.debug(new_rule)
 		# Append rule to the list
 		rules.append(new_rule)
 	return rules
+
+
+def generate_filename_string(tags):
+	filename_expression = " and not filename matches /$VALUE$/i"
+	filenames = []
+	expression = ""
+	for t in tags:
+		filenames.append(os.path.splitext(t)[0])
+	# Compose the full expression
+	if len(filenames) == 1:
+		expression = filename_expression.replace('$VALUE$', filenames[0])
+	else:
+		for f in filenames:
+			expression += filename_expression.replace('$VALUE$', f)
+	return expression
 
 
 def generate_string_values(version_info):
@@ -205,14 +234,33 @@ def generate_string_values(version_info):
 	return string_values
 
 
+def get_yaml_info_for_sample(sample_hash, yaml_infos):
+	# Loop over YAML infos and find the sample using its hash
+	for yi in yaml_infos:
+		for sample_info in yi['KnownVulnerableSamples']:
+			sample_hashes = []
+			if 'MD5' in sample_info:
+				sample_hashes.append(sample_info['MD5'])
+			if 'SHA1' in sample_info:
+				sample_hashes.append(sample_info['SHA1'])
+			if 'SHA256' in sample_info:
+				sample_hashes.append(sample_info['SHA256'])
+			# if the driver's hash matches on of the hashes mentioned in the sample info in the YAML
+			if sample_hash in sample_hashes:
+				# return the info
+				return yi
+	# otherwise return nothing
+	return None
+
+
 def get_version_info(version_info, value):
 	if value in version_info:
 		return version_info[value]
 	return ''
 
 
-def generate_rule_name(version_info):
-	prefix = "PUA_VULN_Driver"
+def generate_rule_name(version_info, type_string):
+	prefix = "%s_Driver" % type_string
 	rid = shortuuid.ShortUUID().random(length=4)
 	# Trying to use the values from the VersionInfo for sections of the name
 	custom_rule_part = []
@@ -256,9 +304,7 @@ if __name__ == '__main__':
 	parser.add_argument('-y', nargs='*', 
                     help='Path to YAML files with information on the drivers (can be used multiple times)',
                     metavar='yaml-files', default=['../../yaml/'])
-	parser.add_argument('-o', help="Output file for simple rules", metavar='output-folder', default='../../detections/yara/vuln-drivers.yar')
-	parser.add_argument('-a', help="Output file for anomaly detection rules", metavar='output-folder', default='../../detections/yara/vuln-driver-anomalies.yar')
-	parser.add_argument('--strict', action='store_true', default=False, help='Include magic header and filesize to make the rule more strict (less false positives)')
+	parser.add_argument('-o', help="Output folder for rules", metavar='output-folder', default='../../detections/yara/')
 	parser.add_argument('--debug', action='store_true', default=False, help='Debug output')
 
 	args = parser.parse_args()
@@ -281,9 +327,9 @@ if __name__ == '__main__':
 
 	# Walk the YAML information folders and get a dictionary with meta data
 	Log.info("[+] Processing %d YAML folders" % len(args.y))
-	yaml_info = process_yaml_files(args.y, args.debug)
-	pprint(yaml_info[0])
-	sys.exit(1)
+	yaml_infos = process_yaml_files(args.y, args.debug)
+	#pprint(yaml_infos[0])
+	#sys.exit(1)
 
 	# Process each file and extract the header info need for the YARA rules
 	Log.info("[+] Processing %d sample files" % len(file_paths))
@@ -291,10 +337,31 @@ if __name__ == '__main__':
 
 	# Generate YARA rules and return them as list of their string representation
 	Log.info("[+] Generating YARA rules from %d header infos" % len(file_infos))
-	yara_rules = generate_yara_rules(file_infos, args.strict, args.debug, args.o)
+	yara_rules_vulnerable_drivers = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="vulnerable driver",  strict=False, renamed=False)
+	yara_rules_malicious_drivers = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="malicious",  strict=False, renamed=False)
+	yara_rules_vulnerable_drivers_strict = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="vulnerable driver",  strict=True, renamed=False)
+	yara_rules_malicious_drivers_strict = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="malicious",  strict=True, renamed=False)
+	yara_rules_vulnerable_drivers_strict_renamed = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="vulnerable driver",  strict=True, renamed=True)
 
 	# Write the output file
-	with open(args.o + 'yara-rules.yar', 'w') as fh:
-		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules), args.o + 'yara-rules.yar'))
-		fh.write("\n".join(yara_rules))
+	output_file = os.path.join(args.o, 'yara-rules_vulnerable_drivers.yar')
+	with open(output_file, 'w') as fh:
+		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_vulnerable_drivers), output_file))
+		fh.write("\n".join(yara_rules_vulnerable_drivers))
+	output_file = os.path.join(args.o, 'yara-rules_malicious_drivers.yar')
+	with open(output_file, 'w') as fh:
+		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_malicious_drivers), output_file))
+		fh.write("\n".join(yara_rules_malicious_drivers))
+	output_file = os.path.join(args.o, 'yara-rules_vulnerable_drivers_strict.yar')
+	with open(output_file, 'w') as fh:
+		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_vulnerable_drivers_strict), output_file))
+		fh.write("\n".join(yara_rules_vulnerable_drivers_strict))
+	output_file = os.path.join(args.o, 'yara-rules_malicious_drivers_strict.yar')
+	with open(output_file, 'w') as fh:
+		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_malicious_drivers_strict), output_file))
+		fh.write("\n".join(yara_rules_malicious_drivers_strict))
+	output_file = os.path.join(args.o, 'yara-rules_vulnerable_drivers_strict_renamed.yar')
+	with open(output_file, 'w') as fh:
+		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_vulnerable_drivers_strict_renamed), output_file))
+		fh.write("\n".join(yara_rules_vulnerable_drivers_strict_renamed))
 	
