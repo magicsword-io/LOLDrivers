@@ -1,5 +1,5 @@
 
-rule MAL_Driver_MicrosoftCorporation_windbgsys_MicrosoftWindowsOperatingSystem_zUjz {
+rule MAL_Driver_MicrosoftCorporation_windbgsys_MicrosoftWindowsOperatingSystem_3JkC {
 	meta:
 		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - windbg.sys"
 		author = "Florian Roth"
@@ -37,7 +37,7 @@ rule MAL_Driver_MicrosoftCorporation_windbgsys_MicrosoftWindowsOperatingSystem_z
 }
 
 
-rule MAL_Driver_SenseCORP__8RUa {
+rule MAL_Driver_SenseCORP__8JCJ {
 	meta:
 		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Sense5Ext.sys"
 		author = "Florian Roth"
@@ -56,7 +56,7 @@ rule MAL_Driver_SenseCORP__8RUa {
 }
 
 
-rule MAL_Driver_LegalCorp_PCIExpressVideoCapture_6AiP {
+rule MAL_Driver_LegalCorp_PCIExpressVideoCapture_SpKk {
 	meta:
 		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PcieCubed.sys"
 		author = "Florian Roth"
@@ -77,7 +77,7 @@ rule MAL_Driver_LegalCorp_PCIExpressVideoCapture_6AiP {
 }
 
 
-rule MAL_Driver_MicrosoftCorporation_ntbiosys_MicrosoftRWindowsRNTOperatingSystem_3kiC {
+rule MAL_Driver_MicrosoftCorporation_ntbiosys_MicrosoftRWindowsRNTOperatingSystem_75JH {
 	meta:
 		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ntbios_2.sys"
 		author = "Florian Roth"
@@ -100,7 +100,7 @@ rule MAL_Driver_MicrosoftCorporation_ntbiosys_MicrosoftRWindowsRNTOperatingSyste
 }
 
 
-rule MAL_Driver_gentilkiwiBenjaminDELPY_mimidrv_mimidrvmimikatz_bX7Z {
+rule MAL_Driver_gentilkiwiBenjaminDELPY_mimidrv_mimidrvmimikatz_4Bde {
 	meta:
 		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys"
 		author = "Florian Roth"
@@ -122,7 +122,7 @@ rule MAL_Driver_gentilkiwiBenjaminDELPY_mimidrv_mimidrvmimikatz_bX7Z {
 }
 
 
-rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_85Hk {
+rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_8KwX {
 	meta:
 		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - wantd_6.sys"
 		author = "Florian Roth"
@@ -147,7 +147,7 @@ rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_85
 }
 
 
-rule MAL_Driver_GMER_gmersys_GMER_8CE7 {
+rule MAL_Driver_GMER_gmersys_GMER_6tyR {
 	meta:
 		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gmer64.sys"
 		author = "Florian Roth"
@@ -169,7 +169,7 @@ rule MAL_Driver_GMER_gmersys_GMER_8CE7 {
 }
 
 
-rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_5MzP {
+rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_6RGh {
 	meta:
 		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - wantd_2.sys"
 		author = "Florian Roth"
@@ -191,7 +191,7 @@ rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_5M
 }
 
 
-rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_5k4R {
+rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_5tt8 {
 	meta:
 		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - wantd_3.sys"
 		author = "Florian Roth"
@@ -213,7 +213,7 @@ rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_5k
 }
 
 
-rule MAL_Driver_SenseCORP__3srr {
+rule MAL_Driver_SenseCORP__VUtA {
 	meta:
 		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Sense5Ext.sys"
 		author = "Florian Roth"
@@ -232,7 +232,7 @@ rule MAL_Driver_SenseCORP__3srr {
 }
 
 
-rule MAL_Driver_MicrosoftCorporation_ndislansys_MicrosoftWindowsOperatingSystem_97pe {
+rule MAL_Driver_MicrosoftCorporation_ndislansys_MicrosoftWindowsOperatingSystem_3MV6 {
 	meta:
 		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ndislan.sys"
 		author = "Florian Roth"

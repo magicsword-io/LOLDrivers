@@ -154,6 +154,7 @@ def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, 
 		type_score = 50
 		if renamed:
 			type_score = 70
+			type_string = "PUA_VULN_Renamed"
 		# for malicious drivers
 		if 'Category' in yaml_info:
 			#print(yaml_info['Category'])
@@ -344,23 +345,23 @@ if __name__ == '__main__':
 	yara_rules_vulnerable_drivers_strict_renamed = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="vulnerable driver",  strict=True, renamed=True)
 
 	# Write the output file
-	output_file = os.path.join(args.o, 'yara-rules_vulnerable_drivers.yar')
+	output_file = os.path.join(args.o, 'yara-rules_vuln_drivers.yar')
 	with open(output_file, 'w') as fh:
 		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_vulnerable_drivers), output_file))
 		fh.write("\n".join(yara_rules_vulnerable_drivers))
-	output_file = os.path.join(args.o, 'yara-rules_malicious_drivers.yar')
+	output_file = os.path.join(args.o, 'yara-rules_mal_drivers.yar')
 	with open(output_file, 'w') as fh:
 		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_malicious_drivers), output_file))
 		fh.write("\n".join(yara_rules_malicious_drivers))
-	output_file = os.path.join(args.o, 'yara-rules_vulnerable_drivers_strict.yar')
+	output_file = os.path.join(args.o, 'yara-rules_vuln_drivers_strict.yar')
 	with open(output_file, 'w') as fh:
 		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_vulnerable_drivers_strict), output_file))
 		fh.write("\n".join(yara_rules_vulnerable_drivers_strict))
-	output_file = os.path.join(args.o, 'yara-rules_malicious_drivers_strict.yar')
+	output_file = os.path.join(args.o, 'yara-rules_mal_drivers_strict.yar')
 	with open(output_file, 'w') as fh:
 		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_malicious_drivers_strict), output_file))
 		fh.write("\n".join(yara_rules_malicious_drivers_strict))
-	output_file = os.path.join(args.o, 'yara-rules_vulnerable_drivers_strict_renamed.yar')
+	output_file = os.path.join(args.o, 'yara-rules_vuln_drivers_strict_renamed.yar')
 	with open(output_file, 'w') as fh:
 		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_vulnerable_drivers_strict_renamed), output_file))
 		fh.write("\n".join(yara_rules_vulnerable_drivers_strict_renamed))
