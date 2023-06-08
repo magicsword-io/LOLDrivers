@@ -1,7 +1,7 @@
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_76jL {
+rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_WewP {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "34bee22c18ddbddbe115cf1ab55cabf0e482aba1eb2c343153577fb24b7226d3"
@@ -24,9 +24,9 @@ rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_76jL {
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_5otD {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_74Yb {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d7e091e0d478c34232e8479b950c5513077b3a69309885cee4c61063e5f74ac0"
@@ -44,9 +44,9 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_5otD {
 }
 
 
-rule PUA_VULN_Driver_EldoSCorporation_elrawdsksys_RawDisk_6NTo {
+rule PUA_VULN_Driver_EldoSCorporation_elrawdsksys_RawDisk_3oAD {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - elrawdsk.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - elrawdsk.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6"
@@ -67,9 +67,9 @@ rule PUA_VULN_Driver_EldoSCorporation_elrawdsksys_RawDisk_6NTo {
 }
 
 
-rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_NBwQ {
+rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_jb62 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gdrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gdrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "81aafae4c4158d0b9a6431aff0410745a0f6a43fb20a9ab316ffeb8c2e2ccac0"
@@ -89,9 +89,9 @@ rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_NBwQ
 }
 
 
-rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_4qep {
+rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_57sz {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AMDRyzenMasterDriver.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AMDRyzenMasterDriver.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f6cd7353cb6e86e98d387473ed6340f9b44241867508e209e944f548b9db1d5f"
@@ -111,9 +111,9 @@ rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMaster
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_kFmY {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_4fPz {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2594b3ef3675ca3a7b465b8ed4962e3251364bab13b12af00ebba7fa2211abb2"
@@ -133,9 +133,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_4o5E {
+rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_5xZB {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6befa481e8cca8084d9ec3a1925782cd3c28ef7a3e4384e034d48deaabb96b63"
@@ -161,9 +161,9 @@ rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_4o5E {
 }
 
 
-rule PUA_VULN_Driver_RWEverything_RwDrvsys_RwDrvDriver_6DH5 {
+rule PUA_VULN_Driver_RWEverything_RwDrvsys_RwDrvDriver_76Z9 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - RwDrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - RwDrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "45ba688a4bded8a7e78a4f5b0dc21004e951ddceb014bb92f51a3301d2fbc56a"
@@ -187,9 +187,9 @@ rule PUA_VULN_Driver_RWEverything_RwDrvsys_RwDrvDriver_6DH5 {
 }
 
 
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_vmdrvsys_WindowsRWinDDKdriver_8hAo {
+rule PUA_VULN_Driver_WindowsRWinDDKprovider_vmdrvsys_WindowsRWinDDKdriver_8WwK {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - vmdrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - vmdrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5c0b429e5935814457934fa9c10ac7a88e19068fa1bd152879e4e9b89c103921"
@@ -211,9 +211,9 @@ rule PUA_VULN_Driver_WindowsRWinDDKprovider_vmdrvsys_WindowsRWinDDKdriver_8hAo {
 }
 
 
-rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_3tZ4 {
+rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_7KHH {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AMDRyzenMasterDriver.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AMDRyzenMasterDriver.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a13054f349b7baa8c8a3fcbd31789807a493cc52224bbff5e412eb2bd52a6433"
@@ -234,9 +234,9 @@ rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMaster
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_7Ckt {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_6xYb {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5bd41a29cbba0d24e639f49d1f201b9bd119b11f5e3b8a5fefa3a5c6f1e7692c"
@@ -256,9 +256,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_7Ck
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_8q7V {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_5FMW {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "88e2e6a705d3fb71b966d9fb46dc5a4b015548daf585fb54dfcd81dc0bd3ebdc"
@@ -288,9 +288,9 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_8
 }
 
 
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_cpuzsys_WindowsRWinDDKdriver_3okw {
+rule PUA_VULN_Driver_WindowsRWinDDKprovider_cpuzsys_WindowsRWinDDKdriver_7KFD {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1f4d4db4abe26e765a33afb2501ac134d14cadeaa74ae8a0fae420e4ecf58e0c"
@@ -316,9 +316,9 @@ rule PUA_VULN_Driver_WindowsRWinDDKprovider_cpuzsys_WindowsRWinDDKdriver_3okw {
 }
 
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_6Cqp {
+rule PUA_VULN_Driver_NovellInc_NovellXTier_6JLi {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - libnicm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - libnicm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b50ffc60eaa4fb7429fdbb67c0aba0c7085f5129564d0a113fec231c5f8ff62e"
@@ -338,9 +338,9 @@ rule PUA_VULN_Driver_NovellInc_NovellXTier_6Cqp {
 }
 
 
-rule PUA_VULN_Driver_OpenLibSysorg_WinRingsys_WinRing_7UNm {
+rule PUA_VULN_Driver_OpenLibSysorg_WinRingsys_WinRing_5MxW {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - WinRing0x64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - WinRing0x64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5"
@@ -361,9 +361,9 @@ rule PUA_VULN_Driver_OpenLibSysorg_WinRingsys_WinRing_7UNm {
 }
 
 
-rule PUA_VULN_Driver_Windowswinowsdriverkitsprovider_HwRwDrvsys_Hardwarereadwritedriver_6JJi {
+rule PUA_VULN_Driver_Windowswinowsdriverkitsprovider_HwRwDrvsys_Hardwarereadwritedriver_6irU {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - HwRwDrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - HwRwDrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "21ccdd306b5183c00ecfd0475b3152e7d94b921e858e59b68a03e925d1715f21"
@@ -383,9 +383,9 @@ rule PUA_VULN_Driver_Windowswinowsdriverkitsprovider_HwRwDrvsys_Hardwarereadwrit
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_6XB3 {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_7wGQ {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ad8ffccfde782bc287241152cf24245a8bf21c2530d81c57e17631b3c4adb833"
@@ -405,9 +405,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_6XB3 {
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_4nj7 {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3fks {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3124b0411b8077605db2a9b7909d8240e0d554496600e2706e531c93c931e1b5"
@@ -427,9 +427,9 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_4nj7 {
 }
 
 
-rule PUA_VULN_Driver_IObit_Monitorsys_AdvancedSystemCare_ndzC {
+rule PUA_VULN_Driver_IObit_Monitorsys_AdvancedSystemCare_UuPS {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Monitor_win10_x64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Monitor_win10_x64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e4a7da2cf59a4a21fc42b611df1d59cae75051925a7ddf42bf216cc1a026eadb"
@@ -449,9 +449,9 @@ rule PUA_VULN_Driver_IObit_Monitorsys_AdvancedSystemCare_ndzC {
 }
 
 
-rule PUA_VULN_Driver_PhoenixTechnologiesLtd_PHLASHNT_WinPhlash_96Eu {
+rule PUA_VULN_Driver_PhoenixTechnologiesLtd_PHLASHNT_WinPhlash_3fpD {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PhlashNT.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PhlashNT.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "65db1b259e305a52042e07e111f4fa4af16542c8bacd33655f753ef642228890"
@@ -471,9 +471,9 @@ rule PUA_VULN_Driver_PhoenixTechnologiesLtd_PHLASHNT_WinPhlash_96Eu {
 }
 
 
-rule PUA_VULN_Driver_ArthurLiberman_ALSysIOsys_ALSysIO_86XR {
+rule PUA_VULN_Driver_ArthurLiberman_ALSysIOsys_ALSysIO_XPp7 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ALSysIO64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ALSysIO64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7196187fb1ef8d108b380d37b2af8efdeb3ca1f6eefd37b5dc114c609147216d"
@@ -493,9 +493,9 @@ rule PUA_VULN_Driver_ArthurLiberman_ALSysIOsys_ALSysIO_86XR {
 }
 
 
-rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_7sEw {
+rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_8HxM {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gdrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gdrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "133e542842656197c5d22429bd56d57aa33c9522897fdf29853a6d321033c743"
@@ -515,9 +515,9 @@ rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_7sEw
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_4s6q {
+rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_iAvc {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0d3790af5f8e5c945410929e31d06144a471ac82f828afe89a4758a5bbeb7f9f"
@@ -548,9 +548,9 @@ rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_4s6q {
 }
 
 
-rule PUA_VULN_Driver_ASUStek_Driversys_ECtool_NcZ9 {
+rule PUA_VULN_Driver_ASUStek_Driversys_ECtool_4Cq7 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - driver7-x86-withoutdbg.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - driver7-x86-withoutdbg.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "927c2a580d51a598177fa54c65e9d2610f5f212f1b6cb2fbf2740b64368f010a"
@@ -572,9 +572,9 @@ rule PUA_VULN_Driver_ASUStek_Driversys_ECtool_NcZ9 {
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_8qPw {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_8Sob {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cf4b5fa853ce809f1924df3a3ae3c4e191878c4ea5248d8785dc7e51807a512b"
@@ -594,9 +594,9 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_8qPw {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_z3Hx {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_64tL {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d783ace822f8fe4e25d5387e5dd249cb72e62f62079023216dc436f1853a150f"
@@ -616,9 +616,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_z3Hx {
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_3j4V {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_6gja {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1"
@@ -638,9 +638,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_3j4V {
 }
 
 
-rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriverfle_54rJ {
+rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriverfle_7chd {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - BS_I2cIo.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - BS_I2cIo.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "42e170a7ab1d2c160d60abfc906872f9cfd0c2ee169ed76f6acb3f83b3eeefdb"
@@ -662,9 +662,9 @@ rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriverfle_54rJ {
 }
 
 
-rule PUA_VULN_Driver_MiTACTechnologyCorporation_mtcBSvsys_MiTACSystemServiceProvider_5Htz {
+rule PUA_VULN_Driver_MiTACTechnologyCorporation_mtcBSvsys_MiTACSystemServiceProvider_7Dyw {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mtcBSv64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mtcBSv64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c9cf1d627078f63a36bbde364cd0d5f2be1714124d186c06db5bcdf549a109f8"
@@ -684,9 +684,9 @@ rule PUA_VULN_Driver_MiTACTechnologyCorporation_mtcBSvsys_MiTACSystemServiceProv
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_QwmQ {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_7ni2 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5f6547e9823f94c5b94af1fb69a967c4902f72b6e0c783804835e6ce27f887b0"
@@ -706,9 +706,9 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_QwmQ {
 }
 
 
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_4Shx {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_64ai {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viraglt64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viraglt64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "58a74dceb2022cd8a358b92acd1b48a5e01c524c3b0195d7033e4bd55eff4495"
@@ -728,9 +728,9 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_4Shx {
 }
 
 
-rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanMonFltXsys_PanCafeManager_5Mhu {
+rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanMonFltXsys_PanCafeManager_3HuH {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PanMonFltX64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PanMonFltX64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "06508aacb4ed0a1398a2b0da5fa2dbf7da435b56da76fd83c759a50a51c75caf"
@@ -750,9 +750,9 @@ rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanMonFltXsys_PanCa
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_6irP {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_5pfx {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0f17e5cfc5bdd74aff91bfb1a836071345ba2b5d1b47b0d5bf8e7e0d4d5e2dbf"
@@ -772,9 +772,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_6irP {
 }
 
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_7hxR {
+rule PUA_VULN_Driver_NovellInc_NovellXTier_8K9S {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ncpl.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ncpl.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6c7120e40fc850e4715058b233f5ad4527d1084a909114fd6a36b7b7573c4a44"
@@ -794,9 +794,9 @@ rule PUA_VULN_Driver_NovellInc_NovellXTier_7hxR {
 }
 
 
-rule PUA_VULN_Driver_BSMIsys__6sfi {
+rule PUA_VULN_Driver_BSMIsys__4CbN {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - BSMIXP64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - BSMIXP64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "59626cac380d8fe0b80a6d4c4406d62ba0683a2f0f68d50ad506ca1b1cf25347"
@@ -815,9 +815,9 @@ rule PUA_VULN_Driver_BSMIsys__6sfi {
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_5ZGU {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_6pAF {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "99f4994a0e5bd1bf6e3f637d3225c69ff4cd620557e23637533e7f18d7d6cba1"
@@ -867,9 +867,9 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_5ZGU {
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_5MLy {
+rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_438k {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "26e3bfef255efd052a84c3c43994c73222b14c95db9a4b1fc2e98f1a5cb26e43"
@@ -891,9 +891,9 @@ rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_5MLy {
 }
 
 
-rule PUA_VULN_Driver_AsusTekComputerInc_BsDefsys_SupportSSTSFSSTEEATFTATCAMFNTAMFNBVCTVCBMFTWC_53ht {
+rule PUA_VULN_Driver_AsusTekComputerInc_BsDefsys_SupportSSTSFSSTEEATFTATCAMFNTAMFNBVCTVCBMFTWC_8rBM {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Bs_Def.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Bs_Def.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be"
@@ -916,9 +916,9 @@ rule PUA_VULN_Driver_AsusTekComputerInc_BsDefsys_SupportSSTSFSSTEEATFTATCAMFNTAM
 }
 
 
-rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanIOxsys_PanIOLibrary_3oJN {
+rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanIOxsys_PanIOLibrary_LFDL {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PanIOx64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PanIOx64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6b830ea0db6546a044c9900d3f335e7820c2a80e147b0751641899d1a5aa8f74"
@@ -938,9 +938,9 @@ rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanIOxsys_PanIOLibr
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_ME8b {
+rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_8Ptw {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2a6db9facf9e13d35c37dd468be04bae5f70c6127a9aee76daebddbdec95d486"
@@ -962,9 +962,9 @@ rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_ME8b {
 }
 
 
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_e4zf {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_6EfP {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ElbyCDIO.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ElbyCDIO.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "82fbcb371d53b8a76a25fbbafaae31147c0d1f6b9f26b3ea45262c2267386989"
@@ -984,9 +984,9 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_e4zf {
 }
 
 
-rule PUA_VULN_Driver_EnTechTaiwan_seasys_softEnginex_3Au6 {
+rule PUA_VULN_Driver_EnTechTaiwan_seasys_softEnginex_3umn {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Se64a.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Se64a.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6cb51ae871fbd5d07c5aad6ff8eea43d34063089528603ca9ceb8b4f52f68ddc"
@@ -1006,9 +1006,9 @@ rule PUA_VULN_Driver_EnTechTaiwan_seasys_softEnginex_3Au6 {
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_74xD {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_8ciZ {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0b542e47248611a1895018ec4f4033ea53464f259c74eb014d018b19ad818917"
@@ -1028,9 +1028,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_74x
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_5vFS {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_6nUc {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1273b74c3c1553eaa92e844fbd51f716356cc19cf77c2c780d4899ec7738fbd1"
@@ -1050,9 +1050,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_5vFS {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8tFj {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8KG2 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "385485e643aa611e97ceae6590c6a8c47155886123dbb9de1e704d0d1624d039"
@@ -1073,9 +1073,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8tFj {
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_6yX7 {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_4cU7 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8fe9828bea83adc8b1429394db7a556a17f79846ad0bfb7f242084a5c96edf2a"
@@ -1092,9 +1092,9 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_6yX7 {
 }
 
 
-rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_cpuzsys_WindowsRCodenameLonghornDDKdriver_7ZKu {
+rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_cpuzsys_WindowsRCodenameLonghornDDKdriver_8zBV {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "49329fa09f584d1960b09c1b15df18c0bc1c4fdb90bf48b6b5703e872040b668"
@@ -1117,9 +1117,9 @@ rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_cpuzsys_WindowsRCodenam
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_7pPe {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_7nvY {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3d9e83b189fcf5c3541c62d1f54a0da0a4e5b62c3243d2989afc46644056c8e3"
@@ -1139,9 +1139,9 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_7pPe {
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3kUe {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_KUaC {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2bbe65cbec3bb069e92233924f7ee1f95ffa16173fceb932c34f68d862781250"
@@ -1162,9 +1162,9 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3kUe {
 }
 
 
-rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_khCt {
+rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_4jWs {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gdrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gdrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "092d04284fdeb6762e65e6ac5b813920d6c69a5e99d110769c5c1a78e11c5ba0"
@@ -1185,9 +1185,9 @@ rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_khCt
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3W8q {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4Frp {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "62f5e13b2edc00128716cb93e6a9eddffea67ce83d2bb426f18f5be08ead89e0"
@@ -1208,9 +1208,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3W8q {
 }
 
 
-rule PUA_VULN_Driver_YYInc_dianhu_PP6L {
+rule PUA_VULN_Driver_YYInc_dianhu_6Uyo {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Dh_Kernel_10.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Dh_Kernel_10.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "80cbba9f404df3e642f22c476664d63d7c229d45d34f5cd0e19c65eb41becec3"
@@ -1229,9 +1229,9 @@ rule PUA_VULN_Driver_YYInc_dianhu_PP6L {
 }
 
 
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_6pZW {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_6HaG {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ElbyCDIO.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ElbyCDIO.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8f68ca89910ebe9da3d02ec82d935de1814d79c44f36cd30ea02fa49ae488f00"
@@ -1252,9 +1252,9 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_6pZW {
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_7Z6e {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_5Ni2 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a5a50449e2cc4d0dbc80496f757935ae38bf8a1bebdd6555a3495d8c219df2ad"
@@ -1274,9 +1274,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_7Z6e {
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_4oBB {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_99HY {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "591bd5e92dfa0117b3daa29750e73e2db25baa717c31217539d30ffb1f7f3a52"
@@ -1296,9 +1296,9 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_4oBB {
 }
 
 
-rule PUA_VULN_Driver_OpenLibSysorg_WinRingsys_WinRing_95iz {
+rule PUA_VULN_Driver_OpenLibSysorg_WinRingsys_WinRing_NYVT {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - WinRing0.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - WinRing0.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "47eaebc920ccf99e09fc9924feb6b19b8a28589f52783327067c9b09754b5e84"
@@ -1319,9 +1319,9 @@ rule PUA_VULN_Driver_OpenLibSysorg_WinRingsys_WinRing_95iz {
 }
 
 
-rule PUA_VULN_Driver_InsydeSoftwareCorp_segwindrvxsys_SEGWindowsDriverx_7X5W {
+rule PUA_VULN_Driver_InsydeSoftwareCorp_segwindrvxsys_SEGWindowsDriverx_3vaJ {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - segwindrvx64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - segwindrvx64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "65329dad28e92f4bcc64de15c552b6ef424494028b18875b7dba840053bc0cdd"
@@ -1341,9 +1341,9 @@ rule PUA_VULN_Driver_InsydeSoftwareCorp_segwindrvxsys_SEGWindowsDriverx_7X5W {
 }
 
 
-rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_6Qdh {
+rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_89uk {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AMDRyzenMasterDriver.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AMDRyzenMasterDriver.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "909de5f21837ea2b13fdc4e5763589e6bdedb903f7c04e1d0b08776639774880"
@@ -1363,9 +1363,9 @@ rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMaster
 }
 
 
-rule PUA_VULN_Driver_ATITechnologiesInc_atillksys_ATIDiagnostics_8vXL {
+rule PUA_VULN_Driver_ATITechnologiesInc_atillksys_ATIDiagnostics_7YBG {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - atillk64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - atillk64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ad40e6d0f77c0e579fb87c5106bf6de3d1a9f30ee2fbf8c9c011f377fa05f173"
@@ -1387,9 +1387,9 @@ rule PUA_VULN_Driver_ATITechnologiesInc_atillksys_ATIDiagnostics_8vXL {
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_6hay {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_6R2G {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0cd4ca335155062182608cad9ef5c8351a715bce92049719dd09c76422cd7b0c"
@@ -1409,9 +1409,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_6ha
 }
 
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_7zRN {
+rule PUA_VULN_Driver_NovellInc_NovellXTier_8ghQ {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - libnicm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - libnicm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e16dc51c51b2df88c474feb52ce884d152b3511094306a289623de69dedfdf48"
@@ -1433,9 +1433,9 @@ rule PUA_VULN_Driver_NovellInc_NovellXTier_7zRN {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_8kaw {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_4mtx {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3fa6379951f08ed3cb87eeba9cf0c5f5e1d0317dcfcf003b810df9d795eeb73e"
@@ -1455,9 +1455,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_8kaw {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8y3F {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8LCT {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3e1d47a497babbfd1c83905777b517ec87c65742bee7eb57a2273eca825d2272"
@@ -1477,9 +1477,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8y3F {
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_3E9F {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_6cob {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6fb5bc9c51f6872de116c7db8a2134461743908efc306373f6de59a0646c4f5d"
@@ -1499,9 +1499,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 }
 
 
-rule PUA_VULN_Driver_ASRockIncorporation_AsrDrvsys_ASRockIODriver_7BsB {
+rule PUA_VULN_Driver_ASRockIncorporation_AsrDrvsys_ASRockIODriver_CAQK {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AsrDrv106.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AsrDrv106.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3943a796cc7c5352aa57ccf544295bfd6fb69aae147bc8235a00202dc6ed6838"
@@ -1527,9 +1527,9 @@ rule PUA_VULN_Driver_ASRockIncorporation_AsrDrvsys_ASRockIODriver_7BsB {
 }
 
 
-rule PUA_VULN_Driver_HPDevelopmentCompany_etdsuppsys_HPETDiDriverDLL_4dwS {
+rule PUA_VULN_Driver_HPDevelopmentCompany_etdsuppsys_HPETDiDriverDLL_cgPD {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - etdsupp.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - etdsupp.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f744abb99c97d98e4cd08072a897107829d6d8481aee96c22443f626d00f4145"
@@ -1549,9 +1549,9 @@ rule PUA_VULN_Driver_HPDevelopmentCompany_etdsuppsys_HPETDiDriverDLL_4dwS {
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_6hPL {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_5ZQy {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1f8168036d636aad1680dd0f577ef9532dbb2dad3591d63e752b0ba3ee6fd501"
@@ -1571,9 +1571,9 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_6hPL {
 }
 
 
-rule PUA_VULN_Driver_PhoenixTechnologies_Agentsys_DriverAgent_8exa {
+rule PUA_VULN_Driver_PhoenixTechnologies_Agentsys_DriverAgent_4AWY {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Agent64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Agent64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4045ae77859b1dbf13972451972eaaf6f3c97bea423e9e78f1c2f14330cd47ca"
@@ -1597,9 +1597,9 @@ rule PUA_VULN_Driver_PhoenixTechnologies_Agentsys_DriverAgent_8exa {
 }
 
 
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_8puo {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_3tMf {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viragt64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viragt64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d0e25b879d830e4f867b09d6540a664b6f88bad353cd14494c33b31a8091f605"
@@ -1619,9 +1619,9 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_8puo {
 }
 
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_4rkB {
+rule PUA_VULN_Driver_NovellInc_NovellXTier_56D9 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NICM.SYS"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NICM.SYS"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "904e0f7d485a98e8497d5ec6dd6e6e1cf0b8d8e067fb64a9e09790af3c8c9d5a"
@@ -1641,9 +1641,9 @@ rule PUA_VULN_Driver_NovellInc_NovellXTier_4rkB {
 }
 
 
-rule PUA_VULN_Driver_OpenLibSysorg_OpenLibSyssys_OpenLibSys_8z2D {
+rule PUA_VULN_Driver_OpenLibSysorg_OpenLibSyssys_OpenLibSys_Hzk9 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - OpenLibSys.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - OpenLibSys.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f0605dda1def240dc7e14efa73927d6c6d89988c01ea8647b671667b2b167008"
@@ -1663,9 +1663,9 @@ rule PUA_VULN_Driver_OpenLibSysorg_OpenLibSyssys_OpenLibSys_8z2D {
 }
 
 
-rule PUA_VULN_Driver_RWEverything_RwDrvsys_RWEverythingReadWriteDriver_Qi2S {
+rule PUA_VULN_Driver_RWEverything_RwDrvsys_RWEverythingReadWriteDriver_6YvW {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AsrIbDrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AsrIbDrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2a652de6b680d5ad92376ad323021850dab2c653abf06edf26120f7714b8e08a"
@@ -1690,9 +1690,9 @@ rule PUA_VULN_Driver_RWEverything_RwDrvsys_RWEverythingReadWriteDriver_Qi2S {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3hik {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6v5u {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5027fce41ed60906a0e76b97c95c2a5a83d57a2d1cd42de232a21f26c0d58e48"
@@ -1712,9 +1712,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3hik {
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_59iF {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_3Gph {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "19d0fc91b70d7a719f7a28b4ad929f114bf1de94a4c7cba5ad821285a4485da0"
@@ -1734,9 +1734,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_59i
 }
 
 
-rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_P7rZ {
+rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_4gFf {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AMDRyzenMasterDriver.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AMDRyzenMasterDriver.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "77955af8a8bcea8998f4046c2f8534f6fb1959c71de049ca2f4298ba47d8f23a"
@@ -1756,9 +1756,9 @@ rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMaster
 }
 
 
-rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_3edD {
+rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_8mSu {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AMDRyzenMasterDriver.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AMDRyzenMasterDriver.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9b1ac756e35f795dd91adbc841e78db23cb7165280f8d4a01df663128b66d194"
@@ -1778,9 +1778,9 @@ rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMaster
 }
 
 
-rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanMonFltsys_PanCafeManager_3h7s {
+rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanMonFltsys_PanCafeManager_4k4c {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PanMonFlt.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PanMonFlt.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7e0124fcc7c95fdc34408cf154cb41e654dade8b898c71ad587b2090b1da30d7"
@@ -1800,9 +1800,9 @@ rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanMonFltsys_PanCaf
 }
 
 
-rule PUA_VULN_Driver_LenovoGroupLimitedR_LenovoDiagnosticsDriversys_LenovoDiagnostics_8u3w {
+rule PUA_VULN_Driver_LenovoGroupLimitedR_LenovoDiagnosticsDriversys_LenovoDiagnostics_7qbE {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - LenovoDiagnosticsDriver.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - LenovoDiagnosticsDriver.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f05b1ee9e2f6ab704b8919d5071becbce6f9d0f9d0ba32a460c41d5272134abe"
@@ -1822,9 +1822,9 @@ rule PUA_VULN_Driver_LenovoGroupLimitedR_LenovoDiagnosticsDriversys_LenovoDiagno
 }
 
 
-rule PUA_VULN_Driver_Dell_DBUtil_87gU {
+rule PUA_VULN_Driver_Dell_DBUtil_32dJ {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - DBUtilDrv2.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - DBUtilDrv2.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "71fe5af0f1564dc187eea8d59c0fbc897712afa07d18316d2080330ba17cf009"
@@ -1841,9 +1841,9 @@ rule PUA_VULN_Driver_Dell_DBUtil_87gU {
 }
 
 
-rule PUA_VULN_Driver_ATSZIO_ATSZIODriver_5QSM {
+rule PUA_VULN_Driver_ATSZIO_ATSZIODriver_8mPS {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ATSZIO.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ATSZIO.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "673bcec3d53fab5efd6e3bac25ac9d6cc51f6bbdf8336e38aade2713dc1ae11b"
@@ -1863,9 +1863,9 @@ rule PUA_VULN_Driver_ATSZIO_ATSZIODriver_5QSM {
 }
 
 
-rule PUA_VULN_Driver_ASUS_asmmapsys_ATKGenericFunctionService_7Uat {
+rule PUA_VULN_Driver_ASUS_asmmapsys_ATKGenericFunctionService_7VsC {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - asmmap64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - asmmap64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "025e7be9fcefd6a83f4471bba0c11f1c11bd5047047d26626da24ee9a419cdc4"
@@ -1885,9 +1885,9 @@ rule PUA_VULN_Driver_ASUS_asmmapsys_ATKGenericFunctionService_7Uat {
 }
 
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_caRp {
+rule PUA_VULN_Driver_NovellInc_NovellXTier_4eug {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - nscm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - nscm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fb81b5f8bf69637dbdf050181499088a67d24577587bc520de94b5ee8996240f"
@@ -1908,9 +1908,9 @@ rule PUA_VULN_Driver_NovellInc_NovellXTier_caRp {
 }
 
 
-rule PUA_VULN_Driver_Realtek_rtkiosys_RealtekIODriver_uwEi {
+rule PUA_VULN_Driver_Realtek_rtkiosys_RealtekIODriver_5pV8 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - rtkio64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - rtkio64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7133a461aeb03b4d69d43f3d26cd1a9e3ee01694e97a0645a3d8aa1a44c39129"
@@ -1930,9 +1930,9 @@ rule PUA_VULN_Driver_Realtek_rtkiosys_RealtekIODriver_uwEi {
 }
 
 
-rule PUA_VULN_Driver_LGElectronicsInc_LHAsys_MicrosoftWindowsOperatingSystem_3BbC {
+rule PUA_VULN_Driver_LGElectronicsInc_LHAsys_MicrosoftWindowsOperatingSystem_3ME4 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - LHA.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - LHA.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "23ba19352b1e71a965260bf4d5120f0200709ee8657ed381043bec9a938a1ade"
@@ -1953,9 +1953,9 @@ rule PUA_VULN_Driver_LGElectronicsInc_LHAsys_MicrosoftWindowsOperatingSystem_3Bb
 }
 
 
-rule PUA_VULN_Driver_LogMeInInc_LMIinfosys_LogMeIn_FrxS {
+rule PUA_VULN_Driver_LogMeInInc_LMIinfosys_LogMeIn_36M3 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - LMIinfo.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - LMIinfo.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "453be8f63cc6b116e2049659e081d896491cf1a426e3d5f029f98146a3f44233"
@@ -1975,9 +1975,9 @@ rule PUA_VULN_Driver_LogMeInInc_LMIinfosys_LogMeIn_FrxS {
 }
 
 
-rule PUA_VULN_Driver_InsydeSoftwareCorp_segwindrvxsys_SEGWindowsDriverx_99R5 {
+rule PUA_VULN_Driver_InsydeSoftwareCorp_segwindrvxsys_SEGWindowsDriverx_4Urm {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - segwindrvx64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - segwindrvx64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c628cda1ef43defc00af45b79949675a8422490d32b080b3a8bb9434242bdbf2"
@@ -1997,9 +1997,9 @@ rule PUA_VULN_Driver_InsydeSoftwareCorp_segwindrvxsys_SEGWindowsDriverx_99R5 {
 }
 
 
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_4bdr {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_4j9m {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ElbyCDIO.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ElbyCDIO.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2fbbc276737047cb9b3ba5396756d28c1737342d89dce1b64c23a9c4513ae445"
@@ -2019,9 +2019,9 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_4bdr {
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_3Uiu {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_3xv2 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "bced04bdefad6a08c763265d6993f07aa2feb57d33ed057f162a947cf0e6668f"
@@ -2041,9 +2041,9 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_3
 }
 
 
-rule PUA_VULN_Driver_Realtek_rtkiowxsys_RealtekIODriver_8y7h {
+rule PUA_VULN_Driver_Realtek_rtkiowxsys_RealtekIODriver_AMs2 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - rtkiow8x64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - rtkiow8x64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "082c39fe2e3217004206535e271ebd45c11eb072efde4cc9885b25ba5c39f91d"
@@ -2063,9 +2063,9 @@ rule PUA_VULN_Driver_Realtek_rtkiowxsys_RealtekIODriver_8y7h {
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_Cjtn {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_5uzD {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d1f4949f76d8ac9f2fa844d16b1b45fb1375d149d46e414e4a4c9424dc66c91f"
@@ -2085,9 +2085,9 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_Cjtn {
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_RD2y {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_5cgL {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7cb497abc44aad09a38160d6a071db499e05ff5871802ccc45d565d242026ee7"
@@ -2107,9 +2107,9 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_RD2y {
 }
 
 
-rule PUA_VULN_Driver_SafeNetInc_Hostnt_Hostnt_8Zzs {
+rule PUA_VULN_Driver_SafeNetInc_Hostnt_Hostnt_7ABD {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - HOSTNT.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - HOSTNT.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "07b6d69bafcfd767f1b63a490a8843c3bb1f8e1bbea56176109b5743c8f7d357"
@@ -2129,9 +2129,9 @@ rule PUA_VULN_Driver_SafeNetInc_Hostnt_Hostnt_8Zzs {
 }
 
 
-rule PUA_VULN_Driver_RivetNetworksLLC_KfeCoDrvsys_KillerTrafficControl_4jn6 {
+rule PUA_VULN_Driver_RivetNetworksLLC_KfeCoDrvsys_KillerTrafficControl_89pt {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - KfeCo11X64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - KfeCo11X64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9a91d6e83b8fdec536580f6617f10dfc64eedf14ead29a6a644eb154426622ba"
@@ -2151,9 +2151,9 @@ rule PUA_VULN_Driver_RivetNetworksLLC_KfeCoDrvsys_KillerTrafficControl_4jn6 {
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_6mn4 {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_Ks2K {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7cb594af6a3655daebc9fad9c8abf2417b00ba31dcd118707824e5316fc0cc21"
@@ -2171,9 +2171,9 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_6mn4 {
 }
 
 
-rule PUA_VULN_Driver_ASRockIncorporation_AsrAutoChkUpdDrvsys_AsrAutoChkUpdDrvDriver_3z9k {
+rule PUA_VULN_Driver_ASRockIncorporation_AsrAutoChkUpdDrvsys_AsrAutoChkUpdDrvDriver_7pnC {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AsrAutoChkUpdDrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AsrAutoChkUpdDrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2aa1b08f47fbb1e2bd2e4a492f5d616968e703e1359a921f62b38b8e4662f0c4"
@@ -2193,9 +2193,9 @@ rule PUA_VULN_Driver_ASRockIncorporation_AsrAutoChkUpdDrvsys_AsrAutoChkUpdDrvDri
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7RCX {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_ANXv {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "97b32ddf83f75637e3ba934df117081dd6a1c57d47a4c9700d35e736da11d5bd"
@@ -2216,9 +2216,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7RCX {
 }
 
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_84Rt {
+rule PUA_VULN_Driver_NovellInc_NovellXTier_6esA {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - nscm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - nscm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "28999af32b55ddb7dcfc26376a244aa2fe297233ce7abe4919a1aef2f7e2cee7"
@@ -2238,9 +2238,9 @@ rule PUA_VULN_Driver_NovellInc_NovellXTier_84Rt {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7yxY {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3Gyd {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "818e396595d08d724666803cd29dac566dc7db23bf50e9919d04b33afa988c01"
@@ -2260,9 +2260,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7yxY {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6AQ2 {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4jrR {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6ffdde6bc6784c13c601442e47157062941c47015891e7139c2aaba676ab59cc"
@@ -2282,9 +2282,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6AQ2 {
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_8uir {
+rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_7sY8 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "771015b2620942919bb2e0683476635b7a09db55216d6fbf03534cb18513b20c"
@@ -2307,9 +2307,9 @@ rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_8uir {
 }
 
 
-rule PUA_VULN_Driver_WindowsRServerDDKprovider_speedfansys_WindowsRServerDDKdriver_8CNh {
+rule PUA_VULN_Driver_WindowsRServerDDKprovider_speedfansys_WindowsRServerDDKdriver_6ust {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - speedfan.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - speedfan.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "22be050955347661685a4343c51f11c7811674e030386d2264cd12ecbf544b7c"
@@ -2329,9 +2329,9 @@ rule PUA_VULN_Driver_WindowsRServerDDKprovider_speedfansys_WindowsRServerDDKdriv
 }
 
 
-rule PUA_VULN_Driver_OpenLibSysorg_OpenLibSyssys_OpenLibSys_74GL {
+rule PUA_VULN_Driver_OpenLibSysorg_OpenLibSyssys_OpenLibSys_4PnD {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - OpenLibSys.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - OpenLibSys.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "91314768da140999e682d2a290d48b78bb25a35525ea12c1b1f9634d14602b2c"
@@ -2351,9 +2351,9 @@ rule PUA_VULN_Driver_OpenLibSysorg_OpenLibSyssys_OpenLibSys_74GL {
 }
 
 
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_7QgR {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_8vdo {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viragt64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viragt64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e4eca7db365929ff7c5c785e2eab04ef8ec67ea9edcf7392f2b74eccd9449148"
@@ -2373,9 +2373,9 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_7QgR {
 }
 
 
-rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_3dWB {
+rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_3vH8 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ATSZIO.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ATSZIO.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fb6b0d304433bf88cc7d57728683dbb4b9833459dc33528918ead09b3907ff22"
@@ -2395,9 +2395,9 @@ rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_3dWB {
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_6KKV {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_8WS8 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "075de997497262a9d105afeadaaefc6348b25ce0e0126505c24aa9396c251e85"
@@ -2418,9 +2418,9 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_6
 }
 
 
-rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_8nL5 {
+rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_5aGP {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - MsIo64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - MsIo64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ae42afa9be9aa6f6a5ae09fa9c05cd2dfb7861dc72d4fd8e0130e5843756c471"
@@ -2442,9 +2442,9 @@ rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_8nL5 {
 }
 
 
-rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublic_5ZpC {
+rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublic_5ufL {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - VBoxDrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - VBoxDrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3724b39e97936bb20ada51c6119aded04530ed86f6b8d6b45fbfb2f3b9a4114b"
@@ -2464,9 +2464,9 @@ rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublic_5ZpC {
 }
 
 
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_3Usa {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_B7ot {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ElbyCDIO.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ElbyCDIO.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "238046cfe126a1f8ab96d8b62f6aa5ec97bab830e2bae5b1b6ab2d31894c79e4"
@@ -2486,9 +2486,9 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_3Usa {
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibXsys_NTIOLibX_6hCe {
+rule PUA_VULN_Driver_MSI_NTIOLibXsys_NTIOLibX_8Rms {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1e8b0c1966e566a523d652e00f7727d8b0663f1dfdce3b9a09b9adfaef48d8ee"
@@ -2509,9 +2509,9 @@ rule PUA_VULN_Driver_MSI_NTIOLibXsys_NTIOLibX_6hCe {
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_mco5 {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_3JL4 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6bfc0f425de9f4e7480aa2d1f2e08892d0553ed0df1c31e9bf3d8d702f38fa2e"
@@ -2533,9 +2533,9 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_m
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_8Ynm {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_FxDa {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7a48f92a9c2d95a72e18055cac28c1e7e6cad5f47aa735cbea5c3b82813ccfaf"
@@ -2555,9 +2555,9 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_8
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_8fsE {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_6i6e {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "45f42c5d874369d6be270ea27a5511efcca512aeac7977f83a51b7c4dee6b5ef"
@@ -2574,9 +2574,9 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_8fsE {
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_gVyi {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_6Xbb {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4d0580c20c1ba74cf90d44c82d040f0039542eea96e4bbff3996e6760f457cee"
@@ -2603,9 +2603,9 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_gVyi {
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_8f7k {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_75HQ {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "86a1b1bacc0c51332c9979e6aad84b5fba335df6b9a096ccb7681ab0779a8882"
@@ -2625,9 +2625,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_8f7k {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_5SCW {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_84D6 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "61befeef14783eb0fed679fca179d2f5c33eb2dcbd40980669ca2ebeb3bf11cf"
@@ -2647,9 +2647,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_5SCW {
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_8aoV {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_7YiN {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "be8dd2d39a527649e34dc77ef8bc07193a4234b38597b8f51e519dadc5479ec2"
@@ -2669,9 +2669,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_8aoV {
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3w7t {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_6ebU {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "30706f110725199e338e9cc1c940d9a644d19a14f0eb8847712cba4cacda67ab"
@@ -2691,9 +2691,9 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3w7t {
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_4skX {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_DQCa {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cc586254e9e89e88334adee44e332166119307e79c2f18f6c2ab90ce8ba7fc9b"
@@ -2713,9 +2713,9 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_4skX {
 }
 
 
-rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_rtkiosys_WindowsRCodenameLonghornDDKdriver_8xxk {
+rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_rtkiosys_WindowsRCodenameLonghornDDKdriver_57jw {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - rtkio64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - rtkio64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "916c535957a3b8cbf3336b63b2260ea4055163a9e6b214f2a7005d6d36a4a677"
@@ -2737,9 +2737,9 @@ rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_rtkiosys_WindowsRCodena
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8kf4 {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6VVB {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e4d9f037411284e996a002b15b49bc227d085ee869ae1cd91ba54ff7c244f036"
@@ -2759,9 +2759,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8kf4 {
 }
 
 
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_CupFixerxsys_WindowsRWinDDKdriver_ESv6 {
+rule PUA_VULN_Driver_WindowsRWinDDKprovider_CupFixerxsys_WindowsRWinDDKdriver_8NFo {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - CupFixerx64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - CupFixerx64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8c748ae5dcc10614cc134064c99367d28f3131d1f1dda0c9c29e99279dc1bdd9"
@@ -2781,9 +2781,9 @@ rule PUA_VULN_Driver_WindowsRWinDDKprovider_CupFixerxsys_WindowsRWinDDKdriver_ES
 }
 
 
-rule PUA_VULN_Driver_ASUSTeKComputerInc_EIOsys_ASUSVGAKernelModeDriver_8Bgy {
+rule PUA_VULN_Driver_ASUSTeKComputerInc_EIOsys_ASUSVGAKernelModeDriver_5WRn {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - EIO.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - EIO.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b17507a3246020fa0052a172485d7b3567e0161747927f2edf27c40e310852e0"
@@ -2803,9 +2803,9 @@ rule PUA_VULN_Driver_ASUSTeKComputerInc_EIOsys_ASUSVGAKernelModeDriver_8Bgy {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_jVaq {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7UEe {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2afdb3278a7b57466a103024aef9ff7f41c73a19bab843a8ebf3d3c4d4e82b30"
@@ -2825,9 +2825,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_jVaq {
 }
 
 
-rule PUA_VULN_Driver_ASUSTeKComputerInc_IOMapsys_ASUSKernelModeDriverforNT_EZQ8 {
+rule PUA_VULN_Driver_ASUSTeKComputerInc_IOMapsys_ASUSKernelModeDriverforNT_joEF {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - IOMap64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - IOMap64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41"
@@ -2847,9 +2847,9 @@ rule PUA_VULN_Driver_ASUSTeKComputerInc_IOMapsys_ASUSKernelModeDriverforNT_EZQ8 
 }
 
 
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_8eno {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_6nCQ {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viragt.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viragt.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e05eeb2b8c18ad2cb2d1038c043d770a0d51b96b748bc34be3e7fc6f3790ce53"
@@ -2869,9 +2869,9 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_8eno {
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_3frh {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_4cjA {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e4522e2cfa0b1f5d258a3cf85b87681d6969e0572f668024c465d635c236b5d9"
@@ -2891,9 +2891,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 }
 
 
-rule PUA_VULN_Driver_MarvinTestSolutionsInc_Hwsys_HW_8H8c {
+rule PUA_VULN_Driver_MarvinTestSolutionsInc_Hwsys_HW_QSyJ {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - hw.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - hw.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "55963284bbd5a3297f39f12f0d8a01ed99fe59d008561e3537bcd4db4b4268fa"
@@ -2914,9 +2914,9 @@ rule PUA_VULN_Driver_MarvinTestSolutionsInc_Hwsys_HW_8H8c {
 }
 
 
-rule PUA_VULN_Driver_MyDriverscom_HWM_DriverGenius_5ELg {
+rule PUA_VULN_Driver_MyDriverscom_HWM_DriverGenius_6eDs {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mydrivers.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mydrivers.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6"
@@ -2936,9 +2936,9 @@ rule PUA_VULN_Driver_MyDriverscom_HWM_DriverGenius_5ELg {
 }
 
 
-rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_8tPw {
+rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_4VBx {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - SANDRA"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - SANDRA"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3e274df646f191d2705c0beaa35eeea84808593c3b333809f13632782e27ad75"
@@ -2958,9 +2958,9 @@ rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_8tPw {
 }
 
 
-rule PUA_VULN_Driver_PowerTool_kEvPsys_PowerTool_3HBc {
+rule PUA_VULN_Driver_PowerTool_kEvPsys_PowerTool_7p4C {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - kEvP64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - kEvP64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8e6363a6393eb4234667c6f614b2072e33512866b3204f8395bbe01530d63f2f"
@@ -2982,9 +2982,9 @@ rule PUA_VULN_Driver_PowerTool_kEvPsys_PowerTool_3HBc {
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_3TJf {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_32YN {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3b6e85c8fed9e39b21b2eab0b69bc464272b2c92961510c36e2e2df7aa39861b"
@@ -3004,9 +3004,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_3TJf {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_hTeP {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3JK8 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7c731c0ea7f28671ab7787800db69739ea5cd6be16ea21045b4580cf95cbf73b"
@@ -3027,9 +3027,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_hTeP {
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_5gnh {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_6kcM {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1a42ebde59e8f63804eaa404f79ee93a16bb33d27fb158c6bfbe6143226899a0"
@@ -3049,9 +3049,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_5gnh {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_guXB {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8iyH {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ec5fac0b6bb267a2bd10fc80c8cca6718439d56e82e053d3ff799ce5f3475db5"
@@ -3071,9 +3071,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_guXB {
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_3nXw {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_7ei2 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "34e0364a4952d914f23f271d36e11161fb6bb7b64aea22ff965a967825a4a4bf"
@@ -3093,9 +3093,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_3nX
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_4oXd {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_8Tic {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d0bd1ae72aeb5f3eabf1531a635f990e5eaae7fdd560342f915f723766c80889"
@@ -3115,9 +3115,9 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_4oXd {
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_BWxw {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_39yx {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3c18ae965fba56d09a65770b4d8da54ccd7801f979d3ebd283397bc99646004b"
@@ -3134,9 +3134,9 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_BWxw {
 }
 
 
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_4eC7 {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_7aSy {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viragt64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viragt64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2b4c7d3820fe08400a7791e2556132b902a9bbadc1942de57077ecb9d21bf47a"
@@ -3156,9 +3156,9 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_4eC7 {
 }
 
 
-rule PUA_VULN_Driver_DTResearchInc_iomemsys_iomemsys_5Y6B {
+rule PUA_VULN_Driver_DTResearchInc_iomemsys_iomemsys_7wXt {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iomem64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iomem64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3d23bdbaf9905259d858df5bf991eb23d2dc9f4ecda7f9f77839691acef1b8c4"
@@ -3178,9 +3178,9 @@ rule PUA_VULN_Driver_DTResearchInc_iomemsys_iomemsys_5Y6B {
 }
 
 
-rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_5Z3Y {
+rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_45rG {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - SANDRA"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - SANDRA"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "496f4a4021226fb0f1b5f71a7634c84114c29faa308746a12c2414adb6b2a40b"
@@ -3200,9 +3200,9 @@ rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_5Z3Y {
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_66vS {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_5R5p {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1b00d6e5d40b1b84ca63da0e99246574cdd2a533122bc83746f06c0d66e63a6e"
@@ -3223,9 +3223,9 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_6
 }
 
 
-rule PUA_VULN_Driver_MultiTheftAuto_MTASanAndreas_3C6E {
+rule PUA_VULN_Driver_MultiTheftAuto_MTASanAndreas_4MbN {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - FairplayKD.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - FairplayKD.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9f4ce6ab5e8d44f355426d9a6ab79833709f39b300733b5b251a0766e895e0e5"
@@ -3243,9 +3243,9 @@ rule PUA_VULN_Driver_MultiTheftAuto_MTASanAndreas_3C6E {
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_3JbK {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_za3r {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2732050a7d836ae0bdc5c0aea4cdf8ce205618c3e7f613b8139c176e86476d0c"
@@ -3265,9 +3265,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_3JbK {
 }
 
 
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_4Y5r {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_8Ae6 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viragt64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viragt64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ef6d3c00f9d0aa31a218094480299ef73fc85146adf62fd0c2f4f88972c5c850"
@@ -3287,9 +3287,9 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_4Y5r {
 }
 
 
-rule PUA_VULN_Driver_MicroFocus_MicroFocusXTier_7FVq {
+rule PUA_VULN_Driver_MicroFocus_MicroFocusXTier_4bYF {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - libnicm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - libnicm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "95d50c69cdbf10c9c9d61e64fe864ac91e6f6caa637d128eb20e1d3510e776d3"
@@ -3308,9 +3308,9 @@ rule PUA_VULN_Driver_MicroFocus_MicroFocusXTier_7FVq {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_qn9L {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_Gvpz {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e3eff841ea0f2786e5e0fed2744c0829719ad711fc9258eeaf81ed65a52a8918"
@@ -3330,9 +3330,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_qn9L {
 }
 
 
-rule PUA_VULN_Driver_ArthurLiberman_ALSysIOsys_ALSysIO_4tET {
+rule PUA_VULN_Driver_ArthurLiberman_ALSysIOsys_ALSysIO_5Ndp {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ALSysIO64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ALSysIO64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7f375639a0df7fe51e5518cf87c3f513c55bc117db47d28da8c615642eb18bfa"
@@ -3352,9 +3352,9 @@ rule PUA_VULN_Driver_ArthurLiberman_ALSysIOsys_ALSysIO_4tET {
 }
 
 
-rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanIOsys_PanIOLibrary_36X4 {
+rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanIOsys_PanIOLibrary_8aKX {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PanIO.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PanIO.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f596e64f4c5d7c37a00493728d8756b243cfdc11e3372d6d6dfeffc13c9ab960"
@@ -3374,9 +3374,9 @@ rule PUA_VULN_Driver_PanYazilimBilisimTeknolojileriTicLtdSti_PanIOsys_PanIOLibra
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_5d42 {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_4Qnu {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "17687cba00ec2c9036dd3cb5430aa1f4851e64990dafb4c8f06d88de5283d6ca"
@@ -3396,9 +3396,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_5d42 {
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_89dU {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_5sqX {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9a54ef5cfbe6db599322967ee2c84db7daabcb468be10a3ccfcaa0f64d9173c7"
@@ -3418,9 +3418,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 }
 
 
-rule PUA_VULN_Driver_OTi_otipcibussys_KernelModeDriverToAccessPhysicalMemoryAndPorts_6Lpp {
+rule PUA_VULN_Driver_OTi_otipcibussys_KernelModeDriverToAccessPhysicalMemoryAndPorts_6ZsT {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - otipcibus.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - otipcibus.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4e3eb5b9bce2fd9f6878ae36288211f0997f6149aa8c290ed91228ba4cdfae80"
@@ -3439,9 +3439,9 @@ rule PUA_VULN_Driver_OTi_otipcibussys_KernelModeDriverToAccessPhysicalMemoryAndP
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_8h6x {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_3Bqi {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "dcb815eb8e9016608d0d917101b6af8c84b96fb709dc0344bceed02cbc4ed258"
@@ -3461,9 +3461,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_8h6x {
 }
 
 
-rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_3Qgn {
+rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_a72J {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - MsIo64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - MsIo64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cfcf32f5662791f1f22a77acb6dddfbc970fe6e99506969b3ea67c03f67687ab"
@@ -3483,9 +3483,9 @@ rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_3Qgn {
 }
 
 
-rule PUA_VULN_Driver_DTResearchInc_iomemsys_iomemsys_55PY {
+rule PUA_VULN_Driver_DTResearchInc_iomemsys_iomemsys_6QoX {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iomem64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iomem64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "dd4a1253d47de14ef83f1bc8b40816a86ccf90d1e624c5adf9203ae9d51d4097"
@@ -3505,9 +3505,9 @@ rule PUA_VULN_Driver_DTResearchInc_iomemsys_iomemsys_55PY {
 }
 
 
-rule PUA_VULN_Driver_PCHuntersys_PCHunter_8VHS {
+rule PUA_VULN_Driver_PCHuntersys_PCHunter_iYaC {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PCHunter.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PCHunter.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1b7fb154a7b7903a3c81f12f4b094f24a3c60a6a8cffca894c67c264ab7545fa"
@@ -3527,9 +3527,9 @@ rule PUA_VULN_Driver_PCHuntersys_PCHunter_8VHS {
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_85Uu {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_6JdW {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "65008817eb97635826a8708a6411d7b50f762bab81304e457119d669382944c3"
@@ -3549,9 +3549,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_85Uu {
 }
 
 
-rule PUA_VULN_Driver_NovellInc_NovellXTier_7VeP {
+rule PUA_VULN_Driver_NovellInc_NovellXTier_6RYB {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - nscm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - nscm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8e88cb80328c3dbaa2752591692e74a2fae7e146d7d8aabc9b9ac9a6fe561e6c"
@@ -3570,9 +3570,9 @@ rule PUA_VULN_Driver_NovellInc_NovellXTier_7VeP {
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_jDzx {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_8298 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e428ddf9afc9b2d11e2271f0a67a2d6638b860c2c12d4b8cc63d33f3349ee93f"
@@ -3589,9 +3589,9 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_jDzx {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_97gi {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6Rja {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0909005d625866ef8ccd8ae8af5745a469f4f70561b644d6e38b80bccb53eb06"
@@ -3611,9 +3611,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_97gi {
 }
 
 
-rule PUA_VULN_Driver_Huawei_HwOsEc_HuaweiMateBook_3Q2S {
+rule PUA_VULN_Driver_Huawei_HwOsEc_HuaweiMateBook_7Ern {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - HwOs2Ec7x64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - HwOs2Ec7x64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b179e1ab6dc0b1aee783adbcad4ad6bb75a8a64cb798f30c0dd2ee8aaf43e6de"
@@ -3634,9 +3634,9 @@ rule PUA_VULN_Driver_Huawei_HwOsEc_HuaweiMateBook_3Q2S {
 }
 
 
-rule PUA_VULN_Driver_HPInc_HpPortIoxsys_HpPortIo_7WW2 {
+rule PUA_VULN_Driver_HPInc_HpPortIoxsys_HpPortIo_63xX {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - HpPortIox64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - HpPortIox64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a4680fabf606d6580893434e81c130ff7ec9467a15e6534692443465f264d3c9"
@@ -3655,9 +3655,9 @@ rule PUA_VULN_Driver_HPInc_HpPortIoxsys_HpPortIo_7WW2 {
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_4ezc {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_Rovy {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "76614f2e372f33100a8d92bf372cdbc1e183930ca747eed0b0cf2501293b990a"
@@ -3674,9 +3674,9 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_4ezc {
 }
 
 
-rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_3Gdg {
+rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_7SAS {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gdrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gdrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8b92cdb91a2e2fab3881d54f5862e723826b759749f837a11c9e9d85d52095a2"
@@ -3696,9 +3696,9 @@ rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_3Gdg
 }
 
 
-rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_7vdh {
+rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_8fci {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - SANDRA"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - SANDRA"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "881bca6dc2dafe1ae18aeb59216af939a3ac37248c13ed42ad0e1048a3855461"
@@ -3718,9 +3718,9 @@ rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_7vdh {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8uxo {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6Mna {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5192ec4501d0fe0b1c8f7bf9b778f7524a7a70a26bbbb66e5dab8480f6fdbb8b"
@@ -3740,9 +3740,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8uxo {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4Egs {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6Vmf {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "80a59ca71fc20961ccafc0686051e86ae4afbbd4578cb26ad4570b9207651085"
@@ -3762,9 +3762,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4Egs {
 }
 
 
-rule PUA_VULN_Driver_MicroFocus_MicroFocusXTier_4z83 {
+rule PUA_VULN_Driver_MicroFocus_MicroFocusXTier_8h8S {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - nscm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - nscm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5351c81b4ec5a0d79c39d24bac7600d10eac30c13546fde43d23636b3f421e7c"
@@ -3783,9 +3783,9 @@ rule PUA_VULN_Driver_MicroFocus_MicroFocusXTier_4z83 {
 }
 
 
-rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_8pmL {
+rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_8Fau {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - vboxdrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - vboxdrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "78827fa00ea48d96ac9af8d1c1e317d02ce11793e7f7f6e4c7aac7b5d7dd490f"
@@ -3806,9 +3806,9 @@ rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_8pmL {
 }
 
 
-rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_52ra {
+rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_3wvB {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - CorsairLLAccess64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - CorsairLLAccess64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5fad3775feb8b6f6dcbd1642ae6b6a565ff7b64eadfc9bf9777918b51696ab36"
@@ -3829,9 +3829,9 @@ rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_52ra {
 }
 
 
-rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_3qWJ {
+rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_6yVz {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a072197177aad26c31960694e38e2cae85afbab070929e67e331b99d3a418cf4"
@@ -3853,9 +3853,9 @@ rule PUA_VULN_Driver_CPUID_cpuzsys_CPUIDservice_3qWJ {
 }
 
 
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_4Yeg {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_7jLk {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viragt64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viragt64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2a6212f3b68a6f263e96420b3607b31cfdfe51afff516f3c87d27bf8a89721e8"
@@ -3875,9 +3875,9 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_4Yeg {
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_58C6 {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_6UTJ {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "aaa3459bcac25423f78ed72dbae4d7ef19e7c5c65770cbe5210b14e33cd1816c"
@@ -3897,9 +3897,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_58C6 {
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswVmmsys_avastAntivirus_64so {
+rule PUA_VULN_Driver_AVASTSoftware_aswVmmsys_avastAntivirus_4ksH {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswVmm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswVmm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "36505921af5a09175395ebaea29c72b2a69a3a9204384a767a5be8a721f31b10"
@@ -3919,9 +3919,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswVmmsys_avastAntivirus_64so {
 }
 
 
-rule PUA_VULN_Driver_WindowsRServerDDKprovider_gdrvsys_WindowsRServerDDKdriver_8A6e {
+rule PUA_VULN_Driver_WindowsRServerDDKprovider_gdrvsys_WindowsRServerDDKdriver_5PZ4 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gdrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gdrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "31f4cfb4c71da44120752721103a16512444c13c2ac2d857a7e6f13cb679b427"
@@ -3943,9 +3943,9 @@ rule PUA_VULN_Driver_WindowsRServerDDKprovider_gdrvsys_WindowsRServerDDKdriver_8
 }
 
 
-rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_gdrv_4uvr {
+rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_gdrv_5WCc {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gdrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gdrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ff6729518a380bf57f1bc6f1ec0aa7f3012e1618b8d9b0f31a61d299ee2b4339"
@@ -3965,9 +3965,9 @@ rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_gdrv_4uvr {
 }
 
 
-rule PUA_VULN_Driver_ASUSTeKComputerInc_EIOsys_ASUSVGAKernelModeDriver_6yQy {
+rule PUA_VULN_Driver_ASUSTeKComputerInc_EIOsys_ASUSVGAKernelModeDriver_gVeR {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - EIO.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - EIO.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cf69704755ec2643dfd245ae1d4e15d77f306aeb1a576ffa159453de1a7345cb"
@@ -3987,9 +3987,9 @@ rule PUA_VULN_Driver_ASUSTeKComputerInc_EIOsys_ASUSVGAKernelModeDriver_6yQy {
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_5SJc {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_4pk9 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "440883cd9d6a76db5e53517d0ec7fe13d5a50d2f6a7f91ecfc863bc3490e4f5c"
@@ -4009,9 +4009,9 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_5
 }
 
 
-rule PUA_VULN_Driver_RivetNetworksLLC_KfeCoDrvsys_KillerTrafficControl_4BBP {
+rule PUA_VULN_Driver_RivetNetworksLLC_KfeCoDrvsys_KillerTrafficControl_8Vey {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - KfeCo10X64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - KfeCo10X64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b583414fcee280128788f7b39451c511376fe821f455d4f3702795e96d560704"
@@ -4031,9 +4031,9 @@ rule PUA_VULN_Driver_RivetNetworksLLC_KfeCoDrvsys_KillerTrafficControl_4BBP {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_6M5C {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_5WjY {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ed2f33452ec32830ffef2d5dc832985db9600c306ed890c47f3f33ccbb335c39"
@@ -4053,9 +4053,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_6M5C {
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibXsys_NTIOLib_8wAR {
+rule PUA_VULN_Driver_MSI_NTIOLibXsys_NTIOLib_6G6m {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "09bedbf7a41e0f8dabe4f41d331db58373ce15b2e9204540873a1884f38bdde1"
@@ -4075,9 +4075,9 @@ rule PUA_VULN_Driver_MSI_NTIOLibXsys_NTIOLib_8wAR {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_3Zge {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_8crV {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a8027daa6facf1ff81405daf6763249e9acf232a1a191b6bf106711630e6188e"
@@ -4097,9 +4097,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_3Zge {
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_JLpB {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_5Kh4 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0f016c80c4938fbcd47a47409969b3925f54292eba2ce01a8e45222ce8615eb8"
@@ -4119,9 +4119,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 }
 
 
-rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_6ZXp {
+rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_8QdF {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - VBoxDrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - VBoxDrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7539157df91923d4575f7f57c8eb8b0fd87f064c919c1db85e73eebb2910b60c"
@@ -4141,9 +4141,9 @@ rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_6ZXp {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_82JZ {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6TdM {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "478d855b648ef4501d3b08b3b10e94076ac67546b0ce86b454324f1bf9a78aa0"
@@ -4163,9 +4163,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_82JZ {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_ActiveClean_3i9o {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_ActiveClean_8k2V {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a903f329b70f0078197cb7683aae1bb432eaf58572fe572f7cb4bc2080042d7e"
@@ -4185,9 +4185,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_ActiveClean_3i9o {
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_8hwJ {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_3rAv {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3ff39728f1c11d1108f65ec5eb3d722fd1a1279c530d79712e0d32b34880baaa"
@@ -4208,9 +4208,9 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_8
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_4u8r {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_8u6Q {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "bdbceca41e576841cad2f2b38ee6dbf92fd77fbbfdfe6ecf99f0623d44ef182c"
@@ -4230,9 +4230,9 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_4
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6TD9 {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7swg {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7837cb350338c4958968d06b105466da6518f5bb522a6e70e87c0cad85128408"
@@ -4252,9 +4252,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6TD9 {
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_7EQ7 {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_3sEe {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0b2ad05939b0aabbdc011082fad7960baa0c459ec16a2b29f37c1fa31795a46d"
@@ -4274,9 +4274,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 }
 
 
-rule PUA_VULN_Driver_Copyright_AdvancedMalwareProtection_4AwZ {
+rule PUA_VULN_Driver_Copyright_AdvancedMalwareProtection_6wM6 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - amsdk.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - amsdk.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6f55c148bb27c14408cf0f16f344abcd63539174ac855e510a42d78cfaec451c"
@@ -4295,9 +4295,9 @@ rule PUA_VULN_Driver_Copyright_AdvancedMalwareProtection_4AwZ {
 }
 
 
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_La36 {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_7XVN {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - elbycdio.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - elbycdio.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "eea53103e7a5a55dc1df79797395a2a3e96123ebd71cdd2db4b1be80e7b3f02b"
@@ -4317,9 +4317,9 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_La36 {
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_3F3a {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_5P5D {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2d2c7ee9547738a8a676ab785c151e8b48ed40fe7cf6174650814c7f5f58513b"
@@ -4339,9 +4339,9 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_3F3a {
 }
 
 
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_kSqG {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_4JE7 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ElbyCDIO.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ElbyCDIO.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5cfad3d473961763306d72c12bd5ae14183a1a5778325c9acacca764b79ca185"
@@ -4361,9 +4361,9 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_kSqG {
 }
 
 
-rule PUA_VULN_Driver_ArthurLiberman_ALSysIOsys_ALSysIO_7EMM {
+rule PUA_VULN_Driver_ArthurLiberman_ALSysIOsys_ALSysIO_5exx {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ALSysIO64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ALSysIO64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "119c48b79735fda0ecd973d77d9bdc6b329960caed09b38ab454236ca039d280"
@@ -4383,9 +4383,9 @@ rule PUA_VULN_Driver_ArthurLiberman_ALSysIOsys_ALSysIO_7EMM {
 }
 
 
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_37Rn {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_5kx7 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viragt64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viragt64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "263e8f1e20612849aea95272da85773f577fd962a7a6d525b53f43407aa7ad24"
@@ -4405,9 +4405,9 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_37Rn {
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_CQbk {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_5hqw {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e83908eba2501a00ef9e74e7d1c8b4ff1279f1cd6051707fd51824f87e4378fa"
@@ -4427,9 +4427,9 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_CQbk {
 }
 
 
-rule PUA_VULN_Driver_HilscherGesellschaftfrSystemaoutomationmbH_physmemsys_PhysicalMemoryAccessDriver_7kYe {
+rule PUA_VULN_Driver_HilscherGesellschaftfrSystemaoutomationmbH_physmemsys_PhysicalMemoryAccessDriver_5EAS {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - physmem.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - physmem.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c299063e3eae8ddc15839767e83b9808fd43418dc5a1af7e4f44b97ba53fbd3d"
@@ -4449,9 +4449,9 @@ rule PUA_VULN_Driver_HilscherGesellschaftfrSystemaoutomationmbH_physmemsys_Physi
 }
 
 
-rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_7ohA {
+rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_TPbc {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AMDRyzenMasterDriver.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AMDRyzenMasterDriver.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "af1011c76a22af7be97a0b3e0ce11aca0509820c59fa7c8eeaaa1b2c0225f75a"
@@ -4471,9 +4471,9 @@ rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMaster
 }
 
 
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_7LwH {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_5mkV {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ElbyCDIO.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ElbyCDIO.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ada4e42bf5ef58ef1aad94435441003b1cc1fcaa5d38bfdbe1a3d736dc451d47"
@@ -4493,9 +4493,9 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_7LwH {
 }
 
 
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_3QD5 {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_5hmP {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viragt64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viragt64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9b2f051ac901ab47d0012a1002cb8b2db28c14e9480c0dd55e1ac11c81ba9285"
@@ -4515,9 +4515,9 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_3QD5 {
 }
 
 
-rule PUA_VULN_Driver_CYRENInc_AMP_CYRENAMP_69Dm {
+rule PUA_VULN_Driver_CYRENInc_AMP_CYRENAMP_4GBv {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - amp.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - amp.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cbb8239a765bf5b2c1b6a5c8832d2cab8fef5deacadfb65d8ed43ef56d291ab6"
@@ -4537,9 +4537,9 @@ rule PUA_VULN_Driver_CYRENInc_AMP_CYRENAMP_69Dm {
 }
 
 
-rule PUA_VULN_Driver_SuperMicroComputerInc_superbmc_superbmc_6SkF {
+rule PUA_VULN_Driver_SuperMicroComputerInc_superbmc_superbmc_7mWx {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - superbmc.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - superbmc.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f8430bdc6fd01f42217d66d87a3ef6f66cb2700ebb39c4f25c8b851858cc4b35"
@@ -4559,9 +4559,9 @@ rule PUA_VULN_Driver_SuperMicroComputerInc_superbmc_superbmc_6SkF {
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_6fdd {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_6XUc {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1023dcd4c80db19e9f82f95b1c5e1ddb60db7ac034848dd5cc1c78104a6350f4"
@@ -4581,9 +4581,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_6zS4 {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_3svt {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f877296e8506e6a1acbdacdc5085b18c6842320a2775a329d286bac796f08d54"
@@ -4604,9 +4604,9 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_6zS4 {
 }
 
 
-rule PUA_VULN_Driver_AlmicoSoftware_sfdrvxsys_SpeedFan_X_4T85 {
+rule PUA_VULN_Driver_AlmicoSoftware_sfdrvxsys_SpeedFan_X_8HdF {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - sfdrvx32.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - sfdrvx32.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ad23d77a38655acb71216824e363df8ac41a48a1a0080f35a0d23aa14b54460b"
@@ -4626,9 +4626,9 @@ rule PUA_VULN_Driver_AlmicoSoftware_sfdrvxsys_SpeedFan_X_4T85 {
 }
 
 
-rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_6Csz {
+rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_6yTe {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ATSZIO.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ATSZIO.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1a4f7d7926efc3e3488758ce318246ea78a061bde759ec6c906ff005dd8213e5"
@@ -4652,9 +4652,9 @@ rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_6Csz {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5tMK {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_gy7b {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "bcfc2c9883e6c1b8429be44cc4db988a9eecb544988fbd756d18cfca6201876f"
@@ -4674,9 +4674,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5tMK {
 }
 
 
-rule PUA_VULN_Driver_WindowsRDDKprovider_gdrvsys_WindowsRDDKdriver_5hTH {
+rule PUA_VULN_Driver_WindowsRDDKprovider_gdrvsys_WindowsRDDKdriver_XDBt {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gdrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gdrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f4ff679066269392f6b7c3ba6257fc60dd609e4f9c491b00e1a16e4c405b0b9b"
@@ -4697,9 +4697,9 @@ rule PUA_VULN_Driver_WindowsRDDKprovider_gdrvsys_WindowsRDDKdriver_5hTH {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5Nt6 {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3o2J {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "dbc604b4e01362a3e51357af4a87686834fe913852a4e0a8c0d4c1a0f7d076ed"
@@ -4719,9 +4719,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5Nt6 {
 }
 
 
-rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_64Sv {
+rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_3L72 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - CorsairLLAccess64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - CorsairLLAccess64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f15ae970e222ce06dbf3752b223270d0e726fb78ebec3598b4f8225b5a0880b1"
@@ -4741,9 +4741,9 @@ rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_64Sv {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7UbH {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_r7Sw {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4e37592a2a415f520438330c32cfbdbd6af594deef5290b2fa4b9722b898ff69"
@@ -4763,9 +4763,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7UbH {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6UtA {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6wTE {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ecd07df7ad6fee9269a9e9429eb199bf3e24cf672aa1d013b7e8d90d75324566"
@@ -4785,9 +4785,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6UtA {
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_5Na3 {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_kabi {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "36e3127f045ef1fa7426a3ff8c441092d3b66923d2b69826034e48306609e289"
@@ -4807,9 +4807,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_5Na3 {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6RcD {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_7b65 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fda93c6e41212e86af07f57ca95db841161f00b08dae6304a51b467056e56280"
@@ -4829,9 +4829,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6RcD {
 }
 
 
-rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriver_3xGG {
+rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriver_8Szd {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - BS_RCIO64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - BS_RCIO64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d205286bffdf09bc033c09e95c519c1c267b40c2ee8bab703c6a2d86741ccd3e"
@@ -4851,9 +4851,9 @@ rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriver_3xGG {
 }
 
 
-rule PUA_VULN_Driver_WindowsRWinDDKprovider_amifldrvsys_WindowsRWinDDKdriver_7Uzh {
+rule PUA_VULN_Driver_WindowsRWinDDKprovider_amifldrvsys_WindowsRWinDDKdriver_3vxd {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - amifldrv64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - amifldrv64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "38d87b51f4b69ba2dae1477684a1415f1a3b578eee5e1126673b1beaefee9a20"
@@ -4874,9 +4874,9 @@ rule PUA_VULN_Driver_WindowsRWinDDKprovider_amifldrvsys_WindowsRWinDDKdriver_7Uz
 }
 
 
-rule PUA_VULN_Driver_HighresolutionEnterpriseswwwhighrezcouk_inpoutxsys_inpoutxDriverVersion_x_8Ueg {
+rule PUA_VULN_Driver_HighresolutionEnterpriseswwwhighrezcouk_inpoutxsys_inpoutxDriverVersion_x_5Y9c {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - inpoutx64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - inpoutx64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f581decc2888ef27ee1ea85ea23bbb5fb2fe6a554266ff5a1476acd1d29d53af"
@@ -4898,9 +4898,9 @@ rule PUA_VULN_Driver_HighresolutionEnterpriseswwwhighrezcouk_inpoutxsys_inpoutxD
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3J2k {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6vvt {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "12eda8b65ed8c1d80464a0c535ea099dffdb4981c134294cb0fa424efc85ee56"
@@ -4920,9 +4920,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3J2k {
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_6dBc {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_8DtS {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ebe2e9ec6d5d94c2d58fbcc9d78c5f0ee7a2f2c1aed6d1b309f383186d11dfa3"
@@ -4942,9 +4942,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_6dBc {
 }
 
 
-rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_5Tr8 {
+rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_d4LA {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - CorsairLLAccess64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - CorsairLLAccess64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a334bdf0c0ab07803380eb6ef83eefe7c147d6962595dd9c943a6a76f2200b0d"
@@ -4965,9 +4965,9 @@ rule PUA_VULN_Driver_CorsairMemoryInc_CorsairLLAccess_CorsairLLAccess_5Tr8 {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8K6u {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5jjh {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1c1251784e6f61525d0082882a969cb8a0c5d5359be22f5a73e3b0cd38b51687"
@@ -4987,9 +4987,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8K6u {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_5h9h {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_84XH {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4bc0921ffd4acc865525d3faf98961e8decc5aec4974552cbbf2ae8d5a569de4"
@@ -5009,9 +5009,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroAEGIS_5h9h {
 }
 
 
-rule PUA_VULN_Driver_IObitInformationTechnology_IObitUnlockersys_Unlocker_7yYh {
+rule PUA_VULN_Driver_IObitInformationTechnology_IObitUnlockersys_Unlocker_5cbY {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - IObitUnlocker.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - IObitUnlocker.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f85cca4badff17d1aa90752153ccec77a68ad282b69e3985fdc4743eaea85004"
@@ -5031,9 +5031,9 @@ rule PUA_VULN_Driver_IObitInformationTechnology_IObitUnlockersys_Unlocker_7yYh {
 }
 
 
-rule PUA_VULN_Driver_RazerInc_Rzpnk_Rzpnk_4DLN {
+rule PUA_VULN_Driver_RazerInc_Rzpnk_Rzpnk_5hqv {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - rzpnk.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - rzpnk.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "93d873cdf23d5edc622b74f9544cac7fe247d7a68e1e2a7bf2879fad97a3ae63"
@@ -5053,9 +5053,9 @@ rule PUA_VULN_Driver_RazerInc_Rzpnk_Rzpnk_4DLN {
 }
 
 
-rule PUA_VULN_Driver_WiseCleanercom_WiseUnlosys_WiseUnlo_8xan {
+rule PUA_VULN_Driver_WiseCleanercom_WiseUnlosys_WiseUnlo_6Hzr {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - WiseUnlo.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - WiseUnlo.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "358ac54be252673841a1d65bfc2fb6d549c1a4c877fa7f5e1bfa188f30375d69"
@@ -5075,9 +5075,9 @@ rule PUA_VULN_Driver_WiseCleanercom_WiseUnlosys_WiseUnlo_8xan {
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_5xU4 {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_z3Nv {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9b6a84f7c40ea51c38cc4d2e93efb3375e9d98d4894a85941190d94fbe73a4e4"
@@ -5097,9 +5097,9 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_5
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_5pWv {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_8JaN {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7d43769b353d63093228a59eb19bba87ce6b552d7e1a99bf34a54eee641aa0ea"
@@ -5119,9 +5119,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_mZbk {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_32mK {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "adc10de960f40fa9f6e28449748250fa9ddfd331115b77a79809a50c606753ee"
@@ -5141,9 +5141,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_mZbk {
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_89zJ {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_8XGV {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "94911fe6f2aba9683b10353094caf71ee4a882de63b4620797629d79f18feec5"
@@ -5163,9 +5163,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_89z
 }
 
 
-rule PUA_VULN_Driver_FUJITSULIMITED_ADVDRVsys_MicrosoftRWindowsROperatingSystem_5FH4 {
+rule PUA_VULN_Driver_FUJITSULIMITED_ADVDRVsys_MicrosoftRWindowsROperatingSystem_66Zo {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ADV64DRV.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ADV64DRV.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "04a85e359525d662338cae86c1e59b1d7aa9bd12b920e8067503723dc1e03162"
@@ -5184,9 +5184,9 @@ rule PUA_VULN_Driver_FUJITSULIMITED_ADVDRVsys_MicrosoftRWindowsROperatingSystem_
 }
 
 
-rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_8Y5C {
+rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMasterServiceDriver_4Te7 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AMDRyzenMasterDriver.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AMDRyzenMasterDriver.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ff9623317287358440ec67da9ba79994d9b17b99ffdd709ec836478fe1fc22a5"
@@ -5206,9 +5206,9 @@ rule PUA_VULN_Driver_AdvancedMicroDevices_AMDRyzenMasterDriversys_AMDRyzenMaster
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys__8qTX {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys__73nQ {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "77950e2a40ac0447ae7ee1ee3ef1242ce22796a157074e6f04e345b1956e143c"
@@ -5228,9 +5228,9 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys__8qTX {
 }
 
 
-rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_8ZUn {
+rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_4dZz {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - SANDRA"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - SANDRA"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b019ebd77ac19cdd72bba3318032752649bd56a7576723a8ae1cccd70ee1e61a"
@@ -5250,9 +5250,9 @@ rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_8ZUn {
 }
 
 
-rule PUA_VULN_Driver_AdvancedMicroDevicesInc_AMDPowerProfilersys_AMDuProf_6nZb {
+rule PUA_VULN_Driver_AdvancedMicroDevicesInc_AMDPowerProfilersys_AMDuProf_4Xfe {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AMDPowerProfiler.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AMDPowerProfiler.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0af5ccb3d33a9ba92071c9637be6254030d61998733a5eb3583e865e17844e05"
@@ -5272,9 +5272,9 @@ rule PUA_VULN_Driver_AdvancedMicroDevicesInc_AMDPowerProfilersys_AMDuProf_6nZb {
 }
 
 
-rule PUA_VULN_Driver_Realtek_rtkiosys_RealtekIODriver_8PBD {
+rule PUA_VULN_Driver_Realtek_rtkiosys_RealtekIODriver_92ty {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - rtkio64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - rtkio64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "074ae477c8c7ae76c6f2b0bf77ac17935a8e8ee51b52155d2821d93ab30f3761"
@@ -5294,9 +5294,9 @@ rule PUA_VULN_Driver_Realtek_rtkiosys_RealtekIODriver_8PBD {
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3y97 {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_G6PF {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "98b734dda78c16ebcaa4afeb31007926542b63b2f163b2f733fa0d00dbb344d8"
@@ -5316,9 +5316,9 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_3y97 {
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_73Q6 {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_3yz3 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9a95a70f68144980f2d684e96c79bdc93ebca1587f46afae6962478631e85d0c"
@@ -5335,9 +5335,9 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_73Q6 {
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_4oPo {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_96fp {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "19bf0d0f55d2ad33ef2d105520bde8fb4286f00e9d7a721e3c9587b9408a0775"
@@ -5357,9 +5357,9 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_4oPo {
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_3Eah {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_99BW {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2bbc6b9dd5e6d0327250b32305be20c89b19b56d33a096522ee33f22d8c82ff1"
@@ -5376,9 +5376,9 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_3Eah {
 }
 
 
-rule PUA_VULN_Driver_LogitechInc_Lvavsys_LogitechWebcamSoftware_5xPc {
+rule PUA_VULN_Driver_LogitechInc_Lvavsys_LogitechWebcamSoftware_7fYC {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Lv561av.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Lv561av.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e86cb77de7b6a8025f9a546f6c45d135f471e664963cf70b381bee2dfd0fdef4"
@@ -5398,9 +5398,9 @@ rule PUA_VULN_Driver_LogitechInc_Lvavsys_LogitechWebcamSoftware_5xPc {
 }
 
 
-rule PUA_VULN_Driver_HPInc_HpPortIoxsys_HpPortIo_69uz {
+rule PUA_VULN_Driver_HPInc_HpPortIoxsys_HpPortIo_3M2r {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - HpPortIox64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - HpPortIox64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c5050a2017490fff7aa53c73755982b339ddb0fd7cef2cde32c81bc9834331c5"
@@ -5420,9 +5420,9 @@ rule PUA_VULN_Driver_HPInc_HpPortIoxsys_HpPortIo_69uz {
 }
 
 
-rule PUA_VULN_Driver_Realtek_rtkiowxsys_RealtekIODriver_gQG5 {
+rule PUA_VULN_Driver_Realtek_rtkiowxsys_RealtekIODriver_7KJv {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - rtkio64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - rtkio64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ab8f2217e59319b88080e052782e559a706fa4fb7b8b708f709ff3617124da89"
@@ -5442,9 +5442,9 @@ rule PUA_VULN_Driver_Realtek_rtkiowxsys_RealtekIODriver_gQG5 {
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_7hDE {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_4pHb {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2ce81759bfa236913bbbb9b2cbc093140b099486fd002910b18e2c6e31fdc4f1"
@@ -5464,9 +5464,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPot_AVGInternetSecuritySystem_7hD
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_NBco {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_99d2 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9254f012009d55f555418ff85f7d93b184ab7cb0e37aecdfdab62cfe94dea96b"
@@ -5486,9 +5486,9 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_NBco {
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_5eL8 {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_7Abv {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NalDrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NalDrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b"
@@ -5509,9 +5509,9 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_5eL8 {
 }
 
 
-rule PUA_VULN_Driver_Realtek_rtkiowxsys_RealtekIODriver_49ZG {
+rule PUA_VULN_Driver_Realtek_rtkiowxsys_RealtekIODriver_4PwA {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - rtkiow10x64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - rtkiow10x64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "32e1a8513eee746d17eb5402fb9d8ff9507fb6e1238e7ff06f7a5c50ff3df993"
@@ -5531,9 +5531,9 @@ rule PUA_VULN_Driver_Realtek_rtkiowxsys_RealtekIODriver_49ZG {
 }
 
 
-rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_7mP9 {
+rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_7fqW {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - MsIo64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - MsIo64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89"
@@ -5553,9 +5553,9 @@ rule PUA_VULN_Driver_MICSYSTechnologyCoLTd_MsIosys_MsIoDriverVersion_x_7mP9 {
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_7Qj7 {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_5Mrj {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1078af0c70e03ac17c7b8aa5ee03593f5decfef2f536716646a4ded1e98c153c"
@@ -5575,9 +5575,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 }
 
 
-rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_4QBo {
+rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_7h5S {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gdrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gdrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "26c28746e947389856543837aa59a5b1f4697e5721a04d00aa28151a2659b097"
@@ -5597,9 +5597,9 @@ rule PUA_VULN_Driver_GIGABYTETECHNOLOGYCOLTD_gdrvsys_GIGABYTESoftwaredriver_4QBo
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3xA6 {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_8FVv {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cc687fe3741bbde1dd142eac0ef59fd1d4457daee43cdde23bb162ef28d04e64"
@@ -5619,9 +5619,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3xA6 {
 }
 
 
-rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_CPUDriver_WindowsRCodenameLonghornDDKdriver_yLgT {
+rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_CPUDriver_WindowsRCodenameLonghornDDKdriver_5Jb2 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - WCPU.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - WCPU.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "159e7c5a12157af92e0d14a0d3ea116f91c09e21a9831486e6dc592c93c10980"
@@ -5641,9 +5641,9 @@ rule PUA_VULN_Driver_WindowsRCodenameLonghornDDKprovider_CPUDriver_WindowsRCoden
 }
 
 
-rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_5Qhu {
+rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_6N9N {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NTIOLib.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1ddfe4756f5db9fb319d6c6da9c41c588a729d9e7817190b027b38e9c076d219"
@@ -5663,9 +5663,9 @@ rule PUA_VULN_Driver_MSI_NTIOLibsys_NTIOLib_5Qhu {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_C5JX {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5Bwb {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "654c5ba47f74008c8f49cbb97988017eec8c898adc3bb851bc6e1fdf9dcf54ad"
@@ -5685,9 +5685,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_C5JX {
 }
 
 
-rule PUA_VULN_Driver_MarvinTestSolutionsInc_Hwsys_HW_5X24 {
+rule PUA_VULN_Driver_MarvinTestSolutionsInc_Hwsys_HW_gwiH {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - HW.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - HW.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fd388cf1df06d419b14dedbeb24c6f4dff37bea26018775f09d56b3067f0de2c"
@@ -5708,9 +5708,9 @@ rule PUA_VULN_Driver_MarvinTestSolutionsInc_Hwsys_HW_5X24 {
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_3Z5x {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_5eGV {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6e0aa67cfdbe27a059cbd066443337f81c5b6d37444d14792d1c765d9d122dcf"
@@ -5730,9 +5730,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_4Fet {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_7rgw {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a2f45d95d54f4e110b577e621fefa0483fa0e3dcca14c500c298fb9209e491c1"
@@ -5752,9 +5752,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 }
 
 
-rule PUA_VULN_Driver_NVIDIACorporation_nvflash_NVIDIAFlashDriver_4MQF {
+rule PUA_VULN_Driver_NVIDIACorporation_nvflash_NVIDIAFlashDriver_3wxS {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - nvflash.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - nvflash.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "afdd66562dea51001c3a9de300f91fc3eb965d6848dfce92ccb9b75853e02508"
@@ -5774,9 +5774,9 @@ rule PUA_VULN_Driver_NVIDIACorporation_nvflash_NVIDIAFlashDriver_4MQF {
 }
 
 
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_4Rvb {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_4Q6z {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ElbyCDIO.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ElbyCDIO.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f85eb576acb5db0d2f48e5f09a7244165a876fa1ca8697ebb773e4d7071d4439"
@@ -5796,9 +5796,9 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_4Rvb {
 }
 
 
-rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublicbyVektorTrev_5iGj {
+rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublicbyVektorTrev_5rhG {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - VBoxDrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - VBoxDrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "26f41e4268be59f5de07552b51fa52d18d88be94f8895eb4a16de0f3940cf712"
@@ -5818,9 +5818,9 @@ rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublicbyVektorTrev
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4qXu {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_88tg {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3c4207c90c97733fae2a08679d63fbbe94dfcf96fdfdf88406aa7ab3f80ea78f"
@@ -5840,9 +5840,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4qXu {
 }
 
 
-rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_VFFb {
+rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_7dbN {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ATSZIO.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ATSZIO.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "55a1535e173c998fbbc978009b02d36ca0c737340d84ac2a8da73dfc2f450ef9"
@@ -5863,9 +5863,9 @@ rule PUA_VULN_Driver_ASUSTekComputerInc_ATSZIOsys_ATSZIODriver_VFFb {
 }
 
 
-rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_7uLV {
+rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_FWkM {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - sandra.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - sandra.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1aaf4c1e3cb6774857e2eef27c17e68dc1ae577112e4769665f516c2e8c4e27b"
@@ -5885,9 +5885,9 @@ rule PUA_VULN_Driver_SiSoftware_SANDRA_SiSoftwareSandra_7uLV {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_8raj {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_5wtF {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c9014b03866bf37faa8fdb16b6af7cfec976aaef179fd5797d0c0bf8079d3a8c"
@@ -5907,9 +5907,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_AEGIS_8raj {
 }
 
 
-rule PUA_VULN_Driver_SymantecCorporation_VProEventMonitorSys_SymantecEventMonitorsDriverDevelopmentEdition_zCA3 {
+rule PUA_VULN_Driver_SymantecCorporation_VProEventMonitorSys_SymantecEventMonitorsDriverDevelopmentEdition_452A {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - VProEventMonitor.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - VProEventMonitor.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7877c1b0e7429453b750218ca491c2825dae684ad9616642eff7b41715c70aca"
@@ -5929,9 +5929,9 @@ rule PUA_VULN_Driver_SymantecCorporation_VProEventMonitorSys_SymantecEventMonito
 }
 
 
-rule PUA_VULN_Driver_wj_KProcessHacker_3uS6 {
+rule PUA_VULN_Driver_wj_KProcessHacker_8qRK {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - krpocesshacker.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - krpocesshacker.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c725919e6357126d512c638f993cf572112f323da359645e4088f789eb4c7b8c"
@@ -5950,9 +5950,9 @@ rule PUA_VULN_Driver_wj_KProcessHacker_3uS6 {
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_7wGS {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_8GQu {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7ad0ab23023bc500c3b46f414a8b363c5f8700861bc4745cecc14dd34bcee9ed"
@@ -5972,9 +5972,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPot_AvastAntivirus_7wGS {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6GJb {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_5dFa {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c082514317bf80a2f5129d84a5a55e411a95e32d03a4df1274537704c80e41dd"
@@ -5994,9 +5994,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_6GJb {
 }
 
 
-rule PUA_VULN_Driver_CreativeTechnologyInnovationCoLTd_CtiIosys_CtiIoDriverVersion_x_8vEK {
+rule PUA_VULN_Driver_CreativeTechnologyInnovationCoLTd_CtiIosys_CtiIoDriverVersion_x_UhMk {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - CtiIo64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - CtiIo64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2121a2bb8ebbf2e6e82c782b6f3c6b7904f686aa495def25cf1cf52a42e16109"
@@ -6016,9 +6016,9 @@ rule PUA_VULN_Driver_CreativeTechnologyInnovationCoLTd_CtiIosys_CtiIoDriverVersi
 }
 
 
-rule PUA_VULN_Driver_SSmartSoftwareSolutionsGmbH_SysDrvS_SysDrvS_5gru {
+rule PUA_VULN_Driver_SSmartSoftwareSolutionsGmbH_SysDrvS_SysDrvS_5Xro {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - SysDrv3S.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - SysDrv3S.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0e53b58415fa68552928622118d5b8a3a851b2fc512709a90b63ba46acda8b6b"
@@ -6038,9 +6038,9 @@ rule PUA_VULN_Driver_SSmartSoftwareSolutionsGmbH_SysDrvS_SysDrvS_5gru {
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_4Wxr {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_8fTW {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "14adbf0bc43414a7700e5403100cff7fc6ade50bebfab16a17acf2fdda5a9da8"
@@ -6060,9 +6060,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_4Wxr {
 }
 
 
-rule PUA_VULN_Driver_WindowsRServerDDKprovider_cpuzsys_WindowsRServerDDKdriver_38h9 {
+rule PUA_VULN_Driver_WindowsRServerDDKprovider_cpuzsys_WindowsRServerDDKdriver_6oAa {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz_x64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz_x64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3871e16758a1778907667f78589359734f7f62f9dc953ec558946dcdbe6951e3"
@@ -6082,9 +6082,9 @@ rule PUA_VULN_Driver_WindowsRServerDDKprovider_cpuzsys_WindowsRServerDDKdriver_3
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_3eyi {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_j5TM {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "37c637a74bf20d7630281581a8fae124200920df11ad7cd68c14c26cc12c5ec9"
@@ -6104,9 +6104,9 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_3eyi {
 }
 
 
-rule PUA_VULN_Driver_TOSHIBACorporation_NCHGBIOSxSYS_TOSHIBABIOSPackage_5WSF {
+rule PUA_VULN_Driver_TOSHIBACorporation_NCHGBIOSxSYS_TOSHIBABIOSPackage_7URQ {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NCHGBIOS2x64.SYS"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NCHGBIOS2x64.SYS"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073"
@@ -6126,9 +6126,9 @@ rule PUA_VULN_Driver_TOSHIBACorporation_NCHGBIOSxSYS_TOSHIBABIOSPackage_5WSF {
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_3mbL {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_43Nf {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "543991ca8d1c65113dff039b85ae3f9a87f503daec30f46929fd454bc57e5a91"
@@ -6146,9 +6146,9 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_3mbL {
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_6kcm {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_7YBq {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "30abc0cc700fdebc74e62d574addc08f6227f9c7177d9eaa8cbc37d5c017c9bb"
@@ -6168,9 +6168,9 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_6
 }
 
 
-rule PUA_VULN_Driver_ZemanaLtd_ZAM_JZ4T {
+rule PUA_VULN_Driver_ZemanaLtd_ZAM_4nEq {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - zam64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "de8f8006d8ee429b5f333503defa54b25447f4ed6aeade5e4219e23f3473ef1c"
@@ -6187,9 +6187,9 @@ rule PUA_VULN_Driver_ZemanaLtd_ZAM_JZ4T {
 }
 
 
-rule PUA_VULN_Driver_SuperMicroComputerInc_phymem_phymem_7oSB {
+rule PUA_VULN_Driver_SuperMicroComputerInc_phymem_phymem_7qok {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - phymem64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - phymem64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1963d5a0e512b72353953aadbe694f73a9a576f0241a988378fa40bf574eda52"
@@ -6209,9 +6209,9 @@ rule PUA_VULN_Driver_SuperMicroComputerInc_phymem_phymem_7oSB {
 }
 
 
-rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_5oMe {
+rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_4y6u {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - procexp.Sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "16a2e578bc8683f17a175480fea4f53c838cfae965f1d4caa47eaf9e0b3415c1"
@@ -6232,9 +6232,9 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_procexpsys_ProcessExplorer_5
 }
 
 
-rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublic_8VxX {
+rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublic_HxcN {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - VBoxDrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - VBoxDrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cfb7af8ac67a379e7869289aeee21837c448ea6f8ab6c93988e7aa423653bd40"
@@ -6254,9 +6254,9 @@ rule PUA_VULN_Driver_VektorTSecurityService_VBoxDrv_AntidetectPublic_8VxX {
 }
 
 
-rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_5XFL {
+rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_4GCM {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - VBoxDrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - VBoxDrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c8940e2e9b069ec94f9f711150b313b437f8429f78d522810601b6ee8b52bada"
@@ -6276,9 +6276,9 @@ rule PUA_VULN_Driver_SunMicrosystemsInc_VBoxDrvsys_SunVirtualBox_r_5XFL {
 }
 
 
-rule PUA_VULN_Driver_PinduoduoLtdCorp_VBoxDrv_PinduoduoSecureVDI_69Gd {
+rule PUA_VULN_Driver_PinduoduoLtdCorp_VBoxDrv_PinduoduoSecureVDI_4V6n {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - VBoxDrv.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - VBoxDrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9dab4b6fddc8e1ec0a186aa8382b184a5d52cfcabaaf04ff9e3767021eb09cf4"
@@ -6298,9 +6298,9 @@ rule PUA_VULN_Driver_PinduoduoLtdCorp_VBoxDrv_PinduoduoSecureVDI_69Gd {
 }
 
 
-rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_5iP6 {
+rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_32a5 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viragt64.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - viragt64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "18deed37f60b6aa8634dda2565a0485452487d7bce88afb49301a7352db4e506"
@@ -6320,9 +6320,9 @@ rule PUA_VULN_Driver_TGSoftSas_viragtsys_VirITAgentSystem_5iP6 {
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_7o98 {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_8REi {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8cfd5b2102fbc77018c7fe6019ec15f07da497f6d73c32a31f4ba07e67ec85d9"
@@ -6342,9 +6342,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_37qR {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_35LQ {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d5c4ff35eaa74ccdb80c7197d3d113c9cd38561070f2aa69c0affe8ed84a77c9"
@@ -6364,9 +6364,9 @@ rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_37qR {
 }
 
 
-rule PUA_VULN_Driver_wj_KProcessHacker_8kNP {
+rule PUA_VULN_Driver_wj_KProcessHacker_7hHn {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - kprocesshacker.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - kprocesshacker.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "70211a3f90376bbc61f49c22a63075d1d4ddd53f0aefa976216c46e6ba39a9f4"
@@ -6385,9 +6385,9 @@ rule PUA_VULN_Driver_wj_KProcessHacker_8kNP {
 }
 
 
-rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4ih2 {
+rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_3Msz {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TmComm.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "76e807b6c0214e66455f09a8de8faad40b738982ca84470f0043de0290449524"
@@ -6407,9 +6407,9 @@ rule PUA_VULN_Driver_TrendMicroInc_TmCommsys_TrendMicroEyes_4ih2 {
 }
 
 
-rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriver_5pAU {
+rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriver_59rn {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - BS_HWMIO64_W10.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - BS_HWMIO64_W10.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1d0397c263d51e9fc95bcc8baf98d1a853e1c0401cd0e27c7bf5da3fba1c93a8"
@@ -6429,9 +6429,9 @@ rule PUA_VULN_Driver_BIOSTARGroup_IOdriver_BIOSTARIOdriver_5pAU {
 }
 
 
-rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_f5pq {
+rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_6isL {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e2e79f1e696f27fa70d72f97e448081b1fa14d59cbb89bb4a40428534dd5c6f6"
@@ -6451,9 +6451,9 @@ rule PUA_VULN_Driver_AVGTechnologiesCZsro_aswArPotsys_AVGInternetSecuritySystem_
 }
 
 
-rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_4Sbd {
+rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_PWPi {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5f69d6b167a1eeca3f6ac64785c3c01976ee7303171faf998d65852056988683"
@@ -6473,9 +6473,9 @@ rule PUA_VULN_Driver_IntelCorporation_iQVWSYS_IntelRiQVWSYS_4Sbd {
 }
 
 
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_7CPA {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_3JRe {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ElbyCDIO.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ElbyCDIO.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9679758455c69877fce866267d60c39d108b495dca183954e4af869902965b3d"
@@ -6495,9 +6495,9 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_7CPA {
 }
 
 
-rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_5Z4T {
+rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_67eB {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ElbyCDIO.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ElbyCDIO.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8137ce22d0d0fc5ea5b174d6ad3506a4949506477b1325da2ccb76511f4c4f60"
@@ -6517,9 +6517,9 @@ rule PUA_VULN_Driver_ElaborateBytesAG_ElbyCDIO_CDRTools_5Z4T {
 }
 
 
-rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_7ssr {
+rule PUA_VULN_Driver_AVASTSoftware_aswArPotsys_AvastAntivirus_XLV4 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - aswArPot.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4da08c0681fbe028b60a1eaf5cb8890bd3eba4d0e6a8b976495ddcd315e147ba"

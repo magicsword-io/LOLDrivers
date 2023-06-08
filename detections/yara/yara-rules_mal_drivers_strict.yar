@@ -1,7 +1,7 @@
 
-rule MAL_Driver_MicrosoftCorporation_windbgsys_MicrosoftWindowsOperatingSystem_3JkC {
+rule MAL_Driver_MicrosoftCorporation_windbgsys_MicrosoftWindowsOperatingSystem_5dj9 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - windbg.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - windbg.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6994b32e3f3357f4a1d0abe81e8b62dd54e36b17816f2f1a80018584200a1b77"
@@ -37,9 +37,9 @@ rule MAL_Driver_MicrosoftCorporation_windbgsys_MicrosoftWindowsOperatingSystem_3
 }
 
 
-rule MAL_Driver_SenseCORP__8JCJ {
+rule MAL_Driver_SenseCORP__6KyA {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Sense5Ext.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Sense5Ext.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "42b22faa489b5de936db33f12184f6233198bdf851a18264d31210207827ba25"
@@ -56,9 +56,9 @@ rule MAL_Driver_SenseCORP__8JCJ {
 }
 
 
-rule MAL_Driver_LegalCorp_PCIExpressVideoCapture_SpKk {
+rule MAL_Driver_LegalCorp_PCIExpressVideoCapture_3qnz {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PcieCubed.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PcieCubed.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fd223833abffa9cd6cc1848d77599673643585925a7ee51259d67c44d361cce8"
@@ -77,9 +77,9 @@ rule MAL_Driver_LegalCorp_PCIExpressVideoCapture_SpKk {
 }
 
 
-rule MAL_Driver_MicrosoftCorporation_ntbiosys_MicrosoftRWindowsRNTOperatingSystem_75JH {
+rule MAL_Driver_MicrosoftCorporation_ntbiosys_MicrosoftRWindowsRNTOperatingSystem_pxa5 {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ntbios_2.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ntbios_2.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c0d88db11d0f529754d290ed5f4c34b4dba8c4f2e5c4148866daabeab0d25f9c"
@@ -100,9 +100,9 @@ rule MAL_Driver_MicrosoftCorporation_ntbiosys_MicrosoftRWindowsRNTOperatingSyste
 }
 
 
-rule MAL_Driver_gentilkiwiBenjaminDELPY_mimidrv_mimidrvmimikatz_4Bde {
+rule MAL_Driver_gentilkiwiBenjaminDELPY_mimidrv_mimidrvmimikatz_6KMc {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "200f98655d1f46d2599c2c8605ebb7e335fee3883a32135ca1a81e09819bc64a"
@@ -122,9 +122,9 @@ rule MAL_Driver_gentilkiwiBenjaminDELPY_mimidrv_mimidrvmimikatz_4Bde {
 }
 
 
-rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_8KwX {
+rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_7g7F {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - wantd_6.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - wantd_6.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e7af7bcb86bd6bab1835f610671c3921441965a839673ac34444cf0ce7b2164e"
@@ -147,9 +147,9 @@ rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_8K
 }
 
 
-rule MAL_Driver_GMER_gmersys_GMER_6tyR {
+rule MAL_Driver_GMER_gmersys_GMER_7aUC {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gmer64.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gmer64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "18c909a2b8c5e16821d6ef908f56881aa0ecceeaccb5fa1e54995935fcfd12f7"
@@ -169,9 +169,9 @@ rule MAL_Driver_GMER_gmersys_GMER_6tyR {
 }
 
 
-rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_6RGh {
+rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_4q8E {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - wantd_2.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - wantd_2.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6908ebf52eb19c6719a0b508d1e2128f198d10441551cbfb9f4031d382f5229f"
@@ -191,9 +191,9 @@ rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_6R
 }
 
 
-rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_5tt8 {
+rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_3sNw {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - wantd_3.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - wantd_3.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1"
@@ -213,9 +213,9 @@ rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_5t
 }
 
 
-rule MAL_Driver_SenseCORP__VUtA {
+rule MAL_Driver_SenseCORP__8m3T {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Sense5Ext.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Sense5Ext.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7f4555a940ce1156c9bcea9a2a0b801f9a5e44ec9400b61b14a7b1a6404ffdf6"
@@ -232,9 +232,9 @@ rule MAL_Driver_SenseCORP__VUtA {
 }
 
 
-rule MAL_Driver_MicrosoftCorporation_ndislansys_MicrosoftWindowsOperatingSystem_3MV6 {
+rule MAL_Driver_MicrosoftCorporation_ndislansys_MicrosoftWindowsOperatingSystem_3t7Z {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ndislan.sys"
+		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ndislan.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b0eb4d999e4e0e7c2e33ff081e847c87b49940eb24a9e0794c6aa9516832c427"

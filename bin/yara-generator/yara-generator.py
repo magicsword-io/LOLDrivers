@@ -29,7 +29,7 @@ import shortuuid
 YARA_RULE_TEMPLATE = '''
 rule $$$RULENAME$$$ {
 	meta:
-		description = "Detects $$$type$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - $$$FILENAMES$$$"
+		description = "Detects $$$TYPE$$$ driver mentioned in LOLDrivers project using VersionInfo values from the PE header - $$$FILENAMES$$$"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "$$$HASH$$$"
@@ -182,7 +182,10 @@ def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, 
 		new_rule = new_rule.replace('$$$DATE$$$', datetime.today().strftime('%Y-%m-%d'))
 		new_rule = new_rule.replace('$$$FILENAMES$$$', ", ".join(file_names))
 		new_rule = new_rule.replace('$$$SCORE$$$', str(type_score))
-		new_rule = new_rule.replace('$$$TYPE$$$', type_desc)
+		if renamed:
+			new_rule = new_rule.replace('$$$TYPE$$$', 'renamed %s' % type_desc)
+		else:
+			new_rule = new_rule.replace('$$$TYPE$$$', type_desc)
 		string_values = generate_string_values(hi['version_info'])
 		# if string values is empty or too small
 		if len(string_values) < 3:
