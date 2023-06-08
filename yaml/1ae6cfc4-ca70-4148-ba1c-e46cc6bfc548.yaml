@@ -5,20 +5,29 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
-  Command: sc.exe create kprocesshacker.sys binPath=C:\windows\temp\kprocesshacker.sys     type=kernel
-    && sc.exe start kprocesshacker.sys
+  Command: sc.exe create kprocesshacker.sys binPath=C:\windows\temp\kprocesshacker.sys type=kernel && sc.exe start kprocesshacker.sys
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
-- ' https://github.com/jbaines-r7/dellicious'
-- ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
-- https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+- 'https://github.com/jbaines-r7/dellicious'
+- 'https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
+- 'https://github.com/ZeroMemoryEx/Overlord'
 Acknowledgement:
   Person: ''
   Handle: ''
 Detection:
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/70211a3f90376bbc61f49c22a63075d1d4ddd53f0aefa976216c46e6ba39a9f4.yara
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/70211a3f90376bbc61f49c22a63075d1d4ddd53f0aefa976216c46e6ba39a9f4.yara
 - type: sigma_hash
