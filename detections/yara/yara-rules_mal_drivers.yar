@@ -1,5 +1,5 @@
 
-rule MAL_Driver_MicrosoftCorporation_windbgsys_MicrosoftWindowsOperatingSystem_7aFi {
+rule MAL_Driver_MicrosoftCorporation_windbgsys_MicrosoftWindowsOperatingSystem_8X7H {
 	meta:
 		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - windbg.sys"
 		author = "Florian Roth"
@@ -21,8 +21,8 @@ rule MAL_Driver_MicrosoftCorporation_windbgsys_MicrosoftWindowsOperatingSystem_7
 		hash = "e1cb86386757b947b39086cc8639da988f6e8018ca9995dd669bdc03c8d39d7d"
 		hash = "e6f764c3b5580cd1675cbf184938ad5a201a8c096607857869bd7c3399df0d12"
 		hash = "bb2422e96ea993007f25c71d55b2eddfa1e940c89e895abb50dd07d7c17ca1df"
-		date = "2023-06-08"
-		score = 75
+		date = "2023-06-12"
+		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069006e0064006f007700730020004700550049002000730079006d0062006f006c00690063002000640065006200750067006700650072 } /* FileDescription Windows GUI symbolic debugger */
 		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e } /* CompanyName Microsoft Corporation */
@@ -37,14 +37,14 @@ rule MAL_Driver_MicrosoftCorporation_windbgsys_MicrosoftWindowsOperatingSystem_7
 }
 
 
-rule MAL_Driver_SenseCORP__5cRP {
+rule MAL_Driver_SenseCORP__tQuH {
 	meta:
 		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Sense5Ext.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "42b22faa489b5de936db33f12184f6233198bdf851a18264d31210207827ba25"
-		date = "2023-06-08"
-		score = 75
+		date = "2023-06-12"
+		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530065006e0073006500350020004400720069007600650072 } /* FileDescription Sense5 Driver */
 		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00530065006e00730065003500200043004f00520050 } /* CompanyName Sense5 CORP */
@@ -56,14 +56,14 @@ rule MAL_Driver_SenseCORP__5cRP {
 }
 
 
-rule MAL_Driver_LegalCorp_PCIExpressVideoCapture_38my {
+rule MAL_Driver_LegalCorp_PCIExpressVideoCapture_8rVq {
 	meta:
 		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PcieCubed.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fd223833abffa9cd6cc1848d77599673643585925a7ee51259d67c44d361cce8"
-		date = "2023-06-08"
-		score = 75
+		date = "2023-06-12"
+		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005000430049006500200056006900640065006f00200043006100700074007500720065 } /* FileDescription PCIe Video Capture */
 		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004c006500670061006c00200043006f00720070002e } /* CompanyName Legal Corp. */
@@ -77,15 +77,15 @@ rule MAL_Driver_LegalCorp_PCIExpressVideoCapture_38my {
 }
 
 
-rule MAL_Driver_MicrosoftCorporation_ntbiosys_MicrosoftRWindowsRNTOperatingSystem_gkFw {
+rule MAL_Driver_MicrosoftCorporation_ntbiosys_MicrosoftRWindowsRNTOperatingSystem_Gn3r {
 	meta:
 		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ntbios_2.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c0d88db11d0f529754d290ed5f4c34b4dba8c4f2e5c4148866daabeab0d25f9c"
 		hash = "96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc"
-		date = "2023-06-08"
-		score = 75
+		date = "2023-06-12"
+		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]006e007400620069006f00730020006400720069007600650072 } /* FileDescription ntbios driver */
 		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e } /* CompanyName Microsoft Corporation */
@@ -100,14 +100,14 @@ rule MAL_Driver_MicrosoftCorporation_ntbiosys_MicrosoftRWindowsRNTOperatingSyste
 }
 
 
-rule MAL_Driver_gentilkiwiBenjaminDELPY_mimidrv_mimidrvmimikatz_5ptb {
+rule MAL_Driver_gentilkiwiBenjaminDELPY_mimidrv_mimidrvmimikatz_59Gc {
 	meta:
 		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "200f98655d1f46d2599c2c8605ebb7e335fee3883a32135ca1a81e09819bc64a"
-		date = "2023-06-08"
-		score = 75
+		date = "2023-06-12"
+		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]006d0069006d006900640072007600200066006f0072002000570069006e0064006f0077007300200028006d0069006d0069006b00610074007a0029 } /* FileDescription mimidrv for Windows (mimikatz) */
 		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00670065006e00740069006c006b0069007700690020002800420065006e006a0061006d0069006e002000440045004c005000590029 } /* CompanyName gentilkiwi (Benjamin DELPY) */
@@ -122,7 +122,7 @@ rule MAL_Driver_gentilkiwiBenjaminDELPY_mimidrv_mimidrvmimikatz_5ptb {
 }
 
 
-rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_4tZR {
+rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_7jSi {
 	meta:
 		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - wantd_6.sys"
 		author = "Florian Roth"
@@ -131,8 +131,8 @@ rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_4t
 		hash = "b9dad0131c51e2645e761b74a71ebad2bf175645fa9f42a4ab0e6921b83306e3"
 		hash = "8d9a2363b757d3f127b9c6ed8f7b8b018e652369bc070aa3500b3a978feaa6ce"
 		hash = "06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4"
-		date = "2023-06-08"
-		score = 75
+		date = "2023-06-12"
+		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570041004e0020005400720061006e00730070006f007200740020004400720069007600650072 } /* FileDescription WAN Transport Driver */
 		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e } /* CompanyName Microsoft Corporation */
@@ -147,14 +147,14 @@ rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_4t
 }
 
 
-rule MAL_Driver_GMER_gmersys_GMER_ACVj {
+rule MAL_Driver_GMER_gmersys_GMER_4f4b {
 	meta:
 		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gmer64.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "18c909a2b8c5e16821d6ef908f56881aa0ecceeaccb5fa1e54995935fcfd12f7"
-		date = "2023-06-08"
-		score = 75
+		date = "2023-06-12"
+		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004d00450052002000440072006900760065007200200068007400740070003a002f002f007700770077002e0067006d00650072002e006e00650074 } /* FileDescription GMER Driver http://www.gmer.net */
 		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0047004d00450052 } /* CompanyName GMER */
@@ -169,14 +169,14 @@ rule MAL_Driver_GMER_gmersys_GMER_ACVj {
 }
 
 
-rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_3NJN {
+rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_3eqx {
 	meta:
 		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - wantd_2.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6908ebf52eb19c6719a0b508d1e2128f198d10441551cbfb9f4031d382f5229f"
-		date = "2023-06-08"
-		score = 75
+		date = "2023-06-12"
+		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570041004e0020005400720061006e00730070006f007200740020004400720069007600650072 } /* FileDescription WAN Transport Driver */
 		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e } /* CompanyName Microsoft Corporation */
@@ -191,14 +191,14 @@ rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_3N
 }
 
 
-rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_rCop {
+rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_5QRV {
 	meta:
 		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - wantd_3.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1"
-		date = "2023-06-08"
-		score = 75
+		date = "2023-06-12"
+		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570041004e0020005400720061006e00730070006f007200740020004400720069007600650072 } /* FileDescription WAN Transport Driver */
 		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e } /* CompanyName Microsoft Corporation */
@@ -213,14 +213,14 @@ rule MAL_Driver_MicrosoftCorporation_wantdsys_MicrosoftWindowsOperatingSystem_rC
 }
 
 
-rule MAL_Driver_SenseCORP__6sQh {
+rule MAL_Driver_SenseCORP__4a2u {
 	meta:
 		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Sense5Ext.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7f4555a940ce1156c9bcea9a2a0b801f9a5e44ec9400b61b14a7b1a6404ffdf6"
-		date = "2023-06-08"
-		score = 75
+		date = "2023-06-12"
+		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530065006e0073006500350020004400720069007600650072 } /* FileDescription Sense5 Driver */
 		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00530065006e00730065003500200043004f00520050 } /* CompanyName Sense5 CORP */
@@ -232,14 +232,14 @@ rule MAL_Driver_SenseCORP__6sQh {
 }
 
 
-rule MAL_Driver_MicrosoftCorporation_ndislansys_MicrosoftWindowsOperatingSystem_4MCM {
+rule MAL_Driver_MicrosoftCorporation_ndislansys_MicrosoftWindowsOperatingSystem_33L6 {
 	meta:
 		description = "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ndislan.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b0eb4d999e4e0e7c2e33ff081e847c87b49940eb24a9e0794c6aa9516832c427"
-		date = "2023-06-08"
-		score = 75
+		date = "2023-06-12"
+		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d00530020004c0041004e0020004400720069007600650072 } /* FileDescription MS LAN Driver */
 		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]004d006900630072006f0073006f0066007400200043006f00720070006f0072006100740069006f006e } /* CompanyName Microsoft Corporation */
