@@ -10,8 +10,8 @@ The rule generator in version 0.4 generates five output files:
 
 | File Name | Description | Score | 
 | --- | --- | --- |
-| yara-rules_vuln_drivers.yar | Contains rules to detect the vulnerable drivers without magic header and file size restrictions (possible false positives or malware that embeds them) | 50 |
-| yara-rules_mal_drivers.yar | Contains rules to detect the malicious drivers without magic header and file size restrictions (possible false positives or malware that embeds them) | 75 |
+| yara-rules_vuln_drivers.yar | Contains rules to detect the vulnerable drivers without magic header and file size restrictions (possible false positives or malware that embeds them) | 40 |
+| yara-rules_mal_drivers.yar | Contains rules to detect the malicious drivers without magic header and file size restrictions (possible false positives or malware that embeds them) | 70 |
 | yara-rules_vuln_drivers_strict.yar | Contains rules to detect the vulnerable drivers with magic header and file size restrictions  (less false positives) | 50 |
 | yara-rules_mal_drivers_strict.yar | Contains rules to detect the malicious drivers with magic header and file size restrictions (less false positives) | 85 |
 | yara-rules_vuln_drivers_strict_renamed.yar | Contains rules to detect the vulnerable drivers with magic header and file size restrictions and filename checks (a renamed vulnerable driver is much more suspicious)[^1] | 70 |

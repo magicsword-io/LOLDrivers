@@ -151,7 +151,7 @@ def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, 
 		type_driver = "vulnerable driver"
 		type_string = "PUA_VULN"
 		type_desc = "vulnerable"
-		type_score = 50
+		type_score = 40
 		if renamed:
 			type_score = 70
 			type_string = "PUA_VULN_Renamed"
@@ -162,7 +162,7 @@ def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, 
 				type_driver = "malicious"
 				type_string = "MAL_"
 				type_desc = "malicious"
-				type_score = 75
+				type_score = 70
 				if strict:
 					type_score = 85
 		# File names (use the file names in field 'Tags' otherwise use the driver file names)
@@ -347,7 +347,8 @@ if __name__ == '__main__':
 	yara_rules_malicious_drivers_strict = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="malicious",  strict=True, renamed=False)
 	yara_rules_vulnerable_drivers_strict_renamed = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="vulnerable driver",  strict=True, renamed=True)
 
-	# Write the output file
+	# Write the output files
+	# The sets
 	output_file = os.path.join(args.o, 'yara-rules_vuln_drivers.yar')
 	with open(output_file, 'w') as fh:
 		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_vulnerable_drivers), output_file))
@@ -368,4 +369,5 @@ if __name__ == '__main__':
 	with open(output_file, 'w') as fh:
 		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_vulnerable_drivers_strict_renamed), output_file))
 		fh.write("\n".join(yara_rules_vulnerable_drivers_strict_renamed))
+	# The single rules for each driver
 	
