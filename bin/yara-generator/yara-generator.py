@@ -6,7 +6,7 @@
 # Florian Roth
 # june 2023
 
-__version__ = "0.4.0"
+__version__ = "0.4.1"
 __author__ = "Florian Roth"
 
 import sys
@@ -16,6 +16,7 @@ import hashlib
 import logging
 import math
 import os
+import re
 import platform
 from pprint import pprint
 import string
@@ -24,7 +25,7 @@ import traceback
 from datetime import datetime
 
 import pefile
-import shortuuid
+
 
 YARA_RULE_TEMPLATE = '''
 rule $$$RULENAME$$$ {
@@ -175,7 +176,7 @@ def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, 
 
 		# Generate Rule
 		new_rule = YARA_RULE_TEMPLATE
-		rule_name = generate_rule_name(hi['version_info'], type_string)
+		rule_name = generate_rule_name(hi['version_info'], type_string, hi['sha256'][0])
 		Log.info("Generating YARA rule for %s - rule name %s" % (hi['file_names'], rule_name))
 		new_rule = new_rule.replace('$$$RULENAME$$$', rule_name)
 		new_rule = new_rule.replace('$$$HASH$$$', '"\n\t\thash = "'.join(hi['sha256']))
@@ -233,7 +234,7 @@ def generate_string_values(version_info):
 		if value: # if not empty
 			field_hex = binascii.hexlify(field.encode('utf-16-be')).decode()
 			value_hex = binascii.hexlify(value.encode('utf-16-be')).decode()
-			search_value = "{ %s[1-8]%s } /* %s %s */" % (field_hex, value_hex, field, value)
+			search_value = "{ %s[1-8]%s } /* %s %s */" % (field_hex, value_hex, field, removeNonAsciiDrop(value))
 			string_values.append(search_value)
 	return string_values
 
@@ -263,9 +264,9 @@ def get_version_info(version_info, value):
 	return ''
 
 
-def generate_rule_name(version_info, type_string):
+def generate_rule_name(version_info, type_string, hash_value):
 	prefix = "%s_Driver" % type_string
-	rid = shortuuid.ShortUUID().random(length=4)
+	rid = hash_value[:4].upper()
 	# Trying to use the values from the VersionInfo for sections of the name
 	custom_rule_part = []
 	custom_rule_string = ""
@@ -281,9 +282,9 @@ def generate_rule_name(version_info, type_string):
 	if not custom_rule_part:
 		custom_rule_string = "Gen_%s" % rid
 	else:
-		custom_rule_string = "_".join(custom_rule_part)
+		custom_rule_string = "_".join(custom_rule_part).title()
 	rule_name = "%s_%s_%s" % (prefix, custom_rule_string, rid)
-	rule_name = rule_name.replace('__', '_')
+	rule_name = re.sub(r'[_]{1,}', '_', rule_name)
 	return rule_name
 
 
@@ -370,4 +371,6 @@ if __name__ == '__main__':
 		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_vulnerable_drivers_strict_renamed), output_file))
 		fh.write("\n".join(yara_rules_vulnerable_drivers_strict_renamed))
 	# The single rules for each driver
+	output_path_single_rules = os.path.join(args.o, '/single-rules')
+	
 	
