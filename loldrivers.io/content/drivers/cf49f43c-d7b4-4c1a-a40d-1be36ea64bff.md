@@ -94,6 +94,7 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 <li><a href="https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951">https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951</a></li>
 <br>
 
+
 ### Known Vulnerable Samples
 
 | Property           | Value |
@@ -105,12 +106,81 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 | Authentihash MD5   | [0ef111dc998659cbc37f0d9845cdd2df](https://www.virustotal.com/gui/search/authentihash%253A0ef111dc998659cbc37f0d9845cdd2df) |
 | Authentihash SHA1  | [432b5809d84935d15574de8d64b22e06682ff715](https://www.virustotal.com/gui/search/authentihash%253A432b5809d84935d15574de8d64b22e06682ff715) |
 | Authentihash SHA256| [97cada65b735f3eece349c7b7021c4469d5a9fb3cf8b5e2ac187006469ffbc98](https://www.virustotal.com/gui/search/authentihash%253A97cada65b735f3eece349c7b7021c4469d5a9fb3cf8b5e2ac187006469ffbc98) |
+| RichPEHeaderHash MD5   | [4c4e61d23caf453cd98052bd346147af](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A4c4e61d23caf453cd98052bd346147af) |
+| RichPEHeaderHash SHA1  | [8cac5443a51b67b2cdcf79e16acf97e900f1cc3b](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A8cac5443a51b67b2cdcf79e16acf97e900f1cc3b) |
+| RichPEHeaderHash SHA256| [b4312d3ba6a4607ea60df01e1cc8f20eced165f726bb535c437a1c48f63bb1b0](https://www.virustotal.com/gui/search/rich_pe_header_hash%253Ab4312d3ba6a4607ea60df01e1cc8f20eced165f726bb535c437a1c48f63bb1b0) |
 | Company           | 3S-Smart Software Solutions GmbH |
 | Description       | SysDrv3S |
 | Product           | SysDrv3S |
 | OriginalFilename  | SysDrv3S.sys |
 
+#### Certificates
 
+{{< details "Expand" >}}
+###### Certificate 04000000000125071df9af
+| Field                             | Value                      |
+|-----------------------------------|----------------------------|
+| ToBeSigned (TBS) MD5              | f47739306d14722e670d9436eadb8e4f  |
+| ToBeSigned (TBS) SHA1             | 457d9df00a652cb4c3356d00145d9528fc309172 |
+| ToBeSigned (TBS) SHA256           | bd1765c56594221373893ef26d97f88c144fb0e5a0111215b45d7239c3444df7 |
+| Subject                           | OU=GlobalSign Root CA , R3, O=GlobalSign, CN=GlobalSign |
+| ValidFrom                         | 2009-11-18 10:00:00 |
+| ValidTo                           | 2019-03-18 10:00:00 |
+| Signature                         | 4252a97ea2cf5b3bcb4bddbaf85759d324a47772ef62443782ed06ee04d5165f24a314dc6c54056ab09b3dda8139daad28db956f8183f5cd62b14524b1dd29e5085495958cf01d065f1ad6463f1340174811169b474dd13ab50f571c9230d0f8b2253b0acdf687f9c7b257d33f7da58c14ce9ca8c79f4693da59fa795d652035445a4fc1909dc1549256dc34c8f5c103d05dc059489c00fc95a0f1d176f71636c813927f2d2bc0b880f126261f414d52bf1e97bb018208e715f6c1d5342accf5e4c3877a5781e1d6d74286620177e2a9c47a86f404387a076a7d00ec73f7a80b3478c59eb3efb838400e8c3353c875ec5f3eea755eff820e7415dc1905f3ba31 |
+| SignatureAlgorithmOID             | 1.2.840.113549.1.1.11 |
+| IsCertificateAuthority            | True |
+| SerialNumber                      | 04000000000125071df9af |
+| Version                           | 3 |
+###### Certificate 481b6a07a9424c1eaafef3cdf10f
+| Field                             | Value                      |
+|-----------------------------------|----------------------------|
+| ToBeSigned (TBS) MD5              | fd8cfeea06be14fa89689909e1fc72dc  |
+| ToBeSigned (TBS) SHA1             | 8bc3cd2f70abe543e0dbe721065a4076c8521f36 |
+| ToBeSigned (TBS) SHA256           | 15e7050789df807f3e3174294a01b637a1239f603e42f4b5db9398efa9da9996 |
+| Subject                           | C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning CA , SHA256 , G3 |
+| ValidFrom                         | 2016-06-15 00:00:00 |
+| ValidTo                           | 2024-06-15 00:00:00 |
+| Signature                         | 7609c4cc2fd9ef1e4ba9f857f3403921ca4c3c1d9e292b20d42b44d288ce1a0d05cf8381bbeb69bc318d2ac4c744cc6060941ccfa1e102240ead5bbe2cc2271e67b7e8281f3251e339f398dfb89f2e8b2ab47b0a03bcbd36048fc9d09c4fa3022799b0f045e934dfe43aa3b70637d86f2a7990d4d44e5871ec53a96198f73969e0129c575872862729a51de532f32b99975abf2bb03cb406ea0e64ecb7cd65802417c2d937f5b1261035477b9a02ba54a24593ff79bf1a8cc59fb59fdf78e76b50f14794694b24b8da05e80c9d4f06ec4a31207e4f5d86842f35a3cd9cc184571f1fadc0e2a4b1ef296b2197a6d4feed0337b0fcf58d2abcdc8483e3dec3e75f |
+| SignatureAlgorithmOID             | 1.2.840.113549.1.1.11 |
+| IsCertificateAuthority            | True |
+| SerialNumber                      | 481b6a07a9424c1eaafef3cdf10f |
+| Version                           | 3 |
+###### Certificate 6129152700000000002a
+| Field                             | Value                      |
+|-----------------------------------|----------------------------|
+| ToBeSigned (TBS) MD5              | 0bb058d116f02817737920f112d9fd3b  |
+| ToBeSigned (TBS) SHA1             | fd116235171a4feafedee586b7a59185fb5fd7e6 |
+| ToBeSigned (TBS) SHA256           | f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4 |
+| Subject                           | C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA |
+| ValidFrom                         | 2011-04-15 19:55:08 |
+| ValidTo                           | 2021-04-15 20:05:08 |
+| Signature                         | 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0 |
+| SignatureAlgorithmOID             | 1.2.840.113549.1.1.5 |
+| IsCertificateAuthority            | True |
+| SerialNumber                      | 6129152700000000002a |
+| Version                           | 3 |
+###### Certificate 60a8b030535055def1677cc6
+| Field                             | Value                      |
+|-----------------------------------|----------------------------|
+| ToBeSigned (TBS) MD5              | e3f11dbfce17755c33f8e88f75d1920e  |
+| ToBeSigned (TBS) SHA1             | 78dcece49b4dbff1bd9a4d66644961c0805aef51 |
+| ToBeSigned (TBS) SHA256           | f8e8df9ee7f7b09507e2c889d366c16a4383d87ff22d2c01808b116a4898d5d3 |
+| Subject                           | ??=Private Organization, serialNumber=HRB 6186, ??=DE, ??=Bayern, ??=Kempten (Allgaeu), C=DE, ST=Bayern, L=Kempten (Allg??u), ??=Memminger Str. 151, O=3S,Smart Software Solutions GmbH, CN=3S,Smart Software Solutions GmbH, emailAddress=info@codesys.com |
+| ValidFrom                         | 2019-02-01 15:34:02 |
+| ValidTo                           | 2021-02-01 15:34:02 |
+| Signature                         | 80dad6d1dcb4d50486f485a5309cfafec484503d27a24a02d63b1343782a476cf76e64e32c7dfc9aca28cbdcc636c4ce4da1da4dd72f613fa54c68489ee8331b4fc66399ea933533a946e4f30f64f2ee09d592c06d1482c128e6d2c8cf0b5321a919bece3e8338c86717291eb589575bd3780e66a24111a1fa3975ffd0df0e779cf4a3ec9ecb06a7a6d89e6467d9104742fe3be7af25d1adf7e3583159a852d82e64b7b4c5f9134dbab58e4d736204e1bfdf0a66121fd9cb0a674ffac58e4de9019444329e5dd5d81770c24fc4529c52f527f473cd2ecb27b97e68b2486db25f8c2c4ced516f0c18cf1cb4b36d09109d88d20ba6b5259f4b6405c5d268718a97 |
+| SignatureAlgorithmOID             | 1.2.840.113549.1.1.11 |
+| IsCertificateAuthority            | False |
+| SerialNumber                      | 60a8b030535055def1677cc6 |
+| Version                           | 3 |
+
+{{< /details >}}
+#### Imports
+{{< details "Expand" >}}
+* HAL.dll
+* ntoskrnl.exe
+
+{{< /details >}}
 #### Imports
 {{< details "Expand" >}}
 * HAL.dll
@@ -169,39 +239,72 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "IsCertificateAuthority": true,
+      "SerialNumber": "04000000000125071df9af",
       "Signature": "4252a97ea2cf5b3bcb4bddbaf85759d324a47772ef62443782ed06ee04d5165f24a314dc6c54056ab09b3dda8139daad28db956f8183f5cd62b14524b1dd29e5085495958cf01d065f1ad6463f1340174811169b474dd13ab50f571c9230d0f8b2253b0acdf687f9c7b257d33f7da58c14ce9ca8c79f4693da59fa795d652035445a4fc1909dc1549256dc34c8f5c103d05dc059489c00fc95a0f1d176f71636c813927f2d2bc0b880f126261f414d52bf1e97bb018208e715f6c1d5342accf5e4c3877a5781e1d6d74286620177e2a9c47a86f404387a076a7d00ec73f7a80b3478c59eb3efb838400e8c3353c875ec5f3eea755eff820e7415dc1905f3ba31",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
       "Subject": "OU=GlobalSign Root CA , R3, O=GlobalSign, CN=GlobalSign",
+      "TBS": {
+        "MD5": "f47739306d14722e670d9436eadb8e4f",
+        "SHA1": "457d9df00a652cb4c3356d00145d9528fc309172",
+        "SHA256": "bd1765c56594221373893ef26d97f88c144fb0e5a0111215b45d7239c3444df7"
+      },
       "ValidFrom": "2009-11-18 10:00:00",
-      "ValidTo": "2019-03-18 10:00:00"
+      "ValidTo": "2019-03-18 10:00:00",
+      "Version": 3
     },
     {
+      "IsCertificateAuthority": true,
+      "SerialNumber": "481b6a07a9424c1eaafef3cdf10f",
       "Signature": "7609c4cc2fd9ef1e4ba9f857f3403921ca4c3c1d9e292b20d42b44d288ce1a0d05cf8381bbeb69bc318d2ac4c744cc6060941ccfa1e102240ead5bbe2cc2271e67b7e8281f3251e339f398dfb89f2e8b2ab47b0a03bcbd36048fc9d09c4fa3022799b0f045e934dfe43aa3b70637d86f2a7990d4d44e5871ec53a96198f73969e0129c575872862729a51de532f32b99975abf2bb03cb406ea0e64ecb7cd65802417c2d937f5b1261035477b9a02ba54a24593ff79bf1a8cc59fb59fdf78e76b50f14794694b24b8da05e80c9d4f06ec4a31207e4f5d86842f35a3cd9cc184571f1fadc0e2a4b1ef296b2197a6d4feed0337b0fcf58d2abcdc8483e3dec3e75f",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
       "Subject": "C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning CA , SHA256 , G3",
+      "TBS": {
+        "MD5": "fd8cfeea06be14fa89689909e1fc72dc",
+        "SHA1": "8bc3cd2f70abe543e0dbe721065a4076c8521f36",
+        "SHA256": "15e7050789df807f3e3174294a01b637a1239f603e42f4b5db9398efa9da9996"
+      },
       "ValidFrom": "2016-06-15 00:00:00",
-      "ValidTo": "2024-06-15 00:00:00"
+      "ValidTo": "2024-06-15 00:00:00",
+      "Version": 3
     },
     {
+      "IsCertificateAuthority": true,
+      "SerialNumber": "6129152700000000002a",
       "Signature": "5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
       "Subject": "C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA",
+      "TBS": {
+        "MD5": "0bb058d116f02817737920f112d9fd3b",
+        "SHA1": "fd116235171a4feafedee586b7a59185fb5fd7e6",
+        "SHA256": "f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4"
+      },
       "ValidFrom": "2011-04-15 19:55:08",
-      "ValidTo": "2021-04-15 20:05:08"
+      "ValidTo": "2021-04-15 20:05:08",
+      "Version": 3
     },
     {
+      "IsCertificateAuthority": false,
+      "SerialNumber": "60a8b030535055def1677cc6",
       "Signature": "80dad6d1dcb4d50486f485a5309cfafec484503d27a24a02d63b1343782a476cf76e64e32c7dfc9aca28cbdcc636c4ce4da1da4dd72f613fa54c68489ee8331b4fc66399ea933533a946e4f30f64f2ee09d592c06d1482c128e6d2c8cf0b5321a919bece3e8338c86717291eb589575bd3780e66a24111a1fa3975ffd0df0e779cf4a3ec9ecb06a7a6d89e6467d9104742fe3be7af25d1adf7e3583159a852d82e64b7b4c5f9134dbab58e4d736204e1bfdf0a66121fd9cb0a674ffac58e4de9019444329e5dd5d81770c24fc4529c52f527f473cd2ecb27b97e68b2486db25f8c2c4ced516f0c18cf1cb4b36d09109d88d20ba6b5259f4b6405c5d268718a97",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
       "Subject": "??=Private Organization, serialNumber=HRB 6186, ??=DE, ??=Bayern, ??=Kempten (Allgaeu), C=DE, ST=Bayern, L=Kempten (Allg??u), ??=Memminger Str. 151, O=3S,Smart Software Solutions GmbH, CN=3S,Smart Software Solutions GmbH, emailAddress=info@codesys.com",
+      "TBS": {
+        "MD5": "e3f11dbfce17755c33f8e88f75d1920e",
+        "SHA1": "78dcece49b4dbff1bd9a4d66644961c0805aef51",
+        "SHA256": "f8e8df9ee7f7b09507e2c889d366c16a4383d87ff22d2c01808b116a4898d5d3"
+      },
       "ValidFrom": "2019-02-01 15:34:02",
-      "ValidTo": "2021-02-01 15:34:02"
+      "ValidTo": "2021-02-01 15:34:02",
+      "Version": 3
     }
   ],
   "CertificatesInfo": "",
   "Signer": [
     {
       "Issuer": "C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning CA , SHA256 , G3",
-      "SerialNumber": "60a8b030535055def1677cc6"
+      "SerialNumber": "60a8b030535055def1677cc6",
+      "Version": 1
     }
   ],
   "SignerInfo": ""
