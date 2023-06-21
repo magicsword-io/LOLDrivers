@@ -32,9 +32,54 @@ This download link contains the vulnerable driver!
 
 
 
+
 ### Detections
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/5c0b429e5935814457934fa9c10ac7a88e19068fa1bd152879e4e9b89c103921.yara" "YARA" >}}
+
+{{< block "grid-3" >}}
+{{< column >}}
+#### YARA 🏹
+{{< details "Expand" >}}
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict.yar" "Exact Match" >}}{{< tip >}}with header and size limitation{{< /tip >}} 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
+
+
+{{< /details >}}
+{{< /column >}}
+
+
+
+{{< column >}}
+
+#### Sigma 🛡️
+{{< details "Expand" >}}
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{{< tip >}}detects loading using name only{{< /tip >}} 
+
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{{< tip >}}detects loading using hashes only{{< /tip >}} 
+
+{{< /details >}}
+
+{{< /column >}}
+
+
+{{< column "mb-2" >}}
+
+#### Sysmon 🔎
+{{< details "Expand" >}}
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
+
+{{< /details >}}
+
+{{< /column >}}
+{{< /block >}}
+
 
 ### Resources
 <br>
@@ -266,7 +311,7 @@ This download link contains the vulnerable driver!
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/2ea12acc-95b6-4f91-afb7-8ded7a2fe9d9.yaml)
 
-*last_updated:* 2023-06-05
+*last_updated:* 2023-06-21
 
 
 

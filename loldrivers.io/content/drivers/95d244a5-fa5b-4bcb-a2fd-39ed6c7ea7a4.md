@@ -40,9 +40,54 @@ sc.exe create rtkio64.sys binPath=C:\windows\temp\rtkio64.sys type=kernel &amp;&
 | Elevate privileges | kernel | Windows 10 |
 
 
+
 ### Detections
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/7133a461aeb03b4d69d43f3d26cd1a9e3ee01694e97a0645a3d8aa1a44c39129.yara" "YARA" >}}
+
+{{< block "grid-3" >}}
+{{< column >}}
+#### YARA 🏹
+{{< details "Expand" >}}
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict.yar" "Exact Match" >}}{{< tip >}}with header and size limitation{{< /tip >}} 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
+
+
+{{< /details >}}
+{{< /column >}}
+
+
+
+{{< column >}}
+
+#### Sigma 🛡️
+{{< details "Expand" >}}
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{{< tip >}}detects loading using name only{{< /tip >}} 
+
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{{< tip >}}detects loading using hashes only{{< /tip >}} 
+
+{{< /details >}}
+
+{{< /column >}}
+
+
+{{< column "mb-2" >}}
+
+#### Sysmon 🔎
+{{< details "Expand" >}}
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
+
+{{< /details >}}
+
+{{< /column >}}
+{{< /block >}}
+
 
 ### Resources
 <br>
@@ -175,7 +220,7 @@ sc.exe create rtkio64.sys binPath=C:\windows\temp\rtkio64.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/95d244a5-fa5b-4bcb-a2fd-39ed6c7ea7a4.yaml)
 
-*last_updated:* 2023-06-05
+*last_updated:* 2023-06-21
 
 
 

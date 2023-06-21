@@ -45,9 +45,54 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 | Elevate privileges | kernel | Windows 10 |
 
 
+
 ### Detections
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/358ac54be252673841a1d65bfc2fb6d549c1a4c877fa7f5e1bfa188f30375d69.yara" "YARA" >}}
+
+{{< block "grid-3" >}}
+{{< column >}}
+#### YARA 🏹
+{{< details "Expand" >}}
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict.yar" "Exact Match" >}}{{< tip >}}with header and size limitation{{< /tip >}} 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
+
+
+{{< /details >}}
+{{< /column >}}
+
+
+
+{{< column >}}
+
+#### Sigma 🛡️
+{{< details "Expand" >}}
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{{< tip >}}detects loading using name only{{< /tip >}} 
+
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{{< tip >}}detects loading using hashes only{{< /tip >}} 
+
+{{< /details >}}
+
+{{< /column >}}
+
+
+{{< column "mb-2" >}}
+
+#### Sysmon 🔎
+{{< details "Expand" >}}
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
+
+{{< /details >}}
+
+{{< /column >}}
+{{< /block >}}
+
 
 ### Resources
 <br>
@@ -150,7 +195,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/b28cc2ee-d4a2-4fe4-9acb-a7a61cad20c6.yaml)
 
-*last_updated:* 2023-06-05
+*last_updated:* 2023-06-21
 
 
 
