@@ -4,12 +4,13 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create WinFlash64.sys binPath=C:\windows\temp\WinFlash64.sys
-  type=kernel && sc.exe start WinFlash64.sys'
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create WinFlash64.sys binPath=C:\windows\temp\WinFlash64.sys type=kernel
+    && sc.exe start WinFlash64.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
@@ -17,7 +18,7 @@ Acknowledgement:
   Handle: ''
 Detection: []
 KnownVulnerableSamples:
-- FileName: WinFlash64.sys
+- Filename: WinFlash64.sys
   MD5: a216803d691d92acc44ac77d981aa767
   SHA1: 48be0ec2e8cb90cac2be49ef71e44390a0f648ce
   SHA256: 316a27e2bdb86222bc7c8af4e5472166b02aec7f3f526901ce939094e5861f6d
@@ -91,7 +92,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: WinFlash64.sys
+- Filename: WinFlash64.sys
   MD5: bf2a954160cb155df0df433929e9102b
   SHA1: 7a1689cde189378e7db84456212b0e438f9bf90a
   SHA256: 8797d9afc7a6bb0933f100a8acbb5d0666ec691779d522ac66c66817155b1c0d
@@ -164,7 +165,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: WinFlash64.sys
+- Filename: WinFlash64.sys
   MD5: bc6ff00fb3a14437c94b37ac9a2101d4
   SHA1: d5326fea00bcde2ef7155acf3285c245c9fb4ece
   SHA256: 8bda0108de82ebeae82f43108046c5feb6f042e312fa0115475a9e32274fae59

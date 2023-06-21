@@ -4,12 +4,13 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create BS_RCIOW1064.sys binPath=C:\windows\temp\BS_RCIOW1064.sys
-  type=kernel && sc.exe start BS_RCIOW1064.sys'
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create BS_RCIOW1064.sys binPath=C:\windows\temp\BS_RCIOW1064.sys type=kernel
+    && sc.exe start BS_RCIOW1064.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
@@ -17,7 +18,7 @@ Acknowledgement:
   Handle: ''
 Detection: []
 KnownVulnerableSamples:
-- FileName: BS_RCIOW1064.sys
+- Filename: BS_RCIOW1064.sys
   MD5: 6b6dfb6d952a2e36efd4a387fdb94637
   SHA1: 42eb220fdfb76c6e0649a3e36acccbdf36e287f1
   SHA256: 6191c20426dd9b131122fb97e45be64a4d6ce98cc583406f38473434636ddedc

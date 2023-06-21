@@ -4,46 +4,21 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: sc.exe create ATSZIO.sys binPath=C:\windows\temp\ATSZIO.sys type=kernel
-  && sc.exe start ATSZIO.sys
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create ATSZIO.sys binPath=C:\windows\temp\ATSZIO.sys type=kernel
+    && sc.exe start ATSZIO.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
   Person: []
   Handle: ''
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/0da746e49fd662be910d0e366934a7e02898714eaaa577e261ab40eb44222b5c.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/1a4f7d7926efc3e3488758ce318246ea78a061bde759ec6c906ff005dd8213e5.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/31d8fc6f5fb837d5eb29db828d13ba8ee11867d86a90b2c2483a578e1d0ec43a.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/55a1535e173c998fbbc978009b02d36ca0c737340d84ac2a8da73dfc2f450ef9.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/673bcec3d53fab5efd6e3bac25ac9d6cc51f6bbdf8336e38aade2713dc1ae11b.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c64d4ac416363c7a1aa828929544d1c1d78cf032b39769943b851cfc4c0faafc.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e32ab30d01dcff6418544d93f99ae812d2ce6396e809686620547bea05074f6f.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ecfc52a22e4a41bf53865b0e28309411c60af34a44e31a5c53cdc8c5733e8282.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/fb6b0d304433bf88cc7d57728683dbb4b9833459dc33528918ead09b3907ff22.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Detection: []
 KnownVulnerableSamples:
-- FileName: ATSZIO.sys
+- Filename: ATSZIO.sys
   MD5: 17b97fbe2e8834d7ad30211635e1b271
   SHA1: e88259de797573fa515603ad3354aed0bce572f1
   SHA256: 0da746e49fd662be910d0e366934a7e02898714eaaa577e261ab40eb44222b5c
@@ -145,7 +120,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: ATSZIO.sys
+- Filename: ATSZIO.sys
   MD5: 7ee0c884e7d282958c5b3a9e47f23e13
   SHA1: 86e893e59352fcb220768fb758fcc5bbd91dd39e
   SHA256: 1a4f7d7926efc3e3488758ce318246ea78a061bde759ec6c906ff005dd8213e5
@@ -210,7 +185,7 @@ KnownVulnerableSamples:
     - SerialNumber: 330000004de597a775e3157f7b00000000004d
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
-- FileName: ATSZIO.sys
+- Filename: ATSZIO.sys
   MD5: 030c8432981e4d41b191624b3e07afe2
   SHA1: 87d47340d1940eaeb788523606804855818569e3
   SHA256: 31d8fc6f5fb837d5eb29db828d13ba8ee11867d86a90b2c2483a578e1d0ec43a
@@ -292,7 +267,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
-- FileName: ATSZIO.sys
+- Filename: ATSZIO.sys
   MD5: 715ac0756234a203cb7ce8524b6ddc0d
   SHA1: d73dabcb3f55935b701542fd26875006217ebbbe
   SHA256: 55a1535e173c998fbbc978009b02d36ca0c737340d84ac2a8da73dfc2f450ef9
@@ -392,7 +367,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: ATSZIO.sys
+- Filename: ATSZIO.sys
   MD5: f84da507b3067f019c340b737cd68d32
   SHA1: 5e9538d76b75f87f94ca5409ae3ddc363e8aba7f
   SHA256: 673bcec3d53fab5efd6e3bac25ac9d6cc51f6bbdf8336e38aade2713dc1ae11b
@@ -480,7 +455,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
-- FileName: ATSZIO.sys
+- Filename: ATSZIO.sys
   MD5: 4814205270caa80d35569eee8081838e
   SHA1: d6de8983dbd9c4c83f514f4edf1ac7be7f68632f
   SHA256: c64d4ac416363c7a1aa828929544d1c1d78cf032b39769943b851cfc4c0faafc
@@ -571,7 +546,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: ATSZIO.sys
+- Filename: ATSZIO.sys
   MD5: dbf11f3fad1db3eb08e2ee24b5ebfb95
   SHA1: cea540a2864ece0a868d841ab27680ff841fcbe6
   SHA256: e32ab30d01dcff6418544d93f99ae812d2ce6396e809686620547bea05074f6f
@@ -636,7 +611,7 @@ KnownVulnerableSamples:
     - SerialNumber: 068642beebecb7ddb4272ae42e83b490
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
-- FileName: ATSZIO.sys
+- Filename: ATSZIO.sys
   MD5: 5a1ee9e6a177f305765f09b0ae6ac1c5
   SHA1: 3f67a43ae174a715795e49f72bc350302de83323
   SHA256: ecfc52a22e4a41bf53865b0e28309411c60af34a44e31a5c53cdc8c5733e8282
@@ -728,7 +703,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: ATSZIO.sys
+- Filename: ATSZIO.sys
   MD5: 6682176866d6bd6b4ea3c8e398bd3aae
   SHA1: 962e2ac84c28ed5e373d4d4ccb434eceee011974
   SHA256: fb6b0d304433bf88cc7d57728683dbb4b9833459dc33528918ead09b3907ff22

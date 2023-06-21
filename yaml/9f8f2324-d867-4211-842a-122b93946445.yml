@@ -4,12 +4,13 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create mhyprot.sys binPath=C:\windows\temp\mhyprot.sys type=kernel
-  && sc.exe start mhyprot.sys'
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create mhyprot.sys binPath=C:\windows\temp\mhyprot.sys type=kernel
+    && sc.exe start mhyprot.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
@@ -17,7 +18,7 @@ Acknowledgement:
   Handle: ''
 Detection: []
 KnownVulnerableSamples:
-- FileName: mhyprot.sys
+- Filename: mhyprot.sys
   MD5: 8b779fe1d71839ad361226f66f1b3fe5
   SHA1: 175fb76c7cd8f0aeb916f4acb3b03f8b2d51846a
   SHA256: 0c512b615eac374d4d494e3c36838d8e788b3dc2691bf27916f7f42694b14467
@@ -167,7 +168,7 @@ KnownVulnerableSamples:
     - SerialNumber: 05a7559541e0fdc678d79e3272468907
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
-- FileName: mhyprot.sys
+- Filename: mhyprot.sys
   MD5: 67e3b720cee8184c714585a85f8058a0
   SHA1: 254dce914e13b90003b0ae72d8705d92fe7c8dd0
   SHA256: 69e3fda487a5ec2ec0f67b7d79a5a836ff0036497b2d1aec514c67d2efa789b2
@@ -320,7 +321,7 @@ KnownVulnerableSamples:
     - SerialNumber: 05a7559541e0fdc678d79e3272468907
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
-- FileName: mhyprot2.sys
+- Filename: mhyprot2.sys
   MD5: 8f47af49c330c9fcf3451ad2252b9e04
   SHA1: be797c91768ac854bd3b82a093e55db83da0cb11
   SHA256: ad2477632b9b07588cfe0e692f244c05fa4202975c1fe91dd3b90fa911ac6058
@@ -474,7 +475,7 @@ KnownVulnerableSamples:
     - SerialNumber: 05a7559541e0fdc678d79e3272468907
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
-- FileName: mhyprot2.sys
+- Filename: mhyprot2.sys
   MD5: 89c7bd12495e29413038224cb61db02e
   SHA1: 16c6bcef489f190a48e9d3b1f35972db89516479
   SHA256: b8b94c2646b62f6ac08f16514b6efaa9866aa3c581e4c0435a7aeafe569b2418

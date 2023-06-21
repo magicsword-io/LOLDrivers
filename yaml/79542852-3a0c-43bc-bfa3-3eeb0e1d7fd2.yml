@@ -4,42 +4,21 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: sc.exe create VBoxDrv.sys binPath=C:\windows\temp\VBoxDrv.sys type=kernel
-  && sc.exe start VBoxDrv.sys
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create VBoxDrv.sys binPath=C:\windows\temp\VBoxDrv.sys type=kernel
+    && sc.exe start VBoxDrv.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
   Person: []
   Handle: ''
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/26f41e4268be59f5de07552b51fa52d18d88be94f8895eb4a16de0f3940cf712.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/3724b39e97936bb20ada51c6119aded04530ed86f6b8d6b45fbfb2f3b9a4114b.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/7539157df91923d4575f7f57c8eb8b0fd87f064c919c1db85e73eebb2910b60c.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/9dab4b6fddc8e1ec0a186aa8382b184a5d52cfcabaaf04ff9e3767021eb09cf4.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c26b51b4c37330800cff8519252e110116c3aaade94ceb9894ec5bfb1b8f9924.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c8940e2e9b069ec94f9f711150b313b437f8429f78d522810601b6ee8b52bada.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/cfb7af8ac67a379e7869289aeee21837c448ea6f8ab6c93988e7aa423653bd40.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Detection: []
 KnownVulnerableSamples:
-- FileName: VBoxDrv.sys
+- Filename: VBoxDrv.sys
   MD5: b1b8e6b85dd03c7f1290b1a071fc79c1
   SHA1: a22dead5cdf05bd2f79a4d0066ffcf01c7d303ec
   SHA256: 26f41e4268be59f5de07552b51fa52d18d88be94f8895eb4a16de0f3940cf712
@@ -624,7 +603,7 @@ KnownVulnerableSamples:
     Signer:
     - SerialNumber: c3b2c606d320e0bf4f71f1e73668a938
       Issuer: CN=Vektor T13 Security Service
-- FileName: VBoxDrv.sys
+- Filename: VBoxDrv.sys
   MD5: 02a1d77ef13bd41cad04abcce896d0b9
   SHA1: 59c0fa0d61576d9eb839c9c7e15d57047ee7fe29
   SHA256: 3724b39e97936bb20ada51c6119aded04530ed86f6b8d6b45fbfb2f3b9a4114b
@@ -1209,7 +1188,7 @@ KnownVulnerableSamples:
     Signer:
     - SerialNumber: 4d87df1b3d1e239b405dc85d0a0bad22
       Issuer: CN=Vektor T13 Technology
-- FileName: VBoxDrv.sys
+- Filename: VBoxDrv.sys
   MD5: 962a33a191dbe56915fd196e3a868cf0
   SHA1: 449ff4f5ce2fdddac05a6c82e45a7e802b1c1305
   SHA256: 7539157df91923d4575f7f57c8eb8b0fd87f064c919c1db85e73eebb2910b60c
@@ -1572,7 +1551,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: VBoxDrv.sys
+- Filename: VBoxDrv.sys
   MD5: 3e87e3346441539d3a90278a120766df
   SHA1: ce5681896e7631b6e83cccb7aa056a33e72a1bbe
   SHA256: 9dab4b6fddc8e1ec0a186aa8382b184a5d52cfcabaaf04ff9e3767021eb09cf4
@@ -3467,7 +3446,7 @@ KnownVulnerableSamples:
     Signer:
     - SerialNumber: 77769240d819a3f2eb2e7f8baffecd26
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
-- FileName: VBoxDrv.sys
+- Filename: VBoxDrv.sys
   MD5: e3bdb307b32b13b8f7e621e8d5cc8cd3
   SHA1: 58fe23f1bb9d4bcc1b07b102222a7d776cc90f6c
   SHA256: c26b51b4c37330800cff8519252e110116c3aaade94ceb9894ec5bfb1b8f9924
@@ -3760,7 +3739,7 @@ KnownVulnerableSamples:
     - SerialNumber: 330000033c89c66a7b45bb1fbd00000000033c
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Production PCA 2011
-- FileName: VBoxDrv.sys
+- Filename: VBoxDrv.sys
   MD5: 443689645455987cb347154b391f734d
   SHA1: 2fed7eddd63f10ed4649d9425b94f86140f91385
   SHA256: c8940e2e9b069ec94f9f711150b313b437f8429f78d522810601b6ee8b52bada
@@ -4071,7 +4050,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: VBoxDrv.sys
+- Filename: VBoxDrv.sys
   MD5: 6beb1d8146f5a4aaa2f7b8c0c9bced30
   SHA1: 07f62d9b6321bed0008e106e9ce4240cb3f76da2
   SHA256: cfb7af8ac67a379e7869289aeee21837c448ea6f8ab6c93988e7aa423653bd40

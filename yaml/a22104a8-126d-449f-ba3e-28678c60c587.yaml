@@ -148,5 +148,30 @@ KnownVulnerableSamples:
   - NdisCopyFromPacketToPacket
   - NdisFreePacketPool
   Signatures: {}
+  RichPEHeaderHash:
+    MD5: 7dac9e657681230dfe85b6e42aa5891e
+    SHA1: 02e8444b111e83edca1a07580800daf3e7e2453d
+    SHA256: 3e7f74d584bec768a7e4677b53f195737e86f319c4804790a13a2adbb38425a9
+  Sections:
+    .text:
+      Entropy: 6.502320391551188
+      Virtual Size: '0xb444'
+    .rdata:
+      Entropy: 4.059142627811111
+      Virtual Size: '0x178'
+    .data:
+      Entropy: 3.447893896844354
+      Virtual Size: '0xd70c0'
+    INIT:
+      Entropy: 5.35998649387063
+      Virtual Size: '0x952'
+    .rsrc:
+      Entropy: 3.272892553001117
+      Virtual Size: '0x3b0'
+    .reloc:
+      Entropy: 3.7078151277985745
+      Virtual Size: '0x10a2'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2014-04-30 01:52:21'
 Tags:
 - wantd_3.sys

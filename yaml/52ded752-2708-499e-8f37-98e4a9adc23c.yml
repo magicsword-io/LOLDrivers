@@ -4,12 +4,13 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create GLCKIO2.sys binPath=C:\windows\temp\GLCKIO2.sys type=kernel
-  && sc.exe start GLCKIO2.sys'
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create GLCKIO2.sys binPath=C:\windows\temp\GLCKIO2.sys type=kernel
+    && sc.exe start GLCKIO2.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
@@ -17,7 +18,7 @@ Acknowledgement:
   Handle: ''
 Detection: []
 KnownVulnerableSamples:
-- FileName: GLCKIO2.sys
+- Filename: GLCKIO2.sys
   MD5: dedd07993780d973c22c93e77ab69fa3
   SHA1: 83b5e60943a92050fccb8acef7aa464c8f81d38e
   SHA256: e5b0772be02e2bc807804874cf669e97aa36f5aff1f12fa0a631a3c7b4dd0dc8

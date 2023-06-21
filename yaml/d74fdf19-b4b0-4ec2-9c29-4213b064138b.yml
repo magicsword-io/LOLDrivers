@@ -4,12 +4,13 @@ Created: '2023-05-11'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create irec binPath=C:\windows\temp\irec.sys type=kernel
-  && sc.exe start irec.sys'
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create irec binPath=C:\windows\temp\irec.sys type=kernel
+    && sc.exe start irec.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - https://github.com/alfarom256/HPHardwareDiagnostics-PoC
 Acknowledgement:
@@ -17,7 +18,7 @@ Acknowledgement:
   Handle: '@_mmpte_software'
 Detection: []
 KnownVulnerableSamples:
-- FileName: irec.sys
+- Filename: irec.sys
   MD5: f1a203406a680cc7e4017844b129dcbf
   SHA1: d2fb46277c36498e87d0f47415b7980440d40e3d
   SHA256: dd573f23d656818036fc9ae1064eda31aca86acb9bc44a6e127db3ea112a9094

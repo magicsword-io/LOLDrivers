@@ -4,38 +4,21 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: sc.exe create NTIOLib.sys binPath=C:\windows\temp\NTIOLib.sys type=kernel
-  && sc.exe start NTIOLib.sys
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create NTIOLib.sys binPath=C:\windows\temp\NTIOLib.sys type=kernel
+    && sc.exe start NTIOLib.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
   Person: []
   Handle: ''
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/18776682fcc0c6863147143759a8d4050a4115a8ede0136e49a7cf885c8a4805.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/7893307df2fdde25371645a924f0333e1b2de31b6bc839d8e2a908d7830c6504.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/952199c28332bc90cfd74530a77ee237967ed32b3c71322559c59f7a42187dc4.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c2a4ddcc9c3b339d752c48925d62fc4cc5adbf6fae8fedef74cdd47e88da01f8.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e3936d3356573ce2e472495cd3ce769f49a613e453b010433dafce5ea498ddc2.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Detection: []
 KnownVulnerableSamples:
-- FileName: NTIOLib.sys
+- Filename: NTIOLib.sys
   MD5: 4d99d02f49e027332a0a9c31c674e13b
   SHA1: 39e57a0bb3b349c70ad5f11592f9282860bbcc0a
   SHA256: 18776682fcc0c6863147143759a8d4050a4115a8ede0136e49a7cf885c8a4805
@@ -118,7 +101,7 @@ KnownVulnerableSamples:
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-- FileName: NTIOLib.sys
+- Filename: NTIOLib.sys
   MD5: 2e5f016ff9378be41fe98fa62f99b12d
   SHA1: 4518758452af35d593e0cae80d9841a86af6d3de
   SHA256: 7893307df2fdde25371645a924f0333e1b2de31b6bc839d8e2a908d7830c6504
@@ -200,7 +183,7 @@ KnownVulnerableSamples:
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-- FileName: NTIOLib.sys
+- Filename: NTIOLib.sys
   MD5: 6d97ee5b3300d0f7fa359f2712834c40
   SHA1: 8dc2097a90eb7e9d6ee31a7c7a95e7a0b2093b89
   SHA256: 952199c28332bc90cfd74530a77ee237967ed32b3c71322559c59f7a42187dc4
@@ -269,7 +252,7 @@ KnownVulnerableSamples:
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-- FileName: NTIOLib.sys
+- Filename: NTIOLib.sys
   MD5: 2f1ebc14bd8a29b89896737ca4076002
   SHA1: 6bfeac43be3ebd8d95a5eba963e18d97d76d2b05
   SHA256: c2a4ddcc9c3b339d752c48925d62fc4cc5adbf6fae8fedef74cdd47e88da01f8
@@ -351,7 +334,7 @@ KnownVulnerableSamples:
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-- FileName: NTIOLib.sys
+- Filename: NTIOLib.sys
   MD5: 1c4acf27317a2b5eaedff3ce6094794d
   SHA1: 4a7324ca485973d514fd087699f6d759ff32743b
   SHA256: e3936d3356573ce2e472495cd3ce769f49a613e453b010433dafce5ea498ddc2
