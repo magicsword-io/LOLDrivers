@@ -69,11 +69,83 @@ This download link contains the malicious driver!
 {% endif %}
 
 
-{% if driver.yara %}
+
 ### Detections
 
-{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/{% endraw %}{{ driver.KnownVulnerableSamples[0].SHA256 }}{% raw %}.yara" "YARA" >}}{% endraw %}
+{% raw %}
+{{< block "grid-3" >}}
+{{< column >}}
+{% endraw %}
+#### YARA 🏹
+{% raw %}{{< details "Expand" >}}{% endraw %}
+
+{% if driver.Category == 'malicious' %}
+
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_mal_drivers_strict.yar" "Exact Match" >}}{% endraw %}
+{% raw %}{{< tip >}}with header and size limitation{{< /tip >}}{% endraw %} 
+
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_mal_drivers.yar" "Threat Hunting" >}}{% endraw %}
+{% raw %}{{< tip >}}without header and size limitation{{< /tip >}}{% endraw %} 
+
+
+{% elif driver.Category == 'vulnerable driver' %}
+
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict.yar" "Exact Match" >}}{% endraw %}
+{% raw %}{{< tip >}}with header and size limitation{{< /tip >}}{% endraw %} 
+
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{% endraw %}
+{% raw %}{{< tip >}}without header and size limitation{{< /tip >}}{% endraw %} 
+
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_strict_renamed.yar" "Renamed" >}}{% endraw %}
+{% raw %}{{< tip >}}for renamed driver files{{< /tip >}}{% endraw %} 
+
 {% endif %}
+
+{% raw %}{{< /details >}}{% endraw %}
+{% raw %}
+{{< /column >}}
+{% endraw %}
+
+
+{% raw %}
+{{< column >}}
+{% endraw %}
+
+#### Sigma 🛡️
+{% raw %}{{< details "Expand" >}}{% endraw %}
+
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{% endraw %}
+{% raw %}{{< tip >}}detects loading using name only{{< /tip >}}{% endraw %} 
+
+
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{% endraw %}
+{% raw %}{{< tip >}}detects loading using hashes only{{< /tip >}}{% endraw %} 
+
+{% raw %}{{< /details >}}{% endraw %}
+{% raw %}
+
+{{< /column >}}
+{% endraw %}
+
+{% raw %}
+{{< column "mb-2" >}}
+{% endraw %}
+
+#### Sysmon 🔎
+{% raw %}{{< details "Expand" >}}{% endraw %}
+
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{% endraw %}
+{% raw %}{{< tip >}}on hashes{{< /tip >}}{% endraw %} 
+
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{% endraw %}
+{% raw %}{{< tip >}}on hashes{{< /tip >}}{% endraw %} 
+
+{% raw %}{{< /details >}}{% endraw %}
+
+{% raw %}
+{{< /column >}}
+{{< /block >}}
+{% endraw %}
 
 
 ### Resources
