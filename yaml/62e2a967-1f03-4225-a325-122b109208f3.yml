@@ -4,12 +4,13 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create DirectIo.sys binPath=C:\windows\temp\DirectIo.sys type=kernel
-  && sc.exe start DirectIo.sys'
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create DirectIo.sys binPath=C:\windows\temp\DirectIo.sys type=kernel
+    && sc.exe start DirectIo.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
@@ -17,7 +18,7 @@ Acknowledgement:
   Handle: ''
 Detection: []
 KnownVulnerableSamples:
-- FileName: DirectIo.sys
+- Filename: DirectIo.sys
   MD5: d77fb9fb256b0c2ec0258c39b80dc513
   SHA1: bdfb1a2b08d823009c912808425b357d22480ecc
   SHA256: 2b186926ed815d87eaf72759a69095a11274f5d13c33b8cc2b8700a1f020be1d
@@ -119,7 +120,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: DirectIo.sys
+- Filename: DirectIo.sys
   MD5: 590875a0b2eeb171403fc7d0f5110cb2
   SHA1: 4f94789cffb23c301f93d6913b594748684abf6a
   SHA256: 31f4140c12ac31f5729a8de4dc051d3acd07783564604df831a2a6722c979192
@@ -208,7 +209,7 @@ KnownVulnerableSamples:
     Signer:
     - SerialNumber: '401630'
       Issuer: C=ZA, O=Thawte Consulting (Pty) Ltd., CN=Thawte Code Signing CA
-- FileName: DirectIo.sys
+- Filename: DirectIo.sys
   MD5: 392d7180653b0ca77a78bdf15953d865
   SHA1: 3e917f0986802d47c0ffe4d6f5944998987c4160
   SHA256: 673b63b67345773cd6d66f6adcf2c753e2d949232bff818d5bb6e05786538d92
@@ -321,7 +322,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
-- FileName: DirectIo.sys
+- Filename: DirectIo.sys
   MD5: e3fda6120dfa016a76d975fdab7954f6
   SHA1: e2e7a2b2550b889235aafd9ffd1966ccd20badfe
   SHA256: 83f7be0a13c1fccf024c31da5c68c0ea1decf4f48fc39d6e4fd324bbe789ae8a
@@ -411,7 +412,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: DirectIo.sys
+- Filename: DirectIo.sys
   MD5: a17c403c4b74d4fa920c3887066daeb2
   SHA1: 30c6e1da8745c3d53df696af407ef095a8398273
   SHA256: 94be67c319a67de75ebed050d5537cfaa795d72bba52f3d8cf349e7bd075410e
@@ -513,7 +514,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: DirectIo.sys
+- Filename: DirectIo.sys
   MD5: 7056549baa6da18910151b08121e2c94
   SHA1: 84d44e166072bccf1f8e1e9eb51880ffa065a274
   SHA256: bb68552936a6b0a68fb53ce864a6387d2698332aac10a7adfdd5a48b97027ce3

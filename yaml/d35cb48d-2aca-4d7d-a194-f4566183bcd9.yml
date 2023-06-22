@@ -4,110 +4,21 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: sc.exe create TmComm.sys binPath=C:\windows\temp\TmComm.sys type=kernel
-  && sc.exe start TmComm.sys
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create TmComm.sys binPath=C:\windows\temp\TmComm.sys type=kernel
+    && sc.exe start TmComm.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
   Person: []
   Handle: ''
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/0909005d625866ef8ccd8ae8af5745a469f4f70561b644d6e38b80bccb53eb06.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/12eda8b65ed8c1d80464a0c535ea099dffdb4981c134294cb0fa424efc85ee56.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/1c1251784e6f61525d0082882a969cb8a0c5d5359be22f5a73e3b0cd38b51687.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/2afdb3278a7b57466a103024aef9ff7f41c73a19bab843a8ebf3d3c4d4e82b30.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/385485e643aa611e97ceae6590c6a8c47155886123dbb9de1e704d0d1624d039.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/3c4207c90c97733fae2a08679d63fbbe94dfcf96fdfdf88406aa7ab3f80ea78f.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/3e1d47a497babbfd1c83905777b517ec87c65742bee7eb57a2273eca825d2272.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/3fa6379951f08ed3cb87eeba9cf0c5f5e1d0317dcfcf003b810df9d795eeb73e.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/478d855b648ef4501d3b08b3b10e94076ac67546b0ce86b454324f1bf9a78aa0.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4bc0921ffd4acc865525d3faf98961e8decc5aec4974552cbbf2ae8d5a569de4.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4e37592a2a415f520438330c32cfbdbd6af594deef5290b2fa4b9722b898ff69.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/5027fce41ed60906a0e76b97c95c2a5a83d57a2d1cd42de232a21f26c0d58e48.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/5192ec4501d0fe0b1c8f7bf9b778f7524a7a70a26bbbb66e5dab8480f6fdbb8b.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/61befeef14783eb0fed679fca179d2f5c33eb2dcbd40980669ca2ebeb3bf11cf.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/62f5e13b2edc00128716cb93e6a9eddffea67ce83d2bb426f18f5be08ead89e0.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/654c5ba47f74008c8f49cbb97988017eec8c898adc3bb851bc6e1fdf9dcf54ad.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6ffdde6bc6784c13c601442e47157062941c47015891e7139c2aaba676ab59cc.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/76e807b6c0214e66455f09a8de8faad40b738982ca84470f0043de0290449524.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/7837cb350338c4958968d06b105466da6518f5bb522a6e70e87c0cad85128408.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/7c731c0ea7f28671ab7787800db69739ea5cd6be16ea21045b4580cf95cbf73b.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/80a59ca71fc20961ccafc0686051e86ae4afbbd4578cb26ad4570b9207651085.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/818e396595d08d724666803cd29dac566dc7db23bf50e9919d04b33afa988c01.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/89108a15f009b285db4ef94250b889d5b11b96b4aa7b190784a6d1396e893e10.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/97b32ddf83f75637e3ba934df117081dd6a1c57d47a4c9700d35e736da11d5bd.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/a8027daa6facf1ff81405daf6763249e9acf232a1a191b6bf106711630e6188e.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/a903f329b70f0078197cb7683aae1bb432eaf58572fe572f7cb4bc2080042d7e.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/adc10de960f40fa9f6e28449748250fa9ddfd331115b77a79809a50c606753ee.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/b773511fdb2e370dec042530910a905472fcc2558eb108b246fd3200171b04d3.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/bcfc2c9883e6c1b8429be44cc4db988a9eecb544988fbd756d18cfca6201876f.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c082514317bf80a2f5129d84a5a55e411a95e32d03a4df1274537704c80e41dd.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c9014b03866bf37faa8fdb16b6af7cfec976aaef179fd5797d0c0bf8079d3a8c.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/d783ace822f8fe4e25d5387e5dd249cb72e62f62079023216dc436f1853a150f.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/dbc604b4e01362a3e51357af4a87686834fe913852a4e0a8c0d4c1a0f7d076ed.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e3eff841ea0f2786e5e0fed2744c0829719ad711fc9258eeaf81ed65a52a8918.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e4d9f037411284e996a002b15b49bc227d085ee869ae1cd91ba54ff7c244f036.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ec5fac0b6bb267a2bd10fc80c8cca6718439d56e82e053d3ff799ce5f3475db5.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ecd07df7ad6fee9269a9e9429eb199bf3e24cf672aa1d013b7e8d90d75324566.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ed2f33452ec32830ffef2d5dc832985db9600c306ed890c47f3f33ccbb335c39.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ee3ff12943ced401e2b6df9e66e8a0be8e449fa9326cab241f471b2d8ffefdd7.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/fca10cde7d331b7f614118682d834d46125a65888e97bd9fda2df3f15797166c.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/fda93c6e41212e86af07f57ca95db841161f00b08dae6304a51b467056e56280.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Detection: []
 KnownVulnerableSamples:
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 34686a4b10f239d781772e9e94486c1a
   SHA1: 8a922499f7a1b978555b46c30f90de1339760c74
   SHA256: 0909005d625866ef8ccd8ae8af5745a469f4f70561b644d6e38b80bccb53eb06
@@ -887,7 +798,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 28d6b138adc174a86c0f6248d8a88275
   SHA1: 8ac5703e67c3e6e0585cb8dbb86d196c5362f9bb
   SHA256: 12eda8b65ed8c1d80464a0c535ea099dffdb4981c134294cb0fa424efc85ee56
@@ -1644,7 +1555,7 @@ KnownVulnerableSamples:
     - SerialNumber: 0ea0fe4dfb74cc64bc32143103c27c8b
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: e3aaa0c1c3a5e99eb9970ebe4b5a3183
   SHA1: 8fafd70bae94bbc22786c9328ee9126fed54dbae
   SHA256: 1c1251784e6f61525d0082882a969cb8a0c5d5359be22f5a73e3b0cd38b51687
@@ -2364,7 +2275,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 5a615f4641287e5e88968f5455627d45
   SHA1: dcfeca5e883a084e89ecd734c4528b922a1099b9
   SHA256: 2afdb3278a7b57466a103024aef9ff7f41c73a19bab843a8ebf3d3c4d4e82b30
@@ -3138,7 +3049,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 85e606523ce390f7fcd8370d5f4b812a
   SHA1: 55c64235d223baeb8577a2445fdaa6bedcde23db
   SHA256: 385485e643aa611e97ceae6590c6a8c47155886123dbb9de1e704d0d1624d039
@@ -3906,7 +3817,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 6e25148bb384469f3d5386dc5217548a
   SHA1: dbf6e72c08824fe49c29b7660c9965c37d983e93
   SHA256: 3c4207c90c97733fae2a08679d63fbbe94dfcf96fdfdf88406aa7ab3f80ea78f
@@ -4680,7 +4591,7 @@ KnownVulnerableSamples:
     - SerialNumber: 0ea0fe4dfb74cc64bc32143103c27c8b
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: ad866d83b4f0391aecceb4e507011831
   SHA1: 2cc70b772b42e0208f345c7c70d78f7536812f99
   SHA256: 3e1d47a497babbfd1c83905777b517ec87c65742bee7eb57a2273eca825d2272
@@ -5356,7 +5267,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: dd9596c18818288845423c68f3f39800
   SHA1: fb1570b4865083dfce1fcff2bd72e9e1b03cead5
   SHA256: 3fa6379951f08ed3cb87eeba9cf0c5f5e1d0317dcfcf003b810df9d795eeb73e
@@ -5974,7 +5885,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 3e796eb95aca7e620d6a0c2118d6871b
   SHA1: dc6e62dbde5869a6adc92253fff6326b6af5c8d4
   SHA256: 478d855b648ef4501d3b08b3b10e94076ac67546b0ce86b454324f1bf9a78aa0
@@ -6755,7 +6666,7 @@ KnownVulnerableSamples:
     - SerialNumber: 0ea0fe4dfb74cc64bc32143103c27c8b
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: f4b7b84a6828d2f9205b55cf8cfc7742
   SHA1: e835776e0dc68c994dd18e8628454520156c93e3
   SHA256: 4bc0921ffd4acc865525d3faf98961e8decc5aec4974552cbbf2ae8d5a569de4
@@ -7377,7 +7288,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 29122f970a9e766ef01a73e0616d68b3
   SHA1: 432fa24e0ce4b3673113c90b34d6e52dc7bac471
   SHA256: 4e37592a2a415f520438330c32cfbdbd6af594deef5290b2fa4b9722b898ff69
@@ -8115,7 +8026,7 @@ KnownVulnerableSamples:
     - SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 8580165a2803591e007380db9097bbcc
   SHA1: 5a55c227ca13e9373b87f1ef6534533c7ce1f4fb
   SHA256: 5027fce41ed60906a0e76b97c95c2a5a83d57a2d1cd42de232a21f26c0d58e48
@@ -8830,7 +8741,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 085d3423f3c12a17119920f1a293ab4d
   SHA1: d3daa971580b9f94002f7257de44fcef13bb1673
   SHA256: 5192ec4501d0fe0b1c8f7bf9b778f7524a7a70a26bbbb66e5dab8480f6fdbb8b
@@ -9609,7 +9520,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 08bac71557df8a9b1381c8c165f64520
   SHA1: 891c8d482e23222498022845a6b349fe1a186bcc
   SHA256: 61befeef14783eb0fed679fca179d2f5c33eb2dcbd40980669ca2ebeb3bf11cf
@@ -10208,7 +10119,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 42132c7a755064f94314b01afb80e73c
   SHA1: 3e790c4e893513566916c76a677b0f98bd7334dd
   SHA256: 62f5e13b2edc00128716cb93e6a9eddffea67ce83d2bb426f18f5be08ead89e0
@@ -10984,7 +10895,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: f51065667fb127cf6de984daea2f6b24
   SHA1: 1768fb2b4796f624fa52b95dfdfbfb922ac21019
   SHA256: 654c5ba47f74008c8f49cbb97988017eec8c898adc3bb851bc6e1fdf9dcf54ad
@@ -11726,7 +11637,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: a31246180e61140ad7ff9dd7edf1f6a1
   SHA1: fe0afc6dd03a9bd7f6e673cc6b4af2266737e3d1
   SHA256: 6ffdde6bc6784c13c601442e47157062941c47015891e7139c2aaba676ab59cc
@@ -12401,7 +12312,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 569676d3d45b0964ac6dd0815be8ff8c
   SHA1: 58b31fb2b623bd2c5d5c8c49b657a14a674664a4
   SHA256: 76e807b6c0214e66455f09a8de8faad40b738982ca84470f0043de0290449524
@@ -13170,7 +13081,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: df9953fa93e1793456a8d428ba7e5700
   SHA1: 8db4376a86bd2164513c178a578a0bf8d90e7292
   SHA256: 7837cb350338c4958968d06b105466da6518f5bb522a6e70e87c0cad85128408
@@ -13946,7 +13857,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 58a92520dda53166e322118ee0503364
   SHA1: d2be76e79741454b4611675b58446e10fc3d0c6c
   SHA256: 7c731c0ea7f28671ab7787800db69739ea5cd6be16ea21045b4580cf95cbf73b
@@ -14722,7 +14633,7 @@ KnownVulnerableSamples:
     - SerialNumber: 0f6146af9397c7fa04b13c2d0279a1ba
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 4c6d311e0b13c4f469f717db4ab4d0e7
   SHA1: 6da2dd8a0b4c0e09a04613bbabfc07c0b848ec77
   SHA256: 80a59ca71fc20961ccafc0686051e86ae4afbbd4578cb26ad4570b9207651085
@@ -15433,7 +15344,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 1db988eb9ac5f99756c33b91830a9cf6
   SHA1: 4471935df0e68fe149425703b66f1efca3d82168
   SHA256: 818e396595d08d724666803cd29dac566dc7db23bf50e9919d04b33afa988c01
@@ -16201,7 +16112,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: f33c3f08536f988aac84d72d83b139a6
   SHA1: 07f60b2b0e56cb15aad3ca8a96d9fe3a91491329
   SHA256: 89108a15f009b285db4ef94250b889d5b11b96b4aa7b190784a6d1396e893e10
@@ -16916,7 +16827,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 46edb648c1b5c3abd76bd5e912dac026
   SHA1: 3f43412c563889a5f5350f415f7040a71cc25221
   SHA256: 97b32ddf83f75637e3ba934df117081dd6a1c57d47a4c9700d35e736da11d5bd
@@ -17561,7 +17472,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 2ddd3c0e23bc0fd63702910c597298b4
   SHA1: 3fd7fda9c7dfdb2a845c39971572bd090bee3b1d
   SHA256: a8027daa6facf1ff81405daf6763249e9acf232a1a191b6bf106711630e6188e
@@ -18161,7 +18072,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 3e4a1384a27013ab7b767a88b8a1bd34
   SHA1: ae344c123ef6d206235f2a8448d07f86433db5a6
   SHA256: a903f329b70f0078197cb7683aae1bb432eaf58572fe572f7cb4bc2080042d7e
@@ -18675,7 +18586,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: f65e545771fd922693f0ec68b2141012
   SHA1: 850f15fd67d9177a50f3efef07a805b9613f50d6
   SHA256: adc10de960f40fa9f6e28449748250fa9ddfd331115b77a79809a50c606753ee
@@ -19268,7 +19179,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 9af5ae780b6a9ea485fa15f28ddb20a7
   SHA1: 6a60c5dc7d881ddb5d6fe954f10b8aa10d214e72
   SHA256: b773511fdb2e370dec042530910a905472fcc2558eb108b246fd3200171b04d3
@@ -20050,7 +19961,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 09927915aba84c8acd91efdaac674b86
   SHA1: b304cb10c88ddd8461bad429ebfd2fd1b809ac2b
   SHA256: bcfc2c9883e6c1b8429be44cc4db988a9eecb544988fbd756d18cfca6201876f
@@ -20818,7 +20729,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 113056ec5c679b6f74c9556339ebf962
   SHA1: e7d8fc86b90f75864b7e2415235e17df4d85ee31
   SHA256: c082514317bf80a2f5129d84a5a55e411a95e32d03a4df1274537704c80e41dd
@@ -21593,7 +21504,7 @@ KnownVulnerableSamples:
     - SerialNumber: 0ea0fe4dfb74cc64bc32143103c27c8b
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: c42caa9cdcc50c01cb2fed985a03fe23
   SHA1: b3c111d7192cfa8824e5c9b7c0660c37978025d6
   SHA256: c9014b03866bf37faa8fdb16b6af7cfec976aaef179fd5797d0c0bf8079d3a8c
@@ -22182,7 +22093,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: d79b8b7bed8d30387c22663b24e8c191
   SHA1: af5b7556706e09ee9e74ee2e87eab5c0a49d2d35
   SHA256: d783ace822f8fe4e25d5387e5dd249cb72e62f62079023216dc436f1853a150f
@@ -22900,7 +22811,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: e28ce623e3e5fa1d2fe16c721efad4c2
   SHA1: 4cd5bf02edf6883a08dfed7702267612e21ed56e
   SHA256: dbc604b4e01362a3e51357af4a87686834fe913852a4e0a8c0d4c1a0f7d076ed
@@ -23678,7 +23589,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 62eed4173c566a248531fb6f20a5900d
   SHA1: 0e60414750c48676d7aa9c9ec81c0a3b3a4d53d0
   SHA256: e3eff841ea0f2786e5e0fed2744c0829719ad711fc9258eeaf81ed65a52a8918
@@ -24440,7 +24351,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 8cb2ffb8bb0bbf8cd0dd685611854637
   SHA1: 3ca51b23f8562485820883e894b448413891183a
   SHA256: e4d9f037411284e996a002b15b49bc227d085ee869ae1cd91ba54ff7c244f036
@@ -25217,7 +25128,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 59f6320772a2e6b0b3587536be4cc022
   SHA1: fc8fbd92f6e64682360885c188d1bdfbc14ca579
   SHA256: ec5fac0b6bb267a2bd10fc80c8cca6718439d56e82e053d3ff799ce5f3475db5
@@ -25975,7 +25886,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: c006d1844f20b91d0ea52bf32d611f30
   SHA1: 70258117b5efe65476f85143fd14fa0b7f148adb
   SHA256: ecd07df7ad6fee9269a9e9429eb199bf3e24cf672aa1d013b7e8d90d75324566
@@ -26758,7 +26669,7 @@ KnownVulnerableSamples:
     - SerialNumber: 0ea0fe4dfb74cc64bc32143103c27c8b
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 949ef0df929a71d6cc77494dfcb1ddeb
   SHA1: a34adabde63514e1916713a588905c4019f83efb
   SHA256: ed2f33452ec32830ffef2d5dc832985db9600c306ed890c47f3f33ccbb335c39
@@ -27370,7 +27281,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: d6b259b2dfe80bdf4d026063accd752c
   SHA1: 0adc1320421f02f2324e764aa344018758514436
   SHA256: ee3ff12943ced401e2b6df9e66e8a0be8e449fa9326cab241f471b2d8ffefdd7
@@ -28132,7 +28043,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 996ded363410dfd38af50c76bd5b4fbc
   SHA1: d7597d27eeb2658a7c7362193f4e5c813c5013e5
   SHA256: fca10cde7d331b7f614118682d834d46125a65888e97bd9fda2df3f15797166c
@@ -28886,7 +28797,7 @@ KnownVulnerableSamples:
     - SerialNumber: 0f6146af9397c7fa04b13c2d0279a1ba
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
-- FileName: TmComm.sys
+- Filename: TmComm.sys
   MD5: 148bd10da8c8d64928a213c7bf1f2fca
   SHA1: dfd801b6c2715f5525f8ffb38e3396a5ad9b831d
   SHA256: fda93c6e41212e86af07f57ca95db841161f00b08dae6304a51b467056e56280

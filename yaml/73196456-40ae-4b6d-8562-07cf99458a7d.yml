@@ -4,32 +4,21 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: sc.exe create kEvP64.sys binPath=C:\windows\temp\kEvP64.sys type=kernel
-  && sc.exe start kEvP64.sys
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create kEvP64.sys binPath=C:\windows\temp\kEvP64.sys type=kernel
+    && sc.exe start kEvP64.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
   Person: []
   Handle: ''
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/09b0e07af8b17db1d896b78da4dd3f55db76738ee1f4ced083a97d737334a184.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/8e6363a6393eb4234667c6f614b2072e33512866b3204f8395bbe01530d63f2f.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Detection: []
 KnownVulnerableSamples:
-- FileName: kEvP64.sys
+- Filename: kEvP64.sys
   MD5: 4ff880566f22919ed94ffae215d39da5
   SHA1: 755349d56cdd668ca22eebc4fc89f0cccef47327
   SHA256: 09b0e07af8b17db1d896b78da4dd3f55db76738ee1f4ced083a97d737334a184
@@ -196,7 +185,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: kEvP64.sys
+- Filename: kEvP64.sys
   MD5: 7e7e3f5532b6af24dcc252ac4b240311
   SHA1: 3ccf1f3ac636a5e21b39ede48ff49fa23e05413f
   SHA256: 8e6363a6393eb4234667c6f614b2072e33512866b3204f8395bbe01530d63f2f

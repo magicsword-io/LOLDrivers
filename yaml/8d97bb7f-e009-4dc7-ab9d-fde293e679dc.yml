@@ -4,12 +4,13 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create AsUpIO.sys binPath=C:\windows\temp\AsUpIO.sys type=kernel
-  && sc.exe start AsUpIO.sys'
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create AsUpIO.sys binPath=C:\windows\temp\AsUpIO.sys type=kernel
+    && sc.exe start AsUpIO.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
@@ -17,7 +18,7 @@ Acknowledgement:
   Handle: ''
 Detection: []
 KnownVulnerableSamples:
-- FileName: AsUpIO.sys
+- Filename: AsUpIO.sys
   MD5: 9ba7c30177d2897bb3f7b3dc2f95ae0a
   SHA1: 7115929de6fc6b9f09142a878d1a1bf358af5f24
   SHA256: 8f23313adb35782adb0ba97fefbfbb8bbc5fc40ae272e07f6d4629a5305a3fa2
@@ -101,7 +102,7 @@ KnownVulnerableSamples:
     - SerialNumber: 0c64962e4467edcc1579646b7337ec8c
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
-- FileName: AsUpIO.sys
+- Filename: AsUpIO.sys
   MD5: f8dce1eb0f9fcaf07f68fe290aa629e4
   SHA1: d697a3f4993e7cb15efdeda3b1a798ae25a2d0e9
   SHA256: bdcacee3695583a0ca38b9a786b9f7334bf2a9a3387e4069c8e6ca378b2791d0

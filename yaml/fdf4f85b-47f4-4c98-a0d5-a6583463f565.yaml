@@ -106,15 +106,61 @@ KnownVulnerableSamples:
       ValidTo: '2036-04-28 23:59:59'
       Signature: 3065023078bd4995657101d0465768650e68a9dc3608c1eefdd48edb40653f0dff93afc2ae6386a37ecbb4915a78ec070367077c023100e79f1ff1075bac34c638bcb5a550cee6ea387e3e7990e4a45bab020de807fc56a65a8addb350b2ddf2fa66749ed01663
       SignatureAlgorithmOID: 1.2.840.10045.4.3.3
+      IsCertificateAuthority: true
+      SerialNumber: 0fb8a740b9158d035143bc59d9f04029
+      Version: 3
+      TBS:
+        MD5: b4a3c39dbd2935ac070032406fa082e4
+        SHA1: 891bf1b0a017f5aadbc0d997fe63eb0ec25a1655
+        SHA256: 81d8278fe4857a2dfa510a0af74deeb0623ef79e25fcf171644808a3ec652305
     - Subject: ??=Private Organization, ??=ES, ??=Valencia, serialNumber=B98657844,
         C=ES, L=Valencia, O=Voicemod Sociedad Limitada, CN=Voicemod Sociedad Limitada
       ValidFrom: '2021-10-21 00:00:00'
       ValidTo: '2023-01-19 23:59:59'
       Signature: 3066023100fd8a9d376bf4399c7cb947c5fbb2e90bb3fdbcb37cab257ef47db016f1898e2d129241a757f039f8e7112b05a48632a60231009b75d4e2623fb9f54ce9ffc6ba7a661a5d2d54b096ddf6c510b2f6063981c15846e282779e9febffa39e5c9fad429646
       SignatureAlgorithmOID: 1.2.840.10045.4.3.3
+      IsCertificateAuthority: false
+      SerialNumber: 014d8930c6a3fceb0f4021734d5ed508
+      Version: 3
+      TBS:
+        MD5: 59e2799dd07c9a450f06c376eb220a48
+        SHA1: 8588e052171ee54d148087ef5e2b8cf81017d199
+        SHA256: 3a0fbfc101d7832c403769e3f28cdfcea533abdd1461c09b134594a1d21aabe8
     Signer:
     - SerialNumber: 014d8930c6a3fceb0f4021734d5ed508
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Global G3 Code Signing ECC SHA384
         2021 CA1
+      Version: 1
+  RichPEHeaderHash:
+    MD5: f6ca8831520c235d28dbfa26ad735d55
+    SHA1: e8d1bb5697814956222cfbf5d0275766135f9ba0
+    SHA256: 709e3c46eff74215c009624ce48e3d6d65a6e5237d38781232e9cb1844748fcf
+  Sections:
+    .text:
+      Entropy: 5.72820930665092
+      Virtual Size: '0x1466'
+    .rdata:
+      Entropy: 4.71043452997573
+      Virtual Size: '0x1440'
+    .data:
+      Entropy: 1.9612699371321567
+      Virtual Size: '0x72c'
+    .pdata:
+      Entropy: 4.38228852061058
+      Virtual Size: '0x570'
+    PAGE:
+      Entropy: 6.039766687351532
+      Virtual Size: '0x2e8a'
+    INIT:
+      Entropy: 5.4515972556240095
+      Virtual Size: '0x6da'
+    .rsrc:
+      Entropy: 3.595344946345435
+      Virtual Size: '0x460'
+    .reloc:
+      Entropy: 5.058075646330186
+      Virtual Size: '0x188'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2022-02-22 13:12:24'
 Tags:
 - vmdrv.sys

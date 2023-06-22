@@ -4,32 +4,21 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &&
-  sc.exe start vmdrv.sys
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel
+    && sc.exe start vmdrv.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
   Person: []
   Handle: ''
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/5c0b429e5935814457934fa9c10ac7a88e19068fa1bd152879e4e9b89c103921.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/d884ca8cc4ef1826ca3ab03eb3c2d8f356ba25f2d20db0a7d9fc251c565be7f3.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Detection: []
 KnownVulnerableSamples:
-- FileName: vmdrv.sys
+- Filename: vmdrv.sys
   MD5: 6d67da13cf84f15f6797ed929dd8cf5d
   SHA1: 1a17cc64e47d3db7085a4dc365049a2d4552dc8a
   SHA256: 5c0b429e5935814457934fa9c10ac7a88e19068fa1bd152879e4e9b89c103921
@@ -116,7 +105,7 @@ KnownVulnerableSamples:
     - SerialNumber: 02c5372170daa825b5e24b614268c5b5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
-- FileName: vmdrv.sys
+- Filename: vmdrv.sys
   MD5: 0e625b7a7c3f75524e307b160f8db337
   SHA1: 5088c71a740ef7c4156dcaa31e543052fe226e1c
   SHA256: d884ca8cc4ef1826ca3ab03eb3c2d8f356ba25f2d20db0a7d9fc251c565be7f3

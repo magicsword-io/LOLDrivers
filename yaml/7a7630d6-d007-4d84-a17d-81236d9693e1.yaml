@@ -107,5 +107,27 @@ KnownVulnerableSamples:
   - KfAcquireSpinLock
   - KfReleaseSpinLock
   Signatures: {}
+  RichPEHeaderHash:
+    MD5: f3e1fc89f2b01c40ea38fc9510166f54
+    SHA1: e532da616b3b77c80bdcb3512ea2ed13872d5c52
+    SHA256: 7e846d33fc8dd8d0efe1e5aab73002ad4d85b7d714cf1740430761c502b839b3
+  Sections:
+    .text:
+      Entropy: 6.494811181987745
+      Virtual Size: '0x29ea'
+    .rdata:
+      Entropy: 4.39758457014392
+      Virtual Size: '0x1a8'
+    .data:
+      Entropy: 1.8565370577491536
+      Virtual Size: '0x4c8'
+    INIT:
+      Entropy: 5.340341272296366
+      Virtual Size: '0x640'
+    .reloc:
+      Entropy: 5.3775866734053865
+      Virtual Size: '0x4aa'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2007-06-19 23:46:07'
 Tags:
 - d.sys

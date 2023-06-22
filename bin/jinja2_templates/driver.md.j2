@@ -69,11 +69,83 @@ This download link contains the malicious driver!
 {% endif %}
 
 
-{% if driver.yara %}
+
 ### Detections
 
-{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/{% endraw %}{{ driver.KnownVulnerableSamples[0].SHA256 }}{% raw %}.yara" "YARA" >}}{% endraw %}
+{% raw %}
+{{< block "grid-3" >}}
+{{< column >}}
+{% endraw %}
+#### YARA 🏹
+{% raw %}{{< details "Expand" >}}{% endraw %}
+
+{% if driver.Category == 'malicious' %}
+
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_mal_drivers_strict.yar" "Exact Match" >}}{% endraw %}
+{% raw %}{{< tip >}}with header and size limitation{{< /tip >}}{% endraw %} 
+
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_mal_drivers.yar" "Threat Hunting" >}}{% endraw %}
+{% raw %}{{< tip >}}without header and size limitation{{< /tip >}}{% endraw %} 
+
+
+{% elif driver.Category == 'vulnerable driver' %}
+
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict.yar" "Exact Match" >}}{% endraw %}
+{% raw %}{{< tip >}}with header and size limitation{{< /tip >}}{% endraw %} 
+
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{% endraw %}
+{% raw %}{{< tip >}}without header and size limitation{{< /tip >}}{% endraw %} 
+
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_strict_renamed.yar" "Renamed" >}}{% endraw %}
+{% raw %}{{< tip >}}for renamed driver files{{< /tip >}}{% endraw %} 
+
 {% endif %}
+
+{% raw %}{{< /details >}}{% endraw %}
+{% raw %}
+{{< /column >}}
+{% endraw %}
+
+
+{% raw %}
+{{< column >}}
+{% endraw %}
+
+#### Sigma 🛡️
+{% raw %}{{< details "Expand" >}}{% endraw %}
+
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{% endraw %}
+{% raw %}{{< tip >}}detects loading using name only{{< /tip >}}{% endraw %} 
+
+
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{% endraw %}
+{% raw %}{{< tip >}}detects loading using hashes only{{< /tip >}}{% endraw %} 
+
+{% raw %}{{< /details >}}{% endraw %}
+{% raw %}
+
+{{< /column >}}
+{% endraw %}
+
+{% raw %}
+{{< column "mb-2" >}}
+{% endraw %}
+
+#### Sysmon 🔎
+{% raw %}{{< details "Expand" >}}{% endraw %}
+
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{% endraw %}
+{% raw %}{{< tip >}}on hashes{{< /tip >}}{% endraw %} 
+
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{% endraw %}
+{% raw %}{{< tip >}}on hashes{{< /tip >}}{% endraw %} 
+
+{% raw %}{{< /details >}}{% endraw %}
+
+{% raw %}
+{{< /column >}}
+{{< /block >}}
+{% endraw %}
 
 
 ### Resources
@@ -84,6 +156,14 @@ This download link contains the malicious driver!
 {% endfor %}
 {% endif %}
 <br>
+
+{% if driver.CVE %}
+### CVE
+
+{% for cve in driver.CVE %}
+<li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name={{cve}}">{{cve}}</a></li>
+{% endfor %}
+{% endif %}
 
 {% if driver.KnownVulnerableSamples %}
 ### Known Vulnerable Samples
@@ -99,6 +179,11 @@ This download link contains the malicious driver!
 | Authentihash MD5   | [{{ hash.Authentihash.MD5 }}](https://www.virustotal.com/gui/search/authentihash%253A{{ hash.Authentihash.MD5 }}) |
 | Authentihash SHA1  | [{{ hash.Authentihash.SHA1 }}](https://www.virustotal.com/gui/search/authentihash%253A{{ hash.Authentihash.SHA1 }}) |
 | Authentihash SHA256| [{{ hash.Authentihash.SHA256 }}](https://www.virustotal.com/gui/search/authentihash%253A{{ hash.Authentihash.SHA256 }}) |
+{% endif %}
+{% if hash.RichPEHeaderHash %}
+| RichPEHeaderHash MD5   | [{{ hash.RichPEHeaderHash.MD5 }}](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A{{ hash.RichPEHeaderHash.MD5 }}) |
+| RichPEHeaderHash SHA1  | [{{ hash.RichPEHeaderHash.SHA1 }}](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A{{ hash.RichPEHeaderHash.SHA1 }}) |
+| RichPEHeaderHash SHA256| [{{ hash.RichPEHeaderHash.SHA256 }}](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A{{ hash.RichPEHeaderHash.SHA256 }}) |
 {% endif %}
 {% if hash.Publisher %}| Publisher         | {{ hash.Publisher }} |
 {% endif %}
@@ -119,6 +204,45 @@ This download link contains the malicious driver!
 {% if hash.OriginalFilename %}| OriginalFilename  | {{ hash.OriginalFilename }} |
 {% endif %}
 
+{% if hash.Signatures %}
+{% for signature in hash.Signatures %}
+{% if signature.Certificates %}
+#### Certificates
+
+{% raw %}{{< details "Expand" >}}{% endraw %}
+
+{% for certificate in signature.Certificates %}
+{% if certificate.TBS %}
+###### Certificate {{ certificate.SerialNumber }}
+| Field                             | Value                      |
+|-----------------------------------|----------------------------|
+| ToBeSigned (TBS) MD5              | {{ certificate.TBS.MD5 }}  |
+| ToBeSigned (TBS) SHA1             | {{ certificate.TBS.SHA1 }} |
+| ToBeSigned (TBS) SHA256           | {{ certificate.TBS.SHA256 }} |
+| Subject                           | {{ certificate.Subject }} |
+| ValidFrom                         | {{ certificate.ValidFrom }} |
+| ValidTo                           | {{ certificate.ValidTo }} |
+| Signature                         | {{ certificate.Signature }} |
+| SignatureAlgorithmOID             | {{ certificate.SignatureAlgorithmOID }} |
+| IsCertificateAuthority            | {{ certificate.IsCertificateAuthority }} |
+| SerialNumber                      | {{ certificate.SerialNumber }} |
+| Version                           | {{ certificate.Version }} |
+{% endif %}
+{% endfor %}
+
+{% raw %}{{< /details >}}{% endraw %}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+#### Imports
+{% raw %}{{< details "Expand" >}}{% endraw %}
+
+{% for import in hash.Imports %}
+* {{ import }}
+{% endfor %}
+
+{% raw %}{{< /details >}}{% endraw %}
 
 #### Imports
 {% raw %}{{< details "Expand" >}}{% endraw %}

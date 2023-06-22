@@ -1,0 +1,37 @@
+Id: c734bcff-aaaa-4450-a9a9-25ee52aa7ff1
+Author: Guus Verbeek
+Created: '2023-06-05'
+MitreID: T1068
+Category: malicious
+Verified: 'FALSE'
+Commands:
+  Command: sc.exe create ktes.sys binPath=C:\windows\temp\ktes.sys type=kernel &&
+    sc.exe start ktes.sys
+  Description: BlackCat Ransomware Deploys New Signed Kernel Driver. BlackCat ransomware
+    incident that occurred in February 2023.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: ktes.sys
+  MD5: ''
+  SHA1: 5ed22c0033aed380aa154e672e8db3a2d4c195c4
+  SHA256: ''
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+Tags: 
+- ktes.sys

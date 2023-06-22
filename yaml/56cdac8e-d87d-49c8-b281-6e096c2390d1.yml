@@ -4,12 +4,13 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create gvcidrv64.sys binPath=C:\windows\temp\gvcidrv64.sys type=kernel
-  && sc.exe start gvcidrv64.sys'
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create gvcidrv64.sys binPath=C:\windows\temp\gvcidrv64.sys type=kernel
+    && sc.exe start gvcidrv64.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
@@ -17,7 +18,7 @@ Acknowledgement:
   Handle: ''
 Detection: []
 KnownVulnerableSamples:
-- FileName: gvcidrv64.sys
+- Filename: gvcidrv64.sys
   MD5: 1a22a85489a94db6ff68cd624ef43bad
   SHA1: d302ae7f016299af323a3542d840004888ab91ff
   SHA256: a2353030d4ea3ad9e874a0f7ff35bbfa10562c98c949d88cabab27102bbb8e48
@@ -78,7 +79,7 @@ KnownVulnerableSamples:
     - SerialNumber: 33000000319479a318f5522d06000000000031
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
-- FileName: GVCIDrv64.sys
+- Filename: GVCIDrv64.sys
   MD5: acd221ff7cf10b6117fd609929cde395
   SHA1: 1586f121d38cc42e5d04fe2f56091e91c6cdd8fa
   SHA256: f85784fa8e7a7ec86cb3fe76435802f6bb82256e1824ed7b5d61bf075f054573

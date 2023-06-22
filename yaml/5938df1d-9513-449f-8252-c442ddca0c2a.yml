@@ -4,12 +4,13 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: 'sc.exe create VBoxUSB.sys binPath=C:\windows\temp\VBoxUSB.Sys type=kernel
-  && sc.exe start VBoxUSB.Sys'
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create VBoxUSB.sys binPath=C:\windows\temp\VBoxUSB.Sys type=kernel
+    && sc.exe start VBoxUSB.Sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
@@ -17,7 +18,7 @@ Acknowledgement:
   Handle: ''
 Detection: []
 KnownVulnerableSamples:
-- FileName: VBoxUSB.Sys
+- Filename: VBoxUSB.Sys
   MD5: 65b979bcab915c3922578fe77953d789
   SHA1: 6a2912c8e2aa4373852585bc1134b83c637bc9fd
   SHA256: 6071db01b50c658cf78665c24f1d21f21b4a12d16bfcfaa6813bf6bbc4d0a1e8

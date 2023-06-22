@@ -4,66 +4,21 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: sc.exe create iQVW64.sys binPath=C:\windows\temp\iQVW64.SYS type=kernel
-  && sc.exe start iQVW64.SYS
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create iQVW64.sys binPath=C:\windows\temp\iQVW64.SYS type=kernel
+    && sc.exe start iQVW64.SYS
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
   Person: []
   Handle: ''
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/19bf0d0f55d2ad33ef2d105520bde8fb4286f00e9d7a721e3c9587b9408a0775.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/1f8168036d636aad1680dd0f577ef9532dbb2dad3591d63e752b0ba3ee6fd501.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/2d2c7ee9547738a8a676ab785c151e8b48ed40fe7cf6174650814c7f5f58513b.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/37c637a74bf20d7630281581a8fae124200920df11ad7cd68c14c26cc12c5ec9.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4d0580c20c1ba74cf90d44c82d040f0039542eea96e4bbff3996e6760f457cee.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/57a389da784269bb2cc0a258500f6dfbf4f6269276e1192619ce439ec77f4572.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/5f6547e9823f94c5b94af1fb69a967c4902f72b6e0c783804835e6ce27f887b0.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/5f69d6b167a1eeca3f6ac64785c3c01976ee7303171faf998d65852056988683.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/77c5e95b872b1d815d6d3ed28b399ca39f3427eeb0143f49982120ff732285a9.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/7cb497abc44aad09a38160d6a071db499e05ff5871802ccc45d565d242026ee7.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/a566af57d88f37fa033e64b1d8abbd3ffdacaba260475fbbc8dab846a824eff5.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/a59c40e7470b7003e8adfee37c77606663e78d7e3f2ebb8d60910af19924d8df.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/b51ddcf8309c80384986dda9b11bf7856b030e3e885b0856efdb9e84064917e5.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/cff9aa9046bdfd781d34f607d901a431a51bb7e5f48f4f681cc743b2cdedc98c.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/d1f4949f76d8ac9f2fa844d16b1b45fb1375d149d46e414e4a4c9424dc66c91f.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/d74755311d127d0eb7454e56babc2db8dbaa814bc4ba8e2a7754d3e0224778e1.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/de3597ae7196ca8c0750dce296a8a4f58893774f764455a125464766fcc9b3b5.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/f877296e8506e6a1acbdacdc5085b18c6842320a2775a329d286bac796f08d54.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ff115cefe624b6ca0b3878a86f6f8b352d1915b65fbbdc33ae15530a96ebdaa7.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Detection: []
 KnownVulnerableSamples:
-- FileName: iQVW64.SYS
+- Filename: iQVW64.SYS
   MD5: c796a92a66ec725b7b7febbdc13dc69b
   SHA1: 0ed0c4d6c3b6b478cbfd7fb0bd1e1b5457a757cc
   SHA256: 19bf0d0f55d2ad33ef2d105520bde8fb4286f00e9d7a721e3c9587b9408a0775
@@ -170,7 +125,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
-- FileName: iQVW64.SYS
+- Filename: iQVW64.SYS
   MD5: f7d963c14a691a022301afa31de9ecef
   SHA1: 2e546d86d3b1e4eaa92b6ec4768de79f70eb922f
   SHA256: 1f8168036d636aad1680dd0f577ef9532dbb2dad3591d63e752b0ba3ee6fd501
@@ -289,7 +244,7 @@ KnownVulnerableSamples:
     - SerialNumber: 560000013927007472d9b99b9b000000000139
       Issuer: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Issuing
         CA 7B
-- FileName: iQVW64.SYS
+- Filename: iQVW64.SYS
   MD5: 73a40e29f61e5d142c8f42b28a351190
   SHA1: bdfb25cc4ed569dc0d5849545eb4abe08539029f
   SHA256: 2d2c7ee9547738a8a676ab785c151e8b48ed40fe7cf6174650814c7f5f58513b
@@ -390,7 +345,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: iQVW64.SYS
+- Filename: iQVW64.SYS
   MD5: 69ba501a268f09f694ff0e8e208aa20e
   SHA1: 3d6d53b0f1cc908b898610227b9f1b9352137aba
   SHA256: 37c637a74bf20d7630281581a8fae124200920df11ad7cd68c14c26cc12c5ec9
@@ -510,7 +465,7 @@ KnownVulnerableSamples:
     - SerialNumber: 560000077b478c76c9afcafcaf00000000077b
       Issuer: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Issuing
         CA 7B
-- FileName: iQVW64.SYS
+- Filename: iQVW64.SYS
   MD5: de4001f89ed139d1ed6ae5586d48997a
   SHA1: cb212a826324909fdedd2b572a59a5be877f1d7d
   SHA256: 4d0580c20c1ba74cf90d44c82d040f0039542eea96e4bbff3996e6760f457cee
@@ -616,7 +571,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: iQVW64.SYS
+- Filename: iQVW64.SYS
   MD5: 5adebdb94abb4c76dad2b7ecb1384a9d
   SHA1: 1e8bccbd74f194db6411011017716c8c6b730d03
   SHA256: 57a389da784269bb2cc0a258500f6dfbf4f6269276e1192619ce439ec77f4572
@@ -722,7 +677,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: iQVW64.SYS
+- Filename: iQVW64.SYS
   MD5: b32497762d916dba6c827e31205b67dd
   SHA1: 9310239b75394b75a963336fbd154038fc13c4e3
   SHA256: 5f6547e9823f94c5b94af1fb69a967c4902f72b6e0c783804835e6ce27f887b0
@@ -851,7 +806,7 @@ KnownVulnerableSamples:
     - SerialNumber: 330000ba45a7f4234edca115e400020000ba45
       Issuer: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Basic
         Issuing CA 3B
-- FileName: iQVW64.SYS
+- Filename: iQVW64.SYS
   MD5: ca6931fcbc1492d7283aa9dc0149032e
   SHA1: 45a9f95a7a018925148152b888d09d478d56bbf5
   SHA256: 5f69d6b167a1eeca3f6ac64785c3c01976ee7303171faf998d65852056988683
@@ -980,7 +935,7 @@ KnownVulnerableSamples:
     - SerialNumber: 330000b7c6cfa9df260db5243500020000b7c6
       Issuer: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Basic
         Issuing CA 3B
-- FileName: iQVW64.SYS
+- Filename: iQVW64.SYS
   MD5: 349fa788a4a7b57e37e426aca9b736d5
   SHA1: 687b8962febbbea4cf6b3c11181fd76acb7dfd5a
   SHA256: 77c5e95b872b1d815d6d3ed28b399ca39f3427eeb0143f49982120ff732285a9
@@ -1079,7 +1034,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: iQVW64.SYS
+- Filename: iQVW64.SYS
   MD5: 1c61eb82f1269d8d6be8de2411133811
   SHA1: 0d6fb0cb9566b4e4ca4586f26fe0631ffa847f2c
   SHA256: 7cb497abc44aad09a38160d6a071db499e05ff5871802ccc45d565d242026ee7
@@ -1198,7 +1153,7 @@ KnownVulnerableSamples:
     - SerialNumber: 5600000a6c1826788c3ae621c1000000000a6c
       Issuer: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Issuing
         CA 7B
-- FileName: iQVW64.SYS
+- Filename: iQVW64.SYS
   MD5: 31a4631d77b2357ac9618e2a60021f11
   SHA1: 637d0de7fa2a06e462dad40a575cb0fa4a38d377
   SHA256: a566af57d88f37fa033e64b1d8abbd3ffdacaba260475fbbc8dab846a824eff5
@@ -1297,7 +1252,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
-- FileName: iQVW64.SYS
+- Filename: iQVW64.SYS
   MD5: 7c22b7686c75a2bb7409b3c392cc791a
   SHA1: bed5bad7f405aa828a146c7f71d09c31d0c32051
   SHA256: a59c40e7470b7003e8adfee37c77606663e78d7e3f2ebb8d60910af19924d8df
@@ -1399,7 +1354,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
-- FileName: iQVW64.SYS
+- Filename: iQVW64.SYS
   MD5: 477e02a8e31cde2e76a8fb020df095c2
   SHA1: 9449f211c3c47821b638513d239e5f2c778dc523
   SHA256: b51ddcf8309c80384986dda9b11bf7856b030e3e885b0856efdb9e84064917e5
@@ -1498,7 +1453,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
-- FileName: iQVW64.SYS
+- Filename: iQVW64.SYS
   MD5: ce67e51b8c0370d1bfe421b79fa8b656
   SHA1: 4885cd221fa1ea330b9e4c1702be955d68bd3f6a
   SHA256: cff9aa9046bdfd781d34f607d901a431a51bb7e5f48f4f681cc743b2cdedc98c
@@ -1597,7 +1552,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
-- FileName: iQVW64.SYS
+- Filename: iQVW64.SYS
   MD5: 2cc65e805757cfc4f87889cdceb546cd
   SHA1: 7c625de858710d3673f6cb0cd8d0643d5422c688
   SHA256: d1f4949f76d8ac9f2fa844d16b1b45fb1375d149d46e414e4a4c9424dc66c91f
@@ -1700,7 +1655,7 @@ KnownVulnerableSamples:
     - SerialNumber: 330000b7c6cfa9df260db5243500020000b7c6
       Issuer: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Basic
         Issuing CA 3B
-- FileName: iQVW64.SYS
+- Filename: iQVW64.SYS
   MD5: e1ebc6c5257a277115a7e61ee3e5e42f
   SHA1: b67945815e40b1cd90708c57c57dab12ed29da83
   SHA256: d74755311d127d0eb7454e56babc2db8dbaa814bc4ba8e2a7754d3e0224778e1
@@ -1806,7 +1761,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: iQVW64.SYS
+- Filename: iQVW64.SYS
   MD5: edbf206c27c3aa7d1890899dffcc03ec
   SHA1: 3bb1dddb4157b6b8175fc6e1e7c33bef7870c500
   SHA256: de3597ae7196ca8c0750dce296a8a4f58893774f764455a125464766fcc9b3b5
@@ -1909,7 +1864,7 @@ KnownVulnerableSamples:
     - SerialNumber: 330000b7c6cfa9df260db5243500020000b7c6
       Issuer: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Basic
         Issuing CA 3B
-- FileName: iQVW64.SYS
+- Filename: iQVW64.SYS
   MD5: d0a5f9ace1f0c459cef714156db1de02
   SHA1: 540b9f9a232b9d597138b8e0f33d83f5f6e247af
   SHA256: f877296e8506e6a1acbdacdc5085b18c6842320a2775a329d286bac796f08d54
@@ -2013,7 +1968,7 @@ KnownVulnerableSamples:
     - SerialNumber: 330000b4a079accd956034e6ae00020000b4a0
       Issuer: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Basic
         Issuing CA 3B
-- FileName: iQVW64.SYS
+- Filename: iQVW64.SYS
   MD5: cebf532d1e3c109418687cb9207516ad
   SHA1: 444a2b778e2fc26067c49dde0aff0dcfb85f2b64
   SHA256: ff115cefe624b6ca0b3878a86f6f8b352d1915b65fbbdc33ae15530a96ebdaa7

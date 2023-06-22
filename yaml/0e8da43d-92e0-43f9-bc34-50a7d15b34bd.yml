@@ -4,30 +4,21 @@ Created: '2023-05-11'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: sc.exe create etdsupp binPath=C:\windows\temp\etdsupp.sys type=kernel &&
-  sc.exe start etdsupp.sys
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create etdsupp binPath=C:\windows\temp\etdsupp.sys type=kernel
+    && sc.exe start etdsupp.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
-  Person: Michael Alfaro
+  Person: 'Michael Alfaro'
   Handle: '@_mmpte_software'
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/f744abb99c97d98e4cd08072a897107829d6d8481aee96c22443f626d00f4145.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Detection: []
 KnownVulnerableSamples:
-- FileName: etdsupp.sys
+- Filename: etdsupp.sys
   MD5: a92bf3c219a5fa82087b6c31bdf36ff3
   SHA1: a57eefa0c653b49bd60b6f46d7c441a78063b682
   SHA256: f744abb99c97d98e4cd08072a897107829d6d8481aee96c22443f626d00f4145

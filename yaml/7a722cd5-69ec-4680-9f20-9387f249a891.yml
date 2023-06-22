@@ -4,48 +4,21 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: sc.exe create ElbyCDIO.sys binPath=C:\windows\temp\ElbyCDIO.sys type=kernel
-  && sc.exe start ElbyCDIO.sys
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create ElbyCDIO.sys binPath=C:\windows\temp\ElbyCDIO.sys type=kernel
+    && sc.exe start ElbyCDIO.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
   Person: []
   Handle: ''
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/238046cfe126a1f8ab96d8b62f6aa5ec97bab830e2bae5b1b6ab2d31894c79e4.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/2fbbc276737047cb9b3ba5396756d28c1737342d89dce1b64c23a9c4513ae445.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/5cfad3d473961763306d72c12bd5ae14183a1a5778325c9acacca764b79ca185.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/8137ce22d0d0fc5ea5b174d6ad3506a4949506477b1325da2ccb76511f4c4f60.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/82fbcb371d53b8a76a25fbbafaae31147c0d1f6b9f26b3ea45262c2267386989.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/8f68ca89910ebe9da3d02ec82d935de1814d79c44f36cd30ea02fa49ae488f00.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/9679758455c69877fce866267d60c39d108b495dca183954e4af869902965b3d.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ada4e42bf5ef58ef1aad94435441003b1cc1fcaa5d38bfdbe1a3d736dc451d47.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c8eaa5e6d3230b93c126d2d58e32409e4aeeb23ccf0dd047a17f1ef552f92fe9.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/f85eb576acb5db0d2f48e5f09a7244165a876fa1ca8697ebb773e4d7071d4439.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Detection: []
 KnownVulnerableSamples:
-- FileName: ElbyCDIO.sys
+- Filename: ElbyCDIO.sys
   MD5: 702d5606cf2199e0edea6f0e0d27cd10
   SHA1: 879e327292616c56bd4aafc279fbda6cc393b74d
   SHA256: 238046cfe126a1f8ab96d8b62f6aa5ec97bab830e2bae5b1b6ab2d31894c79e4
@@ -148,7 +121,7 @@ KnownVulnerableSamples:
     - SerialNumber: 0100000000011e643e96d0
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
-- FileName: ElbyCDIO.sys
+- Filename: ElbyCDIO.sys
   MD5: 945ef111161bae49075107e5bc11a23f
   SHA1: ea37a4241fa4d92c168d052c4e095ccd22a83080
   SHA256: 2fbbc276737047cb9b3ba5396756d28c1737342d89dce1b64c23a9c4513ae445
@@ -243,7 +216,7 @@ KnownVulnerableSamples:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
-- FileName: ElbyCDIO.sys
+- Filename: ElbyCDIO.sys
   MD5: 24fe18891c173a7c76426d08d2b0630e
   SHA1: f640c94e71921479cc48d06b59aba41ffa50a769
   SHA256: 5cfad3d473961763306d72c12bd5ae14183a1a5778325c9acacca764b79ca185
@@ -355,7 +328,7 @@ KnownVulnerableSamples:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
-- FileName: ElbyCDIO.sys
+- Filename: ElbyCDIO.sys
   MD5: aaa8999a169e39fb8b48ae49cd6ac30a
   SHA1: 2eeab9786dac3f5f69e642f6e29f4e4819038551
   SHA256: 8137ce22d0d0fc5ea5b174d6ad3506a4949506477b1325da2ccb76511f4c4f60
@@ -471,7 +444,7 @@ KnownVulnerableSamples:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
-- FileName: ElbyCDIO.sys
+- Filename: ElbyCDIO.sys
   MD5: d21fba3d09e5b060bd08796916166218
   SHA1: caa0cb48368542a54949be18475d45b342fb76e5
   SHA256: 82fbcb371d53b8a76a25fbbafaae31147c0d1f6b9f26b3ea45262c2267386989
@@ -588,7 +561,7 @@ KnownVulnerableSamples:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
-- FileName: ElbyCDIO.sys
+- Filename: ElbyCDIO.sys
   MD5: b5326548762bfaae7a42d5b0898dfeac
   SHA1: f3029dba668285aac04117273599ac12a94a3564
   SHA256: 8f68ca89910ebe9da3d02ec82d935de1814d79c44f36cd30ea02fa49ae488f00
@@ -683,7 +656,7 @@ KnownVulnerableSamples:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
-- FileName: ElbyCDIO.sys
+- Filename: ElbyCDIO.sys
   MD5: e9ccb6bac8715918a2ac35d8f0b4e1e6
   SHA1: 9feacc95d30107ce3e1e9a491e2c12d73eef2979
   SHA256: 9679758455c69877fce866267d60c39d108b495dca183954e4af869902965b3d
@@ -793,7 +766,7 @@ KnownVulnerableSamples:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
-- FileName: ElbyCDIO.sys
+- Filename: ElbyCDIO.sys
   MD5: 28cb0b64134ad62c2acf77db8501a619
   SHA1: 5742ad3d30bd34c0c26c466ac6475a2b832ad59e
   SHA256: ada4e42bf5ef58ef1aad94435441003b1cc1fcaa5d38bfdbe1a3d736dc451d47
@@ -905,7 +878,7 @@ KnownVulnerableSamples:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
-- FileName: ElbyCDIO.sys
+- Filename: ElbyCDIO.sys
   MD5: f141db170bb4c6e088f30ddc58404ad3
   SHA1: 34b0f1b2038a1572ee6381022a24333357b033c4
   SHA256: c8eaa5e6d3230b93c126d2d58e32409e4aeeb23ccf0dd047a17f1ef552f92fe9
@@ -1000,7 +973,7 @@ KnownVulnerableSamples:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
-- FileName: ElbyCDIO.sys
+- Filename: ElbyCDIO.sys
   MD5: 0634299fc837b47b531e4762d946b2ae
   SHA1: 0a19a9c4c9185b80188da529ec9c9f45cbe73186
   SHA256: f85eb576acb5db0d2f48e5f09a7244165a876fa1ca8697ebb773e4d7071d4439

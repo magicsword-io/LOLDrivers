@@ -77,17 +77,38 @@ KnownVulnerableSamples:
       ValidTo: '2012-12-31 23:59:59'
       Signature: 1e98aa27b778b508b5c9726db7dfc00e98a635c488c9d2f66df14b1afbd5f92d99009ed1e79b8be13fbd39800c66cd07bc5c9854a694ba10d14e8babf56f65cc6709a2807c52e80e03d66b7ac60518ecc8ac427c072ca73d0866dc00edfd941d73f2729893b111d68fef8eeaacf496510cd08ddf31524f5eaf7da74a75e64ece2b9f292be7cf5d9f037e6e277b23ad622966af92e82ccebd9c7fdccd173c43c2093f7545c79ee4d7607f97c6e4aac769f5fccd74ac2cb048c1504e70561eb535d38ebeb1edacbdfe0cec857dd5bb856644195d9f93eb82ba639ed37c61ffc81bd923587f30a366a139265e92c33ccb3732faf5a38ddcd5b0a3e9253655d781fa
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
+      Version: 3
+      TBS:
+        MD5: e6d820afb23af20a65cf0b03247ea05e
+        SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
+        SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
       Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+      Version: 3
+      TBS:
+        MD5: 518d2ea8a21e879c942d504824ac211c
+        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
     - Subject: C=PL, ST=malopolska, L=Krakow, O=IBM Polska Sp. z o.o., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, CN=IBM Polska Sp. z o.o.
       ValidFrom: '2010-04-08 00:00:00'
       ValidTo: '2013-04-09 23:59:59'
       Signature: aec628787fc5115db93dba252e13cd029479d493c11fe73c7489505159c140ffe12c4626385c9dc75bb198692a08f1ddef7596666f654f6b2ac73884106f73c854ea38c3ea17af5d6b114884e174c4fb9061d48894066d6375662ddfdbb501cecbd1b6b92b9ac67a4b420aab9275658932fbcddfaa96590f5d40d29c807fda722681eb09fd16407fc1f2aea03470f36d1e134807d87dfc934789a500bf97b7fa816a56b96b269cf900d66809306d450556051df6ea7643848b2199d3a4927c34f1e385a31ead8aabb510a3dc1551c2ddabfede5f3210e774196660380a9d707d329c97e4317ddde27e111865367bab7c424e9a704f7f005d641cff9e3977bd38
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 45595f53cb4840a48f7415305213fba6
+      Version: 3
+      TBS:
+        MD5: 478f5b241a92e2c4a0b1580fbf6a1222
+        SHA1: 16c4e1d539fe3eff639929b0e688e97dea1fbd7c
+        SHA256: f9655471d8ad73cfa42a56521d31e6f0d7088207234f3aaa00638fe36fad109d
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -95,11 +116,41 @@ KnownVulnerableSamples:
       ValidTo: '2019-05-20 23:59:59'
       Signature: 8b03c0dd94d841a26169b015a878c730c6903c7e42f724b6e4837317047f04109ca1e2fa812febc0ca44e772e050b6551020836e9692e49a516ab43731dca52deb8c00c71d4fe74d32ba85f84ebefa675565f06abe7aca64381a101078457631f3867a030f60c2b35d9df68b6676821b59e183e5bd49a53856e5de41770e580f
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 655226e1b22e18e1590f2985ac22e75c
+      Version: 3
+      TBS:
+        MD5: 650704c342850095f3288eaf791147d4
+        SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
+        SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
     Signer:
     - SerialNumber: 45595f53cb4840a48f7415305213fba6
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 2913b9a2d064bbf06952ebcd7b6a75de
+    SHA1: 06e980c32915f83814a657f8e37a8320803a7b7e
+    SHA256: 3f8fc8e800b7c61556df8a46929b7e1f1456d58f242d1301f44851a7648c1d53
+  Sections:
+    .text:
+      Entropy: 6.162845467346244
+      Virtual Size: '0x1a00'
+    .rdata:
+      Entropy: 4.3931373244808105
+      Virtual Size: '0x228'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.456333815753792
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 4.839932002422845
+      Virtual Size: '0x2ce'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2006-05-05 01:39:53'
 - Filename: CITMDRV_AMD64.sys
   MD5: aa1ed3917928f04d97d8a217fe9b5cb1
   SHA1: 2e3de9bff43d7712707ef8a0b10f7e4ad8427fd8
@@ -158,18 +209,39 @@ KnownVulnerableSamples:
       ValidTo: '2020-12-30 23:59:59'
       Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
       ValidTo: '2020-12-29 23:59:59'
       Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
     - Subject: C=PL, ST=mazowieckie, L=Warsaw, O=IBM Polska Sp. z o.o., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, CN=IBM Polska Sp. z o.o.
       ValidFrom: '2013-05-31 00:00:00'
       ValidTo: '2016-06-29 23:59:59'
       Signature: 42e8dc916f2dc408ca5166c8b7ced14e560f83871c13c6c64e315e05fe905f6d744191e2e1fa04e15896b09c9853c735ac78efecf1d9d6c4b81d449b71b041b37f66e879cdd3ccaee2fad716d01f842540235d15c8b607c010ae4abe541053cc38f0f16c25c4cc1064aea63f2db60ebb4a7fd0f4c468f658bfe57c541b1b9292c3e6490604e75ceb222dad4bd25c3cf81031d9eeb9599a7f150f3ea8417ae517a59488fc512bbda13ba30018b1692ebfea87957384abb8cb0ce20141a7d58299a15454184e79a36c7e492e5e98c145e6e2b6010fb70825c2557176ad96047e55ca2136536f9d2357f3bbd970eb696a6af7eedb5ffdbe4696b99412a5d09e568e
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 63acb2cbe8cf97d66478469f5ce0d445
+      Version: 3
+      TBS:
+        MD5: d2f517a828f35cbbd527489cdc79ea5d
+        SHA1: c09bc2bc5ba1256a1a7928f16cb0a628ff50209b
+        SHA256: e20f8274f7861cfeac94335c1201e538a22ed769e10c4eef430bf8f50598ff85
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -177,6 +249,13 @@ KnownVulnerableSamples:
       ValidTo: '2021-02-22 19:35:17'
       Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -184,11 +263,41 @@ KnownVulnerableSamples:
       ValidTo: '2020-02-07 23:59:59'
       Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
     Signer:
     - SerialNumber: 63acb2cbe8cf97d66478469f5ce0d445
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 2913b9a2d064bbf06952ebcd7b6a75de
+    SHA1: 06e980c32915f83814a657f8e37a8320803a7b7e
+    SHA256: 3f8fc8e800b7c61556df8a46929b7e1f1456d58f242d1301f44851a7648c1d53
+  Sections:
+    .text:
+      Entropy: 6.162845467346244
+      Virtual Size: '0x1a00'
+    .rdata:
+      Entropy: 4.3931373244808105
+      Virtual Size: '0x228'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.456333815753792
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 4.839932002422845
+      Virtual Size: '0x2ce'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2006-05-05 01:39:53'
 - Filename: CITMDRV_AMD64.sys
   MD5: dd39a86852b498b891672ffbcd071c03
   SHA1: c9cbfdd0be7b35751a017ec59ff7237ffdc4df1f
@@ -247,18 +356,39 @@ KnownVulnerableSamples:
       ValidTo: '2020-12-30 23:59:59'
       Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
       ValidTo: '2020-12-29 23:59:59'
       Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
     - Subject: C=PL, ST=mazowieckie, L=Warsaw, O=IBM Polska Sp. z o.o., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, CN=IBM Polska Sp. z o.o.
       ValidFrom: '2013-05-31 00:00:00'
       ValidTo: '2016-06-29 23:59:59'
       Signature: 42e8dc916f2dc408ca5166c8b7ced14e560f83871c13c6c64e315e05fe905f6d744191e2e1fa04e15896b09c9853c735ac78efecf1d9d6c4b81d449b71b041b37f66e879cdd3ccaee2fad716d01f842540235d15c8b607c010ae4abe541053cc38f0f16c25c4cc1064aea63f2db60ebb4a7fd0f4c468f658bfe57c541b1b9292c3e6490604e75ceb222dad4bd25c3cf81031d9eeb9599a7f150f3ea8417ae517a59488fc512bbda13ba30018b1692ebfea87957384abb8cb0ce20141a7d58299a15454184e79a36c7e492e5e98c145e6e2b6010fb70825c2557176ad96047e55ca2136536f9d2357f3bbd970eb696a6af7eedb5ffdbe4696b99412a5d09e568e
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 63acb2cbe8cf97d66478469f5ce0d445
+      Version: 3
+      TBS:
+        MD5: d2f517a828f35cbbd527489cdc79ea5d
+        SHA1: c09bc2bc5ba1256a1a7928f16cb0a628ff50209b
+        SHA256: e20f8274f7861cfeac94335c1201e538a22ed769e10c4eef430bf8f50598ff85
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -266,6 +396,13 @@ KnownVulnerableSamples:
       ValidTo: '2021-02-22 19:35:17'
       Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -273,11 +410,41 @@ KnownVulnerableSamples:
       ValidTo: '2020-02-07 23:59:59'
       Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
     Signer:
     - SerialNumber: 63acb2cbe8cf97d66478469f5ce0d445
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 2913b9a2d064bbf06952ebcd7b6a75de
+    SHA1: 06e980c32915f83814a657f8e37a8320803a7b7e
+    SHA256: 3f8fc8e800b7c61556df8a46929b7e1f1456d58f242d1301f44851a7648c1d53
+  Sections:
+    .text:
+      Entropy: 6.162845467346244
+      Virtual Size: '0x1a00'
+    .rdata:
+      Entropy: 4.3931373244808105
+      Virtual Size: '0x228'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.456333815753792
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 4.839932002422845
+      Virtual Size: '0x2ce'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2006-05-05 01:39:53'
 - Filename: CITMDRV_AMD64.sys
   MD5: 708ac9f7b12b6ca4553fd8d0c7299296
   SHA1: 078ae07dec258db4376d5a2a05b9b508d68c0123
@@ -336,18 +503,39 @@ KnownVulnerableSamples:
       ValidTo: '2020-12-30 23:59:59'
       Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
       ValidTo: '2020-12-29 23:59:59'
       Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
     - Subject: C=PL, ST=mazowieckie, L=Warsaw, O=IBM Polska Sp. z o.o., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, CN=IBM Polska Sp. z o.o.
       ValidFrom: '2013-05-31 00:00:00'
       ValidTo: '2016-06-29 23:59:59'
       Signature: 42e8dc916f2dc408ca5166c8b7ced14e560f83871c13c6c64e315e05fe905f6d744191e2e1fa04e15896b09c9853c735ac78efecf1d9d6c4b81d449b71b041b37f66e879cdd3ccaee2fad716d01f842540235d15c8b607c010ae4abe541053cc38f0f16c25c4cc1064aea63f2db60ebb4a7fd0f4c468f658bfe57c541b1b9292c3e6490604e75ceb222dad4bd25c3cf81031d9eeb9599a7f150f3ea8417ae517a59488fc512bbda13ba30018b1692ebfea87957384abb8cb0ce20141a7d58299a15454184e79a36c7e492e5e98c145e6e2b6010fb70825c2557176ad96047e55ca2136536f9d2357f3bbd970eb696a6af7eedb5ffdbe4696b99412a5d09e568e
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 63acb2cbe8cf97d66478469f5ce0d445
+      Version: 3
+      TBS:
+        MD5: d2f517a828f35cbbd527489cdc79ea5d
+        SHA1: c09bc2bc5ba1256a1a7928f16cb0a628ff50209b
+        SHA256: e20f8274f7861cfeac94335c1201e538a22ed769e10c4eef430bf8f50598ff85
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -355,6 +543,13 @@ KnownVulnerableSamples:
       ValidTo: '2021-02-22 19:35:17'
       Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -362,11 +557,41 @@ KnownVulnerableSamples:
       ValidTo: '2020-02-07 23:59:59'
       Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
     Signer:
     - SerialNumber: 63acb2cbe8cf97d66478469f5ce0d445
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 2913b9a2d064bbf06952ebcd7b6a75de
+    SHA1: 06e980c32915f83814a657f8e37a8320803a7b7e
+    SHA256: 3f8fc8e800b7c61556df8a46929b7e1f1456d58f242d1301f44851a7648c1d53
+  Sections:
+    .text:
+      Entropy: 6.162845467346244
+      Virtual Size: '0x1a00'
+    .rdata:
+      Entropy: 4.3931373244808105
+      Virtual Size: '0x228'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.456333815753792
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 4.839932002422845
+      Virtual Size: '0x2ce'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2006-05-05 01:39:53'
 - Filename: CITMDRV_AMD64.sys
   MD5: 7a16fca3d56c6038c692ec75b2bfee15
   SHA1: 623cd2abef6c92255f79cbbd3309cb59176771da
@@ -425,18 +650,39 @@ KnownVulnerableSamples:
       ValidTo: '2020-12-30 23:59:59'
       Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
       ValidTo: '2020-12-29 23:59:59'
       Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
     - Subject: C=PL, ST=mazowieckie, L=Warsaw, O=IBM Polska Sp. z o.o., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, CN=IBM Polska Sp. z o.o.
       ValidFrom: '2013-05-31 00:00:00'
       ValidTo: '2016-06-29 23:59:59'
       Signature: 42e8dc916f2dc408ca5166c8b7ced14e560f83871c13c6c64e315e05fe905f6d744191e2e1fa04e15896b09c9853c735ac78efecf1d9d6c4b81d449b71b041b37f66e879cdd3ccaee2fad716d01f842540235d15c8b607c010ae4abe541053cc38f0f16c25c4cc1064aea63f2db60ebb4a7fd0f4c468f658bfe57c541b1b9292c3e6490604e75ceb222dad4bd25c3cf81031d9eeb9599a7f150f3ea8417ae517a59488fc512bbda13ba30018b1692ebfea87957384abb8cb0ce20141a7d58299a15454184e79a36c7e492e5e98c145e6e2b6010fb70825c2557176ad96047e55ca2136536f9d2357f3bbd970eb696a6af7eedb5ffdbe4696b99412a5d09e568e
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 63acb2cbe8cf97d66478469f5ce0d445
+      Version: 3
+      TBS:
+        MD5: d2f517a828f35cbbd527489cdc79ea5d
+        SHA1: c09bc2bc5ba1256a1a7928f16cb0a628ff50209b
+        SHA256: e20f8274f7861cfeac94335c1201e538a22ed769e10c4eef430bf8f50598ff85
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -444,6 +690,13 @@ KnownVulnerableSamples:
       ValidTo: '2021-02-22 19:35:17'
       Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -451,11 +704,41 @@ KnownVulnerableSamples:
       ValidTo: '2020-02-07 23:59:59'
       Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
     Signer:
     - SerialNumber: 63acb2cbe8cf97d66478469f5ce0d445
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 2913b9a2d064bbf06952ebcd7b6a75de
+    SHA1: 06e980c32915f83814a657f8e37a8320803a7b7e
+    SHA256: 3f8fc8e800b7c61556df8a46929b7e1f1456d58f242d1301f44851a7648c1d53
+  Sections:
+    .text:
+      Entropy: 6.162845467346244
+      Virtual Size: '0x1a00'
+    .rdata:
+      Entropy: 4.3931373244808105
+      Virtual Size: '0x228'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.456333815753792
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 4.839932002422845
+      Virtual Size: '0x2ce'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2006-05-05 01:39:53'
 - Filename: CITMDRV_AMD64.sys
   MD5: 5970e8de1b337ca665114511b9d10806
   SHA1: 1f3a9265963b660392c4053329eb9436deeed339
@@ -514,17 +797,38 @@ KnownVulnerableSamples:
       ValidTo: '2012-12-31 23:59:59'
       Signature: 1e98aa27b778b508b5c9726db7dfc00e98a635c488c9d2f66df14b1afbd5f92d99009ed1e79b8be13fbd39800c66cd07bc5c9854a694ba10d14e8babf56f65cc6709a2807c52e80e03d66b7ac60518ecc8ac427c072ca73d0866dc00edfd941d73f2729893b111d68fef8eeaacf496510cd08ddf31524f5eaf7da74a75e64ece2b9f292be7cf5d9f037e6e277b23ad622966af92e82ccebd9c7fdccd173c43c2093f7545c79ee4d7607f97c6e4aac769f5fccd74ac2cb048c1504e70561eb535d38ebeb1edacbdfe0cec857dd5bb856644195d9f93eb82ba639ed37c61ffc81bd923587f30a366a139265e92c33ccb3732faf5a38ddcd5b0a3e9253655d781fa
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
+      Version: 3
+      TBS:
+        MD5: e6d820afb23af20a65cf0b03247ea05e
+        SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
+        SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
       Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+      Version: 3
+      TBS:
+        MD5: 518d2ea8a21e879c942d504824ac211c
+        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
     - Subject: C=PL, ST=malopolska, L=Krakow, O=IBM Polska Sp. z o.o., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, CN=IBM Polska Sp. z o.o.
       ValidFrom: '2010-04-08 00:00:00'
       ValidTo: '2013-04-09 23:59:59'
       Signature: aec628787fc5115db93dba252e13cd029479d493c11fe73c7489505159c140ffe12c4626385c9dc75bb198692a08f1ddef7596666f654f6b2ac73884106f73c854ea38c3ea17af5d6b114884e174c4fb9061d48894066d6375662ddfdbb501cecbd1b6b92b9ac67a4b420aab9275658932fbcddfaa96590f5d40d29c807fda722681eb09fd16407fc1f2aea03470f36d1e134807d87dfc934789a500bf97b7fa816a56b96b269cf900d66809306d450556051df6ea7643848b2199d3a4927c34f1e385a31ead8aabb510a3dc1551c2ddabfede5f3210e774196660380a9d707d329c97e4317ddde27e111865367bab7c424e9a704f7f005d641cff9e3977bd38
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 45595f53cb4840a48f7415305213fba6
+      Version: 3
+      TBS:
+        MD5: 478f5b241a92e2c4a0b1580fbf6a1222
+        SHA1: 16c4e1d539fe3eff639929b0e688e97dea1fbd7c
+        SHA256: f9655471d8ad73cfa42a56521d31e6f0d7088207234f3aaa00638fe36fad109d
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -532,11 +836,41 @@ KnownVulnerableSamples:
       ValidTo: '2019-05-20 23:59:59'
       Signature: 8b03c0dd94d841a26169b015a878c730c6903c7e42f724b6e4837317047f04109ca1e2fa812febc0ca44e772e050b6551020836e9692e49a516ab43731dca52deb8c00c71d4fe74d32ba85f84ebefa675565f06abe7aca64381a101078457631f3867a030f60c2b35d9df68b6676821b59e183e5bd49a53856e5de41770e580f
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 655226e1b22e18e1590f2985ac22e75c
+      Version: 3
+      TBS:
+        MD5: 650704c342850095f3288eaf791147d4
+        SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
+        SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
     Signer:
     - SerialNumber: 45595f53cb4840a48f7415305213fba6
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 2913b9a2d064bbf06952ebcd7b6a75de
+    SHA1: 06e980c32915f83814a657f8e37a8320803a7b7e
+    SHA256: 3f8fc8e800b7c61556df8a46929b7e1f1456d58f242d1301f44851a7648c1d53
+  Sections:
+    .text:
+      Entropy: 6.162845467346244
+      Virtual Size: '0x1a00'
+    .rdata:
+      Entropy: 4.3931373244808105
+      Virtual Size: '0x228'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.456333815753792
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 4.839932002422845
+      Virtual Size: '0x2ce'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2006-05-05 01:39:53'
 - Filename: CITMDRV_AMD64.sys
   MD5: 2509a71a02296aa65a3428ddfac22180
   SHA1: 4a235f0b84ff615e2879fa9e0ec0d745fcfdaa5c
@@ -595,18 +929,39 @@ KnownVulnerableSamples:
       ValidTo: '2020-12-30 23:59:59'
       Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
       ValidTo: '2020-12-29 23:59:59'
       Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
     - Subject: C=PL, ST=mazowieckie, L=Warsaw, O=IBM Polska Sp. z o.o., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, CN=IBM Polska Sp. z o.o.
       ValidFrom: '2013-05-31 00:00:00'
       ValidTo: '2016-06-29 23:59:59'
       Signature: 42e8dc916f2dc408ca5166c8b7ced14e560f83871c13c6c64e315e05fe905f6d744191e2e1fa04e15896b09c9853c735ac78efecf1d9d6c4b81d449b71b041b37f66e879cdd3ccaee2fad716d01f842540235d15c8b607c010ae4abe541053cc38f0f16c25c4cc1064aea63f2db60ebb4a7fd0f4c468f658bfe57c541b1b9292c3e6490604e75ceb222dad4bd25c3cf81031d9eeb9599a7f150f3ea8417ae517a59488fc512bbda13ba30018b1692ebfea87957384abb8cb0ce20141a7d58299a15454184e79a36c7e492e5e98c145e6e2b6010fb70825c2557176ad96047e55ca2136536f9d2357f3bbd970eb696a6af7eedb5ffdbe4696b99412a5d09e568e
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 63acb2cbe8cf97d66478469f5ce0d445
+      Version: 3
+      TBS:
+        MD5: d2f517a828f35cbbd527489cdc79ea5d
+        SHA1: c09bc2bc5ba1256a1a7928f16cb0a628ff50209b
+        SHA256: e20f8274f7861cfeac94335c1201e538a22ed769e10c4eef430bf8f50598ff85
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -614,6 +969,13 @@ KnownVulnerableSamples:
       ValidTo: '2021-02-22 19:35:17'
       Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -621,11 +983,41 @@ KnownVulnerableSamples:
       ValidTo: '2020-02-07 23:59:59'
       Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
     Signer:
     - SerialNumber: 63acb2cbe8cf97d66478469f5ce0d445
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 2913b9a2d064bbf06952ebcd7b6a75de
+    SHA1: 06e980c32915f83814a657f8e37a8320803a7b7e
+    SHA256: 3f8fc8e800b7c61556df8a46929b7e1f1456d58f242d1301f44851a7648c1d53
+  Sections:
+    .text:
+      Entropy: 6.162845467346244
+      Virtual Size: '0x1a00'
+    .rdata:
+      Entropy: 4.3931373244808105
+      Virtual Size: '0x228'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.456333815753792
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 4.839932002422845
+      Virtual Size: '0x2ce'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2006-05-05 01:39:53'
 - Filename: CITMDRV_AMD64.sys
   MD5: 296bde4d0ed32c6069eb90c502187d0d
   SHA1: ace6b9e34e3e2e73fe584f3bbdb4e4ec106e0a7d
@@ -684,18 +1076,39 @@ KnownVulnerableSamples:
       ValidTo: '2020-12-30 23:59:59'
       Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
       ValidTo: '2020-12-29 23:59:59'
       Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
     - Subject: C=PL, ST=mazowieckie, L=Warsaw, O=IBM Polska Sp. z o.o., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, CN=IBM Polska Sp. z o.o.
       ValidFrom: '2013-05-31 00:00:00'
       ValidTo: '2016-06-29 23:59:59'
       Signature: 42e8dc916f2dc408ca5166c8b7ced14e560f83871c13c6c64e315e05fe905f6d744191e2e1fa04e15896b09c9853c735ac78efecf1d9d6c4b81d449b71b041b37f66e879cdd3ccaee2fad716d01f842540235d15c8b607c010ae4abe541053cc38f0f16c25c4cc1064aea63f2db60ebb4a7fd0f4c468f658bfe57c541b1b9292c3e6490604e75ceb222dad4bd25c3cf81031d9eeb9599a7f150f3ea8417ae517a59488fc512bbda13ba30018b1692ebfea87957384abb8cb0ce20141a7d58299a15454184e79a36c7e492e5e98c145e6e2b6010fb70825c2557176ad96047e55ca2136536f9d2357f3bbd970eb696a6af7eedb5ffdbe4696b99412a5d09e568e
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 63acb2cbe8cf97d66478469f5ce0d445
+      Version: 3
+      TBS:
+        MD5: d2f517a828f35cbbd527489cdc79ea5d
+        SHA1: c09bc2bc5ba1256a1a7928f16cb0a628ff50209b
+        SHA256: e20f8274f7861cfeac94335c1201e538a22ed769e10c4eef430bf8f50598ff85
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -703,6 +1116,13 @@ KnownVulnerableSamples:
       ValidTo: '2021-02-22 19:35:17'
       Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -710,11 +1130,41 @@ KnownVulnerableSamples:
       ValidTo: '2020-02-07 23:59:59'
       Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
     Signer:
     - SerialNumber: 63acb2cbe8cf97d66478469f5ce0d445
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 2913b9a2d064bbf06952ebcd7b6a75de
+    SHA1: 06e980c32915f83814a657f8e37a8320803a7b7e
+    SHA256: 3f8fc8e800b7c61556df8a46929b7e1f1456d58f242d1301f44851a7648c1d53
+  Sections:
+    .text:
+      Entropy: 6.162845467346244
+      Virtual Size: '0x1a00'
+    .rdata:
+      Entropy: 4.3931373244808105
+      Virtual Size: '0x228'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.456333815753792
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 4.839932002422845
+      Virtual Size: '0x2ce'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2006-05-05 01:39:53'
 - Filename: CITMDRV_AMD64.sys
   MD5: d1bac75205c389d6d5d6418f0457c29b
   SHA1: 4268f30b79ce125a81d0d588bef0d4e2ad409bbb
@@ -773,18 +1223,39 @@ KnownVulnerableSamples:
       ValidTo: '2020-12-30 23:59:59'
       Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
       ValidTo: '2020-12-29 23:59:59'
       Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
     - Subject: C=PL, ST=malopolska, L=Krakow, O=IBM Polska Sp. z o.o., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, CN=IBM Polska Sp. z o.o.
       ValidFrom: '2010-04-08 00:00:00'
       ValidTo: '2013-04-09 23:59:59'
       Signature: aec628787fc5115db93dba252e13cd029479d493c11fe73c7489505159c140ffe12c4626385c9dc75bb198692a08f1ddef7596666f654f6b2ac73884106f73c854ea38c3ea17af5d6b114884e174c4fb9061d48894066d6375662ddfdbb501cecbd1b6b92b9ac67a4b420aab9275658932fbcddfaa96590f5d40d29c807fda722681eb09fd16407fc1f2aea03470f36d1e134807d87dfc934789a500bf97b7fa816a56b96b269cf900d66809306d450556051df6ea7643848b2199d3a4927c34f1e385a31ead8aabb510a3dc1551c2ddabfede5f3210e774196660380a9d707d329c97e4317ddde27e111865367bab7c424e9a704f7f005d641cff9e3977bd38
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 45595f53cb4840a48f7415305213fba6
+      Version: 3
+      TBS:
+        MD5: 478f5b241a92e2c4a0b1580fbf6a1222
+        SHA1: 16c4e1d539fe3eff639929b0e688e97dea1fbd7c
+        SHA256: f9655471d8ad73cfa42a56521d31e6f0d7088207234f3aaa00638fe36fad109d
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -792,11 +1263,41 @@ KnownVulnerableSamples:
       ValidTo: '2019-05-20 23:59:59'
       Signature: 8b03c0dd94d841a26169b015a878c730c6903c7e42f724b6e4837317047f04109ca1e2fa812febc0ca44e772e050b6551020836e9692e49a516ab43731dca52deb8c00c71d4fe74d32ba85f84ebefa675565f06abe7aca64381a101078457631f3867a030f60c2b35d9df68b6676821b59e183e5bd49a53856e5de41770e580f
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 655226e1b22e18e1590f2985ac22e75c
+      Version: 3
+      TBS:
+        MD5: 650704c342850095f3288eaf791147d4
+        SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
+        SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
     Signer:
     - SerialNumber: 45595f53cb4840a48f7415305213fba6
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 2913b9a2d064bbf06952ebcd7b6a75de
+    SHA1: 06e980c32915f83814a657f8e37a8320803a7b7e
+    SHA256: 3f8fc8e800b7c61556df8a46929b7e1f1456d58f242d1301f44851a7648c1d53
+  Sections:
+    .text:
+      Entropy: 6.162845467346244
+      Virtual Size: '0x1a00'
+    .rdata:
+      Entropy: 4.3931373244808105
+      Virtual Size: '0x228'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.456333815753792
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 4.839932002422845
+      Virtual Size: '0x2ce'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2006-05-05 01:39:53'
 - Filename: CITMDRV_AMD64.sys
   MD5: b2a9ac0600b12ec9819e049d7a6a0b75
   SHA1: c834c4931b074665d56ccab437dfcc326649d612
@@ -855,28 +1356,79 @@ KnownVulnerableSamples:
       ValidTo: '2020-12-30 23:59:59'
       Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
       ValidTo: '2020-12-29 23:59:59'
       Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
     - Subject: C=PL, ST=mazowieckie, L=Warsaw, O=IBM Polska Sp. z o.o., CN=IBM Polska
         Sp. z o.o.
       ValidFrom: '2016-05-30 00:00:00'
       ValidTo: '2019-07-29 23:59:59'
       Signature: 37c4cb65c2d5579c51543d15af31471b5b497715b8018ab41d79e8c5fd07393f3ae94bc05fe9c7c309f7ac8cc213535a8fa8ea90100c57e455b50ddc95ee310d73c0577dd2e02e8f488ac3402f0a04f6bd5f40892e98c1c7a0f2763666416c56578c5124f057a762ac7e12ec79b0513db914a194e0180e7c60ebcfe6669802fa959e117dbe681d72789baa05343c622da0bb17eb05b8c6f0740d7053dbee3f12d569d4186d2dcc65a802e5ff99f6e9737f3b025eb44df12036e51b3d078fb5c29f36134134aa0ac6d34dc45d973b92fb05740c50975194828977dbe9c7218c092a4a96ec45d08610914926d92eb2fc2f0e7e4965dda5f82b7c9bbd731256acbf
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 74c58808c139aecc23260eb2ba16f2fd
+      Version: 3
+      TBS:
+        MD5: e7b67b21239296b841387cb545428012
+        SHA1: 16490d98ea08654a99e355b9b87be04fc66b62df
+        SHA256: 3dfd1ebc716c318dd93c0532018c67ca0e98bdb16dfbbd266dabf6f47dcb8870
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
       ValidTo: '2023-12-09 23:59:59'
       Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
     Signer:
     - SerialNumber: 74c58808c139aecc23260eb2ba16f2fd
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 2913b9a2d064bbf06952ebcd7b6a75de
+    SHA1: 06e980c32915f83814a657f8e37a8320803a7b7e
+    SHA256: 3f8fc8e800b7c61556df8a46929b7e1f1456d58f242d1301f44851a7648c1d53
+  Sections:
+    .text:
+      Entropy: 6.162845467346244
+      Virtual Size: '0x1a00'
+    .rdata:
+      Entropy: 4.3931373244808105
+      Virtual Size: '0x228'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.456333815753792
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 4.839932002422845
+      Virtual Size: '0x2ce'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2006-05-05 01:39:53'
 - Filename: CITMDRV_AMD64.sys
   MD5: 79f7e6f98a5d3ab6601622be4471027f
   SHA1: 8f5cd4a56e6e15935491aa40adb1ecad61eafe7c
@@ -935,17 +1487,38 @@ KnownVulnerableSamples:
       ValidTo: '2012-12-31 23:59:59'
       Signature: 1e98aa27b778b508b5c9726db7dfc00e98a635c488c9d2f66df14b1afbd5f92d99009ed1e79b8be13fbd39800c66cd07bc5c9854a694ba10d14e8babf56f65cc6709a2807c52e80e03d66b7ac60518ecc8ac427c072ca73d0866dc00edfd941d73f2729893b111d68fef8eeaacf496510cd08ddf31524f5eaf7da74a75e64ece2b9f292be7cf5d9f037e6e277b23ad622966af92e82ccebd9c7fdccd173c43c2093f7545c79ee4d7607f97c6e4aac769f5fccd74ac2cb048c1504e70561eb535d38ebeb1edacbdfe0cec857dd5bb856644195d9f93eb82ba639ed37c61ffc81bd923587f30a366a139265e92c33ccb3732faf5a38ddcd5b0a3e9253655d781fa
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
+      Version: 3
+      TBS:
+        MD5: e6d820afb23af20a65cf0b03247ea05e
+        SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
+        SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
       Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+      Version: 3
+      TBS:
+        MD5: 518d2ea8a21e879c942d504824ac211c
+        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
     - Subject: C=PL, ST=malopolska, L=Krakow, O=IBM Polska Sp. z o.o., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, CN=IBM Polska Sp. z o.o.
       ValidFrom: '2010-04-08 00:00:00'
       ValidTo: '2013-04-09 23:59:59'
       Signature: aec628787fc5115db93dba252e13cd029479d493c11fe73c7489505159c140ffe12c4626385c9dc75bb198692a08f1ddef7596666f654f6b2ac73884106f73c854ea38c3ea17af5d6b114884e174c4fb9061d48894066d6375662ddfdbb501cecbd1b6b92b9ac67a4b420aab9275658932fbcddfaa96590f5d40d29c807fda722681eb09fd16407fc1f2aea03470f36d1e134807d87dfc934789a500bf97b7fa816a56b96b269cf900d66809306d450556051df6ea7643848b2199d3a4927c34f1e385a31ead8aabb510a3dc1551c2ddabfede5f3210e774196660380a9d707d329c97e4317ddde27e111865367bab7c424e9a704f7f005d641cff9e3977bd38
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 45595f53cb4840a48f7415305213fba6
+      Version: 3
+      TBS:
+        MD5: 478f5b241a92e2c4a0b1580fbf6a1222
+        SHA1: 16c4e1d539fe3eff639929b0e688e97dea1fbd7c
+        SHA256: f9655471d8ad73cfa42a56521d31e6f0d7088207234f3aaa00638fe36fad109d
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -953,11 +1526,41 @@ KnownVulnerableSamples:
       ValidTo: '2019-05-20 23:59:59'
       Signature: 8b03c0dd94d841a26169b015a878c730c6903c7e42f724b6e4837317047f04109ca1e2fa812febc0ca44e772e050b6551020836e9692e49a516ab43731dca52deb8c00c71d4fe74d32ba85f84ebefa675565f06abe7aca64381a101078457631f3867a030f60c2b35d9df68b6676821b59e183e5bd49a53856e5de41770e580f
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 655226e1b22e18e1590f2985ac22e75c
+      Version: 3
+      TBS:
+        MD5: 650704c342850095f3288eaf791147d4
+        SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
+        SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
     Signer:
     - SerialNumber: 45595f53cb4840a48f7415305213fba6
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 2913b9a2d064bbf06952ebcd7b6a75de
+    SHA1: 06e980c32915f83814a657f8e37a8320803a7b7e
+    SHA256: 3f8fc8e800b7c61556df8a46929b7e1f1456d58f242d1301f44851a7648c1d53
+  Sections:
+    .text:
+      Entropy: 6.162845467346244
+      Virtual Size: '0x1a00'
+    .rdata:
+      Entropy: 4.3931373244808105
+      Virtual Size: '0x228'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.456333815753792
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 4.839932002422845
+      Virtual Size: '0x2ce'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2006-05-05 01:39:53'
 - Filename: CITMDRV_AMD64.sys
   MD5: 2d465b4487dc81effaa84f122b71c24f
   SHA1: 51b60eaa228458dee605430aae1bc26f3fc62325
@@ -1016,17 +1619,38 @@ KnownVulnerableSamples:
       ValidTo: '2012-12-31 23:59:59'
       Signature: 1e98aa27b778b508b5c9726db7dfc00e98a635c488c9d2f66df14b1afbd5f92d99009ed1e79b8be13fbd39800c66cd07bc5c9854a694ba10d14e8babf56f65cc6709a2807c52e80e03d66b7ac60518ecc8ac427c072ca73d0866dc00edfd941d73f2729893b111d68fef8eeaacf496510cd08ddf31524f5eaf7da74a75e64ece2b9f292be7cf5d9f037e6e277b23ad622966af92e82ccebd9c7fdccd173c43c2093f7545c79ee4d7607f97c6e4aac769f5fccd74ac2cb048c1504e70561eb535d38ebeb1edacbdfe0cec857dd5bb856644195d9f93eb82ba639ed37c61ffc81bd923587f30a366a139265e92c33ccb3732faf5a38ddcd5b0a3e9253655d781fa
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
+      Version: 3
+      TBS:
+        MD5: e6d820afb23af20a65cf0b03247ea05e
+        SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
+        SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
       Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+      Version: 3
+      TBS:
+        MD5: 518d2ea8a21e879c942d504824ac211c
+        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
     - Subject: C=PL, ST=malopolska, L=Krakow, O=IBM Polska Sp. z o.o., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, CN=IBM Polska Sp. z o.o.
       ValidFrom: '2010-04-08 00:00:00'
       ValidTo: '2013-04-09 23:59:59'
       Signature: aec628787fc5115db93dba252e13cd029479d493c11fe73c7489505159c140ffe12c4626385c9dc75bb198692a08f1ddef7596666f654f6b2ac73884106f73c854ea38c3ea17af5d6b114884e174c4fb9061d48894066d6375662ddfdbb501cecbd1b6b92b9ac67a4b420aab9275658932fbcddfaa96590f5d40d29c807fda722681eb09fd16407fc1f2aea03470f36d1e134807d87dfc934789a500bf97b7fa816a56b96b269cf900d66809306d450556051df6ea7643848b2199d3a4927c34f1e385a31ead8aabb510a3dc1551c2ddabfede5f3210e774196660380a9d707d329c97e4317ddde27e111865367bab7c424e9a704f7f005d641cff9e3977bd38
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 45595f53cb4840a48f7415305213fba6
+      Version: 3
+      TBS:
+        MD5: 478f5b241a92e2c4a0b1580fbf6a1222
+        SHA1: 16c4e1d539fe3eff639929b0e688e97dea1fbd7c
+        SHA256: f9655471d8ad73cfa42a56521d31e6f0d7088207234f3aaa00638fe36fad109d
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -1034,11 +1658,41 @@ KnownVulnerableSamples:
       ValidTo: '2019-05-20 23:59:59'
       Signature: 8b03c0dd94d841a26169b015a878c730c6903c7e42f724b6e4837317047f04109ca1e2fa812febc0ca44e772e050b6551020836e9692e49a516ab43731dca52deb8c00c71d4fe74d32ba85f84ebefa675565f06abe7aca64381a101078457631f3867a030f60c2b35d9df68b6676821b59e183e5bd49a53856e5de41770e580f
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 655226e1b22e18e1590f2985ac22e75c
+      Version: 3
+      TBS:
+        MD5: 650704c342850095f3288eaf791147d4
+        SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
+        SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
     Signer:
     - SerialNumber: 45595f53cb4840a48f7415305213fba6
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 2913b9a2d064bbf06952ebcd7b6a75de
+    SHA1: 06e980c32915f83814a657f8e37a8320803a7b7e
+    SHA256: 3f8fc8e800b7c61556df8a46929b7e1f1456d58f242d1301f44851a7648c1d53
+  Sections:
+    .text:
+      Entropy: 6.162845467346244
+      Virtual Size: '0x1a00'
+    .rdata:
+      Entropy: 4.3931373244808105
+      Virtual Size: '0x228'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.456333815753792
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 4.839932002422845
+      Virtual Size: '0x2ce'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2006-05-05 01:39:53'
 - Filename: CITMDRV_AMD64.sys
   MD5: 4d17b32be70ef39eae5d5edeb5e89877
   SHA1: 3270720a066492b046d7180ca6e60602c764cac7
@@ -1097,18 +1751,39 @@ KnownVulnerableSamples:
       ValidTo: '2020-12-30 23:59:59'
       Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
       ValidTo: '2020-12-29 23:59:59'
       Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
     - Subject: C=PL, ST=malopolska, L=Krakow, O=IBM Polska Sp. z o.o., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, CN=IBM Polska Sp. z o.o.
       ValidFrom: '2010-04-08 00:00:00'
       ValidTo: '2013-04-09 23:59:59'
       Signature: aec628787fc5115db93dba252e13cd029479d493c11fe73c7489505159c140ffe12c4626385c9dc75bb198692a08f1ddef7596666f654f6b2ac73884106f73c854ea38c3ea17af5d6b114884e174c4fb9061d48894066d6375662ddfdbb501cecbd1b6b92b9ac67a4b420aab9275658932fbcddfaa96590f5d40d29c807fda722681eb09fd16407fc1f2aea03470f36d1e134807d87dfc934789a500bf97b7fa816a56b96b269cf900d66809306d450556051df6ea7643848b2199d3a4927c34f1e385a31ead8aabb510a3dc1551c2ddabfede5f3210e774196660380a9d707d329c97e4317ddde27e111865367bab7c424e9a704f7f005d641cff9e3977bd38
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 45595f53cb4840a48f7415305213fba6
+      Version: 3
+      TBS:
+        MD5: 478f5b241a92e2c4a0b1580fbf6a1222
+        SHA1: 16c4e1d539fe3eff639929b0e688e97dea1fbd7c
+        SHA256: f9655471d8ad73cfa42a56521d31e6f0d7088207234f3aaa00638fe36fad109d
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -1116,11 +1791,41 @@ KnownVulnerableSamples:
       ValidTo: '2019-05-20 23:59:59'
       Signature: 8b03c0dd94d841a26169b015a878c730c6903c7e42f724b6e4837317047f04109ca1e2fa812febc0ca44e772e050b6551020836e9692e49a516ab43731dca52deb8c00c71d4fe74d32ba85f84ebefa675565f06abe7aca64381a101078457631f3867a030f60c2b35d9df68b6676821b59e183e5bd49a53856e5de41770e580f
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 655226e1b22e18e1590f2985ac22e75c
+      Version: 3
+      TBS:
+        MD5: 650704c342850095f3288eaf791147d4
+        SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
+        SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
     Signer:
     - SerialNumber: 45595f53cb4840a48f7415305213fba6
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 2913b9a2d064bbf06952ebcd7b6a75de
+    SHA1: 06e980c32915f83814a657f8e37a8320803a7b7e
+    SHA256: 3f8fc8e800b7c61556df8a46929b7e1f1456d58f242d1301f44851a7648c1d53
+  Sections:
+    .text:
+      Entropy: 6.162845467346244
+      Virtual Size: '0x1a00'
+    .rdata:
+      Entropy: 4.3931373244808105
+      Virtual Size: '0x228'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.456333815753792
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 4.839932002422845
+      Virtual Size: '0x2ce'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2006-05-05 01:39:53'
 - Filename: CITMDRV_AMD64.sys
   MD5: c1d3a6bb423739a5e781f7eee04c9cfd
   SHA1: 2a6e6bd51c7062ad24c02a4d2c1b5e948908d131
@@ -1179,17 +1884,38 @@ KnownVulnerableSamples:
       ValidTo: '2012-12-31 23:59:59'
       Signature: 1e98aa27b778b508b5c9726db7dfc00e98a635c488c9d2f66df14b1afbd5f92d99009ed1e79b8be13fbd39800c66cd07bc5c9854a694ba10d14e8babf56f65cc6709a2807c52e80e03d66b7ac60518ecc8ac427c072ca73d0866dc00edfd941d73f2729893b111d68fef8eeaacf496510cd08ddf31524f5eaf7da74a75e64ece2b9f292be7cf5d9f037e6e277b23ad622966af92e82ccebd9c7fdccd173c43c2093f7545c79ee4d7607f97c6e4aac769f5fccd74ac2cb048c1504e70561eb535d38ebeb1edacbdfe0cec857dd5bb856644195d9f93eb82ba639ed37c61ffc81bd923587f30a366a139265e92c33ccb3732faf5a38ddcd5b0a3e9253655d781fa
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
+      Version: 3
+      TBS:
+        MD5: e6d820afb23af20a65cf0b03247ea05e
+        SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
+        SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
       Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+      Version: 3
+      TBS:
+        MD5: 518d2ea8a21e879c942d504824ac211c
+        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
     - Subject: C=PL, ST=malopolska, L=Krakow, O=IBM Polska Sp. z o.o., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, CN=IBM Polska Sp. z o.o.
       ValidFrom: '2010-04-08 00:00:00'
       ValidTo: '2013-04-09 23:59:59'
       Signature: aec628787fc5115db93dba252e13cd029479d493c11fe73c7489505159c140ffe12c4626385c9dc75bb198692a08f1ddef7596666f654f6b2ac73884106f73c854ea38c3ea17af5d6b114884e174c4fb9061d48894066d6375662ddfdbb501cecbd1b6b92b9ac67a4b420aab9275658932fbcddfaa96590f5d40d29c807fda722681eb09fd16407fc1f2aea03470f36d1e134807d87dfc934789a500bf97b7fa816a56b96b269cf900d66809306d450556051df6ea7643848b2199d3a4927c34f1e385a31ead8aabb510a3dc1551c2ddabfede5f3210e774196660380a9d707d329c97e4317ddde27e111865367bab7c424e9a704f7f005d641cff9e3977bd38
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 45595f53cb4840a48f7415305213fba6
+      Version: 3
+      TBS:
+        MD5: 478f5b241a92e2c4a0b1580fbf6a1222
+        SHA1: 16c4e1d539fe3eff639929b0e688e97dea1fbd7c
+        SHA256: f9655471d8ad73cfa42a56521d31e6f0d7088207234f3aaa00638fe36fad109d
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -1197,11 +1923,41 @@ KnownVulnerableSamples:
       ValidTo: '2019-05-20 23:59:59'
       Signature: 8b03c0dd94d841a26169b015a878c730c6903c7e42f724b6e4837317047f04109ca1e2fa812febc0ca44e772e050b6551020836e9692e49a516ab43731dca52deb8c00c71d4fe74d32ba85f84ebefa675565f06abe7aca64381a101078457631f3867a030f60c2b35d9df68b6676821b59e183e5bd49a53856e5de41770e580f
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 655226e1b22e18e1590f2985ac22e75c
+      Version: 3
+      TBS:
+        MD5: 650704c342850095f3288eaf791147d4
+        SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
+        SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
     Signer:
     - SerialNumber: 45595f53cb4840a48f7415305213fba6
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 2913b9a2d064bbf06952ebcd7b6a75de
+    SHA1: 06e980c32915f83814a657f8e37a8320803a7b7e
+    SHA256: 3f8fc8e800b7c61556df8a46929b7e1f1456d58f242d1301f44851a7648c1d53
+  Sections:
+    .text:
+      Entropy: 6.162845467346244
+      Virtual Size: '0x1a00'
+    .rdata:
+      Entropy: 4.3931373244808105
+      Virtual Size: '0x228'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.456333815753792
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 4.839932002422845
+      Virtual Size: '0x2ce'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2006-05-05 01:39:53'
 - Filename: CITMDRV_AMD64.sys
   MD5: 054299e09cea38df2b84e6b29348b418
   SHA1: 19bd488fe54b011f387e8c5d202a70019a204adf
@@ -1260,28 +2016,79 @@ KnownVulnerableSamples:
       ValidTo: '2020-12-30 23:59:59'
       Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
       ValidTo: '2020-12-29 23:59:59'
       Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
     - Subject: C=PL, ST=mazowieckie, L=Warsaw, O=IBM Polska Sp. z o.o., CN=IBM Polska
         Sp. z o.o.
       ValidFrom: '2016-05-30 00:00:00'
       ValidTo: '2019-07-29 23:59:59'
       Signature: 37c4cb65c2d5579c51543d15af31471b5b497715b8018ab41d79e8c5fd07393f3ae94bc05fe9c7c309f7ac8cc213535a8fa8ea90100c57e455b50ddc95ee310d73c0577dd2e02e8f488ac3402f0a04f6bd5f40892e98c1c7a0f2763666416c56578c5124f057a762ac7e12ec79b0513db914a194e0180e7c60ebcfe6669802fa959e117dbe681d72789baa05343c622da0bb17eb05b8c6f0740d7053dbee3f12d569d4186d2dcc65a802e5ff99f6e9737f3b025eb44df12036e51b3d078fb5c29f36134134aa0ac6d34dc45d973b92fb05740c50975194828977dbe9c7218c092a4a96ec45d08610914926d92eb2fc2f0e7e4965dda5f82b7c9bbd731256acbf
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 74c58808c139aecc23260eb2ba16f2fd
+      Version: 3
+      TBS:
+        MD5: e7b67b21239296b841387cb545428012
+        SHA1: 16490d98ea08654a99e355b9b87be04fc66b62df
+        SHA256: 3dfd1ebc716c318dd93c0532018c67ca0e98bdb16dfbbd266dabf6f47dcb8870
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
       ValidTo: '2023-12-09 23:59:59'
       Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
     Signer:
     - SerialNumber: 74c58808c139aecc23260eb2ba16f2fd
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 2913b9a2d064bbf06952ebcd7b6a75de
+    SHA1: 06e980c32915f83814a657f8e37a8320803a7b7e
+    SHA256: 3f8fc8e800b7c61556df8a46929b7e1f1456d58f242d1301f44851a7648c1d53
+  Sections:
+    .text:
+      Entropy: 6.162845467346244
+      Virtual Size: '0x1a00'
+    .rdata:
+      Entropy: 4.3931373244808105
+      Virtual Size: '0x228'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.456333815753792
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 4.839932002422845
+      Virtual Size: '0x2ce'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2006-05-05 01:39:53'
 - Filename: CITMDRV_AMD64.sys
   MD5: 0ba6afe0ea182236f98365bd977adfdf
   SHA1: a6fe4f30ca7cb94d74bc6d42cdd09a136056952e
@@ -1340,27 +2147,78 @@ KnownVulnerableSamples:
       ValidTo: '2020-12-30 23:59:59'
       Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
       ValidTo: '2020-12-29 23:59:59'
       Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
     - Subject: C=PL, ST=mazowieckie, L=Warsaw, O=IBM Polska Sp. z o.o., CN=IBM Polska
         Sp. z o.o.
       ValidFrom: '2016-05-30 00:00:00'
       ValidTo: '2019-07-29 23:59:59'
       Signature: 37c4cb65c2d5579c51543d15af31471b5b497715b8018ab41d79e8c5fd07393f3ae94bc05fe9c7c309f7ac8cc213535a8fa8ea90100c57e455b50ddc95ee310d73c0577dd2e02e8f488ac3402f0a04f6bd5f40892e98c1c7a0f2763666416c56578c5124f057a762ac7e12ec79b0513db914a194e0180e7c60ebcfe6669802fa959e117dbe681d72789baa05343c622da0bb17eb05b8c6f0740d7053dbee3f12d569d4186d2dcc65a802e5ff99f6e9737f3b025eb44df12036e51b3d078fb5c29f36134134aa0ac6d34dc45d973b92fb05740c50975194828977dbe9c7218c092a4a96ec45d08610914926d92eb2fc2f0e7e4965dda5f82b7c9bbd731256acbf
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 74c58808c139aecc23260eb2ba16f2fd
+      Version: 3
+      TBS:
+        MD5: e7b67b21239296b841387cb545428012
+        SHA1: 16490d98ea08654a99e355b9b87be04fc66b62df
+        SHA256: 3dfd1ebc716c318dd93c0532018c67ca0e98bdb16dfbbd266dabf6f47dcb8870
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
       ValidTo: '2023-12-09 23:59:59'
       Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
     Signer:
     - SerialNumber: 74c58808c139aecc23260eb2ba16f2fd
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 2913b9a2d064bbf06952ebcd7b6a75de
+    SHA1: 06e980c32915f83814a657f8e37a8320803a7b7e
+    SHA256: 3f8fc8e800b7c61556df8a46929b7e1f1456d58f242d1301f44851a7648c1d53
+  Sections:
+    .text:
+      Entropy: 6.162845467346244
+      Virtual Size: '0x1a00'
+    .rdata:
+      Entropy: 4.3931373244808105
+      Virtual Size: '0x228'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.456333815753792
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 4.839932002422845
+      Virtual Size: '0x2ce'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2006-05-05 01:39:53'
 Tags:
 - CITMDRV_AMD64.sys

@@ -4,34 +4,21 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
-Commands: sc.exe create NICM.sys binPath=C:\windows\temp\NICM.SYS type=kernel && sc.exe
-  start NICM.SYS
-Description: []
-Usecase: Elevate privileges
-Privileges: kernel
-OperatingSystem: Windows 10
+Commands:
+  Command: sc.exe create NICM.sys binPath=C:\windows\temp\NICM.SYS type=kernel
+    && sc.exe start NICM.SYS
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
   Person: []
   Handle: ''
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/3a65d14fd3b1b5981084cdbd293dc6f4558911ea18dd80177d1e5b54d85bcaa0.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/904e0f7d485a98e8497d5ec6dd6e6e1cf0b8d8e067fb64a9e09790af3c8c9d5a.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/cf3180f5308af002ac5d6fd5b75d1340878c375f0aebc3157e3bcad6322b7190.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Detection: []
 KnownVulnerableSamples:
-- FileName: NICM.SYS
+- Filename: NICM.SYS
   MD5: 52b7cd123f6d1b9ed76b08f2ee7d9433
   SHA1: 4d6e532830058fadd861ff9eac16de8cfc6974ce
   SHA256: 3a65d14fd3b1b5981084cdbd293dc6f4558911ea18dd80177d1e5b54d85bcaa0
@@ -144,7 +131,7 @@ KnownVulnerableSamples:
     - SerialNumber: 33000002528b33aaf895f339db000000000252
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Code Signing PCA 2011
-- FileName: NICM.SYS
+- Filename: NICM.SYS
   MD5: f690bfc0799e51a626ba3931960c3173
   SHA1: d3a6f86245212e1ef9e0e906818027ec14a239cb
   SHA256: 904e0f7d485a98e8497d5ec6dd6e6e1cf0b8d8e067fb64a9e09790af3c8c9d5a
@@ -285,7 +272,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-- FileName: NICM.SYS
+- Filename: NICM.SYS
   MD5: 3bf217f8ef018ca5ea20947bfdfc0a4d
   SHA1: 26a8ab6ea80ab64d5736b9b72a39d90121156e76
   SHA256: cf3180f5308af002ac5d6fd5b75d1340878c375f0aebc3157e3bcad6322b7190
