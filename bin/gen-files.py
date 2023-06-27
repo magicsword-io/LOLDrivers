@@ -229,6 +229,36 @@ def gen_sysmon_block_config(md5_list, sha1_list, sha256_list, name):
         f.write("	</EventFiltering>\n")
         f.write("</Sysmon>\n")
 
+def gen_sysmon_exe_detect_config(md5_list, sha1_list, sha256_list, name):
+    """
+        Generates sysmon executable detection configuration
+    """
+    with open(f"detections/sysmon/{name}.xml", "w") as f:
+        f.write("<Sysmon schemaversion=\"4.82\">\n")
+        f.write("	<EventFiltering>\n")
+        f.write("		<RuleGroup name=\"\" groupRelation=\"or\">\n")
+        f.write("			<FileExecutableDetected onmatch=\"include\">\n")
+
+        if md5_list:
+            for i in md5_list:
+                if i != "-":
+                    f.write("                <Hashes condition=\"contains\">MD5=" + i + "</Hashes>\n")
+        
+        if sha1_list:
+            for i in sha1_list:
+                if i != "-":
+                    f.write("                <Hashes condition=\"contains\">SHA1=" + i + "</Hashes>\n")
+        
+        if sha256_list:
+            for i in sha256_list:
+                if i != "-":
+                    f.write("                <Hashes condition=\"contains\">SHA256=" + i + "</Hashes>\n")
+
+        f.write("			</FileExecutableDetected>\n")
+        f.write("		</RuleGroup>\n")
+        f.write("	</EventFiltering>\n")
+        f.write("</Sysmon>\n")
+
 def gen_sigma_rule_hashes(md5_list, sha1_list, sha256_list, name, uuid, title, description):
     """
         Generates DriverLoad SIGMA rule based on driver hashes
@@ -366,6 +396,10 @@ if __name__ == "__main__":
     # sysmon_config_vulnerable_hashes_block
     gen_sysmon_block_config(md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable, "sysmon_config_vulnerable_hashes_block")
     gen_sysmon_block_config(md5_list_malicious, sha1_list_malicious, sha256_list_malicious, "sysmon_config_malicious_hashes_block")
+
+   # sysmon_config_vulnerable_hashes_exe_detect
+    gen_sysmon_exe_detect_config(md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable, "sysmon_config_vulnerable_hashes_exe_detect")
+    gen_sysmon_exe_detect_config(md5_list_malicious, sha1_list_malicious, sha256_list_malicious, "sysmon_config_malicious_hashes_exe_detect")
     
     print("[+] Generating Sigma rules...")
     # driver_load_win_vuln_drivers
