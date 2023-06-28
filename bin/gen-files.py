@@ -206,7 +206,7 @@ def gen_sysmon_block_config(md5_list, sha1_list, sha256_list, name, rule_group_n
     with open(f"detections/sysmon/{name}.xml", "w") as f:
         f.write("<Sysmon schemaversion=\"4.82\">\n")
         f.write("	<EventFiltering>\n")
-        f.write("		<RuleGroup name=\"\" groupRelation=\"or\">\n")
+        f.write("		<RuleGroup name=\"%s\" groupRelation=\"or\">\n" % rule_group_name)
         f.write("			<FileBlockExecutable onmatch=\"include\">\n")
 
         if md5_list:
@@ -236,7 +236,7 @@ def gen_sysmon_exe_detect_config(md5_list, sha1_list, sha256_list, name, rule_gr
     with open(f"detections/sysmon/{name}.xml", "w") as f:
         f.write("<Sysmon schemaversion=\"4.82\">\n")
         f.write("	<EventFiltering>\n")
-        f.write("		<RuleGroup name=\"\" groupRelation=\"or\">\n")
+        f.write("		<RuleGroup name=\"%s\" groupRelation=\"or\">\n" % rule_group_name)
         f.write("			<FileExecutableDetected onmatch=\"include\">\n")
 
         if md5_list:
