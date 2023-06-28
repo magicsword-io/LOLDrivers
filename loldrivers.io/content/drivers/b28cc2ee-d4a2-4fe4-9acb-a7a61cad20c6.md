@@ -275,7 +275,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/b28cc2ee-d4a2-4fe4-9acb-a7a61cad20c6.yaml)
 
-*last_updated:* 2023-06-24
+*last_updated:* 2023-06-28
 
 
 

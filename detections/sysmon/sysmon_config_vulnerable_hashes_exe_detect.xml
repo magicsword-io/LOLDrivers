@@ -1,7 +1,7 @@
 <Sysmon schemaversion="4.82">
 	<EventFiltering>
 		<RuleGroup name="" groupRelation="or">
-			<FileBlockExecutable onmatch="include">
+			<FileExecutableDetected onmatch="include">
                 <Hashes condition="contains">MD5=3a48f0e4297947663fbb11702aa1d728</Hashes>
                 <Hashes condition="contains">MD5=62f02339fe267dc7438f603bfb5431a1</Hashes>
                 <Hashes condition="contains">MD5=054299e09cea38df2b84e6b29348b418</Hashes>
@@ -2096,7 +2096,7 @@
                 <Hashes condition="contains">SHA256=0b542e47248611a1895018ec4f4033ea53464f259c74eb014d018b19ad818917</Hashes>
                 <Hashes condition="contains">SHA256=47f0cdaa2359a63ad1389ef4a635f1f6eee1f63bdf6ef177f114bdcdadc2e005</Hashes>
                 <Hashes condition="contains">SHA256=e7cbfb16261de1c7f009431d374d90e9eb049ba78246e38bc4c8b9e06f324b6f</Hashes>
-			</FileBlockExecutable>
+			</FileExecutableDetected>
 		</RuleGroup>
 	</EventFiltering>
 </Sysmon>
