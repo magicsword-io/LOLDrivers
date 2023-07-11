@@ -1,7 +1,7 @@
 import yaml
 import os
 from datetime import date
-
+import hashlib
 
 path_to_yml = "../yaml"
 path_to_yml = os.path.join(os.path.dirname(os.path.realpath(__file__)), path_to_yml)
@@ -358,7 +358,27 @@ def gen_sigma_rule_names(names_list):
             f.write("    - False positives may occur if one of the vulnerable driver names mentioned above didn't change its name between versions. So always make sure that the driver being loaded is the legitimate one and the non vulnerable version.\n")
             f.write("    - If you experience a lot of FP you could comment the driver name or its exact known legitimate location (when possible)\n")
             f.write("level: low\n")
+
+def gen_clamav_hash_list():
+    """
+    Generates ClamAV hash list in the format sha256_hash:filesize:signature_name.
+    """
+    drivers_path = 'drivers/' 
+    output_dir = 'detections/av/'
+    os.makedirs(output_dir, exist_ok=True)  # Create the directory if it doesn't exist
+    hdb_file = os.path.join(output_dir, 'LOLDrivers.hdb')
+
     
+    with open(hdb_file, 'w') as hdb:
+        for root, _, files in os.walk(drivers_path):
+            for file in files:
+                if file.endswith('.bin'):
+                    full_path = os.path.join(root, file)
+                    with open(full_path, 'rb') as f:
+                        data = f.read()
+                        sha256_hash = hashlib.sha256(data).hexdigest()
+                        filesize = os.path.getsize(full_path)
+                        hdb.write(f'{sha256_hash}:{filesize}:{file}\n')
 
 if __name__ == "__main__":
     
@@ -381,6 +401,7 @@ if __name__ == "__main__":
     gen_hashes_files(md5_list_boots, sha1_list_boots, sha256_list_boots, "samples_boots")
     gen_hashes_files(md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable, "samples_vulnerable")
     gen_hashes_files(md5_list_malicious, sha1_list_malicious, sha256_list_malicious, "samples_malicious")
+    gen_clamav_hash_list()
 
     print("[+] Generating authentihash samples...")
     # authentihash_samples
