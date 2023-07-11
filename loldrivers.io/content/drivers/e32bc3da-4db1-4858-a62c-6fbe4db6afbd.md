@@ -53,7 +53,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
 
 
 {{< /details >}}
@@ -81,7 +81,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 {{< details "Expand" >}}
 {{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
 
 {{< /details >}}
 
@@ -650,7 +650,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/e32bc3da-4db1-4858-a62c-6fbe4db6afbd.yaml)
 
-*last_updated:* 2023-06-28
+*last_updated:* 2023-07-11
 
 
 
