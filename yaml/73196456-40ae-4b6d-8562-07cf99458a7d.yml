@@ -145,7 +145,7 @@ KnownVulnerableSamples:
   - FltObjectDereference
   - FltRegisterFilter
   Signatures:
-  - CertificatesInfo: []
+  - CertificatesInfo: ''
     SignerInfo: ''
     Certificates:
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
@@ -154,18 +154,38 @@ KnownVulnerableSamples:
       ValidTo: '2020-12-30 23:59:59'
       Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
       ValidTo: '2020-12-29 23:59:59'
       Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-    - Subject: C=CN, ST=Beijing, L=Beijing, O=???????????????????????????????????????,
-        OU=RD, CN=???????????????????????????????????????
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+    - Subject: C=CN, ST=Beijing, L=Beijing, O=, OU=RD, CN=
       ValidFrom: '2015-07-27 00:00:00'
       ValidTo: '2016-08-25 23:59:59'
       Signature: cb382c80e762f190213e6d4d24123b8e2851f2775f1df964e29655c927f1395c81bd01aa4106ceba3895b1db2744a41d4b0bc9b4305f7f5826764c038808d14dd7d3429ffbf6cbac8462d86c176c36ca145a8b9298eed05a55f84731eff3f5e98f6d4d0d7bda39e2a1e8854362dff3bd1b9be33f4f34f97e1e74354f5afd2689260230c61481f8cc6bbba9659f47dd114e9991e9c0d9cb91453001dd604edd328454ecb389c37ebbfb4ed2477a9abbca65723363ffd0814ddff8248ff33129df16bcd5a47c4140d1ff4d245c2b3f2cbf39ca68fcba6377cfb455d3a564ebe8af38855b4482176763e1d9a63777a1112972edf7f0b7ebaecde68653b23acd229d
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 195c5f9885214bfb4f88dd2ad1f0be8c
+      Version: 3
+      TBS:
+        MD5: 29354273ffa68d860d2e9deb5fe3d602
+        SHA1: fa3d720490408dcaad3762167515dd5023710e1a
+        SHA256: f2be523e7f4c60d579119a390a4bfc10c4400b4e5104bc1187dd67cdde7491e0
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -173,6 +193,13 @@ KnownVulnerableSamples:
       ValidTo: '2021-02-22 19:35:17'
       Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -180,11 +207,50 @@ KnownVulnerableSamples:
       ValidTo: '2020-02-07 23:59:59'
       Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
     Signer:
     - SerialNumber: 195c5f9885214bfb4f88dd2ad1f0be8c
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: fcdc85906fc0d379ce5bd1f99cd4ec0e
+    SHA1: 862a2c25721e0e4bd332fd64324d347d1bcdc617
+    SHA256: 3b55a7c6f619060d5a89038de0943b3fe83d4653e92b8062581f97ba14bf51ea
+  Sections:
+    .text:
+      Entropy: 5.613631106472611
+      Virtual Size: '0x1b1ad'
+    .rdata:
+      Entropy: 5.0751353959883
+      Virtual Size: '0x3a28'
+    .data:
+      Entropy: 4.884576013154239
+      Virtual Size: '0x6c80'
+    .pdata:
+      Entropy: 5.001144635940318
+      Virtual Size: '0x9cc'
+    PAGE:
+      Entropy: 5.56864239699956
+      Virtual Size: '0xd0d'
+    INIT:
+      Entropy: 5.551018134028347
+      Virtual Size: '0xf62'
+    .rsrc:
+      Entropy: 3.234842024525819
+      Virtual Size: '0x318'
+    .reloc:
+      Entropy: 1.3741854163060885
+      Virtual Size: '0x18'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2015-12-21 00:56:08'
 - Filename: kEvP64.sys
   MD5: 7e7e3f5532b6af24dcc252ac4b240311
   SHA1: 3ccf1f3ac636a5e21b39ede48ff49fa23e05413f
@@ -312,7 +378,7 @@ KnownVulnerableSamples:
   - FltObjectDereference
   - FltRegisterFilter
   Signatures:
-  - CertificatesInfo: []
+  - CertificatesInfo: ''
     SignerInfo: ''
     Certificates:
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
@@ -321,18 +387,38 @@ KnownVulnerableSamples:
       ValidTo: '2020-12-30 23:59:59'
       Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
       ValidTo: '2020-12-29 23:59:59'
       Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-    - Subject: C=CN, ST=Beijing, L=Beijing, O=???????????????????????????????????????,
-        OU=RD, CN=???????????????????????????????????????
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+    - Subject: C=CN, ST=Beijing, L=Beijing, O=, OU=RD, CN=
       ValidFrom: '2015-07-27 00:00:00'
       ValidTo: '2016-08-25 23:59:59'
       Signature: cb382c80e762f190213e6d4d24123b8e2851f2775f1df964e29655c927f1395c81bd01aa4106ceba3895b1db2744a41d4b0bc9b4305f7f5826764c038808d14dd7d3429ffbf6cbac8462d86c176c36ca145a8b9298eed05a55f84731eff3f5e98f6d4d0d7bda39e2a1e8854362dff3bd1b9be33f4f34f97e1e74354f5afd2689260230c61481f8cc6bbba9659f47dd114e9991e9c0d9cb91453001dd604edd328454ecb389c37ebbfb4ed2477a9abbca65723363ffd0814ddff8248ff33129df16bcd5a47c4140d1ff4d245c2b3f2cbf39ca68fcba6377cfb455d3a564ebe8af38855b4482176763e1d9a63777a1112972edf7f0b7ebaecde68653b23acd229d
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 195c5f9885214bfb4f88dd2ad1f0be8c
+      Version: 3
+      TBS:
+        MD5: 29354273ffa68d860d2e9deb5fe3d602
+        SHA1: fa3d720490408dcaad3762167515dd5023710e1a
+        SHA256: f2be523e7f4c60d579119a390a4bfc10c4400b4e5104bc1187dd67cdde7491e0
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -340,6 +426,13 @@ KnownVulnerableSamples:
       ValidTo: '2021-02-22 19:35:17'
       Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -347,10 +440,49 @@ KnownVulnerableSamples:
       ValidTo: '2020-02-07 23:59:59'
       Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
     Signer:
     - SerialNumber: 195c5f9885214bfb4f88dd2ad1f0be8c
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: fcdc85906fc0d379ce5bd1f99cd4ec0e
+    SHA1: 862a2c25721e0e4bd332fd64324d347d1bcdc617
+    SHA256: 3b55a7c6f619060d5a89038de0943b3fe83d4653e92b8062581f97ba14bf51ea
+  Sections:
+    .text:
+      Entropy: 5.6112015272148374
+      Virtual Size: '0x1b49d'
+    .rdata:
+      Entropy: 5.075219300211116
+      Virtual Size: '0x3a28'
+    .data:
+      Entropy: 4.884576013154239
+      Virtual Size: '0x6c80'
+    .pdata:
+      Entropy: 4.9553740981969785
+      Virtual Size: '0x9e4'
+    PAGE:
+      Entropy: 5.596201545135429
+      Virtual Size: '0xd9d'
+    INIT:
+      Entropy: 5.553006501210225
+      Virtual Size: '0xf62'
+    .rsrc:
+      Entropy: 3.234842024525819
+      Virtual Size: '0x318'
+    .reloc:
+      Entropy: 1.3741854163060885
+      Virtual Size: '0x18'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2015-12-08 19:11:57'
 Tags:
 - kEvP64.sys
