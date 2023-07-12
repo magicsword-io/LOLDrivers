@@ -341,9 +341,9 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 | Authentihash MD5   | [9eea185193b6357a2bd97455572b650c](https://www.virustotal.com/gui/search/authentihash%253A9eea185193b6357a2bd97455572b650c) |
 | Authentihash SHA1  | [4ac29762ab2ad025a13a1e8cf7af9b7f4c875aac](https://www.virustotal.com/gui/search/authentihash%253A4ac29762ab2ad025a13a1e8cf7af9b7f4c875aac) |
 | Authentihash SHA256| [ca213b79336c69128620bc39e6d987c1e605299fb6525344ba1b08b7829197c7](https://www.virustotal.com/gui/search/authentihash%253Aca213b79336c69128620bc39e6d987c1e605299fb6525344ba1b08b7829197c7) |
-| RichPEHeaderHash MD5   | [dc3dfe1fda1d095e5fa3849e71bb1fb6](https://www.virustotal.com/gui/search/rich_pe_header_hash%253Adc3dfe1fda1d095e5fa3849e71bb1fb6) |
-| RichPEHeaderHash SHA1  | [772d5aa7af303c29b3901b79fcca7b061680e29e](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A772d5aa7af303c29b3901b79fcca7b061680e29e) |
-| RichPEHeaderHash SHA256| [82732fd11bdbc96fa1c3a0b827c338cc56c5c8d8bdae6c6a7a5006b7d611d9c2](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A82732fd11bdbc96fa1c3a0b827c338cc56c5c8d8bdae6c6a7a5006b7d611d9c2) |
+| RichPEHeaderHash MD5   | [b771c0bd9fe0e428b467b774d1cbc0bf](https://www.virustotal.com/gui/search/rich_pe_header_hash%253Ab771c0bd9fe0e428b467b774d1cbc0bf) |
+| RichPEHeaderHash SHA1  | [93b03b61a7b4b4efd2f85ff40709bdacae9d0a2a](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A93b03b61a7b4b4efd2f85ff40709bdacae9d0a2a) |
+| RichPEHeaderHash SHA256| [98f486ee105b32d3e054170a341c20d2874830b8f67bd00bf2479a10ed9497b1](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A98f486ee105b32d3e054170a341c20d2874830b8f67bd00bf2479a10ed9497b1) |
 | Company           | Insyde Software Corp. |
 | Description       | SEG Windows Driver x64 |
 | Product           | SEG Windows Driver x64 |
@@ -352,6 +352,76 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 #### Certificates
 
 {{< details "Expand" >}}
+###### Certificate 7e93ebfb7cc64e59ea4b9a77d406fc3b
+| Field                             | Value                      |
+|-----------------------------------|----------------------------|
+| ToBeSigned (TBS) MD5              | d0785ad36e427c92b19f6826ab1e8020  |
+| ToBeSigned (TBS) SHA1             | 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43 |
+| ToBeSigned (TBS) SHA256           | c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff |
+| Subject                           | C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA , G2 |
+| ValidFrom                         | 2012-12-21 00:00:00 |
+| ValidTo                           | 2020-12-30 23:59:59 |
+| Signature                         | 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6 |
+| SignatureAlgorithmOID             | 1.2.840.113549.1.1.5 |
+| IsCertificateAuthority            | True |
+| SerialNumber                      | 7e93ebfb7cc64e59ea4b9a77d406fc3b |
+| Version                           | 3 |
+###### Certificate 0ecff438c8febf356e04d86a981b1a50
+| Field                             | Value                      |
+|-----------------------------------|----------------------------|
+| ToBeSigned (TBS) MD5              | e9d38360b914c8863f6cba3ee58764d3  |
+| ToBeSigned (TBS) SHA1             | 4cba8eae47b6bf76f20b3504b98b8f062694a89b |
+| ToBeSigned (TBS) SHA256           | 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976 |
+| Subject                           | C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer , G4 |
+| ValidFrom                         | 2012-10-18 00:00:00 |
+| ValidTo                           | 2020-12-29 23:59:59 |
+| Signature                         | 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475 |
+| SignatureAlgorithmOID             | 1.2.840.113549.1.1.5 |
+| IsCertificateAuthority            | False |
+| SerialNumber                      | 0ecff438c8febf356e04d86a981b1a50 |
+| Version                           | 3 |
+###### Certificate 250ce8e030612e9f2b89f7054d7cf8fd
+| Field                             | Value                      |
+|-----------------------------------|----------------------------|
+| ToBeSigned (TBS) MD5              | 918d9eb6a6cd36c531eceb926170a7e1  |
+| ToBeSigned (TBS) SHA1             | 0ae95700d65e6f59715aa47048993ca7858e676a |
+| ToBeSigned (TBS) SHA256           | 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166 |
+| Subject                           | C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification Authority , G5 |
+| ValidFrom                         | 2006-11-08 00:00:00 |
+| ValidTo                           | 2021-11-07 23:59:59 |
+| Signature                         | 1302ddf8e88600f25af8f8200c59886207cecef74ef9bb59a198e5e138dd4ebc6618d3adeb18f20dc96d3e4a9420c33cbabd6554c6af44b310ad2c6b3eabd707b6b88163c5f95e2ee52a67cecd330c2ad7895603231fb3bee83a0859b4ec4535f78a5bff66cf50afc66d578d1978b7b9a2d157ea1f9a4bafbac98e127ec6bdff |
+| SignatureAlgorithmOID             | 1.2.840.113549.1.1.5 |
+| IsCertificateAuthority            | True |
+| SerialNumber                      | 250ce8e030612e9f2b89f7054d7cf8fd |
+| Version                           | 3 |
+###### Certificate 610c120600000000001b
+| Field                             | Value                      |
+|-----------------------------------|----------------------------|
+| ToBeSigned (TBS) MD5              | 53c41bc1164e09e0cd1617a5bf913efd  |
+| ToBeSigned (TBS) SHA1             | 93c03aac8951d494ecd5696b1c08658541b18727 |
+| ToBeSigned (TBS) SHA256           | 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b |
+| Subject                           | C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority |
+| ValidFrom                         | 2006-05-23 17:01:29 |
+| ValidTo                           | 2016-05-23 17:11:29 |
+| Signature                         | 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665 |
+| SignatureAlgorithmOID             | 1.2.840.113549.1.1.5 |
+| IsCertificateAuthority            | True |
+| SerialNumber                      | 610c120600000000001b |
+| Version                           | 3 |
+###### Certificate 0355af7ef9418e476d877eecd9f9e9e2
+| Field                             | Value                      |
+|-----------------------------------|----------------------------|
+| ToBeSigned (TBS) MD5              | 768c1a47836a7536fbc50e7be60e65ff  |
+| ToBeSigned (TBS) SHA1             | 569a77bd8a095070b13b75bc81cd0422f746daa3 |
+| ToBeSigned (TBS) SHA256           | d5289c20d1f89ac5000b691627764379d369c68ab7d53425baa8e83f09b5b369 |
+| Subject                           | C=TW, ST=Taiwan, L=Taipei, O=Insyde Software Corp., OU=Digital ID Class 3 , Microsoft Software Validation v2, CN=Insyde Software Corp. |
+| ValidFrom                         | 2012-12-28 00:00:00 |
+| ValidTo                           | 2016-01-27 23:59:59 |
+| Signature                         | 19cf4cfe8a901a2d50614d496664fcdaaa80098ec50cec3e3f56a3d08a399d96d13046789c8281a1a9bf1054c79351f73e091664da593dcd39ec4ad7077513b01270666042cb743d4cd2387b61067384d5ed20ee0773e7e61fc1a8a750c3882c6e64ad0f8819b91c19c50708510467ee34ac845fb0a68259e90c7dbef65dcc4b75c72fde8d954ef37d53bba6f00a40e1c85deeb81531772b07232f8e8fe791eac42ab152b5e970c008f14bdec7a7e1ac114bae73ae1ba4f3a525a169f37de670a9447f65653426abb77c6a8b7f91c2d5428a63059129ba94818d3f6cceac0e0790ddb23d56f598e0a9083fc8b92a3b100c0dc1729290ba44fb1538ac4cedf926 |
+| SignatureAlgorithmOID             | 1.2.840.113549.1.1.5 |
+| IsCertificateAuthority            | False |
+| SerialNumber                      | 0355af7ef9418e476d877eecd9f9e9e2 |
+| Version                           | 3 |
 ###### Certificate 5200e5aa2556fc1a86ed96c9d44b33c7
 | Field                             | Value                      |
 |-----------------------------------|----------------------------|
@@ -516,7 +586,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/a4aa80bc-4ecd-49ab-bc0f-0f49b07fdd7f.yaml)
 
-*last_updated:* 2023-07-11
+*last_updated:* 2023-07-12
 
 
 

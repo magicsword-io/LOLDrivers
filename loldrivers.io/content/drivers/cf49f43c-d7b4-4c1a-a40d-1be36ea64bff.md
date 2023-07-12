@@ -165,7 +165,7 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 | ToBeSigned (TBS) MD5              | e3f11dbfce17755c33f8e88f75d1920e  |
 | ToBeSigned (TBS) SHA1             | 78dcece49b4dbff1bd9a4d66644961c0805aef51 |
 | ToBeSigned (TBS) SHA256           | f8e8df9ee7f7b09507e2c889d366c16a4383d87ff22d2c01808b116a4898d5d3 |
-| Subject                           | ??=Private Organization, serialNumber=HRB 6186, ??=DE, ??=Bayern, ??=Kempten (Allgaeu), C=DE, ST=Bayern, L=Kempten (Allg??u), ??=Memminger Str. 151, O=3S,Smart Software Solutions GmbH, CN=3S,Smart Software Solutions GmbH, emailAddress=info@codesys.com |
+| Subject                           | ??=Private Organization, serialNumber=HRB 6186, ??=DE, ??=Bayern, ??=Kempten (Allgaeu), C=DE, ST=Bayern, L=Kempten (Allgu), ??=Memminger Str. 151, O=3S,Smart Software Solutions GmbH, CN=3S,Smart Software Solutions GmbH, emailAddress=info@codesys.com |
 | ValidFrom                         | 2019-02-01 15:34:02 |
 | ValidTo                           | 2021-02-01 15:34:02 |
 | Signature                         | 80dad6d1dcb4d50486f485a5309cfafec484503d27a24a02d63b1343782a476cf76e64e32c7dfc9aca28cbdcc636c4ce4da1da4dd72f613fa54c68489ee8331b4fc66399ea933533a946e4f30f64f2ee09d592c06d1482c128e6d2c8cf0b5321a919bece3e8338c86717291eb589575bd3780e66a24111a1fa3975ffd0df0e779cf4a3ec9ecb06a7a6d89e6467d9104742fe3be7af25d1adf7e3583159a852d82e64b7b4c5f9134dbab58e4d736204e1bfdf0a66121fd9cb0a674ffac58e4de9019444329e5dd5d81770c24fc4529c52f527f473cd2ecb27b97e68b2486db25f8c2c4ced516f0c18cf1cb4b36d09109d88d20ba6b5259f4b6405c5d268718a97 |
@@ -288,7 +288,7 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
       "SerialNumber": "60a8b030535055def1677cc6",
       "Signature": "80dad6d1dcb4d50486f485a5309cfafec484503d27a24a02d63b1343782a476cf76e64e32c7dfc9aca28cbdcc636c4ce4da1da4dd72f613fa54c68489ee8331b4fc66399ea933533a946e4f30f64f2ee09d592c06d1482c128e6d2c8cf0b5321a919bece3e8338c86717291eb589575bd3780e66a24111a1fa3975ffd0df0e779cf4a3ec9ecb06a7a6d89e6467d9104742fe3be7af25d1adf7e3583159a852d82e64b7b4c5f9134dbab58e4d736204e1bfdf0a66121fd9cb0a674ffac58e4de9019444329e5dd5d81770c24fc4529c52f527f473cd2ecb27b97e68b2486db25f8c2c4ced516f0c18cf1cb4b36d09109d88d20ba6b5259f4b6405c5d268718a97",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
-      "Subject": "??=Private Organization, serialNumber=HRB 6186, ??=DE, ??=Bayern, ??=Kempten (Allgaeu), C=DE, ST=Bayern, L=Kempten (Allg??u), ??=Memminger Str. 151, O=3S,Smart Software Solutions GmbH, CN=3S,Smart Software Solutions GmbH, emailAddress=info@codesys.com",
+      "Subject": "??=Private Organization, serialNumber=HRB 6186, ??=DE, ??=Bayern, ??=Kempten (Allgaeu), C=DE, ST=Bayern, L=Kempten (Allgu), ??=Memminger Str. 151, O=3S,Smart Software Solutions GmbH, CN=3S,Smart Software Solutions GmbH, emailAddress=info@codesys.com",
       "TBS": {
         "MD5": "e3f11dbfce17755c33f8e88f75d1920e",
         "SHA1": "78dcece49b4dbff1bd9a4d66644961c0805aef51",
@@ -318,7 +318,7 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cf49f43c-d7b4-4c1a-a40d-1be36ea64bff.yaml)
 
-*last_updated:* 2023-07-11
+*last_updated:* 2023-07-12
 
 
 

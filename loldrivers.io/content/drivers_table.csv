@@ -85,6 +85,7 @@
 [SysDrv3S.sys](drivers/cf49f43c-d7b4-4c1a-a40d-1be36ea64bff/),[0e53b58415fa68552928622118d5b8a3a851b2fc512709a90b63ba46acda8b6b](drivers/cf49f43c-d7b4-4c1a-a40d-1be36ea64bff/),Vulnerable driver,2023-05-22
 [GVCIDrv64.sys](drivers/7c83cb1a-a5ab-4ea0-aa69-0e9a1d09a82f/),[42f0b036687cbd7717c9efed6991c00d4e3e7b032dc965a2556c02177dfdad0f](drivers/7c83cb1a-a5ab-4ea0-aa69-0e9a1d09a82f/),Vulnerable driver,2023-01-09
 [EIO.sys](drivers/f654ad84-c61d-477c-a0b2-d153b927dfcc/),[b17507a3246020fa0052a172485d7b3567e0161747927f2edf27c40e310852e0](drivers/f654ad84-c61d-477c-a0b2-d153b927dfcc/),Vulnerable driver,2023-05-20
+[spwizimgVT.sys](drivers/b759adfa-b353-4ca3-9dfb-8fadf7a437eb/),[30061ef383e18e74bb067fbca69544f1a7544e8dc017d4e7633d8379aff4c3c3](drivers/b759adfa-b353-4ca3-9dfb-8fadf7a437eb/),Malicious,2023-07-12
 [AsIO64.sys](drivers/79692987-1dd0-41a0-a560-9a0441922e5a/),[b48a309ee0960da3caaaaf1e794e8c409993aeb3a2b64809f36b97aac8a1e62a](drivers/79692987-1dd0-41a0-a560-9a0441922e5a/),Vulnerable driver,2023-01-09
 [BS_Def64.sys](drivers/4a80da66-f8f1-4af9-ba56-696cfe6c1e10/),[0040153302b88bee27eb4f1eca6855039e1a057370f5e8c615724fa5215bada3](drivers/4a80da66-f8f1-4af9-ba56-696cfe6c1e10/),Vulnerable driver,2023-01-09
 [RwDrv.sys](drivers/b03798af-d25a-400b-9236-4643a802846f/),[1e0eb0811a7cf1bdaf29d3d2cab373ca51eb8d8b58889ab7728e2d3aed244abe](drivers/b03798af-d25a-400b-9236-4643a802846f/),Vulnerable driver,2023-05-06
@@ -93,7 +94,6 @@
 [MsIo64.sys](drivers/214654eb-90c4-48c8-a183-0157e50bf07f/),[0f035948848432bc243704041739e49b528f35c82a5be922d9e3b8a4c44398ff](drivers/214654eb-90c4-48c8-a183-0157e50bf07f/),Vulnerable driver,2023-05-06
 [WCPU.sys](drivers/7f645b95-4374-47ae-be1a-e4415308b550/),[159e7c5a12157af92e0d14a0d3ea116f91c09e21a9831486e6dc592c93c10980](drivers/7f645b95-4374-47ae-be1a-e4415308b550/),Vulnerable driver,2023-01-09
 [WinIo64A.sys](drivers/2cfede23-67f4-4af7-830f-c95ba30a43ae/),not available ,Vulnerable driver,2023-01-09
-[cpuz.sys](drivers/16d8962b-cf96-432f-8a43-d41f06828f56/),[0d3790af5f8e5c945410929e31d06144a471ac82f828afe89a4758a5bbeb7f9f](drivers/16d8962b-cf96-432f-8a43-d41f06828f56/),Vulnerable driver,2023-05-06
 [msrhook.sys](drivers/1a1cf88a-96d0-46cd-a24d-1535e4a5f6e3/),[6de84caa2ca18673e01b91af58220c60aecd5cccf269725ec3c7f226b2167492](drivers/1a1cf88a-96d0-46cd-a24d-1535e4a5f6e3/),Vulnerable driver,2023-01-09
 [wantd_2.sys](drivers/aa687f89-4f3b-4b59-b64e-fee5e2ae2310/),[6908ebf52eb19c6719a0b508d1e2128f198d10441551cbfb9f4031d382f5229f](drivers/aa687f89-4f3b-4b59-b64e-fee5e2ae2310/),Malicious,2023-02-28
 [elrawdsk.sys](drivers/205721b7-b83b-414a-b4b5-8bacb4a37777/),[4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6](drivers/205721b7-b83b-414a-b4b5-8bacb4a37777/),Vulnerable driver,2023-01-09
@@ -129,6 +129,7 @@
 [DirectIo32.sys](drivers/ee2d68aa-1a65-4967-8627-73590b041538/),[0be4912bfd7a79f6ebfa1c06a59f0fb402bd4fe0158265780509edd0e562eac1](drivers/ee2d68aa-1a65-4967-8627-73590b041538/),Vulnerable driver,2023-05-06
 [NodeDriver.sys](drivers/7a5fe570-3b35-4fad-b7d6-7518bd5436a0/),[05b146a48a69dd62a02759487e769bd30d39f16374bc76c86453b4ae59e7ffa4](drivers/7a5fe570-3b35-4fad-b7d6-7518bd5436a0/),Malicious,2023-03-02
 [kprocesshacker.sys](drivers/1ae6cfc4-ca70-4148-ba1c-e46cc6bfc548/),[70211a3f90376bbc61f49c22a63075d1d4ddd53f0aefa976216c46e6ba39a9f4](drivers/1ae6cfc4-ca70-4148-ba1c-e46cc6bfc548/),Vulnerable driver,2023-01-09
+[cpuz.sys](drivers/16d8962b-cf96-432f-8a43-d41f06828f56/),[0d3790af5f8e5c945410929e31d06144a471ac82f828afe89a4758a5bbeb7f9f](drivers/16d8962b-cf96-432f-8a43-d41f06828f56/),Vulnerable driver,2023-05-06
 [viragt.sys](drivers/39742f99-2180-46d7-8538-56667c935cc3/),[e05eeb2b8c18ad2cb2d1038c043d770a0d51b96b748bc34be3e7fc6f3790ce53](drivers/39742f99-2180-46d7-8538-56667c935cc3/),Vulnerable driver,2023-01-09
 [HpPortIox64.sys](drivers/13637210-2e1c-45a4-9f76-fe38c3c34264/),[a4680fabf606d6580893434e81c130ff7ec9467a15e6534692443465f264d3c9](drivers/13637210-2e1c-45a4-9f76-fe38c3c34264/),Vulnerable driver,2023-05-06
 [Proxy32.sys](drivers/0d0d204b-f6ce-4ce4-8d76-1724a1676c3f/),[49ed27460730b62403c1d2e4930573121ab0c86c442854bc0a62415ca445a810](drivers/0d0d204b-f6ce-4ce4-8d76-1724a1676c3f/),Vulnerable driver,2023-01-09
@@ -154,6 +155,7 @@
 [SANDRA](drivers/a7628504-9e35-4e42-91f7-0c0a512549f4/),[3e274df646f191d2705c0beaa35eeea84808593c3b333809f13632782e27ad75](drivers/a7628504-9e35-4e42-91f7-0c0a512549f4/),Vulnerable driver,2023-05-06
 [netfilterdrv.sys](drivers/f1dcb0e4-aa53-4e62-ab09-fb7b4a356916/),not available ,Vulnerable driver,2023-01-09
 [PCHunter.sys](drivers/a261cd64-0d04-4bf5-ad73-f3bb96bf83cf/),[1b7fb154a7b7903a3c81f12f4b094f24a3c60a6a8cffca894c67c264ab7545fa](drivers/a261cd64-0d04-4bf5-ad73-f3bb96bf83cf/),Vulnerable driver,2023-01-09
+[834761775.sys](drivers/66813e1f-13c8-4884-931a-62b46350c345/),[24c900024d213549502301c366d18c318887630f04c96bf0a3d6ba74e0df164f](drivers/66813e1f-13c8-4884-931a-62b46350c345/),Malicious,2023-07-12
 [2.sys](drivers/0c0198a3-5c63-4a9b-abe9-88a810602329/),[88076e98d45ed3adf0c5355411fe8ca793eb7cec1a1c61f5e1ec337eae267463](drivers/0c0198a3-5c63-4a9b-abe9-88a810602329/),Malicious,2023-03-04
 [ASIO32.sys](drivers/920e3326-e5dc-446a-9993-6ec05266e0e0/),not available ,Vulnerable driver,2023-01-09
 [UCOREW64.SYS](drivers/a338a9fc-9fe3-400c-9fe4-69bb7892602d/),[a7c8f4faf3cbb088cac7753d81f8ec4c38ccb97cd9da817741f49272e8d01200](drivers/a338a9fc-9fe3-400c-9fe4-69bb7892602d/),Vulnerable driver,2023-01-09
@@ -173,6 +175,7 @@
 [physmem.sys](drivers/f4c22f4d-eff8-40c5-8b31-146abe5f17b7/),not available ,Vulnerable driver,2023-01-09
 [driver7-x86-withoutdbg.sys](drivers/d9f2c3d6-160c-4eb3-8547-894fcf810342/),[927c2a580d51a598177fa54c65e9d2610f5f212f1b6cb2fbf2740b64368f010a](drivers/d9f2c3d6-160c-4eb3-8547-894fcf810342/),Vulnerable driver,2023-01-09
 [daxin_blank3.sys](drivers/9748d5c8-62dd-474b-a336-0aadb49e5ff9/),[7a7e8df7173387aec593e4fe2b45520ea3156c5f810d2bb1b2784efd1c922376](drivers/9748d5c8-62dd-474b-a336-0aadb49e5ff9/),Malicious,2023-02-28
+[telephonuAfY.sys](drivers/0d039ee9-aaa5-49c2-a980-405d4290ee0a/),[87565ff08a93a8ff41ea932bf55dec8e0c7e79aba036507ea45df9d81cb36105](drivers/0d039ee9-aaa5-49c2-a980-405d4290ee0a/),Malicious,2023-07-11
 [d4.sys](drivers/c2e70ee6-2f13-4d43-ad5a-c2bf033cc457/),[823da894b2c73ffcd39e77366b6f1abf0ae9604d9b20140a54e6d55053aadeba](drivers/c2e70ee6-2f13-4d43-ad5a-c2bf033cc457/),Vulnerable driver,2023-01-09
 [ntbios.sys](drivers/eef1fcf4-8c54-420b-8d38-9c5f95129dcc/),[96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc](drivers/eef1fcf4-8c54-420b-8d38-9c5f95129dcc/),Malicious,2023-02-28
 [Air_SYSTEM10.sys](drivers/0eb5f4ce-12a7-4b45-b021-42b995de07c5/),[f461414a2596555cece5cfee65a3c22648db0082ca211f6238af8230e41b3212](drivers/0eb5f4ce-12a7-4b45-b021-42b995de07c5/),Malicious,2023-03-03
@@ -224,6 +227,7 @@
 [dbk64.sys](drivers/1524a54d-520d-4fa4-a7d5-aaaa066fbfc4/),[18e1707b319c279c7e0204074088cc39286007a1cf6cb6e269d5067d8d0628c6](drivers/1524a54d-520d-4fa4-a7d5-aaaa066fbfc4/),Vulnerable driver,2023-01-09
 [iomem64.sys](drivers/04d377f9-36e0-42a4-8d47-62232163dc68/),[3d23bdbaf9905259d858df5bf991eb23d2dc9f4ecda7f9f77839691acef1b8c4](drivers/04d377f9-36e0-42a4-8d47-62232163dc68/),Vulnerable driver,2023-01-09
 [AsrDrv103.sys](drivers/32ccd436-eb13-4ab3-83d4-3e5471f4e364/),[2003b478b9fd1b3d76ec5bf4172c2e8915babbbee7ad1783794acbf8d4c2519d](drivers/32ccd436-eb13-4ab3-83d4-3e5471f4e364/),Vulnerable driver,2023-01-09
+[reddriver.sys](drivers/87593c63-9e3e-4d09-aa47-94bca0783396/),[82b0e1d7a27b67f0e6dc39dc41e880bdaef5d1f69fcec38e08da2ed78e805ef9](drivers/87593c63-9e3e-4d09-aa47-94bca0783396/),Malicious,2023-07-12
 [7.sys](drivers/f7f88ef4-ada4-4210-a40d-9d84142ef0fb/),[6839fcae985774427c65fe38e773aa96ec451a412caa5354ad9e2b9b54ffe6c1](drivers/f7f88ef4-ada4-4210-a40d-9d84142ef0fb/),Malicious,2023-03-04
 [d2.sys](drivers/d05a0a6c-c037-4647-99ac-c41593190223/),[cb57f3a7fe9e1f8e63332c563b0a319b26c944be839eabc03e9a3277756ba612](drivers/d05a0a6c-c037-4647-99ac-c41593190223/),Vulnerable driver,2023-01-09
 [amsdk.sys](drivers/a285591e-ad3c-46a3-a648-c58589ff5efc/),[6f55c148bb27c14408cf0f16f344abcd63539174ac855e510a42d78cfaec451c](drivers/a285591e-ad3c-46a3-a648-c58589ff5efc/),Vulnerable driver,2023-05-22
@@ -240,6 +244,7 @@
 [KfeCo10X64.sys](drivers/3e0bf6dc-791b-4170-8c40-427e7299d93d/),[b583414fcee280128788f7b39451c511376fe821f455d4f3702795e96d560704](drivers/3e0bf6dc-791b-4170-8c40-427e7299d93d/),Vulnerable driver,2023-05-12
 [wfshbr64.sys](drivers/ddf661c0-7dfc-4c26-89c5-00cd6a81a139/),[b8807e365be2813b7eccd2e4c49afb0d1e131086715638b7a6307cd7d7e9556c](drivers/ddf661c0-7dfc-4c26-89c5-00cd6a81a139/),Malicious,2023-06-05
 [GLCKIO2.sys](drivers/868c6920-f6cb-4088-8277-095a1358abe1/),[3a5ec83fe670e5e23aef3afa0a7241053f5b6be5e6ca01766d6b5f9177183c25](drivers/868c6920-f6cb-4088-8277-095a1358abe1/),Vulnerable driver,2023-01-09
+[typelibdE.sys](drivers/9713603a-53bf-4907-a304-b422db741fc6/),[4f02aed3750bc6a924c75e774404f259f721d8f4081ed68aa01cf73ca5430f85](drivers/9713603a-53bf-4907-a304-b422db741fc6/),Malicious,2023-07-12
 [ndislan.sys](drivers/ca1e8664-841f-4e4b-9e67-3f515cc249c6/),[b0eb4d999e4e0e7c2e33ff081e847c87b49940eb24a9e0794c6aa9516832c427](drivers/ca1e8664-841f-4e4b-9e67-3f515cc249c6/),Malicious,2023-02-28
 [libnicm.sys](drivers/2b949a0d-939f-456a-a34f-4589d7712227/),[95d50c69cdbf10c9c9d61e64fe864ac91e6f6caa637d128eb20e1d3510e776d3](drivers/2b949a0d-939f-456a-a34f-4589d7712227/),Vulnerable driver,2023-01-09
 [elbycdio.sys](drivers/855ade1f-8a9e-4c9d-ab8e-d7e409609852/),[eea53103e7a5a55dc1df79797395a2a3e96123ebd71cdd2db4b1be80e7b3f02b](drivers/855ade1f-8a9e-4c9d-ab8e-d7e409609852/),Vulnerable driver,2023-01-09
@@ -253,6 +258,7 @@
 [nt3.sys](drivers/d5118882-6cdd-4b06-8bf4-e9818f16137e/),[7d8937c18d6e11a0952e53970a0934cf0e65515637ac24d6ca52ccf4b93d385f](drivers/d5118882-6cdd-4b06-8bf4-e9818f16137e/),Vulnerable driver,2023-01-09
 [otipcibus.sys](drivers/17cf4fac-88f1-467d-9f62-481d33accc5b/),[4e3eb5b9bce2fd9f6878ae36288211f0997f6149aa8c290ed91228ba4cdfae80](drivers/17cf4fac-88f1-467d-9f62-481d33accc5b/),Vulnerable driver,2023-01-09
 [atillk64.sys](drivers/10b1fc3d-c444-4885-8ca9-4b5891885507/),[38bb9751a3a1f072d518afe6921a66ee6d5cf6d25bc50af49e1925f20d75d4d7](drivers/10b1fc3d-c444-4885-8ca9-4b5891885507/),Vulnerable driver,2023-05-06
+[NlsLexicons0024UvN.sys](drivers/18a842be-681a-4f32-97fd-57cb72ff5f3a/),[7a84703552ae032a0d1699a081e422ed6c958bbe56d5b41839c8bfa6395bee1d](drivers/18a842be-681a-4f32-97fd-57cb72ff5f3a/),Malicious,2023-07-12
 [atillk64.sys](drivers/61514cbd-6f34-4a3e-a022-9ecbccc16feb/),[5c04c274a708c9a7d993e33be3ea9e6119dc29527a767410dbaf93996f87369a](drivers/61514cbd-6f34-4a3e-a022-9ecbccc16feb/),Vulnerable driver,2023-01-09
 [WYProxy64.sys](drivers/f93e88c2-d0e8-4347-869f-efa568955e9d/),[fafa1bb36f0ac34b762a10e9f327dcab2152a6d0b16a19697362d49a31e7f566](drivers/f93e88c2-d0e8-4347-869f-efa568955e9d/),Vulnerable driver,2023-01-09
 [windows8-10-32.sys](drivers/7437388f-821e-421f-a3c1-62ce2c725a6a/),[5b9623da9ba8e5c80c49473f40ffe7ad315dcadffc3230afdc9d9226d60a715a](drivers/7437388f-821e-421f-a3c1-62ce2c725a6a/),Vulnerable driver,2023-01-09
@@ -263,6 +269,7 @@
 [procexp.Sys](drivers/0567c6c4-282f-406f-9369-7f876b899c25/),[075de997497262a9d105afeadaaefc6348b25ce0e0126505c24aa9396c251e85](drivers/0567c6c4-282f-406f-9369-7f876b899c25/),Vulnerable driver,2023-05-06
 [daxin_blank6.sys](drivers/3d1439e9-9a7d-497a-8c6c-74513f825d6a/),[e6a7b0bc01a627a7d0ffb07faddb3a4dd96b6f5208ac26107bdaeb3ab1ec8217](drivers/3d1439e9-9a7d-497a-8c6c-74513f825d6a/),Malicious,2023-02-28
 [POORTRY2.sys](drivers/618fbf89-f4e3-4b2a-a4b4-cc4bf7c180e0/),[9bb09752cf3a464455422909edef518ac18fe63cf5e1e8d9d6c2e68db62e0c87](drivers/618fbf89-f4e3-4b2a-a4b4-cc4bf7c180e0/),Malicious,2023-03-04
+[ktmutil7ODM.sys](drivers/809e7c77-f0fa-46fb-862c-71969ae0c032/),[751e9376cb7cb9de63e1808d43579d787d3f6d659173038fe44a2d7fdb4fd17e](drivers/809e7c77-f0fa-46fb-862c-71969ae0c032/),Malicious,2023-07-12
 [daxin_blank5.sys](drivers/0590655c-baa2-481a-b909-463534bd7a5e/),[9c2f3e9811f7d0c7463eaa1ee6f39c23f902f3797b80891590b43bbe0fdf0e51](drivers/0590655c-baa2-481a-b909-463534bd7a5e/),Malicious,2023-02-28
 [NetProxyDriver.sys](drivers/c1ece07b-e92a-4050-95ee-90e03aa82120/),[8111085022bda87e5f6aa4c195e743cc6dd6a3a6d41add475d267dc6b105a69f](drivers/c1ece07b-e92a-4050-95ee-90e03aa82120/),Vulnerable driver,2023-01-09
 [DirectIo.sys](drivers/ce2d41fd-908f-414c-b6b5-338298f425b8/),[4422851a0a102f654e95d3b79c357ae3af1b096d7d1576663c027cfbc04abaf9](drivers/ce2d41fd-908f-414c-b6b5-338298f425b8/),Vulnerable driver,2023-01-09
