@@ -5,15 +5,16 @@ MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
-  Command: sc.exe create kprocesshacker.sys binPath=C:\windows\temp\kprocesshacker.sys type=kernel && sc.exe start kprocesshacker.sys
+  Command: sc.exe create kprocesshacker.sys binPath=C:\windows\temp\kprocesshacker.sys
+    type=kernel && sc.exe start kprocesshacker.sys
   Description: ''
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
-- 'https://github.com/jbaines-r7/dellicious'
-- 'https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
-- 'https://github.com/ZeroMemoryEx/Overlord'
+- https://github.com/jbaines-r7/dellicious
+- https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+- https://github.com/ZeroMemoryEx/Overlord
 Acknowledgement:
   Person: ''
   Handle: ''
