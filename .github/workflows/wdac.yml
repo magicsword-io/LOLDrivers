@@ -9,29 +9,16 @@ on:
 
 jobs:
   generate-wdac:
-    runs-on: windows-latest
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v3
       with:
         submodules: false
         lfs: true
-    - name: Download PowerShell
-      shell: powershell
-      run: |
-        Invoke-WebRequest -Uri "https://github.com/PowerShell/PowerShell/releases/download/v7.3.4/PowerShell-7.3.4-win-x64.msi" -OutFile "PowerShell-7.3.4-win-x64.msi"
-    - name: Install PowerShell
-      shell: powershell
-      run: |
-        Start-Process -Wait -FilePath msiexec.exe -ArgumentList '/package PowerShell-7.3.4-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1'
     - name: Check PowerShell version
       shell: pwsh
       run: |
         Write-Output "PowerShell version: $($PSVersionTable.PSVersion)"
-    - name: Install WDACConfig module
-      shell: pwsh
-      run: |
-        Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
-        Install-Module -Name WDACConfig -Force
     - name: List drivers directory
       shell: pwsh
       run: |
