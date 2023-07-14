@@ -15,6 +15,10 @@ jobs:
       with:
         submodules: false
         lfs: true
+    - name: Setup PowerShell
+      uses: actions/setup-powershell@v1.0.2
+      with:
+        powershell-version: 7.3.4
     - name: Check PowerShell version
       shell: pwsh
       run: |
