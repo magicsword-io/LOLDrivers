@@ -15,59 +15,18 @@ jobs:
       with:
         submodules: false
         lfs: true
-    - name: Create audit policy
+    - name: Install WDACConfig module
       shell: powershell
       run: |
-        if(!(Test-Path -Path .\detections\wdac\)){
-          New-Item -ItemType Directory -Path .\detections\wdac\ -Force
-        }
-        Get-ChildItem .\drivers\*.bin | Rename-Item -newname { $_.name -replace '.bin','.sys' };
-        New-CIPolicy -Audit -ScanPath .\drivers\ -UserPEs -Level Hash -FilePath .\detections\wdac\AuditPolicy.xml
-    - name: Create deny policy
+        Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
+        Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+        Install-Module -Name WDACConfig -Force
+    - name: Create WDAC Deny Configuration
       shell: powershell
       run: |
-        if(!(Test-Path -Path .\detections\wdac\)){
-          New-Item -ItemType Directory -Path .\detections\wdac\ -Force
-        }
-        Get-ChildItem .\drivers\*.bin | Rename-Item -newname { $_.name -replace '.bin','.sys' };
-        $drivers = Get-SystemDriver -ScanPath .\drivers\ -NoShadowCopy;
-        $NewDriverRules = New-CIPolicyRule -DriverFiles $drivers -Level Hash;
-        Merge-CIPolicy -OutputFilePath .\detections\wdac\DenyPolicy.xml -PolicyPaths C:\Windows\schemas\CodeIntegrity\ExamplePolicies\AllowAll.xml -Rules $NewDriverRules | Out-Null;
-    - name: Create supplemental policy
-      shell: powershell
-      run: |
-        # Create supplemental policy based on the deny policy
-        ConvertFrom-CIPolicy -XmlFilePath .\detections\wdac\DenyPolicy.xml -BinaryFilePath .\detections\wdac\SupplementalPolicy.bin
+        New-DenyWDACConfig -drivers -PolicyName "LOLDrivers Deny" -ScanLocations .\drivers\
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
         name: WDAC Policies
-        path: ./detections/wdac/*
-    - name: Test drivers
-      shell: powershell
-      run: |
-        $i = 0
-        (Get-ChildItem .\drivers\).FullName | ForEach-Object {
-          New-Service -BinaryPathName $_ -Name "DriverTest$i" -Description $_ -StartupType Manual
-          Start-Service -Name "DriverTest$i" -ErrorAction SilentlyContinue
-          $i++
-        }
-        $logName = 'Microsoft-Windows-CodeIntegrity/Operational'
-        $log = New-Object System.Diagnostics.Eventing.Reader.EventLogConfiguration $logName
-        $log.MaximumSizeInBytes = '50000000'
-        $log.IsEnabled = $true
-        $log.SaveChanges()
-        $ScriptBlock = {
-          foreach ($event in Get-WinEvent -FilterHashtable @{LogName = 'Microsoft-Windows-CodeIntegrity/Operational'; ID = 3077 } -ErrorAction SilentlyContinue ) {
-            $xml = [xml]$event.toxml()
-            $xml.event.eventdata.data | ForEach-Object { $hash = @{} } { $hash[$_.name] = $_.'#text' } { [pscustomobject]$hash } |
-            Select-Object -Property 'SHA256 Hash' , 'File Name', 'OriginalFileName', 'ProductName', 'InternalName', 'FileDescription', 'FileVersion', 'SHA1 Hash', 'USN'
-          }        
-        }
-        $Results = Invoke-Command -ScriptBlock $ScriptBlock
-        $Results | Out-File -FilePath .\detections\wdac\TestResults.txt
-    - name: Upload test results
-      uses: actions/upload-artifact@v3
-      with:
-        name: Test Results
-        path: ./detections/wdac/TestResults.txt
+        path: ./detections/wdac/*.xml
