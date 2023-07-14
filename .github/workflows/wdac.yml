@@ -33,8 +33,13 @@ jobs:
         $drivers = Get-SystemDriver -ScanPath .\drivers\ -NoShadowCopy;
         $NewDriverRules = New-CIPolicyRule -DriverFiles $drivers -Level Hash;
         Merge-CIPolicy -OutputFilePath .\detections\wdac\DenyPolicy.xml -PolicyPaths C:\Windows\schemas\CodeIntegrity\ExamplePolicies\AllowAll.xml -Rules $NewDriverRules | Out-Null;
+    - name: Create supplemental policy
+      shell: powershell
+      run: |
+        # Create supplemental policy based on the deny policy
+        ConvertFrom-CIPolicy -XmlFilePath .\detections\wdac\DenyPolicy.xml -BinaryFilePath .\detections\wdac\SupplementalPolicy.bin
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
         name: WDAC Policies
-        path: ./detections/wdac/*.xml
+        path: ./detections/wdac/*
