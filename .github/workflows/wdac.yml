@@ -35,6 +35,21 @@ jobs:
     - name: Create WDAC Deny Configuration
       shell: pwsh
       run: |
+        # Get the module path
+        $modulePath = (Get-Module -Name WDACConfig -ListAvailable).ModuleBase
+
+        # Construct the path to the Resources.ps1 file
+        $resourcesFilePath = Join-Path -Path $modulePath -ChildPath 'Resources.ps1'
+
+        # Load the script content into a variable
+        $scriptContent = Get-Content -Path $resourcesFilePath -Raw
+
+        # Remove the undesired line
+        $scriptContent = $scriptContent -replace 'if \(-NOT \(\[System\.Environment\]::OSVersion\.Version -ge ''10\.0\.22621''\)\) { Write-Error -Message "You''re not using Windows 11 22H2, exitting\.\.\." }', ''
+
+        # Save the modified content back to the file
+        $scriptContent | Set-Content -Path $resourcesFilePath
+
         New-DenyWDACConfig -drivers -PolicyName "LOLDrivers Deny" -ScanLocations .\drivers\
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
