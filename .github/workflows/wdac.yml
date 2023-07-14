@@ -33,8 +33,17 @@ jobs:
             Write-Output $_.Exception.StackTrace
             exit 1
         }
+    - name: List policy directory
+      shell: pwsh
+      run: |
+        Get-ChildItem -Path ./detections/wdac/
+    - name: List current directory
+      shell: pwsh
+      run: |
+        Get-ChildItem -Path ./
+
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
         name: WDAC Policies
-        path: ./detections/wdac/LOLDriversDeny.xml
+        path: ./*.xml
