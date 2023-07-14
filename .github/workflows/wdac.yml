@@ -22,7 +22,7 @@ jobs:
           New-Item -ItemType Directory -Path .\detections\wdac\ -Force
         }
         Get-ChildItem .\drivers\*.bin | Rename-Item -newname { $_.name -replace '.bin','.sys' };
-        New-CIPolicy -Audit -ScanPath .\drivers\ -UserPEs -Level Hash -OutputFilePath .\detections\wdac\AuditPolicy.xml
+        New-CIPolicy -Audit -ScanPath .\drivers\ -UserPEs -Level Hash -FilePath .\detections\wdac\AuditPolicy.xml
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
