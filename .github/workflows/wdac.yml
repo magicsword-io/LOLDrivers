@@ -49,13 +49,23 @@ jobs:
             New-Item -ItemType Directory -Path ./detections/wdac/
         }
         Move-Item -Path ./*.xml -Destination ./detections/wdac/
+    - name: Clean up test services before testing
+      shell: powershell
+      run: |
+        $i = 0
+        while (Get-Service -Name "DriverTest$i" -ErrorAction SilentlyContinue) {
+          Stop-Service -Name "DriverTest$i" -Force -ErrorAction SilentlyContinue
+          Remove-Service -Name "DriverTest$i" -ErrorAction SilentlyContinue
+          $i++
+        }
     - name: Test drivers
       shell: powershell
       run: |
         $i = 0
         (Get-ChildItem .\drivers\).FullName | ForEach-Object {
-          New-Service -BinaryPathName $_ -Name "DriverTest$i" -Description $_ -StartupType Manual
-          Start-Service -Name "DriverTest$i" -ErrorAction SilentlyContinue
+          $serviceName = "DriverTest$i"
+          New-Service -BinaryPathName $_ -Name $serviceName -Description $_ -StartupType Manual
+          Start-Service -Name $serviceName -ErrorAction SilentlyContinue
           $i++
         }
         $logName = 'Microsoft-Windows-CodeIntegrity/Operational'
@@ -71,8 +81,16 @@ jobs:
           }        
         }
         $Results = Invoke-Command -ScriptBlock $ScriptBlock
-        $Results 
         $Results | Out-File -FilePath .\detections\wdac\TestResults.txt
+    - name: Clean up test services after testing
+      shell: powershell
+      run: |
+        $i = 0
+        while (Get-Service -Name "DriverTest$i" -ErrorAction SilentlyContinue) {
+          Stop-Service -Name "DriverTest$i" -Force -ErrorAction SilentlyContinue
+          Remove-Service -Name "DriverTest$i" -ErrorAction SilentlyContinue
+          $i++
+        }
     - name: Upload test results
       uses: actions/upload-artifact@v3
       with:
