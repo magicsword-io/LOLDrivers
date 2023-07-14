@@ -15,19 +15,29 @@ jobs:
       with:
         submodules: false
         lfs: true
-    - name: Setup PowerShell
-      uses: actions/setup-powershell@v1
-      with:
-        powershell-version: '7.4.0-preview.4'
+    - name: Check PowerShell version
+      shell: pwsh
+      run: |
+        Write-Output "PowerShell version: $($PSVersionTable.PSVersion)"
     - name: Install WDACConfig module
       shell: pwsh
       run: |
+        # Check PowerShell version
+        if ($PSVersionTable.PSVersion -lt [Version]'7.3.4') {
+            Write-Error "PowerShell version 7.3.4 or higher is required."
+            exit 1
+        }
         Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
         Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
         Install-Module -Name WDACConfig -Force
     - name: Create WDAC Deny Configuration
       shell: pwsh
       run: |
+        # Check PowerShell version
+        if ($PSVersionTable.PSVersion -lt [Version]'7.3.4') {
+            Write-Error "PowerShell version 7.3.4 or higher is required."
+            exit 1
+        }
         New-DenyWDACConfig -drivers -PolicyName "LOLDrivers Deny" -ScanLocations .\drivers\
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
