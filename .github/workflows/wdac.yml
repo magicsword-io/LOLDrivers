@@ -53,11 +53,15 @@ jobs:
       shell: powershell
       run: |
         $i = 0
-        while (Get-Service -Name "DriverTest$i" -ErrorAction SilentlyContinue) {
-          Stop-Service -Name "DriverTest$i" -Force -ErrorAction SilentlyContinue
-          Remove-Service -Name "DriverTest$i" -ErrorAction SilentlyContinue
+        while ($service = Get-Service -Name "DriverTest$i" -ErrorAction SilentlyContinue) {
+          do {
+            Stop-Service -Name "DriverTest$i" -Force -ErrorAction SilentlyContinue
+            Remove-Service -Name "DriverTest$i" -ErrorAction SilentlyContinue
+            Start-Sleep -Seconds 1
+          } while ($service = Get-Service -Name "DriverTest$i" -ErrorAction SilentlyContinue)
           $i++
         }
+
     - name: Test drivers
       shell: powershell
       run: |
