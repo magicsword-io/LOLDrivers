@@ -24,7 +24,7 @@ jobs:
     - name: Create WDAC Deny Configuration
       shell: powershell
       run: |
-        New-DenyWDACConfig -drivers -PolicyName "LOLDrivers Deny" -ScanLocations .\drivers\
+        New-DenyWDACConfig -Normal -drivers -PolicyName "LOLDrivers Deny" -ScanLocations .\drivers\
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
