@@ -15,10 +15,14 @@ jobs:
       with:
         submodules: false
         lfs: true
-    - name: Setup PowerShell
-      uses: actions/setup-powershell@v1.0.2
-      with:
-        powershell-version: 7.3.4
+    - name: Download PowerShell
+      shell: powershell
+      run: |
+        Invoke-WebRequest -Uri "https://github.com/PowerShell/PowerShell/releases/download/v7.3.4/PowerShell-7.3.4-win-x64.msi" -OutFile "PowerShell-7.3.4-win-x64.msi"
+    - name: Install PowerShell
+      shell: powershell
+      run: |
+        Start-Process -Wait -FilePath msiexec.exe -ArgumentList '/package PowerShell-7.3.4-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1'
     - name: Check PowerShell version
       shell: pwsh
       run: |
@@ -26,22 +30,12 @@ jobs:
     - name: Install WDACConfig module
       shell: pwsh
       run: |
-        # Check PowerShell version
-        if ($PSVersionTable.PSVersion -lt [Version]'7.3.4') {
-            Write-Error "PowerShell version 7.3.4 or higher is required."
-            exit 1
-        }
         Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
         Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
         Install-Module -Name WDACConfig -Force
     - name: Create WDAC Deny Configuration
       shell: pwsh
       run: |
-        # Check PowerShell version
-        if ($PSVersionTable.PSVersion -lt [Version]'7.3.4') {
-            Write-Error "PowerShell version 7.3.4 or higher is required."
-            exit 1
-        }
         New-DenyWDACConfig -drivers -PolicyName "LOLDrivers Deny" -ScanLocations .\drivers\
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
