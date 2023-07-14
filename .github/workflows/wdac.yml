@@ -32,6 +32,10 @@ jobs:
       run: |
         Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
         Install-Module -Name WDACConfig -Force
+    - name: List drivers directory
+      shell: pwsh
+      run: |
+        Get-ChildItem -Path .\drivers\
     - name: Create WDAC Deny Configuration
       shell: pwsh
       run: |
@@ -50,7 +54,13 @@ jobs:
         # Save the modified content back to the file
         $scriptContent | Set-Content -Path $resourcesFilePath
 
-        New-DenyWDACConfig -drivers -PolicyName "LOLDrivers Deny" -ScanLocations .\drivers\
+        try {
+            New-DenyWDACConfig -drivers -PolicyName "LOLDrivers Deny" -ScanLocations .\drivers\
+        } catch {
+            Write-Output $_.Exception.Message
+            Write-Output $_.Exception.StackTrace
+            exit 1
+        }
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
