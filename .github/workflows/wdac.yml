@@ -22,9 +22,7 @@ jobs:
           New-Item -ItemType Directory -Path .\detections\wdac\ -Force
         }
         Get-ChildItem .\drivers\*.bin | Rename-Item -newname { $_.name -replace '.bin','.sys' };
-        $drivers = Get-SystemDriver -ScanPath .\drivers\ -NoShadowCopy;
-        $NewDriverRules = New-CIPolicyRule -DriverFiles $drivers -Level Hash -Audit;
-        Merge-CIPolicy -OutputFilePath .\detections\wdac\AuditPolicy.xml -PolicyPaths C:\Windows\schemas\CodeIntegrity\ExamplePolicies\AllowAll.xml -Rules $NewDriverRules | Out-Null;
+        New-CIPolicy -Audit -ScanPath .\drivers\ -UserPEs -Level Hash -OutputFilePath .\detections\wdac\AuditPolicy.xml
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
