@@ -27,7 +27,7 @@ jobs:
       shell: pwsh
       run: |
         try {
-            New-DenyWDACConfig -drivers -PolicyName "LOLDrivers_Deny" -ScanLocations .\drivers\
+            New-DenyWDACConfig -drivers -PolicyName "LOLDriversDeny" -ScanLocations .\drivers\
         } catch {
             Write-Output $_.Exception.Message
             Write-Output $_.Exception.StackTrace
@@ -37,4 +37,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: WDAC Policies
-        path: ./detections/wdac/LOLDrivers_Deny.xml
+        path: ./detections/wdac/LOLDriversDeny.xml
