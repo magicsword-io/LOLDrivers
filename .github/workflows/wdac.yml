@@ -30,7 +30,6 @@ jobs:
     - name: Install WDACConfig module
       shell: pwsh
       run: |
-        Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
         Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
         Install-Module -Name WDACConfig -Force
     - name: Create WDAC Deny Configuration
