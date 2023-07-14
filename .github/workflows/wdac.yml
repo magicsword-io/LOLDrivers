@@ -71,6 +71,7 @@ jobs:
           }        
         }
         $Results = Invoke-Command -ScriptBlock $ScriptBlock
+        $Results 
         $Results | Out-File -FilePath .\detections\wdac\TestResults.txt
     - name: Upload test results
       uses: actions/upload-artifact@v3
