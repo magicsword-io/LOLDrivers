@@ -15,16 +15,20 @@ jobs:
       with:
         submodules: false
         lfs: true
+    - name: Setup PowerShell
+      uses: actions/setup-powershell@v1
+      with:
+        powershell-version: '7.4.0-preview.4'
     - name: Install WDACConfig module
-      shell: powershell
+      shell: pwsh
       run: |
         Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
         Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
         Install-Module -Name WDACConfig -Force
     - name: Create WDAC Deny Configuration
-      shell: powershell
+      shell: pwsh
       run: |
-        New-DenyWDACConfig -Normal -drivers -PolicyName "LOLDrivers Deny" -ScanLocations .\drivers\
+        New-DenyWDACConfig -drivers -PolicyName "LOLDrivers Deny" -ScanLocations .\drivers\
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
