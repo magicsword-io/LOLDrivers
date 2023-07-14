@@ -1,0 +1,37 @@
+Name: echo_driver.sys
+Author: Protocol & Zach
+Created: '2023-14-07'
+MitreID: T1134
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create echo_driver.sys binPath=C:\windows\temp\echo_driver.sys type=kernel
+    && sc.exe start echo_driver.sys
+  Description: Bad access controls in Inspect Element Ltd.'s echo_driver.sys allows
+    attacker to gain arbitrary memory read and write, which allows for easy Privilege
+    Escalation via Token Theft.
+  Usecase: Elevate privileges, arbitrary memory read/write
+  Privileges: kernel
+  OperatingSystem: Windows 10/11
+Resources:
+- https://ioctl.fail/echo-ac-writeup/
+- https://github.com/kite03/echoac-poc/tree/main/PoC
+Acknowledgement:
+  Person: 'protocol'
+  Handle: '@WindowsKernel'
+Detection: []
+KnownVulnerableSamples:
+- Filename: 'echo_driver.sys'
+  MD5: 187ddca26d119573223cf0a32ba55a61
+  SHA1: a93197c8c1897a95c4fb0367d7451019ae9f3054
+  SHA256: ea3c5569405ed02ec24298534a983bcb5de113c18bc3fd01a4dd0b5839cd17b9
+  Signature: 'Microsoft Windows Hardware Compatibility Publisher'
+  Date: '00:59 PM 06/18/2021'
+  Publisher: 'Microsoft Windows Hardware Compatibility Publisher'
+  Company: 'Inspect Element Ltd.'
+  Description: 'Anticheat tool Kernel Driver'
+  Product: 'echo-free.exe'
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: 'echo_driver.sys'
