@@ -56,11 +56,12 @@ jobs:
         while ($service = Get-Service -Name "DriverTest$i" -ErrorAction SilentlyContinue) {
           do {
             Stop-Service -Name "DriverTest$i" -Force -ErrorAction SilentlyContinue
-            Remove-Service -Name "DriverTest$i" -ErrorAction SilentlyContinue
+            sc.exe delete "DriverTest$i"
             Start-Sleep -Seconds 1
           } while ($service = Get-Service -Name "DriverTest$i" -ErrorAction SilentlyContinue)
           $i++
         }
+
 
     - name: Test drivers
       shell: powershell
@@ -90,11 +91,18 @@ jobs:
       shell: powershell
       run: |
         $i = 0
-        while (Get-Service -Name "DriverTest$i" -ErrorAction SilentlyContinue) {
-          Stop-Service -Name "DriverTest$i" -Force -ErrorAction SilentlyContinue
-          Remove-Service -Name "DriverTest$i" -ErrorAction SilentlyContinue
+        while ($service = Get-Service -Name "DriverTest$i" -ErrorAction SilentlyContinue) {
+          do {
+            Stop-Service -Name "DriverTest$i" -Force -ErrorAction SilentlyContinue
+            sc.exe delete "DriverTest$i"
+            Start-Sleep -Seconds 1
+          } while ($service = Get-Service -Name "DriverTest$i" -ErrorAction SilentlyContinue)
           $i++
         }
+    - name: List wdac directory
+      shell: pwsh
+      run: |
+        Get-ChildItem -Path ./detections/wdac/
     - name: Upload test results
       uses: actions/upload-artifact@v3
       with:
