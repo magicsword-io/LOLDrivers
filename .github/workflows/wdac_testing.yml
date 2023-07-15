@@ -29,6 +29,11 @@ jobs:
     - name: Test drivers
       shell: powershell
       run: |
+        $logName = 'Microsoft-Windows-CodeIntegrity/Operational'
+        $log = New-Object System.Diagnostics.Eventing.Reader.EventLogConfiguration $logName
+        $log.MaximumSizeInBytes = '50000000'
+        $log.IsEnabled = $true
+        $log.SaveChanges()
         $i = 0
         (Get-ChildItem .\drivers\).FullName | ForEach-Object {
           $serviceName = "DriverTest$i"
@@ -36,11 +41,6 @@ jobs:
           Start-Service -Name $serviceName -ErrorAction SilentlyContinue
           $i++
         }
-        $logName = 'Microsoft-Windows-CodeIntegrity/Operational'
-        $log = New-Object System.Diagnostics.Eventing.Reader.EventLogConfiguration $logName
-        $log.MaximumSizeInBytes = '50000000'
-        $log.IsEnabled = $true
-        $log.SaveChanges()
         $ScriptBlock = {
           foreach ($event in Get-WinEvent -FilterHashtable @{LogName = 'Microsoft-Windows-CodeIntegrity/Operational'; ID = 3077 } -ErrorAction SilentlyContinue ) {
             $xml = [xml]$event.toxml()
@@ -49,7 +49,12 @@ jobs:
           }        
         }
         $Results = Invoke-Command -ScriptBlock $ScriptBlock
-        $Results | Out-File -FilePath .\detections\wdac\TestResults.txt
+        $outputPath = ".\detections\wdac\TestResults.txt"
+        $outputDirectory = Split-Path -Path $outputPath -Parent
+        if (!(Test-Path -Path $outputDirectory)) {
+          New-Item -ItemType Directory -Path $outputDirectory -Force
+        }
+        $Results | Out-File -FilePath $outputPath
     - name: List wdac directory
       shell: pwsh
       run: |
