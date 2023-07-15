@@ -53,11 +53,3 @@ jobs:
             New-Item -ItemType Directory -Path ./detections/wdac/
         }
         Move-Item -Path ./*.xml -Destination ./detections/wdac/
-    - name: Commit Generated Data
-      run: |     
-          git config --global user.name "Github Actions"
-          git config --global user.email "robot@noreply.github.com"
-          git config --global push.default simple
-          git add ./detections/wdac/
-          git commit -m "New WDAC Policy Created [ci skip]"
-          git push https://${{ secrets.GH_PAT }}@github.com/magicsword-io/LOLDrivers.git HEAD:refs/heads/test-branch -f
