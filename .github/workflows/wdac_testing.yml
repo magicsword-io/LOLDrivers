@@ -16,16 +16,20 @@ jobs:
         submodules: false
         lfs: true
     - name: Clean up test services before testing
-      shell: powershell
+      shell: pwsh
       run: |
         $servicesToDelete = Get-Service | Where-Object { $_.Name -like "DriverTest*" } | Select-Object -ExpandProperty Name
-        foreach ($serviceName in $servicesToDelete) {
-            while ((Get-Service -Name $serviceName -ErrorAction SilentlyContinue).Status -ne $null) {
-                Stop-Service -Name $serviceName -Force -ErrorAction SilentlyContinue
-                sc.exe delete $serviceName
+        $servicesToDelete | ForEach-Object -Parallel {
+            while ((Get-Service -Name $_ -ErrorAction SilentlyContinue).Status -ne $null) {
+                Stop-Service -Name $_ -Force -ErrorAction SilentlyContinue
+                sc.exe delete $_
                 Start-Sleep -Seconds 1
             }
-        }
+        } -ThrottleLimit 10
+    - name: Apply WDAC Policy
+      shell: pwsh
+      run: |
+        Set-CommonWDACConfig -UnsignedPolicyPath 'C:\Users\mhaag\actions-runner\_work\LOLDrivers\LOLDrivers\detections\wdac\DenyPolicy LOLDriversDeny.xml'
     - name: Test drivers
       shell: powershell
       run: |
@@ -64,3 +68,4 @@ jobs:
       with:
         name: Test Results
         path: ./detections/wdac/TestResults.txt
+
