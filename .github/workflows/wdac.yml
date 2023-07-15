@@ -23,9 +23,14 @@ jobs:
       shell: pwsh
       run: |
         if (-not (Get-Module -Name WDACConfig -ListAvailable)) {
-           Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+            Write-Host "WDACConfig module not found. Installing..."
+            Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
             Install-Module -Name WDACConfig -Force
+            Write-Host "WDACConfig module installed successfully."
+        } else {
+            Write-Host "WDACConfig module is already installed."
         }
+
     - name: Create WDAC Deny Configuration
       shell: pwsh
       run: |
@@ -55,4 +60,6 @@ jobs:
           git config --global push.default simple
           git add ./detections/wdac/
           git commit -m "New WDAC Policy Created [ci skip]"
-          git push
+          git push origin HEAD:${{ github.ref }} -f
+      env:
+        GH_PAT: ${{ secrets.GH_PAT }}
