@@ -19,10 +19,13 @@ jobs:
       shell: pwsh
       run: |
         Write-Output "PowerShell version: $($PSVersionTable.PSVersion)"
-    - name: List drivers directory
+    - name: Confirm WDACConfig Installation
       shell: pwsh
       run: |
-        Get-ChildItem -Path .\drivers\
+        if (-not (Get-Module -Name WDACConfig -ListAvailable)) {
+           Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+            Install-Module -Name WDACConfig -Force
+        }
     - name: Create WDAC Deny Configuration
       shell: pwsh
       run: |
@@ -33,10 +36,6 @@ jobs:
             Write-Output $_.Exception.StackTrace
             exit 1
         }
-    - name: List current directory
-      shell: pwsh
-      run: |
-        Get-ChildItem -Path ./
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
@@ -49,3 +48,11 @@ jobs:
             New-Item -ItemType Directory -Path ./detections/wdac/
         }
         Move-Item -Path ./*.xml -Destination ./detections/wdac/
+    - name: Commit Generated Data
+      run: |     
+          git config --global user.name "Github Actions"
+          git config --global user.email "robot@noreply.github.com"
+          git config --global push.default simple
+          git add ./detections/wdac/
+          git commit -m "New WDAC Policy Created [ci skip]"
+          git push
