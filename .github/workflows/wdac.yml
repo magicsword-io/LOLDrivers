@@ -46,10 +46,14 @@ jobs:
       with:
         name: WDAC Policies
         path: ./*.xml
-    - name: Move XML to detections directory
+    - name: Move XML to detections directory and copy to desktop
       shell: pwsh
       run: |
         if (!(Test-Path -Path ./detections/wdac/)) {
             New-Item -ItemType Directory -Path ./detections/wdac/
         }
         Move-Item -Path ./*.xml -Destination ./detections/wdac/
+        $username = [Environment]::UserName
+        $desktopPath = "C:\Users\$username\Desktop"
+        Write-Host "Copying XML file to $desktopPath"
+        Copy-Item -Path ./*.xml -Destination $desktopPath
