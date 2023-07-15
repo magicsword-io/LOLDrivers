@@ -18,10 +18,11 @@ jobs:
     - name: Clean up test services before testing
       shell: powershell
       run: |
-        Get-Service | Where-Object { $_.Name -like "DriverTest*" } | ForEach-Object {
-            while ($_.Status -ne $null) {
-                Stop-Service -Name $_.Name -Force -ErrorAction SilentlyContinue
-                sc.exe delete $_.Name
+        $servicesToDelete = Get-Service | Where-Object { $_.Name -like "DriverTest*" } | Select-Object -ExpandProperty Name
+        foreach ($serviceName in $servicesToDelete) {
+            while ((Get-Service -Name $serviceName -ErrorAction SilentlyContinue).Status -ne $null) {
+                Stop-Service -Name $serviceName -Force -ErrorAction SilentlyContinue
+                sc.exe delete $serviceName
                 Start-Sleep -Seconds 1
             }
         }
