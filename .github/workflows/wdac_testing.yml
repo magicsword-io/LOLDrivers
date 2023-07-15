@@ -16,7 +16,7 @@ jobs:
         submodules: false
         lfs: true
     - name: Clean up test services before testing
-      shell: powershell
+      shell: pwsh
       run: |
         $servicesToDelete = Get-Service -ErrorAction SilentlyContinue | Where-Object { $_.Name -like "DriverTest*" } | Select-Object -ExpandProperty Name
         $servicesToDelete | ForEach-Object -Parallel {
@@ -31,7 +31,7 @@ jobs:
       run: |
         Set-CommonWDACConfig -UnsignedPolicyPath 'C:\Users\mhaag\actions-runner\_work\LOLDrivers\LOLDrivers\detections\wdac\DenyPolicy LOLDriversDeny.xml'
     - name: Test drivers
-      shell: powershell
+      shell: pwsh
       run: |
         $logName = 'Microsoft-Windows-CodeIntegrity/Operational'
         $log = New-Object System.Diagnostics.Eventing.Reader.EventLogConfiguration $logName
