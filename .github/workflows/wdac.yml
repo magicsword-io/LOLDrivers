@@ -60,6 +60,4 @@ jobs:
           git config --global push.default simple
           git add ./detections/wdac/
           git commit -m "New WDAC Policy Created [ci skip]"
-          git push origin HEAD:${{ github.ref }} -f
-      env:
-        GH_PAT: ${{ secrets.GH_PAT }}
+          git push https://${{ secrets.GH_PAT }}@github.com/magicsword-io/LOLDrivers.git HEAD:refs/heads/test-branch -f
