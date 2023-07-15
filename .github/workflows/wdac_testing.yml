@@ -1,0 +1,60 @@
+name: Test Drivers
+
+on: 
+  push:
+    branches:
+      - "*"
+  pull_request:
+    branches: [main, test-branch]
+
+jobs:
+  test-drivers:
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        submodules: false
+        lfs: true
+    - name: Clean up test services before testing
+      shell: powershell
+      run: |
+        Get-Service | Where-Object { $_.Name -like "DriverTest*" } | ForEach-Object {
+            while ($_.Status -ne $null) {
+                Stop-Service -Name $_.Name -Force -ErrorAction SilentlyContinue
+                sc.exe delete $_.Name
+                Start-Sleep -Seconds 1
+            }
+        }
+    - name: Test drivers
+      shell: powershell
+      run: |
+        $i = 0
+        (Get-ChildItem .\drivers\).FullName | ForEach-Object {
+          $serviceName = "DriverTest$i"
+          New-Service -BinaryPathName $_ -Name $serviceName -Description $_ -StartupType Manual
+          Start-Service -Name $serviceName -ErrorAction SilentlyContinue
+          $i++
+        }
+        $logName = 'Microsoft-Windows-CodeIntegrity/Operational'
+        $log = New-Object System.Diagnostics.Eventing.Reader.EventLogConfiguration $logName
+        $log.MaximumSizeInBytes = '50000000'
+        $log.IsEnabled = $true
+        $log.SaveChanges()
+        $ScriptBlock = {
+          foreach ($event in Get-WinEvent -FilterHashtable @{LogName = 'Microsoft-Windows-CodeIntegrity/Operational'; ID = 3077 } -ErrorAction SilentlyContinue ) {
+            $xml = [xml]$event.toxml()
+            $xml.event.eventdata.data | ForEach-Object { $hash = @{} } { $hash[$_.name] = $_.'#text' } { [pscustomobject]$hash } |
+            Select-Object -Property 'SHA256 Hash' , 'File Name', 'OriginalFileName', 'ProductName', 'InternalName', 'FileDescription', 'FileVersion', 'SHA1 Hash', 'USN'
+          }        
+        }
+        $Results = Invoke-Command -ScriptBlock $ScriptBlock
+        $Results | Out-File -FilePath .\detections\wdac\TestResults.txt
+    - name: List wdac directory
+      shell: pwsh
+      run: |
+        Get-ChildItem -Path ./detections/wdac/
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      with:
+        name: Test Results
+        path: ./detections/wdac/TestResults.txt
