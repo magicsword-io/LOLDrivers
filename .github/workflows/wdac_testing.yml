@@ -16,9 +16,9 @@ jobs:
         submodules: false
         lfs: true
     - name: Clean up test services before testing
-      shell: pwsh
+      shell: powershell
       run: |
-        $servicesToDelete = Get-Service | Where-Object { $_.Name -like "DriverTest*" } | Select-Object -ExpandProperty Name
+        $servicesToDelete = Get-Service -ErrorAction SilentlyContinue | Where-Object { $_.Name -like "DriverTest*" } | Select-Object -ExpandProperty Name
         $servicesToDelete | ForEach-Object -Parallel {
             while ((Get-Service -Name $_ -ErrorAction SilentlyContinue).Status -ne $null) {
                 Stop-Service -Name $_ -Force -ErrorAction SilentlyContinue
