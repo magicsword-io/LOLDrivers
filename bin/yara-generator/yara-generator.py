@@ -142,75 +142,83 @@ def process_files(input_files, debug):
 
 
 def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, renamed):
-	rules = list()
+    rules = list()
 
-	# Loop over the header infos 
-	for hi in header_infos:
-		# Get YAML info to determine the type of rule
-		yaml_info = get_yaml_info_for_sample(hi['sha256'][0], yaml_infos)
-		# Category and values
-		type_driver = "vulnerable driver"
-		type_string = "PUA_VULN"
-		type_desc = "vulnerable"
-		type_score = 40
-		if renamed:
-			type_score = 70
-			type_string = "PUA_VULN_Renamed"
-		# for malicious drivers
-		if 'Category' in yaml_info:
-			#print(yaml_info['Category'])
-			if yaml_info['Category'] == "malicious":
-				type_driver = "malicious"
-				type_string = "MAL_"
-				type_desc = "malicious"
-				type_score = 70
-				if strict:
-					type_score = 85
-		# File names (use the file names in field 'Tags' otherwise use the driver file names)
-		file_names = hi['file_names']
-		if 'Tags' in yaml_info:
-			file_names = yaml_info['Tags']
-		# Apply filter
-		if driver_filter is not type_driver:
-			continue
+    # Loop over the header infos 
+    for hi in header_infos:
+        # Get YAML info to determine the type of rule
+        yaml_info = get_yaml_info_for_sample(hi['sha256'][0], yaml_infos)
+        
+        if yaml_info is None:
+            print(f"No YAML info found for file with SHA256: {hi['sha256'][0]}. Skipping this file.")
+            continue
 
-		# Generate Rule
-		new_rule = YARA_RULE_TEMPLATE
-		rule_name = generate_rule_name(hi['version_info'], type_string, hi['sha256'][0])
-		Log.info("Generating YARA rule for %s - rule name %s" % (hi['file_names'], rule_name))
-		new_rule = new_rule.replace('$$$RULENAME$$$', rule_name)
-		new_rule = new_rule.replace('$$$HASH$$$', '"\n\t\thash = "'.join(hi['sha256']))
-		new_rule = new_rule.replace('$$$DATE$$$', datetime.today().strftime('%Y-%m-%d'))
-		new_rule = new_rule.replace('$$$FILENAMES$$$', ", ".join(file_names))
-		new_rule = new_rule.replace('$$$SCORE$$$', str(type_score))
-		if renamed:
-			new_rule = new_rule.replace('$$$TYPE$$$', 'renamed %s' % type_desc)
-		else:
-			new_rule = new_rule.replace('$$$TYPE$$$', type_desc)
-		string_values = generate_string_values(hi['version_info'])
-		# if string values is empty or too small
-		if len(string_values) < 3:
-			Log.info("Number of extracted PE version info values is empty or not big enough - YARA rule generation skipped for %s" % hi['file_names'])
-			continue
-		new_rule = new_rule.replace('$$$STRINGS$$$', "\n\t\t$ = ".join(string_values))
-		# Condition
-		if strict:
-			new_rule = new_rule.replace('$$$STRICT$$$', "uint16(0) == 0x5a4d and filesize < %dKB and " % max(hi['file_sizes']))
-		else:
-			new_rule = new_rule.replace('$$$STRICT$$$', '')
-		if 'Tags' in yaml_info:
-			if renamed and len(yaml_info['Tags']) > 0:
-				filename_string = generate_filename_string(yaml_info['Tags'])
-				new_rule = new_rule.replace('$$$RENAMED$$$', filename_string)
-			else:
-				new_rule = new_rule.replace('$$$RENAMED$$$', '') 
-		else:
-			new_rule = new_rule.replace('$$$RENAMED$$$', '') 
+        # Category and values
+        type_driver = "vulnerable driver"
+        type_string = "PUA_VULN"
+        type_desc = "vulnerable"
+        type_score = 40
+        if renamed:
+            type_score = 70
+            type_string = "PUA_VULN_Renamed"
+        
+        print(yaml_info)
+        if 'Category' in yaml_info:
+            if yaml_info['Category'] == "malicious":
+                type_driver = "malicious"
+                type_string = "MAL_"
+                type_desc = "malicious"
+                type_score = 70
+                if strict:
+                    type_score = 85
 
-		Log.debug(new_rule)
-		# Append rule to the list
-		rules.append(new_rule)
-	return rules
+        # File names (use the file names in field 'Tags' otherwise use the driver file names)
+        file_names = hi['file_names']
+        if yaml_info is not None and 'Tags' in yaml_info:
+            file_names = yaml_info['Tags']
+
+        # Apply filter
+        if driver_filter is not type_driver:
+            continue
+
+        # Generate Rule
+        new_rule = YARA_RULE_TEMPLATE
+        rule_name = generate_rule_name(hi['version_info'], type_string, hi['sha256'][0])
+        Log.info("Generating YARA rule for %s - rule name %s" % (hi['file_names'], rule_name))
+        new_rule = new_rule.replace('$$$RULENAME$$$', rule_name)
+        new_rule = new_rule.replace('$$$HASH$$$', '"\n\t\thash = "'.join(hi['sha256']))
+        new_rule = new_rule.replace('$$$DATE$$$', datetime.today().strftime('%Y-%m-%d'))
+        new_rule = new_rule.replace('$$$FILENAMES$$$', ", ".join(file_names))
+        new_rule = new_rule.replace('$$$SCORE$$$', str(type_score))
+        if renamed:
+            new_rule = new_rule.replace('$$$TYPE$$$', 'renamed %s' % type_desc)
+        else:
+            new_rule = new_rule.replace('$$$TYPE$$$', type_desc)
+        string_values = generate_string_values(hi['version_info'])
+        # if string values is empty or too small
+        if len(string_values) < 3:
+            Log.info("Number of extracted PE version info values is empty or not big enough - YARA rule generation skipped for %s" % hi['file_names'])
+            continue
+        new_rule = new_rule.replace('$$$STRINGS$$$', "\n\t\t$ = ".join(string_values))
+        # Condition
+        if strict:
+            new_rule = new_rule.replace('$$$STRICT$$$', "uint16(0) == 0x5a4d and filesize < %dKB and " % max(hi['file_sizes']))
+        else:
+            new_rule = new_rule.replace('$$$STRICT$$$', '')
+        if 'Tags' in yaml_info:
+            if renamed and len(yaml_info['Tags']) > 0:
+                filename_string = generate_filename_string(yaml_info['Tags'])
+                new_rule = new_rule.replace('$$$RENAMED$$$', filename_string)
+            else:
+                new_rule = new_rule.replace('$$$RENAMED$$$', '')
+        else:
+            new_rule = new_rule.replace('$$$RENAMED$$$', '')
+
+        Log.debug(new_rule)
+        # Append rule to the list
+        rules.append(new_rule)
+    return rules
+
 
 
 def generate_filename_string(tags):
