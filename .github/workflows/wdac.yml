@@ -15,10 +15,29 @@ jobs:
       with:
         submodules: false
         lfs: true
+    - name: Download PowerShell
+      shell: pwsh
+      run: |
+        $PSVersion = (Get-Host).Version.Major
+        if ($PSVersion -lt 7) {
+            Invoke-WebRequest -Uri "https://github.com/PowerShell/PowerShell/releases/download/v7.3.4/PowerShell-7.3.4-win-x64.msi" -OutFile "PowerShell-7.3.4-win-x64.msi"
+        }
+    - name: Install PowerShell
+      shell: pwsh
+      run: |
+        $PSVersion = (Get-Host).Version.Major
+        if ($PSVersion -lt 7) {
+            Start-Process -Wait -FilePath msiexec.exe -ArgumentList '/package PowerShell-7.3.4-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1'
+        }
     - name: Check PowerShell version
       shell: pwsh
       run: |
-        Write-Output "PowerShell version: $($PSVersionTable.PSVersion)"
+        $PSVersion = (Get-Host).Version.Major
+        Write-Output "PowerShell version: $PSVersion"
+        if ($PSVersion -lt 7) {
+            Write-Output "PowerShell version is less than 7.3.4. Stopping..."
+            exit 1
+        }
     - name: Confirm WDACConfig Installation
       shell: pwsh
       run: |
@@ -30,7 +49,7 @@ jobs:
         } else {
             Write-Host "WDACConfig module is already installed."
         }
-
+    # ... rest of your workflow ...
     - name: Create WDAC Deny Configuration
       shell: pwsh
       run: |
@@ -56,5 +75,5 @@ jobs:
         $username = [Environment]::UserName
         $desktopPath = "C:\Users\$username\Desktop"
         Write-Host "Copying XML file to $desktopPath"
-        $wdacpolicy = ./detections/wdac/DenyPolicy LOLDriversDeny.xml
+        $wdacpolicy = "./detections/wdac/DenyPolicy LOLDriversDeny.xml"
         Copy-Item -Path $wdacpolicy -Destination $desktopPath
