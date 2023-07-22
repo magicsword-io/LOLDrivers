@@ -56,4 +56,5 @@ jobs:
         $username = [Environment]::UserName
         $desktopPath = "C:\Users\$username\Desktop"
         Write-Host "Copying XML file to $desktopPath"
-        Copy-Item -Path ./*.xml -Destination $desktopPath
+        $wdacpolicy = ./detections/wdac/DenyPolicy LOLDriversDeny.xml
+        Copy-Item -Path $wdacpolicy -Destination $desktopPath
