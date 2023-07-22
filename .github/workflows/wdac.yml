@@ -11,6 +11,10 @@ jobs:
   generate-wdac:
     runs-on: self-hosted
     steps:
+    - name: Exclude path from Windows Defender
+      shell: pwsh
+      run: |
+        Add-MpPreference -ExclusionPath 'C:\Users\mhaag\actions-runner'
     - uses: actions/checkout@v3
       with:
         submodules: false
