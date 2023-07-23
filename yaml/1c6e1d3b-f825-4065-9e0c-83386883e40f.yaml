@@ -194,10 +194,6 @@ KnownVulnerableSamples:
       SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Version: 1
     SignerInfo: ''
-MitreID: T1068
-Resources:
-- https://github.com/nomi-sec/PoC-in-GitHub/blob/2a85c15ed806287861a7adec6545c85aec618e3b/2017/CVE-2017-9769.json#L13
-- https://www.rapid7.com/db/modules/exploit/windows/local/razer_zwopenprocess/
 - Authentihash:
     MD5: 76934be6e996e801ea4d68c504d427c3
     SHA1: b2e03d9e602a6026f45c08b686c6810abd43bfac
@@ -360,6 +356,10 @@ Resources:
       SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Version: 1
     SignerInfo: ''
+MitreID: T1068
+Resources:
+- https://github.com/nomi-sec/PoC-in-GitHub/blob/2a85c15ed806287861a7adec6545c85aec618e3b/2017/CVE-2017-9769.json#L13
+- https://www.rapid7.com/db/modules/exploit/windows/local/razer_zwopenprocess/
 Tags:
 - rzpnk.sys
 Verified: 'TRUE'
