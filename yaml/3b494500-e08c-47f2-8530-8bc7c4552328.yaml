@@ -1,0 +1,180 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: 3b494500-e08c-47f2-8530-8bc7c4552328
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: e03a070a426b0c2de53ea23bfc76086b
+    SHA1: 202d5a05e546740037f9a4dc2b21f71680c39d3b
+    SHA256: 0391107305d76eb9ddf1a5b3b3c50da361e8ab35b573dbd19bf9383436b9303e
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2021-04-09 00:29:46'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
+  ImportedFunctions:
+  - FwpsAcquireClassifyHandle0
+  - FwpsReleaseClassifyHandle0
+  - FwpmFilterDeleteById0
+  - FwpsAcquireWritableLayerDataPointer0
+  - FwpsApplyModifiedLayerData0
+  - FwpmFilterAdd0
+  - FwpmCalloutAdd0
+  - FwpmSubLayerDeleteByKey0
+  - FwpmSubLayerAdd0
+  - FwpmTransactionAbort0
+  - FwpmTransactionCommit0
+  - FwpmTransactionBegin0
+  - FwpmEngineClose0
+  - FwpmEngineOpen0
+  - FwpsCalloutUnregisterById0
+  - FwpsCompleteClassify0
+  - FwpsCalloutRegister1
+  - memcpy
+  - KeGetCurrentThread
+  - KeInitializeEvent
+  - KeWaitForSingleObject
+  - IoAllocateIrp
+  - IofCallDriver
+  - IoCreateFile
+  - IoFreeIrp
+  - IoGetRelatedDeviceObject
+  - ObReferenceObjectByHandle
+  - ObfDereferenceObject
+  - ZwQueryInformationFile
+  - ZwSetInformationFile
+  - ZwReadFile
+  - ZwWriteFile
+  - ZwClose
+  - IoFileObjectType
+  - strchr
+  - strncat
+  - strncpy_s
+  - KeResetEvent
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - IoAllocateMdl
+  - IoFreeMdl
+  - IoReuseIrp
+  - memset
+  - sprintf
+  - KeEnterCriticalRegion
+  - KeLeaveCriticalRegion
+  - PsTerminateSystemThread
+  - KeSetBasePriorityThread
+  - CmUnRegisterCallback
+  - CmRegisterCallbackEx
+  - CmCallbackGetKeyObjectID
+  - strncmp
+  - strncpy
+  - wcsncmp
+  - ExAcquireSpinLockExclusive
+  - ExReleaseSpinLockExclusive
+  - RtlCreateSecurityDescriptor
+  - RtlSetDaclSecurityDescriptor
+  - KeInitializeTimerEx
+  - KeSetTimerEx
+  - PsCreateSystemThread
+  - ZwCreateKey
+  - ZwOpenKey
+  - ZwFlushKey
+  - ZwQueryValueKey
+  - ZwSetValueKey
+  - NtQueryInformationToken
+  - RtlLengthSid
+  - RtlConvertSidToUnicodeString
+  - RtlCreateAcl
+  - RtlAddAccessAllowedAce
+  - RtlSetOwnerSecurityDescriptor
+  - PsLookupProcessByProcessId
+  - ObOpenObjectByPointer
+  - ZwOpenProcessTokenEx
+  - ZwSetSecurityObject
+  - PsGetProcessImageFileName
+  - _allmul
+  - PsProcessType
+  - SeExports
+  - IoDeleteSymbolicLink
+  - RtlUnwind
+  - MmIsAddressValid
+  - ExFreePoolWithTag
+  - ExAllocatePoolWithTag
+  - KeSetEvent
+  - RtlFreeUnicodeString
+  - KeBugCheckEx
+  - RtlAnsiStringToUnicodeString
+  - RtlCopyUnicodeString
+  - RtlInitUnicodeString
+  - RtlInitAnsiString
+  - strstr
+  - WskDeregister
+  - WskReleaseProviderNPI
+  - WskCaptureProviderNPI
+  - WskRegister
+  - KeGetCurrentIrql
+  - WdfVersionBind
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  - WdfVersionUnbind
+  Imports:
+  - fwpkclnt.sys
+  - ntoskrnl.exe
+  - NETIO.SYS
+  - HAL.dll
+  - WDFLDR.SYS
+  InternalName: ''
+  MD5: e04ff937f6fd273b774f23aed5dd8c13
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 48c184eea90f0f9d8a01e83867866680
+    SHA1: fadd2ab2dd0e54dd2328f37e313b3a7f50f58391
+    SHA256: a918abac8859e89b8f2d620f60f54921e2f156a401cfe171a609326331f60635
+  SHA1: 655a9487d7a935322e19bb92d2465849055d029d
+  SHA256: c8926e31be2d1355e542793af8ff9ccc4d1d60cae40c9564b2400dd4e1090bda
+  Sections:
+    .data:
+      Entropy: 1.2415415090465123
+      Virtual Size: '0x6f40'
+    .rdata:
+      Entropy: 4.44659940311796
+      Virtual Size: '0x8c4'
+    .reloc:
+      Entropy: 6.652737807428317
+      Virtual Size: '0x5e4'
+    .text:
+      Entropy: 6.564030296364231
+      Virtual Size: '0x5b62'
+    INIT:
+      Entropy: 5.541103554795583
+      Virtual Size: '0xae6'
+  Signature: ''
+  Signatures: {}
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- ''
+Verified: 'TRUE'

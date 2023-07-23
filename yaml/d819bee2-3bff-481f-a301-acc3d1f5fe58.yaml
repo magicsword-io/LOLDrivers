@@ -1,22 +1,16 @@
-Id: d819bee2-3bff-481f-a301-acc3d1f5fe58
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create Se64a.sys binPath=C:\windows\temp\Se64a.sys type=kernel &&
     sc.exe start Se64a.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6cb51ae871fbd5d07c5aad6ff8eea43d34063089528603ca9ceb8b4f52f68ddc.yara
@@ -28,35 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: d819bee2-3bff-481f-a301-acc3d1f5fe58
 KnownVulnerableSamples:
-- Filename: Se64a.sys
-  MD5: 0a6a1c9a7f80a2a5dcced5c4c0473765
-  SHA1: 33285b2e97a0aeb317166cce91f6733cf9c1ad53
-  SHA256: 6cb51ae871fbd5d07c5aad6ff8eea43d34063089528603ca9ceb8b4f52f68ddc
-  Signature:
-  - EnTech Taiwan
-  - GlobalSign ObjectSign CA
-  - GlobalSign Primary Object Publishing CA
-  - GlobalSign Root CA - R1
-  Date: ''
-  Publisher: ''
-  Company: EnTech Taiwan
-  Description: EnTech softEngine x64 kernel-mode driver
-  Product: softEngine-x64
-  ProductVersion: '2.1'
-  FileVersion: '1.1'
-  MachineType: AMD64
-  OriginalFilename: se64a.sys
-  Authentihash:
+- Authentihash:
     MD5: 46f46abcb9e3ba747c2a2904babe38c0
     SHA1: a4e8e3268569acc0a0b3f6eada713c0fa8825463
     SHA256: 04cfb452e1ac73fb2f3b8a80d9f27e19a344a6bf0f74c7f9cae3ae82d3770195
-  InternalName: se64a.sys
+  Company: EnTech Taiwan
   Copyright: Copyright (c) EnTech Taiwan, 2004-2006.
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2007-05-02 23:50:31'
+  Date: ''
+  Description: EnTech softEngine x64 kernel-mode driver
   ExportedFunctions: ''
+  FileVersion: '1.1'
+  Filename: Se64a.sys
   ImportedFunctions:
   - ZwOpenSection
   - RtlInitUnicodeString
@@ -75,113 +54,134 @@ KnownVulnerableSamples:
   - ZwClose
   - HalTranslateBusAddress
   - HalGetBusDataByOffset
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=TW, O=EnTech Taiwan, CN=EnTech Taiwan, emailAddress=support@entechtaiwan.com
-      ValidFrom: '2006-09-25 13:13:42'
-      ValidTo: '2007-09-25 13:13:42'
-      Signature: 739a954688a5bb20b2eb536c3f48cd6e12268b1f20d7c8919b33fe01a7bce0f1b635aa818464902885ff85b54359fc618e27daed7251ddd7b69aadfa93934e4984a4df006169520d8153e467cdda6346d13de5534c458dc65d8cee53d40449ddf07c0141baaf5c5027a3ffa82282697be813b8bfd97f2ba1ca2cfb12a20c6962e5bd556fb794d67bd6d3d6f8db113a64833073294431ed9bfa94dd7d62ec07c6093c7fbdba8663fcff1b5d8c6f6322d236abfacc681f9aaf5711fb415e1622d125175ea225f785983e05f56cd7f3dede31c4faea8272570ea3079a8085a8333d348780b35d671479caef0f7d1c23da8bf317ca12b50da33f87f24a4c1b9766b5
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 0100000000010de51c0971
-      Version: 3
-      TBS:
-        MD5: 2fa8071fc8b4266de6fbcd201437b3a5
-        SHA1: 4b937982ab09b70f8676542f39a883a4294d3fca
-        SHA256: 6934f8f9093cbf62b6af5802405c022d546a33427b98b882522ce29190ae082f
-    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
-      ValidFrom: '2003-12-04 00:00:00'
-      ValidTo: '2013-12-03 23:59:59'
-      Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
-      Version: 3
-      TBS:
-        MD5: 518d2ea8a21e879c942d504824ac211c
-        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
-        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
-    - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
-        Primary Object Publishing CA
-      ValidFrom: '1999-01-28 12:00:00'
-      ValidTo: '2014-01-27 11:00:00'
-      Signature: a0422eb876a7427186404d464d5b26b0b074f93f89a87b7cb7f1c697e08239999d43fe60823642b55b878df55df4bbffa91044a871d3c7f12241f29aa4a5ec63fae5eb654a19309d8bc7b6fddc3fe16cfdd5521407fc6d24ccb3cc81a2c052f327b96d9e063dd8a849023269c7054294d0bbe3bba908c393501bdb846dc0ba1e5298659c1376bdb3d567292f1f7baa2c51a0fd854f263c48a38127a6feee7f7899c245cf9d1f527ed7958bfde1d020c3af7e51a22f663bab2dcf2d8e8c4d7d18392128fbdcae6d6581d0e0d7184be7b5f774d784e6522aac3b68fd3b4ab80154849132bb95d28e6330a69ece2396feab2eb86a8b74dcde21a114c2fbbf53af10
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 04000000000108d9611cd6
-      Version: 3
-      TBS:
-        MD5: 698f075151097d84c0b1f3e7bc3d6fca
-        SHA1: 041750993d7c9e063f02dfe74699598640911aab
-        SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
-    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
-      ValidFrom: '2003-12-04 00:00:00'
-      ValidTo: '2008-12-03 23:59:59'
-      Signature: 877870da4e5201205be079c98230c4fdb91996bd9100c3bdcdcdc6f40ed8fff94dc033623011c5f5741bd492de5f9c2013b17c45be50cd83e7801783a72793671346fbcab8984103cc9b515b058b7fa86ff31b501b242ef2698d6c22f7bbca1695ed0c74c06877d9eb996287c17390f889747a23aba3987b97b1f78f29714d2e751b4841daf0b50d2054d677a097826369fd09cf8af075bb099bd9f91155269a6132be7a02b07b86bea2c38b222c78d13576bc92735cf9b9e64c150a23cce4d2d4342e4940153c0f607a24c6a566ef96cf70eb3ee7f40d7edcd17ca3767169c19c4f47303521b1a2af1a623c2bd98eaa2a077bd818b35c7be29da56ffe3c89ad
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 0de92bf0d4d82988183205095e9a7688
-      Version: 3
-      TBS:
-        MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
-        SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
-        SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
-    - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
-        CA
-      ValidFrom: '2004-01-22 09:00:00'
-      ValidTo: '2014-01-27 10:00:00'
-      Signature: 11d45d8af43d0d9d7e4fa70071610b56b34caa70e1b2d1dec7886d1d897c2ba946e58b1f8e4cc26695911fe34d394ae31b70b7446edc068a4d6d25e89812dcbca0dd864eae8f81130540905a542529944acaf165b4ef0679dae7cb86f004c918dcee72b320015748dfe333e12ccd9c077f9447278d888d340ca67c5c20c17d07b3736b648c26d29bd7e87965a6a891a174862a050282c1847cf279cd3c2a2b0f99291eea8c8a1ab16aeaa266380e65e1add8c6c91f888d3976ee1782c4138d97ce6341e77af5b4b66c15c33813b3930b620688dde1447f10a950248b60dc05f75ba514b27b56720b96eabffc057090659e051ca4dd07af4b57dec639673bc574
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 04000000000108d9612448
-      Version: 3
-      TBS:
-        MD5: 2fc76031fc24eec1ef3db2d246d21d6a
-        SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
-        SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
-    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
-      ValidFrom: '2006-05-23 17:00:51'
-      ValidTo: '2016-05-23 17:10:51'
-      Signature: 13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 610b7f6b000000000019
-      Version: 3
-      TBS:
-        MD5: 4798d55be7663a75649cda4dedc686ef
-        SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
-        SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
-    Signer:
-    - SerialNumber: 0100000000010de51c0971
-      Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
-        CA
-      Version: 1
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: se64a.sys
+  MD5: 0a6a1c9a7f80a2a5dcced5c4c0473765
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: se64a.sys
+  Product: softEngine-x64
+  ProductVersion: '2.1'
+  Publisher: ''
   RichPEHeaderHash:
     MD5: d8769f69d7da8cd49f23e0c53b4f6691
     SHA1: a365bf7da477b9e6968d87efe1d4102ae5e7824d
     SHA256: b26a02d19f2fa49a4edd90db93906a66715b28742990f193c8e206c2e2e83809
+  SHA1: 33285b2e97a0aeb317166cce91f6733cf9c1ad53
+  SHA256: 6cb51ae871fbd5d07c5aad6ff8eea43d34063089528603ca9ceb8b4f52f68ddc
   Sections:
-    .text:
-      Entropy: 5.93130241752649
-      Virtual Size: '0x6c6'
-    .rdata:
-      Entropy: 4.190891588241376
-      Virtual Size: '0x15c'
     .data:
       Entropy: 1.5223397931278442
       Virtual Size: '0x80'
     .pdata:
       Entropy: 2.754900337629122
       Virtual Size: '0x3c'
-    INIT:
-      Entropy: 4.515964863332142
-      Virtual Size: '0x252'
+    .rdata:
+      Entropy: 4.190891588241376
+      Virtual Size: '0x15c'
     .rsrc:
       Entropy: 3.2868225931904593
       Virtual Size: '0x370'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-05-02 23:50:31'
+    .text:
+      Entropy: 5.93130241752649
+      Virtual Size: '0x6c6'
+    INIT:
+      Entropy: 4.515964863332142
+      Virtual Size: '0x252'
+  Signature:
+  - EnTech Taiwan
+  - GlobalSign ObjectSign CA
+  - GlobalSign Primary Object Publishing CA
+  - GlobalSign Root CA - R1
+  Signatures:
+  - Certificates:
+    - IsCertificateAuthority: true
+      SerialNumber: 0100000000010de51c0971
+      Signature: 739a954688a5bb20b2eb536c3f48cd6e12268b1f20d7c8919b33fe01a7bce0f1b635aa818464902885ff85b54359fc618e27daed7251ddd7b69aadfa93934e4984a4df006169520d8153e467cdda6346d13de5534c458dc65d8cee53d40449ddf07c0141baaf5c5027a3ffa82282697be813b8bfd97f2ba1ca2cfb12a20c6962e5bd556fb794d67bd6d3d6f8db113a64833073294431ed9bfa94dd7d62ec07c6093c7fbdba8663fcff1b5d8c6f6322d236abfacc681f9aaf5711fb415e1622d125175ea225f785983e05f56cd7f3dede31c4faea8272570ea3079a8085a8333d348780b35d671479caef0f7d1c23da8bf317ca12b50da33f87f24a4c1b9766b5
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=TW, O=EnTech Taiwan, CN=EnTech Taiwan, emailAddress=support@entechtaiwan.com
+      TBS:
+        MD5: 2fa8071fc8b4266de6fbcd201437b3a5
+        SHA1: 4b937982ab09b70f8676542f39a883a4294d3fca
+        SHA256: 6934f8f9093cbf62b6af5802405c022d546a33427b98b882522ce29190ae082f
+      ValidFrom: '2006-09-25 13:13:42'
+      ValidTo: '2007-09-25 13:13:42'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+      Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
+      TBS:
+        MD5: 518d2ea8a21e879c942d504824ac211c
+        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2013-12-03 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 04000000000108d9611cd6
+      Signature: a0422eb876a7427186404d464d5b26b0b074f93f89a87b7cb7f1c697e08239999d43fe60823642b55b878df55df4bbffa91044a871d3c7f12241f29aa4a5ec63fae5eb654a19309d8bc7b6fddc3fe16cfdd5521407fc6d24ccb3cc81a2c052f327b96d9e063dd8a849023269c7054294d0bbe3bba908c393501bdb846dc0ba1e5298659c1376bdb3d567292f1f7baa2c51a0fd854f263c48a38127a6feee7f7899c245cf9d1f527ed7958bfde1d020c3af7e51a22f663bab2dcf2d8e8c4d7d18392128fbdcae6d6581d0e0d7184be7b5f774d784e6522aac3b68fd3b4ab80154849132bb95d28e6330a69ece2396feab2eb86a8b74dcde21a114c2fbbf53af10
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
+        Primary Object Publishing CA
+      TBS:
+        MD5: 698f075151097d84c0b1f3e7bc3d6fca
+        SHA1: 041750993d7c9e063f02dfe74699598640911aab
+        SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+      ValidFrom: '1999-01-28 12:00:00'
+      ValidTo: '2014-01-27 11:00:00'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 0de92bf0d4d82988183205095e9a7688
+      Signature: 877870da4e5201205be079c98230c4fdb91996bd9100c3bdcdcdc6f40ed8fff94dc033623011c5f5741bd492de5f9c2013b17c45be50cd83e7801783a72793671346fbcab8984103cc9b515b058b7fa86ff31b501b242ef2698d6c22f7bbca1695ed0c74c06877d9eb996287c17390f889747a23aba3987b97b1f78f29714d2e751b4841daf0b50d2054d677a097826369fd09cf8af075bb099bd9f91155269a6132be7a02b07b86bea2c38b222c78d13576bc92735cf9b9e64c150a23cce4d2d4342e4940153c0f607a24c6a566ef96cf70eb3ee7f40d7edcd17ca3767169c19c4f47303521b1a2af1a623c2bd98eaa2a077bd818b35c7be29da56ffe3c89ad
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
+      TBS:
+        MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
+        SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
+        SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2008-12-03 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 04000000000108d9612448
+      Signature: 11d45d8af43d0d9d7e4fa70071610b56b34caa70e1b2d1dec7886d1d897c2ba946e58b1f8e4cc26695911fe34d394ae31b70b7446edc068a4d6d25e89812dcbca0dd864eae8f81130540905a542529944acaf165b4ef0679dae7cb86f004c918dcee72b320015748dfe333e12ccd9c077f9447278d888d340ca67c5c20c17d07b3736b648c26d29bd7e87965a6a891a174862a050282c1847cf279cd3c2a2b0f99291eea8c8a1ab16aeaa266380e65e1add8c6c91f888d3976ee1782c4138d97ce6341e77af5b4b66c15c33813b3930b620688dde1447f10a950248b60dc05f75ba514b27b56720b96eabffc057090659e051ca4dd07af4b57dec639673bc574
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
+        CA
+      TBS:
+        MD5: 2fc76031fc24eec1ef3db2d246d21d6a
+        SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
+        SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+      ValidFrom: '2004-01-22 09:00:00'
+      ValidTo: '2014-01-27 10:00:00'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 610b7f6b000000000019
+      Signature: 13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      TBS:
+        MD5: 4798d55be7663a75649cda4dedc686ef
+        SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
+        SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+      ValidFrom: '2006-05-23 17:00:51'
+      ValidTo: '2016-05-23 17:10:51'
+      Version: 3
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
+        CA
+      SerialNumber: 0100000000010de51c0971
+      Version: 1
+    SignerInfo: ''
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - Se64a.sys
+Verified: 'TRUE'

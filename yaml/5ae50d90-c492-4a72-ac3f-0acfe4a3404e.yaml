@@ -1,0 +1,85 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: 5ae50d90-c492-4a72-ac3f-0acfe4a3404e
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: 767303ab50712958a3fda9c2022590e0
+    SHA1: 7f5f6d152aae4da8b062120f7deda031313e46f9
+    SHA256: b7614d88ed04e2d3bf0798380e04b90e04d87a785fbd99f994206da8d9658fe5
+  Company: Elaborate Bytes
+  Copyright: Copyright (C) Elaborate Bytes 2000
+  CreationTimestamp: '2000-11-30 16:02:08'
+  Date: ''
+  Description: ElbyCD Windows NT/2000 I/O driver
+  ExportedFunctions: ''
+  FileVersion: 1, 0, 1, 0
+  Filename: ''
+  ImportedFunctions:
+  - RtlInitAnsiString
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - RtlInitUnicodeString
+  - IofCompleteRequest
+  - RtlFreeUnicodeString
+  - IoDeleteSymbolicLink
+  - RtlAnsiStringToUnicodeString
+  - IoDeleteDevice
+  - IoCreateUnprotectedSymbolicLink
+  - ZwCreateFile
+  - ZwCreateKey
+  - ZwOpenKey
+  - ZwDeviceIoControlFile
+  - ZwClose
+  Imports:
+  - ntoskrnl.exe
+  InternalName: ElbyCDIO
+  MD5: 520c18f50d3cb2ce162767c4c1998b86
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ElbyCDIO.sys
+  PDBPath: ''
+  Product: CDRTools
+  ProductVersion: 3, 0, 0, 1
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 4572daeecc881e542f45787723a4437f
+    SHA1: ab98fa2e494f5c14d63e10a40afe41dc972b1ce6
+    SHA256: eb9978531ba9788ada8169d387a0a5d6a44ec56025546013ebcab36d477aab65
+  SHA1: eb2496304073727564b513efd6387a77ce395443
+  SHA256: 98ec7cc994d26699f5d26103a0aeb361128cff3c2c4d624fc99126540e23e97e
+  Sections:
+    .reloc:
+      Entropy: 4.010989732097636
+      Virtual Size: '0x78'
+    .rsrc:
+      Entropy: 3.325319101382068
+      Virtual Size: '0x4d8'
+    .text:
+      Entropy: 5.752189074044081
+      Virtual Size: '0x57e'
+    INIT:
+      Entropy: 4.716354335922163
+      Virtual Size: '0x1b2'
+  Signature: ''
+  Signatures: {}
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- ElbyCDIO
+Verified: 'TRUE'

@@ -1,0 +1,2217 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: 0e148ca9-68b1-4321-bddd-146f845d54d3
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: d865b8b11ee0f2ddc9095e3249015abf
+    SHA1: 0aa57861ba15db6dc026c87f503fbe9635a29629
+    SHA256: 14e6f0d5f93dc52471af549de1c91c1fc1d9dbd175d5932c17e58e6b186694c9
+  Company: IObit
+  Copyright: "IObit Copyright \xA9 2005-2013"
+  CreationTimestamp: '2013-09-27 03:40:47'
+  Date: ''
+  Description: IObitUnlocker Driver
+  ExportedFunctions: ''
+  FileVersion: '1.2.0.0 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - IoCreateDevice
+  - MmGetSystemRoutineAddress
+  - ExfInterlockedPopEntryList
+  - DbgPrint
+  - KeWaitForSingleObject
+  - IofCallDriver
+  - KeGetCurrentThread
+  - KeInitializeEvent
+  - IoAllocateIrp
+  - ZwClose
+  - ObfDereferenceObject
+  - IoGetRelatedDeviceObject
+  - ObReferenceObjectByHandle
+  - IoFileObjectType
+  - memcpy
+  - ZwWriteFile
+  - ZwReadFile
+  - ZwWaitForSingleObject
+  - memset
+  - RtlCompareUnicodeString
+  - KeDelayExecutionThread
+  - _wcsnicmp
+  - IoCreateSymbolicLink
+  - IoCreateFile
+  - ZwQueryDirectoryFile
+  - IoFreeIrp
+  - KeSetEvent
+  - ZwOpenProcess
+  - ZwTerminateProcess
+  - _wcsicmp
+  - wcsrchr
+  - ZwDuplicateObject
+  - ExfInterlockedPushEntryList
+  - KeUnstackDetachProcess
+  - MmIsAddressValid
+  - PsGetProcessPeb
+  - KeStackAttachProcess
+  - PsLookupProcessByProcessId
+  - ZwQuerySystemInformation
+  - ZwQuerySymbolicLinkObject
+  - ZwOpenSymbolicLinkObject
+  - RtlInitUnicodeString
+  - ZwQueryInformationFile
+  - ObQueryNameString
+  - KeTickCount
+  - KeBugCheckEx
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - IoDeleteSymbolicLink
+  - _vsnwprintf
+  - IoDeleteDevice
+  - KeGetCurrentIrql
+  - RtlUnwind
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - NTOSKRNL.EXE
+  InternalName: IObitUnlocker.sys
+  MD5: 9c14315e086882e89a01c9700c4b5530
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: IObitUnlocker.sys
+  PDBPath: ''
+  Product: IObitUnlocker
+  ProductVersion: 1.2.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 45e8197e8972ce1575cb59ba47bbca6b
+    SHA1: 1c05376b51b700befeedb5e91c2b046898e5e955
+    SHA256: 613e1f251c62380c70363a484341431d05279fd28749c36173025f0a7108e138
+  SHA1: 2446597bd4fd1f67657425310bec5db5614a8616
+  SHA256: 0209934453e9ce60b1a5e4b85412e6faf29127987505bfb1185fc9296c578b09
+  Sections:
+    .data:
+      Entropy: 1.5672229185382367
+      Virtual Size: '0x8c'
+    .rdata:
+      Entropy: 4.184352632111533
+      Virtual Size: '0x29c'
+    .reloc:
+      Entropy: 5.526376244216933
+      Virtual Size: '0x3d6'
+    .rsrc:
+      Entropy: 3.287732512533589
+      Virtual Size: '0x370'
+    .text:
+      Entropy: 6.352640579869565
+      Virtual Size: '0x3d9c'
+    INIT:
+      Entropy: 5.4156598647971395
+      Virtual Size: '0x5e8'
+  Signature: ''
+  Signatures: {}
+- Authentihash:
+    MD5: d08742729d8b2acaf972fcea6df3bf09
+    SHA1: d7fe09f414ea3a9f2b979c6d883079f0ed563a4b
+    SHA256: 89d96210bf36a88acb14086c96e916b790d21b7adf81d0907c823ca2afbe0ce3
+  Company: IObit
+  Copyright: "IObit Copyright \xA9 2005-2013"
+  CreationTimestamp: '2013-09-27 03:40:53'
+  Date: ''
+  Description: IObitUnlocker Driver
+  ExportedFunctions: ''
+  FileVersion: '1.2.0.0 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - IoDeleteSymbolicLink
+  - ExFreePoolWithTag
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - _wcsnicmp
+  - ZwReadFile
+  - IoGetRelatedDeviceObject
+  - MmGetSystemRoutineAddress
+  - KeInitializeEvent
+  - ExInterlockedPopEntryList
+  - KeDelayExecutionThread
+  - IoFileObjectType
+  - ZwWaitForSingleObject
+  - ZwClose
+  - ObReferenceObjectByHandle
+  - KeWaitForSingleObject
+  - RtlCompareUnicodeString
+  - IoAllocateIrp
+  - ObfDereferenceObject
+  - ZwWriteFile
+  - DbgPrint
+  - IofCallDriver
+  - _wcsicmp
+  - PsGetProcessPeb
+  - PsLookupProcessByProcessId
+  - ZwQuerySymbolicLinkObject
+  - RtlInitUnicodeString
+  - KeSetEvent
+  - IoCreateFile
+  - ZwQuerySystemInformation
+  - ZwOpenSymbolicLinkObject
+  - KeUnstackDetachProcess
+  - ObQueryNameString
+  - wcsrchr
+  - ZwQueryDirectoryFile
+  - _vsnwprintf
+  - ZwDuplicateObject
+  - IoFreeIrp
+  - ZwOpenProcess
+  - MmIsAddressValid
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ExInterlockedPushEntryList
+  - KeStackAttachProcess
+  - KeBugCheckEx
+  - __C_specific_handler
+  Imports:
+  - ntoskrnl.exe
+  InternalName: IObitUnlocker.sys
+  MD5: ad6ec006e29343c466f73bf47fe0caf3
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: IObitUnlocker.sys
+  PDBPath: ''
+  Product: IObitUnlocker
+  ProductVersion: 1.2.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 772fe1b9794caabb89ee0b78335e3f98
+    SHA1: 877c7c33339b6359e6c366e9c4744b779f24f542
+    SHA256: aed7ad05867110783a74d2c2d4c7a0d2c84075f8a3626e45df6e8f021ea3f592
+  SHA1: 7f4bef1dbc56974f36c25e37b344213d144ffcb4
+  SHA256: d8096325bfe81b093dd522095b6153d9c4850ba2eaa790e12e7056ef160d0432
+  Sections:
+    .data:
+      Entropy: 0.7812641672999111
+      Virtual Size: '0x170'
+    .pdata:
+      Entropy: 4.165113468119247
+      Virtual Size: '0x234'
+    .rdata:
+      Entropy: 4.788425060525102
+      Virtual Size: '0x584'
+    .reloc:
+      Entropy: 1.2987909647818572
+      Virtual Size: '0x24'
+    .rsrc:
+      Entropy: 3.288590339240593
+      Virtual Size: '0x370'
+    .text:
+      Entropy: 6.210028479836042
+      Virtual Size: '0x5186'
+    INIT:
+      Entropy: 5.162190008807952
+      Virtual Size: '0x64c'
+  Signature: ''
+  Signatures:
+  - Certificates:
+    - IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 11cadaf29da4c3cb113bf1877b120103
+      Signature: a09ea7ad2e5d67136d3a8d90878294843292af15103d0bca0dfb6091aa98d35d2bbda19f7b67e8c60ec5650d5d9edfaa0f61e744c2f3f3df12d07a68429127e2a7c5e262ab6bac51cb4287cc131aac3e115f7b1a0c57bfd901f5aff0555c981017d7670952c661bb07d1349af20539651e5789c99682a314d8beba080acfd9baa442db7b5df21b250ce44649d6b942c7a76d2d45744d3c24b26cc6433790ee5b0d7b54d6151245e0284177afeae7196f59b13718be94ed54e9ba5c84a330f8f39f277ed2be7424dd45dfb9c758566e7aaf4fd7eb45f9c5b10073379de1dc5af34f78727dfc0473a0c7ff2ccab6dc9c0ddba5a602013010ee789dfcaac21d0fa9
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=CN, ST=Sichuan, L=Chengdu, O=IObit Information Technology, OU=Digital
+        ID Class 3 , Microsoft Software Validation v2, CN=IObit Information Technology
+      TBS:
+        MD5: 6767e14c32c32562d2ed0feeccf02a40
+        SHA1: 84fdcb3f59b6c50918daea4a7cc3b200d6d5c91e
+        SHA256: 264d50b6b2be1acd6642f3f5f7d938820937ecae24a93891c6b45366f3b8d152
+      ValidFrom: '2013-01-15 00:00:00'
+      ValidTo: '2016-02-14 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Version: 3
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      SerialNumber: 11cadaf29da4c3cb113bf1877b120103
+      Version: 1
+    SignerInfo: ''
+- Authentihash:
+    MD5: 751c91ae91cb43aadaeaa1bb187c593a
+    SHA1: dd220acea885a954085e614b94da2b5bba5c0cc3
+    SHA256: e0aff24a54400fe9f86564b8ce9f874e7ff51e96085ff950baff05844cff2bd1
+  Company: IObit Information Technology
+  Copyright: "\xA9 IObit. All rights reserved."
+  CreationTimestamp: '2022-08-17 02:18:15'
+  Date: ''
+  Description: Unlocker Driver
+  ExportedFunctions: ''
+  FileVersion: 1.3.0.10
+  Filename: IObitUnlocker.sys
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - IoDeleteSymbolicLink
+  - ExFreePoolWithTag
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - _wcsnicmp
+  - ZwReadFile
+  - IoGetRelatedDeviceObject
+  - MmGetSystemRoutineAddress
+  - KeInitializeEvent
+  - ExInterlockedPopEntryList
+  - KeDelayExecutionThread
+  - IoFileObjectType
+  - ZwWaitForSingleObject
+  - ZwCreateFile
+  - ExAllocatePool
+  - IoGetCurrentProcess
+  - ZwClose
+  - ObReferenceObjectByHandle
+  - KeWaitForSingleObject
+  - RtlCompareUnicodeString
+  - IoAllocateIrp
+  - ObfDereferenceObject
+  - ZwQueryInformationFile
+  - ZwWriteFile
+  - ObOpenObjectByPointer
+  - DbgPrint
+  - IofCallDriver
+  - _wcsicmp
+  - PsGetProcessPeb
+  - PsLookupProcessByProcessId
+  - ZwQuerySymbolicLinkObject
+  - RtlInitUnicodeString
+  - KeSetEvent
+  - RtlAppendUnicodeToString
+  - IoCreateFile
+  - ZwQuerySystemInformation
+  - ZwOpenSymbolicLinkObject
+  - KeUnstackDetachProcess
+  - ObQueryNameString
+  - wcsrchr
+  - ZwQueryDirectoryFile
+  - _vsnwprintf
+  - RtlAppendUnicodeStringToString
+  - ZwDuplicateObject
+  - IoFreeIrp
+  - ZwOpenProcess
+  - PsGetCurrentProcessId
+  - MmIsAddressValid
+  - ZwTerminateProcess
+  - ExInterlockedPushEntryList
+  - KeStackAttachProcess
+  - KeBugCheckEx
+  - __C_specific_handler
+  Imports:
+  - ntoskrnl.exe
+  InternalName: IObitUnlocker.sys
+  MD5: 2391fb461b061d0e5fccb050d4af7941
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: IObitUnlocker.sys
+  Product: Unlocker
+  ProductVersion: 1.3.0.10
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 35ffa69ed506b3a5d24d6e9c10f88070
+    SHA1: a5d21268d58eebe7c8e0921d0079974d8541ffb7
+    SHA256: 7068185b0f6869fa20b8c64c2e6f2c3bedc161bc4118e602df47da640013cb62
+  SHA1: 7c6cad6a268230f6e08417d278dda4d66bb00d13
+  SHA256: f85cca4badff17d1aa90752153ccec77a68ad282b69e3985fdc4743eaea85004
+  Sections:
+    .data:
+      Entropy: 0.8079955727472559
+      Virtual Size: '0x170'
+    .pdata:
+      Entropy: 4.257735635509842
+      Virtual Size: '0x27c'
+    .rdata:
+      Entropy: 4.74536885813998
+      Virtual Size: '0x644'
+    .reloc:
+      Entropy: 1.2987909647818572
+      Virtual Size: '0x24'
+    .rsrc:
+      Entropy: 3.2596097351980737
+      Virtual Size: '0x370'
+    .text:
+      Entropy: 6.174805563267683
+      Virtual Size: '0x5976'
+    INIT:
+      Entropy: 5.202412460125397
+      Virtual Size: '0x72a'
+  Signature:
+  - IObit CO., LTD
+  - DigiCert EV Code Signing CA
+  - DigiCert
+  Signatures:
+  - Certificates:
+    - IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 0d98f5df96c592c5b76bfde1cb823096
+      Signature: 89d53256ccf4b2e50a8e05d88de9ed33f6adde16e143a6f7f042ec4ed9220c7c4195b543ad1ae9c5ae5421f192140d62b28449c83a0c31759765c127fed77c447072976f2d5e8d44e07dafbbc5a0cea9e8020081c3f8a22a1519e53d8c69ff3ffbd7e090e92593a738b8bd6d583b27e5e797672294147fd1b8492683b1b3f202c3e0c571f9fad02d95f8204e054fa722ac42bf21e54ec1891942ab339f004ab57cb01838539bf5196fc1579e0add7c42206ff5e10bb0934b4a801fab12ed748a6a858af5c9601296ce6ca9b14b46f731a0485f49f142ab65dacb0103daaee13b2269f2c2b2d2bb2b04abe93642ecc988fa536170194acc1c73d48a781d3d5f0e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: ??=CN, ??=Sichuan, ??=Wuhou District, Chengdu, ??=Private Organization,
+        serialNumber=91510107072412418F, C=CN, ST=Sichuan, L=Chengdu, O=IObit CO.,
+        LTD, CN=IObit CO., LTD
+      TBS:
+        MD5: d0ba095f2bdb679cea084b4106479484
+        SHA1: 80aba0ecbd2b71c84bc73ac42963bc9ce247a020
+        SHA256: a93f8b7111c3e2288e164e42131e2ad52867060479ade1f6e6b3124cde822cfa
+      ValidFrom: '2019-08-27 00:00:00'
+      ValidTo: '2022-08-30 12:00:00'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
+      Signature: 9e5b963a2e1288acab016da49f75e40187a3a532d7bcbaa97ea3d61417f7c2136b7c738f2b6ae50f265968b08e259b6ceffa6c939208c14dcf459e9c46d61e74a19b14a3fa012f4ab101e1724048111368b9369d914bd7c2391210c1c4dcbb6214142a615d4f387c661fc61bffadbe4f7f945b7343000f4d73b751cf0ef677c05bcd348cd96313aa0e6111d6f28e27fcb47bb8b91120918678ea0ed428ff2ad52438e837b2ec96bb9fbc4a1650e15ebf517d23a032c7c1949e7ac9c026a2cc2587a0127e749f2d8db1c8e784beb9d1e9debb6a4e887371e12238cb2487e9737e51b2ff98eb4e7e2fe0ca0efab35ed1ba0542a8489f83f63fc4caa8df68a05061
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      TBS:
+        MD5: f92649915476229b093c211c2b18e6c4
+        SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
+        SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Version: 3
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      SerialNumber: 0d98f5df96c592c5b76bfde1cb823096
+      Version: 1
+    SignerInfo: ''
+- Authentihash:
+    MD5: 979c3d1cb589639a129b4e4cec243e73
+    SHA1: 3a54be5a75468b20ef8e182a7af6e6f314a5d633
+    SHA256: afc1873543735d6299543d91d7c09ee1fa1588ff9f131ba4aedcd32b984c8ec1
+  Company: IObit
+  Copyright: "IObit Copyright \xA9 2005-2013"
+  CreationTimestamp: '2013-09-27 03:41:05'
+  Date: ''
+  Description: IObitUnlocker Driver
+  ExportedFunctions: ''
+  FileVersion: '1.2.0.0 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - IoDeleteSymbolicLink
+  - ExFreePoolWithTag
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - _wcsnicmp
+  - ZwReadFile
+  - IoGetRelatedDeviceObject
+  - MmGetSystemRoutineAddress
+  - KeInitializeEvent
+  - ExInterlockedPopEntryList
+  - KeDelayExecutionThread
+  - IoFileObjectType
+  - ZwWaitForSingleObject
+  - ZwClose
+  - ObReferenceObjectByHandle
+  - KeWaitForSingleObject
+  - RtlCompareUnicodeString
+  - IoAllocateIrp
+  - ObfDereferenceObject
+  - ZwWriteFile
+  - DbgPrint
+  - IofCallDriver
+  - _wcsicmp
+  - PsGetProcessPeb
+  - PsLookupProcessByProcessId
+  - ZwQuerySymbolicLinkObject
+  - RtlInitUnicodeString
+  - KeSetEvent
+  - IoCreateFile
+  - ZwQuerySystemInformation
+  - ZwOpenSymbolicLinkObject
+  - KeUnstackDetachProcess
+  - ObQueryNameString
+  - wcsrchr
+  - ZwQueryDirectoryFile
+  - _vsnwprintf
+  - ZwDuplicateObject
+  - IoFreeIrp
+  - ZwOpenProcess
+  - MmIsAddressValid
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ExInterlockedPushEntryList
+  - KeStackAttachProcess
+  - KeBugCheckEx
+  - __C_specific_handler
+  Imports:
+  - ntoskrnl.exe
+  InternalName: IObitUnlocker.sys
+  MD5: f58e9309d8251a3010ee022aa5a6e377
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: IObitUnlocker.sys
+  PDBPath: ''
+  Product: IObitUnlocker
+  ProductVersion: 1.2.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: fff3d2887cf0d6b4e4c9e7d3140d1f80
+    SHA1: 885e1b2eba8bd38ea2838313f851ce33455454e4
+    SHA256: 51b62dce85767011acfae48ba8fb023efcf56ff687cc3207762652b9bea36013
+  SHA1: 40cfe5793a25722aaf47388f8059af53e77a4b22
+  SHA256: b6ae324b84a4632cf690dd565954d64b205104fc3fa42181612c3f5b830579c6
+  Sections:
+    .data:
+      Entropy: 0.7812641672999111
+      Virtual Size: '0x170'
+    .pdata:
+      Entropy: 4.179297571785238
+      Virtual Size: '0x24c'
+    .rdata:
+      Entropy: 4.769811652238958
+      Virtual Size: '0x594'
+    .reloc:
+      Entropy: 1.2987909647818572
+      Virtual Size: '0x24'
+    .rsrc:
+      Entropy: 3.288590339240593
+      Virtual Size: '0x370'
+    .text:
+      Entropy: 6.202075133120773
+      Virtual Size: '0x5186'
+    INIT:
+      Entropy: 5.2106778004138254
+      Virtual Size: '0x64c'
+  Signature: ''
+  Signatures:
+  - Certificates:
+    - IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 11cadaf29da4c3cb113bf1877b120103
+      Signature: a09ea7ad2e5d67136d3a8d90878294843292af15103d0bca0dfb6091aa98d35d2bbda19f7b67e8c60ec5650d5d9edfaa0f61e744c2f3f3df12d07a68429127e2a7c5e262ab6bac51cb4287cc131aac3e115f7b1a0c57bfd901f5aff0555c981017d7670952c661bb07d1349af20539651e5789c99682a314d8beba080acfd9baa442db7b5df21b250ce44649d6b942c7a76d2d45744d3c24b26cc6433790ee5b0d7b54d6151245e0284177afeae7196f59b13718be94ed54e9ba5c84a330f8f39f277ed2be7424dd45dfb9c758566e7aaf4fd7eb45f9c5b10073379de1dc5af34f78727dfc0473a0c7ff2ccab6dc9c0ddba5a602013010ee789dfcaac21d0fa9
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=CN, ST=Sichuan, L=Chengdu, O=IObit Information Technology, OU=Digital
+        ID Class 3 , Microsoft Software Validation v2, CN=IObit Information Technology
+      TBS:
+        MD5: 6767e14c32c32562d2ed0feeccf02a40
+        SHA1: 84fdcb3f59b6c50918daea4a7cc3b200d6d5c91e
+        SHA256: 264d50b6b2be1acd6642f3f5f7d938820937ecae24a93891c6b45366f3b8d152
+      ValidFrom: '2013-01-15 00:00:00'
+      ValidTo: '2016-02-14 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Version: 3
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      SerialNumber: 11cadaf29da4c3cb113bf1877b120103
+      Version: 1
+    SignerInfo: ''
+- Authentihash:
+    MD5: 979c3d1cb589639a129b4e4cec243e73
+    SHA1: 3a54be5a75468b20ef8e182a7af6e6f314a5d633
+    SHA256: afc1873543735d6299543d91d7c09ee1fa1588ff9f131ba4aedcd32b984c8ec1
+  Company: IObit
+  Copyright: "IObit Copyright \xA9 2005-2013"
+  CreationTimestamp: '2013-09-27 03:41:05'
+  Date: ''
+  Description: IObitUnlocker Driver
+  ExportedFunctions: ''
+  FileVersion: '1.2.0.0 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - IoDeleteSymbolicLink
+  - ExFreePoolWithTag
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - _wcsnicmp
+  - ZwReadFile
+  - IoGetRelatedDeviceObject
+  - MmGetSystemRoutineAddress
+  - KeInitializeEvent
+  - ExInterlockedPopEntryList
+  - KeDelayExecutionThread
+  - IoFileObjectType
+  - ZwWaitForSingleObject
+  - ZwClose
+  - ObReferenceObjectByHandle
+  - KeWaitForSingleObject
+  - RtlCompareUnicodeString
+  - IoAllocateIrp
+  - ObfDereferenceObject
+  - ZwWriteFile
+  - DbgPrint
+  - IofCallDriver
+  - _wcsicmp
+  - PsGetProcessPeb
+  - PsLookupProcessByProcessId
+  - ZwQuerySymbolicLinkObject
+  - RtlInitUnicodeString
+  - KeSetEvent
+  - IoCreateFile
+  - ZwQuerySystemInformation
+  - ZwOpenSymbolicLinkObject
+  - KeUnstackDetachProcess
+  - ObQueryNameString
+  - wcsrchr
+  - ZwQueryDirectoryFile
+  - _vsnwprintf
+  - ZwDuplicateObject
+  - IoFreeIrp
+  - ZwOpenProcess
+  - MmIsAddressValid
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ExInterlockedPushEntryList
+  - KeStackAttachProcess
+  - KeBugCheckEx
+  - __C_specific_handler
+  Imports:
+  - ntoskrnl.exe
+  InternalName: IObitUnlocker.sys
+  MD5: 3a3d54e49cae4b51f5231d3ae6724fcd
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: IObitUnlocker.sys
+  PDBPath: ''
+  Product: IObitUnlocker
+  ProductVersion: 1.2.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: fff3d2887cf0d6b4e4c9e7d3140d1f80
+    SHA1: 885e1b2eba8bd38ea2838313f851ce33455454e4
+    SHA256: 51b62dce85767011acfae48ba8fb023efcf56ff687cc3207762652b9bea36013
+  SHA1: 8d404be8d892e5a073eca1d872a5023014dd0b73
+  SHA256: d3e95b8d8cbb0c4c3bb78d929408b37fd3b8f305b6234f7f03954465d52454eb
+  Sections:
+    .data:
+      Entropy: 0.7812641672999111
+      Virtual Size: '0x170'
+    .pdata:
+      Entropy: 4.179297571785238
+      Virtual Size: '0x24c'
+    .rdata:
+      Entropy: 4.769811652238958
+      Virtual Size: '0x594'
+    .reloc:
+      Entropy: 1.2987909647818572
+      Virtual Size: '0x24'
+    .rsrc:
+      Entropy: 3.288590339240593
+      Virtual Size: '0x370'
+    .text:
+      Entropy: 6.202075133120773
+      Virtual Size: '0x5186'
+    INIT:
+      Entropy: 5.2106778004138254
+      Virtual Size: '0x64c'
+  Signature: ''
+  Signatures:
+  - Certificates:
+    - IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 11cadaf29da4c3cb113bf1877b120103
+      Signature: a09ea7ad2e5d67136d3a8d90878294843292af15103d0bca0dfb6091aa98d35d2bbda19f7b67e8c60ec5650d5d9edfaa0f61e744c2f3f3df12d07a68429127e2a7c5e262ab6bac51cb4287cc131aac3e115f7b1a0c57bfd901f5aff0555c981017d7670952c661bb07d1349af20539651e5789c99682a314d8beba080acfd9baa442db7b5df21b250ce44649d6b942c7a76d2d45744d3c24b26cc6433790ee5b0d7b54d6151245e0284177afeae7196f59b13718be94ed54e9ba5c84a330f8f39f277ed2be7424dd45dfb9c758566e7aaf4fd7eb45f9c5b10073379de1dc5af34f78727dfc0473a0c7ff2ccab6dc9c0ddba5a602013010ee789dfcaac21d0fa9
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=CN, ST=Sichuan, L=Chengdu, O=IObit Information Technology, OU=Digital
+        ID Class 3 , Microsoft Software Validation v2, CN=IObit Information Technology
+      TBS:
+        MD5: 6767e14c32c32562d2ed0feeccf02a40
+        SHA1: 84fdcb3f59b6c50918daea4a7cc3b200d6d5c91e
+        SHA256: 264d50b6b2be1acd6642f3f5f7d938820937ecae24a93891c6b45366f3b8d152
+      ValidFrom: '2013-01-15 00:00:00'
+      ValidTo: '2016-02-14 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Version: 3
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      SerialNumber: 11cadaf29da4c3cb113bf1877b120103
+      Version: 1
+    SignerInfo: ''
+- Authentihash:
+    MD5: 979c3d1cb589639a129b4e4cec243e73
+    SHA1: 3a54be5a75468b20ef8e182a7af6e6f314a5d633
+    SHA256: afc1873543735d6299543d91d7c09ee1fa1588ff9f131ba4aedcd32b984c8ec1
+  Company: IObit
+  Copyright: "IObit Copyright \xA9 2005-2013"
+  CreationTimestamp: '2013-09-27 03:41:05'
+  Date: ''
+  Description: IObitUnlocker Driver
+  ExportedFunctions: ''
+  FileVersion: '1.2.0.0 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - IoDeleteSymbolicLink
+  - ExFreePoolWithTag
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - _wcsnicmp
+  - ZwReadFile
+  - IoGetRelatedDeviceObject
+  - MmGetSystemRoutineAddress
+  - KeInitializeEvent
+  - ExInterlockedPopEntryList
+  - KeDelayExecutionThread
+  - IoFileObjectType
+  - ZwWaitForSingleObject
+  - ZwClose
+  - ObReferenceObjectByHandle
+  - KeWaitForSingleObject
+  - RtlCompareUnicodeString
+  - IoAllocateIrp
+  - ObfDereferenceObject
+  - ZwWriteFile
+  - DbgPrint
+  - IofCallDriver
+  - _wcsicmp
+  - PsGetProcessPeb
+  - PsLookupProcessByProcessId
+  - ZwQuerySymbolicLinkObject
+  - RtlInitUnicodeString
+  - KeSetEvent
+  - IoCreateFile
+  - ZwQuerySystemInformation
+  - ZwOpenSymbolicLinkObject
+  - KeUnstackDetachProcess
+  - ObQueryNameString
+  - wcsrchr
+  - ZwQueryDirectoryFile
+  - _vsnwprintf
+  - ZwDuplicateObject
+  - IoFreeIrp
+  - ZwOpenProcess
+  - MmIsAddressValid
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ExInterlockedPushEntryList
+  - KeStackAttachProcess
+  - KeBugCheckEx
+  - __C_specific_handler
+  Imports:
+  - ntoskrnl.exe
+  InternalName: IObitUnlocker.sys
+  MD5: 57fdf2cc39a2865dd67dcf762d2c0b7f
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: IObitUnlocker.sys
+  PDBPath: ''
+  Product: IObitUnlocker
+  ProductVersion: 1.2.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: fff3d2887cf0d6b4e4c9e7d3140d1f80
+    SHA1: 885e1b2eba8bd38ea2838313f851ce33455454e4
+    SHA256: 51b62dce85767011acfae48ba8fb023efcf56ff687cc3207762652b9bea36013
+  SHA1: 8628a983d81e5df59187d3272b509a5a8e12137a
+  SHA256: 5ea5f339b2e40dea57378626790ca7e9a82777aacdada5bc61ebb7d82043fa07
+  Sections:
+    .data:
+      Entropy: 0.7812641672999111
+      Virtual Size: '0x170'
+    .pdata:
+      Entropy: 4.179297571785238
+      Virtual Size: '0x24c'
+    .rdata:
+      Entropy: 4.769811652238958
+      Virtual Size: '0x594'
+    .reloc:
+      Entropy: 1.2987909647818572
+      Virtual Size: '0x24'
+    .rsrc:
+      Entropy: 3.288590339240593
+      Virtual Size: '0x370'
+    .text:
+      Entropy: 6.202075133120773
+      Virtual Size: '0x5186'
+    INIT:
+      Entropy: 5.2106778004138254
+      Virtual Size: '0x64c'
+  Signature: ''
+  Signatures: {}
+- Authentihash:
+    MD5: 910e58c2580f8eb3efacae948c39e947
+    SHA1: f96bc840dde4d24fcd3f2f4712fdb8143aeedf99
+    SHA256: 198a4dc1c4bd7eff31ff4d1952a592170b25bfb5fedcd9d5d4c4fd3707337e42
+  Company: IObit
+  Copyright: "IObit Copyright \xA9 2005-2013"
+  CreationTimestamp: '2013-09-27 03:40:56'
+  Date: ''
+  Description: IObitUnlocker Driver
+  ExportedFunctions: ''
+  FileVersion: '1.2.0.0 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - MmGetSystemRoutineAddress
+  - ExfInterlockedPopEntryList
+  - DbgPrint
+  - KeWaitForSingleObject
+  - IofCallDriver
+  - KeGetCurrentThread
+  - KeInitializeEvent
+  - IoAllocateIrp
+  - ZwClose
+  - ObfDereferenceObject
+  - IoGetRelatedDeviceObject
+  - ObReferenceObjectByHandle
+  - IoFileObjectType
+  - memcpy
+  - ZwWriteFile
+  - ZwReadFile
+  - ZwWaitForSingleObject
+  - memset
+  - RtlCompareUnicodeString
+  - KeDelayExecutionThread
+  - _wcsnicmp
+  - ExFreePoolWithTag
+  - IoCreateFile
+  - ZwQueryDirectoryFile
+  - IoFreeIrp
+  - KeSetEvent
+  - ZwOpenProcess
+  - ZwTerminateProcess
+  - _wcsicmp
+  - wcsrchr
+  - ZwDuplicateObject
+  - ExfInterlockedPushEntryList
+  - KeUnstackDetachProcess
+  - MmIsAddressValid
+  - PsGetProcessPeb
+  - KeStackAttachProcess
+  - PsLookupProcessByProcessId
+  - ZwQuerySystemInformation
+  - ZwQuerySymbolicLinkObject
+  - ZwOpenSymbolicLinkObject
+  - RtlInitUnicodeString
+  - ZwQueryInformationFile
+  - ObQueryNameString
+  - KeTickCount
+  - KeBugCheckEx
+  - RtlUnwind
+  - IofCompleteRequest
+  - IoDeleteSymbolicLink
+  - _vsnwprintf
+  - IoDeleteDevice
+  - KeGetCurrentIrql
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: IObitUnlocker.sys
+  MD5: 98eaed36ba245047410a19c191cd1a69
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: IObitUnlocker.sys
+  PDBPath: ''
+  Product: IObitUnlocker
+  ProductVersion: 1.2.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 5ed41271591cfd1188e26860c867cd71
+    SHA1: 5659e97f0a3d6b4b5cc6db7922ce3b1a5d2a2d62
+    SHA256: 96f9617c2e249fd97c13b33fc62066abc19a3dfc63913f8b7f680423c7d80e63
+  SHA1: e1aa2dcd6702f26c14805bb117acfb4a99b9d673
+  SHA256: 969f73a1da331e43777a3c1f08ec0734e7cf8c8136e5d469cbad8035fbfe3b47
+  Sections:
+    .data:
+      Entropy: 1.5279258901075148
+      Virtual Size: '0x8c'
+    .rdata:
+      Entropy: 4.189271224540514
+      Virtual Size: '0x28c'
+    .reloc:
+      Entropy: 5.472046791762154
+      Virtual Size: '0x3f6'
+    .rsrc:
+      Entropy: 3.287732512533589
+      Virtual Size: '0x370'
+    .text:
+      Entropy: 6.315433318536223
+      Virtual Size: '0x3d80'
+    INIT:
+      Entropy: 5.418516536382236
+      Virtual Size: '0x5c2'
+  Signature: ''
+  Signatures: {}
+- Authentihash:
+    MD5: 910e58c2580f8eb3efacae948c39e947
+    SHA1: f96bc840dde4d24fcd3f2f4712fdb8143aeedf99
+    SHA256: 198a4dc1c4bd7eff31ff4d1952a592170b25bfb5fedcd9d5d4c4fd3707337e42
+  Company: IObit
+  Copyright: "IObit Copyright \xA9 2005-2013"
+  CreationTimestamp: '2013-09-27 03:40:56'
+  Date: ''
+  Description: IObitUnlocker Driver
+  ExportedFunctions: ''
+  FileVersion: '1.2.0.0 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - MmGetSystemRoutineAddress
+  - ExfInterlockedPopEntryList
+  - DbgPrint
+  - KeWaitForSingleObject
+  - IofCallDriver
+  - KeGetCurrentThread
+  - KeInitializeEvent
+  - IoAllocateIrp
+  - ZwClose
+  - ObfDereferenceObject
+  - IoGetRelatedDeviceObject
+  - ObReferenceObjectByHandle
+  - IoFileObjectType
+  - memcpy
+  - ZwWriteFile
+  - ZwReadFile
+  - ZwWaitForSingleObject
+  - memset
+  - RtlCompareUnicodeString
+  - KeDelayExecutionThread
+  - _wcsnicmp
+  - ExFreePoolWithTag
+  - IoCreateFile
+  - ZwQueryDirectoryFile
+  - IoFreeIrp
+  - KeSetEvent
+  - ZwOpenProcess
+  - ZwTerminateProcess
+  - _wcsicmp
+  - wcsrchr
+  - ZwDuplicateObject
+  - ExfInterlockedPushEntryList
+  - KeUnstackDetachProcess
+  - MmIsAddressValid
+  - PsGetProcessPeb
+  - KeStackAttachProcess
+  - PsLookupProcessByProcessId
+  - ZwQuerySystemInformation
+  - ZwQuerySymbolicLinkObject
+  - ZwOpenSymbolicLinkObject
+  - RtlInitUnicodeString
+  - ZwQueryInformationFile
+  - ObQueryNameString
+  - KeTickCount
+  - KeBugCheckEx
+  - RtlUnwind
+  - IofCompleteRequest
+  - IoDeleteSymbolicLink
+  - _vsnwprintf
+  - IoDeleteDevice
+  - KeGetCurrentIrql
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: IObitUnlocker.sys
+  MD5: 3a41edc1dda049a1b8aa411f728831e0
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: IObitUnlocker.sys
+  PDBPath: ''
+  Product: IObitUnlocker
+  ProductVersion: 1.2.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 5ed41271591cfd1188e26860c867cd71
+    SHA1: 5659e97f0a3d6b4b5cc6db7922ce3b1a5d2a2d62
+    SHA256: 96f9617c2e249fd97c13b33fc62066abc19a3dfc63913f8b7f680423c7d80e63
+  SHA1: abc5bbd11f26232bab2a68ecbff3cbb05f59701b
+  SHA256: 507724d96a54f3e45c16a065bf38ae82a9b80d07096a461068a701cae0c1cf29
+  Sections:
+    .data:
+      Entropy: 1.5279258901075148
+      Virtual Size: '0x8c'
+    .rdata:
+      Entropy: 4.189271224540514
+      Virtual Size: '0x28c'
+    .reloc:
+      Entropy: 5.472046791762154
+      Virtual Size: '0x3f6'
+    .rsrc:
+      Entropy: 3.287732512533589
+      Virtual Size: '0x370'
+    .text:
+      Entropy: 6.315433318536223
+      Virtual Size: '0x3d80'
+    INIT:
+      Entropy: 5.418516536382236
+      Virtual Size: '0x5c2'
+  Signature: ''
+  Signatures:
+  - Certificates:
+    - IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 11cadaf29da4c3cb113bf1877b120103
+      Signature: a09ea7ad2e5d67136d3a8d90878294843292af15103d0bca0dfb6091aa98d35d2bbda19f7b67e8c60ec5650d5d9edfaa0f61e744c2f3f3df12d07a68429127e2a7c5e262ab6bac51cb4287cc131aac3e115f7b1a0c57bfd901f5aff0555c981017d7670952c661bb07d1349af20539651e5789c99682a314d8beba080acfd9baa442db7b5df21b250ce44649d6b942c7a76d2d45744d3c24b26cc6433790ee5b0d7b54d6151245e0284177afeae7196f59b13718be94ed54e9ba5c84a330f8f39f277ed2be7424dd45dfb9c758566e7aaf4fd7eb45f9c5b10073379de1dc5af34f78727dfc0473a0c7ff2ccab6dc9c0ddba5a602013010ee789dfcaac21d0fa9
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=CN, ST=Sichuan, L=Chengdu, O=IObit Information Technology, OU=Digital
+        ID Class 3 , Microsoft Software Validation v2, CN=IObit Information Technology
+      TBS:
+        MD5: 6767e14c32c32562d2ed0feeccf02a40
+        SHA1: 84fdcb3f59b6c50918daea4a7cc3b200d6d5c91e
+        SHA256: 264d50b6b2be1acd6642f3f5f7d938820937ecae24a93891c6b45366f3b8d152
+      ValidFrom: '2013-01-15 00:00:00'
+      ValidTo: '2016-02-14 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Version: 3
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      SerialNumber: 11cadaf29da4c3cb113bf1877b120103
+      Version: 1
+    SignerInfo: ''
+- Authentihash:
+    MD5: d865b8b11ee0f2ddc9095e3249015abf
+    SHA1: 0aa57861ba15db6dc026c87f503fbe9635a29629
+    SHA256: 14e6f0d5f93dc52471af549de1c91c1fc1d9dbd175d5932c17e58e6b186694c9
+  Company: IObit
+  Copyright: "IObit Copyright \xA9 2005-2013"
+  CreationTimestamp: '2013-09-27 03:40:47'
+  Date: ''
+  Description: IObitUnlocker Driver
+  ExportedFunctions: ''
+  FileVersion: '1.2.0.0 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - IoCreateDevice
+  - MmGetSystemRoutineAddress
+  - ExfInterlockedPopEntryList
+  - DbgPrint
+  - KeWaitForSingleObject
+  - IofCallDriver
+  - KeGetCurrentThread
+  - KeInitializeEvent
+  - IoAllocateIrp
+  - ZwClose
+  - ObfDereferenceObject
+  - IoGetRelatedDeviceObject
+  - ObReferenceObjectByHandle
+  - IoFileObjectType
+  - memcpy
+  - ZwWriteFile
+  - ZwReadFile
+  - ZwWaitForSingleObject
+  - memset
+  - RtlCompareUnicodeString
+  - KeDelayExecutionThread
+  - _wcsnicmp
+  - IoCreateSymbolicLink
+  - IoCreateFile
+  - ZwQueryDirectoryFile
+  - IoFreeIrp
+  - KeSetEvent
+  - ZwOpenProcess
+  - ZwTerminateProcess
+  - _wcsicmp
+  - wcsrchr
+  - ZwDuplicateObject
+  - ExfInterlockedPushEntryList
+  - KeUnstackDetachProcess
+  - MmIsAddressValid
+  - PsGetProcessPeb
+  - KeStackAttachProcess
+  - PsLookupProcessByProcessId
+  - ZwQuerySystemInformation
+  - ZwQuerySymbolicLinkObject
+  - ZwOpenSymbolicLinkObject
+  - RtlInitUnicodeString
+  - ZwQueryInformationFile
+  - ObQueryNameString
+  - KeTickCount
+  - KeBugCheckEx
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - IoDeleteSymbolicLink
+  - _vsnwprintf
+  - IoDeleteDevice
+  - KeGetCurrentIrql
+  - RtlUnwind
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - NTOSKRNL.EXE
+  InternalName: IObitUnlocker.sys
+  MD5: 848690ca707b4850c967e3217f285fcc
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: IObitUnlocker.sys
+  PDBPath: ''
+  Product: IObitUnlocker
+  ProductVersion: 1.2.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 45e8197e8972ce1575cb59ba47bbca6b
+    SHA1: 1c05376b51b700befeedb5e91c2b046898e5e955
+    SHA256: 613e1f251c62380c70363a484341431d05279fd28749c36173025f0a7108e138
+  SHA1: 9e8c4fea1f2bc9fce1e08a6e0a448e567b504f66
+  SHA256: b0dd55b4dc7e561dfe413b029673674e2a5381f5f4daede03ddf3484310a6e11
+  Sections:
+    .data:
+      Entropy: 1.5672229185382367
+      Virtual Size: '0x8c'
+    .rdata:
+      Entropy: 4.184352632111533
+      Virtual Size: '0x29c'
+    .reloc:
+      Entropy: 5.526376244216933
+      Virtual Size: '0x3d6'
+    .rsrc:
+      Entropy: 3.287732512533589
+      Virtual Size: '0x370'
+    .text:
+      Entropy: 6.352640579869565
+      Virtual Size: '0x3d9c'
+    INIT:
+      Entropy: 5.4156598647971395
+      Virtual Size: '0x5e8'
+  Signature: ''
+  Signatures:
+  - Certificates:
+    - IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 11cadaf29da4c3cb113bf1877b120103
+      Signature: a09ea7ad2e5d67136d3a8d90878294843292af15103d0bca0dfb6091aa98d35d2bbda19f7b67e8c60ec5650d5d9edfaa0f61e744c2f3f3df12d07a68429127e2a7c5e262ab6bac51cb4287cc131aac3e115f7b1a0c57bfd901f5aff0555c981017d7670952c661bb07d1349af20539651e5789c99682a314d8beba080acfd9baa442db7b5df21b250ce44649d6b942c7a76d2d45744d3c24b26cc6433790ee5b0d7b54d6151245e0284177afeae7196f59b13718be94ed54e9ba5c84a330f8f39f277ed2be7424dd45dfb9c758566e7aaf4fd7eb45f9c5b10073379de1dc5af34f78727dfc0473a0c7ff2ccab6dc9c0ddba5a602013010ee789dfcaac21d0fa9
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=CN, ST=Sichuan, L=Chengdu, O=IObit Information Technology, OU=Digital
+        ID Class 3 , Microsoft Software Validation v2, CN=IObit Information Technology
+      TBS:
+        MD5: 6767e14c32c32562d2ed0feeccf02a40
+        SHA1: 84fdcb3f59b6c50918daea4a7cc3b200d6d5c91e
+        SHA256: 264d50b6b2be1acd6642f3f5f7d938820937ecae24a93891c6b45366f3b8d152
+      ValidFrom: '2013-01-15 00:00:00'
+      ValidTo: '2016-02-14 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Version: 3
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      SerialNumber: 11cadaf29da4c3cb113bf1877b120103
+      Version: 1
+    SignerInfo: ''
+- Authentihash:
+    MD5: 979c3d1cb589639a129b4e4cec243e73
+    SHA1: 3a54be5a75468b20ef8e182a7af6e6f314a5d633
+    SHA256: afc1873543735d6299543d91d7c09ee1fa1588ff9f131ba4aedcd32b984c8ec1
+  Company: IObit
+  Copyright: "IObit Copyright \xA9 2005-2013"
+  CreationTimestamp: '2013-09-27 03:41:05'
+  Date: ''
+  Description: IObitUnlocker Driver
+  ExportedFunctions: ''
+  FileVersion: '1.2.0.0 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - IoDeleteSymbolicLink
+  - ExFreePoolWithTag
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - _wcsnicmp
+  - ZwReadFile
+  - IoGetRelatedDeviceObject
+  - MmGetSystemRoutineAddress
+  - KeInitializeEvent
+  - ExInterlockedPopEntryList
+  - KeDelayExecutionThread
+  - IoFileObjectType
+  - ZwWaitForSingleObject
+  - ZwClose
+  - ObReferenceObjectByHandle
+  - KeWaitForSingleObject
+  - RtlCompareUnicodeString
+  - IoAllocateIrp
+  - ObfDereferenceObject
+  - ZwWriteFile
+  - DbgPrint
+  - IofCallDriver
+  - _wcsicmp
+  - PsGetProcessPeb
+  - PsLookupProcessByProcessId
+  - ZwQuerySymbolicLinkObject
+  - RtlInitUnicodeString
+  - KeSetEvent
+  - IoCreateFile
+  - ZwQuerySystemInformation
+  - ZwOpenSymbolicLinkObject
+  - KeUnstackDetachProcess
+  - ObQueryNameString
+  - wcsrchr
+  - ZwQueryDirectoryFile
+  - _vsnwprintf
+  - ZwDuplicateObject
+  - IoFreeIrp
+  - ZwOpenProcess
+  - MmIsAddressValid
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ExInterlockedPushEntryList
+  - KeStackAttachProcess
+  - KeBugCheckEx
+  - __C_specific_handler
+  Imports:
+  - ntoskrnl.exe
+  InternalName: IObitUnlocker.sys
+  MD5: a8dd685a6afb748c9f487a139c9c367b
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: IObitUnlocker.sys
+  PDBPath: ''
+  Product: IObitUnlocker
+  ProductVersion: 1.2.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: fff3d2887cf0d6b4e4c9e7d3140d1f80
+    SHA1: 885e1b2eba8bd38ea2838313f851ce33455454e4
+    SHA256: 51b62dce85767011acfae48ba8fb023efcf56ff687cc3207762652b9bea36013
+  SHA1: d032ad51c9d12e08709e7b31ea705585a52cbf23
+  SHA256: a92d2736c8cd99195a1ef4d0d9a3412bee481acf585944e3b5946b465361a3e7
+  Sections:
+    .data:
+      Entropy: 0.7812641672999111
+      Virtual Size: '0x170'
+    .pdata:
+      Entropy: 4.179297571785238
+      Virtual Size: '0x24c'
+    .rdata:
+      Entropy: 4.769811652238958
+      Virtual Size: '0x594'
+    .reloc:
+      Entropy: 1.2987909647818572
+      Virtual Size: '0x24'
+    .rsrc:
+      Entropy: 3.288590339240593
+      Virtual Size: '0x370'
+    .text:
+      Entropy: 6.202075133120773
+      Virtual Size: '0x5186'
+    INIT:
+      Entropy: 5.2106778004138254
+      Virtual Size: '0x64c'
+  Signature: ''
+  Signatures:
+  - Certificates:
+    - IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 11cadaf29da4c3cb113bf1877b120103
+      Signature: a09ea7ad2e5d67136d3a8d90878294843292af15103d0bca0dfb6091aa98d35d2bbda19f7b67e8c60ec5650d5d9edfaa0f61e744c2f3f3df12d07a68429127e2a7c5e262ab6bac51cb4287cc131aac3e115f7b1a0c57bfd901f5aff0555c981017d7670952c661bb07d1349af20539651e5789c99682a314d8beba080acfd9baa442db7b5df21b250ce44649d6b942c7a76d2d45744d3c24b26cc6433790ee5b0d7b54d6151245e0284177afeae7196f59b13718be94ed54e9ba5c84a330f8f39f277ed2be7424dd45dfb9c758566e7aaf4fd7eb45f9c5b10073379de1dc5af34f78727dfc0473a0c7ff2ccab6dc9c0ddba5a602013010ee789dfcaac21d0fa9
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=CN, ST=Sichuan, L=Chengdu, O=IObit Information Technology, OU=Digital
+        ID Class 3 , Microsoft Software Validation v2, CN=IObit Information Technology
+      TBS:
+        MD5: 6767e14c32c32562d2ed0feeccf02a40
+        SHA1: 84fdcb3f59b6c50918daea4a7cc3b200d6d5c91e
+        SHA256: 264d50b6b2be1acd6642f3f5f7d938820937ecae24a93891c6b45366f3b8d152
+      ValidFrom: '2013-01-15 00:00:00'
+      ValidTo: '2016-02-14 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Version: 3
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      SerialNumber: 11cadaf29da4c3cb113bf1877b120103
+      Version: 1
+    SignerInfo: ''
+- Authentihash:
+    MD5: d865b8b11ee0f2ddc9095e3249015abf
+    SHA1: 0aa57861ba15db6dc026c87f503fbe9635a29629
+    SHA256: 14e6f0d5f93dc52471af549de1c91c1fc1d9dbd175d5932c17e58e6b186694c9
+  Company: IObit
+  Copyright: "IObit Copyright \xA9 2005-2013"
+  CreationTimestamp: '2013-09-27 03:40:47'
+  Date: ''
+  Description: IObitUnlocker Driver
+  ExportedFunctions: ''
+  FileVersion: '1.2.0.0 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - IoCreateDevice
+  - MmGetSystemRoutineAddress
+  - ExfInterlockedPopEntryList
+  - DbgPrint
+  - KeWaitForSingleObject
+  - IofCallDriver
+  - KeGetCurrentThread
+  - KeInitializeEvent
+  - IoAllocateIrp
+  - ZwClose
+  - ObfDereferenceObject
+  - IoGetRelatedDeviceObject
+  - ObReferenceObjectByHandle
+  - IoFileObjectType
+  - memcpy
+  - ZwWriteFile
+  - ZwReadFile
+  - ZwWaitForSingleObject
+  - memset
+  - RtlCompareUnicodeString
+  - KeDelayExecutionThread
+  - _wcsnicmp
+  - IoCreateSymbolicLink
+  - IoCreateFile
+  - ZwQueryDirectoryFile
+  - IoFreeIrp
+  - KeSetEvent
+  - ZwOpenProcess
+  - ZwTerminateProcess
+  - _wcsicmp
+  - wcsrchr
+  - ZwDuplicateObject
+  - ExfInterlockedPushEntryList
+  - KeUnstackDetachProcess
+  - MmIsAddressValid
+  - PsGetProcessPeb
+  - KeStackAttachProcess
+  - PsLookupProcessByProcessId
+  - ZwQuerySystemInformation
+  - ZwQuerySymbolicLinkObject
+  - ZwOpenSymbolicLinkObject
+  - RtlInitUnicodeString
+  - ZwQueryInformationFile
+  - ObQueryNameString
+  - KeTickCount
+  - KeBugCheckEx
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - IoDeleteSymbolicLink
+  - _vsnwprintf
+  - IoDeleteDevice
+  - KeGetCurrentIrql
+  - RtlUnwind
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - NTOSKRNL.EXE
+  InternalName: IObitUnlocker.sys
+  MD5: 501945a3f0055033edc64be09717eef2
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: IObitUnlocker.sys
+  PDBPath: ''
+  Product: IObitUnlocker
+  ProductVersion: 1.2.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 45e8197e8972ce1575cb59ba47bbca6b
+    SHA1: 1c05376b51b700befeedb5e91c2b046898e5e955
+    SHA256: 613e1f251c62380c70363a484341431d05279fd28749c36173025f0a7108e138
+  SHA1: 373d015e5faa183edc164821f68f6bf172f8b364
+  SHA256: a38c26c0754f6c9389ea43dd0149db26b95742c1b37468fcf0d8ced66da1dcb9
+  Sections:
+    .data:
+      Entropy: 1.5672229185382367
+      Virtual Size: '0x8c'
+    .rdata:
+      Entropy: 4.184352632111533
+      Virtual Size: '0x29c'
+    .reloc:
+      Entropy: 5.526376244216933
+      Virtual Size: '0x3d6'
+    .rsrc:
+      Entropy: 3.287732512533589
+      Virtual Size: '0x370'
+    .text:
+      Entropy: 6.352640579869565
+      Virtual Size: '0x3d9c'
+    INIT:
+      Entropy: 5.4156598647971395
+      Virtual Size: '0x5e8'
+  Signature: ''
+  Signatures:
+  - Certificates:
+    - IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 11cadaf29da4c3cb113bf1877b120103
+      Signature: a09ea7ad2e5d67136d3a8d90878294843292af15103d0bca0dfb6091aa98d35d2bbda19f7b67e8c60ec5650d5d9edfaa0f61e744c2f3f3df12d07a68429127e2a7c5e262ab6bac51cb4287cc131aac3e115f7b1a0c57bfd901f5aff0555c981017d7670952c661bb07d1349af20539651e5789c99682a314d8beba080acfd9baa442db7b5df21b250ce44649d6b942c7a76d2d45744d3c24b26cc6433790ee5b0d7b54d6151245e0284177afeae7196f59b13718be94ed54e9ba5c84a330f8f39f277ed2be7424dd45dfb9c758566e7aaf4fd7eb45f9c5b10073379de1dc5af34f78727dfc0473a0c7ff2ccab6dc9c0ddba5a602013010ee789dfcaac21d0fa9
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=CN, ST=Sichuan, L=Chengdu, O=IObit Information Technology, OU=Digital
+        ID Class 3 , Microsoft Software Validation v2, CN=IObit Information Technology
+      TBS:
+        MD5: 6767e14c32c32562d2ed0feeccf02a40
+        SHA1: 84fdcb3f59b6c50918daea4a7cc3b200d6d5c91e
+        SHA256: 264d50b6b2be1acd6642f3f5f7d938820937ecae24a93891c6b45366f3b8d152
+      ValidFrom: '2013-01-15 00:00:00'
+      ValidTo: '2016-02-14 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Version: 3
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      SerialNumber: 11cadaf29da4c3cb113bf1877b120103
+      Version: 1
+    SignerInfo: ''
+- Authentihash:
+    MD5: d865b8b11ee0f2ddc9095e3249015abf
+    SHA1: 0aa57861ba15db6dc026c87f503fbe9635a29629
+    SHA256: 14e6f0d5f93dc52471af549de1c91c1fc1d9dbd175d5932c17e58e6b186694c9
+  Company: IObit
+  Copyright: "IObit Copyright \xA9 2005-2013"
+  CreationTimestamp: '2013-09-27 03:40:47'
+  Date: ''
+  Description: IObitUnlocker Driver
+  ExportedFunctions: ''
+  FileVersion: '1.2.0.0 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - IoCreateDevice
+  - MmGetSystemRoutineAddress
+  - ExfInterlockedPopEntryList
+  - DbgPrint
+  - KeWaitForSingleObject
+  - IofCallDriver
+  - KeGetCurrentThread
+  - KeInitializeEvent
+  - IoAllocateIrp
+  - ZwClose
+  - ObfDereferenceObject
+  - IoGetRelatedDeviceObject
+  - ObReferenceObjectByHandle
+  - IoFileObjectType
+  - memcpy
+  - ZwWriteFile
+  - ZwReadFile
+  - ZwWaitForSingleObject
+  - memset
+  - RtlCompareUnicodeString
+  - KeDelayExecutionThread
+  - _wcsnicmp
+  - IoCreateSymbolicLink
+  - IoCreateFile
+  - ZwQueryDirectoryFile
+  - IoFreeIrp
+  - KeSetEvent
+  - ZwOpenProcess
+  - ZwTerminateProcess
+  - _wcsicmp
+  - wcsrchr
+  - ZwDuplicateObject
+  - ExfInterlockedPushEntryList
+  - KeUnstackDetachProcess
+  - MmIsAddressValid
+  - PsGetProcessPeb
+  - KeStackAttachProcess
+  - PsLookupProcessByProcessId
+  - ZwQuerySystemInformation
+  - ZwQuerySymbolicLinkObject
+  - ZwOpenSymbolicLinkObject
+  - RtlInitUnicodeString
+  - ZwQueryInformationFile
+  - ObQueryNameString
+  - KeTickCount
+  - KeBugCheckEx
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - IoDeleteSymbolicLink
+  - _vsnwprintf
+  - IoDeleteDevice
+  - KeGetCurrentIrql
+  - RtlUnwind
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - NTOSKRNL.EXE
+  InternalName: IObitUnlocker.sys
+  MD5: 5cc5fc8ce149dca1d05fb47c0aec9497
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: IObitUnlocker.sys
+  PDBPath: ''
+  Product: IObitUnlocker
+  ProductVersion: 1.2.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 45e8197e8972ce1575cb59ba47bbca6b
+    SHA1: 1c05376b51b700befeedb5e91c2b046898e5e955
+    SHA256: 613e1f251c62380c70363a484341431d05279fd28749c36173025f0a7108e138
+  SHA1: 14488a51c38e647c2347928f675a167acec8fbd6
+  SHA256: faa9aa7118ecf9bb6594281f6b582f1ced0cc62d5db09a2fbf9b7ce70c532285
+  Sections:
+    .data:
+      Entropy: 1.5672229185382367
+      Virtual Size: '0x8c'
+    .rdata:
+      Entropy: 4.184352632111533
+      Virtual Size: '0x29c'
+    .reloc:
+      Entropy: 5.526376244216933
+      Virtual Size: '0x3d6'
+    .rsrc:
+      Entropy: 3.287732512533589
+      Virtual Size: '0x370'
+    .text:
+      Entropy: 6.352640579869565
+      Virtual Size: '0x3d9c'
+    INIT:
+      Entropy: 5.4156598647971395
+      Virtual Size: '0x5e8'
+  Signature: ''
+  Signatures:
+  - Certificates:
+    - IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 11cadaf29da4c3cb113bf1877b120103
+      Signature: a09ea7ad2e5d67136d3a8d90878294843292af15103d0bca0dfb6091aa98d35d2bbda19f7b67e8c60ec5650d5d9edfaa0f61e744c2f3f3df12d07a68429127e2a7c5e262ab6bac51cb4287cc131aac3e115f7b1a0c57bfd901f5aff0555c981017d7670952c661bb07d1349af20539651e5789c99682a314d8beba080acfd9baa442db7b5df21b250ce44649d6b942c7a76d2d45744d3c24b26cc6433790ee5b0d7b54d6151245e0284177afeae7196f59b13718be94ed54e9ba5c84a330f8f39f277ed2be7424dd45dfb9c758566e7aaf4fd7eb45f9c5b10073379de1dc5af34f78727dfc0473a0c7ff2ccab6dc9c0ddba5a602013010ee789dfcaac21d0fa9
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=CN, ST=Sichuan, L=Chengdu, O=IObit Information Technology, OU=Digital
+        ID Class 3 , Microsoft Software Validation v2, CN=IObit Information Technology
+      TBS:
+        MD5: 6767e14c32c32562d2ed0feeccf02a40
+        SHA1: 84fdcb3f59b6c50918daea4a7cc3b200d6d5c91e
+        SHA256: 264d50b6b2be1acd6642f3f5f7d938820937ecae24a93891c6b45366f3b8d152
+      ValidFrom: '2013-01-15 00:00:00'
+      ValidTo: '2016-02-14 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Version: 3
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      SerialNumber: 11cadaf29da4c3cb113bf1877b120103
+      Version: 1
+    SignerInfo: ''
+- Authentihash:
+    MD5: d08742729d8b2acaf972fcea6df3bf09
+    SHA1: d7fe09f414ea3a9f2b979c6d883079f0ed563a4b
+    SHA256: 89d96210bf36a88acb14086c96e916b790d21b7adf81d0907c823ca2afbe0ce3
+  Company: IObit
+  Copyright: "IObit Copyright \xA9 2005-2013"
+  CreationTimestamp: '2013-09-27 03:40:53'
+  Date: ''
+  Description: IObitUnlocker Driver
+  ExportedFunctions: ''
+  FileVersion: '1.2.0.0 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - IoDeleteSymbolicLink
+  - ExFreePoolWithTag
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - _wcsnicmp
+  - ZwReadFile
+  - IoGetRelatedDeviceObject
+  - MmGetSystemRoutineAddress
+  - KeInitializeEvent
+  - ExInterlockedPopEntryList
+  - KeDelayExecutionThread
+  - IoFileObjectType
+  - ZwWaitForSingleObject
+  - ZwClose
+  - ObReferenceObjectByHandle
+  - KeWaitForSingleObject
+  - RtlCompareUnicodeString
+  - IoAllocateIrp
+  - ObfDereferenceObject
+  - ZwWriteFile
+  - DbgPrint
+  - IofCallDriver
+  - _wcsicmp
+  - PsGetProcessPeb
+  - PsLookupProcessByProcessId
+  - ZwQuerySymbolicLinkObject
+  - RtlInitUnicodeString
+  - KeSetEvent
+  - IoCreateFile
+  - ZwQuerySystemInformation
+  - ZwOpenSymbolicLinkObject
+  - KeUnstackDetachProcess
+  - ObQueryNameString
+  - wcsrchr
+  - ZwQueryDirectoryFile
+  - _vsnwprintf
+  - ZwDuplicateObject
+  - IoFreeIrp
+  - ZwOpenProcess
+  - MmIsAddressValid
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ExInterlockedPushEntryList
+  - KeStackAttachProcess
+  - KeBugCheckEx
+  - __C_specific_handler
+  Imports:
+  - ntoskrnl.exe
+  InternalName: IObitUnlocker.sys
+  MD5: 3b967b644881ccb5a95f06e903d8b218
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: IObitUnlocker.sys
+  PDBPath: ''
+  Product: IObitUnlocker
+  ProductVersion: 1.2.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 772fe1b9794caabb89ee0b78335e3f98
+    SHA1: 877c7c33339b6359e6c366e9c4744b779f24f542
+    SHA256: aed7ad05867110783a74d2c2d4c7a0d2c84075f8a3626e45df6e8f021ea3f592
+  SHA1: 3a97b4f93c69cbf25fa4c4696e44577524c3c9a0
+  SHA256: c2e1a3dd0dfb3477a3e855368b23d12b8818df8fa3bc3508abf069a0873d6bf8
+  Sections:
+    .data:
+      Entropy: 0.7812641672999111
+      Virtual Size: '0x170'
+    .pdata:
+      Entropy: 4.165113468119247
+      Virtual Size: '0x234'
+    .rdata:
+      Entropy: 4.788425060525102
+      Virtual Size: '0x584'
+    .reloc:
+      Entropy: 1.2987909647818572
+      Virtual Size: '0x24'
+    .rsrc:
+      Entropy: 3.288590339240593
+      Virtual Size: '0x370'
+    .text:
+      Entropy: 6.210028479836042
+      Virtual Size: '0x5186'
+    INIT:
+      Entropy: 5.162190008807952
+      Virtual Size: '0x64c'
+  Signature: ''
+  Signatures: {}
+- Authentihash:
+    MD5: 979c3d1cb589639a129b4e4cec243e73
+    SHA1: 3a54be5a75468b20ef8e182a7af6e6f314a5d633
+    SHA256: afc1873543735d6299543d91d7c09ee1fa1588ff9f131ba4aedcd32b984c8ec1
+  Company: IObit
+  Copyright: "IObit Copyright \xA9 2005-2013"
+  CreationTimestamp: '2013-09-27 03:41:05'
+  Date: ''
+  Description: IObitUnlocker Driver
+  ExportedFunctions: ''
+  FileVersion: '1.2.0.0 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - IoDeleteSymbolicLink
+  - ExFreePoolWithTag
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - _wcsnicmp
+  - ZwReadFile
+  - IoGetRelatedDeviceObject
+  - MmGetSystemRoutineAddress
+  - KeInitializeEvent
+  - ExInterlockedPopEntryList
+  - KeDelayExecutionThread
+  - IoFileObjectType
+  - ZwWaitForSingleObject
+  - ZwClose
+  - ObReferenceObjectByHandle
+  - KeWaitForSingleObject
+  - RtlCompareUnicodeString
+  - IoAllocateIrp
+  - ObfDereferenceObject
+  - ZwWriteFile
+  - DbgPrint
+  - IofCallDriver
+  - _wcsicmp
+  - PsGetProcessPeb
+  - PsLookupProcessByProcessId
+  - ZwQuerySymbolicLinkObject
+  - RtlInitUnicodeString
+  - KeSetEvent
+  - IoCreateFile
+  - ZwQuerySystemInformation
+  - ZwOpenSymbolicLinkObject
+  - KeUnstackDetachProcess
+  - ObQueryNameString
+  - wcsrchr
+  - ZwQueryDirectoryFile
+  - _vsnwprintf
+  - ZwDuplicateObject
+  - IoFreeIrp
+  - ZwOpenProcess
+  - MmIsAddressValid
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ExInterlockedPushEntryList
+  - KeStackAttachProcess
+  - KeBugCheckEx
+  - __C_specific_handler
+  Imports:
+  - ntoskrnl.exe
+  InternalName: IObitUnlocker.sys
+  MD5: d7b749051da5fb4604f4141f19c47660
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: IObitUnlocker.sys
+  PDBPath: ''
+  Product: IObitUnlocker
+  ProductVersion: 1.2.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: fff3d2887cf0d6b4e4c9e7d3140d1f80
+    SHA1: 885e1b2eba8bd38ea2838313f851ce33455454e4
+    SHA256: 51b62dce85767011acfae48ba8fb023efcf56ff687cc3207762652b9bea36013
+  SHA1: 288daefd1ce65fb01011dc8a64491111207d3965
+  SHA256: 2b33df9aff7cb99a782b252e8eb65ca49874a112986a1c49cd9971210597a8ae
+  Sections:
+    .data:
+      Entropy: 0.7812641672999111
+      Virtual Size: '0x170'
+    .pdata:
+      Entropy: 4.179297571785238
+      Virtual Size: '0x24c'
+    .rdata:
+      Entropy: 4.769811652238958
+      Virtual Size: '0x594'
+    .reloc:
+      Entropy: 1.2987909647818572
+      Virtual Size: '0x24'
+    .rsrc:
+      Entropy: 3.288590339240593
+      Virtual Size: '0x370'
+    .text:
+      Entropy: 6.202075133120773
+      Virtual Size: '0x5186'
+    INIT:
+      Entropy: 5.2106778004138254
+      Virtual Size: '0x64c'
+  Signature: ''
+  Signatures:
+  - Certificates:
+    - IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 11cadaf29da4c3cb113bf1877b120103
+      Signature: a09ea7ad2e5d67136d3a8d90878294843292af15103d0bca0dfb6091aa98d35d2bbda19f7b67e8c60ec5650d5d9edfaa0f61e744c2f3f3df12d07a68429127e2a7c5e262ab6bac51cb4287cc131aac3e115f7b1a0c57bfd901f5aff0555c981017d7670952c661bb07d1349af20539651e5789c99682a314d8beba080acfd9baa442db7b5df21b250ce44649d6b942c7a76d2d45744d3c24b26cc6433790ee5b0d7b54d6151245e0284177afeae7196f59b13718be94ed54e9ba5c84a330f8f39f277ed2be7424dd45dfb9c758566e7aaf4fd7eb45f9c5b10073379de1dc5af34f78727dfc0473a0c7ff2ccab6dc9c0ddba5a602013010ee789dfcaac21d0fa9
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=CN, ST=Sichuan, L=Chengdu, O=IObit Information Technology, OU=Digital
+        ID Class 3 , Microsoft Software Validation v2, CN=IObit Information Technology
+      TBS:
+        MD5: 6767e14c32c32562d2ed0feeccf02a40
+        SHA1: 84fdcb3f59b6c50918daea4a7cc3b200d6d5c91e
+        SHA256: 264d50b6b2be1acd6642f3f5f7d938820937ecae24a93891c6b45366f3b8d152
+      ValidFrom: '2013-01-15 00:00:00'
+      ValidTo: '2016-02-14 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Version: 3
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      SerialNumber: 11cadaf29da4c3cb113bf1877b120103
+      Version: 1
+    SignerInfo: ''
+
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- IObitUnlocker.sys
+Verified: 'TRUE'

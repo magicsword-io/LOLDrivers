@@ -1,0 +1,189 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: f73457b3-982a-45d1-b14e-cde7f8904d63
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: fa4d63404779505dc50914274f9140d5
+    SHA1: 0eb3f60cfbb78a7299a3fa0aae4f9ede2bb60e6a
+    SHA256: 752b31418053dc19c0573d16953d5ad24723bd57e5f62eff391e632548855b5f
+  Company: SiSoftware
+  Copyright: "Copyright \xA9 SiSoftware Ltd 1995-2005. All rights reserved."
+  CreationTimestamp: '2005-02-09 08:08:53'
+  Date: ''
+  Description: Sandra Device Driver (Win32 x86)(Unicode)
+  ExportedFunctions: ''
+  FileVersion: '10.2.1.1 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - _except_handler3
+  - IoFreeMdl
+  - MmUnmapLockedPages
+  - READ_REGISTER_ULONG
+  - READ_REGISTER_USHORT
+  - READ_REGISTER_UCHAR
+  - WRITE_REGISTER_ULONG
+  - WRITE_REGISTER_USHORT
+  - WRITE_REGISTER_UCHAR
+  - IoReportResourceUsage
+  - MmMapLockedPagesSpecifyCache
+  - MmResetDriverPaging
+  - MmPageEntireDriver
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoUnregisterShutdownNotification
+  - RtlQueryRegistryValues
+  - KeInitializeSpinLock
+  - IoRegisterShutdownNotification
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - KeTickCount
+  - KeBugCheckEx
+  - RtlUnicodeStringToAnsiString
+  - ZwSetInformationThread
+  - IoQueryDeviceDescription
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - RtlAppendUnicodeToString
+  - ZwCreateKey
+  - ZwSetValueKey
+  - NtQueryInformationProcess
+  - wcslen
+  - ZwClose
+  - IofCompleteRequest
+  - RtlInitUnicodeString
+  - KfReleaseSpinLock
+  - HalGetInterruptVector
+  - KeStallExecutionProcessor
+  - KeRaiseIrqlToDpcLevel
+  - KfLowerIrql
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  - WRITE_PORT_UCHAR
+  - WRITE_PORT_USHORT
+  - WRITE_PORT_ULONG
+  - READ_PORT_UCHAR
+  - READ_PORT_USHORT
+  - READ_PORT_ULONG
+  - HalTranslateBusAddress
+  - KfAcquireSpinLock
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: SANDRA
+  MD5: d86269ba823c9ecf49a145540cd0b3df
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: SANDRA
+  PDBPath: ''
+  Product: SiSoftware Sandra
+  ProductVersion: 10.2.1.1
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: aafad5020ce92eef8fbc7ad80d519673
+    SHA1: ef9fb0357510ea69f66b012abb9fbe6cd0ad6de6
+    SHA256: 269ca1654821ad613e212d88ce927ba4515f3d4329a0c4b4d7ea6c31bc25fed4
+  SHA1: f9eb4c942a89b4ba39d2bdbfd23716937ccb9925
+  SHA256: 1284a1462a5270833ec7719f768cdb381e7d0a9c475041f9f3c74fa8eea83590
+  Sections:
+    .data:
+      Entropy: 1.5567796494470396
+      Virtual Size: '0x14'
+    .rdata:
+      Entropy: 3.8034701112314675
+      Virtual Size: '0x1a4'
+    .reloc:
+      Entropy: 4.671970480708587
+      Virtual Size: '0x1e2'
+    .rsrc:
+      Entropy: 3.4036907314164977
+      Virtual Size: '0x728'
+    .text:
+      Entropy: 6.251401594953046
+      Virtual Size: '0x18f8'
+    INIT:
+      Entropy: 5.487441120729154
+      Virtual Size: '0x606'
+    init:
+      Entropy: 5.557777832993581
+      Virtual Size: '0x301'
+  Signature: ''
+  Signatures:
+  - Certificates:
+    - IsCertificateAuthority: true
+      SerialNumber: 0a
+      Signature: 76b29cee139f1bf62d349294457334dc8e6b2e5cfc4c7d89ebc368f1d7990f2e1d17c8b5168bbecd8a0506f219493a035b05c9208e6d52e17681a0c3658a2267e41c53533746bfbcd72feb7b9ed014456c402108e25d757666301ef4df828a2fbdf3a20cbf1ddb9f14a29a72374db07748e84a3f09ce55192cefe60724e1afec
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=ZA, O=Thawte Consulting (Pty) Ltd., CN=Thawte Code Signing CA
+      TBS:
+        MD5: 6c239df74ade9185bb735cea2298c028
+        SHA1: f6297a00d3b2b4ce4750402b66e7ea018d54f683
+        SHA256: c5e3eebf1434d85e615b06e3c7a4d3c31d10a4fb0ff7a9b262bd41b43a6aaefe
+      ValidFrom: '2003-08-06 00:00:00'
+      ValidTo: '2013-08-05 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+      Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
+      TBS:
+        MD5: 518d2ea8a21e879c942d504824ac211c
+        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2013-12-03 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 3ea278
+      Signature: 2623e3d4f0ca2111695ee2c1493671d554de79106efd8d98928e0890eb65e7da15d2f4c8f739e5fd1ce3e2205327c540b29ad0a901b605a623b2de380e382e4b75b9b41c5b4deb75c974d02c1911fb58851e75b6fc20bb947fca991fc050dee03a914b69345c77aeba2fa02e1b22cd2b75ad2593d9f5caa24550a02db6a3506d
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.4
+      Subject: CN=SiSoftware LTD, O=SiSoftware LTD, OU=Secure Application Development,
+        C=UK, ST=London, L=London
+      TBS:
+        MD5: d1fe7af23616fed8bc3caa7652a5a797
+        SHA1: 2761ec21ac2de20b9341ae80bfb2d7fecbbc82f8
+        SHA256: e1b99e1290c46d85fea0a77eff3976c23b4f50950eea0ad74e69375b6a8d46e1
+      ValidFrom: '2004-09-23 16:28:04'
+      ValidTo: '2005-09-23 16:28:04'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 0de92bf0d4d82988183205095e9a7688
+      Signature: 877870da4e5201205be079c98230c4fdb91996bd9100c3bdcdcdc6f40ed8fff94dc033623011c5f5741bd492de5f9c2013b17c45be50cd83e7801783a72793671346fbcab8984103cc9b515b058b7fa86ff31b501b242ef2698d6c22f7bbca1695ed0c74c06877d9eb996287c17390f889747a23aba3987b97b1f78f29714d2e751b4841daf0b50d2054d677a097826369fd09cf8af075bb099bd9f91155269a6132be7a02b07b86bea2c38b222c78d13576bc92735cf9b9e64c150a23cce4d2d4342e4940153c0f607a24c6a566ef96cf70eb3ee7f40d7edcd17ca3767169c19c4f47303521b1a2af1a623c2bd98eaa2a077bd818b35c7be29da56ffe3c89ad
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
+      TBS:
+        MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
+        SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
+        SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2008-12-03 23:59:59'
+      Version: 3
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: C=ZA, O=Thawte Consulting (Pty) Ltd., CN=Thawte Code Signing CA
+      SerialNumber: 3ea278
+      Version: 1
+    SignerInfo: ''
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- SANDRA
+Verified: 'TRUE'

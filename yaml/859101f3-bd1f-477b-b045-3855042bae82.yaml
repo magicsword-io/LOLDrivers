@@ -1,0 +1,214 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: 859101f3-bd1f-477b-b045-3855042bae82
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: e03a070a426b0c2de53ea23bfc76086b
+    SHA1: 202d5a05e546740037f9a4dc2b21f71680c39d3b
+    SHA256: 0391107305d76eb9ddf1a5b3b3c50da361e8ab35b573dbd19bf9383436b9303e
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2021-04-09 00:29:46'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
+  ImportedFunctions:
+  - FwpsAcquireClassifyHandle0
+  - FwpsReleaseClassifyHandle0
+  - FwpmFilterDeleteById0
+  - FwpsAcquireWritableLayerDataPointer0
+  - FwpsApplyModifiedLayerData0
+  - FwpmFilterAdd0
+  - FwpmCalloutAdd0
+  - FwpmSubLayerDeleteByKey0
+  - FwpmSubLayerAdd0
+  - FwpmTransactionAbort0
+  - FwpmTransactionCommit0
+  - FwpmTransactionBegin0
+  - FwpmEngineClose0
+  - FwpmEngineOpen0
+  - FwpsCalloutUnregisterById0
+  - FwpsCompleteClassify0
+  - FwpsCalloutRegister1
+  - memcpy
+  - KeGetCurrentThread
+  - KeInitializeEvent
+  - KeWaitForSingleObject
+  - IoAllocateIrp
+  - IofCallDriver
+  - IoCreateFile
+  - IoFreeIrp
+  - IoGetRelatedDeviceObject
+  - ObReferenceObjectByHandle
+  - ObfDereferenceObject
+  - ZwQueryInformationFile
+  - ZwSetInformationFile
+  - ZwReadFile
+  - ZwWriteFile
+  - ZwClose
+  - IoFileObjectType
+  - strchr
+  - strncat
+  - strncpy_s
+  - KeResetEvent
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - IoAllocateMdl
+  - IoFreeMdl
+  - IoReuseIrp
+  - memset
+  - sprintf
+  - KeEnterCriticalRegion
+  - KeLeaveCriticalRegion
+  - PsTerminateSystemThread
+  - KeSetBasePriorityThread
+  - CmUnRegisterCallback
+  - CmRegisterCallbackEx
+  - CmCallbackGetKeyObjectID
+  - strncmp
+  - strncpy
+  - wcsncmp
+  - ExAcquireSpinLockExclusive
+  - ExReleaseSpinLockExclusive
+  - RtlCreateSecurityDescriptor
+  - RtlSetDaclSecurityDescriptor
+  - KeInitializeTimerEx
+  - KeSetTimerEx
+  - PsCreateSystemThread
+  - ZwCreateKey
+  - ZwOpenKey
+  - ZwFlushKey
+  - ZwQueryValueKey
+  - ZwSetValueKey
+  - NtQueryInformationToken
+  - RtlLengthSid
+  - RtlConvertSidToUnicodeString
+  - RtlCreateAcl
+  - RtlAddAccessAllowedAce
+  - RtlSetOwnerSecurityDescriptor
+  - PsLookupProcessByProcessId
+  - ObOpenObjectByPointer
+  - ZwOpenProcessTokenEx
+  - ZwSetSecurityObject
+  - PsGetProcessImageFileName
+  - _allmul
+  - PsProcessType
+  - SeExports
+  - IoDeleteSymbolicLink
+  - RtlUnwind
+  - MmIsAddressValid
+  - ExFreePoolWithTag
+  - ExAllocatePoolWithTag
+  - KeSetEvent
+  - RtlFreeUnicodeString
+  - KeBugCheckEx
+  - RtlAnsiStringToUnicodeString
+  - RtlCopyUnicodeString
+  - RtlInitUnicodeString
+  - RtlInitAnsiString
+  - strstr
+  - WskDeregister
+  - WskReleaseProviderNPI
+  - WskCaptureProviderNPI
+  - WskRegister
+  - KeGetCurrentIrql
+  - WdfVersionBind
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  - WdfVersionUnbind
+  Imports:
+  - fwpkclnt.sys
+  - ntoskrnl.exe
+  - NETIO.SYS
+  - HAL.dll
+  - WDFLDR.SYS
+  InternalName: ''
+  MD5: a07f5f368deb3569ec3129fa55da4041
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 48c184eea90f0f9d8a01e83867866680
+    SHA1: fadd2ab2dd0e54dd2328f37e313b3a7f50f58391
+    SHA256: a918abac8859e89b8f2d620f60f54921e2f156a401cfe171a609326331f60635
+  SHA1: a10ce0c717bfe0163eda2459964ad637d634de27
+  SHA256: 16b6be03495a4f4cf394194566bb02061fba2256cc04dcbde5aa6a17e41b7650
+  Sections:
+    .data:
+      Entropy: 1.2415415090465123
+      Virtual Size: '0x6f40'
+    .rdata:
+      Entropy: 4.44659940311796
+      Virtual Size: '0x8c4'
+    .reloc:
+      Entropy: 6.652737807428317
+      Virtual Size: '0x5e4'
+    .text:
+      Entropy: 6.564030296364231
+      Virtual Size: '0x5b62'
+    INIT:
+      Entropy: 5.541103554795583
+      Virtual Size: '0xae6'
+  Signature: ''
+  Signatures:
+  - Certificates:
+    - IsCertificateAuthority: false
+      SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
+      Signature: 0d2d53cd15a8feddcb17e2df1bf7dc1aef21e98c6cd220f58b593824849c134a0f1add59ce42ef80ddf47860273013604d9568ec5894a797bd4e571432a9aaf10ab04dd1c038b26ab7c5ca3a9c88d009267fab56254525546a0a055fb37b9cd8029c7d501809fc8b11482c7a4347b3ad29f35427c9570e87117db52cc94864259274b9e2e758f918a3af1fdb9f9d40ffa3ae2e2ae012fb97a436258642a2a4223dc6690db88103a6e5220646bd8afb3d12eb894ac28b527396a1965408487f6ab878b3c474b8c960842861ae8e799a3d2a8d6f918f50f8e26bb1ed6ced47be36e447574e8568582964ff31cd288b9c7f8d7e6a46d6c3d92f5c101fe1522a720c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      TBS:
+        MD5: a0dd89c33c4973bf6758331e200fb6de
+        SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
+        SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
+      ValidFrom: '2020-12-15 22:15:33'
+      ValidTo: '2021-12-02 22:15:33'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 610baac1000000000009
+      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      TBS:
+        MD5: a569061297e8e824767dbc3184a69bea
+        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+      ValidFrom: '2012-04-18 23:48:38'
+      ValidTo: '2027-04-18 23:58:38'
+      Version: 3
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
+      Version: 1
+    SignerInfo: ''
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- ''
+Verified: 'TRUE'

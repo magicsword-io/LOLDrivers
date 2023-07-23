@@ -1,0 +1,48 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: 830ec851-1075-4345-9c16-27a2bc123836
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  Company: ''
+  Copyright: ''
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
+  Imports: ''
+  InternalName: ''
+  MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: ''
+  SHA256: 9f9315790d0b0cc5213ac9a8eff0968cccc0a6c469b50d6598ce759748fe74bf
+  Signature: ''
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- ''
+Verified: 'TRUE'

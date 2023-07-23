@@ -1,23 +1,16 @@
-Id: a22104a8-126d-449f-ba3e-28678c60c587
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-02-28'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create wantd_3.sys binPath=C:\windows\temp\wantd_3.sys type=kernel
     && sc.exe start wantd_3.sys
   Description: Driver used in the Daxin malware campaign.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
-- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
-- ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-02-28'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1.yara
@@ -29,32 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: a22104a8-126d-449f-ba3e-28678c60c587
 KnownVulnerableSamples:
-- Filename: wantd_3.sys
-  MD5: fb7c61ef427f9b2fdff3574ee6b1819b
-  SHA1: 1f25f54e9b289f76604e81e98483309612c5a471
-  SHA256: 81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1
-  Signature: Unsigned
-  Date: 7:52 AM 4/30/2014
-  Publisher: n/a
-  Company: Microsoft Corporation
-  Description: WAN Transport Driver
-  Product: Microsoft Windows Operating System
-  ProductVersion: 5.2.3790.938
-  FileVersion: 5.2.3790.938
-  MachineType: I386
-  OriginalFilename: wantd.sys
-  Authentihash:
+- Authentihash:
     MD5: cbb18883d7893156620f084ff40b2fbf
     SHA1: df59532dbae676b3fb2653a1bbd9cd5f1cd3ba78
     SHA256: a1ee0b8a7974f3d11c10241027c0e7171c798a28589aae9ff8c5a86228642af7
-  InternalName: wantd.sys
+  Company: Microsoft Corporation
   Copyright: Microsoft Corporation. All rights reserved.
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  - NDIS.SYS
+  CreationTimestamp: '2014-04-30 01:52:21'
+  Date: ''
+  Description: WAN Transport Driver
   ExportedFunctions: ''
+  FileVersion: 5.2.3790.938
+  Filename: wantd_3.sys
   ImportedFunctions:
   - IofCompleteRequest
   - KeResetEvent
@@ -147,31 +128,50 @@ KnownVulnerableSamples:
   - NdisFreeBufferPool
   - NdisCopyFromPacketToPacket
   - NdisFreePacketPool
-  Signatures: {}
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - NDIS.SYS
+  InternalName: wantd.sys
+  MD5: fb7c61ef427f9b2fdff3574ee6b1819b
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: wantd.sys
+  Product: Microsoft Windows Operating System
+  ProductVersion: 5.2.3790.938
+  Publisher: n/a
   RichPEHeaderHash:
     MD5: 7dac9e657681230dfe85b6e42aa5891e
     SHA1: 02e8444b111e83edca1a07580800daf3e7e2453d
     SHA256: 3e7f74d584bec768a7e4677b53f195737e86f319c4804790a13a2adbb38425a9
+  SHA1: 1f25f54e9b289f76604e81e98483309612c5a471
+  SHA256: 81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1
   Sections:
-    .text:
-      Entropy: 6.502320391551188
-      Virtual Size: '0xb444'
-    .rdata:
-      Entropy: 4.059142627811111
-      Virtual Size: '0x178'
     .data:
       Entropy: 3.447893896844354
       Virtual Size: '0xd70c0'
-    INIT:
-      Entropy: 5.35998649387063
-      Virtual Size: '0x952'
-    .rsrc:
-      Entropy: 3.272892553001117
-      Virtual Size: '0x3b0'
+    .rdata:
+      Entropy: 4.059142627811111
+      Virtual Size: '0x178'
     .reloc:
       Entropy: 3.7078151277985745
       Virtual Size: '0x10a2'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-04-30 01:52:21'
+    .rsrc:
+      Entropy: 3.272892553001117
+      Virtual Size: '0x3b0'
+    .text:
+      Entropy: 6.502320391551188
+      Virtual Size: '0xb444'
+    INIT:
+      Entropy: 5.35998649387063
+      Virtual Size: '0x952'
+  Signature: Unsigned
+  Signatures: {}
+MitreID: T1068
+Resources:
+- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+- ''
 Tags:
 - wantd_3.sys
+Verified: 'TRUE'

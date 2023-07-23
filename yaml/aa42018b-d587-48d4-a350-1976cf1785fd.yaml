@@ -1,0 +1,104 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: aa42018b-d587-48d4-a350-1976cf1785fd
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: 35dfa37479c8966aa9d3428660358a43
+    SHA1: 6ee2e56413ce129ea2319d6dba28ba4f27cf75b7
+    SHA256: 94111de210f6b3b48dda16b3422f0f9180e30bcb5765b6858c451d1d89196199
+  Company: Overclocking Tool
+  Copyright: Copyright (C), 2005
+  CreationTimestamp: '2005-10-20 08:35:08'
+  Date: ''
+  Description: Overclocking Hardware Abstraction Sys
+  ExportedFunctions: ''
+  FileVersion: 5.10.20.0
+  Filename: ''
+  ImportedFunctions:
+  - MmMapIoSpace
+  - IofCompleteRequest
+  - MmUnmapIoSpace
+  - IoDeleteSymbolicLink
+  - KeTickCount
+  - IoAllocateMdl
+  - MmBuildMdlForNonPagedPool
+  - MmMapLockedPages
+  - IoFreeMdl
+  - RtlInitUnicodeString
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - HalGetBusDataByOffset
+  - WRITE_PORT_UCHAR
+  - WRITE_PORT_USHORT
+  - WRITE_PORT_ULONG
+  - READ_PORT_UCHAR
+  - READ_PORT_USHORT
+  - READ_PORT_ULONG
+  - HalSetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: atillk64.sys
+  MD5: ee59b64ae296a87bf7a6aee38ad09617
+  MachineType: IA64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: atillk64.sys
+  PDBPath: ''
+  Product: Overclocking Tool
+  ProductVersion: 5.10.20.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: f1899a92dac775dd91c488238c47121f
+    SHA1: f87117679e6a15d2f7cb1eb9a955920f7e27182f
+    SHA256: 7a797dd2fc95f2cc57884cc125ece95a449fb288004a431c565207c6689478db
+  SHA1: 5abffd08f4939a0dee81a5d95cf1c02e2e14218c
+  SHA256: 11a9787831ac4f0657aeb5e7019c23acc39d8833faf28f85bd10d7590ea4cc5f
+  Sections:
+    .pdata:
+      Entropy: 3.032649273691926
+      Virtual Size: '0x6c'
+    .rdata:
+      Entropy: 4.005865295392332
+      Virtual Size: '0x284'
+    .reloc:
+      Entropy: 0.6102086113176999
+      Virtual Size: '0x128'
+    .rsrc:
+      Entropy: 3.3091519076430678
+      Virtual Size: '0x370'
+    .sdata:
+      Entropy: 2.1249953441922287
+      Virtual Size: '0xc8'
+    .srdata:
+      Entropy: 1.77520470625279
+      Virtual Size: '0x20'
+    .text:
+      Entropy: 5.408148680070703
+      Virtual Size: '0x2540'
+    INIT:
+      Entropy: 5.150279397766819
+      Virtual Size: '0x370'
+  Signature: ''
+  Signatures: {}
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- atillk64.sys
+Verified: 'TRUE'

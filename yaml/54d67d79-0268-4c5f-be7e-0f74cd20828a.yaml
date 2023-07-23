@@ -1,22 +1,16 @@
-Id: 54d67d79-0268-4c5f-be7e-0f74cd20828a
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create NTIOLib_X64.sys binPath=C:\windows\temp\NTIOLib_X64.sys     type=kernel
     && sc.exe start NTIOLib_X64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/d8b58f6a89a7618558e37afc360cd772b6731e3ba367f8d58734ecee2244a530.yara
@@ -28,35 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 54d67d79-0268-4c5f-be7e-0f74cd20828a
 KnownVulnerableSamples:
-- Filename: NTIOLib_X64.sys
-  MD5: c02f70960fa934b8defa16a03d7f6556
-  SHA1: 3805e4e08ad342d224973ecdade8b00c40ed31be
-  SHA256: d8b58f6a89a7618558e37afc360cd772b6731e3ba367f8d58734ecee2244a530
-  Signature:
-  - Micro-Star Int'l Co. Ltd.
-  - GlobalSign ObjectSign CA
-  - GlobalSign Primary Object Publishing CA
-  - GlobalSign Root CA - R1
-  Date: ''
-  Publisher: ''
-  Company: MSI
-  Description: NTIOLib
-  Product: NTIOLib
-  ProductVersion: 1.0.0.0
-  FileVersion: 1.0.0.0
-  MachineType: AMD64
-  OriginalFilename: NTIOLib.sys
-  Authentihash:
+- Authentihash:
     MD5: c6830e904e56ea951005ea7639eedd35
     SHA1: c57c0dd18135bca5fdb094858a70033c006cd281
     SHA256: 4a05ad47cd63932b3df2d0f1f42617321729772211bec651fe061140d3e75957
-  InternalName: NTIOLib.sys
+  Company: MSI
   Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2011-01-05 20:05:14'
+  Date: ''
+  Description: NTIOLib
   ExportedFunctions: ''
+  FileVersion: 1.0.0.0
+  Filename: NTIOLib_X64.sys
   ImportedFunctions:
   - MmUnmapIoSpace
   - MmMapIoSpace
@@ -70,89 +49,110 @@ KnownVulnerableSamples:
   - __C_specific_handler
   - HalSetBusDataByOffset
   - HalGetBusDataByOffset
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
-        Primary Object Publishing CA
-      ValidFrom: '1999-01-28 12:00:00'
-      ValidTo: '2014-01-27 11:00:00'
-      Signature: a0422eb876a7427186404d464d5b26b0b074f93f89a87b7cb7f1c697e08239999d43fe60823642b55b878df55df4bbffa91044a871d3c7f12241f29aa4a5ec63fae5eb654a19309d8bc7b6fddc3fe16cfdd5521407fc6d24ccb3cc81a2c052f327b96d9e063dd8a849023269c7054294d0bbe3bba908c393501bdb846dc0ba1e5298659c1376bdb3d567292f1f7baa2c51a0fd854f263c48a38127a6feee7f7899c245cf9d1f527ed7958bfde1d020c3af7e51a22f663bab2dcf2d8e8c4d7d18392128fbdcae6d6581d0e0d7184be7b5f774d784e6522aac3b68fd3b4ab80154849132bb95d28e6330a69ece2396feab2eb86a8b74dcde21a114c2fbbf53af10
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 04000000000108d9611cd6
-      Version: 3
-      TBS:
-        MD5: 698f075151097d84c0b1f3e7bc3d6fca
-        SHA1: 041750993d7c9e063f02dfe74699598640911aab
-        SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
-    - Subject: C=TW, O=Micro,Star Int'l Co. Ltd., CN=Micro,Star Int'l Co. Ltd.
-      ValidFrom: '2008-08-28 09:49:45'
-      ValidTo: '2011-08-28 09:49:45'
-      Signature: 572df373e9b036711b3cf5ee882e5d75d8d50f012407cf0c1b554ff8f41c7b6477fa0b2ad579f2c1fe7b8b9d7374b690527c219eb979686fb67d0b4cf2885d8d7d1261f05cb72fe4c9f294c52aa05f3e5d1ceb0d77085dbd6af07978032505da666f353283a8982af26985e69c1599479945b591124183574b8a4cc34caa62e31b523dac3fedbd04951b3661399ed34f5c5868d9bbe3295fc09890d9521e1cdcae2ff129f547d4c8ce8aa08616107c555fac60e5b63c14ddfeb6962af3608b75d9c77c69260d8af9775b83afaa15b8ecef6840cb4ee87d451f9042b49735ea40931c0664c8c2bf6a139db6ac5b90edcea63a6bf5b54978f027b1046170d476d0
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 0100000000011c08b7f67e
-      Version: 3
-      TBS:
-        MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
-        SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
-        SHA256: 88a8e9a799af515b9223e4cdf24d0ef1e72f12124be02786f026a3c26317b417
-    - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
-        CA
-      ValidFrom: '2004-01-22 09:00:00'
-      ValidTo: '2014-01-27 10:00:00'
-      Signature: 3c4a010267edf20a2e736e40252f1dccbc2db652141b27122cf1229e190a89b6ef352a29152b1a88c20f37168d2602d5e93080f608b9939ac0498f332c3035ff4ab9892aa75c38e761a778fe22851a07b4b9edcf21f25ddedff329c5d38d9e14c4285c88e590a300442912b23e759540244a6beee2d0ef862ddf6d741a4f1cc79424c443464f7b81015d23733cd9752e995361565e7ccd13e237d222e570f8a743f6154147fda24702c43651ca545da6cdcad61817533ff1d38e0f0aafda17941657a0991431c90e1611d2c04ca2a25978fbb6b933cff763c9d2c4c84953dd8a59525e7d3b385eed220360ac85cd58325dcdc31c07fa7ef67efbc8ac378be498
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 04000000000117ab50b915
-      Version: 3
-      TBS:
-        MD5: 5686b287d716c4d2428b092c4ef30f9c
-        SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
-        SHA256: 60846fc990e271a707cd2d53d0bb21834a04f7652214aa0c12597ff6649d352d
-    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
-      ValidFrom: '2006-05-23 17:00:51'
-      ValidTo: '2016-05-23 17:10:51'
-      Signature: 13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 610b7f6b000000000019
-      Version: 3
-      TBS:
-        MD5: 4798d55be7663a75649cda4dedc686ef
-        SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
-        SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
-    Signer:
-    - SerialNumber: 0100000000011c08b7f67e
-      Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
-        CA
-      Version: 1
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: NTIOLib.sys
+  MD5: c02f70960fa934b8defa16a03d7f6556
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
+  Publisher: ''
   RichPEHeaderHash:
     MD5: 2ee757c19c3e831d8f872914fe1b1384
     SHA1: 9c58163cf35d80dbe450b656a52ee9de12bc60d2
     SHA256: c5a21f0ae765d60ce4e2189aa3ca90b603b75ac02d9a98d1ab04375ad398132c
+  SHA1: 3805e4e08ad342d224973ecdade8b00c40ed31be
+  SHA256: d8b58f6a89a7618558e37afc360cd772b6731e3ba367f8d58734ecee2244a530
   Sections:
-    .text:
-      Entropy: 6.012418155163931
-      Virtual Size: '0x794'
-    .rdata:
-      Entropy: 4.38104344738678
-      Virtual Size: '0x1b0'
     .data:
       Entropy: 0.5096713223407059
       Virtual Size: '0x114'
     .pdata:
       Entropy: 3.217404746311882
       Virtual Size: '0x6c'
-    INIT:
-      Entropy: 4.846887314724898
-      Virtual Size: '0x222'
+    .rdata:
+      Entropy: 4.38104344738678
+      Virtual Size: '0x1b0'
     .rsrc:
       Entropy: 3.2498244109800973
       Virtual Size: '0x370'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-01-05 20:05:14'
+    .text:
+      Entropy: 6.012418155163931
+      Virtual Size: '0x794'
+    INIT:
+      Entropy: 4.846887314724898
+      Virtual Size: '0x222'
+  Signature:
+  - Micro-Star Int'l Co. Ltd.
+  - GlobalSign ObjectSign CA
+  - GlobalSign Primary Object Publishing CA
+  - GlobalSign Root CA - R1
+  Signatures:
+  - Certificates:
+    - IsCertificateAuthority: true
+      SerialNumber: 04000000000108d9611cd6
+      Signature: a0422eb876a7427186404d464d5b26b0b074f93f89a87b7cb7f1c697e08239999d43fe60823642b55b878df55df4bbffa91044a871d3c7f12241f29aa4a5ec63fae5eb654a19309d8bc7b6fddc3fe16cfdd5521407fc6d24ccb3cc81a2c052f327b96d9e063dd8a849023269c7054294d0bbe3bba908c393501bdb846dc0ba1e5298659c1376bdb3d567292f1f7baa2c51a0fd854f263c48a38127a6feee7f7899c245cf9d1f527ed7958bfde1d020c3af7e51a22f663bab2dcf2d8e8c4d7d18392128fbdcae6d6581d0e0d7184be7b5f774d784e6522aac3b68fd3b4ab80154849132bb95d28e6330a69ece2396feab2eb86a8b74dcde21a114c2fbbf53af10
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
+        Primary Object Publishing CA
+      TBS:
+        MD5: 698f075151097d84c0b1f3e7bc3d6fca
+        SHA1: 041750993d7c9e063f02dfe74699598640911aab
+        SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+      ValidFrom: '1999-01-28 12:00:00'
+      ValidTo: '2014-01-27 11:00:00'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 0100000000011c08b7f67e
+      Signature: 572df373e9b036711b3cf5ee882e5d75d8d50f012407cf0c1b554ff8f41c7b6477fa0b2ad579f2c1fe7b8b9d7374b690527c219eb979686fb67d0b4cf2885d8d7d1261f05cb72fe4c9f294c52aa05f3e5d1ceb0d77085dbd6af07978032505da666f353283a8982af26985e69c1599479945b591124183574b8a4cc34caa62e31b523dac3fedbd04951b3661399ed34f5c5868d9bbe3295fc09890d9521e1cdcae2ff129f547d4c8ce8aa08616107c555fac60e5b63c14ddfeb6962af3608b75d9c77c69260d8af9775b83afaa15b8ecef6840cb4ee87d451f9042b49735ea40931c0664c8c2bf6a139db6ac5b90edcea63a6bf5b54978f027b1046170d476d0
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=TW, O=Micro,Star Int'l Co. Ltd., CN=Micro,Star Int'l Co. Ltd.
+      TBS:
+        MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
+        SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
+        SHA256: 88a8e9a799af515b9223e4cdf24d0ef1e72f12124be02786f026a3c26317b417
+      ValidFrom: '2008-08-28 09:49:45'
+      ValidTo: '2011-08-28 09:49:45'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 04000000000117ab50b915
+      Signature: 3c4a010267edf20a2e736e40252f1dccbc2db652141b27122cf1229e190a89b6ef352a29152b1a88c20f37168d2602d5e93080f608b9939ac0498f332c3035ff4ab9892aa75c38e761a778fe22851a07b4b9edcf21f25ddedff329c5d38d9e14c4285c88e590a300442912b23e759540244a6beee2d0ef862ddf6d741a4f1cc79424c443464f7b81015d23733cd9752e995361565e7ccd13e237d222e570f8a743f6154147fda24702c43651ca545da6cdcad61817533ff1d38e0f0aafda17941657a0991431c90e1611d2c04ca2a25978fbb6b933cff763c9d2c4c84953dd8a59525e7d3b385eed220360ac85cd58325dcdc31c07fa7ef67efbc8ac378be498
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
+        CA
+      TBS:
+        MD5: 5686b287d716c4d2428b092c4ef30f9c
+        SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
+        SHA256: 60846fc990e271a707cd2d53d0bb21834a04f7652214aa0c12597ff6649d352d
+      ValidFrom: '2004-01-22 09:00:00'
+      ValidTo: '2014-01-27 10:00:00'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 610b7f6b000000000019
+      Signature: 13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      TBS:
+        MD5: 4798d55be7663a75649cda4dedc686ef
+        SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
+        SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+      ValidFrom: '2006-05-23 17:00:51'
+      ValidTo: '2016-05-23 17:10:51'
+      Version: 3
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
+        CA
+      SerialNumber: 0100000000011c08b7f67e
+      Version: 1
+    SignerInfo: ''
+MitreID: T1068
+Resources:
+- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Tags:
 - NTIOLib_X64.sys
+Verified: 'TRUE'

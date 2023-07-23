@@ -1,131 +1,131 @@
-Id: 19003e00-d42d-4cbe-91f3-756451bdd7da
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag, Guus Verbeek
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create AsrSetupDrv103.sys binPath=C:\windows\temp\AsrSetupDrv103.sys
     type=kernel && sc.exe start AsrSetupDrv103.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: 19003e00-d42d-4cbe-91f3-756451bdd7da
 KnownVulnerableSamples:
-- Filename: AsrSetupDrv103.sys
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: AsrSetupDrv103.sys
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: 0b6ec2aedc518849a1c61a70b1f9fb068ede2bc3
   Signature: []
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: AsrSetupDrv103.sys
   MachineType: ''
   OriginalFilename: ''
-- Filename: AsrSetupDrv103.sys
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: 461882bd59887617cadc1c7b2b22d0a45458c070
   Signature: []
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: AsrSetupDrv103.sys
   MachineType: ''
   OriginalFilename: ''
-- Filename: AsrSetupDrv103.sys
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: a7948a4e9a3a1a9ed0e4e41350e422464d8313cd
   Signature: []
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: AsrSetupDrv103.sys
   MachineType: ''
   OriginalFilename: ''
-- Filename: AsrSetupDrv103.sys
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: f3cce7e79ab5bd055f311bb3ac44a838779270b6
   Signature: []
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: AsrSetupDrv103.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: AsrSetupDrv103.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: ''
   SHA256: 399EFFE75D32BDAB6FA0A6BFFE02DBF0A59219D940B654837C3BE1C0BD02E9AA
   Signature:
   - ''
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: AsrSetupDrv103.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: AsrSetupDrv103.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: ''
   SHA256: 27CD05527FEB020084A4A76579C125458571DA8843CDFC3733211760A11DA970
   Signature:
   - ''
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: AsrSetupDrv103.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: AsrSetupDrv103.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: ''
   SHA256: 7AAF2AA194B936E48BC90F01EE854768C8383C0BE50CFB41B346666AEC0CF853
   Signature:
   - ''
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: AsrSetupDrv103.sys
+  MD5: ''
   MachineType: ''
   OriginalFilename: ''
-- Filename: AsrSetupDrv103.sys
-  MD5: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: ''
   SHA256: 727E8BA66A8FF07BDC778EACB463B65F2D7167A6616CA2F259EA32571CACF8AF
   Signature:
   - ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+MitreID: T1068
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - AsrSetupDrv103.sys
+Verified: 'FALSE'

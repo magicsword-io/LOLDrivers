@@ -1,0 +1,112 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: cf2db082-f599-42d7-87c1-a97097192cfe
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: 18fb56fabbd62de931ed334197e5989c
+    SHA1: 83e3725839448a2324dc280ebb5aeb21cf1a41e8
+    SHA256: 3bf4f8cb26ba38e54636864c744aac0839e7a1d6cb7b6cf13995e8ab19b9f7f8
+  Company: Elaborate Bytes AG
+  Copyright: Copyright (C) 2000 - 2003 Elaborate Bytes AG
+  CreationTimestamp: '2003-09-15 10:57:35'
+  Date: ''
+  Description: ElbyCD Windows NT/2000/XP I/O driver
+  ExportedFunctions: ''
+  FileVersion: 4, 3, 0, 3
+  Filename: ''
+  ImportedFunctions:
+  - KeWaitForSingleObject
+  - ExFreePool
+  - RtlFreeUnicodeString
+  - IoDeleteSymbolicLink
+  - RtlAnsiStringToUnicodeString
+  - RtlInitAnsiString
+  - ExAllocatePool
+  - IoCreateUnprotectedSymbolicLink
+  - ZwCreateFile
+  - ZwCreateKey
+  - ZwOpenKey
+  - IoFreeMdl
+  - MmMapLockedPages
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - MmUnmapLockedPages
+  - KeReleaseMutex
+  - MmUnlockPages
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IofCallDriver
+  - IoBuildDeviceIoControlRequest
+  - KeInitializeEvent
+  - ObfDereferenceObject
+  - ObReferenceObjectByHandle
+  - ZwDeleteKey
+  - ZwClose
+  - ZwDeviceIoControlFile
+  - IoCreateSymbolicLink
+  - KeInitializeMutex
+  - IoCreateDevice
+  - RtlUnwind
+  - MmProbeAndLockPages
+  - IofCompleteRequest
+  - KeQueryPerformanceCounter
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ElbyCDIO
+  MD5: 37c3a9fef349d13685ec9c2acaaeafce
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ElbyCDIO.sys
+  PDBPath: ''
+  Product: CDRTools
+  ProductVersion: 4, 3, 0, 0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 7d357a968c06de113fc7cd4ee41a5c30
+    SHA1: 3f129b8486a9be0877c6316ac38e0c083e38f22e
+    SHA256: 7ddb39875104d8c7226a102d142642322f7082c0dd7f8c6af57bdccdf9509898
+  SHA1: 5b83c61178afb87ef7d58fd786808effcaaae861
+  SHA256: 51480eebbbfb684149842c3e19a8ffbd3f71183c017e0c4bc6cf06aacf9c0292
+  Sections:
+    .data:
+      Entropy: -0.0
+      Virtual Size: '0x4'
+    .rdata:
+      Entropy: 4.409291785316403
+      Virtual Size: '0x12d'
+    .reloc:
+      Entropy: 5.266299268761837
+      Virtual Size: '0x1d2'
+    .rsrc:
+      Entropy: 3.3444284436528027
+      Virtual Size: '0x4e0'
+    .text:
+      Entropy: 6.141181767034272
+      Virtual Size: '0x15cc'
+    INIT:
+      Entropy: 5.197390663550614
+      Virtual Size: '0x3b6'
+  Signature: ''
+  Signatures: {}
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- ElbyCDIO
+Verified: 'TRUE'

@@ -1,0 +1,176 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: c99e9d34-c6f6-4704-8dc9-2567303dd533
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: 3a7c1ab3c7376492586cf10657e0b914
+    SHA1: e4061096700b51ecc4dbdff6b4dc1e8e640fd7ae
+    SHA256: 4c03f7e80857630277d292ad7324541cad38f652a199d94bc18a10aef98c8bfa
+  Company: CPUID
+  Copyright: Copyright(C) 2014 CPUID
+  CreationTimestamp: '2015-10-07 02:25:28'
+  Date: ''
+  Description: CPUID Driver
+  ExportedFunctions: ''
+  FileVersion: '6.1.7600.16385 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - RtlAnsiStringToUnicodeString
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - KeInitializeEvent
+  - RtlInitAnsiString
+  - MmUnmapIoSpace
+  - IoCancelIrp
+  - RtlFreeUnicodeString
+  - IoGetDeviceObjectPointer
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - KeWaitForSingleObject
+  - PsGetVersion
+  - IoCreateSymbolicLink
+  - ObfDereferenceObject
+  - IoCreateDevice
+  - IofCallDriver
+  - KeBugCheckEx
+  - IoDeleteSymbolicLink
+  - IoBuildDeviceIoControlRequest
+  - MmMapIoSpace
+  - ExAllocatePoolWithTag
+  - RtlUnwindEx
+  - HalSetBusDataByOffset
+  - KeStallExecutionProcessor
+  - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: cpuz.sys
+  MD5: 0d4306983e694c1f34920bae12d887e6
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: cpuz.sys
+  PDBPath: ''
+  Product: CPUID service
+  ProductVersion: 6.1.7600.16385
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: b3dcf662ce69ad7b34717fb6aecf09a7
+    SHA1: 63be2c28ecee71a739bfbaf38466362e998bc5bc
+    SHA256: f4257b7e95b00b38e446b2708cc342fe32846266064b94c78ec1f987731c2226
+  SHA1: deaf7d0c934cc428981ffa5bf528ca920bc692dc
+  SHA256: 8d6febd54ce0c98ea3653e582f7791061923a9a4842bd4a1326564204431ca9f
+  Sections:
+    .data:
+      Entropy: 0.378703493487675
+      Virtual Size: '0x2c0'
+    .pdata:
+      Entropy: 3.5511621274596537
+      Virtual Size: '0xd8'
+    .rdata:
+      Entropy: 4.21132054612556
+      Virtual Size: '0x424'
+    .rsrc:
+      Entropy: 3.3971374522271924
+      Virtual Size: '0x350'
+    .text:
+      Entropy: 6.187068215362904
+      Virtual Size: '0x30c6'
+    INIT:
+      Entropy: 5.131854482283732
+      Virtual Size: '0x3ea'
+  Signature: ''
+  Signatures:
+  - Certificates:
+    - IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 07ef902f309d9df93e5124fa3ee5dae2
+      Signature: 4963c1597fb6f142ae83559d5a70e5bd09f92fdf2ddd16d93c77e91b10c52ef9e1032654515997dafd19e3b078e8c841ebde628e2f77b29c898d0612e2b7b1b3fec6a5cd93d9588494010e4e42b60d5d89d5ee4ee403228155cde73c1bdb770e65a7262a5c7cfa0914836d876a77698e88ac46b162a6326c79e62a857737571b64ab9d19556e6cfb7fcc5b32d340ef3872a7d9736575265b78b702652bd8621bb9b678a4768cbf78d6eba0d1370ad0f3e3e7d7d91e666627c9a0a30c548ed97fb9aca358aa0476ba2f1d475e956bf29123c59dce2c119d56603c42706f0c88efc1cd913e5dcba0130840eb86968290cd55f93b90466e8710bafd4111f67f04ba
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      Subject: ??=Private Organization, ??=FR, serialNumber=493 590 202, ??=39 rue
+        Joseph Jacquard, postalCode=59240, C=FR, L=Dunkerque, O=CPUID, CN=CPUID
+      TBS:
+        MD5: aa06717c45e9e49a8c1e001c66edd9fa
+        SHA1: 6a150d1cba59e4090bf9169a333e0fb226ed5472
+        SHA256: 6dde4dd03be027a9ce82b9337559c984377a7a7f3f589d575726bfcbb806afdb
+      ValidFrom: '2015-09-11 00:00:00'
+      ValidTo: '2018-09-19 12:00:00'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Version: 3
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      SerialNumber: 07ef902f309d9df93e5124fa3ee5dae2
+      Version: 1
+    SignerInfo: ''
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- cpuz.sys
+Verified: 'TRUE'

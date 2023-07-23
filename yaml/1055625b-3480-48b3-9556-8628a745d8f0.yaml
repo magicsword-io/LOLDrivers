@@ -1,0 +1,182 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: 1055625b-3480-48b3-9556-8628a745d8f0
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: 9eddbcece57bf37b4e4c752599b4f1de
+    SHA1: b4af2981b9d94df71083a1f0c2d68e0883aa1cd1
+    SHA256: 5d10285d802fa793c217933c907d82db58977b865b3dad3848c6ed2550022413
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2010-02-03 21:52:36'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
+  ImportedFunctions:
+  - WRITE_REGISTER_BUFFER_USHORT
+  - WRITE_REGISTER_BUFFER_ULONG
+  - IofCompleteRequest
+  - WRITE_REGISTER_BUFFER_UCHAR
+  - IoCreateDevice
+  - KeTickCount
+  - MmMapIoSpace
+  - READ_REGISTER_BUFFER_ULONG
+  - READ_REGISTER_BUFFER_USHORT
+  - READ_REGISTER_BUFFER_UCHAR
+  - MmUnmapIoSpace
+  - RtlInitUnicodeString
+  - IoDeleteSymbolicLink
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - RtlUnwind
+  - KeBugCheckEx
+  - HalGetBusDataByOffset
+  - WRITE_PORT_ULONG
+  - WRITE_PORT_USHORT
+  - WRITE_PORT_UCHAR
+  - READ_PORT_ULONG
+  - READ_PORT_USHORT
+  - READ_PORT_UCHAR
+  - HalSetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: 8af7fc0eb2e945c1be06238bde456091
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 993a8e328132a5ee41af8530044b3761
+    SHA1: 4a74fc1906f709fb6fb916c67f097179aeb155ac
+    SHA256: 3cc565366d03e6995a5a6131d96ec0201ee58e39e5644fd5b9abb94db773fdfa
+  SHA1: 8892ea0b3a05c65889162761ace8409df270d4c3
+  SHA256: 23787eb342fd38da73ce785023176f98304267c6f6fa8a50e718da096c7a7951
+  Sections:
+    .data:
+      Entropy: 2.9182958340544896
+      Virtual Size: '0xc'
+    .rdata:
+      Entropy: 4.047936591624656
+      Virtual Size: '0x1b4'
+    .reloc:
+      Entropy: 4.744935426027903
+      Virtual Size: '0xcc'
+    .text:
+      Entropy: 6.173202023746463
+      Virtual Size: '0xb02'
+    INIT:
+      Entropy: 5.40100021301616
+      Virtual Size: '0x336'
+  Signature: ''
+  Signatures:
+  - Certificates:
+    - IsCertificateAuthority: true
+      SerialNumber: 040000000001239e0facb3
+      Signature: b578a6a27c04b77fc97f7d6abc71fa293060c2f4621efe7f431e9b6ee2b21f730b85765b7df54e49062fd4fab79140efed6f8d8e138354c52a023d0aa4dc990b7abd772fcc40c18ff3c48c4e72ba107ce6ff642bc7ce6ca7fcd79a7c8e468d01834d423bdb9c3f9f326157d717b0b33666f0b3fd446f8137b1944ea7562589f58ad66d116262795c42900218d39c23fc08e86445b92d7e805b4eafc38a299283781f914134af85c5fd07994e2c5cfec7fd17bb2525314d72b5b5294b489a376f13c7114e4a451e7e2f319cabe852afd6679734885f0e276a6652d15ac7ac302c2038dd2bff3aebce104582a27b1ba12073569b2a93e60451066c1bdc2f899493
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
+        Primary Object Publishing CA
+      TBS:
+        MD5: 5ccf05e4dec10d9d6fe15d8778325272
+        SHA1: 79f0a648bd7f1184f86bff43ae47c9ecc3ed3cec
+        SHA256: 33ea31b892ba274a4aefe545de45c42c218b6dff78146655cdea892545c2cccc
+      ValidFrom: '1999-01-28 13:00:00'
+      ValidTo: '2017-01-27 12:00:00'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 0400000000012019c19066
+      Signature: 5df6cb2b0d0140849f857a43706ae0c5e7aa0600d76713c9089131654f14a8a905dc389e6aa0300abd8dc78028ee4245ca94f3de5845a9803204f5595c6a70003927944df5b44634e81c5331b2b35416e9cc42abd5d959301cfb462725b88723b1e8758824831ec876377b01494548a4ede25dd27c9ca2dc2dba105a126265abae00c710343bcb72bd14240cdcc37627b4a7fee15829f20e169f91391d89a6e60f1c878ce258ac927e243eaaec14e73a33348bc63bac83ab0f14627aba1a2d4d4b1bc530f00b92797d3c78e0f8e6d215965999392b3061e8b8f8c0a1e9221411787dc4dc89bec0bb94e172aeebb540404fef171e585ed0a88996ac9228e9babf
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: OU=Timestamping CA, O=GlobalSign, CN=GlobalSign Timestamping CA
+      TBS:
+        MD5: 42023b9487cafe46c1b6a49c369a362e
+        SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
+        SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+      ValidFrom: '2009-03-18 11:00:00'
+      ValidTo: '2028-01-28 12:00:00'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 01000000000125b0b4cc01
+      Signature: bc89ecfee63655935c79d4117a86808f17b693b26d9b91a1561811c655eaf608edad9b9ef52b81c8bbdd607b1b47991e6d403e1d80c213d58e04052fdbe7ae529e688472a1e54a603cf89bd52f46d8c3b2b79353ac9b6c432424d1f1fce9562e3411581843eaefff34746ca0c06c7fad031969881e9560cabbbd0cbb76efc724b081c63831cf36ad0c38b89020849b2e8f28b99ff6ca9427cdac396157e0e3955a9c769230f5dea6973d721c2a6032a8334d8635338a5cf3a4fdf7062ce16b4b30f5cbd34362f841b9de7d20cb058c8e2cf65f35fd338d42896508362ca389f45a858bb0b97bdb6ccba1f8d20e1bbb977cd12779be9d7c3be6a75634d8c991a9
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
+      TBS:
+        MD5: e3369c8e5aec0504b3a50455f615d9f9
+        SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
+        SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+      ValidFrom: '2009-12-21 09:32:56'
+      ValidTo: '2020-12-22 09:32:56'
+      Version: 3
+    - IsCertificateAuthority: false
+      SerialNumber: 010000000001224e6689d6
+      Signature: 85c9779e6b59736985b385e0e41542c8ad4d0549dde97d7fe57f28b7c94d9213ee3a5b930cda11d5ec31ad7af91301be188686cbea8509d053c737650684c16a46cd6ea0ee4ab8145b4a8b290a83abb754e43282f154a581c2c97d4ae4efc0f74e61197a74c6ff9edf4a73eda9f2bb8823db91718bdd114e195f07cdb5e2d20adb72e878920c26bad4a9cb400f0b5c2d1dbba924d0430a0bdb80a83d95961beff2c242a2f3da9838971caeb92395892174f7579bee52fb234887a3871c117751187c2fa334171aaf7a14e1dcd05aa8930e37f82c0aac6c514881f4ba1dc6c4aca3f2e59ef3a4de8744df815ee34333185aa3225675e20d60d7ae838f51937132
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=CN, O=Suzhou Ind. Park ShiSuanKeJi Co., Ltd., CN=Suzhou Ind. Park
+        ShiSuanKeJi Co., Ltd., emailAddress=support@winmount.com
+      TBS:
+        MD5: ca2389fcfbf20e5e06a93095a11e2969
+        SHA1: 560b2b09d374366d82385c34f5af32f90a36e4ff
+        SHA256: 8145484fe1f9827a0473717e15ff7ebe86c39d6e1659f294dacedf863c149ee0
+      ValidFrom: '2009-07-06 03:56:35'
+      ValidTo: '2010-07-06 03:56:35'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 040000000001239e0faf24
+      Signature: 1e6af36df48ea922fe7008652ea15dab3330dd6c78fa4beaadc58dec107a6ac55897396b92f391e20ca7281cd15d768e8b077c136fadc43643b3c1bc3159cf1838d8a33bceffca6758bfe0f1ac613ea23b1ebc025b41ac446bf526f3ed5ea865f6ca65a63fcaf577eba5862a582956f8be161040e9d2fc572c636137662539202e0703a036032594bd7ceb7ed3a3c2c57616753092b9ff7641352168d10e5e5c8ec30360e68040fcc05da2546e6e9267a7811287a2a32bdbb74dffe4d5c7e505e6d5f1aefccd661821f33e47c9e59542612c9d2680b20fa83d0ec9a778df6e748c2c46f672e93c646b2855c44b6433cb78541338f0d57106d43e0d0a350ee0b3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
+        CA
+      TBS:
+        MD5: 7dd2351a85d3665eeb6720a21f4f7dee
+        SHA1: 77838c4d7f36958a581841d28f481d61ce0696ed
+        SHA256: 846725f4b0193468c1079d6127e9e6e420fc6ed66019ed02d732ba644decad57
+      ValidFrom: '2004-01-22 10:00:00'
+      ValidTo: '2017-01-27 10:00:00'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 610b7f6b000000000019
+      Signature: 13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      TBS:
+        MD5: 4798d55be7663a75649cda4dedc686ef
+        SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
+        SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+      ValidFrom: '2006-05-23 17:00:51'
+      ValidTo: '2016-05-23 17:10:51'
+      Version: 3
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
+        CA
+      SerialNumber: 010000000001224e6689d6
+      Version: 1
+    SignerInfo: ''
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- ''
+Verified: 'TRUE'

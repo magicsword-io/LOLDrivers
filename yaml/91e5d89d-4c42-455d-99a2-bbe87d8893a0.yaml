@@ -1,0 +1,232 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: 91e5d89d-4c42-455d-99a2-bbe87d8893a0
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: 0d76526227d593a8967ed866b5991e10
+    SHA1: 3ae56ab63230d6d9552360845b4a37b5801cc5ea
+    SHA256: e9b433a33dc72eb2622947b41f01d04a48cd71beac775a88f3f1e4c838090ee8
+  Company: Windows (R) Win 7 DDK provider
+  Copyright: "Copyright \xA9 NetFilterSDK.com"
+  CreationTimestamp: '2020-09-15 00:54:19'
+  Date: ''
+  Description: NetFilter SDK WFP Driver (WPP)
+  ExportedFunctions: ''
+  FileVersion: '1.5.9.7 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - KeBugCheckEx
+  - ExUuidCreate
+  - swprintf_s
+  - RtlCreateSecurityDescriptor
+  - RtlLengthSid
+  - IoAllocateMdl
+  - ObOpenObjectByPointer
+  - IoReleaseCancelSpinLock
+  - IoCreateDevice
+  - MmFreePagesFromMdl
+  - ObfDereferenceObject
+  - PsGetCurrentProcessId
+  - IoCreateSymbolicLink
+  - SeExports
+  - ZwSetSecurityObject
+  - KeWaitForSingleObject
+  - ObReferenceObjectByHandle
+  - ZwSetInformationThread
+  - IofCompleteRequest
+  - PsTerminateSystemThread
+  - ZwQueryValueKey
+  - MmMapLockedPagesSpecifyCache
+  - PsCreateSystemThread
+  - RtlAddAccessAllowedAce
+  - MmBuildMdlForNonPagedPool
+  - MmAllocatePagesForMdl
+  - KeInitializeEvent
+  - RtlAppendUnicodeToString
+  - MmGetSystemRoutineAddress
+  - KeSetEvent
+  - IoDeleteDevice
+  - RtlSetDaclSecurityDescriptor
+  - PsLookupProcessByProcessId
+  - RtlCreateAcl
+  - IoDeleteSymbolicLink
+  - MmUnmapLockedPages
+  - RtlCompareMemory
+  - RtlValidSid
+  - ExDeleteNPagedLookasideList
+  - ExQueryDepthSList
+  - IoFreeMdl
+  - ExpInterlockedPopEntrySList
+  - KeAcquireInStackQueuedSpinLock
+  - ExpInterlockedPushEntrySList
+  - KeReleaseInStackQueuedSpinLock
+  - ExInitializeNPagedLookasideList
+  - ExFreePoolWithTag
+  - ExAllocatePoolWithTag
+  - ZwOpenKey
+  - ZwClose
+  - RtlInitUnicodeString
+  - __C_specific_handler
+  - FwpsFlowAssociateContext0
+  - FwpsCalloutUnregisterByKey0
+  - FwpmSubLayerAdd0
+  - FwpsQueryPacketInjectionState0
+  - FwpmSubLayerDeleteByKey0
+  - FwpmSubLayerEnum0
+  - FwpmTransactionCommit0
+  - FwpmSubLayerCreateEnumHandle0
+  - FwpmSubLayerDestroyEnumHandle0
+  - FwpmProviderContextDeleteByKey0
+  - FwpmCalloutAdd0
+  - FwpmProviderAdd0
+  - FwpmTransactionAbort0
+  - FwpmEngineOpen0
+  - FwpsAcquireClassifyHandle0
+  - FwpmFilterAdd0
+  - FwpsPendClassify0
+  - FwpsCalloutRegister1
+  - FwpmTransactionBegin0
+  - FwpmEngineClose0
+  - FwpmFreeMemory0
+  - FwpsAcquireWritableLayerDataPointer0
+  - FwpsApplyModifiedLayerData0
+  - FwpsInjectNetworkReceiveAsync0
+  - FwpsFreeCloneNetBufferList0
+  - FwpsInjectionHandleDestroy0
+  - FwpsConstructIpHeaderForTransportPacket0
+  - FwpsAllocateNetBufferAndNetBufferList0
+  - FwpsInjectionHandleCreate0
+  - FwpsInjectTransportReceiveAsync0
+  - FwpsInjectNetworkSendAsync0
+  - FwpsCopyStreamDataToBuffer0
+  - FwpsInjectTransportSendAsync0
+  - FwpsFlowRemoveContext0
+  - FwpsCloneStreamData0
+  - FwpsCompleteClassify0
+  - FwpsStreamInjectAsync0
+  - FwpsReleaseClassifyHandle0
+  - FwpsDiscardClonedStreamData0
+  - FwpsFreeNetBufferList0
+  - FwpmBfeStateUnsubscribeChanges0
+  - FwpmBfeStateGet0
+  - FwpmBfeStateSubscribeChanges0
+  - NdisAllocateGenericObject
+  - NdisWaitEvent
+  - NdisAllocateNetBufferListPool
+  - NdisInitializeEvent
+  - NdisFreeGenericObject
+  - NdisFreeNetBufferListPool
+  - NdisGetDataBuffer
+  - NdisRetreatNetBufferDataStart
+  - NdisAdvanceNetBufferDataStart
+  Imports:
+  - ntoskrnl.exe
+  - fwpkclnt.sys
+  - NDIS.SYS
+  InternalName: netfilter2.sys
+  MD5: 14acd57bd9fa8093c46fdd5e9f271b70
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: netfilter2.sys
+  PDBPath: ''
+  Product: Windows (R) Win 7 DDK driver
+  ProductVersion: 6.1.7600.16385
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 5f9eb581b0ce6f9d2b5f1f5a9771af50
+    SHA1: cb1828152e4668b5e033ee126a52df4f76700b2a
+    SHA256: e9bd3b71a475097efee5f9196d05a582abc2323affe47c2c9cf9bf933004e22f
+  SHA1: b0cb07e84261626a384e74020735be0cace7a3bd
+  SHA256: 639ff79f13e40d47b90ecd709699edd10e740cb41451acb95590a68b6352de2b
+  Sections:
+    .data:
+      Entropy: 1.921663371680462
+      Virtual Size: '0x1718'
+    .pdata:
+      Entropy: 4.529523254969204
+      Virtual Size: '0x6d8'
+    .rdata:
+      Entropy: 5.490124607621635
+      Virtual Size: '0xbd4'
+    .reloc:
+      Entropy: 3.9064526149567356
+      Virtual Size: '0x1fe'
+    .rsrc:
+      Entropy: 3.410095048874038
+      Virtual Size: '0x3e0'
+    .text:
+      Entropy: 6.2545679166711565
+      Virtual Size: '0xd64e'
+    INIT:
+      Entropy: 5.309837255433513
+      Virtual Size: '0xe96'
+  Signature: ''
+  Signatures:
+  - Certificates:
+    - IsCertificateAuthority: false
+      SerialNumber: 34b2bc04e9d297465f2e52b3afe91006
+      Signature: 69bcb684fce97d7337f96fc6fe53b0ea3583530177b86a8e2986a25d33f46573718cd139b90876b9ed26317dcbf2d305846428eef0886a0e824a5351b9ae4f53b40ca53331e027951ad1808cbfd74c8376455c69ed4d0087339d3d42c3111d958795c33007f0b0a71ab19e720b5a47e01474041e4fd44845d5970d51b2163299b22b092c5bc35bfa3f11c357ca0d5fcd5359d02e8dc44f89a5720383accd5eb0c206e222ddae0f3840043da2432c644e29a4daeb3d8478adda02ee49e677e3327aecf41ecfef68a311c976b0f2b1e96101d8a332c02df2f34a954f4542bfc8ef3dbe237e731fd501b7097ae5692f5b0cc33cce4e84874d2d37deaa324d5ec72e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      Subject: C=FR, L=Paris, O=Orange, OU=Nordnet, CN=Orange
+      TBS:
+        MD5: aa18d17697a27f7af6deb97095af2a2c
+        SHA1: d00a8a47f4879d72d0c724fe76c98c509406169f
+        SHA256: b17c8db0c54e42683d417a0908ba35d55ee44ad152024e2b178aa2a903cc385b
+      ValidFrom: '2020-02-06 00:00:00'
+      ValidTo: '2021-02-06 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Version: 3
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      SerialNumber: 34b2bc04e9d297465f2e52b3afe91006
+      Version: 1
+    SignerInfo: ''
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- netfilter2.sys
+Verified: 'TRUE'

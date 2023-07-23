@@ -1,0 +1,100 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: 58509acb-50b4-41a0-9de3-76c571a459e3
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: d7acc8a58b2163f0b070d647e81c49fd
+    SHA1: 0cb0fd5bea730e4eaaec1426b0c15376ccac6d83
+    SHA256: 0d0962db9dc6879067270134801ad425c1f3e85b0dc39877c02aaa9c54aca14e
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2018-02-12 00:57:28'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
+  ImportedFunctions:
+  - ObfDereferenceObject
+  - ZwUnmapViewOfSection
+  - IofCompleteRequest
+  - MmAllocateNonCachedMemory
+  - MmFreeNonCachedMemory
+  - Ke386SetIoAccessMap
+  - ZwOpenSection
+  - IoGetCurrentProcess
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - KeTickCount
+  - ObReferenceObjectByHandle
+  - ZwMapViewOfSection
+  - ZwClose
+  - DbgPrint
+  - RtlInitUnicodeString
+  - IoDeleteSymbolicLink
+  - Ke386IoSetAccessProcess
+  - IoDeleteDevice
+  - WRITE_PORT_USHORT
+  - WRITE_PORT_UCHAR
+  - READ_PORT_ULONG
+  - READ_PORT_USHORT
+  - READ_PORT_UCHAR
+  - HalTranslateBusAddress
+  - WRITE_PORT_ULONG
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: 9c00a44418a8e719c0034f0d55802693
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: d1c5b39e151846c2dcb30d3116cba10d
+    SHA1: ef12b9e4550f27b0c74b09f9f6c4e1cfa6d757f7
+    SHA256: ace4fba2c26bcc6e806e2ad3abec8dd0852907ccd429053608e3c639a514d1bc
+  SHA1: 7478eb19b453f82ef99734b8aed1e0911aab9d55
+  SHA256: c7d4943ddac34e1a38692c624d799e634ad4c4e3ae7e3bb2ae4cf0d8eb8985bc
+  Sections:
+    .data:
+      Entropy: 2.5
+      Virtual Size: '0x8'
+    .rdata:
+      Entropy: 4.257419198996188
+      Virtual Size: '0xc3'
+    .reloc:
+      Entropy: 4.3106029983367184
+      Virtual Size: '0xe8'
+    .text:
+      Entropy: 6.282770026975047
+      Virtual Size: '0x9f0'
+    INIT:
+      Entropy: 5.4236305547105035
+      Virtual Size: '0x32e'
+  Signature: ''
+  Signatures: {}
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- ''
+Verified: 'TRUE'

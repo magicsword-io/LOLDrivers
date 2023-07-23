@@ -1,0 +1,98 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: 4acb8aad-df23-48a0-81d3-ad46856ab54b
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: f7b9cfa7e07f5c516f65bbe9f7976634
+    SHA1: 40603c7230d74ff33524a11c0b09f9459e7afe91
+    SHA256: 8b4cbd2bc16071a1868597ec86857dba1140f981e3e943b0857341daffff4e69
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2012-07-23 01:53:08'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
+  ImportedFunctions:
+  - ZwMapViewOfSection
+  - RtlInitUnicodeString
+  - ZwUnmapViewOfSection
+  - ZwClose
+  - ObReferenceObjectByHandle
+  - ZwOpenSection
+  - MmUnmapLockedPages
+  - MmMapLockedPages
+  - MmFreeContiguousMemory
+  - MmBuildMdlForNonPagedPool
+  - MmMapIoSpace
+  - MmGetPhysicalAddress
+  - MmIsAddressValid
+  - IoAllocateMdl
+  - MmAllocateContiguousMemory
+  - IoDeleteSymbolicLink
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - KeBugCheckEx
+  - IoFreeMdl
+  - MmUnmapIoSpace
+  - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: 6b53c79248a6699da703c4c3ff9d4a7e
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 4514064220e4df532f9e1c494dcf525b
+    SHA1: 2c8246e50cf577a458ea6c41dbdbce96b1cd935c
+    SHA256: cf1a7659682ded15bdb0f509de52b3e4aaa2bffb9e19b98208b8615bd9138433
+  SHA1: 61ec6cb5de378948ef036ff627c87c32f7308bad
+  SHA256: 3972159a58fd04da06f648c3828648cf394d3eb6af89538166cae8e6184c3eb6
+  Sections:
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.5513818130711634
+      Virtual Size: '0xa8'
+    .rdata:
+      Entropy: 4.155346525091322
+      Virtual Size: '0x1fc'
+    .text:
+      Entropy: 6.111427747435866
+      Virtual Size: '0x111e'
+    INIT:
+      Entropy: 5.084386508092528
+      Virtual Size: '0x39e'
+  Signature: ''
+  Signatures: {}
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- ''
+Verified: 'TRUE'

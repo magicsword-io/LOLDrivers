@@ -1,0 +1,88 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: a1a17fc3-5d94-40c5-bc2d-9cf350edf66e
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: 9f79edf758e219929902ec7564e0f435
+    SHA1: c92148d0666f2235500805975be79738b84e48c2
+    SHA256: 19c74ea0e0baf04820e5642bd2fa224158801ed966be1041539e3c55bd65c471
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2009-04-06 01:21:08'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
+  ImportedFunctions:
+  - ZwMapViewOfSection
+  - ObReferenceObjectByHandle
+  - ZwOpenSection
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - ZwClose
+  - IofCompleteRequest
+  - ZwUnmapViewOfSection
+  - IoIs32bitProcess
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - IoDeleteSymbolicLink
+  - KeDelayExecutionThread
+  - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: 517d484bdbad4637188ec7a908335b86
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: deb9c1e252f598099d70d2b33a313da3
+    SHA1: f0c2801e0091ed6f5e10ea7045e911aa90030290
+    SHA256: 914fb9761d50c3fa2ecf9fbd8af3735f9b8d6c4903e067c8af9546e79b6f22c7
+  SHA1: 2207cdee7deaba1492ae2349392864f19eb4dfaf
+  SHA256: db73b0fa032be22405fa0b52fbfe3b30e56ac4787e620e4854c32668ae43bc33
+  Sections:
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0xc'
+    .pdata:
+      Entropy: 3.245354266022441
+      Virtual Size: '0x84'
+    .rdata:
+      Entropy: 4.362536233544753
+      Virtual Size: '0x170'
+    .text:
+      Entropy: 6.140846081676954
+      Virtual Size: '0xca6'
+    INIT:
+      Entropy: 4.455848230056508
+      Virtual Size: '0x204'
+  Signature: ''
+  Signatures: {}
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- ''
+Verified: 'TRUE'

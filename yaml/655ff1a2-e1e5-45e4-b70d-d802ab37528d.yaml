@@ -1,0 +1,202 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: 655ff1a2-e1e5-45e4-b70d-d802ab37528d
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: f8e1478f4ca8f2d9908f496d02a53d1b
+    SHA1: a2da5c397f737fa55d8f93d3ced5eb70ae09801f
+    SHA256: ddd83af2e99c2e51f2bbbb5a1faadf9f2ddbc3e39b086935621d6846a8530d76
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2021-03-14 05:30:46'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
+  ImportedFunctions:
+  - FwpmFilterAdd0
+  - FwpmFilterDeleteById0
+  - FwpsAcquireClassifyHandle0
+  - FwpmCalloutAdd0
+  - FwpsCompleteClassify0
+  - FwpsAcquireWritableLayerDataPointer0
+  - FwpsApplyModifiedLayerData0
+  - FwpmSubLayerDeleteByKey0
+  - FwpmSubLayerAdd0
+  - FwpmTransactionAbort0
+  - FwpmTransactionCommit0
+  - FwpmTransactionBegin0
+  - FwpmEngineClose0
+  - FwpmEngineOpen0
+  - FwpsCalloutUnregisterById0
+  - FwpsReleaseClassifyHandle0
+  - FwpsCalloutRegister1
+  - KeInitializeEvent
+  - KeWaitForSingleObject
+  - IoAllocateIrp
+  - IofCallDriver
+  - IoCreateFile
+  - IoFreeIrp
+  - IoGetRelatedDeviceObject
+  - ObReferenceObjectByHandle
+  - ObfDereferenceObject
+  - ZwQueryInformationFile
+  - ZwSetInformationFile
+  - ZwReadFile
+  - ZwWriteFile
+  - ZwClose
+  - IoFileObjectType
+  - strchr
+  - strncat
+  - strncpy_s
+  - strstr
+  - KeResetEvent
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - IoAllocateMdl
+  - IoFreeMdl
+  - IoReuseIrp
+  - __C_specific_handler
+  - DbgPrintEx
+  - vDbgPrintEx
+  - vDbgPrintExWithPrefix
+  - MmIsAddressValid
+  - ExSystemTimeToLocalTime
+  - sprintf
+  - _vsnwprintf
+  - KeEnterCriticalRegion
+  - KeLeaveCriticalRegion
+  - PsTerminateSystemThread
+  - KeSetBasePriorityThread
+  - CmUnRegisterCallback
+  - CmRegisterCallbackEx
+  - CmCallbackGetKeyObjectID
+  - strncmp
+  - strncpy
+  - wcsncmp
+  - ExAcquireSpinLockExclusive
+  - ExReleaseSpinLockExclusive
+  - RtlCreateSecurityDescriptor
+  - RtlSetDaclSecurityDescriptor
+  - KeInitializeTimerEx
+  - KeSetTimerEx
+  - PsCreateSystemThread
+  - ZwCreateKey
+  - ZwOpenKey
+  - ZwFlushKey
+  - ZwQueryValueKey
+  - ZwSetValueKey
+  - NtQueryInformationToken
+  - RtlLengthSid
+  - RtlConvertSidToUnicodeString
+  - RtlCreateAcl
+  - RtlAddAccessAllowedAce
+  - RtlSetOwnerSecurityDescriptor
+  - PsLookupProcessByProcessId
+  - ObOpenObjectByPointer
+  - ZwOpenProcessTokenEx
+  - ZwSetSecurityObject
+  - PsGetProcessImageFileName
+  - PsProcessType
+  - SeExports
+  - IoDeleteSymbolicLink
+  - ExFreePoolWithTag
+  - ExAllocatePoolWithTag
+  - KeSetEvent
+  - RtlFreeUnicodeString
+  - KeBugCheckEx
+  - RtlCopyUnicodeString
+  - RtlAnsiStringToUnicodeString
+  - RtlInitUnicodeString
+  - RtlInitAnsiString
+  - RtlTimeToTimeFields
+  - WskCaptureProviderNPI
+  - WskReleaseProviderNPI
+  - WskDeregister
+  - WskRegister
+  - WdfVersionBind
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  - WdfVersionUnbind
+  Imports:
+  - fwpkclnt.sys
+  - ntoskrnl.exe
+  - NETIO.SYS
+  - WDFLDR.SYS
+  InternalName: ''
+  MD5: 58df991da21c475ac135914b8315f74d
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: a47d93f02dee54ad56542d814d001142
+    SHA1: 2d6f2588a47d00c1c29caf3788c526b269336c9f
+    SHA256: bbb6ea1f1094dc888e550580580a36bd7037614d3cd2e82f9ebbe8603b2ef205
+  SHA1: b821b326c1855ca802ead55042657909a5f2d760
+  SHA256: e8e7f2f889948fd977b5941e6897921da28c8898a9ca1379816d9f3fa9bc40ff
+  Sections:
+    .data:
+      Entropy: 1.3922294956110923
+      Virtual Size: '0x9368'
+    .pdata:
+      Entropy: 4.435523629682755
+      Virtual Size: '0x600'
+    .rdata:
+      Entropy: 4.6907155880453235
+      Virtual Size: '0x1204'
+    .reloc:
+      Entropy: 3.7366309574076895
+      Virtual Size: '0x3c'
+    .text:
+      Entropy: 6.3479204189833816
+      Virtual Size: '0x6918'
+    INIT:
+      Entropy: 5.275916510674749
+      Virtual Size: '0xcdc'
+  Signature: ''
+  Signatures:
+  - Certificates:
+    - IsCertificateAuthority: true
+      SerialNumber: 7327097da23417a74d45181fb160f9f7
+      Signature: 9d9c50d62f1d3f83e5674790b79a01dd9657691bc22921c135ef920701916ee70111da99bdcf8e14e724f5ae67453cdded4fd3bb59e8e30c3eccf8848c9070f943a7400380739723113d7d2f52dc02a67af40098362df9df6e5bc180b861ccaa600dd7793b98ab2cd1fff98823ecb5b29246443d512b2a2e348ad61e21606b8ba4925de502a70223b7018310947656bea89582d9c6ac9ae3a90482168fd4ba15436d4a0a7e02d671f37e7e20b9277a9529e5263a753838f90939fb27aa5346cc90eae02ba041df0243b42372da0464543b1b9218bfa53286e7c6b1d25656924d1e33a5bbb18a9bcfdc890ced58058fc928610ff44563389120721acd84745d96
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: CN=WDKTestCert omen,132578539763945900
+      TBS:
+        MD5: 5d145463479eab33d0b1ac71466b0053
+        SHA1: 9b5f08d89d15ab86917e5f219f39c795ba31bb9a
+        SHA256: dd6fc2174d74188dd80ab58623416d2c2c39716760e09a75e7fddf94aeb71e09
+      ValidFrom: '2021-02-15 09:12:56'
+      ValidTo: '2031-02-15 00:00:00'
+      Version: 3
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: CN=WDKTestCert omen,132578539763945900
+      SerialNumber: 7327097da23417a74d45181fb160f9f7
+      Version: 1
+    SignerInfo: ''
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- ''
+Verified: 'TRUE'

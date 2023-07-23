@@ -1,0 +1,99 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: 14b3d786-ddd2-40dd-aca8-46c139d4b9f2
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: 52dfeb18cfe3ae58c1d32fda1451a9b5
+    SHA1: a4dce60eadcc112bdaa9562a92ede168d981bdd7
+    SHA256: e288439705d9be2c1f74cf8a44c3853ac3708e52c592b23398877006fadf6ccc
+  Company: Highresolution Enterprises [www.highrez.co.uk]
+  Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
+    Logix4u
+  CreationTimestamp: '2016-01-27 06:33:10'
+  Date: ''
+  Description: Kernel level port access driver
+  ExportedFunctions: ''
+  FileVersion: '1.2 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - ZwUnmapViewOfSection
+  - memcpy
+  - IoCreateSymbolicLink
+  - ZwOpenSection
+  - KeTickCount
+  - KeBugCheckEx
+  - ObReferenceObjectByHandle
+  - ZwMapViewOfSection
+  - ZwClose
+  - RtlInitUnicodeString
+  - IoDeleteSymbolicLink
+  - IoDeleteDevice
+  - IoCreateDevice
+  - IofCompleteRequest
+  - READ_PORT_USHORT
+  - WRITE_PORT_UCHAR
+  - READ_PORT_UCHAR
+  - READ_PORT_ULONG
+  - WRITE_PORT_ULONG
+  - HalTranslateBusAddress
+  - WRITE_PORT_USHORT
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: inpout32.sys
+  MD5: b2aba4fa678c272ece36f928e5b81dd9
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: inpout32.sys
+  PDBPath: ''
+  Product: inpout32 Driver Version 1.2
+  ProductVersion: '1.2'
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 82b51be4db1ebb8f0503b9d1d4d80eab
+    SHA1: f2685b529f56fa725fe6820cb6f1a9520b332a1a
+    SHA256: 8f2cf5a4a26e0cafb74c91dbb06c0efcfd12ceb5d95d3825848f335e6ff4db72
+  SHA1: dd0eb190ea088a869c378e495ffc9bf22c6bcbfb
+  SHA256: 16360ead229b13deb47bc2bef40f282474c9f18c213c636cdfb8cc2495168251
+  Sections:
+    .data:
+      Entropy: 3.0
+      Virtual Size: '0x8'
+    .rdata:
+      Entropy: 4.809377553728081
+      Virtual Size: '0xeb'
+    .reloc:
+      Entropy: 3.9163455609991296
+      Virtual Size: '0x8e'
+    .rsrc:
+      Entropy: 3.349101665082088
+      Virtual Size: '0x438'
+    .text:
+      Entropy: 6.104195195474332
+      Virtual Size: '0x524'
+    INIT:
+      Entropy: 5.382949218313684
+      Virtual Size: '0x29a'
+  Signature: ''
+  Signatures: {}
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- inpout32.sys
+Verified: 'TRUE'

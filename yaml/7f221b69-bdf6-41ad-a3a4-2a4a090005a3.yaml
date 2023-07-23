@@ -1,0 +1,240 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: 7f221b69-bdf6-41ad-a3a4-2a4a090005a3
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: 295e520ba1eb2fca6e3882d0484ec95c
+    SHA1: b72f8a4a0b112daac6e94c229a80fb812d230927
+    SHA256: 7591749dee0fde532af9afadbe5e4ccc48f5fd792cc0cb64cb305094ba191330
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2014-08-01 01:37:10'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: 4.4.1.9596
+  Filename: ''
+  ImportedFunctions:
+  - InitCommonControlsEx
+  - SHGetPathFromIDListW
+  - SHGetFileInfoW
+  - CommandLineToArgvW
+  - ShellExecuteW
+  - ShellExecuteExW
+  - SHGetMalloc
+  - SHBrowseForFolderW
+  - SHGetSpecialFolderLocation
+  - CreateFileA
+  - FreeLibrary
+  - GetProcessHeap
+  - HeapAlloc
+  - GetLastError
+  - GetProcAddress
+  - HeapFree
+  - LoadLibraryW
+  - GetModuleFileNameW
+  - LocalFree
+  - WaitForSingleObject
+  - CreateProcessW
+  - SetCurrentDirectoryW
+  - GetCurrentDirectoryW
+  - CloseHandle
+  - SetFileApisToOEM
+  - GetCurrentProcess
+  - GetCurrentThread
+  - SetPriorityClass
+  - GetEnvironmentVariableW
+  - SetThreadPriority
+  - GetVersionExW
+  - GetModuleHandleW
+  - ExpandEnvironmentStringsW
+  - CreateFileW
+  - GetCommandLineW
+  - DeleteFileW
+  - GetFileAttributesW
+  - RemoveDirectoryW
+  - CreateDirectoryW
+  - FindClose
+  - FindNextFileW
+  - FindFirstFileW
+  - FormatMessageW
+  - InterlockedExchangeAdd
+  - SetEndOfFile
+  - SetFileTime
+  - WriteFile
+  - SetFilePointer
+  - GetFileSize
+  - ReadFile
+  - MultiByteToWideChar
+  - WideCharToMultiByte
+  - InitializeCriticalSection
+  - LeaveCriticalSection
+  - EnterCriticalSection
+  - DeleteCriticalSection
+  - MoveFileW
+  - lstrlenW
+  - GetTempPathW
+  - GetFullPathNameW
+  - GetWindowsDirectoryW
+  - GetTempFileNameW
+  - SetFileAttributesW
+  - GetLongPathNameW
+  - ResetEvent
+  - CreateEventW
+  - SetEvent
+  - FindResourceW
+  - FileTimeToSystemTime
+  - SetStdHandle
+  - WriteConsoleW
+  - GetConsoleOutputCP
+  - WriteConsoleA
+  - GetStringTypeW
+  - GetStringTypeA
+  - GetLocaleInfoA
+  - LoadLibraryA
+  - HeapReAlloc
+  - VirtualAlloc
+  - FlushFileBuffers
+  - GetConsoleMode
+  - GetConsoleCP
+  - LCMapStringW
+  - LCMapStringA
+  - GetCurrentProcessId
+  - GetTickCount
+  - QueryPerformanceCounter
+  - VirtualFree
+  - HeapCreate
+  - HeapDestroy
+  - GetStartupInfoA
+  - GetACP
+  - WaitForMultipleObjects
+  - ResumeThread
+  - GetFileType
+  - SetHandleCount
+  - GetCommandLineA
+  - GetEnvironmentStringsW
+  - FreeEnvironmentStringsW
+  - GetEnvironmentStrings
+  - FreeEnvironmentStringsA
+  - IsValidCodePage
+  - TerminateProcess
+  - UnhandledExceptionFilter
+  - SetUnhandledExceptionFilter
+  - IsDebuggerPresent
+  - GetSystemTimeAsFileTime
+  - GetVersionExA
+  - GetStartupInfoW
+  - ExitThread
+  - GetCurrentThreadId
+  - CreateThread
+  - RaiseException
+  - RtlUnwind
+  - GetModuleHandleA
+  - TlsGetValue
+  - TlsAlloc
+  - TlsSetValue
+  - TlsFree
+  - InterlockedIncrement
+  - SetLastError
+  - InterlockedDecrement
+  - Sleep
+  - HeapSize
+  - ExitProcess
+  - GetStdHandle
+  - GetModuleFileNameA
+  - GetCPInfo
+  - GetOEMCP
+  - TranslateMessage
+  - IsWindowVisible
+  - EnableWindow
+  - GetMessageW
+  - KillTimer
+  - DispatchMessageW
+  - PostQuitMessage
+  - CreateDialogParamW
+  - ScreenToClient
+  - DestroyIcon
+  - IsWindow
+  - ShowWindow
+  - MessageBoxW
+  - PostMessageW
+  - DialogBoxParamW
+  - SetWindowPos
+  - GetWindowRect
+  - GetSystemMetrics
+  - GetWindowTextW
+  - SetWindowTextW
+  - GetDlgItem
+  - SendMessageW
+  - EndDialog
+  - SetFocus
+  - LoadIconW
+  - GetDesktopWindow
+  - LoadStringW
+  - SetTimer
+  - IsDialogMessageW
+  - DeleteObject
+  - CreateSolidBrush
+  - CoUninitialize
+  - CoTaskMemFree
+  - CoInitializeEx
+  - CoCreateInstance
+  - CoInitialize
+  Imports:
+  - COMCTL32.dll
+  - SHELL32.dll
+  - KERNEL32.dll
+  - USER32.dll
+  - GDI32.dll
+  - ole32.dll
+  InternalName: ''
+  MD5: 85bd61f697d33131fd6609fbc7337ebf
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: '4.4'
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: dfcfc6a02ddd326f58049ed74c742afd
+    SHA1: b7f6386a0252574ac5b2b5b7dc9c870426dce32d
+    SHA256: f0dbb3a42d7c94e8ef47b0f7c5c36a6281a7623f7995a61413e616a96db583c0
+  SHA1: eb1a5457010b07393ffd4c8c8206e83e737290ec
+  SHA256: 272d3541491b145e93c47b225769ef65a53b5f8586ed6edb991f763ee5300417
+  Sections:
+    .data:
+      Entropy: 4.945319467301306
+      Virtual Size: '0xa3e0'
+    .rdata:
+      Entropy: 4.912185025833945
+      Virtual Size: '0xcc84'
+    .rsrc:
+      Entropy: 6.594798012652241
+      Virtual Size: '0x121ac'
+    .text:
+      Entropy: 6.629799424341935
+      Virtual Size: '0x40475'
+  Signature: ''
+  Signatures: {}
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- ''
+Verified: 'TRUE'

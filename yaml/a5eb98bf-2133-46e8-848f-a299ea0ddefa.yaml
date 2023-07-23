@@ -1,0 +1,144 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: a5eb98bf-2133-46e8-848f-a299ea0ddefa
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: 9e725819820804fbf377917e9e7a3333
+    SHA1: b0ec7d971da8ae84c0ed8f88a5d46b23996e636c
+    SHA256: 038f39558035292f1d794b7cf49f8e751e8633daec31454fe85cccbea83ba3fb
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2009-08-20 04:07:22'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
+  ImportedFunctions:
+  - ZwClose
+  - ZwMapViewOfSection
+  - ObReferenceObjectByHandle
+  - ZwOpenSection
+  - RtlInitUnicodeString
+  - ZwUnmapViewOfSection
+  - MmFreeContiguousMemory
+  - IoFreeMdl
+  - MmMapLockedPages
+  - MmBuildMdlForNonPagedPool
+  - MmUnmapIoSpace
+  - MmGetPhysicalAddress
+  - MmIsAddressValid
+  - MmAllocateContiguousMemory
+  - MmUnmapLockedPages
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - IoAllocateMdl
+  - MmMapIoSpace
+  - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: f41f65189b796534d8ef6bf9caa06853
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 9f334698254c92ce933257bc672850e4
+    SHA1: 2873eeac59f168bf8f1a29b5dccf7a310f9ac7f7
+    SHA256: 61ec7fee8a31996254d6d7f32e6332ccd9d36fe8b7fe0cf5a407840ef4381027
+  SHA1: 4d7d514b13de9bd3e9753bf058958e7f03f36983
+  SHA256: 5e238d351e16d4909ca394f1db0326a60d33c9ac7b4d78aefcf17a6d9cc72be9
+  Sections:
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.4895989621236247
+      Virtual Size: '0xb4'
+    .rdata:
+      Entropy: 4.414177314559514
+      Virtual Size: '0x264'
+    .text:
+      Entropy: 5.99821129939302
+      Virtual Size: '0x1176'
+    INIT:
+      Entropy: 4.891266027306224
+      Virtual Size: '0x36e'
+  Signature: ''
+  Signatures:
+  - Certificates:
+    - IsCertificateAuthority: false
+      SerialNumber: 00bae5fa7e148e727ecf4481e69416f9a0
+      Signature: 519d68e4d16da2927761a469f3e722556dc89310e1cc9b215e8992da99d01a265aba54680568e7addbc248e894045a18190d3e05ac35109fbc8518bdf7e68a28e853bff1b2291d84ec03550569a0fa8331c5de89c4c9c47911c902a40cd4772b2086b541a8c57d3a30c05858d717dec7f859c66895ee1bea0b5a9c871a297efed221348320c85aebcda9a210e7f7b3ac88325041ea330fa5ca0cba6ecf07861e3e665c8095df135706b033b38d9567fd9b2c745e3afab8048e7aa41a4b7b0ef7ef39315a98026983b9fa9fe775c15452d18b124890fb9b52db063cbd3dc0d58b3eeb894262c74bd791efe66bf49f071ee4796aa7b3c983b29b05a53c3a0bd507
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      Subject: C=DE, postalCode=81673, ST=Bayern, L=M??nchen, ??=Tomannweg 6, O=NOVENTI
+        Health SE, CN=NOVENTI Health SE
+      TBS:
+        MD5: e60d2ebd77b703a3f6628183b0ad1262
+        SHA1: 9e82200e82226ceae142ac8b8cd9580dd585c0c7
+        SHA256: 587d3e589c526256b69c3836ba380c292f11cba42bd7ad847cdb8922d5c0c66a
+      ValidFrom: '2021-03-25 00:00:00'
+      ValidTo: '2024-03-24 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 3972443af922b751d7d36c10dd313595
+      Signature: 188751dc74213d9c8ae027b733d02eccecf0e6cb5e11de226f9b758e9e72fee4d6feaa1f9c962def034a7eaef48d6f723c433bc03febb8df5caaa9c6aef2fcd8eea37b43f686367c14e0cdf4f73ffedeb8b48af09196fefd43647efdccd201a17d7df81919c9422b13bf588bbaa4a266047688914e0c8914cea24dc932b3bae8141abc71f15bf0410b98000a220310e50cb1f9cd923719ed3bf1e43ab6f945132675afbbaaef3f7b773bd2c402913d1900d3175c39db3f7b180d45cd9385962f5ddf59164f3f51bdd545183fed4a8ee80661742316b50d50732744477f105d892a6b853114c4e8a96a4c80bc6a78cfb87f8e7672990c9dfed7910816a1a35f95
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      Subject: C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust
+        RSA Certification Authority
+      TBS:
+        MD5: 3f5b269ded03667a7bad47c1885062b0
+        SHA1: 0f01247aaf8b46e3617880e0f5f5dfac696ed7a3
+        SHA256: 593e2d49a74023555526aef9b7422b19e5b8b167391b6dee5ed292b1ca23a74c
+      ValidFrom: '2019-03-12 00:00:00'
+      ValidTo: '2028-12-31 23:59:59'
+      Version: 3
+    - IsCertificateAuthority: true
+      SerialNumber: 1da248306f9b2618d082e0967d33d36a
+      Signature: 4d6350ed47344a61a4dbde6a2a8c9bf100001e1d627b3ad732c2f6b3e063b3fb6100889a1b6d1007044fbeb8ea897822eb0f46ecf3465e40468912f40b775a9c2a413afcd6f4ebe7f7159533c3a18328b7de2fe494f78533832d4a4048bf9ac24f4ab18f24f4b38137d3b764b0a6236a596852425fff04ebe174657908f5a993de6b71409996ba78f1b9c8e2c30816b1ab635ac815806d745e4a757ea5b8c36cb5cfdf4a79875cc7404d6335f630d3cfb50a0e0b047fa04baebba3a5d08400933e535d34a50035696cbe9f2025100d19fb509061be398f7a8e4df69f0e1efe075112668326194895ce4ac9c17ff33a059bf96fdf887fc0239ed21e437a4531c19c4da9f059b25919e86a8d290402777c4b4bcd70be3ab2555a783ebcbb6f0310257715348af936cc4392e4ba4ff1629328255729fb5119c7a125406a8457c6b29db1bc1c0ada7c677e7d2ee9284c187ec47b3141719a4b29ec0b3d5750d2caddfd9e0551e54478dd01deb175980d5424fdf04ee3e2f883bd72bacb3d3aeef05e1792686dc861f9a6f12a0a0ba5b9f49eee983205859eebf98329d3c62c7dbd3a772e8b3742a06a82ed3b4aaa9410a4e10df817c5b65a79331892e3b575f8a1e98e0a251ee41ef19f5a8723ff9fa4519efb398011cddbb5c4a7a8806fe553d4e0e3a2c2d25b1afa32262d6a57701c3ca4582ea3f35b4b07dc3259f387a71a6d58
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Code Signing CA
+      TBS:
+        MD5: c1eabfb5994258ad955adb7c2df165e6
+        SHA1: fa33b3c00cebc469b269220d9eab26926c9b8ad8
+        SHA256: 70dffac37eb787b2198816982c7d44f541d2e39a7dac069d37b367dc9f354b32
+      ValidFrom: '2018-11-02 00:00:00'
+      ValidTo: '2030-12-31 23:59:59'
+      Version: 3
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Code Signing CA
+      SerialNumber: 00bae5fa7e148e727ecf4481e69416f9a0
+      Version: 1
+    SignerInfo: ''
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- ''
+Verified: 'TRUE'
