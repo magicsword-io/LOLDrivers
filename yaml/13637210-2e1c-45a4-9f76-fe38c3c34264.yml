@@ -53,7 +53,7 @@ KnownVulnerableSamples:
   - HalSetBusDataByOffset
   - HalGetBusDataByOffset
   Signatures:
-  - CertificatesInfo: []
+  - CertificatesInfo: ''
     SignerInfo: ''
     Certificates:
     - Subject: C=US, ST=California, L=Palo Alto, O=HP Inc., OU=HP Cybersecurity, CN=HP
@@ -62,15 +62,55 @@ KnownVulnerableSamples:
       ValidTo: '2020-05-11 12:00:00'
       Signature: aa3f4f546b3d6b83970947632b27c00eaf66df4d21f2f3d4437fe0eca7e4c09e690bdefd378870decaac098e2733296e3a168ad24619242c1b85b97536b196c8598179c433f6cbde589199dfd0d82a0d606918b9ff243c7bc159096f1a3c06119e399744ef024d36ea40b991816f9c7816c491c2508f87165bae72cc3cfae8ee0cab40f988ca2ef7bd084fa6956b79aff39fabe0793f3456f82b3da0d077fcd80f3effb0a788509d834c347957ba0b39f61747dae3b880b9bd70f58a87ed9d0dd8a6bd9aaca12fc7f4a49fa1703209a023a7685b253d095f2377167d9a8859b9edfd8a4377d0c06eb597fb929f900d30dbd3de83101ead341cfcf5a4f500c29b
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 09e002ed55ebc92b8a799574f80069fd
+      Version: 3
+      TBS:
+        MD5: 8e5a33e7bb54021804e4e59f3e526eb6
+        SHA1: 1100fd4e09b76dbfc11a2af0be5fb874e1fb7de5
+        SHA256: 073be2d750162b598fb61d31412483eb6c2b95746abf85862de245322ab1dc13
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 High Assurance
         Code Signing CA
       ValidFrom: '2013-10-22 12:00:00'
       ValidTo: '2028-10-22 12:00:00'
       Signature: 6a0eff7e137c06a54bc02e8cf9536409e2ba58913050eccc9fe1d3a82f4846361829d078285f9856400f1ebabdb13b875cdc5bd8200ded1a164dd51124214bf127699013eb11a101dafdb54e795975bd382a6ac3f68e412b8aa28bd72c5151d99ca0c8e34eba6ca847d24ed1681f8c02573bb3296a8e6a202ab9f2006264bac8e900f9cca4d4ba9a35d8af2c656c167c5821de4a30d0faeb245d06c99d16b7ad4a45d325e20cf040aa5c4dac7ecd0682b976466908d832b682fee3a95834431b8e6767973f6831163638953e87f7c7c3af9d7a7719d9de93b5fd6e2bfc94f93db74c12352c30bee88d9e05709a4813f48cd6e71eac38e7a8f3ad0cb77aec67ed
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0b7e10903c38490ffa2f679a87a1a7b9
+      Version: 3
+      TBS:
+        MD5: 7b0fbcf5c5aa55932726e9222f56efe2
+        SHA1: f09486b2b82a88a8b82aa2a12440496c8e53c452
+        SHA256: 0bf095b845b69928b5d7dfd1c42ae4f90feb8dc97f7830598c93e848877021fb
     Signer:
     - SerialNumber: 09e002ed55ebc92b8a799574f80069fd
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 High Assurance
         Code Signing CA
+      Version: 1
+  RichPEHeaderHash:
+    MD5: 41ddd08b440611823bc5d8cb732c563d
+    SHA1: 8acdfc9ac988c6250e2a031640f6e169b5fddb73
+    SHA256: 189683b4db2e68d2f0b3f91f1141907b3887f23991867a68a22389d40ad3634e
+  Sections:
+    .text:
+      Entropy: 5.93987588694592
+      Virtual Size: '0x6ba'
+    .rdata:
+      Entropy: 4.302335685844511
+      Virtual Size: '0x198'
+    .data:
+      Entropy: 0.5096713223407059
+      Virtual Size: '0x114'
+    .pdata:
+      Entropy: 3.169156050691243
+      Virtual Size: '0x6c'
+    INIT:
+      Entropy: 5.046663153942613
+      Virtual Size: '0x242'
+    .rsrc:
+      Entropy: 3.1281653750930665
+      Virtual Size: '0x2f8'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2020-01-16 02:04:02'
 Tags:
 - HpPortIox64.sys

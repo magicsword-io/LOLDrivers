@@ -85,7 +85,7 @@ sc.exe create ktes.sys binPath=C:\windows\temp\ktes.sys type=kernel &amp;&amp; s
 {{< details "Expand" >}}
 {{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
 
 {{< /details >}}
 
@@ -136,7 +136,7 @@ sc.exe create ktes.sys binPath=C:\windows\temp\ktes.sys type=kernel &amp;&amp; s
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/c734bcff-aaaa-4450-a9a9-25ee52aa7ff1.yaml)
 
-*last_updated:* 2023-06-24
+*last_updated:* 2023-07-22
 
 
 
