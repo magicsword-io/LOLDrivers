@@ -114,6 +114,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 | Product           | SEG Windows Driver x64 |
 | OriginalFilename  | segwindrvx64.sys |
 
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/4ae55080ec8aed49343e40d08370195c.bin" "Download" >}} 
+
 #### Certificates
 
 {{< details "Expand" >}}
@@ -348,6 +350,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 | Description       | SEG Windows Driver x64 |
 | Product           | SEG Windows Driver x64 |
 | OriginalFilename  | segwindrvx64.sys |
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/bdc3b6b83dde7111d5d6b9a2aadf233f.bin" "Download" >}} 
 
 #### Certificates
 
@@ -586,14 +590,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/a4aa80bc-4ecd-49ab-bc0f-0f49b07fdd7f.yaml)
 
-*last_updated:* 2023-07-22
-
-
-
-
-
-
-
+*last_updated:* 2023-07-23
 
 {{< /column >}}
 {{< /block >}}

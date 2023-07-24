@@ -39,6 +39,7 @@ We were not able to verify the hash of this driver successfully, it has not been
 - **Acknowledgement**: {{driver.Acknowledgement.Person}} | [{{ driver.Acknowledgement.Handle }}](https://twitter.com/{{driver.Acknowledgement.Handle}})
 
 {% if driver.KnownVulnerableSamples %}
+{% if driver.KnownVulnerableSamples[0].MD5 %}
 {% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/{% endraw %}{{ driver.KnownVulnerableSamples[0].MD5 }}{% raw %}.bin" "Download" >}}{% endraw %}
 {% raw %}
 {{< tip "warning" >}}
@@ -51,6 +52,7 @@ This download link contains the malicious driver!
 {% raw %}
 {{< /tip >}}
 {% endraw %}
+{% endif %}
 {% endif %}
 
 {% if driver.Commands.Command %}
@@ -204,6 +206,10 @@ This download link contains the malicious driver!
 {% if hash.OriginalFilename %}| OriginalFilename  | {{ hash.OriginalFilename }} |
 {% endif %}
 
+{% if hash.MD5 %}
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/{% endraw %}{{ hash.MD5 }}{% raw %}.bin" "Download" >}}{% endraw %} 
+{% endif %}
+
 {% if hash.Signatures %}
 {% for signature in hash.Signatures %}
 {% if signature.Certificates %}
@@ -290,13 +296,6 @@ This download link contains the malicious driver!
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml{{driver.kind}}/{{ driver.Id }}.yaml)
 
 *last_updated:* {{ time }}
-
-
-
-
-
-
-
 {% raw %}
 {{< /column >}}
 {{< /block >}}

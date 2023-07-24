@@ -111,6 +111,8 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
 | RichPEHeaderHash SHA1  | [a843b261089202e7260aaaeda0c341dd471e60de](https://www.virustotal.com/gui/search/rich_pe_header_hash%253Aa843b261089202e7260aaaeda0c341dd471e60de) |
 | RichPEHeaderHash SHA256| [631fce68262329c32a525e128948baa17c8438f89b68df4c9c460865dac05699](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A631fce68262329c32a525e128948baa17c8438f89b68df4c9c460865dac05699) |
 
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/49938383844ceec33dba794fb751c9a5.bin" "Download" >}} 
+
 #### Certificates
 
 {{< details "Expand" >}}
@@ -284,14 +286,7 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cfd36b2e-cf96-498e-aeb6-ee20e7b33bbb.yaml)
 
-*last_updated:* 2023-07-22
-
-
-
-
-
-
-
+*last_updated:* 2023-07-23
 
 {{< /column >}}
 {{< /block >}}

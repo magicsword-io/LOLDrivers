@@ -27,11 +27,6 @@ BlackCat Ransomware Deploys New Signed Kernel Driver. BlackCat ransomware incide
 - **Author**: Guus Verbeek
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/.bin" "Download" >}}
-{{< tip "warning" >}}
-This download link contains the malicious driver!
-
-{{< /tip >}}
 
 ### Commands
 
@@ -109,6 +104,7 @@ sc.exe create ktes.sys binPath=C:\windows\temp\ktes.sys type=kernel &amp;&amp; s
 | SHA256             | [](https://www.virustotal.com/gui/file/) |
 
 
+
 #### Imports
 {{< details "Expand" >}}
 
@@ -136,14 +132,7 @@ sc.exe create ktes.sys binPath=C:\windows\temp\ktes.sys type=kernel &amp;&amp; s
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/c734bcff-aaaa-4450-a9a9-25ee52aa7ff1.yaml)
 
-*last_updated:* 2023-07-22
-
-
-
-
-
-
-
+*last_updated:* 2023-07-23
 
 {{< /column >}}
 {{< /block >}}

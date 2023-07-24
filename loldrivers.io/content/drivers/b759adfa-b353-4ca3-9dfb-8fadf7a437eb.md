@@ -113,6 +113,8 @@ sc.exe create spwizimgVT.sys binPath=C:\windows\temp\spwizimgVT.sys type=kernel 
 | RichPEHeaderHash SHA1  | [a03c600569d3c813667c3520788e423f1c5eed0f](https://www.virustotal.com/gui/search/rich_pe_header_hash%253Aa03c600569d3c813667c3520788e423f1c5eed0f) |
 | RichPEHeaderHash SHA256| [39e0e1bb3f0a24fd42b1e55d492f5b87a926d6689b172c3475e1898f737be750](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A39e0e1bb3f0a24fd42b1e55d492f5b87a926d6689b172c3475e1898f737be750) |
 
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/5917e415a5bf30b3fcbcbcb8a4f20ee0.bin" "Download" >}} 
+
 #### Certificates
 
 {{< details "Expand" >}}
@@ -333,14 +335,7 @@ sc.exe create spwizimgVT.sys binPath=C:\windows\temp\spwizimgVT.sys type=kernel 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/b759adfa-b353-4ca3-9dfb-8fadf7a437eb.yaml)
 
-*last_updated:* 2023-07-22
-
-
-
-
-
-
-
+*last_updated:* 2023-07-23
 
 {{< /column >}}
 {{< /block >}}
