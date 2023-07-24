@@ -114,6 +114,8 @@ sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &amp;&amp;
 | Product           | Windows (R) Win 7 DDK driver |
 | OriginalFilename  | vmdrv.sys |
 
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/6d67da13cf84f15f6797ed929dd8cf5d.bin" "Download" >}} 
+
 #### Certificates
 
 {{< details "Expand" >}}
@@ -303,6 +305,8 @@ sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &amp;&amp;
 | Product           | Windows (R) Win 7 DDK driver |
 | OriginalFilename  | vmdrv.sys |
 
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0e625b7a7c3f75524e307b160f8db337.bin" "Download" >}} 
+
 #### Certificates
 
 {{< details "Expand" >}}
@@ -466,14 +470,7 @@ sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &amp;&amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/2ea12acc-95b6-4f91-afb7-8ded7a2fe9d9.yaml)
 
-*last_updated:* 2023-07-22
-
-
-
-
-
-
-
+*last_updated:* 2023-07-23
 
 {{< /column >}}
 {{< /block >}}

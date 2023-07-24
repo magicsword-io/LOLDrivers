@@ -113,6 +113,8 @@ sc.exe create mhyprot.sys binPath=C:\windows\temp\mhyprot.sys type=kernel &amp;&
 | RichPEHeaderHash SHA1  | [3e905e3d061d0d59de61fcf39c994fcb0ec1bab3](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A3e905e3d061d0d59de61fcf39c994fcb0ec1bab3) |
 | RichPEHeaderHash SHA256| [2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6) |
 
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/4b817d0e7714b9d43db43ae4a22a161e.bin" "Download" >}} 
+
 #### Certificates
 
 {{< details "Expand" >}}
@@ -402,14 +404,7 @@ sc.exe create mhyprot.sys binPath=C:\windows\temp\mhyprot.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/50cfaec9-55f8-49df-aa3e-b9ec3f4f4ff3.yaml)
 
-*last_updated:* 2023-07-22
-
-
-
-
-
-
-
+*last_updated:* 2023-07-23
 
 {{< /column >}}
 {{< /block >}}

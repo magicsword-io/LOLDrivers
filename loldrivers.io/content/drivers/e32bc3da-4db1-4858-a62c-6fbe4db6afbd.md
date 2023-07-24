@@ -113,6 +113,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | RichPEHeaderHash SHA1  | [960715bfbccb53b6c4eccca3b232b25640e15b52](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A960715bfbccb53b6c4eccca3b232b25640e15b52) |
 | RichPEHeaderHash SHA256| [d755e9f3cb861f5227319238f1811265e332e36a922b9a25da38b122a791fdfa](https://www.virustotal.com/gui/search/rich_pe_header_hash%253Ad755e9f3cb861f5227319238f1811265e332e36a922b9a25da38b122a791fdfa) |
 
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/2d8e4f38b36c334d0a32a7324832501d.bin" "Download" >}} 
+
 #### Certificates
 
 {{< details "Expand" >}}
@@ -334,6 +336,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | RichPEHeaderHash SHA1  | [39449f1e1ca8b17755e87827b9a394a4143d5b07](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A39449f1e1ca8b17755e87827b9a394a4143d5b07) |
 | RichPEHeaderHash SHA256| [f56fbdad98db55f8a8a7391c059ec563e0f6754624895ec154a2dd9d1fa350d5](https://www.virustotal.com/gui/search/rich_pe_header_hash%253Af56fbdad98db55f8a8a7391c059ec563e0f6754624895ec154a2dd9d1fa350d5) |
 
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0ec361f2fba49c73260af351c39ff9cb.bin" "Download" >}} 
+
 
 #### Imports
 {{< details "Expand" >}}
@@ -478,6 +482,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 | Authentihash MD5   | [bcd9f192e2f9321ed549c722f30206e5](https://www.virustotal.com/gui/search/authentihash%253Abcd9f192e2f9321ed549c722f30206e5) |
 | Authentihash SHA1  | [8498265d4ca81b83ec1454d9ec013d7a9c0c87bf](https://www.virustotal.com/gui/search/authentihash%253A8498265d4ca81b83ec1454d9ec013d7a9c0c87bf) |
 | Authentihash SHA256| [606beced7746cdb684d3a44f41e48713c6bbe5bfb1486c52b5cca815e99d31b4](https://www.virustotal.com/gui/search/authentihash%253A606beced7746cdb684d3a44f41e48713c6bbe5bfb1486c52b5cca815e99d31b4) |
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/0a2ec9e3e236698185978a5fc76e74e6.bin" "Download" >}} 
 
 #### Certificates
 
@@ -650,14 +656,7 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/e32bc3da-4db1-4858-a62c-6fbe4db6afbd.yaml)
 
-*last_updated:* 2023-07-22
-
-
-
-
-
-
-
+*last_updated:* 2023-07-23
 
 {{< /column >}}
 {{< /block >}}
