@@ -70,72 +70,72 @@ KnownVulnerableSamples:
   SHA1: b2f955b3e6107f831ebe67997f8586d4fe9f3e98
   SHA256: c8f9e1ad7b8cce62fba349a00bc168c849d42cfb2ca5b2c6cc4b51d054e0c497
   Sections:
-    ."!b:
+    .text:
       Entropy: 0.0
-      Virtual Size: '0x14e2da'
-    .Kl$:
-      Entropy: 7.704385920634162
-      Virtual Size: '0x2968c0'
+      Virtual Size: '0x266e'
+    .rdata:
+      Entropy: 0.0
+      Virtual Size: '0x68c'
     .data:
       Entropy: 0.0
       Virtual Size: '0x78'
     .pdata:
       Entropy: 0.0
       Virtual Size: '0x18c'
-    .rdata:
-      Entropy: 0.0
-      Virtual Size: '0x68c'
-    .reloc:
-      Entropy: 3.7856601791711784
-      Virtual Size: '0xc4'
-    .text:
-      Entropy: 0.0
-      Virtual Size: '0x266e'
-    .t{f:
-      Entropy: 0.8144190015462619
-      Virtual Size: '0x280'
     INIT:
       Entropy: 0.0
       Virtual Size: '0x550'
+    ."!b:
+      Entropy: 0.0
+      Virtual Size: '0x14e2da'
+    .t{f:
+      Entropy: 0.8144190015462619
+      Virtual Size: '0x280'
+    .Kl$:
+      Entropy: 7.704385920634162
+      Virtual Size: '0x2968c0'
+    .reloc:
+      Entropy: 3.7856601791711784
+      Virtual Size: '0xc4'
   Signature:
   - Microsoft Windows Hardware Compatibility Publisher
   - Microsoft Windows Third Party Component CA 2014
   - Microsoft Root Certificate Authority 2010
   Signatures:
-  - Certificates:
-    - IsCertificateAuthority: false
-      SerialNumber: 3300000057ee4d659a923e7c10000000000057
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2022-06-07 18:08:06'
+      ValidTo: '2023-06-01 18:08:06'
       Signature: 0a835e40cdb627d4f0a0d3dbbf64a46a05c132d0b5df9d11cd9c195d7037737057d57a342732ae68d67de47f460e7211c7c40dc29b0a079caff871c4834a9a2fc85e759de9b78659ad6fd79b7320e538e9ba5d52227ad67cc00b0a770ef662af3d743a558643ad89cfb015591709a69b6271a9b65db71898e7cb9964c6376dc474898301a6133198b486b518fdd9d7b9723dcffc441e026833f7c72e27986026c97b9184a0048b10d1fe6847ae467f02173f7a69120be780e5b6b9e6399402cc58735a31b537cc33578fbea443135a4a612359150bcf9ab316f6a9248bc71ef3f3480b9b3fa2341692bc3a121d80214688f7bd87d5ec56dcbd0ea61abf2c7ed2b739a07590adb596d401735d955f5f94c591d69ab4363a42f9fca549d439495711ff7990448c03724792ed4acf31f2b35b136c1b2f37aa82b1aabf7daf059dcb2e976e95311ec6e9cc53876dd09632cf512d39c801849a7c1088a565691953e07c7ff17b22518e982dd2dcc0feda8c834ca1f5e247aef1c3af5f13cd4b8cc1b6c0179bc876db88d677047c34366533e349796dbdea86389ad640710b7742ae8cc4ec88f10fa80ede4b1c93f81b55480fc8228216d54813df0327e74b3db9f3512a40c0568e4215827f9b7a2613deea72a7ec4df2def05e5559015049fe83edc83300526045cb128119e131b7d3573b268e24b0a25b9ad59f6301c8fc8f409322
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Hardware Compatibility Publisher
+      IsCertificateAuthority: false
+      SerialNumber: 3300000057ee4d659a923e7c10000000000057
+      Version: 3
       TBS:
         MD5: fdc11a5676aed4e9cc0c09eeb7450dfb
         SHA1: 4902077d9a05d4231b791d3b05bafa4a79132f03
         SHA256: 5db56c23d83bf67c7152e28ad4a684a7372b4ae4f52afe7a81ce91eef94caec3
-      ValidFrom: '2022-06-07 18:08:06'
-      ValidTo: '2023-06-01 18:08:06'
-      Version: 3
-    - IsCertificateAuthority: true
-      SerialNumber: 330000000d690d5d7893d076df00000000000d
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      ValidFrom: '2014-10-15 20:31:27'
+      ValidTo: '2029-10-15 20:41:27'
       Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2014
+      IsCertificateAuthority: true
+      SerialNumber: 330000000d690d5d7893d076df00000000000d
+      Version: 3
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
-      ValidFrom: '2014-10-15 20:31:27'
-      ValidTo: '2029-10-15 20:41:27'
-      Version: 3
-    CertificatesInfo: ''
     Signer:
-    - Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+    - SerialNumber: 3300000057ee4d659a923e7c10000000000057
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
-      SerialNumber: 3300000057ee4d659a923e7c10000000000057
       Version: 1
-    SignerInfo: ''
 MitreID: T1068
 Resources:
 - https://www.sentinelone.com/labs/driving-through-defenses-targeted-attacks-leverage-signed-malicious-microsoft-drivers/

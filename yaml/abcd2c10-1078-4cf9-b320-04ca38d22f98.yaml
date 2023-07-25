@@ -68,45 +68,45 @@ KnownVulnerableSamples:
   SHA1: d022f5e3c1bba43871af254a16ab0e378ea66184
   SHA256: 0ae8d1dd56a8a000ced74a627052933d2e9bff31d251de185b3c0c5fc94a44db
   Sections:
+    .text:
+      Entropy: 5.8460744196686925
+      Virtual Size: '0x15d5'
+    .rdata:
+      Entropy: 4.55099880214042
+      Virtual Size: '0x97c'
     .data:
       Entropy: 0.9568619474743305
       Virtual Size: '0x300'
     .pdata:
       Entropy: 3.671187470457645
       Virtual Size: '0x108'
-    .rdata:
-      Entropy: 4.55099880214042
-      Virtual Size: '0x97c'
-    .reloc:
-      Entropy: 3.6427249051134334
-      Virtual Size: '0x38'
-    .text:
-      Entropy: 5.8460744196686925
-      Virtual Size: '0x15d5'
     INIT:
       Entropy: 4.824674172237123
       Virtual Size: '0x326'
+    .reloc:
+      Entropy: 3.6427249051134334
+      Virtual Size: '0x38'
   Signature: ''
   Signatures:
-  - Certificates:
-    - IsCertificateAuthority: true
-      SerialNumber: 13d597c6ebaaaf994d4463d3387c0dd2
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: CN=WDKTestCert anash,133231280654008727
+      ValidFrom: '2023-03-12 20:54:25'
+      ValidTo: '2033-03-12 00:00:00'
       Signature: 2877c0544f97abe3532296be49983e1e9b7f4c99ef327222c4b2b6d70194c8d97db7140a51dc6a18a009549aabe1bcb8c95d089917b9fed893b52f0518b649680aab7fdb5af9098de934aede339cee3d3c271ffc25c8d1b188fee3ff9a8b6591ac9f6e21934467db0d7d6595edcc98f3bbaf303202fab533ae82372da8d8b8dee1dcb80312e8ebe140ea9edfac35bf59e909b49edad358761784ffafb590665a6426e9b3fae943864a0484002555a654647e1495e92d9e8dafd00b0e36e30a921ec424e2d4a70d579879bdaaab9bc21824479b905e710ae1269e3fc3695c50811805f163e23590e53c173a79adda0fe1deb674f34fc0adf3cbcf93a4955907f7
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      Subject: CN=WDKTestCert anash,133231280654008727
+      IsCertificateAuthority: true
+      SerialNumber: 13d597c6ebaaaf994d4463d3387c0dd2
+      Version: 3
       TBS:
         MD5: 6b552c6f192fd7c811a7f292b41dd282
         SHA1: fbd054373b922c03cad87c948c29ed2ed0883910
         SHA256: e9098f46ff7e02093422a6e4745f420d41fc08c66a95b6f62f09b44297bf35af
-      ValidFrom: '2023-03-12 20:54:25'
-      ValidTo: '2033-03-12 00:00:00'
-      Version: 3
-    CertificatesInfo: ''
     Signer:
-    - Issuer: CN=WDKTestCert anash,133231280654008727
-      SerialNumber: 13d597c6ebaaaf994d4463d3387c0dd2
+    - SerialNumber: 13d597c6ebaaaf994d4463d3387c0dd2
+      Issuer: CN=WDKTestCert anash,133231280654008727
       Version: 1
-    SignerInfo: ''
 MitreID: T1068
 Resources:
 - https://github.com/ZeroMemoryEx/Chaos-Rootkit

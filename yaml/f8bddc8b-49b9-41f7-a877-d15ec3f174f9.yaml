@@ -140,27 +140,27 @@ KnownVulnerableSamples:
   SHA1: 8692274681e8d10c26ddf2b993f31974b04f5bf0
   SHA256: 8dafe5f3d0527b66f6857559e3c81872699003e0f2ffda9202a1b5e29db2002e
   Sections:
-    .data:
-      Entropy: 3.0844180409640822
-      Virtual Size: '0xc2300'
-    .rdata:
-      Entropy: 5.526837662527405
-      Virtual Size: '0x4e8'
-    .reloc:
-      Entropy: 6.615348924620848
-      Virtual Size: '0x88c'
     .text:
       Entropy: 6.0195250267284255
       Virtual Size: '0x9786'
+    .rdata:
+      Entropy: 5.526837662527405
+      Virtual Size: '0x4e8'
+    .data:
+      Entropy: 3.0844180409640822
+      Virtual Size: '0xc2300'
+    INIT:
+      Entropy: 5.443407835301055
+      Virtual Size: '0x954'
     .vmp0:
       Entropy: 3.0924132037589103
       Virtual Size: '0xebe'
     .vmp1:
       Entropy: 7.965990900452569
       Virtual Size: '0x211c'
-    INIT:
-      Entropy: 5.443407835301055
-      Virtual Size: '0x954'
+    .reloc:
+      Entropy: 6.615348924620848
+      Virtual Size: '0x88c'
   Signature: Unsigned
   Signatures: {}
 MitreID: T1068

@@ -4,7 +4,7 @@ Acknowledgement:
 Author: Michael Haag
 CVE:
 - ''
-Category: vulnerable drivers
+Category: malicious
 Commands:
   Command: ''
   Description: Confirmed vulnerable driver from Microsoft Block List
@@ -55,18 +55,18 @@ KnownVulnerableSamples:
   SHA1: fcf9978cf1af2e9b1e2eaf509513664dfcc1847b
   SHA256: 7433f14b40c674c5e87b6210c330d5bcaf2f6f52d632ae29e9b7cf3ca405665b
   Sections:
-    .data:
-      Entropy: -0.0
-      Virtual Size: '0xc0'
-    .info:
-      Entropy: 1.3665783978789787
-      Virtual Size: '0xa0'
-    .pdata:
-      Entropy: 3.006469661076665
-      Virtual Size: '0x48'
     .text:
       Entropy: 5.848826218029174
       Virtual Size: '0x4e0'
+    .data:
+      Entropy: -0.0
+      Virtual Size: '0xc0'
+    .pdata:
+      Entropy: 3.006469661076665
+      Virtual Size: '0x48'
+    .info:
+      Entropy: 1.3665783978789787
+      Virtual Size: '0xa0'
     INIT:
       Entropy: 4.123682579107587
       Virtual Size: '0x114'
@@ -76,5 +76,5 @@ MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Tags:
-- ''
+- mlgbbiicaihflrnh.sys
 Verified: 'TRUE'

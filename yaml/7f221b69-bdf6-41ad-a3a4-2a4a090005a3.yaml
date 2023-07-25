@@ -18,9 +18,9 @@ Detection:
 Id: 7f221b69-bdf6-41ad-a3a4-2a4a090005a3
 KnownVulnerableSamples:
 - Authentihash:
-    MD5: 295e520ba1eb2fca6e3882d0484ec95c
-    SHA1: b72f8a4a0b112daac6e94c229a80fb812d230927
-    SHA256: 7591749dee0fde532af9afadbe5e4ccc48f5fd792cc0cb64cb305094ba191330
+    MD5: b6d7ad40addbfcdae1b94a14183a51de
+    SHA1: f32e5c2ffca211127e24004a06baf17765a21833
+    SHA256: c064cbde03472778df5963b11801501ebdadabb5f522edef03778f1a4df7e339
   Company: ''
   Copyright: ''
   CreationTimestamp: '2014-08-01 01:37:10'
@@ -218,23 +218,23 @@ KnownVulnerableSamples:
   SHA1: eb1a5457010b07393ffd4c8c8206e83e737290ec
   SHA256: 272d3541491b145e93c47b225769ef65a53b5f8586ed6edb991f763ee5300417
   Sections:
-    .data:
-      Entropy: 4.945319467301306
-      Virtual Size: '0xa3e0'
-    .rdata:
-      Entropy: 4.912185025833945
-      Virtual Size: '0xcc84'
-    .rsrc:
-      Entropy: 6.594798012652241
-      Virtual Size: '0x121ac'
     .text:
       Entropy: 6.629799424341935
       Virtual Size: '0x40475'
+    .rdata:
+      Entropy: 4.912185025833945
+      Virtual Size: '0xcc84'
+    .data:
+      Entropy: 4.945319467301306
+      Virtual Size: '0xa3e0'
+    .rsrc:
+      Entropy: 6.594798012652241
+      Virtual Size: '0x121ac'
   Signature: ''
   Signatures: {}
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Tags:
-- ''
+- powertools.exe
 Verified: 'TRUE'

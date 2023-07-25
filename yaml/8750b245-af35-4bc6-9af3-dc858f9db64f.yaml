@@ -47,27 +47,27 @@ KnownVulnerableSamples:
   SHA1: 17fa047c1f979b180644906fe9265f21af5b0509
   SHA256: 749b0e8c8c8b7dda8c2063c708047cfe95afa0a4d86886b31a12f3018396e67c
   Sections:
-    .00cfg:
-      Entropy: 2.0728769534576146
-      Virtual Size: '0x30'
-    .data:
-      Entropy: 7.984550623960864
-      Virtual Size: '0xc5d0'
-    .edata:
-      Entropy: 2.8457622013064974
-      Virtual Size: '0x4f'
-    .pdata:
-      Entropy: 4.188923701028426
-      Virtual Size: '0x234'
-    .rdata:
-      Entropy: 4.233695689323557
-      Virtual Size: '0x718'
-    .reloc:
-      Entropy: 3.326879484051224
-      Virtual Size: '0x2c'
     .text:
       Entropy: 6.261203394144865
       Virtual Size: '0x3b3a'
+    .rdata:
+      Entropy: 4.233695689323557
+      Virtual Size: '0x718'
+    .data:
+      Entropy: 7.984550623960864
+      Virtual Size: '0xc5d0'
+    .pdata:
+      Entropy: 4.188923701028426
+      Virtual Size: '0x234'
+    .00cfg:
+      Entropy: 2.0728769534576146
+      Virtual Size: '0x30'
+    .edata:
+      Entropy: 2.8457622013064974
+      Virtual Size: '0x4f'
+    .reloc:
+      Entropy: 3.326879484051224
+      Virtual Size: '0x2c'
   Signature: []
   Signatures: {}
 - Authentihash:
@@ -100,27 +100,27 @@ KnownVulnerableSamples:
   SHA1: 1f3799fed3cf43254fe30dcdfdb8dc02d82e662b
   SHA256: f8236fc01d4efaa48f032e301be2ebba4036b2cd945982a29046eca03944d2ae
   Sections:
-    .00cfg:
-      Entropy: 2.072876953457614
-      Virtual Size: '0x30'
-    .data:
-      Entropy: 7.977732267872434
-      Virtual Size: '0xa1a0'
-    .edata:
-      Entropy: 3.69345697232837
-      Virtual Size: '0x4f'
-    .pdata:
-      Entropy: 4.076640402204788
-      Virtual Size: '0x1d4'
-    .rdata:
-      Entropy: 4.06302777043616
-      Virtual Size: '0x608'
-    .reloc:
-      Entropy: 3.2814249385966785
-      Virtual Size: '0x2c'
     .text:
       Entropy: 6.207903166992804
       Virtual Size: '0x2fda'
+    .rdata:
+      Entropy: 4.06302777043616
+      Virtual Size: '0x608'
+    .data:
+      Entropy: 7.977732267872434
+      Virtual Size: '0xa1a0'
+    .pdata:
+      Entropy: 4.076640402204788
+      Virtual Size: '0x1d4'
+    .00cfg:
+      Entropy: 2.072876953457614
+      Virtual Size: '0x30'
+    .edata:
+      Entropy: 3.69345697232837
+      Virtual Size: '0x4f'
+    .reloc:
+      Entropy: 3.2814249385966785
+      Virtual Size: '0x2c'
   Signature: []
   Signatures: {}
 - Authentihash:
@@ -153,27 +153,27 @@ KnownVulnerableSamples:
   SHA1: 1f3799fed3cf43254fe30dcdfdb8dc02d82e662b
   SHA256: f8236fc01d4efaa48f032e301be2ebba4036b2cd945982a29046eca03944d2ae
   Sections:
-    .00cfg:
-      Entropy: 2.072876953457614
-      Virtual Size: '0x30'
-    .data:
-      Entropy: 7.977732267872434
-      Virtual Size: '0xa1a0'
-    .edata:
-      Entropy: 3.69345697232837
-      Virtual Size: '0x4f'
-    .pdata:
-      Entropy: 4.076640402204788
-      Virtual Size: '0x1d4'
-    .rdata:
-      Entropy: 4.06302777043616
-      Virtual Size: '0x608'
-    .reloc:
-      Entropy: 3.2814249385966785
-      Virtual Size: '0x2c'
     .text:
       Entropy: 6.207903166992804
       Virtual Size: '0x2fda'
+    .rdata:
+      Entropy: 4.06302777043616
+      Virtual Size: '0x608'
+    .data:
+      Entropy: 7.977732267872434
+      Virtual Size: '0xa1a0'
+    .pdata:
+      Entropy: 4.076640402204788
+      Virtual Size: '0x1d4'
+    .00cfg:
+      Entropy: 2.072876953457614
+      Virtual Size: '0x30'
+    .edata:
+      Entropy: 3.69345697232837
+      Virtual Size: '0x4f'
+    .reloc:
+      Entropy: 3.2814249385966785
+      Virtual Size: '0x2c'
   Signature: []
   Signatures: {}
 - Company: ''

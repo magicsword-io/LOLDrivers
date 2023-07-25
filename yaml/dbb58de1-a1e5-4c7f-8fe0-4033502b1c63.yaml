@@ -55,18 +55,18 @@ KnownVulnerableSamples:
   SHA1: d10a054c6c3b1243cb13ff6648cd5de21a0b6548
   SHA256: 6165491e8391eac9c0e3b9a2a31e1692a567c16cbfa36d7a88c401ffae1f6c63
   Sections:
-    .data:
-      Entropy: -0.0
-      Virtual Size: '0xc0'
-    .info:
-      Entropy: 1.3665783978789787
-      Virtual Size: '0xa0'
-    .pdata:
-      Entropy: 3.006469661076665
-      Virtual Size: '0x48'
     .text:
       Entropy: 5.848826218029174
       Virtual Size: '0x4e0'
+    .data:
+      Entropy: -0.0
+      Virtual Size: '0xc0'
+    .pdata:
+      Entropy: 3.006469661076665
+      Virtual Size: '0x48'
+    .info:
+      Entropy: 1.3665783978789787
+      Virtual Size: '0xa0'
     INIT:
       Entropy: 4.123682579107587
       Virtual Size: '0x114'
@@ -76,5 +76,5 @@ MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Tags:
-- ''
+- asas.sys
 Verified: 'TRUE'

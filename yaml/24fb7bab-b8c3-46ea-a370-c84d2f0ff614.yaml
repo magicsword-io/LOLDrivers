@@ -72,102 +72,102 @@ KnownVulnerableSamples:
   SHA1: 2261198385d62d2117f50f631652eded0ecc71db
   SHA256: 04a85e359525d662338cae86c1e59b1d7aa9bd12b920e8067503723dc1e03162
   Sections:
+    .text:
+      Entropy: 5.903584171694268
+      Virtual Size: '0x962'
+    .rdata:
+      Entropy: 4.136425539237833
+      Virtual Size: '0x1d4'
     .data:
       Entropy: 0.5159719988134768
       Virtual Size: '0x110'
     .pdata:
       Entropy: 3.195198013509955
       Virtual Size: '0x90'
-    .rdata:
-      Entropy: 4.136425539237833
-      Virtual Size: '0x1d4'
-    .rsrc:
-      Entropy: 3.331846154390591
-      Virtual Size: '0x3f0'
-    .text:
-      Entropy: 5.903584171694268
-      Virtual Size: '0x962'
     INIT:
       Entropy: 4.823287376137565
       Virtual Size: '0x252'
+    .rsrc:
+      Entropy: 3.331846154390591
+      Virtual Size: '0x3f0'
   Signature:
   - 'FUJITSU LIMITED '
   - VeriSign Class 3 Code Signing 2004 CA
   - VeriSign Class 3 Public Primary CA
   Signatures:
-  - Certificates:
-    - IsCertificateAuthority: true
-      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2013-12-03 23:59:59'
       Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
+      IsCertificateAuthority: true
+      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+      Version: 3
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
       ValidFrom: '2003-12-04 00:00:00'
-      ValidTo: '2013-12-03 23:59:59'
-      Version: 3
-    - IsCertificateAuthority: false
-      SerialNumber: 0de92bf0d4d82988183205095e9a7688
+      ValidTo: '2008-12-03 23:59:59'
       Signature: 877870da4e5201205be079c98230c4fdb91996bd9100c3bdcdcdc6f40ed8fff94dc033623011c5f5741bd492de5f9c2013b17c45be50cd83e7801783a72793671346fbcab8984103cc9b515b058b7fa86ff31b501b242ef2698d6c22f7bbca1695ed0c74c06877d9eb996287c17390f889747a23aba3987b97b1f78f29714d2e751b4841daf0b50d2054d677a097826369fd09cf8af075bb099bd9f91155269a6132be7a02b07b86bea2c38b222c78d13576bc92735cf9b9e64c150a23cce4d2d4342e4940153c0f607a24c6a566ef96cf70eb3ee7f40d7edcd17ca3767169c19c4f47303521b1a2af1a623c2bd98eaa2a077bd818b35c7be29da56ffe3c89ad
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
+      IsCertificateAuthority: false
+      SerialNumber: 0de92bf0d4d82988183205095e9a7688
+      Version: 3
       TBS:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
         SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
-      ValidFrom: '2003-12-04 00:00:00'
-      ValidTo: '2008-12-03 23:59:59'
-      Version: 3
-    - IsCertificateAuthority: true
-      SerialNumber: 4191a15a3978dfcf496566381d4c75c2
-      Signature: ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
+      ValidFrom: '2004-07-16 00:00:00'
+      ValidTo: '2014-07-15 23:59:59'
+      Signature: ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 4191a15a3978dfcf496566381d4c75c2
+      Version: 3
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
-      ValidFrom: '2004-07-16 00:00:00'
-      ValidTo: '2014-07-15 23:59:59'
-      Version: 3
-    - IsCertificateAuthority: true
-      SerialNumber: 610c120600000000001b
+    - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
+      ValidFrom: '2006-05-23 17:01:29'
+      ValidTo: '2016-05-23 17:11:29'
       Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
+      IsCertificateAuthority: true
+      SerialNumber: 610c120600000000001b
+      Version: 3
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
-      ValidFrom: '2006-05-23 17:01:29'
-      ValidTo: '2016-05-23 17:11:29'
-      Version: 3
-    - IsCertificateAuthority: false
-      SerialNumber: 6b7f98e2e421c2f95c47f321abf1aef1
-      Signature: 78ab202d129483254db90615ecfc16a8057fe3f49f614b5d04d92d593ef3aad056d06e29f50323337adb77ef869b046e060dbc793f2142cfdf59de270f02c3d5486ddfda1456be32f76fb5047ef6eefc08c99305a9029753af10ac21b04e76ba8b0651e80d64eccec56353f1fd7082ec8d38737b2f13b6f2d8db5720fe070285bf8ab99d932b52ac8a614cdc11ed0d52b119219dea9b2eeb31a2ea229f0a9de4d770c124872fb0c1154395c8e8cc967205ece6fcc4c976744874f9409a7cab02e612f08924794f8d9f8c1f026acdd269516a43042ebc0d055cae803266e8cc70b0121d8946650c9cbe6cb7f5c359ab80174c0e9208ff07c44980930c244bfc43
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      Subject: 'C=JP, ST=Kanagawa, L=Kawasaki, O=FUJITSU LIMITED , OU=Digital ID Class
+    - Subject: 'C=JP, ST=Kanagawa, L=Kawasaki, O=FUJITSU LIMITED , OU=Digital ID Class
         3 , Microsoft Software Validation v2, OU=Personal Systems Business Unit, CN=FUJITSU
         LIMITED '
+      ValidFrom: '2006-05-31 00:00:00'
+      ValidTo: '2007-06-01 23:59:59'
+      Signature: 78ab202d129483254db90615ecfc16a8057fe3f49f614b5d04d92d593ef3aad056d06e29f50323337adb77ef869b046e060dbc793f2142cfdf59de270f02c3d5486ddfda1456be32f76fb5047ef6eefc08c99305a9029753af10ac21b04e76ba8b0651e80d64eccec56353f1fd7082ec8d38737b2f13b6f2d8db5720fe070285bf8ab99d932b52ac8a614cdc11ed0d52b119219dea9b2eeb31a2ea229f0a9de4d770c124872fb0c1154395c8e8cc967205ece6fcc4c976744874f9409a7cab02e612f08924794f8d9f8c1f026acdd269516a43042ebc0d055cae803266e8cc70b0121d8946650c9cbe6cb7f5c359ab80174c0e9208ff07c44980930c244bfc43
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 6b7f98e2e421c2f95c47f321abf1aef1
+      Version: 3
       TBS:
         MD5: 3aef8abc12c5f5a0b32350fbb16f4548
         SHA1: c568d06e1fd94c11c9f1db167c15497e84a86abf
         SHA256: d0b6a09973254b6b93b041e24f6ecdb4a14bdc27a571bcefa81a4a39a5734600
-      ValidFrom: '2006-05-31 00:00:00'
-      ValidTo: '2007-06-01 23:59:59'
-      Version: 3
-    CertificatesInfo: ''
     Signer:
-    - Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+    - SerialNumber: 6b7f98e2e421c2f95c47f321abf1aef1
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
-      SerialNumber: 6b7f98e2e421c2f95c47f321abf1aef1
       Version: 1
-    SignerInfo: ''
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

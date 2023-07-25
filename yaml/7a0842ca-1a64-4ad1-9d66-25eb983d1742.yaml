@@ -124,77 +124,78 @@ KnownVulnerableSamples:
   SHA1: 75c924435e87f38f20e5e77b7f2c382b9c9b974b
   SHA256: 035b96ff8b85d312be0f9df6271714392a802ec8bab59ae8229812ddc67ced5a
   Sections:
-    .data:
-      Entropy: 2.450212064914747
-      Virtual Size: '0x1c'
-    .rdata:
-      Entropy: 4.091327919587039
-      Virtual Size: '0x454'
-    .reloc:
-      Entropy: 6.43814817478269
-      Virtual Size: '0x28c'
     .text:
       Entropy: 6.122291821648682
       Virtual Size: '0x3162'
-    INIT:
-      Entropy: 5.60467066998622
-      Virtual Size: '0x824'
+    .rdata:
+      Entropy: 4.091327919587039
+      Virtual Size: '0x454'
+    .data:
+      Entropy: 2.450212064914747
+      Virtual Size: '0x1c'
     PAGE:
       Entropy: 5.1712774885026676
       Virtual Size: '0x82'
+    INIT:
+      Entropy: 5.60467066998622
+      Virtual Size: '0x824'
+    .reloc:
+      Entropy: 6.43814817478269
+      Virtual Size: '0x28c'
   Signature: ''
   Signatures:
-  - Certificates:
-    - IsCertificateAuthority: true
-      SerialNumber: 61204db4000000000027
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
       Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
-        EV Root CA
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
-      ValidFrom: '2011-04-15 19:45:33'
-      ValidTo: '2021-04-15 19:55:33'
-      Version: 3
-    - IsCertificateAuthority: false
-      SerialNumber: 0d671c2c3c13676231329afa97b1ec2b
-      Signature: 5c01ed6a6f6c302d1b2ff3c17bae241ce2fcd501196d753b285ea9d44ba291565fc97503fa50ba4b0abba54066e1b04ac66018e8eb06c8104515df0b903f432e04c1d486336929a4d637fe7e06197a75ad7199bfae0a3a66ea6e55cf1ba9b68e33ef35f5b46cef71f5c8b6230d459c2e843a09b01ebe5020852ac9948357f09a66ad78bc60d795fce62fb63288f5550bc6446acbe7fdad31f8dd76045d7ed50bb79dc6ee9333ad8c12b64e2e544f922dfea0586b0d1cb80c37f96fc68b20f95b104f11ef5fe49349829afe35ceecfd22c96b5f89263701f95364d4f0816bcd0bee9e40aa1b956cd4659181e05d0872f4838b3208138b67d9c03faad605f1b924
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      Subject: ??=AU, ??=Private Organization, serialNumber=099 321 392, C=AU, ST=New
+    - Subject: ??=AU, ??=Private Organization, serialNumber=099 321 392, C=AU, ST=New
         South Wales, L=Surry Hills, O=PassMark Software Pty Ltd, CN=PassMark Software
         Pty Ltd
+      ValidFrom: '2018-10-18 00:00:00'
+      ValidTo: '2021-02-28 12:00:00'
+      Signature: 5c01ed6a6f6c302d1b2ff3c17bae241ce2fcd501196d753b285ea9d44ba291565fc97503fa50ba4b0abba54066e1b04ac66018e8eb06c8104515df0b903f432e04c1d486336929a4d637fe7e06197a75ad7199bfae0a3a66ea6e55cf1ba9b68e33ef35f5b46cef71f5c8b6230d459c2e843a09b01ebe5020852ac9948357f09a66ad78bc60d795fce62fb63288f5550bc6446acbe7fdad31f8dd76045d7ed50bb79dc6ee9333ad8c12b64e2e544f922dfea0586b0d1cb80c37f96fc68b20f95b104f11ef5fe49349829afe35ceecfd22c96b5f89263701f95364d4f0816bcd0bee9e40aa1b956cd4659181e05d0872f4838b3208138b67d9c03faad605f1b924
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0d671c2c3c13676231329afa97b1ec2b
+      Version: 3
       TBS:
         MD5: fd290a4891edd36420e082391a96d9b0
         SHA1: fe33d6386cb017f4d39d5b1e21861bbc387aae7a
         SHA256: 57e2af9bbd6fed434ad5df9b194936fc6d3a1b71658bdd31c2d289f8a0f5c2e0
-      ValidFrom: '2018-10-18 00:00:00'
-      ValidTo: '2021-02-28 12:00:00'
-      Version: 3
-    - IsCertificateAuthority: true
-      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
       Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
-        CA (SHA2)
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
       TBS:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
         SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
-      ValidFrom: '2012-04-18 12:00:00'
-      ValidTo: '2027-04-18 12:00:00'
-      Version: 3
-    CertificatesInfo: ''
     Signer:
-    - Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+    - SerialNumber: 0d671c2c3c13676231329afa97b1ec2b
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
-      SerialNumber: 0d671c2c3c13676231329afa97b1ec2b
       Version: 1
-    SignerInfo: ''
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Tags:
-- ''
+- directio32_legacy.sys
+- DirectIo32.sys
 Verified: 'TRUE'

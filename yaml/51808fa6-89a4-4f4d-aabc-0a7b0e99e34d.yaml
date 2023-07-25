@@ -142,38 +142,38 @@ KnownVulnerableSamples:
   SHA1: b1266873fa36a2104fd5d7f498a9957bc3d9d450
   SHA256: 603ccc97a198b004f9fa56deed2295d1b2d42ef01f22d80a00cb28bcf1b85646
   Sections:
+    .text:
+      Entropy: 6.183070832014416
+      Virtual Size: '0x6ed0'
+    .rdata:
+      Entropy: 4.768973580594352
+      Virtual Size: '0x159c'
     .data:
       Entropy: 0.807954115503613
       Virtual Size: '0x15f8'
     .pdata:
       Entropy: 7.83996638727823
       Virtual Size: '0x684'
-    .rdata:
-      Entropy: 4.768973580594352
-      Virtual Size: '0x159c'
+    PAGE:
+      Entropy: 5.929327209049661
+      Virtual Size: '0xb7a'
+    INIT:
+      Entropy: 5.3523212488458185
+      Virtual Size: '0xe54'
+    .upx0:
+      Entropy: 7.037246397744446
+      Virtual Size: '0x124190'
     .reloc:
       Entropy: 3.9077681077271933
       Virtual Size: '0xcc'
     .rsrc:
       Entropy: 2.9056718289000636
       Virtual Size: '0x22c'
-    .text:
-      Entropy: 6.183070832014416
-      Virtual Size: '0x6ed0'
-    .upx0:
-      Entropy: 7.037246397744446
-      Virtual Size: '0x124190'
-    INIT:
-      Entropy: 5.3523212488458185
-      Virtual Size: '0xe54'
-    PAGE:
-      Entropy: 5.929327209049661
-      Virtual Size: '0xb7a'
   Signature: ''
   Signatures: {}
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Tags:
-- ''
+- kdriver.sys
 Verified: 'TRUE'
