@@ -53,7 +53,6 @@ jobs:
         } else {
             Write-Host "WDACConfig module is already installed."
         }
-    # ... rest of your workflow ...
     - name: Create WDAC Deny Configuration
       shell: pwsh
       run: |
