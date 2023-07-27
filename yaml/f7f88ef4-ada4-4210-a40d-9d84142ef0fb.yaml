@@ -1,56 +1,31 @@
-Id: f7f88ef4-ada4-4210-a40d-9d84142ef0fb
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-03-04'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create 7.sys binPath=C:\windows\temp\7.sys type=kernel && sc.exe
     start 7.sys
   Description: Driver categorized as POORTRY by Mandiant.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-- ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-03-04'
 Detection: []
+Id: f7f88ef4-ada4-4210-a40d-9d84142ef0fb
 KnownVulnerableSamples:
-- Filename: 7.sys
-  MD5: dc564bac7258e16627b9de0ce39fae25
-  SHA1: 0291d0457acaf0fe8ed5c3137302390469ce8b35
-  SHA256: 6839fcae985774427c65fe38e773aa96ec451a412caa5354ad9e2b9b54ffe6c1
-  Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  - Microsoft Windows Third Party Component CA 2014
-  - Microsoft Root Certificate Authority 2010
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: f147f4f5f6dcaf5d0e5481418ef02c42
     SHA1: e31276554b012178dc6fb06c7f44b6241d48f8a7
     SHA256: 3325f541c9930a321930853e0d7f0f4c35ba99f99a97bfe275c60248957720fb
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - NETIO.SYS
-  - ntoskrnl.exe
-  - WDFLDR.SYS
-  - ntoskrnl.exe
-  - HAL.dll
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2022-08-19 01:48:21'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: 7.sys
   ImportedFunctions:
   - WskCaptureProviderNPI
   - RtlFreeAnsiString
@@ -70,6 +45,60 @@ KnownVulnerableSamples:
   - KeRevertToUserAffinityThread
   - DbgPrint
   - KeQueryPerformanceCounter
+  Imports:
+  - NETIO.SYS
+  - ntoskrnl.exe
+  - WDFLDR.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: dc564bac7258e16627b9de0ce39fae25
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
+    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
+    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
+  SHA1: 0291d0457acaf0fe8ed5c3137302390469ce8b35
+  SHA256: 6839fcae985774427c65fe38e773aa96ec451a412caa5354ad9e2b9b54ffe6c1
+  Sections:
+    .text:
+      Entropy: 0.0
+      Virtual Size: '0x5046'
+    .rdata:
+      Entropy: 0.0
+      Virtual Size: '0x1074'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0x7e8'
+    .pdata:
+      Entropy: 0.0
+      Virtual Size: '0x4b0'
+    INIT:
+      Entropy: 0.0
+      Virtual Size: '0x9f6'
+    .vmp0:
+      Entropy: 0.0
+      Virtual Size: '0x37d19a'
+    .vmp1:
+      Entropy: 2.75
+      Virtual Size: '0x8'
+    .vmp2:
+      Entropy: 7.887021821864985
+      Virtual Size: '0x4bf0a8'
+    .reloc:
+      Entropy: 3.730379301057809
+      Virtual Size: '0xdc'
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+  - Microsoft Root Certificate Authority 2010
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -105,39 +134,10 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
-  RichPEHeaderHash:
-    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
-    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
-    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
-  Sections:
-    .text:
-      Entropy: 0.0
-      Virtual Size: '0x5046'
-    .rdata:
-      Entropy: 0.0
-      Virtual Size: '0x1074'
-    .data:
-      Entropy: 0.0
-      Virtual Size: '0x7e8'
-    .pdata:
-      Entropy: 0.0
-      Virtual Size: '0x4b0'
-    INIT:
-      Entropy: 0.0
-      Virtual Size: '0x9f6'
-    .vmp0:
-      Entropy: 0.0
-      Virtual Size: '0x37d19a'
-    .vmp1:
-      Entropy: 2.75
-      Virtual Size: '0x8'
-    .vmp2:
-      Entropy: 7.887021821864985
-      Virtual Size: '0x4bf0a8'
-    .reloc:
-      Entropy: 3.730379301057809
-      Virtual Size: '0xdc'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-08-19 01:48:21'
+MitreID: T1068
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+- ''
 Tags:
 - 7.sys
+Verified: 'TRUE'

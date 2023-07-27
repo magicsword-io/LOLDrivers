@@ -1,23 +1,16 @@
-Id: 43d0af25-c066-471f-bb73-6ce25dc7e0eb
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create Dh_Kernel.sys binPath=C:\windows\temp\Dh_Kernel.sys type=kernel
     && sc.exe start Dh_Kernel.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955.yara
@@ -29,34 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 43d0af25-c066-471f-bb73-6ce25dc7e0eb
 KnownVulnerableSamples:
-- Filename: Dh_Kernel.sys
-  MD5: 98763a3dee3cf03de334f00f95fc071a
-  SHA1: 745bad097052134548fe159f158c04be5616afc2
-  SHA256: bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955
-  Signature:
-  - YY Inc.
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: YY Inc.
-  Company: YY Inc.
-  Description: dianhu
-  Product: dianhu
-  ProductVersion: 1.0.99
-  FileVersion: 1.0.99
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 2d03bf608f236ee1f4654e06857a3062
     SHA1: 508c1a26486188aa1268d6c23c65e57b8efe71f6
     SHA256: f5215f83138901ca7ade60c2222446fa3dd7e8900a745bd339f8a596cb29356c
-  InternalName: ''
+  Company: YY Inc.
   Copyright: "Copyright \xA9 2007-2017 YY Inc. All rights reserved."
-  Imports:
-  - ntoskrnl.exe
-  - WDFLDR.SYS
+  CreationTimestamp: '2018-01-18 21:39:32'
+  Date: ''
+  Description: dianhu
   ExportedFunctions: ''
+  FileVersion: 1.0.99
+  Filename: Dh_Kernel.sys
   ImportedFunctions:
   - ExFreePoolWithTag
   - ProbeForRead
@@ -92,6 +71,52 @@ KnownVulnerableSamples:
   - WdfVersionBind
   - WdfVersionUnbind
   - WdfVersionUnbindClass
+  Imports:
+  - ntoskrnl.exe
+  - WDFLDR.SYS
+  InternalName: ''
+  MD5: 98763a3dee3cf03de334f00f95fc071a
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: dianhu
+  ProductVersion: 1.0.99
+  Publisher: YY Inc.
+  RichPEHeaderHash:
+    MD5: 29491e8e7f428022f1e82366bfc238ae
+    SHA1: a03ed5fa635033941e81b4e09dc5f9168f1c6d1b
+    SHA256: e3405f700509557ccbde0682b8a2e77152965a5ae152bb139b55c4e7262d6f21
+  SHA1: 745bad097052134548fe159f158c04be5616afc2
+  SHA256: bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955
+  Sections:
+    .text:
+      Entropy: 6.129655537397785
+      Virtual Size: '0x1670'
+    .rdata:
+      Entropy: 4.054446562472431
+      Virtual Size: '0x768'
+    .data:
+      Entropy: 0.6580185257943139
+      Virtual Size: '0xfc0'
+    .pdata:
+      Entropy: 3.9409695700497185
+      Virtual Size: '0x18c'
+    .gfids:
+      Entropy: 0.8112781244591328
+      Virtual Size: '0x4'
+    INIT:
+      Entropy: 5.035770702298317
+      Virtual Size: '0x4ac'
+    .rsrc:
+      Entropy: 3.2019276464793474
+      Virtual Size: '0x468'
+    .reloc:
+      Entropy: 3.066603109673247
+      Virtual Size: '0x28'
+  Signature:
+  - YY Inc.
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -168,36 +193,11 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 29491e8e7f428022f1e82366bfc238ae
-    SHA1: a03ed5fa635033941e81b4e09dc5f9168f1c6d1b
-    SHA256: e3405f700509557ccbde0682b8a2e77152965a5ae152bb139b55c4e7262d6f21
-  Sections:
-    .text:
-      Entropy: 6.129655537397785
-      Virtual Size: '0x1670'
-    .rdata:
-      Entropy: 4.054446562472431
-      Virtual Size: '0x768'
-    .data:
-      Entropy: 0.6580185257943139
-      Virtual Size: '0xfc0'
-    .pdata:
-      Entropy: 3.9409695700497185
-      Virtual Size: '0x18c'
-    .gfids:
-      Entropy: 0.8112781244591328
-      Virtual Size: '0x4'
-    INIT:
-      Entropy: 5.035770702298317
-      Virtual Size: '0x4ac'
-    .rsrc:
-      Entropy: 3.2019276464793474
-      Virtual Size: '0x468'
-    .reloc:
-      Entropy: 3.066603109673247
-      Virtual Size: '0x28'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-01-18 21:39:32'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - Dh_Kernel.sys
+Verified: 'TRUE'

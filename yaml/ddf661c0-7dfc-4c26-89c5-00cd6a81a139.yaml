@@ -1,11 +1,10 @@
-Id: ddf661c0-7dfc-4c26-89c5-00cd6a81a139
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-06-05'
-MitreID: T1068
 CVE:
 - CVE-2022-42046
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create wfshbr64.sys binPath=C:\windows\temp\wfshbr64.sys type=kernel
     && sc.exe start wfshbr64.sys
@@ -17,38 +16,50 @@ Commands:
 
     The driver is signed by Microsoft hardware compatibility publisher that is submitted
     via Microsoft Hardware Program.'
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://github.com/kkent030315/CVE-2022-42046
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-06-05'
 Detection: []
+Id: ddf661c0-7dfc-4c26-89c5-00cd6a81a139
 KnownVulnerableSamples:
-- Filename: wfshbr64.sys
-  MD5: b76aee508f68b5b6dccd6e1f66f4cf8b
-  SHA1: 0167259abd9231c29bec32e6106ca93a13999f90
-  SHA256: b8807e365be2813b7eccd2e4c49afb0d1e131086715638b7a6307cd7d7e9556c
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: f143857a68801478dbe4de842a9d4f6a
     SHA1: 47063aa084976104d928e2b0f4f4b800adb22c89
     SHA256: b0399dd3c395f84cbd6ac2e3e8ca8ee344a0f699b17db0624f936ae4bb4b7953
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2022-11-28 03:10:24'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: wfshbr64.sys
+  ImportedFunctions:
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IofCompleteRequest
+  - PsGetCurrentProcessId
+  - IoGetCurrentProcess
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  Imports:
+  - ntoskrnl.exe
+  InternalName: ''
+  MD5: b76aee508f68b5b6dccd6e1f66f4cf8b
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   RichPEHeaderHash:
     MD5: 1cae7fcf3f9627d90b3aa959faa5495d
     SHA1: a6fdd5b1bebd1c134a1ff6e613d9694d2ad2f81d
     SHA256: 46e9b36f8db362f22fa5d1fcd13371e9cd34ee5302ea3a7be320d7cf07815bbd
+  SHA1: 0167259abd9231c29bec32e6106ca93a13999f90
+  SHA256: b8807e365be2813b7eccd2e4c49afb0d1e131086715638b7a6307cd7d7e9556c
   Sections:
     .text:
       Entropy: 6.360436024553698
@@ -68,22 +79,7 @@ KnownVulnerableSamples:
     INIT:
       Entropy: 4.1005955318674525
       Virtual Size: '0x12e'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-11-28 03:10:24'
-  InternalName: ''
-  Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - IoDeleteDevice
-  - IoDeleteSymbolicLink
-  - RtlInitUnicodeString
-  - IofCompleteRequest
-  - PsGetCurrentProcessId
-  - IoGetCurrentProcess
-  - IoCreateSymbolicLink
-  - IoCreateDevice
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -119,28 +115,43 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
-- Filename: wfshbr64.sys
-  MD5: c9d4214c850e0cedf033dc8f0cd3aace
-  SHA1: b2f5d3318aab69e6e0ca8da4a4733849e3f1cee2
-  SHA256: 89698cad598a56f9e45efffd15d1841e494a2409cc12279150a03842cd6bb7f3
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 82a8528c1c8391d38cbd90ba8823f833
     SHA1: 0122f7a57784f2ac460d175687450d8940cace6e
     SHA256: d16a59cd7c52d1d32bb43670cdca739aadb19ba15996bac62071845e1bfbdb95
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2022-06-30 23:25:32'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: wfshbr64.sys
+  ImportedFunctions:
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - IofCompleteRequest
+  - PsGetCurrentProcessId
+  - IoGetCurrentProcess
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  Imports:
+  - ntoskrnl.exe
+  InternalName: ''
+  MD5: c9d4214c850e0cedf033dc8f0cd3aace
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   RichPEHeaderHash:
     MD5: 1cae7fcf3f9627d90b3aa959faa5495d
     SHA1: a6fdd5b1bebd1c134a1ff6e613d9694d2ad2f81d
     SHA256: 46e9b36f8db362f22fa5d1fcd13371e9cd34ee5302ea3a7be320d7cf07815bbd
+  SHA1: b2f5d3318aab69e6e0ca8da4a4733849e3f1cee2
+  SHA256: 89698cad598a56f9e45efffd15d1841e494a2409cc12279150a03842cd6bb7f3
   Sections:
     .text:
       Entropy: 6.375146124739003
@@ -160,22 +171,7 @@ KnownVulnerableSamples:
     INIT:
       Entropy: 4.1005955318674525
       Virtual Size: '0x12e'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-06-30 23:25:32'
-  InternalName: ''
-  Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - IoDeleteDevice
-  - IoDeleteSymbolicLink
-  - RtlInitUnicodeString
-  - IofCompleteRequest
-  - PsGetCurrentProcessId
-  - IoGetCurrentProcess
-  - IoCreateSymbolicLink
-  - IoCreateDevice
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -211,6 +207,10 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+MitreID: T1068
+Resources:
+- https://github.com/kkent030315/CVE-2022-42046
 Tags:
 - wfshbr64.sys
 - wfshbr32.sys
+Verified: 'TRUE'

@@ -1,22 +1,16 @@
-Id: 4d365dd0-34c3-492e-a2bd-c16266796ae5
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create ALSysIO64.sys binPath=C:\windows\temp\ALSysIO64.sys type=kernel
     && sc.exe start ALSysIO64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/7196187fb1ef8d108b380d37b2af8efdeb3ca1f6eefd37b5dc114c609147216d.yara
@@ -32,34 +26,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 4d365dd0-34c3-492e-a2bd-c16266796ae5
 KnownVulnerableSamples:
-- Filename: ALSysIO64.sys
-  MD5: 13dda15ef67eb265869fc371c72d6ef0
-  SHA1: 2f991435a6f58e25c103a657d24ed892b99690b8
-  SHA256: 7196187fb1ef8d108b380d37b2af8efdeb3ca1f6eefd37b5dc114c609147216d
-  Signature:
-  - Artur Liberman
-  - GlobalSign CodeSigning CA - G2
-  - GlobalSign Root CA - R1
-  Date: ''
-  Publisher: Artur Liberman
-  Company: Arthur Liberman
-  Description: ALSysIO
-  Product: ALSysIO
-  ProductVersion: 2.0.8.0
-  FileVersion: 2.0.8.0
-  MachineType: AMD64
-  OriginalFilename: ALSysIO.sys
-  Authentihash:
+- Authentihash:
     MD5: 86be5dbedcfcd517b9b602436cd985eb
     SHA1: 7a9981f1bca18e2f624fe806c753a14dfd970c4e
     SHA256: ca829178d01990c8d1d6a681dee074a53f0dd873fd8eef6f6161c682449ec8c5
-  InternalName: ALSysIO.sys
+  Company: Arthur Liberman
   Copyright: Copyright (C) 2003-2009 Arthur Liberman
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2013-03-05 14:50:34'
+  Date: ''
+  Description: ALSysIO
   ExportedFunctions: ''
+  FileVersion: 2.0.8.0
+  Filename: ALSysIO64.sys
   ImportedFunctions:
   - IoDeleteDevice
   - ZwClose
@@ -88,6 +68,46 @@ KnownVulnerableSamples:
   - IoDeleteSymbolicLink
   - RtlUnwindEx
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ALSysIO.sys
+  MD5: 13dda15ef67eb265869fc371c72d6ef0
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ALSysIO.sys
+  Product: ALSysIO
+  ProductVersion: 2.0.8.0
+  Publisher: Artur Liberman
+  RichPEHeaderHash:
+    MD5: fa032a9e33f5f3a4125cfa9c178850f9
+    SHA1: 2956abd1741d40b754a0c26100d60415591fd887
+    SHA256: 0d234a1913ceeac6a2072152698734f7ae25cadb077db00d1a78b5bf376bac77
+  SHA1: 2f991435a6f58e25c103a657d24ed892b99690b8
+  SHA256: 7196187fb1ef8d108b380d37b2af8efdeb3ca1f6eefd37b5dc114c609147216d
+  Sections:
+    .text:
+      Entropy: 6.095274875783498
+      Virtual Size: '0x3389'
+    .rdata:
+      Entropy: 4.296371217977882
+      Virtual Size: '0x554'
+    .data:
+      Entropy: 0.5524918135800905
+      Virtual Size: '0x184'
+    .pdata:
+      Entropy: 4.0236239083842475
+      Virtual Size: '0x24c'
+    INIT:
+      Entropy: 5.135904026607732
+      Virtual Size: '0x3f0'
+    .rsrc:
+      Entropy: 3.2958125541040038
+      Virtual Size: '0x388'
+  Signature:
+  - Artur Liberman
+  - GlobalSign CodeSigning CA - G2
+  - GlobalSign Root CA - R1
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -156,58 +176,18 @@ KnownVulnerableSamples:
     - SerialNumber: 112124a45abbf7c551deb213b28633c3dcad
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
-  RichPEHeaderHash:
-    MD5: fa032a9e33f5f3a4125cfa9c178850f9
-    SHA1: 2956abd1741d40b754a0c26100d60415591fd887
-    SHA256: 0d234a1913ceeac6a2072152698734f7ae25cadb077db00d1a78b5bf376bac77
-  Sections:
-    .text:
-      Entropy: 6.095274875783498
-      Virtual Size: '0x3389'
-    .rdata:
-      Entropy: 4.296371217977882
-      Virtual Size: '0x554'
-    .data:
-      Entropy: 0.5524918135800905
-      Virtual Size: '0x184'
-    .pdata:
-      Entropy: 4.0236239083842475
-      Virtual Size: '0x24c'
-    INIT:
-      Entropy: 5.135904026607732
-      Virtual Size: '0x3f0'
-    .rsrc:
-      Entropy: 3.2958125541040038
-      Virtual Size: '0x388'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-03-05 14:50:34'
-- Filename: ALSysIO64.sys
-  MD5: ba5f0f6347780c2ed911bbf888e75bef
-  SHA1: f02af84393e9627ba808d4159841854a6601cf80
-  SHA256: 7f375639a0df7fe51e5518cf87c3f513c55bc117db47d28da8c615642eb18bfa
-  Signature:
-  - Artur Liberman
-  - GlobalSign CodeSigning CA - G2
-  - GlobalSign Root CA - R1
-  Date: ''
-  Publisher: Artur Liberman
-  Company: Arthur Liberman
-  Description: ALSysIO
-  Product: ALSysIO
-  ProductVersion: 2.0.9.0
-  FileVersion: 2.0.9.0
-  MachineType: AMD64
-  OriginalFilename: ALSysIO.sys
-  Authentihash:
+- Authentihash:
     MD5: 966e1c16e1aa07044b733c5589f40fd7
     SHA1: 7027b399daf84a7c24dd010c2806bf6048a230bd
     SHA256: ac22a7cce3795e58c974056a86a06444e831d52185f9f37db88c65e14cd5bb75
-  InternalName: ALSysIO.sys
+  Company: Arthur Liberman
   Copyright: Copyright (C) 2003-2009 Arthur Liberman
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2016-02-19 15:24:23'
+  Date: ''
+  Description: ALSysIO
   ExportedFunctions: ''
+  FileVersion: 2.0.9.0
+  Filename: ALSysIO64.sys
   ImportedFunctions:
   - IoDeleteDevice
   - ZwClose
@@ -236,6 +216,46 @@ KnownVulnerableSamples:
   - IoDeleteSymbolicLink
   - RtlUnwindEx
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ALSysIO.sys
+  MD5: ba5f0f6347780c2ed911bbf888e75bef
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ALSysIO.sys
+  Product: ALSysIO
+  ProductVersion: 2.0.9.0
+  Publisher: Artur Liberman
+  RichPEHeaderHash:
+    MD5: fa032a9e33f5f3a4125cfa9c178850f9
+    SHA1: 2956abd1741d40b754a0c26100d60415591fd887
+    SHA256: 0d234a1913ceeac6a2072152698734f7ae25cadb077db00d1a78b5bf376bac77
+  SHA1: f02af84393e9627ba808d4159841854a6601cf80
+  SHA256: 7f375639a0df7fe51e5518cf87c3f513c55bc117db47d28da8c615642eb18bfa
+  Sections:
+    .text:
+      Entropy: 6.118126498568242
+      Virtual Size: '0x2f95'
+    .rdata:
+      Entropy: 4.334329395963305
+      Virtual Size: '0x4bc'
+    .data:
+      Entropy: 0.5401996588023142
+      Virtual Size: '0x19c'
+    .pdata:
+      Entropy: 4.014945953829912
+      Virtual Size: '0x1d4'
+    INIT:
+      Entropy: 5.0865478764498455
+      Virtual Size: '0x3f0'
+    .rsrc:
+      Entropy: 3.2944352172701143
+      Virtual Size: '0x388'
+  Signature:
+  - Artur Liberman
+  - GlobalSign CodeSigning CA - G2
+  - GlobalSign Root CA - R1
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -305,55 +325,18 @@ KnownVulnerableSamples:
     - SerialNumber: 112124a45abbf7c551deb213b28633c3dcad
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
-  RichPEHeaderHash:
-    MD5: fa032a9e33f5f3a4125cfa9c178850f9
-    SHA1: 2956abd1741d40b754a0c26100d60415591fd887
-    SHA256: 0d234a1913ceeac6a2072152698734f7ae25cadb077db00d1a78b5bf376bac77
-  Sections:
-    .text:
-      Entropy: 6.118126498568242
-      Virtual Size: '0x2f95'
-    .rdata:
-      Entropy: 4.334329395963305
-      Virtual Size: '0x4bc'
-    .data:
-      Entropy: 0.5401996588023142
-      Virtual Size: '0x19c'
-    .pdata:
-      Entropy: 4.014945953829912
-      Virtual Size: '0x1d4'
-    INIT:
-      Entropy: 5.0865478764498455
-      Virtual Size: '0x3f0'
-    .rsrc:
-      Entropy: 3.2944352172701143
-      Virtual Size: '0x388'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-02-19 15:24:23'
-- Filename: ALSysIO64.sys
-  MD5: afc2448b4080f695e76e059a96958cab
-  SHA1: 256d285347acd715ed8920e41e5ec928ae9201a8
-  SHA256: 119c48b79735fda0ecd973d77d9bdc6b329960caed09b38ab454236ca039d280
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: Arthur Liberman
-  Description: ALSysIO64
-  Product: ALSysIO64
-  ProductVersion: 2.0.11.0
-  FileVersion: 2.0.11.0
-  MachineType: AMD64
-  OriginalFilename: ALSysIO64.sys
-  Authentihash:
+- Authentihash:
     MD5: 7b9763c297936ce055a04790362cc75f
     SHA1: 530dd2863a09dc57801d62551c48eb9e48476fe8
     SHA256: 1c55b6620216c195ce24ef21e6ab7e181146fccf17c06606c4cd419fe3e45bd7
-  InternalName: ALSysIO64.sys
+  Company: Arthur Liberman
   Copyright: Copyright (C) 2003-2019 Arthur Liberman
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2019-02-01 10:48:41'
+  Date: ''
+  Description: ALSysIO64
   ExportedFunctions: ''
+  FileVersion: 2.0.11.0
+  Filename: ALSysIO64.sys
   ImportedFunctions:
   - IoDeleteDevice
   - ZwClose
@@ -387,6 +370,49 @@ KnownVulnerableSamples:
   - DbgPrint
   - IoDeleteSymbolicLink
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ALSysIO64.sys
+  MD5: afc2448b4080f695e76e059a96958cab
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ALSysIO64.sys
+  Product: ALSysIO64
+  ProductVersion: 2.0.11.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: b5b5bc6c59d1c8f098299b0c74a28bcd
+    SHA1: c8f81a0224ea38ce7ac7d94c4259693c4fe5a88c
+    SHA256: e9a21989acb90615e4ceece63e354a938056341eef27c69a1f174e2a11bc72cd
+  SHA1: 256d285347acd715ed8920e41e5ec928ae9201a8
+  SHA256: 119c48b79735fda0ecd973d77d9bdc6b329960caed09b38ab454236ca039d280
+  Sections:
+    .text:
+      Entropy: 6.094646886255092
+      Virtual Size: '0x3025'
+    .rdata:
+      Entropy: 4.4005847545275065
+      Virtual Size: '0x554'
+    .data:
+      Entropy: 0.5086871497841102
+      Virtual Size: '0x1ac'
+    .pdata:
+      Entropy: 4.077679652832968
+      Virtual Size: '0x1e0'
+    PAGE:
+      Entropy: 5.694732552989121
+      Virtual Size: '0x178'
+    INIT:
+      Entropy: 5.16258604036066
+      Virtual Size: '0x49c'
+    .rsrc:
+      Entropy: 3.3268549437522807
+      Virtual Size: '0x3a0'
+    .reloc:
+      Entropy: 1.584962500721156
+      Virtual Size: '0xc'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -459,36 +485,10 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: b5b5bc6c59d1c8f098299b0c74a28bcd
-    SHA1: c8f81a0224ea38ce7ac7d94c4259693c4fe5a88c
-    SHA256: e9a21989acb90615e4ceece63e354a938056341eef27c69a1f174e2a11bc72cd
-  Sections:
-    .text:
-      Entropy: 6.094646886255092
-      Virtual Size: '0x3025'
-    .rdata:
-      Entropy: 4.4005847545275065
-      Virtual Size: '0x554'
-    .data:
-      Entropy: 0.5086871497841102
-      Virtual Size: '0x1ac'
-    .pdata:
-      Entropy: 4.077679652832968
-      Virtual Size: '0x1e0'
-    PAGE:
-      Entropy: 5.694732552989121
-      Virtual Size: '0x178'
-    INIT:
-      Entropy: 5.16258604036066
-      Virtual Size: '0x49c'
-    .rsrc:
-      Entropy: 3.3268549437522807
-      Virtual Size: '0x3a0'
-    .reloc:
-      Entropy: 1.584962500721156
-      Virtual Size: '0xc'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-02-01 10:48:41'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - ALSysIO64.sys
+Verified: 'TRUE'

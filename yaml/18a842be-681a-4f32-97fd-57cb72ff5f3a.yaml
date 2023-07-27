@@ -1,9 +1,8 @@
-Id: 18a842be-681a-4f32-97fd-57cb72ff5f3a
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-07-12'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create NlsLexicons0024UvN.sys binPath=C:\windows\temp\NlsLexicons0024UvN.sys
     type=kernel && sc.exe start NlsLexicons0024UvN.sys
@@ -18,69 +17,25 @@ Commands:
     \ knowledge of the Windows operating system.\nThis threat appears to target native\
     \ Chinese speakers, as it searches for Chinese language browsers to hijack. Additionally,\
     \ the authors are likely Chinese speakers themselves."
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://blog.talosintelligence.com/undocumented-reddriver/
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-12'
 Detection: []
+Id: 18a842be-681a-4f32-97fd-57cb72ff5f3a
 KnownVulnerableSamples:
-- Filename: ''
-  MD5: bd91787b5dcb2189b856804e85dfa1d9
-  SHA1: 675cc00de7c1ef508ccd0c91770c82342c0ad4ab
-  SHA256: 7a84703552ae032a0d1699a081e422ed6c958bbe56d5b41839c8bfa6395bee1d
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 3dcdfa017206720c83d41ef7ed63fac6
     SHA1: beae75723cef4aa97e6d0021838405802ead468a
     SHA256: 6ce1073705194870175a8b9c9ebbbb7ad54df81849b111588ea8aeef910da987
-  RichPEHeaderHash:
-    MD5: ceb1860de56dcebdf714302cb649ff71
-    SHA1: a03c600569d3c813667c3520788e423f1c5eed0f
-    SHA256: 39e0e1bb3f0a24fd42b1e55d492f5b87a926d6689b172c3475e1898f737be750
-  Sections:
-    .text:
-      Entropy: 6.259941019226518
-      Virtual Size: '0x6bb4'
-    .rdata:
-      Entropy: 4.4971641369869415
-      Virtual Size: '0xd38'
-    .data:
-      Entropy: 5.434886649336555
-      Virtual Size: '0x2f28'
-    .pdata:
-      Entropy: 4.420943866714438
-      Virtual Size: '0x57c'
-    .gfids:
-      Entropy: 0.8112781244591328
-      Virtual Size: '0x4'
-    INIT:
-      Entropy: 5.1734289362463395
-      Virtual Size: '0xad4'
-    .reloc:
-      Entropy: 3.084183719779188
-      Virtual Size: '0x28'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-04-28 00:10:45'
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - fwpkclnt.sys
-  - ntoskrnl.exe
-  - WDFLDR.SYS
+  CreationTimestamp: '2023-04-28 00:10:45'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
   ImportedFunctions:
   - FwpsReleaseClassifyHandle0
   - FwpsAcquireClassifyHandle0
@@ -162,6 +117,47 @@ KnownVulnerableSamples:
   - WdfVersionBindClass
   - WdfVersionUnbindClass
   - WdfVersionUnbind
+  Imports:
+  - fwpkclnt.sys
+  - ntoskrnl.exe
+  - WDFLDR.SYS
+  InternalName: ''
+  MD5: bd91787b5dcb2189b856804e85dfa1d9
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: ceb1860de56dcebdf714302cb649ff71
+    SHA1: a03c600569d3c813667c3520788e423f1c5eed0f
+    SHA256: 39e0e1bb3f0a24fd42b1e55d492f5b87a926d6689b172c3475e1898f737be750
+  SHA1: 675cc00de7c1ef508ccd0c91770c82342c0ad4ab
+  SHA256: 7a84703552ae032a0d1699a081e422ed6c958bbe56d5b41839c8bfa6395bee1d
+  Sections:
+    .text:
+      Entropy: 6.259941019226518
+      Virtual Size: '0x6bb4'
+    .rdata:
+      Entropy: 4.4971641369869415
+      Virtual Size: '0xd38'
+    .data:
+      Entropy: 5.434886649336555
+      Virtual Size: '0x2f28'
+    .pdata:
+      Entropy: 4.420943866714438
+      Virtual Size: '0x57c'
+    .gfids:
+      Entropy: 0.8112781244591328
+      Virtual Size: '0x4'
+    INIT:
+      Entropy: 5.1734289362463395
+      Virtual Size: '0xad4'
+    .reloc:
+      Entropy: 3.084183719779188
+      Virtual Size: '0x28'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -212,5 +208,9 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+MitreID: T1068
+Resources:
+- https://blog.talosintelligence.com/undocumented-reddriver/
 Tags:
 - NlsLexicons0024UvN.sys
+Verified: 'TRUE'

@@ -1,22 +1,16 @@
-Id: d819bee2-3bff-481f-a301-acc3d1f5fe58
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create Se64a.sys binPath=C:\windows\temp\Se64a.sys type=kernel &&
     sc.exe start Se64a.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6cb51ae871fbd5d07c5aad6ff8eea43d34063089528603ca9ceb8b4f52f68ddc.yara
@@ -28,35 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: d819bee2-3bff-481f-a301-acc3d1f5fe58
 KnownVulnerableSamples:
-- Filename: Se64a.sys
-  MD5: 0a6a1c9a7f80a2a5dcced5c4c0473765
-  SHA1: 33285b2e97a0aeb317166cce91f6733cf9c1ad53
-  SHA256: 6cb51ae871fbd5d07c5aad6ff8eea43d34063089528603ca9ceb8b4f52f68ddc
-  Signature:
-  - EnTech Taiwan
-  - GlobalSign ObjectSign CA
-  - GlobalSign Primary Object Publishing CA
-  - GlobalSign Root CA - R1
-  Date: ''
-  Publisher: ''
-  Company: EnTech Taiwan
-  Description: EnTech softEngine x64 kernel-mode driver
-  Product: softEngine-x64
-  ProductVersion: '2.1'
-  FileVersion: '1.1'
-  MachineType: AMD64
-  OriginalFilename: se64a.sys
-  Authentihash:
+- Authentihash:
     MD5: 46f46abcb9e3ba747c2a2904babe38c0
     SHA1: a4e8e3268569acc0a0b3f6eada713c0fa8825463
     SHA256: 04cfb452e1ac73fb2f3b8a80d9f27e19a344a6bf0f74c7f9cae3ae82d3770195
-  InternalName: se64a.sys
+  Company: EnTech Taiwan
   Copyright: Copyright (c) EnTech Taiwan, 2004-2006.
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2007-05-02 23:50:31'
+  Date: ''
+  Description: EnTech softEngine x64 kernel-mode driver
   ExportedFunctions: ''
+  FileVersion: '1.1'
+  Filename: Se64a.sys
   ImportedFunctions:
   - ZwOpenSection
   - RtlInitUnicodeString
@@ -75,6 +54,47 @@ KnownVulnerableSamples:
   - ZwClose
   - HalTranslateBusAddress
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: se64a.sys
+  MD5: 0a6a1c9a7f80a2a5dcced5c4c0473765
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: se64a.sys
+  Product: softEngine-x64
+  ProductVersion: '2.1'
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: d8769f69d7da8cd49f23e0c53b4f6691
+    SHA1: a365bf7da477b9e6968d87efe1d4102ae5e7824d
+    SHA256: b26a02d19f2fa49a4edd90db93906a66715b28742990f193c8e206c2e2e83809
+  SHA1: 33285b2e97a0aeb317166cce91f6733cf9c1ad53
+  SHA256: 6cb51ae871fbd5d07c5aad6ff8eea43d34063089528603ca9ceb8b4f52f68ddc
+  Sections:
+    .text:
+      Entropy: 5.93130241752649
+      Virtual Size: '0x6c6'
+    .rdata:
+      Entropy: 4.190891588241376
+      Virtual Size: '0x15c'
+    .data:
+      Entropy: 1.5223397931278442
+      Virtual Size: '0x80'
+    .pdata:
+      Entropy: 2.754900337629122
+      Virtual Size: '0x3c'
+    INIT:
+      Entropy: 4.515964863332142
+      Virtual Size: '0x252'
+    .rsrc:
+      Entropy: 3.2868225931904593
+      Virtual Size: '0x370'
+  Signature:
+  - EnTech Taiwan
+  - GlobalSign ObjectSign CA
+  - GlobalSign Primary Object Publishing CA
+  - GlobalSign Root CA - R1
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -158,30 +178,10 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: d8769f69d7da8cd49f23e0c53b4f6691
-    SHA1: a365bf7da477b9e6968d87efe1d4102ae5e7824d
-    SHA256: b26a02d19f2fa49a4edd90db93906a66715b28742990f193c8e206c2e2e83809
-  Sections:
-    .text:
-      Entropy: 5.93130241752649
-      Virtual Size: '0x6c6'
-    .rdata:
-      Entropy: 4.190891588241376
-      Virtual Size: '0x15c'
-    .data:
-      Entropy: 1.5223397931278442
-      Virtual Size: '0x80'
-    .pdata:
-      Entropy: 2.754900337629122
-      Virtual Size: '0x3c'
-    INIT:
-      Entropy: 4.515964863332142
-      Virtual Size: '0x252'
-    .rsrc:
-      Entropy: 3.2868225931904593
-      Virtual Size: '0x370'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-05-02 23:50:31'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - Se64a.sys
+Verified: 'TRUE'

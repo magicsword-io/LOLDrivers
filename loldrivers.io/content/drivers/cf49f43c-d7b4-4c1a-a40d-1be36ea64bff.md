@@ -114,6 +114,8 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 | Product           | SysDrv3S |
 | OriginalFilename  | SysDrv3S.sys |
 
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/31eca8c0b32135850d5a50aee11fec87.bin" "Download" >}} 
+
 #### Certificates
 
 {{< details "Expand" >}}
@@ -318,14 +320,7 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cf49f43c-d7b4-4c1a-a40d-1be36ea64bff.yaml)
 
-*last_updated:* 2023-07-12
-
-
-
-
-
-
-
+*last_updated:* 2023-07-27
 
 {{< /column >}}
 {{< /block >}}

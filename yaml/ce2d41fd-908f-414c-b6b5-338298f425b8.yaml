@@ -1,51 +1,31 @@
-Id: ce2d41fd-908f-414c-b6b5-338298f425b8
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create DirectIo.sys binPath=C:\windows\temp\DirectIo.sys type=kernel
     && sc.exe start DirectIo.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: ce2d41fd-908f-414c-b6b5-338298f425b8
 KnownVulnerableSamples:
-- Filename: DirectIo.sys
-  MD5: a785b3bc4309d2eb111911c1b55e793f
-  SHA1: 19f3343bfad0ef3595f41d60272d21746c92ffca
-  SHA256: 4422851a0a102f654e95d3b79c357ae3af1b096d7d1576663c027cfbc04abaf9
-  Signature:
-  - PassMark Software Pty Ltd
-  - VeriSign Class 3 Code Signing 2009-2 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: I386
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: c6fbe703bcefd3a5a191dce9cd2bf71d
     SHA1: 7d24a5e3a9bb0eba2a4cf19f516384c7a0c95eb7
     SHA256: 129fa1795cffca9973f59df59f880a9f2bdb3aa9873363f8e2f598ccc6e32542
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2012-02-15 17:39:35'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: DirectIo.sys
   ImportedFunctions:
   - ZwMapViewOfSection
   - ObReferenceObjectByHandle
@@ -99,6 +79,46 @@ KnownVulnerableSamples:
   - WRITE_PORT_UCHAR
   - KeGetCurrentIrql
   - READ_PORT_ULONG
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: a785b3bc4309d2eb111911c1b55e793f
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: bdaae5ccba049985b33c943d9a3ef28e
+    SHA1: 0061b9039804cc086dbae70e788e91b9a85c5128
+    SHA256: c46f0e8863984c8b11a0ae9872cc81e67e15608f50035ce728700fce24b59787
+  SHA1: 19f3343bfad0ef3595f41d60272d21746c92ffca
+  SHA256: 4422851a0a102f654e95d3b79c357ae3af1b096d7d1576663c027cfbc04abaf9
+  Sections:
+    .text:
+      Entropy: 6.043671775499248
+      Virtual Size: '0x2537'
+    .rdata:
+      Entropy: 4.176113186134154
+      Virtual Size: '0x144'
+    .data:
+      Entropy: 3.625
+      Virtual Size: '0x20'
+    PAGE:
+      Entropy: 5.630531458844188
+      Virtual Size: '0xcd'
+    INIT:
+      Entropy: 5.468877748140006
+      Virtual Size: '0x5ba'
+    .reloc:
+      Entropy: 5.422595746439076
+      Virtual Size: '0x258'
+  Signature:
+  - PassMark Software Pty Ltd
+  - VeriSign Class 3 Code Signing 2009-2 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -173,30 +193,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: bdaae5ccba049985b33c943d9a3ef28e
-    SHA1: 0061b9039804cc086dbae70e788e91b9a85c5128
-    SHA256: c46f0e8863984c8b11a0ae9872cc81e67e15608f50035ce728700fce24b59787
-  Sections:
-    .text:
-      Entropy: 6.043671775499248
-      Virtual Size: '0x2537'
-    .rdata:
-      Entropy: 4.176113186134154
-      Virtual Size: '0x144'
-    .data:
-      Entropy: 3.625
-      Virtual Size: '0x20'
-    PAGE:
-      Entropy: 5.630531458844188
-      Virtual Size: '0xcd'
-    INIT:
-      Entropy: 5.468877748140006
-      Virtual Size: '0x5ba'
-    .reloc:
-      Entropy: 5.422595746439076
-      Virtual Size: '0x258'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-02-15 17:39:35'
+MitreID: T1068
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - DirectIo.sys
+Verified: 'FALSE'

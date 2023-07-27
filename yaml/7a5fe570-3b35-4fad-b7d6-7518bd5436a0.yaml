@@ -1,53 +1,31 @@
-Id: 7a5fe570-3b35-4fad-b7d6-7518bd5436a0
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-03-02'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create NodeDriver.sys binPath=C:\windows\temp\NodeDriver.sys type=kernel
     && sc.exe start NodeDriver.sys
   Description: Driver categorized as POORTRY by Mandiant.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-- ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-03-02'
 Detection: []
+Id: 7a5fe570-3b35-4fad-b7d6-7518bd5436a0
 KnownVulnerableSamples:
-- Filename: NodeDriver.sys
-  MD5: ee6b1a79cb6641aa44c762ee90786fe0
-  SHA1: 3ef30c95e40a854cc4ded94fc503d0c3dc3e620e
-  SHA256: 05b146a48a69dd62a02759487e769bd30d39f16374bc76c86453b4ae59e7ffa4
-  Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  - Microsoft Windows Third Party Component CA 2014
-  - Microsoft Root Certificate Authority 2010
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: cb01e86f3c5a26629d53856c5e4990ec
     SHA1: fbbb429de5458a274b4a4ab44ed6785139f4a7e4
     SHA256: 43374fd68dc06c8491b16d177156444ee44f497bbceafd0165f40ba48bf6802f
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - NETIO.SYS
-  - ntoskrnl.exe
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2022-08-20 09:19:01'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: NodeDriver.sys
   ImportedFunctions:
   - WskCaptureProviderNPI
   - ExAllocatePoolWithTag
@@ -64,6 +42,57 @@ KnownVulnerableSamples:
   - KeRevertToUserAffinityThread
   - DbgPrint
   - KeQueryPerformanceCounter
+  Imports:
+  - NETIO.SYS
+  - ntoskrnl.exe
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: ee6b1a79cb6641aa44c762ee90786fe0
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
+    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
+    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
+  SHA1: 3ef30c95e40a854cc4ded94fc503d0c3dc3e620e
+  SHA256: 05b146a48a69dd62a02759487e769bd30d39f16374bc76c86453b4ae59e7ffa4
+  Sections:
+    .text:
+      Entropy: 0.0
+      Virtual Size: '0x1ffb'
+    .rdata:
+      Entropy: 0.0
+      Virtual Size: '0x96c'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0xdc'
+    .pdata:
+      Entropy: 0.0
+      Virtual Size: '0x210'
+    INIT:
+      Entropy: 0.0
+      Virtual Size: '0x6e4'
+    .vmp0:
+      Entropy: 0.0
+      Virtual Size: '0x14a8f5'
+    .vmp1:
+      Entropy: 2.75
+      Virtual Size: '0x8'
+    .vmp2:
+      Entropy: 7.68378408308375
+      Virtual Size: '0x28e558'
+    .reloc:
+      Entropy: 3.782851919585966
+      Virtual Size: '0xe8'
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+  - Microsoft Root Certificate Authority 2010
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -99,39 +128,10 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
-  RichPEHeaderHash:
-    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
-    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
-    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
-  Sections:
-    .text:
-      Entropy: 0.0
-      Virtual Size: '0x1ffb'
-    .rdata:
-      Entropy: 0.0
-      Virtual Size: '0x96c'
-    .data:
-      Entropy: 0.0
-      Virtual Size: '0xdc'
-    .pdata:
-      Entropy: 0.0
-      Virtual Size: '0x210'
-    INIT:
-      Entropy: 0.0
-      Virtual Size: '0x6e4'
-    .vmp0:
-      Entropy: 0.0
-      Virtual Size: '0x14a8f5'
-    .vmp1:
-      Entropy: 2.75
-      Virtual Size: '0x8'
-    .vmp2:
-      Entropy: 7.68378408308375
-      Virtual Size: '0x28e558'
-    .reloc:
-      Entropy: 3.782851919585966
-      Virtual Size: '0xe8'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-08-20 09:19:01'
+MitreID: T1068
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+- ''
 Tags:
 - NodeDriver.sys
+Verified: 'TRUE'

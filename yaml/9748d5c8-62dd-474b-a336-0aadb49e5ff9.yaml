@@ -1,51 +1,31 @@
-Id: 9748d5c8-62dd-474b-a336-0aadb49e5ff9
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-02-28'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create daxin_blank3.sys binPath=C:\windows\temp\daxin_blank3.sys     type=kernel
     && sc.exe start daxin_blank3.sys
   Description: Driver used in the Daxin malware campaign.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
-- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
-- ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-02-28'
 Detection: []
+Id: 9748d5c8-62dd-474b-a336-0aadb49e5ff9
 KnownVulnerableSamples:
-- Filename: daxin_blank3.sys
-  MD5: bd5b0514f3b40f139d8079138d01b5f6
-  SHA1: 73bac306292b4e9107147db94d0d836fdb071e33
-  SHA256: 7a7e8df7173387aec593e4fe2b45520ea3156c5f810d2bb1b2784efd1c922376
-  Signature: Unsigned
-  Date: 12:54 AM 11/18/2009
-  Publisher: n/a
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: I386
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 800a604e6039d6dc93d68d116c38b640
     SHA1: 75670f26e2df371741e8832012e06fdcd179b64c
     SHA256: afb9e6b70f707149e7243e41ffafbdda463da9a890c56091c454df60608efa0f
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - NTOSKRNL.EXE
-  - HAL.DLL
-  - ntoskrnl.exe
-  - NDIS.SYS
+  CreationTimestamp: '2009-11-17 17:54:13'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: daxin_blank3.sys
   ImportedFunctions:
   - MmMapLockedPagesSpecifyCache
   - ZwClose
@@ -140,11 +120,25 @@ KnownVulnerableSamples:
   - NdisFreeBufferPool
   - NdisFreePacketPool
   - NdisFreeMemory
-  Signatures: {}
+  Imports:
+  - NTOSKRNL.EXE
+  - HAL.DLL
+  - ntoskrnl.exe
+  - NDIS.SYS
+  InternalName: ''
+  MD5: bd5b0514f3b40f139d8079138d01b5f6
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: n/a
   RichPEHeaderHash:
     MD5: 9857565d974281ef92bdf9265b2054e4
     SHA1: c85f13237ee6920b3ec2550afbae60d7cc4315c6
     SHA256: 9ebbf9b07f0b4454c9ff06e0ef41e51af3f1789ec72c54ca41f259a2d5b9f831
+  SHA1: 73bac306292b4e9107147db94d0d836fdb071e33
+  SHA256: 7a7e8df7173387aec593e4fe2b45520ea3156c5f810d2bb1b2784efd1c922376
   Sections:
     .text:
       Entropy: 6.006793186078718
@@ -161,7 +155,13 @@ KnownVulnerableSamples:
     .reloc:
       Entropy: 3.6320572578287265
       Virtual Size: '0xe20'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-11-17 17:54:13'
+  Signature: Unsigned
+  Signatures: {}
+MitreID: T1068
+Resources:
+- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+- ''
 Tags:
 - daxin_blank3.sys
+Verified: 'TRUE'

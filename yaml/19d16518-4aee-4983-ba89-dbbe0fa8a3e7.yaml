@@ -1,22 +1,16 @@
-Id: 19d16518-4aee-4983-ba89-dbbe0fa8a3e7
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create AsrRapidStartDrv.sys binPath=C:\windows\temp\AsrRapidStartDrv.sys     type=kernel
     && sc.exe start AsrRapidStartDrv.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/0aafa9f47acf69d46c9542985994ff5321f00842a28df2396d4a3076776a83cb.yara
@@ -28,34 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 19d16518-4aee-4983-ba89-dbbe0fa8a3e7
 KnownVulnerableSamples:
-- Filename: AsrRapidStartDrv.sys
-  MD5: 31469f1313871690e8dc2e8ee4799b22
-  SHA1: 89cd760e8cb19d29ee08c430fb17a5fd4455c741
-  SHA256: 0aafa9f47acf69d46c9542985994ff5321f00842a28df2396d4a3076776a83cb
-  Signature:
-  - ASROCK Incorporation
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: ASROCK Incorporation
-  Company: RW-Everything
-  Description: RW-Everything Read & Write Driver
-  Product: RW-Everything Read & Write Driver
-  ProductVersion: 1.00.00.0000
-  FileVersion: '1.00.00.0000 built by: WinDDK'
-  MachineType: AMD64
-  OriginalFilename: RwDrv.sys
-  Authentihash:
+- Authentihash:
     MD5: 98a9518fefaf056f5804b631e735ff73
     SHA1: 5ac05af283a3bda3b09ce8ad292ba5c689216b7a
     SHA256: 913ab7134ea3460e76db753cf68f336ada8f0b9c397be88c75f9567a8694f4a5
-  InternalName: RwDrv.sys
+  Company: RW-Everything
   Copyright: Copyright (C) 2008 RW-Everything
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2012-02-07 08:17:24'
+  Date: ''
+  Description: RW-Everything Read & Write Driver
   ExportedFunctions: ''
+  FileVersion: '1.00.00.0000 built by: WinDDK'
+  Filename: AsrRapidStartDrv.sys
   ImportedFunctions:
   - IoDeleteSymbolicLink
   - ExFreePoolWithTag
@@ -79,6 +59,46 @@ KnownVulnerableSamples:
   - KeBugCheckEx
   - ExAllocatePoolWithTag
   - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: RwDrv.sys
+  MD5: 31469f1313871690e8dc2e8ee4799b22
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: RwDrv.sys
+  Product: RW-Everything Read & Write Driver
+  ProductVersion: 1.00.00.0000
+  Publisher: ASROCK Incorporation
+  RichPEHeaderHash:
+    MD5: a84c01eca8a6ca8e5221dbca3000c16e
+    SHA1: ff0ae5ad07f99ad2ac40b53c5215335a5d84e926
+    SHA256: 961a144592952461a785ff1f4d4f55c4132016b9fbbce3d881edf6131038533b
+  SHA1: 89cd760e8cb19d29ee08c430fb17a5fd4455c741
+  SHA256: 0aafa9f47acf69d46c9542985994ff5321f00842a28df2396d4a3076776a83cb
+  Sections:
+    .text:
+      Entropy: 6.33792036132721
+      Virtual Size: '0x1a28'
+    .rdata:
+      Entropy: 4.569601662787029
+      Virtual Size: '0x24c'
+    .data:
+      Entropy: 0.46979092711892695
+      Virtual Size: '0x130'
+    .pdata:
+      Entropy: 3.6846124142888885
+      Virtual Size: '0xf0'
+    INIT:
+      Entropy: 5.36094471500958
+      Virtual Size: '0x4e8'
+    .rsrc:
+      Entropy: 3.3169950909252863
+      Virtual Size: '0x3c0'
+  Signature:
+  - ASROCK Incorporation
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -167,30 +187,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: a84c01eca8a6ca8e5221dbca3000c16e
-    SHA1: ff0ae5ad07f99ad2ac40b53c5215335a5d84e926
-    SHA256: 961a144592952461a785ff1f4d4f55c4132016b9fbbce3d881edf6131038533b
-  Sections:
-    .text:
-      Entropy: 6.33792036132721
-      Virtual Size: '0x1a28'
-    .rdata:
-      Entropy: 4.569601662787029
-      Virtual Size: '0x24c'
-    .data:
-      Entropy: 0.46979092711892695
-      Virtual Size: '0x130'
-    .pdata:
-      Entropy: 3.6846124142888885
-      Virtual Size: '0xf0'
-    INIT:
-      Entropy: 5.36094471500958
-      Virtual Size: '0x4e8'
-    .rsrc:
-      Entropy: 3.3169950909252863
-      Virtual Size: '0x3c0'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-02-07 08:17:24'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - AsrRapidStartDrv.sys
+Verified: 'TRUE'

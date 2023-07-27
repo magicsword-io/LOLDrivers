@@ -1,21 +1,16 @@
-Id: a285591e-ad3c-46a3-a648-c58589ff5efc
+Acknowledgement:
+  Handle: hfiref0x
+  Person: hfiref0x
 Author: Michael Haag
-Created: '2023-05-22'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create amsdk.sys binPath=C:\windows\temp\amsdk.sys type=kernel &&
     sc.exe start amsdk.sys
   Description: Vulnerable driver found in https://github.com/hfiref0x/KDU.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
-Acknowledgement:
-  Person: hfiref0x
-  Handle: hfiref0x
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-05-22'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6f55c148bb27c14408cf0f16f344abcd63539174ac855e510a42d78cfaec451c.yara
@@ -27,31 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: a285591e-ad3c-46a3-a648-c58589ff5efc
 KnownVulnerableSamples:
-- Filename: amsdk.sys
-  MD5: eb525d99a31eb4fff09814e83593a494
-  SHA1: 290d6376658cf0f8182de0fae40b503098fa09fd
-  SHA256: 6f55c148bb27c14408cf0f16f344abcd63539174ac855e510a42d78cfaec451c
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: Copyright 2018.
-  Description: Advanced Malware Protection
-  Product: Advanced Malware Protection
-  ProductVersion: 3.0.0.000
-  FileVersion: 3.0.0.000
-  MachineType: AMD64
-  OriginalFilename: ZAM.exe
-  Authentihash:
+- Authentihash:
     MD5: 89627ebd29f4ae929d7f40fd4dabead3
     SHA1: 084553447bdbc056bbe49bad8acfaf25eb83462a
     SHA256: 60571dbcaec96d9517e0d116d066e70ae747aa4396d7857b2eea0f4c1a5a70b4
-  InternalName: ''
+  Company: Copyright 2018.
   Copyright: Copyright 2018. All rights reserved.
-  Imports:
-  - FLTMGR.SYS
-  - ntoskrnl.exe
+  CreationTimestamp: '2019-04-23 03:04:57'
+  Date: ''
+  Description: Advanced Malware Protection
   ExportedFunctions: ''
+  FileVersion: 3.0.0.000
+  Filename: amsdk.sys
   ImportedFunctions:
   - FltRegisterFilter
   - FltUnregisterFilter
@@ -208,6 +192,52 @@ KnownVulnerableSamples:
   - RtlGetOwnerSecurityDescriptor
   - ZwCreateKey
   - RtlFreeUnicodeString
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  InternalName: ''
+  MD5: eb525d99a31eb4fff09814e83593a494
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ZAM.exe
+  Product: Advanced Malware Protection
+  ProductVersion: 3.0.0.000
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 538cd5afb8509a14342d4a050452744b
+    SHA1: af8e1d754d89a2c862fd68cee30add8efb16ac34
+    SHA256: f3c4c4d8cba6ebe5127ccbe7eec2a8cc847c56e45b87963b1cd731aee7399677
+  SHA1: 290d6376658cf0f8182de0fae40b503098fa09fd
+  SHA256: 6f55c148bb27c14408cf0f16f344abcd63539174ac855e510a42d78cfaec451c
+  Sections:
+    .text:
+      Entropy: 6.288792032582127
+      Virtual Size: '0x21e55'
+    .hook:
+      Entropy: 5.057670405083817
+      Virtual Size: '0x9bf'
+    .rdata:
+      Entropy: 5.308796601472368
+      Virtual Size: '0x4b48'
+    .data:
+      Entropy: 4.851242079025995
+      Virtual Size: '0x53f88'
+    .pdata:
+      Entropy: 5.286849909582269
+      Virtual Size: '0xa50'
+    PAGE:
+      Entropy: 6.2717360142736265
+      Virtual Size: '0x1a47'
+    INIT:
+      Entropy: 5.316023504958503
+      Virtual Size: '0x1384'
+    .rsrc:
+      Entropy: 3.2308389214733806
+      Virtual Size: '0x348'
+    .reloc:
+      Entropy: 1.4735474069876848
+      Virtual Size: '0x234'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -266,39 +296,9 @@ KnownVulnerableSamples:
     - SerialNumber: 1f7b0de3090ee13a436315a6
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
       Version: 1
-  RichPEHeaderHash:
-    MD5: 538cd5afb8509a14342d4a050452744b
-    SHA1: af8e1d754d89a2c862fd68cee30add8efb16ac34
-    SHA256: f3c4c4d8cba6ebe5127ccbe7eec2a8cc847c56e45b87963b1cd731aee7399677
-  Sections:
-    .text:
-      Entropy: 6.288792032582127
-      Virtual Size: '0x21e55'
-    .hook:
-      Entropy: 5.057670405083817
-      Virtual Size: '0x9bf'
-    .rdata:
-      Entropy: 5.308796601472368
-      Virtual Size: '0x4b48'
-    .data:
-      Entropy: 4.851242079025995
-      Virtual Size: '0x53f88'
-    .pdata:
-      Entropy: 5.286849909582269
-      Virtual Size: '0xa50'
-    PAGE:
-      Entropy: 6.2717360142736265
-      Virtual Size: '0x1a47'
-    INIT:
-      Entropy: 5.316023504958503
-      Virtual Size: '0x1384'
-    .rsrc:
-      Entropy: 3.2308389214733806
-      Virtual Size: '0x348'
-    .reloc:
-      Entropy: 1.4735474069876848
-      Virtual Size: '0x234'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-04-23 03:04:57'
+MitreID: T1068
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
 Tags:
 - amsdk.sys
+Verified: 'TRUE'

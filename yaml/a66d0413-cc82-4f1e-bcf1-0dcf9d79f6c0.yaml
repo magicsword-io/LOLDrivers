@@ -1,22 +1,16 @@
-Id: a66d0413-cc82-4f1e-bcf1-0dcf9d79f6c0
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create BS_HWMIO64_W10.sys binPath=C:\windows\temp\BS_HWMIO64_W10.sys     type=kernel
     && sc.exe start BS_HWMIO64_W10.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/1d0397c263d51e9fc95bcc8baf98d1a853e1c0401cd0e27c7bf5da3fba1c93a8.yara
@@ -28,34 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: a66d0413-cc82-4f1e-bcf1-0dcf9d79f6c0
 KnownVulnerableSamples:
-- Filename: BS_HWMIO64_W10.sys
-  MD5: d2588631d8aae2a3e54410eaf54f0679
-  SHA1: cb3de54667548a5c9abf5d8fa47db4097fcee9f1
-  SHA256: 1d0397c263d51e9fc95bcc8baf98d1a853e1c0401cd0e27c7bf5da3fba1c93a8
-  Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  - Microsoft Windows Third Party Component CA 2014
-  - Microsoft Root Certificate Authority 2010
-  Date: ''
-  Publisher: ''
-  Company: BIOSTAR Group
-  Description: I/O Interface driver file
-  Product: BIOSTAR I/O driver
-  ProductVersion: 10, 0, 1806, 2200
-  FileVersion: 10, 0, 1806, 2200
-  MachineType: AMD64
-  OriginalFilename: BS_HWMIO64_W10.sys
-  Authentihash:
+- Authentihash:
     MD5: 88704eaf268ad2d72eb099de209873c6
     SHA1: 2d8499e9b45d7ae198cab59c7435bc83cd4162a0
     SHA256: c3fa4872fd2c286904a0cf37a392ef89fb6ba2a84fc9e1b66c70e0cb5ae28efa
-  InternalName: I/O driver
+  Company: BIOSTAR Group
   Copyright: Copyright (c) 2018-2019 BIOSTAR Group
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2018-06-22 01:44:19'
+  Date: ''
+  Description: I/O Interface driver file
   ExportedFunctions: ''
+  FileVersion: 10, 0, 1806, 2200
+  Filename: BS_HWMIO64_W10.sys
   ImportedFunctions:
   - KeInitializeSemaphore
   - IoCreateSymbolicLink
@@ -84,6 +64,46 @@ KnownVulnerableSamples:
   - IoDeleteSymbolicLink
   - HalSetBusDataByOffset
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: I/O driver
+  MD5: d2588631d8aae2a3e54410eaf54f0679
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: BS_HWMIO64_W10.sys
+  Product: BIOSTAR I/O driver
+  ProductVersion: 10, 0, 1806, 2200
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: fa3d25060a1ec2f8199a8bba2d045991
+    SHA1: ad2b349c74d3ed46f9becdf406543a042bc9aa42
+    SHA256: 248bdbea478bce55d40dfffeec5d164dd8018c12791b03ef33306faa402a261c
+  SHA1: cb3de54667548a5c9abf5d8fa47db4097fcee9f1
+  SHA256: 1d0397c263d51e9fc95bcc8baf98d1a853e1c0401cd0e27c7bf5da3fba1c93a8
+  Sections:
+    .text:
+      Entropy: 6.347451867098618
+      Virtual Size: '0x17fa'
+    .rdata:
+      Entropy: 4.575317657961913
+      Virtual Size: '0x284'
+    .data:
+      Entropy: 0.4546683345547283
+      Virtual Size: '0x13c'
+    .pdata:
+      Entropy: 3.779283626461584
+      Virtual Size: '0x108'
+    INIT:
+      Entropy: 5.347992842976472
+      Virtual Size: '0x560'
+    .rsrc:
+      Entropy: 3.4136205238930715
+      Virtual Size: '0x420'
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+  - Microsoft Root Certificate Authority 2010
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -119,30 +139,10 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
-  RichPEHeaderHash:
-    MD5: fa3d25060a1ec2f8199a8bba2d045991
-    SHA1: ad2b349c74d3ed46f9becdf406543a042bc9aa42
-    SHA256: 248bdbea478bce55d40dfffeec5d164dd8018c12791b03ef33306faa402a261c
-  Sections:
-    .text:
-      Entropy: 6.347451867098618
-      Virtual Size: '0x17fa'
-    .rdata:
-      Entropy: 4.575317657961913
-      Virtual Size: '0x284'
-    .data:
-      Entropy: 0.4546683345547283
-      Virtual Size: '0x13c'
-    .pdata:
-      Entropy: 3.779283626461584
-      Virtual Size: '0x108'
-    INIT:
-      Entropy: 5.347992842976472
-      Virtual Size: '0x560'
-    .rsrc:
-      Entropy: 3.4136205238930715
-      Virtual Size: '0x420'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-06-22 01:44:19'
+MitreID: T1068
+Resources:
+- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Tags:
 - BS_HWMIO64_W10.sys
+Verified: 'TRUE'

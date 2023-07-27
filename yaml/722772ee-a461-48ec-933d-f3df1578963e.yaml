@@ -1,50 +1,31 @@
-Id: 722772ee-a461-48ec-933d-f3df1578963e
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create BlackBoneDrv10.sys binPath=C:\windows\temp\BlackBoneDrv10.sys     type=kernel
     && sc.exe start BlackBoneDrv10.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: 722772ee-a461-48ec-933d-f3df1578963e
 KnownVulnerableSamples:
-- Filename: BlackBoneDrv10.sys
-  MD5: f7393fb917aed182e4cbef25ce8af950
-  SHA1: 3ee2fd08137e9262d2e911158090e4a7c7427ea0
-  SHA256: f51bdb0ad924178131c21e39a8ccd191e46b5512b0f2e1cc8486f63e84e5d960
-  Signature:
-  - Nanjing Zhixiao Information Technology Co.,Ltd
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 068d02b18a4c87366e8d54200f319e50
     SHA1: 79ef55ea5d6cab924abb722d501e9b950fdae904
     SHA256: a4ac619fb531793945ad4c72bdd809ebd38512fc234aa452cb8364ee05465a7b
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2020-08-22 02:28:52'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: BlackBoneDrv10.sys
   ImportedFunctions:
   - RtlUnicodeStringToInteger
   - RtlInitAnsiString
@@ -146,6 +127,48 @@ KnownVulnerableSamples:
   - ExEnumHandleTable
   - ExfUnblockPushLock
   - RtlCompareUnicodeStrings
+  Imports:
+  - ntoskrnl.exe
+  InternalName: ''
+  MD5: f7393fb917aed182e4cbef25ce8af950
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 8ae03f4a21c195de4eeb96ec5dae9b7a
+    SHA1: 93e1d3ff812963175c270d4f8c23c6cface99c06
+    SHA256: d372fd5e9e55f5a8a5719a0691ead276968e1666719a27dcc6967d4f745dfd6d
+  SHA1: 3ee2fd08137e9262d2e911158090e4a7c7427ea0
+  SHA256: f51bdb0ad924178131c21e39a8ccd191e46b5512b0f2e1cc8486f63e84e5d960
+  Sections:
+    .text:
+      Entropy: 6.43962487299422
+      Virtual Size: '0x1a5a'
+    .rdata:
+      Entropy: 4.697945169758717
+      Virtual Size: '0xf5c'
+    .data:
+      Entropy: 1.0815311650012875
+      Virtual Size: '0x570'
+    .pdata:
+      Entropy: 4.50622088620596
+      Virtual Size: '0x4ec'
+    PAGE:
+      Entropy: 6.481384276672756
+      Virtual Size: '0x9935'
+    INIT:
+      Entropy: 6.131034821076418
+      Virtual Size: '0x1ca6'
+    .reloc:
+      Entropy: 2.708694969562842
+      Virtual Size: '0x14'
+  Signature:
+  - Nanjing Zhixiao Information Technology Co.,Ltd
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -198,33 +221,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 8ae03f4a21c195de4eeb96ec5dae9b7a
-    SHA1: 93e1d3ff812963175c270d4f8c23c6cface99c06
-    SHA256: d372fd5e9e55f5a8a5719a0691ead276968e1666719a27dcc6967d4f745dfd6d
-  Sections:
-    .text:
-      Entropy: 6.43962487299422
-      Virtual Size: '0x1a5a'
-    .rdata:
-      Entropy: 4.697945169758717
-      Virtual Size: '0xf5c'
-    .data:
-      Entropy: 1.0815311650012875
-      Virtual Size: '0x570'
-    .pdata:
-      Entropy: 4.50622088620596
-      Virtual Size: '0x4ec'
-    PAGE:
-      Entropy: 6.481384276672756
-      Virtual Size: '0x9935'
-    INIT:
-      Entropy: 6.131034821076418
-      Virtual Size: '0x1ca6'
-    .reloc:
-      Entropy: 2.708694969562842
-      Virtual Size: '0x14'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-08-22 02:28:52'
+MitreID: T1068
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - BlackBoneDrv10.sys
+Verified: 'FALSE'

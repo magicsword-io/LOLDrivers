@@ -1,22 +1,16 @@
-Id: 7f645b95-4374-47ae-be1a-e4415308b550
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create WCPU.sys binPath=C:\windows\temp\WCPU.sys type=kernel &&
     sc.exe start WCPU.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/159e7c5a12157af92e0d14a0d3ea116f91c09e21a9831486e6dc592c93c10980.yara
@@ -28,34 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 7f645b95-4374-47ae-be1a-e4415308b550
 KnownVulnerableSamples:
-- Filename: WCPU.sys
-  MD5: c1d063c9422a19944cdaa6714623f2ec
-  SHA1: f36a47edfacd85e0c6d4d22133dd386aee4eec15
-  SHA256: 159e7c5a12157af92e0d14a0d3ea116f91c09e21a9831486e6dc592c93c10980
-  Signature:
-  - ASUSTeK Computer Inc.
-  - VeriSign Class 3 Code Signing 2004 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: ''
-  Publisher: ''
-  Company: Windows (R) Codename Longhorn DDK provider
-  Description: ASUS TDE CPU Driver
-  Product: Windows (R) Codename Longhorn DDK driver
-  ProductVersion: 6.0.6000.16386
-  FileVersion: '6.0.6000.16386 built by: WinDDK'
-  MachineType: AMD64
-  OriginalFilename: CPU Driver
-  Authentihash:
+- Authentihash:
     MD5: 1a77777592eb402fe56bcb43d618d02e
     SHA1: 81e3e81048e0f323eee8d04aa9b291d77caa21e0
     SHA256: 54bc506b2f0cf66d12d4a2415ab743c2b2a1f3079089e3e0c0c1f3f49dd7335e
-  InternalName: CPU Driver
+  Company: Windows (R) Codename Longhorn DDK provider
   Copyright: Copyright by ASUSTek COMPUTER INC. 2006
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2006-12-21 03:21:24'
+  Date: ''
+  Description: ASUS TDE CPU Driver
   ExportedFunctions: ''
+  FileVersion: '6.0.6000.16386 built by: WinDDK'
+  Filename: WCPU.sys
   ImportedFunctions:
   - ZwUnmapViewOfSection
   - ZwClose
@@ -70,6 +50,46 @@ KnownVulnerableSamples:
   - IoCreateDevice
   - RtlInitUnicodeString
   - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: CPU Driver
+  MD5: c1d063c9422a19944cdaa6714623f2ec
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: CPU Driver
+  Product: Windows (R) Codename Longhorn DDK driver
+  ProductVersion: 6.0.6000.16386
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: d101f9368f4b720f40c512b9a7b67cc4
+    SHA1: abea1a5ff4c4e312d9bfb9d3cbcc21f4195c4809
+    SHA256: 0d1f45e9aa0988e1a7aee185bbf5bf48fd4c4b7e1168c8ecb79f47a15dd03616
+  SHA1: f36a47edfacd85e0c6d4d22133dd386aee4eec15
+  SHA256: 159e7c5a12157af92e0d14a0d3ea116f91c09e21a9831486e6dc592c93c10980
+  Sections:
+    .text:
+      Entropy: 5.985625350824249
+      Virtual Size: '0xade'
+    .rdata:
+      Entropy: 3.954197356499777
+      Virtual Size: '0x124'
+    .data:
+      Entropy: 0.4498563545832192
+      Virtual Size: '0x140'
+    .pdata:
+      Entropy: 3.1473267367721696
+      Virtual Size: '0x48'
+    INIT:
+      Entropy: 4.911287908556835
+      Virtual Size: '0x23e'
+    .rsrc:
+      Entropy: 3.4268548853633605
+      Virtual Size: '0x408'
+  Signature:
+  - ASUSTeK Computer Inc.
+  - VeriSign Class 3 Code Signing 2004 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -145,30 +165,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: d101f9368f4b720f40c512b9a7b67cc4
-    SHA1: abea1a5ff4c4e312d9bfb9d3cbcc21f4195c4809
-    SHA256: 0d1f45e9aa0988e1a7aee185bbf5bf48fd4c4b7e1168c8ecb79f47a15dd03616
-  Sections:
-    .text:
-      Entropy: 5.985625350824249
-      Virtual Size: '0xade'
-    .rdata:
-      Entropy: 3.954197356499777
-      Virtual Size: '0x124'
-    .data:
-      Entropy: 0.4498563545832192
-      Virtual Size: '0x140'
-    .pdata:
-      Entropy: 3.1473267367721696
-      Virtual Size: '0x48'
-    INIT:
-      Entropy: 4.911287908556835
-      Virtual Size: '0x23e'
-    .rsrc:
-      Entropy: 3.4268548853633605
-      Virtual Size: '0x408'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2006-12-21 03:21:24'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - WCPU.sys
+Verified: 'TRUE'

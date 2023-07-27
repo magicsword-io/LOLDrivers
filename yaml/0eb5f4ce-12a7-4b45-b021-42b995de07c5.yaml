@@ -1,51 +1,31 @@
-Id: 0eb5f4ce-12a7-4b45-b021-42b995de07c5
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-03-03'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create Air_SYSTEM10.sys binPath=C:\windows\temp\Air_SYSTEM10.sys     type=kernel
     && sc.exe start Air_SYSTEM10.sys
   Description: Driver categorized as POORTRY by Mandiant.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-- ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-03-03'
 Detection: []
+Id: 0eb5f4ce-12a7-4b45-b021-42b995de07c5
 KnownVulnerableSamples:
-- Filename: Air_SYSTEM10.sys
-  MD5: 1f2888e57fdd6aee466962c25ba7d62d
-  SHA1: c23eeb6f18f626ce1fd840227f351fa7543bb167
-  SHA256: f461414a2596555cece5cfee65a3c22648db0082ca211f6238af8230e41b3212
-  Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  - Microsoft Windows Third Party Component CA 2014
-  - Microsoft Root Certificate Authority 2010
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 6f562fc03c72abd6ff33c6df23df0219
     SHA1: 7435b3f4c67217bfcdcfa9d940b12e5d5d6a22da
     SHA256: 9c31a9fbf833b732b5f3f06c31e200994a65ce187260e66eff62278660dba4ef
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - FLTMGR.SYS
-  - ntoskrnl.exe
+  CreationTimestamp: '2022-09-29 07:14:26'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: Air_SYSTEM10.sys
   ImportedFunctions:
   - FltRegisterFilter
   - FltUnregisterFilter
@@ -107,6 +87,49 @@ KnownVulnerableSamples:
   - MmCopyVirtualMemory
   - PsGetProcessPeb
   - ZwQuerySystemInformation
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  InternalName: ''
+  MD5: 1f2888e57fdd6aee466962c25ba7d62d
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: dc535cdd7504ad7bdb7a3f4e35fc6a41
+    SHA1: 431632c0f59afaed3ceadca17f2e9e2a81ec0e17
+    SHA256: fad4e2c2e8de2bf44be578f2747f21eb3f9e1ffbbbaeefebe8f2db1b64f5d8e4
+  SHA1: c23eeb6f18f626ce1fd840227f351fa7543bb167
+  SHA256: f461414a2596555cece5cfee65a3c22648db0082ca211f6238af8230e41b3212
+  Sections:
+    .text:
+      Entropy: 5.990918385480201
+      Virtual Size: '0x762f'
+    .rdata:
+      Entropy: 4.863080854105776
+      Virtual Size: '0x124c'
+    .data:
+      Entropy: 7.990071848879915
+      Virtual Size: '0x107a2'
+    .pdata:
+      Entropy: 7.711412146562409
+      Virtual Size: '0x600'
+    INIT:
+      Entropy: 5.351030079594413
+      Virtual Size: '0x8be'
+    .vmp0:
+      Entropy: 6.894363452637907
+      Virtual Size: '0x108ed8'
+    .reloc:
+      Entropy: 4.478793837093537
+      Virtual Size: '0xe4'
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+  - Microsoft Root Certificate Authority 2010
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -142,33 +165,10 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
-  RichPEHeaderHash:
-    MD5: dc535cdd7504ad7bdb7a3f4e35fc6a41
-    SHA1: 431632c0f59afaed3ceadca17f2e9e2a81ec0e17
-    SHA256: fad4e2c2e8de2bf44be578f2747f21eb3f9e1ffbbbaeefebe8f2db1b64f5d8e4
-  Sections:
-    .text:
-      Entropy: 5.990918385480201
-      Virtual Size: '0x762f'
-    .rdata:
-      Entropy: 4.863080854105776
-      Virtual Size: '0x124c'
-    .data:
-      Entropy: 7.990071848879915
-      Virtual Size: '0x107a2'
-    .pdata:
-      Entropy: 7.711412146562409
-      Virtual Size: '0x600'
-    INIT:
-      Entropy: 5.351030079594413
-      Virtual Size: '0x8be'
-    .vmp0:
-      Entropy: 6.894363452637907
-      Virtual Size: '0x108ed8'
-    .reloc:
-      Entropy: 4.478793837093537
-      Virtual Size: '0xe4'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-09-29 07:14:26'
+MitreID: T1068
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+- ''
 Tags:
 - Air_SYSTEM10.sys
+Verified: 'TRUE'

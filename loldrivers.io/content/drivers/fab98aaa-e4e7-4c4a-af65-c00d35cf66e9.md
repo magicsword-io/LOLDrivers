@@ -116,6 +116,8 @@ sc.exe create cpuz141.sys binPath=C:\windows\temp\cpuz141.sys type=kernel &amp;&
 | Product           | CPUID service |
 | OriginalFilename  | cpuz.sys |
 
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/db72def618cbc3c5f9aa82f091b54250.bin" "Download" >}} 
+
 #### Certificates
 
 {{< details "Expand" >}}
@@ -310,14 +312,7 @@ sc.exe create cpuz141.sys binPath=C:\windows\temp\cpuz141.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fab98aaa-e4e7-4c4a-af65-c00d35cf66e9.yaml)
 
-*last_updated:* 2023-07-12
-
-
-
-
-
-
-
+*last_updated:* 2023-07-27
 
 {{< /column >}}
 {{< /block >}}

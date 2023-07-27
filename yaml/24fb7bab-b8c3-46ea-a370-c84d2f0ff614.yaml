@@ -1,22 +1,16 @@
-Id: 24fb7bab-b8c3-46ea-a370-c84d2f0ff614
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create ADV64DRV.sys binPath=C:\windows\temp\ADV64DRV.sys type=kernel
     && sc.exe start ADV64DRV.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: BlockRule
   value: https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-block-rules
@@ -32,34 +26,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 24fb7bab-b8c3-46ea-a370-c84d2f0ff614
 KnownVulnerableSamples:
-- Filename: ADV64DRV.sys
-  MD5: 778b7feea3c750d44745d3bf294bd4ce
-  SHA1: 2261198385d62d2117f50f631652eded0ecc71db
-  SHA256: 04a85e359525d662338cae86c1e59b1d7aa9bd12b920e8067503723dc1e03162
-  Signature:
-  - 'FUJITSU LIMITED '
-  - VeriSign Class 3 Code Signing 2004 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: 01:30 AM 08/29/2006
-  Publisher: FUJITSU LIMITED
-  Company: FUJITSU LIMITED.
-  Description: ''
-  Product: MicrosoftR WindowsR Operating System
-  ProductVersion: 2, 0, 0, 0
-  FileVersion: 2, 0, 0, 0
-  MachineType: AMD64
-  OriginalFilename: ADV64DRV.sys
-  Authentihash:
+- Authentihash:
     MD5: e1c188570d8720f9c35e194e17a7fd36
     SHA1: ca6b0d932e5ac9dbe1242aca48ba93a14cf9d151
     SHA256: b2b37ef379ada79d2abe78375312bfcd4b518139bc525a522c2a6329ba097cc4
-  InternalName: ADV64DRV.sys
+  Company: FUJITSU LIMITED.
   Copyright: Copyright(C) FUJITSU LIMITED 2005
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2005-09-16 03:50:59'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: 2, 0, 0, 0
+  Filename: ADV64DRV.sys
   ImportedFunctions:
   - RtlAppendUnicodeToString
   - RtlInitUnicodeString
@@ -74,6 +54,46 @@ KnownVulnerableSamples:
   - IoAllocateErrorLogEntry
   - IofCompleteRequest
   - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ADV64DRV.sys
+  MD5: 778b7feea3c750d44745d3bf294bd4ce
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ADV64DRV.sys
+  Product: MicrosoftR WindowsR Operating System
+  ProductVersion: 2, 0, 0, 0
+  Publisher: FUJITSU LIMITED
+  RichPEHeaderHash:
+    MD5: 1b19b7c8c29ee1a90f9c2b13eb7d131b
+    SHA1: 7adbedde877708b811bc96acc23a31532d6f4f83
+    SHA256: 25afa73a325285db7c250742fbb2de5dc0ce869553c6dc16149ae0c66372c42b
+  SHA1: 2261198385d62d2117f50f631652eded0ecc71db
+  SHA256: 04a85e359525d662338cae86c1e59b1d7aa9bd12b920e8067503723dc1e03162
+  Sections:
+    .text:
+      Entropy: 5.903584171694268
+      Virtual Size: '0x962'
+    .rdata:
+      Entropy: 4.136425539237833
+      Virtual Size: '0x1d4'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.195198013509955
+      Virtual Size: '0x90'
+    INIT:
+      Entropy: 4.823287376137565
+      Virtual Size: '0x252'
+    .rsrc:
+      Entropy: 3.331846154390591
+      Virtual Size: '0x3f0'
+  Signature:
+  - 'FUJITSU LIMITED '
+  - VeriSign Class 3 Code Signing 2004 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -148,30 +168,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 1b19b7c8c29ee1a90f9c2b13eb7d131b
-    SHA1: 7adbedde877708b811bc96acc23a31532d6f4f83
-    SHA256: 25afa73a325285db7c250742fbb2de5dc0ce869553c6dc16149ae0c66372c42b
-  Sections:
-    .text:
-      Entropy: 5.903584171694268
-      Virtual Size: '0x962'
-    .rdata:
-      Entropy: 4.136425539237833
-      Virtual Size: '0x1d4'
-    .data:
-      Entropy: 0.5159719988134768
-      Virtual Size: '0x110'
-    .pdata:
-      Entropy: 3.195198013509955
-      Virtual Size: '0x90'
-    INIT:
-      Entropy: 4.823287376137565
-      Virtual Size: '0x252'
-    .rsrc:
-      Entropy: 3.331846154390591
-      Virtual Size: '0x3f0'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-09-16 03:50:59'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - ADV64DRV.sys
+Verified: 'TRUE'

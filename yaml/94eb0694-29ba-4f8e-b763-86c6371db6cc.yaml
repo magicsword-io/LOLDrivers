@@ -1,52 +1,31 @@
-Id: 94eb0694-29ba-4f8e-b763-86c6371db6cc
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create winio64.sys binPath=C:\windows\temp\winio64.sys type=kernel
     && sc.exe start winio64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: 94eb0694-29ba-4f8e-b763-86c6371db6cc
 KnownVulnerableSamples:
-- Filename: winio64.sys
-  MD5: 97221e16e7a99a00592ca278c49ffbfc
-  SHA1: 943593e880b4d340f2548548e6e673ef6f61eed3
-  SHA256: e1980c6592e6d2d92c1a65acad8f1071b6a404097bb6fcce494f3c8ac31385cf
-  Signature:
-  - Exacq Technologies, Inc.
-  - StartCom Class 3 Primary Intermediate Object CA
-  - StartCom Certification Authority
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 241252e4ebe7b4fdf6fd5a34ece5b127
     SHA1: eaba3ed3a83a8ef75db88c1f0def5160c3835a8c
     SHA256: cb5ebba562c33ef2ed93558913792726c8c2e5898531923589122ae31db64ebb
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  - WDFLDR.SYS
+  CreationTimestamp: '2014-05-19 09:29:34'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: winio64.sys
   ImportedFunctions:
   - ObfDereferenceObject
   - ZwClose
@@ -67,6 +46,47 @@ KnownVulnerableSamples:
   - WdfVersionBind
   - WdfVersionBindClass
   - WdfVersionUnbindClass
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - WDFLDR.SYS
+  InternalName: ''
+  MD5: 97221e16e7a99a00592ca278c49ffbfc
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 01fa87d3ec80d5af5f5d299a66795493
+    SHA1: 5957eeee532c4f376ed95fb03784c5051dd8c097
+    SHA256: 39f1dcdc4eeab157c00e38de7f5f1aff3b162318d5c9e33e8f63becae1850eb2
+  SHA1: 943593e880b4d340f2548548e6e673ef6f61eed3
+  SHA256: e1980c6592e6d2d92c1a65acad8f1071b6a404097bb6fcce494f3c8ac31385cf
+  Sections:
+    .text:
+      Entropy: 6.0566282345703675
+      Virtual Size: '0xdbe'
+    .rdata:
+      Entropy: 3.918940983915505
+      Virtual Size: '0x2b4'
+    .data:
+      Entropy: 0.632570099181397
+      Virtual Size: '0x1028'
+    .pdata:
+      Entropy: 3.595150149062291
+      Virtual Size: '0xc0'
+    INIT:
+      Entropy: 4.92328698169394
+      Virtual Size: '0x326'
+    .reloc:
+      Entropy: 1.4575187496394217
+      Virtual Size: '0x30'
+  Signature:
+  - Exacq Technologies, Inc.
+  - StartCom Class 3 Primary Intermediate Object CA
+  - StartCom Certification Authority
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -141,58 +161,18 @@ KnownVulnerableSamples:
       Issuer: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom
         Class 3 Primary Intermediate Object CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 01fa87d3ec80d5af5f5d299a66795493
-    SHA1: 5957eeee532c4f376ed95fb03784c5051dd8c097
-    SHA256: 39f1dcdc4eeab157c00e38de7f5f1aff3b162318d5c9e33e8f63becae1850eb2
-  Sections:
-    .text:
-      Entropy: 6.0566282345703675
-      Virtual Size: '0xdbe'
-    .rdata:
-      Entropy: 3.918940983915505
-      Virtual Size: '0x2b4'
-    .data:
-      Entropy: 0.632570099181397
-      Virtual Size: '0x1028'
-    .pdata:
-      Entropy: 3.595150149062291
-      Virtual Size: '0xc0'
-    INIT:
-      Entropy: 4.92328698169394
-      Virtual Size: '0x326'
-    .reloc:
-      Entropy: 1.4575187496394217
-      Virtual Size: '0x30'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-05-19 09:29:34'
-- Filename: winio64.sys
-  MD5: 11fb599312cb1cf43ca5e879ed6fb71e
-  SHA1: b4d014b5edd6e19ce0e8395a64faedf49688ecb5
-  SHA256: 9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374
-  Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  - Microsoft Windows Third Party Component CA 2014
-  - Microsoft Root Certificate Authority 2010
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 198111fd73515aa7fe4387612f027f0f
     SHA1: 651b953cb03928e41424ad59f21d4978d6f4952e
     SHA256: ebbaa44277a3ec6e20ad3f6aef5399fdc398306eb4c13aa96e45c9a281820a12
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2018-03-19 21:59:12'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: winio64.sys
   ImportedFunctions:
   - RtlInitUnicodeString
   - IoDeleteDevice
@@ -210,6 +190,43 @@ KnownVulnerableSamples:
   - IoCreateSymbolicLink
   - IoDeleteSymbolicLink
   - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: 11fb599312cb1cf43ca5e879ed6fb71e
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 2b745d90a102a42256774e350aac3080
+    SHA1: 45768de16e9654a5b21dcc916b5115ef81950791
+    SHA256: 59089a80084d2dd2efbc48ed53ce8eb6198155fe8552e36c1355c732691963a3
+  SHA1: b4d014b5edd6e19ce0e8395a64faedf49688ecb5
+  SHA256: 9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374
+  Sections:
+    .text:
+      Entropy: 6.155249930767524
+      Virtual Size: '0x103c'
+    .rdata:
+      Entropy: 3.9170994221049087
+      Virtual Size: '0x144'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.1235136228187446
+      Virtual Size: '0x54'
+    INIT:
+      Entropy: 5.023217119758618
+      Virtual Size: '0x2a6'
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+  - Microsoft Root Certificate Authority 2010
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -245,27 +262,10 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
-  RichPEHeaderHash:
-    MD5: 2b745d90a102a42256774e350aac3080
-    SHA1: 45768de16e9654a5b21dcc916b5115ef81950791
-    SHA256: 59089a80084d2dd2efbc48ed53ce8eb6198155fe8552e36c1355c732691963a3
-  Sections:
-    .text:
-      Entropy: 6.155249930767524
-      Virtual Size: '0x103c'
-    .rdata:
-      Entropy: 3.9170994221049087
-      Virtual Size: '0x144'
-    .data:
-      Entropy: 0.5159719988134768
-      Virtual Size: '0x110'
-    .pdata:
-      Entropy: 3.1235136228187446
-      Virtual Size: '0x54'
-    INIT:
-      Entropy: 5.023217119758618
-      Virtual Size: '0x2a6'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-03-19 21:59:12'
+MitreID: T1068
+Resources:
+- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Tags:
 - winio64.sys
+Verified: 'TRUE'

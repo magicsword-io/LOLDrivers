@@ -1,52 +1,31 @@
-Id: d64167b6-f281-41d8-9535-6cb925e77aec
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create EneTechIo64.sys binPath=C:\windows\temp\EneTechIo64.sys     type=kernel
     && sc.exe start EneTechIo64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c'
-- https://github.com/hfiref0x/KDU/releases/tag/v1.2.0
-- https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: d64167b6-f281-41d8-9535-6cb925e77aec
 KnownVulnerableSamples:
-- Filename: EneTechIo64.sys
-  MD5: d6e9f6c67d9b3d790d592557a7d57c3c
-  SHA1: a87d6eac2d70a3fbc04e59412326b28001c179de
-  SHA256: 06bda5a1594f7121acd2efe38ccb617fbc078bb9a70b665a5f5efd70e3013f50
-  Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  - Microsoft Windows Third Party Component CA 2014
-  - Microsoft Root Certificate Authority 2010
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 0765c07a666231285972c3487acfc7b2
     SHA1: 6b60825564b2dccff3a4f904b71541bfe94136c9
     SHA256: 865e4bc7290fc3b380e266ccd98c2d4e965beb711d7efd090d052e8326accdd2
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2019-10-14 10:04:53'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: EneTechIo64.sys
   ImportedFunctions:
   - IoCreateDevice
   - IoCreateSymbolicLink
@@ -63,6 +42,46 @@ KnownVulnerableSamples:
   - ObfDereferenceObject
   - RtlInitUnicodeString
   - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: d6e9f6c67d9b3d790d592557a7d57c3c
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 4a23d6ba4d088fbf637bb28fc6a99439
+    SHA1: 8f52c83c0f2612ced8898f1eb3f585c909d87254
+    SHA256: 7e972a6436525790aab04e43c9e149d9053d08e56ac404a93263b06c28664731
+  SHA1: a87d6eac2d70a3fbc04e59412326b28001c179de
+  SHA256: 06bda5a1594f7121acd2efe38ccb617fbc078bb9a70b665a5f5efd70e3013f50
+  Sections:
+    .text:
+      Entropy: 6.408882511640041
+      Virtual Size: '0x130e'
+    .rdata:
+      Entropy: 5.616144796481331
+      Virtual Size: '0x714'
+    .data:
+      Entropy: 3.75
+      Virtual Size: '0x10'
+    .pdata:
+      Entropy: 3.692470356444116
+      Virtual Size: '0x12c'
+    INIT:
+      Entropy: 5.223875821180386
+      Virtual Size: '0x2b2'
+    .reloc:
+      Entropy: 3.046439344671015
+      Virtual Size: '0x14'
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+  - Microsoft Root Certificate Authority 2010
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -98,30 +117,11 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
-  RichPEHeaderHash:
-    MD5: 4a23d6ba4d088fbf637bb28fc6a99439
-    SHA1: 8f52c83c0f2612ced8898f1eb3f585c909d87254
-    SHA256: 7e972a6436525790aab04e43c9e149d9053d08e56ac404a93263b06c28664731
-  Sections:
-    .text:
-      Entropy: 6.408882511640041
-      Virtual Size: '0x130e'
-    .rdata:
-      Entropy: 5.616144796481331
-      Virtual Size: '0x714'
-    .data:
-      Entropy: 3.75
-      Virtual Size: '0x10'
-    .pdata:
-      Entropy: 3.692470356444116
-      Virtual Size: '0x12c'
-    INIT:
-      Entropy: 5.223875821180386
-      Virtual Size: '0x2b2'
-    .reloc:
-      Entropy: 3.046439344671015
-      Virtual Size: '0x14'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-10-14 10:04:53'
+MitreID: T1068
+Resources:
+- ' https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c'
+- https://github.com/hfiref0x/KDU/releases/tag/v1.2.0
+- https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
 Tags:
 - EneTechIo64.sys
+Verified: 'TRUE'

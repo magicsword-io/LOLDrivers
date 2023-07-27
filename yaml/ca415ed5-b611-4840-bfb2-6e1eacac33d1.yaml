@@ -1,25 +1,18 @@
-Id: ca415ed5-b611-4840-bfb2-6e1eacac33d1
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 CVE:
 - CVE-2018-16712
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create Monitor_win10_x64.sys binPath=C:\windows\temp\Monitor_win10_x64.sys     type=kernel
     && sc.exe start Monitor_win10_x64.sys
   Description: CVE-2018-16712
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html
-- https://www.unknowncheats.me/forum/anti-cheat-bypass/244386-mta-fairplaykd-driver-reversed-exploited-rpm.html
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e4a7da2cf59a4a21fc42b611df1d59cae75051925a7ddf42bf216cc1a026eadb.yara
@@ -31,34 +24,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: ca415ed5-b611-4840-bfb2-6e1eacac33d1
 KnownVulnerableSamples:
-- Filename: Monitor_win10_x64.sys
-  MD5: 988dabdcf990b134b0ac1e00512c30c4
-  SHA1: ef80da613442047697bec35ea228cde477c09a3d
-  SHA256: e4a7da2cf59a4a21fc42b611df1d59cae75051925a7ddf42bf216cc1a026eadb
-  Signature:
-  - IObit Information Technology
-  - Symantec Class 3 SHA256 Code Signing CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: IObit
-  Description: IObit Temperature Monitor
-  Product: Advanced SystemCare
-  ProductVersion: 12.0.0.0
-  FileVersion: 1.2.0.11
-  MachineType: AMD64
-  OriginalFilename: Monitor.sys
-  Authentihash:
+- Authentihash:
     MD5: 68e5bf10aeb81b2ec77280aec1c2dc22
     SHA1: c42802424a1e61cc089ba1f071734b390232aec3
     SHA256: 2dec76da0b361e4ed49a4015e67cefb0e6b812103d8ebf93b74016d99d9fcfad
-  InternalName: Monitor.sys
+  Company: IObit
   Copyright: "\xA9 IObit. All rights reserved."
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2018-07-03 20:20:33'
+  Date: ''
+  Description: IObit Temperature Monitor
   ExportedFunctions: ''
+  FileVersion: 1.2.0.11
+  Filename: Monitor_win10_x64.sys
   ImportedFunctions:
   - MmUnmapIoSpace
   - MmMapIoSpace
@@ -72,6 +51,46 @@ KnownVulnerableSamples:
   - __C_specific_handler
   - HalSetBusDataByOffset
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: Monitor.sys
+  MD5: 988dabdcf990b134b0ac1e00512c30c4
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: Monitor.sys
+  Product: Advanced SystemCare
+  ProductVersion: 12.0.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 41ddd08b440611823bc5d8cb732c563d
+    SHA1: 8acdfc9ac988c6250e2a031640f6e169b5fddb73
+    SHA256: 189683b4db2e68d2f0b3f91f1141907b3887f23991867a68a22389d40ad3634e
+  SHA1: ef80da613442047697bec35ea228cde477c09a3d
+  SHA256: e4a7da2cf59a4a21fc42b611df1d59cae75051925a7ddf42bf216cc1a026eadb
+  Sections:
+    .text:
+      Entropy: 5.95023414975741
+      Virtual Size: '0x6e2'
+    .rdata:
+      Entropy: 4.184043693662125
+      Virtual Size: '0x188'
+    .data:
+      Entropy: 0.5096713223407059
+      Virtual Size: '0x114'
+    .pdata:
+      Entropy: 3.2826397607342592
+      Virtual Size: '0x6c'
+    INIT:
+      Entropy: 5.046663153942613
+      Virtual Size: '0x242'
+    .rsrc:
+      Entropy: 3.2374748801563418
+      Virtual Size: '0x388'
+  Signature:
+  - IObit Information Technology
+  - Symantec Class 3 SHA256 Code Signing CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -147,30 +166,11 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 41ddd08b440611823bc5d8cb732c563d
-    SHA1: 8acdfc9ac988c6250e2a031640f6e169b5fddb73
-    SHA256: 189683b4db2e68d2f0b3f91f1141907b3887f23991867a68a22389d40ad3634e
-  Sections:
-    .text:
-      Entropy: 5.95023414975741
-      Virtual Size: '0x6e2'
-    .rdata:
-      Entropy: 4.184043693662125
-      Virtual Size: '0x188'
-    .data:
-      Entropy: 0.5096713223407059
-      Virtual Size: '0x114'
-    .pdata:
-      Entropy: 3.2826397607342592
-      Virtual Size: '0x6c'
-    INIT:
-      Entropy: 5.046663153942613
-      Virtual Size: '0x242'
-    .rsrc:
-      Entropy: 3.2374748801563418
-      Virtual Size: '0x388'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-07-03 20:20:33'
+MitreID: T1068
+Resources:
+- https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html
+- https://www.unknowncheats.me/forum/anti-cheat-bypass/244386-mta-fairplaykd-driver-reversed-exploited-rpm.html
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Tags:
 - Monitor_win10_x64.sys
+Verified: 'TRUE'

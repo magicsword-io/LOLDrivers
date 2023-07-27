@@ -1,22 +1,16 @@
-Id: 47fe1aaf-02cd-4a41-8bf5-0047015a2a6e
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create phymem64.sys binPath=C:\windows\temp\phymem64.sys type=kernel
     && sc.exe start phymem64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/1963d5a0e512b72353953aadbe694f73a9a576f0241a988378fa40bf574eda52.yara
@@ -28,33 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 47fe1aaf-02cd-4a41-8bf5-0047015a2a6e
 KnownVulnerableSamples:
-- Filename: phymem64.sys
-  MD5: 2c54859a67306e20bfdc8887b537de72
-  SHA1: d7f7594ff084201c0d9fa2f4ef1626635b67bce5
-  SHA256: 1963d5a0e512b72353953aadbe694f73a9a576f0241a988378fa40bf574eda52
-  Signature:
-  - Super Micro Computer, Inc.
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: Super Micro Computer, Inc.
-  Description: phymem Application
-  Product: phymem
-  ProductVersion: 1, 0, 0, 0
-  FileVersion: 1, 0, 0, 0
-  MachineType: AMD64
-  OriginalFilename: phymem.sys
-  Authentihash:
+- Authentihash:
     MD5: aa43aa9f88e2fed984077a8852d85a4f
     SHA1: 52a8cd44646973b59c244b5f7b04b33a412634a2
     SHA256: 6ed3379d7ac1ad8bcfd13cd2502420569088ee7f1e04522ada48481d9a545a08
-  InternalName: phymem
+  Company: Super Micro Computer, Inc.
   Copyright: Copyright(c) 1993-2015 Super Micro Computer, Inc.
-  Imports:
-  - NTOSKRNL.exe
+  CreationTimestamp: '2015-04-09 00:40:09'
+  Date: ''
+  Description: phymem Application
   ExportedFunctions: ''
+  FileVersion: 1, 0, 0, 0
+  Filename: phymem64.sys
   ImportedFunctions:
   - KeWaitForSingleObject
   - IofCallDriver
@@ -79,6 +60,45 @@ KnownVulnerableSamples:
   - IoDeleteSymbolicLink
   - MmMapLockedPagesSpecifyCache
   - IoGetDeviceObjectPointer
+  Imports:
+  - NTOSKRNL.exe
+  InternalName: phymem
+  MD5: 2c54859a67306e20bfdc8887b537de72
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: phymem.sys
+  Product: phymem
+  ProductVersion: 1, 0, 0, 0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: bd33f84d81742c17cfc029ea6abe4802
+    SHA1: 633f4488d46ab5179e9077c28f5f311b3710a84f
+    SHA256: c5e9cb841597fe8ccfab8e3e9ec59a3ab7df0c4cc78e5f890ceca5cdfbf823d9
+  SHA1: d7f7594ff084201c0d9fa2f4ef1626635b67bce5
+  SHA256: 1963d5a0e512b72353953aadbe694f73a9a576f0241a988378fa40bf574eda52
+  Sections:
+    .text:
+      Entropy: 5.325588962543002
+      Virtual Size: '0x1304'
+    .rdata:
+      Entropy: 2.9789372580558635
+      Virtual Size: '0x124'
+    .data:
+      Entropy: 4.0189779389354525
+      Virtual Size: '0x378'
+    .pdata:
+      Entropy: 3.4505600621755907
+      Virtual Size: '0x9c'
+    INIT:
+      Entropy: 4.476869723241912
+      Virtual Size: '0x2e6'
+    .rsrc:
+      Entropy: 3.2030597101899123
+      Virtual Size: '0x3b8'
+  Signature:
+  - Super Micro Computer, Inc.
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -169,30 +189,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: bd33f84d81742c17cfc029ea6abe4802
-    SHA1: 633f4488d46ab5179e9077c28f5f311b3710a84f
-    SHA256: c5e9cb841597fe8ccfab8e3e9ec59a3ab7df0c4cc78e5f890ceca5cdfbf823d9
-  Sections:
-    .text:
-      Entropy: 5.325588962543002
-      Virtual Size: '0x1304'
-    .rdata:
-      Entropy: 2.9789372580558635
-      Virtual Size: '0x124'
-    .data:
-      Entropy: 4.0189779389354525
-      Virtual Size: '0x378'
-    .pdata:
-      Entropy: 3.4505600621755907
-      Virtual Size: '0x9c'
-    INIT:
-      Entropy: 4.476869723241912
-      Virtual Size: '0x2e6'
-    .rsrc:
-      Entropy: 3.2030597101899123
-      Virtual Size: '0x3b8'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-04-09 00:40:09'
+MitreID: T1068
+Resources:
+- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Tags:
 - phymem64.sys
+Verified: 'TRUE'

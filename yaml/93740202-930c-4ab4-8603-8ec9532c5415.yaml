@@ -1,9 +1,8 @@
-Id: 93740202-930c-4ab4-8603-8ec9532c5415
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Guus Verbeek
-Created: '2023-06-05'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create WinTapix.sys binPath=C:\windows\temp\WinTapix.sys type=kernel
     && sc.exe start WinTapix.sys
@@ -12,38 +11,83 @@ Commands:
     and unauthorized usage. It transforms the original executable file into a virtualized
     code executed in a protected environment, making it difficult to analyze and tamper
     with.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.fortinet.com/blog/threat-research/wintapix-kernal-driver-middle-east-countries
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-06-05'
 Detection: []
+Id: 93740202-930c-4ab4-8603-8ec9532c5415
 KnownVulnerableSamples:
-- Filename: WinTapix.sys
-  MD5: 3dd829fb27353622eff34be1eabb8f18
-  SHA1: 22c9da04847c26188226c3a345e2126ef00aa19e
-  SHA256: 8578bff36e3b02cc71495b647db88c67c3c5ca710b5a2bd539148550595d0330
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: Microsoft Corporation
-  Description: Windows Kernel Executive Module
-  Product: "Microsoft\xAE Windows\xAE Operating System"
-  ProductVersion: 6.3.9600.16384
-  FileVersion: 6.3.9600.16384 (winblue_rtm.130821-1623)
-  MachineType: AMD64
-  OriginalFilename: WinTapix.sys
-  Authentihash:
+- Authentihash:
     MD5: bb6790230efd9de2ee1a5be037f3c32e
     SHA1: 8d29b561a12cc9e04c93f0915cebc13c400bd749
     SHA256: d0d8dcc01aba3ac08084ad40df3c64e7dfdd26ad403b08e610b96e2fcaf8a713
+  Company: Microsoft Corporation
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
+  CreationTimestamp: '2020-05-04 11:58:49'
+  Date: ''
+  Description: Windows Kernel Executive Module
+  ExportedFunctions: ''
+  FileVersion: 6.3.9600.16384 (winblue_rtm.130821-1623)
+  Filename: WinTapix.sys
+  ImportedFunctions:
+  - RtlCompareUnicodeString
+  - KeDelayExecutionThread
+  - ExAllocatePool
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - PsCreateSystemThread
+  - ObfDereferenceObject
+  - ZwClose
+  - MmIsAddressValid
+  - ZwTerminateProcess
+  - ZwOpenProcess
+  - RtlConvertSidToUnicodeString
+  - KeStackAttachProcess
+  - KeUnstackDetachProcess
+  - PsReferencePrimaryToken
+  - PsLookupProcessByProcessId
+  - ObOpenObjectByPointer
+  - ZwAllocateVirtualMemory
+  - RtlInitUnicodeString
+  - ZwQueryInformationToken
+  - ZwQueryInformationProcess
+  - ZwQuerySystemInformation
+  - ZwCreateFile
+  - ZwQueryInformationFile
+  - ZwReadFile
+  - ZwWriteFile
+  - ZwCreateKey
+  - ZwOpenKey
+  - ZwSetValueKey
+  - ZwNotifyChangeKey
+  - ZwCreateEvent
+  - ZwDeleteFile
+  - ZwSetEvent
+  - InitSafeBootMode
+  - strcmp
+  - ZwUnloadKey
+  - NtBuildNumber
+  - ZwWaitForSingleObject
+  - wcscmp
+  - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: WinTapix.sys
+  MD5: 3dd829fb27353622eff34be1eabb8f18
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: WinTapix.sys
+  Product: "Microsoft\xAE Windows\xAE Operating System"
+  ProductVersion: 6.3.9600.16384
+  Publisher: ''
   RichPEHeaderHash:
     MD5: ffdf660eb1ebf020a1d0a55a90712dfb
     SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
     SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
+  SHA1: 22c9da04847c26188226c3a345e2126ef00aa19e
+  SHA256: 8578bff36e3b02cc71495b647db88c67c3c5ca710b5a2bd539148550595d0330
   Sections:
     .text:
       Entropy: 5.415990855405883
@@ -69,55 +113,7 @@ KnownVulnerableSamples:
     .rsrc:
       Entropy: 3.4364895350293736
       Virtual Size: '0x40c'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-05-04 11:58:49'
-  InternalName: WinTapix.sys
-  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - RtlCompareUnicodeString
-  - KeDelayExecutionThread
-  - ExAllocatePool
-  - ExAllocatePoolWithTag
-  - ExFreePoolWithTag
-  - PsCreateSystemThread
-  - ObfDereferenceObject
-  - ZwClose
-  - MmIsAddressValid
-  - ZwTerminateProcess
-  - ZwOpenProcess
-  - RtlConvertSidToUnicodeString
-  - KeStackAttachProcess
-  - KeUnstackDetachProcess
-  - PsReferencePrimaryToken
-  - PsLookupProcessByProcessId
-  - ObOpenObjectByPointer
-  - ZwAllocateVirtualMemory
-  - RtlInitUnicodeString
-  - ZwQueryInformationToken
-  - ZwQueryInformationProcess
-  - ZwQuerySystemInformation
-  - ZwCreateFile
-  - ZwQueryInformationFile
-  - ZwReadFile
-  - ZwWriteFile
-  - ZwCreateKey
-  - ZwOpenKey
-  - ZwSetValueKey
-  - ZwNotifyChangeKey
-  - ZwCreateEvent
-  - ZwDeleteFile
-  - ZwSetEvent
-  - InitSafeBootMode
-  - strcmp
-  - ZwUnloadKey
-  - NtBuildNumber
-  - ZwWaitForSingleObject
-  - wcscmp
-  - KeStallExecutionProcessor
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -182,28 +178,76 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-- Filename: WinTapix.sys
-  MD5: a90236e4962620949b720f647a91f101
-  SHA1: 7f7d144cc80129d0db3159ea5d4294c34b79b20a
-  SHA256: 1485c0ed3e875cbdfc6786a5bd26d18ea9d31727deb8df290a1c00c780419a4e
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: Microsoft Corporation
-  Description: Windows Kernel Executive Module
-  Product: "Microsoft\xAE Windows\xAE Operating System"
-  ProductVersion: 6.3.9600.16384
-  FileVersion: 6.3.9600.16384 (winblue_rtm.130821-1623)
-  MachineType: AMD64
-  OriginalFilename: WinTapix.sys
-  Authentihash:
+- Authentihash:
     MD5: b39131751dda6e639ad70e2480d5fcd9
     SHA1: cf1390d2e70d6ee560d3030b891d90f5fc897f8f
     SHA256: 6ca42465bf4101ff63117c171cb31204dd29c45ba4ea7c31fd950f17e19b5d03
+  Company: Microsoft Corporation
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
+  CreationTimestamp: '2020-05-03 08:29:44'
+  Date: ''
+  Description: Windows Kernel Executive Module
+  ExportedFunctions: ''
+  FileVersion: 6.3.9600.16384 (winblue_rtm.130821-1623)
+  Filename: WinTapix.sys
+  ImportedFunctions:
+  - RtlCompareUnicodeString
+  - KeDelayExecutionThread
+  - ExAllocatePool
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - PsCreateSystemThread
+  - ObfDereferenceObject
+  - ZwClose
+  - MmIsAddressValid
+  - ZwTerminateProcess
+  - ZwOpenProcess
+  - RtlConvertSidToUnicodeString
+  - KeStackAttachProcess
+  - KeUnstackDetachProcess
+  - PsReferencePrimaryToken
+  - PsLookupProcessByProcessId
+  - ObOpenObjectByPointer
+  - ZwAllocateVirtualMemory
+  - RtlInitUnicodeString
+  - ZwQueryInformationToken
+  - ZwQueryInformationProcess
+  - ZwQuerySystemInformation
+  - ZwCreateFile
+  - ZwQueryInformationFile
+  - ZwReadFile
+  - ZwWriteFile
+  - ZwCreateKey
+  - ZwOpenKey
+  - ZwSetValueKey
+  - ZwNotifyChangeKey
+  - ZwCreateEvent
+  - ZwDeleteFile
+  - ZwSetEvent
+  - InitSafeBootMode
+  - strcmp
+  - ZwUnloadKey
+  - NtBuildNumber
+  - ZwWaitForSingleObject
+  - wcscmp
+  - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: WinTapix.sys
+  MD5: a90236e4962620949b720f647a91f101
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: WinTapix.sys
+  Product: "Microsoft\xAE Windows\xAE Operating System"
+  ProductVersion: 6.3.9600.16384
+  Publisher: ''
   RichPEHeaderHash:
     MD5: ffdf660eb1ebf020a1d0a55a90712dfb
     SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
     SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
+  SHA1: 7f7d144cc80129d0db3159ea5d4294c34b79b20a
+  SHA256: 1485c0ed3e875cbdfc6786a5bd26d18ea9d31727deb8df290a1c00c780419a4e
   Sections:
     .text:
       Entropy: 5.411119420135706
@@ -229,55 +273,7 @@ KnownVulnerableSamples:
     .rsrc:
       Entropy: 3.4364895350293736
       Virtual Size: '0x40c'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-05-03 08:29:44'
-  InternalName: WinTapix.sys
-  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - RtlCompareUnicodeString
-  - KeDelayExecutionThread
-  - ExAllocatePool
-  - ExAllocatePoolWithTag
-  - ExFreePoolWithTag
-  - PsCreateSystemThread
-  - ObfDereferenceObject
-  - ZwClose
-  - MmIsAddressValid
-  - ZwTerminateProcess
-  - ZwOpenProcess
-  - RtlConvertSidToUnicodeString
-  - KeStackAttachProcess
-  - KeUnstackDetachProcess
-  - PsReferencePrimaryToken
-  - PsLookupProcessByProcessId
-  - ObOpenObjectByPointer
-  - ZwAllocateVirtualMemory
-  - RtlInitUnicodeString
-  - ZwQueryInformationToken
-  - ZwQueryInformationProcess
-  - ZwQuerySystemInformation
-  - ZwCreateFile
-  - ZwQueryInformationFile
-  - ZwReadFile
-  - ZwWriteFile
-  - ZwCreateKey
-  - ZwOpenKey
-  - ZwSetValueKey
-  - ZwNotifyChangeKey
-  - ZwCreateEvent
-  - ZwDeleteFile
-  - ZwSetEvent
-  - InitSafeBootMode
-  - strcmp
-  - ZwUnloadKey
-  - NtBuildNumber
-  - ZwWaitForSingleObject
-  - wcscmp
-  - KeStallExecutionProcessor
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -342,57 +338,18 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-- Filename: WinTapix.sys
-  MD5: 4dd6250eb2d368f500949952eb013964
-  SHA1: 6802e2d2d4e6ee38aa513dafd6840e864310513b
-  SHA256: f6c316e2385f2694d47e936b0ac4bc9b55e279d530dd5e805f0d963cb47c3c0d
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: Microsoft Corporation
-  Description: Server Network driver
-  Product: "Microsoft\xAE Windows\xAE Operating System"
-  ProductVersion: 10.0.18362.693
-  FileVersion: 10.0.18362.693 (WinBuild.160101.0800)
-  MachineType: AMD64
-  OriginalFilename: SRVNET2.SYS
-  Authentihash:
+- Authentihash:
     MD5: 5858899869ed5c70f3af5287d4f4299c
     SHA1: b52e5da0ba19dc71148c4d4499f688ff4d86ed59
     SHA256: 9ac6d632f61d9abe287616ade35f555cd8cf5b91adda382c5ced0cbae468b0e7
-  RichPEHeaderHash:
-    MD5: 30b6cef006f64eb9f65066c48e5968a7
-    SHA1: 6cc09a78e32fe00891c45ea5083dc0d720b1960b
-    SHA256: 1bc7925380d6f1cdc950c23e606238376b26afca782faba789ee6ac30bde7ac0
-  Sections:
-    .text:
-      Entropy: 5.619117393799512
-      Virtual Size: '0xa542'
-    .rdata:
-      Entropy: 3.73679947614093
-      Virtual Size: '0x70c'
-    .data:
-      Entropy: 7.9965258450632275
-      Virtual Size: '0x73918'
-    .pdata:
-      Entropy: 4.533159114843445
-      Virtual Size: '0xa8c'
-    INIT:
-      Entropy: 4.910848389822466
-      Virtual Size: '0x3f4'
-    .reloc:
-      Entropy: 2.9387218755408675
-      Virtual Size: '0x18'
-    .rsrc:
-      Entropy: 3.45088426885429
-      Virtual Size: '0x3e8'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-06-28 23:28:49'
-  InternalName: SRVNET2.SYS
+  Company: Microsoft Corporation
   Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2021-06-28 23:28:49'
+  Date: ''
+  Description: Server Network driver
   ExportedFunctions: ''
+  FileVersion: 10.0.18362.693 (WinBuild.160101.0800)
+  Filename: WinTapix.sys
   ImportedFunctions:
   - ExFreePoolWithTag
   - ZwQuerySystemInformation
@@ -429,6 +386,45 @@ KnownVulnerableSamples:
   - RtlInitAnsiString
   - RtlAnsiStringToUnicodeString
   - RtlUnicodeStringToAnsiString
+  Imports:
+  - ntoskrnl.exe
+  InternalName: SRVNET2.SYS
+  MD5: 4dd6250eb2d368f500949952eb013964
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: SRVNET2.SYS
+  Product: "Microsoft\xAE Windows\xAE Operating System"
+  ProductVersion: 10.0.18362.693
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 30b6cef006f64eb9f65066c48e5968a7
+    SHA1: 6cc09a78e32fe00891c45ea5083dc0d720b1960b
+    SHA256: 1bc7925380d6f1cdc950c23e606238376b26afca782faba789ee6ac30bde7ac0
+  SHA1: 6802e2d2d4e6ee38aa513dafd6840e864310513b
+  SHA256: f6c316e2385f2694d47e936b0ac4bc9b55e279d530dd5e805f0d963cb47c3c0d
+  Sections:
+    .text:
+      Entropy: 5.619117393799512
+      Virtual Size: '0xa542'
+    .rdata:
+      Entropy: 3.73679947614093
+      Virtual Size: '0x70c'
+    .data:
+      Entropy: 7.9965258450632275
+      Virtual Size: '0x73918'
+    .pdata:
+      Entropy: 4.533159114843445
+      Virtual Size: '0xa8c'
+    INIT:
+      Entropy: 4.910848389822466
+      Virtual Size: '0x3f4'
+    .reloc:
+      Entropy: 2.9387218755408675
+      Virtual Size: '0x18'
+    .rsrc:
+      Entropy: 3.45088426885429
+      Virtual Size: '0x3e8'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -494,6 +490,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+MitreID: T1068
+Resources:
+- https://www.fortinet.com/blog/threat-research/wintapix-kernal-driver-middle-east-countries
 Tags:
 - WinTapix.sys
 - SRVNET2.SYS
+Verified: 'TRUE'

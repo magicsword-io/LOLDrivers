@@ -1,9 +1,8 @@
-Id: d827f7a6-1832-4ddb-90dd-7a8cf1c7f25e
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-03-04'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create LcTkA.sys binPath=C:\windows\temp\LcTkA.sys type=kernel &&
     sc.exe start LcTkA.sys
@@ -16,46 +15,25 @@ Commands:
     \ number (75361). Today, MSRC released an associated advisory under ADV220005.\n\
     This research is being released alongside Mandiant, a SentinelOne technology and\
     \ incident response partner. "
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.sentinelone.com/labs/driving-through-defenses-targeted-attacks-leverage-signed-malicious-microsoft-drivers/
-- ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-03-04'
 Detection: []
+Id: d827f7a6-1832-4ddb-90dd-7a8cf1c7f25e
 KnownVulnerableSamples:
-- Filename: LcTkA.sys
-  MD5: 909f3fc221acbe999483c87d9ead024a
-  SHA1: b2f955b3e6107f831ebe67997f8586d4fe9f3e98
-  SHA256: c8f9e1ad7b8cce62fba349a00bc168c849d42cfb2ca5b2c6cc4b51d054e0c497
-  Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  - Microsoft Windows Third Party Component CA 2014
-  - Microsoft Root Certificate Authority 2010
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: b663d79a688800d84065ccc2809874b7
     SHA1: 46a9d9e9904ba5f4c011ad69d0795969c721c662
     SHA256: 675329ef7a63a7c58d3daa6cb5c6e299143decec7a149c36a6bfe204bbf0407e
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2022-10-02 13:48:02'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: LcTkA.sys
   ImportedFunctions:
   - KeInitializeEvent
   - HalReturnToFirmware
@@ -72,6 +50,57 @@ KnownVulnerableSamples:
   - KeRevertToUserAffinityThread
   - DbgPrint
   - KeQueryPerformanceCounter
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: 909f3fc221acbe999483c87d9ead024a
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
+    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
+    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
+  SHA1: b2f955b3e6107f831ebe67997f8586d4fe9f3e98
+  SHA256: c8f9e1ad7b8cce62fba349a00bc168c849d42cfb2ca5b2c6cc4b51d054e0c497
+  Sections:
+    .text:
+      Entropy: 0.0
+      Virtual Size: '0x266e'
+    .rdata:
+      Entropy: 0.0
+      Virtual Size: '0x68c'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0x78'
+    .pdata:
+      Entropy: 0.0
+      Virtual Size: '0x18c'
+    INIT:
+      Entropy: 0.0
+      Virtual Size: '0x550'
+    ."!b:
+      Entropy: 0.0
+      Virtual Size: '0x14e2da'
+    .t{f:
+      Entropy: 0.8144190015462619
+      Virtual Size: '0x280'
+    .Kl$:
+      Entropy: 7.704385920634162
+      Virtual Size: '0x2968c0'
+    .reloc:
+      Entropy: 3.7856601791711784
+      Virtual Size: '0xc4'
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+  - Microsoft Root Certificate Authority 2010
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -107,39 +136,10 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
-  RichPEHeaderHash:
-    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
-    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
-    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
-  Sections:
-    .text:
-      Entropy: 0.0
-      Virtual Size: '0x266e'
-    .rdata:
-      Entropy: 0.0
-      Virtual Size: '0x68c'
-    .data:
-      Entropy: 0.0
-      Virtual Size: '0x78'
-    .pdata:
-      Entropy: 0.0
-      Virtual Size: '0x18c'
-    INIT:
-      Entropy: 0.0
-      Virtual Size: '0x550'
-    ."!b:
-      Entropy: 0.0
-      Virtual Size: '0x14e2da'
-    .t{f:
-      Entropy: 0.8144190015462619
-      Virtual Size: '0x280'
-    .Kl$:
-      Entropy: 7.704385920634162
-      Virtual Size: '0x2968c0'
-    .reloc:
-      Entropy: 3.7856601791711784
-      Virtual Size: '0xc4'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-10-02 13:48:02'
+MitreID: T1068
+Resources:
+- https://www.sentinelone.com/labs/driving-through-defenses-targeted-attacks-leverage-signed-malicious-microsoft-drivers/
+- ''
 Tags:
 - LcTkA.sys
+Verified: 'TRUE'

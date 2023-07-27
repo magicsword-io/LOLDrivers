@@ -1,22 +1,16 @@
-Id: f4990bdd-8821-4a3c-a11a-4651e645810c
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create IOMap64.sys binPath=C:\windows\temp\IOMap64.sys type=kernel
     && sc.exe start IOMap64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41.yara
@@ -28,34 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: f4990bdd-8821-4a3c-a11a-4651e645810c
 KnownVulnerableSamples:
-- Filename: IOMap64.sys
-  MD5: a01c412699b6f21645b2885c2bae4454
-  SHA1: 2fc6845047abcf2a918fce89ab99e4955d08e72c
-  SHA256: ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41
-  Signature:
-  - ASUSTeK Computer Inc.
-  - VeriSign Class 3 Code Signing 2009-2 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: ''
-  Publisher: ''
-  Company: ASUSTeK Computer Inc.
-  Description: 'ASUS Kernel Mode Driver for NT '
-  Product: 'ASUS Kernel Mode Driver for NT '
-  ProductVersion: '1.00'
-  FileVersion: '1.00'
-  MachineType: AMD64
-  OriginalFilename: IOMap.sys
-  Authentihash:
+- Authentihash:
     MD5: 3d840e2458fef30b0871bf1c13b060ff
     SHA1: 63b773c3c8308ddfa783b318d0ea67724fa1dc2f
     SHA256: 34b3acdeac5002880071f73b70aa3abd3a6facb9e281b5c93cc82a7a8a6d5cc1
-  InternalName: IOMap.sys
+  Company: ASUSTeK Computer Inc.
   Copyright: Copyright 2010 ASUSTeK Computer Inc.
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2010-02-04 18:55:34'
+  Date: ''
+  Description: 'ASUS Kernel Mode Driver for NT '
   ExportedFunctions: ''
+  FileVersion: '1.00'
+  Filename: IOMap64.sys
   ImportedFunctions:
   - KeInitializeMutex
   - RtlInitUnicodeString
@@ -76,6 +56,46 @@ KnownVulnerableSamples:
   - ExAllocatePoolWithTag
   - HalTranslateBusAddress
   - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: IOMap.sys
+  MD5: a01c412699b6f21645b2885c2bae4454
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: IOMap.sys
+  Product: 'ASUS Kernel Mode Driver for NT '
+  ProductVersion: '1.00'
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: fbccc3a104df27d5cfc3732e79242335
+    SHA1: f43a074e5d0724463bece3b665b3602a0642ceb1
+    SHA256: 9da8629da77396f72801318b4779adec059769739c20388b7552c8dd6f54999d
+  SHA1: 2fc6845047abcf2a918fce89ab99e4955d08e72c
+  SHA256: ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41
+  Sections:
+    .text:
+      Entropy: 6.34225561921043
+      Virtual Size: '0x2b08'
+    .rdata:
+      Entropy: 4.599132287329003
+      Virtual Size: '0x264'
+    .data:
+      Entropy: 0.30140680731160896
+      Virtual Size: '0x368'
+    .pdata:
+      Entropy: 3.885379359516789
+      Virtual Size: '0x174'
+    INIT:
+      Entropy: 5.022850878062124
+      Virtual Size: '0x308'
+    .rsrc:
+      Entropy: 3.2496696786658736
+      Virtual Size: '0x410'
+  Signature:
+  - ASUSTeK Computer Inc.
+  - VeriSign Class 3 Code Signing 2009-2 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -151,30 +171,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: fbccc3a104df27d5cfc3732e79242335
-    SHA1: f43a074e5d0724463bece3b665b3602a0642ceb1
-    SHA256: 9da8629da77396f72801318b4779adec059769739c20388b7552c8dd6f54999d
-  Sections:
-    .text:
-      Entropy: 6.34225561921043
-      Virtual Size: '0x2b08'
-    .rdata:
-      Entropy: 4.599132287329003
-      Virtual Size: '0x264'
-    .data:
-      Entropy: 0.30140680731160896
-      Virtual Size: '0x368'
-    .pdata:
-      Entropy: 3.885379359516789
-      Virtual Size: '0x174'
-    INIT:
-      Entropy: 5.022850878062124
-      Virtual Size: '0x308'
-    .rsrc:
-      Entropy: 3.2496696786658736
-      Virtual Size: '0x410'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-02-04 18:55:34'
+MitreID: T1068
+Resources:
+- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Tags:
 - IOMap64.sys
+Verified: 'TRUE'

@@ -1,22 +1,16 @@
-Id: 5943b267-64f3-40d4-8669-354f23dec122
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create Agent64.sys binPath=C:\windows\temp\Agent64.sys type=kernel
     && sc.exe start Agent64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/05f052c64d192cf69a462a5ec16dda0d43ca5d0245900c9fcb9201685a2e7748.yara
@@ -36,35 +30,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 5943b267-64f3-40d4-8669-354f23dec122
 KnownVulnerableSamples:
-- Filename: Agent64.sys
-  MD5: 8407ddfab85ae664e507c30314090385
-  SHA1: 8db869c0674221a2d3280143cbb0807fac08e0cc
-  SHA256: 05f052c64d192cf69a462a5ec16dda0d43ca5d0245900c9fcb9201685a2e7748
-  Signature:
-  - eSupport.com, Inc.
-  - GlobalSign CodeSigning CA - SHA256 - G2
-  - GlobalSign
-  - GlobalSign Root CA - R1
-  Date: ''
-  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
-  Company: Phoenix Technologies
-  Description: DriverAgent Direct I/O for 64-bit Windows
-  Product: DriverAgent
-  ProductVersion: '6.0'
-  FileVersion: '6.0'
-  MachineType: AMD64
-  OriginalFilename: Agent64.sys
-  Authentihash:
+- Authentihash:
     MD5: d86884546c97e614b73d16c600cfb2df
     SHA1: 94f7575a6bb378d0cf85b3dc65941c95415e7a80
     SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
-  InternalName: Agent64.sys
+  Company: Phoenix Technologies
   Copyright: EnTech Taiwan, 1997-2009
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2009-12-14 03:23:26'
+  Date: ''
+  Description: DriverAgent Direct I/O for 64-bit Windows
   ExportedFunctions: ''
+  FileVersion: '6.0'
+  Filename: Agent64.sys
   ImportedFunctions:
   - KeInitializeDpc
   - IofCompleteRequest
@@ -102,6 +81,47 @@ KnownVulnerableSamples:
   - HalTranslateBusAddress
   - HalGetInterruptVector
   - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: Agent64.sys
+  MD5: 8407ddfab85ae664e507c30314090385
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: Agent64.sys
+  Product: DriverAgent
+  ProductVersion: '6.0'
+  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
+  RichPEHeaderHash:
+    MD5: dd9ea0c6c3773a8caf1a86726551af41
+    SHA1: 45509ef0d417fb2a30496adc9511d048e4730f98
+    SHA256: 5b467c45ee29fdaba31eff00eacc8db61940f94a9bf6a357c0663c58b2cd752b
+  SHA1: 8db869c0674221a2d3280143cbb0807fac08e0cc
+  SHA256: 05f052c64d192cf69a462a5ec16dda0d43ca5d0245900c9fcb9201685a2e7748
+  Sections:
+    .text:
+      Entropy: 6.202530356985499
+      Virtual Size: '0x1e7e'
+    .rdata:
+      Entropy: 4.254011605715145
+      Virtual Size: '0x2c8'
+    .data:
+      Entropy: 0.36599028709984766
+      Virtual Size: '0x198'
+    .pdata:
+      Entropy: 3.801830276557545
+      Virtual Size: '0xf0'
+    INIT:
+      Entropy: 4.959426922678397
+      Virtual Size: '0x4e4'
+    .rsrc:
+      Entropy: 3.2916671010793452
+      Virtual Size: '0x3f8'
+  Signature:
+  - eSupport.com, Inc.
+  - GlobalSign CodeSigning CA - SHA256 - G2
+  - GlobalSign
+  - GlobalSign Root CA - R1
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -184,96 +204,96 @@ KnownVulnerableSamples:
     - SerialNumber: 11216e054fad930d88cabc078eb0d3bcc8ac
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , SHA256 , G2
       Version: 1
+- Authentihash:
+    MD5: d86884546c97e614b73d16c600cfb2df
+    SHA1: 94f7575a6bb378d0cf85b3dc65941c95415e7a80
+    SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
+  Company: Phoenix Technologies
+  Copyright: EnTech Taiwan, 1997-2009
+  CreationTimestamp: '2009-12-14 03:23:26'
+  Date: ''
+  Description: DriverAgent Direct I/O for 64-bit Windows
+  ExportedFunctions: ''
+  FileVersion: '6.0'
+  Filename: Agent64.sys
+  ImportedFunctions:
+  - KeInitializeDpc
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - IofCallDriver
+  - ExFreePoolWithTag
+  - ExAllocatePool
+  - ZwClose
+  - MmUnmapLockedPages
+  - IoDeleteDevice
+  - KeSetEvent
+  - MmFreeContiguousMemory
+  - MmUnmapIoSpace
+  - IoFreeMdl
+  - ZwUnmapViewOfSection
+  - IoConnectInterrupt
+  - IoDisconnectInterrupt
+  - IoStartNextPacket
+  - KeInsertQueueDpc
+  - MmMapLockedPages
+  - ZwMapViewOfSection
+  - MmBuildMdlForNonPagedPool
+  - MmGetPhysicalAddress
+  - MmMapLockedPagesSpecifyCache
+  - ObReferenceObjectByHandle
+  - ZwOpenSection
+  - IoAllocateMdl
+  - MmAllocateContiguousMemory
+  - KeBugCheckEx
+  - RtlInitUnicodeString
+  - _snwprintf
+  - IoCreateNotificationEvent
+  - IoDeleteSymbolicLink
+  - HalTranslateBusAddress
+  - HalGetInterruptVector
+  - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: Agent64.sys
+  MD5: 1ed08a6264c5c92099d6d1dae5e8f530
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: Agent64.sys
+  Product: DriverAgent
+  ProductVersion: '6.0'
+  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
   RichPEHeaderHash:
     MD5: dd9ea0c6c3773a8caf1a86726551af41
     SHA1: 45509ef0d417fb2a30496adc9511d048e4730f98
     SHA256: 5b467c45ee29fdaba31eff00eacc8db61940f94a9bf6a357c0663c58b2cd752b
-  Sections:
-    .text:
-      Entropy: 6.202530356985499
-      Virtual Size: '0x1e7e'
-    .rdata:
-      Entropy: 4.254011605715145
-      Virtual Size: '0x2c8'
-    .data:
-      Entropy: 0.36599028709984766
-      Virtual Size: '0x198'
-    .pdata:
-      Entropy: 3.801830276557545
-      Virtual Size: '0xf0'
-    INIT:
-      Entropy: 4.959426922678397
-      Virtual Size: '0x4e4'
-    .rsrc:
-      Entropy: 3.2916671010793452
-      Virtual Size: '0x3f8'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-12-14 03:23:26'
-- Filename: Agent64.sys
-  MD5: 1ed08a6264c5c92099d6d1dae5e8f530
   SHA1: 27d3ebea7655a72e6e8b95053753a25db944ec0f
   SHA256: 4045ae77859b1dbf13972451972eaaf6f3c97bea423e9e78f1c2f14330cd47ca
+  Sections:
+    .text:
+      Entropy: 6.202530356985499
+      Virtual Size: '0x1e7e'
+    .rdata:
+      Entropy: 4.254011605715145
+      Virtual Size: '0x2c8'
+    .data:
+      Entropy: 0.36599028709984766
+      Virtual Size: '0x198'
+    .pdata:
+      Entropy: 3.801830276557545
+      Virtual Size: '0xf0'
+    INIT:
+      Entropy: 4.959426922678397
+      Virtual Size: '0x4e4'
+    .rsrc:
+      Entropy: 3.2916671010793452
+      Virtual Size: '0x3f8'
   Signature:
   - Phoenix Technologies Ltd
   - GlobalSign ObjectSign CA
   - GlobalSign Primary Object Publishing CA
   - GlobalSign Root CA - R1
-  Date: ''
-  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
-  Company: Phoenix Technologies
-  Description: DriverAgent Direct I/O for 64-bit Windows
-  Product: DriverAgent
-  ProductVersion: '6.0'
-  FileVersion: '6.0'
-  MachineType: AMD64
-  OriginalFilename: Agent64.sys
-  Authentihash:
-    MD5: d86884546c97e614b73d16c600cfb2df
-    SHA1: 94f7575a6bb378d0cf85b3dc65941c95415e7a80
-    SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
-  InternalName: Agent64.sys
-  Copyright: EnTech Taiwan, 1997-2009
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - KeInitializeDpc
-  - IofCompleteRequest
-  - IoCreateSymbolicLink
-  - IoCreateDevice
-  - IofCallDriver
-  - ExFreePoolWithTag
-  - ExAllocatePool
-  - ZwClose
-  - MmUnmapLockedPages
-  - IoDeleteDevice
-  - KeSetEvent
-  - MmFreeContiguousMemory
-  - MmUnmapIoSpace
-  - IoFreeMdl
-  - ZwUnmapViewOfSection
-  - IoConnectInterrupt
-  - IoDisconnectInterrupt
-  - IoStartNextPacket
-  - KeInsertQueueDpc
-  - MmMapLockedPages
-  - ZwMapViewOfSection
-  - MmBuildMdlForNonPagedPool
-  - MmGetPhysicalAddress
-  - MmMapLockedPagesSpecifyCache
-  - ObReferenceObjectByHandle
-  - ZwOpenSection
-  - IoAllocateMdl
-  - MmAllocateContiguousMemory
-  - KeBugCheckEx
-  - RtlInitUnicodeString
-  - _snwprintf
-  - IoCreateNotificationEvent
-  - IoDeleteSymbolicLink
-  - HalTranslateBusAddress
-  - HalGetInterruptVector
-  - KeStallExecutionProcessor
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -359,96 +379,96 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+- Authentihash:
+    MD5: d86884546c97e614b73d16c600cfb2df
+    SHA1: 94f7575a6bb378d0cf85b3dc65941c95415e7a80
+    SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
+  Company: Phoenix Technologies
+  Copyright: EnTech Taiwan, 1997-2009
+  CreationTimestamp: '2009-12-14 03:23:26'
+  Date: ''
+  Description: DriverAgent Direct I/O for 64-bit Windows
+  ExportedFunctions: ''
+  FileVersion: '6.0'
+  Filename: Agent64.sys
+  ImportedFunctions:
+  - KeInitializeDpc
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - IofCallDriver
+  - ExFreePoolWithTag
+  - ExAllocatePool
+  - ZwClose
+  - MmUnmapLockedPages
+  - IoDeleteDevice
+  - KeSetEvent
+  - MmFreeContiguousMemory
+  - MmUnmapIoSpace
+  - IoFreeMdl
+  - ZwUnmapViewOfSection
+  - IoConnectInterrupt
+  - IoDisconnectInterrupt
+  - IoStartNextPacket
+  - KeInsertQueueDpc
+  - MmMapLockedPages
+  - ZwMapViewOfSection
+  - MmBuildMdlForNonPagedPool
+  - MmGetPhysicalAddress
+  - MmMapLockedPagesSpecifyCache
+  - ObReferenceObjectByHandle
+  - ZwOpenSection
+  - IoAllocateMdl
+  - MmAllocateContiguousMemory
+  - KeBugCheckEx
+  - RtlInitUnicodeString
+  - _snwprintf
+  - IoCreateNotificationEvent
+  - IoDeleteSymbolicLink
+  - HalTranslateBusAddress
+  - HalGetInterruptVector
+  - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: Agent64.sys
+  MD5: ddc2ffe0ab3fcd48db898ab13c38d88d
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: Agent64.sys
+  Product: DriverAgent
+  ProductVersion: '6.0'
+  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
   RichPEHeaderHash:
     MD5: dd9ea0c6c3773a8caf1a86726551af41
     SHA1: 45509ef0d417fb2a30496adc9511d048e4730f98
     SHA256: 5b467c45ee29fdaba31eff00eacc8db61940f94a9bf6a357c0663c58b2cd752b
-  Sections:
-    .text:
-      Entropy: 6.202530356985499
-      Virtual Size: '0x1e7e'
-    .rdata:
-      Entropy: 4.254011605715145
-      Virtual Size: '0x2c8'
-    .data:
-      Entropy: 0.36599028709984766
-      Virtual Size: '0x198'
-    .pdata:
-      Entropy: 3.801830276557545
-      Virtual Size: '0xf0'
-    INIT:
-      Entropy: 4.959426922678397
-      Virtual Size: '0x4e4'
-    .rsrc:
-      Entropy: 3.2916671010793452
-      Virtual Size: '0x3f8'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-12-14 03:23:26'
-- Filename: Agent64.sys
-  MD5: ddc2ffe0ab3fcd48db898ab13c38d88d
   SHA1: 33cdab3bbc8b3adce4067a1b042778607dce2acd
   SHA256: 6948480954137987a0be626c24cf594390960242cd75f094cd6aaa5c2e7a54fa
+  Sections:
+    .text:
+      Entropy: 6.202530356985499
+      Virtual Size: '0x1e7e'
+    .rdata:
+      Entropy: 4.254011605715145
+      Virtual Size: '0x2c8'
+    .data:
+      Entropy: 0.36599028709984766
+      Virtual Size: '0x198'
+    .pdata:
+      Entropy: 3.801830276557545
+      Virtual Size: '0xf0'
+    INIT:
+      Entropy: 4.959426922678397
+      Virtual Size: '0x4e4'
+    .rsrc:
+      Entropy: 3.2916671010793452
+      Virtual Size: '0x3f8'
   Signature:
   - Phoenix Technologies Ltd
   - GlobalSign ObjectSign CA
   - GlobalSign Primary Object Publishing CA
   - GlobalSign Root CA - R1
-  Date: ''
-  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
-  Company: Phoenix Technologies
-  Description: DriverAgent Direct I/O for 64-bit Windows
-  Product: DriverAgent
-  ProductVersion: '6.0'
-  FileVersion: '6.0'
-  MachineType: AMD64
-  OriginalFilename: Agent64.sys
-  Authentihash:
-    MD5: d86884546c97e614b73d16c600cfb2df
-    SHA1: 94f7575a6bb378d0cf85b3dc65941c95415e7a80
-    SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
-  InternalName: Agent64.sys
-  Copyright: EnTech Taiwan, 1997-2009
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - KeInitializeDpc
-  - IofCompleteRequest
-  - IoCreateSymbolicLink
-  - IoCreateDevice
-  - IofCallDriver
-  - ExFreePoolWithTag
-  - ExAllocatePool
-  - ZwClose
-  - MmUnmapLockedPages
-  - IoDeleteDevice
-  - KeSetEvent
-  - MmFreeContiguousMemory
-  - MmUnmapIoSpace
-  - IoFreeMdl
-  - ZwUnmapViewOfSection
-  - IoConnectInterrupt
-  - IoDisconnectInterrupt
-  - IoStartNextPacket
-  - KeInsertQueueDpc
-  - MmMapLockedPages
-  - ZwMapViewOfSection
-  - MmBuildMdlForNonPagedPool
-  - MmGetPhysicalAddress
-  - MmMapLockedPagesSpecifyCache
-  - ObReferenceObjectByHandle
-  - ZwOpenSection
-  - IoAllocateMdl
-  - MmAllocateContiguousMemory
-  - KeBugCheckEx
-  - RtlInitUnicodeString
-  - _snwprintf
-  - IoCreateNotificationEvent
-  - IoDeleteSymbolicLink
-  - HalTranslateBusAddress
-  - HalGetInterruptVector
-  - KeStallExecutionProcessor
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -534,10 +554,72 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+- Authentihash:
+    MD5: d86884546c97e614b73d16c600cfb2df
+    SHA1: 94f7575a6bb378d0cf85b3dc65941c95415e7a80
+    SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
+  Company: Phoenix Technologies
+  Copyright: EnTech Taiwan, 1997-2009
+  CreationTimestamp: '2009-12-14 03:23:26'
+  Date: ''
+  Description: DriverAgent Direct I/O for 64-bit Windows
+  ExportedFunctions: ''
+  FileVersion: '6.0'
+  Filename: Agent64.sys
+  ImportedFunctions:
+  - KeInitializeDpc
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - IofCallDriver
+  - ExFreePoolWithTag
+  - ExAllocatePool
+  - ZwClose
+  - MmUnmapLockedPages
+  - IoDeleteDevice
+  - KeSetEvent
+  - MmFreeContiguousMemory
+  - MmUnmapIoSpace
+  - IoFreeMdl
+  - ZwUnmapViewOfSection
+  - IoConnectInterrupt
+  - IoDisconnectInterrupt
+  - IoStartNextPacket
+  - KeInsertQueueDpc
+  - MmMapLockedPages
+  - ZwMapViewOfSection
+  - MmBuildMdlForNonPagedPool
+  - MmGetPhysicalAddress
+  - MmMapLockedPagesSpecifyCache
+  - ObReferenceObjectByHandle
+  - ZwOpenSection
+  - IoAllocateMdl
+  - MmAllocateContiguousMemory
+  - KeBugCheckEx
+  - RtlInitUnicodeString
+  - _snwprintf
+  - IoCreateNotificationEvent
+  - IoDeleteSymbolicLink
+  - HalTranslateBusAddress
+  - HalGetInterruptVector
+  - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: Agent64.sys
+  MD5: 29ccff428e5eb70ae429c3da8968e1ec
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: Agent64.sys
+  Product: DriverAgent
+  ProductVersion: '6.0'
+  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
   RichPEHeaderHash:
     MD5: dd9ea0c6c3773a8caf1a86726551af41
     SHA1: 45509ef0d417fb2a30496adc9511d048e4730f98
     SHA256: 5b467c45ee29fdaba31eff00eacc8db61940f94a9bf6a357c0663c58b2cd752b
+  SHA1: 21e6c104fe9731c874fab5c9560c929b2857b918
+  SHA256: 8cb62c5d41148de416014f80bd1fd033fd4d2bd504cb05b90eeb6992a382d58f
   Sections:
     .text:
       Entropy: 6.202530356985499
@@ -557,72 +639,10 @@ KnownVulnerableSamples:
     .rsrc:
       Entropy: 3.2916671010793452
       Virtual Size: '0x3f8'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-12-14 03:23:26'
-- Filename: Agent64.sys
-  MD5: 29ccff428e5eb70ae429c3da8968e1ec
-  SHA1: 21e6c104fe9731c874fab5c9560c929b2857b918
-  SHA256: 8cb62c5d41148de416014f80bd1fd033fd4d2bd504cb05b90eeb6992a382d58f
   Signature:
   - eSupport.com, Inc
   - GlobalSign CodeSigning CA - G2
   - GlobalSign Root CA - R1
-  Date: ''
-  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
-  Company: Phoenix Technologies
-  Description: DriverAgent Direct I/O for 64-bit Windows
-  Product: DriverAgent
-  ProductVersion: '6.0'
-  FileVersion: '6.0'
-  MachineType: AMD64
-  OriginalFilename: Agent64.sys
-  Authentihash:
-    MD5: d86884546c97e614b73d16c600cfb2df
-    SHA1: 94f7575a6bb378d0cf85b3dc65941c95415e7a80
-    SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
-  InternalName: Agent64.sys
-  Copyright: EnTech Taiwan, 1997-2009
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - KeInitializeDpc
-  - IofCompleteRequest
-  - IoCreateSymbolicLink
-  - IoCreateDevice
-  - IofCallDriver
-  - ExFreePoolWithTag
-  - ExAllocatePool
-  - ZwClose
-  - MmUnmapLockedPages
-  - IoDeleteDevice
-  - KeSetEvent
-  - MmFreeContiguousMemory
-  - MmUnmapIoSpace
-  - IoFreeMdl
-  - ZwUnmapViewOfSection
-  - IoConnectInterrupt
-  - IoDisconnectInterrupt
-  - IoStartNextPacket
-  - KeInsertQueueDpc
-  - MmMapLockedPages
-  - ZwMapViewOfSection
-  - MmBuildMdlForNonPagedPool
-  - MmGetPhysicalAddress
-  - MmMapLockedPagesSpecifyCache
-  - ObReferenceObjectByHandle
-  - ZwOpenSection
-  - IoAllocateMdl
-  - MmAllocateContiguousMemory
-  - KeBugCheckEx
-  - RtlInitUnicodeString
-  - _snwprintf
-  - IoCreateNotificationEvent
-  - IoDeleteSymbolicLink
-  - HalTranslateBusAddress
-  - HalGetInterruptVector
-  - KeStallExecutionProcessor
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -694,59 +714,18 @@ KnownVulnerableSamples:
     - SerialNumber: 11213d2f2fb6b9005e295e3c9596b6442513
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
-  RichPEHeaderHash:
-    MD5: dd9ea0c6c3773a8caf1a86726551af41
-    SHA1: 45509ef0d417fb2a30496adc9511d048e4730f98
-    SHA256: 5b467c45ee29fdaba31eff00eacc8db61940f94a9bf6a357c0663c58b2cd752b
-  Sections:
-    .text:
-      Entropy: 6.202530356985499
-      Virtual Size: '0x1e7e'
-    .rdata:
-      Entropy: 4.254011605715145
-      Virtual Size: '0x2c8'
-    .data:
-      Entropy: 0.36599028709984766
-      Virtual Size: '0x198'
-    .pdata:
-      Entropy: 3.801830276557545
-      Virtual Size: '0xf0'
-    INIT:
-      Entropy: 4.959426922678397
-      Virtual Size: '0x4e4'
-    .rsrc:
-      Entropy: 3.2916671010793452
-      Virtual Size: '0x3f8'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-12-14 03:23:26'
-- Filename: Agent64.sys
-  MD5: a57b47489febc552515778dd0fd1e51c
-  SHA1: d979353d04bf65cc92ad3412605bc81edbb75ec2
-  SHA256: b1d96233235a62dbb21b8dbe2d1ae333199669f67664b107bff1ad49b41d9414
-  Signature:
-  - eSupport.com, Inc.
-  - GlobalSign Extended Validation CodeSigning CA - SHA256 - G2
-  - GlobalSign
-  - GlobalSign Root CA - R1
-  Date: ''
-  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
-  Company: Phoenix Technologies
-  Description: DriverAgent Direct I/O for 64-bit Windows
-  Product: DriverAgent
-  ProductVersion: '6.0'
-  FileVersion: '6.0'
-  MachineType: AMD64
-  OriginalFilename: Agent64.sys
-  Authentihash:
+- Authentihash:
     MD5: d86884546c97e614b73d16c600cfb2df
     SHA1: 94f7575a6bb378d0cf85b3dc65941c95415e7a80
     SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
-  InternalName: Agent64.sys
+  Company: Phoenix Technologies
   Copyright: EnTech Taiwan, 1997-2009
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2009-12-14 03:23:26'
+  Date: ''
+  Description: DriverAgent Direct I/O for 64-bit Windows
   ExportedFunctions: ''
+  FileVersion: '6.0'
+  Filename: Agent64.sys
   ImportedFunctions:
   - KeInitializeDpc
   - IofCompleteRequest
@@ -784,6 +763,47 @@ KnownVulnerableSamples:
   - HalTranslateBusAddress
   - HalGetInterruptVector
   - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: Agent64.sys
+  MD5: a57b47489febc552515778dd0fd1e51c
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: Agent64.sys
+  Product: DriverAgent
+  ProductVersion: '6.0'
+  Publisher: '"eSupport.com, Inc.", Phoenix Technologies Ltd, "eSupport.com, Inc" '
+  RichPEHeaderHash:
+    MD5: dd9ea0c6c3773a8caf1a86726551af41
+    SHA1: 45509ef0d417fb2a30496adc9511d048e4730f98
+    SHA256: 5b467c45ee29fdaba31eff00eacc8db61940f94a9bf6a357c0663c58b2cd752b
+  SHA1: d979353d04bf65cc92ad3412605bc81edbb75ec2
+  SHA256: b1d96233235a62dbb21b8dbe2d1ae333199669f67664b107bff1ad49b41d9414
+  Sections:
+    .text:
+      Entropy: 6.202530356985499
+      Virtual Size: '0x1e7e'
+    .rdata:
+      Entropy: 4.254011605715145
+      Virtual Size: '0x2c8'
+    .data:
+      Entropy: 0.36599028709984766
+      Virtual Size: '0x198'
+    .pdata:
+      Entropy: 3.801830276557545
+      Virtual Size: '0xf0'
+    INIT:
+      Entropy: 4.959426922678397
+      Virtual Size: '0x4e4'
+    .rsrc:
+      Entropy: 3.2916671010793452
+      Virtual Size: '0x3f8'
+  Signature:
+  - eSupport.com, Inc.
+  - GlobalSign Extended Validation CodeSigning CA - SHA256 - G2
+  - GlobalSign
+  - GlobalSign Root CA - R1
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -844,10 +864,73 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
         CA , SHA256 , G2
       Version: 1
+- Authentihash:
+    MD5: d86884546c97e614b73d16c600cfb2df
+    SHA1: 94f7575a6bb378d0cf85b3dc65941c95415e7a80
+    SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
+  Company: Phoenix Technologies
+  Copyright: EnTech Taiwan, 1997-2009
+  CreationTimestamp: '2009-12-14 03:23:26'
+  Date: ''
+  Description: DriverAgent Direct I/O for 64-bit Windows
+  ExportedFunctions: ''
+  FileVersion: '6.0'
+  Filename: ''
+  ImportedFunctions:
+  - KeInitializeDpc
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - IofCallDriver
+  - ExFreePoolWithTag
+  - ExAllocatePool
+  - ZwClose
+  - MmUnmapLockedPages
+  - IoDeleteDevice
+  - KeSetEvent
+  - MmFreeContiguousMemory
+  - MmUnmapIoSpace
+  - IoFreeMdl
+  - ZwUnmapViewOfSection
+  - IoConnectInterrupt
+  - IoDisconnectInterrupt
+  - IoStartNextPacket
+  - KeInsertQueueDpc
+  - MmMapLockedPages
+  - ZwMapViewOfSection
+  - MmBuildMdlForNonPagedPool
+  - MmGetPhysicalAddress
+  - MmMapLockedPagesSpecifyCache
+  - ObReferenceObjectByHandle
+  - ZwOpenSection
+  - IoAllocateMdl
+  - MmAllocateContiguousMemory
+  - KeBugCheckEx
+  - RtlInitUnicodeString
+  - _snwprintf
+  - IoCreateNotificationEvent
+  - IoDeleteSymbolicLink
+  - HalTranslateBusAddress
+  - HalGetInterruptVector
+  - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: Agent64.sys
+  MD5: fe71c99a5830f94d77a8792741d6e6c7
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: Agent64.sys
+  PDBPath: ''
+  Product: DriverAgent
+  ProductVersion: '6.0'
+  Publisher: ''
   RichPEHeaderHash:
     MD5: dd9ea0c6c3773a8caf1a86726551af41
     SHA1: 45509ef0d417fb2a30496adc9511d048e4730f98
     SHA256: 5b467c45ee29fdaba31eff00eacc8db61940f94a9bf6a357c0663c58b2cd752b
+  SHA1: acb5d7e182a108ee02c5cb879fc94e0d6db7dd68
+  SHA256: 4db1e0fdc9e6cefeb1d588668ea6161a977c372d841e7b87098cf90aa679abfb
   Sections:
     .text:
       Entropy: 6.202530356985499
@@ -867,7 +950,12 @@ KnownVulnerableSamples:
     .rsrc:
       Entropy: 3.2916671010793452
       Virtual Size: '0x3f8'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-12-14 03:23:26'
+  Signature: ''
+  Signatures: {}
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - Agent64.sys
+Verified: 'TRUE'

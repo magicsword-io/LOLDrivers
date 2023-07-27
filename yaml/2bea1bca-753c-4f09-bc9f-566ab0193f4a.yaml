@@ -1,14 +1,13 @@
-Id: 2bea1bca-753c-4f09-bc9f-566ab0193f4a
+Acknowledgement:
+  Handle: '@mattnotmax'
+  Person: MattNotMax
 Author: Michael Haag, rasta-mouse, goosvorbook
-Created: '2023-01-09'
-MitreID: T1068
 CVEs:
 - CVE-2018-19320
 - CVE-2018-19322
 - CVE-2018-19323
 - CVE-2018-19321
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create gdrv.sys binPath=C:\windows\temp\gdrv.sys type=kernel &&
     sc.exe start gdrv.sys
@@ -18,19 +17,10 @@ Commands:
     Registers (MSRs). Affected versions: GIGABYTE APP Center v1.05.21 and previous,
     AORUS GRAPHICS ENGINE v1.33 and previous, XTREME GAMING ENGINE v1.25 and previous,
     OC GURU II v2.08'
-  Usecase: Elevate privileges, tamper with PPL or system processes
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://github.com/hoangprod/DanSpecial
-- https://github.com/namazso/physmem_drivers
-- https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-privilege-vulnerabilities
-- https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b
-- https://github.com/namazso/physmem_drivers
-- https://github.com/hmnthabit/CVE-2018-19320-LPE
-Acknowledgement:
-  Person: MattNotMax
-  Handle: '@mattnotmax'
+  Privileges: kernel
+  Usecase: Elevate privileges, tamper with PPL or system processes
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/31f4cfb4c71da44120752721103a16512444c13c2ac2d857a7e6f13cb679b427.yara
@@ -44,34 +34,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 2bea1bca-753c-4f09-bc9f-566ab0193f4a
 KnownVulnerableSamples:
-- Filename: gdrv.sys
-  MD5: 9ab9f3b75a2eb87fafb1b7361be9dfb3
-  SHA1: fe10018af723986db50701c8532df5ed98b17c39
-  SHA256: 31f4cfb4c71da44120752721103a16512444c13c2ac2d857a7e6f13cb679b427
-  Signature:
-  - Giga-Byte Technology
-  - VeriSign Class 3 Code Signing 2009-2 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: 2013-07-03 17:32:00 UTC, 2017-11-30 18:40:00 UTC
-  Publisher: ''
-  Company: Windows (R) Server 2003 DDK provider
-  Description: GIGABYTE Tools
-  Product: Windows (R) Server 2003 DDK driver
-  ProductVersion: 5.2.3790.1830
-  FileVersion: '5.2.3790.1830 built by: WinDDK'
-  MachineType: AMD64
-  OriginalFilename: gdrv.sys
-  Authentihash:
+- Authentihash:
     MD5: b18b1bff521337695d2d6a0768340252
     SHA1: 0f5034fcf5b34be22a72d2ecc29e348e93b6f00f
     SHA256: 9c0e80958b907c8df345ec2f8d711acefb4951ee3e6e84892ecd429f5e1f3acb
-  InternalName: gdrv.sys
+  Company: Windows (R) Server 2003 DDK provider
   Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2013-07-03 22:27:55'
+  Date: ''
+  Description: GIGABYTE Tools
   ExportedFunctions: ''
+  FileVersion: '5.2.3790.1830 built by: WinDDK'
+  Filename: gdrv.sys
   ImportedFunctions:
   - IoCreateDevice
   - RtlInitUnicodeString
@@ -101,6 +77,46 @@ KnownVulnerableSamples:
   - KeReleaseInStackQueuedSpinLock
   - IoDeleteDevice
   - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: gdrv.sys
+  MD5: 9ab9f3b75a2eb87fafb1b7361be9dfb3
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: gdrv.sys
+  Product: Windows (R) Server 2003 DDK driver
+  ProductVersion: 5.2.3790.1830
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 2c77dbb41d635860b678106d8fa08bb9
+    SHA1: 4051f5ac448fe8692e040214388d39e15e328d94
+    SHA256: 6254640a7abc96cdb67d146d6295362aaff6ef9f6a04015883379d7008d86322
+  SHA1: fe10018af723986db50701c8532df5ed98b17c39
+  SHA256: 31f4cfb4c71da44120752721103a16512444c13c2ac2d857a7e6f13cb679b427
+  Sections:
+    .text:
+      Entropy: 6.2502047491555315
+      Virtual Size: '0x2dc8'
+    .rdata:
+      Entropy: 4.431694959682769
+      Virtual Size: '0x610'
+    .data:
+      Entropy: 0.4231266687750792
+      Virtual Size: '0x158'
+    .pdata:
+      Entropy: 4.120326366692263
+      Virtual Size: '0x2dc'
+    INIT:
+      Entropy: 4.963482726390094
+      Virtual Size: '0x412'
+    .rsrc:
+      Entropy: 3.471909950512757
+      Virtual Size: '0x3e8'
+  Signature:
+  - Giga-Byte Technology
+  - VeriSign Class 3 Code Signing 2009-2 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -177,58 +193,18 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 2c77dbb41d635860b678106d8fa08bb9
-    SHA1: 4051f5ac448fe8692e040214388d39e15e328d94
-    SHA256: 6254640a7abc96cdb67d146d6295362aaff6ef9f6a04015883379d7008d86322
-  Sections:
-    .text:
-      Entropy: 6.2502047491555315
-      Virtual Size: '0x2dc8'
-    .rdata:
-      Entropy: 4.431694959682769
-      Virtual Size: '0x610'
-    .data:
-      Entropy: 0.4231266687750792
-      Virtual Size: '0x158'
-    .pdata:
-      Entropy: 4.120326366692263
-      Virtual Size: '0x2dc'
-    INIT:
-      Entropy: 4.963482726390094
-      Virtual Size: '0x412'
-    .rsrc:
-      Entropy: 3.471909950512757
-      Virtual Size: '0x3e8'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-07-03 22:27:55'
-- Filename: gdrv.sys
-  MD5: 1cff7b947f8c3dea1d34dc791fc78cdc
-  SHA1: 8d59fd14a445c8f3f0f7991fa6cd717d466b3754
-  SHA256: ff6729518a380bf57f1bc6f1ec0aa7f3012e1618b8d9b0f31a61d299ee2b4339
-  Signature:
-  - GIGA-BYTE TECHNOLOGY CO., LTD.
-  - Symantec Class 3 SHA256 Code Signing CA
-  - VeriSign
-  Date: 2013-07-03 17:32:00 UTC, 2017-11-30 18:40:00 UTC
-  Publisher: ''
-  Company: GIGA-BYTE TECHNOLOGY CO., LTD.
-  Description: GIGA-BYTE NonPNP Driver
-  Product: gdrv64
-  ProductVersion: '17120101'
-  FileVersion: 1.0.0.1
-  MachineType: AMD64
-  OriginalFilename: gdrv.sys
-  Authentihash:
+- Authentihash:
     MD5: bf45a5d10968424666abede02113a509
     SHA1: 5c26f130f6a5ad8bdd2eed29140542dae0885b17
     SHA256: 34da66774ba09c4a8fc59349401ca1fefaaf4e66a9c620c7782c072a16089ba3
-  InternalName: gdrv.sys
+  Company: GIGA-BYTE TECHNOLOGY CO., LTD.
   Copyright: Copyright (C) 2017
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2017-11-30 22:40:53'
+  Date: 2013-07-03 17:32:00 UTC, 2017-11-30 18:40:00 UTC
+  Description: GIGA-BYTE NonPNP Driver
   ExportedFunctions: ''
+  FileVersion: 1.0.0.1
+  Filename: gdrv.sys
   ImportedFunctions:
   - KeAcquireInStackQueuedSpinLock
   - KeReleaseInStackQueuedSpinLock
@@ -259,6 +235,52 @@ KnownVulnerableSamples:
   - IoCreateDevice
   - RtlInitUnicodeString
   - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: gdrv.sys
+  MD5: 1cff7b947f8c3dea1d34dc791fc78cdc
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: gdrv.sys
+  Product: gdrv64
+  ProductVersion: '17120101'
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 70b1ee9be3128d3a3c5bf7c1f897432b
+    SHA1: c014187bfa0e24bebb124cb9ec8f15c032a84dfd
+    SHA256: 6a6338f1e739e18916862bfc84b364e3f8669e92eb2cd15505fff4f9bb5637ee
+  SHA1: 8d59fd14a445c8f3f0f7991fa6cd717d466b3754
+  SHA256: ff6729518a380bf57f1bc6f1ec0aa7f3012e1618b8d9b0f31a61d299ee2b4339
+  Sections:
+    .text:
+      Entropy: 6.467558996526725
+      Virtual Size: '0x2a8f'
+    .rdata:
+      Entropy: 4.214092846808287
+      Virtual Size: '0x6a0'
+    .data:
+      Entropy: 1.2607720515150977
+      Virtual Size: '0x54'
+    .pdata:
+      Entropy: 3.937251533548631
+      Virtual Size: '0x1ec'
+    .gfids:
+      Entropy: 0.8112781244591328
+      Virtual Size: '0x4'
+    INIT:
+      Entropy: 5.256526972951585
+      Virtual Size: '0x44c'
+    .rsrc:
+      Entropy: 3.3029113366937604
+      Virtual Size: '0x348'
+    .reloc:
+      Entropy: 2.7500000000000004
+      Virtual Size: '0x18'
+  Signature:
+  - GIGA-BYTE TECHNOLOGY CO., LTD.
+  - Symantec Class 3 SHA256 Code Signing CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -334,36 +356,169 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+- Authentihash:
+    MD5: b18b1bff521337695d2d6a0768340252
+    SHA1: 0f5034fcf5b34be22a72d2ecc29e348e93b6f00f
+    SHA256: 9c0e80958b907c8df345ec2f8d711acefb4951ee3e6e84892ecd429f5e1f3acb
+  Company: Windows (R) Server 2003 DDK provider
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
+  CreationTimestamp: '2013-07-03 22:27:55'
+  Date: ''
+  Description: GIGABYTE Tools
+  ExportedFunctions: ''
+  FileVersion: '5.2.3790.1830 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - IoCreateDevice
+  - RtlInitUnicodeString
+  - DbgPrint
+  - IoDeleteSymbolicLink
+  - ExFreePoolWithTag
+  - MmUnmapIoSpace
+  - IoFreeMdl
+  - MmUnmapLockedPages
+  - MmMapIoSpace
+  - ZwClose
+  - ZwMapViewOfSection
+  - ObReferenceObjectByHandle
+  - ZwOpenSection
+  - IoCreateSymbolicLink
+  - KeAcquireInStackQueuedSpinLock
+  - MmFreeContiguousMemory
+  - MmIsAddressValid
+  - MmAllocateContiguousMemory
+  - MmGetPhysicalAddress
+  - IofCompleteRequest
+  - ExAllocatePoolWithTag
+  - MmMapLockedPages
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - ZwUnmapViewOfSection
+  - KeReleaseInStackQueuedSpinLock
+  - IoDeleteDevice
+  - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: gdrv.sys
+  MD5: 95a95e28cf5ee4ece6ffbaf169358192
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: gdrv.sys
+  PDBPath: ''
+  Product: Windows (R) Server 2003 DDK driver
+  ProductVersion: 5.2.3790.1830
+  Publisher: ''
   RichPEHeaderHash:
-    MD5: 70b1ee9be3128d3a3c5bf7c1f897432b
-    SHA1: c014187bfa0e24bebb124cb9ec8f15c032a84dfd
-    SHA256: 6a6338f1e739e18916862bfc84b364e3f8669e92eb2cd15505fff4f9bb5637ee
+    MD5: 2c77dbb41d635860b678106d8fa08bb9
+    SHA1: 4051f5ac448fe8692e040214388d39e15e328d94
+    SHA256: 6254640a7abc96cdb67d146d6295362aaff6ef9f6a04015883379d7008d86322
+  SHA1: 84341ed15d645c4daedcdd39863998761e4cb0e3
+  SHA256: 88992ddcb9aaedb8bfcc9b4354138d1f7b0d7dddb9e7fcc28590f27824bee5c3
   Sections:
     .text:
-      Entropy: 6.467558996526725
-      Virtual Size: '0x2a8f'
+      Entropy: 6.2502047491555315
+      Virtual Size: '0x2dc8'
     .rdata:
-      Entropy: 4.214092846808287
-      Virtual Size: '0x6a0'
+      Entropy: 4.431694959682769
+      Virtual Size: '0x610'
     .data:
-      Entropy: 1.2607720515150977
-      Virtual Size: '0x54'
+      Entropy: 0.4231266687750792
+      Virtual Size: '0x158'
     .pdata:
-      Entropy: 3.937251533548631
-      Virtual Size: '0x1ec'
-    .gfids:
-      Entropy: 0.8112781244591328
-      Virtual Size: '0x4'
+      Entropy: 4.120326366692263
+      Virtual Size: '0x2dc'
     INIT:
-      Entropy: 5.256526972951585
-      Virtual Size: '0x44c'
+      Entropy: 4.963482726390094
+      Virtual Size: '0x412'
     .rsrc:
-      Entropy: 3.3029113366937604
-      Virtual Size: '0x348'
-    .reloc:
-      Entropy: 2.7500000000000004
-      Virtual Size: '0x18'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-11-30 22:40:53'
+      Entropy: 3.471909950512757
+      Virtual Size: '0x3e8'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
+        CA
+      ValidFrom: '2009-05-21 00:00:00'
+      ValidTo: '2019-05-20 23:59:59'
+      Signature: 8b03c0dd94d841a26169b015a878c730c6903c7e42f724b6e4837317047f04109ca1e2fa812febc0ca44e772e050b6551020836e9692e49a516ab43731dca52deb8c00c71d4fe74d32ba85f84ebefa675565f06abe7aca64381a101078457631f3867a030f60c2b35d9df68b6676821b59e183e5bd49a53856e5de41770e580f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 655226e1b22e18e1590f2985ac22e75c
+      Version: 3
+      TBS:
+        MD5: 650704c342850095f3288eaf791147d4
+        SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
+        SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+    - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
+      ValidFrom: '2006-05-23 17:01:29'
+      ValidTo: '2016-05-23 17:11:29'
+      Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 610c120600000000001b
+      Version: 3
+      TBS:
+        MD5: 53c41bc1164e09e0cd1617a5bf913efd
+        SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
+        SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+    - Subject: C=TW, ST=Taiwan, L=Taipei Hsien, O=Giga,Byte Technology, OU=Digital
+        ID Class 3 , Microsoft Software Validation v2, OU=Testing Department, CN=Giga,Byte
+        Technology
+      ValidFrom: '2010-08-23 00:00:00'
+      ValidTo: '2013-10-17 23:59:59'
+      Signature: a91cbb579fbb2bc2ed2fe0fa0055cc881ce21e175262d28efea8bd12eff1095eb750b2fc7b842c4c739c2e4ef41d1065df039d1d62e0c5db62340fd1989efcc16e97b23caaa71e40dcabaf4aa34dd7d53a3ef5c0f2fec1b964798d2a1c8b11d68ea326495fbede162652faa523ce52ed60ca5227dddeab211b90965b866425adc84465117f3ec040cb005aa590ef69a70db0de17af66f3e52da6b8c93237fc1975e2891c89712971266c80956a21542c71e1962b16655373911c3ea09bd0b26c866eb1a9fe4f1d0f7be30888c529b148990b4f226897e2a4a651c80cc79196f2731949d190c67be01b82362956317bc3487f490b460924ad135d97c6f9526292
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 248472542c24ab8e429229acf121ca26
+      Version: 3
+      TBS:
+        MD5: dc48abdae01614d4607b1f5760dfce88
+        SHA1: 467c1868ddb5ef8db746e66acbaab9fdd03fb740
+        SHA256: a7f448e2fe327e481adfd1e89db612d5c58ff7891373a6e398ab98ddaeae74c5
+    Signer:
+    - SerialNumber: 248472542c24ab8e429229acf121ca26
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
+        CA
+      Version: 1
+MitreID: T1068
+Resources:
+- https://github.com/hoangprod/DanSpecial
+- https://github.com/namazso/physmem_drivers
+- https://www.secureauth.com/labs/advisories/gigabyte-drivers-elevation-privilege-vulnerabilities
+- https://medium.com/@fsx30/weaponizing-vulnerable-driver-for-privilege-escalation-gigabyte-edition-e73ee523598b
+- https://github.com/namazso/physmem_drivers
+- https://github.com/hmnthabit/CVE-2018-19320-LPE
 Tags:
 - gdrv.sys
+Verified: 'TRUE'
