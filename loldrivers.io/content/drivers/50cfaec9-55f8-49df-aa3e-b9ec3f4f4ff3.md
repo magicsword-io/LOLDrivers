@@ -404,7 +404,7 @@ sc.exe create mhyprot.sys binPath=C:\windows\temp\mhyprot.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/50cfaec9-55f8-49df-aa3e-b9ec3f4f4ff3.yaml)
 
-*last_updated:* 2023-07-25
+*last_updated:* 2023-07-27
 
 {{< /column >}}
 {{< /block >}}
