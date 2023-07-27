@@ -1,23 +1,16 @@
-Id: 892292f9-b87c-40a5-80e5-8c9b02914e8b
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-02-28'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create wantd.sys binPath=C:\windows\temp\wantd.sys type=kernel &&
     sc.exe start wantd.sys
   Description: Driver used in the Daxin malware campaign.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
-- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
-- ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-02-28'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4.yara
@@ -29,32 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 892292f9-b87c-40a5-80e5-8c9b02914e8b
 KnownVulnerableSamples:
-- Filename: wantd.sys
-  MD5: b0770094c3c64250167b55e4db850c04
-  SHA1: 6abbc3003c7aa69ce79cbbcd2e3210b07f21d202
-  SHA256: 06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4
-  Signature: A required certificate is not within its validity period when verifying
-    against the current system clock or the timestamp in the signed file.
-  Date: 11:59 PM 11/27/2013
-  Publisher: Anhua Xinda (Beijing) Technology Co., Ltd.
-  Company: Microsoft Corporation
-  Description: WAN Transport Driver
-  Product: Microsoft Windows Operating System
-  ProductVersion: 6.1.7600.1172
-  FileVersion: 6.1.7600.1172
-  MachineType: AMD64
-  OriginalFilename: wantd.sys
-  Authentihash:
+- Authentihash:
     MD5: 1ed42c05e43c14ab16d16fbe8eaed870
     SHA1: 68cb54489a0556594a28f5f1410cc64d74a1c182
     SHA256: a47b9af109988e8e033886638edc84964968eecd0d24483eafaad6a6d68005ea
-  InternalName: wantd.sys
+  Company: Microsoft Corporation
   Copyright: Microsoft Corporation. All rights reserved.
-  Imports:
-  - ntoskrnl.exe
-  - NDIS.SYS
+  CreationTimestamp: '2013-11-27 16:59:02'
+  Date: ''
+  Description: WAN Transport Driver
   ExportedFunctions: ''
+  FileVersion: 6.1.7600.1172
+  Filename: wantd.sys
   ImportedFunctions:
   - wcsncmp
   - IoAllocateMdl
@@ -139,6 +120,44 @@ KnownVulnerableSamples:
   - NdisFreeNetBufferListPool
   - NdisFreeNetBufferList
   - NdisSendNetBufferLists
+  Imports:
+  - ntoskrnl.exe
+  - NDIS.SYS
+  InternalName: wantd.sys
+  MD5: b0770094c3c64250167b55e4db850c04
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: wantd.sys
+  Product: Microsoft Windows Operating System
+  ProductVersion: 6.1.7600.1172
+  Publisher: Anhua Xinda (Beijing) Technology Co., Ltd.
+  RichPEHeaderHash:
+    MD5: 8cdd468850a9084b109fb26005e28d1f
+    SHA1: abee83f631fc7792dc07a572a003c103903f305e
+    SHA256: aa49c3910540c2edd0e4a9154e5741d5cc65662a1364616e057ca3fc74243755
+  SHA1: 6abbc3003c7aa69ce79cbbcd2e3210b07f21d202
+  SHA256: 06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4
+  Sections:
+    .text:
+      Entropy: 6.377221041391935
+      Virtual Size: '0xd88c'
+    .rdata:
+      Entropy: 4.702371843577182
+      Virtual Size: '0x84c'
+    .data:
+      Entropy: 1.0571423331776753
+      Virtual Size: '0x12590'
+    .pdata:
+      Entropy: 4.5393227380510455
+      Virtual Size: '0x8c4'
+    INIT:
+      Entropy: 5.793042716031905
+      Virtual Size: '0xd8c'
+    .rsrc:
+      Entropy: 3.262685485179719
+      Virtual Size: '0x3b0'
+  Signature: A required certificate is not within its validity period when verifying
+    against the current system clock or the timestamp in the signed file.
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -191,30 +210,11 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 8cdd468850a9084b109fb26005e28d1f
-    SHA1: abee83f631fc7792dc07a572a003c103903f305e
-    SHA256: aa49c3910540c2edd0e4a9154e5741d5cc65662a1364616e057ca3fc74243755
-  Sections:
-    .text:
-      Entropy: 6.377221041391935
-      Virtual Size: '0xd88c'
-    .rdata:
-      Entropy: 4.702371843577182
-      Virtual Size: '0x84c'
-    .data:
-      Entropy: 1.0571423331776753
-      Virtual Size: '0x12590'
-    .pdata:
-      Entropy: 4.5393227380510455
-      Virtual Size: '0x8c4'
-    INIT:
-      Entropy: 5.793042716031905
-      Virtual Size: '0xd8c'
-    .rsrc:
-      Entropy: 3.262685485179719
-      Virtual Size: '0x3b0'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-11-27 16:59:02'
+MitreID: T1068
+Resources:
+- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+- ''
 Tags:
 - wantd.sys
+Verified: 'TRUE'

@@ -1,22 +1,16 @@
-Id: 47a351ee-8abe-40d8-bc2b-557390fa0945
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create Lv561av.sys binPath=C:\windows\temp\Lv561av.sys type=kernel
     && sc.exe start Lv561av.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e86cb77de7b6a8025f9a546f6c45d135f471e664963cf70b381bee2dfd0fdef4.yara
@@ -28,37 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 47a351ee-8abe-40d8-bc2b-557390fa0945
 KnownVulnerableSamples:
-- Filename: Lv561av.sys
-  MD5: b47dee29b5e6e1939567a926c7a3e6a4
-  SHA1: 351cbd352b3ec0d5f4f58c84af732a0bf41b4463
-  SHA256: e86cb77de7b6a8025f9a546f6c45d135f471e664963cf70b381bee2dfd0fdef4
-  Signature:
-  - Logitech Inc
-  - VeriSign Class 3 Code Signing 2004 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: ''
-  Publisher: ''
-  Company: Logitech Inc.
-  Description: Logitech Video Driver
-  Product: Logitech Webcam Software
-  ProductVersion: 12.00.1278.0
-  FileVersion: 12.00.1278.0
-  MachineType: AMD64
-  OriginalFilename: Lv561av.sys
-  Authentihash:
+- Authentihash:
     MD5: 92a9fa0ebbb45b600397611e247710b1
     SHA1: ed3e97c7290768216c5b3abbd4a29dde856eb3c7
     SHA256: c54ffa9a32cd99972ca905dcf99e20f8429e3cfd45bc1ddf4f9af8b3ed688c88
-  InternalName: Lv561av.sys
+  Company: Logitech Inc.
   Copyright: (c) 1996-2009 Logitech.  All rights reserved.
-  Imports:
-  - NTOSKRNL.exe
-  - ntoskrnl.exe
-  - HAL.DLL
-  - USBD.SYS
-  - ks.sys
+  CreationTimestamp: '2009-04-30 16:43:07'
+  Date: ''
+  Description: Logitech Video Driver
   ExportedFunctions: ''
+  FileVersion: 12.00.1278.0
+  Filename: Lv561av.sys
   ImportedFunctions:
   - KeWaitForSingleObject
   - IoBuildSynchronousFsdRequest
@@ -179,6 +156,55 @@ KnownVulnerableSamples:
   - KsStreamPointerDelete
   - KsStreamPointerAdvance
   - KsDefaultAddEventHandler
+  Imports:
+  - NTOSKRNL.exe
+  - ntoskrnl.exe
+  - HAL.DLL
+  - USBD.SYS
+  - ks.sys
+  InternalName: Lv561av.sys
+  MD5: b47dee29b5e6e1939567a926c7a3e6a4
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: Lv561av.sys
+  Product: Logitech Webcam Software
+  ProductVersion: 12.00.1278.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 336f1265144cabe54117b2a5a2feaa61
+    SHA1: a7929a374484ec35507a4aed4fde1fe68da65590
+    SHA256: 3ae3d9dea9a6862c021e9cb564ce10ce270d868c008af55453bb6b23e1c065a7
+  SHA1: 351cbd352b3ec0d5f4f58c84af732a0bf41b4463
+  SHA256: e86cb77de7b6a8025f9a546f6c45d135f471e664963cf70b381bee2dfd0fdef4
+  Sections:
+    .text:
+      Entropy: 6.406233801541219
+      Virtual Size: '0x479e9'
+    .rdata:
+      Entropy: 4.196349686025448
+      Virtual Size: '0x45cc'
+    .data:
+      Entropy: 0.8628896749719599
+      Virtual Size: '0x31108'
+    .pdata:
+      Entropy: 5.66659760742878
+      Virtual Size: '0x2094'
+    PAGE:
+      Entropy: 5.987346466184306
+      Virtual Size: '0xc4ba'
+    INIT:
+      Entropy: 5.299569824747148
+      Virtual Size: '0x1092'
+    .rsrc:
+      Entropy: 3.4673390377653823
+      Virtual Size: '0x958'
+    .reloc:
+      Entropy: 4.0356682635201455
+      Virtual Size: '0xc94'
+  Signature:
+  - Logitech Inc
+  - VeriSign Class 3 Code Signing 2004 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -253,36 +279,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 336f1265144cabe54117b2a5a2feaa61
-    SHA1: a7929a374484ec35507a4aed4fde1fe68da65590
-    SHA256: 3ae3d9dea9a6862c021e9cb564ce10ce270d868c008af55453bb6b23e1c065a7
-  Sections:
-    .text:
-      Entropy: 6.406233801541219
-      Virtual Size: '0x479e9'
-    .rdata:
-      Entropy: 4.196349686025448
-      Virtual Size: '0x45cc'
-    .data:
-      Entropy: 0.8628896749719599
-      Virtual Size: '0x31108'
-    .pdata:
-      Entropy: 5.66659760742878
-      Virtual Size: '0x2094'
-    PAGE:
-      Entropy: 5.987346466184306
-      Virtual Size: '0xc4ba'
-    INIT:
-      Entropy: 5.299569824747148
-      Virtual Size: '0x1092'
-    .rsrc:
-      Entropy: 3.4673390377653823
-      Virtual Size: '0x958'
-    .reloc:
-      Entropy: 4.0356682635201455
-      Virtual Size: '0xc94'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-04-30 16:43:07'
+MitreID: T1068
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - Lv561av.sys
+Verified: 'FALSE'

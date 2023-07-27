@@ -1,51 +1,31 @@
-Id: 1bf3b155-752a-4cc7-beb0-f202e525eb1a
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-02-28'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create daxin_blank1.sys binPath=C:\windows\temp\daxin_blank1.sys     type=kernel
     && sc.exe start daxin_blank1.sys
   Description: Driver used in the Daxin malware campaign.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
-- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
-- ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-02-28'
 Detection: []
+Id: 1bf3b155-752a-4cc7-beb0-f202e525eb1a
 KnownVulnerableSamples:
-- Filename: daxin_blank1.sys
-  MD5: a6e9d6505f6d2326a8a9214667c61c67
-  SHA1: cb3f30809b05cf02bc29d4a7796fb0650271e542
-  SHA256: 5bc3994612624da168750455b363f2964e1861dba4f1c305df01b970ac02a7ae
-  Signature: A certificate was explicitly revoked by its issuer.
-  Date: 4:05 AM 2/6/2021
-  Publisher: Fuqing Yuntan Network Tech Co.,Ltd.
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 7c9b3308f3eb98dd7ddb59b2f6b14656
     SHA1: 6a9693e262ea82a33b6caee0426512f944366577
     SHA256: 389d04a947be32b43eab5767f548fc193e9ac5fe5225a3b6dc26ddc80c326d7d
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - NDIS.SYS
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2021-02-05 21:05:26'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: daxin_blank1.sys
   ImportedFunctions:
   - _stricmp
   - NdisDeregisterProtocol
@@ -62,6 +42,51 @@ KnownVulnerableSamples:
   - KeRevertToUserAffinityThread
   - DbgPrint
   - KeQueryPerformanceCounter
+  Imports:
+  - ntoskrnl.exe
+  - NDIS.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: a6e9d6505f6d2326a8a9214667c61c67
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: Fuqing Yuntan Network Tech Co.,Ltd.
+  RichPEHeaderHash:
+    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
+    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
+    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
+  SHA1: cb3f30809b05cf02bc29d4a7796fb0650271e542
+  SHA256: 5bc3994612624da168750455b363f2964e1861dba4f1c305df01b970ac02a7ae
+  Sections:
+    .text:
+      Entropy: 0.0
+      Virtual Size: '0xfd2c'
+    .rdata:
+      Entropy: 0.0
+      Virtual Size: '0x97c'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0x137b0'
+    .pdata:
+      Entropy: 0.0
+      Virtual Size: '0x9f0'
+    INIT:
+      Entropy: 0.0
+      Virtual Size: '0x10fa'
+    .vmp0:
+      Entropy: 0.0
+      Virtual Size: '0x14c4ff'
+    .vmp1:
+      Entropy: 7.704706089997662
+      Virtual Size: '0x297058'
+    .reloc:
+      Entropy: 3.8824949399771813
+      Virtual Size: '0x90'
+  Signature: A certificate was explicitly revoked by its issuer.
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -114,36 +139,11 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
-    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
-    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
-  Sections:
-    .text:
-      Entropy: 0.0
-      Virtual Size: '0xfd2c'
-    .rdata:
-      Entropy: 0.0
-      Virtual Size: '0x97c'
-    .data:
-      Entropy: 0.0
-      Virtual Size: '0x137b0'
-    .pdata:
-      Entropy: 0.0
-      Virtual Size: '0x9f0'
-    INIT:
-      Entropy: 0.0
-      Virtual Size: '0x10fa'
-    .vmp0:
-      Entropy: 0.0
-      Virtual Size: '0x14c4ff'
-    .vmp1:
-      Entropy: 7.704706089997662
-      Virtual Size: '0x297058'
-    .reloc:
-      Entropy: 3.8824949399771813
-      Virtual Size: '0x90'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-02-05 21:05:26'
+MitreID: T1068
+Resources:
+- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+- ''
 Tags:
 - daxin_blank1.sys
+Verified: 'TRUE'

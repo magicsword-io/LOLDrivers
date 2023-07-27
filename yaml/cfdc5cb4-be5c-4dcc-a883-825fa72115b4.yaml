@@ -1,22 +1,16 @@
-Id: cfdc5cb4-be5c-4dcc-a883-825fa72115b4
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create PanMonFlt.sys binPath=C:\windows\temp\PanMonFlt.sys type=kernel
     && sc.exe start PanMonFlt.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/7e0124fcc7c95fdc34408cf154cb41e654dade8b898c71ad587b2090b1da30d7.yara
@@ -28,36 +22,21 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: cfdc5cb4-be5c-4dcc-a883-825fa72115b4
 KnownVulnerableSamples:
-- Filename: PanMonFlt.sys
-  MD5: 2850608430dd089f24386f3336c84729
-  SHA1: a6816949cd469b6e5c35858d19273936fab1bef6
-  SHA256: 7e0124fcc7c95fdc34408cf154cb41e654dade8b898c71ad587b2090b1da30d7
-  Signature:
-  - PAN YAZILIM BILISIM TEKNOLOJILERI TICARET LTD. STI.
-  - GlobalSign CodeSigning CA - G2
-  - GlobalSign
-  Date: ''
-  Publisher: ''
-  Company: Pan Yazilim Bilisim Teknolojileri Tic. Ltd. Sti.
-  Description: PanCafe Manager File Monitor
-  Product: PanCafe Manager
-  ProductVersion: 1.0.0.0
-  FileVersion: 1.0.0.0
-  MachineType: I386
-  OriginalFilename: PanMonFlt.sys
-  Authentihash:
+- Authentihash:
     MD5: 850ca45e16991f9560f708bf7a186754
     SHA1: 800256c84e09de2c001868c0ec35211f6e9ad92a
     SHA256: 348679f0f44eb5a50601c48728a5afd2b4312c95eeb7179ce57d447c0d30f873
-  InternalName: PanMonFlt.sys
+  Company: Pan Yazilim Bilisim Teknolojileri Tic. Ltd. Sti.
   Copyright: "Copyright (c) 2012-2014 Pan Yaz\u0131l\u0131m Bilisim Teknolojileri\
     \ Tic. Ltd. Sti."
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  - FLTMGR.SYS
+  CreationTimestamp: '2014-05-13 04:15:33'
+  Date: ''
+  Description: PanCafe Manager File Monitor
   ExportedFunctions: ''
+  FileVersion: 1.0.0.0
+  Filename: PanMonFlt.sys
   ImportedFunctions:
   - ExfInterlockedInsertTailList
   - RtlEqualUnicodeString
@@ -97,6 +76,50 @@ KnownVulnerableSamples:
   - FltSendMessage
   - FltCloseClientPort
   - FltCloseCommunicationPort
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - FLTMGR.SYS
+  InternalName: PanMonFlt.sys
+  MD5: 2850608430dd089f24386f3336c84729
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: PanMonFlt.sys
+  Product: PanCafe Manager
+  ProductVersion: 1.0.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 1b4eab2e9a9d6d50d01f5f87b3204eca
+    SHA1: eac6a4bc47ad1644fe24fdba3c6b48473019e7dd
+    SHA256: 34e9a03dfe62d72f328ca4767b059492f97da7e2e417602f77fe7406a7383066
+  SHA1: a6816949cd469b6e5c35858d19273936fab1bef6
+  SHA256: 7e0124fcc7c95fdc34408cf154cb41e654dade8b898c71ad587b2090b1da30d7
+  Sections:
+    .text:
+      Entropy: 6.335726638794917
+      Virtual Size: '0x10f4'
+    .rdata:
+      Entropy: 3.525137185011594
+      Virtual Size: '0x2e4'
+    .data:
+      Entropy: 0.6031688079276124
+      Virtual Size: '0x6c'
+    PAGE:
+      Entropy: 6.342959495579106
+      Virtual Size: '0x8a9'
+    INIT:
+      Entropy: 5.701244302783198
+      Virtual Size: '0x662'
+    .rsrc:
+      Entropy: 3.277025420592376
+      Virtual Size: '0x458'
+    .reloc:
+      Entropy: 6.226641404507606
+      Virtual Size: '0x25a'
+  Signature:
+  - PAN YAZILIM BILISIM TEKNOLOJILERI TICARET LTD. STI.
+  - GlobalSign CodeSigning CA - G2
+  - GlobalSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -167,33 +190,10 @@ KnownVulnerableSamples:
     - SerialNumber: 1121506480253469e07e54ee8612041fbb92
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
-  RichPEHeaderHash:
-    MD5: 1b4eab2e9a9d6d50d01f5f87b3204eca
-    SHA1: eac6a4bc47ad1644fe24fdba3c6b48473019e7dd
-    SHA256: 34e9a03dfe62d72f328ca4767b059492f97da7e2e417602f77fe7406a7383066
-  Sections:
-    .text:
-      Entropy: 6.335726638794917
-      Virtual Size: '0x10f4'
-    .rdata:
-      Entropy: 3.525137185011594
-      Virtual Size: '0x2e4'
-    .data:
-      Entropy: 0.6031688079276124
-      Virtual Size: '0x6c'
-    PAGE:
-      Entropy: 6.342959495579106
-      Virtual Size: '0x8a9'
-    INIT:
-      Entropy: 5.701244302783198
-      Virtual Size: '0x662'
-    .rsrc:
-      Entropy: 3.277025420592376
-      Virtual Size: '0x458'
-    .reloc:
-      Entropy: 6.226641404507606
-      Virtual Size: '0x25a'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-05-13 04:15:33'
+MitreID: T1068
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - PanMonFlt.sys
+Verified: 'FALSE'

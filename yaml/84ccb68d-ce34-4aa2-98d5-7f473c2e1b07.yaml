@@ -1,52 +1,31 @@
-Id: 84ccb68d-ce34-4aa2-98d5-7f473c2e1b07
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create SysInfo.sys binPath=C:\windows\temp\SysInfo.sys type=kernel
     && sc.exe start SysInfo.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: 84ccb68d-ce34-4aa2-98d5-7f473c2e1b07
 KnownVulnerableSamples:
-- Filename: SysInfo.sys
-  MD5: 5228b7a738dc90a06ae4f4a7412cb1e9
-  SHA1: f0c463d29a5914b01e4607889094f1b7d95e7aaf
-  SHA256: 7049f3c939efe76a5556c2a2c04386db51daf61d56b679f4868bb0983c996ebb
-  Signature:
-  - Noriyuki MIYAZAKI
-  - GlobalSign ObjectSign CA
-  - GlobalSign Primary Object Publishing CA
-  - GlobalSign Root CA - R1
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 0f56e9fddae9389425d93099ad609867
     SHA1: ca88f321631c1552e3e0bcd1f26ad3435cc9f1ae
     SHA256: a82d08ef67bdfccf0a2cf6d507c9fbb6ac42bd74bf2ade46ec07fe253deb6573
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2005-09-18 15:24:12'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: SysInfo.sys
   ImportedFunctions:
   - RtlInitUnicodeString
   - __C_specific_handler
@@ -65,6 +44,47 @@ KnownVulnerableSamples:
   - IoDeleteDevice
   - HalGetBusDataByOffset
   - HalSetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: 5228b7a738dc90a06ae4f4a7412cb1e9
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 6f1cb980913392475dc6ef6c3e569966
+    SHA1: f9a5cfdfccc186ff84aa40a07c1cdb730d82e085
+    SHA256: bad3eabf9d630efa497af8ca6a682b596241143a6ce77f4e267cf15e19895da9
+  SHA1: f0c463d29a5914b01e4607889094f1b7d95e7aaf
+  SHA256: 7049f3c939efe76a5556c2a2c04386db51daf61d56b679f4868bb0983c996ebb
+  Sections:
+    .text:
+      Entropy: 5.870227791947925
+      Virtual Size: '0x14fe'
+    .rdata:
+      Entropy: 4.287500138971227
+      Virtual Size: '0x3d0'
+    .data:
+      Entropy: 1.2323958376791513
+      Virtual Size: '0x194'
+    .pdata:
+      Entropy: 3.8940062848117547
+      Virtual Size: '0x1e0'
+    INIT:
+      Entropy: 4.784186682731765
+      Virtual Size: '0x2b0'
+    .reloc:
+      Entropy: 2.011866957009745
+      Virtual Size: '0x5c'
+  Signature:
+  - Noriyuki MIYAZAKI
+  - GlobalSign ObjectSign CA
+  - GlobalSign Primary Object Publishing CA
+  - GlobalSign Root CA - R1
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -149,30 +169,10 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 6f1cb980913392475dc6ef6c3e569966
-    SHA1: f9a5cfdfccc186ff84aa40a07c1cdb730d82e085
-    SHA256: bad3eabf9d630efa497af8ca6a682b596241143a6ce77f4e267cf15e19895da9
-  Sections:
-    .text:
-      Entropy: 5.870227791947925
-      Virtual Size: '0x14fe'
-    .rdata:
-      Entropy: 4.287500138971227
-      Virtual Size: '0x3d0'
-    .data:
-      Entropy: 1.2323958376791513
-      Virtual Size: '0x194'
-    .pdata:
-      Entropy: 3.8940062848117547
-      Virtual Size: '0x1e0'
-    INIT:
-      Entropy: 4.784186682731765
-      Virtual Size: '0x2b0'
-    .reloc:
-      Entropy: 2.011866957009745
-      Virtual Size: '0x5c'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-09-18 15:24:12'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - SysInfo.sys
+Verified: 'TRUE'

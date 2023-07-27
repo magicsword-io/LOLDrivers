@@ -1,22 +1,16 @@
-Id: 999a11ae-ec2b-4863-baa4-1384ec2b7339
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create NalDrv.sys binPath=C:\windows\temp\NalDrv.sys type=kernel
     && sc.exe start NalDrv.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c'
-- https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b.yara
@@ -28,34 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 999a11ae-ec2b-4863-baa4-1384ec2b7339
 KnownVulnerableSamples:
-- Filename: NalDrv.sys
-  MD5: 1898ceda3247213c084f43637ef163b3
-  SHA1: d04e5db5b6c848a29732bfd52029001f23c3da75
-  SHA256: 4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b
-  Signature:
-  - Intel Corporation
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: 'Intel Corporation '
-  Description: Intel(R) Network Adapter Diagnostic Driver
-  Product: Intel(R) iQVW64.SYS
-  ProductVersion: 1.03.0.7
-  FileVersion: '1.03.0.7 built by: WinDDK'
-  MachineType: AMD64
-  OriginalFilename: iQVW64.SYS
-  Authentihash:
+- Authentihash:
     MD5: 1789a16d20ca2b55f491ad71848166a2
     SHA1: 2cbfe4ad0e1231ff3e19c19ca9311d952ce170b7
     SHA256: 785e87bc23a1353fe0726554fd009aca69c320a98445a604a64e23ab45108087
-  InternalName: iQVW64.SYS
+  Company: 'Intel Corporation '
   Copyright: Copyright (C) 2002-2013 Intel Corporation All Rights Reserved.
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2013-11-14 08:22:43'
+  Date: ''
+  Description: Intel(R) Network Adapter Diagnostic Driver
   ExportedFunctions: ''
+  FileVersion: '1.03.0.7 built by: WinDDK'
+  Filename: NalDrv.sys
   ImportedFunctions:
   - IoCreateSymbolicLink
   - IoCreateDevice
@@ -96,6 +76,46 @@ KnownVulnerableSamples:
   - IoDeleteDevice
   - KeStallExecutionProcessor
   - KeQueryPerformanceCounter
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: iQVW64.SYS
+  MD5: 1898ceda3247213c084f43637ef163b3
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: iQVW64.SYS
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.03.0.7
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 4521e9ed78c16f8d1e49a1981dfb32eb
+    SHA1: 557230bdf881a5a09523f4b063c81e10594ee183
+    SHA256: 4d270337cbd39f54b308a8b11869c2d85075acb846ce369f90aeceb8dd87782f
+  SHA1: d04e5db5b6c848a29732bfd52029001f23c3da75
+  SHA256: 4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b
+  Sections:
+    .text:
+      Entropy: 6.312074870341971
+      Virtual Size: '0x4615'
+    .rdata:
+      Entropy: 4.765757053328623
+      Virtual Size: '0x7c0'
+    .data:
+      Entropy: 0.30140680731160896
+      Virtual Size: '0x5c9ec0'
+    .pdata:
+      Entropy: 4.307215755522235
+      Virtual Size: '0x408'
+    INIT:
+      Entropy: 5.835829282045137
+      Virtual Size: '0x7a8'
+    .rsrc:
+      Entropy: 3.423830950438437
+      Virtual Size: '0x3f8'
+  Signature:
+  - Intel Corporation
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -173,30 +193,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 4521e9ed78c16f8d1e49a1981dfb32eb
-    SHA1: 557230bdf881a5a09523f4b063c81e10594ee183
-    SHA256: 4d270337cbd39f54b308a8b11869c2d85075acb846ce369f90aeceb8dd87782f
-  Sections:
-    .text:
-      Entropy: 6.312074870341971
-      Virtual Size: '0x4615'
-    .rdata:
-      Entropy: 4.765757053328623
-      Virtual Size: '0x7c0'
-    .data:
-      Entropy: 0.30140680731160896
-      Virtual Size: '0x5c9ec0'
-    .pdata:
-      Entropy: 4.307215755522235
-      Virtual Size: '0x408'
-    INIT:
-      Entropy: 5.835829282045137
-      Virtual Size: '0x7a8'
-    .rsrc:
-      Entropy: 3.423830950438437
-      Virtual Size: '0x3f8'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-11-14 08:22:43'
+MitreID: T1068
+Resources:
+- ' https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c'
+- https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
 Tags:
 - NalDrv.sys
+Verified: 'TRUE'

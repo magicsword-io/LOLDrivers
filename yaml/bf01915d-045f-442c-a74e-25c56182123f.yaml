@@ -1,22 +1,16 @@
-Id: bf01915d-045f-442c-a74e-25c56182123f
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create BSMI.sys binPath=C:\windows\temp\BSMI.sys type=kernel &&
     sc.exe start BSMI.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/59626cac380d8fe0b80a6d4c4406d62ba0683a2f0f68d50ad506ca1b1cf25347.yara
@@ -28,33 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: bf01915d-045f-442c-a74e-25c56182123f
 KnownVulnerableSamples:
-- Filename: BSMI.sys
-  MD5: fac8eb49e2fd541b81fcbdeb98a199cb
-  SHA1: 9a35ae9a1f95ce4be64adc604c80079173e4a676
-  SHA256: 59626cac380d8fe0b80a6d4c4406d62ba0683a2f0f68d50ad506ca1b1cf25347
-  Signature:
-  - BIOSTAR MICROTECH INT'L CORP
-  - VeriSign Class 3 Code Signing 2009-2 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: SMI Driver
-  Product: ''
-  ProductVersion: 1.0.0.3
-  FileVersion: 1.0.0.3
-  MachineType: AMD64
-  OriginalFilename: BSMI.sys
-  Authentihash:
+- Authentihash:
     MD5: 0dea670f26bf6bf65701c4aa0dd89079
     SHA1: cc071f9cc1cb577b22824d401b63508f61cd76c0
     SHA256: df82f155376b4e95a3f497b7362ba6039c04d2ae78926f626dbe1a459bc626d7
-  InternalName: BSMI.sys
+  Company: ''
   Copyright: Copyright (C) BIOSTAR Corp. 2011
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2012-08-29 02:16:01'
+  Date: ''
+  Description: SMI Driver
   ExportedFunctions: ''
+  FileVersion: 1.0.0.3
+  Filename: BSMI.sys
   ImportedFunctions:
   - IoDeleteSymbolicLink
   - RtlInitUnicodeString
@@ -68,6 +49,48 @@ KnownVulnerableSamples:
   - RtlAssert
   - DbgPrint
   - KeBugCheckEx
+  Imports:
+  - ntoskrnl.exe
+  InternalName: BSMI.sys
+  MD5: fac8eb49e2fd541b81fcbdeb98a199cb
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: BSMI.sys
+  Product: ''
+  ProductVersion: 1.0.0.3
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 3be75f081abbf99ce6301a0d05ac2359
+    SHA1: a48fe1a284ba70b96c39ed2779f343bc84d3bd66
+    SHA256: a222a1ed1250afdb5191e967ce4ac6d941b921e778bf247f7c339326c86d6a63
+  SHA1: 9a35ae9a1f95ce4be64adc604c80079173e4a676
+  SHA256: 59626cac380d8fe0b80a6d4c4406d62ba0683a2f0f68d50ad506ca1b1cf25347
+  Sections:
+    .text:
+      Entropy: 5.332274090432314
+      Virtual Size: '0x1ec'
+    .rdata:
+      Entropy: 4.219189311950067
+      Virtual Size: '0x138'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.2803544650278664
+      Virtual Size: '0x78'
+    PAGE:
+      Entropy: 5.860418233355002
+      Virtual Size: '0x10b7'
+    INIT:
+      Entropy: 5.45891810936059
+      Virtual Size: '0x44a'
+    .rsrc:
+      Entropy: 3.213568148851367
+      Virtual Size: '0x378'
+  Signature:
+  - BIOSTAR MICROTECH INT'L CORP
+  - VeriSign Class 3 Code Signing 2009-2 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -143,33 +166,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 3be75f081abbf99ce6301a0d05ac2359
-    SHA1: a48fe1a284ba70b96c39ed2779f343bc84d3bd66
-    SHA256: a222a1ed1250afdb5191e967ce4ac6d941b921e778bf247f7c339326c86d6a63
-  Sections:
-    .text:
-      Entropy: 5.332274090432314
-      Virtual Size: '0x1ec'
-    .rdata:
-      Entropy: 4.219189311950067
-      Virtual Size: '0x138'
-    .data:
-      Entropy: 0.5159719988134768
-      Virtual Size: '0x110'
-    .pdata:
-      Entropy: 3.2803544650278664
-      Virtual Size: '0x78'
-    PAGE:
-      Entropy: 5.860418233355002
-      Virtual Size: '0x10b7'
-    INIT:
-      Entropy: 5.45891810936059
-      Virtual Size: '0x44a'
-    .rsrc:
-      Entropy: 3.213568148851367
-      Virtual Size: '0x378'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-08-29 02:16:01'
+MitreID: T1068
+Resources:
+- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Tags:
 - BSMI.sys
+Verified: 'TRUE'

@@ -1,50 +1,31 @@
-Id: 0c0198a3-5c63-4a9b-abe9-88a810602329
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-03-04'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create 2.sys binPath=C:\windows\temp\2.sys type=kernel && sc.exe
     start 2.sys
   Description: Driver categorized as POORTRY by Mandiant.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-- ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-03-04'
 Detection: []
+Id: 0c0198a3-5c63-4a9b-abe9-88a810602329
 KnownVulnerableSamples:
-- Filename: 2.sys
-  MD5: bd25be845c151370ff177509d95d5add
-  SHA1: 10115219e3595b93204c70eec6db3e68a93f3144
-  SHA256: 88076e98d45ed3adf0c5355411fe8ca793eb7cec1a1c61f5e1ec337eae267463
-  Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  - Microsoft Windows Third Party Component CA 2014
-  - Microsoft Root Certificate Authority 2010
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 887c566bdc8ed5231f45a37845d5ee89
     SHA1: e6ab2bbad89502d8985381b33d7351eb97cb2b78
     SHA256: 565733b6e6d8f7b9661f04a3b4f29372f5dec080512551204b92ac4916a144cb
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2013-12-12 10:14:51'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: 2.sys
   ImportedFunctions:
   - ExAllocatePoolWithTag
   - IoDeleteSymbolicLink
@@ -64,6 +45,42 @@ KnownVulnerableSamples:
   - DbgPrint
   - KeBugCheckEx
   - __chkstk
+  Imports:
+  - ntoskrnl.exe
+  InternalName: ''
+  MD5: bd25be845c151370ff177509d95d5add
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: b8bd897847f9fb59fd2cd13a53dd67bd
+    SHA1: 3db6a537756d68d4e961e37bc17960881214eca4
+    SHA256: 0418235f7944cd80b88942aa7c406a353062afb5f821b5d7e8bd9628e6db3325
+  SHA1: 10115219e3595b93204c70eec6db3e68a93f3144
+  SHA256: 88076e98d45ed3adf0c5355411fe8ca793eb7cec1a1c61f5e1ec337eae267463
+  Sections:
+    .text:
+      Entropy: 5.937121058090373
+      Virtual Size: '0xb9b'
+    .rdata:
+      Entropy: 4.490966677486938
+      Virtual Size: '0x1ac'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.286805294060428
+      Virtual Size: '0x90'
+    INIT:
+      Entropy: 5.062533995350018
+      Virtual Size: '0x2c0'
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+  - Microsoft Root Certificate Authority 2010
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -99,27 +116,10 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
-  RichPEHeaderHash:
-    MD5: b8bd897847f9fb59fd2cd13a53dd67bd
-    SHA1: 3db6a537756d68d4e961e37bc17960881214eca4
-    SHA256: 0418235f7944cd80b88942aa7c406a353062afb5f821b5d7e8bd9628e6db3325
-  Sections:
-    .text:
-      Entropy: 5.937121058090373
-      Virtual Size: '0xb9b'
-    .rdata:
-      Entropy: 4.490966677486938
-      Virtual Size: '0x1ac'
-    .data:
-      Entropy: 0.5159719988134768
-      Virtual Size: '0x110'
-    .pdata:
-      Entropy: 3.286805294060428
-      Virtual Size: '0x90'
-    INIT:
-      Entropy: 5.062533995350018
-      Virtual Size: '0x2c0'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-12-12 10:14:51'
+MitreID: T1068
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+- ''
 Tags:
 - 2.sys
+Verified: 'TRUE'

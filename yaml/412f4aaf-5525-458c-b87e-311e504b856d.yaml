@@ -1,49 +1,32 @@
-Id: 412f4aaf-5525-458c-b87e-311e504b856d
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Guus Verbeek
-Created: '2023-05-07'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create mJj0ge.sys binPath=C:\windows\temp\mJj0ge.sys type=kernel
     && sc.exe start mJj0ge.sys
   Description: The criminals signed their AV-killer malware, closely related to one
     known as BURNTCIGAR, with a legitimate WHCP certificate
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://news.sophos.com/en-us/2022/12/13/signed-driver-malware-moves-up-the-software-trust-chain/
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-05-07'
 Detection: []
+Id: 412f4aaf-5525-458c-b87e-311e504b856d
 KnownVulnerableSamples:
-- Filename: mJj0ge.sys
-  MD5: 3d0b3e19262099ade884b75ba86ca7e8
-  SHA1: 0883a9c54e8442a551994989db6fc694f1086d41
-  SHA256: 5f6fec8f7890d032461b127332759c88a1b7360aa10c6bd38482572f59d2ba8b
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 83f21305be7f7633dd4c48cf1d523ad9
     SHA1: 707122f1d7cac4419bd5e5d2da1eb947852d38c0
     SHA256: a720c9a95ab33b29c19fc37fed2b4d2079a2e4b9bd861d406043bd6010fc4d71
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2022-06-02 04:09:08'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: mJj0ge.sys
   ImportedFunctions:
   - rand
   - ExAllocatePool
@@ -59,6 +42,53 @@ KnownVulnerableSamples:
   - KeRevertToUserAffinityThread
   - DbgPrint
   - KeQueryPerformanceCounter
+  Imports:
+  - ntoskrnl.exe
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: 3d0b3e19262099ade884b75ba86ca7e8
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
+    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
+    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
+  SHA1: 0883a9c54e8442a551994989db6fc694f1086d41
+  SHA256: 5f6fec8f7890d032461b127332759c88a1b7360aa10c6bd38482572f59d2ba8b
+  Sections:
+    .text:
+      Entropy: 0.0
+      Virtual Size: '0x16a8'
+    .rdata:
+      Entropy: 0.0
+      Virtual Size: '0x5b0'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 0.0
+      Virtual Size: '0x15c'
+    INIT:
+      Entropy: 0.0
+      Virtual Size: '0x3ee'
+    .=Kh:
+      Entropy: 0.0
+      Virtual Size: '0x1475cd'
+    .f$[:
+      Entropy: 0.9358240835129747
+      Virtual Size: '0x200'
+    .}4A:
+      Entropy: 7.704946018916512
+      Virtual Size: '0x291c30'
+    .reloc:
+      Entropy: 3.9221996373565777
+      Virtual Size: '0xd0'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -110,39 +140,9 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
-    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
-    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
-  Sections:
-    .text:
-      Entropy: 0.0
-      Virtual Size: '0x16a8'
-    .rdata:
-      Entropy: 0.0
-      Virtual Size: '0x5b0'
-    .data:
-      Entropy: 0.0
-      Virtual Size: '0x110'
-    .pdata:
-      Entropy: 0.0
-      Virtual Size: '0x15c'
-    INIT:
-      Entropy: 0.0
-      Virtual Size: '0x3ee'
-    .=Kh:
-      Entropy: 0.0
-      Virtual Size: '0x1475cd'
-    .f$[:
-      Entropy: 0.9358240835129747
-      Virtual Size: '0x200'
-    .}4A:
-      Entropy: 7.704946018916512
-      Virtual Size: '0x291c30'
-    .reloc:
-      Entropy: 3.9221996373565777
-      Virtual Size: '0xd0'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-06-02 04:09:08'
+MitreID: T1068
+Resources:
+- https://news.sophos.com/en-us/2022/12/13/signed-driver-malware-moves-up-the-software-trust-chain/
 Tags:
 - mJj0ge.sys
+Verified: 'TRUE'

@@ -1,9 +1,8 @@
-Id: b759adfa-b353-4ca3-9dfb-8fadf7a437eb
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-07-12'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create spwizimgVT.sys binPath=C:\windows\temp\spwizimgVT.sys type=kernel
     && sc.exe start spwizimgVT.sys
@@ -18,69 +17,25 @@ Commands:
     \ knowledge of the Windows operating system.\nThis threat appears to target native\
     \ Chinese speakers, as it searches for Chinese language browsers to hijack. Additionally,\
     \ the authors are likely Chinese speakers themselves."
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://blog.talosintelligence.com/undocumented-reddriver/
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-12'
 Detection: []
+Id: b759adfa-b353-4ca3-9dfb-8fadf7a437eb
 KnownVulnerableSamples:
-- Filename: ''
-  MD5: 5917e415a5bf30b3fcbcbcb8a4f20ee0
-  SHA1: 4dd86ff6f7180abebcb92e556a486abe7132754c
-  SHA256: 30061ef383e18e74bb067fbca69544f1a7544e8dc017d4e7633d8379aff4c3c3
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: d4b2c5fa7675cb780e8d4bc6bee7e41c
     SHA1: 69fb9f2483c8e571780175dd607d455d9ed8ce47
     SHA256: c9fbff8b749a1f580b5b5b9e59ec3ffd769b4179970b82e32a3d36e7a3a8cb1a
-  RichPEHeaderHash:
-    MD5: ceb1860de56dcebdf714302cb649ff71
-    SHA1: a03c600569d3c813667c3520788e423f1c5eed0f
-    SHA256: 39e0e1bb3f0a24fd42b1e55d492f5b87a926d6689b172c3475e1898f737be750
-  Sections:
-    .text:
-      Entropy: 6.259941019226518
-      Virtual Size: '0x6bb4'
-    .rdata:
-      Entropy: 4.500891407698158
-      Virtual Size: '0xd38'
-    .data:
-      Entropy: 5.434886649336555
-      Virtual Size: '0x2f28'
-    .pdata:
-      Entropy: 4.420943866714438
-      Virtual Size: '0x57c'
-    .gfids:
-      Entropy: 0.8112781244591328
-      Virtual Size: '0x4'
-    INIT:
-      Entropy: 5.1734289362463395
-      Virtual Size: '0xad4'
-    .reloc:
-      Entropy: 3.084183719779188
-      Virtual Size: '0x28'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-05-15 01:22:31'
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - fwpkclnt.sys
-  - ntoskrnl.exe
-  - WDFLDR.SYS
+  CreationTimestamp: '2023-05-15 01:22:31'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
   ImportedFunctions:
   - FwpsReleaseClassifyHandle0
   - FwpsAcquireClassifyHandle0
@@ -162,6 +117,47 @@ KnownVulnerableSamples:
   - WdfVersionBindClass
   - WdfVersionUnbindClass
   - WdfVersionUnbind
+  Imports:
+  - fwpkclnt.sys
+  - ntoskrnl.exe
+  - WDFLDR.SYS
+  InternalName: ''
+  MD5: 5917e415a5bf30b3fcbcbcb8a4f20ee0
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: ceb1860de56dcebdf714302cb649ff71
+    SHA1: a03c600569d3c813667c3520788e423f1c5eed0f
+    SHA256: 39e0e1bb3f0a24fd42b1e55d492f5b87a926d6689b172c3475e1898f737be750
+  SHA1: 4dd86ff6f7180abebcb92e556a486abe7132754c
+  SHA256: 30061ef383e18e74bb067fbca69544f1a7544e8dc017d4e7633d8379aff4c3c3
+  Sections:
+    .text:
+      Entropy: 6.259941019226518
+      Virtual Size: '0x6bb4'
+    .rdata:
+      Entropy: 4.500891407698158
+      Virtual Size: '0xd38'
+    .data:
+      Entropy: 5.434886649336555
+      Virtual Size: '0x2f28'
+    .pdata:
+      Entropy: 4.420943866714438
+      Virtual Size: '0x57c'
+    .gfids:
+      Entropy: 0.8112781244591328
+      Virtual Size: '0x4'
+    INIT:
+      Entropy: 5.1734289362463395
+      Virtual Size: '0xad4'
+    .reloc:
+      Entropy: 3.084183719779188
+      Virtual Size: '0x28'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -207,5 +203,9 @@ KnownVulnerableSamples:
     - SerialNumber: 0dbdf488aeaa9795e332a1ca2747af0d
       Issuer: C=US, O=thawte, Inc., CN=thawte SHA256 Code Signing CA
       Version: 1
+MitreID: T1068
+Resources:
+- https://blog.talosintelligence.com/undocumented-reddriver/
 Tags:
 - spwizimgVT.sys
+Verified: 'TRUE'

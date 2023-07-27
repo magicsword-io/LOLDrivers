@@ -1,76 +1,33 @@
-Id: afb8bb46-1d13-407d-9866-1daa7c82ca63
+Acknowledgement:
+  Handle: '@WindowsKernel'
+  Person: protocol
 Author: Protocol & Zach
-Created: '2023-07-14'
-MitreID: T1134
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create echo_driver.sys binPath=C:\windows\temp\echo_driver.sys type=kernel
     && sc.exe start echo_driver.sys
   Description: Bad access controls in Inspect Element Ltd.'s echo_driver.sys allows
     attacker to gain arbitrary memory read and write, which allows for easy Privilege
     Escalation via Token Theft.
-  Usecase: Elevate privileges, arbitrary memory read/write
-  Privileges: kernel
   OperatingSystem: Windows 10/11
-Resources:
-- https://ioctl.fail/echo-ac-writeup/
-- https://github.com/kite03/echoac-poc/tree/main/PoC
-Acknowledgement:
-  Person: protocol
-  Handle: '@WindowsKernel'
+  Privileges: kernel
+  Usecase: Elevate privileges, arbitrary memory read/write
+Created: '2023-07-14'
 Detection: []
+Id: afb8bb46-1d13-407d-9866-1daa7c82ca63
 KnownVulnerableSamples:
-- Filename: echo_driver.sys
-  MD5: 187ddca26d119573223cf0a32ba55a61
-  SHA1: a93197c8c1897a95c4fb0367d7451019ae9f3054
-  SHA256: ea3c5569405ed02ec24298534a983bcb5de113c18bc3fd01a4dd0b5839cd17b9
-  Signature: Microsoft Windows Hardware Compatibility Publisher
-  Date: 00:59 PM 06/18/2021
-  Publisher: Microsoft Windows Hardware Compatibility Publisher
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: cad120d8ba6473b07a3b76a41921d720
     SHA1: 678620a9cc9e7ffe179bc5cda0a2dd0597e231ee
     SHA256: 92f9d73cec5ab3352c4b3cbf4574d13b2e506cba24cc74580e19e941063eaf7d
-  RichPEHeaderHash:
-    MD5: cc4824dfc6c671b058dc67ec8bf938b4
-    SHA1: c47436cdd195b3f6272869d73144fbd3771f8491
-    SHA256: 431855c1601ceb0745917f8b160449568c3fc9049779c5e2a7613a61728afc6b
-  Sections:
-    .text:
-      Entropy: 6.2214058928825935
-      Virtual Size: '0x19ed'
-    .rdata:
-      Entropy: 4.829954270142013
-      Virtual Size: '0xb44'
-    .data:
-      Entropy: 2.467385656401615
-      Virtual Size: '0x388'
-    .pdata:
-      Entropy: 3.707723651312958
-      Virtual Size: '0x12c'
-    INIT:
-      Entropy: 4.856375853777676
-      Virtual Size: '0x67a'
-    .reloc:
-      Entropy: 3.078175865086577
-      Virtual Size: '0x24'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-06-17 17:17:15'
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - cng.sys
-  - ntoskrnl.exe
-  - WDFLDR.SYS
+  CreationTimestamp: '2021-06-17 17:17:15'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: echo_driver.sys
   ImportedFunctions:
   - BCryptVerifySignature
   - BCryptCreateHash
@@ -122,6 +79,44 @@ KnownVulnerableSamples:
   - WdfVersionBindClass
   - WdfVersionUnbindClass
   - WdfVersionBind
+  Imports:
+  - cng.sys
+  - ntoskrnl.exe
+  - WDFLDR.SYS
+  InternalName: ''
+  MD5: 187ddca26d119573223cf0a32ba55a61
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: Microsoft Windows Hardware Compatibility Publisher
+  RichPEHeaderHash:
+    MD5: cc4824dfc6c671b058dc67ec8bf938b4
+    SHA1: c47436cdd195b3f6272869d73144fbd3771f8491
+    SHA256: 431855c1601ceb0745917f8b160449568c3fc9049779c5e2a7613a61728afc6b
+  SHA1: a93197c8c1897a95c4fb0367d7451019ae9f3054
+  SHA256: ea3c5569405ed02ec24298534a983bcb5de113c18bc3fd01a4dd0b5839cd17b9
+  Sections:
+    .text:
+      Entropy: 6.2214058928825935
+      Virtual Size: '0x19ed'
+    .rdata:
+      Entropy: 4.829954270142013
+      Virtual Size: '0xb44'
+    .data:
+      Entropy: 2.467385656401615
+      Virtual Size: '0x388'
+    .pdata:
+      Entropy: 3.707723651312958
+      Virtual Size: '0x12c'
+    INIT:
+      Entropy: 4.856375853777676
+      Virtual Size: '0x67a'
+    .reloc:
+      Entropy: 3.078175865086577
+      Virtual Size: '0x24'
+  Signature: Microsoft Windows Hardware Compatibility Publisher
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -157,5 +152,10 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+MitreID: T1134
+Resources:
+- https://ioctl.fail/echo-ac-writeup/
+- https://github.com/kite03/echoac-poc/tree/main/PoC
 Tags:
 - echo_driver.sys
+Verified: 'TRUE'

@@ -1,9 +1,8 @@
-Id: 8a162702-b043-4108-bb6c-1488751a4a32
+Acknowledgement:
+  Handle: BushidoToken
+  Person: BushidoToken
 Author: Will BushidoToken
-Created: '2023-05-22'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create dkrTK.sys binPath=C:\windows\temp\dkrTK.sys type=kernel &&
     sc.exe start dkrTK.sys
@@ -15,42 +14,25 @@ Commands:
     \ only uses one of the exposed Device Input and Output Control (IOCTL) code \u2014\
     \ Kill Process, which is used to kill security agent processes installed on the\
     \ system."
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.trendmicro.com/content/dam/trendmicro/global/en/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver/indicators-blackcat-ransomware-deploys-new-signed-kernel-driver.txt
-- https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
-Acknowledgement:
-  Person: BushidoToken
-  Handle: BushidoToken
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-05-22'
 Detection: []
+Id: 8a162702-b043-4108-bb6c-1488751a4a32
 KnownVulnerableSamples:
-- Filename: dkrTK.sys
-  MD5: a837302307dace2a00d07202b661bce2
-  SHA1: 91568d7a82cc7677f6b13f11bea5c40cf12d281b
-  SHA256: 52d5c35325ce701516f8b04380c9fbdb78ec6bcc13b444f758fdb03d545b0677
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 233c2815720d7aa90838780dc482ddb9
     SHA1: 6271a84b349debb9a1bf7a5a164e91ef6cb9f869
     SHA256: 24395b622d4fd48864a50978ffd2b82fdded5189741a6deea9293cc075cd0c6b
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2022-06-02 04:09:08'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: dkrTK.sys
   ImportedFunctions:
   - rand
   - srand
@@ -91,6 +73,53 @@ KnownVulnerableSamples:
   - KeRevertToUserAffinityThread
   - DbgPrint
   - KeQueryPerformanceCounter
+  Imports:
+  - ntoskrnl.exe
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: a837302307dace2a00d07202b661bce2
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
+    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
+    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
+  SHA1: 91568d7a82cc7677f6b13f11bea5c40cf12d281b
+  SHA256: 52d5c35325ce701516f8b04380c9fbdb78ec6bcc13b444f758fdb03d545b0677
+  Sections:
+    .text:
+      Entropy: 0.0
+      Virtual Size: '0x16a8'
+    .rdata:
+      Entropy: 0.0
+      Virtual Size: '0x5b0'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 0.0
+      Virtual Size: '0x15c'
+    INIT:
+      Entropy: 0.0
+      Virtual Size: '0x3ee'
+    .YUC:
+      Entropy: 0.0
+      Virtual Size: '0x1394a0'
+    .(~z:
+      Entropy: 2.1490473203220253
+      Virtual Size: '0x200'
+    .A<b:
+      Entropy: 7.650439716839931
+      Virtual Size: '0x2536b0'
+    .reloc:
+      Entropy: 3.915623139317465
+      Virtual Size: '0xd8'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -136,39 +165,10 @@ KnownVulnerableSamples:
     - SerialNumber: 38de06b8be15187f107e04f8b1138977
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
       Version: 1
-  RichPEHeaderHash:
-    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
-    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
-    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
-  Sections:
-    .text:
-      Entropy: 0.0
-      Virtual Size: '0x16a8'
-    .rdata:
-      Entropy: 0.0
-      Virtual Size: '0x5b0'
-    .data:
-      Entropy: 0.0
-      Virtual Size: '0x110'
-    .pdata:
-      Entropy: 0.0
-      Virtual Size: '0x15c'
-    INIT:
-      Entropy: 0.0
-      Virtual Size: '0x3ee'
-    .YUC:
-      Entropy: 0.0
-      Virtual Size: '0x1394a0'
-    .(~z:
-      Entropy: 2.1490473203220253
-      Virtual Size: '0x200'
-    .A<b:
-      Entropy: 7.650439716839931
-      Virtual Size: '0x2536b0'
-    .reloc:
-      Entropy: 3.915623139317465
-      Virtual Size: '0xd8'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-06-02 04:09:08'
+MitreID: T1068
+Resources:
+- https://www.trendmicro.com/content/dam/trendmicro/global/en/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver/indicators-blackcat-ransomware-deploys-new-signed-kernel-driver.txt
+- https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
 Tags:
 - dkrTK.sys
+Verified: 'TRUE'

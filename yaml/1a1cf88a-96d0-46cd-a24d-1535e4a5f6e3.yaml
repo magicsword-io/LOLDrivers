@@ -1,51 +1,31 @@
-Id: 1a1cf88a-96d0-46cd-a24d-1535e4a5f6e3
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create msrhook.sys binPath=C:\windows\temp\msrhook.sys type=kernel
     && sc.exe start msrhook.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: 1a1cf88a-96d0-46cd-a24d-1535e4a5f6e3
 KnownVulnerableSamples:
-- Filename: msrhook.sys
-  MD5: c49a1956a6a25ffc25ad97d6762b0989
-  SHA1: 89909fa481ff67d7449ee90d24c167b17b0612f1
-  SHA256: 6de84caa2ca18673e01b91af58220c60aecd5cccf269725ec3c7f226b2167492
-  Signature:
-  - ID TECH
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 172df59ed493cc10ccca27239ff3b4e3
     SHA1: ccce82f52142229c88746b06b198ea5c5e058961
     SHA256: 37e33b54de1bbe4cf86fa58aeec39084afb35e0cbe5f69c763ecaec1d352daa0
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2014-03-27 18:36:23'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: msrhook.sys
   ImportedFunctions:
   - KeInitializeEvent
   - KeDelayExecutionThread
@@ -74,6 +54,46 @@ KnownVulnerableSamples:
   - IoCreateDevice
   - RtlInitUnicodeString
   - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: c49a1956a6a25ffc25ad97d6762b0989
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: b39a70fb2c30cf4cc1682346d883041e
+    SHA1: 1ac564071b1cab56609d154c9b6e7ee798c970d8
+    SHA256: 7380b70b92ac4b9a4c151a1f18751b52a4523830da6d998745dbc822837162cc
+  SHA1: 89909fa481ff67d7449ee90d24c167b17b0612f1
+  SHA256: 6de84caa2ca18673e01b91af58220c60aecd5cccf269725ec3c7f226b2167492
+  Sections:
+    .text:
+      Entropy: 6.353601687080194
+      Virtual Size: '0x2511'
+    .rdata:
+      Entropy: 3.9145119966486024
+      Virtual Size: '0x414'
+    .data:
+      Entropy: 0.5673389940094367
+      Virtual Size: '0x2618'
+    .pdata:
+      Entropy: 3.9851918849242547
+      Virtual Size: '0x21c'
+    INIT:
+      Entropy: 4.886849659994224
+      Virtual Size: '0x3c0'
+    .reloc:
+      Entropy: 1.9669171866886992
+      Virtual Size: '0x10'
+  Signature:
+  - ID TECH
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -151,30 +171,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: b39a70fb2c30cf4cc1682346d883041e
-    SHA1: 1ac564071b1cab56609d154c9b6e7ee798c970d8
-    SHA256: 7380b70b92ac4b9a4c151a1f18751b52a4523830da6d998745dbc822837162cc
-  Sections:
-    .text:
-      Entropy: 6.353601687080194
-      Virtual Size: '0x2511'
-    .rdata:
-      Entropy: 3.9145119966486024
-      Virtual Size: '0x414'
-    .data:
-      Entropy: 0.5673389940094367
-      Virtual Size: '0x2618'
-    .pdata:
-      Entropy: 3.9851918849242547
-      Virtual Size: '0x21c'
-    INIT:
-      Entropy: 4.886849659994224
-      Virtual Size: '0x3c0'
-    .reloc:
-      Entropy: 1.9669171866886992
-      Virtual Size: '0x10'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-03-27 18:36:23'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - msrhook.sys
+Verified: 'TRUE'

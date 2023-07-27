@@ -1,46 +1,31 @@
-Id: b1dd91b1-9ba3-4d68-a2d1-919039e18430
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-04-14'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create dcr.sys binPath=C:\windows\temp\dcr.sys type=kernel && sc.exe
     start dcr.sys
   Description: DriveCrypt Dcr.sys vulnerability exploit for bypassing x64 DSE
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://github.com/wjcsharp/DriveCrypt
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-04-14'
 Detection: []
+Id: b1dd91b1-9ba3-4d68-a2d1-919039e18430
 KnownVulnerableSamples:
-- Filename: dcr.sys
-  MD5: c24800c382b38707e556af957e9e94fd
-  SHA1: b49ac8fefc6d1274d84fef44c1e5183cc7accba1
-  SHA256: 3c6f9917418e991ed41540d8d882c8ca51d582a82fd01bff6cdf26591454faf5
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: accf79b751fafb101c1ce17fb7611b70
     SHA1: 8f2f1684a7305f32015d54c402790a47c6c7a0c9
     SHA256: 2b60228db4f3092063e115537b5731ef3487ecf55c036e812605c5149071332c
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2009-04-03 06:12:33'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: dcr.sys
   ImportedFunctions:
   - ExFreePoolWithTag
   - RtlInitAnsiString
@@ -106,6 +91,39 @@ KnownVulnerableSamples:
   - ZwFsControlFile
   - __C_specific_handler
   - __chkstk
+  Imports:
+  - ntoskrnl.exe
+  InternalName: ''
+  MD5: c24800c382b38707e556af957e9e94fd
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 0173f40d754c5a013f4ca5651a62fbd0
+    SHA1: 680e2e28e9ce527689bc31a349ac87ead75b6826
+    SHA256: c523dbc32bc5ec4e966710432be7dc0d1c172b65bb3c42636c65f17cfde6196d
+  SHA1: b49ac8fefc6d1274d84fef44c1e5183cc7accba1
+  SHA256: 3c6f9917418e991ed41540d8d882c8ca51d582a82fd01bff6cdf26591454faf5
+  Sections:
+    .text:
+      Entropy: 6.401262967451807
+      Virtual Size: '0x2bf64'
+    .data:
+      Entropy: 1.268441553105141
+      Virtual Size: '0x22600'
+    .pdata:
+      Entropy: 5.321759404372387
+      Virtual Size: '0xc48'
+    INIT:
+      Entropy: 5.042298031844367
+      Virtual Size: '0x78a'
+    .reloc:
+      Entropy: 1.4128994326009754
+      Virtual Size: '0x384'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -178,27 +196,9 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 0173f40d754c5a013f4ca5651a62fbd0
-    SHA1: 680e2e28e9ce527689bc31a349ac87ead75b6826
-    SHA256: c523dbc32bc5ec4e966710432be7dc0d1c172b65bb3c42636c65f17cfde6196d
-  Sections:
-    .text:
-      Entropy: 6.401262967451807
-      Virtual Size: '0x2bf64'
-    .data:
-      Entropy: 1.268441553105141
-      Virtual Size: '0x22600'
-    .pdata:
-      Entropy: 5.321759404372387
-      Virtual Size: '0xc48'
-    INIT:
-      Entropy: 5.042298031844367
-      Virtual Size: '0x78a'
-    .reloc:
-      Entropy: 1.4128994326009754
-      Virtual Size: '0x384'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-04-03 06:12:33'
+MitreID: T1068
+Resources:
+- https://github.com/wjcsharp/DriveCrypt
 Tags:
 - dcr.sys
+Verified: 'TRUE'

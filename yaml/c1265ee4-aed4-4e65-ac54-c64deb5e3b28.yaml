@@ -1,52 +1,32 @@
-Id: c1265ee4-aed4-4e65-ac54-c64deb5e3b28
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Guus Verbeek
-Created: '2023-05-07'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create fur.sys binPath=C:\windows\temp\fur.sys type=kernel && sc.exe
     start fur.sys
   Description: SophosLabs has discovered that threat actors are using a new driver
     loader called BURNTCIGAR to install a malicious driver signed with Microsoft.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware, https://news.sophos.com/en-us/2022/12/13/signed-driver-malware-moves-up-the-software-trust-chain/
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-05-07'
 Detection: []
+Id: c1265ee4-aed4-4e65-ac54-c64deb5e3b28
 KnownVulnerableSamples:
-- Filename: ''
-  MD5: 6a066d2be83cf83f343d0550b0b8f206
-  SHA1: 8e126f4f35e228fdd3aa78d533225db7122d8945
-  SHA256: 0d10c4b2f56364b475b60bd2933273c8b1ed2176353e59e65f968c61e93b7d99
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 5c23bab622d6bbabd23d29b4adaa4ae0
     SHA1: 9fbb6f9a22d1c676ff1b97a33d4c5e94f18aca5f
     SHA256: aab97fb324c883f1de71112e1d9fb716cef40636e39a3b9f4a5b8678cf7bde3f
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - FLTMGR.SYS
-  - NETIO.SYS
-  - WDFLDR.SYS
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2022-09-14 22:24:03'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
   ImportedFunctions:
   - ObQueryNameString
   - FltUnregisterFilter
@@ -65,6 +45,59 @@ KnownVulnerableSamples:
   - KeRevertToUserAffinityThread
   - DbgPrint
   - KeQueryPerformanceCounter
+  Imports:
+  - ntoskrnl.exe
+  - FLTMGR.SYS
+  - NETIO.SYS
+  - WDFLDR.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: 6a066d2be83cf83f343d0550b0b8f206
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
+    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
+    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
+  SHA1: 8e126f4f35e228fdd3aa78d533225db7122d8945
+  SHA256: 0d10c4b2f56364b475b60bd2933273c8b1ed2176353e59e65f968c61e93b7d99
+  Sections:
+    .text:
+      Entropy: 0.0
+      Virtual Size: '0x37fc5'
+    .rdata:
+      Entropy: 0.0
+      Virtual Size: '0x1db4'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0x43c8'
+    .pdata:
+      Entropy: 0.0
+      Virtual Size: '0x10a4'
+    PAGE:
+      Entropy: 0.0
+      Virtual Size: '0x13'
+    INIT:
+      Entropy: 0.0
+      Virtual Size: '0xdde'
+    .73h0:
+      Entropy: 0.0
+      Virtual Size: '0x1b36a5'
+    .73h1:
+      Entropy: 0.5261478929039797
+      Virtual Size: '0x4b8'
+    .73h2:
+      Entropy: 7.781889548207141
+      Virtual Size: '0x30ee44'
+    .reloc:
+      Entropy: 3.799240213996674
+      Virtual Size: '0xc8'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -100,42 +133,9 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
-  RichPEHeaderHash:
-    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
-    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
-    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
-  Sections:
-    .text:
-      Entropy: 0.0
-      Virtual Size: '0x37fc5'
-    .rdata:
-      Entropy: 0.0
-      Virtual Size: '0x1db4'
-    .data:
-      Entropy: 0.0
-      Virtual Size: '0x43c8'
-    .pdata:
-      Entropy: 0.0
-      Virtual Size: '0x10a4'
-    PAGE:
-      Entropy: 0.0
-      Virtual Size: '0x13'
-    INIT:
-      Entropy: 0.0
-      Virtual Size: '0xdde'
-    .73h0:
-      Entropy: 0.0
-      Virtual Size: '0x1b36a5'
-    .73h1:
-      Entropy: 0.5261478929039797
-      Virtual Size: '0x4b8'
-    .73h2:
-      Entropy: 7.781889548207141
-      Virtual Size: '0x30ee44'
-    .reloc:
-      Entropy: 3.799240213996674
-      Virtual Size: '0xc8'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-09-14 22:24:03'
+MitreID: T1068
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware, https://news.sophos.com/en-us/2022/12/13/signed-driver-malware-moves-up-the-software-trust-chain/
 Tags:
 - fur.sys
+Verified: 'TRUE'

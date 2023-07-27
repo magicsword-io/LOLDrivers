@@ -1,46 +1,56 @@
-Id: 8198f5af-4b40-4800-a22a-4a7cf957ef37
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Guus Verbeek
-Created: '2023-06-05'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create MSqPq.sys binPath=C:\windows\temp\MSqPq.sys type=kernel &&
     sc.exe start MSqPq.sys
   Description: BlackCat Ransomware Deploys New Signed Kernel Driver. BlackCat ransomware
     incident that occurred in February 2023.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-06-05'
 Detection: []
+Id: 8198f5af-4b40-4800-a22a-4a7cf957ef37
 KnownVulnerableSamples:
-- Filename: MSqPq.sys
-  MD5: 97539c78d6e2b5356ce79e40bcd4d570
-  SHA1: f6793243ad20359d8be40d3accac168a15a327fb
-  SHA256: 56066ed07bad3b5c1474e8fae5ee2543d17d7977369b34450bd0775517e3b25c
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: e66ea646261c73baee310361524fbb7c
     SHA1: 12d1ff0396dc1ffe15ad4fcb42319f6d4ee99393
     SHA256: 0527451d72ba02db8479ea69689350cc563b939bb2cc685386719ab32b7e2772
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2022-12-21 06:07:48'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: MSqPq.sys
+  ImportedFunctions:
+  - KeInitializeEvent
+  - KeInitializeEvent
+  - HalReturnToFirmware
+  - HalReturnToFirmware
+  - HalReturnToFirmware
+  - HalReturnToFirmware
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: 97539c78d6e2b5356ce79e40bcd4d570
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   RichPEHeaderHash:
     MD5: b3c2084dcf3f40c0653c0d83ed93d1ec
     SHA1: 98192b19393d287eeaa3c6cb52aa97723a66d136
     SHA256: 783d7f55f46700737aafd36725d14b1c98049d9c0179f13143227d1e285d624b
+  SHA1: f6793243ad20359d8be40d3accac168a15a327fb
+  SHA256: 56066ed07bad3b5c1474e8fae5ee2543d17d7977369b34450bd0775517e3b25c
   Sections:
     .text:
       Entropy: 7.939220758583228
@@ -54,21 +64,7 @@ KnownVulnerableSamples:
     .reloc:
       Entropy: 2.192572025670077
       Virtual Size: '0x1000'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-12-21 06:07:48'
-  InternalName: ''
-  Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - KeInitializeEvent
-  - KeInitializeEvent
-  - HalReturnToFirmware
-  - HalReturnToFirmware
-  - HalReturnToFirmware
-  - HalReturnToFirmware
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -121,5 +117,9 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+MitreID: T1068
+Resources:
+- https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
 Tags:
 - MSqPq.sys
+Verified: 'TRUE'

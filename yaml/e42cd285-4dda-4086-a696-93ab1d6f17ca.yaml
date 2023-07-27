@@ -1,22 +1,16 @@
-Id: e42cd285-4dda-4086-a696-93ab1d6f17ca
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create HOSTNT.sys binPath=C:\windows\temp\HOSTNT.sys type=kernel
     && sc.exe start HOSTNT.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/07b6d69bafcfd767f1b63a490a8843c3bb1f8e1bbea56176109b5743c8f7d357.yara
@@ -28,34 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: e42cd285-4dda-4086-a696-93ab1d6f17ca
 KnownVulnerableSamples:
-- Filename: HOSTNT.sys
-  MD5: e8ebba56ea799e1e62748c59e1a4c586
-  SHA1: ac13941f436139b909d105ad55637e1308f49d9a
-  SHA256: 07b6d69bafcfd767f1b63a490a8843c3bb1f8e1bbea56176109b5743c8f7d357
-  Signature:
-  - SafeNet, Inc.
-  - VeriSign Class 3 Code Signing 2004 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: ''
-  Publisher: '"SafeNet, Inc."'
-  Company: SafeNet, Inc.
-  Description: Hostnt 64-bit driver
-  Product: Hostnt
-  ProductVersion: 4, 0, 16, 0
-  FileVersion: 4, 0, 16, 0
-  MachineType: AMD64
-  OriginalFilename: Hostnt.sys
-  Authentihash:
+- Authentihash:
     MD5: 143dd36b65e3550323812614f6952d95
     SHA1: 925f076cef081c0c2f6dded10c1349b4e65f7dde
     SHA256: 8920dedd3c5488ecc1db2ace55b2000d4cebf899c5e591b429d3f7767eee2216
-  InternalName: Hostnt
+  Company: SafeNet, Inc.
   Copyright: Copyright (C)  SafeNet, Inc.
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2007-11-26 19:16:37'
+  Date: ''
+  Description: Hostnt 64-bit driver
   ExportedFunctions: ''
+  FileVersion: 4, 0, 16, 0
+  Filename: HOSTNT.sys
   ImportedFunctions:
   - IoDeleteDevice
   - ZwUnmapViewOfSection
@@ -70,6 +50,46 @@ KnownVulnerableSamples:
   - IoCreateSymbolicLink
   - ZwMapViewOfSection
   - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: Hostnt
+  MD5: e8ebba56ea799e1e62748c59e1a4c586
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: Hostnt.sys
+  Product: Hostnt
+  ProductVersion: 4, 0, 16, 0
+  Publisher: '"SafeNet, Inc."'
+  RichPEHeaderHash:
+    MD5: 4024d9b5e71cd1761134c397f2cf292b
+    SHA1: a0011e3b0d99e7f5e0c0f0b3bf4026d1883e1e90
+    SHA256: 253ac530a75860bb51af25e2b12a9d0611c7eee6e5bacd9800bf24afbf4b6c80
+  SHA1: ac13941f436139b909d105ad55637e1308f49d9a
+  SHA256: 07b6d69bafcfd767f1b63a490a8843c3bb1f8e1bbea56176109b5743c8f7d357
+  Sections:
+    .text:
+      Entropy: 5.864601789900182
+      Virtual Size: '0x9be'
+    .rdata:
+      Entropy: 4.356371540103682
+      Virtual Size: '0x164'
+    .data:
+      Entropy: 0.32552420731642917
+      Virtual Size: '0x1d4'
+    .pdata:
+      Entropy: 3.182334194023545
+      Virtual Size: '0x54'
+    INIT:
+      Entropy: 4.896619545447233
+      Virtual Size: '0x23e'
+    .rsrc:
+      Entropy: 3.2410270216436903
+      Virtual Size: '0x3c0'
+  Signature:
+  - SafeNet, Inc.
+  - VeriSign Class 3 Code Signing 2004 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -145,30 +165,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 4024d9b5e71cd1761134c397f2cf292b
-    SHA1: a0011e3b0d99e7f5e0c0f0b3bf4026d1883e1e90
-    SHA256: 253ac530a75860bb51af25e2b12a9d0611c7eee6e5bacd9800bf24afbf4b6c80
-  Sections:
-    .text:
-      Entropy: 5.864601789900182
-      Virtual Size: '0x9be'
-    .rdata:
-      Entropy: 4.356371540103682
-      Virtual Size: '0x164'
-    .data:
-      Entropy: 0.32552420731642917
-      Virtual Size: '0x1d4'
-    .pdata:
-      Entropy: 3.182334194023545
-      Virtual Size: '0x54'
-    INIT:
-      Entropy: 4.896619545447233
-      Virtual Size: '0x23e'
-    .rsrc:
-      Entropy: 3.2410270216436903
-      Virtual Size: '0x3c0'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-11-26 19:16:37'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - HOSTNT.sys
+Verified: 'TRUE'

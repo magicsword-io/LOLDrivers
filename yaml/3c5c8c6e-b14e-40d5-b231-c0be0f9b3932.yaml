@@ -1,51 +1,31 @@
-Id: 3c5c8c6e-b14e-40d5-b231-c0be0f9b3932
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create AsUpIO64.sys binPath=C:\windows\temp\AsUpIO64.sys type=kernel
     && sc.exe start AsUpIO64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: 3c5c8c6e-b14e-40d5-b231-c0be0f9b3932
 KnownVulnerableSamples:
-- Filename: AsUpIO64.sys
-  MD5: 1392b92179b07b672720763d9b1028a5
-  SHA1: 8b6aa5b2bff44766ef7afbe095966a71bc4183fa
-  SHA256: b4d47ea790920a4531e3df5a4b4b0721b7fea6b49a35679f0652f1e590422602
-  Signature:
-  - ASUSTeK Computer Inc.
-  - VeriSign Class 3 Code Signing 2009-2 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 1e97ead4c5049f8fefe2b72edd5fa90e
     SHA1: 2a95f882dd9bafcc57f144a2708a7ec67dd7844c
     SHA256: 7f75d91844b0c162eeb24d14bcf63b7f230e111daa7b0a26eaa489eeb22d9057
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2010-08-02 20:47:59'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: AsUpIO64.sys
   ImportedFunctions:
   - ZwMapViewOfSection
   - ObReferenceObjectByHandle
@@ -63,6 +43,43 @@ KnownVulnerableSamples:
   - IofCompleteRequest
   - KeDelayExecutionThread
   - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: 1392b92179b07b672720763d9b1028a5
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 058831031bc182e09fd9501e62a8c8ce
+    SHA1: 23c55978de25c037af392054d26cc72818ee3a60
+    SHA256: 7890a60d1090102ce6bb8cacac02b827a9edbbdf8ec13c022a9170b0ee036c43
+  SHA1: 8b6aa5b2bff44766ef7afbe095966a71bc4183fa
+  SHA256: b4d47ea790920a4531e3df5a4b4b0721b7fea6b49a35679f0652f1e590422602
+  Sections:
+    .text:
+      Entropy: 6.128485959548185
+      Virtual Size: '0x10fc'
+    .rdata:
+      Entropy: 4.469326855336564
+      Virtual Size: '0x1a0'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0xc'
+    .pdata:
+      Entropy: 3.3216749799000778
+      Virtual Size: '0x90'
+    INIT:
+      Entropy: 4.5288929688981066
+      Virtual Size: '0x24a'
+  Signature:
+  - ASUSTeK Computer Inc.
+  - VeriSign Class 3 Code Signing 2009-2 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -138,27 +155,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 058831031bc182e09fd9501e62a8c8ce
-    SHA1: 23c55978de25c037af392054d26cc72818ee3a60
-    SHA256: 7890a60d1090102ce6bb8cacac02b827a9edbbdf8ec13c022a9170b0ee036c43
-  Sections:
-    .text:
-      Entropy: 6.128485959548185
-      Virtual Size: '0x10fc'
-    .rdata:
-      Entropy: 4.469326855336564
-      Virtual Size: '0x1a0'
-    .data:
-      Entropy: 0.0
-      Virtual Size: '0xc'
-    .pdata:
-      Entropy: 3.3216749799000778
-      Virtual Size: '0x90'
-    INIT:
-      Entropy: 4.5288929688981066
-      Virtual Size: '0x24a'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-08-02 20:47:59'
+MitreID: T1068
+Resources:
+- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Tags:
 - AsUpIO64.sys
+Verified: 'TRUE'

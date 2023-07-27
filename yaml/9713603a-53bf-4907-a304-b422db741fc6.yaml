@@ -1,9 +1,8 @@
-Id: 9713603a-53bf-4907-a304-b422db741fc6
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-07-12'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create typelibdE.sys binPath=C:\windows\temp\typelibdE.sys type=kernel
     && sc.exe start typelibdE.sys
@@ -18,68 +17,25 @@ Commands:
     \ knowledge of the Windows operating system.\nThis threat appears to target native\
     \ Chinese speakers, as it searches for Chinese language browsers to hijack. Additionally,\
     \ the authors are likely Chinese speakers themselves."
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://blog.talosintelligence.com/undocumented-reddriver/
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-12'
 Detection: []
+Id: 9713603a-53bf-4907-a304-b422db741fc6
 KnownVulnerableSamples:
-- Filename: ''
-  MD5: 2406ea37152d2154be3fef6d69ada2c6
-  SHA1: b6eb40ea52b47f03edb8f45e2e431b5f666df8c5
-  SHA256: 4f02aed3750bc6a924c75e774404f259f721d8f4081ed68aa01cf73ca5430f85
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 0a1afc7458bc0043c28e2a3d3c55218f
     SHA1: 174f3d13b28fd23e4f5113822ec18cffe7977c44
     SHA256: 81f4258c5aee1bfe424880fbc61a1928a816014c502f010be03becbb42e648fb
-  RichPEHeaderHash:
-    MD5: 3e8b77121573e70b98f26828a7ec2cc0
-    SHA1: 93e009f2ef2ebc8e6f91afb0407312e379d114c1
-    SHA256: 6c46fc6908d6505c93eae0f2e772f203724356a3d89ae8b31d9060ee718ea32f
-  Sections:
-    .text:
-      Entropy: 6.244772828250603
-      Virtual Size: '0x5f44'
-    .rdata:
-      Entropy: 4.44550851705184
-      Virtual Size: '0xc08'
-    .data:
-      Entropy: 5.43290923140193
-      Virtual Size: '0x2c40'
-    .pdata:
-      Entropy: 4.386100622624198
-      Virtual Size: '0x4f8'
-    .gfids:
-      Entropy: 0.8112781244591328
-      Virtual Size: '0x4'
-    INIT:
-      Entropy: 5.167244656939951
-      Virtual Size: '0x96e'
-    .reloc:
-      Entropy: 3.2341837197791876
-      Virtual Size: '0x28'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-04-10 19:59:25'
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - WDFLDR.SYS
+  CreationTimestamp: '2023-04-10 19:59:25'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
   ImportedFunctions:
   - RtlCompareMemory
   - ExAllocatePool
@@ -153,6 +109,46 @@ KnownVulnerableSamples:
   - WdfVersionBind
   - WdfVersionUnbind
   - WdfVersionUnbindClass
+  Imports:
+  - ntoskrnl.exe
+  - WDFLDR.SYS
+  InternalName: ''
+  MD5: 2406ea37152d2154be3fef6d69ada2c6
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 3e8b77121573e70b98f26828a7ec2cc0
+    SHA1: 93e009f2ef2ebc8e6f91afb0407312e379d114c1
+    SHA256: 6c46fc6908d6505c93eae0f2e772f203724356a3d89ae8b31d9060ee718ea32f
+  SHA1: b6eb40ea52b47f03edb8f45e2e431b5f666df8c5
+  SHA256: 4f02aed3750bc6a924c75e774404f259f721d8f4081ed68aa01cf73ca5430f85
+  Sections:
+    .text:
+      Entropy: 6.244772828250603
+      Virtual Size: '0x5f44'
+    .rdata:
+      Entropy: 4.44550851705184
+      Virtual Size: '0xc08'
+    .data:
+      Entropy: 5.43290923140193
+      Virtual Size: '0x2c40'
+    .pdata:
+      Entropy: 4.386100622624198
+      Virtual Size: '0x4f8'
+    .gfids:
+      Entropy: 0.8112781244591328
+      Virtual Size: '0x4'
+    INIT:
+      Entropy: 5.167244656939951
+      Virtual Size: '0x96e'
+    .reloc:
+      Entropy: 3.2341837197791876
+      Virtual Size: '0x28'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -198,5 +194,9 @@ KnownVulnerableSamples:
     - SerialNumber: 0dbdf488aeaa9795e332a1ca2747af0d
       Issuer: C=US, O=thawte, Inc., CN=thawte SHA256 Code Signing CA
       Version: 1
+MitreID: T1068
+Resources:
+- https://blog.talosintelligence.com/undocumented-reddriver/
 Tags:
 - typelibdE.sys
+Verified: 'TRUE'

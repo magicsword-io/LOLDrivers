@@ -1,50 +1,31 @@
-Id: e299b0b6-e5e2-45b3-bf0b-c008068cebfa
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create BS_Flash64.sys binPath=C:\windows\temp\BS_Flash64.sys type=kernel
     && sc.exe start BS_Flash64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: e299b0b6-e5e2-45b3-bf0b-c008068cebfa
 KnownVulnerableSamples:
-- Filename: BS_Flash64.sys
-  MD5: f5051c756035ef5de9c4c48bacb0612b
-  SHA1: e83458c4a6383223759cd8024e60c17be4e7c85f
-  SHA256: 86a8e0aa29a5b52c84921188cc1f0eca9a7904dcfe09544602933d8377720219
-  Signature:
-  - BIOSTAR MICROTECH INT'L CORP
-  - VeriSign Class 3 Code Signing 2004 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: cf428ad377e1fd1a045e058b896fcee2
     SHA1: 5107438a02164e1bcedd556a786f37f59cd04231
     SHA256: 543c3f024e4affd0aafa3a229fa19dbe7a70972bb18ed6347d3492dd174edac5
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2007-08-21 02:38:26'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: BS_Flash64.sys
   ImportedFunctions:
   - IoDeleteDevice
   - RtlFreeUnicodeString
@@ -61,6 +42,42 @@ KnownVulnerableSamples:
   - MmUnmapIoSpace
   - MmMapIoSpace
   - KeBugCheckEx
+  Imports:
+  - ntoskrnl.exe
+  InternalName: ''
+  MD5: f5051c756035ef5de9c4c48bacb0612b
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: f611e8b47daf79029d2e777e3071d939
+    SHA1: 2dc185768c738521fb43db6d6b100bb04d43177f
+    SHA256: 66f092383abb8b873a957d01b5079e4f2b52a63770dcf68fff59410500f5974f
+  SHA1: e83458c4a6383223759cd8024e60c17be4e7c85f
+  SHA256: 86a8e0aa29a5b52c84921188cc1f0eca9a7904dcfe09544602933d8377720219
+  Sections:
+    .text:
+      Entropy: 5.928404971671749
+      Virtual Size: '0x78e'
+    .rdata:
+      Entropy: 4.478088869880772
+      Virtual Size: '0x1a4'
+    .data:
+      Entropy: 0.4917211838342579
+      Virtual Size: '0x120'
+    .pdata:
+      Entropy: 3.2547080358712224
+      Virtual Size: '0x78'
+    INIT:
+      Entropy: 4.87693704487193
+      Virtual Size: '0x262'
+  Signature:
+  - BIOSTAR MICROTECH INT'L CORP
+  - VeriSign Class 3 Code Signing 2004 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -111,27 +128,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: f611e8b47daf79029d2e777e3071d939
-    SHA1: 2dc185768c738521fb43db6d6b100bb04d43177f
-    SHA256: 66f092383abb8b873a957d01b5079e4f2b52a63770dcf68fff59410500f5974f
-  Sections:
-    .text:
-      Entropy: 5.928404971671749
-      Virtual Size: '0x78e'
-    .rdata:
-      Entropy: 4.478088869880772
-      Virtual Size: '0x1a4'
-    .data:
-      Entropy: 0.4917211838342579
-      Virtual Size: '0x120'
-    .pdata:
-      Entropy: 3.2547080358712224
-      Virtual Size: '0x78'
-    INIT:
-      Entropy: 4.87693704487193
-      Virtual Size: '0x262'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-08-21 02:38:26'
+MitreID: T1068
+Resources:
+- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Tags:
 - BS_Flash64.sys
+Verified: 'TRUE'

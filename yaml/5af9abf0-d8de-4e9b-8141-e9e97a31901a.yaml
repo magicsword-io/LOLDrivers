@@ -1,22 +1,16 @@
-Id: 5af9abf0-d8de-4e9b-8141-e9e97a31901a
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create AsrDrv102.sys binPath=C:\windows\temp\AsrDrv102.sys type=kernel
     && sc.exe start AsrDrv102.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/a7c2e7910942dd5e43e2f4eb159bcd2b4e71366e34a68109548b9fb12ac0f7cc.yara
@@ -28,34 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 5af9abf0-d8de-4e9b-8141-e9e97a31901a
 KnownVulnerableSamples:
-- Filename: AsrDrv102.sys
-  MD5: 76bb1a4332666222a8e3e1339e267179
-  SHA1: 9923c8f1e565a05b3c738d283cf5c0ed61a0b90f
-  SHA256: a7c2e7910942dd5e43e2f4eb159bcd2b4e71366e34a68109548b9fb12ac0f7cc
-  Signature:
-  - ASROCK Incorporation
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: ASRock Incorporation
-  Description: ASRock IO Driver
-  Product: ASRock IO Driver
-  ProductVersion: 1.00.00.0000
-  FileVersion: '1.00.00.0000 built by: WinDDK'
-  MachineType: AMD64
-  OriginalFilename: AsrDrv.sys
-  Authentihash:
+- Authentihash:
     MD5: c36c748b4297cedfdc5f38de22a40b5a
     SHA1: 5f9c7d3552ffa98c9dcf9a9b7ad1263d2ab24a2f
     SHA256: 11eecf9e6e2447856ed4cf86ee1cb779cfe0672c808bbd5934cf2f09a62d6170
-  InternalName: AsrDrv.sys
+  Company: ASRock Incorporation
   Copyright: Copyright (C) 2012 ASRock Incorporation
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2015-11-27 20:11:08'
+  Date: ''
+  Description: ASRock IO Driver
   ExportedFunctions: ''
+  FileVersion: '1.00.00.0000 built by: WinDDK'
+  Filename: AsrDrv102.sys
   ImportedFunctions:
   - IoDeleteSymbolicLink
   - ExFreePoolWithTag
@@ -79,6 +59,46 @@ KnownVulnerableSamples:
   - KeBugCheckEx
   - ExAllocatePoolWithTag
   - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: AsrDrv.sys
+  MD5: 76bb1a4332666222a8e3e1339e267179
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: AsrDrv.sys
+  Product: ASRock IO Driver
+  ProductVersion: 1.00.00.0000
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: a84c01eca8a6ca8e5221dbca3000c16e
+    SHA1: ff0ae5ad07f99ad2ac40b53c5215335a5d84e926
+    SHA256: 961a144592952461a785ff1f4d4f55c4132016b9fbbce3d881edf6131038533b
+  SHA1: 9923c8f1e565a05b3c738d283cf5c0ed61a0b90f
+  SHA256: a7c2e7910942dd5e43e2f4eb159bcd2b4e71366e34a68109548b9fb12ac0f7cc
+  Sections:
+    .text:
+      Entropy: 6.324222497384398
+      Virtual Size: '0x1c58'
+    .rdata:
+      Entropy: 4.638280963908253
+      Virtual Size: '0x264'
+    .data:
+      Entropy: 0.46979092711892695
+      Virtual Size: '0x130'
+    .pdata:
+      Entropy: 3.778294775527596
+      Virtual Size: '0xfc'
+    INIT:
+      Entropy: 5.41793863789468
+      Virtual Size: '0x4d8'
+    .rsrc:
+      Entropy: 3.287296316763299
+      Virtual Size: '0x3a0'
+  Signature:
+  - ASROCK Incorporation
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -168,30 +188,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: a84c01eca8a6ca8e5221dbca3000c16e
-    SHA1: ff0ae5ad07f99ad2ac40b53c5215335a5d84e926
-    SHA256: 961a144592952461a785ff1f4d4f55c4132016b9fbbce3d881edf6131038533b
-  Sections:
-    .text:
-      Entropy: 6.324222497384398
-      Virtual Size: '0x1c58'
-    .rdata:
-      Entropy: 4.638280963908253
-      Virtual Size: '0x264'
-    .data:
-      Entropy: 0.46979092711892695
-      Virtual Size: '0x130'
-    .pdata:
-      Entropy: 3.778294775527596
-      Virtual Size: '0xfc'
-    INIT:
-      Entropy: 5.41793863789468
-      Virtual Size: '0x4d8'
-    .rsrc:
-      Entropy: 3.287296316763299
-      Virtual Size: '0x3a0'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-11-27 20:11:08'
+MitreID: T1068
+Resources:
+- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Tags:
 - AsrDrv102.sys
+Verified: 'TRUE'

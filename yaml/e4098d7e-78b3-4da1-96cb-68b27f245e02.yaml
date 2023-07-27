@@ -1,22 +1,16 @@
-Id: e4098d7e-78b3-4da1-96cb-68b27f245e02
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create HwOs2Ec7x64.sys binPath=C:\windows\temp\HwOs2Ec7x64.sys     type=kernel
     && sc.exe start HwOs2Ec7x64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/b179e1ab6dc0b1aee783adbcad4ad6bb75a8a64cb798f30c0dd2ee8aaf43e6de.yara
@@ -28,33 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: e4098d7e-78b3-4da1-96cb-68b27f245e02
 KnownVulnerableSamples:
-- Filename: HwOs2Ec7x64.sys
-  MD5: bae1f127c4ff21d8fe45e2bbfc59c180
-  SHA1: 26c4a7b392d7e7bd7f0a2a758534e45c0d9a56ab
-  SHA256: b179e1ab6dc0b1aee783adbcad4ad6bb75a8a64cb798f30c0dd2ee8aaf43e6de
-  Signature:
-  - Huawei Technologies Co.,Ltd.
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: Huawei
-  Description: HwOs2Ec
-  Product: Huawei MateBook
-  ProductVersion: 1.0.0.1
-  FileVersion: 1.0.0.1
-  MachineType: AMD64
-  OriginalFilename: HwOs2Ec.sys
-  Authentihash:
+- Authentihash:
     MD5: 9a0c8745f43136476aa78ea77af67a0a
     SHA1: dcfc27b5aac3e1911c0617d6c1823e65267c09a3
     SHA256: b78cb190a4968d06f2cdab65ea0106bc47eefdaffc871ba5dd2c2dccadb1e403
-  InternalName: HwOs2Ec
+  Company: Huawei
   Copyright: Copyright (C) 2016
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2017-04-12 20:51:36'
+  Date: ''
+  Description: HwOs2Ec
   ExportedFunctions: ''
+  FileVersion: 1.0.0.1
+  Filename: HwOs2Ec7x64.sys
   ImportedFunctions:
   - DbgPrint
   - IofCompleteRequest
@@ -121,6 +102,54 @@ KnownVulnerableSamples:
   - ObQueryNameString
   - IoFileObjectType
   - KeBugCheckEx
+  Imports:
+  - ntoskrnl.exe
+  InternalName: HwOs2Ec
+  MD5: bae1f127c4ff21d8fe45e2bbfc59c180
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: HwOs2Ec.sys
+  Product: Huawei MateBook
+  ProductVersion: 1.0.0.1
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: b58df55aa41763ccb62987fd4956f59c
+    SHA1: 55b5847cfadc4b9c1fd7d0505c973e2cbaf21365
+    SHA256: 511d3ee1bc5d3763f740817dd866171e179f95d8351036c1d02d8bc4dc12f5d7
+  SHA1: 26c4a7b392d7e7bd7f0a2a758534e45c0d9a56ab
+  SHA256: b179e1ab6dc0b1aee783adbcad4ad6bb75a8a64cb798f30c0dd2ee8aaf43e6de
+  Sections:
+    .text:
+      Entropy: 6.236880813198621
+      Virtual Size: '0x2084'
+    .rdata:
+      Entropy: 4.364746352540341
+      Virtual Size: '0x994'
+    .data:
+      Entropy: 0.30140680731160896
+      Virtual Size: '0x61c'
+    .pdata:
+      Entropy: 4.211164079381654
+      Virtual Size: '0x33c'
+    .gfids:
+      Entropy: 0.8112781244591328
+      Virtual Size: '0x4'
+    PAGE:
+      Entropy: 6.230170005876138
+      Virtual Size: '0x18ea'
+    INIT:
+      Entropy: 5.513789896059991
+      Virtual Size: '0x92a'
+    .rsrc:
+      Entropy: 3.224013557904709
+      Virtual Size: '0x308'
+    .reloc:
+      Entropy: 2.5414460711655216
+      Virtual Size: '0x14'
+  Signature:
+  - Huawei Technologies Co.,Ltd.
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -198,39 +227,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: b58df55aa41763ccb62987fd4956f59c
-    SHA1: 55b5847cfadc4b9c1fd7d0505c973e2cbaf21365
-    SHA256: 511d3ee1bc5d3763f740817dd866171e179f95d8351036c1d02d8bc4dc12f5d7
-  Sections:
-    .text:
-      Entropy: 6.236880813198621
-      Virtual Size: '0x2084'
-    .rdata:
-      Entropy: 4.364746352540341
-      Virtual Size: '0x994'
-    .data:
-      Entropy: 0.30140680731160896
-      Virtual Size: '0x61c'
-    .pdata:
-      Entropy: 4.211164079381654
-      Virtual Size: '0x33c'
-    .gfids:
-      Entropy: 0.8112781244591328
-      Virtual Size: '0x4'
-    PAGE:
-      Entropy: 6.230170005876138
-      Virtual Size: '0x18ea'
-    INIT:
-      Entropy: 5.513789896059991
-      Virtual Size: '0x92a'
-    .rsrc:
-      Entropy: 3.224013557904709
-      Virtual Size: '0x308'
-    .reloc:
-      Entropy: 2.5414460711655216
-      Virtual Size: '0x14'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-04-12 20:51:36'
+MitreID: T1068
+Resources:
+- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Tags:
 - HwOs2Ec7x64.sys
+Verified: 'TRUE'

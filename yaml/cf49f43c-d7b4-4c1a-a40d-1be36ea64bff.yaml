@@ -1,21 +1,16 @@
-Id: cf49f43c-d7b4-4c1a-a40d-1be36ea64bff
+Acknowledgement:
+  Handle: hfiref0x
+  Person: hfiref0x
 Author: Michael Haag
-Created: '2023-05-22'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel
     && sc.exe start SysDrv3S.sys
   Description: Vulnerable driver found in https://github.com/hfiref0x/KDU.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
-Acknowledgement:
-  Person: hfiref0x
-  Handle: hfiref0x
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-05-22'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/0e53b58415fa68552928622118d5b8a3a851b2fc512709a90b63ba46acda8b6b.yara
@@ -27,31 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: cf49f43c-d7b4-4c1a-a40d-1be36ea64bff
 KnownVulnerableSamples:
-- Filename: SysDrv3S.sys
-  MD5: 31eca8c0b32135850d5a50aee11fec87
-  SHA1: e1069365cb580e3525090f2fa28efd4127223588
-  SHA256: 0e53b58415fa68552928622118d5b8a3a851b2fc512709a90b63ba46acda8b6b
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: 3S-Smart Software Solutions GmbH
-  Description: SysDrv3S
-  Product: SysDrv3S
-  ProductVersion: 3.5.6.0
-  FileVersion: 3,5,6,0
-  MachineType: AMD64
-  OriginalFilename: SysDrv3S.sys
-  Authentihash:
+- Authentihash:
     MD5: 0ef111dc998659cbc37f0d9845cdd2df
     SHA1: 432b5809d84935d15574de8d64b22e06682ff715
     SHA256: 97cada65b735f3eece349c7b7021c4469d5a9fb3cf8b5e2ac187006469ffbc98
-  InternalName: SysDrv3S
+  Company: 3S-Smart Software Solutions GmbH
   Copyright: "Copyright \xA9 2006-2014"
-  Imports:
-  - HAL.dll
-  - ntoskrnl.exe
+  CreationTimestamp: '2016-02-24 05:31:51'
+  Date: ''
+  Description: SysDrv3S
   ExportedFunctions: ''
+  FileVersion: 3,5,6,0
+  Filename: SysDrv3S.sys
   ImportedFunctions:
   - HalSetBusDataByOffset
   - HalTranslateBusAddress
@@ -90,6 +74,49 @@ KnownVulnerableSamples:
   - PoStartNextPowerIrp
   - IoFreeIrp
   - IoAllocateIrp
+  Imports:
+  - HAL.dll
+  - ntoskrnl.exe
+  InternalName: SysDrv3S
+  MD5: 31eca8c0b32135850d5a50aee11fec87
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: SysDrv3S.sys
+  Product: SysDrv3S
+  ProductVersion: 3.5.6.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 4c4e61d23caf453cd98052bd346147af
+    SHA1: 8cac5443a51b67b2cdcf79e16acf97e900f1cc3b
+    SHA256: b4312d3ba6a4607ea60df01e1cc8f20eced165f726bb535c437a1c48f63bb1b0
+  SHA1: e1069365cb580e3525090f2fa28efd4127223588
+  SHA256: 0e53b58415fa68552928622118d5b8a3a851b2fc512709a90b63ba46acda8b6b
+  Sections:
+    .text:
+      Entropy: 5.487700675400823
+      Virtual Size: '0x3afb'
+    .gdat:
+      Entropy: 0.0
+      Virtual Size: '0xec1314'
+    .rdata:
+      Entropy: 5.282534845463875
+      Virtual Size: '0xac4'
+    .data:
+      Entropy: 2.8653907057442844
+      Virtual Size: '0xf0'
+    .pdata:
+      Entropy: 4.315220761729047
+      Virtual Size: '0x2a0'
+    INIT:
+      Entropy: 4.919040139613327
+      Virtual Size: '0x472'
+    .rsrc:
+      Entropy: 3.3014617564676696
+      Virtual Size: '0x3c0'
+    .reloc:
+      Entropy: 1.2611452975073978
+      Virtual Size: '0x120'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -150,36 +177,9 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
         CA , SHA256 , G3
       Version: 1
-  RichPEHeaderHash:
-    MD5: 4c4e61d23caf453cd98052bd346147af
-    SHA1: 8cac5443a51b67b2cdcf79e16acf97e900f1cc3b
-    SHA256: b4312d3ba6a4607ea60df01e1cc8f20eced165f726bb535c437a1c48f63bb1b0
-  Sections:
-    .text:
-      Entropy: 5.487700675400823
-      Virtual Size: '0x3afb'
-    .gdat:
-      Entropy: 0.0
-      Virtual Size: '0xec1314'
-    .rdata:
-      Entropy: 5.282534845463875
-      Virtual Size: '0xac4'
-    .data:
-      Entropy: 2.8653907057442844
-      Virtual Size: '0xf0'
-    .pdata:
-      Entropy: 4.315220761729047
-      Virtual Size: '0x2a0'
-    INIT:
-      Entropy: 4.919040139613327
-      Virtual Size: '0x472'
-    .rsrc:
-      Entropy: 3.3014617564676696
-      Virtual Size: '0x3c0'
-    .reloc:
-      Entropy: 1.2611452975073978
-      Virtual Size: '0x120'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-02-24 05:31:51'
+MitreID: T1068
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
 Tags:
 - SysDrv3S.sys
+Verified: 'TRUE'

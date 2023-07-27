@@ -1,26 +1,17 @@
-Id: 7ce8fb06-46eb-4f4f-90d5-5518a6561f15
+Acknowledgement:
+  Handle: hfiref0x
+  Person: hfiref0x
 Author: Michael Haag
-Created: '2023-05-22'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create gmer64.sys binPath=C:\windows\temp\gmer64.sys type=kernel
     && sc.exe start gmer64.sys
   Description: Driver used by the GMER application. Which is an application that detects
     and removes rootkits
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
-- http://www.gmer.net/
-- https://github.com/gtworek/PSBits/blob/master/Misc/KillWithLolDriver.ps1
-- https://github.com/ZeroMemoryEx/Blackout
-- https://github.com/b1-team/superman
-Acknowledgement:
-  Person: hfiref0x
-  Handle: hfiref0x
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-05-22'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/18c909a2b8c5e16821d6ef908f56881aa0ecceeaccb5fa1e54995935fcfd12f7.yara
@@ -32,30 +23,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 7ce8fb06-46eb-4f4f-90d5-5518a6561f15
 KnownVulnerableSamples:
-- Filename: gmer64.sys
-  MD5: a822b9e6eedf69211013e192967bf523
-  SHA1: 83506de48bd0c50ea00c9e889fe980f56e6c6e1b
-  SHA256: 18c909a2b8c5e16821d6ef908f56881aa0ecceeaccb5fa1e54995935fcfd12f7
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: GMER
-  Description: GMER Driver http://www.gmer.net
-  Product: GMER
-  ProductVersion: 2, 0, 6983
-  FileVersion: '2, 0, 6983 built by: WinDDK'
-  MachineType: AMD64
-  OriginalFilename: gmer64.sys
-  Authentihash:
+- Authentihash:
     MD5: 7514f440c5b9e5c4a0498e4489b76d62
     SHA1: 0bca6c35159282fd64615abc4d398399b061847b
     SHA256: 3913d9754b78182aa25d38fbd7ea02502bdf1d81e6525ab4b5ffe5f543200478
-  InternalName: gmer64.sys
+  Company: GMER
   Copyright: Copyright (C) GMER 2003-2013
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2016-03-09 00:28:57'
+  Date: ''
+  Description: GMER Driver http://www.gmer.net
   ExportedFunctions: ''
+  FileVersion: '2, 0, 6983 built by: WinDDK'
+  Filename: gmer64.sys
   ImportedFunctions:
   - PsProcessType
   - IoDeleteSymbolicLink
@@ -148,6 +129,42 @@ KnownVulnerableSamples:
   - PsTerminateSystemThread
   - KeBugCheckEx
   - __C_specific_handler
+  Imports:
+  - ntoskrnl.exe
+  InternalName: gmer64.sys
+  MD5: a822b9e6eedf69211013e192967bf523
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: gmer64.sys
+  Product: GMER
+  ProductVersion: 2, 0, 6983
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: ae0016968883c7b6d9bf26bf6adcb454
+    SHA1: ae1e456ae17f0bce4cb62e8cc3a76e5b83c53caa
+    SHA256: 9c178663dffdd9f9429f961711da30f4c966a2437d235785d182a6e5afb40fbc
+  SHA1: 83506de48bd0c50ea00c9e889fe980f56e6c6e1b
+  SHA256: 18c909a2b8c5e16821d6ef908f56881aa0ecceeaccb5fa1e54995935fcfd12f7
+  Sections:
+    .text:
+      Entropy: 6.190031082489791
+      Virtual Size: '0x9ed1'
+    .rdata:
+      Entropy: 4.557929170549758
+      Virtual Size: '0xe44'
+    .data:
+      Entropy: 0.30140680731160896
+      Virtual Size: '0xf50'
+    .pdata:
+      Entropy: 4.428217198958577
+      Virtual Size: '0x468'
+    INIT:
+      Entropy: 5.165565402631577
+      Virtual Size: '0xace'
+    .rsrc:
+      Entropy: 3.389674147151622
+      Virtual Size: '0x368'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -193,30 +210,13 @@ KnownVulnerableSamples:
     - SerialNumber: 1121c5bcad73319ee0131e328a2b814e164a
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
-  RichPEHeaderHash:
-    MD5: ae0016968883c7b6d9bf26bf6adcb454
-    SHA1: ae1e456ae17f0bce4cb62e8cc3a76e5b83c53caa
-    SHA256: 9c178663dffdd9f9429f961711da30f4c966a2437d235785d182a6e5afb40fbc
-  Sections:
-    .text:
-      Entropy: 6.190031082489791
-      Virtual Size: '0x9ed1'
-    .rdata:
-      Entropy: 4.557929170549758
-      Virtual Size: '0xe44'
-    .data:
-      Entropy: 0.30140680731160896
-      Virtual Size: '0xf50'
-    .pdata:
-      Entropy: 4.428217198958577
-      Virtual Size: '0x468'
-    INIT:
-      Entropy: 5.165565402631577
-      Virtual Size: '0xace'
-    .rsrc:
-      Entropy: 3.389674147151622
-      Virtual Size: '0x368'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-03-09 00:28:57'
+MitreID: T1068
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
+- http://www.gmer.net/
+- https://github.com/gtworek/PSBits/blob/master/Misc/KillWithLolDriver.ps1
+- https://github.com/ZeroMemoryEx/Blackout
+- https://github.com/b1-team/superman
 Tags:
 - gmer64.sys
+Verified: 'TRUE'

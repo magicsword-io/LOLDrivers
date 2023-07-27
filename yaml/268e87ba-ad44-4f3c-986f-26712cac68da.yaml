@@ -1,52 +1,31 @@
-Id: 268e87ba-ad44-4f3c-986f-26712cac68da
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create Phymemx64.sys binPath=C:\windows\temp\Phymemx64.sys type=kernel
     && sc.exe start Phymemx64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: 268e87ba-ad44-4f3c-986f-26712cac68da
 KnownVulnerableSamples:
-- Filename: Phymemx64.sys
-  MD5: 715572dfe6fb10b16f980bfa242f3fa5
-  SHA1: f42f28d164205d9f6dab9317c9fecad54c38d5d2
-  SHA256: 19a212e6fc324f4cb9ee5eba60f5c1fc0191799a4432265cbeaa3307c76a7fc0
-  Signature:
-  - Huawei Technologies Co.,Ltd.
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 4325af5c85aa7bb0339389cf54d78817
     SHA1: 3c9f40ac72b0202cb40627fdeb7298079187193a
     SHA256: a6ae7364fd188c10d6b5a729a7ff58a3eb11e7feb0d107d18f9133655c11fb66
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  - WDFLDR.SYS
+  CreationTimestamp: '2016-11-23 02:00:09'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: Phymemx64.sys
   ImportedFunctions:
   - ObfDereferenceObject
   - ZwClose
@@ -67,6 +46,50 @@ KnownVulnerableSamples:
   - WdfVersionBind
   - WdfVersionBindClass
   - WdfVersionUnbindClass
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - WDFLDR.SYS
+  InternalName: ''
+  MD5: 715572dfe6fb10b16f980bfa242f3fa5
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: f4aa5622ff85e2086f92c9ac26b7d2b9
+    SHA1: a862ae538e1a011bc76d443f9899bb301d8fe21e
+    SHA256: 42dd8e27522c83dd188be1d03159a3cb141eda3d07f9fcb12aa2310e478f1066
+  SHA1: f42f28d164205d9f6dab9317c9fecad54c38d5d2
+  SHA256: 19a212e6fc324f4cb9ee5eba60f5c1fc0191799a4432265cbeaa3307c76a7fc0
+  Sections:
+    .text:
+      Entropy: 6.109907887975518
+      Virtual Size: '0xd3e'
+    .rdata:
+      Entropy: 4.038835060262648
+      Virtual Size: '0x4e4'
+    .data:
+      Entropy: 0.6146016951479871
+      Virtual Size: '0xf28'
+    .pdata:
+      Entropy: 3.5273168104817696
+      Virtual Size: '0xd8'
+    .gfids:
+      Entropy: 1.5
+      Virtual Size: '0x4'
+    INIT:
+      Entropy: 4.939906423726662
+      Virtual Size: '0x31e'
+    .reloc:
+      Entropy: 2.8820214465367484
+      Virtual Size: '0x24'
+  Signature:
+  - Huawei Technologies Co.,Ltd.
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -144,10 +167,56 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+- Authentihash:
+    MD5: 4325af5c85aa7bb0339389cf54d78817
+    SHA1: 3c9f40ac72b0202cb40627fdeb7298079187193a
+    SHA256: a6ae7364fd188c10d6b5a729a7ff58a3eb11e7feb0d107d18f9133655c11fb66
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2016-11-23 02:00:09'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: Phymemx64.sys
+  ImportedFunctions:
+  - ObfDereferenceObject
+  - ZwClose
+  - ZwOpenSection
+  - ObReferenceObjectByHandle
+  - ZwUnmapViewOfSection
+  - KeBugCheckEx
+  - IoDeleteSymbolicLink
+  - IoDeleteDevice
+  - RtlCopyUnicodeString
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - IofCompleteRequest
+  - ZwMapViewOfSection
+  - RtlInitUnicodeString
+  - HalTranslateBusAddress
+  - WdfVersionUnbind
+  - WdfVersionBind
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - WDFLDR.SYS
+  InternalName: ''
+  MD5: e7ab83a655b0cd934a19d94ac81e4eec
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   RichPEHeaderHash:
     MD5: f4aa5622ff85e2086f92c9ac26b7d2b9
     SHA1: a862ae538e1a011bc76d443f9899bb301d8fe21e
     SHA256: 42dd8e27522c83dd188be1d03159a3cb141eda3d07f9fcb12aa2310e478f1066
+  SHA1: 6ecfc7ccc4843812bfccfb7e91594c018f0a0ff9
+  SHA256: 88df37ede18bea511f1782c1a6c4915690b29591cf2c1bf5f52201fbbb4fa2b9
   Sections:
     .text:
       Entropy: 6.109907887975518
@@ -170,53 +239,7 @@ KnownVulnerableSamples:
     .reloc:
       Entropy: 2.8820214465367484
       Virtual Size: '0x24'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-11-23 02:00:09'
-- Filename: Phymemx64.sys
-  MD5: e7ab83a655b0cd934a19d94ac81e4eec
-  SHA1: 6ecfc7ccc4843812bfccfb7e91594c018f0a0ff9
-  SHA256: 88df37ede18bea511f1782c1a6c4915690b29591cf2c1bf5f52201fbbb4fa2b9
   Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
-    MD5: 4325af5c85aa7bb0339389cf54d78817
-    SHA1: 3c9f40ac72b0202cb40627fdeb7298079187193a
-    SHA256: a6ae7364fd188c10d6b5a729a7ff58a3eb11e7feb0d107d18f9133655c11fb66
-  InternalName: ''
-  Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  - WDFLDR.SYS
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - ObfDereferenceObject
-  - ZwClose
-  - ZwOpenSection
-  - ObReferenceObjectByHandle
-  - ZwUnmapViewOfSection
-  - KeBugCheckEx
-  - IoDeleteSymbolicLink
-  - IoDeleteDevice
-  - RtlCopyUnicodeString
-  - IoCreateSymbolicLink
-  - IoCreateDevice
-  - IofCompleteRequest
-  - ZwMapViewOfSection
-  - RtlInitUnicodeString
-  - HalTranslateBusAddress
-  - WdfVersionUnbind
-  - WdfVersionBind
-  - WdfVersionBindClass
-  - WdfVersionUnbindClass
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -292,33 +315,10 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: f4aa5622ff85e2086f92c9ac26b7d2b9
-    SHA1: a862ae538e1a011bc76d443f9899bb301d8fe21e
-    SHA256: 42dd8e27522c83dd188be1d03159a3cb141eda3d07f9fcb12aa2310e478f1066
-  Sections:
-    .text:
-      Entropy: 6.109907887975518
-      Virtual Size: '0xd3e'
-    .rdata:
-      Entropy: 4.038835060262648
-      Virtual Size: '0x4e4'
-    .data:
-      Entropy: 0.6146016951479871
-      Virtual Size: '0xf28'
-    .pdata:
-      Entropy: 3.5273168104817696
-      Virtual Size: '0xd8'
-    .gfids:
-      Entropy: 1.5
-      Virtual Size: '0x4'
-    INIT:
-      Entropy: 4.939906423726662
-      Virtual Size: '0x31e'
-    .reloc:
-      Entropy: 2.8820214465367484
-      Virtual Size: '0x24'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-11-23 02:00:09'
+MitreID: T1068
+Resources:
+- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Tags:
 - Phymemx64.sys
+Verified: 'TRUE'

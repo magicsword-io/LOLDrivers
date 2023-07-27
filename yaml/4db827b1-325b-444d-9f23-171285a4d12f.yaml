@@ -1,22 +1,16 @@
-Id: 4db827b1-325b-444d-9f23-171285a4d12f
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create VProEventMonitor.sys binPath=C:\windows\temp\VProEventMonitor.sys     type=kernel
     && sc.exe start VProEventMonitor.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/7877c1b0e7429453b750218ca491c2825dae684ad9616642eff7b41715c70aca.yara
@@ -28,34 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 4db827b1-325b-444d-9f23-171285a4d12f
 KnownVulnerableSamples:
-- Filename: VProEventMonitor.sys
-  MD5: cd9f0fcecf1664facb3671c0130dc8bb
-  SHA1: 0c26ab1299adcd9a385b541ef1653728270aa23e
-  SHA256: 7877c1b0e7429453b750218ca491c2825dae684ad9616642eff7b41715c70aca
-  Signature:
-  - Symantec Corporation
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: Symantec Corporation
-  Description: VProEventMonitor.Sys - Event Monitoring driver
-  Product: Symantec Event Monitors Driver Development Edition
-  ProductVersion: 1.0.0
-  FileVersion: 1.0.0.45708
-  MachineType: AMD64
-  OriginalFilename: VProEventMonitor.Sys
-  Authentihash:
+- Authentihash:
     MD5: ed01170d94a5e21d04b6d7212b53c994
     SHA1: cbaa70aac878a389c8213a5bc0df830b1d5b4e04
     SHA256: 9994990c02c37472625cc7b2255044feef9b73c08ca3a70c06861b7d26b27a25
-  InternalName: VProEventMonitor.Sys
+  Company: Symantec Corporation
   Copyright: "Copyright \xA9 2007-2008 Symantec Corporation. All rights reserved."
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2012-06-28 04:53:46'
+  Date: ''
+  Description: VProEventMonitor.Sys - Event Monitoring driver
   ExportedFunctions: ''
+  FileVersion: 1.0.0.45708
+  Filename: VProEventMonitor.sys
   ImportedFunctions:
   - PsGetVersion
   - strncmp
@@ -84,6 +64,46 @@ KnownVulnerableSamples:
   - DbgPrint
   - ExReleaseFastMutex
   - KeQueryPerformanceCounter
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: VProEventMonitor.Sys
+  MD5: cd9f0fcecf1664facb3671c0130dc8bb
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: VProEventMonitor.Sys
+  Product: Symantec Event Monitors Driver Development Edition
+  ProductVersion: 1.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: c492fc6302ba1d302ecd17b883170218
+    SHA1: fda9d8e10686fb6d1e1edb93de5fa0b62f27e9ee
+    SHA256: 62f2e4d85e08eb2e44b09df13add2fd672b667877575c2f1a10ba1586d8b0e53
+  SHA1: 0c26ab1299adcd9a385b541ef1653728270aa23e
+  SHA256: 7877c1b0e7429453b750218ca491c2825dae684ad9616642eff7b41715c70aca
+  Sections:
+    .text:
+      Entropy: 6.390530381204556
+      Virtual Size: '0x1eba'
+    .rdata:
+      Entropy: 4.396653063344109
+      Virtual Size: '0x22c'
+    .data:
+      Entropy: 0.7805204809539781
+      Virtual Size: '0x194'
+    .pdata:
+      Entropy: 3.454144073130144
+      Virtual Size: '0x78'
+    INIT:
+      Entropy: 4.914325578266425
+      Virtual Size: '0x3d4'
+    .rsrc:
+      Entropy: 3.325918842448171
+      Virtual Size: '0x540'
+  Signature:
+  - Symantec Corporation
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -172,30 +192,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: c492fc6302ba1d302ecd17b883170218
-    SHA1: fda9d8e10686fb6d1e1edb93de5fa0b62f27e9ee
-    SHA256: 62f2e4d85e08eb2e44b09df13add2fd672b667877575c2f1a10ba1586d8b0e53
-  Sections:
-    .text:
-      Entropy: 6.390530381204556
-      Virtual Size: '0x1eba'
-    .rdata:
-      Entropy: 4.396653063344109
-      Virtual Size: '0x22c'
-    .data:
-      Entropy: 0.7805204809539781
-      Virtual Size: '0x194'
-    .pdata:
-      Entropy: 3.454144073130144
-      Virtual Size: '0x78'
-    INIT:
-      Entropy: 4.914325578266425
-      Virtual Size: '0x3d4'
-    .rsrc:
-      Entropy: 3.325918842448171
-      Virtual Size: '0x540'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-06-28 04:53:46'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - VProEventMonitor.sys
+Verified: 'TRUE'

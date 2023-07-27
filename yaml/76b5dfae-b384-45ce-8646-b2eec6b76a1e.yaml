@@ -1,9 +1,8 @@
-Id: 76b5dfae-b384-45ce-8646-b2eec6b76a1e
+Acknowledgement:
+  Handle: zwclose
+  Person: zwclose
 Author: Paul Michaud
-Created: '2023-05-12'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create KfeCo11X64.sys binPath=C:\windows\temp\KfeCo11X64.sys type=kernel
     && sc.exe start KfeCo11X64.sys
@@ -16,16 +15,10 @@ Commands:
     Some users think that Killer suite is required for the NIC to work properly, so
     they install it even after a fresh Windows install. This version is confirmed
     vulnerable based on the script usage from zwclose.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://zwclose.github.io/2023/04/18/killer2.html
-- https://twitter.com/zwclose/status/1648441215808049153
-- https://zwclose.github.io/2022/12/18/killer1.html
-Acknowledgement:
-  Person: zwclose
-  Handle: zwclose
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-05-12'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/9a91d6e83b8fdec536580f6617f10dfc64eedf14ead29a6a644eb154426622ba.yara
@@ -37,33 +30,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 76b5dfae-b384-45ce-8646-b2eec6b76a1e
 KnownVulnerableSamples:
-- Filename: KfeCo11X64.sys
-  MD5: c901887f28bbb55a10eb934755b47227
-  SHA1: 2540205480ea3d59e4031de3c6632e3ce2596459
-  SHA256: 9a91d6e83b8fdec536580f6617f10dfc64eedf14ead29a6a644eb154426622ba
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: Rivet Networks, LLC.
-  Description: Killer Traffic Control Callout Driver
-  Product: Killer Traffic Control
-  ProductVersion: 9.8.4.59
-  FileVersion: 9.8.4.59
-  MachineType: AMD64
-  OriginalFilename: KfeCoDrv.sys
-  Authentihash:
+- Authentihash:
     MD5: 758090532f58b19865d76a41389c2d58
     SHA1: 6aa5070d7346f164d618915d32ddb9cfe1c1fecc
     SHA256: a7047cee090ddbd150d7337a9357e03ccea56f004a2d29ddb7b8a0636a396240
-  InternalName: KfeCoDrv.sys
+  Company: Rivet Networks, LLC.
   Copyright: Copyright (C) 2015-2018 Rivet Networks, LLC.
-  Imports:
-  - ntoskrnl.exe
-  - NDIS.SYS
-  - fwpkclnt.sys
-  - WDFLDR.SYS
+  CreationTimestamp: '2022-03-29 11:25:42'
+  Date: ''
+  Description: Killer Traffic Control Callout Driver
   ExportedFunctions: ''
+  FileVersion: 9.8.4.59
+  Filename: KfeCo11X64.sys
   ImportedFunctions:
   - ExFreePoolWithTag
   - KeReleaseInStackQueuedSpinLockFromDpcLevel
@@ -171,6 +151,48 @@ KnownVulnerableSamples:
   - WdfVersionBindClass
   - WdfVersionUnbindClass
   - WdfVersionBind
+  Imports:
+  - ntoskrnl.exe
+  - NDIS.SYS
+  - fwpkclnt.sys
+  - WDFLDR.SYS
+  InternalName: KfeCoDrv.sys
+  MD5: c901887f28bbb55a10eb934755b47227
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: KfeCoDrv.sys
+  Product: Killer Traffic Control
+  ProductVersion: 9.8.4.59
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: c02c92737cc75210cbdb22db9985bd7c
+    SHA1: 91b9fe88004bdda4bff995e0c46393f755e4d6fc
+    SHA256: 4642f08acdd1a88ef296c925ce1fcaecf013e5e98de934eb839ac24a4e06f467
+  SHA1: 2540205480ea3d59e4031de3c6632e3ce2596459
+  SHA256: 9a91d6e83b8fdec536580f6617f10dfc64eedf14ead29a6a644eb154426622ba
+  Sections:
+    .text:
+      Entropy: 6.401436855573186
+      Virtual Size: '0x20be6'
+    .rdata:
+      Entropy: 5.653552737913285
+      Virtual Size: '0x33d0'
+    .data:
+      Entropy: 5.555301615962117
+      Virtual Size: '0x13ba258'
+    .pdata:
+      Entropy: 5.387931457488882
+      Virtual Size: '0x1644'
+    INIT:
+      Entropy: 5.361670872068078
+      Virtual Size: '0xeb0'
+    .rsrc:
+      Entropy: 3.6430731262668115
+      Virtual Size: '0xc40'
+    .reloc:
+      Entropy: 4.191396558286582
+      Virtual Size: '0x34'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -219,33 +241,11 @@ KnownVulnerableSamples:
       Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Code Signing CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: c02c92737cc75210cbdb22db9985bd7c
-    SHA1: 91b9fe88004bdda4bff995e0c46393f755e4d6fc
-    SHA256: 4642f08acdd1a88ef296c925ce1fcaecf013e5e98de934eb839ac24a4e06f467
-  Sections:
-    .text:
-      Entropy: 6.401436855573186
-      Virtual Size: '0x20be6'
-    .rdata:
-      Entropy: 5.653552737913285
-      Virtual Size: '0x33d0'
-    .data:
-      Entropy: 5.555301615962117
-      Virtual Size: '0x13ba258'
-    .pdata:
-      Entropy: 5.387931457488882
-      Virtual Size: '0x1644'
-    INIT:
-      Entropy: 5.361670872068078
-      Virtual Size: '0xeb0'
-    .rsrc:
-      Entropy: 3.6430731262668115
-      Virtual Size: '0xc40'
-    .reloc:
-      Entropy: 4.191396558286582
-      Virtual Size: '0x34'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-03-29 11:25:42'
+MitreID: T1068
+Resources:
+- https://zwclose.github.io/2023/04/18/killer2.html
+- https://twitter.com/zwclose/status/1648441215808049153
+- https://zwclose.github.io/2022/12/18/killer1.html
 Tags:
 - KfeCo11X64.sys
+Verified: 'TRUE'

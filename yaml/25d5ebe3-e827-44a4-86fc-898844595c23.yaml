@@ -1,52 +1,31 @@
-Id: 25d5ebe3-e827-44a4-86fc-898844595c23
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-03-04'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create POORTRY.sys binPath=C:\windows\temp\POORTRY.sys type=kernel
     && sc.exe start POORTRY.sys
   Description: Driver categorized as POORTRY by Mandiant.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-- ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-03-04'
 Detection: []
+Id: 25d5ebe3-e827-44a4-86fc-898844595c23
 KnownVulnerableSamples:
-- Filename: POORTRY.sys
-  MD5: 7f9309f5e4defec132b622fadbcad511
-  SHA1: a3ed5cbfbc17b58243289f3cf575bf04be49591d
-  SHA256: 6b5cf41512255237064e9274ca8f8a3fef820c45aa6067c9c6a0e6f5751a0421
-  Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  - Microsoft Windows Third Party Component CA 2014
-  - Microsoft Root Certificate Authority 2010
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 103f3c1ce174dff5dfc79a428d4bf385
     SHA1: b4d007b0c6ae6b4cfd96aab617f239cd8ebc8afb
     SHA256: 45b9eee68266d1128bc252087f4a8ae18dbb0e0b6317e28bc248b25ca2431a56
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - NETIO.SYS
-  - ntoskrnl.exe
-  - WDFLDR.SYS
+  CreationTimestamp: '2022-06-07 06:29:24'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: POORTRY.sys
   ImportedFunctions:
   - WskCaptureProviderNPI
   - WskReleaseProviderNPI
@@ -113,6 +92,50 @@ KnownVulnerableSamples:
   - WdfVersionBind
   - WdfVersionUnbind
   - WdfVersionUnbindClass
+  Imports:
+  - NETIO.SYS
+  - ntoskrnl.exe
+  - WDFLDR.SYS
+  InternalName: ''
+  MD5: 7f9309f5e4defec132b622fadbcad511
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
+    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
+    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
+  SHA1: a3ed5cbfbc17b58243289f3cf575bf04be49591d
+  SHA256: 6b5cf41512255237064e9274ca8f8a3fef820c45aa6067c9c6a0e6f5751a0421
+  Sections:
+    .text:
+      Entropy: 3.3215483068965117
+      Virtual Size: '0x6fda'
+    .rdata:
+      Entropy: 3.6296738296175355
+      Virtual Size: '0x3a04'
+    .data:
+      Entropy: 5.121133857019538
+      Virtual Size: '0x1c558'
+    .pdata:
+      Entropy: 7.476825033246972
+      Virtual Size: '0x264'
+    INIT:
+      Entropy: 5.314020433529914
+      Virtual Size: '0x858'
+    .vmp0:
+      Entropy: 7.625965054905161
+      Virtual Size: '0x2200f8'
+    .reloc:
+      Entropy: 3.87772027288033
+      Virtual Size: '0xb8'
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+  - Microsoft Root Certificate Authority 2010
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -148,33 +171,10 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
-  RichPEHeaderHash:
-    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
-    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
-    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
-  Sections:
-    .text:
-      Entropy: 3.3215483068965117
-      Virtual Size: '0x6fda'
-    .rdata:
-      Entropy: 3.6296738296175355
-      Virtual Size: '0x3a04'
-    .data:
-      Entropy: 5.121133857019538
-      Virtual Size: '0x1c558'
-    .pdata:
-      Entropy: 7.476825033246972
-      Virtual Size: '0x264'
-    INIT:
-      Entropy: 5.314020433529914
-      Virtual Size: '0x858'
-    .vmp0:
-      Entropy: 7.625965054905161
-      Virtual Size: '0x2200f8'
-    .reloc:
-      Entropy: 3.87772027288033
-      Virtual Size: '0xb8'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-06-07 06:29:24'
+MitreID: T1068
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+- ''
 Tags:
 - POORTRY.sys
+Verified: 'TRUE'

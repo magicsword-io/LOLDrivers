@@ -1,22 +1,16 @@
-Id: 47724cc1-bf75-4ab7-a47a-355a9aa30de1
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create BSMIx64.sys binPath=C:\windows\temp\BSMIx64.sys type=kernel
     && sc.exe start BSMIx64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/552f70374715e70c4ade591d65177be2539ec60f751223680dfaccb9e0be0ed9.yara
@@ -28,33 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 47724cc1-bf75-4ab7-a47a-355a9aa30de1
 KnownVulnerableSamples:
-- Filename: BSMIx64.sys
-  MD5: 444f538daa9f7b340cfd43974ed43690
-  SHA1: c6bd965300f07012d1b651a9b8776028c45b149a
-  SHA256: 552f70374715e70c4ade591d65177be2539ec60f751223680dfaccb9e0be0ed9
-  Signature:
-  - BIOSTAR MICROTECH INT'L CORP
-  - VeriSign Class 3 Code Signing 2009-2 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: SMI Driver
-  Product: ''
-  ProductVersion: 1.0.0.3
-  FileVersion: 1.0.0.3
-  MachineType: AMD64
-  OriginalFilename: BSMI.sys
-  Authentihash:
+- Authentihash:
     MD5: 72a5a1e2fc2713cfa0d159485ce1253c
     SHA1: b978b3595a1a8cb5a345bce980178e8abf5e0bae
     SHA256: 15bc804877a607ba0d017df9f6ac951ac7ffbcca8069c5ba28e0cf505f7553b8
-  InternalName: BSMI.sys
+  Company: ''
   Copyright: Copyright (C) BIOSTAR Corp. 2011
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2012-04-14 00:29:52'
+  Date: ''
+  Description: SMI Driver
   ExportedFunctions: ''
+  FileVersion: 1.0.0.3
+  Filename: BSMIx64.sys
   ImportedFunctions:
   - IoDeleteSymbolicLink
   - RtlInitUnicodeString
@@ -68,6 +49,48 @@ KnownVulnerableSamples:
   - RtlAssert
   - DbgPrint
   - KeBugCheckEx
+  Imports:
+  - ntoskrnl.exe
+  InternalName: BSMI.sys
+  MD5: 444f538daa9f7b340cfd43974ed43690
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: BSMI.sys
+  Product: ''
+  ProductVersion: 1.0.0.3
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: ba346012eed73e59e9d5db50e3a6eac5
+    SHA1: 28856bd6dd1232a0a5d0f33e19768d97d1a999fc
+    SHA256: 525abc79b724917b1c4172226e3367fa3442cbecb61a88a8ed0ba4183020850b
+  SHA1: c6bd965300f07012d1b651a9b8776028c45b149a
+  SHA256: 552f70374715e70c4ade591d65177be2539ec60f751223680dfaccb9e0be0ed9
+  Sections:
+    .text:
+      Entropy: 5.32567833332289
+      Virtual Size: '0x1ec'
+    .rdata:
+      Entropy: 4.128621475943943
+      Virtual Size: '0x134'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.234301640934487
+      Virtual Size: '0x78'
+    PAGE:
+      Entropy: 5.7544301318546305
+      Virtual Size: '0xe27'
+    INIT:
+      Entropy: 5.464233242259506
+      Virtual Size: '0x44a'
+    .rsrc:
+      Entropy: 3.2120064124235372
+      Virtual Size: '0x378'
+  Signature:
+  - BIOSTAR MICROTECH INT'L CORP
+  - VeriSign Class 3 Code Signing 2009-2 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -143,33 +166,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: ba346012eed73e59e9d5db50e3a6eac5
-    SHA1: 28856bd6dd1232a0a5d0f33e19768d97d1a999fc
-    SHA256: 525abc79b724917b1c4172226e3367fa3442cbecb61a88a8ed0ba4183020850b
-  Sections:
-    .text:
-      Entropy: 5.32567833332289
-      Virtual Size: '0x1ec'
-    .rdata:
-      Entropy: 4.128621475943943
-      Virtual Size: '0x134'
-    .data:
-      Entropy: 0.5159719988134768
-      Virtual Size: '0x110'
-    .pdata:
-      Entropy: 3.234301640934487
-      Virtual Size: '0x78'
-    PAGE:
-      Entropy: 5.7544301318546305
-      Virtual Size: '0xe27'
-    INIT:
-      Entropy: 5.464233242259506
-      Virtual Size: '0x44a'
-    .rsrc:
-      Entropy: 3.2120064124235372
-      Virtual Size: '0x378'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-04-14 00:29:52'
+MitreID: T1068
+Resources:
+- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Tags:
 - BSMIx64.sys
+Verified: 'TRUE'

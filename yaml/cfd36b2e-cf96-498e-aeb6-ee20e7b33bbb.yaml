@@ -1,50 +1,31 @@
-Id: cfd36b2e-cf96-498e-aeb6-ee20e7b33bbb
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=kernel
     && sc.exe start magdrvamd64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html
-- ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: cfd36b2e-cf96-498e-aeb6-ee20e7b33bbb
 KnownVulnerableSamples:
-- Filename: magdrvamd64.sys
-  MD5: 49938383844ceec33dba794fb751c9a5
-  SHA1: e22495d92ac3dcae5eeb1980549a9ead8155f98a
-  SHA256: be54f7279e69fb7651f98e91d24069dbc7c4c67e65850e486622ccbdc44d9a57
-  Signature:
-  - Samsung Electronics Co., Ltd.
-  - GlobalSign CodeSigning CA - G2
-  - GlobalSign Root CA - R1
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 4bc9c678b740fdbb6da3da4af3444c09
     SHA1: 592989e3e6942baf38127b50e39dd732b323a92d
     SHA256: 911e01544557544de4ad59b374f1234513821c50a00c7afa62a8fcca07385b2f
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - NTOSKRNL.exe
+  CreationTimestamp: '2013-11-28 06:29:00'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: magdrvamd64.sys
   ImportedFunctions:
   - IoDeleteDevice
   - IoCreateSymbolicLink
@@ -54,6 +35,45 @@ KnownVulnerableSamples:
   - IoDeleteSymbolicLink
   - MmUnmapIoSpace
   - MmMapIoSpace
+  Imports:
+  - NTOSKRNL.exe
+  InternalName: ''
+  MD5: 49938383844ceec33dba794fb751c9a5
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: b600bdf31f987123de173daba685c687
+    SHA1: a843b261089202e7260aaaeda0c341dd471e60de
+    SHA256: 631fce68262329c32a525e128948baa17c8438f89b68df4c9c460865dac05699
+  SHA1: e22495d92ac3dcae5eeb1980549a9ead8155f98a
+  SHA256: be54f7279e69fb7651f98e91d24069dbc7c4c67e65850e486622ccbdc44d9a57
+  Sections:
+    .text:
+      Entropy: 5.206906989594489
+      Virtual Size: '0x824'
+    .rdata:
+      Entropy: 2.5448150550251083
+      Virtual Size: '0xa0'
+    .data:
+      Entropy: 4.727146336862168
+      Virtual Size: '0x4bf'
+    .pdata:
+      Entropy: 3.142076023138039
+      Virtual Size: '0x84'
+    INIT:
+      Entropy: 4.012978735724934
+      Virtual Size: '0x122'
+    .rsrc:
+      Entropy: 4.085285638853219
+      Virtual Size: '0xb0'
+  Signature:
+  - Samsung Electronics Co., Ltd.
+  - GlobalSign CodeSigning CA - G2
+  - GlobalSign Root CA - R1
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -112,30 +132,10 @@ KnownVulnerableSamples:
     - SerialNumber: 1121d54c6060d0acf70c52ceac844116f169
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
-  RichPEHeaderHash:
-    MD5: b600bdf31f987123de173daba685c687
-    SHA1: a843b261089202e7260aaaeda0c341dd471e60de
-    SHA256: 631fce68262329c32a525e128948baa17c8438f89b68df4c9c460865dac05699
-  Sections:
-    .text:
-      Entropy: 5.206906989594489
-      Virtual Size: '0x824'
-    .rdata:
-      Entropy: 2.5448150550251083
-      Virtual Size: '0xa0'
-    .data:
-      Entropy: 4.727146336862168
-      Virtual Size: '0x4bf'
-    .pdata:
-      Entropy: 3.142076023138039
-      Virtual Size: '0x84'
-    INIT:
-      Entropy: 4.012978735724934
-      Virtual Size: '0x122'
-    .rsrc:
-      Entropy: 4.085285638853219
-      Virtual Size: '0xb0'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-11-28 06:29:00'
+MitreID: T1068
+Resources:
+- https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html
+- ''
 Tags:
 - magdrvamd64.sys
+Verified: 'TRUE'

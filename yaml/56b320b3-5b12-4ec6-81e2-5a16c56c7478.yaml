@@ -1,0 +1,98 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: 56b320b3-5b12-4ec6-81e2-5a16c56c7478
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: cc216e3696b7c60bf00217438f753d71
+    SHA1: 005c8117d7bf2e73e6139d3c91f24b70e22a844e
+    SHA256: 73a0ccf3e32c262142bde91c19f5b1f395878783f157c6bed5874ede5a3afddd
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2021-03-25 00:39:46'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
+  ImportedFunctions:
+  - ExFreePoolWithTag
+  - ObfDereferenceObject
+  - ObReferenceObjectByName
+  - IoDriverObjectType
+  - __chkstk
+  - ExAllocatePool
+  Imports:
+  - ntoskrnl.exe
+  InternalName: ''
+  MD5: c4bacbaea0b1ae94c6c9583ba27b2fbe
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 6c556b0adc59ed603f9930cbb6006934
+    SHA1: 7855ddf5015fd759ba0c05608df36b31e4735d8d
+    SHA256: 93f9003f73076cf9fe4ec209e05131a046af9e38b3d08d1475c2dfd0a8575a39
+  SHA1: 7f5e6f6518f4997fc6f9a17f8f411c5147c7c14d
+  SHA256: 321cc3f24a518c70fb537ee9472b1777d05727c649d5b6538082a971c40ddcbe
+  Sections:
+    .text:
+      Entropy: 6.42993529718741
+      Virtual Size: '0xb8a'
+    .rdata:
+      Entropy: 4.6416383236333125
+      Virtual Size: '0x2c4'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0x10'
+    .pdata:
+      Entropy: 3.387382541570423
+      Virtual Size: '0x90'
+    INIT:
+      Entropy: 3.939198544448209
+      Virtual Size: '0xe8'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: CN=WDKTestCert LuckyStrike,132606458839688289
+      ValidFrom: '2021-03-19 16:44:45'
+      ValidTo: '2031-03-19 00:00:00'
+      Signature: c681ec2a6c74bd38bf01bf46998793da6e38783814d5fdf18eb122be168763a98edb15146792509356bacba4df62b796af4f34177c409ec62da915565cc87c8cb3d9b4eb5bce23388f583617a06d22e24e0bbab3c3196f411259ccc00ec1c2cae87208fc2d3814bd68ab3fc920a9e3e899bab82e0178071f9071b280b46efff3b4827d898353ad5273c5f70724efaf3965b3275a8258cc4a137a5501f49ce0f055a85d0d73d2233d07f954fc5330172e95aa50f1e28e4cf487d511dc60a51f671db46652567c27f2cf5f4e48caf232abcb808106a006a9564e136ce0d3c61eae8e79778090c23f2c9973ab2149d0b058fe52f3f661d997837157c680bafdb7a9
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 459f66550fe479a84170eb50c75c9f3c
+      Version: 3
+      TBS:
+        MD5: 7773789c84ab7bbe854ea7a8e3fc4a13
+        SHA1: 45c7568ed49b056a5db0e62aa4f42a50173b9ba1
+        SHA256: 4a60ee2fae435938b5bad02905c117d3e23c663856966971ad15c2d2acf98fed
+    Signer:
+    - SerialNumber: 459f66550fe479a84170eb50c75c9f3c
+      Issuer: CN=WDKTestCert LuckyStrike,132606458839688289
+      Version: 1
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- spf.sys
+Verified: 'TRUE'

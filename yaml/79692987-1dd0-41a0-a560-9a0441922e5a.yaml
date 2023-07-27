@@ -1,51 +1,31 @@
-Id: 79692987-1dd0-41a0-a560-9a0441922e5a
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create AsIO64.sys binPath=C:\windows\temp\AsIO64.sys type=kernel
     && sc.exe start AsIO64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: 79692987-1dd0-41a0-a560-9a0441922e5a
 KnownVulnerableSamples:
-- Filename: AsIO64.sys
-  MD5: 8065a7659562005127673ac52898675f
-  SHA1: fcde5275ee1913509927ce5f0f85e6681064c9d2
-  SHA256: b48a309ee0960da3caaaaf1e794e8c409993aeb3a2b64809f36b97aac8a1e62a
-  Signature:
-  - ASUSTeK Computer Inc.
-  - VeriSign Class 3 Code Signing 2004 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: ''
-  Publisher: ASUSTeK Computer Inc.
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: d593aec08f96fe410f7a6b53e49551a0
     SHA1: 2ea631bfe3fd765e3a03b3165790faf8fdd8286b
     SHA256: 906d8412b357379db9512e3f584fcda1f788acc1337e5b4d4eff5e6fa59324a6
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2007-12-17 02:11:49'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: AsIO64.sys
   ImportedFunctions:
   - ZwClose
   - ZwMapViewOfSection
@@ -62,6 +42,43 @@ KnownVulnerableSamples:
   - IoDeleteSymbolicLink
   - DbgPrint
   - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: 8065a7659562005127673ac52898675f
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ASUSTeK Computer Inc.
+  RichPEHeaderHash:
+    MD5: 59080883b71fd56bbf10ec0ae4b6bdd4
+    SHA1: 503a36a225568553cc9b05f63b3506c6ff21e12e
+    SHA256: bc812d4ddc3ecfbf38c4d0d185e368fc58bac6e07f722db032bf6303daa7c946
+  SHA1: fcde5275ee1913509927ce5f0f85e6681064c9d2
+  SHA256: b48a309ee0960da3caaaaf1e794e8c409993aeb3a2b64809f36b97aac8a1e62a
+  Sections:
+    .text:
+      Entropy: 6.269179908398606
+      Virtual Size: '0x106c'
+    .rdata:
+      Entropy: 4.398778967999751
+      Virtual Size: '0x19c'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0xc'
+    .pdata:
+      Entropy: 3.2766921576186183
+      Virtual Size: '0x84'
+    INIT:
+      Entropy: 4.419041794725205
+      Virtual Size: '0x218'
+  Signature:
+  - ASUSTeK Computer Inc.
+  - VeriSign Class 3 Code Signing 2004 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -137,27 +154,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 59080883b71fd56bbf10ec0ae4b6bdd4
-    SHA1: 503a36a225568553cc9b05f63b3506c6ff21e12e
-    SHA256: bc812d4ddc3ecfbf38c4d0d185e368fc58bac6e07f722db032bf6303daa7c946
-  Sections:
-    .text:
-      Entropy: 6.269179908398606
-      Virtual Size: '0x106c'
-    .rdata:
-      Entropy: 4.398778967999751
-      Virtual Size: '0x19c'
-    .data:
-      Entropy: 0.0
-      Virtual Size: '0xc'
-    .pdata:
-      Entropy: 3.2766921576186183
-      Virtual Size: '0x84'
-    INIT:
-      Entropy: 4.419041794725205
-      Virtual Size: '0x218'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-12-17 02:11:49'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - AsIO64.sys
+Verified: 'TRUE'

@@ -1,50 +1,31 @@
-Id: 19897aed-9be8-4111-a7d8-35618b9d75b3
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create smep_capcom.sys binPath=C:\windows\temp\smep_capcom.sys     type=kernel
     && sc.exe start smep_capcom.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: 19897aed-9be8-4111-a7d8-35618b9d75b3
 KnownVulnerableSamples:
-- Filename: smep_capcom.sys
-  MD5: f406c5536bcf9bacbeb7ce8a3c383bfa
-  SHA1: 21edff2937eb5cd6f6b0acb7ee5247681f624260
-  SHA256: db2a9247177e8cdd50fe9433d066b86ffd2a84301aa6b2eb60f361cfff077004
-  Signature:
-  - CAPCOM Co.,Ltd.
-  - Symantec Class 3 SHA256 Code Signing CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 37458813b5115cbf06552da28fefbbbb
     SHA1: 1d1cafc73c97c6bcd2331f8777d90fdca57125a3
     SHA256: faa08cb609a5b7be6bfdb61f1e4a5e8adf2f5a1d2492f262483df7326934f5d4
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2016-09-05 00:43:33'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: smep_capcom.sys
   ImportedFunctions:
   - IoDeleteSymbolicLink
   - RtlInitUnicodeString
@@ -53,6 +34,42 @@ KnownVulnerableSamples:
   - IoCreateSymbolicLink
   - IoCreateDevice
   - IoDeleteDevice
+  Imports:
+  - ntoskrnl.exe
+  InternalName: ''
+  MD5: f406c5536bcf9bacbeb7ce8a3c383bfa
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: b2f23c03be4553a744ff25735a80073c
+    SHA1: 2703d60c8f12df9d6adf5ae475bfeb1786486888
+    SHA256: 46ffd109664b6694974986a39d508002d564434d60a0fb9f861401f2cb2c83f1
+  SHA1: 21edff2937eb5cd6f6b0acb7ee5247681f624260
+  SHA256: db2a9247177e8cdd50fe9433d066b86ffd2a84301aa6b2eb60f361cfff077004
+  Sections:
+    .text:
+      Entropy: 5.848826218029174
+      Virtual Size: '0x4e0'
+    .data:
+      Entropy: -0.0
+      Virtual Size: '0xc0'
+    .pdata:
+      Entropy: 3.006469661076665
+      Virtual Size: '0x48'
+    .info:
+      Entropy: 1.3665783978789787
+      Virtual Size: '0xa0'
+    INIT:
+      Entropy: 4.123682579107587
+      Virtual Size: '0x114'
+  Signature:
+  - CAPCOM Co.,Ltd.
+  - Symantec Class 3 SHA256 Code Signing CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -128,27 +145,10 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: b2f23c03be4553a744ff25735a80073c
-    SHA1: 2703d60c8f12df9d6adf5ae475bfeb1786486888
-    SHA256: 46ffd109664b6694974986a39d508002d564434d60a0fb9f861401f2cb2c83f1
-  Sections:
-    .text:
-      Entropy: 5.848826218029174
-      Virtual Size: '0x4e0'
-    .data:
-      Entropy: -0.0
-      Virtual Size: '0xc0'
-    .pdata:
-      Entropy: 3.006469661076665
-      Virtual Size: '0x48'
-    .info:
-      Entropy: 1.3665783978789787
-      Virtual Size: '0xa0'
-    INIT:
-      Entropy: 4.123682579107587
-      Virtual Size: '0x114'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-09-05 00:43:33'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - smep_capcom.sys
+Verified: 'TRUE'

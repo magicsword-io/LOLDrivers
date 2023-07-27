@@ -1,22 +1,16 @@
-Id: 6a50e368-1120-434b-9232-1a0702c80437
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create AsrDrv106.sys binPath=C:\windows\temp\AsrDrv106.sys type=kernel
     && sc.exe start AsrDrv106.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/3943a796cc7c5352aa57ccf544295bfd6fb69aae147bc8235a00202dc6ed6838.yara
@@ -28,37 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 6a50e368-1120-434b-9232-1a0702c80437
 KnownVulnerableSamples:
-- Filename: AsrDrv106.sys
-  MD5: 12908c285b9d68ee1f39186110df0f1e
-  SHA1: b0032b8d8e6f4bd19a31619ce38d8e010f29a816
-  SHA256: 3943a796cc7c5352aa57ccf544295bfd6fb69aae147bc8235a00202dc6ed6838
-  Signature:
-  - ASROCK INC.
-  - GlobalSign GCC R45 EV CodeSigning CA 2020
-  - GlobalSign Code Signing Root R45
-  - GlobalSign
-  - GlobalSign Root CA - R1
-  Date: ''
-  Publisher: ''
-  Company: ASRock Incorporation
-  Description: ASRock IO Driver
-  Product: ASRock IO Driver
-  ProductVersion: 1.00.00.0000
-  FileVersion: '1.00.00.0000 built by: WinDDK'
-  MachineType: AMD64
-  OriginalFilename: AsrDrv.sys
-  Authentihash:
+- Authentihash:
     MD5: f67b148a13ad3caa51c3c2ef142791ea
     SHA1: f621633290173daac18bb14ca3f52bc027cd2721
     SHA256: ac7b3c3b74e6e282c7f50c17a6213b81b181f779cd7c0c78e3cb426c427a98db
-  InternalName: AsrDrv.sys
+  Company: ASRock Incorporation
   Copyright: Copyright (C) 2012 ASRock Incorporation
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  - cng.sys
+  CreationTimestamp: '2021-11-15 00:04:46'
+  Date: ''
+  Description: ASRock IO Driver
   ExportedFunctions: ''
+  FileVersion: '1.00.00.0000 built by: WinDDK'
+  Filename: AsrDrv106.sys
   ImportedFunctions:
   - RtlQueryRegistryValues
   - MmUnmapIoSpace
@@ -113,6 +90,55 @@ KnownVulnerableSamples:
   - BCryptOpenAlgorithmProvider
   - BCryptDecrypt
   - BCryptDestroyKey
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - cng.sys
+  InternalName: AsrDrv.sys
+  MD5: 12908c285b9d68ee1f39186110df0f1e
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: AsrDrv.sys
+  Product: ASRock IO Driver
+  ProductVersion: 1.00.00.0000
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 6540c04d181ea1395978a08c3d816451
+    SHA1: b3b7c684121b40f53751e0b7757ec248ef0670b4
+    SHA256: c68faaf4251928872474abfd81ef5ce8a2b5e5bd48c2edb586a4d2e518baa09d
+  SHA1: b0032b8d8e6f4bd19a31619ce38d8e010f29a816
+  SHA256: 3943a796cc7c5352aa57ccf544295bfd6fb69aae147bc8235a00202dc6ed6838
+  Sections:
+    .text:
+      Entropy: 6.3058037590863005
+      Virtual Size: '0x2238'
+    .rdata:
+      Entropy: 4.480768786103598
+      Virtual Size: '0x7c4'
+    .data:
+      Entropy: 1.3791658791138062
+      Virtual Size: '0x31c'
+    .pdata:
+      Entropy: 4.2004883967539595
+      Virtual Size: '0x2b8'
+    PAGE:
+      Entropy: 6.220333128676603
+      Virtual Size: '0x1a47'
+    INIT:
+      Entropy: 5.434583432431194
+      Virtual Size: '0x93a'
+    .rsrc:
+      Entropy: 3.2917593657396744
+      Virtual Size: '0x3a0'
+    .reloc:
+      Entropy: 1.2280731978955797
+      Virtual Size: '0x60'
+  Signature:
+  - ASROCK INC.
+  - GlobalSign GCC R45 EV CodeSigning CA 2020
+  - GlobalSign Code Signing Root R45
+  - GlobalSign
+  - GlobalSign Root CA - R1
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -183,36 +209,10 @@ KnownVulnerableSamples:
     - SerialNumber: 3be24b96d2c8d729eddb03e3
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
       Version: 1
-  RichPEHeaderHash:
-    MD5: 6540c04d181ea1395978a08c3d816451
-    SHA1: b3b7c684121b40f53751e0b7757ec248ef0670b4
-    SHA256: c68faaf4251928872474abfd81ef5ce8a2b5e5bd48c2edb586a4d2e518baa09d
-  Sections:
-    .text:
-      Entropy: 6.3058037590863005
-      Virtual Size: '0x2238'
-    .rdata:
-      Entropy: 4.480768786103598
-      Virtual Size: '0x7c4'
-    .data:
-      Entropy: 1.3791658791138062
-      Virtual Size: '0x31c'
-    .pdata:
-      Entropy: 4.2004883967539595
-      Virtual Size: '0x2b8'
-    PAGE:
-      Entropy: 6.220333128676603
-      Virtual Size: '0x1a47'
-    INIT:
-      Entropy: 5.434583432431194
-      Virtual Size: '0x93a'
-    .rsrc:
-      Entropy: 3.2917593657396744
-      Virtual Size: '0x3a0'
-    .reloc:
-      Entropy: 1.2280731978955797
-      Virtual Size: '0x60'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-11-15 00:04:46'
+MitreID: T1068
+Resources:
+- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Tags:
 - AsrDrv106.sys
+Verified: 'TRUE'

@@ -1,51 +1,31 @@
-Id: 9b65dba4-81a0-48cc-8ff0-a4f353881062
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create EneIo64.sys binPath=C:\windows\temp\EneIo64.sys type=kernel
     && sc.exe start EneIo64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c'
-- https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: 9b65dba4-81a0-48cc-8ff0-a4f353881062
 KnownVulnerableSamples:
-- Filename: EneIo64.sys
-  MD5: 11fb599312cb1cf43ca5e879ed6fb71e
-  SHA1: b4d014b5edd6e19ce0e8395a64faedf49688ecb5
-  SHA256: 9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374
-  Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  - Microsoft Windows Third Party Component CA 2014
-  - Microsoft Root Certificate Authority 2010
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 198111fd73515aa7fe4387612f027f0f
     SHA1: 651b953cb03928e41424ad59f21d4978d6f4952e
     SHA256: ebbaa44277a3ec6e20ad3f6aef5399fdc398306eb4c13aa96e45c9a281820a12
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2018-03-19 21:59:12'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: EneIo64.sys
   ImportedFunctions:
   - RtlInitUnicodeString
   - IoDeleteDevice
@@ -63,6 +43,43 @@ KnownVulnerableSamples:
   - IoCreateSymbolicLink
   - IoDeleteSymbolicLink
   - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: 11fb599312cb1cf43ca5e879ed6fb71e
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 2b745d90a102a42256774e350aac3080
+    SHA1: 45768de16e9654a5b21dcc916b5115ef81950791
+    SHA256: 59089a80084d2dd2efbc48ed53ce8eb6198155fe8552e36c1355c732691963a3
+  SHA1: b4d014b5edd6e19ce0e8395a64faedf49688ecb5
+  SHA256: 9fc29480407e5179aa8ea41682409b4ea33f1a42026277613d6484e5419de374
+  Sections:
+    .text:
+      Entropy: 6.155249930767524
+      Virtual Size: '0x103c'
+    .rdata:
+      Entropy: 3.9170994221049087
+      Virtual Size: '0x144'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.1235136228187446
+      Virtual Size: '0x54'
+    INIT:
+      Entropy: 5.023217119758618
+      Virtual Size: '0x2a6'
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+  - Microsoft Root Certificate Authority 2010
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -98,27 +115,10 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
-  RichPEHeaderHash:
-    MD5: 2b745d90a102a42256774e350aac3080
-    SHA1: 45768de16e9654a5b21dcc916b5115ef81950791
-    SHA256: 59089a80084d2dd2efbc48ed53ce8eb6198155fe8552e36c1355c732691963a3
-  Sections:
-    .text:
-      Entropy: 6.155249930767524
-      Virtual Size: '0x103c'
-    .rdata:
-      Entropy: 3.9170994221049087
-      Virtual Size: '0x144'
-    .data:
-      Entropy: 0.5159719988134768
-      Virtual Size: '0x110'
-    .pdata:
-      Entropy: 3.1235136228187446
-      Virtual Size: '0x54'
-    INIT:
-      Entropy: 5.023217119758618
-      Virtual Size: '0x2a6'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-03-19 21:59:12'
+MitreID: T1068
+Resources:
+- ' https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c'
+- https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
 Tags:
 - EneIo64.sys
+Verified: 'TRUE'
