@@ -1,6 +1,7 @@
 import argparse
 import os
 import yaml
+import re
 
 # Parse command-line arguments
 parser = argparse.ArgumentParser()
@@ -18,6 +19,15 @@ sysmon_rules = [
     {"type": "sysmon_hash_block", "value": base_url + "detections/sysmon/sysmon_config_vulnerable_hashes_block.xml"}
 ]
 
+# Define YARA rules files
+yara_rules_files = [
+    "yara-rules_mal_drivers_strict.yar", 
+    "yara-rules_vuln_drivers_strict_renamed.yar", 
+    "yara-rules_vuln_drivers.yar",
+    "yara-rules_mal_drivers.yar",
+    "yara-rules_vuln_drivers_strict.yar"
+]
+
 # Loop through each YAML file in the directory
 for file_name in os.listdir('yaml'):
     if file_name.endswith('.yaml') or file_name.endswith('.yml'):
@@ -31,13 +41,23 @@ for file_name in os.listdir('yaml'):
         updated = False
         for entry in yaml_data['KnownVulnerableSamples']:
             sha256 = entry.get('SHA256')
-            if sha256:
-                yara_file_path = os.path.join('detections/yara', f'{sha256}.yara')
-                if os.path.exists(yara_file_path):
-                    updated = True
-                    if args.verbose:
-                        print(f"Updating file: {file_path}")
-                    yaml_data['Detection'].append({"type": "yara_signature", "value": base_url + yara_file_path})
+        if sha256:
+            for yara_file_name in yara_rules_files:
+                yara_file_path = os.path.join('detections/yara', yara_file_name)
+
+                # Load YARA rules from the file
+                with open(yara_file_path, 'r') as f:
+                    yara_rules = f.read()
+                
+                # Check if a rule exists for the specific sample
+                if re.search(f'{sha256}', yara_rules):
+                    yara_link = {"type": "yara_signature", "value": base_url + yara_file_path}
+                    if yara_link not in yaml_data['Detection']:
+                        updated = True
+                        if args.verbose:
+                            print(f"Updating file: {file_path}")
+                        yaml_data['Detection'].append(yara_link)
+                    break
 
         # Add specific sigma and sysmon rules to detections
         yaml_data['Detection'].extend(sigma_rules)
@@ -47,4 +67,3 @@ for file_name in os.listdir('yaml'):
         if updated:
             with open(file_path, 'w') as f:
                 yaml.dump(yaml_data, f, sort_keys=False)
-
