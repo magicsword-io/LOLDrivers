@@ -1,6 +1,7 @@
 # LOLDrivers - Living Off The Land Drivers 🚗💨
 
-![CI build](https://github.com/magicsword-io/LOLDrivers/actions/workflows/validate.yml/badge.svg)
+![CI build](https://github.com/magicsword-io/LOLDrivers/actions/workflows/validate.yml/badge.svg) 
+![Drivers](https://img.shields.io/badge/Drivers-1239-flat.svg)
 
 Welcome to LOLDrivers (Living Off The Land Drivers), an exciting open-source project that brings together vulnerable, malicious, and known malicious Windows drivers in one comprehensive repository. Our mission is to empower organizations of all sizes with the knowledge and tools to understand and address driver-related security risks, making their systems safer and more reliable.
 
@@ -44,9 +45,11 @@ If you'd like to contribute, please follow these steps:
 
 For more detailed instructions, please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file. To create a new YAML file for a driver, use the provided [YML-Template](YML-Template.yml).
 
-## 🚨 Sigma and Sysmon Detection
+## 🚨 Sigma, Yara, ClamAV and Sysmon Detection
 
-LOLDrivers provides comprehensive Sigma and Sysmon detection rules to help you effectively detect potential threats. To explore these rules in detail, navigate to the [sigma](detections/sigma/) and [sysmon](detections/sysmon/) directories under the detection folder.
+![](loldrivers.io/static/images/detections.webp)
+
+LOLDrivers provides comprehensive Sigma, Yara, ClamAV and Sysmon detection rules to help you effectively detect potential threats. To explore these rules in detail, navigate to the [sigma](detections/sigma/), [yara](detections/yara), [av](https://github.com/magicsword-io/LOLDrivers/blob/main/detections/av/LOLDrivers.hdb) and [sysmon](detections/sysmon/) directories under the detection folder.
 
 Happy hunting! 🕵️‍♂️
 
