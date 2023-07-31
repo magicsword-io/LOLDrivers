@@ -1,9 +1,8 @@
-Id: 66813e1f-13c8-4884-931a-62b46350c345
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-07-12'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create 834761775.sys binPath=C:\windows\temp\834761775.sys type=kernel
     && sc.exe start 834761775.sys
@@ -18,75 +17,25 @@ Commands:
     \ knowledge of the Windows operating system.\nThis threat appears to target native\
     \ Chinese speakers, as it searches for Chinese language browsers to hijack. Additionally,\
     \ the authors are likely Chinese speakers themselves."
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://blog.talosintelligence.com/undocumented-reddriver/
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-12'
 Detection: []
+Id: 66813e1f-13c8-4884-931a-62b46350c345
 KnownVulnerableSamples:
-- Filename: 834761775.sys
-  MD5: 072ba2309b825ce1dba37d8d924ea8ed
-  SHA1: 89a74d0e9fd03129082c5b868f5ad62558ca34fd
-  SHA256: 24c900024d213549502301c366d18c318887630f04c96bf0a3d6ba74e0df164f
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: d572a2339ab3259578bfb39301b78884
     SHA1: d8e79ba181f2a646bbaa9e28ce2c4c490074fda2
     SHA256: 22074c412bb82bd97768eba0cb40e451d75d969e94d0548af804aafc04ca02fd
-  RichPEHeaderHash:
-    MD5: 704ff674d65cee070ccb97324955d0af
-    SHA1: c83a46f6adfb07de81e62046c7a9d8bd95c36dcf
-    SHA256: 586df7c43db7e44e51d3eef5aad1a38022c5f6d3598b05a47eec523d5ad74b2b
-  Sections:
-    .text:
-      Entropy: 6.293307409084567
-      Virtual Size: '0x30a0'
-    .rdata:
-      Entropy: 4.578734482189957
-      Virtual Size: '0xb70'
-    .data:
-      Entropy: 1.8195102265290914
-      Virtual Size: '0x17e8'
-    .pdata:
-      Entropy: 4.204635975366644
-      Virtual Size: '0x324'
-    .gfids:
-      Entropy: 0.8112781244591328
-      Virtual Size: '0x4'
-    PAGE:
-      Entropy: 6.019078078470311
-      Virtual Size: '0x4fc'
-    INIT:
-      Entropy: 5.17688181935493
-      Virtual Size: '0x6be'
-    .rsrc:
-      Entropy: 2.6182828359466233
-      Virtual Size: '0x140'
-    .reloc:
-      Entropy: 3.7531088905778556
-      Virtual Size: '0x58'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-10-10 19:26:25'
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - fwpkclnt.sys
-  - WDFLDR.SYS
+  CreationTimestamp: '2022-10-10 19:26:25'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: 834761775.sys
   ImportedFunctions:
   - ExAllocatePoolWithTag
   - ExFreePoolWithTag
@@ -135,6 +84,53 @@ KnownVulnerableSamples:
   - WdfVersionBind
   - WdfVersionUnbind
   - WdfVersionUnbindClass
+  Imports:
+  - ntoskrnl.exe
+  - fwpkclnt.sys
+  - WDFLDR.SYS
+  InternalName: ''
+  MD5: 072ba2309b825ce1dba37d8d924ea8ed
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 704ff674d65cee070ccb97324955d0af
+    SHA1: c83a46f6adfb07de81e62046c7a9d8bd95c36dcf
+    SHA256: 586df7c43db7e44e51d3eef5aad1a38022c5f6d3598b05a47eec523d5ad74b2b
+  SHA1: 89a74d0e9fd03129082c5b868f5ad62558ca34fd
+  SHA256: 24c900024d213549502301c366d18c318887630f04c96bf0a3d6ba74e0df164f
+  Sections:
+    .text:
+      Entropy: 6.293307409084567
+      Virtual Size: '0x30a0'
+    .rdata:
+      Entropy: 4.578734482189957
+      Virtual Size: '0xb70'
+    .data:
+      Entropy: 1.8195102265290914
+      Virtual Size: '0x17e8'
+    .pdata:
+      Entropy: 4.204635975366644
+      Virtual Size: '0x324'
+    .gfids:
+      Entropy: 0.8112781244591328
+      Virtual Size: '0x4'
+    PAGE:
+      Entropy: 6.019078078470311
+      Virtual Size: '0x4fc'
+    INIT:
+      Entropy: 5.17688181935493
+      Virtual Size: '0x6be'
+    .rsrc:
+      Entropy: 2.6182828359466233
+      Virtual Size: '0x140'
+    .reloc:
+      Entropy: 3.7531088905778556
+      Virtual Size: '0x58'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -212,5 +208,9 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+MitreID: T1068
+Resources:
+- https://blog.talosintelligence.com/undocumented-reddriver/
 Tags:
 - 834761775.sys
+Verified: 'TRUE'

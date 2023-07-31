@@ -1,22 +1,16 @@
-Id: 3ac0eda2-a844-4a9d-9cfa-c25a9e05d678
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create Bs_Def.sys binPath=C:\windows\temp\Bs_Def.sys type=kernel
     && sc.exe start Bs_Def.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be.yara
@@ -28,44 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 3ac0eda2-a844-4a9d-9cfa-c25a9e05d678
 KnownVulnerableSamples:
-- Filename: Bs_Def.sys
-  MD5: a9f220b1507a3c9a327a99995ff99c82
-  SHA1: 2c5ff272bd345962ed41ab8869aef41da0dfe697
-  SHA256: 5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be
-  Signature:
-  - ASUSTeK Computer Inc.
-  - VeriSign Class 3 Code Signing 2004 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: ''
-  Publisher: ''
-  Company: AsusTek Computer Inc.
-  Description: Default BIOS Flash Driver
-  Product: Support SST39SF020,SST29EE020,AT49F002T,AT29C020,AM29F002NT,AM29F002NB,V29C51002T,V29C51002B,M29F002T,W29C020.
-  ProductVersion: '1.24'
-  FileVersion: '1.24 built by: WinDDK'
-  MachineType: AMD64
-  OriginalFilename: Bs_Def64.sys
-  Authentihash:
+- Authentihash:
     MD5: f27b347b5124473a3a9a46986889e408
     SHA1: 69ca963ec00bdd2a92a9777e91d0174bbe97e29c
     SHA256: 410f02303292798ab2a8b3e7d253938b466e83071b15e7d3aaa25f4995b27187
-  InternalName: Bs_Def64.sys
+  Company: AsusTek Computer Inc.
   Copyright: Copyright (C) AsusTek Computer. 1992-2004
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2008-01-13 19:30:32'
+  Date: ''
+  Description: Default BIOS Flash Driver
   ExportedFunctions: ''
+  FileVersion: '1.24 built by: WinDDK'
+  Filename: Bs_Def.sys
   ImportedFunctions:
   - MmBuildMdlForNonPagedPool
   - IoAllocateMdl
@@ -98,6 +68,46 @@ KnownVulnerableSamples:
   - RtlInitUnicodeString
   - MmFreeContiguousMemory
   - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: Bs_Def64.sys
+  MD5: a9f220b1507a3c9a327a99995ff99c82
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: Bs_Def64.sys
+  Product: Support SST39SF020,SST29EE020,AT49F002T,AT29C020,AM29F002NT,AM29F002NB,V29C51002T,V29C51002B,M29F002T,W29C020.
+  ProductVersion: '1.24'
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: b9778f4f7aef605da31955e8c8dce73b
+    SHA1: c238d428e1d44bf02fff788a0116e22fe52eced5
+    SHA256: e2a2300457038c8e2fb727789dc596bc4613ad168457b2335dba604e2432fa5c
+  SHA1: 2c5ff272bd345962ed41ab8869aef41da0dfe697
+  SHA256: 5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be
+  Sections:
+    .text:
+      Entropy: 6.292910223541919
+      Virtual Size: '0x1ef2'
+    .rdata:
+      Entropy: 4.119337235735607
+      Virtual Size: '0x2b0'
+    .data:
+      Entropy: 0.020393135236084953
+      Virtual Size: '0x4540'
+    .pdata:
+      Entropy: 3.8139163392612154
+      Virtual Size: '0x120'
+    INIT:
+      Entropy: 4.72379419775939
+      Virtual Size: '0x3ca'
+    .rsrc:
+      Entropy: 3.495555403797425
+      Virtual Size: '0x458'
+  Signature:
+  - ASUSTeK Computer Inc.
+  - VeriSign Class 3 Code Signing 2004 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -173,30 +183,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: b9778f4f7aef605da31955e8c8dce73b
-    SHA1: c238d428e1d44bf02fff788a0116e22fe52eced5
-    SHA256: e2a2300457038c8e2fb727789dc596bc4613ad168457b2335dba604e2432fa5c
-  Sections:
-    .text:
-      Entropy: 6.292910223541919
-      Virtual Size: '0x1ef2'
-    .rdata:
-      Entropy: 4.119337235735607
-      Virtual Size: '0x2b0'
-    .data:
-      Entropy: 0.020393135236084953
-      Virtual Size: '0x4540'
-    .pdata:
-      Entropy: 3.8139163392612154
-      Virtual Size: '0x120'
-    INIT:
-      Entropy: 4.72379419775939
-      Virtual Size: '0x3ca'
-    .rsrc:
-      Entropy: 3.495555403797425
-      Virtual Size: '0x458'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-01-13 19:30:32'
+MitreID: T1068
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - Bs_Def.sys
+Verified: 'FALSE'

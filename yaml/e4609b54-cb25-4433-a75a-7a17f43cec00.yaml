@@ -1,22 +1,16 @@
-Id: e4609b54-cb25-4433-a75a-7a17f43cec00
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create HwRwDrv.sys binPath=C:\windows\temp\HwRwDrv.sys type=kernel
     && sc.exe start HwRwDrv.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/21ccdd306b5183c00ecfd0475b3152e7d94b921e858e59b68a03e925d1715f21.yara
@@ -28,44 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: e4609b54-cb25-4433-a75a-7a17f43cec00
 KnownVulnerableSamples:
-- Filename: HwRwDrv.sys
-  MD5: dbc415304403be25ac83047c170b0ec2
-  SHA1: 2b0bb408ff0e66bcdf6574f1ca52cbf4015b257b
-  SHA256: 21ccdd306b5183c00ecfd0475b3152e7d94b921e858e59b68a03e925d1715f21
-  Signature:
-  - Shuttle Inc.
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: Shuttle Inc.
-  Company: "Windows\xAE winows 7 driver kits provider"
-  Description: Hardware read & write driver
-  Product: Hardware read & write driver
-  ProductVersion: 1.0.5.0
-  FileVersion: 1.0.5.0
-  MachineType: AMD64
-  OriginalFilename: HwRwDrv.sys
-  Authentihash:
+- Authentihash:
     MD5: 62d9c8a109afc08e2858d98df9776850
     SHA1: 7beb26c59b8d1b9540c6fae7c05c2b1cc2537e54
     SHA256: d852810a7319e3249077a1b9f1317f6f4157a19bb99b90063d118c30c2c84ac2
-  InternalName: HwRwDrv.sys
+  Company: "Windows\xAE winows 7 driver kits provider"
   Copyright: "Copyright\xA9 Microsoft Corporation. All rights reserved."
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2012-07-27 23:28:05'
+  Date: ''
+  Description: Hardware read & write driver
   ExportedFunctions: ''
+  FileVersion: 1.0.5.0
+  Filename: HwRwDrv.sys
   ImportedFunctions:
   - MmUnmapIoSpace
   - MmMapIoSpace
@@ -79,6 +49,46 @@ KnownVulnerableSamples:
   - __C_specific_handler
   - HalSetBusDataByOffset
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: HwRwDrv.sys
+  MD5: dbc415304403be25ac83047c170b0ec2
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: HwRwDrv.sys
+  Product: Hardware read & write driver
+  ProductVersion: 1.0.5.0
+  Publisher: Shuttle Inc.
+  RichPEHeaderHash:
+    MD5: 41ddd08b440611823bc5d8cb732c563d
+    SHA1: 8acdfc9ac988c6250e2a031640f6e169b5fddb73
+    SHA256: 189683b4db2e68d2f0b3f91f1141907b3887f23991867a68a22389d40ad3634e
+  SHA1: 2b0bb408ff0e66bcdf6574f1ca52cbf4015b257b
+  SHA256: 21ccdd306b5183c00ecfd0475b3152e7d94b921e858e59b68a03e925d1715f21
+  Sections:
+    .text:
+      Entropy: 6.002580848253962
+      Virtual Size: '0x738'
+    .rdata:
+      Entropy: 4.153369840669388
+      Virtual Size: '0x1a0'
+    .data:
+      Entropy: 0.5096713223407059
+      Virtual Size: '0x114'
+    .pdata:
+      Entropy: 3.3767756355039418
+      Virtual Size: '0x78'
+    INIT:
+      Entropy: 5.046663153942613
+      Virtual Size: '0x242'
+    .rsrc:
+      Entropy: 3.261974484039489
+      Virtual Size: '0x458'
+  Signature:
+  - Shuttle Inc.
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -155,30 +165,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 41ddd08b440611823bc5d8cb732c563d
-    SHA1: 8acdfc9ac988c6250e2a031640f6e169b5fddb73
-    SHA256: 189683b4db2e68d2f0b3f91f1141907b3887f23991867a68a22389d40ad3634e
-  Sections:
-    .text:
-      Entropy: 6.002580848253962
-      Virtual Size: '0x738'
-    .rdata:
-      Entropy: 4.153369840669388
-      Virtual Size: '0x1a0'
-    .data:
-      Entropy: 0.5096713223407059
-      Virtual Size: '0x114'
-    .pdata:
-      Entropy: 3.3767756355039418
-      Virtual Size: '0x78'
-    INIT:
-      Entropy: 5.046663153942613
-      Virtual Size: '0x242'
-    .rsrc:
-      Entropy: 3.261974484039489
-      Virtual Size: '0x458'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-07-27 23:28:05'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - HwRwDrv.sys
+Verified: 'TRUE'

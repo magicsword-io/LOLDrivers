@@ -1,22 +1,16 @@
-Id: fdf4f85b-47f4-4c98-a0d5-a6583463f565
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &&
     sc.exe start vmdrv.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/32cccc4f249499061c0afa18f534c825d01034a1f6815f5506bf4c4ff55d1351.yara
@@ -28,44 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: fdf4f85b-47f4-4c98-a0d5-a6583463f565
 KnownVulnerableSamples:
-- Filename: vmdrv.sys
-  MD5: d5db81974ffda566fa821400419f59be
-  SHA1: 4c18754dca481f107f0923fb8ef5e149d128525d
-  SHA256: 32cccc4f249499061c0afa18f534c825d01034a1f6815f5506bf4c4ff55d1351
-  Signature:
-  - Voicemod Sociedad Limitada
-  - DigiCert Global G3 Code Signing ECC SHA384 2021 CA1
-  - DigiCert Global Root G3
-  Date: ''
-  Publisher: ''
-  Company: Windows (R) Win 7 DDK provider
-  Description: Voicemod Virtual Audio Device (WDM)
-  Product: Windows (R) Win 7 DDK driver
-  ProductVersion: 10.0.10011.16384
-  FileVersion: 10.0.10011.16384
-  MachineType: AMD64
-  OriginalFilename: vmdrv.sys
-  Authentihash:
+- Authentihash:
     MD5: 681bb8e9713477839a1ee8d87b498630
     SHA1: 68cdcd073e57f650c5d6173cd79af3a3526052f6
     SHA256: 99ddeba6bcdc79e52e3ff8afc63dbe4b299161cf0f5558a2d7630c2a18daf2c6
-  InternalName: vmdrv.sys
+  Company: Windows (R) Win 7 DDK provider
   Copyright: Copyright (C) Voicemod S.L.2010-2020
-  Imports:
-  - ntoskrnl.exe
-  - portcls.sys
+  CreationTimestamp: '2022-02-22 13:12:24'
+  Date: ''
+  Description: Voicemod Virtual Audio Device (WDM)
   ExportedFunctions: ''
+  FileVersion: 10.0.10011.16384
+  Filename: vmdrv.sys
   ImportedFunctions:
   - RtlInitUnicodeString
   - KeClearEvent
@@ -106,6 +76,52 @@ KnownVulnerableSamples:
   - PcRegisterSubdevice
   - PcRegisterPhysicalConnection
   - PcNewPort
+  Imports:
+  - ntoskrnl.exe
+  - portcls.sys
+  InternalName: vmdrv.sys
+  MD5: d5db81974ffda566fa821400419f59be
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: vmdrv.sys
+  Product: Windows (R) Win 7 DDK driver
+  ProductVersion: 10.0.10011.16384
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: f6ca8831520c235d28dbfa26ad735d55
+    SHA1: e8d1bb5697814956222cfbf5d0275766135f9ba0
+    SHA256: 709e3c46eff74215c009624ce48e3d6d65a6e5237d38781232e9cb1844748fcf
+  SHA1: 4c18754dca481f107f0923fb8ef5e149d128525d
+  SHA256: 32cccc4f249499061c0afa18f534c825d01034a1f6815f5506bf4c4ff55d1351
+  Sections:
+    .text:
+      Entropy: 5.72820930665092
+      Virtual Size: '0x1466'
+    .rdata:
+      Entropy: 4.71043452997573
+      Virtual Size: '0x1440'
+    .data:
+      Entropy: 1.9612699371321567
+      Virtual Size: '0x72c'
+    .pdata:
+      Entropy: 4.38228852061058
+      Virtual Size: '0x570'
+    PAGE:
+      Entropy: 6.039766687351532
+      Virtual Size: '0x2e8a'
+    INIT:
+      Entropy: 5.4515972556240095
+      Virtual Size: '0x6da'
+    .rsrc:
+      Entropy: 3.595344946345435
+      Virtual Size: '0x460'
+    .reloc:
+      Entropy: 5.058075646330186
+      Virtual Size: '0x188'
+  Signature:
+  - Voicemod Sociedad Limitada
+  - DigiCert Global G3 Code Signing ECC SHA384 2021 CA1
+  - DigiCert Global Root G3
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -141,36 +157,10 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Global G3 Code Signing ECC SHA384
         2021 CA1
       Version: 1
-  RichPEHeaderHash:
-    MD5: f6ca8831520c235d28dbfa26ad735d55
-    SHA1: e8d1bb5697814956222cfbf5d0275766135f9ba0
-    SHA256: 709e3c46eff74215c009624ce48e3d6d65a6e5237d38781232e9cb1844748fcf
-  Sections:
-    .text:
-      Entropy: 5.72820930665092
-      Virtual Size: '0x1466'
-    .rdata:
-      Entropy: 4.71043452997573
-      Virtual Size: '0x1440'
-    .data:
-      Entropy: 1.9612699371321567
-      Virtual Size: '0x72c'
-    .pdata:
-      Entropy: 4.38228852061058
-      Virtual Size: '0x570'
-    PAGE:
-      Entropy: 6.039766687351532
-      Virtual Size: '0x2e8a'
-    INIT:
-      Entropy: 5.4515972556240095
-      Virtual Size: '0x6da'
-    .rsrc:
-      Entropy: 3.595344946345435
-      Virtual Size: '0x460'
-    .reloc:
-      Entropy: 5.058075646330186
-      Virtual Size: '0x188'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-02-22 13:12:24'
+MitreID: T1068
+Resources:
+- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Tags:
 - vmdrv.sys
+Verified: 'TRUE'

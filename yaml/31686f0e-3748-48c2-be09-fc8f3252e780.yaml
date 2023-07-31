@@ -1,23 +1,16 @@
-Id: 31686f0e-3748-48c2-be09-fc8f3252e780
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create FairplayKD.sys binPath=C:\windows\temp\FairplayKD.sys type=kernel
     && sc.exe start FairplayKD.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html
-- https://www.unknowncheats.me/forum/anti-cheat-bypass/244386-mta-fairplaykd-driver-reversed-exploited-rpm.html
-- ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/9f4ce6ab5e8d44f355426d9a6ab79833709f39b300733b5b251a0766e895e0e5.yara
@@ -29,43 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 31686f0e-3748-48c2-be09-fc8f3252e780
 KnownVulnerableSamples:
-- Filename: FairplayKD.sys
-  MD5: 4e90cd77509738d30d3181a4d0880bfa
-  SHA1: b4dcdbd97f38b24d729b986f84a9cdb3fc34d59f
-  SHA256: 9f4ce6ab5e8d44f355426d9a6ab79833709f39b300733b5b251a0766e895e0e5
-  Signature:
-  - Hans Roes
-  - Thawte Code Signing CA - G2
-  - thawte
-  Date: ''
-  Publisher: ''
-  Company: Multi Theft Auto
-  Description: Multi Theft Auto patch driver
-  Product: MTA San Andreas
-  ProductVersion: 367.3269.61.64
-  FileVersion: 367.3269.61.64
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 5fb82230ba512d33a6e3090985a29e49
     SHA1: 0eaa4cf7d1944f6259dd9941209dec15a4029c4a
     SHA256: 66d59e646f3965bc5225eca4285ae65f34b8681fb1bee3eaf440f6795b2fa70f
-  InternalName: ''
+  Company: Multi Theft Auto
   Copyright: (C) 2003 - 2017 Multi Theft Auto
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2017-07-15 18:25:00'
+  Date: ''
+  Description: Multi Theft Auto patch driver
   ExportedFunctions: ''
+  FileVersion: 367.3269.61.64
+  Filename: FairplayKD.sys
   ImportedFunctions:
   - PsProcessType
   - RtlAnsiStringToUnicodeString
@@ -99,6 +69,51 @@ KnownVulnerableSamples:
   - ExAllocatePoolWithQuotaTag
   - ZwQuerySystemInformation
   - __C_specific_handler
+  Imports:
+  - ntoskrnl.exe
+  InternalName: ''
+  MD5: 4e90cd77509738d30d3181a4d0880bfa
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: MTA San Andreas
+  ProductVersion: 367.3269.61.64
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 0cfd4733c24065eb45f253c4cb122750
+    SHA1: e32f8f9859bd361c03f962f2c0a07ca346464c7d
+    SHA256: 0a8551c7118d23e193be05fd6d9427dcbecf1038bd5c2b7c991bc444a6c2a184
+  SHA1: b4dcdbd97f38b24d729b986f84a9cdb3fc34d59f
+  SHA256: 9f4ce6ab5e8d44f355426d9a6ab79833709f39b300733b5b251a0766e895e0e5
+  Sections:
+    .text:
+      Entropy: 6.323352332673226
+      Virtual Size: '0xde09'
+    .rdata:
+      Entropy: 4.933506136276985
+      Virtual Size: '0x87c'
+    .data:
+      Entropy: 0.520333943502828
+      Virtual Size: '0x3179'
+    .pdata:
+      Entropy: 4.471532261778057
+      Virtual Size: '0x4c8'
+    PAGE:
+      Entropy: 6.087997650342493
+      Virtual Size: '0x28d'
+    INIT:
+      Entropy: 5.249508633671543
+      Virtual Size: '0x488'
+    .rsrc:
+      Entropy: 3.3888439455803665
+      Virtual Size: '0x308'
+    .reloc:
+      Entropy: 1.751629167387823
+      Virtual Size: '0x18'
+  Signature:
+  - Hans Roes
+  - Thawte Code Signing CA - G2
+  - thawte
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -171,36 +186,11 @@ KnownVulnerableSamples:
     - SerialNumber: 371fc099cdb143347b4424e9dc1f3b30
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
       Version: 1
-  RichPEHeaderHash:
-    MD5: 0cfd4733c24065eb45f253c4cb122750
-    SHA1: e32f8f9859bd361c03f962f2c0a07ca346464c7d
-    SHA256: 0a8551c7118d23e193be05fd6d9427dcbecf1038bd5c2b7c991bc444a6c2a184
-  Sections:
-    .text:
-      Entropy: 6.323352332673226
-      Virtual Size: '0xde09'
-    .rdata:
-      Entropy: 4.933506136276985
-      Virtual Size: '0x87c'
-    .data:
-      Entropy: 0.520333943502828
-      Virtual Size: '0x3179'
-    .pdata:
-      Entropy: 4.471532261778057
-      Virtual Size: '0x4c8'
-    PAGE:
-      Entropy: 6.087997650342493
-      Virtual Size: '0x28d'
-    INIT:
-      Entropy: 5.249508633671543
-      Virtual Size: '0x488'
-    .rsrc:
-      Entropy: 3.3888439455803665
-      Virtual Size: '0x308'
-    .reloc:
-      Entropy: 1.751629167387823
-      Virtual Size: '0x18'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-07-15 18:25:00'
+MitreID: T1068
+Resources:
+- https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html
+- https://www.unknowncheats.me/forum/anti-cheat-bypass/244386-mta-fairplaykd-driver-reversed-exploited-rpm.html
+- ''
 Tags:
 - FairplayKD.sys
+Verified: 'FALSE'

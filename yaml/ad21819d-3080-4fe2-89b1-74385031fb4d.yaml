@@ -1,22 +1,16 @@
-Id: ad21819d-3080-4fe2-89b1-74385031fb4d
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create ATSZIO64.sys binPath=C:\windows\temp\ATSZIO64.sys type=kernel
     && sc.exe start ATSZIO64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece.yara
@@ -28,44 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: ad21819d-3080-4fe2-89b1-74385031fb4d
 KnownVulnerableSamples:
-- Filename: ATSZIO64.sys
-  MD5: b12d1630fd50b2a21fd91e45d522ba3a
-  SHA1: 490109fa6739f114651f4199196c5121d1c6bdf2
-  SHA256: 01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece
-  Signature:
-  - ASUSTeK Computer Inc.
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: ASUSTek Computer Inc.
-  Description: ATSZIO Driver
-  Product: ATSZIO Driver
-  ProductVersion: 0.2.1.7
-  FileVersion: 0.2.1.7
-  MachineType: AMD64
-  OriginalFilename: ATSZIO.sys
-  Authentihash:
+- Authentihash:
     MD5: 69a92cb6ac87c99f10b24eefa13f0b10
     SHA1: b66bf2b1b07f8f2bab1418131ae66b0a55265f73
     SHA256: 0ff8bcc7f938ec71ee33fbe089d38e40a8190603558d4765c47b1b09e1dd764a
-  InternalName: ATSZIO.sys
+  Company: ASUSTek Computer Inc.
   Copyright: Copyright (C) 2012
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2014-09-18 06:04:29'
+  Date: ''
+  Description: ATSZIO Driver
   ExportedFunctions: ''
+  FileVersion: 0.2.1.7
+  Filename: ATSZIO64.sys
   ImportedFunctions:
   - KeWaitForSingleObject
   - ExAllocatePool
@@ -90,6 +60,52 @@ KnownVulnerableSamples:
   - RtlInitUnicodeString
   - HalSetBusDataByOffset
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ATSZIO.sys
+  MD5: b12d1630fd50b2a21fd91e45d522ba3a
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ATSZIO.sys
+  Product: ATSZIO Driver
+  ProductVersion: 0.2.1.7
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 5633aed816ac7f25c13e7f4286ee4097
+    SHA1: 65f5dfbb3adcd40e7bdac184b5f599df9317377a
+    SHA256: 63b956b0064047af48cfdc479899aa30c5f0c2944c96e6ad03e3c26171d83147
+  SHA1: 490109fa6739f114651f4199196c5121d1c6bdf2
+  SHA256: 01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece
+  Sections:
+    .text:
+      Entropy: 5.55616133376499
+      Virtual Size: '0x5d4'
+    .rdata:
+      Entropy: 3.9257359466643256
+      Virtual Size: '0x2ec'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.305451172213043
+      Virtual Size: '0x60'
+    PAGE:
+      Entropy: 6.205978336553792
+      Virtual Size: '0xcfe'
+    INIT:
+      Entropy: 5.6051981124019505
+      Virtual Size: '0x5dc'
+    .rsrc:
+      Entropy: 3.2691875406923323
+      Virtual Size: '0x330'
+    .reloc:
+      Entropy: 1.584962500721156
+      Virtual Size: '0xc'
+  Signature:
+  - ASUSTeK Computer Inc.
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -180,36 +196,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 5633aed816ac7f25c13e7f4286ee4097
-    SHA1: 65f5dfbb3adcd40e7bdac184b5f599df9317377a
-    SHA256: 63b956b0064047af48cfdc479899aa30c5f0c2944c96e6ad03e3c26171d83147
-  Sections:
-    .text:
-      Entropy: 5.55616133376499
-      Virtual Size: '0x5d4'
-    .rdata:
-      Entropy: 3.9257359466643256
-      Virtual Size: '0x2ec'
-    .data:
-      Entropy: 0.5035334969292564
-      Virtual Size: '0x118'
-    .pdata:
-      Entropy: 3.305451172213043
-      Virtual Size: '0x60'
-    PAGE:
-      Entropy: 6.205978336553792
-      Virtual Size: '0xcfe'
-    INIT:
-      Entropy: 5.6051981124019505
-      Virtual Size: '0x5dc'
-    .rsrc:
-      Entropy: 3.2691875406923323
-      Virtual Size: '0x330'
-    .reloc:
-      Entropy: 1.584962500721156
-      Virtual Size: '0xc'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-09-18 06:04:29'
+MitreID: T1068
+Resources:
+- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Tags:
 - ATSZIO64.sys
+Verified: 'TRUE'

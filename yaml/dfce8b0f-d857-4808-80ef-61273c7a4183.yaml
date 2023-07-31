@@ -1,22 +1,16 @@
-Id: dfce8b0f-d857-4808-80ef-61273c7a4183
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create Dh_Kernel_10.sys binPath=C:\windows\temp\Dh_Kernel_10.sys     type=kernel
     && sc.exe start Dh_Kernel_10.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/80cbba9f404df3e642f22c476664d63d7c229d45d34f5cd0e19c65eb41becec3.yara
@@ -28,44 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: dfce8b0f-d857-4808-80ef-61273c7a4183
 KnownVulnerableSamples:
-- Filename: Dh_Kernel_10.sys
-  MD5: 51207adb8dab983332d6b22c29fe8129
-  SHA1: ddbe809b731a0962e404a045ab9e65a0b64917ad
-  SHA256: 80cbba9f404df3e642f22c476664d63d7c229d45d34f5cd0e19c65eb41becec3
-  Signature:
-  - YY Inc.
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: YY Inc.
-  Company: YY Inc.
-  Description: dianhu
-  Product: dianhu
-  ProductVersion: 1.0.99
-  FileVersion: 1.0.99
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: df4f1e566667e15b3d81c5c3e50e97ca
     SHA1: b92959042d232605abba254bc0368b87ec047079
     SHA256: c786f3ca229da18b2806af4d57ecad603859ee548549b19f71a623f477fc740e
-  InternalName: ''
+  Company: YY Inc.
   Copyright: "Copyright \xA9 2007-2017 YY Inc. All rights reserved."
-  Imports:
-  - ntoskrnl.exe
-  - WDFLDR.SYS
+  CreationTimestamp: '2018-01-18 21:39:35'
+  Date: ''
+  Description: dianhu
   ExportedFunctions: ''
+  FileVersion: 1.0.99
+  Filename: Dh_Kernel_10.sys
   ImportedFunctions:
   - ExAllocatePool
   - ExAllocatePoolWithTag
@@ -101,6 +71,52 @@ KnownVulnerableSamples:
   - WdfVersionUnbind
   - WdfVersionBind
   - WdfVersionUnbindClass
+  Imports:
+  - ntoskrnl.exe
+  - WDFLDR.SYS
+  InternalName: ''
+  MD5: 51207adb8dab983332d6b22c29fe8129
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: dianhu
+  ProductVersion: 1.0.99
+  Publisher: YY Inc.
+  RichPEHeaderHash:
+    MD5: dd59fbf2d4f15f7be042491384066375
+    SHA1: 4d812db21605baf50ff41aac70f12e08500f6d36
+    SHA256: 9cd17189761d0a6cc7a9a1c58234197625327c8bdb61dbc2785749f0877cca23
+  SHA1: ddbe809b731a0962e404a045ab9e65a0b64917ad
+  SHA256: 80cbba9f404df3e642f22c476664d63d7c229d45d34f5cd0e19c65eb41becec3
+  Sections:
+    .text:
+      Entropy: 6.123630314203942
+      Virtual Size: '0x1670'
+    .rdata:
+      Entropy: 4.068632989833302
+      Virtual Size: '0x758'
+    .data:
+      Entropy: 0.6055098552416325
+      Virtual Size: '0x360'
+    .pdata:
+      Entropy: 3.8977003523597156
+      Virtual Size: '0x180'
+    .gfids:
+      Entropy: 0.8112781244591328
+      Virtual Size: '0x4'
+    INIT:
+      Entropy: 4.873962088217271
+      Virtual Size: '0x484'
+    .rsrc:
+      Entropy: 3.2019276464793474
+      Virtual Size: '0x468'
+    .reloc:
+      Entropy: 3.066603109673247
+      Virtual Size: '0x28'
+  Signature:
+  - YY Inc.
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -177,36 +193,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: dd59fbf2d4f15f7be042491384066375
-    SHA1: 4d812db21605baf50ff41aac70f12e08500f6d36
-    SHA256: 9cd17189761d0a6cc7a9a1c58234197625327c8bdb61dbc2785749f0877cca23
-  Sections:
-    .text:
-      Entropy: 6.123630314203942
-      Virtual Size: '0x1670'
-    .rdata:
-      Entropy: 4.068632989833302
-      Virtual Size: '0x758'
-    .data:
-      Entropy: 0.6055098552416325
-      Virtual Size: '0x360'
-    .pdata:
-      Entropy: 3.8977003523597156
-      Virtual Size: '0x180'
-    .gfids:
-      Entropy: 0.8112781244591328
-      Virtual Size: '0x4'
-    INIT:
-      Entropy: 4.873962088217271
-      Virtual Size: '0x484'
-    .rsrc:
-      Entropy: 3.2019276464793474
-      Virtual Size: '0x468'
-    .reloc:
-      Entropy: 3.066603109673247
-      Virtual Size: '0x28'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-01-18 21:39:35'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - Dh_Kernel_10.sys
+Verified: 'TRUE'

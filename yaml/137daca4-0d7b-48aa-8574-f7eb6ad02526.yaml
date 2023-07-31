@@ -1,25 +1,18 @@
-Id: 137daca4-0d7b-48aa-8574-f7eb6ad02526
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 CVE:
 - CVE-2007-5633
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create speedfan.sys binPath=C:\windows\temp\speedfan.sys type=kernel
     && sc.exe start speedfan.sys
   Description: speedfan.sys is a vulnerable driver. CVE-2007-5633.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/jbaines-r7/dellicious'
-- ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
-- https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/22be050955347661685a4343c51f11c7811674e030386d2264cd12ecbf544b7c.yara
@@ -31,43 +24,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 137daca4-0d7b-48aa-8574-f7eb6ad02526
 KnownVulnerableSamples:
-- Filename: speedfan.sys
-  MD5: 5f9785e7535f8f602cb294a54962c9e7
-  SHA1: bfe55cacc7c56c9f7bd75bdb4b352c0b745d071b
-  SHA256: 22be050955347661685a4343c51f11c7811674e030386d2264cd12ecbf544b7c
-  Signature:
-  - Sokno S.R.L.
-  - VeriSign Class 3 Code Signing 2004 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: ''
-  Publisher: ''
-  Company: Windows (R) Server 2003 DDK provider
-  Description: SpeedFan Device Driver
-  Product: Windows (R) Server 2003 DDK driver
-  ProductVersion: 5.2.3790.0
-  FileVersion: '5.2.3790.0 built by: WinDDK'
-  MachineType: AMD64
-  OriginalFilename: speedfan.sys
-  Authentihash:
+- Authentihash:
     MD5: af368f76c059d1e07aa884e86d29bbab
     SHA1: 9c08d169b0f59a411c5b51f481622bc78bdf9c84
     SHA256: 641490e28b2a1ee223238f5d969b5abf60a1089afe597c4251b285449e6b3b04
-  InternalName: speedfan.sys
+  Company: Windows (R) Server 2003 DDK provider
   Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2006-09-24 07:26:48'
+  Date: ''
+  Description: SpeedFan Device Driver
   ExportedFunctions: ''
+  FileVersion: '5.2.3790.0 built by: WinDDK'
+  Filename: speedfan.sys
   ImportedFunctions:
   - MmUnmapIoSpace
   - MmMapIoSpace
@@ -80,6 +50,45 @@ KnownVulnerableSamples:
   - IoCreateDevice
   - RtlUnwindEx
   - KeBugCheckEx
+  Imports:
+  - ntoskrnl.exe
+  InternalName: speedfan.sys
+  MD5: 5f9785e7535f8f602cb294a54962c9e7
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: speedfan.sys
+  Product: Windows (R) Server 2003 DDK driver
+  ProductVersion: 5.2.3790.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: edbbdf5bb0479e4f4a4827203aebb406
+    SHA1: 691e232c9f6d9c5b1241ef5f0f48f67f7b9eb501
+    SHA256: f6121f3ea39a6896af3b0824a60eed616d52548fad83ded59b90a688dc219dd6
+  SHA1: bfe55cacc7c56c9f7bd75bdb4b352c0b745d071b
+  SHA256: 22be050955347661685a4343c51f11c7811674e030386d2264cd12ecbf544b7c
+  Sections:
+    .text:
+      Entropy: 6.055367251142709
+      Virtual Size: '0xb42'
+    .rdata:
+      Entropy: 4.6530845799285725
+      Virtual Size: '0x168'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.040863839434868
+      Virtual Size: '0x3c'
+    INIT:
+      Entropy: 4.7999537352109725
+      Virtual Size: '0x1d8'
+    .rsrc:
+      Entropy: 3.3557848657208913
+      Virtual Size: '0x400'
+  Signature:
+  - Sokno S.R.L.
+  - VeriSign Class 3 Code Signing 2004 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -153,30 +162,11 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: edbbdf5bb0479e4f4a4827203aebb406
-    SHA1: 691e232c9f6d9c5b1241ef5f0f48f67f7b9eb501
-    SHA256: f6121f3ea39a6896af3b0824a60eed616d52548fad83ded59b90a688dc219dd6
-  Sections:
-    .text:
-      Entropy: 6.055367251142709
-      Virtual Size: '0xb42'
-    .rdata:
-      Entropy: 4.6530845799285725
-      Virtual Size: '0x168'
-    .data:
-      Entropy: 0.5159719988134768
-      Virtual Size: '0x110'
-    .pdata:
-      Entropy: 3.040863839434868
-      Virtual Size: '0x3c'
-    INIT:
-      Entropy: 4.7999537352109725
-      Virtual Size: '0x1d8'
-    .rsrc:
-      Entropy: 3.3557848657208913
-      Virtual Size: '0x400'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2006-09-24 07:26:48'
+MitreID: T1068
+Resources:
+- ' https://github.com/jbaines-r7/dellicious'
+- ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
+- https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
 Tags:
 - speedfan.sys
+Verified: 'TRUE'

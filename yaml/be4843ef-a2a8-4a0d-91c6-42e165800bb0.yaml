@@ -1,35 +1,35 @@
-Id: be4843ef-a2a8-4a0d-91c6-42e165800bb0
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create TestBone.sys binPath=C:\windows\temp\TestBone.sys type=kernel
     && sc.exe start TestBone.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
+Detection: []
+Id: be4843ef-a2a8-4a0d-91c6-42e165800bb0
+KnownVulnerableSamples:
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: TestBone.sys
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA256: 0de4247e72d378713bcf22d5c5d3874d079203bb4364e25f67a90d5570bdcce8
+  Signature: []
+MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
-Detection: []
-KnownVulnerableSamples:
-- Filename: TestBone.sys
-  SHA256: 0de4247e72d378713bcf22d5c5d3874d079203bb4364e25f67a90d5570bdcce8
-  Signature: []
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
 Tags:
 - TestBone.sys
+Verified: 'FALSE'

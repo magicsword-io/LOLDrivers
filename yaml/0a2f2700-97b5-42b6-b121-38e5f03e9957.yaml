@@ -1,51 +1,31 @@
-Id: 0a2f2700-97b5-42b6-b121-38e5f03e9957
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create BS_RCIO.sys binPath=C:\windows\temp\BS_RCIO.sys type=kernel
     && sc.exe start BS_RCIO.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: 0a2f2700-97b5-42b6-b121-38e5f03e9957
 KnownVulnerableSamples:
-- Filename: BS_RCIO.sys
-  MD5: ab53d07f18a9697139ddc825b466f696
-  SHA1: 213ba055863d4226da26a759e8a254062ea77814
-  SHA256: 362c4f3dadc9c393682664a139d65d80e32caa2a97b6e0361dfd713a73267ecc
-  Signature:
-  - Biostar Microtech Int'l Corp
-  - DigiCert EV Code Signing CA
-  - DigiCert
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: I386
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 8284660345377a69dd99b25fdf397314
     SHA1: 3311e4e94e8a6dd81859719fbe0fcbf187f0bd8a
     SHA256: f67e60228084151fdcb84e94a48693db864cf606b65faef5a1d829175380dbfa
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2017-01-16 19:29:00'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: BS_RCIO.sys
   ImportedFunctions:
   - KeWaitForSingleObject
   - memcpy
@@ -84,6 +64,43 @@ KnownVulnerableSamples:
   - READ_PORT_USHORT
   - READ_PORT_ULONG
   - KfLowerIrql
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: ab53d07f18a9697139ddc825b466f696
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: c518efc7fb74ad56780730034846fb80
+    SHA1: ec34db923330d443ffb78311b27ed227fee4ed16
+    SHA256: 31c6a4c2e5994dcccb1fc3fa846b9d865f191213ec5686c163e548fa58c0e245
+  SHA1: 213ba055863d4226da26a759e8a254062ea77814
+  SHA256: 362c4f3dadc9c393682664a139d65d80e32caa2a97b6e0361dfd713a73267ecc
+  Sections:
+    .text:
+      Entropy: 6.012865951436391
+      Virtual Size: '0xeec'
+    .rdata:
+      Entropy: 4.674544303018785
+      Virtual Size: '0x127'
+    .data:
+      Entropy: 1.3219280948873622
+      Virtual Size: '0x28'
+    INIT:
+      Entropy: 5.6725581816645905
+      Virtual Size: '0x54c'
+    .reloc:
+      Entropy: 5.327084372249684
+      Virtual Size: '0x1a2'
+  Signature:
+  - Biostar Microtech Int'l Corp
+  - DigiCert EV Code Signing CA
+  - DigiCert
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -157,27 +174,10 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: c518efc7fb74ad56780730034846fb80
-    SHA1: ec34db923330d443ffb78311b27ed227fee4ed16
-    SHA256: 31c6a4c2e5994dcccb1fc3fa846b9d865f191213ec5686c163e548fa58c0e245
-  Sections:
-    .text:
-      Entropy: 6.012865951436391
-      Virtual Size: '0xeec'
-    .rdata:
-      Entropy: 4.674544303018785
-      Virtual Size: '0x127'
-    .data:
-      Entropy: 1.3219280948873622
-      Virtual Size: '0x28'
-    INIT:
-      Entropy: 5.6725581816645905
-      Virtual Size: '0x54c'
-    .reloc:
-      Entropy: 5.327084372249684
-      Virtual Size: '0x1a2'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-01-16 19:29:00'
+MitreID: T1068
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - BS_RCIO.sys
+Verified: 'TRUE'

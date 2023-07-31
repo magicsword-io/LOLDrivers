@@ -1,22 +1,16 @@
-Id: 40bfb01b-d251-4c2c-952e-052a89a76f5b
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create PanMonFltX64.sys binPath=C:\windows\temp\PanMonFltX64.sys     type=kernel
     && sc.exe start PanMonFltX64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/06508aacb4ed0a1398a2b0da5fa2dbf7da435b56da76fd83c759a50a51c75caf.yara
@@ -28,45 +22,21 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 40bfb01b-d251-4c2c-952e-052a89a76f5b
 KnownVulnerableSamples:
-- Filename: PanMonFltX64.sys
-  MD5: 0067c788e1cb174f008c325ebde56c22
-  SHA1: 12d38abbc5391369a4c14f3431715b5b76ac5a2a
-  SHA256: 06508aacb4ed0a1398a2b0da5fa2dbf7da435b56da76fd83c759a50a51c75caf
-  Signature:
-  - PAN YAZILIM BILISIM TEKNOLOJILERI TICARET LTD. STI.
-  - GlobalSign CodeSigning CA - G2
-  - GlobalSign
-  Date: ''
-  Publisher: ''
-  Company: Pan Yazilim Bilisim Teknolojileri Tic. Ltd. Sti.
-  Description: PanCafe Manager File Monitor
-  Product: PanCafe Manager
-  ProductVersion: 1.0.0.0
-  FileVersion: 1.0.0.0
-  MachineType: AMD64
-  OriginalFilename: PanMonFltX64.sys
-  Authentihash:
+- Authentihash:
     MD5: fb2c77030c99606abb5d78bd51d6637d
     SHA1: cc0f86949ee6261f8c3de046112b99595db14c00
     SHA256: 9544fbc011638cbc168f6ea4740cc6ed6fd331769e191fd64bdf9113eb64fde1
-  InternalName: PanMonFltX64.sys
+  Company: Pan Yazilim Bilisim Teknolojileri Tic. Ltd. Sti.
   Copyright: "Copyright (c) 2012-2014 Pan Yaz\u0131l\u0131m Bilisim Teknolojileri\
     \ Tic. Ltd. Sti."
-  Imports:
-  - ntoskrnl.exe
-  - FLTMGR.SYS
+  CreationTimestamp: '2014-05-13 04:15:50'
+  Date: ''
+  Description: PanCafe Manager File Monitor
   ExportedFunctions: ''
+  FileVersion: 1.0.0.0
+  Filename: PanMonFltX64.sys
   ImportedFunctions:
   - KeBugCheckEx
   - KeAcquireSpinLockRaiseToDpc
@@ -103,6 +73,52 @@ KnownVulnerableSamples:
   - FltCloseClientPort
   - FltSetStreamHandleContext
   - FltGetStreamHandleContext
+  Imports:
+  - ntoskrnl.exe
+  - FLTMGR.SYS
+  InternalName: PanMonFltX64.sys
+  MD5: 0067c788e1cb174f008c325ebde56c22
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: PanMonFltX64.sys
+  Product: PanCafe Manager
+  ProductVersion: 1.0.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 5d1f68f5e0a96a6328e19ddee6e5dec6
+    SHA1: f9e98fa9ca5d0ad02d278a614237e3e76c816c4f
+    SHA256: fad7365ef6ff458ffb8e56ab08b7738f76f0c7e9eb4c418db6b95c00707d3d4d
+  SHA1: 12d38abbc5391369a4c14f3431715b5b76ac5a2a
+  SHA256: 06508aacb4ed0a1398a2b0da5fa2dbf7da435b56da76fd83c759a50a51c75caf
+  Sections:
+    .text:
+      Entropy: 6.29240907400768
+      Virtual Size: '0x1458'
+    .rdata:
+      Entropy: 3.5547199827710894
+      Virtual Size: '0x4cc'
+    .data:
+      Entropy: 0.3431538312845408
+      Virtual Size: '0x1b8'
+    .pdata:
+      Entropy: 3.737697960317056
+      Virtual Size: '0x15c'
+    PAGE:
+      Entropy: 6.263020524838166
+      Virtual Size: '0xa4f'
+    INIT:
+      Entropy: 5.508547194545659
+      Virtual Size: '0x7b2'
+    .rsrc:
+      Entropy: 3.2818302394966063
+      Virtual Size: '0x468'
+    .reloc:
+      Entropy: 1.4052605014851491
+      Virtual Size: '0x62'
+  Signature:
+  - PAN YAZILIM BILISIM TEKNOLOJILERI TICARET LTD. STI.
+  - GlobalSign CodeSigning CA - G2
+  - GlobalSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -173,36 +189,10 @@ KnownVulnerableSamples:
     - SerialNumber: 1121506480253469e07e54ee8612041fbb92
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
-  RichPEHeaderHash:
-    MD5: 5d1f68f5e0a96a6328e19ddee6e5dec6
-    SHA1: f9e98fa9ca5d0ad02d278a614237e3e76c816c4f
-    SHA256: fad7365ef6ff458ffb8e56ab08b7738f76f0c7e9eb4c418db6b95c00707d3d4d
-  Sections:
-    .text:
-      Entropy: 6.29240907400768
-      Virtual Size: '0x1458'
-    .rdata:
-      Entropy: 3.5547199827710894
-      Virtual Size: '0x4cc'
-    .data:
-      Entropy: 0.3431538312845408
-      Virtual Size: '0x1b8'
-    .pdata:
-      Entropy: 3.737697960317056
-      Virtual Size: '0x15c'
-    PAGE:
-      Entropy: 6.263020524838166
-      Virtual Size: '0xa4f'
-    INIT:
-      Entropy: 5.508547194545659
-      Virtual Size: '0x7b2'
-    .rsrc:
-      Entropy: 3.2818302394966063
-      Virtual Size: '0x468'
-    .reloc:
-      Entropy: 1.4052605014851491
-      Virtual Size: '0x62'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-05-13 04:15:50'
+MitreID: T1068
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - PanMonFltX64.sys
+Verified: 'FALSE'

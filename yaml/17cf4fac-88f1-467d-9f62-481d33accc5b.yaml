@@ -1,22 +1,16 @@
-Id: 17cf4fac-88f1-467d-9f62-481d33accc5b
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create otipcibus.sys binPath=C:\windows\temp\otipcibus.sys type=kernel
     && sc.exe start otipcibus.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4e3eb5b9bce2fd9f6878ae36288211f0997f6149aa8c290ed91228ba4cdfae80.yara
@@ -28,44 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 17cf4fac-88f1-467d-9f62-481d33accc5b
 KnownVulnerableSamples:
-- Filename: otipcibus.sys
-  MD5: d5a642329cce4df94b8dc1ba9660ae34
-  SHA1: ccdd3a1ebe9a1c8f8a72af20a05a10f11da1d308
-  SHA256: 4e3eb5b9bce2fd9f6878ae36288211f0997f6149aa8c290ed91228ba4cdfae80
-  Signature:
-  - Ours Technology Inc.
-  - Symantec Class 3 SHA256 Code Signing CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: OTi
-  Description: Hardware Access Driver
-  Product: Kernel Mode Driver To Access Physical Memory And Ports
-  ProductVersion: 1.1000.0.1
-  FileVersion: 1.1000.0.1
-  MachineType: AMD64
-  OriginalFilename: otipcibus64.sys
-  Authentihash:
+- Authentihash:
     MD5: 0fc8a346a333624a7b6645da7a1b6b8b
     SHA1: fd172c7f8bdc81988fcf1642881078a8ca8415f6
     SHA256: 1cda1a6e33d14d5dd06344425102bf840f8149e817ecfb01c59a2190d3367024
-  InternalName: otipcibus64.sys
+  Company: OTi
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - WDFLDR.SYS
+  CreationTimestamp: '2018-08-27 00:12:54'
+  Date: ''
+  Description: Hardware Access Driver
   ExportedFunctions: ''
+  FileVersion: 1.1000.0.1
+  Filename: otipcibus.sys
   ImportedFunctions:
   - ExAllocatePool
   - ExFreePoolWithTag
@@ -93,6 +63,49 @@ KnownVulnerableSamples:
   - WdfVersionUnbind
   - WdfVersionBind
   - WdfVersionUnbindClass
+  Imports:
+  - ntoskrnl.exe
+  - WDFLDR.SYS
+  InternalName: otipcibus64.sys
+  MD5: d5a642329cce4df94b8dc1ba9660ae34
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: otipcibus64.sys
+  Product: Kernel Mode Driver To Access Physical Memory And Ports
+  ProductVersion: 1.1000.0.1
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: b34681d0b4e69df394a00475fc8b8e2b
+    SHA1: 610ef1c2343ce3e7b8fa2fe945b8d39c8c499db1
+    SHA256: 40b86a78a8cf7c02e7599b5a5c25ab085e206420923b6c718161c1fd248645fa
+  SHA1: ccdd3a1ebe9a1c8f8a72af20a05a10f11da1d308
+  SHA256: 4e3eb5b9bce2fd9f6878ae36288211f0997f6149aa8c290ed91228ba4cdfae80
+  Sections:
+    .text:
+      Entropy: 6.133933891984983
+      Virtual Size: '0xdf3'
+    .rdata:
+      Entropy: 4.417947833956902
+      Virtual Size: '0x6a2'
+    .data:
+      Entropy: 0.5780798803320499
+      Virtual Size: '0x1070'
+    .pdata:
+      Entropy: 3.42138799002103
+      Virtual Size: '0xa8'
+    INIT:
+      Entropy: 4.427979696753516
+      Virtual Size: '0x2d'
+    .rsrc:
+      Entropy: 3.272477164189334
+      Virtual Size: '0x3a8'
+    .reloc:
+      Entropy: 2.5625
+      Virtual Size: '0x20'
+  Signature:
+  - Ours Technology Inc.
+  - Symantec Class 3 SHA256 Code Signing CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -168,33 +181,10 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: b34681d0b4e69df394a00475fc8b8e2b
-    SHA1: 610ef1c2343ce3e7b8fa2fe945b8d39c8c499db1
-    SHA256: 40b86a78a8cf7c02e7599b5a5c25ab085e206420923b6c718161c1fd248645fa
-  Sections:
-    .text:
-      Entropy: 6.133933891984983
-      Virtual Size: '0xdf3'
-    .rdata:
-      Entropy: 4.417947833956902
-      Virtual Size: '0x6a2'
-    .data:
-      Entropy: 0.5780798803320499
-      Virtual Size: '0x1070'
-    .pdata:
-      Entropy: 3.42138799002103
-      Virtual Size: '0xa8'
-    INIT:
-      Entropy: 4.427979696753516
-      Virtual Size: '0x2d'
-    .rsrc:
-      Entropy: 3.272477164189334
-      Virtual Size: '0x3a8'
-    .reloc:
-      Entropy: 2.5625
-      Virtual Size: '0x20'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-08-27 00:12:54'
+MitreID: T1068
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - otipcibus.sys
+Verified: 'FALSE'

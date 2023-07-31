@@ -1,22 +1,16 @@
-Id: 9a4fb66e-9084-4b21-9d76-a7afbe330606
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create AMDPowerProfiler.sys binPath=C:\windows\temp\AMDPowerProfiler.sys     type=kernel
     && sc.exe start AMDPowerProfiler.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/0af5ccb3d33a9ba92071c9637be6254030d61998733a5eb3583e865e17844e05.yara
@@ -28,46 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 9a4fb66e-9084-4b21-9d76-a7afbe330606
 KnownVulnerableSamples:
-- Filename: AMDPowerProfiler.sys
-  MD5: e4266262a77fffdea2584283f6c4f51d
-  SHA1: b480c54391a2a2f917a44f91a5e9e4590648b332
-  SHA256: 0af5ccb3d33a9ba92071c9637be6254030d61998733a5eb3583e865e17844e05
-  Signature:
-  - Advanced Micro Devices Inc.
-  - Sectigo RSA Code Signing CA
-  - USERTrust RSA Certification Authority
-  - Sectigo (AAA)
-  Date: ''
-  Publisher: ''
-  Company: Advanced Micro Devices, Inc.
-  Description: AMD Power Profiling Driver
-  Product: AMD uProf
-  ProductVersion: 3.4.493.0
-  FileVersion: 6.1.0.0
-  MachineType: AMD64
-  OriginalFilename: AMDPowerProfiler.sys
-  Authentihash:
+- Authentihash:
     MD5: 7ed9c787e267b2606441010b65767771
     SHA1: 07a5aac8abb0a85822bf792607b9e90914b454dc
     SHA256: e1d3963c55c7ffa96d16e47ec4bbb4e171f828650ce853eb0b83c90ae9c6265a
-  InternalName: AMDPowerProfiler.sys
+  Company: Advanced Micro Devices, Inc.
   Copyright: "\xA9 2021 AMD Inc. All rights reserved."
-  Imports:
-  - AMDPCore.SYS
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2021-07-26 10:06:46'
+  Date: ''
+  Description: AMD Power Profiling Driver
   ExportedFunctions: ''
+  FileVersion: 6.1.0.0
+  Filename: AMDPowerProfiler.sys
   ImportedFunctions:
   - PcoreRemoveAllConfigurations
   - PcoreIsLoaded
@@ -160,6 +128,57 @@ KnownVulnerableSamples:
   - KeQueryPerformanceCounter
   - HalAllocateHardwareCounters
   - HalFreeHardwareCounters
+  Imports:
+  - AMDPCore.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: AMDPowerProfiler.sys
+  MD5: e4266262a77fffdea2584283f6c4f51d
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: AMDPowerProfiler.sys
+  Product: AMD uProf
+  ProductVersion: 3.4.493.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: f738aebbde053d70ac80a3e913b2205a
+    SHA1: 5a6f2f340be31f31d82d22202b4489fc1fb03893
+    SHA256: 878dda98771551824d963e08ecadef9233c5854b143d5c1d9d42c05620c8cd73
+  SHA1: b480c54391a2a2f917a44f91a5e9e4590648b332
+  SHA256: 0af5ccb3d33a9ba92071c9637be6254030d61998733a5eb3583e865e17844e05
+  Sections:
+    .text:
+      Entropy: 6.425434279923185
+      Virtual Size: '0x9f01'
+    .rdata:
+      Entropy: 4.825713970701754
+      Virtual Size: '0x16fc'
+    .data:
+      Entropy: 2.108172298358785
+      Virtual Size: '0x2d54'
+    .pdata:
+      Entropy: 4.753427592244756
+      Virtual Size: '0xb4c'
+    .gfids:
+      Entropy: 0.8112781244591328
+      Virtual Size: '0x4'
+    PAGE:
+      Entropy: 6.292249475182866
+      Virtual Size: '0x1ae4'
+    INIT:
+      Entropy: 5.299563826983875
+      Virtual Size: '0xc02'
+    .rsrc:
+      Entropy: 3.32176383105506
+      Virtual Size: '0x420'
+    .reloc:
+      Entropy: 3.3672076092970715
+      Virtual Size: '0x2c'
+  Signature:
+  - Advanced Micro Devices Inc.
+  - Sectigo RSA Code Signing CA
+  - USERTrust RSA Certification Authority
+  - Sectigo (AAA)
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -233,39 +252,10 @@ KnownVulnerableSamples:
       Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Code Signing CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: f738aebbde053d70ac80a3e913b2205a
-    SHA1: 5a6f2f340be31f31d82d22202b4489fc1fb03893
-    SHA256: 878dda98771551824d963e08ecadef9233c5854b143d5c1d9d42c05620c8cd73
-  Sections:
-    .text:
-      Entropy: 6.425434279923185
-      Virtual Size: '0x9f01'
-    .rdata:
-      Entropy: 4.825713970701754
-      Virtual Size: '0x16fc'
-    .data:
-      Entropy: 2.108172298358785
-      Virtual Size: '0x2d54'
-    .pdata:
-      Entropy: 4.753427592244756
-      Virtual Size: '0xb4c'
-    .gfids:
-      Entropy: 0.8112781244591328
-      Virtual Size: '0x4'
-    PAGE:
-      Entropy: 6.292249475182866
-      Virtual Size: '0x1ae4'
-    INIT:
-      Entropy: 5.299563826983875
-      Virtual Size: '0xc02'
-    .rsrc:
-      Entropy: 3.32176383105506
-      Virtual Size: '0x420'
-    .reloc:
-      Entropy: 3.3672076092970715
-      Virtual Size: '0x2c'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-07-26 10:06:46'
+MitreID: T1068
+Resources:
+- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Tags:
 - AMDPowerProfiler.sys
+Verified: 'TRUE'

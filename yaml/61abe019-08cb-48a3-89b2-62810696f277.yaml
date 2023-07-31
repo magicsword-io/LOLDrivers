@@ -1,45 +1,50 @@
-Id: 61abe019-08cb-48a3-89b2-62810696f277
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-06-05'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create NQrmq.sys binPath=C:\windows\temp\NQrmq.sys type=kernel &&
     sc.exe start NQrmq.sys
   Description: Found via RichPEHeaderHash pivoting.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-06-05'
 Detection: []
+Id: 61abe019-08cb-48a3-89b2-62810696f277
 KnownVulnerableSamples:
-- Filename: NQrmq.sys
-  MD5: 550b7991d93534bc510bc4f237155a7a
-  SHA1: 9382981b05b1fb950245313992444bfa0db5f881
-  SHA256: ad938d15ecfd70083c474e1642a88b078c3cea02cdbddf66d4fb1c01b9b29d9a
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: deb930efdc62da7c54923e3c7802a85c
     SHA1: 1ce8dfaf518604b9043f7fe3c31eae11f84e74cb
     SHA256: 16a1977a9251d6d4bec86bb0702a97bcaefa94444bbfe3978af2f79ee10d62a6
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2022-06-02 04:09:08'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: NQrmq.sys
+  ImportedFunctions:
+  - rand
+  - rand
+  Imports:
+  - ntoskrnl.exe
+  InternalName: ''
+  MD5: 550b7991d93534bc510bc4f237155a7a
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   RichPEHeaderHash:
     MD5: a7d4acb55095eb7efa7945ef805fcf8b
     SHA1: 10103bfe4f9a5b22c45d64354f88be415249f384
     SHA256: 58bcb1d3215317fc95d1b8ddef6945aead4de70049db273b0d4a82a7e22b38d8
+  SHA1: 9382981b05b1fb950245313992444bfa0db5f881
+  SHA256: ad938d15ecfd70083c474e1642a88b078c3cea02cdbddf66d4fb1c01b9b29d9a
   Sections:
     .text:
       Entropy: 2.2994112768420387
@@ -53,16 +58,7 @@ KnownVulnerableSamples:
     .reloc:
       Entropy: 2.262142397286403
       Virtual Size: '0x1000'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-06-02 04:09:08'
-  InternalName: ''
-  Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - rand
-  - rand
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -115,5 +111,9 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+MitreID: T1068
+Resources:
+- ''
 Tags:
 - NQrmq.sys
+Verified: 'TRUE'

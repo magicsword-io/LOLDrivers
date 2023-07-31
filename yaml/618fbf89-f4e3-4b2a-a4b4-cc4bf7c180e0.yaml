@@ -1,51 +1,31 @@
-Id: 618fbf89-f4e3-4b2a-a4b4-cc4bf7c180e0
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-03-04'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create POORTRY2.sys binPath=C:\windows\temp\POORTRY2.sys type=kernel
     && sc.exe start POORTRY2.sys
   Description: Driver categorized as POORTRY by Mandiant.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-- ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-03-04'
 Detection: []
+Id: 618fbf89-f4e3-4b2a-a4b4-cc4bf7c180e0
 KnownVulnerableSamples:
-- Filename: POORTRY2.sys
-  MD5: b164daf106566f444dfb280d743bc2f7
-  SHA1: 7e836dadc2e149a0b758c7e22c989cbfcce18684
-  SHA256: 9bb09752cf3a464455422909edef518ac18fe63cf5e1e8d9d6c2e68db62e0c87
-  Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  - Microsoft Windows Third Party Component CA 2014
-  - Microsoft Root Certificate Authority 2010
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: I386
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: ffbbaeada1f7507faca4ef59c6e3e577
     SHA1: 56f9aa37f099409170b4656079edbf52e464b700
     SHA256: 29bf8618816bce5fa2845409d98b7b96915e0763bb04719535ca885e4713cfaf
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - FLTMGR.SYS
+  CreationTimestamp: '2022-08-16 06:58:09'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: POORTRY2.sys
   ImportedFunctions:
   - RtlTimeToTimeFields
   - ExAllocatePoolWithTag
@@ -111,6 +91,46 @@ KnownVulnerableSamples:
   - FltFreeSecurityDescriptor
   - FltCreateCommunicationPort
   - FltCloseClientPort
+  Imports:
+  - ntoskrnl.exe
+  - FLTMGR.SYS
+  InternalName: ''
+  MD5: b164daf106566f444dfb280d743bc2f7
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 104f21983f4d9023b3caea75e150d708
+    SHA1: f7c1d81b689da74283e59a207c099add982ebe65
+    SHA256: d7cc985c73b6cab2c875fcdabc34930c0849b055477e264061c4ef8351c69fa0
+  SHA1: 7e836dadc2e149a0b758c7e22c989cbfcce18684
+  SHA256: 9bb09752cf3a464455422909edef518ac18fe63cf5e1e8d9d6c2e68db62e0c87
+  Sections:
+    .text:
+      Entropy: 6.45038937848739
+      Virtual Size: '0x62f0'
+    .text1:
+      Entropy: 5.165948744304026
+      Virtual Size: '0x297'
+    .rdata:
+      Entropy: 5.232271695468786
+      Virtual Size: '0x1124'
+    .data:
+      Entropy: 5.293435318357553
+      Virtual Size: '0x1444'
+    INIT:
+      Entropy: 5.301289658142679
+      Virtual Size: '0x65c'
+    .reloc:
+      Entropy: 5.3198588285526975
+      Virtual Size: '0x624'
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+  - Microsoft Root Certificate Authority 2010
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -146,30 +166,10 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
-  RichPEHeaderHash:
-    MD5: 104f21983f4d9023b3caea75e150d708
-    SHA1: f7c1d81b689da74283e59a207c099add982ebe65
-    SHA256: d7cc985c73b6cab2c875fcdabc34930c0849b055477e264061c4ef8351c69fa0
-  Sections:
-    .text:
-      Entropy: 6.45038937848739
-      Virtual Size: '0x62f0'
-    .text1:
-      Entropy: 5.165948744304026
-      Virtual Size: '0x297'
-    .rdata:
-      Entropy: 5.232271695468786
-      Virtual Size: '0x1124'
-    .data:
-      Entropy: 5.293435318357553
-      Virtual Size: '0x1444'
-    INIT:
-      Entropy: 5.301289658142679
-      Virtual Size: '0x65c'
-    .reloc:
-      Entropy: 5.3198588285526975
-      Virtual Size: '0x624'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-08-16 06:58:09'
+MitreID: T1068
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+- ''
 Tags:
 - POORTRY2.sys
+Verified: 'TRUE'

@@ -1,22 +1,16 @@
-Id: 9889da50-3908-4499-a729-187295a60a0e
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create asrdrv104.sys binPath=C:\windows\temp\asrdrv104.sys type=kernel
     && sc.exe start asrdrv104.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6ed35f310c96920a271c59a097b382da07856e40179c2a4239f8daa04eef38e7.yara
@@ -28,80 +22,68 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 9889da50-3908-4499-a729-187295a60a0e
 KnownVulnerableSamples:
-- Filename: asrdrv104.sys
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: asrdrv104.sys
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: 6c1bb3a72ebfb5359b9e22ca44d0a1ff825a68f2
   Signature: []
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: asrdrv104.sys
   MachineType: ''
   OriginalFilename: ''
-- Filename: asrdrv104.sys
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: e039c9dd21494dbd073b4823fc3a17fbb951ec6c
   Signature: []
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: asrdrv104.sys
   MachineType: ''
   OriginalFilename: ''
-- Filename: asrdrv104.sys
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: 7eec3a1edf3b021883a4b5da450db63f7c0afeeb
   Signature: []
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: asrdrv104.sys
   MachineType: ''
   OriginalFilename: ''
-- Filename: asrdrv104.sys
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: e5021a98e55d514e2376aa573d143631e5ee1c13
   Signature: []
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
-- Filename: asrdrv104.sys
-  MD5: de1cc5c266140bff9d964fab87a29421
-  SHA1: 729a8675665c61824f22f06c7b954be4d14b52c4
-  SHA256: 6ed35f310c96920a271c59a097b382da07856e40179c2a4239f8daa04eef38e7
-  Signature: []
-  Date: ''
-  Publisher: ''
-  Company: ASRock Incorporation
-  Description: ASRock IO Driver
-  Product: ASRock IO Driver
-  ProductVersion: 1.00.00.0000
-  FileVersion: '1.00.00.0000 built by: WinDDK'
-  MachineType: I386
-  OriginalFilename: AsrDrv.sys
-  Authentihash:
+- Authentihash:
     MD5: 6b214126743cbf8efdfae0a4fb7d78eb
     SHA1: efc91a1317eb086196fa1a2f94fbf96258b5ec2e
     SHA256: 5b08d996938a0ab9a3b7a65e3049482dff819028102d41f7c5924af467b0a3e4
-  InternalName: AsrDrv.sys
+  Company: ASRock Incorporation
   Copyright: Copyright (C) 2012 ASRock Incorporation
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  - cng.sys
+  CreationTimestamp: '2017-03-24 22:06:29'
+  Date: ''
+  Description: ASRock IO Driver
   ExportedFunctions: ''
+  FileVersion: '1.00.00.0000 built by: WinDDK'
+  Filename: asrdrv104.sys
   ImportedFunctions:
   - memset
   - MmGetPhysicalAddress
@@ -159,6 +141,47 @@ KnownVulnerableSamples:
   - BCryptOpenAlgorithmProvider
   - BCryptDestroyKey
   - BCryptDecrypt
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - cng.sys
+  InternalName: AsrDrv.sys
+  MD5: de1cc5c266140bff9d964fab87a29421
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: AsrDrv.sys
+  Product: ASRock IO Driver
+  ProductVersion: 1.00.00.0000
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 6a040ce6cb149645c2ee94feff2864a5
+    SHA1: 50b80eb17b5728b9a40887c3b998bf565dd77920
+    SHA256: 6dba5e5edc047abf8b9eac9ca2dc7dec808e6b1656406542a8d3c150a6447940
+  SHA1: 729a8675665c61824f22f06c7b954be4d14b52c4
+  SHA256: 6ed35f310c96920a271c59a097b382da07856e40179c2a4239f8daa04eef38e7
+  Sections:
+    .text:
+      Entropy: 6.364656828511862
+      Virtual Size: '0x18a7'
+    .rdata:
+      Entropy: 3.9722804080346172
+      Virtual Size: '0x3eb'
+    .data:
+      Entropy: 2.2015449012732216
+      Virtual Size: '0x198'
+    PAGE:
+      Entropy: 6.258332879320928
+      Virtual Size: '0x13e2'
+    INIT:
+      Entropy: 5.577901310875993
+      Virtual Size: '0x7d0'
+    .rsrc:
+      Entropy: 3.288790736965791
+      Virtual Size: '0x3a0'
+    .reloc:
+      Entropy: 5.0897276785189
+      Virtual Size: '0x2b0'
+  Signature: []
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -248,57 +271,34 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 6a040ce6cb149645c2ee94feff2864a5
-    SHA1: 50b80eb17b5728b9a40887c3b998bf565dd77920
-    SHA256: 6dba5e5edc047abf8b9eac9ca2dc7dec808e6b1656406542a8d3c150a6447940
-  Sections:
-    .text:
-      Entropy: 6.364656828511862
-      Virtual Size: '0x18a7'
-    .rdata:
-      Entropy: 3.9722804080346172
-      Virtual Size: '0x3eb'
-    .data:
-      Entropy: 2.2015449012732216
-      Virtual Size: '0x198'
-    PAGE:
-      Entropy: 6.258332879320928
-      Virtual Size: '0x13e2'
-    INIT:
-      Entropy: 5.577901310875993
-      Virtual Size: '0x7d0'
-    .rsrc:
-      Entropy: 3.288790736965791
-      Virtual Size: '0x3a0'
-    .reloc:
-      Entropy: 5.0897276785189
-      Virtual Size: '0x2b0'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-03-24 22:06:29'
-- Filename: asrdrv104.sys
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: asrdrv104.sys
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: 2b4d0dead4c1a7cc95543748b3565cfa802e5256
   Signature: []
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: asrdrv104.sys
   MachineType: ''
   OriginalFilename: ''
-- Filename: asrdrv104.sys
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: 4a7d66874a0472a47087fabaa033a85d47413379
   Signature: []
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+MitreID: T1068
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - asrdrv104.sys
+Verified: 'FALSE'

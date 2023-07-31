@@ -1,24 +1,16 @@
-Id: f4c22f4d-eff8-40c5-8b31-146abe5f17b7
+Acknowledgement:
+  Handle: hfiref0x
+  Person: hfiref0x
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create physmem.sys binPath=C:\windows\temp\physmem.sys type=kernel
     && sc.exe start physmem.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://github.com/jbaines-r7/dellicious
-- https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-- https://github.com/magicsword-io/LOLDrivers/issues/55
-- https://github.com/hfiref0x/KDU
-Acknowledgement:
-  Person: hfiref0x
-  Handle: hfiref0x
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c299063e3eae8ddc15839767e83b9808fd43418dc5a1af7e4f44b97ba53fbd3d.yara
@@ -30,53 +22,33 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: f4c22f4d-eff8-40c5-8b31-146abe5f17b7
 KnownVulnerableSamples:
-- Filename: physmem.sys
-  SHA1: 589a7d4df869395601ba7538a65afae8c4616385
-  Signature: []
+- Company: ''
   Date: ''
-  Publisher: ''
-  Company: ''
   Description: ''
-  Product: ''
-  ProductVersion: ''
   FileVersion: ''
+  Filename: physmem.sys
   MachineType: ''
   OriginalFilename: ''
-- Filename: physmem.sys
-  MD5: a0e2223868b6133c5712ba5ed20c3e8a
-  SHA1: 17614fdee3b89272e99758983b99111cbb1b312c
-  SHA256: c299063e3eae8ddc15839767e83b9808fd43418dc5a1af7e4f44b97ba53fbd3d
-  Signature: []
-  Date: ''
+  Product: ''
+  ProductVersion: ''
   Publisher: ''
-  Company: "Hilscher Gesellschaft f\xFCr Systemaoutomation mbH"
-  Description: Physical Memory Access Driver
-  Product: Physical Memory Access Driver
-  ProductVersion: 1.0.0.0
-  FileVersion: 1.0.0.0
-  MachineType: AMD64
-  OriginalFilename: physmem.sys
-  Authentihash:
+  SHA1: 589a7d4df869395601ba7538a65afae8c4616385
+  Signature: []
+- Authentihash:
     MD5: f2cd816e7f899442730b832a2e03797e
     SHA1: fd0cb3ea1deb4fdb22536a7c15669eb53315e5c8
     SHA256: 03a831e18d933954d432187835e0d6aea8bf10fd84dfbe36a23366e2b0538a11
-  InternalName: physmem.sys
+  Company: "Hilscher Gesellschaft f\xFCr Systemaoutomation mbH"
   Copyright: "\xA9 Hilscher Gesellschaft f\xFCr Systemaoutomation mbH. All rights\
     \ reserved."
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2015-03-03 03:41:21'
+  Date: ''
+  Description: Physical Memory Access Driver
   ExportedFunctions: ''
+  FileVersion: 1.0.0.0
+  Filename: physmem.sys
   ImportedFunctions:
   - IoDeleteSymbolicLink
   - ExFreePoolWithTag
@@ -116,6 +88,48 @@ KnownVulnerableSamples:
   - ZwQueryValueKey
   - ZwSetValueKey
   - RtlFreeUnicodeString
+  Imports:
+  - ntoskrnl.exe
+  InternalName: physmem.sys
+  MD5: a0e2223868b6133c5712ba5ed20c3e8a
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: physmem.sys
+  Product: Physical Memory Access Driver
+  ProductVersion: 1.0.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: e6cc56ca27c747f0eac9bf069c3fa6bd
+    SHA1: fbccb687d26acddde11a3bdffffc25f203c5e2c5
+    SHA256: 2587386d839f45995acd720c0492f5cd11a36b6ad2ec4c4e43d7b2a4abfe38f2
+  SHA1: 17614fdee3b89272e99758983b99111cbb1b312c
+  SHA256: c299063e3eae8ddc15839767e83b9808fd43418dc5a1af7e4f44b97ba53fbd3d
+  Sections:
+    .text:
+      Entropy: 6.027791363175618
+      Virtual Size: '0x9a4'
+    .rdata:
+      Entropy: 4.406909342132945
+      Virtual Size: '0x6a4'
+    .data:
+      Entropy: 1.4415102248217193
+      Virtual Size: '0x2fc'
+    .pdata:
+      Entropy: 4.084260584440838
+      Virtual Size: '0x234'
+    PAGE:
+      Entropy: 6.207000209026155
+      Virtual Size: '0x1b74'
+    INIT:
+      Entropy: 5.390231391811294
+      Virtual Size: '0x72e'
+    .rsrc:
+      Entropy: 3.2825157034395094
+      Virtual Size: '0x410'
+    .reloc:
+      Entropy: 1.2280731978955797
+      Virtual Size: '0x60'
+  Signature: []
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -186,36 +200,12 @@ KnownVulnerableSamples:
     - SerialNumber: 1121d48f27abe17574473e4066a863792d46
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
-  RichPEHeaderHash:
-    MD5: e6cc56ca27c747f0eac9bf069c3fa6bd
-    SHA1: fbccb687d26acddde11a3bdffffc25f203c5e2c5
-    SHA256: 2587386d839f45995acd720c0492f5cd11a36b6ad2ec4c4e43d7b2a4abfe38f2
-  Sections:
-    .text:
-      Entropy: 6.027791363175618
-      Virtual Size: '0x9a4'
-    .rdata:
-      Entropy: 4.406909342132945
-      Virtual Size: '0x6a4'
-    .data:
-      Entropy: 1.4415102248217193
-      Virtual Size: '0x2fc'
-    .pdata:
-      Entropy: 4.084260584440838
-      Virtual Size: '0x234'
-    PAGE:
-      Entropy: 6.207000209026155
-      Virtual Size: '0x1b74'
-    INIT:
-      Entropy: 5.390231391811294
-      Virtual Size: '0x72e'
-    .rsrc:
-      Entropy: 3.2825157034395094
-      Virtual Size: '0x410'
-    .reloc:
-      Entropy: 1.2280731978955797
-      Virtual Size: '0x60'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-03-03 03:41:21'
+MitreID: T1068
+Resources:
+- https://github.com/jbaines-r7/dellicious
+- https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+- https://github.com/magicsword-io/LOLDrivers/issues/55
+- https://github.com/hfiref0x/KDU
 Tags:
 - physmem.sys
+Verified: 'TRUE'

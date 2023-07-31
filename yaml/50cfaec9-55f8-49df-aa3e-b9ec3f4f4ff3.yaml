@@ -1,53 +1,31 @@
-Id: 50cfaec9-55f8-49df-aa3e-b9ec3f4f4ff3
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create mhyprot.sys binPath=C:\windows\temp\mhyprot.sys type=kernel
     && sc.exe start mhyprot.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/jbaines-r7/dellicious'
-- ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
-- https://github.com/elastic/protections-artifacts/blob/932baf346cc8a743f1963ad3d4565b42ed17bebe/yara/rules/Windows_VulnDriver_Mhyprot.yar
-- https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: 50cfaec9-55f8-49df-aa3e-b9ec3f4f4ff3
 KnownVulnerableSamples:
-- Filename: mhyprot.sys
-  MD5: 4b817d0e7714b9d43db43ae4a22a161e
-  SHA1: 0466e90bf0e83b776ca8716e01d35a8a2e5f96d3
-  SHA256: 509628b6d16d2428031311d7bd2add8d5f5160e9ecc0cd909f1e82bbbb3234d6
-  Signature:
-  - miHoYo Co.,Ltd.
-  - DigiCert Assured ID Code Signing CA-1
-  - DigiCert
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: ff295de93e6b6dcc3938d50901a7240d
     SHA1: 484c72dd4fd91083b249f3ccc733a3c8335e583f
     SHA256: 0c7809ac1fa074408518ddc0ac118912c9cd43ed9c89213bc4d59043016b040c
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - WDFLDR.SYS
+  CreationTimestamp: '2020-08-16 21:38:03'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: mhyprot.sys
   ImportedFunctions:
   - NtQuerySystemInformation
   - RtlInitUnicodeString
@@ -142,6 +120,55 @@ KnownVulnerableSamples:
   - WdfVersionBind
   - WdfVersionUnbind
   - WdfVersionUnbindClass
+  Imports:
+  - ntoskrnl.exe
+  - WDFLDR.SYS
+  InternalName: ''
+  MD5: 4b817d0e7714b9d43db43ae4a22a161e
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
+    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
+    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
+  SHA1: 0466e90bf0e83b776ca8716e01d35a8a2e5f96d3
+  SHA256: 509628b6d16d2428031311d7bd2add8d5f5160e9ecc0cd909f1e82bbbb3234d6
+  Sections:
+    .text:
+      Entropy: 6.183070832014416
+      Virtual Size: '0x6ed0'
+    .rdata:
+      Entropy: 4.768973580594352
+      Virtual Size: '0x159c'
+    .data:
+      Entropy: 0.807954115503613
+      Virtual Size: '0x15f8'
+    .pdata:
+      Entropy: 7.83996638727823
+      Virtual Size: '0x684'
+    PAGE:
+      Entropy: 5.929327209049661
+      Virtual Size: '0xb7a'
+    INIT:
+      Entropy: 5.3523212488458185
+      Virtual Size: '0xe54'
+    .upx0:
+      Entropy: 7.037246397744446
+      Virtual Size: '0x124190'
+    .reloc:
+      Entropy: 3.9077681077271933
+      Virtual Size: '0xcc'
+    .rsrc:
+      Entropy: 2.9056718289000636
+      Virtual Size: '0x22c'
+  Signature:
+  - miHoYo Co.,Ltd.
+  - DigiCert Assured ID Code Signing CA-1
+  - DigiCert
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -213,39 +240,12 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       Version: 1
-  RichPEHeaderHash:
-    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
-    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
-    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
-  Sections:
-    .text:
-      Entropy: 6.183070832014416
-      Virtual Size: '0x6ed0'
-    .rdata:
-      Entropy: 4.768973580594352
-      Virtual Size: '0x159c'
-    .data:
-      Entropy: 0.807954115503613
-      Virtual Size: '0x15f8'
-    .pdata:
-      Entropy: 7.83996638727823
-      Virtual Size: '0x684'
-    PAGE:
-      Entropy: 5.929327209049661
-      Virtual Size: '0xb7a'
-    INIT:
-      Entropy: 5.3523212488458185
-      Virtual Size: '0xe54'
-    .upx0:
-      Entropy: 7.037246397744446
-      Virtual Size: '0x124190'
-    .reloc:
-      Entropy: 3.9077681077271933
-      Virtual Size: '0xcc'
-    .rsrc:
-      Entropy: 2.9056718289000636
-      Virtual Size: '0x22c'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-08-16 21:38:03'
+MitreID: T1068
+Resources:
+- ' https://github.com/jbaines-r7/dellicious'
+- ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
+- https://github.com/elastic/protections-artifacts/blob/932baf346cc8a743f1963ad3d4565b42ed17bebe/yara/rules/Windows_VulnDriver_Mhyprot.yar
+- https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
 Tags:
 - mhyprot.sys
+Verified: 'TRUE'

@@ -1,46 +1,31 @@
-Id: 5261cacf-380c-4573-85ff-a643cbdf009a
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Guus Verbeek
-Created: '2023-05-06'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create KApcHelper_x64.sys binPath=C:\windows\temp\KApcHelper_x64.sys
     type=kernel && sc.exe start KApcHelper_x64.sys
   Description: Vulnerable driving using the stolen Nvidia Certificate.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-05-06'
 Detection: []
+Id: 5261cacf-380c-4573-85ff-a643cbdf009a
 KnownVulnerableSamples:
-- Filename: KApcHelper_x64.sys
-  MD5: 0f16a43f7989034641fd2de3eb268bf1
-  SHA1: cc65bf60600b64feece5575f21ab89e03a728332
-  SHA256: d7c81b0f3c14844f6424e8bdd31a128e773cb96cccef6d05cbff473f0ccb9f9c
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: adb7de0467bd3f92fce34819ec656658
     SHA1: 2c1bc3f623fd9bfdf2ecbe5403da1849c85b8433
     SHA256: 2a30ad675142cf411e7e5f5c53c6423de570a398295b0956130a7a7d77383103
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2022-06-06 09:14:46'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: KApcHelper_x64.sys
   ImportedFunctions:
   - rand
   - srand
@@ -69,6 +54,42 @@ KnownVulnerableSamples:
   - PsIsSystemThread
   - ObOpenObjectByPointerWithTag
   - KeBugCheckEx
+  Imports:
+  - ntoskrnl.exe
+  InternalName: ''
+  MD5: 0f16a43f7989034641fd2de3eb268bf1
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 5080c1caf53ea61b5b919bbcaf0c8354
+    SHA1: 6fbbf5ebe27354688ae61f0d43226c8f7326bfec
+    SHA256: 5cc392362f3b91dc626f688e374e0da1866120dcc396fe403a5d8b561cc18943
+  SHA1: cc65bf60600b64feece5575f21ab89e03a728332
+  SHA256: d7c81b0f3c14844f6424e8bdd31a128e773cb96cccef6d05cbff473f0ccb9f9c
+  Sections:
+    .text:
+      Entropy: 5.860500055750153
+      Virtual Size: '0x1728'
+    .rdata:
+      Entropy: 3.7459107255443396
+      Virtual Size: '0x5b0'
+    .data:
+      Entropy: 0.6050836155077387
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.7039606450049316
+      Virtual Size: '0x15c'
+    INIT:
+      Entropy: 5.269327550372214
+      Virtual Size: '0x400'
+    .reloc:
+      Entropy: 3.43699961153114
+      Virtual Size: '0x20'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -120,30 +141,9 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 5080c1caf53ea61b5b919bbcaf0c8354
-    SHA1: 6fbbf5ebe27354688ae61f0d43226c8f7326bfec
-    SHA256: 5cc392362f3b91dc626f688e374e0da1866120dcc396fe403a5d8b561cc18943
-  Sections:
-    .text:
-      Entropy: 5.860500055750153
-      Virtual Size: '0x1728'
-    .rdata:
-      Entropy: 3.7459107255443396
-      Virtual Size: '0x5b0'
-    .data:
-      Entropy: 0.6050836155077387
-      Virtual Size: '0x110'
-    .pdata:
-      Entropy: 3.7039606450049316
-      Virtual Size: '0x15c'
-    INIT:
-      Entropy: 5.269327550372214
-      Virtual Size: '0x400'
-    .reloc:
-      Entropy: 3.43699961153114
-      Virtual Size: '0x20'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-06-06 09:14:46'
+MitreID: T1068
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
 Tags:
 - KApcHelper_x64.sys
+Verified: 'TRUE'

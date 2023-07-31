@@ -1,22 +1,16 @@
-Id: 1c7631f0-f92f-4be5-8ba7-3eefb0601d45
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create LHA.sys binPath=C:\windows\temp\LHA.sys type=kernel && sc.exe
     start LHA.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e75714f8e0ff45605f6fc7689a1a89c7dcd34aab66c6131c63fefaca584539cf.yara
@@ -28,44 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 1c7631f0-f92f-4be5-8ba7-3eefb0601d45
 KnownVulnerableSamples:
-- Filename: LHA.sys
-  MD5: 748cf64b95ca83abc35762ad2c25458f
-  SHA1: fcd615df88645d1f57ff5702bd6758b77efea6d0
-  SHA256: e75714f8e0ff45605f6fc7689a1a89c7dcd34aab66c6131c63fefaca584539cf
-  Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  - Microsoft Windows Third Party Component CA 2014
-  - Microsoft Root Certificate Authority 2010
-  Date: ''
-  Publisher: ''
-  Company: LG Electronics Inc.
-  Description: LHA
-  Product: "Microsoft\xAE Windows\xAE Operating System"
-  ProductVersion: 6.1.7600.16385
-  FileVersion: '6.1.7600.16385 built by: WinDDK'
-  MachineType: AMD64
-  OriginalFilename: LHA.sys
-  Authentihash:
+- Authentihash:
     MD5: 8a3fb969d6edfb9a860e13a556a9d64f
     SHA1: d9cf173dd75bf410c2f7f35247cd4db186af9a41
     SHA256: fe14940b5d3068b7ceffd28a529196811f1d0e175522f4dfab26573e7aca0bb4
-  InternalName: LHA.sys
+  Company: LG Electronics Inc.
   Copyright: ultrabios@hotmail.com
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2018-12-27 16:06:43'
+  Date: ''
+  Description: LHA
   ExportedFunctions: ''
+  FileVersion: '6.1.7600.16385 built by: WinDDK'
+  Filename: LHA.sys
   ImportedFunctions:
   - ExFreePoolWithTag
   - RtlInitUnicodeString
@@ -120,6 +90,52 @@ KnownVulnerableSamples:
   - ZwSetValueKey
   - RtlFreeUnicodeString
   - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: LHA.sys
+  MD5: 748cf64b95ca83abc35762ad2c25458f
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: LHA.sys
+  Product: "Microsoft\xAE Windows\xAE Operating System"
+  ProductVersion: 6.1.7600.16385
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 8de9ce6c09a8dc70b9c6399d53ed5752
+    SHA1: 28c10b23cbb09f205edb21dfabd65800df836b7e
+    SHA256: f662fa4a5aa3686ae214a0559bd422bc979b969f0f33abacc560c8b4af7d7a7d
+  SHA1: fcd615df88645d1f57ff5702bd6758b77efea6d0
+  SHA256: e75714f8e0ff45605f6fc7689a1a89c7dcd34aab66c6131c63fefaca584539cf
+  Sections:
+    .text:
+      Entropy: 6.3729713051901875
+      Virtual Size: '0x275e'
+    .rdata:
+      Entropy: 4.35894546013594
+      Virtual Size: '0x79c'
+    .data:
+      Entropy: 1.4282942392169038
+      Virtual Size: '0x381'
+    .pdata:
+      Entropy: 4.246697265407486
+      Virtual Size: '0x2b8'
+    PAGE:
+      Entropy: 6.214193657765831
+      Virtual Size: '0x1a47'
+    INIT:
+      Entropy: 5.174871630570359
+      Virtual Size: '0x728'
+    .rsrc:
+      Entropy: 3.40609004191681
+      Virtual Size: '0x380'
+    .reloc:
+      Entropy: 1.2280731978955797
+      Virtual Size: '0x60'
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+  - Microsoft Root Certificate Authority 2010
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -155,36 +171,10 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
-  RichPEHeaderHash:
-    MD5: 8de9ce6c09a8dc70b9c6399d53ed5752
-    SHA1: 28c10b23cbb09f205edb21dfabd65800df836b7e
-    SHA256: f662fa4a5aa3686ae214a0559bd422bc979b969f0f33abacc560c8b4af7d7a7d
-  Sections:
-    .text:
-      Entropy: 6.3729713051901875
-      Virtual Size: '0x275e'
-    .rdata:
-      Entropy: 4.35894546013594
-      Virtual Size: '0x79c'
-    .data:
-      Entropy: 1.4282942392169038
-      Virtual Size: '0x381'
-    .pdata:
-      Entropy: 4.246697265407486
-      Virtual Size: '0x2b8'
-    PAGE:
-      Entropy: 6.214193657765831
-      Virtual Size: '0x1a47'
-    INIT:
-      Entropy: 5.174871630570359
-      Virtual Size: '0x728'
-    .rsrc:
-      Entropy: 3.40609004191681
-      Virtual Size: '0x380'
-    .reloc:
-      Entropy: 1.2280731978955797
-      Virtual Size: '0x60'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-12-27 16:06:43'
+MitreID: T1068
+Resources:
+- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Tags:
 - LHA.sys
+Verified: 'TRUE'

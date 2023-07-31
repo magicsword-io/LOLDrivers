@@ -1,22 +1,16 @@
-Id: d0048840-970f-4ad5-9a07-1d39469d721f
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create asmmap64.sys binPath=C:\windows\temp\asmmap64.sys type=kernel
     && sc.exe start asmmap64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/025e7be9fcefd6a83f4471bba0c11f1c11bd5047047d26626da24ee9a419cdc4.yara
@@ -28,44 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: d0048840-970f-4ad5-9a07-1d39469d721f
 KnownVulnerableSamples:
-- Filename: asmmap64.sys
-  MD5: 4c016fd76ed5c05e84ca8cab77993961
-  SHA1: 00a442a4305c62cefa8105c0b4c4a9a5f4d1e93b
-  SHA256: 025e7be9fcefd6a83f4471bba0c11f1c11bd5047047d26626da24ee9a419cdc4
-  Signature:
-  - ASUSTeK Computer Inc.
-  - VeriSign Class 3 Code Signing 2004 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: ''
-  Publisher: ASUSTeK Computer Inc.
-  Company: ASUS
-  Description: Memory mapping Driver
-  Product: ATK Generic Function Service
-  ProductVersion: 1, 0, 9, 0
-  FileVersion: 1, 0, 9, 1
-  MachineType: AMD64
-  OriginalFilename: asmmap.sys
-  Authentihash:
+- Authentihash:
     MD5: 882ef4da71bcb67204bdec731afe1c94
     SHA1: 734f215383ef61350c2da97dea53589ede21a3d2
     SHA256: ab300e7e0d5d540900dbe11495b8d6788039d1cffb22e2dc2304b730a71eec97
-  InternalName: asmmap.sys
+  Company: ASUS
   Copyright: Copyright (C) 2009
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2009-07-02 03:13:26'
+  Date: ''
+  Description: Memory mapping Driver
   ExportedFunctions: ''
+  FileVersion: 1, 0, 9, 1
+  Filename: asmmap64.sys
   ImportedFunctions:
   - MmMapLockedPages
   - ZwMapViewOfSection
@@ -90,6 +60,49 @@ KnownVulnerableSamples:
   - MmUnmapLockedPages
   - __C_specific_handler
   - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: asmmap.sys
+  MD5: 4c016fd76ed5c05e84ca8cab77993961
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: asmmap.sys
+  Product: ATK Generic Function Service
+  ProductVersion: 1, 0, 9, 0
+  Publisher: ASUSTeK Computer Inc.
+  RichPEHeaderHash:
+    MD5: 489421b3bc2efbff64c7ebb190792545
+    SHA1: 9e0ccca479f274f2850957f9f537e83466b00bcf
+    SHA256: 32cea88cc91e2ca87d15e37abade9eff363d2181098b8158a82fad96fe397af8
+  SHA1: 00a442a4305c62cefa8105c0b4c4a9a5f4d1e93b
+  SHA256: 025e7be9fcefd6a83f4471bba0c11f1c11bd5047047d26626da24ee9a419cdc4
+  Sections:
+    .text:
+      Entropy: 6.115881282143121
+      Virtual Size: '0xc24'
+    .rdata:
+      Entropy: 4.18878869048599
+      Virtual Size: '0x1c8'
+    .data:
+      Entropy: 0.4804878386624626
+      Virtual Size: '0x128'
+    .pdata:
+      Entropy: 3.106598149978197
+      Virtual Size: '0x54'
+    PAGE:
+      Entropy: 4.745588841989915
+      Virtual Size: '0x55'
+    INIT:
+      Entropy: 5.098158205267566
+      Virtual Size: '0x384'
+    .rsrc:
+      Entropy: 3.2593250631693493
+      Virtual Size: '0x350'
+  Signature:
+  - ASUSTeK Computer Inc.
+  - VeriSign Class 3 Code Signing 2004 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -165,33 +178,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 489421b3bc2efbff64c7ebb190792545
-    SHA1: 9e0ccca479f274f2850957f9f537e83466b00bcf
-    SHA256: 32cea88cc91e2ca87d15e37abade9eff363d2181098b8158a82fad96fe397af8
-  Sections:
-    .text:
-      Entropy: 6.115881282143121
-      Virtual Size: '0xc24'
-    .rdata:
-      Entropy: 4.18878869048599
-      Virtual Size: '0x1c8'
-    .data:
-      Entropy: 0.4804878386624626
-      Virtual Size: '0x128'
-    .pdata:
-      Entropy: 3.106598149978197
-      Virtual Size: '0x54'
-    PAGE:
-      Entropy: 4.745588841989915
-      Virtual Size: '0x55'
-    INIT:
-      Entropy: 5.098158205267566
-      Virtual Size: '0x384'
-    .rsrc:
-      Entropy: 3.2593250631693493
-      Virtual Size: '0x350'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-07-02 03:13:26'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - asmmap64.sys
+Verified: 'TRUE'

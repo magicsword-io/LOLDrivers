@@ -1,29 +1,19 @@
-Id: 6d21df78-d718-44df-b722-99eec654f5b2
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 CVE:
 - CVE-2020-17382
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create MsIo64.sys binPath=C:\windows\temp\MsIo64.sys type=kernel
     && sc.exe start MsIo64.sys
   Description: The MSI AmbientLink MsIo64 driver 1.0.0.8 has a Buffer Overflow (0x80102040,
     0x80102044, 0x80102050,and 0x80102054)
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- ' https://www.matteomalvica.com/blog/2020/09/24/weaponizing-cve-2020-17382/'
-- https://packetstormsecurity.com/files/159315/MSI-Ambient-Link-Driver-1.0.0.8-Privilege-Escalation.html
-- https://www.coresecurity.com/core-labs/advisories/msi-ambient-link-multiple-vulnerabilities
-- https://github.com/Exploitables/CVE-2020-17382
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89.yara
@@ -35,44 +25,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 6d21df78-d718-44df-b722-99eec654f5b2
 KnownVulnerableSamples:
-- Filename: MsIo64.sys
-  MD5: dc943bf367ae77016ae399df8e71d38a
-  SHA1: 6b54f8f137778c1391285fee6150dfa58a8120b1
-  SHA256: 43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89
-  Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  - Microsoft Windows Third Party Component CA 2014
-  - Microsoft Root Certificate Authority 2010
-  Date: ''
-  Publisher: ''
-  Company: MICSYS Technology Co., LTd
-  Description: MICSYS driver
-  Product: MsIo64 Driver Version 1.1
-  ProductVersion: 1.1 x64
-  FileVersion: '1.1 x64 built by: WinDDK'
-  MachineType: AMD64
-  OriginalFilename: MsIo64.sys
-  Authentihash:
+- Authentihash:
     MD5: 9bb721ac0afc94a499a238ae32418d51
     SHA1: 04a903f13528536f1d0b1751886754d9aa5cdafa
     SHA256: 5bf00eff58e5bbe4cf578ec37b9e13c8fa74511fb2644352fcc091347153a709
-  InternalName: MsIo64.sys
+  Company: MICSYS Technology Co., LTd
   Copyright: Copyright (c) 2019 MICSYS
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2019-10-16 19:19:01'
+  Date: ''
+  Description: MICSYS driver
   ExportedFunctions: ''
+  FileVersion: '1.1 x64 built by: WinDDK'
+  Filename: MsIo64.sys
   ImportedFunctions:
   - RtlInitUnicodeString
   - DbgPrint
@@ -88,6 +54,46 @@ KnownVulnerableSamples:
   - ObfDereferenceObject
   - IoDeleteDevice
   - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: MsIo64.sys
+  MD5: dc943bf367ae77016ae399df8e71d38a
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: MsIo64.sys
+  Product: MsIo64 Driver Version 1.1
+  ProductVersion: 1.1 x64
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 16fd38750e66bdbd1fea732d9f09426a
+    SHA1: 7ce9165e772f5ac8f706f6f6af8144fcf014918d
+    SHA256: cca1d17de91fd6c28483d04c00c9e3040abe9ddc2db79db94f16372a6dedfe85
+  SHA1: 6b54f8f137778c1391285fee6150dfa58a8120b1
+  SHA256: 43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89
+  Sections:
+    .text:
+      Entropy: 6.129792436837484
+      Virtual Size: '0x1005'
+    .rdata:
+      Entropy: 4.205714713533588
+      Virtual Size: '0x174'
+    .data:
+      Entropy: 0.4975521352521052
+      Virtual Size: '0x11c'
+    .pdata:
+      Entropy: 3.197487339123456
+      Virtual Size: '0x60'
+    INIT:
+      Entropy: 4.759649157271499
+      Virtual Size: '0x262'
+    .rsrc:
+      Entropy: 3.379586366740354
+      Virtual Size: '0x388'
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+  - Microsoft Root Certificate Authority 2010
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -123,30 +129,14 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
-  RichPEHeaderHash:
-    MD5: 16fd38750e66bdbd1fea732d9f09426a
-    SHA1: 7ce9165e772f5ac8f706f6f6af8144fcf014918d
-    SHA256: cca1d17de91fd6c28483d04c00c9e3040abe9ddc2db79db94f16372a6dedfe85
-  Sections:
-    .text:
-      Entropy: 6.129792436837484
-      Virtual Size: '0x1005'
-    .rdata:
-      Entropy: 4.205714713533588
-      Virtual Size: '0x174'
-    .data:
-      Entropy: 0.4975521352521052
-      Virtual Size: '0x11c'
-    .pdata:
-      Entropy: 3.197487339123456
-      Virtual Size: '0x60'
-    INIT:
-      Entropy: 4.759649157271499
-      Virtual Size: '0x262'
-    .rsrc:
-      Entropy: 3.379586366740354
-      Virtual Size: '0x388'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-10-16 19:19:01'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- ' https://www.matteomalvica.com/blog/2020/09/24/weaponizing-cve-2020-17382/'
+- https://packetstormsecurity.com/files/159315/MSI-Ambient-Link-Driver-1.0.0.8-Privilege-Escalation.html
+- https://www.coresecurity.com/core-labs/advisories/msi-ambient-link-multiple-vulnerabilities
+- https://github.com/Exploitables/CVE-2020-17382
+- https://github.com/namazso/physmem_drivers
 Tags:
 - MsIo64.sys
+Verified: 'TRUE'

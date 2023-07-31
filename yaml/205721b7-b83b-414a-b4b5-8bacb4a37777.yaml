@@ -1,25 +1,16 @@
-Id: 205721b7-b83b-414a-b4b5-8bacb4a37777
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create elrawdsk.sys binPath=C:\windows\temp\elrawdsk.sys type=kernel
     && sc.exe start elrawdsk.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/jbaines-r7/dellicious'
-- ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
-- https://securelist.com/shamoon-the-wiper-further-details-part-ii/57784/
-- https://github.com/Yara-Rules/rules/blob/master/malware/MALW_Shamoon.yar
-- https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6.yara
@@ -33,46 +24,21 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 205721b7-b83b-414a-b4b5-8bacb4a37777
 KnownVulnerableSamples:
-- Filename: elrawdsk.sys
-  MD5: 1493d342e7a36553c56b2adea150949e
-  SHA1: ce549714a11bd43b52be709581c6e144957136ec
-  SHA256: 4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6
-  Signature:
-  - EldoS Corporation
-  - GlobalSign ObjectSign CA
-  - GlobalSign Primary Object Publishing CA
-  - GlobalSign Root CA - R1
-  Date: ''
-  Publisher: ''
-  Company: EldoS Corporation
-  Description: RawDisk Driver. Allows write access to files and raw disk sectors for
-    user mode applications in Windows 2000 and later.
-  Product: RawDisk
-  ProductVersion: 2, 1, 27, 0
-  FileVersion: 2, 1, 27, 106
-  MachineType: I386
-  OriginalFilename: elrawdsk.sys
-  Authentihash:
+- Authentihash:
     MD5: 20f14b58e9548b6ea99b35006f631197
     SHA1: 174bd2e0965b996cff4a26ac511e551788fbc894
     SHA256: 98a55dc61046f4509d2465cbc373a9391c07125e5f4a242d2f475f14f32e5430
-  InternalName: elrawdsk.sys
+  Company: EldoS Corporation
   Copyright: 'Copyright (C) 2007-2011, EldoS Corporation '
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2011-12-28 09:51:24'
+  Date: ''
+  Description: RawDisk Driver. Allows write access to files and raw disk sectors for
+    user mode applications in Windows 2000 and later.
   ExportedFunctions: ''
+  FileVersion: 2, 1, 27, 106
+  Filename: elrawdsk.sys
   ImportedFunctions:
   - MmUnlockPages
   - KeSetEvent
@@ -144,6 +110,50 @@ KnownVulnerableSamples:
   - RtlUnwind
   - KeBugCheckEx
   - KeGetCurrentIrql
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: elrawdsk.sys
+  MD5: 1493d342e7a36553c56b2adea150949e
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: elrawdsk.sys
+  Product: RawDisk
+  ProductVersion: 2, 1, 27, 0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: d512dc1d3f0a51f472f64f6eb33ca3f5
+    SHA1: 483f250357611a1856163d84fa6ce1e4a9d1c8cf
+    SHA256: c5c2f6383bf7479ab69f7dd26d5c7167e512ca053bebf3dbdb670692f914aea2
+  SHA1: ce549714a11bd43b52be709581c6e144957136ec
+  SHA256: 4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6
+  Sections:
+    .text:
+      Entropy: 6.064316199141177
+      Virtual Size: '0x55e'
+    .rdata:
+      Entropy: 4.05997020827267
+      Virtual Size: '0x364'
+    .data:
+      Entropy: 6.1533423871883475
+      Virtual Size: '0x254'
+    PAGE:
+      Entropy: 6.400618863867007
+      Virtual Size: '0x27cd'
+    INIT:
+      Entropy: 5.631401753063165
+      Virtual Size: '0x938'
+    .rsrc:
+      Entropy: 3.3620204666639477
+      Virtual Size: '0x4c0'
+    .reloc:
+      Entropy: 4.550590110458819
+      Virtual Size: '0x45a'
+  Signature:
+  - EldoS Corporation
+  - GlobalSign ObjectSign CA
+  - GlobalSign Primary Object Publishing CA
+  - GlobalSign Root CA - R1
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -227,62 +237,19 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: d512dc1d3f0a51f472f64f6eb33ca3f5
-    SHA1: 483f250357611a1856163d84fa6ce1e4a9d1c8cf
-    SHA256: c5c2f6383bf7479ab69f7dd26d5c7167e512ca053bebf3dbdb670692f914aea2
-  Sections:
-    .text:
-      Entropy: 6.064316199141177
-      Virtual Size: '0x55e'
-    .rdata:
-      Entropy: 4.05997020827267
-      Virtual Size: '0x364'
-    .data:
-      Entropy: 6.1533423871883475
-      Virtual Size: '0x254'
-    PAGE:
-      Entropy: 6.400618863867007
-      Virtual Size: '0x27cd'
-    INIT:
-      Entropy: 5.631401753063165
-      Virtual Size: '0x938'
-    .rsrc:
-      Entropy: 3.3620204666639477
-      Virtual Size: '0x4c0'
-    .reloc:
-      Entropy: 4.550590110458819
-      Virtual Size: '0x45a'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-12-28 09:51:24'
-- Filename: elrawdsk.sys
-  MD5: 76c643ab29d497317085e5db8c799960
-  SHA1: 1292c7dd60214d96a71e7705e519006b9de7968f
-  SHA256: 5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a
-  Signature:
-  - EldoS Corporation
-  - GlobalSign ObjectSign CA
-  - GlobalSign Primary Object Publishing CA
-  - GlobalSign Root CA - R1
-  Date: ''
-  Publisher: ''
-  Company: EldoS Corporation
-  Description: RawDisk Driver. Allows write access to files and raw disk sectors for
-    user mode applications in Windows 2000 and later.
-  Product: RawDisk
-  ProductVersion: 2, 1, 27, 0
-  FileVersion: 2, 1, 27, 106
-  MachineType: AMD64
-  OriginalFilename: elrawdsk.sys
-  Authentihash:
+- Authentihash:
     MD5: c1afcba807a13aa25a0b363a22c760d6
     SHA1: 8422fb53e48b27a42cc7595ca7c7ae0597168db6
     SHA256: 29a2ae6439381ea2aa3116df7025cbb5c6c7c07cc8d19508e6021e4d6177a565
-  InternalName: elrawdsk.sys
+  Company: EldoS Corporation
   Copyright: 'Copyright (C) 2007-2011, EldoS Corporation '
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2011-12-28 09:51:29'
+  Date: ''
+  Description: RawDisk Driver. Allows write access to files and raw disk sectors for
+    user mode applications in Windows 2000 and later.
   ExportedFunctions: ''
+  FileVersion: 2, 1, 27, 106
+  Filename: elrawdsk.sys
   ImportedFunctions:
   - MmSystemRangeStart
   - ExAllocatePoolWithTag
@@ -344,6 +311,52 @@ KnownVulnerableSamples:
   - MmMapIoSpace
   - KeBugCheckEx
   - __C_specific_handler
+  Imports:
+  - ntoskrnl.exe
+  InternalName: elrawdsk.sys
+  MD5: 76c643ab29d497317085e5db8c799960
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: elrawdsk.sys
+  Product: RawDisk
+  ProductVersion: 2, 1, 27, 0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: ebf1a803ddcd9f517aa01e0c06df63b4
+    SHA1: 69a75f765ad4245b1edca52d1fc2409072e8bcc5
+    SHA256: 77dfeecadaa96ff3f6eb22dae7e7d9696299764558668588bdd49ad93e2701ed
+  SHA1: 1292c7dd60214d96a71e7705e519006b9de7968f
+  SHA256: 5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a
+  Sections:
+    .text:
+      Entropy: 5.988867629662927
+      Virtual Size: '0x837'
+    .rdata:
+      Entropy: 4.457231257472823
+      Virtual Size: '0x5c8'
+    .data:
+      Entropy: 4.811500896924898
+      Virtual Size: '0x360'
+    .pdata:
+      Entropy: 4.0091827632792
+      Virtual Size: '0x180'
+    PAGE:
+      Entropy: 6.215625995230105
+      Virtual Size: '0x2e87'
+    INIT:
+      Entropy: 5.372005883277131
+      Virtual Size: '0x9cc'
+    .rsrc:
+      Entropy: 3.363665203506053
+      Virtual Size: '0x4c0'
+    .reloc:
+      Entropy: 1.1876798536707462
+      Virtual Size: '0x24'
+  Signature:
+  - EldoS Corporation
+  - GlobalSign ObjectSign CA
+  - GlobalSign Primary Object Publishing CA
+  - GlobalSign Root CA - R1
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -427,36 +440,13 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: ebf1a803ddcd9f517aa01e0c06df63b4
-    SHA1: 69a75f765ad4245b1edca52d1fc2409072e8bcc5
-    SHA256: 77dfeecadaa96ff3f6eb22dae7e7d9696299764558668588bdd49ad93e2701ed
-  Sections:
-    .text:
-      Entropy: 5.988867629662927
-      Virtual Size: '0x837'
-    .rdata:
-      Entropy: 4.457231257472823
-      Virtual Size: '0x5c8'
-    .data:
-      Entropy: 4.811500896924898
-      Virtual Size: '0x360'
-    .pdata:
-      Entropy: 4.0091827632792
-      Virtual Size: '0x180'
-    PAGE:
-      Entropy: 6.215625995230105
-      Virtual Size: '0x2e87'
-    INIT:
-      Entropy: 5.372005883277131
-      Virtual Size: '0x9cc'
-    .rsrc:
-      Entropy: 3.363665203506053
-      Virtual Size: '0x4c0'
-    .reloc:
-      Entropy: 1.1876798536707462
-      Virtual Size: '0x24'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-12-28 09:51:29'
+MitreID: T1068
+Resources:
+- ' https://github.com/jbaines-r7/dellicious'
+- ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
+- https://securelist.com/shamoon-the-wiper-further-details-part-ii/57784/
+- https://github.com/Yara-Rules/rules/blob/master/malware/MALW_Shamoon.yar
+- https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
 Tags:
 - elrawdsk.sys
+Verified: 'TRUE'

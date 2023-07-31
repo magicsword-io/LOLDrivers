@@ -1,22 +1,16 @@
-Id: ca768fc5-9b5c-4ced-90ab-fd6be9a70199
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create amp.sys binPath=C:\windows\temp\amp.sys type=kernel && sc.exe
     start amp.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c'
-- https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/cbb8239a765bf5b2c1b6a5c8832d2cab8fef5deacadfb65d8ed43ef56d291ab6.yara
@@ -28,41 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: ca768fc5-9b5c-4ced-90ab-fd6be9a70199
 KnownVulnerableSamples:
-- Filename: amp.sys
-  MD5: c533d6d64b474ffc3169a0e0fc0a701a
-  SHA1: 3f223581409492172a1e875f130f3485b90fbe5f
-  SHA256: cbb8239a765bf5b2c1b6a5c8832d2cab8fef5deacadfb65d8ed43ef56d291ab6
-  Signature: []
-  Date: ''
-  Publisher: ''
-  Company: CYREN Inc.
-  Description: AMP Minifilter
-  Product: CYREN AMP 5
-  ProductVersion: 5.4.11.1
-  FileVersion: 5.4.11.1
-  MachineType: AMD64
-  OriginalFilename: amp.sys
-  Authentihash:
+- Authentihash:
     MD5: 74ee74d20c3afc42d7722a88aacf3671
     SHA1: 87a84133f5e4c12d2d4a42fcc3be84b43a6202b5
     SHA256: a37371c4e62f106e7da03fd5bdd6f12ecdf7fcaf1195dbf9fb7ef6eb456a7506
-  InternalName: AMP
+  Company: CYREN Inc.
   Copyright: "Copyright \xA9 1999 - 2014. CYREN Inc. All rights reserved."
-  Imports:
-  - ntoskrnl.exe
-  - FLTMGR.SYS
+  CreationTimestamp: '2014-03-25 13:59:30'
+  Date: ''
+  Description: AMP Minifilter
   ExportedFunctions: ''
+  FileVersion: 5.4.11.1
+  Filename: amp.sys
   ImportedFunctions:
   - ObfDereferenceObject
   - ObQueryNameString
@@ -190,6 +163,46 @@ KnownVulnerableSamples:
   - FltQueryInformationFile
   - FltClose
   - FltFlushBuffers
+  Imports:
+  - ntoskrnl.exe
+  - FLTMGR.SYS
+  InternalName: AMP
+  MD5: c533d6d64b474ffc3169a0e0fc0a701a
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: amp.sys
+  Product: CYREN AMP 5
+  ProductVersion: 5.4.11.1
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 593d089f4c58f69bf9a55187183311c5
+    SHA1: 44ca4aa0f7d23e93513678acc2cd2adc598e8ffb
+    SHA256: 760adc6081dcffb04db56b93951995c42ff320cccf993fc11bca93786a57ad41
+  SHA1: 3f223581409492172a1e875f130f3485b90fbe5f
+  SHA256: cbb8239a765bf5b2c1b6a5c8832d2cab8fef5deacadfb65d8ed43ef56d291ab6
+  Sections:
+    .text:
+      Entropy: 5.795894479251706
+      Virtual Size: '0x1f960'
+    .rdata:
+      Entropy: 4.518923904752782
+      Virtual Size: '0x4f90'
+    .data:
+      Entropy: 2.409200954086959
+      Virtual Size: '0x2b40'
+    .pdata:
+      Entropy: 5.291198709809552
+      Virtual Size: '0x19c8'
+    INIT:
+      Entropy: 5.073572228970491
+      Virtual Size: '0xf3a'
+    .rsrc:
+      Entropy: 3.534591232946144
+      Virtual Size: '0x4b8'
+    .reloc:
+      Entropy: 2.7884103232343667
+      Virtual Size: '0x2b6'
+  Signature: []
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -265,33 +278,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 593d089f4c58f69bf9a55187183311c5
-    SHA1: 44ca4aa0f7d23e93513678acc2cd2adc598e8ffb
-    SHA256: 760adc6081dcffb04db56b93951995c42ff320cccf993fc11bca93786a57ad41
-  Sections:
-    .text:
-      Entropy: 5.795894479251706
-      Virtual Size: '0x1f960'
-    .rdata:
-      Entropy: 4.518923904752782
-      Virtual Size: '0x4f90'
-    .data:
-      Entropy: 2.409200954086959
-      Virtual Size: '0x2b40'
-    .pdata:
-      Entropy: 5.291198709809552
-      Virtual Size: '0x19c8'
-    INIT:
-      Entropy: 5.073572228970491
-      Virtual Size: '0xf3a'
-    .rsrc:
-      Entropy: 3.534591232946144
-      Virtual Size: '0x4b8'
-    .reloc:
-      Entropy: 2.7884103232343667
-      Virtual Size: '0x2b6'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-03-25 13:59:30'
+MitreID: T1068
+Resources:
+- ' https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c'
+- https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
 Tags:
 - amp.sys
+Verified: 'TRUE'

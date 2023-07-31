@@ -1,22 +1,16 @@
-Id: 91ff1575-9ff2-46fd-8bfe-0bb3e3457b7f
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create inpoutx64.sys binPath=C:\windows\temp\inpoutx64.sys type=kernel
     && sc.exe start inpoutx64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/2d83ccb1ad9839c9f5b3f10b1f856177df1594c66cbbc7661677d4b462ebf44d.yara
@@ -32,59 +26,75 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 91ff1575-9ff2-46fd-8bfe-0bb3e3457b7f
 KnownVulnerableSamples:
-- Filename: inpoutx64.sys
+- Authentihash:
+    MD5: c21e45ae33d6b1f864a276a13ba3aaeb
+    SHA1: 94b9b91a2acc786b54e8dbc11b759b05bc15fc3f
+    SHA256: 9f70169f9541c8f5b13d3ec1f3514cc4f2607d572ffb4c7e5a98be0856852dd8
+  Company: Highresolution Enterprises [www.highrez.co.uk]
+  Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
+    Logix4u
+  CreationTimestamp: '2016-01-27 06:33:44'
+  Date: ''
+  Description: Kernel level port access driver
+  ExportedFunctions: ''
+  FileVersion: '1.2 x64 built by: WinDDK'
+  Filename: inpoutx64.sys
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - ZwUnmapViewOfSection
+  - ZwClose
+  - IofCompleteRequest
+  - ZwMapViewOfSection
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - ZwOpenSection
+  - KeBugCheckEx
+  - ObReferenceObjectByHandle
+  - IoDeleteSymbolicLink
+  - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: inpoutx64.sys
   MD5: 4d487f77be4471900d6ccbc47242cc25
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: inpoutx64.sys
+  Product: inpoutx64 Driver Version 1.2
+  ProductVersion: 1.2 x64
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 3c96e0741ae47291a272a41e4b9e80e5
+    SHA1: 6168bdc4289ffbe75eb6423de53622518c00c42e
+    SHA256: abd3637076b6be89cc761b324909f926cea53a0a2caebb9b9aec8d86a5515910
   SHA1: cc0e0440adc058615e31e8a52372abadf658e6b1
   SHA256: 2d83ccb1ad9839c9f5b3f10b1f856177df1594c66cbbc7661677d4b462ebf44d
+  Sections:
+    .text:
+      Entropy: 5.943192274109432
+      Virtual Size: '0xa2e'
+    .rdata:
+      Entropy: 4.525980022369495
+      Virtual Size: '0x174'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.165076186548889
+      Virtual Size: '0x6c'
+    INIT:
+      Entropy: 5.043077605667908
+      Virtual Size: '0x25e'
+    .rsrc:
+      Entropy: 3.375001080130226
+      Virtual Size: '0x448'
   Signature:
   - RISINTECH INC.
   - VeriSign Class 3 Code Signing 2010 CA
   - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: Highresolution Enterprises [www.highrez.co.uk]
-  Description: Kernel level port access driver
-  Product: inpoutx64 Driver Version 1.2
-  ProductVersion: 1.2 x64
-  FileVersion: '1.2 x64 built by: WinDDK'
-  MachineType: AMD64
-  OriginalFilename: inpoutx64.sys
-  Authentihash:
-    MD5: c21e45ae33d6b1f864a276a13ba3aaeb
-    SHA1: 94b9b91a2acc786b54e8dbc11b759b05bc15fc3f
-    SHA256: 9f70169f9541c8f5b13d3ec1f3514cc4f2607d572ffb4c7e5a98be0856852dd8
-  InternalName: inpoutx64.sys
-  Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
-    Logix4u
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - RtlInitUnicodeString
-  - IoDeleteDevice
-  - ZwUnmapViewOfSection
-  - ZwClose
-  - IofCompleteRequest
-  - ZwMapViewOfSection
-  - IoCreateSymbolicLink
-  - IoCreateDevice
-  - ZwOpenSection
-  - KeBugCheckEx
-  - ObReferenceObjectByHandle
-  - IoDeleteSymbolicLink
-  - HalTranslateBusAddress
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -161,73 +171,73 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+- Authentihash:
+    MD5: c21e45ae33d6b1f864a276a13ba3aaeb
+    SHA1: 94b9b91a2acc786b54e8dbc11b759b05bc15fc3f
+    SHA256: 9f70169f9541c8f5b13d3ec1f3514cc4f2607d572ffb4c7e5a98be0856852dd8
+  Company: Highresolution Enterprises [www.highrez.co.uk]
+  Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
+    Logix4u
+  CreationTimestamp: '2016-01-27 06:33:44'
+  Date: ''
+  Description: Kernel level port access driver
+  ExportedFunctions: ''
+  FileVersion: '1.2 x64 built by: WinDDK'
+  Filename: inpoutx64.sys
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - ZwUnmapViewOfSection
+  - ZwClose
+  - IofCompleteRequest
+  - ZwMapViewOfSection
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - ZwOpenSection
+  - KeBugCheckEx
+  - ObReferenceObjectByHandle
+  - IoDeleteSymbolicLink
+  - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: inpoutx64.sys
+  MD5: 5ca1922ed5ee2b533b5f3dd9be20fd9a
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: inpoutx64.sys
+  Product: inpoutx64 Driver Version 1.2
+  ProductVersion: 1.2 x64
+  Publisher: ''
   RichPEHeaderHash:
     MD5: 3c96e0741ae47291a272a41e4b9e80e5
     SHA1: 6168bdc4289ffbe75eb6423de53622518c00c42e
     SHA256: abd3637076b6be89cc761b324909f926cea53a0a2caebb9b9aec8d86a5515910
-  Sections:
-    .text:
-      Entropy: 5.943192274109432
-      Virtual Size: '0xa2e'
-    .rdata:
-      Entropy: 4.525980022369495
-      Virtual Size: '0x174'
-    .data:
-      Entropy: 0.5159719988134768
-      Virtual Size: '0x110'
-    .pdata:
-      Entropy: 3.165076186548889
-      Virtual Size: '0x6c'
-    INIT:
-      Entropy: 5.043077605667908
-      Virtual Size: '0x25e'
-    .rsrc:
-      Entropy: 3.375001080130226
-      Virtual Size: '0x448'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-01-27 06:33:44'
-- Filename: inpoutx64.sys
-  MD5: 5ca1922ed5ee2b533b5f3dd9be20fd9a
   SHA1: 5520ac25d81550a255dc16a0bb89d4b275f6f809
   SHA256: f581decc2888ef27ee1ea85ea23bbb5fb2fe6a554266ff5a1476acd1d29d53af
+  Sections:
+    .text:
+      Entropy: 5.943192274109432
+      Virtual Size: '0xa2e'
+    .rdata:
+      Entropy: 4.525980022369495
+      Virtual Size: '0x174'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.165076186548889
+      Virtual Size: '0x6c'
+    INIT:
+      Entropy: 5.043077605667908
+      Virtual Size: '0x25e'
+    .rsrc:
+      Entropy: 3.375001080130226
+      Virtual Size: '0x448'
   Signature:
   - RISINTECH INC.
   - VeriSign Class 3 Code Signing 2010 CA
   - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: Highresolution Enterprises [www.highrez.co.uk]
-  Description: Kernel level port access driver
-  Product: inpoutx64 Driver Version 1.2
-  ProductVersion: 1.2 x64
-  FileVersion: '1.2 x64 built by: WinDDK'
-  MachineType: AMD64
-  OriginalFilename: inpoutx64.sys
-  Authentihash:
-    MD5: c21e45ae33d6b1f864a276a13ba3aaeb
-    SHA1: 94b9b91a2acc786b54e8dbc11b759b05bc15fc3f
-    SHA256: 9f70169f9541c8f5b13d3ec1f3514cc4f2607d572ffb4c7e5a98be0856852dd8
-  InternalName: inpoutx64.sys
-  Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
-    Logix4u
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - RtlInitUnicodeString
-  - IoDeleteDevice
-  - ZwUnmapViewOfSection
-  - ZwClose
-  - IofCompleteRequest
-  - ZwMapViewOfSection
-  - IoCreateSymbolicLink
-  - IoCreateDevice
-  - ZwOpenSection
-  - KeBugCheckEx
-  - ObReferenceObjectByHandle
-  - IoDeleteSymbolicLink
-  - HalTranslateBusAddress
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -304,73 +314,73 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+- Authentihash:
+    MD5: ad4eff45cdb0b12af3990945afff9a8f
+    SHA1: 8e1f51761f21148f68ac925cc5f9e9c78f3d5ec4
+    SHA256: d61ce5874adb89b4e992df8df879b568d9c4136df568718a768cd807d789a726
+  Company: Highresolution Enterprises [www.highrez.co.uk]
+  Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
+    Logix4u
+  CreationTimestamp: '2008-10-17 17:01:16'
+  Date: ''
+  Description: Kernel level port access driver
+  ExportedFunctions: ''
+  FileVersion: '1.2 x64 built by: WinDDK'
+  Filename: inpoutx64.sys
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - ZwClose
+  - ZwMapViewOfSection
+  - ObReferenceObjectByHandle
+  - IoDeleteDevice
+  - ZwUnmapViewOfSection
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - KeBugCheckEx
+  - ZwOpenSection
+  - IofCompleteRequest
+  - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: inpoutx64.sys
+  MD5: 9321a61a25c7961d9f36852ecaa86f55
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: inpoutx64.sys
+  Product: inpoutx64 Driver Version 1.2
+  ProductVersion: 1.2 x64
+  Publisher: ''
   RichPEHeaderHash:
-    MD5: 3c96e0741ae47291a272a41e4b9e80e5
-    SHA1: 6168bdc4289ffbe75eb6423de53622518c00c42e
-    SHA256: abd3637076b6be89cc761b324909f926cea53a0a2caebb9b9aec8d86a5515910
+    MD5: 1b19b7c8c29ee1a90f9c2b13eb7d131b
+    SHA1: 7adbedde877708b811bc96acc23a31532d6f4f83
+    SHA256: 25afa73a325285db7c250742fbb2de5dc0ce869553c6dc16149ae0c66372c42b
+  SHA1: 6afc6b04cf73dd461e4a4956365f25c1f1162387
+  SHA256: f8965fdce668692c3785afa3559159f9a18287bc0d53abb21902895a8ecf221b
   Sections:
     .text:
-      Entropy: 5.943192274109432
-      Virtual Size: '0xa2e'
+      Entropy: 5.89661455260416
+      Virtual Size: '0xaa4'
     .rdata:
-      Entropy: 4.525980022369495
-      Virtual Size: '0x174'
+      Entropy: 4.467747737177358
+      Virtual Size: '0x17c'
     .data:
       Entropy: 0.5159719988134768
       Virtual Size: '0x110'
     .pdata:
-      Entropy: 3.165076186548889
-      Virtual Size: '0x6c'
+      Entropy: 3.106290594309254
+      Virtual Size: '0x60'
     INIT:
-      Entropy: 5.043077605667908
-      Virtual Size: '0x25e'
+      Entropy: 4.840483025983054
+      Virtual Size: '0x246'
     .rsrc:
       Entropy: 3.375001080130226
       Virtual Size: '0x448'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-01-27 06:33:44'
-- Filename: inpoutx64.sys
-  MD5: 9321a61a25c7961d9f36852ecaa86f55
-  SHA1: 6afc6b04cf73dd461e4a4956365f25c1f1162387
-  SHA256: f8965fdce668692c3785afa3559159f9a18287bc0d53abb21902895a8ecf221b
   Signature:
   - Red Fox UK Limited
   - VeriSign Class 3 Code Signing 2004 CA
   - VeriSign Class 3 Public Primary CA
-  Date: ''
-  Publisher: ''
-  Company: Highresolution Enterprises [www.highrez.co.uk]
-  Description: Kernel level port access driver
-  Product: inpoutx64 Driver Version 1.2
-  ProductVersion: 1.2 x64
-  FileVersion: '1.2 x64 built by: WinDDK'
-  MachineType: AMD64
-  OriginalFilename: inpoutx64.sys
-  Authentihash:
-    MD5: ad4eff45cdb0b12af3990945afff9a8f
-    SHA1: 8e1f51761f21148f68ac925cc5f9e9c78f3d5ec4
-    SHA256: d61ce5874adb89b4e992df8df879b568d9c4136df568718a768cd807d789a726
-  InternalName: inpoutx64.sys
-  Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
-    Logix4u
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - IoDeleteSymbolicLink
-  - RtlInitUnicodeString
-  - ZwClose
-  - ZwMapViewOfSection
-  - ObReferenceObjectByHandle
-  - IoDeleteDevice
-  - ZwUnmapViewOfSection
-  - IoCreateSymbolicLink
-  - IoCreateDevice
-  - KeBugCheckEx
-  - ZwOpenSection
-  - IofCompleteRequest
-  - HalTranslateBusAddress
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -445,30 +455,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 1b19b7c8c29ee1a90f9c2b13eb7d131b
-    SHA1: 7adbedde877708b811bc96acc23a31532d6f4f83
-    SHA256: 25afa73a325285db7c250742fbb2de5dc0ce869553c6dc16149ae0c66372c42b
-  Sections:
-    .text:
-      Entropy: 5.89661455260416
-      Virtual Size: '0xaa4'
-    .rdata:
-      Entropy: 4.467747737177358
-      Virtual Size: '0x17c'
-    .data:
-      Entropy: 0.5159719988134768
-      Virtual Size: '0x110'
-    .pdata:
-      Entropy: 3.106290594309254
-      Virtual Size: '0x60'
-    INIT:
-      Entropy: 4.840483025983054
-      Virtual Size: '0x246'
-    .rsrc:
-      Entropy: 3.375001080130226
-      Virtual Size: '0x448'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-10-17 17:01:16'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - inpoutx64.sys
+Verified: 'TRUE'

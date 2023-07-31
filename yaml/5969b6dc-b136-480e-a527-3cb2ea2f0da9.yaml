@@ -1,23 +1,16 @@
-Id: 5969b6dc-b136-480e-a527-3cb2ea2f0da9
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Guus Verbeek
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create hw_sys binPath=C:\windows\temp\hw.sys type=kernel && sc.exe
     start hw.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-- https://decoded.avast.io/janvojtesek/the-return-of-candiru-zero-days-in-the-middle-east/
-- https://www.virustotal.com/gui/file/6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5/detection
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8.yara
@@ -35,46 +28,21 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 5969b6dc-b136-480e-a527-3cb2ea2f0da9
 KnownVulnerableSamples:
-- Filename: hw.sys
-  MD5: 3247014ba35d406475311a2eab0c4657
-  SHA1: 74e4e3006b644392f5fcea4a9bae1d9d84714b57
-  SHA256: 4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8
-  Signature:
-  - Marvin Test Solutions, Inc.
-  - GlobalSign Extended Validation CodeSigning CA - SHA256 - G3
-  - GlobalSign
-  - GlobalSign Root CA - R1
-  Date: ''
-  Publisher: ''
-  Company: Marvin Test Solutions, Inc.
-  Description: HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI
-    access
-  Product: HW
-  ProductVersion: 4.9.8.0
-  FileVersion: 4.9.8.0
-  MachineType: I386
-  OriginalFilename: HW.sys
-  Authentihash:
+- Authentihash:
     MD5: 6eafc9b68f2047adf6879e955d3b69e8
     SHA1: 8a6d85617bc601b818ddf1b8e8d5db6cf7ae31c1
     SHA256: 615a7c647eba3f2dcea463d5705d5d59ca70b4250f895ad20ce6876076a8fa28
-  InternalName: Hw.sys
+  Company: Marvin Test Solutions, Inc.
   Copyright: "Copyright \xA9 1996-2021 Marvin Test Solutions, Inc. All Rights Reserved."
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2021-01-06 17:19:33'
+  Date: ''
+  Description: HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI
+    access
   ExportedFunctions: ''
+  FileVersion: 4.9.8.0
+  Filename: hw.sys
   ImportedFunctions:
   - KeReleaseMutex
   - KeWaitForSingleObject
@@ -155,6 +123,41 @@ KnownVulnerableSamples:
   - HalTranslateBusAddress
   - HalGetBusDataByOffset
   - HalGetInterruptVector
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: Hw.sys
+  MD5: 3247014ba35d406475311a2eab0c4657
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: HW.sys
+  Product: HW
+  ProductVersion: 4.9.8.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 91d1f756630dbcb9bb34ab945f1e3a43
+    SHA1: 8213b5de157232171c54fb94c86028521e9bb905
+    SHA256: 0a9072b98f01eaed2e4fd4ebbdcb86740b5427a213d8c1a7e5bd49d9613aa152
+  SHA1: 74e4e3006b644392f5fcea4a9bae1d9d84714b57
+  SHA256: 4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8
+  Sections:
+    .text:
+      Entropy: 5.94588431546437
+      Virtual Size: '0x4242'
+    .rdata:
+      Entropy: 5.126726594759932
+      Virtual Size: '0xc2c'
+    .rsrc:
+      Entropy: 3.6674325094888713
+      Virtual Size: '0x4a0'
+    .reloc:
+      Entropy: 5.321382942427512
+      Virtual Size: '0x322'
+  Signature:
+  - Marvin Test Solutions, Inc.
+  - GlobalSign Extended Validation CodeSigning CA - SHA256 - G3
+  - GlobalSign
+  - GlobalSign Root CA - R1
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -203,99 +206,102 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
         CA , SHA256 , G3
       Version: 1
-  RichPEHeaderHash:
-    MD5: 91d1f756630dbcb9bb34ab945f1e3a43
-    SHA1: 8213b5de157232171c54fb94c86028521e9bb905
-    SHA256: 0a9072b98f01eaed2e4fd4ebbdcb86740b5427a213d8c1a7e5bd49d9613aa152
-  Sections:
-    .text:
-      Entropy: 5.94588431546437
-      Virtual Size: '0x4242'
-    .rdata:
-      Entropy: 5.126726594759932
-      Virtual Size: '0xc2c'
-    .rsrc:
-      Entropy: 3.6674325094888713
-      Virtual Size: '0x4a0'
-    .reloc:
-      Entropy: 5.321382942427512
-      Virtual Size: '0x322'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 17:19:33'
-- Filename: HW.sys
+- Authentihash:
+    MD5: 22db74f3f2e50ccdeb471c81e3a62532
+    SHA1: 6e87cd3b027a07a810164d618e3f2fce61eb6ec4
+    SHA256: 734b74798a680d2e534c14a033858c4081c7879af1f48037d9d5483aa27a7e90
+  Company: Marvin Test Solutions, Inc.
+  Copyright: "Copyright \xA9 1996-2015 Marvin Test Solutions, Inc. All Rights Reserved."
+  CreationTimestamp: '2015-06-24 17:52:05'
+  Date: ''
+  Description: HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI
+    access
+  ExportedFunctions: ''
+  FileVersion: 4.8.2.0
+  Filename: HW.sys
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - RtlAppendUnicodeStringToString
+  - ZwClose
+  - ZwOpenProcess
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - PsGetCurrentProcessId
+  - KeInitializeDpc
+  - MmGetSystemRoutineAddress
+  - IoDeleteDevice
+  - IoCreateSymbolicLink
+  - KeInitializeMutex
+  - IoCreateDevice
+  - IoDeleteSymbolicLink
+  - PsGetVersion
+  - ZwUnmapViewOfSection
+  - ZwMapViewOfSection
+  - ObReferenceObjectByHandle
+  - ZwOpenSection
+  - ExFreePoolWithTag
+  - MmMapLockedPages
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - MmMapIoSpace
+  - MmUnmapLockedPages
+  - MmUnmapIoSpace
+  - MmFreeContiguousMemory
+  - MmGetPhysicalAddress
+  - MmAllocateContiguousMemory
+  - IofCallDriver
+  - IoBuildSynchronousFsdRequest
+  - IoGetDeviceProperty
+  - KeInitializeEvent
+  - ObfDereferenceObject
+  - ExAllocatePoolWithTag
+  - ObReferenceObjectByName
+  - IoDriverObjectType
+  - IofCompleteRequest
+  - IoDisconnectInterrupt
+  - KeReleaseInterruptSpinLock
+  - KeAcquireInterruptSpinLock
+  - ExEventObjectType
+  - KeFlushQueuedDpcs
+  - KeInsertQueueDpc
+  - KeSetEvent
+  - IoFreeMdl
+  - ExAllocatePool
+  - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: Hw.sys
   MD5: 45c2d133d41d2732f3653ed615a745c8
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: HW.sys
+  Product: HW
+  ProductVersion: 4.8.2.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 3389ab434a886ca939bbb64de33ea971
+    SHA1: 38d029a7b63d45c7c386558117cda903c1b15102
+    SHA256: 517ea8a886737da4ba8f7bcdc6041dc0da9073a76e514be5a73d10836ebcbbf0
   SHA1: 4e56e0b1d12664c05615c69697a2f5c5d893058a
   SHA256: 6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5
+  Sections:
+    .text:
+      Entropy: 5.475629198747561
+      Virtual Size: '0x3694'
+    INIT:
+      Entropy: 5.133620054689875
+      Virtual Size: '0x2151'
+    .rdata:
+      Entropy: 4.569984356691087
+      Virtual Size: '0xaec'
+    .pdata:
+      Entropy: 3.983331164222992
+      Virtual Size: '0x318'
+    .rsrc:
+      Entropy: 3.6769129984563755
+      Virtual Size: '0x49c'
   Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: Marvin Test Solutions, Inc.
-  Description: HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI
-    access
-  Product: HW
-  ProductVersion: 4.8.2.0
-  FileVersion: 4.8.2.0
-  MachineType: AMD64
-  OriginalFilename: HW.sys
-  Authentihash:
-    MD5: 22db74f3f2e50ccdeb471c81e3a62532
-    SHA1: 6e87cd3b027a07a810164d618e3f2fce61eb6ec4
-    SHA256: 734b74798a680d2e534c14a033858c4081c7879af1f48037d9d5483aa27a7e90
-  InternalName: Hw.sys
-  Copyright: "Copyright \xA9 1996-2015 Marvin Test Solutions, Inc. All Rights Reserved."
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - RtlInitUnicodeString
-  - RtlAppendUnicodeStringToString
-  - ZwClose
-  - ZwOpenProcess
-  - KeReleaseMutex
-  - KeWaitForSingleObject
-  - PsGetCurrentProcessId
-  - KeInitializeDpc
-  - MmGetSystemRoutineAddress
-  - IoDeleteDevice
-  - IoCreateSymbolicLink
-  - KeInitializeMutex
-  - IoCreateDevice
-  - IoDeleteSymbolicLink
-  - PsGetVersion
-  - ZwUnmapViewOfSection
-  - ZwMapViewOfSection
-  - ObReferenceObjectByHandle
-  - ZwOpenSection
-  - ExFreePoolWithTag
-  - MmMapLockedPages
-  - MmBuildMdlForNonPagedPool
-  - IoAllocateMdl
-  - MmMapIoSpace
-  - MmUnmapLockedPages
-  - MmUnmapIoSpace
-  - MmFreeContiguousMemory
-  - MmGetPhysicalAddress
-  - MmAllocateContiguousMemory
-  - IofCallDriver
-  - IoBuildSynchronousFsdRequest
-  - IoGetDeviceProperty
-  - KeInitializeEvent
-  - ObfDereferenceObject
-  - ExAllocatePoolWithTag
-  - ObReferenceObjectByName
-  - IoDriverObjectType
-  - IofCompleteRequest
-  - IoDisconnectInterrupt
-  - KeReleaseInterruptSpinLock
-  - KeAcquireInterruptSpinLock
-  - ExEventObjectType
-  - KeFlushQueuedDpcs
-  - KeInsertQueueDpc
-  - KeSetEvent
-  - IoFreeMdl
-  - ExAllocatePool
-  - HalGetBusDataByOffset
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -366,102 +372,102 @@ KnownVulnerableSamples:
     - SerialNumber: 1121f0942b1e09a2573e8ab9ce0e3955b2de
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+- Authentihash:
+    MD5: 22db74f3f2e50ccdeb471c81e3a62532
+    SHA1: 6e87cd3b027a07a810164d618e3f2fce61eb6ec4
+    SHA256: 734b74798a680d2e534c14a033858c4081c7879af1f48037d9d5483aa27a7e90
+  Company: Marvin Test Solutions, Inc.
+  Copyright: "Copyright \xA9 1996-2015 Marvin Test Solutions, Inc. All Rights Reserved."
+  CreationTimestamp: '2015-06-24 17:52:05'
+  Date: ''
+  Description: HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI
+    access
+  ExportedFunctions: ''
+  FileVersion: 4.8.2.0
+  Filename: hw.sys
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - RtlAppendUnicodeStringToString
+  - ZwClose
+  - ZwOpenProcess
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - PsGetCurrentProcessId
+  - KeInitializeDpc
+  - MmGetSystemRoutineAddress
+  - IoDeleteDevice
+  - IoCreateSymbolicLink
+  - KeInitializeMutex
+  - IoCreateDevice
+  - IoDeleteSymbolicLink
+  - PsGetVersion
+  - ZwUnmapViewOfSection
+  - ZwMapViewOfSection
+  - ObReferenceObjectByHandle
+  - ZwOpenSection
+  - ExFreePoolWithTag
+  - MmMapLockedPages
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - MmMapIoSpace
+  - MmUnmapLockedPages
+  - MmUnmapIoSpace
+  - MmFreeContiguousMemory
+  - MmGetPhysicalAddress
+  - MmAllocateContiguousMemory
+  - IofCallDriver
+  - IoBuildSynchronousFsdRequest
+  - IoGetDeviceProperty
+  - KeInitializeEvent
+  - ObfDereferenceObject
+  - ExAllocatePoolWithTag
+  - ObReferenceObjectByName
+  - IoDriverObjectType
+  - IofCompleteRequest
+  - IoDisconnectInterrupt
+  - KeReleaseInterruptSpinLock
+  - KeAcquireInterruptSpinLock
+  - ExEventObjectType
+  - KeFlushQueuedDpcs
+  - KeInsertQueueDpc
+  - KeSetEvent
+  - IoFreeMdl
+  - ExAllocatePool
+  - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: Hw.sys
+  MD5: 3cf7a55ec897cc938aebb8161cb8e74f
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: HW.sys
+  Product: HW
+  ProductVersion: 4.8.2.0
+  Publisher: ''
   RichPEHeaderHash:
     MD5: 3389ab434a886ca939bbb64de33ea971
     SHA1: 38d029a7b63d45c7c386558117cda903c1b15102
     SHA256: 517ea8a886737da4ba8f7bcdc6041dc0da9073a76e514be5a73d10836ebcbbf0
-  Sections:
-    .text:
-      Entropy: 5.475629198747561
-      Virtual Size: '0x3694'
-    INIT:
-      Entropy: 5.133620054689875
-      Virtual Size: '0x2151'
-    .rdata:
-      Entropy: 4.569984356691087
-      Virtual Size: '0xaec'
-    .pdata:
-      Entropy: 3.983331164222992
-      Virtual Size: '0x318'
-    .rsrc:
-      Entropy: 3.6769129984563755
-      Virtual Size: '0x49c'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-06-24 17:52:05'
-- Filename: hw.sys
-  MD5: 3cf7a55ec897cc938aebb8161cb8e74f
   SHA1: 22fc833e07dd163315095d32ebcd3b3e377c33a4
   SHA256: fd388cf1df06d419b14dedbeb24c6f4dff37bea26018775f09d56b3067f0de2c
+  Sections:
+    .text:
+      Entropy: 5.475629198747561
+      Virtual Size: '0x3694'
+    INIT:
+      Entropy: 5.133620054689875
+      Virtual Size: '0x2151'
+    .rdata:
+      Entropy: 4.569984356691087
+      Virtual Size: '0xaec'
+    .pdata:
+      Entropy: 3.983331164222992
+      Virtual Size: '0x318'
+    .rsrc:
+      Entropy: 3.6769129984563755
+      Virtual Size: '0x49c'
   Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: Marvin Test Solutions, Inc.
-  Description: HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI
-    access
-  Product: HW
-  ProductVersion: 4.8.2.0
-  FileVersion: 4.8.2.0
-  MachineType: AMD64
-  OriginalFilename: HW.sys
-  Authentihash:
-    MD5: 22db74f3f2e50ccdeb471c81e3a62532
-    SHA1: 6e87cd3b027a07a810164d618e3f2fce61eb6ec4
-    SHA256: 734b74798a680d2e534c14a033858c4081c7879af1f48037d9d5483aa27a7e90
-  InternalName: Hw.sys
-  Copyright: "Copyright \xA9 1996-2015 Marvin Test Solutions, Inc. All Rights Reserved."
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - RtlInitUnicodeString
-  - RtlAppendUnicodeStringToString
-  - ZwClose
-  - ZwOpenProcess
-  - KeReleaseMutex
-  - KeWaitForSingleObject
-  - PsGetCurrentProcessId
-  - KeInitializeDpc
-  - MmGetSystemRoutineAddress
-  - IoDeleteDevice
-  - IoCreateSymbolicLink
-  - KeInitializeMutex
-  - IoCreateDevice
-  - IoDeleteSymbolicLink
-  - PsGetVersion
-  - ZwUnmapViewOfSection
-  - ZwMapViewOfSection
-  - ObReferenceObjectByHandle
-  - ZwOpenSection
-  - ExFreePoolWithTag
-  - MmMapLockedPages
-  - MmBuildMdlForNonPagedPool
-  - IoAllocateMdl
-  - MmMapIoSpace
-  - MmUnmapLockedPages
-  - MmUnmapIoSpace
-  - MmFreeContiguousMemory
-  - MmGetPhysicalAddress
-  - MmAllocateContiguousMemory
-  - IofCallDriver
-  - IoBuildSynchronousFsdRequest
-  - IoGetDeviceProperty
-  - KeInitializeEvent
-  - ObfDereferenceObject
-  - ExAllocatePoolWithTag
-  - ObReferenceObjectByName
-  - IoDriverObjectType
-  - IofCompleteRequest
-  - IoDisconnectInterrupt
-  - KeReleaseInterruptSpinLock
-  - KeAcquireInterruptSpinLock
-  - ExEventObjectType
-  - KeFlushQueuedDpcs
-  - KeInsertQueueDpc
-  - KeSetEvent
-  - IoFreeMdl
-  - ExAllocatePool
-  - HalGetBusDataByOffset
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -532,53 +538,19 @@ KnownVulnerableSamples:
     - SerialNumber: 1121f0942b1e09a2573e8ab9ce0e3955b2de
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
-  RichPEHeaderHash:
-    MD5: 3389ab434a886ca939bbb64de33ea971
-    SHA1: 38d029a7b63d45c7c386558117cda903c1b15102
-    SHA256: 517ea8a886737da4ba8f7bcdc6041dc0da9073a76e514be5a73d10836ebcbbf0
-  Sections:
-    .text:
-      Entropy: 5.475629198747561
-      Virtual Size: '0x3694'
-    INIT:
-      Entropy: 5.133620054689875
-      Virtual Size: '0x2151'
-    .rdata:
-      Entropy: 4.569984356691087
-      Virtual Size: '0xaec'
-    .pdata:
-      Entropy: 3.983331164222992
-      Virtual Size: '0x318'
-    .rsrc:
-      Entropy: 3.6769129984563755
-      Virtual Size: '0x49c'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-06-24 17:52:05'
-- Filename: hw.sys
-  MD5: 376b1e8957227a3639ec1482900d9b97
-  SHA1: 18f34a0005e82a9a1556ba40b997b0eae554d5fd
-  SHA256: 55963284bbd5a3297f39f12f0d8a01ed99fe59d008561e3537bcd4db4b4268fa
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: Marvin Test Solutions, Inc.
-  Description: HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI
-    access
-  Product: HW
-  ProductVersion: 4.9.8.0
-  FileVersion: 4.9.8.0
-  MachineType: AMD64
-  OriginalFilename: HW.sys
-  Authentihash:
+- Authentihash:
     MD5: 0e03e32b8b0f3a1abb52581c1b5698f6
     SHA1: 4614a646d19fb297aa878ba5e70dc9a6a1c5dd8a
     SHA256: 25bc1b72ba6092674ec561d7de8f5e4a7adb23c29fa68de5b29a30a671257dac
-  InternalName: Hw.sys
+  Company: Marvin Test Solutions, Inc.
   Copyright: "Copyright \xA9 1996-2021 Marvin Test Solutions, Inc. All Rights Reserved."
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2021-01-06 17:19:31'
+  Date: ''
+  Description: HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI
+    access
   ExportedFunctions: ''
+  FileVersion: 4.9.8.0
+  Filename: hw.sys
   ImportedFunctions:
   - RtlInitUnicodeString
   - RtlAppendUnicodeStringToString
@@ -631,6 +603,37 @@ KnownVulnerableSamples:
   - ObReferenceObjectByHandle
   - ExAllocatePool
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: Hw.sys
+  MD5: 376b1e8957227a3639ec1482900d9b97
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: HW.sys
+  Product: HW
+  ProductVersion: 4.9.8.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: e75a603d7467c2b1506dbbea74ea68c2
+    SHA1: 592275b78e5255bb3a1245eaeb263858e3111278
+    SHA256: 739066eb4b1f106dec36d824dba3a08ce1052c98e99b69fa9d1aa228d6dae664
+  SHA1: 18f34a0005e82a9a1556ba40b997b0eae554d5fd
+  SHA256: 55963284bbd5a3297f39f12f0d8a01ed99fe59d008561e3537bcd4db4b4268fa
+  Sections:
+    .text:
+      Entropy: 5.425823948048583
+      Virtual Size: '0x5e54'
+    .rdata:
+      Entropy: 4.468643667711766
+      Virtual Size: '0xcaa'
+    .pdata:
+      Entropy: 4.00613719103044
+      Virtual Size: '0x33c'
+    .rsrc:
+      Entropy: 3.6737432495687674
+      Virtual Size: '0x4a0'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -679,24 +682,11 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
         CA , SHA256 , G3
       Version: 1
-  RichPEHeaderHash:
-    MD5: e75a603d7467c2b1506dbbea74ea68c2
-    SHA1: 592275b78e5255bb3a1245eaeb263858e3111278
-    SHA256: 739066eb4b1f106dec36d824dba3a08ce1052c98e99b69fa9d1aa228d6dae664
-  Sections:
-    .text:
-      Entropy: 5.425823948048583
-      Virtual Size: '0x5e54'
-    .rdata:
-      Entropy: 4.468643667711766
-      Virtual Size: '0xcaa'
-    .pdata:
-      Entropy: 4.00613719103044
-      Virtual Size: '0x33c'
-    .rsrc:
-      Entropy: 3.6737432495687674
-      Virtual Size: '0x4a0'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 17:19:31'
+MitreID: T1068
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+- https://decoded.avast.io/janvojtesek/the-return-of-candiru-zero-days-in-the-middle-east/
+- https://www.virustotal.com/gui/file/6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5/detection
 Tags:
 - hw.sys
+Verified: 'TRUE'

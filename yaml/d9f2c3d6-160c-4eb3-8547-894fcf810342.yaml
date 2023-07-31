@@ -1,22 +1,16 @@
-Id: d9f2c3d6-160c-4eb3-8547-894fcf810342
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create driver7-x86-withoutdbg.sys binPath=C:\windows\temp\driver7-x86-withoutdbg.sys     type=kernel
     && sc.exe start driver7-x86-withoutdbg.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/Chigusa0w0/AsusDriversPrivEscala'
-- https://github.com/Chigusa0w0/AsusDriversPrivEscala
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/927c2a580d51a598177fa54c65e9d2610f5f212f1b6cb2fbf2740b64368f010a.yara
@@ -28,44 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: d9f2c3d6-160c-4eb3-8547-894fcf810342
 KnownVulnerableSamples:
-- Filename: driver7-x86-withoutdbg.sys
-  MD5: 4f191abc652d8f7442ca2636725e1ed6
-  SHA1: 4243dbbf6e5719d723f24d0f862afd0fcb40bc35
-  SHA256: 927c2a580d51a598177fa54c65e9d2610f5f212f1b6cb2fbf2740b64368f010a
-  Signature:
-  - ASUSTeK Computer Inc.
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: ASUStek
-  Description: The driver for the ECtool driver-based tools
-  Product: EC tool
-  ProductVersion: '2.5'
-  FileVersion: 2.5.0.2
-  MachineType: I386
-  OriginalFilename: Driver7
-  Authentihash:
+- Authentihash:
     MD5: 7776703e27df791bf1d4af2acb94115d
     SHA1: 8c08885be9ec2ad64537038f6dca6654e475106a
     SHA256: baa89ffd5255e5c72112ed57937353ae48a050c9af423cbde6b380978ecc235c
-  InternalName: Driver7.sys
+  Company: ASUStek
   Copyright: 'Copyright '
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2013-03-21 06:35:36'
+  Date: ''
+  Description: The driver for the ECtool driver-based tools
   ExportedFunctions: ''
+  FileVersion: 2.5.0.2
+  Filename: driver7-x86-withoutdbg.sys
   ImportedFunctions:
   - ObReferenceObjectByHandle
   - ZwOpenSection
@@ -98,6 +68,49 @@ KnownVulnerableSamples:
   - WRITE_PORT_UCHAR
   - READ_PORT_UCHAR
   - KeGetCurrentIrql
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: Driver7.sys
+  MD5: 4f191abc652d8f7442ca2636725e1ed6
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: Driver7
+  Product: EC tool
+  ProductVersion: '2.5'
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: c22861539504f6c66aa08576abbb4eaa
+    SHA1: d4945351b9a5348ebf6709e7dede84691d5d34c5
+    SHA256: 7935f1f7091f605cfe6fffbb94de394435ac3448f62a031099b3b1fb3eca7c43
+  SHA1: 4243dbbf6e5719d723f24d0f862afd0fcb40bc35
+  SHA256: 927c2a580d51a598177fa54c65e9d2610f5f212f1b6cb2fbf2740b64368f010a
+  Sections:
+    .text:
+      Entropy: 6.150604069031463
+      Virtual Size: '0x5585'
+    .rdata:
+      Entropy: 4.184831170165224
+      Virtual Size: '0x14e'
+    .data:
+      Entropy: 2.9738513896100436
+      Virtual Size: '0x24'
+    PAGE:
+      Entropy: 5.321075488184404
+      Virtual Size: '0xdc'
+    INIT:
+      Entropy: 5.874768242109667
+      Virtual Size: '0x59e'
+    .rsrc:
+      Entropy: 3.251515813633504
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 5.946967872900435
+      Virtual Size: '0x4d8'
+  Signature:
+  - ASUSTeK Computer Inc.
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -188,33 +201,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: c22861539504f6c66aa08576abbb4eaa
-    SHA1: d4945351b9a5348ebf6709e7dede84691d5d34c5
-    SHA256: 7935f1f7091f605cfe6fffbb94de394435ac3448f62a031099b3b1fb3eca7c43
-  Sections:
-    .text:
-      Entropy: 6.150604069031463
-      Virtual Size: '0x5585'
-    .rdata:
-      Entropy: 4.184831170165224
-      Virtual Size: '0x14e'
-    .data:
-      Entropy: 2.9738513896100436
-      Virtual Size: '0x24'
-    PAGE:
-      Entropy: 5.321075488184404
-      Virtual Size: '0xdc'
-    INIT:
-      Entropy: 5.874768242109667
-      Virtual Size: '0x59e'
-    .rsrc:
-      Entropy: 3.251515813633504
-      Virtual Size: '0x398'
-    .reloc:
-      Entropy: 5.946967872900435
-      Virtual Size: '0x4d8'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-03-21 06:35:36'
+MitreID: T1068
+Resources:
+- ' https://github.com/Chigusa0w0/AsusDriversPrivEscala'
+- https://github.com/Chigusa0w0/AsusDriversPrivEscala
 Tags:
 - driver7-x86-withoutdbg.sys
+Verified: 'TRUE'

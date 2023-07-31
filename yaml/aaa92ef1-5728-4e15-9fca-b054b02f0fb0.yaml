@@ -1,52 +1,31 @@
-Id: aaa92ef1-5728-4e15-9fca-b054b02f0fb0
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create piddrv64.sys binPath=C:\windows\temp\piddrv64.sys type=kernel
     && sc.exe start piddrv64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: aaa92ef1-5728-4e15-9fca-b054b02f0fb0
 KnownVulnerableSamples:
-- Filename: piddrv64.sys
-  MD5: fd7de498a72b2daf89f321d23948c3c4
-  SHA1: c4ed28fdfba7b8a8dfe39e591006f25d39990f07
-  SHA256: b03f26009de2e8eabfcf6152f49b02a55c5e5d0f73e01d48f5a745f93ce93a29
-  Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  - Microsoft Windows Third Party Component CA 2012
-  - Microsoft Root Certificate Authority 2010
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: a6200c0995103391120e3561971560a6
     SHA1: 0c2599d738d01a82ec91725f499acebbcfb47cc9
     SHA256: b97f870c501714fa453cf18ae8a30c87d08ff1e6d784afdbb0121aea3da2dc28
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  - WDFLDR.SYS
+  CreationTimestamp: '2019-01-23 01:53:06'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: piddrv64.sys
   ImportedFunctions:
   - MmGetSystemRoutineAddress
   - IoBuildSynchronousFsdRequest
@@ -81,6 +60,53 @@ KnownVulnerableSamples:
   - WdfVersionBind
   - WdfVersionBindClass
   - WdfVersionUnbindClass
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - WDFLDR.SYS
+  InternalName: ''
+  MD5: fd7de498a72b2daf89f321d23948c3c4
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: b993d25ff5b93ffa13610af751faac82
+    SHA1: 56acb91e58ffd8ebdbcc7a832c3b07ec3da8d68d
+    SHA256: cedcd19f2c6c12e7ebbe9ae491fc73c2db6d4561bda95c6b689c42ed4805704d
+  SHA1: c4ed28fdfba7b8a8dfe39e591006f25d39990f07
+  SHA256: b03f26009de2e8eabfcf6152f49b02a55c5e5d0f73e01d48f5a745f93ce93a29
+  Sections:
+    .text:
+      Entropy: 6.261738272825293
+      Virtual Size: '0x14c8'
+    .rdata:
+      Entropy: 4.166385890678869
+      Virtual Size: '0x700'
+    .data:
+      Entropy: 0.9718077021742217
+      Virtual Size: '0xf48'
+    .pdata:
+      Entropy: 3.7490610892230234
+      Virtual Size: '0x15c'
+    .gfids:
+      Entropy: 0.8112781244591328
+      Virtual Size: '0x4'
+    PAGE:
+      Entropy: 5.647828214747166
+      Virtual Size: '0x68a'
+    INIT:
+      Entropy: 5.330366313619981
+      Virtual Size: '0x5f4'
+    .reloc:
+      Entropy: 3.084183719779188
+      Virtual Size: '0x28'
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2012
+  - Microsoft Root Certificate Authority 2010
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -116,36 +142,10 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       Version: 1
-  RichPEHeaderHash:
-    MD5: b993d25ff5b93ffa13610af751faac82
-    SHA1: 56acb91e58ffd8ebdbcc7a832c3b07ec3da8d68d
-    SHA256: cedcd19f2c6c12e7ebbe9ae491fc73c2db6d4561bda95c6b689c42ed4805704d
-  Sections:
-    .text:
-      Entropy: 6.261738272825293
-      Virtual Size: '0x14c8'
-    .rdata:
-      Entropy: 4.166385890678869
-      Virtual Size: '0x700'
-    .data:
-      Entropy: 0.9718077021742217
-      Virtual Size: '0xf48'
-    .pdata:
-      Entropy: 3.7490610892230234
-      Virtual Size: '0x15c'
-    .gfids:
-      Entropy: 0.8112781244591328
-      Virtual Size: '0x4'
-    PAGE:
-      Entropy: 5.647828214747166
-      Virtual Size: '0x68a'
-    INIT:
-      Entropy: 5.330366313619981
-      Virtual Size: '0x5f4'
-    .reloc:
-      Entropy: 3.084183719779188
-      Virtual Size: '0x28'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-01-23 01:53:06'
+MitreID: T1068
+Resources:
+- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Tags:
 - piddrv64.sys
+Verified: 'TRUE'

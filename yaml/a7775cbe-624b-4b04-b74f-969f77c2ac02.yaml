@@ -1,22 +1,16 @@
-Id: a7775cbe-624b-4b04-b74f-969f77c2ac02
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create viragt64.sys binPath=C:\windows\temp\viragt64.sys type=kernel
     && sc.exe start viragt64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/58a74dceb2022cd8a358b92acd1b48a5e01c524c3b0195d7033e4bd55eff4495.yara
@@ -28,44 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: a7775cbe-624b-4b04-b74f-969f77c2ac02
 KnownVulnerableSamples:
-- Filename: viragt64.sys
-  MD5: 43830326cd5fae66f5508e27cbec39a0
-  SHA1: 05c0c49e8bcf11b883d41441ce87a2ee7a3aba1d
-  SHA256: 58a74dceb2022cd8a358b92acd1b48a5e01c524c3b0195d7033e4bd55eff4495
-  Signature:
-  - TG Soft S.a.s. Di Tonello Gianfranco e C.
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: TG Soft S.a.s.
-  Description: VirIT Agent System
-  Product: VirIT Agent System
-  ProductVersion: 1, 0, 0, 11
-  FileVersion: 1, 0, 0, 11
-  MachineType: AMD64
-  OriginalFilename: viragt64.sys
-  Authentihash:
+- Authentihash:
     MD5: 68a2f77cfa5aec4556b4276852be637f
     SHA1: 0188096c79f0cdde9233e52d4117c0f53e667e3d
     SHA256: 54e969dc477af9a3e5b53dc4edaebc41a7b73c87ecca13dc1fbb8dfc86c0fd78
-  InternalName: viragt.sys
+  Company: TG Soft S.a.s.
   Copyright: Copyright (C) TG Soft S.a.s. 2011, 2016 - www.tgsoft.it
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2016-09-07 02:36:15'
+  Date: ''
+  Description: VirIT Agent System
   ExportedFunctions: ''
+  FileVersion: 1, 0, 0, 11
+  Filename: viragt64.sys
   ImportedFunctions:
   - mbstowcs
   - ExAllocatePoolWithTag
@@ -134,6 +104,49 @@ KnownVulnerableSamples:
   - __C_specific_handler
   - __chkstk
   - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: viragt.sys
+  MD5: 43830326cd5fae66f5508e27cbec39a0
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: viragt64.sys
+  Product: VirIT Agent System
+  ProductVersion: 1, 0, 0, 11
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: a93c261e407f22e8e9e11096ef7669a4
+    SHA1: 579ea1a06578ca54a9b86ccfa3c06b3be01831bf
+    SHA256: b566c96b0a5ca93fe5cdd066966b85657108a1cc6eadb0b683932c781d3a3510
+  SHA1: 05c0c49e8bcf11b883d41441ce87a2ee7a3aba1d
+  SHA256: 58a74dceb2022cd8a358b92acd1b48a5e01c524c3b0195d7033e4bd55eff4495
+  Sections:
+    .text:
+      Entropy: 6.38698919148908
+      Virtual Size: '0xd05a'
+    .rdata:
+      Entropy: 4.97390475614417
+      Virtual Size: '0xc58'
+    .data:
+      Entropy: 0.9258397206248276
+      Virtual Size: '0x3960'
+    .pdata:
+      Entropy: 4.385772691209427
+      Virtual Size: '0x36c'
+    INIT:
+      Entropy: 5.1732274398336635
+      Virtual Size: '0x842'
+    .rsrc:
+      Entropy: 3.313751980383981
+      Virtual Size: '0x438'
+    .reloc:
+      Entropy: 2.2971855943665056
+      Virtual Size: '0x14c'
+  Signature:
+  - TG Soft S.a.s. Di Tonello Gianfranco e C.
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -223,33 +236,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: a93c261e407f22e8e9e11096ef7669a4
-    SHA1: 579ea1a06578ca54a9b86ccfa3c06b3be01831bf
-    SHA256: b566c96b0a5ca93fe5cdd066966b85657108a1cc6eadb0b683932c781d3a3510
-  Sections:
-    .text:
-      Entropy: 6.38698919148908
-      Virtual Size: '0xd05a'
-    .rdata:
-      Entropy: 4.97390475614417
-      Virtual Size: '0xc58'
-    .data:
-      Entropy: 0.9258397206248276
-      Virtual Size: '0x3960'
-    .pdata:
-      Entropy: 4.385772691209427
-      Virtual Size: '0x36c'
-    INIT:
-      Entropy: 5.1732274398336635
-      Virtual Size: '0x842'
-    .rsrc:
-      Entropy: 3.313751980383981
-      Virtual Size: '0x438'
-    .reloc:
-      Entropy: 2.2971855943665056
-      Virtual Size: '0x14c'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-09-07 02:36:15'
+MitreID: T1068
+Resources:
+- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Tags:
 - viragt64.sys
+Verified: 'TRUE'

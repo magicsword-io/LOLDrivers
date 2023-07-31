@@ -1,22 +1,16 @@
-Id: 7bb5ff05-25f8-410d-ae99-c8e8f082d24f
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create WinRing0.sys binPath=C:\windows\temp\WinRing0.sys type=kernel
     && sc.exe start WinRing0.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://github.com/namazso/physmem_drivers
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/3ec5ad51e6879464dfbccb9f4ed76c6325056a42548d5994ba869da9c4c039a8.yara
@@ -32,44 +26,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 7bb5ff05-25f8-410d-ae99-c8e8f082d24f
 KnownVulnerableSamples:
-- Filename: WinRing0.sys
-  MD5: 828bb9cb1dd449cd65a29b18ec46055f
-  SHA1: 558aad879b6a47d94a968f39d0a4e3a3aaef1ef1
-  SHA256: 3ec5ad51e6879464dfbccb9f4ed76c6325056a42548d5994ba869da9c4c039a8
-  Signature:
-  - TOSHIBA AMERICA INFORMATION SYSTEMS, INC.
-  - VeriSign Class 3 Code Signing 2004 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: ''
-  Publisher: ''
-  Company: OpenLibSys.org
-  Description: WinRing0
-  Product: WinRing0
-  ProductVersion: 1.0.1.2
-  FileVersion: 1.0.1.2
-  MachineType: AMD64
-  OriginalFilename: WinRing0.sys
-  Authentihash:
+- Authentihash:
     MD5: 650fa4b522e8d06d0cdfa4bf278e85f1
     SHA1: dfe2533a4398d67dfc722eb8d9f8ffa3a823a721
     SHA256: 7188af66fe23bd8cf27f003ad6c7550cdb6faa5c948fe7c3b1435c9246345eb3
-  InternalName: WinRing0.sys
+  Company: OpenLibSys.org
   Copyright: Copyright (C) 2007 OpenLibSys.org. All rights reserved.
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2007-12-15 01:04:52'
+  Date: ''
+  Description: WinRing0
   ExportedFunctions: ''
+  FileVersion: 1.0.1.2
+  Filename: WinRing0.sys
   ImportedFunctions:
   - MmUnmapIoSpace
   - MmMapIoSpace
@@ -83,6 +53,46 @@ KnownVulnerableSamples:
   - __C_specific_handler
   - HalSetBusDataByOffset
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: WinRing0.sys
+  MD5: 828bb9cb1dd449cd65a29b18ec46055f
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: WinRing0.sys
+  Product: WinRing0
+  ProductVersion: 1.0.1.2
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 6c9272bb390e89b75934eea3b15a1858
+    SHA1: 16dab615286d22f060143bb9316a28122f8e4d1b
+    SHA256: 4a41cc91e3a5794be7d9088e93b0277f123a88d3b6568c5f92fe084bb5c78b4a
+  SHA1: 558aad879b6a47d94a968f39d0a4e3a3aaef1ef1
+  SHA256: 3ec5ad51e6879464dfbccb9f4ed76c6325056a42548d5994ba869da9c4c039a8
+  Sections:
+    .text:
+      Entropy: 6.02563890741647
+      Virtual Size: '0x796'
+    .rdata:
+      Entropy: 4.1567602868650235
+      Virtual Size: '0x190'
+    .data:
+      Entropy: 0.5096713223407059
+      Virtual Size: '0x114'
+    .pdata:
+      Entropy: 3.2625699366690815
+      Virtual Size: '0x6c'
+    INIT:
+      Entropy: 4.864582637105269
+      Virtual Size: '0x222'
+    .rsrc:
+      Entropy: 3.2650956402233735
+      Virtual Size: '0x3b0'
+  Signature:
+  - TOSHIBA AMERICA INFORMATION SYSTEMS, INC.
+  - VeriSign Class 3 Code Signing 2004 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -146,10 +156,48 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+- Authentihash:
+    MD5: 650fa4b522e8d06d0cdfa4bf278e85f1
+    SHA1: dfe2533a4398d67dfc722eb8d9f8ffa3a823a721
+    SHA256: 7188af66fe23bd8cf27f003ad6c7550cdb6faa5c948fe7c3b1435c9246345eb3
+  Company: OpenLibSys.org
+  Copyright: Copyright (C) 2007 OpenLibSys.org. All rights reserved.
+  CreationTimestamp: '2007-12-15 01:04:52'
+  Date: ''
+  Description: WinRing0
+  ExportedFunctions: ''
+  FileVersion: 1.0.1.2
+  Filename: WinRing0.sys
+  ImportedFunctions:
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - IofCompleteRequest
+  - IoDeleteDevice
+  - IoCreateDevice
+  - KeBugCheckEx
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - IoDeleteSymbolicLink
+  - __C_specific_handler
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: WinRing0.sys
+  MD5: 12cecc3c14160f32b21279c1a36b8338
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: WinRing0.sys
+  Product: WinRing0
+  ProductVersion: 1.0.1.2
+  Publisher: ''
   RichPEHeaderHash:
     MD5: 6c9272bb390e89b75934eea3b15a1858
     SHA1: 16dab615286d22f060143bb9316a28122f8e4d1b
     SHA256: 4a41cc91e3a5794be7d9088e93b0277f123a88d3b6568c5f92fe084bb5c78b4a
+  SHA1: 7fb52290883a6b69a96d480f2867643396727e83
+  SHA256: 47eaebc920ccf99e09fc9924feb6b19b8a28589f52783327067c9b09754b5e84
   Sections:
     .text:
       Entropy: 6.02563890741647
@@ -169,49 +217,11 @@ KnownVulnerableSamples:
     .rsrc:
       Entropy: 3.2650956402233735
       Virtual Size: '0x3b0'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-12-15 01:04:52'
-- Filename: WinRing0.sys
-  MD5: 12cecc3c14160f32b21279c1a36b8338
-  SHA1: 7fb52290883a6b69a96d480f2867643396727e83
-  SHA256: 47eaebc920ccf99e09fc9924feb6b19b8a28589f52783327067c9b09754b5e84
   Signature:
   - Noriyuki MIYAZAKI
   - GlobalSign ObjectSign CA
   - GlobalSign Primary Object Publishing CA
   - GlobalSign Root CA - R1
-  Date: ''
-  Publisher: ''
-  Company: OpenLibSys.org
-  Description: WinRing0
-  Product: WinRing0
-  ProductVersion: 1.0.1.2
-  FileVersion: 1.0.1.2
-  MachineType: AMD64
-  OriginalFilename: WinRing0.sys
-  Authentihash:
-    MD5: 650fa4b522e8d06d0cdfa4bf278e85f1
-    SHA1: dfe2533a4398d67dfc722eb8d9f8ffa3a823a721
-    SHA256: 7188af66fe23bd8cf27f003ad6c7550cdb6faa5c948fe7c3b1435c9246345eb3
-  InternalName: WinRing0.sys
-  Copyright: Copyright (C) 2007 OpenLibSys.org. All rights reserved.
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - MmUnmapIoSpace
-  - MmMapIoSpace
-  - IofCompleteRequest
-  - IoDeleteDevice
-  - IoCreateDevice
-  - KeBugCheckEx
-  - RtlInitUnicodeString
-  - IoCreateSymbolicLink
-  - IoDeleteSymbolicLink
-  - __C_specific_handler
-  - HalSetBusDataByOffset
-  - HalGetBusDataByOffset
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -296,58 +306,18 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 6c9272bb390e89b75934eea3b15a1858
-    SHA1: 16dab615286d22f060143bb9316a28122f8e4d1b
-    SHA256: 4a41cc91e3a5794be7d9088e93b0277f123a88d3b6568c5f92fe084bb5c78b4a
-  Sections:
-    .text:
-      Entropy: 6.02563890741647
-      Virtual Size: '0x796'
-    .rdata:
-      Entropy: 4.1567602868650235
-      Virtual Size: '0x190'
-    .data:
-      Entropy: 0.5096713223407059
-      Virtual Size: '0x114'
-    .pdata:
-      Entropy: 3.2625699366690815
-      Virtual Size: '0x6c'
-    INIT:
-      Entropy: 4.864582637105269
-      Virtual Size: '0x222'
-    .rsrc:
-      Entropy: 3.2650956402233735
-      Virtual Size: '0x3b0'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-12-15 01:04:52'
-- Filename: WinRing0.sys
-  MD5: 27bcbeec8a466178a6057b64bef66512
-  SHA1: 012db3a80faf1f7f727b538cbe5d94064e7159de
-  SHA256: a7b000abbcc344444a9b00cfade7aa22ab92ce0cadec196c30eb1851ae4fa062
-  Signature:
-  - EVGA
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: OpenLibSys.org
-  Description: WinRing0
-  Product: WinRing0
-  ProductVersion: 1.2.0.5
-  FileVersion: 1.2.0.5
-  MachineType: AMD64
-  OriginalFilename: WinRing0.sys
-  Authentihash:
+- Authentihash:
     MD5: c4355451eccb590e5e6d817760d2d2ef
     SHA1: 7aed8186977fcf7ee219da493baecdb95ec8040d
     SHA256: 9305f0834e67aa16fb252bd30927e5f835639ef4b868f20d232260edffefd6f0
-  InternalName: WinRing0.sys
+  Company: OpenLibSys.org
   Copyright: Copyright (C) 2007-2008 OpenLibSys.org. All rights reserved.
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2013-05-01 20:19:47'
+  Date: ''
+  Description: WinRing0
   ExportedFunctions: ''
+  FileVersion: 1.2.0.5
+  Filename: WinRing0.sys
   ImportedFunctions:
   - MmUnmapIoSpace
   - MmMapIoSpace
@@ -361,6 +331,46 @@ KnownVulnerableSamples:
   - __C_specific_handler
   - HalSetBusDataByOffset
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: WinRing0.sys
+  MD5: 27bcbeec8a466178a6057b64bef66512
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: WinRing0.sys
+  Product: WinRing0
+  ProductVersion: 1.2.0.5
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: bc02c8d775721faba8edc4cde3e2f975
+    SHA1: 0b5efeae6fcaa45d68933a6570412dea379750b9
+    SHA256: 0d456f914c7a3a9b70f1a5ba7320682340381f11e9373de2d2d1585fe23e8a8e
+  SHA1: 012db3a80faf1f7f727b538cbe5d94064e7159de
+  SHA256: a7b000abbcc344444a9b00cfade7aa22ab92ce0cadec196c30eb1851ae4fa062
+  Sections:
+    .text:
+      Entropy: 5.995968257191882
+      Virtual Size: '0x796'
+    .rdata:
+      Entropy: 4.182802481161083
+      Virtual Size: '0x19c'
+    .data:
+      Entropy: 0.5096713223407059
+      Virtual Size: '0x114'
+    .pdata:
+      Entropy: 3.276775635503942
+      Virtual Size: '0x78'
+    INIT:
+      Entropy: 5.031588684181026
+      Virtual Size: '0x242'
+    .rsrc:
+      Entropy: 3.2858216134068057
+      Virtual Size: '0x3c0'
+  Signature:
+  - EVGA
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -438,59 +448,18 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: bc02c8d775721faba8edc4cde3e2f975
-    SHA1: 0b5efeae6fcaa45d68933a6570412dea379750b9
-    SHA256: 0d456f914c7a3a9b70f1a5ba7320682340381f11e9373de2d2d1585fe23e8a8e
-  Sections:
-    .text:
-      Entropy: 5.995968257191882
-      Virtual Size: '0x796'
-    .rdata:
-      Entropy: 4.182802481161083
-      Virtual Size: '0x19c'
-    .data:
-      Entropy: 0.5096713223407059
-      Virtual Size: '0x114'
-    .pdata:
-      Entropy: 3.276775635503942
-      Virtual Size: '0x78'
-    INIT:
-      Entropy: 5.031588684181026
-      Virtual Size: '0x242'
-    .rsrc:
-      Entropy: 3.2858216134068057
-      Virtual Size: '0x3c0'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-05-01 20:19:47'
-- Filename: WinRing0x64.sys
-  MD5: 0c0195c48b6b8582fa6f6373032118da
-  SHA1: d25340ae8e92a6d29f599fef426a2bc1b5217299
-  SHA256: 11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5
-  Signature:
-  - Noriyuki MIYAZAKI
-  - GlobalSign ObjectSign CA
-  - GlobalSign Primary Object Publishing CA
-  - GlobalSign Root CA - R1
-  Date: ''
-  Publisher: ''
-  Company: OpenLibSys.org
-  Description: WinRing0
-  Product: WinRing0
-  ProductVersion: 1.2.0.5
-  FileVersion: 1.2.0.5
-  MachineType: AMD64
-  OriginalFilename: WinRing0.sys
-  Authentihash:
+- Authentihash:
     MD5: 2bab314d894a026ac6073efe43c14a3d
     SHA1: 266821a39174d29f6f8791cf9f44f1a1f3439dda
     SHA256: 1b845e5e43ce9e9b645ac198549e81f45c08197aad69708d96cdb9a719eb0e29
-  InternalName: WinRing0.sys
+  Company: OpenLibSys.org
   Copyright: Copyright (C) 2007-2008 OpenLibSys.org. All rights reserved.
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2008-07-26 07:29:37'
+  Date: ''
+  Description: WinRing0
   ExportedFunctions: ''
+  FileVersion: 1.2.0.5
+  Filename: WinRing0x64.sys
   ImportedFunctions:
   - IoDeleteSymbolicLink
   - RtlInitUnicodeString
@@ -504,6 +473,47 @@ KnownVulnerableSamples:
   - __C_specific_handler
   - HalSetBusDataByOffset
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: WinRing0.sys
+  MD5: 0c0195c48b6b8582fa6f6373032118da
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: WinRing0.sys
+  Product: WinRing0
+  ProductVersion: 1.2.0.5
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 6c9272bb390e89b75934eea3b15a1858
+    SHA1: 16dab615286d22f060143bb9316a28122f8e4d1b
+    SHA256: 4a41cc91e3a5794be7d9088e93b0277f123a88d3b6568c5f92fe084bb5c78b4a
+  SHA1: d25340ae8e92a6d29f599fef426a2bc1b5217299
+  SHA256: 11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5
+  Sections:
+    .text:
+      Entropy: 5.985778783373138
+      Virtual Size: '0x6c6'
+    .rdata:
+      Entropy: 4.1187644683409586
+      Virtual Size: '0x17c'
+    .data:
+      Entropy: 0.5096713223407059
+      Virtual Size: '0x114'
+    .pdata:
+      Entropy: 3.180043880366087
+      Virtual Size: '0x60'
+    INIT:
+      Entropy: 4.880913698813426
+      Virtual Size: '0x222'
+    .rsrc:
+      Entropy: 3.2858216134068057
+      Virtual Size: '0x3c0'
+  Signature:
+  - Noriyuki MIYAZAKI
+  - GlobalSign ObjectSign CA
+  - GlobalSign Primary Object Publishing CA
+  - GlobalSign Root CA - R1
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -588,31 +598,11 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 6c9272bb390e89b75934eea3b15a1858
-    SHA1: 16dab615286d22f060143bb9316a28122f8e4d1b
-    SHA256: 4a41cc91e3a5794be7d9088e93b0277f123a88d3b6568c5f92fe084bb5c78b4a
-  Sections:
-    .text:
-      Entropy: 5.985778783373138
-      Virtual Size: '0x6c6'
-    .rdata:
-      Entropy: 4.1187644683409586
-      Virtual Size: '0x17c'
-    .data:
-      Entropy: 0.5096713223407059
-      Virtual Size: '0x114'
-    .pdata:
-      Entropy: 3.180043880366087
-      Virtual Size: '0x60'
-    INIT:
-      Entropy: 4.880913698813426
-      Virtual Size: '0x222'
-    .rsrc:
-      Entropy: 3.2858216134068057
-      Virtual Size: '0x3c0'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-07-26 07:29:37'
+MitreID: T1068
+Resources:
+- https://github.com/namazso/physmem_drivers
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Tags:
 - WinRing0.sys
 - WinRing0x64
+Verified: 'TRUE'

@@ -1,23 +1,16 @@
-Id: ca1e8664-841f-4e4b-9e67-3f515cc249c6
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-02-28'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create ndislan.sys binPath=C:\windows\temp \n \n \n  dislan.sys
     type=kernel && sc.exe start ndislan.sys
   Description: Driver used in the Daxin malware campaign.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
-- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
-- ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-02-28'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/b0eb4d999e4e0e7c2e33ff081e847c87b49940eb24a9e0794c6aa9516832c427.yara
@@ -29,41 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_mal_drivers_strict.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: ca1e8664-841f-4e4b-9e67-3f515cc249c6
 KnownVulnerableSamples:
-- Filename: ndislan.sys
-  MD5: 47e6ac52431ca47da17248d80bf71389
-  SHA1: d417c0be261b0c6f44afdec3d5432100e420c3ed
-  SHA256: b0eb4d999e4e0e7c2e33ff081e847c87b49940eb24a9e0794c6aa9516832c427
-  Signature: A required certificate is not within its validity period when verifying
-    against the current system clock or the timestamp in the signed file.
-  Date: 4:49 PM 10/12/2012
-  Publisher: Anhua Xinda (Beijing) Technology Co., Ltd.
-  Company: Microsoft Corporation
-  Description: MS LAN Driver
-  Product: "Microsoft\xAE Windows\xAE Operating System"
-  ProductVersion: 6.1.7600.1421
-  FileVersion: 6.1.7600.1421
-  MachineType: AMD64
-  OriginalFilename: ndislan.sys
-  Authentihash:
+- Authentihash:
     MD5: 8bddebd3670d9f154318afd62195a2b8
     SHA1: 7f57424f2ce7186e3a1951f3710f28d7ce9c8a96
     SHA256: 9345c3af554c06aa949492f1642a7a03404956d2952cca8a68658b62dccb0825
-  InternalName: ndislan.sys
+  Company: Microsoft Corporation
   Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2012-10-12 10:49:03'
+  Date: ''
+  Description: MS LAN Driver
   ExportedFunctions: ''
+  FileVersion: 6.1.7600.1421
+  Filename: ndislan.sys
   ImportedFunctions:
   - MmUnmapLockedPages
   - RtlInitUnicodeString
@@ -96,6 +68,46 @@ KnownVulnerableSamples:
   - IoCreateDriver
   - ObReferenceObjectByName
   - __C_specific_handler
+  Imports:
+  - ntoskrnl.exe
+  InternalName: ndislan.sys
+  MD5: 47e6ac52431ca47da17248d80bf71389
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ndislan.sys
+  Product: "Microsoft\xAE Windows\xAE Operating System"
+  ProductVersion: 6.1.7600.1421
+  Publisher: Anhua Xinda (Beijing) Technology Co., Ltd.
+  RichPEHeaderHash:
+    MD5: f72e2aff64758e755d064be58687c63a
+    SHA1: 5915e4960e60aebeaae7f44ce29f2ff94c2efbad
+    SHA256: e50f132eab52ef68882eb3887d20d6f5ba041849df869c16ad86faa982c92668
+  SHA1: d417c0be261b0c6f44afdec3d5432100e420c3ed
+  SHA256: b0eb4d999e4e0e7c2e33ff081e847c87b49940eb24a9e0794c6aa9516832c427
+  Sections:
+    .text:
+      Entropy: 6.456249805094755
+      Virtual Size: '0x19ce'
+    .rdata:
+      Entropy: 4.280603944787833
+      Virtual Size: '0x29c'
+    .data:
+      Entropy: 7.998560628737929
+      Virtual Size: '0x333d0'
+    .pdata:
+      Entropy: 3.7745259370743525
+      Virtual Size: '0xb4'
+    INIT:
+      Entropy: 5.849769223480602
+      Virtual Size: '0x660'
+    .rsrc:
+      Entropy: 3.36967354515268
+      Virtual Size: '0x3b0'
+    .reloc:
+      Entropy: 1.2385061127340509
+      Virtual Size: '0xb4'
+  Signature: A required certificate is not within its validity period when verifying
+    against the current system clock or the timestamp in the signed file.
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -148,33 +160,11 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: f72e2aff64758e755d064be58687c63a
-    SHA1: 5915e4960e60aebeaae7f44ce29f2ff94c2efbad
-    SHA256: e50f132eab52ef68882eb3887d20d6f5ba041849df869c16ad86faa982c92668
-  Sections:
-    .text:
-      Entropy: 6.456249805094755
-      Virtual Size: '0x19ce'
-    .rdata:
-      Entropy: 4.280603944787833
-      Virtual Size: '0x29c'
-    .data:
-      Entropy: 7.998560628737929
-      Virtual Size: '0x333d0'
-    .pdata:
-      Entropy: 3.7745259370743525
-      Virtual Size: '0xb4'
-    INIT:
-      Entropy: 5.849769223480602
-      Virtual Size: '0x660'
-    .rsrc:
-      Entropy: 3.36967354515268
-      Virtual Size: '0x3b0'
-    .reloc:
-      Entropy: 1.2385061127340509
-      Virtual Size: '0xb4'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-10-12 10:49:03'
+MitreID: T1068
+Resources:
+- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+- ''
 Tags:
 - ndislan.sys
+Verified: 'TRUE'

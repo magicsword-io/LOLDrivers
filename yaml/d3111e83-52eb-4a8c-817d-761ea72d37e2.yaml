@@ -1,37 +1,37 @@
-Id: d3111e83-52eb-4a8c-817d-761ea72d37e2
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Guus Verbeek
-Created: '2023-06-05'
-MitreID: T1068
 Category: malicious
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create fgme.sys binPath=C:\windows\temp\fgme.sys type=kernel &&
     sc.exe start fgme.sys
   Description: BlackCat Ransomware Deploys New Signed Kernel Driver. BlackCat ransomware
     incident that occurred in February 2023.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-06-05'
 Detection: []
+Id: d3111e83-52eb-4a8c-817d-761ea72d37e2
 KnownVulnerableSamples:
-- Filename: fgme.sys
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: fgme.sys
   MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: 0bec69c1b22603e9a385495fbe94700ac36b28e5
   SHA256: ''
   Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
-Tags: 
+MitreID: T1068
+Resources:
+- https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
+Tags:
 - fgme.sys
+Verified: 'FALSE'

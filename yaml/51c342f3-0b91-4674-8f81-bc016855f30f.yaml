@@ -1,22 +1,16 @@
-Id: 51c342f3-0b91-4674-8f81-bc016855f30f
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create AsrDrv101.sys binPath=C:\windows\temp\AsrDrv101.sys type=kernel
     && sc.exe start AsrDrv101.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/f40435488389b4fb3b945ca21a8325a51e1b5f80f045ab019748d0ec66056a8b.yara
@@ -28,44 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 51c342f3-0b91-4674-8f81-bc016855f30f
 KnownVulnerableSamples:
-- Filename: AsrDrv101.sys
-  MD5: 1a234f4643f5658bab07bfa611282267
-  SHA1: 57511ef5ff8162a9d793071b5bf7ebe8371759de
-  SHA256: f40435488389b4fb3b945ca21a8325a51e1b5f80f045ab019748d0ec66056a8b
-  Signature:
-  - ASROCK Incorporation
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: ASROCK Incorporation
-  Company: ASRock Incorporation
-  Description: ASRock IO Driver
-  Product: ASRock IO Driver
-  ProductVersion: 1.00.00.0000
-  FileVersion: '1.00.00.0000 built by: WinDDK'
-  MachineType: AMD64
-  OriginalFilename: AsrDrv.sys
-  Authentihash:
+- Authentihash:
     MD5: 236e9dd83b6d3ae6d23a57590b68fb5e
     SHA1: d0580bfc31faefb7e017798121c5b8a4e68155f9
     SHA256: fee4560f2160a951d83344857eb4587ab10c1cfd8c5cfc23b6f06bef8ebcd984
-  InternalName: AsrDrv.sys
+  Company: ASRock Incorporation
   Copyright: Copyright (C) 2012 ASRock Incorporation
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2013-01-14 23:25:51'
+  Date: ''
+  Description: ASRock IO Driver
   ExportedFunctions: ''
+  FileVersion: '1.00.00.0000 built by: WinDDK'
+  Filename: AsrDrv101.sys
   ImportedFunctions:
   - IoDeleteSymbolicLink
   - ExFreePoolWithTag
@@ -89,6 +59,46 @@ KnownVulnerableSamples:
   - KeBugCheckEx
   - ExAllocatePoolWithTag
   - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: AsrDrv.sys
+  MD5: 1a234f4643f5658bab07bfa611282267
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: AsrDrv.sys
+  Product: ASRock IO Driver
+  ProductVersion: 1.00.00.0000
+  Publisher: ASROCK Incorporation
+  RichPEHeaderHash:
+    MD5: a84c01eca8a6ca8e5221dbca3000c16e
+    SHA1: ff0ae5ad07f99ad2ac40b53c5215335a5d84e926
+    SHA256: 961a144592952461a785ff1f4d4f55c4132016b9fbbce3d881edf6131038533b
+  SHA1: 57511ef5ff8162a9d793071b5bf7ebe8371759de
+  SHA256: f40435488389b4fb3b945ca21a8325a51e1b5f80f045ab019748d0ec66056a8b
+  Sections:
+    .text:
+      Entropy: 6.322191972105939
+      Virtual Size: '0x1c08'
+    .rdata:
+      Entropy: 4.654405673393832
+      Virtual Size: '0x264'
+    .data:
+      Entropy: 0.46979092711892695
+      Virtual Size: '0x130'
+    .pdata:
+      Entropy: 3.68915035708827
+      Virtual Size: '0xfc'
+    INIT:
+      Entropy: 5.421591319356761
+      Virtual Size: '0x4d8'
+    .rsrc:
+      Entropy: 3.287296316763299
+      Virtual Size: '0x3a0'
+  Signature:
+  - ASROCK Incorporation
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -178,30 +188,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: a84c01eca8a6ca8e5221dbca3000c16e
-    SHA1: ff0ae5ad07f99ad2ac40b53c5215335a5d84e926
-    SHA256: 961a144592952461a785ff1f4d4f55c4132016b9fbbce3d881edf6131038533b
-  Sections:
-    .text:
-      Entropy: 6.322191972105939
-      Virtual Size: '0x1c08'
-    .rdata:
-      Entropy: 4.654405673393832
-      Virtual Size: '0x264'
-    .data:
-      Entropy: 0.46979092711892695
-      Virtual Size: '0x130'
-    .pdata:
-      Entropy: 3.68915035708827
-      Virtual Size: '0xfc'
-    INIT:
-      Entropy: 5.421591319356761
-      Virtual Size: '0x4d8'
-    .rsrc:
-      Entropy: 3.287296316763299
-      Virtual Size: '0x3a0'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-14 23:25:51'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - AsrDrv101.sys
+Verified: 'TRUE'

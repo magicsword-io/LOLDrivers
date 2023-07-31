@@ -1,9 +1,8 @@
-Id: 3e0bf6dc-791b-4170-8c40-427e7299d93d
+Acknowledgement:
+  Handle: zwclose
+  Person: zwclose
 Author: Paul Michaud
-Created: '2023-05-12'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create KfeCo10X64.sys binPath=C:\windows\temp\KfeCo10X64.sys type=kernel
     && sc.exe start KfeCo10X64.sys
@@ -16,16 +15,10 @@ Commands:
     Some users think that Killer suite is required for the NIC to work properly, so
     they install it even after a fresh Windows install. This version is confirmed
     vulnerable based on the script usage from zwclose.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://zwclose.github.io/2023/04/18/killer2.html
-- https://twitter.com/zwclose/status/1648441215808049153
-- https://zwclose.github.io/2022/12/18/killer1.html
-Acknowledgement:
-  Person: zwclose
-  Handle: zwclose
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-05-12'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/b583414fcee280128788f7b39451c511376fe821f455d4f3702795e96d560704.yara
@@ -37,43 +30,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 3e0bf6dc-791b-4170-8c40-427e7299d93d
 KnownVulnerableSamples:
-- Filename: KfeCo10X64.sys
-  MD5: 697f698b59f32f66cd8166e43a5c49c7
-  SHA1: f5d58452620b55c2931cba75eb701f4cde90a9e4
-  SHA256: b583414fcee280128788f7b39451c511376fe821f455d4f3702795e96d560704
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: Rivet Networks, LLC.
-  Description: Killer Traffic Control Callout Driver
-  Product: Killer Traffic Control
-  ProductVersion: 9.7.4.11
-  FileVersion: 9.7.4.11
-  MachineType: AMD64
-  OriginalFilename: KfeCoDrv.sys
-  Authentihash:
+- Authentihash:
     MD5: 9085c42a59541dbd2e05fec9c247a189
     SHA1: c46323ef4fd5f553003a92fdad0d3059564e481f
     SHA256: 8bce4a327c9e77631c03057b0e45cdbb2e751194d42995c0310e3ccdd3d33b7c
-  InternalName: KfeCoDrv.sys
+  Company: Rivet Networks, LLC.
   Copyright: Copyright (C) 2015-2018 Rivet Networks, LLC.
-  Imports:
-  - ntoskrnl.exe
-  - NDIS.SYS
-  - fwpkclnt.sys
-  - WDFLDR.SYS
+  CreationTimestamp: '2021-03-22 12:11:11'
+  Date: ''
+  Description: Killer Traffic Control Callout Driver
   ExportedFunctions: ''
+  FileVersion: 9.7.4.11
+  Filename: KfeCo10X64.sys
   ImportedFunctions:
   - EtwRegister
   - KeInitializeEvent
@@ -183,6 +153,51 @@ KnownVulnerableSamples:
   - WdfVersionBindClass
   - WdfVersionUnbindClass
   - WdfVersionBind
+  Imports:
+  - ntoskrnl.exe
+  - NDIS.SYS
+  - fwpkclnt.sys
+  - WDFLDR.SYS
+  InternalName: KfeCoDrv.sys
+  MD5: 697f698b59f32f66cd8166e43a5c49c7
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: KfeCoDrv.sys
+  Product: Killer Traffic Control
+  ProductVersion: 9.7.4.11
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: b301b486d17ef17fe9acb03cf6ae3f6a
+    SHA1: ee057f4265cd4f04330043b3293b6ee0e459b633
+    SHA256: 49e01950af25f272bc33299d131748ef0fa66aa52ac039711082e9122d6f6d8c
+  SHA1: f5d58452620b55c2931cba75eb701f4cde90a9e4
+  SHA256: b583414fcee280128788f7b39451c511376fe821f455d4f3702795e96d560704
+  Sections:
+    .text:
+      Entropy: 6.357724164029769
+      Virtual Size: '0x20a36'
+    .rdata:
+      Entropy: 5.659188529377184
+      Virtual Size: '0x3694'
+    .data:
+      Entropy: 5.765325174395972
+      Virtual Size: '0x12b9e60'
+    .pdata:
+      Entropy: 5.3747108436250635
+      Virtual Size: '0x15b4'
+    PAGE:
+      Entropy: 5.469889141982762
+      Virtual Size: '0x120'
+    INIT:
+      Entropy: 5.3585580911922355
+      Virtual Size: '0xeea'
+    .rsrc:
+      Entropy: 3.6394619362630465
+      Virtual Size: '0xc40'
+    .reloc:
+      Entropy: 3.99391294150606
+      Virtual Size: '0x30'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -230,36 +245,11 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
         ID Code Signing CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: b301b486d17ef17fe9acb03cf6ae3f6a
-    SHA1: ee057f4265cd4f04330043b3293b6ee0e459b633
-    SHA256: 49e01950af25f272bc33299d131748ef0fa66aa52ac039711082e9122d6f6d8c
-  Sections:
-    .text:
-      Entropy: 6.357724164029769
-      Virtual Size: '0x20a36'
-    .rdata:
-      Entropy: 5.659188529377184
-      Virtual Size: '0x3694'
-    .data:
-      Entropy: 5.765325174395972
-      Virtual Size: '0x12b9e60'
-    .pdata:
-      Entropy: 5.3747108436250635
-      Virtual Size: '0x15b4'
-    PAGE:
-      Entropy: 5.469889141982762
-      Virtual Size: '0x120'
-    INIT:
-      Entropy: 5.3585580911922355
-      Virtual Size: '0xeea'
-    .rsrc:
-      Entropy: 3.6394619362630465
-      Virtual Size: '0xc40'
-    .reloc:
-      Entropy: 3.99391294150606
-      Virtual Size: '0x30'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-03-22 12:11:11'
+MitreID: T1068
+Resources:
+- https://zwclose.github.io/2023/04/18/killer2.html
+- https://twitter.com/zwclose/status/1648441215808049153
+- https://zwclose.github.io/2022/12/18/killer1.html
 Tags:
 - KfeCo10X64.sys
+Verified: 'TRUE'

@@ -1,24 +1,16 @@
-Id: e7c958da-fd5d-40d6-975e-582c6fee7f69
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create BS_RCIO64.sys binPath=C:\windows\temp\BS_RCIO64.sys type=kernel
     && sc.exe start BS_RCIO64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/jbaines-r7/dellicious'
-- ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
-- https://github.com/elastic/protections-artifacts/blob/932baf346cc8a743f1963ad3d4565b42ed17bebe/yara/rules/Windows_VulnDriver_Biostar.yar#L54
-- https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/d205286bffdf09bc033c09e95c519c1c267b40c2ee8bab703c6a2d86741ccd3e.yara
@@ -30,44 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: e7c958da-fd5d-40d6-975e-582c6fee7f69
 KnownVulnerableSamples:
-- Filename: BS_RCIO64.sys
-  MD5: b10b210c5944965d0dc85e70a0b19a42
-  SHA1: 5db61d00a001fd493591dc919f69b14713889fc5
-  SHA256: d205286bffdf09bc033c09e95c519c1c267b40c2ee8bab703c6a2d86741ccd3e
-  Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  - Microsoft Windows Third Party Component CA 2014
-  - Microsoft Root Certificate Authority 2010
-  Date: ''
-  Publisher: ''
-  Company: BIOSTAR Group
-  Description: I/O Interface driver file
-  Product: BIOSTAR I/O driver
-  ProductVersion: 10.0.1901.1100
-  FileVersion: 10.0.1901.1100
-  MachineType: AMD64
-  OriginalFilename: BS_RCIO64.sys
-  Authentihash:
+- Authentihash:
     MD5: 380a4fd97d795fec244add19a9c21fd6
     SHA1: 6832acd68bcf08f8ced63023b5f7da36824cc596
     SHA256: 6991be9952aa08c0d2ac9fa728410ebdb44988b496ed01b8b7f478785ebb30c4
-  InternalName: I/O driver
+  Company: BIOSTAR Group
   Copyright: Copyright (c) 2018-2019 BIOSTAR Group
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2019-01-10 19:06:10'
+  Date: ''
+  Description: I/O Interface driver file
   ExportedFunctions: ''
+  FileVersion: 10.0.1901.1100
+  Filename: BS_RCIO64.sys
   ImportedFunctions:
   - KeInitializeSemaphore
   - IoCreateSymbolicLink
@@ -96,6 +64,46 @@ KnownVulnerableSamples:
   - IoDeleteSymbolicLink
   - HalSetBusDataByOffset
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: I/O driver
+  MD5: b10b210c5944965d0dc85e70a0b19a42
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: BS_RCIO64.sys
+  Product: BIOSTAR I/O driver
+  ProductVersion: 10.0.1901.1100
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: fa3d25060a1ec2f8199a8bba2d045991
+    SHA1: ad2b349c74d3ed46f9becdf406543a042bc9aa42
+    SHA256: 248bdbea478bce55d40dfffeec5d164dd8018c12791b03ef33306faa402a261c
+  SHA1: 5db61d00a001fd493591dc919f69b14713889fc5
+  SHA256: d205286bffdf09bc033c09e95c519c1c267b40c2ee8bab703c6a2d86741ccd3e
+  Sections:
+    .text:
+      Entropy: 6.431562553318975
+      Virtual Size: '0x23a8'
+    .rdata:
+      Entropy: 4.706103981422025
+      Virtual Size: '0x2b0'
+    .data:
+      Entropy: 0.43605306823188833
+      Virtual Size: '0x14c'
+    .pdata:
+      Entropy: 3.811817272023083
+      Virtual Size: '0x168'
+    INIT:
+      Entropy: 5.343740869583082
+      Virtual Size: '0x550'
+    .rsrc:
+      Entropy: 3.3065491006589522
+      Virtual Size: '0x410'
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+  - Microsoft Root Certificate Authority 2010
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -131,30 +139,12 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
-  RichPEHeaderHash:
-    MD5: fa3d25060a1ec2f8199a8bba2d045991
-    SHA1: ad2b349c74d3ed46f9becdf406543a042bc9aa42
-    SHA256: 248bdbea478bce55d40dfffeec5d164dd8018c12791b03ef33306faa402a261c
-  Sections:
-    .text:
-      Entropy: 6.431562553318975
-      Virtual Size: '0x23a8'
-    .rdata:
-      Entropy: 4.706103981422025
-      Virtual Size: '0x2b0'
-    .data:
-      Entropy: 0.43605306823188833
-      Virtual Size: '0x14c'
-    .pdata:
-      Entropy: 3.811817272023083
-      Virtual Size: '0x168'
-    INIT:
-      Entropy: 5.343740869583082
-      Virtual Size: '0x550'
-    .rsrc:
-      Entropy: 3.3065491006589522
-      Virtual Size: '0x410'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-01-10 19:06:10'
+MitreID: T1068
+Resources:
+- ' https://github.com/jbaines-r7/dellicious'
+- ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
+- https://github.com/elastic/protections-artifacts/blob/932baf346cc8a743f1963ad3d4565b42ed17bebe/yara/rules/Windows_VulnDriver_Biostar.yar#L54
+- https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
 Tags:
 - BS_RCIO64.sys
+Verified: 'TRUE'

@@ -1,22 +1,16 @@
-Id: 22aa985b-5fdb-4e38-9382-a496220c27ec
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create TmComm.sys binPath=C:\windows\temp\TmComm.sys type=kernel
     && sc.exe start TmComm.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/cc687fe3741bbde1dd142eac0ef59fd1d4457daee43cdde23bb162ef28d04e64.yara
@@ -28,42 +22,17 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 22aa985b-5fdb-4e38-9382-a496220c27ec
 KnownVulnerableSamples:
-- Filename: TmComm.sys
-  MD5: 2e1f8a2a80221deb93496a861693c565
-  SHA1: a00e444120449e35641d58e62ed64bb9c9f518d2
-  SHA256: cc687fe3741bbde1dd142eac0ef59fd1d4457daee43cdde23bb162ef28d04e64
-  Signature:
-  - Trend Micro, Inc.
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: Trend Micro Inc.
-  Description: TrendMicro Common Module
-  Product: Trend Micro Eyes
-  ProductVersion: '7.30'
-  FileVersion: 7.30.0.1099
-  MachineType: AMD64
-  OriginalFilename: TmComm.sys
-  Authentihash:
+- Authentihash:
     MD5: 2d7f04ca689981b18fb8a4488e029843
     SHA1: 6c0af836a89234e9a69363495719b686fbad8d7d
     SHA256: d580349730ace5170e7c33850bdcb37cbf16b70d0d1adc2568fdd223c2a55a77
-  InternalName: TmComm.sys
+  Company: Trend Micro Inc.
   Copyright: Copyright  (C)  2018 Trend Micro Incorporated. All rights reserved.
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2018-04-09 04:08:57'
+  Date: ''
+  Description: TrendMicro Common Module
   ExportedFunctions:
   - ??0CAutoUpdateConfigThread@@QEAA@AEBV0@@Z
   - ??0CAutoUpdateConfigThread@@QEAA@PEAU_UNICODE_STRING@@P6AX0PEAX@Z1@Z
@@ -565,6 +534,8 @@ KnownVulnerableSamples:
   - ValidateAddressWithSize
   - _ResetProtectFromClose
   - _UtilDosPathNameToNtPathName
+  FileVersion: 7.30.0.1099
+  Filename: TmComm.sys
   ImportedFunctions:
   - RtlInitUnicodeString
   - KeInitializeEvent
@@ -772,6 +743,57 @@ KnownVulnerableSamples:
   - RtlAnsiStringToUnicodeString
   - _purecall
   - KeBugCheckEx
+  Imports:
+  - ntoskrnl.exe
+  InternalName: TmComm.sys
+  MD5: 2e1f8a2a80221deb93496a861693c565
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: TmComm.sys
+  Product: Trend Micro Eyes
+  ProductVersion: '7.30'
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 1ef18db502f07590b0133ea93427886b
+    SHA1: 914fa70ff269481ce7c8e767d0e276b77de8e7af
+    SHA256: 704350b0e89fb3277a7ba93465a4cdcd8b21bbab537ec95548227dbe1d735ac2
+  SHA1: a00e444120449e35641d58e62ed64bb9c9f518d2
+  SHA256: cc687fe3741bbde1dd142eac0ef59fd1d4457daee43cdde23bb162ef28d04e64
+  Sections:
+    .text:
+      Entropy: 5.885154328803672
+      Virtual Size: '0x53645'
+    .rdata:
+      Entropy: 3.4521682563196063
+      Virtual Size: '0x6174'
+    .data:
+      Entropy: 4.6769393569967495
+      Virtual Size: '0x33fc'
+    .pdata:
+      Entropy: 5.59222376260237
+      Virtual Size: '0x3ae0'
+    .gfids:
+      Entropy: 2.0
+      Virtual Size: '0x4'
+    PAGE:
+      Entropy: 6.304005705274431
+      Virtual Size: '0x1ae4'
+    .edata:
+      Entropy: 5.8497108705685115
+      Virtual Size: '0x5834'
+    INIT:
+      Entropy: 5.349136401673575
+      Virtual Size: '0x1890'
+    .rsrc:
+      Entropy: 3.3806680083024423
+      Virtual Size: '0x568'
+    .reloc:
+      Entropy: 5.332144849624946
+      Virtual Size: '0x4c8'
+  Signature:
+  - Trend Micro, Inc.
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -848,42 +870,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 1ef18db502f07590b0133ea93427886b
-    SHA1: 914fa70ff269481ce7c8e767d0e276b77de8e7af
-    SHA256: 704350b0e89fb3277a7ba93465a4cdcd8b21bbab537ec95548227dbe1d735ac2
-  Sections:
-    .text:
-      Entropy: 5.885154328803672
-      Virtual Size: '0x53645'
-    .rdata:
-      Entropy: 3.4521682563196063
-      Virtual Size: '0x6174'
-    .data:
-      Entropy: 4.6769393569967495
-      Virtual Size: '0x33fc'
-    .pdata:
-      Entropy: 5.59222376260237
-      Virtual Size: '0x3ae0'
-    .gfids:
-      Entropy: 2.0
-      Virtual Size: '0x4'
-    PAGE:
-      Entropy: 6.304005705274431
-      Virtual Size: '0x1ae4'
-    .edata:
-      Entropy: 5.8497108705685115
-      Virtual Size: '0x5834'
-    INIT:
-      Entropy: 5.349136401673575
-      Virtual Size: '0x1890'
-    .rsrc:
-      Entropy: 3.3806680083024423
-      Virtual Size: '0x568'
-    .reloc:
-      Entropy: 5.332144849624946
-      Virtual Size: '0x4c8'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-04-09 04:08:57'
+MitreID: T1068
+Resources:
+- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Tags:
 - TmComm.sys
+Verified: 'TRUE'

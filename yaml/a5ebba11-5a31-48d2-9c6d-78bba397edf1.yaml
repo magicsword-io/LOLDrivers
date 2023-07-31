@@ -1,22 +1,16 @@
-Id: a5ebba11-5a31-48d2-9c6d-78bba397edf1
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-03-04'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create PcieCubed.sys binPath=C:\windows\temp\PcieCubed.sys type=kernel
     && sc.exe start PcieCubed.sys
   Description: Driver categorized as POORTRY by Mandiant.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-- ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-03-04'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/fd223833abffa9cd6cc1848d77599673643585925a7ee51259d67c44d361cce8.yara
@@ -28,45 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_mal_drivers_strict.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: a5ebba11-5a31-48d2-9c6d-78bba397edf1
 KnownVulnerableSamples:
-- Filename: PcieCubed.sys
-  MD5: 22949977ce5cd96ba674b403a9c81285
-  SHA1: 745335bcdf02fb42df7d890a24858e16094f48fd
-  SHA256: fd223833abffa9cd6cc1848d77599673643585925a7ee51259d67c44d361cce8
-  Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  - Microsoft Windows Third Party Component CA 2014
-  - Microsoft Root Certificate Authority 2010
-  Date: ''
-  Publisher: ''
-  Company: Legal Corp.
-  Description: PCIe Video Capture
-  Product: PCI Express Video Capture
-  ProductVersion: 1.0.0.15
-  FileVersion: 1.0.0.15
-  MachineType: AMD64
-  OriginalFilename: PcieCubed.sys
-  Authentihash:
+- Authentihash:
     MD5: 489c034fa8dcfc9d211fc7e8e80c24e6
     SHA1: 0a2da48019251954888ff3963ef21ccb624c1aba
     SHA256: 2bbbe2ae5aa51868e7afc2c16c3a0a79fa3302e6830feeccca7f0363a62dddb4
-  InternalName: ''
+  Company: Legal Corp.
   Copyright: 2016 Legal
-  Imports:
-  - ntoskrnl.exe
-  - HAL.DLL
-  - ks.sys
+  CreationTimestamp: '2017-10-24 00:01:19'
+  Date: ''
+  Description: PCIe Video Capture
   ExportedFunctions: ''
+  FileVersion: 1.0.0.15
+  Filename: PcieCubed.sys
   ImportedFunctions:
   - KeDelayExecutionThread
   - KeWaitForMultipleObjects
@@ -152,6 +121,53 @@ KnownVulnerableSamples:
   - KsPinAcquireProcessingMutex
   - KsAcquireDevice
   - KsPinGetReferenceClockInterface
+  Imports:
+  - ntoskrnl.exe
+  - HAL.DLL
+  - ks.sys
+  InternalName: ''
+  MD5: 22949977ce5cd96ba674b403a9c81285
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: PcieCubed.sys
+  Product: PCI Express Video Capture
+  ProductVersion: 1.0.0.15
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 1bef43f2e0bf4a79c17818c4437f1b78
+    SHA1: d1d5c1e0a1dc1049ac16711d7ba8943954167639
+    SHA256: 095a215b9a8ab34f0ddc1e7df4d6687eff136ff73ceb3e81296ecce27926a91a
+  SHA1: 745335bcdf02fb42df7d890a24858e16094f48fd
+  SHA256: fd223833abffa9cd6cc1848d77599673643585925a7ee51259d67c44d361cce8
+  Sections:
+    .text:
+      Entropy: 6.346689098489718
+      Virtual Size: '0x3f92d'
+    .rdata:
+      Entropy: 4.6238943300255775
+      Virtual Size: '0x1ab24'
+    .data:
+      Entropy: 3.3567678592928782
+      Virtual Size: '0x205d4'
+    .pdata:
+      Entropy: 5.574699559285883
+      Virtual Size: '0x1f08'
+    PAGE:
+      Entropy: 0.8112781244591328
+      Virtual Size: '0x18'
+    INIT:
+      Entropy: 5.187652924677167
+      Virtual Size: '0xabe'
+    .rsrc:
+      Entropy: 3.3153275739966412
+      Virtual Size: '0x378'
+    .reloc:
+      Entropy: 3.3480125359038277
+      Virtual Size: '0x8e8'
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+  - Microsoft Root Certificate Authority 2010
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -187,36 +203,10 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
-  RichPEHeaderHash:
-    MD5: 1bef43f2e0bf4a79c17818c4437f1b78
-    SHA1: d1d5c1e0a1dc1049ac16711d7ba8943954167639
-    SHA256: 095a215b9a8ab34f0ddc1e7df4d6687eff136ff73ceb3e81296ecce27926a91a
-  Sections:
-    .text:
-      Entropy: 6.346689098489718
-      Virtual Size: '0x3f92d'
-    .rdata:
-      Entropy: 4.6238943300255775
-      Virtual Size: '0x1ab24'
-    .data:
-      Entropy: 3.3567678592928782
-      Virtual Size: '0x205d4'
-    .pdata:
-      Entropy: 5.574699559285883
-      Virtual Size: '0x1f08'
-    PAGE:
-      Entropy: 0.8112781244591328
-      Virtual Size: '0x18'
-    INIT:
-      Entropy: 5.187652924677167
-      Virtual Size: '0xabe'
-    .rsrc:
-      Entropy: 3.3153275739966412
-      Virtual Size: '0x378'
-    .reloc:
-      Entropy: 3.3480125359038277
-      Virtual Size: '0x8e8'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-10-24 00:01:19'
+MitreID: T1068
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+- ''
 Tags:
 - PcieCubed.sys
+Verified: 'TRUE'

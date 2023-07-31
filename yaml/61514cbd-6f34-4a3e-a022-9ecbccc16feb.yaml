@@ -1,22 +1,16 @@
-Id: 61514cbd-6f34-4a3e-a022-9ecbccc16feb
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create atillk64.sys binPath=C:\windows\temp\atillk64.sys type=kernel
     && sc.exe start atillk64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/5c04c274a708c9a7d993e33be3ea9e6119dc29527a767410dbaf93996f87369a.yara
@@ -28,44 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 61514cbd-6f34-4a3e-a022-9ecbccc16feb
 KnownVulnerableSamples:
-- Filename: atillk64.sys
-  MD5: 62f02339fe267dc7438f603bfb5431a1
-  SHA1: c52cef5b9e1d4a78431b7af56a6fdb6aa1bcad65
-  SHA256: 5c04c274a708c9a7d993e33be3ea9e6119dc29527a767410dbaf93996f87369a
-  Signature:
-  - ATI Technologies, Inc
-  - VeriSign Class 3 Code Signing 2004 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: ''
-  Publisher: '"ATI Technologies, Inc"'
-  Company: ATI Technologies Inc.
-  Description: ATI Diagnostics Hardware Abstraction Sys
-  Product: ATI Diagnostics
-  ProductVersion: 5.11.9.0
-  FileVersion: 5.11.9.0
-  MachineType: AMD64
-  OriginalFilename: atillk64.sys
-  Authentihash:
+- Authentihash:
     MD5: 281880f5f33d1aab062ceccd237ef992
     SHA1: e8e533d9e8df018648ccbafbd6081507f5c0f41a
     SHA256: 126719d008d106b7100ae47ed47666c1334701bd7ddb32d5b8e84048f258700f
-  InternalName: atillk64.sys
+  Company: ATI Technologies Inc.
   Copyright: Copyright (C) ATI Technologies Inc., 2003
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2011-04-15 15:18:51'
+  Date: ''
+  Description: ATI Diagnostics Hardware Abstraction Sys
   ExportedFunctions: ''
+  FileVersion: 5.11.9.0
+  Filename: atillk64.sys
   ImportedFunctions:
   - IoDeleteDevice
   - MmUnmapIoSpace
@@ -82,6 +52,46 @@ KnownVulnerableSamples:
   - IoDeleteSymbolicLink
   - HalSetBusDataByOffset
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: atillk64.sys
+  MD5: 62f02339fe267dc7438f603bfb5431a1
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: atillk64.sys
+  Product: ATI Diagnostics
+  ProductVersion: 5.11.9.0
+  Publisher: '"ATI Technologies, Inc"'
+  RichPEHeaderHash:
+    MD5: 9a290b6aa359474f64ca33193d8516d5
+    SHA1: d6fa643c1dd86eb99fbb65a631509f417cefff33
+    SHA256: 54336aec6e8c6fd49516ffb9b781b0f7e2ac819eaa6e6d8d9a6531fa0fbfb240
+  SHA1: c52cef5b9e1d4a78431b7af56a6fdb6aa1bcad65
+  SHA256: 5c04c274a708c9a7d993e33be3ea9e6119dc29527a767410dbaf93996f87369a
+  Sections:
+    .text:
+      Entropy: 6.024399825980691
+      Virtual Size: '0x9aa'
+    .rdata:
+      Entropy: 4.486635449414708
+      Virtual Size: '0x174'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.1158730908486914
+      Virtual Size: '0x48'
+    INIT:
+      Entropy: 5.026533926282324
+      Virtual Size: '0x28e'
+    .rsrc:
+      Entropy: 3.3307368674259283
+      Virtual Size: '0x3a8'
+  Signature:
+  - ATI Technologies, Inc
+  - VeriSign Class 3 Code Signing 2004 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -156,30 +166,366 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+- Authentihash:
+    MD5: 78103f6de4cad64d95a8beda5f8b9112
+    SHA1: 0358bcba83349cb23ea44d5c36b9e22adaec8d94
+    SHA256: 2952ae305f9e206bb0b6d7986f2b6942656c310f9d201cf2e2dd6e961c18804e
+  Company: ATI Technologies Inc.
+  Copyright: Copyright (C) ATI Technologies Inc., 2003
+  CreationTimestamp: '2005-09-09 12:40:54'
+  Date: ''
+  Description: ATI Diagnostics Hardware Abstraction Sys
+  ExportedFunctions: ''
+  FileVersion: 5.11.9.0
+  Filename: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - MmUnmapIoSpace
+  - IoFreeMdl
+  - MmMapLockedPages
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - IoCreateDevice
+  - IofCompleteRequest
+  - IoDeleteSymbolicLink
+  - IoCreateSymbolicLink
+  - MmMapIoSpace
+  - IoDeleteDevice
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: atillk64.sys
+  MD5: a0074303fe697a36d9397c0122e04973
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: atillk64.sys
+  PDBPath: ''
+  Product: ATI Diagnostics
+  ProductVersion: 5.11.9.0
+  Publisher: ''
   RichPEHeaderHash:
-    MD5: 9a290b6aa359474f64ca33193d8516d5
-    SHA1: d6fa643c1dd86eb99fbb65a631509f417cefff33
-    SHA256: 54336aec6e8c6fd49516ffb9b781b0f7e2ac819eaa6e6d8d9a6531fa0fbfb240
+    MD5: acb8ae81124f862a3e913e3aa625f35d
+    SHA1: 49255f0aea0d3a98ff31799c93fae2a40b0085b5
+    SHA256: 8bbe121f8f400e2f6858cbb2ba3f15c89de8e434fa27298831bf5d23244ba97d
+  SHA1: 5853e44ea0b6b4e9844651aa57d631193c1ed0f0
+  SHA256: be66f3bbfed7d648cfd110853ddb8cef561f94a45405afc6be06e846b697d2b0
   Sections:
     .text:
-      Entropy: 6.024399825980691
-      Virtual Size: '0x9aa'
+      Entropy: 5.939518444890944
+      Virtual Size: '0xae2'
     .rdata:
-      Entropy: 4.486635449414708
-      Virtual Size: '0x174'
+      Entropy: 4.464303279960791
+      Virtual Size: '0x158'
     .data:
       Entropy: 0.5159719988134768
       Virtual Size: '0x110'
     .pdata:
-      Entropy: 3.1158730908486914
-      Virtual Size: '0x48'
+      Entropy: 2.674419891996053
+      Virtual Size: '0x30'
     INIT:
-      Entropy: 5.026533926282324
-      Virtual Size: '0x28e'
+      Entropy: 4.792686708537381
+      Virtual Size: '0x25e'
     .rsrc:
       Entropy: 3.3307368674259283
       Virtual Size: '0x3a8'
+  Signature: ''
+  Signatures: {}
+- Authentihash:
+    MD5: 75c20227e11024bdfd5fbe23e769bbca
+    SHA1: 2e3cf3678d476420696ec7df46b08d4d24d25644
+    SHA256: c9b8ecd0657fda14476920fe47783bd8a951d7a4a640935d9199b4a7ae4b8b69
+  Company: ATI Technologies Inc.
+  Copyright: Copyright (C) ATI Technologies Inc., 2003
+  CreationTimestamp: '2005-09-09 12:36:29'
+  Date: ''
+  Description: ATI Diagnostics Hardware Abstraction Sys
+  ExportedFunctions: ''
+  FileVersion: 5.11.9.0
+  Filename: ''
+  ImportedFunctions:
+  - MmMapIoSpace
+  - IofCompleteRequest
+  - MmUnmapIoSpace
+  - IoDeleteSymbolicLink
+  - KeTickCount
+  - IoAllocateMdl
+  - MmBuildMdlForNonPagedPool
+  - MmMapLockedPages
+  - IoFreeMdl
+  - RtlInitUnicodeString
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - HalGetBusDataByOffset
+  - WRITE_PORT_UCHAR
+  - WRITE_PORT_USHORT
+  - WRITE_PORT_ULONG
+  - READ_PORT_UCHAR
+  - READ_PORT_USHORT
+  - READ_PORT_ULONG
+  - HalSetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: atillk64.sys
+  MD5: 7461f0f9b931044a9d5f1d44eb4e8e09
+  MachineType: IA64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-04-15 15:18:51'
+  OriginalFilename: atillk64.sys
+  PDBPath: ''
+  Product: ATI Diagnostics
+  ProductVersion: 5.11.9.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: f1899a92dac775dd91c488238c47121f
+    SHA1: f87117679e6a15d2f7cb1eb9a955920f7e27182f
+    SHA256: 7a797dd2fc95f2cc57884cc125ece95a449fb288004a431c565207c6689478db
+  SHA1: 22c9cd0f5986e91b733fbd5eda377720fd76c86d
+  SHA256: c825a47817399e988912bb75106befaefae0babc0743a7e32b46f17469c78cad
+  Sections:
+    .text:
+      Entropy: 5.408148680070703
+      Virtual Size: '0x2540'
+    .rdata:
+      Entropy: 3.945423865388493
+      Virtual Size: '0x27c'
+    .pdata:
+      Entropy: 3.0150554354522017
+      Virtual Size: '0x6c'
+    .srdata:
+      Entropy: 1.77520470625279
+      Virtual Size: '0x20'
+    .sdata:
+      Entropy: 2.1249953441922287
+      Virtual Size: '0xc8'
+    INIT:
+      Entropy: 5.150279397766819
+      Virtual Size: '0x370'
+    .rsrc:
+      Entropy: 3.3270115807792875
+      Virtual Size: '0x3a8'
+    .reloc:
+      Entropy: 0.6102086113176999
+      Virtual Size: '0x128'
+  Signature: ''
+  Signatures: {}
+- Authentihash:
+    MD5: 78103f6de4cad64d95a8beda5f8b9112
+    SHA1: 0358bcba83349cb23ea44d5c36b9e22adaec8d94
+    SHA256: 2952ae305f9e206bb0b6d7986f2b6942656c310f9d201cf2e2dd6e961c18804e
+  Company: ATI Technologies Inc.
+  Copyright: Copyright (C) ATI Technologies Inc., 2003
+  CreationTimestamp: '2005-09-09 12:40:54'
+  Date: ''
+  Description: ATI Diagnostics Hardware Abstraction Sys
+  ExportedFunctions: ''
+  FileVersion: 5.11.9.0
+  Filename: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - MmUnmapIoSpace
+  - IoFreeMdl
+  - MmMapLockedPages
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - IoCreateDevice
+  - IofCompleteRequest
+  - IoDeleteSymbolicLink
+  - IoCreateSymbolicLink
+  - MmMapIoSpace
+  - IoDeleteDevice
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: atillk64.sys
+  MD5: 5e35c049bc8076406910da36edf9212d
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: atillk64.sys
+  PDBPath: ''
+  Product: ATI Diagnostics
+  ProductVersion: 5.11.9.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: acb8ae81124f862a3e913e3aa625f35d
+    SHA1: 49255f0aea0d3a98ff31799c93fae2a40b0085b5
+    SHA256: 8bbe121f8f400e2f6858cbb2ba3f15c89de8e434fa27298831bf5d23244ba97d
+  SHA1: 48a09ca5fdbc214e675083c2259e051b0629457b
+  SHA256: 6c6c5e35accc37c928d721c800476ccf4c4b5b06a1b0906dc5ff4df71ff50943
+  Sections:
+    .text:
+      Entropy: 5.939518444890944
+      Virtual Size: '0xae2'
+    .rdata:
+      Entropy: 4.464303279960791
+      Virtual Size: '0x158'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 2.674419891996053
+      Virtual Size: '0x30'
+    INIT:
+      Entropy: 4.792686708537381
+      Virtual Size: '0x25e'
+    .rsrc:
+      Entropy: 3.3307368674259283
+      Virtual Size: '0x3a8'
+  Signature: ''
+  Signatures: {}
+- Authentihash:
+    MD5: 35dfa37479c8966aa9d3428660358a43
+    SHA1: 6ee2e56413ce129ea2319d6dba28ba4f27cf75b7
+    SHA256: 94111de210f6b3b48dda16b3422f0f9180e30bcb5765b6858c451d1d89196199
+  Company: Overclocking Tool
+  Copyright: Copyright (C), 2005
+  CreationTimestamp: '2005-10-20 08:35:08'
+  Date: ''
+  Description: Overclocking Hardware Abstraction Sys
+  ExportedFunctions: ''
+  FileVersion: 5.10.20.0
+  Filename: ''
+  ImportedFunctions:
+  - MmMapIoSpace
+  - IofCompleteRequest
+  - MmUnmapIoSpace
+  - IoDeleteSymbolicLink
+  - KeTickCount
+  - IoAllocateMdl
+  - MmBuildMdlForNonPagedPool
+  - MmMapLockedPages
+  - IoFreeMdl
+  - RtlInitUnicodeString
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - HalGetBusDataByOffset
+  - WRITE_PORT_UCHAR
+  - WRITE_PORT_USHORT
+  - WRITE_PORT_ULONG
+  - READ_PORT_UCHAR
+  - READ_PORT_USHORT
+  - READ_PORT_ULONG
+  - HalSetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: atillk64.sys
+  MD5: ee59b64ae296a87bf7a6aee38ad09617
+  MachineType: IA64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: atillk64.sys
+  PDBPath: ''
+  Product: Overclocking Tool
+  ProductVersion: 5.10.20.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: f1899a92dac775dd91c488238c47121f
+    SHA1: f87117679e6a15d2f7cb1eb9a955920f7e27182f
+    SHA256: 7a797dd2fc95f2cc57884cc125ece95a449fb288004a431c565207c6689478db
+  SHA1: 5abffd08f4939a0dee81a5d95cf1c02e2e14218c
+  SHA256: 11a9787831ac4f0657aeb5e7019c23acc39d8833faf28f85bd10d7590ea4cc5f
+  Sections:
+    .text:
+      Entropy: 5.408148680070703
+      Virtual Size: '0x2540'
+    .rdata:
+      Entropy: 4.005865295392332
+      Virtual Size: '0x284'
+    .pdata:
+      Entropy: 3.032649273691926
+      Virtual Size: '0x6c'
+    .srdata:
+      Entropy: 1.77520470625279
+      Virtual Size: '0x20'
+    .sdata:
+      Entropy: 2.1249953441922287
+      Virtual Size: '0xc8'
+    INIT:
+      Entropy: 5.150279397766819
+      Virtual Size: '0x370'
+    .rsrc:
+      Entropy: 3.3091519076430678
+      Virtual Size: '0x370'
+    .reloc:
+      Entropy: 0.6102086113176999
+      Virtual Size: '0x128'
+  Signature: ''
+  Signatures: {}
+- Authentihash:
+    MD5: 4fee47ce2601648cb3ebd757ddd1af8b
+    SHA1: fe625d7ad61b93ea376b4924fa088cb22b3fa28d
+    SHA256: fb19f241ddae74ec4a0f87dff025ec68dc809f9dd883649c0e58822de28e6f1b
+  Company: Overclocking Tool
+  Copyright: Copyright (C), 2005
+  CreationTimestamp: '2005-10-20 08:34:01'
+  Date: ''
+  Description: Overclocking Hardware Abstraction Sys
+  ExportedFunctions: ''
+  FileVersion: 5.10.20.0
+  Filename: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - MmUnmapIoSpace
+  - IoFreeMdl
+  - MmMapLockedPages
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - IoCreateDevice
+  - IofCompleteRequest
+  - IoDeleteSymbolicLink
+  - IoCreateSymbolicLink
+  - MmMapIoSpace
+  - IoDeleteDevice
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: atillk64.sys
+  MD5: 7962d91b1f53ce55c7338788bd4eb378
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: atillk64.sys
+  PDBPath: ''
+  Product: Overclocking Tool
+  ProductVersion: 5.10.20.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: acb8ae81124f862a3e913e3aa625f35d
+    SHA1: 49255f0aea0d3a98ff31799c93fae2a40b0085b5
+    SHA256: 8bbe121f8f400e2f6858cbb2ba3f15c89de8e434fa27298831bf5d23244ba97d
+  SHA1: 0b63e76fad88ac48dbfc7cf227890332fcd994a5
+  SHA256: d2182b6ef3255c7c1a69223cd3c2d68eb8ba3112ce433cd49cd803dc76412d4b
+  Sections:
+    .text:
+      Entropy: 5.939518444890944
+      Virtual Size: '0xae2'
+    .rdata:
+      Entropy: 4.499086331786735
+      Virtual Size: '0x164'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 2.71608655866272
+      Virtual Size: '0x30'
+    INIT:
+      Entropy: 4.792686708537381
+      Virtual Size: '0x25e'
+    .rsrc:
+      Entropy: 3.3131142579854043
+      Virtual Size: '0x370'
+  Signature: ''
+  Signatures: {}
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - atillk64.sys
+Verified: 'TRUE'

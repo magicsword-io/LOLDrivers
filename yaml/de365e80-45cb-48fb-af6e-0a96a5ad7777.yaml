@@ -1,23 +1,18 @@
-Id: de365e80-45cb-48fb-af6e-0a96a5ad7777
+Acknowledgement:
+  Handle: '@zwclose'
+  Person: zwclose
 Author: zwclose
-Created: '2023-05-22'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'True'
 Commands:
   Command: sc.exe create CtiIo64.sys binPath=C:\windows\temp\CtiIo64.sys type=kernel
     && sc.exe start CtiIo64.sys
   Description: The driver is part of Dragon Center (or MSI Center?) from MSI. It creates
     \Device\CtiIo ACLless DO and provides access to memory and IO. The driver is signed
     with WHQL cert.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://github.com/magicsword-io/LOLDrivers/pull/81
-Acknowledgement:
-  Person: zwclose
-  Handle: '@zwclose'
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-05-22'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/2121a2bb8ebbf2e6e82c782b6f3c6b7904f686aa495def25cf1cf52a42e16109.yara
@@ -29,41 +24,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: de365e80-45cb-48fb-af6e-0a96a5ad7777
 KnownVulnerableSamples:
-- Filename: ''
-  MD5: 3f8cdaf7413000d34d6a1a1d5341a11b
-  SHA1: c1c869deee6293eee3d0d84b6706d90fab8f8558
-  SHA256: 2121a2bb8ebbf2e6e82c782b6f3c6b7904f686aa495def25cf1cf52a42e16109
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: Creative Technology Innovation Co., LTd.
-  Description: CTI IO driver
-  Product: CtiIo64 Driver Version 1.0
-  ProductVersion: 1.0 x64
-  FileVersion: '1.0 x64 built by: WinDDK'
-  MachineType: AMD64
-  OriginalFilename: CtiIo64.sys
-  Authentihash:
+- Authentihash:
     MD5: 6bbd44ee42e3bbc6b4acc12fe11d765a
     SHA1: a19ec41abb65a26116bce1413470271d89d18995
     SHA256: 2b4af74d74a4380130a1c46d2f1ffe112d87d9d7646540bbbd201c5bd176082b
-  InternalName: CtiIo64.sys
+  Company: Creative Technology Innovation Co., LTd.
   Copyright: Copyright (c) 2021 CTI
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2021-05-06 21:21:55'
+  Date: ''
+  Description: CTI IO driver
   ExportedFunctions: ''
+  FileVersion: '1.0 x64 built by: WinDDK'
+  Filename: ''
   ImportedFunctions:
   - RtlInitUnicodeString
   - DbgPrint
@@ -79,6 +53,43 @@ KnownVulnerableSamples:
   - ObfDereferenceObject
   - IoDeleteDevice
   - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: CtiIo64.sys
+  MD5: 3f8cdaf7413000d34d6a1a1d5341a11b
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: CtiIo64.sys
+  Product: CtiIo64 Driver Version 1.0
+  ProductVersion: 1.0 x64
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: ca146dde5be4c188affdff2cb309138f
+    SHA1: 2ccd48af92b211fe134d5fa3c7888b95d648825e
+    SHA256: 1a49f88636cc1a3ab481d8a17a6bc61de8a93ff1dc8b6253dcc5e3cbcaac827c
+  SHA1: c1c869deee6293eee3d0d84b6706d90fab8f8558
+  SHA256: 2121a2bb8ebbf2e6e82c782b6f3c6b7904f686aa495def25cf1cf52a42e16109
+  Sections:
+    .text:
+      Entropy: 6.003998833007615
+      Virtual Size: '0xe45'
+    .rdata:
+      Entropy: 4.524233693641258
+      Virtual Size: '0x198'
+    .data:
+      Entropy: 0.5014196173403422
+      Virtual Size: '0x130'
+    .pdata:
+      Entropy: 2.8847894065764192
+      Virtual Size: '0x54'
+    INIT:
+      Entropy: 4.780729528841017
+      Virtual Size: '0x262'
+    .rsrc:
+      Entropy: 3.348289734887143
+      Virtual Size: '0x3a0'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -114,30 +125,9 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
-  RichPEHeaderHash:
-    MD5: ca146dde5be4c188affdff2cb309138f
-    SHA1: 2ccd48af92b211fe134d5fa3c7888b95d648825e
-    SHA256: 1a49f88636cc1a3ab481d8a17a6bc61de8a93ff1dc8b6253dcc5e3cbcaac827c
-  Sections:
-    .text:
-      Entropy: 6.003998833007615
-      Virtual Size: '0xe45'
-    .rdata:
-      Entropy: 4.524233693641258
-      Virtual Size: '0x198'
-    .data:
-      Entropy: 0.5014196173403422
-      Virtual Size: '0x130'
-    .pdata:
-      Entropy: 2.8847894065764192
-      Virtual Size: '0x54'
-    INIT:
-      Entropy: 4.780729528841017
-      Virtual Size: '0x262'
-    .rsrc:
-      Entropy: 3.348289734887143
-      Virtual Size: '0x3a0'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-05-06 21:21:55'
+MitreID: T1068
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/pull/81
 Tags:
 - CtiIo64.sys
+Verified: 'True'

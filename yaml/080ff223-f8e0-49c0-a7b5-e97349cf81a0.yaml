@@ -1,22 +1,16 @@
-Id: 080ff223-f8e0-49c0-a7b5-e97349cf81a0
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create HpPortIox64.sys binPath=C:\windows\temp\HpPortIox64.sys     type=kernel
     && sc.exe start HpPortIox64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c5050a2017490fff7aa53c73755982b339ddb0fd7cef2cde32c81bc9834331c5.yara
@@ -28,44 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 080ff223-f8e0-49c0-a7b5-e97349cf81a0
 KnownVulnerableSamples:
-- Filename: HpPortIox64.sys
-  MD5: a641e3dccba765a10718c9cb0da7879e
-  SHA1: 8c377ab4eebc5f4d8dd7bb3f90c0187dfdd3349f
-  SHA256: c5050a2017490fff7aa53c73755982b339ddb0fd7cef2cde32c81bc9834331c5
-  Signature:
-  - HP Inc.
-  - DigiCert SHA2 Assured ID Code Signing CA
-  - DigiCert
-  Date: ''
-  Publisher: ''
-  Company: HP Inc.
-  Description: HpPortIo
-  Product: HpPortIo
-  ProductVersion: 1.2.0.9
-  FileVersion: 1.2.0.9
-  MachineType: AMD64
-  OriginalFilename: HpPortIox64.sys
-  Authentihash:
+- Authentihash:
     MD5: 986877a0cf596be97155e9469f3c4b40
     SHA1: 98807d9e11bad4feed54d0d2c1abadeb95ca997c
     SHA256: 35b31c96194d78cbb98b3223bf810f78f53fc0e4601f49169938ca883586e4e9
-  InternalName: HpPortIox64.sys
+  Company: HP Inc.
   Copyright: Copyright (C) 2020-2021 HP Inc. All rights reserved.
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2021-04-20 21:22:47'
+  Date: ''
+  Description: HpPortIo
   ExportedFunctions: ''
+  FileVersion: 1.2.0.9
+  Filename: HpPortIox64.sys
   ImportedFunctions:
   - MmGetSystemRoutineAddress
   - RtlUnicodeStringToAnsiString
@@ -105,6 +75,49 @@ KnownVulnerableSamples:
   - __C_specific_handler
   - HalSetBusDataByOffset
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: HpPortIox64.sys
+  MD5: a641e3dccba765a10718c9cb0da7879e
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: HpPortIox64.sys
+  Product: HpPortIo
+  ProductVersion: 1.2.0.9
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 4d4d28dcc041614dbd266ba38ab0b695
+    SHA1: 4d93ccf1496f49e241e0a8948d5f356787864952
+    SHA256: 2dba8cdd15e9042ac6f8f474ed1bd3c6ed65b64176bee0edb8a763ec144183c5
+  SHA1: 8c377ab4eebc5f4d8dd7bb3f90c0187dfdd3349f
+  SHA256: c5050a2017490fff7aa53c73755982b339ddb0fd7cef2cde32c81bc9834331c5
+  Sections:
+    .text:
+      Entropy: 5.606025812365913
+      Virtual Size: '0x5d61'
+    .rdata:
+      Entropy: 4.972101999668686
+      Virtual Size: '0xf84'
+    .data:
+      Entropy: 1.2741239614517732
+      Virtual Size: '0x1b8'
+    .pdata:
+      Entropy: 4.080437825589189
+      Virtual Size: '0x270'
+    INIT:
+      Entropy: 5.127227635761384
+      Virtual Size: '0x534'
+    .rsrc:
+      Entropy: 3.2845087920390967
+      Virtual Size: '0x3a8'
+    .reloc:
+      Entropy: 1.584962500721156
+      Virtual Size: '0xc'
+  Signature:
+  - HP Inc.
+  - DigiCert SHA2 Assured ID Code Signing CA
+  - DigiCert
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -140,33 +153,10 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
         ID Code Signing CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 4d4d28dcc041614dbd266ba38ab0b695
-    SHA1: 4d93ccf1496f49e241e0a8948d5f356787864952
-    SHA256: 2dba8cdd15e9042ac6f8f474ed1bd3c6ed65b64176bee0edb8a763ec144183c5
-  Sections:
-    .text:
-      Entropy: 5.606025812365913
-      Virtual Size: '0x5d61'
-    .rdata:
-      Entropy: 4.972101999668686
-      Virtual Size: '0xf84'
-    .data:
-      Entropy: 1.2741239614517732
-      Virtual Size: '0x1b8'
-    .pdata:
-      Entropy: 4.080437825589189
-      Virtual Size: '0x270'
-    INIT:
-      Entropy: 5.127227635761384
-      Virtual Size: '0x534'
-    .rsrc:
-      Entropy: 3.2845087920390967
-      Virtual Size: '0x3a8'
-    .reloc:
-      Entropy: 1.584962500721156
-      Virtual Size: '0xc'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-04-20 21:22:47'
+MitreID: T1068
+Resources:
+- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Tags:
 - HpPortIox64.sys
+Verified: 'TRUE'

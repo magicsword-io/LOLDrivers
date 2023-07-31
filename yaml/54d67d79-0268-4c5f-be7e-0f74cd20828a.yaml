@@ -1,22 +1,16 @@
-Id: 54d67d79-0268-4c5f-be7e-0f74cd20828a
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create NTIOLib_X64.sys binPath=C:\windows\temp\NTIOLib_X64.sys     type=kernel
     && sc.exe start NTIOLib_X64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/d8b58f6a89a7618558e37afc360cd772b6731e3ba367f8d58734ecee2244a530.yara
@@ -28,45 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 54d67d79-0268-4c5f-be7e-0f74cd20828a
 KnownVulnerableSamples:
-- Filename: NTIOLib_X64.sys
-  MD5: c02f70960fa934b8defa16a03d7f6556
-  SHA1: 3805e4e08ad342d224973ecdade8b00c40ed31be
-  SHA256: d8b58f6a89a7618558e37afc360cd772b6731e3ba367f8d58734ecee2244a530
-  Signature:
-  - Micro-Star Int'l Co. Ltd.
-  - GlobalSign ObjectSign CA
-  - GlobalSign Primary Object Publishing CA
-  - GlobalSign Root CA - R1
-  Date: ''
-  Publisher: ''
-  Company: MSI
-  Description: NTIOLib
-  Product: NTIOLib
-  ProductVersion: 1.0.0.0
-  FileVersion: 1.0.0.0
-  MachineType: AMD64
-  OriginalFilename: NTIOLib.sys
-  Authentihash:
+- Authentihash:
     MD5: c6830e904e56ea951005ea7639eedd35
     SHA1: c57c0dd18135bca5fdb094858a70033c006cd281
     SHA256: 4a05ad47cd63932b3df2d0f1f42617321729772211bec651fe061140d3e75957
-  InternalName: NTIOLib.sys
+  Company: MSI
   Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2011-01-05 20:05:14'
+  Date: ''
+  Description: NTIOLib
   ExportedFunctions: ''
+  FileVersion: 1.0.0.0
+  Filename: NTIOLib_X64.sys
   ImportedFunctions:
   - MmUnmapIoSpace
   - MmMapIoSpace
@@ -80,6 +49,47 @@ KnownVulnerableSamples:
   - __C_specific_handler
   - HalSetBusDataByOffset
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: NTIOLib.sys
+  MD5: c02f70960fa934b8defa16a03d7f6556
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: NTIOLib.sys
+  Product: NTIOLib
+  ProductVersion: 1.0.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 2ee757c19c3e831d8f872914fe1b1384
+    SHA1: 9c58163cf35d80dbe450b656a52ee9de12bc60d2
+    SHA256: c5a21f0ae765d60ce4e2189aa3ca90b603b75ac02d9a98d1ab04375ad398132c
+  SHA1: 3805e4e08ad342d224973ecdade8b00c40ed31be
+  SHA256: d8b58f6a89a7618558e37afc360cd772b6731e3ba367f8d58734ecee2244a530
+  Sections:
+    .text:
+      Entropy: 6.012418155163931
+      Virtual Size: '0x794'
+    .rdata:
+      Entropy: 4.38104344738678
+      Virtual Size: '0x1b0'
+    .data:
+      Entropy: 0.5096713223407059
+      Virtual Size: '0x114'
+    .pdata:
+      Entropy: 3.217404746311882
+      Virtual Size: '0x6c'
+    INIT:
+      Entropy: 4.846887314724898
+      Virtual Size: '0x222'
+    .rsrc:
+      Entropy: 3.2498244109800973
+      Virtual Size: '0x370'
+  Signature:
+  - Micro-Star Int'l Co. Ltd.
+  - GlobalSign ObjectSign CA
+  - GlobalSign Primary Object Publishing CA
+  - GlobalSign Root CA - R1
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -139,30 +149,10 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 2ee757c19c3e831d8f872914fe1b1384
-    SHA1: 9c58163cf35d80dbe450b656a52ee9de12bc60d2
-    SHA256: c5a21f0ae765d60ce4e2189aa3ca90b603b75ac02d9a98d1ab04375ad398132c
-  Sections:
-    .text:
-      Entropy: 6.012418155163931
-      Virtual Size: '0x794'
-    .rdata:
-      Entropy: 4.38104344738678
-      Virtual Size: '0x1b0'
-    .data:
-      Entropy: 0.5096713223407059
-      Virtual Size: '0x114'
-    .pdata:
-      Entropy: 3.217404746311882
-      Virtual Size: '0x6c'
-    INIT:
-      Entropy: 4.846887314724898
-      Virtual Size: '0x222'
-    .rsrc:
-      Entropy: 3.2498244109800973
-      Virtual Size: '0x370'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-01-05 20:05:14'
+MitreID: T1068
+Resources:
+- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Tags:
 - NTIOLib_X64.sys
+Verified: 'TRUE'

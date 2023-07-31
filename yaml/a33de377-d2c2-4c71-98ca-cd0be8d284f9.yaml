@@ -1,23 +1,16 @@
-Id: a33de377-d2c2-4c71-98ca-cd0be8d284f9
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create BS_I2cIo.sys binPath=C:\windows\temp\BS_I2cIo.sys type=kernel
     && sc.exe start BS_I2cIo.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://github.com/elastic/protections-artifacts/blob/932baf346cc8a743f1963ad3d4565b42ed17bebe/yara/rules/Windows_VulnDriver_Biostar.yar#L30
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a.yara
@@ -29,44 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: a33de377-d2c2-4c71-98ca-cd0be8d284f9
 KnownVulnerableSamples:
-- Filename: BS_I2cIo.sys
-  MD5: 83601bbe5563d92c1fdb4e960d84dc77
-  SHA1: dc55217b6043d819eadebd423ff07704ee103231
-  SHA256: 55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a
-  Signature:
-  - BIOSTAR MICROTECH INT'L CORP
-  - VeriSign Class 3 Code Signing 2004 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: ''
-  Publisher: ''
-  Company: BIOSTAR Group
-  Description: I/O Interface driver file
-  Product: BIOSTAR I/O driver fle
-  ProductVersion: 1, 1, 0, 0
-  FileVersion: 1, 1, 0, 0
-  MachineType: AMD64
-  OriginalFilename: BS_I2cIo.sys
-  Authentihash:
+- Authentihash:
     MD5: bcc1ae726001fdbabb8159e3b333f3fd
     SHA1: 7885fb33d8800fa3c036252af70e0a8391ab367d
     SHA256: 85ac17aec836d5125db7407d2dc3af8e5b01241fea781b2fd55aae796b3912b4
-  InternalName: I/O driver
+  Company: BIOSTAR Group
   Copyright: Copyright (c) 2002-2006 BIOSTAR Group
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2008-06-16 00:45:18'
+  Date: ''
+  Description: I/O Interface driver file
   ExportedFunctions: ''
+  FileVersion: 1, 1, 0, 0
+  Filename: BS_I2cIo.sys
   ImportedFunctions:
   - IoDeleteSymbolicLink
   - IoStartNextPacket
@@ -84,6 +53,49 @@ KnownVulnerableSamples:
   - HalSetBusDataByOffset
   - HalTranslateBusAddress
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: I/O driver
+  MD5: 83601bbe5563d92c1fdb4e960d84dc77
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: BS_I2cIo.sys
+  Product: BIOSTAR I/O driver fle
+  ProductVersion: 1, 1, 0, 0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 195c2f6f9da1c18b845a8235fb390cd2
+    SHA1: 0c7f02af8aa0a5340fcd1c53a328c6373fef5c03
+    SHA256: e844831f6e05858085e47445dd5d7ea20e3d88f8220209b4098e76f0581f4bf1
+  SHA1: dc55217b6043d819eadebd423ff07704ee103231
+  SHA256: 55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a
+  Sections:
+    .text:
+      Entropy: 5.977257057316772
+      Virtual Size: '0x9d0'
+    .rdata:
+      Entropy: 4.457181754135786
+      Virtual Size: '0x1c8'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.26210477374917
+      Virtual Size: '0x9c'
+    PAGE:
+      Entropy: 4.61606579250549
+      Virtual Size: '0xaa'
+    INIT:
+      Entropy: 5.409774533805617
+      Virtual Size: '0x4c8'
+    .rsrc:
+      Entropy: 3.2773872054400512
+      Virtual Size: '0x408'
+  Signature:
+  - BIOSTAR MICROTECH INT'L CORP
+  - VeriSign Class 3 Code Signing 2004 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -159,33 +171,11 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 195c2f6f9da1c18b845a8235fb390cd2
-    SHA1: 0c7f02af8aa0a5340fcd1c53a328c6373fef5c03
-    SHA256: e844831f6e05858085e47445dd5d7ea20e3d88f8220209b4098e76f0581f4bf1
-  Sections:
-    .text:
-      Entropy: 5.977257057316772
-      Virtual Size: '0x9d0'
-    .rdata:
-      Entropy: 4.457181754135786
-      Virtual Size: '0x1c8'
-    .data:
-      Entropy: 0.5035334969292564
-      Virtual Size: '0x118'
-    .pdata:
-      Entropy: 3.26210477374917
-      Virtual Size: '0x9c'
-    PAGE:
-      Entropy: 4.61606579250549
-      Virtual Size: '0xaa'
-    INIT:
-      Entropy: 5.409774533805617
-      Virtual Size: '0x4c8'
-    .rsrc:
-      Entropy: 3.2773872054400512
-      Virtual Size: '0x408'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-06-16 00:45:18'
+MitreID: T1068
+Resources:
+- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
+- https://github.com/elastic/protections-artifacts/blob/932baf346cc8a743f1963ad3d4565b42ed17bebe/yara/rules/Windows_VulnDriver_Biostar.yar#L30
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Tags:
 - BS_I2cIo.sys
+Verified: 'TRUE'

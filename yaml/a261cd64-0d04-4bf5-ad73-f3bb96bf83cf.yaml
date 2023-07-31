@@ -1,22 +1,16 @@
-Id: a261cd64-0d04-4bf5-ad73-f3bb96bf83cf
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create PCHunter.sys binPath=C:\windows\temp\PCHunter.sys type=kernel
     && sc.exe start PCHunter.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/1b7fb154a7b7903a3c81f12f4b094f24a3c60a6a8cffca894c67c264ab7545fa.yara
@@ -28,42 +22,21 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: a261cd64-0d04-4bf5-ad73-f3bb96bf83cf
 KnownVulnerableSamples:
-- Filename: PCHunter.sys
-  MD5: c2c1b8c00b99e913d992a870ed478a24
-  SHA1: a64354aac2d68b4fa74b5829a9d42d90d83b040c
-  SHA256: 1b7fb154a7b7903a3c81f12f4b094f24a3c60a6a8cffca894c67c264ab7545fa
-  Signature: []
-  Date: ''
-  Publisher: ''
-  Company: "\u4E00\u666E\u660E\u4E3A\uFF08\u5317\u4EAC\uFF09\u4FE1\u606F\u6280\u672F\
-    \u6709\u9650\u516C\u53F8"
-  Description: Epoolsoft Windows Information View Tools
-  Product: PCHunter
-  ProductVersion: 1.0.0.4
-  FileVersion: 1.0.0.4
-  MachineType: AMD64
-  OriginalFilename: PCHunter.sys
-  Authentihash:
+- Authentihash:
     MD5: 9655d43fd874e7a6720b36e7fd9fa6b7
     SHA1: a14261c290339995b7430495f2dfdd1da64dcfc5
     SHA256: c2d209ed240027608003f8d32b621f8baaf5601aaf348e64269e4457a594c7c3
-  InternalName: PCHunter.sys
+  Company: "\u4E00\u666E\u660E\u4E3A\uFF08\u5317\u4EAC\uFF09\u4FE1\u606F\u6280\u672F\
+    \u6709\u9650\u516C\u53F8"
   Copyright: (C) 2013-2016 Epoolsoft Corporation. All Rights Reserved.
-  Imports:
-  - ntoskrnl.exe
-  - FLTMGR.SYS
+  CreationTimestamp: '2016-04-10 08:17:05'
+  Date: ''
+  Description: Epoolsoft Windows Information View Tools
   ExportedFunctions: ''
+  FileVersion: 1.0.0.4
+  Filename: PCHunter.sys
   ImportedFunctions:
   - ZwCreateKey
   - RtlInitUnicodeString
@@ -132,6 +105,52 @@ KnownVulnerableSamples:
   - FltRegisterFilter
   - FltUnregisterFilter
   - FltGetFileNameInformation
+  Imports:
+  - ntoskrnl.exe
+  - FLTMGR.SYS
+  InternalName: PCHunter.sys
+  MD5: c2c1b8c00b99e913d992a870ed478a24
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: PCHunter.sys
+  Product: PCHunter
+  ProductVersion: 1.0.0.4
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 819db1bed1ee2ace0a19ce67f94dfc84
+    SHA1: 0dd604290ee6a8e102aa4964d90c99d1c8bc1332
+    SHA256: 608f08d51ee0c93ea049baae3b51084ac93c2453383d22aacfbcde896d4d398a
+  SHA1: a64354aac2d68b4fa74b5829a9d42d90d83b040c
+  SHA256: 1b7fb154a7b7903a3c81f12f4b094f24a3c60a6a8cffca894c67c264ab7545fa
+  Sections:
+    .text:
+      Entropy: 6.3553477241339005
+      Virtual Size: '0x81050'
+    .rdata:
+      Entropy: 5.552306001700414
+      Virtual Size: '0xcf7c'
+    .data:
+      Entropy: 2.831777228998586
+      Virtual Size: '0x2eda8'
+    .pdata:
+      Entropy: 5.938259413904041
+      Virtual Size: '0x7860'
+    INIT:
+      Entropy: 5.080110483782868
+      Virtual Size: '0x852'
+    .rsrc:
+      Entropy: 3.4546217154700916
+      Virtual Size: '0x3b0'
+    .pchunt0:
+      Entropy: 1.7563449969203195
+      Virtual Size: '0x780'
+    .pchunt1:
+      Entropy: 7.978022918434585
+      Virtual Size: '0x166bd'
+    .reloc:
+      Entropy: 4.690928622225438
+      Virtual Size: '0x180'
+  Signature: []
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -226,39 +245,10 @@ KnownVulnerableSamples:
     - SerialNumber: 5c5d0a336ba298b9695d2cfa5a181510
       Issuer: C=CN, O=WoSign CA Limited, CN=WoSign Class 3 Code Signing CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 819db1bed1ee2ace0a19ce67f94dfc84
-    SHA1: 0dd604290ee6a8e102aa4964d90c99d1c8bc1332
-    SHA256: 608f08d51ee0c93ea049baae3b51084ac93c2453383d22aacfbcde896d4d398a
-  Sections:
-    .text:
-      Entropy: 6.3553477241339005
-      Virtual Size: '0x81050'
-    .rdata:
-      Entropy: 5.552306001700414
-      Virtual Size: '0xcf7c'
-    .data:
-      Entropy: 2.831777228998586
-      Virtual Size: '0x2eda8'
-    .pdata:
-      Entropy: 5.938259413904041
-      Virtual Size: '0x7860'
-    INIT:
-      Entropy: 5.080110483782868
-      Virtual Size: '0x852'
-    .rsrc:
-      Entropy: 3.4546217154700916
-      Virtual Size: '0x3b0'
-    .pchunt0:
-      Entropy: 1.7563449969203195
-      Virtual Size: '0x780'
-    .pchunt1:
-      Entropy: 7.978022918434585
-      Virtual Size: '0x166bd'
-    .reloc:
-      Entropy: 4.690928622225438
-      Virtual Size: '0x180'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-04-10 08:17:05'
+MitreID: T1068
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - PCHunter.sys
+Verified: 'FALSE'

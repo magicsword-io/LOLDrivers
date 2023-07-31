@@ -1,22 +1,16 @@
-Id: fab98aaa-e4e7-4c4a-af65-c00d35cf66e9
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create cpuz141.sys binPath=C:\windows\temp\cpuz141.sys type=kernel
     && sc.exe start cpuz141.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ded2927f9a4e64eefd09d0caba78e94f309e3a6292841ae81d5528cab109f95d.yara
@@ -28,44 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: fab98aaa-e4e7-4c4a-af65-c00d35cf66e9
 KnownVulnerableSamples:
-- Filename: cpuz141.sys
-  MD5: db72def618cbc3c5f9aa82f091b54250
-  SHA1: f5696fb352a3fbd14fb1a89ad21a71776027f9ab
-  SHA256: ded2927f9a4e64eefd09d0caba78e94f309e3a6292841ae81d5528cab109f95d
-  Signature:
-  - CPUID
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: CPUID
-  Company: CPUID
-  Description: CPUID Driver
-  Product: CPUID service
-  ProductVersion: 6.1.7600.16385
-  FileVersion: '6.1.7600.16385 built by: WinDDK'
-  MachineType: AMD64
-  OriginalFilename: cpuz.sys
-  Authentihash:
+- Authentihash:
     MD5: 17b67e675e778c70d3c348d5088ab514
     SHA1: b38b98608e410c1555a7d73056e86e1db850bb2e
     SHA256: 33b88ac3151f2192eaf4c2be3c7ad00e49090c8b94ec51b754e19ac784b087aa
-  InternalName: cpuz.sys
+  Company: CPUID
   Copyright: Copyright(C) 2016 CPUID
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2016-11-22 06:20:59'
+  Date: ''
+  Description: CPUID Driver
   ExportedFunctions: ''
+  FileVersion: '6.1.7600.16385 built by: WinDDK'
+  Filename: cpuz141.sys
   ImportedFunctions:
   - RtlInitUnicodeString
   - IoDeleteDevice
@@ -94,6 +64,46 @@ KnownVulnerableSamples:
   - HalSetBusDataByOffset
   - KeStallExecutionProcessor
   - KeQueryPerformanceCounter
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: cpuz.sys
+  MD5: db72def618cbc3c5f9aa82f091b54250
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: cpuz.sys
+  Product: CPUID service
+  ProductVersion: 6.1.7600.16385
+  Publisher: CPUID
+  RichPEHeaderHash:
+    MD5: c046d6f14ec39d2a0f67a417bda83c5e
+    SHA1: 74661f1063b4c80566f75a1bee22c35f7af17fa9
+    SHA256: 440eebbdc09d290724d364056ba4e2725c75759819a6df0a1ed5c876ed7d2474
+  SHA1: f5696fb352a3fbd14fb1a89ad21a71776027f9ab
+  SHA256: ded2927f9a4e64eefd09d0caba78e94f309e3a6292841ae81d5528cab109f95d
+  Sections:
+    .text:
+      Entropy: 6.216329473107877
+      Virtual Size: '0x3a06'
+    .rdata:
+      Entropy: 4.223270892386599
+      Virtual Size: '0x48c'
+    .data:
+      Entropy: 0.378703493487675
+      Virtual Size: '0x440'
+    .pdata:
+      Entropy: 3.5113758608463215
+      Virtual Size: '0xf0'
+    INIT:
+      Entropy: 5.116119018385266
+      Virtual Size: '0x40e'
+    .rsrc:
+      Entropy: 3.3889145139722916
+      Virtual Size: '0x350'
+  Signature:
+  - CPUID
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -156,30 +166,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: c046d6f14ec39d2a0f67a417bda83c5e
-    SHA1: 74661f1063b4c80566f75a1bee22c35f7af17fa9
-    SHA256: 440eebbdc09d290724d364056ba4e2725c75759819a6df0a1ed5c876ed7d2474
-  Sections:
-    .text:
-      Entropy: 6.216329473107877
-      Virtual Size: '0x3a06'
-    .rdata:
-      Entropy: 4.223270892386599
-      Virtual Size: '0x48c'
-    .data:
-      Entropy: 0.378703493487675
-      Virtual Size: '0x440'
-    .pdata:
-      Entropy: 3.5113758608463215
-      Virtual Size: '0xf0'
-    INIT:
-      Entropy: 5.116119018385266
-      Virtual Size: '0x40e'
-    .rsrc:
-      Entropy: 3.3889145139722916
-      Virtual Size: '0x350'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-11-22 06:20:59'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - cpuz141.sys
+Verified: 'TRUE'

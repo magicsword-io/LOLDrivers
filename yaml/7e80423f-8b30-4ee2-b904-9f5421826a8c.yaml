@@ -1,49 +1,31 @@
-Id: 7e80423f-8b30-4ee2-b904-9f5421826a8c
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-02-28'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create daxin_blank.sys binPath=C:\windows\temp\daxin_blank.sys     type=kernel
     && sc.exe start daxin_blank.sys
   Description: Driver used in the Daxin malware campaign.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
-- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
-- ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-02-28'
 Detection: []
+Id: 7e80423f-8b30-4ee2-b904-9f5421826a8c
 KnownVulnerableSamples:
-- Filename: daxin_blank.sys
-  MD5: 62c18d61ed324088f963510bae43b831
-  SHA1: 8302802b709ad242a81b939b6c90b3230e1a1f1e
-  SHA256: 49c827cf48efb122a9d6fd87b426482b7496ccd4a2dbca31ebbf6b2b80c98530
-  Signature: Signed
-  Date: 7:07 AM 1/23/2013
-  Publisher: Anhua Xinda (Beijing) Technology Co., Ltd.
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 253bde63495fa4f995a6debae44e598e
     SHA1: 57391d4c4e30f91e3e780d5242fd98a178ec67ac
     SHA256: a000d211840cb8fbcbf95c334b1d04eadb45ba03b0413c96472e47e9e22413ff
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - NDIS.SYS
+  CreationTimestamp: '2013-01-23 00:07:26'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: daxin_blank.sys
   ImportedFunctions:
   - wcsncmp
   - DbgPrint
@@ -127,6 +109,40 @@ KnownVulnerableSamples:
   - NdisFreeNetBufferListPool
   - NdisFreeNetBufferList
   - NdisSendNetBufferLists
+  Imports:
+  - ntoskrnl.exe
+  - NDIS.SYS
+  InternalName: ''
+  MD5: 62c18d61ed324088f963510bae43b831
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: Anhua Xinda (Beijing) Technology Co., Ltd.
+  RichPEHeaderHash:
+    MD5: 8f9faa12ddcbb631cbad8b74124e28c1
+    SHA1: c120a5848e8e01e01846164408d19dcb972cc894
+    SHA256: edf117e94236b5914ca392b30047f8acb8c10d19d1ab6d09d5ca116dfc756d39
+  SHA1: 8302802b709ad242a81b939b6c90b3230e1a1f1e
+  SHA256: 49c827cf48efb122a9d6fd87b426482b7496ccd4a2dbca31ebbf6b2b80c98530
+  Sections:
+    .text:
+      Entropy: 6.330285813038149
+      Virtual Size: '0xa994'
+    .rdata:
+      Entropy: 4.611583743512791
+      Virtual Size: '0x72c'
+    .data:
+      Entropy: 0.7386195307662838
+      Virtual Size: '0x195558'
+    .pdata:
+      Entropy: 4.5208242156082745
+      Virtual Size: '0x720'
+    INIT:
+      Entropy: 5.8159894517645485
+      Virtual Size: '0xdae'
+  Signature: Signed
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -205,27 +221,11 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 8f9faa12ddcbb631cbad8b74124e28c1
-    SHA1: c120a5848e8e01e01846164408d19dcb972cc894
-    SHA256: edf117e94236b5914ca392b30047f8acb8c10d19d1ab6d09d5ca116dfc756d39
-  Sections:
-    .text:
-      Entropy: 6.330285813038149
-      Virtual Size: '0xa994'
-    .rdata:
-      Entropy: 4.611583743512791
-      Virtual Size: '0x72c'
-    .data:
-      Entropy: 0.7386195307662838
-      Virtual Size: '0x195558'
-    .pdata:
-      Entropy: 4.5208242156082745
-      Virtual Size: '0x720'
-    INIT:
-      Entropy: 5.8159894517645485
-      Virtual Size: '0xdae'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-23 00:07:26'
+MitreID: T1068
+Resources:
+- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+- ''
 Tags:
 - daxin_blank.sys
+Verified: 'TRUE'

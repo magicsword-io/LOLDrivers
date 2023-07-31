@@ -1,23 +1,16 @@
-Id: eef1fcf4-8c54-420b-8d38-9c5f95129dcc
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-02-28'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create ntbios.sys binPath=C:\windows\temp \n \n \n  tbios.sys type=kernel
     && sc.exe start ntbios.sys
   Description: Driver used in the Daxin malware campaign.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
-- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
-- ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-02-28'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc.yara
@@ -29,43 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_mal_drivers_strict.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: eef1fcf4-8c54-420b-8d38-9c5f95129dcc
 KnownVulnerableSamples:
-- Filename: ntbios.sys
-  MD5: 14580bd59c55185115fd3abe73b016a2
-  SHA1: 71469dce9c2f38d0e0243a289f915131bf6dd2a8
-  SHA256: 96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc
-  Signature: Unsigned
-  Date: 10:26 AM 11/19/2009
-  Publisher: n/a
-  Company: Microsoft Corporation
-  Description: ntbios driver
-  Product: ' Microsoft(R) Windows (R) NT Operating System'
-  ProductVersion: 5, 0, 2, 1
-  FileVersion: 5, 0, 2, 1
-  MachineType: I386
-  OriginalFilename: ntbios.sys
-  Authentihash:
+- Authentihash:
     MD5: dd3f6fe14dadb95f5d8c963006dec9d7
     SHA1: 2374491565e5798dccd4db2dc2af7e9bbefafd5b
     SHA256: 50f9323eaf7c49cfca5890c6c46d729574d0caca89f7acc9f608c8226f54a975
-  InternalName: ntbio.sys
+  Company: Microsoft Corporation
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2003"
-  Imports:
-  - NTOSKRNL.EXE
-  - HAL.DLL
-  - ntoskrnl.exe
-  - NDIS.SYS
+  CreationTimestamp: '2009-11-19 03:26:14'
+  Date: ''
+  Description: ntbios driver
   ExportedFunctions: ''
+  FileVersion: 5, 0, 2, 1
+  Filename: ntbios.sys
   ImportedFunctions:
   - MmUnlockPages
   - MmProbeAndLockPages
@@ -128,11 +98,25 @@ KnownVulnerableSamples:
   - NdisAllocateBufferPool
   - NdisCloseAdapter
   - NdisDeregisterProtocol
-  Signatures: {}
+  Imports:
+  - NTOSKRNL.EXE
+  - HAL.DLL
+  - ntoskrnl.exe
+  - NDIS.SYS
+  InternalName: ntbio.sys
+  MD5: 14580bd59c55185115fd3abe73b016a2
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ntbios.sys
+  Product: ' Microsoft(R) Windows (R) NT Operating System'
+  ProductVersion: 5, 0, 2, 1
+  Publisher: n/a
   RichPEHeaderHash:
     MD5: ebd225fe8cf34907033d6b6123047339
     SHA1: 642936e6d95c6231c8427a1c7a76dd99910fc635
     SHA256: b04e0a7d507b0838174bb9df686e4ce60c5b81e183867441ed5951a5d3555510
+  SHA1: 71469dce9c2f38d0e0243a289f915131bf6dd2a8
+  SHA256: 96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc
   Sections:
     .text:
       Entropy: 6.406428066873703
@@ -152,7 +136,13 @@ KnownVulnerableSamples:
     .reloc:
       Entropy: 4.172193963992313
       Virtual Size: '0x768'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-11-19 03:26:14'
+  Signature: Unsigned
+  Signatures: {}
+MitreID: T1068
+Resources:
+- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+- ''
 Tags:
 - ntbios.sys
+Verified: 'TRUE'

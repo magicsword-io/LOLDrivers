@@ -1,22 +1,16 @@
-Id: 04d377f9-36e0-42a4-8d47-62232163dc68
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create iomem64.sys binPath=C:\windows\temp\iomem64.sys type=kernel
     && sc.exe start iomem64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/3d23bdbaf9905259d858df5bf991eb23d2dc9f4ecda7f9f77839691acef1b8c4.yara
@@ -30,44 +24,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 04d377f9-36e0-42a4-8d47-62232163dc68
 KnownVulnerableSamples:
-- Filename: iomem64.sys
-  MD5: 0898af0888d8f7a9544ef56e5e16354e
-  SHA1: 4b009e91bae8d27b160dc195f10c095f8a2441e1
-  SHA256: 3d23bdbaf9905259d858df5bf991eb23d2dc9f4ecda7f9f77839691acef1b8c4
-  Signature:
-  - DT RESEARCH, INC. TAIWAN BRANCH
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: DT Research, Inc.
-  Description: DTR Kernel mode driver
-  Product: iomem.sys
-  ProductVersion: 2.3.0.0
-  FileVersion: 2.3.0.0
-  MachineType: AMD64
-  OriginalFilename: iomem.sys
-  Authentihash:
+- Authentihash:
     MD5: 9b6609bd5d9d8de37273fe2d355ae349
     SHA1: 4bf9ce7ffca224020572af6c13e866d8d41ad5bf
     SHA256: 46ffe559f5a8f6bd611ac5a9264edf92d8449d8d31b2ddf6b2add5971e309c56
-  InternalName: iomem.sys
+  Company: DT Research, Inc.
   Copyright: DT Research Inc. All Rights Reserved.
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2013-01-28 01:45:17'
+  Date: ''
+  Description: DTR Kernel mode driver
   ExportedFunctions: ''
+  FileVersion: 2.3.0.0
+  Filename: iomem64.sys
   ImportedFunctions:
   - IoDeleteDevice
   - MmUnmapIoSpace
@@ -84,6 +54,46 @@ KnownVulnerableSamples:
   - IoDeleteSymbolicLink
   - HalSetBusDataByOffset
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: iomem.sys
+  MD5: 0898af0888d8f7a9544ef56e5e16354e
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: iomem.sys
+  Product: iomem.sys
+  ProductVersion: 2.3.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 0ae286be57b21fec5b461a83d859358d
+    SHA1: 2f485c062bee896fc4fa28cc256c4f7466f3ff81
+    SHA256: 1beb30ca75a71912c068d962caa0f4a651ff924c1cbb1b88cf2bdcb357590e21
+  SHA1: 4b009e91bae8d27b160dc195f10c095f8a2441e1
+  SHA256: 3d23bdbaf9905259d858df5bf991eb23d2dc9f4ecda7f9f77839691acef1b8c4
+  Sections:
+    .text:
+      Entropy: 5.429433941896276
+      Virtual Size: '0x13b4'
+    .rdata:
+      Entropy: 4.340575063764079
+      Virtual Size: '0x198'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.3340349653294203
+      Virtual Size: '0xa8'
+    INIT:
+      Entropy: 5.039084100171449
+      Virtual Size: '0x2a6'
+    .rsrc:
+      Entropy: 3.2363116153206524
+      Virtual Size: '0x350'
+  Signature:
+  - DT RESEARCH, INC. TAIWAN BRANCH
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -162,58 +172,18 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 0ae286be57b21fec5b461a83d859358d
-    SHA1: 2f485c062bee896fc4fa28cc256c4f7466f3ff81
-    SHA256: 1beb30ca75a71912c068d962caa0f4a651ff924c1cbb1b88cf2bdcb357590e21
-  Sections:
-    .text:
-      Entropy: 5.429433941896276
-      Virtual Size: '0x13b4'
-    .rdata:
-      Entropy: 4.340575063764079
-      Virtual Size: '0x198'
-    .data:
-      Entropy: 0.5035334969292564
-      Virtual Size: '0x118'
-    .pdata:
-      Entropy: 3.3340349653294203
-      Virtual Size: '0xa8'
-    INIT:
-      Entropy: 5.039084100171449
-      Virtual Size: '0x2a6'
-    .rsrc:
-      Entropy: 3.2363116153206524
-      Virtual Size: '0x350'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-28 01:45:17'
-- Filename: iomem64.sys
-  MD5: f1e054333cc40f79cfa78e5fbf3b54c2
-  SHA1: 6003184788cd3d2fc624ca801df291ccc4e225ee
-  SHA256: dd4a1253d47de14ef83f1bc8b40816a86ccf90d1e624c5adf9203ae9d51d4097
-  Signature:
-  - DT RESEARCH, INC. TAIWAN BRANCH
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: DT Research, Inc.
-  Description: DTR Kernel mode driver
-  Product: iomem.sys
-  ProductVersion: 2.2.0.0
-  FileVersion: 2.2.0.0
-  MachineType: AMD64
-  OriginalFilename: iomem.sys
-  Authentihash:
+- Authentihash:
     MD5: 91896c53af5ab967f7f131285354e4ac
     SHA1: 7eec42b3027252dea4c777bbdbd47560bc179986
     SHA256: 57d36936fbf8785380536b03e5d9be172e5dd5c3bf435e19875a80aa96f97e1f
-  InternalName: iomem.sys
+  Company: DT Research, Inc.
   Copyright: DT Research Inc. All Rights Reserved.
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2012-12-03 01:39:06'
+  Date: ''
+  Description: DTR Kernel mode driver
   ExportedFunctions: ''
+  FileVersion: 2.2.0.0
+  Filename: iomem64.sys
   ImportedFunctions:
   - IoDeleteDevice
   - MmUnmapIoSpace
@@ -230,6 +200,46 @@ KnownVulnerableSamples:
   - IoDeleteSymbolicLink
   - HalSetBusDataByOffset
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: iomem.sys
+  MD5: f1e054333cc40f79cfa78e5fbf3b54c2
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: iomem.sys
+  Product: iomem.sys
+  ProductVersion: 2.2.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 0ae286be57b21fec5b461a83d859358d
+    SHA1: 2f485c062bee896fc4fa28cc256c4f7466f3ff81
+    SHA256: 1beb30ca75a71912c068d962caa0f4a651ff924c1cbb1b88cf2bdcb357590e21
+  SHA1: 6003184788cd3d2fc624ca801df291ccc4e225ee
+  SHA256: dd4a1253d47de14ef83f1bc8b40816a86ccf90d1e624c5adf9203ae9d51d4097
+  Sections:
+    .text:
+      Entropy: 5.4276217868285315
+      Virtual Size: '0x1384'
+    .rdata:
+      Entropy: 4.330082770085826
+      Virtual Size: '0x198'
+    .data:
+      Entropy: 0.5035334969292564
+      Virtual Size: '0x118'
+    .pdata:
+      Entropy: 3.3340349653294203
+      Virtual Size: '0xa8'
+    INIT:
+      Entropy: 5.039084100171449
+      Virtual Size: '0x2a6'
+    .rsrc:
+      Entropy: 3.227189755068873
+      Virtual Size: '0x350'
+  Signature:
+  - DT RESEARCH, INC. TAIWAN BRANCH
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -307,30 +317,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 0ae286be57b21fec5b461a83d859358d
-    SHA1: 2f485c062bee896fc4fa28cc256c4f7466f3ff81
-    SHA256: 1beb30ca75a71912c068d962caa0f4a651ff924c1cbb1b88cf2bdcb357590e21
-  Sections:
-    .text:
-      Entropy: 5.4276217868285315
-      Virtual Size: '0x1384'
-    .rdata:
-      Entropy: 4.330082770085826
-      Virtual Size: '0x198'
-    .data:
-      Entropy: 0.5035334969292564
-      Virtual Size: '0x118'
-    .pdata:
-      Entropy: 3.3340349653294203
-      Virtual Size: '0xa8'
-    INIT:
-      Entropy: 5.039084100171449
-      Virtual Size: '0x2a6'
-    .rsrc:
-      Entropy: 3.227189755068873
-      Virtual Size: '0x350'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-12-03 01:39:06'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - iomem64.sys
+Verified: 'TRUE'

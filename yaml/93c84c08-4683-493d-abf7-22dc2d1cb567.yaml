@@ -1,22 +1,16 @@
-Id: 93c84c08-4683-493d-abf7-22dc2d1cb567
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create PanIOx64.sys binPath=C:\windows\temp\PanIOx64.sys type=kernel
     && sc.exe start PanIOx64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6b830ea0db6546a044c9900d3f335e7820c2a80e147b0751641899d1a5aa8f74.yara
@@ -28,44 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 93c84c08-4683-493d-abf7-22dc2d1cb567
 KnownVulnerableSamples:
-- Filename: PanIOx64.sys
-  MD5: 0d6fef14f8e1ce5753424bd22c46b1ce
-  SHA1: 814200191551faec65b21f5f6819b46c8fc227a3
-  SHA256: 6b830ea0db6546a044c9900d3f335e7820c2a80e147b0751641899d1a5aa8f74
-  Signature:
-  - PAN YAZILIM BILISIM TEKNOLOJILERI TICARET LTD. STI.
-  - GlobalSign CodeSigning CA - G2
-  - GlobalSign
-  Date: ''
-  Publisher: ''
-  Company: Pan Yazilim Bilisim Teknolojileri Tic. Ltd. Sti.
-  Description: Temperature and system information driver
-  Product: PanIO Library
-  ProductVersion: 1.0.0.0
-  FileVersion: 1.0.0.0
-  MachineType: AMD64
-  OriginalFilename: PanIOx64.sys
-  Authentihash:
+- Authentihash:
     MD5: 7bd56fcd55d1fd188e5200b7db5cd7be
     SHA1: 519926b0b385e27141d88c5576aa9f86d8d3bb0d
     SHA256: 13aa698c09a31d642d3e2a9dd03be2363b11b4024689fb6c97234719446dbbd7
-  InternalName: PanIOx64.sys
+  Company: Pan Yazilim Bilisim Teknolojileri Tic. Ltd. Sti.
   Copyright: Copyright (c) 2012-2014 Pan Yazilim Bilisim Teknolojileri Tic. Ltd. Sti.
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2014-04-17 03:14:26'
+  Date: ''
+  Description: Temperature and system information driver
   ExportedFunctions: ''
+  FileVersion: 1.0.0.0
+  Filename: PanIOx64.sys
   ImportedFunctions:
   - MmUnmapIoSpace
   - MmMapIoSpace
@@ -79,6 +49,46 @@ KnownVulnerableSamples:
   - __C_specific_handler
   - HalSetBusDataByOffset
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: PanIOx64.sys
+  MD5: 0d6fef14f8e1ce5753424bd22c46b1ce
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: PanIOx64.sys
+  Product: PanIO Library
+  ProductVersion: 1.0.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 41ddd08b440611823bc5d8cb732c563d
+    SHA1: 8acdfc9ac988c6250e2a031640f6e169b5fddb73
+    SHA256: 189683b4db2e68d2f0b3f91f1141907b3887f23991867a68a22389d40ad3634e
+  SHA1: 814200191551faec65b21f5f6819b46c8fc227a3
+  SHA256: 6b830ea0db6546a044c9900d3f335e7820c2a80e147b0751641899d1a5aa8f74
+  Sections:
+    .text:
+      Entropy: 5.953593109948523
+      Virtual Size: '0x6bc'
+    .rdata:
+      Entropy: 4.084486961544062
+      Virtual Size: '0x184'
+    .data:
+      Entropy: 0.5096713223407059
+      Virtual Size: '0x114'
+    .pdata:
+      Entropy: 3.2519912045851185
+      Virtual Size: '0x6c'
+    INIT:
+      Entropy: 5.046663153942613
+      Virtual Size: '0x242'
+    .rsrc:
+      Entropy: 3.305144322260994
+      Virtual Size: '0x448'
+  Signature:
+  - PAN YAZILIM BILISIM TEKNOLOJILERI TICARET LTD. STI.
+  - GlobalSign CodeSigning CA - G2
+  - GlobalSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -149,30 +159,10 @@ KnownVulnerableSamples:
     - SerialNumber: 1121506480253469e07e54ee8612041fbb92
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
-  RichPEHeaderHash:
-    MD5: 41ddd08b440611823bc5d8cb732c563d
-    SHA1: 8acdfc9ac988c6250e2a031640f6e169b5fddb73
-    SHA256: 189683b4db2e68d2f0b3f91f1141907b3887f23991867a68a22389d40ad3634e
-  Sections:
-    .text:
-      Entropy: 5.953593109948523
-      Virtual Size: '0x6bc'
-    .rdata:
-      Entropy: 4.084486961544062
-      Virtual Size: '0x184'
-    .data:
-      Entropy: 0.5096713223407059
-      Virtual Size: '0x114'
-    .pdata:
-      Entropy: 3.2519912045851185
-      Virtual Size: '0x6c'
-    INIT:
-      Entropy: 5.046663153942613
-      Virtual Size: '0x242'
-    .rsrc:
-      Entropy: 3.305144322260994
-      Virtual Size: '0x448'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-04-17 03:14:26'
+MitreID: T1068
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - PanIOx64.sys
+Verified: 'FALSE'

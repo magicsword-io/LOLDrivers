@@ -1,22 +1,16 @@
-Id: d9e00cc7-a8f4-4390-a6dc-0f5423e97da4
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create mydrivers.sys binPath=C:\windows\temp\mydrivers.sys type=kernel
     && sc.exe start mydrivers.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6.yara
@@ -28,44 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: d9e00cc7-a8f4-4390-a6dc-0f5423e97da4
 KnownVulnerableSamples:
-- Filename: mydrivers.sys
-  MD5: 507a649eb585d8d0447eab0532ef0c73
-  SHA1: 7859e75580570e23a1ef7208b9a76f81738043d5
-  SHA256: 08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6
-  Signature:
-  - Beijing Kingsoft Security software Co.,Ltd
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: MyDrivers.com
-  Description: DriverGenius Hardware monitor
-  Product: DriverGenius
-  ProductVersion: 2016.7.7.1214
-  FileVersion: 9.2.707.1214
-  MachineType: I386
-  OriginalFilename: mydrivers.sys
-  Authentihash:
+- Authentihash:
     MD5: 74a1e675b4fd736298bc24d082684b0e
     SHA1: c57e38ce02ba45c3ad886faff98fe346560b1f5e
     SHA256: a689804c4e6e9aa07d48f9c99b7a1be6b05cba1c632b1a083b8031f6e1651c28
-  InternalName: HWM
+  Company: MyDrivers.com
   Copyright: Copyright MyDrivers.com all right
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2016-07-07 03:47:37'
+  Date: ''
+  Description: DriverGenius Hardware monitor
   ExportedFunctions: ''
+  FileVersion: 9.2.707.1214
+  Filename: mydrivers.sys
   ImportedFunctions:
   - WRITE_REGISTER_BUFFER_USHORT
   - WRITE_REGISTER_BUFFER_ULONG
@@ -92,6 +62,46 @@ KnownVulnerableSamples:
   - READ_PORT_USHORT
   - READ_PORT_UCHAR
   - HalSetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: HWM
+  MD5: 507a649eb585d8d0447eab0532ef0c73
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: mydrivers.sys
+  Product: DriverGenius
+  ProductVersion: 2016.7.7.1214
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 32723c8062c08c35296c3e94f2b13cca
+    SHA1: ccb30ac21cfd87ec3d5f72a3e00fc7272f6bedd9
+    SHA256: 08f465c1cc08c882dc26c9b12af153532f5fc848ddb5dd7731009af08ece586c
+  SHA1: 7859e75580570e23a1ef7208b9a76f81738043d5
+  SHA256: 08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6
+  Sections:
+    .text:
+      Entropy: 6.200805818650461
+      Virtual Size: '0xaf2'
+    .rdata:
+      Entropy: 4.072413187793462
+      Virtual Size: '0x1b4'
+    .data:
+      Entropy: 2.9182958340544896
+      Virtual Size: '0xc'
+    INIT:
+      Entropy: 5.469889098051007
+      Virtual Size: '0x336'
+    .rsrc:
+      Entropy: 3.2912171468929072
+      Virtual Size: '0x368'
+    .reloc:
+      Entropy: 4.766376236187827
+      Virtual Size: '0xcc'
+  Signature:
+  - Beijing Kingsoft Security software Co.,Ltd
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -169,30 +179,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 32723c8062c08c35296c3e94f2b13cca
-    SHA1: ccb30ac21cfd87ec3d5f72a3e00fc7272f6bedd9
-    SHA256: 08f465c1cc08c882dc26c9b12af153532f5fc848ddb5dd7731009af08ece586c
-  Sections:
-    .text:
-      Entropy: 6.200805818650461
-      Virtual Size: '0xaf2'
-    .rdata:
-      Entropy: 4.072413187793462
-      Virtual Size: '0x1b4'
-    .data:
-      Entropy: 2.9182958340544896
-      Virtual Size: '0xc'
-    INIT:
-      Entropy: 5.469889098051007
-      Virtual Size: '0x336'
-    .rsrc:
-      Entropy: 3.2912171468929072
-      Virtual Size: '0x368'
-    .reloc:
-      Entropy: 4.766376236187827
-      Virtual Size: '0xcc'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-07-07 03:47:37'
+MitreID: T1068
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - mydrivers.sys
+Verified: 'FALSE'

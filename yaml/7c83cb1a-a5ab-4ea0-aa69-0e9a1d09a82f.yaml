@@ -1,52 +1,31 @@
-Id: 7c83cb1a-a5ab-4ea0-aa69-0e9a1d09a82f
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create GVCIDrv64.sys binPath=C:\windows\temp\GVCIDrv64.sys type=kernel
     && sc.exe start GVCIDrv64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: 7c83cb1a-a5ab-4ea0-aa69-0e9a1d09a82f
 KnownVulnerableSamples:
-- Filename: GVCIDrv64.sys
-  MD5: 8b287636041792f640f92e77e560725e
-  SHA1: e92817a8744ebc4e4fa5383cdce2b2977f01ecd4
-  SHA256: 42f0b036687cbd7717c9efed6991c00d4e3e7b032dc965a2556c02177dfdad0f
-  Signature:
-  - GIGA-BYTE TECHNOLOGY CO., LTD.
-  - Symantec Class 3 SHA256 Code Signing CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 263d00295d36d976b90f44aadc1faa90
     SHA1: 4eae38e9dc262eb7b6ede4b3d3f4ad068933845e
     SHA256: 2ff09bb919a9909068166c30322c4e904befeba5429e9a11d011297fb8a73c07
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  - WDFLDR.SYS
+  CreationTimestamp: '2019-01-14 20:00:52'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: GVCIDrv64.sys
   ImportedFunctions:
   - IoDeleteDevice
   - IoDeleteSymbolicLink
@@ -66,6 +45,47 @@ KnownVulnerableSamples:
   - WdfVersionBind
   - WdfVersionUnbindClass
   - WdfVersionBindClass
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - WDFLDR.SYS
+  InternalName: ''
+  MD5: 8b287636041792f640f92e77e560725e
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 5989194a389d2f7302b66de35c6b4ff5
+    SHA1: bcd3bbaf6c808eb23b0cad3cef6586bfcd063d62
+    SHA256: 83dbcc75fa740bdc3df5599b038ff6386a6a58805acfdaa77173f37b1808c012
+  SHA1: e92817a8744ebc4e4fa5383cdce2b2977f01ecd4
+  SHA256: 42f0b036687cbd7717c9efed6991c00d4e3e7b032dc965a2556c02177dfdad0f
+  Sections:
+    .text:
+      Entropy: 6.147035799967813
+      Virtual Size: '0xe0b'
+    .rdata:
+      Entropy: 3.806114293929385
+      Virtual Size: '0x54c'
+    .data:
+      Entropy: 0.5982968479127164
+      Virtual Size: '0xf28'
+    .pdata:
+      Entropy: 3.4469659354420483
+      Virtual Size: '0xb4'
+    INIT:
+      Entropy: 4.9556661025850675
+      Virtual Size: '0x2fa'
+    .reloc:
+      Entropy: 3.0890191852411095
+      Virtual Size: '0x24'
+  Signature:
+  - GIGA-BYTE TECHNOLOGY CO., LTD.
+  - Symantec Class 3 SHA256 Code Signing CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -141,30 +161,10 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 5989194a389d2f7302b66de35c6b4ff5
-    SHA1: bcd3bbaf6c808eb23b0cad3cef6586bfcd063d62
-    SHA256: 83dbcc75fa740bdc3df5599b038ff6386a6a58805acfdaa77173f37b1808c012
-  Sections:
-    .text:
-      Entropy: 6.147035799967813
-      Virtual Size: '0xe0b'
-    .rdata:
-      Entropy: 3.806114293929385
-      Virtual Size: '0x54c'
-    .data:
-      Entropy: 0.5982968479127164
-      Virtual Size: '0xf28'
-    .pdata:
-      Entropy: 3.4469659354420483
-      Virtual Size: '0xb4'
-    INIT:
-      Entropy: 4.9556661025850675
-      Virtual Size: '0x2fa'
-    .reloc:
-      Entropy: 3.0890191852411095
-      Virtual Size: '0x24'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-01-14 20:00:52'
+MitreID: T1068
+Resources:
+- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Tags:
 - GVCIDrv64.sys
+Verified: 'TRUE'

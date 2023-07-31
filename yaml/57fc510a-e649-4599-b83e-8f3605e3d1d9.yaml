@@ -1,12 +1,11 @@
-Id: 57fc510a-e649-4599-b83e-8f3605e3d1d9
+Acknowledgement:
+  Handle: '@mattnotmax'
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 CVE:
 - CVE-2022-26522
 - CVE-2022-26523
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create aswArPot.sys binPath=C:\windows\temp\aswArPot.sys type=kernel
     && sc.exe start aswArPot.sys
@@ -14,16 +13,10 @@ Commands:
     \ been found to be vulnerable to two high severity attacks that could potentially\
     \ lead to privilege escalation by running code in the kernel from a non-administrator\
     \ user."
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- 'CVE-2022-26522, CVE-2022-26523: Both of these vulnerabilities were fixed in version
-  22.1.'
-Acknowledgement:
-  Person: ''
-  Handle: '@mattnotmax'
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1.yara
@@ -35,43 +28,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 57fc510a-e649-4599-b83e-8f3605e3d1d9
 KnownVulnerableSamples:
-- Filename: aswArPot.sys
-  MD5: a179c4093d05a3e1ee73f6ff07f994aa
-  SHA1: 5d6b9e80e12bfc595d4d26f6afb099b3cb471dd4
-  SHA256: 4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1
-  Signature:
-  - Avast Software s.r.o.
-  - DigiCert High Assurance Code Signing CA-1
-  - DigiCert
-  Date: '2021-02-01 14:09:00'
-  Publisher: ''
-  Company: AVAST Software
-  Description: Avast Anti Rootkit
-  Product: 'Avast Antivirus '
-  ProductVersion: 21.1.187.0
-  FileVersion: 21.1.187.0
-  MachineType: AMD64
-  OriginalFilename: aswArPot.sys
-  Authentihash:
+- Authentihash:
     MD5: 66d55dcf5fe5e1b60f32880d48207105
     SHA1: b8b5e5951f1c4148537e9850f2b577a453e4c045
     SHA256: c0c131bc8d6c8b5a2be32474474b1221bce1289c174c87e743ed4a512f5571d4
-  InternalName: aswArPot
+  Company: AVAST Software
   Copyright: Copyright (c) 2021 AVAST Software
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2021-02-01 02:08:43'
+  Date: ''
+  Description: Avast Anti Rootkit
   ExportedFunctions: ''
+  FileVersion: 21.1.187.0
+  Filename: aswArPot.sys
   ImportedFunctions:
   - __C_specific_handler
   - KeDelayExecutionThread
@@ -239,6 +209,51 @@ KnownVulnerableSamples:
   - ExCreateCallback
   - ExUnregisterCallback
   - strcmp
+  Imports:
+  - ntoskrnl.exe
+  InternalName: aswArPot
+  MD5: a179c4093d05a3e1ee73f6ff07f994aa
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: aswArPot.sys
+  Product: 'Avast Antivirus '
+  ProductVersion: 21.1.187.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: edc05997bbdab8acd04f275b386ffdab
+    SHA1: b47a65e11021476840629d33996069e4638e241c
+    SHA256: fe13709d1d6fd5734b2d61d1661e6ac2540c5ee2f4f96e56418d1db86c0bdb20
+  SHA1: 5d6b9e80e12bfc595d4d26f6afb099b3cb471dd4
+  SHA256: 4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1
+  Sections:
+    .text:
+      Entropy: 6.386320097220837
+      Virtual Size: '0x228c2'
+    .rdata:
+      Entropy: 5.733045078108813
+      Virtual Size: '0x3ba4'
+    .data:
+      Entropy: 2.827822492450825
+      Virtual Size: '0x25ad0'
+    .pdata:
+      Entropy: 5.411411947630738
+      Virtual Size: '0x1218'
+    PAGE:
+      Entropy: 6.270335052415906
+      Virtual Size: '0x1c4b'
+    INIT:
+      Entropy: 5.365142970284712
+      Virtual Size: '0x13dc'
+    .rsrc:
+      Entropy: 3.285771259007418
+      Virtual Size: '0x398'
+    .reloc:
+      Entropy: 5.435120402444784
+      Virtual Size: '0x1a0'
+  Signature:
+  - Avast Software s.r.o.
+  - DigiCert High Assurance Code Signing CA-1
+  - DigiCert
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -312,36 +327,11 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
-  RichPEHeaderHash:
-    MD5: edc05997bbdab8acd04f275b386ffdab
-    SHA1: b47a65e11021476840629d33996069e4638e241c
-    SHA256: fe13709d1d6fd5734b2d61d1661e6ac2540c5ee2f4f96e56418d1db86c0bdb20
-  Sections:
-    .text:
-      Entropy: 6.386320097220837
-      Virtual Size: '0x228c2'
-    .rdata:
-      Entropy: 5.733045078108813
-      Virtual Size: '0x3ba4'
-    .data:
-      Entropy: 2.827822492450825
-      Virtual Size: '0x25ad0'
-    .pdata:
-      Entropy: 5.411411947630738
-      Virtual Size: '0x1218'
-    PAGE:
-      Entropy: 6.270335052415906
-      Virtual Size: '0x1c4b'
-    INIT:
-      Entropy: 5.365142970284712
-      Virtual Size: '0x13dc'
-    .rsrc:
-      Entropy: 3.285771259007418
-      Virtual Size: '0x398'
-    .reloc:
-      Entropy: 5.435120402444784
-      Virtual Size: '0x1a0'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-02-01 02:08:43'
+MitreID: T1068
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- 'CVE-2022-26522, CVE-2022-26523: Both of these vulnerabilities were fixed in version
+  22.1.'
 Tags:
 - aswArPot.sys
+Verified: 'TRUE'

@@ -1,47 +1,31 @@
-Id: 6fe10a55-7fb8-4a9d-9ebc-1b27b6e5b833
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Guus Verbeek
-Created: '2023-05-07'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create prokiller64.sys binPath=C:\windows\temp\prokiller64.sys type=kernel
     && sc.exe start prokiller64.sys
   Description: Signed POORTRY Samples
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-- https://news.sophos.com/en-us/2022/12/13/signed-driver-malware-moves-up-the-software-trust-chain/
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-05-07'
 Detection: []
+Id: 6fe10a55-7fb8-4a9d-9ebc-1b27b6e5b833
 KnownVulnerableSamples:
-- Filename: prokiller64.sys
-  MD5: 10f3679384a03cb487bda9621ceb5f90
-  SHA1: 31cc8718894d6e6ce8c132f68b8caaba39b5ba7a
-  SHA256: 0440ef40c46fdd2b5d86e7feef8577a8591de862cfd7928cdbcc8f47b8fa3ffc
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 4252d83e18ad41f0cea7ac168218d95b
     SHA1: cf9cb05c9b725efca68c4b7d6f53c8e233217ac4
     SHA256: cd66e893300e7e59a749fe4e1b1706f8ccb5ae140254def9f5a614648e2da36f
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2022-06-02 04:09:08'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: prokiller64.sys
   ImportedFunctions:
   - rand
   - srand
@@ -69,6 +53,42 @@ KnownVulnerableSamples:
   - PsIsSystemThread
   - ObOpenObjectByPointerWithTag
   - KeBugCheckEx
+  Imports:
+  - ntoskrnl.exe
+  InternalName: ''
+  MD5: 10f3679384a03cb487bda9621ceb5f90
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: a7d4acb55095eb7efa7945ef805fcf8b
+    SHA1: 10103bfe4f9a5b22c45d64354f88be415249f384
+    SHA256: 58bcb1d3215317fc95d1b8ddef6945aead4de70049db273b0d4a82a7e22b38d8
+  SHA1: 31cc8718894d6e6ce8c132f68b8caaba39b5ba7a
+  SHA256: 0440ef40c46fdd2b5d86e7feef8577a8591de862cfd7928cdbcc8f47b8fa3ffc
+  Sections:
+    .text:
+      Entropy: 5.867789766876108
+      Virtual Size: '0x16a8'
+    .rdata:
+      Entropy: 3.699262445440139
+      Virtual Size: '0x5b0'
+    .data:
+      Entropy: 0.6050836155077387
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.6860326615335524
+      Virtual Size: '0x15c'
+    INIT:
+      Entropy: 5.264965850546818
+      Virtual Size: '0x3ee'
+    .reloc:
+      Entropy: 3.566428031846024
+      Virtual Size: '0x20'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -121,30 +141,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: a7d4acb55095eb7efa7945ef805fcf8b
-    SHA1: 10103bfe4f9a5b22c45d64354f88be415249f384
-    SHA256: 58bcb1d3215317fc95d1b8ddef6945aead4de70049db273b0d4a82a7e22b38d8
-  Sections:
-    .text:
-      Entropy: 5.867789766876108
-      Virtual Size: '0x16a8'
-    .rdata:
-      Entropy: 3.699262445440139
-      Virtual Size: '0x5b0'
-    .data:
-      Entropy: 0.6050836155077387
-      Virtual Size: '0x110'
-    .pdata:
-      Entropy: 3.6860326615335524
-      Virtual Size: '0x15c'
-    INIT:
-      Entropy: 5.264965850546818
-      Virtual Size: '0x3ee'
-    .reloc:
-      Entropy: 3.566428031846024
-      Virtual Size: '0x20'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-06-02 04:09:08'
+MitreID: T1068
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+- https://news.sophos.com/en-us/2022/12/13/signed-driver-malware-moves-up-the-software-trust-chain/
 Tags:
 - prokiller64.sys
+Verified: 'TRUE'

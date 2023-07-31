@@ -1,22 +1,16 @@
-Id: be3e49ea-095e-4fdb-9529-f4c2dbb9a9fc
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel
     && sc.exe start PhlashNT.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/65db1b259e305a52042e07e111f4fa4af16542c8bacd33655f753ef642228890.yara
@@ -28,43 +22,20 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: be3e49ea-095e-4fdb-9529-f4c2dbb9a9fc
 KnownVulnerableSamples:
-- Filename: PhlashNT.sys
-  MD5: e9e786bdba458b8b4f9e93d034f73d00
-  SHA1: c6d349823bbb1f5b44bae91357895dba653c5861
-  SHA256: 65db1b259e305a52042e07e111f4fa4af16542c8bacd33655f753ef642228890
-  Signature:
-  - Phoenix Technology Ltd.
-  - VeriSign Class 3 Code Signing 2004 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: ''
-  Publisher: ''
-  Company: Phoenix Technologies, Ltd.
-  Description: SWinFlash Driver for Windows NT
-  Product: WinPhlash
-  ProductVersion: 1.6.1.0
-  FileVersion: 1.6.1.0
-  MachineType: AMD64
-  OriginalFilename: PHLASHNT.SYS
-  Authentihash:
+- Authentihash:
     MD5: 5cf72ecb15ffea87586783893b02c43d
     SHA1: ef2d7210b761f158a0832083a8407b3ec2f99db9
     SHA256: cde02c7db90626bcfbfbbc1315d4ce18d4f15667fa57c16b9ac2b060507c62ad
-  InternalName: PHLASHNT
+  Company: Phoenix Technologies, Ltd.
   Copyright: (c) Phoenix Technologies, Ltd. 2000-2003
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2009-09-22 22:36:24'
+  Date: ''
+  Description: SWinFlash Driver for Windows NT
   ExportedFunctions: ''
+  FileVersion: 1.6.1.0
+  Filename: PhlashNT.sys
   ImportedFunctions:
   - IoDeleteDevice
   - IoCreateSymbolicLink
@@ -79,6 +50,48 @@ KnownVulnerableSamples:
   - MmUnmapIoSpace
   - ExFreePoolWithTag
   - ExAllocatePoolWithTag
+  Imports:
+  - ntoskrnl.exe
+  InternalName: PHLASHNT
+  MD5: e9e786bdba458b8b4f9e93d034f73d00
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: PHLASHNT.SYS
+  Product: WinPhlash
+  ProductVersion: 1.6.1.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 73c7564d5bcb59bfea5884036081a613
+    SHA1: a3e28a225415911b2f00bfb8c248e7c0a89f0a5f
+    SHA256: 82a46d69e70d700c06faa5128c311c4d8d1e63ab9507e635cfca2d0e9c875c3f
+  SHA1: c6d349823bbb1f5b44bae91357895dba653c5861
+  SHA256: 65db1b259e305a52042e07e111f4fa4af16542c8bacd33655f753ef642228890
+  Sections:
+    .text:
+      Entropy: 5.653488587929744
+      Virtual Size: '0xb617'
+    .rdata:
+      Entropy: 3.8431584393217295
+      Virtual Size: '0x478'
+    .data:
+      Entropy: 1.4805049954314338
+      Virtual Size: '0x8cc'
+    .pdata:
+      Entropy: 4.32207066965722
+      Virtual Size: '0x534'
+    INIT:
+      Entropy: 4.833223964565047
+      Virtual Size: '0x212'
+    .rsrc:
+      Entropy: 3.3053699840139497
+      Virtual Size: '0x368'
+    .reloc:
+      Entropy: 1.667662953351116
+      Virtual Size: '0xdc'
+  Signature:
+  - Phoenix Technology Ltd.
+  - VeriSign Class 3 Code Signing 2004 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -154,33 +167,10 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 73c7564d5bcb59bfea5884036081a613
-    SHA1: a3e28a225415911b2f00bfb8c248e7c0a89f0a5f
-    SHA256: 82a46d69e70d700c06faa5128c311c4d8d1e63ab9507e635cfca2d0e9c875c3f
-  Sections:
-    .text:
-      Entropy: 5.653488587929744
-      Virtual Size: '0xb617'
-    .rdata:
-      Entropy: 3.8431584393217295
-      Virtual Size: '0x478'
-    .data:
-      Entropy: 1.4805049954314338
-      Virtual Size: '0x8cc'
-    .pdata:
-      Entropy: 4.32207066965722
-      Virtual Size: '0x534'
-    INIT:
-      Entropy: 4.833223964565047
-      Virtual Size: '0x212'
-    .rsrc:
-      Entropy: 3.3053699840139497
-      Virtual Size: '0x368'
-    .reloc:
-      Entropy: 1.667662953351116
-      Virtual Size: '0xdc'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-09-22 22:36:24'
+MitreID: T1068
+Resources:
+- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Tags:
 - PhlashNT.sys
+Verified: 'TRUE'
