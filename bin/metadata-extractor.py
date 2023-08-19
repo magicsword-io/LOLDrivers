@@ -170,7 +170,8 @@ def get_metadata(driver):
                     tmp_cert_dict['TBS'] = {
                         "MD5": hashlib.md5(raw_cert.tbs_certificate_bytes).hexdigest(),
                         "SHA1": hashlib.sha1(raw_cert.tbs_certificate_bytes).hexdigest(),
-                        "SHA256": hashlib.sha256(raw_cert.tbs_certificate_bytes).hexdigest()
+                        "SHA256": hashlib.sha256(raw_cert.tbs_certificate_bytes).hexdigest(),
+                        "SHA384": hashlib.sha384(raw_cert.tbs_certificate_bytes).hexdigest()
                     }
 
                     sig_info['Certificates'].append(tmp_cert_dict)
