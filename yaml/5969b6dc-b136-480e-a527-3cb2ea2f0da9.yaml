@@ -46,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: 615a7c647eba3f2dcea463d5705d5d59ca70b4250f895ad20ce6876076a8fa28
   Company: Marvin Test Solutions, Inc.
   Copyright: "Copyright \xA9 1996-2021 Marvin Test Solutions, Inc. All Rights Reserved."
-  CreationTimestamp: '2021-01-06 17:19:33'
+  CreationTimestamp: '2021-01-06 19:19:33'
   Date: ''
   Description: HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI
     access
@@ -184,6 +184,7 @@ KnownVulnerableSamples:
         MD5: 51c3959a45cecf3d21a3effb05762573
         SHA1: ecfcd25fd0525448a74875ba271566bc0bfbf061
         SHA256: de1da11668f0a8d5e13346ed3ab2755f5d25bebffcfd1d0bde5b9f87bc292c91
+        SHA384: f0eab75baf1f24a53d63bd795cd07292a312f603513c8cb0f40fe5acbdb477ed72607d309fad21471a16f6223fb3a838
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
         CA , SHA256 , G3
       ValidFrom: '2016-06-15 00:00:00'
@@ -197,6 +198,7 @@ KnownVulnerableSamples:
         MD5: fd8cfeea06be14fa89689909e1fc72dc
         SHA1: 8bc3cd2f70abe543e0dbe721065a4076c8521f36
         SHA256: 15e7050789df807f3e3174294a01b637a1239f603e42f4b5db9398efa9da9996
+        SHA384: 8b9f95e6d3dd45e4ef38e2f12fb893d7d1bb1ba867e152e4a73c49b3d51dd52bc83a05982deac29af90436061248546d
     - Subject: ??=Private Organization, serialNumber=2147696, ??=US, ??=DELAWARE,
         C=US, ST=CA, L=Irvine, ??=1770 Kettering, O=Marvin Test Solutions, Inc., CN=Marvin
         Test Solutions, Inc.
@@ -211,6 +213,7 @@ KnownVulnerableSamples:
         MD5: c4e9591383494fbfb914aac72114934d
         SHA1: 336fa67dfea049342c5b9ad622c30f97262c04fc
         SHA256: b7347983521d490b380cc89242a926377785b57661f2b2332ab2750920e607d5
+        SHA384: 11ec2caeda9631792c0d7ea604db5ee96d697903e18addcc84d34e1c0257473a2c3007aa3a4568855997baf804495488
     Signer:
     - SerialNumber: 716ef836a8ceb23aeaf9174e
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
@@ -222,7 +225,7 @@ KnownVulnerableSamples:
     SHA256: 734b74798a680d2e534c14a033858c4081c7879af1f48037d9d5483aa27a7e90
   Company: Marvin Test Solutions, Inc.
   Copyright: "Copyright \xA9 1996-2015 Marvin Test Solutions, Inc. All Rights Reserved."
-  CreationTimestamp: '2015-06-24 17:52:05'
+  CreationTimestamp: '2015-06-24 19:52:05'
   Date: ''
   Description: HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI
     access
@@ -303,7 +306,7 @@ KnownVulnerableSamples:
       Entropy: 5.133620054689875
       Virtual Size: '0x2151'
     .rdata:
-      Entropy: 4.569984356691087
+      Entropy: 4.569984356691088
       Virtual Size: '0xaec'
     .pdata:
       Entropy: 3.983331164222992
@@ -328,6 +331,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -340,6 +344,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G2
       ValidFrom: '2015-02-03 00:00:00'
@@ -353,6 +358,7 @@ KnownVulnerableSamples:
         MD5: a0ac4d48fe852f7b3ed4e623d59a825f
         SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
         SHA256: 78d2e41a13eb4e9171bae2d2adb192cf39210b5231f77cda936bcfbe8c003bdf
+        SHA384: 990ed96dca5979deeedc98a012279f04efb5559d7e7f5084a12f3802ee9439326557aecefd081cff739b78515b5d7f50
     - Subject: C=US, ST=CA, L=Irvine, O=Marvin Test Solutions, Inc., CN=Marvin Test
         Solutions, Inc., emailAddress=it@marvintest.com
       ValidFrom: '2015-06-17 17:46:36'
@@ -366,6 +372,7 @@ KnownVulnerableSamples:
         MD5: 5bdf35241e1bbd3dd8560aba2c4305f1
         SHA1: 34e844721f998e3b40ee75329c4e5df87e52dc61
         SHA256: 9441743aa497acefe2535a284e44a4cd55a201965900add8c7d770b0af7a8845
+        SHA384: 83003cfcb03f6cff7f5ca49603bcd9db4b5ebf62dd48a892b7d78e98ecf42726f0e77e9318050b71f5d6c649f92938c8
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -378,6 +385,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     Signer:
     - SerialNumber: 1121f0942b1e09a2573e8ab9ce0e3955b2de
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -388,7 +396,7 @@ KnownVulnerableSamples:
     SHA256: 734b74798a680d2e534c14a033858c4081c7879af1f48037d9d5483aa27a7e90
   Company: Marvin Test Solutions, Inc.
   Copyright: "Copyright \xA9 1996-2015 Marvin Test Solutions, Inc. All Rights Reserved."
-  CreationTimestamp: '2015-06-24 17:52:05'
+  CreationTimestamp: '2015-06-24 19:52:05'
   Date: ''
   Description: HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI
     access
@@ -469,7 +477,7 @@ KnownVulnerableSamples:
       Entropy: 5.133620054689875
       Virtual Size: '0x2151'
     .rdata:
-      Entropy: 4.569984356691087
+      Entropy: 4.569984356691088
       Virtual Size: '0xaec'
     .pdata:
       Entropy: 3.983331164222992
@@ -494,6 +502,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -506,6 +515,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G2
       ValidFrom: '2015-02-03 00:00:00'
@@ -519,6 +529,7 @@ KnownVulnerableSamples:
         MD5: a0ac4d48fe852f7b3ed4e623d59a825f
         SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
         SHA256: 78d2e41a13eb4e9171bae2d2adb192cf39210b5231f77cda936bcfbe8c003bdf
+        SHA384: 990ed96dca5979deeedc98a012279f04efb5559d7e7f5084a12f3802ee9439326557aecefd081cff739b78515b5d7f50
     - Subject: C=US, ST=CA, L=Irvine, O=Marvin Test Solutions, Inc., CN=Marvin Test
         Solutions, Inc., emailAddress=it@marvintest.com
       ValidFrom: '2015-06-17 17:46:36'
@@ -532,6 +543,7 @@ KnownVulnerableSamples:
         MD5: 5bdf35241e1bbd3dd8560aba2c4305f1
         SHA1: 34e844721f998e3b40ee75329c4e5df87e52dc61
         SHA256: 9441743aa497acefe2535a284e44a4cd55a201965900add8c7d770b0af7a8845
+        SHA384: 83003cfcb03f6cff7f5ca49603bcd9db4b5ebf62dd48a892b7d78e98ecf42726f0e77e9318050b71f5d6c649f92938c8
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -544,6 +556,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     Signer:
     - SerialNumber: 1121f0942b1e09a2573e8ab9ce0e3955b2de
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -554,7 +567,7 @@ KnownVulnerableSamples:
     SHA256: 25bc1b72ba6092674ec561d7de8f5e4a7adb23c29fa68de5b29a30a671257dac
   Company: Marvin Test Solutions, Inc.
   Copyright: "Copyright \xA9 1996-2021 Marvin Test Solutions, Inc. All Rights Reserved."
-  CreationTimestamp: '2021-01-06 17:19:31'
+  CreationTimestamp: '2021-01-06 19:19:31'
   Date: ''
   Description: HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI
     access
@@ -635,10 +648,10 @@ KnownVulnerableSamples:
       Entropy: 5.425823948048583
       Virtual Size: '0x5e54'
     .rdata:
-      Entropy: 4.468643667711766
+      Entropy: 4.468643667711767
       Virtual Size: '0xcaa'
     .pdata:
-      Entropy: 4.00613719103044
+      Entropy: 4.006137191030439
       Virtual Size: '0x33c'
     .rsrc:
       Entropy: 3.6737432495687674
@@ -660,6 +673,7 @@ KnownVulnerableSamples:
         MD5: 51c3959a45cecf3d21a3effb05762573
         SHA1: ecfcd25fd0525448a74875ba271566bc0bfbf061
         SHA256: de1da11668f0a8d5e13346ed3ab2755f5d25bebffcfd1d0bde5b9f87bc292c91
+        SHA384: f0eab75baf1f24a53d63bd795cd07292a312f603513c8cb0f40fe5acbdb477ed72607d309fad21471a16f6223fb3a838
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
         CA , SHA256 , G3
       ValidFrom: '2016-06-15 00:00:00'
@@ -673,6 +687,7 @@ KnownVulnerableSamples:
         MD5: fd8cfeea06be14fa89689909e1fc72dc
         SHA1: 8bc3cd2f70abe543e0dbe721065a4076c8521f36
         SHA256: 15e7050789df807f3e3174294a01b637a1239f603e42f4b5db9398efa9da9996
+        SHA384: 8b9f95e6d3dd45e4ef38e2f12fb893d7d1bb1ba867e152e4a73c49b3d51dd52bc83a05982deac29af90436061248546d
     - Subject: ??=Private Organization, serialNumber=2147696, ??=US, ??=DELAWARE,
         C=US, ST=CA, L=Irvine, ??=1770 Kettering, O=Marvin Test Solutions, Inc., CN=Marvin
         Test Solutions, Inc.
@@ -687,6 +702,7 @@ KnownVulnerableSamples:
         MD5: c4e9591383494fbfb914aac72114934d
         SHA1: 336fa67dfea049342c5b9ad622c30f97262c04fc
         SHA256: b7347983521d490b380cc89242a926377785b57661f2b2332ab2750920e607d5
+        SHA384: 11ec2caeda9631792c0d7ea604db5ee96d697903e18addcc84d34e1c0257473a2c3007aa3a4568855997baf804495488
     Signer:
     - SerialNumber: 716ef836a8ceb23aeaf9174e
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning

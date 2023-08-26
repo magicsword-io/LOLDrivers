@@ -48,7 +48,7 @@ KnownVulnerableSamples:
     SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
   Company: Phoenix Technologies
   Copyright: EnTech Taiwan, 1997-2009
-  CreationTimestamp: '2009-12-14 03:23:26'
+  CreationTimestamp: '2009-12-14 05:23:26'
   Date: ''
   Description: DriverAgent Direct I/O for 64-bit Windows
   ExportedFunctions: ''
@@ -110,7 +110,7 @@ KnownVulnerableSamples:
   SHA256: 05f052c64d192cf69a462a5ec16dda0d43ca5d0245900c9fcb9201685a2e7748
   Sections:
     .text:
-      Entropy: 6.202530356985499
+      Entropy: 6.202530356985501
       Virtual Size: '0x1e7e'
     .rdata:
       Entropy: 4.254011605715145
@@ -148,6 +148,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , SHA256 , G2
       ValidFrom: '2011-08-02 10:00:00'
       ValidTo: '2019-08-02 10:00:00'
@@ -160,6 +161,7 @@ KnownVulnerableSamples:
         MD5: 0140a61a07f5dfb1d7d3c66ec7d6a916
         SHA1: 38cf80255975d689f1ab266a85bc72335a82e41f
         SHA256: 79a79284a0ef2db92bc02b235895de02ee6a15bb7ee233185d4567f9fc3d1d1a
+        SHA384: 5fcadd07057f8358148fca22ad424498f8e1a97bb55317e4426f809000542988867e0c44d0175950450653e0d20dd83a
     - Subject: OU=GlobalSign Root CA , R3, O=GlobalSign, CN=GlobalSign
       ValidFrom: '2009-11-18 10:00:00'
       ValidTo: '2019-03-18 10:00:00'
@@ -172,6 +174,7 @@ KnownVulnerableSamples:
         MD5: f47739306d14722e670d9436eadb8e4f
         SHA1: 457d9df00a652cb4c3356d00145d9528fc309172
         SHA256: bd1765c56594221373893ef26d97f88c144fb0e5a0111215b45d7239c3444df7
+        SHA384: b8b268a1bdf388be66a1c969b7b353cb2bbc9fad446049b7efa05a9ab3b714494e97f4d1ee1c0bae35bfd9bf6ef275b3
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G2
       ValidFrom: '2015-02-03 00:00:00'
@@ -185,6 +188,7 @@ KnownVulnerableSamples:
         MD5: a0ac4d48fe852f7b3ed4e623d59a825f
         SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
         SHA256: 78d2e41a13eb4e9171bae2d2adb192cf39210b5231f77cda936bcfbe8c003bdf
+        SHA384: 990ed96dca5979deeedc98a012279f04efb5559d7e7f5084a12f3802ee9439326557aecefd081cff739b78515b5d7f50
     - Subject: C=US, ST=MA, L=North Andover, O=eSupport.com, Inc., CN=eSupport.com,
         Inc.
       ValidFrom: '2014-09-24 20:36:26'
@@ -198,6 +202,7 @@ KnownVulnerableSamples:
         MD5: 07ff655cdba156b39f88d802c992ebf3
         SHA1: 3c8d5517e4d30167f270e3543d5e2ce2bf467070
         SHA256: a065dcc26ff157388fbb81ef23454b8eaf2deaa4794040f4bf1afb6a6d79d0a7
+        SHA384: e9c4de5f60539f7237e8d371e15b74bcc18d5b329fa6545c422b0c400f98d6c1e482c5a9b98e61c5ab8958c76e226976
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -210,6 +215,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     Signer:
     - SerialNumber: 11216e054fad930d88cabc078eb0d3bcc8ac
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , SHA256 , G2
@@ -220,7 +226,7 @@ KnownVulnerableSamples:
     SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
   Company: Phoenix Technologies
   Copyright: EnTech Taiwan, 1997-2009
-  CreationTimestamp: '2009-12-14 03:23:26'
+  CreationTimestamp: '2009-12-14 05:23:26'
   Date: ''
   Description: DriverAgent Direct I/O for 64-bit Windows
   ExportedFunctions: ''
@@ -282,7 +288,7 @@ KnownVulnerableSamples:
   SHA256: 4045ae77859b1dbf13972451972eaaf6f3c97bea423e9e78f1c2f14330cd47ca
   Sections:
     .text:
-      Entropy: 6.202530356985499
+      Entropy: 6.202530356985501
       Virtual Size: '0x1e7e'
     .rdata:
       Entropy: 4.254011605715145
@@ -321,6 +327,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -333,6 +340,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 13:00:00'
@@ -346,6 +354,7 @@ KnownVulnerableSamples:
         MD5: 5ccf05e4dec10d9d6fe15d8778325272
         SHA1: 79f0a648bd7f1184f86bff43ae47c9ecc3ed3cec
         SHA256: 33ea31b892ba274a4aefe545de45c42c218b6dff78146655cdea892545c2cccc
+        SHA384: 1350ebc11fd20f5f141bc545786506e6a154be054da7a6e603cb276a6d60a24f2a4016ecc2f5cabd1088e1905f60aabf
     - Subject: C=US, ST=MA, L=North Andover, O=Phoenix Technologies Ltd, OU=eSupport,
         CN=Phoenix Technologies Ltd
       ValidFrom: '2009-12-11 17:20:45'
@@ -359,6 +368,7 @@ KnownVulnerableSamples:
         MD5: ed0acf60cdd337b9e0a2ab818d7733c6
         SHA1: e5a9eb7de851eb17fed066190a6c4e8b13cc908b
         SHA256: ddb82ae2aaed1a98b7c6c84378f622064b4e0e3f9b2abb57819eeba31eabee40
+        SHA384: 589881a40c8ed6c0d0c368b44000629373665870382b6e9b4621fe9eaa06051c6e358bc4faacc9778a96d2ac872bc359
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 10:00:00'
@@ -372,6 +382,7 @@ KnownVulnerableSamples:
         MD5: 7dd2351a85d3665eeb6720a21f4f7dee
         SHA1: 77838c4d7f36958a581841d28f481d61ce0696ed
         SHA256: 846725f4b0193468c1079d6127e9e6e420fc6ed66019ed02d732ba644decad57
+        SHA384: aaa45fe704bc66bb1842a2123c6e45e016dfbc7ba2ce07d7d2ee0b5d488a39c68bc6db582cb45d51f5fa52e60be8efd6
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -384,6 +395,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 010000000001257ee1f400
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
@@ -395,7 +407,7 @@ KnownVulnerableSamples:
     SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
   Company: Phoenix Technologies
   Copyright: EnTech Taiwan, 1997-2009
-  CreationTimestamp: '2009-12-14 03:23:26'
+  CreationTimestamp: '2009-12-14 05:23:26'
   Date: ''
   Description: DriverAgent Direct I/O for 64-bit Windows
   ExportedFunctions: ''
@@ -457,7 +469,7 @@ KnownVulnerableSamples:
   SHA256: 6948480954137987a0be626c24cf594390960242cd75f094cd6aaa5c2e7a54fa
   Sections:
     .text:
-      Entropy: 6.202530356985499
+      Entropy: 6.202530356985501
       Virtual Size: '0x1e7e'
     .rdata:
       Entropy: 4.254011605715145
@@ -496,6 +508,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -508,6 +521,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 13:00:00'
@@ -521,6 +535,7 @@ KnownVulnerableSamples:
         MD5: 5ccf05e4dec10d9d6fe15d8778325272
         SHA1: 79f0a648bd7f1184f86bff43ae47c9ecc3ed3cec
         SHA256: 33ea31b892ba274a4aefe545de45c42c218b6dff78146655cdea892545c2cccc
+        SHA384: 1350ebc11fd20f5f141bc545786506e6a154be054da7a6e603cb276a6d60a24f2a4016ecc2f5cabd1088e1905f60aabf
     - Subject: C=US, ST=MA, L=North Andover, O=Phoenix Technologies Ltd, OU=eSupport,
         CN=Phoenix Technologies Ltd
       ValidFrom: '2009-12-11 17:20:45'
@@ -534,6 +549,7 @@ KnownVulnerableSamples:
         MD5: ed0acf60cdd337b9e0a2ab818d7733c6
         SHA1: e5a9eb7de851eb17fed066190a6c4e8b13cc908b
         SHA256: ddb82ae2aaed1a98b7c6c84378f622064b4e0e3f9b2abb57819eeba31eabee40
+        SHA384: 589881a40c8ed6c0d0c368b44000629373665870382b6e9b4621fe9eaa06051c6e358bc4faacc9778a96d2ac872bc359
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 10:00:00'
@@ -547,6 +563,7 @@ KnownVulnerableSamples:
         MD5: 7dd2351a85d3665eeb6720a21f4f7dee
         SHA1: 77838c4d7f36958a581841d28f481d61ce0696ed
         SHA256: 846725f4b0193468c1079d6127e9e6e420fc6ed66019ed02d732ba644decad57
+        SHA384: aaa45fe704bc66bb1842a2123c6e45e016dfbc7ba2ce07d7d2ee0b5d488a39c68bc6db582cb45d51f5fa52e60be8efd6
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -559,6 +576,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 010000000001257ee1f400
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
@@ -570,7 +588,7 @@ KnownVulnerableSamples:
     SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
   Company: Phoenix Technologies
   Copyright: EnTech Taiwan, 1997-2009
-  CreationTimestamp: '2009-12-14 03:23:26'
+  CreationTimestamp: '2009-12-14 05:23:26'
   Date: ''
   Description: DriverAgent Direct I/O for 64-bit Windows
   ExportedFunctions: ''
@@ -632,7 +650,7 @@ KnownVulnerableSamples:
   SHA256: 8cb62c5d41148de416014f80bd1fd033fd4d2bd504cb05b90eeb6992a382d58f
   Sections:
     .text:
-      Entropy: 6.202530356985499
+      Entropy: 6.202530356985501
       Virtual Size: '0x1e7e'
     .rdata:
       Entropy: 4.254011605715145
@@ -670,6 +688,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -682,6 +701,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -695,6 +715,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Massachusetts, L=North Andover, O=eSupport.com, Inc, CN=eSupport.com,
         Inc
       ValidFrom: '2013-08-20 20:02:56'
@@ -708,6 +729,7 @@ KnownVulnerableSamples:
         MD5: 570a8aca88583d09bea3e125d3d7000b
         SHA1: 08661628ab6fc154918e70be1e880d44b5ef6d18
         SHA256: a66a20b7e5eccc727d743a53db3d8db58b16a9855cee5188efd74e8d5290beba
+        SHA384: c3ca78259c9cab5169770ea2a84e0473004ed3e70c5af5ec2f130c1a91cf2ea29e8f1d6fb7f8dbf963d425f1ce1bf6ad
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -720,6 +742,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     Signer:
     - SerialNumber: 11213d2f2fb6b9005e295e3c9596b6442513
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -730,7 +753,7 @@ KnownVulnerableSamples:
     SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
   Company: Phoenix Technologies
   Copyright: EnTech Taiwan, 1997-2009
-  CreationTimestamp: '2009-12-14 03:23:26'
+  CreationTimestamp: '2009-12-14 05:23:26'
   Date: ''
   Description: DriverAgent Direct I/O for 64-bit Windows
   ExportedFunctions: ''
@@ -792,7 +815,7 @@ KnownVulnerableSamples:
   SHA256: b1d96233235a62dbb21b8dbe2d1ae333199669f67664b107bff1ad49b41d9414
   Sections:
     .text:
-      Entropy: 6.202530356985499
+      Entropy: 6.202530356985501
       Virtual Size: '0x1e7e'
     .rdata:
       Entropy: 4.254011605715145
@@ -830,6 +853,7 @@ KnownVulnerableSamples:
         MD5: f47739306d14722e670d9436eadb8e4f
         SHA1: 457d9df00a652cb4c3356d00145d9528fc309172
         SHA256: bd1765c56594221373893ef26d97f88c144fb0e5a0111215b45d7239c3444df7
+        SHA384: b8b268a1bdf388be66a1c969b7b353cb2bbc9fad446049b7efa05a9ab3b714494e97f4d1ee1c0bae35bfd9bf6ef275b3
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
         CA , SHA256 , G2
       ValidFrom: '2011-08-02 10:00:00'
@@ -843,6 +867,7 @@ KnownVulnerableSamples:
         MD5: b3d3ff804abcd2e7686c126c98cc2c10
         SHA1: 358391557c2b6213777e282ad8efe9c8112d1b0e
         SHA256: 9467b8e0d2879abe9a9b791d7a1aa60672949af71bb1b2a5aca1a54368519bca
+        SHA384: 936a127c2d468f5e4edb642c82bed11fb5df99b87cf34b8d7ddc136e979183d133dae715146d98c63af32186eb8d1bbd
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -855,6 +880,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     - Subject: ??=Private Organization, serialNumber=001030216, ??=US, ??=Massachusetts,
         C=US, ST=MA, L=North Andover, ??=120 Water St, O=eSupport.com, Inc., CN=eSupport.com,
         Inc.
@@ -869,6 +895,7 @@ KnownVulnerableSamples:
         MD5: f072f16cdf1f6c4bf7cf7e6306bc5fdc
         SHA1: 3cd171c0933a070c0d16bca6ae068aaf4844bb89
         SHA256: 02243b344c0aafe05d84d4f599fc19d862cd6965a4e0d299af544cbaaea3c58f
+        SHA384: 4bb4b23312bf392a82f4104c9a08c160e35893b8988911eebed69df1af0179d1a7a640fcda88678df7b9855ca9790688
     Signer:
     - SerialNumber: 1121b5d4d579fe52c475c01e3da626487f05
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
@@ -880,7 +907,7 @@ KnownVulnerableSamples:
     SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
   Company: Phoenix Technologies
   Copyright: EnTech Taiwan, 1997-2009
-  CreationTimestamp: '2009-12-14 03:23:26'
+  CreationTimestamp: '2009-12-14 05:23:26'
   Date: ''
   Description: DriverAgent Direct I/O for 64-bit Windows
   ExportedFunctions: ''
@@ -943,7 +970,7 @@ KnownVulnerableSamples:
   SHA256: 4db1e0fdc9e6cefeb1d588668ea6161a977c372d841e7b87098cf90aa679abfb
   Sections:
     .text:
-      Entropy: 6.202530356985499
+      Entropy: 6.202530356985501
       Virtual Size: '0x1e7e'
     .rdata:
       Entropy: 4.254011605715145

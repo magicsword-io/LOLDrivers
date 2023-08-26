@@ -71,6 +71,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -83,6 +84,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -96,6 +98,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=TW, O=Micro,Star Int'l Co. Ltd., CN=Micro,Star Int'l Co. Ltd.
       ValidFrom: '2008-08-28 09:49:45'
       ValidTo: '2011-08-28 09:49:45'
@@ -108,6 +111,7 @@ KnownVulnerableSamples:
         MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
         SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
         SHA256: 88a8e9a799af515b9223e4cdf24d0ef1e72f12124be02786f026a3c26317b417
+        SHA384: d8d8769d5b6a0fe7c56fcde24c735475ee0e5d01c63dbf7690cdae5a3e251818bed42443d0c6424d39e81a19d6c83bdb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -121,6 +125,7 @@ KnownVulnerableSamples:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
         SHA256: 60846fc990e271a707cd2d53d0bb21834a04f7652214aa0c12597ff6649d352d
+        SHA384: 6b37b28ca97b32a31b0fa53b5e961ae0f2d1aae2c5bf46de132e57834ee3968d9af7ad204821f9389cc4e0b5a8481fe8
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -133,6 +138,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000011c08b7f67e
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
@@ -156,10 +162,10 @@ KnownVulnerableSamples:
       Entropy: 3.1879942043708462
       Virtual Size: '0x60'
     INIT:
-      Entropy: 4.4494366822955245
+      Entropy: 4.449436682295525
       Virtual Size: '0x202'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
 - Filename: RTCore64.sys
   MD5: 925ee3f3227c3b63e141ba16bd83f024
   SHA1: 57ea07ab767f11c81c6468b1f8a3d5f4618b800b
@@ -213,6 +219,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -225,6 +232,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -237,6 +245,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -251,6 +260,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -263,6 +273,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -282,13 +293,13 @@ KnownVulnerableSamples:
       Entropy: 2.4884950805464947
       Virtual Size: '0x58'
     .pdata:
-      Entropy: 3.045843351790575
+      Entropy: 3.0458433517905754
       Virtual Size: '0x54'
     INIT:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 06:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
 - Filename: rtcore64.sys
   MD5: 483abeee17e4e30a760ec8c0d6d31d6d
   SHA1: f56fec3f2012cd7fc4528626debc590909ed74b6
@@ -345,6 +356,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G2
       ValidFrom: '2016-05-24 00:00:00'
@@ -358,6 +370,7 @@ KnownVulnerableSamples:
         MD5: acb5170547d76873f1e4ff18ed5de2eb
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
         SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
+        SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
         CA , SHA256 , G3
       ValidFrom: '2016-06-15 00:00:00'
@@ -371,6 +384,7 @@ KnownVulnerableSamples:
         MD5: fd8cfeea06be14fa89689909e1fc72dc
         SHA1: 8bc3cd2f70abe543e0dbe721065a4076c8521f36
         SHA256: 15e7050789df807f3e3174294a01b637a1239f603e42f4b5db9398efa9da9996
+        SHA384: 8b9f95e6d3dd45e4ef38e2f12fb893d7d1bb1ba867e152e4a73c49b3d51dd52bc83a05982deac29af90436061248546d
     - Subject: O=GlobalSign, OU=GlobalSign Root CA , R3, CN=GlobalSign
       ValidFrom: '2015-06-04 17:47:53'
       ValidTo: '2025-06-04 17:47:53'
@@ -383,6 +397,7 @@ KnownVulnerableSamples:
         MD5: b61c1ad0b5d89c8170aaa81f8b6218a3
         SHA1: b84d6a44f86e112ef3ecb55e22527fd37f622de8
         SHA256: 60c5e154e6794b6ac214b221c8b62a733eb8794092aa400729bbf88b72748230
+        SHA384: be8fab78dcd9709d29c973205e536a3994a93769c7032b72d9ab26106a5e00b5a3497e41baec9cf9824506ca0990ffac
     - Subject: ??=Private Organization, serialNumber=22178368, ??=TW, C=TW, ST=New
         Taipei, L=New Taipei, ??=NO.69, LI,DE ST., ZHONGHE DIST., O=MICRO,STAR INTERNATIONAL
         CO., LTD., CN=MICRO,STAR INTERNATIONAL CO., LTD.
@@ -397,6 +412,7 @@ KnownVulnerableSamples:
         MD5: 86cb9d8321d25d44f040248ada40f6e3
         SHA1: 463cc47327cdb8d04848de5595f0f5d52d7e97ba
         SHA256: 5ac1448b6565bffa2dcc53738f6b01aed6d37aa0b9cda1c6497060fc14144fa6
+        SHA384: 5fb0ee916e64059bfd26e29f31b2cf2bf9086aaae1af19ccba781b165be2731dd322ce5e0d9105a9ec2bf11eba76ded2
     Signer:
     - SerialNumber: 6a7bb9e55c0bbf1def6c739c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
@@ -414,16 +430,16 @@ KnownVulnerableSamples:
       Entropy: 4.12172979146796
       Virtual Size: '0x188'
     .data:
-      Entropy: 0.9253228016668384
+      Entropy: 0.9253228016668387
       Virtual Size: '0xd80'
     .pdata:
-      Entropy: 3.1619674481420286
+      Entropy: 3.161967448142028
       Virtual Size: '0x60'
     INIT:
-      Entropy: 5.101996629515978
+      Entropy: 5.101996629515979
       Virtual Size: '0x2f0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-09-19 04:45:31'
+  CreationTimestamp: '2019-09-19 06:45:31'
 - Filename: RTCore64.sys
   MD5: c508d28487121828c3a1c2b57acb05be
   SHA1: 7c43d43d95232e37aa09c5e2bcd3a7699d6b7479
@@ -477,6 +493,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -489,6 +506,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -501,6 +519,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -515,6 +534,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -527,6 +547,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -546,13 +567,13 @@ KnownVulnerableSamples:
       Entropy: 2.4884950805464947
       Virtual Size: '0x58'
     .pdata:
-      Entropy: 3.045843351790575
+      Entropy: 3.0458433517905754
       Virtual Size: '0x54'
     INIT:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 06:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
 - Filename: RTCore64.sys
   MD5: 08c1bce6627764c9f8c79439555c5636
   SHA1: 4d4535c111c7b568cb8a3bece27a97d738512a6b
@@ -608,6 +629,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -620,6 +642,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G2
       ValidFrom: '2015-02-03 00:00:00'
@@ -633,6 +656,7 @@ KnownVulnerableSamples:
         MD5: a0ac4d48fe852f7b3ed4e623d59a825f
         SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
         SHA256: 78d2e41a13eb4e9171bae2d2adb192cf39210b5231f77cda936bcfbe8c003bdf
+        SHA384: 990ed96dca5979deeedc98a012279f04efb5559d7e7f5084a12f3802ee9439326557aecefd081cff739b78515b5d7f50
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -647,6 +671,7 @@ KnownVulnerableSamples:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
         SHA256: 5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d
+        SHA384: db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -659,6 +684,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -678,13 +704,13 @@ KnownVulnerableSamples:
       Entropy: 2.4884950805464947
       Virtual Size: '0x58'
     .pdata:
-      Entropy: 2.979061917571089
+      Entropy: 2.9790619175710895
       Virtual Size: '0x54'
     INIT:
       Entropy: 4.523481595961036
       Virtual Size: '0x258'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-04-24 01:01:47'
+  CreationTimestamp: '2015-04-24 03:01:47'
 - Filename: RTCore64.sys
   MD5: 2d91d45cd09dfc3f8e89da1c261fd1ac
   SHA1: 634b1e9d0aafac1ec4373291cefb52c121e8d265
@@ -737,6 +763,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -749,6 +776,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=US, ST=California, L=Brea, O=EVGA, OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=EVGA
       ValidFrom: '2010-04-14 00:00:00'
@@ -762,6 +790,7 @@ KnownVulnerableSamples:
         MD5: 5ba772ec00357ae706016510775c7a00
         SHA1: eeb31b244ea14abae1e947ecdca0d6ae4720031b
         SHA256: c8e707c2615c26ac78ed06b42dd20bc8ff82bc5e02ddafe2c9af85755097691b
+        SHA384: a1d6af64a5eb3841d632438119fc954354caf3ccea61b69003a7fc9da166a9c653dc0359be2ae2463bffb7b53b0911ac
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -776,6 +805,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -788,6 +818,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 79c32d7ddd2458cf2eabe5b1b5c5290f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -812,10 +843,10 @@ KnownVulnerableSamples:
       Entropy: 3.1879942043708462
       Virtual Size: '0x60'
     INIT:
-      Entropy: 4.4494366822955245
+      Entropy: 4.449436682295525
       Virtual Size: '0x202'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
 - Filename: RTCore64.sys
   MD5: bcd60bf152fdec05cd40562b466be252
   SHA1: 6ce0094a9aacdc050ff568935014607b8f23ff00
@@ -872,6 +903,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
       ValidFrom: '2016-03-16 00:00:00'
       ValidTo: '2024-03-16 00:00:00'
@@ -884,6 +916,7 @@ KnownVulnerableSamples:
         MD5: 729cf4baceff4ef7aa199ad4f4ebed3d
         SHA1: f478f0e790d5c8ec6056a3ab2567404a991d2837
         SHA256: c3c88c2a500cb5a97abca837193a5bd382f6eb3aeb0008edbce65ea2a3dbfd5c
+        SHA384: e62bbb1ba1ad3df59f2c7265df5576af6b5d4a7473b74985a9d956975fdfc517ffbdd2172b0e3ea36befcb6a9026c872
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G2
       ValidFrom: '2016-05-24 00:00:00'
@@ -897,6 +930,7 @@ KnownVulnerableSamples:
         MD5: acb5170547d76873f1e4ff18ed5de2eb
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
         SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
+        SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
     - Subject: C=TW, ST=New Taipei, L=New Taipei, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., CN=MICRO,STAR INTERNATIONAL CO., LTD.
       ValidFrom: '2019-10-21 14:23:20'
@@ -910,6 +944,7 @@ KnownVulnerableSamples:
         MD5: afafe18984c1b75f71051a6d8d44a5c6
         SHA1: 503d375c7f58060d3b98e297afb274339759d1d4
         SHA256: 9c3b3e4058cde499217d75ce48382b5490fab6fdff14650f674a1776b87d251a
+        SHA384: 96cda05887310f4977443637fecc2d9bac5bb46fc0dd5eb37c84e4e0d87d4fbb05efd7d1901c1741a72328526f01012f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -922,6 +957,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     Signer:
     - SerialNumber: 2636eab537f6156b78af523a
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
@@ -938,16 +974,16 @@ KnownVulnerableSamples:
       Entropy: 4.12172979146796
       Virtual Size: '0x188'
     .data:
-      Entropy: 0.9253228016668384
+      Entropy: 0.9253228016668387
       Virtual Size: '0xd80'
     .pdata:
-      Entropy: 3.1619674481420286
+      Entropy: 3.161967448142028
       Virtual Size: '0x60'
     INIT:
-      Entropy: 5.101996629515978
+      Entropy: 5.101996629515979
       Virtual Size: '0x2f0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-09-19 04:45:31'
+  CreationTimestamp: '2019-09-19 06:45:31'
 - Filename: RTCore64.sys
   MD5: 69ac6165912cb263a656497cc70155e6
   SHA1: 722aa0fa468b63c5d7ea308d77230ae3169d5f83
@@ -1003,6 +1039,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -1015,6 +1052,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G2
       ValidFrom: '2015-02-03 00:00:00'
@@ -1028,6 +1066,7 @@ KnownVulnerableSamples:
         MD5: a0ac4d48fe852f7b3ed4e623d59a825f
         SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
         SHA256: 78d2e41a13eb4e9171bae2d2adb192cf39210b5231f77cda936bcfbe8c003bdf
+        SHA384: 990ed96dca5979deeedc98a012279f04efb5559d7e7f5084a12f3802ee9439326557aecefd081cff739b78515b5d7f50
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -1042,6 +1081,7 @@ KnownVulnerableSamples:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
         SHA256: 5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d
+        SHA384: db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1054,6 +1094,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -1073,13 +1114,13 @@ KnownVulnerableSamples:
       Entropy: 2.4884950805464947
       Virtual Size: '0x58'
     .pdata:
-      Entropy: 2.979061917571089
+      Entropy: 2.9790619175710895
       Virtual Size: '0x54'
     INIT:
       Entropy: 4.523481595961036
       Virtual Size: '0x258'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-04-24 01:01:47'
+  CreationTimestamp: '2015-04-24 03:01:47'
 - Filename: RTCore64.sys
   MD5: 4eb4069c230a5dc40cd5d60d2cb3e0d0
   SHA1: cc3e5e45aca5b670035dfb008f0a88cecfd91cf7
@@ -1163,6 +1204,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
       ValidFrom: '2016-03-16 00:00:00'
       ValidTo: '2024-03-16 00:00:00'
@@ -1175,6 +1217,7 @@ KnownVulnerableSamples:
         MD5: 729cf4baceff4ef7aa199ad4f4ebed3d
         SHA1: f478f0e790d5c8ec6056a3ab2567404a991d2837
         SHA256: c3c88c2a500cb5a97abca837193a5bd382f6eb3aeb0008edbce65ea2a3dbfd5c
+        SHA384: e62bbb1ba1ad3df59f2c7265df5576af6b5d4a7473b74985a9d956975fdfc517ffbdd2172b0e3ea36befcb6a9026c872
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G2
       ValidFrom: '2016-05-24 00:00:00'
@@ -1188,6 +1231,7 @@ KnownVulnerableSamples:
         MD5: acb5170547d76873f1e4ff18ed5de2eb
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
         SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
+        SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
     - Subject: C=TW, ST=New Taipei, L=New Taipei, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., CN=MICRO,STAR INTERNATIONAL CO., LTD.
       ValidFrom: '2019-10-21 14:23:20'
@@ -1201,6 +1245,7 @@ KnownVulnerableSamples:
         MD5: afafe18984c1b75f71051a6d8d44a5c6
         SHA1: 503d375c7f58060d3b98e297afb274339759d1d4
         SHA256: 9c3b3e4058cde499217d75ce48382b5490fab6fdff14650f674a1776b87d251a
+        SHA384: 96cda05887310f4977443637fecc2d9bac5bb46fc0dd5eb37c84e4e0d87d4fbb05efd7d1901c1741a72328526f01012f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -1213,6 +1258,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     Signer:
     - SerialNumber: 2636eab537f6156b78af523a
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
@@ -1241,10 +1287,10 @@ KnownVulnerableSamples:
       Entropy: 5.168930070566578
       Virtual Size: '0x634'
     .reloc:
-      Entropy: 1.2280731978955797
+      Entropy: 1.2280731978955792
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-06-18 05:55:42'
+  CreationTimestamp: '2020-06-18 07:55:42'
 - Filename: RTCore64.sys
   MD5: 680dcb5c39c1ec40ac3897bb3e9f27b9
   SHA1: 431550db5c160b56e801f220ceeb515dc16e68d2
@@ -1297,6 +1343,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -1309,6 +1356,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=US, ST=California, L=Brea, O=EVGA, OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=EVGA
       ValidFrom: '2010-04-14 00:00:00'
@@ -1322,6 +1370,7 @@ KnownVulnerableSamples:
         MD5: 5ba772ec00357ae706016510775c7a00
         SHA1: eeb31b244ea14abae1e947ecdca0d6ae4720031b
         SHA256: c8e707c2615c26ac78ed06b42dd20bc8ff82bc5e02ddafe2c9af85755097691b
+        SHA384: a1d6af64a5eb3841d632438119fc954354caf3ccea61b69003a7fc9da166a9c653dc0359be2ae2463bffb7b53b0911ac
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -1336,6 +1385,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1348,6 +1398,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 79c32d7ddd2458cf2eabe5b1b5c5290f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1372,10 +1423,10 @@ KnownVulnerableSamples:
       Entropy: 3.1879942043708462
       Virtual Size: '0x60'
     INIT:
-      Entropy: 4.4494366822955245
+      Entropy: 4.449436682295525
       Virtual Size: '0x202'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
 - Filename: RTCore64.sys
   MD5: f8fe655b7d63dbdc53b0983a0d143028
   SHA1: d9c1913a6c76b883568910094dfa1d67aad80c84
@@ -1429,6 +1480,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -1441,6 +1493,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -1453,6 +1506,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -1467,6 +1521,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1479,6 +1534,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -1498,13 +1554,13 @@ KnownVulnerableSamples:
       Entropy: 2.4884950805464947
       Virtual Size: '0x58'
     .pdata:
-      Entropy: 3.045843351790575
+      Entropy: 3.0458433517905754
       Virtual Size: '0x54'
     INIT:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 06:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
 - Filename: RTCore64.sys
   MD5: 880611326b768c4922e9da8a8effc582
   SHA1: 96323381a98790b8ffac1654cb65e12dbbe6aff1
@@ -1560,6 +1616,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -1572,6 +1629,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G2
       ValidFrom: '2016-05-24 00:00:00'
@@ -1585,6 +1643,7 @@ KnownVulnerableSamples:
         MD5: acb5170547d76873f1e4ff18ed5de2eb
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
         SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
+        SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -1599,6 +1658,7 @@ KnownVulnerableSamples:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
         SHA256: 5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d
+        SHA384: db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1611,6 +1671,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -1630,13 +1691,13 @@ KnownVulnerableSamples:
       Entropy: 2.4884950805464947
       Virtual Size: '0x58'
     .pdata:
-      Entropy: 2.979061917571089
+      Entropy: 2.9790619175710895
       Virtual Size: '0x54'
     INIT:
       Entropy: 4.523481595961036
       Virtual Size: '0x258'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-04-24 01:01:47'
+  CreationTimestamp: '2015-04-24 03:01:47'
 - Filename: RTCore64.sys
   MD5: 515c75d77c64909690c18c08ef3fc310
   SHA1: 7877bd7da617ec92a5c47f0da1f0abcf6484d905
@@ -1690,6 +1751,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -1702,6 +1764,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=US, ST=California, L=Brea, O=EVGA, OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=EVGA
       ValidFrom: '2010-04-14 00:00:00'
@@ -1715,6 +1778,7 @@ KnownVulnerableSamples:
         MD5: 5ba772ec00357ae706016510775c7a00
         SHA1: eeb31b244ea14abae1e947ecdca0d6ae4720031b
         SHA256: c8e707c2615c26ac78ed06b42dd20bc8ff82bc5e02ddafe2c9af85755097691b
+        SHA384: a1d6af64a5eb3841d632438119fc954354caf3ccea61b69003a7fc9da166a9c653dc0359be2ae2463bffb7b53b0911ac
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -1729,6 +1793,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1741,6 +1806,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 79c32d7ddd2458cf2eabe5b1b5c5290f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1762,13 +1828,13 @@ KnownVulnerableSamples:
       Entropy: 2.4884950805464947
       Virtual Size: '0x58'
     .pdata:
-      Entropy: 3.045843351790575
+      Entropy: 3.0458433517905754
       Virtual Size: '0x54'
     INIT:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 06:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
 - Filename: RTCore64.sys
   MD5: 6fa271b6816affaef640808fc51ac8af
   SHA1: 5291b17205accf847433388fe17553e96ad434ec
@@ -1822,6 +1888,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -1834,6 +1901,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -1846,6 +1914,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -1860,6 +1929,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1872,6 +1942,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -1891,13 +1962,13 @@ KnownVulnerableSamples:
       Entropy: 2.4884950805464947
       Virtual Size: '0x58'
     .pdata:
-      Entropy: 3.045843351790575
+      Entropy: 3.0458433517905754
       Virtual Size: '0x54'
     INIT:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 06:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
 - Filename: RTCore64.sys
   MD5: d63c9c1a427a134461258b7b8742858f
   SHA1: ef0504dd90eb451f51d2c4f987fb7833c91c755b
@@ -1951,6 +2022,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -1963,6 +2035,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -1977,6 +2050,7 @@ KnownVulnerableSamples:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
         SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1989,6 +2063,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=US, ST=California, L=Brea, O=EVGA, OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=EVGA
       ValidFrom: '2012-02-29 00:00:00'
@@ -2002,6 +2077,7 @@ KnownVulnerableSamples:
         MD5: e994671d8d440b7739cdd9775bbca72f
         SHA1: ea9446b39b968aa6953e1bf74a36435759b3d2e3
         SHA256: 37a9886a67c19d644c74505801f947d3b2756a5540cbd89a0c8d500511cb838d
+        SHA384: 41d34e73f1b002f885c80004e3c366299392258ce5ba880150875ed8811ebc9913dc34cdf7c9800a8303dd512207787c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -2016,6 +2092,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 26d7f5563eb3e42a81f7c715fcd2799d
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -2037,13 +2114,13 @@ KnownVulnerableSamples:
       Entropy: 2.4884950805464947
       Virtual Size: '0x58'
     .pdata:
-      Entropy: 3.045843351790575
+      Entropy: 3.0458433517905754
       Virtual Size: '0x54'
     INIT:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 06:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
 - Filename: RTCore64.sys
   MD5: 3a7c69293fcd5688cc398691093ec06a
   SHA1: aadebbcbde0e7edd35e29d98871289a75e744aad
@@ -2096,6 +2173,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -2108,6 +2186,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -2122,6 +2201,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=California, L=Brea, O=EVGA, OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=EVGA
       ValidFrom: '2008-04-16 00:00:00'
@@ -2135,6 +2215,7 @@ KnownVulnerableSamples:
         MD5: 8f51b4e16b87e1cc89b9d0c997227546
         SHA1: 8f3cdd2b86ae03653f0612911a2f01a9dca49a22
         SHA256: c7f57b7287c808d2713aba9e368fe387b5825bfbda1bd1824f374beaa8e30be9
+        SHA384: 70423f071aae83c68149b7fca1181f65fd5ee37b1527bb989c3c6b0af7d78b19930c8b2cb517da35f66294eba8768e37
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -2147,6 +2228,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 546ea040bf5075ce0a5c01d4c6ded19d
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -2171,10 +2253,10 @@ KnownVulnerableSamples:
       Entropy: 3.1879942043708462
       Virtual Size: '0x60'
     INIT:
-      Entropy: 4.4494366822955245
+      Entropy: 4.449436682295525
       Virtual Size: '0x202'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
 - Filename: RTCore64.sys
   MD5: d5e76d125d624f8025d534f49e3c4162
   SHA1: 8a23735d9a143ad526bf73c6553e36e8a8d2e561
@@ -2227,6 +2309,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -2239,6 +2322,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -2253,6 +2337,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=California, L=Brea, O=EVGA, OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=EVGA
       ValidFrom: '2008-04-16 00:00:00'
@@ -2266,6 +2351,7 @@ KnownVulnerableSamples:
         MD5: 8f51b4e16b87e1cc89b9d0c997227546
         SHA1: 8f3cdd2b86ae03653f0612911a2f01a9dca49a22
         SHA256: c7f57b7287c808d2713aba9e368fe387b5825bfbda1bd1824f374beaa8e30be9
+        SHA384: 70423f071aae83c68149b7fca1181f65fd5ee37b1527bb989c3c6b0af7d78b19930c8b2cb517da35f66294eba8768e37
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -2278,6 +2364,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 546ea040bf5075ce0a5c01d4c6ded19d
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -2302,10 +2389,10 @@ KnownVulnerableSamples:
       Entropy: 3.1879942043708462
       Virtual Size: '0x60'
     INIT:
-      Entropy: 4.4494366822955245
+      Entropy: 4.449436682295525
       Virtual Size: '0x202'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
 - Filename: rtcore64.sys
   MD5: ecdc79141b7002b246770d01606504f2
   SHA1: 4d14d25b540bf8623d09c06107b8ca7bb7625c30
@@ -2359,6 +2446,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -2371,6 +2459,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=US, ST=California, L=Brea, O=EVGA, OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=EVGA
       ValidFrom: '2010-04-14 00:00:00'
@@ -2384,6 +2473,7 @@ KnownVulnerableSamples:
         MD5: 5ba772ec00357ae706016510775c7a00
         SHA1: eeb31b244ea14abae1e947ecdca0d6ae4720031b
         SHA256: c8e707c2615c26ac78ed06b42dd20bc8ff82bc5e02ddafe2c9af85755097691b
+        SHA384: a1d6af64a5eb3841d632438119fc954354caf3ccea61b69003a7fc9da166a9c653dc0359be2ae2463bffb7b53b0911ac
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -2398,6 +2488,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -2410,6 +2501,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 79c32d7ddd2458cf2eabe5b1b5c5290f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -2431,13 +2523,13 @@ KnownVulnerableSamples:
       Entropy: 2.4884950805464947
       Virtual Size: '0x58'
     .pdata:
-      Entropy: 3.045843351790575
+      Entropy: 3.0458433517905754
       Virtual Size: '0x54'
     INIT:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 06:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
 - Filename: RTCore64.sys
   MD5: 3aacaa62758fa6d178043d78ba89bebc
   SHA1: f77413ec3bd9ed3f31fc53a4c755dc4123e0068f
@@ -2491,6 +2583,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -2503,6 +2596,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G1
       ValidFrom: '2013-08-23 00:00:00'
@@ -2516,6 +2610,7 @@ KnownVulnerableSamples:
         MD5: b95cbc184d388718612d5933f7b36770
         SHA1: ff124c5d160710720108616ffee99bbe090ed363
         SHA256: 13027620255363f07bbf85ae7d0dc06c07d8b0f4368b12f983ee3f4fce605733
+        SHA384: f42ed00f615f2822dcd3d33794477428afb52ddab932ebcde3586f92a27e18f9faba6b3334ca4e59e0cb24bdbf8395a6
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -2530,6 +2625,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -2542,6 +2638,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -2567,7 +2664,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-03-10 23:32:06'
+  CreationTimestamp: '2013-03-11 01:32:06'
 - Filename: rtcore64.sys
   MD5: 4e4b9bdcc6b8d97828ae1972d750a08d
   SHA1: 82034032b30bbb78d634d6f52c7d7770a73b1b3c
@@ -2621,6 +2718,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -2633,6 +2731,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -2645,6 +2744,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -2659,6 +2759,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -2671,6 +2772,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -2696,7 +2798,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-03-10 23:32:06'
+  CreationTimestamp: '2013-03-11 01:32:06'
 - Filename: RTCore64.sys
   MD5: 821adf5ba68fd8cc7f4f1bc915fe47de
   SHA1: eb0021e29488c97a0e42a084a4fe5a0695eccb7b
@@ -2750,6 +2852,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -2762,6 +2865,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G1
       ValidFrom: '2013-08-23 00:00:00'
@@ -2775,6 +2879,7 @@ KnownVulnerableSamples:
         MD5: b95cbc184d388718612d5933f7b36770
         SHA1: ff124c5d160710720108616ffee99bbe090ed363
         SHA256: 13027620255363f07bbf85ae7d0dc06c07d8b0f4368b12f983ee3f4fce605733
+        SHA384: f42ed00f615f2822dcd3d33794477428afb52ddab932ebcde3586f92a27e18f9faba6b3334ca4e59e0cb24bdbf8395a6
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -2789,6 +2894,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -2801,6 +2907,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -2826,7 +2933,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-03-10 23:32:06'
+  CreationTimestamp: '2013-03-11 01:32:06'
 - Filename: RTCore64.sys
   MD5: 0d5774527af6e30905317839686b449d
   SHA1: 75d0b9bdfa79e5d43ec8b4c0996f559075723de7
@@ -2880,6 +2987,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -2892,6 +3000,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G1
       ValidFrom: '2013-08-23 00:00:00'
@@ -2905,6 +3014,7 @@ KnownVulnerableSamples:
         MD5: b95cbc184d388718612d5933f7b36770
         SHA1: ff124c5d160710720108616ffee99bbe090ed363
         SHA256: 13027620255363f07bbf85ae7d0dc06c07d8b0f4368b12f983ee3f4fce605733
+        SHA384: f42ed00f615f2822dcd3d33794477428afb52ddab932ebcde3586f92a27e18f9faba6b3334ca4e59e0cb24bdbf8395a6
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -2919,6 +3029,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -2931,6 +3042,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -2956,7 +3068,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-03-10 23:32:06'
+  CreationTimestamp: '2013-03-11 01:32:06'
 - Filename: RTCore64.sys
   MD5: 18439fe2aaeddfd355ef88091cb6c15f
   SHA1: 52d9bbe41eea0b60507c469f7810d80343c03c2b
@@ -3010,6 +3122,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -3022,6 +3135,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -3034,6 +3148,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -3048,6 +3163,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -3060,6 +3176,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -3085,7 +3202,7 @@ KnownVulnerableSamples:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-03-10 23:32:06'
+  CreationTimestamp: '2013-03-11 01:32:06'
 - Filename: RTCore64.sys
   MD5: 4b60ef388071e0baf299496e3d6590ae
   SHA1: cf9b4d606467108e4b845ecb8ede2f5865bd6c33
@@ -3139,6 +3256,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -3153,6 +3271,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -3165,6 +3284,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -3184,13 +3304,13 @@ KnownVulnerableSamples:
       Entropy: 2.4884950805464947
       Virtual Size: '0x58'
     .pdata:
-      Entropy: 3.045843351790575
+      Entropy: 3.0458433517905754
       Virtual Size: '0x54'
     INIT:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 06:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
 - Filename: RTCore64.sys
   MD5: aa9adcf64008e13d7e68b56fdd307ead
   SHA1: 562368c390b0dadf2356b8b3c747357ecef2dfc8
@@ -3246,6 +3366,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -3258,6 +3379,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G2
       ValidFrom: '2016-05-24 00:00:00'
@@ -3271,6 +3393,7 @@ KnownVulnerableSamples:
         MD5: acb5170547d76873f1e4ff18ed5de2eb
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
         SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
+        SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -3285,6 +3408,7 @@ KnownVulnerableSamples:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
         SHA256: 5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d
+        SHA384: db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -3297,6 +3421,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -3310,7 +3435,7 @@ KnownVulnerableSamples:
       Entropy: 5.9488831741487855
       Virtual Size: '0xb64'
     .rdata:
-      Entropy: 3.0845170472775276
+      Entropy: 3.084517047277527
       Virtual Size: '0x12c'
     .data:
       Entropy: 2.4884950805464947
@@ -3322,7 +3447,7 @@ KnownVulnerableSamples:
       Entropy: 4.528890116790764
       Virtual Size: '0x258'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-09-30 06:03:17'
+  CreationTimestamp: '2016-09-30 08:03:17'
 - Filename: RTCore64.sys
   MD5: 6a094d8e4b00dd1d93eb494099e98478
   SHA1: fdf4a0af89f0c8276ad6d540c75beece380703ab
@@ -3378,6 +3503,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -3390,6 +3516,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G2
       ValidFrom: '2016-05-24 00:00:00'
@@ -3403,6 +3530,7 @@ KnownVulnerableSamples:
         MD5: acb5170547d76873f1e4ff18ed5de2eb
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
         SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
+        SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -3417,6 +3545,7 @@ KnownVulnerableSamples:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
         SHA256: 5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d
+        SHA384: db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -3429,6 +3558,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -3442,7 +3572,7 @@ KnownVulnerableSamples:
       Entropy: 5.9488831741487855
       Virtual Size: '0xb64'
     .rdata:
-      Entropy: 3.0845170472775276
+      Entropy: 3.084517047277527
       Virtual Size: '0x12c'
     .data:
       Entropy: 2.4884950805464947
@@ -3454,7 +3584,7 @@ KnownVulnerableSamples:
       Entropy: 4.528890116790764
       Virtual Size: '0x258'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-09-30 06:03:17'
+  CreationTimestamp: '2016-09-30 08:03:17'
 - Filename: RTCore64.sys
   MD5: 0fc2653b1c45f08ca0abd1eb7772e3c0
   SHA1: 94144619920bd086028bb5647b1649a35438028c
@@ -3508,6 +3638,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -3520,6 +3651,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -3532,6 +3664,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -3546,6 +3679,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -3558,6 +3692,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -3577,13 +3712,13 @@ KnownVulnerableSamples:
       Entropy: 2.4884950805464947
       Virtual Size: '0x58'
     .pdata:
-      Entropy: 3.045843351790575
+      Entropy: 3.0458433517905754
       Virtual Size: '0x54'
     INIT:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 06:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
 - Filename: RTCore64.sys
   MD5: d424f369f7e010249619f0ecbe5f3805
   SHA1: 5e4b93591f905854fb870011464291c3508aff44
@@ -3637,6 +3772,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -3649,6 +3785,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -3661,6 +3798,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -3675,6 +3813,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -3687,6 +3826,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -3706,13 +3846,13 @@ KnownVulnerableSamples:
       Entropy: 2.4884950805464947
       Virtual Size: '0x58'
     .pdata:
-      Entropy: 3.045843351790575
+      Entropy: 3.0458433517905754
       Virtual Size: '0x54'
     INIT:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 06:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
 - Filename: RTCore64.sys
   MD5: 9d884ecd3b6c3f2509851ea15ffefbef
   SHA1: e11f48631c6e0277e21a8bdf9be513651305f0d5
@@ -3766,6 +3906,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -3778,6 +3919,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -3790,6 +3932,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -3804,6 +3947,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -3816,6 +3960,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -3835,13 +3980,13 @@ KnownVulnerableSamples:
       Entropy: 2.4884950805464947
       Virtual Size: '0x58'
     .pdata:
-      Entropy: 3.045843351790575
+      Entropy: 3.0458433517905754
       Virtual Size: '0x54'
     INIT:
       Entropy: 4.468159720315432
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-06 06:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
 - Filename: rtcore64.sys
   MD5: 5b1e1a9dade81f1e80fdc0a2d3f9006e
   SHA1: 9b8c7eda28bfad07ffe5f84a892299bc7e118442
@@ -3894,6 +4039,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -3906,6 +4052,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=US, ST=California, L=Brea, O=EVGA, OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=EVGA
       ValidFrom: '2010-04-14 00:00:00'
@@ -3919,6 +4066,7 @@ KnownVulnerableSamples:
         MD5: 5ba772ec00357ae706016510775c7a00
         SHA1: eeb31b244ea14abae1e947ecdca0d6ae4720031b
         SHA256: c8e707c2615c26ac78ed06b42dd20bc8ff82bc5e02ddafe2c9af85755097691b
+        SHA384: a1d6af64a5eb3841d632438119fc954354caf3ccea61b69003a7fc9da166a9c653dc0359be2ae2463bffb7b53b0911ac
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -3933,6 +4081,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -3945,6 +4094,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 79c32d7ddd2458cf2eabe5b1b5c5290f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -3969,10 +4119,10 @@ KnownVulnerableSamples:
       Entropy: 3.1879942043708462
       Virtual Size: '0x60'
     INIT:
-      Entropy: 4.4494366822955245
+      Entropy: 4.449436682295525
       Virtual Size: '0x202'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
 - Filename: RTCore64.sys
   MD5: 24061b0958874c1cb2a5a8e9d25482d4
   SHA1: 282fca60f0c37eb6d76400bca24567945e43c6d8
@@ -4028,6 +4178,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -4040,6 +4191,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G2
       ValidFrom: '2015-02-03 00:00:00'
@@ -4053,6 +4205,7 @@ KnownVulnerableSamples:
         MD5: a0ac4d48fe852f7b3ed4e623d59a825f
         SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
         SHA256: 78d2e41a13eb4e9171bae2d2adb192cf39210b5231f77cda936bcfbe8c003bdf
+        SHA384: 990ed96dca5979deeedc98a012279f04efb5559d7e7f5084a12f3802ee9439326557aecefd081cff739b78515b5d7f50
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -4067,6 +4220,7 @@ KnownVulnerableSamples:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
         SHA256: 5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d
+        SHA384: db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -4079,6 +4233,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -4098,13 +4253,13 @@ KnownVulnerableSamples:
       Entropy: 2.4884950805464947
       Virtual Size: '0x58'
     .pdata:
-      Entropy: 2.979061917571089
+      Entropy: 2.9790619175710895
       Virtual Size: '0x54'
     INIT:
       Entropy: 4.523481595961036
       Virtual Size: '0x258'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-04-24 01:01:47'
+  CreationTimestamp: '2015-04-24 03:01:47'
 - Filename: RTCore64.sys
   MD5: 70196d88c03f2ea557281b24dad85de5
   SHA1: 55015f64783ddd148674a74d8137bcd6ccd6231d
@@ -4161,6 +4316,7 @@ KnownVulnerableSamples:
         MD5: 93b601b98fc29a9e89a704048928b85f
         SHA1: 3e8e6487f8fd27d322a269a71edaac5d57811286
         SHA256: bedd4b1831f17c7ec1d507380f4c9836baa8ce20065a67db8b43acea14294ba4
+        SHA384: 5019d634bf6be7246128e117bfdf533f97aa574fae9080307b427fc77998fe9f280ba23b051cfbd6cf5d37c6e578d698
     - Subject: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing Root R46
       ValidFrom: '2021-05-25 00:00:00'
       ValidTo: '2028-12-31 23:59:59'
@@ -4173,6 +4329,7 @@ KnownVulnerableSamples:
         MD5: 207045ce7b7ab131e78e459b13825902
         SHA1: bcf7530a1ab309fb1926cb720f9fd58cff1cb88f
         SHA256: 0f31a4237992e1ea623baf4c29480afb6d913e10f1fb1d56bb56f5b03fbff13b
+        SHA384: a229d2722bc6091d73b1d979b81088c977cb028a6f7cbf264bb81d5cc8f099f87d7c296e48bf09d7ebe275f5498661a4
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root
         G4
       ValidFrom: '2022-08-01 00:00:00'
@@ -4186,6 +4343,7 @@ KnownVulnerableSamples:
         MD5: 21a266bd49f2778b24d13d95641ea6ac
         SHA1: 21319f341fdf06bf6a104427afa8b7823b1ea7f3
         SHA256: e933dc68ee65abd1f9b1aa6738eff60a6895d3d8cc4accf0c69069aa3decd757
+        SHA384: 11533efd6b326a4e065a936de300fe0586a479f93d569d2403bd62c7ad35f1b2199daee3adb510f429c4fc97b4b024e3
     - Subject: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA R36
       ValidFrom: '2021-03-22 00:00:00'
       ValidTo: '2036-03-21 23:59:59'
@@ -4198,6 +4356,7 @@ KnownVulnerableSamples:
         MD5: 69409ee689cc94e90149ce9bccab49ae
         SHA1: f3939507fa02c048647ede4cced7596339738157
         SHA256: 3a42b4be5968e1e6489b8362a2a84cdbf7834f2aa9eb96cfb0dfeedeac4aa7d3
+        SHA384: 0eeb0f83c55ccaaf275cec9caaed00280b6dd9bd8e37bd8a191a5cf77a0e2d1298edb019e2a1e67e3f7bd4b1c7616dc0
     - Subject: C=CA, ST=Ontario, O=Cold Air Systems Inc., CN=Cold Air Systems Inc.
       ValidFrom: '2022-03-21 00:00:00'
       ValidTo: '2023-03-21 23:59:59'
@@ -4210,6 +4369,7 @@ KnownVulnerableSamples:
         MD5: 466b9aa4bd3cf112cd4137ad2a126a6f
         SHA1: da908b34622da9cd35e04241f7b75cb324bdbeba
         SHA256: 6aa5da7e4e7ecc6c823702da039db9e3b84d474a1d04559162f212eb4468ab3e
+        SHA384: 63c064a3b7e9a04bb6caa5de429686291b11f6c4faf68929d70fac63b48a1ca5d0b51c871d1b61974163e776358876a3
     - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping
         CA
       ValidFrom: '2022-03-23 00:00:00'
@@ -4223,6 +4383,7 @@ KnownVulnerableSamples:
         MD5: e4b8ad9932ff9205f580cf8fb2afbb86
         SHA1: 5301f7044d78bf94dd2b6e4871083a17fdba1dcc
         SHA256: c3d01499a5d1d2f71e0f44e78fbfa4b8aadb43dd4f226401e0c1d7a6d53357fa
+        SHA384: 84b5f399da5a4f4387269adfd951ef7d2197c29552ed2d2e449060664c3825d6bdb2acc3e563d999e54652f7384f445e
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp 2022 , 2
       ValidFrom: '2022-09-21 00:00:00'
       ValidTo: '2033-11-21 23:59:59'
@@ -4235,6 +4396,7 @@ KnownVulnerableSamples:
         MD5: 812cb8ca0c79b318780ec5128ad13c1d
         SHA1: 3f8047d078307123301e50a25e9afb0dc4b6843d
         SHA256: 0c0b121e6f807bc22d4e0f4945634c22eca7e4d5ca58a1526a40e918a35c1d79
+        SHA384: 86aab81948499b3c90833253a853e7b3fd82ccf7b65b35806831ab60814bfc6ad8848c990df262a1c89b6fc4267dad81
     Signer:
     - SerialNumber: 0096c2ac9b7a12bd9588243110dc6b0519
       Issuer: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA R36
@@ -4248,7 +4410,7 @@ KnownVulnerableSamples:
       Entropy: 5.9488831741487855
       Virtual Size: '0xb64'
     .rdata:
-      Entropy: 3.0845170472775276
+      Entropy: 3.084517047277527
       Virtual Size: '0x12c'
     .data:
       Entropy: 2.4884950805464947
@@ -4260,14 +4422,14 @@ KnownVulnerableSamples:
       Entropy: 4.528890116790764
       Virtual Size: '0x258'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-09-30 06:03:17'
+  CreationTimestamp: '2016-09-30 08:03:17'
 - Authentihash:
     MD5: 55466195f0b2f4afc4243b43a806e6d9
     SHA1: 38b353d8480885de5dcf299deca99ce4f26a1d20
     SHA256: 5182caf10de9cec0740ecde5a081c21cdc100d7eb328ffe6f3f63183889fec6b
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2011-09-06 06:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -4318,7 +4480,7 @@ KnownVulnerableSamples:
       Entropy: 2.4884950805464947
       Virtual Size: '0x58'
     .pdata:
-      Entropy: 3.045843351790575
+      Entropy: 3.0458433517905754
       Virtual Size: '0x54'
     INIT:
       Entropy: 4.468159720315432
@@ -4340,6 +4502,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -4352,6 +4515,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -4366,6 +4530,7 @@ KnownVulnerableSamples:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
         SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -4378,6 +4543,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=US, ST=California, L=Brea, O=EVGA, OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=EVGA
       ValidFrom: '2012-02-29 00:00:00'
@@ -4391,6 +4557,7 @@ KnownVulnerableSamples:
         MD5: e994671d8d440b7739cdd9775bbca72f
         SHA1: ea9446b39b968aa6953e1bf74a36435759b3d2e3
         SHA256: 37a9886a67c19d644c74505801f947d3b2756a5540cbd89a0c8d500511cb838d
+        SHA384: 41d34e73f1b002f885c80004e3c366299392258ce5ba880150875ed8811ebc9913dc34cdf7c9800a8303dd512207787c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -4405,6 +4572,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 26d7f5563eb3e42a81f7c715fcd2799d
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at

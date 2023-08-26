@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: ac7b3c3b74e6e282c7f50c17a6213b81b181f779cd7c0c78e3cb426c427a98db
   Company: ASRock Incorporation
   Copyright: Copyright (C) 2012 ASRock Incorporation
-  CreationTimestamp: '2021-11-15 00:04:46'
+  CreationTimestamp: '2021-11-15 02:04:46'
   Date: ''
   Description: ASRock IO Driver
   ExportedFunctions: ''
@@ -120,7 +120,7 @@ KnownVulnerableSamples:
   SHA256: 3943a796cc7c5352aa57ccf544295bfd6fb69aae147bc8235a00202dc6ed6838
   Sections:
     .text:
-      Entropy: 6.3058037590863005
+      Entropy: 6.305803759086301
       Virtual Size: '0x2238'
     .rdata:
       Entropy: 4.480768786103598
@@ -141,7 +141,7 @@ KnownVulnerableSamples:
       Entropy: 3.2917593657396744
       Virtual Size: '0x3a0'
     .reloc:
-      Entropy: 1.2280731978955797
+      Entropy: 1.2280731978955794
       Virtual Size: '0x60'
   Signature:
   - ASROCK INC.
@@ -165,6 +165,7 @@ KnownVulnerableSamples:
         MD5: 51c3959a45cecf3d21a3effb05762573
         SHA1: ecfcd25fd0525448a74875ba271566bc0bfbf061
         SHA256: de1da11668f0a8d5e13346ed3ab2755f5d25bebffcfd1d0bde5b9f87bc292c91
+        SHA384: f0eab75baf1f24a53d63bd795cd07292a312f603513c8cb0f40fe5acbdb477ed72607d309fad21471a16f6223fb3a838
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -177,6 +178,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Code Signing Root R45
       ValidFrom: '2020-07-28 00:00:00'
       ValidTo: '2029-03-18 00:00:00'
@@ -189,6 +191,7 @@ KnownVulnerableSamples:
         MD5: a33260428269bc902bc1cd280e4b1837
         SHA1: 254209ca172cffcc67bd2a88996556d2f09538f0
         SHA256: a67411358594f2cf016741a63fd49f36de917f86531b3e3a43eb6a421c654868
+        SHA384: fec727af43d1569995cea26e8eb97167165842a5b185304425a92c03b71254c5d51222837515f33e60cb8ed2e8c625ba
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
       ValidFrom: '2020-07-28 00:00:00'
       ValidTo: '2030-07-28 00:00:00'
@@ -201,6 +204,7 @@ KnownVulnerableSamples:
         MD5: 65fd1dac1f115d9507f4e1840c8cb36a
         SHA1: c7cf5607e19b22fe60c055e71d9b555d70f71f66
         SHA256: d9c7db0b704f07089440c56e69a0f31d730edf77cfbf7514630e8b5390a270fe
+        SHA384: defe810317bd1215b4d1ee0ec8a5fb38b21d094ef1173cae670956cd899232638e4f9473fd947bd550a4a77300bbb2ab
     - Subject: ??=Private Organization, serialNumber=80333613, ??=TW, C=TW, ST=Taipei,
         L=Taipei, ??=2F., No. 37, Sec. 2, Zhongyang S. Rd., Beitou Dist., O=ASROCK
         INC., CN=ASROCK INC.
@@ -215,6 +219,7 @@ KnownVulnerableSamples:
         MD5: bce317dc724ff8d4f6f02fca3e0e481e
         SHA1: c84cd3e5f7120b9fcf38bbd968c2921dbd0a1e76
         SHA256: 9b51dea8257984791d5cd3d82426595e92baba100bfd4cb0c960b1366f0a261e
+        SHA384: 403399db25033616ddd75c1e9f8df3fc60f3c235523ae77716568897bca0e2b7756a1fd7a12a2ebbeec5836c6ca7d5ac
     Signer:
     - SerialNumber: 3be24b96d2c8d729eddb03e3
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020

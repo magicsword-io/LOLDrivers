@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: c3e3719ca592ba65a67f594ec1a08d0d7ad724b088be77d48cb33627c56f4614
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2010-06-27 23:19:38'
+  CreationTimestamp: '2010-06-28 01:19:38'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -62,7 +62,7 @@ KnownVulnerableSamples:
   SHA256: 2da330a2088409efc351118445a824f11edbe51cf3d653b298053785097fe40e
   Sections:
     .text:
-      Entropy: 6.108859458208728
+      Entropy: 6.108859458208727
       Virtual Size: '0xd86'
     .rdata:
       Entropy: 4.337980114178664
@@ -97,6 +97,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -109,6 +110,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -123,6 +125,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -135,6 +138,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei / Peitou, O=ASUSTeK Computer Inc., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Quality Testing Department,
         CN=ASUSTeK Computer Inc.
@@ -149,6 +153,7 @@ KnownVulnerableSamples:
         MD5: a8e2727ca2cb8705c02aaef015feb372
         SHA1: 94a0711ecebe96729e048ae1c7de9c4ba5c25ec4
         SHA256: dd670882ef38bfeecfb2865ad06f52e36b07f99fbf5937b2ede58178d2221961
+        SHA384: 508037c851d72d2bf8f35ba25436903a510d02d58f923b6d2c694a9a27f4a82b0b0953ee7b3c68078faafe3886a64aa4
     Signer:
     - SerialNumber: 12d5c9e2949d48abaccd3514f0fb22ad
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -161,7 +166,7 @@ KnownVulnerableSamples:
     SHA256: 9dcfd796e244d0687cc35eac9538f209f76c6df12de166f19dbc7d2c47fb16b3
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-08-22 03:54:47'
+  CreationTimestamp: '2012-08-22 05:54:47'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -206,7 +211,7 @@ KnownVulnerableSamples:
       Entropy: 6.1181571322303645
       Virtual Size: '0xd66'
     .rdata:
-      Entropy: 4.313686441268313
+      Entropy: 4.313686441268312
       Virtual Size: '0x188'
     .data:
       Entropy: 0.0
@@ -238,6 +243,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -250,6 +256,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -264,6 +271,7 @@ KnownVulnerableSamples:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
         SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -276,6 +284,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei / Peitou, O=ASUSTeK Computer Inc., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Quality Testing Department,
         CN=ASUSTeK Computer Inc.
@@ -290,6 +299,7 @@ KnownVulnerableSamples:
         MD5: 72cafb0a175f0481177fa2c9803283c7
         SHA1: b603167b958c5fcd7094552891ddc4e2ea4c149f
         SHA256: a36a0024075771a4b30eab8f1288817059fe1a01003d0c1d92f647df17f3b688
+        SHA384: 33c28dc6857ce5d20a2e9ba8a47f6bc80a9a98fba518fd732963bedbbb408848b89b3d8438d413f8b933ee761ffa1653
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -304,6 +314,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 7d08d9bc130726de26ee4ef28e133084
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -316,7 +327,7 @@ KnownVulnerableSamples:
     SHA256: 7f75d91844b0c162eeb24d14bcf63b7f230e111daa7b0a26eaa489eeb22d9057
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2010-08-02 20:47:59'
+  CreationTimestamp: '2010-08-02 22:47:59'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -361,7 +372,7 @@ KnownVulnerableSamples:
       Entropy: 6.128485959548185
       Virtual Size: '0x10fc'
     .rdata:
-      Entropy: 4.469326855336564
+      Entropy: 4.469326855336565
       Virtual Size: '0x1a0'
     .data:
       Entropy: 0.0
@@ -393,6 +404,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -405,6 +417,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -419,6 +432,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -431,6 +445,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei / Peitou, O=ASUSTeK Computer Inc., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Quality Testing Department,
         CN=ASUSTeK Computer Inc.
@@ -445,6 +460,7 @@ KnownVulnerableSamples:
         MD5: a8e2727ca2cb8705c02aaef015feb372
         SHA1: 94a0711ecebe96729e048ae1c7de9c4ba5c25ec4
         SHA256: dd670882ef38bfeecfb2865ad06f52e36b07f99fbf5937b2ede58178d2221961
+        SHA384: 508037c851d72d2bf8f35ba25436903a510d02d58f923b6d2c694a9a27f4a82b0b0953ee7b3c68078faafe3886a64aa4
     Signer:
     - SerialNumber: 12d5c9e2949d48abaccd3514f0fb22ad
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -457,7 +473,7 @@ KnownVulnerableSamples:
     SHA256: 191689c53195dbe828f406b206cb167dcd4671ecdab32b80e01c885f706a6baf
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2010-08-23 19:53:02'
+  CreationTimestamp: '2010-08-23 21:53:02'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -534,6 +550,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -546,6 +563,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -560,6 +578,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -572,6 +591,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei / Peitou, O=ASUSTeK Computer Inc., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Quality Testing Department,
         CN=ASUSTeK Computer Inc.
@@ -586,6 +606,7 @@ KnownVulnerableSamples:
         MD5: a8e2727ca2cb8705c02aaef015feb372
         SHA1: 94a0711ecebe96729e048ae1c7de9c4ba5c25ec4
         SHA256: dd670882ef38bfeecfb2865ad06f52e36b07f99fbf5937b2ede58178d2221961
+        SHA384: 508037c851d72d2bf8f35ba25436903a510d02d58f923b6d2c694a9a27f4a82b0b0953ee7b3c68078faafe3886a64aa4
     Signer:
     - SerialNumber: 12d5c9e2949d48abaccd3514f0fb22ad
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -598,7 +619,7 @@ KnownVulnerableSamples:
     SHA256: 19c74ea0e0baf04820e5642bd2fa224158801ed966be1041539e3c55bd65c471
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-04-06 01:21:08'
+  CreationTimestamp: '2009-04-06 03:21:08'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -642,7 +663,7 @@ KnownVulnerableSamples:
       Entropy: 6.140846081676954
       Virtual Size: '0xca6'
     .rdata:
-      Entropy: 4.362536233544753
+      Entropy: 4.362536233544752
       Virtual Size: '0x170'
     .data:
       Entropy: 0.0
@@ -661,7 +682,7 @@ KnownVulnerableSamples:
     SHA256: 9dcfd796e244d0687cc35eac9538f209f76c6df12de166f19dbc7d2c47fb16b3
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-08-22 03:54:47'
+  CreationTimestamp: '2012-08-22 05:54:47'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -707,7 +728,7 @@ KnownVulnerableSamples:
       Entropy: 6.1181571322303645
       Virtual Size: '0xd66'
     .rdata:
-      Entropy: 4.313686441268313
+      Entropy: 4.313686441268312
       Virtual Size: '0x188'
     .data:
       Entropy: 0.0
@@ -736,6 +757,7 @@ KnownVulnerableSamples:
         MD5: df2a0bc442ef65cd9973329be21c642f
         SHA1: d13bcda797c6b986a1a45b7ce9184e87ba0f994c
         SHA256: 41718d172e45eaa02ec88494587672cf50f96a310aebc5b49a66c0adae99edc5
+        SHA384: db7864a35b468726f3d431e07825ae860ddb0d6250b3bd8906f1b0ff98ce7b4c563c73288b01ec8f1ec5a2a06f31bc40
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -749,6 +771,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 330000001dc31a761624754f8000000000001d
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -760,7 +783,7 @@ KnownVulnerableSamples:
     SHA256: c1b41d6b91448e2409bb2f4fbf4aeb952adf373d0decc9d052277b89ba401407
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-08-03 01:02:32'
+  CreationTimestamp: '2009-08-03 03:02:32'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -813,10 +836,10 @@ KnownVulnerableSamples:
   SHA256: b3e645e8817696fa5d5e2255f9328f3b6a2e5fce91737f4d654ff155dc9851e5
   Sections:
     .text:
-      Entropy: 6.1960789663995905
+      Entropy: 6.196078966399591
       Virtual Size: '0x872'
     .rdata:
-      Entropy: 2.808152433711106
+      Entropy: 2.8081524337111055
       Virtual Size: '0xc4'
     .data:
       Entropy: -0.0
@@ -845,6 +868,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -857,6 +881,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -871,6 +896,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -883,6 +909,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei / Peitou, O=ASUSTeK Computer Inc., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Quality Testing Department,
         CN=ASUSTeK Computer Inc.
@@ -897,6 +924,7 @@ KnownVulnerableSamples:
         MD5: a8e2727ca2cb8705c02aaef015feb372
         SHA1: 94a0711ecebe96729e048ae1c7de9c4ba5c25ec4
         SHA256: dd670882ef38bfeecfb2865ad06f52e36b07f99fbf5937b2ede58178d2221961
+        SHA384: 508037c851d72d2bf8f35ba25436903a510d02d58f923b6d2c694a9a27f4a82b0b0953ee7b3c68078faafe3886a64aa4
     Signer:
     - SerialNumber: 12d5c9e2949d48abaccd3514f0fb22ad
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -909,7 +937,7 @@ KnownVulnerableSamples:
     SHA256: 80599708ce61ec5d6dcfc5977208a2a0be2252820a88d9ba260d8cdf5dc7fbe4
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-12-21 01:55:21'
+  CreationTimestamp: '2005-12-21 03:55:21'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -994,6 +1022,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2008-12-03 23:59:59'
@@ -1006,6 +1035,7 @@ KnownVulnerableSamples:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
         SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -1020,6 +1050,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1032,6 +1063,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei / Peitou, O=ASUSTeK Computer Inc., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Quality Testing Department,
         CN=ASUSTeK Computer Inc.
@@ -1046,6 +1078,7 @@ KnownVulnerableSamples:
         MD5: 2fc1a78b4874ed1ac403284a5d4084fb
         SHA1: 9ae9b025b3a9ebfacdf55104f3fc1c143457a296
         SHA256: 9ffd439139209f1a084cb30cd791558dc266265405f7c5c7444c5a941ff0c004
+        SHA384: 656817a3d8aa52cdc8fbff1dcb0ef1f07ea93f0c6b82067d7c6c5f68a125dc3b50f88974a66d59ecc5b996ca5e55eaa1
     Signer:
     - SerialNumber: 284649f592786c4851c1138e364185ae
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1058,7 +1091,7 @@ KnownVulnerableSamples:
     SHA256: 739c11fdb8673ab5b78f1a874daf5ba3faddb7910a6d4e0cc49abd8b8537333f
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-08-03 01:03:16'
+  CreationTimestamp: '2009-08-03 03:03:16'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1131,6 +1164,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1143,6 +1177,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -1157,6 +1192,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1169,6 +1205,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei / Peitou, O=ASUSTeK Computer Inc., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Quality Testing Department,
         CN=ASUSTeK Computer Inc.
@@ -1183,6 +1220,7 @@ KnownVulnerableSamples:
         MD5: a8e2727ca2cb8705c02aaef015feb372
         SHA1: 94a0711ecebe96729e048ae1c7de9c4ba5c25ec4
         SHA256: dd670882ef38bfeecfb2865ad06f52e36b07f99fbf5937b2ede58178d2221961
+        SHA384: 508037c851d72d2bf8f35ba25436903a510d02d58f923b6d2c694a9a27f4a82b0b0953ee7b3c68078faafe3886a64aa4
     Signer:
     - SerialNumber: 12d5c9e2949d48abaccd3514f0fb22ad
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1195,7 +1233,7 @@ KnownVulnerableSamples:
     SHA256: 9dcfd796e244d0687cc35eac9538f209f76c6df12de166f19dbc7d2c47fb16b3
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-08-22 03:54:47'
+  CreationTimestamp: '2012-08-22 05:54:47'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1241,7 +1279,7 @@ KnownVulnerableSamples:
       Entropy: 6.1181571322303645
       Virtual Size: '0xd66'
     .rdata:
-      Entropy: 4.313686441268313
+      Entropy: 4.313686441268312
       Virtual Size: '0x188'
     .data:
       Entropy: 0.0
@@ -1270,6 +1308,7 @@ KnownVulnerableSamples:
         MD5: 40e2b5ee26c4990c33a5e669c600b8a3
         SHA1: 30796f70d4552dd84ee58219d9f61df8c22bec18
         SHA256: 3062c7ba0949c3e882ca9cc23a60b9e4e742c7e2e1d4c3a63b893019189dba13
+        SHA384: e215473c05b611248331b3b259cc483a94c2d830fa63a5b6e08d1e52b06d360ebd30519a73f6ffcf79be880975e94738
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -1282,6 +1321,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -1294,6 +1334,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 073501671dc61bf273a6daec906e40a5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -1305,7 +1346,7 @@ KnownVulnerableSamples:
     SHA256: 92edd48dfac025d4069eb6491b9730d9d131b77cceaa480af9b3c32bc8c5e3a9
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-08-22 03:54:43'
+  CreationTimestamp: '2012-08-22 05:54:43'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1393,6 +1434,7 @@ KnownVulnerableSamples:
         MD5: df2a0bc442ef65cd9973329be21c642f
         SHA1: d13bcda797c6b986a1a45b7ce9184e87ba0f994c
         SHA256: 41718d172e45eaa02ec88494587672cf50f96a310aebc5b49a66c0adae99edc5
+        SHA384: db7864a35b468726f3d431e07825ae860ddb0d6250b3bd8906f1b0ff98ce7b4c563c73288b01ec8f1ec5a2a06f31bc40
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -1406,6 +1448,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 330000001dc31a761624754f8000000000001d
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft

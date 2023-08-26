@@ -34,7 +34,7 @@ KnownVulnerableSamples:
   Company: Highresolution Enterprises [www.highrez.co.uk]
   Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
     Logix4u
-  CreationTimestamp: '2008-10-17 17:02:20'
+  CreationTimestamp: '2008-10-17 19:02:20'
   Date: ''
   Description: Kernel level port access driver
   ExportedFunctions: ''
@@ -81,7 +81,7 @@ KnownVulnerableSamples:
   SHA256: cfab93885e5129a86d13fd380d010cc8c204429973b776ab1b472d84a767930f
   Sections:
     .text:
-      Entropy: 6.095861469171585
+      Entropy: 6.095861469171586
       Virtual Size: '0x55a'
     .rdata:
       Entropy: 4.693087492764082
@@ -116,6 +116,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -128,6 +129,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -142,6 +144,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=GB, ST=London, L=London, O=Red Fox UK Limited, OU=Digital ID Class
         3 , Microsoft Software Validation v2, OU=Development, CN=Red Fox UK Limited
       ValidFrom: '2008-10-09 00:00:00'
@@ -155,6 +158,7 @@ KnownVulnerableSamples:
         MD5: 829bad243d9bc5a00c1e79d729074543
         SHA1: d3c7c1b9a74057a2ca88fc8c08ea615c2443e474
         SHA256: 5e426e3820c03eebe44dc5b2e21dc0c0a58b3e810396f571b5aa6d358012fb2b
+        SHA384: 9cccb08402fd8db1f2dfd8649ff887b75723b2e45bf2650490f683e75bb4e1246c899f6aa7d1a4dded666270eb2a9699
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -167,6 +171,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 620cbcba5648e27b80aef5226ee67fce
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -180,7 +185,7 @@ KnownVulnerableSamples:
   Company: Highresolution Enterprises [www.highrez.co.uk]
   Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
     Logix4u
-  CreationTimestamp: '2016-01-27 06:33:10'
+  CreationTimestamp: '2016-01-27 08:33:10'
   Date: ''
   Description: Kernel level port access driver
   ExportedFunctions: ''
@@ -243,7 +248,7 @@ KnownVulnerableSamples:
       Entropy: 3.349101665082088
       Virtual Size: '0x438'
     .reloc:
-      Entropy: 3.9163455609991296
+      Entropy: 3.916345560999129
       Virtual Size: '0x8e'
   Signature: ''
   Signatures:
@@ -263,6 +268,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -276,6 +282,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taiwan, L=Taoyuan, O=RISINTECH INC., CN=RISINTECH INC.
       ValidFrom: '2014-08-18 00:00:00'
       ValidTo: '2016-09-16 23:59:59'
@@ -288,6 +295,7 @@ KnownVulnerableSamples:
         MD5: c28667139d7b72ed16209f3b8c47a0a2
         SHA1: 40a51c3a559434b7f40a5da53934df63dcba6013
         SHA256: f1cba92d3ac93328befa314f2d38eabdf6a1baabdf90d8858149de6a0b87f108
+        SHA384: 0beac0fd90c8f01bc7b43823e884cc60e440c999ac30d1f23379cc2821902a00bb1c86b3491ec231ab1e64f798d8b35b
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -302,6 +310,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -316,6 +325,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 08aa09e04443e946331fd1cfe085f12d
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -329,7 +339,7 @@ KnownVulnerableSamples:
   Company: Highresolution Enterprises [www.highrez.co.uk]
   Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
     Logix4u
-  CreationTimestamp: '2016-01-27 06:33:35'
+  CreationTimestamp: '2016-01-27 08:33:35'
   Date: ''
   Description: Kernel level port access driver
   ExportedFunctions: ''
@@ -412,6 +422,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -425,6 +436,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taiwan, L=Taoyuan, O=RISINTECH INC., CN=RISINTECH INC.
       ValidFrom: '2014-08-18 00:00:00'
       ValidTo: '2016-09-16 23:59:59'
@@ -437,6 +449,7 @@ KnownVulnerableSamples:
         MD5: c28667139d7b72ed16209f3b8c47a0a2
         SHA1: 40a51c3a559434b7f40a5da53934df63dcba6013
         SHA256: f1cba92d3ac93328befa314f2d38eabdf6a1baabdf90d8858149de6a0b87f108
+        SHA384: 0beac0fd90c8f01bc7b43823e884cc60e440c999ac30d1f23379cc2821902a00bb1c86b3491ec231ab1e64f798d8b35b
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -451,6 +464,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -465,6 +479,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 08aa09e04443e946331fd1cfe085f12d
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -478,7 +493,7 @@ KnownVulnerableSamples:
   Company: Highresolution Enterprises [www.highrez.co.uk]
   Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
     Logix4u
-  CreationTimestamp: '2016-01-27 06:33:35'
+  CreationTimestamp: '2016-01-27 08:33:35'
   Date: ''
   Description: Kernel level port access driver
   ExportedFunctions: ''
@@ -552,7 +567,7 @@ KnownVulnerableSamples:
   Company: Highresolution Enterprises [www.highrez.co.uk]
   Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
     Logix4u
-  CreationTimestamp: '2016-01-27 06:33:10'
+  CreationTimestamp: '2016-01-27 08:33:10'
   Date: ''
   Description: Kernel level port access driver
   ExportedFunctions: ''
@@ -615,7 +630,7 @@ KnownVulnerableSamples:
       Entropy: 3.349101665082088
       Virtual Size: '0x438'
     .reloc:
-      Entropy: 3.9163455609991296
+      Entropy: 3.916345560999129
       Virtual Size: '0x8e'
   Signature: ''
   Signatures: {}

@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: a47b9af109988e8e033886638edc84964968eecd0d24483eafaad6a6d68005ea
   Company: Microsoft Corporation
   Copyright: Microsoft Corporation. All rights reserved.
-  CreationTimestamp: '2013-11-27 16:59:02'
+  CreationTimestamp: '2013-11-27 18:59:02'
   Date: ''
   Description: WAN Transport Driver
   ExportedFunctions: ''
@@ -149,7 +149,7 @@ KnownVulnerableSamples:
   SHA256: 06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4
   Sections:
     .text:
-      Entropy: 6.377221041391935
+      Entropy: 6.377221041391937
       Virtual Size: '0xd88c'
     .rdata:
       Entropy: 4.702371843577182
@@ -161,10 +161,10 @@ KnownVulnerableSamples:
       Entropy: 4.5393227380510455
       Virtual Size: '0x8c4'
     INIT:
-      Entropy: 5.793042716031905
+      Entropy: 5.793042716031906
       Virtual Size: '0xd8c'
     .rsrc:
-      Entropy: 3.262685485179719
+      Entropy: 3.2626854851797193
       Virtual Size: '0x3b0'
   Signature: A required certificate is not within its validity period when verifying
     against the current system clock or the timestamp in the signed file.
@@ -186,6 +186,7 @@ KnownVulnerableSamples:
         MD5: ce372214eabe9d311e4a156fe2044327
         SHA1: 7f7eb1a547c9b0b2e41b0f44515dfd20c16edceb
         SHA256: 03d59cc81c6960a93ab4b02e5521aa9fb349e8d7df9dfdf675201e48c23b5a34
+        SHA384: 4b8829bc6980e82affeb7ad29efb59fc3ca9b02d015e6c0f385b9f2cf275609cd45936659f41fce579c073e34c2ca308
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -200,6 +201,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -214,6 +216,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 387c9476e28320264594846317d46540
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at

@@ -79,6 +79,7 @@ KnownVulnerableSamples:
         MD5: 5d8003a64dfa5a4d88365da1566038cb
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
         SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
     - Subject: ??=Private Organization, ??=US, ??=California, serialNumber=C2895304,
         C=US, ST=California, L=Palo Alto, O=HP Inc., OU=HP Cybersecurity, CN=HP Inc.
       ValidFrom: '2022-01-19 00:00:00'
@@ -92,6 +93,7 @@ KnownVulnerableSamples:
         MD5: afe1c63df3a72b3310fa8c7dffc96e31
         SHA1: 703cdd9e140b72b91be73f874f4c20992bb298e9
         SHA256: 92451a4efd049ec849f8a2439f467692ef93c6d2c7fb5fa44686f979ce4a9491
+        SHA384: 47c4642eaa33c02889cabb1070764b99c10827dbd83cd3fe5bcc939a8480c0c58d0abf53f06513ade2c4701b55ebf738
     Signer:
     - SerialNumber: 0ec67729a8c3327b1b23804ce24719bd
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
@@ -106,13 +108,13 @@ KnownVulnerableSamples:
       Entropy: 6.3127580415603495
       Virtual Size: '0x10ab'
     .rdata:
-      Entropy: 3.7500872463390986
+      Entropy: 3.7500872463390977
       Virtual Size: '0x4e4'
     .data:
       Entropy: 3.446439344671015
       Virtual Size: '0x14'
     .pdata:
-      Entropy: 3.499049437096423
+      Entropy: 3.4990494370964225
       Virtual Size: '0xc0'
     INIT:
       Entropy: 5.190058073985316
@@ -124,6 +126,6 @@ KnownVulnerableSamples:
       Entropy: 3.046439344671015
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-11-07 16:38:44'
+  CreationTimestamp: '2022-11-07 18:38:44'
 Tags:
 - etdsupp.sys

@@ -79,6 +79,7 @@ KnownVulnerableSamples:
         MD5: 8e5a33e7bb54021804e4e59f3e526eb6
         SHA1: 1100fd4e09b76dbfc11a2af0be5fb874e1fb7de5
         SHA256: 073be2d750162b598fb61d31412483eb6c2b95746abf85862de245322ab1dc13
+        SHA384: bc5188acd4a01d2e790b324dbac52b313693782a4d0f8db3e32b6dd92eef020171eeab09d42890b2e60e2a1207761f62
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 High Assurance
         Code Signing CA
       ValidFrom: '2013-10-22 12:00:00'
@@ -92,6 +93,7 @@ KnownVulnerableSamples:
         MD5: 7b0fbcf5c5aa55932726e9222f56efe2
         SHA1: f09486b2b82a88a8b82aa2a12440496c8e53c452
         SHA256: 0bf095b845b69928b5d7dfd1c42ae4f90feb8dc97f7830598c93e848877021fb
+        SHA384: f2a7644292efe9a7adc26cdeb0aa13980ea792d21845ba696684ac64d7f906839f3ec7625c3a88efefe3a451d961d317
     Signer:
     - SerialNumber: 09e002ed55ebc92b8a799574f80069fd
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 High Assurance
@@ -103,7 +105,7 @@ KnownVulnerableSamples:
     SHA256: 189683b4db2e68d2f0b3f91f1141907b3887f23991867a68a22389d40ad3634e
   Sections:
     .text:
-      Entropy: 5.93987588694592
+      Entropy: 5.939875886945923
       Virtual Size: '0x6ba'
     .rdata:
       Entropy: 4.302335685844511
@@ -118,9 +120,9 @@ KnownVulnerableSamples:
       Entropy: 5.046663153942613
       Virtual Size: '0x242'
     .rsrc:
-      Entropy: 3.1281653750930665
+      Entropy: 3.128165375093067
       Virtual Size: '0x2f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-01-16 02:04:02'
+  CreationTimestamp: '2020-01-16 04:04:02'
 Tags:
 - HpPortIox64.sys

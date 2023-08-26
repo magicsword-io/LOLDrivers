@@ -30,7 +30,7 @@ KnownVulnerableSamples:
     SHA256: 81f4258c5aee1bfe424880fbc61a1928a816014c502f010be03becbb42e648fb
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2023-04-10 19:59:25'
+  CreationTimestamp: '2023-04-10 21:59:25'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -140,10 +140,10 @@ KnownVulnerableSamples:
       Entropy: 4.386100622624198
       Virtual Size: '0x4f8'
     .gfids:
-      Entropy: 0.8112781244591328
+      Entropy: 0.8112781244591329
       Virtual Size: '0x4'
     INIT:
-      Entropy: 5.167244656939951
+      Entropy: 5.1672446569399515
       Virtual Size: '0x96e'
     .reloc:
       Entropy: 3.2341837197791876
@@ -165,6 +165,7 @@ KnownVulnerableSamples:
         MD5: 8314595952398203ab24badbbc927d39
         SHA1: b07dcf73133408eee2786a208ce4b2543bf6c583
         SHA256: c734685d985b8ea13db4fc1a6dcd26aa0dde78b4c3b651ea5d58e32e081b2a41
+        SHA384: 874ded773c743b4e18744d7978b41cfe2e55529c61d45a0e34b3950aaad56b6c7a3780880133bcd1df3b1f86d468d46d
     - Subject: C=CN, L=, O=, OU=, CN=
       ValidFrom: '2018-08-15 00:00:00'
       ValidTo: '2019-08-15 23:59:59'
@@ -177,6 +178,7 @@ KnownVulnerableSamples:
         MD5: 5037c865c427f7d514ac954ef7e66ccf
         SHA1: cfcc3ebb5c9003e88373beb66781dbdf9e1904d2
         SHA256: cd684ad96d510b669c0767e4b845fb7a04fba27c1f3a0935b09a988d94938f6e
+        SHA384: 30bf56d04a2a54ae834ea9b111da02fe53c0c13ddd66f815aed8100bb887c6d5b299e518ba1f4abc0f2c3bb02029141b
     - Subject: C=US, O=thawte, Inc., OU=Certification Services Division, OU=(c) 2006
         thawte, Inc. , For authorized use only, CN=thawte Primary Root CA
       ValidFrom: '2011-02-22 19:31:57'
@@ -190,6 +192,7 @@ KnownVulnerableSamples:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
         SHA256: a39ed0d6fd4eb1a6f7fed60f726e23eae668b7591bc004644625d22c701213fa
+        SHA384: 64b7643e4146016cbf83c911eb67e4601b6bb8d66f8ee8dcee67b815f91770d86ab23678b984430f22a963e5484881b7
     Signer:
     - SerialNumber: 0dbdf488aeaa9795e332a1ca2747af0d
       Issuer: C=US, O=thawte, Inc., CN=thawte SHA256 Code Signing CA

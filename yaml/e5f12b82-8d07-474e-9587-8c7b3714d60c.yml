@@ -194,6 +194,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -207,6 +208,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TR, L=Edirne, O=Zemana Ltd., CN=Zemana Ltd.
       ValidFrom: '2014-12-16 00:00:00'
       ValidTo: '2017-12-20 12:00:00'
@@ -219,6 +221,7 @@ KnownVulnerableSamples:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
         SHA256: 7caefa120bfce12d33df6ed4ffefcb069a7290c90b378deca4ef2d66947eb18d
+        SHA384: e26234d027fe70850cbb5efc9c4e61196cdaa00339a64d729c6d4a57bd04d148b16c00e2855b79979787a76f4b860a25
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -232,6 +235,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -245,6 +249,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     Signer:
     - SerialNumber: 0210230fd364b469091b8a4440145e18
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
@@ -259,10 +264,10 @@ KnownVulnerableSamples:
       Entropy: 6.311575029098583
       Virtual Size: '0x20975'
     .hook:
-      Entropy: 5.097466333253085
+      Entropy: 5.097466333253086
       Virtual Size: '0x9af'
     .rdata:
-      Entropy: 5.539147413432647
+      Entropy: 5.539147413432646
       Virtual Size: '0x463c'
     .data:
       Entropy: 4.8888094657184
@@ -271,7 +276,7 @@ KnownVulnerableSamples:
       Entropy: 5.125727272335482
       Virtual Size: '0x84c'
     INIT:
-      Entropy: 5.341472095080265
+      Entropy: 5.341472095080266
       Virtual Size: '0xf2e'
     .rsrc:
       Entropy: 3.1200681658662868
@@ -280,7 +285,7 @@ KnownVulnerableSamples:
       Entropy: 4.004251703727133
       Virtual Size: '0x58'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-11-20 16:27:25'
+  CreationTimestamp: '2015-11-20 18:27:25'
 - Filename: zam64.sys
   MD5: db46c56849bbce9a55a03283efc8c280
   SHA1: 8f4b79b8026da7f966d38a8ba494c113c5e3894b
@@ -423,6 +428,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -436,6 +442,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TR, L=Edirne, O=Zemana Ltd., CN=Zemana Ltd.
       ValidFrom: '2014-12-16 00:00:00'
       ValidTo: '2017-12-20 12:00:00'
@@ -448,6 +455,7 @@ KnownVulnerableSamples:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
         SHA256: 7caefa120bfce12d33df6ed4ffefcb069a7290c90b378deca4ef2d66947eb18d
+        SHA384: e26234d027fe70850cbb5efc9c4e61196cdaa00339a64d729c6d4a57bd04d148b16c00e2855b79979787a76f4b860a25
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -461,6 +469,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -474,6 +483,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     Signer:
     - SerialNumber: 0210230fd364b469091b8a4440145e18
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
@@ -485,31 +495,31 @@ KnownVulnerableSamples:
     SHA256: 9cb52aae7fdcaabee6e2e9b8640a4a386e7610f0fdedd53413fd1a9d1e7c044b
   Sections:
     .text:
-      Entropy: 6.394396532876167
+      Entropy: 6.394396532876168
       Virtual Size: '0xb374'
     .hook:
-      Entropy: 5.038393262108047
+      Entropy: 5.038393262108046
       Virtual Size: '0x9af'
     .rdata:
       Entropy: 5.496538814940608
       Virtual Size: '0x4354'
     .data:
-      Entropy: 4.885486089888766
+      Entropy: 4.885486089888765
       Virtual Size: '0x95b0'
     .pdata:
-      Entropy: 4.837204199996544
+      Entropy: 4.837204199996541
       Virtual Size: '0x774'
     INIT:
-      Entropy: 5.364871219090765
+      Entropy: 5.364871219090766
       Virtual Size: '0xcea'
     .rsrc:
       Entropy: 3.1167029968436752
       Virtual Size: '0x270'
     .reloc:
-      Entropy: 4.005527221234636
+      Entropy: 4.005527221234631
       Virtual Size: '0x5c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-07-23 05:10:50'
+  CreationTimestamp: '2015-07-23 07:10:50'
 - Filename: zamguard64.sys
   MD5: 99c131567c10c25589e741e69a8f8aa3
   SHA1: 3b8ddf860861cc4040dea2d2d09f80582547d105
@@ -684,6 +694,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -697,6 +708,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TR, L=Edirne, O=Zemana Ltd., CN=Zemana Ltd.
       ValidFrom: '2014-12-16 00:00:00'
       ValidTo: '2017-12-20 12:00:00'
@@ -709,6 +721,7 @@ KnownVulnerableSamples:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
         SHA256: 7caefa120bfce12d33df6ed4ffefcb069a7290c90b378deca4ef2d66947eb18d
+        SHA384: e26234d027fe70850cbb5efc9c4e61196cdaa00339a64d729c6d4a57bd04d148b16c00e2855b79979787a76f4b860a25
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -722,6 +735,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -735,6 +749,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     Signer:
     - SerialNumber: 0210230fd364b469091b8a4440145e18
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
@@ -749,7 +764,7 @@ KnownVulnerableSamples:
       Entropy: 6.318184968025881
       Virtual Size: '0x217a5'
     .hook:
-      Entropy: 5.11576244605271
+      Entropy: 5.1157624460527105
       Virtual Size: '0x9af'
     .rdata:
       Entropy: 5.528539978421143
@@ -770,7 +785,7 @@ KnownVulnerableSamples:
       Entropy: 4.064239284774715
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-05-24 03:38:42'
+  CreationTimestamp: '2016-05-24 05:38:42'
 - Filename: zam64.sys
   MD5: e5f8fcdfb52155ed4dffd8a205b3d091
   SHA1: 90abd7670c84c47e6ffc45c67d676db8c12b1939
@@ -930,6 +945,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -943,6 +959,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TR, L=Edirne, O=Zemana Ltd., CN=Zemana Ltd.
       ValidFrom: '2014-12-16 00:00:00'
       ValidTo: '2017-12-20 12:00:00'
@@ -955,6 +972,7 @@ KnownVulnerableSamples:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
         SHA256: 7caefa120bfce12d33df6ed4ffefcb069a7290c90b378deca4ef2d66947eb18d
+        SHA384: e26234d027fe70850cbb5efc9c4e61196cdaa00339a64d729c6d4a57bd04d148b16c00e2855b79979787a76f4b860a25
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -968,6 +986,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -981,6 +1000,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     Signer:
     - SerialNumber: 0210230fd364b469091b8a4440145e18
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
@@ -992,7 +1012,7 @@ KnownVulnerableSamples:
     SHA256: 20fee3293ed1f05bc11ae72145db01fabac5b03a5373d99becc657699f98b330
   Sections:
     .text:
-      Entropy: 6.311766074951009
+      Entropy: 6.3117660749510085
       Virtual Size: '0x20925'
     .hook:
       Entropy: 5.1040723684174
@@ -1016,7 +1036,7 @@ KnownVulnerableSamples:
       Entropy: 4.004251703727133
       Virtual Size: '0x58'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-11-03 07:00:59'
+  CreationTimestamp: '2015-11-03 09:00:59'
 - Filename: zam64.sys
   MD5: 707ab1170389eba44ffd4cfad01b5969
   SHA1: b99a5396094b6b20cea72fbf0c0083030155f74e
@@ -1191,6 +1211,7 @@ KnownVulnerableSamples:
         MD5: d83c9268bb1f35e4ea0f81b7b876b4f8
         SHA1: 6a784e02bf67f5791a85567716aa2d0fd701fcd0
         SHA256: 00dab92fcb3753ac06147a6d8888b5731877d84979e3f178f572e3a1dff33fa8
+        SHA384: 75264b08d0862968698b184e6049337dbb3ddaab64c4cb71aaa8b990f10bc8b8660e2b1044da616784559b92f6b45280
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -1204,6 +1225,7 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 3300000058e7c589c068dca727000000000058
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -1239,7 +1261,7 @@ KnownVulnerableSamples:
       Entropy: 4.064239284774715
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-17 11:06:53'
+  CreationTimestamp: '2016-08-17 13:06:53'
 - Filename: zam64.sys
   MD5: 9e0659d443a2b9d1afc75a160f500605
   SHA1: 09f117d83f2f206ee37f1eb19eea576a0ac9bdcc
@@ -1382,6 +1404,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1395,6 +1418,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TR, L=Edirne, O=Zemana Ltd., CN=Zemana Ltd.
       ValidFrom: '2014-12-16 00:00:00'
       ValidTo: '2017-12-20 12:00:00'
@@ -1407,6 +1431,7 @@ KnownVulnerableSamples:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
         SHA256: 7caefa120bfce12d33df6ed4ffefcb069a7290c90b378deca4ef2d66947eb18d
+        SHA384: e26234d027fe70850cbb5efc9c4e61196cdaa00339a64d729c6d4a57bd04d148b16c00e2855b79979787a76f4b860a25
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -1420,6 +1445,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -1433,6 +1459,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     Signer:
     - SerialNumber: 0210230fd364b469091b8a4440145e18
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
@@ -1444,31 +1471,31 @@ KnownVulnerableSamples:
     SHA256: 9cb52aae7fdcaabee6e2e9b8640a4a386e7610f0fdedd53413fd1a9d1e7c044b
   Sections:
     .text:
-      Entropy: 6.39444173923497
+      Entropy: 6.394441739234971
       Virtual Size: '0xb374'
     .hook:
-      Entropy: 5.038393262108047
+      Entropy: 5.038393262108046
       Virtual Size: '0x9af'
     .rdata:
       Entropy: 5.49649919697251
       Virtual Size: '0x4354'
     .data:
-      Entropy: 4.885486089888766
+      Entropy: 4.885486089888765
       Virtual Size: '0x95b0'
     .pdata:
-      Entropy: 4.837204199996544
+      Entropy: 4.837204199996541
       Virtual Size: '0x774'
     INIT:
-      Entropy: 5.364871219090765
+      Entropy: 5.364871219090766
       Virtual Size: '0xcea'
     .rsrc:
-      Entropy: 3.1027914592928436
+      Entropy: 3.102791459292843
       Virtual Size: '0x270'
     .reloc:
-      Entropy: 4.005527221234636
+      Entropy: 4.005527221234631
       Virtual Size: '0x5c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-08-30 06:52:48'
+  CreationTimestamp: '2015-08-30 08:52:48'
 - Filename: zamguard64.sys
   MD5: 51e7b58f6e9b776568ffbd4dd9972a60
   SHA1: 2cf75df00c69d907cfe683cb25077015d05be65d
@@ -1611,6 +1638,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1624,6 +1652,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TR, L=Edirne, O=Zemana Ltd., CN=Zemana Ltd.
       ValidFrom: '2014-12-16 00:00:00'
       ValidTo: '2017-12-20 12:00:00'
@@ -1636,6 +1665,7 @@ KnownVulnerableSamples:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
         SHA256: 7caefa120bfce12d33df6ed4ffefcb069a7290c90b378deca4ef2d66947eb18d
+        SHA384: e26234d027fe70850cbb5efc9c4e61196cdaa00339a64d729c6d4a57bd04d148b16c00e2855b79979787a76f4b860a25
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -1649,6 +1679,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -1662,6 +1693,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     Signer:
     - SerialNumber: 0210230fd364b469091b8a4440145e18
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
@@ -1676,7 +1708,7 @@ KnownVulnerableSamples:
       Entropy: 6.385878636968825
       Virtual Size: '0xb224'
     .hook:
-      Entropy: 5.044794310603694
+      Entropy: 5.0447943106036925
       Virtual Size: '0x9af'
     .rdata:
       Entropy: 5.531467293507371
@@ -1688,7 +1720,7 @@ KnownVulnerableSamples:
       Entropy: 4.807436318496407
       Virtual Size: '0x75c'
     INIT:
-      Entropy: 5.3696053533373425
+      Entropy: 5.369605353337342
       Virtual Size: '0xcea'
     .rsrc:
       Entropy: 3.1111150668737135
@@ -1697,7 +1729,7 @@ KnownVulnerableSamples:
       Entropy: 3.8191100346914766
       Virtual Size: '0x54'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-06-30 07:29:29'
+  CreationTimestamp: '2015-06-30 09:29:29'
 - Filename: zamguard32.sys
   MD5: 06897b431c07886454e0681723dd53e6
   SHA1: 40d29aa7b3fafd27c8b27c7ca7a3089ccb88d69b
@@ -1884,6 +1916,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1897,6 +1930,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TR, L=Edirne, O=Zemana Ltd., CN=Zemana Ltd.
       ValidFrom: '2014-12-16 00:00:00'
       ValidTo: '2017-12-20 12:00:00'
@@ -1909,6 +1943,7 @@ KnownVulnerableSamples:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
         SHA256: 7caefa120bfce12d33df6ed4ffefcb069a7290c90b378deca4ef2d66947eb18d
+        SHA384: e26234d027fe70850cbb5efc9c4e61196cdaa00339a64d729c6d4a57bd04d148b16c00e2855b79979787a76f4b860a25
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -1922,6 +1957,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -1935,6 +1971,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     Signer:
     - SerialNumber: 0210230fd364b469091b8a4440145e18
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
@@ -1967,7 +2004,7 @@ KnownVulnerableSamples:
       Entropy: 6.750936493564276
       Virtual Size: '0x222c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-17 11:07:02'
+  CreationTimestamp: '2016-08-17 13:07:02'
 - Filename: zam64.sys
   MD5: d4a10447fdaff7a001715191c1f914b6
   SHA1: 628e63caf72c29042e162f5f7570105d2108e3c2
@@ -2108,6 +2145,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -2121,6 +2159,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TR, L=Edirne, O=Zemana Ltd., CN=Zemana Ltd.
       ValidFrom: '2014-12-16 00:00:00'
       ValidTo: '2017-12-20 12:00:00'
@@ -2133,6 +2172,7 @@ KnownVulnerableSamples:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
         SHA256: 7caefa120bfce12d33df6ed4ffefcb069a7290c90b378deca4ef2d66947eb18d
+        SHA384: e26234d027fe70850cbb5efc9c4e61196cdaa00339a64d729c6d4a57bd04d148b16c00e2855b79979787a76f4b860a25
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -2146,6 +2186,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -2159,6 +2200,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     Signer:
     - SerialNumber: 0210230fd364b469091b8a4440145e18
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
@@ -2170,10 +2212,10 @@ KnownVulnerableSamples:
     SHA256: 86aa19cd5e2beaf013e66553b916cc39a8c456d7000e46bcfc4719eda41206b5
   Sections:
     .text:
-      Entropy: 6.391414310346214
+      Entropy: 6.3914143103462155
       Virtual Size: '0xaf64'
     .hook:
-      Entropy: 5.064996868770916
+      Entropy: 5.0649968687709155
       Virtual Size: '0x9af'
     .rdata:
       Entropy: 5.536191925684008
@@ -2188,13 +2230,13 @@ KnownVulnerableSamples:
       Entropy: 5.371003736727007
       Virtual Size: '0xcba'
     .rsrc:
-      Entropy: 3.2000366091764283
+      Entropy: 3.2000366091764265
       Virtual Size: '0x2a8'
     .reloc:
       Entropy: 3.7715246176915187
       Virtual Size: '0x54'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-05-12 07:14:11'
+  CreationTimestamp: '2015-05-12 09:14:11'
 - Filename: zam64.sys
   MD5: 75e50ae2e0f783e0caf912f45e15248a
   SHA1: a3d612a5ea3439ba72157bd96e390070bdddbbf3
@@ -2369,6 +2411,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -2382,6 +2425,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TR, L=Edirne, O=Zemana Ltd., CN=Zemana Ltd.
       ValidFrom: '2014-12-16 00:00:00'
       ValidTo: '2017-12-20 12:00:00'
@@ -2394,6 +2438,7 @@ KnownVulnerableSamples:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
         SHA256: 7caefa120bfce12d33df6ed4ffefcb069a7290c90b378deca4ef2d66947eb18d
+        SHA384: e26234d027fe70850cbb5efc9c4e61196cdaa00339a64d729c6d4a57bd04d148b16c00e2855b79979787a76f4b860a25
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -2407,6 +2452,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -2420,6 +2466,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     Signer:
     - SerialNumber: 0210230fd364b469091b8a4440145e18
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
@@ -2431,13 +2478,13 @@ KnownVulnerableSamples:
     SHA256: a0d4900197b774247b0cb136ab600bfdb16e2ea139e80b8ee4bd0cc768223a5a
   Sections:
     .text:
-      Entropy: 5.993512424846143
+      Entropy: 5.993512424846142
       Virtual Size: '0x2c275'
     .hook:
       Entropy: 5.054306709915981
       Virtual Size: '0x9cf'
     .rdata:
-      Entropy: 5.401668155372347
+      Entropy: 5.401668155372346
       Virtual Size: '0x43d4'
     .data:
       Entropy: 4.886684982431987
@@ -2449,13 +2496,13 @@ KnownVulnerableSamples:
       Entropy: 5.34672539398453
       Virtual Size: '0x1106'
     .rsrc:
-      Entropy: 3.099017887403996
+      Entropy: 3.0990178874039955
       Virtual Size: '0x270'
     .reloc:
       Entropy: 4.067679213183045
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-04-01 04:23:58'
+  CreationTimestamp: '2016-04-01 06:23:58'
 - Filename: zam64.sys
   MD5: 5054083cf29649a76c94658ba7ff5bce
   SHA1: dd4cd182192b43d4105786ba87f55a036ec45ef2
@@ -2607,6 +2654,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -2620,6 +2668,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TR, L=Edirne, O=Zemana Ltd., CN=Zemana Ltd.
       ValidFrom: '2014-12-16 00:00:00'
       ValidTo: '2017-12-20 12:00:00'
@@ -2632,6 +2681,7 @@ KnownVulnerableSamples:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
         SHA256: 7caefa120bfce12d33df6ed4ffefcb069a7290c90b378deca4ef2d66947eb18d
+        SHA384: e26234d027fe70850cbb5efc9c4e61196cdaa00339a64d729c6d4a57bd04d148b16c00e2855b79979787a76f4b860a25
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -2645,6 +2695,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -2658,6 +2709,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     Signer:
     - SerialNumber: 0210230fd364b469091b8a4440145e18
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
@@ -2669,10 +2721,10 @@ KnownVulnerableSamples:
     SHA256: 02f7c54750b6c80addc5b62d3517dfc10363a27e0277cc87d5c12136d341d484
   Sections:
     .text:
-      Entropy: 6.399466980549077
+      Entropy: 6.399466980549078
       Virtual Size: '0xbae4'
     .hook:
-      Entropy: 5.065053175214044
+      Entropy: 5.065053175214043
       Virtual Size: '0x9af'
     .rdata:
       Entropy: 5.476727334664607
@@ -2693,7 +2745,7 @@ KnownVulnerableSamples:
       Entropy: 3.983795976674783
       Virtual Size: '0x58'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-10-22 05:36:54'
+  CreationTimestamp: '2015-10-22 07:36:54'
 - Filename: zam64.sys
   MD5: 21e13f2cb269defeae5e1d09887d47bb
   SHA1: 16d7ecf09fc98798a6170e4cef2745e0bee3f5c7
@@ -2874,6 +2926,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -2887,6 +2940,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TR, L=Edirne, O=Zemana Ltd., CN=Zemana Ltd.
       ValidFrom: '2014-12-16 00:00:00'
       ValidTo: '2017-12-20 12:00:00'
@@ -2899,6 +2953,7 @@ KnownVulnerableSamples:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
         SHA256: 7caefa120bfce12d33df6ed4ffefcb069a7290c90b378deca4ef2d66947eb18d
+        SHA384: e26234d027fe70850cbb5efc9c4e61196cdaa00339a64d729c6d4a57bd04d148b16c00e2855b79979787a76f4b860a25
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -2912,6 +2967,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -2925,6 +2981,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     Signer:
     - SerialNumber: 0210230fd364b469091b8a4440145e18
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
@@ -2960,7 +3017,7 @@ KnownVulnerableSamples:
       Entropy: 4.064239284774715
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-17 11:06:53'
+  CreationTimestamp: '2016-08-17 13:06:53'
 Tags:
 - zam64.sys
 - zamguard32.sys

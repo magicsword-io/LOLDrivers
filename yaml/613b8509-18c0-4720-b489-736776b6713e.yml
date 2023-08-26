@@ -95,6 +95,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -108,6 +109,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       ValidFrom: '2014-03-04 00:00:00'
@@ -121,6 +123,7 @@ KnownVulnerableSamples:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
+        SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
     - Subject: ??=TW, ??=, ??=NEW TAIPEI, ??=Private Organization, serialNumber=22044755,
         C=TW, L=NEW TAIPEI, O=GIGA,BYTE Technology Co., Ltd., CN=GIGA,BYTE Technology
         Co., Ltd.
@@ -135,6 +138,7 @@ KnownVulnerableSamples:
         MD5: 5415ec7433f8ae320658011dfcfa2998
         SHA1: 044407fe1b8e4b5af9eecf34ea87a0ecb32ee6bb
         SHA256: f828f449f9b365a1455b8358b044385beaf097166a80defc440eacb8deb6ef26
+        SHA384: 640b5b53eabd60a97be0f1fcf7c893edb3d8ebf507c63958114532cd445246dc0ae92a4dadec314dd5babee5d7f0497c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -149,6 +153,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 4f8eefa0dcc85bbd656ab0f160743d34
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
@@ -160,7 +165,7 @@ KnownVulnerableSamples:
     SHA256: fe972e5d0cd1b46882d0c1cacca6f8fd9f7034d006e00f8439a549090d7fd40f
   Sections:
     .text:
-      Entropy: 6.079755030506782
+      Entropy: 6.079755030506781
       Virtual Size: '0x383'
     .rdata:
       Entropy: 3.9588953379045915
@@ -169,19 +174,19 @@ KnownVulnerableSamples:
       Entropy: 0.568711264156015
       Virtual Size: '0x8b8'
     PAGE:
-      Entropy: 6.197689857125293
+      Entropy: 6.197689857125294
       Virtual Size: '0xa7e'
     INIT:
       Entropy: 5.617941004832402
       Virtual Size: '0x3ba'
     .rsrc:
-      Entropy: 3.3378742704604414
+      Entropy: 3.337874270460442
       Virtual Size: '0x368'
     .reloc:
       Entropy: 5.642936600253398
       Virtual Size: '0x188'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-02-12 20:25:54'
+  CreationTimestamp: '2019-02-12 22:25:54'
 - Filename: gdrv.sys
   MD5: 043d5a1fc66662a3f91b8a9c027f9be9
   SHA1: 3d8cc9123be74b31c597b0014c2a72090f0c44ef
@@ -241,6 +246,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -254,6 +260,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       ValidFrom: '2014-03-04 00:00:00'
@@ -267,6 +274,7 @@ KnownVulnerableSamples:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
+        SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
     - Subject: ??=TW, ??=, ??=NEW TAIPEI, ??=Private Organization, serialNumber=22044755,
         C=TW, L=NEW TAIPEI, O=GIGA,BYTE Technology Co., Ltd., CN=GIGA,BYTE Technology
         Co., Ltd.
@@ -281,6 +289,7 @@ KnownVulnerableSamples:
         MD5: 5415ec7433f8ae320658011dfcfa2998
         SHA1: 044407fe1b8e4b5af9eecf34ea87a0ecb32ee6bb
         SHA256: f828f449f9b365a1455b8358b044385beaf097166a80defc440eacb8deb6ef26
+        SHA384: 640b5b53eabd60a97be0f1fcf7c893edb3d8ebf507c63958114532cd445246dc0ae92a4dadec314dd5babee5d7f0497c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -295,6 +304,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 4f8eefa0dcc85bbd656ab0f160743d34
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
@@ -309,7 +319,7 @@ KnownVulnerableSamples:
       Entropy: 6.1918639017358545
       Virtual Size: '0x103e'
     .rdata:
-      Entropy: 4.237177841304867
+      Entropy: 4.2371778413048675
       Virtual Size: '0x6b0'
     .data:
       Entropy: 0.754659278632904
@@ -318,22 +328,22 @@ KnownVulnerableSamples:
       Entropy: 3.811205019243734
       Virtual Size: '0x174'
     .gfids:
-      Entropy: 0.8112781244591328
+      Entropy: 0.8112781244591329
       Virtual Size: '0x4'
     PAGE:
       Entropy: 6.06059048417531
       Virtual Size: '0x834'
     INIT:
-      Entropy: 5.430018205225444
+      Entropy: 5.430018205225443
       Virtual Size: '0x3bc'
     .rsrc:
-      Entropy: 3.340167848442093
+      Entropy: 3.3401678484420936
       Virtual Size: '0x368'
     .reloc:
       Entropy: 3.251870619839375
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-02-12 20:23:11'
+  CreationTimestamp: '2019-02-12 22:23:11'
 - Filename: gdrv.sys
   MD5: 3c55092900343d3d28564e2d34e7be2c
   SHA1: 1a56614ea7d335c844b7fc6edd5feb59b8df7b55
@@ -399,6 +409,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -412,6 +423,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       ValidFrom: '2014-03-04 00:00:00'
@@ -425,6 +437,7 @@ KnownVulnerableSamples:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
+        SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
     - Subject: ??=TW, ??=, ??=NEW TAIPEI, ??=Private Organization, serialNumber=22044755,
         C=TW, L=NEW TAIPEI, O=GIGA,BYTE Technology Co., Ltd., CN=GIGA,BYTE Technology
         Co., Ltd.
@@ -439,6 +452,7 @@ KnownVulnerableSamples:
         MD5: 5415ec7433f8ae320658011dfcfa2998
         SHA1: 044407fe1b8e4b5af9eecf34ea87a0ecb32ee6bb
         SHA256: f828f449f9b365a1455b8358b044385beaf097166a80defc440eacb8deb6ef26
+        SHA384: 640b5b53eabd60a97be0f1fcf7c893edb3d8ebf507c63958114532cd445246dc0ae92a4dadec314dd5babee5d7f0497c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -453,6 +467,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 4f8eefa0dcc85bbd656ab0f160743d34
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
@@ -473,10 +488,10 @@ KnownVulnerableSamples:
       Entropy: 0.7345015722226091
       Virtual Size: '0xfb8'
     .pdata:
-      Entropy: 3.8098736809486815
+      Entropy: 3.809873680948682
       Virtual Size: '0x1a4'
     .gfids:
-      Entropy: 0.8112781244591328
+      Entropy: 0.8112781244591329
       Virtual Size: '0x4'
     PAGE:
       Entropy: 6.056099606920948
@@ -485,13 +500,13 @@ KnownVulnerableSamples:
       Entropy: 5.472943444636511
       Virtual Size: '0x468'
     .rsrc:
-      Entropy: 3.3475705158878046
+      Entropy: 3.347570515887805
       Virtual Size: '0x368'
     .reloc:
       Entropy: 3.3380209612256118
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-04-15 01:45:51'
+  CreationTimestamp: '2019-04-15 03:45:51'
 - Filename: gdrv.sys
   MD5: 7907e14f9bcf3a4689c9a74a1a873cb6
   SHA1: b9b72a5be3871ddc0446bae35548ea176c4ea613
@@ -552,6 +567,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -564,6 +580,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -578,6 +595,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -590,6 +608,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei Hsien, O=Giga,Byte Technology, OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Testing Department, CN=Giga,Byte
         Technology
@@ -604,6 +623,7 @@ KnownVulnerableSamples:
         MD5: 0695cf8f3778103101610eccc2a78d04
         SHA1: ab5b9a4474b73d3317a7853116f62e83c9301b0d
         SHA256: 6b88dbf87d212b8a91c4fd09d6725e3ae498d898c8292e77657be9d44e2503ca
+        SHA384: 3dab111c5395ec6bda188690b936c86ed2e9d46d5f718488bd3f7608338556cf774df25f2ad4a64564d067c21dc05cdc
     Signer:
     - SerialNumber: 720ef3aaa1a44f7d0717a805c290c378
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -619,7 +639,7 @@ KnownVulnerableSamples:
       Entropy: 6.2433654070225355
       Virtual Size: '0x2c18'
     .rdata:
-      Entropy: 4.588619241668126
+      Entropy: 4.588619241668127
       Virtual Size: '0x5fc'
     .data:
       Entropy: 0.4231266687750792
@@ -634,7 +654,7 @@ KnownVulnerableSamples:
       Entropy: 4.481086585534943
       Virtual Size: '0x65c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-12 21:22:29'
+  CreationTimestamp: '2009-03-12 23:22:29'
 - Filename: gdrv.sys
   MD5: a72e10ecea2fdeb8b9d4f45d0294086b
   SHA1: 4692730f6b56eeb0399460c72ade8a15ddd43a62
@@ -700,6 +720,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -713,6 +734,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       ValidFrom: '2014-03-04 00:00:00'
@@ -726,6 +748,7 @@ KnownVulnerableSamples:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
+        SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -740,6 +763,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: ??=TW, ??=Private Organization, serialNumber=22044755, C=TW, ST=Taiwan,
         L=New Taipei, O=GIGA,BYTE TECHNOLOGY CO., LTD., OU=Quality Validation Department
         II, CN=GIGA,BYTE TECHNOLOGY CO., LTD.
@@ -754,6 +778,7 @@ KnownVulnerableSamples:
         MD5: 7ce6ab4209b99d039125f7d2466f7707
         SHA1: 6f99eeb729cc36377229a2b37172f0da37e6bbb1
         SHA256: 864a2f84905d3ccee358fdad2333d71065de08345ee97cecaab964195f85fcd3
+        SHA384: ae8ccffac5ac06f978822df110f59000024525bc59262df7c1f2fea08ff49285afca479959f163ce4bfe43e956cfa220
     Signer:
     - SerialNumber: 47547865fbe14ca43b8231902649d74d
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
@@ -765,19 +790,19 @@ KnownVulnerableSamples:
     SHA256: 71b608735d9c6d4adcdade732f8df7684c6a8bc7c5b8d427d584c58c52bd04a9
   Sections:
     .text:
-      Entropy: 6.1762923779720875
+      Entropy: 6.176292377972086
       Virtual Size: '0x134e'
     .rdata:
-      Entropy: 4.255692242153894
+      Entropy: 4.255692242153893
       Virtual Size: '0x750'
     .data:
       Entropy: 0.7345015722226091
       Virtual Size: '0xfb8'
     .pdata:
-      Entropy: 3.8755184712871364
+      Entropy: 3.875518471287137
       Virtual Size: '0x1a4'
     .gfids:
-      Entropy: 0.8112781244591328
+      Entropy: 0.8112781244591329
       Virtual Size: '0x4'
     PAGE:
       Entropy: 6.058280996869597
@@ -786,13 +811,13 @@ KnownVulnerableSamples:
       Entropy: 5.476143480518104
       Virtual Size: '0x468'
     .rsrc:
-      Entropy: 3.3444821443483326
+      Entropy: 3.344482144348333
       Virtual Size: '0x368'
     .reloc:
       Entropy: 3.248587587731763
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-04-20 04:38:40'
+  CreationTimestamp: '2018-04-20 06:38:40'
 - Filename: gdrv.sys
   MD5: 31f34de4374a6ed0e70a022a0efa2570
   SHA1: c70989ed7a6ad9d7cd40ae970e90f3c3f2f84860
@@ -859,6 +884,7 @@ KnownVulnerableSamples:
         MD5: 729cf4baceff4ef7aa199ad4f4ebed3d
         SHA1: f478f0e790d5c8ec6056a3ab2567404a991d2837
         SHA256: c3c88c2a500cb5a97abca837193a5bd382f6eb3aeb0008edbce65ea2a3dbfd5c
+        SHA384: e62bbb1ba1ad3df59f2c7265df5576af6b5d4a7473b74985a9d956975fdfc517ffbdd2172b0e3ea36befcb6a9026c872
     - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2021
       ValidFrom: '2021-01-01 00:00:00'
       ValidTo: '2031-01-06 00:00:00'
@@ -871,6 +897,7 @@ KnownVulnerableSamples:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
         SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
     - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2021
       ValidFrom: '2021-01-01 00:00:00'
       ValidTo: '2031-01-06 00:00:00'
@@ -883,6 +910,7 @@ KnownVulnerableSamples:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
         SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
     - Subject: C=CN, ST=, L=, O=, CN=
       ValidFrom: '2020-01-02 07:05:30'
       ValidTo: '2021-01-02 03:42:16'
@@ -895,6 +923,7 @@ KnownVulnerableSamples:
         MD5: 123a13c6529f9736a927a9c5e9b63fe2
         SHA1: 5af3705dcda674e6509c0c61e91a4806f71dcb62
         SHA256: 183fa9cdb2c0c101e4d50479e304de6cec444744fd66fb4ca2f6038c661f19a2
+        SHA384: a432c1a652dbae1681bab4e6775628c55c7f6f999be2513cf117a6f09588b32f325be5424664d5c5a8dd040e1ed94bd7
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -907,6 +936,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
         ID Timestamping CA
       ValidFrom: '2016-01-07 12:00:00'
@@ -920,6 +950,7 @@ KnownVulnerableSamples:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
         SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
         ID Timestamping CA
       ValidFrom: '2016-01-07 12:00:00'
@@ -933,6 +964,7 @@ KnownVulnerableSamples:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
         SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
     Signer:
     - SerialNumber: 0f05d43d469ef74a803e0b3c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
@@ -946,7 +978,7 @@ KnownVulnerableSamples:
       Entropy: 6.2502047491555315
       Virtual Size: '0x2dc8'
     .rdata:
-      Entropy: 4.431694959682769
+      Entropy: 4.431694959682768
       Virtual Size: '0x610'
     .data:
       Entropy: 0.4231266687750792
@@ -958,10 +990,10 @@ KnownVulnerableSamples:
       Entropy: 4.963482726390094
       Virtual Size: '0x412'
     .rsrc:
-      Entropy: 3.471909950512757
+      Entropy: 3.4719099505127566
       Virtual Size: '0x3e8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-07-03 22:27:55'
+  CreationTimestamp: '2013-07-04 00:27:55'
 - Filename: gdrv.sys
   MD5: 4e093256b034925ecd6b29473ff16858
   SHA1: eba5483bb47ec6ff51d91a9bdf1eee3b6344493d
@@ -1026,6 +1058,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G2
       ValidFrom: '2016-05-24 00:00:00'
@@ -1039,6 +1072,7 @@ KnownVulnerableSamples:
         MD5: acb5170547d76873f1e4ff18ed5de2eb
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
         SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
+        SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       ValidFrom: '2014-03-04 00:00:00'
@@ -1052,6 +1086,7 @@ KnownVulnerableSamples:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
+        SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
     - Subject: ??=TW, ??=, ??=NEW TAIPEI, ??=Private Organization, serialNumber=22044755,
         C=TW, L=NEW TAIPEI, O=GIGA,BYTE Technology Co., Ltd., CN=GIGA,BYTE Technology
         Co., Ltd.
@@ -1066,6 +1101,7 @@ KnownVulnerableSamples:
         MD5: 5415ec7433f8ae320658011dfcfa2998
         SHA1: 044407fe1b8e4b5af9eecf34ea87a0ecb32ee6bb
         SHA256: f828f449f9b365a1455b8358b044385beaf097166a80defc440eacb8deb6ef26
+        SHA384: 640b5b53eabd60a97be0f1fcf7c893edb3d8ebf507c63958114532cd445246dc0ae92a4dadec314dd5babee5d7f0497c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -1080,6 +1116,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 4f8eefa0dcc85bbd656ab0f160743d34
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
@@ -1094,7 +1131,7 @@ KnownVulnerableSamples:
       Entropy: 6.302884181466605
       Virtual Size: '0x1c8e'
     .rdata:
-      Entropy: 5.4427400878221235
+      Entropy: 5.442740087822128
       Virtual Size: '0xa4c'
     .data:
       Entropy: 0.754659278632904
@@ -1109,13 +1146,13 @@ KnownVulnerableSamples:
       Entropy: 5.399422660207438
       Virtual Size: '0x468'
     .rsrc:
-      Entropy: 3.3405007945158087
+      Entropy: 3.340500794515809
       Virtual Size: '0x368'
     .reloc:
       Entropy: 3.1867043459100257
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-25 00:05:25'
+  CreationTimestamp: '2021-01-25 02:05:25'
 - Filename: gdrv.sys
   MD5: 1549e6cbce408acaddeb4d24796f2eaf
   SHA1: 18f09ec53f0b7d2b1ab64949157e0e84628d0f0a
@@ -1175,6 +1212,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1188,6 +1226,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       ValidFrom: '2014-03-04 00:00:00'
@@ -1201,6 +1240,7 @@ KnownVulnerableSamples:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
+        SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
     - Subject: ??=TW, ??=, ??=NEW TAIPEI, ??=Private Organization, serialNumber=22044755,
         C=TW, L=NEW TAIPEI, O=GIGA,BYTE Technology Co., Ltd., CN=GIGA,BYTE Technology
         Co., Ltd.
@@ -1215,6 +1255,7 @@ KnownVulnerableSamples:
         MD5: 5415ec7433f8ae320658011dfcfa2998
         SHA1: 044407fe1b8e4b5af9eecf34ea87a0ecb32ee6bb
         SHA256: f828f449f9b365a1455b8358b044385beaf097166a80defc440eacb8deb6ef26
+        SHA384: 640b5b53eabd60a97be0f1fcf7c893edb3d8ebf507c63958114532cd445246dc0ae92a4dadec314dd5babee5d7f0497c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -1229,6 +1270,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 4f8eefa0dcc85bbd656ab0f160743d34
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
@@ -1243,7 +1285,7 @@ KnownVulnerableSamples:
       Entropy: 6.1668404611605645
       Virtual Size: '0x103e'
     .rdata:
-      Entropy: 4.224340384192507
+      Entropy: 4.224340384192508
       Virtual Size: '0x6b0'
     .data:
       Entropy: 0.754659278632904
@@ -1252,13 +1294,13 @@ KnownVulnerableSamples:
       Entropy: 3.7951668454952525
       Virtual Size: '0x174'
     .gfids:
-      Entropy: 0.8112781244591328
+      Entropy: 0.8112781244591329
       Virtual Size: '0x4'
     PAGE:
       Entropy: 6.072611130069712
       Virtual Size: '0x844'
     INIT:
-      Entropy: 5.430018205225444
+      Entropy: 5.430018205225443
       Virtual Size: '0x3bc'
     .rsrc:
       Entropy: 3.3337739108428788
@@ -1267,7 +1309,7 @@ KnownVulnerableSamples:
       Entropy: 3.251870619839375
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-01-17 01:52:53'
+  CreationTimestamp: '2019-01-17 03:52:53'
 - Filename: gdrv.sys
   MD5: c832a4313ff082258240b61b88efa025
   SHA1: 1f1ce28c10453acbc9d3844b4604c59c0ab0ad46
@@ -1338,6 +1380,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1351,6 +1394,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -1365,6 +1409,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1377,6 +1422,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei Hsien, O=Giga,Byte Technology, OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Testing Department, CN=Giga,Byte
         Technology
@@ -1391,6 +1437,7 @@ KnownVulnerableSamples:
         MD5: dc48abdae01614d4607b1f5760dfce88
         SHA1: 467c1868ddb5ef8db746e66acbaab9fdd03fb740
         SHA256: a7f448e2fe327e481adfd1e89db612d5c58ff7891373a6e398ab98ddaeae74c5
+        SHA384: eb0d25fdcfab622d1c80a92ecd689bde520ed2b8099b4120194daa1a0013cabc5bd5792b0c1f12ca9c93fa4518aa2ca7
     Signer:
     - SerialNumber: 248472542c24ab8e429229acf121ca26
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1418,7 +1465,7 @@ KnownVulnerableSamples:
       Entropy: 4.981256903616009
       Virtual Size: '0x12c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-07-03 22:27:29'
+  CreationTimestamp: '2013-07-04 00:27:29'
 - Filename: gdrv.sys
   MD5: d556cb79967e92b5cc69686d16c1d846
   SHA1: de2b56ef7a30a4697e9c4cdcae0fc215d45d061d
@@ -1482,6 +1529,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1494,6 +1542,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -1508,6 +1557,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1520,6 +1570,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei Hsien, O=Giga,Byte Technology, OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Testing Department, CN=Giga,Byte
         Technology
@@ -1534,6 +1585,7 @@ KnownVulnerableSamples:
         MD5: 0695cf8f3778103101610eccc2a78d04
         SHA1: ab5b9a4474b73d3317a7853116f62e83c9301b0d
         SHA256: 6b88dbf87d212b8a91c4fd09d6725e3ae498d898c8292e77657be9d44e2503ca
+        SHA384: 3dab111c5395ec6bda188690b936c86ed2e9d46d5f718488bd3f7608338556cf774df25f2ad4a64564d067c21dc05cdc
     Signer:
     - SerialNumber: 720ef3aaa1a44f7d0717a805c290c378
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1546,13 +1598,13 @@ KnownVulnerableSamples:
     SHA256: 851842a00e07f2b11092dfc28ddea69804461fa27a8eb4fe3366b4994c31a520
   Sections:
     .text:
-      Entropy: 6.524533743036898
+      Entropy: 6.524533743036899
       Virtual Size: '0x194e'
     .rdata:
       Entropy: 2.691603448798156
       Virtual Size: '0xc4'
     INIT:
-      Entropy: 5.184577293889747
+      Entropy: 5.184577293889746
       Virtual Size: '0x2ae'
     .rsrc:
       Entropy: 4.514825600793878
@@ -1561,6 +1613,6 @@ KnownVulnerableSamples:
       Entropy: 4.802440942775519
       Virtual Size: '0xf8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-12 21:17:32'
+  CreationTimestamp: '2009-03-12 23:17:32'
 Tags:
 - gdrv.sys

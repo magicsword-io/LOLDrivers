@@ -171,6 +171,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -184,6 +185,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=CN, ST=Beijing, L=Beijing, O=, OU=RD, CN=
       ValidFrom: '2015-07-27 00:00:00'
       ValidTo: '2016-08-25 23:59:59'
@@ -196,6 +198,7 @@ KnownVulnerableSamples:
         MD5: 29354273ffa68d860d2e9deb5fe3d602
         SHA1: fa3d720490408dcaad3762167515dd5023710e1a
         SHA256: f2be523e7f4c60d579119a390a4bfc10c4400b4e5104bc1187dd67cdde7491e0
+        SHA384: c5706cd33379ce04bf38d2ad2016b09a5a53da722a8998b6387c8bd5fcda06bad32415c7b1ab1a09a1f1b76a85fbb03b
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -210,6 +213,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -224,6 +228,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 195c5f9885214bfb4f88dd2ad1f0be8c
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -245,7 +250,7 @@ KnownVulnerableSamples:
       Entropy: 4.884576013154239
       Virtual Size: '0x6c80'
     .pdata:
-      Entropy: 5.001144635940318
+      Entropy: 5.001144635940314
       Virtual Size: '0x9cc'
     PAGE:
       Entropy: 5.56864239699956
@@ -257,10 +262,10 @@ KnownVulnerableSamples:
       Entropy: 3.234842024525819
       Virtual Size: '0x318'
     .reloc:
-      Entropy: 1.3741854163060885
+      Entropy: 1.3741854163060887
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-12-21 00:56:08'
+  CreationTimestamp: '2015-12-21 02:56:08'
 - Filename: kEvP64.sys
   MD5: 7e7e3f5532b6af24dcc252ac4b240311
   SHA1: 3ccf1f3ac636a5e21b39ede48ff49fa23e05413f
@@ -404,6 +409,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -417,6 +423,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=CN, ST=Beijing, L=Beijing, O=, OU=RD, CN=
       ValidFrom: '2015-07-27 00:00:00'
       ValidTo: '2016-08-25 23:59:59'
@@ -429,6 +436,7 @@ KnownVulnerableSamples:
         MD5: 29354273ffa68d860d2e9deb5fe3d602
         SHA1: fa3d720490408dcaad3762167515dd5023710e1a
         SHA256: f2be523e7f4c60d579119a390a4bfc10c4400b4e5104bc1187dd67cdde7491e0
+        SHA384: c5706cd33379ce04bf38d2ad2016b09a5a53da722a8998b6387c8bd5fcda06bad32415c7b1ab1a09a1f1b76a85fbb03b
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -443,6 +451,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -457,6 +466,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 195c5f9885214bfb4f88dd2ad1f0be8c
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -490,9 +500,9 @@ KnownVulnerableSamples:
       Entropy: 3.234842024525819
       Virtual Size: '0x318'
     .reloc:
-      Entropy: 1.3741854163060885
+      Entropy: 1.3741854163060887
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-12-08 19:11:57'
+  CreationTimestamp: '2015-12-08 21:11:57'
 Tags:
 - kEvP64.sys

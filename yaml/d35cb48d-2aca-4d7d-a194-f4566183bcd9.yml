@@ -785,6 +785,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -798,6 +799,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., CN=Trend Micro, Inc.
       ValidFrom: '2017-04-27 00:00:00'
       ValidTo: '2018-07-16 23:59:59'
@@ -810,6 +812,7 @@ KnownVulnerableSamples:
         MD5: 78eaa337666217b1c16a9a0ebd0b8434
         SHA1: ff9cb835e78f6185eed4372096c3bae53b17d18d
         SHA256: 1c0d9746725e176b4a7c2852878f14d7587f58e65d346bc1247f1c8ee6374250
+        SHA384: ffe3c75b860679a5de399c7d2c2844dbfac51d5d8581e24648d208daba1e4bed5c867808e02dc8d7cb3df1d4b2b53d10
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -824,6 +827,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -838,6 +842,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 497c4fad471540e6e453d0cafb155740
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -865,7 +870,7 @@ KnownVulnerableSamples:
       Entropy: 5.824573239851714
       Virtual Size: '0x55d9'
     INIT:
-      Entropy: 5.686422415916716
+      Entropy: 5.686422415916717
       Virtual Size: '0x1676'
     .rsrc:
       Entropy: 3.3664663839402515
@@ -874,7 +879,7 @@ KnownVulnerableSamples:
       Entropy: 6.584816287075715
       Virtual Size: '0x368a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-10-16 04:19:20'
+  CreationTimestamp: '2017-10-16 06:19:20'
 - Filename: TmComm.sys
   MD5: 28d6b138adc174a86c0f6248d8a88275
   SHA1: 8ac5703e67c3e6e0585cb8dbb86d196c5362f9bb
@@ -1613,6 +1618,7 @@ KnownVulnerableSamples:
         MD5: e93e004baa6013b41135ac0648e29d5b
         SHA1: dc91e26674d4b627319c700d3ebb1a6cf83d358e
         SHA256: 0d20335edb166a303411548471bee6f301c8b4f7f7e453d09c15303de2c888d7
+        SHA384: 5e0130ee64e28e6366fcf0ca8a126b3f7e06eec60b8a46ac90dbfa858aac8f0c1a9cce248a606fdf9a98eae98dd5d887
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -1626,6 +1632,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -1638,6 +1645,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -1651,6 +1659,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -1663,6 +1672,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0ea0fe4dfb74cc64bc32143103c27c8b
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
@@ -1674,7 +1684,7 @@ KnownVulnerableSamples:
     SHA256: b61ea91d46738a0387b4bbfb7c154f3a1881c8cab9360fd8eb85e1dd8c5d386c
   Sections:
     .text:
-      Entropy: 6.4384140721471494
+      Entropy: 6.438414072147151
       Virtual Size: '0x37d64'
     .rdata:
       Entropy: 3.501299855418845
@@ -1701,7 +1711,7 @@ KnownVulnerableSamples:
       Entropy: 4.092946145413326
       Virtual Size: '0x7f6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-11-24 20:59:46'
+  CreationTimestamp: '2019-11-24 22:59:46'
 - Filename: TmComm.sys
   MD5: e3aaa0c1c3a5e99eb9970ebe4b5a3183
   SHA1: 8fafd70bae94bbc22786c9328ee9126fed54dbae
@@ -2400,6 +2410,7 @@ KnownVulnerableSamples:
         MD5: b6aa9cf28bcfc9f07ec1069fb425ab61
         SHA1: ca7a166fcd53878ba5a38d4cac37c63513cfc1fa
         SHA256: 711394fc49f8948a831f687d42ced6b18514f57786ecc6cdbc3c3eb72e568a40
+        SHA384: ca01f9c9ed4e1ddff7126b7bbf618bc8132429886ca563f86655429e928739c621b9fdea6e04a623712cbb998c5c7d77
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -2414,6 +2425,7 @@ KnownVulnerableSamples:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
         SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -2426,6 +2438,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., CN=Trend Micro, Inc.
       ValidFrom: '2015-02-20 00:00:00'
       ValidTo: '2016-05-21 23:59:59'
@@ -2438,6 +2451,7 @@ KnownVulnerableSamples:
         MD5: 7e2a6f93403382b4ec42463426d0a4b5
         SHA1: 62acc697c0e2dc37f3d37ab79751637346e051e2
         SHA256: 3e9a51973a839e5bc6e81c886e085b777d08ce2b24f816b7552cf2c44e322d59
+        SHA384: e6206b8dc5d081bcf85545a545ebe91bb0c796b5b94bf0b915223440f73a2cea4ca0981d8da85ae07384918a1f7c927d
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -2452,6 +2466,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 1519396ee230f02cad1fcfdb077a35f0
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -2464,7 +2479,7 @@ KnownVulnerableSamples:
     SHA256: 4eb67ab524a9d7f44e010b8a29c08d68801262325b6d99adabb130d91438ebd3
   Sections:
     .text:
-      Entropy: 6.661606033507545
+      Entropy: 6.661606033507546
       Virtual Size: '0x31e92'
     .rdata:
       Entropy: 4.998706327691213
@@ -2479,16 +2494,16 @@ KnownVulnerableSamples:
       Entropy: 5.864036559426088
       Virtual Size: '0x4cc0'
     INIT:
-      Entropy: 5.649089582615812
+      Entropy: 5.649089582615811
       Virtual Size: '0x15a4'
     .rsrc:
-      Entropy: 3.3955059754786987
+      Entropy: 3.395505975478699
       Virtual Size: '0x760'
     .reloc:
       Entropy: 6.563142165769885
       Virtual Size: '0x2ec2'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-12-03 06:29:37'
+  CreationTimestamp: '2015-12-03 08:29:37'
 - Filename: TmComm.sys
   MD5: 5a615f4641287e5e88968f5455627d45
   SHA1: dcfeca5e883a084e89ecd734c4528b922a1099b9
@@ -3246,6 +3261,7 @@ KnownVulnerableSamples:
         MD5: 0179e8ddeebaf8998fec419d65cdf13d
         SHA1: 34c724c3369f2da8c25b591808962f66f10bde28
         SHA256: 35b0bac11602847aaab65fb35199d3c8976cde3ccf7e061b130177c712cbd92f
+        SHA384: 85f2e758b5480eb225ae42777ed339de71da458c1d40677c0fb6ef8e560e42764a577335e4839b5342061c31ee837b6e
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., CN=Trend Micro, Inc.
       ValidFrom: '2016-03-29 00:00:00'
       ValidTo: '2017-06-28 23:59:59'
@@ -3258,6 +3274,7 @@ KnownVulnerableSamples:
         MD5: b3ca7d6b821d8e3432b29874980af55e
         SHA1: 618d7e55a24c1d8b65a0bcce79120c5e3b13fa4d
         SHA256: c645c6a7dc7243a4a3f78a6569c029401a7bda8bc4732ce7198d9f21f19b12fa
+        SHA384: a215ae468847498103234ed023774ba72f8d35f82f2fef5ca8521f020e7ea9c1f2df2a312743bff5fa65747b0760ec59
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -3272,6 +3289,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -3286,6 +3304,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 774d49c5649436de6bf3190a67eedcdf
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -3298,7 +3317,7 @@ KnownVulnerableSamples:
     SHA256: 001d9e469d2c4160f8fbff1c0aee013e72881cffb568910a2c1473a17bf858b2
   Sections:
     .text:
-      Entropy: 6.67281466246844
+      Entropy: 6.672814662468441
       Virtual Size: '0x38a9a'
     .rdata:
       Entropy: 4.975276040199546
@@ -3313,16 +3332,16 @@ KnownVulnerableSamples:
       Entropy: 5.8231443718271825
       Virtual Size: '0x55d9'
     INIT:
-      Entropy: 5.688321491488638
+      Entropy: 5.688321491488639
       Virtual Size: '0x1676'
     .rsrc:
-      Entropy: 3.4184273855348146
+      Entropy: 3.418427385534814
       Virtual Size: '0x758'
     .reloc:
-      Entropy: 6.578935622303867
+      Entropy: 6.578935622303866
       Virtual Size: '0x35d6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-04 03:27:03'
+  CreationTimestamp: '2016-08-04 05:27:03'
 - Filename: TmComm.sys
   MD5: 85e606523ce390f7fcd8370d5f4b812a
   SHA1: 55c64235d223baeb8577a2445fdaa6bedcde23db
@@ -4068,6 +4087,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -4081,6 +4101,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., CN=Trend Micro, Inc.
       ValidFrom: '2017-04-27 00:00:00'
       ValidTo: '2018-07-16 23:59:59'
@@ -4093,6 +4114,7 @@ KnownVulnerableSamples:
         MD5: 78eaa337666217b1c16a9a0ebd0b8434
         SHA1: ff9cb835e78f6185eed4372096c3bae53b17d18d
         SHA256: 1c0d9746725e176b4a7c2852878f14d7587f58e65d346bc1247f1c8ee6374250
+        SHA384: ffe3c75b860679a5de399c7d2c2844dbfac51d5d8581e24648d208daba1e4bed5c867808e02dc8d7cb3df1d4b2b53d10
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -4107,6 +4129,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -4121,6 +4144,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 497c4fad471540e6e453d0cafb155740
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -4148,7 +4172,7 @@ KnownVulnerableSamples:
       Entropy: 2.0
       Virtual Size: '0x4'
     PAGE:
-      Entropy: 6.308406037999558
+      Entropy: 6.308406037999557
       Virtual Size: '0x1ae4'
     .edata:
       Entropy: 5.84084380733241
@@ -4163,7 +4187,7 @@ KnownVulnerableSamples:
       Entropy: 5.319305863516213
       Virtual Size: '0x4c8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-07-12 21:23:02'
+  CreationTimestamp: '2017-07-12 23:23:02'
 - Filename: TmComm.sys
   MD5: 6e25148bb384469f3d5386dc5217548a
   SHA1: dbf6e72c08824fe49c29b7660c9965c37d983e93
@@ -4919,6 +4943,7 @@ KnownVulnerableSamples:
         MD5: e93e004baa6013b41135ac0648e29d5b
         SHA1: dc91e26674d4b627319c700d3ebb1a6cf83d358e
         SHA256: 0d20335edb166a303411548471bee6f301c8b4f7f7e453d09c15303de2c888d7
+        SHA384: 5e0130ee64e28e6366fcf0ca8a126b3f7e06eec60b8a46ac90dbfa858aac8f0c1a9cce248a606fdf9a98eae98dd5d887
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -4932,6 +4957,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -4944,6 +4970,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -4957,6 +4984,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -4969,6 +4997,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0ea0fe4dfb74cc64bc32143103c27c8b
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
@@ -4980,7 +5009,7 @@ KnownVulnerableSamples:
     SHA256: 118d8d8e4d2d1ce80640e7b28300dd41389daf9bdbdc6ad2e9fefcde4aab7ad2
   Sections:
     .text:
-      Entropy: 6.674088172403195
+      Entropy: 6.674088172403196
       Virtual Size: '0x3521e'
     .rdata:
       Entropy: 4.891713204478538
@@ -4989,22 +5018,22 @@ KnownVulnerableSamples:
       Entropy: 3.902683274701683
       Virtual Size: '0x3610'
     PAGE:
-      Entropy: 6.269350000242081
+      Entropy: 6.26935000024208
       Virtual Size: '0x13dd'
     .edata:
       Entropy: 5.844064311160178
       Virtual Size: '0x55d9'
     INIT:
-      Entropy: 5.530415320687985
+      Entropy: 5.530415320687984
       Virtual Size: '0x1668'
     .rsrc:
-      Entropy: 3.3690890151354242
+      Entropy: 3.369089015135424
       Virtual Size: '0x568'
     .reloc:
       Entropy: 6.508397535267547
       Virtual Size: '0x36c6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-06-22 02:26:17'
+  CreationTimestamp: '2020-06-22 04:26:17'
 - Filename: TmComm.sys
   MD5: ad866d83b4f0391aecceb4e507011831
   SHA1: 2cc70b772b42e0208f345c7c70d78f7536812f99
@@ -5660,6 +5689,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -5672,6 +5702,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -5686,6 +5717,7 @@ KnownVulnerableSamples:
         MD5: b7d8444a70054990435f35a5630df5e1
         SHA1: 4678c6e4a8787a8e6ed2bce8792b122f6c08afd8
         SHA256: 0a8b4b359ea7890b358e56e436e9cfc6f32b037b2599b597ca7f7a80d475ec98
+        SHA384: ab21ee23bcdcf6f6066fb964d61467419ca8c0f3ad0b3fa2be4db6ed6af1cdff066b27d1988551c75836f22eddffef1f
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -5698,6 +5730,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., OU=Digital ID Class
         3 , Microsoft Software Validation v2, OU=RD, CN=Trend Micro, Inc.
       ValidFrom: '2011-01-31 00:00:00'
@@ -5711,6 +5744,7 @@ KnownVulnerableSamples:
         MD5: 8ddf6d6623a3f10024af513804bb606d
         SHA1: 4daedaec405b6dfefce005517e230b2419ad08bc
         SHA256: 54894db2dab64a4991b4deab1a3415d4ea0d9905711af3b67242a0568d799b95
+        SHA384: 86d5ea29e277816e49909c8dc8a7771ade2a556ded900951402c72b4b892570cd6bc43f790716c492c07579919c366be
     Signer:
     - SerialNumber: 24e3d70b86ed54d0b22c3450b960984e
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -5741,13 +5775,13 @@ KnownVulnerableSamples:
       Entropy: 5.693019686156264
       Virtual Size: '0x14b4'
     .rsrc:
-      Entropy: 3.3612414595115774
+      Entropy: 3.361241459511578
       Virtual Size: '0x4b0'
     .reloc:
-      Entropy: 6.456848462956811
+      Entropy: 6.4568484629568115
       Virtual Size: '0x2378'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-07-27 20:25:40'
+  CreationTimestamp: '2011-07-27 22:25:40'
 - Filename: TmComm.sys
   MD5: dd9596c18818288845423c68f3f39800
   SHA1: fb1570b4865083dfce1fcff2bd72e9e1b03cead5
@@ -6345,6 +6379,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -6357,6 +6392,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -6371,6 +6407,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., OU=Digital ID Class
         3 , Microsoft Software Validation v2, OU=RD, CN=Trend Micro, Inc.
       ValidFrom: '2008-01-16 00:00:00'
@@ -6384,6 +6421,7 @@ KnownVulnerableSamples:
         MD5: e00f0a38c65f7c0b9f19b97448d6a0e3
         SHA1: 91c033a2f289418c4101654dceacef1b25bb55d0
         SHA256: 38b3fcbdb734b0e3439f3c9a3c4c1712091f577d2b616d41224137faf7ba7c86
+        SHA384: d3a0e6ebbe1b8a4847fa56fa62a48d76fc223870a66d30de9ce77fe5ff4ac0eeb84644ab4b67a7c4638ce79dec03a62d
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -6396,6 +6434,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 645212f783f4d7aba3555729e99ce065
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -6414,7 +6453,7 @@ KnownVulnerableSamples:
       Entropy: 4.634666729330959
       Virtual Size: '0x144c'
     .data:
-      Entropy: 3.9446075307325157
+      Entropy: 3.944607530732516
       Virtual Size: '0x16bc'
     PAGE:
       Entropy: 6.243598029174851
@@ -6423,16 +6462,16 @@ KnownVulnerableSamples:
       Entropy: 5.749935609745734
       Virtual Size: '0x41dd'
     INIT:
-      Entropy: 5.631772594207243
+      Entropy: 5.631772594207244
       Virtual Size: '0x118c'
     .rsrc:
-      Entropy: 3.4004517599515784
+      Entropy: 3.400451759951579
       Virtual Size: '0x4b0'
     .reloc:
       Entropy: 6.410366991109568
       Virtual Size: '0x1b90'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-11-01 22:13:22'
+  CreationTimestamp: '2009-11-02 00:13:22'
 - Filename: TmComm.sys
   MD5: 3e796eb95aca7e620d6a0c2118d6871b
   SHA1: dc6e62dbde5869a6adc92253fff6326b6af5c8d4
@@ -7195,6 +7234,7 @@ KnownVulnerableSamples:
         MD5: e93e004baa6013b41135ac0648e29d5b
         SHA1: dc91e26674d4b627319c700d3ebb1a6cf83d358e
         SHA256: 0d20335edb166a303411548471bee6f301c8b4f7f7e453d09c15303de2c888d7
+        SHA384: 5e0130ee64e28e6366fcf0ca8a126b3f7e06eec60b8a46ac90dbfa858aac8f0c1a9cce248a606fdf9a98eae98dd5d887
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -7208,6 +7248,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -7220,6 +7261,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -7233,6 +7275,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -7245,6 +7288,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0ea0fe4dfb74cc64bc32143103c27c8b
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
@@ -7259,7 +7303,7 @@ KnownVulnerableSamples:
       Entropy: 6.684999852122335
       Virtual Size: '0x3a766'
     .rdata:
-      Entropy: 4.984299070312925
+      Entropy: 4.984299070312926
       Virtual Size: '0x247c'
     .data:
       Entropy: 3.9442152039569094
@@ -7271,7 +7315,7 @@ KnownVulnerableSamples:
       Entropy: 5.855274627420937
       Virtual Size: '0x5600'
     INIT:
-      Entropy: 5.688648408179323
+      Entropy: 5.688648408179324
       Virtual Size: '0x16de'
     .rsrc:
       Entropy: 3.3796752140702377
@@ -7280,7 +7324,7 @@ KnownVulnerableSamples:
       Entropy: 6.625578074091372
       Virtual Size: '0x381c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-11-18 03:29:47'
+  CreationTimestamp: '2019-11-18 05:29:47'
 - Filename: TmComm.sys
   MD5: f4b7b84a6828d2f9205b55cf8cfc7742
   SHA1: e835776e0dc68c994dd18e8628454520156c93e3
@@ -7882,6 +7926,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -7894,6 +7939,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -7908,6 +7954,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., OU=Digital ID Class
         3 , Microsoft Software Validation v2, OU=RD, CN=Trend Micro, Inc.
       ValidFrom: '2008-01-16 00:00:00'
@@ -7921,6 +7968,7 @@ KnownVulnerableSamples:
         MD5: e00f0a38c65f7c0b9f19b97448d6a0e3
         SHA1: 91c033a2f289418c4101654dceacef1b25bb55d0
         SHA256: 38b3fcbdb734b0e3439f3c9a3c4c1712091f577d2b616d41224137faf7ba7c86
+        SHA384: d3a0e6ebbe1b8a4847fa56fa62a48d76fc223870a66d30de9ce77fe5ff4ac0eeb84644ab4b67a7c4638ce79dec03a62d
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -7933,6 +7981,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 645212f783f4d7aba3555729e99ce065
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -7945,10 +7994,10 @@ KnownVulnerableSamples:
     SHA256: 353de968d66434d82e17dad93d2565f57228bd75935707cf356b3a1cc6e55df2
   Sections:
     .text:
-      Entropy: 6.653371338957767
+      Entropy: 6.653371338957766
       Virtual Size: '0x1c041'
     .rdata:
-      Entropy: 4.685387628366295
+      Entropy: 4.685387628366296
       Virtual Size: '0x1504'
     .data:
       Entropy: 4.775148100931776
@@ -7957,7 +8006,7 @@ KnownVulnerableSamples:
       Entropy: 6.262363907801653
       Virtual Size: '0x13dd'
     .edata:
-      Entropy: 5.773141863953021
+      Entropy: 5.77314186395302
       Virtual Size: '0x4204'
     INIT:
       Entropy: 5.711791309479314
@@ -7969,7 +8018,7 @@ KnownVulnerableSamples:
       Entropy: 6.406852082339942
       Virtual Size: '0x1c9a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-02-08 02:56:46'
+  CreationTimestamp: '2010-02-08 04:56:46'
 - Filename: TmComm.sys
   MD5: 29122f970a9e766ef01a73e0616d68b3
   SHA1: 432fa24e0ce4b3673113c90b34d6e52dc7bac471
@@ -8705,6 +8754,7 @@ KnownVulnerableSamples:
         MD5: a0dd89c33c4973bf6758331e200fb6de
         SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
         SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
+        SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -8718,6 +8768,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -8732,7 +8783,7 @@ KnownVulnerableSamples:
       Entropy: 6.427114198273594
       Virtual Size: '0x31f90'
     .rdata:
-      Entropy: 3.4418936111862846
+      Entropy: 3.441893611186285
       Virtual Size: '0x6140'
     .data:
       Entropy: 2.99098009328391
@@ -8741,13 +8792,13 @@ KnownVulnerableSamples:
       Entropy: 5.377672795247099
       Virtual Size: '0x23f4'
     PAGE:
-      Entropy: 6.214710688570614
+      Entropy: 6.214710688570615
       Virtual Size: '0x19f7'
     .edata:
       Entropy: 5.7715931789036965
       Virtual Size: '0x5805'
     INIT:
-      Entropy: 5.299636747033507
+      Entropy: 5.299636747033505
       Virtual Size: '0x17d2'
     .rsrc:
       Entropy: 3.364607601829167
@@ -8756,7 +8807,7 @@ KnownVulnerableSamples:
       Entropy: 4.0313065892955455
       Virtual Size: '0x7be'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-06-17 20:32:14'
+  CreationTimestamp: '2021-06-17 22:32:14'
 - Filename: TmComm.sys
   MD5: 8580165a2803591e007380db9097bbcc
   SHA1: 5a55c227ca13e9373b87f1ef6534533c7ce1f4fb
@@ -9451,6 +9502,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -9463,6 +9515,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -9477,6 +9530,7 @@ KnownVulnerableSamples:
         MD5: b7d8444a70054990435f35a5630df5e1
         SHA1: 4678c6e4a8787a8e6ed2bce8792b122f6c08afd8
         SHA256: 0a8b4b359ea7890b358e56e436e9cfc6f32b037b2599b597ca7f7a80d475ec98
+        SHA384: ab21ee23bcdcf6f6066fb964d61467419ca8c0f3ad0b3fa2be4db6ed6af1cdff066b27d1988551c75836f22eddffef1f
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -9489,6 +9543,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., OU=Digital ID Class
         3 , Microsoft Software Validation v2, OU=RD, CN=Trend Micro, Inc.
       ValidFrom: '2011-12-27 00:00:00'
@@ -9502,6 +9557,7 @@ KnownVulnerableSamples:
         MD5: 11b208a45459069f827186fe81c6badd
         SHA1: 456356986e8ecbb7b05e4617d37cb8cd69ce4969
         SHA256: 4a0336d7ffa5db42ece4b342e1244f5c2bd0681827f68f847d99195c83740145
+        SHA384: 8a5edd0f475b19f4667fde62ee69bbe81a130ddad07ff7cbeb16d4bd9bddd3aa1e59f2469cc15c01e8889e01b048778d
     Signer:
     - SerialNumber: 6326c00ead256b6837eeb29b5ee84720
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -9517,13 +9573,13 @@ KnownVulnerableSamples:
       Entropy: 6.660946608051692
       Virtual Size: '0x2e408'
     .rdata:
-      Entropy: 4.709860073342209
+      Entropy: 4.70986007334221
       Virtual Size: '0x1cec'
     .data:
       Entropy: 4.4959420211886885
       Virtual Size: '0x271c'
     PAGE:
-      Entropy: 6.210709607609148
+      Entropy: 6.2107096076091475
       Virtual Size: '0x13dd'
     .edata:
       Entropy: 5.854662933678954
@@ -9532,13 +9588,13 @@ KnownVulnerableSamples:
       Entropy: 5.701929107824438
       Virtual Size: '0x159a'
     .rsrc:
-      Entropy: 3.4202040685324873
+      Entropy: 3.4202040685324877
       Virtual Size: '0x778'
     .reloc:
       Entropy: 6.549466447440598
       Virtual Size: '0x2b5c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-08-02 03:35:11'
+  CreationTimestamp: '2012-08-02 05:35:11'
 - Filename: TmComm.sys
   MD5: 085d3423f3c12a17119920f1a293ab4d
   SHA1: d3daa971580b9f94002f7257de44fcef13bb1673
@@ -10296,6 +10352,7 @@ KnownVulnerableSamples:
         MD5: b6aa9cf28bcfc9f07ec1069fb425ab61
         SHA1: ca7a166fcd53878ba5a38d4cac37c63513cfc1fa
         SHA256: 711394fc49f8948a831f687d42ced6b18514f57786ecc6cdbc3c3eb72e568a40
+        SHA384: ca01f9c9ed4e1ddff7126b7bbf618bc8132429886ca563f86655429e928739c621b9fdea6e04a623712cbb998c5c7d77
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -10310,6 +10367,7 @@ KnownVulnerableSamples:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
         SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -10322,6 +10380,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., CN=Trend Micro, Inc.
       ValidFrom: '2015-02-20 00:00:00'
       ValidTo: '2016-05-21 23:59:59'
@@ -10334,6 +10393,7 @@ KnownVulnerableSamples:
         MD5: 7e2a6f93403382b4ec42463426d0a4b5
         SHA1: 62acc697c0e2dc37f3d37ab79751637346e051e2
         SHA256: 3e9a51973a839e5bc6e81c886e085b777d08ce2b24f816b7552cf2c44e322d59
+        SHA384: e6206b8dc5d081bcf85545a545ebe91bb0c796b5b94bf0b915223440f73a2cea4ca0981d8da85ae07384918a1f7c927d
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -10348,6 +10408,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 1519396ee230f02cad1fcfdb077a35f0
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -10363,28 +10424,28 @@ KnownVulnerableSamples:
       Entropy: 6.67128338092209
       Virtual Size: '0x3846a'
     .rdata:
-      Entropy: 4.982309760035619
+      Entropy: 4.982309760035618
       Virtual Size: '0x249c'
     .data:
       Entropy: 4.3753627367754016
       Virtual Size: '0x3180'
     PAGE:
-      Entropy: 6.29167790866865
+      Entropy: 6.291677908668649
       Virtual Size: '0x13dd'
     .edata:
-      Entropy: 5.826712241683845
+      Entropy: 5.826712241683846
       Virtual Size: '0x55d9'
     INIT:
-      Entropy: 5.683406925828227
+      Entropy: 5.683406925828229
       Virtual Size: '0x1676'
     .rsrc:
-      Entropy: 3.40997749366868
+      Entropy: 3.4099774936686806
       Virtual Size: '0x760'
     .reloc:
       Entropy: 6.584936952359539
       Virtual Size: '0x35ce'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-07-16 05:25:16'
+  CreationTimestamp: '2015-07-16 07:25:16'
 - Filename: TmComm.sys
   MD5: 08bac71557df8a9b1381c8c165f64520
   SHA1: 891c8d482e23222498022845a6b349fe1a186bcc
@@ -10963,6 +11024,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -10975,6 +11037,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -10989,6 +11052,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., OU=Digital ID Class
         3 , Microsoft Software Validation v2, OU=RD, CN=Trend Micro, Inc.
       ValidFrom: '2008-01-16 00:00:00'
@@ -11002,6 +11066,7 @@ KnownVulnerableSamples:
         MD5: e00f0a38c65f7c0b9f19b97448d6a0e3
         SHA1: 91c033a2f289418c4101654dceacef1b25bb55d0
         SHA256: 38b3fcbdb734b0e3439f3c9a3c4c1712091f577d2b616d41224137faf7ba7c86
+        SHA384: d3a0e6ebbe1b8a4847fa56fa62a48d76fc223870a66d30de9ce77fe5ff4ac0eeb84644ab4b67a7c4638ce79dec03a62d
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -11014,6 +11079,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 645212f783f4d7aba3555729e99ce065
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -11029,7 +11095,7 @@ KnownVulnerableSamples:
       Entropy: 6.647148674525195
       Virtual Size: '0x174e7'
     .rdata:
-      Entropy: 4.6801307561668075
+      Entropy: 4.680130756166809
       Virtual Size: '0x1214'
     .data:
       Entropy: 3.627718081283959
@@ -11050,7 +11116,7 @@ KnownVulnerableSamples:
       Entropy: 6.379725750908649
       Virtual Size: '0x1796'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-07-22 06:53:20'
+  CreationTimestamp: '2008-07-22 08:53:20'
 - Filename: TmComm.sys
   MD5: 42132c7a755064f94314b01afb80e73c
   SHA1: 3e790c4e893513566916c76a677b0f98bd7334dd
@@ -11810,6 +11876,7 @@ KnownVulnerableSamples:
         MD5: 0179e8ddeebaf8998fec419d65cdf13d
         SHA1: 34c724c3369f2da8c25b591808962f66f10bde28
         SHA256: 35b0bac11602847aaab65fb35199d3c8976cde3ccf7e061b130177c712cbd92f
+        SHA384: 85f2e758b5480eb225ae42777ed339de71da458c1d40677c0fb6ef8e560e42764a577335e4839b5342061c31ee837b6e
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., CN=Trend Micro, Inc.
       ValidFrom: '2016-03-29 00:00:00'
       ValidTo: '2017-06-28 23:59:59'
@@ -11822,6 +11889,7 @@ KnownVulnerableSamples:
         MD5: b3ca7d6b821d8e3432b29874980af55e
         SHA1: 618d7e55a24c1d8b65a0bcce79120c5e3b13fa4d
         SHA256: c645c6a7dc7243a4a3f78a6569c029401a7bda8bc4732ce7198d9f21f19b12fa
+        SHA384: a215ae468847498103234ed023774ba72f8d35f82f2fef5ca8521f020e7ea9c1f2df2a312743bff5fa65747b0760ec59
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -11836,6 +11904,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -11850,6 +11919,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 774d49c5649436de6bf3190a67eedcdf
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -11862,7 +11932,7 @@ KnownVulnerableSamples:
     SHA256: 625832d0b9c8d6aef127c177634d2f29f994e6ed52ae7b78e592bc13316aa347
   Sections:
     .text:
-      Entropy: 6.788341267413328
+      Entropy: 6.788341267413327
       Virtual Size: '0x37b48'
     .rdata:
       Entropy: 5.099573225002653
@@ -11874,7 +11944,7 @@ KnownVulnerableSamples:
       Entropy: 6.287788165734512
       Virtual Size: '0x15da'
     .edata:
-      Entropy: 5.808478975586355
+      Entropy: 5.808478975586356
       Virtual Size: '0x5635'
     INIT:
       Entropy: 5.720292552820918
@@ -11886,7 +11956,7 @@ KnownVulnerableSamples:
       Entropy: 6.788646623912156
       Virtual Size: '0x3310'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-01 21:01:01'
+  CreationTimestamp: '2016-08-01 23:01:01'
 - Filename: TmComm.sys
   MD5: f51065667fb127cf6de984daea2f6b24
   SHA1: 1768fb2b4796f624fa52b95dfdfbfb922ac21019
@@ -12613,6 +12683,7 @@ KnownVulnerableSamples:
         MD5: f13ede9179075999ef7f856ec31e364b
         SHA1: 2f09867166e6107e17808317f5c8d4ee157f45bc
         SHA256: 089a2c4c6ac7432020acdb65c33bf39130da6f37c002ba79128bd4c94e4fa101
+        SHA384: 67be6d358f4ecd0726163603a404db9d78c340951d43fd608482cd89a2de7f9566f0ce45f8222f420003157cb266b939
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -12627,6 +12698,7 @@ KnownVulnerableSamples:
         MD5: b7d8444a70054990435f35a5630df5e1
         SHA1: 4678c6e4a8787a8e6ed2bce8792b122f6c08afd8
         SHA256: 0a8b4b359ea7890b358e56e436e9cfc6f32b037b2599b597ca7f7a80d475ec98
+        SHA384: ab21ee23bcdcf6f6066fb964d61467419ca8c0f3ad0b3fa2be4db6ed6af1cdff066b27d1988551c75836f22eddffef1f
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -12639,6 +12711,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., OU=Digital ID Class
         3 , Microsoft Software Validation v2, CN=Trend Micro, Inc.
       ValidFrom: '2013-01-17 00:00:00'
@@ -12652,6 +12725,7 @@ KnownVulnerableSamples:
         MD5: 685d99029d38a9d263ea82cd02a49f6c
         SHA1: 93464d8f54b4ee7caf22ca1db15a4211e0d3c79e
         SHA256: 894991f1477dff88c7c0707531073bb59483750bcad672fc388179affca07aa9
+        SHA384: e1e5526fbf2108b827717adc49e251251bb8d43a578cd1796da78fcb26c1757b2779616c46e05caf593c2c5046ac60b4
     Signer:
     - SerialNumber: 1a9d178ad334acdf47c8a0d15bb50e6e
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -12664,22 +12738,22 @@ KnownVulnerableSamples:
     SHA256: 559177f9f73571b4f376e356741cfbedbb9806f57e0a1a70cb6b8dd57b8d83fa
   Sections:
     .text:
-      Entropy: 6.422836072266523
+      Entropy: 6.422836072266524
       Virtual Size: '0x2f9e8'
     .rdata:
-      Entropy: 3.4057499319194284
+      Entropy: 3.405749931919429
       Virtual Size: '0x5ed4'
     .data:
       Entropy: 3.371340799515363
       Virtual Size: '0x2d78'
     .pdata:
-      Entropy: 5.344142440054196
+      Entropy: 5.344142440054197
       Virtual Size: '0x225c'
     PAGE:
       Entropy: 6.227607991130914
       Virtual Size: '0x19f7'
     .edata:
-      Entropy: 5.801919096006544
+      Entropy: 5.801919096006545
       Virtual Size: '0x56da'
     INIT:
       Entropy: 5.227774256657284
@@ -12691,7 +12765,7 @@ KnownVulnerableSamples:
       Entropy: 3.7667938810500683
       Virtual Size: '0x76e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-09-27 20:56:05'
+  CreationTimestamp: '2013-09-27 22:56:05'
 - Filename: TmComm.sys
   MD5: a31246180e61140ad7ff9dd7edf1f6a1
   SHA1: fe0afc6dd03a9bd7f6e673cc6b4af2266737e3d1
@@ -13346,6 +13420,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -13358,6 +13433,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -13372,6 +13448,7 @@ KnownVulnerableSamples:
         MD5: b7d8444a70054990435f35a5630df5e1
         SHA1: 4678c6e4a8787a8e6ed2bce8792b122f6c08afd8
         SHA256: 0a8b4b359ea7890b358e56e436e9cfc6f32b037b2599b597ca7f7a80d475ec98
+        SHA384: ab21ee23bcdcf6f6066fb964d61467419ca8c0f3ad0b3fa2be4db6ed6af1cdff066b27d1988551c75836f22eddffef1f
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -13384,6 +13461,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., OU=Digital ID Class
         3 , Microsoft Software Validation v2, OU=RD, CN=Trend Micro, Inc.
       ValidFrom: '2011-01-31 00:00:00'
@@ -13397,6 +13475,7 @@ KnownVulnerableSamples:
         MD5: 8ddf6d6623a3f10024af513804bb606d
         SHA1: 4daedaec405b6dfefce005517e230b2419ad08bc
         SHA256: 54894db2dab64a4991b4deab1a3415d4ea0d9905711af3b67242a0568d799b95
+        SHA384: 86d5ea29e277816e49909c8dc8a7771ade2a556ded900951402c72b4b892570cd6bc43f790716c492c07579919c366be
     Signer:
     - SerialNumber: 24e3d70b86ed54d0b22c3450b960984e
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -13409,7 +13488,7 @@ KnownVulnerableSamples:
     SHA256: 0a5393cf21980cb34b6c35c2fe034fa52f56cd502b9bb49398d04d555bc5cc8f
   Sections:
     .text:
-      Entropy: 6.637129922851107
+      Entropy: 6.6371299228511065
       Virtual Size: '0x22ba5'
     .rdata:
       Entropy: 4.761454035310139
@@ -13430,10 +13509,10 @@ KnownVulnerableSamples:
       Entropy: 3.3462893643061093
       Virtual Size: '0x4c8'
     .reloc:
-      Entropy: 6.4411864426675525
+      Entropy: 6.441186442667552
       Virtual Size: '0x224c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-06-20 22:08:35'
+  CreationTimestamp: '2011-06-21 00:08:35'
 - Filename: TmComm.sys
   MD5: 569676d3d45b0964ac6dd0815be8ff8c
   SHA1: 58b31fb2b623bd2c5d5c8c49b657a14a674664a4
@@ -14187,6 +14266,7 @@ KnownVulnerableSamples:
         MD5: f13ede9179075999ef7f856ec31e364b
         SHA1: 2f09867166e6107e17808317f5c8d4ee157f45bc
         SHA256: 089a2c4c6ac7432020acdb65c33bf39130da6f37c002ba79128bd4c94e4fa101
+        SHA384: 67be6d358f4ecd0726163603a404db9d78c340951d43fd608482cd89a2de7f9566f0ce45f8222f420003157cb266b939
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -14201,6 +14281,7 @@ KnownVulnerableSamples:
         MD5: b7d8444a70054990435f35a5630df5e1
         SHA1: 4678c6e4a8787a8e6ed2bce8792b122f6c08afd8
         SHA256: 0a8b4b359ea7890b358e56e436e9cfc6f32b037b2599b597ca7f7a80d475ec98
+        SHA384: ab21ee23bcdcf6f6066fb964d61467419ca8c0f3ad0b3fa2be4db6ed6af1cdff066b27d1988551c75836f22eddffef1f
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -14213,6 +14294,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., OU=Digital ID Class
         3 , Microsoft Software Validation v2, CN=Trend Micro, Inc.
       ValidFrom: '2013-01-17 00:00:00'
@@ -14226,6 +14308,7 @@ KnownVulnerableSamples:
         MD5: 685d99029d38a9d263ea82cd02a49f6c
         SHA1: 93464d8f54b4ee7caf22ca1db15a4211e0d3c79e
         SHA256: 894991f1477dff88c7c0707531073bb59483750bcad672fc388179affca07aa9
+        SHA384: e1e5526fbf2108b827717adc49e251251bb8d43a578cd1796da78fcb26c1757b2779616c46e05caf593c2c5046ac60b4
     Signer:
     - SerialNumber: 1a9d178ad334acdf47c8a0d15bb50e6e
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -14250,7 +14333,7 @@ KnownVulnerableSamples:
       Entropy: 6.272967726994635
       Virtual Size: '0x13dd'
     .edata:
-      Entropy: 5.845224532240377
+      Entropy: 5.845224532240378
       Virtual Size: '0x551f'
     INIT:
       Entropy: 5.617734341199324
@@ -14262,7 +14345,7 @@ KnownVulnerableSamples:
       Entropy: 6.578578500694431
       Virtual Size: '0x329e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-12-09 05:00:06'
+  CreationTimestamp: '2013-12-09 07:00:06'
 - Filename: TmComm.sys
   MD5: df9953fa93e1793456a8d428ba7e5700
   SHA1: 8db4376a86bd2164513c178a578a0bf8d90e7292
@@ -15022,6 +15105,7 @@ KnownVulnerableSamples:
         MD5: 0179e8ddeebaf8998fec419d65cdf13d
         SHA1: 34c724c3369f2da8c25b591808962f66f10bde28
         SHA256: 35b0bac11602847aaab65fb35199d3c8976cde3ccf7e061b130177c712cbd92f
+        SHA384: 85f2e758b5480eb225ae42777ed339de71da458c1d40677c0fb6ef8e560e42764a577335e4839b5342061c31ee837b6e
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., CN=Trend Micro, Inc.
       ValidFrom: '2016-03-29 00:00:00'
       ValidTo: '2017-06-28 23:59:59'
@@ -15034,6 +15118,7 @@ KnownVulnerableSamples:
         MD5: b3ca7d6b821d8e3432b29874980af55e
         SHA1: 618d7e55a24c1d8b65a0bcce79120c5e3b13fa4d
         SHA256: c645c6a7dc7243a4a3f78a6569c029401a7bda8bc4732ce7198d9f21f19b12fa
+        SHA384: a215ae468847498103234ed023774ba72f8d35f82f2fef5ca8521f020e7ea9c1f2df2a312743bff5fa65747b0760ec59
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -15048,6 +15133,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -15062,6 +15148,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 774d49c5649436de6bf3190a67eedcdf
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -15074,7 +15161,7 @@ KnownVulnerableSamples:
     SHA256: b574f3894ffb1b628c20191e085a4ada2a5f0eb04ea86a3a1ddc1d9fffd22f99
   Sections:
     .text:
-      Entropy: 6.673561666527176
+      Entropy: 6.673561666527175
       Virtual Size: '0x38cae'
     .rdata:
       Entropy: 4.979849623381759
@@ -15083,7 +15170,7 @@ KnownVulnerableSamples:
       Entropy: 4.14651912575915
       Virtual Size: '0x33c8'
     PAGE:
-      Entropy: 6.277515265606626
+      Entropy: 6.277515265606624
       Virtual Size: '0x13dd'
     .edata:
       Entropy: 5.8225858614570685
@@ -15092,13 +15179,13 @@ KnownVulnerableSamples:
       Entropy: 5.690208258374318
       Virtual Size: '0x16a2'
     .rsrc:
-      Entropy: 3.3994669099172996
+      Entropy: 3.3994669099173
       Virtual Size: '0x760'
     .reloc:
       Entropy: 6.591495714645472
       Virtual Size: '0x35fa'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-12 00:50:21'
+  CreationTimestamp: '2016-08-12 02:50:21'
 - Filename: TmComm.sys
   MD5: 58a92520dda53166e322118ee0503364
   SHA1: d2be76e79741454b4611675b58446e10fc3d0c6c
@@ -15856,6 +15943,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=TW, ??=Private Organization, serialNumber=23310837, C=TW, ST=Taipei
         City, L=Daan District, O=Trend Micro, Inc., CN=Trend Micro, Inc.
       ValidFrom: '2020-08-07 00:00:00'
@@ -15869,6 +15957,7 @@ KnownVulnerableSamples:
         MD5: df4ab4b67a0e9b1f9ec4a1ad9ea6052a
         SHA1: dc1d0c4be3072afed8b0739a21b87b14292815e0
         SHA256: 9c8450b3fa641a421a545e7e4fa7e1bcb657db4796bef147312c44b7a1b5ffe0
+        SHA384: 696022742c9e2b0213ef1a2c2a42e430a4a0823e7a2e8a5561fa6398964bf70ce95a4847da78efc56e17f75a9ddbd105
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -15881,6 +15970,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -15894,6 +15984,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -15906,6 +15997,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0f6146af9397c7fa04b13c2d0279a1ba
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -15920,16 +16012,16 @@ KnownVulnerableSamples:
       Entropy: 6.673511290910388
       Virtual Size: '0x35248'
     .rdata:
-      Entropy: 4.891769477584015
+      Entropy: 4.891769477584014
       Virtual Size: '0x240c'
     .data:
       Entropy: 3.895955816940672
       Virtual Size: '0x3610'
     PAGE:
-      Entropy: 6.270493563310339
+      Entropy: 6.270493563310338
       Virtual Size: '0x13dd'
     .edata:
-      Entropy: 5.846384752625249
+      Entropy: 5.84638475262525
       Virtual Size: '0x5624'
     INIT:
       Entropy: 5.53026630517678
@@ -15941,7 +16033,7 @@ KnownVulnerableSamples:
       Entropy: 6.518002036355309
       Virtual Size: '0x36c8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-08-25 02:07:39'
+  CreationTimestamp: '2020-08-25 04:07:39'
 - Filename: TmComm.sys
   MD5: 4c6d311e0b13c4f469f717db4ab4d0e7
   SHA1: 6da2dd8a0b4c0e09a04613bbabfc07c0b848ec77
@@ -16637,6 +16729,7 @@ KnownVulnerableSamples:
         MD5: f13ede9179075999ef7f856ec31e364b
         SHA1: 2f09867166e6107e17808317f5c8d4ee157f45bc
         SHA256: 089a2c4c6ac7432020acdb65c33bf39130da6f37c002ba79128bd4c94e4fa101
+        SHA384: 67be6d358f4ecd0726163603a404db9d78c340951d43fd608482cd89a2de7f9566f0ce45f8222f420003157cb266b939
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -16651,6 +16744,7 @@ KnownVulnerableSamples:
         MD5: b7d8444a70054990435f35a5630df5e1
         SHA1: 4678c6e4a8787a8e6ed2bce8792b122f6c08afd8
         SHA256: 0a8b4b359ea7890b358e56e436e9cfc6f32b037b2599b597ca7f7a80d475ec98
+        SHA384: ab21ee23bcdcf6f6066fb964d61467419ca8c0f3ad0b3fa2be4db6ed6af1cdff066b27d1988551c75836f22eddffef1f
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -16663,6 +16757,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., OU=Digital ID Class
         3 , Microsoft Software Validation v2, CN=Trend Micro, Inc.
       ValidFrom: '2013-01-17 00:00:00'
@@ -16676,6 +16771,7 @@ KnownVulnerableSamples:
         MD5: 685d99029d38a9d263ea82cd02a49f6c
         SHA1: 93464d8f54b4ee7caf22ca1db15a4211e0d3c79e
         SHA256: 894991f1477dff88c7c0707531073bb59483750bcad672fc388179affca07aa9
+        SHA384: e1e5526fbf2108b827717adc49e251251bb8d43a578cd1796da78fcb26c1757b2779616c46e05caf593c2c5046ac60b4
     Signer:
     - SerialNumber: 1a9d178ad334acdf47c8a0d15bb50e6e
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -16691,7 +16787,7 @@ KnownVulnerableSamples:
       Entropy: 6.659355150585429
       Virtual Size: '0x2f4ea'
     .rdata:
-      Entropy: 4.941878386974578
+      Entropy: 4.941878386974579
       Virtual Size: '0x222c'
     .data:
       Entropy: 4.467965598104597
@@ -16706,13 +16802,13 @@ KnownVulnerableSamples:
       Entropy: 5.700073457087385
       Virtual Size: '0x15b2'
     .rsrc:
-      Entropy: 3.406112394615697
+      Entropy: 3.4061123946156964
       Virtual Size: '0x758'
     .reloc:
-      Entropy: 6.5624235881747826
+      Entropy: 6.562423588174783
       Virtual Size: '0x2c98'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-09-02 01:57:59'
+  CreationTimestamp: '2013-09-02 03:57:59'
 - Filename: TmComm.sys
   MD5: 1db988eb9ac5f99756c33b91830a9cf6
   SHA1: 4471935df0e68fe149425703b66f1efca3d82168
@@ -17458,6 +17554,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -17471,6 +17568,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., CN=Trend Micro, Inc.
       ValidFrom: '2017-04-27 00:00:00'
       ValidTo: '2018-07-16 23:59:59'
@@ -17483,6 +17581,7 @@ KnownVulnerableSamples:
         MD5: 78eaa337666217b1c16a9a0ebd0b8434
         SHA1: ff9cb835e78f6185eed4372096c3bae53b17d18d
         SHA256: 1c0d9746725e176b4a7c2852878f14d7587f58e65d346bc1247f1c8ee6374250
+        SHA384: ffe3c75b860679a5de399c7d2c2844dbfac51d5d8581e24648d208daba1e4bed5c867808e02dc8d7cb3df1d4b2b53d10
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -17497,6 +17596,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -17511,6 +17611,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 497c4fad471540e6e453d0cafb155740
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -17544,16 +17645,16 @@ KnownVulnerableSamples:
       Entropy: 5.838691747338806
       Virtual Size: '0x5834'
     INIT:
-      Entropy: 5.344290242092717
+      Entropy: 5.3442902420927165
       Virtual Size: '0x18a6'
     .rsrc:
-      Entropy: 3.381417586542839
+      Entropy: 3.3814175865428386
       Virtual Size: '0x568'
     .reloc:
       Entropy: 5.319305863516213
       Virtual Size: '0x4c8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-10-02 04:43:25'
+  CreationTimestamp: '2017-10-02 06:43:25'
 - Filename: TmComm.sys
   MD5: f33c3f08536f988aac84d72d83b139a6
   SHA1: 07f60b2b0e56cb15aad3ca8a96d9fe3a91491329
@@ -18248,6 +18349,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -18260,6 +18362,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -18274,6 +18377,7 @@ KnownVulnerableSamples:
         MD5: b7d8444a70054990435f35a5630df5e1
         SHA1: 4678c6e4a8787a8e6ed2bce8792b122f6c08afd8
         SHA256: 0a8b4b359ea7890b358e56e436e9cfc6f32b037b2599b597ca7f7a80d475ec98
+        SHA384: ab21ee23bcdcf6f6066fb964d61467419ca8c0f3ad0b3fa2be4db6ed6af1cdff066b27d1988551c75836f22eddffef1f
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -18286,6 +18390,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., OU=Digital ID Class
         3 , Microsoft Software Validation v2, OU=RD, CN=Trend Micro, Inc.
       ValidFrom: '2011-12-27 00:00:00'
@@ -18299,6 +18404,7 @@ KnownVulnerableSamples:
         MD5: 11b208a45459069f827186fe81c6badd
         SHA1: 456356986e8ecbb7b05e4617d37cb8cd69ce4969
         SHA256: 4a0336d7ffa5db42ece4b342e1244f5c2bd0681827f68f847d99195c83740145
+        SHA384: 8a5edd0f475b19f4667fde62ee69bbe81a130ddad07ff7cbeb16d4bd9bddd3aa1e59f2469cc15c01e8889e01b048778d
     Signer:
     - SerialNumber: 6326c00ead256b6837eeb29b5ee84720
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -18335,7 +18441,7 @@ KnownVulnerableSamples:
       Entropy: 6.547529823822407
       Virtual Size: '0x2c08'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-11-13 04:31:52'
+  CreationTimestamp: '2012-11-13 06:31:52'
 - Filename: TmComm.sys
   MD5: 46edb648c1b5c3abd76bd5e912dac026
   SHA1: 3f43412c563889a5f5350f415f7040a71cc25221
@@ -18960,6 +19066,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -18972,6 +19079,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -18986,6 +19094,7 @@ KnownVulnerableSamples:
         MD5: b7d8444a70054990435f35a5630df5e1
         SHA1: 4678c6e4a8787a8e6ed2bce8792b122f6c08afd8
         SHA256: 0a8b4b359ea7890b358e56e436e9cfc6f32b037b2599b597ca7f7a80d475ec98
+        SHA384: ab21ee23bcdcf6f6066fb964d61467419ca8c0f3ad0b3fa2be4db6ed6af1cdff066b27d1988551c75836f22eddffef1f
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -18998,6 +19107,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., OU=Digital ID Class
         3 , Microsoft Software Validation v2, OU=RD, CN=Trend Micro, Inc.
       ValidFrom: '2011-12-27 00:00:00'
@@ -19011,6 +19121,7 @@ KnownVulnerableSamples:
         MD5: 11b208a45459069f827186fe81c6badd
         SHA1: 456356986e8ecbb7b05e4617d37cb8cd69ce4969
         SHA256: 4a0336d7ffa5db42ece4b342e1244f5c2bd0681827f68f847d99195c83740145
+        SHA384: 8a5edd0f475b19f4667fde62ee69bbe81a130ddad07ff7cbeb16d4bd9bddd3aa1e59f2469cc15c01e8889e01b048778d
     Signer:
     - SerialNumber: 6326c00ead256b6837eeb29b5ee84720
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -19041,16 +19152,16 @@ KnownVulnerableSamples:
       Entropy: 5.761030423743034
       Virtual Size: '0x4de7'
     INIT:
-      Entropy: 5.276807727813277
+      Entropy: 5.276807727813276
       Virtual Size: '0x1168'
     .rsrc:
       Entropy: 3.4111757391638116
       Virtual Size: '0x780'
     .reloc:
-      Entropy: 3.755788581312189
+      Entropy: 3.755788581312188
       Virtual Size: '0x578'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-11-13 04:31:43'
+  CreationTimestamp: '2012-11-13 06:31:43'
 - Filename: TmComm.sys
   MD5: 2ddd3c0e23bc0fd63702910c597298b4
   SHA1: 3fd7fda9c7dfdb2a845c39971572bd090bee3b1d
@@ -19630,6 +19741,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -19642,6 +19754,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -19656,6 +19769,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., OU=Digital ID Class
         3 , Microsoft Software Validation v2, OU=RD, CN=Trend Micro, Inc.
       ValidFrom: '2008-01-16 00:00:00'
@@ -19669,6 +19783,7 @@ KnownVulnerableSamples:
         MD5: e00f0a38c65f7c0b9f19b97448d6a0e3
         SHA1: 91c033a2f289418c4101654dceacef1b25bb55d0
         SHA256: 38b3fcbdb734b0e3439f3c9a3c4c1712091f577d2b616d41224137faf7ba7c86
+        SHA384: d3a0e6ebbe1b8a4847fa56fa62a48d76fc223870a66d30de9ce77fe5ff4ac0eeb84644ab4b67a7c4638ce79dec03a62d
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -19681,6 +19796,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 645212f783f4d7aba3555729e99ce065
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -19693,7 +19809,7 @@ KnownVulnerableSamples:
     SHA256: bf0ee0f8675bb1fbe955bd5eedb7f49b38a8af2e99a9f101d826baf830fe6c55
   Sections:
     .text:
-      Entropy: 6.6478031768375745
+      Entropy: 6.647803176837575
       Virtual Size: '0x17825'
     .rdata:
       Entropy: 4.7004676283988225
@@ -19714,10 +19830,10 @@ KnownVulnerableSamples:
       Entropy: 3.379624116145044
       Virtual Size: '0x498'
     .reloc:
-      Entropy: 6.408585235130312
+      Entropy: 6.4085852351303085
       Virtual Size: '0x17d2'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-10-27 22:11:08'
+  CreationTimestamp: '2008-10-28 00:11:08'
 - Filename: TmComm.sys
   MD5: 3e4a1384a27013ab7b767a88b8a1bd34
   SHA1: ae344c123ef6d206235f2a8448d07f86433db5a6
@@ -20216,6 +20332,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2008-12-03 23:59:59'
@@ -20228,6 +20345,7 @@ KnownVulnerableSamples:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
         SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -20242,6 +20360,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., OU=Digital ID Class
         3 , Microsoft Software Validation v2, OU=RD, CN=Trend Micro, Inc.
       ValidFrom: '2006-01-20 00:00:00'
@@ -20255,6 +20374,7 @@ KnownVulnerableSamples:
         MD5: 190c4a172b309e1a6c672bef0dc442a3
         SHA1: 0ef8720411ec5275234f4db0aedb0415bf63a45f
         SHA256: dc9eb159ce2b994bb915ae48f8c38d16a54e1db0cc158ec9b0ff71041a1c73eb
+        SHA384: ac482274816fcb062d883896039ae2659f67612cd4b9aa289ccbc28d949b0c16f6622f03aae1fbcdc4b9aeff216f40b7
     Signer:
     - SerialNumber: 681ce312057f03f206153b679ec06cb9
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -20267,7 +20387,7 @@ KnownVulnerableSamples:
     SHA256: 6086e316a4760ea6d1f73fa8682dd0c2a3111dca50bc01d10e7fd3ec249ec8c8
   Sections:
     .text:
-      Entropy: 6.563438799635112
+      Entropy: 6.563438799635113
       Virtual Size: '0xecd3'
     .rdata:
       Entropy: 4.708176627227074
@@ -20276,7 +20396,7 @@ KnownVulnerableSamples:
       Entropy: 2.3615129599002604
       Virtual Size: '0xa08'
     PAGE:
-      Entropy: 6.251571950480721
+      Entropy: 6.251571950480722
       Virtual Size: '0x13ac'
     .edata:
       Entropy: 5.713739669407665
@@ -20291,7 +20411,7 @@ KnownVulnerableSamples:
       Entropy: 6.309665717791699
       Virtual Size: '0x1002'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-01-24 02:45:21'
+  CreationTimestamp: '2007-01-24 04:45:21'
 - Filename: TmComm.sys
   MD5: f65e545771fd922693f0ec68b2141012
   SHA1: 850f15fd67d9177a50f3efef07a805b9613f50d6
@@ -20864,6 +20984,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -20876,6 +20997,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -20890,6 +21012,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., OU=Digital ID Class
         3 , Microsoft Software Validation v2, OU=RD, CN=Trend Micro, Inc.
       ValidFrom: '2008-01-16 00:00:00'
@@ -20903,6 +21026,7 @@ KnownVulnerableSamples:
         MD5: e00f0a38c65f7c0b9f19b97448d6a0e3
         SHA1: 91c033a2f289418c4101654dceacef1b25bb55d0
         SHA256: 38b3fcbdb734b0e3439f3c9a3c4c1712091f577d2b616d41224137faf7ba7c86
+        SHA384: d3a0e6ebbe1b8a4847fa56fa62a48d76fc223870a66d30de9ce77fe5ff4ac0eeb84644ab4b67a7c4638ce79dec03a62d
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -20915,6 +21039,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 645212f783f4d7aba3555729e99ce065
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -20930,19 +21055,19 @@ KnownVulnerableSamples:
       Entropy: 6.611141212755658
       Virtual Size: '0x16412'
     .rdata:
-      Entropy: 4.809141722841255
+      Entropy: 4.809141722841254
       Virtual Size: '0x1104'
     .data:
       Entropy: 1.5135609179459095
       Virtual Size: '0x14f4'
     PAGE:
-      Entropy: 6.243880711573033
+      Entropy: 6.243880711573034
       Virtual Size: '0x13d3'
     .edata:
       Entropy: 5.794718485434606
       Virtual Size: '0x402b'
     INIT:
-      Entropy: 5.674755033880664
+      Entropy: 5.674755033880665
       Virtual Size: '0x1032'
     .rsrc:
       Entropy: 3.39699693513827
@@ -20951,7 +21076,7 @@ KnownVulnerableSamples:
       Entropy: 6.434544685125248
       Virtual Size: '0x16c4'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-04-01 05:02:16'
+  CreationTimestamp: '2008-04-01 07:02:16'
 - Filename: TmComm.sys
   MD5: 9af5ae780b6a9ea485fa15f28ddb20a7
   SHA1: 6a60c5dc7d881ddb5d6fe954f10b8aa10d214e72
@@ -21711,6 +21836,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -21724,6 +21850,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., CN=Trend Micro, Inc.
       ValidFrom: '2017-04-27 00:00:00'
       ValidTo: '2018-07-16 23:59:59'
@@ -21736,6 +21863,7 @@ KnownVulnerableSamples:
         MD5: 78eaa337666217b1c16a9a0ebd0b8434
         SHA1: ff9cb835e78f6185eed4372096c3bae53b17d18d
         SHA256: 1c0d9746725e176b4a7c2852878f14d7587f58e65d346bc1247f1c8ee6374250
+        SHA384: ffe3c75b860679a5de399c7d2c2844dbfac51d5d8581e24648d208daba1e4bed5c867808e02dc8d7cb3df1d4b2b53d10
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -21750,6 +21878,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -21764,6 +21893,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 497c4fad471540e6e453d0cafb155740
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -21776,7 +21906,7 @@ KnownVulnerableSamples:
     SHA256: 0dd9eaf41e836f6a7165b1443ea778563dcd126fa15e4561b54bc6bdae0a6d01
   Sections:
     .text:
-      Entropy: 6.776237694128123
+      Entropy: 6.776237694128122
       Virtual Size: '0x39e34'
     .rdata:
       Entropy: 5.132175114810313
@@ -21794,13 +21924,13 @@ KnownVulnerableSamples:
       Entropy: 5.724503523166839
       Virtual Size: '0x1692'
     .rsrc:
-      Entropy: 3.385539994882901
+      Entropy: 3.3855399948829006
       Virtual Size: '0x568'
     .reloc:
       Entropy: 6.795234137948534
       Virtual Size: '0x3600'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-07-12 21:24:09'
+  CreationTimestamp: '2017-07-12 23:24:09'
 - Filename: TmComm.sys
   MD5: 09927915aba84c8acd91efdaac674b86
   SHA1: b304cb10c88ddd8461bad429ebfd2fd1b809ac2b
@@ -22546,6 +22676,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -22559,6 +22690,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., CN=Trend Micro, Inc.
       ValidFrom: '2017-04-27 00:00:00'
       ValidTo: '2018-07-16 23:59:59'
@@ -22571,6 +22703,7 @@ KnownVulnerableSamples:
         MD5: 78eaa337666217b1c16a9a0ebd0b8434
         SHA1: ff9cb835e78f6185eed4372096c3bae53b17d18d
         SHA256: 1c0d9746725e176b4a7c2852878f14d7587f58e65d346bc1247f1c8ee6374250
+        SHA384: ffe3c75b860679a5de399c7d2c2844dbfac51d5d8581e24648d208daba1e4bed5c867808e02dc8d7cb3df1d4b2b53d10
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -22585,6 +22718,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -22599,6 +22733,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 497c4fad471540e6e453d0cafb155740
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -22614,7 +22749,7 @@ KnownVulnerableSamples:
       Entropy: 5.8826477605363685
       Virtual Size: '0x523a5'
     .rdata:
-      Entropy: 3.453137760228661
+      Entropy: 3.4531377602286604
       Virtual Size: '0x613c'
     .data:
       Entropy: 4.680027676315811
@@ -22641,7 +22776,7 @@ KnownVulnerableSamples:
       Entropy: 5.319305863516213
       Virtual Size: '0x4c8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-05-18 04:55:14'
+  CreationTimestamp: '2017-05-18 06:55:14'
 - Filename: TmComm.sys
   MD5: 113056ec5c679b6f74c9556339ebf962
   SHA1: e7d8fc86b90f75864b7e2415235e17df4d85ee31
@@ -23398,6 +23533,7 @@ KnownVulnerableSamples:
         MD5: e93e004baa6013b41135ac0648e29d5b
         SHA1: dc91e26674d4b627319c700d3ebb1a6cf83d358e
         SHA256: 0d20335edb166a303411548471bee6f301c8b4f7f7e453d09c15303de2c888d7
+        SHA384: 5e0130ee64e28e6366fcf0ca8a126b3f7e06eec60b8a46ac90dbfa858aac8f0c1a9cce248a606fdf9a98eae98dd5d887
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -23411,6 +23547,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -23423,6 +23560,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -23436,6 +23574,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -23448,6 +23587,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0ea0fe4dfb74cc64bc32143103c27c8b
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
@@ -23462,10 +23602,10 @@ KnownVulnerableSamples:
       Entropy: 6.674077726621015
       Virtual Size: '0x355ca'
     .rdata:
-      Entropy: 4.891820584938996
+      Entropy: 4.891820584938997
       Virtual Size: '0x23dc'
     .data:
-      Entropy: 3.899869327051466
+      Entropy: 3.8998693270514657
       Virtual Size: '0x35f8'
     PAGE:
       Entropy: 6.276023697743035
@@ -23477,13 +23617,13 @@ KnownVulnerableSamples:
       Entropy: 5.540833069832532
       Virtual Size: '0x1676'
     .rsrc:
-      Entropy: 3.368081864049287
+      Entropy: 3.3680818640492864
       Virtual Size: '0x568'
     .reloc:
       Entropy: 6.521676719817061
       Virtual Size: '0x3704'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-06-28 23:59:05'
+  CreationTimestamp: '2020-06-29 01:59:05'
 - Filename: TmComm.sys
   MD5: c42caa9cdcc50c01cb2fed985a03fe23
   SHA1: b3c111d7192cfa8824e5c9b7c0660c37978025d6
@@ -24052,6 +24192,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -24064,6 +24205,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -24078,6 +24220,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., OU=Digital ID Class
         3 , Microsoft Software Validation v2, OU=RD, CN=Trend Micro, Inc.
       ValidFrom: '2007-01-30 00:00:00'
@@ -24091,6 +24234,7 @@ KnownVulnerableSamples:
         MD5: 1be2a89d67bb40c5a169d9e31c1a85af
         SHA1: 626dfc9caa0b9c229d6327683e87e36da2f30a3d
         SHA256: bb4688ce8067e75a34458bff65e0bf0fd213b3e9416108aabb410d305495dc77
+        SHA384: 2e653f784f09ea4b4d116e8eb0bcca663a00e56c644ae68fca89e33a7942ad6abf294c304faf9a651e167e53a7d3efc7
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -24103,6 +24247,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 225c8b52640584163ec1835017ded781
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -24118,7 +24263,7 @@ KnownVulnerableSamples:
       Entropy: 6.620073654305084
       Virtual Size: '0x1578c'
     .rdata:
-      Entropy: 4.841249633294921
+      Entropy: 4.841249633294918
       Virtual Size: '0x1104'
     .data:
       Entropy: 1.5135702595033218
@@ -24130,16 +24275,16 @@ KnownVulnerableSamples:
       Entropy: 5.790090125317036
       Virtual Size: '0x4000'
     INIT:
-      Entropy: 5.6705606908323976
+      Entropy: 5.670560690832398
       Virtual Size: '0xfd2'
     .rsrc:
       Entropy: 3.388798265244797
       Virtual Size: '0x490'
     .reloc:
-      Entropy: 6.40160183656787
+      Entropy: 6.401601836567871
       Virtual Size: '0x1626'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-09-05 04:57:07'
+  CreationTimestamp: '2007-09-05 06:57:07'
 - Filename: TmComm.sys
   MD5: d79b8b7bed8d30387c22663b24e8c191
   SHA1: af5b7556706e09ee9e74ee2e87eab5c0a49d2d35
@@ -24837,6 +24982,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -24849,6 +24995,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -24863,6 +25010,7 @@ KnownVulnerableSamples:
         MD5: b7d8444a70054990435f35a5630df5e1
         SHA1: 4678c6e4a8787a8e6ed2bce8792b122f6c08afd8
         SHA256: 0a8b4b359ea7890b358e56e436e9cfc6f32b037b2599b597ca7f7a80d475ec98
+        SHA384: ab21ee23bcdcf6f6066fb964d61467419ca8c0f3ad0b3fa2be4db6ed6af1cdff066b27d1988551c75836f22eddffef1f
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -24875,6 +25023,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., OU=Digital ID Class
         3 , Microsoft Software Validation v2, OU=RD, CN=Trend Micro, Inc.
       ValidFrom: '2011-12-27 00:00:00'
@@ -24888,6 +25037,7 @@ KnownVulnerableSamples:
         MD5: 11b208a45459069f827186fe81c6badd
         SHA1: 456356986e8ecbb7b05e4617d37cb8cd69ce4969
         SHA256: 4a0336d7ffa5db42ece4b342e1244f5c2bd0681827f68f847d99195c83740145
+        SHA384: 8a5edd0f475b19f4667fde62ee69bbe81a130ddad07ff7cbeb16d4bd9bddd3aa1e59f2469cc15c01e8889e01b048778d
     Signer:
     - SerialNumber: 6326c00ead256b6837eeb29b5ee84720
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -24906,7 +25056,7 @@ KnownVulnerableSamples:
       Entropy: 4.705135847053364
       Virtual Size: '0x1cec'
     .data:
-      Entropy: 4.493079171005889
+      Entropy: 4.49307917100589
       Virtual Size: '0x271c'
     PAGE:
       Entropy: 6.211668374305894
@@ -24918,13 +25068,13 @@ KnownVulnerableSamples:
       Entropy: 5.69306663400132
       Virtual Size: '0x15da'
     .rsrc:
-      Entropy: 3.4183381525203025
+      Entropy: 3.418338152520303
       Virtual Size: '0x778'
     .reloc:
       Entropy: 6.567369227688049
       Virtual Size: '0x2b36'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-06-05 01:36:19'
+  CreationTimestamp: '2012-06-05 03:36:19'
 - Filename: TmComm.sys
   MD5: e28ce623e3e5fa1d2fe16c721efad4c2
   SHA1: 4cd5bf02edf6883a08dfed7702267612e21ed56e
@@ -25680,6 +25830,7 @@ KnownVulnerableSamples:
         MD5: f13ede9179075999ef7f856ec31e364b
         SHA1: 2f09867166e6107e17808317f5c8d4ee157f45bc
         SHA256: 089a2c4c6ac7432020acdb65c33bf39130da6f37c002ba79128bd4c94e4fa101
+        SHA384: 67be6d358f4ecd0726163603a404db9d78c340951d43fd608482cd89a2de7f9566f0ce45f8222f420003157cb266b939
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -25694,6 +25845,7 @@ KnownVulnerableSamples:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
         SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -25706,6 +25858,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., OU=Digital ID Class
         3 , Microsoft Software Validation v2, CN=Trend Micro, Inc.
       ValidFrom: '2014-02-07 00:00:00'
@@ -25719,6 +25872,7 @@ KnownVulnerableSamples:
         MD5: e8f93ae74cc54a00e4278f92c46c42e9
         SHA1: 1e2d3a7e0be7d05f35ede330e922292e6ffa1a0c
         SHA256: 9d5606f127dc9d395d41a511d41831b7fff0954458d6c2d09297e25d2a44671f
+        SHA384: f95ca91d5422848535963f417a3c14867d65e77c13653ff430af0f7219eed7085ecf35a810930f731369e02b325c059f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -25733,6 +25887,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 5bb307b9e6fbf0c0fd40f5772d1ad8e3
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -25754,7 +25909,7 @@ KnownVulnerableSamples:
       Entropy: 4.587939809496467
       Virtual Size: '0x3000'
     PAGE:
-      Entropy: 6.291603080402883
+      Entropy: 6.291603080402881
       Virtual Size: '0x13dd'
     .edata:
       Entropy: 5.835213314323085
@@ -25763,13 +25918,13 @@ KnownVulnerableSamples:
       Entropy: 5.650775218389838
       Virtual Size: '0x16a2'
     .rsrc:
-      Entropy: 3.4011474091653793
+      Entropy: 3.4011474091653797
       Virtual Size: '0x760'
     .reloc:
       Entropy: 6.581452060997828
       Virtual Size: '0x346c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-07-14 01:39:00'
+  CreationTimestamp: '2014-07-14 03:39:00'
 - Filename: TmComm.sys
   MD5: 62eed4173c566a248531fb6f20a5900d
   SHA1: 0e60414750c48676d7aa9c9ec81c0a3b3a4d53d0
@@ -26515,6 +26670,7 @@ KnownVulnerableSamples:
         MD5: 0179e8ddeebaf8998fec419d65cdf13d
         SHA1: 34c724c3369f2da8c25b591808962f66f10bde28
         SHA256: 35b0bac11602847aaab65fb35199d3c8976cde3ccf7e061b130177c712cbd92f
+        SHA384: 85f2e758b5480eb225ae42777ed339de71da458c1d40677c0fb6ef8e560e42764a577335e4839b5342061c31ee837b6e
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., CN=Trend Micro, Inc.
       ValidFrom: '2016-03-29 00:00:00'
       ValidTo: '2017-06-28 23:59:59'
@@ -26527,6 +26683,7 @@ KnownVulnerableSamples:
         MD5: b3ca7d6b821d8e3432b29874980af55e
         SHA1: 618d7e55a24c1d8b65a0bcce79120c5e3b13fa4d
         SHA256: c645c6a7dc7243a4a3f78a6569c029401a7bda8bc4732ce7198d9f21f19b12fa
+        SHA384: a215ae468847498103234ed023774ba72f8d35f82f2fef5ca8521f020e7ea9c1f2df2a312743bff5fa65747b0760ec59
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -26541,6 +26698,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -26555,6 +26713,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 774d49c5649436de6bf3190a67eedcdf
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -26573,28 +26732,28 @@ KnownVulnerableSamples:
       Entropy: 3.4279991805667236
       Virtual Size: '0x6104'
     .data:
-      Entropy: 4.655791914208071
+      Entropy: 4.655791914208073
       Virtual Size: '0x325c'
     .pdata:
-      Entropy: 5.512999023457541
+      Entropy: 5.51299902345754
       Virtual Size: '0x3a2c'
     PAGE:
-      Entropy: 6.291915046471805
+      Entropy: 6.2919150464718046
       Virtual Size: '0x1ae4'
     .edata:
       Entropy: 5.779142854207373
       Virtual Size: '0x5834'
     INIT:
-      Entropy: 5.341865740296962
+      Entropy: 5.341865740296961
       Virtual Size: '0x18a6'
     .rsrc:
       Entropy: 3.3420109781941383
       Virtual Size: '0x568'
     .reloc:
-      Entropy: 5.322414751159131
+      Entropy: 5.32241475115913
       Virtual Size: '0x4c8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-22 19:36:21'
+  CreationTimestamp: '2016-08-22 21:36:21'
 - Filename: TmComm.sys
   MD5: 8cb2ffb8bb0bbf8cd0dd685611854637
   SHA1: 3ca51b23f8562485820883e894b448413891183a
@@ -27350,6 +27509,7 @@ KnownVulnerableSamples:
         MD5: b6aa9cf28bcfc9f07ec1069fb425ab61
         SHA1: ca7a166fcd53878ba5a38d4cac37c63513cfc1fa
         SHA256: 711394fc49f8948a831f687d42ced6b18514f57786ecc6cdbc3c3eb72e568a40
+        SHA384: ca01f9c9ed4e1ddff7126b7bbf618bc8132429886ca563f86655429e928739c621b9fdea6e04a623712cbb998c5c7d77
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -27364,6 +27524,7 @@ KnownVulnerableSamples:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
         SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -27376,6 +27537,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., CN=Trend Micro, Inc.
       ValidFrom: '2015-02-20 00:00:00'
       ValidTo: '2016-05-21 23:59:59'
@@ -27388,6 +27550,7 @@ KnownVulnerableSamples:
         MD5: 7e2a6f93403382b4ec42463426d0a4b5
         SHA1: 62acc697c0e2dc37f3d37ab79751637346e051e2
         SHA256: 3e9a51973a839e5bc6e81c886e085b777d08ce2b24f816b7552cf2c44e322d59
+        SHA384: e6206b8dc5d081bcf85545a545ebe91bb0c796b5b94bf0b915223440f73a2cea4ca0981d8da85ae07384918a1f7c927d
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -27402,6 +27565,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 1519396ee230f02cad1fcfdb077a35f0
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -27432,13 +27596,13 @@ KnownVulnerableSamples:
       Entropy: 5.687168375595582
       Virtual Size: '0x16a2'
     .rsrc:
-      Entropy: 3.4082708252413982
+      Entropy: 3.408270825241399
       Virtual Size: '0x760'
     .reloc:
       Entropy: 6.570450611341717
       Virtual Size: '0x34f0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-05-29 01:42:42'
+  CreationTimestamp: '2015-05-29 03:42:42'
 - Filename: TmComm.sys
   MD5: 59f6320772a2e6b0b3587536be4cc022
   SHA1: fc8fbd92f6e64682360885c188d1bdfbc14ca579
@@ -28175,6 +28339,7 @@ KnownVulnerableSamples:
         MD5: b6aa9cf28bcfc9f07ec1069fb425ab61
         SHA1: ca7a166fcd53878ba5a38d4cac37c63513cfc1fa
         SHA256: 711394fc49f8948a831f687d42ced6b18514f57786ecc6cdbc3c3eb72e568a40
+        SHA384: ca01f9c9ed4e1ddff7126b7bbf618bc8132429886ca563f86655429e928739c621b9fdea6e04a623712cbb998c5c7d77
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -28189,6 +28354,7 @@ KnownVulnerableSamples:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
         SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -28201,6 +28367,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., CN=Trend Micro, Inc.
       ValidFrom: '2015-02-20 00:00:00'
       ValidTo: '2016-05-21 23:59:59'
@@ -28213,6 +28380,7 @@ KnownVulnerableSamples:
         MD5: 7e2a6f93403382b4ec42463426d0a4b5
         SHA1: 62acc697c0e2dc37f3d37ab79751637346e051e2
         SHA256: 3e9a51973a839e5bc6e81c886e085b777d08ce2b24f816b7552cf2c44e322d59
+        SHA384: e6206b8dc5d081bcf85545a545ebe91bb0c796b5b94bf0b915223440f73a2cea4ca0981d8da85ae07384918a1f7c927d
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -28227,6 +28395,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 1519396ee230f02cad1fcfdb077a35f0
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -28239,7 +28408,7 @@ KnownVulnerableSamples:
     SHA256: 74a96f12a0a25d6abdf05628a4a1fad9c3f4fcb2db2b43549616e33071123a39
   Sections:
     .text:
-      Entropy: 6.4355501612921335
+      Entropy: 6.435550161292133
       Virtual Size: '0x36608'
     .rdata:
       Entropy: 3.5104433986216437
@@ -28260,13 +28429,13 @@ KnownVulnerableSamples:
       Entropy: 5.298026666334914
       Virtual Size: '0x17fe'
     .rsrc:
-      Entropy: 3.409376014331317
+      Entropy: 3.4093760143313174
       Virtual Size: '0x760'
     .reloc:
       Entropy: 4.105722313144271
       Virtual Size: '0x7e0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-08-27 07:19:02'
+  CreationTimestamp: '2015-08-27 09:19:02'
 - Filename: TmComm.sys
   MD5: c006d1844f20b91d0ea52bf32d611f30
   SHA1: 70258117b5efe65476f85143fd14fa0b7f148adb
@@ -29029,6 +29198,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -29042,6 +29212,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, L=Taipei, O=Trend Micro, Inc., OU=Taipei, TW, CN=Trend Micro,
         Inc.
       ValidFrom: '2019-07-12 00:00:00'
@@ -29055,6 +29226,7 @@ KnownVulnerableSamples:
         MD5: e93e004baa6013b41135ac0648e29d5b
         SHA1: dc91e26674d4b627319c700d3ebb1a6cf83d358e
         SHA256: 0d20335edb166a303411548471bee6f301c8b4f7f7e453d09c15303de2c888d7
+        SHA384: 5e0130ee64e28e6366fcf0ca8a126b3f7e06eec60b8a46ac90dbfa858aac8f0c1a9cce248a606fdf9a98eae98dd5d887
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -29068,6 +29240,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -29081,6 +29254,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     Signer:
     - SerialNumber: 0ea0fe4dfb74cc64bc32143103c27c8b
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
@@ -29095,7 +29269,7 @@ KnownVulnerableSamples:
       Entropy: 6.773538420139162
       Virtual Size: '0x39746'
     .rdata:
-      Entropy: 5.122447142288969
+      Entropy: 5.12244714228897
       Virtual Size: '0x22f4'
     .data:
       Entropy: 4.298114547131317
@@ -29104,7 +29278,7 @@ KnownVulnerableSamples:
       Entropy: 6.2892805988471245
       Virtual Size: '0x15da'
     .edata:
-      Entropy: 5.836862891614327
+      Entropy: 5.836862891614326
       Virtual Size: '0x5635'
     INIT:
       Entropy: 5.722338444534344
@@ -29116,7 +29290,7 @@ KnownVulnerableSamples:
       Entropy: 6.787941917403422
       Virtual Size: '0x3554'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-10-25 05:13:45'
+  CreationTimestamp: '2019-10-25 07:13:45'
 - Filename: TmComm.sys
   MD5: 949ef0df929a71d6cc77494dfcb1ddeb
   SHA1: a34adabde63514e1916713a588905c4019f83efb
@@ -29708,6 +29882,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -29720,6 +29895,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -29734,6 +29910,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., OU=Digital ID Class
         3 , Microsoft Software Validation v2, OU=RD, CN=Trend Micro, Inc.
       ValidFrom: '2008-01-16 00:00:00'
@@ -29747,6 +29924,7 @@ KnownVulnerableSamples:
         MD5: e00f0a38c65f7c0b9f19b97448d6a0e3
         SHA1: 91c033a2f289418c4101654dceacef1b25bb55d0
         SHA256: 38b3fcbdb734b0e3439f3c9a3c4c1712091f577d2b616d41224137faf7ba7c86
+        SHA384: d3a0e6ebbe1b8a4847fa56fa62a48d76fc223870a66d30de9ce77fe5ff4ac0eeb84644ab4b67a7c4638ce79dec03a62d
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -29759,6 +29937,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 645212f783f4d7aba3555729e99ce065
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -29789,13 +29968,13 @@ KnownVulnerableSamples:
       Entropy: 5.626152938599922
       Virtual Size: '0x10f8'
     .rsrc:
-      Entropy: 3.4038881368671845
+      Entropy: 3.403888136867185
       Virtual Size: '0x4b0'
     .reloc:
       Entropy: 6.395300918196204
       Virtual Size: '0x1b14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-07-06 00:10:25'
+  CreationTimestamp: '2009-07-06 02:10:25'
 - Filename: TmComm.sys
   MD5: d6b259b2dfe80bdf4d026063accd752c
   SHA1: 0adc1320421f02f2324e764aa344018758514436
@@ -30541,6 +30720,7 @@ KnownVulnerableSamples:
         MD5: 0179e8ddeebaf8998fec419d65cdf13d
         SHA1: 34c724c3369f2da8c25b591808962f66f10bde28
         SHA256: 35b0bac11602847aaab65fb35199d3c8976cde3ccf7e061b130177c712cbd92f
+        SHA384: 85f2e758b5480eb225ae42777ed339de71da458c1d40677c0fb6ef8e560e42764a577335e4839b5342061c31ee837b6e
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=Trend Micro, Inc., CN=Trend Micro, Inc.
       ValidFrom: '2016-03-29 00:00:00'
       ValidTo: '2017-06-28 23:59:59'
@@ -30553,6 +30733,7 @@ KnownVulnerableSamples:
         MD5: b3ca7d6b821d8e3432b29874980af55e
         SHA1: 618d7e55a24c1d8b65a0bcce79120c5e3b13fa4d
         SHA256: c645c6a7dc7243a4a3f78a6569c029401a7bda8bc4732ce7198d9f21f19b12fa
+        SHA384: a215ae468847498103234ed023774ba72f8d35f82f2fef5ca8521f020e7ea9c1f2df2a312743bff5fa65747b0760ec59
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -30567,6 +30748,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -30581,6 +30763,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 774d49c5649436de6bf3190a67eedcdf
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -30593,34 +30776,34 @@ KnownVulnerableSamples:
     SHA256: da02581a92aa11134e23d9ee3cf7d60945700fec9b37c0a3365e2aebe68ec5b3
   Sections:
     .text:
-      Entropy: 5.86389192642893
+      Entropy: 5.863891926428929
       Virtual Size: '0x4f325'
     .rdata:
       Entropy: 3.427567442847141
       Virtual Size: '0x6104'
     .data:
-      Entropy: 4.655791914208071
+      Entropy: 4.655791914208073
       Virtual Size: '0x325c'
     .pdata:
-      Entropy: 5.512999023457541
+      Entropy: 5.51299902345754
       Virtual Size: '0x3a2c'
     PAGE:
-      Entropy: 6.291915046471805
+      Entropy: 6.2919150464718046
       Virtual Size: '0x1ae4'
     .edata:
       Entropy: 5.779149360804799
       Virtual Size: '0x5834'
     INIT:
-      Entropy: 5.341865740296962
+      Entropy: 5.341865740296961
       Virtual Size: '0x18a6'
     .rsrc:
       Entropy: 3.355484856716838
       Virtual Size: '0x560'
     .reloc:
-      Entropy: 5.322414751159131
+      Entropy: 5.32241475115913
       Virtual Size: '0x4c8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-01 21:07:52'
+  CreationTimestamp: '2016-08-01 23:07:52'
 - Filename: TmComm.sys
   MD5: 996ded363410dfd38af50c76bd5b4fbc
   SHA1: d7597d27eeb2658a7c7362193f4e5c813c5013e5
@@ -31356,6 +31539,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=TW, ??=Private Organization, serialNumber=23310837, C=TW, ST=Taipei
         City, L=Daan District, O=Trend Micro, Inc., CN=Trend Micro, Inc.
       ValidFrom: '2020-08-07 00:00:00'
@@ -31369,6 +31553,7 @@ KnownVulnerableSamples:
         MD5: df4ab4b67a0e9b1f9ec4a1ad9ea6052a
         SHA1: dc1d0c4be3072afed8b0739a21b87b14292815e0
         SHA256: 9c8450b3fa641a421a545e7e4fa7e1bcb657db4796bef147312c44b7a1b5ffe0
+        SHA384: 696022742c9e2b0213ef1a2c2a42e430a4a0823e7a2e8a5561fa6398964bf70ce95a4847da78efc56e17f75a9ddbd105
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -31381,6 +31566,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -31394,6 +31580,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -31406,6 +31593,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0f6146af9397c7fa04b13c2d0279a1ba
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -31432,10 +31620,10 @@ KnownVulnerableSamples:
       Entropy: 6.21184090044214
       Virtual Size: '0x19f7'
     .edata:
-      Entropy: 5.770740565962119
+      Entropy: 5.77074056596212
       Virtual Size: '0x5805'
     INIT:
-      Entropy: 5.299636747033507
+      Entropy: 5.299636747033505
       Virtual Size: '0x17d2'
     .rsrc:
       Entropy: 3.3710034705474916
@@ -31444,7 +31632,7 @@ KnownVulnerableSamples:
       Entropy: 4.0313065892955455
       Virtual Size: '0x7be'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-08-25 02:07:44'
+  CreationTimestamp: '2020-08-25 04:07:44'
 - Filename: TmComm.sys
   MD5: 148bd10da8c8d64928a213c7bf1f2fca
   SHA1: dfd801b6c2715f5525f8ffb38e3396a5ad9b831d
@@ -32183,6 +32371,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -32196,6 +32385,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, L=Taipei, O=Trend Micro, Inc., CN=Trend Micro, Inc.
       ValidFrom: '2018-05-22 00:00:00'
       ValidTo: '2019-07-16 23:59:59'
@@ -32208,6 +32398,7 @@ KnownVulnerableSamples:
         MD5: 869d63236005004b14196f1446676514
         SHA1: 5ab0ae52f86a1af51af5a3421d581cc4899f1ccf
         SHA256: 55c2a996787daba322e26cfeb97216d96f9b0d12fd89b075c3a544f31c9930bd
+        SHA384: 1799b5cca24b4a3007253673705c146a5f8bb1fddf90d567096825eb269e24bb269b73873c48fc371dc7354fb5fdf48e
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -32222,6 +32413,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -32236,6 +32428,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 60d927b542b7d1147fb2f0c4b9c1bbb2
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -32248,7 +32441,7 @@ KnownVulnerableSamples:
     SHA256: b61ea91d46738a0387b4bbfb7c154f3a1881c8cab9360fd8eb85e1dd8c5d386c
   Sections:
     .text:
-      Entropy: 6.439439842109969
+      Entropy: 6.439439842109968
       Virtual Size: '0x37a64'
     .rdata:
       Entropy: 3.491900069223922
@@ -32275,6 +32468,6 @@ KnownVulnerableSamples:
       Entropy: 4.092946145413326
       Virtual Size: '0x7f6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-04-26 02:43:26'
+  CreationTimestamp: '2019-04-26 04:43:26'
 Tags:
 - TmComm.sys

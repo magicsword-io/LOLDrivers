@@ -23,7 +23,7 @@ KnownVulnerableSamples:
     SHA256: e7a6c3a40724ba871e13d9c55b7967ed252777a2382fea86e4ed6a2a8203fb4a
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-08-26 04:47:53'
+  CreationTimestamp: '2012-08-26 06:47:53'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -100,7 +100,7 @@ KnownVulnerableSamples:
       Entropy: 3.460622498395349
       Virtual Size: '0x684'
     .data:
-      Entropy: 3.11924592348315
+      Entropy: 3.1192459234831507
       Virtual Size: '0xe8'
     PAGE:
       Entropy: 5.786287892614831
@@ -109,7 +109,7 @@ KnownVulnerableSamples:
       Entropy: 5.266174691926025
       Virtual Size: '0x53e'
     .reloc:
-      Entropy: 5.67439270665009
+      Entropy: 5.674392706650088
       Virtual Size: '0x30e'
   Signature: ''
   Signatures:
@@ -128,6 +128,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -140,6 +141,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -152,6 +154,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=FR, CN=Benjamin Delpy
       ValidFrom: '2011-06-28 09:46:16'
       ValidTo: '2014-06-28 09:46:16'
@@ -164,6 +167,7 @@ KnownVulnerableSamples:
         MD5: ee0a53dda8301d1e78bd5487f1d49bf4
         SHA1: 5538f8cd492c2ec8d581f3665d2b4217c86fa19a
         SHA256: a39725e610e1a556e7bdfad56f59d24a5278073378a5d9880e14395bbd808deb
+        SHA384: 4d4d34b092fe3ed154a156e89c561e8a57082e207ff3d89025574e6fb05922465d3347141710b408259c73e7a0e889ca
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -176,6 +180,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 112169417a1c3ef46a301f99385f50680fa0
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -186,7 +191,7 @@ KnownVulnerableSamples:
     SHA256: 82fea578188662b4ed6df4c3aaaf6ebae72a6cd2f8bf135a89150cca1769156b
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-02-08 17:50:50'
+  CreationTimestamp: '2012-02-08 19:50:50'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -256,7 +261,7 @@ KnownVulnerableSamples:
   SHA256: 47356707e610cfd0be97595fbe55246b96a69141e1da579e6f662ddda6dc5280
   Sections:
     .text:
-      Entropy: 6.206569634065094
+      Entropy: 6.206569634065093
       Virtual Size: '0x2388'
     .rdata:
       Entropy: 3.426812306993836
@@ -290,6 +295,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -302,6 +308,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -314,6 +321,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=FR, CN=Benjamin Delpy
       ValidFrom: '2011-06-28 09:46:16'
       ValidTo: '2014-06-28 09:46:16'
@@ -326,6 +334,7 @@ KnownVulnerableSamples:
         MD5: ee0a53dda8301d1e78bd5487f1d49bf4
         SHA1: 5538f8cd492c2ec8d581f3665d2b4217c86fa19a
         SHA256: a39725e610e1a556e7bdfad56f59d24a5278073378a5d9880e14395bbd808deb
+        SHA384: 4d4d34b092fe3ed154a156e89c561e8a57082e207ff3d89025574e6fb05922465d3347141710b408259c73e7a0e889ca
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -338,6 +347,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 112169417a1c3ef46a301f99385f50680fa0
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -348,7 +358,7 @@ KnownVulnerableSamples:
     SHA256: 76718b87861bf6e502aa95ea85e378326c8db1759fe010c941b26cba3c881133
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-11-03 11:37:13'
+  CreationTimestamp: '2012-11-03 13:37:13'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -422,10 +432,10 @@ KnownVulnerableSamples:
       Entropy: 6.203004686966463
       Virtual Size: '0x289e'
     .rdata:
-      Entropy: 3.4564408637017117
+      Entropy: 3.456440863701712
       Virtual Size: '0x684'
     .data:
-      Entropy: 3.11924592348315
+      Entropy: 3.1192459234831507
       Virtual Size: '0xe8'
     PAGE:
       Entropy: 5.786287892614831
@@ -434,7 +444,7 @@ KnownVulnerableSamples:
       Entropy: 5.266174691926025
       Virtual Size: '0x53e'
     .reloc:
-      Entropy: 5.67439270665009
+      Entropy: 5.674392706650088
       Virtual Size: '0x30e'
   Signature: ''
   Signatures:
@@ -453,6 +463,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -465,6 +476,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -477,6 +489,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=FR, CN=Benjamin Delpy
       ValidFrom: '2011-06-28 09:46:16'
       ValidTo: '2014-06-28 09:46:16'
@@ -489,6 +502,7 @@ KnownVulnerableSamples:
         MD5: ee0a53dda8301d1e78bd5487f1d49bf4
         SHA1: 5538f8cd492c2ec8d581f3665d2b4217c86fa19a
         SHA256: a39725e610e1a556e7bdfad56f59d24a5278073378a5d9880e14395bbd808deb
+        SHA384: 4d4d34b092fe3ed154a156e89c561e8a57082e207ff3d89025574e6fb05922465d3347141710b408259c73e7a0e889ca
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -501,6 +515,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 112169417a1c3ef46a301f99385f50680fa0
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -511,7 +526,7 @@ KnownVulnerableSamples:
     SHA256: 184cc3969b79f1856614bed64c1d5562d3363e13a92176f2e9a9235a4aa7d051
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-05-17 13:33:16'
+  CreationTimestamp: '2013-05-17 15:33:16'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -585,13 +600,13 @@ KnownVulnerableSamples:
       Entropy: 4.076714176904094
       Virtual Size: '0x940'
     .data:
-      Entropy: 1.4269125817182893
+      Entropy: 1.4269125817182886
       Virtual Size: '0x2b8'
     .pdata:
-      Entropy: 3.9170697014365152
+      Entropy: 3.917069701436515
       Virtual Size: '0x1f8'
     PAGE:
-      Entropy: 6.079756252073022
+      Entropy: 6.079756252073023
       Virtual Size: '0x28b'
     INIT:
       Entropy: 5.100311543493838
@@ -616,6 +631,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -628,6 +644,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -640,6 +657,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=FR, CN=Benjamin Delpy
       ValidFrom: '2011-06-28 09:46:16'
       ValidTo: '2014-06-28 09:46:16'
@@ -652,6 +670,7 @@ KnownVulnerableSamples:
         MD5: ee0a53dda8301d1e78bd5487f1d49bf4
         SHA1: 5538f8cd492c2ec8d581f3665d2b4217c86fa19a
         SHA256: a39725e610e1a556e7bdfad56f59d24a5278073378a5d9880e14395bbd808deb
+        SHA384: 4d4d34b092fe3ed154a156e89c561e8a57082e207ff3d89025574e6fb05922465d3347141710b408259c73e7a0e889ca
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -664,6 +683,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 112169417a1c3ef46a301f99385f50680fa0
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -674,7 +694,7 @@ KnownVulnerableSamples:
     SHA256: caa87fc917ab2ccf9bf2ad715173d74e031626c6bd3c80dca01f27933fec7242
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-01-14 22:20:03'
+  CreationTimestamp: '2013-01-15 00:20:03'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -748,13 +768,13 @@ KnownVulnerableSamples:
       Entropy: 4.051333761804722
       Virtual Size: '0x940'
     .data:
-      Entropy: 1.4269125817182893
+      Entropy: 1.4269125817182886
       Virtual Size: '0x2b8'
     .pdata:
-      Entropy: 3.9170697014365152
+      Entropy: 3.917069701436515
       Virtual Size: '0x1f8'
     PAGE:
-      Entropy: 6.079756252073022
+      Entropy: 6.079756252073023
       Virtual Size: '0x28b'
     INIT:
       Entropy: 5.100311543493838
@@ -779,6 +799,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -791,6 +812,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -803,6 +825,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=FR, CN=Benjamin Delpy
       ValidFrom: '2011-06-28 09:46:16'
       ValidTo: '2014-06-28 09:46:16'
@@ -815,6 +838,7 @@ KnownVulnerableSamples:
         MD5: ee0a53dda8301d1e78bd5487f1d49bf4
         SHA1: 5538f8cd492c2ec8d581f3665d2b4217c86fa19a
         SHA256: a39725e610e1a556e7bdfad56f59d24a5278073378a5d9880e14395bbd808deb
+        SHA384: 4d4d34b092fe3ed154a156e89c561e8a57082e207ff3d89025574e6fb05922465d3347141710b408259c73e7a0e889ca
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -827,6 +851,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 112169417a1c3ef46a301f99385f50680fa0
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -837,7 +862,7 @@ KnownVulnerableSamples:
     SHA256: 19bfc95d74b27684e420b985589105d51772100383e7c3790a34ae311fee03d8
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-08-17 16:23:49'
+  CreationTimestamp: '2013-08-17 18:23:49'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -914,7 +939,7 @@ KnownVulnerableSamples:
       Entropy: 3.474661239920984
       Virtual Size: '0x684'
     .data:
-      Entropy: 3.11924592348315
+      Entropy: 3.1192459234831507
       Virtual Size: '0xe8'
     PAGE:
       Entropy: 5.786287892614831
@@ -923,7 +948,7 @@ KnownVulnerableSamples:
       Entropy: 5.266174691926025
       Virtual Size: '0x53e'
     .reloc:
-      Entropy: 5.67439270665009
+      Entropy: 5.674392706650088
       Virtual Size: '0x30e'
   Signature: ''
   Signatures:
@@ -942,6 +967,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -954,6 +980,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -966,6 +993,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=FR, CN=Benjamin Delpy
       ValidFrom: '2011-06-28 09:46:16'
       ValidTo: '2014-06-28 09:46:16'
@@ -978,6 +1006,7 @@ KnownVulnerableSamples:
         MD5: ee0a53dda8301d1e78bd5487f1d49bf4
         SHA1: 5538f8cd492c2ec8d581f3665d2b4217c86fa19a
         SHA256: a39725e610e1a556e7bdfad56f59d24a5278073378a5d9880e14395bbd808deb
+        SHA384: 4d4d34b092fe3ed154a156e89c561e8a57082e207ff3d89025574e6fb05922465d3347141710b408259c73e7a0e889ca
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -990,6 +1019,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 112169417a1c3ef46a301f99385f50680fa0
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -1000,7 +1030,7 @@ KnownVulnerableSamples:
     SHA256: 8210a89ba143d927384d7b2e6b3714d6ae9a9a384796ec6e306df38ca91e9c4e
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-09-08 07:18:08'
+  CreationTimestamp: '2012-09-08 09:18:08'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1077,7 +1107,7 @@ KnownVulnerableSamples:
       Entropy: 3.4515246314550203
       Virtual Size: '0x684'
     .data:
-      Entropy: 3.11924592348315
+      Entropy: 3.1192459234831507
       Virtual Size: '0xe8'
     PAGE:
       Entropy: 5.786287892614831
@@ -1086,7 +1116,7 @@ KnownVulnerableSamples:
       Entropy: 5.266174691926025
       Virtual Size: '0x53e'
     .reloc:
-      Entropy: 5.67439270665009
+      Entropy: 5.674392706650088
       Virtual Size: '0x30e'
   Signature: ''
   Signatures:
@@ -1105,6 +1135,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -1117,6 +1148,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -1129,6 +1161,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=FR, CN=Benjamin Delpy
       ValidFrom: '2011-06-28 09:46:16'
       ValidTo: '2014-06-28 09:46:16'
@@ -1141,6 +1174,7 @@ KnownVulnerableSamples:
         MD5: ee0a53dda8301d1e78bd5487f1d49bf4
         SHA1: 5538f8cd492c2ec8d581f3665d2b4217c86fa19a
         SHA256: a39725e610e1a556e7bdfad56f59d24a5278073378a5d9880e14395bbd808deb
+        SHA384: 4d4d34b092fe3ed154a156e89c561e8a57082e207ff3d89025574e6fb05922465d3347141710b408259c73e7a0e889ca
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1153,6 +1187,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 112169417a1c3ef46a301f99385f50680fa0
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -1163,7 +1198,7 @@ KnownVulnerableSamples:
     SHA256: ed8d68c07947c01ca03d886e6ca795a3f8b2f079e8292f019bba3b97b41eef54
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-09-05 20:02:26'
+  CreationTimestamp: '2012-09-05 22:02:26'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1237,10 +1272,10 @@ KnownVulnerableSamples:
       Entropy: 6.203004686966463
       Virtual Size: '0x289e'
     .rdata:
-      Entropy: 3.4527878322014005
+      Entropy: 3.452787832201401
       Virtual Size: '0x684'
     .data:
-      Entropy: 3.11924592348315
+      Entropy: 3.1192459234831507
       Virtual Size: '0xe8'
     PAGE:
       Entropy: 5.786287892614831
@@ -1249,7 +1284,7 @@ KnownVulnerableSamples:
       Entropy: 5.266174691926025
       Virtual Size: '0x53e'
     .reloc:
-      Entropy: 5.67439270665009
+      Entropy: 5.674392706650088
       Virtual Size: '0x30e'
   Signature: ''
   Signatures:
@@ -1268,6 +1303,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -1280,6 +1316,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -1292,6 +1329,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=FR, CN=Benjamin Delpy
       ValidFrom: '2011-06-28 09:46:16'
       ValidTo: '2014-06-28 09:46:16'
@@ -1304,6 +1342,7 @@ KnownVulnerableSamples:
         MD5: ee0a53dda8301d1e78bd5487f1d49bf4
         SHA1: 5538f8cd492c2ec8d581f3665d2b4217c86fa19a
         SHA256: a39725e610e1a556e7bdfad56f59d24a5278073378a5d9880e14395bbd808deb
+        SHA384: 4d4d34b092fe3ed154a156e89c561e8a57082e207ff3d89025574e6fb05922465d3347141710b408259c73e7a0e889ca
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1316,6 +1355,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 112169417a1c3ef46a301f99385f50680fa0
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -1326,7 +1366,7 @@ KnownVulnerableSamples:
     SHA256: bd9386206a5dfdf63bf642e2917fae6d5e8a1e52874cb2cfbabf79e47b9fed74
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-08-13 17:31:25'
+  CreationTimestamp: '2012-08-13 19:31:25'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1403,7 +1443,7 @@ KnownVulnerableSamples:
       Entropy: 3.4522369758432485
       Virtual Size: '0x684'
     .data:
-      Entropy: 3.11924592348315
+      Entropy: 3.1192459234831507
       Virtual Size: '0xe8'
     PAGE:
       Entropy: 5.786287892614831
@@ -1412,7 +1452,7 @@ KnownVulnerableSamples:
       Entropy: 5.266174691926025
       Virtual Size: '0x53e'
     .reloc:
-      Entropy: 5.67439270665009
+      Entropy: 5.674392706650088
       Virtual Size: '0x30e'
   Signature: ''
   Signatures:
@@ -1431,6 +1471,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -1443,6 +1484,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -1455,6 +1497,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=FR, CN=Benjamin Delpy
       ValidFrom: '2011-06-28 09:46:16'
       ValidTo: '2014-06-28 09:46:16'
@@ -1467,6 +1510,7 @@ KnownVulnerableSamples:
         MD5: ee0a53dda8301d1e78bd5487f1d49bf4
         SHA1: 5538f8cd492c2ec8d581f3665d2b4217c86fa19a
         SHA256: a39725e610e1a556e7bdfad56f59d24a5278073378a5d9880e14395bbd808deb
+        SHA384: 4d4d34b092fe3ed154a156e89c561e8a57082e207ff3d89025574e6fb05922465d3347141710b408259c73e7a0e889ca
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1479,6 +1523,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 112169417a1c3ef46a301f99385f50680fa0
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -1489,7 +1534,7 @@ KnownVulnerableSamples:
     SHA256: 51141c22e37d651703dd57cfda018ff06a0175a78e7c72f8ad733a281721716a
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-02-08 17:51:00'
+  CreationTimestamp: '2012-02-08 19:51:00'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1556,7 +1601,7 @@ KnownVulnerableSamples:
   SHA256: 36f45a42ebf2de6962db92aaf8845d7f9fd6895bedc31422adcf31c59a79602d
   Sections:
     .text:
-      Entropy: 6.11082071374607
+      Entropy: 6.110820713746071
       Virtual Size: '0x31da'
     .rdata:
       Entropy: 4.065232172363281
@@ -1593,6 +1638,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -1605,6 +1651,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -1617,6 +1664,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=FR, CN=Benjamin Delpy
       ValidFrom: '2011-06-28 09:46:16'
       ValidTo: '2014-06-28 09:46:16'
@@ -1629,6 +1677,7 @@ KnownVulnerableSamples:
         MD5: ee0a53dda8301d1e78bd5487f1d49bf4
         SHA1: 5538f8cd492c2ec8d581f3665d2b4217c86fa19a
         SHA256: a39725e610e1a556e7bdfad56f59d24a5278073378a5d9880e14395bbd808deb
+        SHA384: 4d4d34b092fe3ed154a156e89c561e8a57082e207ff3d89025574e6fb05922465d3347141710b408259c73e7a0e889ca
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1641,6 +1690,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 112169417a1c3ef46a301f99385f50680fa0
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -1651,7 +1701,7 @@ KnownVulnerableSamples:
     SHA256: 36487117894ca7b93f704e26f22725827f6f04ec3b8c45eaa0d283a11de9a9c3
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-09-05 20:02:32'
+  CreationTimestamp: '2012-09-05 22:02:32'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1725,13 +1775,13 @@ KnownVulnerableSamples:
       Entropy: 4.052824356346606
       Virtual Size: '0x940'
     .data:
-      Entropy: 1.4269125817182893
+      Entropy: 1.4269125817182886
       Virtual Size: '0x2b8'
     .pdata:
-      Entropy: 3.9170697014365152
+      Entropy: 3.917069701436515
       Virtual Size: '0x1f8'
     PAGE:
-      Entropy: 6.079756252073022
+      Entropy: 6.079756252073023
       Virtual Size: '0x28b'
     INIT:
       Entropy: 5.100311543493838
@@ -1756,6 +1806,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -1768,6 +1819,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -1780,6 +1832,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=FR, CN=Benjamin Delpy
       ValidFrom: '2011-06-28 09:46:16'
       ValidTo: '2014-06-28 09:46:16'
@@ -1792,6 +1845,7 @@ KnownVulnerableSamples:
         MD5: ee0a53dda8301d1e78bd5487f1d49bf4
         SHA1: 5538f8cd492c2ec8d581f3665d2b4217c86fa19a
         SHA256: a39725e610e1a556e7bdfad56f59d24a5278073378a5d9880e14395bbd808deb
+        SHA384: 4d4d34b092fe3ed154a156e89c561e8a57082e207ff3d89025574e6fb05922465d3347141710b408259c73e7a0e889ca
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1804,6 +1858,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 112169417a1c3ef46a301f99385f50680fa0
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -1814,7 +1869,7 @@ KnownVulnerableSamples:
     SHA256: be25688313f29d7e62c996572825c33f3dcdda373ec235efe552aeb2219990bb
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-08-17 16:23:52'
+  CreationTimestamp: '2013-08-17 18:23:52'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1888,13 +1943,13 @@ KnownVulnerableSamples:
       Entropy: 4.063554093583363
       Virtual Size: '0x940'
     .data:
-      Entropy: 1.4269125817182893
+      Entropy: 1.4269125817182886
       Virtual Size: '0x2b8'
     .pdata:
-      Entropy: 3.9170697014365152
+      Entropy: 3.917069701436515
       Virtual Size: '0x1f8'
     PAGE:
-      Entropy: 6.079756252073022
+      Entropy: 6.079756252073023
       Virtual Size: '0x28b'
     INIT:
       Entropy: 5.100311543493838
@@ -1919,6 +1974,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -1931,6 +1987,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -1943,6 +2000,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=FR, CN=Benjamin Delpy
       ValidFrom: '2011-06-28 09:46:16'
       ValidTo: '2014-06-28 09:46:16'
@@ -1955,6 +2013,7 @@ KnownVulnerableSamples:
         MD5: ee0a53dda8301d1e78bd5487f1d49bf4
         SHA1: 5538f8cd492c2ec8d581f3665d2b4217c86fa19a
         SHA256: a39725e610e1a556e7bdfad56f59d24a5278073378a5d9880e14395bbd808deb
+        SHA384: 4d4d34b092fe3ed154a156e89c561e8a57082e207ff3d89025574e6fb05922465d3347141710b408259c73e7a0e889ca
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1967,6 +2026,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 112169417a1c3ef46a301f99385f50680fa0
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2

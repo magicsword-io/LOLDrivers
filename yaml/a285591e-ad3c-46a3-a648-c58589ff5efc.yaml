@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 60571dbcaec96d9517e0d116d066e70ae747aa4396d7857b2eea0f4c1a5a70b4
   Company: Copyright 2018.
   Copyright: Copyright 2018. All rights reserved.
-  CreationTimestamp: '2019-04-23 03:04:57'
+  CreationTimestamp: '2019-04-23 05:04:57'
   Date: ''
   Description: Advanced Malware Protection
   ExportedFunctions: ''
@@ -233,7 +233,7 @@ KnownVulnerableSamples:
       Entropy: 4.851242079025995
       Virtual Size: '0x53f88'
     .pdata:
-      Entropy: 5.286849909582269
+      Entropy: 5.28684990958227
       Virtual Size: '0xa50'
     PAGE:
       Entropy: 6.2717360142736265
@@ -245,7 +245,7 @@ KnownVulnerableSamples:
       Entropy: 3.2308389214733806
       Virtual Size: '0x348'
     .reloc:
-      Entropy: 1.4735474069876848
+      Entropy: 1.4735474069876846
       Virtual Size: '0x234'
   Signature: ''
   Signatures:
@@ -264,6 +264,7 @@ KnownVulnerableSamples:
         MD5: 51c3959a45cecf3d21a3effb05762573
         SHA1: ecfcd25fd0525448a74875ba271566bc0bfbf061
         SHA256: de1da11668f0a8d5e13346ed3ab2755f5d25bebffcfd1d0bde5b9f87bc292c91
+        SHA384: f0eab75baf1f24a53d63bd795cd07292a312f603513c8cb0f40fe5acbdb477ed72607d309fad21471a16f6223fb3a838
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Code Signing Root R45
       ValidFrom: '2020-07-28 00:00:00'
       ValidTo: '2029-03-18 00:00:00'
@@ -276,6 +277,7 @@ KnownVulnerableSamples:
         MD5: a33260428269bc902bc1cd280e4b1837
         SHA1: 254209ca172cffcc67bd2a88996556d2f09538f0
         SHA256: a67411358594f2cf016741a63fd49f36de917f86531b3e3a43eb6a421c654868
+        SHA384: fec727af43d1569995cea26e8eb97167165842a5b185304425a92c03b71254c5d51222837515f33e60cb8ed2e8c625ba
     - Subject: ??=Private Organization, serialNumber=460726, ??=US, ??=Idaho, C=US,
         ST=Idaho, L=Boise, ??=702 W Idaho Street Suite 1100, O=WATCHDOGDEVELOPMENT.COM,
         LLC, CN=WATCHDOGDEVELOPMENT.COM, LLC
@@ -290,6 +292,7 @@ KnownVulnerableSamples:
         MD5: cf8f84376abaf814f76cb8332f32d76f
         SHA1: 1103e907c83a85682befe4adba4d03b8f6c95543
         SHA256: 8de6eae4e1479f02dc58281ad5c035e629345ff74a177e559192d03bd23e0f9f
+        SHA384: 6fba402fc6da63e224d7b775f3377322607bfda2e9f00ea3a22705921ff4a9ea40b28bc032799ca30fe000df3e429793
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
       ValidFrom: '2020-07-28 00:00:00'
       ValidTo: '2030-07-28 00:00:00'
@@ -302,6 +305,7 @@ KnownVulnerableSamples:
         MD5: 65fd1dac1f115d9507f4e1840c8cb36a
         SHA1: c7cf5607e19b22fe60c055e71d9b555d70f71f66
         SHA256: d9c7db0b704f07089440c56e69a0f31d730edf77cfbf7514630e8b5390a270fe
+        SHA384: defe810317bd1215b4d1ee0ec8a5fb38b21d094ef1173cae670956cd899232638e4f9473fd947bd550a4a77300bbb2ab
     Signer:
     - SerialNumber: 1f7b0de3090ee13a436315a6
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020

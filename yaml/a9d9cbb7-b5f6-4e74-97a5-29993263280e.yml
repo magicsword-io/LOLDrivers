@@ -96,6 +96,7 @@ KnownVulnerableSamples:
         MD5: 5b81fd0f706522a8d7c9f2957283c0b4
         SHA1: 84d894599653a8ed0e0b2802db3197dc177908cc
         SHA256: 4fa629304df4287c97ae5b7e481974316e9daf776b0cdeffab1671e7dca68fb4
+        SHA384: 0b89dc122fc7ebf80881a5047ffbbcb0bec30636516aff4f43307e2a925a476cabfc26e2cc392ad748d655f6ec4c8b75
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -109,6 +110,7 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 33000000319479a318f5522d06000000000031
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -141,7 +143,7 @@ KnownVulnerableSamples:
       Entropy: 2.7588718484453603
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-09-05 21:33:31'
+  CreationTimestamp: '2019-09-05 23:33:31'
 - Filename: CorsairLLAccess64.sys
   MD5: 3b9698a9ee85f0b4edf150deef790ccd
   SHA1: fbfabf309680fbf7c0f6f14c5a0e4840c894e393
@@ -221,6 +223,7 @@ KnownVulnerableSamples:
         MD5: 5b81fd0f706522a8d7c9f2957283c0b4
         SHA1: 84d894599653a8ed0e0b2802db3197dc177908cc
         SHA256: 4fa629304df4287c97ae5b7e481974316e9daf776b0cdeffab1671e7dca68fb4
+        SHA384: 0b89dc122fc7ebf80881a5047ffbbcb0bec30636516aff4f43307e2a925a476cabfc26e2cc392ad748d655f6ec4c8b75
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -234,6 +237,7 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 33000000319479a318f5522d06000000000031
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -263,7 +267,7 @@ KnownVulnerableSamples:
       Entropy: 5.904008861740888
       Virtual Size: '0x11c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-09-05 21:33:16'
+  CreationTimestamp: '2019-09-05 23:33:16'
 - Filename: CorsairLLAccess64.sys
   MD5: 30efb7d485fc9c28fe82a97deac29626
   SHA1: 85941b94524da181be8aad290127aa18fc71895c
@@ -344,6 +348,7 @@ KnownVulnerableSamples:
         MD5: 5b81fd0f706522a8d7c9f2957283c0b4
         SHA1: 84d894599653a8ed0e0b2802db3197dc177908cc
         SHA256: 4fa629304df4287c97ae5b7e481974316e9daf776b0cdeffab1671e7dca68fb4
+        SHA384: 0b89dc122fc7ebf80881a5047ffbbcb0bec30636516aff4f43307e2a925a476cabfc26e2cc392ad748d655f6ec4c8b75
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -357,6 +362,7 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 33000000319479a318f5522d06000000000031
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -368,7 +374,7 @@ KnownVulnerableSamples:
     SHA256: 8cce9adc0a3123b98608fd0a4bd3ed9249390fbaf9962b59c431833a7d1a12dc
   Sections:
     .text:
-      Entropy: 6.333999663714496
+      Entropy: 6.333999663714495
       Virtual Size: '0xf2c'
     .rdata:
       Entropy: 4.008877803842863
@@ -386,7 +392,7 @@ KnownVulnerableSamples:
       Entropy: 5.926808995856722
       Virtual Size: '0x128'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-10-28 17:18:58'
+  CreationTimestamp: '2019-10-28 19:18:58'
 - Filename: CorsairLLAccess64.sys
   MD5: f042e8318cf20957c2339d96690c3186
   SHA1: 2871a631f36cd1ea2fd268036087d28070ef2c52
@@ -466,6 +472,7 @@ KnownVulnerableSamples:
         MD5: 5b81fd0f706522a8d7c9f2957283c0b4
         SHA1: 84d894599653a8ed0e0b2802db3197dc177908cc
         SHA256: 4fa629304df4287c97ae5b7e481974316e9daf776b0cdeffab1671e7dca68fb4
+        SHA384: 0b89dc122fc7ebf80881a5047ffbbcb0bec30636516aff4f43307e2a925a476cabfc26e2cc392ad748d655f6ec4c8b75
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -479,6 +486,7 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 33000000319479a318f5522d06000000000031
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -508,6 +516,6 @@ KnownVulnerableSamples:
       Entropy: 5.9065976115977605
       Virtual Size: '0x110'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-08-26 01:16:05'
+  CreationTimestamp: '2019-08-26 03:16:05'
 Tags:
 - CorsairLLAccess64.sys

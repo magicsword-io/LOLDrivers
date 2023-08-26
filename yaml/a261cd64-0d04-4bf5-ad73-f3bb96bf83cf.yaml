@@ -41,7 +41,7 @@ KnownVulnerableSamples:
   Company: "\u4E00\u666E\u660E\u4E3A\uFF08\u5317\u4EAC\uFF09\u4FE1\u606F\u6280\u672F\
     \u6709\u9650\u516C\u53F8"
   Copyright: (C) 2013-2016 Epoolsoft Corporation. All Rights Reserved.
-  CreationTimestamp: '2016-04-10 08:17:05'
+  CreationTimestamp: '2016-04-10 10:17:05'
   Date: ''
   Description: Epoolsoft Windows Information View Tools
   ExportedFunctions: ''
@@ -140,7 +140,7 @@ KnownVulnerableSamples:
       Entropy: 5.552306001700414
       Virtual Size: '0xcf7c'
     .data:
-      Entropy: 2.831777228998586
+      Entropy: 2.8317772289985865
       Virtual Size: '0x2eda8'
     .pdata:
       Entropy: 5.938259413904041
@@ -149,10 +149,10 @@ KnownVulnerableSamples:
       Entropy: 5.080110483782868
       Virtual Size: '0x852'
     .rsrc:
-      Entropy: 3.4546217154700916
+      Entropy: 3.454621715470091
       Virtual Size: '0x3b0'
     .pchunt0:
-      Entropy: 1.7563449969203195
+      Entropy: 1.75634499692032
       Virtual Size: '0x780'
     .pchunt1:
       Entropy: 7.978022918434585
@@ -177,6 +177,7 @@ KnownVulnerableSamples:
         MD5: 22abfcdb0a677a41a0e98019f629e785
         SHA1: 3c68a9e0ba9434a54c9b731fed228bb0f662f6c5
         SHA256: 5142ab5696ee82d72ca8fc8f622adffcdb73bf2e6d6a8531d5f86ce4f823ac23
+        SHA384: 94fb388bf7369e43f7824012505050758ff9c7fff41df4d869ed3d6780c7a8875b291ca9c1b89fb68fb7b51d2febae42
     - Subject: C=CN, O=WoSign CA Limited, CN=WoSign Time Stamping Signer
       ValidFrom: '2009-08-08 01:00:05'
       ValidTo: '2024-08-08 01:00:05'
@@ -189,6 +190,7 @@ KnownVulnerableSamples:
         MD5: 626797c449e52df71f4d81ad5be6d993
         SHA1: 58672dea8f4352d39f2021436acf155a2dcbb224
         SHA256: 21ee871c9b6d0fdb62f442f75f9f446f5cfece9c8ed5624f5691bfd704fa90e5
+        SHA384: 4568d42f64a1f6e61ed808fa82c4cfd12a63908ac2e5fa3cf2b413ea835250c245bfd38f781f91ccca94082edce253df
     - Subject: C=CN, O=WoSign CA Limited, CN=WoSign Class 3 Code Signing CA
       ValidFrom: '2009-08-08 01:00:05'
       ValidTo: '2024-08-08 01:00:05'
@@ -201,6 +203,7 @@ KnownVulnerableSamples:
         MD5: 1a335fef744b698e4bde0dbe71df85ba
         SHA1: 567c76a1da9fd89c9f8bc09fe4f1e8109b8794cd
         SHA256: 86eaa893035f20d7480aba99d60c96cbe5aebb5490adef7b2d18f0da65efc238
+        SHA384: d752946329772337992b5ebd1193b60da7fee9c80d767c42c6833bbaeda23e41b4b0f156de8749f654e1a3a590a471e8
     - Subject: C=CN, O=WoSign CA Limited, CN=Certification Authority of WoSign
       ValidFrom: '2015-04-29 17:12:11'
       ValidTo: '2025-04-29 17:12:11'
@@ -213,6 +216,7 @@ KnownVulnerableSamples:
         MD5: ac25a5b7bc19804fd0911884d862f25c
         SHA1: d474e0b87ecde20a8aeaa4fa25431a620cbd4b63
         SHA256: 1fcf929a758d423c1466d3504642ec681de44f4d3b57dcca98c637f3a46d6f12
+        SHA384: 2e0a3138431b93f42f82b9ae193de6fd9f3b9abe286c3d65e442a8aa2f67a8d27027a8622859a05f3749c2cfc7f8c6be
     - Subject: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom
         Certification Authority
       ValidFrom: '2011-04-15 20:13:19'
@@ -226,6 +230,7 @@ KnownVulnerableSamples:
         MD5: 5b3304180221a8328ce477b1fd93898f
         SHA1: 9b7f1e1653a52d801387f1e51d17fabb8d435d0c
         SHA256: 67070bcf2ee304cedd252a1dd8a7222c1be50fd2d5eabef9446cb633e133d264
+        SHA384: be36b1ba9a006afb9eb53263634cb8ca38dd6ca7f95ec56f943324f3a26f9c34c2dff1a3a5c72c88513e23e1f20c8824
     - Subject: C=CN, O=WoSign CA Limited, CN=Certification Authority of WoSign
       ValidFrom: '2006-09-17 22:46:36'
       ValidTo: '2019-12-31 23:59:59'
@@ -238,6 +243,7 @@ KnownVulnerableSamples:
         MD5: dd50ed7562bd4ce20df7b5c24d9f1446
         SHA1: 188ce565932b1320e89f1c94e1b21eb49f714a6b
         SHA256: e9c8df2dbd3edd63c701a9a6b71cf740eb8d54526dba56970712888237086691
+        SHA384: 3c0a92298ab549c53c98518786164baadde65fa06a197de4784bf34053752ce84ba6b943ae4dcc9944bb334c9e346c91
     - Subject: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom
         Certification Authority
       ValidFrom: '2006-09-17 19:46:36'
@@ -251,6 +257,7 @@ KnownVulnerableSamples:
         MD5: 8df2b22eaf3cd2c53b65a50b1e9bb8aa
         SHA1: 84e608dd4cc47c78e2de0f831405996c467fc35d
         SHA256: e6f79754976245b19b33d66ba2fb76381e96c2fe296354e73d19ef9d177a5025
+        SHA384: a8ae434f73a057427e39a002e0fbfbdb402381e82cff6c472c836c6040af688e2afa61e13785b5c533dfff728e1cd9f3
     Signer:
     - SerialNumber: 5c5d0a336ba298b9695d2cfa5a181510
       Issuer: C=CN, O=WoSign CA Limited, CN=WoSign Class 3 Code Signing CA

@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: c767a5895119154467ac3fce8e82c20e6538a4e54f6c109001c61f8abd58f9f8
   Company: ASRock Incorporation
   Copyright: Copyright (C) 2012 ASRock Incorporation
-  CreationTimestamp: '2012-07-23 08:59:20'
+  CreationTimestamp: '2012-07-23 10:59:20'
   Date: ''
   Description: ASRock IO Driver
   ExportedFunctions: ''
@@ -94,13 +94,13 @@ KnownVulnerableSamples:
       Entropy: 4.613366571949234
       Virtual Size: '0x254'
     .data:
-      Entropy: 0.46979092711892695
+      Entropy: 0.4697909271189269
       Virtual Size: '0x130'
     .pdata:
       Entropy: 3.6856873474703487
       Virtual Size: '0xf0'
     INIT:
-      Entropy: 5.418481788878183
+      Entropy: 5.418481788878181
       Virtual Size: '0x4d8'
     .rsrc:
       Entropy: 3.287296316763299
@@ -126,6 +126,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -138,6 +139,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -152,6 +154,7 @@ KnownVulnerableSamples:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
         SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -164,6 +167,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=TAIWAN, L=Taipei, O=ASROCK Incorporation, OU=Digital ID Class
         3 , Microsoft Software Validation v2, CN=ASROCK Incorporation
       ValidFrom: '2011-03-07 00:00:00'
@@ -177,6 +181,7 @@ KnownVulnerableSamples:
         MD5: 544af7037e76dccfe47a9dffd9b847fd
         SHA1: ea7dceadac1b76a4a0ed5624632072f8aa6ce02c
         SHA256: 87f5b27417a56e4175d0e0acb7a831961963fad217e5d82fbf699287e8fdab25
+        SHA384: 2b6eb82e226dcec715cc7c98e2bf9a9a0dcb3f4e471827fe95d9dbd452ce459c6ae9525771c673800fa84b679b14db89
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -191,6 +196,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 45dfec7bb3d378c97feb24efd699bb4e
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at

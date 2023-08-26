@@ -44,7 +44,7 @@ KnownVulnerableSamples:
     SHA256: ca829178d01990c8d1d6a681dee074a53f0dd873fd8eef6f6161c682449ec8c5
   Company: Arthur Liberman
   Copyright: Copyright (C) 2003-2009 Arthur Liberman
-  CreationTimestamp: '2013-03-05 14:50:34'
+  CreationTimestamp: '2013-03-05 16:50:34'
   Date: ''
   Description: ALSysIO
   ExportedFunctions: ''
@@ -134,6 +134,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -146,6 +147,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -158,6 +160,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=IL, CN=Artur Liberman
       ValidFrom: '2013-03-05 15:18:55'
       ValidTo: '2016-03-05 15:18:55'
@@ -170,6 +173,7 @@ KnownVulnerableSamples:
         MD5: 56627e70a0b871843f4c3244885a29b2
         SHA1: 7425308f88b4b3d59f4f15c5b9399ee445142f85
         SHA256: 8e1fcd00db7895ff671e93e4e92a98d902ee2afa2c46e0548b3c1bca605b54f0
+        SHA384: 1f0906f566cd9e09ccfa4b5cd6a10ce17755725f49764cd2ca7437a5bd26b7ef970136fb87880814554c3fd4e640aae9
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -182,6 +186,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     Signer:
     - SerialNumber: 112124a45abbf7c551deb213b28633c3dcad
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -192,7 +197,7 @@ KnownVulnerableSamples:
     SHA256: ac22a7cce3795e58c974056a86a06444e831d52185f9f37db88c65e14cd5bb75
   Company: Arthur Liberman
   Copyright: Copyright (C) 2003-2009 Arthur Liberman
-  CreationTimestamp: '2016-02-19 15:24:23'
+  CreationTimestamp: '2016-02-19 17:24:23'
   Date: ''
   Description: ALSysIO
   ExportedFunctions: ''
@@ -245,7 +250,7 @@ KnownVulnerableSamples:
   SHA256: 7f375639a0df7fe51e5518cf87c3f513c55bc117db47d28da8c615642eb18bfa
   Sections:
     .text:
-      Entropy: 6.118126498568242
+      Entropy: 6.118126498568241
       Virtual Size: '0x2f95'
     .rdata:
       Entropy: 4.334329395963305
@@ -254,13 +259,13 @@ KnownVulnerableSamples:
       Entropy: 0.5401996588023142
       Virtual Size: '0x19c'
     .pdata:
-      Entropy: 4.014945953829912
+      Entropy: 4.014945953829911
       Virtual Size: '0x1d4'
     INIT:
       Entropy: 5.0865478764498455
       Virtual Size: '0x3f0'
     .rsrc:
-      Entropy: 3.2944352172701143
+      Entropy: 3.294435217270114
       Virtual Size: '0x388'
   Signature:
   - Artur Liberman
@@ -282,6 +287,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -294,6 +300,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=IL, CN=Artur Liberman
       ValidFrom: '2013-03-05 15:18:55'
       ValidTo: '2016-03-05 15:18:55'
@@ -306,6 +313,7 @@ KnownVulnerableSamples:
         MD5: 56627e70a0b871843f4c3244885a29b2
         SHA1: 7425308f88b4b3d59f4f15c5b9399ee445142f85
         SHA256: 8e1fcd00db7895ff671e93e4e92a98d902ee2afa2c46e0548b3c1bca605b54f0
+        SHA384: 1f0906f566cd9e09ccfa4b5cd6a10ce17755725f49764cd2ca7437a5bd26b7ef970136fb87880814554c3fd4e640aae9
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G2
       ValidFrom: '2015-02-03 00:00:00'
@@ -319,6 +327,7 @@ KnownVulnerableSamples:
         MD5: a0ac4d48fe852f7b3ed4e623d59a825f
         SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
         SHA256: 78d2e41a13eb4e9171bae2d2adb192cf39210b5231f77cda936bcfbe8c003bdf
+        SHA384: 990ed96dca5979deeedc98a012279f04efb5559d7e7f5084a12f3802ee9439326557aecefd081cff739b78515b5d7f50
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -331,6 +340,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     Signer:
     - SerialNumber: 112124a45abbf7c551deb213b28633c3dcad
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
@@ -341,7 +351,7 @@ KnownVulnerableSamples:
     SHA256: 1c55b6620216c195ce24ef21e6ab7e181146fccf17c06606c4cd419fe3e45bd7
   Company: Arthur Liberman
   Copyright: Copyright (C) 2003-2019 Arthur Liberman
-  CreationTimestamp: '2019-02-01 10:48:41'
+  CreationTimestamp: '2019-02-01 12:48:41'
   Date: ''
   Description: ALSysIO64
   ExportedFunctions: ''
@@ -399,7 +409,7 @@ KnownVulnerableSamples:
   SHA256: 119c48b79735fda0ecd973d77d9bdc6b329960caed09b38ab454236ca039d280
   Sections:
     .text:
-      Entropy: 6.094646886255092
+      Entropy: 6.094646886255093
       Virtual Size: '0x3025'
     .rdata:
       Entropy: 4.4005847545275065
@@ -414,7 +424,7 @@ KnownVulnerableSamples:
       Entropy: 5.694732552989121
       Virtual Size: '0x178'
     INIT:
-      Entropy: 5.16258604036066
+      Entropy: 5.162586040360661
       Virtual Size: '0x49c'
     .rsrc:
       Entropy: 3.3268549437522807
@@ -440,6 +450,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=IL, ??=Business Entity, serialNumber=307609677, C=IL, L=Ramat Gan,
         O=ALCPU (Arthur Liberman), CN=ALCPU (Arthur Liberman)
       ValidFrom: '2017-06-23 00:00:00'
@@ -453,6 +464,7 @@ KnownVulnerableSamples:
         MD5: c93e319e441fcfedcf9f02f39d65a2fa
         SHA1: c74ae2671c17ebd0cf2f0177e687f747b1f05de8
         SHA256: 8eafc0fd89cba2f9ae664cb54e0b4e6d95d4802b63935cf570faec91e1081438
+        SHA384: 1d3b4464030e4d3e948d351965a7c7859456c7d042720fb53991a07d1da135ac0c711b1922c72b2f6d81b8c8f4f8c7a3
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -465,6 +477,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -478,6 +491,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -490,6 +504,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0fd092438045aa3e667a4952fd8e429a
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing

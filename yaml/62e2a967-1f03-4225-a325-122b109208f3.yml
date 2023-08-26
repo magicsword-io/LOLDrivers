@@ -99,6 +99,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -111,6 +112,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -125,6 +127,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=AU, ST=NSW, O=PassMark Software Pty Ltd, OU=Digital ID Class 3 ,
         Microsoft Software Validation v2, CN=PassMark Software Pty Ltd
       ValidFrom: '2007-10-16 00:00:00'
@@ -138,6 +141,7 @@ KnownVulnerableSamples:
         MD5: 6d1e29bfc506a25c8c94f3187928f78a
         SHA1: 8148e95f805e70a0099df66b0af3014ccd3e9c54
         SHA256: a8ebde025316b08aee32311f8e9d2951724cfa0bfc3758ccdfc350e67d472ea8
+        SHA384: 70a1e68b764d966da3179c64ddd8492bbb9ba2290ec0e38013345427a9aa734630ad9a10403da776a0bf028343796c42
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -150,6 +154,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 6204d256fa7f1bbb6b94137201342edb
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -165,10 +170,10 @@ KnownVulnerableSamples:
       Entropy: 5.621982105180218
       Virtual Size: '0x179a'
     .rdata:
-      Entropy: 4.305717440945202
+      Entropy: 4.305717440945199
       Virtual Size: '0x114'
     .data:
-      Entropy: 3.8219280948873617
+      Entropy: 3.821928094887362
       Virtual Size: '0x14'
     INIT:
       Entropy: 5.431417999610977
@@ -177,7 +182,7 @@ KnownVulnerableSamples:
       Entropy: 4.913420364027462
       Virtual Size: '0x16c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-09-29 00:09:53'
+  CreationTimestamp: '2009-09-29 02:09:53'
 - Filename: DirectIo.sys
   MD5: 590875a0b2eeb171403fc7d0f5110cb2
   SHA1: 4f94789cffb23c301f93d6913b594748684abf6a
@@ -255,6 +260,7 @@ KnownVulnerableSamples:
         MD5: 6c239df74ade9185bb735cea2298c028
         SHA1: f6297a00d3b2b4ce4750402b66e7ea018d54f683
         SHA256: c5e3eebf1434d85e615b06e3c7a4d3c31d10a4fb0ff7a9b262bd41b43a6aaefe
+        SHA384: 48520b9f122b94ccc316982c87d8ebf6ca4fc4e6fd4504c8fcee63b307b5502c403bf0676ef96ca9dc2004a11bbc825b
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -267,6 +273,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=AU, ST=NSW, L=Sydney, O=PassMark Software Pty Ltd, OU=Secure Application
         Development, CN=PassMark Software Pty Ltd
       ValidFrom: '2005-10-20 07:03:10'
@@ -280,6 +287,7 @@ KnownVulnerableSamples:
         MD5: 391972f40ad0e59490bd1803af723015
         SHA1: e66f420395c523174f01f8952b6f4915c32bc1f1
         SHA256: 5df9a71e9b686740112195dd58c94639fd0bcce56227b37dc36b6a7e26a61130
+        SHA384: 23c676950785a7ad29464e024f6adb73d241c28bbaa207074c5ed8f6f2264d9e8b91e7f98c2b749f9fb999f1c2692029
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2008-12-03 23:59:59'
@@ -292,6 +300,7 @@ KnownVulnerableSamples:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
         SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
     Signer:
     - SerialNumber: '401630'
       Issuer: C=ZA, O=Thawte Consulting (Pty) Ltd., CN=Thawte Code Signing CA
@@ -305,10 +314,10 @@ KnownVulnerableSamples:
       Entropy: 5.489870201579556
       Virtual Size: '0x1594'
     .rdata:
-      Entropy: 4.312098470238592
+      Entropy: 4.31209847023859
       Virtual Size: '0x114'
     .data:
-      Entropy: 2.8453509366224368
+      Entropy: 2.8453509366224363
       Virtual Size: '0xb'
     INIT:
       Entropy: 5.307601538228162
@@ -317,7 +326,7 @@ KnownVulnerableSamples:
       Entropy: 4.914864452783341
       Virtual Size: '0x134'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2003-08-13 22:34:23'
+  CreationTimestamp: '2003-08-14 00:34:23'
 - Filename: DirectIo.sys
   MD5: 392d7180653b0ca77a78bdf15953d865
   SHA1: 3e917f0986802d47c0ffe4d6f5944998987c4160
@@ -410,6 +419,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -422,6 +432,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=AU, ST=NSW, O=PassMark Software Pty Ltd, OU=Digital ID Class 3 ,
         Microsoft Software Validation v2, CN=PassMark Software Pty Ltd
       ValidFrom: '2009-09-22 00:00:00'
@@ -435,6 +446,7 @@ KnownVulnerableSamples:
         MD5: 159feaed9447c7d71653069c337ec2b3
         SHA1: 5079a8aa946ee016c86153d4456f58277360c036
         SHA256: e76ee5754b8da5b514befb3a89eed638de08605326a1e611ddbed9e864551abf
+        SHA384: 9830194c19654f1196e74505a987588c36aa700489f3f482f1ad017bba6e39ebf9be18ab153da8cd9f8a672801820a87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -449,6 +461,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -461,6 +474,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 38e7fa0db1a398f805bb85a69171dc9d
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -488,7 +502,7 @@ KnownVulnerableSamples:
       Entropy: 5.373707929571261
       Virtual Size: '0x240'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-12-20 17:07:39'
+  CreationTimestamp: '2011-12-20 19:07:39'
 - Filename: DirectIo.sys
   MD5: e3fda6120dfa016a76d975fdab7954f6
   SHA1: e2e7a2b2550b889235aafd9ffd1966ccd20badfe
@@ -558,6 +572,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2008-12-03 23:59:59'
@@ -570,6 +585,7 @@ KnownVulnerableSamples:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
         SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -584,6 +600,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=AU, ST=NSW, O=PassMark Software Pty Ltd, OU=Digital ID Class 3 ,
         Microsoft Software Validation v2, CN=PassMark Software Pty Ltd
       ValidFrom: '2006-10-19 00:00:00'
@@ -597,6 +614,7 @@ KnownVulnerableSamples:
         MD5: a333a5d8e036bd92dcf209381fc331d5
         SHA1: e5cd8df5f677bc92b27eed5ed408a6db2a1f0153
         SHA256: b870910241ae9b44b91890b43fd7105b0af45bf7509b25d3f907a651ac21733d
+        SHA384: a3145574b39a4c5e13e48125dcab20eb80d4ade33f0dca8c3eb9782e741352d54064dfdff6e376973d7a6a94b57632a7
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -609,6 +627,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 6365cef4a64e1054779b87cb364f5ba7
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -627,7 +646,7 @@ KnownVulnerableSamples:
       Entropy: 4.174482219291641
       Virtual Size: '0x350'
     .data:
-      Entropy: 0.8149399521927442
+      Entropy: 0.8149399521927443
       Virtual Size: '0x120'
     .pdata:
       Entropy: 3.8028644197826855
@@ -636,7 +655,7 @@ KnownVulnerableSamples:
       Entropy: 4.96025225558874
       Virtual Size: '0x462'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2004-09-27 02:11:28'
+  CreationTimestamp: '2004-09-27 04:11:28'
 - Filename: DirectIo.sys
   MD5: a17c403c4b74d4fa920c3887066daeb2
   SHA1: 30c6e1da8745c3d53df696af407ef095a8398273
@@ -718,6 +737,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -730,6 +750,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -744,6 +765,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=AU, ST=NSW, O=PassMark Software Pty Ltd, OU=Digital ID Class 3 ,
         Microsoft Software Validation v2, CN=PassMark Software Pty Ltd
       ValidFrom: '2007-10-16 00:00:00'
@@ -757,6 +779,7 @@ KnownVulnerableSamples:
         MD5: 6d1e29bfc506a25c8c94f3187928f78a
         SHA1: 8148e95f805e70a0099df66b0af3014ccd3e9c54
         SHA256: a8ebde025316b08aee32311f8e9d2951724cfa0bfc3758ccdfc350e67d472ea8
+        SHA384: 70a1e68b764d966da3179c64ddd8492bbb9ba2290ec0e38013345427a9aa734630ad9a10403da776a0bf028343796c42
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -769,6 +792,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 6204d256fa7f1bbb6b94137201342edb
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -784,10 +808,10 @@ KnownVulnerableSamples:
       Entropy: 5.605951337306646
       Virtual Size: '0x16e8'
     .rdata:
-      Entropy: 4.355262991817329
+      Entropy: 4.355262991817328
       Virtual Size: '0x114'
     .data:
-      Entropy: 3.8219280948873617
+      Entropy: 3.821928094887362
       Virtual Size: '0x14'
     INIT:
       Entropy: 5.4991652276764285
@@ -796,7 +820,7 @@ KnownVulnerableSamples:
       Entropy: 5.080423885108474
       Virtual Size: '0x158'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-03-09 18:42:32'
+  CreationTimestamp: '2008-03-09 20:42:32'
 - Filename: DirectIo.sys
   MD5: 7056549baa6da18910151b08121e2c94
   SHA1: 84d44e166072bccf1f8e1e9eb51880ffa065a274
@@ -874,6 +898,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2008-12-03 23:59:59'
@@ -886,6 +911,7 @@ KnownVulnerableSamples:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
         SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -900,6 +926,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=AU, ST=NSW, O=PassMark Software Pty Ltd, OU=Digital ID Class 3 ,
         Microsoft Software Validation v2, CN=PassMark Software Pty Ltd
       ValidFrom: '2006-10-19 00:00:00'
@@ -913,6 +940,7 @@ KnownVulnerableSamples:
         MD5: a333a5d8e036bd92dcf209381fc331d5
         SHA1: e5cd8df5f677bc92b27eed5ed408a6db2a1f0153
         SHA256: b870910241ae9b44b91890b43fd7105b0af45bf7509b25d3f907a651ac21733d
+        SHA384: a3145574b39a4c5e13e48125dcab20eb80d4ade33f0dca8c3eb9782e741352d54064dfdff6e376973d7a6a94b57632a7
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -925,6 +953,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 6365cef4a64e1054779b87cb364f5ba7
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -940,10 +969,10 @@ KnownVulnerableSamples:
       Entropy: 5.489870201579556
       Virtual Size: '0x1594'
     .rdata:
-      Entropy: 4.312098470238592
+      Entropy: 4.31209847023859
       Virtual Size: '0x114'
     .data:
-      Entropy: 2.8453509366224368
+      Entropy: 2.8453509366224363
       Virtual Size: '0xb'
     INIT:
       Entropy: 5.307601538228162
@@ -952,6 +981,6 @@ KnownVulnerableSamples:
       Entropy: 4.914864452783341
       Virtual Size: '0x134'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2003-08-13 22:34:23'
+  CreationTimestamp: '2003-08-14 00:34:23'
 Tags:
 - DirectIo.sys

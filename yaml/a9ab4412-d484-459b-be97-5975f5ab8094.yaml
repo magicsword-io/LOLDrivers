@@ -5,8 +5,8 @@ MitreID: T1014
 Category: malicious
 Verified: 'TRUE'
 Commands:
-  Command: sc.exe create be6318413160e589080df02bb3ca6e6a.sys binPath=C:\windows\temp\be6318413160e589080df02bb3ca6e6a.sys type=kernel
-    && sc.exe start be6318413160e589080df02bb3ca6e6a.sys
+  Command: sc.exe create be6318413160e589080df02bb3ca6e6a.sys binPath=C:\windows\temp\be6318413160e589080df02bb3ca6e6a.sys
+    type=kernel && sc.exe start be6318413160e589080df02bb3ca6e6a.sys
   Description: "Cisco Talos has identified multiple versions of an undocumented malicious\
     \ driver named \u201CRedDriver,\u201D a driver-based browser hijacker that uses\
     \ the Windows Filtering Platform (WFP) to intercept browser traffic. RedDriver\
@@ -55,7 +55,7 @@ KnownVulnerableSamples:
       Entropy: 6.2119592546505995
       Virtual Size: '0xc1ee'
     .rdata:
-      Entropy: 5.110403242864534
+      Entropy: 5.110403242864533
       Virtual Size: '0xbac'
     .data:
       Entropy: 7.880055977911046
@@ -70,7 +70,7 @@ KnownVulnerableSamples:
       Entropy: 5.268683087271941
       Virtual Size: '0xa96'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-06-30 05:57:00'
+  CreationTimestamp: '2023-06-30 07:57:00'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -181,6 +181,7 @@ KnownVulnerableSamples:
         MD5: 4d213d99215f488050faaa39765656d1
         SHA1: 0308508b5a3fcd330bbf28931f8e1a9c93c3ee69
         SHA256: ea947432de238a25fdb7892e436f4ef44f30ab16ae9e1eb914860f4808b25ef2
+        SHA384: 430e932514f35ed55f31f050f33bcc0b9244fd83c6d1d28ee240306e54292e93b5894ef4eb9c09bf84cdc8068c6a7230
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -195,6 +196,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -209,6 +211,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 0a005d2e2bcd4137168217d8c727747c
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at

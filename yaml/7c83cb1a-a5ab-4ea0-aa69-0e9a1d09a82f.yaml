@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: 2ff09bb919a9909068166c30322c4e904befeba5429e9a11d011297fb8a73c07
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2019-01-14 20:00:52'
+  CreationTimestamp: '2019-01-14 22:00:52'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -103,6 +103,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -116,6 +117,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taiwan, L=NEW TAIPEI, O=GIGA,BYTE TECHNOLOGY CO., LTD., CN=GIGA,BYTE
         TECHNOLOGY CO., LTD.
       ValidFrom: '2016-07-21 00:00:00'
@@ -129,6 +131,7 @@ KnownVulnerableSamples:
         MD5: 50709ce3a9d9947196f8c152ac6b7e98
         SHA1: 5132abcc111cb532cccd06ff4f92bd9269fd9c8b
         SHA256: 163f38b3e76f73f6ed3909bae3036f6e3a923b202d3a9f994aa084ee81f3788a
+        SHA384: 6cab2d8d58f99daa3b8d7dd9b711172d5953748a8368ecd1e8e15af8ff0fac8e66c126f952be97321b75fe7a1bc87cb8
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
@@ -142,6 +145,7 @@ KnownVulnerableSamples:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
         SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -156,6 +160,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 2ad22e071f61cafe7884bfa43a31b21b
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec

@@ -117,6 +117,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=Private Organization, ??=TW, serialNumber=22671299, ??=No. 2, Innovation
         Road II, Hsinchu Science Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu,
         O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
@@ -131,6 +132,7 @@ KnownVulnerableSamples:
         MD5: 31dfd57553ffa3502588782224f0f952
         SHA1: 5ab8ec4ea22baa159082487c27072381e061852a
         SHA256: 89fe69abb220b5f1f93e80dcbb348b390f24e6805a7abf98823e410e282774cb
+        SHA384: ae20a14adc332445cbdec78ff89392dd9000fc95559eac38330516d00cf9bd845079946c6d3dc2655021ddda7de132a5
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -143,6 +145,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -156,6 +159,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -168,6 +172,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0320be3eb866526927f999b97b04346e
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -179,7 +184,7 @@ KnownVulnerableSamples:
     SHA256: 35603db30b731cf20bc04d18789310d7c8acd10db9fc3b50e0c666862570ef24
   Sections:
     .text:
-      Entropy: 6.3866541913319255
+      Entropy: 6.386654191331926
       Virtual Size: '0x418b'
     .rdata:
       Entropy: 5.162127331086041
@@ -191,7 +196,7 @@ KnownVulnerableSamples:
       Entropy: 4.072524997204114
       Virtual Size: '0x210'
     PAGE:
-      Entropy: 6.0669578130256525
+      Entropy: 6.066957813025652
       Virtual Size: '0x544'
     INIT:
       Entropy: 5.930060809840686
@@ -203,7 +208,7 @@ KnownVulnerableSamples:
       Entropy: 1.584962500721156
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-01-18 01:48:25'
+  CreationTimestamp: '2017-01-18 03:48:25'
 - Filename: rtkio.sys
   MD5: ffd0c87d9bf894af26823fbde94c71b6
   SHA1: eacfc73f5f45f229867ee8b2eb1f9649b5dd422e
@@ -271,6 +276,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -283,6 +289,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -297,6 +304,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -309,6 +317,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Hsinchu, O=Realtek Semiconductor Corp, OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=RTCN, CN=Realtek Semiconductor
         Corp
@@ -323,6 +332,7 @@ KnownVulnerableSamples:
         MD5: 4a941c830f7e9f9ce03c356b8c0fd25d
         SHA1: f1ecad59308eb35e10b7085b6523e82d1f513957
         SHA256: 70f36413a87faa734af7ba107f105430be009bb7a01948b30bbf0060f8c2d4d3
+        SHA384: 4b214d1474e9242b3e2b01919e6d0d802aaac64e3f40218454a2310a1a5662fbaa92240c822e42599469c33fe1d8f237
     Signer:
     - SerialNumber: 2c80892e0115b0b77aa3594b9a733953
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -335,13 +345,13 @@ KnownVulnerableSamples:
     SHA256: 735b68b5200bb9398147dd562bd90e6e63c1c77c6012be8f076b7382bb93e03d
   Sections:
     .text:
-      Entropy: 5.971538930127549
+      Entropy: 5.971538930127548
       Virtual Size: '0x76e'
     .rdata:
       Entropy: 3.776130126635075
       Virtual Size: '0x164'
     .data:
-      Entropy: 2.9182958340544896
+      Entropy: 2.918295834054489
       Virtual Size: '0xc'
     PAGE:
       Entropy: 6.248080040341218
@@ -356,7 +366,7 @@ KnownVulnerableSamples:
       Entropy: 5.056661630034299
       Virtual Size: '0x134'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-07-02 06:59:01'
+  CreationTimestamp: '2010-07-02 08:59:01'
 - Filename: rtkiow10x64.sys
   MD5: 96a8b535b5e14b582ca5679a3e2a5946
   SHA1: f6b3577ea4b1a5641ae3421151a26268434c3db8
@@ -451,6 +461,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=TW, ??=Private Organization, serialNumber=22671299, C=TW, L=HSINCHU,
         O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
       ValidFrom: '2020-01-09 00:00:00'
@@ -464,6 +475,7 @@ KnownVulnerableSamples:
         MD5: d969341c77d84b74180d7c0bbd1758f7
         SHA1: 13ff0fcb6faef6cc0d764891fd83ff75b222a2b0
         SHA256: 8cc799dc0170de639334d3a3112d2d2b8629fdc98844cb4d6d6c6dc0776bb8fe
+        SHA384: 511153edeab984723234ccf6cece5240e80bfb0f0108edfb3408db6c3457f8a909098b81c048dcf4027392345315df7d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -476,6 +488,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -489,6 +502,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -501,6 +515,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 04df4d56733ae38d598ea004dd2d9c51
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -515,13 +530,13 @@ KnownVulnerableSamples:
       Entropy: 6.4238147271439425
       Virtual Size: '0x3f3b'
     .rdata:
-      Entropy: 4.651736190470738
+      Entropy: 4.6517361904707375
       Virtual Size: '0xee4'
     .data:
       Entropy: 1.588342766840537
       Virtual Size: '0x308'
     .pdata:
-      Entropy: 4.335125322152539
+      Entropy: 4.335125322152541
       Virtual Size: '0x3d8'
     PAGE:
       Entropy: 6.261507946344208
@@ -536,7 +551,7 @@ KnownVulnerableSamples:
       Entropy: 3.3766291673878226
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-07-09 03:28:24'
+  CreationTimestamp: '2020-07-09 05:28:24'
 - Filename: rtkio.sys
   MD5: 664ad9cf500916c94fc2c0020660ac4e
   SHA1: 444f96d8943aec21d26f665203f3fb80b9a2a260
@@ -597,6 +612,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -609,6 +625,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -623,6 +640,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -635,6 +653,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Hsinchu, O=Realtek Semiconductor Corp, OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=RTCN, CN=Realtek Semiconductor
         Corp
@@ -649,6 +668,7 @@ KnownVulnerableSamples:
         MD5: 4a941c830f7e9f9ce03c356b8c0fd25d
         SHA1: f1ecad59308eb35e10b7085b6523e82d1f513957
         SHA256: 70f36413a87faa734af7ba107f105430be009bb7a01948b30bbf0060f8c2d4d3
+        SHA384: 4b214d1474e9242b3e2b01919e6d0d802aaac64e3f40218454a2310a1a5662fbaa92240c822e42599469c33fe1d8f237
     Signer:
     - SerialNumber: 2c80892e0115b0b77aa3594b9a733953
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -682,7 +702,7 @@ KnownVulnerableSamples:
       Entropy: 3.411543280486889
       Virtual Size: '0x408'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-07-02 06:59:21'
+  CreationTimestamp: '2010-07-02 08:59:21'
 - Filename: rtkio64.sys
   MD5: 70dcd07d38017b43f710061f37cb4a91
   SHA1: 99201c9555e5faf6e8d82da793b148311f8aa4b8
@@ -762,6 +782,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=Private Organization, ??=TW, serialNumber=22671299, ??=No. 2, Innovation
         Road II, Hsinchu Science Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu,
         O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
@@ -776,6 +797,7 @@ KnownVulnerableSamples:
         MD5: 31dfd57553ffa3502588782224f0f952
         SHA1: 5ab8ec4ea22baa159082487c27072381e061852a
         SHA256: 89fe69abb220b5f1f93e80dcbb348b390f24e6805a7abf98823e410e282774cb
+        SHA384: ae20a14adc332445cbdec78ff89392dd9000fc95559eac38330516d00cf9bd845079946c6d3dc2655021ddda7de132a5
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -788,6 +810,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -801,6 +824,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -813,6 +837,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0320be3eb866526927f999b97b04346e
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -824,10 +849,10 @@ KnownVulnerableSamples:
     SHA256: 8a53766046063ac93a2c854907cdbdcd226ddf188b42d675b6b45a942277b7a6
   Sections:
     .text:
-      Entropy: 6.401182749152008
+      Entropy: 6.4011827491520075
       Virtual Size: '0x406b'
     .rdata:
-      Entropy: 5.0686244640973666
+      Entropy: 5.068624464097369
       Virtual Size: '0x434'
     .data:
       Entropy: 0.3584113039007212
@@ -848,7 +873,7 @@ KnownVulnerableSamples:
       Entropy: 1.584962500721156
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-08-23 09:43:11'
+  CreationTimestamp: '2017-08-23 11:43:11'
 - Filename: rtkio.sys
   MD5: daf800da15b33bf1a84ee7afc59f0656
   SHA1: 166759fd511613414d3213942fe2575b926a6226
@@ -922,6 +947,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=Private Organization, ??=TW, serialNumber=22671299, ??=No. 2, Innovation
         Road II, Hsinchu Science Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu,
         O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
@@ -936,6 +962,7 @@ KnownVulnerableSamples:
         MD5: 31dfd57553ffa3502588782224f0f952
         SHA1: 5ab8ec4ea22baa159082487c27072381e061852a
         SHA256: 89fe69abb220b5f1f93e80dcbb348b390f24e6805a7abf98823e410e282774cb
+        SHA384: ae20a14adc332445cbdec78ff89392dd9000fc95559eac38330516d00cf9bd845079946c6d3dc2655021ddda7de132a5
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -948,6 +975,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -961,6 +989,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -973,6 +1002,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0320be3eb866526927f999b97b04346e
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -984,13 +1014,13 @@ KnownVulnerableSamples:
     SHA256: 735b68b5200bb9398147dd562bd90e6e63c1c77c6012be8f076b7382bb93e03d
   Sections:
     .text:
-      Entropy: 5.971538930127549
+      Entropy: 5.971538930127548
       Virtual Size: '0x76e'
     .rdata:
       Entropy: 3.776130126635075
       Virtual Size: '0x164'
     .data:
-      Entropy: 2.9182958340544896
+      Entropy: 2.918295834054489
       Virtual Size: '0xc'
     PAGE:
       Entropy: 6.248080040341218
@@ -1005,7 +1035,7 @@ KnownVulnerableSamples:
       Entropy: 5.056661630034299
       Virtual Size: '0x134'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-07-02 06:59:01'
+  CreationTimestamp: '2010-07-02 08:59:01'
 - Filename: rtkiow10x64.sys
   MD5: b5ada7fd226d20ec6634fc24768f9e22
   SHA1: 947db58d6f36a8df9fa2a1057f3a7f653ccbc42e
@@ -1085,6 +1115,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=Private Organization, ??=TW, serialNumber=22671299, ??=No. 2, Innovation
         Road II, Hsinchu Science Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu,
         O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
@@ -1099,6 +1130,7 @@ KnownVulnerableSamples:
         MD5: 31dfd57553ffa3502588782224f0f952
         SHA1: 5ab8ec4ea22baa159082487c27072381e061852a
         SHA256: 89fe69abb220b5f1f93e80dcbb348b390f24e6805a7abf98823e410e282774cb
+        SHA384: ae20a14adc332445cbdec78ff89392dd9000fc95559eac38330516d00cf9bd845079946c6d3dc2655021ddda7de132a5
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -1111,6 +1143,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -1124,6 +1157,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -1136,6 +1170,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0320be3eb866526927f999b97b04346e
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -1171,7 +1206,7 @@ KnownVulnerableSamples:
       Entropy: 3.0976094754943175
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-08-23 09:44:32'
+  CreationTimestamp: '2017-08-23 11:44:32'
 - Filename: rtkiow8x64.sys
   MD5: b8b6686324f7aa77f570bc019ec214e6
   SHA1: 6a3d3b9ab3d201cd6b0316a7f9c3fb4d34d0f403
@@ -1251,6 +1286,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=Private Organization, ??=TW, serialNumber=22671299, ??=No. 2, Innovation
         Road II, Hsinchu Science Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu,
         O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
@@ -1265,6 +1301,7 @@ KnownVulnerableSamples:
         MD5: 31dfd57553ffa3502588782224f0f952
         SHA1: 5ab8ec4ea22baa159082487c27072381e061852a
         SHA256: 89fe69abb220b5f1f93e80dcbb348b390f24e6805a7abf98823e410e282774cb
+        SHA384: ae20a14adc332445cbdec78ff89392dd9000fc95559eac38330516d00cf9bd845079946c6d3dc2655021ddda7de132a5
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -1277,6 +1314,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -1290,6 +1328,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -1302,6 +1341,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0320be3eb866526927f999b97b04346e
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -1313,7 +1353,7 @@ KnownVulnerableSamples:
     SHA256: fcf8792839ba33da61aca308fedee78dcbd7cd149c7c25e26b398e15f94ed2e0
   Sections:
     .text:
-      Entropy: 6.358698963973129
+      Entropy: 6.35869896397313
       Virtual Size: '0x423b'
     .rdata:
       Entropy: 4.640039413530853
@@ -1328,23 +1368,23 @@ KnownVulnerableSamples:
       Entropy: 6.028041090380566
       Virtual Size: '0x6b4'
     INIT:
-      Entropy: 5.777636360920832
+      Entropy: 5.777636360920831
       Virtual Size: '0x71e'
     .rsrc:
-      Entropy: 3.2824181682640794
+      Entropy: 3.282418168264079
       Virtual Size: '0x460'
     .reloc:
       Entropy: 3.0976094754943175
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-08-23 09:43:48'
+  CreationTimestamp: '2017-08-23 11:43:48'
 - Authentihash:
     MD5: 323c438f0a5a5e25ab49d996f968e876
     SHA1: f9399f08551048d8c72269d26ad1ac09a463d87f
     SHA256: aff3f4d25b85b6b3147d2b7f586edc3e9aa2ec25c37d5dc7ad809d99677497ea
   Company: 'Realtek                                            '
   Copyright: 'Copyright (C) 2015 Realtek Semiconductor Corporation. All Right Reserved.            '
-  CreationTimestamp: '2015-01-16 00:07:46'
+  CreationTimestamp: '2015-01-16 02:07:46'
   Date: ''
   Description: Realtek IODriver
   ExportedFunctions: ''
@@ -1410,7 +1450,7 @@ KnownVulnerableSamples:
       Entropy: 5.413882222771933
       Virtual Size: '0x50c'
     .rsrc:
-      Entropy: 3.25708255411683
+      Entropy: 3.2570825541168293
       Virtual Size: '0x478'
   Signature: ''
   Signatures:
@@ -1430,6 +1470,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1443,6 +1484,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taiwan, L=Hsinchu, O=Realtek Semiconductor Corp, OU=Digital
         ID Class 3 , Microsoft Software Validation v2, CN=Realtek Semiconductor Corp
       ValidFrom: '2013-05-13 00:00:00'
@@ -1456,6 +1498,7 @@ KnownVulnerableSamples:
         MD5: 505d3f5a216851c77d04130ee52b62d3
         SHA1: 5a2febebb76e946077a8a12e86ca1fdae047c93e
         SHA256: f496fa88d26071183b7cf6d90e16f9b1a19402f0c5d7bbecaf86a152925b9d3b
+        SHA384: 0d7164733ff545f216de67cfe0f95b15df5ba4d2ae37041dc253d24a7c62e4da4a222f536ad06d263f103973202d6d99
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -1470,6 +1513,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -1484,6 +1528,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 13222a5dccf716df5af9c87084412dd9
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1496,7 +1541,7 @@ KnownVulnerableSamples:
     SHA256: 4ecb25cb7a127729a0124d1c0e0ba7dd0c24a02f48f40f6af174b15581b6925c
   Company: 'Realtek                                            '
   Copyright: 'Copyright (C) 2012 Realtek Semiconductor Corporation. All Right Reserved.            '
-  CreationTimestamp: '2012-07-25 08:19:43'
+  CreationTimestamp: '2012-07-25 10:19:43'
   Date: ''
   Description: Realtek IODriver
   ExportedFunctions: ''
@@ -1547,7 +1592,7 @@ KnownVulnerableSamples:
       Entropy: 5.923664619701371
       Virtual Size: '0x548'
     .rdata:
-      Entropy: 4.279574069269288
+      Entropy: 4.279574069269293
       Virtual Size: '0x1ec'
     .data:
       Entropy: 0.5035334969292564
@@ -1556,7 +1601,7 @@ KnownVulnerableSamples:
       Entropy: 3.4238240815263694
       Virtual Size: '0x9c'
     PAGE:
-      Entropy: 6.2455841977264095
+      Entropy: 6.24558419772641
       Virtual Size: '0x77e'
     INIT:
       Entropy: 5.41262022426708
@@ -1582,6 +1627,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1594,6 +1640,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -1608,6 +1655,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1620,6 +1668,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Hsinchu, O=Realtek Semiconductor Corp, OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=RTCN, CN=Realtek Semiconductor
         Corp
@@ -1634,6 +1683,7 @@ KnownVulnerableSamples:
         MD5: 4a941c830f7e9f9ce03c356b8c0fd25d
         SHA1: f1ecad59308eb35e10b7085b6523e82d1f513957
         SHA256: 70f36413a87faa734af7ba107f105430be009bb7a01948b30bbf0060f8c2d4d3
+        SHA384: 4b214d1474e9242b3e2b01919e6d0d802aaac64e3f40218454a2310a1a5662fbaa92240c822e42599469c33fe1d8f237
     Signer:
     - SerialNumber: 2c80892e0115b0b77aa3594b9a733953
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1646,7 +1696,7 @@ KnownVulnerableSamples:
     SHA256: 902b754dd302a994074ea8d3e619d2f9000e6c6997e428f19f41533f7c5e192c
   Company: 'Realtek                                            '
   Copyright: 'Copyright (C) 2020 Realtek Semiconductor Corporation. All Right Reserved.            '
-  CreationTimestamp: '2020-07-09 03:29:01'
+  CreationTimestamp: '2020-07-09 05:29:01'
   Date: ''
   Description: Realtek IO Driver
   ExportedFunctions: ''
@@ -1744,7 +1794,7 @@ KnownVulnerableSamples:
       Entropy: 6.260538908004026
       Virtual Size: '0x1f94'
     INIT:
-      Entropy: 5.842745769901463
+      Entropy: 5.842745769901464
       Virtual Size: '0xc80'
     .rsrc:
       Entropy: 3.281854652191381
@@ -1770,6 +1820,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=TW, ??=Private Organization, serialNumber=22671299, C=TW, L=HSINCHU,
         O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
       ValidFrom: '2020-01-09 00:00:00'
@@ -1783,6 +1834,7 @@ KnownVulnerableSamples:
         MD5: d969341c77d84b74180d7c0bbd1758f7
         SHA1: 13ff0fcb6faef6cc0d764891fd83ff75b222a2b0
         SHA256: 8cc799dc0170de639334d3a3112d2d2b8629fdc98844cb4d6d6c6dc0776bb8fe
+        SHA384: 511153edeab984723234ccf6cece5240e80bfb0f0108edfb3408db6c3457f8a909098b81c048dcf4027392345315df7d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -1795,6 +1847,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -1808,6 +1861,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -1820,6 +1874,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 04df4d56733ae38d598ea004dd2d9c51
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -1831,7 +1886,7 @@ KnownVulnerableSamples:
     SHA256: f3308899fc0ebdd04a4dacc386873c25dabe32a8f34607fb335148d2dab667d8
   Company: 'Realtek                                            '
   Copyright: 'Copyright (C) 2016 Realtek Semiconductor Corporation. All Right Reserved.            '
-  CreationTimestamp: '2016-08-25 03:11:29'
+  CreationTimestamp: '2016-08-25 05:11:29'
   Date: ''
   Description: Realtek IO Driver
   ExportedFunctions: ''
@@ -1902,7 +1957,7 @@ KnownVulnerableSamples:
       Entropy: 6.051257697095618
       Virtual Size: '0x554'
     INIT:
-      Entropy: 5.919795403572851
+      Entropy: 5.91979540357285
       Virtual Size: '0x94c'
     .rsrc:
       Entropy: 3.2913123916924825
@@ -1928,6 +1983,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=Private Organization, ??=TW, serialNumber=22671299, ??=No. 2, Innovation
         Road II, Hsinchu Science Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu,
         O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
@@ -1942,6 +1998,7 @@ KnownVulnerableSamples:
         MD5: 7198bc17fb72482ba5b7ec573b8b0d52
         SHA1: 975a554601a6887eab2a45b39df25fc298a5244d
         SHA256: c25244fbc7a090b7fad21bac21419cc6c9766034fcca1b74222fa8dd8d99c8ae
+        SHA384: 5987193a6feaf5e88d974a1b5f40859d3fc97d18bd382de6ac15d89c8fca492da88115993e26b2eec27c46e962058fcb
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -1954,6 +2011,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -1967,6 +2025,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -1979,6 +2038,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 03da4c26c76e1255dc8279aa9a751acc
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -1990,7 +2050,7 @@ KnownVulnerableSamples:
     SHA256: ed617d4c50288921a6a760de19db1633bd8172421109dcf68082c67db085ddb1
   Company: 'Realtek                                            '
   Copyright: 'Copyright (C) 2016 Realtek Semiconductor Corporation. All Right Reserved.            '
-  CreationTimestamp: '2016-01-04 22:48:28'
+  CreationTimestamp: '2016-01-05 00:48:28'
   Date: ''
   Description: Realtek IO Driver
   ExportedFunctions: ''
@@ -2049,10 +2109,10 @@ KnownVulnerableSamples:
       Entropy: 3.5974706785237442
       Virtual Size: '0xe4'
     PAGE:
-      Entropy: 4.846922682767448
+      Entropy: 4.846922682767447
       Virtual Size: '0xc4'
     INIT:
-      Entropy: 5.322902325690655
+      Entropy: 5.322902325690656
       Virtual Size: '0x44e'
     .rsrc:
       Entropy: 3.2501296267000415
@@ -2075,6 +2135,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -2088,6 +2149,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taiwan, L=Hsinchu, O=Realtek Semiconductor Corp, OU=Digital
         ID Class 3 , Microsoft Software Validation v2, CN=Realtek Semiconductor Corp
       ValidFrom: '2013-05-13 00:00:00'
@@ -2101,6 +2163,7 @@ KnownVulnerableSamples:
         MD5: 505d3f5a216851c77d04130ee52b62d3
         SHA1: 5a2febebb76e946077a8a12e86ca1fdae047c93e
         SHA256: f496fa88d26071183b7cf6d90e16f9b1a19402f0c5d7bbecaf86a152925b9d3b
+        SHA384: 0d7164733ff545f216de67cfe0f95b15df5ba4d2ae37041dc253d24a7c62e4da4a222f536ad06d263f103973202d6d99
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -2115,6 +2178,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -2129,6 +2193,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 13222a5dccf716df5af9c87084412dd9
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -2141,7 +2206,7 @@ KnownVulnerableSamples:
     SHA256: c6389dca278be297b95846badc2b6859b488f123dbdc5d7bfc6f4393eeb7e678
   Company: 'Realtek                                            '
   Copyright: 'Copyright (C) 2016 Realtek Semiconductor Corporation. All Right Reserved.            '
-  CreationTimestamp: '2016-08-25 03:11:29'
+  CreationTimestamp: '2016-08-25 05:11:29'
   Date: ''
   Description: Realtek IO Driver
   ExportedFunctions: ''
@@ -2212,7 +2277,7 @@ KnownVulnerableSamples:
       Entropy: 6.051257697095618
       Virtual Size: '0x554'
     INIT:
-      Entropy: 5.919795403572851
+      Entropy: 5.91979540357285
       Virtual Size: '0x94c'
     .rsrc:
       Entropy: 3.2913123916924825
@@ -2238,6 +2303,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=Private Organization, ??=TW, serialNumber=22671299, ??=No. 2, Innovation
         Road II, Hsinchu Science Park, postalCode=300, C=TW, ST=Taiwan, L=Hsinchu,
         O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
@@ -2252,6 +2318,7 @@ KnownVulnerableSamples:
         MD5: 31dfd57553ffa3502588782224f0f952
         SHA1: 5ab8ec4ea22baa159082487c27072381e061852a
         SHA256: 89fe69abb220b5f1f93e80dcbb348b390f24e6805a7abf98823e410e282774cb
+        SHA384: ae20a14adc332445cbdec78ff89392dd9000fc95559eac38330516d00cf9bd845079946c6d3dc2655021ddda7de132a5
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -2264,6 +2331,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -2277,6 +2345,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -2289,6 +2358,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0320be3eb866526927f999b97b04346e
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing

@@ -48,7 +48,7 @@ KnownVulnerableSamples:
     SHA256: a7047cee090ddbd150d7337a9357e03ccea56f004a2d29ddb7b8a0636a396240
   Company: Rivet Networks, LLC.
   Copyright: Copyright (C) 2015-2018 Rivet Networks, LLC.
-  CreationTimestamp: '2022-03-29 11:25:42'
+  CreationTimestamp: '2022-03-29 13:25:42'
   Date: ''
   Description: Killer Traffic Control Callout Driver
   ExportedFunctions: ''
@@ -185,7 +185,7 @@ KnownVulnerableSamples:
       Entropy: 6.401436855573186
       Virtual Size: '0x20be6'
     .rdata:
-      Entropy: 5.653552737913285
+      Entropy: 5.6535527379132855
       Virtual Size: '0x33d0'
     .data:
       Entropy: 5.555301615962117
@@ -220,6 +220,7 @@ KnownVulnerableSamples:
         MD5: 6e52024b4fb80fcfdb67508172f48293
         SHA1: 30760fb50b6398765ff477da4c21f1178e5408ca
         SHA256: c3e02d446cd74203a21e7a6cf8be25669401c7d9e8a893698a8cb8b4f57ae2b4
+        SHA384: 7aef7d354f49169034ea09963d73e3d927dd6b796ff3ce3f83d1762e7280845e56582ff1a15cce812dde13468bc7d5d9
     - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Code Signing CA
       ValidFrom: '2018-11-02 00:00:00'
@@ -233,6 +234,7 @@ KnownVulnerableSamples:
         MD5: c1eabfb5994258ad955adb7c2df165e6
         SHA1: fa33b3c00cebc469b269220d9eab26926c9b8ad8
         SHA256: 70dffac37eb787b2198816982c7d44f541d2e39a7dac069d37b367dc9f354b32
+        SHA384: 20adc5b59cb532e215f01ba09a9c745898c206555613512fea7c295ccfd17ced4fe2c5bc3274ca8a270fc68799b8343c
     - Subject: C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust
         RSA Certification Authority
       ValidFrom: '2015-07-22 21:03:49'
@@ -246,6 +248,7 @@ KnownVulnerableSamples:
         MD5: a2d2ae7554f77f6e9ffb0b1a9b700ac4
         SHA1: 9f69ff166f5dc446578a45d7d69482373755e141
         SHA256: ad394b7e5cb9ccf6429762405f9840b648e38e8faf2de376f1aa375c6729abb7
+        SHA384: eda103bac2997f31d778637ce8d1fa1263485a9d6a77d6e381bad8312e6bbec020ce5036e16ca96087e50f6ab200944a
     Signer:
     - SerialNumber: 00bfcce9854e3f154ff8e62c2ce2fde84d
       Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo

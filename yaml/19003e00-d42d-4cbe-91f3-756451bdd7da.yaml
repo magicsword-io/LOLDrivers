@@ -138,7 +138,7 @@ KnownVulnerableSamples:
     SHA256: 399effe75d32bdab6fa0a6bffe02dbf0a59219d940b654837c3be1c0bd02e9aa
   Company: RW-Everything
   Copyright: Copyright (C) 2011 RW-Everything
-  CreationTimestamp: '2022-01-04 01:19:15'
+  CreationTimestamp: '2022-01-04 03:19:15'
   Date: ''
   Description: AsrSetupDrv103 Driver
   ExportedFunctions: ''
@@ -240,7 +240,7 @@ KnownVulnerableSamples:
       Entropy: 3.3084703257953634
       Virtual Size: '0x3b8'
     .reloc:
-      Entropy: 1.2280731978955797
+      Entropy: 1.2280731978955794
       Virtual Size: '0x60'
   Signature: ''
   Signatures:
@@ -259,6 +259,7 @@ KnownVulnerableSamples:
         MD5: 51c3959a45cecf3d21a3effb05762573
         SHA1: ecfcd25fd0525448a74875ba271566bc0bfbf061
         SHA256: de1da11668f0a8d5e13346ed3ab2755f5d25bebffcfd1d0bde5b9f87bc292c91
+        SHA384: f0eab75baf1f24a53d63bd795cd07292a312f603513c8cb0f40fe5acbdb477ed72607d309fad21471a16f6223fb3a838
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -271,6 +272,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Code Signing Root R45
       ValidFrom: '2020-07-28 00:00:00'
       ValidTo: '2029-03-18 00:00:00'
@@ -283,6 +285,7 @@ KnownVulnerableSamples:
         MD5: a33260428269bc902bc1cd280e4b1837
         SHA1: 254209ca172cffcc67bd2a88996556d2f09538f0
         SHA256: a67411358594f2cf016741a63fd49f36de917f86531b3e3a43eb6a421c654868
+        SHA384: fec727af43d1569995cea26e8eb97167165842a5b185304425a92c03b71254c5d51222837515f33e60cb8ed2e8c625ba
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
       ValidFrom: '2020-07-28 00:00:00'
       ValidTo: '2030-07-28 00:00:00'
@@ -295,6 +298,7 @@ KnownVulnerableSamples:
         MD5: 65fd1dac1f115d9507f4e1840c8cb36a
         SHA1: c7cf5607e19b22fe60c055e71d9b555d70f71f66
         SHA256: d9c7db0b704f07089440c56e69a0f31d730edf77cfbf7514630e8b5390a270fe
+        SHA384: defe810317bd1215b4d1ee0ec8a5fb38b21d094ef1173cae670956cd899232638e4f9473fd947bd550a4a77300bbb2ab
     - Subject: ??=Private Organization, serialNumber=80333613, ??=TW, C=TW, ST=Taipei,
         L=Taipei, ??=2F., No. 37, Sec. 2, Zhongyang S. Rd., Beitou Dist., O=ASROCK
         INC., CN=ASROCK INC.
@@ -309,6 +313,7 @@ KnownVulnerableSamples:
         MD5: bce317dc724ff8d4f6f02fca3e0e481e
         SHA1: c84cd3e5f7120b9fcf38bbd968c2921dbd0a1e76
         SHA256: 9b51dea8257984791d5cd3d82426595e92baba100bfd4cb0c960b1366f0a261e
+        SHA384: 403399db25033616ddd75c1e9f8df3fc60f3c235523ae77716568897bca0e2b7756a1fd7a12a2ebbeec5836c6ca7d5ac
     Signer:
     - SerialNumber: 3be24b96d2c8d729eddb03e3
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
@@ -319,7 +324,7 @@ KnownVulnerableSamples:
     SHA256: 7aaf2aa194b936e48bc90f01ee854768c8383c0be50cfb41b346666aec0cf853
   Company: RW-Everything
   Copyright: Copyright (C) 2011 RW-Everything
-  CreationTimestamp: '2015-01-14 02:11:44'
+  CreationTimestamp: '2015-01-14 04:11:44'
   Date: ''
   Description: AsrSetupDrv103 Driver
   ExportedFunctions: ''
@@ -403,7 +408,7 @@ KnownVulnerableSamples:
       Entropy: 6.303345316333857
       Virtual Size: '0x2248'
     .rdata:
-      Entropy: 4.4991617725747
+      Entropy: 4.499161772574699
       Virtual Size: '0x7cc'
     .data:
       Entropy: 1.3791658791138062
@@ -421,7 +426,7 @@ KnownVulnerableSamples:
       Entropy: 3.3084703257953634
       Virtual Size: '0x3b8'
     .reloc:
-      Entropy: 1.2280731978955797
+      Entropy: 1.2280731978955794
       Virtual Size: '0x60'
   Signature: ''
   Signatures:
@@ -441,6 +446,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -454,6 +460,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -468,6 +475,7 @@ KnownVulnerableSamples:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
         SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -480,6 +488,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=TAIWAN, L=Taipei, O=ASROCK Incorporation, OU=Digital ID Class
         3 , Microsoft Software Validation v2, CN=ASROCK Incorporation
       ValidFrom: '2014-03-07 00:00:00'
@@ -493,6 +502,7 @@ KnownVulnerableSamples:
         MD5: 987b0fb90b05c0b59ba66fb1527c27e3
         SHA1: 1b5d5279beed01b2355731588b1a26da29218b55
         SHA256: b3cd9f313e55fce2d39d25dbe303777e5db9d0c01448dcd9ac70c2355bb5b4ea
+        SHA384: 4bb9546cdd73e2bff4224e021b54318e708c822a1a773a9e7246a46054aba1dd14c1651e8f01f5661b4ff4a3241c32ff
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -507,6 +517,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 03ffdaa3aac322387d7eb98acf9524bf
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at

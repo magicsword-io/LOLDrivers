@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 35b31c96194d78cbb98b3223bf810f78f53fc0e4601f49169938ca883586e4e9
   Company: HP Inc.
   Copyright: Copyright (C) 2020-2021 HP Inc. All rights reserved.
-  CreationTimestamp: '2021-04-20 21:22:47'
+  CreationTimestamp: '2021-04-20 23:22:47'
   Date: ''
   Description: HpPortIo
   ExportedFunctions: ''
@@ -116,7 +116,7 @@ KnownVulnerableSamples:
       Entropy: 4.080437825589189
       Virtual Size: '0x270'
     INIT:
-      Entropy: 5.127227635761384
+      Entropy: 5.1272276357613835
       Virtual Size: '0x534'
     .rsrc:
       Entropy: 3.2845087920390967
@@ -145,6 +145,7 @@ KnownVulnerableSamples:
         MD5: 9359496ca4f021408b9d8923cab8b179
         SHA1: 2aed40d7759997830870769be250199fd609e40e
         SHA256: e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65
+        SHA384: 5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c
     - Subject: C=US, ST=California, L=Palo Alto, O=HP Inc., OU=HP Cybersecurity, CN=HP
         Inc.
       ValidFrom: '2020-05-14 00:00:00'
@@ -158,6 +159,7 @@ KnownVulnerableSamples:
         MD5: 5e993a919f907013f89ff0215fcfdf29
         SHA1: b8b101040d1a81a545ae65cc953979880d3c1b10
         SHA256: 8896a2b0f531a6672e0b827766d86766184f0e350785a3c263fc67347e99fe75
+        SHA384: 8ca6718d1dfe26aabc763217c248619ba30a5485604d1e197ea049a93dc487fba8332c07437ce13bfe67e8075fcf3745
     Signer:
     - SerialNumber: 0449edef08b987f05203c4e0f2356499
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured

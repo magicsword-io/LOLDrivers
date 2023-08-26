@@ -42,7 +42,7 @@ KnownVulnerableSamples:
     SHA256: 34e6a56c60746c51034b45a7b2a36617205b598d0bbcc695f92404605a0975d5
   Company: Lenovo Group Limited (R)
   Copyright: "\xA9 2021 Lenovo Group Limited. All rights reserved."
-  CreationTimestamp: '2022-01-28 10:59:24'
+  CreationTimestamp: '2022-01-28 12:59:24'
   Date: ''
   Description: Lenovo Diagnostics Driver for Windows 10 and later.
   ExportedFunctions: ''
@@ -114,7 +114,7 @@ KnownVulnerableSamples:
       Entropy: 4.307397917054479
       Virtual Size: '0xe34'
     .data:
-      Entropy: 2.112180138315051
+      Entropy: 2.1121801383150514
       Virtual Size: '0x280'
     .pdata:
       Entropy: 4.122037812300564
@@ -152,6 +152,7 @@ KnownVulnerableSamples:
         MD5: 5d8003a64dfa5a4d88365da1566038cb
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
         SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
     - Subject: C=US, ST=North Carolina, L=Morrisville, O=Lenovo, OU=G14, CN=Lenovo
       ValidFrom: '2021-11-22 00:00:00'
       ValidTo: '2022-03-30 23:59:59'
@@ -164,6 +165,7 @@ KnownVulnerableSamples:
         MD5: 3452c838cdc0fad2580244b9efd5d8de
         SHA1: f4d9f9525fa79caa80e5ef5b88ea4b07d6e272ad
         SHA256: 4d66a4b0e68dc05b77e33ff1c284de96b040b4a6b3fe69326bc6cc2477e70866
+        SHA384: fd4fbb32ae0c9b9d6796dd2028d09121a186975991e6008ab1dc57ebbef199ba873f6bc26bd710852ef16d4249856392
     Signer:
     - SerialNumber: 01d4b02045832881e2d7530641135991
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096

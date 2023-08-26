@@ -103,6 +103,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -115,6 +116,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=AU, ST=NSW, O=PassMark Software Pty Ltd, OU=Digital ID Class 3 ,
         Microsoft Software Validation v2, CN=PassMark Software Pty Ltd
       ValidFrom: '2009-09-22 00:00:00'
@@ -128,6 +130,7 @@ KnownVulnerableSamples:
         MD5: 159feaed9447c7d71653069c337ec2b3
         SHA1: 5079a8aa946ee016c86153d4456f58277360c036
         SHA256: e76ee5754b8da5b514befb3a89eed638de08605326a1e611ddbed9e864551abf
+        SHA384: 9830194c19654f1196e74505a987588c36aa700489f3f482f1ad017bba6e39ebf9be18ab153da8cd9f8a672801820a87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -142,6 +145,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -154,6 +158,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 38e7fa0db1a398f805bb85a69171dc9d
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -166,7 +171,7 @@ KnownVulnerableSamples:
     SHA256: 128c2e1ac497e379854c941e1ea5f9d4dbf85b9dfafaa2267bdb65febfc09da0
   Sections:
     .text:
-      Entropy: 5.9515705369687755
+      Entropy: 5.951570536968776
       Virtual Size: '0x3314'
     .rdata:
       Entropy: 4.168919883077898
@@ -181,10 +186,10 @@ KnownVulnerableSamples:
       Entropy: 5.411254015049126
       Virtual Size: '0x108'
     INIT:
-      Entropy: 5.227088557036365
+      Entropy: 5.227088557036364
       Virtual Size: '0x624'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-02-22 20:22:58'
+  CreationTimestamp: '2012-02-22 22:22:58'
 - Filename: DirectIo64.sys
   MD5: 8fbb1ffc6f13f9d5ee8480b36baffc52
   SHA1: 3c9c86c0b215ecbab0eeb4479c204dba65258b8e
@@ -269,6 +274,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -281,6 +287,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=AU, ST=NSW, O=PassMark Software Pty Ltd, OU=Digital ID Class 3 ,
         Microsoft Software Validation v2, CN=PassMark Software Pty Ltd
       ValidFrom: '2009-09-22 00:00:00'
@@ -294,6 +301,7 @@ KnownVulnerableSamples:
         MD5: 159feaed9447c7d71653069c337ec2b3
         SHA1: 5079a8aa946ee016c86153d4456f58277360c036
         SHA256: e76ee5754b8da5b514befb3a89eed638de08605326a1e611ddbed9e864551abf
+        SHA384: 9830194c19654f1196e74505a987588c36aa700489f3f482f1ad017bba6e39ebf9be18ab153da8cd9f8a672801820a87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -308,6 +316,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -320,6 +329,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 38e7fa0db1a398f805bb85a69171dc9d
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -332,10 +342,10 @@ KnownVulnerableSamples:
     SHA256: eb78e7b1ebb205f8233c939a609ac568b9a9b60f69cea65b26d175238fda5ee6
   Sections:
     .text:
-      Entropy: 5.977637591893704
+      Entropy: 5.9776375918937035
       Virtual Size: '0x3394'
     .rdata:
-      Entropy: 4.139541280272844
+      Entropy: 4.1395412802728435
       Virtual Size: '0x33c'
     .data:
       Entropy: 0.8622020313988807
@@ -344,13 +354,13 @@ KnownVulnerableSamples:
       Entropy: 3.7403006541244106
       Virtual Size: '0xd8'
     PAGE:
-      Entropy: 5.411254015049125
+      Entropy: 5.411254015049126
       Virtual Size: '0x108'
     INIT:
       Entropy: 5.221465772836785
       Virtual Size: '0x60e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-08-12 22:30:24'
+  CreationTimestamp: '2012-08-13 00:30:24'
 - Filename: DirectIo64.sys
   MD5: 76d1d4d285f74059f32b8ad19a146d0c
   SHA1: 3f338ab65bac9550b8749bb1208edb0f7d7bcb81
@@ -451,6 +461,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=AU, ST=New South Wales, L=Sydney, O=PassMark Software Pty Ltd, OU=Secure
         Application Development, CN=PassMark Software Pty Ltd
       ValidFrom: '2013-01-14 00:00:00'
@@ -464,6 +475,7 @@ KnownVulnerableSamples:
         MD5: 68d63143985e350ea05f95c3c989d910
         SHA1: 35d4099366238cdf0d0568367df87e76a721e4e4
         SHA256: 565f57952c378ad23755193c410d80a4b4cf11374e8d68ae7ad35d58f7bd2705
+        SHA384: 4bd08adf5fda0e77a40698a53035b92924ac76993d1b3653da1db17f24e99f4525bdf5c31e5b2b0923bb76033f2804ac
     - Subject: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
       ValidFrom: '2010-02-08 00:00:00'
       ValidTo: '2020-02-07 23:59:59'
@@ -476,6 +488,7 @@ KnownVulnerableSamples:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
         SHA256: d8844186775bddbccaf3dc017064df7d760fd4b85c5d07561a3efd7da950f89e
+        SHA384: 78d972495720b43a6470b18ae1226bcca20707628087717a9364c14ca053ba264e6d149718b103542d9942200138a69d
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -489,6 +502,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=thawte, Inc., OU=Certification Services Division, OU=(c) 2006
         thawte, Inc. , For authorized use only, CN=thawte Primary Root CA
       ValidFrom: '2011-02-22 19:31:57'
@@ -502,6 +516,7 @@ KnownVulnerableSamples:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
         SHA256: a39ed0d6fd4eb1a6f7fed60f726e23eae668b7591bc004644625d22c701213fa
+        SHA384: 64b7643e4146016cbf83c911eb67e4601b6bb8d66f8ee8dcee67b815f91770d86ab23678b984430f22a963e5484881b7
     Signer:
     - SerialNumber: 6ec5060c23b767aa5eb4fe5ddad4af2d
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
@@ -521,7 +536,7 @@ KnownVulnerableSamples:
       Entropy: 0.8622020313988807
       Virtual Size: '0x138'
     .pdata:
-      Entropy: 3.868763621456546
+      Entropy: 3.868763621456545
       Virtual Size: '0x114'
     PAGE:
       Entropy: 5.399340200550161
@@ -530,7 +545,7 @@ KnownVulnerableSamples:
       Entropy: 5.226965938564804
       Virtual Size: '0x80e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-03-10 10:47:29'
+  CreationTimestamp: '2014-03-10 12:47:29'
 - Filename: DirectIo64.sys
   MD5: f41eea88057d3dd1a56027c4174eed22
   SHA1: 13572d36428ef32cfed3af7a8bb011ee756302b0
@@ -631,6 +646,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=AU, ST=New South Wales, L=Sydney, O=PassMark Software Pty Ltd, OU=Secure
         Application Development, CN=PassMark Software Pty Ltd
       ValidFrom: '2013-01-14 00:00:00'
@@ -644,6 +660,7 @@ KnownVulnerableSamples:
         MD5: 68d63143985e350ea05f95c3c989d910
         SHA1: 35d4099366238cdf0d0568367df87e76a721e4e4
         SHA256: 565f57952c378ad23755193c410d80a4b4cf11374e8d68ae7ad35d58f7bd2705
+        SHA384: 4bd08adf5fda0e77a40698a53035b92924ac76993d1b3653da1db17f24e99f4525bdf5c31e5b2b0923bb76033f2804ac
     - Subject: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
       ValidFrom: '2010-02-08 00:00:00'
       ValidTo: '2020-02-07 23:59:59'
@@ -656,6 +673,7 @@ KnownVulnerableSamples:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
         SHA256: d8844186775bddbccaf3dc017064df7d760fd4b85c5d07561a3efd7da950f89e
+        SHA384: 78d972495720b43a6470b18ae1226bcca20707628087717a9364c14ca053ba264e6d149718b103542d9942200138a69d
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -669,6 +687,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=thawte, Inc., OU=Certification Services Division, OU=(c) 2006
         thawte, Inc. , For authorized use only, CN=thawte Primary Root CA
       ValidFrom: '2011-02-22 19:31:57'
@@ -682,6 +701,7 @@ KnownVulnerableSamples:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
         SHA256: a39ed0d6fd4eb1a6f7fed60f726e23eae668b7591bc004644625d22c701213fa
+        SHA384: 64b7643e4146016cbf83c911eb67e4601b6bb8d66f8ee8dcee67b815f91770d86ab23678b984430f22a963e5484881b7
     Signer:
     - SerialNumber: 6ec5060c23b767aa5eb4fe5ddad4af2d
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
@@ -710,7 +730,7 @@ KnownVulnerableSamples:
       Entropy: 5.226965938564804
       Virtual Size: '0x80e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-11-25 12:43:27'
+  CreationTimestamp: '2013-11-25 14:43:27'
 - Filename: DirectIo64.sys
   MD5: c4f5619ce04d4bee38024d08513c77fd
   SHA1: 4c6ec22bc10947d089167b19d83a26bdd69f0dd1
@@ -811,6 +831,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=AU, ST=New South Wales, L=Sydney, O=PassMark Software Pty Ltd, OU=Secure
         Application Development, CN=PassMark Software Pty Ltd
       ValidFrom: '2013-01-14 00:00:00'
@@ -824,6 +845,7 @@ KnownVulnerableSamples:
         MD5: 68d63143985e350ea05f95c3c989d910
         SHA1: 35d4099366238cdf0d0568367df87e76a721e4e4
         SHA256: 565f57952c378ad23755193c410d80a4b4cf11374e8d68ae7ad35d58f7bd2705
+        SHA384: 4bd08adf5fda0e77a40698a53035b92924ac76993d1b3653da1db17f24e99f4525bdf5c31e5b2b0923bb76033f2804ac
     - Subject: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
       ValidFrom: '2010-02-08 00:00:00'
       ValidTo: '2020-02-07 23:59:59'
@@ -836,6 +858,7 @@ KnownVulnerableSamples:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
         SHA256: d8844186775bddbccaf3dc017064df7d760fd4b85c5d07561a3efd7da950f89e
+        SHA384: 78d972495720b43a6470b18ae1226bcca20707628087717a9364c14ca053ba264e6d149718b103542d9942200138a69d
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -849,6 +872,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=thawte, Inc., OU=Certification Services Division, OU=(c) 2006
         thawte, Inc. , For authorized use only, CN=thawte Primary Root CA
       ValidFrom: '2011-02-22 19:31:57'
@@ -862,6 +886,7 @@ KnownVulnerableSamples:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
         SHA256: a39ed0d6fd4eb1a6f7fed60f726e23eae668b7591bc004644625d22c701213fa
+        SHA384: 64b7643e4146016cbf83c911eb67e4601b6bb8d66f8ee8dcee67b815f91770d86ab23678b984430f22a963e5484881b7
     Signer:
     - SerialNumber: 6ec5060c23b767aa5eb4fe5ddad4af2d
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
@@ -881,16 +906,16 @@ KnownVulnerableSamples:
       Entropy: 0.8808638227277628
       Virtual Size: '0x130'
     .pdata:
-      Entropy: 3.927374807869365
+      Entropy: 3.9273748078693647
       Virtual Size: '0x1e0'
     PAGE:
       Entropy: 5.2771074199280354
       Virtual Size: '0x118'
     INIT:
-      Entropy: 5.235595172767805
+      Entropy: 5.235595172767806
       Virtual Size: '0x80e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-03-27 21:48:42'
+  CreationTimestamp: '2014-03-27 23:48:42'
 - Filename: DirectIo64.sys
   MD5: 5093f38d597532d59d4df9018056f0d1
   SHA1: 0904b8fa4654197eefd6380c81bbb2149ffe0634
@@ -997,6 +1022,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
       ValidFrom: '2010-02-08 00:00:00'
       ValidTo: '2020-02-07 23:59:59'
@@ -1009,6 +1035,7 @@ KnownVulnerableSamples:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
         SHA256: d8844186775bddbccaf3dc017064df7d760fd4b85c5d07561a3efd7da950f89e
+        SHA384: 78d972495720b43a6470b18ae1226bcca20707628087717a9364c14ca053ba264e6d149718b103542d9942200138a69d
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1022,6 +1049,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=AU, ST=New South Wales, L=Sydney, O=PassMark Software Pty Ltd, OU=Secure
         Application Development, CN=PassMark Software Pty Ltd
       ValidFrom: '2014-10-23 00:00:00'
@@ -1035,6 +1063,7 @@ KnownVulnerableSamples:
         MD5: fbbc2fd31bef7df6deb6127e593c71bb
         SHA1: 82b8bf771c8f1b038935f84e2a41a37c30650003
         SHA256: ed0d4e6cc774379d4622d107da1a202d9f330e7a68b03abd182ec86685ec7067
+        SHA384: d774707c21ab68e089c3a431d1a85fa8037cf9f5148930ffecb95f979603ee80322b6bdd156d49d85b3a91d527f6034a
     - Subject: C=US, O=thawte, Inc., OU=Certification Services Division, OU=(c) 2006
         thawte, Inc. , For authorized use only, CN=thawte Primary Root CA
       ValidFrom: '2011-02-22 19:31:57'
@@ -1048,6 +1077,7 @@ KnownVulnerableSamples:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
         SHA256: a39ed0d6fd4eb1a6f7fed60f726e23eae668b7591bc004644625d22c701213fa
+        SHA384: 64b7643e4146016cbf83c911eb67e4601b6bb8d66f8ee8dcee67b815f91770d86ab23678b984430f22a963e5484881b7
     Signer:
     - SerialNumber: 5ece8cdb4d508efee821a7cfff5b8016
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
@@ -1058,7 +1088,7 @@ KnownVulnerableSamples:
     SHA256: cf243b5653eaf18b0053550b15395fecde2a3b4d63b0d8ac399a601008c9505d
   Sections:
     .text:
-      Entropy: 6.1001997862429445
+      Entropy: 6.100199786242943
       Virtual Size: '0x3b0a'
     .rdata:
       Entropy: 4.048184411054468
@@ -1079,7 +1109,7 @@ KnownVulnerableSamples:
       Entropy: 2.091917186688699
       Virtual Size: '0x10'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-25 17:13:06'
+  CreationTimestamp: '2016-08-25 19:13:06'
 - Filename: DirectIo64.sys
   MD5: 790ccca8341919bb8bb49262a21fca0e
   SHA1: 61f5904e9ff0d7e83ad89f0e7a3741e7f2fbf799
@@ -1180,6 +1210,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
       ValidFrom: '2010-02-08 00:00:00'
       ValidTo: '2020-02-07 23:59:59'
@@ -1192,6 +1223,7 @@ KnownVulnerableSamples:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
         SHA256: d8844186775bddbccaf3dc017064df7d760fd4b85c5d07561a3efd7da950f89e
+        SHA384: 78d972495720b43a6470b18ae1226bcca20707628087717a9364c14ca053ba264e6d149718b103542d9942200138a69d
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1205,6 +1237,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=AU, ST=New South Wales, L=Sydney, O=PassMark Software Pty Ltd, OU=Secure
         Application Development, CN=PassMark Software Pty Ltd
       ValidFrom: '2014-10-23 00:00:00'
@@ -1218,6 +1251,7 @@ KnownVulnerableSamples:
         MD5: fbbc2fd31bef7df6deb6127e593c71bb
         SHA1: 82b8bf771c8f1b038935f84e2a41a37c30650003
         SHA256: ed0d4e6cc774379d4622d107da1a202d9f330e7a68b03abd182ec86685ec7067
+        SHA384: d774707c21ab68e089c3a431d1a85fa8037cf9f5148930ffecb95f979603ee80322b6bdd156d49d85b3a91d527f6034a
     - Subject: C=US, O=thawte, Inc., OU=Certification Services Division, OU=(c) 2006
         thawte, Inc. , For authorized use only, CN=thawte Primary Root CA
       ValidFrom: '2011-02-22 19:31:57'
@@ -1231,6 +1265,7 @@ KnownVulnerableSamples:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
         SHA256: a39ed0d6fd4eb1a6f7fed60f726e23eae668b7591bc004644625d22c701213fa
+        SHA384: 64b7643e4146016cbf83c911eb67e4601b6bb8d66f8ee8dcee67b815f91770d86ab23678b984430f22a963e5484881b7
     Signer:
     - SerialNumber: 5ece8cdb4d508efee821a7cfff5b8016
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
@@ -1244,13 +1279,13 @@ KnownVulnerableSamples:
       Entropy: 6.059318111466569
       Virtual Size: '0x42d4'
     .rdata:
-      Entropy: 4.215605826640909
+      Entropy: 4.21560582664091
       Virtual Size: '0x434'
     .data:
       Entropy: 0.8622020313988807
       Virtual Size: '0x138'
     .pdata:
-      Entropy: 3.864487603588554
+      Entropy: 3.864487603588553
       Virtual Size: '0x114'
     PAGE:
       Entropy: 5.406915958125919
@@ -1259,7 +1294,7 @@ KnownVulnerableSamples:
       Entropy: 5.236703969449414
       Virtual Size: '0x80e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-02-15 22:32:24'
+  CreationTimestamp: '2015-02-16 00:32:24'
 - Filename: DirectIo64.sys
   MD5: 7978d858168fadd05c17779da5f4695a
   SHA1: 2db49bdf8029fdcda0a2f722219ae744eae918b0
@@ -1366,6 +1401,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=AU, ??=Private Organization, serialNumber=099 321 392, C=AU, ST=New
         South Wales, L=Surry Hills, O=PassMark Software Pty Ltd, CN=PassMark Software
         Pty Ltd
@@ -1380,6 +1416,7 @@ KnownVulnerableSamples:
         MD5: fd290a4891edd36420e082391a96d9b0
         SHA1: fe33d6386cb017f4d39d5b1e21861bbc387aae7a
         SHA256: 57e2af9bbd6fed434ad5df9b194936fc6d3a1b71658bdd31c2d289f8a0f5c2e0
+        SHA384: feff93a9900bd0c3ac0d46892b5c06dc002eb55bc2daa6c4d62d20491c9f5141771c7563166751af02b2308059449e52
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       ValidFrom: '2012-04-18 12:00:00'
@@ -1393,6 +1430,7 @@ KnownVulnerableSamples:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
         SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
     Signer:
     - SerialNumber: 0d671c2c3c13676231329afa97b1ec2b
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -1413,10 +1451,10 @@ KnownVulnerableSamples:
       Entropy: 3.1174924611847556
       Virtual Size: '0x18'
     .pdata:
-      Entropy: 3.8748693325097565
+      Entropy: 3.874869332509757
       Virtual Size: '0x1a4'
     PAGE:
-      Entropy: 5.139743175424712
+      Entropy: 5.1397431754247105
       Virtual Size: '0xb8'
     INIT:
       Entropy: 5.280103711506725
@@ -1425,7 +1463,7 @@ KnownVulnerableSamples:
       Entropy: 2.7678941476196224
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-08-11 23:44:52'
+  CreationTimestamp: '2020-08-12 01:44:52'
 - Filename: DirectIo64.sys
   MD5: d660fc7255646d5014d45c3bca9c6e20
   SHA1: 01b95ae502aa09aabc69a0482fcc8198f7765950
@@ -1532,6 +1570,7 @@ KnownVulnerableSamples:
         MD5: 2baec9756b3a504265976c41516baaaf
         SHA1: ab61870aef61c26f46ca1b47b31cdb8e913e761a
         SHA256: a3f1d66a2b69dbde47793b58177920f95c7cc03478edbdca0fcc8126c3f85c9c
+        SHA384: 8b19e693cc12862c8dbfd5af03e4205c3783a25720024b425edd461bbade11f879ccaf90811e9f856089d7df62eee26e
     - Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
         RSA Extended Validation Code Signing CA
       ValidFrom: '2014-12-03 00:00:00'
@@ -1545,6 +1584,7 @@ KnownVulnerableSamples:
         MD5: e3898a5cae592360ce7bfdf5ff3fb13f
         SHA1: 217c51b90dbb7f0528e8ba170d227f647fbc995b
         SHA256: 3a9b4006a9e125b4458344389c86dfb4f6728848b9871654c615a138514d02ec
+        SHA384: fcd8dd15125f14b84fec55838806355ec3787407188bac83c2c0d6c841adf9ac76ee83eccc5c9463f1f88fc5295a31ee
     Signer:
     - SerialNumber: 00c230ef10f73148fd583fc3836a573892
       Issuer: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
@@ -1556,7 +1596,7 @@ KnownVulnerableSamples:
     SHA256: 960e71301913e91402d391fb433fa2ef911efc4815b7e8d40a0f3b7678a3d921
   Sections:
     .text:
-      Entropy: 6.077838124140272
+      Entropy: 6.077838124140273
       Virtual Size: '0x3daa'
     .rdata:
       Entropy: 3.9535065165874417
@@ -1568,7 +1608,7 @@ KnownVulnerableSamples:
       Entropy: 3.970239889641578
       Virtual Size: '0x1c8'
     PAGE:
-      Entropy: 5.139743175424712
+      Entropy: 5.1397431754247105
       Virtual Size: '0xb8'
     INIT:
       Entropy: 5.2866904768043925
@@ -1577,7 +1617,7 @@ KnownVulnerableSamples:
       Entropy: 3.471001127588696
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-06-27 22:21:07'
+  CreationTimestamp: '2022-06-28 00:21:07'
 - Filename: DirectIo64.sys
   MD5: b3424a229d845a88340045c29327c529
   SHA1: ffabdf33635bdc1ed1714bc8bbfd7b73ef78a37c
@@ -1684,6 +1724,7 @@ KnownVulnerableSamples:
         MD5: 2baec9756b3a504265976c41516baaaf
         SHA1: ab61870aef61c26f46ca1b47b31cdb8e913e761a
         SHA256: a3f1d66a2b69dbde47793b58177920f95c7cc03478edbdca0fcc8126c3f85c9c
+        SHA384: 8b19e693cc12862c8dbfd5af03e4205c3783a25720024b425edd461bbade11f879ccaf90811e9f856089d7df62eee26e
     - Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
         RSA Extended Validation Code Signing CA
       ValidFrom: '2014-12-03 00:00:00'
@@ -1697,6 +1738,7 @@ KnownVulnerableSamples:
         MD5: e3898a5cae592360ce7bfdf5ff3fb13f
         SHA1: 217c51b90dbb7f0528e8ba170d227f647fbc995b
         SHA256: 3a9b4006a9e125b4458344389c86dfb4f6728848b9871654c615a138514d02ec
+        SHA384: fcd8dd15125f14b84fec55838806355ec3787407188bac83c2c0d6c841adf9ac76ee83eccc5c9463f1f88fc5295a31ee
     Signer:
     - SerialNumber: 00c230ef10f73148fd583fc3836a573892
       Issuer: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
@@ -1708,7 +1750,7 @@ KnownVulnerableSamples:
     SHA256: 960e71301913e91402d391fb433fa2ef911efc4815b7e8d40a0f3b7678a3d921
   Sections:
     .text:
-      Entropy: 6.077838124140272
+      Entropy: 6.077838124140273
       Virtual Size: '0x3daa'
     .rdata:
       Entropy: 3.9535065165874417
@@ -1720,7 +1762,7 @@ KnownVulnerableSamples:
       Entropy: 3.970239889641578
       Virtual Size: '0x1c8'
     PAGE:
-      Entropy: 5.139743175424712
+      Entropy: 5.1397431754247105
       Virtual Size: '0xb8'
     INIT:
       Entropy: 5.2866904768043925
@@ -1729,6 +1771,6 @@ KnownVulnerableSamples:
       Entropy: 3.471001127588696
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-06-27 22:21:07'
+  CreationTimestamp: '2022-06-28 00:21:07'
 Tags:
 - directio64.sys

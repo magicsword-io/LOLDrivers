@@ -77,6 +77,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -90,6 +91,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom
         Certification Authority
       ValidFrom: '2011-04-15 20:13:19'
@@ -103,6 +105,7 @@ KnownVulnerableSamples:
         MD5: 5b3304180221a8328ce477b1fd93898f
         SHA1: 9b7f1e1653a52d801387f1e51d17fabb8d435d0c
         SHA256: 67070bcf2ee304cedd252a1dd8a7222c1be50fd2d5eabef9446cb633e133d264
+        SHA384: be36b1ba9a006afb9eb53263634cb8ca38dd6ca7f95ec56f943324f3a26f9c34c2dff1a3a5c72c88513e23e1f20c8824
     - Subject: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom
         Class 3 Primary Intermediate Object CA
       ValidFrom: '2007-10-24 22:03:55'
@@ -116,6 +119,7 @@ KnownVulnerableSamples:
         MD5: 40b719dc6e7a16f1672333943daca04b
         SHA1: fbb05f9486d50f8f35013e531f1504e9f62cb3df
         SHA256: 4997f6bbc707da19c7897e17a916d35dfbd8112bb671ac5d2d9397c690b7ba5c
+        SHA384: f73bf1c578a221661f96516389fd512e150551bab68487c981a2dfbb172419e2d2e5b00f52b50a251b9ff5dcb0be83df
     - Subject: ??=Hdgwyqp6jNS97z8P, C=US, ST=Indiana, L=Fishers, O=Exacq Technologies,
         Inc., CN=Exacq Technologies, Inc., emailAddress=info@exacq.com
       ValidFrom: '2014-07-24 18:00:20'
@@ -129,6 +133,7 @@ KnownVulnerableSamples:
         MD5: f5497dbe7af27561736a3ba6935044e8
         SHA1: 50728ba20d7ee0726bb8aa4a9d9659f7c938830f
         SHA256: e468a80174391ca98a6720033afaec1f31468ac2aeee5938ff0350977ec443fe
+        SHA384: 5b5ae06ffc6250a52e3085bc0c8da4f74d722ff772535cb5f14588218b3dcad60f5b09c79afb2e189b4f60a11e286f63
     Signer:
     - SerialNumber: 0f69
       Issuer: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom
@@ -152,13 +157,13 @@ KnownVulnerableSamples:
       Entropy: 3.595150149062291
       Virtual Size: '0xc0'
     INIT:
-      Entropy: 4.92328698169394
+      Entropy: 4.923286981693941
       Virtual Size: '0x326'
     .reloc:
       Entropy: 1.4575187496394217
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-05-19 09:29:34'
+  CreationTimestamp: '2014-05-19 11:29:34'
 - Filename: WinIo64.sys
   MD5: 7c0b186d1912686cfcb8cd9cdebabe58
   SHA1: 6bb68e1894bfbc1ac86bcdc048f7fe7743de2f92
@@ -218,6 +223,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -231,6 +237,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom
         Certification Authority
       ValidFrom: '2011-04-15 20:13:19'
@@ -244,6 +251,7 @@ KnownVulnerableSamples:
         MD5: 5b3304180221a8328ce477b1fd93898f
         SHA1: 9b7f1e1653a52d801387f1e51d17fabb8d435d0c
         SHA256: 67070bcf2ee304cedd252a1dd8a7222c1be50fd2d5eabef9446cb633e133d264
+        SHA384: be36b1ba9a006afb9eb53263634cb8ca38dd6ca7f95ec56f943324f3a26f9c34c2dff1a3a5c72c88513e23e1f20c8824
     - Subject: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom
         Class 3 Primary Intermediate Object CA
       ValidFrom: '2007-10-24 22:03:55'
@@ -257,6 +265,7 @@ KnownVulnerableSamples:
         MD5: 40b719dc6e7a16f1672333943daca04b
         SHA1: fbb05f9486d50f8f35013e531f1504e9f62cb3df
         SHA256: 4997f6bbc707da19c7897e17a916d35dfbd8112bb671ac5d2d9397c690b7ba5c
+        SHA384: f73bf1c578a221661f96516389fd512e150551bab68487c981a2dfbb172419e2d2e5b00f52b50a251b9ff5dcb0be83df
     - Subject: ??=Hdgwyqp6jNS97z8P, C=US, ST=Indiana, L=Fishers, O=Exacq Technologies,
         Inc., CN=Exacq Technologies, Inc., emailAddress=info@exacq.com
       ValidFrom: '2014-07-24 18:00:20'
@@ -270,6 +279,7 @@ KnownVulnerableSamples:
         MD5: f5497dbe7af27561736a3ba6935044e8
         SHA1: 50728ba20d7ee0726bb8aa4a9d9659f7c938830f
         SHA256: e468a80174391ca98a6720033afaec1f31468ac2aeee5938ff0350977ec443fe
+        SHA384: 5b5ae06ffc6250a52e3085bc0c8da4f74d722ff772535cb5f14588218b3dcad60f5b09c79afb2e189b4f60a11e286f63
     Signer:
     - SerialNumber: 0f69
       Issuer: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom
@@ -293,12 +303,12 @@ KnownVulnerableSamples:
       Entropy: 3.595150149062291
       Virtual Size: '0xc0'
     INIT:
-      Entropy: 4.92328698169394
+      Entropy: 4.923286981693941
       Virtual Size: '0x326'
     .reloc:
       Entropy: 1.4575187496394217
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-05-19 09:29:34'
+  CreationTimestamp: '2014-05-19 11:29:34'
 Tags:
 - winio64.sys

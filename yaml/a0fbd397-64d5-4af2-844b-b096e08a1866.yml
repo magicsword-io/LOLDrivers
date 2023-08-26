@@ -138,6 +138,7 @@ KnownVulnerableSamples:
         MD5: 92b6022918bc02eb361b8a02fb1da57d
         SHA1: 8ceb945fac0f6d623d464e21740ae6eb60351652
         SHA256: c1446860a1cd9db490d3ea85e9df05df44af8d44e2bb803a2a2018f3b6c41bcb
+        SHA384: 322ed1a62a9f2ed7c7f601e99a8db15371e3ba1039a73c81801165ea987679023bc36f8c357f74354dce65532b71be3c
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Code Signing PCA 2011
       ValidFrom: '2011-07-08 20:59:09'
@@ -151,6 +152,7 @@ KnownVulnerableSamples:
         MD5: b4ec95434f1d45b8055077cf90540a5f
         SHA1: 71f74db41d045d6eaf81a849bbb3e21544edcff4
         SHA256: f6f717a43ad9abddc8cefdde1c505462535e7d1307e630f9544a2d14fe8bf26e
+        SHA384: 25cbac323e740588a1ea3ca39ea907647440884ad75fc4bd99be6c82202aba42e95049fa7b66884977e60b819b21a2a5
     Signer:
     - SerialNumber: 33000002528b33aaf895f339db000000000252
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -162,10 +164,10 @@ KnownVulnerableSamples:
     SHA256: 93963bed2c58da923a8df184e6443740eba6ecb6949996b6568f42fe525bf906
   Sections:
     .text:
-      Entropy: 6.307312732264105
+      Entropy: 6.307312732264104
       Virtual Size: '0x3980'
     .rdata:
-      Entropy: 4.780683221400144
+      Entropy: 4.780683221400145
       Virtual Size: '0x56c'
     .data:
       Entropy: 2.7659755587497967
@@ -180,13 +182,13 @@ KnownVulnerableSamples:
       Entropy: 5.7784312613823845
       Virtual Size: '0xb38'
     .rsrc:
-      Entropy: 3.2963910982792863
+      Entropy: 3.296391098279287
       Virtual Size: '0x360'
     .reloc:
       Entropy: 1.3741854163060885
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-15 23:19:18'
+  CreationTimestamp: '2013-01-16 01:19:18'
 - Filename: libnicm.sys
   MD5: cfad9185ffcf5850b5810c28b24d5fc8
   SHA1: 87f313fc30ec8759b391e9d6c08f79b02f3ecebd
@@ -297,6 +299,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -309,6 +312,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -323,6 +327,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2007-04-04 00:00:00'
@@ -336,6 +341,7 @@ KnownVulnerableSamples:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
         SHA256: d98d63f26125a94eb767fdd2526f6c74bfb40cb4d117a1d87ca3ed0d99bd6f0b
+        SHA384: cf20d9d6343b52b05ebaeace8a75ad950089e2d55508571cf5b153583fdf2d7b11bc61b8f38bfa70f09b2e7ac63d9ef5
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -348,6 +354,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -384,7 +391,7 @@ KnownVulnerableSamples:
       Entropy: 1.3741854163060885
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-27 11:53:33'
+  CreationTimestamp: '2009-03-27 13:53:33'
 - Filename: libnicm.sys
   MD5: 0809f48fd30845d983d569b847fa83cf
   SHA1: c02cb8256dfb37f690f2698473fe5428d17bc178
@@ -497,6 +504,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -509,6 +517,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -523,6 +532,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2007-04-04 00:00:00'
@@ -536,6 +546,7 @@ KnownVulnerableSamples:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
         SHA256: d98d63f26125a94eb767fdd2526f6c74bfb40cb4d117a1d87ca3ed0d99bd6f0b
+        SHA384: cf20d9d6343b52b05ebaeace8a75ad950089e2d55508571cf5b153583fdf2d7b11bc61b8f38bfa70f09b2e7ac63d9ef5
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -548,6 +559,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -581,7 +593,7 @@ KnownVulnerableSamples:
       Entropy: 5.760669973768758
       Virtual Size: '0x3d2'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-27 11:49:09'
+  CreationTimestamp: '2009-03-27 13:49:09'
 - Filename: libnicm.sys
   MD5: 6ae9d25e02b54367a4e93c2492b8b02e
   SHA1: cfdf9c9125755f4e81fa7cc5410d7740fdfea4ed
@@ -692,6 +704,7 @@ KnownVulnerableSamples:
         MD5: 92b6022918bc02eb361b8a02fb1da57d
         SHA1: 8ceb945fac0f6d623d464e21740ae6eb60351652
         SHA256: c1446860a1cd9db490d3ea85e9df05df44af8d44e2bb803a2a2018f3b6c41bcb
+        SHA384: 322ed1a62a9f2ed7c7f601e99a8db15371e3ba1039a73c81801165ea987679023bc36f8c357f74354dce65532b71be3c
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Code Signing PCA 2011
       ValidFrom: '2011-07-08 20:59:09'
@@ -705,6 +718,7 @@ KnownVulnerableSamples:
         MD5: b4ec95434f1d45b8055077cf90540a5f
         SHA1: 71f74db41d045d6eaf81a849bbb3e21544edcff4
         SHA256: f6f717a43ad9abddc8cefdde1c505462535e7d1307e630f9544a2d14fe8bf26e
+        SHA384: 25cbac323e740588a1ea3ca39ea907647440884ad75fc4bd99be6c82202aba42e95049fa7b66884977e60b819b21a2a5
     Signer:
     - SerialNumber: 33000002528b33aaf895f339db000000000252
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -716,10 +730,10 @@ KnownVulnerableSamples:
     SHA256: 93963bed2c58da923a8df184e6443740eba6ecb6949996b6568f42fe525bf906
   Sections:
     .text:
-      Entropy: 6.307312732264105
+      Entropy: 6.307312732264104
       Virtual Size: '0x3980'
     .rdata:
-      Entropy: 4.780683221400144
+      Entropy: 4.780683221400145
       Virtual Size: '0x56c'
     .data:
       Entropy: 2.7659755587497967
@@ -731,7 +745,7 @@ KnownVulnerableSamples:
       Entropy: 4.8209283897016855
       Virtual Size: '0x18e'
     INIT:
-      Entropy: 5.8834626044862475
+      Entropy: 5.883462604486247
       Virtual Size: '0xb38'
     .rsrc:
       Entropy: 6.471949403238668
@@ -740,7 +754,7 @@ KnownVulnerableSamples:
       Entropy: 3.5739348962840563
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-15 23:19:18'
+  CreationTimestamp: '2013-01-16 01:19:18'
 - Filename: libnicm.sys
   MD5: 34a7fab63a4ed5a0b61eb204828e08e5
   SHA1: 469c04cb7841eedd43227facaf60a6d55cf21fd7
@@ -851,6 +865,7 @@ KnownVulnerableSamples:
         MD5: 7ece739fdaa27d96b67f587db04186a7
         SHA1: b8701efa0ab12b8fea2293c9cff8772ecca084d0
         SHA256: c1392bdcbb0b50215fca8c78f25c2d857e515dce06c87ce86527c88c91d5d7e4
+        SHA384: 8d292e8db16824f3ac9d668816c4cf521a9eb251069694c92932683afcaa4e53d5fa3a1f58356749e655299ed83fe191
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Production PCA 2011
       ValidFrom: '2011-10-19 18:41:42'
@@ -864,6 +879,7 @@ KnownVulnerableSamples:
         MD5: 30a3f0b64324ed7f465e7fc618cb69e7
         SHA1: 002de3561519b662c5e3f5faba1b92c403fb7c41
         SHA256: 4e80be107c860de896384b3eff50504dc2d76ac7151df3102a4450637a032146
+        SHA384: 4f9a02c3eac5e83c38074d54c0bf270e03a1d668e0001c9812c509eb08a19075ee778a7630e65598e4608fc66e2d1c66
     Signer:
     - SerialNumber: 330000036ce57eeb5d1cc2be1700000000036c
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -875,10 +891,10 @@ KnownVulnerableSamples:
     SHA256: 93963bed2c58da923a8df184e6443740eba6ecb6949996b6568f42fe525bf906
   Sections:
     .text:
-      Entropy: 6.307312732264105
+      Entropy: 6.307312732264104
       Virtual Size: '0x3980'
     .rdata:
-      Entropy: 4.780683221400144
+      Entropy: 4.780683221400145
       Virtual Size: '0x56c'
     .data:
       Entropy: 2.7659755587497967
@@ -890,7 +906,7 @@ KnownVulnerableSamples:
       Entropy: 4.8209283897016855
       Virtual Size: '0x18e'
     INIT:
-      Entropy: 5.8834626044862475
+      Entropy: 5.883462604486247
       Virtual Size: '0xb38'
     .rsrc:
       Entropy: 6.471949403238668
@@ -899,6 +915,6 @@ KnownVulnerableSamples:
       Entropy: 3.5739348962840563
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-15 23:19:18'
+  CreationTimestamp: '2013-01-16 01:19:18'
 Tags:
 - libnicm.sys

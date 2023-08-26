@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 6991be9952aa08c0d2ac9fa728410ebdb44988b496ed01b8b7f478785ebb30c4
   Company: BIOSTAR Group
   Copyright: Copyright (c) 2018-2019 BIOSTAR Group
-  CreationTimestamp: '2019-01-10 19:06:10'
+  CreationTimestamp: '2019-01-10 21:06:10'
   Date: ''
   Description: I/O Interface driver file
   ExportedFunctions: ''
@@ -102,13 +102,13 @@ KnownVulnerableSamples:
       Entropy: 0.43605306823188833
       Virtual Size: '0x14c'
     .pdata:
-      Entropy: 3.811817272023083
+      Entropy: 3.8118172720230836
       Virtual Size: '0x168'
     INIT:
-      Entropy: 5.343740869583082
+      Entropy: 5.3437408695830815
       Virtual Size: '0x550'
     .rsrc:
-      Entropy: 3.3065491006589522
+      Entropy: 3.3065491006589527
       Virtual Size: '0x410'
   Signature:
   - Microsoft Windows Hardware Compatibility Publisher
@@ -131,6 +131,7 @@ KnownVulnerableSamples:
         MD5: 60cb2d8488f8724a67bf3254e6a57ff1
         SHA1: 37aef77a1afaa33ac5787fc43a2c1e2509a19eb1
         SHA256: 495a6ff7ace92f915eb1753c4c0b32612056e6d320bb17ff90346db3aa357432
+        SHA384: 2a90dcf67abc92f070775de78ecf066e7730ea57b4c4d6c64cfdd66c3eb0f639ac188b24571a9f600ef017737a71decf
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -144,6 +145,7 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 33000000253a2738690a3451c1000000000025
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft

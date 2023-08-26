@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 9f86fc8a6eaa3b38f33be4a0d552c184e575afa50a60df7383c06a394e3926d8
   Company: TG Soft S.a.s.
   Copyright: Copyright (C) TG Soft S.a.s. 2006, 2013 - www.tgsoft.it
-  CreationTimestamp: '2013-01-23 01:38:45'
+  CreationTimestamp: '2013-01-23 03:38:45'
   Date: ''
   Description: VirIT Agent System
   ExportedFunctions: ''
@@ -172,7 +172,7 @@ KnownVulnerableSamples:
   SHA256: e05eeb2b8c18ad2cb2d1038c043d770a0d51b96b748bc34be3e7fc6f3790ce53
   Sections:
     .text:
-      Entropy: 6.747532035906447
+      Entropy: 6.747532035906448
       Virtual Size: '0xdbb5'
     NonPaged:
       Entropy: 6.71406382908674
@@ -184,13 +184,13 @@ KnownVulnerableSamples:
       Entropy: 0.04519006846517909
       Virtual Size: '0x364c'
     INIT:
-      Entropy: 5.662214565720019
+      Entropy: 5.66221456572002
       Virtual Size: '0xa84'
     .rsrc:
       Entropy: 3.3233696108191855
       Virtual Size: '0x430'
     .reloc:
-      Entropy: 6.276829324907502
+      Entropy: 6.276829324907503
       Virtual Size: '0xf58'
   Signature:
   - TG Soft S.a.s. Di Tonello Gianfranco e C.
@@ -213,6 +213,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -226,6 +227,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -240,6 +242,7 @@ KnownVulnerableSamples:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
         SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -252,6 +255,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=IT, ST=Padova, L=Rubano, O=TG Soft S.a.s. Di Tonello Gianfranco e
         C., OU=Digital ID Class 3 , Microsoft Software Validation v2, CN=TG Soft S.a.s.
         Di Tonello Gianfranco e C.
@@ -266,6 +270,7 @@ KnownVulnerableSamples:
         MD5: 1f0b47e6661a3261d4c982b2eb35b0ec
         SHA1: 8320a06969446f33184f8a25a91942870a5a54d5
         SHA256: 15e095f260d9ceca3f947817c1f53ddf687e32438d55a51be1b66785183e9840
+        SHA384: 184afc72b02ad7f852cdc9db26f294ce37ac12ec9ed3375d34acf6918a1662c0afd7d1cc39ecf1decc7e667645a3fc67
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -280,6 +285,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 4cccaccf48f6d93fb37178d7fce6209c
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -292,7 +298,7 @@ KnownVulnerableSamples:
     SHA256: 554bf34bde5e7c86fc463496d19a4369d911ccad90e3c684855192cd677641c4
   Company: TG Soft S.a.s.
   Copyright: Copyright (C) TG Soft S.a.s. 2011, 2013 - www.tgsoft.it
-  CreationTimestamp: '2013-11-29 05:03:41'
+  CreationTimestamp: '2013-11-29 07:03:41'
   Date: ''
   Description: VirIT Agent System
   ExportedFunctions: ''
@@ -386,19 +392,19 @@ KnownVulnerableSamples:
   SHA256: a2096b460e31451659b0dde752264c362f47254c8191930bc921ff16a4311641
   Sections:
     .text:
-      Entropy: 6.3652977072668016
+      Entropy: 6.365297707266801
       Virtual Size: '0xb1da'
     .rdata:
       Entropy: 4.99053189312109
       Virtual Size: '0xc04'
     .data:
-      Entropy: 0.9258397206248276
+      Entropy: 0.9258397206248277
       Virtual Size: '0x3878'
     .pdata:
-      Entropy: 4.342028159341795
+      Entropy: 4.342028159341793
       Virtual Size: '0x318'
     INIT:
-      Entropy: 5.227110365700928
+      Entropy: 5.22711036570093
       Virtual Size: '0x842'
     .rsrc:
       Entropy: 3.311386289808379
@@ -424,6 +430,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -437,6 +444,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -451,6 +459,7 @@ KnownVulnerableSamples:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
         SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -463,6 +472,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=IT, ST=Padova, L=Rubano, O=TG Soft S.a.s. Di Tonello Gianfranco e
         C., OU=Digital ID Class 3 , Microsoft Software Validation v2, CN=TG Soft S.a.s.
         Di Tonello Gianfranco e C.
@@ -477,6 +487,7 @@ KnownVulnerableSamples:
         MD5: 1f0b47e6661a3261d4c982b2eb35b0ec
         SHA1: 8320a06969446f33184f8a25a91942870a5a54d5
         SHA256: 15e095f260d9ceca3f947817c1f53ddf687e32438d55a51be1b66785183e9840
+        SHA384: 184afc72b02ad7f852cdc9db26f294ce37ac12ec9ed3375d34acf6918a1662c0afd7d1cc39ecf1decc7e667645a3fc67
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -491,6 +502,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 4cccaccf48f6d93fb37178d7fce6209c
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at

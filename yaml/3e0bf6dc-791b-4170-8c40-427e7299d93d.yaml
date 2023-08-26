@@ -48,7 +48,7 @@ KnownVulnerableSamples:
     SHA256: 8bce4a327c9e77631c03057b0e45cdbb2e751194d42995c0310e3ccdd3d33b7c
   Company: Rivet Networks, LLC.
   Copyright: Copyright (C) 2015-2018 Rivet Networks, LLC.
-  CreationTimestamp: '2021-03-22 12:11:11'
+  CreationTimestamp: '2021-03-22 14:11:11'
   Date: ''
   Description: Killer Traffic Control Callout Driver
   ExportedFunctions: ''
@@ -196,13 +196,13 @@ KnownVulnerableSamples:
       Entropy: 5.3747108436250635
       Virtual Size: '0x15b4'
     PAGE:
-      Entropy: 5.469889141982762
+      Entropy: 5.469889141982761
       Virtual Size: '0x120'
     INIT:
       Entropy: 5.3585580911922355
       Virtual Size: '0xeea'
     .rsrc:
-      Entropy: 3.6394619362630465
+      Entropy: 3.639461936263046
       Virtual Size: '0xc40'
     .reloc:
       Entropy: 3.99391294150606
@@ -224,6 +224,7 @@ KnownVulnerableSamples:
         MD5: 442b1dbda48f9394d93cd7f179212f66
         SHA1: 61311e42ae706d22a7e44fb2f99334fcdaa56f77
         SHA256: 49384716c6fa94187600b02c48dda179ee50019c6160c23bb031169dc30bcb61
+        SHA384: 5f3c9d0c0a595c967418907dd5c5b05f3202a02e577cb55ae21d06384dc658d964d44a4ca3c7fb529c2a4a609a3486dc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
         ID Code Signing CA
       ValidFrom: '2013-10-22 12:00:00'
@@ -237,6 +238,7 @@ KnownVulnerableSamples:
         MD5: 9359496ca4f021408b9d8923cab8b179
         SHA1: 2aed40d7759997830870769be250199fd609e40e
         SHA256: e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65
+        SHA384: 5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
         CA
       ValidFrom: '2011-04-15 19:41:37'
@@ -250,6 +252,7 @@ KnownVulnerableSamples:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
         SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
     Signer:
     - SerialNumber: 0824024fda0b4b1b496eeeddfcff6e16
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured

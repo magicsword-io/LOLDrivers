@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: ab494aba56e9ea7b6055ac437f6b678e7239b0fda54bf28019480565a098a6e3
   Company: Huawei
   Copyright: Copyright (C) 2016
-  CreationTimestamp: '2018-03-23 00:56:31'
+  CreationTimestamp: '2018-03-23 02:56:31'
   Date: ''
   Description: HwOs2Ec
   ExportedFunctions: ''
@@ -158,16 +158,16 @@ KnownVulnerableSamples:
       Entropy: 0.30140680731160896
       Virtual Size: '0x27c'
     .pdata:
-      Entropy: 4.330099069591839
+      Entropy: 4.3300990695918395
       Virtual Size: '0x3d8'
     .gfids:
-      Entropy: 0.8112781244591328
+      Entropy: 0.8112781244591329
       Virtual Size: '0x4'
     PAGE:
-      Entropy: 6.294080780063295
+      Entropy: 6.294080780063294
       Virtual Size: '0x2160'
     INIT:
-      Entropy: 5.409627830089687
+      Entropy: 5.409627830089686
       Virtual Size: '0xb68'
     .rsrc:
       Entropy: 3.2265908774923377
@@ -195,6 +195,7 @@ KnownVulnerableSamples:
         MD5: d67576f5521d1ccab52e9215e0f9f743
         SHA1: 725a5684e8ab40f2155bbd7a4490a3fbb0fa747b
         SHA256: 676c4e84e727f5004c10bb52017676f46bd54d69499017e9fd58271ec341d739
+        SHA384: 92c454a9d235f2087ac03a0889b51bfc96539132ebe14a02a07d9287473a21b0a65886496ef68878df21422318064284
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
         , G2
       ValidFrom: '2012-12-21 00:00:00'
@@ -208,6 +209,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: OU=Copyright (c) 1997 Microsoft Corp., OU=Microsoft Corporation, CN=Microsoft
         Root Authority
       ValidFrom: '1997-01-10 07:00:00'
@@ -221,6 +223,7 @@ KnownVulnerableSamples:
         MD5: 8b3c3087b7056f5ec5ddba91a1b901f0
         SHA1: 10792d184e6eb874504fd0d5ec06cabc0229da56
         SHA256: b0f310311013abfe7a7b41182ad99bc9846bdf91c432d48aa1777208150185a4
+        SHA384: 7b8d4a70780f1827a39dce0f6d4a32e2ba18d837fc4e4664b98569c346c67cc5c90efbadd53794bc91c41024decab2ff
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -234,6 +237,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       ValidFrom: '2014-03-04 00:00:00'
@@ -247,6 +251,7 @@ KnownVulnerableSamples:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
+        SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
     - Subject: ??=CN, ??=Guangdong, ??=Shenzhen, ??=Private Organization, serialNumber=914403001922038216,
         C=CN, ST=guangdong, L=shenzhen, O=Huawei Technologies Co., Ltd., CN=Huawei
         Technologies Co., Ltd.
@@ -261,6 +266,7 @@ KnownVulnerableSamples:
         MD5: 43be09b45818339b6233a11e2475e003
         SHA1: 063e6aeb12a5bf2b6e02ebcda4cd474662a5be18
         SHA256: a71bb69621ea11ab4ce55b9e83589fed52e4273e838fbab7992e024cef88601a
+        SHA384: 6c8c9e1ab7a6ac3c02c3400d777229f5ee8dbf561f22127c36da5c2b638ad1e90fbb9386271643946a81cb5b8811b9a7
     - Subject: DC=com, DC=microsoft, CN=Microsoft Root Certificate Authority
       ValidFrom: '2001-05-09 23:19:22'
       ValidTo: '2021-05-09 23:28:13'
@@ -273,6 +279,7 @@ KnownVulnerableSamples:
         MD5: ca846b34f2abfeea2228098843a0e0c6
         SHA1: 391be92883d52509155bfeae27b9bd340170b76b
         SHA256: 855920f04434989fc8f601eecd2f79ff93fe51b541d63aa94bef1425cd7d521d
+        SHA384: cd8d5f1c2d282098fd92fd831a4ecbec74c4f97ba26ce2a0953cb2c367afb1469c7441554e4ecefe56ef44f281196043
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -287,6 +294,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Code Verification Root
       ValidFrom: '2005-11-01 13:46:46'
@@ -300,6 +308,7 @@ KnownVulnerableSamples:
         MD5: ee8df66ce2c464c64bb9a9eb9cbd7e90
         SHA1: f4e3b23c5b3673fb06339c35314279fdee1e003f
         SHA256: 6d260763a05a13ab7823c6d584f19e5dab26e8e6b56d305ecc7376cd23f411fb
+        SHA384: 7cb39e0131ea77825f441568bd91846811955cd0f45d547020173347f4fd3d7dfe5bc4952fa4f9675902c4a869328196
     Signer:
     - SerialNumber: 45d8f42e053d18c5e90f3febd6e17ad7
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec

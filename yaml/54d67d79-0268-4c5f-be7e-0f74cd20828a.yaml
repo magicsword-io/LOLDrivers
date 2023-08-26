@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 4a05ad47cd63932b3df2d0f1f42617321729772211bec651fe061140d3e75957
   Company: MSI
   Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
-  CreationTimestamp: '2011-01-05 20:05:14'
+  CreationTimestamp: '2011-01-05 22:05:14'
   Date: ''
   Description: NTIOLib
   ExportedFunctions: ''
@@ -93,7 +93,7 @@ KnownVulnerableSamples:
       Entropy: 4.846887314724898
       Virtual Size: '0x222'
     .rsrc:
-      Entropy: 3.2498244109800973
+      Entropy: 3.249824410980098
       Virtual Size: '0x370'
   Signature:
   - Micro-Star Int'l Co. Ltd.
@@ -117,6 +117,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=TW, O=Micro,Star Int'l Co. Ltd., CN=Micro,Star Int'l Co. Ltd.
       ValidFrom: '2008-08-28 09:49:45'
       ValidTo: '2011-08-28 09:49:45'
@@ -129,6 +130,7 @@ KnownVulnerableSamples:
         MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
         SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
         SHA256: 88a8e9a799af515b9223e4cdf24d0ef1e72f12124be02786f026a3c26317b417
+        SHA384: d8d8769d5b6a0fe7c56fcde24c735475ee0e5d01c63dbf7690cdae5a3e251818bed42443d0c6424d39e81a19d6c83bdb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -142,6 +144,7 @@ KnownVulnerableSamples:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
         SHA256: 60846fc990e271a707cd2d53d0bb21834a04f7652214aa0c12597ff6649d352d
+        SHA384: 6b37b28ca97b32a31b0fa53b5e961ae0f2d1aae2c5bf46de132e57834ee3968d9af7ad204821f9389cc4e0b5a8481fe8
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -154,6 +157,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000011c08b7f67e
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
