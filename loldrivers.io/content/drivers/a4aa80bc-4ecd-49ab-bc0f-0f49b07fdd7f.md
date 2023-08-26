@@ -267,7 +267,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "d0785ad36e427c92b19f6826ab1e8020",
         "SHA1": "365b7a9c21bd9373e49052c3e7b3e4646ddd4d43",
-        "SHA256": "c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff"
+        "SHA256": "c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff",
+        "SHA384": "eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b"
       },
       "ValidFrom": "2012-12-21 00:00:00",
       "ValidTo": "2020-12-30 23:59:59",
@@ -282,7 +283,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "e9d38360b914c8863f6cba3ee58764d3",
         "SHA1": "4cba8eae47b6bf76f20b3504b98b8f062694a89b",
-        "SHA256": "88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976"
+        "SHA256": "88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976",
+        "SHA384": "e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652"
       },
       "ValidFrom": "2012-10-18 00:00:00",
       "ValidTo": "2020-12-29 23:59:59",
@@ -297,7 +299,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "918d9eb6a6cd36c531eceb926170a7e1",
         "SHA1": "0ae95700d65e6f59715aa47048993ca7858e676a",
-        "SHA256": "47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166"
+        "SHA256": "47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166",
+        "SHA384": "e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85"
       },
       "ValidFrom": "2006-11-08 00:00:00",
       "ValidTo": "2021-11-07 23:59:59",
@@ -312,7 +315,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "53c41bc1164e09e0cd1617a5bf913efd",
         "SHA1": "93c03aac8951d494ecd5696b1c08658541b18727",
-        "SHA256": "40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b"
+        "SHA256": "40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b",
+        "SHA384": "f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8"
       },
       "ValidFrom": "2006-05-23 17:01:29",
       "ValidTo": "2016-05-23 17:11:29",
@@ -327,7 +331,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "768c1a47836a7536fbc50e7be60e65ff",
         "SHA1": "569a77bd8a095070b13b75bc81cd0422f746daa3",
-        "SHA256": "d5289c20d1f89ac5000b691627764379d369c68ab7d53425baa8e83f09b5b369"
+        "SHA256": "d5289c20d1f89ac5000b691627764379d369c68ab7d53425baa8e83f09b5b369",
+        "SHA384": "92eb214d60e1c7342eb7b4863dd634d364d80494b4090301e872fba4d2efbec2a799d49f0ac9590f8c61e0fb3b905af3"
       },
       "ValidFrom": "2012-12-28 00:00:00",
       "ValidTo": "2016-01-27 23:59:59",
@@ -342,7 +347,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "b30c31a572b0409383ed3fbe17e56e81",
         "SHA1": "4843a82ed3b1f2bfbee9671960e1940c942f688d",
-        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9"
+        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9",
+        "SHA384": "bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da"
       },
       "ValidFrom": "2010-02-08 00:00:00",
       "ValidTo": "2020-02-07 23:59:59",
@@ -519,7 +525,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "d0785ad36e427c92b19f6826ab1e8020",
         "SHA1": "365b7a9c21bd9373e49052c3e7b3e4646ddd4d43",
-        "SHA256": "c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff"
+        "SHA256": "c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff",
+        "SHA384": "eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b"
       },
       "ValidFrom": "2012-12-21 00:00:00",
       "ValidTo": "2020-12-30 23:59:59",
@@ -534,7 +541,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "e9d38360b914c8863f6cba3ee58764d3",
         "SHA1": "4cba8eae47b6bf76f20b3504b98b8f062694a89b",
-        "SHA256": "88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976"
+        "SHA256": "88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976",
+        "SHA384": "e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652"
       },
       "ValidFrom": "2012-10-18 00:00:00",
       "ValidTo": "2020-12-29 23:59:59",
@@ -549,7 +557,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "918d9eb6a6cd36c531eceb926170a7e1",
         "SHA1": "0ae95700d65e6f59715aa47048993ca7858e676a",
-        "SHA256": "47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166"
+        "SHA256": "47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166",
+        "SHA384": "e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85"
       },
       "ValidFrom": "2006-11-08 00:00:00",
       "ValidTo": "2021-11-07 23:59:59",
@@ -564,7 +573,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "53c41bc1164e09e0cd1617a5bf913efd",
         "SHA1": "93c03aac8951d494ecd5696b1c08658541b18727",
-        "SHA256": "40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b"
+        "SHA256": "40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b",
+        "SHA384": "f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8"
       },
       "ValidFrom": "2006-05-23 17:01:29",
       "ValidTo": "2016-05-23 17:11:29",
@@ -579,7 +589,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "768c1a47836a7536fbc50e7be60e65ff",
         "SHA1": "569a77bd8a095070b13b75bc81cd0422f746daa3",
-        "SHA256": "d5289c20d1f89ac5000b691627764379d369c68ab7d53425baa8e83f09b5b369"
+        "SHA256": "d5289c20d1f89ac5000b691627764379d369c68ab7d53425baa8e83f09b5b369",
+        "SHA384": "92eb214d60e1c7342eb7b4863dd634d364d80494b4090301e872fba4d2efbec2a799d49f0ac9590f8c61e0fb3b905af3"
       },
       "ValidFrom": "2012-12-28 00:00:00",
       "ValidTo": "2016-01-27 23:59:59",
@@ -594,7 +605,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "b30c31a572b0409383ed3fbe17e56e81",
         "SHA1": "4843a82ed3b1f2bfbee9671960e1940c942f688d",
-        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9"
+        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9",
+        "SHA384": "bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da"
       },
       "ValidFrom": "2010-02-08 00:00:00",
       "ValidTo": "2020-02-07 23:59:59",
@@ -785,7 +797,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "d0785ad36e427c92b19f6826ab1e8020",
         "SHA1": "365b7a9c21bd9373e49052c3e7b3e4646ddd4d43",
-        "SHA256": "c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff"
+        "SHA256": "c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff",
+        "SHA384": "eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b"
       },
       "ValidFrom": "2012-12-21 00:00:00",
       "ValidTo": "2020-12-30 23:59:59",
@@ -800,7 +813,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "e9d38360b914c8863f6cba3ee58764d3",
         "SHA1": "4cba8eae47b6bf76f20b3504b98b8f062694a89b",
-        "SHA256": "88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976"
+        "SHA256": "88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976",
+        "SHA384": "e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652"
       },
       "ValidFrom": "2012-10-18 00:00:00",
       "ValidTo": "2020-12-29 23:59:59",
@@ -815,7 +829,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "918d9eb6a6cd36c531eceb926170a7e1",
         "SHA1": "0ae95700d65e6f59715aa47048993ca7858e676a",
-        "SHA256": "47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166"
+        "SHA256": "47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166",
+        "SHA384": "e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85"
       },
       "ValidFrom": "2006-11-08 00:00:00",
       "ValidTo": "2021-11-07 23:59:59",
@@ -830,7 +845,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "53c41bc1164e09e0cd1617a5bf913efd",
         "SHA1": "93c03aac8951d494ecd5696b1c08658541b18727",
-        "SHA256": "40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b"
+        "SHA256": "40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b",
+        "SHA384": "f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8"
       },
       "ValidFrom": "2006-05-23 17:01:29",
       "ValidTo": "2016-05-23 17:11:29",
@@ -845,7 +861,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "768c1a47836a7536fbc50e7be60e65ff",
         "SHA1": "569a77bd8a095070b13b75bc81cd0422f746daa3",
-        "SHA256": "d5289c20d1f89ac5000b691627764379d369c68ab7d53425baa8e83f09b5b369"
+        "SHA256": "d5289c20d1f89ac5000b691627764379d369c68ab7d53425baa8e83f09b5b369",
+        "SHA384": "92eb214d60e1c7342eb7b4863dd634d364d80494b4090301e872fba4d2efbec2a799d49f0ac9590f8c61e0fb3b905af3"
       },
       "ValidFrom": "2012-12-28 00:00:00",
       "ValidTo": "2016-01-27 23:59:59",
@@ -860,7 +877,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "b30c31a572b0409383ed3fbe17e56e81",
         "SHA1": "4843a82ed3b1f2bfbee9671960e1940c942f688d",
-        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9"
+        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9",
+        "SHA384": "bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da"
       },
       "ValidFrom": "2010-02-08 00:00:00",
       "ValidTo": "2020-02-07 23:59:59",
@@ -1070,7 +1088,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "d0785ad36e427c92b19f6826ab1e8020",
         "SHA1": "365b7a9c21bd9373e49052c3e7b3e4646ddd4d43",
-        "SHA256": "c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff"
+        "SHA256": "c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff",
+        "SHA384": "eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b"
       },
       "ValidFrom": "2012-12-21 00:00:00",
       "ValidTo": "2020-12-30 23:59:59",
@@ -1085,7 +1104,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "e9d38360b914c8863f6cba3ee58764d3",
         "SHA1": "4cba8eae47b6bf76f20b3504b98b8f062694a89b",
-        "SHA256": "88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976"
+        "SHA256": "88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976",
+        "SHA384": "e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652"
       },
       "ValidFrom": "2012-10-18 00:00:00",
       "ValidTo": "2020-12-29 23:59:59",
@@ -1100,7 +1120,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "918d9eb6a6cd36c531eceb926170a7e1",
         "SHA1": "0ae95700d65e6f59715aa47048993ca7858e676a",
-        "SHA256": "47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166"
+        "SHA256": "47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166",
+        "SHA384": "e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85"
       },
       "ValidFrom": "2006-11-08 00:00:00",
       "ValidTo": "2021-11-07 23:59:59",
@@ -1115,7 +1136,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "53c41bc1164e09e0cd1617a5bf913efd",
         "SHA1": "93c03aac8951d494ecd5696b1c08658541b18727",
-        "SHA256": "40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b"
+        "SHA256": "40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b",
+        "SHA384": "f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8"
       },
       "ValidFrom": "2006-05-23 17:01:29",
       "ValidTo": "2016-05-23 17:11:29",
@@ -1130,7 +1152,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "768c1a47836a7536fbc50e7be60e65ff",
         "SHA1": "569a77bd8a095070b13b75bc81cd0422f746daa3",
-        "SHA256": "d5289c20d1f89ac5000b691627764379d369c68ab7d53425baa8e83f09b5b369"
+        "SHA256": "d5289c20d1f89ac5000b691627764379d369c68ab7d53425baa8e83f09b5b369",
+        "SHA384": "92eb214d60e1c7342eb7b4863dd634d364d80494b4090301e872fba4d2efbec2a799d49f0ac9590f8c61e0fb3b905af3"
       },
       "ValidFrom": "2012-12-28 00:00:00",
       "ValidTo": "2016-01-27 23:59:59",
@@ -1145,7 +1168,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "b30c31a572b0409383ed3fbe17e56e81",
         "SHA1": "4843a82ed3b1f2bfbee9671960e1940c942f688d",
-        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9"
+        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9",
+        "SHA384": "bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da"
       },
       "ValidFrom": "2010-02-08 00:00:00",
       "ValidTo": "2020-02-07 23:59:59",
@@ -1322,7 +1346,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "d0785ad36e427c92b19f6826ab1e8020",
         "SHA1": "365b7a9c21bd9373e49052c3e7b3e4646ddd4d43",
-        "SHA256": "c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff"
+        "SHA256": "c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff",
+        "SHA384": "eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b"
       },
       "ValidFrom": "2012-12-21 00:00:00",
       "ValidTo": "2020-12-30 23:59:59",
@@ -1337,7 +1362,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "e9d38360b914c8863f6cba3ee58764d3",
         "SHA1": "4cba8eae47b6bf76f20b3504b98b8f062694a89b",
-        "SHA256": "88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976"
+        "SHA256": "88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976",
+        "SHA384": "e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652"
       },
       "ValidFrom": "2012-10-18 00:00:00",
       "ValidTo": "2020-12-29 23:59:59",
@@ -1352,7 +1378,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "918d9eb6a6cd36c531eceb926170a7e1",
         "SHA1": "0ae95700d65e6f59715aa47048993ca7858e676a",
-        "SHA256": "47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166"
+        "SHA256": "47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166",
+        "SHA384": "e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85"
       },
       "ValidFrom": "2006-11-08 00:00:00",
       "ValidTo": "2021-11-07 23:59:59",
@@ -1367,7 +1394,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "53c41bc1164e09e0cd1617a5bf913efd",
         "SHA1": "93c03aac8951d494ecd5696b1c08658541b18727",
-        "SHA256": "40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b"
+        "SHA256": "40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b",
+        "SHA384": "f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8"
       },
       "ValidFrom": "2006-05-23 17:01:29",
       "ValidTo": "2016-05-23 17:11:29",
@@ -1382,7 +1410,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "768c1a47836a7536fbc50e7be60e65ff",
         "SHA1": "569a77bd8a095070b13b75bc81cd0422f746daa3",
-        "SHA256": "d5289c20d1f89ac5000b691627764379d369c68ab7d53425baa8e83f09b5b369"
+        "SHA256": "d5289c20d1f89ac5000b691627764379d369c68ab7d53425baa8e83f09b5b369",
+        "SHA384": "92eb214d60e1c7342eb7b4863dd634d364d80494b4090301e872fba4d2efbec2a799d49f0ac9590f8c61e0fb3b905af3"
       },
       "ValidFrom": "2012-12-28 00:00:00",
       "ValidTo": "2016-01-27 23:59:59",
@@ -1397,7 +1426,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "b30c31a572b0409383ed3fbe17e56e81",
         "SHA1": "4843a82ed3b1f2bfbee9671960e1940c942f688d",
-        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9"
+        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9",
+        "SHA384": "bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da"
       },
       "ValidFrom": "2010-02-08 00:00:00",
       "ValidTo": "2020-02-07 23:59:59",
@@ -1583,7 +1613,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "d0785ad36e427c92b19f6826ab1e8020",
         "SHA1": "365b7a9c21bd9373e49052c3e7b3e4646ddd4d43",
-        "SHA256": "c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff"
+        "SHA256": "c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff",
+        "SHA384": "eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b"
       },
       "ValidFrom": "2012-12-21 00:00:00",
       "ValidTo": "2020-12-30 23:59:59",
@@ -1598,7 +1629,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "e9d38360b914c8863f6cba3ee58764d3",
         "SHA1": "4cba8eae47b6bf76f20b3504b98b8f062694a89b",
-        "SHA256": "88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976"
+        "SHA256": "88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976",
+        "SHA384": "e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652"
       },
       "ValidFrom": "2012-10-18 00:00:00",
       "ValidTo": "2020-12-29 23:59:59",
@@ -1613,7 +1645,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "918d9eb6a6cd36c531eceb926170a7e1",
         "SHA1": "0ae95700d65e6f59715aa47048993ca7858e676a",
-        "SHA256": "47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166"
+        "SHA256": "47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166",
+        "SHA384": "e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85"
       },
       "ValidFrom": "2006-11-08 00:00:00",
       "ValidTo": "2021-11-07 23:59:59",
@@ -1628,7 +1661,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "53c41bc1164e09e0cd1617a5bf913efd",
         "SHA1": "93c03aac8951d494ecd5696b1c08658541b18727",
-        "SHA256": "40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b"
+        "SHA256": "40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b",
+        "SHA384": "f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8"
       },
       "ValidFrom": "2006-05-23 17:01:29",
       "ValidTo": "2016-05-23 17:11:29",
@@ -1643,7 +1677,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "768c1a47836a7536fbc50e7be60e65ff",
         "SHA1": "569a77bd8a095070b13b75bc81cd0422f746daa3",
-        "SHA256": "d5289c20d1f89ac5000b691627764379d369c68ab7d53425baa8e83f09b5b369"
+        "SHA256": "d5289c20d1f89ac5000b691627764379d369c68ab7d53425baa8e83f09b5b369",
+        "SHA384": "92eb214d60e1c7342eb7b4863dd634d364d80494b4090301e872fba4d2efbec2a799d49f0ac9590f8c61e0fb3b905af3"
       },
       "ValidFrom": "2012-12-28 00:00:00",
       "ValidTo": "2016-01-27 23:59:59",
@@ -1658,7 +1693,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "b30c31a572b0409383ed3fbe17e56e81",
         "SHA1": "4843a82ed3b1f2bfbee9671960e1940c942f688d",
-        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9"
+        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9",
+        "SHA384": "bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da"
       },
       "ValidFrom": "2010-02-08 00:00:00",
       "ValidTo": "2020-02-07 23:59:59",
@@ -1844,7 +1880,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "d0785ad36e427c92b19f6826ab1e8020",
         "SHA1": "365b7a9c21bd9373e49052c3e7b3e4646ddd4d43",
-        "SHA256": "c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff"
+        "SHA256": "c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff",
+        "SHA384": "eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b"
       },
       "ValidFrom": "2012-12-21 00:00:00",
       "ValidTo": "2020-12-30 23:59:59",
@@ -1859,7 +1896,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "e9d38360b914c8863f6cba3ee58764d3",
         "SHA1": "4cba8eae47b6bf76f20b3504b98b8f062694a89b",
-        "SHA256": "88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976"
+        "SHA256": "88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976",
+        "SHA384": "e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652"
       },
       "ValidFrom": "2012-10-18 00:00:00",
       "ValidTo": "2020-12-29 23:59:59",
@@ -1874,7 +1912,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "918d9eb6a6cd36c531eceb926170a7e1",
         "SHA1": "0ae95700d65e6f59715aa47048993ca7858e676a",
-        "SHA256": "47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166"
+        "SHA256": "47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166",
+        "SHA384": "e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85"
       },
       "ValidFrom": "2006-11-08 00:00:00",
       "ValidTo": "2021-11-07 23:59:59",
@@ -1889,7 +1928,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "53c41bc1164e09e0cd1617a5bf913efd",
         "SHA1": "93c03aac8951d494ecd5696b1c08658541b18727",
-        "SHA256": "40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b"
+        "SHA256": "40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b",
+        "SHA384": "f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8"
       },
       "ValidFrom": "2006-05-23 17:01:29",
       "ValidTo": "2016-05-23 17:11:29",
@@ -1904,7 +1944,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "768c1a47836a7536fbc50e7be60e65ff",
         "SHA1": "569a77bd8a095070b13b75bc81cd0422f746daa3",
-        "SHA256": "d5289c20d1f89ac5000b691627764379d369c68ab7d53425baa8e83f09b5b369"
+        "SHA256": "d5289c20d1f89ac5000b691627764379d369c68ab7d53425baa8e83f09b5b369",
+        "SHA384": "92eb214d60e1c7342eb7b4863dd634d364d80494b4090301e872fba4d2efbec2a799d49f0ac9590f8c61e0fb3b905af3"
       },
       "ValidFrom": "2012-12-28 00:00:00",
       "ValidTo": "2016-01-27 23:59:59",
@@ -1919,7 +1960,8 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "TBS": {
         "MD5": "b30c31a572b0409383ed3fbe17e56e81",
         "SHA1": "4843a82ed3b1f2bfbee9671960e1940c942f688d",
-        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9"
+        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9",
+        "SHA384": "bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da"
       },
       "ValidFrom": "2010-02-08 00:00:00",
       "ValidTo": "2020-02-07 23:59:59",
@@ -1945,7 +1987,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/a4aa80bc-4ecd-49ab-bc0f-0f49b07fdd7f.yaml)
 
-*last_updated:* 2023-08-01
+*last_updated:* 2023-08-26
 
 {{< /column >}}
 {{< /block >}}

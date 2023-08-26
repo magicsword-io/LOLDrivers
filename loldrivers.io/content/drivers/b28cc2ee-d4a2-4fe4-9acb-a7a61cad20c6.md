@@ -216,7 +216,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "d3b63256734014c7a7f5e01a335af2ac",
         "SHA1": "b7c7ae11be35f9788e341a5b868b4b599b1d6763",
-        "SHA256": "0114225eea0b2816e2fe11ce39f522a5f7a4a0bdd6887016b9671308b6260937"
+        "SHA256": "0114225eea0b2816e2fe11ce39f522a5f7a4a0bdd6887016b9671308b6260937",
+        "SHA384": "38204a5ba53242499ba3fdd8579117d1a666070a872ecba8a05bc00a977b8c3ebfd0edb1148e2546f3f7dcfaf15d04d2"
       },
       "ValidFrom": "2015-05-07 00:00:00",
       "ValidTo": "2017-05-14 23:59:59",
@@ -231,7 +232,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "78a717e082dcc1cda3458d917e677d14",
         "SHA1": "4a872e0e51f9b304469cd1dedb496ee9b8b983a4",
-        "SHA256": "317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8"
+        "SHA256": "317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8",
+        "SHA384": "b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c"
       },
       "ValidFrom": "2011-02-22 19:25:17",
       "ValidTo": "2021-02-22 19:35:17",
@@ -246,7 +248,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "b30c31a572b0409383ed3fbe17e56e81",
         "SHA1": "4843a82ed3b1f2bfbee9671960e1940c942f688d",
-        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9"
+        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9",
+        "SHA384": "bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da"
       },
       "ValidFrom": "2010-02-08 00:00:00",
       "ValidTo": "2020-02-07 23:59:59",
@@ -389,7 +392,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "d3b63256734014c7a7f5e01a335af2ac",
         "SHA1": "b7c7ae11be35f9788e341a5b868b4b599b1d6763",
-        "SHA256": "0114225eea0b2816e2fe11ce39f522a5f7a4a0bdd6887016b9671308b6260937"
+        "SHA256": "0114225eea0b2816e2fe11ce39f522a5f7a4a0bdd6887016b9671308b6260937",
+        "SHA384": "38204a5ba53242499ba3fdd8579117d1a666070a872ecba8a05bc00a977b8c3ebfd0edb1148e2546f3f7dcfaf15d04d2"
       },
       "ValidFrom": "2015-05-07 00:00:00",
       "ValidTo": "2017-05-14 23:59:59",
@@ -404,7 +408,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "78a717e082dcc1cda3458d917e677d14",
         "SHA1": "4a872e0e51f9b304469cd1dedb496ee9b8b983a4",
-        "SHA256": "317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8"
+        "SHA256": "317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8",
+        "SHA384": "b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c"
       },
       "ValidFrom": "2011-02-22 19:25:17",
       "ValidTo": "2021-02-22 19:35:17",
@@ -419,7 +424,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "b30c31a572b0409383ed3fbe17e56e81",
         "SHA1": "4843a82ed3b1f2bfbee9671960e1940c942f688d",
-        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9"
+        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9",
+        "SHA384": "bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da"
       },
       "ValidFrom": "2010-02-08 00:00:00",
       "ValidTo": "2020-02-07 23:59:59",
@@ -586,7 +592,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "d3b63256734014c7a7f5e01a335af2ac",
         "SHA1": "b7c7ae11be35f9788e341a5b868b4b599b1d6763",
-        "SHA256": "0114225eea0b2816e2fe11ce39f522a5f7a4a0bdd6887016b9671308b6260937"
+        "SHA256": "0114225eea0b2816e2fe11ce39f522a5f7a4a0bdd6887016b9671308b6260937",
+        "SHA384": "38204a5ba53242499ba3fdd8579117d1a666070a872ecba8a05bc00a977b8c3ebfd0edb1148e2546f3f7dcfaf15d04d2"
       },
       "ValidFrom": "2015-05-07 00:00:00",
       "ValidTo": "2017-05-14 23:59:59",
@@ -601,7 +608,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "78a717e082dcc1cda3458d917e677d14",
         "SHA1": "4a872e0e51f9b304469cd1dedb496ee9b8b983a4",
-        "SHA256": "317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8"
+        "SHA256": "317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8",
+        "SHA384": "b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c"
       },
       "ValidFrom": "2011-02-22 19:25:17",
       "ValidTo": "2021-02-22 19:35:17",
@@ -616,7 +624,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "b30c31a572b0409383ed3fbe17e56e81",
         "SHA1": "4843a82ed3b1f2bfbee9671960e1940c942f688d",
-        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9"
+        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9",
+        "SHA384": "bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da"
       },
       "ValidFrom": "2010-02-08 00:00:00",
       "ValidTo": "2020-02-07 23:59:59",
@@ -787,7 +796,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "d3b63256734014c7a7f5e01a335af2ac",
         "SHA1": "b7c7ae11be35f9788e341a5b868b4b599b1d6763",
-        "SHA256": "0114225eea0b2816e2fe11ce39f522a5f7a4a0bdd6887016b9671308b6260937"
+        "SHA256": "0114225eea0b2816e2fe11ce39f522a5f7a4a0bdd6887016b9671308b6260937",
+        "SHA384": "38204a5ba53242499ba3fdd8579117d1a666070a872ecba8a05bc00a977b8c3ebfd0edb1148e2546f3f7dcfaf15d04d2"
       },
       "ValidFrom": "2015-05-07 00:00:00",
       "ValidTo": "2017-05-14 23:59:59",
@@ -802,7 +812,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "78a717e082dcc1cda3458d917e677d14",
         "SHA1": "4a872e0e51f9b304469cd1dedb496ee9b8b983a4",
-        "SHA256": "317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8"
+        "SHA256": "317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8",
+        "SHA384": "b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c"
       },
       "ValidFrom": "2011-02-22 19:25:17",
       "ValidTo": "2021-02-22 19:35:17",
@@ -817,7 +828,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "b30c31a572b0409383ed3fbe17e56e81",
         "SHA1": "4843a82ed3b1f2bfbee9671960e1940c942f688d",
-        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9"
+        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9",
+        "SHA384": "bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da"
       },
       "ValidFrom": "2010-02-08 00:00:00",
       "ValidTo": "2020-02-07 23:59:59",
@@ -961,7 +973,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "d3b63256734014c7a7f5e01a335af2ac",
         "SHA1": "b7c7ae11be35f9788e341a5b868b4b599b1d6763",
-        "SHA256": "0114225eea0b2816e2fe11ce39f522a5f7a4a0bdd6887016b9671308b6260937"
+        "SHA256": "0114225eea0b2816e2fe11ce39f522a5f7a4a0bdd6887016b9671308b6260937",
+        "SHA384": "38204a5ba53242499ba3fdd8579117d1a666070a872ecba8a05bc00a977b8c3ebfd0edb1148e2546f3f7dcfaf15d04d2"
       },
       "ValidFrom": "2015-05-07 00:00:00",
       "ValidTo": "2017-05-14 23:59:59",
@@ -976,7 +989,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "78a717e082dcc1cda3458d917e677d14",
         "SHA1": "4a872e0e51f9b304469cd1dedb496ee9b8b983a4",
-        "SHA256": "317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8"
+        "SHA256": "317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8",
+        "SHA384": "b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c"
       },
       "ValidFrom": "2011-02-22 19:25:17",
       "ValidTo": "2021-02-22 19:35:17",
@@ -991,7 +1005,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "b30c31a572b0409383ed3fbe17e56e81",
         "SHA1": "4843a82ed3b1f2bfbee9671960e1940c942f688d",
-        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9"
+        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9",
+        "SHA384": "bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da"
       },
       "ValidFrom": "2010-02-08 00:00:00",
       "ValidTo": "2020-02-07 23:59:59",
@@ -1130,7 +1145,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "d3b63256734014c7a7f5e01a335af2ac",
         "SHA1": "b7c7ae11be35f9788e341a5b868b4b599b1d6763",
-        "SHA256": "0114225eea0b2816e2fe11ce39f522a5f7a4a0bdd6887016b9671308b6260937"
+        "SHA256": "0114225eea0b2816e2fe11ce39f522a5f7a4a0bdd6887016b9671308b6260937",
+        "SHA384": "38204a5ba53242499ba3fdd8579117d1a666070a872ecba8a05bc00a977b8c3ebfd0edb1148e2546f3f7dcfaf15d04d2"
       },
       "ValidFrom": "2015-05-07 00:00:00",
       "ValidTo": "2017-05-14 23:59:59",
@@ -1145,7 +1161,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "78a717e082dcc1cda3458d917e677d14",
         "SHA1": "4a872e0e51f9b304469cd1dedb496ee9b8b983a4",
-        "SHA256": "317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8"
+        "SHA256": "317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8",
+        "SHA384": "b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c"
       },
       "ValidFrom": "2011-02-22 19:25:17",
       "ValidTo": "2021-02-22 19:35:17",
@@ -1160,7 +1177,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "b30c31a572b0409383ed3fbe17e56e81",
         "SHA1": "4843a82ed3b1f2bfbee9671960e1940c942f688d",
-        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9"
+        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9",
+        "SHA384": "bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da"
       },
       "ValidFrom": "2010-02-08 00:00:00",
       "ValidTo": "2020-02-07 23:59:59",
@@ -1299,7 +1317,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "d3b63256734014c7a7f5e01a335af2ac",
         "SHA1": "b7c7ae11be35f9788e341a5b868b4b599b1d6763",
-        "SHA256": "0114225eea0b2816e2fe11ce39f522a5f7a4a0bdd6887016b9671308b6260937"
+        "SHA256": "0114225eea0b2816e2fe11ce39f522a5f7a4a0bdd6887016b9671308b6260937",
+        "SHA384": "38204a5ba53242499ba3fdd8579117d1a666070a872ecba8a05bc00a977b8c3ebfd0edb1148e2546f3f7dcfaf15d04d2"
       },
       "ValidFrom": "2015-05-07 00:00:00",
       "ValidTo": "2017-05-14 23:59:59",
@@ -1314,7 +1333,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "78a717e082dcc1cda3458d917e677d14",
         "SHA1": "4a872e0e51f9b304469cd1dedb496ee9b8b983a4",
-        "SHA256": "317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8"
+        "SHA256": "317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8",
+        "SHA384": "b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c"
       },
       "ValidFrom": "2011-02-22 19:25:17",
       "ValidTo": "2021-02-22 19:35:17",
@@ -1329,7 +1349,8 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "TBS": {
         "MD5": "b30c31a572b0409383ed3fbe17e56e81",
         "SHA1": "4843a82ed3b1f2bfbee9671960e1940c942f688d",
-        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9"
+        "SHA256": "03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9",
+        "SHA384": "bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da"
       },
       "ValidFrom": "2010-02-08 00:00:00",
       "ValidTo": "2020-02-07 23:59:59",
@@ -1355,7 +1376,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/b28cc2ee-d4a2-4fe4-9acb-a7a61cad20c6.yaml)
 
-*last_updated:* 2023-08-01
+*last_updated:* 2023-08-26
 
 {{< /column >}}
 {{< /block >}}
