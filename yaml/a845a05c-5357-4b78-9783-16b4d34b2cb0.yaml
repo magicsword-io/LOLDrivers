@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: a2b0b2e9e458016b22ebbf47411008f0a87efd9103b125870ce37246ab5bdff0
   Company: AVAST Software
   Copyright: Copyright (c) 2013 AVAST Software
-  CreationTimestamp: '2013-08-30 01:36:44'
+  CreationTimestamp: '2013-08-30 03:36:44'
   Date: ''
   Description: avast! VM Monitor
   ExportedFunctions: ''
@@ -199,19 +199,19 @@ KnownVulnerableSamples:
       Entropy: 4.337653561530945
       Virtual Size: '0x3684'
     .data:
-      Entropy: 2.248043192138036
+      Entropy: 2.2480431921380357
       Virtual Size: '0xf0d0'
     PAGE:
-      Entropy: 6.275818990042088
+      Entropy: 6.2758189900420875
       Virtual Size: '0x13dd'
     INIT:
-      Entropy: 5.497102312949239
+      Entropy: 5.49710231294924
       Virtual Size: '0xdc4'
     .rsrc:
       Entropy: 3.4097453831731763
       Virtual Size: '0x470'
     .reloc:
-      Entropy: 6.2040113276427356
+      Entropy: 6.204011327642732
       Virtual Size: '0x2058'
   Signature:
   - AVAST Software
@@ -234,6 +234,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -247,6 +248,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -261,6 +263,7 @@ KnownVulnerableSamples:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
         SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -273,6 +276,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=CZ, ST=Praha, L=Praha 4, O=AVAST Software, OU=Digital ID Class 3
         , Microsoft Software Validation v2, CN=AVAST Software
       ValidFrom: '2011-01-31 00:00:00'
@@ -286,6 +290,7 @@ KnownVulnerableSamples:
         MD5: 21d1d3208df2fa1d448ca0d6a7c3f767
         SHA1: 8c1c5b83db485fb02a60c5637d7a0e7dd61386e9
         SHA256: efa85130741975dc47e84d0fe609aefcab90da0474420cef1c4002b032bd5d76
+        SHA384: 4246553acc05423f671b817d9c605f081132eced2149d8a0cb94b655721ad9c7cfc27744eb119d323e97084b805f21ef
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -300,6 +305,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 0dd6d671fe0364d43b632131417e7b3f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at

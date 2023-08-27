@@ -84,6 +84,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=Private Organization, ??=TW, serialNumber=23826200, ??=2F, NO.108,2,
         MIN CHUAN RD, postalCode=231, C=TW, ST=XINDIAN DIST, L=NEW TAIPEI CITY, O=Biostar
         Microtech Int'l Corp, CN=Biostar Microtech Int'l Corp
@@ -98,6 +99,7 @@ KnownVulnerableSamples:
         MD5: fceeb2776d11b95aa3245d3d58f42b1c
         SHA1: 4f7372c5af343d7b826a3850efc89890dc925e89
         SHA256: 7e415ade909c99a1a1b34400f1c6e4e7c6e1fc6b878db11b5e18232248ede0e1
+        SHA384: 9da446ae9f73a8c0954d0bb9d3a24895562ec7f6e8addc405a3195aea3a8274a54761987fff22d2ac97a306410588895
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       ValidFrom: '2012-04-18 12:00:00'
@@ -111,6 +113,7 @@ KnownVulnerableSamples:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
         SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
     Signer:
     - SerialNumber: 0293728e6275aee2cea6efb4bac1eed6
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -122,7 +125,7 @@ KnownVulnerableSamples:
     SHA256: b5dd410353c4011fe699e4a824a89792144f5a11c756f64d5b5acfea3a9f1c8a
   Sections:
     .text:
-      Entropy: 6.361588386451387
+      Entropy: 6.361588386451386
       Virtual Size: '0x1cb8'
     .rdata:
       Entropy: 4.58746169223957
@@ -134,9 +137,9 @@ KnownVulnerableSamples:
       Entropy: 3.776265199432483
       Virtual Size: '0x12c'
     INIT:
-      Entropy: 5.347369827936226
+      Entropy: 5.347369827936225
       Virtual Size: '0x550'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-04-17 02:48:21'
+  CreationTimestamp: '2017-04-17 04:48:21'
 Tags:
 - BS_RCIOW1064.sys

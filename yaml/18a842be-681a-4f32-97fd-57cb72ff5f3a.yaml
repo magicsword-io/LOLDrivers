@@ -30,7 +30,7 @@ KnownVulnerableSamples:
     SHA256: 6ce1073705194870175a8b9c9ebbbb7ad54df81849b111588ea8aeef910da987
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2023-04-28 00:10:45'
+  CreationTimestamp: '2023-04-28 02:10:45'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -149,10 +149,10 @@ KnownVulnerableSamples:
       Entropy: 4.420943866714438
       Virtual Size: '0x57c'
     .gfids:
-      Entropy: 0.8112781244591328
+      Entropy: 0.8112781244591329
       Virtual Size: '0x4'
     INIT:
-      Entropy: 5.1734289362463395
+      Entropy: 5.173428936246337
       Virtual Size: '0xad4'
     .reloc:
       Entropy: 3.084183719779188
@@ -174,6 +174,7 @@ KnownVulnerableSamples:
         MD5: bac0d95b77a36eed50d84415420e56bd
         SHA1: c107a2a8939e3ff203847e4ba576c7e3767c063a
         SHA256: 7f648cc593ad1a699a8d5a5c972bf1cce89bf3dfd83a67f46de3230c61429fe2
+        SHA384: 8dbc1e5b1a805710fae35f16ba814f64758a8d683d1af74ce98ab5cf3a52daaa20ea783eb48d2dac3ba519eaad70ce9b
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -188,6 +189,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -202,6 +204,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 2ac01de88063badb080008853fdd8c6c
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at

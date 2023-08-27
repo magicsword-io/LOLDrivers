@@ -42,7 +42,7 @@ KnownVulnerableSamples:
     SHA256: 2b4af74d74a4380130a1c46d2f1ffe112d87d9d7646540bbbd201c5bd176082b
   Company: Creative Technology Innovation Co., LTd.
   Copyright: Copyright (c) 2021 CTI
-  CreationTimestamp: '2021-05-06 21:21:55'
+  CreationTimestamp: '2021-05-06 23:21:55'
   Date: ''
   Description: CTI IO driver
   ExportedFunctions: ''
@@ -82,7 +82,7 @@ KnownVulnerableSamples:
   SHA256: 2121a2bb8ebbf2e6e82c782b6f3c6b7904f686aa495def25cf1cf52a42e16109
   Sections:
     .text:
-      Entropy: 6.003998833007615
+      Entropy: 6.003998833007613
       Virtual Size: '0xe45'
     .rdata:
       Entropy: 4.524233693641258
@@ -91,13 +91,13 @@ KnownVulnerableSamples:
       Entropy: 0.5014196173403422
       Virtual Size: '0x130'
     .pdata:
-      Entropy: 2.8847894065764192
+      Entropy: 2.884789406576419
       Virtual Size: '0x54'
     INIT:
-      Entropy: 4.780729528841017
+      Entropy: 4.780729528841016
       Virtual Size: '0x262'
     .rsrc:
-      Entropy: 3.348289734887143
+      Entropy: 3.3482897348871425
       Virtual Size: '0x3a0'
   Signature: ''
   Signatures:
@@ -117,6 +117,7 @@ KnownVulnerableSamples:
         MD5: 3d790bd5602e84a4aa8560133ced0a41
         SHA1: 909e31e3e3808ab55d508fc0ba47e0132a57d7ab
         SHA256: ac1acbcba260f10270527c3762457c1b96818466df9da51dfec3b147c90db453
+        SHA384: c548f472f381df2da149c036e2f47be20293838eb23adce5e1b0ad1ba1fe8c33f688528452146c87dcb26070a2a23ced
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -130,6 +131,7 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 33000000433a68189e33902987000000000043
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft

@@ -30,7 +30,7 @@ KnownVulnerableSamples:
     SHA256: 22074c412bb82bd97768eba0cb40e451d75d969e94d0548af804aafc04ca02fd
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-10-10 19:26:25'
+  CreationTimestamp: '2022-10-10 21:26:25'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -116,7 +116,7 @@ KnownVulnerableSamples:
       Entropy: 4.204635975366644
       Virtual Size: '0x324'
     .gfids:
-      Entropy: 0.8112781244591328
+      Entropy: 0.8112781244591329
       Virtual Size: '0x4'
     PAGE:
       Entropy: 6.019078078470311
@@ -125,7 +125,7 @@ KnownVulnerableSamples:
       Entropy: 5.17688181935493
       Virtual Size: '0x6be'
     .rsrc:
-      Entropy: 2.6182828359466233
+      Entropy: 2.618282835946623
       Virtual Size: '0x140'
     .reloc:
       Entropy: 3.7531088905778556
@@ -148,6 +148,7 @@ KnownVulnerableSamples:
         MD5: 4d213d99215f488050faaa39765656d1
         SHA1: 0308508b5a3fcd330bbf28931f8e1a9c93c3ee69
         SHA256: ea947432de238a25fdb7892e436f4ef44f30ab16ae9e1eb914860f4808b25ef2
+        SHA384: 430e932514f35ed55f31f050f33bcc0b9244fd83c6d1d28ee240306e54292e93b5894ef4eb9c09bf84cdc8068c6a7230
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -162,6 +163,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=CN, O=JemmyLoveJenny PKI Service, OU=timestamp.pki.jemmylovejenny.tk,
         CN=Fake TimeStamp Responder
       ValidFrom: '2000-01-01 00:00:00'
@@ -175,6 +177,7 @@ KnownVulnerableSamples:
         MD5: 5ab6e3eff526144c0498d28f2e8744cc
         SHA1: 7ab94f2c92d6886a876615876fb3c7d996cc0ea3
         SHA256: ff83ab76196af2d3172c0be1ab23720770de769bed8daf815a059ca46df241af
+        SHA384: 9990f7fd996aa8f520b4d64eee4060d0009b6cd517416b7300245df65cb15eb72ab985f520bc02346c544d46ad172ae5
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -189,6 +192,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     - Subject: C=CN, O=JemmyLoveJenny PKI Service, OU=pki.jemmylovejenny.tk, CN=JemmyLoveJenny
         SHA1 TimeStamping Services CA
       ValidFrom: '2000-01-01 00:00:00'
@@ -202,6 +206,7 @@ KnownVulnerableSamples:
         MD5: 953110dc4528bb8653d24128ec59f13b
         SHA1: 3a111b3ec6c092f7181132509479ba73bc3c828f
         SHA256: 3434a95dfbfdb4b2cdff9d76632bcfc1d8c9a2b805596ed3f8af1c97f61643b1
+        SHA384: 41c54e667a7ccaab3d4b6288e8c78789163e4adce5029f5e43de2a25ea9ad07bd3f4679538ebc301477917f46cfb8788
     Signer:
     - SerialNumber: 0a005d2e2bcd4137168217d8c727747c
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at

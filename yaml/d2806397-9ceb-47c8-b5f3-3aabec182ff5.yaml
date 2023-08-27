@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: c4031eb0a40137c4ab6d2dbdd2755135c63ab137a0aeb74a7bbea6617b96f0a7
   Company: TOSHIBA Corporation
   Copyright: Copyright (C) 1999-2012 TOSHIBA Corporation. All Rights Reserved.
-  CreationTimestamp: '2013-01-14 18:59:36'
+  CreationTimestamp: '2013-01-14 20:59:36'
   Date: ''
   Description: BIOS Update Driver For Windows x64 Edition
   ExportedFunctions: ''
@@ -94,7 +94,7 @@ KnownVulnerableSamples:
       Entropy: 3.2580562234004296
       Virtual Size: '0x6c'
     INIT:
-      Entropy: 4.903742587310438
+      Entropy: 4.903742587310439
       Virtual Size: '0x2ae'
     .rsrc:
       Entropy: 3.4356081026839522
@@ -120,6 +120,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -133,6 +134,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -147,6 +149,7 @@ KnownVulnerableSamples:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
         SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -159,6 +162,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=JP, ST=Tokyo, L=1,1 Shibaura, 1,chome, Minato,ku, O=TOSHIBA CORPORATION,
         OU=Digital ID Class 3 , Microsoft Software Validation v2, OU=TOSHIBA CORPORATION,
         CN=TOSHIBA CORPORATION
@@ -173,6 +177,7 @@ KnownVulnerableSamples:
         MD5: 91ef24d360937dc7a131e11bd0ec6224
         SHA1: 25bd894d25596a11b1ea317bf25d4774fc19ee4c
         SHA256: 120afcbfa6317121a8255d79d9216cacb1545acf8b27f63c5e9f50e208d9abeb
+        SHA384: 5ec40867f9174220893b801f465c81b00e6ccc52ecc401768d55e1c0c9c7943187500707978dfcd1feeab13d72857412
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -187,6 +192,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 4dfa235fb8e4e89715cc62facb68438d
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -199,7 +205,7 @@ KnownVulnerableSamples:
     SHA256: 85686a6dec96776c2e8510fea7ca198b84429fb0b756a2d87ee1cc4570ac9b87
   Company: TOSHIBA Corporation
   Copyright: Copyright (C) 1999-2010 TOSHIBA Corporation. All Rights Reserved.
-  CreationTimestamp: '2010-12-16 06:08:35'
+  CreationTimestamp: '2010-12-16 08:08:35'
   Date: ''
   Description: BIOS Update Driver For Windows x64 Edition
   ExportedFunctions: ''
@@ -255,7 +261,7 @@ KnownVulnerableSamples:
       Entropy: 3.25805622340043
       Virtual Size: '0x6c'
     INIT:
-      Entropy: 4.914629955349568
+      Entropy: 4.914629955349569
       Virtual Size: '0x2ca'
     .rsrc:
       Entropy: 3.418422854912434
@@ -278,6 +284,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -290,6 +297,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -304,6 +312,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -316,6 +325,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=JP, ST=Tokyo, L=1,1 Shibaura, 1,chome, Minato,ku, O=TOSHIBA CORPORATION,
         OU=Digital ID Class 3 , Microsoft Software Validation v2, OU=TOSHIBA CORPORATION,
         CN=TOSHIBA CORPORATION
@@ -330,6 +340,7 @@ KnownVulnerableSamples:
         MD5: b5879b02585ebcdb899f6ff09bf4d1ed
         SHA1: c9b563daca0689780baf6bc6524d86dfd66c2fd8
         SHA256: 36d22ed370549b7bd7ef59b27cc37d07e9462f9e270fb1f71bd69e3a2be18ba7
+        SHA384: fd931b18ba081535e5862f4e743413eee38ec460c3ffa05c919d1ee41f87674932dbe1a14d7623e66aa1da2e38a86336
     Signer:
     - SerialNumber: 4b06fb7842759523c64bc79deaa482c6
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at

@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: e4ac5c7fbb41ee988029b27d8b6be574725689fd1365f5a56f5a12d9120f86c6
   Company: Corsair Memory, Inc.
   Copyright: Corsair Memory, Inc. (c) 2019, All rights reserved
-  CreationTimestamp: '2019-10-28 17:19:22'
+  CreationTimestamp: '2019-10-28 19:19:22'
   Date: ''
   Description: Corsair LL Access
   ExportedFunctions: ''
@@ -99,7 +99,7 @@ KnownVulnerableSamples:
       Entropy: 6.167927885696172
       Virtual Size: '0xf8a'
     .rdata:
-      Entropy: 3.8995505502370675
+      Entropy: 3.8995505502370666
       Virtual Size: '0x5ec'
     .data:
       Entropy: 0.28109187076190567
@@ -108,7 +108,7 @@ KnownVulnerableSamples:
       Entropy: 3.6266995207164214
       Virtual Size: '0xfc'
     INIT:
-      Entropy: 5.2475324615066405
+      Entropy: 5.24753246150664
       Virtual Size: '0x46c'
     .rsrc:
       Entropy: 3.494224562959288
@@ -137,6 +137,7 @@ KnownVulnerableSamples:
         MD5: 5b81fd0f706522a8d7c9f2957283c0b4
         SHA1: 84d894599653a8ed0e0b2802db3197dc177908cc
         SHA256: 4fa629304df4287c97ae5b7e481974316e9daf776b0cdeffab1671e7dca68fb4
+        SHA384: 0b89dc122fc7ebf80881a5047ffbbcb0bec30636516aff4f43307e2a925a476cabfc26e2cc392ad748d655f6ec4c8b75
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -150,6 +151,7 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 33000000319479a318f5522d06000000000031
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft

@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: 2a30ad675142cf411e7e5f5c53c6423de570a398295b0956130a7a7d77383103
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-06-06 09:14:46'
+  CreationTimestamp: '2022-06-06 11:14:46'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -75,7 +75,7 @@ KnownVulnerableSamples:
       Entropy: 5.860500055750153
       Virtual Size: '0x1728'
     .rdata:
-      Entropy: 3.7459107255443396
+      Entropy: 3.745910725544339
       Virtual Size: '0x5b0'
     .data:
       Entropy: 0.6050836155077387
@@ -107,6 +107,7 @@ KnownVulnerableSamples:
         MD5: cef292b5c6cdb07e480ccbba0c9d56d1
         SHA1: 15c37dbebe6fcc77108e3d7ad982676d3d5e77f7
         SHA256: 3cb152375fa9e694fd2f9167c382005166871c783774997df1a42e0b6013d82a
+        SHA384: e64427dea71a71110ebc317f3552cd7193c5743f72d5cac9257abe80346d15ee42930d5a85e16c02ea06f56c7e8811fb
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -121,6 +122,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -135,6 +137,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 43bb437d609866286dd839e1d00309f5
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at

@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 9345c3af554c06aa949492f1642a7a03404956d2952cca8a68658b62dccb0825
   Company: Microsoft Corporation
   Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  CreationTimestamp: '2012-10-12 10:49:03'
+  CreationTimestamp: '2012-10-12 12:49:03'
   Date: ''
   Description: MS LAN Driver
   ExportedFunctions: ''
@@ -102,16 +102,16 @@ KnownVulnerableSamples:
       Entropy: 4.280603944787833
       Virtual Size: '0x29c'
     .data:
-      Entropy: 7.998560628737929
+      Entropy: 7.998560628737928
       Virtual Size: '0x333d0'
     .pdata:
       Entropy: 3.7745259370743525
       Virtual Size: '0xb4'
     INIT:
-      Entropy: 5.849769223480602
+      Entropy: 5.849769223480601
       Virtual Size: '0x660'
     .rsrc:
-      Entropy: 3.36967354515268
+      Entropy: 3.369673545152681
       Virtual Size: '0x3b0'
     .reloc:
       Entropy: 1.2385061127340509
@@ -136,6 +136,7 @@ KnownVulnerableSamples:
         MD5: ce372214eabe9d311e4a156fe2044327
         SHA1: 7f7eb1a547c9b0b2e41b0f44515dfd20c16edceb
         SHA256: 03d59cc81c6960a93ab4b02e5521aa9fb349e8d7df9dfdf675201e48c23b5a34
+        SHA384: 4b8829bc6980e82affeb7ad29efb59fc3ca9b02d015e6c0f385b9f2cf275609cd45936659f41fce579c073e34c2ca308
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -150,6 +151,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -164,6 +166,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 387c9476e28320264594846317d46540
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at

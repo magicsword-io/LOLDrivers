@@ -42,7 +42,7 @@ KnownVulnerableSamples:
     SHA256: 98a55dc61046f4509d2465cbc373a9391c07125e5f4a242d2f475f14f32e5430
   Company: EldoS Corporation
   Copyright: 'Copyright (C) 2007-2011, EldoS Corporation '
-  CreationTimestamp: '2011-12-28 09:51:24'
+  CreationTimestamp: '2011-12-28 11:51:24'
   Date: ''
   Description: RawDisk Driver. Allows write access to files and raw disk sectors for
     user mode applications in Windows 2000 and later.
@@ -139,13 +139,13 @@ KnownVulnerableSamples:
   SHA256: 4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6
   Sections:
     .text:
-      Entropy: 6.064316199141177
+      Entropy: 6.064316199141176
       Virtual Size: '0x55e'
     .rdata:
       Entropy: 4.05997020827267
       Virtual Size: '0x364'
     .data:
-      Entropy: 6.1533423871883475
+      Entropy: 6.1533423871883395
       Virtual Size: '0x254'
     PAGE:
       Entropy: 6.400618863867007
@@ -180,6 +180,7 @@ KnownVulnerableSamples:
         MD5: ed6239e956d9b626e57a5167a2c220e2
         SHA1: d055c8586761071ece10d426a3dd0efd03fc91bc
         SHA256: 850084ee0da4f38de7dd7a11c10c1a7e51139cce79c9430f522565a28c0ed65d
+        SHA384: 8010768caf26e171b5481e07247cda624f5b992b6797ee2b8ad5bfcb616ef8e896580c5414473b223375f9557b6b9270
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 13:00:00'
@@ -193,6 +194,7 @@ KnownVulnerableSamples:
         MD5: 5ccf05e4dec10d9d6fe15d8778325272
         SHA1: 79f0a648bd7f1184f86bff43ae47c9ecc3ed3cec
         SHA256: 33ea31b892ba274a4aefe545de45c42c218b6dff78146655cdea892545c2cccc
+        SHA384: 1350ebc11fd20f5f141bc545786506e6a154be054da7a6e603cb276a6d60a24f2a4016ecc2f5cabd1088e1905f60aabf
     - Subject: OU=Timestamping CA, O=GlobalSign, CN=GlobalSign Timestamping CA
       ValidFrom: '2009-03-18 11:00:00'
       ValidTo: '2028-01-28 12:00:00'
@@ -205,6 +207,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -217,6 +220,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 10:00:00'
@@ -230,6 +234,7 @@ KnownVulnerableSamples:
         MD5: 7dd2351a85d3665eeb6720a21f4f7dee
         SHA1: 77838c4d7f36958a581841d28f481d61ce0696ed
         SHA256: 846725f4b0193468c1079d6127e9e6e420fc6ed66019ed02d732ba644decad57
+        SHA384: aaa45fe704bc66bb1842a2123c6e45e016dfbc7ba2ce07d7d2ee0b5d488a39c68bc6db582cb45d51f5fa52e60be8efd6
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -242,6 +247,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 010000000001261dec28f7
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
@@ -253,7 +259,7 @@ KnownVulnerableSamples:
     SHA256: 29a2ae6439381ea2aa3116df7025cbb5c6c7c07cc8d19508e6021e4d6177a565
   Company: EldoS Corporation
   Copyright: 'Copyright (C) 2007-2011, EldoS Corporation '
-  CreationTimestamp: '2011-12-28 09:51:29'
+  CreationTimestamp: '2011-12-28 11:51:29'
   Date: ''
   Description: RawDisk Driver. Allows write access to files and raw disk sectors for
     user mode applications in Windows 2000 and later.
@@ -351,7 +357,7 @@ KnownVulnerableSamples:
       Entropy: 4.0091827632792
       Virtual Size: '0x180'
     PAGE:
-      Entropy: 6.215625995230105
+      Entropy: 6.215625995230106
       Virtual Size: '0x2e87'
     INIT:
       Entropy: 5.372005883277131
@@ -360,7 +366,7 @@ KnownVulnerableSamples:
       Entropy: 3.363665203506053
       Virtual Size: '0x4c0'
     .reloc:
-      Entropy: 1.1876798536707462
+      Entropy: 1.187679853670746
       Virtual Size: '0x24'
   Signature:
   - EldoS Corporation
@@ -383,6 +389,7 @@ KnownVulnerableSamples:
         MD5: ed6239e956d9b626e57a5167a2c220e2
         SHA1: d055c8586761071ece10d426a3dd0efd03fc91bc
         SHA256: 850084ee0da4f38de7dd7a11c10c1a7e51139cce79c9430f522565a28c0ed65d
+        SHA384: 8010768caf26e171b5481e07247cda624f5b992b6797ee2b8ad5bfcb616ef8e896580c5414473b223375f9557b6b9270
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 13:00:00'
@@ -396,6 +403,7 @@ KnownVulnerableSamples:
         MD5: 5ccf05e4dec10d9d6fe15d8778325272
         SHA1: 79f0a648bd7f1184f86bff43ae47c9ecc3ed3cec
         SHA256: 33ea31b892ba274a4aefe545de45c42c218b6dff78146655cdea892545c2cccc
+        SHA384: 1350ebc11fd20f5f141bc545786506e6a154be054da7a6e603cb276a6d60a24f2a4016ecc2f5cabd1088e1905f60aabf
     - Subject: OU=Timestamping CA, O=GlobalSign, CN=GlobalSign Timestamping CA
       ValidFrom: '2009-03-18 11:00:00'
       ValidTo: '2028-01-28 12:00:00'
@@ -408,6 +416,7 @@ KnownVulnerableSamples:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
         SHA256: b7126567833f3daa4085ff41e73112daad3d1e3808a942c1936520e2d6c46c78
+        SHA384: 0ee4f63d6f157ec4f6990c3ebb411ccd76cb1e2123c7f692459e43f96c0da2dbf60a2bce6afeacc60621d3055028baea
     - Subject: C=BE, O=GlobalSign NV, CN=GlobalSign Time Stamping Authority
       ValidFrom: '2009-12-21 09:32:56'
       ValidTo: '2020-12-22 09:32:56'
@@ -420,6 +429,7 @@ KnownVulnerableSamples:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
         SHA256: 26da721a670c72836926032fee6920118bfb9bff89cc8d0ce30d9452c33f2532
+        SHA384: 1524902f0e25addc6d74039d439366d2b06199e215004fd8e145369f50ea94a021ce6312e8a62b35470da0309ccb975c
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 10:00:00'
@@ -433,6 +443,7 @@ KnownVulnerableSamples:
         MD5: 7dd2351a85d3665eeb6720a21f4f7dee
         SHA1: 77838c4d7f36958a581841d28f481d61ce0696ed
         SHA256: 846725f4b0193468c1079d6127e9e6e420fc6ed66019ed02d732ba644decad57
+        SHA384: aaa45fe704bc66bb1842a2123c6e45e016dfbc7ba2ce07d7d2ee0b5d488a39c68bc6db582cb45d51f5fa52e60be8efd6
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -445,6 +456,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 010000000001261dec28f7
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign

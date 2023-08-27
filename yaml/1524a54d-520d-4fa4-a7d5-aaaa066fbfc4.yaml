@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: 71dc8d678e0749599d3db144c93741f64def1b8b0efb98bef963d2215ebb4992
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2018-06-10 02:06:16'
+  CreationTimestamp: '2018-06-10 04:06:16'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -187,7 +187,7 @@ KnownVulnerableSamples:
       Entropy: 5.326593764460783
       Virtual Size: '0x1020'
     .reloc:
-      Entropy: 3.7524415161285263
+      Entropy: 3.752441516128526
       Virtual Size: '0x38'
   Signature:
   - Cheat Engine
@@ -210,6 +210,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: OU=GlobalSign Root CA , R3, O=GlobalSign, CN=GlobalSign
       ValidFrom: '2009-11-18 10:00:00'
       ValidTo: '2019-03-18 10:00:00'
@@ -222,6 +223,7 @@ KnownVulnerableSamples:
         MD5: f47739306d14722e670d9436eadb8e4f
         SHA1: 457d9df00a652cb4c3356d00145d9528fc309172
         SHA256: bd1765c56594221373893ef26d97f88c144fb0e5a0111215b45d7239c3444df7
+        SHA384: b8b268a1bdf388be66a1c969b7b353cb2bbc9fad446049b7efa05a9ab3b714494e97f4d1ee1c0bae35bfd9bf6ef275b3
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G2
       ValidFrom: '2016-05-24 00:00:00'
@@ -235,6 +237,7 @@ KnownVulnerableSamples:
         MD5: acb5170547d76873f1e4ff18ed5de2eb
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
         SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
+        SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
         CA , SHA256 , G3
       ValidFrom: '2016-06-15 00:00:00'
@@ -248,6 +251,7 @@ KnownVulnerableSamples:
         MD5: fd8cfeea06be14fa89689909e1fc72dc
         SHA1: 8bc3cd2f70abe543e0dbe721065a4076c8521f36
         SHA256: 15e7050789df807f3e3174294a01b637a1239f603e42f4b5db9398efa9da9996
+        SHA384: 8b9f95e6d3dd45e4ef38e2f12fb893d7d1bb1ba867e152e4a73c49b3d51dd52bc83a05982deac29af90436061248546d
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -260,6 +264,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     - Subject: ??=Private Organization, serialNumber=50212036, ??=NL, C=NL, ST=Noord,Brabant,
         L=Eindhoven, ??=Frankendaal 32, O=Cheat Engine, CN=Cheat Engine
       ValidFrom: '2018-01-26 17:35:01'
@@ -273,6 +278,7 @@ KnownVulnerableSamples:
         MD5: 0b13dccb2637dc9079aedef86a08fa6b
         SHA1: f51d58aee7ca738a2dce7744b39859e2d2806a6f
         SHA256: 635add73274894e1cf81a1c30297bf6af19846178e6b28220062f4c8a7acfd6f
+        SHA384: 5343b21290afd360e1b6faca3c81c467d1fa75c568ec737e9a205d8ec371141f29ca8ea44ed4be2d5848b061008ce525
     Signer:
     - SerialNumber: 1a9706fde692d88ca99b822d
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
@@ -284,7 +290,7 @@ KnownVulnerableSamples:
     SHA256: d041654d8cbf189c29919733fd40184ceaf0050295fc7a7e6e3f4cda45b5e090
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-06-05 08:22:43'
+  CreationTimestamp: '2021-06-05 10:22:43'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -437,13 +443,13 @@ KnownVulnerableSamples:
   SHA256: 626fae47811450d080d08c3d9fd890aa64bfecdc45eacd42a40850c1833c8763
   Sections:
     .text:
-      Entropy: 5.682451889338359
+      Entropy: 5.682451889338358
       Virtual Size: '0x132df'
     .rdata:
       Entropy: 4.517419685097444
       Virtual Size: '0x131c'
     .data:
-      Entropy: 3.255209832890341
+      Entropy: 3.2552098328903405
       Virtual Size: '0xacc4'
     .pdata:
       Entropy: 4.8820210675954305
@@ -452,7 +458,7 @@ KnownVulnerableSamples:
       Entropy: 5.330738501788467
       Virtual Size: '0x1040'
     .reloc:
-      Entropy: 3.7749703233410856
+      Entropy: 3.774970323341085
       Virtual Size: '0x38'
   Signature: ''
   Signatures:
@@ -471,6 +477,7 @@ KnownVulnerableSamples:
         MD5: 3e12d32ec517f55b419739b79b663983
         SHA1: 02dd1db230dce5d495a9264bb0946a4621eeba08
         SHA256: 5229ba15b31b0c6f4cca89c2985177974327d1b689a3b935a0bd975532af22ab
+        SHA384: 65f867b5cddad176bed9ce2206693bf5daa9f55b0aa5572b153c1704f45296353a9616c3bb4b8668a38ee00fe0c0cf86
     - Subject: OU=GlobalSign Root CA , R3, O=GlobalSign, CN=GlobalSign
       ValidFrom: '2018-09-19 00:00:00'
       ValidTo: '2028-01-28 12:00:00'
@@ -483,6 +490,7 @@ KnownVulnerableSamples:
         MD5: 51c3959a45cecf3d21a3effb05762573
         SHA1: ecfcd25fd0525448a74875ba271566bc0bfbf061
         SHA256: de1da11668f0a8d5e13346ed3ab2755f5d25bebffcfd1d0bde5b9f87bc292c91
+        SHA384: f0eab75baf1f24a53d63bd795cd07292a312f603513c8cb0f40fe5acbdb477ed72607d309fad21471a16f6223fb3a838
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -495,6 +503,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     - Subject: OU=GlobalSign Root CA , R6, O=GlobalSign, CN=GlobalSign
       ValidFrom: '2019-02-20 00:00:00'
       ValidTo: '2029-03-18 10:00:00'
@@ -507,6 +516,7 @@ KnownVulnerableSamples:
         MD5: 0457b0f3260d39d5ebb31b5a25a0f98a
         SHA1: 30396862f517c4aa71795b25d71a772badc36860
         SHA256: a4b297fecf824963d3877b2008a7b42dd7576a2039e2c64c54fe354f32f51f1c
+        SHA384: db09e847954618e46dc648065395c2cbfdf7f0aa6d002e59150c04bfafe3e87255522552a8cd445e5ab73abf920e83ec
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Code Signing Root R45
       ValidFrom: '2020-07-28 00:00:00'
       ValidTo: '2029-03-18 00:00:00'
@@ -519,6 +529,7 @@ KnownVulnerableSamples:
         MD5: a33260428269bc902bc1cd280e4b1837
         SHA1: 254209ca172cffcc67bd2a88996556d2f09538f0
         SHA256: a67411358594f2cf016741a63fd49f36de917f86531b3e3a43eb6a421c654868
+        SHA384: fec727af43d1569995cea26e8eb97167165842a5b185304425a92c03b71254c5d51222837515f33e60cb8ed2e8c625ba
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Timestamping CA , SHA384 ,
         G4
       ValidFrom: '2018-06-20 00:00:00'
@@ -532,6 +543,7 @@ KnownVulnerableSamples:
         MD5: 4b80e148166f75934663aa914e0f1992
         SHA1: dc2cbf1962ab679f4e3724e6c5953bb75f4cdb36
         SHA256: 5eacff77bfe1704c571abfd361b1779bd77cebfead48e02afa3a3bd098f4f68c
+        SHA384: 93ba08f334b9e5f04cc1e2a33b4b7a22935a84e4e018bca1f1a96447b8e318e43eb2cc0a5d8f3abf478a74d182374133
     - Subject: ??=Private Organization, serialNumber=50212036, ??=NL, C=NL, ST=Noord,Brabant,
         L=Waalre, ??=Irenelaan 24, O=Cheat Engine, CN=Cheat Engine
       ValidFrom: '2021-04-13 18:52:42'
@@ -545,6 +557,7 @@ KnownVulnerableSamples:
         MD5: 896731b509196bf3f30582a3c5c04c38
         SHA1: 5112cf67db96a72398bbefb4ec44086c27511fb7
         SHA256: 6e5d7f487c8e653e4535aadadf54b903b7f75fea9930bfa2c6fabb28501c1996
+        SHA384: 47ab490bd13eb1b9f7517676965cd142946a325d17c4db3fd00c902850cc7489642f7ab650a4d1572d44e2cdd24dae75
     - Subject: C=BE, O=GlobalSign nv,sa, CN=Globalsign TSA for MS Authenticode Advanced
         , G4
       ValidFrom: '2021-05-27 10:00:16'
@@ -558,6 +571,7 @@ KnownVulnerableSamples:
         MD5: 71fa2e9dc37bcda10b8ee18e8330f0d0
         SHA1: d5f650f385330b7609759fbc058d610f52d4352e
         SHA256: 0a4c62c6765d2ad7039277e3ff7d5637df89461cac60065965ab42b8bc491a7a
+        SHA384: a6d94156b0799c3fd25126b62a3d9db549729bd3c63ff262a0f2a7da7b57910fce0f054d0d09c5b8349619a1d5edf666
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
       ValidFrom: '2020-07-28 00:00:00'
       ValidTo: '2030-07-28 00:00:00'
@@ -570,6 +584,7 @@ KnownVulnerableSamples:
         MD5: 65fd1dac1f115d9507f4e1840c8cb36a
         SHA1: c7cf5607e19b22fe60c055e71d9b555d70f71f66
         SHA256: d9c7db0b704f07089440c56e69a0f31d730edf77cfbf7514630e8b5390a270fe
+        SHA384: defe810317bd1215b4d1ee0ec8a5fb38b21d094ef1173cae670956cd899232638e4f9473fd947bd550a4a77300bbb2ab
     Signer:
     - SerialNumber: 3038811fdd430a77db5b3cc2
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020

@@ -42,7 +42,7 @@ KnownVulnerableSamples:
     SHA256: 46ffe559f5a8f6bd611ac5a9264edf92d8449d8d31b2ddf6b2add5971e309c56
   Company: DT Research, Inc.
   Copyright: DT Research Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-28 01:45:17'
+  CreationTimestamp: '2013-01-28 03:45:17'
   Date: ''
   Description: DTR Kernel mode driver
   ExportedFunctions: ''
@@ -121,6 +121,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -134,6 +135,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taipei, L=Zhongzheng, O=DT RESEARCH, INC. TAIWAN BRANCH, OU=Digital
         ID Class 3 , Microsoft Software Validation v2, CN=DT RESEARCH, INC. TAIWAN
         BRANCH
@@ -148,6 +150,7 @@ KnownVulnerableSamples:
         MD5: dbb1dd5e54c789f66640d658709fedf2
         SHA1: c5216c75242d0744a48ee5527b5f32953eca22de
         SHA256: 2a3d22ff84046ce3ef33bb5b856892a9154243c11be3c5938ffbb68f3e6d33ba
+        SHA384: cc2c9885bd39100045b4cc7339c25b4ccbac9cc1dc8afbe382bedf2406bd1b71500d59f9ed298d7ad716dd961ac44c23
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -162,6 +165,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -176,6 +180,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 79666acda698ffe7bb2f8c23ade9d57d
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -188,7 +193,7 @@ KnownVulnerableSamples:
     SHA256: 57d36936fbf8785380536b03e5d9be172e5dd5c3bf435e19875a80aa96f97e1f
   Company: DT Research, Inc.
   Copyright: DT Research Inc. All Rights Reserved.
-  CreationTimestamp: '2012-12-03 01:39:06'
+  CreationTimestamp: '2012-12-03 03:39:06'
   Date: ''
   Description: DTR Kernel mode driver
   ExportedFunctions: ''
@@ -229,7 +234,7 @@ KnownVulnerableSamples:
   SHA256: dd4a1253d47de14ef83f1bc8b40816a86ccf90d1e624c5adf9203ae9d51d4097
   Sections:
     .text:
-      Entropy: 5.4276217868285315
+      Entropy: 5.427621786828532
       Virtual Size: '0x1384'
     .rdata:
       Entropy: 4.330082770085826
@@ -244,7 +249,7 @@ KnownVulnerableSamples:
       Entropy: 5.039084100171449
       Virtual Size: '0x2a6'
     .rsrc:
-      Entropy: 3.227189755068873
+      Entropy: 3.2271897550688724
       Virtual Size: '0x350'
   Signature:
   - DT RESEARCH, INC. TAIWAN BRANCH
@@ -267,6 +272,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -279,6 +285,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=TW, ST=Taiwan, L=Taipei, O=DT RESEARCH, INC. TAIWAN BRANCH, OU=Digital
         ID Class 3 , Microsoft Software Validation v2, CN=DT RESEARCH, INC. TAIWAN
         BRANCH
@@ -293,6 +300,7 @@ KnownVulnerableSamples:
         MD5: a64ea916f6938102e6116b8283e3597f
         SHA1: 888f188d39a9c8b14375f1bbcf5c88f5b1e92d63
         SHA256: 1ad8fb0027b18802ed025be6d1258c99c5d2ee586e2eb5ecfaa706bc8b8170c9
+        SHA384: 9bf7495220fe2b9cd3c86a155aacdf93325f370a32233aaa8c4a185864d52f178b26c6af87335146f7f716237f13c854
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -307,6 +315,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -321,6 +330,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 215c8fa3dc44a29e86e5e59bd239b3c8
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at

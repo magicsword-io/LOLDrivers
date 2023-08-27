@@ -23,7 +23,7 @@ KnownVulnerableSamples:
     SHA256: 14bd76f66fe5749d1812f7cf47cc5f9a8a830c53a7ede5e42a14a4140a70f5d2
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2019-07-31 20:57:34'
+  CreationTimestamp: '2019-07-31 22:57:34'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -118,6 +118,7 @@ KnownVulnerableSamples:
         MD5: 5e970fa8e5b374d84d23bf98aab0173c
         SHA1: c45627b5584bf62327df60d6185744a2d2f2bcbf
         SHA256: 1834ca09fa8c45bad85fd11092023310ca8d7bd1a61ce68d5a1b97f176edabac
+        SHA384: d50356245ed5e5d5d2f1d2751b46e65cba80c1a0a643ed735bf0ccc884199f8972ddcf417bd28b08e11bd7a2f2fe5b98
     - Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
         Time Stamping CA
       ValidFrom: '2011-04-27 00:00:00'
@@ -131,6 +132,7 @@ KnownVulnerableSamples:
         MD5: 3e187409e1fcd68ffc6120fb6009cf62
         SHA1: 9bd61e6a791b075faa44aa3acbe313c5691c75d8
         SHA256: b770099c68730d04e672fa6b2c95967942de79acf1618b8fae65f12cd9550b6b
+        SHA384: 44bed61de98fb6e1a63b050967e3d6066156e35d7a7aa4d1035fe470fcda13a905a9b5dbe518b7369a2b2e3b9ecf0b4c
     - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         SHA,1 Time Stamping Signer
       ValidFrom: '2019-05-02 00:00:00'
@@ -144,6 +146,7 @@ KnownVulnerableSamples:
         MD5: 592ad76ae898df37d17988b22279fb3b
         SHA1: bedaabb03cb578e823720eea01085b81464a3a8e
         SHA256: ae3daea3edbaf9106e68f4aeb1806d245b7a22ca71cf373b822e33da849878b3
+        SHA384: 0f03543c450255d894a64cddbedabc2b946134197db1810666cbf86557d72fd0442972c75426ba17a2876a4849100270
     - Subject: C=CN, L=Shanghai, O=miHoYo Co.,Ltd., OU=OPS, CN=miHoYo Co.,Ltd.
       ValidFrom: '2019-04-08 00:00:00'
       ValidTo: '2022-04-08 12:00:00'
@@ -156,6 +159,7 @@ KnownVulnerableSamples:
         MD5: 3e83a7572d1c522dd9072ba6399029d7
         SHA1: e2c2d59b70f028a66a8711bfa97f842475f84639
         SHA256: 5a504a929cb21f72008d5d57bcd992a7cac13f6aa90cbb886b5ecd809e3b59dd
+        SHA384: 72916ab6c7eb3f5cb7444b3d7d2ac8cb52944605477c5a0f181d060e4edb4c37ebe5eb3c0566dda9de2d2707636ec355
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
         CA
       ValidFrom: '2011-04-15 19:41:37'
@@ -169,6 +173,7 @@ KnownVulnerableSamples:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
         SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -182,6 +187,7 @@ KnownVulnerableSamples:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
         SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
+        SHA384: 86f49574f368a561914a52d7ae043ec6784ef8c718960700f834e123594605d25d39f1ad45f1eb5052c9567f3edd0e16
     Signer:
     - SerialNumber: 05a7559541e0fdc678d79e3272468907
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
@@ -193,7 +199,7 @@ KnownVulnerableSamples:
     SHA256: 25454028a4f56d3c58747811a86be43397a6290d1a053bc30d97b41bf3c58c6f
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2020-04-19 21:19:37'
+  CreationTimestamp: '2020-04-19 23:19:37'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -315,7 +321,7 @@ KnownVulnerableSamples:
       Entropy: 6.1912018117070735
       Virtual Size: '0x6c80'
     .rdata:
-      Entropy: 4.780472480164167
+      Entropy: 4.780472480164169
       Virtual Size: '0x1584'
     .data:
       Entropy: 0.805522255156276
@@ -356,6 +362,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -369,6 +376,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=CN, L=Shanghai, O=miHoYo Co.,Ltd., OU=OPS, CN=miHoYo Co.,Ltd.
       ValidFrom: '2019-04-08 00:00:00'
       ValidTo: '2022-04-08 12:00:00'
@@ -381,6 +389,7 @@ KnownVulnerableSamples:
         MD5: 3e83a7572d1c522dd9072ba6399029d7
         SHA1: e2c2d59b70f028a66a8711bfa97f842475f84639
         SHA256: 5a504a929cb21f72008d5d57bcd992a7cac13f6aa90cbb886b5ecd809e3b59dd
+        SHA384: 72916ab6c7eb3f5cb7444b3d7d2ac8cb52944605477c5a0f181d060e4edb4c37ebe5eb3c0566dda9de2d2707636ec355
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
         CA
       ValidFrom: '2011-04-15 19:41:37'
@@ -394,6 +403,7 @@ KnownVulnerableSamples:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
         SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -407,6 +417,7 @@ KnownVulnerableSamples:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
         SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
+        SHA384: 86f49574f368a561914a52d7ae043ec6784ef8c718960700f834e123594605d25d39f1ad45f1eb5052c9567f3edd0e16
     Signer:
     - SerialNumber: 05a7559541e0fdc678d79e3272468907
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code

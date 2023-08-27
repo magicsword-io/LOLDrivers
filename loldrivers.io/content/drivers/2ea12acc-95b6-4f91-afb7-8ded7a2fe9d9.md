@@ -237,7 +237,8 @@ sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &amp;&amp;
       "TBS": {
         "MD5": "8e3ffc222fbcebdbb8b23115ab259be7",
         "SHA1": "ee20bff28ffe13be731c294c90d6ded5aae0ec0e",
-        "SHA256": "59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821"
+        "SHA256": "59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821",
+        "SHA384": "f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7"
       },
       "ValidFrom": "2011-04-15 19:45:33",
       "ValidTo": "2021-04-15 19:55:33",
@@ -252,7 +253,8 @@ sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &amp;&amp;
       "TBS": {
         "MD5": "8431e52b92e0051577de716f75313854",
         "SHA1": "8ad5802e684da7297a1f3ef73bed0ea370b42db9",
-        "SHA256": "a6ad079dada95f4b49268f60d4b44ca44a4efc0af30632accdad536b27ab2790"
+        "SHA256": "a6ad079dada95f4b49268f60d4b44ca44a4efc0af30632accdad536b27ab2790",
+        "SHA384": "f7d20854c88556d3598f58487b32ae7f7a119abcd0c30d386d50248b5dafd00601a47339a2e4f822ee3b848a74c08666"
       },
       "ValidFrom": "2019-12-13 00:00:00",
       "ValidTo": "2020-12-17 12:00:00",
@@ -267,7 +269,8 @@ sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &amp;&amp;
       "TBS": {
         "MD5": "83f5de89f641d0fbf60248e10a7b9534",
         "SHA1": "382a73a059a08698d6eb98c87e1b36fc750933a4",
-        "SHA256": "eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf"
+        "SHA256": "eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf",
+        "SHA384": "4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1"
       },
       "ValidFrom": "2012-04-18 12:00:00",
       "ValidTo": "2027-04-18 12:00:00",
@@ -414,7 +417,8 @@ sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &amp;&amp;
       "TBS": {
         "MD5": "8e3ffc222fbcebdbb8b23115ab259be7",
         "SHA1": "ee20bff28ffe13be731c294c90d6ded5aae0ec0e",
-        "SHA256": "59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821"
+        "SHA256": "59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821",
+        "SHA384": "f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7"
       },
       "ValidFrom": "2011-04-15 19:45:33",
       "ValidTo": "2021-04-15 19:55:33",
@@ -429,7 +433,8 @@ sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &amp;&amp;
       "TBS": {
         "MD5": "8431e52b92e0051577de716f75313854",
         "SHA1": "8ad5802e684da7297a1f3ef73bed0ea370b42db9",
-        "SHA256": "a6ad079dada95f4b49268f60d4b44ca44a4efc0af30632accdad536b27ab2790"
+        "SHA256": "a6ad079dada95f4b49268f60d4b44ca44a4efc0af30632accdad536b27ab2790",
+        "SHA384": "f7d20854c88556d3598f58487b32ae7f7a119abcd0c30d386d50248b5dafd00601a47339a2e4f822ee3b848a74c08666"
       },
       "ValidFrom": "2019-12-13 00:00:00",
       "ValidTo": "2020-12-17 12:00:00",
@@ -444,7 +449,8 @@ sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &amp;&amp;
       "TBS": {
         "MD5": "83f5de89f641d0fbf60248e10a7b9534",
         "SHA1": "382a73a059a08698d6eb98c87e1b36fc750933a4",
-        "SHA256": "eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf"
+        "SHA256": "eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf",
+        "SHA384": "4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1"
       },
       "ValidFrom": "2012-04-18 12:00:00",
       "ValidTo": "2027-04-18 12:00:00",

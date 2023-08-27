@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 66d59e646f3965bc5225eca4285ae65f34b8681fb1bee3eaf440f6795b2fa70f
   Company: Multi Theft Auto
   Copyright: (C) 2003 - 2017 Multi Theft Auto
-  CreationTimestamp: '2017-07-15 18:25:00'
+  CreationTimestamp: '2017-07-15 20:25:00'
   Date: ''
   Description: Multi Theft Auto patch driver
   ExportedFunctions: ''
@@ -115,7 +115,7 @@ KnownVulnerableSamples:
       Entropy: 5.249508633671543
       Virtual Size: '0x488'
     .rsrc:
-      Entropy: 3.3888439455803665
+      Entropy: 3.388843945580366
       Virtual Size: '0x308'
     .reloc:
       Entropy: 1.751629167387823
@@ -141,6 +141,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
       ValidFrom: '2010-02-08 00:00:00'
       ValidTo: '2020-02-07 23:59:59'
@@ -153,6 +154,7 @@ KnownVulnerableSamples:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
         SHA256: d8844186775bddbccaf3dc017064df7d760fd4b85c5d07561a3efd7da950f89e
+        SHA384: 78d972495720b43a6470b18ae1226bcca20707628087717a9364c14ca053ba264e6d149718b103542d9942200138a69d
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -166,6 +168,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=BE, ST=Antwerpen, L=Kasterlee, O=No Organization Affiliation, OU=Individual
         Developer, CN=Hans Roes
       ValidFrom: '2016-07-06 00:00:00'
@@ -179,6 +182,7 @@ KnownVulnerableSamples:
         MD5: 494b9765c3a2b4a874439b1afcdde928
         SHA1: be00543b1d5c59f704618fb5e4de9d6bcc18a2fd
         SHA256: d748797bfa645ea26b7761c3d4cde817f9c036debfa38f3a167963655eba8a10
+        SHA384: f9655d60f4641898f82591f7568e41e5f7034c7395b22b05a684b2bc2bfbdcf75db2b955061196d5f86d41fd29f240f8
     - Subject: C=US, O=thawte, Inc., OU=Certification Services Division, OU=(c) 2006
         thawte, Inc. , For authorized use only, CN=thawte Primary Root CA
       ValidFrom: '2011-02-22 19:31:57'
@@ -192,6 +196,7 @@ KnownVulnerableSamples:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
         SHA256: a39ed0d6fd4eb1a6f7fed60f726e23eae668b7591bc004644625d22c701213fa
+        SHA384: 64b7643e4146016cbf83c911eb67e4601b6bb8d66f8ee8dcee67b815f91770d86ab23678b984430f22a963e5484881b7
     Signer:
     - SerialNumber: 371fc099cdb143347b4424e9dc1f3b30
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2

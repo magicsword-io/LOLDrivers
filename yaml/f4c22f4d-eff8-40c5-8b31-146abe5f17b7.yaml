@@ -53,7 +53,7 @@ KnownVulnerableSamples:
   Company: "Hilscher Gesellschaft f\xFCr Systemaoutomation mbH"
   Copyright: "\xA9 Hilscher Gesellschaft f\xFCr Systemaoutomation mbH. All rights\
     \ reserved."
-  CreationTimestamp: '2015-03-03 03:41:21'
+  CreationTimestamp: '2015-03-03 05:41:21'
   Date: ''
   Description: Physical Memory Access Driver
   ExportedFunctions: ''
@@ -116,7 +116,7 @@ KnownVulnerableSamples:
   SHA256: c299063e3eae8ddc15839767e83b9808fd43418dc5a1af7e4f44b97ba53fbd3d
   Sections:
     .text:
-      Entropy: 6.027791363175618
+      Entropy: 6.02779136317562
       Virtual Size: '0x9a4'
     .rdata:
       Entropy: 4.406909342132945
@@ -134,10 +134,10 @@ KnownVulnerableSamples:
       Entropy: 5.390231391811294
       Virtual Size: '0x72e'
     .rsrc:
-      Entropy: 3.2825157034395094
+      Entropy: 3.282515703439509
       Virtual Size: '0x410'
     .reloc:
-      Entropy: 1.2280731978955797
+      Entropy: 1.2280731978955792
       Virtual Size: '0x60'
   Signature: []
   Signatures:
@@ -156,6 +156,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -168,6 +169,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G1
       ValidFrom: '2013-08-23 00:00:00'
@@ -181,6 +183,7 @@ KnownVulnerableSamples:
         MD5: b95cbc184d388718612d5933f7b36770
         SHA1: ff124c5d160710720108616ffee99bbe090ed363
         SHA256: 13027620255363f07bbf85ae7d0dc06c07d8b0f4368b12f983ee3f4fce605733
+        SHA384: f42ed00f615f2822dcd3d33794477428afb52ddab932ebcde3586f92a27e18f9faba6b3334ca4e59e0cb24bdbf8395a6
     - Subject: C=DE, ST=Hessen, L=Hattersheim, O=Hilscher Gesellschaft fuer Systemautomation
         mbH, OU=Entwicklung, CN=Hilscher Gesellschaft fuer Systemautomation mbH
       ValidFrom: '2012-10-16 17:12:03'
@@ -194,6 +197,7 @@ KnownVulnerableSamples:
         MD5: a0b38273556ad764038918e68194eec5
         SHA1: d56fdcc2f77abef441098296982738c5ee38a581
         SHA256: a05023adb30251cf5d067da276c9cbac05e6c6effcd4af6afbc7f0da0b028c36
+        SHA384: 22132b899076c26e5398232e59454abe49d2a22eb701dca9924da4bc7da6eb18c677c4d4a980bb6b1b0fb0e8cad2fd2a
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -206,6 +210,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     Signer:
     - SerialNumber: 1121d48f27abe17574473e4066a863792d46
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2

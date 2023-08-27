@@ -206,6 +206,7 @@ KnownVulnerableSamples:
         MD5: b46a69db7e461e55282dc24dc594e5d6
         SHA1: 3b19241d555a74781e2b63a7c14ad12b1ec68205
         SHA256: 2a247cfecd58618afbf0f68cde5b9284a822e18e6ad5ff873467c6845b7f5975
+        SHA384: 5d7aeddeeef9b55bec8c3c5def19b19b0986f14b37ebc2e572847c82ab66a5dda02cfb30dd60a6be132441c7c4a70e79
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -219,6 +220,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 330000009484c47568579aafe9000000000094
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -245,7 +247,7 @@ KnownVulnerableSamples:
       Entropy: 6.228697679351415
       Virtual Size: '0x1a1b'
     INIT:
-      Entropy: 5.210944759781676
+      Entropy: 5.210944759781675
       Virtual Size: '0x818'
     .rsrc:
       Entropy: 3.300315570047502
@@ -254,7 +256,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-04-27 01:35:06'
+  CreationTimestamp: '2020-04-27 03:35:06'
 - Filename: procexp.Sys
   MD5: fea9319d67177ed6f36438d2bd9392fb
   SHA1: db6170ee2ee0a3292deceb2fc88ef26d938ebf2d
@@ -335,6 +337,7 @@ KnownVulnerableSamples:
         MD5: b9dc0ff1a60c3aba24a78d505955bf39
         SHA1: 15a5da2c8aa2955af75615009d249071f91fd252
         SHA256: ba7853f855ba7bc325287c11f5f7b20e013716affad372440feb2c3cf02f0bc5
+        SHA384: 90f67f637874aca58284dde5bfa77d98616efd902d1a63f53bc30cd287d464e6706388ed317199236e0739642622f9c5
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -348,6 +351,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000b20f9ad86794f322f60000000000b2
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -368,7 +372,7 @@ KnownVulnerableSamples:
       Entropy: 1.6388264292981416
       Virtual Size: '0x3c'
     .pdata:
-      Entropy: 3.9469090112624383
+      Entropy: 3.9469090112624388
       Virtual Size: '0x100'
     INIT:
       Entropy: 4.9698639451866535
@@ -380,7 +384,7 @@ KnownVulnerableSamples:
       Entropy: 2.7841837197791888
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-06-01 08:24:35'
+  CreationTimestamp: '2021-06-01 10:24:35'
 - Filename: procexp.Sys
   MD5: eeb8e039f6d942538eb4b0252117899a
   SHA1: bebf97411946749b9050989d9c40352dbe8269ea
@@ -459,6 +463,7 @@ KnownVulnerableSamples:
         MD5: 55a4c08c9404782113330a8cd169ed20
         SHA1: 74807ba52ae6108b0fbac5031090b3295b2c3bba
         SHA256: 3fe3c656e859492b0d4bb2c4c2020ae816340f985e054239d3342ffb93269b16
+        SHA384: 653eeae6166aec45fd75b679034bec2a53623d999b14ebfbc821067c1c041eaa5f00cf8e7e7330ad793b880aa35f6c4e
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -473,6 +478,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -485,6 +491,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 4112e632c7b18a029a3a1fac803ab89f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -500,7 +507,7 @@ KnownVulnerableSamples:
       Entropy: 6.305335255152002
       Virtual Size: '0x147a'
     .rdata:
-      Entropy: 3.790465958065011
+      Entropy: 3.790465958065012
       Virtual Size: '0x1ec'
     .data:
       Entropy: 2.0577277787393187
@@ -512,10 +519,10 @@ KnownVulnerableSamples:
       Entropy: 3.261114029825118
       Virtual Size: '0x380'
     .reloc:
-      Entropy: 5.426276217210761
+      Entropy: 5.42627621721076
       Virtual Size: '0x186'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-04-15 03:23:35'
+  CreationTimestamp: '2010-04-15 05:23:35'
 - Filename: procexp.Sys
   MD5: c56a9ed0192c5a2b39691e54f2132a2f
   SHA1: 9099482b26e9ba8e1d303418afc9111a3bffd6b3
@@ -590,6 +597,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=Texas, L=Austin, O=Sysinternals, OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Headquarters, CN=Sysinternals
       ValidFrom: '2007-03-05 00:00:00'
@@ -603,6 +611,7 @@ KnownVulnerableSamples:
         MD5: ae18dfd140f9414eadf1f611ec1b84b7
         SHA1: 9aecb2568e995d5965e49acf3ff247bc3d1ab99c
         SHA256: f14ce5fe5f508ced18d652e8211edb00c1c773899d03d18dec932df9c54f0a86
+        SHA384: c2a6c771b86b687befda12f6871e2f0d473317b4694f25ddc835d2f203953870f26ae9994822e53fcddaeb012f2b6740
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -615,6 +624,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 7d2c89d309e57beef2d791bb8ed6a26f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -627,25 +637,25 @@ KnownVulnerableSamples:
     SHA256: b3da31bed27ae39b6fd4b9152315a2a81e444cdb54edb34eb6a583538717a4a1
   Sections:
     .text:
-      Entropy: 6.168262202149083
+      Entropy: 6.168262202149082
       Virtual Size: '0x19f8'
     .rdata:
-      Entropy: 4.079443409043563
+      Entropy: 4.079443409043562
       Virtual Size: '0x2cc'
     .data:
-      Entropy: 0.4860349013607531
+      Entropy: 0.4860349013607527
       Virtual Size: '0x124'
     .pdata:
       Entropy: 3.651113286298327
       Virtual Size: '0xa8'
     INIT:
-      Entropy: 5.006142056841753
+      Entropy: 5.006142056841754
       Virtual Size: '0x4a0'
     .rsrc:
-      Entropy: 3.294153762600323
+      Entropy: 3.2941537626003226
       Virtual Size: '0x380'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-11-03 14:19:45'
+  CreationTimestamp: '2008-11-03 16:19:45'
 - Filename: procexp.Sys
   MD5: 6ff59faea912903af0ba8e80e58612bc
   SHA1: 736531c76b8d9c56e26561bf430e10ecabff0186
@@ -748,6 +758,7 @@ KnownVulnerableSamples:
         MD5: 31c86790d5106374a2387094c9e925f9
         SHA1: 02effd51d770a6881492009028d3e37d52a353ec
         SHA256: 4846d6d5238e9900fae36792af3ac2835f6f10aa18de48b558c676e94bb24e05
+        SHA384: 0bffcf528e304b0b704985707ddbafbbcf5670203ae1dfa78b1ef03926cc6619f55fd20c095bbe416f470e50a075c5d2
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Hardware Compatibility Publisher
       ValidFrom: '2019-04-18 18:42:23'
@@ -761,6 +772,7 @@ KnownVulnerableSamples:
         MD5: f9a6526d8f83e3d33d925ae95b752dca
         SHA1: ad9f086d0642e3b5de60584c44123cf4603c4525
         SHA256: 7bdb7967d328a3a1cb2d2c4c7399633203668f9a86a271b277a218b639ad12ee
+        SHA384: 0ae0176f351a8e4df75f1c72d2002b1682a1e4d1ccb069fb8b5bcb496ef016a6386e44428ebabe538eb2900b564e3f93
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Hardware Compatibility PCA
       ValidFrom: '2018-09-20 17:42:01'
@@ -774,6 +786,7 @@ KnownVulnerableSamples:
         MD5: 77dab20d8e23cd8e18633adca506cf6e
         SHA1: c5506bee3c29254dc5b5a0e6e7a14046522708ef
         SHA256: 611f1d188d7c39a400a01ee32e2c257be5082445ace6f59acd103a250cc2ec0f
+        SHA384: cf4c4b8360744f9c56803afb49175361c93fc4a95c77dbe0eebb2852a32c93ed9cc563495c0e1c9c32e4d58512f55b49
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Time,Stamp PCA
       ValidFrom: '2007-04-03 12:53:09'
@@ -787,6 +800,7 @@ KnownVulnerableSamples:
         MD5: 335713f62536c68d0acc82df3dceb932
         SHA1: 023cf1c5e99dc2f24133dae6937145bb481306e6
         SHA256: 65d585d6bf2b0aa4f798b9af69be08c6f1c3d01a754f989768b722a145df5312
+        SHA384: f7dd00644994985c518f70c060386448dd0c3a13f5eff12a0dd31bf8333f24b781928d323acca27e04633e71a7f22e71
     Signer:
     - SerialNumber: 33000000387a14cce6619d8c51000200000038
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -813,7 +827,7 @@ KnownVulnerableSamples:
       Entropy: 6.228697679351415
       Virtual Size: '0x1a1b'
     INIT:
-      Entropy: 5.210944759781676
+      Entropy: 5.210944759781675
       Virtual Size: '0x818'
     .rsrc:
       Entropy: 3.282250655906871
@@ -822,7 +836,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-06-13 07:35:39'
+  CreationTimestamp: '2019-06-13 09:35:39'
 - Filename: procexp.Sys
   MD5: 8e78ab9b9709bafb11695a0a6eddeff9
   SHA1: 2f9b0cd96d961e49d5d3b416028fd3a0e43d6a28
@@ -926,6 +940,7 @@ KnownVulnerableSamples:
         MD5: 55a4c08c9404782113330a8cd169ed20
         SHA1: 74807ba52ae6108b0fbac5031090b3295b2c3bba
         SHA256: 3fe3c656e859492b0d4bb2c4c2020ae816340f985e054239d3342ffb93269b16
+        SHA384: 653eeae6166aec45fd75b679034bec2a53623d999b14ebfbc821067c1c041eaa5f00cf8e7e7330ad793b880aa35f6c4e
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -940,6 +955,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -952,6 +968,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 4112e632c7b18a029a3a1fac803ab89f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -970,13 +987,13 @@ KnownVulnerableSamples:
       Entropy: 4.339948425571505
       Virtual Size: '0x8b8'
     .data:
-      Entropy: 4.48191551836309
+      Entropy: 4.481915518363089
       Virtual Size: '0x9d0'
     .pdata:
-      Entropy: 4.13079962034881
+      Entropy: 4.130799620348809
       Virtual Size: '0x300'
     PAGE:
-      Entropy: 6.230330583561505
+      Entropy: 6.230330583561506
       Virtual Size: '0x1a1b'
     INIT:
       Entropy: 5.199891508904556
@@ -985,10 +1002,10 @@ KnownVulnerableSamples:
       Entropy: 3.2729894475085453
       Virtual Size: '0x380'
     .reloc:
-      Entropy: 1.1266429267004154
+      Entropy: 1.126642926700415
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-06-16 15:21:56'
+  CreationTimestamp: '2012-06-16 17:21:56'
 - Filename: procexp.Sys
   MD5: a91a1bc393971a662a3210dac8c17dfd
   SHA1: e4fcb363cfe9de0e32096fa5be94a41577a89bb0
@@ -1092,6 +1109,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=Texas, L=Austin, O=Sysinternals, OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Headquarters, CN=Sysinternals
       ValidFrom: '2007-03-05 00:00:00'
@@ -1105,6 +1123,7 @@ KnownVulnerableSamples:
         MD5: ae18dfd140f9414eadf1f611ec1b84b7
         SHA1: 9aecb2568e995d5965e49acf3ff247bc3d1ab99c
         SHA256: f14ce5fe5f508ced18d652e8211edb00c1c773899d03d18dec932df9c54f0a86
+        SHA384: c2a6c771b86b687befda12f6871e2f0d473317b4694f25ddc835d2f203953870f26ae9994822e53fcddaeb012f2b6740
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1117,6 +1136,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 7d2c89d309e57beef2d791bb8ed6a26f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1138,7 +1158,7 @@ KnownVulnerableSamples:
       Entropy: 2.165957212826059
       Virtual Size: '0x1b4'
     PAGE:
-      Entropy: 6.253761393386401
+      Entropy: 6.253761393386402
       Virtual Size: '0x13e2'
     INIT:
       Entropy: 5.513149658648293
@@ -1150,7 +1170,7 @@ KnownVulnerableSamples:
       Entropy: 5.7007058924695935
       Virtual Size: '0x29e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-03-30 18:27:21'
+  CreationTimestamp: '2010-03-30 20:27:21'
 - Filename: procexp.Sys
   MD5: e4a0bba88605d4c07b58a2cc3fac0fe9
   SHA1: ac31d15851c0af14d60cfce23f00c4b7887d3cb7
@@ -1250,6 +1270,7 @@ KnownVulnerableSamples:
         MD5: 55a4c08c9404782113330a8cd169ed20
         SHA1: 74807ba52ae6108b0fbac5031090b3295b2c3bba
         SHA256: 3fe3c656e859492b0d4bb2c4c2020ae816340f985e054239d3342ffb93269b16
+        SHA384: 653eeae6166aec45fd75b679034bec2a53623d999b14ebfbc821067c1c041eaa5f00cf8e7e7330ad793b880aa35f6c4e
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -1264,6 +1285,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1276,6 +1298,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 4112e632c7b18a029a3a1fac803ab89f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1288,31 +1311,31 @@ KnownVulnerableSamples:
     SHA256: dc52d97ba63a84b49265c1c6d9a802ee7e0d3151f917ed1a9840711caddb6fd5
   Sections:
     .text:
-      Entropy: 5.574488362960796
+      Entropy: 5.574488362960797
       Virtual Size: '0x2d8f'
     .rdata:
       Entropy: 4.3611610571192605
       Virtual Size: '0x890'
     .data:
-      Entropy: 4.5196692261371245
+      Entropy: 4.519669226137125
       Virtual Size: '0x970'
     .pdata:
-      Entropy: 4.1349798434712515
+      Entropy: 4.134979843471252
       Virtual Size: '0x2f4'
     PAGE:
-      Entropy: 6.226121511186966
+      Entropy: 6.226121511186965
       Virtual Size: '0x1a1b'
     INIT:
-      Entropy: 5.188603622455519
+      Entropy: 5.188603622455518
       Virtual Size: '0x7be'
     .rsrc:
       Entropy: 3.2752215903656885
       Virtual Size: '0x380'
     .reloc:
-      Entropy: 1.2270124269441627
+      Entropy: 1.2270124269441625
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-12-30 16:49:03'
+  CreationTimestamp: '2011-12-30 18:49:03'
 - Filename: procexp.Sys
   MD5: 880686bceaf66bfde3c80569eb1ebfa7
   SHA1: 10b9ae9286837b3bf6a00771c7e81adbdea3cbfe
@@ -1409,6 +1432,7 @@ KnownVulnerableSamples:
         MD5: 55a4c08c9404782113330a8cd169ed20
         SHA1: 74807ba52ae6108b0fbac5031090b3295b2c3bba
         SHA256: 3fe3c656e859492b0d4bb2c4c2020ae816340f985e054239d3342ffb93269b16
+        SHA384: 653eeae6166aec45fd75b679034bec2a53623d999b14ebfbc821067c1c041eaa5f00cf8e7e7330ad793b880aa35f6c4e
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -1423,6 +1447,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1435,6 +1460,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 4112e632c7b18a029a3a1fac803ab89f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1450,28 +1476,28 @@ KnownVulnerableSamples:
       Entropy: 6.1214097189278265
       Virtual Size: '0x1b42'
     .rdata:
-      Entropy: 4.321784985283108
+      Entropy: 4.321784985283106
       Virtual Size: '0x7f8'
     .data:
-      Entropy: 1.3979136028359334
+      Entropy: 1.3979136028359336
       Virtual Size: '0x314'
     .pdata:
       Entropy: 4.1873206533709775
       Virtual Size: '0x24c'
     PAGE:
-      Entropy: 6.217617404924
+      Entropy: 6.217617404924001
       Virtual Size: '0x1a47'
     INIT:
       Entropy: 5.182814317902468
       Virtual Size: '0x78a'
     .rsrc:
-      Entropy: 3.26616908006282
+      Entropy: 3.2661690800628196
       Virtual Size: '0x380'
     .reloc:
-      Entropy: 1.2280731978955797
+      Entropy: 1.2280731978955792
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-04-25 12:19:41'
+  CreationTimestamp: '2011-04-25 14:19:41'
 - Filename: procexp.Sys
   MD5: ad03f225247b58a57584b40a4d1746d3
   SHA1: e525f54b762c10703c975132e8fc21b6cd88d39b
@@ -1573,6 +1599,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1586,6 +1613,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Washington, L=Redmond, O=Sysinternals, OU=Digital ID Class
         3 , Microsoft Software Validation v2, CN=Sysinternals
       ValidFrom: '2013-04-06 00:00:00'
@@ -1599,6 +1627,7 @@ KnownVulnerableSamples:
         MD5: 1b7ca026e68405de56477b5b7bb3a0a5
         SHA1: b2a1bd13d8833154f02e51e25c9f023d54a27d21
         SHA256: 2018b8e7ea18c392558dcd375742cc792648ec23e5eb07d7987c27c76f4c62c0
+        SHA384: a8ccad9eeb4974ba9504241c685e7e1dd85e0de420c0ae077f8f3e92b3ab7c9a1653b3d0d535250a741bb7e36ec2f06a
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -1613,6 +1642,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -1627,6 +1657,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 1efd983a49d3f152ac9cd2941b8a0edd
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1651,7 +1682,7 @@ KnownVulnerableSamples:
       Entropy: 4.238715005322108
       Virtual Size: '0x2e8'
     PAGE:
-      Entropy: 6.226087739371598
+      Entropy: 6.226087739371599
       Virtual Size: '0x1a1b'
     INIT:
       Entropy: 5.215673013101648
@@ -1663,7 +1694,7 @@ KnownVulnerableSamples:
       Entropy: 2.855388542207534
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-05-10 22:52:10'
+  CreationTimestamp: '2015-05-11 00:52:10'
 - Filename: procexp.Sys
   MD5: 90f8c1b76f786814d03ef4c51d4abb6d
   SHA1: d1c38145addfed1bcd1b400334ff5a5e2ef9a5c6
@@ -1767,6 +1798,7 @@ KnownVulnerableSamples:
         MD5: 1b7ca026e68405de56477b5b7bb3a0a5
         SHA1: b2a1bd13d8833154f02e51e25c9f023d54a27d21
         SHA256: 2018b8e7ea18c392558dcd375742cc792648ec23e5eb07d7987c27c76f4c62c0
+        SHA384: a8ccad9eeb4974ba9504241c685e7e1dd85e0de420c0ae077f8f3e92b3ab7c9a1653b3d0d535250a741bb7e36ec2f06a
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -1781,6 +1813,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -1795,6 +1828,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 1efd983a49d3f152ac9cd2941b8a0edd
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1810,16 +1844,16 @@ KnownVulnerableSamples:
       Entropy: 5.526495684182833
       Virtual Size: '0x31a3'
     .rdata:
-      Entropy: 4.333968530107277
+      Entropy: 4.333968530107276
       Virtual Size: '0x8b8'
     .data:
-      Entropy: 4.48191551836309
+      Entropy: 4.481915518363089
       Virtual Size: '0x9d0'
     .pdata:
       Entropy: 4.158668830245067
       Virtual Size: '0x300'
     PAGE:
-      Entropy: 6.228863895048878
+      Entropy: 6.228863895048879
       Virtual Size: '0x1a1b'
     INIT:
       Entropy: 5.199891508904556
@@ -1828,10 +1862,10 @@ KnownVulnerableSamples:
       Entropy: 3.2729894475085453
       Virtual Size: '0x380'
     .reloc:
-      Entropy: 1.1266429267004154
+      Entropy: 1.126642926700415
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-10-20 18:16:05'
+  CreationTimestamp: '2013-10-20 20:16:05'
 - Filename: procexp.Sys
   MD5: f9d04e99e4cab90973226a4555bc6d57
   SHA1: 96ec8c16f6a54b48e9a7f0d0416a529f4bf9ac11
@@ -1934,6 +1968,7 @@ KnownVulnerableSamples:
         MD5: 3094214121c022fb9a5e410920d5eb96
         SHA1: 388c68e81cfc19e838d5070ac4e6793b32bfd293
         SHA256: 0fe53b3d3a84a2b9768554a34a64622ed13cd1b915bdacdc4955e12cc24b4da9
+        SHA384: 8bdb4ff21bcdd1436dc37b1e6c9c7fb32178462243304b51a6277b5291a9421dd65fb238c8711b1aef75b85375a92599
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Hardware Compatibility Publisher
       ValidFrom: '2018-06-08 17:24:26'
@@ -1947,6 +1982,7 @@ KnownVulnerableSamples:
         MD5: 9a2de17c0445f3e68c9315347b5805f8
         SHA1: df228171e01e890d9b69a749887197af4a3f7602
         SHA256: 4a7311ef8dd289fa50df104e89c167449e87034901503c7e9423ee9e90d5c528
+        SHA384: e3f444c0320389de66bee39dc64dfb13eb4903590060830cbebaf14d8c707b2eb1e6289c9c08e7f258e6dea4387d88eb
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Hardware Compatibility PCA
       ValidFrom: '2012-06-04 21:05:46'
@@ -1960,6 +1996,7 @@ KnownVulnerableSamples:
         MD5: cfa5fa49250320f7a3473a82877fabf3
         SHA1: 6b3242a9a639b0da4d5882c7eeb402be6615ad0c
         SHA256: 8e7c756d4597e8cca0f627d75647e2f9d5a693f1f263b193347066d214c1d4db
+        SHA384: 296a0f621330ac591c8c80bdd5e5bd19e9c01e8d267d02a3f3abc845088174d752c077907b99b128d389dc13ea69d009
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Time,Stamp PCA
       ValidFrom: '2007-04-03 12:53:09'
@@ -1973,6 +2010,7 @@ KnownVulnerableSamples:
         MD5: 335713f62536c68d0acc82df3dceb932
         SHA1: 023cf1c5e99dc2f24133dae6937145bb481306e6
         SHA256: 65d585d6bf2b0aa4f798b9af69be08c6f1c3d01a754f989768b722a145df5312
+        SHA384: f7dd00644994985c518f70c060386448dd0c3a13f5eff12a0dd31bf8333f24b781928d323acca27e04633e71a7f22e71
     Signer:
     - SerialNumber: 33000000317c61d46115ceba6a000100000031
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -1999,7 +2037,7 @@ KnownVulnerableSamples:
       Entropy: 6.2273427245942345
       Virtual Size: '0x1a1b'
     INIT:
-      Entropy: 5.211213219982408
+      Entropy: 5.211213219982407
       Virtual Size: '0x818'
     .rsrc:
       Entropy: 3.282250655906871
@@ -2008,7 +2046,7 @@ KnownVulnerableSamples:
       Entropy: 3.667481250360578
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-11-09 12:21:38'
+  CreationTimestamp: '2018-11-09 14:21:38'
 - Filename: procexp.Sys
   MD5: 659a59d7e26b7730361244e12201378e
   SHA1: c21510569fd84a5fe04508aa28e3cf9c8cc45b7a
@@ -2111,6 +2149,7 @@ KnownVulnerableSamples:
         MD5: 10a173441d459944d30bbcfc69f7521b
         SHA1: 500cf2d67d9e3b7c31b2a65d4f121f7201cade0e
         SHA256: 1994223eadaccd1eaf27c1a3e90dd6142a4ceb8f8fafe5109e2accbccc60e4ed
+        SHA384: 583cf1f7091b957856b816d69081d73f79f4fa08bfd49b6c40f09087c1a50823637b96b2c8f224b934e5234212ef8f53
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Hardware Compatibility Publisher
       ValidFrom: '2019-04-18 18:42:23'
@@ -2124,6 +2163,7 @@ KnownVulnerableSamples:
         MD5: f9a6526d8f83e3d33d925ae95b752dca
         SHA1: ad9f086d0642e3b5de60584c44123cf4603c4525
         SHA256: 7bdb7967d328a3a1cb2d2c4c7399633203668f9a86a271b277a218b639ad12ee
+        SHA384: 0ae0176f351a8e4df75f1c72d2002b1682a1e4d1ccb069fb8b5bcb496ef016a6386e44428ebabe538eb2900b564e3f93
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Hardware Compatibility PCA
       ValidFrom: '2018-09-20 17:42:01'
@@ -2137,6 +2177,7 @@ KnownVulnerableSamples:
         MD5: 77dab20d8e23cd8e18633adca506cf6e
         SHA1: c5506bee3c29254dc5b5a0e6e7a14046522708ef
         SHA256: 611f1d188d7c39a400a01ee32e2c257be5082445ace6f59acd103a250cc2ec0f
+        SHA384: cf4c4b8360744f9c56803afb49175361c93fc4a95c77dbe0eebb2852a32c93ed9cc563495c0e1c9c32e4d58512f55b49
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Time,Stamp PCA
       ValidFrom: '2007-04-03 12:53:09'
@@ -2150,6 +2191,7 @@ KnownVulnerableSamples:
         MD5: 335713f62536c68d0acc82df3dceb932
         SHA1: 023cf1c5e99dc2f24133dae6937145bb481306e6
         SHA256: 65d585d6bf2b0aa4f798b9af69be08c6f1c3d01a754f989768b722a145df5312
+        SHA384: f7dd00644994985c518f70c060386448dd0c3a13f5eff12a0dd31bf8333f24b781928d323acca27e04633e71a7f22e71
     Signer:
     - SerialNumber: 33000000387a14cce6619d8c51000200000038
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -2176,7 +2218,7 @@ KnownVulnerableSamples:
       Entropy: 6.228697679351415
       Virtual Size: '0x1a1b'
     INIT:
-      Entropy: 5.210944759781676
+      Entropy: 5.210944759781675
       Virtual Size: '0x818'
     .rsrc:
       Entropy: 3.2450999660680178
@@ -2185,7 +2227,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-06-28 15:02:57'
+  CreationTimestamp: '2019-06-28 17:02:57'
 - Filename: procexp.Sys
   MD5: da6f7407c4656a2dbaf16a407aff1a38
   SHA1: ed40c1f7da98634869b415530e250f4a665a8c48
@@ -2287,6 +2329,7 @@ KnownVulnerableSamples:
         MD5: b9dc0ff1a60c3aba24a78d505955bf39
         SHA1: 15a5da2c8aa2955af75615009d249071f91fd252
         SHA256: ba7853f855ba7bc325287c11f5f7b20e013716affad372440feb2c3cf02f0bc5
+        SHA384: 90f67f637874aca58284dde5bfa77d98616efd902d1a63f53bc30cd287d464e6706388ed317199236e0739642622f9c5
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -2300,6 +2343,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000b20f9ad86794f322f60000000000b2
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -2326,7 +2370,7 @@ KnownVulnerableSamples:
       Entropy: 6.227798908894738
       Virtual Size: '0x1a1b'
     INIT:
-      Entropy: 5.210944759781676
+      Entropy: 5.210944759781675
       Virtual Size: '0x818'
     .rsrc:
       Entropy: 3.2986851505507833
@@ -2335,7 +2379,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-05-26 08:02:20'
+  CreationTimestamp: '2021-05-26 10:02:20'
 - Filename: procexp.Sys
   MD5: 6b3abe55c4d39e305a11b4d1091dfaac
   SHA1: 1c537fd17836283364349475c6138e6667cf1164
@@ -2436,6 +2480,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=Texas, L=Austin, O=Sysinternals, OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Headquarters, CN=Sysinternals
       ValidFrom: '2007-03-05 00:00:00'
@@ -2449,6 +2494,7 @@ KnownVulnerableSamples:
         MD5: ae18dfd140f9414eadf1f611ec1b84b7
         SHA1: 9aecb2568e995d5965e49acf3ff247bc3d1ab99c
         SHA256: f14ce5fe5f508ced18d652e8211edb00c1c773899d03d18dec932df9c54f0a86
+        SHA384: c2a6c771b86b687befda12f6871e2f0d473317b4694f25ddc835d2f203953870f26ae9994822e53fcddaeb012f2b6740
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -2461,6 +2507,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 7d2c89d309e57beef2d791bb8ed6a26f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -2485,7 +2532,7 @@ KnownVulnerableSamples:
       Entropy: 1.5305882342388135
       Virtual Size: '0x4c'
     .sdata:
-      Entropy: 2.6750321646829582
+      Entropy: 2.675032164682958
       Virtual Size: '0x234'
     .data:
       Entropy: 1.8211654677412543
@@ -2497,13 +2544,13 @@ KnownVulnerableSamples:
       Entropy: 5.205112242696482
       Virtual Size: '0x834'
     .rsrc:
-      Entropy: 3.2914310280393253
+      Entropy: 3.291431028039325
       Virtual Size: '0x380'
     .reloc:
       Entropy: 1.4379095220400315
       Virtual Size: '0x338'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-03-30 18:30:49'
+  CreationTimestamp: '2010-03-30 20:30:49'
 - Filename: procexp.Sys
   MD5: cec257dcac9e708cefb17f8984dd0a70
   SHA1: da361c56c18ea98e1c442aac7c322ff20f64486b
@@ -2605,6 +2652,7 @@ KnownVulnerableSamples:
         MD5: b23d5388c0fa7b32ff0a91fccb5cce6d
         SHA1: ab5d6cc2d03e34f4fe2e51fa524401d5806f9a9f
         SHA256: a072644961dcfa16259c4aac9cb7faf1431c48b41f616551827dd3f41a849976
+        SHA384: a723c261b9b6c6bd3d706d37e6a3e22c3e2b60b012d4358cf41d5df21c7759e89fa165cf120dfb84b8f65e8ab45b0afa
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, OU=MOPR, CN=Microsoft
         Windows Hardware Compatibility Publisher
       ValidFrom: '2016-10-12 20:32:53'
@@ -2618,6 +2666,7 @@ KnownVulnerableSamples:
         MD5: 16a85b0d3a49b45acb03c9165240f78a
         SHA1: d21820acd2d9a023556d949773b2177b63552ea3
         SHA256: 0c0eaf6cf17b0b0a74d5a8f6286ec93e43001ee82f2481278e009c57366c63d5
+        SHA384: 8fa38bd1192722d0e4a7afae30214255bac446feade34a716d90d4567bc0875613b7a3d53292194f644e2ad2c1c14962
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Hardware Compatibility PCA
       ValidFrom: '2012-06-04 21:05:46'
@@ -2631,6 +2680,7 @@ KnownVulnerableSamples:
         MD5: cfa5fa49250320f7a3473a82877fabf3
         SHA1: 6b3242a9a639b0da4d5882c7eeb402be6615ad0c
         SHA256: 8e7c756d4597e8cca0f627d75647e2f9d5a693f1f263b193347066d214c1d4db
+        SHA384: 296a0f621330ac591c8c80bdd5e5bd19e9c01e8d267d02a3f3abc845088174d752c077907b99b128d389dc13ea69d009
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Time,Stamp PCA
       ValidFrom: '2007-04-03 12:53:09'
@@ -2644,6 +2694,7 @@ KnownVulnerableSamples:
         MD5: 335713f62536c68d0acc82df3dceb932
         SHA1: 023cf1c5e99dc2f24133dae6937145bb481306e6
         SHA256: 65d585d6bf2b0aa4f798b9af69be08c6f1c3d01a754f989768b722a145df5312
+        SHA384: f7dd00644994985c518f70c060386448dd0c3a13f5eff12a0dd31bf8333f24b781928d323acca27e04633e71a7f22e71
     Signer:
     - SerialNumber: 33000000244d59538809906ea7000100000024
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -2667,7 +2718,7 @@ KnownVulnerableSamples:
       Entropy: 4.194795401903142
       Virtual Size: '0x2e8'
     PAGE:
-      Entropy: 6.2255173792372
+      Entropy: 6.225517379237201
       Virtual Size: '0x1a1b'
     INIT:
       Entropy: 5.215673013101648
@@ -2679,7 +2730,7 @@ KnownVulnerableSamples:
       Entropy: 2.855388542207534
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-04-30 17:23:14'
+  CreationTimestamp: '2017-04-30 19:23:14'
 - Filename: procexp.Sys
   MD5: bf74d0706f5ab9c34067192260f4efb0
   SHA1: 6b090c558b877b6abb0d1051610cadbc6335ecbb
@@ -2781,6 +2832,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -2794,6 +2846,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Washington, L=Redmond, O=Sysinternals, OU=Digital ID Class
         3 , Microsoft Software Validation v2, CN=Sysinternals
       ValidFrom: '2013-04-06 00:00:00'
@@ -2807,6 +2860,7 @@ KnownVulnerableSamples:
         MD5: 1b7ca026e68405de56477b5b7bb3a0a5
         SHA1: b2a1bd13d8833154f02e51e25c9f023d54a27d21
         SHA256: 2018b8e7ea18c392558dcd375742cc792648ec23e5eb07d7987c27c76f4c62c0
+        SHA384: a8ccad9eeb4974ba9504241c685e7e1dd85e0de420c0ae077f8f3e92b3ab7c9a1653b3d0d535250a741bb7e36ec2f06a
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -2821,6 +2875,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -2835,6 +2890,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 1efd983a49d3f152ac9cd2941b8a0edd
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -2850,7 +2906,7 @@ KnownVulnerableSamples:
       Entropy: 6.194112925534596
       Virtual Size: '0x2370'
     .rdata:
-      Entropy: 4.434868128160928
+      Entropy: 4.434868128160927
       Virtual Size: '0xb78'
     .data:
       Entropy: 2.0654743843388097
@@ -2859,7 +2915,7 @@ KnownVulnerableSamples:
       Entropy: 4.238556641699438
       Virtual Size: '0x2e8'
     PAGE:
-      Entropy: 6.226087739371598
+      Entropy: 6.226087739371599
       Virtual Size: '0x1a1b'
     INIT:
       Entropy: 5.215673013101648
@@ -2871,7 +2927,7 @@ KnownVulnerableSamples:
       Entropy: 2.855388542207534
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-07-08 00:28:27'
+  CreationTimestamp: '2014-07-08 02:28:27'
 - Filename: procexp.Sys
   MD5: 92927c47d6ff139c9b19674c9d0088f6
   SHA1: a98734cd388f5b4b3caca5ce61cb03b05a8ad570
@@ -2973,6 +3029,7 @@ KnownVulnerableSamples:
         MD5: b9dc0ff1a60c3aba24a78d505955bf39
         SHA1: 15a5da2c8aa2955af75615009d249071f91fd252
         SHA256: ba7853f855ba7bc325287c11f5f7b20e013716affad372440feb2c3cf02f0bc5
+        SHA384: 90f67f637874aca58284dde5bfa77d98616efd902d1a63f53bc30cd287d464e6706388ed317199236e0739642622f9c5
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -2986,6 +3043,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000b20f9ad86794f322f60000000000b2
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -3012,7 +3070,7 @@ KnownVulnerableSamples:
       Entropy: 6.227798908894738
       Virtual Size: '0x1a1b'
     INIT:
-      Entropy: 5.210944759781676
+      Entropy: 5.210944759781675
       Virtual Size: '0x818'
     .rsrc:
       Entropy: 3.3048344530109697
@@ -3021,7 +3079,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-06-01 08:24:37'
+  CreationTimestamp: '2021-06-01 10:24:37'
 - Filename: procexp.Sys
   MD5: 2e219df70fccb79351f0452cba86623e
   SHA1: 2740cd167a9ccb81c8e8719ce0d2ae31babc631c
@@ -3130,6 +3188,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Test PCA
       ValidFrom: '2010-05-10 07:00:00'
@@ -3143,6 +3202,7 @@ KnownVulnerableSamples:
         MD5: 8ee8b5683b30c385e8f50ba39c817ecf
         SHA1: 0bead658f967af350cfce561ac851470f0bea7a7
         SHA256: 09763f5805c8295309022c7ef0dab73421a992d49902824b93a2a39f639c1ae7
+        SHA384: 8e30b9dbbecb0eb13a70166c2db49365467daca2b4c5a323bd675dcdaff232b9c92f93d45da62ea403524a4220e2aa0f
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -3156,6 +3216,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: DC=com, DC=microsoft, DC=corp, DC=redmond, CN=MSIT Test CodeSign CA
         2
       ValidFrom: '2014-01-03 23:17:17'
@@ -3169,6 +3230,7 @@ KnownVulnerableSamples:
         MD5: af75bafa171badc569c547f8cb748b04
         SHA1: ca9e1727c61692a1894e9f78f646a34f1a4046c1
         SHA256: 6f3fc63b80ab900fb038ca2bff158a031615bf33c8e4a069e309e7985b30f9ca
+        SHA384: 264a82fc20cf73d863651570f7d2b0aaf0765c92953ea47eb6fc85f7d4c7a6e2a146c0e654611d33ad273474d5167a40
     - Subject: CN=Mark Russinovich
       ValidFrom: '2015-06-30 15:50:49'
       ValidTo: '2016-06-29 15:50:49'
@@ -3181,6 +3243,7 @@ KnownVulnerableSamples:
         MD5: d47b1f71468f38d938a59072612c5a81
         SHA1: f029c7017324e858115d76088dd21ab0106145d2
         SHA256: 400790acf2a3847c7021865e7213b25eec9b9354cf5ec47ec1d3cadf2e8be539
+        SHA384: 26fdffba51f8b2620f44d1f199e5a3c6a81744d4b4c4116eee67edbca74ef6002cddd7bc5aec674fed74d84b72a1b166
     Signer:
     - SerialNumber: 77005ec5ff32646dcbf76aac900003005ec5ff
       Issuer: DC=com, DC=microsoft, DC=corp, DC=redmond, CN=MSIT Test CodeSign CA
@@ -3213,7 +3276,7 @@ KnownVulnerableSamples:
       Entropy: 6.4689942009857395
       Virtual Size: '0x360'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-12-05 14:43:50'
+  CreationTimestamp: '2015-12-05 16:43:50'
 - Filename: procexp.Sys
   MD5: 0ef05030abd55ba6b02faa2c0970f67f
   SHA1: f6d826d73bf819dbc9a058f2b55c88d6d4b634e3
@@ -3285,6 +3348,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -3297,6 +3361,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=US, ST=Texas, L=Austin, O=Sysinternals, OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Headquarters, CN=Sysinternals
       ValidFrom: '2006-02-02 00:00:00'
@@ -3310,6 +3375,7 @@ KnownVulnerableSamples:
         MD5: a41a1fbfc85b812b2a1570204015b8b4
         SHA1: a7e0f6ba7402a18a3a4e861e57a3ffacb582e8c0
         SHA256: c770e31a5ae65a0ae2b2b2c550ebaa2aa3594d872c08b31dde6d8105fc8b6687
+        SHA384: 1b58aa762321744aba0769fbf8d45151bb613a18cf8caf68b41c85af4c1715681cd186df5e5805cf400b12ab09166e9b
     Signer:
     - SerialNumber: 75c1a798b875894335c78cddbf05cbff
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -3322,7 +3388,7 @@ KnownVulnerableSamples:
     SHA256: 1379bea6cc6236eca70f97ba7fc73338ade1f24a85c4bf1c08992e573a48fad2
   Sections:
     .text:
-      Entropy: 6.100262415508947
+      Entropy: 6.100262415508948
       Virtual Size: '0xf68'
     INIT:
       Entropy: 5.190425299514774
@@ -3334,7 +3400,7 @@ KnownVulnerableSamples:
       Entropy: 4.850293456344704
       Virtual Size: '0x12e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2006-01-06 15:04:34'
+  CreationTimestamp: '2006-01-06 17:04:34'
 - Filename: procexp.Sys
   MD5: b7ca4c32c844df9b61634052ae276387
   SHA1: 6df6d5b30d04b9adb9d2c99de18ed108b011d52b
@@ -3409,6 +3475,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=Texas, L=Austin, O=Sysinternals, OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Headquarters, CN=Sysinternals
       ValidFrom: '2007-03-05 00:00:00'
@@ -3422,6 +3489,7 @@ KnownVulnerableSamples:
         MD5: ae18dfd140f9414eadf1f611ec1b84b7
         SHA1: 9aecb2568e995d5965e49acf3ff247bc3d1ab99c
         SHA256: f14ce5fe5f508ced18d652e8211edb00c1c773899d03d18dec932df9c54f0a86
+        SHA384: c2a6c771b86b687befda12f6871e2f0d473317b4694f25ddc835d2f203953870f26ae9994822e53fcddaeb012f2b6740
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -3434,6 +3502,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 7d2c89d309e57beef2d791bb8ed6a26f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -3452,19 +3521,19 @@ KnownVulnerableSamples:
       Entropy: 4.141958899402925
       Virtual Size: '0x2dc'
     .data:
-      Entropy: 0.4860349013607531
+      Entropy: 0.4860349013607527
       Virtual Size: '0x124'
     .pdata:
-      Entropy: 3.5957393883250757
+      Entropy: 3.5957393883250752
       Virtual Size: '0xc0'
     INIT:
-      Entropy: 5.011637602197952
+      Entropy: 5.011637602197953
       Virtual Size: '0x4a0'
     .rsrc:
-      Entropy: 3.2795326755401355
+      Entropy: 3.279532675540135
       Virtual Size: '0x380'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-07-21 14:42:49'
+  CreationTimestamp: '2008-07-21 16:42:49'
 - Filename: procexp.Sys
   MD5: 9beecfb3146f19400880da61476ef940
   SHA1: d5beca70469e0dcb099ba35979155e7c91876fd2
@@ -3566,6 +3635,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -3579,6 +3649,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Washington, L=Redmond, O=Sysinternals, OU=Digital ID Class
         3 , Microsoft Software Validation v2, CN=Sysinternals
       ValidFrom: '2013-04-06 00:00:00'
@@ -3592,6 +3663,7 @@ KnownVulnerableSamples:
         MD5: 1b7ca026e68405de56477b5b7bb3a0a5
         SHA1: b2a1bd13d8833154f02e51e25c9f023d54a27d21
         SHA256: 2018b8e7ea18c392558dcd375742cc792648ec23e5eb07d7987c27c76f4c62c0
+        SHA384: a8ccad9eeb4974ba9504241c685e7e1dd85e0de420c0ae077f8f3e92b3ab7c9a1653b3d0d535250a741bb7e36ec2f06a
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -3606,6 +3678,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -3620,6 +3693,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 1efd983a49d3f152ac9cd2941b8a0edd
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -3635,7 +3709,7 @@ KnownVulnerableSamples:
       Entropy: 6.194112925534596
       Virtual Size: '0x2370'
     .rdata:
-      Entropy: 4.434868128160928
+      Entropy: 4.434868128160927
       Virtual Size: '0xb78'
     .data:
       Entropy: 2.0654743843388097
@@ -3644,7 +3718,7 @@ KnownVulnerableSamples:
       Entropy: 4.238556641699438
       Virtual Size: '0x2e8'
     PAGE:
-      Entropy: 6.226087739371598
+      Entropy: 6.226087739371599
       Virtual Size: '0x1a1b'
     INIT:
       Entropy: 5.215673013101648
@@ -3656,7 +3730,7 @@ KnownVulnerableSamples:
       Entropy: 2.855388542207534
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-07-08 00:28:27'
+  CreationTimestamp: '2014-07-08 02:28:27'
 - Filename: procexp.Sys
   MD5: b79475c4783efdd8122694c6b5669a79
   SHA1: d612165251d5f1dcfb1f1a762c88d956f49ce344
@@ -3758,6 +3832,7 @@ KnownVulnerableSamples:
         MD5: b46a69db7e461e55282dc24dc594e5d6
         SHA1: 3b19241d555a74781e2b63a7c14ad12b1ec68205
         SHA256: 2a247cfecd58618afbf0f68cde5b9284a822e18e6ad5ff873467c6845b7f5975
+        SHA384: 5d7aeddeeef9b55bec8c3c5def19b19b0986f14b37ebc2e572847c82ab66a5dda02cfb30dd60a6be132441c7c4a70e79
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -3771,6 +3846,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 330000009484c47568579aafe9000000000094
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -3797,7 +3873,7 @@ KnownVulnerableSamples:
       Entropy: 6.228697679351415
       Virtual Size: '0x1a1b'
     INIT:
-      Entropy: 5.210944759781676
+      Entropy: 5.210944759781675
       Virtual Size: '0x818'
     .rsrc:
       Entropy: 3.300315570047502
@@ -3806,7 +3882,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-09-11 15:57:25'
+  CreationTimestamp: '2020-09-11 17:57:25'
 - Filename: procexp.Sys
   MD5: 318e309e11199ec69d8928c46a4d901b
   SHA1: 63bb17160115f16b3fca1f028b13033af4e468c6
@@ -3909,6 +3985,7 @@ KnownVulnerableSamples:
         MD5: 3094214121c022fb9a5e410920d5eb96
         SHA1: 388c68e81cfc19e838d5070ac4e6793b32bfd293
         SHA256: 0fe53b3d3a84a2b9768554a34a64622ed13cd1b915bdacdc4955e12cc24b4da9
+        SHA384: 8bdb4ff21bcdd1436dc37b1e6c9c7fb32178462243304b51a6277b5291a9421dd65fb238c8711b1aef75b85375a92599
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Hardware Compatibility Publisher
       ValidFrom: '2018-06-08 17:24:26'
@@ -3922,6 +3999,7 @@ KnownVulnerableSamples:
         MD5: 9a2de17c0445f3e68c9315347b5805f8
         SHA1: df228171e01e890d9b69a749887197af4a3f7602
         SHA256: 4a7311ef8dd289fa50df104e89c167449e87034901503c7e9423ee9e90d5c528
+        SHA384: e3f444c0320389de66bee39dc64dfb13eb4903590060830cbebaf14d8c707b2eb1e6289c9c08e7f258e6dea4387d88eb
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Hardware Compatibility PCA
       ValidFrom: '2012-06-04 21:05:46'
@@ -3935,6 +4013,7 @@ KnownVulnerableSamples:
         MD5: cfa5fa49250320f7a3473a82877fabf3
         SHA1: 6b3242a9a639b0da4d5882c7eeb402be6615ad0c
         SHA256: 8e7c756d4597e8cca0f627d75647e2f9d5a693f1f263b193347066d214c1d4db
+        SHA384: 296a0f621330ac591c8c80bdd5e5bd19e9c01e8d267d02a3f3abc845088174d752c077907b99b128d389dc13ea69d009
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Time,Stamp PCA
       ValidFrom: '2007-04-03 12:53:09'
@@ -3948,6 +4027,7 @@ KnownVulnerableSamples:
         MD5: 335713f62536c68d0acc82df3dceb932
         SHA1: 023cf1c5e99dc2f24133dae6937145bb481306e6
         SHA256: 65d585d6bf2b0aa4f798b9af69be08c6f1c3d01a754f989768b722a145df5312
+        SHA384: f7dd00644994985c518f70c060386448dd0c3a13f5eff12a0dd31bf8333f24b781928d323acca27e04633e71a7f22e71
     Signer:
     - SerialNumber: 33000000317c61d46115ceba6a000100000031
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -3974,7 +4054,7 @@ KnownVulnerableSamples:
       Entropy: 6.2273427245942345
       Virtual Size: '0x1a1b'
     INIT:
-      Entropy: 5.211213219982408
+      Entropy: 5.211213219982407
       Virtual Size: '0x818'
     .rsrc:
       Entropy: 3.282250655906871
@@ -3983,7 +4063,7 @@ KnownVulnerableSamples:
       Entropy: 3.667481250360578
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-11-16 16:15:17'
+  CreationTimestamp: '2018-11-16 18:15:17'
 - Filename: procexp.Sys
   MD5: c69c292e0b76b25a5fa0e16136770e11
   SHA1: 05eff2001f595f9e2894c6b5eee756ae72379a6d
@@ -4085,6 +4165,7 @@ KnownVulnerableSamples:
         MD5: fc736157189c18985ff54e87edc06166
         SHA1: 9c4ab0e49bf223f88f1a9cd4be69e53db6f59ef2
         SHA256: 8daf9edee56dd74ee0c24f9f618f2fac6eb78e8cd688c733bc8ba9c3a9d6303e
+        SHA384: 1ce3414a874efbbb74f1563aa28a7c5039b6ca232fc1c0975c8e608124d5d769e660d87436ef643e6b0cf2d672736fb1
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, OU=MOPR, CN=Microsoft
         Corporation
       ValidFrom: '2015-06-04 17:42:45'
@@ -4098,6 +4179,7 @@ KnownVulnerableSamples:
         MD5: 14e79171202b9f17d8770ee3e9e1a04c
         SHA1: ce13da3e20f06d1c9ebef5646f4b763f423fbffa
         SHA256: 37823fe17d235fa83b5231f159e969bcf0d0c6c134d4a89a5f91a92143c7472f
+        SHA384: 3965aeba6c585db3abc820f536d80296b9868da981a558ade81e7ae4fd1a6203a7f953ab33f265fa7f1c566213a89ffa
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Code Signing PCA
       ValidFrom: '2010-08-31 22:19:32'
@@ -4111,6 +4193,7 @@ KnownVulnerableSamples:
         MD5: 482f91c72e48878971dcf15579a96bd8
         SHA1: 27543a3f7612de2261c7228321722402f63a07de
         SHA256: d372e474aa3b4ca8c060f6adbab1dd488b720b0314aeaf05d49448180ff8afc6
+        SHA384: 63ec1262b2abf88e3a376855d52b4973a32721d960a6c99c2019395c40ffc21c1e60c123c2e81bf93565471caabfb5bf
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Time,Stamp PCA
       ValidFrom: '2007-04-03 12:53:09'
@@ -4124,6 +4207,7 @@ KnownVulnerableSamples:
         MD5: 335713f62536c68d0acc82df3dceb932
         SHA1: 023cf1c5e99dc2f24133dae6937145bb481306e6
         SHA256: 65d585d6bf2b0aa4f798b9af69be08c6f1c3d01a754f989768b722a145df5312
+        SHA384: f7dd00644994985c518f70c060386448dd0c3a13f5eff12a0dd31bf8333f24b781928d323acca27e04633e71a7f22e71
     Signer:
     - SerialNumber: 330000010a2c79aed7797ba6ac00010000010a
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -4147,7 +4231,7 @@ KnownVulnerableSamples:
       Entropy: 4.238715005322108
       Virtual Size: '0x2e8'
     PAGE:
-      Entropy: 6.226087739371598
+      Entropy: 6.226087739371599
       Virtual Size: '0x1a1b'
     INIT:
       Entropy: 5.215673013101648
@@ -4159,7 +4243,7 @@ KnownVulnerableSamples:
       Entropy: 2.855388542207534
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-02-04 15:04:43'
+  CreationTimestamp: '2016-02-04 17:04:43'
 - Filename: procexp.Sys
   MD5: 9982da703f13140997e137b1e745a2e3
   SHA1: 511b06898770337609ee065547dbf14ce3de5a95
@@ -4262,6 +4346,7 @@ KnownVulnerableSamples:
         MD5: 10a173441d459944d30bbcfc69f7521b
         SHA1: 500cf2d67d9e3b7c31b2a65d4f121f7201cade0e
         SHA256: 1994223eadaccd1eaf27c1a3e90dd6142a4ceb8f8fafe5109e2accbccc60e4ed
+        SHA384: 583cf1f7091b957856b816d69081d73f79f4fa08bfd49b6c40f09087c1a50823637b96b2c8f224b934e5234212ef8f53
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Hardware Compatibility Publisher
       ValidFrom: '2019-04-18 18:42:23'
@@ -4275,6 +4360,7 @@ KnownVulnerableSamples:
         MD5: f9a6526d8f83e3d33d925ae95b752dca
         SHA1: ad9f086d0642e3b5de60584c44123cf4603c4525
         SHA256: 7bdb7967d328a3a1cb2d2c4c7399633203668f9a86a271b277a218b639ad12ee
+        SHA384: 0ae0176f351a8e4df75f1c72d2002b1682a1e4d1ccb069fb8b5bcb496ef016a6386e44428ebabe538eb2900b564e3f93
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Hardware Compatibility PCA
       ValidFrom: '2018-09-20 17:42:01'
@@ -4288,6 +4374,7 @@ KnownVulnerableSamples:
         MD5: 77dab20d8e23cd8e18633adca506cf6e
         SHA1: c5506bee3c29254dc5b5a0e6e7a14046522708ef
         SHA256: 611f1d188d7c39a400a01ee32e2c257be5082445ace6f59acd103a250cc2ec0f
+        SHA384: cf4c4b8360744f9c56803afb49175361c93fc4a95c77dbe0eebb2852a32c93ed9cc563495c0e1c9c32e4d58512f55b49
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Time,Stamp PCA
       ValidFrom: '2007-04-03 12:53:09'
@@ -4301,6 +4388,7 @@ KnownVulnerableSamples:
         MD5: 335713f62536c68d0acc82df3dceb932
         SHA1: 023cf1c5e99dc2f24133dae6937145bb481306e6
         SHA256: 65d585d6bf2b0aa4f798b9af69be08c6f1c3d01a754f989768b722a145df5312
+        SHA384: f7dd00644994985c518f70c060386448dd0c3a13f5eff12a0dd31bf8333f24b781928d323acca27e04633e71a7f22e71
     Signer:
     - SerialNumber: 33000000387a14cce6619d8c51000200000038
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -4327,7 +4415,7 @@ KnownVulnerableSamples:
       Entropy: 6.228697679351415
       Virtual Size: '0x1a1b'
     INIT:
-      Entropy: 5.210944759781676
+      Entropy: 5.210944759781675
       Virtual Size: '0x818'
     .rsrc:
       Entropy: 3.282250655906871
@@ -4336,7 +4424,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-06-28 15:02:57'
+  CreationTimestamp: '2019-06-28 17:02:57'
 - Filename: procexp.Sys
   MD5: 9b9d367cb53df0a2e0850760c840d016
   SHA1: 631fdd1ef2d6f2d98e36f8fc7adbf90fbfb0a1e8
@@ -4439,6 +4527,7 @@ KnownVulnerableSamples:
         MD5: 474aa22f78903fa7bca0bf6ff4dabe03
         SHA1: 1745a1caaa7a8dd0da3ae4b2c3037b327e66ca86
         SHA256: a8662656da96725e4dedea5cd1234e9d64281228f08f87462cdcf378d7ff4a03
+        SHA384: c9ff7f654d644415032d44f78f8dd9f2d51fabb059dc3f75ea39a3d7b20604ae1d7d3b365205f5468d1fbd4e1f858be3
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Hardware Compatibility Publisher
       ValidFrom: '2019-04-18 18:42:23'
@@ -4452,6 +4541,7 @@ KnownVulnerableSamples:
         MD5: f9a6526d8f83e3d33d925ae95b752dca
         SHA1: ad9f086d0642e3b5de60584c44123cf4603c4525
         SHA256: 7bdb7967d328a3a1cb2d2c4c7399633203668f9a86a271b277a218b639ad12ee
+        SHA384: 0ae0176f351a8e4df75f1c72d2002b1682a1e4d1ccb069fb8b5bcb496ef016a6386e44428ebabe538eb2900b564e3f93
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Hardware Compatibility PCA
       ValidFrom: '2018-09-20 17:42:01'
@@ -4465,6 +4555,7 @@ KnownVulnerableSamples:
         MD5: 77dab20d8e23cd8e18633adca506cf6e
         SHA1: c5506bee3c29254dc5b5a0e6e7a14046522708ef
         SHA256: 611f1d188d7c39a400a01ee32e2c257be5082445ace6f59acd103a250cc2ec0f
+        SHA384: cf4c4b8360744f9c56803afb49175361c93fc4a95c77dbe0eebb2852a32c93ed9cc563495c0e1c9c32e4d58512f55b49
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Time,Stamp PCA
       ValidFrom: '2007-04-03 12:53:09'
@@ -4478,6 +4569,7 @@ KnownVulnerableSamples:
         MD5: 335713f62536c68d0acc82df3dceb932
         SHA1: 023cf1c5e99dc2f24133dae6937145bb481306e6
         SHA256: 65d585d6bf2b0aa4f798b9af69be08c6f1c3d01a754f989768b722a145df5312
+        SHA384: f7dd00644994985c518f70c060386448dd0c3a13f5eff12a0dd31bf8333f24b781928d323acca27e04633e71a7f22e71
     Signer:
     - SerialNumber: 33000000387a14cce6619d8c51000200000038
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -4492,7 +4584,7 @@ KnownVulnerableSamples:
       Entropy: 6.137423926314564
       Virtual Size: '0x25a0'
     .rdata:
-      Entropy: 4.328121245748763
+      Entropy: 4.328121245748762
       Virtual Size: '0xf78'
     .data:
       Entropy: 2.0732868843388097
@@ -4504,7 +4596,7 @@ KnownVulnerableSamples:
       Entropy: 6.228697679351415
       Virtual Size: '0x1a1b'
     INIT:
-      Entropy: 5.210944759781676
+      Entropy: 5.210944759781675
       Virtual Size: '0x818'
     .rsrc:
       Entropy: 3.282250655906871
@@ -4513,7 +4605,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-06-13 08:03:46'
+  CreationTimestamp: '2019-06-13 10:03:46'
 - Filename: procexp152.sys
   MD5: ad03f225247b58a57584b40a4d1746d3
   SHA1: e525f54b762c10703c975132e8fc21b6cd88d39b
@@ -4618,6 +4710,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -4631,6 +4724,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Washington, L=Redmond, O=Sysinternals, OU=Digital ID Class
         3 , Microsoft Software Validation v2, CN=Sysinternals
       ValidFrom: '2013-04-06 00:00:00'
@@ -4644,6 +4738,7 @@ KnownVulnerableSamples:
         MD5: 1b7ca026e68405de56477b5b7bb3a0a5
         SHA1: b2a1bd13d8833154f02e51e25c9f023d54a27d21
         SHA256: 2018b8e7ea18c392558dcd375742cc792648ec23e5eb07d7987c27c76f4c62c0
+        SHA384: a8ccad9eeb4974ba9504241c685e7e1dd85e0de420c0ae077f8f3e92b3ab7c9a1653b3d0d535250a741bb7e36ec2f06a
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -4658,6 +4753,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -4672,6 +4768,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 1efd983a49d3f152ac9cd2941b8a0edd
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -4696,7 +4793,7 @@ KnownVulnerableSamples:
       Entropy: 4.238715005322108
       Virtual Size: '0x2e8'
     PAGE:
-      Entropy: 6.226087739371598
+      Entropy: 6.226087739371599
       Virtual Size: '0x1a1b'
     INIT:
       Entropy: 5.215673013101648
@@ -4708,7 +4805,7 @@ KnownVulnerableSamples:
       Entropy: 2.855388542207534
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-05-10 22:52:10'
+  CreationTimestamp: '2015-05-11 00:52:10'
 - Filename: procexp.Sys
   MD5: 97e3a44ec4ae58c8cc38eefc613e950e
   SHA1: bc47e15537fa7c32dfefd23168d7e1741f8477ed
@@ -4816,6 +4913,7 @@ KnownVulnerableSamples:
         MD5: b9dc0ff1a60c3aba24a78d505955bf39
         SHA1: 15a5da2c8aa2955af75615009d249071f91fd252
         SHA256: ba7853f855ba7bc325287c11f5f7b20e013716affad372440feb2c3cf02f0bc5
+        SHA384: 90f67f637874aca58284dde5bfa77d98616efd902d1a63f53bc30cd287d464e6706388ed317199236e0739642622f9c5
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -4829,6 +4927,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000b20f9ad86794f322f60000000000b2
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -4855,16 +4954,16 @@ KnownVulnerableSamples:
       Entropy: 6.227798908894738
       Virtual Size: '0x1a1b'
     INIT:
-      Entropy: 5.210944759781676
+      Entropy: 5.210944759781675
       Virtual Size: '0x818'
     .rsrc:
-      Entropy: 3.3092987387252557
+      Entropy: 3.3092987387252553
       Virtual Size: '0x380'
     .reloc:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-08-16 20:01:16'
+  CreationTimestamp: '2021-08-16 22:01:16'
 - Filename: procexp.sys
   MD5: b79475c4783efdd8122694c6b5669a79
   SHA1: d612165251d5f1dcfb1f1a762c88d956f49ce344
@@ -4904,7 +5003,7 @@ KnownVulnerableSamples:
       Entropy: 6.228697679351415
       Virtual Size: '0x1a1b'
     INIT:
-      Entropy: 5.210944759781676
+      Entropy: 5.210944759781675
       Virtual Size: '0x818'
     .rsrc:
       Entropy: 3.300315570047502
@@ -4913,7 +5012,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-09-11 15:57:25'
+  CreationTimestamp: '2020-09-11 17:57:25'
   InternalName: procexp.sys
   Copyright: Copyright (C) Mark Russinovich 1996-2020
   Imports:
@@ -5000,6 +5099,7 @@ KnownVulnerableSamples:
         MD5: b46a69db7e461e55282dc24dc594e5d6
         SHA1: 3b19241d555a74781e2b63a7c14ad12b1ec68205
         SHA256: 2a247cfecd58618afbf0f68cde5b9284a822e18e6ad5ff873467c6845b7f5975
+        SHA384: 5d7aeddeeef9b55bec8c3c5def19b19b0986f14b37ebc2e572847c82ab66a5dda02cfb30dd60a6be132441c7c4a70e79
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -5013,6 +5113,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 330000009484c47568579aafe9000000000094
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -5122,6 +5223,7 @@ KnownVulnerableSamples:
         MD5: d47b44dce52973327e0283b8aaa49df4
         SHA1: d8c5ee55191da114e9e73f01e6222025ede696ac
         SHA256: 2d7cd230c57a7af8093369126606854002ea799a5d9b72fdb636988bdec5b451
+        SHA384: fdf14dbff80d252e2775d15550a319a858a79083ef31346a46beb1361031d3f8d16db0483a893a1ba4370f58c8bc47b2
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -5135,6 +5237,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 3300000082c88ba15b1c3ef710000000000082
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -5161,7 +5264,7 @@ KnownVulnerableSamples:
       Entropy: 6.228697679351415
       Virtual Size: '0x1a1b'
     INIT:
-      Entropy: 5.210944759781676
+      Entropy: 5.210944759781675
       Virtual Size: '0x818'
     .rsrc:
       Entropy: 3.3102527040960963
@@ -5170,6 +5273,6 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-12-13 09:37:59'
+  CreationTimestamp: '2019-12-13 11:37:59'
 Tags:
 - procexp.Sys

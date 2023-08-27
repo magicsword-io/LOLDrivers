@@ -76,6 +76,7 @@ KnownVulnerableSamples:
         MD5: 5b81fd0f706522a8d7c9f2957283c0b4
         SHA1: 84d894599653a8ed0e0b2802db3197dc177908cc
         SHA256: 4fa629304df4287c97ae5b7e481974316e9daf776b0cdeffab1671e7dca68fb4
+        SHA384: 0b89dc122fc7ebf80881a5047ffbbcb0bec30636516aff4f43307e2a925a476cabfc26e2cc392ad748d655f6ec4c8b75
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -89,6 +90,7 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 33000000319479a318f5522d06000000000031
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -118,7 +120,7 @@ KnownVulnerableSamples:
       Entropy: 3.0890191852411095
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-12-06 02:42:17'
+  CreationTimestamp: '2019-12-06 04:42:17'
 - Filename: GVCIDrv64.sys
   MD5: acd221ff7cf10b6117fd609929cde395
   SHA1: 1586f121d38cc42e5d04fe2f56091e91c6cdd8fa
@@ -177,6 +179,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -190,6 +193,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       ValidFrom: '2014-03-04 00:00:00'
@@ -203,6 +207,7 @@ KnownVulnerableSamples:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
+        SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
     - Subject: ??=TW, ??=, ??=NEW TAIPEI, ??=Private Organization, serialNumber=22044755,
         C=TW, L=NEW TAIPEI, O=GIGA,BYTE Technology Co., Ltd., CN=GIGA,BYTE Technology
         Co., Ltd.
@@ -217,6 +222,7 @@ KnownVulnerableSamples:
         MD5: 5415ec7433f8ae320658011dfcfa2998
         SHA1: 044407fe1b8e4b5af9eecf34ea87a0ecb32ee6bb
         SHA256: f828f449f9b365a1455b8358b044385beaf097166a80defc440eacb8deb6ef26
+        SHA384: 640b5b53eabd60a97be0f1fcf7c893edb3d8ebf507c63958114532cd445246dc0ae92a4dadec314dd5babee5d7f0497c
     Signer:
     - SerialNumber: 4f8eefa0dcc85bbd656ab0f160743d34
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
@@ -246,6 +252,6 @@ KnownVulnerableSamples:
       Entropy: 3.0890191852411095
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-12-06 02:42:17'
+  CreationTimestamp: '2019-12-06 04:42:17'
 Tags:
 - gvcidrv64.sys

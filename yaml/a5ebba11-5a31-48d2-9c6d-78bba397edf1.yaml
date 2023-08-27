@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 2bbbe2ae5aa51868e7afc2c16c3a0a79fa3302e6830feeccca7f0363a62dddb4
   Company: Legal Corp.
   Copyright: 2016 Legal
-  CreationTimestamp: '2017-10-24 00:01:19'
+  CreationTimestamp: '2017-10-24 02:01:19'
   Date: ''
   Description: PCIe Video Capture
   ExportedFunctions: ''
@@ -157,13 +157,13 @@ KnownVulnerableSamples:
       Entropy: 4.6238943300255775
       Virtual Size: '0x1ab24'
     .data:
-      Entropy: 3.3567678592928782
+      Entropy: 3.356767859292879
       Virtual Size: '0x205d4'
     .pdata:
       Entropy: 5.574699559285883
       Virtual Size: '0x1f08'
     PAGE:
-      Entropy: 0.8112781244591328
+      Entropy: 0.8112781244591329
       Virtual Size: '0x18'
     INIT:
       Entropy: 5.187652924677167
@@ -172,7 +172,7 @@ KnownVulnerableSamples:
       Entropy: 3.3153275739966412
       Virtual Size: '0x378'
     .reloc:
-      Entropy: 3.3480125359038277
+      Entropy: 3.348012535903828
       Virtual Size: '0x8e8'
   Signature:
   - Microsoft Windows Hardware Compatibility Publisher
@@ -195,6 +195,7 @@ KnownVulnerableSamples:
         MD5: fdc11a5676aed4e9cc0c09eeb7450dfb
         SHA1: 4902077d9a05d4231b791d3b05bafa4a79132f03
         SHA256: 5db56c23d83bf67c7152e28ad4a684a7372b4ae4f52afe7a81ce91eef94caec3
+        SHA384: c952d7f0e0ea5216ce4400601fb7c0829f0f3fcd6eb2b5b9112fbe45d133e00c4abd660f8e1794f7ac4ef95123e2c0ab
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -208,6 +209,7 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 3300000057ee4d659a923e7c10000000000057
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft

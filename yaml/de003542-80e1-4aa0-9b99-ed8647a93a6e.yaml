@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 539aa921b5352ab385430e1608ac5c0ae36f35e678d471b7a5994ec7c02eadea
   Company: Windows (R) Server 2003 DDK provider
   Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  CreationTimestamp: '2007-07-13 07:25:20'
+  CreationTimestamp: '2007-07-13 09:25:20'
   Date: ''
   Description: CPUID Driver
   ExportedFunctions: ''
@@ -81,10 +81,10 @@ KnownVulnerableSamples:
       Entropy: 5.910901072438337
       Virtual Size: '0x1294'
     .rdata:
-      Entropy: 4.629269752704382
+      Entropy: 4.629269752704383
       Virtual Size: '0x3bc'
     .data:
-      Entropy: 0.6699250014423124
+      Entropy: 0.6699250014423125
       Virtual Size: '0x24'
     .pdata:
       Entropy: 3.2898520572409398
@@ -93,7 +93,7 @@ KnownVulnerableSamples:
       Entropy: 4.263302108012708
       Virtual Size: '0x1b8'
     .rsrc:
-      Entropy: 3.3973670313444364
+      Entropy: 3.397367031344437
       Virtual Size: '0x3d8'
   Signature:
   - CPUID
@@ -116,6 +116,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -128,6 +129,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -142,6 +144,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=FR, ST=NORD, L=DUNKERQUE, O=CPUID, OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=CPUID
       ValidFrom: '2007-02-08 00:00:00'
@@ -155,6 +158,7 @@ KnownVulnerableSamples:
         MD5: 5e3b5587eb8c553dc279bb241c30689d
         SHA1: 5b5631ff0033ed753a5c630a4d8d48772050db32
         SHA256: 9b30d9d9f9fd9c0480c0503dd4ac86649d2cc180d1401ade6dd8048356d7f634
+        SHA384: 1886034ac8dc819ed45b8b48b0225cdb142d53d61bda992ee7e4923276c3c36dffbb0f8d929e1ad20c3437709df2399a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -167,6 +171,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 10e29d74903d9c7cd58caa35a0944770
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at

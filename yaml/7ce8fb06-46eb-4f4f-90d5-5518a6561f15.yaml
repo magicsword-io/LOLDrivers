@@ -41,7 +41,7 @@ KnownVulnerableSamples:
     SHA256: 3913d9754b78182aa25d38fbd7ea02502bdf1d81e6525ab4b5ffe5f543200478
   Company: GMER
   Copyright: Copyright (C) GMER 2003-2013
-  CreationTimestamp: '2016-03-09 00:28:57'
+  CreationTimestamp: '2016-03-09 02:28:57'
   Date: ''
   Description: GMER Driver http://www.gmer.net
   ExportedFunctions: ''
@@ -191,6 +191,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=PL, ST=Katowice, L=Katowice, O=GMEREK Systemy Komputerowe Przemyslaw
         Gmerek, CN=GMEREK Systemy Komputerowe Przemyslaw Gmerek
       ValidFrom: '2014-01-02 07:01:46'
@@ -204,6 +205,7 @@ KnownVulnerableSamples:
         MD5: 6f0e4c627d045bd81b94ec79fd4b371d
         SHA1: a624238b100a59ac8722559c4d1e75aa4f7d99a4
         SHA256: f0f8a64560267f1ff198c83420155851c8b91ae9eeb6227c9d1833b29b504e83
+        SHA384: 3f63878ac97adadd93ed3e316d703f25459441d2d9847dd8caec36af8c904906aaf96b55cde8cefda3d3c8031c722dd1
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -216,6 +218,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     Signer:
     - SerialNumber: 1121c5bcad73319ee0131e328a2b814e164a
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2

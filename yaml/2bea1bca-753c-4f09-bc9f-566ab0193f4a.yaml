@@ -52,7 +52,7 @@ KnownVulnerableSamples:
     SHA256: 9c0e80958b907c8df345ec2f8d711acefb4951ee3e6e84892ecd429f5e1f3acb
   Company: Windows (R) Server 2003 DDK provider
   Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  CreationTimestamp: '2013-07-03 22:27:55'
+  CreationTimestamp: '2013-07-04 00:27:55'
   Date: ''
   Description: GIGABYTE Tools
   ExportedFunctions: ''
@@ -109,7 +109,7 @@ KnownVulnerableSamples:
       Entropy: 6.2502047491555315
       Virtual Size: '0x2dc8'
     .rdata:
-      Entropy: 4.431694959682769
+      Entropy: 4.431694959682768
       Virtual Size: '0x610'
     .data:
       Entropy: 0.4231266687750792
@@ -121,7 +121,7 @@ KnownVulnerableSamples:
       Entropy: 4.963482726390094
       Virtual Size: '0x412'
     .rsrc:
-      Entropy: 3.471909950512757
+      Entropy: 3.4719099505127566
       Virtual Size: '0x3e8'
   Signature:
   - Giga-Byte Technology
@@ -144,6 +144,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -157,6 +158,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -171,6 +173,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -183,6 +186,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei Hsien, O=Giga,Byte Technology, OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Testing Department, CN=Giga,Byte
         Technology
@@ -197,6 +201,7 @@ KnownVulnerableSamples:
         MD5: dc48abdae01614d4607b1f5760dfce88
         SHA1: 467c1868ddb5ef8db746e66acbaab9fdd03fb740
         SHA256: a7f448e2fe327e481adfd1e89db612d5c58ff7891373a6e398ab98ddaeae74c5
+        SHA384: eb0d25fdcfab622d1c80a92ecd689bde520ed2b8099b4120194daa1a0013cabc5bd5792b0c1f12ca9c93fa4518aa2ca7
     Signer:
     - SerialNumber: 248472542c24ab8e429229acf121ca26
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -209,7 +214,7 @@ KnownVulnerableSamples:
     SHA256: 34da66774ba09c4a8fc59349401ca1fefaaf4e66a9c620c7782c072a16089ba3
   Company: GIGA-BYTE TECHNOLOGY CO., LTD.
   Copyright: Copyright (C) 2017
-  CreationTimestamp: '2017-11-30 22:40:53'
+  CreationTimestamp: '2017-12-01 00:40:53'
   Date: 2013-07-03 17:32:00 UTC, 2017-11-30 18:40:00 UTC
   Description: GIGA-BYTE NonPNP Driver
   ExportedFunctions: ''
@@ -273,10 +278,10 @@ KnownVulnerableSamples:
       Entropy: 1.2607720515150977
       Virtual Size: '0x54'
     .pdata:
-      Entropy: 3.937251533548631
+      Entropy: 3.9372515335486327
       Virtual Size: '0x1ec'
     .gfids:
-      Entropy: 0.8112781244591328
+      Entropy: 0.8112781244591329
       Virtual Size: '0x4'
     INIT:
       Entropy: 5.256526972951585
@@ -308,6 +313,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -321,6 +327,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taiwan, L=NEW TAIPEI, O=GIGA,BYTE TECHNOLOGY CO., LTD., CN=GIGA,BYTE
         TECHNOLOGY CO., LTD.
       ValidFrom: '2016-07-21 00:00:00'
@@ -334,6 +341,7 @@ KnownVulnerableSamples:
         MD5: 50709ce3a9d9947196f8c152ac6b7e98
         SHA1: 5132abcc111cb532cccd06ff4f92bd9269fd9c8b
         SHA256: 163f38b3e76f73f6ed3909bae3036f6e3a923b202d3a9f994aa084ee81f3788a
+        SHA384: 6cab2d8d58f99daa3b8d7dd9b711172d5953748a8368ecd1e8e15af8ff0fac8e66c126f952be97321b75fe7a1bc87cb8
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
@@ -347,6 +355,7 @@ KnownVulnerableSamples:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
         SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -361,6 +370,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 2ad22e071f61cafe7884bfa43a31b21b
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
@@ -372,7 +382,7 @@ KnownVulnerableSamples:
     SHA256: 9c0e80958b907c8df345ec2f8d711acefb4951ee3e6e84892ecd429f5e1f3acb
   Company: Windows (R) Server 2003 DDK provider
   Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  CreationTimestamp: '2013-07-03 22:27:55'
+  CreationTimestamp: '2013-07-04 00:27:55'
   Date: ''
   Description: GIGABYTE Tools
   ExportedFunctions: ''
@@ -430,7 +440,7 @@ KnownVulnerableSamples:
       Entropy: 6.2502047491555315
       Virtual Size: '0x2dc8'
     .rdata:
-      Entropy: 4.431694959682769
+      Entropy: 4.431694959682768
       Virtual Size: '0x610'
     .data:
       Entropy: 0.4231266687750792
@@ -442,7 +452,7 @@ KnownVulnerableSamples:
       Entropy: 4.963482726390094
       Virtual Size: '0x412'
     .rsrc:
-      Entropy: 3.471909950512757
+      Entropy: 3.4719099505127566
       Virtual Size: '0x3e8'
   Signature: ''
   Signatures:
@@ -462,6 +472,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -475,6 +486,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -489,6 +501,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -501,6 +514,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei Hsien, O=Giga,Byte Technology, OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Testing Department, CN=Giga,Byte
         Technology
@@ -515,6 +529,7 @@ KnownVulnerableSamples:
         MD5: dc48abdae01614d4607b1f5760dfce88
         SHA1: 467c1868ddb5ef8db746e66acbaab9fdd03fb740
         SHA256: a7f448e2fe327e481adfd1e89db612d5c58ff7891373a6e398ab98ddaeae74c5
+        SHA384: eb0d25fdcfab622d1c80a92ecd689bde520ed2b8099b4120194daa1a0013cabc5bd5792b0c1f12ca9c93fa4518aa2ca7
     Signer:
     - SerialNumber: 248472542c24ab8e429229acf121ca26
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at

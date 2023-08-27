@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: b9661dd0dcf81d2ee8e5eb3b728c907b4eb861806971051ad772f7fe4d09eb6a
   Company: SiSoftware
   Copyright: "Copyright \xA9 SiSoftware Ltd 1995-2008. All rights reserved."
-  CreationTimestamp: '2008-03-10 12:30:10'
+  CreationTimestamp: '2008-03-10 14:30:10'
   Date: ''
   Description: Sandra Device Driver (Win64 x64)(Unicode)
   ExportedFunctions: ''
@@ -110,7 +110,7 @@ KnownVulnerableSamples:
       Entropy: 4.090920874616539
       Virtual Size: '0x2dc'
     .data:
-      Entropy: 0.3888300330017545
+      Entropy: 0.38883003300175434
       Virtual Size: '0x17c'
     .pdata:
       Entropy: 3.821946507798045
@@ -119,7 +119,7 @@ KnownVulnerableSamples:
       Entropy: 5.007565545055857
       Virtual Size: '0x50a'
     .rsrc:
-      Entropy: 3.4105227461664467
+      Entropy: 3.4105227461664462
       Virtual Size: '0x728'
   Signature:
   - SiSoftware Ltd
@@ -142,6 +142,7 @@ KnownVulnerableSamples:
         MD5: 861ac2a336eb5977ee1d342b79b3339a
         SHA1: 172f39bca3dda7c6d5169c96b34a5fe7e96ff0bd
         SHA256: 4e5f8008413b8bd1daacea968d79051fc84d2fcd76ded06c65fd8d2cf3b4e2e1
+        SHA384: 99b4b343c5b223a1446551c3dd26e2a0dcafe214460c5fcc4f9f12eaca42695ae9adb04fc19eec33f17d1659a0730e95
     - Subject: C=GB, ST=London, L=London, O=SiSoftware Ltd, OU=Development, OU=GeoTrust
         Code Signing, CN=SiSoftware Ltd
       ValidFrom: '2006-08-25 14:34:37'
@@ -155,6 +156,7 @@ KnownVulnerableSamples:
         MD5: 53874260ddccaab0a480923b0bdb9f87
         SHA1: 918b8c4efb05da56f1d3d99f99a20eebaca51734
         SHA256: ba08cbcbf581a6f105512e5ce808655aeb91406ae3565ab1cdee935f19d9c86e
+        SHA384: 2c9c1ef0dce7e30a34e8873394e6142d705ae6eb8c2aa7cafb4ff600f56df44213ad4437ea6771b0d79b79fa31eeda60
     - Subject: C=US, O=GeoTrust Inc., OU=GeoTrust TrustCenter Timestamp, CN=GeoTrust
         TrustCenter Authenticode Timestamp I
       ValidFrom: '2006-02-13 15:40:22'
@@ -168,6 +170,7 @@ KnownVulnerableSamples:
         MD5: 75ffae38758191312831922d8786a94e
         SHA1: d134a530fe0e79d599a54543644dd0f05020d64f
         SHA256: ff5857d0dbbcfcef23ec8aadc7cb4db858d427de94bf380629223fe6429ece19
+        SHA384: c0fea314395e452e7cf6713c28ef5405859078ec210d9110f1f2455754eca38eb516b349731e0499ec74a06c09153924
     - Subject: C=US, O=Equifax, OU=Equifax Secure Certificate Authority
       ValidFrom: '2006-05-23 17:01:15'
       ValidTo: '2016-05-23 17:11:15'
@@ -180,6 +183,7 @@ KnownVulnerableSamples:
         MD5: 6e11ed171e9a07e607b8ca65bf0e8858
         SHA1: 6d329a72420f76868584957854cdc45172e9f902
         SHA256: 75efb8656a18ba5dacc596757bfb0fa11f0d3d81fd5f8cf9bb8975ced87e7b1b
+        SHA384: c41060ed797c77588692c0b3e36e19cca2d48c354863437f3df76009e25c916e8d2c7e17b297fbc59da085e98d070093
     Signer:
     - SerialNumber: 008da900010020ba965fe3dc471ba8
       Issuer: C=US, OU=GeoTrust TrustCenter CodeSigning CA, O=GeoTrust Inc, CN=GeoTrust
@@ -191,7 +195,7 @@ KnownVulnerableSamples:
     SHA256: 367035e87b8a361bdc51f55a2467b2606eb29feae3af892d8c17df1841c20b97
   Company: SiSoftware
   Copyright: "Copyright \xA9 SiSoftware Ltd 1995-Present. All rights reserved."
-  CreationTimestamp: '2009-08-07 16:44:51'
+  CreationTimestamp: '2009-08-07 18:44:51'
   Date: ''
   Description: Sandra Device Driver (x64)(Unicode)
   ExportedFunctions: ''
@@ -259,7 +263,7 @@ KnownVulnerableSamples:
       Entropy: 4.37370787251034
       Virtual Size: '0x30c'
     .data:
-      Entropy: 0.3458408061738237
+      Entropy: 0.34584080617382373
       Virtual Size: '0x1b4'
     .pdata:
       Entropy: 3.8807864998077926
@@ -288,6 +292,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, OU=GeoTrust TrustCenter CodeSigning CA, O=GeoTrust Inc, CN=GeoTrust
         TrustCenter CodeSigning CA I
       ValidFrom: '2006-02-01 21:44:28'
@@ -301,6 +306,7 @@ KnownVulnerableSamples:
         MD5: 861ac2a336eb5977ee1d342b79b3339a
         SHA1: 172f39bca3dda7c6d5169c96b34a5fe7e96ff0bd
         SHA256: 4e5f8008413b8bd1daacea968d79051fc84d2fcd76ded06c65fd8d2cf3b4e2e1
+        SHA384: 99b4b343c5b223a1446551c3dd26e2a0dcafe214460c5fcc4f9f12eaca42695ae9adb04fc19eec33f17d1659a0730e95
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -313,6 +319,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=GB, ST=London, L=London, O=SiSoftware Ltd, OU=Development, OU=GeoTrust
         Code Signing, CN=SiSoftware Ltd
       ValidFrom: '2006-08-25 14:34:37'
@@ -326,6 +333,7 @@ KnownVulnerableSamples:
         MD5: 53874260ddccaab0a480923b0bdb9f87
         SHA1: 918b8c4efb05da56f1d3d99f99a20eebaca51734
         SHA256: ba08cbcbf581a6f105512e5ce808655aeb91406ae3565ab1cdee935f19d9c86e
+        SHA384: 2c9c1ef0dce7e30a34e8873394e6142d705ae6eb8c2aa7cafb4ff600f56df44213ad4437ea6771b0d79b79fa31eeda60
     - Subject: C=US, O=Equifax, OU=Equifax Secure Certificate Authority
       ValidFrom: '2006-05-23 17:01:15'
       ValidTo: '2016-05-23 17:11:15'
@@ -338,6 +346,7 @@ KnownVulnerableSamples:
         MD5: 6e11ed171e9a07e607b8ca65bf0e8858
         SHA1: 6d329a72420f76868584957854cdc45172e9f902
         SHA256: 75efb8656a18ba5dacc596757bfb0fa11f0d3d81fd5f8cf9bb8975ced87e7b1b
+        SHA384: c41060ed797c77588692c0b3e36e19cca2d48c354863437f3df76009e25c916e8d2c7e17b297fbc59da085e98d070093
     Signer:
     - SerialNumber: 008da900010020ba965fe3dc471ba8
       Issuer: C=US, OU=GeoTrust TrustCenter CodeSigning CA, O=GeoTrust Inc, CN=GeoTrust
@@ -349,7 +358,7 @@ KnownVulnerableSamples:
     SHA256: 75e539170a00e447842a85441be36dc9e1fa81a3f6386806f3d90e7b4cca1ac1
   Company: SiSoftware
   Copyright: "Copyright \xA9 SiSoftware Ltd 1995-Present. All rights reserved."
-  CreationTimestamp: '2009-08-07 16:45:08'
+  CreationTimestamp: '2009-08-07 18:45:08'
   Date: ''
   Description: Sandra Device Driver (IA64)(Unicode)
   ExportedFunctions: ''
@@ -419,16 +428,16 @@ KnownVulnerableSamples:
   SHA256: cbf74bed1a4d3d5819b7c50e9d91e5760db1562d8032122edac6f0970f427183
   Sections:
     .text:
-      Entropy: 5.4102105799916975
+      Entropy: 5.410210579991697
       Virtual Size: '0x7110'
     .rdata:
       Entropy: 3.7550946692171805
       Virtual Size: '0x568'
     .pdata:
-      Entropy: 3.7461220043136456
+      Entropy: 3.746122004313646
       Virtual Size: '0x174'
     .sdata:
-      Entropy: 2.0721296606285398
+      Entropy: 2.0721296606285393
       Virtual Size: '0x240'
     .data:
       Entropy: 0.0
@@ -460,6 +469,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, OU=GeoTrust TrustCenter CodeSigning CA, O=GeoTrust Inc, CN=GeoTrust
         TrustCenter CodeSigning CA I
       ValidFrom: '2006-02-01 21:44:28'
@@ -473,6 +483,7 @@ KnownVulnerableSamples:
         MD5: 861ac2a336eb5977ee1d342b79b3339a
         SHA1: 172f39bca3dda7c6d5169c96b34a5fe7e96ff0bd
         SHA256: 4e5f8008413b8bd1daacea968d79051fc84d2fcd76ded06c65fd8d2cf3b4e2e1
+        SHA384: 99b4b343c5b223a1446551c3dd26e2a0dcafe214460c5fcc4f9f12eaca42695ae9adb04fc19eec33f17d1659a0730e95
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -485,6 +496,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=GB, ST=London, L=London, O=SiSoftware Ltd, OU=Development, OU=GeoTrust
         Code Signing, CN=SiSoftware Ltd
       ValidFrom: '2006-08-25 14:34:37'
@@ -498,6 +510,7 @@ KnownVulnerableSamples:
         MD5: 53874260ddccaab0a480923b0bdb9f87
         SHA1: 918b8c4efb05da56f1d3d99f99a20eebaca51734
         SHA256: ba08cbcbf581a6f105512e5ce808655aeb91406ae3565ab1cdee935f19d9c86e
+        SHA384: 2c9c1ef0dce7e30a34e8873394e6142d705ae6eb8c2aa7cafb4ff600f56df44213ad4437ea6771b0d79b79fa31eeda60
     - Subject: C=US, O=Equifax, OU=Equifax Secure Certificate Authority
       ValidFrom: '2006-05-23 17:01:15'
       ValidTo: '2016-05-23 17:11:15'
@@ -510,6 +523,7 @@ KnownVulnerableSamples:
         MD5: 6e11ed171e9a07e607b8ca65bf0e8858
         SHA1: 6d329a72420f76868584957854cdc45172e9f902
         SHA256: 75efb8656a18ba5dacc596757bfb0fa11f0d3d81fd5f8cf9bb8975ced87e7b1b
+        SHA384: c41060ed797c77588692c0b3e36e19cca2d48c354863437f3df76009e25c916e8d2c7e17b297fbc59da085e98d070093
     Signer:
     - SerialNumber: 008da900010020ba965fe3dc471ba8
       Issuer: C=US, OU=GeoTrust TrustCenter CodeSigning CA, O=GeoTrust Inc, CN=GeoTrust
@@ -521,7 +535,7 @@ KnownVulnerableSamples:
     SHA256: 752b31418053dc19c0573d16953d5ad24723bd57e5f62eff391e632548855b5f
   Company: SiSoftware
   Copyright: "Copyright \xA9 SiSoftware Ltd 1995-2005. All rights reserved."
-  CreationTimestamp: '2005-02-09 08:08:53'
+  CreationTimestamp: '2005-02-09 10:08:53'
   Date: ''
   Description: Sandra Device Driver (Win32 x86)(Unicode)
   ExportedFunctions: ''
@@ -601,13 +615,13 @@ KnownVulnerableSamples:
   SHA256: 1284a1462a5270833ec7719f768cdb381e7d0a9c475041f9f3c74fa8eea83590
   Sections:
     .text:
-      Entropy: 6.251401594953046
+      Entropy: 6.251401594953049
       Virtual Size: '0x18f8'
     init:
       Entropy: 5.557777832993581
       Virtual Size: '0x301'
     .rdata:
-      Entropy: 3.8034701112314675
+      Entropy: 3.803470111231468
       Virtual Size: '0x1a4'
     .data:
       Entropy: 1.5567796494470396
@@ -616,10 +630,10 @@ KnownVulnerableSamples:
       Entropy: 5.487441120729154
       Virtual Size: '0x606'
     .rsrc:
-      Entropy: 3.4036907314164977
+      Entropy: 3.4036907314164973
       Virtual Size: '0x728'
     .reloc:
-      Entropy: 4.671970480708587
+      Entropy: 4.6719704807085884
       Virtual Size: '0x1e2'
   Signature: ''
   Signatures:
@@ -638,6 +652,7 @@ KnownVulnerableSamples:
         MD5: 6c239df74ade9185bb735cea2298c028
         SHA1: f6297a00d3b2b4ce4750402b66e7ea018d54f683
         SHA256: c5e3eebf1434d85e615b06e3c7a4d3c31d10a4fb0ff7a9b262bd41b43a6aaefe
+        SHA384: 48520b9f122b94ccc316982c87d8ebf6ca4fc4e6fd4504c8fcee63b307b5502c403bf0676ef96ca9dc2004a11bbc825b
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -650,6 +665,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: CN=SiSoftware LTD, O=SiSoftware LTD, OU=Secure Application Development,
         C=UK, ST=London, L=London
       ValidFrom: '2004-09-23 16:28:04'
@@ -663,6 +679,7 @@ KnownVulnerableSamples:
         MD5: d1fe7af23616fed8bc3caa7652a5a797
         SHA1: 2761ec21ac2de20b9341ae80bfb2d7fecbbc82f8
         SHA256: e1b99e1290c46d85fea0a77eff3976c23b4f50950eea0ad74e69375b6a8d46e1
+        SHA384: 8fc563c827ac41fbde84bebb16f27264dae9c37f874b629b75c62c1b3bf45c06342954994092067e21086e89aecb8bcf
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2008-12-03 23:59:59'
@@ -675,6 +692,7 @@ KnownVulnerableSamples:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
         SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
     Signer:
     - SerialNumber: 3ea278
       Issuer: C=ZA, O=Thawte Consulting (Pty) Ltd., CN=Thawte Code Signing CA
@@ -685,7 +703,7 @@ KnownVulnerableSamples:
     SHA256: 31867db933ed4407d22de8f0ef9b52958c40c63c2328e1863dfd3fe58d3b53c3
   Company: SiSoftware
   Copyright: "Copyright \xA9 SiSoftware Ltd 1995-Present. All rights reserved."
-  CreationTimestamp: '2009-08-07 16:44:41'
+  CreationTimestamp: '2009-08-07 18:44:41'
   Date: ''
   Description: Sandra Device Driver (x86)(Unicode)
   ExportedFunctions: ''
@@ -764,10 +782,10 @@ KnownVulnerableSamples:
   SHA256: d7c79238f862b471740aff4cc3982658d1339795e9ec884a8921efe2e547d7c3
   Sections:
     .text:
-      Entropy: 6.378172236096485
+      Entropy: 6.378172236096484
       Virtual Size: '0x22ac'
     .rdata:
-      Entropy: 3.9562346649102187
+      Entropy: 3.956234664910219
       Virtual Size: '0x1c4'
     .data:
       Entropy: 0.560652868272508
@@ -799,6 +817,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, OU=GeoTrust TrustCenter CodeSigning CA, O=GeoTrust Inc, CN=GeoTrust
         TrustCenter CodeSigning CA I
       ValidFrom: '2006-02-01 21:44:28'
@@ -812,6 +831,7 @@ KnownVulnerableSamples:
         MD5: 861ac2a336eb5977ee1d342b79b3339a
         SHA1: 172f39bca3dda7c6d5169c96b34a5fe7e96ff0bd
         SHA256: 4e5f8008413b8bd1daacea968d79051fc84d2fcd76ded06c65fd8d2cf3b4e2e1
+        SHA384: 99b4b343c5b223a1446551c3dd26e2a0dcafe214460c5fcc4f9f12eaca42695ae9adb04fc19eec33f17d1659a0730e95
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -824,6 +844,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=GB, ST=London, L=London, O=SiSoftware Ltd, OU=Development, OU=GeoTrust
         Code Signing, CN=SiSoftware Ltd
       ValidFrom: '2006-08-25 14:34:37'
@@ -837,6 +858,7 @@ KnownVulnerableSamples:
         MD5: 53874260ddccaab0a480923b0bdb9f87
         SHA1: 918b8c4efb05da56f1d3d99f99a20eebaca51734
         SHA256: ba08cbcbf581a6f105512e5ce808655aeb91406ae3565ab1cdee935f19d9c86e
+        SHA384: 2c9c1ef0dce7e30a34e8873394e6142d705ae6eb8c2aa7cafb4ff600f56df44213ad4437ea6771b0d79b79fa31eeda60
     - Subject: C=US, O=Equifax, OU=Equifax Secure Certificate Authority
       ValidFrom: '2006-05-23 17:01:15'
       ValidTo: '2016-05-23 17:11:15'
@@ -849,6 +871,7 @@ KnownVulnerableSamples:
         MD5: 6e11ed171e9a07e607b8ca65bf0e8858
         SHA1: 6d329a72420f76868584957854cdc45172e9f902
         SHA256: 75efb8656a18ba5dacc596757bfb0fa11f0d3d81fd5f8cf9bb8975ced87e7b1b
+        SHA384: c41060ed797c77588692c0b3e36e19cca2d48c354863437f3df76009e25c916e8d2c7e17b297fbc59da085e98d070093
     Signer:
     - SerialNumber: 008da900010020ba965fe3dc471ba8
       Issuer: C=US, OU=GeoTrust TrustCenter CodeSigning CA, O=GeoTrust Inc, CN=GeoTrust

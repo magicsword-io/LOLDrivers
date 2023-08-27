@@ -249,7 +249,8 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
       "TBS": {
         "MD5": "f47739306d14722e670d9436eadb8e4f",
         "SHA1": "457d9df00a652cb4c3356d00145d9528fc309172",
-        "SHA256": "bd1765c56594221373893ef26d97f88c144fb0e5a0111215b45d7239c3444df7"
+        "SHA256": "bd1765c56594221373893ef26d97f88c144fb0e5a0111215b45d7239c3444df7",
+        "SHA384": "b8b268a1bdf388be66a1c969b7b353cb2bbc9fad446049b7efa05a9ab3b714494e97f4d1ee1c0bae35bfd9bf6ef275b3"
       },
       "ValidFrom": "2009-11-18 10:00:00",
       "ValidTo": "2019-03-18 10:00:00",
@@ -264,7 +265,8 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
       "TBS": {
         "MD5": "fd8cfeea06be14fa89689909e1fc72dc",
         "SHA1": "8bc3cd2f70abe543e0dbe721065a4076c8521f36",
-        "SHA256": "15e7050789df807f3e3174294a01b637a1239f603e42f4b5db9398efa9da9996"
+        "SHA256": "15e7050789df807f3e3174294a01b637a1239f603e42f4b5db9398efa9da9996",
+        "SHA384": "8b9f95e6d3dd45e4ef38e2f12fb893d7d1bb1ba867e152e4a73c49b3d51dd52bc83a05982deac29af90436061248546d"
       },
       "ValidFrom": "2016-06-15 00:00:00",
       "ValidTo": "2024-06-15 00:00:00",
@@ -279,7 +281,8 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
       "TBS": {
         "MD5": "0bb058d116f02817737920f112d9fd3b",
         "SHA1": "fd116235171a4feafedee586b7a59185fb5fd7e6",
-        "SHA256": "f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4"
+        "SHA256": "f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4",
+        "SHA384": "c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6"
       },
       "ValidFrom": "2011-04-15 19:55:08",
       "ValidTo": "2021-04-15 20:05:08",
@@ -294,7 +297,8 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
       "TBS": {
         "MD5": "e3f11dbfce17755c33f8e88f75d1920e",
         "SHA1": "78dcece49b4dbff1bd9a4d66644961c0805aef51",
-        "SHA256": "f8e8df9ee7f7b09507e2c889d366c16a4383d87ff22d2c01808b116a4898d5d3"
+        "SHA256": "f8e8df9ee7f7b09507e2c889d366c16a4383d87ff22d2c01808b116a4898d5d3",
+        "SHA384": "012b1e87cc98ed598fd4dc3a8fccba9328af6fa73510f4fd613b5e2fbe031815f008046be97c766c5f0ab9367e89173b"
       },
       "ValidFrom": "2019-02-01 15:34:02",
       "ValidTo": "2021-02-01 15:34:02",

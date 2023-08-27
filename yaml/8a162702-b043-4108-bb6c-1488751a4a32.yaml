@@ -27,7 +27,7 @@ KnownVulnerableSamples:
     SHA256: 24395b622d4fd48864a50978ffd2b82fdded5189741a6deea9293cc075cd0c6b
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-06-02 04:09:08'
+  CreationTimestamp: '2022-06-02 06:09:08'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -136,6 +136,7 @@ KnownVulnerableSamples:
         MD5: 1e71dd41570c4bb591861555853106a3
         SHA1: 1cb57dd770235af6c117b995e9c52909a0e44684
         SHA256: 4ebff6116837c32889b3bcbabd82137e69a7d30ea1458d8e8e9a1861379761f3
+        SHA384: 738b7cc310cd6dd8166ed2317a8bc065a3fe0245b8b0ff73a781f0902c3a6c29f5e133f2f43e040f49aec974a618063c
     - Subject: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
       ValidFrom: '2010-02-08 00:00:00'
       ValidTo: '2020-02-07 23:59:59'
@@ -148,6 +149,7 @@ KnownVulnerableSamples:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
         SHA256: d8844186775bddbccaf3dc017064df7d760fd4b85c5d07561a3efd7da950f89e
+        SHA384: 78d972495720b43a6470b18ae1226bcca20707628087717a9364c14ca053ba264e6d149718b103542d9942200138a69d
     - Subject: C=US, O=thawte, Inc., OU=Certification Services Division, OU=(c) 2006
         thawte, Inc. , For authorized use only, CN=thawte Primary Root CA
       ValidFrom: '2011-02-22 19:31:57'
@@ -161,6 +163,7 @@ KnownVulnerableSamples:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
         SHA256: a39ed0d6fd4eb1a6f7fed60f726e23eae668b7591bc004644625d22c701213fa
+        SHA384: 64b7643e4146016cbf83c911eb67e4601b6bb8d66f8ee8dcee67b815f91770d86ab23678b984430f22a963e5484881b7
     Signer:
     - SerialNumber: 38de06b8be15187f107e04f8b1138977
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2

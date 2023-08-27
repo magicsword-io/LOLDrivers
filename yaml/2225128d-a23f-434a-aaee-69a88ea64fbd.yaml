@@ -33,7 +33,7 @@ KnownVulnerableSamples:
     SHA256: c44b807e14e5da43a060cb36a83aa5b1e4b7b95620f9e41d289694f9daa8b77a
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2010 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2010-09-09 03:22:55'
+  CreationTimestamp: '2010-09-09 05:22:55'
   Date: ''
   Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
@@ -112,7 +112,7 @@ KnownVulnerableSamples:
       Entropy: 5.272062316111859
       Virtual Size: '0x49c'
     .rsrc:
-      Entropy: 3.3821876571495975
+      Entropy: 3.3821876571495966
       Virtual Size: '0x398'
     .reloc:
       Entropy: 0.6052620389809359
@@ -135,6 +135,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -147,6 +148,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=SK, L=Bratislava, O=REALiX, CN=REALiX
       ValidFrom: '2009-07-16 13:59:23'
       ValidTo: '2012-07-16 13:59:20'
@@ -159,6 +161,7 @@ KnownVulnerableSamples:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
         SHA256: 5b17af75beca4abe098882f6b4fe2ed4975f428d81b964c648b1ac5df313233b
+        SHA384: b0ad18a16f199f8ee3efc9bc5d21bb209674a4e3d1013b7943c08eeae9b47ce706da1fd8707f86dbd31651ad4a2e886c
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 13:00:00'
@@ -172,6 +175,7 @@ KnownVulnerableSamples:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
         SHA256: 6811f3e33268aef810dc3277f8f9356adcbc3c36446a0420593b82f3cd526022
+        SHA384: 92f5e55d6eb6d965c1b698e56cbb8087d80eda1a24eb6ed178abeddafe2fcf524e9f8311ca232be7f5b4555b89b97c6b
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 10:00:00'
@@ -185,6 +189,7 @@ KnownVulnerableSamples:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
         SHA256: aec84e1206957180ccf4e598fa10864ef4ee18ff9fc126b9a54af79c618f0492
+        SHA384: a2b0c7b9ffe6e8244a4662099132406aea0a47889ecde7b336c4f09296da2ffbb3718597a0fb570bd1e97e88a24f8fbb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -197,6 +202,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 010000000001228403475b
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
@@ -208,7 +214,7 @@ KnownVulnerableSamples:
     SHA256: 80b2c44b2cdb74bafcc1271c5338f1d80f3621308b6c9d24d52bb28c8983677c
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2011 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2011-12-19 01:47:57'
+  CreationTimestamp: '2011-12-19 03:47:57'
   Date: ''
   Description: HWiNFO32/64 Kernel Driver
   ExportedFunctions: ''
@@ -293,7 +299,7 @@ KnownVulnerableSamples:
       Entropy: 0.0
       Virtual Size: '0x70'
     INIT:
-      Entropy: 5.290544135278689
+      Entropy: 5.290544135278688
       Virtual Size: '0x59a'
     .rsrc:
       Entropy: 3.4286778385903047
@@ -319,6 +325,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -331,6 +338,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=SK, L=Bratislava, O=REALiX, CN=REALiX
       ValidFrom: '2009-07-16 13:59:23'
       ValidTo: '2012-07-16 13:59:20'
@@ -343,6 +351,7 @@ KnownVulnerableSamples:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
         SHA256: 5b17af75beca4abe098882f6b4fe2ed4975f428d81b964c648b1ac5df313233b
+        SHA384: b0ad18a16f199f8ee3efc9bc5d21bb209674a4e3d1013b7943c08eeae9b47ce706da1fd8707f86dbd31651ad4a2e886c
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 13:00:00'
@@ -356,6 +365,7 @@ KnownVulnerableSamples:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
         SHA256: 6811f3e33268aef810dc3277f8f9356adcbc3c36446a0420593b82f3cd526022
+        SHA384: 92f5e55d6eb6d965c1b698e56cbb8087d80eda1a24eb6ed178abeddafe2fcf524e9f8311ca232be7f5b4555b89b97c6b
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 10:00:00'
@@ -369,6 +379,7 @@ KnownVulnerableSamples:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
         SHA256: aec84e1206957180ccf4e598fa10864ef4ee18ff9fc126b9a54af79c618f0492
+        SHA384: a2b0c7b9ffe6e8244a4662099132406aea0a47889ecde7b336c4f09296da2ffbb3718597a0fb570bd1e97e88a24f8fbb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -381,6 +392,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 010000000001228403475b
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
@@ -392,7 +404,7 @@ KnownVulnerableSamples:
     SHA256: 02f63773cdd991c891e10044633630154ae6fa63dbfe9b35082e48d4924f2dde
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2011 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2011-05-22 14:51:10'
+  CreationTimestamp: '2011-05-22 16:51:10'
   Date: ''
   Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
@@ -471,7 +483,7 @@ KnownVulnerableSamples:
       Entropy: 5.269101500371755
       Virtual Size: '0x49c'
     .rsrc:
-      Entropy: 3.3599342260805867
+      Entropy: 3.359934226080586
       Virtual Size: '0x398'
     .reloc:
       Entropy: 0.6052620389809359
@@ -494,6 +506,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -506,6 +519,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=SK, L=Bratislava, O=REALiX, CN=REALiX
       ValidFrom: '2009-07-16 13:59:23'
       ValidTo: '2012-07-16 13:59:20'
@@ -518,6 +532,7 @@ KnownVulnerableSamples:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
         SHA256: 5b17af75beca4abe098882f6b4fe2ed4975f428d81b964c648b1ac5df313233b
+        SHA384: b0ad18a16f199f8ee3efc9bc5d21bb209674a4e3d1013b7943c08eeae9b47ce706da1fd8707f86dbd31651ad4a2e886c
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 13:00:00'
@@ -531,6 +546,7 @@ KnownVulnerableSamples:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
         SHA256: 6811f3e33268aef810dc3277f8f9356adcbc3c36446a0420593b82f3cd526022
+        SHA384: 92f5e55d6eb6d965c1b698e56cbb8087d80eda1a24eb6ed178abeddafe2fcf524e9f8311ca232be7f5b4555b89b97c6b
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 10:00:00'
@@ -544,6 +560,7 @@ KnownVulnerableSamples:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
         SHA256: aec84e1206957180ccf4e598fa10864ef4ee18ff9fc126b9a54af79c618f0492
+        SHA384: a2b0c7b9ffe6e8244a4662099132406aea0a47889ecde7b336c4f09296da2ffbb3718597a0fb570bd1e97e88a24f8fbb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -556,6 +573,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 010000000001228403475b
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
@@ -567,7 +585,7 @@ KnownVulnerableSamples:
     SHA256: 3bf77c52cc0e6b1b0f2b8ceffaadb156673768146950401c27fbfd7e2bedd618
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2008 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2008-11-21 01:48:44'
+  CreationTimestamp: '2008-11-21 03:48:44'
   Date: ''
   Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
@@ -619,22 +637,22 @@ KnownVulnerableSamples:
       Entropy: 5.465356793578808
       Virtual Size: '0x4602'
     .rdata:
-      Entropy: 3.0742566055822693
+      Entropy: 3.0742566055822698
       Virtual Size: '0x580'
     .pdata:
-      Entropy: 3.5069972717607123
+      Entropy: 3.506997271760712
       Virtual Size: '0x144'
     .srdata:
-      Entropy: 1.9604047768631525
+      Entropy: 1.960404776863152
       Virtual Size: '0x28'
     .sdata:
-      Entropy: 2.3733818957525035
+      Entropy: 2.373381895752503
       Virtual Size: '0xe0'
     INIT:
-      Entropy: 5.1971875289773655
+      Entropy: 5.197187528977365
       Virtual Size: '0x38a'
     .rsrc:
-      Entropy: 3.3760557844440275
+      Entropy: 3.3760557844440267
       Virtual Size: '0x398'
     .reloc:
       Entropy: 0.6225863028138227
@@ -657,6 +675,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -669,6 +688,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -683,6 +703,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=SK, ST=Bratislava, L=Bratislava, O=Martin Malik , REALiX, OU=Digital
         ID Class 3 , Microsoft Software Validation v2, CN=Martin Malik , REALiX
       ValidFrom: '2008-07-22 00:00:00'
@@ -696,6 +717,7 @@ KnownVulnerableSamples:
         MD5: 5b7ee623fe90fcb14bd8367d9f739b70
         SHA1: 06cda38f916ca04cbfe060ad324e6e7fbd0ec0a5
         SHA256: daafde68491c6923c1555360e0d42781ea0ca7d11a073b347ca2f36e62aa5bc7
+        SHA384: 19c31f0d3c5c7e8931faa9c07901efbd6db913c70f1c0c0f02a7f87fd4e6b6e401ab5072adb59f8a72d72372aeadefbc
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -708,6 +730,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 6e476474a7abff3a7b04ae741f7e6ed1
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -720,7 +743,7 @@ KnownVulnerableSamples:
     SHA256: 3e62730949b6cbbaf938d9b2015fe1b84eb63322c4287d0ce2b4c6f987c2dadd
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2011 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2011-09-22 00:45:00'
+  CreationTimestamp: '2011-09-22 02:45:00'
   Date: ''
   Description: HWiNFO32/64 Kernel Driver
   ExportedFunctions: ''
@@ -805,7 +828,7 @@ KnownVulnerableSamples:
       Entropy: 0.0
       Virtual Size: '0x70'
     INIT:
-      Entropy: 5.289432818651469
+      Entropy: 5.289432818651468
       Virtual Size: '0x59a'
     .rsrc:
       Entropy: 3.427398645694084
@@ -831,6 +854,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -843,6 +867,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=SK, L=Bratislava, O=REALiX, CN=REALiX
       ValidFrom: '2009-07-16 13:59:23'
       ValidTo: '2012-07-16 13:59:20'
@@ -855,6 +880,7 @@ KnownVulnerableSamples:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
         SHA256: 5b17af75beca4abe098882f6b4fe2ed4975f428d81b964c648b1ac5df313233b
+        SHA384: b0ad18a16f199f8ee3efc9bc5d21bb209674a4e3d1013b7943c08eeae9b47ce706da1fd8707f86dbd31651ad4a2e886c
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 13:00:00'
@@ -868,6 +894,7 @@ KnownVulnerableSamples:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
         SHA256: 6811f3e33268aef810dc3277f8f9356adcbc3c36446a0420593b82f3cd526022
+        SHA384: 92f5e55d6eb6d965c1b698e56cbb8087d80eda1a24eb6ed178abeddafe2fcf524e9f8311ca232be7f5b4555b89b97c6b
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 10:00:00'
@@ -881,6 +908,7 @@ KnownVulnerableSamples:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
         SHA256: aec84e1206957180ccf4e598fa10864ef4ee18ff9fc126b9a54af79c618f0492
+        SHA384: a2b0c7b9ffe6e8244a4662099132406aea0a47889ecde7b336c4f09296da2ffbb3718597a0fb570bd1e97e88a24f8fbb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -893,6 +921,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 010000000001228403475b
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
@@ -904,7 +933,7 @@ KnownVulnerableSamples:
     SHA256: 742b102cc69403c669244f0efcf9ac8e5bbdb9b10f35f03c743651afe5ac32ba
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2010 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2010-07-25 06:37:28'
+  CreationTimestamp: '2010-07-25 08:37:28'
   Date: ''
   Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
@@ -983,7 +1012,7 @@ KnownVulnerableSamples:
       Entropy: 5.272062316111859
       Virtual Size: '0x49c'
     .rsrc:
-      Entropy: 3.3780569299107057
+      Entropy: 3.3780569299107053
       Virtual Size: '0x398'
     .reloc:
       Entropy: 0.6052620389809359
@@ -1006,6 +1035,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1018,6 +1048,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=SK, L=Bratislava, O=REALiX, CN=REALiX
       ValidFrom: '2009-07-16 13:59:23'
       ValidTo: '2012-07-16 13:59:20'
@@ -1030,6 +1061,7 @@ KnownVulnerableSamples:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
         SHA256: 5b17af75beca4abe098882f6b4fe2ed4975f428d81b964c648b1ac5df313233b
+        SHA384: b0ad18a16f199f8ee3efc9bc5d21bb209674a4e3d1013b7943c08eeae9b47ce706da1fd8707f86dbd31651ad4a2e886c
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 13:00:00'
@@ -1043,6 +1075,7 @@ KnownVulnerableSamples:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
         SHA256: 6811f3e33268aef810dc3277f8f9356adcbc3c36446a0420593b82f3cd526022
+        SHA384: 92f5e55d6eb6d965c1b698e56cbb8087d80eda1a24eb6ed178abeddafe2fcf524e9f8311ca232be7f5b4555b89b97c6b
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 10:00:00'
@@ -1056,6 +1089,7 @@ KnownVulnerableSamples:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
         SHA256: aec84e1206957180ccf4e598fa10864ef4ee18ff9fc126b9a54af79c618f0492
+        SHA384: a2b0c7b9ffe6e8244a4662099132406aea0a47889ecde7b336c4f09296da2ffbb3718597a0fb570bd1e97e88a24f8fbb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1068,6 +1102,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 010000000001228403475b
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
@@ -1079,7 +1114,7 @@ KnownVulnerableSamples:
     SHA256: de09000bb9f5f81ff6c9ba239ea2498cff4e3decf6ae0220e4b0d64c3500acf8
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2009 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2009-07-16 08:22:02'
+  CreationTimestamp: '2009-07-16 10:22:02'
   Date: ''
   Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
@@ -1131,7 +1166,7 @@ KnownVulnerableSamples:
   SHA256: 4e54e98df13110aac41f3207e400cce2a00df29ce18c32186e536c1de25a75ce
   Sections:
     .text:
-      Entropy: 5.518620495680425
+      Entropy: 5.518620495680424
       Virtual Size: '0x5202'
     .rdata:
       Entropy: 3.0634282017515315
@@ -1140,7 +1175,7 @@ KnownVulnerableSamples:
       Entropy: 3.4860181353362267
       Virtual Size: '0x144'
     .srdata:
-      Entropy: 1.9604047768631525
+      Entropy: 1.960404776863152
       Virtual Size: '0x28'
     .sdata:
       Entropy: 2.38165853193268
@@ -1149,7 +1184,7 @@ KnownVulnerableSamples:
       Entropy: 5.200504686380647
       Virtual Size: '0x3d2'
     .rsrc:
-      Entropy: 3.3770380367348327
+      Entropy: 3.3770380367348323
       Virtual Size: '0x398'
     .reloc:
       Entropy: 0.6003700907203152
@@ -1172,6 +1207,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1184,6 +1220,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=SK, L=Bratislava, O=REALiX, CN=REALiX
       ValidFrom: '2009-07-16 13:59:23'
       ValidTo: '2012-07-16 13:59:20'
@@ -1196,6 +1233,7 @@ KnownVulnerableSamples:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
         SHA256: 5b17af75beca4abe098882f6b4fe2ed4975f428d81b964c648b1ac5df313233b
+        SHA384: b0ad18a16f199f8ee3efc9bc5d21bb209674a4e3d1013b7943c08eeae9b47ce706da1fd8707f86dbd31651ad4a2e886c
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 13:00:00'
@@ -1209,6 +1247,7 @@ KnownVulnerableSamples:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
         SHA256: 6811f3e33268aef810dc3277f8f9356adcbc3c36446a0420593b82f3cd526022
+        SHA384: 92f5e55d6eb6d965c1b698e56cbb8087d80eda1a24eb6ed178abeddafe2fcf524e9f8311ca232be7f5b4555b89b97c6b
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 10:00:00'
@@ -1222,6 +1261,7 @@ KnownVulnerableSamples:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
         SHA256: aec84e1206957180ccf4e598fa10864ef4ee18ff9fc126b9a54af79c618f0492
+        SHA384: a2b0c7b9ffe6e8244a4662099132406aea0a47889ecde7b336c4f09296da2ffbb3718597a0fb570bd1e97e88a24f8fbb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1234,6 +1274,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 010000000001228403475b
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
@@ -1245,7 +1286,7 @@ KnownVulnerableSamples:
     SHA256: c191c7d4ec03c4ef0f51a67af42a90390f75ebd6f83dbc05e317fe5a90a1fb31
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2010 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2010-09-29 16:13:28'
+  CreationTimestamp: '2010-09-29 18:13:28'
   Date: ''
   Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
@@ -1324,7 +1365,7 @@ KnownVulnerableSamples:
       Entropy: 5.272062316111859
       Virtual Size: '0x49c'
     .rsrc:
-      Entropy: 3.384894423449242
+      Entropy: 3.3848944234492415
       Virtual Size: '0x398'
     .reloc:
       Entropy: 0.6052620389809359
@@ -1347,6 +1388,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1359,6 +1401,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=SK, L=Bratislava, O=REALiX, CN=REALiX
       ValidFrom: '2009-07-16 13:59:23'
       ValidTo: '2012-07-16 13:59:20'
@@ -1371,6 +1414,7 @@ KnownVulnerableSamples:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
         SHA256: 5b17af75beca4abe098882f6b4fe2ed4975f428d81b964c648b1ac5df313233b
+        SHA384: b0ad18a16f199f8ee3efc9bc5d21bb209674a4e3d1013b7943c08eeae9b47ce706da1fd8707f86dbd31651ad4a2e886c
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 13:00:00'
@@ -1384,6 +1428,7 @@ KnownVulnerableSamples:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
         SHA256: 6811f3e33268aef810dc3277f8f9356adcbc3c36446a0420593b82f3cd526022
+        SHA384: 92f5e55d6eb6d965c1b698e56cbb8087d80eda1a24eb6ed178abeddafe2fcf524e9f8311ca232be7f5b4555b89b97c6b
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 10:00:00'
@@ -1397,6 +1442,7 @@ KnownVulnerableSamples:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
         SHA256: aec84e1206957180ccf4e598fa10864ef4ee18ff9fc126b9a54af79c618f0492
+        SHA384: a2b0c7b9ffe6e8244a4662099132406aea0a47889ecde7b336c4f09296da2ffbb3718597a0fb570bd1e97e88a24f8fbb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1409,6 +1455,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 010000000001228403475b
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
@@ -1420,7 +1467,7 @@ KnownVulnerableSamples:
     SHA256: 52b9302507bccd7eb775137a4c17b0df9a5a99671968c01924cd0c52a0c69262
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2010 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2010-06-20 11:16:25'
+  CreationTimestamp: '2010-06-20 13:16:25'
   Date: ''
   Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
@@ -1478,7 +1525,7 @@ KnownVulnerableSamples:
   SHA256: 8dcec67a1f4903981c3e0ab938784c2f241e041e26748e1c22059e0e507cfb37
   Sections:
     .text:
-      Entropy: 5.523597494035855
+      Entropy: 5.5235974940358545
       Virtual Size: '0x5a30'
     .rdata:
       Entropy: 3.1193674975685135
@@ -1499,7 +1546,7 @@ KnownVulnerableSamples:
       Entropy: 5.273757231366097
       Virtual Size: '0x49c'
     .rsrc:
-      Entropy: 3.3843160876061558
+      Entropy: 3.3843160876061553
       Virtual Size: '0x398'
     .reloc:
       Entropy: 0.5863303988495302
@@ -1522,6 +1569,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1534,6 +1582,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=SK, L=Bratislava, O=REALiX, CN=REALiX
       ValidFrom: '2009-07-16 13:59:23'
       ValidTo: '2012-07-16 13:59:20'
@@ -1546,6 +1595,7 @@ KnownVulnerableSamples:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
         SHA256: 5b17af75beca4abe098882f6b4fe2ed4975f428d81b964c648b1ac5df313233b
+        SHA384: b0ad18a16f199f8ee3efc9bc5d21bb209674a4e3d1013b7943c08eeae9b47ce706da1fd8707f86dbd31651ad4a2e886c
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 13:00:00'
@@ -1559,6 +1609,7 @@ KnownVulnerableSamples:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
         SHA256: 6811f3e33268aef810dc3277f8f9356adcbc3c36446a0420593b82f3cd526022
+        SHA384: 92f5e55d6eb6d965c1b698e56cbb8087d80eda1a24eb6ed178abeddafe2fcf524e9f8311ca232be7f5b4555b89b97c6b
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 10:00:00'
@@ -1572,6 +1623,7 @@ KnownVulnerableSamples:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
         SHA256: aec84e1206957180ccf4e598fa10864ef4ee18ff9fc126b9a54af79c618f0492
+        SHA384: a2b0c7b9ffe6e8244a4662099132406aea0a47889ecde7b336c4f09296da2ffbb3718597a0fb570bd1e97e88a24f8fbb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1584,6 +1636,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 010000000001228403475b
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
@@ -1595,7 +1648,7 @@ KnownVulnerableSamples:
     SHA256: 13d7c729c019c1c5a4b3e9fb27d1dd0b992fb7099f4314e011aafcb3472b7107
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2011 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2011-08-23 01:06:20'
+  CreationTimestamp: '2011-08-23 03:06:20'
   Date: ''
   Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
@@ -1662,10 +1715,10 @@ KnownVulnerableSamples:
   SHA256: 6701433861742c08eb50f1e785962378143ad5b6c374ac29118168599f8a0f1c
   Sections:
     .text:
-      Entropy: 5.46011657052177
+      Entropy: 5.460116570521769
       Virtual Size: '0x5ee0'
     .rdata:
-      Entropy: 3.096488004471368
+      Entropy: 3.0964880044713676
       Virtual Size: '0x680'
     .pdata:
       Entropy: 3.6395592528546747
@@ -1680,13 +1733,13 @@ KnownVulnerableSamples:
       Entropy: 0.0
       Virtual Size: '0x70'
     INIT:
-      Entropy: 5.289432818651469
+      Entropy: 5.289432818651468
       Virtual Size: '0x59a'
     .rsrc:
-      Entropy: 3.3824753337870868
+      Entropy: 3.3824753337870863
       Virtual Size: '0x398'
     .reloc:
-      Entropy: 0.6958390817943604
+      Entropy: 0.6958390817943603
       Virtual Size: '0x232'
   Signature: ''
   Signatures:
@@ -1706,6 +1759,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1718,6 +1772,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=SK, L=Bratislava, O=REALiX, CN=REALiX
       ValidFrom: '2009-07-16 13:59:23'
       ValidTo: '2012-07-16 13:59:20'
@@ -1730,6 +1785,7 @@ KnownVulnerableSamples:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
         SHA256: 5b17af75beca4abe098882f6b4fe2ed4975f428d81b964c648b1ac5df313233b
+        SHA384: b0ad18a16f199f8ee3efc9bc5d21bb209674a4e3d1013b7943c08eeae9b47ce706da1fd8707f86dbd31651ad4a2e886c
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 13:00:00'
@@ -1743,6 +1799,7 @@ KnownVulnerableSamples:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
         SHA256: 6811f3e33268aef810dc3277f8f9356adcbc3c36446a0420593b82f3cd526022
+        SHA384: 92f5e55d6eb6d965c1b698e56cbb8087d80eda1a24eb6ed178abeddafe2fcf524e9f8311ca232be7f5b4555b89b97c6b
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 10:00:00'
@@ -1756,6 +1813,7 @@ KnownVulnerableSamples:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
         SHA256: aec84e1206957180ccf4e598fa10864ef4ee18ff9fc126b9a54af79c618f0492
+        SHA384: a2b0c7b9ffe6e8244a4662099132406aea0a47889ecde7b336c4f09296da2ffbb3718597a0fb570bd1e97e88a24f8fbb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1768,6 +1826,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 010000000001228403475b
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
@@ -1779,7 +1838,7 @@ KnownVulnerableSamples:
     SHA256: a082cdb569b9f1f82252402fa05785fd409222912d5b9e5423299819e6f940ed
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2010 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2010-02-16 14:45:04'
+  CreationTimestamp: '2010-02-16 16:45:04'
   Date: ''
   Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
@@ -1840,7 +1899,7 @@ KnownVulnerableSamples:
       Entropy: 3.4860181353362267
       Virtual Size: '0x144'
     .srdata:
-      Entropy: 1.9604047768631525
+      Entropy: 1.960404776863152
       Virtual Size: '0x28'
     .sdata:
       Entropy: 2.38165853193268
@@ -1849,7 +1908,7 @@ KnownVulnerableSamples:
       Entropy: 5.200504686380647
       Virtual Size: '0x3d2'
     .rsrc:
-      Entropy: 3.3793659817892636
+      Entropy: 3.3793659817892627
       Virtual Size: '0x398'
     .reloc:
       Entropy: 0.6003700907203152
@@ -1872,6 +1931,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1884,6 +1944,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=SK, L=Bratislava, O=REALiX, CN=REALiX
       ValidFrom: '2009-07-16 13:59:23'
       ValidTo: '2012-07-16 13:59:20'
@@ -1896,6 +1957,7 @@ KnownVulnerableSamples:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
         SHA256: 5b17af75beca4abe098882f6b4fe2ed4975f428d81b964c648b1ac5df313233b
+        SHA384: b0ad18a16f199f8ee3efc9bc5d21bb209674a4e3d1013b7943c08eeae9b47ce706da1fd8707f86dbd31651ad4a2e886c
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 13:00:00'
@@ -1909,6 +1971,7 @@ KnownVulnerableSamples:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
         SHA256: 6811f3e33268aef810dc3277f8f9356adcbc3c36446a0420593b82f3cd526022
+        SHA384: 92f5e55d6eb6d965c1b698e56cbb8087d80eda1a24eb6ed178abeddafe2fcf524e9f8311ca232be7f5b4555b89b97c6b
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 10:00:00'
@@ -1922,6 +1985,7 @@ KnownVulnerableSamples:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
         SHA256: aec84e1206957180ccf4e598fa10864ef4ee18ff9fc126b9a54af79c618f0492
+        SHA384: a2b0c7b9ffe6e8244a4662099132406aea0a47889ecde7b336c4f09296da2ffbb3718597a0fb570bd1e97e88a24f8fbb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1934,6 +1998,7 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 010000000001228403475b
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign

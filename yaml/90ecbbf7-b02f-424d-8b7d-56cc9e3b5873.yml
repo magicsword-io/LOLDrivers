@@ -72,6 +72,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -85,6 +86,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -99,6 +101,7 @@ KnownVulnerableSamples:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
         SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -111,6 +114,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei / Peitou, O=ASUSTeK Computer Inc., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Quality Testing Department,
         CN=ASUSTeK Computer Inc.
@@ -125,6 +129,7 @@ KnownVulnerableSamples:
         MD5: 72cafb0a175f0481177fa2c9803283c7
         SHA1: b603167b958c5fcd7094552891ddc4e2ea4c149f
         SHA256: a36a0024075771a4b30eab8f1288817059fe1a01003d0c1d92f647df17f3b688
+        SHA384: 33c28dc6857ce5d20a2e9ba8a47f6bc80a9a98fba518fd732963bedbbb408848b89b3d8438d413f8b933ee761ffa1653
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -139,6 +144,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 7d08d9bc130726de26ee4ef28e133084
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -169,7 +175,7 @@ KnownVulnerableSamples:
       Entropy: 1.584962500721156
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-09-10 00:36:29'
+  CreationTimestamp: '2014-09-10 02:36:29'
 - Filename: EneIo64.sys
   MD5: 86fd54c56dcafe2de918c36f8dfda67e
   SHA1: 0b01c4c1f18d72eb622be2553114f32edfe7b7aa
@@ -239,6 +245,7 @@ KnownVulnerableSamples:
         MD5: a780e8237c69d6012c9a0ce5576fbab0
         SHA1: 613115803ff02f51d735686030790041e4207ecd
         SHA256: 2a73e196c22294f2670b352ff3e37cb6c586d5754c67f2557c10dc49295e32dd
+        SHA384: 71f67d14277b8318635b771249919e29fa673b9f3b7b41ad50b83f38a0a128860d0a49f0fb212bec5bbacaf538749d57
     - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping
         CA
       ValidFrom: '2022-03-23 00:00:00'
@@ -252,6 +259,7 @@ KnownVulnerableSamples:
         MD5: e4b8ad9932ff9205f580cf8fb2afbb86
         SHA1: 5301f7044d78bf94dd2b6e4871083a17fdba1dcc
         SHA256: c3d01499a5d1d2f71e0f44e78fbfa4b8aadb43dd4f226401e0c1d7a6d53357fa
+        SHA384: 84b5f399da5a4f4387269adfd951ef7d2197c29552ed2d2e449060664c3825d6bdb2acc3e563d999e54652f7384f445e
     - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
         SHA384 2021 CA1
       ValidFrom: '2021-04-29 00:00:00'
@@ -265,6 +273,7 @@ KnownVulnerableSamples:
         MD5: 5d8003a64dfa5a4d88365da1566038cb
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
         SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
     - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2022 , 2
       ValidFrom: '2022-03-29 00:00:00'
       ValidTo: '2033-03-14 23:59:59'
@@ -277,6 +286,7 @@ KnownVulnerableSamples:
         MD5: d49300b4e758e36a3832679763a83c58
         SHA1: ec3075370fcea680e09497d44a4b246012f24160
         SHA256: fa5e895ff2603de9e15939a00299836f73e5778058f22194f696d19e79a8b010
+        SHA384: 13ab2eedcd7e712f635ca1da3dc30cd8d8e22cedcf5a2c4994181509dddbf76867d07925b9a514d123bc1d5cab41fe9f
     - Subject: ??=Private Organization, ??=TW, serialNumber=16505809, C=TW, L=HSINCHU
         CITY, O=ENE TECHNOLOGY INC., CN=ENE TECHNOLOGY INC.
       ValidFrom: '2021-07-06 00:00:00'
@@ -290,6 +300,7 @@ KnownVulnerableSamples:
         MD5: 03c022b5bd95b982d374487f2e446818
         SHA1: 9bb3db6bee31ae0eeea7d58eb4dbef14528602ec
         SHA256: b307d4f6d8ab941cd7f5877bfe76ce1f79f0a8d4cfbf7bab3bb5c93aeaaf67dc
+        SHA384: 20fc12de256659cf0d07c11080c23255aafa46c1ed3e3fd078b25bb7fbc500d1d9c702d6b8e5252911c5764d9251ecad
     Signer:
     - SerialNumber: 0d6403ef47571a33435fc827ccefc858
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
@@ -301,7 +312,7 @@ KnownVulnerableSamples:
     SHA256: 893f6ad3e6f34030f6416c00feb4f816d84461e62e441908bab4a6fdb39b0761
   Sections:
     .text:
-      Entropy: 6.190870515576075
+      Entropy: 6.190870515576076
       Virtual Size: '0x14b2'
     .rdata:
       Entropy: 5.431524952006945
@@ -310,7 +321,7 @@ KnownVulnerableSamples:
       Entropy: 2.591917186688699
       Virtual Size: '0x20'
     .pdata:
-      Entropy: 3.775198059023202
+      Entropy: 3.7751980590232015
       Virtual Size: '0x180'
     INIT:
       Entropy: 5.1721688922538265
@@ -319,6 +330,6 @@ KnownVulnerableSamples:
       Entropy: 2.684183719779189
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-05-08 00:07:19'
+  CreationTimestamp: '2020-05-08 02:07:19'
 Tags:
 - eneio64.sys

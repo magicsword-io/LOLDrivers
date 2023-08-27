@@ -139,6 +139,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=CN, ??=Sichuan, ??=Wuhou District, Chengdu, ??=Private Organization,
         serialNumber=91510107072412418F, C=CN, ST=Sichuan, L=Chengdu, O=IObit CO.,
         LTD, CN=IObit CO., LTD
@@ -153,6 +154,7 @@ KnownVulnerableSamples:
         MD5: d0ba095f2bdb679cea084b4106479484
         SHA1: 80aba0ecbd2b71c84bc73ac42963bc9ce247a020
         SHA256: a93f8b7111c3e2288e164e42131e2ad52867060479ade1f6e6b3124cde822cfa
+        SHA384: 8293c567ba382434adab5899693e47e5d6e06c0b9f3c158bf17675d5a1476627db51d00dc9573bf4b89412617e651ba6
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -166,6 +168,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 0d98f5df96c592c5b76bfde1cb823096
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -183,7 +186,7 @@ KnownVulnerableSamples:
       Entropy: 4.74536885813998
       Virtual Size: '0x644'
     .data:
-      Entropy: 0.8079955727472559
+      Entropy: 0.8079955727472564
       Virtual Size: '0x170'
     .pdata:
       Entropy: 4.257735635509842
@@ -192,12 +195,12 @@ KnownVulnerableSamples:
       Entropy: 5.202412460125397
       Virtual Size: '0x72a'
     .rsrc:
-      Entropy: 3.2596097351980737
+      Entropy: 3.2596097351980746
       Virtual Size: '0x370'
     .reloc:
       Entropy: 1.2987909647818572
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-08-17 02:18:15'
+  CreationTimestamp: '2022-08-17 04:18:15'
 Tags:
 - IObitUnlocker.sys

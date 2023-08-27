@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 99ddeba6bcdc79e52e3ff8afc63dbe4b299161cf0f5558a2d7630c2a18daf2c6
   Company: Windows (R) Win 7 DDK provider
   Copyright: Copyright (C) Voicemod S.L.2010-2020
-  CreationTimestamp: '2022-02-22 13:12:24'
+  CreationTimestamp: '2022-02-22 15:12:24'
   Date: ''
   Description: Voicemod Virtual Audio Device (WDM)
   ExportedFunctions: ''
@@ -108,10 +108,10 @@ KnownVulnerableSamples:
       Entropy: 5.72820930665092
       Virtual Size: '0x1466'
     .rdata:
-      Entropy: 4.71043452997573
+      Entropy: 4.710434529975731
       Virtual Size: '0x1440'
     .data:
-      Entropy: 1.9612699371321567
+      Entropy: 1.961269937132157
       Virtual Size: '0x72c'
     .pdata:
       Entropy: 4.38228852061058
@@ -149,6 +149,7 @@ KnownVulnerableSamples:
         MD5: b4a3c39dbd2935ac070032406fa082e4
         SHA1: 891bf1b0a017f5aadbc0d997fe63eb0ec25a1655
         SHA256: 81d8278fe4857a2dfa510a0af74deeb0623ef79e25fcf171644808a3ec652305
+        SHA384: 17653c0976e1370da584b5eaf4a6deb1d3b7cad97c2f12592e7b96c5302b88bde20b30fa5963ef0ac9f2063083b48e9e
     - Subject: ??=Private Organization, ??=ES, ??=Valencia, serialNumber=B98657844,
         C=ES, L=Valencia, O=Voicemod Sociedad Limitada, CN=Voicemod Sociedad Limitada
       ValidFrom: '2021-10-21 00:00:00'
@@ -162,6 +163,7 @@ KnownVulnerableSamples:
         MD5: 59e2799dd07c9a450f06c376eb220a48
         SHA1: 8588e052171ee54d148087ef5e2b8cf81017d199
         SHA256: 3a0fbfc101d7832c403769e3f28cdfcea533abdd1461c09b134594a1d21aabe8
+        SHA384: 6df23072f503ec2ff425603e606c706a149144483579648653c5e1f40c64243b77cc021873ed46c5ac9597ba452f11fc
     Signer:
     - SerialNumber: 014d8930c6a3fceb0f4021734d5ed508
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Global G3 Code Signing ECC SHA384

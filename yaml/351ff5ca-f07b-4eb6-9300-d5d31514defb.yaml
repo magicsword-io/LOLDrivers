@@ -42,7 +42,7 @@ KnownVulnerableSamples:
     SHA256: 0e291148da43ea6a491b8b94bdf573365087940c9b90f6a15a4e589da86a518d
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-15 23:24:57'
+  CreationTimestamp: '2013-01-16 01:24:57'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -97,10 +97,10 @@ KnownVulnerableSamples:
   SHA256: 76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22
   Sections:
     .text:
-      Entropy: 5.9944111351941185
+      Entropy: 5.994411135194118
       Virtual Size: '0x5736'
     .rdata:
-      Entropy: 5.542492779395016
+      Entropy: 5.542492779395015
       Virtual Size: '0x570'
     .data:
       Entropy: 1.445115035315444
@@ -141,6 +141,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -154,6 +155,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -168,6 +170,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2010-04-03 00:00:00'
@@ -181,6 +184,7 @@ KnownVulnerableSamples:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
         SHA256: ae1dc09d08e93ace95fe203adfbfadcd4c029529d3f99ab381c368064b58d9a0
+        SHA384: 18c6db711578cfcd4bce87c63d053e242c7c196efc892c2d4a8733cb75bb7dc3cac3f702e0e1d4b7fa2c590acb53fdee
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -193,6 +197,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -205,7 +210,7 @@ KnownVulnerableSamples:
     SHA256: 1622ac0c618a86be17e0f97daa061f9aaa0e721dc0fd30d76bbc5c958e9a9d92
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-03-27 11:56:49'
+  CreationTimestamp: '2009-03-27 13:56:49'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -251,7 +256,7 @@ KnownVulnerableSamples:
       Entropy: 5.981323117886685
       Virtual Size: '0x4a25'
     .rdata:
-      Entropy: 5.681127753509768
+      Entropy: 5.6811277535097675
       Virtual Size: '0x480'
     .data:
       Entropy: 0.8264834692004682
@@ -269,7 +274,7 @@ KnownVulnerableSamples:
       Entropy: 3.289150653685818
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 1.2454265871243133
+      Entropy: 1.245426587124313
       Virtual Size: '0x3c'
   Signatures:
   - CertificatesInfo: ''
@@ -288,6 +293,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -300,6 +306,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -314,6 +321,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2007-04-04 00:00:00'
@@ -327,6 +335,7 @@ KnownVulnerableSamples:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
         SHA256: d98d63f26125a94eb767fdd2526f6c74bfb40cb4d117a1d87ca3ed0d99bd6f0b
+        SHA384: cf20d9d6343b52b05ebaeace8a75ad950089e2d55508571cf5b153583fdf2d7b11bc61b8f38bfa70f09b2e7ac63d9ef5
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -339,6 +348,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -351,7 +361,7 @@ KnownVulnerableSamples:
     SHA256: 92ca1aec3afc90b44861c2e0be084a3db38d22d52f35e1697643d6477151392f
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-15 23:24:57'
+  CreationTimestamp: '2013-01-16 01:24:57'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -404,10 +414,10 @@ KnownVulnerableSamples:
   SHA256: 2e665962c827ce0adbd29fe6bcf09bbb1d7a7022075d162ff9b65d0af9794ac0
   Sections:
     .text:
-      Entropy: 5.9944111351941185
+      Entropy: 5.994411135194118
       Virtual Size: '0x5736'
     .rdata:
-      Entropy: 5.542492779395016
+      Entropy: 5.542492779395015
       Virtual Size: '0x570'
     .data:
       Entropy: 1.445115035315444
@@ -425,7 +435,7 @@ KnownVulnerableSamples:
       Entropy: 6.472426446171854
       Virtual Size: '0x14a24'
     .reloc:
-      Entropy: 5.039009418592025
+      Entropy: 5.039009418592024
       Virtual Size: '0x48'
   Signatures:
   - CertificatesInfo: ''
@@ -444,6 +454,7 @@ KnownVulnerableSamples:
         MD5: 7ece739fdaa27d96b67f587db04186a7
         SHA1: b8701efa0ab12b8fea2293c9cff8772ecca084d0
         SHA256: c1392bdcbb0b50215fca8c78f25c2d857e515dce06c87ce86527c88c91d5d7e4
+        SHA384: 8d292e8db16824f3ac9d668816c4cf521a9eb251069694c92932683afcaa4e53d5fa3a1f58356749e655299ed83fe191
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Production PCA 2011
       ValidFrom: '2011-10-19 18:41:42'
@@ -457,6 +468,7 @@ KnownVulnerableSamples:
         MD5: 30a3f0b64324ed7f465e7fc618cb69e7
         SHA1: 002de3561519b662c5e3f5faba1b92c403fb7c41
         SHA256: 4e80be107c860de896384b3eff50504dc2d76ac7151df3102a4450637a032146
+        SHA384: 4f9a02c3eac5e83c38074d54c0bf270e03a1d668e0001c9812c509eb08a19075ee778a7630e65598e4608fc66e2d1c66
     Signer:
     - SerialNumber: 330000036ce57eeb5d1cc2be1700000000036c
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -468,7 +480,7 @@ KnownVulnerableSamples:
     SHA256: a363deaf1790e9c0610e07a7203749aab8b60f5ededc944abc0ef3010f5e2105
   Company: Micro Focus
   Copyright: (C) Copyright 2000-2017, Micro Focus. All Rights Reserved.
-  CreationTimestamp: '2022-03-03 03:52:58'
+  CreationTimestamp: '2022-03-03 05:52:58'
   Description: XTier Security Context Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -531,7 +543,7 @@ KnownVulnerableSamples:
       Entropy: 1.445115035315444
       Virtual Size: '0x5a8'
     .pdata:
-      Entropy: 4.277709228070346
+      Entropy: 4.277709228070347
       Virtual Size: '0x450'
     .edata:
       Entropy: 3.956023170093665
@@ -562,6 +574,7 @@ KnownVulnerableSamples:
         MD5: 9f0782e89bd41cdd96ec55357457478a
         SHA1: 35c2180572baad19019acca1334e6c653699c389
         SHA256: 50814710213afec410f26e573d25267a2e21d3d15f158be8a43a666c9cc6fa08
+        SHA384: 8d48f066b0284071d64bbc556e018824a8388ccd142a56c7b7b04ef6d27cade07da57ac82d8067e18ad64d35af11e2a7
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -575,6 +588,7 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 330000004de597a775e3157f7b00000000004d
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -586,7 +600,7 @@ KnownVulnerableSamples:
     SHA256: 34f36a59ecf6174eeac15994e54c41fe1e3e3b1eee8ed4c399ec8c63212373d7
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2011-04-01 19:18:14'
+  CreationTimestamp: '2011-04-01 21:18:14'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -638,7 +652,7 @@ KnownVulnerableSamples:
       Entropy: 0.8264834692004682
       Virtual Size: '0x568'
     .pdata:
-      Entropy: 4.238276468304064
+      Entropy: 4.238276468304065
       Virtual Size: '0x3d8'
     .edata:
       Entropy: 3.956023170093665
@@ -650,7 +664,7 @@ KnownVulnerableSamples:
       Entropy: 3.287931080812757
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 1.2454265871243133
+      Entropy: 1.245426587124313
       Virtual Size: '0x3c'
   Signatures:
   - CertificatesInfo: ''
@@ -669,6 +683,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -681,6 +696,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -695,6 +711,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2010-04-03 00:00:00'
@@ -708,6 +725,7 @@ KnownVulnerableSamples:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
         SHA256: ae1dc09d08e93ace95fe203adfbfadcd4c029529d3f99ab381c368064b58d9a0
+        SHA384: 18c6db711578cfcd4bce87c63d053e242c7c196efc892c2d4a8733cb75bb7dc3cac3f702e0e1d4b7fa2c590acb53fdee
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -720,6 +738,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -732,7 +751,7 @@ KnownVulnerableSamples:
     SHA256: 00dfeab446afecac7b44b0b1680d5ca7d421eda243e16db8c08706bb593a8391
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-03-27 11:52:17'
+  CreationTimestamp: '2009-03-27 13:52:17'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -787,13 +806,13 @@ KnownVulnerableSamples:
       Entropy: 3.88787733918592
       Virtual Size: '0x63'
     INIT:
-      Entropy: 5.407607088870612
+      Entropy: 5.407607088870611
       Virtual Size: '0x2d6'
     .rsrc:
       Entropy: 3.289150653685818
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 6.220983522762253
+      Entropy: 6.2209835227622525
       Virtual Size: '0x4f2'
   Signatures:
   - CertificatesInfo: ''
@@ -812,6 +831,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -824,6 +844,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -838,6 +859,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2007-04-04 00:00:00'
@@ -851,6 +873,7 @@ KnownVulnerableSamples:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
         SHA256: d98d63f26125a94eb767fdd2526f6c74bfb40cb4d117a1d87ca3ed0d99bd6f0b
+        SHA384: cf20d9d6343b52b05ebaeace8a75ad950089e2d55508571cf5b153583fdf2d7b11bc61b8f38bfa70f09b2e7ac63d9ef5
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -863,6 +886,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -875,7 +899,7 @@ KnownVulnerableSamples:
     SHA256: 253ed7f5c7115e957dfdb1f5c6c51592b491a70b27787903c8fd848e45b9cf22
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-15 23:24:57'
+  CreationTimestamp: '2013-01-16 01:24:57'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -928,10 +952,10 @@ KnownVulnerableSamples:
   SHA256: fb81b5f8bf69637dbdf050181499088a67d24577587bc520de94b5ee8996240f
   Sections:
     .text:
-      Entropy: 5.9944111351941185
+      Entropy: 5.994411135194118
       Virtual Size: '0x5736'
     .rdata:
-      Entropy: 5.542492779395016
+      Entropy: 5.542492779395015
       Virtual Size: '0x570'
     .data:
       Entropy: 1.445115035315444
@@ -968,6 +992,7 @@ KnownVulnerableSamples:
         MD5: 92b6022918bc02eb361b8a02fb1da57d
         SHA1: 8ceb945fac0f6d623d464e21740ae6eb60351652
         SHA256: c1446860a1cd9db490d3ea85e9df05df44af8d44e2bb803a2a2018f3b6c41bcb
+        SHA384: 322ed1a62a9f2ed7c7f601e99a8db15371e3ba1039a73c81801165ea987679023bc36f8c357f74354dce65532b71be3c
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Code Signing PCA 2011
       ValidFrom: '2011-07-08 20:59:09'
@@ -981,6 +1006,7 @@ KnownVulnerableSamples:
         MD5: b4ec95434f1d45b8055077cf90540a5f
         SHA1: 71f74db41d045d6eaf81a849bbb3e21544edcff4
         SHA256: f6f717a43ad9abddc8cefdde1c505462535e7d1307e630f9544a2d14fe8bf26e
+        SHA384: 25cbac323e740588a1ea3ca39ea907647440884ad75fc4bd99be6c82202aba42e95049fa7b66884977e60b819b21a2a5
     Signer:
     - SerialNumber: 33000002528b33aaf895f339db000000000252
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -992,7 +1018,7 @@ KnownVulnerableSamples:
     SHA256: 0e291148da43ea6a491b8b94bdf573365087940c9b90f6a15a4e589da86a518d
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-15 23:24:57'
+  CreationTimestamp: '2013-01-16 01:24:57'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -1047,10 +1073,10 @@ KnownVulnerableSamples:
   SHA256: 76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22
   Sections:
     .text:
-      Entropy: 5.9944111351941185
+      Entropy: 5.994411135194118
       Virtual Size: '0x5736'
     .rdata:
-      Entropy: 5.542492779395016
+      Entropy: 5.542492779395015
       Virtual Size: '0x570'
     .data:
       Entropy: 1.445115035315444
@@ -1091,6 +1117,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1104,6 +1131,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -1118,6 +1146,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2010-04-03 00:00:00'
@@ -1131,6 +1160,7 @@ KnownVulnerableSamples:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
         SHA256: ae1dc09d08e93ace95fe203adfbfadcd4c029529d3f99ab381c368064b58d9a0
+        SHA384: 18c6db711578cfcd4bce87c63d053e242c7c196efc892c2d4a8733cb75bb7dc3cac3f702e0e1d4b7fa2c590acb53fdee
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1143,6 +1173,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1155,7 +1186,7 @@ KnownVulnerableSamples:
     SHA256: 1622ac0c618a86be17e0f97daa061f9aaa0e721dc0fd30d76bbc5c958e9a9d92
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-03-27 11:56:49'
+  CreationTimestamp: '2009-03-27 13:56:49'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -1201,7 +1232,7 @@ KnownVulnerableSamples:
       Entropy: 5.981323117886685
       Virtual Size: '0x4a25'
     .rdata:
-      Entropy: 5.681127753509768
+      Entropy: 5.6811277535097675
       Virtual Size: '0x480'
     .data:
       Entropy: 0.8264834692004682
@@ -1219,7 +1250,7 @@ KnownVulnerableSamples:
       Entropy: 3.289150653685818
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 1.2454265871243133
+      Entropy: 1.245426587124313
       Virtual Size: '0x3c'
   Signatures:
   - CertificatesInfo: ''
@@ -1238,6 +1269,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1250,6 +1282,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -1264,6 +1297,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2007-04-04 00:00:00'
@@ -1277,6 +1311,7 @@ KnownVulnerableSamples:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
         SHA256: d98d63f26125a94eb767fdd2526f6c74bfb40cb4d117a1d87ca3ed0d99bd6f0b
+        SHA384: cf20d9d6343b52b05ebaeace8a75ad950089e2d55508571cf5b153583fdf2d7b11bc61b8f38bfa70f09b2e7ac63d9ef5
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1289,6 +1324,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1301,7 +1337,7 @@ KnownVulnerableSamples:
     SHA256: 92ca1aec3afc90b44861c2e0be084a3db38d22d52f35e1697643d6477151392f
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-15 23:24:57'
+  CreationTimestamp: '2013-01-16 01:24:57'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -1354,10 +1390,10 @@ KnownVulnerableSamples:
   SHA256: 2e665962c827ce0adbd29fe6bcf09bbb1d7a7022075d162ff9b65d0af9794ac0
   Sections:
     .text:
-      Entropy: 5.9944111351941185
+      Entropy: 5.994411135194118
       Virtual Size: '0x5736'
     .rdata:
-      Entropy: 5.542492779395016
+      Entropy: 5.542492779395015
       Virtual Size: '0x570'
     .data:
       Entropy: 1.445115035315444
@@ -1375,7 +1411,7 @@ KnownVulnerableSamples:
       Entropy: 6.472426446171854
       Virtual Size: '0x14a24'
     .reloc:
-      Entropy: 5.039009418592025
+      Entropy: 5.039009418592024
       Virtual Size: '0x48'
   Signatures:
   - CertificatesInfo: ''
@@ -1394,6 +1430,7 @@ KnownVulnerableSamples:
         MD5: 7ece739fdaa27d96b67f587db04186a7
         SHA1: b8701efa0ab12b8fea2293c9cff8772ecca084d0
         SHA256: c1392bdcbb0b50215fca8c78f25c2d857e515dce06c87ce86527c88c91d5d7e4
+        SHA384: 8d292e8db16824f3ac9d668816c4cf521a9eb251069694c92932683afcaa4e53d5fa3a1f58356749e655299ed83fe191
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Production PCA 2011
       ValidFrom: '2011-10-19 18:41:42'
@@ -1407,6 +1444,7 @@ KnownVulnerableSamples:
         MD5: 30a3f0b64324ed7f465e7fc618cb69e7
         SHA1: 002de3561519b662c5e3f5faba1b92c403fb7c41
         SHA256: 4e80be107c860de896384b3eff50504dc2d76ac7151df3102a4450637a032146
+        SHA384: 4f9a02c3eac5e83c38074d54c0bf270e03a1d668e0001c9812c509eb08a19075ee778a7630e65598e4608fc66e2d1c66
     Signer:
     - SerialNumber: 330000036ce57eeb5d1cc2be1700000000036c
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -1418,7 +1456,7 @@ KnownVulnerableSamples:
     SHA256: a363deaf1790e9c0610e07a7203749aab8b60f5ededc944abc0ef3010f5e2105
   Company: Micro Focus
   Copyright: (C) Copyright 2000-2017, Micro Focus. All Rights Reserved.
-  CreationTimestamp: '2022-03-03 03:52:58'
+  CreationTimestamp: '2022-03-03 05:52:58'
   Description: XTier Security Context Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -1481,7 +1519,7 @@ KnownVulnerableSamples:
       Entropy: 1.445115035315444
       Virtual Size: '0x5a8'
     .pdata:
-      Entropy: 4.277709228070346
+      Entropy: 4.277709228070347
       Virtual Size: '0x450'
     .edata:
       Entropy: 3.956023170093665
@@ -1512,6 +1550,7 @@ KnownVulnerableSamples:
         MD5: 9f0782e89bd41cdd96ec55357457478a
         SHA1: 35c2180572baad19019acca1334e6c653699c389
         SHA256: 50814710213afec410f26e573d25267a2e21d3d15f158be8a43a666c9cc6fa08
+        SHA384: 8d48f066b0284071d64bbc556e018824a8388ccd142a56c7b7b04ef6d27cade07da57ac82d8067e18ad64d35af11e2a7
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -1525,6 +1564,7 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 330000004de597a775e3157f7b00000000004d
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -1536,7 +1576,7 @@ KnownVulnerableSamples:
     SHA256: 34f36a59ecf6174eeac15994e54c41fe1e3e3b1eee8ed4c399ec8c63212373d7
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2011-04-01 19:18:14'
+  CreationTimestamp: '2011-04-01 21:18:14'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -1588,7 +1628,7 @@ KnownVulnerableSamples:
       Entropy: 0.8264834692004682
       Virtual Size: '0x568'
     .pdata:
-      Entropy: 4.238276468304064
+      Entropy: 4.238276468304065
       Virtual Size: '0x3d8'
     .edata:
       Entropy: 3.956023170093665
@@ -1600,7 +1640,7 @@ KnownVulnerableSamples:
       Entropy: 3.287931080812757
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 1.2454265871243133
+      Entropy: 1.245426587124313
       Virtual Size: '0x3c'
   Signatures:
   - CertificatesInfo: ''
@@ -1619,6 +1659,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1631,6 +1672,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -1645,6 +1687,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2010-04-03 00:00:00'
@@ -1658,6 +1701,7 @@ KnownVulnerableSamples:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
         SHA256: ae1dc09d08e93ace95fe203adfbfadcd4c029529d3f99ab381c368064b58d9a0
+        SHA384: 18c6db711578cfcd4bce87c63d053e242c7c196efc892c2d4a8733cb75bb7dc3cac3f702e0e1d4b7fa2c590acb53fdee
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1670,6 +1714,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1682,7 +1727,7 @@ KnownVulnerableSamples:
     SHA256: 00dfeab446afecac7b44b0b1680d5ca7d421eda243e16db8c08706bb593a8391
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-03-27 11:52:17'
+  CreationTimestamp: '2009-03-27 13:52:17'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -1737,13 +1782,13 @@ KnownVulnerableSamples:
       Entropy: 3.88787733918592
       Virtual Size: '0x63'
     INIT:
-      Entropy: 5.407607088870612
+      Entropy: 5.407607088870611
       Virtual Size: '0x2d6'
     .rsrc:
       Entropy: 3.289150653685818
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 6.220983522762253
+      Entropy: 6.2209835227622525
       Virtual Size: '0x4f2'
   Signatures:
   - CertificatesInfo: ''
@@ -1762,6 +1807,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1774,6 +1820,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -1788,6 +1835,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2007-04-04 00:00:00'
@@ -1801,6 +1849,7 @@ KnownVulnerableSamples:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
         SHA256: d98d63f26125a94eb767fdd2526f6c74bfb40cb4d117a1d87ca3ed0d99bd6f0b
+        SHA384: cf20d9d6343b52b05ebaeace8a75ad950089e2d55508571cf5b153583fdf2d7b11bc61b8f38bfa70f09b2e7ac63d9ef5
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1813,6 +1862,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1825,7 +1875,7 @@ KnownVulnerableSamples:
     SHA256: 253ed7f5c7115e957dfdb1f5c6c51592b491a70b27787903c8fd848e45b9cf22
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-15 23:24:57'
+  CreationTimestamp: '2013-01-16 01:24:57'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -1878,10 +1928,10 @@ KnownVulnerableSamples:
   SHA256: fb81b5f8bf69637dbdf050181499088a67d24577587bc520de94b5ee8996240f
   Sections:
     .text:
-      Entropy: 5.9944111351941185
+      Entropy: 5.994411135194118
       Virtual Size: '0x5736'
     .rdata:
-      Entropy: 5.542492779395016
+      Entropy: 5.542492779395015
       Virtual Size: '0x570'
     .data:
       Entropy: 1.445115035315444
@@ -1918,6 +1968,7 @@ KnownVulnerableSamples:
         MD5: 92b6022918bc02eb361b8a02fb1da57d
         SHA1: 8ceb945fac0f6d623d464e21740ae6eb60351652
         SHA256: c1446860a1cd9db490d3ea85e9df05df44af8d44e2bb803a2a2018f3b6c41bcb
+        SHA384: 322ed1a62a9f2ed7c7f601e99a8db15371e3ba1039a73c81801165ea987679023bc36f8c357f74354dce65532b71be3c
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Code Signing PCA 2011
       ValidFrom: '2011-07-08 20:59:09'
@@ -1931,6 +1982,7 @@ KnownVulnerableSamples:
         MD5: b4ec95434f1d45b8055077cf90540a5f
         SHA1: 71f74db41d045d6eaf81a849bbb3e21544edcff4
         SHA256: f6f717a43ad9abddc8cefdde1c505462535e7d1307e630f9544a2d14fe8bf26e
+        SHA384: 25cbac323e740588a1ea3ca39ea907647440884ad75fc4bd99be6c82202aba42e95049fa7b66884977e60b819b21a2a5
     Signer:
     - SerialNumber: 33000002528b33aaf895f339db000000000252
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -1942,7 +1994,7 @@ KnownVulnerableSamples:
     SHA256: 410d79a49c02da50f4567166d5acef977b5dbc3aafb67522939bf902e65596a5
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-12-22 01:35:10'
+  CreationTimestamp: '2015-12-22 03:35:10'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -2002,7 +2054,7 @@ KnownVulnerableSamples:
       Entropy: 6.015399864614518
       Virtual Size: '0x5a46'
     .rdata:
-      Entropy: 5.555982444894318
+      Entropy: 5.555982444894319
       Virtual Size: '0x598'
     .data:
       Entropy: 1.445115035315444
@@ -2040,6 +2092,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -2053,6 +2106,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=Novell, Inc.
       ValidFrom: '2013-03-05 00:00:00'
@@ -2066,6 +2120,7 @@ KnownVulnerableSamples:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
         SHA256: 2b9c106aae9a1675874a797c8571eb9fcec0a503ca4ddff69603321350fe3e68
+        SHA384: eac8e04313e7d424d650203026e3011abf7f02f40fecd7ab1a139aa229fabe40ac62b1f262780c4b27758214b08f7e87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -2080,6 +2135,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -2094,6 +2150,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -2106,7 +2163,7 @@ KnownVulnerableSamples:
     SHA256: 1d640783395631c1b4878ac7945f227c4c4f64fe26dd30cbed755dc440931e85
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-06-26 06:12:50'
+  CreationTimestamp: '2015-06-26 08:12:50'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -2204,6 +2261,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -2217,6 +2275,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=Novell, Inc.
       ValidFrom: '2013-03-05 00:00:00'
@@ -2230,6 +2289,7 @@ KnownVulnerableSamples:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
         SHA256: 2b9c106aae9a1675874a797c8571eb9fcec0a503ca4ddff69603321350fe3e68
+        SHA384: eac8e04313e7d424d650203026e3011abf7f02f40fecd7ab1a139aa229fabe40ac62b1f262780c4b27758214b08f7e87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -2244,6 +2304,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -2258,6 +2319,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -2270,7 +2332,7 @@ KnownVulnerableSamples:
     SHA256: 37b9fbd6547091b83b2595bb0f9f9035ae95111868a4393aab52bf22087233d7
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2012, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2012-03-18 19:29:20'
+  CreationTimestamp: '2012-03-18 21:29:20'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -2329,13 +2391,13 @@ KnownVulnerableSamples:
       Entropy: 3.8878773391859194
       Virtual Size: '0x63'
     INIT:
-      Entropy: 5.3979225181347195
+      Entropy: 5.39792251813472
       Virtual Size: '0x2f8'
     .rsrc:
       Entropy: 3.2729254116810207
       Virtual Size: '0x358'
     .reloc:
-      Entropy: 6.189610877444558
+      Entropy: 6.189610877444557
       Virtual Size: '0x512'
   Signature: ''
   Signatures:
@@ -2355,6 +2417,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -2367,6 +2430,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -2381,6 +2445,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2010-04-03 00:00:00'
@@ -2394,6 +2459,7 @@ KnownVulnerableSamples:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
         SHA256: ae1dc09d08e93ace95fe203adfbfadcd4c029529d3f99ab381c368064b58d9a0
+        SHA384: 18c6db711578cfcd4bce87c63d053e242c7c196efc892c2d4a8733cb75bb7dc3cac3f702e0e1d4b7fa2c590acb53fdee
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -2406,6 +2472,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -2418,7 +2485,7 @@ KnownVulnerableSamples:
     SHA256: 748b6350472e21bab16497e4296794619dede7fcdb188fea1574f89498a2ff54
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2008-08-18 10:18:12'
+  CreationTimestamp: '2008-08-18 12:18:12'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -2485,7 +2552,7 @@ KnownVulnerableSamples:
       Entropy: 3.289150653685818
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 1.2454265871243133
+      Entropy: 1.245426587124313
       Virtual Size: '0x3c'
   Signature: ''
   Signatures:
@@ -2505,6 +2572,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -2517,6 +2585,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -2531,6 +2600,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2007-04-04 00:00:00'
@@ -2544,6 +2614,7 @@ KnownVulnerableSamples:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
         SHA256: d98d63f26125a94eb767fdd2526f6c74bfb40cb4d117a1d87ca3ed0d99bd6f0b
+        SHA384: cf20d9d6343b52b05ebaeace8a75ad950089e2d55508571cf5b153583fdf2d7b11bc61b8f38bfa70f09b2e7ac63d9ef5
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -2556,6 +2627,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -2568,7 +2640,7 @@ KnownVulnerableSamples:
     SHA256: 0f4ca9e9507724526f2b624d165750344473d388da38b7f3f6a8366dbc15140b
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-09-08 13:40:51'
+  CreationTimestamp: '2009-09-08 15:40:51'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -2614,7 +2686,7 @@ KnownVulnerableSamples:
   SHA256: 14938f68957ede6e2b742a550042119a8fbc9f14427fb89fa53fff12d243561c
   Sections:
     .text:
-      Entropy: 5.984908350932489
+      Entropy: 5.984908350932488
       Virtual Size: '0x4c05'
     .rdata:
       Entropy: 5.608591774799332
@@ -2623,7 +2695,7 @@ KnownVulnerableSamples:
       Entropy: 0.8264834692004682
       Virtual Size: '0x568'
     .pdata:
-      Entropy: 4.239573253931084
+      Entropy: 4.239573253931085
       Virtual Size: '0x3d8'
     .edata:
       Entropy: 3.983850316580165
@@ -2635,7 +2707,7 @@ KnownVulnerableSamples:
       Entropy: 3.289150653685818
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 1.2454265871243133
+      Entropy: 1.245426587124313
       Virtual Size: '0x3c'
   Signature: ''
   Signatures:
@@ -2655,6 +2727,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -2667,6 +2740,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -2681,6 +2755,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2007-04-04 00:00:00'
@@ -2694,6 +2769,7 @@ KnownVulnerableSamples:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
         SHA256: d98d63f26125a94eb767fdd2526f6c74bfb40cb4d117a1d87ca3ed0d99bd6f0b
+        SHA384: cf20d9d6343b52b05ebaeace8a75ad950089e2d55508571cf5b153583fdf2d7b11bc61b8f38bfa70f09b2e7ac63d9ef5
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -2706,6 +2782,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -2718,7 +2795,7 @@ KnownVulnerableSamples:
     SHA256: 4c21b7065cb961127ab9e2a0251ab8d50cfd65369a41e88e36bc2908af2b1d8d
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-12-18 02:23:27'
+  CreationTimestamp: '2013-12-18 04:23:27'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -2794,7 +2871,7 @@ KnownVulnerableSamples:
       Entropy: 3.275995301680775
       Virtual Size: '0x358'
     .reloc:
-      Entropy: 6.2966285478887905
+      Entropy: 6.29662854788879
       Virtual Size: '0x59c'
   Signature: ''
   Signatures:
@@ -2814,6 +2891,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -2827,6 +2905,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=Novell, Inc.
       ValidFrom: '2013-03-05 00:00:00'
@@ -2840,6 +2919,7 @@ KnownVulnerableSamples:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
         SHA256: 2b9c106aae9a1675874a797c8571eb9fcec0a503ca4ddff69603321350fe3e68
+        SHA384: eac8e04313e7d424d650203026e3011abf7f02f40fecd7ab1a139aa229fabe40ac62b1f262780c4b27758214b08f7e87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -2854,6 +2934,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -2868,6 +2949,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -2880,7 +2962,7 @@ KnownVulnerableSamples:
     SHA256: 234fc829bfd4d8d5dca351be176f5a06cb29bbfd5632a93cc218936d32a44851
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2014, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2014-08-26 13:58:19'
+  CreationTimestamp: '2014-08-26 15:58:19'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -2956,7 +3038,7 @@ KnownVulnerableSamples:
       Entropy: 3.274996758488867
       Virtual Size: '0x358'
     .reloc:
-      Entropy: 6.285236926922213
+      Entropy: 6.285236926922212
       Virtual Size: '0x5a2'
   Signature: ''
   Signatures:
@@ -2976,6 +3058,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -2989,6 +3072,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=Novell, Inc.
       ValidFrom: '2013-03-05 00:00:00'
@@ -3002,6 +3086,7 @@ KnownVulnerableSamples:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
         SHA256: 2b9c106aae9a1675874a797c8571eb9fcec0a503ca4ddff69603321350fe3e68
+        SHA384: eac8e04313e7d424d650203026e3011abf7f02f40fecd7ab1a139aa229fabe40ac62b1f262780c4b27758214b08f7e87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -3016,6 +3101,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -3030,6 +3116,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -3042,7 +3129,7 @@ KnownVulnerableSamples:
     SHA256: 8ac341d36e1af8959de6410a976400ded8554f5ffb6a462a8080c38a0140f4d4
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2011-07-17 21:25:32'
+  CreationTimestamp: '2011-07-17 23:25:32'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -3089,7 +3176,7 @@ KnownVulnerableSamples:
   SHA256: 53810ca98e07a567bb082628d95d796f14c218762cbbaa79704740284dccda4b
   Sections:
     .text:
-      Entropy: 6.148140674179319
+      Entropy: 6.148140674179317
       Virtual Size: '0x3517'
     .rdata:
       Entropy: 5.94388104788726
@@ -3127,6 +3214,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -3139,6 +3227,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -3153,6 +3242,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2010-04-03 00:00:00'
@@ -3166,6 +3256,7 @@ KnownVulnerableSamples:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
         SHA256: ae1dc09d08e93ace95fe203adfbfadcd4c029529d3f99ab381c368064b58d9a0
+        SHA384: 18c6db711578cfcd4bce87c63d053e242c7c196efc892c2d4a8733cb75bb7dc3cac3f702e0e1d4b7fa2c590acb53fdee
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -3178,6 +3269,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -3190,7 +3282,7 @@ KnownVulnerableSamples:
     SHA256: 5271f526b19331c7f8526a5e10b9aedc0ddd325958aa0e908ceaee40692f7ae2
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-06-26 06:12:59'
+  CreationTimestamp: '2015-06-26 08:12:59'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -3251,7 +3343,7 @@ KnownVulnerableSamples:
       Entropy: 6.216974830222535
       Virtual Size: '0x3f4c'
     .rdata:
-      Entropy: 5.980250864123602
+      Entropy: 5.980250864123601
       Virtual Size: '0x313'
     .data:
       Entropy: 1.31505443956947
@@ -3286,6 +3378,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -3299,6 +3392,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=Novell, Inc.
       ValidFrom: '2013-03-05 00:00:00'
@@ -3312,6 +3406,7 @@ KnownVulnerableSamples:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
         SHA256: 2b9c106aae9a1675874a797c8571eb9fcec0a503ca4ddff69603321350fe3e68
+        SHA384: eac8e04313e7d424d650203026e3011abf7f02f40fecd7ab1a139aa229fabe40ac62b1f262780c4b27758214b08f7e87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -3326,6 +3421,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -3340,6 +3436,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -3352,7 +3449,7 @@ KnownVulnerableSamples:
     SHA256: f62282e44713d7d2f4c780027c7bbb82ba0b491c8836dfae33a2d82e8b5a43d2
   Company: Novell, Inc.
   Copyright: "Copyright \xA9 1997-2007 Novell, Inc."
-  CreationTimestamp: '2007-08-09 13:35:11'
+  CreationTimestamp: '2007-08-09 15:35:11'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -3419,7 +3516,7 @@ KnownVulnerableSamples:
       Entropy: 3.2545231002082082
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 1.2454265871243133
+      Entropy: 1.245426587124313
       Virtual Size: '0x3c'
   Signature: ''
   Signatures:
@@ -3439,6 +3536,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -3451,6 +3549,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -3465,6 +3564,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2007-04-04 00:00:00'
@@ -3478,6 +3578,7 @@ KnownVulnerableSamples:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
         SHA256: d98d63f26125a94eb767fdd2526f6c74bfb40cb4d117a1d87ca3ed0d99bd6f0b
+        SHA384: cf20d9d6343b52b05ebaeace8a75ad950089e2d55508571cf5b153583fdf2d7b11bc61b8f38bfa70f09b2e7ac63d9ef5
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -3490,6 +3591,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -3502,7 +3604,7 @@ KnownVulnerableSamples:
     SHA256: cf2ea0e4d21d3774bbacf10a14c75583b448829f87a90b869678fbc4de9b2a99
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2012, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2012-03-18 19:31:45'
+  CreationTimestamp: '2012-03-18 21:31:45'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -3569,7 +3671,7 @@ KnownVulnerableSamples:
       Entropy: 3.2729254116810207
       Virtual Size: '0x358'
     .reloc:
-      Entropy: 1.2454265871243133
+      Entropy: 1.245426587124313
       Virtual Size: '0x3c'
   Signature: ''
   Signatures:
@@ -3589,6 +3691,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -3601,6 +3704,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -3615,6 +3719,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2010-04-03 00:00:00'
@@ -3628,6 +3733,7 @@ KnownVulnerableSamples:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
         SHA256: ae1dc09d08e93ace95fe203adfbfadcd4c029529d3f99ab381c368064b58d9a0
+        SHA384: 18c6db711578cfcd4bce87c63d053e242c7c196efc892c2d4a8733cb75bb7dc3cac3f702e0e1d4b7fa2c590acb53fdee
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -3640,6 +3746,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -3652,7 +3759,7 @@ KnownVulnerableSamples:
     SHA256: 1204026fdc9c859960ee561eb9f1fd9ebf6c88c78c5d4cee35ef029ad5050ec6
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-09-26 07:24:31'
+  CreationTimestamp: '2015-09-26 09:24:31'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -3750,6 +3857,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -3763,6 +3871,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=Novell, Inc.
       ValidFrom: '2013-03-05 00:00:00'
@@ -3776,6 +3885,7 @@ KnownVulnerableSamples:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
         SHA256: 2b9c106aae9a1675874a797c8571eb9fcec0a503ca4ddff69603321350fe3e68
+        SHA384: eac8e04313e7d424d650203026e3011abf7f02f40fecd7ab1a139aa229fabe40ac62b1f262780c4b27758214b08f7e87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -3790,6 +3900,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -3804,6 +3915,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -3816,7 +3928,7 @@ KnownVulnerableSamples:
     SHA256: cdcf71696db4031fe3e70969bbe6169744ff91eebb24d6ffb734f922a850183b
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-15 23:25:05'
+  CreationTimestamp: '2013-01-16 01:25:05'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -3875,7 +3987,7 @@ KnownVulnerableSamples:
       Entropy: 6.203445234172961
       Virtual Size: '0x3d1e'
     .rdata:
-      Entropy: 5.965429698658006
+      Entropy: 5.965429698658007
       Virtual Size: '0x319'
     .data:
       Entropy: 1.31505443956947
@@ -3890,7 +4002,7 @@ KnownVulnerableSamples:
       Entropy: 3.275995301680775
       Virtual Size: '0x358'
     .reloc:
-      Entropy: 6.3111395868300635
+      Entropy: 6.311139586830064
       Virtual Size: '0x58a'
   Signature: ''
   Signatures:
@@ -3910,6 +4022,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -3923,6 +4036,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -3937,6 +4051,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2010-04-03 00:00:00'
@@ -3950,6 +4065,7 @@ KnownVulnerableSamples:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
         SHA256: ae1dc09d08e93ace95fe203adfbfadcd4c029529d3f99ab381c368064b58d9a0
+        SHA384: 18c6db711578cfcd4bce87c63d053e242c7c196efc892c2d4a8733cb75bb7dc3cac3f702e0e1d4b7fa2c590acb53fdee
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -3962,6 +4078,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -3974,7 +4091,7 @@ KnownVulnerableSamples:
     SHA256: 058c4fbd3a12f0d7ddfc771067f03dea88cc33dd4b61139edcb0b2d17905f084
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-05-29 04:48:33'
+  CreationTimestamp: '2013-05-29 06:48:33'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -4033,7 +4150,7 @@ KnownVulnerableSamples:
       Entropy: 6.203445234172961
       Virtual Size: '0x3d1e'
     .rdata:
-      Entropy: 5.9628504398204285
+      Entropy: 5.962850439820429
       Virtual Size: '0x317'
     .data:
       Entropy: 1.31505443956947
@@ -4048,7 +4165,7 @@ KnownVulnerableSamples:
       Entropy: 3.275995301680775
       Virtual Size: '0x358'
     .reloc:
-      Entropy: 6.3111395868300635
+      Entropy: 6.311139586830064
       Virtual Size: '0x58a'
   Signature: ''
   Signatures:
@@ -4068,6 +4185,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -4081,6 +4199,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=Novell, Inc.
       ValidFrom: '2013-03-05 00:00:00'
@@ -4094,6 +4213,7 @@ KnownVulnerableSamples:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
         SHA256: 2b9c106aae9a1675874a797c8571eb9fcec0a503ca4ddff69603321350fe3e68
+        SHA384: eac8e04313e7d424d650203026e3011abf7f02f40fecd7ab1a139aa229fabe40ac62b1f262780c4b27758214b08f7e87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -4108,6 +4228,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -4122,6 +4243,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -4134,7 +4256,7 @@ KnownVulnerableSamples:
     SHA256: 52c7b29023ac2a98b7a9c73de790d820d3d6d095bea0b077d4dad53fa97b0731
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-12-18 07:22:32'
+  CreationTimestamp: '2009-12-18 09:22:32'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -4184,7 +4306,7 @@ KnownVulnerableSamples:
       Entropy: 6.149831920888144
       Virtual Size: '0x3505'
     .rdata:
-      Entropy: 5.915581864636488
+      Entropy: 5.915581864636487
       Virtual Size: '0x2c7'
     .data:
       Entropy: 0.6992933847552781
@@ -4219,6 +4341,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -4231,6 +4354,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -4245,6 +4369,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2007-04-04 00:00:00'
@@ -4258,6 +4383,7 @@ KnownVulnerableSamples:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
         SHA256: d98d63f26125a94eb767fdd2526f6c74bfb40cb4d117a1d87ca3ed0d99bd6f0b
+        SHA384: cf20d9d6343b52b05ebaeace8a75ad950089e2d55508571cf5b153583fdf2d7b11bc61b8f38bfa70f09b2e7ac63d9ef5
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -4270,6 +4396,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -4282,7 +4409,7 @@ KnownVulnerableSamples:
     SHA256: 0174cea1dd70b374f355126ae6be650dff95897d8c8200caac91d4f9e5e5b871
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2011-09-29 19:30:09'
+  CreationTimestamp: '2011-09-29 21:30:09'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -4337,7 +4464,7 @@ KnownVulnerableSamples:
       Entropy: 0.8264834692004682
       Virtual Size: '0x568'
     .pdata:
-      Entropy: 4.111090558168592
+      Entropy: 4.111090558168596
       Virtual Size: '0x3d8'
     .edata:
       Entropy: 3.9636482963781448
@@ -4349,7 +4476,7 @@ KnownVulnerableSamples:
       Entropy: 3.287931080812757
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 1.2454265871243133
+      Entropy: 1.245426587124313
       Virtual Size: '0x3c'
   Signature: ''
   Signatures:
@@ -4369,6 +4496,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -4381,6 +4509,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -4395,6 +4524,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2010-04-03 00:00:00'
@@ -4408,6 +4538,7 @@ KnownVulnerableSamples:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
         SHA256: ae1dc09d08e93ace95fe203adfbfadcd4c029529d3f99ab381c368064b58d9a0
+        SHA384: 18c6db711578cfcd4bce87c63d053e242c7c196efc892c2d4a8733cb75bb7dc3cac3f702e0e1d4b7fa2c590acb53fdee
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -4420,6 +4551,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -4432,7 +4564,7 @@ KnownVulnerableSamples:
     SHA256: 5173b9240e9bcd0d9b25290bb0aa45d156fd5a0080841515ab44f61e0e6bd894
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2014, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2014-11-18 01:10:41'
+  CreationTimestamp: '2014-11-18 03:10:41'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -4530,6 +4662,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -4543,6 +4676,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=Novell, Inc.
       ValidFrom: '2013-03-05 00:00:00'
@@ -4556,6 +4690,7 @@ KnownVulnerableSamples:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
         SHA256: 2b9c106aae9a1675874a797c8571eb9fcec0a503ca4ddff69603321350fe3e68
+        SHA384: eac8e04313e7d424d650203026e3011abf7f02f40fecd7ab1a139aa229fabe40ac62b1f262780c4b27758214b08f7e87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -4570,6 +4705,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -4584,6 +4720,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -4596,7 +4733,7 @@ KnownVulnerableSamples:
     SHA256: aa1c07fc6289ddc2182b11e555073e66b7acbfc17c38efb44ecaa19a6aaf722f
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2014, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2014-08-26 13:58:08'
+  CreationTimestamp: '2014-08-26 15:58:08'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -4654,10 +4791,10 @@ KnownVulnerableSamples:
   SHA256: a855b6ec385b3369c547a3c54e88a013dd028865aba0f3f08be84cdcbaa9a0f6
   Sections:
     .text:
-      Entropy: 6.005303811091079
+      Entropy: 6.005303811091078
       Virtual Size: '0x5956'
     .rdata:
-      Entropy: 5.502369510844811
+      Entropy: 5.50236951084481
       Virtual Size: '0x598'
     .data:
       Entropy: 1.4266625052332786
@@ -4669,7 +4806,7 @@ KnownVulnerableSamples:
       Entropy: 3.9510714024606037
       Virtual Size: '0x63'
     INIT:
-      Entropy: 5.340825447936182
+      Entropy: 5.340825447936183
       Virtual Size: '0x4ee'
     .rsrc:
       Entropy: 3.274996758488867
@@ -4695,6 +4832,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -4708,6 +4846,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=Novell, Inc.
       ValidFrom: '2013-03-05 00:00:00'
@@ -4721,6 +4860,7 @@ KnownVulnerableSamples:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
         SHA256: 2b9c106aae9a1675874a797c8571eb9fcec0a503ca4ddff69603321350fe3e68
+        SHA384: eac8e04313e7d424d650203026e3011abf7f02f40fecd7ab1a139aa229fabe40ac62b1f262780c4b27758214b08f7e87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -4735,6 +4875,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -4749,6 +4890,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -4761,7 +4903,7 @@ KnownVulnerableSamples:
     SHA256: 11b0e5d7971aaa2a6c4621f068af390f291fd796c202369605c2e0c7940f50ee
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-09-08 13:31:34'
+  CreationTimestamp: '2009-09-08 15:31:34'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -4846,6 +4988,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -4858,6 +5001,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -4872,6 +5016,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2007-04-04 00:00:00'
@@ -4885,6 +5030,7 @@ KnownVulnerableSamples:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
         SHA256: d98d63f26125a94eb767fdd2526f6c74bfb40cb4d117a1d87ca3ed0d99bd6f0b
+        SHA384: cf20d9d6343b52b05ebaeace8a75ad950089e2d55508571cf5b153583fdf2d7b11bc61b8f38bfa70f09b2e7ac63d9ef5
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -4897,6 +5043,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at

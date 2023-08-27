@@ -23,7 +23,7 @@ KnownVulnerableSamples:
     SHA256: 5195443274ee3a382e947f03fd409437730434c2af0c1bb1c99f5ba1953f989e
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-12-20 21:33:43'
+  CreationTimestamp: '2021-12-20 23:33:43'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -154,7 +154,7 @@ KnownVulnerableSamples:
       Entropy: 0.807954115503613
       Virtual Size: '0x15f8'
     .pdata:
-      Entropy: 7.800461572948713
+      Entropy: 7.800461572948712
       Virtual Size: '0x660'
     PAGE:
       Entropy: 5.557939798776847
@@ -188,6 +188,7 @@ KnownVulnerableSamples:
         MD5: 3e83a7572d1c522dd9072ba6399029d7
         SHA1: e2c2d59b70f028a66a8711bfa97f842475f84639
         SHA256: 5a504a929cb21f72008d5d57bcd992a7cac13f6aa90cbb886b5ecd809e3b59dd
+        SHA384: 72916ab6c7eb3f5cb7444b3d7d2ac8cb52944605477c5a0f181d060e4edb4c37ebe5eb3c0566dda9de2d2707636ec355
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
         CA
       ValidFrom: '2011-04-15 19:41:37'
@@ -201,6 +202,7 @@ KnownVulnerableSamples:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
         SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -214,6 +216,7 @@ KnownVulnerableSamples:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
         SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
+        SHA384: 86f49574f368a561914a52d7ae043ec6784ef8c718960700f834e123594605d25d39f1ad45f1eb5052c9567f3edd0e16
     - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Time Stamping CA
       ValidFrom: '2019-05-02 00:00:00'
@@ -227,6 +230,7 @@ KnownVulnerableSamples:
         MD5: 63499ed59a1293b786649470e4ce0bd7
         SHA1: 7309d8eaa65da1f3da7030c08f00a3b0a20fa908
         SHA256: 8c8d2046b29e792e71b28705fe67c435208a336dde074a75452d98e72c734937
+        SHA384: 5dbc5eae13908fee4c4e5216f87e3e87208fff0d1052f5fa9f0856a429d6a6c422c625f2318f2f29aea26ece09c1e811
     - Subject: 'C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Time Stamping Signer #2'
       ValidFrom: '2020-10-23 00:00:00'
@@ -240,6 +244,7 @@ KnownVulnerableSamples:
         MD5: 6efd500ce038df7aa3087c1e63a5eb5c
         SHA1: 1c961712a02fb995c585080eda53a753656ca3ad
         SHA256: f60d4f8f7b56499de889264b1e64890694c5b106129d3db068976ed33495577a
+        SHA384: 031fdf7c078e205b4d3ffaff40de36f48f91f87c3b0005b482ff614b320f5e47785045cb87a3e6a75085c24ae8409498
     Signer:
     - SerialNumber: 05a7559541e0fdc678d79e3272468907
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code

@@ -149,6 +149,7 @@ KnownVulnerableSamples:
         MD5: 3e83a7572d1c522dd9072ba6399029d7
         SHA1: e2c2d59b70f028a66a8711bfa97f842475f84639
         SHA256: 5a504a929cb21f72008d5d57bcd992a7cac13f6aa90cbb886b5ecd809e3b59dd
+        SHA384: 72916ab6c7eb3f5cb7444b3d7d2ac8cb52944605477c5a0f181d060e4edb4c37ebe5eb3c0566dda9de2d2707636ec355
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
         CA
       ValidFrom: '2011-04-15 19:41:37'
@@ -162,6 +163,7 @@ KnownVulnerableSamples:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
         SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -174,6 +176,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -187,6 +190,7 @@ KnownVulnerableSamples:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
         SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
+        SHA384: 86f49574f368a561914a52d7ae043ec6784ef8c718960700f834e123594605d25d39f1ad45f1eb5052c9567f3edd0e16
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -199,6 +203,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 05a7559541e0fdc678d79e3272468907
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
@@ -228,7 +233,7 @@ KnownVulnerableSamples:
       Entropy: 5.3523212488458185
       Virtual Size: '0xe54'
     .upx0:
-      Entropy: 7.037246397744446
+      Entropy: 7.037246397744445
       Virtual Size: '0x124190'
     .reloc:
       Entropy: 3.9077681077271933
@@ -237,7 +242,7 @@ KnownVulnerableSamples:
       Entropy: 2.9056718289000636
       Virtual Size: '0x22c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-08-16 21:38:03'
+  CreationTimestamp: '2020-08-16 23:38:03'
 - Filename: mhyprot.sys
   MD5: 67e3b720cee8184c714585a85f8058a0
   SHA1: 254dce914e13b90003b0ae72d8705d92fe7c8dd0
@@ -370,6 +375,7 @@ KnownVulnerableSamples:
         MD5: 3e83a7572d1c522dd9072ba6399029d7
         SHA1: e2c2d59b70f028a66a8711bfa97f842475f84639
         SHA256: 5a504a929cb21f72008d5d57bcd992a7cac13f6aa90cbb886b5ecd809e3b59dd
+        SHA384: 72916ab6c7eb3f5cb7444b3d7d2ac8cb52944605477c5a0f181d060e4edb4c37ebe5eb3c0566dda9de2d2707636ec355
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
         CA
       ValidFrom: '2011-04-15 19:41:37'
@@ -383,6 +389,7 @@ KnownVulnerableSamples:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
         SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -396,6 +403,7 @@ KnownVulnerableSamples:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
         SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
+        SHA384: 86f49574f368a561914a52d7ae043ec6784ef8c718960700f834e123594605d25d39f1ad45f1eb5052c9567f3edd0e16
     - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Time Stamping CA
       ValidFrom: '2019-05-02 00:00:00'
@@ -409,6 +417,7 @@ KnownVulnerableSamples:
         MD5: 63499ed59a1293b786649470e4ce0bd7
         SHA1: 7309d8eaa65da1f3da7030c08f00a3b0a20fa908
         SHA256: 8c8d2046b29e792e71b28705fe67c435208a336dde074a75452d98e72c734937
+        SHA384: 5dbc5eae13908fee4c4e5216f87e3e87208fff0d1052f5fa9f0856a429d6a6c422c625f2318f2f29aea26ece09c1e811
     - Subject: 'C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Time Stamping Signer #2'
       ValidFrom: '2020-10-23 00:00:00'
@@ -422,6 +431,7 @@ KnownVulnerableSamples:
         MD5: 6efd500ce038df7aa3087c1e63a5eb5c
         SHA1: 1c961712a02fb995c585080eda53a753656ca3ad
         SHA256: f60d4f8f7b56499de889264b1e64890694c5b106129d3db068976ed33495577a
+        SHA384: 031fdf7c078e205b4d3ffaff40de36f48f91f87c3b0005b482ff614b320f5e47785045cb87a3e6a75085c24ae8409498
     Signer:
     - SerialNumber: 05a7559541e0fdc678d79e3272468907
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
@@ -436,13 +446,13 @@ KnownVulnerableSamples:
       Entropy: 6.1683529019554815
       Virtual Size: '0x71a0'
     .rdata:
-      Entropy: 4.824949371923319
+      Entropy: 4.824949371923318
       Virtual Size: '0x15ec'
     .data:
       Entropy: 0.779983909093318
       Virtual Size: '0x10f8'
     .pdata:
-      Entropy: 7.754446314071279
+      Entropy: 7.75444631407128
       Virtual Size: '0x6cc'
     PAGE:
       Entropy: 5.190660216587449
@@ -451,16 +461,16 @@ KnownVulnerableSamples:
       Entropy: 5.3593629521412485
       Virtual Size: '0xeae'
     .upx0:
-      Entropy: 7.178607218904576
+      Entropy: 7.178607218904575
       Virtual Size: '0x13fa4c'
     .reloc:
-      Entropy: 3.991090826834167
+      Entropy: 3.9910908268341667
       Virtual Size: '0xc0'
     .rsrc:
       Entropy: 2.9056718289000636
       Virtual Size: '0x22c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-11 02:10:15'
+  CreationTimestamp: '2021-01-11 04:10:15'
 - Filename: mhyprot2.sys
   MD5: 8f47af49c330c9fcf3451ad2252b9e04
   SHA1: be797c91768ac854bd3b82a093e55db83da0cb11
@@ -594,6 +604,7 @@ KnownVulnerableSamples:
         MD5: 3e83a7572d1c522dd9072ba6399029d7
         SHA1: e2c2d59b70f028a66a8711bfa97f842475f84639
         SHA256: 5a504a929cb21f72008d5d57bcd992a7cac13f6aa90cbb886b5ecd809e3b59dd
+        SHA384: 72916ab6c7eb3f5cb7444b3d7d2ac8cb52944605477c5a0f181d060e4edb4c37ebe5eb3c0566dda9de2d2707636ec355
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
         CA
       ValidFrom: '2011-04-15 19:41:37'
@@ -607,6 +618,7 @@ KnownVulnerableSamples:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
         SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -620,6 +632,7 @@ KnownVulnerableSamples:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
         SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
+        SHA384: 86f49574f368a561914a52d7ae043ec6784ef8c718960700f834e123594605d25d39f1ad45f1eb5052c9567f3edd0e16
     - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Time Stamping CA
       ValidFrom: '2019-05-02 00:00:00'
@@ -633,6 +646,7 @@ KnownVulnerableSamples:
         MD5: 63499ed59a1293b786649470e4ce0bd7
         SHA1: 7309d8eaa65da1f3da7030c08f00a3b0a20fa908
         SHA256: 8c8d2046b29e792e71b28705fe67c435208a336dde074a75452d98e72c734937
+        SHA384: 5dbc5eae13908fee4c4e5216f87e3e87208fff0d1052f5fa9f0856a429d6a6c422c625f2318f2f29aea26ece09c1e811
     - Subject: 'C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Time Stamping Signer #2'
       ValidFrom: '2020-10-23 00:00:00'
@@ -646,6 +660,7 @@ KnownVulnerableSamples:
         MD5: 6efd500ce038df7aa3087c1e63a5eb5c
         SHA1: 1c961712a02fb995c585080eda53a753656ca3ad
         SHA256: f60d4f8f7b56499de889264b1e64890694c5b106129d3db068976ed33495577a
+        SHA384: 031fdf7c078e205b4d3ffaff40de36f48f91f87c3b0005b482ff614b320f5e47785045cb87a3e6a75085c24ae8409498
     Signer:
     - SerialNumber: 05a7559541e0fdc678d79e3272468907
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
@@ -678,13 +693,13 @@ KnownVulnerableSamples:
       Entropy: 7.119277616060462
       Virtual Size: '0x137444'
     .reloc:
-      Entropy: 3.865030456441881
+      Entropy: 3.8650304564418816
       Virtual Size: '0xb4'
     .rsrc:
       Entropy: 2.9056718289000636
       Virtual Size: '0x22c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-06-28 02:44:28'
+  CreationTimestamp: '2021-06-28 04:44:28'
 - Filename: mhyprot2.sys
   MD5: 89c7bd12495e29413038224cb61db02e
   SHA1: 16c6bcef489f190a48e9d3b1f35972db89516479
@@ -818,6 +833,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -831,6 +847,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=CN, L=Shanghai, O=miHoYo Co.,Ltd., OU=OPS, CN=miHoYo Co.,Ltd.
       ValidFrom: '2019-04-08 00:00:00'
       ValidTo: '2022-04-08 12:00:00'
@@ -843,6 +860,7 @@ KnownVulnerableSamples:
         MD5: 3e83a7572d1c522dd9072ba6399029d7
         SHA1: e2c2d59b70f028a66a8711bfa97f842475f84639
         SHA256: 5a504a929cb21f72008d5d57bcd992a7cac13f6aa90cbb886b5ecd809e3b59dd
+        SHA384: 72916ab6c7eb3f5cb7444b3d7d2ac8cb52944605477c5a0f181d060e4edb4c37ebe5eb3c0566dda9de2d2707636ec355
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
         CA
       ValidFrom: '2011-04-15 19:41:37'
@@ -856,6 +874,7 @@ KnownVulnerableSamples:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
         SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -869,6 +888,7 @@ KnownVulnerableSamples:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
         SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
+        SHA384: 86f49574f368a561914a52d7ae043ec6784ef8c718960700f834e123594605d25d39f1ad45f1eb5052c9567f3edd0e16
     Signer:
     - SerialNumber: 05a7559541e0fdc678d79e3272468907
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
@@ -883,7 +903,7 @@ KnownVulnerableSamples:
       Entropy: 6.159305681452516
       Virtual Size: '0x6a80'
     .rdata:
-      Entropy: 4.746385872522309
+      Entropy: 4.74638587252231
       Virtual Size: '0x151c'
     .data:
       Entropy: 0.807954115503613
@@ -892,13 +912,13 @@ KnownVulnerableSamples:
       Entropy: 7.784757457181626
       Virtual Size: '0x660'
     PAGE:
-      Entropy: 5.53961384590436
+      Entropy: 5.539613845904359
       Virtual Size: '0xb0a'
     INIT:
-      Entropy: 5.3746803358978985
+      Entropy: 5.374680335897899
       Virtual Size: '0xe8e'
     .upx0:
-      Entropy: 7.120374756857897
+      Entropy: 7.120374756857896
       Virtual Size: '0x13b804'
     .reloc:
       Entropy: 3.969283875435989
@@ -907,6 +927,6 @@ KnownVulnerableSamples:
       Entropy: 2.9106266625370485
       Virtual Size: '0x22c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-12-29 19:40:40'
+  CreationTimestamp: '2020-12-29 21:40:40'
 Tags:
 - mhyprot.sys

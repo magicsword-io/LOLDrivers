@@ -73,6 +73,7 @@ KnownVulnerableSamples:
         MD5: df2a0bc442ef65cd9973329be21c642f
         SHA1: d13bcda797c6b986a1a45b7ce9184e87ba0f994c
         SHA256: 41718d172e45eaa02ec88494587672cf50f96a310aebc5b49a66c0adae99edc5
+        SHA384: db7864a35b468726f3d431e07825ae860ddb0d6250b3bd8906f1b0ff98ce7b4c563c73288b01ec8f1ec5a2a06f31bc40
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -86,6 +87,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 330000001dc31a761624754f8000000000001d
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -100,7 +102,7 @@ KnownVulnerableSamples:
       Entropy: 6.1181571322303645
       Virtual Size: '0xd66'
     .rdata:
-      Entropy: 4.313686441268313
+      Entropy: 4.313686441268312
       Virtual Size: '0x188'
     .data:
       Entropy: 0.0
@@ -112,7 +114,7 @@ KnownVulnerableSamples:
       Entropy: 4.548019208277369
       Virtual Size: '0x24a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-08-22 03:54:47'
+  CreationTimestamp: '2012-08-22 05:54:47'
 - Filename: AsIO32.sys
   MD5: 2ca1044a04cb2f0ce5bd0a5832981e04
   SHA1: 8b86c99328e4eb542663164685c6926e7e54ac20
@@ -181,6 +183,7 @@ KnownVulnerableSamples:
         MD5: df2a0bc442ef65cd9973329be21c642f
         SHA1: d13bcda797c6b986a1a45b7ce9184e87ba0f994c
         SHA256: 41718d172e45eaa02ec88494587672cf50f96a310aebc5b49a66c0adae99edc5
+        SHA384: db7864a35b468726f3d431e07825ae860ddb0d6250b3bd8906f1b0ff98ce7b4c563c73288b01ec8f1ec5a2a06f31bc40
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -194,6 +197,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 330000001dc31a761624754f8000000000001d
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -220,7 +224,7 @@ KnownVulnerableSamples:
       Entropy: 3.6862767817925604
       Virtual Size: '0xc6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-08-22 03:54:43'
+  CreationTimestamp: '2012-08-22 05:54:43'
 - Filename: AsIO3.sys
   MD5: 40f39a98fb513411dacdfc5b2d972206
   SHA1: fe02ae340dc7fe08e4ad26dab9de418924e21603
@@ -287,6 +291,7 @@ KnownVulnerableSamples:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
         SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
         ID Timestamping CA
       ValidFrom: '2016-01-07 12:00:00'
@@ -300,6 +305,7 @@ KnownVulnerableSamples:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
         SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -313,6 +319,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
         City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2019-04-01 00:00:00'
@@ -326,6 +333,7 @@ KnownVulnerableSamples:
         MD5: 69796942ecdfadbd806bdea1460a5115
         SHA1: 0ce9329828324db04bd0a7b101b4fbfedb3be8b2
         SHA256: efd9b83b154c3e805e1bf7fdfd6a7f7bfdcf2ff3e191d1c33bdc427b6c82039b
+        SHA384: e27d21dc30c40e7b675120062e69c438e9f448ceed7b0434dedd129848c6a8edf05ec07ac25f5ec300be0da46a4c6eab
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       ValidFrom: '2012-04-18 12:00:00'
@@ -339,6 +347,7 @@ KnownVulnerableSamples:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
         SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
     Signer:
     - SerialNumber: 0c64962e4467edcc1579646b7337ec8c
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -365,10 +374,10 @@ KnownVulnerableSamples:
       Entropy: 5.255268621688079
       Virtual Size: '0x42c'
     .reloc:
-      Entropy: 2.9464393446710155
+      Entropy: 2.946439344671015
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-09-29 04:05:28'
+  CreationTimestamp: '2021-09-29 06:05:28'
 - Filename: AsIO3.sys
   MD5: 19f32bf24b725f103f49dc3fa2f4f0bd
   SHA1: e40ea8d498328b90c4afbb0bb0e8b91b826f688e
@@ -442,6 +451,7 @@ KnownVulnerableSamples:
         MD5: 5d8003a64dfa5a4d88365da1566038cb
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
         SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
     - Subject: ??=Private Organization, ??=TW, serialNumber=23638777, C=TW, ST=Taipei
         City, L=Beitou District, O=ASUSTeK COMPUTER INC., CN=ASUSTeK COMPUTER INC.
       ValidFrom: '2021-10-22 00:00:00'
@@ -455,6 +465,7 @@ KnownVulnerableSamples:
         MD5: 0357e292e0e92b06c92b21cacfcfa451
         SHA1: f52795bc8de5d803f09e20dd216d7df861f4cb34
         SHA256: b33b80e64cdfb28fb9afb17259be19ffe1edf8aae62fcfbfe8ff301f786c500d
+        SHA384: 5fbe918c3fa1034d5671ae38b20773df18b8f9dd48e60f90c5c98708e73d6ca0c6dec4e2bcb0de22ba3efb59479db152
     Signer:
     - SerialNumber: 0bbe02c8838fbf02ab56edabb1e34c19
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
@@ -469,7 +480,7 @@ KnownVulnerableSamples:
       Entropy: 6.407232131831549
       Virtual Size: '0x58d3'
     .rdata:
-      Entropy: 5.437107960063165
+      Entropy: 5.437107960063166
       Virtual Size: '0x8d4'
     .data:
       Entropy: 0.9313275414257391
@@ -484,7 +495,7 @@ KnownVulnerableSamples:
       Entropy: 3.1086949695628423
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-05-18 20:51:01'
+  CreationTimestamp: '2022-05-18 22:51:01'
 - Filename: asio.sys
   MD5: bfe96411cf67edb3cee2b9894b910cd5
   SHA1: 67dfd415c729705396ce54166bd70faf09ac7f10
@@ -553,6 +564,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -565,6 +577,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -579,6 +592,7 @@ KnownVulnerableSamples:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
         SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -591,6 +605,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei / Peitou, O=ASUSTeK Computer Inc., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Quality Testing Department,
         CN=ASUSTeK Computer Inc.
@@ -605,6 +620,7 @@ KnownVulnerableSamples:
         MD5: 72cafb0a175f0481177fa2c9803283c7
         SHA1: b603167b958c5fcd7094552891ddc4e2ea4c149f
         SHA256: a36a0024075771a4b30eab8f1288817059fe1a01003d0c1d92f647df17f3b688
+        SHA384: 33c28dc6857ce5d20a2e9ba8a47f6bc80a9a98fba518fd732963bedbbb408848b89b3d8438d413f8b933ee761ffa1653
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -619,6 +635,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 7d08d9bc130726de26ee4ef28e133084
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -646,7 +663,7 @@ KnownVulnerableSamples:
       Entropy: 3.6862767817925604
       Virtual Size: '0xc6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-08-22 03:54:43'
+  CreationTimestamp: '2012-08-22 05:54:43'
 - Filename: asio.sys
   MD5: ea14899d1bfba397bc731770765768d1
   SHA1: c775ca665ed4858acc3f7e75e025cbbda1f8c687
@@ -702,6 +719,7 @@ KnownVulnerableSamples:
         MD5: cef292b5c6cdb07e480ccbba0c9d56d1
         SHA1: 15c37dbebe6fcc77108e3d7ad982676d3d5e77f7
         SHA256: 3cb152375fa9e694fd2f9167c382005166871c783774997df1a42e0b6013d82a
+        SHA384: e64427dea71a71110ebc317f3552cd7193c5743f72d5cac9257abe80346d15ee42930d5a85e16c02ea06f56c7e8811fb
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -716,6 +734,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -730,6 +749,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 43bb437d609866286dd839e1d00309f5
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -742,7 +762,7 @@ KnownVulnerableSamples:
     SHA256: 4dbce3e8c08dd544b78f87323f6d794fb990bb10cb6d239fe367da87a803f23c
   Sections:
     .text:
-      Entropy: 6.108859458208728
+      Entropy: 6.108859458208727
       Virtual Size: '0xd86'
     .rdata:
       Entropy: 4.337980114178664
@@ -757,7 +777,7 @@ KnownVulnerableSamples:
       Entropy: 4.571215641554434
       Virtual Size: '0x24a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-06-27 23:19:38'
+  CreationTimestamp: '2010-06-28 01:19:38'
 - Filename: AsIO2.sys
   MD5: 09672532194b4bff5e0f7a7d782c7bf2
   SHA1: aa2ea973bb248b18973e57339307cfb8d309f687
@@ -825,6 +845,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -838,6 +859,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -851,6 +873,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
         City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2019-04-01 00:00:00'
@@ -864,6 +887,7 @@ KnownVulnerableSamples:
         MD5: 69796942ecdfadbd806bdea1460a5115
         SHA1: 0ce9329828324db04bd0a7b101b4fbfedb3be8b2
         SHA256: efd9b83b154c3e805e1bf7fdfd6a7f7bfdcf2ff3e191d1c33bdc427b6c82039b
+        SHA384: e27d21dc30c40e7b675120062e69c438e9f448ceed7b0434dedd129848c6a8edf05ec07ac25f5ec300be0da46a4c6eab
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       ValidFrom: '2012-04-18 12:00:00'
@@ -877,6 +901,7 @@ KnownVulnerableSamples:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
         SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
     Signer:
     - SerialNumber: 0c64962e4467edcc1579646b7337ec8c
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -891,7 +916,7 @@ KnownVulnerableSamples:
       Entropy: 6.504139925831708
       Virtual Size: '0x24d2'
     .rdata:
-      Entropy: 5.447692050379133
+      Entropy: 5.447692050379134
       Virtual Size: '0x874'
     .data:
       Entropy: 2.591917186688699
@@ -903,10 +928,10 @@ KnownVulnerableSamples:
       Entropy: 5.215252524750182
       Virtual Size: '0x436'
     .reloc:
-      Entropy: 2.9464393446710155
+      Entropy: 2.946439344671015
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-04-09 03:59:16'
+  CreationTimestamp: '2019-04-09 05:59:16'
 - Filename: AsIO3.sys
   MD5: ba23266992ad964eff6d358d946b76bd
   SHA1: d1670bd08cfd376fc2b70c6193f3099078f1d72f
@@ -973,6 +998,7 @@ KnownVulnerableSamples:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
         SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
         ID Timestamping CA
       ValidFrom: '2016-01-07 12:00:00'
@@ -986,6 +1012,7 @@ KnownVulnerableSamples:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
         SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -999,6 +1026,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
         City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2019-04-01 00:00:00'
@@ -1012,6 +1040,7 @@ KnownVulnerableSamples:
         MD5: 69796942ecdfadbd806bdea1460a5115
         SHA1: 0ce9329828324db04bd0a7b101b4fbfedb3be8b2
         SHA256: efd9b83b154c3e805e1bf7fdfd6a7f7bfdcf2ff3e191d1c33bdc427b6c82039b
+        SHA384: e27d21dc30c40e7b675120062e69c438e9f448ceed7b0434dedd129848c6a8edf05ec07ac25f5ec300be0da46a4c6eab
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       ValidFrom: '2012-04-18 12:00:00'
@@ -1025,6 +1054,7 @@ KnownVulnerableSamples:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
         SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
     Signer:
     - SerialNumber: 0c64962e4467edcc1579646b7337ec8c
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -1051,10 +1081,10 @@ KnownVulnerableSamples:
       Entropy: 5.255268621688079
       Virtual Size: '0x42c'
     .reloc:
-      Entropy: 2.9464393446710155
+      Entropy: 2.946439344671015
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-05-31 19:44:39'
+  CreationTimestamp: '2021-05-31 21:44:39'
 - Filename: AsIO2.sys
   MD5: f4e1997192d5a95a38965c9e15c687fc
   SHA1: d3b23a0b70d6d279abd8db109f08a8b0721ce327
@@ -1123,6 +1153,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
         City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2019-04-01 00:00:00'
@@ -1136,6 +1167,7 @@ KnownVulnerableSamples:
         MD5: 69796942ecdfadbd806bdea1460a5115
         SHA1: 0ce9329828324db04bd0a7b101b4fbfedb3be8b2
         SHA256: efd9b83b154c3e805e1bf7fdfd6a7f7bfdcf2ff3e191d1c33bdc427b6c82039b
+        SHA384: e27d21dc30c40e7b675120062e69c438e9f448ceed7b0434dedd129848c6a8edf05ec07ac25f5ec300be0da46a4c6eab
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -1148,6 +1180,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       ValidFrom: '2012-04-18 12:00:00'
@@ -1161,6 +1194,7 @@ KnownVulnerableSamples:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
         SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -1173,6 +1207,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0c64962e4467edcc1579646b7337ec8c
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -1184,7 +1219,7 @@ KnownVulnerableSamples:
     SHA256: 73a749678370e9cfeca10fc868e7a18cc3b499e01f7a97479cd909f44feb5b87
   Sections:
     .text:
-      Entropy: 6.497436117425461
+      Entropy: 6.49743611742546
       Virtual Size: '0x2552'
     .rdata:
       Entropy: 5.458978412009734
@@ -1196,13 +1231,13 @@ KnownVulnerableSamples:
       Entropy: 3.90277567498223
       Virtual Size: '0x18c'
     INIT:
-      Entropy: 5.195052400903618
+      Entropy: 5.195052400903619
       Virtual Size: '0x44e'
     .reloc:
       Entropy: 2.939353872167201
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-05-20 02:47:26'
+  CreationTimestamp: '2020-05-20 04:47:26'
 - Filename: AsIO3_64.sys
   MD5: 07efb8259b42975d502a058db8a3fd21
   SHA1: 9f22ebcd2915471e7526f30aa53c24b557a689f5
@@ -1276,6 +1311,7 @@ KnownVulnerableSamples:
         MD5: 5d8003a64dfa5a4d88365da1566038cb
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
         SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
     - Subject: ??=Private Organization, ??=TW, serialNumber=23638777, C=TW, ST=Taipei
         City, L=Beitou District, O=ASUSTeK COMPUTER INC., CN=ASUSTeK COMPUTER INC.
       ValidFrom: '2021-10-22 00:00:00'
@@ -1289,6 +1325,7 @@ KnownVulnerableSamples:
         MD5: 0357e292e0e92b06c92b21cacfcfa451
         SHA1: f52795bc8de5d803f09e20dd216d7df861f4cb34
         SHA256: b33b80e64cdfb28fb9afb17259be19ffe1edf8aae62fcfbfe8ff301f786c500d
+        SHA384: 5fbe918c3fa1034d5671ae38b20773df18b8f9dd48e60f90c5c98708e73d6ca0c6dec4e2bcb0de22ba3efb59479db152
     Signer:
     - SerialNumber: 0bbe02c8838fbf02ab56edabb1e34c19
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
@@ -1318,7 +1355,7 @@ KnownVulnerableSamples:
       Entropy: 3.1086949695628423
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-07-28 02:33:11'
+  CreationTimestamp: '2022-07-28 04:33:11'
 - Filename: AsIO3.sys
   MD5: 1414629b1ee93d2652ff49b2eb829940
   SHA1: df58f9b193c6916aaec7606c0de5eba70c8ec665
@@ -1392,6 +1429,7 @@ KnownVulnerableSamples:
         MD5: 5d8003a64dfa5a4d88365da1566038cb
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
         SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
     - Subject: ??=Private Organization, ??=TW, serialNumber=23638777, C=TW, ST=Taipei
         City, L=Beitou District, O=ASUSTeK COMPUTER INC., CN=ASUSTeK COMPUTER INC.
       ValidFrom: '2021-10-22 00:00:00'
@@ -1405,6 +1443,7 @@ KnownVulnerableSamples:
         MD5: 0357e292e0e92b06c92b21cacfcfa451
         SHA1: f52795bc8de5d803f09e20dd216d7df861f4cb34
         SHA256: b33b80e64cdfb28fb9afb17259be19ffe1edf8aae62fcfbfe8ff301f786c500d
+        SHA384: 5fbe918c3fa1034d5671ae38b20773df18b8f9dd48e60f90c5c98708e73d6ca0c6dec4e2bcb0de22ba3efb59479db152
     Signer:
     - SerialNumber: 0bbe02c8838fbf02ab56edabb1e34c19
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
@@ -1419,7 +1458,7 @@ KnownVulnerableSamples:
       Entropy: 6.407232131831549
       Virtual Size: '0x58d3'
     .rdata:
-      Entropy: 5.437107960063165
+      Entropy: 5.437107960063166
       Virtual Size: '0x8d4'
     .data:
       Entropy: 0.9313275414257391
@@ -1434,7 +1473,7 @@ KnownVulnerableSamples:
       Entropy: 3.1086949695628423
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-05-18 20:51:01'
+  CreationTimestamp: '2022-05-18 22:51:01'
 - Filename: AsIO3.sys
   MD5: 67e03f83c503c3f11843942df32efe5a
   SHA1: b0c7ec472abf544c5524b644a7114cba0505951e
@@ -1501,6 +1540,7 @@ KnownVulnerableSamples:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
         SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
         ID Timestamping CA
       ValidFrom: '2016-01-07 12:00:00'
@@ -1514,6 +1554,7 @@ KnownVulnerableSamples:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
         SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -1527,6 +1568,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
         City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2019-04-01 00:00:00'
@@ -1540,6 +1582,7 @@ KnownVulnerableSamples:
         MD5: 69796942ecdfadbd806bdea1460a5115
         SHA1: 0ce9329828324db04bd0a7b101b4fbfedb3be8b2
         SHA256: efd9b83b154c3e805e1bf7fdfd6a7f7bfdcf2ff3e191d1c33bdc427b6c82039b
+        SHA384: e27d21dc30c40e7b675120062e69c438e9f448ceed7b0434dedd129848c6a8edf05ec07ac25f5ec300be0da46a4c6eab
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       ValidFrom: '2012-04-18 12:00:00'
@@ -1553,6 +1596,7 @@ KnownVulnerableSamples:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
         SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
     Signer:
     - SerialNumber: 0c64962e4467edcc1579646b7337ec8c
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -1579,10 +1623,10 @@ KnownVulnerableSamples:
       Entropy: 5.260485600682463
       Virtual Size: '0x42c'
     .reloc:
-      Entropy: 2.9464393446710155
+      Entropy: 2.946439344671015
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-09-15 20:17:14'
+  CreationTimestamp: '2021-09-15 22:17:14'
 - Filename: AsIO64.sys
   MD5: 85b756463ab0c000f816260d49923cde
   SHA1: de0c16e3812924212f04e15caa09763ae4770403
@@ -1636,6 +1680,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2008-12-03 23:59:59'
@@ -1648,6 +1693,7 @@ KnownVulnerableSamples:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
         SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -1662,6 +1708,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1674,6 +1721,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei / Peitou, O=ASUSTeK Computer Inc., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Quality Testing Department,
         CN=ASUSTeK Computer Inc.
@@ -1688,6 +1736,7 @@ KnownVulnerableSamples:
         MD5: 2fc1a78b4874ed1ac403284a5d4084fb
         SHA1: 9ae9b025b3a9ebfacdf55104f3fc1c143457a296
         SHA256: 9ffd439139209f1a084cb30cd791558dc266265405f7c5c7444c5a941ff0c004
+        SHA384: 656817a3d8aa52cdc8fbff1dcb0ef1f07ea93f0c6b82067d7c6c5f68a125dc3b50f88974a66d59ecc5b996ca5e55eaa1
     Signer:
     - SerialNumber: 284649f592786c4851c1138e364185ae
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1700,10 +1749,10 @@ KnownVulnerableSamples:
     SHA256: bc812d4ddc3ecfbf38c4d0d185e368fc58bac6e07f722db032bf6303daa7c946
   Sections:
     .text:
-      Entropy: 6.172691138654025
+      Entropy: 6.1726911386540255
       Virtual Size: '0xd8c'
     .rdata:
-      Entropy: 4.3738577464905095
+      Entropy: 4.3738577464905015
       Virtual Size: '0x18c'
     .data:
       Entropy: 0.0
@@ -1712,10 +1761,10 @@ KnownVulnerableSamples:
       Entropy: 3.3303322930213435
       Virtual Size: '0x84'
     INIT:
-      Entropy: 4.4509406095000665
+      Entropy: 4.450940609500066
       Virtual Size: '0x218'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2004-10-14 03:53:21'
+  CreationTimestamp: '2004-10-14 05:53:21'
 - Filename: AsIO3_64.sys
   MD5: 598f8fb2317350e5f90b7bd16baf5738
   SHA1: a8be6203c5a87ecc3ae1c452b7b6dbdf3a9f82ae
@@ -1782,6 +1831,7 @@ KnownVulnerableSamples:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
         SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
         ID Timestamping CA
       ValidFrom: '2016-01-07 12:00:00'
@@ -1795,6 +1845,7 @@ KnownVulnerableSamples:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
         SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -1808,6 +1859,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
         City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2019-04-01 00:00:00'
@@ -1821,6 +1873,7 @@ KnownVulnerableSamples:
         MD5: 69796942ecdfadbd806bdea1460a5115
         SHA1: 0ce9329828324db04bd0a7b101b4fbfedb3be8b2
         SHA256: efd9b83b154c3e805e1bf7fdfd6a7f7bfdcf2ff3e191d1c33bdc427b6c82039b
+        SHA384: e27d21dc30c40e7b675120062e69c438e9f448ceed7b0434dedd129848c6a8edf05ec07ac25f5ec300be0da46a4c6eab
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       ValidFrom: '2012-04-18 12:00:00'
@@ -1834,6 +1887,7 @@ KnownVulnerableSamples:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
         SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
     Signer:
     - SerialNumber: 0c64962e4467edcc1579646b7337ec8c
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -1860,10 +1914,10 @@ KnownVulnerableSamples:
       Entropy: 5.255268621688079
       Virtual Size: '0x42c'
     .reloc:
-      Entropy: 2.9464393446710155
+      Entropy: 2.946439344671015
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-05-31 19:44:39'
+  CreationTimestamp: '2021-05-31 21:44:39'
 - Filename: asio.sys
   MD5: 2b4e66fac6503494a2c6f32bb6ab3826
   SHA1: ed219d966a6e74275895cc0b975b79397760ea9f
@@ -1930,6 +1984,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1942,6 +1997,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -1956,6 +2012,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1968,6 +2025,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei / Peitou, O=ASUSTeK Computer Inc., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Quality Testing Department,
         CN=ASUSTeK Computer Inc.
@@ -1982,6 +2040,7 @@ KnownVulnerableSamples:
         MD5: 54f73eaca10fe12ff2e14194e2f019b8
         SHA1: 471cb77202e7d4941a5bff8ba813f5ed221dc32e
         SHA256: 9dba2d4765226ca91fb7104e0cbd01308c4e8ed9727ea661eeaa473d7825ee35
+        SHA384: 272d877ad02e5487a0864e4d876a9e06fea5ead9cd149e7a48c4f111cfa8dc2f05f1042f2822b42360896da334e6390d
     Signer:
     - SerialNumber: 23eab3ac30c7016a299c8d31d99f3ae8
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -2009,7 +2068,7 @@ KnownVulnerableSamples:
       Entropy: 4.595102637134157
       Virtual Size: '0xcc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-12-17 02:10:20'
+  CreationTimestamp: '2007-12-17 04:10:20'
 - Filename: AsIO2.sys
   MD5: 79329e2917623181888605bc5b302711
   SHA1: 844d2345bde50bf8ee7e86117cf7b8c6e6f00be4
@@ -2077,6 +2136,7 @@ KnownVulnerableSamples:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
         SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
         ID Timestamping CA
       ValidFrom: '2016-01-07 12:00:00'
@@ -2090,6 +2150,7 @@ KnownVulnerableSamples:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
         SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -2103,6 +2164,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
         City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2019-04-01 00:00:00'
@@ -2116,6 +2178,7 @@ KnownVulnerableSamples:
         MD5: 69796942ecdfadbd806bdea1460a5115
         SHA1: 0ce9329828324db04bd0a7b101b4fbfedb3be8b2
         SHA256: efd9b83b154c3e805e1bf7fdfd6a7f7bfdcf2ff3e191d1c33bdc427b6c82039b
+        SHA384: e27d21dc30c40e7b675120062e69c438e9f448ceed7b0434dedd129848c6a8edf05ec07ac25f5ec300be0da46a4c6eab
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       ValidFrom: '2012-04-18 12:00:00'
@@ -2129,6 +2192,7 @@ KnownVulnerableSamples:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
         SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
     Signer:
     - SerialNumber: 0c64962e4467edcc1579646b7337ec8c
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -2152,13 +2216,13 @@ KnownVulnerableSamples:
       Entropy: 3.9380649561842502
       Virtual Size: '0x198'
     INIT:
-      Entropy: 5.190250208066914
+      Entropy: 5.190250208066915
       Virtual Size: '0x44e'
     .reloc:
       Entropy: 2.939353872167201
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-05-31 19:42:16'
+  CreationTimestamp: '2021-05-31 21:42:16'
 - Filename: AsIO3.sys
   MD5: 1ce19950e23c975f677b80ff59d04fae
   SHA1: 4f30f64b5dfcdc889f4a5e25b039c93dd8551c71
@@ -2232,6 +2296,7 @@ KnownVulnerableSamples:
         MD5: 5d8003a64dfa5a4d88365da1566038cb
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
         SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
     - Subject: ??=Private Organization, ??=TW, serialNumber=23638777, C=TW, ST=Taipei
         City, L=Beitou District, O=ASUSTeK COMPUTER INC., CN=ASUSTeK COMPUTER INC.
       ValidFrom: '2021-10-22 00:00:00'
@@ -2245,6 +2310,7 @@ KnownVulnerableSamples:
         MD5: 0357e292e0e92b06c92b21cacfcfa451
         SHA1: f52795bc8de5d803f09e20dd216d7df861f4cb34
         SHA256: b33b80e64cdfb28fb9afb17259be19ffe1edf8aae62fcfbfe8ff301f786c500d
+        SHA384: 5fbe918c3fa1034d5671ae38b20773df18b8f9dd48e60f90c5c98708e73d6ca0c6dec4e2bcb0de22ba3efb59479db152
     Signer:
     - SerialNumber: 0bbe02c8838fbf02ab56edabb1e34c19
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
@@ -2259,7 +2325,7 @@ KnownVulnerableSamples:
       Entropy: 6.407232131831549
       Virtual Size: '0x58d3'
     .rdata:
-      Entropy: 5.437107960063165
+      Entropy: 5.437107960063166
       Virtual Size: '0x8d4'
     .data:
       Entropy: 0.9313275414257391
@@ -2274,7 +2340,7 @@ KnownVulnerableSamples:
       Entropy: 3.1086949695628423
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-05-18 20:51:01'
+  CreationTimestamp: '2022-05-18 22:51:01'
 - Filename: AsIO3.sys
   MD5: 370a4ca29a7cf1d6bc0744afc12b236c
   SHA1: cfa85a19d9a2f7f687b0decdc4a5480b6e30cb8c
@@ -2342,6 +2408,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
         City, O=ASUSTeK Computer Inc., CN=ASUSTeK Computer Inc.
       ValidFrom: '2019-04-01 00:00:00'
@@ -2355,6 +2422,7 @@ KnownVulnerableSamples:
         MD5: 69796942ecdfadbd806bdea1460a5115
         SHA1: 0ce9329828324db04bd0a7b101b4fbfedb3be8b2
         SHA256: efd9b83b154c3e805e1bf7fdfd6a7f7bfdcf2ff3e191d1c33bdc427b6c82039b
+        SHA384: e27d21dc30c40e7b675120062e69c438e9f448ceed7b0434dedd129848c6a8edf05ec07ac25f5ec300be0da46a4c6eab
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -2367,6 +2435,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       ValidFrom: '2012-04-18 12:00:00'
@@ -2380,6 +2449,7 @@ KnownVulnerableSamples:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
         SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -2392,6 +2462,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0c64962e4467edcc1579646b7337ec8c
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -2403,7 +2474,7 @@ KnownVulnerableSamples:
     SHA256: 9ce58648fd2c5b9ba36584499ca7bf3ed1eca7da6c847f10d6e07f1e9c0a8880
   Sections:
     .text:
-      Entropy: 6.326590226061026
+      Entropy: 6.326590226061027
       Virtual Size: '0x4733'
     .rdata:
       Entropy: 5.496552032776753
@@ -2418,10 +2489,10 @@ KnownVulnerableSamples:
       Entropy: 5.257848104368007
       Virtual Size: '0x42c'
     .reloc:
-      Entropy: 2.9464393446710155
+      Entropy: 2.946439344671015
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-12-15 01:10:32'
+  CreationTimestamp: '2020-12-15 03:10:32'
 - Filename: asio.sys
   MD5: 68726474c69b738eac3a62e06b33addc
   SHA1: 8453fc3198349cf0561c87efc329c81e7240c3da
@@ -2475,6 +2546,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -2487,6 +2559,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -2501,6 +2574,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -2513,6 +2587,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=TW, ST=Taiwan, L=Taipei / Peitou, O=ASUSTeK Computer Inc., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Quality Testing Department,
         CN=ASUSTeK Computer Inc.
@@ -2527,6 +2602,7 @@ KnownVulnerableSamples:
         MD5: 336ceef1b70541c73c4c4f7af221eac7
         SHA1: 582a82a16246e3aa1e3534a2df1f33f7de90ad9d
         SHA256: 6eb6b2bdb401d5172e19ce279574850c18e97bb0635dd89b62a92fc0442b73a3
+        SHA384: c1ff22f1feb811e669f8bf1c4b6f5334b72046c4ed2b81f07b96684747db19323a5c1dfb2fd08ad00a82538080c2689a
     Signer:
     - SerialNumber: 37ed9092bdd1dccf58d2afa47f961448
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -2542,7 +2618,7 @@ KnownVulnerableSamples:
       Entropy: 6.140846081676954
       Virtual Size: '0xca6'
     .rdata:
-      Entropy: 4.362536233544753
+      Entropy: 4.362536233544752
       Virtual Size: '0x170'
     .data:
       Entropy: 0.0
@@ -2554,7 +2630,7 @@ KnownVulnerableSamples:
       Entropy: 4.455848230056508
       Virtual Size: '0x204'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-04-06 01:21:08'
+  CreationTimestamp: '2009-04-06 03:21:08'
 - Filename: AsIO3_64.sys
   MD5: d5556c54c474cf0bff25804bfbe788d3
   SHA1: c71597c89bd8e937886e3390bc8ac4f17cdeae7c
@@ -2628,6 +2704,7 @@ KnownVulnerableSamples:
         MD5: 5d8003a64dfa5a4d88365da1566038cb
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
         SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
     - Subject: ??=Private Organization, ??=TW, serialNumber=23638777, C=TW, ST=Taipei
         City, L=Beitou District, O=ASUSTeK COMPUTER INC., CN=ASUSTeK COMPUTER INC.
       ValidFrom: '2021-10-22 00:00:00'
@@ -2641,6 +2718,7 @@ KnownVulnerableSamples:
         MD5: 0357e292e0e92b06c92b21cacfcfa451
         SHA1: f52795bc8de5d803f09e20dd216d7df861f4cb34
         SHA256: b33b80e64cdfb28fb9afb17259be19ffe1edf8aae62fcfbfe8ff301f786c500d
+        SHA384: 5fbe918c3fa1034d5671ae38b20773df18b8f9dd48e60f90c5c98708e73d6ca0c6dec4e2bcb0de22ba3efb59479db152
     Signer:
     - SerialNumber: 0bbe02c8838fbf02ab56edabb1e34c19
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
@@ -2670,6 +2748,6 @@ KnownVulnerableSamples:
       Entropy: 3.1086949695628423
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-02-17 05:12:10'
+  CreationTimestamp: '2022-02-17 07:12:10'
 Tags:
 - asio.sys

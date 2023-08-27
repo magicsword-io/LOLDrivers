@@ -330,7 +330,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "c0189c338449a42fe8358c2c1fbecc60",
         "SHA1": "b8ac0ee6875594b80ad86a6df6dd1fa3048c187c",
-        "SHA256": "a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5"
+        "SHA256": "a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5",
+        "SHA384": "76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150"
       },
       "ValidFrom": "2021-01-01 00:00:00",
       "ValidTo": "2031-01-06 00:00:00",
@@ -345,7 +346,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "cf1823794dca38d348ac92962c7d5169",
         "SHA1": "b8e9d958543069fdabf0c237726e0c7cc43b5dfe",
-        "SHA256": "86c52427d3191c4568149f56ace950e86fa9f8be719cc06575244c6a9f6513e8"
+        "SHA256": "86c52427d3191c4568149f56ace950e86fa9f8be719cc06575244c6a9f6513e8",
+        "SHA384": "50169f7ae27863c5c690fba1e7833c6de342cac8aa6e1abca4da93970425d92468a6e81c255e0fb66146823e5b250fc0"
       },
       "ValidFrom": "2019-04-04 00:00:00",
       "ValidTo": "2022-04-08 12:00:00",
@@ -360,7 +362,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "9359496ca4f021408b9d8923cab8b179",
         "SHA1": "2aed40d7759997830870769be250199fd609e40e",
-        "SHA256": "e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65"
+        "SHA256": "e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65",
+        "SHA384": "5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c"
       },
       "ValidFrom": "2013-10-22 12:00:00",
       "ValidTo": "2028-10-22 12:00:00",
@@ -375,7 +378,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "8d26184fc613f89aba1cefb30fce1b53",
         "SHA1": "63a7e376bad5ec2e419d514a403bcf46c8d31d95",
-        "SHA256": "56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c"
+        "SHA256": "56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c",
+        "SHA384": "d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a"
       },
       "ValidFrom": "2016-01-07 12:00:00",
       "ValidTo": "2031-01-07 12:00:00",
@@ -390,7 +394,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "983a0c315a50542362f2bd6a5d71c8d0",
         "SHA1": "8047f476001f5cb16a661d2a3fd0c3576168f5e2",
-        "SHA256": "5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83"
+        "SHA256": "5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83",
+        "SHA384": "5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc"
       },
       "ValidFrom": "2011-04-15 19:41:37",
       "ValidTo": "2021-04-15 19:51:37",
@@ -598,7 +603,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "c0189c338449a42fe8358c2c1fbecc60",
         "SHA1": "b8ac0ee6875594b80ad86a6df6dd1fa3048c187c",
-        "SHA256": "a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5"
+        "SHA256": "a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5",
+        "SHA384": "76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150"
       },
       "ValidFrom": "2021-01-01 00:00:00",
       "ValidTo": "2031-01-06 00:00:00",
@@ -613,7 +619,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "cf1823794dca38d348ac92962c7d5169",
         "SHA1": "b8e9d958543069fdabf0c237726e0c7cc43b5dfe",
-        "SHA256": "86c52427d3191c4568149f56ace950e86fa9f8be719cc06575244c6a9f6513e8"
+        "SHA256": "86c52427d3191c4568149f56ace950e86fa9f8be719cc06575244c6a9f6513e8",
+        "SHA384": "50169f7ae27863c5c690fba1e7833c6de342cac8aa6e1abca4da93970425d92468a6e81c255e0fb66146823e5b250fc0"
       },
       "ValidFrom": "2019-04-04 00:00:00",
       "ValidTo": "2022-04-08 12:00:00",
@@ -628,7 +635,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "9359496ca4f021408b9d8923cab8b179",
         "SHA1": "2aed40d7759997830870769be250199fd609e40e",
-        "SHA256": "e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65"
+        "SHA256": "e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65",
+        "SHA384": "5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c"
       },
       "ValidFrom": "2013-10-22 12:00:00",
       "ValidTo": "2028-10-22 12:00:00",
@@ -643,7 +651,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "8d26184fc613f89aba1cefb30fce1b53",
         "SHA1": "63a7e376bad5ec2e419d514a403bcf46c8d31d95",
-        "SHA256": "56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c"
+        "SHA256": "56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c",
+        "SHA384": "d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a"
       },
       "ValidFrom": "2016-01-07 12:00:00",
       "ValidTo": "2031-01-07 12:00:00",
@@ -658,7 +667,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "983a0c315a50542362f2bd6a5d71c8d0",
         "SHA1": "8047f476001f5cb16a661d2a3fd0c3576168f5e2",
-        "SHA256": "5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83"
+        "SHA256": "5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83",
+        "SHA384": "5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc"
       },
       "ValidFrom": "2011-04-15 19:41:37",
       "ValidTo": "2021-04-15 19:51:37",
@@ -869,7 +879,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "c0189c338449a42fe8358c2c1fbecc60",
         "SHA1": "b8ac0ee6875594b80ad86a6df6dd1fa3048c187c",
-        "SHA256": "a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5"
+        "SHA256": "a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5",
+        "SHA384": "76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150"
       },
       "ValidFrom": "2021-01-01 00:00:00",
       "ValidTo": "2031-01-06 00:00:00",
@@ -884,7 +895,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "cf1823794dca38d348ac92962c7d5169",
         "SHA1": "b8e9d958543069fdabf0c237726e0c7cc43b5dfe",
-        "SHA256": "86c52427d3191c4568149f56ace950e86fa9f8be719cc06575244c6a9f6513e8"
+        "SHA256": "86c52427d3191c4568149f56ace950e86fa9f8be719cc06575244c6a9f6513e8",
+        "SHA384": "50169f7ae27863c5c690fba1e7833c6de342cac8aa6e1abca4da93970425d92468a6e81c255e0fb66146823e5b250fc0"
       },
       "ValidFrom": "2019-04-04 00:00:00",
       "ValidTo": "2022-04-08 12:00:00",
@@ -899,7 +911,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "9359496ca4f021408b9d8923cab8b179",
         "SHA1": "2aed40d7759997830870769be250199fd609e40e",
-        "SHA256": "e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65"
+        "SHA256": "e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65",
+        "SHA384": "5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c"
       },
       "ValidFrom": "2013-10-22 12:00:00",
       "ValidTo": "2028-10-22 12:00:00",
@@ -914,7 +927,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "8d26184fc613f89aba1cefb30fce1b53",
         "SHA1": "63a7e376bad5ec2e419d514a403bcf46c8d31d95",
-        "SHA256": "56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c"
+        "SHA256": "56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c",
+        "SHA384": "d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a"
       },
       "ValidFrom": "2016-01-07 12:00:00",
       "ValidTo": "2031-01-07 12:00:00",
@@ -929,7 +943,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "983a0c315a50542362f2bd6a5d71c8d0",
         "SHA1": "8047f476001f5cb16a661d2a3fd0c3576168f5e2",
-        "SHA256": "5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83"
+        "SHA256": "5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83",
+        "SHA384": "5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc"
       },
       "ValidFrom": "2011-04-15 19:41:37",
       "ValidTo": "2021-04-15 19:51:37",
@@ -1140,7 +1155,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "c0189c338449a42fe8358c2c1fbecc60",
         "SHA1": "b8ac0ee6875594b80ad86a6df6dd1fa3048c187c",
-        "SHA256": "a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5"
+        "SHA256": "a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5",
+        "SHA384": "76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150"
       },
       "ValidFrom": "2021-01-01 00:00:00",
       "ValidTo": "2031-01-06 00:00:00",
@@ -1155,7 +1171,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "cf1823794dca38d348ac92962c7d5169",
         "SHA1": "b8e9d958543069fdabf0c237726e0c7cc43b5dfe",
-        "SHA256": "86c52427d3191c4568149f56ace950e86fa9f8be719cc06575244c6a9f6513e8"
+        "SHA256": "86c52427d3191c4568149f56ace950e86fa9f8be719cc06575244c6a9f6513e8",
+        "SHA384": "50169f7ae27863c5c690fba1e7833c6de342cac8aa6e1abca4da93970425d92468a6e81c255e0fb66146823e5b250fc0"
       },
       "ValidFrom": "2019-04-04 00:00:00",
       "ValidTo": "2022-04-08 12:00:00",
@@ -1170,7 +1187,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "9359496ca4f021408b9d8923cab8b179",
         "SHA1": "2aed40d7759997830870769be250199fd609e40e",
-        "SHA256": "e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65"
+        "SHA256": "e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65",
+        "SHA384": "5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c"
       },
       "ValidFrom": "2013-10-22 12:00:00",
       "ValidTo": "2028-10-22 12:00:00",
@@ -1185,7 +1203,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "8d26184fc613f89aba1cefb30fce1b53",
         "SHA1": "63a7e376bad5ec2e419d514a403bcf46c8d31d95",
-        "SHA256": "56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c"
+        "SHA256": "56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c",
+        "SHA384": "d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a"
       },
       "ValidFrom": "2016-01-07 12:00:00",
       "ValidTo": "2031-01-07 12:00:00",
@@ -1200,7 +1219,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "983a0c315a50542362f2bd6a5d71c8d0",
         "SHA1": "8047f476001f5cb16a661d2a3fd0c3576168f5e2",
-        "SHA256": "5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83"
+        "SHA256": "5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83",
+        "SHA384": "5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc"
       },
       "ValidFrom": "2011-04-15 19:41:37",
       "ValidTo": "2021-04-15 19:51:37",
@@ -1450,7 +1470,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "c0189c338449a42fe8358c2c1fbecc60",
         "SHA1": "b8ac0ee6875594b80ad86a6df6dd1fa3048c187c",
-        "SHA256": "a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5"
+        "SHA256": "a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5",
+        "SHA384": "76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150"
       },
       "ValidFrom": "2021-01-01 00:00:00",
       "ValidTo": "2031-01-06 00:00:00",
@@ -1465,7 +1486,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "cf1823794dca38d348ac92962c7d5169",
         "SHA1": "b8e9d958543069fdabf0c237726e0c7cc43b5dfe",
-        "SHA256": "86c52427d3191c4568149f56ace950e86fa9f8be719cc06575244c6a9f6513e8"
+        "SHA256": "86c52427d3191c4568149f56ace950e86fa9f8be719cc06575244c6a9f6513e8",
+        "SHA384": "50169f7ae27863c5c690fba1e7833c6de342cac8aa6e1abca4da93970425d92468a6e81c255e0fb66146823e5b250fc0"
       },
       "ValidFrom": "2019-04-04 00:00:00",
       "ValidTo": "2022-04-08 12:00:00",
@@ -1480,7 +1502,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "9359496ca4f021408b9d8923cab8b179",
         "SHA1": "2aed40d7759997830870769be250199fd609e40e",
-        "SHA256": "e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65"
+        "SHA256": "e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65",
+        "SHA384": "5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c"
       },
       "ValidFrom": "2013-10-22 12:00:00",
       "ValidTo": "2028-10-22 12:00:00",
@@ -1495,7 +1518,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "8d26184fc613f89aba1cefb30fce1b53",
         "SHA1": "63a7e376bad5ec2e419d514a403bcf46c8d31d95",
-        "SHA256": "56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c"
+        "SHA256": "56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c",
+        "SHA384": "d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a"
       },
       "ValidFrom": "2016-01-07 12:00:00",
       "ValidTo": "2031-01-07 12:00:00",
@@ -1510,7 +1534,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "983a0c315a50542362f2bd6a5d71c8d0",
         "SHA1": "8047f476001f5cb16a661d2a3fd0c3576168f5e2",
-        "SHA256": "5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83"
+        "SHA256": "5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83",
+        "SHA384": "5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc"
       },
       "ValidFrom": "2011-04-15 19:41:37",
       "ValidTo": "2021-04-15 19:51:37",
@@ -1721,7 +1746,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "c0189c338449a42fe8358c2c1fbecc60",
         "SHA1": "b8ac0ee6875594b80ad86a6df6dd1fa3048c187c",
-        "SHA256": "a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5"
+        "SHA256": "a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5",
+        "SHA384": "76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150"
       },
       "ValidFrom": "2021-01-01 00:00:00",
       "ValidTo": "2031-01-06 00:00:00",
@@ -1736,7 +1762,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "cf1823794dca38d348ac92962c7d5169",
         "SHA1": "b8e9d958543069fdabf0c237726e0c7cc43b5dfe",
-        "SHA256": "86c52427d3191c4568149f56ace950e86fa9f8be719cc06575244c6a9f6513e8"
+        "SHA256": "86c52427d3191c4568149f56ace950e86fa9f8be719cc06575244c6a9f6513e8",
+        "SHA384": "50169f7ae27863c5c690fba1e7833c6de342cac8aa6e1abca4da93970425d92468a6e81c255e0fb66146823e5b250fc0"
       },
       "ValidFrom": "2019-04-04 00:00:00",
       "ValidTo": "2022-04-08 12:00:00",
@@ -1751,7 +1778,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "9359496ca4f021408b9d8923cab8b179",
         "SHA1": "2aed40d7759997830870769be250199fd609e40e",
-        "SHA256": "e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65"
+        "SHA256": "e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65",
+        "SHA384": "5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c"
       },
       "ValidFrom": "2013-10-22 12:00:00",
       "ValidTo": "2028-10-22 12:00:00",
@@ -1766,7 +1794,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "8d26184fc613f89aba1cefb30fce1b53",
         "SHA1": "63a7e376bad5ec2e419d514a403bcf46c8d31d95",
-        "SHA256": "56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c"
+        "SHA256": "56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c",
+        "SHA384": "d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a"
       },
       "ValidFrom": "2016-01-07 12:00:00",
       "ValidTo": "2031-01-07 12:00:00",
@@ -1781,7 +1810,8 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "TBS": {
         "MD5": "983a0c315a50542362f2bd6a5d71c8d0",
         "SHA1": "8047f476001f5cb16a661d2a3fd0c3576168f5e2",
-        "SHA256": "5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83"
+        "SHA256": "5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83",
+        "SHA384": "5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc"
       },
       "ValidFrom": "2011-04-15 19:41:37",
       "ValidTo": "2021-04-15 19:51:37",

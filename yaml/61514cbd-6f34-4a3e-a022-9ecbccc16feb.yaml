@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 126719d008d106b7100ae47ed47666c1334701bd7ddb32d5b8e84048f258700f
   Company: ATI Technologies Inc.
   Copyright: Copyright (C) ATI Technologies Inc., 2003
-  CreationTimestamp: '2011-04-15 15:18:51'
+  CreationTimestamp: '2011-04-15 17:18:51'
   Date: ''
   Description: ATI Diagnostics Hardware Abstraction Sys
   ExportedFunctions: ''
@@ -81,7 +81,7 @@ KnownVulnerableSamples:
   SHA256: 5c04c274a708c9a7d993e33be3ea9e6119dc29527a767410dbaf93996f87369a
   Sections:
     .text:
-      Entropy: 6.024399825980691
+      Entropy: 6.02439982598069
       Virtual Size: '0x9aa'
     .rdata:
       Entropy: 4.486635449414708
@@ -119,6 +119,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -131,6 +132,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -145,6 +147,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=CA, ST=Ontario, L=Thornhill, O=ATI Technologies, Inc, OU=Digital
         ID Class 3 , Microsoft Software Validation v2, CN=ATI Technologies, Inc
       ValidFrom: '2009-02-25 00:00:00'
@@ -158,6 +161,7 @@ KnownVulnerableSamples:
         MD5: e600fbca7c2701b9111579168a30d24f
         SHA1: e4cd7d4093a1274a4fb11fa72e24074afd131299
         SHA256: 5cf62822df938d9b5b5dc367ed8555404c1d65bc548782d70980f12d7628a7cc
+        SHA384: f8bc2d6a5407c50430de0b98e3aad644afc7de9d2247897a24e9df8589d844e4e3a83071860af0e3a699fea81c6a3cc6
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -170,6 +174,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 3de959ef88a52c10bc8511ef057c233f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -182,7 +187,7 @@ KnownVulnerableSamples:
     SHA256: 2952ae305f9e206bb0b6d7986f2b6942656c310f9d201cf2e2dd6e961c18804e
   Company: ATI Technologies Inc.
   Copyright: Copyright (C) ATI Technologies Inc., 2003
-  CreationTimestamp: '2005-09-09 12:40:54'
+  CreationTimestamp: '2005-09-09 14:40:54'
   Date: ''
   Description: ATI Diagnostics Hardware Abstraction Sys
   ExportedFunctions: ''
@@ -248,7 +253,7 @@ KnownVulnerableSamples:
     SHA256: c9b8ecd0657fda14476920fe47783bd8a951d7a4a640935d9199b4a7ae4b8b69
   Company: ATI Technologies Inc.
   Copyright: Copyright (C) ATI Technologies Inc., 2003
-  CreationTimestamp: '2005-09-09 12:36:29'
+  CreationTimestamp: '2005-09-09 14:36:29'
   Date: ''
   Description: ATI Diagnostics Hardware Abstraction Sys
   ExportedFunctions: ''
@@ -296,10 +301,10 @@ KnownVulnerableSamples:
   SHA256: c825a47817399e988912bb75106befaefae0babc0743a7e32b46f17469c78cad
   Sections:
     .text:
-      Entropy: 5.408148680070703
+      Entropy: 5.408148680070702
       Virtual Size: '0x2540'
     .rdata:
-      Entropy: 3.945423865388493
+      Entropy: 3.9454238653884937
       Virtual Size: '0x27c'
     .pdata:
       Entropy: 3.0150554354522017
@@ -327,7 +332,7 @@ KnownVulnerableSamples:
     SHA256: 2952ae305f9e206bb0b6d7986f2b6942656c310f9d201cf2e2dd6e961c18804e
   Company: ATI Technologies Inc.
   Copyright: Copyright (C) ATI Technologies Inc., 2003
-  CreationTimestamp: '2005-09-09 12:40:54'
+  CreationTimestamp: '2005-09-09 14:40:54'
   Date: ''
   Description: ATI Diagnostics Hardware Abstraction Sys
   ExportedFunctions: ''
@@ -393,7 +398,7 @@ KnownVulnerableSamples:
     SHA256: 94111de210f6b3b48dda16b3422f0f9180e30bcb5765b6858c451d1d89196199
   Company: Overclocking Tool
   Copyright: Copyright (C), 2005
-  CreationTimestamp: '2005-10-20 08:35:08'
+  CreationTimestamp: '2005-10-20 10:35:08'
   Date: ''
   Description: Overclocking Hardware Abstraction Sys
   ExportedFunctions: ''
@@ -441,10 +446,10 @@ KnownVulnerableSamples:
   SHA256: 11a9787831ac4f0657aeb5e7019c23acc39d8833faf28f85bd10d7590ea4cc5f
   Sections:
     .text:
-      Entropy: 5.408148680070703
+      Entropy: 5.408148680070702
       Virtual Size: '0x2540'
     .rdata:
-      Entropy: 4.005865295392332
+      Entropy: 4.005865295392331
       Virtual Size: '0x284'
     .pdata:
       Entropy: 3.032649273691926
@@ -459,7 +464,7 @@ KnownVulnerableSamples:
       Entropy: 5.150279397766819
       Virtual Size: '0x370'
     .rsrc:
-      Entropy: 3.3091519076430678
+      Entropy: 3.309151907643068
       Virtual Size: '0x370'
     .reloc:
       Entropy: 0.6102086113176999
@@ -472,7 +477,7 @@ KnownVulnerableSamples:
     SHA256: fb19f241ddae74ec4a0f87dff025ec68dc809f9dd883649c0e58822de28e6f1b
   Company: Overclocking Tool
   Copyright: Copyright (C), 2005
-  CreationTimestamp: '2005-10-20 08:34:01'
+  CreationTimestamp: '2005-10-20 10:34:01'
   Date: ''
   Description: Overclocking Hardware Abstraction Sys
   ExportedFunctions: ''

@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: 7fb0f6fc5bdd22d53f8532cb19da666a77a66ffb1cf3919a2e22b66c13b415b7
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-10-08 13:06:56'
+  CreationTimestamp: '2009-10-08 15:06:56'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -72,22 +72,22 @@ KnownVulnerableSamples:
   SHA256: 3ac5e01689a3d745e60925bc7faca8d4306ae693e803b5e19c94906dc30add46
   Sections:
     .text:
-      Entropy: 6.182156159214639
+      Entropy: 6.182156159214638
       Virtual Size: '0x1438'
     .rdata:
       Entropy: 4.593841506669575
       Virtual Size: '0x270'
     .data:
-      Entropy: 1.0975594113294969
+      Entropy: 1.0975594113294966
       Virtual Size: '0x130'
     .pdata:
       Entropy: 3.5904624670053096
       Virtual Size: '0xa8'
     PAGE:
-      Entropy: 5.489182751023983
+      Entropy: 5.489182751023982
       Virtual Size: '0x470'
     INIT:
-      Entropy: 5.219327338093401
+      Entropy: 5.219327338093399
       Virtual Size: '0x508'
   Signature:
   - Intel(R) Processor Identification Utility
@@ -110,6 +110,7 @@ KnownVulnerableSamples:
         MD5: f532f9999c3f7a078f0f973c726a2a04
         SHA1: f56832bc9412c372f9a8744591258f8bb11af2d8
         SHA256: 4c75ce4be51027c4e1f7422775c3ae79d5195ffc0ff7f379123a603ccb702c60
+        SHA384: 084772ceb63ae50ebd8125ba9eba0c9b38d0e94a806f58513f71f1d5489f52489b0dfbb8c67603a425a603451b3b1719
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer ,
         G2
       ValidFrom: '2007-06-15 00:00:00'
@@ -123,6 +124,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -135,6 +137,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=Equifax, OU=Equifax Secure Certificate Authority
       ValidFrom: '2006-05-23 17:01:15'
       ValidTo: '2016-05-23 17:11:15'
@@ -147,6 +150,7 @@ KnownVulnerableSamples:
         MD5: 6e11ed171e9a07e607b8ca65bf0e8858
         SHA1: 6d329a72420f76868584957854cdc45172e9f902
         SHA256: 75efb8656a18ba5dacc596757bfb0fa11f0d3d81fd5f8cf9bb8975ced87e7b1b
+        SHA384: c41060ed797c77588692c0b3e36e19cca2d48c354863437f3df76009e25c916e8d2c7e17b297fbc59da085e98d070093
     - Subject: CN=Intel(R) Processor Identification Utility
       ValidFrom: '2009-03-19 00:29:29'
       ValidTo: '2012-03-18 00:29:29'
@@ -159,6 +163,7 @@ KnownVulnerableSamples:
         MD5: b3bd1f3e90334bd036db0c87a99bbe67
         SHA1: 560fd30788b6778228d6f72d2383fdad0ea7d6f4
         SHA256: bf0423565349e55db360084fa861a2189f3a186453b49849eea648fbe6c38a06
+        SHA384: 86a06d6f26ddbfe8e607ef1f25ded4a7077162c098a1127b37bff187b9dfdf94ac831eff028d137642a6d7a9fde216ae
     - Subject: C=US, O=Intel Corporation, CN=Intel External Basic Issuing CA 3A
       ValidFrom: '2006-03-22 22:22:42'
       ValidTo: '2012-03-22 22:32:42'
@@ -171,6 +176,7 @@ KnownVulnerableSamples:
         MD5: 5563adcf63b9dd7859bcf84b3c2c95bb
         SHA1: 83c83dbb905a1b9612d3de74267f36cfb88f714c
         SHA256: 335520ee32bdf0d48087cde95c0964d6f64ebfb89223dc1b85ab22307c6328f1
+        SHA384: 3770ae5456ac5ac1e9027fd13495d9cbbb51379a0dc00c7bd8b96b2d566cfd4c158c05ebe9bf63768b9684680a4cc4e4
     Signer:
     - SerialNumber: 13fd5f58000000002ea3
       Issuer: C=US, O=Intel Corporation, CN=Intel External Basic Issuing CA 3A

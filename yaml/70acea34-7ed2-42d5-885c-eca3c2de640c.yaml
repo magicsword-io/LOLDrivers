@@ -42,7 +42,7 @@ KnownVulnerableSamples:
     SHA256: 13cd99ff2120d9fd651814d826b6c8481d549f684a8fbfb2d8775c9faa1c27f5
   Company: Sense5 CORP
   Copyright: Copyright (C) 2022
-  CreationTimestamp: '2022-08-22 07:52:21'
+  CreationTimestamp: '2022-08-22 09:52:21'
   Date: ''
   Description: Sense5 Driver
   ExportedFunctions: ''
@@ -167,7 +167,7 @@ KnownVulnerableSamples:
       Entropy: 6.870248263937928
       Virtual Size: '0x7870'
     .rdata:
-      Entropy: 5.897354598934941
+      Entropy: 5.89735459893494
       Virtual Size: '0x96c'
     .data:
       Entropy: 0.7351616034595755
@@ -176,10 +176,10 @@ KnownVulnerableSamples:
       Entropy: 7.583918822532478
       Virtual Size: '0x288'
     INIT:
-      Entropy: 7.689240999337947
+      Entropy: 7.689240999337948
       Virtual Size: '0x63c'
     .gg0:
-      Entropy: 7.616860950546135
+      Entropy: 7.616860950546134
       Virtual Size: '0x2a80df'
     .gg1:
       Entropy: 2.618757537927313
@@ -214,6 +214,7 @@ KnownVulnerableSamples:
         MD5: fdc11a5676aed4e9cc0c09eeb7450dfb
         SHA1: 4902077d9a05d4231b791d3b05bafa4a79132f03
         SHA256: 5db56c23d83bf67c7152e28ad4a684a7372b4ae4f52afe7a81ce91eef94caec3
+        SHA384: c952d7f0e0ea5216ce4400601fb7c0829f0f3fcd6eb2b5b9112fbe45d133e00c4abd660f8e1794f7ac4ef95123e2c0ab
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -227,6 +228,7 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 3300000057ee4d659a923e7c10000000000057
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -238,7 +240,7 @@ KnownVulnerableSamples:
     SHA256: dcfab3c5f99c15cbb7df17c59914af551b90e0ed3c1dc040bad9927b12b67125
   Company: Sense5 CORP
   Copyright: Copyright (C) 2022
-  CreationTimestamp: '2022-08-08 23:58:08'
+  CreationTimestamp: '2022-08-09 01:58:08'
   Date: ''
   Description: Sense5 Driver
   ExportedFunctions: ''
@@ -369,7 +371,7 @@ KnownVulnerableSamples:
       Entropy: 0.7351616034595755
       Virtual Size: '0x80190'
     .pdata:
-      Entropy: 7.636341499640352
+      Entropy: 7.636341499640353
       Virtual Size: '0x288'
     INIT:
       Entropy: 7.669235447153766
@@ -381,13 +383,13 @@ KnownVulnerableSamples:
       Entropy: 2.624443455503771
       Virtual Size: '0x3b8'
     .gg2:
-      Entropy: 7.2332731109027
+      Entropy: 7.233273110902698
       Virtual Size: '0x195c4c'
     .reloc:
       Entropy: 4.1612553058698465
       Virtual Size: '0x178'
     .rsrc:
-      Entropy: 3.1435087623386986
+      Entropy: 3.143508762338698
       Virtual Size: '0x260'
   Signature: ''
   Signatures:
@@ -407,6 +409,7 @@ KnownVulnerableSamples:
         MD5: fdc11a5676aed4e9cc0c09eeb7450dfb
         SHA1: 4902077d9a05d4231b791d3b05bafa4a79132f03
         SHA256: 5db56c23d83bf67c7152e28ad4a684a7372b4ae4f52afe7a81ce91eef94caec3
+        SHA384: c952d7f0e0ea5216ce4400601fb7c0829f0f3fcd6eb2b5b9112fbe45d133e00c4abd660f8e1794f7ac4ef95123e2c0ab
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -420,6 +423,7 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 3300000057ee4d659a923e7c10000000000057
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft

@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: e1d3963c55c7ffa96d16e47ec4bbb4e171f828650ce853eb0b83c90ae9c6265a
   Company: Advanced Micro Devices, Inc.
   Copyright: "\xA9 2021 AMD Inc. All rights reserved."
-  CreationTimestamp: '2021-07-26 10:06:46'
+  CreationTimestamp: '2021-07-26 12:06:46'
   Date: ''
   Description: AMD Power Profiling Driver
   ExportedFunctions: ''
@@ -170,7 +170,7 @@ KnownVulnerableSamples:
       Entropy: 4.753427592244756
       Virtual Size: '0xb4c'
     .gfids:
-      Entropy: 0.8112781244591328
+      Entropy: 0.8112781244591329
       Virtual Size: '0x4'
     PAGE:
       Entropy: 6.292249475182866
@@ -205,6 +205,7 @@ KnownVulnerableSamples:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
         SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
         ID Timestamping CA
       ValidFrom: '2016-01-07 12:00:00'
@@ -218,6 +219,7 @@ KnownVulnerableSamples:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
         SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
     - Subject: C=US, ST=California, L=Santa Clara, O=Advanced Micro Devices Inc.,
         CN=Advanced Micro Devices Inc.
       ValidFrom: '2021-05-11 00:00:00'
@@ -231,6 +233,7 @@ KnownVulnerableSamples:
         MD5: f2f60243e26dcdf4729d28b1beb55f01
         SHA1: a23ac91136dd79d77b93b12c813e0c6669ed9f4d
         SHA256: 192ee517f8ae928808632422a6461613d65ee324fa58d2f099a27a3d0da9ca6b
+        SHA384: beb93a1ff1715564a418ecb07cee42465dbf9c76cc703e7088bdafb2099b003afa0c335bcd15d318dcb2bf8519c199da
     - Subject: C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust
         RSA Certification Authority
       ValidFrom: '2019-03-12 00:00:00'
@@ -244,6 +247,7 @@ KnownVulnerableSamples:
         MD5: 3f5b269ded03667a7bad47c1885062b0
         SHA1: 0f01247aaf8b46e3617880e0f5f5dfac696ed7a3
         SHA256: 593e2d49a74023555526aef9b7422b19e5b8b167391b6dee5ed292b1ca23a74c
+        SHA384: 13baa039635f1c5292a8c2f36aae7e1d25c025202e9092f5b0f53f5f752dfa9c71b3d1b8d9a6358fcee6ec75622fabf9
     - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Code Signing CA
       ValidFrom: '2018-11-02 00:00:00'
@@ -257,6 +261,7 @@ KnownVulnerableSamples:
         MD5: c1eabfb5994258ad955adb7c2df165e6
         SHA1: fa33b3c00cebc469b269220d9eab26926c9b8ad8
         SHA256: 70dffac37eb787b2198816982c7d44f541d2e39a7dac069d37b367dc9f354b32
+        SHA384: 20adc5b59cb532e215f01ba09a9c745898c206555613512fea7c295ccfd17ced4fe2c5bc3274ca8a270fc68799b8343c
     Signer:
     - SerialNumber: 535091e6cab13af393b51ead0825f627
       Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo

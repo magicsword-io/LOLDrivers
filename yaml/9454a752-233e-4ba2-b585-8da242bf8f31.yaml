@@ -23,7 +23,7 @@ KnownVulnerableSamples:
     SHA256: b430d3a0bdb837a5d6625d3b1cef07abd1953f969869ff6cf7ba398ae605431a
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-05-09 05:38:33'
+  CreationTimestamp: '2021-05-09 07:38:33'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -163,7 +163,7 @@ KnownVulnerableSamples:
   SHA256: 22da5a055b7b17c69def9f5af54e257c751507e7b6b9a835fcf6245ab90ae750
   Sections:
     .text:
-      Entropy: 6.340576773907242
+      Entropy: 6.340576773907241
       Virtual Size: '0x5de8'
     .rdata:
       Entropy: 4.626365451667356
@@ -172,7 +172,7 @@ KnownVulnerableSamples:
       Entropy: 0.6890836305716007
       Virtual Size: '0x9428'
     INIT:
-      Entropy: 5.674405086792681
+      Entropy: 5.67440508679268
       Virtual Size: '0xb48'
     .reloc:
       Entropy: 6.678125183974352
@@ -195,6 +195,7 @@ KnownVulnerableSamples:
         MD5: a0dd89c33c4973bf6758331e200fb6de
         SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
         SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
+        SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -208,6 +209,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -219,7 +221,7 @@ KnownVulnerableSamples:
     SHA256: 3d31118a2e92377ecb632bd722132c04af4e65e24ff87743796c75eb07cfcd71
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-05-15 06:44:55'
+  CreationTimestamp: '2021-05-15 08:44:55'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -359,7 +361,7 @@ KnownVulnerableSamples:
   SHA256: 23115b5b1d5511d59cdad75f863d65893304dc098848dcb149b69492f51b31f6
   Sections:
     .text:
-      Entropy: 6.340579412340497
+      Entropy: 6.340579412340496
       Virtual Size: '0x5de8'
     .rdata:
       Entropy: 4.565535020821956
@@ -368,7 +370,7 @@ KnownVulnerableSamples:
       Entropy: 0.6890836305716007
       Virtual Size: '0x9428'
     INIT:
-      Entropy: 5.674405086792681
+      Entropy: 5.67440508679268
       Virtual Size: '0xb48'
     .reloc:
       Entropy: 6.678416291453968
@@ -381,7 +383,7 @@ KnownVulnerableSamples:
     SHA256: cc383ad11e9d06047a1558ed343f389492da3ac2b84b71462aee502a2fa616c8
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-05-14 20:22:09'
+  CreationTimestamp: '2021-05-14 22:22:09'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -415,10 +417,10 @@ KnownVulnerableSamples:
   SHA256: f3efcf47681d9f96afcbc843a241c21a643b173c48270446f6fe634991a57847
   Sections:
     .text:
-      Entropy: 5.817981688831222
+      Entropy: 5.817981688831221
       Virtual Size: '0x9ac'
     .rdata:
-      Entropy: 3.8039387703024032
+      Entropy: 3.803938770302403
       Virtual Size: '0x544'
     .data:
       Entropy: 0.6106954451479871
@@ -430,7 +432,7 @@ KnownVulnerableSamples:
       Entropy: 4.918280561548722
       Virtual Size: '0x19e'
     .reloc:
-      Entropy: 3.0841837197791877
+      Entropy: 3.084183719779188
       Virtual Size: '0x28'
   Signature: ''
   Signatures:
@@ -450,6 +452,7 @@ KnownVulnerableSamples:
         MD5: a0dd89c33c4973bf6758331e200fb6de
         SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
         SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
+        SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -463,6 +466,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -474,7 +478,7 @@ KnownVulnerableSamples:
     SHA256: f08ebddc11aefcb46082c239f8d97ceea247d846e22c4bcdd72af75c1cbc6b0b
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-05-15 06:46:21'
+  CreationTimestamp: '2021-05-15 08:46:21'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -614,16 +618,16 @@ KnownVulnerableSamples:
   SHA256: cfe2dd2cf1eb8b79d3b4ae980cda6fd933979d47c837fda77256a24a41316468
   Sections:
     .text:
-      Entropy: 6.340579412340497
+      Entropy: 6.340579412340496
       Virtual Size: '0x5de8'
     .rdata:
       Entropy: 4.572425708982675
       Virtual Size: '0x5f4'
     .data:
-      Entropy: 0.6890357570368669
+      Entropy: 0.689035757036867
       Virtual Size: '0x9428'
     INIT:
-      Entropy: 5.674405086792681
+      Entropy: 5.67440508679268
       Virtual Size: '0xb48'
     .reloc:
       Entropy: 6.678416291453968
@@ -636,7 +640,7 @@ KnownVulnerableSamples:
     SHA256: c56536f99207915e5a1f7d4f014ab942bd820e64ff7f371ad0462ef26ed27242
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-05-15 06:46:38'
+  CreationTimestamp: '2021-05-15 08:46:38'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -770,7 +774,7 @@ KnownVulnerableSamples:
   SHA256: bbc58fd69ce5fed6691dd8d2084e9b728add808ffd5ea8b42ac284b686f77d9a
   Sections:
     .text:
-      Entropy: 6.3151171440822305
+      Entropy: 6.31511714408223
       Virtual Size: '0x6722'
     .rdata:
       Entropy: 4.565306374693255
@@ -779,7 +783,7 @@ KnownVulnerableSamples:
       Entropy: 0.6671192572015003
       Virtual Size: '0xbb18'
     .pdata:
-      Entropy: 4.417141719623935
+      Entropy: 4.417141719623933
       Virtual Size: '0x630'
     INIT:
       Entropy: 5.171869742524338
@@ -805,6 +809,7 @@ KnownVulnerableSamples:
         MD5: a0dd89c33c4973bf6758331e200fb6de
         SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
         SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
+        SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -818,6 +823,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -829,7 +835,7 @@ KnownVulnerableSamples:
     SHA256: c56536f99207915e5a1f7d4f014ab942bd820e64ff7f371ad0462ef26ed27242
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-05-15 06:46:38'
+  CreationTimestamp: '2021-05-15 08:46:38'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -963,7 +969,7 @@ KnownVulnerableSamples:
   SHA256: 16e68d2fa75a4e04872be42e2b54c041e43ab3409096741690520417e3368aa6
   Sections:
     .text:
-      Entropy: 6.3151171440822305
+      Entropy: 6.31511714408223
       Virtual Size: '0x6722'
     .rdata:
       Entropy: 4.565306374693255
@@ -972,7 +978,7 @@ KnownVulnerableSamples:
       Entropy: 0.6671192572015003
       Virtual Size: '0xbb18'
     .pdata:
-      Entropy: 4.417141719623935
+      Entropy: 4.417141719623933
       Virtual Size: '0x630'
     INIT:
       Entropy: 5.171869742524338
@@ -988,7 +994,7 @@ KnownVulnerableSamples:
     SHA256: 221dfbc74bbb255b0879360ccc71a74b756b2e0f16e9386b38a9ce9d4e2e34f9
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-05-15 01:06:29'
+  CreationTimestamp: '2021-05-15 03:06:29'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1053,19 +1059,19 @@ KnownVulnerableSamples:
   SHA256: 04a269dd0a03e32e5b2a1c8ab0768791962e040d080d44dc44dab01dd7954f2b
   Sections:
     .text:
-      Entropy: 6.004652069757254
+      Entropy: 6.0046520697572525
       Virtual Size: '0x16ea'
     .rdata:
       Entropy: 4.089109208356412
       Virtual Size: '0x754'
     .data:
-      Entropy: 0.6753101114175523
+      Entropy: 0.6753101114175524
       Virtual Size: '0x36d8'
     .pdata:
       Entropy: 3.8774173817774784
       Virtual Size: '0x1bc'
     INIT:
-      Entropy: 5.066163615261483
+      Entropy: 5.066163615261484
       Virtual Size: '0x530'
     .reloc:
       Entropy: 3.047012012247794
@@ -1088,6 +1094,7 @@ KnownVulnerableSamples:
         MD5: a0dd89c33c4973bf6758331e200fb6de
         SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
         SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
+        SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -1101,6 +1108,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -1112,7 +1120,7 @@ KnownVulnerableSamples:
     SHA256: 7f1772bdf7dd81cb00d30159d19d4eb9160b54d7609b36f781d08ca3afbd29a7
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-03-27 02:41:44'
+  CreationTimestamp: '2021-03-27 04:41:44'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1239,7 +1247,7 @@ KnownVulnerableSamples:
   SHA256: 40c45c9b1c764777096b59f99ae524cbd25b88c805187e615c3ed6840f3d4c15
   Sections:
     .text:
-      Entropy: 6.346151239727315
+      Entropy: 6.346151239727316
       Virtual Size: '0x6958'
     .rdata:
       Entropy: 4.682011637139368
@@ -1251,7 +1259,7 @@ KnownVulnerableSamples:
       Entropy: 4.418309034702974
       Virtual Size: '0x60c'
     INIT:
-      Entropy: 5.255249066470295
+      Entropy: 5.255249066470294
       Virtual Size: '0xc3a'
     .reloc:
       Entropy: 3.7366309574076895
@@ -1274,6 +1282,7 @@ KnownVulnerableSamples:
         MD5: a0dd89c33c4973bf6758331e200fb6de
         SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
         SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
+        SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -1287,6 +1296,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -1298,7 +1308,7 @@ KnownVulnerableSamples:
     SHA256: 0988d366572a57b3015d875b60704517d05115580678e8f2e126f771eda28f7b
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-04-18 08:09:04'
+  CreationTimestamp: '2021-04-18 10:09:04'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1432,7 +1442,7 @@ KnownVulnerableSamples:
   SHA256: f83c357106a7d1d055b5cb75c8414aa3219354deb16ae9ee7efe8ee4c8c670ca
   Sections:
     .text:
-      Entropy: 6.3151171440822305
+      Entropy: 6.31511714408223
       Virtual Size: '0x6722'
     .rdata:
       Entropy: 4.597541961463757
@@ -1441,7 +1451,7 @@ KnownVulnerableSamples:
       Entropy: 0.6671192572015003
       Virtual Size: '0xbb18'
     .pdata:
-      Entropy: 4.427523715328472
+      Entropy: 4.427523715328469
       Virtual Size: '0x630'
     INIT:
       Entropy: 5.171869742524338
@@ -1467,6 +1477,7 @@ KnownVulnerableSamples:
         MD5: a0dd89c33c4973bf6758331e200fb6de
         SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
         SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
+        SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -1480,6 +1491,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -1491,7 +1503,7 @@ KnownVulnerableSamples:
     SHA256: 651ffa0c7aff7b4a7695dddd209dc3e7f68156e29a14d3fcc17aef4f2a205dcc
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-03-17 07:13:37'
+  CreationTimestamp: '2021-03-17 09:13:37'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1624,13 +1636,13 @@ KnownVulnerableSamples:
   SHA256: 24ea733bae1b8722841fb4c6cead93c4c4f0b1248ca9a21601b1ce6b95b06864
   Sections:
     .text:
-      Entropy: 6.599025143052685
+      Entropy: 6.599025143052686
       Virtual Size: '0x55ae'
     .rdata:
       Entropy: 4.489014367618685
       Virtual Size: '0x8dc'
     .data:
-      Entropy: 1.2232140216567502
+      Entropy: 1.2232140216567504
       Virtual Size: '0x6d38'
     INIT:
       Entropy: 5.5462767634898
@@ -1656,6 +1668,7 @@ KnownVulnerableSamples:
         MD5: a0dd89c33c4973bf6758331e200fb6de
         SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
         SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
+        SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -1669,6 +1682,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -1680,7 +1694,7 @@ KnownVulnerableSamples:
     SHA256: f08ebddc11aefcb46082c239f8d97ceea247d846e22c4bcdd72af75c1cbc6b0b
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-05-15 06:46:21'
+  CreationTimestamp: '2021-05-15 08:46:21'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1820,16 +1834,16 @@ KnownVulnerableSamples:
   SHA256: 8249e9c0ac0840a36d9a5b9ff3e217198a2f533159acd4bf3d9b0132cc079870
   Sections:
     .text:
-      Entropy: 6.340579412340497
+      Entropy: 6.340579412340496
       Virtual Size: '0x5de8'
     .rdata:
       Entropy: 4.572425708982675
       Virtual Size: '0x5f4'
     .data:
-      Entropy: 0.6890357570368669
+      Entropy: 0.689035757036867
       Virtual Size: '0x9428'
     INIT:
-      Entropy: 5.674405086792681
+      Entropy: 5.67440508679268
       Virtual Size: '0xb48'
     .reloc:
       Entropy: 6.678416291453968
@@ -1852,6 +1866,7 @@ KnownVulnerableSamples:
         MD5: a0dd89c33c4973bf6758331e200fb6de
         SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
         SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
+        SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -1865,6 +1880,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -1876,7 +1892,7 @@ KnownVulnerableSamples:
     SHA256: 72b99147839bcfb062d29014ec09fe20a8f261748b5925b00171ef3cb849a4c1
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2019-11-03 23:10:09'
+  CreationTimestamp: '2019-11-04 01:10:09'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1975,6 +1991,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=CN, ??=Shanghai, ??=Private Organization, serialNumber=9131010707118381X9,
         C=CN, ST=Shanghai, L=Shanghai, O=, CN=
       ValidFrom: '2019-08-27 00:00:00'
@@ -1988,6 +2005,7 @@ KnownVulnerableSamples:
         MD5: 62acdecc22447b159a7e2efb0350bd63
         SHA1: ddd0bd1dded2c9189fc5b8563f8210deb83c590b
         SHA256: ae3a19b6b64e739d5d2abb0e1471874b7d8b6b1e3f1e38ed483166a664355a4e
+        SHA384: 9af686e9341ce78dc60186100fa406916c8b90ea25a604401ffe99f3e2c4bfcf20e9106e1cfc05414972a2e069dae5e0
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -2001,6 +2019,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 09b92d7a420083c94eaf18145cfaedd1
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -2012,7 +2031,7 @@ KnownVulnerableSamples:
     SHA256: 5c206b569b7059b7c32eb5fc36922cb435c2b16c8d96de1038c8bd298ed498fe
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-05-15 06:17:21'
+  CreationTimestamp: '2021-05-15 08:17:21'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -2146,7 +2165,7 @@ KnownVulnerableSamples:
   SHA256: 0123c7f12dd7530d55aee49949ff1fee911c9689bd04591684aa641882589785
   Sections:
     .text:
-      Entropy: 6.3151171440822305
+      Entropy: 6.31511714408223
       Virtual Size: '0x6722'
     .rdata:
       Entropy: 4.567171752554631
@@ -2155,7 +2174,7 @@ KnownVulnerableSamples:
       Entropy: 0.6671648510441038
       Virtual Size: '0xbb18'
     .pdata:
-      Entropy: 4.417141719623935
+      Entropy: 4.417141719623933
       Virtual Size: '0x630'
     INIT:
       Entropy: 5.171869742524338
@@ -2171,7 +2190,7 @@ KnownVulnerableSamples:
     SHA256: 5c206b569b7059b7c32eb5fc36922cb435c2b16c8d96de1038c8bd298ed498fe
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-05-15 06:17:21'
+  CreationTimestamp: '2021-05-15 08:17:21'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -2305,7 +2324,7 @@ KnownVulnerableSamples:
   SHA256: 63d61549030fcf46ff1dc138122580b4364f0fe99e6b068bc6a3d6903656aff0
   Sections:
     .text:
-      Entropy: 6.3151171440822305
+      Entropy: 6.31511714408223
       Virtual Size: '0x6722'
     .rdata:
       Entropy: 4.567171752554631
@@ -2314,7 +2333,7 @@ KnownVulnerableSamples:
       Entropy: 0.6671648510441038
       Virtual Size: '0xbb18'
     .pdata:
-      Entropy: 4.417141719623935
+      Entropy: 4.417141719623933
       Virtual Size: '0x630'
     INIT:
       Entropy: 5.171869742524338
@@ -2340,6 +2359,7 @@ KnownVulnerableSamples:
         MD5: a0dd89c33c4973bf6758331e200fb6de
         SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
         SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
+        SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -2353,6 +2373,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -2364,7 +2385,7 @@ KnownVulnerableSamples:
     SHA256: 0391107305d76eb9ddf1a5b3b3c50da361e8ab35b573dbd19bf9383436b9303e
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-04-09 00:29:46'
+  CreationTimestamp: '2021-04-09 02:29:46'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -2497,7 +2518,7 @@ KnownVulnerableSamples:
   SHA256: 16b6be03495a4f4cf394194566bb02061fba2256cc04dcbde5aa6a17e41b7650
   Sections:
     .text:
-      Entropy: 6.564030296364231
+      Entropy: 6.56403029636423
       Virtual Size: '0x5b62'
     .rdata:
       Entropy: 4.44659940311796
@@ -2506,10 +2527,10 @@ KnownVulnerableSamples:
       Entropy: 1.2415415090465123
       Virtual Size: '0x6f40'
     INIT:
-      Entropy: 5.541103554795583
+      Entropy: 5.5411035547955825
       Virtual Size: '0xae6'
     .reloc:
-      Entropy: 6.652737807428317
+      Entropy: 6.652737807428316
       Virtual Size: '0x5e4'
   Signature: ''
   Signatures:
@@ -2529,6 +2550,7 @@ KnownVulnerableSamples:
         MD5: a0dd89c33c4973bf6758331e200fb6de
         SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
         SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
+        SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -2542,6 +2564,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -2553,7 +2576,7 @@ KnownVulnerableSamples:
     SHA256: 3d31118a2e92377ecb632bd722132c04af4e65e24ff87743796c75eb07cfcd71
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-05-15 06:44:55'
+  CreationTimestamp: '2021-05-15 08:44:55'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -2693,7 +2716,7 @@ KnownVulnerableSamples:
   SHA256: e0afb8b937a5907fbe55a1d1cc7574e9304007ef33fa80ff3896e997a1beaf37
   Sections:
     .text:
-      Entropy: 6.340579412340497
+      Entropy: 6.340579412340496
       Virtual Size: '0x5de8'
     .rdata:
       Entropy: 4.565535020821956
@@ -2702,7 +2725,7 @@ KnownVulnerableSamples:
       Entropy: 0.6890836305716007
       Virtual Size: '0x9428'
     INIT:
-      Entropy: 5.674405086792681
+      Entropy: 5.67440508679268
       Virtual Size: '0xb48'
     .reloc:
       Entropy: 6.678416291453968
@@ -2725,6 +2748,7 @@ KnownVulnerableSamples:
         MD5: a0dd89c33c4973bf6758331e200fb6de
         SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
         SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
+        SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -2738,6 +2762,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft

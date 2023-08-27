@@ -30,7 +30,7 @@ KnownVulnerableSamples:
     SHA256: 1c8cb72b9a011b60b1b9caea508b26fbbd95a1e3634af66082417381fe6544fb
   Company: NVIDIA Corporation
   Copyright: (C) 2017 NVIDIA Corporation. All rights reserved.
-  CreationTimestamp: '2019-02-01 01:06:05'
+  CreationTimestamp: '2019-02-01 03:06:05'
   Date: ''
   Description: NVIDIA Flash Driver, Version 1.8.0
   ExportedFunctions: ''
@@ -115,10 +115,10 @@ KnownVulnerableSamples:
       Entropy: 6.2778472843180975
       Virtual Size: '0x1bc4'
     INIT:
-      Entropy: 4.8735935335934135
+      Entropy: 4.873593533593414
       Virtual Size: '0x5a6'
     .rsrc:
-      Entropy: 3.2654027990870595
+      Entropy: 3.265402799087059
       Virtual Size: '0x390'
     .reloc:
       Entropy: 3.138803162769666
@@ -144,6 +144,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -157,6 +158,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=California, L=Santa Clara, O=NVIDIA Corporation, OU=IT,MIS,
         CN=NVIDIA Corporation
       ValidFrom: '2018-07-09 00:00:00'
@@ -170,6 +172,7 @@ KnownVulnerableSamples:
         MD5: 1de08c5d4f3fc8565ecc362fa01114ef
         SHA1: 17d12b784a180588ebffbd8275101648b5484f94
         SHA256: d9ca17863bfb2ca747a76b66d7c4351ab72f1be3d7a9c40eb2aa9938efc6a779
+        SHA384: e1b8dcee10dd623dfc88ed9adaba1066c52cc5905d49118e51982360cd4b0acd76c84871494821f07da66034fa0d3779
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -184,6 +187,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -198,6 +202,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 4fbe0a02426ebd20c26244b5eca652a3
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -210,7 +215,7 @@ KnownVulnerableSamples:
     SHA256: b62ecd7eccde402456eab582b49705cc77065d7015e7d92bbc06e0fcff097e58
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2011-04-05 17:22:50'
+  CreationTimestamp: '2011-04-05 19:22:50'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -285,6 +290,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -297,6 +303,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -311,6 +318,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -323,6 +331,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=US, ST=California, L=Santa Clara, O=NVIDIA Corporation, OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Software, CN=NVIDIA Corporation
       ValidFrom: '2009-07-31 00:00:00'
@@ -336,6 +345,7 @@ KnownVulnerableSamples:
         MD5: 4914c1d2c944d48a9636059155440df8
         SHA1: 0337264fca5a8d774786b5b275e03ab42edb11ae
         SHA256: 8833131f04e02297c80b986ec7e7793e194fb144470dc36cc57a376487c2750b
+        SHA384: 8450d31af22887ac50415c01d88f7eb6081b7044ab8f35ac0b63e09828786258e73fed98f37c99df6d5472b6a34f6db3
     Signer:
     - SerialNumber: 534abed0be56d9840dd12ddb84f8b031
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -348,7 +358,7 @@ KnownVulnerableSamples:
     SHA256: dde12d20a00f7987f6e53eeeee3d5667482940f06d012a0003b80f217a105d74
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2016-09-13 10:55:59'
+  CreationTimestamp: '2016-09-13 12:55:59'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -426,6 +436,7 @@ KnownVulnerableSamples:
         MD5: ca9c04cba2830b5f4ef152b4a39d12ed
         SHA1: f049a238763d4a90b148ab10a500f96ebf1dc436
         SHA256: aef2a80c4f1f523fd6832fef743b9222808b1c71991e914635846ab8802c4fd9
+        SHA384: 9675fa13ddfdf105282fbbe4697fdda632d16b27b5b81844f5694b9022b0556e2d32ed6e1b9665b5d792499a314e7eb2
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -440,6 +451,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -454,6 +466,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -466,6 +479,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -478,6 +492,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 14781bc862e8dc503a559346f5dcc518
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -490,7 +505,7 @@ KnownVulnerableSamples:
     SHA256: 4b38c075ba6523502dfd39ed10757db58234a1c84d4952b65e30b4a8679bfcca
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2016-06-14 16:02:51'
+  CreationTimestamp: '2016-06-14 18:02:51'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -564,6 +579,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G2
       ValidFrom: '2015-02-03 00:00:00'
@@ -577,6 +593,7 @@ KnownVulnerableSamples:
         MD5: a0ac4d48fe852f7b3ed4e623d59a825f
         SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
         SHA256: 78d2e41a13eb4e9171bae2d2adb192cf39210b5231f77cda936bcfbe8c003bdf
+        SHA384: 990ed96dca5979deeedc98a012279f04efb5559d7e7f5084a12f3802ee9439326557aecefd081cff739b78515b5d7f50
     - Subject: C=US, ST=California, L=SANTA CLARA, O=NVIDIA Corporation, CN=NVIDIA
         Corporation
       ValidFrom: '2015-07-28 00:00:00'
@@ -590,6 +607,7 @@ KnownVulnerableSamples:
         MD5: ca9c04cba2830b5f4ef152b4a39d12ed
         SHA1: f049a238763d4a90b148ab10a500f96ebf1dc436
         SHA256: aef2a80c4f1f523fd6832fef743b9222808b1c71991e914635846ab8802c4fd9
+        SHA384: 9675fa13ddfdf105282fbbe4697fdda632d16b27b5b81844f5694b9022b0556e2d32ed6e1b9665b5d792499a314e7eb2
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -604,6 +622,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -618,6 +637,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 14781bc862e8dc503a559346f5dcc518
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -630,7 +650,7 @@ KnownVulnerableSamples:
     SHA256: d9434a50e1a6252f23af362631a5576017cce3ef109d7fc93748de8bd46f9385
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2014-08-01 18:05:12'
+  CreationTimestamp: '2014-08-01 20:05:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -705,6 +725,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -718,6 +739,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -732,6 +754,7 @@ KnownVulnerableSamples:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
         SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -744,6 +767,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=US, ST=California, L=Santa Clara, O=NVIDIA Corporation, OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Software, CN=NVIDIA Corporation
       ValidFrom: '2011-09-02 00:00:00'
@@ -757,6 +781,7 @@ KnownVulnerableSamples:
         MD5: cef292b5c6cdb07e480ccbba0c9d56d1
         SHA1: 15c37dbebe6fcc77108e3d7ad982676d3d5e77f7
         SHA256: 3cb152375fa9e694fd2f9167c382005166871c783774997df1a42e0b6013d82a
+        SHA384: e64427dea71a71110ebc317f3552cd7193c5743f72d5cac9257abe80346d15ee42930d5a85e16c02ea06f56c7e8811fb
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -771,6 +796,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 43bb437d609866286dd839e1d00309f5
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -783,7 +809,7 @@ KnownVulnerableSamples:
     SHA256: 91ee89520105ccbceca6ee0e34070f28c8dc5a3d73ec65f384da5da4f2a36dc0
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2016-09-13 10:56:02'
+  CreationTimestamp: '2016-09-13 12:56:02'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -857,6 +883,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G2
       ValidFrom: '2016-05-24 00:00:00'
@@ -870,6 +897,7 @@ KnownVulnerableSamples:
         MD5: acb5170547d76873f1e4ff18ed5de2eb
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
         SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
+        SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
     - Subject: C=US, ST=California, L=SANTA CLARA, O=NVIDIA Corporation, CN=NVIDIA
         Corporation
       ValidFrom: '2015-07-28 00:00:00'
@@ -883,6 +911,7 @@ KnownVulnerableSamples:
         MD5: ca9c04cba2830b5f4ef152b4a39d12ed
         SHA1: f049a238763d4a90b148ab10a500f96ebf1dc436
         SHA256: aef2a80c4f1f523fd6832fef743b9222808b1c71991e914635846ab8802c4fd9
+        SHA384: 9675fa13ddfdf105282fbbe4697fdda632d16b27b5b81844f5694b9022b0556e2d32ed6e1b9665b5d792499a314e7eb2
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -897,6 +926,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -911,6 +941,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 14781bc862e8dc503a559346f5dcc518
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -923,7 +954,7 @@ KnownVulnerableSamples:
     SHA256: d4288c055c6d68b4a45df501877443e544b31c193f8559c8c7eac927ae738e8a
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-06-04 10:13:54'
+  CreationTimestamp: '2009-06-04 12:13:54'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -998,6 +1029,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1010,6 +1042,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -1024,6 +1057,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=California, L=Santa Clara, O=NVIDIA Corporation, OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Software, CN=NVIDIA Corporation
       ValidFrom: '2007-08-07 00:00:00'
@@ -1037,6 +1071,7 @@ KnownVulnerableSamples:
         MD5: 175416493bada497157d28d65f476b32
         SHA1: 80854f578e2a3b5552ea839ba4f98ddfe94b2381
         SHA256: 9f176c9eea37039bc9ac9c92f64af7e3718e9cab05291cca2408dbef2bfb7a50
+        SHA384: c178b9d04327f47938b970e8645084e9ef15aec5f42a31067d0d9fb74cce2f092b73d4564be9bcbddd13715b063ab942
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1049,6 +1084,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 3af820a6907699580410055228ecaddf
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1061,7 +1097,7 @@ KnownVulnerableSamples:
     SHA256: d510b3424178f80cbe926217d74bbecbf682a88f1b6052ef27fd27d601fc14f7
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-03-27 03:31:22'
+  CreationTimestamp: '2013-03-27 05:31:22'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1136,6 +1172,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1149,6 +1186,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -1163,6 +1201,7 @@ KnownVulnerableSamples:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
         SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1175,6 +1214,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=US, ST=California, L=Santa Clara, O=NVIDIA Corporation, OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Software, CN=NVIDIA Corporation
       ValidFrom: '2011-09-02 00:00:00'
@@ -1188,6 +1228,7 @@ KnownVulnerableSamples:
         MD5: cef292b5c6cdb07e480ccbba0c9d56d1
         SHA1: 15c37dbebe6fcc77108e3d7ad982676d3d5e77f7
         SHA256: 3cb152375fa9e694fd2f9167c382005166871c783774997df1a42e0b6013d82a
+        SHA384: e64427dea71a71110ebc317f3552cd7193c5743f72d5cac9257abe80346d15ee42930d5a85e16c02ea06f56c7e8811fb
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -1202,6 +1243,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 43bb437d609866286dd839e1d00309f5
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at

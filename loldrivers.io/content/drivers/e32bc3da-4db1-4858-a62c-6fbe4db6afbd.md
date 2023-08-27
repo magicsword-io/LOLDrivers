@@ -242,7 +242,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -257,7 +258,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -272,7 +274,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -287,7 +290,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -302,7 +306,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -392,7 +397,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -407,7 +413,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -422,7 +429,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -437,7 +445,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -452,7 +461,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -570,7 +580,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -585,7 +596,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -600,7 +612,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -615,7 +628,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -630,7 +644,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -790,7 +805,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -805,7 +821,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -820,7 +837,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -835,7 +853,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -850,7 +869,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -1010,7 +1030,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -1025,7 +1046,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -1040,7 +1062,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -1055,7 +1078,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -1070,7 +1094,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -1245,7 +1270,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -1260,7 +1286,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -1275,7 +1302,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -1290,7 +1318,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -1305,7 +1334,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -1465,7 +1495,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -1480,7 +1511,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -1495,7 +1527,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -1510,7 +1543,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -1525,7 +1559,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -1685,7 +1720,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -1700,7 +1736,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -1715,7 +1752,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -1730,7 +1768,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -1745,7 +1784,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -1906,7 +1946,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -1921,7 +1962,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -1936,7 +1978,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -1951,7 +1994,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -1966,7 +2010,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -2052,7 +2097,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -2067,7 +2113,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -2082,7 +2129,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -2097,7 +2145,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -2112,7 +2161,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -2272,7 +2322,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -2287,7 +2338,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -2302,7 +2354,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -2317,7 +2370,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -2332,7 +2386,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -2492,7 +2547,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -2507,7 +2563,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -2522,7 +2579,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -2537,7 +2595,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -2552,7 +2611,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -2713,7 +2773,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -2728,7 +2789,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -2743,7 +2805,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -2758,7 +2821,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -2773,7 +2837,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -2936,7 +3001,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -2951,7 +3017,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -2966,7 +3033,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -2981,7 +3049,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -2996,7 +3065,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -3082,7 +3152,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -3097,7 +3168,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -3112,7 +3184,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -3127,7 +3200,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -3142,7 +3216,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -3302,7 +3377,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -3317,7 +3393,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -3332,7 +3409,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -3347,7 +3425,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -3362,7 +3441,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -3522,7 +3602,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -3537,7 +3618,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -3552,7 +3634,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -3567,7 +3650,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -3582,7 +3666,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -3742,7 +3827,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -3757,7 +3843,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -3772,7 +3859,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -3787,7 +3875,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -3802,7 +3891,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -3962,7 +4052,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -3977,7 +4068,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -3992,7 +4084,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -4007,7 +4100,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -4022,7 +4116,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -4196,7 +4291,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -4211,7 +4307,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -4226,7 +4323,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -4241,7 +4339,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -4256,7 +4355,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -4430,7 +4530,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -4445,7 +4546,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -4460,7 +4562,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -4475,7 +4578,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -4490,7 +4594,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -4651,7 +4756,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -4666,7 +4772,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -4681,7 +4788,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -4696,7 +4804,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -4711,7 +4820,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -4885,7 +4995,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -4900,7 +5011,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -4915,7 +5027,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -4930,7 +5043,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -4945,7 +5059,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -5105,7 +5220,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -5120,7 +5236,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -5135,7 +5252,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -5150,7 +5268,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -5165,7 +5284,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -5339,7 +5459,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -5354,7 +5475,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -5369,7 +5491,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -5384,7 +5507,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -5399,7 +5523,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -5560,7 +5685,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -5575,7 +5701,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -5590,7 +5717,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -5605,7 +5733,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -5620,7 +5749,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -5783,7 +5913,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -5798,7 +5929,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -5813,7 +5945,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -5828,7 +5961,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -5843,7 +5977,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -6006,7 +6141,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -6021,7 +6157,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -6036,7 +6173,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -6051,7 +6189,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -6066,7 +6205,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -6227,7 +6367,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -6242,7 +6383,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -6257,7 +6399,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -6272,7 +6415,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -6287,7 +6431,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -6448,7 +6593,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -6463,7 +6609,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -6478,7 +6625,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -6493,7 +6641,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -6508,7 +6657,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -6682,7 +6832,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -6697,7 +6848,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -6712,7 +6864,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -6727,7 +6880,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -6742,7 +6896,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -6902,7 +7057,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -6917,7 +7073,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -6932,7 +7089,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -6947,7 +7105,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -6962,7 +7121,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -7122,7 +7282,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -7137,7 +7298,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -7152,7 +7314,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -7167,7 +7330,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -7182,7 +7346,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -7342,7 +7507,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -7357,7 +7523,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -7372,7 +7539,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -7387,7 +7555,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -7402,7 +7571,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -7577,7 +7747,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -7592,7 +7763,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -7607,7 +7779,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -7622,7 +7795,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -7637,7 +7811,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -7797,7 +7972,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -7812,7 +7988,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -7827,7 +8004,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -7842,7 +8020,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -7857,7 +8036,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -8032,7 +8212,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -8047,7 +8228,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -8062,7 +8244,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -8077,7 +8260,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -8092,7 +8276,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -8252,7 +8437,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -8267,7 +8453,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -8282,7 +8469,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -8297,7 +8485,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -8312,7 +8501,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -8475,7 +8665,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -8490,7 +8681,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -8505,7 +8697,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -8520,7 +8713,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -8535,7 +8729,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -8698,7 +8893,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -8713,7 +8909,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -8728,7 +8925,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -8743,7 +8941,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -8758,7 +8957,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -8919,7 +9119,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -8934,7 +9135,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -8949,7 +9151,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -8964,7 +9167,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -8979,7 +9183,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -9140,7 +9345,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -9155,7 +9361,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -9170,7 +9377,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -9185,7 +9393,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -9200,7 +9409,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",
@@ -9361,7 +9571,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "e140543fe3256027cfa79fc3c19c1776",
         "SHA1": "c655f94eb1ecc93de319fc0c9a2dc6c5ec063728",
-        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448"
+        "SHA256": "3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448",
+        "SHA384": "d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2028-01-28 12:00:00",
@@ -9376,7 +9587,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -9391,7 +9603,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "acb5170547d76873f1e4ff18ed5de2eb",
         "SHA1": "bd6e261e75b807381bada7287de04d259258a5fa",
-        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6"
+        "SHA256": "4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6",
+        "SHA384": "4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8"
       },
       "ValidFrom": "2016-05-24 00:00:00",
       "ValidTo": "2027-06-24 00:00:00",
@@ -9406,7 +9619,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "403bb44a62aed1a94bd5df05b3292482",
         "SHA1": "e4a0353e75940ab1e8cbff2f433f186c7f0b0f09",
-        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d"
+        "SHA256": "5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d",
+        "SHA384": "db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca"
       },
       "ValidFrom": "2014-06-03 09:16:15",
       "ValidTo": "2017-09-03 09:16:15",
@@ -9421,7 +9635,8 @@ sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel &amp
       "TBS": {
         "MD5": "4798d55be7663a75649cda4dedc686ef",
         "SHA1": "0f1ab2937b245d9466ea6f9bf056a5942e3989cf",
-        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1"
+        "SHA256": "ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1",
+        "SHA384": "6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3"
       },
       "ValidFrom": "2006-05-23 17:00:51",
       "ValidTo": "2016-05-23 17:10:51",

@@ -132,7 +132,7 @@ def get_metadata(driver):
         metadata['LegalCopyright'] = version_info.get('LegalCopyright', b'').decode("utf-8")
         metadata['ProductVersion'] = version_info.get('ProductVersion', b'').decode("utf-8")
 
-    except lief.not_found:
+    except Exception as e:
         metadata['CompanyName'] = ""
         metadata['FileDescription'] = ""
         metadata['InternalName'] = ""
@@ -141,8 +141,6 @@ def get_metadata(driver):
         metadata['ProductName'] = ""
         metadata['LegalCopyright'] = ""
         metadata['ProductVersion'] = ""
-
-
 
     if len(pe.signatures) > 0:
         metadata['Signatures'] = []

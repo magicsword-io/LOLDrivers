@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: 9c31a9fbf833b732b5f3f06c31e200994a65ce187260e66eff62278660dba4ef
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-09-29 07:14:26'
+  CreationTimestamp: '2022-09-29 09:14:26'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -109,7 +109,7 @@ KnownVulnerableSamples:
       Entropy: 5.990918385480201
       Virtual Size: '0x762f'
     .rdata:
-      Entropy: 4.863080854105776
+      Entropy: 4.8630808541057755
       Virtual Size: '0x124c'
     .data:
       Entropy: 7.990071848879915
@@ -118,13 +118,13 @@ KnownVulnerableSamples:
       Entropy: 7.711412146562409
       Virtual Size: '0x600'
     INIT:
-      Entropy: 5.351030079594413
+      Entropy: 5.351030079594412
       Virtual Size: '0x8be'
     .vmp0:
       Entropy: 6.894363452637907
       Virtual Size: '0x108ed8'
     .reloc:
-      Entropy: 4.478793837093537
+      Entropy: 4.478793837093536
       Virtual Size: '0xe4'
   Signature:
   - Microsoft Windows Hardware Compatibility Publisher
@@ -147,6 +147,7 @@ KnownVulnerableSamples:
         MD5: fdc11a5676aed4e9cc0c09eeb7450dfb
         SHA1: 4902077d9a05d4231b791d3b05bafa4a79132f03
         SHA256: 5db56c23d83bf67c7152e28ad4a684a7372b4ae4f52afe7a81ce91eef94caec3
+        SHA384: c952d7f0e0ea5216ce4400601fb7c0829f0f3fcd6eb2b5b9112fbe45d133e00c4abd660f8e1794f7ac4ef95123e2c0ab
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -160,6 +161,7 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 3300000057ee4d659a923e7c10000000000057
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft

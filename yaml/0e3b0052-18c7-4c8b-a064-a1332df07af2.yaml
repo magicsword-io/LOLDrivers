@@ -34,7 +34,7 @@ KnownVulnerableSamples:
   Company: "\u96F7\u795E\uFF08\u6B66\u6C49\uFF09\u7F51\u7EDC\u6280\u672F\u6709\u9650\
     \u516C\u53F8"
   Copyright: Copyright @ Www.Nn.Com
-  CreationTimestamp: '2020-04-03 04:51:25'
+  CreationTimestamp: '2020-04-03 06:51:25'
   Date: ''
   Description: "\u96F7\u795ENN\u52A0\u901F\u5668-\u9A71\u52A8\u7A0B\u5E8F\u6587\u4EF6"
   ExportedFunctions: ''
@@ -187,7 +187,7 @@ KnownVulnerableSamples:
       Entropy: 3.686270807485425
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 6.590687837428921
+      Entropy: 6.59068783742892
       Virtual Size: '0xc8a'
   Signature: ''
   Signatures:
@@ -207,6 +207,7 @@ KnownVulnerableSamples:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
         SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
     - Subject: C=CN, ST=, L=, O=, CN=
       ValidFrom: '2020-04-07 00:00:00'
       ValidTo: '2023-04-12 12:00:00'
@@ -219,6 +220,7 @@ KnownVulnerableSamples:
         MD5: 559c170b8f735dd1ba8c3946354c4fa5
         SHA1: e7432e65001ca5e56478ee25ae9906981432ee75
         SHA256: 1c6140780d5210fb89e1dd3005184e03dc52740266a921035b1f836b5af0d32a
+        SHA384: 545ad02c12154f939f80b6f4b9d7ae888550220af82ec3f0a42805c8f6e6d7e57dbe62c80a8f8ec35a894acce2f68d9f
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -231,6 +233,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -244,6 +247,7 @@ KnownVulnerableSamples:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
         SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
+        SHA384: 86f49574f368a561914a52d7ae043ec6784ef8c718960700f834e123594605d25d39f1ad45f1eb5052c9567f3edd0e16
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -256,6 +260,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0dd7d4a785990584d8c0837659173272
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
@@ -268,7 +273,7 @@ KnownVulnerableSamples:
   Company: "\u96F7\u795E\uFF08\u6B66\u6C49\uFF09\u7F51\u7EDC\u6280\u672F\u6709\u9650\
     \u516C\u53F8"
   Copyright: Copyright @ Www.Nn.Com
-  CreationTimestamp: '2020-04-03 04:54:10'
+  CreationTimestamp: '2020-04-03 06:54:10'
   Date: ''
   Description: "\u96F7\u795ENN\u52A0\u901F\u5668-\u9A71\u52A8\u7A0B\u5E8F\u6587\u4EF6"
   ExportedFunctions: ''
@@ -408,10 +413,10 @@ KnownVulnerableSamples:
       Entropy: 4.7617738882730976
       Virtual Size: '0x1c7c'
     .data:
-      Entropy: 1.9573155632634147
+      Entropy: 1.957315563263415
       Virtual Size: '0x16c0'
     .pdata:
-      Entropy: 4.987692606613797
+      Entropy: 4.987692606613798
       Virtual Size: '0xd50'
     INIT:
       Entropy: 5.223648954698558
@@ -420,7 +425,7 @@ KnownVulnerableSamples:
       Entropy: 3.8633479531370662
       Virtual Size: '0x3b8'
     .reloc:
-      Entropy: 4.789360076662959
+      Entropy: 4.789360076662958
       Virtual Size: '0x130'
   Signature: ''
   Signatures:
@@ -440,6 +445,7 @@ KnownVulnerableSamples:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
         SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
     - Subject: C=CN, ST=, L=, O=, CN=
       ValidFrom: '2020-04-07 00:00:00'
       ValidTo: '2023-04-12 12:00:00'
@@ -452,6 +458,7 @@ KnownVulnerableSamples:
         MD5: 559c170b8f735dd1ba8c3946354c4fa5
         SHA1: e7432e65001ca5e56478ee25ae9906981432ee75
         SHA256: 1c6140780d5210fb89e1dd3005184e03dc52740266a921035b1f836b5af0d32a
+        SHA384: 545ad02c12154f939f80b6f4b9d7ae888550220af82ec3f0a42805c8f6e6d7e57dbe62c80a8f8ec35a894acce2f68d9f
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -464,6 +471,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -477,6 +485,7 @@ KnownVulnerableSamples:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
         SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
+        SHA384: 86f49574f368a561914a52d7ae043ec6784ef8c718960700f834e123594605d25d39f1ad45f1eb5052c9567f3edd0e16
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -489,6 +498,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0dd7d4a785990584d8c0837659173272
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code

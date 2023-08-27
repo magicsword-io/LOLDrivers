@@ -46,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: c0c131bc8d6c8b5a2be32474474b1221bce1289c174c87e743ed4a512f5571d4
   Company: AVAST Software
   Copyright: Copyright (c) 2021 AVAST Software
-  CreationTimestamp: '2021-02-01 02:08:43'
+  CreationTimestamp: '2021-02-01 04:08:43'
   Date: ''
   Description: Avast Anti Rootkit
   ExportedFunctions: ''
@@ -237,7 +237,7 @@ KnownVulnerableSamples:
   SHA256: 4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1
   Sections:
     .text:
-      Entropy: 6.386320097220837
+      Entropy: 6.386320097220838
       Virtual Size: '0x228c2'
     .rdata:
       Entropy: 5.733045078108813
@@ -249,7 +249,7 @@ KnownVulnerableSamples:
       Entropy: 5.411411947630738
       Virtual Size: '0x1218'
     PAGE:
-      Entropy: 6.270335052415906
+      Entropy: 6.270335052415905
       Virtual Size: '0x1c4b'
     INIT:
       Entropy: 5.365142970284712
@@ -280,6 +280,7 @@ KnownVulnerableSamples:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
         SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
     - Subject: C=CZ, L=Praha, O=Avast Software s.r.o., OU=RE 999, CN=Avast Software
         s.r.o.
       ValidFrom: '2019-12-02 00:00:00'
@@ -293,6 +294,7 @@ KnownVulnerableSamples:
         MD5: f251d9cde0901fb67831855b4a592b51
         SHA1: cd0ac068faea4b875ded287512f20b6ba8dcb457
         SHA256: 247e040822854e1a4cbc3488782a9e96db6bffa9bdfe36406a46e3f88695d423
+        SHA384: c6a765c300f3ee36604e9c51a9fcd18071b0cd0bd15b3ad69350f04a0b1b5ef7b71556af698a1e8988bf91cd8b2a6104
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
         ID Timestamping CA
       ValidFrom: '2016-01-07 12:00:00'
@@ -306,6 +308,7 @@ KnownVulnerableSamples:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
         SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         EV Root CA
       ValidFrom: '2011-04-15 19:45:33'
@@ -319,6 +322,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -332,6 +336,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     Signer:
     - SerialNumber: 03f02aca051d1c9330eeabd3706e836f
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance

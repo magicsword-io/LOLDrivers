@@ -95,6 +95,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=Private Organization, ??=US, ??=Delaware, serialNumber=3830661,
         ??=320 Summer Street, postalCode=02210, C=US, ST=Massachusetts, L=Boston,
         O=LogMeIn, Inc., CN=LogMeIn, Inc.
@@ -109,6 +110,7 @@ KnownVulnerableSamples:
         MD5: 0ab811681729b60e5a52e1d629735427
         SHA1: 915bae9a4eb8f9401e25e88aa88df0291d284e87
         SHA256: 0959baf33a5efce5a36076b4fde7d39f1c04e3c4e2b0f6859be66cc9d472538f
+        SHA384: 42654d164eef35c9ef5c4138dd485009b65b8db4affc1f1359572b00465b92bf5ce3dd64e4504f74263b81f81eb73044
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -121,6 +123,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       ValidFrom: '2012-04-18 12:00:00'
@@ -134,6 +137,7 @@ KnownVulnerableSamples:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
         SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -146,6 +150,7 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 080d35880102e23d2340f69eb3c0e561
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -172,12 +177,12 @@ KnownVulnerableSamples:
       Entropy: 5.1019801701731975
       Virtual Size: '0x404'
     .rsrc:
-      Entropy: 3.552566938777486
+      Entropy: 3.5525669387774856
       Virtual Size: '0x438'
     .reloc:
       Entropy: 2.3438548967005404
       Virtual Size: '0x20'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-01-10 09:30:08'
+  CreationTimestamp: '2017-01-10 11:30:08'
 Tags:
 - LMIinfo.sys
