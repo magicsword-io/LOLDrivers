@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies with Poetry
         run: poetry install
       - name: Generate shields.io URL
-        run: poetry run python bin/gen_counter.py -f yaml/
+        run: poetry run python bin/gen-counter.py -f yaml/
         id: counter
       - name: Update README
         run: |
