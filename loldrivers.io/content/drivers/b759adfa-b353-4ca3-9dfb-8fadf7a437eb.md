@@ -338,7 +338,7 @@ sc.exe create spwizimgVT.sys binPath=C:\windows\temp\spwizimgVT.sys type=kernel 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/b759adfa-b353-4ca3-9dfb-8fadf7a437eb.yaml)
 
-*last_updated:* 2023-08-28
+*last_updated:* 2023-09-03
 
 {{< /column >}}
 {{< /block >}}
