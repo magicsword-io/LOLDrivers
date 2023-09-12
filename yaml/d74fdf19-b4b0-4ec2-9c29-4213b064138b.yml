@@ -7,15 +7,17 @@ Verified: 'TRUE'
 Commands:
   Command: sc.exe create irec binPath=C:\windows\temp\irec.sys type=kernel && sc.exe
     start irec.sys
-  Description: ''
+  Description: 'The driver in question, identified as \\.\IREC, provides an interface for external programs to directly interact with system processes. Its key functionality is encapsulated in the OPENPROCESS function which, upon receiving a Process ID (PID), returns a handle to that specific process operating within the kernels domain. The vulnerability emerges from the indiscriminate nature of this functionality. An ill-intentioned actor can exploit this to obtain handles to critical processes like LSASS. With a hardcoded access mask of 0x410, this driver essentially grants PROCESS_QUERY_INFORMATION and PROCESS_VM_READ permissions, enabling unauthorized memory dumps from privileged processes, all from an unprivileged context.'
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
-- https://github.com/alfarom256/HPHardwareDiagnostics-PoC
+- https://blog.dru1d.ninja/windows-driver-exploit-development-irec-sys-a5eb45093945
+- https://gist.github.com/dru1d-foofus/1af21179f253879f101c3a8d4f718bf0
+- https://www.binalyze.com/irec
 Acknowledgement:
-  Person: Michael Alfaro
-  Handle: '@_mmpte_software'
+  Person: Michael Alfaro (@_mmpte_software), Tyler Booth
+  Handle: '@tyler_dru1d'
 Detection: []
 KnownVulnerableSamples:
 - Filename: irec.sys
