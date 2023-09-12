@@ -26,7 +26,7 @@ def get_yaml(file_path: str) -> dict:
             data.append(part)
     return data
 
-def gen_names_list():
+def gen_names_list(category_):
     """
         Generates list of driver names
     """
@@ -34,7 +34,7 @@ def gen_names_list():
     for file in yield_next_rule_file_path(path_to_yml):
         category = get_yaml_part(file_path=file, part_name="Category")
         driver_name = get_yaml_part(file_path=file, part_name="Tags")[0]
-        if category != "Revoked Bootloaders":
+        if category_.lower() == category.lower():
             if driver_name:
                 names_list.append(driver_name)
     
@@ -50,6 +50,7 @@ def gen_hashes_lists(category_):
     md5_list = []
     sha1_list = []
     sha256_list = []
+    imphash_list = []
     for file in yield_next_rule_file_path(path_to_yml):
         category = get_yaml_part(file_path=file, part_name="Category")
         if category_.lower() == category.lower():
@@ -65,13 +66,17 @@ def gen_hashes_lists(category_):
                     if 'SHA256' in i:
                         if i['SHA256'] != "-":
                             sha256_list.append(i['SHA256'])
+                    if 'Imphash' in i:
+                        if i['Imphash'] != "-":
+                            imphash_list.append(i['Imphash'])
     
     # Remove leading and trailing spaces as well as any duplicates
     md5_list = list(filter(None,list(set([i.lstrip().strip().lower() for i in md5_list]))))
     sha1_list = list(filter(None,list(set([i.lstrip().strip().lower() for i in sha1_list]))))
     sha256_list = list(filter(None,list(set([i.lstrip().strip().lower() for i in sha256_list]))))
+    imphash_list = list(filter(None,list(set([i.lstrip().strip().lower() for i in imphash_list]))))
 
-    return md5_list, sha1_list, sha256_list
+    return md5_list, sha1_list, sha256_list, imphash_list
 
 def gen_authentihash_lists(category_):
     """
@@ -104,7 +109,7 @@ def gen_authentihash_lists(category_):
 
     return authentihash_md5_list, authentihash_sha1_list, authentihash_sha256_list
 
-def gen_hashes_files(md5_list, sha1_list, sha256_list, name):
+def gen_hashes_files(md5_list, sha1_list, sha256_list, imphash_list, name):
     """
         Generates hash samples files
     """
@@ -126,6 +131,12 @@ def gen_hashes_files(md5_list, sha1_list, sha256_list, name):
     if sha256_list:
         with open(f'detections/hashes/{name}.sha256', 'w') as f:
             for i in sha256_list:
+                if i != "-":
+                    f.write(i + "\n")
+
+    if imphash_list:
+        with open(f'detections/hashes/{name}.imphash', 'w') as f:
+            for i in imphash_list:
                 if i != "-":
                     f.write(i + "\n")
 
@@ -166,7 +177,7 @@ def gen_authentihash_file(authentihash_md5_list, authentihash_sha1_list, authent
                 if i != "-":
                     f.write(i + "\n")
 
-def gen_sysmon_driver_load_config(md5_list, sha1_list, sha256_list, name, rule_group_name):
+def gen_sysmon_driver_load_config(md5_list, sha1_list, sha256_list, imphash_list, name, rule_group_name):
     """
         Generates sysmon driver load configuration
     """
@@ -194,12 +205,17 @@ def gen_sysmon_driver_load_config(md5_list, sha1_list, sha256_list, name, rule_g
                 if i != "-":
                     f.write("                <Hashes condition=\"contains\">SHA256=" + i + "</Hashes>\n")
 
+        if imphash_list:
+            for i in imphash_list:
+                if i != "-":
+                    f.write("                <Hashes condition=\"contains\">IMPHASH=" + i + "</Hashes>\n")
+
         f.write("			</DriverLoad>\n")
         f.write("		</RuleGroup>\n")
         f.write("	</EventFiltering>\n")
         f.write("</Sysmon>\n")
 
-def gen_sysmon_block_config(md5_list, sha1_list, sha256_list, name, rule_group_name):
+def gen_sysmon_block_config(md5_list, sha1_list, sha256_list, imphash_list, name, rule_group_name):
     """
         Generates sysmon blocking configuration
     """
@@ -223,13 +239,18 @@ def gen_sysmon_block_config(md5_list, sha1_list, sha256_list, name, rule_group_n
             for i in sha256_list:
                 if i != "-":
                     f.write("                <Hashes condition=\"contains\">SHA256=" + i + "</Hashes>\n")
+        
+        if imphash_list:
+            for i in imphash_list:
+                if i != "-":
+                    f.write("                <Hashes condition=\"contains\">IMPHASH=" + i + "</Hashes>\n")
 
         f.write("			</FileBlockExecutable>\n")
         f.write("		</RuleGroup>\n")
         f.write("	</EventFiltering>\n")
         f.write("</Sysmon>\n")
 
-def gen_sysmon_exe_detect_config(md5_list, sha1_list, sha256_list, name, rule_group_name):
+def gen_sysmon_exe_detect_config(md5_list, sha1_list, sha256_list, imphash_list, name, rule_group_name):
     """
         Generates sysmon executable detection configuration
     """
@@ -253,13 +274,18 @@ def gen_sysmon_exe_detect_config(md5_list, sha1_list, sha256_list, name, rule_gr
             for i in sha256_list:
                 if i != "-":
                     f.write("                <Hashes condition=\"contains\">SHA256=" + i + "</Hashes>\n")
+        
+        if imphash_list:
+            for i in imphash_list:
+                if i != "-":
+                    f.write("                <Hashes condition=\"contains\">IMPHASH=" + i + "</Hashes>\n")
 
         f.write("			</FileExecutableDetected>\n")
         f.write("		</RuleGroup>\n")
         f.write("	</EventFiltering>\n")
         f.write("</Sysmon>\n")
 
-def gen_sigma_rule_hashes(md5_list, sha1_list, sha256_list, name, uuid, title, description):
+def gen_sigma_rule_hashes(md5_list, sha1_list, sha256_list, imphash_list, name, uuid, title, description):
     """
         Generates DriverLoad SIGMA rule based on driver hashes
     """
@@ -299,6 +325,10 @@ def gen_sigma_rule_hashes(md5_list, sha1_list, sha256_list, name, uuid, title, d
                 for i in sha256_list:
                     f.write("            - 'SHA256=" + i + "'\n")
             
+            if imphash_list:
+                for i in imphash_list:
+                    f.write("            - 'IMPHASH=" + i + "'\n")
+            
             f.write("    selection_other:\n")
 
             if md5_list:
@@ -315,25 +345,27 @@ def gen_sigma_rule_hashes(md5_list, sha1_list, sha256_list, name, uuid, title, d
                 f.write("        - sha256:\n")
                 for i in sha256_list:
                     f.write("            - '" + i + "'\n")
+            
+            if imphash_list:
+                f.write("        - imphash:\n")
+                for i in imphash_list:
+                    f.write("            - '" + i + "'\n")
 
             f.write("    condition: 1 of selection_*\n")
             f.write("falsepositives:\n")
             f.write("    - Unknown\n")
             f.write("level: high\n")
 
-def gen_sigma_rule_names(names_list):
+def gen_sigma_rule_names(names_list, uuid, rule_name, rule_title, description, level):
     """
         Generates DriverLoad SIGMA rule based on driver names
     """
     if names_list:
-        with open("detections/sigma/driver_load_win_vuln_drivers_names.yml", "w") as f:
-            f.write("title: Vulnerable Driver Load By Name\n")
-            f.write("id: c316eac1-f3d8-42da-ad1c-66dcec5ca787\n")
-            f.write("related:\n")
-            f.write("    - id: 7aaaf4b8-e47c-4295-92ee-6ed40a6f60c8\n")
-            f.write("      type: derived\n")
+        with open(f"detections/sigma/{rule_name}.yml", "w") as f:
+            f.write(f"title: {rule_title}\n")
+            f.write(f"id: {uuid}\n")
             f.write("status: experimental\n")
-            f.write("description: Detects the load of known vulnerable drivers via their names only.\n")
+            f.write(f"description: {description}.\n")
             f.write("references:\n")
             f.write("    - https://loldrivers.io/\n")
             f.write("author: Nasreddine Bencherchali (Nextron Systems)\n")
@@ -357,7 +389,7 @@ def gen_sigma_rule_names(names_list):
             f.write("falsepositives:\n")
             f.write("    - False positives may occur if one of the vulnerable driver names mentioned above didn't change its name between versions. So always make sure that the driver being loaded is the legitimate one and the non vulnerable version.\n")
             f.write("    - If you experience a lot of FP you could comment the driver name or its exact known legitimate location (when possible)\n")
-            f.write("level: low\n")
+            f.write(f"level: {level}\n")
 
 def gen_clamav_hash_list():
     """
@@ -385,46 +417,47 @@ if __name__ == "__main__":
     # GOOTS LOVER
 
     print("[+] Generating hash lists...")
-    md5_list_boots, sha1_list_boots, sha256_list_boots = gen_hashes_lists("Revoked Bootloaders")
-    md5_list_malicious, sha1_list_malicious, sha256_list_malicious = gen_hashes_lists("malicious")
-    md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable = gen_hashes_lists("vulnerable driver")
+    md5_list_malicious, sha1_list_malicious, sha256_list_malicious, imphash_list_malicious = gen_hashes_lists("malicious")
+    md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable, imphash_list_vulnerable = gen_hashes_lists("vulnerable driver")
 
     print("[+] Generating authentihash lists...")
-    authentihash_md5_list_boots, authentihash_sha1_list_boots, authentihash_sha256_list_boots = gen_authentihash_lists("Revoked Bootloaders")
     authentihash_md5_list_malicious, authentihash_sha1_list_malicious, authentihash_sha256_list_malicious = gen_authentihash_lists("malicious")
     authentihash_md5_list_vulnerable, authentihash_sha1_list_vulnerable, authentihash_sha256_list_vulnerable = gen_authentihash_lists("vulnerable driver")
 
-    names_list = gen_names_list()
+    print("[+] Generating names lists...")
+    names_list_malicious = gen_names_list("malicious")
+    names_list_vulnerable = gen_names_list("vulnerable driver")
 
     print("[+] Generating hash samples...")
     # samples
-    gen_hashes_files(md5_list_boots, sha1_list_boots, sha256_list_boots, "samples_boots")
-    gen_hashes_files(md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable, "samples_vulnerable")
-    gen_hashes_files(md5_list_malicious, sha1_list_malicious, sha256_list_malicious, "samples_malicious")
+    gen_hashes_files(md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable, imphash_list_vulnerable, "samples_vulnerable")
+    gen_hashes_files(md5_list_malicious, sha1_list_malicious, sha256_list_malicious, imphash_list_malicious, "samples_malicious")
     gen_clamav_hash_list()
 
     print("[+] Generating authentihash samples...")
     # authentihash_samples
-    gen_authentihash_file(authentihash_md5_list_boots, authentihash_sha1_list_boots, authentihash_sha256_list_boots, "authentihash_samples_boots")
     gen_authentihash_file(authentihash_md5_list_vulnerable, authentihash_sha1_list_vulnerable, authentihash_sha256_list_vulnerable, "authentihash_samples_vulnerable")
     gen_authentihash_file(authentihash_md5_list_malicious, authentihash_sha1_list_malicious, authentihash_sha256_list_malicious, "authentihash_samples_malicious")
     
     print("[+] Generating Sysmon configurations...")
     # sysmon_config_vulnerable_hashes
-    gen_sysmon_driver_load_config(md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable, "sysmon_config_vulnerable_hashes", "Vulnerable Driver Load")
-    gen_sysmon_driver_load_config(md5_list_malicious, sha1_list_malicious, sha256_list_malicious, "sysmon_config_malicious_hashes", "Malicious Driver Load")
+    gen_sysmon_driver_load_config(md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable, imphash_list_vulnerable, "sysmon_config_vulnerable_hashes", "Vulnerable Driver Load")
+    gen_sysmon_driver_load_config(md5_list_malicious, sha1_list_malicious, sha256_list_malicious, imphash_list_malicious, "sysmon_config_malicious_hashes", "Malicious Driver Load")
     
     # sysmon_config_vulnerable_hashes_block
-    gen_sysmon_block_config(md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable, "sysmon_config_vulnerable_hashes_block", "Vulnerable Driver Blocked")
-    gen_sysmon_block_config(md5_list_malicious, sha1_list_malicious, sha256_list_malicious, "sysmon_config_malicious_hashes_block", "Malicious Driver Blocked")
+    gen_sysmon_block_config(md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable, imphash_list_vulnerable, "sysmon_config_vulnerable_hashes_block", "Vulnerable Driver Blocked")
+    gen_sysmon_block_config(md5_list_malicious, sha1_list_malicious, sha256_list_malicious, imphash_list_malicious, "sysmon_config_malicious_hashes_block", "Malicious Driver Blocked")
 
    # sysmon_config_vulnerable_hashes_exe_detect
-    gen_sysmon_exe_detect_config(md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable, "sysmon_config_vulnerable_hashes_exe_detect", "Vulnerable Driver Drop Detected")
-    gen_sysmon_exe_detect_config(md5_list_malicious, sha1_list_malicious, sha256_list_malicious, "sysmon_config_malicious_hashes_exe_detect", "Malicious Driver Drop Detected")
+    gen_sysmon_exe_detect_config(md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable, imphash_list_vulnerable, "sysmon_config_vulnerable_hashes_exe_detect", "Vulnerable Driver Drop Detected")
+    gen_sysmon_exe_detect_config(md5_list_malicious, sha1_list_malicious, sha256_list_malicious, imphash_list_malicious, "sysmon_config_malicious_hashes_exe_detect", "Malicious Driver Drop Detected")
     
     print("[+] Generating Sigma rules...")
     # driver_load_win_vuln_drivers
-    gen_sigma_rule_hashes(md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable, "driver_load_win_vuln_drivers", "7aaaf4b8-e47c-4295-92ee-6ed40a6f60c8", "Vulnerable Driver Load", "Detects the load of known vulnerable drivers by hash value")
-    gen_sigma_rule_hashes(md5_list_malicious, sha1_list_malicious, sha256_list_malicious, "driver_load_win_mal_drivers", "05296024-fe8a-4baf-8f3d-9a5f5624ceb2", "Malicious Driver Load", "Detects the load of known malicious drivers by hash value")
+    gen_sigma_rule_hashes(md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable, imphash_list_vulnerable, "driver_load_win_vuln_drivers", "7aaaf4b8-e47c-4295-92ee-6ed40a6f60c8", "Vulnerable Driver Load", "Detects the load of known vulnerable drivers by hash value")
+    gen_sigma_rule_hashes(md5_list_malicious, sha1_list_malicious, sha256_list_malicious, imphash_list_malicious, "driver_load_win_mal_drivers", "05296024-fe8a-4baf-8f3d-9a5f5624ceb2", "Malicious Driver Load", "Detects the load of known malicious drivers by hash value")
     
-    gen_sigma_rule_names(names_list)
+    gen_sigma_rule_names(names_list_vulnerable, "72cd00d6-490c-4650-86ff-1d11f491daa1", "driver_load_win_vuln_drivers_names", "Vulnerable Driver Load By Name", "Detects the load of known vulnerable drivers via their names only.", "low")
+    gen_sigma_rule_names(names_list_malicious, "39b64854-5497-4b57-a448-40977b8c9679", "driver_load_win_mal_drivers_names", "Malicious Driver Load By Name", "Detects the load of known malicious drivers via their names only.", "medium")
+
+    print("[+] Finished...Happy Hunting")
