@@ -88,6 +88,8 @@ def get_metadata(driver):
 
     md5, sha1, sha256 = get_hashes(driver)
 
+    imphash = lief.PE.get_imphash(pe, lief.PE.IMPHASH_MODE.PEFILE)
+
     metadata["Name"] = pe.name
     metadata["Libraries"] = pe.libraries
 
@@ -103,6 +105,7 @@ def get_metadata(driver):
     metadata["MD5"] = md5
     metadata["SHA1"] = sha1
     metadata["SHA256"] = sha256
+    metadata["Imphash"] = imphash
 
     metadata['Machine'] = pe.header.machine.name
     metadata['MagicHeader'] = " ".join([hex(i)[2:] for i in pe.header.signature])
@@ -225,6 +228,7 @@ def enrich_yaml(file_path_, metadata_md5, metadata_sha1, metadata_sha256):
                     sample['MD5'] = metadata_['MD5']
                     sample['SHA1'] = metadata_['SHA1']
                     sample['SHA256'] = metadata_['SHA256']
+                    sample['Imphash'] = metadata_['Imphash']
                     sample['Authentihash'] = {
                         'MD5':metadata_['AuthentihashMD5'],
                         'SHA1': metadata_['AuthentihashSHA1'],
