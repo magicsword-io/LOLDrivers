@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "loldriver-lql-gen"
+version = "0.1.0"
+description = ""
+authors = ["Jose Hernandez <josehelps@gmail.com>"]
+readme = "README.md"
+packages = [{include = "loldriver_lql_gen"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+pyyaml = "^6.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
