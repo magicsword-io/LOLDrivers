@@ -1,0 +1,36 @@
+Id: 6736cbe7-33ea-4488-b464-231c0b8d1049
+Author: Takahiro Haruyama
+Created: '2023-10-12'
+MitreID: T1542
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create gpcidrv64.sys binPath=C:\windows\temp\gpcidrv64.sys type=kernel
+    && sc.exe start gpcidrv64.sys
+  Description: ''
+  Usecase: firmware erasing/modification
+  Privileges: kernel
+  OperatingSystem: Windows 11
+Resources:
+- https://github.com/ucsb-seclab/popkorn-artifact/tree/main/evaluation
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: ''
+  MD5: 5d4df0bac74e9ac62af6bc99440b050b
+  SHA1: ''
+  SHA256: 655110646bff890c448c0951e11132dc3592bda6e080696341b930d090224723
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+Tags:
+- gpcidrv64.sys

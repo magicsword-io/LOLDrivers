@@ -1,0 +1,36 @@
+Id: 257d425f-f660-466c-8bee-c24cccf06daa
+Author: Takahiro Haruyama
+Created: '2023-10-12'
+MitreID: T1542, T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create AsmIo64.sys binPath=C:\windows\temp\AsmIo64.sys type=kernel
+    && sc.exe start AsmIo64.sys
+  Description: ''
+  Usecase: Elevate privileges, firmware erasing/modification
+  Privileges: kernel
+  OperatingSystem: Windows 11
+Resources:
+- https://github.com/ucsb-seclab/popkorn-artifact/tree/main/evaluation
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: ''
+  MD5: 8f73c1c48ffddfca7d1a98faf83d18ff
+  SHA1: ''
+  SHA256: e4658d93544f69f5cb9aa6d9fec420fecc8750cb57e1e9798da38c139d44f2eb
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+Tags:
+- AsmIo64.sys
