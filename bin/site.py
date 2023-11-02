@@ -7,6 +7,8 @@ import json
 import datetime
 import jinja2
 import csv
+import pandas as pd
+
 
 def write_drivers_csv(drivers, output_dir, VERBOSE):
     output_file = os.path.join(output_dir, 'content', 'api', 'drivers.csv')
@@ -17,61 +19,56 @@ def write_drivers_csv(drivers, output_dir, VERBOSE):
               'KnownVulnerableSamples_Publisher', 'KnownVulnerableSamples_Date',
               'KnownVulnerableSamples_Company', 'KnownVulnerableSamples_Description', 
               'KnownVulnerableSamples_Authentihash_MD5', 'KnownVulnerableSamples_Authentihash_SHA1', 'KnownVulnerableSamples_Authentihash_SHA256', 'Verified', 'Tags']
+    rows = []
+    for driver in drivers:
+        if VERBOSE:
+            print(f"Writing driver CSV: {driver['Id']}")
 
-    with open(output_file, 'w', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=header, quotechar='"', quoting=csv.QUOTE_ALL)
-        writer.writeheader()
+        md5s = [s['MD5'] for s in driver['KnownVulnerableSamples'] if 'MD5' in s]
+        sha1s = [s['SHA1'] for s in driver['KnownVulnerableSamples'] if 'SHA1' in s]
+        sha256s = [s['SHA256'] for s in driver['KnownVulnerableSamples'] if 'SHA256' in s]
+        publishers = [s['Publisher'] for s in driver['KnownVulnerableSamples'] if 'Publisher' in s]
+        dates = [s['Date'] for s in driver['KnownVulnerableSamples'] if 'Date' in s]
+        companies = [s['Company'] for s in driver['KnownVulnerableSamples'] if 'Company' in s]
+        descriptions = [s['Description'] for s in driver['KnownVulnerableSamples'] if 'Description' in s]
+        authentihash_md5s = [s['Authentihash']['MD5'] for s in driver['KnownVulnerableSamples'] if 'Authentihash' in s]
+        authentihash_sha1s = [s['Authentihash']['SHA1'] for s in driver['KnownVulnerableSamples'] if 'Authentihash' in s]
+        authentihash_sha256s = [s['Authentihash']['SHA256'] for s in driver['KnownVulnerableSamples'] if 'Authentihash' in s]
 
-        for driver in drivers:
-            if VERBOSE:
-                print(f"Writing driver CSV: {driver['Id']}")
+        row = {
+            'Id': driver.get('Id', ''),
+            'Author': driver.get('Author', ''),
+            'Created': driver.get('Created', ''),
+            'Command': driver.get('Command', ''),
+            'Description': driver.get('Description', ''),
+            'Usecase': driver.get('Usecase', ''),
+            'Category': driver.get('Category', ''),
+            'Privileges': driver.get('Privileges', ''),
+            'MitreID': driver.get('MitreID', ''),
+            'OperatingSystem': driver.get('OperatingSystem', ''),
+            'Resources': driver.get('Resources', ''),
+            'Driver Description': driver.get('Driver Description', ''),
+            'Person': driver.get('Person', ''),
+            'Handle': driver.get('Handle', ''),
+            'Detection': driver.get('Detection', ''),
+            'KnownVulnerableSamples_MD5': ', '.join(str(md5) for md5 in md5s),
+            'KnownVulnerableSamples_SHA1': ', '.join(str(sha1) for sha1 in sha1s),
+            'KnownVulnerableSamples_SHA256': ', '.join(str(sha256) for sha256 in sha256s),
+            'KnownVulnerableSamples_Publisher': ', '.join(str(publisher) for publisher in publishers),
+            'KnownVulnerableSamples_Date': ', '.join(str(date) for date in dates),
+            'KnownVulnerableSamples_Company': ', '.join(str(company) for company in companies),
+            'KnownVulnerableSamples_Description': ', '.join(str(description) for description in descriptions),
+            'KnownVulnerableSamples_Authentihash_MD5': ', '.join(str(md5) for md5 in authentihash_md5s),
+            'KnownVulnerableSamples_Authentihash_SHA1': ', '.join(str(sha1) for sha1 in authentihash_sha1s),
+            'KnownVulnerableSamples_Authentihash_SHA256': ', '.join(str(sha256) for sha256 in authentihash_sha256s),
+            'Verified': driver.get('Verified', ''),
+            'Tags': ', '.join(str(tag) for tag in driver['Tags'])                                  
+        }
 
-            md5s = [s['MD5'] for s in driver['KnownVulnerableSamples'] if 'MD5' in s]
-            sha1s = [s['SHA1'] for s in driver['KnownVulnerableSamples'] if 'SHA1' in s]
-            sha256s = [s['SHA256'] for s in driver['KnownVulnerableSamples'] if 'SHA256' in s]
-            publishers = [s['Publisher'] for s in driver['KnownVulnerableSamples'] if 'Publisher' in s]
-            dates = [s['Date'] for s in driver['KnownVulnerableSamples'] if 'Date' in s]
-            companies = [s['Company'] for s in driver['KnownVulnerableSamples'] if 'Company' in s]
-            descriptions = [s['Description'] for s in driver['KnownVulnerableSamples'] if 'Description' in s]
-            authentihash_md5s = [s['Authentihash']['MD5'] for s in driver['KnownVulnerableSamples'] if 'Authentihash' in s]
-            authentihash_sha1s = [s['Authentihash']['SHA1'] for s in driver['KnownVulnerableSamples'] if 'Authentihash' in s]
-            authentihash_sha256s = [s['Authentihash']['SHA256'] for s in driver['KnownVulnerableSamples'] if 'Authentihash' in s]
+        rows.append(row)
 
-        
-            row = {
-                'Id': driver.get('Id', ''),
-                'Author': driver.get('Author', ''),
-                'Created': driver.get('Created', ''),
-                'Command': driver.get('Command', ''),
-                'Description': driver.get('Description', ''),
-                'Usecase': driver.get('Usecase', ''),
-                'Category': driver.get('Category', ''),
-                'Privileges': driver.get('Privileges', ''),
-                'MitreID': driver.get('MitreID', ''),
-                'OperatingSystem': driver.get('OperatingSystem', ''),
-                'Resources': driver.get('Resources', ''),
-                'Driver Description': driver.get('Driver Description', ''),
-                'Person': driver.get('Person', ''),
-                'Handle': driver.get('Handle', ''),
-                'Detection': driver.get('Detection', ''),
-                'KnownVulnerableSamples_MD5': ', '.join(str(md5) for md5 in md5s),
-                'KnownVulnerableSamples_SHA1': ', '.join(str(sha1) for sha1 in sha1s),
-                'KnownVulnerableSamples_SHA256': ', '.join(str(sha256) for sha256 in sha256s),
-                'KnownVulnerableSamples_Publisher': ', '.join(str(publisher) for publisher in publishers),
-                'KnownVulnerableSamples_Date': ', '.join(str(date) for date in dates),
-                'KnownVulnerableSamples_Company': ', '.join(str(company) for company in companies),
-                'KnownVulnerableSamples_Description': ', '.join(str(description) for description in descriptions),
-                'KnownVulnerableSamples_Authentihash_MD5': ', '.join(str(md5) for md5 in authentihash_md5s),
-                'KnownVulnerableSamples_Authentihash_SHA1': ', '.join(str(sha1) for sha1 in authentihash_sha1s),
-                'KnownVulnerableSamples_Authentihash_SHA256': ', '.join(str(sha256) for sha256 in authentihash_sha256s),
-                'Verified': driver.get('Verified', ''),
-                'Tags': ', '.join(str(tag) for tag in driver['Tags'])                                  
-            }
-
-            writer.writerow(row)
-
-
-
+    df = pd.DataFrame(rows, columns=header)
+    df.to_csv(output_file, quoting=1, index=False)
 
 
 def write_top_products(drivers, output_dir, top_n=5):
@@ -133,7 +130,6 @@ def write_top_publishers(drivers, output_dir, top_n=5):
         for publisher, count in sorted_publishers:
             for _ in range(count):
                 writer.writerow([count, publisher])
-
 
 
 def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE):
