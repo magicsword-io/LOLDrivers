@@ -19,7 +19,7 @@ def write_drivers_csv(drivers, output_dir, VERBOSE):
               'KnownVulnerableSamples_Authentihash_MD5', 'KnownVulnerableSamples_Authentihash_SHA1', 'KnownVulnerableSamples_Authentihash_SHA256', 'Verified', 'Tags']
 
     with open(output_file, 'w', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=header)
+        writer = csv.DictWriter(f, fieldnames=header, quotechar='"', quoting=csv.QUOTE_ALL)
         writer.writeheader()
 
         for driver in drivers:
