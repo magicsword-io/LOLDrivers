@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: d7c683ef033ac2dc4dfa0dc61f39931f91c0e8fd19e613f664cb03e14112ef6e
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2019-11-19 13:14:20'
+  CreationTimestamp: '2019-11-19 11:14:20'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -95,13 +95,13 @@ KnownVulnerableSamples:
       Entropy: 0.8066631169807633
       Virtual Size: '0x390'
     .pdata:
-      Entropy: 4.010875946168035
+      Entropy: 4.010875946168034
       Virtual Size: '0x1c8'
     PAGE:
       Entropy: 6.06807405800903
       Virtual Size: '0x9fc'
     INIT:
-      Entropy: 5.66197765025481
+      Entropy: 5.661977650254811
       Virtual Size: '0x4d8'
     .reloc:
       Entropy: 3.1733593135475084
@@ -147,13 +147,14 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       Version: 1
+  Imphash: f138fdbc6c7fbf73e135717c7d7eac27
 - Authentihash:
     MD5: 1e96108c0938d4c34d7072f04bc8b951
     SHA1: d46ae9bcc746ca408fbb55fb0d61b638720a8f25
     SHA256: 7bacb353363cc29f7f3815a9d01e85cd86202d92378d1ab1b11df1ab2f42f40a
   Company: Dell
   Copyright: "\xA9 2021 Dell Inc. All Rights Reserved. "
-  CreationTimestamp: '2021-05-06 19:20:18'
+  CreationTimestamp: '2021-05-06 17:20:18'
   Date: ''
   Description: DBUtil
   ExportedFunctions: ''
@@ -259,6 +260,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       Version: 1
+  Imphash: 506a31d768aec26b297c45b50026c820
 MitreID: T1068
 Resources:
 - https://github.com/jbaines-r7/dellicious

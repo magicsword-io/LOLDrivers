@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: a6ae7364fd188c10d6b5a729a7ff58a3eb11e7feb0d107d18f9133655c11fb66
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2016-11-23 04:00:09'
+  CreationTimestamp: '2016-11-23 02:00:09'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -69,7 +69,7 @@ KnownVulnerableSamples:
       Entropy: 6.109907887975518
       Virtual Size: '0xd3e'
     .rdata:
-      Entropy: 4.038835060262647
+      Entropy: 4.038835060262648
       Virtual Size: '0x4e4'
     .data:
       Entropy: 0.6146016951479871
@@ -81,7 +81,7 @@ KnownVulnerableSamples:
       Entropy: 1.5
       Virtual Size: '0x4'
     INIT:
-      Entropy: 4.939906423726663
+      Entropy: 4.939906423726662
       Virtual Size: '0x31e'
     .reloc:
       Entropy: 2.8820214465367484
@@ -172,13 +172,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 9e15ce38f071c916bea830247f1241bb
 - Authentihash:
     MD5: 4325af5c85aa7bb0339389cf54d78817
     SHA1: 3c9f40ac72b0202cb40627fdeb7298079187193a
     SHA256: a6ae7364fd188c10d6b5a729a7ff58a3eb11e7feb0d107d18f9133655c11fb66
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2016-11-23 04:00:09'
+  CreationTimestamp: '2016-11-23 02:00:09'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -227,7 +228,7 @@ KnownVulnerableSamples:
       Entropy: 6.109907887975518
       Virtual Size: '0xd3e'
     .rdata:
-      Entropy: 4.038835060262647
+      Entropy: 4.038835060262648
       Virtual Size: '0x4e4'
     .data:
       Entropy: 0.6146016951479871
@@ -239,7 +240,7 @@ KnownVulnerableSamples:
       Entropy: 1.5
       Virtual Size: '0x4'
     INIT:
-      Entropy: 4.939906423726663
+      Entropy: 4.939906423726662
       Virtual Size: '0x31e'
     .reloc:
       Entropy: 2.8820214465367484
@@ -325,6 +326,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: 9e15ce38f071c916bea830247f1241bb
 MitreID: T1068
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'

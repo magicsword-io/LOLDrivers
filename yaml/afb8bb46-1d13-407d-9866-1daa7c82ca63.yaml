@@ -22,7 +22,7 @@ KnownVulnerableSamples:
     SHA256: 92f9d73cec5ab3352c4b3cbf4574d13b2e506cba24cc74580e19e941063eaf7d
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-06-17 19:17:15'
+  CreationTimestamp: '2021-06-17 17:17:15'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -99,7 +99,7 @@ KnownVulnerableSamples:
   SHA256: ea3c5569405ed02ec24298534a983bcb5de113c18bc3fd01a4dd0b5839cd17b9
   Sections:
     .text:
-      Entropy: 6.221405892882593
+      Entropy: 6.2214058928825935
       Virtual Size: '0x19ed'
     .rdata:
       Entropy: 4.829954270142013
@@ -154,6 +154,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: a94892b77a6474429b9f692d9952a9d5
 MitreID: T1134
 Resources:
 - https://ioctl.fail/echo-ac-writeup/

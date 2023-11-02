@@ -164,10 +164,10 @@ KnownVulnerableSamples:
     SHA256: 14ccd7b6557e31d8e57079e70c05cb15da8336c7380554b9b40f44840989f524
   Sections:
     .text:
-      Entropy: 6.282178701948503
+      Entropy: 6.282178701948502
       Virtual Size: '0x7bef'
     .rdata:
-      Entropy: 4.69562868146937
+      Entropy: 4.695628681469371
       Virtual Size: '0x7dc'
     .data:
       Entropy: 2.3749984963543618
@@ -188,7 +188,8 @@ KnownVulnerableSamples:
       Entropy: 3.6567400216610486
       Virtual Size: '0x160'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-16 01:20:00'
+  CreationTimestamp: '2013-01-15 23:20:00'
+  Imphash: 8ec78cf864273fd81203678b61c41f04
 - Filename: NICM.SYS
   MD5: f690bfc0799e51a626ba3931960c3173
   SHA1: d3a6f86245212e1ef9e0e906818027ec14a239cb
@@ -395,10 +396,11 @@ KnownVulnerableSamples:
       Entropy: 3.285837261243419
       Virtual Size: '0x358'
     .reloc:
-      Entropy: 6.1533927986680945
+      Entropy: 6.153392798668095
       Virtual Size: '0x600'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-27 13:49:27'
+  CreationTimestamp: '2009-03-27 11:49:27'
+  Imphash: 0e4f5481813eeec4e5dd96e36020135f
 - Filename: NICM.SYS
   MD5: 3bf217f8ef018ca5ea20947bfdfc0a4d
   SHA1: 26a8ab6ea80ab64d5736b9b72a39d90121156e76
@@ -593,7 +595,7 @@ KnownVulnerableSamples:
       Entropy: 4.011677463066665
       Virtual Size: '0x63'
     INIT:
-      Entropy: 5.176988201091536
+      Entropy: 5.176988201091535
       Virtual Size: '0x96e'
     .rsrc:
       Entropy: 3.285837261243419
@@ -602,6 +604,7 @@ KnownVulnerableSamples:
       Entropy: 3.6567400216610486
       Virtual Size: '0x160'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-27 13:53:53'
+  CreationTimestamp: '2009-03-27 11:53:53'
+  Imphash: f2dc136141066311fddef65f7f417c44
 Tags:
 - NICM.SYS

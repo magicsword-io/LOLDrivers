@@ -23,7 +23,7 @@ KnownVulnerableSamples:
     SHA256: f8886a9c759e0426e08d55e410b02c5b05af3c287b15970175e4874316ffaf13
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2018-09-29 16:21:09'
+  CreationTimestamp: '2018-09-29 14:21:09'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -84,7 +84,7 @@ KnownVulnerableSamples:
   SHA256: cf16a2218fc8a3b6fa5aa4a0bc6205792798078c380ccc7e5041476e0f1bc53d
   Sections:
     .text:
-      Entropy: 6.434641089980121
+      Entropy: 6.434641089980122
       Virtual Size: '0x2978'
     .rdata:
       Entropy: 4.633162531132468
@@ -96,7 +96,7 @@ KnownVulnerableSamples:
       Entropy: 3.8812217396242468
       Virtual Size: '0x15c'
     INIT:
-      Entropy: 5.546551932389905
+      Entropy: 5.546551932389904
       Virtual Size: '0x838'
     .rsrc:
       Entropy: 2.7484228256782828
@@ -183,6 +183,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 9c8c681f74950997cd571fd838a847b8
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

@@ -34,7 +34,7 @@ KnownVulnerableSamples:
   Company: "\u5B89\u82AF\u7F51\u76FE\uFF08\u5317\u4EAC\uFF09\u79D1\u6280\u6709\u9650\
     \u516C\u53F8"
   Copyright: (C) 2019-2021 AnXinSec Corporation. All Rights Reserved.
-  CreationTimestamp: '2020-07-29 11:37:31'
+  CreationTimestamp: '2020-07-29 09:37:31'
   Date: ''
   Description: "\u7CFB\u7EDF\u4FE1\u606F\u67E5\u770B\u5DE5\u5177"
   ExportedFunctions: ''
@@ -159,7 +159,7 @@ KnownVulnerableSamples:
       Entropy: 5.354522573439451
       Virtual Size: '0x627c'
     .data:
-      Entropy: 2.863563941104293
+      Entropy: 2.8635639411042924
       Virtual Size: '0x300a0'
     .pdata:
       Entropy: 5.867567283432031
@@ -171,7 +171,7 @@ KnownVulnerableSamples:
       Entropy: 3.5635144751881898
       Virtual Size: '0x320'
     .reloc:
-      Entropy: 4.883553433346754
+      Entropy: 4.883553433346755
       Virtual Size: '0x17c'
   Signature: ''
   Signatures:
@@ -251,6 +251,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Imphash: c56dbf2e72704141d7b2279a64c54621
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

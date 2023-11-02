@@ -25,7 +25,7 @@ KnownVulnerableSamples:
     SHA256: 4cfd9cb41a51b1e1fdfc9a6855323bf11a0baf18e5d8f0ee7480a8cb5be7c8ac
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2023-05-11 13:16:19'
+  CreationTimestamp: '2023-05-11 11:16:19'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -60,7 +60,7 @@ KnownVulnerableSamples:
       Entropy: 5.891982734570695
       Virtual Size: '0x3e3'
     .rdata:
-      Entropy: 3.482655125510869
+      Entropy: 3.4826551255108695
       Virtual Size: '0x37c'
     .data:
       Entropy: 3.75
@@ -96,6 +96,7 @@ KnownVulnerableSamples:
     - SerialNumber: 7b475bcb4233f98946d0a1fbeb9de9ce
       Issuer: CN=WDKTestCert zezec,132961360795713868
       Version: 1
+  Imphash: 2de3451f3e7b02970582bb8f9fd8c73a
 MitreID: T1068
 Resources:
 - https://github.com/zeze-zeze/CYBERSEC2023-BYOVD-Demo

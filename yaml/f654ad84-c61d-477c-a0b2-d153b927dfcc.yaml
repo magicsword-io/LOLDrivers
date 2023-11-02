@@ -42,7 +42,7 @@ KnownVulnerableSamples:
     SHA256: 72b36c64f0b349d7816c8e5e2d1a7f59807de0c87d3f071a04dbc56bec9c00db
   Company: ASUSTeK Computer Inc.
   Copyright: Copyright 2007 ASUSTeK Computer Inc.
-  CreationTimestamp: '2007-10-16 09:54:18'
+  CreationTimestamp: '2007-10-16 07:54:18'
   Date: ''
   Description: ASUS VGA Kernel Mode Driver
   ExportedFunctions: ''
@@ -95,7 +95,7 @@ KnownVulnerableSamples:
       Entropy: 0.30140680731160896
       Virtual Size: '0x268'
     .pdata:
-      Entropy: 3.860446400858485
+      Entropy: 3.8604464008584847
       Virtual Size: '0x150'
     INIT:
       Entropy: 4.888514779635871
@@ -105,13 +105,14 @@ KnownVulnerableSamples:
       Virtual Size: '0x3f8'
   Signature: ''
   Signatures: {}
+  Imphash: b8302791cd2edfe6dd562c4854ea495f
 - Authentihash:
     MD5: 5af6b25eec77fec510803a229944c8ad
     SHA1: ed54e23998978f8124bd1f97c265f708ddba1de0
     SHA256: d4e7335a177e47688d68ad89940c272f82728c882623f1630e7fd2e03e16f003
   Company: ASUSTeK Computer Inc.
   Copyright: Copyright 2004 ASUSTeK Computer Inc.
-  CreationTimestamp: '2009-07-21 22:34:42'
+  CreationTimestamp: '2009-07-21 20:34:42'
   Date: ''
   Description: ASUS VGA Kernel Mode Driver
   ExportedFunctions: ''
@@ -161,7 +162,7 @@ KnownVulnerableSamples:
       Entropy: 6.344394733228123
       Virtual Size: '0x2af0'
     .rdata:
-      Entropy: 4.547262034696365
+      Entropy: 4.547262034696364
       Virtual Size: '0x28c'
     .data:
       Entropy: 0.30140680731160896
@@ -177,13 +178,14 @@ KnownVulnerableSamples:
       Virtual Size: '0x3f8'
   Signature: ''
   Signatures: {}
+  Imphash: a96a02cf5f7896a9a9f045d1986bd83c
 - Authentihash:
     MD5: 3fc7ad198c185c20a883e902a02b80f1
     SHA1: 30a48418d07561c8df8aa4219734f0ded791e430
     SHA256: 047c1d5bb80826a6f66c182fc8b5f66f59609a71e734117f20a4f98b9866bde5
   Company: ASUSTeK Computer Inc.
   Copyright: Copyright 2004 ASUSTeK Computer Inc.
-  CreationTimestamp: '2009-07-21 22:34:52'
+  CreationTimestamp: '2009-07-21 20:34:52'
   Date: ''
   Description: ASUS VGA Kernel Mode Driver
   ExportedFunctions: ''
@@ -244,7 +246,7 @@ KnownVulnerableSamples:
   SHA256: 1fac3fab8ea2137a7e81a26de121187bf72e7d16ffa3e9aec3886e2376d3c718
   Sections:
     .text:
-      Entropy: 6.197406818919452
+      Entropy: 6.197406818919454
       Virtual Size: '0x2300'
     .rdata:
       Entropy: 4.397674780869272
@@ -253,7 +255,7 @@ KnownVulnerableSamples:
       Entropy: 0.26335818237546343
       Virtual Size: '0x124'
     INIT:
-      Entropy: 5.418987941875578
+      Entropy: 5.41898794187558
       Virtual Size: '0x3e8'
     .rsrc:
       Entropy: 3.3076199882850426
@@ -299,13 +301,14 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       Version: 1
+  Imphash: 6a47c957830ccce7ef43ed96aacf7c2c
 - Authentihash:
     MD5: 5af6b25eec77fec510803a229944c8ad
     SHA1: ed54e23998978f8124bd1f97c265f708ddba1de0
     SHA256: d4e7335a177e47688d68ad89940c272f82728c882623f1630e7fd2e03e16f003
   Company: ASUSTeK Computer Inc.
   Copyright: Copyright 2004 ASUSTeK Computer Inc.
-  CreationTimestamp: '2009-07-21 22:34:42'
+  CreationTimestamp: '2009-07-21 20:34:42'
   Date: ''
   Description: ASUS VGA Kernel Mode Driver
   ExportedFunctions: ''
@@ -356,7 +359,7 @@ KnownVulnerableSamples:
       Entropy: 6.344394733228123
       Virtual Size: '0x2af0'
     .rdata:
-      Entropy: 4.547262034696365
+      Entropy: 4.547262034696364
       Virtual Size: '0x28c'
     .data:
       Entropy: 0.30140680731160896
@@ -408,6 +411,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       Version: 1
+  Imphash: a96a02cf5f7896a9a9f045d1986bd83c
 MitreID: T1068
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules

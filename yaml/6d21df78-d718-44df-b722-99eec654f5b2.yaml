@@ -43,7 +43,7 @@ KnownVulnerableSamples:
     SHA256: 5bf00eff58e5bbe4cf578ec37b9e13c8fa74511fb2644352fcc091347153a709
   Company: MICSYS Technology Co., LTd
   Copyright: Copyright (c) 2019 MICSYS
-  CreationTimestamp: '2019-10-16 21:19:01'
+  CreationTimestamp: '2019-10-16 19:19:01'
   Date: ''
   Description: MICSYS driver
   ExportedFunctions: ''
@@ -83,7 +83,7 @@ KnownVulnerableSamples:
   SHA256: 43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89
   Sections:
     .text:
-      Entropy: 6.129792436837482
+      Entropy: 6.129792436837484
       Virtual Size: '0x1005'
     .rdata:
       Entropy: 4.205714713533588
@@ -95,7 +95,7 @@ KnownVulnerableSamples:
       Entropy: 3.197487339123456
       Virtual Size: '0x60'
     INIT:
-      Entropy: 4.7596491572714985
+      Entropy: 4.759649157271499
       Virtual Size: '0x262'
     .rsrc:
       Entropy: 3.379586366740354
@@ -141,6 +141,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: 8a424cd36ae3eab0d11332ce3b982a02
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

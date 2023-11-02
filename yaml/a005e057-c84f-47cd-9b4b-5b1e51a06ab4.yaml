@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: 7fb0f6fc5bdd22d53f8532cb19da666a77a66ffb1cf3919a2e22b66c13b415b7
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-10-08 15:06:56'
+  CreationTimestamp: '2009-10-08 13:06:56'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -72,22 +72,22 @@ KnownVulnerableSamples:
   SHA256: 3ac5e01689a3d745e60925bc7faca8d4306ae693e803b5e19c94906dc30add46
   Sections:
     .text:
-      Entropy: 6.182156159214638
+      Entropy: 6.182156159214639
       Virtual Size: '0x1438'
     .rdata:
       Entropy: 4.593841506669575
       Virtual Size: '0x270'
     .data:
-      Entropy: 1.0975594113294966
+      Entropy: 1.0975594113294969
       Virtual Size: '0x130'
     .pdata:
       Entropy: 3.5904624670053096
       Virtual Size: '0xa8'
     PAGE:
-      Entropy: 5.489182751023982
+      Entropy: 5.489182751023983
       Virtual Size: '0x470'
     INIT:
-      Entropy: 5.219327338093399
+      Entropy: 5.219327338093401
       Virtual Size: '0x508'
   Signature:
   - Intel(R) Processor Identification Utility
@@ -181,6 +181,7 @@ KnownVulnerableSamples:
     - SerialNumber: 13fd5f58000000002ea3
       Issuer: C=US, O=Intel Corporation, CN=Intel External Basic Issuing CA 3A
       Version: 1
+  Imphash: 67bace81ce26ddf73732dd75cbd0c0f2
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

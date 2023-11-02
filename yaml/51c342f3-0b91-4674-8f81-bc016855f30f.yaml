@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: fee4560f2160a951d83344857eb4587ab10c1cfd8c5cfc23b6f06bef8ebcd984
   Company: ASRock Incorporation
   Copyright: Copyright (C) 2012 ASRock Incorporation
-  CreationTimestamp: '2013-01-15 01:25:51'
+  CreationTimestamp: '2013-01-14 23:25:51'
   Date: ''
   Description: ASRock IO Driver
   ExportedFunctions: ''
@@ -88,19 +88,19 @@ KnownVulnerableSamples:
   SHA256: f40435488389b4fb3b945ca21a8325a51e1b5f80f045ab019748d0ec66056a8b
   Sections:
     .text:
-      Entropy: 6.32219197210594
+      Entropy: 6.322191972105939
       Virtual Size: '0x1c08'
     .rdata:
       Entropy: 4.654405673393832
       Virtual Size: '0x264'
     .data:
-      Entropy: 0.4697909271189269
+      Entropy: 0.46979092711892695
       Virtual Size: '0x130'
     .pdata:
       Entropy: 3.68915035708827
       Virtual Size: '0xfc'
     INIT:
-      Entropy: 5.421591319356759
+      Entropy: 5.421591319356761
       Virtual Size: '0x4d8'
     .rsrc:
       Entropy: 3.287296316763299
@@ -204,6 +204,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 9d7183c1d8107495354c4fad9dae3452
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

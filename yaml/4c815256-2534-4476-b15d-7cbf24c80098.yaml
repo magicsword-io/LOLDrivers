@@ -23,7 +23,7 @@ KnownVulnerableSamples:
     SHA256: 25454028a4f56d3c58747811a86be43397a6290d1a053bc30d97b41bf3c58c6f
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2020-04-19 23:19:37'
+  CreationTimestamp: '2020-04-19 21:19:37'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -145,7 +145,7 @@ KnownVulnerableSamples:
       Entropy: 6.1912018117070735
       Virtual Size: '0x6c80'
     .rdata:
-      Entropy: 4.780472480164169
+      Entropy: 4.780472480164167
       Virtual Size: '0x1584'
     .data:
       Entropy: 0.805522255156276
@@ -271,6 +271,7 @@ KnownVulnerableSamples:
     - SerialNumber: 1d11ed1006343e0fd1bc5511f3ab2084
       Issuer: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA R36
       Version: 1
+  Imphash: 409d2ab916237fb129c57aacbb7cb4fe
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

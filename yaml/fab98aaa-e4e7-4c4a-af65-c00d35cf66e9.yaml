@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 33b88ac3151f2192eaf4c2be3c7ad00e49090c8b94ec51b754e19ac784b087aa
   Company: CPUID
   Copyright: Copyright(C) 2016 CPUID
-  CreationTimestamp: '2016-11-22 08:20:59'
+  CreationTimestamp: '2016-11-22 06:20:59'
   Date: ''
   Description: CPUID Driver
   ExportedFunctions: ''
@@ -93,22 +93,22 @@ KnownVulnerableSamples:
   SHA256: ded2927f9a4e64eefd09d0caba78e94f309e3a6292841ae81d5528cab109f95d
   Sections:
     .text:
-      Entropy: 6.216329473107876
+      Entropy: 6.216329473107877
       Virtual Size: '0x3a06'
     .rdata:
-      Entropy: 4.223270892386598
+      Entropy: 4.223270892386599
       Virtual Size: '0x48c'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x440'
     .pdata:
       Entropy: 3.5113758608463215
       Virtual Size: '0xf0'
     INIT:
-      Entropy: 5.116119018385267
+      Entropy: 5.116119018385266
       Virtual Size: '0x40e'
     .rsrc:
-      Entropy: 3.388914513972292
+      Entropy: 3.3889145139722916
       Virtual Size: '0x350'
   Signature:
   - CPUID
@@ -180,6 +180,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 8f96c3ef5dda3fe697d4a4d6326dbe37
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

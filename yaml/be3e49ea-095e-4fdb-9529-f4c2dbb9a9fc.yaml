@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: cde02c7db90626bcfbfbbc1315d4ce18d4f15667fa57c16b9ac2b060507c62ad
   Company: Phoenix Technologies, Ltd.
   Copyright: (c) Phoenix Technologies, Ltd. 2000-2003
-  CreationTimestamp: '2009-09-23 00:36:24'
+  CreationTimestamp: '2009-09-22 22:36:24'
   Date: ''
   Description: SWinFlash Driver for Windows NT
   ExportedFunctions: ''
@@ -87,16 +87,16 @@ KnownVulnerableSamples:
       Entropy: 1.4805049954314338
       Virtual Size: '0x8cc'
     .pdata:
-      Entropy: 4.322070669657221
+      Entropy: 4.32207066965722
       Virtual Size: '0x534'
     INIT:
       Entropy: 4.833223964565047
       Virtual Size: '0x212'
     .rsrc:
-      Entropy: 3.30536998401395
+      Entropy: 3.3053699840139497
       Virtual Size: '0x368'
     .reloc:
-      Entropy: 1.6676629533511158
+      Entropy: 1.667662953351116
       Virtual Size: '0xdc'
   Signature:
   - Phoenix Technology Ltd.
@@ -182,6 +182,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: b1336b0cb67918ed39f1f88c354910d0
 MitreID: T1068
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'

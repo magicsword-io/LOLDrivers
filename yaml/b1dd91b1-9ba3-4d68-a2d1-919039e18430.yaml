@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: 2b60228db4f3092063e115537b5731ef3487ecf55c036e812605c5149071332c
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-04-03 08:12:33'
+  CreationTimestamp: '2009-04-03 06:12:33'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -112,13 +112,13 @@ KnownVulnerableSamples:
       Entropy: 6.401262967451807
       Virtual Size: '0x2bf64'
     .data:
-      Entropy: 1.2684415531051414
+      Entropy: 1.268441553105141
       Virtual Size: '0x22600'
     .pdata:
       Entropy: 5.321759404372387
       Virtual Size: '0xc48'
     INIT:
-      Entropy: 5.042298031844366
+      Entropy: 5.042298031844367
       Virtual Size: '0x78a'
     .reloc:
       Entropy: 1.4128994326009754
@@ -201,6 +201,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 858ceae385cdcfcbc7814644564c23e6
 MitreID: T1068
 Resources:
 - https://github.com/wjcsharp/DriveCrypt

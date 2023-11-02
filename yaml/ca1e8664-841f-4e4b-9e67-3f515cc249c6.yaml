@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 9345c3af554c06aa949492f1642a7a03404956d2952cca8a68658b62dccb0825
   Company: Microsoft Corporation
   Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  CreationTimestamp: '2012-10-12 12:49:03'
+  CreationTimestamp: '2012-10-12 10:49:03'
   Date: ''
   Description: MS LAN Driver
   ExportedFunctions: ''
@@ -102,16 +102,16 @@ KnownVulnerableSamples:
       Entropy: 4.280603944787833
       Virtual Size: '0x29c'
     .data:
-      Entropy: 7.998560628737928
+      Entropy: 7.998560628737929
       Virtual Size: '0x333d0'
     .pdata:
       Entropy: 3.7745259370743525
       Virtual Size: '0xb4'
     INIT:
-      Entropy: 5.849769223480601
+      Entropy: 5.849769223480602
       Virtual Size: '0x660'
     .rsrc:
-      Entropy: 3.369673545152681
+      Entropy: 3.36967354515268
       Virtual Size: '0x3b0'
     .reloc:
       Entropy: 1.2385061127340509
@@ -173,6 +173,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 70e1caa5a322b56fd7951f1b2caacb0d
 MitreID: T1068
 Resources:
 - https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48

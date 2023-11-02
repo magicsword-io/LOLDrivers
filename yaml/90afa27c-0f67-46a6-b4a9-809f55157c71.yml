@@ -157,7 +157,7 @@ KnownVulnerableSamples:
       Entropy: 5.981323117886685
       Virtual Size: '0x4a25'
     .rdata:
-      Entropy: 5.6811277535097675
+      Entropy: 5.681127753509768
       Virtual Size: '0x480'
     .data:
       Entropy: 0.8264834692004682
@@ -175,10 +175,11 @@ KnownVulnerableSamples:
       Entropy: 3.289150653685818
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 1.245426587124313
+      Entropy: 1.2454265871243133
       Virtual Size: '0x3c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-27 13:56:49'
+  CreationTimestamp: '2009-03-27 11:56:49'
+  Imphash: 7d004bbe0f546a91c93562d324307fa7
 - Filename: nscm.sys
   MD5: 4c76554d9a72653c6156ca0024d21a8e
   SHA1: 6d3c760251d6e6ea7ff4f4fcac14876fac829cf9
@@ -273,10 +274,10 @@ KnownVulnerableSamples:
     SHA256: 097828b6f5705aca00605777868f774f37fd5ecf705e958c6dbdb860c4934be4
   Sections:
     .text:
-      Entropy: 5.994411135194118
+      Entropy: 5.9944111351941185
       Virtual Size: '0x5736'
     .rdata:
-      Entropy: 5.542492779395015
+      Entropy: 5.542492779395016
       Virtual Size: '0x570'
     .data:
       Entropy: 1.445115035315444
@@ -294,10 +295,11 @@ KnownVulnerableSamples:
       Entropy: 6.472426446171854
       Virtual Size: '0x14a24'
     .reloc:
-      Entropy: 5.039009418592024
+      Entropy: 5.039009418592025
       Virtual Size: '0x48'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-16 01:24:57'
+  CreationTimestamp: '2013-01-15 23:24:57'
+  Imphash: 8b7e7c20da6ca9ac4bdb3927fe2b266a
 - Filename: nscm.sys
   MD5: 5f4a232d92480a1bebbe025ef64dc760
   SHA1: 0cb14c1049c0e81c8655ab7ee7d698c11758ea06
@@ -402,7 +404,7 @@ KnownVulnerableSamples:
       Entropy: 1.445115035315444
       Virtual Size: '0x5a8'
     .pdata:
-      Entropy: 4.277709228070347
+      Entropy: 4.277709228070346
       Virtual Size: '0x450'
     .edata:
       Entropy: 3.956023170093665
@@ -417,7 +419,8 @@ KnownVulnerableSamples:
       Entropy: 1.2355823247516717
       Virtual Size: '0x48'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-03-03 05:52:58'
+  CreationTimestamp: '2022-03-03 03:52:58'
+  Imphash: 01aa65221a48929f0a34a27c4e3011b1
 - Filename: nscm.sys
   MD5: f56f30ac68c35dd4680054cdfd8f3f00
   SHA1: fce3a95b222c810c56e7ed5a3d7fb059eb693682
@@ -553,7 +556,7 @@ KnownVulnerableSamples:
       Entropy: 0.8264834692004682
       Virtual Size: '0x568'
     .pdata:
-      Entropy: 4.238276468304065
+      Entropy: 4.238276468304064
       Virtual Size: '0x3d8'
     .edata:
       Entropy: 3.956023170093665
@@ -565,10 +568,11 @@ KnownVulnerableSamples:
       Entropy: 3.287931080812757
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 1.245426587124313
+      Entropy: 1.2454265871243133
       Virtual Size: '0x3c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-04-01 21:18:14'
+  CreationTimestamp: '2011-04-01 19:18:14'
+  Imphash: b8d0a36d2b14d79dfa08fb2e121f0920
 - Filename: nscm.sys
   MD5: a1547e8b2ca0516d0d9191a55b8536c0
   SHA1: 7cd4aea9c1f82111bf7f9d4934be95e9bb6f8ae0
@@ -707,16 +711,17 @@ KnownVulnerableSamples:
       Entropy: 3.88787733918592
       Virtual Size: '0x63'
     INIT:
-      Entropy: 5.407607088870611
+      Entropy: 5.407607088870612
       Virtual Size: '0x2d6'
     .rsrc:
       Entropy: 3.289150653685818
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 6.2209835227622525
+      Entropy: 6.220983522762253
       Virtual Size: '0x4f2'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-27 13:52:17'
+  CreationTimestamp: '2009-03-27 11:52:17'
+  Imphash: 65181bc89a1c2b5854548236269846c1
 - Filename: nscm.sys
   MD5: bd5d4d07ae09e9f418d6b4ac6d9f2ed5
   SHA1: d61acd857242185a56e101642d15b9b5f0558c26
@@ -811,10 +816,10 @@ KnownVulnerableSamples:
     SHA256: 097828b6f5705aca00605777868f774f37fd5ecf705e958c6dbdb860c4934be4
   Sections:
     .text:
-      Entropy: 5.994411135194118
+      Entropy: 5.9944111351941185
       Virtual Size: '0x5736'
     .rdata:
-      Entropy: 5.542492779395015
+      Entropy: 5.542492779395016
       Virtual Size: '0x570'
     .data:
       Entropy: 1.445115035315444
@@ -835,6 +840,7 @@ KnownVulnerableSamples:
       Entropy: 1.2355823247516717
       Virtual Size: '0x48'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-16 01:24:57'
+  CreationTimestamp: '2013-01-15 23:24:57'
+  Imphash: 8b7e7c20da6ca9ac4bdb3927fe2b266a
 Tags:
 - nscm.sys

@@ -42,7 +42,7 @@ KnownVulnerableSamples:
     SHA256: 641490e28b2a1ee223238f5d969b5abf60a1089afe597c4251b285449e6b3b04
   Company: Windows (R) Server 2003 DDK provider
   Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  CreationTimestamp: '2006-09-24 09:26:48'
+  CreationTimestamp: '2006-09-24 07:26:48'
   Date: ''
   Description: SpeedFan Device Driver
   ExportedFunctions: ''
@@ -90,7 +90,7 @@ KnownVulnerableSamples:
       Entropy: 3.040863839434868
       Virtual Size: '0x3c'
     INIT:
-      Entropy: 4.799953735210973
+      Entropy: 4.7999537352109725
       Virtual Size: '0x1d8'
     .rsrc:
       Entropy: 3.3557848657208913
@@ -177,6 +177,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: adfd4c0b031598afecb6f3f585f5f581
 MitreID: T1068
 Resources:
 - ' https://github.com/jbaines-r7/dellicious'

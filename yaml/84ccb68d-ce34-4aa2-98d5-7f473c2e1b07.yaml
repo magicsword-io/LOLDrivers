@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: a82d08ef67bdfccf0a2cf6d507c9fbb6ac42bd74bf2ade46ec07fe253deb6573
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-09-18 17:24:12'
+  CreationTimestamp: '2005-09-18 15:24:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -63,10 +63,10 @@ KnownVulnerableSamples:
   SHA256: 7049f3c939efe76a5556c2a2c04386db51daf61d56b679f4868bb0983c996ebb
   Sections:
     .text:
-      Entropy: 5.870227791947924
+      Entropy: 5.870227791947925
       Virtual Size: '0x14fe'
     .rdata:
-      Entropy: 4.287500138971229
+      Entropy: 4.287500138971227
       Virtual Size: '0x3d0'
     .data:
       Entropy: 1.2323958376791513
@@ -175,6 +175,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 3c61f9a38aaa7650fcd33b46e794d1bb
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

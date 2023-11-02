@@ -182,10 +182,10 @@ KnownVulnerableSamples:
     SHA256: 42f78a461ed14e570a478480556a7a5080f89599e4cbc71653939ef634ec9131
   Sections:
     .text:
-      Entropy: 6.356712625314793
+      Entropy: 6.356712625314794
       Virtual Size: '0x216e'
     .rdata:
-      Entropy: 4.1282109704661964
+      Entropy: 4.128210970466196
       Virtual Size: '0x6e4'
     .data:
       Entropy: 0.6627058304164626
@@ -194,10 +194,10 @@ KnownVulnerableSamples:
       Entropy: 3.94471136074808
       Virtual Size: '0x1bc'
     PAGE:
-      Entropy: 5.761547010517612
+      Entropy: 5.761547010517613
       Virtual Size: '0x175'
     INIT:
-      Entropy: 5.14180293465244
+      Entropy: 5.141802934652441
       Virtual Size: '0x438'
     .rsrc:
       Entropy: 3.5824042953246473
@@ -206,6 +206,7 @@ KnownVulnerableSamples:
       Entropy: 2.6981203125901447
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-07-28 04:31:47'
+  CreationTimestamp: '2020-07-28 02:31:47'
+  Imphash: f9141c3df8f7ec7b3f2d46265a3b5528
 Tags:
 - CupFixerx64.sys

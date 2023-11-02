@@ -103,7 +103,7 @@ KnownVulnerableSamples:
     SHA256: 9c4db6ee983fd4fa74f8212031ade343a1b9abdb258d05bef1aabd7ab49fbc16
   Company: Logitech
   Copyright: "Copyright \xA9 Logitech, Inc"
-  CreationTimestamp: '2015-06-09 12:52:04'
+  CreationTimestamp: '2015-06-09 10:52:04'
   Date: ''
   Description: CPU Core Temperature Monitor
   ExportedFunctions: ''
@@ -145,16 +145,16 @@ KnownVulnerableSamples:
       Entropy: 6.2073365191410375
       Virtual Size: '0x69c'
     .rdata:
-      Entropy: 3.3720266275598263
+      Entropy: 3.3720266275598267
       Virtual Size: '0x184'
     .data:
       Entropy: 2.450212064914747
       Virtual Size: '0x1c'
     INIT:
-      Entropy: 5.268799163409309
+      Entropy: 5.2687991634093105
       Virtual Size: '0x1d2'
     .rsrc:
-      Entropy: 3.1865657158694196
+      Entropy: 3.18656571586942
       Virtual Size: '0x350'
     .reloc:
       Entropy: 4.84009258268497
@@ -239,6 +239,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: 5ea78a193212fe61ac722f45f0b0eab9
 MitreID: T1068
 Resources:
 - https://github.com/VoidSec/Exploit-Development/tree/b82b6d3ac1cce66221101d3e0f4634aa64cb4ca7/windows/x64/kernel/logitech_v.9.02.65_DoS

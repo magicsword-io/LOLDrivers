@@ -46,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: c0c131bc8d6c8b5a2be32474474b1221bce1289c174c87e743ed4a512f5571d4
   Company: AVAST Software
   Copyright: Copyright (c) 2021 AVAST Software
-  CreationTimestamp: '2021-02-01 04:08:43'
+  CreationTimestamp: '2021-02-01 02:08:43'
   Date: ''
   Description: Avast Anti Rootkit
   ExportedFunctions: ''
@@ -237,7 +237,7 @@ KnownVulnerableSamples:
   SHA256: 4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1
   Sections:
     .text:
-      Entropy: 6.386320097220838
+      Entropy: 6.386320097220837
       Virtual Size: '0x228c2'
     .rdata:
       Entropy: 5.733045078108813
@@ -249,7 +249,7 @@ KnownVulnerableSamples:
       Entropy: 5.411411947630738
       Virtual Size: '0x1218'
     PAGE:
-      Entropy: 6.270335052415905
+      Entropy: 6.270335052415906
       Virtual Size: '0x1c4b'
     INIT:
       Entropy: 5.365142970284712
@@ -342,6 +342,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: 3702511999371bac8982d01820dd70f2
 MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'

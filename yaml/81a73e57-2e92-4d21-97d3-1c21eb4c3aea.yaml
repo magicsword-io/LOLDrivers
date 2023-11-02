@@ -42,7 +42,7 @@ KnownVulnerableSamples:
     SHA256: 34e6a56c60746c51034b45a7b2a36617205b598d0bbcc695f92404605a0975d5
   Company: Lenovo Group Limited (R)
   Copyright: "\xA9 2021 Lenovo Group Limited. All rights reserved."
-  CreationTimestamp: '2022-01-28 12:59:24'
+  CreationTimestamp: '2022-01-28 10:59:24'
   Date: ''
   Description: Lenovo Diagnostics Driver for Windows 10 and later.
   ExportedFunctions: ''
@@ -114,7 +114,7 @@ KnownVulnerableSamples:
       Entropy: 4.307397917054479
       Virtual Size: '0xe34'
     .data:
-      Entropy: 2.1121801383150514
+      Entropy: 2.112180138315051
       Virtual Size: '0x280'
     .pdata:
       Entropy: 4.122037812300564
@@ -171,6 +171,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
         SHA384 2021 CA1
       Version: 1
+  Imphash: 225e24ee3c4081a16ef32831b70bf8ef
 MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'

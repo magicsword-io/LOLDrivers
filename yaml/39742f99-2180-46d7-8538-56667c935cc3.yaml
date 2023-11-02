@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 9f86fc8a6eaa3b38f33be4a0d552c184e575afa50a60df7383c06a394e3926d8
   Company: TG Soft S.a.s.
   Copyright: Copyright (C) TG Soft S.a.s. 2006, 2013 - www.tgsoft.it
-  CreationTimestamp: '2013-01-23 03:38:45'
+  CreationTimestamp: '2013-01-23 01:38:45'
   Date: ''
   Description: VirIT Agent System
   ExportedFunctions: ''
@@ -172,7 +172,7 @@ KnownVulnerableSamples:
   SHA256: e05eeb2b8c18ad2cb2d1038c043d770a0d51b96b748bc34be3e7fc6f3790ce53
   Sections:
     .text:
-      Entropy: 6.747532035906448
+      Entropy: 6.747532035906447
       Virtual Size: '0xdbb5'
     NonPaged:
       Entropy: 6.71406382908674
@@ -184,13 +184,13 @@ KnownVulnerableSamples:
       Entropy: 0.04519006846517909
       Virtual Size: '0x364c'
     INIT:
-      Entropy: 5.66221456572002
+      Entropy: 5.662214565720019
       Virtual Size: '0xa84'
     .rsrc:
       Entropy: 3.3233696108191855
       Virtual Size: '0x430'
     .reloc:
-      Entropy: 6.276829324907503
+      Entropy: 6.276829324907502
       Virtual Size: '0xf58'
   Signature:
   - TG Soft S.a.s. Di Tonello Gianfranco e C.
@@ -292,13 +292,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 0b663530751cc11f34273fee7921c431
 - Authentihash:
     MD5: b6d013002983064089233685b9bde66b
     SHA1: 6db4ed2d751cc8ae376f2dd69e702e9e469ad8c9
     SHA256: 554bf34bde5e7c86fc463496d19a4369d911ccad90e3c684855192cd677641c4
   Company: TG Soft S.a.s.
   Copyright: Copyright (C) TG Soft S.a.s. 2011, 2013 - www.tgsoft.it
-  CreationTimestamp: '2013-11-29 07:03:41'
+  CreationTimestamp: '2013-11-29 05:03:41'
   Date: ''
   Description: VirIT Agent System
   ExportedFunctions: ''
@@ -392,19 +393,19 @@ KnownVulnerableSamples:
   SHA256: a2096b460e31451659b0dde752264c362f47254c8191930bc921ff16a4311641
   Sections:
     .text:
-      Entropy: 6.365297707266801
+      Entropy: 6.3652977072668016
       Virtual Size: '0xb1da'
     .rdata:
       Entropy: 4.99053189312109
       Virtual Size: '0xc04'
     .data:
-      Entropy: 0.9258397206248277
+      Entropy: 0.9258397206248276
       Virtual Size: '0x3878'
     .pdata:
-      Entropy: 4.342028159341793
+      Entropy: 4.342028159341795
       Virtual Size: '0x318'
     INIT:
-      Entropy: 5.22711036570093
+      Entropy: 5.227110365700928
       Virtual Size: '0x842'
     .rsrc:
       Entropy: 3.311386289808379
@@ -509,6 +510,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 85fd19df117fbc21efbcb1d587063e12
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

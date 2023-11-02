@@ -33,7 +33,7 @@ KnownVulnerableSamples:
     SHA256: 407ca87833bd0931eec8005bb125e56d5765058c9b6422620aa95d8b2044239a
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2008-08-18 12:16:41'
+  CreationTimestamp: '2008-08-18 10:16:41'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -147,7 +147,7 @@ KnownVulnerableSamples:
       Entropy: 4.031879483268685
       Virtual Size: '0x63'
     INIT:
-      Entropy: 5.176988201091536
+      Entropy: 5.176988201091535
       Virtual Size: '0x96e'
     .rsrc:
       Entropy: 3.285837261243419
@@ -235,6 +235,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: f2dc136141066311fddef65f7f417c44
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

@@ -33,7 +33,7 @@ KnownVulnerableSamples:
     SHA256: f020137cb08f86c48810780209a3f4a1fac361ed089ade61c1b5d6c64ded7872
   Company: innotek GmbH
   Copyright: innotek GmbH & Others
-  CreationTimestamp: '2007-12-29 03:25:14'
+  CreationTimestamp: '2007-12-29 01:25:14'
   Date: ''
   Description: VirtualBox Host Interface Networking Driver
   ExportedFunctions: ''
@@ -110,10 +110,10 @@ KnownVulnerableSamples:
       Entropy: 4.87905427246399
       Virtual Size: '0xab8'
     INIT:
-      Entropy: 5.8243428580179595
+      Entropy: 5.82434285801796
       Virtual Size: '0x62e'
     .rsrc:
-      Entropy: 3.3007721043331344
+      Entropy: 3.300772104333135
       Virtual Size: '0x390'
     .reloc:
       Entropy: 6.184220326704345
@@ -210,13 +210,14 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 76950c8e12482b742f86f2896856a00e
 - Authentihash:
     MD5: 470e29597bd85eece73b1d7876ed4581
     SHA1: 653f0e8dce4363f65da265d03c5fb89ac1e40fca
     SHA256: 16c63f5ebd96caecae3581a91b949ccc803cf7c18482448d19f9433d6d40ebee
   Company: Sun Microsystems, Inc.
   Copyright: Sun Microsystems, Inc. & Others
-  CreationTimestamp: '2008-04-30 16:07:13'
+  CreationTimestamp: '2008-04-30 14:07:13'
   Date: ''
   Description: VirtualBox Host Interface Networking Driver
   ExportedFunctions: ''
@@ -287,16 +288,16 @@ KnownVulnerableSamples:
       Entropy: 6.464554740728887
       Virtual Size: '0x79ac'
     .rdata:
-      Entropy: 3.26514342244172
+      Entropy: 3.2651434224417204
       Virtual Size: '0x844'
     .data:
-      Entropy: 4.762583195848007
+      Entropy: 4.7625831958480065
       Virtual Size: '0xa38'
     INIT:
       Entropy: 5.795225260851648
       Virtual Size: '0x62e'
     .rsrc:
-      Entropy: 3.305490731624694
+      Entropy: 3.3054907316246935
       Virtual Size: '0x3b8'
     .reloc:
       Entropy: 6.182943276421891
@@ -392,6 +393,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 76950c8e12482b742f86f2896856a00e
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

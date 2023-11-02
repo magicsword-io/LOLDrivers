@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: c54ffa9a32cd99972ca905dcf99e20f8429e3cfd45bc1ddf4f9af8b3ed688c88
   Company: Logitech Inc.
   Copyright: (c) 1996-2009 Logitech.  All rights reserved.
-  CreationTimestamp: '2009-04-30 18:43:07'
+  CreationTimestamp: '2009-04-30 16:43:07'
   Date: ''
   Description: Logitech Video Driver
   ExportedFunctions: ''
@@ -188,10 +188,10 @@ KnownVulnerableSamples:
   SHA256: e86cb77de7b6a8025f9a546f6c45d135f471e664963cf70b381bee2dfd0fdef4
   Sections:
     .text:
-      Entropy: 6.406233801541218
+      Entropy: 6.406233801541219
       Virtual Size: '0x479e9'
     .rdata:
-      Entropy: 4.1963496860254486
+      Entropy: 4.196349686025448
       Virtual Size: '0x45cc'
     .data:
       Entropy: 0.8628896749719599
@@ -209,7 +209,7 @@ KnownVulnerableSamples:
       Entropy: 3.4673390377653823
       Virtual Size: '0x958'
     .reloc:
-      Entropy: 4.035668263520144
+      Entropy: 4.0356682635201455
       Virtual Size: '0xc94'
   Signature:
   - Logitech Inc
@@ -294,6 +294,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: e11e41c95c1872ac3ebbd7768b16cf9e
 MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'

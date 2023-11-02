@@ -42,7 +42,7 @@ KnownVulnerableSamples:
     SHA256: 0e291148da43ea6a491b8b94bdf573365087940c9b90f6a15a4e589da86a518d
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-16 01:24:57'
+  CreationTimestamp: '2013-01-15 23:24:57'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -97,10 +97,10 @@ KnownVulnerableSamples:
   SHA256: 76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22
   Sections:
     .text:
-      Entropy: 5.994411135194118
+      Entropy: 5.9944111351941185
       Virtual Size: '0x5736'
     .rdata:
-      Entropy: 5.542492779395015
+      Entropy: 5.542492779395016
       Virtual Size: '0x570'
     .data:
       Entropy: 1.445115035315444
@@ -204,13 +204,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: 8b7e7c20da6ca9ac4bdb3927fe2b266a
 - Authentihash:
     MD5: 3a5b83215c9ea17f8d3ad3812c30a340
     SHA1: 533e0690528ff3f0d59edeed9dd53b4f37c0a110
     SHA256: 1622ac0c618a86be17e0f97daa061f9aaa0e721dc0fd30d76bbc5c958e9a9d92
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-03-27 13:56:49'
+  CreationTimestamp: '2009-03-27 11:56:49'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -256,7 +257,7 @@ KnownVulnerableSamples:
       Entropy: 5.981323117886685
       Virtual Size: '0x4a25'
     .rdata:
-      Entropy: 5.6811277535097675
+      Entropy: 5.681127753509768
       Virtual Size: '0x480'
     .data:
       Entropy: 0.8264834692004682
@@ -274,7 +275,7 @@ KnownVulnerableSamples:
       Entropy: 3.289150653685818
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 1.245426587124313
+      Entropy: 1.2454265871243133
       Virtual Size: '0x3c'
   Signatures:
   - CertificatesInfo: ''
@@ -355,13 +356,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: 7d004bbe0f546a91c93562d324307fa7
 - Authentihash:
     MD5: b546d6b223a9e1a42f8359dbf9d9737c
     SHA1: 41f6704252efa14de0d72eeaf7475886ba7f3bdc
     SHA256: 92ca1aec3afc90b44861c2e0be084a3db38d22d52f35e1697643d6477151392f
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-16 01:24:57'
+  CreationTimestamp: '2013-01-15 23:24:57'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -414,10 +416,10 @@ KnownVulnerableSamples:
   SHA256: 2e665962c827ce0adbd29fe6bcf09bbb1d7a7022075d162ff9b65d0af9794ac0
   Sections:
     .text:
-      Entropy: 5.994411135194118
+      Entropy: 5.9944111351941185
       Virtual Size: '0x5736'
     .rdata:
-      Entropy: 5.542492779395015
+      Entropy: 5.542492779395016
       Virtual Size: '0x570'
     .data:
       Entropy: 1.445115035315444
@@ -435,7 +437,7 @@ KnownVulnerableSamples:
       Entropy: 6.472426446171854
       Virtual Size: '0x14a24'
     .reloc:
-      Entropy: 5.039009418592024
+      Entropy: 5.039009418592025
       Virtual Size: '0x48'
   Signatures:
   - CertificatesInfo: ''
@@ -474,13 +476,14 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Production PCA 2011
       Version: 1
+  Imphash: 8b7e7c20da6ca9ac4bdb3927fe2b266a
 - Authentihash:
     MD5: 5d62cae57be434a4d56924574498c4f2
     SHA1: 1a99d3141d75a3ef1998944b2d107089ce3ef6e4
     SHA256: a363deaf1790e9c0610e07a7203749aab8b60f5ededc944abc0ef3010f5e2105
   Company: Micro Focus
   Copyright: (C) Copyright 2000-2017, Micro Focus. All Rights Reserved.
-  CreationTimestamp: '2022-03-03 05:52:58'
+  CreationTimestamp: '2022-03-03 03:52:58'
   Description: XTier Security Context Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -543,7 +546,7 @@ KnownVulnerableSamples:
       Entropy: 1.445115035315444
       Virtual Size: '0x5a8'
     .pdata:
-      Entropy: 4.277709228070347
+      Entropy: 4.277709228070346
       Virtual Size: '0x450'
     .edata:
       Entropy: 3.956023170093665
@@ -594,13 +597,14 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: 01aa65221a48929f0a34a27c4e3011b1
 - Authentihash:
     MD5: 3050ced748b80cc81892435fd0868bfc
     SHA1: 579e23f2b6ce2221ba435abc20801e98ab91a360
     SHA256: 34f36a59ecf6174eeac15994e54c41fe1e3e3b1eee8ed4c399ec8c63212373d7
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2011-04-01 21:18:14'
+  CreationTimestamp: '2011-04-01 19:18:14'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -652,7 +656,7 @@ KnownVulnerableSamples:
       Entropy: 0.8264834692004682
       Virtual Size: '0x568'
     .pdata:
-      Entropy: 4.238276468304065
+      Entropy: 4.238276468304064
       Virtual Size: '0x3d8'
     .edata:
       Entropy: 3.956023170093665
@@ -664,7 +668,7 @@ KnownVulnerableSamples:
       Entropy: 3.287931080812757
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 1.245426587124313
+      Entropy: 1.2454265871243133
       Virtual Size: '0x3c'
   Signatures:
   - CertificatesInfo: ''
@@ -745,13 +749,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: b8d0a36d2b14d79dfa08fb2e121f0920
 - Authentihash:
     MD5: 7e245f8b1d1bddfd217d1cd060b91657
     SHA1: 8c89db8dd4d7947cb5eb13c7a12907564576cb91
     SHA256: 00dfeab446afecac7b44b0b1680d5ca7d421eda243e16db8c08706bb593a8391
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-03-27 13:52:17'
+  CreationTimestamp: '2009-03-27 11:52:17'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -806,13 +811,13 @@ KnownVulnerableSamples:
       Entropy: 3.88787733918592
       Virtual Size: '0x63'
     INIT:
-      Entropy: 5.407607088870611
+      Entropy: 5.407607088870612
       Virtual Size: '0x2d6'
     .rsrc:
       Entropy: 3.289150653685818
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 6.2209835227622525
+      Entropy: 6.220983522762253
       Virtual Size: '0x4f2'
   Signatures:
   - CertificatesInfo: ''
@@ -893,13 +898,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: 65181bc89a1c2b5854548236269846c1
 - Authentihash:
     MD5: 32265ccdfe3d7f66269cbee0d5555e5b
     SHA1: 72e5f5f6f266410d827fef10dc82c7ec8541e036
     SHA256: 253ed7f5c7115e957dfdb1f5c6c51592b491a70b27787903c8fd848e45b9cf22
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-16 01:24:57'
+  CreationTimestamp: '2013-01-15 23:24:57'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -952,10 +958,10 @@ KnownVulnerableSamples:
   SHA256: fb81b5f8bf69637dbdf050181499088a67d24577587bc520de94b5ee8996240f
   Sections:
     .text:
-      Entropy: 5.994411135194118
+      Entropy: 5.9944111351941185
       Virtual Size: '0x5736'
     .rdata:
-      Entropy: 5.542492779395015
+      Entropy: 5.542492779395016
       Virtual Size: '0x570'
     .data:
       Entropy: 1.445115035315444
@@ -1012,13 +1018,14 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Code Signing PCA 2011
       Version: 1
+  Imphash: 8b7e7c20da6ca9ac4bdb3927fe2b266a
 - Authentihash:
     MD5: 0d1a4e506e7c928f1683a9cf38eb0835
     SHA1: 50471608c91621cb84ba646974311da0abf6b3e9
     SHA256: 0e291148da43ea6a491b8b94bdf573365087940c9b90f6a15a4e589da86a518d
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-16 01:24:57'
+  CreationTimestamp: '2013-01-15 23:24:57'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -1073,10 +1080,10 @@ KnownVulnerableSamples:
   SHA256: 76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22
   Sections:
     .text:
-      Entropy: 5.994411135194118
+      Entropy: 5.9944111351941185
       Virtual Size: '0x5736'
     .rdata:
-      Entropy: 5.542492779395015
+      Entropy: 5.542492779395016
       Virtual Size: '0x570'
     .data:
       Entropy: 1.445115035315444
@@ -1180,13 +1187,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: 8b7e7c20da6ca9ac4bdb3927fe2b266a
 - Authentihash:
     MD5: 3a5b83215c9ea17f8d3ad3812c30a340
     SHA1: 533e0690528ff3f0d59edeed9dd53b4f37c0a110
     SHA256: 1622ac0c618a86be17e0f97daa061f9aaa0e721dc0fd30d76bbc5c958e9a9d92
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-03-27 13:56:49'
+  CreationTimestamp: '2009-03-27 11:56:49'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -1232,7 +1240,7 @@ KnownVulnerableSamples:
       Entropy: 5.981323117886685
       Virtual Size: '0x4a25'
     .rdata:
-      Entropy: 5.6811277535097675
+      Entropy: 5.681127753509768
       Virtual Size: '0x480'
     .data:
       Entropy: 0.8264834692004682
@@ -1250,7 +1258,7 @@ KnownVulnerableSamples:
       Entropy: 3.289150653685818
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 1.245426587124313
+      Entropy: 1.2454265871243133
       Virtual Size: '0x3c'
   Signatures:
   - CertificatesInfo: ''
@@ -1331,13 +1339,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: 7d004bbe0f546a91c93562d324307fa7
 - Authentihash:
     MD5: b546d6b223a9e1a42f8359dbf9d9737c
     SHA1: 41f6704252efa14de0d72eeaf7475886ba7f3bdc
     SHA256: 92ca1aec3afc90b44861c2e0be084a3db38d22d52f35e1697643d6477151392f
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-16 01:24:57'
+  CreationTimestamp: '2013-01-15 23:24:57'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -1390,10 +1399,10 @@ KnownVulnerableSamples:
   SHA256: 2e665962c827ce0adbd29fe6bcf09bbb1d7a7022075d162ff9b65d0af9794ac0
   Sections:
     .text:
-      Entropy: 5.994411135194118
+      Entropy: 5.9944111351941185
       Virtual Size: '0x5736'
     .rdata:
-      Entropy: 5.542492779395015
+      Entropy: 5.542492779395016
       Virtual Size: '0x570'
     .data:
       Entropy: 1.445115035315444
@@ -1411,7 +1420,7 @@ KnownVulnerableSamples:
       Entropy: 6.472426446171854
       Virtual Size: '0x14a24'
     .reloc:
-      Entropy: 5.039009418592024
+      Entropy: 5.039009418592025
       Virtual Size: '0x48'
   Signatures:
   - CertificatesInfo: ''
@@ -1450,13 +1459,14 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Production PCA 2011
       Version: 1
+  Imphash: 8b7e7c20da6ca9ac4bdb3927fe2b266a
 - Authentihash:
     MD5: 5d62cae57be434a4d56924574498c4f2
     SHA1: 1a99d3141d75a3ef1998944b2d107089ce3ef6e4
     SHA256: a363deaf1790e9c0610e07a7203749aab8b60f5ededc944abc0ef3010f5e2105
   Company: Micro Focus
   Copyright: (C) Copyright 2000-2017, Micro Focus. All Rights Reserved.
-  CreationTimestamp: '2022-03-03 05:52:58'
+  CreationTimestamp: '2022-03-03 03:52:58'
   Description: XTier Security Context Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -1519,7 +1529,7 @@ KnownVulnerableSamples:
       Entropy: 1.445115035315444
       Virtual Size: '0x5a8'
     .pdata:
-      Entropy: 4.277709228070347
+      Entropy: 4.277709228070346
       Virtual Size: '0x450'
     .edata:
       Entropy: 3.956023170093665
@@ -1570,13 +1580,14 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: 01aa65221a48929f0a34a27c4e3011b1
 - Authentihash:
     MD5: 3050ced748b80cc81892435fd0868bfc
     SHA1: 579e23f2b6ce2221ba435abc20801e98ab91a360
     SHA256: 34f36a59ecf6174eeac15994e54c41fe1e3e3b1eee8ed4c399ec8c63212373d7
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2011-04-01 21:18:14'
+  CreationTimestamp: '2011-04-01 19:18:14'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -1628,7 +1639,7 @@ KnownVulnerableSamples:
       Entropy: 0.8264834692004682
       Virtual Size: '0x568'
     .pdata:
-      Entropy: 4.238276468304065
+      Entropy: 4.238276468304064
       Virtual Size: '0x3d8'
     .edata:
       Entropy: 3.956023170093665
@@ -1640,7 +1651,7 @@ KnownVulnerableSamples:
       Entropy: 3.287931080812757
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 1.245426587124313
+      Entropy: 1.2454265871243133
       Virtual Size: '0x3c'
   Signatures:
   - CertificatesInfo: ''
@@ -1721,13 +1732,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: b8d0a36d2b14d79dfa08fb2e121f0920
 - Authentihash:
     MD5: 7e245f8b1d1bddfd217d1cd060b91657
     SHA1: 8c89db8dd4d7947cb5eb13c7a12907564576cb91
     SHA256: 00dfeab446afecac7b44b0b1680d5ca7d421eda243e16db8c08706bb593a8391
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-03-27 13:52:17'
+  CreationTimestamp: '2009-03-27 11:52:17'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -1782,13 +1794,13 @@ KnownVulnerableSamples:
       Entropy: 3.88787733918592
       Virtual Size: '0x63'
     INIT:
-      Entropy: 5.407607088870611
+      Entropy: 5.407607088870612
       Virtual Size: '0x2d6'
     .rsrc:
       Entropy: 3.289150653685818
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 6.2209835227622525
+      Entropy: 6.220983522762253
       Virtual Size: '0x4f2'
   Signatures:
   - CertificatesInfo: ''
@@ -1869,13 +1881,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: 65181bc89a1c2b5854548236269846c1
 - Authentihash:
     MD5: 32265ccdfe3d7f66269cbee0d5555e5b
     SHA1: 72e5f5f6f266410d827fef10dc82c7ec8541e036
     SHA256: 253ed7f5c7115e957dfdb1f5c6c51592b491a70b27787903c8fd848e45b9cf22
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-16 01:24:57'
+  CreationTimestamp: '2013-01-15 23:24:57'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -1928,10 +1941,10 @@ KnownVulnerableSamples:
   SHA256: fb81b5f8bf69637dbdf050181499088a67d24577587bc520de94b5ee8996240f
   Sections:
     .text:
-      Entropy: 5.994411135194118
+      Entropy: 5.9944111351941185
       Virtual Size: '0x5736'
     .rdata:
-      Entropy: 5.542492779395015
+      Entropy: 5.542492779395016
       Virtual Size: '0x570'
     .data:
       Entropy: 1.445115035315444
@@ -1988,13 +2001,14 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Code Signing PCA 2011
       Version: 1
+  Imphash: 8b7e7c20da6ca9ac4bdb3927fe2b266a
 - Authentihash:
     MD5: b5668ca76edf23b8329578964f97f552
     SHA1: 99848c658086ecb326e83cf3521e3440ecee6c35
     SHA256: 410d79a49c02da50f4567166d5acef977b5dbc3aafb67522939bf902e65596a5
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-12-22 03:35:10'
+  CreationTimestamp: '2015-12-22 01:35:10'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -2054,7 +2068,7 @@ KnownVulnerableSamples:
       Entropy: 6.015399864614518
       Virtual Size: '0x5a46'
     .rdata:
-      Entropy: 5.555982444894319
+      Entropy: 5.555982444894318
       Virtual Size: '0x598'
     .data:
       Entropy: 1.445115035315444
@@ -2157,13 +2171,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 01aa65221a48929f0a34a27c4e3011b1
 - Authentihash:
     MD5: 948889eac3cc3134cf6f45bcabc52858
     SHA1: 45227aa1232e6c321ce40939f144bb6c1cf58e12
     SHA256: 1d640783395631c1b4878ac7945f227c4c4f64fe26dd30cbed755dc440931e85
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-06-26 08:12:50'
+  CreationTimestamp: '2015-06-26 06:12:50'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -2326,13 +2341,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 01aa65221a48929f0a34a27c4e3011b1
 - Authentihash:
     MD5: 81c87e8e69594a5970f8034743c82b45
     SHA1: cbf74b634b651c2c60a72b294a60d37232ea3e84
     SHA256: 37b9fbd6547091b83b2595bb0f9f9035ae95111868a4393aab52bf22087233d7
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2012, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2012-03-18 21:29:20'
+  CreationTimestamp: '2012-03-18 19:29:20'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -2391,13 +2407,13 @@ KnownVulnerableSamples:
       Entropy: 3.8878773391859194
       Virtual Size: '0x63'
     INIT:
-      Entropy: 5.39792251813472
+      Entropy: 5.3979225181347195
       Virtual Size: '0x2f8'
     .rsrc:
       Entropy: 3.2729254116810207
       Virtual Size: '0x358'
     .reloc:
-      Entropy: 6.189610877444557
+      Entropy: 6.189610877444558
       Virtual Size: '0x512'
   Signature: ''
   Signatures:
@@ -2479,13 +2495,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: 29a2e15ac1622a3daf7da5a78f0cef08
 - Authentihash:
     MD5: 8fd0912006f7d1f320c95b39673f7ee3
     SHA1: 0eb2a02bddee973aef2fdb9f587cdfec7c136407
     SHA256: 748b6350472e21bab16497e4296794619dede7fcdb188fea1574f89498a2ff54
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2008-08-18 12:18:12'
+  CreationTimestamp: '2008-08-18 10:18:12'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -2552,7 +2569,7 @@ KnownVulnerableSamples:
       Entropy: 3.289150653685818
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 1.245426587124313
+      Entropy: 1.2454265871243133
       Virtual Size: '0x3c'
   Signature: ''
   Signatures:
@@ -2634,13 +2651,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: 7d004bbe0f546a91c93562d324307fa7
 - Authentihash:
     MD5: 6b6c8f2c44df5aade507397b36071a45
     SHA1: 9510465b38ab1e05b2c5e9d40f962430916296da
     SHA256: 0f4ca9e9507724526f2b624d165750344473d388da38b7f3f6a8366dbc15140b
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-09-08 15:40:51'
+  CreationTimestamp: '2009-09-08 13:40:51'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -2686,7 +2704,7 @@ KnownVulnerableSamples:
   SHA256: 14938f68957ede6e2b742a550042119a8fbc9f14427fb89fa53fff12d243561c
   Sections:
     .text:
-      Entropy: 5.984908350932488
+      Entropy: 5.984908350932489
       Virtual Size: '0x4c05'
     .rdata:
       Entropy: 5.608591774799332
@@ -2695,7 +2713,7 @@ KnownVulnerableSamples:
       Entropy: 0.8264834692004682
       Virtual Size: '0x568'
     .pdata:
-      Entropy: 4.239573253931085
+      Entropy: 4.239573253931084
       Virtual Size: '0x3d8'
     .edata:
       Entropy: 3.983850316580165
@@ -2707,7 +2725,7 @@ KnownVulnerableSamples:
       Entropy: 3.289150653685818
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 1.245426587124313
+      Entropy: 1.2454265871243133
       Virtual Size: '0x3c'
   Signature: ''
   Signatures:
@@ -2789,13 +2807,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: b8d0a36d2b14d79dfa08fb2e121f0920
 - Authentihash:
     MD5: e27fcbf5c5155f962e8734d698d38680
     SHA1: dc05bc4f8de1c51ea6cdca68df880908e1d49eed
     SHA256: 4c21b7065cb961127ab9e2a0251ab8d50cfd65369a41e88e36bc2908af2b1d8d
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-12-18 04:23:27'
+  CreationTimestamp: '2013-12-18 02:23:27'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -2871,7 +2890,7 @@ KnownVulnerableSamples:
       Entropy: 3.275995301680775
       Virtual Size: '0x358'
     .reloc:
-      Entropy: 6.29662854788879
+      Entropy: 6.2966285478887905
       Virtual Size: '0x59c'
   Signature: ''
   Signatures:
@@ -2956,13 +2975,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: e1a5435877b427be967867a25b1d263e
 - Authentihash:
     MD5: 3d6cb9acf4c080dd83a0033feef09a4e
     SHA1: c966a8f171c40ffea5b8464bb7d4e737db0ec175
     SHA256: 234fc829bfd4d8d5dca351be176f5a06cb29bbfd5632a93cc218936d32a44851
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2014, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2014-08-26 15:58:19'
+  CreationTimestamp: '2014-08-26 13:58:19'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -3038,7 +3058,7 @@ KnownVulnerableSamples:
       Entropy: 3.274996758488867
       Virtual Size: '0x358'
     .reloc:
-      Entropy: 6.285236926922212
+      Entropy: 6.285236926922213
       Virtual Size: '0x5a2'
   Signature: ''
   Signatures:
@@ -3123,13 +3143,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 9fc4a96d982ebfd6b9d87c0f3ebef681
 - Authentihash:
     MD5: 0d2b36f1bf3378239f699e508290e746
     SHA1: ccba48d017eb2a19cc9b6b14d3762158dcb02b43
     SHA256: 8ac341d36e1af8959de6410a976400ded8554f5ffb6a462a8080c38a0140f4d4
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2011-07-17 23:25:32'
+  CreationTimestamp: '2011-07-17 21:25:32'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -3176,7 +3197,7 @@ KnownVulnerableSamples:
   SHA256: 53810ca98e07a567bb082628d95d796f14c218762cbbaa79704740284dccda4b
   Sections:
     .text:
-      Entropy: 6.148140674179317
+      Entropy: 6.148140674179319
       Virtual Size: '0x3517'
     .rdata:
       Entropy: 5.94388104788726
@@ -3276,13 +3297,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: 052280a42374b8d779c10cd0d8118691
 - Authentihash:
     MD5: aac45578e5c6ab044107b52ce2888349
     SHA1: e48f528493b963c8660f8c989281fd5b2277f359
     SHA256: 5271f526b19331c7f8526a5e10b9aedc0ddd325958aa0e908ceaee40692f7ae2
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-06-26 08:12:59'
+  CreationTimestamp: '2015-06-26 06:12:59'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -3343,7 +3365,7 @@ KnownVulnerableSamples:
       Entropy: 6.216974830222535
       Virtual Size: '0x3f4c'
     .rdata:
-      Entropy: 5.980250864123601
+      Entropy: 5.980250864123602
       Virtual Size: '0x313'
     .data:
       Entropy: 1.31505443956947
@@ -3443,13 +3465,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 5899e93373114ca9e458e906675132b7
 - Authentihash:
     MD5: 0d2b0c403b11961ee8fb42c7c114815f
     SHA1: b9b60fb3b1c3560b824e168428f0827713aa2f24
     SHA256: f62282e44713d7d2f4c780027c7bbb82ba0b491c8836dfae33a2d82e8b5a43d2
   Company: Novell, Inc.
   Copyright: "Copyright \xA9 1997-2007 Novell, Inc."
-  CreationTimestamp: '2007-08-09 15:35:11'
+  CreationTimestamp: '2007-08-09 13:35:11'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -3516,7 +3539,7 @@ KnownVulnerableSamples:
       Entropy: 3.2545231002082082
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 1.245426587124313
+      Entropy: 1.2454265871243133
       Virtual Size: '0x3c'
   Signature: ''
   Signatures:
@@ -3598,13 +3621,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: 7d004bbe0f546a91c93562d324307fa7
 - Authentihash:
     MD5: 985c950cb09a516571021db7e3ad9dde
     SHA1: a4566fef7b427142afe4b1adf10509e79a91dc32
     SHA256: cf2ea0e4d21d3774bbacf10a14c75583b448829f87a90b869678fbc4de9b2a99
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2012, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2012-03-18 21:31:45'
+  CreationTimestamp: '2012-03-18 19:31:45'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -3671,7 +3695,7 @@ KnownVulnerableSamples:
       Entropy: 3.2729254116810207
       Virtual Size: '0x358'
     .reloc:
-      Entropy: 1.245426587124313
+      Entropy: 1.2454265871243133
       Virtual Size: '0x3c'
   Signature: ''
   Signatures:
@@ -3753,13 +3777,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: 0707fe3c02c8d2a4d6219bd0596d76f3
 - Authentihash:
     MD5: be114b63574e247ecf51e79063dbd19b
     SHA1: 61433a484870ba379064ba353b118497c67c7a7e
     SHA256: 1204026fdc9c859960ee561eb9f1fd9ebf6c88c78c5d4cee35ef029ad5050ec6
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-09-26 09:24:31'
+  CreationTimestamp: '2015-09-26 07:24:31'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -3922,13 +3947,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 01aa65221a48929f0a34a27c4e3011b1
 - Authentihash:
     MD5: 3758930d9496e57668292eba34653f43
     SHA1: 871a3a9cb2b7288f6e7f5dd21a06c7e04bcdf4ee
     SHA256: cdcf71696db4031fe3e70969bbe6169744ff91eebb24d6ffb734f922a850183b
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-16 01:25:05'
+  CreationTimestamp: '2013-01-15 23:25:05'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -3987,7 +4013,7 @@ KnownVulnerableSamples:
       Entropy: 6.203445234172961
       Virtual Size: '0x3d1e'
     .rdata:
-      Entropy: 5.965429698658007
+      Entropy: 5.965429698658006
       Virtual Size: '0x319'
     .data:
       Entropy: 1.31505443956947
@@ -4002,7 +4028,7 @@ KnownVulnerableSamples:
       Entropy: 3.275995301680775
       Virtual Size: '0x358'
     .reloc:
-      Entropy: 6.311139586830064
+      Entropy: 6.3111395868300635
       Virtual Size: '0x58a'
   Signature: ''
   Signatures:
@@ -4085,13 +4111,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: 61b719638eacc2c5ca299805d4819e69
 - Authentihash:
     MD5: c6ccce2e7b4566f54a6fae9adb1b1c13
     SHA1: 9e576add0418f0eb1866857633003be454595eb8
     SHA256: 058c4fbd3a12f0d7ddfc771067f03dea88cc33dd4b61139edcb0b2d17905f084
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-05-29 06:48:33'
+  CreationTimestamp: '2013-05-29 04:48:33'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -4150,7 +4177,7 @@ KnownVulnerableSamples:
       Entropy: 6.203445234172961
       Virtual Size: '0x3d1e'
     .rdata:
-      Entropy: 5.962850439820429
+      Entropy: 5.9628504398204285
       Virtual Size: '0x317'
     .data:
       Entropy: 1.31505443956947
@@ -4165,7 +4192,7 @@ KnownVulnerableSamples:
       Entropy: 3.275995301680775
       Virtual Size: '0x358'
     .reloc:
-      Entropy: 6.311139586830064
+      Entropy: 6.3111395868300635
       Virtual Size: '0x58a'
   Signature: ''
   Signatures:
@@ -4250,13 +4277,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 61b719638eacc2c5ca299805d4819e69
 - Authentihash:
     MD5: 971c1a374c811eac22b6fbfc2511b41c
     SHA1: 6ba91ab77af48446e377efdcc817d902e1b22fd9
     SHA256: 52c7b29023ac2a98b7a9c73de790d820d3d6d095bea0b077d4dad53fa97b0731
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-12-18 09:22:32'
+  CreationTimestamp: '2009-12-18 07:22:32'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -4306,7 +4334,7 @@ KnownVulnerableSamples:
       Entropy: 6.149831920888144
       Virtual Size: '0x3505'
     .rdata:
-      Entropy: 5.915581864636487
+      Entropy: 5.915581864636488
       Virtual Size: '0x2c7'
     .data:
       Entropy: 0.6992933847552781
@@ -4403,13 +4431,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: 052280a42374b8d779c10cd0d8118691
 - Authentihash:
     MD5: b372031d7a2000669e5de1d85071025b
     SHA1: 8aa0e754ef4a5f94ae72b76d54fa052264faefbc
     SHA256: 0174cea1dd70b374f355126ae6be650dff95897d8c8200caac91d4f9e5e5b871
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2011-09-29 21:30:09'
+  CreationTimestamp: '2011-09-29 19:30:09'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -4464,7 +4493,7 @@ KnownVulnerableSamples:
       Entropy: 0.8264834692004682
       Virtual Size: '0x568'
     .pdata:
-      Entropy: 4.111090558168596
+      Entropy: 4.111090558168592
       Virtual Size: '0x3d8'
     .edata:
       Entropy: 3.9636482963781448
@@ -4476,7 +4505,7 @@ KnownVulnerableSamples:
       Entropy: 3.287931080812757
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 1.245426587124313
+      Entropy: 1.2454265871243133
       Virtual Size: '0x3c'
   Signature: ''
   Signatures:
@@ -4558,13 +4587,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: b8d0a36d2b14d79dfa08fb2e121f0920
 - Authentihash:
     MD5: e688b6a82cdde6f902e0a8a5c3a060e6
     SHA1: 8281e161d667835b26397b4d944b55bb2dea01f9
     SHA256: 5173b9240e9bcd0d9b25290bb0aa45d156fd5a0080841515ab44f61e0e6bd894
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2014, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2014-11-18 03:10:41'
+  CreationTimestamp: '2014-11-18 01:10:41'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -4727,13 +4757,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 01aa65221a48929f0a34a27c4e3011b1
 - Authentihash:
     MD5: 86c7e1fbe71ce4a51fc4842efbe4e80d
     SHA1: ad20f4fce0a45f0da0a52c077b324daa3aaa4cc9
     SHA256: aa1c07fc6289ddc2182b11e555073e66b7acbfc17c38efb44ecaa19a6aaf722f
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2014, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2014-08-26 15:58:08'
+  CreationTimestamp: '2014-08-26 13:58:08'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -4791,10 +4822,10 @@ KnownVulnerableSamples:
   SHA256: a855b6ec385b3369c547a3c54e88a013dd028865aba0f3f08be84cdcbaa9a0f6
   Sections:
     .text:
-      Entropy: 6.005303811091078
+      Entropy: 6.005303811091079
       Virtual Size: '0x5956'
     .rdata:
-      Entropy: 5.50236951084481
+      Entropy: 5.502369510844811
       Virtual Size: '0x598'
     .data:
       Entropy: 1.4266625052332786
@@ -4806,7 +4837,7 @@ KnownVulnerableSamples:
       Entropy: 3.9510714024606037
       Virtual Size: '0x63'
     INIT:
-      Entropy: 5.340825447936183
+      Entropy: 5.340825447936182
       Virtual Size: '0x4ee'
     .rsrc:
       Entropy: 3.274996758488867
@@ -4897,13 +4928,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 0a8eeabf5981efb2116244785cb03900
 - Authentihash:
     MD5: 8e14a79b10ada5719e402ea12dd77111
     SHA1: 0466c42d770bf9350948d15810f04965f8ab658a
     SHA256: 11b0e5d7971aaa2a6c4621f068af390f291fd796c202369605c2e0c7940f50ee
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-09-08 15:31:34'
+  CreationTimestamp: '2009-09-08 13:31:34'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -5050,6 +5082,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: 052280a42374b8d779c10cd0d8118691
 MitreID: T1068
 Resources:
 - ' https://github.com/jbaines-r7/dellicious'

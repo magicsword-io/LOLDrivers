@@ -41,7 +41,7 @@ KnownVulnerableSamples:
   Company: "\u4E00\u666E\u660E\u4E3A\uFF08\u5317\u4EAC\uFF09\u4FE1\u606F\u6280\u672F\
     \u6709\u9650\u516C\u53F8"
   Copyright: (C) 2013-2016 Epoolsoft Corporation. All Rights Reserved.
-  CreationTimestamp: '2016-04-10 10:17:05'
+  CreationTimestamp: '2016-04-10 08:17:05'
   Date: ''
   Description: Epoolsoft Windows Information View Tools
   ExportedFunctions: ''
@@ -140,7 +140,7 @@ KnownVulnerableSamples:
       Entropy: 5.552306001700414
       Virtual Size: '0xcf7c'
     .data:
-      Entropy: 2.8317772289985865
+      Entropy: 2.831777228998586
       Virtual Size: '0x2eda8'
     .pdata:
       Entropy: 5.938259413904041
@@ -149,10 +149,10 @@ KnownVulnerableSamples:
       Entropy: 5.080110483782868
       Virtual Size: '0x852'
     .rsrc:
-      Entropy: 3.454621715470091
+      Entropy: 3.4546217154700916
       Virtual Size: '0x3b0'
     .pchunt0:
-      Entropy: 1.75634499692032
+      Entropy: 1.7563449969203195
       Virtual Size: '0x780'
     .pchunt1:
       Entropy: 7.978022918434585
@@ -262,6 +262,7 @@ KnownVulnerableSamples:
     - SerialNumber: 5c5d0a336ba298b9695d2cfa5a181510
       Issuer: C=CN, O=WoSign CA Limited, CN=WoSign Class 3 Code Signing CA
       Version: 1
+  Imphash: f510a429c6ce5c8d414550518b3823d2
 MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'

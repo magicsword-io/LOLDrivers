@@ -233,7 +233,7 @@ KnownVulnerableSamples:
       Entropy: 5.3523212488458185
       Virtual Size: '0xe54'
     .upx0:
-      Entropy: 7.037246397744445
+      Entropy: 7.037246397744446
       Virtual Size: '0x124190'
     .reloc:
       Entropy: 3.9077681077271933
@@ -242,7 +242,8 @@ KnownVulnerableSamples:
       Entropy: 2.9056718289000636
       Virtual Size: '0x22c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-08-16 23:38:03'
+  CreationTimestamp: '2020-08-16 21:38:03'
+  Imphash: a74f61fdcea718cb9579907b2caf54ab
 - Filename: mhyprot.sys
   MD5: 67e3b720cee8184c714585a85f8058a0
   SHA1: 254dce914e13b90003b0ae72d8705d92fe7c8dd0
@@ -446,13 +447,13 @@ KnownVulnerableSamples:
       Entropy: 6.1683529019554815
       Virtual Size: '0x71a0'
     .rdata:
-      Entropy: 4.824949371923318
+      Entropy: 4.824949371923319
       Virtual Size: '0x15ec'
     .data:
       Entropy: 0.779983909093318
       Virtual Size: '0x10f8'
     .pdata:
-      Entropy: 7.75444631407128
+      Entropy: 7.754446314071279
       Virtual Size: '0x6cc'
     PAGE:
       Entropy: 5.190660216587449
@@ -461,16 +462,17 @@ KnownVulnerableSamples:
       Entropy: 5.3593629521412485
       Virtual Size: '0xeae'
     .upx0:
-      Entropy: 7.178607218904575
+      Entropy: 7.178607218904576
       Virtual Size: '0x13fa4c'
     .reloc:
-      Entropy: 3.9910908268341667
+      Entropy: 3.991090826834167
       Virtual Size: '0xc0'
     .rsrc:
       Entropy: 2.9056718289000636
       Virtual Size: '0x22c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-11 04:10:15'
+  CreationTimestamp: '2021-01-11 02:10:15'
+  Imphash: 82525a4a571f0f8d4e4f42ec6bb3900e
 - Filename: mhyprot2.sys
   MD5: 8f47af49c330c9fcf3451ad2252b9e04
   SHA1: be797c91768ac854bd3b82a093e55db83da0cb11
@@ -693,13 +695,14 @@ KnownVulnerableSamples:
       Entropy: 7.119277616060462
       Virtual Size: '0x137444'
     .reloc:
-      Entropy: 3.8650304564418816
+      Entropy: 3.865030456441881
       Virtual Size: '0xb4'
     .rsrc:
       Entropy: 2.9056718289000636
       Virtual Size: '0x22c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-06-28 04:44:28'
+  CreationTimestamp: '2021-06-28 02:44:28'
+  Imphash: ebb99842fa08915eb8b7f67d8dc7a13a
 - Filename: mhyprot2.sys
   MD5: 89c7bd12495e29413038224cb61db02e
   SHA1: 16c6bcef489f190a48e9d3b1f35972db89516479
@@ -903,7 +906,7 @@ KnownVulnerableSamples:
       Entropy: 6.159305681452516
       Virtual Size: '0x6a80'
     .rdata:
-      Entropy: 4.74638587252231
+      Entropy: 4.746385872522309
       Virtual Size: '0x151c'
     .data:
       Entropy: 0.807954115503613
@@ -912,13 +915,13 @@ KnownVulnerableSamples:
       Entropy: 7.784757457181626
       Virtual Size: '0x660'
     PAGE:
-      Entropy: 5.539613845904359
+      Entropy: 5.53961384590436
       Virtual Size: '0xb0a'
     INIT:
-      Entropy: 5.374680335897899
+      Entropy: 5.3746803358978985
       Virtual Size: '0xe8e'
     .upx0:
-      Entropy: 7.120374756857896
+      Entropy: 7.120374756857897
       Virtual Size: '0x13b804'
     .reloc:
       Entropy: 3.969283875435989
@@ -927,6 +930,7 @@ KnownVulnerableSamples:
       Entropy: 2.9106266625370485
       Virtual Size: '0x22c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-12-29 21:40:40'
+  CreationTimestamp: '2020-12-29 19:40:40'
+  Imphash: 4b0b017b23567cf8b9e1268957acd032
 Tags:
 - mhyprot.sys

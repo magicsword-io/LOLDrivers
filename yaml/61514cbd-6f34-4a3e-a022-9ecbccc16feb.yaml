@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 126719d008d106b7100ae47ed47666c1334701bd7ddb32d5b8e84048f258700f
   Company: ATI Technologies Inc.
   Copyright: Copyright (C) ATI Technologies Inc., 2003
-  CreationTimestamp: '2011-04-15 17:18:51'
+  CreationTimestamp: '2011-04-15 15:18:51'
   Date: ''
   Description: ATI Diagnostics Hardware Abstraction Sys
   ExportedFunctions: ''
@@ -81,7 +81,7 @@ KnownVulnerableSamples:
   SHA256: 5c04c274a708c9a7d993e33be3ea9e6119dc29527a767410dbaf93996f87369a
   Sections:
     .text:
-      Entropy: 6.02439982598069
+      Entropy: 6.024399825980691
       Virtual Size: '0x9aa'
     .rdata:
       Entropy: 4.486635449414708
@@ -181,13 +181,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: 634f3c43b014dc8845b086c9328a678c
 - Authentihash:
     MD5: 78103f6de4cad64d95a8beda5f8b9112
     SHA1: 0358bcba83349cb23ea44d5c36b9e22adaec8d94
     SHA256: 2952ae305f9e206bb0b6d7986f2b6942656c310f9d201cf2e2dd6e961c18804e
   Company: ATI Technologies Inc.
   Copyright: Copyright (C) ATI Technologies Inc., 2003
-  CreationTimestamp: '2005-09-09 14:40:54'
+  CreationTimestamp: '2005-09-09 12:40:54'
   Date: ''
   Description: ATI Diagnostics Hardware Abstraction Sys
   ExportedFunctions: ''
@@ -247,13 +248,14 @@ KnownVulnerableSamples:
       Virtual Size: '0x3a8'
   Signature: ''
   Signatures: {}
+  Imphash: b4c2607b2af5376910bf80b561e9a18a
 - Authentihash:
     MD5: 75c20227e11024bdfd5fbe23e769bbca
     SHA1: 2e3cf3678d476420696ec7df46b08d4d24d25644
     SHA256: c9b8ecd0657fda14476920fe47783bd8a951d7a4a640935d9199b4a7ae4b8b69
   Company: ATI Technologies Inc.
   Copyright: Copyright (C) ATI Technologies Inc., 2003
-  CreationTimestamp: '2005-09-09 14:36:29'
+  CreationTimestamp: '2005-09-09 12:36:29'
   Date: ''
   Description: ATI Diagnostics Hardware Abstraction Sys
   ExportedFunctions: ''
@@ -301,10 +303,10 @@ KnownVulnerableSamples:
   SHA256: c825a47817399e988912bb75106befaefae0babc0743a7e32b46f17469c78cad
   Sections:
     .text:
-      Entropy: 5.408148680070702
+      Entropy: 5.408148680070703
       Virtual Size: '0x2540'
     .rdata:
-      Entropy: 3.9454238653884937
+      Entropy: 3.945423865388493
       Virtual Size: '0x27c'
     .pdata:
       Entropy: 3.0150554354522017
@@ -326,13 +328,14 @@ KnownVulnerableSamples:
       Virtual Size: '0x128'
   Signature: ''
   Signatures: {}
+  Imphash: a18b467c3b43f334ca455c495a3ef70d
 - Authentihash:
     MD5: 78103f6de4cad64d95a8beda5f8b9112
     SHA1: 0358bcba83349cb23ea44d5c36b9e22adaec8d94
     SHA256: 2952ae305f9e206bb0b6d7986f2b6942656c310f9d201cf2e2dd6e961c18804e
   Company: ATI Technologies Inc.
   Copyright: Copyright (C) ATI Technologies Inc., 2003
-  CreationTimestamp: '2005-09-09 14:40:54'
+  CreationTimestamp: '2005-09-09 12:40:54'
   Date: ''
   Description: ATI Diagnostics Hardware Abstraction Sys
   ExportedFunctions: ''
@@ -392,13 +395,14 @@ KnownVulnerableSamples:
       Virtual Size: '0x3a8'
   Signature: ''
   Signatures: {}
+  Imphash: b4c2607b2af5376910bf80b561e9a18a
 - Authentihash:
     MD5: 35dfa37479c8966aa9d3428660358a43
     SHA1: 6ee2e56413ce129ea2319d6dba28ba4f27cf75b7
     SHA256: 94111de210f6b3b48dda16b3422f0f9180e30bcb5765b6858c451d1d89196199
   Company: Overclocking Tool
   Copyright: Copyright (C), 2005
-  CreationTimestamp: '2005-10-20 10:35:08'
+  CreationTimestamp: '2005-10-20 08:35:08'
   Date: ''
   Description: Overclocking Hardware Abstraction Sys
   ExportedFunctions: ''
@@ -446,10 +450,10 @@ KnownVulnerableSamples:
   SHA256: 11a9787831ac4f0657aeb5e7019c23acc39d8833faf28f85bd10d7590ea4cc5f
   Sections:
     .text:
-      Entropy: 5.408148680070702
+      Entropy: 5.408148680070703
       Virtual Size: '0x2540'
     .rdata:
-      Entropy: 4.005865295392331
+      Entropy: 4.005865295392332
       Virtual Size: '0x284'
     .pdata:
       Entropy: 3.032649273691926
@@ -464,20 +468,21 @@ KnownVulnerableSamples:
       Entropy: 5.150279397766819
       Virtual Size: '0x370'
     .rsrc:
-      Entropy: 3.309151907643068
+      Entropy: 3.3091519076430678
       Virtual Size: '0x370'
     .reloc:
       Entropy: 0.6102086113176999
       Virtual Size: '0x128'
   Signature: ''
   Signatures: {}
+  Imphash: a18b467c3b43f334ca455c495a3ef70d
 - Authentihash:
     MD5: 4fee47ce2601648cb3ebd757ddd1af8b
     SHA1: fe625d7ad61b93ea376b4924fa088cb22b3fa28d
     SHA256: fb19f241ddae74ec4a0f87dff025ec68dc809f9dd883649c0e58822de28e6f1b
   Company: Overclocking Tool
   Copyright: Copyright (C), 2005
-  CreationTimestamp: '2005-10-20 10:34:01'
+  CreationTimestamp: '2005-10-20 08:34:01'
   Date: ''
   Description: Overclocking Hardware Abstraction Sys
   ExportedFunctions: ''
@@ -537,6 +542,7 @@ KnownVulnerableSamples:
       Virtual Size: '0x370'
   Signature: ''
   Signatures: {}
+  Imphash: b4c2607b2af5376910bf80b561e9a18a
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

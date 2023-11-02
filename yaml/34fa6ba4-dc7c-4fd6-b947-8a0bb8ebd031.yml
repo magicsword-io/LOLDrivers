@@ -163,7 +163,7 @@ KnownVulnerableSamples:
       Entropy: 6.247707800469627
       Virtual Size: '0x1b9e'
     .rdata:
-      Entropy: 4.463570504310668
+      Entropy: 4.463570504310669
       Virtual Size: '0x25c'
     .data:
       Entropy: 0.39557408985753395
@@ -172,10 +172,11 @@ KnownVulnerableSamples:
       Entropy: 3.794557073208479
       Virtual Size: '0x108'
     INIT:
-      Entropy: 5.112552923478556
+      Entropy: 5.112552923478557
       Virtual Size: '0x38e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-08-24 04:57:32'
+  CreationTimestamp: '2020-08-24 02:57:32'
+  Imphash: 4fbdc03e4487f98fb59360ea5b3e640d
 - Filename: amifldrv64.sys
   MD5: ee57cbe6ec6a703678eaa6c59542ff57
   SHA1: c614ab686e844c7a7d2b20bc7061ab15290e2cfd
@@ -318,13 +319,14 @@ KnownVulnerableSamples:
       Entropy: 0.5159719988134768
       Virtual Size: '0x110'
     .pdata:
-      Entropy: 3.7272243492513075
+      Entropy: 3.727224349251308
       Virtual Size: '0xc0'
     INIT:
       Entropy: 5.080431277889913
       Virtual Size: '0x3f2'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-03-15 07:47:37'
+  CreationTimestamp: '2017-03-15 05:47:37'
+  Imphash: 363922cc73591e60f2af113182414230
 - Filename: amifldrv64.sys
   MD5: df5f8e118a97d1b38833fcdf7127ab29
   SHA1: 5fece994f2409810a0ad050b3ca9b633c93919e4
@@ -457,19 +459,20 @@ KnownVulnerableSamples:
       Entropy: 6.240395044842424
       Virtual Size: '0x1bbe'
     .rdata:
-      Entropy: 4.49957640880605
+      Entropy: 4.499576408806053
       Virtual Size: '0x26c'
     .data:
       Entropy: 0.39557408985753395
       Virtual Size: '0x1c0'
     .pdata:
-      Entropy: 3.786691959373583
+      Entropy: 3.7866919593735844
       Virtual Size: '0x114'
     INIT:
-      Entropy: 5.11338247018423
+      Entropy: 5.113382470184231
       Virtual Size: '0x38e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-10-31 03:38:06'
+  CreationTimestamp: '2019-10-31 01:38:06'
+  Imphash: 4fbdc03e4487f98fb59360ea5b3e640d
 - Filename: amifldrv64.sys
   MD5: 785045f8b25cd2e937ddc6b09debe01a
   SHA1: 029c678674f482ababe8bbfdb93152392457109d
@@ -612,13 +615,14 @@ KnownVulnerableSamples:
       Entropy: 0.5159719988134768
       Virtual Size: '0x110'
     .pdata:
-      Entropy: 3.7272243492513075
+      Entropy: 3.727224349251308
       Virtual Size: '0xc0'
     INIT:
       Entropy: 5.080431277889913
       Virtual Size: '0x3f2'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-03-15 07:47:37'
+  CreationTimestamp: '2017-03-15 05:47:37'
+  Imphash: 363922cc73591e60f2af113182414230
 - Filename: amifldrv.sys
   MD5: 119f0656ab4bb872f79ee5d421e2b9f9
   SHA1: e35969966769e7760094cbcffb294d0d04a09db6
@@ -755,10 +759,10 @@ KnownVulnerableSamples:
     SHA256: 42f78a461ed14e570a478480556a7a5080f89599e4cbc71653939ef634ec9131
   Sections:
     .text:
-      Entropy: 6.356712625314793
+      Entropy: 6.356712625314794
       Virtual Size: '0x216e'
     .rdata:
-      Entropy: 4.1282109704661964
+      Entropy: 4.128210970466196
       Virtual Size: '0x6e4'
     .data:
       Entropy: 0.6627058304164626
@@ -767,10 +771,10 @@ KnownVulnerableSamples:
       Entropy: 3.94471136074808
       Virtual Size: '0x1bc'
     PAGE:
-      Entropy: 5.761547010517612
+      Entropy: 5.761547010517613
       Virtual Size: '0x175'
     INIT:
-      Entropy: 5.14180293465244
+      Entropy: 5.141802934652441
       Virtual Size: '0x438'
     .rsrc:
       Entropy: 3.585664604917059
@@ -779,7 +783,8 @@ KnownVulnerableSamples:
       Entropy: 2.6981203125901447
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-07-28 04:31:47'
+  CreationTimestamp: '2020-07-28 02:31:47'
+  Imphash: f9141c3df8f7ec7b3f2d46265a3b5528
 - Filename: amifldrv64.sys
   MD5: 530feb1e37831302f58b7c219be6b844
   SHA1: 1e09f3dd6ba9386fa9126f0116e49c2371401e01
@@ -915,7 +920,7 @@ KnownVulnerableSamples:
     SHA256: 57efd778c9cb9f19af7c15791ec042aa8649a34f79f40555ce7bbd908179dae8
   Sections:
     .text:
-      Entropy: 5.9166791641252905
+      Entropy: 5.916679164125288
       Virtual Size: '0xd46'
     .rdata:
       Entropy: 4.163766107235004
@@ -927,7 +932,8 @@ KnownVulnerableSamples:
       Entropy: 4.645780413972533
       Virtual Size: '0x362'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-10-07 12:50:32'
+  CreationTimestamp: '2009-10-07 10:50:32'
+  Imphash: 4199ed50502e00f57d9b66e9305450f5
 - Filename: amifldrv64.sys
   MD5: c098f8aeb67eeb2262dbf681690a9306
   SHA1: 7e8efd93a1dad02385ec56c8f3b1cfd23aa47977
@@ -1059,7 +1065,7 @@ KnownVulnerableSamples:
     SHA256: 07ede27cc723134153668c011d01210e82f50b6d45471edbc77aba4a5c9c5413
   Sections:
     .text:
-      Entropy: 6.012507478420488
+      Entropy: 6.012507478420489
       Virtual Size: '0x1226'
     .rdata:
       Entropy: 4.443008293370459
@@ -1074,7 +1080,8 @@ KnownVulnerableSamples:
       Entropy: 4.891266027306224
       Virtual Size: '0x36e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-13 02:30:53'
+  CreationTimestamp: '2011-09-13 00:30:53'
+  Imphash: 4c304943af1b07b15a5efa80f17d9b89
 - Filename: amifldrv64.sys
   MD5: f22740ba54a400fd2be7690bb204aa08
   SHA1: 5812387783d61c6ab5702213bb968590a18065e3
@@ -1206,10 +1213,10 @@ KnownVulnerableSamples:
     SHA256: b6e3bfceb30922134310682e6739ee977179beb280fb658c861dbdb674d0b9b3
   Sections:
     .text:
-      Entropy: 6.255870039704507
+      Entropy: 6.255870039704506
       Virtual Size: '0x1d3e'
     .rdata:
-      Entropy: 4.372538706454056
+      Entropy: 4.372538706454062
       Virtual Size: '0x26c'
     .data:
       Entropy: 0.4411373632813633
@@ -1221,7 +1228,8 @@ KnownVulnerableSamples:
       Entropy: 5.080449314433511
       Virtual Size: '0x3ba'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-07-23 04:00:28'
+  CreationTimestamp: '2019-07-23 02:00:28'
+  Imphash: b05ee5c816a30bc52378c759486af0b9
 - Filename: amifldrv64.sys
   MD5: 24156523b923fd9dcfdd0ac684dcdb20
   SHA1: ff9048c451644c9c5ff2ba1408b194a0970b49e6
@@ -1369,7 +1377,8 @@ KnownVulnerableSamples:
       Entropy: 5.097766085646503
       Virtual Size: '0x3de'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-01-03 22:29:59'
+  CreationTimestamp: '2017-01-03 20:29:59'
+  Imphash: bd607d71fdc1444aa96dc431591c5c44
 - Filename: amifldrv64.sys
   MD5: 7331720a5522d5cd972623326cf87a3f
   SHA1: 456a1acacaa02664517c2f2fb854216e8e967f9d
@@ -1516,7 +1525,8 @@ KnownVulnerableSamples:
       Entropy: 4.8944037123884145
       Virtual Size: '0x36e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-02-09 22:39:06'
+  CreationTimestamp: '2009-02-09 20:39:06'
+  Imphash: 4c304943af1b07b15a5efa80f17d9b89
 - Filename: amifldrv64.sys
   MD5: 2971d4ee95f640d2818e38d8877c8984
   SHA1: 28fa0e9429af24197134306b6c7189263e939136
@@ -1648,7 +1658,7 @@ KnownVulnerableSamples:
     SHA256: 07ede27cc723134153668c011d01210e82f50b6d45471edbc77aba4a5c9c5413
   Sections:
     .text:
-      Entropy: 6.014310825644327
+      Entropy: 6.014310825644326
       Virtual Size: '0x1256'
     .rdata:
       Entropy: 4.559308378075733
@@ -1663,7 +1673,8 @@ KnownVulnerableSamples:
       Entropy: 4.8944037123884145
       Virtual Size: '0x36e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-06-21 22:54:13'
+  CreationTimestamp: '2011-06-21 20:54:13'
+  Imphash: 4c304943af1b07b15a5efa80f17d9b89
 - Filename: amifldrv64.sys
   MD5: 2503c4cf31588f0b011eb992ca3ee7ff
   SHA1: e700fcfae0582275dbaee740f4f44b081703d20d
@@ -1795,7 +1806,7 @@ KnownVulnerableSamples:
     SHA256: 2059d94bbcf46705cbe2d88968197f1af1e4286afcf7ecc184d1521e10d1d5a3
   Sections:
     .text:
-      Entropy: 6.222025814777584
+      Entropy: 6.222025814777585
       Virtual Size: '0x183e'
     .rdata:
       Entropy: 4.316666644738919
@@ -1804,13 +1815,14 @@ KnownVulnerableSamples:
       Entropy: 0.5159719988134768
       Virtual Size: '0x110'
     .pdata:
-      Entropy: 3.6993554490759397
+      Entropy: 3.6993554490759406
       Virtual Size: '0xc0'
     INIT:
       Entropy: 5.0855381540270885
       Virtual Size: '0x3ba'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-11-05 01:20:44'
+  CreationTimestamp: '2018-11-04 23:20:44'
+  Imphash: b05ee5c816a30bc52378c759486af0b9
 - Filename: amifldrv64.sys
   MD5: e5e8ecb20bc5630414707295327d755e
   SHA1: 06ecf73790f0277b8e27c8138e2c9ad0fc876438
@@ -1940,10 +1952,10 @@ KnownVulnerableSamples:
     SHA256: 6021a5d2b54abfd1988a1671700cf8b01a009cd4f31242beb383303d8623c6e2
   Sections:
     .text:
-      Entropy: 6.237884437720331
+      Entropy: 6.237884437720332
       Virtual Size: '0x1b7e'
     .rdata:
-      Entropy: 4.467064388656254
+      Entropy: 4.467064388656255
       Virtual Size: '0x25c'
     .data:
       Entropy: 0.39557408985753395
@@ -1952,10 +1964,11 @@ KnownVulnerableSamples:
       Entropy: 3.7790272797610935
       Virtual Size: '0x108'
     INIT:
-      Entropy: 5.111613634498036
+      Entropy: 5.1116136344980365
       Virtual Size: '0x38e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-09-10 22:51:41'
+  CreationTimestamp: '2020-09-10 20:51:41'
+  Imphash: 4fbdc03e4487f98fb59360ea5b3e640d
 - Filename: amifldrv64.sys
   MD5: 1f7b2a00fe0c55d17d1b04c5e0507970
   SHA1: eb1ecad3d37bb980f908bf1a912415cff32e79e6
@@ -2102,7 +2115,8 @@ KnownVulnerableSamples:
       Entropy: 4.891266027306224
       Virtual Size: '0x36e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-08-20 06:07:22'
+  CreationTimestamp: '2009-08-20 04:07:22'
+  Imphash: 4c304943af1b07b15a5efa80f17d9b89
 - Filename: amifldrv.sys
   MD5: 7b9717c608a5f5a1c816128a609e9575
   SHA1: ec457a53ea03287cbbd1edcd5f27835a518ef144
@@ -2239,7 +2253,7 @@ KnownVulnerableSamples:
     SHA256: 2b7e106cfd1c70b544af1544f1e4efc46a8cb812a907bbf89d9e73eac42f7b03
   Sections:
     .text:
-      Entropy: 6.377894790652308
+      Entropy: 6.377894790652307
       Virtual Size: '0x20fe'
     .rdata:
       Entropy: 4.187746427960226
@@ -2248,10 +2262,10 @@ KnownVulnerableSamples:
       Entropy: 0.6627058304164626
       Virtual Size: '0x1fc'
     .pdata:
-      Entropy: 3.9618307720615733
+      Entropy: 3.9618307720615737
       Virtual Size: '0x1e0'
     .gfids:
-      Entropy: 0.8112781244591329
+      Entropy: 0.8112781244591328
       Virtual Size: '0x4'
     PAGE:
       Entropy: 5.772669094690347
@@ -2266,7 +2280,8 @@ KnownVulnerableSamples:
       Entropy: 2.9176286494293437
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-09-18 02:26:30'
+  CreationTimestamp: '2020-09-18 00:26:30'
+  Imphash: 07a42e80559d960b176c0fc8fd309bfe
 - Filename: amifldrv64.sys
   MD5: 6ab7b8ef0c44e7d2d5909fdb58d37fa5
   SHA1: bb962c9a8dda93e94fef504c4159de881e4706fe
@@ -2424,7 +2439,8 @@ KnownVulnerableSamples:
       Entropy: 4.923446652280529
       Virtual Size: '0x3ae'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-12-04 01:04:12'
+  CreationTimestamp: '2014-12-03 23:04:12'
+  Imphash: 4c0161f638d5acafe23fcee3c5e86f15
 Tags:
 - amifldrv64.sys
 - amifldrv.sys

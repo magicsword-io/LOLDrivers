@@ -119,13 +119,14 @@ KnownVulnerableSamples:
       Entropy: 2.9485276044371007
       Virtual Size: '0x60'
     INIT:
-      Entropy: 4.787286905890197
+      Entropy: 4.7872869058901975
       Virtual Size: '0x262'
     .rsrc:
-      Entropy: 3.3857241783952006
+      Entropy: 3.385724178395201
       Virtual Size: '0x390'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-06-09 03:43:50'
+  CreationTimestamp: '2022-06-09 01:43:50'
+  Imphash: 8a424cd36ae3eab0d11332ce3b982a02
 - Filename: MsIo32.sys
   MD5: 564d84a799db39b381a582a0b2f738c4
   SHA1: fbc6d2448739ddec35bb5d6c94b46df4148f648d
@@ -242,13 +243,14 @@ KnownVulnerableSamples:
       Entropy: 2.5
       Virtual Size: '0x8'
     INIT:
-      Entropy: 5.423630554710504
+      Entropy: 5.4236305547105035
       Virtual Size: '0x32e'
     .reloc:
-      Entropy: 4.310602998336719
+      Entropy: 4.3106029983367184
       Virtual Size: '0xe8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-02-12 02:57:28'
+  CreationTimestamp: '2018-02-12 00:57:28'
+  Imphash: 24b344cd341f8b20003ac85be08df979
 - Filename: MsIo64.sys
   MD5: 55a7c51dc2aa959c41e391db8f6b8b4f
   SHA1: bc949bc040333fdc9140b897b0066ef125343ef6
@@ -338,16 +340,17 @@ KnownVulnerableSamples:
       Entropy: 0.4975521352521052
       Virtual Size: '0x11c'
     .pdata:
-      Entropy: 3.0877782872938777
+      Entropy: 3.087778287293878
       Virtual Size: '0x60'
     INIT:
-      Entropy: 4.784008217365607
+      Entropy: 4.784008217365608
       Virtual Size: '0x262'
     .rsrc:
-      Entropy: 3.3886540650827426
+      Entropy: 3.388654065082743
       Virtual Size: '0x390'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-04-15 00:18:47'
+  CreationTimestamp: '2021-04-14 22:18:47'
+  Imphash: 8a424cd36ae3eab0d11332ce3b982a02
 - Filename: MsIo64.sys
   MD5: de711decdd763a73098372f752bf5a1c
   SHA1: 663803d7ab5aff28be37c2e7e8c7b98b91c5733e
@@ -439,13 +442,14 @@ KnownVulnerableSamples:
       Entropy: 3.1449604398835636
       Virtual Size: '0x60'
     INIT:
-      Entropy: 4.784008217365607
+      Entropy: 4.784008217365608
       Virtual Size: '0x262'
     .rsrc:
       Entropy: 3.371121078414638
       Virtual Size: '0x390'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-01-19 22:35:15'
+  CreationTimestamp: '2020-01-19 20:35:15'
+  Imphash: 8a424cd36ae3eab0d11332ce3b982a02
 - Filename: MsIo64.sys
   MD5: 61b068b10abfa0776f3b96a208d75bf9
   SHA1: 1de9f25d189faa294468517b15947a523538ce9d
@@ -528,7 +532,7 @@ KnownVulnerableSamples:
     SHA256: 8dca05c1af4dd5e09c431a0bb260dd3287443231d8c55b15b02ed4257e312cec
   Sections:
     .text:
-      Entropy: 6.149721231513279
+      Entropy: 6.149721231513278
       Virtual Size: '0xe1f'
     .rdata:
       Entropy: 4.310768861955645
@@ -540,12 +544,13 @@ KnownVulnerableSamples:
       Entropy: 2.9836116206272116
       Virtual Size: '0x60'
     INIT:
-      Entropy: 4.834422659066409
+      Entropy: 4.834422659066408
       Virtual Size: '0x2b2'
     .rsrc:
-      Entropy: 3.3886540650827426
+      Entropy: 3.388654065082743
       Virtual Size: '0x390'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-04-05 21:54:11'
+  CreationTimestamp: '2023-04-05 19:54:11'
+  Imphash: 12a08688ec92616a8b639d85cc13a3ed
 Tags:
 - MsIo64.sys

@@ -23,7 +23,7 @@ KnownVulnerableSamples:
     SHA256: 14bd76f66fe5749d1812f7cf47cc5f9a8a830c53a7ede5e42a14a4140a70f5d2
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2019-07-31 22:57:34'
+  CreationTimestamp: '2019-07-31 20:57:34'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -193,13 +193,14 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       Version: 1
+  Imphash: 99b8ab1f6f7cf3c4104347e2872bef54
 - Authentihash:
     MD5: 788a1df0b3fd2dfa3fdfc24e441f9d2c
     SHA1: 2a40c0a92107d9b3faa9aecdedf5016c1ea564f1
     SHA256: 25454028a4f56d3c58747811a86be43397a6290d1a053bc30d97b41bf3c58c6f
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2020-04-19 23:19:37'
+  CreationTimestamp: '2020-04-19 21:19:37'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -321,7 +322,7 @@ KnownVulnerableSamples:
       Entropy: 6.1912018117070735
       Virtual Size: '0x6c80'
     .rdata:
-      Entropy: 4.780472480164169
+      Entropy: 4.780472480164167
       Virtual Size: '0x1584'
     .data:
       Entropy: 0.805522255156276
@@ -423,6 +424,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       Version: 1
+  Imphash: 409d2ab916237fb129c57aacbb7cb4fe
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

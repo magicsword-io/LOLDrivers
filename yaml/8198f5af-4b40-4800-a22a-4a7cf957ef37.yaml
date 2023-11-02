@@ -21,7 +21,7 @@ KnownVulnerableSamples:
     SHA256: 0527451d72ba02db8479ea69689350cc563b939bb2cc685386719ab32b7e2772
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-12-21 08:07:48'
+  CreationTimestamp: '2022-12-21 06:07:48'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -53,7 +53,7 @@ KnownVulnerableSamples:
   SHA256: 56066ed07bad3b5c1474e8fae5ee2543d17d7977369b34450bd0775517e3b25c
   Sections:
     .text:
-      Entropy: 7.939220758583227
+      Entropy: 7.939220758583228
       Virtual Size: '0x8000'
     .py:
       Entropy: 7.692954758388239
@@ -120,6 +120,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: fca0f3c7b6d79f494034b9d2a1f5921a
 MitreID: T1068
 Resources:
 - https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html

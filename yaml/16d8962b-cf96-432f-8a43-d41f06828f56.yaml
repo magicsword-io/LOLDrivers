@@ -185,7 +185,7 @@ KnownVulnerableSamples:
     SHA256: 79749e2d14cda7629ae1b8bdc88101418cb5a099b93137ea76824b0246209519
   Sections:
     .text:
-      Entropy: 6.222402374512636
+      Entropy: 6.222402374512635
       Virtual Size: '0x2780'
     .rdata:
       Entropy: 4.5251453594439255
@@ -194,7 +194,7 @@ KnownVulnerableSamples:
       Entropy: 0.335842300318532
       Virtual Size: '0x1e0'
     INIT:
-      Entropy: 5.4235150411010435
+      Entropy: 5.423515041101043
       Virtual Size: '0x404'
     .rsrc:
       Entropy: 3.3927376128305218
@@ -203,7 +203,8 @@ KnownVulnerableSamples:
       Entropy: 5.4807357701963335
       Virtual Size: '0x258'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-08-11 03:45:54'
+  CreationTimestamp: '2012-08-11 01:45:54'
+  Imphash: a0a13575e37906924a0b79043b4005c6
 - Filename: cpuz.sys
   MD5: 26ce59f9fc8639fd7fed53ce3b785015
   SHA1: 2bf6b88b84d27cdf0699d6d18b08a1b36310cdd1
@@ -375,10 +376,11 @@ KnownVulnerableSamples:
       Entropy: 3.3927376128305218
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 5.505190852822325
+      Entropy: 5.5051908528223255
       Virtual Size: '0x254'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-03-09 03:55:45'
+  CreationTimestamp: '2012-03-09 01:55:45'
+  Imphash: 958dd67f866ae27cf716e30a025b266f
 - Filename: cpuz.sys
   MD5: 75dbd5db9892d7451d0429bec1aabe1a
   SHA1: c05df2e56e05b97e3ca8c6a61865cae722ed3066
@@ -534,19 +536,20 @@ KnownVulnerableSamples:
       Entropy: 4.172824067374571
       Virtual Size: '0x3ec'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.503621523339014
       Virtual Size: '0xc0'
     INIT:
-      Entropy: 5.076575853289001
+      Entropy: 5.076575853289
       Virtual Size: '0x406'
     .rsrc:
       Entropy: 3.3943730160709853
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-03-09 03:56:55'
+  CreationTimestamp: '2012-03-09 01:56:55'
+  Imphash: 82942c060f79cefd3bf1acdf5c207561
 - Filename: cpuz.sys
   MD5: fe820a5f99b092c3660762c6fc6c64e0
   SHA1: fad8e308f6d2e6a9cfaf9e6189335126a3c69acb
@@ -702,19 +705,20 @@ KnownVulnerableSamples:
       Entropy: 4.160071293394142
       Virtual Size: '0x3d4'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
-      Entropy: 3.497053164334639
+      Entropy: 3.4970531643346394
       Virtual Size: '0xc0'
     INIT:
-      Entropy: 5.076575853289001
+      Entropy: 5.076575853289
       Virtual Size: '0x406'
     .rsrc:
-      Entropy: 3.3935766621226477
+      Entropy: 3.3935766621226473
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-10-27 13:24:41'
+  CreationTimestamp: '2012-10-27 11:24:41'
+  Imphash: 82942c060f79cefd3bf1acdf5c207561
 - Filename: cpuz.sys
   MD5: 262969a3fab32b9e17e63e2d17a57744
   SHA1: 363b907c3b4f37968e9c8e1b7eeca5a5c5d530f8
@@ -855,19 +859,20 @@ KnownVulnerableSamples:
       Entropy: 4.183312032190414
       Virtual Size: '0x3ec'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.53594863841985
       Virtual Size: '0xc0'
     INIT:
-      Entropy: 5.076575853289001
+      Entropy: 5.076575853289
       Virtual Size: '0x406'
     .rsrc:
       Entropy: 3.3943730160709853
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-11-09 08:33:36'
+  CreationTimestamp: '2010-11-09 06:33:36'
+  Imphash: 82942c060f79cefd3bf1acdf5c207561
 - Filename: cpuz.sys
   MD5: 17719a7f571d4cd08223f0b30f71b8b8
   SHA1: f9c916d163b85057414300ca214ebdf751172ecf
@@ -1002,25 +1007,26 @@ KnownVulnerableSamples:
     SHA256: 35b9d8fc904c88f4df237edc610727f89c415e48bcf135191c43832bb2935ba6
   Sections:
     .text:
-      Entropy: 6.182386482362876
+      Entropy: 6.182386482362877
       Virtual Size: '0x2256'
     .rdata:
       Entropy: 4.258631853520521
       Virtual Size: '0x3d0'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.4326961450392584
       Virtual Size: '0x90'
     INIT:
-      Entropy: 5.067835669413666
+      Entropy: 5.067835669413665
       Virtual Size: '0x406'
     .rsrc:
-      Entropy: 3.4148190207283124
+      Entropy: 3.4148190207283133
       Virtual Size: '0x3d0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-07-09 07:16:58'
+  CreationTimestamp: '2010-07-09 05:16:58'
+  Imphash: 82942c060f79cefd3bf1acdf5c207561
 - Filename: cpuz.sys
   MD5: 21be10f66bb65c1d406407faa0b9ba95
   SHA1: 86e59b17272a3e7d9976c980ded939bf8bf75069
@@ -1174,10 +1180,10 @@ KnownVulnerableSamples:
       Entropy: 6.184959788800412
       Virtual Size: '0x3046'
     .rdata:
-      Entropy: 4.196719997838869
+      Entropy: 4.1967199978388665
       Virtual Size: '0x434'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.61540303809267
@@ -1189,7 +1195,8 @@ KnownVulnerableSamples:
       Entropy: 3.3971374522271924
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-10-06 06:26:29'
+  CreationTimestamp: '2014-10-06 04:26:29'
+  Imphash: 82942c060f79cefd3bf1acdf5c207561
 - Filename: cpuz.sys
   MD5: 4885e1bf1971c8fa9e7686fd5199f500
   SHA1: 388068adc9ec46a0bbc8173bcb0d5f9cf8af6ea5
@@ -1346,19 +1353,20 @@ KnownVulnerableSamples:
       Entropy: 4.1481713750399685
       Virtual Size: '0x414'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.5274875201903875
       Virtual Size: '0xc0'
     INIT:
-      Entropy: 5.076575853289001
+      Entropy: 5.076575853289
       Virtual Size: '0x406'
     .rsrc:
-      Entropy: 3.3935766621226477
+      Entropy: 3.3935766621226473
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-11-27 05:33:59'
+  CreationTimestamp: '2013-11-27 03:33:59'
+  Imphash: 82942c060f79cefd3bf1acdf5c207561
 - Filename: cpuz.sys
   MD5: ab4ee84e09b09012ac86d3a875af9d43
   SHA1: 3c81cdfd99d91c7c9de7921607be12233ed0dfd8
@@ -1515,19 +1523,20 @@ KnownVulnerableSamples:
       Entropy: 4.158462162346533
       Virtual Size: '0x3d4'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.501505002731896
       Virtual Size: '0xc0'
     INIT:
-      Entropy: 5.076575853289001
+      Entropy: 5.076575853289
       Virtual Size: '0x406'
     .rsrc:
-      Entropy: 3.3935766621226477
+      Entropy: 3.3935766621226473
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-05-10 08:42:51'
+  CreationTimestamp: '2013-05-10 06:42:51'
+  Imphash: 82942c060f79cefd3bf1acdf5c207561
 - Filename: cpuz.sys
   MD5: 743c403d20a89db5ed84c874768b7119
   SHA1: dc8fa4648c674e3a7148dd8e8c35f668a3701a52
@@ -1672,22 +1681,23 @@ KnownVulnerableSamples:
       Entropy: 6.221169838993626
       Virtual Size: '0x2030'
     .rdata:
-      Entropy: 4.56402950718439
+      Entropy: 4.564029507184391
       Virtual Size: '0x2ec'
     .data:
       Entropy: 0.22396935932252834
       Virtual Size: '0x1c0'
     INIT:
-      Entropy: 5.469542149056819
+      Entropy: 5.46954214905682
       Virtual Size: '0x3fc'
     .rsrc:
-      Entropy: 3.413813063110846
+      Entropy: 3.413813063110847
       Virtual Size: '0x3d0'
     .reloc:
       Entropy: 5.666994611221042
       Virtual Size: '0x210'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-05-11 05:59:25'
+  CreationTimestamp: '2010-05-11 03:59:25'
+  Imphash: 744af2b62301859b4ccdffba53551b15
 - Filename: cpuz.sys
   MD5: e0bfbdf3793ea2742c03f5a82cb305a5
   SHA1: a6a71fb4f91080aff2a3a42811b4bd86fb22168d
@@ -1825,19 +1835,20 @@ KnownVulnerableSamples:
       Entropy: 4.302697981700664
       Virtual Size: '0x394'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.3507319703399823
       Virtual Size: '0x84'
     INIT:
-      Entropy: 4.945456847123697
+      Entropy: 4.945456847123696
       Virtual Size: '0x388'
     .rsrc:
       Entropy: 3.393742999677783
       Virtual Size: '0x400'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-07 05:03:14'
+  CreationTimestamp: '2009-03-07 03:03:14'
+  Imphash: cb8db41ab8c06472574e58b9466f4070
 - Filename: cpuz.sys
   MD5: 22ca5fe8fb0e5e22e6fb0848108c03f4
   SHA1: bec66e0a4842048c25732f7ea2bbe989ea400abf
@@ -1959,13 +1970,13 @@ KnownVulnerableSamples:
     SHA256: 440eebbdc09d290724d364056ba4e2725c75759819a6df0a1ed5c876ed7d2474
   Sections:
     .text:
-      Entropy: 6.167627326915936
+      Entropy: 6.167627326915935
       Virtual Size: '0x4536'
     .rdata:
       Entropy: 4.195082406902852
       Virtual Size: '0x534'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x440'
     .pdata:
       Entropy: 3.6289632983036624
@@ -1977,7 +1988,8 @@ KnownVulnerableSamples:
       Entropy: 3.394946071861716
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-04-24 07:12:14'
+  CreationTimestamp: '2017-04-24 05:12:14'
+  Imphash: 8f96c3ef5dda3fe697d4a4d6326dbe37
 - Filename: cpuz.sys
   MD5: 3ab94fba7196e84a97e83b15f7bcb270
   SHA1: bea745b598dd957924d3465ebc04c5b830d5724f
@@ -2147,13 +2159,14 @@ KnownVulnerableSamples:
       Entropy: 5.42180997612463
       Virtual Size: '0x3f4'
     .rsrc:
-      Entropy: 3.3919412588821842
+      Entropy: 3.391941258882184
       Virtual Size: '0x350'
     .reloc:
       Entropy: 5.431068617797713
       Virtual Size: '0x234'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-08-24 04:58:17'
+  CreationTimestamp: '2013-08-24 02:58:17'
+  Imphash: 958dd67f866ae27cf716e30a025b266f
 - Filename: cpuz.sys
   MD5: e323413de3caec7f7730b43c551f26a0
   SHA1: f3c20ce4282587c920e9ff5da2150fac7858172e
@@ -2308,10 +2321,10 @@ KnownVulnerableSamples:
       Entropy: 6.223329975658994
       Virtual Size: '0x3207'
     .rdata:
-      Entropy: 4.180853798556739
+      Entropy: 4.1808537985567344
       Virtual Size: '0x434'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.626263920579275
@@ -2323,7 +2336,8 @@ KnownVulnerableSamples:
       Entropy: 3.3971374522271924
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-10-23 11:03:05'
+  CreationTimestamp: '2014-10-23 09:03:05'
+  Imphash: 28c5045218461018dbde27212ab0f227
 - Filename: cpuz.sys
   MD5: c9c25778efe890baa4087e32937016a0
   SHA1: f4728f490d741b04b611164a7d997e34458e3a5e
@@ -2455,25 +2469,26 @@ KnownVulnerableSamples:
     SHA256: f6f4beb34371f4eec6c80a94046382a70864524606df3fdcf4d08fe9ddacc1af
   Sections:
     .text:
-      Entropy: 6.154548729898715
+      Entropy: 6.154548729898717
       Virtual Size: '0x1dd6'
     .rdata:
       Entropy: 4.332394275902173
       Virtual Size: '0x39c'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.424516355212702
       Virtual Size: '0x84'
     INIT:
-      Entropy: 4.945456847123697
+      Entropy: 4.945456847123696
       Virtual Size: '0x388'
     .rsrc:
       Entropy: 3.393742999677783
       Virtual Size: '0x400'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-26 19:17:23'
+  CreationTimestamp: '2009-03-26 17:17:23'
+  Imphash: cb8db41ab8c06472574e58b9466f4070
 - Filename: cpuz.sys
   MD5: 2f8653034a35526df88ea0c62b035a42
   SHA1: 68ca9c27131aa35c7f433dc914da74f4b3d8793f
@@ -2614,10 +2629,10 @@ KnownVulnerableSamples:
     SHA256: 3e8f2e809174f7d618f3ce991f37c51a77d2a43db600925041b13fa3430146de
   Sections:
     .text:
-      Entropy: 6.237934687882858
+      Entropy: 6.237934687882857
       Virtual Size: '0x2180'
     .rdata:
-      Entropy: 4.448290031446241
+      Entropy: 4.44829003144624
       Virtual Size: '0x2f4'
     .data:
       Entropy: 0.335842300318532
@@ -2632,7 +2647,8 @@ KnownVulnerableSamples:
       Entropy: 5.51200680030155
       Virtual Size: '0x236'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-03-10 11:24:11'
+  CreationTimestamp: '2010-03-10 09:24:11'
+  Imphash: 29a1da8841f5363423dcba1a9773809a
 - Filename: cpuz.sys
   MD5: e747f164fc89566f934f9ec5627cd8c3
   SHA1: a958734d25865cbc6bcbc11090ab9d6b72799143
@@ -2751,10 +2767,10 @@ KnownVulnerableSamples:
     SHA256: 48acdfbe5ad27d73c0fd9b115a49420f182d146bca52797ce33cc2a061ff0ced
   Sections:
     .text:
-      Entropy: 5.336714834529697
+      Entropy: 5.336714834529696
       Virtual Size: '0x5780'
     .rdata:
-      Entropy: 4.010151907627344
+      Entropy: 4.010151907627347
       Virtual Size: '0x550'
     .pdata:
       Entropy: 3.4578065856245583
@@ -2772,7 +2788,8 @@ KnownVulnerableSamples:
       Entropy: 0.9012044915351938
       Virtual Size: '0x188'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-03-23 07:27:23'
+  CreationTimestamp: '2017-03-23 05:27:23'
+  Imphash: a2d936fa82b7340d28a697fb344046d8
 - Filename: cpuz.sys
   MD5: c08063f052308b6f5882482615387f30
   SHA1: 252157ab2e33eed7aa112d1c93c720cadcee31ae
@@ -2913,19 +2930,20 @@ KnownVulnerableSamples:
       Entropy: 4.272735727458459
       Virtual Size: '0x3e0'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.401514027013751
       Virtual Size: '0x90'
     INIT:
-      Entropy: 5.067835669413666
+      Entropy: 5.067835669413665
       Virtual Size: '0x406'
     .rsrc:
       Entropy: 3.3943730160709853
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-21 04:23:41'
+  CreationTimestamp: '2011-09-21 02:23:41'
+  Imphash: 82942c060f79cefd3bf1acdf5c207561
 - Filename: cpuz.sys
   MD5: 549e5148be5e7be17f9d416d8a0e333e
   SHA1: 6d9e22a275a5477ea446e6c56ee45671fbcbb5f6
@@ -3071,13 +3089,14 @@ KnownVulnerableSamples:
       Entropy: 5.06628585370835
       Virtual Size: '0x3d6'
     .rsrc:
-      Entropy: 3.4181439310744564
+      Entropy: 3.4181439310744572
       Virtual Size: '0x3d0'
     .reloc:
-      Entropy: 1.0429079984959349
+      Entropy: 1.042907998495935
       Virtual Size: '0x146'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-07-09 07:17:26'
+  CreationTimestamp: '2010-07-09 05:17:26'
+  Imphash: f0820e8f674e44e5c2a3f899ec561c1d
 - Filename: cpuz.sys
   MD5: d0c2caa17c7b6d2200e1b5aa9d07135e
   SHA1: bad84fca57ab0ef0af9230a93e0cc3d149f9ccd0
@@ -3234,7 +3253,7 @@ KnownVulnerableSamples:
       Entropy: 4.177976296652285
       Virtual Size: '0x3ec'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.499086286863614
@@ -3246,7 +3265,8 @@ KnownVulnerableSamples:
       Entropy: 3.3943730160709853
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-08-11 03:48:20'
+  CreationTimestamp: '2012-08-11 01:48:20'
+  Imphash: 2561727ac42d399030b3c46477c428f4
 - Filename: cpuz.sys
   MD5: f310b453ac562f2c53d30aa6e35506bb
   SHA1: eb44a05f8bba3d15e38454bd92999a856e6574eb
@@ -3373,7 +3393,7 @@ KnownVulnerableSamples:
       Entropy: 4.212054484888266
       Virtual Size: '0x424'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.5511621274596537
@@ -3385,7 +3405,8 @@ KnownVulnerableSamples:
       Entropy: 3.3971374522271924
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-10-21 05:22:27'
+  CreationTimestamp: '2015-10-21 03:22:27'
+  Imphash: f12ae9073d95c22ed89247253d59f500
 - Filename: cpuz.sys
   MD5: aa69b4255e786d968adbd75ba5cf3e93
   SHA1: af5f642b105d86f82ba6d5e7a55d6404bfb50875
@@ -3522,10 +3543,10 @@ KnownVulnerableSamples:
       Entropy: 6.169826234776459
       Virtual Size: '0x2176'
     .rdata:
-      Entropy: 4.20787800199448
+      Entropy: 4.207878001994479
       Virtual Size: '0x3cc'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.4966307212281404
@@ -3537,7 +3558,8 @@ KnownVulnerableSamples:
       Entropy: 3.4155760648585995
       Virtual Size: '0x3d0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-03-16 07:00:47'
+  CreationTimestamp: '2010-03-16 05:00:47'
+  Imphash: af34db96db910a3fa7a56f2fac8ed5e1
 - Filename: cpuz.sys
   MD5: 3411fdf098aa20193eee5ffa36ba43b2
   SHA1: ad05bff5fe45df9e08252717fc2bc2af57bf026f
@@ -3697,7 +3719,8 @@ KnownVulnerableSamples:
       Entropy: 5.38153465292173
       Virtual Size: '0x244'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-09-21 04:24:20'
+  CreationTimestamp: '2011-09-21 02:24:20'
+  Imphash: 5716c52252afe18d09f6c1bc6e5ef3ef
 - Filename: cpuz.sys
   MD5: f60a9b88c6ff07d4990d8653d0025683
   SHA1: 0cc60a56e245e70f664906b7b67dfe1b4a08a5b7
@@ -3848,7 +3871,7 @@ KnownVulnerableSamples:
       Entropy: 5.3484809966574
       Virtual Size: '0x3b60'
     .rdata:
-      Entropy: 4.1547156749671785
+      Entropy: 4.154715674967178
       Virtual Size: '0x3d8'
     .pdata:
       Entropy: 3.4060649759113413
@@ -3857,16 +3880,17 @@ KnownVulnerableSamples:
       Entropy: 1.1203888318125959
       Virtual Size: '0x2a0'
     INIT:
-      Entropy: 5.032439121972272
+      Entropy: 5.0324391219722715
       Virtual Size: '0x3e8'
     .rsrc:
       Entropy: 3.3971374522271924
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 0.9557665440658052
+      Entropy: 0.9557665440658051
       Virtual Size: '0x168'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-02-17 09:22:11'
+  CreationTimestamp: '2014-02-17 07:22:11'
+  Imphash: a2d936fa82b7340d28a697fb344046d8
 - Filename: cpuz.sys
   MD5: c046ca4da48db1524ddf3a49a8d02b65
   SHA1: 5635bb2478929010693bc3b23f8b7fe5fdbc3aed
@@ -3999,13 +4023,14 @@ KnownVulnerableSamples:
       Entropy: 5.065598292840257
       Virtual Size: '0x3d6'
     .rsrc:
-      Entropy: 3.395817386804122
+      Entropy: 3.3958173868041217
       Virtual Size: '0x350'
     .reloc:
       Entropy: 1.0164053768066021
       Virtual Size: '0x14e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-11-18 04:17:31'
+  CreationTimestamp: '2015-11-18 02:17:31'
+  Imphash: f0820e8f674e44e5c2a3f899ec561c1d
 - Filename: cpuz.sys
   MD5: 0283b43c6bc965175a1c92b255d39556
   SHA1: 8325e8d7fd2edc126dcf1089dee8da64e79fb12e
@@ -4162,7 +4187,7 @@ KnownVulnerableSamples:
     SHA256: 02dc44b04a6426fcaedf26995bfa471f123a90a9c747e82cebaf95f394890631
   Sections:
     .text:
-      Entropy: 6.217479588256462
+      Entropy: 6.217479588256463
       Virtual Size: '0x2750'
     .rdata:
       Entropy: 4.550469836478717
@@ -4177,10 +4202,11 @@ KnownVulnerableSamples:
       Entropy: 3.3927376128305218
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 5.505190852822325
+      Entropy: 5.5051908528223255
       Virtual Size: '0x254'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-02-07 10:44:19'
+  CreationTimestamp: '2012-02-07 08:44:19'
+  Imphash: 958dd67f866ae27cf716e30a025b266f
 - Filename: cpuz.sys
   MD5: 4a85754636c694572ca9f440d254f5ce
   SHA1: dd55015f5406f0051853fd7cca3ab0406b5a2d52
@@ -4314,13 +4340,13 @@ KnownVulnerableSamples:
     SHA256: 53362bef3277e59f67ebc5a085f1cbe60e5c9aef1a18a2ac391b2f4954fa9649
   Sections:
     .text:
-      Entropy: 6.206552850925675
+      Entropy: 6.206552850925677
       Virtual Size: '0x21a6'
     .rdata:
       Entropy: 4.27776755944508
       Virtual Size: '0x3c0'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.401674357474197
@@ -4329,10 +4355,11 @@ KnownVulnerableSamples:
       Entropy: 5.076342695575086
       Virtual Size: '0x3f0'
     .rsrc:
-      Entropy: 3.4148190207283124
+      Entropy: 3.4148190207283133
       Virtual Size: '0x3d0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-06-04 09:51:45'
+  CreationTimestamp: '2010-06-04 07:51:45'
+  Imphash: 68062e8b9d3c1e6cc62a9cae16a12b81
 - Filename: cpuz.sys
   MD5: 8741e6df191c805028b92cec44b1ba88
   SHA1: ba0938512d7abab23a72279b914d0ea0fb46e498
@@ -4487,7 +4514,7 @@ KnownVulnerableSamples:
       Entropy: 4.226233458071221
       Virtual Size: '0x424'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.5511621274596537
@@ -4499,7 +4526,8 @@ KnownVulnerableSamples:
       Entropy: 3.3971374522271924
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-02-26 02:04:34'
+  CreationTimestamp: '2015-02-26 00:04:34'
+  Imphash: f12ae9073d95c22ed89247253d59f500
 - Filename: cpuz.sys
   MD5: bf581e9eb91bace0b02a2c5a54bf1419
   SHA1: 13df48ab4cd412651b2604829ce9b61d39a791bb
@@ -4626,7 +4654,7 @@ KnownVulnerableSamples:
       Entropy: 4.223852822083244
       Virtual Size: '0x424'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.5511621274596537
@@ -4635,10 +4663,11 @@ KnownVulnerableSamples:
       Entropy: 5.131854482283732
       Virtual Size: '0x3ea'
     .rsrc:
-      Entropy: 3.395817386804122
+      Entropy: 3.3958173868041217
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-01-27 04:18:15'
+  CreationTimestamp: '2016-01-27 02:18:15'
+  Imphash: f12ae9073d95c22ed89247253d59f500
 - Filename: cpuz.sys
   MD5: 94ccef76fda12ab0b8270f9b2980552b
   SHA1: e4cbb48aa1aff6cf4ea94ef3b7afb6c245ac47e8
@@ -4775,7 +4804,7 @@ KnownVulnerableSamples:
       Entropy: 4.266884457332851
       Virtual Size: '0x304'
     .data:
-      Entropy: 0.6099523004172783
+      Entropy: 0.6099523004172788
       Virtual Size: '0x124'
     .pdata:
       Entropy: 3.2933218797117716
@@ -4787,7 +4816,8 @@ KnownVulnerableSamples:
       Entropy: 3.3933870153256342
       Virtual Size: '0x400'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-01-25 06:39:05'
+  CreationTimestamp: '2008-01-25 04:39:05'
+  Imphash: aa54fa0523f677e56d6d8199e5e18732
 - Filename: cpuz.sys
   MD5: 9b157f1261a8a42e4ef5ec23dd4cda9e
   SHA1: 99bd8c1f5eeedd9f6a9252df5dbd0e42ef5999a4
@@ -4927,13 +4957,14 @@ KnownVulnerableSamples:
       Entropy: 5.428373271150746
       Virtual Size: '0x3dc'
     .rsrc:
-      Entropy: 3.392568698711948
+      Entropy: 3.3925686987119477
       Virtual Size: '0x350'
     .reloc:
       Entropy: 5.597642275362914
       Virtual Size: '0x27c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-11-18 04:14:04'
+  CreationTimestamp: '2015-11-18 02:14:04'
+  Imphash: 643f4d79f35dddc9bb5cc04a0f0c18d3
 - Filename: cpuz.sys
   MD5: 5212e0957468d3f94d90fa7a0f06b58f
   SHA1: ad1616ea6dc17c91d983e829aa8a6706e81a3d27
@@ -5084,25 +5115,26 @@ KnownVulnerableSamples:
     SHA256: 1a0c69ff029488d41c7d9413943c28d389016adb26698d9baf02c6f32739d591
   Sections:
     .text:
-      Entropy: 6.20154097063279
+      Entropy: 6.201540970632788
       Virtual Size: '0x2c56'
     .rdata:
       Entropy: 4.139510166690065
       Virtual Size: '0x424'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.603856484265247
       Virtual Size: '0xc0'
     INIT:
-      Entropy: 5.076575853289001
+      Entropy: 5.076575853289
       Virtual Size: '0x406'
     .rsrc:
       Entropy: 3.3938887641350184
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-02-17 09:22:16'
+  CreationTimestamp: '2014-02-17 07:22:16'
+  Imphash: 82942c060f79cefd3bf1acdf5c207561
 - Filename: cpuz.sys
   MD5: 56b54823a79a53747cbe11f8c4db7b1e
   SHA1: 1d9fd846e12104ae31fd6f6040b93fc689abf047
@@ -5259,7 +5291,7 @@ KnownVulnerableSamples:
       Entropy: 4.1950691845593875
       Virtual Size: '0x3ec'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.499086286863614
@@ -5271,7 +5303,8 @@ KnownVulnerableSamples:
       Entropy: 3.3943730160709853
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-05-23 10:53:22'
+  CreationTimestamp: '2012-05-23 08:53:22'
+  Imphash: 2561727ac42d399030b3c46477c428f4
 - Filename: cpuz.sys
   MD5: 29872c7376c42e2a64fa838dad98aa11
   SHA1: 8ec28d7da81cf202f03761842738d740c0bb2fed
@@ -5398,10 +5431,10 @@ KnownVulnerableSamples:
       Entropy: 4.23881802889425
       Virtual Size: '0x424'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x440'
     .pdata:
-      Entropy: 3.6386288823324167
+      Entropy: 3.638628882332417
       Virtual Size: '0xf0'
     INIT:
       Entropy: 5.131854482283732
@@ -5410,7 +5443,8 @@ KnownVulnerableSamples:
       Entropy: 3.38341382722288
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-14 15:15:42'
+  CreationTimestamp: '2016-08-14 13:15:42'
+  Imphash: f12ae9073d95c22ed89247253d59f500
 - Filename: cpuz.sys
   MD5: 557fd33ee99db6fe263cfcb82b7866b3
   SHA1: 0a6e0f9f3d7179a99345d40e409895c12919195b
@@ -5560,25 +5594,26 @@ KnownVulnerableSamples:
       Entropy: 5.406032855001113
       Virtual Size: '0x39c0'
     .rdata:
-      Entropy: 4.152970301277941
+      Entropy: 4.152970301277938
       Virtual Size: '0x3d8'
     .pdata:
-      Entropy: 3.326350263414166
+      Entropy: 3.3263502634141657
       Virtual Size: '0xb4'
     .sdata:
       Entropy: 1.1203888318125959
       Virtual Size: '0x2a0'
     INIT:
-      Entropy: 5.032439121972272
+      Entropy: 5.0324391219722715
       Virtual Size: '0x3e8'
     .rsrc:
-      Entropy: 3.396825350214822
+      Entropy: 3.3968253502148213
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 0.9613220996213608
+      Entropy: 0.9613220996213607
       Virtual Size: '0x168'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-10-06 07:54:39'
+  CreationTimestamp: '2012-10-06 05:54:39'
+  Imphash: a2d936fa82b7340d28a697fb344046d8
 - Filename: cpuz.sys
   MD5: c516acb873c7f8c24a0431df8287756e
   SHA1: f6f7b5776001149496092a95fb10218dea5d6a6b
@@ -5700,13 +5735,13 @@ KnownVulnerableSamples:
     SHA256: 440eebbdc09d290724d364056ba4e2725c75759819a6df0a1ed5c876ed7d2474
   Sections:
     .text:
-      Entropy: 6.170317476121288
+      Entropy: 6.170317476121287
       Virtual Size: '0x4536'
     .rdata:
       Entropy: 4.190423561703195
       Virtual Size: '0x534'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x440'
     .pdata:
       Entropy: 3.6289632983036624
@@ -5718,7 +5753,8 @@ KnownVulnerableSamples:
       Entropy: 3.394946071861716
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-03-23 07:26:40'
+  CreationTimestamp: '2017-03-23 05:26:40'
+  Imphash: 8f96c3ef5dda3fe697d4a4d6326dbe37
 - Filename: cpuz.sys
   MD5: 641243746597fbd650e5000d95811ea3
   SHA1: da42cefde56d673850f5ef69e7934d39a6de3025
@@ -5859,7 +5895,7 @@ KnownVulnerableSamples:
       Entropy: 4.244772424988803
       Virtual Size: '0x3d0'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.5003735460865424
@@ -5871,7 +5907,8 @@ KnownVulnerableSamples:
       Entropy: 3.4155760648585995
       Virtual Size: '0x3d0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-03-30 17:34:16'
+  CreationTimestamp: '2010-03-30 15:34:16'
+  Imphash: be527e5f470fbc661f914c81bfc9af38
 - Filename: cpuz.sys
   MD5: a453083b8f4ca7cb60cac327e97edbe2
   SHA1: 53f7fc4feb66af748f2ab295394bf4de62ae9fcc
@@ -6022,25 +6059,26 @@ KnownVulnerableSamples:
     SHA256: 1a0c69ff029488d41c7d9413943c28d389016adb26698d9baf02c6f32739d591
   Sections:
     .text:
-      Entropy: 6.111492164689908
+      Entropy: 6.111492164689909
       Virtual Size: '0x2836'
     .rdata:
       Entropy: 4.175526657333754
       Virtual Size: '0x3d4'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
-      Entropy: 3.497053164334639
+      Entropy: 3.4970531643346394
       Virtual Size: '0xc0'
     INIT:
-      Entropy: 5.076575853289001
+      Entropy: 5.076575853289
       Virtual Size: '0x406'
     .rsrc:
-      Entropy: 3.3935766621226477
+      Entropy: 3.3935766621226473
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-08-24 04:56:35'
+  CreationTimestamp: '2013-08-24 02:56:35'
+  Imphash: 82942c060f79cefd3bf1acdf5c207561
 - Filename: cpuz.sys
   MD5: 07493c774aa406478005e8fe52c788b2
   SHA1: 34a07ae39b232cc3dbbe657b34660e692ff2043a
@@ -6172,13 +6210,13 @@ KnownVulnerableSamples:
     SHA256: 63b15db03090d5e7ba52906b2854fba693e17a5fac179397bd55f91e49d28859
   Sections:
     .text:
-      Entropy: 6.049517664101275
+      Entropy: 6.049517664101274
       Virtual Size: '0x15a6'
     .rdata:
-      Entropy: 4.2613924369366
+      Entropy: 4.2613924369366005
       Virtual Size: '0x304'
     .data:
-      Entropy: 0.6099523004172783
+      Entropy: 0.6099523004172788
       Virtual Size: '0x124'
     .pdata:
       Entropy: 3.3197547776031913
@@ -6190,7 +6228,8 @@ KnownVulnerableSamples:
       Entropy: 3.3933870153256342
       Virtual Size: '0x400'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-02-22 06:12:04'
+  CreationTimestamp: '2008-02-22 04:12:04'
+  Imphash: dc0a0f2d424a59b4d17033f58f01b027
 - Filename: cpuz.sys
   MD5: e425c66663c96d5a9f030b0ad4d219a8
   SHA1: bd87aecc0ac1d1c2ab72be1090d39fab657f7cc6
@@ -6366,7 +6405,8 @@ KnownVulnerableSamples:
       Entropy: 5.600870307396892
       Virtual Size: '0x26e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-02-17 09:21:57'
+  CreationTimestamp: '2014-02-17 07:21:57'
+  Imphash: 958dd67f866ae27cf716e30a025b266f
 - Filename: cpuz.sys
   MD5: ccb09eb78e047c931708149992c2e435
   SHA1: ada23b709cb2bef8bedd612dc345db2e2fdbfaca
@@ -6507,19 +6547,20 @@ KnownVulnerableSamples:
       Entropy: 4.25835240231724
       Virtual Size: '0x3e0'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.3649784372301403
       Virtual Size: '0x90'
     INIT:
-      Entropy: 5.067835669413666
+      Entropy: 5.067835669413665
       Virtual Size: '0x406'
     .rsrc:
       Entropy: 3.3943730160709853
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-01-19 11:42:06'
+  CreationTimestamp: '2011-01-19 09:42:06'
+  Imphash: 82942c060f79cefd3bf1acdf5c207561
 - Filename: cpuz.sys
   MD5: 43bfc857406191963f4f3d9f1b76a7bf
   SHA1: 9329a0ce2749a3a6bea2028ce7562d74c417db64
@@ -6641,25 +6682,26 @@ KnownVulnerableSamples:
     SHA256: 440eebbdc09d290724d364056ba4e2725c75759819a6df0a1ed5c876ed7d2474
   Sections:
     .text:
-      Entropy: 6.202501650998954
+      Entropy: 6.202501650998955
       Virtual Size: '0x38b6'
     .rdata:
       Entropy: 4.1722432536185465
       Virtual Size: '0x464'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x440'
     .pdata:
       Entropy: 3.6000408617955837
       Virtual Size: '0xf0'
     INIT:
-      Entropy: 5.116119018385267
+      Entropy: 5.116119018385266
       Virtual Size: '0x40e'
     .rsrc:
       Entropy: 3.38341382722288
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-10-05 05:53:07'
+  CreationTimestamp: '2016-10-05 03:53:07'
+  Imphash: 8f96c3ef5dda3fe697d4a4d6326dbe37
 - Filename: cpuz.sys
   MD5: 8f5b84350bfc4fe3a65d921b4bd0e737
   SHA1: 76046978d8e4409e53d8126a8dcfc3bf8602c37f
@@ -6815,19 +6857,20 @@ KnownVulnerableSamples:
       Entropy: 4.171320307410102
       Virtual Size: '0x3ec'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.503621523339014
       Virtual Size: '0xc0'
     INIT:
-      Entropy: 5.076575853289001
+      Entropy: 5.076575853289
       Virtual Size: '0x406'
     .rsrc:
       Entropy: 3.3943730160709853
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-02-07 10:44:59'
+  CreationTimestamp: '2012-02-07 08:44:59'
+  Imphash: 82942c060f79cefd3bf1acdf5c207561
 - Filename: cpuz.sys
   MD5: ce57844fb185d0cdd9d3ce9e5b6a891d
   SHA1: 32888d789edc91095da2e0a5d6c564c2aebcee68
@@ -6952,10 +6995,10 @@ KnownVulnerableSamples:
       Entropy: 6.1689591912915125
       Virtual Size: '0x4546'
     .rdata:
-      Entropy: 4.191218153188013
+      Entropy: 4.191218153188012
       Virtual Size: '0x534'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x440'
     .pdata:
       Entropy: 3.6397736740131683
@@ -6967,7 +7010,8 @@ KnownVulnerableSamples:
       Entropy: 3.394946071861716
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-05-22 04:17:51'
+  CreationTimestamp: '2017-05-22 02:17:51'
+  Imphash: 8f96c3ef5dda3fe697d4a4d6326dbe37
 - Filename: cpuz.sys
   MD5: 8ad9dfc971df71cd43788ade6acf8e7d
   SHA1: 7241b25c3a3ee9f36b52de3db2fc27db7065af37
@@ -7094,7 +7138,7 @@ KnownVulnerableSamples:
       Entropy: 4.210489806011185
       Virtual Size: '0x424'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x2c0'
     .pdata:
       Entropy: 3.6128209941554763
@@ -7103,9 +7147,10 @@ KnownVulnerableSamples:
       Entropy: 5.131854482283732
       Virtual Size: '0x3ea'
     .rsrc:
-      Entropy: 3.395817386804122
+      Entropy: 3.3958173868041217
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-11-18 04:58:02'
+  CreationTimestamp: '2015-11-18 02:58:02'
+  Imphash: f12ae9073d95c22ed89247253d59f500
 Tags:
 - cpuz.sys

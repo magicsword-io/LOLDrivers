@@ -264,10 +264,10 @@ KnownVulnerableSamples:
       Entropy: 6.311575029098583
       Virtual Size: '0x20975'
     .hook:
-      Entropy: 5.097466333253086
+      Entropy: 5.097466333253085
       Virtual Size: '0x9af'
     .rdata:
-      Entropy: 5.539147413432646
+      Entropy: 5.539147413432647
       Virtual Size: '0x463c'
     .data:
       Entropy: 4.8888094657184
@@ -276,7 +276,7 @@ KnownVulnerableSamples:
       Entropy: 5.125727272335482
       Virtual Size: '0x84c'
     INIT:
-      Entropy: 5.341472095080266
+      Entropy: 5.341472095080265
       Virtual Size: '0xf2e'
     .rsrc:
       Entropy: 3.1200681658662868
@@ -285,7 +285,8 @@ KnownVulnerableSamples:
       Entropy: 4.004251703727133
       Virtual Size: '0x58'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-11-20 18:27:25'
+  CreationTimestamp: '2015-11-20 16:27:25'
+  Imphash: b35d1d3faa6c97b106b343823d5df867
 - Filename: zam64.sys
   MD5: db46c56849bbce9a55a03283efc8c280
   SHA1: 8f4b79b8026da7f966d38a8ba494c113c5e3894b
@@ -495,31 +496,32 @@ KnownVulnerableSamples:
     SHA256: 9cb52aae7fdcaabee6e2e9b8640a4a386e7610f0fdedd53413fd1a9d1e7c044b
   Sections:
     .text:
-      Entropy: 6.394396532876168
+      Entropy: 6.394396532876167
       Virtual Size: '0xb374'
     .hook:
-      Entropy: 5.038393262108046
+      Entropy: 5.038393262108047
       Virtual Size: '0x9af'
     .rdata:
       Entropy: 5.496538814940608
       Virtual Size: '0x4354'
     .data:
-      Entropy: 4.885486089888765
+      Entropy: 4.885486089888766
       Virtual Size: '0x95b0'
     .pdata:
-      Entropy: 4.837204199996541
+      Entropy: 4.837204199996544
       Virtual Size: '0x774'
     INIT:
-      Entropy: 5.364871219090766
+      Entropy: 5.364871219090765
       Virtual Size: '0xcea'
     .rsrc:
       Entropy: 3.1167029968436752
       Virtual Size: '0x270'
     .reloc:
-      Entropy: 4.005527221234631
+      Entropy: 4.005527221234636
       Virtual Size: '0x5c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-07-23 07:10:50'
+  CreationTimestamp: '2015-07-23 05:10:50'
+  Imphash: 7fba20994f76fb31b9f5a2b3f0c00055
 - Filename: zamguard64.sys
   MD5: 99c131567c10c25589e741e69a8f8aa3
   SHA1: 3b8ddf860861cc4040dea2d2d09f80582547d105
@@ -764,7 +766,7 @@ KnownVulnerableSamples:
       Entropy: 6.318184968025881
       Virtual Size: '0x217a5'
     .hook:
-      Entropy: 5.1157624460527105
+      Entropy: 5.11576244605271
       Virtual Size: '0x9af'
     .rdata:
       Entropy: 5.528539978421143
@@ -785,7 +787,8 @@ KnownVulnerableSamples:
       Entropy: 4.064239284774715
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-05-24 05:38:42'
+  CreationTimestamp: '2016-05-24 03:38:42'
+  Imphash: 3edc60bda68569cac7ad7604728ff40d
 - Filename: zam64.sys
   MD5: e5f8fcdfb52155ed4dffd8a205b3d091
   SHA1: 90abd7670c84c47e6ffc45c67d676db8c12b1939
@@ -1012,7 +1015,7 @@ KnownVulnerableSamples:
     SHA256: 20fee3293ed1f05bc11ae72145db01fabac5b03a5373d99becc657699f98b330
   Sections:
     .text:
-      Entropy: 6.3117660749510085
+      Entropy: 6.311766074951009
       Virtual Size: '0x20925'
     .hook:
       Entropy: 5.1040723684174
@@ -1036,7 +1039,8 @@ KnownVulnerableSamples:
       Entropy: 4.004251703727133
       Virtual Size: '0x58'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-11-03 09:00:59'
+  CreationTimestamp: '2015-11-03 07:00:59'
+  Imphash: c6a0f65ba653ee78255cc9e314abc442
 - Filename: zam64.sys
   MD5: 707ab1170389eba44ffd4cfad01b5969
   SHA1: b99a5396094b6b20cea72fbf0c0083030155f74e
@@ -1261,7 +1265,8 @@ KnownVulnerableSamples:
       Entropy: 4.064239284774715
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-17 13:06:53'
+  CreationTimestamp: '2016-08-17 11:06:53'
+  Imphash: 3edc60bda68569cac7ad7604728ff40d
 - Filename: zam64.sys
   MD5: 9e0659d443a2b9d1afc75a160f500605
   SHA1: 09f117d83f2f206ee37f1eb19eea576a0ac9bdcc
@@ -1471,31 +1476,32 @@ KnownVulnerableSamples:
     SHA256: 9cb52aae7fdcaabee6e2e9b8640a4a386e7610f0fdedd53413fd1a9d1e7c044b
   Sections:
     .text:
-      Entropy: 6.394441739234971
+      Entropy: 6.39444173923497
       Virtual Size: '0xb374'
     .hook:
-      Entropy: 5.038393262108046
+      Entropy: 5.038393262108047
       Virtual Size: '0x9af'
     .rdata:
       Entropy: 5.49649919697251
       Virtual Size: '0x4354'
     .data:
-      Entropy: 4.885486089888765
+      Entropy: 4.885486089888766
       Virtual Size: '0x95b0'
     .pdata:
-      Entropy: 4.837204199996541
+      Entropy: 4.837204199996544
       Virtual Size: '0x774'
     INIT:
-      Entropy: 5.364871219090766
+      Entropy: 5.364871219090765
       Virtual Size: '0xcea'
     .rsrc:
-      Entropy: 3.102791459292843
+      Entropy: 3.1027914592928436
       Virtual Size: '0x270'
     .reloc:
-      Entropy: 4.005527221234631
+      Entropy: 4.005527221234636
       Virtual Size: '0x5c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-08-30 08:52:48'
+  CreationTimestamp: '2015-08-30 06:52:48'
+  Imphash: 7fba20994f76fb31b9f5a2b3f0c00055
 - Filename: zamguard64.sys
   MD5: 51e7b58f6e9b776568ffbd4dd9972a60
   SHA1: 2cf75df00c69d907cfe683cb25077015d05be65d
@@ -1708,7 +1714,7 @@ KnownVulnerableSamples:
       Entropy: 6.385878636968825
       Virtual Size: '0xb224'
     .hook:
-      Entropy: 5.0447943106036925
+      Entropy: 5.044794310603694
       Virtual Size: '0x9af'
     .rdata:
       Entropy: 5.531467293507371
@@ -1720,7 +1726,7 @@ KnownVulnerableSamples:
       Entropy: 4.807436318496407
       Virtual Size: '0x75c'
     INIT:
-      Entropy: 5.369605353337342
+      Entropy: 5.3696053533373425
       Virtual Size: '0xcea'
     .rsrc:
       Entropy: 3.1111150668737135
@@ -1729,7 +1735,8 @@ KnownVulnerableSamples:
       Entropy: 3.8191100346914766
       Virtual Size: '0x54'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-06-30 09:29:29'
+  CreationTimestamp: '2015-06-30 07:29:29'
+  Imphash: 0e9dfd08346bbe128159bff440d13389
 - Filename: zamguard32.sys
   MD5: 06897b431c07886454e0681723dd53e6
   SHA1: 40d29aa7b3fafd27c8b27c7ca7a3089ccb88d69b
@@ -2004,7 +2011,8 @@ KnownVulnerableSamples:
       Entropy: 6.750936493564276
       Virtual Size: '0x222c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-17 13:07:02'
+  CreationTimestamp: '2016-08-17 11:07:02'
+  Imphash: a49a51d7f2ae972483961eb64d17888e
 - Filename: zam64.sys
   MD5: d4a10447fdaff7a001715191c1f914b6
   SHA1: 628e63caf72c29042e162f5f7570105d2108e3c2
@@ -2212,10 +2220,10 @@ KnownVulnerableSamples:
     SHA256: 86aa19cd5e2beaf013e66553b916cc39a8c456d7000e46bcfc4719eda41206b5
   Sections:
     .text:
-      Entropy: 6.3914143103462155
+      Entropy: 6.391414310346214
       Virtual Size: '0xaf64'
     .hook:
-      Entropy: 5.0649968687709155
+      Entropy: 5.064996868770916
       Virtual Size: '0x9af'
     .rdata:
       Entropy: 5.536191925684008
@@ -2230,13 +2238,14 @@ KnownVulnerableSamples:
       Entropy: 5.371003736727007
       Virtual Size: '0xcba'
     .rsrc:
-      Entropy: 3.2000366091764265
+      Entropy: 3.2000366091764283
       Virtual Size: '0x2a8'
     .reloc:
       Entropy: 3.7715246176915187
       Virtual Size: '0x54'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-05-12 09:14:11'
+  CreationTimestamp: '2015-05-12 07:14:11'
+  Imphash: 089e8a8f2bb007852c63b64e66430293
 - Filename: zam64.sys
   MD5: 75e50ae2e0f783e0caf912f45e15248a
   SHA1: a3d612a5ea3439ba72157bd96e390070bdddbbf3
@@ -2478,13 +2487,13 @@ KnownVulnerableSamples:
     SHA256: a0d4900197b774247b0cb136ab600bfdb16e2ea139e80b8ee4bd0cc768223a5a
   Sections:
     .text:
-      Entropy: 5.993512424846142
+      Entropy: 5.993512424846143
       Virtual Size: '0x2c275'
     .hook:
       Entropy: 5.054306709915981
       Virtual Size: '0x9cf'
     .rdata:
-      Entropy: 5.401668155372346
+      Entropy: 5.401668155372347
       Virtual Size: '0x43d4'
     .data:
       Entropy: 4.886684982431987
@@ -2496,13 +2505,14 @@ KnownVulnerableSamples:
       Entropy: 5.34672539398453
       Virtual Size: '0x1106'
     .rsrc:
-      Entropy: 3.0990178874039955
+      Entropy: 3.099017887403996
       Virtual Size: '0x270'
     .reloc:
       Entropy: 4.067679213183045
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-04-01 06:23:58'
+  CreationTimestamp: '2016-04-01 04:23:58'
+  Imphash: 5f6fd4ffba177389f414dd1a6ded24b4
 - Filename: zam64.sys
   MD5: 5054083cf29649a76c94658ba7ff5bce
   SHA1: dd4cd182192b43d4105786ba87f55a036ec45ef2
@@ -2721,10 +2731,10 @@ KnownVulnerableSamples:
     SHA256: 02f7c54750b6c80addc5b62d3517dfc10363a27e0277cc87d5c12136d341d484
   Sections:
     .text:
-      Entropy: 6.399466980549078
+      Entropy: 6.399466980549077
       Virtual Size: '0xbae4'
     .hook:
-      Entropy: 5.065053175214043
+      Entropy: 5.065053175214044
       Virtual Size: '0x9af'
     .rdata:
       Entropy: 5.476727334664607
@@ -2745,7 +2755,8 @@ KnownVulnerableSamples:
       Entropy: 3.983795976674783
       Virtual Size: '0x58'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-10-22 07:36:54'
+  CreationTimestamp: '2015-10-22 05:36:54'
+  Imphash: 519cf5394541bf5e2869edeec81521e1
 - Filename: zam64.sys
   MD5: 21e13f2cb269defeae5e1d09887d47bb
   SHA1: 16d7ecf09fc98798a6170e4cef2745e0bee3f5c7
@@ -3017,7 +3028,8 @@ KnownVulnerableSamples:
       Entropy: 4.064239284774715
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-17 13:06:53'
+  CreationTimestamp: '2016-08-17 11:06:53'
+  Imphash: 3edc60bda68569cac7ad7604728ff40d
 Tags:
 - zam64.sys
 - zamguard32.sys

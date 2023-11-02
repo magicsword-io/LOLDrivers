@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: 25a0854ef48a4dfbc7f04e94d2b11757e3613b241d39d46a19cb389ce42887e4
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2018-03-07 22:19:59'
+  CreationTimestamp: '2018-03-07 20:19:59'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -61,7 +61,7 @@ KnownVulnerableSamples:
   SHA256: 3a5ec83fe670e5e23aef3afa0a7241053f5b6be5e6ca01766d6b5f9177183c25
   Sections:
     .text:
-      Entropy: 6.39344242605407
+      Entropy: 6.3934424260540705
       Virtual Size: '0x1334'
     .rdata:
       Entropy: 5.626296674970018
@@ -73,7 +73,7 @@ KnownVulnerableSamples:
       Entropy: 3.6286301597756387
       Virtual Size: '0xf0'
     INIT:
-      Entropy: 5.203390798662232
+      Entropy: 5.203390798662231
       Virtual Size: '0x2b2'
     .reloc:
       Entropy: 2.7841837197791888
@@ -159,13 +159,14 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 High Assurance
         Code Signing CA
       Version: 1
+  Imphash: 531d2392dbdd314fb1d9318fe9e5c4d2
 - Authentihash:
     MD5: 86b5239d6b6fe0d6fad286f809d7571a
     SHA1: d99b80b3269d735cac43af5e43483e64ca7961c3
     SHA256: 47dba240967fd0088be618163672dfbddf0138178cccd45b54037f622b221220
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2018-04-23 03:12:05'
+  CreationTimestamp: '2018-04-23 01:12:05'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -206,7 +207,7 @@ KnownVulnerableSamples:
   SHA256: 61a1bdddd3c512e681818debb5bee94db701768fc25e674fcad46592a3259bd0
   Sections:
     .text:
-      Entropy: 6.405831545608101
+      Entropy: 6.405831545608102
       Virtual Size: '0x1374'
     .rdata:
       Entropy: 5.632017178608109
@@ -218,7 +219,7 @@ KnownVulnerableSamples:
       Entropy: 3.6367331036245374
       Virtual Size: '0xfc'
     INIT:
-      Entropy: 5.203390798662232
+      Entropy: 5.203390798662231
       Virtual Size: '0x2b2'
     .reloc:
       Entropy: 2.7841837197791888
@@ -304,6 +305,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 High Assurance
         Code Signing CA
       Version: 1
+  Imphash: 531d2392dbdd314fb1d9318fe9e5c4d2
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

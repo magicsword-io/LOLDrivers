@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: f246b9d22b3ffe15f2e97f306d049020f38ed162150c97d7a72e3ae0b22c79ad
   Company: Pan Yazilim Bilisim Teknolojileri Tic. Ltd. Sti.
   Copyright: Copyright (c) 2012-2014 Pan Yazilim Bilisim Teknolojileri Tic. Ltd. Sti.
-  CreationTimestamp: '2014-04-17 05:16:02'
+  CreationTimestamp: '2014-04-17 03:16:02'
   Date: ''
   Description: Temperature and system information driver
   ExportedFunctions: ''
@@ -94,10 +94,10 @@ KnownVulnerableSamples:
       Entropy: 3.8869044254025407
       Virtual Size: '0x184'
     .data:
-      Entropy: 2.918295834054489
+      Entropy: 2.9182958340544896
       Virtual Size: '0xc'
     INIT:
-      Entropy: 5.419560949940822
+      Entropy: 5.419560949940823
       Virtual Size: '0x2ce'
     .rsrc:
       Entropy: 3.297140059126458
@@ -184,6 +184,7 @@ KnownVulnerableSamples:
     - SerialNumber: 1121506480253469e07e54ee8612041fbb92
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: 7cf815757705e26b809574488ed56d0e
 MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'

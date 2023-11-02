@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: a4ac619fb531793945ad4c72bdd809ebd38512fc234aa452cb8364ee05465a7b
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2020-08-22 04:28:52'
+  CreationTimestamp: '2020-08-22 02:28:52'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -145,22 +145,22 @@ KnownVulnerableSamples:
   SHA256: f51bdb0ad924178131c21e39a8ccd191e46b5512b0f2e1cc8486f63e84e5d960
   Sections:
     .text:
-      Entropy: 6.439624872994222
+      Entropy: 6.43962487299422
       Virtual Size: '0x1a5a'
     .rdata:
       Entropy: 4.697945169758717
       Virtual Size: '0xf5c'
     .data:
-      Entropy: 1.0815311650012878
+      Entropy: 1.0815311650012875
       Virtual Size: '0x570'
     .pdata:
       Entropy: 4.50622088620596
       Virtual Size: '0x4ec'
     PAGE:
-      Entropy: 6.481384276672757
+      Entropy: 6.481384276672756
       Virtual Size: '0x9935'
     INIT:
-      Entropy: 6.131034821076419
+      Entropy: 6.131034821076418
       Virtual Size: '0x1ca6'
     .reloc:
       Entropy: 2.708694969562842
@@ -224,6 +224,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 5988ec9f159fefbdf89d893aa634dd92
 MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'

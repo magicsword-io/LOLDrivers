@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 04cfb452e1ac73fb2f3b8a80d9f27e19a344a6bf0f74c7f9cae3ae82d3770195
   Company: EnTech Taiwan
   Copyright: Copyright (c) EnTech Taiwan, 2004-2006.
-  CreationTimestamp: '2007-05-03 01:50:31'
+  CreationTimestamp: '2007-05-02 23:50:31'
   Date: ''
   Description: EnTech softEngine x64 kernel-mode driver
   ExportedFunctions: ''
@@ -86,10 +86,10 @@ KnownVulnerableSamples:
       Entropy: 5.93130241752649
       Virtual Size: '0x6c6'
     .rdata:
-      Entropy: 4.190891588241377
+      Entropy: 4.190891588241376
       Virtual Size: '0x15c'
     .data:
-      Entropy: 1.5223397931278444
+      Entropy: 1.5223397931278442
       Virtual Size: '0x80'
     .pdata:
       Entropy: 2.754900337629122
@@ -98,7 +98,7 @@ KnownVulnerableSamples:
       Entropy: 4.515964863332142
       Virtual Size: '0x252'
     .rsrc:
-      Entropy: 3.2868225931904598
+      Entropy: 3.2868225931904593
       Virtual Size: '0x370'
   Signature:
   - EnTech Taiwan
@@ -194,6 +194,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 626c8ecbc636968157d73f18ac315926
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

@@ -23,7 +23,7 @@ KnownVulnerableSamples:
     SHA256: 5195443274ee3a382e947f03fd409437730434c2af0c1bb1c99f5ba1953f989e
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-12-20 23:33:43'
+  CreationTimestamp: '2021-12-20 21:33:43'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -154,7 +154,7 @@ KnownVulnerableSamples:
       Entropy: 0.807954115503613
       Virtual Size: '0x15f8'
     .pdata:
-      Entropy: 7.800461572948712
+      Entropy: 7.800461572948713
       Virtual Size: '0x660'
     PAGE:
       Entropy: 5.557939798776847
@@ -250,6 +250,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       Version: 1
+  Imphash: ebb99842fa08915eb8b7f67d8dc7a13a
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

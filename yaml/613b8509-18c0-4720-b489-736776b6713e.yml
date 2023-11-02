@@ -165,7 +165,7 @@ KnownVulnerableSamples:
     SHA256: fe972e5d0cd1b46882d0c1cacca6f8fd9f7034d006e00f8439a549090d7fd40f
   Sections:
     .text:
-      Entropy: 6.079755030506781
+      Entropy: 6.079755030506782
       Virtual Size: '0x383'
     .rdata:
       Entropy: 3.9588953379045915
@@ -174,19 +174,20 @@ KnownVulnerableSamples:
       Entropy: 0.568711264156015
       Virtual Size: '0x8b8'
     PAGE:
-      Entropy: 6.197689857125294
+      Entropy: 6.197689857125293
       Virtual Size: '0xa7e'
     INIT:
       Entropy: 5.617941004832402
       Virtual Size: '0x3ba'
     .rsrc:
-      Entropy: 3.337874270460442
+      Entropy: 3.3378742704604414
       Virtual Size: '0x368'
     .reloc:
       Entropy: 5.642936600253398
       Virtual Size: '0x188'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-02-12 22:25:54'
+  CreationTimestamp: '2019-02-12 20:25:54'
+  Imphash: 59b3f3fa2775e407721c2491ddb2890b
 - Filename: gdrv.sys
   MD5: 043d5a1fc66662a3f91b8a9c027f9be9
   SHA1: 3d8cc9123be74b31c597b0014c2a72090f0c44ef
@@ -319,7 +320,7 @@ KnownVulnerableSamples:
       Entropy: 6.1918639017358545
       Virtual Size: '0x103e'
     .rdata:
-      Entropy: 4.2371778413048675
+      Entropy: 4.237177841304867
       Virtual Size: '0x6b0'
     .data:
       Entropy: 0.754659278632904
@@ -328,22 +329,23 @@ KnownVulnerableSamples:
       Entropy: 3.811205019243734
       Virtual Size: '0x174'
     .gfids:
-      Entropy: 0.8112781244591329
+      Entropy: 0.8112781244591328
       Virtual Size: '0x4'
     PAGE:
       Entropy: 6.06059048417531
       Virtual Size: '0x834'
     INIT:
-      Entropy: 5.430018205225443
+      Entropy: 5.430018205225444
       Virtual Size: '0x3bc'
     .rsrc:
-      Entropy: 3.3401678484420936
+      Entropy: 3.340167848442093
       Virtual Size: '0x368'
     .reloc:
       Entropy: 3.251870619839375
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-02-12 22:23:11'
+  CreationTimestamp: '2019-02-12 20:23:11'
+  Imphash: f7d07bcaa23837d219dcb64e76290252
 - Filename: gdrv.sys
   MD5: 3c55092900343d3d28564e2d34e7be2c
   SHA1: 1a56614ea7d335c844b7fc6edd5feb59b8df7b55
@@ -488,10 +490,10 @@ KnownVulnerableSamples:
       Entropy: 0.7345015722226091
       Virtual Size: '0xfb8'
     .pdata:
-      Entropy: 3.809873680948682
+      Entropy: 3.8098736809486815
       Virtual Size: '0x1a4'
     .gfids:
-      Entropy: 0.8112781244591329
+      Entropy: 0.8112781244591328
       Virtual Size: '0x4'
     PAGE:
       Entropy: 6.056099606920948
@@ -500,13 +502,14 @@ KnownVulnerableSamples:
       Entropy: 5.472943444636511
       Virtual Size: '0x468'
     .rsrc:
-      Entropy: 3.347570515887805
+      Entropy: 3.3475705158878046
       Virtual Size: '0x368'
     .reloc:
       Entropy: 3.3380209612256118
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-04-15 03:45:51'
+  CreationTimestamp: '2019-04-15 01:45:51'
+  Imphash: d6dc99d60798b2647006ddba21671160
 - Filename: gdrv.sys
   MD5: 7907e14f9bcf3a4689c9a74a1a873cb6
   SHA1: b9b72a5be3871ddc0446bae35548ea176c4ea613
@@ -639,7 +642,7 @@ KnownVulnerableSamples:
       Entropy: 6.2433654070225355
       Virtual Size: '0x2c18'
     .rdata:
-      Entropy: 4.588619241668127
+      Entropy: 4.588619241668126
       Virtual Size: '0x5fc'
     .data:
       Entropy: 0.4231266687750792
@@ -654,7 +657,8 @@ KnownVulnerableSamples:
       Entropy: 4.481086585534943
       Virtual Size: '0x65c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-12 23:22:29'
+  CreationTimestamp: '2009-03-12 21:22:29'
+  Imphash: 6816dabcee7b7d027bfbb93a16297afa
 - Filename: gdrv.sys
   MD5: a72e10ecea2fdeb8b9d4f45d0294086b
   SHA1: 4692730f6b56eeb0399460c72ade8a15ddd43a62
@@ -790,19 +794,19 @@ KnownVulnerableSamples:
     SHA256: 71b608735d9c6d4adcdade732f8df7684c6a8bc7c5b8d427d584c58c52bd04a9
   Sections:
     .text:
-      Entropy: 6.176292377972086
+      Entropy: 6.1762923779720875
       Virtual Size: '0x134e'
     .rdata:
-      Entropy: 4.255692242153893
+      Entropy: 4.255692242153894
       Virtual Size: '0x750'
     .data:
       Entropy: 0.7345015722226091
       Virtual Size: '0xfb8'
     .pdata:
-      Entropy: 3.875518471287137
+      Entropy: 3.8755184712871364
       Virtual Size: '0x1a4'
     .gfids:
-      Entropy: 0.8112781244591329
+      Entropy: 0.8112781244591328
       Virtual Size: '0x4'
     PAGE:
       Entropy: 6.058280996869597
@@ -811,13 +815,14 @@ KnownVulnerableSamples:
       Entropy: 5.476143480518104
       Virtual Size: '0x468'
     .rsrc:
-      Entropy: 3.344482144348333
+      Entropy: 3.3444821443483326
       Virtual Size: '0x368'
     .reloc:
       Entropy: 3.248587587731763
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-04-20 06:38:40'
+  CreationTimestamp: '2018-04-20 04:38:40'
+  Imphash: d6dc99d60798b2647006ddba21671160
 - Filename: gdrv.sys
   MD5: 31f34de4374a6ed0e70a022a0efa2570
   SHA1: c70989ed7a6ad9d7cd40ae970e90f3c3f2f84860
@@ -978,7 +983,7 @@ KnownVulnerableSamples:
       Entropy: 6.2502047491555315
       Virtual Size: '0x2dc8'
     .rdata:
-      Entropy: 4.431694959682768
+      Entropy: 4.431694959682769
       Virtual Size: '0x610'
     .data:
       Entropy: 0.4231266687750792
@@ -990,10 +995,11 @@ KnownVulnerableSamples:
       Entropy: 4.963482726390094
       Virtual Size: '0x412'
     .rsrc:
-      Entropy: 3.4719099505127566
+      Entropy: 3.471909950512757
       Virtual Size: '0x3e8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-07-04 00:27:55'
+  CreationTimestamp: '2013-07-03 22:27:55'
+  Imphash: cc81a908891587ccac8059435eda4c66
 - Filename: gdrv.sys
   MD5: 4e093256b034925ecd6b29473ff16858
   SHA1: eba5483bb47ec6ff51d91a9bdf1eee3b6344493d
@@ -1131,7 +1137,7 @@ KnownVulnerableSamples:
       Entropy: 6.302884181466605
       Virtual Size: '0x1c8e'
     .rdata:
-      Entropy: 5.442740087822128
+      Entropy: 5.4427400878221235
       Virtual Size: '0xa4c'
     .data:
       Entropy: 0.754659278632904
@@ -1146,13 +1152,14 @@ KnownVulnerableSamples:
       Entropy: 5.399422660207438
       Virtual Size: '0x468'
     .rsrc:
-      Entropy: 3.340500794515809
+      Entropy: 3.3405007945158087
       Virtual Size: '0x368'
     .reloc:
       Entropy: 3.1867043459100257
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-25 02:05:25'
+  CreationTimestamp: '2021-01-25 00:05:25'
+  Imphash: 81acb4bb89ef49c4e7f30513b4750e53
 - Filename: gdrv.sys
   MD5: 1549e6cbce408acaddeb4d24796f2eaf
   SHA1: 18f09ec53f0b7d2b1ab64949157e0e84628d0f0a
@@ -1285,7 +1292,7 @@ KnownVulnerableSamples:
       Entropy: 6.1668404611605645
       Virtual Size: '0x103e'
     .rdata:
-      Entropy: 4.224340384192508
+      Entropy: 4.224340384192507
       Virtual Size: '0x6b0'
     .data:
       Entropy: 0.754659278632904
@@ -1294,13 +1301,13 @@ KnownVulnerableSamples:
       Entropy: 3.7951668454952525
       Virtual Size: '0x174'
     .gfids:
-      Entropy: 0.8112781244591329
+      Entropy: 0.8112781244591328
       Virtual Size: '0x4'
     PAGE:
       Entropy: 6.072611130069712
       Virtual Size: '0x844'
     INIT:
-      Entropy: 5.430018205225443
+      Entropy: 5.430018205225444
       Virtual Size: '0x3bc'
     .rsrc:
       Entropy: 3.3337739108428788
@@ -1309,7 +1316,8 @@ KnownVulnerableSamples:
       Entropy: 3.251870619839375
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-01-17 03:52:53'
+  CreationTimestamp: '2019-01-17 01:52:53'
+  Imphash: f7d07bcaa23837d219dcb64e76290252
 - Filename: gdrv.sys
   MD5: c832a4313ff082258240b61b88efa025
   SHA1: 1f1ce28c10453acbc9d3844b4604c59c0ab0ad46
@@ -1465,7 +1473,8 @@ KnownVulnerableSamples:
       Entropy: 4.981256903616009
       Virtual Size: '0x12c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-07-04 00:27:29'
+  CreationTimestamp: '2013-07-03 22:27:29'
+  Imphash: 45f8f347e3fb919f3164a4a3278f1c71
 - Filename: gdrv.sys
   MD5: d556cb79967e92b5cc69686d16c1d846
   SHA1: de2b56ef7a30a4697e9c4cdcae0fc215d45d061d
@@ -1598,13 +1607,13 @@ KnownVulnerableSamples:
     SHA256: 851842a00e07f2b11092dfc28ddea69804461fa27a8eb4fe3366b4994c31a520
   Sections:
     .text:
-      Entropy: 6.524533743036899
+      Entropy: 6.524533743036898
       Virtual Size: '0x194e'
     .rdata:
       Entropy: 2.691603448798156
       Virtual Size: '0xc4'
     INIT:
-      Entropy: 5.184577293889746
+      Entropy: 5.184577293889747
       Virtual Size: '0x2ae'
     .rsrc:
       Entropy: 4.514825600793878
@@ -1613,6 +1622,7 @@ KnownVulnerableSamples:
       Entropy: 4.802440942775519
       Virtual Size: '0xf8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-12 23:17:32'
+  CreationTimestamp: '2009-03-12 21:17:32'
+  Imphash: b4c857bd3a7b1d8125c0f62aec45401e
 Tags:
 - gdrv.sys

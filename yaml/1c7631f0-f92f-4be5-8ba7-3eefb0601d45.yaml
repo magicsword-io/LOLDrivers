@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: fe14940b5d3068b7ceffd28a529196811f1d0e175522f4dfab26573e7aca0bb4
   Company: LG Electronics Inc.
   Copyright: ultrabios@hotmail.com
-  CreationTimestamp: '2018-12-27 18:06:43'
+  CreationTimestamp: '2018-12-27 16:06:43'
   Date: ''
   Description: LHA
   ExportedFunctions: ''
@@ -119,10 +119,10 @@ KnownVulnerableSamples:
   SHA256: e75714f8e0ff45605f6fc7689a1a89c7dcd34aab66c6131c63fefaca584539cf
   Sections:
     .text:
-      Entropy: 6.372971305190187
+      Entropy: 6.3729713051901875
       Virtual Size: '0x275e'
     .rdata:
-      Entropy: 4.358945460135941
+      Entropy: 4.35894546013594
       Virtual Size: '0x79c'
     .data:
       Entropy: 1.4282942392169038
@@ -137,10 +137,10 @@ KnownVulnerableSamples:
       Entropy: 5.174871630570359
       Virtual Size: '0x728'
     .rsrc:
-      Entropy: 3.4060900419168094
+      Entropy: 3.40609004191681
       Virtual Size: '0x380'
     .reloc:
-      Entropy: 1.2280731978955792
+      Entropy: 1.2280731978955797
       Virtual Size: '0x60'
   Signature:
   - Microsoft Windows Hardware Compatibility Publisher
@@ -183,6 +183,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: c3fd2e688276a184b2528ee590054e5a
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

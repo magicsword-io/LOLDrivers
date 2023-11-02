@@ -164,10 +164,11 @@ KnownVulnerableSamples:
       Entropy: 5.053976986986072
       Virtual Size: '0x3c6'
     .reloc:
-      Entropy: 2.946439344671015
+      Entropy: 2.9464393446710155
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-05-13 08:36:36'
+  CreationTimestamp: '2019-05-13 06:36:36'
+  Imphash: e0813a780309a0af84b605d95bd194e4
 - Filename: AsUpIO.sys
   MD5: f8dce1eb0f9fcaf07f68fe290aa629e4
   SHA1: d697a3f4993e7cb15efdeda3b1a798ae25a2d0e9
@@ -300,7 +301,7 @@ KnownVulnerableSamples:
     SHA256: a92828358de94f442874b3394840c9f6b8d329d9c61ebf2596af3e16b39d1f2a
   Sections:
     .text:
-      Entropy: 6.5206309718426665
+      Entropy: 6.520630971842666
       Virtual Size: '0x24d2'
     .rdata:
       Entropy: 5.500481689831827
@@ -309,15 +310,16 @@ KnownVulnerableSamples:
       Entropy: 2.591917186688699
       Virtual Size: '0x20'
     .pdata:
-      Entropy: 3.9352160542067125
+      Entropy: 3.935216054206713
       Virtual Size: '0x180'
     INIT:
-      Entropy: 5.215305445325755
+      Entropy: 5.215305445325754
       Virtual Size: '0x416'
     .reloc:
-      Entropy: 3.046439344671015
+      Entropy: 3.0464393446710156
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-06-13 02:15:00'
+  CreationTimestamp: '2019-06-13 00:15:00'
+  Imphash: 51780bba04121d6be13f69de08721445
 Tags:
 - AsUpIO.sys

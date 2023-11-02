@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 0ff8bcc7f938ec71ee33fbe089d38e40a8190603558d4765c47b1b09e1dd764a
   Company: ASUSTek Computer Inc.
   Copyright: Copyright (C) 2012
-  CreationTimestamp: '2014-09-18 08:04:29'
+  CreationTimestamp: '2014-09-18 06:04:29'
   Date: ''
   Description: ATSZIO Driver
   ExportedFunctions: ''
@@ -98,7 +98,7 @@ KnownVulnerableSamples:
       Entropy: 0.5035334969292564
       Virtual Size: '0x118'
     .pdata:
-      Entropy: 3.3054511722130426
+      Entropy: 3.305451172213043
       Virtual Size: '0x60'
     PAGE:
       Entropy: 6.205978336553792
@@ -212,6 +212,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: b19743993dc7f1d48b2a86fe9b9c91e3
 MitreID: T1068
 Resources:
 - ' https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c'

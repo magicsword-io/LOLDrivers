@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 60571dbcaec96d9517e0d116d066e70ae747aa4396d7857b2eea0f4c1a5a70b4
   Company: Copyright 2018.
   Copyright: Copyright 2018. All rights reserved.
-  CreationTimestamp: '2019-04-23 05:04:57'
+  CreationTimestamp: '2019-04-23 03:04:57'
   Date: ''
   Description: Advanced Malware Protection
   ExportedFunctions: ''
@@ -233,7 +233,7 @@ KnownVulnerableSamples:
       Entropy: 4.851242079025995
       Virtual Size: '0x53f88'
     .pdata:
-      Entropy: 5.28684990958227
+      Entropy: 5.286849909582269
       Virtual Size: '0xa50'
     PAGE:
       Entropy: 6.2717360142736265
@@ -245,7 +245,7 @@ KnownVulnerableSamples:
       Entropy: 3.2308389214733806
       Virtual Size: '0x348'
     .reloc:
-      Entropy: 1.4735474069876846
+      Entropy: 1.4735474069876848
       Virtual Size: '0x234'
   Signature: ''
   Signatures:
@@ -310,6 +310,7 @@ KnownVulnerableSamples:
     - SerialNumber: 1f7b0de3090ee13a436315a6
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
       Version: 1
+  Imphash: ad0cdf3bab32983050527655bce40f96
 MitreID: T1068
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951

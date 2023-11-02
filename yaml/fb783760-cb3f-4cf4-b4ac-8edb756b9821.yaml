@@ -1,0 +1,41 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Takahiro Haruyama
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create atlAccesssys binPath= C:\windows\temp\atlAccesssys.sys type=kernel
+    && sc.exe start atlAccesssys
+  Description: The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable
+    drivers (237 file hashes) accepting firmware access. Six allow kernel memory access.
+    All give full control of the devices to non-admin users. By exploiting the vulnerable
+    drivers, an attacker without the system privilege may erase/alter firmware, and/or
+    elevate privileges. As of the time of writing in October 2023, the filenames of
+    the vulnerable drivers have not been made public until now.
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-11-02'
+Detection: []
+Id: fb783760-cb3f-4cf4-b4ac-8edb756b9821
+KnownVulnerableSamples:
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: ''
+  MD5: 08001b0cdb0946433366032827d7a187
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: ''
+  SHA256: ''
+  Signature: ''
+MitreID: T1068
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+Tags:
+- atlAccess.sys
+Verified: 'TRUE'

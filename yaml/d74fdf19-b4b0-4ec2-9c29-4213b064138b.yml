@@ -7,7 +7,15 @@ Verified: 'TRUE'
 Commands:
   Command: sc.exe create irec binPath=C:\windows\temp\irec.sys type=kernel && sc.exe
     start irec.sys
-  Description: 'The driver in question, identified as \\.\IREC, provides an interface for external programs to directly interact with system processes. Its key functionality is encapsulated in the OPENPROCESS function which, upon receiving a Process ID (PID), returns a handle to that specific process operating within the kernels domain. The vulnerability emerges from the indiscriminate nature of this functionality. An ill-intentioned actor can exploit this to obtain handles to critical processes like LSASS. With a hardcoded access mask of 0x410, this driver essentially grants PROCESS_QUERY_INFORMATION and PROCESS_VM_READ permissions, enabling unauthorized memory dumps from privileged processes, all from an unprivileged context.'
+  Description: The driver in question, identified as \\.\IREC, provides an interface
+    for external programs to directly interact with system processes. Its key functionality
+    is encapsulated in the OPENPROCESS function which, upon receiving a Process ID
+    (PID), returns a handle to that specific process operating within the kernels
+    domain. The vulnerability emerges from the indiscriminate nature of this functionality.
+    An ill-intentioned actor can exploit this to obtain handles to critical processes
+    like LSASS. With a hardcoded access mask of 0x410, this driver essentially grants
+    PROCESS_QUERY_INFORMATION and PROCESS_VM_READ permissions, enabling unauthorized
+    memory dumps from privileged processes, all from an unprivileged context.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -187,21 +195,22 @@ KnownVulnerableSamples:
       Entropy: 5.802383883721242
       Virtual Size: '0xb475'
     .rdata:
-      Entropy: 5.163720787898297
+      Entropy: 5.163720787898298
       Virtual Size: '0x3e28'
     .data:
       Entropy: 4.344234095756882
       Virtual Size: '0x72d0'
     .pdata:
-      Entropy: 4.596185144612192
+      Entropy: 4.596185144612191
       Virtual Size: '0x408'
     INIT:
-      Entropy: 5.375836659289258
+      Entropy: 5.375836659289259
       Virtual Size: '0xd12'
     .reloc:
-      Entropy: 3.8424592157772555
+      Entropy: 3.842459215777256
       Virtual Size: '0x50'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-05-30 15:17:53'
+  CreationTimestamp: '2021-05-30 13:17:53'
+  Imphash: 3ee1cb6085fbe05e46e2b88493426848
 Tags:
 - irec.sys

@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: cb5ebba562c33ef2ed93558913792726c8c2e5898531923589122ae31db64ebb
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2014-05-19 11:29:34'
+  CreationTimestamp: '2014-05-19 09:29:34'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -78,7 +78,7 @@ KnownVulnerableSamples:
       Entropy: 3.595150149062291
       Virtual Size: '0xc0'
     INIT:
-      Entropy: 4.923286981693941
+      Entropy: 4.92328698169394
       Virtual Size: '0x326'
     .reloc:
       Entropy: 1.4575187496394217
@@ -166,13 +166,14 @@ KnownVulnerableSamples:
       Issuer: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom
         Class 3 Primary Intermediate Object CA
       Version: 1
+  Imphash: 9e15ce38f071c916bea830247f1241bb
 - Authentihash:
     MD5: 198111fd73515aa7fe4387612f027f0f
     SHA1: 651b953cb03928e41424ad59f21d4978d6f4952e
     SHA256: ebbaa44277a3ec6e20ad3f6aef5399fdc398306eb4c13aa96e45c9a281820a12
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2018-03-19 23:59:12'
+  CreationTimestamp: '2018-03-19 21:59:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -269,6 +270,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: 85f86c7c8ce81a78e84efa545d7edc65
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

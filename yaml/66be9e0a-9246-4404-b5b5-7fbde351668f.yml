@@ -141,19 +141,19 @@ KnownVulnerableSamples:
     SHA256: b6afffab9ad144e0b85cfb4291c424fe49ccb7755d35ecc957a676995d30d30a
   Sections:
     .text:
-      Entropy: 5.498248181512731
+      Entropy: 5.498248181512732
       Virtual Size: '0x2de0'
     .rdata:
-      Entropy: 4.7579185393905385
+      Entropy: 4.75791853939054
       Virtual Size: '0xa34'
     .data:
       Entropy: 2.072964022170868
       Virtual Size: '0x478'
     .pdata:
-      Entropy: 3.895710722971092
+      Entropy: 3.8957107229710917
       Virtual Size: '0x174'
     PAGE:
-      Entropy: 5.049224790555509
+      Entropy: 5.049224790555508
       Virtual Size: '0x14b'
     INIT:
       Entropy: 5.468703078901586
@@ -165,6 +165,7 @@ KnownVulnerableSamples:
       Entropy: 3.593030469985413
       Virtual Size: '0xf8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2006-12-11 02:48:39'
+  CreationTimestamp: '2006-12-11 00:48:39'
+  Imphash: f939ef0b7f792672866386600f82aa04
 Tags:
 - BS_I2cIo.sys

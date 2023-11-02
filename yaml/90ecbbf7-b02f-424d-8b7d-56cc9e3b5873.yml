@@ -175,7 +175,8 @@ KnownVulnerableSamples:
       Entropy: 1.584962500721156
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-09-10 02:36:29'
+  CreationTimestamp: '2014-09-10 00:36:29'
+  Imphash: b3204707f6e489cd5a2484881eaf78ca
 - Filename: EneIo64.sys
   MD5: 86fd54c56dcafe2de918c36f8dfda67e
   SHA1: 0b01c4c1f18d72eb622be2553114f32edfe7b7aa
@@ -312,7 +313,7 @@ KnownVulnerableSamples:
     SHA256: 893f6ad3e6f34030f6416c00feb4f816d84461e62e441908bab4a6fdb39b0761
   Sections:
     .text:
-      Entropy: 6.190870515576076
+      Entropy: 6.190870515576075
       Virtual Size: '0x14b2'
     .rdata:
       Entropy: 5.431524952006945
@@ -321,7 +322,7 @@ KnownVulnerableSamples:
       Entropy: 2.591917186688699
       Virtual Size: '0x20'
     .pdata:
-      Entropy: 3.7751980590232015
+      Entropy: 3.775198059023202
       Virtual Size: '0x180'
     INIT:
       Entropy: 5.1721688922538265
@@ -330,6 +331,7 @@ KnownVulnerableSamples:
       Entropy: 2.684183719779189
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-05-08 02:07:19'
+  CreationTimestamp: '2020-05-08 00:07:19'
+  Imphash: baa420e9d4e3baf0d65d4fc2bf497708
 Tags:
 - eneio64.sys

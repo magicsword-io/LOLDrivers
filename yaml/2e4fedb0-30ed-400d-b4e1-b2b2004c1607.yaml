@@ -42,7 +42,7 @@ KnownVulnerableSamples:
     SHA256: db68a9cbe22b22cba782592eef76e63e080ee8d30943be6da694701f44b6c33e
   Company: OpenLibSys.org
   Copyright: Copyright (C) 2007 OpenLibSys.org
-  CreationTimestamp: '2007-10-19 01:03:47'
+  CreationTimestamp: '2007-10-18 23:03:47'
   Date: ''
   Description: OpenLibSys
   ExportedFunctions: ''
@@ -89,13 +89,13 @@ KnownVulnerableSamples:
       Entropy: 0.5096713223407059
       Virtual Size: '0x114'
     .pdata:
-      Entropy: 3.244290599159479
+      Entropy: 3.2442905991594793
       Virtual Size: '0x6c'
     INIT:
       Entropy: 4.864582637105269
       Virtual Size: '0x222'
     .rsrc:
-      Entropy: 3.212801820430836
+      Entropy: 3.2128018204308373
       Virtual Size: '0x398'
   Signature:
   - Noriyuki MIYAZAKI
@@ -192,13 +192,14 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: bd94d3a0abc78f87147bf8ea41aad734
     SHA1: 7ecbd5098c4161b95dd7e674003dd53069374f3e
     SHA256: 6f3937451f0170a0aec3033cadceeb86ab30ee3c67add3926e116ccc20c0d9a7
   Company: OpenLibSys.org
   Copyright: Copyright (C) 2007 OpenLibSys.org
-  CreationTimestamp: '2007-10-23 10:03:27'
+  CreationTimestamp: '2007-10-23 08:03:27'
   Date: ''
   Description: OpenLibSys
   ExportedFunctions: ''
@@ -251,7 +252,7 @@ KnownVulnerableSamples:
       Entropy: 4.864582637105269
       Virtual Size: '0x222'
     .rsrc:
-      Entropy: 3.229264789633744
+      Entropy: 3.2292647896337443
       Virtual Size: '0x398'
   Signature:
   - Noriyuki MIYAZAKI
@@ -348,6 +349,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

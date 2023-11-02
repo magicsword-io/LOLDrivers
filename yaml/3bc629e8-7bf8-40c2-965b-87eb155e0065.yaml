@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: da8945bd5c693c0593c9d0e3bda49bb1c6007cb25643c95708c6b10bef7c136a
   Company: MiTAC Technology Corporation
   Copyright: Copyright (C) 2007 MiTAC Technology Corporation
-  CreationTimestamp: '2009-08-06 05:55:21'
+  CreationTimestamp: '2009-08-06 03:55:21'
   Date: ''
   Description: MiTAC System Service Provider
   ExportedFunctions: ''
@@ -100,25 +100,25 @@ KnownVulnerableSamples:
   SHA256: c9cf1d627078f63a36bbde364cd0d5f2be1714124d186c06db5bcdf549a109f8
   Sections:
     .text:
-      Entropy: 6.5072482430285055
+      Entropy: 6.507248243028505
       Virtual Size: '0x3423'
     .rdata:
-      Entropy: 5.097449640471523
+      Entropy: 5.097449640471522
       Virtual Size: '0xb7c'
     .data:
-      Entropy: 2.1507312168138237
+      Entropy: 2.1507312168138233
       Virtual Size: '0x430'
     .pdata:
       Entropy: 3.9956432850134944
       Virtual Size: '0x234'
     PAGE:
-      Entropy: 6.076398540339077
+      Entropy: 6.076398540339076
       Virtual Size: '0x10f6'
     INIT:
       Entropy: 5.39989405154638
       Virtual Size: '0x5e6'
     .rsrc:
-      Entropy: 3.342830114559219
+      Entropy: 3.3428301145592196
       Virtual Size: '0x3d0'
     .reloc:
       Entropy: 3.4647779319666974
@@ -206,6 +206,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: 71e84092e69114f0792419cb8b2b0fd1
 MitreID: T1068
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'

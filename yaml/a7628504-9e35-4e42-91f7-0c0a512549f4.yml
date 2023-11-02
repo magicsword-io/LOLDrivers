@@ -155,16 +155,16 @@ KnownVulnerableSamples:
     SHA256: dc2eec05cc1757c2944200b86425c679ef74a3d3ce2c78a7a52d5fa9461264a6
   Sections:
     .text:
-      Entropy: 6.338491601422604
+      Entropy: 6.3384916014226045
       Virtual Size: '0x218e'
     init:
       Entropy: 5.499913754863658
       Virtual Size: '0x41a'
     .rdata:
-      Entropy: 4.279049328939819
+      Entropy: 4.27904932893982
       Virtual Size: '0x2fc'
     .data:
-      Entropy: 0.38883003300175434
+      Entropy: 0.3888300330017545
       Virtual Size: '0x17c'
     .pdata:
       Entropy: 3.8505556961502627
@@ -173,10 +173,11 @@ KnownVulnerableSamples:
       Entropy: 5.1106217019206195
       Virtual Size: '0x50a'
     .rsrc:
-      Entropy: 3.4094120109354775
+      Entropy: 3.409412010935478
       Virtual Size: '0x728'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-11-17 03:40:50'
+  CreationTimestamp: '2007-11-17 01:40:50'
+  Imphash: 84d45ee8df6f63b5af419d89003a97bc
 - Filename: SANDRA
   MD5: 84b17daba8715089542641990c1ea3c2
   SHA1: 3059bc49e027a79ff61f0147edbc5cd56ad5fc2d
@@ -304,7 +305,7 @@ KnownVulnerableSamples:
     SHA256: dc2eec05cc1757c2944200b86425c679ef74a3d3ce2c78a7a52d5fa9461264a6
   Sections:
     .text:
-      Entropy: 6.351976267078302
+      Entropy: 6.351976267078303
       Virtual Size: '0x214e'
     init:
       Entropy: 5.498116523833083
@@ -313,19 +314,20 @@ KnownVulnerableSamples:
       Entropy: 4.285751893718157
       Virtual Size: '0x2fc'
     .data:
-      Entropy: 0.38883003300175434
+      Entropy: 0.3888300330017545
       Virtual Size: '0x17c'
     .pdata:
       Entropy: 3.8481788844096063
       Virtual Size: '0x12c'
     INIT:
-      Entropy: 5.098947380745784
+      Entropy: 5.098947380745783
       Virtual Size: '0x50a'
     .rsrc:
       Entropy: 3.407283116541433
       Virtual Size: '0x728'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-04-03 07:04:51'
+  CreationTimestamp: '2007-04-03 05:04:51'
+  Imphash: 4433528b0f664177546dd3e229f0daa5
 - Filename: SANDRA
   MD5: e36f6f7401ae11e11f69d744703914db
   SHA1: dcdc9b2bc8e79d44846086d0d482cb7c589f09b8
@@ -462,16 +464,17 @@ KnownVulnerableSamples:
       Entropy: 0.4975521352521052
       Virtual Size: '0x11c'
     .pdata:
-      Entropy: 3.9455531753390813
+      Entropy: 3.945553175339081
       Virtual Size: '0x1b0'
     INIT:
       Entropy: 5.079681736051613
       Virtual Size: '0x512'
     .rsrc:
-      Entropy: 3.4089999544386633
+      Entropy: 3.4089999544386638
       Virtual Size: '0x728'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-08-12 20:05:15'
+  CreationTimestamp: '2005-08-12 18:05:15'
+  Imphash: e2306e26abfd90a5ce4dad0e266b3905
 - Filename: SANDRA
   MD5: 1610342659cb8eb4a0361dbc047a2221
   SHA1: 8d0f33d073720597164f7321603578cd13346d1f
@@ -634,9 +637,10 @@ KnownVulnerableSamples:
       Entropy: 3.411024793928045
       Virtual Size: '0x728'
     .reloc:
-      Entropy: 5.014225498795591
+      Entropy: 5.014225498795592
       Virtual Size: '0x24c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-11-17 03:40:29'
+  CreationTimestamp: '2007-11-17 01:40:29'
+  Imphash: 8e96d1a56746c6f6f30f1a0963ce2f26
 Tags:
 - SANDRA.sys

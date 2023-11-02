@@ -180,10 +180,10 @@ KnownVulnerableSamples:
     SHA256: beaf06a61f68e85f98275b59edc329b4d58f310175f1ba8f610c42f76c83fa78
   Sections:
     .text:
-      Entropy: 6.072885505483526
+      Entropy: 6.072885505483524
       Virtual Size: '0x26d9'
     .rdata:
-      Entropy: 4.092745241218814
+      Entropy: 4.092745241218812
       Virtual Size: '0x14d'
     .data:
       Entropy: 3.4193819456463705
@@ -198,7 +198,8 @@ KnownVulnerableSamples:
       Entropy: 5.537217390905003
       Virtual Size: '0x282'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-05-29 21:37:59'
+  CreationTimestamp: '2012-05-29 19:37:59'
+  Imphash: e2c63196ed5368f03dabed73b1ff3409
 - Filename: DirectIo32.sys
   MD5: e913a51f66e380837ffe8da6707d4cc4
   SHA1: 0be77bb3720283c9a970a97dab25d2a312e86110
@@ -373,10 +374,11 @@ KnownVulnerableSamples:
       Entropy: 5.468877748140006
       Virtual Size: '0x5ba'
     .reloc:
-      Entropy: 5.422595746439075
+      Entropy: 5.422595746439076
       Virtual Size: '0x258'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-05-08 01:45:54'
+  CreationTimestamp: '2012-05-07 23:45:54'
+  Imphash: 68b717fa2ab9431cd176776363359d48
 - Filename: DirectIo32.sys
   MD5: 8ac6d458abbe4f5280996eb90235377c
   SHA1: bd421ffdcc074ecca954d9b2c2fbce9301e9a36c
@@ -552,13 +554,13 @@ KnownVulnerableSamples:
     SHA256: 90241e844553b5439be81ddd9accb390ef1d052371ded8c3bf17190f425e1b44
   Sections:
     .text:
-      Entropy: 6.228494768524961
+      Entropy: 6.228494768524962
       Virtual Size: '0x3805'
     .rdata:
       Entropy: 4.190420870369975
       Virtual Size: '0x204'
     .data:
-      Entropy: 3.1082476504589533
+      Entropy: 3.108247650458953
       Virtual Size: '0x34'
     PAGE:
       Entropy: 5.538055649345997
@@ -570,7 +572,8 @@ KnownVulnerableSamples:
       Entropy: 5.684854112325549
       Virtual Size: '0x352'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-02-17 17:48:32'
+  CreationTimestamp: '2015-02-17 15:48:32'
+  Imphash: eade2a2576f329e4971bf5044ab24ac7
 - Filename: DirectIo32.sys
   MD5: 592756f68ab8ae590662b0c4212a3bb9
   SHA1: aadaec4c31d661c249e4cf455ec752fffa3e5cfc
@@ -748,7 +751,8 @@ KnownVulnerableSamples:
       Entropy: 5.4555025563265716
       Virtual Size: '0x258'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-05-14 12:58:59'
+  CreationTimestamp: '2012-05-14 10:58:59'
+  Imphash: 68b717fa2ab9431cd176776363359d48
 - Filename: DirectIo32.sys
   MD5: 0a653d9d0594b152ca835d0b2593269f
   SHA1: 6102b73489e1d319c0db7b84cb2c426c5f680120
@@ -911,7 +915,7 @@ KnownVulnerableSamples:
     SHA256: beaf06a61f68e85f98275b59edc329b4d58f310175f1ba8f610c42f76c83fa78
   Sections:
     .text:
-      Entropy: 6.094411959893322
+      Entropy: 6.094411959893321
       Virtual Size: '0x27cb'
     .rdata:
       Entropy: 4.0771638057775
@@ -923,13 +927,14 @@ KnownVulnerableSamples:
       Entropy: 5.606645620052774
       Virtual Size: '0xcd'
     INIT:
-      Entropy: 5.474590145522428
+      Entropy: 5.474590145522427
       Virtual Size: '0x5ec'
     .reloc:
-      Entropy: 5.535152929801923
+      Entropy: 5.535152929801922
       Virtual Size: '0x280'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-08-13 00:30:17'
+  CreationTimestamp: '2012-08-12 22:30:17'
+  Imphash: 427cd9c70cca88ca1db61a5ddc3b8450
 - Filename: DirectIo32.sys
   MD5: e140cb81bd27434fc4fd9080b7551922
   SHA1: 2a06006e54c62a2e8bdf14313f90f0ab5d2f8de8
@@ -1111,7 +1116,7 @@ KnownVulnerableSamples:
       Entropy: 4.064531984619777
       Virtual Size: '0x204'
     .data:
-      Entropy: 3.1082476504589533
+      Entropy: 3.108247650458953
       Virtual Size: '0x34'
     PAGE:
       Entropy: 5.551494124966307
@@ -1120,10 +1125,11 @@ KnownVulnerableSamples:
       Entropy: 5.614365858236212
       Virtual Size: '0x784'
     .reloc:
-      Entropy: 5.653025095053077
+      Entropy: 5.653025095053076
       Virtual Size: '0x350'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-03-10 12:45:24'
+  CreationTimestamp: '2014-03-10 10:45:24'
+  Imphash: a7f2c2e8e9d6c90e28819d1a3ab84bc8
 - Filename: DirectIo32.sys
   MD5: 10e681ce84afdd642e59ddfdb28284e9
   SHA1: 983a8d4b1cb68140740a7680f929d493463e32e3
@@ -1287,7 +1293,7 @@ KnownVulnerableSamples:
     SHA256: 698ac0c9fdb4ab4afde156a75e859fcb43f91ebfc29d93e1efd9bd9a5d971fea
   Sections:
     .text:
-      Entropy: 6.071623655142025
+      Entropy: 6.071623655142026
       Virtual Size: '0x2717'
     .rdata:
       Entropy: 4.121756234287931
@@ -1299,13 +1305,14 @@ KnownVulnerableSamples:
       Entropy: 5.62316670272552
       Virtual Size: '0xcd'
     INIT:
-      Entropy: 5.463728716873734
+      Entropy: 5.463728716873735
       Virtual Size: '0x5fe'
     .reloc:
       Entropy: 5.542859163741398
       Virtual Size: '0x27e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-07-30 21:02:19'
+  CreationTimestamp: '2012-07-30 19:02:19'
+  Imphash: 32204eaf2afa5b348ab17de07362885c
 - Filename: DirectIo32.sys
   MD5: aa5dd4beca6f67733e04d9d050ecd523
   SHA1: ebafebe5e94fdf12bd2159ed66d73268576bc7d9
@@ -1472,7 +1479,7 @@ KnownVulnerableSamples:
       Entropy: 6.061050295068108
       Virtual Size: '0x26f3'
     .rdata:
-      Entropy: 4.193579920546621
+      Entropy: 4.193579920546634
       Virtual Size: '0x154'
     .data:
       Entropy: 3.4193819456463705
@@ -1484,9 +1491,10 @@ KnownVulnerableSamples:
       Entropy: 5.4626794075683645
       Virtual Size: '0x5fe'
     .reloc:
-      Entropy: 5.529407432639036
+      Entropy: 5.529407432639037
       Virtual Size: '0x27e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-02-22 22:49:09'
+  CreationTimestamp: '2012-02-22 20:49:09'
+  Imphash: 32204eaf2afa5b348ab17de07362885c
 Tags:
 - DirectIo32.sys

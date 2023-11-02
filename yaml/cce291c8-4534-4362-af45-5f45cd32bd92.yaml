@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: 7fd788358585e0b863328475898bb4400ed8d478466d1b7f5cc0252671456cc8
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-07-09 21:35:24'
+  CreationTimestamp: '2013-07-09 19:35:24'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -58,13 +58,13 @@ KnownVulnerableSamples:
       Entropy: -0.0
       Virtual Size: '0xc0'
     .pdata:
-      Entropy: 3.0064696610766655
+      Entropy: 3.006469661076665
       Virtual Size: '0x48'
     .info:
       Entropy: 2.422343555669997
       Virtual Size: '0xa0'
     INIT:
-      Entropy: 4.123682579107586
+      Entropy: 4.123682579107587
       Virtual Size: '0x114'
   Signature:
   - NAMCO BANDAI Online Inc.
@@ -144,6 +144,7 @@ KnownVulnerableSamples:
     - SerialNumber: 1121953cf4f12153ed3974a70d218298b988
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: 45bfe170e0cd654bc1e2ae3fca3ac3f4
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

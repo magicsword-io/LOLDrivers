@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 1cda1a6e33d14d5dd06344425102bf840f8149e817ecfb01c59a2190d3367024
   Company: OTi
   Copyright: ''
-  CreationTimestamp: '2018-08-27 02:12:54'
+  CreationTimestamp: '2018-08-27 00:12:54'
   Date: ''
   Description: Hardware Access Driver
   ExportedFunctions: ''
@@ -92,7 +92,7 @@ KnownVulnerableSamples:
   SHA256: 4e3eb5b9bce2fd9f6878ae36288211f0997f6149aa8c290ed91228ba4cdfae80
   Sections:
     .text:
-      Entropy: 6.1339338919849835
+      Entropy: 6.133933891984983
       Virtual Size: '0xdf3'
     .rdata:
       Entropy: 4.417947833956902
@@ -196,6 +196,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: cf1a39b9408348cddaa4a2827283534c
 MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'

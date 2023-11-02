@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: e4ac5c7fbb41ee988029b27d8b6be574725689fd1365f5a56f5a12d9120f86c6
   Company: Corsair Memory, Inc.
   Copyright: Corsair Memory, Inc. (c) 2019, All rights reserved
-  CreationTimestamp: '2019-10-28 19:19:22'
+  CreationTimestamp: '2019-10-28 17:19:22'
   Date: ''
   Description: Corsair LL Access
   ExportedFunctions: ''
@@ -99,7 +99,7 @@ KnownVulnerableSamples:
       Entropy: 6.167927885696172
       Virtual Size: '0xf8a'
     .rdata:
-      Entropy: 3.8995505502370666
+      Entropy: 3.8995505502370675
       Virtual Size: '0x5ec'
     .data:
       Entropy: 0.28109187076190567
@@ -108,7 +108,7 @@ KnownVulnerableSamples:
       Entropy: 3.6266995207164214
       Virtual Size: '0xfc'
     INIT:
-      Entropy: 5.24753246150664
+      Entropy: 5.2475324615066405
       Virtual Size: '0x46c'
     .rsrc:
       Entropy: 3.494224562959288
@@ -157,6 +157,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: f2c2ee1ff03c54f384f4eee8c2533107
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

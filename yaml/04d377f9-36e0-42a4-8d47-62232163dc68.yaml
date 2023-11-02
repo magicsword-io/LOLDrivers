@@ -42,7 +42,7 @@ KnownVulnerableSamples:
     SHA256: 46ffe559f5a8f6bd611ac5a9264edf92d8449d8d31b2ddf6b2add5971e309c56
   Company: DT Research, Inc.
   Copyright: DT Research Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-28 03:45:17'
+  CreationTimestamp: '2013-01-28 01:45:17'
   Date: ''
   Description: DTR Kernel mode driver
   ExportedFunctions: ''
@@ -187,13 +187,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 679eba16ab2d51543b7007708838ef7c
 - Authentihash:
     MD5: 91896c53af5ab967f7f131285354e4ac
     SHA1: 7eec42b3027252dea4c777bbdbd47560bc179986
     SHA256: 57d36936fbf8785380536b03e5d9be172e5dd5c3bf435e19875a80aa96f97e1f
   Company: DT Research, Inc.
   Copyright: DT Research Inc. All Rights Reserved.
-  CreationTimestamp: '2012-12-03 03:39:06'
+  CreationTimestamp: '2012-12-03 01:39:06'
   Date: ''
   Description: DTR Kernel mode driver
   ExportedFunctions: ''
@@ -234,7 +235,7 @@ KnownVulnerableSamples:
   SHA256: dd4a1253d47de14ef83f1bc8b40816a86ccf90d1e624c5adf9203ae9d51d4097
   Sections:
     .text:
-      Entropy: 5.427621786828532
+      Entropy: 5.4276217868285315
       Virtual Size: '0x1384'
     .rdata:
       Entropy: 4.330082770085826
@@ -249,7 +250,7 @@ KnownVulnerableSamples:
       Entropy: 5.039084100171449
       Virtual Size: '0x2a6'
     .rsrc:
-      Entropy: 3.2271897550688724
+      Entropy: 3.227189755068873
       Virtual Size: '0x350'
   Signature:
   - DT RESEARCH, INC. TAIWAN BRANCH
@@ -337,6 +338,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 679eba16ab2d51543b7007708838ef7c
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

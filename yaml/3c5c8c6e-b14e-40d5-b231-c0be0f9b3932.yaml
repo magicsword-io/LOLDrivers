@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: 7f75d91844b0c162eeb24d14bcf63b7f230e111daa7b0a26eaa489eeb22d9057
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2010-08-02 22:47:59'
+  CreationTimestamp: '2010-08-02 20:47:59'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -65,7 +65,7 @@ KnownVulnerableSamples:
       Entropy: 6.128485959548185
       Virtual Size: '0x10fc'
     .rdata:
-      Entropy: 4.469326855336565
+      Entropy: 4.469326855336564
       Virtual Size: '0x1a0'
     .data:
       Entropy: 0.0
@@ -160,6 +160,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: b4b90c1b054ebe273bff4b2fd6927990
 MitreID: T1068
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'

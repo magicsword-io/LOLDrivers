@@ -1,0 +1,541 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Takahiro Haruyama
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create PDFWKRNLsys binPath= C:\windows\temp\PDFWKRNLsys.sys type=kernel
+    && sc.exe start PDFWKRNLsys
+  Description: The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable
+    drivers (237 file hashes) accepting firmware access. Six allow kernel memory access.
+    All give full control of the devices to non-admin users. By exploiting the vulnerable
+    drivers, an attacker without the system privilege may erase/alter firmware, and/or
+    elevate privileges. As of the time of writing in October 2023, the filenames of
+    the vulnerable drivers have not been made public until now.
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-11-02'
+Detection: []
+Id: fded7e63-0470-40fe-97ed-aa83fd027bad
+KnownVulnerableSamples:
+- Company: Advanced Micro Devices, Inc.
+  Date: ''
+  Description: USB-C Power Delivery Firmware Update Tool Kernel Driver
+  FileVersion: '1.0'
+  Filename: ''
+  MD5: 057ec65bac5e786affeb97c0a0d1db15
+  MachineType: AMD64
+  OriginalFilename: PDFWKRNL.sys
+  Product: USB-C Power Delivery Firmware Update Tool Kernel Driver
+  ProductVersion: '1.0'
+  Publisher: ''
+  SHA1: 16a091bfd1fd616d4607cac367782b1d2ab07491
+  SHA256: 0cf84400c09582ee2911a5b1582332c992d1cd29fcf811cb1dc00fcd61757db0
+  Signature: ''
+  Imphash: 3f4c9025125027e307b7e52dd577303b
+  Authentihash:
+    MD5: 88f43386706a10bf13406da24ff3ce17
+    SHA1: 2bb6572b167727925c082adbe1f68671c1198fe4
+    SHA256: 6370c82c2dbdf93608cccb88d78468edeb27f5d08f9ed0baf161842c0751f6a4
+  RichPEHeaderHash:
+    MD5: ab0033f961519a670a4f5bb4cb27078c
+    SHA1: 001439f5c078236db0d9f3975d109bbbbcdca85d
+    SHA256: 0d157e35d3e64fede649680b050c99079456df79286889fc0ed61417f8249918
+  Sections:
+    .text:
+      Entropy: 5.774198151282791
+      Virtual Size: '0x96a'
+    .rdata:
+      Entropy: 3.152042663025651
+      Virtual Size: '0x474'
+    .data:
+      Entropy: 1.457518749639422
+      Virtual Size: '0x18'
+    .pdata:
+      Entropy: 3.1359292104877943
+      Virtual Size: '0x84'
+    INIT:
+      Entropy: 4.58854617911247
+      Virtual Size: '0x23c'
+    .rsrc:
+      Entropy: 3.3373025657841526
+      Virtual Size: '0x418'
+    .reloc:
+      Entropy: 3.569548827786958
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2022-04-07 20:20:42'
+  InternalName: PDFWKRNL.sys
+  Copyright: Copyright (C) 2021 Advanced Micro Devices, Inc.
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - RtlInitUnicodeString
+  - MmMapIoSpace
+  - MmFreeContiguousMemory
+  - IoDeleteDevice
+  - MmUnmapIoSpace
+  - MmGetPhysicalAddress
+  - IoDeleteSymbolicLink
+  - IoFreeMdl
+  - MmAllocateContiguousMemorySpecifyCache
+  - IoCreateDevice
+  - ExFreePoolWithTag
+  - MmUnmapLockedPages
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - MmMapLockedPages
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=California, L=Santa Clara, O=Advanced Micro Devices Inc.,
+        CN=Advanced Micro Devices Inc.
+      ValidFrom: '2021-05-11 00:00:00'
+      ValidTo: '2024-05-10 23:59:59'
+      Signature: 8444e268ff381c9148985f408e5cc1453a560c9dd94d2a6cfa01dd7f2adc8af633053d2c79027db4f185f477b0d5db8b362b37dbd0d258823831ace7058baf3feb80a9eb2de9dd886bcf390fae9b586fc833e63db5c6a07019f35a9fce6899502852737b32d25ea7832c3786df0642d21622e56c0b0171e96f9520d07f73950376ff555bcf9c8a55bf4f86c088b58e2cb625a0ef4680ed7281f09a40c7be9f69cba77a6967030e39b2cfa46692698ced9e5347dd7056b476545c3442f934cb2c30cb986afabd29a9a9e2eb28c5bd6ee47dabf5ef587f850ea49b124eb868aac68de949616d08f875192b93388549c7327a3ef085e287d5a743810c151b250c64
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 535091e6cab13af393b51ead0825f627
+      Version: 3
+      TBS:
+        MD5: f2f60243e26dcdf4729d28b1beb55f01
+        SHA1: a23ac91136dd79d77b93b12c813e0c6669ed9f4d
+        SHA256: 192ee517f8ae928808632422a6461613d65ee324fa58d2f099a27a3d0da9ca6b
+        SHA384: beb93a1ff1715564a418ecb07cee42465dbf9c76cc703e7088bdafb2099b003afa0c335bcd15d318dcb2bf8519c199da
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Code Signing CA
+      ValidFrom: '2018-11-02 00:00:00'
+      ValidTo: '2030-12-31 23:59:59'
+      Signature: 4d6350ed47344a61a4dbde6a2a8c9bf100001e1d627b3ad732c2f6b3e063b3fb6100889a1b6d1007044fbeb8ea897822eb0f46ecf3465e40468912f40b775a9c2a413afcd6f4ebe7f7159533c3a18328b7de2fe494f78533832d4a4048bf9ac24f4ab18f24f4b38137d3b764b0a6236a596852425fff04ebe174657908f5a993de6b71409996ba78f1b9c8e2c30816b1ab635ac815806d745e4a757ea5b8c36cb5cfdf4a79875cc7404d6335f630d3cfb50a0e0b047fa04baebba3a5d08400933e535d34a50035696cbe9f2025100d19fb509061be398f7a8e4df69f0e1efe075112668326194895ce4ac9c17ff33a059bf96fdf887fc0239ed21e437a4531c19c4da9f059b25919e86a8d290402777c4b4bcd70be3ab2555a783ebcbb6f0310257715348af936cc4392e4ba4ff1629328255729fb5119c7a125406a8457c6b29db1bc1c0ada7c677e7d2ee9284c187ec47b3141719a4b29ec0b3d5750d2caddfd9e0551e54478dd01deb175980d5424fdf04ee3e2f883bd72bacb3d3aeef05e1792686dc861f9a6f12a0a0ba5b9f49eee983205859eebf98329d3c62c7dbd3a772e8b3742a06a82ed3b4aaa9410a4e10df817c5b65a79331892e3b575f8a1e98e0a251ee41ef19f5a8723ff9fa4519efb398011cddbb5c4a7a8806fe553d4e0e3a2c2d25b1afa32262d6a57701c3ca4582ea3f35b4b07dc3259f387a71a6d58
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 1da248306f9b2618d082e0967d33d36a
+      Version: 3
+      TBS:
+        MD5: c1eabfb5994258ad955adb7c2df165e6
+        SHA1: fa33b3c00cebc469b269220d9eab26926c9b8ad8
+        SHA256: 70dffac37eb787b2198816982c7d44f541d2e39a7dac069d37b367dc9f354b32
+        SHA384: 20adc5b59cb532e215f01ba09a9c745898c206555613512fea7c295ccfd17ced4fe2c5bc3274ca8a270fc68799b8343c
+    - Subject: C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust
+        RSA Certification Authority
+      ValidFrom: '2015-07-22 21:03:49'
+      ValidTo: '2025-07-22 21:03:49'
+      Signature: 6b22933c3d395471646b0ef2e43c3011c5204a4b860f92f1ff33793ad9e498a70e40a022807e61b2e0a719cf2695312a65d46a4f3186eac0c62ec5648c3d4859cd0b2f743d9426131042d49798275e3c76d278691d1a64e7057275e0eb6640439f8f0c46ff9760a6c867ad10089b62a6e9be3a8ad3074d9f729325bc0611e02c90383e671cfd19d79e90ce3dc2e0e761acc0e504f51e99540c910d01567137ae27d49e4322a5c927cd4de571123924a5415687ffbc55140f25ca89eec797e5d213ff3d7e1aa08f3fc82cd7a370d0c760c0fcd83e51e797c63e3bedcf78be8acae3c4f2a7a7ed9eae08028fa052db721ed53bc34d9f8efa9b70c7f8e3bf6c3f929be4373eec6a8c29f9c1a2bf8b3e1a6966fb1c634f2601c902c43ed2ffc343a81bfd99fad4bca5b9e2932f3b01c5d1f43a2f68c3e064b75a955e46cc078369bb3c05925673357345984e7cd812a5b742e9a263f642601870d13b6f31c087c7e671e1f34616e9f5b872b3e96d1f622649a3498bdd68c78b6856f7defcfa8724b80381178fe5f1676a1daed374f78ca55db30b8e422996ce49c4777e667c01171a6c1424c3b0177705d81a40b7866bd8e47b40ac7edf4e6f24f92080828c33e7e5fa29d89dda8b705d2bc91d824c0b67cb84419ee7067e1183442d8a19eef47f9add791c37191e9f3f8c29ba0d5c1086376c48cd455dcd70bcbcd14d5dd8c5b876
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 3300000044b73ffcef5acfa27a000000000044
+      Version: 3
+      TBS:
+        MD5: a2d2ae7554f77f6e9ffb0b1a9b700ac4
+        SHA1: 9f69ff166f5dc446578a45d7d69482373755e141
+        SHA256: ad394b7e5cb9ccf6429762405f9840b648e38e8faf2de376f1aa375c6729abb7
+        SHA384: eda103bac2997f31d778637ce8d1fa1263485a9d6a77d6e381bad8312e6bbec020ce5036e16ca96087e50f6ab200944a
+    Signer:
+    - SerialNumber: 535091e6cab13af393b51ead0825f627
+      Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Code Signing CA
+      Version: 1
+- Company: Advanced Micro Devices, Inc.
+  Date: ''
+  Description: USB-C Power Delivery Firmware Update Utility Driver
+  FileVersion: '1.1'
+  Filename: ''
+  MD5: 0b0447072ada1636a14087574a512c82
+  MachineType: AMD64
+  OriginalFilename: PDFWKRNL.sys
+  Product: USB-C Power Delivery Firmware Update Utility Driver
+  ProductVersion: '1.1'
+  Publisher: ''
+  SHA1: e28b754d4d332ea57349110c019d841cf4d27356
+  SHA256: 5df689a62003d26df4aefbaed41ec1205abbf3a2e18e1f1d51b97711e8fcdf00
+  Signature: ''
+  Imphash: f5df2479285c7b593b3630b8357032e3
+  Authentihash:
+    MD5: afe828d66195a0e13579137ca102238b
+    SHA1: b0e839e75e4a607e1697a6a8a246d11bcca712e0
+    SHA256: cd5bff03256b98922b47a2725128540953a0ac15bd2be204196917d0c707a9cb
+  RichPEHeaderHash:
+    MD5: 33c9bfc9dc766dcea534eeb1d824cd8a
+    SHA1: 56a256d7e55cd26ee6ef005948cc10775844d8aa
+    SHA256: 8b6a847e85f2718f6ffb093a6e5623d635e5d35fe85fe238f7b349800ee790ec
+  Sections:
+    .text:
+      Entropy: 5.860373054881857
+      Virtual Size: '0xdc0'
+    .rdata:
+      Entropy: 4.017039388906641
+      Virtual Size: '0xc54'
+    .data:
+      Entropy: 1.874295453293815
+      Virtual Size: '0x240'
+    .pdata:
+      Entropy: 4.093065667164915
+      Virtual Size: '0x270'
+    PAGE:
+      Entropy: 6.200431242069836
+      Virtual Size: '0x1d0b'
+    INIT:
+      Entropy: 4.845082540506861
+      Virtual Size: '0x576'
+    .rsrc:
+      Entropy: 3.34832425352919
+      Virtual Size: '0x408'
+    .reloc:
+      Entropy: 3.92146948986705
+      Virtual Size: '0x3c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-06-23 11:20:08'
+  InternalName: PDFWKRNL.sys
+  Copyright: Copyright (C) 2023 Advanced Micro Devices, Inc.
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - RtlInitUnicodeString
+  - MmMapIoSpace
+  - MmFreeContiguousMemory
+  - IoDeleteDevice
+  - MmUnmapIoSpace
+  - MmGetPhysicalAddress
+  - IoDeleteSymbolicLink
+  - IoFreeMdl
+  - MmAllocateContiguousMemorySpecifyCache
+  - ExFreePoolWithTag
+  - MmUnmapLockedPages
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - MmMapLockedPages
+  - ZwCreateKey
+  - MmGetSystemRoutineAddress
+  - ZwClose
+  - ZwSetSecurityObject
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - ObOpenObjectByPointer
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeExports
+  - RtlCreateSecurityDescriptor
+  - _wcsnicmp
+  - ExAllocatePoolWithTag
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - IoIsWdmVersionAvailable
+  - RtlSetDaclSecurityDescriptor
+  - ZwOpenKey
+  - ZwSetValueKey
+  - ZwQueryValueKey
+  - RtlFreeUnicodeString
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=California, L=Santa Clara, O=Advanced Micro Devices Inc.,
+        CN=Advanced Micro Devices Inc.
+      ValidFrom: '2021-05-11 00:00:00'
+      ValidTo: '2024-05-10 23:59:59'
+      Signature: 8444e268ff381c9148985f408e5cc1453a560c9dd94d2a6cfa01dd7f2adc8af633053d2c79027db4f185f477b0d5db8b362b37dbd0d258823831ace7058baf3feb80a9eb2de9dd886bcf390fae9b586fc833e63db5c6a07019f35a9fce6899502852737b32d25ea7832c3786df0642d21622e56c0b0171e96f9520d07f73950376ff555bcf9c8a55bf4f86c088b58e2cb625a0ef4680ed7281f09a40c7be9f69cba77a6967030e39b2cfa46692698ced9e5347dd7056b476545c3442f934cb2c30cb986afabd29a9a9e2eb28c5bd6ee47dabf5ef587f850ea49b124eb868aac68de949616d08f875192b93388549c7327a3ef085e287d5a743810c151b250c64
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 535091e6cab13af393b51ead0825f627
+      Version: 3
+      TBS:
+        MD5: f2f60243e26dcdf4729d28b1beb55f01
+        SHA1: a23ac91136dd79d77b93b12c813e0c6669ed9f4d
+        SHA256: 192ee517f8ae928808632422a6461613d65ee324fa58d2f099a27a3d0da9ca6b
+        SHA384: beb93a1ff1715564a418ecb07cee42465dbf9c76cc703e7088bdafb2099b003afa0c335bcd15d318dcb2bf8519c199da
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Code Signing CA
+      ValidFrom: '2018-11-02 00:00:00'
+      ValidTo: '2030-12-31 23:59:59'
+      Signature: 4d6350ed47344a61a4dbde6a2a8c9bf100001e1d627b3ad732c2f6b3e063b3fb6100889a1b6d1007044fbeb8ea897822eb0f46ecf3465e40468912f40b775a9c2a413afcd6f4ebe7f7159533c3a18328b7de2fe494f78533832d4a4048bf9ac24f4ab18f24f4b38137d3b764b0a6236a596852425fff04ebe174657908f5a993de6b71409996ba78f1b9c8e2c30816b1ab635ac815806d745e4a757ea5b8c36cb5cfdf4a79875cc7404d6335f630d3cfb50a0e0b047fa04baebba3a5d08400933e535d34a50035696cbe9f2025100d19fb509061be398f7a8e4df69f0e1efe075112668326194895ce4ac9c17ff33a059bf96fdf887fc0239ed21e437a4531c19c4da9f059b25919e86a8d290402777c4b4bcd70be3ab2555a783ebcbb6f0310257715348af936cc4392e4ba4ff1629328255729fb5119c7a125406a8457c6b29db1bc1c0ada7c677e7d2ee9284c187ec47b3141719a4b29ec0b3d5750d2caddfd9e0551e54478dd01deb175980d5424fdf04ee3e2f883bd72bacb3d3aeef05e1792686dc861f9a6f12a0a0ba5b9f49eee983205859eebf98329d3c62c7dbd3a772e8b3742a06a82ed3b4aaa9410a4e10df817c5b65a79331892e3b575f8a1e98e0a251ee41ef19f5a8723ff9fa4519efb398011cddbb5c4a7a8806fe553d4e0e3a2c2d25b1afa32262d6a57701c3ca4582ea3f35b4b07dc3259f387a71a6d58
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 1da248306f9b2618d082e0967d33d36a
+      Version: 3
+      TBS:
+        MD5: c1eabfb5994258ad955adb7c2df165e6
+        SHA1: fa33b3c00cebc469b269220d9eab26926c9b8ad8
+        SHA256: 70dffac37eb787b2198816982c7d44f541d2e39a7dac069d37b367dc9f354b32
+        SHA384: 20adc5b59cb532e215f01ba09a9c745898c206555613512fea7c295ccfd17ced4fe2c5bc3274ca8a270fc68799b8343c
+    - Subject: C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust
+        RSA Certification Authority
+      ValidFrom: '2015-07-22 21:03:49'
+      ValidTo: '2025-07-22 21:03:49'
+      Signature: 6b22933c3d395471646b0ef2e43c3011c5204a4b860f92f1ff33793ad9e498a70e40a022807e61b2e0a719cf2695312a65d46a4f3186eac0c62ec5648c3d4859cd0b2f743d9426131042d49798275e3c76d278691d1a64e7057275e0eb6640439f8f0c46ff9760a6c867ad10089b62a6e9be3a8ad3074d9f729325bc0611e02c90383e671cfd19d79e90ce3dc2e0e761acc0e504f51e99540c910d01567137ae27d49e4322a5c927cd4de571123924a5415687ffbc55140f25ca89eec797e5d213ff3d7e1aa08f3fc82cd7a370d0c760c0fcd83e51e797c63e3bedcf78be8acae3c4f2a7a7ed9eae08028fa052db721ed53bc34d9f8efa9b70c7f8e3bf6c3f929be4373eec6a8c29f9c1a2bf8b3e1a6966fb1c634f2601c902c43ed2ffc343a81bfd99fad4bca5b9e2932f3b01c5d1f43a2f68c3e064b75a955e46cc078369bb3c05925673357345984e7cd812a5b742e9a263f642601870d13b6f31c087c7e671e1f34616e9f5b872b3e96d1f622649a3498bdd68c78b6856f7defcfa8724b80381178fe5f1676a1daed374f78ca55db30b8e422996ce49c4777e667c01171a6c1424c3b0177705d81a40b7866bd8e47b40ac7edf4e6f24f92080828c33e7e5fa29d89dda8b705d2bc91d824c0b67cb84419ee7067e1183442d8a19eef47f9add791c37191e9f3f8c29ba0d5c1086376c48cd455dcd70bcbcd14d5dd8c5b876
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 3300000044b73ffcef5acfa27a000000000044
+      Version: 3
+      TBS:
+        MD5: a2d2ae7554f77f6e9ffb0b1a9b700ac4
+        SHA1: 9f69ff166f5dc446578a45d7d69482373755e141
+        SHA256: ad394b7e5cb9ccf6429762405f9840b648e38e8faf2de376f1aa375c6729abb7
+        SHA384: eda103bac2997f31d778637ce8d1fa1263485a9d6a77d6e381bad8312e6bbec020ce5036e16ca96087e50f6ab200944a
+    Signer:
+    - SerialNumber: 535091e6cab13af393b51ead0825f627
+      Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Code Signing CA
+      Version: 1
+- Company: Advanced Micro Devices, Inc.
+  Date: ''
+  Description: USB-C Power Delivery Firmware Update Utility Driver
+  FileVersion: '1.0'
+  Filename: ''
+  MD5: f0db5af13c457a299a64cf524c64b042
+  MachineType: AMD64
+  OriginalFilename: PDFWKRNL.sys
+  Product: USB-C Power Delivery Firmware Update Utility Driver
+  ProductVersion: '1.0'
+  Publisher: ''
+  SHA1: a24840e32071e0f64e1dff8ca540604896811587
+  SHA256: 6945077a6846af3e4e2f6a2f533702f57e993c5b156b6965a552d6a5d63b7402
+  Signature: ''
+  Imphash: 3f4c9025125027e307b7e52dd577303b
+  Authentihash:
+    MD5: d255a6146ab4e75a6ac362cf07641180
+    SHA1: 661a1a28950cec3f2c3d0e72ab2a05d4a173cf9a
+    SHA256: fc23abdcf93928e1db8401a7ff53c86c85230a8637c4168f7434208f9e8b5ded
+  RichPEHeaderHash:
+    MD5: eff2e20cff5d56c711ba91e03ead294d
+    SHA1: 94f9b8467857dfe5b38ddaf5b260de7da65563ef
+    SHA256: 8548170c0fc3ef601bbd115b2ad461be8dd8abcceb062617f2b02469de17f2c0
+  Sections:
+    .text:
+      Entropy: 5.775171264269732
+      Virtual Size: '0x96a'
+    .rdata:
+      Entropy: 2.837849121032207
+      Virtual Size: '0x504'
+    .data:
+      Entropy: 1.457518749639422
+      Virtual Size: '0x18'
+    .pdata:
+      Entropy: 3.213363216579077
+      Virtual Size: '0x84'
+    INIT:
+      Entropy: 4.607889156155057
+      Virtual Size: '0x23c'
+    .rsrc:
+      Entropy: 3.3343295190199753
+      Virtual Size: '0x408'
+    .reloc:
+      Entropy: 3.5168756957665632
+      Virtual Size: '0x24'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2022-12-22 11:13:53'
+  InternalName: PDFWKRNL.sys
+  Copyright: Copyright (C) 2021 Advanced Micro Devices, Inc.
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - RtlInitUnicodeString
+  - MmMapIoSpace
+  - MmFreeContiguousMemory
+  - IoDeleteDevice
+  - MmUnmapIoSpace
+  - MmGetPhysicalAddress
+  - IoDeleteSymbolicLink
+  - IoFreeMdl
+  - MmAllocateContiguousMemorySpecifyCache
+  - IoCreateDevice
+  - ExFreePoolWithTag
+  - MmUnmapLockedPages
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - MmMapLockedPages
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=California, L=Santa Clara, O=Advanced Micro Devices Inc.,
+        CN=Advanced Micro Devices Inc.
+      ValidFrom: '2021-05-11 00:00:00'
+      ValidTo: '2024-05-10 23:59:59'
+      Signature: 8444e268ff381c9148985f408e5cc1453a560c9dd94d2a6cfa01dd7f2adc8af633053d2c79027db4f185f477b0d5db8b362b37dbd0d258823831ace7058baf3feb80a9eb2de9dd886bcf390fae9b586fc833e63db5c6a07019f35a9fce6899502852737b32d25ea7832c3786df0642d21622e56c0b0171e96f9520d07f73950376ff555bcf9c8a55bf4f86c088b58e2cb625a0ef4680ed7281f09a40c7be9f69cba77a6967030e39b2cfa46692698ced9e5347dd7056b476545c3442f934cb2c30cb986afabd29a9a9e2eb28c5bd6ee47dabf5ef587f850ea49b124eb868aac68de949616d08f875192b93388549c7327a3ef085e287d5a743810c151b250c64
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 535091e6cab13af393b51ead0825f627
+      Version: 3
+      TBS:
+        MD5: f2f60243e26dcdf4729d28b1beb55f01
+        SHA1: a23ac91136dd79d77b93b12c813e0c6669ed9f4d
+        SHA256: 192ee517f8ae928808632422a6461613d65ee324fa58d2f099a27a3d0da9ca6b
+        SHA384: beb93a1ff1715564a418ecb07cee42465dbf9c76cc703e7088bdafb2099b003afa0c335bcd15d318dcb2bf8519c199da
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Code Signing CA
+      ValidFrom: '2018-11-02 00:00:00'
+      ValidTo: '2030-12-31 23:59:59'
+      Signature: 4d6350ed47344a61a4dbde6a2a8c9bf100001e1d627b3ad732c2f6b3e063b3fb6100889a1b6d1007044fbeb8ea897822eb0f46ecf3465e40468912f40b775a9c2a413afcd6f4ebe7f7159533c3a18328b7de2fe494f78533832d4a4048bf9ac24f4ab18f24f4b38137d3b764b0a6236a596852425fff04ebe174657908f5a993de6b71409996ba78f1b9c8e2c30816b1ab635ac815806d745e4a757ea5b8c36cb5cfdf4a79875cc7404d6335f630d3cfb50a0e0b047fa04baebba3a5d08400933e535d34a50035696cbe9f2025100d19fb509061be398f7a8e4df69f0e1efe075112668326194895ce4ac9c17ff33a059bf96fdf887fc0239ed21e437a4531c19c4da9f059b25919e86a8d290402777c4b4bcd70be3ab2555a783ebcbb6f0310257715348af936cc4392e4ba4ff1629328255729fb5119c7a125406a8457c6b29db1bc1c0ada7c677e7d2ee9284c187ec47b3141719a4b29ec0b3d5750d2caddfd9e0551e54478dd01deb175980d5424fdf04ee3e2f883bd72bacb3d3aeef05e1792686dc861f9a6f12a0a0ba5b9f49eee983205859eebf98329d3c62c7dbd3a772e8b3742a06a82ed3b4aaa9410a4e10df817c5b65a79331892e3b575f8a1e98e0a251ee41ef19f5a8723ff9fa4519efb398011cddbb5c4a7a8806fe553d4e0e3a2c2d25b1afa32262d6a57701c3ca4582ea3f35b4b07dc3259f387a71a6d58
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 1da248306f9b2618d082e0967d33d36a
+      Version: 3
+      TBS:
+        MD5: c1eabfb5994258ad955adb7c2df165e6
+        SHA1: fa33b3c00cebc469b269220d9eab26926c9b8ad8
+        SHA256: 70dffac37eb787b2198816982c7d44f541d2e39a7dac069d37b367dc9f354b32
+        SHA384: 20adc5b59cb532e215f01ba09a9c745898c206555613512fea7c295ccfd17ced4fe2c5bc3274ca8a270fc68799b8343c
+    - Subject: C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust
+        RSA Certification Authority
+      ValidFrom: '2015-07-22 21:03:49'
+      ValidTo: '2025-07-22 21:03:49'
+      Signature: 6b22933c3d395471646b0ef2e43c3011c5204a4b860f92f1ff33793ad9e498a70e40a022807e61b2e0a719cf2695312a65d46a4f3186eac0c62ec5648c3d4859cd0b2f743d9426131042d49798275e3c76d278691d1a64e7057275e0eb6640439f8f0c46ff9760a6c867ad10089b62a6e9be3a8ad3074d9f729325bc0611e02c90383e671cfd19d79e90ce3dc2e0e761acc0e504f51e99540c910d01567137ae27d49e4322a5c927cd4de571123924a5415687ffbc55140f25ca89eec797e5d213ff3d7e1aa08f3fc82cd7a370d0c760c0fcd83e51e797c63e3bedcf78be8acae3c4f2a7a7ed9eae08028fa052db721ed53bc34d9f8efa9b70c7f8e3bf6c3f929be4373eec6a8c29f9c1a2bf8b3e1a6966fb1c634f2601c902c43ed2ffc343a81bfd99fad4bca5b9e2932f3b01c5d1f43a2f68c3e064b75a955e46cc078369bb3c05925673357345984e7cd812a5b742e9a263f642601870d13b6f31c087c7e671e1f34616e9f5b872b3e96d1f622649a3498bdd68c78b6856f7defcfa8724b80381178fe5f1676a1daed374f78ca55db30b8e422996ce49c4777e667c01171a6c1424c3b0177705d81a40b7866bd8e47b40ac7edf4e6f24f92080828c33e7e5fa29d89dda8b705d2bc91d824c0b67cb84419ee7067e1183442d8a19eef47f9add791c37191e9f3f8c29ba0d5c1086376c48cd455dcd70bcbcd14d5dd8c5b876
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 3300000044b73ffcef5acfa27a000000000044
+      Version: 3
+      TBS:
+        MD5: a2d2ae7554f77f6e9ffb0b1a9b700ac4
+        SHA1: 9f69ff166f5dc446578a45d7d69482373755e141
+        SHA256: ad394b7e5cb9ccf6429762405f9840b648e38e8faf2de376f1aa375c6729abb7
+        SHA384: eda103bac2997f31d778637ce8d1fa1263485a9d6a77d6e381bad8312e6bbec020ce5036e16ca96087e50f6ab200944a
+    Signer:
+    - SerialNumber: 535091e6cab13af393b51ead0825f627
+      Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Code Signing CA
+      Version: 1
+- Company: Advanced Micro Devices, Inc.
+  Date: ''
+  Description: USB-C Power Delivery Firmware Update Tool Kernel Driver
+  FileVersion: '1.0'
+  Filename: ''
+  MD5: 19c0c18384d6a6d65462be891692df9c
+  MachineType: AMD64
+  OriginalFilename: PDFWKRNL.sys
+  Product: USB-C Power Delivery Firmware Update Tool Kernel Driver
+  ProductVersion: '1.0'
+  Publisher: ''
+  SHA1: 2ee7b3f6bcc9e95a9ae60bcb9bbc483b0400077d
+  SHA256: f190919f1668652249fa23d8c0455acbde9d344089fde96566239b1a18b91da2
+  Signature: ''
+  Imphash: 3f4c9025125027e307b7e52dd577303b
+  Authentihash:
+    MD5: 813f710d7941bc8df3fd60625dcae48a
+    SHA1: 531ae2d8f7aa301b74a37b82b5f3cadbf91962e0
+    SHA256: b49b7bcf44242dac00ca559dca217ec5d935b78c963f23bd0f49f53a610dd569
+  RichPEHeaderHash:
+    MD5: ab0033f961519a670a4f5bb4cb27078c
+    SHA1: 001439f5c078236db0d9f3975d109bbbbcdca85d
+    SHA256: 0d157e35d3e64fede649680b050c99079456df79286889fc0ed61417f8249918
+  Sections:
+    .text:
+      Entropy: 5.774198151282791
+      Virtual Size: '0x96a'
+    .rdata:
+      Entropy: 3.1411445742410575
+      Virtual Size: '0x474'
+    .data:
+      Entropy: 1.457518749639422
+      Virtual Size: '0x18'
+    .pdata:
+      Entropy: 3.1359292104877943
+      Virtual Size: '0x84'
+    INIT:
+      Entropy: 4.58854617911247
+      Virtual Size: '0x23c'
+    .rsrc:
+      Entropy: 3.3373025657841526
+      Virtual Size: '0x418'
+    .reloc:
+      Entropy: 3.569548827786958
+      Virtual Size: '0x20'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-09-08 12:42:11'
+  InternalName: PDFWKRNL.sys
+  Copyright: Copyright (C) 2021 Advanced Micro Devices, Inc.
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - RtlInitUnicodeString
+  - MmMapIoSpace
+  - MmFreeContiguousMemory
+  - IoDeleteDevice
+  - MmUnmapIoSpace
+  - MmGetPhysicalAddress
+  - IoDeleteSymbolicLink
+  - IoFreeMdl
+  - MmAllocateContiguousMemorySpecifyCache
+  - IoCreateDevice
+  - ExFreePoolWithTag
+  - MmUnmapLockedPages
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - MmMapLockedPages
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=California, L=Santa Clara, O=Advanced Micro Devices Inc.,
+        CN=Advanced Micro Devices Inc.
+      ValidFrom: '2021-05-11 00:00:00'
+      ValidTo: '2024-05-10 23:59:59'
+      Signature: 8444e268ff381c9148985f408e5cc1453a560c9dd94d2a6cfa01dd7f2adc8af633053d2c79027db4f185f477b0d5db8b362b37dbd0d258823831ace7058baf3feb80a9eb2de9dd886bcf390fae9b586fc833e63db5c6a07019f35a9fce6899502852737b32d25ea7832c3786df0642d21622e56c0b0171e96f9520d07f73950376ff555bcf9c8a55bf4f86c088b58e2cb625a0ef4680ed7281f09a40c7be9f69cba77a6967030e39b2cfa46692698ced9e5347dd7056b476545c3442f934cb2c30cb986afabd29a9a9e2eb28c5bd6ee47dabf5ef587f850ea49b124eb868aac68de949616d08f875192b93388549c7327a3ef085e287d5a743810c151b250c64
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 535091e6cab13af393b51ead0825f627
+      Version: 3
+      TBS:
+        MD5: f2f60243e26dcdf4729d28b1beb55f01
+        SHA1: a23ac91136dd79d77b93b12c813e0c6669ed9f4d
+        SHA256: 192ee517f8ae928808632422a6461613d65ee324fa58d2f099a27a3d0da9ca6b
+        SHA384: beb93a1ff1715564a418ecb07cee42465dbf9c76cc703e7088bdafb2099b003afa0c335bcd15d318dcb2bf8519c199da
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Code Signing CA
+      ValidFrom: '2018-11-02 00:00:00'
+      ValidTo: '2030-12-31 23:59:59'
+      Signature: 4d6350ed47344a61a4dbde6a2a8c9bf100001e1d627b3ad732c2f6b3e063b3fb6100889a1b6d1007044fbeb8ea897822eb0f46ecf3465e40468912f40b775a9c2a413afcd6f4ebe7f7159533c3a18328b7de2fe494f78533832d4a4048bf9ac24f4ab18f24f4b38137d3b764b0a6236a596852425fff04ebe174657908f5a993de6b71409996ba78f1b9c8e2c30816b1ab635ac815806d745e4a757ea5b8c36cb5cfdf4a79875cc7404d6335f630d3cfb50a0e0b047fa04baebba3a5d08400933e535d34a50035696cbe9f2025100d19fb509061be398f7a8e4df69f0e1efe075112668326194895ce4ac9c17ff33a059bf96fdf887fc0239ed21e437a4531c19c4da9f059b25919e86a8d290402777c4b4bcd70be3ab2555a783ebcbb6f0310257715348af936cc4392e4ba4ff1629328255729fb5119c7a125406a8457c6b29db1bc1c0ada7c677e7d2ee9284c187ec47b3141719a4b29ec0b3d5750d2caddfd9e0551e54478dd01deb175980d5424fdf04ee3e2f883bd72bacb3d3aeef05e1792686dc861f9a6f12a0a0ba5b9f49eee983205859eebf98329d3c62c7dbd3a772e8b3742a06a82ed3b4aaa9410a4e10df817c5b65a79331892e3b575f8a1e98e0a251ee41ef19f5a8723ff9fa4519efb398011cddbb5c4a7a8806fe553d4e0e3a2c2d25b1afa32262d6a57701c3ca4582ea3f35b4b07dc3259f387a71a6d58
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 1da248306f9b2618d082e0967d33d36a
+      Version: 3
+      TBS:
+        MD5: c1eabfb5994258ad955adb7c2df165e6
+        SHA1: fa33b3c00cebc469b269220d9eab26926c9b8ad8
+        SHA256: 70dffac37eb787b2198816982c7d44f541d2e39a7dac069d37b367dc9f354b32
+        SHA384: 20adc5b59cb532e215f01ba09a9c745898c206555613512fea7c295ccfd17ced4fe2c5bc3274ca8a270fc68799b8343c
+    - Subject: C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust
+        RSA Certification Authority
+      ValidFrom: '2015-07-22 21:03:49'
+      ValidTo: '2025-07-22 21:03:49'
+      Signature: 6b22933c3d395471646b0ef2e43c3011c5204a4b860f92f1ff33793ad9e498a70e40a022807e61b2e0a719cf2695312a65d46a4f3186eac0c62ec5648c3d4859cd0b2f743d9426131042d49798275e3c76d278691d1a64e7057275e0eb6640439f8f0c46ff9760a6c867ad10089b62a6e9be3a8ad3074d9f729325bc0611e02c90383e671cfd19d79e90ce3dc2e0e761acc0e504f51e99540c910d01567137ae27d49e4322a5c927cd4de571123924a5415687ffbc55140f25ca89eec797e5d213ff3d7e1aa08f3fc82cd7a370d0c760c0fcd83e51e797c63e3bedcf78be8acae3c4f2a7a7ed9eae08028fa052db721ed53bc34d9f8efa9b70c7f8e3bf6c3f929be4373eec6a8c29f9c1a2bf8b3e1a6966fb1c634f2601c902c43ed2ffc343a81bfd99fad4bca5b9e2932f3b01c5d1f43a2f68c3e064b75a955e46cc078369bb3c05925673357345984e7cd812a5b742e9a263f642601870d13b6f31c087c7e671e1f34616e9f5b872b3e96d1f622649a3498bdd68c78b6856f7defcfa8724b80381178fe5f1676a1daed374f78ca55db30b8e422996ce49c4777e667c01171a6c1424c3b0177705d81a40b7866bd8e47b40ac7edf4e6f24f92080828c33e7e5fa29d89dda8b705d2bc91d824c0b67cb84419ee7067e1183442d8a19eef47f9add791c37191e9f3f8c29ba0d5c1086376c48cd455dcd70bcbcd14d5dd8c5b876
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 3300000044b73ffcef5acfa27a000000000044
+      Version: 3
+      TBS:
+        MD5: a2d2ae7554f77f6e9ffb0b1a9b700ac4
+        SHA1: 9f69ff166f5dc446578a45d7d69482373755e141
+        SHA256: ad394b7e5cb9ccf6429762405f9840b648e38e8faf2de376f1aa375c6729abb7
+        SHA384: eda103bac2997f31d778637ce8d1fa1263485a9d6a77d6e381bad8312e6bbec020ce5036e16ca96087e50f6ab200944a
+    Signer:
+    - SerialNumber: 535091e6cab13af393b51ead0825f627
+      Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Code Signing CA
+      Version: 1
+MitreID: T1068
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+Tags:
+- PDFWKRNL.sys
+Verified: 'TRUE'

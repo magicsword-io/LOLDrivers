@@ -53,7 +53,7 @@ KnownVulnerableSamples:
   Company: "Hilscher Gesellschaft f\xFCr Systemaoutomation mbH"
   Copyright: "\xA9 Hilscher Gesellschaft f\xFCr Systemaoutomation mbH. All rights\
     \ reserved."
-  CreationTimestamp: '2015-03-03 05:41:21'
+  CreationTimestamp: '2015-03-03 03:41:21'
   Date: ''
   Description: Physical Memory Access Driver
   ExportedFunctions: ''
@@ -116,7 +116,7 @@ KnownVulnerableSamples:
   SHA256: c299063e3eae8ddc15839767e83b9808fd43418dc5a1af7e4f44b97ba53fbd3d
   Sections:
     .text:
-      Entropy: 6.02779136317562
+      Entropy: 6.027791363175618
       Virtual Size: '0x9a4'
     .rdata:
       Entropy: 4.406909342132945
@@ -134,10 +134,10 @@ KnownVulnerableSamples:
       Entropy: 5.390231391811294
       Virtual Size: '0x72e'
     .rsrc:
-      Entropy: 3.282515703439509
+      Entropy: 3.2825157034395094
       Virtual Size: '0x410'
     .reloc:
-      Entropy: 1.2280731978955792
+      Entropy: 1.2280731978955797
       Virtual Size: '0x60'
   Signature: []
   Signatures:
@@ -215,6 +215,7 @@ KnownVulnerableSamples:
     - SerialNumber: 1121d48f27abe17574473e4066a863792d46
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: e5af2438da6df2aa9750aa632c80cfa4
 MitreID: T1068
 Resources:
 - https://github.com/jbaines-r7/dellicious

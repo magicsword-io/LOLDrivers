@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: b97f870c501714fa453cf18ae8a30c87d08ff1e6d784afdbb0121aea3da2dc28
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2019-01-23 03:53:06'
+  CreationTimestamp: '2019-01-23 01:53:06'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -89,10 +89,10 @@ KnownVulnerableSamples:
       Entropy: 0.9718077021742217
       Virtual Size: '0xf48'
     .pdata:
-      Entropy: 3.749061089223024
+      Entropy: 3.7490610892230234
       Virtual Size: '0x15c'
     .gfids:
-      Entropy: 0.8112781244591329
+      Entropy: 0.8112781244591328
       Virtual Size: '0x4'
     PAGE:
       Entropy: 5.647828214747166
@@ -144,6 +144,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       Version: 1
+  Imphash: e80eeed7225a880bbde0d038a5fe1af4
 MitreID: T1068
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'

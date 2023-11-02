@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: 129fa1795cffca9973f59df59f880a9f2bdb3aa9873363f8e2f598ccc6e32542
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-02-15 19:39:35'
+  CreationTimestamp: '2012-02-15 17:39:35'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -113,7 +113,7 @@ KnownVulnerableSamples:
       Entropy: 5.468877748140006
       Virtual Size: '0x5ba'
     .reloc:
-      Entropy: 5.422595746439075
+      Entropy: 5.422595746439076
       Virtual Size: '0x258'
   Signature:
   - PassMark Software Pty Ltd
@@ -198,6 +198,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: 68b717fa2ab9431cd176776363359d48
 MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'

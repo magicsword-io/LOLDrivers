@@ -184,7 +184,7 @@ KnownVulnerableSamples:
     SHA256: 35603db30b731cf20bc04d18789310d7c8acd10db9fc3b50e0c666862570ef24
   Sections:
     .text:
-      Entropy: 6.386654191331926
+      Entropy: 6.3866541913319255
       Virtual Size: '0x418b'
     .rdata:
       Entropy: 5.162127331086041
@@ -196,7 +196,7 @@ KnownVulnerableSamples:
       Entropy: 4.072524997204114
       Virtual Size: '0x210'
     PAGE:
-      Entropy: 6.066957813025652
+      Entropy: 6.0669578130256525
       Virtual Size: '0x544'
     INIT:
       Entropy: 5.930060809840686
@@ -208,7 +208,8 @@ KnownVulnerableSamples:
       Entropy: 1.584962500721156
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-01-18 03:48:25'
+  CreationTimestamp: '2017-01-18 01:48:25'
+  Imphash: 8ee2435c62b02fe0372cde028be489cb
 - Filename: rtkio.sys
   MD5: ffd0c87d9bf894af26823fbde94c71b6
   SHA1: eacfc73f5f45f229867ee8b2eb1f9649b5dd422e
@@ -345,13 +346,13 @@ KnownVulnerableSamples:
     SHA256: 735b68b5200bb9398147dd562bd90e6e63c1c77c6012be8f076b7382bb93e03d
   Sections:
     .text:
-      Entropy: 5.971538930127548
+      Entropy: 5.971538930127549
       Virtual Size: '0x76e'
     .rdata:
       Entropy: 3.776130126635075
       Virtual Size: '0x164'
     .data:
-      Entropy: 2.918295834054489
+      Entropy: 2.9182958340544896
       Virtual Size: '0xc'
     PAGE:
       Entropy: 6.248080040341218
@@ -366,7 +367,8 @@ KnownVulnerableSamples:
       Entropy: 5.056661630034299
       Virtual Size: '0x134'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-07-02 08:59:01'
+  CreationTimestamp: '2010-07-02 06:59:01'
+  Imphash: 6ce93eab57a73915ecd5c202a339f6ce
 - Filename: rtkiow10x64.sys
   MD5: 96a8b535b5e14b582ca5679a3e2a5946
   SHA1: f6b3577ea4b1a5641ae3421151a26268434c3db8
@@ -530,13 +532,13 @@ KnownVulnerableSamples:
       Entropy: 6.4238147271439425
       Virtual Size: '0x3f3b'
     .rdata:
-      Entropy: 4.6517361904707375
+      Entropy: 4.651736190470738
       Virtual Size: '0xee4'
     .data:
       Entropy: 1.588342766840537
       Virtual Size: '0x308'
     .pdata:
-      Entropy: 4.335125322152541
+      Entropy: 4.335125322152539
       Virtual Size: '0x3d8'
     PAGE:
       Entropy: 6.261507946344208
@@ -551,7 +553,8 @@ KnownVulnerableSamples:
       Entropy: 3.3766291673878226
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-07-09 05:28:24'
+  CreationTimestamp: '2020-07-09 03:28:24'
+  Imphash: 317f02ddc9809d608a9bf63ce24e9550
 - Filename: rtkio.sys
   MD5: 664ad9cf500916c94fc2c0020660ac4e
   SHA1: 444f96d8943aec21d26f665203f3fb80b9a2a260
@@ -702,7 +705,8 @@ KnownVulnerableSamples:
       Entropy: 3.411543280486889
       Virtual Size: '0x408'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-07-02 08:59:21'
+  CreationTimestamp: '2010-07-02 06:59:21'
+  Imphash: d6c920c10d4d0f92f0ac14c3fefed233
 - Filename: rtkio64.sys
   MD5: 70dcd07d38017b43f710061f37cb4a91
   SHA1: 99201c9555e5faf6e8d82da793b148311f8aa4b8
@@ -849,10 +853,10 @@ KnownVulnerableSamples:
     SHA256: 8a53766046063ac93a2c854907cdbdcd226ddf188b42d675b6b45a942277b7a6
   Sections:
     .text:
-      Entropy: 6.4011827491520075
+      Entropy: 6.401182749152008
       Virtual Size: '0x406b'
     .rdata:
-      Entropy: 5.068624464097369
+      Entropy: 5.0686244640973666
       Virtual Size: '0x434'
     .data:
       Entropy: 0.3584113039007212
@@ -873,7 +877,8 @@ KnownVulnerableSamples:
       Entropy: 1.584962500721156
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-08-23 11:43:11'
+  CreationTimestamp: '2017-08-23 09:43:11'
+  Imphash: f046e37fa7914491dc25a6f7718da341
 - Filename: rtkio.sys
   MD5: daf800da15b33bf1a84ee7afc59f0656
   SHA1: 166759fd511613414d3213942fe2575b926a6226
@@ -1014,13 +1019,13 @@ KnownVulnerableSamples:
     SHA256: 735b68b5200bb9398147dd562bd90e6e63c1c77c6012be8f076b7382bb93e03d
   Sections:
     .text:
-      Entropy: 5.971538930127548
+      Entropy: 5.971538930127549
       Virtual Size: '0x76e'
     .rdata:
       Entropy: 3.776130126635075
       Virtual Size: '0x164'
     .data:
-      Entropy: 2.918295834054489
+      Entropy: 2.9182958340544896
       Virtual Size: '0xc'
     PAGE:
       Entropy: 6.248080040341218
@@ -1035,7 +1040,8 @@ KnownVulnerableSamples:
       Entropy: 5.056661630034299
       Virtual Size: '0x134'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-07-02 08:59:01'
+  CreationTimestamp: '2010-07-02 06:59:01'
+  Imphash: 6ce93eab57a73915ecd5c202a339f6ce
 - Filename: rtkiow10x64.sys
   MD5: b5ada7fd226d20ec6634fc24768f9e22
   SHA1: 947db58d6f36a8df9fa2a1057f3a7f653ccbc42e
@@ -1206,7 +1212,8 @@ KnownVulnerableSamples:
       Entropy: 3.0976094754943175
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-08-23 11:44:32'
+  CreationTimestamp: '2017-08-23 09:44:32'
+  Imphash: 6faad89adbfc9d5448bb1bd12e7714cd
 - Filename: rtkiow8x64.sys
   MD5: b8b6686324f7aa77f570bc019ec214e6
   SHA1: 6a3d3b9ab3d201cd6b0316a7f9c3fb4d34d0f403
@@ -1353,7 +1360,7 @@ KnownVulnerableSamples:
     SHA256: fcf8792839ba33da61aca308fedee78dcbd7cd149c7c25e26b398e15f94ed2e0
   Sections:
     .text:
-      Entropy: 6.35869896397313
+      Entropy: 6.358698963973129
       Virtual Size: '0x423b'
     .rdata:
       Entropy: 4.640039413530853
@@ -1368,23 +1375,24 @@ KnownVulnerableSamples:
       Entropy: 6.028041090380566
       Virtual Size: '0x6b4'
     INIT:
-      Entropy: 5.777636360920831
+      Entropy: 5.777636360920832
       Virtual Size: '0x71e'
     .rsrc:
-      Entropy: 3.282418168264079
+      Entropy: 3.2824181682640794
       Virtual Size: '0x460'
     .reloc:
       Entropy: 3.0976094754943175
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-08-23 11:43:48'
+  CreationTimestamp: '2017-08-23 09:43:48'
+  Imphash: 8122311437457ccae22578e301c6a17d
 - Authentihash:
     MD5: 323c438f0a5a5e25ab49d996f968e876
     SHA1: f9399f08551048d8c72269d26ad1ac09a463d87f
     SHA256: aff3f4d25b85b6b3147d2b7f586edc3e9aa2ec25c37d5dc7ad809d99677497ea
   Company: 'Realtek                                            '
   Copyright: 'Copyright (C) 2015 Realtek Semiconductor Corporation. All Right Reserved.            '
-  CreationTimestamp: '2015-01-16 02:07:46'
+  CreationTimestamp: '2015-01-16 00:07:46'
   Date: ''
   Description: Realtek IODriver
   ExportedFunctions: ''
@@ -1450,7 +1458,7 @@ KnownVulnerableSamples:
       Entropy: 5.413882222771933
       Virtual Size: '0x50c'
     .rsrc:
-      Entropy: 3.2570825541168293
+      Entropy: 3.25708255411683
       Virtual Size: '0x478'
   Signature: ''
   Signatures:
@@ -1535,13 +1543,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 6f2d756d22c285a46206de3bfde6c79d
 - Authentihash:
     MD5: b63a971807801d7c8873059cd5eef56f
     SHA1: 7e75c5237b2536a8ffb04bc9db85b421f560ee80
     SHA256: 4ecb25cb7a127729a0124d1c0e0ba7dd0c24a02f48f40f6af174b15581b6925c
   Company: 'Realtek                                            '
   Copyright: 'Copyright (C) 2012 Realtek Semiconductor Corporation. All Right Reserved.            '
-  CreationTimestamp: '2012-07-25 10:19:43'
+  CreationTimestamp: '2012-07-25 08:19:43'
   Date: ''
   Description: Realtek IODriver
   ExportedFunctions: ''
@@ -1592,7 +1601,7 @@ KnownVulnerableSamples:
       Entropy: 5.923664619701371
       Virtual Size: '0x548'
     .rdata:
-      Entropy: 4.279574069269293
+      Entropy: 4.279574069269288
       Virtual Size: '0x1ec'
     .data:
       Entropy: 0.5035334969292564
@@ -1601,7 +1610,7 @@ KnownVulnerableSamples:
       Entropy: 3.4238240815263694
       Virtual Size: '0x9c'
     PAGE:
-      Entropy: 6.24558419772641
+      Entropy: 6.2455841977264095
       Virtual Size: '0x77e'
     INIT:
       Entropy: 5.41262022426708
@@ -1690,13 +1699,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: 11bfcbdb0787ef461d442f973c392cf6
 - Authentihash:
     MD5: b21ab759cfaa77178c30c8b43678707d
     SHA1: e66b3b650761b1272b22d46ab41649b8a5c26603
     SHA256: 902b754dd302a994074ea8d3e619d2f9000e6c6997e428f19f41533f7c5e192c
   Company: 'Realtek                                            '
   Copyright: 'Copyright (C) 2020 Realtek Semiconductor Corporation. All Right Reserved.            '
-  CreationTimestamp: '2020-07-09 05:29:01'
+  CreationTimestamp: '2020-07-09 03:29:01'
   Date: ''
   Description: Realtek IO Driver
   ExportedFunctions: ''
@@ -1794,7 +1804,7 @@ KnownVulnerableSamples:
       Entropy: 6.260538908004026
       Virtual Size: '0x1f94'
     INIT:
-      Entropy: 5.842745769901464
+      Entropy: 5.842745769901463
       Virtual Size: '0xc80'
     .rsrc:
       Entropy: 3.281854652191381
@@ -1880,13 +1890,14 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Imphash: 4343c9c0b78ee21e895f10d929c240d4
 - Authentihash:
     MD5: d5757762e2ab3f34b0fa097b9abd3b90
     SHA1: bdcbf070f68d8eecc47d7efbd9f377e8e652d026
     SHA256: f3308899fc0ebdd04a4dacc386873c25dabe32a8f34607fb335148d2dab667d8
   Company: 'Realtek                                            '
   Copyright: 'Copyright (C) 2016 Realtek Semiconductor Corporation. All Right Reserved.            '
-  CreationTimestamp: '2016-08-25 05:11:29'
+  CreationTimestamp: '2016-08-25 03:11:29'
   Date: ''
   Description: Realtek IO Driver
   ExportedFunctions: ''
@@ -1957,7 +1968,7 @@ KnownVulnerableSamples:
       Entropy: 6.051257697095618
       Virtual Size: '0x554'
     INIT:
-      Entropy: 5.91979540357285
+      Entropy: 5.919795403572851
       Virtual Size: '0x94c'
     .rsrc:
       Entropy: 3.2913123916924825
@@ -2044,13 +2055,14 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Imphash: 085a78615099ffefa2df0a31da3058d8
 - Authentihash:
     MD5: 9335f6098f8706ebb83466fbd449bc0f
     SHA1: 533e7f159d3adb334067257f80073e33accaa483
     SHA256: ed617d4c50288921a6a760de19db1633bd8172421109dcf68082c67db085ddb1
   Company: 'Realtek                                            '
   Copyright: 'Copyright (C) 2016 Realtek Semiconductor Corporation. All Right Reserved.            '
-  CreationTimestamp: '2016-01-05 00:48:28'
+  CreationTimestamp: '2016-01-04 22:48:28'
   Date: ''
   Description: Realtek IO Driver
   ExportedFunctions: ''
@@ -2109,10 +2121,10 @@ KnownVulnerableSamples:
       Entropy: 3.5974706785237442
       Virtual Size: '0xe4'
     PAGE:
-      Entropy: 4.846922682767447
+      Entropy: 4.846922682767448
       Virtual Size: '0xc4'
     INIT:
-      Entropy: 5.322902325690656
+      Entropy: 5.322902325690655
       Virtual Size: '0x44e'
     .rsrc:
       Entropy: 3.2501296267000415
@@ -2200,13 +2212,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: abdaca21ab5c831000b0aa4b8f357716
 - Authentihash:
     MD5: e13260e98e8c2ff45d504114da8117e8
     SHA1: 16b17721cf655f2442bf3865a9329f96e1e15295
     SHA256: c6389dca278be297b95846badc2b6859b488f123dbdc5d7bfc6f4393eeb7e678
   Company: 'Realtek                                            '
   Copyright: 'Copyright (C) 2016 Realtek Semiconductor Corporation. All Right Reserved.            '
-  CreationTimestamp: '2016-08-25 05:11:29'
+  CreationTimestamp: '2016-08-25 03:11:29'
   Date: ''
   Description: Realtek IO Driver
   ExportedFunctions: ''
@@ -2277,7 +2290,7 @@ KnownVulnerableSamples:
       Entropy: 6.051257697095618
       Virtual Size: '0x554'
     INIT:
-      Entropy: 5.91979540357285
+      Entropy: 5.919795403572851
       Virtual Size: '0x94c'
     .rsrc:
       Entropy: 3.2913123916924825
@@ -2364,6 +2377,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Imphash: 085a78615099ffefa2df0a31da3058d8
 Tags:
 - rtkio.sys
 - rtkio64.sys

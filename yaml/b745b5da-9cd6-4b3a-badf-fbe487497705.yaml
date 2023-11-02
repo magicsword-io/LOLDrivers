@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: b3cbb2b364a494f096e68dc48cca89799ed27e6b97b17633036e363a98fd4421
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-12-26 04:45:03'
+  CreationTimestamp: '2013-12-26 02:45:03'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -62,7 +62,7 @@ KnownVulnerableSamples:
       Entropy: 5.996013008061167
       Virtual Size: '0xa3e'
     .rdata:
-      Entropy: 3.473073129699934
+      Entropy: 3.4730731296999338
       Virtual Size: '0x22c'
     .data:
       Entropy: 0.5159719988134768
@@ -162,13 +162,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 392aa6863da8d7c14ad7386026e93b58
 - Authentihash:
     MD5: 792b743c370ad28281edd4801b22a31e
     SHA1: 80ca9c9cce4b5e6afb92a56b5bfd954eca0ff690
     SHA256: 9199979b9f3ea2108299d028373a6effcc41c81a46eecb430cc6653211d2913d
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-11-13 01:51:52'
+  CreationTimestamp: '2013-11-12 23:51:52'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -310,13 +311,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 392aa6863da8d7c14ad7386026e93b58
 - Authentihash:
     MD5: b2fc995c9a92965a53437c30b53d7096
     SHA1: c21043466942961203e751c9cebcd159e661fa1a
     SHA256: 961012d06eeaabd9eff9b36173e566bf148a5c8f743f3329c70d8918eba26093
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-11-13 01:50:37'
+  CreationTimestamp: '2013-11-12 23:50:37'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -355,7 +357,7 @@ KnownVulnerableSamples:
   SHA256: c9b49b52b493b53cd49c12c3fa9553e57c5394555b64e32d1208f5b96a5b8c6e
   Sections:
     .text:
-      Entropy: 5.997461818264164
+      Entropy: 5.997461818264163
       Virtual Size: '0xa3e'
     .rdata:
       Entropy: 3.501234961607233
@@ -458,6 +460,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 392aa6863da8d7c14ad7386026e93b58
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

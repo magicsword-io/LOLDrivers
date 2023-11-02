@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 85ac17aec836d5125db7407d2dc3af8e5b01241fea781b2fd55aae796b3912b4
   Company: BIOSTAR Group
   Copyright: Copyright (c) 2002-2006 BIOSTAR Group
-  CreationTimestamp: '2008-06-16 02:45:18'
+  CreationTimestamp: '2008-06-16 00:45:18'
   Date: ''
   Description: I/O Interface driver file
   ExportedFunctions: ''
@@ -94,7 +94,7 @@ KnownVulnerableSamples:
       Entropy: 3.26210477374917
       Virtual Size: '0x9c'
     PAGE:
-      Entropy: 4.6160657925054895
+      Entropy: 4.61606579250549
       Virtual Size: '0xaa'
     INIT:
       Entropy: 5.409774533805617
@@ -186,6 +186,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: 07a513d1599c93bd34f01323b1ef7430
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

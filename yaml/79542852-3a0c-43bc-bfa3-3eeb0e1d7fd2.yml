@@ -656,10 +656,10 @@ KnownVulnerableSamples:
       Entropy: 5.55793348559494
       Virtual Size: '0x32c4'
     .edata:
-      Entropy: 5.804608403248268
+      Entropy: 5.804608403248267
       Virtual Size: '0x34f8'
     INIT:
-      Entropy: 5.082239885482415
+      Entropy: 5.082239885482413
       Virtual Size: '0x856'
     .rsrc:
       Entropy: 3.442966233517804
@@ -668,7 +668,8 @@ KnownVulnerableSamples:
       Entropy: 4.07818833178508
       Virtual Size: '0xfb8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-06-22 07:17:13'
+  CreationTimestamp: '2018-06-22 05:17:13'
+  Imphash: 9470f56376e665fb981a35b303436041
 - Filename: VBoxDrv.sys
   MD5: 02a1d77ef13bd41cad04abcce896d0b9
   SHA1: 59c0fa0d61576d9eb839c9c7e15d57047ee7fe29
@@ -1297,19 +1298,20 @@ KnownVulnerableSamples:
       Entropy: 5.559894875195939
       Virtual Size: '0x32c4'
     .edata:
-      Entropy: 5.803857413810885
+      Entropy: 5.803857413810883
       Virtual Size: '0x34f8'
     INIT:
-      Entropy: 5.082239885482415
+      Entropy: 5.082239885482413
       Virtual Size: '0x856'
     .rsrc:
-      Entropy: 3.4258421343253223
+      Entropy: 3.4258421343253227
       Virtual Size: '0x400'
     .reloc:
       Entropy: 4.078099091032765
       Virtual Size: '0xfb8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-02-16 00:57:54'
+  CreationTimestamp: '2019-02-15 22:57:54'
+  Imphash: 9470f56376e665fb981a35b303436041
 - Filename: VBoxDrv.sys
   MD5: 962a33a191dbe56915fd196e3a868cf0
   SHA1: 449ff4f5ce2fdddac05a6c82e45a7e802b1c1305
@@ -1720,7 +1722,7 @@ KnownVulnerableSamples:
     SHA256: fc0103dc5d498962537d247bb47b20b3afcd43026871bda30382d13a5345e851
   Sections:
     .text:
-      Entropy: 6.370050981269773
+      Entropy: 6.370050981269774
       Virtual Size: '0x19504'
     .rdata:
       Entropy: 5.499324680689697
@@ -1729,7 +1731,7 @@ KnownVulnerableSamples:
       Entropy: 1.867829218165165
       Virtual Size: '0x48d4'
     .pdata:
-      Entropy: 5.3376556531680315
+      Entropy: 5.337655653168031
       Virtual Size: '0x27c0'
     .edata:
       Entropy: 5.736737915363427
@@ -1738,13 +1740,14 @@ KnownVulnerableSamples:
       Entropy: 5.000542465514514
       Virtual Size: '0x788'
     .rsrc:
-      Entropy: 3.3019230932350614
+      Entropy: 3.301923093235062
       Virtual Size: '0x398'
     .reloc:
-      Entropy: 4.8034194285979375
+      Entropy: 4.803419428597937
       Virtual Size: '0x6ea'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-06-30 07:41:34'
+  CreationTimestamp: '2009-06-30 05:41:34'
+  Imphash: fd133033a24971502ff0b2f189215c56
 - Filename: VBoxDrv.sys
   MD5: 3e87e3346441539d3a90278a120766df
   SHA1: ce5681896e7631b6e83cccb7aa056a33e72a1bbe
@@ -3686,7 +3689,7 @@ KnownVulnerableSamples:
       Entropy: 6.050660464332838
       Virtual Size: '0xf1dd'
     INIT:
-      Entropy: 5.1915281663343995
+      Entropy: 5.191528166334399
       Virtual Size: '0xc28'
     .rsrc:
       Entropy: 3.3885006610569786
@@ -3695,7 +3698,8 @@ KnownVulnerableSamples:
       Entropy: 3.995412021920204
       Virtual Size: '0x1e0a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-05-30 11:08:50'
+  CreationTimestamp: '2021-05-30 09:08:50'
+  Imphash: 2a20cc9578bb34a4bb10b87b49b24982
 - Filename: VBoxDrv.sys
   MD5: e3bdb307b32b13b8f7e621e8d5cc8cd3
   SHA1: 58fe23f1bb9d4bcc1b07b102222a7d776cc90f6c
@@ -4021,22 +4025,23 @@ KnownVulnerableSamples:
       Entropy: 2.136306008585543
       Virtual Size: '0x35b4'
     .pdata:
-      Entropy: 5.201973567849434
+      Entropy: 5.201973567849435
       Virtual Size: '0x1f20'
     .edata:
       Entropy: 5.704943815176372
       Virtual Size: '0x14d5'
     INIT:
-      Entropy: 4.983784792331665
+      Entropy: 4.983784792331664
       Virtual Size: '0x6fc'
     .rsrc:
-      Entropy: 3.3089166329809117
+      Entropy: 3.308916632980912
       Virtual Size: '0x398'
     .reloc:
       Entropy: 4.900332523869931
       Virtual Size: '0x672'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-04-07 14:30:47'
+  CreationTimestamp: '2009-04-07 12:30:47'
+  Imphash: 6723b1d5bd0f1fc13216cb44541e619e
 - Filename: VBoxDrv.sys
   MD5: 443689645455987cb347154b391f734d
   SHA1: 2fed7eddd63f10ed4649d9425b94f86140f91385
@@ -4404,13 +4409,13 @@ KnownVulnerableSamples:
       Entropy: 2.136306008585543
       Virtual Size: '0x35b4'
     .pdata:
-      Entropy: 5.201973567849434
+      Entropy: 5.201973567849435
       Virtual Size: '0x1f20'
     .edata:
       Entropy: 5.703304599123732
       Virtual Size: '0x14d5'
     INIT:
-      Entropy: 4.983784792331665
+      Entropy: 4.983784792331664
       Virtual Size: '0x6fc'
     .rsrc:
       Entropy: 3.3208922490557096
@@ -4419,7 +4424,8 @@ KnownVulnerableSamples:
       Entropy: 4.900332523869931
       Virtual Size: '0x672'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-05-29 13:54:09'
+  CreationTimestamp: '2009-05-29 11:54:09'
+  Imphash: 6723b1d5bd0f1fc13216cb44541e619e
 - Filename: VBoxDrv.sys
   MD5: 6beb1d8146f5a4aaa2f7b8c0c9bced30
   SHA1: 07f62d9b6321bed0008e106e9ce4240cb3f76da2
@@ -5048,10 +5054,10 @@ KnownVulnerableSamples:
       Entropy: 5.559894875195939
       Virtual Size: '0x32c4'
     .edata:
-      Entropy: 5.804189453998892
+      Entropy: 5.804189453998891
       Virtual Size: '0x34f8'
     INIT:
-      Entropy: 5.082239885482415
+      Entropy: 5.082239885482413
       Virtual Size: '0x856'
     .rsrc:
       Entropy: 3.407529902677342
@@ -5060,6 +5066,7 @@ KnownVulnerableSamples:
       Entropy: 4.078099091032765
       Virtual Size: '0xfb8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-02-04 17:27:31'
+  CreationTimestamp: '2019-02-04 15:27:31'
+  Imphash: 9470f56376e665fb981a35b303436041
 Tags:
 - VBoxDrv.sys

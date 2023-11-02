@@ -135,7 +135,7 @@ KnownVulnerableSamples:
     SHA256: bb5ad1350da2ac8b4f7dbebfee7393782406ea5abe309dea5e588098e11307c3
   Sections:
     .text:
-      Entropy: 6.317753531025092
+      Entropy: 6.317753531025091
       Virtual Size: '0x25ee'
     .rdata:
       Entropy: 5.053084095677546
@@ -147,15 +147,16 @@ KnownVulnerableSamples:
       Entropy: 4.060865402781111
       Virtual Size: '0x210'
     PAGE:
-      Entropy: 5.759523183434063
+      Entropy: 5.759523183434064
       Virtual Size: '0x175'
     INIT:
-      Entropy: 4.954930803750681
+      Entropy: 4.954930803750682
       Virtual Size: '0x4d6'
     .reloc:
       Entropy: 3.003055907333275
       Virtual Size: '0x28'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-05-17 06:01:28'
+  CreationTimestamp: '2022-05-17 04:01:28'
+  Imphash: 1f2627fc453dc35031a9502372bd3549
 Tags:
 - amigendrv64.sys

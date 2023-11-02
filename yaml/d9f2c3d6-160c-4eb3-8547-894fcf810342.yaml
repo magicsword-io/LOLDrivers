@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: baa89ffd5255e5c72112ed57937353ae48a050c9af423cbde6b380978ecc235c
   Company: ASUStek
   Copyright: 'Copyright '
-  CreationTimestamp: '2013-03-21 08:35:36'
+  CreationTimestamp: '2013-03-21 06:35:36'
   Date: ''
   Description: The driver for the ECtool driver-based tools
   ExportedFunctions: ''
@@ -97,25 +97,25 @@ KnownVulnerableSamples:
   SHA256: 927c2a580d51a598177fa54c65e9d2610f5f212f1b6cb2fbf2740b64368f010a
   Sections:
     .text:
-      Entropy: 6.150604069031464
+      Entropy: 6.150604069031463
       Virtual Size: '0x5585'
     .rdata:
       Entropy: 4.184831170165224
       Virtual Size: '0x14e'
     .data:
-      Entropy: 2.973851389610044
+      Entropy: 2.9738513896100436
       Virtual Size: '0x24'
     PAGE:
       Entropy: 5.321075488184404
       Virtual Size: '0xdc'
     INIT:
-      Entropy: 5.874768242109666
+      Entropy: 5.874768242109667
       Virtual Size: '0x59e'
     .rsrc:
-      Entropy: 3.2515158136335036
+      Entropy: 3.251515813633504
       Virtual Size: '0x398'
     .reloc:
-      Entropy: 5.946967872900427
+      Entropy: 5.946967872900435
       Virtual Size: '0x4d8'
   Signature:
   - ASUSTeK Computer Inc.
@@ -217,6 +217,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 10cb3185e13390f8931a50a131448cdf
 MitreID: T1068
 Resources:
 - ' https://github.com/Chigusa0w0/AsusDriversPrivEscala'

@@ -46,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: 615a7c647eba3f2dcea463d5705d5d59ca70b4250f895ad20ce6876076a8fa28
   Company: Marvin Test Solutions, Inc.
   Copyright: "Copyright \xA9 1996-2021 Marvin Test Solutions, Inc. All Rights Reserved."
-  CreationTimestamp: '2021-01-06 19:19:33'
+  CreationTimestamp: '2021-01-06 17:19:33'
   Date: ''
   Description: HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI
     access
@@ -219,13 +219,14 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
         CA , SHA256 , G3
       Version: 1
+  Imphash: 67d92a28cd2923a923adf7fd958905d8
 - Authentihash:
     MD5: 22db74f3f2e50ccdeb471c81e3a62532
     SHA1: 6e87cd3b027a07a810164d618e3f2fce61eb6ec4
     SHA256: 734b74798a680d2e534c14a033858c4081c7879af1f48037d9d5483aa27a7e90
   Company: Marvin Test Solutions, Inc.
   Copyright: "Copyright \xA9 1996-2015 Marvin Test Solutions, Inc. All Rights Reserved."
-  CreationTimestamp: '2015-06-24 19:52:05'
+  CreationTimestamp: '2015-06-24 17:52:05'
   Date: ''
   Description: HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI
     access
@@ -306,7 +307,7 @@ KnownVulnerableSamples:
       Entropy: 5.133620054689875
       Virtual Size: '0x2151'
     .rdata:
-      Entropy: 4.569984356691088
+      Entropy: 4.569984356691087
       Virtual Size: '0xaec'
     .pdata:
       Entropy: 3.983331164222992
@@ -390,13 +391,14 @@ KnownVulnerableSamples:
     - SerialNumber: 1121f0942b1e09a2573e8ab9ce0e3955b2de
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: bd093a7d5ba5632ee52f3466a688ee55
 - Authentihash:
     MD5: 22db74f3f2e50ccdeb471c81e3a62532
     SHA1: 6e87cd3b027a07a810164d618e3f2fce61eb6ec4
     SHA256: 734b74798a680d2e534c14a033858c4081c7879af1f48037d9d5483aa27a7e90
   Company: Marvin Test Solutions, Inc.
   Copyright: "Copyright \xA9 1996-2015 Marvin Test Solutions, Inc. All Rights Reserved."
-  CreationTimestamp: '2015-06-24 19:52:05'
+  CreationTimestamp: '2015-06-24 17:52:05'
   Date: ''
   Description: HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI
     access
@@ -477,7 +479,7 @@ KnownVulnerableSamples:
       Entropy: 5.133620054689875
       Virtual Size: '0x2151'
     .rdata:
-      Entropy: 4.569984356691088
+      Entropy: 4.569984356691087
       Virtual Size: '0xaec'
     .pdata:
       Entropy: 3.983331164222992
@@ -561,13 +563,14 @@ KnownVulnerableSamples:
     - SerialNumber: 1121f0942b1e09a2573e8ab9ce0e3955b2de
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: bd093a7d5ba5632ee52f3466a688ee55
 - Authentihash:
     MD5: 0e03e32b8b0f3a1abb52581c1b5698f6
     SHA1: 4614a646d19fb297aa878ba5e70dc9a6a1c5dd8a
     SHA256: 25bc1b72ba6092674ec561d7de8f5e4a7adb23c29fa68de5b29a30a671257dac
   Company: Marvin Test Solutions, Inc.
   Copyright: "Copyright \xA9 1996-2021 Marvin Test Solutions, Inc. All Rights Reserved."
-  CreationTimestamp: '2021-01-06 19:19:31'
+  CreationTimestamp: '2021-01-06 17:19:31'
   Date: ''
   Description: HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI
     access
@@ -648,10 +651,10 @@ KnownVulnerableSamples:
       Entropy: 5.425823948048583
       Virtual Size: '0x5e54'
     .rdata:
-      Entropy: 4.468643667711767
+      Entropy: 4.468643667711766
       Virtual Size: '0xcaa'
     .pdata:
-      Entropy: 4.006137191030439
+      Entropy: 4.00613719103044
       Virtual Size: '0x33c'
     .rsrc:
       Entropy: 3.6737432495687674
@@ -708,6 +711,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
         CA , SHA256 , G3
       Version: 1
+  Imphash: 91ee149529956a79a91eeb8c48f00b3d
 MitreID: T1068
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules

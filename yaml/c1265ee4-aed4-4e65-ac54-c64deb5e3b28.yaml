@@ -21,7 +21,7 @@ KnownVulnerableSamples:
     SHA256: aab97fb324c883f1de71112e1d9fb716cef40636e39a3b9f4a5b8678cf7bde3f
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-09-15 00:24:03'
+  CreationTimestamp: '2022-09-14 22:24:03'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -89,7 +89,7 @@ KnownVulnerableSamples:
       Entropy: 0.0
       Virtual Size: '0x1b36a5'
     .73h1:
-      Entropy: 0.5261478929039798
+      Entropy: 0.5261478929039797
       Virtual Size: '0x4b8'
     .73h2:
       Entropy: 7.781889548207141
@@ -135,6 +135,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: 28dc68bb6d6bf4f6b2db8dd7588b2511
 MitreID: T1068
 Resources:
 - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware, https://news.sophos.com/en-us/2022/12/13/signed-driver-malware-moves-up-the-software-trust-chain/

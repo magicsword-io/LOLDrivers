@@ -33,7 +33,7 @@ KnownVulnerableSamples:
     SHA256: 516f0bbbc1b47ec2d83cc51be104920899193e2784a45b835fe68f864af1733b
   Company: 'Realtek                                            '
   Copyright: 'Copyright (C) 2020 Realtek Semiconductor Corporation. All Right Reserved.            '
-  CreationTimestamp: '2020-07-09 05:28:49'
+  CreationTimestamp: '2020-07-09 03:28:49'
   Date: ''
   Description: Realtek IO Driver
   ExportedFunctions: ''
@@ -124,13 +124,13 @@ KnownVulnerableSamples:
       Entropy: 1.588342766840537
       Virtual Size: '0x308'
     .pdata:
-      Entropy: 4.344595288855518
+      Entropy: 4.344595288855516
       Virtual Size: '0x3d8'
     PAGE:
-      Entropy: 6.260859399047817
+      Entropy: 6.260859399047818
       Virtual Size: '0x2224'
     INIT:
-      Entropy: 5.728643410948344
+      Entropy: 5.728643410948343
       Virtual Size: '0xa70'
     .rsrc:
       Entropy: 3.2842207767219675
@@ -216,6 +216,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Imphash: cb6cd53c7b292ea3b6a0c8c94176bbce
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

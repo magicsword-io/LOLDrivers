@@ -28,7 +28,7 @@ KnownVulnerableSamples:
     SHA256: 1716d4c523aeea9703032ca93eb9668b9a16f542c00cec248b0a1c132d80bb15
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-06-02 06:09:08'
+  CreationTimestamp: '2022-06-02 04:09:08'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -93,7 +93,7 @@ KnownVulnerableSamples:
       Entropy: 7.687230732544206
       Virtual Size: '0x28aae4'
     .reloc:
-      Entropy: 4.1112795434112295
+      Entropy: 4.111279543411234
       Virtual Size: '0xb8'
   Signature:
   - Microsoft Windows Hardware Compatibility Publisher
@@ -136,6 +136,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: 2a008187d4a73284ddcc43f1b727b513
 MitreID: T1068
 Resources:
 - https://www.sentinelone.com/labs/driving-through-defenses-targeted-attacks-leverage-signed-malicious-microsoft-drivers/

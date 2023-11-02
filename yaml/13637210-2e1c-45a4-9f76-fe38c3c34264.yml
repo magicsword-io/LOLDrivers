@@ -105,7 +105,7 @@ KnownVulnerableSamples:
     SHA256: 189683b4db2e68d2f0b3f91f1141907b3887f23991867a68a22389d40ad3634e
   Sections:
     .text:
-      Entropy: 5.939875886945923
+      Entropy: 5.93987588694592
       Virtual Size: '0x6ba'
     .rdata:
       Entropy: 4.302335685844511
@@ -120,9 +120,10 @@ KnownVulnerableSamples:
       Entropy: 5.046663153942613
       Virtual Size: '0x242'
     .rsrc:
-      Entropy: 3.128165375093067
+      Entropy: 3.1281653750930665
       Virtual Size: '0x2f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-01-16 04:04:02'
+  CreationTimestamp: '2020-01-16 02:04:02'
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 Tags:
 - HpPortIox64.sys

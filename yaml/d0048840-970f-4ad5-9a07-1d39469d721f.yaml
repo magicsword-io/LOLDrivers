@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: ab300e7e0d5d540900dbe11495b8d6788039d1cffb22e2dc2304b730a71eec97
   Company: ASUS
   Copyright: Copyright (C) 2009
-  CreationTimestamp: '2009-07-02 05:13:26'
+  CreationTimestamp: '2009-07-02 03:13:26'
   Date: ''
   Description: Memory mapping Driver
   ExportedFunctions: ''
@@ -101,10 +101,10 @@ KnownVulnerableSamples:
       Entropy: 3.106598149978197
       Virtual Size: '0x54'
     PAGE:
-      Entropy: 4.745588841989914
+      Entropy: 4.745588841989915
       Virtual Size: '0x55'
     INIT:
-      Entropy: 5.098158205267567
+      Entropy: 5.098158205267566
       Virtual Size: '0x384'
     .rsrc:
       Entropy: 3.2593250631693493
@@ -193,6 +193,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: 228bac53e82887d1ed92f51a667a8231
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

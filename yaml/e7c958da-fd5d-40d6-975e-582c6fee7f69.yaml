@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 6991be9952aa08c0d2ac9fa728410ebdb44988b496ed01b8b7f478785ebb30c4
   Company: BIOSTAR Group
   Copyright: Copyright (c) 2018-2019 BIOSTAR Group
-  CreationTimestamp: '2019-01-10 21:06:10'
+  CreationTimestamp: '2019-01-10 19:06:10'
   Date: ''
   Description: I/O Interface driver file
   ExportedFunctions: ''
@@ -102,13 +102,13 @@ KnownVulnerableSamples:
       Entropy: 0.43605306823188833
       Virtual Size: '0x14c'
     .pdata:
-      Entropy: 3.8118172720230836
+      Entropy: 3.811817272023083
       Virtual Size: '0x168'
     INIT:
-      Entropy: 5.3437408695830815
+      Entropy: 5.343740869583082
       Virtual Size: '0x550'
     .rsrc:
-      Entropy: 3.3065491006589527
+      Entropy: 3.3065491006589522
       Virtual Size: '0x410'
   Signature:
   - Microsoft Windows Hardware Compatibility Publisher
@@ -151,6 +151,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: 095c0cdb9c0421da216371c1f4e8790e
 MitreID: T1068
 Resources:
 - ' https://github.com/jbaines-r7/dellicious'

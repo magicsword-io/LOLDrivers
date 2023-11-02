@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: e1d3963c55c7ffa96d16e47ec4bbb4e171f828650ce853eb0b83c90ae9c6265a
   Company: Advanced Micro Devices, Inc.
   Copyright: "\xA9 2021 AMD Inc. All rights reserved."
-  CreationTimestamp: '2021-07-26 12:06:46'
+  CreationTimestamp: '2021-07-26 10:06:46'
   Date: ''
   Description: AMD Power Profiling Driver
   ExportedFunctions: ''
@@ -170,7 +170,7 @@ KnownVulnerableSamples:
       Entropy: 4.753427592244756
       Virtual Size: '0xb4c'
     .gfids:
-      Entropy: 0.8112781244591329
+      Entropy: 0.8112781244591328
       Virtual Size: '0x4'
     PAGE:
       Entropy: 6.292249475182866
@@ -267,6 +267,7 @@ KnownVulnerableSamples:
       Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Code Signing CA
       Version: 1
+  Imphash: 1422b8d354b95d9cd880c8726df45dfc
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

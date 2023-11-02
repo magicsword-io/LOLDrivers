@@ -33,7 +33,7 @@ KnownVulnerableSamples:
     SHA256: 2bb0418dcfb3fa15f01220dc039f2c9ad4dc12eb7f0396deaa9b2e81cb5e77e9
   Company: ASRock Incorporation
   Copyright: Copyright (C) 2012 ASRock Incorporation
-  CreationTimestamp: '2015-12-18 07:32:13'
+  CreationTimestamp: '2015-12-18 05:32:13'
   Date: ''
   Description: AsrAutoChkUpdDrv_1_0_32 Driver
   ExportedFunctions: ''
@@ -85,16 +85,16 @@ KnownVulnerableSamples:
       Entropy: 6.3208486378494
       Virtual Size: '0x1c78'
     .rdata:
-      Entropy: 4.713603818174104
+      Entropy: 4.713603818174108
       Virtual Size: '0x26c'
     .data:
-      Entropy: 0.4697909271189269
+      Entropy: 0.46979092711892695
       Virtual Size: '0x130'
     .pdata:
       Entropy: 3.783970155092492
       Virtual Size: '0xfc'
     INIT:
-      Entropy: 5.349731181563034
+      Entropy: 5.349731181563033
       Virtual Size: '0x518'
     .rsrc:
       Entropy: 3.3841559237194785
@@ -195,6 +195,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 9d7183c1d8107495354c4fad9dae3452
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

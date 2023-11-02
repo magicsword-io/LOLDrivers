@@ -205,13 +205,13 @@ KnownVulnerableSamples:
       Entropy: 6.358217634774591
       Virtual Size: '0xa40a'
     .rdata:
-      Entropy: 4.938894324300714
+      Entropy: 4.938894324300715
       Virtual Size: '0xbbc'
     .data:
-      Entropy: 0.9258397206248277
+      Entropy: 0.9258397206248276
       Virtual Size: '0x2e78'
     .pdata:
-      Entropy: 4.3287629062097635
+      Entropy: 4.328762906209764
       Virtual Size: '0x300'
     INIT:
       Entropy: 5.215013023190219
@@ -223,7 +223,8 @@ KnownVulnerableSamples:
       Entropy: 2.539629799045108
       Virtual Size: '0x124'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-08-23 03:57:10'
+  CreationTimestamp: '2012-08-23 01:57:10'
+  Imphash: 22a9d7a42282b48c566b4423363d3a3e
 - Filename: viragt.sys
   MD5: 25ebe6f757129adbe78ec312a5f1800b
   SHA1: d17656f11b899d58dca7b6c3dd6eef3d65ae88e2
@@ -413,7 +414,7 @@ KnownVulnerableSamples:
       Entropy: 4.918649218922101
       Virtual Size: '0x564'
     .data:
-      Entropy: 0.05543305812835452
+      Entropy: 0.055433058128354515
       Virtual Size: '0x2a0c'
     INIT:
       Entropy: 5.537679642862586
@@ -422,10 +423,11 @@ KnownVulnerableSamples:
       Entropy: 3.294627465002607
       Virtual Size: '0x428'
     .reloc:
-      Entropy: 6.064753530375785
+      Entropy: 6.064753530375784
       Virtual Size: '0xad0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-11-30 03:59:42'
+  CreationTimestamp: '2010-11-30 01:59:42'
+  Imphash: f079f8637a1d4fe2fb93af2a267b68ef
 - Filename: viragt.sys
   MD5: 650f6531db6fb0ed25d7fc70be35a4da
   SHA1: 7ee675f0106e36d9159c5507b96c3237fb9348cd
@@ -639,7 +641,7 @@ KnownVulnerableSamples:
     SHA256: 79c8030870681fcb556c799112ac97f555ad4c5b81e30c73a57fb9090c2745dc
   Sections:
     .text:
-      Entropy: 6.747185330442589
+      Entropy: 6.74718533044259
       Virtual Size: '0xd44d'
     NonPaged:
       Entropy: 6.7226298853008695
@@ -660,7 +662,8 @@ KnownVulnerableSamples:
       Entropy: 6.2771882804364765
       Virtual Size: '0xedc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-07-30 11:03:12'
+  CreationTimestamp: '2012-07-30 09:03:12'
+  Imphash: 80ae2342fd6c7f5e1c642918e33dafb1
 - Filename: viragt.sys
   MD5: 3467b0d996251dc56a72fc51a536dd6b
   SHA1: ca33c88cd74e00ece898dca32a24bdfcacc3f756
@@ -913,7 +916,8 @@ KnownVulnerableSamples:
       Entropy: 6.290375726968473
       Virtual Size: '0xfda'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-11-29 06:59:32'
+  CreationTimestamp: '2013-11-29 04:59:32'
+  Imphash: 3815f9107b799b863cd905178e6e07d0
 - Filename: viragt64.sys
   MD5: 688a10e87af9bcf0e40277d927923a00
   SHA1: 388819a7048179848425441c60b3a8390ad04a69
@@ -1105,19 +1109,19 @@ KnownVulnerableSamples:
     SHA256: b566c96b0a5ca93fe5cdd066966b85657108a1cc6eadb0b683932c781d3a3510
   Sections:
     .text:
-      Entropy: 6.359719252023204
+      Entropy: 6.359719252023205
       Virtual Size: '0xacfa'
     .rdata:
-      Entropy: 5.002975701263855
+      Entropy: 5.002975701263856
       Virtual Size: '0xbf4'
     .data:
-      Entropy: 0.9258397206248277
+      Entropy: 0.9258397206248276
       Virtual Size: '0x3878'
     .pdata:
-      Entropy: 4.302634969584851
+      Entropy: 4.3026349695848545
       Virtual Size: '0x318'
     INIT:
-      Entropy: 5.225312935704257
+      Entropy: 5.225312935704256
       Virtual Size: '0x842'
     .rsrc:
       Entropy: 3.294410486328847
@@ -1126,7 +1130,8 @@ KnownVulnerableSamples:
       Entropy: 2.4653384645476275
       Virtual Size: '0x12e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-23 03:42:36'
+  CreationTimestamp: '2013-01-23 01:42:36'
+  Imphash: 85fd19df117fbc21efbcb1d587063e12
 - Filename: viragt.sys
   MD5: 3d5164e85d740bce0391e2b81d49d308
   SHA1: 7ce978092fadbef44441a5f8dcb434df2464f193
@@ -1361,7 +1366,8 @@ KnownVulnerableSamples:
       Entropy: 6.247994097967221
       Virtual Size: '0xe18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-12-29 12:38:08'
+  CreationTimestamp: '2011-12-29 10:38:08'
+  Imphash: 48e2ef3c2d32ecca62510d90e12b6632
 - Filename: viragt.sys
   MD5: 3ad7b36a584504b3c70b5f552ba33015
   SHA1: d363011d6991219d7f152609164aba63c266b740
@@ -1593,10 +1599,11 @@ KnownVulnerableSamples:
       Entropy: 3.327760494753233
       Virtual Size: '0x430'
     .reloc:
-      Entropy: 6.239805134913374
+      Entropy: 6.239805134913373
       Virtual Size: '0xe14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-05-10 12:33:08'
+  CreationTimestamp: '2011-05-10 10:33:08'
+  Imphash: 48e2ef3c2d32ecca62510d90e12b6632
 - Filename: viragt.sys
   MD5: 08e06b839499cb4b752347399db41b57
   SHA1: b53c360b35174bd89f97f681bf7c17f40e519eb6
@@ -1836,7 +1843,7 @@ KnownVulnerableSamples:
       Entropy: 5.026653618294461
       Virtual Size: '0x5e4'
     .data:
-      Entropy: 0.038418734618129155
+      Entropy: 0.03841873461812914
       Virtual Size: '0x4110'
     INIT:
       Entropy: 5.5783216010211705
@@ -1845,9 +1852,10 @@ KnownVulnerableSamples:
       Entropy: 3.315762201306504
       Virtual Size: '0x430'
     .reloc:
-      Entropy: 6.40437541191771
+      Entropy: 6.404375411917709
       Virtual Size: '0x12a4'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-09-07 04:16:07'
+  CreationTimestamp: '2016-09-07 02:16:07'
+  Imphash: 3815f9107b799b863cd905178e6e07d0
 Tags:
 - viragt64.sys

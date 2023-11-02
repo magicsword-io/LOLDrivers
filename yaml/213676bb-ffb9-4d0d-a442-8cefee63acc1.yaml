@@ -33,7 +33,7 @@ KnownVulnerableSamples:
     SHA256: 904d8d0db7b3ed747ecfbb04386dfbe23b71ffd054f32ab17f65bc17d500f730
   Company: ASRock Incorporation
   Copyright: Copyright (C) 2012 ASRock Incorporation
-  CreationTimestamp: '2017-03-25 00:06:24'
+  CreationTimestamp: '2017-03-24 22:06:24'
   Date: ''
   Description: ASRock IO Driver
   ExportedFunctions: ''
@@ -129,7 +129,7 @@ KnownVulnerableSamples:
       Entropy: 3.2917593657396744
       Virtual Size: '0x3a0'
     .reloc:
-      Entropy: 1.2280731978955794
+      Entropy: 1.2280731978955797
       Virtual Size: '0x60'
   Signature: ''
   Signatures:
@@ -227,13 +227,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 3edc8a0f9cf180b3687025e17be537cc
 - Authentihash:
     MD5: 594b8502120968f8c618ee9199086807
     SHA1: 7eec3a1edf3b021883a4b5da450db63f7c0afeeb
     SHA256: 3f44442f56f2ceb6213fce103466862ac750fb99038030003c1b42da35a43a83
   Company: ASRock Incorporation
   Copyright: Copyright (C) 2012 ASRock Incorporation
-  CreationTimestamp: '2017-03-25 00:06:25'
+  CreationTimestamp: '2017-03-24 22:06:25'
   Date: ''
   Description: ASRock IO Driver
   ExportedFunctions: ''
@@ -314,7 +315,7 @@ KnownVulnerableSamples:
   SHA256: 53bb076e81f6104f41bc284eedae36bd99b53e42719573fa5960932720ebc854
   Sections:
     .text:
-      Entropy: 6.3054270022340955
+      Entropy: 6.305427002234095
       Virtual Size: '0x2238'
     .rdata:
       Entropy: 4.495452222719752
@@ -335,7 +336,7 @@ KnownVulnerableSamples:
       Entropy: 3.2917593657396744
       Virtual Size: '0x3a0'
     .reloc:
-      Entropy: 1.2280731978955794
+      Entropy: 1.2280731978955797
       Virtual Size: '0x60'
   Signature: ''
   Signatures:
@@ -433,13 +434,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 88e21ed9e717781eaf87209acbdbb567
 - Authentihash:
     MD5: bb59340eceecb279389290775536523a
     SHA1: b3410021ea5a46818d9ff05a96c2809a9abe8e4a
     SHA256: b6bf2460e023b1005cc60e107b14a3cfdf9284cc378a086d92e5dcdf6e432e2c
   Company: ASRock Incorporation
   Copyright: Copyright (C) 2012 ASRock Incorporation
-  CreationTimestamp: '2016-04-08 23:22:23'
+  CreationTimestamp: '2016-04-08 21:22:23'
   Date: ''
   Description: ASRock IO Driver
   ExportedFunctions: ''
@@ -523,7 +525,7 @@ KnownVulnerableSamples:
       Entropy: 6.3051619106052055
       Virtual Size: '0x2238'
     .rdata:
-      Entropy: 4.489737477422065
+      Entropy: 4.489737477422066
       Virtual Size: '0x7c4'
     .data:
       Entropy: 1.3791658791138062
@@ -541,17 +543,18 @@ KnownVulnerableSamples:
       Entropy: 3.2917593657396744
       Virtual Size: '0x3a0'
     .reloc:
-      Entropy: 1.2280731978955794
+      Entropy: 1.2280731978955797
       Virtual Size: '0x60'
   Signature: ''
   Signatures: {}
+  Imphash: 88e21ed9e717781eaf87209acbdbb567
 - Authentihash:
     MD5: aa22a4da941f51546e49ca1067fc28e4
     SHA1: 2b4d0dead4c1a7cc95543748b3565cfa802e5256
     SHA256: e6a2ac52a35d470dc336bae5c48a2ebf2d80519bfd57b703da6ce00ddd12163a
   Company: ASRock Incorporation
   Copyright: Copyright (C) 2012 ASRock Incorporation
-  CreationTimestamp: '2017-03-25 00:06:29'
+  CreationTimestamp: '2017-03-24 22:06:29'
   Date: ''
   Description: ASRock IO Driver
   ExportedFunctions: ''
@@ -638,7 +641,7 @@ KnownVulnerableSamples:
       Entropy: 6.364656828511862
       Virtual Size: '0x18a7'
     .rdata:
-      Entropy: 3.9722804080346177
+      Entropy: 3.9722804080346172
       Virtual Size: '0x3eb'
     .data:
       Entropy: 2.2015449012732216
@@ -751,6 +754,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 7c8c655791b5c853e45aa174e5cc1333
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 448a507774886c1745beaa86cd0867d93f142f5d2b58d452c5a8250d93359779
   Company: Microsoft Corporation
   Copyright: Microsoft Corporation. All rights reserved.
-  CreationTimestamp: '2013-11-27 18:59:02'
+  CreationTimestamp: '2013-11-27 16:59:02'
   Date: ''
   Description: WAN Transport Driver
   ExportedFunctions: ''
@@ -164,7 +164,7 @@ KnownVulnerableSamples:
       Entropy: 5.794638723454717
       Virtual Size: '0xd8c'
     .rsrc:
-      Entropy: 3.2626854851797193
+      Entropy: 3.262685485179719
       Virtual Size: '0x3b0'
   Signature: The digital signature of the object did not verify.
   Signatures:
@@ -222,6 +222,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: c32d9a9af7f702814e1368c689877f3a
 MitreID: T1068
 Resources:
 - https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48

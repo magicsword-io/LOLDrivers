@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 54e969dc477af9a3e5b53dc4edaebc41a7b73c87ecca13dc1fbb8dfc86c0fd78
   Company: TG Soft S.a.s.
   Copyright: Copyright (C) TG Soft S.a.s. 2011, 2016 - www.tgsoft.it
-  CreationTimestamp: '2016-09-07 04:36:15'
+  CreationTimestamp: '2016-09-07 02:36:15'
   Date: ''
   Description: VirIT Agent System
   ExportedFunctions: ''
@@ -133,19 +133,19 @@ KnownVulnerableSamples:
   SHA256: 58a74dceb2022cd8a358b92acd1b48a5e01c524c3b0195d7033e4bd55eff4495
   Sections:
     .text:
-      Entropy: 6.3869891914890795
+      Entropy: 6.38698919148908
       Virtual Size: '0xd05a'
     .rdata:
       Entropy: 4.97390475614417
       Virtual Size: '0xc58'
     .data:
-      Entropy: 0.9258397206248277
+      Entropy: 0.9258397206248276
       Virtual Size: '0x3960'
     .pdata:
-      Entropy: 4.385772691209426
+      Entropy: 4.385772691209427
       Virtual Size: '0x36c'
     INIT:
-      Entropy: 5.173227439833666
+      Entropy: 5.1732274398336635
       Virtual Size: '0x842'
     .rsrc:
       Entropy: 3.313751980383981
@@ -252,6 +252,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 85fd19df117fbc21efbcb1d587063e12
 MitreID: T1068
 Resources:
 - ' https://github.com/jbaines-r7/dellicious'

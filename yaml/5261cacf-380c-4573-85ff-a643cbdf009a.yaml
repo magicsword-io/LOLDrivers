@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: 2a30ad675142cf411e7e5f5c53c6423de570a398295b0956130a7a7d77383103
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-06-06 11:14:46'
+  CreationTimestamp: '2022-06-06 09:14:46'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -75,7 +75,7 @@ KnownVulnerableSamples:
       Entropy: 5.860500055750153
       Virtual Size: '0x1728'
     .rdata:
-      Entropy: 3.745910725544339
+      Entropy: 3.7459107255443396
       Virtual Size: '0x5b0'
     .data:
       Entropy: 0.6050836155077387
@@ -144,6 +144,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 4c7cc13a110ccdbb932bb9d7d42efdf4
 MitreID: T1068
 Resources:
 - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
