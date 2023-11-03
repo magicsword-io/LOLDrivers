@@ -27,7 +27,7 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_AAFA {
 		hash = "a85d3fd59bb492a290552e5124bfe3f9e26a3086d69d42ccc44737b5a66673ec"
 		hash = "7662187c236003308a7951c2f49c0768636c492f8935292d02f69e59b01d236d"
 		hash = "c7cd14c71bcac5420872c3d825ff6d4be6a86f3d6a8a584f1a756541efff858e"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]006d0069006d006900640072007600200066006f0072002000570069006e0064006f0077007300200028006d0069006d0069006b00610074007a0029 } /* FileDescription mimidrvforWindowsmimikatz */
@@ -63,7 +63,7 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_0740 {
 		hash = "29348ebe12d872c5f40e316a0043f7e5babe583374487345a79bad0ba93fbdfe"
 		hash = "ddf427ce55b36db522f638ba38e34cd7b96a04cb3c47849b91e7554bfd09a69a"
 		hash = "bcb774b6f6ff504d2db58096601bc5cb419c169bfbeaa3af852417e87d9b2aa0"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]006d0069006d006900640072007600200066006f0072002000570069006e0064006f0077007300200028006d0069006d0069006b00610074007a0029 } /* FileDescription mimidrvforWindowsmimikatz */
@@ -124,7 +124,7 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_3CA5 {
 		hash = "e99580e25f419b5ad90669e0c274cf63d30efa08065d064a863e655bdf77fb59"
 		hash = "4136f1eb11cc463a858393ea733d5f1c220a3187537626f7f5d63eccf7c5a03f"
 		hash = "a0931e16cf7b18d15579e36e0a69edad1717b07527b5407f2c105a2f554224b2"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]006d0069006d006900640072007600200066006f0072002000570069006e0064006f0077007300200028006d0069006d0069006b00610074007a0029 } /* FileDescription mimidrvforWindowsmimikatz */
@@ -161,7 +161,7 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_07BE {
 		hash = "f6157e033a12520c73dcedf8e49cd42d103e5874c34d6527bb9de25a5d26e5ad"
 		hash = "406b844f4b5c82caf26056c67f9815ad8ecf1e6e5b07d446b456e5ff4a1476f9"
 		hash = "31b66a57fae0cc28a6a236d72a35c8b6244f997e700f9464f9cbf800dbf8bee6"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]006d0069006d006900640072007600200066006f0072002000570069006e0064006f0077007300200028006d0069006d0069006b00610074007a0029 } /* FileDescription mimidrvforWindowsmimikatz */
@@ -199,7 +199,7 @@ rule MAL_Driver_Microsoftcorporation_Windbgsys_Microsoftwindowsoperatingsystem_E
 		hash = "6994b32e3f3357f4a1d0abe81e8b62dd54e36b17816f2f1a80018584200a1b77"
 		hash = "fa9abb3e7e06f857be191a1e049dd37642ec41fb2520c105df2227fcac3de5d5"
 		hash = "770f33259d6fb10f4a32d8a57d0d12953e8455c72bb7b60cb39ce505c507013a"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069006e0064006f007700730020004700550049002000730079006d0062006f006c00690063002000640065006200750067006700650072 } /* FileDescription WindowsGUIsymbolicdebugger */
@@ -251,7 +251,7 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_26BE {
 		hash = "c8ae217860f793fce3ad0239d7b357dba562824dd7177c9d723ca4d4a7f99a12"
 		hash = "69866557566c59772f203c11f5fba30271448e231b65806a66e48f41e3804d7f"
 		hash = "a42f4ae69b8755a957256b57eb3d319678eab81705f0ffea0d649ace7321108f"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]006d0069006d006900640072007600200066006f0072002000570069006e0064006f0077007300200028006d0069006d0069006b00610074007a0029 } /* FileDescription mimidrvforWindowsmimikatz */
@@ -286,7 +286,7 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_06DD {
 		hash = "a74e8f94d2c140646a8bb12e3e322c49a97bd1b8a2e4327863d3623f43d65c66"
 		hash = "4dc24fd07f8fb854e685bc540359c59f177de5b91231cc44d6231e33c9e932b1"
 		hash = "0f58e09651d48d2b1bcec7b9f7bb85a2d1a7b65f7a51db281fe0c4f058a48597"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]006d0069006d006900640072007600200066006f0072002000570069006e0064006f0077007300200028006d0069006d0069006b00610074007a0029 } /* FileDescription mimidrvforWindowsmimikatz */
@@ -309,7 +309,7 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_30E0 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "30e083cd7616b1b969a92fd18cf03097735596cce7fcf3254b2ca344e526acc2"
 		hash = "a906251667a103a484a6888dca3e9c8c81f513b8f037b98dfc11440802b0d640"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]006d0069006d006900640072007600200066006f0072002000570069006e0064006f0077007300200028006d0069006d0069006b00610074007a0029 } /* FileDescription mimidrvforWindowsmimikatz */
@@ -334,7 +334,7 @@ rule MAL_Driver_Microsoftcorporation_Wantdsys_Microsoftwindowsoperatingsystem_8D
 		hash = "e7af7bcb86bd6bab1835f610671c3921441965a839673ac34444cf0ce7b2164e"
 		hash = "06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4"
 		hash = "b9dad0131c51e2645e761b74a71ebad2bf175645fa9f42a4ab0e6921b83306e3"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570041004e0020005400720061006e00730070006f007200740020004400720069007600650072 } /* FileDescription WANTransportDriver */
@@ -358,7 +358,7 @@ rule MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_28F5 {
 		hash = "28f5aa194a384680a08c0467e94a8fc40f8b0f3f2ac5deb42e0f51a80d27b553"
 		hash = "2fd43a749b5040ebfafd7cdbd088e27ef44341d121f313515ebde460bf3aaa21"
 		hash = "7824931e55249a501074a258b4f65cd66157ee35672ba17d1c0209f5b0384a28"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]006d0069006d006900640072007600200066006f0072002000570069006e0064006f0077007300200028006d0069006d0069006b00610074007a0029 } /* FileDescription mimidrvforWindowsmimikatz */
@@ -381,7 +381,7 @@ rule MAL_Driver_Microsoftcorporation_Ntbiosys_Microsoftrwindowsrntoperatingsyste
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc"
 		hash = "c0d88db11d0f529754d290ed5f4c34b4dba8c4f2e5c4148866daabeab0d25f9c"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]006e007400620069006f00730020006400720069007600650072 } /* FileDescription ntbiosdriver */
@@ -403,7 +403,7 @@ rule MAL_Driver_Legalcorp_Pciexpressvideocapture_FD22 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fd223833abffa9cd6cc1848d77599673643585925a7ee51259d67c44d361cce8"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005000430049006500200056006900640065006f00200043006100700074007500720065 } /* FileDescription PCIeVideoCapture */
@@ -424,7 +424,7 @@ rule MAL_Driver_Microsoftcorporation_Ndislansys_Microsoftwindowsoperatingsystem_
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b0eb4d999e4e0e7c2e33ff081e847c87b49940eb24a9e0794c6aa9516832c427"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d00530020004c0041004e0020004400720069007600650072 } /* FileDescription MSLANDriver */
@@ -446,7 +446,7 @@ rule MAL_Driver_Microsoftcorporation_Wantdsys_Microsoftwindowsoperatingsystem_81
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570041004e0020005400720061006e00730070006f007200740020004400720069007600650072 } /* FileDescription WANTransportDriver */
@@ -468,7 +468,7 @@ rule MAL_Driver_Sensecorp_7F45 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7f4555a940ce1156c9bcea9a2a0b801f9a5e44ec9400b61b14a7b1a6404ffdf6"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530065006e0073006500350020004400720069007600650072 } /* FileDescription SenseDriver */
@@ -488,7 +488,7 @@ rule MAL_Driver_Microsoftcorporation_Wintapixsys_Microsoftwindowsoperatingsystem
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1485c0ed3e875cbdfc6786a5bd26d18ea9d31727deb8df290a1c00c780419a4e"
 		hash = "8578bff36e3b02cc71495b647db88c67c3c5ca710b5a2bd539148550595d0330"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069006e0064006f007700730020004b00650072006e0065006c00200045007800650063007500740069007600650020004d006f00640075006c0065 } /* FileDescription WindowsKernelExecutiveModule */
@@ -510,7 +510,7 @@ rule MAL_Driver_Sensecorp_42B2 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "42b22faa489b5de936db33f12184f6233198bdf851a18264d31210207827ba25"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530065006e0073006500350020004400720069007600650072 } /* FileDescription SenseDriver */
@@ -529,7 +529,7 @@ rule MAL_Driver_Mimidrv_Mimidrvmimikatz_2FAF {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2faf95a3405578d0e613c8d88d534aa7233da0a6217ce8475890140ab8fb33c8"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00500072006f006400750063007400560065007200730069006f006e[1-8]0032002e0030002e0030002e0030 } /* ProductVersion  */
@@ -548,7 +548,7 @@ rule MAL_Driver_Microsoftcorporation_Srvnetsys_Microsoftwindowsoperatingsystem_F
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f6c316e2385f2694d47e936b0ac4bc9b55e279d530dd5e805f0d963cb47c3c0d"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0053006500720076006500720020004e006500740077006f0072006b0020006400720069007600650072 } /* FileDescription ServerNetworkdriver */
@@ -570,7 +570,7 @@ rule MAL_Driver_Microsoftcorporation_Wantdsys_Microsoftwindowsoperatingsystem_69
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6908ebf52eb19c6719a0b508d1e2128f198d10441551cbfb9f4031d382f5229f"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570041004e0020005400720061006e00730070006f007200740020004400720069007600650072 } /* FileDescription WANTransportDriver */
@@ -592,7 +592,7 @@ rule MAL_Driver_Gmer_Gmersys_Gmer_18C9 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "18c909a2b8c5e16821d6ef908f56881aa0ecceeaccb5fa1e54995935fcfd12f7"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004d00450052002000440072006900760065007200200068007400740070003a002f002f007700770077002e0067006d00650072002e006e00650074 } /* FileDescription GMERDriverhttpwwwgmernet */
@@ -614,7 +614,7 @@ rule MAL_Driver_773B {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "773b4a1efb9932dd5116c93d06681990759343dfe13c0858d09245bc610d5894"
-		date = "2023-07-31"
+		date = "2023-11-02"
 		score = 70
 	strings:
 		$ = { 00460069006c006500560065007200730069006f006e[1-8]0032002e0031002e0031002e0030 } /* FileVersion  */
