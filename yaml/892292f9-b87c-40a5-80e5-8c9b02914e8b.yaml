@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: a47b9af109988e8e033886638edc84964968eecd0d24483eafaad6a6d68005ea
   Company: Microsoft Corporation
   Copyright: Microsoft Corporation. All rights reserved.
-  CreationTimestamp: '2013-11-27 18:59:02'
+  CreationTimestamp: '2013-11-27 16:59:02'
   Date: ''
   Description: WAN Transport Driver
   ExportedFunctions: ''
@@ -149,7 +149,7 @@ KnownVulnerableSamples:
   SHA256: 06a0ec9a316eb89cb041b1907918e3ad3b03842ec65f004f6fa74d57955573a4
   Sections:
     .text:
-      Entropy: 6.377221041391937
+      Entropy: 6.377221041391935
       Virtual Size: '0xd88c'
     .rdata:
       Entropy: 4.702371843577182
@@ -161,10 +161,10 @@ KnownVulnerableSamples:
       Entropy: 4.5393227380510455
       Virtual Size: '0x8c4'
     INIT:
-      Entropy: 5.793042716031906
+      Entropy: 5.793042716031905
       Virtual Size: '0xd8c'
     .rsrc:
-      Entropy: 3.2626854851797193
+      Entropy: 3.262685485179719
       Virtual Size: '0x3b0'
   Signature: A required certificate is not within its validity period when verifying
     against the current system clock or the timestamp in the signed file.
@@ -223,6 +223,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: c32d9a9af7f702814e1368c689877f3a
 MitreID: T1068
 Resources:
 - https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48

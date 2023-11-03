@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: c7b1bb39dcd7f0331989f16fcc7cd29a9ae126bee47746a4be385160da3c5a29
   Company: wj32
   Copyright: Licensed under the GNU GPL, v3.
-  CreationTimestamp: '2015-05-30 04:42:12'
+  CreationTimestamp: '2015-05-30 02:42:12'
   Date: ''
   Description: KProcessHacker
   ExportedFunctions: ''
@@ -148,7 +148,7 @@ KnownVulnerableSamples:
       Entropy: 4.300343584983189
       Virtual Size: '0x27c'
     PAGE:
-      Entropy: 6.138553864199606
+      Entropy: 6.138553864199604
       Virtual Size: '0x3cb2'
     INIT:
       Entropy: 5.199875231714174
@@ -236,13 +236,14 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: 821d74031d3f625bcbd0df08b70f1e77
 - Authentihash:
     MD5: dd81d5b2343e1976d1708e7eb0649f8f
     SHA1: c2b8c1b34f09a91efe196f646ef7f9a11190fb8e
     SHA256: 4ee2a56c1592ff0e951b452c0de064eba05b7c98e3add04c8aa3b4a84eb797a5
   Company: wj32
   Copyright: Licensed under the GNU GPL, v3.
-  CreationTimestamp: '2016-03-28 14:20:42'
+  CreationTimestamp: '2016-03-28 12:20:42'
   Date: ''
   Description: KProcessHacker
   ExportedFunctions: ''
@@ -369,7 +370,7 @@ KnownVulnerableSamples:
       Entropy: 5.20255690837536
       Virtual Size: '0xaa0'
     .rsrc:
-      Entropy: 3.18693995209985
+      Entropy: 3.1869399520998494
       Virtual Size: '0x2f8'
   Signature:
   - Wen Jia Liu
@@ -451,6 +452,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: f86759bb4de4320918615dc06e998a39
 MitreID: T1068
 Resources:
 - https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html

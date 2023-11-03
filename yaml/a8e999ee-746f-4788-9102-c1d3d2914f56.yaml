@@ -30,7 +30,7 @@ KnownVulnerableSamples:
     SHA256: 3ba724dd78864cd527a99673fde1bf7f9f85f2415c91708e7380fbe5e2c085dd
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-07-21 03:22:27'
+  CreationTimestamp: '2021-07-21 01:22:27'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -229,13 +229,14 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
         ID Code Signing CA
       Version: 1
+  Imphash: 391ffad95759bc4bac2b737d0d0eaa84
 - Authentihash:
     MD5: befaf31ebd0bbedb364214fca5dd9799
     SHA1: c58bebef6a92f5a5b37be0394695e8e18a42867f
     SHA256: 350e15bf24dcfdc052db117718329a03e930c17ac8c835e51d001e74bad784e4
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2020-11-29 21:41:05'
+  CreationTimestamp: '2020-11-29 19:41:05'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -380,7 +381,7 @@ KnownVulnerableSamples:
       Entropy: 6.258357354555082
       Virtual Size: '0xe19a'
     .rdata:
-      Entropy: 5.216341532062547
+      Entropy: 5.216341532062553
       Virtual Size: '0x1254'
     .data:
       Entropy: 2.1499810830170913
@@ -471,13 +472,14 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       Version: 1
+  Imphash: 0ebf1214948a636eba076b14cd8f72d5
 - Authentihash:
     MD5: e7902722f707f386ff95d67bfd989be0
     SHA1: 4604a20cae2dfe42320fe8f6aed000ec204efa7e
     SHA256: 13b82d81d6eac1a8b2e4655504dabecbd70673cdf45c244702a02f3397fdff9a
   Company: NetFilterSDK.com
   Copyright: Copyright ? NetFilterSDK.com
-  CreationTimestamp: '2020-09-24 22:14:24'
+  CreationTimestamp: '2020-09-24 20:14:24'
   Date: ''
   Description: NetFilter SDK TDI Hook Driver (WPP)
   ExportedFunctions: ''
@@ -573,10 +575,10 @@ KnownVulnerableSamples:
       Entropy: 5.514785664446277
       Virtual Size: '0x638'
     .rsrc:
-      Entropy: 3.3376557726674836
+      Entropy: 3.337655772667483
       Virtual Size: '0x3a0'
     .reloc:
-      Entropy: 6.444197863031407
+      Entropy: 6.444197863031406
       Virtual Size: '0xa6a'
   Signature: ''
   Signatures:
@@ -655,6 +657,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       Version: 1
+  Imphash: 835e364e2175338d970c2aaee365f3dc
 MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'

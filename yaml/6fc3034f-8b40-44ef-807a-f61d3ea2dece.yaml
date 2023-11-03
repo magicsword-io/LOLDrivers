@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: d33f19a12cd8e8649a56ce2a41e2b56d2ed80f203e5ededc4114c78ef773ffa8
   Company: MSI
   Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
-  CreationTimestamp: '2015-11-24 01:34:45'
+  CreationTimestamp: '2015-11-23 23:34:45'
   Date: ''
   Description: NTIOLib
   ExportedFunctions: ''
@@ -81,7 +81,7 @@ KnownVulnerableSamples:
       Entropy: 5.973820627052045
       Virtual Size: '0x7b2'
     .rdata:
-      Entropy: 4.093549068276714
+      Entropy: 4.093549068276716
       Virtual Size: '0x18c'
     .data:
       Entropy: 0.5096713223407059
@@ -93,7 +93,7 @@ KnownVulnerableSamples:
       Entropy: 5.046663153942613
       Virtual Size: '0x242'
     .rsrc:
-      Entropy: 3.249824410980098
+      Entropy: 3.2498244109800973
       Virtual Size: '0x370'
   Signature:
   - MICRO-STAR INTERNATIONAL CO., LTD.
@@ -176,6 +176,7 @@ KnownVulnerableSamples:
     - SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 MitreID: T1068
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'

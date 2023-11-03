@@ -1,0 +1,92 @@
+title: Malicious Driver Load By Name
+id: 39b64854-5497-4b57-a448-40977b8c9679
+status: experimental
+description: Detects the load of known malicious drivers via their names only..
+references:
+    - https://loldrivers.io/
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022/10/03
+modified: 2023/11/02
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection:
+        ImageLoaded|endswith:
+            - '\lctka.sys'
+            - '\wfshbr64.sys'
+            - '\e939448b28a4edc81f1f974cebf6e7d2.sys'
+            - '\gftkyj64.sys'
+            - '\daxin_blank.sys'
+            - '\poortry.sys'
+            - '\dkrtk.sys'
+            - '\nlslexicons0024uvn.sys'
+            - '\wantd_2.sys'
+            - '\fur.sys'
+            - '\7.sys'
+            - '\a26363e7b02b13f2b8d697abb90cd5c3.sys'
+            - '\ef0e1725aaf0c6c972593f860531a2ea.sys'
+            - '\prokiller64.sys'
+            - '\ktes.sys'
+            - '\2.sys'
+            - '\poortry1.sys'
+            - '\kt2.sys'
+            - '\ktgn.sys'
+            - '\gmer64.sys'
+            - '\typelibde.sys'
+            - '\c94f405c5929cfcccc8ad00b42c95083.sys'
+            - '\daxin_blank5.sys'
+            - '\daxin_blank4.sys'
+            - '\mimikatz.sys'
+            - '\air_system10.sys'
+            - '\5a4fe297c7d42539303137b6d75b150d.sys'
+            - '\4.sys'
+            - '\ktmutil7odm.sys'
+            - '\ntbios.sys'
+            - '\sense5ext.sys'
+            - '\telephonuafy.sys'
+            - '\wantd_5.sys'
+            - '\e29f6311ae87542b3d693c1f38e4e3ad.sys'
+            - '\6771b13a53b9c7449d4891e427735ea2.sys'
+            - '\ndislan.sys'
+            - '\a9df5964635ef8bd567ae487c3d214c4.sys'
+            - '\malicious.sys'
+            - '\msqpq.sys'
+            - '\wantd.sys'
+            - '\mjj0ge.sys'
+            - '\nodedriver.sys'
+            - '\mimidrv.sys'
+            - '\wantd_6.sys'
+            - '\blacklotus_driver.sys'
+            - '\windbg.sys'
+            - '\834761775.sys'
+            - '\nqrmq.sys'
+            - '\fgme.sys'
+            - '\kapchelper_x64.sys'
+            - '\poortry2.sys'
+            - '\be6318413160e589080df02bb3ca6e6a.sys'
+            - '\4748696211bd56c2d93c21cab91e82a5.sys'
+            - '\wintapix.sys'
+            - '\daxin_blank3.sys'
+            - '\ntbios_2.sys'
+            - '\daxin_blank1.sys'
+            - '\1fc7aeeff3ab19004d2e53eae8160ab1.sys'
+            - '\spwizimgvt.sys'
+            - '\4118b86e490aed091b1a219dba45f332.sys'
+            - '\mlgbbiicaihflrnh.sys'
+            - '\wantd_4.sys'
+            - '\reddriver.sys'
+            - '\wantd_3.sys'
+            - '\pciecubed.sys'
+            - '\daxin_blank6.sys'
+            - '\daxin_blank2.sys'
+            - '\a236e7d654cd932b7d11cb604629a2d0.sys'
+    condition: selection
+falsepositives:
+    - False positives may occur if one of the vulnerable driver names mentioned above didn't change its name between versions. So always make sure that the driver being loaded is the legitimate one and the non vulnerable version.
+    - If you experience a lot of FP you could comment the driver name or its exact known legitimate location (when possible)
+level: medium

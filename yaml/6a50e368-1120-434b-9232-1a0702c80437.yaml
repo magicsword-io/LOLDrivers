@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: ac7b3c3b74e6e282c7f50c17a6213b81b181f779cd7c0c78e3cb426c427a98db
   Company: ASRock Incorporation
   Copyright: Copyright (C) 2012 ASRock Incorporation
-  CreationTimestamp: '2021-11-15 02:04:46'
+  CreationTimestamp: '2021-11-15 00:04:46'
   Date: ''
   Description: ASRock IO Driver
   ExportedFunctions: ''
@@ -120,7 +120,7 @@ KnownVulnerableSamples:
   SHA256: 3943a796cc7c5352aa57ccf544295bfd6fb69aae147bc8235a00202dc6ed6838
   Sections:
     .text:
-      Entropy: 6.305803759086301
+      Entropy: 6.3058037590863005
       Virtual Size: '0x2238'
     .rdata:
       Entropy: 4.480768786103598
@@ -141,7 +141,7 @@ KnownVulnerableSamples:
       Entropy: 3.2917593657396744
       Virtual Size: '0x3a0'
     .reloc:
-      Entropy: 1.2280731978955794
+      Entropy: 1.2280731978955797
       Virtual Size: '0x60'
   Signature:
   - ASROCK INC.
@@ -224,6 +224,7 @@ KnownVulnerableSamples:
     - SerialNumber: 3be24b96d2c8d729eddb03e3
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
       Version: 1
+  Imphash: 88e21ed9e717781eaf87209acbdbb567
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

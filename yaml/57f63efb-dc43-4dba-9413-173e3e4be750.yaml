@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: f43d977a5fb1bdc10837e7c4ff03526d2b8fa9757da9dd8bd6514cd31748a858
   Company: RW-Everything
   Copyright: Copyright (C) 2008 RW-Everything
-  CreationTimestamp: '2012-02-07 10:19:34'
+  CreationTimestamp: '2012-02-07 08:19:34'
   Date: ''
   Description: RW-Everything Read & Write Driver
   ExportedFunctions: ''
@@ -88,13 +88,13 @@ KnownVulnerableSamples:
   SHA256: 47f08f7d30d824a8f4bb8a98916401a37c0fd8502db308aba91fe3112b892dcc
   Sections:
     .text:
-      Entropy: 6.338684971851387
+      Entropy: 6.338684971851386
       Virtual Size: '0x1a28'
     .rdata:
       Entropy: 4.597473025210269
       Virtual Size: '0x24c'
     .data:
-      Entropy: 0.4697909271189269
+      Entropy: 0.46979092711892695
       Virtual Size: '0x130'
     .pdata:
       Entropy: 3.6846124142888885
@@ -203,6 +203,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 9d7183c1d8107495354c4fad9dae3452
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

@@ -44,7 +44,7 @@ KnownVulnerableSamples:
     SHA256: 7188af66fe23bd8cf27f003ad6c7550cdb6faa5c948fe7c3b1435c9246345eb3
   Company: OpenLibSys.org
   Copyright: Copyright (C) 2007 OpenLibSys.org. All rights reserved.
-  CreationTimestamp: '2007-12-15 03:04:52'
+  CreationTimestamp: '2007-12-15 01:04:52'
   Date: ''
   Description: WinRing0
   ExportedFunctions: ''
@@ -82,7 +82,7 @@ KnownVulnerableSamples:
   SHA256: 3ec5ad51e6879464dfbccb9f4ed76c6325056a42548d5994ba869da9c4c039a8
   Sections:
     .text:
-      Entropy: 6.025638907416469
+      Entropy: 6.02563890741647
       Virtual Size: '0x796'
     .rdata:
       Entropy: 4.1567602868650235
@@ -170,13 +170,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 650fa4b522e8d06d0cdfa4bf278e85f1
     SHA1: dfe2533a4398d67dfc722eb8d9f8ffa3a823a721
     SHA256: 7188af66fe23bd8cf27f003ad6c7550cdb6faa5c948fe7c3b1435c9246345eb3
   Company: OpenLibSys.org
   Copyright: Copyright (C) 2007 OpenLibSys.org. All rights reserved.
-  CreationTimestamp: '2007-12-15 03:04:52'
+  CreationTimestamp: '2007-12-15 01:04:52'
   Date: ''
   Description: WinRing0
   ExportedFunctions: ''
@@ -214,7 +215,7 @@ KnownVulnerableSamples:
   SHA256: 47eaebc920ccf99e09fc9924feb6b19b8a28589f52783327067c9b09754b5e84
   Sections:
     .text:
-      Entropy: 6.025638907416469
+      Entropy: 6.02563890741647
       Virtual Size: '0x796'
     .rdata:
       Entropy: 4.1567602868650235
@@ -326,13 +327,14 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: c4355451eccb590e5e6d817760d2d2ef
     SHA1: 7aed8186977fcf7ee219da493baecdb95ec8040d
     SHA256: 9305f0834e67aa16fb252bd30927e5f835639ef4b868f20d232260edffefd6f0
   Company: OpenLibSys.org
   Copyright: Copyright (C) 2007-2008 OpenLibSys.org. All rights reserved.
-  CreationTimestamp: '2013-05-01 22:19:47'
+  CreationTimestamp: '2013-05-01 20:19:47'
   Date: ''
   Description: WinRing0
   ExportedFunctions: ''
@@ -379,7 +381,7 @@ KnownVulnerableSamples:
       Entropy: 0.5096713223407059
       Virtual Size: '0x114'
     .pdata:
-      Entropy: 3.2767756355039417
+      Entropy: 3.276775635503942
       Virtual Size: '0x78'
     INIT:
       Entropy: 5.031588684181026
@@ -473,13 +475,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 2bab314d894a026ac6073efe43c14a3d
     SHA1: 266821a39174d29f6f8791cf9f44f1a1f3439dda
     SHA256: 1b845e5e43ce9e9b645ac198549e81f45c08197aad69708d96cdb9a719eb0e29
   Company: OpenLibSys.org
   Copyright: Copyright (C) 2007-2008 OpenLibSys.org. All rights reserved.
-  CreationTimestamp: '2008-07-26 09:29:37'
+  CreationTimestamp: '2008-07-26 07:29:37'
   Date: ''
   Description: WinRing0
   ExportedFunctions: ''
@@ -529,7 +532,7 @@ KnownVulnerableSamples:
       Entropy: 3.180043880366087
       Virtual Size: '0x60'
     INIT:
-      Entropy: 4.880913698813425
+      Entropy: 4.880913698813426
       Virtual Size: '0x222'
     .rsrc:
       Entropy: 3.2858216134068057
@@ -629,6 +632,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: d41fa95d4642dc981f10de36f4dc8cd7
 MitreID: T1068
 Resources:
 - https://github.com/namazso/physmem_drivers

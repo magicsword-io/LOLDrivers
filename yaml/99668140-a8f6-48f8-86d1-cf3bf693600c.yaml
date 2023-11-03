@@ -44,7 +44,7 @@ KnownVulnerableSamples:
     SHA256: 4a9093e8dbcb867e1b97a0a67ce99a8511900658f5201c34ffb8035881f2dbbe
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2018-12-23 21:03:09'
+  CreationTimestamp: '2018-12-23 19:03:09'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -77,7 +77,7 @@ KnownVulnerableSamples:
   SHA256: c7079033659ac9459b3b7ab2510805832db2e2a70fe9beb1a6e13c1f51890d88
   Sections:
     .text:
-      Entropy: 7.954665405440422
+      Entropy: 7.954665405440423
       Virtual Size: '0xd000'
     .sedata:
       Entropy: 7.68195090334756
@@ -163,13 +163,14 @@ KnownVulnerableSamples:
     - SerialNumber: 388c116793e1e1d856228d71
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
       Version: 1
+  Imphash: 8b6c1a09e11200591663b880a94a8d18
 - Authentihash:
     MD5: d490f971f9503765a947997d7c54a4c7
     SHA1: 67650bc9cdf0716bc7b5664723c38fc5327ec662
     SHA256: 4a9093e8dbcb867e1b97a0a67ce99a8511900658f5201c34ffb8035881f2dbbe
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2018-12-23 21:03:09'
+  CreationTimestamp: '2018-12-23 19:03:09'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -202,7 +203,7 @@ KnownVulnerableSamples:
   SHA256: 082d4d4d4ba1bda5e1599bd24e930ae9f000e7d12b00f7021cca90a4600ea470
   Sections:
     .text:
-      Entropy: 7.954665405440422
+      Entropy: 7.954665405440423
       Virtual Size: '0xd000'
     .sedata:
       Entropy: 7.68195090334756
@@ -288,6 +289,7 @@ KnownVulnerableSamples:
     - SerialNumber: 6260caa0dfd6e5dd9d99e2ac
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
       Version: 1
+  Imphash: 8b6c1a09e11200591663b880a94a8d18
 MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'

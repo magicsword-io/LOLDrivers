@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: 71dc8d678e0749599d3db144c93741f64def1b8b0efb98bef963d2215ebb4992
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2018-06-10 04:06:16'
+  CreationTimestamp: '2018-06-10 02:06:16'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -187,7 +187,7 @@ KnownVulnerableSamples:
       Entropy: 5.326593764460783
       Virtual Size: '0x1020'
     .reloc:
-      Entropy: 3.752441516128526
+      Entropy: 3.7524415161285263
       Virtual Size: '0x38'
   Signature:
   - Cheat Engine
@@ -284,13 +284,14 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
         CA , SHA256 , G3
       Version: 1
+  Imphash: 5759d90322a7311eaccf4f0ab2c2a7c4
 - Authentihash:
     MD5: 8950c65d305c42ada6cf31188f526674
     SHA1: 1be4ba36ba9ce5b10d90137c08cc21f823379841
     SHA256: d041654d8cbf189c29919733fd40184ceaf0050295fc7a7e6e3f4cda45b5e090
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-06-05 10:22:43'
+  CreationTimestamp: '2021-06-05 08:22:43'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -443,13 +444,13 @@ KnownVulnerableSamples:
   SHA256: 626fae47811450d080d08c3d9fd890aa64bfecdc45eacd42a40850c1833c8763
   Sections:
     .text:
-      Entropy: 5.682451889338358
+      Entropy: 5.682451889338359
       Virtual Size: '0x132df'
     .rdata:
       Entropy: 4.517419685097444
       Virtual Size: '0x131c'
     .data:
-      Entropy: 3.2552098328903405
+      Entropy: 3.255209832890341
       Virtual Size: '0xacc4'
     .pdata:
       Entropy: 4.8820210675954305
@@ -458,7 +459,7 @@ KnownVulnerableSamples:
       Entropy: 5.330738501788467
       Virtual Size: '0x1040'
     .reloc:
-      Entropy: 3.774970323341085
+      Entropy: 3.7749703233410856
       Virtual Size: '0x38'
   Signature: ''
   Signatures:
@@ -589,6 +590,7 @@ KnownVulnerableSamples:
     - SerialNumber: 3038811fdd430a77db5b3cc2
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
       Version: 1
+  Imphash: 105b74485670215ab231a942c9101ccf
 MitreID: T1068
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'

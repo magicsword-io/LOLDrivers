@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: b78cb190a4968d06f2cdab65ea0106bc47eefdaffc871ba5dd2c2dccadb1e403
   Company: Huawei
   Copyright: Copyright (C) 2016
-  CreationTimestamp: '2017-04-12 22:51:36'
+  CreationTimestamp: '2017-04-12 20:51:36'
   Date: ''
   Description: HwOs2Ec
   ExportedFunctions: ''
@@ -133,22 +133,22 @@ KnownVulnerableSamples:
       Entropy: 6.236880813198621
       Virtual Size: '0x2084'
     .rdata:
-      Entropy: 4.364746352540342
+      Entropy: 4.364746352540341
       Virtual Size: '0x994'
     .data:
       Entropy: 0.30140680731160896
       Virtual Size: '0x61c'
     .pdata:
-      Entropy: 4.211164079381653
+      Entropy: 4.211164079381654
       Virtual Size: '0x33c'
     .gfids:
-      Entropy: 0.8112781244591329
+      Entropy: 0.8112781244591328
       Virtual Size: '0x4'
     PAGE:
       Entropy: 6.230170005876138
       Virtual Size: '0x18ea'
     INIT:
-      Entropy: 5.513789896059987
+      Entropy: 5.513789896059991
       Virtual Size: '0x92a'
     .rsrc:
       Entropy: 3.224013557904709
@@ -242,6 +242,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 0f371a913e9fa3ba3a923718e489debb
 MitreID: T1068
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'

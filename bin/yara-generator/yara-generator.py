@@ -90,7 +90,10 @@ def process_files(input_files, debug):
 		except Exception as e:
 			if debug:
 				traceback.print_exc()
-			Log.info("Couldn't extract any PE header infos for file %s and thus cannot generate a YARA rule for it" % f)
+				print("Attributes of PE object: ", dir(pe))
+			Log.info("Couldn't extract any PE header infos for file %s and thus cannot generate a YARA rule for it. Error: %s" % (f, str(e)))
+
+			#Log.info("Couldn't extract any PE header infos for file %s and thus cannot generate a YARA rule for it" % f)
 			continue
 		Log.debug("Extracted VersionInfo: %s" % string_version_info)
 

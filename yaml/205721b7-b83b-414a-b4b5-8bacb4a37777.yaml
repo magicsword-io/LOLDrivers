@@ -42,7 +42,7 @@ KnownVulnerableSamples:
     SHA256: 98a55dc61046f4509d2465cbc373a9391c07125e5f4a242d2f475f14f32e5430
   Company: EldoS Corporation
   Copyright: 'Copyright (C) 2007-2011, EldoS Corporation '
-  CreationTimestamp: '2011-12-28 11:51:24'
+  CreationTimestamp: '2011-12-28 09:51:24'
   Date: ''
   Description: RawDisk Driver. Allows write access to files and raw disk sectors for
     user mode applications in Windows 2000 and later.
@@ -139,13 +139,13 @@ KnownVulnerableSamples:
   SHA256: 4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6
   Sections:
     .text:
-      Entropy: 6.064316199141176
+      Entropy: 6.064316199141177
       Virtual Size: '0x55e'
     .rdata:
       Entropy: 4.05997020827267
       Virtual Size: '0x364'
     .data:
-      Entropy: 6.1533423871883395
+      Entropy: 6.1533423871883475
       Virtual Size: '0x254'
     PAGE:
       Entropy: 6.400618863867007
@@ -253,13 +253,14 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: c94e5ad0f33374535392364a5a193253
 - Authentihash:
     MD5: c1afcba807a13aa25a0b363a22c760d6
     SHA1: 8422fb53e48b27a42cc7595ca7c7ae0597168db6
     SHA256: 29a2ae6439381ea2aa3116df7025cbb5c6c7c07cc8d19508e6021e4d6177a565
   Company: EldoS Corporation
   Copyright: 'Copyright (C) 2007-2011, EldoS Corporation '
-  CreationTimestamp: '2011-12-28 11:51:29'
+  CreationTimestamp: '2011-12-28 09:51:29'
   Date: ''
   Description: RawDisk Driver. Allows write access to files and raw disk sectors for
     user mode applications in Windows 2000 and later.
@@ -357,7 +358,7 @@ KnownVulnerableSamples:
       Entropy: 4.0091827632792
       Virtual Size: '0x180'
     PAGE:
-      Entropy: 6.215625995230106
+      Entropy: 6.215625995230105
       Virtual Size: '0x2e87'
     INIT:
       Entropy: 5.372005883277131
@@ -366,7 +367,7 @@ KnownVulnerableSamples:
       Entropy: 3.363665203506053
       Virtual Size: '0x4c0'
     .reloc:
-      Entropy: 1.187679853670746
+      Entropy: 1.1876798536707462
       Virtual Size: '0x24'
   Signature:
   - EldoS Corporation
@@ -462,6 +463,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 0cba56fa162378bc4ee09e94a4e2fe33
 MitreID: T1068
 Resources:
 - ' https://github.com/jbaines-r7/dellicious'

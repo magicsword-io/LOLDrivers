@@ -46,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: 785e87bc23a1353fe0726554fd009aca69c320a98445a604a64e23ab45108087
   Company: 'Intel Corporation '
   Copyright: Copyright (C) 2002-2013 Intel Corporation All Rights Reserved.
-  CreationTimestamp: '2013-11-14 10:22:43'
+  CreationTimestamp: '2013-11-14 08:22:43'
   Date: ''
   Description: Intel(R) Network Adapter Diagnostic Driver
   ExportedFunctions: ''
@@ -123,7 +123,7 @@ KnownVulnerableSamples:
       Entropy: 4.307215755522235
       Virtual Size: '0x408'
     INIT:
-      Entropy: 5.835829282045136
+      Entropy: 5.835829282045137
       Virtual Size: '0x7a8'
     .rsrc:
       Entropy: 3.423830950438437
@@ -214,6 +214,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 55db306bc2be3ff71a6b91fd9db051b8
 MitreID: T1068
 Resources:
 - https://www.crowdstrike.com/blog/scattered-spider-attempts-to-avoid-detection-with-bring-your-own-vulnerable-driver-tactic/

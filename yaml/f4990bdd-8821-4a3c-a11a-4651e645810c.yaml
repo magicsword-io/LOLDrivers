@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 34b3acdeac5002880071f73b70aa3abd3a6facb9e281b5c93cc82a7a8a6d5cc1
   Company: ASUSTeK Computer Inc.
   Copyright: Copyright 2010 ASUSTeK Computer Inc.
-  CreationTimestamp: '2010-02-04 20:55:34'
+  CreationTimestamp: '2010-02-04 18:55:34'
   Date: ''
   Description: 'ASUS Kernel Mode Driver for NT '
   ExportedFunctions: ''
@@ -85,7 +85,7 @@ KnownVulnerableSamples:
   SHA256: ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41
   Sections:
     .text:
-      Entropy: 6.342255619210433
+      Entropy: 6.34225561921043
       Virtual Size: '0x2b08'
     .rdata:
       Entropy: 4.599132287329003
@@ -94,13 +94,13 @@ KnownVulnerableSamples:
       Entropy: 0.30140680731160896
       Virtual Size: '0x368'
     .pdata:
-      Entropy: 3.8853793595167896
+      Entropy: 3.885379359516789
       Virtual Size: '0x174'
     INIT:
       Entropy: 5.022850878062124
       Virtual Size: '0x308'
     .rsrc:
-      Entropy: 3.249669678665874
+      Entropy: 3.2496696786658736
       Virtual Size: '0x410'
   Signature:
   - ASUSTeK Computer Inc.
@@ -186,6 +186,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: 9928d53dbe860aba1b7c891831680629
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

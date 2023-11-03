@@ -30,7 +30,7 @@ KnownVulnerableSamples:
     SHA256: 7aa067d928404795b4eb9c169639f23997227504ca4eb7b5b21518e6155abd47
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2023-04-09 21:09:40'
+  CreationTimestamp: '2023-04-09 19:09:40'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -140,10 +140,10 @@ KnownVulnerableSamples:
       Entropy: 4.386100622624198
       Virtual Size: '0x4f8'
     .gfids:
-      Entropy: 0.8112781244591329
+      Entropy: 0.8112781244591328
       Virtual Size: '0x4'
     INIT:
-      Entropy: 5.1672446569399515
+      Entropy: 5.167244656939951
       Virtual Size: '0x96e'
     .reloc:
       Entropy: 3.2341837197791876
@@ -197,6 +197,7 @@ KnownVulnerableSamples:
     - SerialNumber: 0dbdf488aeaa9795e332a1ca2747af0d
       Issuer: C=US, O=thawte, Inc., CN=thawte SHA256 Code Signing CA
       Version: 1
+  Imphash: e3ee9131742bf9c9d43cb9a425e497dd
 MitreID: T1068
 Resources:
 - https://blog.talosintelligence.com/undocumented-reddriver/

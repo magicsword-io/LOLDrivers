@@ -44,7 +44,7 @@ KnownVulnerableSamples:
     SHA256: 57e9de67e908186b3cb8180caa2e5c5d7b6bb31969557b8bd5710d79089e8868
   Company: AsusTek Computer Inc.
   Copyright: Copyright (C) AsusTek Computer. 1992-2004
-  CreationTimestamp: '2006-12-14 04:38:08'
+  CreationTimestamp: '2006-12-14 02:38:08'
   Date: ''
   Description: Default BIOS Flash Driver
   ExportedFunctions: ''
@@ -100,7 +100,7 @@ KnownVulnerableSamples:
   SHA256: 0040153302b88bee27eb4f1eca6855039e1a057370f5e8c615724fa5215bada3
   Sections:
     .text:
-      Entropy: 6.265166959341223
+      Entropy: 6.265166959341222
       Virtual Size: '0x1dbc'
     .rdata:
       Entropy: 4.1389620692091595
@@ -200,13 +200,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: 3aa0ceb8fcd07cf2514d1cb0b9bccf4b
 - Authentihash:
     MD5: 7aa4c54af2ef8f71eb5c7976ab741fa3
     SHA1: c95b6a13289b6538c7f4b68f791758bda1036cbe
     SHA256: 3171d7af852e8b6be4651c415ea9490568475c45ecaa02a33dda9babb1643b07
   Company: AsusTek Computer Inc.
   Copyright: Copyright (C) AsusTek Computer. 1992-2004
-  CreationTimestamp: '2007-03-02 02:09:55'
+  CreationTimestamp: '2007-03-02 00:09:55'
   Date: ''
   Description: Default BIOS Flash Driver
   ExportedFunctions: ''
@@ -362,13 +363,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: 3aa0ceb8fcd07cf2514d1cb0b9bccf4b
 - Authentihash:
     MD5: 034aa8df77d5a2815c8f4cf9f1399fd3
     SHA1: e62d0712ddfd9fbaf9014cf43e49e2087a3f1ed2
     SHA256: eb11a4270a6980a97ea8775422dacbd1e763b7e5898f0a80c71c91449fff7ab4
   Company: AsusTek Computer Inc.
   Copyright: Copyright (C) AsusTek Computer. 1992-2004
-  CreationTimestamp: '2006-09-08 03:32:27'
+  CreationTimestamp: '2006-09-08 01:32:27'
   Date: ''
   Description: Default BIOS Flash Driver
   ExportedFunctions: ''
@@ -424,7 +426,7 @@ KnownVulnerableSamples:
   SHA256: 36b9e31240ab0341873c7092b63e2e0f2cab2962ebf9b25271c3a1216b7669eb
   Sections:
     .text:
-      Entropy: 6.265620446612746
+      Entropy: 6.265620446612747
       Virtual Size: '0x1d5c'
     .rdata:
       Entropy: 4.091497298735098
@@ -524,6 +526,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: 3aa0ceb8fcd07cf2514d1cb0b9bccf4b
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

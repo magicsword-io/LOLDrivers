@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: d580349730ace5170e7c33850bdcb37cbf16b70d0d1adc2568fdd223c2a55a77
   Company: Trend Micro Inc.
   Copyright: Copyright  (C)  2018 Trend Micro Incorporated. All rights reserved.
-  CreationTimestamp: '2018-04-09 06:08:57'
+  CreationTimestamp: '2018-04-09 04:08:57'
   Date: ''
   Description: TrendMicro Common Module
   ExportedFunctions:
@@ -780,7 +780,7 @@ KnownVulnerableSamples:
       Entropy: 4.6769393569967495
       Virtual Size: '0x33fc'
     .pdata:
-      Entropy: 5.592223762602372
+      Entropy: 5.59222376260237
       Virtual Size: '0x3ae0'
     .gfids:
       Entropy: 2.0
@@ -885,6 +885,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 0579e15c488a56c544e8fac130d826ba
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

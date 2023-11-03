@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: c786f3ca229da18b2806af4d57ecad603859ee548549b19f71a623f477fc740e
   Company: YY Inc.
   Copyright: "Copyright \xA9 2007-2017 YY Inc. All rights reserved."
-  CreationTimestamp: '2018-01-18 23:39:35'
+  CreationTimestamp: '2018-01-18 21:39:35'
   Date: ''
   Description: dianhu
   ExportedFunctions: ''
@@ -100,10 +100,10 @@ KnownVulnerableSamples:
   SHA256: 80cbba9f404df3e642f22c476664d63d7c229d45d34f5cd0e19c65eb41becec3
   Sections:
     .text:
-      Entropy: 6.123630314203944
+      Entropy: 6.123630314203942
       Virtual Size: '0x1670'
     .rdata:
-      Entropy: 4.0686329898333025
+      Entropy: 4.068632989833302
       Virtual Size: '0x758'
     .data:
       Entropy: 0.6055098552416325
@@ -112,7 +112,7 @@ KnownVulnerableSamples:
       Entropy: 3.8977003523597156
       Virtual Size: '0x180'
     .gfids:
-      Entropy: 0.8112781244591329
+      Entropy: 0.8112781244591328
       Virtual Size: '0x4'
     INIT:
       Entropy: 4.873962088217271
@@ -208,6 +208,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 50b6a9c4df6d0c9f517c804ad1307d7c
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

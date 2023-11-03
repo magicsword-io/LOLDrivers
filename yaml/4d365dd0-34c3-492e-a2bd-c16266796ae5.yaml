@@ -44,7 +44,7 @@ KnownVulnerableSamples:
     SHA256: ca829178d01990c8d1d6a681dee074a53f0dd873fd8eef6f6161c682449ec8c5
   Company: Arthur Liberman
   Copyright: Copyright (C) 2003-2009 Arthur Liberman
-  CreationTimestamp: '2013-03-05 16:50:34'
+  CreationTimestamp: '2013-03-05 14:50:34'
   Date: ''
   Description: ALSysIO
   ExportedFunctions: ''
@@ -191,13 +191,14 @@ KnownVulnerableSamples:
     - SerialNumber: 112124a45abbf7c551deb213b28633c3dcad
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: 82f5b92ccd99d13f4dd6ed6aaf0441bc
 - Authentihash:
     MD5: 966e1c16e1aa07044b733c5589f40fd7
     SHA1: 7027b399daf84a7c24dd010c2806bf6048a230bd
     SHA256: ac22a7cce3795e58c974056a86a06444e831d52185f9f37db88c65e14cd5bb75
   Company: Arthur Liberman
   Copyright: Copyright (C) 2003-2009 Arthur Liberman
-  CreationTimestamp: '2016-02-19 17:24:23'
+  CreationTimestamp: '2016-02-19 15:24:23'
   Date: ''
   Description: ALSysIO
   ExportedFunctions: ''
@@ -250,7 +251,7 @@ KnownVulnerableSamples:
   SHA256: 7f375639a0df7fe51e5518cf87c3f513c55bc117db47d28da8c615642eb18bfa
   Sections:
     .text:
-      Entropy: 6.118126498568241
+      Entropy: 6.118126498568242
       Virtual Size: '0x2f95'
     .rdata:
       Entropy: 4.334329395963305
@@ -259,13 +260,13 @@ KnownVulnerableSamples:
       Entropy: 0.5401996588023142
       Virtual Size: '0x19c'
     .pdata:
-      Entropy: 4.014945953829911
+      Entropy: 4.014945953829912
       Virtual Size: '0x1d4'
     INIT:
       Entropy: 5.0865478764498455
       Virtual Size: '0x3f0'
     .rsrc:
-      Entropy: 3.294435217270114
+      Entropy: 3.2944352172701143
       Virtual Size: '0x388'
   Signature:
   - Artur Liberman
@@ -345,13 +346,14 @@ KnownVulnerableSamples:
     - SerialNumber: 112124a45abbf7c551deb213b28633c3dcad
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: 82f5b92ccd99d13f4dd6ed6aaf0441bc
 - Authentihash:
     MD5: 7b9763c297936ce055a04790362cc75f
     SHA1: 530dd2863a09dc57801d62551c48eb9e48476fe8
     SHA256: 1c55b6620216c195ce24ef21e6ab7e181146fccf17c06606c4cd419fe3e45bd7
   Company: Arthur Liberman
   Copyright: Copyright (C) 2003-2019 Arthur Liberman
-  CreationTimestamp: '2019-02-01 12:48:41'
+  CreationTimestamp: '2019-02-01 10:48:41'
   Date: ''
   Description: ALSysIO64
   ExportedFunctions: ''
@@ -409,7 +411,7 @@ KnownVulnerableSamples:
   SHA256: 119c48b79735fda0ecd973d77d9bdc6b329960caed09b38ab454236ca039d280
   Sections:
     .text:
-      Entropy: 6.094646886255093
+      Entropy: 6.094646886255092
       Virtual Size: '0x3025'
     .rdata:
       Entropy: 4.4005847545275065
@@ -424,7 +426,7 @@ KnownVulnerableSamples:
       Entropy: 5.694732552989121
       Virtual Size: '0x178'
     INIT:
-      Entropy: 5.162586040360661
+      Entropy: 5.16258604036066
       Virtual Size: '0x49c'
     .rsrc:
       Entropy: 3.3268549437522807
@@ -510,6 +512,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Imphash: 2f7ea575cf15da16c8f117eee37046d8
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

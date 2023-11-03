@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: c4031eb0a40137c4ab6d2dbdd2755135c63ab137a0aeb74a7bbea6617b96f0a7
   Company: TOSHIBA Corporation
   Copyright: Copyright (C) 1999-2012 TOSHIBA Corporation. All Rights Reserved.
-  CreationTimestamp: '2013-01-14 20:59:36'
+  CreationTimestamp: '2013-01-14 18:59:36'
   Date: ''
   Description: BIOS Update Driver For Windows x64 Edition
   ExportedFunctions: ''
@@ -94,7 +94,7 @@ KnownVulnerableSamples:
       Entropy: 3.2580562234004296
       Virtual Size: '0x6c'
     INIT:
-      Entropy: 4.903742587310439
+      Entropy: 4.903742587310438
       Virtual Size: '0x2ae'
     .rsrc:
       Entropy: 3.4356081026839522
@@ -199,13 +199,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 17a9b50297a2334d8e9dfc3411bbe8ab
 - Authentihash:
     MD5: cedf27970826b662ee8b0de712b55804
     SHA1: a50d03e73f06b42e5d3b8eca737fca51af666e1e
     SHA256: 85686a6dec96776c2e8510fea7ca198b84429fb0b756a2d87ee1cc4570ac9b87
   Company: TOSHIBA Corporation
   Copyright: Copyright (C) 1999-2010 TOSHIBA Corporation. All Rights Reserved.
-  CreationTimestamp: '2010-12-16 08:08:35'
+  CreationTimestamp: '2010-12-16 06:08:35'
   Date: ''
   Description: BIOS Update Driver For Windows x64 Edition
   ExportedFunctions: ''
@@ -261,7 +262,7 @@ KnownVulnerableSamples:
       Entropy: 3.25805622340043
       Virtual Size: '0x6c'
     INIT:
-      Entropy: 4.914629955349569
+      Entropy: 4.914629955349568
       Virtual Size: '0x2ca'
     .rsrc:
       Entropy: 3.418422854912434
@@ -347,6 +348,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: c9f08d92efe88afb2545eb82a8870233
 MitreID: T1068
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'

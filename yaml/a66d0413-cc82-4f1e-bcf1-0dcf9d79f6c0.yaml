@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: c3fa4872fd2c286904a0cf37a392ef89fb6ba2a84fc9e1b66c70e0cb5ae28efa
   Company: BIOSTAR Group
   Copyright: Copyright (c) 2018-2019 BIOSTAR Group
-  CreationTimestamp: '2018-06-22 03:44:19'
+  CreationTimestamp: '2018-06-22 01:44:19'
   Date: ''
   Description: I/O Interface driver file
   ExportedFunctions: ''
@@ -99,7 +99,7 @@ KnownVulnerableSamples:
       Entropy: 4.575317657961913
       Virtual Size: '0x284'
     .data:
-      Entropy: 0.45466833455472844
+      Entropy: 0.4546683345547283
       Virtual Size: '0x13c'
     .pdata:
       Entropy: 3.779283626461584
@@ -151,6 +151,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: 095c0cdb9c0421da216371c1f4e8790e
 MitreID: T1068
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'

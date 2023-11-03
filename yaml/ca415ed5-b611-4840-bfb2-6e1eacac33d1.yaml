@@ -42,7 +42,7 @@ KnownVulnerableSamples:
     SHA256: 2dec76da0b361e4ed49a4015e67cefb0e6b812103d8ebf93b74016d99d9fcfad
   Company: IObit
   Copyright: "\xA9 IObit. All rights reserved."
-  CreationTimestamp: '2018-07-03 22:20:33'
+  CreationTimestamp: '2018-07-03 20:20:33'
   Date: ''
   Description: IObit Temperature Monitor
   ExportedFunctions: ''
@@ -80,7 +80,7 @@ KnownVulnerableSamples:
   SHA256: e4a7da2cf59a4a21fc42b611df1d59cae75051925a7ddf42bf216cc1a026eadb
   Sections:
     .text:
-      Entropy: 5.950234149757411
+      Entropy: 5.95023414975741
       Virtual Size: '0x6e2'
     .rdata:
       Entropy: 4.184043693662125
@@ -95,7 +95,7 @@ KnownVulnerableSamples:
       Entropy: 5.046663153942613
       Virtual Size: '0x242'
     .rsrc:
-      Entropy: 3.237474880156342
+      Entropy: 3.2374748801563418
       Virtual Size: '0x388'
   Signature:
   - IObit Information Technology
@@ -181,6 +181,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 MitreID: T1068
 Resources:
 - https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html

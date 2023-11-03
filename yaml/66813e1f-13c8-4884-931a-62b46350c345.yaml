@@ -30,7 +30,7 @@ KnownVulnerableSamples:
     SHA256: 22074c412bb82bd97768eba0cb40e451d75d969e94d0548af804aafc04ca02fd
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-10-10 21:26:25'
+  CreationTimestamp: '2022-10-10 19:26:25'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -116,7 +116,7 @@ KnownVulnerableSamples:
       Entropy: 4.204635975366644
       Virtual Size: '0x324'
     .gfids:
-      Entropy: 0.8112781244591329
+      Entropy: 0.8112781244591328
       Virtual Size: '0x4'
     PAGE:
       Entropy: 6.019078078470311
@@ -125,7 +125,7 @@ KnownVulnerableSamples:
       Entropy: 5.17688181935493
       Virtual Size: '0x6be'
     .rsrc:
-      Entropy: 2.618282835946623
+      Entropy: 2.6182828359466233
       Virtual Size: '0x140'
     .reloc:
       Entropy: 3.7531088905778556
@@ -213,6 +213,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 0262d4147f21d681f8519ab2af79283f
 MitreID: T1068
 Resources:
 - https://blog.talosintelligence.com/undocumented-reddriver/

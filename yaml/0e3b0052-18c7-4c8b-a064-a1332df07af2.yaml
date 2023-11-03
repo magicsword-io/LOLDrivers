@@ -34,7 +34,7 @@ KnownVulnerableSamples:
   Company: "\u96F7\u795E\uFF08\u6B66\u6C49\uFF09\u7F51\u7EDC\u6280\u672F\u6709\u9650\
     \u516C\u53F8"
   Copyright: Copyright @ Www.Nn.Com
-  CreationTimestamp: '2020-04-03 06:51:25'
+  CreationTimestamp: '2020-04-03 04:51:25'
   Date: ''
   Description: "\u96F7\u795ENN\u52A0\u901F\u5668-\u9A71\u52A8\u7A0B\u5E8F\u6587\u4EF6"
   ExportedFunctions: ''
@@ -187,7 +187,7 @@ KnownVulnerableSamples:
       Entropy: 3.686270807485425
       Virtual Size: '0x350'
     .reloc:
-      Entropy: 6.59068783742892
+      Entropy: 6.590687837428921
       Virtual Size: '0xc8a'
   Signature: ''
   Signatures:
@@ -266,6 +266,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       Version: 1
+  Imphash: 710e0a840c6027b3c64add0ff18631c3
 - Authentihash:
     MD5: 264c9453024d0f3b091f4ab6e8ca8d8b
     SHA1: aa937f73a8afcda98e868f4aeeb0eb81a4150075
@@ -273,7 +274,7 @@ KnownVulnerableSamples:
   Company: "\u96F7\u795E\uFF08\u6B66\u6C49\uFF09\u7F51\u7EDC\u6280\u672F\u6709\u9650\
     \u516C\u53F8"
   Copyright: Copyright @ Www.Nn.Com
-  CreationTimestamp: '2020-04-03 06:54:10'
+  CreationTimestamp: '2020-04-03 04:54:10'
   Date: ''
   Description: "\u96F7\u795ENN\u52A0\u901F\u5668-\u9A71\u52A8\u7A0B\u5E8F\u6587\u4EF6"
   ExportedFunctions: ''
@@ -413,10 +414,10 @@ KnownVulnerableSamples:
       Entropy: 4.7617738882730976
       Virtual Size: '0x1c7c'
     .data:
-      Entropy: 1.957315563263415
+      Entropy: 1.9573155632634147
       Virtual Size: '0x16c0'
     .pdata:
-      Entropy: 4.987692606613798
+      Entropy: 4.987692606613797
       Virtual Size: '0xd50'
     INIT:
       Entropy: 5.223648954698558
@@ -425,7 +426,7 @@ KnownVulnerableSamples:
       Entropy: 3.8633479531370662
       Virtual Size: '0x3b8'
     .reloc:
-      Entropy: 4.789360076662958
+      Entropy: 4.789360076662959
       Virtual Size: '0x130'
   Signature: ''
   Signatures:
@@ -504,6 +505,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       Version: 1
+  Imphash: ff016f73670717be3741d1044bf4b7a6
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

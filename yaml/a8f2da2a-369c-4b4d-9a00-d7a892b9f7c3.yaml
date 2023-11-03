@@ -9,7 +9,12 @@ Verified: 'TRUE'
 Commands:
   Command: sc.exe create wsdkd.sys binPath=C:\windows\temp\wsdkd.sys type=kernel &&
     sc.exe start wsdkd.sys
-  Description: 'A vulnerability was found in Watchdog Anti-Virus 1.4.214.0. It has been rated as critical. Affected by this issue is the function 0x80002008 in the library wsdk-driver.sys of the component IoControlCode Handler. The manipulation leads to improper access controls. Attacking locally is a requirement. The exploit has been disclosed to the public and may be used. VDB-223298 is the identifier assigned to this vulnerability.'
+  Description: A vulnerability was found in Watchdog Anti-Virus 1.4.214.0. It has
+    been rated as critical. Affected by this issue is the function 0x80002008 in the
+    library wsdk-driver.sys of the component IoControlCode Handler. The manipulation
+    leads to improper access controls. Attacking locally is a requirement. The exploit
+    has been disclosed to the public and may be used. VDB-223298 is the identifier
+    assigned to this vulnerability.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -20,9 +25,19 @@ Resources:
 Acknowledgement:
   Person: Chris Beckett, Jon Petersen
   Handle: '@cbecks_2'
-Detection: []
+Detection:
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
-- Filename: 'wsdkd.sys'
+- Filename: wsdkd.sys
   MD5: eff3a9cc3e99ef3ddae57df72807f0c7
   SHA1: 611411538b2bc9045d29bbd07e6845e918343e3c
   SHA256: 6278bc785113831b2ec3368e2c9c9e89e8aca49085a59d8d38dac651471d6440
@@ -140,5 +155,6 @@ KnownVulnerableSamples:
     - SerialNumber: 1f7b0de3090ee13a436315a6
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
       Version: 1
+  Imphash: 1e13511288689b63b2e1348bf5eb567b
 Tags:
 - wsdkd.sys

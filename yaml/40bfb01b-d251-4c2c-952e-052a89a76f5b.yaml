@@ -41,7 +41,7 @@ KnownVulnerableSamples:
   Company: Pan Yazilim Bilisim Teknolojileri Tic. Ltd. Sti.
   Copyright: "Copyright (c) 2012-2014 Pan Yaz\u0131l\u0131m Bilisim Teknolojileri\
     \ Tic. Ltd. Sti."
-  CreationTimestamp: '2014-05-13 06:15:50'
+  CreationTimestamp: '2014-05-13 04:15:50'
   Date: ''
   Description: PanCafe Manager File Monitor
   ExportedFunctions: ''
@@ -108,16 +108,16 @@ KnownVulnerableSamples:
       Entropy: 3.5547199827710894
       Virtual Size: '0x4cc'
     .data:
-      Entropy: 0.34315383128454086
+      Entropy: 0.3431538312845408
       Virtual Size: '0x1b8'
     .pdata:
-      Entropy: 3.7376979603170564
+      Entropy: 3.737697960317056
       Virtual Size: '0x15c'
     PAGE:
       Entropy: 6.263020524838166
       Virtual Size: '0xa4f'
     INIT:
-      Entropy: 5.508547194545658
+      Entropy: 5.508547194545659
       Virtual Size: '0x7b2'
     .rsrc:
       Entropy: 3.2818302394966063
@@ -204,6 +204,7 @@ KnownVulnerableSamples:
     - SerialNumber: 1121506480253469e07e54ee8612041fbb92
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: 175c5711f3c49a0d929e9e2314b21c6b
 MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'

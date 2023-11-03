@@ -22,7 +22,7 @@ KnownVulnerableSamples:
     SHA256: 60fb851ce3da03c319a423979b47a95dd231085d89b26516f3e25164a1a14dfb
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2023-05-21 08:19:33'
+  CreationTimestamp: '2023-05-21 06:19:33'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -69,10 +69,10 @@ KnownVulnerableSamples:
   SHA256: 0ae8d1dd56a8a000ced74a627052933d2e9bff31d251de185b3c0c5fc94a44db
   Sections:
     .text:
-      Entropy: 5.846074419668693
+      Entropy: 5.8460744196686925
       Virtual Size: '0x15d5'
     .rdata:
-      Entropy: 4.550998802140419
+      Entropy: 4.55099880214042
       Virtual Size: '0x97c'
     .data:
       Entropy: 0.9568619474743305
@@ -84,7 +84,7 @@ KnownVulnerableSamples:
       Entropy: 4.824674172237123
       Virtual Size: '0x326'
     .reloc:
-      Entropy: 3.642724905113433
+      Entropy: 3.6427249051134334
       Virtual Size: '0x38'
   Signature: ''
   Signatures:
@@ -108,6 +108,7 @@ KnownVulnerableSamples:
     - SerialNumber: 13d597c6ebaaaf994d4463d3387c0dd2
       Issuer: CN=WDKTestCert anash,133231280654008727
       Version: 1
+  Imphash: 3415f704b3149ea9a3d3a54036b208dd
 MitreID: T1068
 Resources:
 - https://github.com/ZeroMemoryEx/Chaos-Rootkit

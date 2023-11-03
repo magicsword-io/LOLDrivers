@@ -33,7 +33,7 @@ KnownVulnerableSamples:
     SHA256: 3de38ef40dbda07a537a7e48cb5d59dbd17bf27d5d399b32df737cd67c0cdb25
   Company: Trend Micro Inc.
   Copyright: Copyright (C) 2015 Trend Micro Incorporated. All rights reserved.
-  CreationTimestamp: '2015-05-08 02:06:46'
+  CreationTimestamp: '2015-05-08 00:06:46'
   Date: ''
   Description: TrendMicro ELAM Driver
   ExportedFunctions: ''
@@ -92,7 +92,7 @@ KnownVulnerableSamples:
   SHA256: dd628061d6e53f3f0b44f409ad914b3494c5d7b5ff6ff0e8fc3161aacec93e96
   Sections:
     .text:
-      Entropy: 6.361406803326353
+      Entropy: 6.361406803326352
       Virtual Size: '0x3f32'
     .rdata:
       Entropy: 4.152220214860239
@@ -147,13 +147,14 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: e53133e314605f61696ede9f23dbc14e
 - Authentihash:
     MD5: 93de89630be80425a0f5571498b89048
     SHA1: 6f39048e31f8e835f7537998bbd3b6ac5cff2c04
     SHA256: 4bef5f5160c6a981562597dda319f9a235c28d5beba5268a454f734500ec1f4f
   Company: Trend Micro Inc.
   Copyright: Copyright (C) 2015 Trend Micro Incorporated. All rights reserved.
-  CreationTimestamp: '2015-11-18 05:14:15'
+  CreationTimestamp: '2015-11-18 03:14:15'
   Date: ''
   Description: TrendMicro ELAM Driver (64-Bit)
   ExportedFunctions: ''
@@ -266,13 +267,14 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: f6aeb7d666f83d90492fb76d8af4e15b
 - Authentihash:
     MD5: 517db4899b3d996cb6f902b0611d233f
     SHA1: a9c9cb2548322748208199a7702d8056ad9a24fd
     SHA256: 0e121d80264c51df9a6fca2f2201d75ccd4dc29d9566bbf0975bb05759e9c6c7
   Company: Trend Micro Inc.
   Copyright: Copyright (C) 2015 Trend Micro Incorporated. All rights reserved.
-  CreationTimestamp: '2015-05-08 03:13:56'
+  CreationTimestamp: '2015-05-08 01:13:56'
   Date: ''
   Description: TrendMicro ELAM Driver (64-Bit)
   ExportedFunctions: ''
@@ -326,7 +328,7 @@ KnownVulnerableSamples:
   SHA256: d0eb3ba0aff471d19260192784bf9f056d669b779b6eaff84e732b7124ce1d11
   Sections:
     .text:
-      Entropy: 6.211209396417357
+      Entropy: 6.211209396417356
       Virtual Size: '0x4f84'
     .rdata:
       Entropy: 4.271822261614328
@@ -344,7 +346,7 @@ KnownVulnerableSamples:
       Entropy: 3.4851512565207843
       Virtual Size: '0x810'
     .reloc:
-      Entropy: 3.695966332799844
+      Entropy: 3.695966332799845
       Virtual Size: '0x11c'
   Signature: ''
   Signatures:
@@ -384,6 +386,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: e54f28e331d8e2b722551f3b280cc686
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

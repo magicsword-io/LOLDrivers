@@ -33,7 +33,7 @@ KnownVulnerableSamples:
     SHA256: 548c44566d19ba0975c9a22e7b592fda45bfa8831e56f55c1c3e7241d84dd175
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2012 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2012-05-10 09:05:22'
+  CreationTimestamp: '2012-05-10 07:05:22'
   Date: ''
   Description: HWiNFO IA64 Kernel Driver
   ExportedFunctions: ''
@@ -102,7 +102,7 @@ KnownVulnerableSamples:
   SHA256: 33c6c622464f80a8d8017a03ff3aa196840da8bb03bfb5212b51612b5cf953dc
   Sections:
     .text:
-      Entropy: 5.456120816192853
+      Entropy: 5.456120816192852
       Virtual Size: '0x6020'
     .rdata:
       Entropy: 3.1079121751758496
@@ -219,6 +219,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 7bf7d94570a80fb38c22341013531b14
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

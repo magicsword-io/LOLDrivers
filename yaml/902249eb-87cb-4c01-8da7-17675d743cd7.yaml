@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: f2b51fbeead17f5ee34d5b4a3a83c848fb76f8f0e80769212e137a7aa539a3bc
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2007-01-04 21:39:31'
+  CreationTimestamp: '2007-01-04 19:39:31'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -60,10 +60,10 @@ KnownVulnerableSamples:
   SHA256: 677c0b1add3990fad51f492553d3533115c50a242a919437ccb145943011d2bf
   Sections:
     .text:
-      Entropy: 6.132176234707052
+      Entropy: 6.132176234707054
       Virtual Size: '0xa2a'
     .rdata:
-      Entropy: 4.239377609592194
+      Entropy: 4.239377609592193
       Virtual Size: '0x17c'
     .data:
       Entropy: 0.4917211838342579
@@ -72,7 +72,7 @@ KnownVulnerableSamples:
       Entropy: 3.2669361989419348
       Virtual Size: '0x78'
     INIT:
-      Entropy: 4.880215733396521
+      Entropy: 4.880215733396522
       Virtual Size: '0x262'
   Signature:
   - Phoenix Technology Ltd.
@@ -157,6 +157,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: 7a4a0df0bde1f8da6547a580d5bee7c3
 MitreID: T1068
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'

@@ -23,7 +23,7 @@ KnownVulnerableSamples:
     SHA256: faa08cb609a5b7be6bfdb61f1e4a5e8adf2f5a1d2492f262483df7326934f5d4
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2016-09-05 02:43:33'
+  CreationTimestamp: '2016-09-05 00:43:33'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -62,13 +62,13 @@ KnownVulnerableSamples:
       Entropy: -0.0
       Virtual Size: '0xc0'
     .pdata:
-      Entropy: 3.0064696610766655
+      Entropy: 3.006469661076665
       Virtual Size: '0x48'
     .info:
-      Entropy: 1.3665783978789785
+      Entropy: 1.3665783978789787
       Virtual Size: '0xa0'
     INIT:
-      Entropy: 4.123682579107586
+      Entropy: 4.123682579107587
       Virtual Size: '0x114'
   Signature: ''
   Signatures:
@@ -151,6 +151,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: 45bfe170e0cd654bc1e2ae3fca3ac3f4
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

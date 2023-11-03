@@ -25,7 +25,7 @@ KnownVulnerableSamples:
     SHA256: 7018d515a6c781ea6097ca71d0f0603ad0d689f7ec99db27fcacd492a9e86027
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2018-02-12 02:57:50'
+  CreationTimestamp: '2018-02-12 00:57:50'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -65,7 +65,7 @@ KnownVulnerableSamples:
   SHA256: 525d9b51a80ca0cd4c5889a96f857e73f3a80da1ffbae59851e0f51bdfb0b6cd
   Sections:
     .text:
-      Entropy: 6.058139200380965
+      Entropy: 6.058139200380966
       Virtual Size: '0xf35'
     .rdata:
       Entropy: 4.121284123833754
@@ -77,7 +77,7 @@ KnownVulnerableSamples:
       Entropy: 3.1036058838796503
       Virtual Size: '0x54'
     INIT:
-      Entropy: 4.784008217365606
+      Entropy: 4.784008217365607
       Virtual Size: '0x262'
   Signature:
   - MICSYS Technology Co., Ltd.
@@ -136,6 +136,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       Version: 1
+  Imphash: 8a424cd36ae3eab0d11332ce3b982a02
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

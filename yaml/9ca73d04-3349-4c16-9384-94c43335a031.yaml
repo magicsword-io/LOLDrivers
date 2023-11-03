@@ -33,7 +33,7 @@ KnownVulnerableSamples:
     SHA256: 7fba2584bb4fb801f322e3a63253ffac36a76d9dc5f0a4747746b0791e2a0d0b
   Company: ASUStek
   Copyright: 'Copyright '
-  CreationTimestamp: '2013-03-21 08:35:29'
+  CreationTimestamp: '2013-03-21 06:35:29'
   Date: ''
   Description: The driver for the ECtool driver-based tools
   ExportedFunctions: ''
@@ -80,7 +80,7 @@ KnownVulnerableSamples:
   SHA256: 1beb15c90dcf7a5234ed077833a0a3e900969b60be1d04fcebce0a9f8994bdbb
   Sections:
     .text:
-      Entropy: 6.500568788219928
+      Entropy: 6.500568788219929
       Virtual Size: '0x2134'
     .rdata:
       Entropy: 4.3339555414847135
@@ -95,10 +95,10 @@ KnownVulnerableSamples:
       Entropy: 4.586659502510647
       Virtual Size: '0x59'
     INIT:
-      Entropy: 5.570641218013117
+      Entropy: 5.570641218013118
       Virtual Size: '0x444'
     .rsrc:
-      Entropy: 3.253689726676982
+      Entropy: 3.2536897266769826
       Virtual Size: '0x398'
     .reloc:
       Entropy: 1.3741854163060885
@@ -200,6 +200,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 83153e4562f92801f14f1b21f712cb46
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

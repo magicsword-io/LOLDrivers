@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 35b31c96194d78cbb98b3223bf810f78f53fc0e4601f49169938ca883586e4e9
   Company: HP Inc.
   Copyright: Copyright (C) 2020-2021 HP Inc. All rights reserved.
-  CreationTimestamp: '2021-04-20 23:22:47'
+  CreationTimestamp: '2021-04-20 21:22:47'
   Date: ''
   Description: HpPortIo
   ExportedFunctions: ''
@@ -116,7 +116,7 @@ KnownVulnerableSamples:
       Entropy: 4.080437825589189
       Virtual Size: '0x270'
     INIT:
-      Entropy: 5.1272276357613835
+      Entropy: 5.127227635761384
       Virtual Size: '0x534'
     .rsrc:
       Entropy: 3.2845087920390967
@@ -165,6 +165,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
         ID Code Signing CA
       Version: 1
+  Imphash: 75018719e85e67b75e73c57d682dbcbf
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

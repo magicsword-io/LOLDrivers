@@ -33,7 +33,7 @@ KnownVulnerableSamples:
     SHA256: c3fa8f5c8094a6c6936faff1d1faa02fd489482f21c288e6c700446ade5c20be
   Company: innotek GmbH
   Copyright: Copyright (C) 2004-2007 innotek GmbH
-  CreationTimestamp: '2007-10-18 03:49:33'
+  CreationTimestamp: '2007-10-18 01:49:33'
   Date: ''
   Description: VirtualBox Guest Driver
   ExportedFunctions:
@@ -145,13 +145,13 @@ KnownVulnerableSamples:
       Entropy: 6.112816718019873
       Virtual Size: '0xd2c'
     .edata:
-      Entropy: 4.985932824859425
+      Entropy: 4.985932824859424
       Virtual Size: '0x36f'
     INIT:
       Entropy: 5.424054586662424
       Virtual Size: '0x51a'
     .rsrc:
-      Entropy: 3.2752949163852607
+      Entropy: 3.27529491638526
       Virtual Size: '0x370'
     .reloc:
       Entropy: 6.423377612183336
@@ -248,13 +248,14 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 1de909f78f82f10ffb00bd2fe9da7dd1
 - Authentihash:
     MD5: 741b0c8a0a56340b62854cb121cb4930
     SHA1: 7618118dbe72c953e62e1bcac6b3c874ec43b72f
     SHA256: bfbc382decb986b6050268e53092eae5e981cb886ccfb116ca7a0b311cef3862
   Company: innotek GmbH
   Copyright: Copyright (C) 2004-2007 innotek GmbH
-  CreationTimestamp: '2008-02-19 11:09:00'
+  CreationTimestamp: '2008-02-19 09:09:00'
   Date: ''
   Description: VirtualBox Guest Driver
   ExportedFunctions:
@@ -360,22 +361,22 @@ KnownVulnerableSamples:
       Entropy: 4.919019075313747
       Virtual Size: '0x1298'
     .data:
-      Entropy: 1.270663545987896
+      Entropy: 1.2706635459878959
       Virtual Size: '0x64'
     PAGE:
-      Entropy: 6.057194637350652
+      Entropy: 6.057194637350653
       Virtual Size: '0x83c'
     .edata:
-      Entropy: 5.0516779936149145
+      Entropy: 5.051677993614914
       Virtual Size: '0x371'
     INIT:
-      Entropy: 6.061100966964756
+      Entropy: 6.061100966964755
       Virtual Size: '0x854'
     .rsrc:
-      Entropy: 3.3367412651633326
+      Entropy: 3.336741265163333
       Virtual Size: '0x388'
     .reloc:
-      Entropy: 6.388840902014099
+      Entropy: 6.388840902014098
       Virtual Size: '0x3ca'
   Signature: ''
   Signatures:
@@ -468,6 +469,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 60c1eb7640a50cdacdac1212965b1b25
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

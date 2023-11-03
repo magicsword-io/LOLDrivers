@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 539aa921b5352ab385430e1608ac5c0ae36f35e678d471b7a5994ec7c02eadea
   Company: Windows (R) Server 2003 DDK provider
   Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  CreationTimestamp: '2007-07-13 09:25:20'
+  CreationTimestamp: '2007-07-13 07:25:20'
   Date: ''
   Description: CPUID Driver
   ExportedFunctions: ''
@@ -81,10 +81,10 @@ KnownVulnerableSamples:
       Entropy: 5.910901072438337
       Virtual Size: '0x1294'
     .rdata:
-      Entropy: 4.629269752704383
+      Entropy: 4.629269752704382
       Virtual Size: '0x3bc'
     .data:
-      Entropy: 0.6699250014423125
+      Entropy: 0.6699250014423124
       Virtual Size: '0x24'
     .pdata:
       Entropy: 3.2898520572409398
@@ -93,7 +93,7 @@ KnownVulnerableSamples:
       Entropy: 4.263302108012708
       Virtual Size: '0x1b8'
     .rsrc:
-      Entropy: 3.397367031344437
+      Entropy: 3.3973670313444364
       Virtual Size: '0x3d8'
   Signature:
   - CPUID
@@ -178,6 +178,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: 78eaf4d62617f6b614d318cc70c6548a
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

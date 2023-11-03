@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 2bbbe2ae5aa51868e7afc2c16c3a0a79fa3302e6830feeccca7f0363a62dddb4
   Company: Legal Corp.
   Copyright: 2016 Legal
-  CreationTimestamp: '2017-10-24 02:01:19'
+  CreationTimestamp: '2017-10-24 00:01:19'
   Date: ''
   Description: PCIe Video Capture
   ExportedFunctions: ''
@@ -157,13 +157,13 @@ KnownVulnerableSamples:
       Entropy: 4.6238943300255775
       Virtual Size: '0x1ab24'
     .data:
-      Entropy: 3.356767859292879
+      Entropy: 3.3567678592928782
       Virtual Size: '0x205d4'
     .pdata:
       Entropy: 5.574699559285883
       Virtual Size: '0x1f08'
     PAGE:
-      Entropy: 0.8112781244591329
+      Entropy: 0.8112781244591328
       Virtual Size: '0x18'
     INIT:
       Entropy: 5.187652924677167
@@ -172,7 +172,7 @@ KnownVulnerableSamples:
       Entropy: 3.3153275739966412
       Virtual Size: '0x378'
     .reloc:
-      Entropy: 3.348012535903828
+      Entropy: 3.3480125359038277
       Virtual Size: '0x8e8'
   Signature:
   - Microsoft Windows Hardware Compatibility Publisher
@@ -215,6 +215,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: 3c5d2ffd06074f1b09c89465cc8bfbf7
 MitreID: T1068
 Resources:
 - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware

@@ -33,7 +33,7 @@ KnownVulnerableSamples:
     SHA256: af10796af9886b896de11d9067ed2b1569e48e0a5a8cacbc06bc50a533d8bec8
   Company: Almico Software
   Copyright: "Copyright \xA9 Almico Software 2001-2011"
-  CreationTimestamp: '2011-03-18 12:08:45'
+  CreationTimestamp: '2011-03-18 10:08:45'
   Date: ''
   Description: SpeedFan x32 Driver
   ExportedFunctions: ''
@@ -87,7 +87,7 @@ KnownVulnerableSamples:
   SHA256: 1e94d4e6d903e98f60c240dc841dcace5f9e8bbb0802e6648a49ab80c23318cb
   Sections:
     .text:
-      Entropy: 6.618252192171535
+      Entropy: 6.618252192171536
       Virtual Size: '0x26e7'
     .rdata:
       Entropy: 4.422031295522142
@@ -96,7 +96,7 @@ KnownVulnerableSamples:
       Entropy: 2.709147917027245
       Virtual Size: '0x18'
     PAGE:
-      Entropy: 6.060957081751257
+      Entropy: 6.0609570817512575
       Virtual Size: '0x78c'
     INIT:
       Entropy: 5.994685980292978
@@ -202,13 +202,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 79bd6aa7fc10b9dec95deb431c299ab0
 - Authentihash:
     MD5: 1dd0af6b54c93c4328f7c5006cd4f96a
     SHA1: 29f2f4ac858b8736927ed1df4921ff283bbaa05f
     SHA256: 103c1735b0ad3fc22070c3268580cd3fdbef0129a787dbc51bd5d36639515a8f
   Company: Almico Software
   Copyright: "Copyright \xA9 Almico Software 2001-2013"
-  CreationTimestamp: '2012-12-29 15:59:33'
+  CreationTimestamp: '2012-12-29 13:59:33'
   Date: ''
   Description: SpeedFan x32 Driver
   ExportedFunctions: ''
@@ -271,7 +272,7 @@ KnownVulnerableSamples:
       Entropy: 2.709147917027245
       Virtual Size: '0x18'
     PAGE:
-      Entropy: 6.10404931121436
+      Entropy: 6.104049311214361
       Virtual Size: '0x894'
     INIT:
       Entropy: 6.023660971492092
@@ -357,6 +358,7 @@ KnownVulnerableSamples:
     - SerialNumber: 112195d7aa105e2ffc7b0e33f36da1636e74
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: 79bd6aa7fc10b9dec95deb431c299ab0
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

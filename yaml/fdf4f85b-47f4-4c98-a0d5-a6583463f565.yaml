@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 99ddeba6bcdc79e52e3ff8afc63dbe4b299161cf0f5558a2d7630c2a18daf2c6
   Company: Windows (R) Win 7 DDK provider
   Copyright: Copyright (C) Voicemod S.L.2010-2020
-  CreationTimestamp: '2022-02-22 15:12:24'
+  CreationTimestamp: '2022-02-22 13:12:24'
   Date: ''
   Description: Voicemod Virtual Audio Device (WDM)
   ExportedFunctions: ''
@@ -108,10 +108,10 @@ KnownVulnerableSamples:
       Entropy: 5.72820930665092
       Virtual Size: '0x1466'
     .rdata:
-      Entropy: 4.710434529975731
+      Entropy: 4.71043452997573
       Virtual Size: '0x1440'
     .data:
-      Entropy: 1.961269937132157
+      Entropy: 1.9612699371321567
       Virtual Size: '0x72c'
     .pdata:
       Entropy: 4.38228852061058
@@ -169,6 +169,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Global G3 Code Signing ECC SHA384
         2021 CA1
       Version: 1
+  Imphash: 7c24141cdcfc23f5eb0e2b6792d80740
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

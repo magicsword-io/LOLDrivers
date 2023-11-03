@@ -52,7 +52,7 @@ KnownVulnerableSamples:
     SHA256: 9c0e80958b907c8df345ec2f8d711acefb4951ee3e6e84892ecd429f5e1f3acb
   Company: Windows (R) Server 2003 DDK provider
   Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  CreationTimestamp: '2013-07-04 00:27:55'
+  CreationTimestamp: '2013-07-03 22:27:55'
   Date: ''
   Description: GIGABYTE Tools
   ExportedFunctions: ''
@@ -109,7 +109,7 @@ KnownVulnerableSamples:
       Entropy: 6.2502047491555315
       Virtual Size: '0x2dc8'
     .rdata:
-      Entropy: 4.431694959682768
+      Entropy: 4.431694959682769
       Virtual Size: '0x610'
     .data:
       Entropy: 0.4231266687750792
@@ -121,7 +121,7 @@ KnownVulnerableSamples:
       Entropy: 4.963482726390094
       Virtual Size: '0x412'
     .rsrc:
-      Entropy: 3.4719099505127566
+      Entropy: 3.471909950512757
       Virtual Size: '0x3e8'
   Signature:
   - Giga-Byte Technology
@@ -208,13 +208,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: cc81a908891587ccac8059435eda4c66
 - Authentihash:
     MD5: bf45a5d10968424666abede02113a509
     SHA1: 5c26f130f6a5ad8bdd2eed29140542dae0885b17
     SHA256: 34da66774ba09c4a8fc59349401ca1fefaaf4e66a9c620c7782c072a16089ba3
   Company: GIGA-BYTE TECHNOLOGY CO., LTD.
   Copyright: Copyright (C) 2017
-  CreationTimestamp: '2017-12-01 00:40:53'
+  CreationTimestamp: '2017-11-30 22:40:53'
   Date: 2013-07-03 17:32:00 UTC, 2017-11-30 18:40:00 UTC
   Description: GIGA-BYTE NonPNP Driver
   ExportedFunctions: ''
@@ -278,10 +279,10 @@ KnownVulnerableSamples:
       Entropy: 1.2607720515150977
       Virtual Size: '0x54'
     .pdata:
-      Entropy: 3.9372515335486327
+      Entropy: 3.937251533548631
       Virtual Size: '0x1ec'
     .gfids:
-      Entropy: 0.8112781244591329
+      Entropy: 0.8112781244591328
       Virtual Size: '0x4'
     INIT:
       Entropy: 5.256526972951585
@@ -376,13 +377,14 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: 1d774a94ad511efe5ebfe70acc6f8c85
 - Authentihash:
     MD5: b18b1bff521337695d2d6a0768340252
     SHA1: 0f5034fcf5b34be22a72d2ecc29e348e93b6f00f
     SHA256: 9c0e80958b907c8df345ec2f8d711acefb4951ee3e6e84892ecd429f5e1f3acb
   Company: Windows (R) Server 2003 DDK provider
   Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  CreationTimestamp: '2013-07-04 00:27:55'
+  CreationTimestamp: '2013-07-03 22:27:55'
   Date: ''
   Description: GIGABYTE Tools
   ExportedFunctions: ''
@@ -440,7 +442,7 @@ KnownVulnerableSamples:
       Entropy: 6.2502047491555315
       Virtual Size: '0x2dc8'
     .rdata:
-      Entropy: 4.431694959682768
+      Entropy: 4.431694959682769
       Virtual Size: '0x610'
     .data:
       Entropy: 0.4231266687750792
@@ -452,7 +454,7 @@ KnownVulnerableSamples:
       Entropy: 4.963482726390094
       Virtual Size: '0x412'
     .rsrc:
-      Entropy: 3.4719099505127566
+      Entropy: 3.471909950512757
       Virtual Size: '0x3e8'
   Signature: ''
   Signatures:
@@ -536,6 +538,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: cc81a908891587ccac8059435eda4c66
 MitreID: T1068
 Resources:
 - https://github.com/hoangprod/DanSpecial

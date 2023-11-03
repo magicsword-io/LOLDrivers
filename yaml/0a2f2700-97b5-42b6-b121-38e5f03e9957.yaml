@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: f67e60228084151fdcb84e94a48693db864cf606b65faef5a1d829175380dbfa
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2017-01-16 21:29:00'
+  CreationTimestamp: '2017-01-16 19:29:00'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -89,7 +89,7 @@ KnownVulnerableSamples:
       Entropy: 4.674544303018785
       Virtual Size: '0x127'
     .data:
-      Entropy: 1.321928094887362
+      Entropy: 1.3219280948873622
       Virtual Size: '0x28'
     INIT:
       Entropy: 5.6725581816645905
@@ -179,6 +179,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Imphash: 1d05fb30a58133da2e9dbdfcf51b80fd
 MitreID: T1068
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules

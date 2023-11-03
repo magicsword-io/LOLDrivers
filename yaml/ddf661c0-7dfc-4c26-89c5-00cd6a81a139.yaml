@@ -29,7 +29,7 @@ KnownVulnerableSamples:
     SHA256: b0399dd3c395f84cbd6ac2e3e8ca8ee344a0f699b17db0624f936ae4bb4b7953
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-11-28 05:10:24'
+  CreationTimestamp: '2022-11-28 03:10:24'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -62,22 +62,22 @@ KnownVulnerableSamples:
   SHA256: b8807e365be2813b7eccd2e4c49afb0d1e131086715638b7a6307cd7d7e9556c
   Sections:
     .text:
-      Entropy: 6.360436024553697
+      Entropy: 6.360436024553698
       Virtual Size: '0x703'
     .rdata:
       Entropy: 3.196284553772549
       Virtual Size: '0x120'
     .data:
-      Entropy: 0.2061122164653855
+      Entropy: 0.20611221646538552
       Virtual Size: '0xe0'
     .pdata:
       Entropy: 3.280267161802354
       Virtual Size: '0x6c'
     .info:
-      Entropy: 1.5662542468017435
+      Entropy: 1.5662542468017437
       Virtual Size: '0xa0'
     INIT:
-      Entropy: 4.100595531867452
+      Entropy: 4.1005955318674525
       Virtual Size: '0x12e'
   Signature: ''
   Signatures:
@@ -117,13 +117,14 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: df43355c636583e56e92142dcc69cc58
 - Authentihash:
     MD5: 82a8528c1c8391d38cbd90ba8823f833
     SHA1: 0122f7a57784f2ac460d175687450d8940cace6e
     SHA256: d16a59cd7c52d1d32bb43670cdca739aadb19ba15996bac62071845e1bfbdb95
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-07-01 01:25:32'
+  CreationTimestamp: '2022-06-30 23:25:32'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -171,7 +172,7 @@ KnownVulnerableSamples:
       Entropy: 1.5240361999132217
       Virtual Size: '0xa0'
     INIT:
-      Entropy: 4.100595531867452
+      Entropy: 4.1005955318674525
       Virtual Size: '0x12e'
   Signature: ''
   Signatures:
@@ -211,6 +212,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: df43355c636583e56e92142dcc69cc58
 MitreID: T1068
 Resources:
 - https://github.com/kkent030315/CVE-2022-42046

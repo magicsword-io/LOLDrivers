@@ -33,7 +33,7 @@ KnownVulnerableSamples:
     SHA256: 07c0239c548fdabcb18ac3b54001edd0f8abffd8285e39662d7632a26456d58b
   Company: innotek GmbH
   Copyright: Copyright (C) 2004-2007 innotek GmbH
-  CreationTimestamp: '2008-02-19 11:08:53'
+  CreationTimestamp: '2008-02-19 09:08:53'
   Date: ''
   Description: VirtualBox i8042 Port Driver
   ExportedFunctions:
@@ -157,7 +157,7 @@ KnownVulnerableSamples:
   SHA256: bbf564a02784d53b8006333406807c3539ee4a594585b1f3713325904cb730ec
   Sections:
     .text:
-      Entropy: 6.51104273846103
+      Entropy: 6.511042738461029
       Virtual Size: '0x55c4'
     .rdata:
       Entropy: 5.112430369048444
@@ -166,16 +166,16 @@ KnownVulnerableSamples:
       Entropy: 1.9734116454177761
       Virtual Size: '0x668'
     .edata:
-      Entropy: 5.028967461980269
+      Entropy: 5.028967461980268
       Virtual Size: '0x371'
     INIT:
       Entropy: 6.396099012840886
       Virtual Size: '0x2c86'
     .rsrc:
-      Entropy: 3.318119849906198
+      Entropy: 3.3181198499061986
       Virtual Size: '0x398'
     .reloc:
-      Entropy: 6.5227889403172075
+      Entropy: 6.522788940317208
       Virtual Size: '0x550'
   Signature: ''
   Signatures:
@@ -268,6 +268,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 218b721c746ae678c4a55323447495e8
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

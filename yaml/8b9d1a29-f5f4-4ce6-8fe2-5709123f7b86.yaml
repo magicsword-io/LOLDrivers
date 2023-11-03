@@ -23,7 +23,7 @@ KnownVulnerableSamples:
     SHA256: 9dcfd796e244d0687cc35eac9538f209f76c6df12de166f19dbc7d2c47fb16b3
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2012-08-22 05:54:47'
+  CreationTimestamp: '2012-08-22 03:54:47'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -69,7 +69,7 @@ KnownVulnerableSamples:
       Entropy: 6.1181571322303645
       Virtual Size: '0xd66'
     .rdata:
-      Entropy: 4.313686441268312
+      Entropy: 4.313686441268313
       Virtual Size: '0x188'
     .data:
       Entropy: 0.0
@@ -118,6 +118,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       Version: 1
+  Imphash: d7de998e454f947f62d4a6b66490563b
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

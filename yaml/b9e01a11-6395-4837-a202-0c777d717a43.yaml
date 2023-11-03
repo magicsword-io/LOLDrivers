@@ -23,7 +23,7 @@ KnownVulnerableSamples:
     SHA256: 6279821bf9ecced596f474c8fc547dab0bddbb3ab972390596bd4c5c7b85c685
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-12-21 17:15:00'
+  CreationTimestamp: '2021-12-21 15:15:00'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -97,7 +97,7 @@ KnownVulnerableSamples:
       Entropy: 1.7544455127443097
       Virtual Size: '0x368'
     .pdata:
-      Entropy: 4.04459244378673
+      Entropy: 4.044592443786725
       Virtual Size: '0x1ec'
     PAGE:
       Entropy: 6.216453412622539
@@ -214,6 +214,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
         CA , SHA256 , G3
       Version: 1
+  Imphash: 3a0b4122e41bf6973f2e7c1b5eee9c5b
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

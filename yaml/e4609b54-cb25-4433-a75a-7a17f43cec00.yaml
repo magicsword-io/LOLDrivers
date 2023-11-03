@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: d852810a7319e3249077a1b9f1317f6f4157a19bb99b90063d118c30c2c84ac2
   Company: "Windows\xAE winows 7 driver kits provider"
   Copyright: "Copyright\xA9 Microsoft Corporation. All rights reserved."
-  CreationTimestamp: '2012-07-28 01:28:05'
+  CreationTimestamp: '2012-07-27 23:28:05'
   Date: ''
   Description: Hardware read & write driver
   ExportedFunctions: ''
@@ -81,19 +81,19 @@ KnownVulnerableSamples:
       Entropy: 6.002580848253962
       Virtual Size: '0x738'
     .rdata:
-      Entropy: 4.153369840669389
+      Entropy: 4.153369840669388
       Virtual Size: '0x1a0'
     .data:
       Entropy: 0.5096713223407059
       Virtual Size: '0x114'
     .pdata:
-      Entropy: 3.3767756355039413
+      Entropy: 3.3767756355039418
       Virtual Size: '0x78'
     INIT:
       Entropy: 5.046663153942613
       Virtual Size: '0x242'
     .rsrc:
-      Entropy: 3.2619744840394893
+      Entropy: 3.261974484039489
       Virtual Size: '0x458'
   Signature:
   - Shuttle Inc.
@@ -180,6 +180,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

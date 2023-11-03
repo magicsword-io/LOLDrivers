@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: 70870e20f563899e4f05be2d0049cb495552b409ca7f4729a335bcbfffc3f47c
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2011-10-20 03:35:13'
+  CreationTimestamp: '2011-10-20 01:35:13'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -62,7 +62,7 @@ KnownVulnerableSamples:
   SHA256: b9a4e40a5d80fedd1037eaed958f9f9efed41eb01ada73d51b5dcd86e27e0cbf
   Sections:
     .text:
-      Entropy: 6.05993849352347
+      Entropy: 6.059938493523471
       Virtual Size: '0xe9c'
     .rdata:
       Entropy: 4.411239902936905
@@ -160,6 +160,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: 9d5a58052468c8e07ff3d5bd730e5d00
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

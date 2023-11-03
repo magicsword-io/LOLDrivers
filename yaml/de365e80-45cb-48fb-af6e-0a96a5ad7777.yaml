@@ -42,7 +42,7 @@ KnownVulnerableSamples:
     SHA256: 2b4af74d74a4380130a1c46d2f1ffe112d87d9d7646540bbbd201c5bd176082b
   Company: Creative Technology Innovation Co., LTd.
   Copyright: Copyright (c) 2021 CTI
-  CreationTimestamp: '2021-05-06 23:21:55'
+  CreationTimestamp: '2021-05-06 21:21:55'
   Date: ''
   Description: CTI IO driver
   ExportedFunctions: ''
@@ -82,7 +82,7 @@ KnownVulnerableSamples:
   SHA256: 2121a2bb8ebbf2e6e82c782b6f3c6b7904f686aa495def25cf1cf52a42e16109
   Sections:
     .text:
-      Entropy: 6.003998833007613
+      Entropy: 6.003998833007615
       Virtual Size: '0xe45'
     .rdata:
       Entropy: 4.524233693641258
@@ -91,13 +91,13 @@ KnownVulnerableSamples:
       Entropy: 0.5014196173403422
       Virtual Size: '0x130'
     .pdata:
-      Entropy: 2.884789406576419
+      Entropy: 2.8847894065764192
       Virtual Size: '0x54'
     INIT:
-      Entropy: 4.780729528841016
+      Entropy: 4.780729528841017
       Virtual Size: '0x262'
     .rsrc:
-      Entropy: 3.3482897348871425
+      Entropy: 3.348289734887143
       Virtual Size: '0x3a0'
   Signature: ''
   Signatures:
@@ -137,6 +137,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: 8a424cd36ae3eab0d11332ce3b982a02
 MitreID: T1068
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/pull/81

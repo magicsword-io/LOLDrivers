@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: 565733b6e6d8f7b9661f04a3b4f29372f5dec080512551204b92ac4916a144cb
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-12-12 12:14:51'
+  CreationTimestamp: '2013-12-12 10:14:51'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -66,7 +66,7 @@ KnownVulnerableSamples:
       Entropy: 5.937121058090373
       Virtual Size: '0xb9b'
     .rdata:
-      Entropy: 4.490966677486937
+      Entropy: 4.490966677486938
       Virtual Size: '0x1ac'
     .data:
       Entropy: 0.5159719988134768
@@ -118,6 +118,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: 3fd33d5b3b52e2db91983ac4b1d7a3c4
 MitreID: T1068
 Resources:
 - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware

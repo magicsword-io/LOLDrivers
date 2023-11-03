@@ -20,7 +20,7 @@ KnownVulnerableSamples:
     SHA256: 911e01544557544de4ad59b374f1234513821c50a00c7afa62a8fcca07385b2f
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-11-28 08:29:00'
+  CreationTimestamp: '2013-11-28 06:29:00'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -59,16 +59,16 @@ KnownVulnerableSamples:
       Entropy: 2.5448150550251083
       Virtual Size: '0xa0'
     .data:
-      Entropy: 4.727146336862169
+      Entropy: 4.727146336862168
       Virtual Size: '0x4bf'
     .pdata:
-      Entropy: 3.1420760231380385
+      Entropy: 3.142076023138039
       Virtual Size: '0x84'
     INIT:
       Entropy: 4.012978735724934
       Virtual Size: '0x122'
     .rsrc:
-      Entropy: 4.085285638853218
+      Entropy: 4.085285638853219
       Virtual Size: '0xb0'
   Signature:
   - Samsung Electronics Co., Ltd.
@@ -136,6 +136,7 @@ KnownVulnerableSamples:
     - SerialNumber: 1121d54c6060d0acf70c52ceac844116f169
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: 3ec1e7e215efad2711248558465da9ad
 MitreID: T1068
 Resources:
 - https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html

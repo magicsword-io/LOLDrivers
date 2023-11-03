@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: b6bf2460e023b1005cc60e107b14a3cfdf9284cc378a086d92e5dcdf6e432e2c
   Company: ASRock Incorporation
   Copyright: Copyright (C) 2012 ASRock Incorporation
-  CreationTimestamp: '2016-04-08 23:22:23'
+  CreationTimestamp: '2016-04-08 21:22:23'
   Date: ''
   Description: ASRock IO Driver
   ExportedFunctions: ''
@@ -123,7 +123,7 @@ KnownVulnerableSamples:
       Entropy: 6.3051619106052055
       Virtual Size: '0x2238'
     .rdata:
-      Entropy: 4.489737477422065
+      Entropy: 4.489737477422066
       Virtual Size: '0x7c4'
     .data:
       Entropy: 1.3791658791138062
@@ -141,7 +141,7 @@ KnownVulnerableSamples:
       Entropy: 3.2917593657396744
       Virtual Size: '0x3a0'
     .reloc:
-      Entropy: 1.2280731978955794
+      Entropy: 1.2280731978955797
       Virtual Size: '0x60'
   Signature:
   - ASROCK Incorporation
@@ -242,6 +242,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 88e21ed9e717781eaf87209acbdbb567
 MitreID: T1068
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'

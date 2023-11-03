@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: a689804c4e6e9aa07d48f9c99b7a1be6b05cba1c632b1a083b8031f6e1651c28
   Company: MyDrivers.com
   Copyright: Copyright MyDrivers.com all right
-  CreationTimestamp: '2016-07-07 05:47:37'
+  CreationTimestamp: '2016-07-07 03:47:37'
   Date: ''
   Description: DriverGenius Hardware monitor
   ExportedFunctions: ''
@@ -94,13 +94,13 @@ KnownVulnerableSamples:
       Entropy: 6.200805818650461
       Virtual Size: '0xaf2'
     .rdata:
-      Entropy: 4.072413187793461
+      Entropy: 4.072413187793462
       Virtual Size: '0x1b4'
     .data:
-      Entropy: 2.918295834054489
+      Entropy: 2.9182958340544896
       Virtual Size: '0xc'
     INIT:
-      Entropy: 5.469889098050979
+      Entropy: 5.469889098051007
       Virtual Size: '0x336'
     .rsrc:
       Entropy: 3.2912171468929072
@@ -194,6 +194,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: a1d29a3af6402793ec9d23883512938a
 MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'

@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: ab494aba56e9ea7b6055ac437f6b678e7239b0fda54bf28019480565a098a6e3
   Company: Huawei
   Copyright: Copyright (C) 2016
-  CreationTimestamp: '2018-03-23 02:56:31'
+  CreationTimestamp: '2018-03-23 00:56:31'
   Date: ''
   Description: HwOs2Ec
   ExportedFunctions: ''
@@ -158,16 +158,16 @@ KnownVulnerableSamples:
       Entropy: 0.30140680731160896
       Virtual Size: '0x27c'
     .pdata:
-      Entropy: 4.3300990695918395
+      Entropy: 4.330099069591839
       Virtual Size: '0x3d8'
     .gfids:
-      Entropy: 0.8112781244591329
+      Entropy: 0.8112781244591328
       Virtual Size: '0x4'
     PAGE:
-      Entropy: 6.294080780063294
+      Entropy: 6.294080780063295
       Virtual Size: '0x2160'
     INIT:
-      Entropy: 5.409627830089686
+      Entropy: 5.409627830089687
       Virtual Size: '0xb68'
     .rsrc:
       Entropy: 3.2265908774923377
@@ -314,6 +314,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       Version: 1
+  Imphash: 071356ee9d8c7f91cbe8fa3c448286a2
 MitreID: T1068
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'

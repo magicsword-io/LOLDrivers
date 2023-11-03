@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: e1d2d76829640542eabc0c96356675c0a930e4607869de8037daf62f898903b5
   Company: Insyde Software Corp.
   Copyright: Copyright (c) 2012 - 2014, Insyde Software Corp. All Rights Reserved.
-  CreationTimestamp: '2014-03-26 01:49:03'
+  CreationTimestamp: '2014-03-25 23:49:03'
   Date: ''
   Description: SEG Windows Driver x64
   ExportedFunctions: ''
@@ -95,10 +95,10 @@ KnownVulnerableSamples:
   SHA256: 0d30c6c4fa0216d0637b4049142bc275814fd674859373bd4af520ce173a1c75
   Sections:
     .text:
-      Entropy: 5.730097404505607
+      Entropy: 5.730097404505606
       Virtual Size: '0x4e76'
     init:
-      Entropy: 5.8094903640520075
+      Entropy: 5.809490364052008
       Virtual Size: '0xba0'
     page:
       Entropy: 5.918798816254175
@@ -107,7 +107,7 @@ KnownVulnerableSamples:
       Entropy: 4.589120564200675
       Virtual Size: '0x45c'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x8c0'
     .pdata:
       Entropy: 4.582338372329757
@@ -119,7 +119,7 @@ KnownVulnerableSamples:
       Entropy: 3.3571301170640653
       Virtual Size: '0x418'
     .reloc:
-      Entropy: 1.523009654835499
+      Entropy: 1.5230096548354992
       Virtual Size: '0x18'
   Signature: ''
   Signatures:
@@ -217,13 +217,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 865c945f842a3f5f5453fb90d12f6765
 - Authentihash:
     MD5: bfc8d6405949be17179975d604e62c90
     SHA1: c7d32983805f04c7aac4e9713d203399aaca7acc
     SHA256: f1f345591efe74fd12e706132939f51963eb39dd0a1db556123c3e850c60fada
   Company: Insyde Software Corp.
   Copyright: Copyright (c) 2012 - 2015, Insyde Software Corp. All Rights Reserved.
-  CreationTimestamp: '2015-04-01 05:39:09'
+  CreationTimestamp: '2015-04-01 03:39:09'
   Date: ''
   Description: SEG Windows Driver x64
   ExportedFunctions: ''
@@ -277,13 +278,13 @@ KnownVulnerableSamples:
   SHA256: 65329dad28e92f4bcc64de15c552b6ef424494028b18875b7dba840053bc0cdd
   Sections:
     .text:
-      Entropy: 6.394547304706309
+      Entropy: 6.394547304706308
       Virtual Size: '0x3790'
     page:
       Entropy: 6.446390725227797
       Virtual Size: '0x7bac'
     init:
-      Entropy: 6.152461897826252
+      Entropy: 6.152461897826253
       Virtual Size: '0x8e0'
     .rdata:
       Entropy: 4.702836701507362
@@ -292,10 +293,10 @@ KnownVulnerableSamples:
       Entropy: 0.3584113039007212
       Virtual Size: '0x7c8'
     .pdata:
-      Entropy: 4.315963058834504
+      Entropy: 4.315963058834505
       Virtual Size: '0x3c0'
     INIT:
-      Entropy: 5.431683261883792
+      Entropy: 5.4316832618837925
       Virtual Size: '0x42a'
     .rsrc:
       Entropy: 3.3723185213577525
@@ -389,13 +390,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: d5d40497d82daf7e44255ede810ce7a6
 - Authentihash:
     MD5: 9eea185193b6357a2bd97455572b650c
     SHA1: 4ac29762ab2ad025a13a1e8cf7af9b7f4c875aac
     SHA256: ca213b79336c69128620bc39e6d987c1e605299fb6525344ba1b08b7829197c7
   Company: Insyde Software Corp.
   Copyright: Copyright (c) 2012 - 2014, Insyde Software Corp. All Rights Reserved.
-  CreationTimestamp: '2014-03-18 16:20:01'
+  CreationTimestamp: '2014-03-18 14:20:01'
   Description: SEG Windows Driver x64
   ExportedFunctions: ''
   FileVersion: 100, 0, 7, 0
@@ -450,22 +452,22 @@ KnownVulnerableSamples:
       Entropy: 6.356774466840064
       Virtual Size: '0x3950'
     page:
-      Entropy: 6.4394531024294945
+      Entropy: 6.439453102429494
       Virtual Size: '0x7f6c'
     init:
       Entropy: 6.129358966398015
       Virtual Size: '0x8f0'
     .rdata:
-      Entropy: 4.895444793454921
+      Entropy: 4.8954447934549234
       Virtual Size: '0x884'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x8c8'
     .pdata:
       Entropy: 4.382232766052746
       Virtual Size: '0x3c0'
     INIT:
-      Entropy: 5.402444020453093
+      Entropy: 5.4024440204530935
       Virtual Size: '0x43a'
     .rsrc:
       Entropy: 3.353203563698321
@@ -568,13 +570,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: d5d40497d82daf7e44255ede810ce7a6
 - Authentihash:
     MD5: 455be805eef8874daa03b46c0dc8237b
     SHA1: 7ebdf0f226a8e60cc9da39add12f75e17f615b7a
     SHA256: ee8ee16198dd8eec8d5fbb7f98f64bb849b2dfcf652cc102f4cdc63a4551549f
   Company: Insyde Software Corp.
   Copyright: Copyright (c) 2012 - 2014, Insyde Software Corp. All Rights Reserved.
-  CreationTimestamp: '2014-03-18 16:27:12'
+  CreationTimestamp: '2014-03-18 14:27:12'
   Date: ''
   Description: SEG Windows Driver x64
   ExportedFunctions: ''
@@ -647,22 +650,22 @@ KnownVulnerableSamples:
   SHA256: 7164aaff86b3b7c588fc7ae7839cc09c5c8c6ae29d1aff5325adaf5bedd7c9f5
   Sections:
     page:
-      Entropy: 6.439541377992987
+      Entropy: 6.439541377992988
       Virtual Size: '0x647a'
     .text:
       Entropy: 6.3508325334692906
       Virtual Size: '0x2eec'
     init:
-      Entropy: 6.311415509117726
+      Entropy: 6.311415509117727
       Virtual Size: '0x76c'
     .rdata:
-      Entropy: 4.252909275286042
+      Entropy: 4.252909275286044
       Virtual Size: '0x1f4'
     .data:
       Entropy: 0.30999732431271465
       Virtual Size: '0x680'
     INIT:
-      Entropy: 5.857854174755008
+      Entropy: 5.857854174755009
       Virtual Size: '0x5e4'
     .rsrc:
       Entropy: 3.3542363142996017
@@ -766,13 +769,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 6736c04d5ff512e5e2eb608414276513
 - Authentihash:
     MD5: 0c6627c22f2d4cedbace35610ef22217
     SHA1: 287617c248c57c29357d09d46b795690efeb1f7f
     SHA256: f83465d2c38c20a3854d86c293867de3baae2f90419dbe82405bc9f9dd7bbd8c
   Company: Insyde Software Corp.
   Copyright: Copyright (c) 2012 - 2014, Insyde Software Corp. All Rights Reserved.
-  CreationTimestamp: '2014-09-19 02:42:51'
+  CreationTimestamp: '2014-09-19 00:42:51'
   Date: ''
   Description: SEG Windows Driver x64
   ExportedFunctions: ''
@@ -827,13 +831,13 @@ KnownVulnerableSamples:
   SHA256: b9ae1d53a464bc9bb86782ab6c55e2da8804c80a361139a82a6c8eef30fddd7c
   Sections:
     .text:
-      Entropy: 6.394547304706309
+      Entropy: 6.394547304706308
       Virtual Size: '0x3790'
     page:
-      Entropy: 6.447016152363959
+      Entropy: 6.447016152363958
       Virtual Size: '0x7bac'
     init:
-      Entropy: 6.152461897826252
+      Entropy: 6.152461897826253
       Virtual Size: '0x8e0'
     .rdata:
       Entropy: 4.7104561151712145
@@ -845,10 +849,10 @@ KnownVulnerableSamples:
       Entropy: 4.341982648651994
       Virtual Size: '0x3c0'
     INIT:
-      Entropy: 5.431683261883792
+      Entropy: 5.4316832618837925
       Virtual Size: '0x42a'
     .rsrc:
-      Entropy: 3.360573519283275
+      Entropy: 3.3605735192832755
       Virtual Size: '0x418'
     .reloc:
       Entropy: 2.4954618442383216
@@ -936,13 +940,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: d5d40497d82daf7e44255ede810ce7a6
 - Authentihash:
     MD5: 0bc06ae681c0c6d57349c70a56da0d6c
     SHA1: 95c09ff1fdec9fa1739492c047d333fd8124b33b
     SHA256: 61bd9a26c01371d865e681f6354853dc0e27b1064906cd99b15220098be6e88d
   Company: Insyde Software Corp.
   Copyright: Copyright (c) 2012 - 2013, Insyde Software Corp. All Rights Reserved.
-  CreationTimestamp: '2013-11-15 02:50:12'
+  CreationTimestamp: '2013-11-15 00:50:12'
   Date: ''
   Description: SEG Windows Driver x64
   ExportedFunctions: ''
@@ -995,7 +1000,7 @@ KnownVulnerableSamples:
       Entropy: 5.707280071498698
       Virtual Size: '0x3406'
     init:
-      Entropy: 5.824328621472291
+      Entropy: 5.824328621472292
       Virtual Size: '0xba0'
     page:
       Entropy: 5.921130042839161
@@ -1004,10 +1009,10 @@ KnownVulnerableSamples:
       Entropy: 4.549620442419733
       Virtual Size: '0x3dc'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x8c0'
     .pdata:
-      Entropy: 4.430891872798602
+      Entropy: 4.4308918727986075
       Virtual Size: '0x3fc'
     INIT:
       Entropy: 5.3100840967243155
@@ -1111,13 +1116,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: e10e743d152cf62f219a7e9192fb533d
 - Authentihash:
     MD5: 1845c2eab4e455303c6505335101afb6
     SHA1: 5c0bf58978971842776ce4ec33ad6bcdeaeee353
     SHA256: b06dad9821beef3442cd9e775228baa56582a3a85c9d178693f3cf236623de17
   Company: Insyde Software Corp.
   Copyright: Copyright (c) 2012 - 2013, Insyde Software Corp. All Rights Reserved.
-  CreationTimestamp: '2013-02-22 00:35:02'
+  CreationTimestamp: '2013-02-21 22:35:02'
   Date: ''
   Description: SEG Windows Driver x64
   ExportedFunctions: ''
@@ -1179,7 +1185,7 @@ KnownVulnerableSamples:
       Entropy: 4.742663114685996
       Virtual Size: '0x4b4'
     .data:
-      Entropy: 0.37870349348767507
+      Entropy: 0.378703493487675
       Virtual Size: '0x894'
     .pdata:
       Entropy: 4.2617984893543515
@@ -1286,6 +1292,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 235102691b04f562ae8aa7ece38d8bc9
 MitreID: T1068
 Resources:
 - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md

@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: df82f155376b4e95a3f497b7362ba6039c04d2ae78926f626dbe1a459bc626d7
   Company: ''
   Copyright: Copyright (C) BIOSTAR Corp. 2011
-  CreationTimestamp: '2012-08-29 04:16:01'
+  CreationTimestamp: '2012-08-29 02:16:01'
   Date: ''
   Description: SMI Driver
   ExportedFunctions: ''
@@ -77,7 +77,7 @@ KnownVulnerableSamples:
   SHA256: 59626cac380d8fe0b80a6d4c4406d62ba0683a2f0f68d50ad506ca1b1cf25347
   Sections:
     .text:
-      Entropy: 5.332274090432317
+      Entropy: 5.332274090432314
       Virtual Size: '0x1ec'
     .rdata:
       Entropy: 4.219189311950067
@@ -181,6 +181,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: bc5c06a7fa9555f3f34043d828d9b123
 MitreID: T1068
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'

@@ -23,7 +23,7 @@ KnownVulnerableSamples:
     SHA256: e219276a4068b1eea5ce08f83a322845dce4eca89e05c71a0c2417065ce48813
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2020-07-08 07:23:10'
+  CreationTimestamp: '2020-07-08 05:23:10'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -117,7 +117,7 @@ KnownVulnerableSamples:
   SHA256: d84e3e250a86227c64a96f6d5ac2b447674ba93d399160850acb2339da43eae5
   Sections:
     .text:
-      Entropy: 6.071965718233517
+      Entropy: 6.071965718233516
       Virtual Size: '0x3c5a'
     .rdata:
       Entropy: 4.1509658726216285
@@ -126,10 +126,10 @@ KnownVulnerableSamples:
       Entropy: 3.1174924611847556
       Virtual Size: '0x18'
     .pdata:
-      Entropy: 3.9305190010988174
+      Entropy: 3.930519001098817
       Virtual Size: '0x1a4'
     PAGE:
-      Entropy: 5.1397431754247105
+      Entropy: 5.139743175424712
       Virtual Size: '0xb8'
     INIT:
       Entropy: 5.280434802516445
@@ -190,6 +190,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       Version: 1
+  Imphash: cef6a450f196b28e634aa3c0655d8eda
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

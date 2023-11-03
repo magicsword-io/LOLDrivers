@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 9994990c02c37472625cc7b2255044feef9b73c08ca3a70c06861b7d26b27a25
   Company: Symantec Corporation
   Copyright: "Copyright \xA9 2007-2008 Symantec Corporation. All rights reserved."
-  CreationTimestamp: '2012-06-28 06:53:46'
+  CreationTimestamp: '2012-06-28 04:53:46'
   Date: ''
   Description: VProEventMonitor.Sys - Event Monitoring driver
   ExportedFunctions: ''
@@ -93,13 +93,13 @@ KnownVulnerableSamples:
   SHA256: 7877c1b0e7429453b750218ca491c2825dae684ad9616642eff7b41715c70aca
   Sections:
     .text:
-      Entropy: 6.390530381204555
+      Entropy: 6.390530381204556
       Virtual Size: '0x1eba'
     .rdata:
       Entropy: 4.396653063344109
       Virtual Size: '0x22c'
     .data:
-      Entropy: 0.780520480953978
+      Entropy: 0.7805204809539781
       Virtual Size: '0x194'
     .pdata:
       Entropy: 3.454144073130144
@@ -208,6 +208,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: c7f08aed5725fe6a53a62ebe354ff135
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

@@ -48,7 +48,7 @@ KnownVulnerableSamples:
     SHA256: a7047cee090ddbd150d7337a9357e03ccea56f004a2d29ddb7b8a0636a396240
   Company: Rivet Networks, LLC.
   Copyright: Copyright (C) 2015-2018 Rivet Networks, LLC.
-  CreationTimestamp: '2022-03-29 13:25:42'
+  CreationTimestamp: '2022-03-29 11:25:42'
   Date: ''
   Description: Killer Traffic Control Callout Driver
   ExportedFunctions: ''
@@ -185,7 +185,7 @@ KnownVulnerableSamples:
       Entropy: 6.401436855573186
       Virtual Size: '0x20be6'
     .rdata:
-      Entropy: 5.6535527379132855
+      Entropy: 5.653552737913285
       Virtual Size: '0x33d0'
     .data:
       Entropy: 5.555301615962117
@@ -254,6 +254,7 @@ KnownVulnerableSamples:
       Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Code Signing CA
       Version: 1
+  Imphash: 13300d56528646611f26704266713952
 MitreID: T1068
 Resources:
 - https://zwclose.github.io/2023/04/18/killer2.html

@@ -34,7 +34,7 @@ KnownVulnerableSamples:
   Company: Highresolution Enterprises [www.highrez.co.uk]
   Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
     Logix4u
-  CreationTimestamp: '2008-10-17 19:02:20'
+  CreationTimestamp: '2008-10-17 17:02:20'
   Date: ''
   Description: Kernel level port access driver
   ExportedFunctions: ''
@@ -81,7 +81,7 @@ KnownVulnerableSamples:
   SHA256: cfab93885e5129a86d13fd380d010cc8c204429973b776ab1b472d84a767930f
   Sections:
     .text:
-      Entropy: 6.095861469171586
+      Entropy: 6.095861469171585
       Virtual Size: '0x55a'
     .rdata:
       Entropy: 4.693087492764082
@@ -178,6 +178,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: d612d61779252088a1f49b157237cecd
 - Authentihash:
     MD5: 52dfeb18cfe3ae58c1d32fda1451a9b5
     SHA1: a4dce60eadcc112bdaa9562a92ede168d981bdd7
@@ -185,7 +186,7 @@ KnownVulnerableSamples:
   Company: Highresolution Enterprises [www.highrez.co.uk]
   Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
     Logix4u
-  CreationTimestamp: '2016-01-27 08:33:10'
+  CreationTimestamp: '2016-01-27 06:33:10'
   Date: ''
   Description: Kernel level port access driver
   ExportedFunctions: ''
@@ -248,7 +249,7 @@ KnownVulnerableSamples:
       Entropy: 3.349101665082088
       Virtual Size: '0x438'
     .reloc:
-      Entropy: 3.916345560999129
+      Entropy: 3.9163455609991296
       Virtual Size: '0x8e'
   Signature: ''
   Signatures:
@@ -332,6 +333,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: b04821c5dd5dd8ebda962bff9f7eb928
 - Authentihash:
     MD5: a311f09079bd606da0a0070785014609
     SHA1: e7b4946a35adcd07e8e0bdc61058b1611063ca74
@@ -339,7 +341,7 @@ KnownVulnerableSamples:
   Company: Highresolution Enterprises [www.highrez.co.uk]
   Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
     Logix4u
-  CreationTimestamp: '2016-01-27 08:33:35'
+  CreationTimestamp: '2016-01-27 06:33:35'
   Date: ''
   Description: Kernel level port access driver
   ExportedFunctions: ''
@@ -486,6 +488,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: b04821c5dd5dd8ebda962bff9f7eb928
 - Authentihash:
     MD5: a311f09079bd606da0a0070785014609
     SHA1: e7b4946a35adcd07e8e0bdc61058b1611063ca74
@@ -493,7 +496,7 @@ KnownVulnerableSamples:
   Company: Highresolution Enterprises [www.highrez.co.uk]
   Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
     Logix4u
-  CreationTimestamp: '2016-01-27 08:33:35'
+  CreationTimestamp: '2016-01-27 06:33:35'
   Date: ''
   Description: Kernel level port access driver
   ExportedFunctions: ''
@@ -560,6 +563,7 @@ KnownVulnerableSamples:
       Virtual Size: '0xac'
   Signature: ''
   Signatures: {}
+  Imphash: b04821c5dd5dd8ebda962bff9f7eb928
 - Authentihash:
     MD5: 52dfeb18cfe3ae58c1d32fda1451a9b5
     SHA1: a4dce60eadcc112bdaa9562a92ede168d981bdd7
@@ -567,7 +571,7 @@ KnownVulnerableSamples:
   Company: Highresolution Enterprises [www.highrez.co.uk]
   Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
     Logix4u
-  CreationTimestamp: '2016-01-27 08:33:10'
+  CreationTimestamp: '2016-01-27 06:33:10'
   Date: ''
   Description: Kernel level port access driver
   ExportedFunctions: ''
@@ -630,10 +634,11 @@ KnownVulnerableSamples:
       Entropy: 3.349101665082088
       Virtual Size: '0x438'
     .reloc:
-      Entropy: 3.916345560999129
+      Entropy: 3.9163455609991296
       Virtual Size: '0x8e'
   Signature: ''
   Signatures: {}
+  Imphash: b04821c5dd5dd8ebda962bff9f7eb928
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

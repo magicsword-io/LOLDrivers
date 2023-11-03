@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 54bc506b2f0cf66d12d4a2415ab743c2b2a1f3079089e3e0c0c1f3f49dd7335e
   Company: Windows (R) Codename Longhorn DDK provider
   Copyright: Copyright by ASUSTek COMPUTER INC. 2006
-  CreationTimestamp: '2006-12-21 05:21:24'
+  CreationTimestamp: '2006-12-21 03:21:24'
   Date: ''
   Description: ASUS TDE CPU Driver
   ExportedFunctions: ''
@@ -79,7 +79,7 @@ KnownVulnerableSamples:
   SHA256: 159e7c5a12157af92e0d14a0d3ea116f91c09e21a9831486e6dc592c93c10980
   Sections:
     .text:
-      Entropy: 5.98562535082425
+      Entropy: 5.985625350824249
       Virtual Size: '0xade'
     .rdata:
       Entropy: 3.954197356499777
@@ -91,7 +91,7 @@ KnownVulnerableSamples:
       Entropy: 3.1473267367721696
       Virtual Size: '0x48'
     INIT:
-      Entropy: 4.911287908556836
+      Entropy: 4.911287908556835
       Virtual Size: '0x23e'
     .rsrc:
       Entropy: 3.4268548853633605
@@ -180,6 +180,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: d169b0949781ca2a6efea5a106266a02
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

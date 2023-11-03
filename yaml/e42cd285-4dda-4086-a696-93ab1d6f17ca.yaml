@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: 8920dedd3c5488ecc1db2ace55b2000d4cebf899c5e591b429d3f7767eee2216
   Company: SafeNet, Inc.
   Copyright: Copyright (C)  SafeNet, Inc.
-  CreationTimestamp: '2007-11-26 21:16:37'
+  CreationTimestamp: '2007-11-26 19:16:37'
   Date: ''
   Description: Hostnt 64-bit driver
   ExportedFunctions: ''
@@ -91,7 +91,7 @@ KnownVulnerableSamples:
       Entropy: 3.182334194023545
       Virtual Size: '0x54'
     INIT:
-      Entropy: 4.896619545447234
+      Entropy: 4.896619545447233
       Virtual Size: '0x23e'
     .rsrc:
       Entropy: 3.2410270216436903
@@ -180,6 +180,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: b4c562c2c654abd2cc71658646314976
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

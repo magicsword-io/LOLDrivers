@@ -33,7 +33,7 @@ KnownVulnerableSamples:
     SHA256: 8f8956abdeb2a52be2cc514790a737a0ad39a9e698a77c1f358e77f1bf9f180b
   Company: Almico Software
   Copyright: "Copyright \xA9 Almico Software 2001-2011"
-  CreationTimestamp: '2011-03-18 12:08:46'
+  CreationTimestamp: '2011-03-18 10:08:46'
   Date: ''
   Description: SpeedFan x64 Driver
   ExportedFunctions: ''
@@ -91,7 +91,7 @@ KnownVulnerableSamples:
   SHA256: 965d4f981b54669a96c5ab02d09bf0a9850d13862425b8981f1a9271350f28bb
   Sections:
     .text:
-      Entropy: 6.3105400390608155
+      Entropy: 6.310540039060815
       Virtual Size: '0x2c41'
     .rdata:
       Entropy: 4.459510602918384
@@ -106,7 +106,7 @@ KnownVulnerableSamples:
       Entropy: 5.925039880811379
       Virtual Size: '0xa76'
     INIT:
-      Entropy: 5.665205221244956
+      Entropy: 5.665205221244955
       Virtual Size: '0x642'
     .rsrc:
       Entropy: 3.301449537608998
@@ -206,13 +206,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 9833f7dab4a59d51b04d2cf31656a0f6
 - Authentihash:
     MD5: 94749793f16989a1c2cc24a75f1559ac
     SHA1: e26a1a3cd82ce6e58fb4252a0da2cc86236618b1
     SHA256: d8ff25255202321bd00f7aa792800e1fb7aab506dca771a4a8e2cc1af265fa15
   Company: Almico Software
   Copyright: "Copyright \xA9 Almico Software 2001-2010"
-  CreationTimestamp: '2010-12-18 06:03:51'
+  CreationTimestamp: '2010-12-18 04:03:51'
   Date: ''
   Description: Speed Fan x64 Driver
   ExportedFunctions: ''
@@ -285,7 +286,7 @@ KnownVulnerableSamples:
       Entropy: 5.6823059965117295
       Virtual Size: '0x5ee'
     .rsrc:
-      Entropy: 3.3165817359453333
+      Entropy: 3.3165817359453325
       Virtual Size: '0x3f8'
   Signature: ''
   Signatures:
@@ -367,13 +368,14 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: 0b19304edb04d5b178dd763d7cd04167
 - Authentihash:
     MD5: 79680d213f9c7a85a512b3d90e3f2e36
     SHA1: 8fe08faea7bb2a8ba69014dd49ee44a3f8a2985c
     SHA256: c09dfc18959fe51d3e5ca1500a94ab74faf0eb72040930e89cdbac653df9e816
   Company: Almico Software
   Copyright: "Copyright \xA9 Almico Software 2001-2013"
-  CreationTimestamp: '2012-12-29 15:59:35'
+  CreationTimestamp: '2012-12-29 13:59:35'
   Date: ''
   Description: SpeedFan x64 Driver
   ExportedFunctions: ''
@@ -434,13 +436,13 @@ KnownVulnerableSamples:
       Entropy: 6.311036525002312
       Virtual Size: '0x2d51'
     .rdata:
-      Entropy: 4.536740032942659
+      Entropy: 4.53674003294266
       Virtual Size: '0x310'
     .data:
       Entropy: 0.5159719988134768
       Virtual Size: '0x110'
     .pdata:
-      Entropy: 3.6903834532865334
+      Entropy: 3.690383453286534
       Virtual Size: '0xc0'
     PAGE:
       Entropy: 5.985531981826166
@@ -526,6 +528,7 @@ KnownVulnerableSamples:
     - SerialNumber: 112195d7aa105e2ffc7b0e33f36da1636e74
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: 9833f7dab4a59d51b04d2cf31656a0f6
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

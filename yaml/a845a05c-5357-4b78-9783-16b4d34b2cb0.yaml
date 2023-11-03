@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: a2b0b2e9e458016b22ebbf47411008f0a87efd9103b125870ce37246ab5bdff0
   Company: AVAST Software
   Copyright: Copyright (c) 2013 AVAST Software
-  CreationTimestamp: '2013-08-30 03:36:44'
+  CreationTimestamp: '2013-08-30 01:36:44'
   Date: ''
   Description: avast! VM Monitor
   ExportedFunctions: ''
@@ -199,19 +199,19 @@ KnownVulnerableSamples:
       Entropy: 4.337653561530945
       Virtual Size: '0x3684'
     .data:
-      Entropy: 2.2480431921380357
+      Entropy: 2.248043192138036
       Virtual Size: '0xf0d0'
     PAGE:
-      Entropy: 6.2758189900420875
+      Entropy: 6.275818990042088
       Virtual Size: '0x13dd'
     INIT:
-      Entropy: 5.49710231294924
+      Entropy: 5.497102312949239
       Virtual Size: '0xdc4'
     .rsrc:
       Entropy: 3.4097453831731763
       Virtual Size: '0x470'
     .reloc:
-      Entropy: 6.204011327642732
+      Entropy: 6.2040113276427356
       Virtual Size: '0x2058'
   Signature:
   - AVAST Software
@@ -312,6 +312,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 44e6f2f64092b48f8eb926c36ebd1d56
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

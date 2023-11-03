@@ -45,7 +45,7 @@ KnownVulnerableSamples:
   Company: Highresolution Enterprises [www.highrez.co.uk]
   Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
     Logix4u
-  CreationTimestamp: '2016-01-27 08:33:44'
+  CreationTimestamp: '2016-01-27 06:33:44'
   Date: ''
   Description: Kernel level port access driver
   ExportedFunctions: ''
@@ -96,7 +96,7 @@ KnownVulnerableSamples:
       Entropy: 3.165076186548889
       Virtual Size: '0x6c'
     INIT:
-      Entropy: 5.043077605667909
+      Entropy: 5.043077605667908
       Virtual Size: '0x25e'
     .rsrc:
       Entropy: 3.375001080130226
@@ -186,6 +186,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: c05e71aad32edcbe71ae0ef1621f8693
 - Authentihash:
     MD5: c21e45ae33d6b1f864a276a13ba3aaeb
     SHA1: 94b9b91a2acc786b54e8dbc11b759b05bc15fc3f
@@ -193,7 +194,7 @@ KnownVulnerableSamples:
   Company: Highresolution Enterprises [www.highrez.co.uk]
   Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
     Logix4u
-  CreationTimestamp: '2016-01-27 08:33:44'
+  CreationTimestamp: '2016-01-27 06:33:44'
   Date: ''
   Description: Kernel level port access driver
   ExportedFunctions: ''
@@ -244,7 +245,7 @@ KnownVulnerableSamples:
       Entropy: 3.165076186548889
       Virtual Size: '0x6c'
     INIT:
-      Entropy: 5.043077605667909
+      Entropy: 5.043077605667908
       Virtual Size: '0x25e'
     .rsrc:
       Entropy: 3.375001080130226
@@ -334,6 +335,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: c05e71aad32edcbe71ae0ef1621f8693
 - Authentihash:
     MD5: ad4eff45cdb0b12af3990945afff9a8f
     SHA1: 8e1f51761f21148f68ac925cc5f9e9c78f3d5ec4
@@ -341,7 +343,7 @@ KnownVulnerableSamples:
   Company: Highresolution Enterprises [www.highrez.co.uk]
   Copyright: Copyright (c) 2008 Highresolution Enterprises. Portions Copyright (c)
     Logix4u
-  CreationTimestamp: '2008-10-17 19:01:16'
+  CreationTimestamp: '2008-10-17 17:01:16'
   Date: ''
   Description: Kernel level port access driver
   ExportedFunctions: ''
@@ -389,7 +391,7 @@ KnownVulnerableSamples:
       Entropy: 0.5159719988134768
       Virtual Size: '0x110'
     .pdata:
-      Entropy: 3.1062905943092534
+      Entropy: 3.106290594309254
       Virtual Size: '0x60'
     INIT:
       Entropy: 4.840483025983054
@@ -480,6 +482,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: 98dc1b41bda471f7eabdce8a5d16c09d
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

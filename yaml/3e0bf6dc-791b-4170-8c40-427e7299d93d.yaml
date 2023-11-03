@@ -48,7 +48,7 @@ KnownVulnerableSamples:
     SHA256: 8bce4a327c9e77631c03057b0e45cdbb2e751194d42995c0310e3ccdd3d33b7c
   Company: Rivet Networks, LLC.
   Copyright: Copyright (C) 2015-2018 Rivet Networks, LLC.
-  CreationTimestamp: '2021-03-22 14:11:11'
+  CreationTimestamp: '2021-03-22 12:11:11'
   Date: ''
   Description: Killer Traffic Control Callout Driver
   ExportedFunctions: ''
@@ -196,13 +196,13 @@ KnownVulnerableSamples:
       Entropy: 5.3747108436250635
       Virtual Size: '0x15b4'
     PAGE:
-      Entropy: 5.469889141982761
+      Entropy: 5.469889141982762
       Virtual Size: '0x120'
     INIT:
       Entropy: 5.3585580911922355
       Virtual Size: '0xeea'
     .rsrc:
-      Entropy: 3.639461936263046
+      Entropy: 3.6394619362630465
       Virtual Size: '0xc40'
     .reloc:
       Entropy: 3.99391294150606
@@ -258,6 +258,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
         ID Code Signing CA
       Version: 1
+  Imphash: 2df11474daf362b1b2fa3d3a89b6acbe
 MitreID: T1068
 Resources:
 - https://zwclose.github.io/2023/04/18/killer2.html

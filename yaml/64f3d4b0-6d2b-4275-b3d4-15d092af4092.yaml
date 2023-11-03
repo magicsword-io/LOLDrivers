@@ -44,7 +44,7 @@ KnownVulnerableSamples:
     SHA256: feef191064d18b6fb63b7299415d1b1e2ec8fcdd742854aa96268d0ec4a0f7b6
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-11-19 13:54:07'
+  CreationTimestamp: '2009-11-19 11:54:07'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -87,7 +87,7 @@ KnownVulnerableSamples:
       Entropy: 5.562502416171061
       Virtual Size: '0x23a'
     .rdata:
-      Entropy: 4.052253559194456
+      Entropy: 4.0522535591944555
       Virtual Size: '0x1d8'
     .data:
       Entropy: 4.418157288156419
@@ -183,6 +183,7 @@ KnownVulnerableSamples:
     - SerialNumber: 13fd5f58000000002ea3
       Issuer: C=US, O=Intel Corporation, CN=Intel External Basic Issuing CA 3A
       Version: 1
+  Imphash: 840e656bdb2987fa422092ec9d588895
 MitreID: T1068
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules

@@ -33,7 +33,7 @@ KnownVulnerableSamples:
     SHA256: 235ab6981b521a424026926ad7f5d19a188e17491933e76269ad9a17a79ccc24
   Company: innotek GmbH
   Copyright: innotek GmbH
-  CreationTimestamp: '2007-12-29 03:25:23'
+  CreationTimestamp: '2007-12-29 01:25:23'
   Date: ''
   Description: VirtualBox USB Monitor Driver
   ExportedFunctions:
@@ -99,7 +99,7 @@ KnownVulnerableSamples:
       Entropy: 6.272243107381891
       Virtual Size: '0x18e4'
     .rdata:
-      Entropy: 6.374714066535061
+      Entropy: 6.37471406653506
       Virtual Size: '0xa0a'
     .data:
       Entropy: 0.005265837971608454
@@ -108,10 +108,10 @@ KnownVulnerableSamples:
       Entropy: 3.559252396078374
       Virtual Size: '0x4c'
     INIT:
-      Entropy: 5.049926835690095
+      Entropy: 5.049926835690096
       Virtual Size: '0x3f4'
     .rsrc:
-      Entropy: 3.2154519145538965
+      Entropy: 3.2154519145538956
       Virtual Size: '0x360'
     .reloc:
       Entropy: 6.378575185284812
@@ -208,13 +208,14 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: d4e3a701b28792a37c553b9675e40b27
 - Authentihash:
     MD5: f21264caccb006076dbfc164b6fc40a1
     SHA1: 6adbca11d73a2d58ca3064703bc500a61cdb2235
     SHA256: 292ada92cd442f78bfafe4098105c5e3f2427589f32ee5999d90b61c422fa445
   Company: Sun Microsystems, Inc.
   Copyright: Sun Microsystems, Inc.
-  CreationTimestamp: '2008-04-30 16:07:15'
+  CreationTimestamp: '2008-04-30 14:07:15'
   Date: ''
   Description: VirtualBox USB Monitor Driver
   ExportedFunctions:
@@ -306,13 +307,13 @@ KnownVulnerableSamples:
   SHA256: 8a2482e19040d591c7cec5dfc35865596ce0154350b5c4e1c9eecc86e7752145
   Sections:
     .text:
-      Entropy: 6.442228185104198
+      Entropy: 6.442228185104197
       Virtual Size: '0x3728'
     .rdata:
-      Entropy: 6.3712115416733495
+      Entropy: 6.371211541673349
       Virtual Size: '0xa06'
     .data:
-      Entropy: 0.003336519284753613
+      Entropy: 0.0033365192847536135
       Virtual Size: '0x3550'
     .edata:
       Entropy: 4.9514046215747225
@@ -417,6 +418,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 89f4cf2f8ccc4562dacd065d5f3bfe55
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

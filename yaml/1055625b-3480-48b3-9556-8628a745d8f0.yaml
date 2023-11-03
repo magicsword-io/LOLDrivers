@@ -23,7 +23,7 @@ KnownVulnerableSamples:
     SHA256: 5d10285d802fa793c217933c907d82db58977b865b3dad3848c6ed2550022413
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2010-02-03 23:52:36'
+  CreationTimestamp: '2010-02-03 21:52:36'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -75,19 +75,19 @@ KnownVulnerableSamples:
   SHA256: 23787eb342fd38da73ce785023176f98304267c6f6fa8a50e718da096c7a7951
   Sections:
     .text:
-      Entropy: 6.173202023746464
+      Entropy: 6.173202023746463
       Virtual Size: '0xb02'
     .rdata:
-      Entropy: 4.047936591624657
+      Entropy: 4.047936591624656
       Virtual Size: '0x1b4'
     .data:
-      Entropy: 2.918295834054489
+      Entropy: 2.9182958340544896
       Virtual Size: '0xc'
     INIT:
-      Entropy: 5.401000213016134
+      Entropy: 5.40100021301616
       Virtual Size: '0x336'
     .reloc:
-      Entropy: 4.744935426027902
+      Entropy: 4.744935426027903
       Virtual Size: '0xcc'
   Signature: ''
   Signatures:
@@ -180,6 +180,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: a1d29a3af6402793ec9d23883512938a
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

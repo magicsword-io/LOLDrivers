@@ -40,7 +40,7 @@ KnownVulnerableSamples:
     SHA256: a37371c4e62f106e7da03fd5bdd6f12ecdf7fcaf1195dbf9fb7ef6eb456a7506
   Company: CYREN Inc.
   Copyright: "Copyright \xA9 1999 - 2014. CYREN Inc. All rights reserved."
-  CreationTimestamp: '2014-03-25 15:59:30'
+  CreationTimestamp: '2014-03-25 13:59:30'
   Date: ''
   Description: AMP Minifilter
   ExportedFunctions: ''
@@ -207,7 +207,7 @@ KnownVulnerableSamples:
       Entropy: 5.073572228970491
       Virtual Size: '0xf3a'
     .rsrc:
-      Entropy: 3.534591232946143
+      Entropy: 3.534591232946144
       Virtual Size: '0x4b8'
     .reloc:
       Entropy: 2.7884103232343667
@@ -293,6 +293,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: d8752c1d5954bea175ac00df5acebb09
 MitreID: T1068
 Resources:
 - ' https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c'
