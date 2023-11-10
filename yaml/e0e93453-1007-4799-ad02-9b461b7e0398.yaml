@@ -3,7 +3,7 @@ Author: ph4nt0mbyt3
 Created: '2023-11-10'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
+Verified: 'TRUE'
 Commands:
   Command: sc.exe create truesight.sys binPath=C:\windows\temp\truesight.sys type=kernel
     && sc.exe start truesight.sys
