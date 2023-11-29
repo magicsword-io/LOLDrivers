@@ -137,6 +137,7 @@ KnownVulnerableSamples:
         Class 3 Extended Validation Code Signing CA , G2
       Version: 1
   Imphash: 8a424cd36ae3eab0d11332ce3b982a02
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

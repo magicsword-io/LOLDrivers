@@ -145,6 +145,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
   Imphash: 45bfe170e0cd654bc1e2ae3fca3ac3f4
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

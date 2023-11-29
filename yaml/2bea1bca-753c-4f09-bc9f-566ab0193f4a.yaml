@@ -209,6 +209,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: cc81a908891587ccac8059435eda4c66
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: bf45a5d10968424666abede02113a509
     SHA1: 5c26f130f6a5ad8bdd2eed29140542dae0885b17
@@ -378,6 +379,7 @@ KnownVulnerableSamples:
         Class 3 SHA256 Code Signing CA
       Version: 1
   Imphash: 1d774a94ad511efe5ebfe70acc6f8c85
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: b18b1bff521337695d2d6a0768340252
     SHA1: 0f5034fcf5b34be22a72d2ecc29e348e93b6f00f
@@ -539,6 +541,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: cc81a908891587ccac8059435eda4c66
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://github.com/hoangprod/DanSpecial

@@ -123,6 +123,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
         SHA384 2021 CA1
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -227,6 +228,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
         SHA384 2021 CA1
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -375,6 +377,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -520,6 +523,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
         SHA384 2021 CA1
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html

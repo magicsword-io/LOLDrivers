@@ -184,6 +184,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: Windows (R) 2000 DDK provider
   Date: ''
   Description: Generic Port I/O
@@ -251,6 +252,7 @@ KnownVulnerableSamples:
   - READ_PORT_ULONG
   - WRITE_PORT_USHORT
   Signatures: {}
+  LoadsDespiteHVCI: 'FALSE'
 - Company: Windows (R) 2003 DDK 3790 provider
   Date: ''
   Description: Generic Port I/O for Win64
@@ -392,6 +394,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: Windows (R) 2003 DDK 3790 provider
   Date: ''
   Description: Generic Port I/O for Win64
@@ -457,6 +460,7 @@ KnownVulnerableSamples:
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
+  LoadsDespiteHVCI: 'FALSE'
 - Company: Windows (R) 2000 DDK provider
   Date: ''
   Description: Generic Port I/O
@@ -524,6 +528,7 @@ KnownVulnerableSamples:
   - READ_PORT_ULONG
   - WRITE_PORT_ULONG
   Signatures: {}
+  LoadsDespiteHVCI: 'FALSE'
 - Company: Windows (R) 2000 DDK provider
   Date: ''
   Description: Generic Port I/O
@@ -591,6 +596,7 @@ KnownVulnerableSamples:
   - READ_PORT_ULONG
   - WRITE_PORT_ULONG
   Signatures: {}
+  LoadsDespiteHVCI: 'FALSE'
 - Company: Windows (R) 2000 DDK provider
   Date: ''
   Description: Generic Port I/O
@@ -658,6 +664,7 @@ KnownVulnerableSamples:
   - READ_PORT_ULONG
   - WRITE_PORT_ULONG
   Signatures: {}
+  LoadsDespiteHVCI: 'FALSE'
 - Company: REALTEK Semiconductor Corp.
   Date: ''
   Description: REALTEK Port I/O
@@ -725,6 +732,7 @@ KnownVulnerableSamples:
   - READ_PORT_ULONG
   - WRITE_PORT_USHORT
   Signatures: {}
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html

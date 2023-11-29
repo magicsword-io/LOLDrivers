@@ -173,6 +173,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -312,6 +313,7 @@ KnownVulnerableSamples:
     - SerialNumber: 112132bbb2b7159fbe5d9e21ae2f0574ba48
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html

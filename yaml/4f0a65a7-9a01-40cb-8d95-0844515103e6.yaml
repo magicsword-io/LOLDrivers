@@ -173,6 +173,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ' Avalue Technology Inc.'
   Date: ''
   Description: AvalueIO Driver
@@ -330,6 +331,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html

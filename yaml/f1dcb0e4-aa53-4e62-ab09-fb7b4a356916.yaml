@@ -26,6 +26,7 @@ KnownVulnerableSamples:
   Publisher: ''
   SHA1: e74b6dda8bc53bc687fc21218bd34062a78d8467
   Signature: []
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -38,6 +39,7 @@ KnownVulnerableSamples:
   Publisher: ''
   SHA1: 2c27abbbbcf10dfb75ad79557e30ace5ed314df8
   Signature: []
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 66257018e5d6ab9266c67b93110b62d6
     SHA1: fd8a340cd071bc98e6eeac9bbd4ac8a78688bc17
@@ -148,6 +150,7 @@ KnownVulnerableSamples:
         Windows Third Party Component CA 2012
       Version: 1
   Imphash: d14ea0e632fc8485d77e7eba3c4d4537
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: e03a070a426b0c2de53ea23bfc76086b
     SHA1: 202d5a05e546740037f9a4dc2b21f71680c39d3b
@@ -304,6 +307,7 @@ KnownVulnerableSamples:
   Signature: ''
   Signatures: {}
   Imphash: 518e77c070ae21af7c558962cd1854a3
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 9ade8d34c15a3b675fbdb13522fb3607
     SHA1: e5a152bb57060c2b27e825258698bd7ff67907ff
@@ -496,6 +500,7 @@ KnownVulnerableSamples:
         Windows Third Party Component CA 2012
       Version: 1
   Imphash: 9321f9c47129fbc728ead2710e22f1a5
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 1abe3c9e3bf2b93b6674b79f3ebabe7f
     SHA1: 61258963d900c2a39408ef4b51f69f405f55e407
@@ -605,6 +610,7 @@ KnownVulnerableSamples:
         Windows Third Party Component CA 2012
       Version: 1
   Imphash: eac62dd0c27ed557fa4b641fa4050d04
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: c57bf5199b7e785e6d1ad348a5dda6b9
     SHA1: e74b6dda8bc53bc687fc21218bd34062a78d8467
@@ -794,6 +800,7 @@ KnownVulnerableSamples:
         Windows Third Party Component CA 2012
       Version: 1
   Imphash: e938b727f5a033818337f7ba0584500f
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules

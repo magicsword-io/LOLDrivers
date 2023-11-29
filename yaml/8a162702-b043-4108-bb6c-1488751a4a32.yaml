@@ -169,6 +169,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
       Version: 1
   Imphash: 26ceec6572c630bdad60c984e51b7da4
+  LoadsDespiteHVCI: 'TRUE'
 MitreID: T1068
 Resources:
 - https://www.trendmicro.com/content/dam/trendmicro/global/en/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver/indicators-blackcat-ransomware-deploys-new-signed-kernel-driver.txt

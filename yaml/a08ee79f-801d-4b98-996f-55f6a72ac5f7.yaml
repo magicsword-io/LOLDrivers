@@ -202,6 +202,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: Interface Corporation
   Date: ''
   Description: GPC-2X72C Kernel Device Driver(SYS) WindowsNT
@@ -387,6 +388,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: Interface Corporation
   Date: ''
   Description: GPC-2X72C I/O Module Device Driver
@@ -551,6 +553,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: Interface Corporation
   Date: ''
   Description: GPC-2X72C I/O Module Device Driver
@@ -768,6 +771,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: Interface Corporation
   Date: ''
   Description: GPC-2X72C I/O Module Device Driver
@@ -976,6 +980,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html

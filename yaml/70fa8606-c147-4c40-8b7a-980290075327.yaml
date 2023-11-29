@@ -233,6 +233,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 5dc868004c7214c10f9f8aa53947cd3a
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: f5bd837b7d2161050fbd98f598eefe23
     SHA1: 0b1bd6933058aa655f03244b6ba228301700dfa5
@@ -438,6 +439,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: bda5fae6640f659c3a67cb8962317e29
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

@@ -167,6 +167,7 @@ KnownVulnerableSamples:
         Class 3 Primary Intermediate Object CA
       Version: 1
   Imphash: 9e15ce38f071c916bea830247f1241bb
+  LoadsDespiteHVCI: 'TRUE'
 - Authentihash:
     MD5: 198111fd73515aa7fe4387612f027f0f
     SHA1: 651b953cb03928e41424ad59f21d4978d6f4952e
@@ -271,6 +272,7 @@ KnownVulnerableSamples:
         Windows Third Party Component CA 2014
       Version: 1
   Imphash: 85f86c7c8ce81a78e84efa545d7edc65
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

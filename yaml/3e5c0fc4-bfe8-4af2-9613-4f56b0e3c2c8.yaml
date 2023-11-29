@@ -97,6 +97,7 @@ KnownVulnerableSamples:
       Issuer: CN=WDKTestCert zezec,132961360795713868
       Version: 1
   Imphash: 2de3451f3e7b02970582bb8f9fd8c73a
+  LoadsDespiteHVCI: 'TRUE'
 MitreID: T1068
 Resources:
 - https://github.com/zeze-zeze/CYBERSEC2023-BYOVD-Demo

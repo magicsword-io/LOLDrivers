@@ -225,6 +225,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2012-08-23 01:57:10'
   Imphash: 22a9d7a42282b48c566b4423363d3a3e
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: viragt.sys
   MD5: 25ebe6f757129adbe78ec312a5f1800b
   SHA1: d17656f11b899d58dca7b6c3dd6eef3d65ae88e2
@@ -428,6 +429,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2010-11-30 01:59:42'
   Imphash: f079f8637a1d4fe2fb93af2a267b68ef
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: viragt.sys
   MD5: 650f6531db6fb0ed25d7fc70be35a4da
   SHA1: 7ee675f0106e36d9159c5507b96c3237fb9348cd
@@ -664,6 +666,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2012-07-30 09:03:12'
   Imphash: 80ae2342fd6c7f5e1c642918e33dafb1
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: viragt.sys
   MD5: 3467b0d996251dc56a72fc51a536dd6b
   SHA1: ca33c88cd74e00ece898dca32a24bdfcacc3f756
@@ -918,6 +921,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2013-11-29 04:59:32'
   Imphash: 3815f9107b799b863cd905178e6e07d0
+  LoadsDespiteHVCI: 'FALSE'
 - Filename: viragt64.sys
   MD5: 688a10e87af9bcf0e40277d927923a00
   SHA1: 388819a7048179848425441c60b3a8390ad04a69
@@ -1132,6 +1136,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2013-01-23 01:42:36'
   Imphash: 85fd19df117fbc21efbcb1d587063e12
+  LoadsDespiteHVCI: 'FALSE'
 - Filename: viragt.sys
   MD5: 3d5164e85d740bce0391e2b81d49d308
   SHA1: 7ce978092fadbef44441a5f8dcb434df2464f193
@@ -1368,6 +1373,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2011-12-29 10:38:08'
   Imphash: 48e2ef3c2d32ecca62510d90e12b6632
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: viragt.sys
   MD5: 3ad7b36a584504b3c70b5f552ba33015
   SHA1: d363011d6991219d7f152609164aba63c266b740
@@ -1604,6 +1610,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2011-05-10 10:33:08'
   Imphash: 48e2ef3c2d32ecca62510d90e12b6632
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: viragt.sys
   MD5: 08e06b839499cb4b752347399db41b57
   SHA1: b53c360b35174bd89f97f681bf7c17f40e519eb6
@@ -1857,5 +1864,6 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2016-09-07 02:16:07'
   Imphash: 3815f9107b799b863cd905178e6e07d0
+  LoadsDespiteHVCI: 'FALSE'
 Tags:
 - viragt64.sys

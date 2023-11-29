@@ -193,6 +193,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: iNFERRE
   Date: ''
   Description: HWDetectNG
@@ -375,6 +376,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: iNFERRE
   Date: ''
   Description: HWDetectNG
@@ -557,6 +559,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html

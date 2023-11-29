@@ -285,6 +285,7 @@ KnownVulnerableSamples:
         CA , SHA256 , G3
       Version: 1
   Imphash: 5759d90322a7311eaccf4f0ab2c2a7c4
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 8950c65d305c42ada6cf31188f526674
     SHA1: 1be4ba36ba9ce5b10d90137c08cc21f823379841
@@ -591,6 +592,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
       Version: 1
   Imphash: 105b74485670215ab231a942c9101ccf
+  LoadsDespiteHVCI: 'TRUE'
 MitreID: T1068
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'

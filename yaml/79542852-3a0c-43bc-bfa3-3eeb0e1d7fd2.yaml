@@ -670,6 +670,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2018-06-22 05:17:13'
   Imphash: 9470f56376e665fb981a35b303436041
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: VBoxDrv.sys
   MD5: 02a1d77ef13bd41cad04abcce896d0b9
   SHA1: 59c0fa0d61576d9eb839c9c7e15d57047ee7fe29
@@ -1312,6 +1313,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2019-02-15 22:57:54'
   Imphash: 9470f56376e665fb981a35b303436041
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: VBoxDrv.sys
   MD5: 962a33a191dbe56915fd196e3a868cf0
   SHA1: 449ff4f5ce2fdddac05a6c82e45a7e802b1c1305
@@ -1748,6 +1750,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2009-06-30 05:41:34'
   Imphash: fd133033a24971502ff0b2f189215c56
+  LoadsDespiteHVCI: 'FALSE'
 - Filename: VBoxDrv.sys
   MD5: 3e87e3346441539d3a90278a120766df
   SHA1: ce5681896e7631b6e83cccb7aa056a33e72a1bbe
@@ -3700,6 +3703,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2021-05-30 09:08:50'
   Imphash: 2a20cc9578bb34a4bb10b87b49b24982
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: VBoxDrv.sys
   MD5: e3bdb307b32b13b8f7e621e8d5cc8cd3
   SHA1: 58fe23f1bb9d4bcc1b07b102222a7d776cc90f6c
@@ -4042,6 +4046,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2009-04-07 12:30:47'
   Imphash: 6723b1d5bd0f1fc13216cb44541e619e
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: VBoxDrv.sys
   MD5: 443689645455987cb347154b391f734d
   SHA1: 2fed7eddd63f10ed4649d9425b94f86140f91385
@@ -4426,6 +4431,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2009-05-29 11:54:09'
   Imphash: 6723b1d5bd0f1fc13216cb44541e619e
+  LoadsDespiteHVCI: 'FALSE'
 - Filename: VBoxDrv.sys
   MD5: 6beb1d8146f5a4aaa2f7b8c0c9bced30
   SHA1: 07f62d9b6321bed0008e106e9ce4240cb3f76da2
@@ -5068,5 +5074,6 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2019-02-04 15:27:31'
   Imphash: 9470f56376e665fb981a35b303436041
+  LoadsDespiteHVCI: 'TRUE'
 Tags:
 - VBoxDrv.sys

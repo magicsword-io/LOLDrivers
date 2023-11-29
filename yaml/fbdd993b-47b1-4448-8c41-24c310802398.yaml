@@ -207,6 +207,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
   Imphash: 176d8e75a27a45e2c6f5d4cceca4d869
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 9c15e4f6f0e218cbaae27bf6952f6303
     SHA1: e15698840eaa0d72abce8207b4e57966e8c064b2
@@ -370,6 +371,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
   Imphash: 955e7b12a8fa06444c68e54026c45de1
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 26e06bbacf3f202b0295342c22e71124
     SHA1: 53aea389ddaba5c52c577a82e416c8c533d1cd1d
@@ -532,6 +534,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
   Imphash: 955e7b12a8fa06444c68e54026c45de1
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: d82a89cc750ae680af9f463b1b4ec8d9
     SHA1: 3b61791f361c785019347cff13712400198c9364
@@ -697,6 +700,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
   Imphash: 6f0b9814da4da038669c47e77c2f268f
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://github.com/jbaines-r7/dellicious

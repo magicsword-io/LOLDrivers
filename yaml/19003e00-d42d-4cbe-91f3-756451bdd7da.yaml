@@ -36,6 +36,7 @@ KnownVulnerableSamples:
   Publisher: ''
   SHA1: 0b6ec2aedc518849a1c61a70b1f9fb068ede2bc3
   Signature: []
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -48,6 +49,7 @@ KnownVulnerableSamples:
   Publisher: ''
   SHA1: 461882bd59887617cadc1c7b2b22d0a45458c070
   Signature: []
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -60,6 +62,7 @@ KnownVulnerableSamples:
   Publisher: ''
   SHA1: a7948a4e9a3a1a9ed0e4e41350e422464d8313cd
   Signature: []
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -72,6 +75,7 @@ KnownVulnerableSamples:
   Publisher: ''
   SHA1: f3cce7e79ab5bd055f311bb3ac44a838779270b6
   Signature: []
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -87,6 +91,7 @@ KnownVulnerableSamples:
   SHA256: 399EFFE75D32BDAB6FA0A6BFFE02DBF0A59219D940B654837C3BE1C0BD02E9AA
   Signature:
   - ''
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -102,6 +107,7 @@ KnownVulnerableSamples:
   SHA256: 27CD05527FEB020084A4A76579C125458571DA8843CDFC3733211760A11DA970
   Signature:
   - ''
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -117,6 +123,7 @@ KnownVulnerableSamples:
   SHA256: 7AAF2AA194B936E48BC90F01EE854768C8383C0BE50CFB41B346666AEC0CF853
   Signature:
   - ''
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -132,6 +139,7 @@ KnownVulnerableSamples:
   SHA256: 727E8BA66A8FF07BDC778EACB463B65F2D7167A6616CA2F259EA32571CACF8AF
   Signature:
   - ''
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 8faa23dd62881edd4c9a04f51649c212
     SHA1: 0b6ec2aedc518849a1c61a70b1f9fb068ede2bc3
@@ -319,6 +327,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
       Version: 1
   Imphash: 88e21ed9e717781eaf87209acbdbb567
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: d8cbed27b67b802e00dd27a41400b762
     SHA1: a7948a4e9a3a1a9ed0e4e41350e422464d8313cd
@@ -526,6 +535,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 88e21ed9e717781eaf87209acbdbb567
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'

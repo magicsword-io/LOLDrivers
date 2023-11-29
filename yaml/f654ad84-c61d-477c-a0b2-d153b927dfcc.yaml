@@ -106,6 +106,7 @@ KnownVulnerableSamples:
   Signature: ''
   Signatures: {}
   Imphash: b8302791cd2edfe6dd562c4854ea495f
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 5af6b25eec77fec510803a229944c8ad
     SHA1: ed54e23998978f8124bd1f97c265f708ddba1de0
@@ -179,6 +180,7 @@ KnownVulnerableSamples:
   Signature: ''
   Signatures: {}
   Imphash: a96a02cf5f7896a9a9f045d1986bd83c
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 3fc7ad198c185c20a883e902a02b80f1
     SHA1: 30a48418d07561c8df8aa4219734f0ded791e430
@@ -302,6 +304,7 @@ KnownVulnerableSamples:
         CA (SHA2)
       Version: 1
   Imphash: 6a47c957830ccce7ef43ed96aacf7c2c
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 5af6b25eec77fec510803a229944c8ad
     SHA1: ed54e23998978f8124bd1f97c265f708ddba1de0
@@ -412,6 +415,7 @@ KnownVulnerableSamples:
         CA (SHA2)
       Version: 1
   Imphash: a96a02cf5f7896a9a9f045d1986bd83c
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules

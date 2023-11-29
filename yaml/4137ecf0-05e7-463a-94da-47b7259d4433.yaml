@@ -26,6 +26,7 @@ KnownVulnerableSamples:
   Publisher: ''
   SHA1: faa870b0cb15c9ac2b9bba5d0470bd501ccd4326
   Signature: []
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -38,6 +39,7 @@ KnownVulnerableSamples:
   Publisher: ''
   SHA1: aca8e53483b40a06dfdee81bb364b1622f9156fe
   Signature: []
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -50,6 +52,7 @@ KnownVulnerableSamples:
   Publisher: ''
   SHA1: 05ac1c64ca16ab0517fe85d4499d08199e63df26
   Signature: []
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'

@@ -36,6 +36,7 @@ KnownVulnerableSamples:
   Publisher: ''
   SHA1: 6c1bb3a72ebfb5359b9e22ca44d0a1ff825a68f2
   Signature: []
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -48,6 +49,7 @@ KnownVulnerableSamples:
   Publisher: ''
   SHA1: e039c9dd21494dbd073b4823fc3a17fbb951ec6c
   Signature: []
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -60,6 +62,7 @@ KnownVulnerableSamples:
   Publisher: ''
   SHA1: 7eec3a1edf3b021883a4b5da450db63f7c0afeeb
   Signature: []
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -72,6 +75,7 @@ KnownVulnerableSamples:
   Publisher: ''
   SHA1: e5021a98e55d514e2376aa573d143631e5ee1c13
   Signature: []
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 6b214126743cbf8efdfae0a4fb7d78eb
     SHA1: efc91a1317eb086196fa1a2f94fbf96258b5ec2e
@@ -278,6 +282,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 7c8c655791b5c853e45aa174e5cc1333
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -290,6 +295,7 @@ KnownVulnerableSamples:
   Publisher: ''
   SHA1: 2b4d0dead4c1a7cc95543748b3565cfa802e5256
   Signature: []
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -302,6 +308,7 @@ KnownVulnerableSamples:
   Publisher: ''
   SHA1: 4a7d66874a0472a47087fabaa033a85d47413379
   Signature: []
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'

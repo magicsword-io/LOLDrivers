@@ -26,6 +26,7 @@ KnownVulnerableSamples:
   Publisher: ''
   SHA1: 10e15ba8ff8ed926ddd3636cec66a0f08c9860a4
   Signature: []
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -38,6 +39,7 @@ KnownVulnerableSamples:
   Publisher: ''
   SHA1: e4436c8c42ba5ffabd58a3b2256f6e86ccc907ab
   Signature: []
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 6f12156b03f79cac857e541cc10b7366
     SHA1: 10e15ba8ff8ed926ddd3636cec66a0f08c9860a4
@@ -184,6 +186,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Intel Corporation, CN=Intel External Basic Issuing CA 3A
       Version: 1
   Imphash: 840e656bdb2987fa422092ec9d588895
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules

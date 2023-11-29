@@ -272,6 +272,7 @@ KnownVulnerableSamples:
       Issuer: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA R36
       Version: 1
   Imphash: 409d2ab916237fb129c57aacbb7cb4fe
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

@@ -197,6 +197,7 @@ KnownVulnerableSamples:
         Class 3 SHA256 Code Signing CA
       Version: 1
   Imphash: cf1a39b9408348cddaa4a2827283534c
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
