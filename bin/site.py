@@ -76,7 +76,7 @@ def write_top_products(drivers, output_dir, top_n=5):
 
     for driver in drivers:
         for hash_info in driver['KnownVulnerableSamples']:
-            product_name = hash_info['Product']
+            product_name = hash_info.get('Product') or None
 
             if not product_name:
                 continue
