@@ -224,7 +224,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
   Imphash: a998fe47a44bfbf2399968e21cfdf7ca
-- Name: ''
+- Filename: ''
   Libraries:
   - ntoskrnl.exe
   ImportedFunctions:
@@ -326,7 +326,7 @@ KnownVulnerableSamples:
   Imphash: a998fe47a44bfbf2399968e21cfdf7ca
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-03-09 07:28:57'
+  CreationTimestamp: '2016-03-09 00:28:57'
   RichPEHeaderMD5: ae0016968883c7b6d9bf26bf6adcb454
   RichPEHeaderSHA1: ae1e456ae17f0bce4cb62e8cc3a76e5b83c53caa
   RichPEHeaderSHA256: 9c178663dffdd9f9429f961711da30f4c966a2437d235785d182a6e5afb40fbc
@@ -408,6 +408,21 @@ KnownVulnerableSamples:
     - SerialNumber: 1121c5bcad73319ee0131e328a2b814e164a
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Authentihash:
+    MD5: 7514f440c5b9e5c4a0498e4489b76d62
+    SHA1: 0bca6c35159282fd64615abc4d398399b061847b
+    SHA256: 3913d9754b78182aa25d38fbd7ea02502bdf1d81e6525ab4b5ffe5f543200478
+  RichPEHeaderHash:
+    MD5: ae0016968883c7b6d9bf26bf6adcb454
+    SHA1: ae1e456ae17f0bce4cb62e8cc3a76e5b83c53caa
+    SHA256: 9c178663dffdd9f9429f961711da30f4c966a2437d235785d182a6e5afb40fbc
+  Description: GMER Driver http://www.gmer.net
+  Company: GMER
+  Product: GMER
+  Copyright: Copyright (C) GMER 2003-2013
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
 MitreID: T1068
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951

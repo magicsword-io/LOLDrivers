@@ -25,7 +25,7 @@ Acknowledgement:
   Handle: ''
 Detection: []
 KnownVulnerableSamples:
-- Filename: 'Truesight'
+- Filename: Truesight
   Libraries:
   - ntoskrnl.exe
   ImportedFunctions:
@@ -110,7 +110,7 @@ KnownVulnerableSamples:
   Imphash: b95bc1a99081d695b1c0b37b90a4a0be
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-08-29 12:07:25'
+  CreationTimestamp: '2023-08-29 06:07:25'
   RichPEHeaderMD5: 2aa941242ce069665648272f38f01e61
   RichPEHeaderSHA1: 27a430c07c51453e908a94ae3e2640dc733030e3
   RichPEHeaderSHA256: 78b94bc1db7ed451dff0467fac7a5e568a1d35f9cabcffbdb4690c13719861bb
@@ -125,7 +125,7 @@ KnownVulnerableSamples:
       Entropy: 4.696875660287618
       Virtual Size: '0x1184'
     .data:
-      Entropy: 2.4448556315683105
+      Entropy: 2.44485563156831
       Virtual Size: '0x320'
     .pdata:
       Entropy: 4.30658373083434
@@ -137,10 +137,10 @@ KnownVulnerableSamples:
       Entropy: 5.52229514751666
       Virtual Size: '0xb14'
     .rsrc:
-      Entropy: 3.2891744328822807
+      Entropy: 3.2891744328822803
       Virtual Size: '0x3e0'
     .reloc:
-      Entropy: 4.191806540004826
+      Entropy: 4.191806540004825
       Virtual Size: '0x6c'
   CompanyName: Adlice Software
   FileDescription: RogueKiller Antirootkit Driver
@@ -198,5 +198,20 @@ KnownVulnerableSamples:
     - SerialNumber: 169d2c94309c0380414bcfdd93a6b27d
       Issuer: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA EV R36
       Version: 1
+  Authentihash:
+    MD5: 7ac40b0bee0d9b6e84d58d567e82e736
+    SHA1: 13c6de4203098a8017a0bd4c4da98f6d547482bb
+    SHA256: 891ad430e7f1d58ef85b437505a6016fa99a72abcfd4734476efc5fc1fcd1cba
+  RichPEHeaderHash:
+    MD5: 2aa941242ce069665648272f38f01e61
+    SHA1: 27a430c07c51453e908a94ae3e2640dc733030e3
+    SHA256: 78b94bc1db7ed451dff0467fac7a5e568a1d35f9cabcffbdb4690c13719861bb
+  Description: RogueKiller Antirootkit Driver
+  Company: Adlice Software
+  Product: Truesight
+  Copyright: Copyright Adlice Software(C) 2023
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
 Tags:
 - truesight.sys
