@@ -131,7 +131,7 @@ def get_metadata(driver):
         metadata['InternalName'] = version_info.get('InternalName', b'').decode("utf-8")
         metadata['OriginalFilename'] = version_info.get('OriginalFilename', b'').decode("utf-8")
         metadata['FileVersion'] = version_info.get('FileVersion', b'').decode("utf-8")
-        metadata['ProductName'] = version_info.get('ProductName', b'').decode("utf-8")
+        metadata['Product'] = version_info.get('ProductName', b'').decode("utf-8")
         metadata['LegalCopyright'] = version_info.get('LegalCopyright', b'').decode("utf-8")
         metadata['ProductVersion'] = version_info.get('ProductVersion', b'').decode("utf-8")
 
@@ -141,7 +141,7 @@ def get_metadata(driver):
         metadata['InternalName'] = ""
         metadata['OriginalFilename'] = ""
         metadata['FileVersion'] = ""
-        metadata['ProductName'] = ""
+        metadata['Product'] = ""
         metadata['LegalCopyright'] = ""
         metadata['ProductVersion'] = ""
 
@@ -248,7 +248,7 @@ def enrich_yaml(file_path_, metadata_md5, metadata_sha1, metadata_sha256):
                     sample['InternalName'] = metadata_['InternalName']
                     sample['OriginalFilename'] = metadata_['OriginalFilename']
                     sample['FileVersion'] = metadata_['FileVersion']
-                    sample['Product'] = metadata_['ProductName']
+                    sample['Product'] = metadata_['Product']
                     sample['ProductVersion'] = metadata_['ProductVersion']
                     sample['Copyright'] = metadata_['LegalCopyright']
                     sample['MachineType'] = metadata_['Machine']

@@ -310,7 +310,7 @@ def gen_sigma_rule_hashes(md5_list, sha1_list, sha256_list, imphash_list, name, 
             f.write("    product: windows\n")
             f.write("    category: driver_load\n")
             f.write("detection:\n")
-            f.write("    selection_sysmon:\n")
+            f.write("    selection:\n")
             f.write("        Hashes|contains:\n")
 
             if md5_list:
@@ -328,30 +328,8 @@ def gen_sigma_rule_hashes(md5_list, sha1_list, sha256_list, imphash_list, name, 
             if imphash_list:
                 for i in imphash_list:
                     f.write("            - 'IMPHASH=" + i + "'\n")
-            
-            f.write("    selection_other:\n")
 
-            if md5_list:
-                f.write("        - md5:\n")
-                for i in md5_list:
-                    f.write("            - '" + i + "'\n")
-            
-            if sha1_list:
-                f.write("        - sha1:\n")
-                for i in sha1_list:
-                    f.write("            - '" + i + "'\n")
-            
-            if sha256_list:
-                f.write("        - sha256:\n")
-                for i in sha256_list:
-                    f.write("            - '" + i + "'\n")
-            
-            if imphash_list:
-                f.write("        - imphash:\n")
-                for i in imphash_list:
-                    f.write("            - '" + i + "'\n")
-
-            f.write("    condition: 1 of selection_*\n")
+            f.write("    condition: selection\n")
             f.write("falsepositives:\n")
             f.write("    - Unknown\n")
             f.write("level: high\n")
@@ -454,10 +432,10 @@ if __name__ == "__main__":
     
     print("[+] Generating Sigma rules...")
     # driver_load_win_vuln_drivers
-    gen_sigma_rule_hashes(md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable, imphash_list_vulnerable, "driver_load_win_vuln_drivers", "7aaaf4b8-e47c-4295-92ee-6ed40a6f60c8", "Vulnerable Driver Load", "Detects the load of known vulnerable drivers by hash value")
-    gen_sigma_rule_hashes(md5_list_malicious, sha1_list_malicious, sha256_list_malicious, imphash_list_malicious, "driver_load_win_mal_drivers", "05296024-fe8a-4baf-8f3d-9a5f5624ceb2", "Malicious Driver Load", "Detects the load of known malicious drivers by hash value")
+    gen_sigma_rule_hashes(md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable, imphash_list_vulnerable, "driver_load_win_vuln_drivers", "7aaaf4b8-e47c-4295-92ee-6ed40a6f60c8", "Vulnerable Driver Load", "Detects loading of known vulnerable driver via their hash.")
+    gen_sigma_rule_hashes(md5_list_malicious, sha1_list_malicious, sha256_list_malicious, imphash_list_malicious, "driver_load_win_mal_drivers", "05296024-fe8a-4baf-8f3d-9a5f5624ceb2", "Malicious Driver Load", "Detects loading of known malicious drivers via their hash.")
     
-    gen_sigma_rule_names(names_list_vulnerable, "72cd00d6-490c-4650-86ff-1d11f491daa1", "driver_load_win_vuln_drivers_names", "Vulnerable Driver Load By Name", "Detects the load of known vulnerable drivers via their names only.", "low")
-    gen_sigma_rule_names(names_list_malicious, "39b64854-5497-4b57-a448-40977b8c9679", "driver_load_win_mal_drivers_names", "Malicious Driver Load By Name", "Detects the load of known malicious drivers via their names only.", "medium")
+    gen_sigma_rule_names(names_list_vulnerable, "72cd00d6-490c-4650-86ff-1d11f491daa1", "driver_load_win_vuln_drivers_names", "Vulnerable Driver Load By Name", "Detects loading of known vulnerable drivers via the file name of the drivers.", "low")
+    gen_sigma_rule_names(names_list_malicious, "39b64854-5497-4b57-a448-40977b8c9679", "driver_load_win_mal_drivers_names", "Malicious Driver Load By Name", "Detects loading of known malicious drivers via the file name of the drivers.", "medium")
 
     print("[+] Finished...Happy Hunting")
