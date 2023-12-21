@@ -78,6 +78,37 @@ def gen_hashes_lists(category_):
 
     return md5_list, sha1_list, sha256_list, imphash_list
 
+def gen_loadsdespitehvci_lists(category_):
+    """
+        Generates lists of hashes for LoadsDespiteHVCI being TRUE
+    """
+    md5_list = []
+    sha1_list = []
+    sha256_list = []
+    imphash_list = []
+    for file in yield_next_rule_file_path(path_to_yml):
+        category = get_yaml_part(file_path=file, part_name="Category")
+        if category_.lower() == category.lower():
+            known_vuln_samples = get_yaml_part(file_path=file, part_name="KnownVulnerableSamples")
+            loads_despite_hvci = get_yaml_part(file_path=file, part_name="LoadsDespiteHVCI")
+            if known_vuln_samples and loads_despite_hvci == 'TRUE':
+                for i in known_vuln_samples:
+                    if 'MD5' in i and i['MD5'] != "-":
+                        md5_list.append(i['MD5'])
+                    if 'SHA1' in i and i['SHA1'] != "-":
+                        sha1_list.append(i['SHA1'])
+                    if 'SHA256' in i and i['SHA256'] != "-":
+                        sha256_list.append(i['SHA256'])
+                    if 'Imphash' in i and i['Imphash'] != "-":
+                        imphash_list.append(i['Imphash'])
+
+    md5_list = list(filter(None,list(set([i.lstrip().strip().lower() for i in md5_list]))))
+    sha1_list = list(filter(None,list(set([i.lstrip().strip().lower() for i in sha1_list]))))
+    sha256_list = list(filter(None,list(set([i.lstrip().strip().lower() for i in sha256_list]))))
+    imphash_list = list(filter(None,list(set([i.lstrip().strip().lower() for i in imphash_list]))))
+
+    return md5_list, sha1_list, sha256_list, imphash_list
+
 def gen_authentihash_lists(category_):
     """
         Generates lists of authentihash
@@ -108,6 +139,37 @@ def gen_authentihash_lists(category_):
     authentihash_sha256_list = list(set([i.lstrip().strip().lower() for i in authentihash_sha256_list]))
 
     return authentihash_md5_list, authentihash_sha1_list, authentihash_sha256_list
+
+def gen_loadsdespitehvci_files(md5_list, sha1_list, sha256_list, imphash_list, name):
+    """
+        Generates hash samples files for LoadsDespiteHVCI
+    """
+    directory = 'detections/hashes/'
+    os.makedirs(directory, exist_ok=True)  # Create the directory if it doesn't exist
+    
+    if md5_list:
+        with open(f'detections/hashes/LoadsDespiteHVCI.{name}.md5', 'w') as f: 
+            for i in md5_list:
+                if i != "-":
+                    f.write(i + "\n")
+    
+    if sha1_list:
+        with open(f'detections/hashes/LoadsDespiteHVCI.{name}.sha1', 'w') as f: 
+            for i in sha1_list:
+                if i != "-":
+                    f.write(i + "\n")
+    
+    if sha256_list:
+        with open(f'detections/hashes/LoadsDespiteHVCI.{name}.sha256', 'w') as f:
+            for i in sha256_list:
+                if i != "-":
+                    f.write(i + "\n")
+    
+    if imphash_list:
+        with open(f'detections/hashes/LoadsDespiteHVCI.{name}.imphash', 'w') as f:
+            for i in imphash_list:
+                if i != "-":
+                    f.write(i + "\n")
 
 def gen_hashes_files(md5_list, sha1_list, sha256_list, imphash_list, name):
     """
@@ -411,6 +473,10 @@ if __name__ == "__main__":
     gen_hashes_files(md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable, imphash_list_vulnerable, "samples_vulnerable")
     gen_hashes_files(md5_list_malicious, sha1_list_malicious, sha256_list_malicious, imphash_list_malicious, "samples_malicious")
     gen_clamav_hash_list()
+
+    print("[+] Generating LoadsDespiteHVCI hash lists...")
+    gen_loadsdespitehvci_files(md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable, imphash_list_vulnerable, "samples_vulnerable")
+    gen_loadsdespitehvci_files(md5_list_malicious, sha1_list_malicious, sha256_list_malicious, imphash_list_malicious, "samples_malicious")
 
     print("[+] Generating authentihash samples...")
     # authentihash_samples
