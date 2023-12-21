@@ -464,6 +464,10 @@ if __name__ == "__main__":
     authentihash_md5_list_malicious, authentihash_sha1_list_malicious, authentihash_sha256_list_malicious = gen_authentihash_lists("malicious")
     authentihash_md5_list_vulnerable, authentihash_sha1_list_vulnerable, authentihash_sha256_list_vulnerable = gen_authentihash_lists("vulnerable driver")
 
+    print("[+] Generating hvci load lists...")
+    hvci_md5_list_malicious, hvci_sha1_list_malicious, hvci_sha256_list_malicious, hvci_imphash_list_malicious = gen_loadsdespitehvci_lists("malicious")
+    hvci_md5_list_vulnerable, hvci_sha1_list_vulnerable, hvci_sha256_list_vulnerable, hvci_imphash_list_vulnerable = gen_loadsdespitehvci_lists("vulnerable driver")
+
     print("[+] Generating names lists...")
     names_list_malicious = gen_names_list("malicious")
     names_list_vulnerable = gen_names_list("vulnerable driver")
@@ -475,8 +479,8 @@ if __name__ == "__main__":
     gen_clamav_hash_list()
 
     print("[+] Generating LoadsDespiteHVCI hash lists...")
-    gen_loadsdespitehvci_files(md5_list_vulnerable, sha1_list_vulnerable, sha256_list_vulnerable, imphash_list_vulnerable, "samples_vulnerable")
-    gen_loadsdespitehvci_files(md5_list_malicious, sha1_list_malicious, sha256_list_malicious, imphash_list_malicious, "samples_malicious")
+    gen_loadsdespitehvci_files(hvci_md5_list_vulnerable, hvci_sha1_list_vulnerable, hvci_sha256_list_vulnerable, hvci_imphash_list_vulnerable, "samples_vulnerable")
+    gen_loadsdespitehvci_files(hvci_md5_list_malicious, hvci_sha1_list_malicious, hvci_sha256_list_malicious, hvci_imphash_list_malicious, "samples_malicious")
 
     print("[+] Generating authentihash samples...")
     # authentihash_samples
