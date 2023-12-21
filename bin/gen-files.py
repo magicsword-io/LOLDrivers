@@ -90,17 +90,18 @@ def gen_loadsdespitehvci_lists(category_):
         category = get_yaml_part(file_path=file, part_name="Category")
         if category_.lower() == category.lower():
             known_vuln_samples = get_yaml_part(file_path=file, part_name="KnownVulnerableSamples")
-            loads_despite_hvci = get_yaml_part(file_path=file, part_name="LoadsDespiteHVCI")
-            if known_vuln_samples and loads_despite_hvci == 'TRUE':
+            if known_vuln_samples:
                 for i in known_vuln_samples:
-                    if 'MD5' in i and i['MD5'] != "-":
-                        md5_list.append(i['MD5'])
-                    if 'SHA1' in i and i['SHA1'] != "-":
-                        sha1_list.append(i['SHA1'])
-                    if 'SHA256' in i and i['SHA256'] != "-":
-                        sha256_list.append(i['SHA256'])
-                    if 'Imphash' in i and i['Imphash'] != "-":
-                        imphash_list.append(i['Imphash'])
+                    loads_despite_hvci = i.get('LoadsDespiteHVCI', 'FALSE')
+                    if loads_despite_hvci == 'TRUE':
+                        if 'MD5' in i and i['MD5'] != "-":
+                            md5_list.append(i['MD5'])
+                        if 'SHA1' in i and i['SHA1'] != "-":
+                            sha1_list.append(i['SHA1'])
+                        if 'SHA256' in i and i['SHA256'] != "-":
+                            sha256_list.append(i['SHA256'])
+                        if 'Imphash' in i and i['Imphash'] != "-":
+                            imphash_list.append(i['Imphash'])
 
     md5_list = list(filter(None,list(set([i.lstrip().strip().lower() for i in md5_list]))))
     sha1_list = list(filter(None,list(set([i.lstrip().strip().lower() for i in sha1_list]))))
