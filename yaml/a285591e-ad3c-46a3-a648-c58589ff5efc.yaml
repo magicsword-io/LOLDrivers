@@ -311,6 +311,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
       Version: 1
   Imphash: ad0cdf3bab32983050527655bce40f96
+  LoadsDespiteHVCI: 'TRUE'
 MitreID: T1068
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951

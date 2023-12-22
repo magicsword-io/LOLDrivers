@@ -134,6 +134,7 @@ KnownVulnerableSamples:
   - READ_PORT_ULONG
   - KeStallExecutionProcessor
   Signatures: {}
+  LoadsDespiteHVCI: 'FALSE'
 - Company: 'Radiant Systems, Inc. '
   Date: ''
   Description: Radiant Hardware Manager for P15xx Platform
@@ -341,6 +342,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: 'Radiant Systems, Inc. '
   Date: ''
   Description: Radiant Hardware Manager for P15xx Platform
@@ -462,6 +464,7 @@ KnownVulnerableSamples:
   - KeStallExecutionProcessor
   - HalTranslateBusAddress
   Signatures: {}
+  LoadsDespiteHVCI: 'FALSE'
 - Company: NCR Corporation
   Date: ''
   Description: Radiant Hardware Manager for P15xx Platform
@@ -629,6 +632,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: 'Radiant Systems, Inc. '
   Date: ''
   Description: Radiant Hardware Manager for P15xx Platform
@@ -826,6 +830,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: NCR Corporation
   Date: ''
   Description: Radiant Hardware Manager for P15xx Platform
@@ -1023,6 +1028,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
         ID Code Signing CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html

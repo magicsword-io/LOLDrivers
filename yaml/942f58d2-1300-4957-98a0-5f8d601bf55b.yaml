@@ -209,6 +209,7 @@ KnownVulnerableSamples:
     - SerialNumber: 1123134f000000003467
       Issuer: C=US, O=Intel Corporation, CN=Intel External Basic Issuing CA 3B
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html

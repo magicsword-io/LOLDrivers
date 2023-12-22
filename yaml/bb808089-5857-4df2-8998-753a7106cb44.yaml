@@ -148,6 +148,7 @@ KnownVulnerableSamples:
         Windows Third Party Component CA 2012
       Version: 1
   Imphash: f138fdbc6c7fbf73e135717c7d7eac27
+  LoadsDespiteHVCI: 'TRUE'
 - Authentihash:
     MD5: 1e96108c0938d4c34d7072f04bc8b951
     SHA1: d46ae9bcc746ca408fbb55fb0d61b638720a8f25
@@ -261,6 +262,7 @@ KnownVulnerableSamples:
         Windows Third Party Component CA 2012
       Version: 1
   Imphash: 506a31d768aec26b297c45b50026c820
+  LoadsDespiteHVCI: 'TRUE'
 MitreID: T1068
 Resources:
 - https://github.com/jbaines-r7/dellicious

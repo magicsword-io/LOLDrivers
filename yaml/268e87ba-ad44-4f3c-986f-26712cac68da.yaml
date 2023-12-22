@@ -173,6 +173,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 9e15ce38f071c916bea830247f1241bb
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 4325af5c85aa7bb0339389cf54d78817
     SHA1: 3c9f40ac72b0202cb40627fdeb7298079187193a
@@ -327,6 +328,7 @@ KnownVulnerableSamples:
         Class 3 SHA256 Code Signing CA
       Version: 1
   Imphash: 9e15ce38f071c916bea830247f1241bb
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'

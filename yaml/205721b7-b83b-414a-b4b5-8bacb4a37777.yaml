@@ -254,6 +254,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: c94e5ad0f33374535392364a5a193253
+  LoadsDespiteHVCI: 'TRUE'
 - Authentihash:
     MD5: c1afcba807a13aa25a0b363a22c760d6
     SHA1: 8422fb53e48b27a42cc7595ca7c7ae0597168db6
@@ -464,6 +465,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 0cba56fa162378bc4ee09e94a4e2fe33
+  LoadsDespiteHVCI: 'TRUE'
 MitreID: T1068
 Resources:
 - ' https://github.com/jbaines-r7/dellicious'

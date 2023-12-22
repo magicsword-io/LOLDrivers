@@ -203,6 +203,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 79bd6aa7fc10b9dec95deb431c299ab0
+  LoadsDespiteHVCI: 'TRUE'
 - Authentihash:
     MD5: 1dd0af6b54c93c4328f7c5006cd4f96a
     SHA1: 29f2f4ac858b8736927ed1df4921ff283bbaa05f
@@ -359,6 +360,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
   Imphash: 79bd6aa7fc10b9dec95deb431c299ab0
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

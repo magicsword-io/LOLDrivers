@@ -293,6 +293,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 0b663530751cc11f34273fee7921c431
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: b6d013002983064089233685b9bde66b
     SHA1: 6db4ed2d751cc8ae376f2dd69e702e9e469ad8c9
@@ -511,6 +512,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 85fd19df117fbc21efbcb1d587063e12
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

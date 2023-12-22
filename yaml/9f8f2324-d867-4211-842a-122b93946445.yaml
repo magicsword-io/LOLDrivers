@@ -244,6 +244,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2020-08-16 21:38:03'
   Imphash: a74f61fdcea718cb9579907b2caf54ab
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: mhyprot.sys
   MD5: 67e3b720cee8184c714585a85f8058a0
   SHA1: 254dce914e13b90003b0ae72d8705d92fe7c8dd0
@@ -473,6 +474,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2021-01-11 02:10:15'
   Imphash: 82525a4a571f0f8d4e4f42ec6bb3900e
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: mhyprot2.sys
   MD5: 8f47af49c330c9fcf3451ad2252b9e04
   SHA1: be797c91768ac854bd3b82a093e55db83da0cb11
@@ -703,6 +705,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2021-06-28 02:44:28'
   Imphash: ebb99842fa08915eb8b7f67d8dc7a13a
+  LoadsDespiteHVCI: 'FALSE'
 - Filename: mhyprot2.sys
   MD5: 89c7bd12495e29413038224cb61db02e
   SHA1: 16c6bcef489f190a48e9d3b1f35972db89516479
@@ -932,5 +935,6 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2020-12-29 19:40:40'
   Imphash: 4b0b017b23567cf8b9e1268957acd032
+  LoadsDespiteHVCI: 'FALSE'
 Tags:
 - mhyprot.sys

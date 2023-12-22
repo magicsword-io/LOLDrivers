@@ -162,6 +162,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 473c3773ca11aa7371dbf350919c5724
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: e593dd14a41fd9a6cb42fdae324c3092
     SHA1: e3c1dd569aa4758552566b0213ee4d1fe6382c4b
@@ -310,6 +311,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 473c3773ca11aa7371dbf350919c5724
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 5a1c888607ae9844ed843b06c8d689ea
     SHA1: 485c0b9710a196c7177b99ee95e5ddb35b26ddd1
@@ -462,6 +464,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 7e1327419d10a7eeece5579526f75d9f
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

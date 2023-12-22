@@ -210,6 +210,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2017-01-18 01:48:25'
   Imphash: 8ee2435c62b02fe0372cde028be489cb
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: rtkio.sys
   MD5: ffd0c87d9bf894af26823fbde94c71b6
   SHA1: eacfc73f5f45f229867ee8b2eb1f9649b5dd422e
@@ -369,6 +370,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2010-07-02 06:59:01'
   Imphash: 6ce93eab57a73915ecd5c202a339f6ce
+  LoadsDespiteHVCI: 'FALSE'
 - Filename: rtkiow10x64.sys
   MD5: 96a8b535b5e14b582ca5679a3e2a5946
   SHA1: f6b3577ea4b1a5641ae3421151a26268434c3db8
@@ -555,6 +557,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2020-07-09 03:28:24'
   Imphash: 317f02ddc9809d608a9bf63ce24e9550
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: rtkio.sys
   MD5: 664ad9cf500916c94fc2c0020660ac4e
   SHA1: 444f96d8943aec21d26f665203f3fb80b9a2a260
@@ -707,6 +710,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2010-07-02 06:59:21'
   Imphash: d6c920c10d4d0f92f0ac14c3fefed233
+  LoadsDespiteHVCI: 'FALSE'
 - Filename: rtkio64.sys
   MD5: 70dcd07d38017b43f710061f37cb4a91
   SHA1: 99201c9555e5faf6e8d82da793b148311f8aa4b8
@@ -879,6 +883,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2017-08-23 09:43:11'
   Imphash: f046e37fa7914491dc25a6f7718da341
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: rtkio.sys
   MD5: daf800da15b33bf1a84ee7afc59f0656
   SHA1: 166759fd511613414d3213942fe2575b926a6226
@@ -1042,6 +1047,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2010-07-02 06:59:01'
   Imphash: 6ce93eab57a73915ecd5c202a339f6ce
+  LoadsDespiteHVCI: 'FALSE'
 - Filename: rtkiow10x64.sys
   MD5: b5ada7fd226d20ec6634fc24768f9e22
   SHA1: 947db58d6f36a8df9fa2a1057f3a7f653ccbc42e
@@ -1214,6 +1220,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2017-08-23 09:44:32'
   Imphash: 6faad89adbfc9d5448bb1bd12e7714cd
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: rtkiow8x64.sys
   MD5: b8b6686324f7aa77f570bc019ec214e6
   SHA1: 6a3d3b9ab3d201cd6b0316a7f9c3fb4d34d0f403
@@ -1386,6 +1393,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2017-08-23 09:43:48'
   Imphash: 8122311437457ccae22578e301c6a17d
+  LoadsDespiteHVCI: 'TRUE'
 - Authentihash:
     MD5: 323c438f0a5a5e25ab49d996f968e876
     SHA1: f9399f08551048d8c72269d26ad1ac09a463d87f
@@ -1544,6 +1552,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 6f2d756d22c285a46206de3bfde6c79d
+  LoadsDespiteHVCI: 'TRUE'
 - Authentihash:
     MD5: b63a971807801d7c8873059cd5eef56f
     SHA1: 7e75c5237b2536a8ffb04bc9db85b421f560ee80
@@ -1700,6 +1709,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 11bfcbdb0787ef461d442f973c392cf6
+  LoadsDespiteHVCI: 'TRUE'
 - Authentihash:
     MD5: b21ab759cfaa77178c30c8b43678707d
     SHA1: e66b3b650761b1272b22d46ab41649b8a5c26603
@@ -1891,6 +1901,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 4343c9c0b78ee21e895f10d929c240d4
+  LoadsDespiteHVCI: 'TRUE'
 - Authentihash:
     MD5: d5757762e2ab3f34b0fa097b9abd3b90
     SHA1: bdcbf070f68d8eecc47d7efbd9f377e8e652d026
@@ -2056,6 +2067,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 085a78615099ffefa2df0a31da3058d8
+  LoadsDespiteHVCI: 'TRUE'
 - Authentihash:
     MD5: 9335f6098f8706ebb83466fbd449bc0f
     SHA1: 533e7f159d3adb334067257f80073e33accaa483
@@ -2213,6 +2225,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: abdaca21ab5c831000b0aa4b8f357716
+  LoadsDespiteHVCI: 'TRUE'
 - Authentihash:
     MD5: e13260e98e8c2ff45d504114da8117e8
     SHA1: 16b17721cf655f2442bf3865a9329f96e1e15295
@@ -2378,6 +2391,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 085a78615099ffefa2df0a31da3058d8
+  LoadsDespiteHVCI: 'TRUE'
 Tags:
 - rtkio.sys
 - rtkio64.sys

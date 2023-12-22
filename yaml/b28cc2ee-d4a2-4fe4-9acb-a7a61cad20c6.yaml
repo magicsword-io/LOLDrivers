@@ -159,6 +159,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: d658b06ec1ce39670b02a2dd83e29d03
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 4e4d97955557f085f4e1fe4cbba82321
     SHA1: 131a7703dbaf36bcf7034e8690a7046e9eb52d2b
@@ -282,6 +283,7 @@ KnownVulnerableSamples:
         RSA Extended Validation Code Signing CA
       Version: 1
   Imphash: 7bc998aaa9fe4b4fd5e133554f42d913
+  LoadsDespiteHVCI: 'TRUE'
 - Authentihash:
     MD5: 6d1e6e5682f9a5e8a64dc8d2ec6ddfac
     SHA1: 49fb554b77c8d533e4a1ff30bbc60ef7f80b7055
@@ -428,6 +430,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: d5bc15465b63888cc8b98ecc63a81517
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 4e4d97955557f085f4e1fe4cbba82321
     SHA1: 131a7703dbaf36bcf7034e8690a7046e9eb52d2b
@@ -577,6 +580,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 7bc998aaa9fe4b4fd5e133554f42d913
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 42d1a185325fed53f39a49a1cbf5ef51
     SHA1: 0d258e0459c2a6754b7dfb69e12a2c44805ca8d8
@@ -705,6 +709,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 05fbe4619edf747787879d9323951439
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 6d1e6e5682f9a5e8a64dc8d2ec6ddfac
     SHA1: 49fb554b77c8d533e4a1ff30bbc60ef7f80b7055
@@ -825,6 +830,7 @@ KnownVulnerableSamples:
         RSA Extended Validation Code Signing CA
       Version: 1
   Imphash: d5bc15465b63888cc8b98ecc63a81517
+  LoadsDespiteHVCI: 'TRUE'
 - Authentihash:
     MD5: 6d1e6e5682f9a5e8a64dc8d2ec6ddfac
     SHA1: 49fb554b77c8d533e4a1ff30bbc60ef7f80b7055
@@ -947,6 +953,7 @@ KnownVulnerableSamples:
         RSA Extended Validation Code Signing CA
       Version: 1
   Imphash: d5bc15465b63888cc8b98ecc63a81517
+  LoadsDespiteHVCI: 'TRUE'
 MitreID: T1068
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules

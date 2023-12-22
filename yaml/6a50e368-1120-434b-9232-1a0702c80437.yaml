@@ -225,6 +225,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
       Version: 1
   Imphash: 88e21ed9e717781eaf87209acbdbb567
+  LoadsDespiteHVCI: 'TRUE'
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

@@ -170,6 +170,7 @@ KnownVulnerableSamples:
         2021 CA1
       Version: 1
   Imphash: 7c24141cdcfc23f5eb0e2b6792d80740
+  LoadsDespiteHVCI: 'TRUE'
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

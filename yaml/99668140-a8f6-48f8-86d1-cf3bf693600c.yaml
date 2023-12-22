@@ -26,6 +26,7 @@ KnownVulnerableSamples:
   Publisher: ''
   SHA256: 9d58f640c7295952b71bdcb456cae37213baccdcd3032c1e3aeb54e79081f395
   Signature: []
+  LoadsDespiteHVCI: 'FALSE'
 - Company: ''
   Date: ''
   Description: ''
@@ -38,6 +39,7 @@ KnownVulnerableSamples:
   Publisher: ''
   SHA256: 4a9093e8dbcb867e1b97a0a67ce99a8511900658f5201c34ffb8035881f2dbbe
   Signature: []
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: d490f971f9503765a947997d7c54a4c7
     SHA1: 67650bc9cdf0716bc7b5664723c38fc5327ec662
@@ -164,6 +166,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
       Version: 1
   Imphash: 8b6c1a09e11200591663b880a94a8d18
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: d490f971f9503765a947997d7c54a4c7
     SHA1: 67650bc9cdf0716bc7b5664723c38fc5327ec662
@@ -290,6 +293,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G3
       Version: 1
   Imphash: 8b6c1a09e11200591663b880a94a8d18
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'

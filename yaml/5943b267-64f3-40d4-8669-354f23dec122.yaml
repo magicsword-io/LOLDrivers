@@ -221,6 +221,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , SHA256 , G2
       Version: 1
   Imphash: 08c7f29f5cb29ba70e49879da2e8ddce
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: d86884546c97e614b73d16c600cfb2df
     SHA1: 94f7575a6bb378d0cf85b3dc65941c95415e7a80
@@ -403,6 +404,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 08c7f29f5cb29ba70e49879da2e8ddce
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: d86884546c97e614b73d16c600cfb2df
     SHA1: 94f7575a6bb378d0cf85b3dc65941c95415e7a80
@@ -585,6 +587,7 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 08c7f29f5cb29ba70e49879da2e8ddce
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: d86884546c97e614b73d16c600cfb2df
     SHA1: 94f7575a6bb378d0cf85b3dc65941c95415e7a80
@@ -751,6 +754,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
   Imphash: 08c7f29f5cb29ba70e49879da2e8ddce
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: d86884546c97e614b73d16c600cfb2df
     SHA1: 94f7575a6bb378d0cf85b3dc65941c95415e7a80
@@ -906,6 +910,7 @@ KnownVulnerableSamples:
         CA , SHA256 , G2
       Version: 1
   Imphash: 08c7f29f5cb29ba70e49879da2e8ddce
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: d86884546c97e614b73d16c600cfb2df
     SHA1: 94f7575a6bb378d0cf85b3dc65941c95415e7a80
@@ -995,6 +1000,7 @@ KnownVulnerableSamples:
   Signature: ''
   Signatures: {}
   Imphash: 08c7f29f5cb29ba70e49879da2e8ddce
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

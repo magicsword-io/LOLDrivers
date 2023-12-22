@@ -182,6 +182,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Intel Corporation, CN=Intel External Basic Issuing CA 3A
       Version: 1
   Imphash: 67bace81ce26ddf73732dd75cbd0c0f2
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

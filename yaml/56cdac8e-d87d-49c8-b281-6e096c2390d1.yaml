@@ -122,6 +122,7 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2019-12-06 02:42:17'
   Imphash: ad374977f06fefefbb9c77155f7a0733
+  LoadsDespiteHVCI: 'FALSE'
 - Filename: GVCIDrv64.sys
   MD5: acd221ff7cf10b6117fd609929cde395
   SHA1: 1586f121d38cc42e5d04fe2f56091e91c6cdd8fa
@@ -255,5 +256,6 @@ KnownVulnerableSamples:
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2019-12-06 02:42:17'
   Imphash: ad374977f06fefefbb9c77155f7a0733
+  LoadsDespiteHVCI: 'TRUE'
 Tags:
 - gvcidrv64.sys

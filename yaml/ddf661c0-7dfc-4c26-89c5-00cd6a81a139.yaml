@@ -118,6 +118,7 @@ KnownVulnerableSamples:
         Windows Third Party Component CA 2014
       Version: 1
   Imphash: df43355c636583e56e92142dcc69cc58
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 82a8528c1c8391d38cbd90ba8823f833
     SHA1: 0122f7a57784f2ac460d175687450d8940cace6e
@@ -213,6 +214,7 @@ KnownVulnerableSamples:
         Windows Third Party Component CA 2014
       Version: 1
   Imphash: df43355c636583e56e92142dcc69cc58
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://github.com/kkent030315/CVE-2022-42046

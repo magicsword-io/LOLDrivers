@@ -166,6 +166,7 @@ KnownVulnerableSamples:
         ID Code Signing CA
       Version: 1
   Imphash: 75018719e85e67b75e73c57d682dbcbf
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

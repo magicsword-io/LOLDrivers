@@ -14,6 +14,10 @@ displayTitle = "{{driver.Tags[0]}}"
 
 {% if driver.Verified == 'TRUE' %}
 # {{driver.Tags[0]}} ![:inline](/images/twitter_verified.png) 
+{% if driver.KnownVulnerableSamples[0].LoadsDespiteHVCI == 'TRUE' %} ![:inline](/images/elmo.gif) {% endif %}
+{% else %}
+# {{driver.Tags[0]}}
+{% endif %}
 
 {% else %}
 # {{driver.Tags[0]}}
@@ -174,6 +178,7 @@ This download link contains the malicious driver!
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | {{ hash.Filename }} |
+| Creation Timestamp           | {{ hash.CreationTimestamp }} |
 | MD5                | [{{ hash.MD5 }}](https://www.virustotal.com/gui/file/{{hash.MD5}}) |
 | SHA1               | [{{ hash.SHA1 }}](https://www.virustotal.com/gui/file/{{hash.SHA1}}) |
 | SHA256             | [{{ hash.SHA256 }}](https://www.virustotal.com/gui/file/{{hash.SHA256}}) |
@@ -250,16 +255,7 @@ This download link contains the malicious driver!
 
 {% raw %}{{< /details >}}{% endraw %}
 
-#### Imports
-{% raw %}{{< details "Expand" >}}{% endraw %}
-
-{% for import in hash.Imports %}
-* {{ import }}
-{% endfor %}
-
-{% raw %}{{< /details >}}{% endraw %}
-
-#### ImportedFunctions
+#### Imported Functions
 {% raw %}{{< details "Expand" >}}{% endraw %}
 
 {% for import in hash.ImportedFunctions %}
@@ -268,7 +264,7 @@ This download link contains the malicious driver!
 
 {% raw %}{{< /details >}}{% endraw %}
 
-#### ExportedFunctions
+#### Exported Functions
 {% raw %}{{< details "Expand" >}}{% endraw %}
 
 {% for export in hash.ExportedFunctions %}
@@ -276,6 +272,15 @@ This download link contains the malicious driver!
 {% endfor %}
 
 {% raw %}{{< /details >}}{%+ endraw +%}
+
+#### Sections
+{% raw %}{{< details "Expand" >}}{% endraw %}
+
+{% for section in hash.Sections %}
+* {{ section }}
+{% endfor %}
+
+{% raw %}{{< /details >}}{% endraw %}
 
 #### Signature
 {% raw %}{{< details "Expand" >}}{% endraw %}

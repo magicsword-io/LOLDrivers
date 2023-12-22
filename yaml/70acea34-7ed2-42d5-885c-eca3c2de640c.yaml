@@ -235,6 +235,7 @@ KnownVulnerableSamples:
         Windows Third Party Component CA 2014
       Version: 1
   Imphash: c214aac08575c139e48d04f5aee21585
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 2855f88dffa0bb68f988d5c116b336fb
     SHA1: 169b81ce8a74d3a404384ad3e90ac3b053323d50
@@ -431,6 +432,7 @@ KnownVulnerableSamples:
         Windows Third Party Component CA 2014
       Version: 1
   Imphash: c214aac08575c139e48d04f5aee21585
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware

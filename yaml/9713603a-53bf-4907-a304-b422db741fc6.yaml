@@ -198,6 +198,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=thawte, Inc., CN=thawte SHA256 Code Signing CA
       Version: 1
   Imphash: e3ee9131742bf9c9d43cb9a425e497dd
+  LoadsDespiteHVCI: 'TRUE'
 MitreID: T1068
 Resources:
 - https://blog.talosintelligence.com/undocumented-reddriver/

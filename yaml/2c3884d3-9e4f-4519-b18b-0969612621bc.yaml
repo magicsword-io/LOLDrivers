@@ -97,6 +97,7 @@ KnownVulnerableSamples:
         Class 3 SHA256 Code Signing CA
       SerialNumber: 6f20ba7d552fb9c436caf4cc7cbea4b3
     SignerInfo: ''
+  LoadsDespiteHVCI: 'TRUE'
 - Authentihash:
     MD5: 8ca1704038d6c48680707e8135672da6
     SHA1: bf20c99129a768b3d2d5c621ab50375984ab9351
@@ -240,6 +241,7 @@ KnownVulnerableSamples:
         Class 3 SHA256 Code Signing CA
       Version: 1
   Imphash: 5ea78a193212fe61ac722f45f0b0eab9
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://github.com/VoidSec/Exploit-Development/tree/b82b6d3ac1cce66221101d3e0f4634aa64cb4ca7/windows/x64/kernel/logitech_v.9.02.65_DoS

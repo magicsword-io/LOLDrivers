@@ -179,6 +179,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: General Electric Company
   Date: ''
   Description: GE Device Driver
@@ -330,6 +331,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: General Electric Company
   Date: ''
   Description: GE Device Driver
@@ -488,6 +490,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: GE Intelligent Platforms, Inc.
   Date: ''
   Description: GE Device Driver
@@ -632,6 +635,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html

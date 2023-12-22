@@ -220,6 +220,7 @@ KnownVulnerableSamples:
         CA , SHA256 , G3
       Version: 1
   Imphash: 67d92a28cd2923a923adf7fd958905d8
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 22db74f3f2e50ccdeb471c81e3a62532
     SHA1: 6e87cd3b027a07a810164d618e3f2fce61eb6ec4
@@ -392,6 +393,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
   Imphash: bd093a7d5ba5632ee52f3466a688ee55
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 22db74f3f2e50ccdeb471c81e3a62532
     SHA1: 6e87cd3b027a07a810164d618e3f2fce61eb6ec4
@@ -564,6 +566,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
   Imphash: bd093a7d5ba5632ee52f3466a688ee55
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 0e03e32b8b0f3a1abb52581c1b5698f6
     SHA1: 4614a646d19fb297aa878ba5e70dc9a6a1c5dd8a
@@ -712,6 +715,7 @@ KnownVulnerableSamples:
         CA , SHA256 , G3
       Version: 1
   Imphash: 91ee149529956a79a91eeb8c48f00b3d
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules

@@ -150,6 +150,7 @@ KnownVulnerableSamples:
       Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Code Signing CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: Advanced Micro Devices, Inc.
   Date: ''
   Description: USB-C Power Delivery Firmware Update Utility Driver
@@ -301,6 +302,7 @@ KnownVulnerableSamples:
       Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Code Signing CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: Advanced Micro Devices, Inc.
   Date: ''
   Description: USB-C Power Delivery Firmware Update Utility Driver
@@ -422,6 +424,7 @@ KnownVulnerableSamples:
       Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Code Signing CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: Advanced Micro Devices, Inc.
   Date: ''
   Description: USB-C Power Delivery Firmware Update Tool Kernel Driver
@@ -543,6 +546,7 @@ KnownVulnerableSamples:
       Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Code Signing CA
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html

@@ -228,6 +228,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: Fintek Corp.
   Date: ''
   Description: Fintek Pcie2Uart Adapter
@@ -417,6 +418,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: Feature Integration Technology Inc.
   Date: ''
   Description: FINTEK PCIECOM Adapter
@@ -590,6 +592,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: Fintek Corp.
   Date: ''
   Description: Fintek Pcie2Uart Adapter
@@ -789,6 +792,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Company: Feature Integration Technology Inc.
   Date: ''
   Description: FINTEK PCIECOM Adapter
@@ -956,6 +960,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html

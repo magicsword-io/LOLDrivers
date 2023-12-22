@@ -175,6 +175,7 @@ KnownVulnerableSamples:
         Issuing CA 3B
       Version: 1
   Imphash: 24e4c876bb5db0b0e0a4e92f0a3d3a48
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 79553d83580570e382d3b9c7e101df2b
     SHA1: e3dbe2aa03847df621591a4cad69a5609de5c237
@@ -336,6 +337,7 @@ KnownVulnerableSamples:
         Issuing CA 3B
       Version: 1
   Imphash: 24e4c876bb5db0b0e0a4e92f0a3d3a48
+  LoadsDespiteHVCI: 'FALSE'
 - Authentihash:
     MD5: 79553d83580570e382d3b9c7e101df2b
     SHA1: e3dbe2aa03847df621591a4cad69a5609de5c237
@@ -491,6 +493,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Intel Corporation, CN=Intel External Basic Issuing CA 3A
       Version: 1
   Imphash: 24e4c876bb5db0b0e0a4e92f0a3d3a48
+  LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
 - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
