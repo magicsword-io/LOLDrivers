@@ -1,0 +1,57 @@
+name: "Reference Archiver"
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  run_powershell:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3.3.0
+    - name: Run PowerShell script
+      run: |
+        Invoke-WebRequest -Uri "https://gist.github.com/MHaggis/8d6de45b883b338e47de08b3cb4c9819" -OutFile "script.ps1"
+        ./script.ps1
+    - name: Upload CSV
+      uses: actions/upload-artifact@v2
+      with:
+        name: hvci_drivers
+        path: bin/hvci_drivers.csv
+
+  run_python:
+    needs: run_powershell
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3.3.0
+    - name: Download CSV
+      uses: actions/download-artifact@v2
+      with:
+        name: hvci_drivers
+        path: bin/
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v4.5.0
+      with:
+        python-version: 3.11
+    - name: Install dependencies
+      run: |
+        pip install PyYAML argparse requests
+    - name: Execute Python script
+      run: |
+        python bin/hvcitag.py
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v5
+      with:
+        reviewers: nasbench, mhaggis
+        delete-branch: true
+        branch: 'create-pull-request/hvciupdate'
+        commit-message: 'chore: update hvci check'
+        title: 'HVCI Tag Update'
+        body: |
+          ### Summary of the Pull Request
+
+          This PR updates the HVCI tagging based on new drivers added to the project.

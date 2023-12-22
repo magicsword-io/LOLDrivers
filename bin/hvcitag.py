@@ -1,6 +1,5 @@
 import csv
 import os
-import re
 import yaml
 
 yaml_directory = '../yaml'
