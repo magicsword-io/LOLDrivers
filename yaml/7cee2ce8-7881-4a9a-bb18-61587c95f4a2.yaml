@@ -7,7 +7,10 @@ Verified: 'TRUE'
 Commands:
   Command: sc.exe create DcProtect.sys binPath=C:\windows\temp\DcProtect.sys type=kernel
     && sc.exe start DcProtect.sys
-  Description: 'bundled with chinese application "DrvCeo" is a set of rootkits. The malicious functionality. prevents registry value writing where the registry key or value includes "dcprotect" or "drvceo". Prevents file deletion if pathname contains "driverdownload", "program files\sysceo", "program files (x86)\sysceo"'
+  Description: 'bundled with chinese application "DrvCeo" is a set of rootkits. The
+    malicious functionality. prevents registry value writing where the registry key
+    or value includes "dcprotect" or "drvceo". Prevents file deletion if pathname
+    contains "driverdownload", "program files\sysceo", "program files (x86)\sysceo"'
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -60,7 +63,7 @@ KnownVulnerableSamples:
   Imphash: e800cd3299d4cda0d9e02255acc3b7dd
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 16:17:50'
+  CreationTimestamp: '2021-01-06 09:17:50'
   RichPEHeaderMD5: 4d8a663ae2f765ff317d5e042cf62899
   RichPEHeaderSHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
   RichPEHeaderSHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
@@ -87,7 +90,7 @@ KnownVulnerableSamples:
       Entropy: 5.40476343320525
       Virtual Size: '0x522'
     .rsrc:
-      Entropy: 3.5670060435577366
+      Entropy: 3.567006043557736
       Virtual Size: '0x450'
     .reloc:
       Entropy: 3.5093407582869136
@@ -179,6 +182,22 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Authentihash:
+    MD5: 6eb18a9f44c6022e259088a2106f048c
+    SHA1: ea9a484278d7a80a46edcd096447bbea0c892f64
+    SHA256: 1ff54579dc4b76e814495d8e1d452a6f868adf06c2de0afdc5c3878b380d0a17
+  RichPEHeaderHash:
+    MD5: 4d8a663ae2f765ff317d5e042cf62899
+    SHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
+    SHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
+  Description: DcProtect Driver
+  Company: Windows (R) Win 7 DDK provider
+  Product: 'DcProtect (R) Win10x64 driver '
+  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  MachineType: AMD64
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
 - Filename: ''
   Libraries:
   - FLTMGR.SYS
@@ -222,7 +241,7 @@ KnownVulnerableSamples:
   Imphash: 2ece23bdef16ee294bd905c7ba1be589
   Machine: I386
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 16:15:15'
+  CreationTimestamp: '2021-01-06 09:15:15'
   RichPEHeaderMD5: 555e8cb2ed5b1eea11f804a11c4aef99
   RichPEHeaderSHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
   RichPEHeaderSHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
@@ -231,7 +250,7 @@ KnownVulnerableSamples:
   AuthentihashSHA256: fcffb9cecbcefc399a2a08d99fcc2b797911afa26f3d69a28a139311cb61c39a
   Sections:
     .text:
-      Entropy: 6.308037981479058
+      Entropy: 6.308037981479057
       Virtual Size: '0x946'
     .rdata:
       Entropy: 3.7031047583665897
@@ -338,6 +357,22 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Authentihash:
+    MD5: bc49e6eba2c3a95f1fe0d1c5c4f2fb70
+    SHA1: fc759e3940f05c22d3919c20d08c44d4fd806b99
+    SHA256: fcffb9cecbcefc399a2a08d99fcc2b797911afa26f3d69a28a139311cb61c39a
+  RichPEHeaderHash:
+    MD5: 555e8cb2ed5b1eea11f804a11c4aef99
+    SHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
+    SHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
+  Description: DcProtect Driver
+  Company: Windows (R) Win 7 DDK provider
+  Product: 'DcProtect (R) Win10x86 driver '
+  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  MachineType: I386
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
 - Filename: ''
   Libraries:
   - FLTMGR.SYS
@@ -379,7 +414,7 @@ KnownVulnerableSamples:
   Imphash: e800cd3299d4cda0d9e02255acc3b7dd
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 16:17:24'
+  CreationTimestamp: '2021-01-06 09:17:24'
   RichPEHeaderMD5: 4d8a663ae2f765ff317d5e042cf62899
   RichPEHeaderSHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
   RichPEHeaderSHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
@@ -498,6 +533,22 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Authentihash:
+    MD5: 96cd68100963cf38f3090777a3dfc543
+    SHA1: 87c65b5bc7991c7161e41dcd609ab3cacf1c5753
+    SHA256: 3f085bc766d865fa012163ed7c044af25285525b1276b6cef2085efab78e9b66
+  RichPEHeaderHash:
+    MD5: 4d8a663ae2f765ff317d5e042cf62899
+    SHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
+    SHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
+  Description: DcProtect Driver
+  Company: Windows (R) Win 7 DDK provider
+  Product: 'DcProtect (R) Win8.1x64 driver '
+  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  MachineType: AMD64
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
 - Filename: ''
   Libraries:
   - FLTMGR.SYS
@@ -541,7 +592,7 @@ KnownVulnerableSamples:
   Imphash: 2ece23bdef16ee294bd905c7ba1be589
   Machine: I386
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 16:14:24'
+  CreationTimestamp: '2021-01-06 09:14:24'
   RichPEHeaderMD5: 555e8cb2ed5b1eea11f804a11c4aef99
   RichPEHeaderSHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
   RichPEHeaderSHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
@@ -550,7 +601,7 @@ KnownVulnerableSamples:
   AuthentihashSHA256: 68fcb5cf6723dd195cf6d929cf9c6aaaca649f6956eb3bd63c2c1a8391c0b21f
   Sections:
     .text:
-      Entropy: 6.308037981479058
+      Entropy: 6.308037981479057
       Virtual Size: '0x946'
     .rdata:
       Entropy: 3.7050277120937967
@@ -565,7 +616,7 @@ KnownVulnerableSamples:
       Entropy: 5.643218995926574
       Virtual Size: '0x452'
     .rsrc:
-      Entropy: 3.575932310227879
+      Entropy: 3.5759323102278784
       Virtual Size: '0x450'
     .reloc:
       Entropy: 5.6072871377452635
@@ -657,6 +708,22 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Authentihash:
+    MD5: 9674f398b8e67adf4d10637287d56acb
+    SHA1: c7cf5617544aea0c8df8adb71cdc1951b88cb381
+    SHA256: 68fcb5cf6723dd195cf6d929cf9c6aaaca649f6956eb3bd63c2c1a8391c0b21f
+  RichPEHeaderHash:
+    MD5: 555e8cb2ed5b1eea11f804a11c4aef99
+    SHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
+    SHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
+  Description: DcProtect Driver
+  Company: Windows (R) Win 7 DDK provider
+  Product: 'DcProtect (R) Win8.1x86 driver '
+  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  MachineType: I386
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
 - Filename: ''
   Libraries:
   - FLTMGR.SYS
@@ -698,7 +765,7 @@ KnownVulnerableSamples:
   Imphash: e800cd3299d4cda0d9e02255acc3b7dd
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 16:16:44'
+  CreationTimestamp: '2021-01-06 09:16:44'
   RichPEHeaderMD5: 4d8a663ae2f765ff317d5e042cf62899
   RichPEHeaderSHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
   RichPEHeaderSHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
@@ -725,7 +792,7 @@ KnownVulnerableSamples:
       Entropy: 5.40476343320525
       Virtual Size: '0x522'
     .rsrc:
-      Entropy: 3.5623685726461813
+      Entropy: 3.562368572646181
       Virtual Size: '0x450'
     .reloc:
       Entropy: 3.5093407582869136
@@ -817,6 +884,22 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Authentihash:
+    MD5: d23bcd43e1a50a59ecdbf9069b37207a
+    SHA1: 79e6df018bd867ebefb8400297f57f5d1586d10a
+    SHA256: 1b14ff6a1054fa4bae158111fbcaf35baeedaa9b664c8fb7241db98f7e1c6c20
+  RichPEHeaderHash:
+    MD5: 4d8a663ae2f765ff317d5e042cf62899
+    SHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
+    SHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
+  Description: DcProtect Driver
+  Company: Windows (R) Win 7 DDK provider
+  Product: 'DcProtect (R) Win8x64 driver '
+  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  MachineType: AMD64
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
 - Filename: ''
   Libraries:
   - FLTMGR.SYS
@@ -860,7 +943,7 @@ KnownVulnerableSamples:
   Imphash: 2ece23bdef16ee294bd905c7ba1be589
   Machine: I386
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 16:13:53'
+  CreationTimestamp: '2021-01-06 09:13:53'
   RichPEHeaderMD5: 555e8cb2ed5b1eea11f804a11c4aef99
   RichPEHeaderSHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
   RichPEHeaderSHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
@@ -869,7 +952,7 @@ KnownVulnerableSamples:
   AuthentihashSHA256: bf1264cf5b9ca687a447a5021394db27eecf31f009185deb634b32f7ed49f620
   Sections:
     .text:
-      Entropy: 6.308037981479058
+      Entropy: 6.308037981479057
       Virtual Size: '0x946'
     .rdata:
       Entropy: 3.7057190010151917
@@ -884,7 +967,7 @@ KnownVulnerableSamples:
       Entropy: 5.643218995926574
       Virtual Size: '0x452'
     .rsrc:
-      Entropy: 3.5681043860840616
+      Entropy: 3.5681043860840607
       Virtual Size: '0x450'
     .reloc:
       Entropy: 5.6072871377452635
@@ -976,6 +1059,22 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Authentihash:
+    MD5: ac737185ad0ab4144de464bc0c1aa6a6
+    SHA1: 8d81b766e0a9e03109ccf5414649d95c0b0c7466
+    SHA256: bf1264cf5b9ca687a447a5021394db27eecf31f009185deb634b32f7ed49f620
+  RichPEHeaderHash:
+    MD5: 555e8cb2ed5b1eea11f804a11c4aef99
+    SHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
+    SHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
+  Description: DcProtect Driver
+  Company: Windows (R) Win 7 DDK provider
+  Product: 'DcProtect (R) Win8x86 driver '
+  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  MachineType: I386
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
 - Filename: ''
   Libraries:
   - FLTMGR.SYS
@@ -1017,7 +1116,7 @@ KnownVulnerableSamples:
   Imphash: e800cd3299d4cda0d9e02255acc3b7dd
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 16:16:01'
+  CreationTimestamp: '2021-01-06 09:16:01'
   RichPEHeaderMD5: c4e7e7af2fdd10d405127dc885585e78
   RichPEHeaderSHA1: bb15c357ab3f88e7eb311098667c091cd5f129c3
   RichPEHeaderSHA256: 7f2615ebe7385406ee5a6aba05c2a4b97cfdf498617fa8dae127640c6b6d465d
@@ -1044,7 +1143,7 @@ KnownVulnerableSamples:
       Entropy: 5.476024924621617
       Virtual Size: '0x55a'
     .rsrc:
-      Entropy: 3.5617752555881617
+      Entropy: 3.561775255588161
       Virtual Size: '0x450'
     .reloc:
       Entropy: 3.4420918598895933
@@ -1136,6 +1235,22 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Authentihash:
+    MD5: 039cffceb3ae187e569f5d727270298d
+    SHA1: a8b62bfd32512bd382fa1e236dbbe01a5be4cbeb
+    SHA256: 9923b3d6e508aa2086c66b36038b37206b0f8d26beaf87022290a2b574c2e047
+  RichPEHeaderHash:
+    MD5: c4e7e7af2fdd10d405127dc885585e78
+    SHA1: bb15c357ab3f88e7eb311098667c091cd5f129c3
+    SHA256: 7f2615ebe7385406ee5a6aba05c2a4b97cfdf498617fa8dae127640c6b6d465d
+  Description: DcProtect Driver
+  Company: Windows (R) Win 7 DDK provider
+  Product: 'DcProtect (R) Win7x64 driver '
+  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  MachineType: AMD64
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
 - Filename: ''
   Libraries:
   - FLTMGR.SYS
@@ -1179,7 +1294,7 @@ KnownVulnerableSamples:
   Imphash: 2ece23bdef16ee294bd905c7ba1be589
   Machine: I386
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 16:13:00'
+  CreationTimestamp: '2021-01-06 09:13:00'
   RichPEHeaderMD5: 331d5fbc7084c96f08da4705084c4bc3
   RichPEHeaderSHA1: 6e6ddabbb0c5d4d90269650e65477ae67bf17947
   RichPEHeaderSHA256: 50cf67aa86ee44eeccc56f3ebc2f441c284470cd58f40766cfa05f534542983e
@@ -1188,7 +1303,7 @@ KnownVulnerableSamples:
   AuthentihashSHA256: 52b1c4667ef36a02a0e6d7f147b8d4bc0e30645e6c88bd2984e53abc693bc18e
   Sections:
     .text:
-      Entropy: 6.308037981479058
+      Entropy: 6.308037981479057
       Virtual Size: '0x946'
     .rdata:
       Entropy: 3.7023655017712978
@@ -1203,7 +1318,7 @@ KnownVulnerableSamples:
       Entropy: 5.649483257924144
       Virtual Size: '0x46a'
     .rsrc:
-      Entropy: 3.5678412574106435
+      Entropy: 3.5678412574106426
       Virtual Size: '0x450'
     .reloc:
       Entropy: 5.595838177817881
@@ -1295,5 +1410,21 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Authentihash:
+    MD5: 007b4e42848dd962ea718006bab02c73
+    SHA1: b19d88aecf348d25a9dbe3d884a4069e5f79c49a
+    SHA256: 52b1c4667ef36a02a0e6d7f147b8d4bc0e30645e6c88bd2984e53abc693bc18e
+  RichPEHeaderHash:
+    MD5: 331d5fbc7084c96f08da4705084c4bc3
+    SHA1: 6e6ddabbb0c5d4d90269650e65477ae67bf17947
+    SHA256: 50cf67aa86ee44eeccc56f3ebc2f441c284470cd58f40766cfa05f534542983e
+  Description: DcProtect Driver
+  Company: Windows (R) Win 7 DDK provider
+  Product: 'DcProtect (R) Win7x86 driver '
+  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  MachineType: I386
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
 Tags:
 - DcProtect.sys
