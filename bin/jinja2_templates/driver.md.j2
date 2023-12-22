@@ -13,11 +13,7 @@ displayTitle = "{{driver.Tags[0]}}"
 
 
 {% if driver.Verified == 'TRUE' %}
-# {{driver.Tags[0]}} ![:inline](/images/twitter_verified.png) 
-{% if driver.KnownVulnerableSamples[0].LoadsDespiteHVCI == 'TRUE' %} ![:inline](/images/elmo.gif) {% endif %}
-{% else %}
-# {{driver.Tags[0]}}
-{% endif %}
+# {{driver.Tags[0]}} ![:inline](/images/twitter_verified.png) {% if driver.KnownVulnerableSamples[0].LoadsDespiteHVCI == 'TRUE' %} ![:inline](/images/elmo.gif) {% endif %}
 
 {% else %}
 # {{driver.Tags[0]}}
