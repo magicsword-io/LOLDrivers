@@ -1,5 +1,5 @@
 Id: e0e93453-1007-4799-ad02-9b461b7e0398
-Author: ph4nt0mbyt3
+Author: ph4nt0mbyt3, Michael Haag
 Created: '2023-11-10'
 MitreID: T1068
 Category: vulnerable driver
@@ -15,7 +15,7 @@ Commands:
     or WDAC enabled. HVCI is designed to ensure the integrity of code executed in
     the kernel, but it cannot protect against all possible vulnerabilities or actions
     that can be performed through drivers or system interfaces.
-  Usecase: AV Killer
+  Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 11
 Resources:
