@@ -13,7 +13,6 @@ displayTitle = "magdrvamd64.sys"
 
 # magdrvamd64.sys ![:inline](/images/twitter_verified.png) 
 
-
 ### Description
 
 magdrvamd64.sys is a vulnerable driver and more information will be added as found.
@@ -101,6 +100,7 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | magdrvamd64.sys |
+| Creation Timestamp           | 2013-11-28 06:29:00 |
 | MD5                | [49938383844ceec33dba794fb751c9a5](https://www.virustotal.com/gui/file/49938383844ceec33dba794fb751c9a5) |
 | SHA1               | [e22495d92ac3dcae5eeb1980549a9ead8155f98a](https://www.virustotal.com/gui/file/e22495d92ac3dcae5eeb1980549a9ead8155f98a) |
 | SHA256             | [be54f7279e69fb7651f98e91d24069dbc7c4c67e65850e486622ccbdc44d9a57](https://www.virustotal.com/gui/file/be54f7279e69fb7651f98e91d24069dbc7c4c67e65850e486622ccbdc44d9a57) |
@@ -179,12 +179,7 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
 * NTOSKRNL.exe
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* NTOSKRNL.exe
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * IoDeleteDevice
 * IoCreateSymbolicLink
@@ -196,11 +191,21 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
 * MmMapIoSpace
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* INIT
+* .rsrc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```

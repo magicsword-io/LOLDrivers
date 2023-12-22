@@ -13,7 +13,6 @@ displayTitle = "stdcdrvws64.sys"
 
 # stdcdrvws64.sys ![:inline](/images/twitter_verified.png) 
 
-
 ### Description
 
 The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
@@ -100,6 +99,7 @@ sc.exe create stdcdrvws64sys binPath= C:\windows\temp\stdcdrvws64sys.sys type=ke
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2010-11-10 17:06:03 |
 | MD5                | [003dc41d148ec3286dc7df404ba3f2aa](https://www.virustotal.com/gui/file/003dc41d148ec3286dc7df404ba3f2aa) |
 | SHA1               | [948fa3149742f73bf3089893407df1b20f78a563](https://www.virustotal.com/gui/file/948fa3149742f73bf3089893407df1b20f78a563) |
 | SHA256             | [70afdc0e11db840d5367afe53c35d9642c1cf616c7832ab283781d085988e505](https://www.virustotal.com/gui/file/70afdc0e11db840d5367afe53c35d9642c1cf616c7832ab283781d085988e505) |
@@ -210,12 +210,7 @@ sc.exe create stdcdrvws64sys binPath= C:\windows\temp\stdcdrvws64sys.sys type=ke
 * ntoskrnl.exe
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * IoDeleteSymbolicLink
 * RtlInitUnicodeString
@@ -237,11 +232,21 @@ sc.exe create stdcdrvws64sys binPath= C:\windows\temp\stdcdrvws64sys.sys type=ke
 * __C_specific_handler
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* INIT
+* .rsrc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```

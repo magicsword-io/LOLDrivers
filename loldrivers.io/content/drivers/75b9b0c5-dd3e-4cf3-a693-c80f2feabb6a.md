@@ -11,8 +11,7 @@ displayTitle = "5a4fe297c7d42539303137b6d75b150d.sys"
 {{< column "mt-2 pt-1">}}
 
 
-# 5a4fe297c7d42539303137b6d75b150d.sys ![:inline](/images/twitter_verified.png) 
-
+# 5a4fe297c7d42539303137b6d75b150d.sys ![:inline](/images/twitter_verified.png)  ![:inline](/images/elmo.gif) 
 
 ### Description
 
@@ -99,6 +98,7 @@ sc.exe create 5a4fe297c7d42539303137b6d75b150d.sys binPath=C:\windows\temp\5a4fe
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2023-06-29 19:57:11 |
 | MD5                | [5a4fe297c7d42539303137b6d75b150d](https://www.virustotal.com/gui/file/5a4fe297c7d42539303137b6d75b150d) |
 | SHA1               | [ebd8b7e964b8c692eea4a8c406b9cd0be621ebe2](https://www.virustotal.com/gui/file/ebd8b7e964b8c692eea4a8c406b9cd0be621ebe2) |
 | SHA256             | [9a67626fb468d3f114c23ac73fd8057f43d06393d3eca04da1d6676f89da2d40](https://www.virustotal.com/gui/file/9a67626fb468d3f114c23ac73fd8057f43d06393d3eca04da1d6676f89da2d40) |
@@ -163,12 +163,7 @@ sc.exe create 5a4fe297c7d42539303137b6d75b150d.sys binPath=C:\windows\temp\5a4fe
 * ntoskrnl.exe
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * ExAllocatePoolWithTag
 * ExFreePoolWithTag
@@ -259,11 +254,21 @@ sc.exe create 5a4fe297c7d42539303137b6d75b150d.sys binPath=C:\windows\temp\5a4fe
 * __C_specific_handler
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* PAGE
+* INIT
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```

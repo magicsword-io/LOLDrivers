@@ -13,7 +13,6 @@ displayTitle = "GtcKmdfBs.sys"
 
 # GtcKmdfBs.sys ![:inline](/images/twitter_verified.png) 
 
-
 ### Description
 
 The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
@@ -100,6 +99,7 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2021-02-22 23:31:41 |
 | MD5                | [e4ea7ebfa142d20a92fbe468a77eafa6](https://www.virustotal.com/gui/file/e4ea7ebfa142d20a92fbe468a77eafa6) |
 | SHA1               | [31529d0e73f7fbfbe8c28367466c404c0e3e1d5a](https://www.virustotal.com/gui/file/31529d0e73f7fbfbe8c28367466c404c0e3e1d5a) |
 | SHA256             | [0abca92512fc98fe6c2e7d0a33935686fc3acbd0a4c68b51f4a70ece828c0664](https://www.virustotal.com/gui/file/0abca92512fc98fe6c2e7d0a33935686fc3acbd0a4c68b51f4a70ece828c0664) |
@@ -157,15 +157,7 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 * WDFLDR.SYS
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* cng.sys
-* ntoskrnl.exe
-* WppRecorder.sys
-* WDFLDR.SYS
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * BCryptSetProperty
 * BCryptCloseAlgorithmProvider
@@ -194,11 +186,23 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 * WdfVersionBindClass
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* PAGE
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -254,6 +258,7 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2019-09-26 20:08:13 |
 | MD5                | [449bb1c656fa30de7702f17e35b11cd3](https://www.virustotal.com/gui/file/449bb1c656fa30de7702f17e35b11cd3) |
 | SHA1               | [273634ac170d1a6abd32e0db597376a6f62eb59e](https://www.virustotal.com/gui/file/273634ac170d1a6abd32e0db597376a6f62eb59e) |
 | SHA256             | [4b465faf013929edf2f605c8cd1ac7a278ddc9a536c4c34096965e6852cbfb51](https://www.virustotal.com/gui/file/4b465faf013929edf2f605c8cd1ac7a278ddc9a536c4c34096965e6852cbfb51) |
@@ -339,15 +344,7 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 * WDFLDR.SYS
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* cng.sys
-* ntoskrnl.exe
-* WppRecorder.sys
-* WDFLDR.SYS
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * BCryptDecrypt
 * BCryptSetProperty
@@ -374,11 +371,23 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 * WdfVersionBindClass
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* PAGE
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -434,6 +443,7 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2019-07-09 01:12:34 |
 | MD5                | [4ec08e0bcdf3e880e7f5a7d78a73440c](https://www.virustotal.com/gui/file/4ec08e0bcdf3e880e7f5a7d78a73440c) |
 | SHA1               | [a22c111045b4358f8279190e50851c443534fc24](https://www.virustotal.com/gui/file/a22c111045b4358f8279190e50851c443534fc24) |
 | SHA256             | [e6023b8fd2ce4ad2f3005a53aa160772e43fe58da8e467bd05ab71f3335fb822](https://www.virustotal.com/gui/file/e6023b8fd2ce4ad2f3005a53aa160772e43fe58da8e467bd05ab71f3335fb822) |
@@ -519,15 +529,7 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 * WDFLDR.SYS
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* cng.sys
-* ntoskrnl.exe
-* WppRecorder.sys
-* WDFLDR.SYS
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * BCryptSetProperty
 * BCryptCloseAlgorithmProvider
@@ -555,11 +557,23 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 * WdfVersionBindClass
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* PAGE
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -615,6 +629,7 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2019-09-26 20:07:44 |
 | MD5                | [cc35379f0421b907004a9099611ee2cd](https://www.virustotal.com/gui/file/cc35379f0421b907004a9099611ee2cd) |
 | SHA1               | [2e9466d5a814c20403be7c7a5811039ca833bd5d](https://www.virustotal.com/gui/file/2e9466d5a814c20403be7c7a5811039ca833bd5d) |
 | SHA256             | [e6d1ee0455068b74cf537388c874acb335382876aa9d74586efb05d6cc362ae5](https://www.virustotal.com/gui/file/e6d1ee0455068b74cf537388c874acb335382876aa9d74586efb05d6cc362ae5) |
@@ -701,16 +716,7 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 * WDFLDR.SYS
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* cng.sys
-* ntoskrnl.exe
-* HAL.dll
-* WppRecorder.sys
-* WDFLDR.SYS
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * BCryptDestroyKey
 * BCryptCloseAlgorithmProvider
@@ -751,11 +757,22 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 * WdfVersionUnbindClass
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* PAGE
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -811,6 +828,7 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2019-09-26 20:08:13 |
 | MD5                | [9993a2a45c745bb0139bf3e8decd626c](https://www.virustotal.com/gui/file/9993a2a45c745bb0139bf3e8decd626c) |
 | SHA1               | [68b97bfaf61294743ba15ef36357cdb8e963b56e](https://www.virustotal.com/gui/file/68b97bfaf61294743ba15ef36357cdb8e963b56e) |
 | SHA256             | [edbb23e74562e98b849e5d0eefde3af056ec6e272802a04b61bebd12395754e5](https://www.virustotal.com/gui/file/edbb23e74562e98b849e5d0eefde3af056ec6e272802a04b61bebd12395754e5) |
@@ -896,15 +914,7 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 * WDFLDR.SYS
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* cng.sys
-* ntoskrnl.exe
-* WppRecorder.sys
-* WDFLDR.SYS
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * BCryptDecrypt
 * BCryptSetProperty
@@ -931,11 +941,23 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 * WdfVersionBindClass
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* PAGE
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```

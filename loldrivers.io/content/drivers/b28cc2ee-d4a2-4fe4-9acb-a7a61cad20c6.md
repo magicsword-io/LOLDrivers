@@ -13,7 +13,6 @@ displayTitle = "WiseUnlo.sys"
 
 # WiseUnlo.sys ![:inline](/images/twitter_verified.png) 
 
-
 ### Description
 
 WiseUnlo.sys is a vulnerable driver and more information will be added as found.
@@ -100,6 +99,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2015-05-11 01:36:47 |
 | MD5                | [33b3842172f21ba22982bfb6bffbda27](https://www.virustotal.com/gui/file/33b3842172f21ba22982bfb6bffbda27) |
 | SHA1               | [c201d5d0ab945095c3b1a356b3b228af1aa652fc](https://www.virustotal.com/gui/file/c201d5d0ab945095c3b1a356b3b228af1aa652fc) |
 | SHA256             | [9d530642aeb6524691d06b9e02a84e3487c9cdd86c264b105035d925c984823a](https://www.virustotal.com/gui/file/9d530642aeb6524691d06b9e02a84e3487c9cdd86c264b105035d925c984823a) |
@@ -168,12 +168,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 * ntoskrnl.exe
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * IoDeleteDevice
 * IoDeleteSymbolicLink
@@ -197,11 +192,21 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 * IoCreateDevice
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* INIT
+* .rsrc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -273,6 +278,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2017-06-29 01:22:02 |
 | MD5                | [e626956c883c7ff3aeb0414570135a58](https://www.virustotal.com/gui/file/e626956c883c7ff3aeb0414570135a58) |
 | SHA1               | [70bb3b831880e058524735b14f2a0f1a72916a4c](https://www.virustotal.com/gui/file/70bb3b831880e058524735b14f2a0f1a72916a4c) |
 | SHA256             | [786f0ba14567a7e19192645ad4e40bee6df259abf2fbdfda35b6a38f8493d6cc](https://www.virustotal.com/gui/file/786f0ba14567a7e19192645ad4e40bee6df259abf2fbdfda35b6a38f8493d6cc) |
@@ -342,13 +348,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 * HAL.dll
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-* HAL.dll
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * RtlInitUnicodeString
 * IoDeleteDevice
@@ -373,11 +373,20 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 * KeGetCurrentIrql
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -449,6 +458,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2017-06-29 01:21:54 |
 | MD5                | [9e0af1fe4d6dd2ca4721810ed1c930d6](https://www.virustotal.com/gui/file/9e0af1fe4d6dd2ca4721810ed1c930d6) |
 | SHA1               | [5b4619596c89ed17ccbe92fd5c0a823033f2f1e1](https://www.virustotal.com/gui/file/5b4619596c89ed17ccbe92fd5c0a823033f2f1e1) |
 | SHA256             | [48b1344e45e4de4dfb74ef918af5e0e403001c9061018e703261bbd72dc30548](https://www.virustotal.com/gui/file/48b1344e45e4de4dfb74ef918af5e0e403001c9061018e703261bbd72dc30548) |
@@ -545,12 +555,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 * ntoskrnl.exe
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * IoDeleteSymbolicLink
 * IoGetRelatedDeviceObject
@@ -573,11 +578,20 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 * IofCallDriver
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .pdata
+* INIT
+* .rsrc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -649,6 +663,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2017-06-29 01:22:02 |
 | MD5                | [da8437200af5f3f790e301b9958993d2](https://www.virustotal.com/gui/file/da8437200af5f3f790e301b9958993d2) |
 | SHA1               | [ce31292b05c0ae1dc639a6ee95bb3bc7350f2aaf](https://www.virustotal.com/gui/file/ce31292b05c0ae1dc639a6ee95bb3bc7350f2aaf) |
 | SHA256             | [87aae726bf7104aac8c8f566ea98f2b51a2bfb6097b6fc8aa1f70adeb4681e1b](https://www.virustotal.com/gui/file/87aae726bf7104aac8c8f566ea98f2b51a2bfb6097b6fc8aa1f70adeb4681e1b) |
@@ -746,13 +761,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 * HAL.dll
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-* HAL.dll
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * RtlInitUnicodeString
 * IoDeleteDevice
@@ -777,11 +786,20 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 * KeGetCurrentIrql
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -853,6 +871,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2015-05-11 01:36:54 |
 | MD5                | [4cee9945f9a3e8f2433f5aa8c58671fb](https://www.virustotal.com/gui/file/4cee9945f9a3e8f2433f5aa8c58671fb) |
 | SHA1               | [b314742af197a786218c6dd704b438469445eefa](https://www.virustotal.com/gui/file/b314742af197a786218c6dd704b438469445eefa) |
 | SHA256             | [5e27fe26110d2b9f6c2bad407d3d0611356576b531564f75ff96f9f72d5fcae4](https://www.virustotal.com/gui/file/5e27fe26110d2b9f6c2bad407d3d0611356576b531564f75ff96f9f72d5fcae4) |
@@ -922,13 +941,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 * HAL.dll
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-* HAL.dll
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * RtlInitUnicodeString
 * DbgPrint
@@ -954,11 +967,21 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 * KeGetCurrentIrql
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -1030,6 +1053,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2017-06-29 01:21:54 |
 | MD5                | [1762105b28eb90d19e9ab3acde16ead6](https://www.virustotal.com/gui/file/1762105b28eb90d19e9ab3acde16ead6) |
 | SHA1               | [20cf02c95e329cf2fd4563cddcbd434aad81ccb4](https://www.virustotal.com/gui/file/20cf02c95e329cf2fd4563cddcbd434aad81ccb4) |
 | SHA256             | [daf549a7080d384ba99d1b5bd2383dbb1aa640f7ea3a216df1f08981508155f5](https://www.virustotal.com/gui/file/daf549a7080d384ba99d1b5bd2383dbb1aa640f7ea3a216df1f08981508155f5) |
@@ -1098,12 +1122,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 * ntoskrnl.exe
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * IoDeleteSymbolicLink
 * IoGetRelatedDeviceObject
@@ -1126,11 +1145,20 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 * IofCallDriver
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .pdata
+* INIT
+* .rsrc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -1202,6 +1230,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | WiseUnlo.sys |
+| Creation Timestamp           | 2017-06-29 01:21:54 |
 | MD5                | [356bda2bf0f6899a2c08b2da3ec69f13](https://www.virustotal.com/gui/file/356bda2bf0f6899a2c08b2da3ec69f13) |
 | SHA1               | [b9807b8840327c6d7fbdde45fc27de921f1f1a82](https://www.virustotal.com/gui/file/b9807b8840327c6d7fbdde45fc27de921f1f1a82) |
 | SHA256             | [358ac54be252673841a1d65bfc2fb6d549c1a4c877fa7f5e1bfa188f30375d69](https://www.virustotal.com/gui/file/358ac54be252673841a1d65bfc2fb6d549c1a4c877fa7f5e1bfa188f30375d69) |
@@ -1270,12 +1299,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 * ntoskrnl.exe
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * IoDeleteSymbolicLink
 * IoGetRelatedDeviceObject
@@ -1298,11 +1322,20 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 * IofCallDriver
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .pdata
+* INIT
+* .rsrc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```

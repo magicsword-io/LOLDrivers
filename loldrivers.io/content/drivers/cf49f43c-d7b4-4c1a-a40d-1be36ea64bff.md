@@ -13,7 +13,6 @@ displayTitle = "SysDrv3S.sys"
 
 # SysDrv3S.sys ![:inline](/images/twitter_verified.png) 
 
-
 ### Description
 
 Vulnerable driver found in https://github.com/hfiref0x/KDU.
@@ -100,6 +99,7 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | SysDrv3S.sys |
+| Creation Timestamp           | 2016-02-24 05:31:51 |
 | MD5                | [31eca8c0b32135850d5a50aee11fec87](https://www.virustotal.com/gui/file/31eca8c0b32135850d5a50aee11fec87) |
 | SHA1               | [e1069365cb580e3525090f2fa28efd4127223588](https://www.virustotal.com/gui/file/e1069365cb580e3525090f2fa28efd4127223588) |
 | SHA256             | [0e53b58415fa68552928622118d5b8a3a851b2fc512709a90b63ba46acda8b6b](https://www.virustotal.com/gui/file/0e53b58415fa68552928622118d5b8a3a851b2fc512709a90b63ba46acda8b6b) |
@@ -183,13 +183,7 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 * ntoskrnl.exe
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* HAL.dll
-* ntoskrnl.exe
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * HalSetBusDataByOffset
 * HalTranslateBusAddress
@@ -230,11 +224,23 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 * IoAllocateIrp
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .gdat
+* .rdata
+* .data
+* .pdata
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```

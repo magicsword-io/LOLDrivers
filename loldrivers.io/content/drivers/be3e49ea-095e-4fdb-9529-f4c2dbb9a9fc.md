@@ -13,7 +13,6 @@ displayTitle = "PhlashNT.sys"
 
 # PhlashNT.sys ![:inline](/images/twitter_verified.png) 
 
-
 ### Description
 
 PhlashNT.sys is a vulnerable driver and more information will be added as found.
@@ -101,6 +100,7 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | PhlashNT.sys |
+| Creation Timestamp           | 2009-09-22 22:36:24 |
 | MD5                | [e9e786bdba458b8b4f9e93d034f73d00](https://www.virustotal.com/gui/file/e9e786bdba458b8b4f9e93d034f73d00) |
 | SHA1               | [c6d349823bbb1f5b44bae91357895dba653c5861](https://www.virustotal.com/gui/file/c6d349823bbb1f5b44bae91357895dba653c5861) |
 | SHA256             | [65db1b259e305a52042e07e111f4fa4af16542c8bacd33655f753ef642228890](https://www.virustotal.com/gui/file/65db1b259e305a52042e07e111f4fa4af16542c8bacd33655f753ef642228890) |
@@ -197,12 +197,7 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
 * ntoskrnl.exe
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * IoDeleteDevice
 * IoCreateSymbolicLink
@@ -219,11 +214,22 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
 * ExAllocatePoolWithTag
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```

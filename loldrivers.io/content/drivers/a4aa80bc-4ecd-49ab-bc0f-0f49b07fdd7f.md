@@ -13,7 +13,6 @@ displayTitle = "segwindrvx64.sys"
 
 # segwindrvx64.sys ![:inline](/images/twitter_verified.png) 
 
-
 ### Description
 
 segwindrvx64.sys is a vulnerable driver and more information will be added as found.
@@ -100,6 +99,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2014-03-25 23:49:03 |
 | MD5                | [9cbdb5fb6dc63cb13f10b6333407cbb9](https://www.virustotal.com/gui/file/9cbdb5fb6dc63cb13f10b6333407cbb9) |
 | SHA1               | [fc62b746e0e726537bf848b48212f46db585af6d](https://www.virustotal.com/gui/file/fc62b746e0e726537bf848b48212f46db585af6d) |
 | SHA256             | [0d30c6c4fa0216d0637b4049142bc275814fd674859373bd4af520ce173a1c75](https://www.virustotal.com/gui/file/0d30c6c4fa0216d0637b4049142bc275814fd674859373bd4af520ce173a1c75) |
@@ -210,12 +210,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 * ntoskrnl.exe
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * ExAllocatePoolWithTag
 * IoDeleteSymbolicLink
@@ -248,11 +243,24 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 * KeBugCheckEx
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* init
+* page
+* .rdata
+* .data
+* .pdata
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -372,6 +380,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | segwindrvx64.sys |
+| Creation Timestamp           | 2015-04-01 03:39:09 |
 | MD5                | [4ae55080ec8aed49343e40d08370195c](https://www.virustotal.com/gui/file/4ae55080ec8aed49343e40d08370195c) |
 | SHA1               | [d702d88b12233be9413446c445f22fda4a92a1d9](https://www.virustotal.com/gui/file/d702d88b12233be9413446c445f22fda4a92a1d9) |
 | SHA256             | [65329dad28e92f4bcc64de15c552b6ef424494028b18875b7dba840053bc0cdd](https://www.virustotal.com/gui/file/65329dad28e92f4bcc64de15c552b6ef424494028b18875b7dba840053bc0cdd) |
@@ -468,12 +477,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 * ntoskrnl.exe
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * MmMapLockedPagesSpecifyCache
 * MmMapIoSpace
@@ -506,11 +510,24 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 * KeBugCheckEx
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* page
+* init
+* .rdata
+* .data
+* .pdata
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -630,6 +647,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | segwindrvx64.sys |
+| Creation Timestamp           | 2014-03-18 14:20:01 |
 | MD5                | [bdc3b6b83dde7111d5d6b9a2aadf233f](https://www.virustotal.com/gui/file/bdc3b6b83dde7111d5d6b9a2aadf233f) |
 | SHA1               | [2ade3347df84d6707f39d9b821890440bcfdb5e9](https://www.virustotal.com/gui/file/2ade3347df84d6707f39d9b821890440bcfdb5e9) |
 | SHA256             | [c628cda1ef43defc00af45b79949675a8422490d32b080b3a8bb9434242bdbf2](https://www.virustotal.com/gui/file/c628cda1ef43defc00af45b79949675a8422490d32b080b3a8bb9434242bdbf2) |
@@ -740,12 +758,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 * ntoskrnl.exe
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * MmMapLockedPagesSpecifyCache
 * MmMapIoSpace
@@ -778,11 +791,24 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 * KeBugCheckEx
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* page
+* init
+* .rdata
+* .data
+* .pdata
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -902,6 +928,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2014-03-18 14:27:12 |
 | MD5                | [31a331a88c6280555859455518a95c35](https://www.virustotal.com/gui/file/31a331a88c6280555859455518a95c35) |
 | SHA1               | [c3be2bbd9b3f696bc9d51d5973cc00ca059fb172](https://www.virustotal.com/gui/file/c3be2bbd9b3f696bc9d51d5973cc00ca059fb172) |
 | SHA256             | [7164aaff86b3b7c588fc7ae7839cc09c5c8c6ae29d1aff5325adaf5bedd7c9f5](https://www.virustotal.com/gui/file/7164aaff86b3b7c588fc7ae7839cc09c5c8c6ae29d1aff5325adaf5bedd7c9f5) |
@@ -1013,13 +1040,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 * HAL.dll
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-* HAL.dll
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * WRITE_REGISTER_ULONG
 * WRITE_REGISTER_BUFFER_UCHAR
@@ -1069,11 +1090,23 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 * KeGetCurrentIrql
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* page
+* .text
+* init
+* .rdata
+* .data
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -1193,6 +1226,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2014-09-19 00:42:51 |
 | MD5                | [875c44411674b75feb07592aeffa09c1](https://www.virustotal.com/gui/file/875c44411674b75feb07592aeffa09c1) |
 | SHA1               | [dc69a6cdf048e2c4a370d4b5cafd717d236374ea](https://www.virustotal.com/gui/file/dc69a6cdf048e2c4a370d4b5cafd717d236374ea) |
 | SHA256             | [b9ae1d53a464bc9bb86782ab6c55e2da8804c80a361139a82a6c8eef30fddd7c](https://www.virustotal.com/gui/file/b9ae1d53a464bc9bb86782ab6c55e2da8804c80a361139a82a6c8eef30fddd7c) |
@@ -1289,12 +1323,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 * ntoskrnl.exe
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * MmMapLockedPagesSpecifyCache
 * MmMapIoSpace
@@ -1327,11 +1356,24 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 * KeBugCheckEx
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* page
+* init
+* .rdata
+* .data
+* .pdata
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -1451,6 +1493,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2013-11-15 00:50:12 |
 | MD5                | [dad8f40626ed4702e0e8502562d93d7c](https://www.virustotal.com/gui/file/dad8f40626ed4702e0e8502562d93d7c) |
 | SHA1               | [b4f1877156bf3157bff1170ba878848b2f22d2d5](https://www.virustotal.com/gui/file/b4f1877156bf3157bff1170ba878848b2f22d2d5) |
 | SHA256             | [38d6d90d543bf6037023c1b1b14212b4fa07731cbbb44bdb17e8faffc12b22e8](https://www.virustotal.com/gui/file/38d6d90d543bf6037023c1b1b14212b4fa07731cbbb44bdb17e8faffc12b22e8) |
@@ -1561,12 +1604,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 * ntoskrnl.exe
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * ExAllocatePoolWithTag
 * IoDeleteSymbolicLink
@@ -1594,11 +1632,23 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 * KeBugCheckEx
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* init
+* page
+* .rdata
+* .data
+* .pdata
+* INIT
+* .rsrc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -1718,6 +1768,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2013-02-21 22:35:02 |
 | MD5                | [f14359ceb3705d77353b244bb795b552](https://www.virustotal.com/gui/file/f14359ceb3705d77353b244bb795b552) |
 | SHA1               | [a09334489fb18443c8793cb0395860518193cc3c](https://www.virustotal.com/gui/file/a09334489fb18443c8793cb0395860518193cc3c) |
 | SHA256             | [0452a6e8f00bae0b79335c1799a26b2b77d603451f2e6cc3b137ad91996d4dec](https://www.virustotal.com/gui/file/0452a6e8f00bae0b79335c1799a26b2b77d603451f2e6cc3b137ad91996d4dec) |
@@ -1828,12 +1879,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 * ntoskrnl.exe
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * ExAllocatePoolWithTag
 * IoDeleteSymbolicLink
@@ -1861,11 +1907,23 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 * KeBugCheckEx
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* init
+* page
+* .rdata
+* .data
+* .pdata
+* INIT
+* .rsrc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```

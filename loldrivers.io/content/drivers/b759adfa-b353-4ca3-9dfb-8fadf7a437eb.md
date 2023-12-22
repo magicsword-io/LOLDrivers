@@ -11,8 +11,7 @@ displayTitle = "spwizimgVT.sys"
 {{< column "mt-2 pt-1">}}
 
 
-# spwizimgVT.sys ![:inline](/images/twitter_verified.png) 
-
+# spwizimgVT.sys ![:inline](/images/twitter_verified.png)  ![:inline](/images/elmo.gif) 
 
 ### Description
 
@@ -103,6 +102,7 @@ sc.exe create spwizimgVT.sys binPath=C:\windows\temp\spwizimgVT.sys type=kernel 
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2023-05-15 01:22:31 |
 | MD5                | [5917e415a5bf30b3fcbcbcb8a4f20ee0](https://www.virustotal.com/gui/file/5917e415a5bf30b3fcbcbcb8a4f20ee0) |
 | SHA1               | [4dd86ff6f7180abebcb92e556a486abe7132754c](https://www.virustotal.com/gui/file/4dd86ff6f7180abebcb92e556a486abe7132754c) |
 | SHA256             | [30061ef383e18e74bb067fbca69544f1a7544e8dc017d4e7633d8379aff4c3c3](https://www.virustotal.com/gui/file/30061ef383e18e74bb067fbca69544f1a7544e8dc017d4e7633d8379aff4c3c3) |
@@ -169,14 +169,7 @@ sc.exe create spwizimgVT.sys binPath=C:\windows\temp\spwizimgVT.sys type=kernel 
 * WDFLDR.SYS
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* fwpkclnt.sys
-* ntoskrnl.exe
-* WDFLDR.SYS
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * FwpsReleaseClassifyHandle0
 * FwpsAcquireClassifyHandle0
@@ -260,11 +253,22 @@ sc.exe create spwizimgVT.sys binPath=C:\windows\temp\spwizimgVT.sys type=kernel 
 * WdfVersionUnbind
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* .gfids
+* INIT
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```

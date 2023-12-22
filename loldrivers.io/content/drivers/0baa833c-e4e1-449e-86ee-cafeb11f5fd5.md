@@ -13,7 +13,6 @@ displayTitle = "vboxguest.sys"
 
 # vboxguest.sys ![:inline](/images/twitter_verified.png) 
 
-
 ### Description
 
 Confirmed vulnerable driver from Microsoft Block List
@@ -90,6 +89,7 @@ Confirmed vulnerable driver from Microsoft Block List
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2007-10-18 01:49:33 |
 | MD5                | [d04f5388e962cd21462bcc54180e84e0](https://www.virustotal.com/gui/file/d04f5388e962cd21462bcc54180e84e0) |
 | SHA1               | [73c2148626ae56cf2ff7686c6fd196ab6f653ffb](https://www.virustotal.com/gui/file/73c2148626ae56cf2ff7686c6fd196ab6f653ffb) |
 | SHA256             | [983310cdce8397c016bfcfcc9c3a8abbb5c928b235bc3c3ae3a3cc10ef24dfbd](https://www.virustotal.com/gui/file/983310cdce8397c016bfcfcc9c3a8abbb5c928b235bc3c3ae3a3cc10ef24dfbd) |
@@ -201,13 +201,7 @@ Confirmed vulnerable driver from Microsoft Block List
 * HAL.dll
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-* HAL.dll
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * IoCreateSymbolicLink
 * IoCreateDevice
@@ -252,7 +246,7 @@ Confirmed vulnerable driver from Microsoft Block List
 * ExReleaseFastMutex
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 * AssertMsg1
 * AssertMsg2
@@ -289,6 +283,18 @@ Confirmed vulnerable driver from Microsoft Block List
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* PAGE
+* .edata
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -408,6 +414,7 @@ Confirmed vulnerable driver from Microsoft Block List
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2008-02-19 09:09:00 |
 | MD5                | [ff7cc8b6553ab57c53d5bc8afcf50f67](https://www.virustotal.com/gui/file/ff7cc8b6553ab57c53d5bc8afcf50f67) |
 | SHA1               | [d5ac49a7ab274bceb6671e19524bd850e06513a0](https://www.virustotal.com/gui/file/d5ac49a7ab274bceb6671e19524bd850e06513a0) |
 | SHA256             | [d53f9111a5e6c94b37e3f39c5860897405cb250dd11aa91c3814a98b1759c055](https://www.virustotal.com/gui/file/d53f9111a5e6c94b37e3f39c5860897405cb250dd11aa91c3814a98b1759c055) |
@@ -519,13 +526,7 @@ Confirmed vulnerable driver from Microsoft Block List
 * HAL.dll
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-* HAL.dll
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * IoDeleteDevice
 * IoDeleteSymbolicLink
@@ -570,7 +571,7 @@ Confirmed vulnerable driver from Microsoft Block List
 * ExAcquireFastMutex
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 * AssertMsg1
 * AssertMsg2
@@ -607,6 +608,18 @@ Confirmed vulnerable driver from Microsoft Block List
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* PAGE
+* .edata
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```

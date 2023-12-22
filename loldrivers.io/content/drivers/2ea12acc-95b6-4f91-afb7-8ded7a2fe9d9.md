@@ -13,7 +13,6 @@ displayTitle = "vmdrv.sys"
 
 # vmdrv.sys ![:inline](/images/twitter_verified.png) 
 
-
 ### Description
 
 vmdrv.sys is a vulnerable driver and more information will be added as found.
@@ -100,6 +99,7 @@ sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &amp;&amp;
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | vmdrv.sys |
+| Creation Timestamp           | 2020-05-15 15:19:53 |
 | MD5                | [6d67da13cf84f15f6797ed929dd8cf5d](https://www.virustotal.com/gui/file/6d67da13cf84f15f6797ed929dd8cf5d) |
 | SHA1               | [1a17cc64e47d3db7085a4dc365049a2d4552dc8a](https://www.virustotal.com/gui/file/1a17cc64e47d3db7085a4dc365049a2d4552dc8a) |
 | SHA256             | [5c0b429e5935814457934fa9c10ac7a88e19068fa1bd152879e4e9b89c103921](https://www.virustotal.com/gui/file/5c0b429e5935814457934fa9c10ac7a88e19068fa1bd152879e4e9b89c103921) |
@@ -169,13 +169,7 @@ sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &amp;&amp;
 * portcls.sys
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-* portcls.sys
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * RtlInitUnicodeString
 * KeClearEvent
@@ -218,11 +212,23 @@ sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &amp;&amp;
 * PcNewPort
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* PAGE
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -294,6 +300,7 @@ sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &amp;&amp;
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | vmdrv.sys |
+| Creation Timestamp           | 2020-09-25 07:11:31 |
 | MD5                | [0e625b7a7c3f75524e307b160f8db337](https://www.virustotal.com/gui/file/0e625b7a7c3f75524e307b160f8db337) |
 | SHA1               | [5088c71a740ef7c4156dcaa31e543052fe226e1c](https://www.virustotal.com/gui/file/5088c71a740ef7c4156dcaa31e543052fe226e1c) |
 | SHA256             | [d884ca8cc4ef1826ca3ab03eb3c2d8f356ba25f2d20db0a7d9fc251c565be7f3](https://www.virustotal.com/gui/file/d884ca8cc4ef1826ca3ab03eb3c2d8f356ba25f2d20db0a7d9fc251c565be7f3) |
@@ -349,13 +356,7 @@ sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &amp;&amp;
 * portcls.sys
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-* portcls.sys
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * RtlInitUnicodeString
 * KeClearEvent
@@ -398,11 +399,23 @@ sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &amp;&amp;
 * PcNewPort
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* PAGE
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```

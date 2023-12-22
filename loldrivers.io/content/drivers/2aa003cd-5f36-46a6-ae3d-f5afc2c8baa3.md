@@ -13,7 +13,6 @@ displayTitle = "mhyprot3.sys"
 
 # mhyprot3.sys ![:inline](/images/twitter_verified.png) 
 
-
 ### Description
 
 mhyprot3.sys is a vulnerable driver and more information will be added as found.
@@ -101,6 +100,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | mhyprot3.sys |
+| Creation Timestamp           | 2022-02-28 06:09:58 |
 | MD5                | [5cc5c26fc99175997d84fe95c61ab2c2](https://www.virustotal.com/gui/file/5cc5c26fc99175997d84fe95c61ab2c2) |
 | SHA1               | [a197a02025946aca96d6e74746f84774df31249e](https://www.virustotal.com/gui/file/a197a02025946aca96d6e74746f84774df31249e) |
 | SHA256             | [475e5016c9c0f5a127896f9179a1b1577a67b357f399ab5a1e68aab07134729a](https://www.virustotal.com/gui/file/475e5016c9c0f5a127896f9179a1b1577a67b357f399ab5a1e68aab07134729a) |
@@ -194,13 +194,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 * WDFLDR.SYS
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-* WDFLDR.SYS
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * ExReleaseFastMutex
 * ObfDereferenceObject
@@ -311,11 +305,23 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 * WdfVersionUnbindClass
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* INIT
+* .upx0
+* .reloc
+* .rsrc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -419,6 +425,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2021-12-13 23:25:51 |
 | MD5                | [fa63a634189bd4d6570964e2161426b0](https://www.virustotal.com/gui/file/fa63a634189bd4d6570964e2161426b0) |
 | SHA1               | [190ec384e6eb1dafca80df05055ead620b2502ba](https://www.virustotal.com/gui/file/190ec384e6eb1dafca80df05055ead620b2502ba) |
 | SHA256             | [7fd90500b57f9ac959c87f713fe9ca59e669e6e1512f77fccb6a75cdc0dfee8e](https://www.virustotal.com/gui/file/7fd90500b57f9ac959c87f713fe9ca59e669e6e1512f77fccb6a75cdc0dfee8e) |
@@ -470,13 +477,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 * WDFLDR.SYS
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-* WDFLDR.SYS
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * ExReleaseFastMutex
 * ObfDereferenceObject
@@ -584,11 +585,24 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 * WdfVersionUnbindClass
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* PAGE
+* INIT
+* .upx0
+* .reloc
+* .rsrc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -692,6 +706,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2022-02-28 06:09:58 |
 | MD5                | [fbf729350ca08a7673b115ce9c9eb7e5](https://www.virustotal.com/gui/file/fbf729350ca08a7673b115ce9c9eb7e5) |
 | SHA1               | [5bdd44eb321557c5d3ab056959397f0048ac90e6](https://www.virustotal.com/gui/file/5bdd44eb321557c5d3ab056959397f0048ac90e6) |
 | SHA256             | [c3d479d7efd0f6b502d6829b893711bdd51aac07d66326b41ef5451bafdfcb29](https://www.virustotal.com/gui/file/c3d479d7efd0f6b502d6829b893711bdd51aac07d66326b41ef5451bafdfcb29) |
@@ -743,13 +758,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 * WDFLDR.SYS
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-* WDFLDR.SYS
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * ExReleaseFastMutex
 * ObfDereferenceObject
@@ -860,11 +869,23 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 * WdfVersionUnbindClass
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* INIT
+* .upx0
+* .reloc
+* .rsrc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -968,6 +989,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2022-05-30 11:28:46 |
 | MD5                | [766f9ea38918827df59a6aed204d2b09](https://www.virustotal.com/gui/file/766f9ea38918827df59a6aed204d2b09) |
 | SHA1               | [12154f58b68902a40a7165035d37974128deb902](https://www.virustotal.com/gui/file/12154f58b68902a40a7165035d37974128deb902) |
 | SHA256             | [24e70c87d58fa5771f02b9ddf0d8870cba6b26e35c6455a2c77f482e2080d3e9](https://www.virustotal.com/gui/file/24e70c87d58fa5771f02b9ddf0d8870cba6b26e35c6455a2c77f482e2080d3e9) |
@@ -1019,13 +1041,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 * WDFLDR.SYS
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-* WDFLDR.SYS
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * ExReleaseFastMutex
 * ObfDereferenceObject
@@ -1136,11 +1152,23 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 * WdfVersionUnbindClass
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* INIT
+* .upx0
+* .reloc
+* .rsrc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -1244,6 +1272,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2021-12-03 02:33:16 |
 | MD5                | [00f887e74faad40e6e97d9d0e9c71370](https://www.virustotal.com/gui/file/00f887e74faad40e6e97d9d0e9c71370) |
 | SHA1               | [6e58421e37c022410455b1c7b01f1e3c949df1cd](https://www.virustotal.com/gui/file/6e58421e37c022410455b1c7b01f1e3c949df1cd) |
 | SHA256             | [b617a072c578cea38c460e2851f3d122ba1b7cfa1f5ee3e9f5927663ac37af61](https://www.virustotal.com/gui/file/b617a072c578cea38c460e2851f3d122ba1b7cfa1f5ee3e9f5927663ac37af61) |
@@ -1337,13 +1366,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 * WDFLDR.SYS
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-* WDFLDR.SYS
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * ExReleaseFastMutex
 * ObfDereferenceObject
@@ -1451,11 +1474,24 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 * WdfVersionUnbindClass
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* PAGE
+* INIT
+* .upx0
+* .reloc
+* .rsrc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -1559,6 +1595,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
+| Creation Timestamp           | 2022-05-30 11:28:46 |
 | MD5                | [5c9f240e0b83df758993837d18859cbe](https://www.virustotal.com/gui/file/5c9f240e0b83df758993837d18859cbe) |
 | SHA1               | [4075de7d7d2169d650c5ccede8251463913511e6](https://www.virustotal.com/gui/file/4075de7d7d2169d650c5ccede8251463913511e6) |
 | SHA256             | [b531f0a11ca481d5125c93c977325e135a04058019f939169ce3cdedaddd422d](https://www.virustotal.com/gui/file/b531f0a11ca481d5125c93c977325e135a04058019f939169ce3cdedaddd422d) |
@@ -1610,13 +1647,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 * WDFLDR.SYS
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-* WDFLDR.SYS
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * ExReleaseFastMutex
 * ObfDereferenceObject
@@ -1727,11 +1758,23 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 * WdfVersionUnbindClass
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* INIT
+* .upx0
+* .reloc
+* .rsrc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```

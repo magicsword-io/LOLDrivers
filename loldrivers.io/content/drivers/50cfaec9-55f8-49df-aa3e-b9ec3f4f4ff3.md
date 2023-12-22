@@ -13,7 +13,6 @@ displayTitle = "mhyprot.sys"
 
 # mhyprot.sys ![:inline](/images/twitter_verified.png) 
 
-
 ### Description
 
 mhyprot.sys is a vulnerable driver and more information will be added as found.
@@ -103,6 +102,7 @@ sc.exe create mhyprot.sys binPath=C:\windows\temp\mhyprot.sys type=kernel &amp;&
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | mhyprot.sys |
+| Creation Timestamp           | 2020-08-16 21:38:03 |
 | MD5                | [4b817d0e7714b9d43db43ae4a22a161e](https://www.virustotal.com/gui/file/4b817d0e7714b9d43db43ae4a22a161e) |
 | SHA1               | [0466e90bf0e83b776ca8716e01d35a8a2e5f96d3](https://www.virustotal.com/gui/file/0466e90bf0e83b776ca8716e01d35a8a2e5f96d3) |
 | SHA256             | [509628b6d16d2428031311d7bd2add8d5f5160e9ecc0cd909f1e82bbbb3234d6](https://www.virustotal.com/gui/file/509628b6d16d2428031311d7bd2add8d5f5160e9ecc0cd909f1e82bbbb3234d6) |
@@ -196,13 +196,7 @@ sc.exe create mhyprot.sys binPath=C:\windows\temp\mhyprot.sys type=kernel &amp;&
 * WDFLDR.SYS
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-* WDFLDR.SYS
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * NtQuerySystemInformation
 * RtlInitUnicodeString
@@ -299,11 +293,24 @@ sc.exe create mhyprot.sys binPath=C:\windows\temp\mhyprot.sys type=kernel &amp;&
 * WdfVersionUnbindClass
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* PAGE
+* INIT
+* .upx0
+* .reloc
+* .rsrc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```

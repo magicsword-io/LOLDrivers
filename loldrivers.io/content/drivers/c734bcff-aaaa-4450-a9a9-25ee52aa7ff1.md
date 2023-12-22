@@ -99,6 +99,7 @@ sc.exe create ktes.sys binPath=C:\windows\temp\ktes.sys type=kernel &amp;&amp; s
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | ktes.sys |
+| Creation Timestamp           |  |
 | MD5                | [](https://www.virustotal.com/gui/file/) |
 | SHA1               | [5ed22c0033aed380aa154e672e8db3a2d4c195c4](https://www.virustotal.com/gui/file/5ed22c0033aed380aa154e672e8db3a2d4c195c4) |
 | SHA256             | [](https://www.virustotal.com/gui/file/) |
@@ -109,19 +110,19 @@ sc.exe create ktes.sys binPath=C:\windows\temp\ktes.sys type=kernel &amp;&amp; s
 {{< details "Expand" >}}
 
 {{< /details >}}
-#### Imports
+#### Imported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}
-
-{{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 
