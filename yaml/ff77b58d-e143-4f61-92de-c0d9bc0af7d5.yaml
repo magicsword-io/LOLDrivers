@@ -1,5 +1,5 @@
 Id: ff77b58d-e143-4f61-92de-c0d9bc0af7d5
-Author: 'Defence Tech security'
+Author: Defence Tech security
 Created: '2024-02-22'
 MitreID: T1068
 CVE:
@@ -19,7 +19,7 @@ Acknowledgement:
   Handle: ''
 Detection: []
 KnownVulnerableSamples:
-- Filename: 'ACE-BASE.sys'
+- Filename: ACE-BASE.sys
   Libraries:
   - ntoskrnl.exe
   - FLTMGR.SYS
@@ -242,7 +242,7 @@ KnownVulnerableSamples:
   Imphash: 13ad56e7c65468e58c468f56e33687d4
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-02-22 15:16:48'
+  CreationTimestamp: '2022-02-22 08:16:48'
   RichPEHeaderMD5: 062556004ee11c5a66737fee0c2ef190
   RichPEHeaderSHA1: 67512e1821c28bf63354cc771c15c6e65982911d
   RichPEHeaderSHA256: 87208680099d7e82d232a61048f4acaaa4a7b49ad81501cbff1fd3f12c80256a
@@ -269,10 +269,10 @@ KnownVulnerableSamples:
       Entropy: 5.359883496957578
       Virtual Size: '0x1ad0'
     .rsrc:
-      Entropy: 3.3592051915529972
+      Entropy: 3.359205191552997
       Virtual Size: '0x3d0'
     .reloc:
-      Entropy: 6.834766060295567
+      Entropy: 6.834766060295568
       Virtual Size: '0xf00'
     .tvm0:
       Entropy: 5.528023547055279
@@ -336,5 +336,22 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       Version: 1
+  Authentihash:
+    MD5: dd3bfadd02f076a1bdea2279c7be339b
+    SHA1: d2e7cbdf71ae78df5cc61c3dc4eacca4365c0f87
+    SHA256: 2759e2290295a81e80ef5d8e95266aa08d67832c0af51267ad1100b89d8b890c
+  RichPEHeaderHash:
+    MD5: 062556004ee11c5a66737fee0c2ef190
+    SHA1: 67512e1821c28bf63354cc771c15c6e65982911d
+    SHA256: 87208680099d7e82d232a61048f4acaaa4a7b49ad81501cbff1fd3f12c80256a
+  Description: ACE-BASE64 NT Driver
+  Company: ANTICHEATEXPERT.COM
+  Product: Anti-Cheat Expert
+  Copyright: "\xA9 AntiCheatExpert.com Limited. All Rights Reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - FLTMGR.SYS
+  - HAL.dll
 Tags:
-- ''
+- ACE-BASE.sys
