@@ -7,10 +7,10 @@ Verified: 'TRUE'
 Commands:
   Command: sc.exe create DcProtect.sys binPath=C:\windows\temp\DcProtect.sys type=kernel
     && sc.exe start DcProtect.sys
-  Description: 'bundled with chinese application "DrvCeo" is a set of rootkits. The
+  Description: bundled with chinese application "DrvCeo" is a set of rootkits. The
     malicious functionality. prevents registry value writing where the registry key
     or value includes "dcprotect" or "drvceo". Prevents file deletion if pathname
-    contains "driverdownload", "program files\sysceo", "program files (x86)\sysceo"'
+    contains "driverdownload", "program files\sysceo", "program files (x86)\sysceo"
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
