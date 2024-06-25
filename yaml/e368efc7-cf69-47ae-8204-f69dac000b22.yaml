@@ -3749,6 +3749,193 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 0627ee7f7d86e0c552a7bc8ee31a1b18
   LoadsDespiteHVCI: 'FALSE'
+- Filename: ''
+  MD5: 47aa03a10ac3a407f8f30f1088edcbc9
+  SHA1: b5d78a1d3ae93bd343c6d65e64c0945d1d558758
+  SHA256: c79a2bb050af6436b10b58ef04dbc7082df1513cec5934432004eb56fba05e66
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: IObit
+  Description: IObitUnlocker Driver
+  Product: IObitUnlocker
+  ProductVersion: 1.2.0.1
+  FileVersion: '1.2.0.1 built by: WinDDK'
+  MachineType: AMD64
+  OriginalFilename: IObitUnlocker.sys
+  Imphash: 878e0ad08d61b8eeabe5f33873401f2d
+  Authentihash:
+    MD5: 1ed0cb218c469ce7bb2917cde85fb4dd
+    SHA1: 5193f41b2787d16decf7d50891fde34dd1162f4f
+    SHA256: 3ee89c1e8738d465d241630ccca4ce218afc02421461e6de91e4dc8133e9501c
+  RichPEHeaderHash:
+    MD5: 87e7284a82caf3f9332dfaff2f515994
+    SHA1: ba095313dc4473516b91f8c36af612b7355c31d3
+    SHA256: 2b061aa8bc49bc9cce9ba24952a5e0e1a581f7d693db1aef26aa44049811beba
+  Sections:
+    .text:
+      Entropy: 5.405554072789149
+      Virtual Size: '0x7fed'
+    .rdata:
+      Entropy: 4.194087376463995
+      Virtual Size: '0x4e8'
+    .data:
+      Entropy: 0.8079955727472559
+      Virtual Size: '0x170'
+    .pdata:
+      Entropy: 4.175415725903598
+      Virtual Size: '0x3a8'
+    INIT:
+      Entropy: 5.217151964086442
+      Virtual Size: '0x6e6'
+    .rsrc:
+      Entropy: 3.3103115449532003
+      Virtual Size: '0x370'
+    .reloc:
+      Entropy: 1.2987909647818572
+      Virtual Size: '0x24'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2017-06-15 00:26:50'
+  InternalName: IObitUnlocker.sys
+  Copyright: "IObit Copyright \xA9 2005-2013"
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - IoDeleteSymbolicLink
+  - ExFreePoolWithTag
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - RtlAssert
+  - _wcsnicmp
+  - ZwReadFile
+  - IoGetRelatedDeviceObject
+  - MmGetSystemRoutineAddress
+  - KeInitializeEvent
+  - ExInterlockedPopEntryList
+  - KeDelayExecutionThread
+  - IoFileObjectType
+  - ZwWaitForSingleObject
+  - ZwClose
+  - ObReferenceObjectByHandle
+  - KeWaitForSingleObject
+  - RtlCompareUnicodeString
+  - IoAllocateIrp
+  - ObfDereferenceObject
+  - ZwWriteFile
+  - DbgPrint
+  - IofCallDriver
+  - _wcsicmp
+  - PsGetProcessPeb
+  - PsLookupProcessByProcessId
+  - ZwQuerySymbolicLinkObject
+  - RtlInitUnicodeString
+  - KeSetEvent
+  - RtlAppendUnicodeToString
+  - IoCreateFile
+  - ZwQuerySystemInformation
+  - ZwOpenSymbolicLinkObject
+  - KeUnstackDetachProcess
+  - ObQueryNameString
+  - ZwCreateFile
+  - wcsrchr
+  - ZwQueryDirectoryFile
+  - _vsnwprintf
+  - RtlAppendUnicodeStringToString
+  - ZwDuplicateObject
+  - IoFreeIrp
+  - ZwOpenProcess
+  - PsGetCurrentProcessId
+  - MmIsAddressValid
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - ExInterlockedPushEntryList
+  - KeStackAttachProcess
+  - KeBugCheckEx
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=CN, ST=Sichuan, L=Chengdu, O=IObit Information Technology, CN=IObit
+        Information Technology
+      ValidFrom: '2015-12-23 00:00:00'
+      ValidTo: '2018-03-23 23:59:59'
+      Signature: 1eca1dc77a22ba11722bcc6c270cd10fd37c3d8222397413c95649e8785fb1bdf1dc1469688cb7ab3bb4691243c5041b3e44994a21838069d3c272f8104ad6ddbba62a3f4383107e770135da9f63e0f8a10f873db3ca001e08cad9de3b93ffd2932c2709db34f8c08de22388abe76109d78fa23adce1c13b139ab1b0d5df60ff8c337f97d6c174fe4351c5eb1875c2e2633d49e5416074e3d3971e3c3afc6369d1f9294365b97a1676dbf3db4e99b8bce5f45374c29a2c7af48e2e55df3d7e299c0ffab20515d2cc8c6e1641880a5a266702b55549a537dd4c744f98ffcd4e28a98e953c905b78bd1739d4c16391f47bc5dd03473d6ffe9452ed41d899cd790f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 454a6cd2e1e63ca9d542dfdab518fed9
+      Version: 3
+      TBS:
+        MD5: dc758b37359f3efd673d2a20e9d65970
+        SHA1: b7293447deac1ede27c037804acf694e00262d28
+        SHA256: e1f3ec931d84ca3ebf315235e9d6b203c49b53cc2fea8a3317a7f5d9717be934
+        SHA384: e14f9b9f001c64204054a84fde7d18b84f217cf42bd19d30ef1b26d399adc01a17d031f763a981ba99539d80ac8b1abe
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    Signer:
+    - SerialNumber: 454a6cd2e1e63ca9d542dfdab518fed9
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
