@@ -185,8 +185,9 @@ KnownVulnerableSamples:
   LoadsDespiteHVCI: 'FALSE'
 MitreID: T1068
 Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
 - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Tags:
 - BSMI.sys
+- BSMIXP64.sys
 Verified: 'TRUE'
