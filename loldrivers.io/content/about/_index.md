@@ -23,7 +23,7 @@ Michael Haag is a Senior Threat Researcher at Splunk. Michael has more than a de
 
 # [Jose Hernandez](https://twitter.com/_josehelps)
 {{< picture "jose-headshot.png" "jose-headshot.png" >}}
-Currently, Jose Enrique Hernandez is a Distinguished Cloud Threat Researcher at Laceworks. Previously he founded and lead the  Threat Research team at Splunk (STRT). Jose is known for creating several security-related projects, including: [Splunk Attack Range](https://github.com/splunk/attack_range), [Splunk Security Content](https://github.com/splunk/security_content), [Git-Wild-Hunt](https://github.com/josehelps/git-wild-hunt), [Melting-Cobalt](https://github.com/splunk/melting-cobalt), and [BlackCert](https://github.com/josehelps/blackcert) projects. He also works as  a maintainer to security industry critical repositories such as [Atomic Red Team](atomicredteam.io/) and [lolbas-project.github.io](lolbas-project.github.io/).
+Currently, Jose Enrique Hernandez is the Director of Threat Research at Splunk (STRT). Previously Jose is co-founded Zenedge acquired by Oracle. Jose is known for creating several security-related projects, including: [Splunk Attack Range](https://github.com/splunk/attack_range), [Splunk Security Content](https://github.com/splunk/security_content), [Git-Wild-Hunt](https://github.com/josehelps/git-wild-hunt), [Melting-Cobalt](https://github.com/splunk/melting-cobalt), and [BlackCert](https://github.com/josehelps/blackcert) projects. He also works as  a maintainer to security industry critical repositories such as [Atomic Red Team](atomicredteam.io/) and [lolbas-project.github.io](lolbas-project.github.io/).
 
 # [Nasreddine Bencherchali](https://twitter.com/nas_bench)
 {{< picture "nas-headshot.png" "nas-headshot.png" >}}
