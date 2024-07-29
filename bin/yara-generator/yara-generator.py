@@ -359,8 +359,8 @@ if __name__ == '__main__':
 	yara_rules_vulnerable_drivers_strict_renamed = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="vulnerable driver",  strict=True, renamed=True)
 
 	# Write the output files
-	# The sets
-	output_file = os.path.join(args.o, 'yara-rules_vuln_drivers.yar')
+	# we write the recommended files to the root folder and other sets to a sub folder named 'other'
+	output_file = os.path.join(args.o, 'other', 'yara-rules_vuln_drivers.yar')
 	with open(output_file, 'w') as fh:
 		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_vulnerable_drivers), output_file))
 		fh.write("\n".join(yara_rules_vulnerable_drivers))
@@ -372,11 +372,11 @@ if __name__ == '__main__':
 	with open(output_file, 'w') as fh:
 		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_vulnerable_drivers_strict), output_file))
 		fh.write("\n".join(yara_rules_vulnerable_drivers_strict))
-	output_file = os.path.join(args.o, 'yara-rules_mal_drivers_strict.yar')
+	output_file = os.path.join(args.o, 'other', 'yara-rules_mal_drivers_strict.yar')
 	with open(output_file, 'w') as fh:
 		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_malicious_drivers_strict), output_file))
 		fh.write("\n".join(yara_rules_malicious_drivers_strict))
-	output_file = os.path.join(args.o, 'yara-rules_vuln_drivers_strict_renamed.yar')
+	output_file = os.path.join(args.o, 'other', 'yara-rules_vuln_drivers_strict_renamed.yar')
 	with open(output_file, 'w') as fh:
 		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_vulnerable_drivers_strict_renamed), output_file))
 		fh.write("\n".join(yara_rules_vulnerable_drivers_strict_renamed))
