@@ -1,51 +1,31 @@
-Id: a338a9fc-9fe3-400c-9fe4-69bb7892602d
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create UCOREW64.SYS binPath=C:\windows\temp\UCOREW64.SYS type=kernel
     && sc.exe start UCOREW64.SYS
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: a338a9fc-9fe3-400c-9fe4-69bb7892602d
 KnownVulnerableSamples:
-- Filename: UCOREW64.SYS
-  MD5: a17c58c0582ee560c72f60764ed63224
-  SHA1: bbc0b9fd67c8f4cefa3d76fcb29ff3cef996b825
-  SHA256: a7c8f4faf3cbb088cac7753d81f8ec4c38ccb97cd9da817741f49272e8d01200
-  Signature:
-  - American Megatrends, Inc.
-  - VeriSign Class 3 Code Signing 2004 CA
-  - VeriSign Class 3 Public Primary CA
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 6957cb828dd243621e2e67c948171264
     SHA1: c55173b926235b8678bddb9b49a1a8b9a92a1ada
     SHA256: f9c290ffc007e94fb61aecff42d267c1e626ec7939025b1a7d7285441d1c490d
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2008-04-22 05:01:50'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: UCOREW64.SYS
   ImportedFunctions:
   - MmMapLockedPages
   - MmBuildMdlForNonPagedPool
@@ -71,6 +51,37 @@ KnownVulnerableSamples:
   - ZwClose
   - MmFreeContiguousMemory
   - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: a17c58c0582ee560c72f60764ed63224
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 6acaf901cdbe1b7ccb7ac8f25cddac3b
+    SHA1: d2e07f98c23fa821659b14533fa1734b478fb627
+    SHA256: c820b388e3fb5223c2ce1b6b764aca527b34b3335ec7c20a408946dc26b4c1ef
+  SHA1: bbc0b9fd67c8f4cefa3d76fcb29ff3cef996b825
+  SHA256: a7c8f4faf3cbb088cac7753d81f8ec4c38ccb97cd9da817741f49272e8d01200
+  Sections:
+    .text:
+      Entropy: 6.361965845410384
+      Virtual Size: '0x18d0'
+    .pdata:
+      Entropy: 3.4274538707186792
+      Virtual Size: '0x90'
+    INIT:
+      Entropy: 4.624071499789533
+      Virtual Size: '0x31a'
+  Signature:
+  - American Megatrends, Inc.
+  - VeriSign Class 3 Code Signing 2004 CA
+  - VeriSign Class 3 Public Primary CA
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -88,6 +99,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -100,6 +112,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -114,6 +127,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -126,6 +140,7 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     - Subject: C=US, ST=Georgia, L=Norcross, O=American Megatrends, Inc., OU=Digital
         ID Class 3 , Microsoft Software Validation v2, OU=Headquarters, CN=American
         Megatrends, Inc.
@@ -140,27 +155,19 @@ KnownVulnerableSamples:
         MD5: 960327b70b290ec28fa2e85cbb7a41fa
         SHA1: a2ac59e0c82196d6661212232bd3bcf0588e40ea
         SHA256: 8bb26b4dc7c105fd9cdd0604cedbf3647a700dc4ddadcad839d8e27312253e73
+        SHA384: 7cfe0dfecc1d1abfa204d28c446f706736b73a35cb37e4c2a40c7f3b68eef14ebfb665a6f23e3c0413cd8caf5979607e
     Signer:
     - SerialNumber: 08dfd80b2826716554b1fb8cfa5043d7
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 6acaf901cdbe1b7ccb7ac8f25cddac3b
-    SHA1: d2e07f98c23fa821659b14533fa1734b478fb627
-    SHA256: c820b388e3fb5223c2ce1b6b764aca527b34b3335ec7c20a408946dc26b4c1ef
-  Sections:
-    .text:
-      Entropy: 6.361965845410384
-      Virtual Size: '0x18d0'
-    .pdata:
-      Entropy: 3.4274538707186792
-      Virtual Size: '0x90'
-    INIT:
-      Entropy: 4.624071499789533
-      Virtual Size: '0x31a'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-04-22 05:01:50'
+  Imphash: 0dcd262801389f839ce909cb173448e2
+  LoadsDespiteHVCI: 'FALSE'
+MitreID: T1068
+Resources:
+- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Tags:
 - UCOREW64.SYS
+Verified: 'TRUE'

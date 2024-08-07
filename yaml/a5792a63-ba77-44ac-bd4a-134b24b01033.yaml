@@ -1,35 +1,36 @@
-Id: a5792a63-ba77-44ac-bd4a-134b24b01033
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create 1.sys binPath=C:\windows\temp\1.sys type=kernel && sc.exe
     start 1.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
+Detection: []
+Id: a5792a63-ba77-44ac-bd4a-134b24b01033
+KnownVulnerableSamples:
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: 1.sys
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA256: 64f9e664bc6d4b8f5f68616dd50ae819c3e60452efd5e589d6604b9356841b57
+  Signature: []
+  LoadsDespiteHVCI: 'FALSE'
+MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
-Detection: []
-KnownVulnerableSamples:
-- Filename: 1.sys
-  SHA256: 64f9e664bc6d4b8f5f68616dd50ae819c3e60452efd5e589d6604b9356841b57
-  Signature: []
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
 Tags:
 - 1.sys
+Verified: 'FALSE'

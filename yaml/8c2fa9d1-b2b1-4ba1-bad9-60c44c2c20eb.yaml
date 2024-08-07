@@ -1,35 +1,36 @@
-Id: 8c2fa9d1-b2b1-4ba1-bad9-60c44c2c20eb
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create t8.sys binPath=C:\windows\temp\t8.sys type=kernel && sc.exe
     start t8.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
+Detection: []
+Id: 8c2fa9d1-b2b1-4ba1-bad9-60c44c2c20eb
+KnownVulnerableSamples:
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: t8.sys
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA256: 258359a7fa3d975620c9810dab3a6493972876a024135feaf3ac8482179b2e79
+  Signature: []
+  LoadsDespiteHVCI: 'FALSE'
+MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
-Detection: []
-KnownVulnerableSamples:
-- Filename: t8.sys
-  SHA256: 258359a7fa3d975620c9810dab3a6493972876a024135feaf3ac8482179b2e79
-  Signature: []
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
 Tags:
 - t8.sys
+Verified: 'FALSE'

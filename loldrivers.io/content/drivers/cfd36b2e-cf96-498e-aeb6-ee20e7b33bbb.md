@@ -13,7 +13,6 @@ displayTitle = "magdrvamd64.sys"
 
 # magdrvamd64.sys ![:inline](/images/twitter_verified.png) 
 
-
 ### Description
 
 magdrvamd64.sys is a vulnerable driver and more information will be added as found.
@@ -53,7 +52,7 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
 
 
 {{< /details >}}
@@ -81,7 +80,7 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
 {{< details "Expand" >}}
 {{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
 
 {{< /details >}}
 
@@ -101,6 +100,7 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | magdrvamd64.sys |
+| Creation Timestamp           | 2013-11-28 06:29:00 |
 | MD5                | [49938383844ceec33dba794fb751c9a5](https://www.virustotal.com/gui/file/49938383844ceec33dba794fb751c9a5) |
 | SHA1               | [e22495d92ac3dcae5eeb1980549a9ead8155f98a](https://www.virustotal.com/gui/file/e22495d92ac3dcae5eeb1980549a9ead8155f98a) |
 | SHA256             | [be54f7279e69fb7651f98e91d24069dbc7c4c67e65850e486622ccbdc44d9a57](https://www.virustotal.com/gui/file/be54f7279e69fb7651f98e91d24069dbc7c4c67e65850e486622ccbdc44d9a57) |
@@ -110,6 +110,8 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
 | RichPEHeaderHash MD5   | [b600bdf31f987123de173daba685c687](https://www.virustotal.com/gui/search/rich_pe_header_hash%253Ab600bdf31f987123de173daba685c687) |
 | RichPEHeaderHash SHA1  | [a843b261089202e7260aaaeda0c341dd471e60de](https://www.virustotal.com/gui/search/rich_pe_header_hash%253Aa843b261089202e7260aaaeda0c341dd471e60de) |
 | RichPEHeaderHash SHA256| [631fce68262329c32a525e128948baa17c8438f89b68df4c9c460865dac05699](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A631fce68262329c32a525e128948baa17c8438f89b68df4c9c460865dac05699) |
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/49938383844ceec33dba794fb751c9a5.bin" "Download" >}} 
 
 #### Certificates
 
@@ -177,12 +179,7 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
 * NTOSKRNL.exe
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* NTOSKRNL.exe
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * IoDeleteDevice
 * IoCreateSymbolicLink
@@ -194,11 +191,21 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
 * MmMapIoSpace
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* INIT
+* .rsrc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -213,7 +220,8 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
       "TBS": {
         "MD5": "f6a9e8eb8784f3f694b4e353c08a0ff5",
         "SHA1": "589a7d4df869395601ba7538a65afae8c4616385",
-        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4"
+        "SHA256": "cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4",
+        "SHA384": "dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b"
       },
       "ValidFrom": "2011-04-13 10:00:00",
       "ValidTo": "2019-04-13 10:00:00",
@@ -228,7 +236,8 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
       "TBS": {
         "MD5": "f13ede9179075999ef7f856ec31e364b",
         "SHA1": "2f09867166e6107e17808317f5c8d4ee157f45bc",
-        "SHA256": "089a2c4c6ac7432020acdb65c33bf39130da6f37c002ba79128bd4c94e4fa101"
+        "SHA256": "089a2c4c6ac7432020acdb65c33bf39130da6f37c002ba79128bd4c94e4fa101",
+        "SHA384": "67be6d358f4ecd0726163603a404db9d78c340951d43fd608482cd89a2de7f9566f0ce45f8222f420003157cb266b939"
       },
       "ValidFrom": "2010-05-10 00:00:00",
       "ValidTo": "2015-05-10 23:59:59",
@@ -243,7 +252,8 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
       "TBS": {
         "MD5": "8b286e174f9f82d6c4f68ff7f24942bd",
         "SHA1": "daa7914258adea501744674b7c67b4b6b857202b",
-        "SHA256": "dea433e56a62967d675adc7c758cb5a97da80a8bc69826b22a6677fc5ec43971"
+        "SHA256": "dea433e56a62967d675adc7c758cb5a97da80a8bc69826b22a6677fc5ec43971",
+        "SHA384": "0db739e7be37dbf14353298c00b90d083749a927441b11c970e078e70dfef4795a21b70d24900af534d96ac08dc99b26"
       },
       "ValidFrom": "2012-10-09 11:25:07",
       "ValidTo": "2015-10-10 11:25:07",
@@ -258,7 +268,8 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
       "TBS": {
         "MD5": "0bb058d116f02817737920f112d9fd3b",
         "SHA1": "fd116235171a4feafedee586b7a59185fb5fd7e6",
-        "SHA256": "f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4"
+        "SHA256": "f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4",
+        "SHA384": "c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6"
       },
       "ValidFrom": "2011-04-15 19:55:08",
       "ValidTo": "2021-04-15 20:05:08",
@@ -284,14 +295,7 @@ sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=k
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cfd36b2e-cf96-498e-aeb6-ee20e7b33bbb.yaml)
 
-*last_updated:* 2023-06-28
-
-
-
-
-
-
-
+*last_updated:* 2024-08-04
 
 {{< /column >}}
 {{< /block >}}

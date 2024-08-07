@@ -1,51 +1,31 @@
-Id: d158321b-4d56-49c5-9a18-bcff9f4a2ebe
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create BS_HWMIo64.sys binPath=C:\windows\temp\BS_HWMIo64.sys type=kernel
     && sc.exe start BS_HWMIo64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: d158321b-4d56-49c5-9a18-bcff9f4a2ebe
 KnownVulnerableSamples:
-- Filename: BS_HWMIo64.sys
-  MD5: 338a98e1c27bc76f09331fcd7ae413a5
-  SHA1: 9c24dd75e4074041dbe03bf21f050c77d748b8e9
-  SHA256: 60c6f4f34c7319cb3f9ca682e59d92711a05a2688badbae4891b1303cd384813
-  Signature:
-  - BIOSTAR MICROTECH INT'L CORP
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: d6f9dc5cd435d1c210cd4053886b9f36
     SHA1: 3281135748c9c7a9ddace55c648c720af810475f
     SHA256: 3de51a3102db7297d96b4de5b60aca5f3a07e8577bbbed7f755f1de9a9c38e75
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2016-06-03 19:39:23'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: BS_HWMIo64.sys
   ImportedFunctions:
   - KeInitializeSemaphore
   - IoCreateSymbolicLink
@@ -74,6 +54,43 @@ KnownVulnerableSamples:
   - IoDeleteSymbolicLink
   - HalSetBusDataByOffset
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: 338a98e1c27bc76f09331fcd7ae413a5
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 9e4425704fab855e1d15d14884b50fc4
+    SHA1: fc1001bb82b6e079b79ce69deb28d7e2c44b50d7
+    SHA256: b5dd410353c4011fe699e4a824a89792144f5a11c756f64d5b5acfea3a9f1c8a
+  SHA1: 9c24dd75e4074041dbe03bf21f050c77d748b8e9
+  SHA256: 60c6f4f34c7319cb3f9ca682e59d92711a05a2688badbae4891b1303cd384813
+  Sections:
+    .text:
+      Entropy: 6.305327851031941
+      Virtual Size: '0x169a'
+    .rdata:
+      Entropy: 4.500724574112924
+      Virtual Size: '0x274'
+    .data:
+      Entropy: 0.4546683345547283
+      Virtual Size: '0x13c'
+    .pdata:
+      Entropy: 3.739340463595429
+      Virtual Size: '0x108'
+    INIT:
+      Entropy: 5.356916760341437
+      Virtual Size: '0x560'
+  Signature:
+  - BIOSTAR MICROTECH INT'L CORP
+  - VeriSign Class 3 Code Signing 2010 CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -91,6 +108,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -104,6 +122,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=TAIPEI HSIEN, L=HSIN TIEN, O=BIOSTAR MICROTECH INT'L CORP,
         OU=Digital ID Class 3 , Microsoft Software Validation v2, CN=BIOSTAR MICROTECH
         INT'L CORP
@@ -118,6 +137,7 @@ KnownVulnerableSamples:
         MD5: 63308081ef616eacfd255ea80348d48e
         SHA1: 71101c0cb853bbae1723d1b1fe54acc512bbc1c5
         SHA256: 742cc2473ca94322239868d3930b1c7dc43c47e476d96676e4e05e192646b8e7
+        SHA384: c98dc933ece7503d27498db2e37e5ab9e1ca3c8ddd7ce22eea3faf9ab86361945396553fb6d2898cee4444ecea8e7bad
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -132,6 +152,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -146,33 +167,19 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 32ba71c02f695ce02de7e6be26c4e481
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: 9e4425704fab855e1d15d14884b50fc4
-    SHA1: fc1001bb82b6e079b79ce69deb28d7e2c44b50d7
-    SHA256: b5dd410353c4011fe699e4a824a89792144f5a11c756f64d5b5acfea3a9f1c8a
-  Sections:
-    .text:
-      Entropy: 6.305327851031941
-      Virtual Size: '0x169a'
-    .rdata:
-      Entropy: 4.500724574112924
-      Virtual Size: '0x274'
-    .data:
-      Entropy: 0.4546683345547283
-      Virtual Size: '0x13c'
-    .pdata:
-      Entropy: 3.739340463595429
-      Virtual Size: '0x108'
-    INIT:
-      Entropy: 5.356916760341437
-      Virtual Size: '0x560'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-06-03 19:39:23'
+  Imphash: 095c0cdb9c0421da216371c1f4e8790e
+  LoadsDespiteHVCI: 'FALSE'
+MitreID: T1068
+Resources:
+- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Tags:
 - BS_HWMIo64.sys
+Verified: 'TRUE'

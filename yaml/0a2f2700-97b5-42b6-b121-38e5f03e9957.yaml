@@ -1,51 +1,31 @@
-Id: 0a2f2700-97b5-42b6-b121-38e5f03e9957
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create BS_RCIO.sys binPath=C:\windows\temp\BS_RCIO.sys type=kernel
     && sc.exe start BS_RCIO.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: 0a2f2700-97b5-42b6-b121-38e5f03e9957
 KnownVulnerableSamples:
-- Filename: BS_RCIO.sys
-  MD5: ab53d07f18a9697139ddc825b466f696
-  SHA1: 213ba055863d4226da26a759e8a254062ea77814
-  SHA256: 362c4f3dadc9c393682664a139d65d80e32caa2a97b6e0361dfd713a73267ecc
-  Signature:
-  - Biostar Microtech Int'l Corp
-  - DigiCert EV Code Signing CA
-  - DigiCert
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: I386
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 8284660345377a69dd99b25fdf397314
     SHA1: 3311e4e94e8a6dd81859719fbe0fcbf187f0bd8a
     SHA256: f67e60228084151fdcb84e94a48693db864cf606b65faef5a1d829175380dbfa
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2017-01-16 19:29:00'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: BS_RCIO.sys
   ImportedFunctions:
   - KeWaitForSingleObject
   - memcpy
@@ -84,6 +64,43 @@ KnownVulnerableSamples:
   - READ_PORT_USHORT
   - READ_PORT_ULONG
   - KfLowerIrql
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: ab53d07f18a9697139ddc825b466f696
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: c518efc7fb74ad56780730034846fb80
+    SHA1: ec34db923330d443ffb78311b27ed227fee4ed16
+    SHA256: 31c6a4c2e5994dcccb1fc3fa846b9d865f191213ec5686c163e548fa58c0e245
+  SHA1: 213ba055863d4226da26a759e8a254062ea77814
+  SHA256: 362c4f3dadc9c393682664a139d65d80e32caa2a97b6e0361dfd713a73267ecc
+  Sections:
+    .text:
+      Entropy: 6.012865951436391
+      Virtual Size: '0xeec'
+    .rdata:
+      Entropy: 4.674544303018785
+      Virtual Size: '0x127'
+    .data:
+      Entropy: 1.3219280948873622
+      Virtual Size: '0x28'
+    INIT:
+      Entropy: 5.6725581816645905
+      Virtual Size: '0x54c'
+    .reloc:
+      Entropy: 5.327084372249684
+      Virtual Size: '0x1a2'
+  Signature:
+  - Biostar Microtech Int'l Corp
+  - DigiCert EV Code Signing CA
+  - DigiCert
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -101,6 +118,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=Private Organization, ??=TW, serialNumber=23826200, ??=2F, NO.108,2,
         MIN CHUAN RD, postalCode=231, C=TW, ST=XINDIAN DIST, L=NEW TAIPEI CITY, O=Biostar
         Microtech Int'l Corp, CN=Biostar Microtech Int'l Corp
@@ -115,6 +133,7 @@ KnownVulnerableSamples:
         MD5: 88a4c70dd696e5777929d272523d55bf
         SHA1: c4353dfabf88e1243b77bcbf451fecea1cd17a87
         SHA256: ecf1547d382836fa9202405ad21933170f4a9a1316d131ef6a89c527164481ad
+        SHA384: e01e1f8f8e20db99bde388c0ef388eecd9742ce89c2d699cd156fca1fec006c869b3cf62fa1992f343b0d86830960deb
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -127,6 +146,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -140,6 +160,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -152,32 +173,18 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0240c40d347ee38f707adae8a101450b
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: c518efc7fb74ad56780730034846fb80
-    SHA1: ec34db923330d443ffb78311b27ed227fee4ed16
-    SHA256: 31c6a4c2e5994dcccb1fc3fa846b9d865f191213ec5686c163e548fa58c0e245
-  Sections:
-    .text:
-      Entropy: 6.012865951436391
-      Virtual Size: '0xeec'
-    .rdata:
-      Entropy: 4.674544303018785
-      Virtual Size: '0x127'
-    .data:
-      Entropy: 1.3219280948873622
-      Virtual Size: '0x28'
-    INIT:
-      Entropy: 5.6725581816645905
-      Virtual Size: '0x54c'
-    .reloc:
-      Entropy: 5.327084372249684
-      Virtual Size: '0x1a2'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-01-16 19:29:00'
+  Imphash: 1d05fb30a58133da2e9dbdfcf51b80fd
+  LoadsDespiteHVCI: 'FALSE'
+MitreID: T1068
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - BS_RCIO.sys
+Verified: 'TRUE'

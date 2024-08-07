@@ -27,11 +27,6 @@ nt2.sys is a vulnerable driver and more information will be added as found.
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/.bin" "Download" >}}
-{{< tip "warning" >}}
-This download link contains the vulnerable driver!
-
-{{< /tip >}}
 
 ### Commands
 
@@ -58,7 +53,7 @@ sc.exe create nt2.sys binPath=C:\windows\temp \n \n \n  t2.sys type=kernel &amp;
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
 
 
 {{< /details >}}
@@ -86,7 +81,7 @@ sc.exe create nt2.sys binPath=C:\windows\temp \n \n \n  t2.sys type=kernel &amp;
 {{< details "Expand" >}}
 {{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
 
 {{< /details >}}
 
@@ -106,28 +101,30 @@ sc.exe create nt2.sys binPath=C:\windows\temp \n \n \n  t2.sys type=kernel &amp;
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | nt2.sys |
+| Creation Timestamp           |  |
 | MD5                | [](https://www.virustotal.com/gui/file/) |
 | SHA1               | [](https://www.virustotal.com/gui/file/) |
 | SHA256             | [cb9890d4e303a4c03095d7bc176c42dee1b47d8aa58e2f442ec1514c8f9e3cec](https://www.virustotal.com/gui/file/cb9890d4e303a4c03095d7bc176c42dee1b47d8aa58e2f442ec1514c8f9e3cec) |
 
 
+
 #### Imports
 {{< details "Expand" >}}
 
 {{< /details >}}
-#### Imports
+#### Imported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}
-
-{{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 
@@ -138,14 +135,7 @@ sc.exe create nt2.sys binPath=C:\windows\temp \n \n \n  t2.sys type=kernel &amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cacc48e6-6ed8-431c-abee-88ee6c2dc3c1.yaml)
 
-*last_updated:* 2023-06-28
-
-
-
-
-
-
-
+*last_updated:* 2024-08-04
 
 {{< /column >}}
 {{< /block >}}

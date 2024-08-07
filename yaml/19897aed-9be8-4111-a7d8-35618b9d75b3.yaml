@@ -1,50 +1,31 @@
-Id: 19897aed-9be8-4111-a7d8-35618b9d75b3
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create smep_capcom.sys binPath=C:\windows\temp\smep_capcom.sys     type=kernel
     && sc.exe start smep_capcom.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: 19897aed-9be8-4111-a7d8-35618b9d75b3
 KnownVulnerableSamples:
-- Filename: smep_capcom.sys
-  MD5: f406c5536bcf9bacbeb7ce8a3c383bfa
-  SHA1: 21edff2937eb5cd6f6b0acb7ee5247681f624260
-  SHA256: db2a9247177e8cdd50fe9433d066b86ffd2a84301aa6b2eb60f361cfff077004
-  Signature:
-  - CAPCOM Co.,Ltd.
-  - Symantec Class 3 SHA256 Code Signing CA
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 37458813b5115cbf06552da28fefbbbb
     SHA1: 1d1cafc73c97c6bcd2331f8777d90fdca57125a3
     SHA256: faa08cb609a5b7be6bfdb61f1e4a5e8adf2f5a1d2492f262483df7326934f5d4
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2016-09-05 00:43:33'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: smep_capcom.sys
   ImportedFunctions:
   - IoDeleteSymbolicLink
   - RtlInitUnicodeString
@@ -53,6 +34,42 @@ KnownVulnerableSamples:
   - IoCreateSymbolicLink
   - IoCreateDevice
   - IoDeleteDevice
+  Imports:
+  - ntoskrnl.exe
+  InternalName: ''
+  MD5: f406c5536bcf9bacbeb7ce8a3c383bfa
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: b2f23c03be4553a744ff25735a80073c
+    SHA1: 2703d60c8f12df9d6adf5ae475bfeb1786486888
+    SHA256: 46ffd109664b6694974986a39d508002d564434d60a0fb9f861401f2cb2c83f1
+  SHA1: 21edff2937eb5cd6f6b0acb7ee5247681f624260
+  SHA256: db2a9247177e8cdd50fe9433d066b86ffd2a84301aa6b2eb60f361cfff077004
+  Sections:
+    .text:
+      Entropy: 5.848826218029174
+      Virtual Size: '0x4e0'
+    .data:
+      Entropy: -0.0
+      Virtual Size: '0xc0'
+    .pdata:
+      Entropy: 3.006469661076665
+      Virtual Size: '0x48'
+    .info:
+      Entropy: 1.3665783978789787
+      Virtual Size: '0xa0'
+    INIT:
+      Entropy: 4.123682579107587
+      Virtual Size: '0x114'
+  Signature:
+  - CAPCOM Co.,Ltd.
+  - Symantec Class 3 SHA256 Code Signing CA
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -70,6 +87,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -83,6 +101,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=JP, ST=Osaka, L=Chuo,ku, O=CAPCOM Co.,Ltd., OU=R&D Asset Management
         Section, CN=CAPCOM Co.,Ltd.
       ValidFrom: '2016-05-02 00:00:00'
@@ -96,6 +115,7 @@ KnownVulnerableSamples:
         MD5: a9f59eaae33b89f4e1abd1f49343dcac
         SHA1: 070bcfc8c776cb0c28f80c39c84633e233bea90a
         SHA256: 30107b5e2bcaa8ae8a2c0682c78b4b79377ca56f6a84c5610ebfc0adcf7b21ad
+        SHA384: b2dfce32fc217b83ce010a7f866e8dfc1dea72f11580521aa400c155b924432707abf72f279939ca1136d84800d445cf
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
@@ -109,6 +129,7 @@ KnownVulnerableSamples:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
         SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -123,32 +144,18 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 7e59408d3c99c511a853fb2f73c03dc4
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
-  RichPEHeaderHash:
-    MD5: b2f23c03be4553a744ff25735a80073c
-    SHA1: 2703d60c8f12df9d6adf5ae475bfeb1786486888
-    SHA256: 46ffd109664b6694974986a39d508002d564434d60a0fb9f861401f2cb2c83f1
-  Sections:
-    .text:
-      Entropy: 5.848826218029174
-      Virtual Size: '0x4e0'
-    .data:
-      Entropy: -0.0
-      Virtual Size: '0xc0'
-    .pdata:
-      Entropy: 3.006469661076665
-      Virtual Size: '0x48'
-    .info:
-      Entropy: 1.3665783978789787
-      Virtual Size: '0xa0'
-    INIT:
-      Entropy: 4.123682579107587
-      Virtual Size: '0x114'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-09-05 00:43:33'
+  Imphash: 45bfe170e0cd654bc1e2ae3fca3ac3f4
+  LoadsDespiteHVCI: 'FALSE'
+MitreID: T1068
+Resources:
+- ' https://github.com/namazso/physmem_drivers'
+- https://github.com/namazso/physmem_drivers
 Tags:
 - smep_capcom.sys
+Verified: 'TRUE'

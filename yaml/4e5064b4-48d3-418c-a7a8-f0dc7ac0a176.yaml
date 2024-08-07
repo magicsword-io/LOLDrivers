@@ -1,11 +1,10 @@
-Id: 4e5064b4-48d3-418c-a7a8-f0dc7ac0a176
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 CVE:
 - CVE-2019-18845
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create MsIo32.sys binPath=C:\windows\temp\MsIo32.sys type=kernel
     && sc.exe start MsIo32.sys
@@ -13,46 +12,25 @@ Commands:
     allow local users (including low integrity processes) to read and write to arbitrary
     memory locations, and consequently gain NT AUTHORITY\SYSTEM privileges, by mapping
     \Device\PhysicalMemory into the calling process via ZwOpenSection and ZwMapViewOfSection.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://www.activecyber.us/activelabs/viper-rgb-driver-local-privilege-escalation-cve-2019-18845
-- http://blog.rewolf.pl/blog/?p=1630
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: 4e5064b4-48d3-418c-a7a8-f0dc7ac0a176
 KnownVulnerableSamples:
-- Filename: MsIo32.sys
-  MD5: d9e7e5bcc5b01915dbcef7762a7fc329
-  SHA1: e6305dddd06490d7f87e3b06d09e9d4c1c643af0
-  SHA256: 525d9b51a80ca0cd4c5889a96f857e73f3a80da1ffbae59851e0f51bdfb0b6cd
-  Signature:
-  - MICSYS Technology Co., Ltd.
-  - Symantec Class 3 Extended Validation Code Signing CA - G2
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 6491c34f274a0ed6258fadca85bd69fb
     SHA1: 7e732acb7cfad9ba043a9350cdeff25d742becb8
     SHA256: 7018d515a6c781ea6097ca71d0f0603ad0d689f7ec99db27fcacd492a9e86027
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2018-02-12 00:57:50'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: MsIo32.sys
   ImportedFunctions:
   - RtlInitUnicodeString
   - DbgPrint
@@ -68,6 +46,43 @@ KnownVulnerableSamples:
   - ObfDereferenceObject
   - IoDeleteDevice
   - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: d9e7e5bcc5b01915dbcef7762a7fc329
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 361b8f718c9e1f8f46acd39bc0e7b5cd
+    SHA1: 3b77d6df2bf649e4281d73aaa445cf8f31030027
+    SHA256: caf536e9adb1df49dc5ac8eb8557389d564f22d4f859c1baa9d0541ed58496f6
+  SHA1: e6305dddd06490d7f87e3b06d09e9d4c1c643af0
+  SHA256: 525d9b51a80ca0cd4c5889a96f857e73f3a80da1ffbae59851e0f51bdfb0b6cd
+  Sections:
+    .text:
+      Entropy: 6.058139200380966
+      Virtual Size: '0xf35'
+    .rdata:
+      Entropy: 4.121284123833754
+      Virtual Size: '0x160'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.1036058838796503
+      Virtual Size: '0x54'
+    INIT:
+      Entropy: 4.784008217365607
+      Virtual Size: '0x262'
+  Signature:
+  - MICSYS Technology Co., Ltd.
+  - Symantec Class 3 Extended Validation Code Signing CA - G2
+  - VeriSign
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -85,6 +100,7 @@ KnownVulnerableSamples:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
         SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
+        SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
     - Subject: ??=TW, ??=Taiwan, ??=New Taipei City, ??=Private Organization, serialNumber=84948057,
         C=TW, ST=Taiwan, L=New Taipei City, O=MICSYS Technology Co., Ltd., CN=MICSYS
         Technology Co., Ltd.
@@ -99,6 +115,7 @@ KnownVulnerableSamples:
         MD5: 388e7704244c6f77b4f54d467075a41c
         SHA1: 90fb8dec5a06fa52296ed951485dabce615ec76e
         SHA256: 39d286d0c713fd8adbf4d9e97f04b8dc770dd286d15e0d36cc985825f05bd551
+        SHA384: 1d2f4da65dfd1829e0b196b6e258b3e2b4ddf3fc63975c62d1db460d4a3e73375cfd5676510e601405563fc1a35d4b11
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -113,32 +130,20 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 48e28f46a3e4ac760dfa9a58fa6c6363
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       Version: 1
-  RichPEHeaderHash:
-    MD5: 361b8f718c9e1f8f46acd39bc0e7b5cd
-    SHA1: 3b77d6df2bf649e4281d73aaa445cf8f31030027
-    SHA256: caf536e9adb1df49dc5ac8eb8557389d564f22d4f859c1baa9d0541ed58496f6
-  Sections:
-    .text:
-      Entropy: 6.058139200380966
-      Virtual Size: '0xf35'
-    .rdata:
-      Entropy: 4.121284123833754
-      Virtual Size: '0x160'
-    .data:
-      Entropy: 0.5159719988134768
-      Virtual Size: '0x110'
-    .pdata:
-      Entropy: 3.1036058838796503
-      Virtual Size: '0x54'
-    INIT:
-      Entropy: 4.784008217365607
-      Virtual Size: '0x262'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-02-12 00:57:50'
+  Imphash: 8a424cd36ae3eab0d11332ce3b982a02
+  LoadsDespiteHVCI: 'FALSE'
+MitreID: T1068
+Resources:
+- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
+- https://www.activecyber.us/activelabs/viper-rgb-driver-local-privilege-escalation-cve-2019-18845
+- http://blog.rewolf.pl/blog/?p=1630
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Tags:
 - MsIo32.sys
+Verified: 'TRUE'

@@ -1,0 +1,157 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Takahiro Haruyama
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create stdcdrv64sys binPath= C:\windows\temp\stdcdrv64sys.sys type=kernel
+    && sc.exe start stdcdrv64sys
+  Description: The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable
+    drivers (237 file hashes) accepting firmware access. Six allow kernel memory access.
+    All give full control of the devices to non-admin users. By exploiting the vulnerable
+    drivers, an attacker without the system privilege may erase/alter firmware, and/or
+    elevate privileges. As of the time of writing in October 2023, the filenames of
+    the vulnerable drivers have not been made public until now.
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-11-02'
+Detection:
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: f33c2e80-7b01-416b-821a-ed06db4b6511
+KnownVulnerableSamples:
+- Company: Intel Corporation
+  Date: ''
+  Description: SelfTest Data Collector
+  FileVersion: 2.0.0.0
+  Filename: ''
+  MD5: d95c9a241e52b4f967fa4cdb7b99fc80
+  MachineType: AMD64
+  OriginalFilename: stdcdrv64.sys
+  Product: SelfTest Data Collector
+  ProductVersion: 2.0.0.0
+  Publisher: ''
+  SHA1: 8ea50d7d13ff2d1306fed30a2d136dd6245eb3bc
+  SHA256: 37022838c4327e2a5805e8479330d8ff6f8cd3495079905e867811906c98ea20
+  Signature: ''
+  Imphash: 2e7d3b001306473cbff3d0dc11a6fcbc
+  Authentihash:
+    MD5: e70d9f1ab58cf19930dc7744a9135bd3
+    SHA1: 04dd836ca6b4fdc52aeef349d042e629b74f34d0
+    SHA256: 59cbdc9190000b1de3719dbdb5d90459c602487672a3bae9c56d8ffae5e64250
+  RichPEHeaderHash:
+    MD5: 4177fc696ec2b92edb94bd0fa66e6043
+    SHA1: ed292b21c8da0d265f40699d579ad442a17483c7
+    SHA256: 83b9906909b8181816feb15b0807566eb053b800c4da8b21bc86dea28637b101
+  Sections:
+    .text:
+      Entropy: 6.336058210124275
+      Virtual Size: '0x2828'
+    .rdata:
+      Entropy: 4.3799557699565765
+      Virtual Size: '0x900'
+    .data:
+      Entropy: 0.6187029948942955
+      Virtual Size: '0x402f0'
+    .pdata:
+      Entropy: 3.9750454932513692
+      Virtual Size: '0x18c'
+    INIT:
+      Entropy: 4.900451719096127
+      Virtual Size: '0x238'
+    .rsrc:
+      Entropy: 3.489627550651526
+      Virtual Size: '0x408'
+    .reloc:
+      Entropy: 3.2855342446735882
+      Virtual Size: '0x2c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2022-01-26 12:37:43'
+  InternalName: stdcdrv64.sys
+  Copyright: Copyright (c) 2019 Intel Corporation
+  Imports:
+  - ntoskrnl.exe
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - KeQueryGroupAffinity
+  - MmMapIoSpace
+  - KeQueryMaximumGroupCount
+  - __C_specific_handler
+  - KeQueryActiveGroupCount
+  - RtlCopyUnicodeString
+  - KeSetSystemGroupAffinityThread
+  - memcpy_s
+  - MmUnmapIoSpace
+  - DbgPrint
+  - WdfVersionUnbind
+  - WdfVersionBind
+  - WdfVersionUnbindClass
+  - WdfVersionBindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=California, L=Santa Clara, O=Intel Corporation, OU=Intel(R)
+        Connectivity Innovation, CN=Intel Corporation
+      ValidFrom: '2021-04-01 00:00:00'
+      ValidTo: '2023-04-01 23:59:59'
+      Signature: 404fb875b6d9ad32d46f121ce14b84fc351a062761e6af184f2ad349473db5da22aa57cec601b22b1d0481d5762ed641d6a32d36e827658b6b60994c3b8fa3e50dc042ccb8237578d668cb73a463b27c4e44ea86d3018ce1d28b0ee05108ab8de0b4ef92f9ae3dae2493deafa551d8020289fe31ab52e619b2a96bcc7914f93bde0fe8b76871b00695cfc5898b7021ca486aaa40e8191a84c63ea21cdb2a115cf66bff7e2275d6e51da41a246fabffabc1a41d793821298875ef79a86dc6f7c811fe83fd6c6c4d6b39b421db1f9e036ee5c8616a193267c8ba2458746b41e1d798691fd3f2301247f2b74c154868784894485319da9abde7d1a771970a0dc21c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 2338186a527042bb43a86c0e8ffae349
+      Version: 3
+      TBS:
+        MD5: 59f261a5b1f3515f0d8133d016945e5b
+        SHA1: 6611dc5b1ee4681579f769ddcbde722288af80eb
+        SHA256: 471a15c5a022768601454a96e0e26f6f655b11712e6116a464276d3e7be4324c
+        SHA384: 841df5dddfc38126a6797e3bfdc2f7479d1184516b6ae0ebe89debe4161208fb88be2c930c177d40a33904a1c9e27f5a
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Code Signing CA
+      ValidFrom: '2018-11-02 00:00:00'
+      ValidTo: '2030-12-31 23:59:59'
+      Signature: 4d6350ed47344a61a4dbde6a2a8c9bf100001e1d627b3ad732c2f6b3e063b3fb6100889a1b6d1007044fbeb8ea897822eb0f46ecf3465e40468912f40b775a9c2a413afcd6f4ebe7f7159533c3a18328b7de2fe494f78533832d4a4048bf9ac24f4ab18f24f4b38137d3b764b0a6236a596852425fff04ebe174657908f5a993de6b71409996ba78f1b9c8e2c30816b1ab635ac815806d745e4a757ea5b8c36cb5cfdf4a79875cc7404d6335f630d3cfb50a0e0b047fa04baebba3a5d08400933e535d34a50035696cbe9f2025100d19fb509061be398f7a8e4df69f0e1efe075112668326194895ce4ac9c17ff33a059bf96fdf887fc0239ed21e437a4531c19c4da9f059b25919e86a8d290402777c4b4bcd70be3ab2555a783ebcbb6f0310257715348af936cc4392e4ba4ff1629328255729fb5119c7a125406a8457c6b29db1bc1c0ada7c677e7d2ee9284c187ec47b3141719a4b29ec0b3d5750d2caddfd9e0551e54478dd01deb175980d5424fdf04ee3e2f883bd72bacb3d3aeef05e1792686dc861f9a6f12a0a0ba5b9f49eee983205859eebf98329d3c62c7dbd3a772e8b3742a06a82ed3b4aaa9410a4e10df817c5b65a79331892e3b575f8a1e98e0a251ee41ef19f5a8723ff9fa4519efb398011cddbb5c4a7a8806fe553d4e0e3a2c2d25b1afa32262d6a57701c3ca4582ea3f35b4b07dc3259f387a71a6d58
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 1da248306f9b2618d082e0967d33d36a
+      Version: 3
+      TBS:
+        MD5: c1eabfb5994258ad955adb7c2df165e6
+        SHA1: fa33b3c00cebc469b269220d9eab26926c9b8ad8
+        SHA256: 70dffac37eb787b2198816982c7d44f541d2e39a7dac069d37b367dc9f354b32
+        SHA384: 20adc5b59cb532e215f01ba09a9c745898c206555613512fea7c295ccfd17ced4fe2c5bc3274ca8a270fc68799b8343c
+    - Subject: C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust
+        RSA Certification Authority
+      ValidFrom: '2015-07-22 21:03:49'
+      ValidTo: '2025-07-22 21:03:49'
+      Signature: 6b22933c3d395471646b0ef2e43c3011c5204a4b860f92f1ff33793ad9e498a70e40a022807e61b2e0a719cf2695312a65d46a4f3186eac0c62ec5648c3d4859cd0b2f743d9426131042d49798275e3c76d278691d1a64e7057275e0eb6640439f8f0c46ff9760a6c867ad10089b62a6e9be3a8ad3074d9f729325bc0611e02c90383e671cfd19d79e90ce3dc2e0e761acc0e504f51e99540c910d01567137ae27d49e4322a5c927cd4de571123924a5415687ffbc55140f25ca89eec797e5d213ff3d7e1aa08f3fc82cd7a370d0c760c0fcd83e51e797c63e3bedcf78be8acae3c4f2a7a7ed9eae08028fa052db721ed53bc34d9f8efa9b70c7f8e3bf6c3f929be4373eec6a8c29f9c1a2bf8b3e1a6966fb1c634f2601c902c43ed2ffc343a81bfd99fad4bca5b9e2932f3b01c5d1f43a2f68c3e064b75a955e46cc078369bb3c05925673357345984e7cd812a5b742e9a263f642601870d13b6f31c087c7e671e1f34616e9f5b872b3e96d1f622649a3498bdd68c78b6856f7defcfa8724b80381178fe5f1676a1daed374f78ca55db30b8e422996ce49c4777e667c01171a6c1424c3b0177705d81a40b7866bd8e47b40ac7edf4e6f24f92080828c33e7e5fa29d89dda8b705d2bc91d824c0b67cb84419ee7067e1183442d8a19eef47f9add791c37191e9f3f8c29ba0d5c1086376c48cd455dcd70bcbcd14d5dd8c5b876
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 3300000044b73ffcef5acfa27a000000000044
+      Version: 3
+      TBS:
+        MD5: a2d2ae7554f77f6e9ffb0b1a9b700ac4
+        SHA1: 9f69ff166f5dc446578a45d7d69482373755e141
+        SHA256: ad394b7e5cb9ccf6429762405f9840b648e38e8faf2de376f1aa375c6729abb7
+        SHA384: eda103bac2997f31d778637ce8d1fa1263485a9d6a77d6e381bad8312e6bbec020ce5036e16ca96087e50f6ab200944a
+    Signer:
+    - SerialNumber: 2338186a527042bb43a86c0e8ffae349
+      Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Code Signing CA
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+MitreID: T1068
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+Tags:
+- stdcdrv64.sys
+Verified: 'TRUE'

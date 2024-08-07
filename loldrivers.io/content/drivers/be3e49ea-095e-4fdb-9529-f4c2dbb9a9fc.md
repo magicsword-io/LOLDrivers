@@ -13,7 +13,6 @@ displayTitle = "PhlashNT.sys"
 
 # PhlashNT.sys ![:inline](/images/twitter_verified.png) 
 
-
 ### Description
 
 PhlashNT.sys is a vulnerable driver and more information will be added as found.
@@ -53,7 +52,7 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
 
 
 {{< /details >}}
@@ -81,7 +80,7 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
 {{< details "Expand" >}}
 {{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
 
 {{< /details >}}
 
@@ -101,6 +100,7 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | PhlashNT.sys |
+| Creation Timestamp           | 2009-09-22 22:36:24 |
 | MD5                | [e9e786bdba458b8b4f9e93d034f73d00](https://www.virustotal.com/gui/file/e9e786bdba458b8b4f9e93d034f73d00) |
 | SHA1               | [c6d349823bbb1f5b44bae91357895dba653c5861](https://www.virustotal.com/gui/file/c6d349823bbb1f5b44bae91357895dba653c5861) |
 | SHA256             | [65db1b259e305a52042e07e111f4fa4af16542c8bacd33655f753ef642228890](https://www.virustotal.com/gui/file/65db1b259e305a52042e07e111f4fa4af16542c8bacd33655f753ef642228890) |
@@ -114,6 +114,8 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
 | Description       | SWinFlash Driver for Windows NT |
 | Product           | WinPhlash |
 | OriginalFilename  | PHLASHNT.SYS |
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/e9e786bdba458b8b4f9e93d034f73d00.bin" "Download" >}} 
 
 #### Certificates
 
@@ -195,12 +197,7 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
 * ntoskrnl.exe
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * IoDeleteDevice
 * IoCreateSymbolicLink
@@ -217,11 +214,22 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
 * ExAllocatePoolWithTag
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -236,7 +244,8 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
       "TBS": {
         "MD5": "d6c7684e9aaa508cf268335f83afe040",
         "SHA1": "18066d20ad92409c567cdfde745279ff71c75226",
-        "SHA256": "a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff"
+        "SHA256": "a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff",
+        "SHA384": "35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7"
       },
       "ValidFrom": "2007-06-15 00:00:00",
       "ValidTo": "2012-06-14 23:59:59",
@@ -251,7 +260,8 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
       "TBS": {
         "MD5": "518d2ea8a21e879c942d504824ac211c",
         "SHA1": "21ce87d827077e61abddf2beba69fde5432ea031",
-        "SHA256": "1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7"
+        "SHA256": "1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7",
+        "SHA384": "53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f"
       },
       "ValidFrom": "2003-12-04 00:00:00",
       "ValidTo": "2013-12-03 23:59:59",
@@ -266,7 +276,8 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
       "TBS": {
         "MD5": "41011f8d0e7c7a6408334ca387914c61",
         "SHA1": "c7fc1727f5b75a6421a1f95c73bbdb23580c48e5",
-        "SHA256": "88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0"
+        "SHA256": "88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0",
+        "SHA384": "a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459"
       },
       "ValidFrom": "2004-07-16 00:00:00",
       "ValidTo": "2014-07-15 23:59:59",
@@ -281,7 +292,8 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
       "TBS": {
         "MD5": "53c41bc1164e09e0cd1617a5bf913efd",
         "SHA1": "93c03aac8951d494ecd5696b1c08658541b18727",
-        "SHA256": "40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b"
+        "SHA256": "40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b",
+        "SHA384": "f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8"
       },
       "ValidFrom": "2006-05-23 17:01:29",
       "ValidTo": "2016-05-23 17:11:29",
@@ -296,7 +308,8 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
       "TBS": {
         "MD5": "e25e721298ff095a569a15965845ad33",
         "SHA1": "241fbb78e76a1bed275262fa03b82141602acce0",
-        "SHA256": "a854ee1ec235e308c5493d99dda2703087298f201bfcb177c872c07cbe8fe68b"
+        "SHA256": "a854ee1ec235e308c5493d99dda2703087298f201bfcb177c872c07cbe8fe68b",
+        "SHA384": "2ae82a4e45a28c6e27561c03828abae37e6719c609657118b1189634d51bb0c2202091d32a415fcb606eec3a20080f3a"
       },
       "ValidFrom": "2008-11-14 00:00:00",
       "ValidTo": "2009-11-14 23:59:59",
@@ -322,14 +335,7 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/be3e49ea-095e-4fdb-9529-f4c2dbb9a9fc.yaml)
 
-*last_updated:* 2023-06-28
-
-
-
-
-
-
-
+*last_updated:* 2024-08-04
 
 {{< /column >}}
 {{< /block >}}

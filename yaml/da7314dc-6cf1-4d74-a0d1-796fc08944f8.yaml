@@ -64,6 +64,16 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_mal_drivers_strict.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 KnownVulnerableSamples:
 - Filename: windbg.sys
   MD5: 40f35792e7565aa047796758a3ce1b77
@@ -200,6 +210,7 @@ KnownVulnerableSamples:
         MD5: e01323d4e9f20b9c042abdd9585d2d81
         SHA1: d1fab71f563191354037fe0bb8bf73718c721e45
         SHA256: 9db6a214ff40e20a9785ef23e93d98de1c0f3b018703c86e6c7cd0d4ade37a14
+        SHA384: 9977259d83cbe7a02e23c446aa606f37b48ab088e375bb4f09a356fdd3abfc114eb2d22305c3d9daeaa47be4fef9f16b
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -214,6 +225,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -228,6 +240,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Time Stamping CA
       ValidFrom: '2019-05-02 00:00:00'
@@ -241,6 +254,7 @@ KnownVulnerableSamples:
         MD5: 63499ed59a1293b786649470e4ce0bd7
         SHA1: 7309d8eaa65da1f3da7030c08f00a3b0a20fa908
         SHA256: 8c8d2046b29e792e71b28705fe67c435208a336dde074a75452d98e72c734937
+        SHA384: 5dbc5eae13908fee4c4e5216f87e3e87208fff0d1052f5fa9f0856a429d6a6c422c625f2318f2f29aea26ece09c1e811
     - Subject: 'C=GB, ST=Manchester, O=Sectigo Limited, CN=Sectigo RSA Time Stamping
         Signer #3'
       ValidFrom: '2022-05-11 00:00:00'
@@ -254,6 +268,7 @@ KnownVulnerableSamples:
         MD5: 26ec2c9bfcb06fdf8a6d95f2c616fd72
         SHA1: 635466f1432046f6fd338624c068872ab6488b12
         SHA256: 2219bd6adf84dc8f6f04833974d150f75f5ce79cbf85788a6f7efaa4a5205839
+        SHA384: 62d3259a3af5706e5bd6ca3f7ca35c0978253facbf7bee54f61d6afdd548e39e435fb55f952dbf8ed2bd6ee0c6b69660
     Signer:
     - SerialNumber: 5f9e06262d2eed425c886a4709350426
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -288,6 +303,8 @@ KnownVulnerableSamples:
       Virtual Size: '0x174'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2023-03-07 08:50:35'
+  Imphash: 63fd1582ac2edee50f7ec7eedde38ee8
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: windbg.sys
   MD5: 093a2a635c3a27aac50efd6463f4efa1
   SHA1: b34a012887ddab761b2298f882858fa1ff4d99f1
@@ -430,10 +447,10 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
-    - Subject: ??=CN, ??=?????????, ??=??????????????????????????????, ??=Private
-        Organization, serialNumber=91420100MA4KN92W72, C=CN, ST=?????????, L=?????????,
-        O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia Yiyong Technology
-        Co., Ltd.
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
+        C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
+        Yiyong Technology Co., Ltd.
       ValidFrom: '2020-11-17 00:00:00'
       ValidTo: '2023-11-12 23:59:59'
       Signature: 9451eb3eee03a01f0c66d87dc537eb17f37bc157ec9037c05a55ee4a3d0c207c67b981841c2b642084bca0a3c65f8e8eb5413f3e897b267aad91044c4098319a1f703fa995afdc53896d20245af8c2829e80081d36135ac1acb414bf966fd0af157b3fc2dac8f616f2b794a76b0fb7b300db0c579f093e31dd739b43f09fb7a73c6c914d8453032ea14950246e80abfc7fbaff2597ab68b6f03d30d97edbee25c0e2786040a1770e26661867920f3b01132c4ac5dc9ef97ae59e7baad68fe1b2b12acc7ed54697e9d4025ced62ac9dca82104ac7dd8219b331fcbed72aab33b95fed0ef6a1f9831c8b68457be6b080ae3c9ae15df500a53b7b2a198ee71abd1b
@@ -445,6 +462,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -458,6 +476,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -488,6 +507,8 @@ KnownVulnerableSamples:
       Virtual Size: '0x144e'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2023-03-30 04:24:09'
+  Imphash: f8e4844312e81dbdb4e8e95e2ad2c127
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: windbg.sys
   MD5: 844af8c877f5da723c1b82cf6e213fc1
   SHA1: 4f2d9a70ea24121ae01df8a76ffba1f9cc0fde4a
@@ -636,6 +657,8 @@ KnownVulnerableSamples:
       Virtual Size: '0x174'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2023-03-30 04:23:58'
+  Imphash: 3db9de43d5d530c10d0cd2d43c7a0771
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: windbg.sys
   MD5: 2ec877e425bd7eddb663627216e3491e
   SHA1: d4f5323da704ff2f25d6b97f38763c147f2a0e6f
@@ -770,6 +793,7 @@ KnownVulnerableSamples:
         MD5: b5ff0da6f1d327dca52b08e9c7c8d439
         SHA1: c7acfdfc234a3bb37535cbe2785d9202b4b0a10c
         SHA256: 80a8f0e8652dcea59596b4238f4c2d9f0212a25ea7434fde70a68a202b7ed0b1
+        SHA384: 5cb5027c847cd97082d64888db37cd3fed2ce3663ae3c7466d16887661fb8772f84f9a756782bd9eadde048ceb0f3773
     - Subject: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
       ValidFrom: '2010-02-08 00:00:00'
       ValidTo: '2020-02-07 23:59:59'
@@ -782,6 +806,7 @@ KnownVulnerableSamples:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
         SHA256: d8844186775bddbccaf3dc017064df7d760fd4b85c5d07561a3efd7da950f89e
+        SHA384: 78d972495720b43a6470b18ae1226bcca20707628087717a9364c14ca053ba264e6d149718b103542d9942200138a69d
     - Subject: C=US, O=thawte, Inc., OU=Certification Services Division, OU=(c) 2006
         thawte, Inc. , For authorized use only, CN=thawte Primary Root CA
       ValidFrom: '2011-02-22 19:31:57'
@@ -795,6 +820,7 @@ KnownVulnerableSamples:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
         SHA256: a39ed0d6fd4eb1a6f7fed60f726e23eae668b7591bc004644625d22c701213fa
+        SHA384: 64b7643e4146016cbf83c911eb67e4601b6bb8d66f8ee8dcee67b815f91770d86ab23678b984430f22a963e5484881b7
     Signer:
     - SerialNumber: 5d11784fb81765023f89a4f4243fe1a9
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
@@ -827,6 +853,8 @@ KnownVulnerableSamples:
       Virtual Size: '0x174'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2023-03-08 03:14:00'
+  Imphash: 63fd1582ac2edee50f7ec7eedde38ee8
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: windbg.sys
   MD5: 0023ca0ca16a62d93ef51f3df98b2f94
   SHA1: 97812f334a077c40e8e642bb9872ac2c49ddb9a2
@@ -884,10 +912,10 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
-    - Subject: ??=CN, ??=?????????, ??=??????????????????????????????, ??=Private
-        Organization, serialNumber=91420100MA4KN92W72, C=CN, ST=?????????, L=?????????,
-        O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia Yiyong Technology
-        Co., Ltd.
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
+        C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
+        Yiyong Technology Co., Ltd.
       ValidFrom: '2020-11-17 00:00:00'
       ValidTo: '2023-11-12 23:59:59'
       Signature: 9451eb3eee03a01f0c66d87dc537eb17f37bc157ec9037c05a55ee4a3d0c207c67b981841c2b642084bca0a3c65f8e8eb5413f3e897b267aad91044c4098319a1f703fa995afdc53896d20245af8c2829e80081d36135ac1acb414bf966fd0af157b3fc2dac8f616f2b794a76b0fb7b300db0c579f093e31dd739b43f09fb7a73c6c914d8453032ea14950246e80abfc7fbaff2597ab68b6f03d30d97edbee25c0e2786040a1770e26661867920f3b01132c4ac5dc9ef97ae59e7baad68fe1b2b12acc7ed54697e9d4025ced62ac9dca82104ac7dd8219b331fcbed72aab33b95fed0ef6a1f9831c8b68457be6b080ae3c9ae15df500a53b7b2a198ee71abd1b
@@ -899,6 +927,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -912,6 +941,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -954,6 +984,8 @@ KnownVulnerableSamples:
       Virtual Size: '0x3f8'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2023-03-09 06:55:38'
+  Imphash: 6b387c029257f024a43a73f38afb2629
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: windbg.sys
   MD5: f69b06ca7c34d16f26ea1c6861edf62a
   SHA1: fdbcebb6cafda927d384d7be2e8063a4377d884f
@@ -1090,10 +1122,10 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
-    - Subject: ??=CN, ??=?????????, ??=??????????????????????????????, ??=Private
-        Organization, serialNumber=91420100MA4KN92W72, C=CN, ST=?????????, L=?????????,
-        O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia Yiyong Technology
-        Co., Ltd.
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
+        C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
+        Yiyong Technology Co., Ltd.
       ValidFrom: '2020-11-17 00:00:00'
       ValidTo: '2023-11-12 23:59:59'
       Signature: 9451eb3eee03a01f0c66d87dc537eb17f37bc157ec9037c05a55ee4a3d0c207c67b981841c2b642084bca0a3c65f8e8eb5413f3e897b267aad91044c4098319a1f703fa995afdc53896d20245af8c2829e80081d36135ac1acb414bf966fd0af157b3fc2dac8f616f2b794a76b0fb7b300db0c579f093e31dd739b43f09fb7a73c6c914d8453032ea14950246e80abfc7fbaff2597ab68b6f03d30d97edbee25c0e2786040a1770e26661867920f3b01132c4ac5dc9ef97ae59e7baad68fe1b2b12acc7ed54697e9d4025ced62ac9dca82104ac7dd8219b331fcbed72aab33b95fed0ef6a1f9831c8b68457be6b080ae3c9ae15df500a53b7b2a198ee71abd1b
@@ -1105,6 +1137,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -1118,6 +1151,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -1151,6 +1185,8 @@ KnownVulnerableSamples:
       Virtual Size: '0x174'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2023-03-30 04:23:58'
+  Imphash: 3db9de43d5d530c10d0cd2d43c7a0771
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: windbg.sys
   MD5: e8eac6642b882a6196555539149c73f2
   SHA1: 3825ebb0b0664b5f0789371240f65231693be37d
@@ -1287,10 +1323,10 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
-    - Subject: ??=CN, ??=?????????, ??=??????????????????????????????, ??=Private
-        Organization, serialNumber=91420100MA4KN92W72, C=CN, ST=?????????, L=?????????,
-        O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia Yiyong Technology
-        Co., Ltd.
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
+        C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
+        Yiyong Technology Co., Ltd.
       ValidFrom: '2020-11-17 00:00:00'
       ValidTo: '2023-11-12 23:59:59'
       Signature: 9451eb3eee03a01f0c66d87dc537eb17f37bc157ec9037c05a55ee4a3d0c207c67b981841c2b642084bca0a3c65f8e8eb5413f3e897b267aad91044c4098319a1f703fa995afdc53896d20245af8c2829e80081d36135ac1acb414bf966fd0af157b3fc2dac8f616f2b794a76b0fb7b300db0c579f093e31dd739b43f09fb7a73c6c914d8453032ea14950246e80abfc7fbaff2597ab68b6f03d30d97edbee25c0e2786040a1770e26661867920f3b01132c4ac5dc9ef97ae59e7baad68fe1b2b12acc7ed54697e9d4025ced62ac9dca82104ac7dd8219b331fcbed72aab33b95fed0ef6a1f9831c8b68457be6b080ae3c9ae15df500a53b7b2a198ee71abd1b
@@ -1302,6 +1338,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -1315,6 +1352,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -1348,6 +1386,8 @@ KnownVulnerableSamples:
       Virtual Size: '0x174'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2023-03-27 22:28:03'
+  Imphash: 3db9de43d5d530c10d0cd2d43c7a0771
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: windbg.sys
   MD5: 5ebfc0af031130ba9de1d5d3275734b3
   SHA1: 48f03a13b0f6d3d929a86514ce48a9352ffef5ad
@@ -1484,10 +1524,10 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
-    - Subject: ??=CN, ??=?????????, ??=??????????????????????????????, ??=Private
-        Organization, serialNumber=91420100MA4KN92W72, C=CN, ST=?????????, L=?????????,
-        O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia Yiyong Technology
-        Co., Ltd.
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
+        C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
+        Yiyong Technology Co., Ltd.
       ValidFrom: '2020-11-17 00:00:00'
       ValidTo: '2023-11-12 23:59:59'
       Signature: 9451eb3eee03a01f0c66d87dc537eb17f37bc157ec9037c05a55ee4a3d0c207c67b981841c2b642084bca0a3c65f8e8eb5413f3e897b267aad91044c4098319a1f703fa995afdc53896d20245af8c2829e80081d36135ac1acb414bf966fd0af157b3fc2dac8f616f2b794a76b0fb7b300db0c579f093e31dd739b43f09fb7a73c6c914d8453032ea14950246e80abfc7fbaff2597ab68b6f03d30d97edbee25c0e2786040a1770e26661867920f3b01132c4ac5dc9ef97ae59e7baad68fe1b2b12acc7ed54697e9d4025ced62ac9dca82104ac7dd8219b331fcbed72aab33b95fed0ef6a1f9831c8b68457be6b080ae3c9ae15df500a53b7b2a198ee71abd1b
@@ -1499,6 +1539,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -1512,6 +1553,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -1545,6 +1587,8 @@ KnownVulnerableSamples:
       Virtual Size: '0x174'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2023-03-30 04:23:58'
+  Imphash: 3db9de43d5d530c10d0cd2d43c7a0771
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: windbg.sys
   MD5: 40b968ecdbe9e967d92c5da51c390eee
   SHA1: b8b123a413b7bccfa8433deba4f88669c969b543
@@ -1681,6 +1725,7 @@ KnownVulnerableSamples:
         MD5: bf6aed18e4c3fd6ac87330096df18117
         SHA1: f96be504b875f1e63bf51eacc6768e4fdecddcc6
         SHA256: 76c137a4dd29ebb1cb6a5d319d17e7049ad6d524f9de5d47c24c14b16a4f0720
+        SHA384: f1d9ab8315a45f1b96431b009f4b5c12cb4d05428d5b003a4100d4b31124799e8d70dbf72a47787657c42e198bbdff33
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -1694,6 +1739,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000f5e8773b206b1ccd610000000000f5
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -1727,6 +1773,8 @@ KnownVulnerableSamples:
       Virtual Size: '0x174'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2023-03-30 04:23:58'
+  Imphash: 3db9de43d5d530c10d0cd2d43c7a0771
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: windbg.sys
   MD5: c71be7b112059d2dc84c0f952e04e6cc
   SHA1: 9ee31f1f25f675a12b7bad386244a9fbfa786a87
@@ -1867,6 +1915,7 @@ KnownVulnerableSamples:
         MD5: e01323d4e9f20b9c042abdd9585d2d81
         SHA1: d1fab71f563191354037fe0bb8bf73718c721e45
         SHA256: 9db6a214ff40e20a9785ef23e93d98de1c0f3b018703c86e6c7cd0d4ade37a14
+        SHA384: 9977259d83cbe7a02e23c446aa606f37b48ab088e375bb4f09a356fdd3abfc114eb2d22305c3d9daeaa47be4fef9f16b
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -1881,6 +1930,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -1895,6 +1945,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Time Stamping CA
       ValidFrom: '2019-05-02 00:00:00'
@@ -1908,6 +1959,7 @@ KnownVulnerableSamples:
         MD5: 63499ed59a1293b786649470e4ce0bd7
         SHA1: 7309d8eaa65da1f3da7030c08f00a3b0a20fa908
         SHA256: 8c8d2046b29e792e71b28705fe67c435208a336dde074a75452d98e72c734937
+        SHA384: 5dbc5eae13908fee4c4e5216f87e3e87208fff0d1052f5fa9f0856a429d6a6c422c625f2318f2f29aea26ece09c1e811
     - Subject: 'C=GB, ST=Manchester, O=Sectigo Limited, CN=Sectigo RSA Time Stamping
         Signer #3'
       ValidFrom: '2022-05-11 00:00:00'
@@ -1921,6 +1973,7 @@ KnownVulnerableSamples:
         MD5: 26ec2c9bfcb06fdf8a6d95f2c616fd72
         SHA1: 635466f1432046f6fd338624c068872ab6488b12
         SHA256: 2219bd6adf84dc8f6f04833974d150f75f5ce79cbf85788a6f7efaa4a5205839
+        SHA384: 62d3259a3af5706e5bd6ca3f7ca35c0978253facbf7bee54f61d6afdd548e39e435fb55f952dbf8ed2bd6ee0c6b69660
     Signer:
     - SerialNumber: 5f9e06262d2eed425c886a4709350426
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
@@ -1952,6 +2005,8 @@ KnownVulnerableSamples:
       Virtual Size: '0x143c'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2023-03-07 08:50:54'
+  Imphash: cf0eb2dce2ba2c9ff5dd0da794b8b372
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: windbg.sys
   MD5: 0ea8389589c603a8b05146bd06020597
   SHA1: 3c1c3f5f5081127229ba0019fbf0efc2a9c1d677
@@ -2091,6 +2146,7 @@ KnownVulnerableSamples:
         MD5: b5ff0da6f1d327dca52b08e9c7c8d439
         SHA1: c7acfdfc234a3bb37535cbe2785d9202b4b0a10c
         SHA256: 80a8f0e8652dcea59596b4238f4c2d9f0212a25ea7434fde70a68a202b7ed0b1
+        SHA384: 5cb5027c847cd97082d64888db37cd3fed2ce3663ae3c7466d16887661fb8772f84f9a756782bd9eadde048ceb0f3773
     - Subject: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
       ValidFrom: '2010-02-08 00:00:00'
       ValidTo: '2020-02-07 23:59:59'
@@ -2103,6 +2159,7 @@ KnownVulnerableSamples:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
         SHA256: d8844186775bddbccaf3dc017064df7d760fd4b85c5d07561a3efd7da950f89e
+        SHA384: 78d972495720b43a6470b18ae1226bcca20707628087717a9364c14ca053ba264e6d149718b103542d9942200138a69d
     - Subject: C=US, O=thawte, Inc., OU=Certification Services Division, OU=(c) 2006
         thawte, Inc. , For authorized use only, CN=thawte Primary Root CA
       ValidFrom: '2011-02-22 19:31:57'
@@ -2116,6 +2173,7 @@ KnownVulnerableSamples:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
         SHA256: a39ed0d6fd4eb1a6f7fed60f726e23eae668b7591bc004644625d22c701213fa
+        SHA384: 64b7643e4146016cbf83c911eb67e4601b6bb8d66f8ee8dcee67b815f91770d86ab23678b984430f22a963e5484881b7
     Signer:
     - SerialNumber: 5d11784fb81765023f89a4f4243fe1a9
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
@@ -2145,6 +2203,8 @@ KnownVulnerableSamples:
       Virtual Size: '0x143c'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2023-03-08 03:14:17'
+  Imphash: cf0eb2dce2ba2c9ff5dd0da794b8b372
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: windbg.sys
   MD5: 19bdd9b799e3c2c54c0d7fff68b31c20
   SHA1: ea4a405445bb6e58c16b81f6d5d2c9a9edde419b
@@ -2203,10 +2263,10 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
-    - Subject: ??=CN, ??=?????????, ??=??????????????????????????????, ??=Private
-        Organization, serialNumber=91420100MA4KN92W72, C=CN, ST=?????????, L=?????????,
-        O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia Yiyong Technology
-        Co., Ltd.
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
+        C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
+        Yiyong Technology Co., Ltd.
       ValidFrom: '2020-11-17 00:00:00'
       ValidTo: '2023-11-12 23:59:59'
       Signature: 9451eb3eee03a01f0c66d87dc537eb17f37bc157ec9037c05a55ee4a3d0c207c67b981841c2b642084bca0a3c65f8e8eb5413f3e897b267aad91044c4098319a1f703fa995afdc53896d20245af8c2829e80081d36135ac1acb414bf966fd0af157b3fc2dac8f616f2b794a76b0fb7b300db0c579f093e31dd739b43f09fb7a73c6c914d8453032ea14950246e80abfc7fbaff2597ab68b6f03d30d97edbee25c0e2786040a1770e26661867920f3b01132c4ac5dc9ef97ae59e7baad68fe1b2b12acc7ed54697e9d4025ced62ac9dca82104ac7dd8219b331fcbed72aab33b95fed0ef6a1f9831c8b68457be6b080ae3c9ae15df500a53b7b2a198ee71abd1b
@@ -2218,6 +2278,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -2231,6 +2292,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -2270,6 +2332,8 @@ KnownVulnerableSamples:
       Virtual Size: '0x3f8'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2023-03-09 06:55:46'
+  Imphash: 514298d18002920ee5a917fc34426417
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: windbg.sys
   MD5: 88bea56ae9257b40063785cf47546024
   SHA1: b5a8e2104d76dbb04cd9ffe86784113585822375
@@ -2412,10 +2476,10 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
-    - Subject: ??=CN, ??=?????????, ??=??????????????????????????????, ??=Private
-        Organization, serialNumber=91420100MA4KN92W72, C=CN, ST=?????????, L=?????????,
-        O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia Yiyong Technology
-        Co., Ltd.
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
+        C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
+        Yiyong Technology Co., Ltd.
       ValidFrom: '2020-11-17 00:00:00'
       ValidTo: '2023-11-12 23:59:59'
       Signature: 9451eb3eee03a01f0c66d87dc537eb17f37bc157ec9037c05a55ee4a3d0c207c67b981841c2b642084bca0a3c65f8e8eb5413f3e897b267aad91044c4098319a1f703fa995afdc53896d20245af8c2829e80081d36135ac1acb414bf966fd0af157b3fc2dac8f616f2b794a76b0fb7b300db0c579f093e31dd739b43f09fb7a73c6c914d8453032ea14950246e80abfc7fbaff2597ab68b6f03d30d97edbee25c0e2786040a1770e26661867920f3b01132c4ac5dc9ef97ae59e7baad68fe1b2b12acc7ed54697e9d4025ced62ac9dca82104ac7dd8219b331fcbed72aab33b95fed0ef6a1f9831c8b68457be6b080ae3c9ae15df500a53b7b2a198ee71abd1b
@@ -2427,6 +2491,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -2440,6 +2505,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -2470,6 +2536,8 @@ KnownVulnerableSamples:
       Virtual Size: '0x144e'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2023-03-30 04:24:09'
+  Imphash: f8e4844312e81dbdb4e8e95e2ad2c127
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: windbg.sys
   MD5: 3f11a94f1ac5efdd19767c6976da9ba4
   SHA1: f92faed3ef92fa5bc88ebc1725221be5d7425528
@@ -2612,10 +2680,10 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
-    - Subject: ??=CN, ??=?????????, ??=??????????????????????????????, ??=Private
-        Organization, serialNumber=91420100MA4KN92W72, C=CN, ST=?????????, L=?????????,
-        O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia Yiyong Technology
-        Co., Ltd.
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
+        C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
+        Yiyong Technology Co., Ltd.
       ValidFrom: '2020-11-17 00:00:00'
       ValidTo: '2023-11-12 23:59:59'
       Signature: 9451eb3eee03a01f0c66d87dc537eb17f37bc157ec9037c05a55ee4a3d0c207c67b981841c2b642084bca0a3c65f8e8eb5413f3e897b267aad91044c4098319a1f703fa995afdc53896d20245af8c2829e80081d36135ac1acb414bf966fd0af157b3fc2dac8f616f2b794a76b0fb7b300db0c579f093e31dd739b43f09fb7a73c6c914d8453032ea14950246e80abfc7fbaff2597ab68b6f03d30d97edbee25c0e2786040a1770e26661867920f3b01132c4ac5dc9ef97ae59e7baad68fe1b2b12acc7ed54697e9d4025ced62ac9dca82104ac7dd8219b331fcbed72aab33b95fed0ef6a1f9831c8b68457be6b080ae3c9ae15df500a53b7b2a198ee71abd1b
@@ -2627,6 +2695,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -2640,6 +2709,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -2670,6 +2740,8 @@ KnownVulnerableSamples:
       Virtual Size: '0x144e'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2023-03-27 22:28:14'
+  Imphash: f8e4844312e81dbdb4e8e95e2ad2c127
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: windbg.sys
   MD5: 0bdd51cc33e88b5265dfb7d88c5dc8d6
   SHA1: 6a6fe0d69e0ea34d695c3b525e6db639f9ad6ac5
@@ -2812,10 +2884,10 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
-    - Subject: ??=CN, ??=?????????, ??=??????????????????????????????, ??=Private
-        Organization, serialNumber=91420100MA4KN92W72, C=CN, ST=?????????, L=?????????,
-        O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia Yiyong Technology
-        Co., Ltd.
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
+        C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
+        Yiyong Technology Co., Ltd.
       ValidFrom: '2020-11-17 00:00:00'
       ValidTo: '2023-11-12 23:59:59'
       Signature: 9451eb3eee03a01f0c66d87dc537eb17f37bc157ec9037c05a55ee4a3d0c207c67b981841c2b642084bca0a3c65f8e8eb5413f3e897b267aad91044c4098319a1f703fa995afdc53896d20245af8c2829e80081d36135ac1acb414bf966fd0af157b3fc2dac8f616f2b794a76b0fb7b300db0c579f093e31dd739b43f09fb7a73c6c914d8453032ea14950246e80abfc7fbaff2597ab68b6f03d30d97edbee25c0e2786040a1770e26661867920f3b01132c4ac5dc9ef97ae59e7baad68fe1b2b12acc7ed54697e9d4025ced62ac9dca82104ac7dd8219b331fcbed72aab33b95fed0ef6a1f9831c8b68457be6b080ae3c9ae15df500a53b7b2a198ee71abd1b
@@ -2827,6 +2899,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -2840,6 +2913,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -2870,6 +2944,8 @@ KnownVulnerableSamples:
       Virtual Size: '0x144e'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2023-03-30 04:24:09'
+  Imphash: f8e4844312e81dbdb4e8e95e2ad2c127
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: windbg.sys
   MD5: b6b530dd25c5eb66499968ec82e8791e
   SHA1: 9c1c9032aa1e33461f35dbf79b6f2d061bfc6774
@@ -3012,6 +3088,7 @@ KnownVulnerableSamples:
         MD5: 8d4476692bcda36ed89244b94bd705f0
         SHA1: ce72176d5cad611366e13a9a997ad7ecc7eb815f
         SHA256: dd1db9c0e7e50040ac6c586c1b6fd479cef240c064473373f75fbeb3e04ff972
+        SHA384: 6f8e6245a2f817203781cc38a9463e5ac7a7db499aede35d3321b4848fc1389dd29831cdfc26984a691d5875c4eebf1a
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -3025,6 +3102,7 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000f3158ea57d1c559f290000000000f3
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
@@ -3055,6 +3133,8 @@ KnownVulnerableSamples:
       Virtual Size: '0x144e'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2023-03-30 04:24:09'
+  Imphash: f8e4844312e81dbdb4e8e95e2ad2c127
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: windbg.sys
   MD5: 77a7ed4798d02ef6636cd0fd07fc382a
   SHA1: 76789196eebfd4203f477a5a6c75eefc12d9a837
@@ -3191,10 +3271,10 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
-    - Subject: ??=CN, ??=?????????, ??=??????????????????????????????, ??=Private
-        Organization, serialNumber=91420100MA4KN92W72, C=CN, ST=?????????, L=?????????,
-        O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia Yiyong Technology
-        Co., Ltd.
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
+        C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
+        Yiyong Technology Co., Ltd.
       ValidFrom: '2020-11-17 00:00:00'
       ValidTo: '2023-11-12 23:59:59'
       Signature: 9451eb3eee03a01f0c66d87dc537eb17f37bc157ec9037c05a55ee4a3d0c207c67b981841c2b642084bca0a3c65f8e8eb5413f3e897b267aad91044c4098319a1f703fa995afdc53896d20245af8c2829e80081d36135ac1acb414bf966fd0af157b3fc2dac8f616f2b794a76b0fb7b300db0c579f093e31dd739b43f09fb7a73c6c914d8453032ea14950246e80abfc7fbaff2597ab68b6f03d30d97edbee25c0e2786040a1770e26661867920f3b01132c4ac5dc9ef97ae59e7baad68fe1b2b12acc7ed54697e9d4025ced62ac9dca82104ac7dd8219b331fcbed72aab33b95fed0ef6a1f9831c8b68457be6b080ae3c9ae15df500a53b7b2a198ee71abd1b
@@ -3206,6 +3286,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -3219,6 +3300,7 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
@@ -3252,5 +3334,7 @@ KnownVulnerableSamples:
       Virtual Size: '0x174'
   MagicHeader: 50 45 0 0
   CreationTimestamp: '2023-03-30 04:23:58'
+  Imphash: 3db9de43d5d530c10d0cd2d43c7a0771
+  LoadsDespiteHVCI: 'TRUE'
 Tags:
 - windbg.sys

@@ -1,0 +1,41 @@
+name: generate-svg-counter
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-counter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+          token: ${{ secrets.PUSH_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4.5.0
+        with:
+            python-version: 3.11
+      - name: Install Poetry
+        run: curl -sSL https://install.python-poetry.org | python -
+      - name: Install dependencies with Poetry
+        run: poetry install
+      - name: Generate shields.io URL
+        run: poetry run python bin/gen-counter.py -f yaml/
+        id: counter
+      - name: Update README
+        run: |
+          echo ${{ steps.counter.outputs.result }}
+          sed -i "s|https://img.shields.io/badge/Drivers-.*-flat.svg|${{ steps.counter.outputs.result }}|" README.md
+        shell: bash
+      - name: update github with new site
+        run: |
+          # configure git to prep for commit
+          git config user.email "bot@magicsword.io"
+          git config user.name "publish bot"
+          git config --global push.default simple
+          git add README.md
+          git commit --allow-empty -m "updating drivers count in README.md [ci skip]"
+          git push

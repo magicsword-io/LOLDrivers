@@ -13,7 +13,6 @@ displayTitle = "SysDrv3S.sys"
 
 # SysDrv3S.sys ![:inline](/images/twitter_verified.png) 
 
-
 ### Description
 
 Vulnerable driver found in https://github.com/hfiref0x/KDU.
@@ -53,7 +52,7 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
 
 
 {{< /details >}}
@@ -81,7 +80,7 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 {{< details "Expand" >}}
 {{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
 
 {{< /details >}}
 
@@ -100,6 +99,7 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | SysDrv3S.sys |
+| Creation Timestamp           | 2016-02-24 05:31:51 |
 | MD5                | [31eca8c0b32135850d5a50aee11fec87](https://www.virustotal.com/gui/file/31eca8c0b32135850d5a50aee11fec87) |
 | SHA1               | [e1069365cb580e3525090f2fa28efd4127223588](https://www.virustotal.com/gui/file/e1069365cb580e3525090f2fa28efd4127223588) |
 | SHA256             | [0e53b58415fa68552928622118d5b8a3a851b2fc512709a90b63ba46acda8b6b](https://www.virustotal.com/gui/file/0e53b58415fa68552928622118d5b8a3a851b2fc512709a90b63ba46acda8b6b) |
@@ -113,6 +113,8 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 | Description       | SysDrv3S |
 | Product           | SysDrv3S |
 | OriginalFilename  | SysDrv3S.sys |
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/31eca8c0b32135850d5a50aee11fec87.bin" "Download" >}} 
 
 #### Certificates
 
@@ -165,7 +167,7 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 | ToBeSigned (TBS) MD5              | e3f11dbfce17755c33f8e88f75d1920e  |
 | ToBeSigned (TBS) SHA1             | 78dcece49b4dbff1bd9a4d66644961c0805aef51 |
 | ToBeSigned (TBS) SHA256           | f8e8df9ee7f7b09507e2c889d366c16a4383d87ff22d2c01808b116a4898d5d3 |
-| Subject                           | ??=Private Organization, serialNumber=HRB 6186, ??=DE, ??=Bayern, ??=Kempten (Allgaeu), C=DE, ST=Bayern, L=Kempten (Allg??u), ??=Memminger Str. 151, O=3S,Smart Software Solutions GmbH, CN=3S,Smart Software Solutions GmbH, emailAddress=info@codesys.com |
+| Subject                           | ??=Private Organization, serialNumber=HRB 6186, ??=DE, ??=Bayern, ??=Kempten (Allgaeu), C=DE, ST=Bayern, L=Kempten (Allgu), ??=Memminger Str. 151, O=3S,Smart Software Solutions GmbH, CN=3S,Smart Software Solutions GmbH, emailAddress=info@codesys.com |
 | ValidFrom                         | 2019-02-01 15:34:02 |
 | ValidTo                           | 2021-02-01 15:34:02 |
 | Signature                         | 80dad6d1dcb4d50486f485a5309cfafec484503d27a24a02d63b1343782a476cf76e64e32c7dfc9aca28cbdcc636c4ce4da1da4dd72f613fa54c68489ee8331b4fc66399ea933533a946e4f30f64f2ee09d592c06d1482c128e6d2c8cf0b5321a919bece3e8338c86717291eb589575bd3780e66a24111a1fa3975ffd0df0e779cf4a3ec9ecb06a7a6d89e6467d9104742fe3be7af25d1adf7e3583159a852d82e64b7b4c5f9134dbab58e4d736204e1bfdf0a66121fd9cb0a674ffac58e4de9019444329e5dd5d81770c24fc4529c52f527f473cd2ecb27b97e68b2486db25f8c2c4ced516f0c18cf1cb4b36d09109d88d20ba6b5259f4b6405c5d268718a97 |
@@ -181,13 +183,7 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 * ntoskrnl.exe
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* HAL.dll
-* ntoskrnl.exe
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * HalSetBusDataByOffset
 * HalTranslateBusAddress
@@ -228,11 +224,23 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 * IoAllocateIrp
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .gdat
+* .rdata
+* .data
+* .pdata
+* INIT
+* .rsrc
+* .reloc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -247,7 +255,8 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
       "TBS": {
         "MD5": "f47739306d14722e670d9436eadb8e4f",
         "SHA1": "457d9df00a652cb4c3356d00145d9528fc309172",
-        "SHA256": "bd1765c56594221373893ef26d97f88c144fb0e5a0111215b45d7239c3444df7"
+        "SHA256": "bd1765c56594221373893ef26d97f88c144fb0e5a0111215b45d7239c3444df7",
+        "SHA384": "b8b268a1bdf388be66a1c969b7b353cb2bbc9fad446049b7efa05a9ab3b714494e97f4d1ee1c0bae35bfd9bf6ef275b3"
       },
       "ValidFrom": "2009-11-18 10:00:00",
       "ValidTo": "2019-03-18 10:00:00",
@@ -262,7 +271,8 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
       "TBS": {
         "MD5": "fd8cfeea06be14fa89689909e1fc72dc",
         "SHA1": "8bc3cd2f70abe543e0dbe721065a4076c8521f36",
-        "SHA256": "15e7050789df807f3e3174294a01b637a1239f603e42f4b5db9398efa9da9996"
+        "SHA256": "15e7050789df807f3e3174294a01b637a1239f603e42f4b5db9398efa9da9996",
+        "SHA384": "8b9f95e6d3dd45e4ef38e2f12fb893d7d1bb1ba867e152e4a73c49b3d51dd52bc83a05982deac29af90436061248546d"
       },
       "ValidFrom": "2016-06-15 00:00:00",
       "ValidTo": "2024-06-15 00:00:00",
@@ -277,7 +287,8 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
       "TBS": {
         "MD5": "0bb058d116f02817737920f112d9fd3b",
         "SHA1": "fd116235171a4feafedee586b7a59185fb5fd7e6",
-        "SHA256": "f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4"
+        "SHA256": "f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4",
+        "SHA384": "c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6"
       },
       "ValidFrom": "2011-04-15 19:55:08",
       "ValidTo": "2021-04-15 20:05:08",
@@ -288,11 +299,12 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
       "SerialNumber": "60a8b030535055def1677cc6",
       "Signature": "80dad6d1dcb4d50486f485a5309cfafec484503d27a24a02d63b1343782a476cf76e64e32c7dfc9aca28cbdcc636c4ce4da1da4dd72f613fa54c68489ee8331b4fc66399ea933533a946e4f30f64f2ee09d592c06d1482c128e6d2c8cf0b5321a919bece3e8338c86717291eb589575bd3780e66a24111a1fa3975ffd0df0e779cf4a3ec9ecb06a7a6d89e6467d9104742fe3be7af25d1adf7e3583159a852d82e64b7b4c5f9134dbab58e4d736204e1bfdf0a66121fd9cb0a674ffac58e4de9019444329e5dd5d81770c24fc4529c52f527f473cd2ecb27b97e68b2486db25f8c2c4ced516f0c18cf1cb4b36d09109d88d20ba6b5259f4b6405c5d268718a97",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
-      "Subject": "??=Private Organization, serialNumber=HRB 6186, ??=DE, ??=Bayern, ??=Kempten (Allgaeu), C=DE, ST=Bayern, L=Kempten (Allg??u), ??=Memminger Str. 151, O=3S,Smart Software Solutions GmbH, CN=3S,Smart Software Solutions GmbH, emailAddress=info@codesys.com",
+      "Subject": "??=Private Organization, serialNumber=HRB 6186, ??=DE, ??=Bayern, ??=Kempten (Allgaeu), C=DE, ST=Bayern, L=Kempten (Allgu), ??=Memminger Str. 151, O=3S,Smart Software Solutions GmbH, CN=3S,Smart Software Solutions GmbH, emailAddress=info@codesys.com",
       "TBS": {
         "MD5": "e3f11dbfce17755c33f8e88f75d1920e",
         "SHA1": "78dcece49b4dbff1bd9a4d66644961c0805aef51",
-        "SHA256": "f8e8df9ee7f7b09507e2c889d366c16a4383d87ff22d2c01808b116a4898d5d3"
+        "SHA256": "f8e8df9ee7f7b09507e2c889d366c16a4383d87ff22d2c01808b116a4898d5d3",
+        "SHA384": "012b1e87cc98ed598fd4dc3a8fccba9328af6fa73510f4fd613b5e2fbe031815f008046be97c766c5f0ab9367e89173b"
       },
       "ValidFrom": "2019-02-01 15:34:02",
       "ValidTo": "2021-02-01 15:34:02",
@@ -318,14 +330,7 @@ sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cf49f43c-d7b4-4c1a-a40d-1be36ea64bff.yaml)
 
-*last_updated:* 2023-06-28
-
-
-
-
-
-
-
+*last_updated:* 2024-08-04
 
 {{< /column >}}
 {{< /block >}}

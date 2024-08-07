@@ -1,37 +1,38 @@
-Id: 0f6c3a28-4d04-474b-a098-37383f984686
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create WinIO32.sys binPath=C:\windows\temp\WinIO32.sys type=kernel
     && sc.exe start WinIO32.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: 0f6c3a28-4d04-474b-a098-37383f984686
 KnownVulnerableSamples:
-- Filename: WinIO32.sys
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: WinIO32.sys
   MD5: ''
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   SHA1: 8fb149fc476cf5bf18dc575334edad7caf210996
   SHA256: ''
   Signature: []
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
+  LoadsDespiteHVCI: 'FALSE'
+MitreID: T1068
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - WinIO32.sys
+Verified: 'FALSE'

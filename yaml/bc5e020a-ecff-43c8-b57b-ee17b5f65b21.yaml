@@ -1,23 +1,16 @@
-Id: bc5e020a-ecff-43c8-b57b-ee17b5f65b21
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create sandra.sys binPath=C:\windows\temp\sandra.sys type=kernel
     && sc.exe start sandra.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/jbaines-r7/dellicious'
-- ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
-- https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/1aaf4c1e3cb6774857e2eef27c17e68dc1ae577112e4769665f516c2e8c4e27b.yara
@@ -29,34 +22,30 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: bc5e020a-ecff-43c8-b57b-ee17b5f65b21
 KnownVulnerableSamples:
-- Filename: sandra.sys
-  MD5: 9a237fa07ce3ed06ea924a9bed4a6b99
-  SHA1: 82ba5513c33e056c3f54152c8555abf555f3e745
-  SHA256: 1aaf4c1e3cb6774857e2eef27c17e68dc1ae577112e4769665f516c2e8c4e27b
-  Signature:
-  - SiSoftware Ltd
-  - GeoTrust TrustCenter CodeSigning CA I
-  - GeoTrust
-  Date: ''
-  Publisher: ''
-  Company: SiSoftware
-  Description: Sandra Device Driver (Win64 x64)(Unicode)
-  Product: SiSoftware Sandra
-  ProductVersion: 10.11.1.1
-  FileVersion: '10.11.1.1 built by: WinDDK'
-  MachineType: AMD64
-  OriginalFilename: SANDRA
-  Authentihash:
+- Authentihash:
     MD5: 6f72f204305c65af27c9f97fe4296b54
     SHA1: b785192962dd159acd960c8f8f9f211747c83610
     SHA256: b9661dd0dcf81d2ee8e5eb3b728c907b4eb861806971051ad772f7fe4d09eb6a
-  InternalName: SANDRA
+  Company: SiSoftware
   Copyright: "Copyright \xA9 SiSoftware Ltd 1995-2008. All rights reserved."
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2008-03-10 12:30:10'
+  Date: ''
+  Description: Sandra Device Driver (Win64 x64)(Unicode)
   ExportedFunctions: ''
+  FileVersion: '10.11.1.1 built by: WinDDK'
+  Filename: sandra.sys
   ImportedFunctions:
   - ZwSetValueKey
   - NtQueryInformationProcess
@@ -93,70 +82,23 @@ KnownVulnerableSamples:
   - HalGetBusDataByOffset
   - HalTranslateBusAddress
   - KeStallExecutionProcessor
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, OU=GeoTrust TrustCenter CodeSigning CA, O=GeoTrust Inc, CN=GeoTrust
-        TrustCenter CodeSigning CA I
-      ValidFrom: '2006-02-01 21:44:28'
-      ValidTo: '2016-01-30 21:44:28'
-      Signature: 65c62c9e0fc5dec5639b6e8341e0d9137104dcd9813151f57eb9930d2ef80ae8c329c0e15e02c935bb2d936ff620702b7af688c0a60133696035618235da87d374289fa4b7c023012a763198473d2bd618173691b6203e8c00876f603252123d15d2a49c00def933f55e980a433ab6af40d8924b85b25701b2c9b09174f7b754
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 05ab96
-      Version: 3
-      TBS:
-        MD5: 861ac2a336eb5977ee1d342b79b3339a
-        SHA1: 172f39bca3dda7c6d5169c96b34a5fe7e96ff0bd
-        SHA256: 4e5f8008413b8bd1daacea968d79051fc84d2fcd76ded06c65fd8d2cf3b4e2e1
-    - Subject: C=GB, ST=London, L=London, O=SiSoftware Ltd, OU=Development, OU=GeoTrust
-        Code Signing, CN=SiSoftware Ltd
-      ValidFrom: '2006-08-25 14:34:37'
-      ValidTo: '2009-08-25 14:34:37'
-      Signature: 4c99f17e9f0b78f896f63b6e8169341c47002763232639c5a84b1ca9ce9af913f4fb60a7a35671b1eedbdd3a6f8e25f1976ec8ca8cd430e26df8872f17e846280193959d43d627fe7e1ec7090b0b5d556a343835712f2a89963601f1ada68ec83c674d1314800ccef6cb90950d53488917e8ad20a291bedbe8bdf439d2d7e511510ed93e25efc0c96d47dcebada3c4343a3572e8c54b73d5d9945278129d735147ca201016dd7ae28429501b4fcf0ec713e6a1399dcc6050e3f7ced3c3d470beed59c912a287014097a3cd1b30fed67c26e21a78b1e32f3dc2ddfb118a9208cd030d936f380cecd2c20046f6ce477d1a303a4ff6666b1294702a2d5d0cf3cbc7
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 008da900010020ba965fe3dc471ba8
-      Version: 3
-      TBS:
-        MD5: 53874260ddccaab0a480923b0bdb9f87
-        SHA1: 918b8c4efb05da56f1d3d99f99a20eebaca51734
-        SHA256: ba08cbcbf581a6f105512e5ce808655aeb91406ae3565ab1cdee935f19d9c86e
-    - Subject: C=US, O=GeoTrust Inc., OU=GeoTrust TrustCenter Timestamp, CN=GeoTrust
-        TrustCenter Authenticode Timestamp I
-      ValidFrom: '2006-02-13 15:40:22'
-      ValidTo: '2016-02-11 15:40:22'
-      Signature: bb64424e3d84a554ba24c4d75f1adbff39b1e0569823903b43d0d95dde4aacb2c13c40d61330b7ba52d48127399813f0c3754d556b0375bcc671348bf7e7e73916ed64ef034ef6a611ad21b3ecc0281f040d8c09aa32d72c99f16216d26e6f387e29504782ab56733ba9e75c53456699b30acfc19840d31d4228274c497f1ab1f9827a2ff19b3b784e48511a2af48c06c09610e337b18d9be9739267b2b45fae47daa2fd8f5b9dbbb85a080a12c025ecd637182df0661ec24020c0303cc7fe64d032590519f908d367c1d5ffa85948d7c1dda9f06fe09acc4e55a625fa3175f41d46ab5c9e35a86b9dfa1bb608e586a0ed95d9fe6ff59f4f26724567ba77449e
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 02358f
-      Version: 3
-      TBS:
-        MD5: 75ffae38758191312831922d8786a94e
-        SHA1: d134a530fe0e79d599a54543644dd0f05020d64f
-        SHA256: ff5857d0dbbcfcef23ec8aadc7cb4db858d427de94bf380629223fe6429ece19
-    - Subject: C=US, O=Equifax, OU=Equifax Secure Certificate Authority
-      ValidFrom: '2006-05-23 17:01:15'
-      ValidTo: '2016-05-23 17:11:15'
-      Signature: 87a40f6b55916248ff54811ccf5db6c5a514aa671df485f6860d38b31c8d22ce7c867946fb71e16114d0ed4e46a48bca64654094f92ad7870ca9b7bedcc40bbd09c106eb9530841b9d8de7bc70c6f86539c4e5c4e65c8fcda130baef065e555290edd8587f15142ecc21a593dab8508d805e6e22a70fde8093add71d24b02aa2f4f20b98750131cc69bc359b3d13662f21bde54ec3639cc8518d59f5b600937ef10c35b0f4180dbfa7bdb2aae16b9f3ce6bb41b5d904e7c8a63abf8a5bdcaa9a3cd2c8dfcb1774163d78470b4c108e406616a0f300ede034998af0f9460ff27fbf202c972616d59e81da94a6dc61c8f18e092d4e32d03df682267d91d7a6c67bc1311d210ed4a342c1b4dfc0446b4f2aeebb29d62787b0a450ae1a9ab5f996f4ccabe52b3df166e2d5e1c3f0c687b659536638026e6194df1563aa415052f9bb64dc95e05b6c2aacfed6e603c21ff65557fe7e813fcb5a0bc1029cac84e47cd3f4c25a17c312706009ec82e5eccdd0b2106d69868c8da60e0416c57164ebd95bb8b08cfc32427e60846f655b7244272b846181f461d50fd51dbc05a27a5f937f26d1c8b3afa0190723e43e225d32d14a0fcee7b72a5c7b6e1c57126864e8337e8c501340a487b0d3a69b1eacbd3d7812bc52af09e0bab0508e5c81f98383af1482f50a6d035721bb9ac32e66fb04215b0a120fc1c907d63cecabf9a52f90883a
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 610bdc8f00000000001a
-      Version: 3
-      TBS:
-        MD5: 6e11ed171e9a07e607b8ca65bf0e8858
-        SHA1: 6d329a72420f76868584957854cdc45172e9f902
-        SHA256: 75efb8656a18ba5dacc596757bfb0fa11f0d3d81fd5f8cf9bb8975ced87e7b1b
-    Signer:
-    - SerialNumber: 008da900010020ba965fe3dc471ba8
-      Issuer: C=US, OU=GeoTrust TrustCenter CodeSigning CA, O=GeoTrust Inc, CN=GeoTrust
-        TrustCenter CodeSigning CA I
-      Version: 1
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: SANDRA
+  MD5: 9a237fa07ce3ed06ea924a9bed4a6b99
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: SANDRA
+  Product: SiSoftware Sandra
+  ProductVersion: 10.11.1.1
+  Publisher: ''
   RichPEHeaderHash:
     MD5: a75be3527d956e54b71d4d394aceffb9
     SHA1: e4fb9247c5e978a65b93b199486696a8bc2b9653
     SHA256: dc2eec05cc1757c2944200b86425c679ef74a3d3ce2c78a7a52d5fa9461264a6
+  SHA1: 82ba5513c33e056c3f54152c8555abf555f3e745
+  SHA256: 1aaf4c1e3cb6774857e2eef27c17e68dc1ae577112e4769665f516c2e8c4e27b
   Sections:
     .text:
       Entropy: 6.3545226200997975
@@ -179,7 +121,776 @@ KnownVulnerableSamples:
     .rsrc:
       Entropy: 3.4105227461664467
       Virtual Size: '0x728'
+  Signature:
+  - SiSoftware Ltd
+  - GeoTrust TrustCenter CodeSigning CA I
+  - GeoTrust
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, OU=GeoTrust TrustCenter CodeSigning CA, O=GeoTrust Inc, CN=GeoTrust
+        TrustCenter CodeSigning CA I
+      ValidFrom: '2006-02-01 21:44:28'
+      ValidTo: '2016-01-30 21:44:28'
+      Signature: 65c62c9e0fc5dec5639b6e8341e0d9137104dcd9813151f57eb9930d2ef80ae8c329c0e15e02c935bb2d936ff620702b7af688c0a60133696035618235da87d374289fa4b7c023012a763198473d2bd618173691b6203e8c00876f603252123d15d2a49c00def933f55e980a433ab6af40d8924b85b25701b2c9b09174f7b754
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 05ab96
+      Version: 3
+      TBS:
+        MD5: 861ac2a336eb5977ee1d342b79b3339a
+        SHA1: 172f39bca3dda7c6d5169c96b34a5fe7e96ff0bd
+        SHA256: 4e5f8008413b8bd1daacea968d79051fc84d2fcd76ded06c65fd8d2cf3b4e2e1
+        SHA384: 99b4b343c5b223a1446551c3dd26e2a0dcafe214460c5fcc4f9f12eaca42695ae9adb04fc19eec33f17d1659a0730e95
+    - Subject: C=GB, ST=London, L=London, O=SiSoftware Ltd, OU=Development, OU=GeoTrust
+        Code Signing, CN=SiSoftware Ltd
+      ValidFrom: '2006-08-25 14:34:37'
+      ValidTo: '2009-08-25 14:34:37'
+      Signature: 4c99f17e9f0b78f896f63b6e8169341c47002763232639c5a84b1ca9ce9af913f4fb60a7a35671b1eedbdd3a6f8e25f1976ec8ca8cd430e26df8872f17e846280193959d43d627fe7e1ec7090b0b5d556a343835712f2a89963601f1ada68ec83c674d1314800ccef6cb90950d53488917e8ad20a291bedbe8bdf439d2d7e511510ed93e25efc0c96d47dcebada3c4343a3572e8c54b73d5d9945278129d735147ca201016dd7ae28429501b4fcf0ec713e6a1399dcc6050e3f7ced3c3d470beed59c912a287014097a3cd1b30fed67c26e21a78b1e32f3dc2ddfb118a9208cd030d936f380cecd2c20046f6ce477d1a303a4ff6666b1294702a2d5d0cf3cbc7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 008da900010020ba965fe3dc471ba8
+      Version: 3
+      TBS:
+        MD5: 53874260ddccaab0a480923b0bdb9f87
+        SHA1: 918b8c4efb05da56f1d3d99f99a20eebaca51734
+        SHA256: ba08cbcbf581a6f105512e5ce808655aeb91406ae3565ab1cdee935f19d9c86e
+        SHA384: 2c9c1ef0dce7e30a34e8873394e6142d705ae6eb8c2aa7cafb4ff600f56df44213ad4437ea6771b0d79b79fa31eeda60
+    - Subject: C=US, O=GeoTrust Inc., OU=GeoTrust TrustCenter Timestamp, CN=GeoTrust
+        TrustCenter Authenticode Timestamp I
+      ValidFrom: '2006-02-13 15:40:22'
+      ValidTo: '2016-02-11 15:40:22'
+      Signature: bb64424e3d84a554ba24c4d75f1adbff39b1e0569823903b43d0d95dde4aacb2c13c40d61330b7ba52d48127399813f0c3754d556b0375bcc671348bf7e7e73916ed64ef034ef6a611ad21b3ecc0281f040d8c09aa32d72c99f16216d26e6f387e29504782ab56733ba9e75c53456699b30acfc19840d31d4228274c497f1ab1f9827a2ff19b3b784e48511a2af48c06c09610e337b18d9be9739267b2b45fae47daa2fd8f5b9dbbb85a080a12c025ecd637182df0661ec24020c0303cc7fe64d032590519f908d367c1d5ffa85948d7c1dda9f06fe09acc4e55a625fa3175f41d46ab5c9e35a86b9dfa1bb608e586a0ed95d9fe6ff59f4f26724567ba77449e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 02358f
+      Version: 3
+      TBS:
+        MD5: 75ffae38758191312831922d8786a94e
+        SHA1: d134a530fe0e79d599a54543644dd0f05020d64f
+        SHA256: ff5857d0dbbcfcef23ec8aadc7cb4db858d427de94bf380629223fe6429ece19
+        SHA384: c0fea314395e452e7cf6713c28ef5405859078ec210d9110f1f2455754eca38eb516b349731e0499ec74a06c09153924
+    - Subject: C=US, O=Equifax, OU=Equifax Secure Certificate Authority
+      ValidFrom: '2006-05-23 17:01:15'
+      ValidTo: '2016-05-23 17:11:15'
+      Signature: 87a40f6b55916248ff54811ccf5db6c5a514aa671df485f6860d38b31c8d22ce7c867946fb71e16114d0ed4e46a48bca64654094f92ad7870ca9b7bedcc40bbd09c106eb9530841b9d8de7bc70c6f86539c4e5c4e65c8fcda130baef065e555290edd8587f15142ecc21a593dab8508d805e6e22a70fde8093add71d24b02aa2f4f20b98750131cc69bc359b3d13662f21bde54ec3639cc8518d59f5b600937ef10c35b0f4180dbfa7bdb2aae16b9f3ce6bb41b5d904e7c8a63abf8a5bdcaa9a3cd2c8dfcb1774163d78470b4c108e406616a0f300ede034998af0f9460ff27fbf202c972616d59e81da94a6dc61c8f18e092d4e32d03df682267d91d7a6c67bc1311d210ed4a342c1b4dfc0446b4f2aeebb29d62787b0a450ae1a9ab5f996f4ccabe52b3df166e2d5e1c3f0c687b659536638026e6194df1563aa415052f9bb64dc95e05b6c2aacfed6e603c21ff65557fe7e813fcb5a0bc1029cac84e47cd3f4c25a17c312706009ec82e5eccdd0b2106d69868c8da60e0416c57164ebd95bb8b08cfc32427e60846f655b7244272b846181f461d50fd51dbc05a27a5f937f26d1c8b3afa0190723e43e225d32d14a0fcee7b72a5c7b6e1c57126864e8337e8c501340a487b0d3a69b1eacbd3d7812bc52af09e0bab0508e5c81f98383af1482f50a6d035721bb9ac32e66fb04215b0a120fc1c907d63cecabf9a52f90883a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 610bdc8f00000000001a
+      Version: 3
+      TBS:
+        MD5: 6e11ed171e9a07e607b8ca65bf0e8858
+        SHA1: 6d329a72420f76868584957854cdc45172e9f902
+        SHA256: 75efb8656a18ba5dacc596757bfb0fa11f0d3d81fd5f8cf9bb8975ced87e7b1b
+        SHA384: c41060ed797c77588692c0b3e36e19cca2d48c354863437f3df76009e25c916e8d2c7e17b297fbc59da085e98d070093
+    Signer:
+    - SerialNumber: 008da900010020ba965fe3dc471ba8
+      Issuer: C=US, OU=GeoTrust TrustCenter CodeSigning CA, O=GeoTrust Inc, CN=GeoTrust
+        TrustCenter CodeSigning CA I
+      Version: 1
+  Imphash: 756adaea6a3f9f0cdaff73d1a49ca201
+  LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: 59b18c35a208c7b07e660311e368b31e
+    SHA1: 073626838c7211f06a4dcf6d618caa3256dcfe94
+    SHA256: 367035e87b8a361bdc51f55a2467b2606eb29feae3af892d8c17df1841c20b97
+  Company: SiSoftware
+  Copyright: "Copyright \xA9 SiSoftware Ltd 1995-Present. All rights reserved."
+  CreationTimestamp: '2009-08-07 16:44:51'
+  Date: ''
+  Description: Sandra Device Driver (x64)(Unicode)
+  ExportedFunctions: ''
+  FileVersion: '15.18.1.1 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - ZwSetValueKey
+  - NtQueryInformationProcess
+  - ZwClose
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - IoQueryDeviceDescription
+  - ZwSetInformationThread
+  - RtlUnicodeStringToAnsiString
+  - IoAllocateMdl
+  - MmBuildMdlForNonPagedPool
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - IoFreeMdl
+  - ZwCreateKey
+  - MmResetDriverPaging
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - IofCompleteRequest
+  - MmPageEntireDriver
+  - IoUnregisterShutdownNotification
+  - IoDeleteSymbolicLink
+  - IoDeleteDevice
+  - RtlQueryRegistryValues
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoRegisterShutdownNotification
+  - KeBugCheckEx
+  - RtlAppendUnicodeToString
+  - IoReportResourceUsage
+  - RtlInitUnicodeString
+  - __C_specific_handler
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  - HalTranslateBusAddress
+  - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: SANDRA
+  MD5: 5efbbfcc6adac121c8e2fe76641ed329
+  MachineType: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-03-10 12:30:10'
+  OriginalFilename: SANDRA
+  PDBPath: ''
+  Product: SiSoftware Sandra
+  ProductVersion: 15.18.1.1
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: e69c03b2be2914d637b48a27820d8a94
+    SHA1: d5cb3b8f858b20d173998370d62acacc181c4811
+    SHA256: 01d5b00a838c1b167e8e6aa122e77f81c486f304f4f75ebd8200c16dad476ea9
+  SHA1: 2fe874274bac6842819c1e9fe9477e6d5240944d
+  SHA256: 0eab16c7f54b61620277977f8c332737081a46bc6bbde50742b6904bdd54f502
+  Sections:
+    .text:
+      Entropy: 6.349714340820283
+      Virtual Size: '0x234e'
+    .rdata:
+      Entropy: 4.37370787251034
+      Virtual Size: '0x30c'
+    .data:
+      Entropy: 0.3458408061738237
+      Virtual Size: '0x1b4'
+    .pdata:
+      Entropy: 3.8807864998077926
+      Virtual Size: '0x150'
+    INIT:
+      Entropy: 5.7741173762361155
+      Virtual Size: '0x962'
+    .rsrc:
+      Entropy: 3.404123391011788
+      Virtual Size: '0x720'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer ,
+        G2
+      ValidFrom: '2007-06-15 00:00:00'
+      ValidTo: '2012-06-14 23:59:59'
+      Signature: 50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
+      Version: 3
+      TBS:
+        MD5: d6c7684e9aaa508cf268335f83afe040
+        SHA1: 18066d20ad92409c567cdfde745279ff71c75226
+        SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
+    - Subject: C=US, OU=GeoTrust TrustCenter CodeSigning CA, O=GeoTrust Inc, CN=GeoTrust
+        TrustCenter CodeSigning CA I
+      ValidFrom: '2006-02-01 21:44:28'
+      ValidTo: '2016-01-30 21:44:28'
+      Signature: 65c62c9e0fc5dec5639b6e8341e0d9137104dcd9813151f57eb9930d2ef80ae8c329c0e15e02c935bb2d936ff620702b7af688c0a60133696035618235da87d374289fa4b7c023012a763198473d2bd618173691b6203e8c00876f603252123d15d2a49c00def933f55e980a433ab6af40d8924b85b25701b2c9b09174f7b754
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 05ab96
+      Version: 3
+      TBS:
+        MD5: 861ac2a336eb5977ee1d342b79b3339a
+        SHA1: 172f39bca3dda7c6d5169c96b34a5fe7e96ff0bd
+        SHA256: 4e5f8008413b8bd1daacea968d79051fc84d2fcd76ded06c65fd8d2cf3b4e2e1
+        SHA384: 99b4b343c5b223a1446551c3dd26e2a0dcafe214460c5fcc4f9f12eaca42695ae9adb04fc19eec33f17d1659a0730e95
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2013-12-03 23:59:59'
+      Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+      Version: 3
+      TBS:
+        MD5: 518d2ea8a21e879c942d504824ac211c
+        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
+    - Subject: C=GB, ST=London, L=London, O=SiSoftware Ltd, OU=Development, OU=GeoTrust
+        Code Signing, CN=SiSoftware Ltd
+      ValidFrom: '2006-08-25 14:34:37'
+      ValidTo: '2009-08-25 14:34:37'
+      Signature: 4c99f17e9f0b78f896f63b6e8169341c47002763232639c5a84b1ca9ce9af913f4fb60a7a35671b1eedbdd3a6f8e25f1976ec8ca8cd430e26df8872f17e846280193959d43d627fe7e1ec7090b0b5d556a343835712f2a89963601f1ada68ec83c674d1314800ccef6cb90950d53488917e8ad20a291bedbe8bdf439d2d7e511510ed93e25efc0c96d47dcebada3c4343a3572e8c54b73d5d9945278129d735147ca201016dd7ae28429501b4fcf0ec713e6a1399dcc6050e3f7ced3c3d470beed59c912a287014097a3cd1b30fed67c26e21a78b1e32f3dc2ddfb118a9208cd030d936f380cecd2c20046f6ce477d1a303a4ff6666b1294702a2d5d0cf3cbc7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 008da900010020ba965fe3dc471ba8
+      Version: 3
+      TBS:
+        MD5: 53874260ddccaab0a480923b0bdb9f87
+        SHA1: 918b8c4efb05da56f1d3d99f99a20eebaca51734
+        SHA256: ba08cbcbf581a6f105512e5ce808655aeb91406ae3565ab1cdee935f19d9c86e
+        SHA384: 2c9c1ef0dce7e30a34e8873394e6142d705ae6eb8c2aa7cafb4ff600f56df44213ad4437ea6771b0d79b79fa31eeda60
+    - Subject: C=US, O=Equifax, OU=Equifax Secure Certificate Authority
+      ValidFrom: '2006-05-23 17:01:15'
+      ValidTo: '2016-05-23 17:11:15'
+      Signature: 87a40f6b55916248ff54811ccf5db6c5a514aa671df485f6860d38b31c8d22ce7c867946fb71e16114d0ed4e46a48bca64654094f92ad7870ca9b7bedcc40bbd09c106eb9530841b9d8de7bc70c6f86539c4e5c4e65c8fcda130baef065e555290edd8587f15142ecc21a593dab8508d805e6e22a70fde8093add71d24b02aa2f4f20b98750131cc69bc359b3d13662f21bde54ec3639cc8518d59f5b600937ef10c35b0f4180dbfa7bdb2aae16b9f3ce6bb41b5d904e7c8a63abf8a5bdcaa9a3cd2c8dfcb1774163d78470b4c108e406616a0f300ede034998af0f9460ff27fbf202c972616d59e81da94a6dc61c8f18e092d4e32d03df682267d91d7a6c67bc1311d210ed4a342c1b4dfc0446b4f2aeebb29d62787b0a450ae1a9ab5f996f4ccabe52b3df166e2d5e1c3f0c687b659536638026e6194df1563aa415052f9bb64dc95e05b6c2aacfed6e603c21ff65557fe7e813fcb5a0bc1029cac84e47cd3f4c25a17c312706009ec82e5eccdd0b2106d69868c8da60e0416c57164ebd95bb8b08cfc32427e60846f655b7244272b846181f461d50fd51dbc05a27a5f937f26d1c8b3afa0190723e43e225d32d14a0fcee7b72a5c7b6e1c57126864e8337e8c501340a487b0d3a69b1eacbd3d7812bc52af09e0bab0508e5c81f98383af1482f50a6d035721bb9ac32e66fb04215b0a120fc1c907d63cecabf9a52f90883a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 610bdc8f00000000001a
+      Version: 3
+      TBS:
+        MD5: 6e11ed171e9a07e607b8ca65bf0e8858
+        SHA1: 6d329a72420f76868584957854cdc45172e9f902
+        SHA256: 75efb8656a18ba5dacc596757bfb0fa11f0d3d81fd5f8cf9bb8975ced87e7b1b
+        SHA384: c41060ed797c77588692c0b3e36e19cca2d48c354863437f3df76009e25c916e8d2c7e17b297fbc59da085e98d070093
+    Signer:
+    - SerialNumber: 008da900010020ba965fe3dc471ba8
+      Issuer: C=US, OU=GeoTrust TrustCenter CodeSigning CA, O=GeoTrust Inc, CN=GeoTrust
+        TrustCenter CodeSigning CA I
+      Version: 1
+  Imphash: 756adaea6a3f9f0cdaff73d1a49ca201
+  LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: bdea036b5792ac51cef9f16b6688fcf8
+    SHA1: fa5499c24395cd44fa8c7129bd433bc00697d0a2
+    SHA256: 75e539170a00e447842a85441be36dc9e1fa81a3f6386806f3d90e7b4cca1ac1
+  Company: SiSoftware
+  Copyright: "Copyright \xA9 SiSoftware Ltd 1995-Present. All rights reserved."
+  CreationTimestamp: '2009-08-07 16:45:08'
+  Date: ''
+  Description: Sandra Device Driver (IA64)(Unicode)
+  ExportedFunctions: ''
+  FileVersion: '15.18.1.1 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - KeLowerIrql
+  - IoQueryDeviceDescription
+  - ZwSetInformationThread
+  - IoAllocateMdl
+  - MmBuildMdlForNonPagedPool
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - IoFreeMdl
+  - IoReportResourceUsage
+  - MmResetDriverPaging
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - KeRaiseIrqlToDpcLevel
+  - MmPageEntireDriver
+  - IoUnregisterShutdownNotification
+  - IoDeleteSymbolicLink
+  - IoDeleteDevice
+  - RtlQueryRegistryValues
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoRegisterShutdownNotification
+  - KeTickCount
+  - KeBugCheckEx
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - ZwClose
+  - NtQueryInformationProcess
+  - ZwSetValueKey
+  - ZwCreateKey
+  - RtlAppendUnicodeToString
+  - IofCompleteRequest
+  - RtlInitUnicodeString
+  - __C_specific_handler
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  - WRITE_PORT_ULONG
+  - WRITE_PORT_USHORT
+  - WRITE_PORT_UCHAR
+  - READ_PORT_ULONG
+  - READ_PORT_USHORT
+  - READ_PORT_UCHAR
+  - HalTranslateBusAddress
+  - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: SANDRA
+  MD5: 0be4a11bc261f3cd8b4dbfebee88c209
+  MachineType: IA64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: SANDRA
+  PDBPath: ''
+  Product: SiSoftware Sandra
+  ProductVersion: 15.18.1.1
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 166449aeb768baba5f9b2bc9161d1ddc
+    SHA1: a24bb9b7f5d44f07a442ae0dc53cfc2812de93ec
+    SHA256: d10123c382130825a283ad67f0b1c547327d8fae4540ac013b47782db5f68090
+  SHA1: d32408c3b79b1f007331d2a3c78b1a7e96f37f79
+  SHA256: cbf74bed1a4d3d5819b7c50e9d91e5760db1562d8032122edac6f0970f427183
+  Sections:
+    .text:
+      Entropy: 5.4102105799916975
+      Virtual Size: '0x7110'
+    .rdata:
+      Entropy: 3.7550946692171805
+      Virtual Size: '0x568'
+    .pdata:
+      Entropy: 3.7461220043136456
+      Virtual Size: '0x174'
+    .sdata:
+      Entropy: 2.0721296606285398
+      Virtual Size: '0x240'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0x4'
+    INIT:
+      Entropy: 5.541911115595251
+      Virtual Size: '0x11f2'
+    .rsrc:
+      Entropy: 3.3976740349481513
+      Virtual Size: '0x728'
+    .reloc:
+      Entropy: 1.2722604546230136
+      Virtual Size: '0x2f4'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer ,
+        G2
+      ValidFrom: '2007-06-15 00:00:00'
+      ValidTo: '2012-06-14 23:59:59'
+      Signature: 50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
+      Version: 3
+      TBS:
+        MD5: d6c7684e9aaa508cf268335f83afe040
+        SHA1: 18066d20ad92409c567cdfde745279ff71c75226
+        SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
+    - Subject: C=US, OU=GeoTrust TrustCenter CodeSigning CA, O=GeoTrust Inc, CN=GeoTrust
+        TrustCenter CodeSigning CA I
+      ValidFrom: '2006-02-01 21:44:28'
+      ValidTo: '2016-01-30 21:44:28'
+      Signature: 65c62c9e0fc5dec5639b6e8341e0d9137104dcd9813151f57eb9930d2ef80ae8c329c0e15e02c935bb2d936ff620702b7af688c0a60133696035618235da87d374289fa4b7c023012a763198473d2bd618173691b6203e8c00876f603252123d15d2a49c00def933f55e980a433ab6af40d8924b85b25701b2c9b09174f7b754
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 05ab96
+      Version: 3
+      TBS:
+        MD5: 861ac2a336eb5977ee1d342b79b3339a
+        SHA1: 172f39bca3dda7c6d5169c96b34a5fe7e96ff0bd
+        SHA256: 4e5f8008413b8bd1daacea968d79051fc84d2fcd76ded06c65fd8d2cf3b4e2e1
+        SHA384: 99b4b343c5b223a1446551c3dd26e2a0dcafe214460c5fcc4f9f12eaca42695ae9adb04fc19eec33f17d1659a0730e95
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2013-12-03 23:59:59'
+      Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+      Version: 3
+      TBS:
+        MD5: 518d2ea8a21e879c942d504824ac211c
+        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
+    - Subject: C=GB, ST=London, L=London, O=SiSoftware Ltd, OU=Development, OU=GeoTrust
+        Code Signing, CN=SiSoftware Ltd
+      ValidFrom: '2006-08-25 14:34:37'
+      ValidTo: '2009-08-25 14:34:37'
+      Signature: 4c99f17e9f0b78f896f63b6e8169341c47002763232639c5a84b1ca9ce9af913f4fb60a7a35671b1eedbdd3a6f8e25f1976ec8ca8cd430e26df8872f17e846280193959d43d627fe7e1ec7090b0b5d556a343835712f2a89963601f1ada68ec83c674d1314800ccef6cb90950d53488917e8ad20a291bedbe8bdf439d2d7e511510ed93e25efc0c96d47dcebada3c4343a3572e8c54b73d5d9945278129d735147ca201016dd7ae28429501b4fcf0ec713e6a1399dcc6050e3f7ced3c3d470beed59c912a287014097a3cd1b30fed67c26e21a78b1e32f3dc2ddfb118a9208cd030d936f380cecd2c20046f6ce477d1a303a4ff6666b1294702a2d5d0cf3cbc7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 008da900010020ba965fe3dc471ba8
+      Version: 3
+      TBS:
+        MD5: 53874260ddccaab0a480923b0bdb9f87
+        SHA1: 918b8c4efb05da56f1d3d99f99a20eebaca51734
+        SHA256: ba08cbcbf581a6f105512e5ce808655aeb91406ae3565ab1cdee935f19d9c86e
+        SHA384: 2c9c1ef0dce7e30a34e8873394e6142d705ae6eb8c2aa7cafb4ff600f56df44213ad4437ea6771b0d79b79fa31eeda60
+    - Subject: C=US, O=Equifax, OU=Equifax Secure Certificate Authority
+      ValidFrom: '2006-05-23 17:01:15'
+      ValidTo: '2016-05-23 17:11:15'
+      Signature: 87a40f6b55916248ff54811ccf5db6c5a514aa671df485f6860d38b31c8d22ce7c867946fb71e16114d0ed4e46a48bca64654094f92ad7870ca9b7bedcc40bbd09c106eb9530841b9d8de7bc70c6f86539c4e5c4e65c8fcda130baef065e555290edd8587f15142ecc21a593dab8508d805e6e22a70fde8093add71d24b02aa2f4f20b98750131cc69bc359b3d13662f21bde54ec3639cc8518d59f5b600937ef10c35b0f4180dbfa7bdb2aae16b9f3ce6bb41b5d904e7c8a63abf8a5bdcaa9a3cd2c8dfcb1774163d78470b4c108e406616a0f300ede034998af0f9460ff27fbf202c972616d59e81da94a6dc61c8f18e092d4e32d03df682267d91d7a6c67bc1311d210ed4a342c1b4dfc0446b4f2aeebb29d62787b0a450ae1a9ab5f996f4ccabe52b3df166e2d5e1c3f0c687b659536638026e6194df1563aa415052f9bb64dc95e05b6c2aacfed6e603c21ff65557fe7e813fcb5a0bc1029cac84e47cd3f4c25a17c312706009ec82e5eccdd0b2106d69868c8da60e0416c57164ebd95bb8b08cfc32427e60846f655b7244272b846181f461d50fd51dbc05a27a5f937f26d1c8b3afa0190723e43e225d32d14a0fcee7b72a5c7b6e1c57126864e8337e8c501340a487b0d3a69b1eacbd3d7812bc52af09e0bab0508e5c81f98383af1482f50a6d035721bb9ac32e66fb04215b0a120fc1c907d63cecabf9a52f90883a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 610bdc8f00000000001a
+      Version: 3
+      TBS:
+        MD5: 6e11ed171e9a07e607b8ca65bf0e8858
+        SHA1: 6d329a72420f76868584957854cdc45172e9f902
+        SHA256: 75efb8656a18ba5dacc596757bfb0fa11f0d3d81fd5f8cf9bb8975ced87e7b1b
+        SHA384: c41060ed797c77588692c0b3e36e19cca2d48c354863437f3df76009e25c916e8d2c7e17b297fbc59da085e98d070093
+    Signer:
+    - SerialNumber: 008da900010020ba965fe3dc471ba8
+      Issuer: C=US, OU=GeoTrust TrustCenter CodeSigning CA, O=GeoTrust Inc, CN=GeoTrust
+        TrustCenter CodeSigning CA I
+      Version: 1
+  Imphash: abbab73b191d90dc642cbbc1f31d750d
+  LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: fa4d63404779505dc50914274f9140d5
+    SHA1: 0eb3f60cfbb78a7299a3fa0aae4f9ede2bb60e6a
+    SHA256: 752b31418053dc19c0573d16953d5ad24723bd57e5f62eff391e632548855b5f
+  Company: SiSoftware
+  Copyright: "Copyright \xA9 SiSoftware Ltd 1995-2005. All rights reserved."
+  CreationTimestamp: '2005-02-09 08:08:53'
+  Date: ''
+  Description: Sandra Device Driver (Win32 x86)(Unicode)
+  ExportedFunctions: ''
+  FileVersion: '10.2.1.1 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - _except_handler3
+  - IoFreeMdl
+  - MmUnmapLockedPages
+  - READ_REGISTER_ULONG
+  - READ_REGISTER_USHORT
+  - READ_REGISTER_UCHAR
+  - WRITE_REGISTER_ULONG
+  - WRITE_REGISTER_USHORT
+  - WRITE_REGISTER_UCHAR
+  - IoReportResourceUsage
+  - MmMapLockedPagesSpecifyCache
+  - MmResetDriverPaging
+  - MmPageEntireDriver
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoUnregisterShutdownNotification
+  - RtlQueryRegistryValues
+  - KeInitializeSpinLock
+  - IoRegisterShutdownNotification
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - KeTickCount
+  - KeBugCheckEx
+  - RtlUnicodeStringToAnsiString
+  - ZwSetInformationThread
+  - IoQueryDeviceDescription
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - RtlAppendUnicodeToString
+  - ZwCreateKey
+  - ZwSetValueKey
+  - NtQueryInformationProcess
+  - wcslen
+  - ZwClose
+  - IofCompleteRequest
+  - RtlInitUnicodeString
+  - KfReleaseSpinLock
+  - HalGetInterruptVector
+  - KeStallExecutionProcessor
+  - KeRaiseIrqlToDpcLevel
+  - KfLowerIrql
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  - WRITE_PORT_UCHAR
+  - WRITE_PORT_USHORT
+  - WRITE_PORT_ULONG
+  - READ_PORT_UCHAR
+  - READ_PORT_USHORT
+  - READ_PORT_ULONG
+  - HalTranslateBusAddress
+  - KfAcquireSpinLock
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: SANDRA
+  MD5: d86269ba823c9ecf49a145540cd0b3df
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: SANDRA
+  PDBPath: ''
+  Product: SiSoftware Sandra
+  ProductVersion: 10.2.1.1
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: aafad5020ce92eef8fbc7ad80d519673
+    SHA1: ef9fb0357510ea69f66b012abb9fbe6cd0ad6de6
+    SHA256: 269ca1654821ad613e212d88ce927ba4515f3d4329a0c4b4d7ea6c31bc25fed4
+  SHA1: f9eb4c942a89b4ba39d2bdbfd23716937ccb9925
+  SHA256: 1284a1462a5270833ec7719f768cdb381e7d0a9c475041f9f3c74fa8eea83590
+  Sections:
+    .text:
+      Entropy: 6.251401594953046
+      Virtual Size: '0x18f8'
+    init:
+      Entropy: 5.557777832993581
+      Virtual Size: '0x301'
+    .rdata:
+      Entropy: 3.8034701112314675
+      Virtual Size: '0x1a4'
+    .data:
+      Entropy: 1.5567796494470396
+      Virtual Size: '0x14'
+    INIT:
+      Entropy: 5.487441120729154
+      Virtual Size: '0x606'
+    .rsrc:
+      Entropy: 3.4036907314164977
+      Virtual Size: '0x728'
+    .reloc:
+      Entropy: 4.671970480708587
+      Virtual Size: '0x1e2'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=ZA, O=Thawte Consulting (Pty) Ltd., CN=Thawte Code Signing CA
+      ValidFrom: '2003-08-06 00:00:00'
+      ValidTo: '2013-08-05 23:59:59'
+      Signature: 76b29cee139f1bf62d349294457334dc8e6b2e5cfc4c7d89ebc368f1d7990f2e1d17c8b5168bbecd8a0506f219493a035b05c9208e6d52e17681a0c3658a2267e41c53533746bfbcd72feb7b9ed014456c402108e25d757666301ef4df828a2fbdf3a20cbf1ddb9f14a29a72374db07748e84a3f09ce55192cefe60724e1afec
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0a
+      Version: 3
+      TBS:
+        MD5: 6c239df74ade9185bb735cea2298c028
+        SHA1: f6297a00d3b2b4ce4750402b66e7ea018d54f683
+        SHA256: c5e3eebf1434d85e615b06e3c7a4d3c31d10a4fb0ff7a9b262bd41b43a6aaefe
+        SHA384: 48520b9f122b94ccc316982c87d8ebf6ca4fc4e6fd4504c8fcee63b307b5502c403bf0676ef96ca9dc2004a11bbc825b
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2013-12-03 23:59:59'
+      Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+      Version: 3
+      TBS:
+        MD5: 518d2ea8a21e879c942d504824ac211c
+        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
+    - Subject: CN=SiSoftware LTD, O=SiSoftware LTD, OU=Secure Application Development,
+        C=UK, ST=London, L=London
+      ValidFrom: '2004-09-23 16:28:04'
+      ValidTo: '2005-09-23 16:28:04'
+      Signature: 2623e3d4f0ca2111695ee2c1493671d554de79106efd8d98928e0890eb65e7da15d2f4c8f739e5fd1ce3e2205327c540b29ad0a901b605a623b2de380e382e4b75b9b41c5b4deb75c974d02c1911fb58851e75b6fc20bb947fca991fc050dee03a914b69345c77aeba2fa02e1b22cd2b75ad2593d9f5caa24550a02db6a3506d
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.4
+      IsCertificateAuthority: false
+      SerialNumber: 3ea278
+      Version: 3
+      TBS:
+        MD5: d1fe7af23616fed8bc3caa7652a5a797
+        SHA1: 2761ec21ac2de20b9341ae80bfb2d7fecbbc82f8
+        SHA256: e1b99e1290c46d85fea0a77eff3976c23b4f50950eea0ad74e69375b6a8d46e1
+        SHA384: 8fc563c827ac41fbde84bebb16f27264dae9c37f874b629b75c62c1b3bf45c06342954994092067e21086e89aecb8bcf
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2008-12-03 23:59:59'
+      Signature: 877870da4e5201205be079c98230c4fdb91996bd9100c3bdcdcdc6f40ed8fff94dc033623011c5f5741bd492de5f9c2013b17c45be50cd83e7801783a72793671346fbcab8984103cc9b515b058b7fa86ff31b501b242ef2698d6c22f7bbca1695ed0c74c06877d9eb996287c17390f889747a23aba3987b97b1f78f29714d2e751b4841daf0b50d2054d677a097826369fd09cf8af075bb099bd9f91155269a6132be7a02b07b86bea2c38b222c78d13576bc92735cf9b9e64c150a23cce4d2d4342e4940153c0f607a24c6a566ef96cf70eb3ee7f40d7edcd17ca3767169c19c4f47303521b1a2af1a623c2bd98eaa2a077bd818b35c7be29da56ffe3c89ad
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0de92bf0d4d82988183205095e9a7688
+      Version: 3
+      TBS:
+        MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
+        SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
+        SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
+    Signer:
+    - SerialNumber: 3ea278
+      Issuer: C=ZA, O=Thawte Consulting (Pty) Ltd., CN=Thawte Code Signing CA
+      Version: 1
+  Imphash: 296afaa5ea70bbd17135afcd04758148
+  LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: 28c35352251b73a8b6a2ba74b137fa63
+    SHA1: 70d749add1825fad7c1c5107bc7a349b8e3740e3
+    SHA256: 31867db933ed4407d22de8f0ef9b52958c40c63c2328e1863dfd3fe58d3b53c3
+  Company: SiSoftware
+  Copyright: "Copyright \xA9 SiSoftware Ltd 1995-Present. All rights reserved."
+  CreationTimestamp: '2009-08-07 16:44:41'
+  Date: ''
+  Description: Sandra Device Driver (x86)(Unicode)
+  ExportedFunctions: ''
+  FileVersion: '15.18.1.1 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - READ_REGISTER_USHORT
+  - READ_REGISTER_ULONG
+  - IoQueryDeviceDescription
+  - ZwSetInformationThread
+  - RtlUnicodeStringToAnsiString
+  - MmMapLockedPagesSpecifyCache
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - IoFreeMdl
+  - MmUnmapLockedPages
+  - IoReportResourceUsage
+  - READ_REGISTER_UCHAR
+  - MmResetDriverPaging
+  - MmPageEntireDriver
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoUnregisterShutdownNotification
+  - RtlQueryRegistryValues
+  - IoRegisterShutdownNotification
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - KeTickCount
+  - KeBugCheckEx
+  - RtlUnwind
+  - WRITE_REGISTER_ULONG
+  - WRITE_REGISTER_USHORT
+  - WRITE_REGISTER_UCHAR
+  - memset
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - RtlAppendUnicodeToString
+  - ZwCreateKey
+  - ZwSetValueKey
+  - NtQueryInformationProcess
+  - ZwClose
+  - IofCompleteRequest
+  - RtlInitUnicodeString
+  - KfReleaseSpinLock
+  - HalGetInterruptVector
+  - KeStallExecutionProcessor
+  - KeRaiseIrqlToDpcLevel
+  - KfLowerIrql
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  - WRITE_PORT_ULONG
+  - WRITE_PORT_USHORT
+  - WRITE_PORT_UCHAR
+  - READ_PORT_ULONG
+  - READ_PORT_USHORT
+  - READ_PORT_UCHAR
+  - HalTranslateBusAddress
+  - KfAcquireSpinLock
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: SANDRA
+  MD5: 230fd3749904ca045ea5ec0aa14006e9
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: SANDRA
+  PDBPath: ''
+  Product: SiSoftware Sandra
+  ProductVersion: 15.18.1.1
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 4c53c50a8157a8d839fa0df04c90708d
+    SHA1: d337063e1ee6ef11a08ec56bd09b3bb03bc8937e
+    SHA256: 2eb834bbe1604d51b7a9032cdd62bab0b366dbf0f2601f9a3cd35cbf0e541e1e
+  SHA1: 22c08d67bf687bf7ddd57056e274cbbbdb647561
+  SHA256: d7c79238f862b471740aff4cc3982658d1339795e9ec884a8921efe2e547d7c3
+  Sections:
+    .text:
+      Entropy: 6.378172236096485
+      Virtual Size: '0x22ac'
+    .rdata:
+      Entropy: 3.9562346649102187
+      Virtual Size: '0x1c4'
+    .data:
+      Entropy: 0.560652868272508
+      Virtual Size: '0xbc'
+    INIT:
+      Entropy: 5.911577120409106
+      Virtual Size: '0x8d2'
+    .rsrc:
+      Entropy: 3.39983496546404
+      Virtual Size: '0x720'
+    .reloc:
+      Entropy: 5.146168090961645
+      Virtual Size: '0x248'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer ,
+        G2
+      ValidFrom: '2007-06-15 00:00:00'
+      ValidTo: '2012-06-14 23:59:59'
+      Signature: 50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
+      Version: 3
+      TBS:
+        MD5: d6c7684e9aaa508cf268335f83afe040
+        SHA1: 18066d20ad92409c567cdfde745279ff71c75226
+        SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
+    - Subject: C=US, OU=GeoTrust TrustCenter CodeSigning CA, O=GeoTrust Inc, CN=GeoTrust
+        TrustCenter CodeSigning CA I
+      ValidFrom: '2006-02-01 21:44:28'
+      ValidTo: '2016-01-30 21:44:28'
+      Signature: 65c62c9e0fc5dec5639b6e8341e0d9137104dcd9813151f57eb9930d2ef80ae8c329c0e15e02c935bb2d936ff620702b7af688c0a60133696035618235da87d374289fa4b7c023012a763198473d2bd618173691b6203e8c00876f603252123d15d2a49c00def933f55e980a433ab6af40d8924b85b25701b2c9b09174f7b754
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 05ab96
+      Version: 3
+      TBS:
+        MD5: 861ac2a336eb5977ee1d342b79b3339a
+        SHA1: 172f39bca3dda7c6d5169c96b34a5fe7e96ff0bd
+        SHA256: 4e5f8008413b8bd1daacea968d79051fc84d2fcd76ded06c65fd8d2cf3b4e2e1
+        SHA384: 99b4b343c5b223a1446551c3dd26e2a0dcafe214460c5fcc4f9f12eaca42695ae9adb04fc19eec33f17d1659a0730e95
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2013-12-03 23:59:59'
+      Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+      Version: 3
+      TBS:
+        MD5: 518d2ea8a21e879c942d504824ac211c
+        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
+    - Subject: C=GB, ST=London, L=London, O=SiSoftware Ltd, OU=Development, OU=GeoTrust
+        Code Signing, CN=SiSoftware Ltd
+      ValidFrom: '2006-08-25 14:34:37'
+      ValidTo: '2009-08-25 14:34:37'
+      Signature: 4c99f17e9f0b78f896f63b6e8169341c47002763232639c5a84b1ca9ce9af913f4fb60a7a35671b1eedbdd3a6f8e25f1976ec8ca8cd430e26df8872f17e846280193959d43d627fe7e1ec7090b0b5d556a343835712f2a89963601f1ada68ec83c674d1314800ccef6cb90950d53488917e8ad20a291bedbe8bdf439d2d7e511510ed93e25efc0c96d47dcebada3c4343a3572e8c54b73d5d9945278129d735147ca201016dd7ae28429501b4fcf0ec713e6a1399dcc6050e3f7ced3c3d470beed59c912a287014097a3cd1b30fed67c26e21a78b1e32f3dc2ddfb118a9208cd030d936f380cecd2c20046f6ce477d1a303a4ff6666b1294702a2d5d0cf3cbc7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 008da900010020ba965fe3dc471ba8
+      Version: 3
+      TBS:
+        MD5: 53874260ddccaab0a480923b0bdb9f87
+        SHA1: 918b8c4efb05da56f1d3d99f99a20eebaca51734
+        SHA256: ba08cbcbf581a6f105512e5ce808655aeb91406ae3565ab1cdee935f19d9c86e
+        SHA384: 2c9c1ef0dce7e30a34e8873394e6142d705ae6eb8c2aa7cafb4ff600f56df44213ad4437ea6771b0d79b79fa31eeda60
+    - Subject: C=US, O=Equifax, OU=Equifax Secure Certificate Authority
+      ValidFrom: '2006-05-23 17:01:15'
+      ValidTo: '2016-05-23 17:11:15'
+      Signature: 87a40f6b55916248ff54811ccf5db6c5a514aa671df485f6860d38b31c8d22ce7c867946fb71e16114d0ed4e46a48bca64654094f92ad7870ca9b7bedcc40bbd09c106eb9530841b9d8de7bc70c6f86539c4e5c4e65c8fcda130baef065e555290edd8587f15142ecc21a593dab8508d805e6e22a70fde8093add71d24b02aa2f4f20b98750131cc69bc359b3d13662f21bde54ec3639cc8518d59f5b600937ef10c35b0f4180dbfa7bdb2aae16b9f3ce6bb41b5d904e7c8a63abf8a5bdcaa9a3cd2c8dfcb1774163d78470b4c108e406616a0f300ede034998af0f9460ff27fbf202c972616d59e81da94a6dc61c8f18e092d4e32d03df682267d91d7a6c67bc1311d210ed4a342c1b4dfc0446b4f2aeebb29d62787b0a450ae1a9ab5f996f4ccabe52b3df166e2d5e1c3f0c687b659536638026e6194df1563aa415052f9bb64dc95e05b6c2aacfed6e603c21ff65557fe7e813fcb5a0bc1029cac84e47cd3f4c25a17c312706009ec82e5eccdd0b2106d69868c8da60e0416c57164ebd95bb8b08cfc32427e60846f655b7244272b846181f461d50fd51dbc05a27a5f937f26d1c8b3afa0190723e43e225d32d14a0fcee7b72a5c7b6e1c57126864e8337e8c501340a487b0d3a69b1eacbd3d7812bc52af09e0bab0508e5c81f98383af1482f50a6d035721bb9ac32e66fb04215b0a120fc1c907d63cecabf9a52f90883a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 610bdc8f00000000001a
+      Version: 3
+      TBS:
+        MD5: 6e11ed171e9a07e607b8ca65bf0e8858
+        SHA1: 6d329a72420f76868584957854cdc45172e9f902
+        SHA256: 75efb8656a18ba5dacc596757bfb0fa11f0d3d81fd5f8cf9bb8975ced87e7b1b
+        SHA384: c41060ed797c77588692c0b3e36e19cca2d48c354863437f3df76009e25c916e8d2c7e17b297fbc59da085e98d070093
+    Signer:
+    - SerialNumber: 008da900010020ba965fe3dc471ba8
+      Issuer: C=US, OU=GeoTrust TrustCenter CodeSigning CA, O=GeoTrust Inc, CN=GeoTrust
+        TrustCenter CodeSigning CA I
+      Version: 1
+  Imphash: 8e96d1a56746c6f6f30f1a0963ce2f26
+  LoadsDespiteHVCI: 'FALSE'
+MitreID: T1068
+Resources:
+- https://github.com/jbaines-r7/dellicious
+- https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
 Tags:
 - sandra.sys
+Verified: 'TRUE'

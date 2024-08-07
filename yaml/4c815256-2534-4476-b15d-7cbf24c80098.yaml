@@ -1,0 +1,281 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Michael Haag
+CVE:
+- ''
+Category: vulnerable drivers
+Commands:
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-07-22'
+Detection:
+- type: ''
+  value: ''
+Id: 4c815256-2534-4476-b15d-7cbf24c80098
+KnownVulnerableSamples:
+- Authentihash:
+    MD5: 788a1df0b3fd2dfa3fdfc24e441f9d2c
+    SHA1: 2a40c0a92107d9b3faa9aecdedf5016c1ea564f1
+    SHA256: 25454028a4f56d3c58747811a86be43397a6290d1a053bc30d97b41bf3c58c6f
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2020-04-19 21:19:37'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: ''
+  ImportedFunctions:
+  - NtQuerySystemInformation
+  - RtlInitUnicodeString
+  - ExAllocatePool
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - _wcsicmp
+  - RtlInitString
+  - RtlAnsiStringToUnicodeString
+  - RtlFreeUnicodeString
+  - IoGetDeviceObjectPointer
+  - ZwClose
+  - MmIsAddressValid
+  - ZwOpenDirectoryObject
+  - ZwQueryDirectoryObject
+  - ObReferenceObjectByName
+  - ZwQuerySystemInformation
+  - __C_specific_handler
+  - MmHighestUserAddress
+  - IoDriverObjectType
+  - KeQueryTimeIncrement
+  - KeStackAttachProcess
+  - KeUnstackDetachProcess
+  - PsGetProcessWow64Process
+  - PsGetProcessPeb
+  - MmUnlockPages
+  - MmGetSystemRoutineAddress
+  - MmUnmapLockedPages
+  - IoFreeMdl
+  - ZwTerminateProcess
+  - PsGetProcessImageFileName
+  - ObOpenObjectByPointer
+  - PsReferenceProcessFilePointer
+  - IoQueryFileDosDeviceName
+  - ZwQueryVirtualMemory
+  - MmProbeAndLockPages
+  - PsLookupProcessByProcessId
+  - MmMapLockedPagesSpecifyCache
+  - IoAllocateMdl
+  - IoGetCurrentProcess
+  - MmCopyVirtualMemory
+  - KeClearEvent
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - MmMapLockedPages
+  - ObReferenceObjectByHandle
+  - PsSetCreateProcessNotifyRoutineEx
+  - PsSetCreateThreadNotifyRoutine
+  - PsRemoveCreateThreadNotifyRoutine
+  - PsSetLoadImageNotifyRoutine
+  - PsRemoveLoadImageNotifyRoutine
+  - ExEventObjectType
+  - ObRegisterCallbacks
+  - ObUnRegisterCallbacks
+  - ObGetFilterVersion
+  - IoThreadToProcess
+  - strcmp
+  - PsProcessType
+  - PsThreadType
+  - RtlGetVersion
+  - ObfReferenceObject
+  - ObGetObjectType
+  - ExEnumHandleTable
+  - ExfUnblockPushLock
+  - _snprintf
+  - vsprintf_s
+  - ZwCreateFile
+  - ZwWriteFile
+  - PsLookupThreadByThreadId
+  - NtQueryInformationThread
+  - DbgPrint
+  - KeDelayExecutionThread
+  - KdDisableDebugger
+  - KdChangeOption
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - KdDebuggerEnabled
+  - PsGetVersion
+  - KeInitializeEvent
+  - RtlCopyUnicodeString
+  - ObfDereferenceObject
+  - ExReleaseFastMutex
+  - ExAcquireFastMutex
+  - MmBuildMdlForNonPagedPool
+  - WdfVersionBindClass
+  - WdfVersionBind
+  - WdfVersionUnbind
+  - WdfVersionUnbindClass
+  Imports:
+  - ntoskrnl.exe
+  - WDFLDR.SYS
+  InternalName: ''
+  MD5: 8b6fc18d944ae44403dd03a6c63b7fbb
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  PDBPath: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
+    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
+    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
+  SHA1: 52784cd9a18b53061648c876ccfcb7775d345f3c
+  SHA256: f6d7faddc3a56875a8d24e4785a139141dd892968f70bf0e37d505af9a3324fd
+  Sections:
+    .text:
+      Entropy: 6.1912018117070735
+      Virtual Size: '0x6c80'
+    .rdata:
+      Entropy: 4.780472480164167
+      Virtual Size: '0x1584'
+    .data:
+      Entropy: 0.805522255156276
+      Virtual Size: '0x15f8'
+    .pdata:
+      Entropy: 7.695557676550278
+      Virtual Size: '0x678'
+    PAGE:
+      Entropy: 5.92926389421831
+      Virtual Size: '0xb0e'
+    INIT:
+      Entropy: 5.364167422952783
+      Virtual Size: '0xe36'
+    .upx0:
+      Entropy: 7.020133249394464
+      Virtual Size: '0x11f974'
+    .reloc:
+      Entropy: 3.8296982621776037
+      Virtual Size: '0xc0'
+    .rsrc:
+      Entropy: 2.892850468812766
+      Virtual Size: '0x22c'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Comodo CA Limited, CN=AAA
+        Certificate Services
+      ValidFrom: '2004-01-01 00:00:00'
+      ValidTo: '2028-12-31 23:59:59'
+      Signature: 0856fc02f09be8ffa4fad67bc64480ce4fc4c5f60058cca6b6bc1449680476e8e6ee5dec020f60d68d50184f264e01e3e6b0a5eebfbc745441bffdfc12b8c74f5af48960057f60b7054af3f6f1c2bfc4b97486b62d7d6bccd2f346dd2fc6e06ac3c334032c7d96dd5ac20ea70a99c1058bab0c2ff35c3acf6c37550987de53406c58effcb6ab656e04f61bdc3ce05a15c69ed9f15948302165036cece92173ec9b03a1e037ada015188ffaba02cea72ca910132cd4e50826ab229760f8905e74d4a29a53bdf2a968e0a26ec2d76cb1a30f9ebfeb68e756f2aef2e32b383a0981b56b85d7be2ded3f1ab7b263e2f5622c82d46a004150f139839f95e93696986e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: '01'
+      Version: 3
+      TBS:
+        MD5: 93b601b98fc29a9e89a704048928b85f
+        SHA1: 3e8e6487f8fd27d322a269a71edaac5d57811286
+        SHA256: bedd4b1831f17c7ec1d507380f4c9836baa8ce20065a67db8b43acea14294ba4
+        SHA384: 5019d634bf6be7246128e117bfdf533f97aa574fae9080307b427fc77998fe9f280ba23b051cfbd6cf5d37c6e578d698
+    - Subject: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing Root R46
+      ValidFrom: '2021-05-25 00:00:00'
+      ValidTo: '2028-12-31 23:59:59'
+      Signature: 12bfa1ef8b749a9844b86946b5ab240a0ca48a67b83a81bf458a7d5207a88d1f4e218539a36b5e2d2086bf10b8ae793b53cdb4fbd844be06d95c6367d44016874486722ad63215f51283c2f9e15d114067f6422772c523e202381a4c20e2db01f7cd464f26a27c66c05136b6890254c7fc58fb6c00eefe98a62e95a10c53291f6fd819a64f9ef7ac09ea5d82c68baf80a7bd8148528431da32ec15e4a64c3d6c3973d40b853920e0851a68e1a74838a9d1362577c18d1916c5884c667d2f63ce98e869dfac3ca85d9dc91c5baed8f32f74cfb87ef6d7839d1196629aae4513da7fdc47fbdfc3529fe60655e99d8cf23a6251bcec240f29d4588084e4457b5ad8
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 48fc93b46055948d36a7c98a89d69416
+      Version: 3
+      TBS:
+        MD5: 207045ce7b7ab131e78e459b13825902
+        SHA1: bcf7530a1ab309fb1926cb720f9fd58cff1cb88f
+        SHA256: 0f31a4237992e1ea623baf4c29480afb6d913e10f1fb1d56bb56f5b03fbff13b
+        SHA384: a229d2722bc6091d73b1d979b81088c977cb028a6f7cbf264bb81d5cc8f099f87d7c296e48bf09d7ebe275f5498661a4
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Trusted Root
+        G4
+      ValidFrom: '2022-08-01 00:00:00'
+      ValidTo: '2031-11-09 23:59:59'
+      Signature: 70a0bf435c55e7385fa0a3741b3db616d7f7bf5707bd9aaca1872cec855ea91abb22f8871a695422eda488776dbd1a14f4134a7a2f2db738eff4ff80b9f8a1f7f272de24bc5203c84ed02adefa2d56cff9f4f7ac307a9a8bb25ed4cfd143449b4321eb9672a148b499cb9d4fa7060313772744d4e77fe859a8f0bf2f0ba6e9f2343cecf703c787a8d24c401935466a6954b0b8a1568eeca4d53de8b1dcfd1cd8f4775a5c548c6fefa1503dfc760968849f6fcadb208d35601c0203cb20b0ac58a00e4063c59822c1b259f5556bcf27ab6c76ce6f232df47e716a236b22ff12b8542d277ed83ad9f0b68796fd5bd15cac18c34d9f73b701a99f57aa5e28e2b994
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 0e9b188ef9d02de7efdb50e20840185a
+      Version: 3
+      TBS:
+        MD5: 21a266bd49f2778b24d13d95641ea6ac
+        SHA1: 21319f341fdf06bf6a104427afa8b7823b1ea7f3
+        SHA256: e933dc68ee65abd1f9b1aa6738eff60a6895d3d8cc4accf0c69069aa3decd757
+        SHA384: 11533efd6b326a4e065a936de300fe0586a479f93d569d2403bd62c7ad35f1b2199daee3adb510f429c4fc97b4b024e3
+    - Subject: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA R36
+      ValidFrom: '2021-03-22 00:00:00'
+      ValidTo: '2036-03-21 23:59:59'
+      Signature: 06ff82e17763366e7ba115209b13ff04fe98754461c3569571d1913f85a1eb4040b1c8d6e072fd85ca64393cf98d4ba0da87ae9db600a306c50b600a2be70c7172010f465d39a593b32372041b0c2c7a9a7ef221ac2ca695a4bdf3e429a010b22a9a4fd0e731604754d21a6c6aa0412193ad05a8e3730e7ec3f29e16f3d87cb17f95d6299a51bebddd31aa5a9dd3df620a19f220cbd8e477b18ced809adb1ba559f43a135c59b583445ff7b01a7a7d65e1cfb0dc30be224c0592f8c55778d2e3d65273895284a2ba06b3d3258b38346d431b39a94e84e7c28a99f1f0268b65e5667b9c842e0d3d265a3c04c7bcd233b7ecf53c7a37e43fdfee3da93b54bc042cac4031c26cce4c9e89a7ab969870a0ac75b8747337213a6f1b9229cbad8acaa628be4e4ee9c0bed38d128b5e4a269b90f552676cfbea62a7cc07d9c4297fdddab7754370e2b837b130a08241d246a4ea94b312ee08eb853a819b3bb52fdd18d4a58dfd8e4929d1afb296cead37ce5f25ef98f2fa139db3d4d649e9cb6e305050647de9c16bea51147c02041d50b52faf18d461b1c78fde448f36badf376b11cc562c35fac5696cfc60e754db9e2a35941f77d3bf563c59d868ebdf1800347b4cdc7c5fccf605ebfa4a2bc104e1d8faeaa28ab66d834cbd4a14283f3982727eb74b26ad6adbf1d79ed82bd86570f995a1ad680c4e7f2fd528d9b0b96b8087d91c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 621d6d0c52019e3b9079152089211c0a
+      Version: 3
+      TBS:
+        MD5: 69409ee689cc94e90149ce9bccab49ae
+        SHA1: f3939507fa02c048647ede4cced7596339738157
+        SHA256: 3a42b4be5968e1e6489b8362a2a84cdbf7834f2aa9eb96cfb0dfeedeac4aa7d3
+        SHA384: 0eeb0f83c55ccaaf275cec9caaed00280b6dd9bd8e37bd8a191a5cf77a0e2d1298edb019e2a1e67e3f7bd4b1c7616dc0
+    - Subject: C=CA, ST=Ontario, O=12980215 Canada Inc., CN=12980215 Canada Inc.
+      ValidFrom: '2022-08-31 00:00:00'
+      ValidTo: '2023-08-31 23:59:59'
+      Signature: 868c0f41b6431c628ac609475d72a09d6db8e5589e4730b13494c120ee8274066dde243da4b952a82358ed03e955147df78410365a6c9539d9a65a84f5d2619ca0b36fded27245f8e4311b3aef7da5689e345f79c2f5eac94c3bcb2c858066a6640cfbc2d598b3e682c2392a8b6a78e61b7fdf9a64a965b54d4445d57ac7097c908107b292aeff2dd6f78c50ced1521274e585fc7ec533585a868471e46a0f97756b60f337ff4f6f1975c8a296337a1a51996338cd8effb81f026f68f6c991871f5bd1e6f847d3537d5fea0b211509eed19f87c3bee9d5a75d2ef537fcad2d02606a0ea53e9e1014b8e38c3dcf8449e79b779cc6cb5d0882a406814bc02fc522b09d3ac034a1a379ee03f56c225adadadb5ab25369e7f23225f85af24d24072816797272b8e52c6e535da98e307f9249ef15ec9c4c7807dab070828787d91fde9279708d1ee1ef68c093ff0775cbb3292eb8cda278b43d369a351f76024a1041f7481ecd8a34eccfd649768f0f57e8cf863f8646876fc6fcc58f530e2d8f9340
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: false
+      SerialNumber: 1d11ed1006343e0fd1bc5511f3ab2084
+      Version: 3
+      TBS:
+        MD5: c9694893402b97bab780caf28eb06630
+        SHA1: e4445448d88eed645840a1640ee97513e67aa457
+        SHA256: ab2e110a867319a2a0084ead4c3e56f02217314d332ea03e6a21cd6f9ff92359
+        SHA384: 13576a93e84c8e2be44514173759709f9407ffa400b448093afd5ebf6030c324b7366a28037dc00a2e30670dab2e3f63
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256 TimeStamping
+        CA
+      ValidFrom: '2022-03-23 00:00:00'
+      ValidTo: '2037-03-22 23:59:59'
+      Signature: 7d598ec093b66f98a94422017e66d6d82142e1b0182e104d13cf3053cebf18fbc7505de24b29fb708a0daa2969fc69c1cf1d07e93e60c8d80be55c5bd76d87fa842025343167cdb612966fc4504c621d0c0882a816bda956cf15738d012225ce95693f4777fb727414d7ffab4f8a2c7aab85cd435fed60b6aa4f91669e2c9ee08aace5fd8cbc6426876c92bd9d7cd0700a7cefa8bc754fba5af7a910b25de9ff285489f0d58a717665daccf072a323fac0278244ae99271bab241e26c1b7de2aebf69eb1799981a35686ab0a45c9dfc48da0e798fbfba69d72afc4c7c1c16a71d9c6138009c4b69fcd878724bb4fa349b9776691f1729ce94b0252a7377e9353ac3b1d08490f94cd397addff256399272c3d3f6ba7f166c341cd4fb6409b212140d0b71324cddc1d783ae49eade5347192d7266be43873aba6014fbd3f3b78ad4cadfbc4957bed0a5f33398741787a38e99ce1dd23fd1d28d3c7f9e8f1985ffb2bd87ef2469d752c1e272c26db6f157b1e198b36b893d4e6f2179959ca70f037bf9800df20164f27fb606716a166badd55c03a2986b098a02bed9541b73ad5159831b462090f0abd81d913febfa4d1f357d9bc04fa82de32df0489f000cd5dc2f9d0237f000be4760226d9f0657642a6298709472be67f1aa4850ffc9896f655542b1f80fac0f20e2be5d6fba92f44154ae7130e1ddb37381aa12bf6edd67cfc
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 073637b724547cd847acfd28662a5e5b
+      Version: 3
+      TBS:
+        MD5: e4b8ad9932ff9205f580cf8fb2afbb86
+        SHA1: 5301f7044d78bf94dd2b6e4871083a17fdba1dcc
+        SHA256: c3d01499a5d1d2f71e0f44e78fbfa4b8aadb43dd4f226401e0c1d7a6d53357fa
+        SHA384: 84b5f399da5a4f4387269adfd951ef7d2197c29552ed2d2e449060664c3825d6bdb2acc3e563d999e54652f7384f445e
+    - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp 2022 , 2
+      ValidFrom: '2022-09-21 00:00:00'
+      ValidTo: '2033-11-21 23:59:59'
+      Signature: 55aa2a1af346f378573730fc75e34fd68523f1fcf995399b25e6f7728a98c377d464fc15fb36c249512c7888635509463900fc69d4ca9b29fba33fc0c9009b131db09889dc78f2cd7c85cd539daf62e26166a3142a45874a98422b50fc1bb59e083009fae42dd7098979f909e688ce7d1bb86aa29bc1536009e8a3b89dd7ad1f1cb8ec9841f0f60e80fbe4ffdf9d10a7eb00ba5f4a8f1a3a52b4eabf0949153536599a0f54d2b21b7f7e5e09ad76548a746dcad205672b76ebff98b226953819884414e50a59a26be7223e4421d23f1cc09bed7c48b2d8920c914f3c6694af5d0253eb9ee29ee4d31f8601649c00c2e95a74750d3de17988bf1c0197c9192380d7365a5f9616b1630cc646403bce5d35d4593e439a18aec3c9cbc3fb9b135f6ab5c7e0f305c359df27622bde41c953b9ff341067f62632987bfe5c42948194829dac0a8bc64b154ad3989045603380e023def803a4f64547e5ceb8034247e841367177adfda2e897744e2eda1e1d8c5ac81e9ad5c2f0c622a84f9bbdd81c9a51c42f9af65fa72797ba962e8557c060e778567f6aefc2959a4b1102c8829cc91a057cba71b54e7a996cf4e89ed45a98c89fbf8dbb185c43f5d02ae8e262ee7804dbbdd1fb5b0aa8707ef0978478e308035d472c63a825389701d23f3adae5e5f6e69bdc7e2cccff174c4d00a2d8d6010eb88beee6e07255892c271961f677018c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0c4d69724b94fa3c2a4a3d2907803d5a
+      Version: 3
+      TBS:
+        MD5: 812cb8ca0c79b318780ec5128ad13c1d
+        SHA1: 3f8047d078307123301e50a25e9afb0dc4b6843d
+        SHA256: 0c0b121e6f807bc22d4e0f4945634c22eca7e4d5ca58a1526a40e918a35c1d79
+        SHA384: 86aab81948499b3c90833253a853e7b3fd82ccf7b65b35806831ab60814bfc6ad8848c990df262a1c89b6fc4267dad81
+    Signer:
+    - SerialNumber: 1d11ed1006343e0fd1bc5511f3ab2084
+      Issuer: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA R36
+      Version: 1
+  Imphash: 409d2ab916237fb129c57aacbb7cb4fe
+  LoadsDespiteHVCI: 'FALSE'
+MitreID: T1068
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Tags:
+- jokercontroller.sys
+Verified: 'TRUE'

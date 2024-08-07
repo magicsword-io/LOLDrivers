@@ -88,6 +88,8 @@ def get_metadata(driver):
 
     md5, sha1, sha256 = get_hashes(driver)
 
+    imphash = lief.PE.get_imphash(pe, lief.PE.IMPHASH_MODE.PEFILE)
+
     metadata["Name"] = pe.name
     metadata["Libraries"] = pe.libraries
 
@@ -103,6 +105,7 @@ def get_metadata(driver):
     metadata["MD5"] = md5
     metadata["SHA1"] = sha1
     metadata["SHA256"] = sha256
+    metadata["Imphash"] = imphash
 
     metadata['Machine'] = pe.header.machine.name
     metadata['MagicHeader'] = " ".join([hex(i)[2:] for i in pe.header.signature])
@@ -128,21 +131,19 @@ def get_metadata(driver):
         metadata['InternalName'] = version_info.get('InternalName', b'').decode("utf-8")
         metadata['OriginalFilename'] = version_info.get('OriginalFilename', b'').decode("utf-8")
         metadata['FileVersion'] = version_info.get('FileVersion', b'').decode("utf-8")
-        metadata['ProductName'] = version_info.get('ProductName', b'').decode("utf-8")
+        metadata['Product'] = version_info.get('ProductName', b'').decode("utf-8")
         metadata['LegalCopyright'] = version_info.get('LegalCopyright', b'').decode("utf-8")
         metadata['ProductVersion'] = version_info.get('ProductVersion', b'').decode("utf-8")
 
-    except lief.not_found:
+    except Exception as e:
         metadata['CompanyName'] = ""
         metadata['FileDescription'] = ""
         metadata['InternalName'] = ""
         metadata['OriginalFilename'] = ""
         metadata['FileVersion'] = ""
-        metadata['ProductName'] = ""
+        metadata['Product'] = ""
         metadata['LegalCopyright'] = ""
         metadata['ProductVersion'] = ""
-
-
 
     if len(pe.signatures) > 0:
         metadata['Signatures'] = []
@@ -170,7 +171,8 @@ def get_metadata(driver):
                     tmp_cert_dict['TBS'] = {
                         "MD5": hashlib.md5(raw_cert.tbs_certificate_bytes).hexdigest(),
                         "SHA1": hashlib.sha1(raw_cert.tbs_certificate_bytes).hexdigest(),
-                        "SHA256": hashlib.sha256(raw_cert.tbs_certificate_bytes).hexdigest()
+                        "SHA256": hashlib.sha256(raw_cert.tbs_certificate_bytes).hexdigest(),
+                        "SHA384": hashlib.sha384(raw_cert.tbs_certificate_bytes).hexdigest()
                     }
 
                     sig_info['Certificates'].append(tmp_cert_dict)
@@ -226,6 +228,7 @@ def enrich_yaml(file_path_, metadata_md5, metadata_sha1, metadata_sha256):
                     sample['MD5'] = metadata_['MD5']
                     sample['SHA1'] = metadata_['SHA1']
                     sample['SHA256'] = metadata_['SHA256']
+                    sample['Imphash'] = metadata_['Imphash']
                     sample['Authentihash'] = {
                         'MD5':metadata_['AuthentihashMD5'],
                         'SHA1': metadata_['AuthentihashSHA1'],
@@ -245,7 +248,7 @@ def enrich_yaml(file_path_, metadata_md5, metadata_sha1, metadata_sha256):
                     sample['InternalName'] = metadata_['InternalName']
                     sample['OriginalFilename'] = metadata_['OriginalFilename']
                     sample['FileVersion'] = metadata_['FileVersion']
-                    sample['Product'] = metadata_['ProductName']
+                    sample['Product'] = metadata_['Product']
                     sample['ProductVersion'] = metadata_['ProductVersion']
                     sample['Copyright'] = metadata_['LegalCopyright']
                     sample['MachineType'] = metadata_['Machine']

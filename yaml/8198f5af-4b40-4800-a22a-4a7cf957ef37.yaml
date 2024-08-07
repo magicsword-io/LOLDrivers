@@ -1,46 +1,56 @@
-Id: 8198f5af-4b40-4800-a22a-4a7cf957ef37
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Guus Verbeek
-Created: '2023-06-05'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create MSqPq.sys binPath=C:\windows\temp\MSqPq.sys type=kernel &&
     sc.exe start MSqPq.sys
   Description: BlackCat Ransomware Deploys New Signed Kernel Driver. BlackCat ransomware
     incident that occurred in February 2023.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-06-05'
 Detection: []
+Id: 8198f5af-4b40-4800-a22a-4a7cf957ef37
 KnownVulnerableSamples:
-- Filename: MSqPq.sys
-  MD5: 97539c78d6e2b5356ce79e40bcd4d570
-  SHA1: f6793243ad20359d8be40d3accac168a15a327fb
-  SHA256: 56066ed07bad3b5c1474e8fae5ee2543d17d7977369b34450bd0775517e3b25c
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: e66ea646261c73baee310361524fbb7c
     SHA1: 12d1ff0396dc1ffe15ad4fcb42319f6d4ee99393
     SHA256: 0527451d72ba02db8479ea69689350cc563b939bb2cc685386719ab32b7e2772
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2022-12-21 06:07:48'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: MSqPq.sys
+  ImportedFunctions:
+  - KeInitializeEvent
+  - KeInitializeEvent
+  - HalReturnToFirmware
+  - HalReturnToFirmware
+  - HalReturnToFirmware
+  - HalReturnToFirmware
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: 97539c78d6e2b5356ce79e40bcd4d570
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   RichPEHeaderHash:
     MD5: b3c2084dcf3f40c0653c0d83ed93d1ec
     SHA1: 98192b19393d287eeaa3c6cb52aa97723a66d136
     SHA256: 783d7f55f46700737aafd36725d14b1c98049d9c0179f13143227d1e285d624b
+  SHA1: f6793243ad20359d8be40d3accac168a15a327fb
+  SHA256: 56066ed07bad3b5c1474e8fae5ee2543d17d7977369b34450bd0775517e3b25c
   Sections:
     .text:
       Entropy: 7.939220758583228
@@ -54,21 +64,7 @@ KnownVulnerableSamples:
     .reloc:
       Entropy: 2.192572025670077
       Virtual Size: '0x1000'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-12-21 06:07:48'
-  InternalName: ''
-  Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - KeInitializeEvent
-  - KeInitializeEvent
-  - HalReturnToFirmware
-  - HalReturnToFirmware
-  - HalReturnToFirmware
-  - HalReturnToFirmware
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -87,6 +83,7 @@ KnownVulnerableSamples:
         MD5: 25491518fa7930337802391dc6ba0a58
         SHA1: 86d84a70f5ffcab0f069df5a064c21d3ae4f5c9b
         SHA256: 608df7f76afec05ddbc17edf9194ff9be0c0393a39fafed038e46e8e6fff4424
+        SHA384: 5764c4369b430f60b38834619195fc4f2bb623b947d0f299b372830272bdde9bd61ed4b577685ec5b6bccd57e2536a4c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -101,6 +98,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -115,11 +113,18 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 650869732d03e27a4fd494dc51845887
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: fca0f3c7b6d79f494034b9d2a1f5921a
+  LoadsDespiteHVCI: 'TRUE'
+MitreID: T1068
+Resources:
+- https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
 Tags:
 - MSqPq.sys
+Verified: 'TRUE'

@@ -1,0 +1,366 @@
+Acknowledgement:
+  Handle: ''
+  Person: ''
+Author: Takahiro Haruyama
+Category: vulnerable driver
+Commands:
+  Command: sc.exe create IoAccesssys binPath= C:\windows\temp\IoAccesssys.sys type=kernel
+    && sc.exe start IoAccesssys
+  Description: The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable
+    drivers (237 file hashes) accepting firmware access. Six allow kernel memory access.
+    All give full control of the devices to non-admin users. By exploiting the vulnerable
+    drivers, an attacker without the system privilege may erase/alter firmware, and/or
+    elevate privileges. As of the time of writing in October 2023, the filenames of
+    the vulnerable drivers have not been made public until now.
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-11-02'
+Detection: []
+Id: c08c03ff-a7b7-4282-a9fc-265ae88dc244
+KnownVulnerableSamples:
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: ''
+  MD5: c15eb30e806ad5e771b23423fd2040b0
+  MachineType: I386
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: e0d12e44db3f57ee7ea723683a6fd346dacf2e3e
+  SHA256: b78eb7f12ba718183313cf336655996756411b7dcc8648157aaa4c891ca9dbee
+  Signature: ''
+  Imphash: c83f076c00d2b0a6ba9dc82f56a97631
+  Authentihash:
+    MD5: c36bebe2a76152bab204272b0bb789df
+    SHA1: 04d4fcdb3deb92b5424cda42b6870d4be6f47d33
+    SHA256: 5868cb3bf5d5a9237e29210218d3d93683c0e4894bc48685ac7d84a1e25e0462
+  RichPEHeaderHash:
+    MD5: 95459a5c07ad57d34911b680a265e9f8
+    SHA1: b8408f375d73ee6e75e3a14ceca744ec3b739bb2
+    SHA256: a0511a9c3353cef915281d5e26b8c5f992462a0a816e808cfafc8fd165211368
+  Sections:
+    .text:
+      Entropy: 6.2095533816131905
+      Virtual Size: '0x28cc'
+    .rdata:
+      Entropy: 5.162764344399424
+      Virtual Size: '0x2c4'
+    .data:
+      Entropy: 1.0972162989563548
+      Virtual Size: '0x9f0'
+    PAGE:
+      Entropy: 6.183611461208023
+      Virtual Size: '0x7de'
+    INIT:
+      Entropy: 5.90814733270709
+      Virtual Size: '0x49a'
+    .reloc:
+      Entropy: 6.620965086342201
+      Virtual Size: '0x540'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2015-06-07 04:50:25'
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmUnmapIoSpace
+  - MmAllocateContiguousMemorySpecifyCache
+  - MmFreeContiguousMemory
+  - IoAllocateMdl
+  - MmMapIoSpace
+  - MmGetPhysicalAddress
+  - RtlUnwind
+  - MmUnmapLockedPages
+  - MmMapLockedPagesSpecifyCache
+  - MmBuildMdlForNonPagedPool
+  - memset
+  - memcpy
+  - RtlCopyUnicodeString
+  - KeBugCheckEx
+  - IoWMIRegistrationControl
+  - MmGetSystemRoutineAddress
+  - RtlCompareMemory
+  - IoFreeMdl
+  - RtlInitUnicodeString
+  - WRITE_PORT_ULONG
+  - READ_PORT_UCHAR
+  - WRITE_PORT_UCHAR
+  - READ_PORT_ULONG
+  - WdfVersionUnbind
+  - WdfVersionBindClass
+  - WdfVersionBind
+  - WdfVersionUnbindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=SE, O=AddTrust AB, OU=AddTrust External TTP Network, CN=AddTrust
+        External CA Root
+      ValidFrom: '2013-08-15 20:26:30'
+      ValidTo: '2023-08-15 20:36:30'
+      Signature: 362ba2f2e1331fe493f7f26985c6640ec99b632fe4703798fd94ec7bcff8a14246f9ed6a4e8d34693605557a1ebbad8c99429606e925a82684bec1bf16a97caa5b04b7fdd1c0f402be28edf577c79bfe3af6e8c17bd382abfa144ecf2bcfe5d5b54840b1a38f838bad2b2553aba634cef243f74f2ce9dd1e4e5ab6bae83b10992400bc50fd78f6e523a8899493f7b74130374a57b7e644d9c9df9905aa44fc74af8264cc07cb01b609c32ee3e832a7b49f4178c7a184365462f2ec150ac8ead084f8f1e06bf456125f95e0fcddb77693fe294a25e90400f1b4110ec9849edb177df51ea58e3629193a6d6c464bd7ab7024288d05a3d9d524f2f8a0d13c8239d4a8820e693a8109fc06f0c75933843693064191232c22a5a7012b50b428aedb46b0591b86b39b87e8494e390b6d14df4c03301e1f5f74aef55b590353ec9816e0d06235751b48b87d13e57a48b87752a40798253b069b7a4e6a6f44864f144f2779273d5073414c9c413edd290c73b1c7fb1f760c176504ebd25010924149ece4067d3615446f89bf697df94d40c13a98b6a07e31d2b5aecafb53d53f5086cd5e933b6d5d7c9a3f3ff7a9255884dd114900a2c7c89e37dd778e6d718be05b81345d54baccf59347886de7ef5be228e4801b40e40f2ad17f2315655aac9994433f465526d6c4fa8895e2919aa32d0b85deac8ce0f967709f71790231f761a229c4
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 3300000035d8d5595b0671412b000000000035
+      Version: 3
+      TBS:
+        MD5: 3d488d41aaeb5661974952080abef2fd
+        SHA1: df01e35e6befc7d65625319f17397b861e618d56
+        SHA256: 3d6ef38b5d26773dc77392e415e88b3a744b30ea9f2081e2a992b5818db2f0c4
+        SHA384: ac7c06916fe4a00307834b2499f12799d3fe463c2e63d1881df669a2786745beeee2b3a7d87cd6bc9e4fe293c22e5a59
+    - Subject: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel Corporation
+        , Embedded Subsystems and IP Blocks Group
+      ValidFrom: '2014-03-18 07:17:07'
+      ValidTo: '2017-03-02 07:17:07'
+      Signature: aecbcba6584118a13d0abdc3a924a2e9a4fe53f24de7ded9c9602b86dc3f21bf44ed0a0d8f98900e0609659a46bac644058be48cecc1f7f2c051c5fdad73bb74ed1257d706f768aa47f13f2efff51a41b673560e24f7f8e3ec2ac330fd6706a3fae4f01defd681f5405894d9a4eb825b7ad4da3334c645f10ff7a09b3de7f16360c11230a1da51c3a0b2d25e9160819ba3bba96fcdee0ab27e1353c161662a289abdeabb333ca5a3e6d1e7628ae29af5c0b5d1a812eb3cc2236112655f03a9df066d31ab604f45c80ccf3836cfe854ec8f772e621a340ab4949c4a9a694a60bfbf569c662c3fef311c8371c9470e71a8843f57ae32ecef4eb43fec307de34b59
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 330000b10096925c294e64426800020000b100
+      Version: 3
+      TBS:
+        MD5: ee82a7de282d96ac9c2bdca2ad40956d
+        SHA1: 31028981d88afa81d29b28d84459fc7800280484
+        SHA256: 81be5065be4b9caf17015d2f93fc7798751defc60fea5987c43451f6232ee3a5
+        SHA384: 64679d84bb3a6d12f2523cd1d4dbead28649478247885b3f83df31f81bc202fffe225bf0751b94be6603aad0b5bb09a8
+    - Subject: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External
+        Basic Issuing CA 3B
+      ValidFrom: '2013-02-08 22:21:23'
+      ValidTo: '2018-02-08 22:31:23'
+      Signature: 47bb93e603b1d9570eff60e90fc75e86e623f7defa6dc27732ef23f68fcc6f2572d4a94bad11a273bb8bd2b7b8879474890ccc5cea3a9ac0753a97597c22003d7ac7c55be8d49313ec8f94cda833dfa4d79aa1c8d8a3b4497e173a02e96656978d16b470abbc6b1048e7457b13c74d05bca02c0516be067ef679678f9c3454e67eea197714f19d3b55e4339f69bba7a72254512c677d0452aa7b66dea96aad8ca15c7939cd1c85ec890699854627a001576e93365145e15a3a59af5b41f9709dc4160e05e795b401b4931a590b8a31f7b648c86af6228c9e92286fa893b4a772533ada2cfad43dbf09237fdfcc652ad091aa5031c865f53858d4b39be6311008
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 612cff88000100000010
+      Version: 3
+      TBS:
+        MD5: da9a02953cdcc039174d11b07dd2967d
+        SHA1: 568cfca269ff49615d305e680988337f0a90bc32
+        SHA256: fad628f5236458a9116a99f2d64fb9131a28f9942fca6239a5e7be0dddf4ce9f
+        SHA384: 5edeab0248f63cdc4c10b748618cd6fa4aa53ffb0ddfd51a2e35de2ea55a56822aa53fa734a46705655e8f5878b24ffd
+    - Subject: C=US, O=Intel Corporation, CN=Intel External Basic Policy CA
+      ValidFrom: '2013-02-01 00:00:00'
+      ValidTo: '2020-05-30 10:48:38'
+      Signature: 586fbfcd43074213fcb8d0ad8121f28a6fef87bc268a7c00bd680c2b19642c1167b3a9d9790aac395d6500163b53466ea2a6b56799dbe8bfa225ae049511093a2fdeacb73db8bc017430804748544ca0fb6ba8b8a284b7f434e57bcedc5278f4316d4251ae87bf94acbe9616fb55e5798264fdac5038e4dccb812ce7776f9d9b235c7d0403f4079e7ed457e266944debb55c5c629e8c2d83e64614e2a11380fddae0862711922bbd87174fcb19184b5e8ce60dd98f7d23766fa4ffa0ba3de36d37d62638e81a9c2392c8561f1a1a8e00d633a66b95fa821e740b0fa486df23337c9e3614b35ce2a3ed48a08e28f1d74cf6c09bb4f53ca3e5a863a22c08a5d5fe
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 79174aa9141736fe15a7ca9f2cff4588
+      Version: 3
+      TBS:
+        MD5: 6ce466d55ab160317ee9b13522c2a82a
+        SHA1: 53b052ba209c525233293274854b264bc0f68b73
+        SHA256: f71790e057380a0cbafdfc25bc8b3dafd6cfbeb01077bb3d8194e91254a2fc9b
+        SHA384: c0cc37f9505ff2bab958c8ef1ea94736efae52bcf5948c866446c46b64fb9f5e603fbad4bc70270ae74e58ac8ab055f9
+    Signer:
+    - SerialNumber: 330000b10096925c294e64426800020000b100
+      Issuer: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Basic
+        Issuing CA 3B
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: ''
+  MD5: 9c3c250646e11052b1e38500ee0e467b
+  MachineType: AMD64
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: 03257294ee74f69881002c4bf764b9cb83b759d6
+  SHA256: b9e0c2a569ab02742fa3a37846310a1d4e46ba2bfd4f80e16f00865fc62690cb
+  Signature: ''
+  Imphash: 2b9471e7bb8c05dc55d0a2ff0591ea98
+  Authentihash:
+    MD5: e84c6faab5ee23b8581c1ef7ac659f30
+    SHA1: f423ba27068de365c22e92d36bf27d5b59dc1f4c
+    SHA256: f82cde6dc693a4ac8b485ac9225f2641141213f8333b0be8d7134d0139f17c26
+  RichPEHeaderHash:
+    MD5: 519c92d7a16994badfc60ce7b09cdd69
+    SHA1: a4148cf355f02cfc99b5dcb8dff41ba2cf2f4458
+    SHA256: 792e30b0468a6e25ea97b55e765c53a1853792dda01a6268dc20817516bf4978
+  Sections:
+    .text:
+      Entropy: 6.263585619165053
+      Virtual Size: '0x3344'
+    .rdata:
+      Entropy: 5.146856676235316
+      Virtual Size: '0x694'
+    .data:
+      Entropy: 1.3312006316419636
+      Virtual Size: '0x11a0'
+    .pdata:
+      Entropy: 4.154132238839191
+      Virtual Size: '0x264'
+    PAGE:
+      Entropy: 6.117300139522273
+      Virtual Size: '0x99c'
+    INIT:
+      Entropy: 5.7762943687625725
+      Virtual Size: '0x4e6'
+    .reloc:
+      Entropy: 3.2377886333147474
+      Virtual Size: '0x34'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2015-06-07 04:50:49'
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - MmAllocateContiguousMemorySpecifyCache
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - IoFreeMdl
+  - MmGetPhysicalAddress
+  - __C_specific_handler
+  - RtlCopyUnicodeString
+  - IoWMIRegistrationControl
+  - MmGetSystemRoutineAddress
+  - RtlCompareMemory
+  - MmFreeContiguousMemory
+  - RtlInitUnicodeString
+  - WdfVersionBindClass
+  - WdfVersionUnbind
+  - WdfVersionBind
+  - WdfVersionUnbindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=SE, O=AddTrust AB, OU=AddTrust External TTP Network, CN=AddTrust
+        External CA Root
+      ValidFrom: '2013-08-15 20:26:30'
+      ValidTo: '2023-08-15 20:36:30'
+      Signature: 362ba2f2e1331fe493f7f26985c6640ec99b632fe4703798fd94ec7bcff8a14246f9ed6a4e8d34693605557a1ebbad8c99429606e925a82684bec1bf16a97caa5b04b7fdd1c0f402be28edf577c79bfe3af6e8c17bd382abfa144ecf2bcfe5d5b54840b1a38f838bad2b2553aba634cef243f74f2ce9dd1e4e5ab6bae83b10992400bc50fd78f6e523a8899493f7b74130374a57b7e644d9c9df9905aa44fc74af8264cc07cb01b609c32ee3e832a7b49f4178c7a184365462f2ec150ac8ead084f8f1e06bf456125f95e0fcddb77693fe294a25e90400f1b4110ec9849edb177df51ea58e3629193a6d6c464bd7ab7024288d05a3d9d524f2f8a0d13c8239d4a8820e693a8109fc06f0c75933843693064191232c22a5a7012b50b428aedb46b0591b86b39b87e8494e390b6d14df4c03301e1f5f74aef55b590353ec9816e0d06235751b48b87d13e57a48b87752a40798253b069b7a4e6a6f44864f144f2779273d5073414c9c413edd290c73b1c7fb1f760c176504ebd25010924149ece4067d3615446f89bf697df94d40c13a98b6a07e31d2b5aecafb53d53f5086cd5e933b6d5d7c9a3f3ff7a9255884dd114900a2c7c89e37dd778e6d718be05b81345d54baccf59347886de7ef5be228e4801b40e40f2ad17f2315655aac9994433f465526d6c4fa8895e2919aa32d0b85deac8ce0f967709f71790231f761a229c4
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 3300000035d8d5595b0671412b000000000035
+      Version: 3
+      TBS:
+        MD5: 3d488d41aaeb5661974952080abef2fd
+        SHA1: df01e35e6befc7d65625319f17397b861e618d56
+        SHA256: 3d6ef38b5d26773dc77392e415e88b3a744b30ea9f2081e2a992b5818db2f0c4
+        SHA384: ac7c06916fe4a00307834b2499f12799d3fe463c2e63d1881df669a2786745beeee2b3a7d87cd6bc9e4fe293c22e5a59
+    - Subject: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel Corporation
+        , Embedded Subsystems and IP Blocks Group
+      ValidFrom: '2014-03-18 07:17:07'
+      ValidTo: '2017-03-02 07:17:07'
+      Signature: aecbcba6584118a13d0abdc3a924a2e9a4fe53f24de7ded9c9602b86dc3f21bf44ed0a0d8f98900e0609659a46bac644058be48cecc1f7f2c051c5fdad73bb74ed1257d706f768aa47f13f2efff51a41b673560e24f7f8e3ec2ac330fd6706a3fae4f01defd681f5405894d9a4eb825b7ad4da3334c645f10ff7a09b3de7f16360c11230a1da51c3a0b2d25e9160819ba3bba96fcdee0ab27e1353c161662a289abdeabb333ca5a3e6d1e7628ae29af5c0b5d1a812eb3cc2236112655f03a9df066d31ab604f45c80ccf3836cfe854ec8f772e621a340ab4949c4a9a694a60bfbf569c662c3fef311c8371c9470e71a8843f57ae32ecef4eb43fec307de34b59
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 330000b10096925c294e64426800020000b100
+      Version: 3
+      TBS:
+        MD5: ee82a7de282d96ac9c2bdca2ad40956d
+        SHA1: 31028981d88afa81d29b28d84459fc7800280484
+        SHA256: 81be5065be4b9caf17015d2f93fc7798751defc60fea5987c43451f6232ee3a5
+        SHA384: 64679d84bb3a6d12f2523cd1d4dbead28649478247885b3f83df31f81bc202fffe225bf0751b94be6603aad0b5bb09a8
+    - Subject: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External
+        Basic Issuing CA 3B
+      ValidFrom: '2013-02-08 22:21:23'
+      ValidTo: '2018-02-08 22:31:23'
+      Signature: 47bb93e603b1d9570eff60e90fc75e86e623f7defa6dc27732ef23f68fcc6f2572d4a94bad11a273bb8bd2b7b8879474890ccc5cea3a9ac0753a97597c22003d7ac7c55be8d49313ec8f94cda833dfa4d79aa1c8d8a3b4497e173a02e96656978d16b470abbc6b1048e7457b13c74d05bca02c0516be067ef679678f9c3454e67eea197714f19d3b55e4339f69bba7a72254512c677d0452aa7b66dea96aad8ca15c7939cd1c85ec890699854627a001576e93365145e15a3a59af5b41f9709dc4160e05e795b401b4931a590b8a31f7b648c86af6228c9e92286fa893b4a772533ada2cfad43dbf09237fdfcc652ad091aa5031c865f53858d4b39be6311008
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 612cff88000100000010
+      Version: 3
+      TBS:
+        MD5: da9a02953cdcc039174d11b07dd2967d
+        SHA1: 568cfca269ff49615d305e680988337f0a90bc32
+        SHA256: fad628f5236458a9116a99f2d64fb9131a28f9942fca6239a5e7be0dddf4ce9f
+        SHA384: 5edeab0248f63cdc4c10b748618cd6fa4aa53ffb0ddfd51a2e35de2ea55a56822aa53fa734a46705655e8f5878b24ffd
+    - Subject: C=US, O=Intel Corporation, CN=Intel External Basic Policy CA
+      ValidFrom: '2013-02-01 00:00:00'
+      ValidTo: '2020-05-30 10:48:38'
+      Signature: 586fbfcd43074213fcb8d0ad8121f28a6fef87bc268a7c00bd680c2b19642c1167b3a9d9790aac395d6500163b53466ea2a6b56799dbe8bfa225ae049511093a2fdeacb73db8bc017430804748544ca0fb6ba8b8a284b7f434e57bcedc5278f4316d4251ae87bf94acbe9616fb55e5798264fdac5038e4dccb812ce7776f9d9b235c7d0403f4079e7ed457e266944debb55c5c629e8c2d83e64614e2a11380fddae0862711922bbd87174fcb19184b5e8ce60dd98f7d23766fa4ffa0ba3de36d37d62638e81a9c2392c8561f1a1a8e00d633a66b95fa821e740b0fa486df23337c9e3614b35ce2a3ed48a08e28f1d74cf6c09bb4f53ca3e5a863a22c08a5d5fe
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 79174aa9141736fe15a7ca9f2cff4588
+      Version: 3
+      TBS:
+        MD5: 6ce466d55ab160317ee9b13522c2a82a
+        SHA1: 53b052ba209c525233293274854b264bc0f68b73
+        SHA256: f71790e057380a0cbafdfc25bc8b3dafd6cfbeb01077bb3d8194e91254a2fc9b
+        SHA384: c0cc37f9505ff2bab958c8ef1ea94736efae52bcf5948c866446c46b64fb9f5e603fbad4bc70270ae74e58ac8ab055f9
+    Signer:
+    - SerialNumber: 330000b10096925c294e64426800020000b100
+      Issuer: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Basic
+        Issuing CA 3B
+      Version: 1
+  LoadsDespiteHVCI: 'FALSE'
+MitreID: T1068
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+Tags:
+- IoAccess.sys
+Verified: 'TRUE'

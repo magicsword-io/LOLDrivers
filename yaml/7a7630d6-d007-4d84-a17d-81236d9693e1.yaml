@@ -1,48 +1,31 @@
-Id: 7a7630d6-d007-4d84-a17d-81236d9693e1
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create d.sys binPath=C:\windows\temp\d.sys type=kernel && sc.exe
     start d.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection: []
+Id: 7a7630d6-d007-4d84-a17d-81236d9693e1
 KnownVulnerableSamples:
-- Filename: d.sys
-  MD5: a60c9173563b940203cf4ad38ccf2082
-  SHA1: a3636986cdcd1d1cb8ab540f3d5c29dcc90bb8f0
-  SHA256: c1c4310e5d467d24e864177bdbfc57cb5d29aac697481bfa9c11ddbeebfd4cc8
-  Signature: []
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: I386
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 19dd018ebddfa9044b05fbb9ddffd7f9
     SHA1: 80111a99c4f127cca12f1902ca241b3e65f339ff
     SHA256: a4ca4a0932afa09e8df3469768f5ac6feaff2b7ae27ac208a218288fc4fbf102
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2007-06-19 23:46:07'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: d.sys
   ImportedFunctions:
   - KeInitializeEvent
   - ObReferenceObjectByHandle
@@ -106,11 +89,23 @@ KnownVulnerableSamples:
   - ExReleaseFastMutex
   - KfAcquireSpinLock
   - KfReleaseSpinLock
-  Signatures: {}
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: ''
+  MD5: a60c9173563b940203cf4ad38ccf2082
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
   RichPEHeaderHash:
     MD5: f3e1fc89f2b01c40ea38fc9510166f54
     SHA1: e532da616b3b77c80bdcb3512ea2ed13872d5c52
     SHA256: 7e846d33fc8dd8d0efe1e5aab73002ad4d85b7d714cf1740430761c502b839b3
+  SHA1: a3636986cdcd1d1cb8ab540f3d5c29dcc90bb8f0
+  SHA256: c1c4310e5d467d24e864177bdbfc57cb5d29aac697481bfa9c11ddbeebfd4cc8
   Sections:
     .text:
       Entropy: 6.494811181987745
@@ -127,7 +122,14 @@ KnownVulnerableSamples:
     .reloc:
       Entropy: 5.3775866734053865
       Virtual Size: '0x4aa'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-06-19 23:46:07'
+  Signature: []
+  Signatures: {}
+  Imphash: 56307b5227183c002e4231320a72b961
+  LoadsDespiteHVCI: 'TRUE'
+MitreID: T1068
+Resources:
+- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - d.sys
+Verified: 'FALSE'

@@ -1,47 +1,40 @@
-Id: 2c3884d3-9e4f-4519-b18b-0969612621bc
+Acknowledgement:
+  Handle: Void_Sec
+  Person: Paolo Stagno
 Author: Nasreddine Bencherchali
-Created: '2023-04-15'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create LgCoreTemp.sys binPath=C:\windows\temp\LgCoreTemp.sys     type=kernel
     && sc.exe start LgCoreTemp.sys
   Description: ''
-  Usecase: Denial of Service
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://github.com/VoidSec/Exploit-Development/tree/b82b6d3ac1cce66221101d3e0f4634aa64cb4ca7/windows/x64/kernel/logitech_v.9.02.65_DoS
-Acknowledgement:
-  Person: Paolo Stagno
-  Handle: Void_Sec
-Detection: []
+  Privileges: kernel
+  Usecase: Denial of Service
+Created: '2023-04-15'
+Detection:
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 2c3884d3-9e4f-4519-b18b-0969612621bc
 KnownVulnerableSamples:
-- Filename: LgCoreTemp.sys
-  MD5: 2d7f1c02b94d6f0f3e10107e5ea8e141
-  SHA1: 471ca4b5bb5fe68543264dd52acb99fddd7b3c6d
-  SHA256: 93b266f38c3c3eaab475d81597abbd7cc07943035068bb6fd670dbbe15de0131
-  Signature: N/A
-  Date: N/A
-  Publisher: N/A
-  Company: Logitech
-  Description: CPU Core Temperature Monitor
-  Product: LgCoreTemp
-  ProductVersion: 1.0.0.1
-  FileVersion: 1.0.0.1
-  MachineType: AMD64
-  OriginalFilename: LgCoreTemp.sys
-  Authentihash:
+- Authentihash:
     MD5: a4c810e750095e71c0288c1ce6669115
     SHA1: e05304325b24fc9f76c106de27ffbef2d7eb3315
     SHA256: 7f0eef1ed4c1278372348cb52e27dc3aa2f51a8b6a62db39d2af75031e55a8db
-  InternalName: LgCoreTemp.sys
+  Company: Logitech
   Copyright: "Copyright \xA9 Logitech, Inc"
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  Date: ''
+  Description: CPU Core Temperature Monitor
   ExportedFunctions: ''
+  FileVersion: 1.0.0.1
+  Filename: LgCoreTemp.sys
   ImportedFunctions:
   - IofCompleteRequest
   - IoCreateDevice
@@ -53,6 +46,121 @@ KnownVulnerableSamples:
   - IoCreateSymbolicLink
   - RtlInitUnicodeString
   - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: LgCoreTemp.sys
+  MD5: 2d7f1c02b94d6f0f3e10107e5ea8e141
+  MachineType: AMD64
+  OriginalFilename: LgCoreTemp.sys
+  Product: LgCoreTemp
+  ProductVersion: 1.0.0.1
+  Publisher: N/A
+  SHA1: 471ca4b5bb5fe68543264dd52acb99fddd7b3c6d
+  SHA256: 93b266f38c3c3eaab475d81597abbd7cc07943035068bb6fd670dbbe15de0131
+  Signature: N/A
+  Signatures:
+  - Certificates:
+    - Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+    - Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+    - Signature: 8b12188765bda73964384c2644835bbd9b46b11b98230aca9ae6d31a2288244f75d3c6d06fae2ef7625676d2a3a0b4c2e978302d461ba5e165ec71a0a7a25c2c99972c0e8bb0194efab03034f581974934fcf3e2536a264de077493370531dd394429d692ca13a84d69d0aaf561d561f73c87b9f6fded706a759d2a1095789596a295795b686c90674ea1a3b582e32e5f5d0a08c685639ee5e9d8381ec102352a6bb4774fd8af770d88bc14abba20c5bcfe543ac7d71937873dbc033e68f81a1220571b348ac80c9b3ce8036252a6d5b4ebcfb381e540d0c4f7eaa4e1978056e261997a70a7b063ff7b3902985db8063e45664f59e7b5a583448883873b7de53
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      Subject: C=US, ST=California, L=Newark, O=Logitech, CN=Logitech
+      ValidFrom: '2015-04-16 00:00:00'
+      ValidTo: '2017-06-14 23:59:59'
+    - Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+    - Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+    CertificatesInfo: ''
+    Signer:
+    - Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      SerialNumber: 6f20ba7d552fb9c436caf4cc7cbea4b3
+    SignerInfo: ''
+  LoadsDespiteHVCI: 'TRUE'
+- Authentihash:
+    MD5: 8ca1704038d6c48680707e8135672da6
+    SHA1: bf20c99129a768b3d2d5c621ab50375984ab9351
+    SHA256: 9c4db6ee983fd4fa74f8212031ade343a1b9abdb258d05bef1aabd7ab49fbc16
+  Company: Logitech
+  Copyright: "Copyright \xA9 Logitech, Inc"
+  CreationTimestamp: '2015-06-09 10:52:04'
+  Date: ''
+  Description: CPU Core Temperature Monitor
+  ExportedFunctions: ''
+  FileVersion: 1.0.0.1
+  Filename: ''
+  ImportedFunctions:
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IofCompleteRequest
+  - _allshl
+  - RtlUnwind
+  - KeSetSystemAffinityThread
+  - KeRevertToUserAffinityThread
+  - IoDeleteSymbolicLink
+  - RtlInitUnicodeString
+  - KeBugCheckEx
+  - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: LgCoreTemp.sys
+  MD5: b94ffce20e36b2930eb3ac72f72c00d6
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: LgCoreTemp.sys
+  PDBPath: ''
+  Product: LgCoreTemp
+  ProductVersion: 1.0.0.1
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 5d6ec1c84d4b9928d235f4a95525d9cd
+    SHA1: 514ac94ab960cc3f30abbe362a4a14c21215a1e1
+    SHA256: 8ea35b0407679ba43ad82ad270dc49eddd5ef7c646d864ebaef9432c914b370d
+  SHA1: a7baff6666fc2d259c22f986b8a153c7b1d1d8be
+  SHA256: e0cb07a0624ddfacaa882af49e3783ae02c9fbd0ab232541a05a95b4a8abd8ef
+  Sections:
+    .text:
+      Entropy: 6.2073365191410375
+      Virtual Size: '0x69c'
+    .rdata:
+      Entropy: 3.3720266275598267
+      Virtual Size: '0x184'
+    .data:
+      Entropy: 2.450212064914747
+      Virtual Size: '0x1c'
+    INIT:
+      Entropy: 5.2687991634093105
+      Virtual Size: '0x1d2'
+    .rsrc:
+      Entropy: 3.18656571586942
+      Virtual Size: '0x350'
+    .reloc:
+      Entropy: 4.84009258268497
+      Virtual Size: '0x84'
+  Signature: ''
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -63,23 +171,55 @@ KnownVulnerableSamples:
       ValidTo: '2020-12-30 23:59:59'
       Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
       ValidTo: '2020-12-29 23:59:59'
       Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=California, L=Newark, O=Logitech, CN=Logitech
       ValidFrom: '2015-04-16 00:00:00'
       ValidTo: '2017-06-14 23:59:59'
       Signature: 8b12188765bda73964384c2644835bbd9b46b11b98230aca9ae6d31a2288244f75d3c6d06fae2ef7625676d2a3a0b4c2e978302d461ba5e165ec71a0a7a25c2c99972c0e8bb0194efab03034f581974934fcf3e2536a264de077493370531dd394429d692ca13a84d69d0aaf561d561f73c87b9f6fded706a759d2a1095789596a295795b686c90674ea1a3b582e32e5f5d0a08c685639ee5e9d8381ec102352a6bb4774fd8af770d88bc14abba20c5bcfe543ac7d71937873dbc033e68f81a1220571b348ac80c9b3ce8036252a6d5b4ebcfb381e540d0c4f7eaa4e1978056e261997a70a7b063ff7b3902985db8063e45664f59e7b5a583448883873b7de53
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 6f20ba7d552fb9c436caf4cc7cbea4b3
+      Version: 3
+      TBS:
+        MD5: ec45634a826b6d64211848832ef8dab1
+        SHA1: 95e4adc0349ce66b62decc081bdd04bae5bfab64
+        SHA256: 52e2c146848749590f3db28d87fce836aedf704d5369ab5edfc860246ad00b3f
+        SHA384: 10d17951c16594097046bfbc5572d620818199f9810ec96c60e8bcfa80137e73e6fc7f07588f33869236408af807d4ec
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
       ValidTo: '2023-12-09 23:59:59'
       Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
       SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -87,9 +227,24 @@ KnownVulnerableSamples:
       ValidTo: '2021-02-22 19:35:17'
       Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 6f20ba7d552fb9c436caf4cc7cbea4b3
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
+      Version: 1
+  Imphash: 5ea78a193212fe61ac722f45f0b0eab9
+  LoadsDespiteHVCI: 'FALSE'
+MitreID: T1068
+Resources:
+- https://github.com/VoidSec/Exploit-Development/tree/b82b6d3ac1cce66221101d3e0f4634aa64cb4ca7/windows/x64/kernel/logitech_v.9.02.65_DoS
 Tags:
 - LgCoreTemp.sys
+Verified: 'TRUE'

@@ -1,22 +1,16 @@
-Id: 3ab0d182-6365-47a7-89f4-34121e889503
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create HwOs2Ec10x64.sys binPath=C:\windows\temp\HwOs2Ec10x64.sys     type=kernel
     && sc.exe start HwOs2Ec10x64.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/bb1135b51acca8348d285dc5461d10e8f57260e7d0c8cc4a092734d53fc40cbc.yara
@@ -28,34 +22,30 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Id: 3ab0d182-6365-47a7-89f4-34121e889503
 KnownVulnerableSamples:
-- Filename: HwOs2Ec10x64.sys
-  MD5: 37086ae5244442ba552803984a11d6cb
-  SHA1: dc0e97adb756c0f30b41840a59b85218cbdd198f
-  SHA256: bb1135b51acca8348d285dc5461d10e8f57260e7d0c8cc4a092734d53fc40cbc
-  Signature:
-  - Huawei Technologies Co., Ltd.
-  - Symantec Class 3 Extended Validation Code Signing CA - G2
-  - VeriSign
-  Date: ''
-  Publisher: ''
-  Company: Huawei
-  Description: HwOs2Ec
-  Product: Huawei MateBook
-  ProductVersion: 1.0.0.1
-  FileVersion: 1.0.0.1
-  MachineType: AMD64
-  OriginalFilename: HwOs2Ec.sys
-  Authentihash:
+- Authentihash:
     MD5: 20be6af18d3b97968b2a8d5a9513caaa
     SHA1: b6a4ef3babbd79479723b8586ea0e8c7a33d1661
     SHA256: ab494aba56e9ea7b6055ac437f6b678e7239b0fda54bf28019480565a098a6e3
-  InternalName: HwOs2Ec
+  Company: Huawei
   Copyright: Copyright (C) 2016
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
+  CreationTimestamp: '2018-03-23 00:56:31'
+  Date: ''
+  Description: HwOs2Ec
   ExportedFunctions: ''
+  FileVersion: 1.0.0.1
+  Filename: HwOs2Ec10x64.sys
   ImportedFunctions:
   - IoCreateDevice
   - IoCreateSymbolicLink
@@ -140,136 +130,23 @@ KnownVulnerableSamples:
   - KeInsertQueueApc
   - DbgPrint
   - HalGetBusDataByOffset
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=MSFT, CN=Microsoft Authenticode(tm) Root Authority
-      ValidFrom: '1995-01-01 08:00:01'
-      ValidTo: '1999-12-31 23:59:59'
-      Signature: 2dc9e2f6129e5d5667fafa4b9a7edc29565c80140228856e26f3cd58da5080c5f819b3a67ce29d6b5f3b8f2274e61804fc4740d87a3f3066f012a4d1eb1de7b6f498ab5322865158ee230976e41d455c4bff4ce302500113cc41a45297d486d5c4fe8383657deabea2683bc1b12998bfa2a5fc9dd384ee701750f30bfa3cefa9278b91b448c845a0e101424b4476041cc219a28e6b2098c4dd02acb4d2a20e8d5db9368e4a1b5d6c1ae2cb007f10f4b295efe3e8ffa17358a9752ca2499585feccda448ac21244d244c8a5a21fa95a8e56c2c37bcf4260dc821ffbce74067ed6f1ac196a4f745cc51566316cc16271910f595b7d2a821adfb1b4d81d37de0d0f
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.4
-      IsCertificateAuthority: true
-      SerialNumber: '01'
-      Version: 3
-      TBS:
-        MD5: d67576f5521d1ccab52e9215e0f9f743
-        SHA1: 725a5684e8ab40f2155bbd7a4490a3fbb0fa747b
-        SHA256: 676c4e84e727f5004c10bb52017676f46bd54d69499017e9fd58271ec341d739
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
-        , G2
-      ValidFrom: '2012-12-21 00:00:00'
-      ValidTo: '2020-12-30 23:59:59'
-      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
-      Version: 3
-      TBS:
-        MD5: d0785ad36e427c92b19f6826ab1e8020
-        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
-        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
-    - Subject: OU=Copyright (c) 1997 Microsoft Corp., OU=Microsoft Corporation, CN=Microsoft
-        Root Authority
-      ValidFrom: '1997-01-10 07:00:00'
-      ValidTo: '2020-12-31 07:00:00'
-      Signature: 95e80bc08df3971835edb80124d87711f35c60329f9e0bcb3e0591888fc93ae621f2f057932cb5a047c862effcd7cc3b3b5aa9365469fe246d3fc9ccaade057cdd318d3d9f10706abbfe124f1869c0fcd043e3115a204fea627bafaa19c82b37252dbe65a1128a250f63a3f7541cf921c9d615f352ac6e433207fd8217f8e5676c0d51f6bdf152c7bde7c430fc203109881d95291a4dd51d02a5f180e003b45bf4b1ddc857ee6549c75254b6b4032812ff90d6f0088f7eb897c5ab372ce47ae4a877e376a000d06a3fc1d2368ae04112a8356a1b6adb35e1d41c04e4a84504c85a33386e4d1c0d62b70aa28cd3d5543f46cd1c55a670db123a8793759fa7d2a0
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.4
-      IsCertificateAuthority: true
-      SerialNumber: 00c1008b3c3c8811d13ef663ecdf40
-      Version: 3
-      TBS:
-        MD5: 8b3c3087b7056f5ec5ddba91a1b901f0
-        SHA1: 10792d184e6eb874504fd0d5ec06cabc0229da56
-        SHA256: b0f310311013abfe7a7b41182ad99bc9846bdf91c432d48aa1777208150185a4
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
-        , G4
-      ValidFrom: '2012-10-18 00:00:00'
-      ValidTo: '2020-12-29 23:59:59'
-      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
-      Version: 3
-      TBS:
-        MD5: e9d38360b914c8863f6cba3ee58764d3
-        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
-        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
-    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
-        Class 3 Extended Validation Code Signing CA , G2
-      ValidFrom: '2014-03-04 00:00:00'
-      ValidTo: '2024-03-03 23:59:59'
-      Signature: 3f5b19f3fa13d575382a5aee9f5aa04ca91dc5cc94eede15fef5106ea41ba56483541858c40b28a185c34e74e5ff897cfed5ed3cba719f5602268f162a88feb0a32722ce4be2388e00a63a865f9de53ea8de644941744121fd07c88417da1d653082cb264f39d60427a481b14b49c3238b7e02321827b7ab0bf31872b6a4ee67066f38a6588de0f17e5da460c6a8e5505fe0e8bae28f9958b6b5a0a876f1a2f11c8841727e52979b0a36998d50f701eb3ce7f0226ae5358c63368a1ab1d967665f971aefa8209df02fba6cced9948500f158f17dc97c22b5075d02c6e60bbfab9393ff27188e33367e5734f1c3af04c184f156b3e8878336f8d30a31dc6e2c6d
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 191a32cb759c97b8cfac118dd5127f49
-      Version: 3
-      TBS:
-        MD5: 788b61bd26da89253179e3de2cdb527f
-        SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
-        SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
-    - Subject: ??=CN, ??=Guangdong, ??=Shenzhen, ??=Private Organization, serialNumber=914403001922038216,
-        C=CN, ST=guangdong, L=shenzhen, O=Huawei Technologies Co., Ltd., CN=Huawei
-        Technologies Co., Ltd.
-      ValidFrom: '2017-12-14 00:00:00'
-      ValidTo: '2019-12-14 23:59:59'
-      Signature: 26d8d72aafae208ca75f86e2d634f131cd47c9531f57dd9d0506dd5f6e51df6baea828f02aa0ae534538921a9bc01af8ed084a8a06a5aa16e5def159a2ea17d84a134aa94467d2016797a2f8e49eb90d1de2e4213b6abd8147b4916f95c7b6c7b9c351cc969c00220c188e6a63806623eabd8fe9780141953a49197cfc1fbf5e39ea1c8f3afc3d792a46786202a7a02b9add0f36ed5125015fab8aded58cc2796b3c2d946b09084fe1547718ba315c53bdeb1d1330306113c6aa141494e11cf0ed3193dace62aef90bb5d6cb65aed548c00983eed016729498079e9ac5931bd33607aa1ee3156967b51963557d977fad2c755e34eb26fc4a249f5d24490d8884
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 45d8f42e053d18c5e90f3febd6e17ad7
-      Version: 3
-      TBS:
-        MD5: 43be09b45818339b6233a11e2475e003
-        SHA1: 063e6aeb12a5bf2b6e02ebcda4cd474662a5be18
-        SHA256: a71bb69621ea11ab4ce55b9e83589fed52e4273e838fbab7992e024cef88601a
-    - Subject: DC=com, DC=microsoft, CN=Microsoft Root Certificate Authority
-      ValidFrom: '2001-05-09 23:19:22'
-      ValidTo: '2021-05-09 23:28:13'
-      Signature: c5114d033a60dd5d5211778fb2bb36c8b205bfb4b7a8d8209d5c1303b61c22fa061335b6c863d49a476f2657d255f104b1265fd6a95068a0bcd2b86eccc3e9acdf19cd78ac5974ac663436c41b3e6c384c330e30120da326fe515300ffaf5a4e840d0f1fe46d052e4e854b8d6c336f54d264abbf50af7d7a39a037ed63030ffc1306ce1636d4543b951b51623ae54d17d40539929a27a85baabdecbbbee3208960716c56b3a513d06d0e237e9503ed683df2d863b86b4db6e830b5e1ca944bf7a2aa5d9930b23da7c2516c28200124272b4b00b79d116b70beb21082bc0c9b68d08d3b2487aa9928729d335f5990bdf5de939e3a625a3439e288551db906b0c1896b2dd769c319123684d0c9a0daff2f6978b2e57adaebd70cc0f7bd6317b8391338a2365b7bf285566a1d6462c138e2aabf5166a294f5129c6622106bf2b730922df229f03d3b144368a2f19c2937cbce3820256d7c67f37e24122403088147eca59e97f518d7cfbbd5ef7696effdcedb569d95a042f99758e1d73122d35f59e63e6e2200ea4384b625dbd9f3085668c0646b1d7cecb693a262576e2ed8e7588fc4314926ddde293587f53071705b143c69bd89127deb2ea3fed87f9e825a520a2bc1432bd930889fc810fb898de6a18575337e6c9edb7313646269a52f7dca966d9ff8044d30923d6e211421c93de0c3fd8a6b9d4afdd1a19d9943773fb0da
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 79ad16a14aa0a5ad4c7358f407132e65
-      Version: 3
-      TBS:
-        MD5: ca846b34f2abfeea2228098843a0e0c6
-        SHA1: 391be92883d52509155bfeae27b9bd340170b76b
-        SHA256: 855920f04434989fc8f601eecd2f79ff93fe51b541d63aa94bef1425cd7d521d
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
-        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
-        Authority , G5
-      ValidFrom: '2011-02-22 19:25:17'
-      ValidTo: '2021-02-22 19:35:17'
-      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 611993e400000000001c
-      Version: 3
-      TBS:
-        MD5: 78a717e082dcc1cda3458d917e677d14
-        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
-        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Code Verification Root
-      ValidFrom: '2005-11-01 13:46:46'
-      ValidTo: '2025-11-01 13:54:03'
-      Signature: 6142e8eb18c871dc4619696dea0ecd3867ac3ea707f64d163c9e57fbb8b8a7c78709e66357d03d469050f50599c9ca743afb01ad7a4d6aab84e0405357c89cd5043682b8b71ec68799c2d8c7209ec6f23e55f98f744451dd2bb6d014ddc6ded2c5ff85af17b9a075dac60de24576961acb3e53fbe9345b3203236cbfd87e9a3d850fc8153b9d00564fafddb1251ca0cc29661b47ce7b67ef64ef484792de9d145069b85f82a9f2ad932b53efab623237eabf040b46eb1984a6aa49a06dc1ab2d83416ab4d6437bd23b7a0cd26dd00d20dc5bc229a7f8822422160135d81ad64422dc476756a6682effc9669ffb7fb464c61e6776e0312e3ad9730d6799c8f5611e5dc1a7b88f311f38dfe3b3874c4db3c4f6605cacac0da02c02b9eff0a35d27bd967d0dd0d44006d1a4d6cb6eb3d536fe48c8f23826563a206aa4c30048e71829e7aba3ab7c07a47fa56b4aba023f86975db96e5924e07c8fedefc3cfaaaf15513fdff728785deb4d1f5d34089b343b2aa1c891097d53c1ff7d801fe06b28d4b9dd587421b89f2dbd153a4e454a5cc3ac7c07b2d02115b8cf69da14e42c24fb66e5019e1a66b4c4ad4d2bad6062e4e48fea370dcad836dc7fdb207a33c04ad61f2de085ce2ba192d754532061867c3703038cfc4347e4f8488bac1a42ea98825d6253816b534630b2e785abbc189c86965986b61aaffafd4831245c011cbb1c
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 729404101f3e0ca347837fca175a8438
-      Version: 3
-      TBS:
-        MD5: ee8df66ce2c464c64bb9a9eb9cbd7e90
-        SHA1: f4e3b23c5b3673fb06339c35314279fdee1e003f
-        SHA256: 6d260763a05a13ab7823c6d584f19e5dab26e8e6b56d305ecc7376cd23f411fb
-    Signer:
-    - SerialNumber: 45d8f42e053d18c5e90f3febd6e17ad7
-      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
-        Class 3 Extended Validation Code Signing CA , G2
-      Version: 1
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: HwOs2Ec
+  MD5: 37086ae5244442ba552803984a11d6cb
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: HwOs2Ec.sys
+  Product: Huawei MateBook
+  ProductVersion: 1.0.0.1
+  Publisher: ''
   RichPEHeaderHash:
     MD5: 1caef52202f244dd7b072a2cbf506293
     SHA1: 7261547970d9fc1926cfeee5cab87ba0f4d7b1b6
     SHA256: 07adf312a869ff25e9f5bd2e9a5668206089681078b161f1d0c2301205025274
+  SHA1: dc0e97adb756c0f30b41840a59b85218cbdd198f
+  SHA256: bb1135b51acca8348d285dc5461d10e8f57260e7d0c8cc4a092734d53fc40cbc
   Sections:
     .text:
       Entropy: 6.209628301100335
@@ -298,7 +175,151 @@ KnownVulnerableSamples:
     .reloc:
       Entropy: 2.7841837197791888
       Virtual Size: '0x14'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-03-23 00:56:31'
+  Signature:
+  - Huawei Technologies Co., Ltd.
+  - Symantec Class 3 Extended Validation Code Signing CA - G2
+  - VeriSign
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=MSFT, CN=Microsoft Authenticode(tm) Root Authority
+      ValidFrom: '1995-01-01 08:00:01'
+      ValidTo: '1999-12-31 23:59:59'
+      Signature: 2dc9e2f6129e5d5667fafa4b9a7edc29565c80140228856e26f3cd58da5080c5f819b3a67ce29d6b5f3b8f2274e61804fc4740d87a3f3066f012a4d1eb1de7b6f498ab5322865158ee230976e41d455c4bff4ce302500113cc41a45297d486d5c4fe8383657deabea2683bc1b12998bfa2a5fc9dd384ee701750f30bfa3cefa9278b91b448c845a0e101424b4476041cc219a28e6b2098c4dd02acb4d2a20e8d5db9368e4a1b5d6c1ae2cb007f10f4b295efe3e8ffa17358a9752ca2499585feccda448ac21244d244c8a5a21fa95a8e56c2c37bcf4260dc821ffbce74067ed6f1ac196a4f745cc51566316cc16271910f595b7d2a821adfb1b4d81d37de0d0f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.4
+      IsCertificateAuthority: true
+      SerialNumber: '01'
+      Version: 3
+      TBS:
+        MD5: d67576f5521d1ccab52e9215e0f9f743
+        SHA1: 725a5684e8ab40f2155bbd7a4490a3fbb0fa747b
+        SHA256: 676c4e84e727f5004c10bb52017676f46bd54d69499017e9fd58271ec341d739
+        SHA384: 92c454a9d235f2087ac03a0889b51bfc96539132ebe14a02a07d9287473a21b0a65886496ef68878df21422318064284
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: OU=Copyright (c) 1997 Microsoft Corp., OU=Microsoft Corporation, CN=Microsoft
+        Root Authority
+      ValidFrom: '1997-01-10 07:00:00'
+      ValidTo: '2020-12-31 07:00:00'
+      Signature: 95e80bc08df3971835edb80124d87711f35c60329f9e0bcb3e0591888fc93ae621f2f057932cb5a047c862effcd7cc3b3b5aa9365469fe246d3fc9ccaade057cdd318d3d9f10706abbfe124f1869c0fcd043e3115a204fea627bafaa19c82b37252dbe65a1128a250f63a3f7541cf921c9d615f352ac6e433207fd8217f8e5676c0d51f6bdf152c7bde7c430fc203109881d95291a4dd51d02a5f180e003b45bf4b1ddc857ee6549c75254b6b4032812ff90d6f0088f7eb897c5ab372ce47ae4a877e376a000d06a3fc1d2368ae04112a8356a1b6adb35e1d41c04e4a84504c85a33386e4d1c0d62b70aa28cd3d5543f46cd1c55a670db123a8793759fa7d2a0
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.4
+      IsCertificateAuthority: true
+      SerialNumber: 00c1008b3c3c8811d13ef663ecdf40
+      Version: 3
+      TBS:
+        MD5: 8b3c3087b7056f5ec5ddba91a1b901f0
+        SHA1: 10792d184e6eb874504fd0d5ec06cabc0229da56
+        SHA256: b0f310311013abfe7a7b41182ad99bc9846bdf91c432d48aa1777208150185a4
+        SHA384: 7b8d4a70780f1827a39dce0f6d4a32e2ba18d837fc4e4664b98569c346c67cc5c90efbadd53794bc91c41024decab2ff
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 Extended Validation Code Signing CA , G2
+      ValidFrom: '2014-03-04 00:00:00'
+      ValidTo: '2024-03-03 23:59:59'
+      Signature: 3f5b19f3fa13d575382a5aee9f5aa04ca91dc5cc94eede15fef5106ea41ba56483541858c40b28a185c34e74e5ff897cfed5ed3cba719f5602268f162a88feb0a32722ce4be2388e00a63a865f9de53ea8de644941744121fd07c88417da1d653082cb264f39d60427a481b14b49c3238b7e02321827b7ab0bf31872b6a4ee67066f38a6588de0f17e5da460c6a8e5505fe0e8bae28f9958b6b5a0a876f1a2f11c8841727e52979b0a36998d50f701eb3ce7f0226ae5358c63368a1ab1d967665f971aefa8209df02fba6cced9948500f158f17dc97c22b5075d02c6e60bbfab9393ff27188e33367e5734f1c3af04c184f156b3e8878336f8d30a31dc6e2c6d
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 191a32cb759c97b8cfac118dd5127f49
+      Version: 3
+      TBS:
+        MD5: 788b61bd26da89253179e3de2cdb527f
+        SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
+        SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
+        SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
+    - Subject: ??=CN, ??=Guangdong, ??=Shenzhen, ??=Private Organization, serialNumber=914403001922038216,
+        C=CN, ST=guangdong, L=shenzhen, O=Huawei Technologies Co., Ltd., CN=Huawei
+        Technologies Co., Ltd.
+      ValidFrom: '2017-12-14 00:00:00'
+      ValidTo: '2019-12-14 23:59:59'
+      Signature: 26d8d72aafae208ca75f86e2d634f131cd47c9531f57dd9d0506dd5f6e51df6baea828f02aa0ae534538921a9bc01af8ed084a8a06a5aa16e5def159a2ea17d84a134aa94467d2016797a2f8e49eb90d1de2e4213b6abd8147b4916f95c7b6c7b9c351cc969c00220c188e6a63806623eabd8fe9780141953a49197cfc1fbf5e39ea1c8f3afc3d792a46786202a7a02b9add0f36ed5125015fab8aded58cc2796b3c2d946b09084fe1547718ba315c53bdeb1d1330306113c6aa141494e11cf0ed3193dace62aef90bb5d6cb65aed548c00983eed016729498079e9ac5931bd33607aa1ee3156967b51963557d977fad2c755e34eb26fc4a249f5d24490d8884
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 45d8f42e053d18c5e90f3febd6e17ad7
+      Version: 3
+      TBS:
+        MD5: 43be09b45818339b6233a11e2475e003
+        SHA1: 063e6aeb12a5bf2b6e02ebcda4cd474662a5be18
+        SHA256: a71bb69621ea11ab4ce55b9e83589fed52e4273e838fbab7992e024cef88601a
+        SHA384: 6c8c9e1ab7a6ac3c02c3400d777229f5ee8dbf561f22127c36da5c2b638ad1e90fbb9386271643946a81cb5b8811b9a7
+    - Subject: DC=com, DC=microsoft, CN=Microsoft Root Certificate Authority
+      ValidFrom: '2001-05-09 23:19:22'
+      ValidTo: '2021-05-09 23:28:13'
+      Signature: c5114d033a60dd5d5211778fb2bb36c8b205bfb4b7a8d8209d5c1303b61c22fa061335b6c863d49a476f2657d255f104b1265fd6a95068a0bcd2b86eccc3e9acdf19cd78ac5974ac663436c41b3e6c384c330e30120da326fe515300ffaf5a4e840d0f1fe46d052e4e854b8d6c336f54d264abbf50af7d7a39a037ed63030ffc1306ce1636d4543b951b51623ae54d17d40539929a27a85baabdecbbbee3208960716c56b3a513d06d0e237e9503ed683df2d863b86b4db6e830b5e1ca944bf7a2aa5d9930b23da7c2516c28200124272b4b00b79d116b70beb21082bc0c9b68d08d3b2487aa9928729d335f5990bdf5de939e3a625a3439e288551db906b0c1896b2dd769c319123684d0c9a0daff2f6978b2e57adaebd70cc0f7bd6317b8391338a2365b7bf285566a1d6462c138e2aabf5166a294f5129c6622106bf2b730922df229f03d3b144368a2f19c2937cbce3820256d7c67f37e24122403088147eca59e97f518d7cfbbd5ef7696effdcedb569d95a042f99758e1d73122d35f59e63e6e2200ea4384b625dbd9f3085668c0646b1d7cecb693a262576e2ed8e7588fc4314926ddde293587f53071705b143c69bd89127deb2ea3fed87f9e825a520a2bc1432bd930889fc810fb898de6a18575337e6c9edb7313646269a52f7dca966d9ff8044d30923d6e211421c93de0c3fd8a6b9d4afdd1a19d9943773fb0da
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 79ad16a14aa0a5ad4c7358f407132e65
+      Version: 3
+      TBS:
+        MD5: ca846b34f2abfeea2228098843a0e0c6
+        SHA1: 391be92883d52509155bfeae27b9bd340170b76b
+        SHA256: 855920f04434989fc8f601eecd2f79ff93fe51b541d63aa94bef1425cd7d521d
+        SHA384: cd8d5f1c2d282098fd92fd831a4ecbec74c4f97ba26ce2a0953cb2c367afb1469c7441554e4ecefe56ef44f281196043
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Code Verification Root
+      ValidFrom: '2005-11-01 13:46:46'
+      ValidTo: '2025-11-01 13:54:03'
+      Signature: 6142e8eb18c871dc4619696dea0ecd3867ac3ea707f64d163c9e57fbb8b8a7c78709e66357d03d469050f50599c9ca743afb01ad7a4d6aab84e0405357c89cd5043682b8b71ec68799c2d8c7209ec6f23e55f98f744451dd2bb6d014ddc6ded2c5ff85af17b9a075dac60de24576961acb3e53fbe9345b3203236cbfd87e9a3d850fc8153b9d00564fafddb1251ca0cc29661b47ce7b67ef64ef484792de9d145069b85f82a9f2ad932b53efab623237eabf040b46eb1984a6aa49a06dc1ab2d83416ab4d6437bd23b7a0cd26dd00d20dc5bc229a7f8822422160135d81ad64422dc476756a6682effc9669ffb7fb464c61e6776e0312e3ad9730d6799c8f5611e5dc1a7b88f311f38dfe3b3874c4db3c4f6605cacac0da02c02b9eff0a35d27bd967d0dd0d44006d1a4d6cb6eb3d536fe48c8f23826563a206aa4c30048e71829e7aba3ab7c07a47fa56b4aba023f86975db96e5924e07c8fedefc3cfaaaf15513fdff728785deb4d1f5d34089b343b2aa1c891097d53c1ff7d801fe06b28d4b9dd587421b89f2dbd153a4e454a5cc3ac7c07b2d02115b8cf69da14e42c24fb66e5019e1a66b4c4ad4d2bad6062e4e48fea370dcad836dc7fdb207a33c04ad61f2de085ce2ba192d754532061867c3703038cfc4347e4f8488bac1a42ea98825d6253816b534630b2e785abbc189c86965986b61aaffafd4831245c011cbb1c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 729404101f3e0ca347837fca175a8438
+      Version: 3
+      TBS:
+        MD5: ee8df66ce2c464c64bb9a9eb9cbd7e90
+        SHA1: f4e3b23c5b3673fb06339c35314279fdee1e003f
+        SHA256: 6d260763a05a13ab7823c6d584f19e5dab26e8e6b56d305ecc7376cd23f411fb
+        SHA384: 7cb39e0131ea77825f441568bd91846811955cd0f45d547020173347f4fd3d7dfe5bc4952fa4f9675902c4a869328196
+    Signer:
+    - SerialNumber: 45d8f42e053d18c5e90f3febd6e17ad7
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 Extended Validation Code Signing CA , G2
+      Version: 1
+  Imphash: 071356ee9d8c7f91cbe8fa3c448286a2
+  LoadsDespiteHVCI: 'TRUE'
+MitreID: T1068
+Resources:
+- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Tags:
 - HwOs2Ec10x64.sys
+Verified: 'TRUE'

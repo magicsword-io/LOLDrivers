@@ -1,35 +1,36 @@
-Id: ad693146-4adf-4407-bb20-f2505e34c226
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create TGSafe.sys binPath=C:\windows\temp\TGSafe.sys type=kernel
     && sc.exe start TGSafe.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
+Detection: []
+Id: ad693146-4adf-4407-bb20-f2505e34c226
+KnownVulnerableSamples:
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: TGSafe.sys
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA256: 3a95cc82173032b82a0ffc7d2e438df64c13bc16b4574214c9fe3be37250925e
+  Signature: []
+  LoadsDespiteHVCI: 'FALSE'
+MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
-Detection: []
-KnownVulnerableSamples:
-- Filename: TGSafe.sys
-  SHA256: 3a95cc82173032b82a0ffc7d2e438df64c13bc16b4574214c9fe3be37250925e
-  Signature: []
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
 Tags:
 - TGSafe.sys
+Verified: 'FALSE'

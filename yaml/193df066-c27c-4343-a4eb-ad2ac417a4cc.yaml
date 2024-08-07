@@ -1,35 +1,36 @@
-Id: 193df066-c27c-4343-a4eb-ad2ac417a4cc
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-01-09'
-MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
   Command: sc.exe create nt5.sys binPath=C:\windows\temp \n \n \n  t5.sys type=kernel
     && sc.exe start nt5.sys
   Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-01-09'
+Detection: []
+Id: 193df066-c27c-4343-a4eb-ad2ac417a4cc
+KnownVulnerableSamples:
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: nt5.sys
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA256: fd33fb2735cc5ef466a54807d3436622407287e325276fcd3ed1290c98bd0533
+  Signature: []
+  LoadsDespiteHVCI: 'FALSE'
+MitreID: T1068
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-  Person: ''
-  Handle: ''
-Detection: []
-KnownVulnerableSamples:
-- Filename: nt5.sys
-  SHA256: fd33fb2735cc5ef466a54807d3436622407287e325276fcd3ed1290c98bd0533
-  Signature: []
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: ''
-  OriginalFilename: ''
 Tags:
 - nt5.sys
+Verified: 'FALSE'

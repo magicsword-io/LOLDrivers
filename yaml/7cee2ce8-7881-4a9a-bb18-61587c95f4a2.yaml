@@ -1,0 +1,1430 @@
+Id: 7cee2ce8-7881-4a9a-bb18-61587c95f4a2
+Author: Wack0
+Created: '2023-11-30'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create DcProtect.sys binPath=C:\windows\temp\DcProtect.sys type=kernel
+    && sc.exe start DcProtect.sys
+  Description: bundled with chinese application "DrvCeo" is a set of rootkits. The
+    malicious functionality. prevents registry value writing where the registry key
+    or value includes "dcprotect" or "drvceo". Prevents file deletion if pathname
+    contains "driverdownload", "program files\sysceo", "program files (x86)\sysceo"
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/154
+- https://www.virustotal.com/gui/user/slipstream
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: ''
+  Libraries:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  ImportedFunctions:
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltStartFiltering
+  - FltCreateCommunicationPort
+  - FltCloseCommunicationPort
+  - FltCloseClientPort
+  - FltBuildDefaultSecurityDescriptor
+  - FltFreeSecurityDescriptor
+  - _strlwr
+  - strstr
+  - RtlInitUnicodeString
+  - RtlCopyUnicodeString
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ExGetPreviousMode
+  - CmUnRegisterCallback
+  - CmRegisterCallbackEx
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoGetCurrentProcess
+  - MmIsAddressValid
+  - PsGetProcessId
+  - ObQueryNameString
+  - FsRtlIsNameInExpression
+  - sprintf
+  - __C_specific_handler
+  ExportedFunctions: ''
+  MD5: 563b33cfc3c815feff659caaa94edc33
+  SHA1: da689e8e0e3fc4c7114b44d185eef4c768e15946
+  SHA256: b2247e68386c1bdfd48687105c3728ebbad672daffa91b57845b4e49693ffd71
+  Imphash: e800cd3299d4cda0d9e02255acc3b7dd
+  Machine: AMD64
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-01-06 09:17:50'
+  RichPEHeaderMD5: 4d8a663ae2f765ff317d5e042cf62899
+  RichPEHeaderSHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
+  RichPEHeaderSHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
+  AuthentihashMD5: 6eb18a9f44c6022e259088a2106f048c
+  AuthentihashSHA1: ea9a484278d7a80a46edcd096447bbea0c892f64
+  AuthentihashSHA256: 1ff54579dc4b76e814495d8e1d452a6f868adf06c2de0afdc5c3878b380d0a17
+  Sections:
+    .text:
+      Entropy: 6.1933071166252995
+      Virtual Size: '0xeff'
+    .rdata:
+      Entropy: 3.480895603142913
+      Virtual Size: '0x6dc'
+    .data:
+      Entropy: 1.1394755320256174
+      Virtual Size: '0x68'
+    .pdata:
+      Entropy: 3.502267951968367
+      Virtual Size: '0xfc'
+    PAGE:
+      Entropy: 4.079225801519104
+      Virtual Size: '0x2c'
+    INIT:
+      Entropy: 5.40476343320525
+      Virtual Size: '0x522'
+    .rsrc:
+      Entropy: 3.567006043557736
+      Virtual Size: '0x450'
+    .reloc:
+      Entropy: 3.5093407582869136
+      Virtual Size: '0x28'
+  CompanyName: Windows (R) Win 7 DDK provider
+  FileDescription: DcProtect Driver
+  InternalName: DcProtect.sys
+  OriginalFilename: DcProtect.sys
+  FileVersion: 1.2.0.0
+  ProductName: 'DcProtect (R) Win10x64 driver '
+  LegalCopyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  ProductVersion: 1.2.0.0
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2021
+      ValidFrom: '2021-01-01 00:00:00'
+      ValidTo: '2031-01-06 00:00:00'
+      Signature: 481cdcb5e99a23bce71ae7200e8e6746fd427251740a2347a3ab92d225c47059be14a0e52781a54d1415190779f0d104c386d93bbdfe4402664ded69a40ff6b870cf62e8f5514a7879367a27b7f3e7529f93a7ed439e7be7b4dd412289fb87a246034efcf4feb76477635f2352698382fa1a53ed90cc8da117730df4f36539704bf39cd67a7bda0cbc3d32d01bcbf561fc75080076bc810ef8c0e15ccfc41172e71b6449d8229a751542f52d323881daf460a2bab452fb5ce06124254fb2dfc929a8734351dabd63d61f5b9bf72e1b4f131df74a0d717e97b7f43f84ebc1e3a349a1facea7bf56cfba597661895f7ea7b48e6778f93698e1cb28da5b87a68a2f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
+      Version: 3
+      TBS:
+        MD5: c0189c338449a42fe8358c2c1fbecc60
+        SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
+        SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Timestamping CA
+      ValidFrom: '2016-01-07 12:00:00'
+      ValidTo: '2031-01-07 12:00:00'
+      Signature: 719512e951875669cdefddda7caa637ab378cf06374084ef4b84bfcacf0302fdc5a7c30e20422caf77f32b1f0c215a2ab705341d6aae99f827a266bf09aa60df76a43a930ff8b2d1d87c1962e85e82251ec4ba1c7b2c21e2d65b2c1435430468b2db7502e072c798d63c64e51f4810185f8938614d62462487638c91522caf2989e5781fd60b14a580d7124770b375d59385937eb69267fb536189a8f56b96c0f458690d7cc801b1b92875b7996385228c61ca79947e59fc8c0fe36fb50126b66ca5ee875121e458609bba0c2d2b6da2c47ebbc4252b4702087c49ae13b6e17c424228c61856cf4134b6665db6747bf55633222f2236b24ba24a95d8f5a68e52
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0aa125d6d6321b7e41e405da3697c215
+      Version: 3
+      TBS:
+        MD5: 8d26184fc613f89aba1cefb30fce1b53
+        SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
+        SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91440703345542411W,
+        C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen
+        Eyun Network Co., Ltd.
+      ValidFrom: '2019-04-24 00:00:00'
+      ValidTo: '2021-04-28 12:00:00'
+      Signature: 40287d210da467c6e8ff239183f0afaded732c19b48eaed1ac490ed9f5e6660576c79ca74ca3d27e2647113e26953c4da58bcbcbd2fd9ef4a402ec0f9715bc44d7c1a4c2fb3909b19e532db2acbf644434b8ad7a583192ca0abd8f8270b08f3cbd1af5874520c8d86173b5b4177a6f4c84fe1a06e4bc4d2378d6d8021c77bba07044d90a91fae6eaf3db9cb8c5954ce2ac5a67be7150a56785a5ff65ed27ec3bd9c47017a5460cd592108d84d803de5ab05d21de72829bbd5bdc42c36d2e1a4e4e0946c0d6e9987ee5634c5eb7340f2b8b30ac11a321b43d20043c88fe1164f8e18d55b00eb050e66be95f2589dc4719590d5a57213bbf51e8777f2a28e20fb4
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
+      Version: 3
+      TBS:
+        MD5: 85b79b9fe18b3766b667a26271e4c146
+        SHA1: 74ff1f4cae4c7cc002981fc5b4b01b62347bc21b
+        SHA256: 6a558777a73413544b90a528696e6ccaab26a49ea0694d59b50252147681f7e4
+        SHA384: af51a957aea8ab15498d1feb160d1304a4ebf17f02199acbf0a02eda15a33afaa5360e39d17d383521546e1a57b384d2
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 9e5b963a2e1288acab016da49f75e40187a3a532d7bcbaa97ea3d61417f7c2136b7c738f2b6ae50f265968b08e259b6ceffa6c939208c14dcf459e9c46d61e74a19b14a3fa012f4ab101e1724048111368b9369d914bd7c2391210c1c4dcbb6214142a615d4f387c661fc61bffadbe4f7f945b7343000f4d73b751cf0ef677c05bcd348cd96313aa0e6111d6f28e27fcb47bb8b91120918678ea0ed428ff2ad52438e837b2ec96bb9fbc4a1650e15ebf517d23a032c7c1949e7ac9c026a2cc2587a0127e749f2d8db1c8e784beb9d1e9debb6a4e887371e12238cb2487e9737e51b2ff98eb4e7e2fe0ca0efab35ed1ba0542a8489f83f63fc4caa8df68a05061
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
+      Version: 3
+      TBS:
+        MD5: f92649915476229b093c211c2b18e6c4
+        SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
+        SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
+    Signer:
+    - SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      Version: 1
+  Authentihash:
+    MD5: 6eb18a9f44c6022e259088a2106f048c
+    SHA1: ea9a484278d7a80a46edcd096447bbea0c892f64
+    SHA256: 1ff54579dc4b76e814495d8e1d452a6f868adf06c2de0afdc5c3878b380d0a17
+  RichPEHeaderHash:
+    MD5: 4d8a663ae2f765ff317d5e042cf62899
+    SHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
+    SHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
+  Description: DcProtect Driver
+  Company: Windows (R) Win 7 DDK provider
+  Product: 'DcProtect (R) Win10x64 driver '
+  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  MachineType: AMD64
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+- Filename: ''
+  Libraries:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  ImportedFunctions:
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltStartFiltering
+  - FltCreateCommunicationPort
+  - FltCloseCommunicationPort
+  - FltCloseClientPort
+  - FltBuildDefaultSecurityDescriptor
+  - FltFreeSecurityDescriptor
+  - _strlwr
+  - strstr
+  - RtlInitUnicodeString
+  - RtlCopyUnicodeString
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ExGetPreviousMode
+  - CmUnRegisterCallback
+  - CmRegisterCallbackEx
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoGetCurrentProcess
+  - MmIsAddressValid
+  - PsGetProcessId
+  - ObQueryNameString
+  - FsRtlIsNameInExpression
+  - sprintf
+  - _except_handler3
+  - memcpy
+  - memset
+  ExportedFunctions: ''
+  MD5: 53f103e490bc11624ef6a51a6d3bdc05
+  SHA1: 5499f1bca93a3613428e8c18ac93a93b9a7249fb
+  SHA256: 3af9c376d43321e813057ecd0403e71cafc3302139e2409ab41e254386c33ecb
+  Imphash: 2ece23bdef16ee294bd905c7ba1be589
+  Machine: I386
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-01-06 09:15:15'
+  RichPEHeaderMD5: 555e8cb2ed5b1eea11f804a11c4aef99
+  RichPEHeaderSHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
+  RichPEHeaderSHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
+  AuthentihashMD5: bc49e6eba2c3a95f1fe0d1c5c4f2fb70
+  AuthentihashSHA1: fc759e3940f05c22d3919c20d08c44d4fd806b99
+  AuthentihashSHA256: fcffb9cecbcefc399a2a08d99fcc2b797911afa26f3d69a28a139311cb61c39a
+  Sections:
+    .text:
+      Entropy: 6.308037981479057
+      Virtual Size: '0x946'
+    .rdata:
+      Entropy: 3.7031047583665897
+      Virtual Size: '0x444'
+    .data:
+      Entropy: 0.830872163407438
+      Virtual Size: '0x54'
+    PAGE:
+      Entropy: 3.895638807527667
+      Virtual Size: '0x24'
+    INIT:
+      Entropy: 5.643218995926574
+      Virtual Size: '0x452'
+    .rsrc:
+      Entropy: 3.5730720453802185
+      Virtual Size: '0x450'
+    .reloc:
+      Entropy: 5.6072871377452635
+      Virtual Size: '0x114'
+  CompanyName: Windows (R) Win 7 DDK provider
+  FileDescription: DcProtect Driver
+  InternalName: DcProtect.sys
+  OriginalFilename: DcProtect.sys
+  FileVersion: 1.2.0.0
+  ProductName: 'DcProtect (R) Win10x86 driver '
+  LegalCopyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  ProductVersion: 1.2.0.0
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2021
+      ValidFrom: '2021-01-01 00:00:00'
+      ValidTo: '2031-01-06 00:00:00'
+      Signature: 481cdcb5e99a23bce71ae7200e8e6746fd427251740a2347a3ab92d225c47059be14a0e52781a54d1415190779f0d104c386d93bbdfe4402664ded69a40ff6b870cf62e8f5514a7879367a27b7f3e7529f93a7ed439e7be7b4dd412289fb87a246034efcf4feb76477635f2352698382fa1a53ed90cc8da117730df4f36539704bf39cd67a7bda0cbc3d32d01bcbf561fc75080076bc810ef8c0e15ccfc41172e71b6449d8229a751542f52d323881daf460a2bab452fb5ce06124254fb2dfc929a8734351dabd63d61f5b9bf72e1b4f131df74a0d717e97b7f43f84ebc1e3a349a1facea7bf56cfba597661895f7ea7b48e6778f93698e1cb28da5b87a68a2f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
+      Version: 3
+      TBS:
+        MD5: c0189c338449a42fe8358c2c1fbecc60
+        SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
+        SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Timestamping CA
+      ValidFrom: '2016-01-07 12:00:00'
+      ValidTo: '2031-01-07 12:00:00'
+      Signature: 719512e951875669cdefddda7caa637ab378cf06374084ef4b84bfcacf0302fdc5a7c30e20422caf77f32b1f0c215a2ab705341d6aae99f827a266bf09aa60df76a43a930ff8b2d1d87c1962e85e82251ec4ba1c7b2c21e2d65b2c1435430468b2db7502e072c798d63c64e51f4810185f8938614d62462487638c91522caf2989e5781fd60b14a580d7124770b375d59385937eb69267fb536189a8f56b96c0f458690d7cc801b1b92875b7996385228c61ca79947e59fc8c0fe36fb50126b66ca5ee875121e458609bba0c2d2b6da2c47ebbc4252b4702087c49ae13b6e17c424228c61856cf4134b6665db6747bf55633222f2236b24ba24a95d8f5a68e52
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0aa125d6d6321b7e41e405da3697c215
+      Version: 3
+      TBS:
+        MD5: 8d26184fc613f89aba1cefb30fce1b53
+        SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
+        SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91440703345542411W,
+        C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen
+        Eyun Network Co., Ltd.
+      ValidFrom: '2019-04-24 00:00:00'
+      ValidTo: '2021-04-28 12:00:00'
+      Signature: 40287d210da467c6e8ff239183f0afaded732c19b48eaed1ac490ed9f5e6660576c79ca74ca3d27e2647113e26953c4da58bcbcbd2fd9ef4a402ec0f9715bc44d7c1a4c2fb3909b19e532db2acbf644434b8ad7a583192ca0abd8f8270b08f3cbd1af5874520c8d86173b5b4177a6f4c84fe1a06e4bc4d2378d6d8021c77bba07044d90a91fae6eaf3db9cb8c5954ce2ac5a67be7150a56785a5ff65ed27ec3bd9c47017a5460cd592108d84d803de5ab05d21de72829bbd5bdc42c36d2e1a4e4e0946c0d6e9987ee5634c5eb7340f2b8b30ac11a321b43d20043c88fe1164f8e18d55b00eb050e66be95f2589dc4719590d5a57213bbf51e8777f2a28e20fb4
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
+      Version: 3
+      TBS:
+        MD5: 85b79b9fe18b3766b667a26271e4c146
+        SHA1: 74ff1f4cae4c7cc002981fc5b4b01b62347bc21b
+        SHA256: 6a558777a73413544b90a528696e6ccaab26a49ea0694d59b50252147681f7e4
+        SHA384: af51a957aea8ab15498d1feb160d1304a4ebf17f02199acbf0a02eda15a33afaa5360e39d17d383521546e1a57b384d2
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 9e5b963a2e1288acab016da49f75e40187a3a532d7bcbaa97ea3d61417f7c2136b7c738f2b6ae50f265968b08e259b6ceffa6c939208c14dcf459e9c46d61e74a19b14a3fa012f4ab101e1724048111368b9369d914bd7c2391210c1c4dcbb6214142a615d4f387c661fc61bffadbe4f7f945b7343000f4d73b751cf0ef677c05bcd348cd96313aa0e6111d6f28e27fcb47bb8b91120918678ea0ed428ff2ad52438e837b2ec96bb9fbc4a1650e15ebf517d23a032c7c1949e7ac9c026a2cc2587a0127e749f2d8db1c8e784beb9d1e9debb6a4e887371e12238cb2487e9737e51b2ff98eb4e7e2fe0ca0efab35ed1ba0542a8489f83f63fc4caa8df68a05061
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
+      Version: 3
+      TBS:
+        MD5: f92649915476229b093c211c2b18e6c4
+        SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
+        SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
+    Signer:
+    - SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      Version: 1
+  Authentihash:
+    MD5: bc49e6eba2c3a95f1fe0d1c5c4f2fb70
+    SHA1: fc759e3940f05c22d3919c20d08c44d4fd806b99
+    SHA256: fcffb9cecbcefc399a2a08d99fcc2b797911afa26f3d69a28a139311cb61c39a
+  RichPEHeaderHash:
+    MD5: 555e8cb2ed5b1eea11f804a11c4aef99
+    SHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
+    SHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
+  Description: DcProtect Driver
+  Company: Windows (R) Win 7 DDK provider
+  Product: 'DcProtect (R) Win10x86 driver '
+  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  MachineType: I386
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+- Filename: ''
+  Libraries:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  ImportedFunctions:
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltStartFiltering
+  - FltCreateCommunicationPort
+  - FltCloseCommunicationPort
+  - FltCloseClientPort
+  - FltBuildDefaultSecurityDescriptor
+  - FltFreeSecurityDescriptor
+  - _strlwr
+  - strstr
+  - RtlInitUnicodeString
+  - RtlCopyUnicodeString
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ExGetPreviousMode
+  - CmUnRegisterCallback
+  - CmRegisterCallbackEx
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoGetCurrentProcess
+  - MmIsAddressValid
+  - PsGetProcessId
+  - ObQueryNameString
+  - FsRtlIsNameInExpression
+  - sprintf
+  - __C_specific_handler
+  ExportedFunctions: ''
+  MD5: d90cdd8f2826e5ea3faf8e258f20dc40
+  SHA1: a71c17bfeefd76a9f89e74a52a2b6fdd3efbabe2
+  SHA256: 9dee9c925f7ea84f56d4a2ad4cf9a88c4dac27380887bf9ac73e7c8108066504
+  Imphash: e800cd3299d4cda0d9e02255acc3b7dd
+  Machine: AMD64
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-01-06 09:17:24'
+  RichPEHeaderMD5: 4d8a663ae2f765ff317d5e042cf62899
+  RichPEHeaderSHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
+  RichPEHeaderSHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
+  AuthentihashMD5: 96cd68100963cf38f3090777a3dfc543
+  AuthentihashSHA1: 87c65b5bc7991c7161e41dcd609ab3cacf1c5753
+  AuthentihashSHA256: 3f085bc766d865fa012163ed7c044af25285525b1276b6cef2085efab78e9b66
+  Sections:
+    .text:
+      Entropy: 6.1933071166252995
+      Virtual Size: '0xeff'
+    .rdata:
+      Entropy: 3.4777226067165428
+      Virtual Size: '0x6dc'
+    .data:
+      Entropy: 1.1394755320256174
+      Virtual Size: '0x68'
+    .pdata:
+      Entropy: 3.502267951968367
+      Virtual Size: '0xfc'
+    PAGE:
+      Entropy: 4.079225801519104
+      Virtual Size: '0x2c'
+    INIT:
+      Entropy: 5.40476343320525
+      Virtual Size: '0x522'
+    .rsrc:
+      Entropy: 3.572691865904277
+      Virtual Size: '0x450'
+    .reloc:
+      Entropy: 3.5093407582869136
+      Virtual Size: '0x28'
+  CompanyName: Windows (R) Win 7 DDK provider
+  FileDescription: DcProtect Driver
+  InternalName: DcProtect.sys
+  OriginalFilename: DcProtect.sys
+  FileVersion: 1.2.0.0
+  ProductName: 'DcProtect (R) Win8.1x64 driver '
+  LegalCopyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  ProductVersion: 1.2.0.0
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2021
+      ValidFrom: '2021-01-01 00:00:00'
+      ValidTo: '2031-01-06 00:00:00'
+      Signature: 481cdcb5e99a23bce71ae7200e8e6746fd427251740a2347a3ab92d225c47059be14a0e52781a54d1415190779f0d104c386d93bbdfe4402664ded69a40ff6b870cf62e8f5514a7879367a27b7f3e7529f93a7ed439e7be7b4dd412289fb87a246034efcf4feb76477635f2352698382fa1a53ed90cc8da117730df4f36539704bf39cd67a7bda0cbc3d32d01bcbf561fc75080076bc810ef8c0e15ccfc41172e71b6449d8229a751542f52d323881daf460a2bab452fb5ce06124254fb2dfc929a8734351dabd63d61f5b9bf72e1b4f131df74a0d717e97b7f43f84ebc1e3a349a1facea7bf56cfba597661895f7ea7b48e6778f93698e1cb28da5b87a68a2f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
+      Version: 3
+      TBS:
+        MD5: c0189c338449a42fe8358c2c1fbecc60
+        SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
+        SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Timestamping CA
+      ValidFrom: '2016-01-07 12:00:00'
+      ValidTo: '2031-01-07 12:00:00'
+      Signature: 719512e951875669cdefddda7caa637ab378cf06374084ef4b84bfcacf0302fdc5a7c30e20422caf77f32b1f0c215a2ab705341d6aae99f827a266bf09aa60df76a43a930ff8b2d1d87c1962e85e82251ec4ba1c7b2c21e2d65b2c1435430468b2db7502e072c798d63c64e51f4810185f8938614d62462487638c91522caf2989e5781fd60b14a580d7124770b375d59385937eb69267fb536189a8f56b96c0f458690d7cc801b1b92875b7996385228c61ca79947e59fc8c0fe36fb50126b66ca5ee875121e458609bba0c2d2b6da2c47ebbc4252b4702087c49ae13b6e17c424228c61856cf4134b6665db6747bf55633222f2236b24ba24a95d8f5a68e52
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0aa125d6d6321b7e41e405da3697c215
+      Version: 3
+      TBS:
+        MD5: 8d26184fc613f89aba1cefb30fce1b53
+        SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
+        SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91440703345542411W,
+        C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen
+        Eyun Network Co., Ltd.
+      ValidFrom: '2019-04-24 00:00:00'
+      ValidTo: '2021-04-28 12:00:00'
+      Signature: 40287d210da467c6e8ff239183f0afaded732c19b48eaed1ac490ed9f5e6660576c79ca74ca3d27e2647113e26953c4da58bcbcbd2fd9ef4a402ec0f9715bc44d7c1a4c2fb3909b19e532db2acbf644434b8ad7a583192ca0abd8f8270b08f3cbd1af5874520c8d86173b5b4177a6f4c84fe1a06e4bc4d2378d6d8021c77bba07044d90a91fae6eaf3db9cb8c5954ce2ac5a67be7150a56785a5ff65ed27ec3bd9c47017a5460cd592108d84d803de5ab05d21de72829bbd5bdc42c36d2e1a4e4e0946c0d6e9987ee5634c5eb7340f2b8b30ac11a321b43d20043c88fe1164f8e18d55b00eb050e66be95f2589dc4719590d5a57213bbf51e8777f2a28e20fb4
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
+      Version: 3
+      TBS:
+        MD5: 85b79b9fe18b3766b667a26271e4c146
+        SHA1: 74ff1f4cae4c7cc002981fc5b4b01b62347bc21b
+        SHA256: 6a558777a73413544b90a528696e6ccaab26a49ea0694d59b50252147681f7e4
+        SHA384: af51a957aea8ab15498d1feb160d1304a4ebf17f02199acbf0a02eda15a33afaa5360e39d17d383521546e1a57b384d2
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 9e5b963a2e1288acab016da49f75e40187a3a532d7bcbaa97ea3d61417f7c2136b7c738f2b6ae50f265968b08e259b6ceffa6c939208c14dcf459e9c46d61e74a19b14a3fa012f4ab101e1724048111368b9369d914bd7c2391210c1c4dcbb6214142a615d4f387c661fc61bffadbe4f7f945b7343000f4d73b751cf0ef677c05bcd348cd96313aa0e6111d6f28e27fcb47bb8b91120918678ea0ed428ff2ad52438e837b2ec96bb9fbc4a1650e15ebf517d23a032c7c1949e7ac9c026a2cc2587a0127e749f2d8db1c8e784beb9d1e9debb6a4e887371e12238cb2487e9737e51b2ff98eb4e7e2fe0ca0efab35ed1ba0542a8489f83f63fc4caa8df68a05061
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
+      Version: 3
+      TBS:
+        MD5: f92649915476229b093c211c2b18e6c4
+        SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
+        SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
+    Signer:
+    - SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      Version: 1
+  Authentihash:
+    MD5: 96cd68100963cf38f3090777a3dfc543
+    SHA1: 87c65b5bc7991c7161e41dcd609ab3cacf1c5753
+    SHA256: 3f085bc766d865fa012163ed7c044af25285525b1276b6cef2085efab78e9b66
+  RichPEHeaderHash:
+    MD5: 4d8a663ae2f765ff317d5e042cf62899
+    SHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
+    SHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
+  Description: DcProtect Driver
+  Company: Windows (R) Win 7 DDK provider
+  Product: 'DcProtect (R) Win8.1x64 driver '
+  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  MachineType: AMD64
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+- Filename: ''
+  Libraries:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  ImportedFunctions:
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltStartFiltering
+  - FltCreateCommunicationPort
+  - FltCloseCommunicationPort
+  - FltCloseClientPort
+  - FltBuildDefaultSecurityDescriptor
+  - FltFreeSecurityDescriptor
+  - _strlwr
+  - strstr
+  - RtlInitUnicodeString
+  - RtlCopyUnicodeString
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ExGetPreviousMode
+  - CmUnRegisterCallback
+  - CmRegisterCallbackEx
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoGetCurrentProcess
+  - MmIsAddressValid
+  - PsGetProcessId
+  - ObQueryNameString
+  - FsRtlIsNameInExpression
+  - sprintf
+  - _except_handler3
+  - memcpy
+  - memset
+  ExportedFunctions: ''
+  MD5: c28b4a60ebd4b8c12861829cc13aa6ff
+  SHA1: ba5b4eaa7cab012b71a8a973899eeee47a12becc
+  SHA256: ff55c1f308a5694eb66a3e9ba326266c826c5341c44958831a7a59a23ed5ecc8
+  Imphash: 2ece23bdef16ee294bd905c7ba1be589
+  Machine: I386
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-01-06 09:14:24'
+  RichPEHeaderMD5: 555e8cb2ed5b1eea11f804a11c4aef99
+  RichPEHeaderSHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
+  RichPEHeaderSHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
+  AuthentihashMD5: 9674f398b8e67adf4d10637287d56acb
+  AuthentihashSHA1: c7cf5617544aea0c8df8adb71cdc1951b88cb381
+  AuthentihashSHA256: 68fcb5cf6723dd195cf6d929cf9c6aaaca649f6956eb3bd63c2c1a8391c0b21f
+  Sections:
+    .text:
+      Entropy: 6.308037981479057
+      Virtual Size: '0x946'
+    .rdata:
+      Entropy: 3.7050277120937967
+      Virtual Size: '0x444'
+    .data:
+      Entropy: 0.830872163407438
+      Virtual Size: '0x54'
+    PAGE:
+      Entropy: 3.895638807527667
+      Virtual Size: '0x24'
+    INIT:
+      Entropy: 5.643218995926574
+      Virtual Size: '0x452'
+    .rsrc:
+      Entropy: 3.5759323102278784
+      Virtual Size: '0x450'
+    .reloc:
+      Entropy: 5.6072871377452635
+      Virtual Size: '0x114'
+  CompanyName: Windows (R) Win 7 DDK provider
+  FileDescription: DcProtect Driver
+  InternalName: DcProtect.sys
+  OriginalFilename: DcProtect.sys
+  FileVersion: 1.2.0.0
+  ProductName: 'DcProtect (R) Win8.1x86 driver '
+  LegalCopyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  ProductVersion: 1.2.0.0
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2021
+      ValidFrom: '2021-01-01 00:00:00'
+      ValidTo: '2031-01-06 00:00:00'
+      Signature: 481cdcb5e99a23bce71ae7200e8e6746fd427251740a2347a3ab92d225c47059be14a0e52781a54d1415190779f0d104c386d93bbdfe4402664ded69a40ff6b870cf62e8f5514a7879367a27b7f3e7529f93a7ed439e7be7b4dd412289fb87a246034efcf4feb76477635f2352698382fa1a53ed90cc8da117730df4f36539704bf39cd67a7bda0cbc3d32d01bcbf561fc75080076bc810ef8c0e15ccfc41172e71b6449d8229a751542f52d323881daf460a2bab452fb5ce06124254fb2dfc929a8734351dabd63d61f5b9bf72e1b4f131df74a0d717e97b7f43f84ebc1e3a349a1facea7bf56cfba597661895f7ea7b48e6778f93698e1cb28da5b87a68a2f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
+      Version: 3
+      TBS:
+        MD5: c0189c338449a42fe8358c2c1fbecc60
+        SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
+        SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Timestamping CA
+      ValidFrom: '2016-01-07 12:00:00'
+      ValidTo: '2031-01-07 12:00:00'
+      Signature: 719512e951875669cdefddda7caa637ab378cf06374084ef4b84bfcacf0302fdc5a7c30e20422caf77f32b1f0c215a2ab705341d6aae99f827a266bf09aa60df76a43a930ff8b2d1d87c1962e85e82251ec4ba1c7b2c21e2d65b2c1435430468b2db7502e072c798d63c64e51f4810185f8938614d62462487638c91522caf2989e5781fd60b14a580d7124770b375d59385937eb69267fb536189a8f56b96c0f458690d7cc801b1b92875b7996385228c61ca79947e59fc8c0fe36fb50126b66ca5ee875121e458609bba0c2d2b6da2c47ebbc4252b4702087c49ae13b6e17c424228c61856cf4134b6665db6747bf55633222f2236b24ba24a95d8f5a68e52
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0aa125d6d6321b7e41e405da3697c215
+      Version: 3
+      TBS:
+        MD5: 8d26184fc613f89aba1cefb30fce1b53
+        SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
+        SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91440703345542411W,
+        C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen
+        Eyun Network Co., Ltd.
+      ValidFrom: '2019-04-24 00:00:00'
+      ValidTo: '2021-04-28 12:00:00'
+      Signature: 40287d210da467c6e8ff239183f0afaded732c19b48eaed1ac490ed9f5e6660576c79ca74ca3d27e2647113e26953c4da58bcbcbd2fd9ef4a402ec0f9715bc44d7c1a4c2fb3909b19e532db2acbf644434b8ad7a583192ca0abd8f8270b08f3cbd1af5874520c8d86173b5b4177a6f4c84fe1a06e4bc4d2378d6d8021c77bba07044d90a91fae6eaf3db9cb8c5954ce2ac5a67be7150a56785a5ff65ed27ec3bd9c47017a5460cd592108d84d803de5ab05d21de72829bbd5bdc42c36d2e1a4e4e0946c0d6e9987ee5634c5eb7340f2b8b30ac11a321b43d20043c88fe1164f8e18d55b00eb050e66be95f2589dc4719590d5a57213bbf51e8777f2a28e20fb4
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
+      Version: 3
+      TBS:
+        MD5: 85b79b9fe18b3766b667a26271e4c146
+        SHA1: 74ff1f4cae4c7cc002981fc5b4b01b62347bc21b
+        SHA256: 6a558777a73413544b90a528696e6ccaab26a49ea0694d59b50252147681f7e4
+        SHA384: af51a957aea8ab15498d1feb160d1304a4ebf17f02199acbf0a02eda15a33afaa5360e39d17d383521546e1a57b384d2
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 9e5b963a2e1288acab016da49f75e40187a3a532d7bcbaa97ea3d61417f7c2136b7c738f2b6ae50f265968b08e259b6ceffa6c939208c14dcf459e9c46d61e74a19b14a3fa012f4ab101e1724048111368b9369d914bd7c2391210c1c4dcbb6214142a615d4f387c661fc61bffadbe4f7f945b7343000f4d73b751cf0ef677c05bcd348cd96313aa0e6111d6f28e27fcb47bb8b91120918678ea0ed428ff2ad52438e837b2ec96bb9fbc4a1650e15ebf517d23a032c7c1949e7ac9c026a2cc2587a0127e749f2d8db1c8e784beb9d1e9debb6a4e887371e12238cb2487e9737e51b2ff98eb4e7e2fe0ca0efab35ed1ba0542a8489f83f63fc4caa8df68a05061
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
+      Version: 3
+      TBS:
+        MD5: f92649915476229b093c211c2b18e6c4
+        SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
+        SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
+    Signer:
+    - SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      Version: 1
+  Authentihash:
+    MD5: 9674f398b8e67adf4d10637287d56acb
+    SHA1: c7cf5617544aea0c8df8adb71cdc1951b88cb381
+    SHA256: 68fcb5cf6723dd195cf6d929cf9c6aaaca649f6956eb3bd63c2c1a8391c0b21f
+  RichPEHeaderHash:
+    MD5: 555e8cb2ed5b1eea11f804a11c4aef99
+    SHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
+    SHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
+  Description: DcProtect Driver
+  Company: Windows (R) Win 7 DDK provider
+  Product: 'DcProtect (R) Win8.1x86 driver '
+  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  MachineType: I386
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+- Filename: ''
+  Libraries:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  ImportedFunctions:
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltStartFiltering
+  - FltCreateCommunicationPort
+  - FltCloseCommunicationPort
+  - FltCloseClientPort
+  - FltBuildDefaultSecurityDescriptor
+  - FltFreeSecurityDescriptor
+  - _strlwr
+  - strstr
+  - RtlInitUnicodeString
+  - RtlCopyUnicodeString
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ExGetPreviousMode
+  - CmUnRegisterCallback
+  - CmRegisterCallbackEx
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoGetCurrentProcess
+  - MmIsAddressValid
+  - PsGetProcessId
+  - ObQueryNameString
+  - FsRtlIsNameInExpression
+  - sprintf
+  - __C_specific_handler
+  ExportedFunctions: ''
+  MD5: c52dce2bee8ec88748411e470ff531f6
+  SHA1: 47830d6d3ee2d2a643abf46a72738d77f14114bc
+  SHA256: f8d45fa03f56e2ea14920b902856666b8d44f1f1b16644baf8c1ae9a61851fb6
+  Imphash: e800cd3299d4cda0d9e02255acc3b7dd
+  Machine: AMD64
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-01-06 09:16:44'
+  RichPEHeaderMD5: 4d8a663ae2f765ff317d5e042cf62899
+  RichPEHeaderSHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
+  RichPEHeaderSHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
+  AuthentihashMD5: d23bcd43e1a50a59ecdbf9069b37207a
+  AuthentihashSHA1: 79e6df018bd867ebefb8400297f57f5d1586d10a
+  AuthentihashSHA256: 1b14ff6a1054fa4bae158111fbcaf35baeedaa9b664c8fb7241db98f7e1c6c20
+  Sections:
+    .text:
+      Entropy: 6.1933071166252995
+      Virtual Size: '0xeff'
+    .rdata:
+      Entropy: 3.4786745698115404
+      Virtual Size: '0x6dc'
+    .data:
+      Entropy: 1.1394755320256174
+      Virtual Size: '0x68'
+    .pdata:
+      Entropy: 3.502267951968367
+      Virtual Size: '0xfc'
+    PAGE:
+      Entropy: 4.079225801519104
+      Virtual Size: '0x2c'
+    INIT:
+      Entropy: 5.40476343320525
+      Virtual Size: '0x522'
+    .rsrc:
+      Entropy: 3.562368572646181
+      Virtual Size: '0x450'
+    .reloc:
+      Entropy: 3.5093407582869136
+      Virtual Size: '0x28'
+  CompanyName: Windows (R) Win 7 DDK provider
+  FileDescription: DcProtect Driver
+  InternalName: DcProtect.sys
+  OriginalFilename: DcProtect.sys
+  FileVersion: 1.2.0.0
+  ProductName: 'DcProtect (R) Win8x64 driver '
+  LegalCopyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  ProductVersion: 1.2.0.0
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2021
+      ValidFrom: '2021-01-01 00:00:00'
+      ValidTo: '2031-01-06 00:00:00'
+      Signature: 481cdcb5e99a23bce71ae7200e8e6746fd427251740a2347a3ab92d225c47059be14a0e52781a54d1415190779f0d104c386d93bbdfe4402664ded69a40ff6b870cf62e8f5514a7879367a27b7f3e7529f93a7ed439e7be7b4dd412289fb87a246034efcf4feb76477635f2352698382fa1a53ed90cc8da117730df4f36539704bf39cd67a7bda0cbc3d32d01bcbf561fc75080076bc810ef8c0e15ccfc41172e71b6449d8229a751542f52d323881daf460a2bab452fb5ce06124254fb2dfc929a8734351dabd63d61f5b9bf72e1b4f131df74a0d717e97b7f43f84ebc1e3a349a1facea7bf56cfba597661895f7ea7b48e6778f93698e1cb28da5b87a68a2f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
+      Version: 3
+      TBS:
+        MD5: c0189c338449a42fe8358c2c1fbecc60
+        SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
+        SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Timestamping CA
+      ValidFrom: '2016-01-07 12:00:00'
+      ValidTo: '2031-01-07 12:00:00'
+      Signature: 719512e951875669cdefddda7caa637ab378cf06374084ef4b84bfcacf0302fdc5a7c30e20422caf77f32b1f0c215a2ab705341d6aae99f827a266bf09aa60df76a43a930ff8b2d1d87c1962e85e82251ec4ba1c7b2c21e2d65b2c1435430468b2db7502e072c798d63c64e51f4810185f8938614d62462487638c91522caf2989e5781fd60b14a580d7124770b375d59385937eb69267fb536189a8f56b96c0f458690d7cc801b1b92875b7996385228c61ca79947e59fc8c0fe36fb50126b66ca5ee875121e458609bba0c2d2b6da2c47ebbc4252b4702087c49ae13b6e17c424228c61856cf4134b6665db6747bf55633222f2236b24ba24a95d8f5a68e52
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0aa125d6d6321b7e41e405da3697c215
+      Version: 3
+      TBS:
+        MD5: 8d26184fc613f89aba1cefb30fce1b53
+        SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
+        SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91440703345542411W,
+        C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen
+        Eyun Network Co., Ltd.
+      ValidFrom: '2019-04-24 00:00:00'
+      ValidTo: '2021-04-28 12:00:00'
+      Signature: 40287d210da467c6e8ff239183f0afaded732c19b48eaed1ac490ed9f5e6660576c79ca74ca3d27e2647113e26953c4da58bcbcbd2fd9ef4a402ec0f9715bc44d7c1a4c2fb3909b19e532db2acbf644434b8ad7a583192ca0abd8f8270b08f3cbd1af5874520c8d86173b5b4177a6f4c84fe1a06e4bc4d2378d6d8021c77bba07044d90a91fae6eaf3db9cb8c5954ce2ac5a67be7150a56785a5ff65ed27ec3bd9c47017a5460cd592108d84d803de5ab05d21de72829bbd5bdc42c36d2e1a4e4e0946c0d6e9987ee5634c5eb7340f2b8b30ac11a321b43d20043c88fe1164f8e18d55b00eb050e66be95f2589dc4719590d5a57213bbf51e8777f2a28e20fb4
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
+      Version: 3
+      TBS:
+        MD5: 85b79b9fe18b3766b667a26271e4c146
+        SHA1: 74ff1f4cae4c7cc002981fc5b4b01b62347bc21b
+        SHA256: 6a558777a73413544b90a528696e6ccaab26a49ea0694d59b50252147681f7e4
+        SHA384: af51a957aea8ab15498d1feb160d1304a4ebf17f02199acbf0a02eda15a33afaa5360e39d17d383521546e1a57b384d2
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 9e5b963a2e1288acab016da49f75e40187a3a532d7bcbaa97ea3d61417f7c2136b7c738f2b6ae50f265968b08e259b6ceffa6c939208c14dcf459e9c46d61e74a19b14a3fa012f4ab101e1724048111368b9369d914bd7c2391210c1c4dcbb6214142a615d4f387c661fc61bffadbe4f7f945b7343000f4d73b751cf0ef677c05bcd348cd96313aa0e6111d6f28e27fcb47bb8b91120918678ea0ed428ff2ad52438e837b2ec96bb9fbc4a1650e15ebf517d23a032c7c1949e7ac9c026a2cc2587a0127e749f2d8db1c8e784beb9d1e9debb6a4e887371e12238cb2487e9737e51b2ff98eb4e7e2fe0ca0efab35ed1ba0542a8489f83f63fc4caa8df68a05061
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
+      Version: 3
+      TBS:
+        MD5: f92649915476229b093c211c2b18e6c4
+        SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
+        SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
+    Signer:
+    - SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      Version: 1
+  Authentihash:
+    MD5: d23bcd43e1a50a59ecdbf9069b37207a
+    SHA1: 79e6df018bd867ebefb8400297f57f5d1586d10a
+    SHA256: 1b14ff6a1054fa4bae158111fbcaf35baeedaa9b664c8fb7241db98f7e1c6c20
+  RichPEHeaderHash:
+    MD5: 4d8a663ae2f765ff317d5e042cf62899
+    SHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
+    SHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
+  Description: DcProtect Driver
+  Company: Windows (R) Win 7 DDK provider
+  Product: 'DcProtect (R) Win8x64 driver '
+  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  MachineType: AMD64
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+- Filename: ''
+  Libraries:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  ImportedFunctions:
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltStartFiltering
+  - FltCreateCommunicationPort
+  - FltCloseCommunicationPort
+  - FltCloseClientPort
+  - FltBuildDefaultSecurityDescriptor
+  - FltFreeSecurityDescriptor
+  - _strlwr
+  - strstr
+  - RtlInitUnicodeString
+  - RtlCopyUnicodeString
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ExGetPreviousMode
+  - CmUnRegisterCallback
+  - CmRegisterCallbackEx
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoGetCurrentProcess
+  - MmIsAddressValid
+  - PsGetProcessId
+  - ObQueryNameString
+  - FsRtlIsNameInExpression
+  - sprintf
+  - _except_handler3
+  - memcpy
+  - memset
+  ExportedFunctions: ''
+  MD5: 3e9ee8418f22a8ae0e2bf6ff293988fa
+  SHA1: f8e88630dae53e0b54edefdefa36d96c3dcbd776
+  SHA256: c35cab244bd88bf0b1e7fc89c587d82763f66cf1108084713f867f72cc6f3633
+  Imphash: 2ece23bdef16ee294bd905c7ba1be589
+  Machine: I386
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-01-06 09:13:53'
+  RichPEHeaderMD5: 555e8cb2ed5b1eea11f804a11c4aef99
+  RichPEHeaderSHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
+  RichPEHeaderSHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
+  AuthentihashMD5: ac737185ad0ab4144de464bc0c1aa6a6
+  AuthentihashSHA1: 8d81b766e0a9e03109ccf5414649d95c0b0c7466
+  AuthentihashSHA256: bf1264cf5b9ca687a447a5021394db27eecf31f009185deb634b32f7ed49f620
+  Sections:
+    .text:
+      Entropy: 6.308037981479057
+      Virtual Size: '0x946'
+    .rdata:
+      Entropy: 3.7057190010151917
+      Virtual Size: '0x444'
+    .data:
+      Entropy: 0.830872163407438
+      Virtual Size: '0x54'
+    PAGE:
+      Entropy: 3.895638807527667
+      Virtual Size: '0x24'
+    INIT:
+      Entropy: 5.643218995926574
+      Virtual Size: '0x452'
+    .rsrc:
+      Entropy: 3.5681043860840607
+      Virtual Size: '0x450'
+    .reloc:
+      Entropy: 5.6072871377452635
+      Virtual Size: '0x114'
+  CompanyName: Windows (R) Win 7 DDK provider
+  FileDescription: DcProtect Driver
+  InternalName: DcProtect.sys
+  OriginalFilename: DcProtect.sys
+  FileVersion: 1.2.0.0
+  ProductName: 'DcProtect (R) Win8x86 driver '
+  LegalCopyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  ProductVersion: 1.2.0.0
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2021
+      ValidFrom: '2021-01-01 00:00:00'
+      ValidTo: '2031-01-06 00:00:00'
+      Signature: 481cdcb5e99a23bce71ae7200e8e6746fd427251740a2347a3ab92d225c47059be14a0e52781a54d1415190779f0d104c386d93bbdfe4402664ded69a40ff6b870cf62e8f5514a7879367a27b7f3e7529f93a7ed439e7be7b4dd412289fb87a246034efcf4feb76477635f2352698382fa1a53ed90cc8da117730df4f36539704bf39cd67a7bda0cbc3d32d01bcbf561fc75080076bc810ef8c0e15ccfc41172e71b6449d8229a751542f52d323881daf460a2bab452fb5ce06124254fb2dfc929a8734351dabd63d61f5b9bf72e1b4f131df74a0d717e97b7f43f84ebc1e3a349a1facea7bf56cfba597661895f7ea7b48e6778f93698e1cb28da5b87a68a2f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
+      Version: 3
+      TBS:
+        MD5: c0189c338449a42fe8358c2c1fbecc60
+        SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
+        SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Timestamping CA
+      ValidFrom: '2016-01-07 12:00:00'
+      ValidTo: '2031-01-07 12:00:00'
+      Signature: 719512e951875669cdefddda7caa637ab378cf06374084ef4b84bfcacf0302fdc5a7c30e20422caf77f32b1f0c215a2ab705341d6aae99f827a266bf09aa60df76a43a930ff8b2d1d87c1962e85e82251ec4ba1c7b2c21e2d65b2c1435430468b2db7502e072c798d63c64e51f4810185f8938614d62462487638c91522caf2989e5781fd60b14a580d7124770b375d59385937eb69267fb536189a8f56b96c0f458690d7cc801b1b92875b7996385228c61ca79947e59fc8c0fe36fb50126b66ca5ee875121e458609bba0c2d2b6da2c47ebbc4252b4702087c49ae13b6e17c424228c61856cf4134b6665db6747bf55633222f2236b24ba24a95d8f5a68e52
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0aa125d6d6321b7e41e405da3697c215
+      Version: 3
+      TBS:
+        MD5: 8d26184fc613f89aba1cefb30fce1b53
+        SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
+        SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91440703345542411W,
+        C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen
+        Eyun Network Co., Ltd.
+      ValidFrom: '2019-04-24 00:00:00'
+      ValidTo: '2021-04-28 12:00:00'
+      Signature: 40287d210da467c6e8ff239183f0afaded732c19b48eaed1ac490ed9f5e6660576c79ca74ca3d27e2647113e26953c4da58bcbcbd2fd9ef4a402ec0f9715bc44d7c1a4c2fb3909b19e532db2acbf644434b8ad7a583192ca0abd8f8270b08f3cbd1af5874520c8d86173b5b4177a6f4c84fe1a06e4bc4d2378d6d8021c77bba07044d90a91fae6eaf3db9cb8c5954ce2ac5a67be7150a56785a5ff65ed27ec3bd9c47017a5460cd592108d84d803de5ab05d21de72829bbd5bdc42c36d2e1a4e4e0946c0d6e9987ee5634c5eb7340f2b8b30ac11a321b43d20043c88fe1164f8e18d55b00eb050e66be95f2589dc4719590d5a57213bbf51e8777f2a28e20fb4
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
+      Version: 3
+      TBS:
+        MD5: 85b79b9fe18b3766b667a26271e4c146
+        SHA1: 74ff1f4cae4c7cc002981fc5b4b01b62347bc21b
+        SHA256: 6a558777a73413544b90a528696e6ccaab26a49ea0694d59b50252147681f7e4
+        SHA384: af51a957aea8ab15498d1feb160d1304a4ebf17f02199acbf0a02eda15a33afaa5360e39d17d383521546e1a57b384d2
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 9e5b963a2e1288acab016da49f75e40187a3a532d7bcbaa97ea3d61417f7c2136b7c738f2b6ae50f265968b08e259b6ceffa6c939208c14dcf459e9c46d61e74a19b14a3fa012f4ab101e1724048111368b9369d914bd7c2391210c1c4dcbb6214142a615d4f387c661fc61bffadbe4f7f945b7343000f4d73b751cf0ef677c05bcd348cd96313aa0e6111d6f28e27fcb47bb8b91120918678ea0ed428ff2ad52438e837b2ec96bb9fbc4a1650e15ebf517d23a032c7c1949e7ac9c026a2cc2587a0127e749f2d8db1c8e784beb9d1e9debb6a4e887371e12238cb2487e9737e51b2ff98eb4e7e2fe0ca0efab35ed1ba0542a8489f83f63fc4caa8df68a05061
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
+      Version: 3
+      TBS:
+        MD5: f92649915476229b093c211c2b18e6c4
+        SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
+        SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
+    Signer:
+    - SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      Version: 1
+  Authentihash:
+    MD5: ac737185ad0ab4144de464bc0c1aa6a6
+    SHA1: 8d81b766e0a9e03109ccf5414649d95c0b0c7466
+    SHA256: bf1264cf5b9ca687a447a5021394db27eecf31f009185deb634b32f7ed49f620
+  RichPEHeaderHash:
+    MD5: 555e8cb2ed5b1eea11f804a11c4aef99
+    SHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
+    SHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
+  Description: DcProtect Driver
+  Company: Windows (R) Win 7 DDK provider
+  Product: 'DcProtect (R) Win8x86 driver '
+  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  MachineType: I386
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+- Filename: ''
+  Libraries:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  ImportedFunctions:
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltStartFiltering
+  - FltCreateCommunicationPort
+  - FltCloseCommunicationPort
+  - FltCloseClientPort
+  - FltBuildDefaultSecurityDescriptor
+  - FltFreeSecurityDescriptor
+  - _strlwr
+  - strstr
+  - RtlInitUnicodeString
+  - RtlCopyUnicodeString
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ExGetPreviousMode
+  - CmUnRegisterCallback
+  - CmRegisterCallbackEx
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoGetCurrentProcess
+  - MmIsAddressValid
+  - PsGetProcessId
+  - ObQueryNameString
+  - FsRtlIsNameInExpression
+  - sprintf
+  - __C_specific_handler
+  ExportedFunctions: ''
+  MD5: 2ab9f5a66d75adb01171bb04ab4380f2
+  SHA1: 1479717fab67d98bbc3665f6b12adddfca74e0ef
+  SHA256: 1698ba7eeee6ff9272cc25b242af89190ff23fd9530f21aa8f0f3792412594f3
+  Imphash: e800cd3299d4cda0d9e02255acc3b7dd
+  Machine: AMD64
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-01-06 09:16:01'
+  RichPEHeaderMD5: c4e7e7af2fdd10d405127dc885585e78
+  RichPEHeaderSHA1: bb15c357ab3f88e7eb311098667c091cd5f129c3
+  RichPEHeaderSHA256: 7f2615ebe7385406ee5a6aba05c2a4b97cfdf498617fa8dae127640c6b6d465d
+  AuthentihashMD5: 039cffceb3ae187e569f5d727270298d
+  AuthentihashSHA1: a8b62bfd32512bd382fa1e236dbbe01a5be4cbeb
+  AuthentihashSHA256: 9923b3d6e508aa2086c66b36038b37206b0f8d26beaf87022290a2b574c2e047
+  Sections:
+    .text:
+      Entropy: 6.1933071166252995
+      Virtual Size: '0xeff'
+    .rdata:
+      Entropy: 3.5078823792385885
+      Virtual Size: '0x6cc'
+    .data:
+      Entropy: 1.1394755320256174
+      Virtual Size: '0x68'
+    .pdata:
+      Entropy: 3.530940511531345
+      Virtual Size: '0xfc'
+    PAGE:
+      Entropy: 4.079225801519104
+      Virtual Size: '0x2c'
+    INIT:
+      Entropy: 5.476024924621617
+      Virtual Size: '0x55a'
+    .rsrc:
+      Entropy: 3.561775255588161
+      Virtual Size: '0x450'
+    .reloc:
+      Entropy: 3.4420918598895933
+      Virtual Size: '0x28'
+  CompanyName: Windows (R) Win 7 DDK provider
+  FileDescription: DcProtect Driver
+  InternalName: DcProtect.sys
+  OriginalFilename: DcProtect.sys
+  FileVersion: 1.2.0.0
+  ProductName: 'DcProtect (R) Win7x64 driver '
+  LegalCopyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  ProductVersion: 1.2.0.0
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2021
+      ValidFrom: '2021-01-01 00:00:00'
+      ValidTo: '2031-01-06 00:00:00'
+      Signature: 481cdcb5e99a23bce71ae7200e8e6746fd427251740a2347a3ab92d225c47059be14a0e52781a54d1415190779f0d104c386d93bbdfe4402664ded69a40ff6b870cf62e8f5514a7879367a27b7f3e7529f93a7ed439e7be7b4dd412289fb87a246034efcf4feb76477635f2352698382fa1a53ed90cc8da117730df4f36539704bf39cd67a7bda0cbc3d32d01bcbf561fc75080076bc810ef8c0e15ccfc41172e71b6449d8229a751542f52d323881daf460a2bab452fb5ce06124254fb2dfc929a8734351dabd63d61f5b9bf72e1b4f131df74a0d717e97b7f43f84ebc1e3a349a1facea7bf56cfba597661895f7ea7b48e6778f93698e1cb28da5b87a68a2f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
+      Version: 3
+      TBS:
+        MD5: c0189c338449a42fe8358c2c1fbecc60
+        SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
+        SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Timestamping CA
+      ValidFrom: '2016-01-07 12:00:00'
+      ValidTo: '2031-01-07 12:00:00'
+      Signature: 719512e951875669cdefddda7caa637ab378cf06374084ef4b84bfcacf0302fdc5a7c30e20422caf77f32b1f0c215a2ab705341d6aae99f827a266bf09aa60df76a43a930ff8b2d1d87c1962e85e82251ec4ba1c7b2c21e2d65b2c1435430468b2db7502e072c798d63c64e51f4810185f8938614d62462487638c91522caf2989e5781fd60b14a580d7124770b375d59385937eb69267fb536189a8f56b96c0f458690d7cc801b1b92875b7996385228c61ca79947e59fc8c0fe36fb50126b66ca5ee875121e458609bba0c2d2b6da2c47ebbc4252b4702087c49ae13b6e17c424228c61856cf4134b6665db6747bf55633222f2236b24ba24a95d8f5a68e52
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0aa125d6d6321b7e41e405da3697c215
+      Version: 3
+      TBS:
+        MD5: 8d26184fc613f89aba1cefb30fce1b53
+        SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
+        SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91440703345542411W,
+        C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen
+        Eyun Network Co., Ltd.
+      ValidFrom: '2019-04-24 00:00:00'
+      ValidTo: '2021-04-28 12:00:00'
+      Signature: 40287d210da467c6e8ff239183f0afaded732c19b48eaed1ac490ed9f5e6660576c79ca74ca3d27e2647113e26953c4da58bcbcbd2fd9ef4a402ec0f9715bc44d7c1a4c2fb3909b19e532db2acbf644434b8ad7a583192ca0abd8f8270b08f3cbd1af5874520c8d86173b5b4177a6f4c84fe1a06e4bc4d2378d6d8021c77bba07044d90a91fae6eaf3db9cb8c5954ce2ac5a67be7150a56785a5ff65ed27ec3bd9c47017a5460cd592108d84d803de5ab05d21de72829bbd5bdc42c36d2e1a4e4e0946c0d6e9987ee5634c5eb7340f2b8b30ac11a321b43d20043c88fe1164f8e18d55b00eb050e66be95f2589dc4719590d5a57213bbf51e8777f2a28e20fb4
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
+      Version: 3
+      TBS:
+        MD5: 85b79b9fe18b3766b667a26271e4c146
+        SHA1: 74ff1f4cae4c7cc002981fc5b4b01b62347bc21b
+        SHA256: 6a558777a73413544b90a528696e6ccaab26a49ea0694d59b50252147681f7e4
+        SHA384: af51a957aea8ab15498d1feb160d1304a4ebf17f02199acbf0a02eda15a33afaa5360e39d17d383521546e1a57b384d2
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 9e5b963a2e1288acab016da49f75e40187a3a532d7bcbaa97ea3d61417f7c2136b7c738f2b6ae50f265968b08e259b6ceffa6c939208c14dcf459e9c46d61e74a19b14a3fa012f4ab101e1724048111368b9369d914bd7c2391210c1c4dcbb6214142a615d4f387c661fc61bffadbe4f7f945b7343000f4d73b751cf0ef677c05bcd348cd96313aa0e6111d6f28e27fcb47bb8b91120918678ea0ed428ff2ad52438e837b2ec96bb9fbc4a1650e15ebf517d23a032c7c1949e7ac9c026a2cc2587a0127e749f2d8db1c8e784beb9d1e9debb6a4e887371e12238cb2487e9737e51b2ff98eb4e7e2fe0ca0efab35ed1ba0542a8489f83f63fc4caa8df68a05061
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
+      Version: 3
+      TBS:
+        MD5: f92649915476229b093c211c2b18e6c4
+        SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
+        SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
+    Signer:
+    - SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      Version: 1
+  Authentihash:
+    MD5: 039cffceb3ae187e569f5d727270298d
+    SHA1: a8b62bfd32512bd382fa1e236dbbe01a5be4cbeb
+    SHA256: 9923b3d6e508aa2086c66b36038b37206b0f8d26beaf87022290a2b574c2e047
+  RichPEHeaderHash:
+    MD5: c4e7e7af2fdd10d405127dc885585e78
+    SHA1: bb15c357ab3f88e7eb311098667c091cd5f129c3
+    SHA256: 7f2615ebe7385406ee5a6aba05c2a4b97cfdf498617fa8dae127640c6b6d465d
+  Description: DcProtect Driver
+  Company: Windows (R) Win 7 DDK provider
+  Product: 'DcProtect (R) Win7x64 driver '
+  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  MachineType: AMD64
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+- Filename: ''
+  Libraries:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+  ImportedFunctions:
+  - FltRegisterFilter
+  - FltUnregisterFilter
+  - FltStartFiltering
+  - FltCreateCommunicationPort
+  - FltCloseCommunicationPort
+  - FltCloseClientPort
+  - FltBuildDefaultSecurityDescriptor
+  - FltFreeSecurityDescriptor
+  - _strlwr
+  - strstr
+  - RtlInitUnicodeString
+  - RtlCopyUnicodeString
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ExGetPreviousMode
+  - CmUnRegisterCallback
+  - CmRegisterCallbackEx
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoGetCurrentProcess
+  - MmIsAddressValid
+  - PsGetProcessId
+  - ObQueryNameString
+  - FsRtlIsNameInExpression
+  - sprintf
+  - _except_handler3
+  - memcpy
+  - memset
+  ExportedFunctions: ''
+  MD5: 2c957aa79231fad8e221e035db6d0d81
+  SHA1: 6de3d5c2e33d91eef975a30bc07b0e53a68e77b8
+  SHA256: 55b5bcbf8fb4e1ce99d201d3903d785888c928aa26e947ce2cdb99eefd0dae03
+  Imphash: 2ece23bdef16ee294bd905c7ba1be589
+  Machine: I386
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2021-01-06 09:13:00'
+  RichPEHeaderMD5: 331d5fbc7084c96f08da4705084c4bc3
+  RichPEHeaderSHA1: 6e6ddabbb0c5d4d90269650e65477ae67bf17947
+  RichPEHeaderSHA256: 50cf67aa86ee44eeccc56f3ebc2f441c284470cd58f40766cfa05f534542983e
+  AuthentihashMD5: 007b4e42848dd962ea718006bab02c73
+  AuthentihashSHA1: b19d88aecf348d25a9dbe3d884a4069e5f79c49a
+  AuthentihashSHA256: 52b1c4667ef36a02a0e6d7f147b8d4bc0e30645e6c88bd2984e53abc693bc18e
+  Sections:
+    .text:
+      Entropy: 6.308037981479057
+      Virtual Size: '0x946'
+    .rdata:
+      Entropy: 3.7023655017712978
+      Virtual Size: '0x444'
+    .data:
+      Entropy: 0.830872163407438
+      Virtual Size: '0x54'
+    PAGE:
+      Entropy: 3.895638807527667
+      Virtual Size: '0x24'
+    INIT:
+      Entropy: 5.649483257924144
+      Virtual Size: '0x46a'
+    .rsrc:
+      Entropy: 3.5678412574106426
+      Virtual Size: '0x450'
+    .reloc:
+      Entropy: 5.595838177817881
+      Virtual Size: '0x11c'
+  CompanyName: Windows (R) Win 7 DDK provider
+  FileDescription: DcProtect Driver
+  InternalName: DcProtect.sys
+  OriginalFilename: DcProtect.sys
+  FileVersion: 1.2.0.0
+  ProductName: 'DcProtect (R) Win7x86 driver '
+  LegalCopyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  ProductVersion: 1.2.0.0
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2021
+      ValidFrom: '2021-01-01 00:00:00'
+      ValidTo: '2031-01-06 00:00:00'
+      Signature: 481cdcb5e99a23bce71ae7200e8e6746fd427251740a2347a3ab92d225c47059be14a0e52781a54d1415190779f0d104c386d93bbdfe4402664ded69a40ff6b870cf62e8f5514a7879367a27b7f3e7529f93a7ed439e7be7b4dd412289fb87a246034efcf4feb76477635f2352698382fa1a53ed90cc8da117730df4f36539704bf39cd67a7bda0cbc3d32d01bcbf561fc75080076bc810ef8c0e15ccfc41172e71b6449d8229a751542f52d323881daf460a2bab452fb5ce06124254fb2dfc929a8734351dabd63d61f5b9bf72e1b4f131df74a0d717e97b7f43f84ebc1e3a349a1facea7bf56cfba597661895f7ea7b48e6778f93698e1cb28da5b87a68a2f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
+      Version: 3
+      TBS:
+        MD5: c0189c338449a42fe8358c2c1fbecc60
+        SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
+        SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Timestamping CA
+      ValidFrom: '2016-01-07 12:00:00'
+      ValidTo: '2031-01-07 12:00:00'
+      Signature: 719512e951875669cdefddda7caa637ab378cf06374084ef4b84bfcacf0302fdc5a7c30e20422caf77f32b1f0c215a2ab705341d6aae99f827a266bf09aa60df76a43a930ff8b2d1d87c1962e85e82251ec4ba1c7b2c21e2d65b2c1435430468b2db7502e072c798d63c64e51f4810185f8938614d62462487638c91522caf2989e5781fd60b14a580d7124770b375d59385937eb69267fb536189a8f56b96c0f458690d7cc801b1b92875b7996385228c61ca79947e59fc8c0fe36fb50126b66ca5ee875121e458609bba0c2d2b6da2c47ebbc4252b4702087c49ae13b6e17c424228c61856cf4134b6665db6747bf55633222f2236b24ba24a95d8f5a68e52
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0aa125d6d6321b7e41e405da3697c215
+      Version: 3
+      TBS:
+        MD5: 8d26184fc613f89aba1cefb30fce1b53
+        SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
+        SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91440703345542411W,
+        C=CN, ST=Guangdong, L=Jiangmen, O=Jiangmen Eyun Network Co., Ltd., CN=Jiangmen
+        Eyun Network Co., Ltd.
+      ValidFrom: '2019-04-24 00:00:00'
+      ValidTo: '2021-04-28 12:00:00'
+      Signature: 40287d210da467c6e8ff239183f0afaded732c19b48eaed1ac490ed9f5e6660576c79ca74ca3d27e2647113e26953c4da58bcbcbd2fd9ef4a402ec0f9715bc44d7c1a4c2fb3909b19e532db2acbf644434b8ad7a583192ca0abd8f8270b08f3cbd1af5874520c8d86173b5b4177a6f4c84fe1a06e4bc4d2378d6d8021c77bba07044d90a91fae6eaf3db9cb8c5954ce2ac5a67be7150a56785a5ff65ed27ec3bd9c47017a5460cd592108d84d803de5ab05d21de72829bbd5bdc42c36d2e1a4e4e0946c0d6e9987ee5634c5eb7340f2b8b30ac11a321b43d20043c88fe1164f8e18d55b00eb050e66be95f2589dc4719590d5a57213bbf51e8777f2a28e20fb4
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
+      Version: 3
+      TBS:
+        MD5: 85b79b9fe18b3766b667a26271e4c146
+        SHA1: 74ff1f4cae4c7cc002981fc5b4b01b62347bc21b
+        SHA256: 6a558777a73413544b90a528696e6ccaab26a49ea0694d59b50252147681f7e4
+        SHA384: af51a957aea8ab15498d1feb160d1304a4ebf17f02199acbf0a02eda15a33afaa5360e39d17d383521546e1a57b384d2
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 9e5b963a2e1288acab016da49f75e40187a3a532d7bcbaa97ea3d61417f7c2136b7c738f2b6ae50f265968b08e259b6ceffa6c939208c14dcf459e9c46d61e74a19b14a3fa012f4ab101e1724048111368b9369d914bd7c2391210c1c4dcbb6214142a615d4f387c661fc61bffadbe4f7f945b7343000f4d73b751cf0ef677c05bcd348cd96313aa0e6111d6f28e27fcb47bb8b91120918678ea0ed428ff2ad52438e837b2ec96bb9fbc4a1650e15ebf517d23a032c7c1949e7ac9c026a2cc2587a0127e749f2d8db1c8e784beb9d1e9debb6a4e887371e12238cb2487e9737e51b2ff98eb4e7e2fe0ca0efab35ed1ba0542a8489f83f63fc4caa8df68a05061
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
+      Version: 3
+      TBS:
+        MD5: f92649915476229b093c211c2b18e6c4
+        SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
+        SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
+    Signer:
+    - SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA
+      Version: 1
+  Authentihash:
+    MD5: 007b4e42848dd962ea718006bab02c73
+    SHA1: b19d88aecf348d25a9dbe3d884a4069e5f79c49a
+    SHA256: 52b1c4667ef36a02a0e6d7f147b8d4bc0e30645e6c88bd2984e53abc693bc18e
+  RichPEHeaderHash:
+    MD5: 331d5fbc7084c96f08da4705084c4bc3
+    SHA1: 6e6ddabbb0c5d4d90269650e65477ae67bf17947
+    SHA256: 50cf67aa86ee44eeccc56f3ebc2f441c284470cd58f40766cfa05f534542983e
+  Description: DcProtect Driver
+  Company: Windows (R) Win 7 DDK provider
+  Product: 'DcProtect (R) Win7x86 driver '
+  Copyright: Copyright (C) 2012-2020 Jiangmen Eyun Network Co.,Ltd. 2019
+  MachineType: I386
+  Imports:
+  - FLTMGR.SYS
+  - ntoskrnl.exe
+Tags:
+- DcProtect.sys

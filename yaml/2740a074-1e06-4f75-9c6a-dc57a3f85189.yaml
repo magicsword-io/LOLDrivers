@@ -1,50 +1,31 @@
-Id: 2740a074-1e06-4f75-9c6a-dc57a3f85189
+Acknowledgement:
+  Handle: ''
+  Person: ''
 Author: Michael Haag
-Created: '2023-03-04'
-MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create POORTRY1.sys binPath=C:\windows\temp\POORTRY1.sys type=kernel
     && sc.exe start POORTRY1.sys
   Description: Driver categorized as POORTRY by Mandiant.
-  Usecase: Elevate privileges
-  Privileges: kernel
   OperatingSystem: Windows 10
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-- ''
-Acknowledgement:
-  Person: ''
-  Handle: ''
+  Privileges: kernel
+  Usecase: Elevate privileges
+Created: '2023-03-04'
 Detection: []
+Id: 2740a074-1e06-4f75-9c6a-dc57a3f85189
 KnownVulnerableSamples:
-- Filename: POORTRY1.sys
-  MD5: acac842a46f3501fe407b1db1b247a0b
-  SHA1: 31fac347aa26e92db4d8c9e1ba37a7c7a2234f08
-  SHA256: 575e58b62afab094c20c296604dc3b7dd2e1a50f5978d8ee24b7dca028e97316
-  Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  - Microsoft Windows Third Party Component CA 2014
-  - Microsoft Root Certificate Authority 2010
-  Date: ''
-  Publisher: ''
-  Company: ''
-  Description: ''
-  Product: ''
-  ProductVersion: ''
-  FileVersion: ''
-  MachineType: AMD64
-  OriginalFilename: ''
-  Authentihash:
+- Authentihash:
     MD5: 887c566bdc8ed5231f45a37845d5ee89
     SHA1: e6ab2bbad89502d8985381b33d7351eb97cb2b78
     SHA256: 565733b6e6d8f7b9661f04a3b4f29372f5dec080512551204b92ac4916a144cb
-  InternalName: ''
+  Company: ''
   Copyright: ''
-  Imports:
-  - ntoskrnl.exe
+  CreationTimestamp: '2013-12-12 10:14:51'
+  Date: ''
+  Description: ''
   ExportedFunctions: ''
+  FileVersion: ''
+  Filename: POORTRY1.sys
   ImportedFunctions:
   - ExAllocatePoolWithTag
   - IoDeleteSymbolicLink
@@ -64,6 +45,42 @@ KnownVulnerableSamples:
   - DbgPrint
   - KeBugCheckEx
   - __chkstk
+  Imports:
+  - ntoskrnl.exe
+  InternalName: ''
+  MD5: acac842a46f3501fe407b1db1b247a0b
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: b8bd897847f9fb59fd2cd13a53dd67bd
+    SHA1: 3db6a537756d68d4e961e37bc17960881214eca4
+    SHA256: 0418235f7944cd80b88942aa7c406a353062afb5f821b5d7e8bd9628e6db3325
+  SHA1: 31fac347aa26e92db4d8c9e1ba37a7c7a2234f08
+  SHA256: 575e58b62afab094c20c296604dc3b7dd2e1a50f5978d8ee24b7dca028e97316
+  Sections:
+    .text:
+      Entropy: 5.937121058090373
+      Virtual Size: '0xb9b'
+    .rdata:
+      Entropy: 4.490966677486938
+      Virtual Size: '0x1ac'
+    .data:
+      Entropy: 0.5159719988134768
+      Virtual Size: '0x110'
+    .pdata:
+      Entropy: 3.286805294060428
+      Virtual Size: '0x90'
+    INIT:
+      Entropy: 5.062533995350018
+      Virtual Size: '0x2c0'
+  Signature:
+  - Microsoft Windows Hardware Compatibility Publisher
+  - Microsoft Windows Third Party Component CA 2014
+  - Microsoft Root Certificate Authority 2010
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -81,6 +98,7 @@ KnownVulnerableSamples:
         MD5: fdc11a5676aed4e9cc0c09eeb7450dfb
         SHA1: 4902077d9a05d4231b791d3b05bafa4a79132f03
         SHA256: 5db56c23d83bf67c7152e28ad4a684a7372b4ae4f52afe7a81ce91eef94caec3
+        SHA384: c952d7f0e0ea5216ce4400601fb7c0829f0f3fcd6eb2b5b9112fbe45d133e00c4abd660f8e1794f7ac4ef95123e2c0ab
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -94,32 +112,18 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 3300000057ee4d659a923e7c10000000000057
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
-  RichPEHeaderHash:
-    MD5: b8bd897847f9fb59fd2cd13a53dd67bd
-    SHA1: 3db6a537756d68d4e961e37bc17960881214eca4
-    SHA256: 0418235f7944cd80b88942aa7c406a353062afb5f821b5d7e8bd9628e6db3325
-  Sections:
-    .text:
-      Entropy: 5.937121058090373
-      Virtual Size: '0xb9b'
-    .rdata:
-      Entropy: 4.490966677486938
-      Virtual Size: '0x1ac'
-    .data:
-      Entropy: 0.5159719988134768
-      Virtual Size: '0x110'
-    .pdata:
-      Entropy: 3.286805294060428
-      Virtual Size: '0x90'
-    INIT:
-      Entropy: 5.062533995350018
-      Virtual Size: '0x2c0'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-12-12 10:14:51'
+  Imphash: 3fd33d5b3b52e2db91983ac4b1d7a3c4
+  LoadsDespiteHVCI: 'FALSE'
+MitreID: T1068
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+- ''
 Tags:
 - POORTRY1.sys
+Verified: 'TRUE'
