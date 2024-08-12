@@ -151,9 +151,34 @@ def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, 
     for hi in header_infos:
         # Get YAML info to determine the type of rule
         yaml_info = get_yaml_info_for_sample(hi['sha256'][0], yaml_infos)
-        
-        if yaml_info is None:
-            print(f"No YAML info found for file with SHA256: {hi['sha256'][0]}. Skipping this file.")
+        # If no YAML info is found, skip the rule generation
+        if not yaml_info:
+            Log.info("No YAML info found for %s - skipping YARA rule generation" % hi['file_names'])
+            continue
+        # Category and values
+        type_driver = "vulnerable driver"
+        type_string = "PUA_VULN"
+        type_desc = "vulnerable"
+        type_score = 40
+        if renamed:
+            type_score = 70
+            type_string = "PUA_VULN_Renamed"
+        # for malicious drivers
+        if 'Category' in yaml_info:
+            #print(yaml_info['Category'])
+            if yaml_info['Category'] == "malicious":
+                type_driver = "malicious"
+                type_string = "MAL_"
+                type_desc = "malicious"
+                type_score = 70
+                if strict:
+                    type_score = 85
+        # File names (use the file names in field 'Tags' otherwise use the driver file names)
+        file_names = hi['file_names']
+        if 'Tags' in yaml_info:
+            file_names = yaml_info['Tags']
+        # Apply filter
+        if driver_filter is not type_driver:
             continue
 
         # Category and values
@@ -254,6 +279,7 @@ def get_yaml_info_for_sample(sample_hash, yaml_infos):
 	# Loop over YAML infos and find the sample using its hash
 	for yi in yaml_infos:
 		for sample_info in yi['KnownVulnerableSamples']:
+			# print(sample_info)
 			sample_hashes = []
 			if 'MD5' in sample_info:
 				sample_hashes.append(sample_info['MD5'])
@@ -320,6 +346,7 @@ if __name__ == '__main__':
 	parser.add_argument('-y', nargs='*', 
                     help='Path to YAML files with information on the drivers (can be used multiple times)',
                     metavar='yaml-files', default=['../../yaml/'])
+	parser.add_argument('-f', help="Write a log file)", metavar='log-file', default='yara-generator.log')
 	parser.add_argument('-o', help="Output folder for rules", metavar='output-folder', default='../../detections/yara/')
 	parser.add_argument('--debug', action='store_true', default=False, help='Debug output')
 
@@ -332,6 +359,10 @@ if __name__ == '__main__':
 	Log.setLevel(logging.INFO)
 	if args.debug:
 		Log.setLevel(logging.DEBUG)
+	# File Handler
+	fileHandler = logging.FileHandler(args.f)
+	fileHandler.setFormatter(logFormatter)
+	Log.addHandler(fileHandler)
 	# Console Handler
 	consoleHandler = logging.StreamHandler()
 	consoleHandler.setFormatter(logFormatter)
@@ -360,8 +391,8 @@ if __name__ == '__main__':
 	yara_rules_vulnerable_drivers_strict_renamed = generate_yara_rules(file_infos, yaml_infos, args.debug, driver_filter="vulnerable driver",  strict=True, renamed=True)
 
 	# Write the output files
-	# The sets
-	output_file = os.path.join(args.o, 'yara-rules_vuln_drivers.yar')
+	# we write the recommended files to the root folder and other sets to a sub folder named 'other'
+	output_file = os.path.join(args.o, 'other', 'yara-rules_vuln_drivers.yar')
 	with open(output_file, 'w') as fh:
 		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_vulnerable_drivers), output_file))
 		fh.write("\n".join(yara_rules_vulnerable_drivers))
@@ -373,15 +404,13 @@ if __name__ == '__main__':
 	with open(output_file, 'w') as fh:
 		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_vulnerable_drivers_strict), output_file))
 		fh.write("\n".join(yara_rules_vulnerable_drivers_strict))
-	output_file = os.path.join(args.o, 'yara-rules_mal_drivers_strict.yar')
+	output_file = os.path.join(args.o, 'other', 'yara-rules_mal_drivers_strict.yar')
 	with open(output_file, 'w') as fh:
 		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_malicious_drivers_strict), output_file))
 		fh.write("\n".join(yara_rules_malicious_drivers_strict))
-	output_file = os.path.join(args.o, 'yara-rules_vuln_drivers_strict_renamed.yar')
+	output_file = os.path.join(args.o, 'other', 'yara-rules_vuln_drivers_strict_renamed.yar')
 	with open(output_file, 'w') as fh:
 		Log.info("[+] Writing %d YARA rules to the output file %s" % (len(yara_rules_vulnerable_drivers_strict_renamed), output_file))
 		fh.write("\n".join(yara_rules_vulnerable_drivers_strict_renamed))
 	# The single rules for each driver
 	output_path_single_rules = os.path.join(args.o, '/single-rules')
-	
-	
