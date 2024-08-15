@@ -1,132 +1,173 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
-Author: Michael Haag
+Id: bd9f084e-b235-4978-bf2a-5f1dc02937df
+Author: rahulwt
+Created: '2024-08-15'
+MitreID: T1068
 Category: vulnerable driver
+Verified: 'FALSE'
 Commands:
-  Command: sc.exe create mtcBSv64.sys binPath=C:\windows\temp\mtcBSv64.sys type=kernel
-    && sc.exe start mtcBSv64.sys
+  Command: 'sc.exe create TfSysMon.sys binPath=C:\windows\temp\TfSysMon.sys type=kernel && sc.exe start TfSysMon.sys'
   Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c9cf1d627078f63a36bbde364cd0d5f2be1714124d186c06db5bcdf549a109f8.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 3bc629e8-7bf8-40c2-965b-87eb155e0065
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- 'https://github.com/BlackSnufkin/BYOVD/tree/main/TfSysMon-Killer'
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
 KnownVulnerableSamples:
-- Authentihash:
-    MD5: c467ed521f199f0d5c1c3705dabf2896
-    SHA1: 8533994513c4f65feb48806b36f42ec9fe21a4c3
-    SHA256: da8945bd5c693c0593c9d0e3bda49bb1c6007cb25643c95708c6b10bef7c136a
-  Company: MiTAC Technology Corporation
-  Copyright: Copyright (C) 2007 MiTAC Technology Corporation
-  CreationTimestamp: '2009-08-06 03:55:21'
+- Filename: 'TfSysMon.sys'
+  MD5: 761f2e2b759389a472bd3d94141742b9
+  SHA1: c881f43c7fe94a6f056a84da8e9a32fe56d8dd9c
+  SHA256: 1c1a4ca2cbac9fe5954763a20aeb82da9b10d028824f42fff071503dcbe15856
+  Signature: ''
   Date: ''
-  Description: MiTAC System Service Provider
-  ExportedFunctions: ''
-  FileVersion: 21, 1, 4, 0
-  Filename: mtcBSv64.sys
-  ImportedFunctions:
-  - ExAllocatePoolWithTag
-  - KeClearEvent
-  - IoDeleteSymbolicLink
-  - ExFreePoolWithTag
-  - KeInitializeMutex
-  - IoRegisterDeviceInterface
-  - IoSetDeviceInterfaceState
-  - IoBuildSynchronousFsdRequest
-  - RtlInitUnicodeString
-  - IoDeleteDevice
-  - KeSetEvent
-  - KeInitializeEvent
-  - KeReleaseSpinLock
-  - IoDetachDevice
-  - KeReleaseMutex
-  - RtlFreeUnicodeString
-  - ExInterlockedInsertTailList
-  - PoStartNextPowerIrp
-  - IofCompleteRequest
-  - KeWaitForSingleObject
-  - IoGetAttachedDeviceReference
-  - IoAttachDeviceToDeviceStack
-  - PoCallDriver
-  - IoCreateSymbolicLink
-  - ObfDereferenceObject
-  - IoCreateDevice
-  - IofCallDriver
-  - KeAcquireSpinLockRaiseToDpc
-  - IoBuildDeviceIoControlRequest
-  - MmUnmapIoSpace
-  - MmMapIoSpace
-  - ExAllocatePool
-  - RtlTimeToTimeFields
-  - KeBugCheckEx
-  - RtlUnicodeToMultiByteN
-  Imports:
-  - ntoskrnl.exe
-  InternalName: mtcBSv64.sys
-  MD5: 9dfd73dadb2f1c7e9c9d2542981aaa63
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: mtcBSv64.sys
-  Product: MiTAC System Service Provider
-  ProductVersion: 21, 1, 4, 0
   Publisher: ''
+  Company: PC Tools
+  Description: ThreatFire System Monitor
+  Product: ThreatFire
+  ProductVersion: 4.6.0.26
+  FileVersion: 4.10.2.1
+  MachineType: AMD64
+  OriginalFilename: TfSysMon.sys
+  Imphash: 9e7c36ff0dc8862002283773ace05f9e
+  Authentihash:
+    MD5: bf20ffaec0c931ba26ba3b4fa1168b8a
+    SHA1: 4e572da2a16b1588b2140f6739dc1dbd82cc1292
+    SHA256: 39f5d351878f7216a69d0330c40e5b2793c6d4d3ee72f0673cf7555ea9dbe86a
   RichPEHeaderHash:
-    MD5: daaf4821d19b88fb6db2599ec300fd8e
-    SHA1: 14d38637b13e8d4054ede49d56edd62db160f8ed
-    SHA256: ffbf2f5e23cd5dd9b5d5b4738a27f212d992e86a752ae88744e37cb46b9b5c8b
-  SHA1: 29a190727140f40cea9514a6420f5a195e36386b
-  SHA256: c9cf1d627078f63a36bbde364cd0d5f2be1714124d186c06db5bcdf549a109f8
+    MD5: 7401835ee57bfad89c8355b1bd87ef20
+    SHA1: 5467c4177559d5b83ce52dd4c8f1366c7ad5ca20
+    SHA256: b40447d856fa680f34064911a1f0285f58dac4ec40e90b306c546ce11615a005
   Sections:
     .text:
-      Entropy: 6.507248243028505
-      Virtual Size: '0x3423'
+      Entropy: 6.326690300828168
+      Virtual Size: '0xa0b8'
     .rdata:
-      Entropy: 5.097449640471522
-      Virtual Size: '0xb7c'
+      Entropy: 5.328583885941854
+      Virtual Size: '0xca0'
     .data:
-      Entropy: 2.1507312168138233
-      Virtual Size: '0x430'
+      Entropy: 0.6238885848006501
+      Virtual Size: '0x7e0'
     .pdata:
-      Entropy: 3.9956432850134944
-      Virtual Size: '0x234'
-    PAGE:
-      Entropy: 6.076398540339076
-      Virtual Size: '0x10f6'
+      Entropy: 4.439637717036265
+      Virtual Size: '0x480'
     INIT:
-      Entropy: 5.39989405154638
-      Virtual Size: '0x5e6'
+      Entropy: 5.125170195862425
+      Virtual Size: '0xcc4'
     .rsrc:
-      Entropy: 3.3428301145592196
-      Virtual Size: '0x3d0'
+      Entropy: 3.2918275791152984
+      Virtual Size: '0x3f8'
     .reloc:
-      Entropy: 3.4647779319666974
-      Virtual Size: '0x116'
-  Signature:
-  - Mitac Technology Corporation
-  - VeriSign Class 3 Code Signing 2004 CA
-  - VeriSign Class 3 Public Primary CA
+      Entropy: 1.2636865525783176
+      Virtual Size: '0x30'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2010-02-01 20:16:19'
+  InternalName: TfSysMon
+  Copyright: "Copyright \xA9 2005-2009 PC Tools. All Rights Reserved."
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - PsLookupProcessByProcessId
+  - RtlDowncaseUnicodeString
+  - RtlInitUnicodeString
+  - KeSetEvent
+  - MmGetSystemRoutineAddress
+  - KeInitializeEvent
+  - ZwQuerySystemInformation
+  - KeReleaseSpinLock
+  - KeUnstackDetachProcess
+  - KeInitializeTimer
+  - PsCreateSystemThread
+  - DbgBreakPoint
+  - ZwQueryValueKey
+  - ExAllocatePool
+  - ExInterlockedInsertTailList
+  - PsTerminateSystemThread
+  - KeQueryTimeIncrement
+  - ZwClose
+  - ObReferenceObjectByHandle
+  - KeWaitForSingleObject
+  - KeSetTimer
+  - PsGetVersion
+  - ExInterlockedRemoveHeadList
+  - ZwQueryInformationProcess
+  - PsGetCurrentProcessId
+  - ObfDereferenceObject
+  - KeCancelTimer
+  - ZwQueryInformationFile
+  - KeWaitForMultipleObjects
+  - RtlUpcaseUnicodeChar
+  - ObOpenObjectByPointer
+  - KeStackAttachProcess
+  - PsLookupThreadByThreadId
+  - ZwAllocateVirtualMemory
+  - ZwOpenKey
+  - KeAcquireSpinLockRaiseToDpc
+  - ExReleaseFastMutex
+  - RtlAnsiStringToUnicodeString
+  - ExAcquireFastMutex
+  - PsSetLoadImageNotifyRoutine
+  - IoFreeWorkItem
+  - RtlInitAnsiString
+  - PsSetCreateThreadNotifyRoutine
+  - RtlUnicodeStringToAnsiString
+  - PsSetCreateProcessNotifyRoutine
+  - RtlEqualUnicodeString
+  - RtlFreeUnicodeString
+  - IoAllocateWorkItem
+  - ZwOpenProcess
+  - RtlCompareMemory
+  - FsRtlDissectName
+  - PsGetCurrentThreadId
+  - IoQueueWorkItem
+  - ExAcquireResourceExclusiveLite
+  - KeLeaveCriticalRegion
+  - RtlAppendUnicodeToString
+  - ZwDeleteValueKey
+  - ZwSetValueKey
+  - RtlDeleteNoSplay
+  - KeEnterCriticalRegion
+  - ObQueryNameString
+  - ExReleaseResourceLite
+  - ZwEnumerateValueKey
+  - RtlAppendUnicodeStringToString
+  - RtlCompareUnicodeString
+  - RtlCopyUnicodeString
+  - ExInitializeResourceLite
+  - ZwDeleteKey
+  - RtlSplay
+  - ZwEnumerateKey
+  - ZwQueryKey
+  - IoBuildDeviceIoControlRequest
+  - IoDeleteDevice
+  - IoGetDeviceObjectPointer
+  - InitSafeBootMode
+  - IofCompleteRequest
+  - IoGetRequestorProcessId
+  - IoCreateSymbolicLink
+  - MmIsAddressValid
+  - IoCreateDevice
+  - ZwTerminateProcess
+  - IofCallDriver
+  - ZwOpenThread
+  - RtlDeleteElementGenericTableAvl
+  - RtlInsertElementGenericTableAvl
+  - ZwReadFile
+  - RtlGetElementGenericTableAvl
+  - IoCreateFile
+  - RtlIsGenericTableEmptyAvl
+  - ExAcquireResourceSharedLite
+  - RtlInitializeGenericTableAvl
+  - RtlUnicodeStringToInteger
+  - RtlLookupElementGenericTableAvl
+  - RtlEnumerateGenericTableWithoutSplayingAvl
+  - KeBugCheckEx
+  - __C_specific_handler
   Signatures:
   - CertificatesInfo: ''
     SignerInfo: ''
@@ -173,20 +214,20 @@ KnownVulnerableSamples:
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
         SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
-    - Subject: C=TW, ST=Taiwan, L=Taipei, O=Mitac Technology Corporation, OU=Digital
-        ID Class 3 , Microsoft Software Validation v2, CN=Mitac Technology Corporation
-      ValidFrom: '2008-10-08 00:00:00'
-      ValidTo: '2009-10-23 23:59:59'
-      Signature: 9c744d221ef49ac5485f8833994046192117e43bba976d71dfb3c8c75596b460638f786855f09fa612ee759ca9dde70bf7bcc5d5fbd6b106b17a8220371d0ebfac391f197f97d4c1d3220612c1ecc219fcad6d1e91e58fc1233253b14dd792a0c382cdea0e1d863e27bed56d5a3b39530db0973a425e0c4febb349965a6312d12bf12d6c67bbc6a3020c9a0de56eb295df368e3ee6f27ccb48d98216a6648432b9731981838fdb72417a163f7883556926398afdd4b16226da80cd8ae58d16ba1d06449f59db81545741b3a8657dbfc1645b3aa4e15dd758b7556c57bd82580a22c1a63c48003d948da81cdda831c8ffe2da7779bf7c22bd596ada4a446b7191
+    - Subject: C=AU, ST=New South Wales, L=North Sydney, O=PC Tools, OU=Digital ID
+        Class 3 , Microsoft Software Validation v2, CN=PC Tools
+      ValidFrom: '2008-07-18 00:00:00'
+      ValidTo: '2011-08-06 23:59:59'
+      Signature: 247f30abadfba4d717be28260bc929394b837b4940a81c250cba8415892271ea306bc6c741112227dc8afd0419b93220a342d20987a085564886139a5f6ebf3f0b7c4a599e6419c5f9de6d58ff3fa620b4987e60d29a277d9d4a38cc7ed64487f94033bad2a92c49aa814b533332d9dae2e6f142f52163f407a43fd6a6ee0351fc40f0c1969584b0ed9aedfda8477b14febbccdcbd0d65645bc0cbf0b34a6cb52e7d6b9ca739d46b986d9e38bfced59b4fa952c916d67a0be9d6157e3d1f3f4023e64d4da93102eab9cfe63d2fc860501a60c8e786e9d446e9545b06178026b8390a3aae5e0d681499b468d6cb9b44afa0b5597dcb6ca920cfb01bae21208c7a
       SignatureAlgorithmOID: 1.2.840.113549.1.1.5
       IsCertificateAuthority: false
-      SerialNumber: 6088078ee11491f60ccddef11374431a
+      SerialNumber: 3942fe1de9b44298ffbec71ba408f092
       Version: 3
       TBS:
-        MD5: b2b41fe37981c6cd7f41eb207443bf3b
-        SHA1: 2c72e3c0f306a754b1c2f235eb2e1e9b8a5a4a19
-        SHA256: 2b6a21c61ca95ed2727b13f085a67f552a66f45b13d9db2943ed96a062dd3089
-        SHA384: ef4cebd45206c18ea14e7ff1bffe3cfe4b26714128f4d064036a793aa65728fccf6b82b4d6e123152f4dd22688a80bf4
+        MD5: 9fd69d78f600dc8a17faa7b89a9ca51d
+        SHA1: f086710273cc2bd48d97f3bd8be55cdd80042d9d
+        SHA256: ed120b5be5d481a5ea7e3d8ae546185f6d5c9262a827b49faebcb3f0edfaeede
+        SHA384: be5320882ee52f54c3797d7b6dc4ac5cb812543ce52fae65c1939ecd4aad8c5715dbd1fe2ecdf00d2e86cc04fb840b8b
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -201,16 +242,10 @@ KnownVulnerableSamples:
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
         SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
-    - SerialNumber: 6088078ee11491f60ccddef11374431a
+    - SerialNumber: 3942fe1de9b44298ffbec71ba408f092
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
-  Imphash: 71e84092e69114f0792419cb8b2b0fd1
-  LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Tags:
-- mtcBSv64.sys
-Verified: 'TRUE'
+- 'TfSysMon.sys'
