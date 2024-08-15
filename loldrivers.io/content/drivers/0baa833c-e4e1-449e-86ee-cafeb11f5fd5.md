@@ -741,7 +741,7 @@ Confirmed vulnerable driver from Microsoft Block List
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/0baa833c-e4e1-449e-86ee-cafeb11f5fd5.yaml)
 
-*last_updated:* 2024-08-12
+*last_updated:* 2024-08-15
 
 {{< /column >}}
 {{< /block >}}
