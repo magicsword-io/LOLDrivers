@@ -86,7 +86,7 @@ def get_metadata(driver, bytes_form):
 
     pe = lief.PE.parse(driver)
 
-    if pe == None:
+    if not isinstance(pe, lief._lief.PE.Binary):
         return None, None, None, None
 
     metadata = {}
