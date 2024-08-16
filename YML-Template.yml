@@ -2,52 +2,53 @@
 # Use this template to create similar YAML files
 # Note that our enrichment process will fill everything within the KnownVulnerableSamples section.
 
-Name: FILENAME.sys # Example: ADV64DRV.sys
+Id: UUIDv4 # Example: 77363871-44a7-4d98-9fdc-46d7db0352f2
+Tags:
+    - FILENAME.sys # Example: ADV64DRV.sys
 Author: Your Name # Example: John Doe
 Created: 'YYYY-MM-DD' # Example: '2023-04-15'
 MitreID: TXXXX # Example: T1000
 CVE:
-- CVE-XXXX-XXXX # Example: CVE-2023-20222
+    - CVE-XXXX-XXXX # Example: CVE-2023-20222
 Category: Category Name # Example: vulnerable driver
 Verified: 'TRUE or FALSE' # Example: 'TRUE'
 Commands:
-  Command: 'Command example' # Example: 'sc.exe create FILENAME.sys binPath=C:\windows\temp\FILENAME.sys type=kernel && sc.exe start FILENAME.sys'
-  Description: 'Command description' # Example: 'Create and start FILENAME.sys'
-  Usecase: Use case description # Example: 'Load a kernel driver'
-  Privileges: Required privileges # Example: kernel
-  OperatingSystem: Operating system # Example: Windows 10
+    Command: 'Command example' # Example: 'sc.exe create FILENAME.sys binPath=C:\windows\temp\FILENAME.sys type=kernel && sc.exe start FILENAME.sys'
+    Description: 'Command description' # Example: 'Create and start FILENAME.sys'
+    Usecase: Use case description # Example: 'Load a kernel driver'
+    Privileges: Required privileges # Example: kernel
+    OperatingSystem: Operating system # Example: Windows 10
 Resources:
-- ' Resource URL' # Example: 'https://www.example.com/resource'
+    - 'Resource URL' # Example: 'https://www.example.com/resource'
 Acknowledgement:
-  Person: 'Person name' # Example: 'Jane Smith'
-  Handle: 'Handle name' # Example: '@janesmith'
+    Person: 'Person name' # Example: 'Jane Smith'
+    Handle: 'Handle name' # Example: '@janesmith'
 Detection:
-- type: Detection Type # Example: BlockRule
-  value: Detection method description # Example: Block rule URL
+-   type: Detection Type # Example: BlockRule
+    value: Detection method description # Example: Block rule URL
 KnownVulnerableSamples:
-- Filename: FILENAME.sys # Example: ADV64DRV.sys
-  MD5: MD5 hash # Example: 778b7feea3c750d44745d3bf294bd4ce
-  SHA1: SHA1 hash # Example: 2261198385d62d2117f50f631652eded0ecc71db
-  SHA256: SHA256 hash # Example: 04a85e359525d662338cae86c1e59b1d7aa9bd12b920e8067503723dc1e03162
-  Signature:
-  - 'Signature example' # Example: 'FUJITSU LIMITED'
-  Date: File creation date # Example: 01:30 AM 08/29/2006
-  Publisher: Publisher name # Example: FUJITSU LIMITED
-  Company: Company name # Example: FUJITSU LIMITED.
-  Description: File description # Example: 'Kernel driver'
-  Product: Product name # Example: MicrosoftR WindowsR Operating System
-  ProductVersion: Product version # Example: 2, 0, 0, 0
-  FileVersion: File version # Example: 2, 0, 0, 0
-  MachineType: Machine type # Example: AMD64
-  OriginalFilename: Original filename # Example: ADV64DRV.sys
-  Authentihash:
-    MD5: MD5 hash # Example: e1c188570d8720f9c35e194e17a7fd36
-    SHA1: SHA1 hash # Example: ca6b0d932e5ac9dbe1242aca48ba93a14cf9d151
-    SHA256: SHA256 hash # Example: b2b37ef379ada79d2abe78375312bfcd4b518139bc525a522c2a6329ba097cc4
-  InternalName: Internal name # Example: ADV64DRV.sys
-  Copyright: Copyright information # Example: Copyright(C) FUJITSU LIMITED 2005
-  Imports:
-  - Imported libraries # Example: ntoskrnl.exe
-  ExportedFunctions: Exported functions # Example: DriverEntry, UnloadDriver
-  PDBPath: PDB file path # Example: c:\symbols\FILENAME.pdb
-
+-   Filename: FILENAME.sys # Example: ADV64DRV.sys
+    MD5: MD5 hash # Example: 778b7feea3c750d44745d3bf294bd4ce
+    SHA1: SHA1 hash # Example: 2261198385d62d2117f50f631652eded0ecc71db
+    SHA256: SHA256 hash # Example: 04a85e359525d662338cae86c1e59b1d7aa9bd12b920e8067503723dc1e03162
+    Signature:
+        - 'Signature example' # Example: 'FUJITSU LIMITED'
+    Date: File creation date # Example: 01:30 AM 08/29/2006
+    Publisher: Publisher name # Example: FUJITSU LIMITED
+    Company: Company name # Example: FUJITSU LIMITED.
+    Description: File description # Example: 'Kernel driver'
+    Product: Product name # Example: MicrosoftR WindowsR Operating System
+    ProductVersion: Product version # Example: 2, 0, 0, 0
+    FileVersion: File version # Example: 2, 0, 0, 0
+    MachineType: Machine type # Example: AMD64
+    OriginalFilename: Original filename # Example: ADV64DRV.sys
+    Authentihash:
+        MD5: MD5 hash # Example: e1c188570d8720f9c35e194e17a7fd36
+        SHA1: SHA1 hash # Example: ca6b0d932e5ac9dbe1242aca48ba93a14cf9d151
+        SHA256: SHA256 hash # Example: b2b37ef379ada79d2abe78375312bfcd4b518139bc525a522c2a6329ba097cc4
+    InternalName: Internal name # Example: ADV64DRV.sys
+    Copyright: Copyright information # Example: Copyright(C) FUJITSU LIMITED 2005
+    Imports:
+        - Imported libraries # Example: ntoskrnl.exe
+    ExportedFunctions: Exported functions # Example: DriverEntry, UnloadDriver
+    PDBPath: PDB file path # Example: c:\symbols\FILENAME.pdb
