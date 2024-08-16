@@ -1,13 +1,13 @@
 Id: 35a9afeb-18f1-4c02-a3aa-830e300138ae
 Tags:
 - netflt.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-07-22'
 MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
-Verified: 'TRUE'
 Commands:
     Command: ''
     Description: Confirmed vulnerable driver from Microsoft Block List
@@ -16,12 +16,12 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: ''
     value: ''
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: e6afe5e6540dab647a06673be116690b

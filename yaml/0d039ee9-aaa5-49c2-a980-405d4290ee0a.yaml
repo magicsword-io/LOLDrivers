@@ -1,11 +1,11 @@
 Id: 0d039ee9-aaa5-49c2-a980-405d4290ee0a
 Tags:
 - telephonuAfY.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-07-11'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create telephonuAfY.sys binPath=C:\windows\temp\telephonuAfY.sys
         type=kernel && sc.exe start telephonuAfY.sys
@@ -25,10 +25,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://blog.talosintelligence.com/undocumented-reddriver/
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 43b75d04464038f6a49bdbe6b1e8b622

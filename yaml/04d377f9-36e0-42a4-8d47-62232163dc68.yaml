@@ -1,11 +1,11 @@
 Id: 04d377f9-36e0-42a4-8d47-62232163dc68
 Tags:
 - iomem64.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create iomem64.sys binPath=C:\windows\temp\iomem64.sys type=kernel
         && sc.exe start iomem64.sys
@@ -15,9 +15,6 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://github.com/namazso/physmem_drivers
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/3d23bdbaf9905259d858df5bf991eb23d2dc9f4ecda7f9f77839691acef1b8c4.yara
@@ -41,6 +38,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 9b6609bd5d9d8de37273fe2d355ae349

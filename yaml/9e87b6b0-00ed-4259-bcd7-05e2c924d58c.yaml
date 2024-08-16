@@ -1,11 +1,11 @@
 Id: 9e87b6b0-00ed-4259-bcd7-05e2c924d58c
 Tags:
 - BSMEMx64.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create BSMEMx64.sys binPath=C:\windows\temp\BSMEMx64.sys type=kernel
         && sc.exe start BSMEMx64.sys
@@ -15,9 +15,6 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/f929bead59e9424ab90427b379dcdd63fbfe0c4fb5e1792e3a1685541cd5ec65.yara
@@ -39,6 +36,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 464c033940c536ca2b627ba616f33fd0

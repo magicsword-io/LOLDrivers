@@ -1,11 +1,11 @@
 Id: cfd36b2e-cf96-498e-aeb6-ee20e7b33bbb
 Tags:
 - magdrvamd64.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create magdrvamd64.sys binPath=C:\windows\temp\magdrvamd64.sys     type=kernel
         && sc.exe start magdrvamd64.sys
@@ -16,10 +16,10 @@ Commands:
 Resources:
 - https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html
 - ''
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 4bc9c678b740fdbb6da3da4af3444c09

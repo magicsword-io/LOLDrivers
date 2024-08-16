@@ -2,11 +2,11 @@ Id: 142453a2-a24d-4b35-8922-6d5939f1c0fc
 Tags:
 - semav6msr.sys
 - semav6msr64.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create semav6msr.sys binPath=C:\windows\temp\semav6msr.sys type=kernel
         && sc.exe start semav6msr.sys
@@ -17,10 +17,10 @@ Commands:
 Resources:
 - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 79553d83580570e382d3b9c7e101df2b

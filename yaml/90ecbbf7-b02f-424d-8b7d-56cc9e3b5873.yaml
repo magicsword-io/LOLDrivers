@@ -1,11 +1,11 @@
 Id: 90ecbbf7-b02f-424d-8b7d-56cc9e3b5873
 Tags:
 - eneio64.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create eneio64.sys binPath=C:\windows\temp\eneio64.sys type=kernel
         && sc.exe start eneio64.sys
@@ -15,10 +15,10 @@ Commands:
     OperatingSystem: Windows 10
 Resources:
 - Internal Research
+Detection: []
 Acknowledgement:
     Person: ''
     Handle: ''
-Detection: []
 KnownVulnerableSamples:
 -   Filename: eneio64.sys
     MD5: 66066d9852bc65988fb4777f0ff3fbb4

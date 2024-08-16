@@ -1,13 +1,13 @@
 Id: a2c3f6e9-25a5-4b75-8c6b-ad2d4e155822
 Tags:
 - directio.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-07-22'
 MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
-Verified: 'TRUE'
 Commands:
     Command: ''
     Description: Confirmed vulnerable driver from Microsoft Block List
@@ -16,12 +16,12 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: ''
     value: ''
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 6f37ada0b6fac68e49db4573cca8a982

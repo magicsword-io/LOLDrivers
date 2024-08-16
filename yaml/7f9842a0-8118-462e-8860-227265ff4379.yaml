@@ -1,11 +1,11 @@
 Id: 7f9842a0-8118-462e-8860-227265ff4379
 Tags:
 - NTIOLib.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create NTIOLib.sys binPath=C:\windows\temp\NTIOLib.sys type=kernel
         && sc.exe start NTIOLib.sys
@@ -15,9 +15,6 @@ Commands:
     OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-    Person: ''
-    Handle: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -29,6 +26,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Person: ''
+    Handle: ''
 KnownVulnerableSamples:
 -   Filename: NTIOLib.sys
     MD5: 4d99d02f49e027332a0a9c31c674e13b

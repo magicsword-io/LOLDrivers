@@ -1,11 +1,11 @@
 Id: 84ccb68d-ce34-4aa2-98d5-7f473c2e1b07
 Tags:
 - SysInfo.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create SysInfo.sys binPath=C:\windows\temp\SysInfo.sys type=kernel
         && sc.exe start SysInfo.sys
@@ -15,10 +15,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://github.com/namazso/physmem_drivers
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 0f56e9fddae9389425d93099ad609867

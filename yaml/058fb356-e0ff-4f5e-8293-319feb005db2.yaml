@@ -1,11 +1,11 @@
 Id: 058fb356-e0ff-4f5e-8293-319feb005db2
 Tags:
 - bandai.sys
+Verified: 'FALSE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
     Command: sc.exe create bandai.sys binPath=C:\windows\temp\bandai.sys type=kernel
         && sc.exe start bandai.sys
@@ -15,10 +15,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Company: ''
     Date: ''

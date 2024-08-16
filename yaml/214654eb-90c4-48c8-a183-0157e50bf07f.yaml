@@ -1,11 +1,11 @@
 Id: 214654eb-90c4-48c8-a183-0157e50bf07f
 Tags:
 - MsIo64.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create MsIo64.sys binPath=C:\windows\temp\MsIo64.sys type=kernel
         && sc.exe start MsIo64.sys
@@ -15,9 +15,6 @@ Commands:
     OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-    Person: ''
-    Handle: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -29,6 +26,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Person: ''
+    Handle: ''
 KnownVulnerableSamples:
 -   Filename: MsIo64.sys
     MD5: 88a6d84f4f1cc188741271ac1999a4e9

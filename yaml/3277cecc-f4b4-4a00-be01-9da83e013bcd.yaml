@@ -1,11 +1,11 @@
 Id: 3277cecc-f4b4-4a00-be01-9da83e013bcd
 Tags:
 - wantd_5.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-02-28'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create wantd_5.sys binPath=C:\windows\temp\wantd_5.sys type=kernel
         && sc.exe start wantd_5.sys
@@ -17,9 +17,6 @@ Resources:
 - https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
 - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
 - ''
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/b9dad0131c51e2645e761b74a71ebad2bf175645fa9f42a4ab0e6921b83306e3.yara
@@ -41,6 +38,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 7c35b7a9bf59a63b84f252906732edde

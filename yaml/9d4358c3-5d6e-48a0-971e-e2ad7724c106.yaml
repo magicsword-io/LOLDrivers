@@ -1,11 +1,11 @@
 Id: 9d4358c3-5d6e-48a0-971e-e2ad7724c106
 Tags:
 - filwfp.sys
+Verified: 'TRUE'
 Author: VirarK
 Created: '2024-06-20'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create filwfp.sys binPath=C:\windows\temp\filwfp.sys type=kernel
         && sc.exe start filwfp.sys
@@ -17,10 +17,10 @@ Commands:
     OperatingSystem: Windows 10
 Resources:
 - https://github.com/zeze-zeze/WindowsKernelVuln/tree/master/CVE-2023-1444
+Detection: []
 Acknowledgement:
     Person: ''
     Handle: ''
-Detection: []
 KnownVulnerableSamples:
 -   Filename: ''
     MD5: 09a85a7798059699231c111176a56a16

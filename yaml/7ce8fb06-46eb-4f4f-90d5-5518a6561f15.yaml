@@ -2,11 +2,11 @@ Id: 7ce8fb06-46eb-4f4f-90d5-5518a6561f15
 Tags:
 - gmer64.sys
 - superman.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-05-22'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create gmer64.sys binPath=C:\windows\temp\gmer64.sys type=kernel
         && sc.exe start gmer64.sys
@@ -21,9 +21,6 @@ Resources:
 - https://github.com/gtworek/PSBits/blob/master/Misc/KillWithLolDriver.ps1
 - https://github.com/ZeroMemoryEx/Blackout
 - https://github.com/b1-team/superman
-Acknowledgement:
-    Handle: hfiref0x
-    Person: hfiref0x
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/18c909a2b8c5e16821d6ef908f56881aa0ecceeaccb5fa1e54995935fcfd12f7.yara
@@ -45,6 +42,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: hfiref0x
+    Person: hfiref0x
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 7514f440c5b9e5c4a0498e4489b76d62

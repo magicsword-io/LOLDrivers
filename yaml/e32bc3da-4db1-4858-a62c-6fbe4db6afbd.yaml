@@ -1,11 +1,11 @@
 Id: e32bc3da-4db1-4858-a62c-6fbe4db6afbd
 Tags:
 - RTCore64.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel
         && sc.exe start RTCore64.sys
@@ -23,10 +23,10 @@ Resources:
 - https://news.sophos.com/en-us/2022/10/04/blackbyte-ransomware-returns/
 - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 - https://github.com/VoidSec/Exploit-Development/tree/b82b6d3ac1cce66221101d3e0f4634aa64cb4ca7/windows/x64/kernel/RTCore64_MSI_Afterburner_v.4.6.4.16117
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 538e5e595c61d2ea8defb7b047784734

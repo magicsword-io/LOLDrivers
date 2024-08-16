@@ -1,11 +1,11 @@
 Id: f3215c19-8053-458c-81a5-90a74c5d2e6d
 Tags:
 - CITMDRV_AMD64.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create CITMDRV_AMD64.sys binPath=C:\windows\temp\CITMDRV_AMD64.sys     type=kernel
         && sc.exe start CITMDRV_AMD64.sys
@@ -15,10 +15,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://github.com/namazso/physmem_drivers
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 6df250bd96e46a522bd7536100737f13

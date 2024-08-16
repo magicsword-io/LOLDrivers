@@ -1,11 +1,11 @@
 Id: 4d365dd0-34c3-492e-a2bd-c16266796ae5
 Tags:
 - ALSysIO64.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create ALSysIO64.sys binPath=C:\windows\temp\ALSysIO64.sys type=kernel
         && sc.exe start ALSysIO64.sys
@@ -15,9 +15,6 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://github.com/namazso/physmem_drivers
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/7196187fb1ef8d108b380d37b2af8efdeb3ca1f6eefd37b5dc114c609147216d.yara
@@ -43,6 +40,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 86be5dbedcfcd517b9b602436cd985eb

@@ -1,11 +1,11 @@
 Id: fb783760-cb3f-4cf4-b4ac-8edb756b9821
 Tags:
 - atlAccess.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
 Created: '2023-11-02'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create atlAccesssys binPath= C:\windows\temp\atlAccesssys.sys
         type=kernel && sc.exe start atlAccesssys
@@ -21,10 +21,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Company: Windows (R) Win 7 DDK provider
     Date: ''

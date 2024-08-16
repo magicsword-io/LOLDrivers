@@ -1,11 +1,11 @@
 Id: f7f88ef4-ada4-4210-a40d-9d84142ef0fb
 Tags:
 - 7.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-03-04'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create 7.sys binPath=C:\windows\temp\7.sys type=kernel && sc.exe
         start 7.sys
@@ -16,10 +16,10 @@ Commands:
 Resources:
 - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
 - ''
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: f147f4f5f6dcaf5d0e5481418ef02c42

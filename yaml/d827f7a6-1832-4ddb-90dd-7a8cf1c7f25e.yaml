@@ -1,11 +1,11 @@
 Id: d827f7a6-1832-4ddb-90dd-7a8cf1c7f25e
 Tags:
 - LcTkA.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-03-04'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create LcTkA.sys binPath=C:\windows\temp\LcTkA.sys type=kernel
         && sc.exe start LcTkA.sys
@@ -24,10 +24,10 @@ Commands:
 Resources:
 - https://www.sentinelone.com/labs/driving-through-defenses-targeted-attacks-leverage-signed-malicious-microsoft-drivers/
 - ''
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: b663d79a688800d84065ccc2809874b7

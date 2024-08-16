@@ -1,11 +1,11 @@
 Id: 670dc258-78b5-4552-a16b-b41917c86f8d
 Tags:
 - driver7-x86.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create driver7-x86.sys binPath=C:\windows\temp\driver7-x86.sys     type=kernel
         && sc.exe start driver7-x86.sys
@@ -15,9 +15,6 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://github.com/Chigusa0w0/AsusDriversPrivEscala
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/42851a01469ba97cdc38939b10cf9ea13237aa1f6c37b1ac84904c5a12a81fa0.yara
@@ -39,6 +36,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: c5d6296b11390f68dc48dcec40990676

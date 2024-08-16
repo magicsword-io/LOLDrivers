@@ -1,13 +1,13 @@
 Id: cf94939a-703f-46a4-917b-d6af7e0685ef
 Tags:
 - mapmom.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-07-22'
 MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
-Verified: 'TRUE'
 Commands:
     Command: ''
     Description: Confirmed vulnerable driver from Microsoft Block List
@@ -16,12 +16,12 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: ''
     value: ''
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 37458813b5115cbf06552da28fefbbbb

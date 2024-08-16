@@ -1,11 +1,11 @@
 Id: a02ee964-a21e-4b08-9c98-a730c90bfd53
 Tags:
 - LMIinfo.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-11'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create LMIinfo binPath=C:\windows\temp\LMIinfo.sys type=kernel
         && sc.exe start LMIinfo.sys
@@ -15,9 +15,6 @@ Commands:
     OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-    Person: Michael Alfaro
-    Handle: '@_mmpte_software'
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -29,6 +26,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Person: Michael Alfaro
+    Handle: '@_mmpte_software'
 KnownVulnerableSamples:
 -   Filename: LMIinfo.sys
     MD5: d4f7c14e92b36c341c41ae93159407dd

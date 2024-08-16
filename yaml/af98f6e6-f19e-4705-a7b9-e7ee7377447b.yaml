@@ -1,11 +1,11 @@
 Id: af98f6e6-f19e-4705-a7b9-e7ee7377447b
 Tags:
 - fildds.sys
+Verified: 'TRUE'
 Author: VirarK
 Created: '2024-06-20'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create fildds.sys binPath=C:\windows\temp\fildds.sys type=kernel
         && sc.exe start fildds.sys
@@ -20,10 +20,10 @@ Commands:
     OperatingSystem: Windows 10
 Resources:
 - https://github.com/zeze-zeze/WindowsKernelVuln/tree/master/CVE-2023-1444
+Detection: []
 Acknowledgement:
     Person: ''
     Handle: ''
-Detection: []
 KnownVulnerableSamples:
 -   Filename: ''
     MD5: afdb17f38361130453ea1098c7ddb754

@@ -1,11 +1,11 @@
 Id: 4f0a65a7-9a01-40cb-8d95-0844515103e6
 Tags:
 - avalueio.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
 Created: '2023-11-02'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create avalueiosys binPath= C:\windows\temp\avalueiosys.sys type=kernel
         && sc.exe start avalueiosys
@@ -21,9 +21,6 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -35,6 +32,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Company: ' Avalue Technology Inc.'
     Date: ''

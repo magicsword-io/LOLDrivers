@@ -2,11 +2,11 @@ Id: 57354c82-ff9c-4a54-8377-d195e4ff0a26
 Tags:
 - Mhyprot2.sys
 - mhyprot.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali, Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create mhyprot.sys binPath=C:\windows\temp\mhyprot.sys type=kernel
         && sc.exe start mhyprot.sys
@@ -21,10 +21,10 @@ Resources:
 - https://github.com/elastic/protections-artifacts/blob/932baf346cc8a743f1963ad3d4565b42ed17bebe/yara/rules/Windows_VulnDriver_Mhyprot.yar
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 - https://github.com/kagurazakasanae/Mhyprot2DrvControl/tree/main
+Detection: []
 Acknowledgement:
     Person: ''
     Handle: ''
-Detection: []
 KnownVulnerableSamples:
 -   Filename: mhyprot.sys
     MD5: 8b779fe1d71839ad361226f66f1b3fe5

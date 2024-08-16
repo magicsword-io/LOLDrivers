@@ -1,13 +1,13 @@
 Id: e368efc7-cf69-47ae-8204-f69dac000b22
 Tags:
 - iobitunlocker.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-07-22'
 MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
-Verified: 'TRUE'
 Commands:
     Command: ''
     Description: Confirmed vulnerable driver from Microsoft Block List
@@ -16,9 +16,6 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: ''
     value: ''
@@ -32,6 +29,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 0a3c811c84c0731bb691dd1c2f51d932

@@ -1,11 +1,11 @@
 Id: c7f76931-e24c-4d94-9e1f-5a083da581b4
 Tags:
 - fd3b7234419fafc9bdd533f48896ed73_b816c5cd.sys
+Verified: 'TRUE'
 Author: Viral Maniar
 Created: '2023-07-25'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create fd3b7234419fafc9bdd533f48896ed73_b816c5cd.sys binPath=C:\windows\temp\fd3b7234419fafc9bdd533f48896ed73_b816c5cd.sys
         type=kernel && sc.exe start fd3b7234419fafc9bdd533f48896ed73_b816c5cd.sys
@@ -17,10 +17,10 @@ Commands:
 Resources:
 - https://news.sophos.com/en-us/2022/12/13/signed-driver-malware-moves-up-the-software-trust-chain/
 - https://github.com/magicsword-io/LOLDrivers/issues/114
+Detection: []
 Acknowledgement:
     Person: ''
     Handle: ''
-Detection: []
 KnownVulnerableSamples:
 -   Filename: ''
     MD5: fd3b7234419fafc9bdd533f48896ed73

@@ -1,11 +1,11 @@
 Id: 809e7c77-f0fa-46fb-862c-71969ae0c032
 Tags:
 - ktmutil7ODM.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-07-12'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create ktmutil7ODM.sys binPath=C:\windows\temp\ktmutil7ODM.sys
         type=kernel && sc.exe start ktmutil7ODM.sys
@@ -25,10 +25,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://blog.talosintelligence.com/undocumented-reddriver/
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 66027547e4679835323129a1aa2427eb

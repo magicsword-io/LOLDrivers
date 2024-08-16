@@ -1,11 +1,11 @@
 Id: ee6fa2de-d388-416c-862d-24385c152fad
 Tags:
 - msr.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-12-02'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create msr.sys binPath=C:\windows\temp\msr.sys type=kernel &&
         sc.exe start msr.sys
@@ -16,10 +16,10 @@ Commands:
 Resources:
 - https://twitter.com/wdormann/status/1699878227261411699
 - https://learn.microsoft.com/en-us/windows/security/application-security/application-control/windows-defender-application-control/design/microsoft-recommended-driver-block-rules
+Detection: []
 Acknowledgement:
     Person: ''
     Handle: ''
-Detection: []
 KnownVulnerableSamples:
 -   Filename: msr.sys
     Libraries:

@@ -1,11 +1,11 @@
 Id: 87752fb8-e9f6-4235-91e2-c4343677d817
 Tags:
 - mimidrv.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-05-22'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create mimidrv.sys binPath=C:\windows\temp\mimidrv.sys type=kernel
         && sc.exe start mimidrv.sys
@@ -19,9 +19,6 @@ Resources:
 - https://github.com/hfiref0x/KDU
 - https://posts.specterops.io/mimidrv-in-depth-4d273d19e148
 - https://github.com/gentilkiwi/mimikatz
-Acknowledgement:
-    Handle: hfiref0x
-    Person: hfiref0x
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/200f98655d1f46d2599c2c8605ebb7e335fee3883a32135ca1a81e09819bc64a.yara
@@ -43,6 +40,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: hfiref0x
+    Person: hfiref0x
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 45fc2828291ee88335899461a2e7d8b7

@@ -1,11 +1,11 @@
 Id: 0567c6c4-282f-406f-9369-7f876b899c25
 Tags:
 - procexp.Sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create procexp.sys binPath=C:\windows\temp\procexp.Sys type=kernel
         && sc.exe start procexp.Sys
@@ -22,9 +22,6 @@ Resources:
 - https://github.com/Yaxser/Backstab/blob/master/resources/PROCEXP.sys
 - https://news.sophos.com/en-us/2023/04/19/aukill-edr-killer-malware-abuses-process-explorer-driver/
 - https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
-Acknowledgement:
-    Person: ''
-    Handle: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/075de997497262a9d105afeadaaefc6348b25ce0e0126505c24aa9396c251e85.yara
@@ -106,6 +103,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Person: ''
+    Handle: ''
 KnownVulnerableSamples:
 -   Filename: procexp.Sys
     MD5: e6cb1728c50bd020e531d19a14904e1c

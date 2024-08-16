@@ -1,11 +1,11 @@
 Id: de365e80-45cb-48fb-af6e-0a96a5ad7777
 Tags:
 - CtiIo64.sys
+Verified: 'True'
 Author: zwclose
 Created: '2023-05-22'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'True'
 Commands:
     Command: sc.exe create CtiIo64.sys binPath=C:\windows\temp\CtiIo64.sys type=kernel
         && sc.exe start CtiIo64.sys
@@ -17,9 +17,6 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/pull/81
-Acknowledgement:
-    Handle: '@zwclose'
-    Person: zwclose
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/2121a2bb8ebbf2e6e82c782b6f3c6b7904f686aa495def25cf1cf52a42e16109.yara
@@ -41,6 +38,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: '@zwclose'
+    Person: zwclose
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 6bbd44ee42e3bbc6b4acc12fe11d765a

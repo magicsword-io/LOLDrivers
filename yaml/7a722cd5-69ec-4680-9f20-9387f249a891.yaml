@@ -1,11 +1,11 @@
 Id: 7a722cd5-69ec-4680-9f20-9387f249a891
 Tags:
 - ElbyCDIO.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create ElbyCDIO.sys binPath=C:\windows\temp\ElbyCDIO.sys type=kernel
         && sc.exe start ElbyCDIO.sys
@@ -15,9 +15,6 @@ Commands:
     OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-    Person: ''
-    Handle: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -29,6 +26,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Person: ''
+    Handle: ''
 KnownVulnerableSamples:
 -   Filename: ElbyCDIO.sys
     MD5: 702d5606cf2199e0edea6f0e0d27cd10

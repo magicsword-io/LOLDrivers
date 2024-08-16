@@ -1,6 +1,7 @@
 Id: 57fc510a-e649-4599-b83e-8f3605e3d1d9
 Tags:
 - aswArPot.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
@@ -8,7 +9,6 @@ CVE:
 - CVE-2022-26522
 - CVE-2022-26523
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create aswArPot.sys binPath=C:\windows\temp\aswArPot.sys type=kernel
         && sc.exe start aswArPot.sys
@@ -23,9 +23,6 @@ Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 - 'CVE-2022-26522, CVE-2022-26523: Both of these vulnerabilities were fixed in version
     22.1.'
-Acknowledgement:
-    Handle: '@mattnotmax'
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1.yara
@@ -47,6 +44,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: '@mattnotmax'
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 66d55dcf5fe5e1b60f32880d48207105

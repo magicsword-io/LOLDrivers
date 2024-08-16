@@ -1,11 +1,11 @@
 Id: 33a9c9ae-5ca3-442d-9f0f-2615637c1c57
 Tags:
 - ntbios_2.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-02-28'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create ntbios_2.sys binPath=C:\windows\temp \n \n \n  tbios_2.sys
         type=kernel && sc.exe start ntbios_2.sys
@@ -17,9 +17,6 @@ Resources:
 - https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
 - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
 - ''
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c0d88db11d0f529754d290ed5f4c34b4dba8c4f2e5c4148866daabeab0d25f9c.yara
@@ -41,6 +38,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: a8e3b56b72814a842b557bfb6638b484

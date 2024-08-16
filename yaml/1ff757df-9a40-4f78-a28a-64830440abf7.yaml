@@ -1,11 +1,11 @@
 Id: 1ff757df-9a40-4f78-a28a-64830440abf7
 Tags:
 - winio64.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create winio64.sys binPath=C:\windows\temp\winio64.sys type=kernel
         && sc.exe start winio64.sys
@@ -15,10 +15,10 @@ Commands:
     OperatingSystem: Windows 10
 Resources:
 - Internal Research
+Detection: []
 Acknowledgement:
     Person: ''
     Handle: ''
-Detection: []
 KnownVulnerableSamples:
 -   Filename: winio64.sys
     MD5: 8fc6cafd4e63a3271edf6a1897a892ae

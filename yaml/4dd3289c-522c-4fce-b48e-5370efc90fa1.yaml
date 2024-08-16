@@ -1,11 +1,11 @@
 Id: 4dd3289c-522c-4fce-b48e-5370efc90fa1
 Tags:
 - iQVW64.SYS
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create iQVW64.sys binPath=C:\windows\temp\iQVW64.SYS type=kernel
         && sc.exe start iQVW64.SYS
@@ -15,9 +15,6 @@ Commands:
     OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-    Person: ''
-    Handle: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -29,6 +26,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Person: ''
+    Handle: ''
 KnownVulnerableSamples:
 -   Filename: iQVW64.SYS
     MD5: c796a92a66ec725b7b7febbdc13dc69b

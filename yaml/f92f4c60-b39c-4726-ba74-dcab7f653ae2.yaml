@@ -1,11 +1,11 @@
 Id: f92f4c60-b39c-4726-ba74-dcab7f653ae2
 Tags:
 - hwdetectng.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
 Created: '2023-11-02'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create hwdetectngsys binPath= C:\windows\temp\hwdetectngsys.sys
         type=kernel && sc.exe start hwdetectngsys
@@ -21,9 +21,6 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -35,6 +32,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Company: iNFERRE
     Date: ''

@@ -1,11 +1,11 @@
 Id: 268e87ba-ad44-4f3c-986f-26712cac68da
 Tags:
 - Phymemx64.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create Phymemx64.sys binPath=C:\windows\temp\Phymemx64.sys type=kernel
         && sc.exe start Phymemx64.sys
@@ -15,10 +15,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 4325af5c85aa7bb0339389cf54d78817

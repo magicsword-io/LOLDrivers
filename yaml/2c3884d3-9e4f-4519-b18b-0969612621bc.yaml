@@ -1,11 +1,11 @@
 Id: 2c3884d3-9e4f-4519-b18b-0969612621bc
 Tags:
 - LgCoreTemp.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-04-15'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create LgCoreTemp.sys binPath=C:\windows\temp\LgCoreTemp.sys     type=kernel
         && sc.exe start LgCoreTemp.sys
@@ -15,9 +15,6 @@ Commands:
     Usecase: Denial of Service
 Resources:
 - https://github.com/VoidSec/Exploit-Development/tree/b82b6d3ac1cce66221101d3e0f4634aa64cb4ca7/windows/x64/kernel/logitech_v.9.02.65_DoS
-Acknowledgement:
-    Handle: Void_Sec
-    Person: Paolo Stagno
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -29,6 +26,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: Void_Sec
+    Person: Paolo Stagno
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: a4c810e750095e71c0288c1ce6669115

@@ -1,11 +1,11 @@
 Id: 90e8600a-9b5c-4153-bb06-1d8fbe0ef232
 Tags:
 - nstr.sys
+Verified: 'FALSE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
     Command: sc.exe create nstr.sys binPath=C:\windows\temp \n \n \n  str.sys type=kernel
         && sc.exe start nstr.sys
@@ -15,10 +15,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Company: ''
     Date: ''

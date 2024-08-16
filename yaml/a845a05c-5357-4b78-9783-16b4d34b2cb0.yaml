@@ -1,11 +1,11 @@
 Id: a845a05c-5357-4b78-9783-16b4d34b2cb0
 Tags:
 - aswVmm.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create aswVmm.sys binPath=C:\windows\temp\aswVmm.sys type=kernel
         && sc.exe start aswVmm.sys
@@ -16,9 +16,6 @@ Commands:
 Resources:
 - https://github.com/tanduRE/AvastHV
 - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/36505921af5a09175395ebaea29c72b2a69a3a9204384a767a5be8a721f31b10.yara
@@ -40,6 +37,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 14260121e1984480cf6e7ec1adead3a3

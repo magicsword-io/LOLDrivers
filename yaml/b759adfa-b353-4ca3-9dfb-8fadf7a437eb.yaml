@@ -1,11 +1,11 @@
 Id: b759adfa-b353-4ca3-9dfb-8fadf7a437eb
 Tags:
 - spwizimgVT.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-07-12'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create spwizimgVT.sys binPath=C:\windows\temp\spwizimgVT.sys type=kernel
         && sc.exe start spwizimgVT.sys
@@ -25,10 +25,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://blog.talosintelligence.com/undocumented-reddriver/
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: d4b2c5fa7675cb780e8d4bc6bee7e41c

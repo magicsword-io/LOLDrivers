@@ -1,11 +1,11 @@
 Id: bb808089-5857-4df2-8998-753a7106cb44
 Tags:
 - DBUtilDrv2.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create DBUtilDrv2.sys binPath=C:\windows\temp\DBUtilDrv2.sys type=kernel
         && sc.exe start DBUtilDrv2.sys
@@ -16,9 +16,6 @@ Commands:
 Resources:
 - https://github.com/jbaines-r7/dellicious
 - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/71fe5af0f1564dc187eea8d59c0fbc897712afa07d18316d2080330ba17cf009.yara
@@ -40,6 +37,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 3736439958e5533142648f0d278fe7df

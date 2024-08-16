@@ -1,11 +1,11 @@
 Id: 18a842be-681a-4f32-97fd-57cb72ff5f3a
 Tags:
 - NlsLexicons0024UvN.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-07-12'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create NlsLexicons0024UvN.sys binPath=C:\windows\temp\NlsLexicons0024UvN.sys
         type=kernel && sc.exe start NlsLexicons0024UvN.sys
@@ -25,10 +25,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://blog.talosintelligence.com/undocumented-reddriver/
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 3dcdfa017206720c83d41ef7ed63fac6

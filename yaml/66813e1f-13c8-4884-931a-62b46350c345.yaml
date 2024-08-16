@@ -1,11 +1,11 @@
 Id: 66813e1f-13c8-4884-931a-62b46350c345
 Tags:
 - 834761775.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-07-12'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create 834761775.sys binPath=C:\windows\temp\834761775.sys type=kernel
         && sc.exe start 834761775.sys
@@ -25,10 +25,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://blog.talosintelligence.com/undocumented-reddriver/
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: d572a2339ab3259578bfb39301b78884

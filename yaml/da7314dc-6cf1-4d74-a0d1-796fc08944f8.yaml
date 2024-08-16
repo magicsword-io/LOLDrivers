@@ -1,11 +1,11 @@
 Id: da7314dc-6cf1-4d74-a0d1-796fc08944f8
 Tags:
 - windbg.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-05-20'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create windbg.sys binPath=C:\windows\temp\windbg.sys type=kernel
         && sc.exe start windbg.sys
@@ -20,9 +20,6 @@ Commands:
     OperatingSystem: Windows 10
 Resources:
 - https://www.trendmicro.com/en_us/research/23/e/water-orthrus-new-campaigns-deliver-rootkit-and-phishing-modules.html
-Acknowledgement:
-    Person: ''
-    Handle: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/139f8412a7c6fdc43dcfbbcdba256ee55654eb36a40f338249d5162a1f69b988.yara
@@ -76,6 +73,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Person: ''
+    Handle: ''
 KnownVulnerableSamples:
 -   Filename: windbg.sys
     MD5: 40f35792e7565aa047796758a3ce1b77

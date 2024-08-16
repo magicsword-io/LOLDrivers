@@ -1,13 +1,13 @@
 Id: 6d21df78-d718-44df-b722-99eec654f5b2
 Tags:
 - MsIo64.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 CVE:
 - CVE-2020-17382
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create MsIo64.sys binPath=C:\windows\temp\MsIo64.sys type=kernel
         && sc.exe start MsIo64.sys
@@ -22,9 +22,6 @@ Resources:
 - https://www.coresecurity.com/core-labs/advisories/msi-ambient-link-multiple-vulnerabilities
 - https://github.com/Exploitables/CVE-2020-17382
 - https://github.com/namazso/physmem_drivers
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89.yara
@@ -46,6 +43,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 9bb721ac0afc94a499a238ae32418d51

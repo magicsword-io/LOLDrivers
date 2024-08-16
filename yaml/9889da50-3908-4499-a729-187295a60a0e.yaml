@@ -1,11 +1,11 @@
 Id: 9889da50-3908-4499-a729-187295a60a0e
 Tags:
 - asrdrv104.sys
+Verified: 'FALSE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
     Command: sc.exe create asrdrv104.sys binPath=C:\windows\temp\asrdrv104.sys type=kernel
         && sc.exe start asrdrv104.sys
@@ -15,9 +15,6 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6ed35f310c96920a271c59a097b382da07856e40179c2a4239f8daa04eef38e7.yara
@@ -29,6 +26,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Company: ''
     Date: ''

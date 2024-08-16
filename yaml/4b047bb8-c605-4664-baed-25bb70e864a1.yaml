@@ -1,11 +1,11 @@
 Id: 4b047bb8-c605-4664-baed-25bb70e864a1
 Tags:
 - Black.sys
+Verified: 'FALSE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
     Command: sc.exe create Black.sys binPath=C:\windows\temp\Black.sys type=kernel
         && sc.exe start Black.sys
@@ -15,10 +15,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Company: ''
     Date: ''

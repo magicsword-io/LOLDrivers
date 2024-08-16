@@ -1,11 +1,11 @@
 Id: 2e4fedb0-30ed-400d-b4e1-b2b2004c1607
 Tags:
 - OpenLibSys.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create OpenLibSys.sys binPath=C:\windows\temp\OpenLibSys.sys type=kernel
         && sc.exe start OpenLibSys.sys
@@ -15,9 +15,6 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://github.com/namazso/physmem_drivers
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/91314768da140999e682d2a290d48b78bb25a35525ea12c1b1f9634d14602b2c.yara
@@ -41,6 +38,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 1244664c7917f03f2b43b30e132f64b5

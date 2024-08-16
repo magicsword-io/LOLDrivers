@@ -1,13 +1,13 @@
 Id: 81a73e57-2e92-4d21-97d3-1c21eb4c3aea
 Tags:
 - LenovoDiagnosticsDriver.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 CVE:
 - CVE-2022-3699
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create LenovoDiagnosticsDriver.sys binPath=C:\windows\temp\LenovoDiagnosticsDriver.sys
         type=kernel && sc.exe start LenovoDiagnosticsDriver.sys
@@ -20,9 +20,6 @@ Resources:
 - https://nephosec.com/cve-2022-3699-lenovo-diagnostics-driver-eop-arbitrary-r-w/
 - https://github.com/alfarom256/CVE-2022-3699
 - https://support.lenovo.com/us/en/product_security/LEN-94532
-Acknowledgement:
-    Handle: alfarom256
-    Person: Mike Alfaro
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/f05b1ee9e2f6ab704b8919d5071becbce6f9d0f9d0ba32a460c41d5272134abe.yara
@@ -44,6 +41,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: alfarom256
+    Person: Mike Alfaro
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 56b6144e389ce3b1e2a0a96a954aa7d8

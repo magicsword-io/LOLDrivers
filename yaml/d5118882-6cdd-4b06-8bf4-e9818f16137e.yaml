@@ -1,11 +1,11 @@
 Id: d5118882-6cdd-4b06-8bf4-e9818f16137e
 Tags:
 - nt3.sys
+Verified: 'FALSE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
     Command: sc.exe create nt3.sys binPath=C:\windows\temp \n \n \n  t3.sys type=kernel
         && sc.exe start nt3.sys
@@ -15,10 +15,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Company: ''
     Date: ''

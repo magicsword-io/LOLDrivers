@@ -1,11 +1,11 @@
 Id: 4f47c65e-2e73-4855-813a-5a823ae845a8
 Tags:
 - tdeio64.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
 Created: '2023-11-02'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create tdeio64sys binPath= C:\windows\temp\tdeio64sys.sys type=kernel
         && sc.exe start tdeio64sys
@@ -21,10 +21,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Company: ''
     Date: ''

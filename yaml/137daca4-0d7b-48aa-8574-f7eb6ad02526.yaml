@@ -1,13 +1,13 @@
 Id: 137daca4-0d7b-48aa-8574-f7eb6ad02526
 Tags:
 - speedfan.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 CVE:
 - CVE-2007-5633
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create speedfan.sys binPath=C:\windows\temp\speedfan.sys type=kernel
         && sc.exe start speedfan.sys
@@ -18,9 +18,6 @@ Commands:
 Resources:
 - https://github.com/jbaines-r7/dellicious
 - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/22be050955347661685a4343c51f11c7811674e030386d2264cd12ecbf544b7c.yara
@@ -42,6 +39,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: af368f76c059d1e07aa884e86d29bbab

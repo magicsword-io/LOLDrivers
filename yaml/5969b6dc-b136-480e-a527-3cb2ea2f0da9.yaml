@@ -1,11 +1,11 @@
 Id: 5969b6dc-b136-480e-a527-3cb2ea2f0da9
 Tags:
 - hw.sys
+Verified: 'TRUE'
 Author: Guus Verbeek
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create hw_sys binPath=C:\windows\temp\hw.sys type=kernel && sc.exe
         start hw.sys
@@ -17,9 +17,6 @@ Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 - https://decoded.avast.io/janvojtesek/the-return-of-candiru-zero-days-in-the-middle-east/
 - https://www.virustotal.com/gui/file/6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5/detection
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8.yara
@@ -47,6 +44,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 6eafc9b68f2047adf6879e955d3b69e8

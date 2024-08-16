@@ -1,11 +1,11 @@
 Id: fa612342-5ae0-4e69-ad9c-14d574d9fb1e
 Tags:
 - dellbios.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
 Created: '2023-11-02'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create dellbiossys binPath= C:\windows\temp\dellbiossys.sys type=kernel
         && sc.exe start dellbiossys
@@ -21,10 +21,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Company: ''
     Date: ''

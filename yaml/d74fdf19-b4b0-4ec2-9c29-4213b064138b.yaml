@@ -1,11 +1,11 @@
 Id: d74fdf19-b4b0-4ec2-9c29-4213b064138b
 Tags:
 - irec.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-11'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create irec binPath=C:\windows\temp\irec.sys type=kernel && sc.exe
         start irec.sys
@@ -26,10 +26,10 @@ Resources:
 - https://blog.dru1d.ninja/windows-driver-exploit-development-irec-sys-a5eb45093945
 - https://gist.github.com/dru1d-foofus/1af21179f253879f101c3a8d4f718bf0
 - https://www.binalyze.com/irec
+Detection: []
 Acknowledgement:
     Person: Michael Alfaro (@_mmpte_software), Tyler Booth
     Handle: '@tyler_dru1d'
-Detection: []
 KnownVulnerableSamples:
 -   Filename: irec.sys
     MD5: f1a203406a680cc7e4017844b129dcbf

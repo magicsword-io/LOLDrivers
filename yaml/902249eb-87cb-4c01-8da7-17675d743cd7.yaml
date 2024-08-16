@@ -1,11 +1,11 @@
 Id: 902249eb-87cb-4c01-8da7-17675d743cd7
 Tags:
 - WinFlash64.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create WinFlash64.sys binPath=C:\windows\temp\WinFlash64.sys type=kernel
         && sc.exe start WinFlash64.sys
@@ -15,10 +15,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 9fd32632e404f7d009ffe1ed34364539

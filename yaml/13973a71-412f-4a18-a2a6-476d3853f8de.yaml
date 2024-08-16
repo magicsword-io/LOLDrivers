@@ -1,11 +1,11 @@
 Id: 13973a71-412f-4a18-a2a6-476d3853f8de
 Tags:
 - AMDRyzenMasterDriver.sys
+Verified: 'TRUE'
 Author: Michael Haag, Nasreddine Bencherchali
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create AMDRyzenMasterDriver.sys binPath=C:\windows\temp\AMDRyzenMasterDriver.sys
         type=kernel && sc.exe start AMDRyzenMasterDriver.sys
@@ -16,9 +16,6 @@ Commands:
 Resources:
 - Internal Research
 - https://github.com/elastic/protections-artifacts/search?q=AMDRyzenMasterDriver
-Acknowledgement:
-    Person: ''
-    Handle: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -30,6 +27,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Person: ''
+    Handle: ''
 KnownVulnerableSamples:
 -   Filename: AMDRyzenMasterDriver.sys
     MD5: f16b44cca74d3c3645e4c0a6bb5c0cb9

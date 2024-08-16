@@ -1,13 +1,13 @@
 Id: 58509acb-50b4-41a0-9de3-76c571a459e3
 Tags:
 - msio32.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-07-22'
 MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
-Verified: 'TRUE'
 Commands:
     Command: ''
     Description: Confirmed vulnerable driver from Microsoft Block List
@@ -16,12 +16,12 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: ''
     value: ''
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: d7acc8a58b2163f0b070d647e81c49fd

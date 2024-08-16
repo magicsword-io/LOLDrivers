@@ -1,11 +1,11 @@
 Id: e0e93453-1007-4799-ad02-9b461b7e0398
 Tags:
 - truesight.sys
+Verified: 'TRUE'
 Author: ph4nt0mbyt3, Michael Haag
 Created: '2023-11-10'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create truesight.sys binPath=C:\windows\temp\truesight.sys type=kernel
         && sc.exe start truesight.sys
@@ -23,10 +23,10 @@ Commands:
     OperatingSystem: Windows 11
 Resources:
 - https://github.com/ph4nt0mbyt3/Darkside
+Detection: []
 Acknowledgement:
     Person: ''
     Handle: ''
-Detection: []
 KnownVulnerableSamples:
 -   Filename: Truesight
     Libraries:

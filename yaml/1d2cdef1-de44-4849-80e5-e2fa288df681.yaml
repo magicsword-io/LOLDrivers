@@ -4,13 +4,13 @@ Tags:
 - iQVW64.SYS
 - IQVW32.sys
 - NalDrv.sys
+Verified: 'TRUE'
 Author: Michael Haag, Guus Verbeek
 Created: '2023-01-09'
 MitreID: T1068
 CVE:
 - CVE-2015-2291
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create iqvw64e.sys binPath=C:\windows\temp\iqvw64e.sys type=kernel
         && sc.exe start iqvw64e.sys
@@ -29,9 +29,6 @@ Resources:
 - https://github.com/Tare05/Intel-CVE-2015-2291
 - https://github.com/TheCruZ/kdmapper
 - https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b.yara
@@ -53,6 +50,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 1789a16d20ca2b55f491ad71848166a2

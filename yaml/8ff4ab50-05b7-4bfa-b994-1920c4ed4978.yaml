@@ -1,13 +1,13 @@
 Id: 8ff4ab50-05b7-4bfa-b994-1920c4ed4978
 Tags:
 - ncpl.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 CVE:
 - CVE-2013-3956
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create ncpl.sys binPath=C:\windows\temp \n \n \n  cpl.sys type=kernel
         && sc.exe start ncpl.sys
@@ -18,9 +18,6 @@ Commands:
 Resources:
 - https://github.com/jbaines-r7/dellicious
 - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6c7120e40fc850e4715058b233f5ad4527d1084a909114fd6a36b7b7573c4a44.yara
@@ -42,6 +39,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: f3387f3cdaec9306dcc5205eebaf3faf

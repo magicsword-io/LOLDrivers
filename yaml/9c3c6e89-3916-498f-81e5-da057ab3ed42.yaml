@@ -1,11 +1,11 @@
 Id: 9c3c6e89-3916-498f-81e5-da057ab3ed42
 Tags:
 - windbg.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-04-22'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create windbg.sys binPath=C:\windows\temp\windbg.sys type=kernel
         && sc.exe start windbg.sys
@@ -17,9 +17,6 @@ Resources:
 - https://www.proofpoint.com/us/blog/threat-insight/now-you-see-it-now-you-dont-copperstealer-performs-widespread-theft
 - https://twitter.com/jaydinbas/status/1642898531445886978?s=20
 - https://twitter.com/jaydinbas/status/1646475092006785027?s=20
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e1cb86386757b947b39086cc8639da988f6e8018ca9995dd669bdc03c8d39d7d.yara
@@ -45,6 +42,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 265462dbda175886e0c02257f2385753

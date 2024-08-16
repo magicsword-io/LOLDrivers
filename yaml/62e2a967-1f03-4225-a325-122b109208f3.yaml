@@ -1,11 +1,11 @@
 Id: 62e2a967-1f03-4225-a325-122b109208f3
 Tags:
 - DirectIo.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create DirectIo.sys binPath=C:\windows\temp\DirectIo.sys type=kernel
         && sc.exe start DirectIo.sys
@@ -15,10 +15,10 @@ Commands:
     OperatingSystem: Windows 10
 Resources:
 - Internal Research
+Detection: []
 Acknowledgement:
     Person: ''
     Handle: ''
-Detection: []
 KnownVulnerableSamples:
 -   Filename: DirectIo.sys
     MD5: d77fb9fb256b0c2ec0258c39b80dc513

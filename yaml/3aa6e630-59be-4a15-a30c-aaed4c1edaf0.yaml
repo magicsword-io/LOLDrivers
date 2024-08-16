@@ -1,11 +1,11 @@
 Id: 3aa6e630-59be-4a15-a30c-aaed4c1edaf0
 Tags:
 - kerneld.amd64
+Verified: 'TRUE'
 Author: Takahiro Haruyama
 Created: '2023-11-02'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys
         type=kernel && sc.exe start kerneldamd64
@@ -21,10 +21,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Company: ''
     Date: ''

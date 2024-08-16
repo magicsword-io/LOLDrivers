@@ -1,11 +1,11 @@
 Id: f8bddc8b-49b9-41f7-a877-d15ec3f174f9
 Tags:
 - daxin_blank4.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-02-28'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create daxin_blank4.sys binPath=C:\windows\temp\daxin_blank4.sys     type=kernel
         && sc.exe start daxin_blank4.sys
@@ -17,10 +17,10 @@ Resources:
 - https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
 - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
 - ''
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: f66f4d6b97b9e7b0e467daed2ed69bed

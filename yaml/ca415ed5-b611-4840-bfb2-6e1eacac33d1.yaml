@@ -1,13 +1,13 @@
 Id: ca415ed5-b611-4840-bfb2-6e1eacac33d1
 Tags:
 - Monitor_win10_x64.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 CVE:
 - CVE-2018-16712
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create Monitor_win10_x64.sys binPath=C:\windows\temp\Monitor_win10_x64.sys     type=kernel
         && sc.exe start Monitor_win10_x64.sys
@@ -19,9 +19,6 @@ Resources:
 - https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html
 - https://www.unknowncheats.me/forum/anti-cheat-bypass/244386-mta-fairplaykd-driver-reversed-exploited-rpm.html
 - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e4a7da2cf59a4a21fc42b611df1d59cae75051925a7ddf42bf216cc1a026eadb.yara
@@ -43,6 +40,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 68e5bf10aeb81b2ec77280aec1c2dc22

@@ -1,11 +1,11 @@
 Id: f654ad84-c61d-477c-a0b2-d153b927dfcc
 Tags:
 - EIO.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-05-20'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create EIO.sys binPath=C:\windows\temp\EIO.sys type=kernel &&
         sc.exe start EIO.sys
@@ -15,9 +15,6 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/b17507a3246020fa0052a172485d7b3567e0161747927f2edf27c40e310852e0.yara
@@ -41,6 +38,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: ff6c5b1f92372186d4f9879e00e42fcf

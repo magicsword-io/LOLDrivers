@@ -1,13 +1,13 @@
 Id: 1c6e1d3b-f825-4065-9e0c-83386883e40f
 Tags:
 - rzpnk.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 CVE:
 - CVE-2017-9769
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create rzpnk.sys binPath=C:\windows\temp\rzpnk.sys type=kernel
         && sc.exe start rzpnk.sys
@@ -22,9 +22,6 @@ Commands:
 Resources:
 - https://github.com/nomi-sec/PoC-in-GitHub/blob/2a85c15ed806287861a7adec6545c85aec618e3b/2017/CVE-2017-9769.json#L13
 - https://www.rapid7.com/db/modules/exploit/windows/local/razer_zwopenprocess/
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/93d873cdf23d5edc622b74f9544cac7fe247d7a68e1e2a7bf2879fad97a3ae63.yara
@@ -46,6 +43,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 76934be6e996e801ea4d68c504d427c3

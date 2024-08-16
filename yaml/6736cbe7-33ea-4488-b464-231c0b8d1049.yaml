@@ -1,11 +1,11 @@
 Id: 6736cbe7-33ea-4488-b464-231c0b8d1049
 Tags:
 - gpcidrv64.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
 Created: '2023-10-12'
 MitreID: T1542
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create gpcidrv64.sys binPath=C:\windows\temp\gpcidrv64.sys type=kernel
         && sc.exe start gpcidrv64.sys
@@ -15,10 +15,10 @@ Commands:
     OperatingSystem: Windows 11
 Resources:
 - https://github.com/ucsb-seclab/popkorn-artifact/tree/main/evaluation
+Detection: []
 Acknowledgement:
     Person: ''
     Handle: ''
-Detection: []
 KnownVulnerableSamples:
 -   Filename: ''
     MD5: 5d4df0bac74e9ac62af6bc99440b050b

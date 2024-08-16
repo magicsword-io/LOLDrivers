@@ -1,11 +1,11 @@
 Id: 2740a074-1e06-4f75-9c6a-dc57a3f85189
 Tags:
 - POORTRY1.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-03-04'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create POORTRY1.sys binPath=C:\windows\temp\POORTRY1.sys type=kernel
         && sc.exe start POORTRY1.sys
@@ -16,10 +16,10 @@ Commands:
 Resources:
 - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
 - ''
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 887c566bdc8ed5231f45a37845d5ee89

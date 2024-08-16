@@ -1,11 +1,11 @@
 Id: ba91bce3-2cf9-4c44-bbd8-1170a44d23db
 Tags:
 - filnk.sys
+Verified: 'TRUE'
 Author: VirarK
 Created: '2024-06-20'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create filnk.sys binPath=C:\windows\temp\filnk.sys type=kernel
         && sc.exe start filnk.sys
@@ -17,10 +17,10 @@ Commands:
     OperatingSystem: Windows 10
 Resources:
 - https://github.com/zeze-zeze/WindowsKernelVuln/tree/master/CVE-2023-1444
+Detection: []
 Acknowledgement:
     Person: ''
     Handle: ''
-Detection: []
 KnownVulnerableSamples:
 -   Filename: ''
     MD5: 4b22e494ad2ac90c42f02dcca0328b7c

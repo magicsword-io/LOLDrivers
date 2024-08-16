@@ -2,11 +2,11 @@ Id: 8d97bb7f-e009-4dc7-ab9d-fde293e679dc
 Tags:
 - AsUpIO.sys
 - AsUpIO64.sys
+Verified: 'TRUE'
 Author: Michael Haag, Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create AsUpIO.sys binPath=C:\windows\temp\AsUpIO.sys type=kernel
         && sc.exe start AsUpIO.sys
@@ -18,10 +18,10 @@ Resources:
 - Internal Research
 - https://github.com/namazso/physmem_drivers
 - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.m
+Detection: []
 Acknowledgement:
     Person: ''
     Handle: ''
-Detection: []
 KnownVulnerableSamples:
 -   Filename: AsUpIO.sys
     MD5: 9ba7c30177d2897bb3f7b3dc2f95ae0a

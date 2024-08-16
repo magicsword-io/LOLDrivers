@@ -1,11 +1,11 @@
 Id: 5938df1d-9513-449f-8252-c442ddca0c2a
 Tags:
 - VBoxUSB.Sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create VBoxUSB.sys binPath=C:\windows\temp\VBoxUSB.Sys type=kernel
         && sc.exe start VBoxUSB.Sys
@@ -15,10 +15,10 @@ Commands:
     OperatingSystem: Windows 10
 Resources:
 - Internal Research
+Detection: []
 Acknowledgement:
     Person: ''
     Handle: ''
-Detection: []
 KnownVulnerableSamples:
 -   Filename: VBoxUSB.Sys
     MD5: 65b979bcab915c3922578fe77953d789

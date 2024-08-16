@@ -4,11 +4,11 @@ Tags:
 - rtkio64.sys
 - rtkiow8x64.sys
 - rtkiow10x64.sys
+Verified: 'TRUE'
 Author: Michael Haag, Nasreddine Bencherchali
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create rtkio64.sys binPath=C:\windows\temp\rtkio64.sys type=kernel
         && sc.exe start rtkio64.sys
@@ -20,9 +20,6 @@ Resources:
 - Internal Research
 - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 - https://github.com/elastic/protections-artifacts/search?q=rtkio
-Acknowledgement:
-    Person: ''
-    Handle: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/074ae477c8c7ae76c6f2b0bf77ac17935a8e8ee51b52155d2821d93ab30f3761.yara
@@ -50,6 +47,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Person: ''
+    Handle: ''
 KnownVulnerableSamples:
 -   Filename: rtkio64.sys
     MD5: 7aa34cd9ea5649c24a814e292b270b6f

@@ -1,11 +1,11 @@
 Id: 76b5dfae-b384-45ce-8646-b2eec6b76a1e
 Tags:
 - KfeCo11X64.sys
+Verified: 'TRUE'
 Author: Paul Michaud
 Created: '2023-05-12'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create KfeCo11X64.sys binPath=C:\windows\temp\KfeCo11X64.sys type=kernel
         && sc.exe start KfeCo11X64.sys
@@ -26,9 +26,6 @@ Resources:
 - https://zwclose.github.io/2023/04/18/killer2.html
 - https://twitter.com/zwclose/status/1648441215808049153
 - https://zwclose.github.io/2022/12/18/killer1.html
-Acknowledgement:
-    Handle: zwclose
-    Person: zwclose
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/9a91d6e83b8fdec536580f6617f10dfc64eedf14ead29a6a644eb154426622ba.yara
@@ -50,6 +47,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: zwclose
+    Person: zwclose
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 758090532f58b19865d76a41389c2d58

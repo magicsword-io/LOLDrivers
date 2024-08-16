@@ -2,11 +2,11 @@ Id: c3cca618-5a7f-4a51-8785-cb328fbfb0df
 Tags:
 - viraglt64.sys
 - viragt64.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create viraglt64.sys binPath=C:\windows\temp\viraglt64.sys type=kernel
         && sc.exe start viraglt64.sys
@@ -17,9 +17,6 @@ Commands:
 Resources:
 - https://github.com/jbaines-r7/dellicious
 - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/58a74dceb2022cd8a358b92acd1b48a5e01c524c3b0195d7033e4bd55eff4495.yara
@@ -41,6 +38,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 68a2f77cfa5aec4556b4276852be637f

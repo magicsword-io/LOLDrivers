@@ -1,11 +1,11 @@
 Id: a4eabc75-edf6-4b74-9a24-6a26187adabf
 Tags:
 - dbutil_2_3.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create dbutil_2_3.sys binPath=C:\windows\temp\dbutil_2_3.sys type=kernel
         && sc.exe start dbutil_2_3.sys
@@ -16,10 +16,10 @@ Commands:
 Resources:
 - https://github.com/namazso/physmem_drivers
 - https://www.sentinelone.com/labs/cve-2021-21551-hundreds-of-millions-of-dell-computers-at-risk-due-to-multiple-bios-driver-privilege-escalation-flaws/
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: e593dd14a41fd9a6cb42fdae324c3092

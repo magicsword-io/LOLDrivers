@@ -1,11 +1,11 @@
 Id: d4664202-d1b9-44d4-97cc-fee2150082db
 Tags:
 - nvflsh64.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create nvflsh64.sys binPath=C:\windows\temp \n \n \n  vflsh64.sys
         type=kernel && sc.exe start nvflsh64.sys
@@ -15,10 +15,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: c3a003ae7b48dcd1dac8bced7cf93f28

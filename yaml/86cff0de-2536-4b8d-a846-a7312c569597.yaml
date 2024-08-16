@@ -1,13 +1,13 @@
 Id: 86cff0de-2536-4b8d-a846-a7312c569597
 Tags:
 - nicm.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 CVE:
 - CVE-2013-3956
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create nicm.sys binPath=C:\windows\temp \n \n \n  icm.sys type=kernel
         && sc.exe start nicm.sys
@@ -18,9 +18,6 @@ Commands:
 Resources:
 - https://github.com/jbaines-r7/dellicious
 - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e6056443537d4d2314dabca1b9168f1eaaf17a14eb41f6f5741b6b82b3119790.yara
@@ -42,6 +39,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 8ab7a633b1d27ac3e7c25caea6609472

@@ -1,11 +1,11 @@
 Id: afb8bb46-1d13-407d-9866-1daa7c82ca63
 Tags:
 - echo_driver.sys
+Verified: 'TRUE'
 Author: Protocol & Zach
 Created: '2023-07-14'
 MitreID: T1134
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create echo_driver.sys binPath=C:\windows\temp\echo_driver.sys
         type=kernel && sc.exe start echo_driver.sys
@@ -19,10 +19,10 @@ Resources:
 - https://ioctl.fail/echo-ac-writeup/
 - https://github.com/kite03/echoac-poc/tree/main/PoC
 - https://github.com/pseuxide/kur
+Detection: []
 Acknowledgement:
     Handle: '@WindowsKernel'
     Person: protocol
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: cad120d8ba6473b07a3b76a41921d720

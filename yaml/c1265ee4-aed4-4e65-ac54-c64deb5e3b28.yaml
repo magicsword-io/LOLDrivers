@@ -1,11 +1,11 @@
 Id: c1265ee4-aed4-4e65-ac54-c64deb5e3b28
 Tags:
 - fur.sys
+Verified: 'TRUE'
 Author: Guus Verbeek
 Created: '2023-05-07'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create fur.sys binPath=C:\windows\temp\fur.sys type=kernel &&
         sc.exe start fur.sys
@@ -16,10 +16,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware, https://news.sophos.com/en-us/2022/12/13/signed-driver-malware-moves-up-the-software-trust-chain/
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 5c23bab622d6bbabd23d29b4adaa4ae0

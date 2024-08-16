@@ -2,11 +2,11 @@ Id: 7bb5ff05-25f8-410d-ae99-c8e8f082d24f
 Tags:
 - WinRing0.sys
 - WinRing0x64
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create WinRing0.sys binPath=C:\windows\temp\WinRing0.sys type=kernel
         && sc.exe start WinRing0.sys
@@ -17,9 +17,6 @@ Commands:
 Resources:
 - https://github.com/namazso/physmem_drivers
 - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/3ec5ad51e6879464dfbccb9f4ed76c6325056a42548d5994ba869da9c4c039a8.yara
@@ -45,6 +42,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 650fa4b522e8d06d0cdfa4bf278e85f1

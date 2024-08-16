@@ -1,11 +1,11 @@
 Id: 62f76f62-ef82-49ea-a26f-36e5727e8d83
 Tags:
 - sysconp.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
 Created: '2023-11-02'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create sysconpsys binPath= C:\windows\temp\sysconpsys.sys type=kernel
         && sc.exe start sysconpsys
@@ -21,10 +21,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Company: ''
     Date: ''

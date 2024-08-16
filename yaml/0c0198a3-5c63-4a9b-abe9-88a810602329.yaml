@@ -1,11 +1,11 @@
 Id: 0c0198a3-5c63-4a9b-abe9-88a810602329
 Tags:
 - 2.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-03-04'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create 2.sys binPath=C:\windows\temp\2.sys type=kernel && sc.exe
         start 2.sys
@@ -16,10 +16,10 @@ Commands:
 Resources:
 - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
 - ''
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 887c566bdc8ed5231f45a37845d5ee89

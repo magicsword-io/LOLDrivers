@@ -1,11 +1,11 @@
 Id: 94eb0694-29ba-4f8e-b763-86c6371db6cc
 Tags:
 - winio64.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create winio64.sys binPath=C:\windows\temp\winio64.sys type=kernel
         && sc.exe start winio64.sys
@@ -15,10 +15,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 241252e4ebe7b4fdf6fd5a34ece5b127

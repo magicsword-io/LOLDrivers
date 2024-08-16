@@ -1,11 +1,11 @@
 Id: 0eb5f4ce-12a7-4b45-b021-42b995de07c5
 Tags:
 - Air_SYSTEM10.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-03-03'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create Air_SYSTEM10.sys binPath=C:\windows\temp\Air_SYSTEM10.sys     type=kernel
         && sc.exe start Air_SYSTEM10.sys
@@ -16,10 +16,10 @@ Commands:
 Resources:
 - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
 - ''
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 6f562fc03c72abd6ff33c6df23df0219

@@ -1,11 +1,11 @@
 Id: ef6b5fe8-6c4b-4b32-8adc-c1d8a83e8558
 Tags:
 - a26363e7b02b13f2b8d697abb90cd5c3.sys
+Verified: 'TRUE'
 Author: Alice Climent-Pommeret
 Created: '2023-07-31'
 MitreID: T1014
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create a26363e7b02b13f2b8d697abb90cd5c3.sys binPath=C:\windows\temp\a26363e7b02b13f2b8d697abb90cd5c3.sys
         type=kernel && sc.exe start a26363e7b02b13f2b8d697abb90cd5c3.sys
@@ -26,10 +26,10 @@ Commands:
     OperatingSystem: Windows 10
 Resources:
 - https://blog.talosintelligence.com/undocumented-reddriver/
+Detection: []
 Acknowledgement:
     Person: ''
     Handle: ''
-Detection: []
 KnownVulnerableSamples:
 -   Filename: ''
     MD5: a26363e7b02b13f2b8d697abb90cd5c3

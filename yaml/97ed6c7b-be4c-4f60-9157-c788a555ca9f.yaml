@@ -1,11 +1,11 @@
 Id: 97ed6c7b-be4c-4f60-9157-c788a555ca9f
 Tags:
 - iscflashx64.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
 Created: '2023-10-12'
 MitreID: T1542
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create iscflashx64.sys binPath=C:\windows\temp\iscflashx64.sys
         type=kernel && sc.exe start iscflashx64.sys
@@ -15,9 +15,6 @@ Commands:
     OperatingSystem: Windows 11
 Resources:
 - ''
-Acknowledgement:
-    Person: ''
-    Handle: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -29,6 +26,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Person: ''
+    Handle: ''
 KnownVulnerableSamples:
 -   Filename: ''
     MD5: 1f8a9619ab644728ce4cf86f3ad879ea

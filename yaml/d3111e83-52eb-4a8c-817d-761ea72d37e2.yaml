@@ -1,11 +1,11 @@
 Id: d3111e83-52eb-4a8c-817d-761ea72d37e2
 Tags:
 - fgme.sys
+Verified: 'FALSE'
 Author: Guus Verbeek
 Created: '2023-06-05'
 MitreID: T1068
 Category: malicious
-Verified: 'FALSE'
 Commands:
     Command: sc.exe create fgme.sys binPath=C:\windows\temp\fgme.sys type=kernel &&
         sc.exe start fgme.sys
@@ -16,10 +16,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Company: ''
     Date: ''

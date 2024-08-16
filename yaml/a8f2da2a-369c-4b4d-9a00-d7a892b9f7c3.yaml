@@ -1,13 +1,13 @@
 Id: a8f2da2a-369c-4b4d-9a00-d7a892b9f7c3
 Tags:
 - wsdkd.sys
+Verified: 'TRUE'
 Author: Chris Beckett, Jon Petersen
 Created: '2023-09-12'
 MitreID: T1068
 CVE:
 - CVE-2023-1453
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create wsdkd.sys binPath=C:\windows\temp\wsdkd.sys type=kernel
         && sc.exe start wsdkd.sys
@@ -24,9 +24,6 @@ Resources:
 - https://github.com/zeze-zeze/WindowsKernelVuln/tree/master/CVE-2023-1453
 - https://nvd.nist.gov/vuln/detail/CVE-2023-1453
 - https://avd.aquasec.com/nvd/2023/cve-2023-1453/
-Acknowledgement:
-    Person: Chris Beckett, Jon Petersen
-    Handle: '@cbecks_2'
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -38,6 +35,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Person: Chris Beckett, Jon Petersen
+    Handle: '@cbecks_2'
 KnownVulnerableSamples:
 -   Filename: wsdkd.sys
     MD5: eff3a9cc3e99ef3ddae57df72807f0c7

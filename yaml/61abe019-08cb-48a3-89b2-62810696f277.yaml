@@ -1,11 +1,11 @@
 Id: 61abe019-08cb-48a3-89b2-62810696f277
 Tags:
 - NQrmq.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-06-05'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create NQrmq.sys binPath=C:\windows\temp\NQrmq.sys type=kernel
         && sc.exe start NQrmq.sys
@@ -15,10 +15,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - ''
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: deb930efdc62da7c54923e3c7802a85c

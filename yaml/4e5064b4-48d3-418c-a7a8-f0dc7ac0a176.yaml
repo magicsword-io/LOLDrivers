@@ -1,13 +1,13 @@
 Id: 4e5064b4-48d3-418c-a7a8-f0dc7ac0a176
 Tags:
 - MsIo32.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 CVE:
 - CVE-2019-18845
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create MsIo32.sys binPath=C:\windows\temp\MsIo32.sys type=kernel
         && sc.exe start MsIo32.sys
@@ -23,10 +23,10 @@ Resources:
 - https://www.activecyber.us/activelabs/viper-rgb-driver-local-privilege-escalation-cve-2019-18845
 - http://blog.rewolf.pl/blog/?p=1630
 - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 6491c34f274a0ed6258fadca85bd69fb

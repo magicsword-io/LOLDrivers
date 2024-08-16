@@ -1,11 +1,11 @@
 Id: 7cee2ce8-7881-4a9a-bb18-61587c95f4a2
 Tags:
 - DcProtect.sys
+Verified: 'TRUE'
 Author: Wack0
 Created: '2023-11-30'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create DcProtect.sys binPath=C:\windows\temp\DcProtect.sys type=kernel
         && sc.exe start DcProtect.sys
@@ -19,10 +19,10 @@ Commands:
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/154
 - https://www.virustotal.com/gui/user/slipstream
+Detection: []
 Acknowledgement:
     Person: ''
     Handle: ''
-Detection: []
 KnownVulnerableSamples:
 -   Filename: ''
     Libraries:

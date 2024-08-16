@@ -1,11 +1,11 @@
 Id: 19897aed-9be8-4111-a7d8-35618b9d75b3
 Tags:
 - smep_capcom.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create smep_capcom.sys binPath=C:\windows\temp\smep_capcom.sys     type=kernel
         && sc.exe start smep_capcom.sys
@@ -15,10 +15,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://github.com/namazso/physmem_drivers
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 37458813b5115cbf06552da28fefbbbb

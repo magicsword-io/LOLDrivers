@@ -1,11 +1,11 @@
 Id: a1d35b93-e97f-4ddd-a465-2405e804e754
 Tags:
 - windows-xp-64.sys
+Verified: 'FALSE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
     Command: sc.exe create windows-xp-64.sys binPath=C:\windows\temp\windows-xp-64.sys     type=kernel
         type=kernel && sc.exe start windows-xp-64.sys
@@ -15,10 +15,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Company: ''
     Date: ''

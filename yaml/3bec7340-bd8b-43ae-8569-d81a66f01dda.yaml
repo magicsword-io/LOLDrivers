@@ -1,11 +1,11 @@
 Id: 3bec7340-bd8b-43ae-8569-d81a66f01dda
 Tags:
 - ene.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create ene.sys binPath=C:\windows\temp\ene.sys type=kernel &&
         sc.exe start ene.sys
@@ -15,10 +15,10 @@ Commands:
     OperatingSystem: Windows 10
 Resources:
 - Internal Research
+Detection: []
 Acknowledgement:
     Person: ''
     Handle: ''
-Detection: []
 KnownVulnerableSamples:
 -   Filename: ene.sys
     MD5: fd80c3d38669b302de4b4b736941c0d1

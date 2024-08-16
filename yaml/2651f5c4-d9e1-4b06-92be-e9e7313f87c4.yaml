@@ -5,11 +5,11 @@ Tags:
 - AsIO3.sys
 - AsIO3_64.sys
 - AsIO2.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali, Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create asio.sys binPath=C:\windows\temp\asio.sys type=kernel &&
         sc.exe start asio.sys
@@ -21,10 +21,10 @@ Resources:
 - Internal Research
 - https://github.com/namazso/physmem_drivers
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+Detection: []
 Acknowledgement:
     Person: ''
     Handle: ''
-Detection: []
 KnownVulnerableSamples:
 -   Filename: asio.sys
     MD5: bedc99bbcedaf89e2ee1aa574c5a2fa4

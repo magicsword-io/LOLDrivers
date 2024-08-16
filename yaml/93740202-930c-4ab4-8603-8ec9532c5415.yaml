@@ -2,11 +2,11 @@ Id: 93740202-930c-4ab4-8603-8ec9532c5415
 Tags:
 - WinTapix.sys
 - SRVNET2.SYS
+Verified: 'TRUE'
 Author: Guus Verbeek
 Created: '2023-06-05'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create WinTapix.sys binPath=C:\windows\temp\WinTapix.sys type=kernel
         && sc.exe start WinTapix.sys
@@ -20,9 +20,6 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://www.fortinet.com/blog/threat-research/wintapix-kernal-driver-middle-east-countries
-Acknowledgement:
-    Handle: ''
-    Person: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_mal_drivers_strict.yar
@@ -34,6 +31,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: bb6790230efd9de2ee1a5be037f3c32e

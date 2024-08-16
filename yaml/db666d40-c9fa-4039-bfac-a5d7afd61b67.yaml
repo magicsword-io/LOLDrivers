@@ -1,11 +1,11 @@
 Id: db666d40-c9fa-4039-bfac-a5d7afd61b67
 Tags:
 - bedaisy.sys
+Verified: 'TRUE'
 Author: Wack0
 Created: '2023-04-22'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create BEDaisy.sys binPath=C:\windows\temp\BEDaisy.sys type=kernel
         && sc.exe start BEDaisy.sys
@@ -16,10 +16,10 @@ Commands:
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/23
 - https://infosec.exchange/@Rairii/109310279380973806
+Detection: []
 Acknowledgement:
     Handle: Wack0
     Person: Wack0
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 85751ed97dcd3096b4b5ee6f66109551

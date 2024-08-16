@@ -2,11 +2,11 @@ Id: 34fa6ba4-dc7c-4fd6-b947-8a0bb8ebd031
 Tags:
 - amifldrv64.sys
 - amifldrv.sys
+Verified: 'TRUE'
 Author: Michael Haag, Nasreddine Bencherchali
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create amifldrv64.sys binPath=C:\windows\temp\amifldrv64.sys type=kernel
         && sc.exe start amifldrv64.sys
@@ -18,9 +18,6 @@ Resources:
 - Internal Research
 - https://github.com/namazso/physmem_drivers
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Acknowledgement:
-    Person: ''
-    Handle: ''
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/38d87b51f4b69ba2dae1477684a1415f1a3b578eee5e1126673b1beaefee9a20.yara
@@ -34,6 +31,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Person: ''
+    Handle: ''
 KnownVulnerableSamples:
 -   Filename: amifldrv64.sys
     MD5: 0dff47f3b14fb1c1bad47cc517f0581a

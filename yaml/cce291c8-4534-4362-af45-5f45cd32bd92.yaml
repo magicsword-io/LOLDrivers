@@ -1,11 +1,11 @@
 Id: cce291c8-4534-4362-af45-5f45cd32bd92
 Tags:
 - smep_namco.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create smep_namco.sys binPath=C:\windows\temp\smep_namco.sys type=kernel
         && sc.exe start smep_namco.sys
@@ -15,10 +15,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://github.com/namazso/physmem_drivers
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 5673638fc95d46f6b323144472c6e608

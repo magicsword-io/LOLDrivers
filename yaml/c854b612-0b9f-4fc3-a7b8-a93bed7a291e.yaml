@@ -1,11 +1,11 @@
 Id: c854b612-0b9f-4fc3-a7b8-a93bed7a291e
 Tags:
 - SSPORT.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-04-15'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create SSPORT.sys binPath=C:\windows\temp\SSPORT.sys     type=kernel
         && sc.exe start SSPORT.sys
@@ -15,10 +15,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://github.com/VoidSec/Exploit-Development/tree/b82b6d3ac1cce66221101d3e0f4634aa64cb4ca7/windows/x64/kernel/ssport_v1.0
+Detection: []
 Acknowledgement:
     Handle: Void_Sec
     Person: Paolo Stagno
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: ffc522ee567368a6f98c38dd2aa57f30

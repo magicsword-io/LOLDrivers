@@ -1,11 +1,11 @@
 Id: 8198f5af-4b40-4800-a22a-4a7cf957ef37
 Tags:
 - MSqPq.sys
+Verified: 'TRUE'
 Author: Guus Verbeek
 Created: '2023-06-05'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create MSqPq.sys binPath=C:\windows\temp\MSqPq.sys type=kernel
         && sc.exe start MSqPq.sys
@@ -16,10 +16,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: e66ea646261c73baee310361524fbb7c

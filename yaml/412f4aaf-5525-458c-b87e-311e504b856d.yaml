@@ -1,11 +1,11 @@
 Id: 412f4aaf-5525-458c-b87e-311e504b856d
 Tags:
 - mJj0ge.sys
+Verified: 'TRUE'
 Author: Guus Verbeek
 Created: '2023-05-07'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create mJj0ge.sys binPath=C:\windows\temp\mJj0ge.sys type=kernel
         && sc.exe start mJj0ge.sys
@@ -16,10 +16,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://news.sophos.com/en-us/2022/12/13/signed-driver-malware-moves-up-the-software-trust-chain/
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: 83f21305be7f7633dd4c48cf1d523ad9

@@ -1,11 +1,11 @@
 Id: b45a3fdf-592a-4cd9-81e2-8fe03d554cad
 Tags:
 - windows7-32.sys
+Verified: 'FALSE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'FALSE'
 Commands:
     Command: sc.exe create windows7-32.sys binPath=C:\windows\temp\windows7-32.sys     type=kernel
         type=kernel && sc.exe start windows7-32.sys
@@ -15,10 +15,10 @@ Commands:
     Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Company: ''
     Date: ''

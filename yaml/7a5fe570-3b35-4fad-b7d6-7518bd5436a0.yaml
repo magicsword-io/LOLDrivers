@@ -1,11 +1,11 @@
 Id: 7a5fe570-3b35-4fad-b7d6-7518bd5436a0
 Tags:
 - NodeDriver.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-03-02'
 MitreID: T1068
 Category: malicious
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create NodeDriver.sys binPath=C:\windows\temp\NodeDriver.sys type=kernel
         && sc.exe start NodeDriver.sys
@@ -16,10 +16,10 @@ Commands:
 Resources:
 - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
 - ''
+Detection: []
 Acknowledgement:
     Handle: ''
     Person: ''
-Detection: []
 KnownVulnerableSamples:
 -   Authentihash:
         MD5: cb01e86f3c5a26629d53856c5e4990ec

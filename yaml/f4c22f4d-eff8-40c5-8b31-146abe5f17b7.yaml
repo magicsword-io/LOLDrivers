@@ -1,11 +1,11 @@
 Id: f4c22f4d-eff8-40c5-8b31-146abe5f17b7
 Tags:
 - physmem.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
     Command: sc.exe create physmem.sys binPath=C:\windows\temp\physmem.sys type=kernel
         && sc.exe start physmem.sys
@@ -18,9 +18,6 @@ Resources:
 - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
 - https://github.com/magicsword-io/LOLDrivers/issues/55
 - https://github.com/hfiref0x/KDU
-Acknowledgement:
-    Handle: hfiref0x
-    Person: hfiref0x
 Detection:
 -   type: yara_signature
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c299063e3eae8ddc15839767e83b9808fd43418dc5a1af7e4f44b97ba53fbd3d.yara
@@ -42,6 +39,9 @@ Detection:
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 -   type: sysmon_hash_block
     value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: hfiref0x
+    Person: hfiref0x
 KnownVulnerableSamples:
 -   Company: ''
     Date: ''
