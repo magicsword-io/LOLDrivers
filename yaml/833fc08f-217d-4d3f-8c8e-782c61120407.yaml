@@ -1,38 +1,38 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
-Author: Guus Verbeek
-Category: malicious
-Commands:
-  Command: sc.exe create kt2.sys binPath=C:\windows\temp\kt2.sys type=kernel && sc.exe
-    start kt2.sys
-  Description: BlackCat Ransomware Deploys New Signed Kernel Driver. BlackCat ransomware
-    incident that occurred in February 2023.
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
-Created: '2023-06-05'
-Detection: []
 Id: 833fc08f-217d-4d3f-8c8e-782c61120407
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: kt2.sys
-  MD5: ''
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: cb25a5125fb353496b59b910263209f273f3552d
-  SHA256: ''
-  Signature: ''
-  LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
 Tags:
 - kt2.sys
+Author: Guus Verbeek
+Created: '2023-06-05'
+MitreID: T1068
+Category: malicious
 Verified: 'FALSE'
+Commands:
+    Command: sc.exe create kt2.sys binPath=C:\windows\temp\kt2.sys type=kernel &&
+        sc.exe start kt2.sys
+    Description: BlackCat Ransomware Deploys New Signed Kernel Driver. BlackCat ransomware
+        incident that occurred in February 2023.
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
+Resources:
+- https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
+Acknowledgement:
+    Handle: ''
+    Person: ''
+Detection: []
+KnownVulnerableSamples:
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: kt2.sys
+    MD5: ''
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: cb25a5125fb353496b59b910263209f273f3552d
+    SHA256: ''
+    Signature: ''
+    LoadsDespiteHVCI: 'TRUE'

@@ -1,106 +1,106 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
-Author: Guus Verbeek
-Category: malicious
-Commands:
-  Command: sc.exe create malicious.sys binPath=C:\windows\temp\malicious.sys type=kernel
-    && sc.exe start malicious.sys
-  Description: This demo is a presentation at the CYBERSEC 2023 in Taiwan. The presentation
-    showcases the abuse of RTCore64.sys (CVE-2019-16098) from MSI and the nullification
-    of the DSE flag to load a malicious unsigned driver. The presentation also demonstrates
-    an attack on 360 Total Security by nulling out its ObRegisterCallbacks and notify
-    callbacks, enabling the execution of any malicious behavior on the processes of
-    360 Total Security.
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
-Created: '2023-06-05'
-Detection: []
 Id: 3e5c0fc4-bfe8-4af2-9613-4f56b0e3c2c8
-KnownVulnerableSamples:
-- Authentihash:
-    MD5: b877e53d3bc3df3d62dc7b26c9b9b006
-    SHA1: 8fb8d175848525061418e80fe95ced27cc0ba0a4
-    SHA256: 4cfd9cb41a51b1e1fdfc9a6855323bf11a0baf18e5d8f0ee7480a8cb5be7c8ac
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2023-05-11 11:16:19'
-  Date: ''
-  Description: ''
-  ExportedFunctions: ''
-  FileVersion: ''
-  Filename: malicious.sys
-  ImportedFunctions:
-  - DbgPrint
-  - KeLowerIrql
-  - KfRaiseIrql
-  - IofCompleteRequest
-  - MmIsAddressValid
-  - PsProcessType
-  - PsThreadType
-  Imports:
-  - ntoskrnl.exe
-  InternalName: ''
-  MD5: 0b311af53d2f4f77d30f1aed709db257
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: a6ba2bd951320636370c55e8d7761b8a
-    SHA1: 20cbbdef0d0d877dba78ae5a8dcd5b8ad33f38cd
-    SHA256: 26b111f150fd8e467e4cb89713a96e1d8f92a50406c4c61bdbea31bcb57343b5
-  SHA1: 43501832ce50ccaba2706be852813d51de5a900f
-  SHA256: 23e89fd30a1c7db37f3ea81b779ce9acf8a4294397cbb54cff350d54afcfd931
-  Sections:
-    .text:
-      Entropy: 5.891982734570695
-      Virtual Size: '0x3e3'
-    .rdata:
-      Entropy: 3.4826551255108695
-      Virtual Size: '0x37c'
-    .data:
-      Entropy: 3.75
-      Virtual Size: '0x10'
-    .pdata:
-      Entropy: 2.8954033911671946
-      Virtual Size: '0x54'
-    INIT:
-      Entropy: 4.906844120691812
-      Virtual Size: '0x148'
-    .reloc:
-      Entropy: 2.970950594454669
-      Virtual Size: '0x14'
-  Signature: ''
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: CN=WDKTestCert zezec,132961360795713868
-      ValidFrom: '2022-05-04 11:08:00'
-      ValidTo: '2032-05-04 00:00:00'
-      Signature: 8a3d87651fb15fcff7666b659d53aa7d6c87f964fdfcee7cdf84e40ccb8fbfe2e27dfc99993a21d9a27e979c9a8ea7db1e6909a386c9ca493d883dd4d3434e3584bd65991851775ca4d8037cd040ab4203fa663da5c06f8b20bae3781684c34481b7b497e51d12461e8885dd013404cb4bdb7bc48c11605043b6d6db7f18b1c60729a92f57bdce8a7dc4023f4162ff126cea4290762dfcdd4fbee670c2326812a74e2db6eb7845b006b56321c0a12cb74ba5f8338d96ec2b8c210e514098839bcf7a5eb53768f2c3d6a7168ffadff069764a48ca66671f1accc5f612debbfe0a07beafe426bb81384b17c6e0b493a7b92053b56aa2ed26e86bed6c131e300061
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 7b475bcb4233f98946d0a1fbeb9de9ce
-      Version: 3
-      TBS:
-        MD5: d606eff6aa2f4e57d695c323c6a3591d
-        SHA1: 83bcbb816007b04a98dddc2ce9d83569e0a913d8
-        SHA256: f367ed049a014c61efef0ed4a4e726dc97c83b58e36b346b68b3039342f2f53c
-        SHA384: 28180687451e1c889191ef51deada86464e2918530084d6d17378238660a39488fc819a164ec225091dd75734d1ebcbd
-    Signer:
-    - SerialNumber: 7b475bcb4233f98946d0a1fbeb9de9ce
-      Issuer: CN=WDKTestCert zezec,132961360795713868
-      Version: 1
-  Imphash: 2de3451f3e7b02970582bb8f9fd8c73a
-  LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://github.com/zeze-zeze/CYBERSEC2023-BYOVD-Demo
 Tags:
 - malicious.sys
+Author: Guus Verbeek
+Created: '2023-06-05'
+MitreID: T1068
+Category: malicious
 Verified: 'TRUE'
+Commands:
+    Command: sc.exe create malicious.sys binPath=C:\windows\temp\malicious.sys type=kernel
+        && sc.exe start malicious.sys
+    Description: This demo is a presentation at the CYBERSEC 2023 in Taiwan. The presentation
+        showcases the abuse of RTCore64.sys (CVE-2019-16098) from MSI and the nullification
+        of the DSE flag to load a malicious unsigned driver. The presentation also
+        demonstrates an attack on 360 Total Security by nulling out its ObRegisterCallbacks
+        and notify callbacks, enabling the execution of any malicious behavior on
+        the processes of 360 Total Security.
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
+Resources:
+- https://github.com/zeze-zeze/CYBERSEC2023-BYOVD-Demo
+Acknowledgement:
+    Handle: ''
+    Person: ''
+Detection: []
+KnownVulnerableSamples:
+-   Authentihash:
+        MD5: b877e53d3bc3df3d62dc7b26c9b9b006
+        SHA1: 8fb8d175848525061418e80fe95ced27cc0ba0a4
+        SHA256: 4cfd9cb41a51b1e1fdfc9a6855323bf11a0baf18e5d8f0ee7480a8cb5be7c8ac
+    Company: ''
+    Copyright: ''
+    CreationTimestamp: '2023-05-11 11:16:19'
+    Date: ''
+    Description: ''
+    ExportedFunctions: ''
+    FileVersion: ''
+    Filename: malicious.sys
+    ImportedFunctions:
+    - DbgPrint
+    - KeLowerIrql
+    - KfRaiseIrql
+    - IofCompleteRequest
+    - MmIsAddressValid
+    - PsProcessType
+    - PsThreadType
+    Imports:
+    - ntoskrnl.exe
+    InternalName: ''
+    MD5: 0b311af53d2f4f77d30f1aed709db257
+    MachineType: AMD64
+    MagicHeader: 50 45 0 0
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: a6ba2bd951320636370c55e8d7761b8a
+        SHA1: 20cbbdef0d0d877dba78ae5a8dcd5b8ad33f38cd
+        SHA256: 26b111f150fd8e467e4cb89713a96e1d8f92a50406c4c61bdbea31bcb57343b5
+    SHA1: 43501832ce50ccaba2706be852813d51de5a900f
+    SHA256: 23e89fd30a1c7db37f3ea81b779ce9acf8a4294397cbb54cff350d54afcfd931
+    Sections:
+        .text:
+            Entropy: 5.891982734570695
+            Virtual Size: '0x3e3'
+        .rdata:
+            Entropy: 3.4826551255108695
+            Virtual Size: '0x37c'
+        .data:
+            Entropy: 3.75
+            Virtual Size: '0x10'
+        .pdata:
+            Entropy: 2.8954033911671946
+            Virtual Size: '0x54'
+        INIT:
+            Entropy: 4.906844120691812
+            Virtual Size: '0x148'
+        .reloc:
+            Entropy: 2.970950594454669
+            Virtual Size: '0x14'
+    Signature: ''
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: CN=WDKTestCert zezec,132961360795713868
+            ValidFrom: '2022-05-04 11:08:00'
+            ValidTo: '2032-05-04 00:00:00'
+            Signature: 8a3d87651fb15fcff7666b659d53aa7d6c87f964fdfcee7cdf84e40ccb8fbfe2e27dfc99993a21d9a27e979c9a8ea7db1e6909a386c9ca493d883dd4d3434e3584bd65991851775ca4d8037cd040ab4203fa663da5c06f8b20bae3781684c34481b7b497e51d12461e8885dd013404cb4bdb7bc48c11605043b6d6db7f18b1c60729a92f57bdce8a7dc4023f4162ff126cea4290762dfcdd4fbee670c2326812a74e2db6eb7845b006b56321c0a12cb74ba5f8338d96ec2b8c210e514098839bcf7a5eb53768f2c3d6a7168ffadff069764a48ca66671f1accc5f612debbfe0a07beafe426bb81384b17c6e0b493a7b92053b56aa2ed26e86bed6c131e300061
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 7b475bcb4233f98946d0a1fbeb9de9ce
+            Version: 3
+            TBS:
+                MD5: d606eff6aa2f4e57d695c323c6a3591d
+                SHA1: 83bcbb816007b04a98dddc2ce9d83569e0a913d8
+                SHA256: f367ed049a014c61efef0ed4a4e726dc97c83b58e36b346b68b3039342f2f53c
+                SHA384: 28180687451e1c889191ef51deada86464e2918530084d6d17378238660a39488fc819a164ec225091dd75734d1ebcbd
+        Signer:
+        -   SerialNumber: 7b475bcb4233f98946d0a1fbeb9de9ce
+            Issuer: CN=WDKTestCert zezec,132961360795713868
+            Version: 1
+    Imphash: 2de3451f3e7b02970582bb8f9fd8c73a
+    LoadsDespiteHVCI: 'TRUE'

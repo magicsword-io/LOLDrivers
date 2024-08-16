@@ -1,35 +1,35 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
-Author: Michael Haag
-Category: vulnerable driver
-Commands:
-  Command: sc.exe create cpupress.sys binPath=C:\windows\temp\cpupress.sys type=kernel
-    && sc.exe start cpupress.sys
-  Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
 Id: c0645f0f-9b97-4fe9-811e-2e45c250c9ef
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: cpupress.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA256: fcdfe570e6dc6e768ef75138033d9961f78045adca53beb6fdb520f6417e0df1
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - cpupress.sys
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
 Verified: 'FALSE'
+Commands:
+    Command: sc.exe create cpupress.sys binPath=C:\windows\temp\cpupress.sys type=kernel
+        && sc.exe start cpupress.sys
+    Description: ''
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+    Handle: ''
+    Person: ''
+Detection: []
+KnownVulnerableSamples:
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: cpupress.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA256: fcdfe570e6dc6e768ef75138033d9961f78045adca53beb6fdb520f6417e0df1
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'

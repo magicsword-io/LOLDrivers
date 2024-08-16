@@ -1,155 +1,157 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
-Author: Takahiro Haruyama
-Category: vulnerable driver
-Commands:
-  Command: sc.exe create WiRwaDrvsys binPath= C:\windows\temp\WiRwaDrvsys.sys type=kernel
-    && sc.exe start WiRwaDrvsys
-  Description: The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable
-    drivers (237 file hashes) accepting firmware access. Six allow kernel memory access.
-    All give full control of the devices to non-admin users. By exploiting the vulnerable
-    drivers, an attacker without the system privilege may erase/alter firmware, and/or
-    elevate privileges. As of the time of writing in October 2023, the filenames of
-    the vulnerable drivers have not been made public until now.
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
-Created: '2023-11-02'
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Id: a4795ab6-d908-44cf-9ebf-a47db367d385
-KnownVulnerableSamples:
-- Company: Wistron Corporation
-  Date: ''
-  Description: Wistron RWA Driver
-  FileVersion: 1.0.0.1016
-  Filename: ''
-  MD5: 7be3a7a743f2013c3e90355219626c2c
-  MachineType: AMD64
-  OriginalFilename: WiRwaDrv.sys
-  Product: Wistron RWA Driver
-  ProductVersion: 1.0.0.1016
-  Publisher: ''
-  SHA1: a951953e3c1bb08653ed7b0daec38be7b0169c27
-  SHA256: d8fc8e3a1348393c5d7c3a84bcbae383d85a4721a751ad7afac5428e5e579b4e
-  Signature: ''
-  Imphash: 21f58b1f2de6ad0e9c019da7a4e7317b
-  Authentihash:
-    MD5: b27ddf036b235b1a2a0f9c3869cf12e5
-    SHA1: d6540f9784c51a4bf08b59e7398de5bacb4e9011
-    SHA256: c7e5bd0090962b4f31e17ab3d1f97bd9870d23238b591a70e27a0c91db138f95
-  RichPEHeaderHash:
-    MD5: c5599f502c132e4cd94d522a8cadd663
-    SHA1: d726b26c064ab532c55824107f0340b8b618b35e
-    SHA256: 5927d293c65d42091d25a0554140352e17a69c69953e583671bc6fad80728249
-  Sections:
-    .text:
-      Entropy: 6.462033360013696
-      Virtual Size: '0x1543'
-    .rdata:
-      Entropy: 3.739190983334858
-      Virtual Size: '0x454'
-    .data:
-      Entropy: 2.620879970154579
-      Virtual Size: '0x28'
-    .pdata:
-      Entropy: 3.480354095113092
-      Virtual Size: '0xb4'
-    INIT:
-      Entropy: 4.855913278600088
-      Virtual Size: '0x1f6'
-    .rsrc:
-      Entropy: 3.5094540781323795
-      Virtual Size: '0x410'
-    .reloc:
-      Entropy: 2.684183719779189
-      Virtual Size: '0x14'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-10-18 02:40:37'
-  InternalName: WiRwaDrv.sys
-  Copyright: Copyright (C) 2019 Wistron Corporation
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - MmMapIoSpace
-  - MmUnmapIoSpace
-  - IofCompleteRequest
-  - DbgPrint
-  - IoCreateSymbolicLink
-  - IoDeleteDevice
-  - IoDeleteSymbolicLink
-  - IoIs32bitProcess
-  - IoCreateDevice
-  - RtlInitUnicodeString
-  - KeStallExecutionProcessor
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
-        Class 3 Extended Validation Code Signing CA , G2
-      ValidFrom: '2014-03-04 00:00:00'
-      ValidTo: '2024-03-03 23:59:59'
-      Signature: 3f5b19f3fa13d575382a5aee9f5aa04ca91dc5cc94eede15fef5106ea41ba56483541858c40b28a185c34e74e5ff897cfed5ed3cba719f5602268f162a88feb0a32722ce4be2388e00a63a865f9de53ea8de644941744121fd07c88417da1d653082cb264f39d60427a481b14b49c3238b7e02321827b7ab0bf31872b6a4ee67066f38a6588de0f17e5da460c6a8e5505fe0e8bae28f9958b6b5a0a876f1a2f11c8841727e52979b0a36998d50f701eb3ce7f0226ae5358c63368a1ab1d967665f971aefa8209df02fba6cced9948500f158f17dc97c22b5075d02c6e60bbfab9393ff27188e33367e5734f1c3af04c184f156b3e8878336f8d30a31dc6e2c6d
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 191a32cb759c97b8cfac118dd5127f49
-      Version: 3
-      TBS:
-        MD5: 788b61bd26da89253179e3de2cdb527f
-        SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
-        SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
-        SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
-    - Subject: ??=TW, ??=Taipei City, ??=Taipei City, ??=Private Organization, serialNumber=12868358,
-        C=TW, L=Taipei City, O=Wistron Corporation, CN=Wistron Corporation
-      ValidFrom: '2019-07-10 00:00:00'
-      ValidTo: '2021-04-10 23:59:59'
-      Signature: 26664b896d1e83b2fa44d95a88188d6a2afec9f4b0495a9b719dc107cbc8ed0efd4c65c8d6a36101ab32caba91f92d7d9402a6b6db782ecd9cea5849917e349b39d7d528045c701abb7072af2dfd526b4756733f4ed5f31e1c84ace251e39a0661493af6de24dba761a94915ced95b4d8421b5167bc9e85318021116959d9f2fe98b674d0d24f01929d50699b151b9cdb8464dfbdc578e725f6a7af29d0e8970f82531130b31fc5874650d637b359ac33a00b64b10bc8fae20adf2ade12764de5902023f8bb7782c8b5c72acf2bdced5727197f9e9d519fccaa7c397ae149da1702cda9d644f654f38044e04f637728f8228391bbe645f87977ca170f1e6cb4f
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 3fab6983c8188ce80d06ddd6b92ef292
-      Version: 3
-      TBS:
-        MD5: 05bc106762d78fe49ebb5136aba4f0ed
-        SHA1: a5f824c6cb64fad75d9adcb6e1bb85eafd6bfb40
-        SHA256: 04b2175a32b3b2aa1c4523f6e6668c5ae4081ce76175f6cfe2a0fff19481b987
-        SHA384: 07a7d53cee7840bc277f18fc445986b9d951c577a3ab46a6a985ac21e15705e9c1556a19de3993c3af13724e5e9a5d49
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
-        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
-        Authority , G5
-      ValidFrom: '2011-02-22 19:25:17'
-      ValidTo: '2021-02-22 19:35:17'
-      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 611993e400000000001c
-      Version: 3
-      TBS:
-        MD5: 78a717e082dcc1cda3458d917e677d14
-        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
-        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
-        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
-    Signer:
-    - SerialNumber: 3fab6983c8188ce80d06ddd6b92ef292
-      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
-        Class 3 Extended Validation Code Signing CA , G2
-      Version: 1
-  LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Tags:
 - WiRwaDrv.sys
+Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
+Category: vulnerable driver
 Verified: 'TRUE'
+Commands:
+    Command: sc.exe create WiRwaDrvsys binPath= C:\windows\temp\WiRwaDrvsys.sys type=kernel
+        && sc.exe start WiRwaDrvsys
+    Description: The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique
+        vulnerable drivers (237 file hashes) accepting firmware access. Six allow
+        kernel memory access. All give full control of the devices to non-admin users.
+        By exploiting the vulnerable drivers, an attacker without the system privilege
+        may erase/alter firmware, and/or elevate privileges. As of the time of writing
+        in October 2023, the filenames of the vulnerable drivers have not been made
+        public until now.
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+Acknowledgement:
+    Handle: ''
+    Person: ''
+Detection:
+-   type: yara_signature
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+-   type: sigma_hash
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+-   type: sigma_names
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+-   type: sysmon_hash_detect
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+-   type: sysmon_hash_block
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+KnownVulnerableSamples:
+-   Company: Wistron Corporation
+    Date: ''
+    Description: Wistron RWA Driver
+    FileVersion: 1.0.0.1016
+    Filename: ''
+    MD5: 7be3a7a743f2013c3e90355219626c2c
+    MachineType: AMD64
+    OriginalFilename: WiRwaDrv.sys
+    Product: Wistron RWA Driver
+    ProductVersion: 1.0.0.1016
+    Publisher: ''
+    SHA1: a951953e3c1bb08653ed7b0daec38be7b0169c27
+    SHA256: d8fc8e3a1348393c5d7c3a84bcbae383d85a4721a751ad7afac5428e5e579b4e
+    Signature: ''
+    Imphash: 21f58b1f2de6ad0e9c019da7a4e7317b
+    Authentihash:
+        MD5: b27ddf036b235b1a2a0f9c3869cf12e5
+        SHA1: d6540f9784c51a4bf08b59e7398de5bacb4e9011
+        SHA256: c7e5bd0090962b4f31e17ab3d1f97bd9870d23238b591a70e27a0c91db138f95
+    RichPEHeaderHash:
+        MD5: c5599f502c132e4cd94d522a8cadd663
+        SHA1: d726b26c064ab532c55824107f0340b8b618b35e
+        SHA256: 5927d293c65d42091d25a0554140352e17a69c69953e583671bc6fad80728249
+    Sections:
+        .text:
+            Entropy: 6.462033360013696
+            Virtual Size: '0x1543'
+        .rdata:
+            Entropy: 3.739190983334858
+            Virtual Size: '0x454'
+        .data:
+            Entropy: 2.620879970154579
+            Virtual Size: '0x28'
+        .pdata:
+            Entropy: 3.480354095113092
+            Virtual Size: '0xb4'
+        INIT:
+            Entropy: 4.855913278600088
+            Virtual Size: '0x1f6'
+        .rsrc:
+            Entropy: 3.5094540781323795
+            Virtual Size: '0x410'
+        .reloc:
+            Entropy: 2.684183719779189
+            Virtual Size: '0x14'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2019-10-18 02:40:37'
+    InternalName: WiRwaDrv.sys
+    Copyright: Copyright (C) 2019 Wistron Corporation
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - MmMapIoSpace
+    - MmUnmapIoSpace
+    - IofCompleteRequest
+    - DbgPrint
+    - IoCreateSymbolicLink
+    - IoDeleteDevice
+    - IoDeleteSymbolicLink
+    - IoIs32bitProcess
+    - IoCreateDevice
+    - RtlInitUnicodeString
+    - KeStallExecutionProcessor
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+                Class 3 Extended Validation Code Signing CA , G2
+            ValidFrom: '2014-03-04 00:00:00'
+            ValidTo: '2024-03-03 23:59:59'
+            Signature: 3f5b19f3fa13d575382a5aee9f5aa04ca91dc5cc94eede15fef5106ea41ba56483541858c40b28a185c34e74e5ff897cfed5ed3cba719f5602268f162a88feb0a32722ce4be2388e00a63a865f9de53ea8de644941744121fd07c88417da1d653082cb264f39d60427a481b14b49c3238b7e02321827b7ab0bf31872b6a4ee67066f38a6588de0f17e5da460c6a8e5505fe0e8bae28f9958b6b5a0a876f1a2f11c8841727e52979b0a36998d50f701eb3ce7f0226ae5358c63368a1ab1d967665f971aefa8209df02fba6cced9948500f158f17dc97c22b5075d02c6e60bbfab9393ff27188e33367e5734f1c3af04c184f156b3e8878336f8d30a31dc6e2c6d
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 191a32cb759c97b8cfac118dd5127f49
+            Version: 3
+            TBS:
+                MD5: 788b61bd26da89253179e3de2cdb527f
+                SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
+                SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
+                SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
+        -   Subject: ??=TW, ??=Taipei City, ??=Taipei City, ??=Private Organization,
+                serialNumber=12868358, C=TW, L=Taipei City, O=Wistron Corporation,
+                CN=Wistron Corporation
+            ValidFrom: '2019-07-10 00:00:00'
+            ValidTo: '2021-04-10 23:59:59'
+            Signature: 26664b896d1e83b2fa44d95a88188d6a2afec9f4b0495a9b719dc107cbc8ed0efd4c65c8d6a36101ab32caba91f92d7d9402a6b6db782ecd9cea5849917e349b39d7d528045c701abb7072af2dfd526b4756733f4ed5f31e1c84ace251e39a0661493af6de24dba761a94915ced95b4d8421b5167bc9e85318021116959d9f2fe98b674d0d24f01929d50699b151b9cdb8464dfbdc578e725f6a7af29d0e8970f82531130b31fc5874650d637b359ac33a00b64b10bc8fae20adf2ade12764de5902023f8bb7782c8b5c72acf2bdced5727197f9e9d519fccaa7c397ae149da1702cda9d644f654f38044e04f637728f8228391bbe645f87977ca170f1e6cb4f
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 3fab6983c8188ce80d06ddd6b92ef292
+            Version: 3
+            TBS:
+                MD5: 05bc106762d78fe49ebb5136aba4f0ed
+                SHA1: a5f824c6cb64fad75d9adcb6e1bb85eafd6bfb40
+                SHA256: 04b2175a32b3b2aa1c4523f6e6668c5ae4081ce76175f6cfe2a0fff19481b987
+                SHA384: 07a7d53cee7840bc277f18fc445986b9d951c577a3ab46a6a985ac21e15705e9c1556a19de3993c3af13724e5e9a5d49
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006
+                VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public
+                Primary Certification Authority , G5
+            ValidFrom: '2011-02-22 19:25:17'
+            ValidTo: '2021-02-22 19:35:17'
+            Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 611993e400000000001c
+            Version: 3
+            TBS:
+                MD5: 78a717e082dcc1cda3458d917e677d14
+                SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+                SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+                SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+        Signer:
+        -   SerialNumber: 3fab6983c8188ce80d06ddd6b92ef292
+            Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+                Class 3 Extended Validation Code Signing CA , G2
+            Version: 1
+    LoadsDespiteHVCI: 'FALSE'

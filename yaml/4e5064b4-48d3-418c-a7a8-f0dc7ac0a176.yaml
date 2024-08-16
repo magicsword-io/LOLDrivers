@@ -1,148 +1,149 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 4e5064b4-48d3-418c-a7a8-f0dc7ac0a176
+Tags:
+- MsIo32.sys
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 CVE:
 - CVE-2019-18845
 Category: vulnerable driver
+Verified: 'TRUE'
 Commands:
-  Command: sc.exe create MsIo32.sys binPath=C:\windows\temp\MsIo32.sys type=kernel
-    && sc.exe start MsIo32.sys
-  Description: The MsIo64.sys and MsIo32.sys drivers in Patriot Viper RGB before 1.1
-    allow local users (including low integrity processes) to read and write to arbitrary
-    memory locations, and consequently gain NT AUTHORITY\SYSTEM privileges, by mapping
-    \Device\PhysicalMemory into the calling process via ZwOpenSection and ZwMapViewOfSection.
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
-Id: 4e5064b4-48d3-418c-a7a8-f0dc7ac0a176
-KnownVulnerableSamples:
-- Authentihash:
-    MD5: 6491c34f274a0ed6258fadca85bd69fb
-    SHA1: 7e732acb7cfad9ba043a9350cdeff25d742becb8
-    SHA256: 7018d515a6c781ea6097ca71d0f0603ad0d689f7ec99db27fcacd492a9e86027
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2018-02-12 00:57:50'
-  Date: ''
-  Description: ''
-  ExportedFunctions: ''
-  FileVersion: ''
-  Filename: MsIo32.sys
-  ImportedFunctions:
-  - RtlInitUnicodeString
-  - DbgPrint
-  - ZwClose
-  - ZwMapViewOfSection
-  - ObReferenceObjectByHandle
-  - ZwOpenSection
-  - IoDeleteSymbolicLink
-  - ZwUnmapViewOfSection
-  - IofCompleteRequest
-  - IoCreateSymbolicLink
-  - IoCreateDevice
-  - ObfDereferenceObject
-  - IoDeleteDevice
-  - HalTranslateBusAddress
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  InternalName: ''
-  MD5: d9e7e5bcc5b01915dbcef7762a7fc329
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: 361b8f718c9e1f8f46acd39bc0e7b5cd
-    SHA1: 3b77d6df2bf649e4281d73aaa445cf8f31030027
-    SHA256: caf536e9adb1df49dc5ac8eb8557389d564f22d4f859c1baa9d0541ed58496f6
-  SHA1: e6305dddd06490d7f87e3b06d09e9d4c1c643af0
-  SHA256: 525d9b51a80ca0cd4c5889a96f857e73f3a80da1ffbae59851e0f51bdfb0b6cd
-  Sections:
-    .text:
-      Entropy: 6.058139200380966
-      Virtual Size: '0xf35'
-    .rdata:
-      Entropy: 4.121284123833754
-      Virtual Size: '0x160'
-    .data:
-      Entropy: 0.5159719988134768
-      Virtual Size: '0x110'
-    .pdata:
-      Entropy: 3.1036058838796503
-      Virtual Size: '0x54'
-    INIT:
-      Entropy: 4.784008217365607
-      Virtual Size: '0x262'
-  Signature:
-  - MICSYS Technology Co., Ltd.
-  - Symantec Class 3 Extended Validation Code Signing CA - G2
-  - VeriSign
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
-        Class 3 Extended Validation Code Signing CA , G2
-      ValidFrom: '2014-03-04 00:00:00'
-      ValidTo: '2024-03-03 23:59:59'
-      Signature: 3f5b19f3fa13d575382a5aee9f5aa04ca91dc5cc94eede15fef5106ea41ba56483541858c40b28a185c34e74e5ff897cfed5ed3cba719f5602268f162a88feb0a32722ce4be2388e00a63a865f9de53ea8de644941744121fd07c88417da1d653082cb264f39d60427a481b14b49c3238b7e02321827b7ab0bf31872b6a4ee67066f38a6588de0f17e5da460c6a8e5505fe0e8bae28f9958b6b5a0a876f1a2f11c8841727e52979b0a36998d50f701eb3ce7f0226ae5358c63368a1ab1d967665f971aefa8209df02fba6cced9948500f158f17dc97c22b5075d02c6e60bbfab9393ff27188e33367e5734f1c3af04c184f156b3e8878336f8d30a31dc6e2c6d
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 191a32cb759c97b8cfac118dd5127f49
-      Version: 3
-      TBS:
-        MD5: 788b61bd26da89253179e3de2cdb527f
-        SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
-        SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
-        SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
-    - Subject: ??=TW, ??=Taiwan, ??=New Taipei City, ??=Private Organization, serialNumber=84948057,
-        C=TW, ST=Taiwan, L=New Taipei City, O=MICSYS Technology Co., Ltd., CN=MICSYS
-        Technology Co., Ltd.
-      ValidFrom: '2017-09-14 00:00:00'
-      ValidTo: '2018-09-14 23:59:59'
-      Signature: a088ab497bb3998b21a495dc947134af2f4fef067e37e6438b4f52f7773769bf583eaad5bf427552ca96f2dae2a60791066346a80c59c22fb22a98c6260fdccac7ed90a0148ce9dad3eebf008f1e3c206f952eea6748b256984b851e809d49c0923cb7224b48c96a83387aebbc70d44d19b1f865e59239b959dd2ecc6746062f1d9dd5ef426ed347184c9aad9d196279ca6e774e0d09b3f270fbe037e554c69c85d0a7d06b81047b0677e33011600c4dc4c08ff159f4ac344f96589cae7aec5166bc7a626b4d6fccbc07505872f781f9a2e4a0a0d5b1539790287a114be16b1c2a1648fbeeb9d95beb171ab1c4007c5c23f044c782cdfbb1703a13ee833197ba
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 48e28f46a3e4ac760dfa9a58fa6c6363
-      Version: 3
-      TBS:
-        MD5: 388e7704244c6f77b4f54d467075a41c
-        SHA1: 90fb8dec5a06fa52296ed951485dabce615ec76e
-        SHA256: 39d286d0c713fd8adbf4d9e97f04b8dc770dd286d15e0d36cc985825f05bd551
-        SHA384: 1d2f4da65dfd1829e0b196b6e258b3e2b4ddf3fc63975c62d1db460d4a3e73375cfd5676510e601405563fc1a35d4b11
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
-        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
-        Authority , G5
-      ValidFrom: '2011-02-22 19:25:17'
-      ValidTo: '2021-02-22 19:35:17'
-      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 611993e400000000001c
-      Version: 3
-      TBS:
-        MD5: 78a717e082dcc1cda3458d917e677d14
-        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
-        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
-        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
-    Signer:
-    - SerialNumber: 48e28f46a3e4ac760dfa9a58fa6c6363
-      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
-        Class 3 Extended Validation Code Signing CA , G2
-      Version: 1
-  Imphash: 8a424cd36ae3eab0d11332ce3b982a02
-  LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
+    Command: sc.exe create MsIo32.sys binPath=C:\windows\temp\MsIo32.sys type=kernel
+        && sc.exe start MsIo32.sys
+    Description: The MsIo64.sys and MsIo32.sys drivers in Patriot Viper RGB before
+        1.1 allow local users (including low integrity processes) to read and write
+        to arbitrary memory locations, and consequently gain NT AUTHORITY\SYSTEM privileges,
+        by mapping \Device\PhysicalMemory into the calling process via ZwOpenSection
+        and ZwMapViewOfSection.
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
 Resources:
 - https://www.activecyber.us/activelabs/viper-rgb-driver-local-privilege-escalation-cve-2019-18845
 - http://blog.rewolf.pl/blog/?p=1630
 - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Tags:
-- MsIo32.sys
-Verified: 'TRUE'
+Acknowledgement:
+    Handle: ''
+    Person: ''
+Detection: []
+KnownVulnerableSamples:
+-   Authentihash:
+        MD5: 6491c34f274a0ed6258fadca85bd69fb
+        SHA1: 7e732acb7cfad9ba043a9350cdeff25d742becb8
+        SHA256: 7018d515a6c781ea6097ca71d0f0603ad0d689f7ec99db27fcacd492a9e86027
+    Company: ''
+    Copyright: ''
+    CreationTimestamp: '2018-02-12 00:57:50'
+    Date: ''
+    Description: ''
+    ExportedFunctions: ''
+    FileVersion: ''
+    Filename: MsIo32.sys
+    ImportedFunctions:
+    - RtlInitUnicodeString
+    - DbgPrint
+    - ZwClose
+    - ZwMapViewOfSection
+    - ObReferenceObjectByHandle
+    - ZwOpenSection
+    - IoDeleteSymbolicLink
+    - ZwUnmapViewOfSection
+    - IofCompleteRequest
+    - IoCreateSymbolicLink
+    - IoCreateDevice
+    - ObfDereferenceObject
+    - IoDeleteDevice
+    - HalTranslateBusAddress
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    InternalName: ''
+    MD5: d9e7e5bcc5b01915dbcef7762a7fc329
+    MachineType: AMD64
+    MagicHeader: 50 45 0 0
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: 361b8f718c9e1f8f46acd39bc0e7b5cd
+        SHA1: 3b77d6df2bf649e4281d73aaa445cf8f31030027
+        SHA256: caf536e9adb1df49dc5ac8eb8557389d564f22d4f859c1baa9d0541ed58496f6
+    SHA1: e6305dddd06490d7f87e3b06d09e9d4c1c643af0
+    SHA256: 525d9b51a80ca0cd4c5889a96f857e73f3a80da1ffbae59851e0f51bdfb0b6cd
+    Sections:
+        .text:
+            Entropy: 6.058139200380966
+            Virtual Size: '0xf35'
+        .rdata:
+            Entropy: 4.121284123833754
+            Virtual Size: '0x160'
+        .data:
+            Entropy: 0.5159719988134768
+            Virtual Size: '0x110'
+        .pdata:
+            Entropy: 3.1036058838796503
+            Virtual Size: '0x54'
+        INIT:
+            Entropy: 4.784008217365607
+            Virtual Size: '0x262'
+    Signature:
+    - MICSYS Technology Co., Ltd.
+    - Symantec Class 3 Extended Validation Code Signing CA - G2
+    - VeriSign
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+                Class 3 Extended Validation Code Signing CA , G2
+            ValidFrom: '2014-03-04 00:00:00'
+            ValidTo: '2024-03-03 23:59:59'
+            Signature: 3f5b19f3fa13d575382a5aee9f5aa04ca91dc5cc94eede15fef5106ea41ba56483541858c40b28a185c34e74e5ff897cfed5ed3cba719f5602268f162a88feb0a32722ce4be2388e00a63a865f9de53ea8de644941744121fd07c88417da1d653082cb264f39d60427a481b14b49c3238b7e02321827b7ab0bf31872b6a4ee67066f38a6588de0f17e5da460c6a8e5505fe0e8bae28f9958b6b5a0a876f1a2f11c8841727e52979b0a36998d50f701eb3ce7f0226ae5358c63368a1ab1d967665f971aefa8209df02fba6cced9948500f158f17dc97c22b5075d02c6e60bbfab9393ff27188e33367e5734f1c3af04c184f156b3e8878336f8d30a31dc6e2c6d
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 191a32cb759c97b8cfac118dd5127f49
+            Version: 3
+            TBS:
+                MD5: 788b61bd26da89253179e3de2cdb527f
+                SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
+                SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
+                SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
+        -   Subject: ??=TW, ??=Taiwan, ??=New Taipei City, ??=Private Organization,
+                serialNumber=84948057, C=TW, ST=Taiwan, L=New Taipei City, O=MICSYS
+                Technology Co., Ltd., CN=MICSYS Technology Co., Ltd.
+            ValidFrom: '2017-09-14 00:00:00'
+            ValidTo: '2018-09-14 23:59:59'
+            Signature: a088ab497bb3998b21a495dc947134af2f4fef067e37e6438b4f52f7773769bf583eaad5bf427552ca96f2dae2a60791066346a80c59c22fb22a98c6260fdccac7ed90a0148ce9dad3eebf008f1e3c206f952eea6748b256984b851e809d49c0923cb7224b48c96a83387aebbc70d44d19b1f865e59239b959dd2ecc6746062f1d9dd5ef426ed347184c9aad9d196279ca6e774e0d09b3f270fbe037e554c69c85d0a7d06b81047b0677e33011600c4dc4c08ff159f4ac344f96589cae7aec5166bc7a626b4d6fccbc07505872f781f9a2e4a0a0d5b1539790287a114be16b1c2a1648fbeeb9d95beb171ab1c4007c5c23f044c782cdfbb1703a13ee833197ba
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 48e28f46a3e4ac760dfa9a58fa6c6363
+            Version: 3
+            TBS:
+                MD5: 388e7704244c6f77b4f54d467075a41c
+                SHA1: 90fb8dec5a06fa52296ed951485dabce615ec76e
+                SHA256: 39d286d0c713fd8adbf4d9e97f04b8dc770dd286d15e0d36cc985825f05bd551
+                SHA384: 1d2f4da65dfd1829e0b196b6e258b3e2b4ddf3fc63975c62d1db460d4a3e73375cfd5676510e601405563fc1a35d4b11
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006
+                VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public
+                Primary Certification Authority , G5
+            ValidFrom: '2011-02-22 19:25:17'
+            ValidTo: '2021-02-22 19:35:17'
+            Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 611993e400000000001c
+            Version: 3
+            TBS:
+                MD5: 78a717e082dcc1cda3458d917e677d14
+                SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+                SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+                SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+        Signer:
+        -   SerialNumber: 48e28f46a3e4ac760dfa9a58fa6c6363
+            Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+                Class 3 Extended Validation Code Signing CA , G2
+            Version: 1
+    Imphash: 8a424cd36ae3eab0d11332ce3b982a02
+    LoadsDespiteHVCI: 'FALSE'

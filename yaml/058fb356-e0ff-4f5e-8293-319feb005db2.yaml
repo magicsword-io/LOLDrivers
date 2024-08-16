@@ -1,48 +1,48 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
-Author: Michael Haag
-Category: vulnerable driver
-Commands:
-  Command: sc.exe create bandai.sys binPath=C:\windows\temp\bandai.sys type=kernel
-    && sc.exe start bandai.sys
-  Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
 Id: 058fb356-e0ff-4f5e-8293-319feb005db2
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: bandai.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 0f780b7ada5dd8464d9f2cc537d973f5ac804e9c
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: bandai.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: ea360a9f23bb7cf67f08b88e6a185a699f0c5410
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - bandai.sys
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
 Verified: 'FALSE'
+Commands:
+    Command: sc.exe create bandai.sys binPath=C:\windows\temp\bandai.sys type=kernel
+        && sc.exe start bandai.sys
+    Description: ''
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+    Handle: ''
+    Person: ''
+Detection: []
+KnownVulnerableSamples:
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: bandai.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: 0f780b7ada5dd8464d9f2cc537d973f5ac804e9c
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: bandai.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: ea360a9f23bb7cf67f08b88e6a185a699f0c5410
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'

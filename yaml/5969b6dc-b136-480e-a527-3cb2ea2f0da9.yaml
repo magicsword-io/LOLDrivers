@@ -1,726 +1,726 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
-Author: Guus Verbeek
-Category: vulnerable driver
-Commands:
-  Command: sc.exe create hw_sys binPath=C:\windows\temp\hw.sys type=kernel && sc.exe
-    start hw.sys
-  Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/fd388cf1df06d419b14dedbeb24c6f4dff37bea26018775f09d56b3067f0de2c.yara
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/55963284bbd5a3297f39f12f0d8a01ed99fe59d008561e3537bcd4db4b4268fa.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Id: 5969b6dc-b136-480e-a527-3cb2ea2f0da9
-KnownVulnerableSamples:
-- Authentihash:
-    MD5: 6eafc9b68f2047adf6879e955d3b69e8
-    SHA1: 8a6d85617bc601b818ddf1b8e8d5db6cf7ae31c1
-    SHA256: 615a7c647eba3f2dcea463d5705d5d59ca70b4250f895ad20ce6876076a8fa28
-  Company: Marvin Test Solutions, Inc.
-  Copyright: "Copyright \xA9 1996-2021 Marvin Test Solutions, Inc. All Rights Reserved."
-  CreationTimestamp: '2021-01-06 17:19:33'
-  Date: ''
-  Description: HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI
-    access
-  ExportedFunctions: ''
-  FileVersion: 4.9.8.0
-  Filename: hw.sys
-  ImportedFunctions:
-  - KeReleaseMutex
-  - KeWaitForSingleObject
-  - PsGetCurrentProcessId
-  - KeInitializeDpc
-  - MmGetSystemRoutineAddress
-  - IoDeleteDevice
-  - IoCreateSymbolicLink
-  - KeInitializeMutex
-  - IoCreateDevice
-  - IoDeleteSymbolicLink
-  - memcpy
-  - PsGetVersion
-  - ZwUnmapViewOfSection
-  - ZwMapViewOfSection
-  - ObReferenceObjectByHandle
-  - ZwOpenSection
-  - IoFreeMdl
-  - MmMapLockedPages
-  - MmBuildMdlForNonPagedPool
-  - IoAllocateMdl
-  - MmMapIoSpace
-  - MmUnmapLockedPages
-  - MmUnmapIoSpace
-  - IoGetDmaAdapter
-  - IofCallDriver
-  - IoBuildSynchronousFsdRequest
-  - ZwOpenProcess
-  - KeInitializeEvent
-  - ObfDereferenceObject
-  - ExAllocatePoolWithTag
-  - ObReferenceObjectByName
-  - IoDriverObjectType
-  - IofCompleteRequest
-  - WRITE_REGISTER_BUFFER_ULONG
-  - WRITE_REGISTER_BUFFER_USHORT
-  - WRITE_REGISTER_BUFFER_UCHAR
-  - WRITE_REGISTER_ULONG
-  - WRITE_REGISTER_USHORT
-  - WRITE_REGISTER_UCHAR
-  - READ_REGISTER_BUFFER_ULONG
-  - READ_REGISTER_BUFFER_USHORT
-  - READ_REGISTER_BUFFER_UCHAR
-  - READ_REGISTER_ULONG
-  - READ_REGISTER_USHORT
-  - READ_REGISTER_UCHAR
-  - IoConnectInterrupt
-  - IoDisconnectInterrupt
-  - KeReleaseInterruptSpinLock
-  - KeAcquireInterruptSpinLock
-  - ExEventObjectType
-  - KeDelayExecutionThread
-  - KeInsertQueueDpc
-  - ZwClose
-  - KeSetEvent
-  - IoCreateNotificationEvent
-  - KeClearEvent
-  - RtlQueryRegistryValues
-  - RtlAppendUnicodeStringToString
-  - RtlInitUnicodeString
-  - memset
-  - ExFreePoolWithTag
-  - IoGetDeviceProperty
-  - ExAllocatePool
-  - READ_PORT_UCHAR
-  - READ_PORT_USHORT
-  - READ_PORT_ULONG
-  - READ_PORT_BUFFER_UCHAR
-  - READ_PORT_BUFFER_USHORT
-  - READ_PORT_BUFFER_ULONG
-  - WRITE_PORT_UCHAR
-  - WRITE_PORT_USHORT
-  - WRITE_PORT_ULONG
-  - WRITE_PORT_BUFFER_UCHAR
-  - WRITE_PORT_BUFFER_USHORT
-  - WRITE_PORT_BUFFER_ULONG
-  - HalAssignSlotResources
-  - HalTranslateBusAddress
-  - HalGetBusDataByOffset
-  - HalGetInterruptVector
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  InternalName: Hw.sys
-  MD5: 3247014ba35d406475311a2eab0c4657
-  MachineType: I386
-  MagicHeader: 50 45 0 0
-  OriginalFilename: HW.sys
-  Product: HW
-  ProductVersion: 4.9.8.0
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: 91d1f756630dbcb9bb34ab945f1e3a43
-    SHA1: 8213b5de157232171c54fb94c86028521e9bb905
-    SHA256: 0a9072b98f01eaed2e4fd4ebbdcb86740b5427a213d8c1a7e5bd49d9613aa152
-  SHA1: 74e4e3006b644392f5fcea4a9bae1d9d84714b57
-  SHA256: 4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8
-  Sections:
-    .text:
-      Entropy: 5.94588431546437
-      Virtual Size: '0x4242'
-    .rdata:
-      Entropy: 5.126726594759932
-      Virtual Size: '0xc2c'
-    .rsrc:
-      Entropy: 3.6674325094888713
-      Virtual Size: '0x4a0'
-    .reloc:
-      Entropy: 5.321382942427512
-      Virtual Size: '0x322'
-  Signature:
-  - Marvin Test Solutions, Inc.
-  - GlobalSign Extended Validation CodeSigning CA - SHA256 - G3
-  - GlobalSign
-  - GlobalSign Root CA - R1
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: OU=GlobalSign Root CA , R3, O=GlobalSign, CN=GlobalSign
-      ValidFrom: '2018-09-19 00:00:00'
-      ValidTo: '2028-01-28 12:00:00'
-      Signature: 2370e9cfe2bef559ae94426fc44333aacd3f3ab96417f262064b48f140880617a1feabd15f3cc633f2f38edd1f1d3ecc1a6099820bacc7fc7e9a872aa57d0fa657eeac3b6a85d6debd4063f8ada6c888b012fcf641df0f09971e38ea539fbe05f43eead39f501276be098bc20b487d1e2e51f68d53d3ab1f401b8a8eed7dfb4f7956705f0cd38e1bb3a7700d372b9795abdae0126b1c40cec5c77eedc26258ec77ed7322c28af5864388adea136efdd8fe422fb97d5ead18ef9490ca3d27ab26949975c7cbd37bf7ca4cd3af5121925b847d2b9f153f74cb51e89e830e166f1be746ce23bdf9e4a28bd2396baa791c912ce261242d8e2a487090c41ec5e8e070
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 01ee5f169dff97352b6465d66a
-      Version: 3
-      TBS:
-        MD5: 51c3959a45cecf3d21a3effb05762573
-        SHA1: ecfcd25fd0525448a74875ba271566bc0bfbf061
-        SHA256: de1da11668f0a8d5e13346ed3ab2755f5d25bebffcfd1d0bde5b9f87bc292c91
-        SHA384: f0eab75baf1f24a53d63bd795cd07292a312f603513c8cb0f40fe5acbdb477ed72607d309fad21471a16f6223fb3a838
-    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
-        CA , SHA256 , G3
-      ValidFrom: '2016-06-15 00:00:00'
-      ValidTo: '2024-06-15 00:00:00'
-      Signature: 7609c4cc2fd9ef1e4ba9f857f3403921ca4c3c1d9e292b20d42b44d288ce1a0d05cf8381bbeb69bc318d2ac4c744cc6060941ccfa1e102240ead5bbe2cc2271e67b7e8281f3251e339f398dfb89f2e8b2ab47b0a03bcbd36048fc9d09c4fa3022799b0f045e934dfe43aa3b70637d86f2a7990d4d44e5871ec53a96198f73969e0129c575872862729a51de532f32b99975abf2bb03cb406ea0e64ecb7cd65802417c2d937f5b1261035477b9a02ba54a24593ff79bf1a8cc59fb59fdf78e76b50f14794694b24b8da05e80c9d4f06ec4a31207e4f5d86842f35a3cd9cc184571f1fadc0e2a4b1ef296b2197a6d4feed0337b0fcf58d2abcdc8483e3dec3e75f
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 481b6a07a9424c1eaafef3cdf10f
-      Version: 3
-      TBS:
-        MD5: fd8cfeea06be14fa89689909e1fc72dc
-        SHA1: 8bc3cd2f70abe543e0dbe721065a4076c8521f36
-        SHA256: 15e7050789df807f3e3174294a01b637a1239f603e42f4b5db9398efa9da9996
-        SHA384: 8b9f95e6d3dd45e4ef38e2f12fb893d7d1bb1ba867e152e4a73c49b3d51dd52bc83a05982deac29af90436061248546d
-    - Subject: ??=Private Organization, serialNumber=2147696, ??=US, ??=DELAWARE,
-        C=US, ST=CA, L=Irvine, ??=1770 Kettering, O=Marvin Test Solutions, Inc., CN=Marvin
-        Test Solutions, Inc.
-      ValidFrom: '2019-07-29 13:20:49'
-      ValidTo: '2022-07-29 13:20:49'
-      Signature: 278a08ea60d9c1c18b2b6f4f1913860edab3f46bc0945c57e099d37309bab4bbf99feec663d1dc2ef68152baa6e95b0da0e4fdb7793c2c7e779dd7206ad76432f28af41448200c079a9ffe26c8355134d71fb598f08e3864416a1925d5253f2344208a90d8b42790191581c112c3145e23fa979ec06f41cb559ad4e4d60cf549598f3746673c745a3a82e2525c9704adaa59d987ddf6a89641378a558686ca78f920cf1c975508f3943ff6df3aae70f9c5fb1db61134ad5b8d0f455e8483ad250403160b984a4fef6b0baed3cb129c953451c23a4bb9a37c762f286e8bb57049c50c4e06fb17e3fc2e6fcd4dffde6e3ee0ad173b19a9862bae7c921c8976344b
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 716ef836a8ceb23aeaf9174e
-      Version: 3
-      TBS:
-        MD5: c4e9591383494fbfb914aac72114934d
-        SHA1: 336fa67dfea049342c5b9ad622c30f97262c04fc
-        SHA256: b7347983521d490b380cc89242a926377785b57661f2b2332ab2750920e607d5
-        SHA384: 11ec2caeda9631792c0d7ea604db5ee96d697903e18addcc84d34e1c0257473a2c3007aa3a4568855997baf804495488
-    Signer:
-    - SerialNumber: 716ef836a8ceb23aeaf9174e
-      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
-        CA , SHA256 , G3
-      Version: 1
-  Imphash: 67d92a28cd2923a923adf7fd958905d8
-  LoadsDespiteHVCI: 'FALSE'
-- Authentihash:
-    MD5: 22db74f3f2e50ccdeb471c81e3a62532
-    SHA1: 6e87cd3b027a07a810164d618e3f2fce61eb6ec4
-    SHA256: 734b74798a680d2e534c14a033858c4081c7879af1f48037d9d5483aa27a7e90
-  Company: Marvin Test Solutions, Inc.
-  Copyright: "Copyright \xA9 1996-2015 Marvin Test Solutions, Inc. All Rights Reserved."
-  CreationTimestamp: '2015-06-24 17:52:05'
-  Date: ''
-  Description: HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI
-    access
-  ExportedFunctions: ''
-  FileVersion: 4.8.2.0
-  Filename: HW.sys
-  ImportedFunctions:
-  - RtlInitUnicodeString
-  - RtlAppendUnicodeStringToString
-  - ZwClose
-  - ZwOpenProcess
-  - KeReleaseMutex
-  - KeWaitForSingleObject
-  - PsGetCurrentProcessId
-  - KeInitializeDpc
-  - MmGetSystemRoutineAddress
-  - IoDeleteDevice
-  - IoCreateSymbolicLink
-  - KeInitializeMutex
-  - IoCreateDevice
-  - IoDeleteSymbolicLink
-  - PsGetVersion
-  - ZwUnmapViewOfSection
-  - ZwMapViewOfSection
-  - ObReferenceObjectByHandle
-  - ZwOpenSection
-  - ExFreePoolWithTag
-  - MmMapLockedPages
-  - MmBuildMdlForNonPagedPool
-  - IoAllocateMdl
-  - MmMapIoSpace
-  - MmUnmapLockedPages
-  - MmUnmapIoSpace
-  - MmFreeContiguousMemory
-  - MmGetPhysicalAddress
-  - MmAllocateContiguousMemory
-  - IofCallDriver
-  - IoBuildSynchronousFsdRequest
-  - IoGetDeviceProperty
-  - KeInitializeEvent
-  - ObfDereferenceObject
-  - ExAllocatePoolWithTag
-  - ObReferenceObjectByName
-  - IoDriverObjectType
-  - IofCompleteRequest
-  - IoDisconnectInterrupt
-  - KeReleaseInterruptSpinLock
-  - KeAcquireInterruptSpinLock
-  - ExEventObjectType
-  - KeFlushQueuedDpcs
-  - KeInsertQueueDpc
-  - KeSetEvent
-  - IoFreeMdl
-  - ExAllocatePool
-  - HalGetBusDataByOffset
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  InternalName: Hw.sys
-  MD5: 45c2d133d41d2732f3653ed615a745c8
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: HW.sys
-  Product: HW
-  ProductVersion: 4.8.2.0
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: 3389ab434a886ca939bbb64de33ea971
-    SHA1: 38d029a7b63d45c7c386558117cda903c1b15102
-    SHA256: 517ea8a886737da4ba8f7bcdc6041dc0da9073a76e514be5a73d10836ebcbbf0
-  SHA1: 4e56e0b1d12664c05615c69697a2f5c5d893058a
-  SHA256: 6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5
-  Sections:
-    .text:
-      Entropy: 5.475629198747561
-      Virtual Size: '0x3694'
-    INIT:
-      Entropy: 5.133620054689875
-      Virtual Size: '0x2151'
-    .rdata:
-      Entropy: 4.569984356691087
-      Virtual Size: '0xaec'
-    .pdata:
-      Entropy: 3.983331164222992
-      Virtual Size: '0x318'
-    .rsrc:
-      Entropy: 3.6769129984563755
-      Virtual Size: '0x49c'
-  Signature: ''
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Timestamping CA , G2
-      ValidFrom: '2011-04-13 10:00:00'
-      ValidTo: '2028-01-28 12:00:00'
-      Signature: 4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 0400000000012f4ee152d7
-      Version: 3
-      TBS:
-        MD5: e140543fe3256027cfa79fc3c19c1776
-        SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
-        SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
-        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
-    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-      ValidFrom: '2011-04-13 10:00:00'
-      ValidTo: '2019-04-13 10:00:00'
-      Signature: 225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 0400000000012f4ee1355c
-      Version: 3
-      TBS:
-        MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
-        SHA1: 589a7d4df869395601ba7538a65afae8c4616385
-        SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
-        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
-    - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
-        , G2
-      ValidFrom: '2015-02-03 00:00:00'
-      ValidTo: '2026-03-03 00:00:00'
-      Signature: 8032dc078d1ca09c9d3c2ae83d218b59a14d7ecc44ce03be7eaabcc4e67b73bb4bf188da904e7537283863b9d72b0f54a956ce7739973073cd9bd9d905451c8da4b8035d4fd91c2e98e0e988e6ecd7057e562a7bf7165ba3ad8f972512841bb25c634a0ad2ef10544782843569289c0ce41f141624fa75dc74726e4ecae36a43afcf7d3648d1bde906912c2fa6c871fdcfbdd89d2198fcafdbde228cafa7f377ef9ddca3704b441af078851ef2a58c39b5dc881c37edad14f5070b26bdbe6d025eb1b8b0586c853a0df6ff5a270cc5de53e7543c564cc94e4c30f6f25cfb1a8cc282bead5991f61b4d557bcf5b01dcfd7ad36f235c32479b01f3c15114468a9b
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 112106a081d33fd87ae5824cc16b52094e03
-      Version: 3
-      TBS:
-        MD5: a0ac4d48fe852f7b3ed4e623d59a825f
-        SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
-        SHA256: 78d2e41a13eb4e9171bae2d2adb192cf39210b5231f77cda936bcfbe8c003bdf
-        SHA384: 990ed96dca5979deeedc98a012279f04efb5559d7e7f5084a12f3802ee9439326557aecefd081cff739b78515b5d7f50
-    - Subject: C=US, ST=CA, L=Irvine, O=Marvin Test Solutions, Inc., CN=Marvin Test
-        Solutions, Inc., emailAddress=it@marvintest.com
-      ValidFrom: '2015-06-17 17:46:36'
-      ValidTo: '2018-05-04 18:44:13'
-      Signature: ab38f2c50cf023223b1fd78c4204cff8fbe1c71ca14bd3dc5d1f7833604526265abcc71a97faae04edf79563c97a75f4587852b1c8cb972771427710112f8fab1c1a01ca13d04301d551ff4c1728798bd5d8e9038ca079a7c1e5fe268f2c87b397bf2038bbee8dabb80be0f2158a468feca435ff9ed8611cf1a7cf0a6756d2defda9934a4c8a6f6dd1577070ca3e6d2ea155f01bae4e0cf05596226810c52e256bf6f7d0632a34bbe3926e083f5eb95bfa614ac331bee378d5a158222731b1edbf1bb3db3915376764e10cffca289cf0478bf9a8e0cf74a85a2a0147aa3ab1b6fb88b69de8c706dc91155126d3b7aaa0fd98b62357a7e30e7c34ef4809009f5d
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 1121f0942b1e09a2573e8ab9ce0e3955b2de
-      Version: 3
-      TBS:
-        MD5: 5bdf35241e1bbd3dd8560aba2c4305f1
-        SHA1: 34e844721f998e3b40ee75329c4e5df87e52dc61
-        SHA256: 9441743aa497acefe2535a284e44a4cd55a201965900add8c7d770b0af7a8845
-        SHA384: 83003cfcb03f6cff7f5ca49603bcd9db4b5ebf62dd48a892b7d78e98ecf42726f0e77e9318050b71f5d6c649f92938c8
-    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
-      ValidFrom: '2011-04-15 19:55:08'
-      ValidTo: '2021-04-15 20:05:08'
-      Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 6129152700000000002a
-      Version: 3
-      TBS:
-        MD5: 0bb058d116f02817737920f112d9fd3b
-        SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
-        SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
-        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
-    Signer:
-    - SerialNumber: 1121f0942b1e09a2573e8ab9ce0e3955b2de
-      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-      Version: 1
-  Imphash: bd093a7d5ba5632ee52f3466a688ee55
-  LoadsDespiteHVCI: 'FALSE'
-- Authentihash:
-    MD5: 22db74f3f2e50ccdeb471c81e3a62532
-    SHA1: 6e87cd3b027a07a810164d618e3f2fce61eb6ec4
-    SHA256: 734b74798a680d2e534c14a033858c4081c7879af1f48037d9d5483aa27a7e90
-  Company: Marvin Test Solutions, Inc.
-  Copyright: "Copyright \xA9 1996-2015 Marvin Test Solutions, Inc. All Rights Reserved."
-  CreationTimestamp: '2015-06-24 17:52:05'
-  Date: ''
-  Description: HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI
-    access
-  ExportedFunctions: ''
-  FileVersion: 4.8.2.0
-  Filename: hw.sys
-  ImportedFunctions:
-  - RtlInitUnicodeString
-  - RtlAppendUnicodeStringToString
-  - ZwClose
-  - ZwOpenProcess
-  - KeReleaseMutex
-  - KeWaitForSingleObject
-  - PsGetCurrentProcessId
-  - KeInitializeDpc
-  - MmGetSystemRoutineAddress
-  - IoDeleteDevice
-  - IoCreateSymbolicLink
-  - KeInitializeMutex
-  - IoCreateDevice
-  - IoDeleteSymbolicLink
-  - PsGetVersion
-  - ZwUnmapViewOfSection
-  - ZwMapViewOfSection
-  - ObReferenceObjectByHandle
-  - ZwOpenSection
-  - ExFreePoolWithTag
-  - MmMapLockedPages
-  - MmBuildMdlForNonPagedPool
-  - IoAllocateMdl
-  - MmMapIoSpace
-  - MmUnmapLockedPages
-  - MmUnmapIoSpace
-  - MmFreeContiguousMemory
-  - MmGetPhysicalAddress
-  - MmAllocateContiguousMemory
-  - IofCallDriver
-  - IoBuildSynchronousFsdRequest
-  - IoGetDeviceProperty
-  - KeInitializeEvent
-  - ObfDereferenceObject
-  - ExAllocatePoolWithTag
-  - ObReferenceObjectByName
-  - IoDriverObjectType
-  - IofCompleteRequest
-  - IoDisconnectInterrupt
-  - KeReleaseInterruptSpinLock
-  - KeAcquireInterruptSpinLock
-  - ExEventObjectType
-  - KeFlushQueuedDpcs
-  - KeInsertQueueDpc
-  - KeSetEvent
-  - IoFreeMdl
-  - ExAllocatePool
-  - HalGetBusDataByOffset
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  InternalName: Hw.sys
-  MD5: 3cf7a55ec897cc938aebb8161cb8e74f
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: HW.sys
-  Product: HW
-  ProductVersion: 4.8.2.0
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: 3389ab434a886ca939bbb64de33ea971
-    SHA1: 38d029a7b63d45c7c386558117cda903c1b15102
-    SHA256: 517ea8a886737da4ba8f7bcdc6041dc0da9073a76e514be5a73d10836ebcbbf0
-  SHA1: 22fc833e07dd163315095d32ebcd3b3e377c33a4
-  SHA256: fd388cf1df06d419b14dedbeb24c6f4dff37bea26018775f09d56b3067f0de2c
-  Sections:
-    .text:
-      Entropy: 5.475629198747561
-      Virtual Size: '0x3694'
-    INIT:
-      Entropy: 5.133620054689875
-      Virtual Size: '0x2151'
-    .rdata:
-      Entropy: 4.569984356691087
-      Virtual Size: '0xaec'
-    .pdata:
-      Entropy: 3.983331164222992
-      Virtual Size: '0x318'
-    .rsrc:
-      Entropy: 3.6769129984563755
-      Virtual Size: '0x49c'
-  Signature: ''
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Timestamping CA , G2
-      ValidFrom: '2011-04-13 10:00:00'
-      ValidTo: '2028-01-28 12:00:00'
-      Signature: 4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 0400000000012f4ee152d7
-      Version: 3
-      TBS:
-        MD5: e140543fe3256027cfa79fc3c19c1776
-        SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
-        SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
-        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
-    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-      ValidFrom: '2011-04-13 10:00:00'
-      ValidTo: '2019-04-13 10:00:00'
-      Signature: 225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 0400000000012f4ee1355c
-      Version: 3
-      TBS:
-        MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
-        SHA1: 589a7d4df869395601ba7538a65afae8c4616385
-        SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
-        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
-    - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
-        , G2
-      ValidFrom: '2015-02-03 00:00:00'
-      ValidTo: '2026-03-03 00:00:00'
-      Signature: 8032dc078d1ca09c9d3c2ae83d218b59a14d7ecc44ce03be7eaabcc4e67b73bb4bf188da904e7537283863b9d72b0f54a956ce7739973073cd9bd9d905451c8da4b8035d4fd91c2e98e0e988e6ecd7057e562a7bf7165ba3ad8f972512841bb25c634a0ad2ef10544782843569289c0ce41f141624fa75dc74726e4ecae36a43afcf7d3648d1bde906912c2fa6c871fdcfbdd89d2198fcafdbde228cafa7f377ef9ddca3704b441af078851ef2a58c39b5dc881c37edad14f5070b26bdbe6d025eb1b8b0586c853a0df6ff5a270cc5de53e7543c564cc94e4c30f6f25cfb1a8cc282bead5991f61b4d557bcf5b01dcfd7ad36f235c32479b01f3c15114468a9b
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 112106a081d33fd87ae5824cc16b52094e03
-      Version: 3
-      TBS:
-        MD5: a0ac4d48fe852f7b3ed4e623d59a825f
-        SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
-        SHA256: 78d2e41a13eb4e9171bae2d2adb192cf39210b5231f77cda936bcfbe8c003bdf
-        SHA384: 990ed96dca5979deeedc98a012279f04efb5559d7e7f5084a12f3802ee9439326557aecefd081cff739b78515b5d7f50
-    - Subject: C=US, ST=CA, L=Irvine, O=Marvin Test Solutions, Inc., CN=Marvin Test
-        Solutions, Inc., emailAddress=it@marvintest.com
-      ValidFrom: '2015-06-17 17:46:36'
-      ValidTo: '2018-05-04 18:44:13'
-      Signature: ab38f2c50cf023223b1fd78c4204cff8fbe1c71ca14bd3dc5d1f7833604526265abcc71a97faae04edf79563c97a75f4587852b1c8cb972771427710112f8fab1c1a01ca13d04301d551ff4c1728798bd5d8e9038ca079a7c1e5fe268f2c87b397bf2038bbee8dabb80be0f2158a468feca435ff9ed8611cf1a7cf0a6756d2defda9934a4c8a6f6dd1577070ca3e6d2ea155f01bae4e0cf05596226810c52e256bf6f7d0632a34bbe3926e083f5eb95bfa614ac331bee378d5a158222731b1edbf1bb3db3915376764e10cffca289cf0478bf9a8e0cf74a85a2a0147aa3ab1b6fb88b69de8c706dc91155126d3b7aaa0fd98b62357a7e30e7c34ef4809009f5d
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 1121f0942b1e09a2573e8ab9ce0e3955b2de
-      Version: 3
-      TBS:
-        MD5: 5bdf35241e1bbd3dd8560aba2c4305f1
-        SHA1: 34e844721f998e3b40ee75329c4e5df87e52dc61
-        SHA256: 9441743aa497acefe2535a284e44a4cd55a201965900add8c7d770b0af7a8845
-        SHA384: 83003cfcb03f6cff7f5ca49603bcd9db4b5ebf62dd48a892b7d78e98ecf42726f0e77e9318050b71f5d6c649f92938c8
-    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
-      ValidFrom: '2011-04-15 19:55:08'
-      ValidTo: '2021-04-15 20:05:08'
-      Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 6129152700000000002a
-      Version: 3
-      TBS:
-        MD5: 0bb058d116f02817737920f112d9fd3b
-        SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
-        SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
-        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
-    Signer:
-    - SerialNumber: 1121f0942b1e09a2573e8ab9ce0e3955b2de
-      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-      Version: 1
-  Imphash: bd093a7d5ba5632ee52f3466a688ee55
-  LoadsDespiteHVCI: 'FALSE'
-- Authentihash:
-    MD5: 0e03e32b8b0f3a1abb52581c1b5698f6
-    SHA1: 4614a646d19fb297aa878ba5e70dc9a6a1c5dd8a
-    SHA256: 25bc1b72ba6092674ec561d7de8f5e4a7adb23c29fa68de5b29a30a671257dac
-  Company: Marvin Test Solutions, Inc.
-  Copyright: "Copyright \xA9 1996-2021 Marvin Test Solutions, Inc. All Rights Reserved."
-  CreationTimestamp: '2021-01-06 17:19:31'
-  Date: ''
-  Description: HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI
-    access
-  ExportedFunctions: ''
-  FileVersion: 4.9.8.0
-  Filename: hw.sys
-  ImportedFunctions:
-  - RtlInitUnicodeString
-  - RtlAppendUnicodeStringToString
-  - RtlQueryRegistryValues
-  - KeClearEvent
-  - IoCreateNotificationEvent
-  - KeSetEvent
-  - ZwClose
-  - ZwOpenProcess
-  - KeReleaseMutex
-  - KeWaitForSingleObject
-  - PsGetCurrentProcessId
-  - KeInitializeDpc
-  - MmGetSystemRoutineAddress
-  - IoDeleteDevice
-  - IoCreateSymbolicLink
-  - KeInitializeMutex
-  - IoCreateDevice
-  - IoDeleteSymbolicLink
-  - PsGetVersion
-  - ZwUnmapViewOfSection
-  - ZwMapViewOfSection
-  - ExFreePoolWithTag
-  - ZwOpenSection
-  - IoFreeMdl
-  - MmMapLockedPages
-  - MmBuildMdlForNonPagedPool
-  - IoAllocateMdl
-  - MmMapIoSpace
-  - MmUnmapLockedPages
-  - MmUnmapIoSpace
-  - MmFreeContiguousMemory
-  - MmGetPhysicalAddress
-  - MmAllocateContiguousMemory
-  - IofCallDriver
-  - IoBuildSynchronousFsdRequest
-  - IoGetDeviceProperty
-  - KeInitializeEvent
-  - ObfDereferenceObject
-  - ExAllocatePoolWithTag
-  - ObReferenceObjectByName
-  - IoDriverObjectType
-  - IofCompleteRequest
-  - IoDisconnectInterrupt
-  - KeReleaseInterruptSpinLock
-  - KeAcquireInterruptSpinLock
-  - ExEventObjectType
-  - KeFlushQueuedDpcs
-  - KeInsertQueueDpc
-  - ObReferenceObjectByHandle
-  - ExAllocatePool
-  - HalGetBusDataByOffset
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  InternalName: Hw.sys
-  MD5: 376b1e8957227a3639ec1482900d9b97
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: HW.sys
-  Product: HW
-  ProductVersion: 4.9.8.0
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: e75a603d7467c2b1506dbbea74ea68c2
-    SHA1: 592275b78e5255bb3a1245eaeb263858e3111278
-    SHA256: 739066eb4b1f106dec36d824dba3a08ce1052c98e99b69fa9d1aa228d6dae664
-  SHA1: 18f34a0005e82a9a1556ba40b997b0eae554d5fd
-  SHA256: 55963284bbd5a3297f39f12f0d8a01ed99fe59d008561e3537bcd4db4b4268fa
-  Sections:
-    .text:
-      Entropy: 5.425823948048583
-      Virtual Size: '0x5e54'
-    .rdata:
-      Entropy: 4.468643667711766
-      Virtual Size: '0xcaa'
-    .pdata:
-      Entropy: 4.00613719103044
-      Virtual Size: '0x33c'
-    .rsrc:
-      Entropy: 3.6737432495687674
-      Virtual Size: '0x4a0'
-  Signature: ''
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: OU=GlobalSign Root CA , R3, O=GlobalSign, CN=GlobalSign
-      ValidFrom: '2018-09-19 00:00:00'
-      ValidTo: '2028-01-28 12:00:00'
-      Signature: 2370e9cfe2bef559ae94426fc44333aacd3f3ab96417f262064b48f140880617a1feabd15f3cc633f2f38edd1f1d3ecc1a6099820bacc7fc7e9a872aa57d0fa657eeac3b6a85d6debd4063f8ada6c888b012fcf641df0f09971e38ea539fbe05f43eead39f501276be098bc20b487d1e2e51f68d53d3ab1f401b8a8eed7dfb4f7956705f0cd38e1bb3a7700d372b9795abdae0126b1c40cec5c77eedc26258ec77ed7322c28af5864388adea136efdd8fe422fb97d5ead18ef9490ca3d27ab26949975c7cbd37bf7ca4cd3af5121925b847d2b9f153f74cb51e89e830e166f1be746ce23bdf9e4a28bd2396baa791c912ce261242d8e2a487090c41ec5e8e070
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 01ee5f169dff97352b6465d66a
-      Version: 3
-      TBS:
-        MD5: 51c3959a45cecf3d21a3effb05762573
-        SHA1: ecfcd25fd0525448a74875ba271566bc0bfbf061
-        SHA256: de1da11668f0a8d5e13346ed3ab2755f5d25bebffcfd1d0bde5b9f87bc292c91
-        SHA384: f0eab75baf1f24a53d63bd795cd07292a312f603513c8cb0f40fe5acbdb477ed72607d309fad21471a16f6223fb3a838
-    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
-        CA , SHA256 , G3
-      ValidFrom: '2016-06-15 00:00:00'
-      ValidTo: '2024-06-15 00:00:00'
-      Signature: 7609c4cc2fd9ef1e4ba9f857f3403921ca4c3c1d9e292b20d42b44d288ce1a0d05cf8381bbeb69bc318d2ac4c744cc6060941ccfa1e102240ead5bbe2cc2271e67b7e8281f3251e339f398dfb89f2e8b2ab47b0a03bcbd36048fc9d09c4fa3022799b0f045e934dfe43aa3b70637d86f2a7990d4d44e5871ec53a96198f73969e0129c575872862729a51de532f32b99975abf2bb03cb406ea0e64ecb7cd65802417c2d937f5b1261035477b9a02ba54a24593ff79bf1a8cc59fb59fdf78e76b50f14794694b24b8da05e80c9d4f06ec4a31207e4f5d86842f35a3cd9cc184571f1fadc0e2a4b1ef296b2197a6d4feed0337b0fcf58d2abcdc8483e3dec3e75f
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 481b6a07a9424c1eaafef3cdf10f
-      Version: 3
-      TBS:
-        MD5: fd8cfeea06be14fa89689909e1fc72dc
-        SHA1: 8bc3cd2f70abe543e0dbe721065a4076c8521f36
-        SHA256: 15e7050789df807f3e3174294a01b637a1239f603e42f4b5db9398efa9da9996
-        SHA384: 8b9f95e6d3dd45e4ef38e2f12fb893d7d1bb1ba867e152e4a73c49b3d51dd52bc83a05982deac29af90436061248546d
-    - Subject: ??=Private Organization, serialNumber=2147696, ??=US, ??=DELAWARE,
-        C=US, ST=CA, L=Irvine, ??=1770 Kettering, O=Marvin Test Solutions, Inc., CN=Marvin
-        Test Solutions, Inc.
-      ValidFrom: '2019-07-29 13:20:49'
-      ValidTo: '2022-07-29 13:20:49'
-      Signature: 278a08ea60d9c1c18b2b6f4f1913860edab3f46bc0945c57e099d37309bab4bbf99feec663d1dc2ef68152baa6e95b0da0e4fdb7793c2c7e779dd7206ad76432f28af41448200c079a9ffe26c8355134d71fb598f08e3864416a1925d5253f2344208a90d8b42790191581c112c3145e23fa979ec06f41cb559ad4e4d60cf549598f3746673c745a3a82e2525c9704adaa59d987ddf6a89641378a558686ca78f920cf1c975508f3943ff6df3aae70f9c5fb1db61134ad5b8d0f455e8483ad250403160b984a4fef6b0baed3cb129c953451c23a4bb9a37c762f286e8bb57049c50c4e06fb17e3fc2e6fcd4dffde6e3ee0ad173b19a9862bae7c921c8976344b
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 716ef836a8ceb23aeaf9174e
-      Version: 3
-      TBS:
-        MD5: c4e9591383494fbfb914aac72114934d
-        SHA1: 336fa67dfea049342c5b9ad622c30f97262c04fc
-        SHA256: b7347983521d490b380cc89242a926377785b57661f2b2332ab2750920e607d5
-        SHA384: 11ec2caeda9631792c0d7ea604db5ee96d697903e18addcc84d34e1c0257473a2c3007aa3a4568855997baf804495488
-    Signer:
-    - SerialNumber: 716ef836a8ceb23aeaf9174e
-      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
-        CA , SHA256 , G3
-      Version: 1
-  Imphash: 91ee149529956a79a91eeb8c48f00b3d
-  LoadsDespiteHVCI: 'FALSE'
+Tags:
+- hw.sys
+Author: Guus Verbeek
+Created: '2023-01-09'
 MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+    Command: sc.exe create hw_sys binPath=C:\windows\temp\hw.sys type=kernel && sc.exe
+        start hw.sys
+    Description: ''
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 - https://decoded.avast.io/janvojtesek/the-return-of-candiru-zero-days-in-the-middle-east/
 - https://www.virustotal.com/gui/file/6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5/detection
-Tags:
-- hw.sys
-Verified: 'TRUE'
+Acknowledgement:
+    Handle: ''
+    Person: ''
+Detection:
+-   type: yara_signature
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8.yara
+-   type: yara_signature
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5.yara
+-   type: yara_signature
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/fd388cf1df06d419b14dedbeb24c6f4dff37bea26018775f09d56b3067f0de2c.yara
+-   type: yara_signature
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/55963284bbd5a3297f39f12f0d8a01ed99fe59d008561e3537bcd4db4b4268fa.yara
+-   type: sigma_hash
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+-   type: sigma_names
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+-   type: sysmon_hash_detect
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+-   type: sysmon_hash_block
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+-   type: yara_signature
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+-   type: sigma_hash
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+-   type: sigma_names
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+-   type: sysmon_hash_detect
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+-   type: sysmon_hash_block
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+KnownVulnerableSamples:
+-   Authentihash:
+        MD5: 6eafc9b68f2047adf6879e955d3b69e8
+        SHA1: 8a6d85617bc601b818ddf1b8e8d5db6cf7ae31c1
+        SHA256: 615a7c647eba3f2dcea463d5705d5d59ca70b4250f895ad20ce6876076a8fa28
+    Company: Marvin Test Solutions, Inc.
+    Copyright: "Copyright \xA9 1996-2021 Marvin Test Solutions, Inc. All Rights Reserved."
+    CreationTimestamp: '2021-01-06 17:19:33'
+    Date: ''
+    Description: HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI
+        access
+    ExportedFunctions: ''
+    FileVersion: 4.9.8.0
+    Filename: hw.sys
+    ImportedFunctions:
+    - KeReleaseMutex
+    - KeWaitForSingleObject
+    - PsGetCurrentProcessId
+    - KeInitializeDpc
+    - MmGetSystemRoutineAddress
+    - IoDeleteDevice
+    - IoCreateSymbolicLink
+    - KeInitializeMutex
+    - IoCreateDevice
+    - IoDeleteSymbolicLink
+    - memcpy
+    - PsGetVersion
+    - ZwUnmapViewOfSection
+    - ZwMapViewOfSection
+    - ObReferenceObjectByHandle
+    - ZwOpenSection
+    - IoFreeMdl
+    - MmMapLockedPages
+    - MmBuildMdlForNonPagedPool
+    - IoAllocateMdl
+    - MmMapIoSpace
+    - MmUnmapLockedPages
+    - MmUnmapIoSpace
+    - IoGetDmaAdapter
+    - IofCallDriver
+    - IoBuildSynchronousFsdRequest
+    - ZwOpenProcess
+    - KeInitializeEvent
+    - ObfDereferenceObject
+    - ExAllocatePoolWithTag
+    - ObReferenceObjectByName
+    - IoDriverObjectType
+    - IofCompleteRequest
+    - WRITE_REGISTER_BUFFER_ULONG
+    - WRITE_REGISTER_BUFFER_USHORT
+    - WRITE_REGISTER_BUFFER_UCHAR
+    - WRITE_REGISTER_ULONG
+    - WRITE_REGISTER_USHORT
+    - WRITE_REGISTER_UCHAR
+    - READ_REGISTER_BUFFER_ULONG
+    - READ_REGISTER_BUFFER_USHORT
+    - READ_REGISTER_BUFFER_UCHAR
+    - READ_REGISTER_ULONG
+    - READ_REGISTER_USHORT
+    - READ_REGISTER_UCHAR
+    - IoConnectInterrupt
+    - IoDisconnectInterrupt
+    - KeReleaseInterruptSpinLock
+    - KeAcquireInterruptSpinLock
+    - ExEventObjectType
+    - KeDelayExecutionThread
+    - KeInsertQueueDpc
+    - ZwClose
+    - KeSetEvent
+    - IoCreateNotificationEvent
+    - KeClearEvent
+    - RtlQueryRegistryValues
+    - RtlAppendUnicodeStringToString
+    - RtlInitUnicodeString
+    - memset
+    - ExFreePoolWithTag
+    - IoGetDeviceProperty
+    - ExAllocatePool
+    - READ_PORT_UCHAR
+    - READ_PORT_USHORT
+    - READ_PORT_ULONG
+    - READ_PORT_BUFFER_UCHAR
+    - READ_PORT_BUFFER_USHORT
+    - READ_PORT_BUFFER_ULONG
+    - WRITE_PORT_UCHAR
+    - WRITE_PORT_USHORT
+    - WRITE_PORT_ULONG
+    - WRITE_PORT_BUFFER_UCHAR
+    - WRITE_PORT_BUFFER_USHORT
+    - WRITE_PORT_BUFFER_ULONG
+    - HalAssignSlotResources
+    - HalTranslateBusAddress
+    - HalGetBusDataByOffset
+    - HalGetInterruptVector
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    InternalName: Hw.sys
+    MD5: 3247014ba35d406475311a2eab0c4657
+    MachineType: I386
+    MagicHeader: 50 45 0 0
+    OriginalFilename: HW.sys
+    Product: HW
+    ProductVersion: 4.9.8.0
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: 91d1f756630dbcb9bb34ab945f1e3a43
+        SHA1: 8213b5de157232171c54fb94c86028521e9bb905
+        SHA256: 0a9072b98f01eaed2e4fd4ebbdcb86740b5427a213d8c1a7e5bd49d9613aa152
+    SHA1: 74e4e3006b644392f5fcea4a9bae1d9d84714b57
+    SHA256: 4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8
+    Sections:
+        .text:
+            Entropy: 5.94588431546437
+            Virtual Size: '0x4242'
+        .rdata:
+            Entropy: 5.126726594759932
+            Virtual Size: '0xc2c'
+        .rsrc:
+            Entropy: 3.6674325094888713
+            Virtual Size: '0x4a0'
+        .reloc:
+            Entropy: 5.321382942427512
+            Virtual Size: '0x322'
+    Signature:
+    - Marvin Test Solutions, Inc.
+    - GlobalSign Extended Validation CodeSigning CA - SHA256 - G3
+    - GlobalSign
+    - GlobalSign Root CA - R1
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: OU=GlobalSign Root CA , R3, O=GlobalSign, CN=GlobalSign
+            ValidFrom: '2018-09-19 00:00:00'
+            ValidTo: '2028-01-28 12:00:00'
+            Signature: 2370e9cfe2bef559ae94426fc44333aacd3f3ab96417f262064b48f140880617a1feabd15f3cc633f2f38edd1f1d3ecc1a6099820bacc7fc7e9a872aa57d0fa657eeac3b6a85d6debd4063f8ada6c888b012fcf641df0f09971e38ea539fbe05f43eead39f501276be098bc20b487d1e2e51f68d53d3ab1f401b8a8eed7dfb4f7956705f0cd38e1bb3a7700d372b9795abdae0126b1c40cec5c77eedc26258ec77ed7322c28af5864388adea136efdd8fe422fb97d5ead18ef9490ca3d27ab26949975c7cbd37bf7ca4cd3af5121925b847d2b9f153f74cb51e89e830e166f1be746ce23bdf9e4a28bd2396baa791c912ce261242d8e2a487090c41ec5e8e070
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 01ee5f169dff97352b6465d66a
+            Version: 3
+            TBS:
+                MD5: 51c3959a45cecf3d21a3effb05762573
+                SHA1: ecfcd25fd0525448a74875ba271566bc0bfbf061
+                SHA256: de1da11668f0a8d5e13346ed3ab2755f5d25bebffcfd1d0bde5b9f87bc292c91
+                SHA384: f0eab75baf1f24a53d63bd795cd07292a312f603513c8cb0f40fe5acbdb477ed72607d309fad21471a16f6223fb3a838
+        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
+                CA , SHA256 , G3
+            ValidFrom: '2016-06-15 00:00:00'
+            ValidTo: '2024-06-15 00:00:00'
+            Signature: 7609c4cc2fd9ef1e4ba9f857f3403921ca4c3c1d9e292b20d42b44d288ce1a0d05cf8381bbeb69bc318d2ac4c744cc6060941ccfa1e102240ead5bbe2cc2271e67b7e8281f3251e339f398dfb89f2e8b2ab47b0a03bcbd36048fc9d09c4fa3022799b0f045e934dfe43aa3b70637d86f2a7990d4d44e5871ec53a96198f73969e0129c575872862729a51de532f32b99975abf2bb03cb406ea0e64ecb7cd65802417c2d937f5b1261035477b9a02ba54a24593ff79bf1a8cc59fb59fdf78e76b50f14794694b24b8da05e80c9d4f06ec4a31207e4f5d86842f35a3cd9cc184571f1fadc0e2a4b1ef296b2197a6d4feed0337b0fcf58d2abcdc8483e3dec3e75f
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 481b6a07a9424c1eaafef3cdf10f
+            Version: 3
+            TBS:
+                MD5: fd8cfeea06be14fa89689909e1fc72dc
+                SHA1: 8bc3cd2f70abe543e0dbe721065a4076c8521f36
+                SHA256: 15e7050789df807f3e3174294a01b637a1239f603e42f4b5db9398efa9da9996
+                SHA384: 8b9f95e6d3dd45e4ef38e2f12fb893d7d1bb1ba867e152e4a73c49b3d51dd52bc83a05982deac29af90436061248546d
+        -   Subject: ??=Private Organization, serialNumber=2147696, ??=US, ??=DELAWARE,
+                C=US, ST=CA, L=Irvine, ??=1770 Kettering, O=Marvin Test Solutions,
+                Inc., CN=Marvin Test Solutions, Inc.
+            ValidFrom: '2019-07-29 13:20:49'
+            ValidTo: '2022-07-29 13:20:49'
+            Signature: 278a08ea60d9c1c18b2b6f4f1913860edab3f46bc0945c57e099d37309bab4bbf99feec663d1dc2ef68152baa6e95b0da0e4fdb7793c2c7e779dd7206ad76432f28af41448200c079a9ffe26c8355134d71fb598f08e3864416a1925d5253f2344208a90d8b42790191581c112c3145e23fa979ec06f41cb559ad4e4d60cf549598f3746673c745a3a82e2525c9704adaa59d987ddf6a89641378a558686ca78f920cf1c975508f3943ff6df3aae70f9c5fb1db61134ad5b8d0f455e8483ad250403160b984a4fef6b0baed3cb129c953451c23a4bb9a37c762f286e8bb57049c50c4e06fb17e3fc2e6fcd4dffde6e3ee0ad173b19a9862bae7c921c8976344b
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 716ef836a8ceb23aeaf9174e
+            Version: 3
+            TBS:
+                MD5: c4e9591383494fbfb914aac72114934d
+                SHA1: 336fa67dfea049342c5b9ad622c30f97262c04fc
+                SHA256: b7347983521d490b380cc89242a926377785b57661f2b2332ab2750920e607d5
+                SHA384: 11ec2caeda9631792c0d7ea604db5ee96d697903e18addcc84d34e1c0257473a2c3007aa3a4568855997baf804495488
+        Signer:
+        -   SerialNumber: 716ef836a8ceb23aeaf9174e
+            Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
+                CA , SHA256 , G3
+            Version: 1
+    Imphash: 67d92a28cd2923a923adf7fd958905d8
+    LoadsDespiteHVCI: 'FALSE'
+-   Authentihash:
+        MD5: 22db74f3f2e50ccdeb471c81e3a62532
+        SHA1: 6e87cd3b027a07a810164d618e3f2fce61eb6ec4
+        SHA256: 734b74798a680d2e534c14a033858c4081c7879af1f48037d9d5483aa27a7e90
+    Company: Marvin Test Solutions, Inc.
+    Copyright: "Copyright \xA9 1996-2015 Marvin Test Solutions, Inc. All Rights Reserved."
+    CreationTimestamp: '2015-06-24 17:52:05'
+    Date: ''
+    Description: HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI
+        access
+    ExportedFunctions: ''
+    FileVersion: 4.8.2.0
+    Filename: HW.sys
+    ImportedFunctions:
+    - RtlInitUnicodeString
+    - RtlAppendUnicodeStringToString
+    - ZwClose
+    - ZwOpenProcess
+    - KeReleaseMutex
+    - KeWaitForSingleObject
+    - PsGetCurrentProcessId
+    - KeInitializeDpc
+    - MmGetSystemRoutineAddress
+    - IoDeleteDevice
+    - IoCreateSymbolicLink
+    - KeInitializeMutex
+    - IoCreateDevice
+    - IoDeleteSymbolicLink
+    - PsGetVersion
+    - ZwUnmapViewOfSection
+    - ZwMapViewOfSection
+    - ObReferenceObjectByHandle
+    - ZwOpenSection
+    - ExFreePoolWithTag
+    - MmMapLockedPages
+    - MmBuildMdlForNonPagedPool
+    - IoAllocateMdl
+    - MmMapIoSpace
+    - MmUnmapLockedPages
+    - MmUnmapIoSpace
+    - MmFreeContiguousMemory
+    - MmGetPhysicalAddress
+    - MmAllocateContiguousMemory
+    - IofCallDriver
+    - IoBuildSynchronousFsdRequest
+    - IoGetDeviceProperty
+    - KeInitializeEvent
+    - ObfDereferenceObject
+    - ExAllocatePoolWithTag
+    - ObReferenceObjectByName
+    - IoDriverObjectType
+    - IofCompleteRequest
+    - IoDisconnectInterrupt
+    - KeReleaseInterruptSpinLock
+    - KeAcquireInterruptSpinLock
+    - ExEventObjectType
+    - KeFlushQueuedDpcs
+    - KeInsertQueueDpc
+    - KeSetEvent
+    - IoFreeMdl
+    - ExAllocatePool
+    - HalGetBusDataByOffset
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    InternalName: Hw.sys
+    MD5: 45c2d133d41d2732f3653ed615a745c8
+    MachineType: AMD64
+    MagicHeader: 50 45 0 0
+    OriginalFilename: HW.sys
+    Product: HW
+    ProductVersion: 4.8.2.0
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: 3389ab434a886ca939bbb64de33ea971
+        SHA1: 38d029a7b63d45c7c386558117cda903c1b15102
+        SHA256: 517ea8a886737da4ba8f7bcdc6041dc0da9073a76e514be5a73d10836ebcbbf0
+    SHA1: 4e56e0b1d12664c05615c69697a2f5c5d893058a
+    SHA256: 6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5
+    Sections:
+        .text:
+            Entropy: 5.475629198747561
+            Virtual Size: '0x3694'
+        INIT:
+            Entropy: 5.133620054689875
+            Virtual Size: '0x2151'
+        .rdata:
+            Entropy: 4.569984356691087
+            Virtual Size: '0xaec'
+        .pdata:
+            Entropy: 3.983331164222992
+            Virtual Size: '0x318'
+        .rsrc:
+            Entropy: 3.6769129984563755
+            Virtual Size: '0x49c'
+    Signature: ''
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Timestamping CA , G2
+            ValidFrom: '2011-04-13 10:00:00'
+            ValidTo: '2028-01-28 12:00:00'
+            Signature: 4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 0400000000012f4ee152d7
+            Version: 3
+            TBS:
+                MD5: e140543fe3256027cfa79fc3c19c1776
+                SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
+                SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+                SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
+        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
+            ValidFrom: '2011-04-13 10:00:00'
+            ValidTo: '2019-04-13 10:00:00'
+            Signature: 225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 0400000000012f4ee1355c
+            Version: 3
+            TBS:
+                MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
+                SHA1: 589a7d4df869395601ba7538a65afae8c4616385
+                SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+                SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
+        -   Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
+                , G2
+            ValidFrom: '2015-02-03 00:00:00'
+            ValidTo: '2026-03-03 00:00:00'
+            Signature: 8032dc078d1ca09c9d3c2ae83d218b59a14d7ecc44ce03be7eaabcc4e67b73bb4bf188da904e7537283863b9d72b0f54a956ce7739973073cd9bd9d905451c8da4b8035d4fd91c2e98e0e988e6ecd7057e562a7bf7165ba3ad8f972512841bb25c634a0ad2ef10544782843569289c0ce41f141624fa75dc74726e4ecae36a43afcf7d3648d1bde906912c2fa6c871fdcfbdd89d2198fcafdbde228cafa7f377ef9ddca3704b441af078851ef2a58c39b5dc881c37edad14f5070b26bdbe6d025eb1b8b0586c853a0df6ff5a270cc5de53e7543c564cc94e4c30f6f25cfb1a8cc282bead5991f61b4d557bcf5b01dcfd7ad36f235c32479b01f3c15114468a9b
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 112106a081d33fd87ae5824cc16b52094e03
+            Version: 3
+            TBS:
+                MD5: a0ac4d48fe852f7b3ed4e623d59a825f
+                SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
+                SHA256: 78d2e41a13eb4e9171bae2d2adb192cf39210b5231f77cda936bcfbe8c003bdf
+                SHA384: 990ed96dca5979deeedc98a012279f04efb5559d7e7f5084a12f3802ee9439326557aecefd081cff739b78515b5d7f50
+        -   Subject: C=US, ST=CA, L=Irvine, O=Marvin Test Solutions, Inc., CN=Marvin
+                Test Solutions, Inc., emailAddress=it@marvintest.com
+            ValidFrom: '2015-06-17 17:46:36'
+            ValidTo: '2018-05-04 18:44:13'
+            Signature: ab38f2c50cf023223b1fd78c4204cff8fbe1c71ca14bd3dc5d1f7833604526265abcc71a97faae04edf79563c97a75f4587852b1c8cb972771427710112f8fab1c1a01ca13d04301d551ff4c1728798bd5d8e9038ca079a7c1e5fe268f2c87b397bf2038bbee8dabb80be0f2158a468feca435ff9ed8611cf1a7cf0a6756d2defda9934a4c8a6f6dd1577070ca3e6d2ea155f01bae4e0cf05596226810c52e256bf6f7d0632a34bbe3926e083f5eb95bfa614ac331bee378d5a158222731b1edbf1bb3db3915376764e10cffca289cf0478bf9a8e0cf74a85a2a0147aa3ab1b6fb88b69de8c706dc91155126d3b7aaa0fd98b62357a7e30e7c34ef4809009f5d
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 1121f0942b1e09a2573e8ab9ce0e3955b2de
+            Version: 3
+            TBS:
+                MD5: 5bdf35241e1bbd3dd8560aba2c4305f1
+                SHA1: 34e844721f998e3b40ee75329c4e5df87e52dc61
+                SHA256: 9441743aa497acefe2535a284e44a4cd55a201965900add8c7d770b0af7a8845
+                SHA384: 83003cfcb03f6cff7f5ca49603bcd9db4b5ebf62dd48a892b7d78e98ecf42726f0e77e9318050b71f5d6c649f92938c8
+        -   Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+            ValidFrom: '2011-04-15 19:55:08'
+            ValidTo: '2021-04-15 20:05:08'
+            Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 6129152700000000002a
+            Version: 3
+            TBS:
+                MD5: 0bb058d116f02817737920f112d9fd3b
+                SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
+                SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+                SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
+        Signer:
+        -   SerialNumber: 1121f0942b1e09a2573e8ab9ce0e3955b2de
+            Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
+            Version: 1
+    Imphash: bd093a7d5ba5632ee52f3466a688ee55
+    LoadsDespiteHVCI: 'FALSE'
+-   Authentihash:
+        MD5: 22db74f3f2e50ccdeb471c81e3a62532
+        SHA1: 6e87cd3b027a07a810164d618e3f2fce61eb6ec4
+        SHA256: 734b74798a680d2e534c14a033858c4081c7879af1f48037d9d5483aa27a7e90
+    Company: Marvin Test Solutions, Inc.
+    Copyright: "Copyright \xA9 1996-2015 Marvin Test Solutions, Inc. All Rights Reserved."
+    CreationTimestamp: '2015-06-24 17:52:05'
+    Date: ''
+    Description: HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI
+        access
+    ExportedFunctions: ''
+    FileVersion: 4.8.2.0
+    Filename: hw.sys
+    ImportedFunctions:
+    - RtlInitUnicodeString
+    - RtlAppendUnicodeStringToString
+    - ZwClose
+    - ZwOpenProcess
+    - KeReleaseMutex
+    - KeWaitForSingleObject
+    - PsGetCurrentProcessId
+    - KeInitializeDpc
+    - MmGetSystemRoutineAddress
+    - IoDeleteDevice
+    - IoCreateSymbolicLink
+    - KeInitializeMutex
+    - IoCreateDevice
+    - IoDeleteSymbolicLink
+    - PsGetVersion
+    - ZwUnmapViewOfSection
+    - ZwMapViewOfSection
+    - ObReferenceObjectByHandle
+    - ZwOpenSection
+    - ExFreePoolWithTag
+    - MmMapLockedPages
+    - MmBuildMdlForNonPagedPool
+    - IoAllocateMdl
+    - MmMapIoSpace
+    - MmUnmapLockedPages
+    - MmUnmapIoSpace
+    - MmFreeContiguousMemory
+    - MmGetPhysicalAddress
+    - MmAllocateContiguousMemory
+    - IofCallDriver
+    - IoBuildSynchronousFsdRequest
+    - IoGetDeviceProperty
+    - KeInitializeEvent
+    - ObfDereferenceObject
+    - ExAllocatePoolWithTag
+    - ObReferenceObjectByName
+    - IoDriverObjectType
+    - IofCompleteRequest
+    - IoDisconnectInterrupt
+    - KeReleaseInterruptSpinLock
+    - KeAcquireInterruptSpinLock
+    - ExEventObjectType
+    - KeFlushQueuedDpcs
+    - KeInsertQueueDpc
+    - KeSetEvent
+    - IoFreeMdl
+    - ExAllocatePool
+    - HalGetBusDataByOffset
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    InternalName: Hw.sys
+    MD5: 3cf7a55ec897cc938aebb8161cb8e74f
+    MachineType: AMD64
+    MagicHeader: 50 45 0 0
+    OriginalFilename: HW.sys
+    Product: HW
+    ProductVersion: 4.8.2.0
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: 3389ab434a886ca939bbb64de33ea971
+        SHA1: 38d029a7b63d45c7c386558117cda903c1b15102
+        SHA256: 517ea8a886737da4ba8f7bcdc6041dc0da9073a76e514be5a73d10836ebcbbf0
+    SHA1: 22fc833e07dd163315095d32ebcd3b3e377c33a4
+    SHA256: fd388cf1df06d419b14dedbeb24c6f4dff37bea26018775f09d56b3067f0de2c
+    Sections:
+        .text:
+            Entropy: 5.475629198747561
+            Virtual Size: '0x3694'
+        INIT:
+            Entropy: 5.133620054689875
+            Virtual Size: '0x2151'
+        .rdata:
+            Entropy: 4.569984356691087
+            Virtual Size: '0xaec'
+        .pdata:
+            Entropy: 3.983331164222992
+            Virtual Size: '0x318'
+        .rsrc:
+            Entropy: 3.6769129984563755
+            Virtual Size: '0x49c'
+    Signature: ''
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Timestamping CA , G2
+            ValidFrom: '2011-04-13 10:00:00'
+            ValidTo: '2028-01-28 12:00:00'
+            Signature: 4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 0400000000012f4ee152d7
+            Version: 3
+            TBS:
+                MD5: e140543fe3256027cfa79fc3c19c1776
+                SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
+                SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+                SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
+        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
+            ValidFrom: '2011-04-13 10:00:00'
+            ValidTo: '2019-04-13 10:00:00'
+            Signature: 225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 0400000000012f4ee1355c
+            Version: 3
+            TBS:
+                MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
+                SHA1: 589a7d4df869395601ba7538a65afae8c4616385
+                SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+                SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
+        -   Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
+                , G2
+            ValidFrom: '2015-02-03 00:00:00'
+            ValidTo: '2026-03-03 00:00:00'
+            Signature: 8032dc078d1ca09c9d3c2ae83d218b59a14d7ecc44ce03be7eaabcc4e67b73bb4bf188da904e7537283863b9d72b0f54a956ce7739973073cd9bd9d905451c8da4b8035d4fd91c2e98e0e988e6ecd7057e562a7bf7165ba3ad8f972512841bb25c634a0ad2ef10544782843569289c0ce41f141624fa75dc74726e4ecae36a43afcf7d3648d1bde906912c2fa6c871fdcfbdd89d2198fcafdbde228cafa7f377ef9ddca3704b441af078851ef2a58c39b5dc881c37edad14f5070b26bdbe6d025eb1b8b0586c853a0df6ff5a270cc5de53e7543c564cc94e4c30f6f25cfb1a8cc282bead5991f61b4d557bcf5b01dcfd7ad36f235c32479b01f3c15114468a9b
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 112106a081d33fd87ae5824cc16b52094e03
+            Version: 3
+            TBS:
+                MD5: a0ac4d48fe852f7b3ed4e623d59a825f
+                SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
+                SHA256: 78d2e41a13eb4e9171bae2d2adb192cf39210b5231f77cda936bcfbe8c003bdf
+                SHA384: 990ed96dca5979deeedc98a012279f04efb5559d7e7f5084a12f3802ee9439326557aecefd081cff739b78515b5d7f50
+        -   Subject: C=US, ST=CA, L=Irvine, O=Marvin Test Solutions, Inc., CN=Marvin
+                Test Solutions, Inc., emailAddress=it@marvintest.com
+            ValidFrom: '2015-06-17 17:46:36'
+            ValidTo: '2018-05-04 18:44:13'
+            Signature: ab38f2c50cf023223b1fd78c4204cff8fbe1c71ca14bd3dc5d1f7833604526265abcc71a97faae04edf79563c97a75f4587852b1c8cb972771427710112f8fab1c1a01ca13d04301d551ff4c1728798bd5d8e9038ca079a7c1e5fe268f2c87b397bf2038bbee8dabb80be0f2158a468feca435ff9ed8611cf1a7cf0a6756d2defda9934a4c8a6f6dd1577070ca3e6d2ea155f01bae4e0cf05596226810c52e256bf6f7d0632a34bbe3926e083f5eb95bfa614ac331bee378d5a158222731b1edbf1bb3db3915376764e10cffca289cf0478bf9a8e0cf74a85a2a0147aa3ab1b6fb88b69de8c706dc91155126d3b7aaa0fd98b62357a7e30e7c34ef4809009f5d
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 1121f0942b1e09a2573e8ab9ce0e3955b2de
+            Version: 3
+            TBS:
+                MD5: 5bdf35241e1bbd3dd8560aba2c4305f1
+                SHA1: 34e844721f998e3b40ee75329c4e5df87e52dc61
+                SHA256: 9441743aa497acefe2535a284e44a4cd55a201965900add8c7d770b0af7a8845
+                SHA384: 83003cfcb03f6cff7f5ca49603bcd9db4b5ebf62dd48a892b7d78e98ecf42726f0e77e9318050b71f5d6c649f92938c8
+        -   Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+            ValidFrom: '2011-04-15 19:55:08'
+            ValidTo: '2021-04-15 20:05:08'
+            Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 6129152700000000002a
+            Version: 3
+            TBS:
+                MD5: 0bb058d116f02817737920f112d9fd3b
+                SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
+                SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+                SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
+        Signer:
+        -   SerialNumber: 1121f0942b1e09a2573e8ab9ce0e3955b2de
+            Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
+            Version: 1
+    Imphash: bd093a7d5ba5632ee52f3466a688ee55
+    LoadsDespiteHVCI: 'FALSE'
+-   Authentihash:
+        MD5: 0e03e32b8b0f3a1abb52581c1b5698f6
+        SHA1: 4614a646d19fb297aa878ba5e70dc9a6a1c5dd8a
+        SHA256: 25bc1b72ba6092674ec561d7de8f5e4a7adb23c29fa68de5b29a30a671257dac
+    Company: Marvin Test Solutions, Inc.
+    Copyright: "Copyright \xA9 1996-2021 Marvin Test Solutions, Inc. All Rights Reserved."
+    CreationTimestamp: '2021-01-06 17:19:31'
+    Date: ''
+    Description: HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI
+        access
+    ExportedFunctions: ''
+    FileVersion: 4.9.8.0
+    Filename: hw.sys
+    ImportedFunctions:
+    - RtlInitUnicodeString
+    - RtlAppendUnicodeStringToString
+    - RtlQueryRegistryValues
+    - KeClearEvent
+    - IoCreateNotificationEvent
+    - KeSetEvent
+    - ZwClose
+    - ZwOpenProcess
+    - KeReleaseMutex
+    - KeWaitForSingleObject
+    - PsGetCurrentProcessId
+    - KeInitializeDpc
+    - MmGetSystemRoutineAddress
+    - IoDeleteDevice
+    - IoCreateSymbolicLink
+    - KeInitializeMutex
+    - IoCreateDevice
+    - IoDeleteSymbolicLink
+    - PsGetVersion
+    - ZwUnmapViewOfSection
+    - ZwMapViewOfSection
+    - ExFreePoolWithTag
+    - ZwOpenSection
+    - IoFreeMdl
+    - MmMapLockedPages
+    - MmBuildMdlForNonPagedPool
+    - IoAllocateMdl
+    - MmMapIoSpace
+    - MmUnmapLockedPages
+    - MmUnmapIoSpace
+    - MmFreeContiguousMemory
+    - MmGetPhysicalAddress
+    - MmAllocateContiguousMemory
+    - IofCallDriver
+    - IoBuildSynchronousFsdRequest
+    - IoGetDeviceProperty
+    - KeInitializeEvent
+    - ObfDereferenceObject
+    - ExAllocatePoolWithTag
+    - ObReferenceObjectByName
+    - IoDriverObjectType
+    - IofCompleteRequest
+    - IoDisconnectInterrupt
+    - KeReleaseInterruptSpinLock
+    - KeAcquireInterruptSpinLock
+    - ExEventObjectType
+    - KeFlushQueuedDpcs
+    - KeInsertQueueDpc
+    - ObReferenceObjectByHandle
+    - ExAllocatePool
+    - HalGetBusDataByOffset
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    InternalName: Hw.sys
+    MD5: 376b1e8957227a3639ec1482900d9b97
+    MachineType: AMD64
+    MagicHeader: 50 45 0 0
+    OriginalFilename: HW.sys
+    Product: HW
+    ProductVersion: 4.9.8.0
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: e75a603d7467c2b1506dbbea74ea68c2
+        SHA1: 592275b78e5255bb3a1245eaeb263858e3111278
+        SHA256: 739066eb4b1f106dec36d824dba3a08ce1052c98e99b69fa9d1aa228d6dae664
+    SHA1: 18f34a0005e82a9a1556ba40b997b0eae554d5fd
+    SHA256: 55963284bbd5a3297f39f12f0d8a01ed99fe59d008561e3537bcd4db4b4268fa
+    Sections:
+        .text:
+            Entropy: 5.425823948048583
+            Virtual Size: '0x5e54'
+        .rdata:
+            Entropy: 4.468643667711766
+            Virtual Size: '0xcaa'
+        .pdata:
+            Entropy: 4.00613719103044
+            Virtual Size: '0x33c'
+        .rsrc:
+            Entropy: 3.6737432495687674
+            Virtual Size: '0x4a0'
+    Signature: ''
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: OU=GlobalSign Root CA , R3, O=GlobalSign, CN=GlobalSign
+            ValidFrom: '2018-09-19 00:00:00'
+            ValidTo: '2028-01-28 12:00:00'
+            Signature: 2370e9cfe2bef559ae94426fc44333aacd3f3ab96417f262064b48f140880617a1feabd15f3cc633f2f38edd1f1d3ecc1a6099820bacc7fc7e9a872aa57d0fa657eeac3b6a85d6debd4063f8ada6c888b012fcf641df0f09971e38ea539fbe05f43eead39f501276be098bc20b487d1e2e51f68d53d3ab1f401b8a8eed7dfb4f7956705f0cd38e1bb3a7700d372b9795abdae0126b1c40cec5c77eedc26258ec77ed7322c28af5864388adea136efdd8fe422fb97d5ead18ef9490ca3d27ab26949975c7cbd37bf7ca4cd3af5121925b847d2b9f153f74cb51e89e830e166f1be746ce23bdf9e4a28bd2396baa791c912ce261242d8e2a487090c41ec5e8e070
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 01ee5f169dff97352b6465d66a
+            Version: 3
+            TBS:
+                MD5: 51c3959a45cecf3d21a3effb05762573
+                SHA1: ecfcd25fd0525448a74875ba271566bc0bfbf061
+                SHA256: de1da11668f0a8d5e13346ed3ab2755f5d25bebffcfd1d0bde5b9f87bc292c91
+                SHA384: f0eab75baf1f24a53d63bd795cd07292a312f603513c8cb0f40fe5acbdb477ed72607d309fad21471a16f6223fb3a838
+        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
+                CA , SHA256 , G3
+            ValidFrom: '2016-06-15 00:00:00'
+            ValidTo: '2024-06-15 00:00:00'
+            Signature: 7609c4cc2fd9ef1e4ba9f857f3403921ca4c3c1d9e292b20d42b44d288ce1a0d05cf8381bbeb69bc318d2ac4c744cc6060941ccfa1e102240ead5bbe2cc2271e67b7e8281f3251e339f398dfb89f2e8b2ab47b0a03bcbd36048fc9d09c4fa3022799b0f045e934dfe43aa3b70637d86f2a7990d4d44e5871ec53a96198f73969e0129c575872862729a51de532f32b99975abf2bb03cb406ea0e64ecb7cd65802417c2d937f5b1261035477b9a02ba54a24593ff79bf1a8cc59fb59fdf78e76b50f14794694b24b8da05e80c9d4f06ec4a31207e4f5d86842f35a3cd9cc184571f1fadc0e2a4b1ef296b2197a6d4feed0337b0fcf58d2abcdc8483e3dec3e75f
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 481b6a07a9424c1eaafef3cdf10f
+            Version: 3
+            TBS:
+                MD5: fd8cfeea06be14fa89689909e1fc72dc
+                SHA1: 8bc3cd2f70abe543e0dbe721065a4076c8521f36
+                SHA256: 15e7050789df807f3e3174294a01b637a1239f603e42f4b5db9398efa9da9996
+                SHA384: 8b9f95e6d3dd45e4ef38e2f12fb893d7d1bb1ba867e152e4a73c49b3d51dd52bc83a05982deac29af90436061248546d
+        -   Subject: ??=Private Organization, serialNumber=2147696, ??=US, ??=DELAWARE,
+                C=US, ST=CA, L=Irvine, ??=1770 Kettering, O=Marvin Test Solutions,
+                Inc., CN=Marvin Test Solutions, Inc.
+            ValidFrom: '2019-07-29 13:20:49'
+            ValidTo: '2022-07-29 13:20:49'
+            Signature: 278a08ea60d9c1c18b2b6f4f1913860edab3f46bc0945c57e099d37309bab4bbf99feec663d1dc2ef68152baa6e95b0da0e4fdb7793c2c7e779dd7206ad76432f28af41448200c079a9ffe26c8355134d71fb598f08e3864416a1925d5253f2344208a90d8b42790191581c112c3145e23fa979ec06f41cb559ad4e4d60cf549598f3746673c745a3a82e2525c9704adaa59d987ddf6a89641378a558686ca78f920cf1c975508f3943ff6df3aae70f9c5fb1db61134ad5b8d0f455e8483ad250403160b984a4fef6b0baed3cb129c953451c23a4bb9a37c762f286e8bb57049c50c4e06fb17e3fc2e6fcd4dffde6e3ee0ad173b19a9862bae7c921c8976344b
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 716ef836a8ceb23aeaf9174e
+            Version: 3
+            TBS:
+                MD5: c4e9591383494fbfb914aac72114934d
+                SHA1: 336fa67dfea049342c5b9ad622c30f97262c04fc
+                SHA256: b7347983521d490b380cc89242a926377785b57661f2b2332ab2750920e607d5
+                SHA384: 11ec2caeda9631792c0d7ea604db5ee96d697903e18addcc84d34e1c0257473a2c3007aa3a4568855997baf804495488
+        Signer:
+        -   SerialNumber: 716ef836a8ceb23aeaf9174e
+            Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
+                CA , SHA256 , G3
+            Version: 1
+    Imphash: 91ee149529956a79a91eeb8c48f00b3d
+    LoadsDespiteHVCI: 'FALSE'

@@ -1,163 +1,164 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 12ccd18a-11da-495a-b4b4-98a2f2bff180
+Tags:
+- yyprotect64.sys
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
+Verified: 'TRUE'
 Commands:
-  Command: ''
-  Description: Confirmed vulnerable driver from Microsoft Block List
-  OperatingSystem: Windows
-  Privileges: kernel
-  Usecase: Elevate privileges
-Created: '2023-07-22'
-Detection:
-- type: ''
-  value: ''
-Id: 12ccd18a-11da-495a-b4b4-98a2f2bff180
-KnownVulnerableSamples:
-- Authentihash:
-    MD5: 64bd6bc3f5bdf6e6699d731716263e26
-    SHA1: 39ed8a86f91a548ae05e71e9c1c337ed4fad8ee4
-    SHA256: 8bce2afd04ec073143a2a4ba51671992451c8e747a84852458321f2d275b5433
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2017-12-29 03:05:35'
-  Date: ''
-  Description: ''
-  ExportedFunctions: ''
-  FileVersion: ''
-  Filename: ''
-  ImportedFunctions:
-  - ZwSetValueKey
-  - FltGetVolumeFromName
-  - IoAllocateMdl
-  - MmProbeAndLockPages
-  - MmMapLockedPagesSpecifyCache
-  - MmUnlockPages
-  - IoFreeMdl
-  - ExAllocatePool
-  - ExFreePool
-  - NtQuerySystemInformation
-  - HalMakeBeep
-  Imports:
-  - ntoskrnl.exe
-  - FLTMGR.SYS
-  - ntoskrnl.exe
-  - hal.dll
-  InternalName: ''
-  MD5: 44c491b809823eba8747e08f3ec68829
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  PDBPath: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: aa5f6914372cf9243bc5016cdf24540f
-    SHA1: b5a9c0cfb38205291a7210daa38e7195c7cde373
-    SHA256: 12946c8414f653344e69f6580aaccc43a72e503787d361c5def0dd935b6612a4
-  SHA1: 7d8129a0cb28b9d3b75bfb84a7388e2357cf7c50
-  SHA256: dcd026fd2ff8d517e2779d67b3d2d5f9a7aa39f19c66fa8ff2cab66d5c6461c6
-  Sections:
-    .text:
-      Entropy: 0.0
-      Virtual Size: '0x68c7'
-    .rdata:
-      Entropy: 0.0
-      Virtual Size: '0xb04'
-    .data:
-      Entropy: 0.0
-      Virtual Size: '0x31d48'
-    .pdata:
-      Entropy: 0.0
-      Virtual Size: '0x378'
-    INIT:
-      Entropy: 0.0
-      Virtual Size: '0xd52'
-    .vmp0:
-      Entropy: 0.0
-      Virtual Size: '0x16947'
-    .vmp1:
-      Entropy: 7.844023139842499
-      Virtual Size: '0x5facc'
-    .reloc:
-      Entropy: 5.268445216752938
-      Virtual Size: '0xb4'
-  Signature: ''
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
-        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
-        Authority , G5
-      ValidFrom: '2006-11-08 00:00:00'
-      ValidTo: '2021-11-07 23:59:59'
-      Signature: a3cd7d1ef7c7758d48e756344c009075a951a556c16dbcfef55322e998a2ac9a7e701eb38e3b45e3869531da6d4cfb34508096cd24f240df043fe265ce34226115ea667064d2f16ef3ca18596a41467e82de19b0703156690d0ce61d9d7158dcccde62f5e17a1002d87adc3bfa57bdc9e98f4621399f51654c8e3abe2841701d
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 1b093b786096da37bba4519446c89678
-      Version: 3
-      TBS:
-        MD5: 13a167a548f4915921fc4381cad99605
-        SHA1: 8b61bb2b0c4cd1eba78f1bc0cd3b8b018269cf30
-        SHA256: 28a75b684ecd8b81b9327d3d3d37eaa56a4630c84dc2e3fade6b663729c86ef5
-        SHA384: 501cca63f378c1234b97d12974f6c883408a006a592b1fa6b1ae7721c0dc211534d5e4b7d9e1fac574c5f7de82684ec0
-    - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
-      ValidFrom: '2006-05-23 17:01:29'
-      ValidTo: '2016-05-23 17:11:29'
-      Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 610c120600000000001b
-      Version: 3
-      TBS:
-        MD5: 53c41bc1164e09e0cd1617a5bf913efd
-        SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
-        SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
-        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
-    - Subject: C=CN, ST=Guangdong, L=Guangzhou, O=YY Inc., OU=PM, CN=YY Inc.
-      ValidFrom: '2015-07-17 00:00:00'
-      ValidTo: '2018-10-15 23:59:59'
-      Signature: d4ce401727e18291036ff6c80bbc6345f4a165c55b6068af11d818772ceb6767e1d9b1b825acfe295bea0c2c2394dd1c04df89e70de7f9deae21ea00853299fc7b22a8e2d20558247695d870fead281c48d6ad4b2075958924d3436d456c6d649b4fd4098c23154a83c40c39273ddcf400a547c68da9db339fe845205865f78d32933bb6a161539c4c07c972411907ece60770fdcc02a683d8f46980e5432c1af11cc684a9a681311ca440b068ce32a0cb2e446aade3829376fc6407d11c8d4f7ad253f45e95673a272aac9f1a1ad9156f9059f34dc444860e40e33847b0d629fe8097f9e82371973e7236de9a5b4bad1840b7961b81f9b7fcb6510e180a5a18
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 53603f0f228be591521b9822ca852ad4
-      Version: 3
-      TBS:
-        MD5: 5c7d7b0dade70cf4b9066854dcf5a8d4
-        SHA1: 6f330267dc23c8950da764bb52dfeb013ea22221
-        SHA256: cdb0fa6086e4c825e8df60047d9586a90fd86f5b5e434e82fa362b6126085111
-        SHA384: a716a75090503141fd275d5751d8da1b3f99dcf04f5cd30ee74869d30238abe837e4058a4ce27e7eea584e3432c754ce
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
-        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
-        CA
-      ValidFrom: '2010-02-08 00:00:00'
-      ValidTo: '2020-02-07 23:59:59'
-      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
-      Version: 3
-      TBS:
-        MD5: b30c31a572b0409383ed3fbe17e56e81
-        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
-        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
-        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
-    Signer:
-    - SerialNumber: 53603f0f228be591521b9822ca852ad4
-      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
-        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
-        CA
-      Version: 1
-  Imphash: 8679f2831e18943f9f5554485c18d976
-  LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
+    Command: ''
+    Description: Confirmed vulnerable driver from Microsoft Block List
+    OperatingSystem: Windows
+    Privileges: kernel
+    Usecase: Elevate privileges
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- yyprotect64.sys
-Verified: 'TRUE'
+Acknowledgement:
+    Handle: ''
+    Person: ''
+Detection:
+-   type: ''
+    value: ''
+KnownVulnerableSamples:
+-   Authentihash:
+        MD5: 64bd6bc3f5bdf6e6699d731716263e26
+        SHA1: 39ed8a86f91a548ae05e71e9c1c337ed4fad8ee4
+        SHA256: 8bce2afd04ec073143a2a4ba51671992451c8e747a84852458321f2d275b5433
+    Company: ''
+    Copyright: ''
+    CreationTimestamp: '2017-12-29 03:05:35'
+    Date: ''
+    Description: ''
+    ExportedFunctions: ''
+    FileVersion: ''
+    Filename: ''
+    ImportedFunctions:
+    - ZwSetValueKey
+    - FltGetVolumeFromName
+    - IoAllocateMdl
+    - MmProbeAndLockPages
+    - MmMapLockedPagesSpecifyCache
+    - MmUnlockPages
+    - IoFreeMdl
+    - ExAllocatePool
+    - ExFreePool
+    - NtQuerySystemInformation
+    - HalMakeBeep
+    Imports:
+    - ntoskrnl.exe
+    - FLTMGR.SYS
+    - ntoskrnl.exe
+    - hal.dll
+    InternalName: ''
+    MD5: 44c491b809823eba8747e08f3ec68829
+    MachineType: AMD64
+    MagicHeader: 50 45 0 0
+    OriginalFilename: ''
+    PDBPath: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: aa5f6914372cf9243bc5016cdf24540f
+        SHA1: b5a9c0cfb38205291a7210daa38e7195c7cde373
+        SHA256: 12946c8414f653344e69f6580aaccc43a72e503787d361c5def0dd935b6612a4
+    SHA1: 7d8129a0cb28b9d3b75bfb84a7388e2357cf7c50
+    SHA256: dcd026fd2ff8d517e2779d67b3d2d5f9a7aa39f19c66fa8ff2cab66d5c6461c6
+    Sections:
+        .text:
+            Entropy: 0.0
+            Virtual Size: '0x68c7'
+        .rdata:
+            Entropy: 0.0
+            Virtual Size: '0xb04'
+        .data:
+            Entropy: 0.0
+            Virtual Size: '0x31d48'
+        .pdata:
+            Entropy: 0.0
+            Virtual Size: '0x378'
+        INIT:
+            Entropy: 0.0
+            Virtual Size: '0xd52'
+        .vmp0:
+            Entropy: 0.0
+            Virtual Size: '0x16947'
+        .vmp1:
+            Entropy: 7.844023139842499
+            Virtual Size: '0x5facc'
+        .reloc:
+            Entropy: 5.268445216752938
+            Virtual Size: '0xb4'
+    Signature: ''
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006
+                VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public
+                Primary Certification Authority , G5
+            ValidFrom: '2006-11-08 00:00:00'
+            ValidTo: '2021-11-07 23:59:59'
+            Signature: a3cd7d1ef7c7758d48e756344c009075a951a556c16dbcfef55322e998a2ac9a7e701eb38e3b45e3869531da6d4cfb34508096cd24f240df043fe265ce34226115ea667064d2f16ef3ca18596a41467e82de19b0703156690d0ce61d9d7158dcccde62f5e17a1002d87adc3bfa57bdc9e98f4621399f51654c8e3abe2841701d
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 1b093b786096da37bba4519446c89678
+            Version: 3
+            TBS:
+                MD5: 13a167a548f4915921fc4381cad99605
+                SHA1: 8b61bb2b0c4cd1eba78f1bc0cd3b8b018269cf30
+                SHA256: 28a75b684ecd8b81b9327d3d3d37eaa56a4630c84dc2e3fade6b663729c86ef5
+                SHA384: 501cca63f378c1234b97d12974f6c883408a006a592b1fa6b1ae7721c0dc211534d5e4b7d9e1fac574c5f7de82684ec0
+        -   Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification
+                Authority
+            ValidFrom: '2006-05-23 17:01:29'
+            ValidTo: '2016-05-23 17:11:29'
+            Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 610c120600000000001b
+            Version: 3
+            TBS:
+                MD5: 53c41bc1164e09e0cd1617a5bf913efd
+                SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
+                SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+                SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
+        -   Subject: C=CN, ST=Guangdong, L=Guangzhou, O=YY Inc., OU=PM, CN=YY Inc.
+            ValidFrom: '2015-07-17 00:00:00'
+            ValidTo: '2018-10-15 23:59:59'
+            Signature: d4ce401727e18291036ff6c80bbc6345f4a165c55b6068af11d818772ceb6767e1d9b1b825acfe295bea0c2c2394dd1c04df89e70de7f9deae21ea00853299fc7b22a8e2d20558247695d870fead281c48d6ad4b2075958924d3436d456c6d649b4fd4098c23154a83c40c39273ddcf400a547c68da9db339fe845205865f78d32933bb6a161539c4c07c972411907ece60770fdcc02a683d8f46980e5432c1af11cc684a9a681311ca440b068ce32a0cb2e446aade3829376fc6407d11c8d4f7ad253f45e95673a272aac9f1a1ad9156f9059f34dc444860e40e33847b0d629fe8097f9e82371973e7236de9a5b4bad1840b7961b81f9b7fcb6510e180a5a18
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 53603f0f228be591521b9822ca852ad4
+            Version: 3
+            TBS:
+                MD5: 5c7d7b0dade70cf4b9066854dcf5a8d4
+                SHA1: 6f330267dc23c8950da764bb52dfeb013ea22221
+                SHA256: cdb0fa6086e4c825e8df60047d9586a90fd86f5b5e434e82fa362b6126085111
+                SHA384: a716a75090503141fd275d5751d8da1b3f99dcf04f5cd30ee74869d30238abe837e4058a4ce27e7eea584e3432c754ce
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
+                Signing 2010 CA
+            ValidFrom: '2010-02-08 00:00:00'
+            ValidTo: '2020-02-07 23:59:59'
+            Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+            Version: 3
+            TBS:
+                MD5: b30c31a572b0409383ed3fbe17e56e81
+                SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+                SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+                SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
+        Signer:
+        -   SerialNumber: 53603f0f228be591521b9822ca852ad4
+            Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
+                Signing 2010 CA
+            Version: 1
+    Imphash: 8679f2831e18943f9f5554485c18d976
+    LoadsDespiteHVCI: 'FALSE'

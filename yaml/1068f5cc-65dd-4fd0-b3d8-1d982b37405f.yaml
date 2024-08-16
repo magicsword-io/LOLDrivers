@@ -1,35 +1,35 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
-Author: Michael Haag
-Category: vulnerable driver
-Commands:
-  Command: sc.exe create WinIO32A.sys binPath=C:\windows\temp\WinIO32A.sys type=kernel
-    && sc.exe start WinIO32A.sys
-  Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
 Id: 1068f5cc-65dd-4fd0-b3d8-1d982b37405f
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: WinIO32A.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 01779ee53f999464465ed690d823d160f73f10e7
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - WinIO32A.sys
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
 Verified: 'FALSE'
+Commands:
+    Command: sc.exe create WinIO32A.sys binPath=C:\windows\temp\WinIO32A.sys type=kernel
+        && sc.exe start WinIO32A.sys
+    Description: ''
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+    Handle: ''
+    Person: ''
+Detection: []
+KnownVulnerableSamples:
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: WinIO32A.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: 01779ee53f999464465ed690d823d160f73f10e7
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'

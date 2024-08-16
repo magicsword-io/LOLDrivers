@@ -1,35 +1,35 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
-Author: Michael Haag
-Category: vulnerable driver
-Commands:
-  Command: sc.exe create windows8-10-32.sys binPath=C:\windows\temp\windows8-10-32.sys     type=kernel
-    type=kernel && sc.exe start windows8-10-32.sys
-  Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
 Id: 7437388f-821e-421f-a3c1-62ce2c725a6a
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: windows8-10-32.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA256: 5b9623da9ba8e5c80c49473f40ffe7ad315dcadffc3230afdc9d9226d60a715a
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - windows8-10-32.sys
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
 Verified: 'FALSE'
+Commands:
+    Command: sc.exe create windows8-10-32.sys binPath=C:\windows\temp\windows8-10-32.sys     type=kernel
+        type=kernel && sc.exe start windows8-10-32.sys
+    Description: ''
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+    Handle: ''
+    Person: ''
+Detection: []
+KnownVulnerableSamples:
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: windows8-10-32.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA256: 5b9623da9ba8e5c80c49473f40ffe7ad315dcadffc3230afdc9d9226d60a715a
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'

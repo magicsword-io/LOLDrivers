@@ -1,319 +1,320 @@
 Id: ba91bce3-2cf9-4c44-bbd8-1170a44d23db
+Tags:
+- filnk.sys
 Author: VirarK
 Created: '2024-06-20'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
-  Command: sc.exe create filnk.sys binPath=C:\windows\temp\filnk.sys type=kernel &&
-    sc.exe start filnk.sys
-  Description: "Twister Antivirus, fildds.sys, DoS2\n\n    CVE-2023-1444\n\n    From\
-    \ IoControlCode 0x8011206B, a normal user can cause DoS due to writing into\n\
-    \    null address."
-  Usecase: Elevate privileges
-  Privileges: kernel
-  OperatingSystem: Windows 10
+    Command: sc.exe create filnk.sys binPath=C:\windows\temp\filnk.sys type=kernel
+        && sc.exe start filnk.sys
+    Description: "Twister Antivirus, fildds.sys, DoS2\n\n    CVE-2023-1444\n\n   \
+        \ From IoControlCode 0x8011206B, a normal user can cause DoS due to writing\
+        \ into\n    null address."
+    Usecase: Elevate privileges
+    Privileges: kernel
+    OperatingSystem: Windows 10
 Resources:
 - https://github.com/zeze-zeze/WindowsKernelVuln/tree/master/CVE-2023-1444
 Acknowledgement:
-  Person: ''
-  Handle: ''
+    Person: ''
+    Handle: ''
 Detection: []
 KnownVulnerableSamples:
-- Filename: ''
-  MD5: 4b22e494ad2ac90c42f02dcca0328b7c
-  SHA1: 116decf4442c23766953d68f05a20c74924ca22e
-  SHA256: ae55a0e93e5ef3948adecf20fa55b0f555dcf40589917a5bfbaa732075f0cc12
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: Filseclab Corporation
-  Description: Filseclab Dynamic Defense System Drv
-  Product: Filseclab Dynamic Defense System
-  ProductVersion: 2, 0, 0, 19353
-  FileVersion: 2, 0, 0, 19353
-  MachineType: AMD64
-  OriginalFilename: filnk.sys
-  Imphash: cd5186f6f0e55f9acedd31a5a6ce3e1c
-  Authentihash:
-    MD5: 5ee751959a9768cc62bbb6f4b8f4ad7e
-    SHA1: 8453c3915cf9bd5ca9ac4339bd592dbac85b51a2
-    SHA256: 2fa50ee8ed9d5c91d3375950613132497c44f468193bce9fe8e51c918a9498b5
-  RichPEHeaderHash:
-    MD5: e77aba1d9f407b19c8c1870d67837939
-    SHA1: a66a7af6cabf549dac05ed67590763cc4daa556d
-    SHA256: 4e4e7a91ccd9719b23dd5a11ff2a6d973dbaed35c6184302467775d318975368
-  Sections:
-    .text:
-      Entropy: 5.708093687560138
-      Virtual Size: '0xb99d4'
-    .rdata:
-      Entropy: 5.9553962784520085
-      Virtual Size: '0xa674'
-    .data:
-      Entropy: 4.728250504498198
-      Virtual Size: '0x1d930'
-    .pdata:
-      Entropy: 5.768631281048143
-      Virtual Size: '0x4f44'
-    .edata:
-      Entropy: 3.862205596455793
-      Virtual Size: '0x1326'
-    INIT:
-      Entropy: 5.292737401001127
-      Virtual Size: '0x106e'
-    .rsrc:
-      Entropy: 3.353644257131943
-      Virtual Size: '0x4a0'
-    .reloc:
-      Entropy: 3.8195269266849787
-      Virtual Size: '0x1384'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-07-10 01:13:59'
-  InternalName: filnk
-  Copyright: Copyright (C) 2002-2013 Filseclab Corporation
-  Imports:
-  - ntoskrnl.exe
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - wcschr
-  - MmUnmapLockedPages
-  - _stricmp
-  - _wcsicmp
-  - KeInsertHeadQueue
-  - sprintf
-  - strncat
-  - _strnicmp
-  - SeTokenIsAdmin
-  - ExAllocatePoolWithTag
-  - PsProcessType
-  - wcscat
-  - ObGetObjectSecurity
-  - ZwCreateKey
-  - IoDeleteSymbolicLink
-  - KeResetEvent
-  - IoRegisterShutdownNotification
-  - strncmp
-  - RtlAnsiStringToUnicodeString
-  - ZwFsControlFile
-  - MmMapLockedPages
-  - _snwprintf
-  - PsLookupProcessByProcessId
-  - ZwQuerySymbolicLinkObject
-  - _wcsnicmp
-  - strlen
-  - ZwReadFile
-  - RtlFreeHeap
-  - RtlDowncaseUnicodeString
-  - KeInitializeApc
-  - PsReferenceImpersonationToken
-  - ZwMapViewOfSection
-  - RtlInitUnicodeString
-  - IoDeleteDevice
-  - KeSetEvent
-  - ExGetPreviousMode
-  - wcsncpy
-  - strcpy
-  - KeInsertQueueApc
-  - RtlAppendUnicodeToString
-  - KeInitializeEvent
-  - RtlInitAnsiString
-  - PsSetCreateThreadNotifyRoutine
-  - RtlUnicodeStringToAnsiString
-  - _snprintf
-  - ZwDeleteValueKey
-  - ZwSetValueKey
-  - KeInitializeDpc
-  - ZwQuerySystemInformation
-  - wcsncat
-  - KeReleaseSpinLock
-  - ZwOpenThread
-  - PsSetCreateProcessNotifyRoutine
-  - ZwOpenProcessToken
-  - RtlEqualUnicodeString
-  - ZwOpenSymbolicLinkObject
-  - IoFreeMdl
-  - SeTokenIsRestricted
-  - KeUnstackDetachProcess
-  - _wcslwr
-  - wcslen
-  - KeInitializeTimer
-  - ZwSetInformationFile
-  - KeReleaseMutex
-  - SeCreateClientSecurity
-  - KeDelayExecutionThread
-  - RtlFreeUnicodeString
-  - ObQueryNameString
-  - strncpy
-  - IoFileObjectType
-  - SeQuerySessionIdToken
-  - PsImpersonateClient
-  - ZwCreateFile
-  - wcsrchr
-  - PsCreateSystemThread
-  - IoGetDeviceObjectPointer
-  - SeImpersonateClient
-  - ExSystemTimeToLocalTime
-  - ZwQueryValueKey
-  - ZwUnmapViewOfSection
-  - ZwQueryDirectoryFile
-  - IoUnregisterShutdownNotification
-  - PsTerminateSystemThread
-  - ExFreePool
-  - IoGetCurrentProcess
-  - ZwFreeVirtualMemory
-  - ZwSetInformationProcess
-  - ExEventObjectType
-  - strcmp
-  - _vsnprintf
-  - KeInsertQueueDpc
-  - ZwClose
-  - RtlAppendUnicodeStringToString
-  - RtlLengthSecurityDescriptor
-  - RtlAllocateHeap
-  - ZwQueryVolumeInformationFile
-  - ObReferenceObjectByHandle
-  - KeWaitForSingleObject
-  - RtlTimeToTimeFields
-  - MmProbeAndLockPages
-  - KeSetTimer
-  - ZwDeleteFile
-  - PsGetVersion
-  - PsThreadType
-  - PsRevertToSelf
-  - RtlCharToInteger
-  - ZwOpenProcess
-  - RtlCompareMemory
-  - MmUnlockPages
-  - ZwQueryInformationProcess
-  - _wcsupr
-  - IoCreateSymbolicLink
-  - PsGetCurrentThreadId
-  - PsGetCurrentProcessId
-  - MmIsAddressValid
-  - ObfDereferenceObject
-  - RtlUnicodeStringToInteger
-  - ZwCreateSection
-  - ObReleaseObjectSecurity
-  - IoCreateDevice
-  - IoQueueWorkItem
-  - ZwOpenFile
-  - wcsncmp
-  - ZwTerminateProcess
-  - wcscmp
-  - KeCancelTimer
-  - ZwQueryInformationFile
-  - MmIsNonPagedSystemAddressValid
-  - ZwWriteFile
-  - ZwDeleteKey
-  - wcscpy
-  - ObOpenObjectByPointer
-  - DbgPrint
-  - KeStackAttachProcess
-  - PsLookupThreadByThreadId
-  - IoAllocateMdl
-  - strcat
-  - ZwQueryKey
-  - SeTokenType
-  - ZwAllocateVirtualMemory
-  - ZwOpenKey
-  - KeAcquireSpinLockRaiseToDpc
-  - KeBugCheckEx
-  - __C_specific_handler
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
-        , G2
-      ValidFrom: '2012-12-21 00:00:00'
-      ValidTo: '2020-12-30 23:59:59'
-      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
-      Version: 3
-      TBS:
-        MD5: d0785ad36e427c92b19f6826ab1e8020
-        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
-        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
-        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
-        , G4
-      ValidFrom: '2012-10-18 00:00:00'
-      ValidTo: '2020-12-29 23:59:59'
-      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
-      Version: 3
-      TBS:
-        MD5: e9d38360b914c8863f6cba3ee58764d3
-        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
-        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
-        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
-        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
-        Authority , G5
-      ValidFrom: '2006-11-08 00:00:00'
-      ValidTo: '2021-11-07 23:59:59'
-      Signature: 1302ddf8e88600f25af8f8200c59886207cecef74ef9bb59a198e5e138dd4ebc6618d3adeb18f20dc96d3e4a9420c33cbabd6554c6af44b310ad2c6b3eabd707b6b88163c5f95e2ee52a67cecd330c2ad7895603231fb3bee83a0859b4ec4535f78a5bff66cf50afc66d578d1978b7b9a2d157ea1f9a4bafbac98e127ec6bdff
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
-      Version: 3
-      TBS:
-        MD5: 918d9eb6a6cd36c531eceb926170a7e1
-        SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
-        SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
-        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
-    - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
-      ValidFrom: '2006-05-23 17:01:29'
-      ValidTo: '2016-05-23 17:11:29'
-      Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 610c120600000000001b
-      Version: 3
-      TBS:
-        MD5: 53c41bc1164e09e0cd1617a5bf913efd
-        SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
-        SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
-        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
-    - Subject: C=CN, ST=Beijing, L=Beijing, O=Filseclab Corporation, OU=Digital ID
-        Class 3 , Microsoft Software Validation v2, CN=Filseclab Corporation
-      ValidFrom: '2013-01-24 00:00:00'
-      ValidTo: '2015-03-25 23:59:59'
-      Signature: 8ef68f4f79ab4918401fb7f1b56dfadc5fe0ebe33e6378262d56e1c1b594f06a2d722b9d9560637feff7fea27277744eeb39e1de4a02f1c341383804b621116568092ea38b3964ff8bfe40e3e54b96e33a2e402717abfd4a87acb2e291e89382467224ec13289015bb1ccf6cb6e5249cecb7773fd6d5fd490f334eefe3333f8a12fdb5cc2a6eda583ff2271eb8f1a51637ee8480cf9f7c1a77a4b3f6405014559d5c929a47a3b04835eaf54e63b7f9865acc75a7ad93148747b16e8600a4a70570f14631b898700b078553cf4235909bb1043017361ba0afa5a7e01e3d646ba50cb5c732f97a76f64a50d95c552cd05c3c55982f1bef1543995242a4830a1da3
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 0c042011198c46c2253eaa60d10f6c37
-      Version: 3
-      TBS:
-        MD5: b6c7960875e80711e84c32514037a56b
-        SHA1: 7100d9b9e36e3e33b70fb33ec728e1ac125d854c
-        SHA256: 2c39a3baaa1135c89c3201e1f57d9b68bd404c6c20f33ea21e6fec81039d0f9b
-        SHA384: dbf6dc6fa0fe8c9b743805be6153ba99a6e4241d0afa3e768bcc8ce4b3013dc43c310f43607d14b590432a7d66e68564
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
-        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
-        CA
-      ValidFrom: '2010-02-08 00:00:00'
-      ValidTo: '2020-02-07 23:59:59'
-      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
-      Version: 3
-      TBS:
-        MD5: b30c31a572b0409383ed3fbe17e56e81
-        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
-        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
-        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
-    Signer:
-    - SerialNumber: 0c042011198c46c2253eaa60d10f6c37
-      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
-        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
-        CA
-      Version: 1
-Tags:
-- filnk.sys
+-   Filename: ''
+    MD5: 4b22e494ad2ac90c42f02dcca0328b7c
+    SHA1: 116decf4442c23766953d68f05a20c74924ca22e
+    SHA256: ae55a0e93e5ef3948adecf20fa55b0f555dcf40589917a5bfbaa732075f0cc12
+    Signature: ''
+    Date: ''
+    Publisher: ''
+    Company: Filseclab Corporation
+    Description: Filseclab Dynamic Defense System Drv
+    Product: Filseclab Dynamic Defense System
+    ProductVersion: 2, 0, 0, 19353
+    FileVersion: 2, 0, 0, 19353
+    MachineType: AMD64
+    OriginalFilename: filnk.sys
+    Imphash: cd5186f6f0e55f9acedd31a5a6ce3e1c
+    Authentihash:
+        MD5: 5ee751959a9768cc62bbb6f4b8f4ad7e
+        SHA1: 8453c3915cf9bd5ca9ac4339bd592dbac85b51a2
+        SHA256: 2fa50ee8ed9d5c91d3375950613132497c44f468193bce9fe8e51c918a9498b5
+    RichPEHeaderHash:
+        MD5: e77aba1d9f407b19c8c1870d67837939
+        SHA1: a66a7af6cabf549dac05ed67590763cc4daa556d
+        SHA256: 4e4e7a91ccd9719b23dd5a11ff2a6d973dbaed35c6184302467775d318975368
+    Sections:
+        .text:
+            Entropy: 5.708093687560138
+            Virtual Size: '0xb99d4'
+        .rdata:
+            Entropy: 5.9553962784520085
+            Virtual Size: '0xa674'
+        .data:
+            Entropy: 4.728250504498198
+            Virtual Size: '0x1d930'
+        .pdata:
+            Entropy: 5.768631281048143
+            Virtual Size: '0x4f44'
+        .edata:
+            Entropy: 3.862205596455793
+            Virtual Size: '0x1326'
+        INIT:
+            Entropy: 5.292737401001127
+            Virtual Size: '0x106e'
+        .rsrc:
+            Entropy: 3.353644257131943
+            Virtual Size: '0x4a0'
+        .reloc:
+            Entropy: 3.8195269266849787
+            Virtual Size: '0x1384'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2013-07-10 01:13:59'
+    InternalName: filnk
+    Copyright: Copyright (C) 2002-2013 Filseclab Corporation
+    Imports:
+    - ntoskrnl.exe
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - wcschr
+    - MmUnmapLockedPages
+    - _stricmp
+    - _wcsicmp
+    - KeInsertHeadQueue
+    - sprintf
+    - strncat
+    - _strnicmp
+    - SeTokenIsAdmin
+    - ExAllocatePoolWithTag
+    - PsProcessType
+    - wcscat
+    - ObGetObjectSecurity
+    - ZwCreateKey
+    - IoDeleteSymbolicLink
+    - KeResetEvent
+    - IoRegisterShutdownNotification
+    - strncmp
+    - RtlAnsiStringToUnicodeString
+    - ZwFsControlFile
+    - MmMapLockedPages
+    - _snwprintf
+    - PsLookupProcessByProcessId
+    - ZwQuerySymbolicLinkObject
+    - _wcsnicmp
+    - strlen
+    - ZwReadFile
+    - RtlFreeHeap
+    - RtlDowncaseUnicodeString
+    - KeInitializeApc
+    - PsReferenceImpersonationToken
+    - ZwMapViewOfSection
+    - RtlInitUnicodeString
+    - IoDeleteDevice
+    - KeSetEvent
+    - ExGetPreviousMode
+    - wcsncpy
+    - strcpy
+    - KeInsertQueueApc
+    - RtlAppendUnicodeToString
+    - KeInitializeEvent
+    - RtlInitAnsiString
+    - PsSetCreateThreadNotifyRoutine
+    - RtlUnicodeStringToAnsiString
+    - _snprintf
+    - ZwDeleteValueKey
+    - ZwSetValueKey
+    - KeInitializeDpc
+    - ZwQuerySystemInformation
+    - wcsncat
+    - KeReleaseSpinLock
+    - ZwOpenThread
+    - PsSetCreateProcessNotifyRoutine
+    - ZwOpenProcessToken
+    - RtlEqualUnicodeString
+    - ZwOpenSymbolicLinkObject
+    - IoFreeMdl
+    - SeTokenIsRestricted
+    - KeUnstackDetachProcess
+    - _wcslwr
+    - wcslen
+    - KeInitializeTimer
+    - ZwSetInformationFile
+    - KeReleaseMutex
+    - SeCreateClientSecurity
+    - KeDelayExecutionThread
+    - RtlFreeUnicodeString
+    - ObQueryNameString
+    - strncpy
+    - IoFileObjectType
+    - SeQuerySessionIdToken
+    - PsImpersonateClient
+    - ZwCreateFile
+    - wcsrchr
+    - PsCreateSystemThread
+    - IoGetDeviceObjectPointer
+    - SeImpersonateClient
+    - ExSystemTimeToLocalTime
+    - ZwQueryValueKey
+    - ZwUnmapViewOfSection
+    - ZwQueryDirectoryFile
+    - IoUnregisterShutdownNotification
+    - PsTerminateSystemThread
+    - ExFreePool
+    - IoGetCurrentProcess
+    - ZwFreeVirtualMemory
+    - ZwSetInformationProcess
+    - ExEventObjectType
+    - strcmp
+    - _vsnprintf
+    - KeInsertQueueDpc
+    - ZwClose
+    - RtlAppendUnicodeStringToString
+    - RtlLengthSecurityDescriptor
+    - RtlAllocateHeap
+    - ZwQueryVolumeInformationFile
+    - ObReferenceObjectByHandle
+    - KeWaitForSingleObject
+    - RtlTimeToTimeFields
+    - MmProbeAndLockPages
+    - KeSetTimer
+    - ZwDeleteFile
+    - PsGetVersion
+    - PsThreadType
+    - PsRevertToSelf
+    - RtlCharToInteger
+    - ZwOpenProcess
+    - RtlCompareMemory
+    - MmUnlockPages
+    - ZwQueryInformationProcess
+    - _wcsupr
+    - IoCreateSymbolicLink
+    - PsGetCurrentThreadId
+    - PsGetCurrentProcessId
+    - MmIsAddressValid
+    - ObfDereferenceObject
+    - RtlUnicodeStringToInteger
+    - ZwCreateSection
+    - ObReleaseObjectSecurity
+    - IoCreateDevice
+    - IoQueueWorkItem
+    - ZwOpenFile
+    - wcsncmp
+    - ZwTerminateProcess
+    - wcscmp
+    - KeCancelTimer
+    - ZwQueryInformationFile
+    - MmIsNonPagedSystemAddressValid
+    - ZwWriteFile
+    - ZwDeleteKey
+    - wcscpy
+    - ObOpenObjectByPointer
+    - DbgPrint
+    - KeStackAttachProcess
+    - PsLookupThreadByThreadId
+    - IoAllocateMdl
+    - strcat
+    - ZwQueryKey
+    - SeTokenType
+    - ZwAllocateVirtualMemory
+    - ZwOpenKey
+    - KeAcquireSpinLockRaiseToDpc
+    - KeBugCheckEx
+    - __C_specific_handler
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                CA , G2
+            ValidFrom: '2012-12-21 00:00:00'
+            ValidTo: '2020-12-30 23:59:59'
+            Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+            Version: 3
+            TBS:
+                MD5: d0785ad36e427c92b19f6826ab1e8020
+                SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+                SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+                SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                Signer , G4
+            ValidFrom: '2012-10-18 00:00:00'
+            ValidTo: '2020-12-29 23:59:59'
+            Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+            Version: 3
+            TBS:
+                MD5: e9d38360b914c8863f6cba3ee58764d3
+                SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+                SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+                SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006
+                VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public
+                Primary Certification Authority , G5
+            ValidFrom: '2006-11-08 00:00:00'
+            ValidTo: '2021-11-07 23:59:59'
+            Signature: 1302ddf8e88600f25af8f8200c59886207cecef74ef9bb59a198e5e138dd4ebc6618d3adeb18f20dc96d3e4a9420c33cbabd6554c6af44b310ad2c6b3eabd707b6b88163c5f95e2ee52a67cecd330c2ad7895603231fb3bee83a0859b4ec4535f78a5bff66cf50afc66d578d1978b7b9a2d157ea1f9a4bafbac98e127ec6bdff
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
+            Version: 3
+            TBS:
+                MD5: 918d9eb6a6cd36c531eceb926170a7e1
+                SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
+                SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+                SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
+        -   Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification
+                Authority
+            ValidFrom: '2006-05-23 17:01:29'
+            ValidTo: '2016-05-23 17:11:29'
+            Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 610c120600000000001b
+            Version: 3
+            TBS:
+                MD5: 53c41bc1164e09e0cd1617a5bf913efd
+                SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
+                SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+                SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
+        -   Subject: C=CN, ST=Beijing, L=Beijing, O=Filseclab Corporation, OU=Digital
+                ID Class 3 , Microsoft Software Validation v2, CN=Filseclab Corporation
+            ValidFrom: '2013-01-24 00:00:00'
+            ValidTo: '2015-03-25 23:59:59'
+            Signature: 8ef68f4f79ab4918401fb7f1b56dfadc5fe0ebe33e6378262d56e1c1b594f06a2d722b9d9560637feff7fea27277744eeb39e1de4a02f1c341383804b621116568092ea38b3964ff8bfe40e3e54b96e33a2e402717abfd4a87acb2e291e89382467224ec13289015bb1ccf6cb6e5249cecb7773fd6d5fd490f334eefe3333f8a12fdb5cc2a6eda583ff2271eb8f1a51637ee8480cf9f7c1a77a4b3f6405014559d5c929a47a3b04835eaf54e63b7f9865acc75a7ad93148747b16e8600a4a70570f14631b898700b078553cf4235909bb1043017361ba0afa5a7e01e3d646ba50cb5c732f97a76f64a50d95c552cd05c3c55982f1bef1543995242a4830a1da3
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 0c042011198c46c2253eaa60d10f6c37
+            Version: 3
+            TBS:
+                MD5: b6c7960875e80711e84c32514037a56b
+                SHA1: 7100d9b9e36e3e33b70fb33ec728e1ac125d854c
+                SHA256: 2c39a3baaa1135c89c3201e1f57d9b68bd404c6c20f33ea21e6fec81039d0f9b
+                SHA384: dbf6dc6fa0fe8c9b743805be6153ba99a6e4241d0afa3e768bcc8ce4b3013dc43c310f43607d14b590432a7d66e68564
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
+                Signing 2010 CA
+            ValidFrom: '2010-02-08 00:00:00'
+            ValidTo: '2020-02-07 23:59:59'
+            Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+            Version: 3
+            TBS:
+                MD5: b30c31a572b0409383ed3fbe17e56e81
+                SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+                SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+                SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
+        Signer:
+        -   SerialNumber: 0c042011198c46c2253eaa60d10f6c37
+            Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
+                Signing 2010 CA
+            Version: 1

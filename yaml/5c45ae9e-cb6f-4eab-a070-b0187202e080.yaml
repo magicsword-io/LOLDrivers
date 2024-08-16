@@ -1,163 +1,163 @@
 Id: 5c45ae9e-cb6f-4eab-a070-b0187202e080
+Tags:
+- amigendrv64.sys
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Verified: 'TRUE'
 Commands:
-  Command: sc.exe create amigendrv64.sys binPath=C:\windows\temp\amigendrv64.sys type=kernel
-    && sc.exe start amigendrv64.sys
-  Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
-  OperatingSystem: Windows 10
+    Command: sc.exe create amigendrv64.sys binPath=C:\windows\temp\amigendrv64.sys
+        type=kernel && sc.exe start amigendrv64.sys
+    Description: ''
+    Usecase: Elevate privileges
+    Privileges: kernel
+    OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Acknowledgement:
-  Person: ''
-  Handle: ''
+    Person: ''
+    Handle: ''
 Detection: []
 KnownVulnerableSamples:
-- Filename: amigendrv64.sys
-  MD5: 32365e3e64d28cc94756ac9a09b67f06
-  SHA1: d48757b74eff02255f74614f35aa27abbe3f72c7
-  SHA256: 09043c51719d4bf6405c9a7a292bb9bb3bcc782f639b708ddcc4eedb5e5c9ce9
-  Authentihash:
-    MD5: 50ce9def1a59a6ec02ac018e8e42b9e1
-    SHA1: 64e1b960b4fd0b597e36f3986abd37cca8ebd230
-    SHA256: e4dbc382c21b4b14b54d37b2fd86e12a7637f177ba4170e19ffde3584ec48e6c
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
-  MachineType: AMD64
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  - WDFLDR.SYS
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - IoAllocateMdl
-  - IoFreeMdl
-  - MmGetPhysicalAddress
-  - RtlInitUnicodeString
-  - IofCompleteRequest
-  - IoCreateDevice
-  - IoCreateSymbolicLink
-  - IoDeleteDevice
-  - IoDeleteSymbolicLink
-  - KeLowerIrql
-  - KfRaiseIrql
-  - MmMapIoSpace
-  - MmUnmapIoSpace
-  - MmFreeContiguousMemory
-  - ZwClose
-  - ZwOpenSection
-  - ZwMapViewOfSection
-  - ExFreePoolWithTag
-  - MmGetSystemRoutineAddress
-  - PsGetVersion
-  - ExAllocatePoolWithQuotaTag
-  - ZwQuerySystemInformation
-  - MmAllocateContiguousMemory
-  - MmUnmapLockedPages
-  - MmMapLockedPagesSpecifyCache
-  - RtlCopyUnicodeString
-  - DbgPrintEx
-  - MmBuildMdlForNonPagedPool
-  - RtlCompareMemory
-  - ObReferenceObjectByHandle
-  - RtlGetVersion
-  - HalTranslateBusAddress
-  - WdfVersionBind
-  - WdfVersionUnbind
-  - WdfVersionUnbindClass
-  - WdfVersionBindClass
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: serialNumber=7155083, ??=US, ??=Delaware, ??=Private Organization,
-        C=US, postalCode=30093, ST=Georgia, L=Norcross, ??=5555 Oakbrook Parkway Suite
-        200, O=AMI US HOLDINGS INC, CN=AMI US HOLDINGS INC
-      ValidFrom: '2020-09-21 00:00:00'
-      ValidTo: '2023-09-21 23:59:59'
-      Signature: 0aa1219fe537cf6f85a9144e7017472eed1f32156a449a50e02ed4cf73ebbf72698577f35aa306a2f80a3fe97215d89040d8ba197aa4c4fd3ae28a87b8728efc279f9685828da2d807bcdc83301fad324a131e79f26855abe6fd0e37604d5c34f27012c2d6ba21be1b268ca621fc1bd0b4bf08d7bf549653613f5b8ae6f1d2a4e34fae1a8e13cbb90f7b9e94ed50487e4d6645e29beb5fd5373e4e0ac8b48bb1566e2da8b0cf424c3ae93e4f75ab7887d8df5bb0b7cbaf623b092f69c58ea8936bbe008b66c1e1a08169893c8dee549bc847412ce9f789697109376b1cb8b7bc737f5fd522e9d330a7ecdbf9c1e4c0ac5a8368a6aa413a19084bc5bc1135ef60
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 00b9963758ead236c6e15cd48ba5433aae
-      Version: 3
-      TBS:
-        MD5: fad04f09614b2237bc7ff05ed3d6af76
-        SHA1: 44f498abb05904d7e8e4cc8808e234e9db1fc883
-        SHA256: e45364f3f083ba191106e672effe0fd50276e7ac702e4b64c1a38afda3457500
-        SHA384: 109d3e0daa1186226363d2d160577e329cc8425b12af9eab517373425c94ea8cb77392c2f5b0a5eeec7b4ddbe9712fb1
-    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
-        RSA Extended Validation Code Signing CA
-      ValidFrom: '2014-12-03 00:00:00'
-      ValidTo: '2029-12-02 23:59:59'
-      Signature: 664eecb716776f11e81b5d6a4ed9f28b6cb15628408bc031c49948233df80ee88097ef6d200b1f13c486fb173415e18e54f7c2b8007315e028d9dabafa8254c2f7ebbfc336d0309fe5a11c94dfef7ce8f62c78a2accf266a15a11531d6313498bd534fc48483a3c4965c3dd8fed6f954ff67936df83e2b6b2ca2087c5648813218b26eac90c1dbe4de398b86e5c7184059a4df9647bab27fb1f8570f858074380e3a58621efe52e3e6ae530986fe8f9bdb5656cc07b089c104f1530b6c6f77ecb21fecf65b4043600f1bab1854b410048ef80ee9cb83b17af2344e6a544ce9832ae9b030251cce628e0eeb85e629feb14ae3f2ae3c91f54ca1bec8170e5cbb424de31a8a92cd3e207edde975b1ea1f745c9e54c29437b261dd0716597f968016e099b5d26eb0c9230615acd123f4338bce75f0c186d3ffe12efa904ffe46f9bbdb4fbbb7fed10d2b04f1d2d195852c8a2eb88556f2c38452a1e933b1eb50c8a1b09fe3c38b3a879ee755d3d36d3417300d68220bd5b9ed733572c3eda737cde343ae45cd34bf28ca8762ed43a4affacb31cb215861465eb6c67aa61e532aa8f85c511f3a5a100f28c0e4748b74c604aaf84b26280a3289db9d2a60716ac3964e16b963bf6195678c4b2ebbb04e83e94d31e58e2722f53c267b4491d3d45af0d37cf438be149a990e8bb15beae48b0f119d7742821c5c3ad4daab882f8d573054
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
-      IsCertificateAuthority: true
-      SerialNumber: 6dd472eb02ae0406e3dd843f5fe145e1
-      Version: 3
-      TBS:
-        MD5: e3898a5cae592360ce7bfdf5ff3fb13f
-        SHA1: 217c51b90dbb7f0528e8ba170d227f647fbc995b
-        SHA256: 3a9b4006a9e125b4458344389c86dfb4f6728848b9871654c615a138514d02ec
-        SHA384: fcd8dd15125f14b84fec55838806355ec3787407188bac83c2c0d6c841adf9ac76ee83eccc5c9463f1f88fc5295a31ee
-    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
-        RSA Certification Authority
-      ValidFrom: '2011-04-11 22:06:20'
-      ValidTo: '2021-04-11 22:16:20'
-      Signature: 81980792fe6f325fd9d24bf57dd971e0fdfc169205b4ce67f5cc4bd4c7109854fa521b48582f73bf19d937a0ad33f351052379d9b277648aebbdc3b39db7b1e637d1d2597e41d98fb314ab15774d6cda40245bb207b8582c4b0c2b5351b3df2eb976ac69c9c2ed64377b8d217accdc9fbc172804cc2547242a85cc56e639398775181f46f6910faa46fa4de64754e2322c76eefbcdbd62e1962429064b0cfe344ae9101d74e57a2f954bcc6ebafdd7355f91e45942defb008e08f151512d62258415081911864061d52553232c297738cc58d38c5fbc19b866064c6310dbb2ac306c16bc8bbcd21bc603131546a550f49a9684bb721038db519ad4c55327cbbf28159e086b3d3f4cc00c911cbf19848b3751a0199d8555c55da56479ef10a5ebf4231cda6fe32e7d17b037761f4d8dc102411f363e067bc5b7602d416251dedde4512da7de81f4c3e0e0e9c31680dd9c497d17cfcb556307d66952f4a49d248dbe1bc98099874548cb49c5ed703500267ca70f7532f7ed088ff0bca560a022d5331efbe5022c95a607f4be14de704c8ea97e41dea9d95064866f9424f7abf683955d0d45d18c238c030a13e40eb943030a4367b3107446e46dbd65de4541867072040bbaddba591f571393b00bedb1144169d3090459c7368e7db64b9df120fcd0f18bbd68ca3eb131cf43d066f5a3ddafb1dcc3178cfa3128c73e4927ab6a1b
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: '61185486000000000024'
-      Version: 3
-      TBS:
-        MD5: ad73330abdd8883ba17ac2572100221e
-        SHA1: 3770402ce3d71f9823386167aa35a7c862f409d3
-        SHA256: 04bc415adcb4ef7df32b9dfe199d92a4078cbd132fd5173961211e7f75385491
-        SHA384: a6c44d9022b3fb3e679acfa266bd26c0bf6a20bb244ef486c04b55539b10ddaa4894c4e0420dfdd025850c5094bb23d1
-    Signer:
-    - SerialNumber: 00b9963758ead236c6e15cd48ba5433aae
-      Issuer: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
-        RSA Extended Validation Code Signing CA
-      Version: 1
-  RichPEHeaderHash:
-    MD5: 9ac80629b285224316ada4697cba3cc0
-    SHA1: 3940db6ddf0ca08f2e43d0c64f6b31dd5837c648
-    SHA256: bb5ad1350da2ac8b4f7dbebfee7393782406ea5abe309dea5e588098e11307c3
-  Sections:
-    .text:
-      Entropy: 6.317753531025091
-      Virtual Size: '0x25ee'
-    .rdata:
-      Entropy: 5.053084095677546
-      Virtual Size: '0xc24'
-    .data:
-      Entropy: 0.95719838068206
-      Virtual Size: '0x5e8'
-    .pdata:
-      Entropy: 4.060865402781111
-      Virtual Size: '0x210'
-    PAGE:
-      Entropy: 5.759523183434064
-      Virtual Size: '0x175'
-    INIT:
-      Entropy: 4.954930803750682
-      Virtual Size: '0x4d6'
-    .reloc:
-      Entropy: 3.003055907333275
-      Virtual Size: '0x28'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-05-17 04:01:28'
-  Imphash: 1f2627fc453dc35031a9502372bd3549
-  LoadsDespiteHVCI: 'TRUE'
-Tags:
-- amigendrv64.sys
+-   Filename: amigendrv64.sys
+    MD5: 32365e3e64d28cc94756ac9a09b67f06
+    SHA1: d48757b74eff02255f74614f35aa27abbe3f72c7
+    SHA256: 09043c51719d4bf6405c9a7a292bb9bb3bcc782f639b708ddcc4eedb5e5c9ce9
+    Authentihash:
+        MD5: 50ce9def1a59a6ec02ac018e8e42b9e1
+        SHA1: 64e1b960b4fd0b597e36f3986abd37cca8ebd230
+        SHA256: e4dbc382c21b4b14b54d37b2fd86e12a7637f177ba4170e19ffde3584ec48e6c
+    Description: ''
+    Company: ''
+    InternalName: ''
+    OriginalFilename: ''
+    FileVersion: ''
+    Product: ''
+    ProductVersion: ''
+    Copyright: ''
+    MachineType: AMD64
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    - WDFLDR.SYS
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - IoAllocateMdl
+    - IoFreeMdl
+    - MmGetPhysicalAddress
+    - RtlInitUnicodeString
+    - IofCompleteRequest
+    - IoCreateDevice
+    - IoCreateSymbolicLink
+    - IoDeleteDevice
+    - IoDeleteSymbolicLink
+    - KeLowerIrql
+    - KfRaiseIrql
+    - MmMapIoSpace
+    - MmUnmapIoSpace
+    - MmFreeContiguousMemory
+    - ZwClose
+    - ZwOpenSection
+    - ZwMapViewOfSection
+    - ExFreePoolWithTag
+    - MmGetSystemRoutineAddress
+    - PsGetVersion
+    - ExAllocatePoolWithQuotaTag
+    - ZwQuerySystemInformation
+    - MmAllocateContiguousMemory
+    - MmUnmapLockedPages
+    - MmMapLockedPagesSpecifyCache
+    - RtlCopyUnicodeString
+    - DbgPrintEx
+    - MmBuildMdlForNonPagedPool
+    - RtlCompareMemory
+    - ObReferenceObjectByHandle
+    - RtlGetVersion
+    - HalTranslateBusAddress
+    - WdfVersionBind
+    - WdfVersionUnbind
+    - WdfVersionUnbindClass
+    - WdfVersionBindClass
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: serialNumber=7155083, ??=US, ??=Delaware, ??=Private Organization,
+                C=US, postalCode=30093, ST=Georgia, L=Norcross, ??=5555 Oakbrook Parkway
+                Suite 200, O=AMI US HOLDINGS INC, CN=AMI US HOLDINGS INC
+            ValidFrom: '2020-09-21 00:00:00'
+            ValidTo: '2023-09-21 23:59:59'
+            Signature: 0aa1219fe537cf6f85a9144e7017472eed1f32156a449a50e02ed4cf73ebbf72698577f35aa306a2f80a3fe97215d89040d8ba197aa4c4fd3ae28a87b8728efc279f9685828da2d807bcdc83301fad324a131e79f26855abe6fd0e37604d5c34f27012c2d6ba21be1b268ca621fc1bd0b4bf08d7bf549653613f5b8ae6f1d2a4e34fae1a8e13cbb90f7b9e94ed50487e4d6645e29beb5fd5373e4e0ac8b48bb1566e2da8b0cf424c3ae93e4f75ab7887d8df5bb0b7cbaf623b092f69c58ea8936bbe008b66c1e1a08169893c8dee549bc847412ce9f789697109376b1cb8b7bc737f5fd522e9d330a7ecdbf9c1e4c0ac5a8368a6aa413a19084bc5bc1135ef60
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 00b9963758ead236c6e15cd48ba5433aae
+            Version: 3
+            TBS:
+                MD5: fad04f09614b2237bc7ff05ed3d6af76
+                SHA1: 44f498abb05904d7e8e4cc8808e234e9db1fc883
+                SHA256: e45364f3f083ba191106e672effe0fd50276e7ac702e4b64c1a38afda3457500
+                SHA384: 109d3e0daa1186226363d2d160577e329cc8425b12af9eab517373425c94ea8cb77392c2f5b0a5eeec7b4ddbe9712fb1
+        -   Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited,
+                CN=COMODO RSA Extended Validation Code Signing CA
+            ValidFrom: '2014-12-03 00:00:00'
+            ValidTo: '2029-12-02 23:59:59'
+            Signature: 664eecb716776f11e81b5d6a4ed9f28b6cb15628408bc031c49948233df80ee88097ef6d200b1f13c486fb173415e18e54f7c2b8007315e028d9dabafa8254c2f7ebbfc336d0309fe5a11c94dfef7ce8f62c78a2accf266a15a11531d6313498bd534fc48483a3c4965c3dd8fed6f954ff67936df83e2b6b2ca2087c5648813218b26eac90c1dbe4de398b86e5c7184059a4df9647bab27fb1f8570f858074380e3a58621efe52e3e6ae530986fe8f9bdb5656cc07b089c104f1530b6c6f77ecb21fecf65b4043600f1bab1854b410048ef80ee9cb83b17af2344e6a544ce9832ae9b030251cce628e0eeb85e629feb14ae3f2ae3c91f54ca1bec8170e5cbb424de31a8a92cd3e207edde975b1ea1f745c9e54c29437b261dd0716597f968016e099b5d26eb0c9230615acd123f4338bce75f0c186d3ffe12efa904ffe46f9bbdb4fbbb7fed10d2b04f1d2d195852c8a2eb88556f2c38452a1e933b1eb50c8a1b09fe3c38b3a879ee755d3d36d3417300d68220bd5b9ed733572c3eda737cde343ae45cd34bf28ca8762ed43a4affacb31cb215861465eb6c67aa61e532aa8f85c511f3a5a100f28c0e4748b74c604aaf84b26280a3289db9d2a60716ac3964e16b963bf6195678c4b2ebbb04e83e94d31e58e2722f53c267b4491d3d45af0d37cf438be149a990e8bb15beae48b0f119d7742821c5c3ad4daab882f8d573054
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+            IsCertificateAuthority: true
+            SerialNumber: 6dd472eb02ae0406e3dd843f5fe145e1
+            Version: 3
+            TBS:
+                MD5: e3898a5cae592360ce7bfdf5ff3fb13f
+                SHA1: 217c51b90dbb7f0528e8ba170d227f647fbc995b
+                SHA256: 3a9b4006a9e125b4458344389c86dfb4f6728848b9871654c615a138514d02ec
+                SHA384: fcd8dd15125f14b84fec55838806355ec3787407188bac83c2c0d6c841adf9ac76ee83eccc5c9463f1f88fc5295a31ee
+        -   Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited,
+                CN=COMODO RSA Certification Authority
+            ValidFrom: '2011-04-11 22:06:20'
+            ValidTo: '2021-04-11 22:16:20'
+            Signature: 81980792fe6f325fd9d24bf57dd971e0fdfc169205b4ce67f5cc4bd4c7109854fa521b48582f73bf19d937a0ad33f351052379d9b277648aebbdc3b39db7b1e637d1d2597e41d98fb314ab15774d6cda40245bb207b8582c4b0c2b5351b3df2eb976ac69c9c2ed64377b8d217accdc9fbc172804cc2547242a85cc56e639398775181f46f6910faa46fa4de64754e2322c76eefbcdbd62e1962429064b0cfe344ae9101d74e57a2f954bcc6ebafdd7355f91e45942defb008e08f151512d62258415081911864061d52553232c297738cc58d38c5fbc19b866064c6310dbb2ac306c16bc8bbcd21bc603131546a550f49a9684bb721038db519ad4c55327cbbf28159e086b3d3f4cc00c911cbf19848b3751a0199d8555c55da56479ef10a5ebf4231cda6fe32e7d17b037761f4d8dc102411f363e067bc5b7602d416251dedde4512da7de81f4c3e0e0e9c31680dd9c497d17cfcb556307d66952f4a49d248dbe1bc98099874548cb49c5ed703500267ca70f7532f7ed088ff0bca560a022d5331efbe5022c95a607f4be14de704c8ea97e41dea9d95064866f9424f7abf683955d0d45d18c238c030a13e40eb943030a4367b3107446e46dbd65de4541867072040bbaddba591f571393b00bedb1144169d3090459c7368e7db64b9df120fcd0f18bbd68ca3eb131cf43d066f5a3ddafb1dcc3178cfa3128c73e4927ab6a1b
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: '61185486000000000024'
+            Version: 3
+            TBS:
+                MD5: ad73330abdd8883ba17ac2572100221e
+                SHA1: 3770402ce3d71f9823386167aa35a7c862f409d3
+                SHA256: 04bc415adcb4ef7df32b9dfe199d92a4078cbd132fd5173961211e7f75385491
+                SHA384: a6c44d9022b3fb3e679acfa266bd26c0bf6a20bb244ef486c04b55539b10ddaa4894c4e0420dfdd025850c5094bb23d1
+        Signer:
+        -   SerialNumber: 00b9963758ead236c6e15cd48ba5433aae
+            Issuer: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+                RSA Extended Validation Code Signing CA
+            Version: 1
+    RichPEHeaderHash:
+        MD5: 9ac80629b285224316ada4697cba3cc0
+        SHA1: 3940db6ddf0ca08f2e43d0c64f6b31dd5837c648
+        SHA256: bb5ad1350da2ac8b4f7dbebfee7393782406ea5abe309dea5e588098e11307c3
+    Sections:
+        .text:
+            Entropy: 6.317753531025091
+            Virtual Size: '0x25ee'
+        .rdata:
+            Entropy: 5.053084095677546
+            Virtual Size: '0xc24'
+        .data:
+            Entropy: 0.95719838068206
+            Virtual Size: '0x5e8'
+        .pdata:
+            Entropy: 4.060865402781111
+            Virtual Size: '0x210'
+        PAGE:
+            Entropy: 5.759523183434064
+            Virtual Size: '0x175'
+        INIT:
+            Entropy: 4.954930803750682
+            Virtual Size: '0x4d6'
+        .reloc:
+            Entropy: 3.003055907333275
+            Virtual Size: '0x28'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2022-05-17 04:01:28'
+    Imphash: 1f2627fc453dc35031a9502372bd3549
+    LoadsDespiteHVCI: 'TRUE'

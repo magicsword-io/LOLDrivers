@@ -1,35 +1,35 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
-Author: Michael Haag
-Category: vulnerable driver
-Commands:
-  Command: sc.exe create bwrsh.sys binPath=C:\windows\temp\bwrsh.sys type=kernel &&
-    sc.exe start bwrsh.sys
-  Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
 Id: 974de971-1f78-47b9-8049-6c34f294acd5
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: bwrsh.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA256: 37dde6bd8a7a36111c3ac57e0ac20bbb93ce3374d0852bcacc9a2c8c8c30079e
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - bwrsh.sys
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
 Verified: 'FALSE'
+Commands:
+    Command: sc.exe create bwrsh.sys binPath=C:\windows\temp\bwrsh.sys type=kernel
+        && sc.exe start bwrsh.sys
+    Description: ''
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Acknowledgement:
+    Handle: ''
+    Person: ''
+Detection: []
+KnownVulnerableSamples:
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: bwrsh.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA256: 37dde6bd8a7a36111c3ac57e0ac20bbb93ce3374d0852bcacc9a2c8c8c30079e
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'
