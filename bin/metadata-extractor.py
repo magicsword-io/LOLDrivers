@@ -90,7 +90,7 @@ def get_metadata(driver):
 
     imphash = lief.PE.get_imphash(pe, lief.PE.IMPHASH_MODE.PEFILE)
 
-    metadata["Name"] = pe.name
+    metadata["Filename"] = pe.name
     metadata["Libraries"] = pe.libraries
 
     if pe.imported_functions:
