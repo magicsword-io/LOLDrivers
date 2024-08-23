@@ -1,175 +1,175 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: f8bddc8b-49b9-41f7-a877-d15ec3f174f9
+Tags:
+- daxin_blank4.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-02-28'
+MitreID: T1068
 Category: malicious
 Commands:
-  Command: sc.exe create daxin_blank4.sys binPath=C:\windows\temp\daxin_blank4.sys     type=kernel
-    && sc.exe start daxin_blank4.sys
-  Description: Driver used in the Daxin malware campaign.
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
-Created: '2023-02-28'
-Detection: []
-Id: f8bddc8b-49b9-41f7-a877-d15ec3f174f9
-KnownVulnerableSamples:
-- Authentihash:
-    MD5: f66f4d6b97b9e7b0e467daed2ed69bed
-    SHA1: c8f227b45d27c43db4b661ef610efbfacfda8a75
-    SHA256: 15b081ec83a89182b5bb0a642d56513f40810b5b0a42e904ab6d3fa8f34c0446
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2010-04-20 02:42:35'
-  Date: ''
-  Description: ''
-  ExportedFunctions: ''
-  FileVersion: ''
-  Filename: daxin_blank4.sys
-  ImportedFunctions:
-  - strlen
-  - IoFreeMdl
-  - MmMapLockedPagesSpecifyCache
-  - ZwClose
-  - IofCompleteRequest
-  - KeResetEvent
-  - InterlockedIncrement
-  - KeSetEvent
-  - InterlockedDecrement
-  - RtlUnicodeStringToInteger
-  - RtlInitUnicodeString
-  - KeInitializeEvent
-  - wcsncmp
-  - wcscat
-  - wcslen
-  - wcscpy
-  - MmBuildMdlForNonPagedPool
-  - IoAllocateMdl
-  - strncmp
-  - MmMapLockedPages
-  - MmProbeAndLockPages
-  - MmUnlockPages
-  - MmUnmapLockedPages
-  - RtlFreeUnicodeString
-  - ZwWriteFile
-  - ZwCreateFile
-  - RtlAnsiStringToUnicodeString
-  - strcat
-  - ZwReadFile
-  - ZwQueryInformationFile
-  - _wcsnicmp
-  - strcmp
-  - _stricmp
-  - MmGetSystemRoutineAddress
-  - ZwQueryValueKey
-  - ZwOpenKey
-  - IoCreateFile
-  - KeWaitForMultipleObjects
-  - strcpy
-  - RtlUnwind
-  - vsprintf
-  - KeWaitForSingleObject
-  - KeDelayExecutionThread
-  - PsTerminateSystemThread
-  - PsCreateSystemThread
-  - ObReferenceObjectByHandle
-  - ExFreePool
-  - KeInitializeSpinLock
-  - KeTickCount
-  - memset
-  - memcpy
-  - RtlCompareUnicodeString
-  - ExAllocatePoolWithTag
-  - KfAcquireSpinLock
-  - KfReleaseSpinLock
-  - PsGetVersion
-  - ZwTerminateProcess
-  - ZwOpenProcess
-  - RtlSetDaclSecurityDescriptor
-  - RtlAddAccessAllowedAce
-  - RtlCreateAcl
-  - RtlLengthSid
-  - RtlCreateSecurityDescriptor
-  - ZwWaitForSingleObject
-  - NtFsControlFile
-  - NtWriteFile
-  - NtReadFile
-  - RtlLengthRequiredSid
-  - RtlImageDirectoryEntryToData
-  - ZwQueryInformationProcess
-  - ZwQuerySystemInformation
-  - PsLookupProcessByProcessId
-  - KeAttachProcess
-  - KeDetachProcess
-  - PsLookupThreadByThreadId
-  - KeInitializeApc
-  - KeInsertQueueApc
-  - ZwOpenFile
-  - ZwDeviceIoControlFile
-  - PsThreadType
-  - NtQuerySystemInformation
-  - NdisAllocateMemory
-  - NdisAllocatePacket
-  - NdisCopyFromPacketToPacket
-  - NdisFreePacket
-  - NdisAllocateBuffer
-  - NdisDeregisterProtocol
-  - NdisRegisterProtocol
-  - NdisAllocateBufferPool
-  - NdisAllocatePacketPool
-  - NdisFreeBufferPool
-  - NdisFreePacketPool
-  - NdisFreeMemory
-  Imports:
-  - NTOSKRNL.EXE
-  - HAL.DLL
-  - ntoskrnl.exe
-  - NDIS.SYS
-  InternalName: ''
-  MD5: 491aec2249ad8e2020f9f9b559ab68a8
-  MachineType: I386
-  MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: n/a
-  RichPEHeaderHash:
-    MD5: 1381b25bf0ced4095e632696cc69b688
-    SHA1: 430cd24c4929262cae66fffe4f3aea3e2f1a7d4e
-    SHA256: 8fa76d4c6994c56e80ca822d3f346cbd3934333a2dfa1ea7c7800023b27efe04
-  SHA1: 8692274681e8d10c26ddf2b993f31974b04f5bf0
-  SHA256: 8dafe5f3d0527b66f6857559e3c81872699003e0f2ffda9202a1b5e29db2002e
-  Sections:
-    .text:
-      Entropy: 6.0195250267284255
-      Virtual Size: '0x9786'
-    .rdata:
-      Entropy: 5.526837662527405
-      Virtual Size: '0x4e8'
-    .data:
-      Entropy: 3.0844180409640822
-      Virtual Size: '0xc2300'
-    INIT:
-      Entropy: 5.443407835301055
-      Virtual Size: '0x954'
-    .vmp0:
-      Entropy: 3.0924132037589103
-      Virtual Size: '0xebe'
-    .vmp1:
-      Entropy: 7.965990900452569
-      Virtual Size: '0x211c'
-    .reloc:
-      Entropy: 6.615348924620848
-      Virtual Size: '0x88c'
-  Signature: Unsigned
-  Signatures: {}
-  Imphash: ea37e43ffc7cfcba181c5cff37a9be1f
-  LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
+    Command: sc.exe create daxin_blank4.sys binPath=C:\windows\temp\daxin_blank4.sys     type=kernel
+        && sc.exe start daxin_blank4.sys
+    Description: Driver used in the Daxin malware campaign.
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
 Resources:
 - https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
 - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
 - ''
-Tags:
-- daxin_blank4.sys
-Verified: 'TRUE'
+Detection: []
+Acknowledgement:
+    Handle: ''
+    Person: ''
+KnownVulnerableSamples:
+-   Authentihash:
+        MD5: f66f4d6b97b9e7b0e467daed2ed69bed
+        SHA1: c8f227b45d27c43db4b661ef610efbfacfda8a75
+        SHA256: 15b081ec83a89182b5bb0a642d56513f40810b5b0a42e904ab6d3fa8f34c0446
+    Company: ''
+    Copyright: ''
+    CreationTimestamp: '2010-04-20 02:42:35'
+    Date: ''
+    Description: ''
+    ExportedFunctions: ''
+    FileVersion: ''
+    Filename: daxin_blank4.sys
+    ImportedFunctions:
+    - strlen
+    - IoFreeMdl
+    - MmMapLockedPagesSpecifyCache
+    - ZwClose
+    - IofCompleteRequest
+    - KeResetEvent
+    - InterlockedIncrement
+    - KeSetEvent
+    - InterlockedDecrement
+    - RtlUnicodeStringToInteger
+    - RtlInitUnicodeString
+    - KeInitializeEvent
+    - wcsncmp
+    - wcscat
+    - wcslen
+    - wcscpy
+    - MmBuildMdlForNonPagedPool
+    - IoAllocateMdl
+    - strncmp
+    - MmMapLockedPages
+    - MmProbeAndLockPages
+    - MmUnlockPages
+    - MmUnmapLockedPages
+    - RtlFreeUnicodeString
+    - ZwWriteFile
+    - ZwCreateFile
+    - RtlAnsiStringToUnicodeString
+    - strcat
+    - ZwReadFile
+    - ZwQueryInformationFile
+    - _wcsnicmp
+    - strcmp
+    - _stricmp
+    - MmGetSystemRoutineAddress
+    - ZwQueryValueKey
+    - ZwOpenKey
+    - IoCreateFile
+    - KeWaitForMultipleObjects
+    - strcpy
+    - RtlUnwind
+    - vsprintf
+    - KeWaitForSingleObject
+    - KeDelayExecutionThread
+    - PsTerminateSystemThread
+    - PsCreateSystemThread
+    - ObReferenceObjectByHandle
+    - ExFreePool
+    - KeInitializeSpinLock
+    - KeTickCount
+    - memset
+    - memcpy
+    - RtlCompareUnicodeString
+    - ExAllocatePoolWithTag
+    - KfAcquireSpinLock
+    - KfReleaseSpinLock
+    - PsGetVersion
+    - ZwTerminateProcess
+    - ZwOpenProcess
+    - RtlSetDaclSecurityDescriptor
+    - RtlAddAccessAllowedAce
+    - RtlCreateAcl
+    - RtlLengthSid
+    - RtlCreateSecurityDescriptor
+    - ZwWaitForSingleObject
+    - NtFsControlFile
+    - NtWriteFile
+    - NtReadFile
+    - RtlLengthRequiredSid
+    - RtlImageDirectoryEntryToData
+    - ZwQueryInformationProcess
+    - ZwQuerySystemInformation
+    - PsLookupProcessByProcessId
+    - KeAttachProcess
+    - KeDetachProcess
+    - PsLookupThreadByThreadId
+    - KeInitializeApc
+    - KeInsertQueueApc
+    - ZwOpenFile
+    - ZwDeviceIoControlFile
+    - PsThreadType
+    - NtQuerySystemInformation
+    - NdisAllocateMemory
+    - NdisAllocatePacket
+    - NdisCopyFromPacketToPacket
+    - NdisFreePacket
+    - NdisAllocateBuffer
+    - NdisDeregisterProtocol
+    - NdisRegisterProtocol
+    - NdisAllocateBufferPool
+    - NdisAllocatePacketPool
+    - NdisFreeBufferPool
+    - NdisFreePacketPool
+    - NdisFreeMemory
+    Imports:
+    - NTOSKRNL.EXE
+    - HAL.DLL
+    - ntoskrnl.exe
+    - NDIS.SYS
+    InternalName: ''
+    MD5: 491aec2249ad8e2020f9f9b559ab68a8
+    MachineType: I386
+    MagicHeader: 50 45 0 0
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: n/a
+    RichPEHeaderHash:
+        MD5: 1381b25bf0ced4095e632696cc69b688
+        SHA1: 430cd24c4929262cae66fffe4f3aea3e2f1a7d4e
+        SHA256: 8fa76d4c6994c56e80ca822d3f346cbd3934333a2dfa1ea7c7800023b27efe04
+    SHA1: 8692274681e8d10c26ddf2b993f31974b04f5bf0
+    SHA256: 8dafe5f3d0527b66f6857559e3c81872699003e0f2ffda9202a1b5e29db2002e
+    Sections:
+        .text:
+            Entropy: 6.0195250267284255
+            Virtual Size: '0x9786'
+        .rdata:
+            Entropy: 5.526837662527405
+            Virtual Size: '0x4e8'
+        .data:
+            Entropy: 3.0844180409640822
+            Virtual Size: '0xc2300'
+        INIT:
+            Entropy: 5.443407835301055
+            Virtual Size: '0x954'
+        .vmp0:
+            Entropy: 3.0924132037589103
+            Virtual Size: '0xebe'
+        .vmp1:
+            Entropy: 7.965990900452569
+            Virtual Size: '0x211c'
+        .reloc:
+            Entropy: 6.615348924620848
+            Virtual Size: '0x88c'
+    Signature: Unsigned
+    Signatures: {}
+    Imphash: ea37e43ffc7cfcba181c5cff37a9be1f
+    LoadsDespiteHVCI: 'TRUE'

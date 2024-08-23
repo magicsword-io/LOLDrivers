@@ -1,74 +1,74 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
-Author: Michael Haag
-Category: vulnerable driver
-Commands:
-  Command: sc.exe create dbutil.sys binPath=C:\windows\temp\dbutil.sys type=kernel
-    && sc.exe start dbutil.sys
-  Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
 Id: 8d14d798-338f-471e-bacb-6d9371c0f529
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: dbutil.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 485c0b9710a196c7177b99ee95e5ddb35b26ddd1
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: dbutil.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 50e2bc41f0186fdce970b80e2a2cb296353af586
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: dbutil.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: e3c1dd569aa4758552566b0213ee4d1fe6382c4b
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: dbutil.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: e09b5e80805b8fe853ea27d8773e31bff262e3f7
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - dbutil.sys
 Verified: 'FALSE'
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+    Command: sc.exe create dbutil.sys binPath=C:\windows\temp\dbutil.sys type=kernel
+        && sc.exe start dbutil.sys
+    Description: ''
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Detection: []
+Acknowledgement:
+    Handle: ''
+    Person: ''
+KnownVulnerableSamples:
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: dbutil.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: 485c0b9710a196c7177b99ee95e5ddb35b26ddd1
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: dbutil.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: 50e2bc41f0186fdce970b80e2a2cb296353af586
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: dbutil.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: e3c1dd569aa4758552566b0213ee4d1fe6382c4b
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: dbutil.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: e09b5e80805b8fe853ea27d8773e31bff262e3f7
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'

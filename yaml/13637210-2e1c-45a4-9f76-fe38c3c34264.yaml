@@ -1,130 +1,130 @@
 Id: 13637210-2e1c-45a4-9f76-fe38c3c34264
+Tags:
+- HpPortIox64.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
-  Command: sc.exe create HpPortIox64.sys binPath=C:\windows\temp\HpPortIox64.sys type=kernel
-    && sc.exe start HpPortIox64.sys
-  Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
-  OperatingSystem: Windows 10
+    Command: sc.exe create HpPortIox64.sys binPath=C:\windows\temp\HpPortIox64.sys
+        type=kernel && sc.exe start HpPortIox64.sys
+    Description: ''
+    Usecase: Elevate privileges
+    Privileges: kernel
+    OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+-   type: yara_signature
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+-   type: sigma_hash
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+-   type: sigma_names
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+-   type: sysmon_hash_detect
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+-   type: sysmon_hash_block
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Person: ''
+    Handle: ''
 KnownVulnerableSamples:
-- Filename: HpPortIox64.sys
-  MD5: 7b9e1e5e8ff4f18f84108bb9f7b5d108
-  SHA1: a59006308c4b5d33bb8f34ac6fb16701814fb8dc
-  SHA256: a4680fabf606d6580893434e81c130ff7ec9467a15e6534692443465f264d3c9
-  Authentihash:
-    MD5: 554fb2c6b328efeef850104fec12899c
-    SHA1: 12eb825418a932b1e4c6697dc7647e89ae52cf3f
-    SHA256: 4582adb2e67eebaff755ae740c1f24bc3af78e0f28e8e8decb99f86bf155ab23
-  Description: HpPortIo
-  Company: HP Inc.
-  InternalName: HpPortIox64.sys
-  OriginalFilename: HpPortIox64.sys
-  FileVersion: 1.0.0.0
-  Product: HpPortIo
-  ProductVersion: 1.0.0.0
-  Copyright: ''
-  MachineType: AMD64
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - MmUnmapIoSpace
-  - MmMapIoSpace
-  - IofCompleteRequest
-  - IoDeleteDevice
-  - IoCreateDevice
-  - KeBugCheckEx
-  - RtlInitUnicodeString
-  - IoCreateSymbolicLink
-  - IoDeleteSymbolicLink
-  - __C_specific_handler
-  - HalSetBusDataByOffset
-  - HalGetBusDataByOffset
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, ST=California, L=Palo Alto, O=HP Inc., OU=HP Cybersecurity, CN=HP
-        Inc.
-      ValidFrom: '2019-05-07 00:00:00'
-      ValidTo: '2020-05-11 12:00:00'
-      Signature: aa3f4f546b3d6b83970947632b27c00eaf66df4d21f2f3d4437fe0eca7e4c09e690bdefd378870decaac098e2733296e3a168ad24619242c1b85b97536b196c8598179c433f6cbde589199dfd0d82a0d606918b9ff243c7bc159096f1a3c06119e399744ef024d36ea40b991816f9c7816c491c2508f87165bae72cc3cfae8ee0cab40f988ca2ef7bd084fa6956b79aff39fabe0793f3456f82b3da0d077fcd80f3effb0a788509d834c347957ba0b39f61747dae3b880b9bd70f58a87ed9d0dd8a6bd9aaca12fc7f4a49fa1703209a023a7685b253d095f2377167d9a8859b9edfd8a4377d0c06eb597fb929f900d30dbd3de83101ead341cfcf5a4f500c29b
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 09e002ed55ebc92b8a799574f80069fd
-      Version: 3
-      TBS:
-        MD5: 8e5a33e7bb54021804e4e59f3e526eb6
-        SHA1: 1100fd4e09b76dbfc11a2af0be5fb874e1fb7de5
-        SHA256: 073be2d750162b598fb61d31412483eb6c2b95746abf85862de245322ab1dc13
-        SHA384: bc5188acd4a01d2e790b324dbac52b313693782a4d0f8db3e32b6dd92eef020171eeab09d42890b2e60e2a1207761f62
-    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 High Assurance
-        Code Signing CA
-      ValidFrom: '2013-10-22 12:00:00'
-      ValidTo: '2028-10-22 12:00:00'
-      Signature: 6a0eff7e137c06a54bc02e8cf9536409e2ba58913050eccc9fe1d3a82f4846361829d078285f9856400f1ebabdb13b875cdc5bd8200ded1a164dd51124214bf127699013eb11a101dafdb54e795975bd382a6ac3f68e412b8aa28bd72c5151d99ca0c8e34eba6ca847d24ed1681f8c02573bb3296a8e6a202ab9f2006264bac8e900f9cca4d4ba9a35d8af2c656c167c5821de4a30d0faeb245d06c99d16b7ad4a45d325e20cf040aa5c4dac7ecd0682b976466908d832b682fee3a95834431b8e6767973f6831163638953e87f7c7c3af9d7a7719d9de93b5fd6e2bfc94f93db74c12352c30bee88d9e05709a4813f48cd6e71eac38e7a8f3ad0cb77aec67ed
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 0b7e10903c38490ffa2f679a87a1a7b9
-      Version: 3
-      TBS:
-        MD5: 7b0fbcf5c5aa55932726e9222f56efe2
-        SHA1: f09486b2b82a88a8b82aa2a12440496c8e53c452
-        SHA256: 0bf095b845b69928b5d7dfd1c42ae4f90feb8dc97f7830598c93e848877021fb
-        SHA384: f2a7644292efe9a7adc26cdeb0aa13980ea792d21845ba696684ac64d7f906839f3ec7625c3a88efefe3a451d961d317
-    Signer:
-    - SerialNumber: 09e002ed55ebc92b8a799574f80069fd
-      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 High Assurance
-        Code Signing CA
-      Version: 1
-  RichPEHeaderHash:
-    MD5: 41ddd08b440611823bc5d8cb732c563d
-    SHA1: 8acdfc9ac988c6250e2a031640f6e169b5fddb73
-    SHA256: 189683b4db2e68d2f0b3f91f1141907b3887f23991867a68a22389d40ad3634e
-  Sections:
-    .text:
-      Entropy: 5.93987588694592
-      Virtual Size: '0x6ba'
-    .rdata:
-      Entropy: 4.302335685844511
-      Virtual Size: '0x198'
-    .data:
-      Entropy: 0.5096713223407059
-      Virtual Size: '0x114'
-    .pdata:
-      Entropy: 3.169156050691243
-      Virtual Size: '0x6c'
-    INIT:
-      Entropy: 5.046663153942613
-      Virtual Size: '0x242'
-    .rsrc:
-      Entropy: 3.1281653750930665
-      Virtual Size: '0x2f8'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-01-16 02:04:02'
-  Imphash: d6f977640d4810a784d152e4d3c63a6b
-  LoadsDespiteHVCI: 'FALSE'
-Tags:
-- HpPortIox64.sys
+-   Filename: HpPortIox64.sys
+    MD5: 7b9e1e5e8ff4f18f84108bb9f7b5d108
+    SHA1: a59006308c4b5d33bb8f34ac6fb16701814fb8dc
+    SHA256: a4680fabf606d6580893434e81c130ff7ec9467a15e6534692443465f264d3c9
+    Authentihash:
+        MD5: 554fb2c6b328efeef850104fec12899c
+        SHA1: 12eb825418a932b1e4c6697dc7647e89ae52cf3f
+        SHA256: 4582adb2e67eebaff755ae740c1f24bc3af78e0f28e8e8decb99f86bf155ab23
+    Description: HpPortIo
+    Company: HP Inc.
+    InternalName: HpPortIox64.sys
+    OriginalFilename: HpPortIox64.sys
+    FileVersion: 1.0.0.0
+    Product: HpPortIo
+    ProductVersion: 1.0.0.0
+    Copyright: ''
+    MachineType: AMD64
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - MmUnmapIoSpace
+    - MmMapIoSpace
+    - IofCompleteRequest
+    - IoDeleteDevice
+    - IoCreateDevice
+    - KeBugCheckEx
+    - RtlInitUnicodeString
+    - IoCreateSymbolicLink
+    - IoDeleteSymbolicLink
+    - __C_specific_handler
+    - HalSetBusDataByOffset
+    - HalGetBusDataByOffset
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, ST=California, L=Palo Alto, O=HP Inc., OU=HP Cybersecurity,
+                CN=HP Inc.
+            ValidFrom: '2019-05-07 00:00:00'
+            ValidTo: '2020-05-11 12:00:00'
+            Signature: aa3f4f546b3d6b83970947632b27c00eaf66df4d21f2f3d4437fe0eca7e4c09e690bdefd378870decaac098e2733296e3a168ad24619242c1b85b97536b196c8598179c433f6cbde589199dfd0d82a0d606918b9ff243c7bc159096f1a3c06119e399744ef024d36ea40b991816f9c7816c491c2508f87165bae72cc3cfae8ee0cab40f988ca2ef7bd084fa6956b79aff39fabe0793f3456f82b3da0d077fcd80f3effb0a788509d834c347957ba0b39f61747dae3b880b9bd70f58a87ed9d0dd8a6bd9aaca12fc7f4a49fa1703209a023a7685b253d095f2377167d9a8859b9edfd8a4377d0c06eb597fb929f900d30dbd3de83101ead341cfcf5a4f500c29b
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 09e002ed55ebc92b8a799574f80069fd
+            Version: 3
+            TBS:
+                MD5: 8e5a33e7bb54021804e4e59f3e526eb6
+                SHA1: 1100fd4e09b76dbfc11a2af0be5fb874e1fb7de5
+                SHA256: 073be2d750162b598fb61d31412483eb6c2b95746abf85862de245322ab1dc13
+                SHA384: bc5188acd4a01d2e790b324dbac52b313693782a4d0f8db3e32b6dd92eef020171eeab09d42890b2e60e2a1207761f62
+        -   Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 High
+                Assurance Code Signing CA
+            ValidFrom: '2013-10-22 12:00:00'
+            ValidTo: '2028-10-22 12:00:00'
+            Signature: 6a0eff7e137c06a54bc02e8cf9536409e2ba58913050eccc9fe1d3a82f4846361829d078285f9856400f1ebabdb13b875cdc5bd8200ded1a164dd51124214bf127699013eb11a101dafdb54e795975bd382a6ac3f68e412b8aa28bd72c5151d99ca0c8e34eba6ca847d24ed1681f8c02573bb3296a8e6a202ab9f2006264bac8e900f9cca4d4ba9a35d8af2c656c167c5821de4a30d0faeb245d06c99d16b7ad4a45d325e20cf040aa5c4dac7ecd0682b976466908d832b682fee3a95834431b8e6767973f6831163638953e87f7c7c3af9d7a7719d9de93b5fd6e2bfc94f93db74c12352c30bee88d9e05709a4813f48cd6e71eac38e7a8f3ad0cb77aec67ed
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 0b7e10903c38490ffa2f679a87a1a7b9
+            Version: 3
+            TBS:
+                MD5: 7b0fbcf5c5aa55932726e9222f56efe2
+                SHA1: f09486b2b82a88a8b82aa2a12440496c8e53c452
+                SHA256: 0bf095b845b69928b5d7dfd1c42ae4f90feb8dc97f7830598c93e848877021fb
+                SHA384: f2a7644292efe9a7adc26cdeb0aa13980ea792d21845ba696684ac64d7f906839f3ec7625c3a88efefe3a451d961d317
+        Signer:
+        -   SerialNumber: 09e002ed55ebc92b8a799574f80069fd
+            Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 High
+                Assurance Code Signing CA
+            Version: 1
+    RichPEHeaderHash:
+        MD5: 41ddd08b440611823bc5d8cb732c563d
+        SHA1: 8acdfc9ac988c6250e2a031640f6e169b5fddb73
+        SHA256: 189683b4db2e68d2f0b3f91f1141907b3887f23991867a68a22389d40ad3634e
+    Sections:
+        .text:
+            Entropy: 5.93987588694592
+            Virtual Size: '0x6ba'
+        .rdata:
+            Entropy: 4.302335685844511
+            Virtual Size: '0x198'
+        .data:
+            Entropy: 0.5096713223407059
+            Virtual Size: '0x114'
+        .pdata:
+            Entropy: 3.169156050691243
+            Virtual Size: '0x6c'
+        INIT:
+            Entropy: 5.046663153942613
+            Virtual Size: '0x242'
+        .rsrc:
+            Entropy: 3.1281653750930665
+            Virtual Size: '0x2f8'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2020-01-16 02:04:02'
+    Imphash: d6f977640d4810a784d152e4d3c63a6b
+    LoadsDespiteHVCI: 'FALSE'

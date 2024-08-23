@@ -1,969 +1,970 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
-Author: Takahiro Haruyama
-Category: vulnerable driver
-Commands:
-  Command: sc.exe create FPCIE2COMsys binPath= C:\windows\temp\FPCIE2COMsys.sys type=kernel
-    && sc.exe start FPCIE2COMsys
-  Description: The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable
-    drivers (237 file hashes) accepting firmware access. Six allow kernel memory access.
-    All give full control of the devices to non-admin users. By exploiting the vulnerable
-    drivers, an attacker without the system privilege may erase/alter firmware, and/or
-    elevate privileges. As of the time of writing in October 2023, the filenames of
-    the vulnerable drivers have not been made public until now.
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
-Created: '2023-11-02'
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Id: 9543c507-9b10-4de8-89b9-42a4f24c99ec
-KnownVulnerableSamples:
-- Company: Fintek Corp.
-  Date: ''
-  Description: Fintek Pcie2Uart Adapter
-  FileVersion: 1, 0, 0, 0
-  Filename: ''
-  MD5: c552dae8eaadd708a38704e8d62cf64d
-  MachineType: I386
-  OriginalFilename: FPCIE2COM.sys
-  Product: Fintek Corp. Fintek Pcie2Uart
-  ProductVersion: 1, 0, 0, 0
-  Publisher: ''
-  SHA1: 59b0b8e3478f3d21213a8afda84181c4ed0a79a7
-  SHA256: 17942865680bd3d6e6633c90cc4bd692ae0951a8589dbe103c1e293b3067344d
-  Signature: ''
-  Imphash: 3ca448454c33a5c72ad5e774de47930a
-  Authentihash:
-    MD5: 3145cb38dd53aca44d7e050667782858
-    SHA1: 532b0d04fe8f2302932988a4161f7fb327d46e46
-    SHA256: 65cf1a886b3e3ec8070bde31cb8e254cd623de1e8c7dd71248b84e6de77a08e6
-  RichPEHeaderHash:
-    MD5: 560c4546e7cd8f033e7a83b8263b0b78
-    SHA1: 268cae1f912917f8f8c247af338a1975395eef9f
-    SHA256: 6a61fd1183e0e57a3475b5b0ee2187c789b2fc3faa2ca60a022aac44f744395e
-  Sections:
-    .text:
-      Entropy: 6.194550115167728
-      Virtual Size: '0x388d'
-    .rdata:
-      Entropy: 4.949802156051865
-      Virtual Size: '0x1c8'
-    .data:
-      Entropy: 3.2192145041934057
-      Virtual Size: '0x238'
-    PAGE:
-      Entropy: 6.0803456106377975
-      Virtual Size: '0x174c'
-    INIT:
-      Entropy: 5.411740050770134
-      Virtual Size: '0x6ce'
-    .rsrc:
-      Entropy: 5.793269376326418
-      Virtual Size: '0x808'
-    .reloc:
-      Entropy: 5.998696043406143
-      Virtual Size: '0x3fc'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-12-10 18:49:33'
-  InternalName: ''
-  Copyright: Copyright @ Fintek Corp. 2002-2013
-  Imports:
-  - NTOSKRNL.EXE
-  - HAL.DLL
-  - WMILIB.SYS
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - ExAllocatePoolWithTag
-  - IoInitializeRemoveLockEx
-  - IoCreateDevice
-  - RtlInitUnicodeString
-  - _snwprintf
-  - InterlockedIncrement
-  - MmUnmapIoSpace
-  - WRITE_REGISTER_BUFFER_UCHAR
-  - MmMapIoSpace
-  - READ_REGISTER_BUFFER_ULONG
-  - RtlCopyUnicodeString
-  - IoAttachDeviceToDeviceStack
-  - KeSetEvent
-  - PoSetPowerState
-  - IoCreateSymbolicLink
-  - IoDeleteSymbolicLink
-  - ZwQueryValueKey
-  - ExAllocatePool
-  - memcpy
-  - ZwSetValueKey
-  - RtlAppendUnicodeToString
-  - ExFreePoolWithTag
-  - ZwClose
-  - ZwOpenKey
-  - IoIsWdmVersionAvailable
-  - swprintf
-  - atoi
-  - IoOpenDeviceRegistryKey
-  - IoDetachDevice
-  - IoDeleteDevice
-  - KeWaitForSingleObject
-  - IofCallDriver
-  - KeInitializeEvent
-  - ObfReferenceObject
-  - IoReleaseRemoveLockAndWaitEx
-  - IoReleaseRemoveLockEx
-  - IoAcquireRemoveLockEx
-  - RtlFreeUnicodeString
-  - ExFreePool
-  - memset
-  - IoFreeIrp
-  - ObfDereferenceObject
-  - IoAllocateIrp
-  - IoGetAttachedDeviceReference
-  - InterlockedDecrement
-  - IoBuildSynchronousFsdRequest
-  - PoCallDriver
-  - PoStartNextPowerIrp
-  - PoRequestPowerIrp
-  - ExQueueWorkItem
-  - IoWMIRegistrationControl
-  - KeTickCount
-  - KeBugCheckEx
-  - IofCompleteRequest
-  - KfAcquireSpinLock
-  - KfReleaseSpinLock
-  - KeGetCurrentIrql
-  - WRITE_PORT_ULONG
-  - READ_PORT_ULONG
-  - READ_PORT_UCHAR
-  - WRITE_PORT_UCHAR
-  - WmiCompleteRequest
-  - WmiSystemControl
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
-        , G2
-      ValidFrom: '2012-12-21 00:00:00'
-      ValidTo: '2020-12-30 23:59:59'
-      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
-      Version: 3
-      TBS:
-        MD5: d0785ad36e427c92b19f6826ab1e8020
-        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
-        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
-        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
-        , G4
-      ValidFrom: '2012-10-18 00:00:00'
-      ValidTo: '2020-12-29 23:59:59'
-      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
-      Version: 3
-      TBS:
-        MD5: e9d38360b914c8863f6cba3ee58764d3
-        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
-        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
-        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
-    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
-        Class 3 Extended Validation Code Signing CA , G2
-      ValidFrom: '2014-03-04 00:00:00'
-      ValidTo: '2024-03-03 23:59:59'
-      Signature: 3f5b19f3fa13d575382a5aee9f5aa04ca91dc5cc94eede15fef5106ea41ba56483541858c40b28a185c34e74e5ff897cfed5ed3cba719f5602268f162a88feb0a32722ce4be2388e00a63a865f9de53ea8de644941744121fd07c88417da1d653082cb264f39d60427a481b14b49c3238b7e02321827b7ab0bf31872b6a4ee67066f38a6588de0f17e5da460c6a8e5505fe0e8bae28f9958b6b5a0a876f1a2f11c8841727e52979b0a36998d50f701eb3ce7f0226ae5358c63368a1ab1d967665f971aefa8209df02fba6cced9948500f158f17dc97c22b5075d02c6e60bbfab9393ff27188e33367e5734f1c3af04c184f156b3e8878336f8d30a31dc6e2c6d
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 191a32cb759c97b8cfac118dd5127f49
-      Version: 3
-      TBS:
-        MD5: 788b61bd26da89253179e3de2cdb527f
-        SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
-        SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
-        SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
-    - Subject: ??=TW, ??=Private Organization, serialNumber=80333472, C=TW, ST=Hsinchu,
-        L=Chupei City, O=Feature Integration Technology Inc, CN=Feature Integration
-        Technology Inc
-      ValidFrom: '2015-05-14 00:00:00'
-      ValidTo: '2017-05-13 23:59:59'
-      Signature: 297893e8612cdccf2bc5ff2cb810dc2a868aa1675d1598bb6a27f22010570e39e89167285c8dbba0abfeaa41a4329e1f21e62ef9a15bc94954e259e0292d9315670097fe51d0778cb97dbb990e7bcb9cfd894bf7e4289e8ec8f3fe1882d2cd1a8261a494537202c3c53e82cc96c3eddc00e2e611c21a9ad7564c13c72eef27d3b479b031a64d8afc84a3bdb76d85fa40f6bdf3f307733bcfee0e9d23e423a97162317cdff0f47e1a083c3d145ad574c54ef4e701d7e868da22b2e16149dc53a9451ce9cd46dc5e0a7b036d04fd73f601406b722fde98fe4f2acfadc670feb885f7e57d0d9e376cd967deb3998b966a57f79f5c49a68920c52ed74368379c1ad2
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 1b0403aaa7d4b40ea3c691a11217f378
-      Version: 3
-      TBS:
-        MD5: b0d42f7686780a7cbd4e531dd96d18fb
-        SHA1: e0d0c6dd0804554232caee87297decab44169257
-        SHA256: 804da934d7c2508775d1c74452b0305f76af5bc4139ca251af3ce55b4be41651
-        SHA384: e761d349002b37019e26ae9dbae64e1c055fe833e57984491987ec0b1e64dc79abaf150cbf1db76a41c192b1c98f46e4
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
-        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
-        Authority , G5
-      ValidFrom: '2011-02-22 19:25:17'
-      ValidTo: '2021-02-22 19:35:17'
-      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 611993e400000000001c
-      Version: 3
-      TBS:
-        MD5: 78a717e082dcc1cda3458d917e677d14
-        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
-        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
-        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
-    Signer:
-    - SerialNumber: 1b0403aaa7d4b40ea3c691a11217f378
-      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
-        Class 3 Extended Validation Code Signing CA , G2
-      Version: 1
-  LoadsDespiteHVCI: 'FALSE'
-- Company: Fintek Corp.
-  Date: ''
-  Description: Fintek Pcie2Uart Adapter
-  FileVersion: 1, 0, 0, 0
-  Filename: ''
-  MD5: ecccbf1e7c727f923c9d709707800e6c
-  MachineType: AMD64
-  OriginalFilename: FPCIE2COM.sys
-  Product: Fintek Corp. Fintek Pcie2Uart
-  ProductVersion: 1, 0, 0, 0
-  Publisher: ''
-  SHA1: cfcecf6207d16aeb0af29aac8a4a2f104483018e
-  SHA256: 32bd0edb9daa60175b1dc054f30e28e8dbfa293a32e6c86bfd06bc046eaa2f9e
-  Signature: ''
-  Imphash: 8d616e68080def2200312de80392efa7
-  Authentihash:
-    MD5: f31b7135682f2657dbe7dfffd065ff53
-    SHA1: bcb3a8484cf837a1874c5eca94d05fa4c295d9ee
-    SHA256: 4ea2a3a6edb3c772f9d358a720f9106260ef22d339bd3c7895e7b5cda03e424d
-  RichPEHeaderHash:
-    MD5: 0131d804ea86a1a0f91c701b4b77854f
-    SHA1: fa3de710100580bd027b4778c2788eb34b078ac5
-    SHA256: 584d6891aaca937da93db4d3125bbb436fbfc5364afae8e399711736429183ce
-  Sections:
-    .text:
-      Entropy: 6.079455671694147
-      Virtual Size: '0x4621'
-    .rdata:
-      Entropy: 4.707304057250705
-      Virtual Size: '0x4c4'
-    .data:
-      Entropy: 1.9479545968141223
-      Virtual Size: '0x464'
-    .pdata:
-      Entropy: 4.154780308135963
-      Virtual Size: '0x2e8'
-    PAGE:
-      Entropy: 5.997687300254138
-      Virtual Size: '0x1ca8'
-    INIT:
-      Entropy: 4.925204557389073
-      Virtual Size: '0x6a2'
-    .rsrc:
-      Entropy: 5.796000589033034
-      Virtual Size: '0x808'
-    .reloc:
-      Entropy: 3.4303212434984744
-      Virtual Size: '0xd6'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-12-10 18:49:25'
-  InternalName: ''
-  Copyright: Copyright @ Fintek Corp. 2002-2013
-  Imports:
-  - ntoskrnl.exe
-  - WMILIB.SYS
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - IoDeleteDevice
-  - KeSetEvent
-  - swprintf
-  - RtlAppendUnicodeToString
-  - KeInitializeEvent
-  - atoi
-  - ZwSetValueKey
-  - KeReleaseSpinLock
-  - IoDetachDevice
-  - MmUnmapIoSpace
-  - PoSetPowerState
-  - RtlFreeUnicodeString
-  - ZwQueryValueKey
-  - ExAllocatePool
-  - ExFreePool
-  - MmMapIoSpace
-  - ZwClose
-  - IofCompleteRequest
-  - KeWaitForSingleObject
-  - IoAttachDeviceToDeviceStack
-  - IoIsWdmVersionAvailable
-  - IoCreateSymbolicLink
-  - RtlInitUnicodeString
-  - IoInitializeRemoveLockEx
-  - IoOpenDeviceRegistryKey
-  - IoCreateDevice
-  - IofCallDriver
-  - ZwOpenKey
-  - KeAcquireSpinLockRaiseToDpc
-  - IoAcquireRemoveLockEx
-  - IoReleaseRemoveLockEx
-  - IoReleaseRemoveLockAndWaitEx
-  - ObfReferenceObject
-  - _snwprintf
-  - IoBuildSynchronousFsdRequest
-  - IoFreeIrp
-  - IoGetAttachedDeviceReference
-  - IoAllocateIrp
-  - ObfDereferenceObject
-  - ExQueueWorkItem
-  - PoRequestPowerIrp
-  - PoStartNextPowerIrp
-  - PoCallDriver
-  - IoWMIRegistrationControl
-  - KeBugCheckEx
-  - ExFreePoolWithTag
-  - IoDeleteSymbolicLink
-  - RtlCopyUnicodeString
-  - ExAllocatePoolWithTag
-  - WmiSystemControl
-  - WmiCompleteRequest
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
-        , G2
-      ValidFrom: '2012-12-21 00:00:00'
-      ValidTo: '2020-12-30 23:59:59'
-      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
-      Version: 3
-      TBS:
-        MD5: d0785ad36e427c92b19f6826ab1e8020
-        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
-        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
-        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
-        , G4
-      ValidFrom: '2012-10-18 00:00:00'
-      ValidTo: '2020-12-29 23:59:59'
-      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
-      Version: 3
-      TBS:
-        MD5: e9d38360b914c8863f6cba3ee58764d3
-        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
-        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
-        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
-    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
-        Class 3 Extended Validation Code Signing CA , G2
-      ValidFrom: '2014-03-04 00:00:00'
-      ValidTo: '2024-03-03 23:59:59'
-      Signature: 3f5b19f3fa13d575382a5aee9f5aa04ca91dc5cc94eede15fef5106ea41ba56483541858c40b28a185c34e74e5ff897cfed5ed3cba719f5602268f162a88feb0a32722ce4be2388e00a63a865f9de53ea8de644941744121fd07c88417da1d653082cb264f39d60427a481b14b49c3238b7e02321827b7ab0bf31872b6a4ee67066f38a6588de0f17e5da460c6a8e5505fe0e8bae28f9958b6b5a0a876f1a2f11c8841727e52979b0a36998d50f701eb3ce7f0226ae5358c63368a1ab1d967665f971aefa8209df02fba6cced9948500f158f17dc97c22b5075d02c6e60bbfab9393ff27188e33367e5734f1c3af04c184f156b3e8878336f8d30a31dc6e2c6d
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 191a32cb759c97b8cfac118dd5127f49
-      Version: 3
-      TBS:
-        MD5: 788b61bd26da89253179e3de2cdb527f
-        SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
-        SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
-        SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
-    - Subject: ??=TW, ??=Private Organization, serialNumber=80333472, C=TW, ST=Hsinchu,
-        L=Chupei City, O=Feature Integration Technology Inc, CN=Feature Integration
-        Technology Inc
-      ValidFrom: '2015-05-14 00:00:00'
-      ValidTo: '2017-05-13 23:59:59'
-      Signature: 297893e8612cdccf2bc5ff2cb810dc2a868aa1675d1598bb6a27f22010570e39e89167285c8dbba0abfeaa41a4329e1f21e62ef9a15bc94954e259e0292d9315670097fe51d0778cb97dbb990e7bcb9cfd894bf7e4289e8ec8f3fe1882d2cd1a8261a494537202c3c53e82cc96c3eddc00e2e611c21a9ad7564c13c72eef27d3b479b031a64d8afc84a3bdb76d85fa40f6bdf3f307733bcfee0e9d23e423a97162317cdff0f47e1a083c3d145ad574c54ef4e701d7e868da22b2e16149dc53a9451ce9cd46dc5e0a7b036d04fd73f601406b722fde98fe4f2acfadc670feb885f7e57d0d9e376cd967deb3998b966a57f79f5c49a68920c52ed74368379c1ad2
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 1b0403aaa7d4b40ea3c691a11217f378
-      Version: 3
-      TBS:
-        MD5: b0d42f7686780a7cbd4e531dd96d18fb
-        SHA1: e0d0c6dd0804554232caee87297decab44169257
-        SHA256: 804da934d7c2508775d1c74452b0305f76af5bc4139ca251af3ce55b4be41651
-        SHA384: e761d349002b37019e26ae9dbae64e1c055fe833e57984491987ec0b1e64dc79abaf150cbf1db76a41c192b1c98f46e4
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
-        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
-        Authority , G5
-      ValidFrom: '2011-02-22 19:25:17'
-      ValidTo: '2021-02-22 19:35:17'
-      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 611993e400000000001c
-      Version: 3
-      TBS:
-        MD5: 78a717e082dcc1cda3458d917e677d14
-        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
-        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
-        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
-    Signer:
-    - SerialNumber: 1b0403aaa7d4b40ea3c691a11217f378
-      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
-        Class 3 Extended Validation Code Signing CA , G2
-      Version: 1
-  LoadsDespiteHVCI: 'FALSE'
-- Company: Feature Integration Technology Inc.
-  Date: ''
-  Description: FINTEK PCIECOM Adapter
-  FileVersion: 22,12,5,0
-  Filename: ''
-  MD5: cafbf85b902f189ba35f3d7823aad195
-  MachineType: I386
-  OriginalFilename: FPCIE2COM.sys
-  Product: 'FINTEK PCIECOM '
-  ProductVersion: 22,12,5,0
-  Publisher: ''
-  SHA1: f70eb454c0e9ea67a18c625faf7a666665801035
-  SHA256: 81fbc9d02ef9e05602ea9c0804d423043d0ea5a06393c7ece3be03459f76a41d
-  Signature: ''
-  Imphash: 799c9c020c6fcfd11a4172bc861f74af
-  Authentihash:
-    MD5: 6c193ad2e2b576f5c410cc4cf75475c0
-    SHA1: 772d1324df82b2fcf33a86d96d1267854695c962
-    SHA256: 1970400679c3ae7000f1ba3e0f12c2d5443df7fbb8947cabe45c7ae977806efb
-  RichPEHeaderHash:
-    MD5: 4d2a279f87a57838bb49ad62fe981940
-    SHA1: a744f529856b0ea75953f2f6228b94cf46d9f0d9
-    SHA256: e603397d41c6d4244e3f05ab451c41f8cdb8e8bf891874d7ac9a52a60be8c25d
-  Sections:
-    .text:
-      Entropy: 6.204197473497571
-      Virtual Size: '0x3ecb'
-    .rdata:
-      Entropy: 4.364891658422532
-      Virtual Size: '0x508'
-    .data:
-      Entropy: 2.74269782750115
-      Virtual Size: '0x1ec'
-    PAGE:
-      Entropy: 6.1616664882521865
-      Virtual Size: '0x266c'
-    INIT:
-      Entropy: 5.520089305549897
-      Virtual Size: '0x6ee'
-    .rsrc:
-      Entropy: 5.949694402837037
-      Virtual Size: '0x790'
-    .reloc:
-      Entropy: 6.3808996505064695
-      Virtual Size: '0x420'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-12-05 01:30:27'
-  InternalName: ''
-  Copyright: Copyright (C) 2022 Feature Integration Technology Inc.
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  - WMILIB.SYS
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - ExFreePoolWithTag
-  - MmMapIoSpace
-  - MmUnmapIoSpace
-  - IoAttachDeviceToDeviceStack
-  - IofCallDriver
-  - IofCompleteRequest
-  - IoCreateDevice
-  - IoIsWdmVersionAvailable
-  - IoCreateSymbolicLink
-  - IoDeleteDevice
-  - IoDeleteSymbolicLink
-  - IoDetachDevice
-  - IoInitializeRemoveLockEx
-  - IoOpenDeviceRegistryKey
-  - PoSetPowerState
-  - ZwClose
-  - ZwCreateKey
-  - ZwOpenKey
-  - ZwQueryValueKey
-  - ZwSetValueKey
-  - swprintf
-  - ExFreePool
-  - atoi
-  - memcpy
-  - IoAcquireRemoveLockEx
-  - IoReleaseRemoveLockEx
-  - IoReleaseRemoveLockAndWaitEx
-  - IoGetDeviceProperty
-  - ObfReferenceObject
-  - ZwCreateFile
-  - ZwReadFile
-  - memset
-  - KeDelayExecutionThread
-  - IoAllocateIrp
-  - IoBuildSynchronousFsdRequest
-  - IoFreeIrp
-  - IoGetAttachedDeviceReference
-  - ObfDereferenceObject
-  - _allmul
-  - ExQueueWorkItem
-  - PoRequestPowerIrp
-  - PoCallDriver
-  - PoStartNextPowerIrp
-  - IoWMIRegistrationControl
-  - ExAllocatePoolWithTag
-  - ExAllocatePool
-  - KeWaitForSingleObject
-  - KeSetEvent
-  - KeInitializeEvent
-  - WRITE_REGISTER_BUFFER_UCHAR
-  - READ_REGISTER_BUFFER_ULONG
-  - RtlFreeUnicodeString
-  - RtlAppendUnicodeToString
-  - RtlCopyUnicodeString
-  - _snwprintf
-  - RtlInitUnicodeString
-  - KfAcquireSpinLock
-  - READ_PORT_ULONG
-  - KeStallExecutionProcessor
-  - KeGetCurrentIrql
-  - KfReleaseSpinLock
-  - READ_PORT_UCHAR
-  - WRITE_PORT_ULONG
-  - WRITE_PORT_UCHAR
-  - WmiCompleteRequest
-  - WmiSystemControl
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
-        EV Root CA
-      ValidFrom: '2011-04-15 19:45:33'
-      ValidTo: '2021-04-15 19:55:33'
-      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 61204db4000000000027
-      Version: 3
-      TBS:
-        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
-        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
-        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
-        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: ??=TW, ??=Private Organization, serialNumber=80333472, C=TW, L=Zhubei
-        City, O=Feature Integration Technology Inc., CN=Feature Integration Technology
-        Inc.
-      ValidFrom: '2020-05-18 00:00:00'
-      ValidTo: '2023-07-07 12:00:00'
-      Signature: 99ee78ec6e1fe71d32ee9a363441763f18bd1d43f94602e40e5fcd88db4081320c546941635210dd77ab1cc463e78155fbf6e46e18c9e835830a711d4deda38cf42a149d011bbbc065cf48bf511d759bfddd6424c3305706b688448f3cbc94ed432b92d6f0af70c9d8cbb9c3805fef1e409b3994bf7d11b9e0d2890fb8b9aa10e58a7cf5777851122293f5f4514797ba2d4416fe058ece0a42d2eadf871a57406e89990f237beb06a99989320b8898992ae21b50c8c71d535013636e66a22268613c32d8ca64fcf610f4e35f59b5e5935243f6eaf1503b38bc54194b244828a55ad3b5d23fc0912c568e81d166b5fee1e8823614c2fc14ae080da6ae347b33bb
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 03829816b04a1318528ff1c4cc820cbe
-      Version: 3
-      TBS:
-        MD5: 52811f961a802901aa7ba924b71f9ca8
-        SHA1: 36cfa3cd654e77c4c2dff091b4761a49bc852087
-        SHA256: 857e282813a570fead4ebce75d19f74ef2437ddc73253e9361a99cdb78b8d06a
-        SHA384: af17ec816c8fed617099707c53f28891cd0cd1794f070261d5bf76fcc32c61f82a4a4bc69cab170829f082712e035d21
-    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
-        CA (SHA2)
-      ValidFrom: '2012-04-18 12:00:00'
-      ValidTo: '2027-04-18 12:00:00'
-      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
-      Version: 3
-      TBS:
-        MD5: 83f5de89f641d0fbf60248e10a7b9534
-        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
-        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
-        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
-    Signer:
-    - SerialNumber: 03829816b04a1318528ff1c4cc820cbe
-      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
-        CA (SHA2)
-      Version: 1
-  LoadsDespiteHVCI: 'FALSE'
-- Company: Fintek Corp.
-  Date: ''
-  Description: Fintek Pcie2Uart Adapter
-  FileVersion: 1, 0, 0, 0
-  Filename: ''
-  MD5: 9fdcd543574a712a80d62da8bfd8331c
-  MachineType: I386
-  OriginalFilename: FPCIE2COM.sys
-  Product: Fintek Corp. Fintek Pcie2Uart
-  ProductVersion: 1, 0, 0, 0
-  Publisher: ''
-  SHA1: a0c7c913d7b5724a46581b6e00dd72c26c37794d
-  SHA256: b1920889466cd5054e3ab6433a618e76c6671c3e806af8b3084c77c0e7648cbe
-  Signature: ''
-  Imphash: ecf8495ba751a7e38d6be4c5c80f2bef
-  Authentihash:
-    MD5: fb1ece9e1203b6e2edd8a86e6c26f912
-    SHA1: b86c9e4c3d4f1e6be76f0a35351416854dd3f180
-    SHA256: 3f36bc2327a34da59c59e3fd4cb920a26f2db1c6a5f8eb17b00dc6e2a4ff71dc
-  RichPEHeaderHash:
-    MD5: 01a6cd8ec98b1707ae77683d666fc4eb
-    SHA1: 487f1824788f902cf5cf0bca4df1ecdfca9d582a
-    SHA256: b9ae362e9dd61922ababdaadcd28fad80b4a2056db587765b288e4540481aad4
-  Sections:
-    .text:
-      Entropy: 6.194411471241169
-      Virtual Size: '0x388d'
-    .rdata:
-      Entropy: 4.9515326941403
-      Virtual Size: '0x1c9'
-    .data:
-      Entropy: 3.2192145041934057
-      Virtual Size: '0x238'
-    PAGE:
-      Entropy: 6.082627566879683
-      Virtual Size: '0x174c'
-    INIT:
-      Entropy: 5.4251827355770565
-      Virtual Size: '0x6ce'
-    .rsrc:
-      Entropy: 5.793269376326418
-      Virtual Size: '0x808'
-    .reloc:
-      Entropy: 5.998696043406143
-      Virtual Size: '0x3fc'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-12-10 18:49:12'
-  InternalName: ''
-  Copyright: Copyright @ Fintek Corp. 2002-2013
-  Imports:
-  - ntoskrnl.exe
-  - HAL.DLL
-  - WMILIB.SYS
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - RtlInitUnicodeString
-  - _snwprintf
-  - InterlockedIncrement
-  - MmUnmapIoSpace
-  - WRITE_REGISTER_BUFFER_UCHAR
-  - MmMapIoSpace
-  - READ_REGISTER_BUFFER_ULONG
-  - IoCreateDevice
-  - IoInitializeRemoveLockEx
-  - KeSetEvent
-  - ExAllocatePoolWithTag
-  - RtlCopyUnicodeString
-  - ExFreePool
-  - ZwQueryValueKey
-  - ExAllocatePool
-  - memcpy
-  - ZwSetValueKey
-  - RtlAppendUnicodeToString
-  - ExFreePoolWithTag
-  - ZwClose
-  - ZwOpenKey
-  - IoAttachDeviceToDeviceStack
-  - swprintf
-  - atoi
-  - IoOpenDeviceRegistryKey
-  - PoSetPowerState
-  - IoCreateSymbolicLink
-  - KeWaitForSingleObject
-  - IofCallDriver
-  - KeInitializeEvent
-  - ObfReferenceObject
-  - IoReleaseRemoveLockAndWaitEx
-  - IoReleaseRemoveLockEx
-  - IoAcquireRemoveLockEx
-  - IoDeleteSymbolicLink
-  - IoDetachDevice
-  - memset
-  - IoFreeIrp
-  - ObfDereferenceObject
-  - IoAllocateIrp
-  - IoGetAttachedDeviceReference
-  - InterlockedDecrement
-  - IoBuildSynchronousFsdRequest
-  - PoCallDriver
-  - PoStartNextPowerIrp
-  - PoRequestPowerIrp
-  - ExQueueWorkItem
-  - IoWMIRegistrationControl
-  - KeTickCount
-  - KeBugCheckEx
-  - IoDeleteDevice
-  - RtlFreeUnicodeString
-  - IoIsWdmVersionAvailable
-  - IofCompleteRequest
-  - KfReleaseSpinLock
-  - READ_PORT_UCHAR
-  - KeGetCurrentIrql
-  - KfAcquireSpinLock
-  - WRITE_PORT_UCHAR
-  - READ_PORT_ULONG
-  - WRITE_PORT_ULONG
-  - WmiSystemControl
-  - WmiCompleteRequest
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
-        , G2
-      ValidFrom: '2012-12-21 00:00:00'
-      ValidTo: '2020-12-30 23:59:59'
-      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
-      Version: 3
-      TBS:
-        MD5: d0785ad36e427c92b19f6826ab1e8020
-        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
-        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
-        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
-        , G4
-      ValidFrom: '2012-10-18 00:00:00'
-      ValidTo: '2020-12-29 23:59:59'
-      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
-      Version: 3
-      TBS:
-        MD5: e9d38360b914c8863f6cba3ee58764d3
-        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
-        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
-        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
-    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
-        Class 3 Extended Validation Code Signing CA , G2
-      ValidFrom: '2014-03-04 00:00:00'
-      ValidTo: '2024-03-03 23:59:59'
-      Signature: 3f5b19f3fa13d575382a5aee9f5aa04ca91dc5cc94eede15fef5106ea41ba56483541858c40b28a185c34e74e5ff897cfed5ed3cba719f5602268f162a88feb0a32722ce4be2388e00a63a865f9de53ea8de644941744121fd07c88417da1d653082cb264f39d60427a481b14b49c3238b7e02321827b7ab0bf31872b6a4ee67066f38a6588de0f17e5da460c6a8e5505fe0e8bae28f9958b6b5a0a876f1a2f11c8841727e52979b0a36998d50f701eb3ce7f0226ae5358c63368a1ab1d967665f971aefa8209df02fba6cced9948500f158f17dc97c22b5075d02c6e60bbfab9393ff27188e33367e5734f1c3af04c184f156b3e8878336f8d30a31dc6e2c6d
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 191a32cb759c97b8cfac118dd5127f49
-      Version: 3
-      TBS:
-        MD5: 788b61bd26da89253179e3de2cdb527f
-        SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
-        SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
-        SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
-    - Subject: ??=TW, ??=Private Organization, serialNumber=80333472, C=TW, ST=Hsinchu,
-        L=Chupei City, O=Feature Integration Technology Inc, CN=Feature Integration
-        Technology Inc
-      ValidFrom: '2015-05-14 00:00:00'
-      ValidTo: '2017-05-13 23:59:59'
-      Signature: 297893e8612cdccf2bc5ff2cb810dc2a868aa1675d1598bb6a27f22010570e39e89167285c8dbba0abfeaa41a4329e1f21e62ef9a15bc94954e259e0292d9315670097fe51d0778cb97dbb990e7bcb9cfd894bf7e4289e8ec8f3fe1882d2cd1a8261a494537202c3c53e82cc96c3eddc00e2e611c21a9ad7564c13c72eef27d3b479b031a64d8afc84a3bdb76d85fa40f6bdf3f307733bcfee0e9d23e423a97162317cdff0f47e1a083c3d145ad574c54ef4e701d7e868da22b2e16149dc53a9451ce9cd46dc5e0a7b036d04fd73f601406b722fde98fe4f2acfadc670feb885f7e57d0d9e376cd967deb3998b966a57f79f5c49a68920c52ed74368379c1ad2
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 1b0403aaa7d4b40ea3c691a11217f378
-      Version: 3
-      TBS:
-        MD5: b0d42f7686780a7cbd4e531dd96d18fb
-        SHA1: e0d0c6dd0804554232caee87297decab44169257
-        SHA256: 804da934d7c2508775d1c74452b0305f76af5bc4139ca251af3ce55b4be41651
-        SHA384: e761d349002b37019e26ae9dbae64e1c055fe833e57984491987ec0b1e64dc79abaf150cbf1db76a41c192b1c98f46e4
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
-        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
-        Authority , G5
-      ValidFrom: '2011-02-22 19:25:17'
-      ValidTo: '2021-02-22 19:35:17'
-      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 611993e400000000001c
-      Version: 3
-      TBS:
-        MD5: 78a717e082dcc1cda3458d917e677d14
-        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
-        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
-        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
-    Signer:
-    - SerialNumber: 1b0403aaa7d4b40ea3c691a11217f378
-      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
-        Class 3 Extended Validation Code Signing CA , G2
-      Version: 1
-  LoadsDespiteHVCI: 'FALSE'
-- Company: Feature Integration Technology Inc.
-  Date: ''
-  Description: FINTEK PCIECOM Adapter
-  FileVersion: 22,12,5,0
-  Filename: ''
-  MD5: 05369fa594a033e48b7921018b3263fb
-  MachineType: AMD64
-  OriginalFilename: FPCIE2COM.sys
-  Product: 'FINTEK PCIECOM '
-  ProductVersion: 22,12,5,0
-  Publisher: ''
-  SHA1: 340ce5d8859f923222bea5917f40c4259cce1bbc
-  SHA256: ebf0e56a1941e3a6583aab4a735f1b04d4750228c18666925945ed9d7c9007e1
-  Signature: ''
-  Imphash: c91146dfe120f6e8fbed2150d9e020ca
-  Authentihash:
-    MD5: 34d9b3d02be97274e320bc946b0084cb
-    SHA1: 833a2dd7ac07ea34332173a2ca402d062af3a7b1
-    SHA256: 52478f3ddd3d0b9eb098e66049d132cc5c7e05720bfc78b6550ce5a40306d993
-  RichPEHeaderHash:
-    MD5: c8768793371ae4f9181875f108ee5fa2
-    SHA1: ebb852ab695113b1d914e8378b34e3a80a43f2c4
-    SHA256: 99ba56cb0b2be4c616466a63268242d16f30843d141becd8f0880b6865f14dab
-  Sections:
-    .text:
-      Entropy: 6.189965072283548
-      Virtual Size: '0x4cc1'
-    .rdata:
-      Entropy: 4.48017109840031
-      Virtual Size: '0xa28'
-    .data:
-      Entropy: 2.3499275679722134
-      Virtual Size: '0x330'
-    .pdata:
-      Entropy: 4.041740299789936
-      Virtual Size: '0x2c4'
-    PAGE:
-      Entropy: 6.1847773888411215
-      Virtual Size: '0x2c28'
-    INIT:
-      Entropy: 5.118835844237064
-      Virtual Size: '0x74e'
-    .rsrc:
-      Entropy: 5.949569622403056
-      Virtual Size: '0x790'
-    .reloc:
-      Entropy: 4.431474633150634
-      Virtual Size: '0xa4'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-12-05 01:30:48'
-  InternalName: ''
-  Copyright: Copyright (C) 2022 Feature Integration Technology Inc.
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  - WMILIB.SYS
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - KeSetEvent
-  - KeWaitForSingleObject
-  - KeAcquireSpinLockRaiseToDpc
-  - KeReleaseSpinLock
-  - ExAllocatePool
-  - ExAllocatePoolWithTag
-  - ExFreePool
-  - ExFreePoolWithTag
-  - MmMapIoSpace
-  - MmUnmapIoSpace
-  - IoAttachDeviceToDeviceStack
-  - IofCallDriver
-  - IofCompleteRequest
-  - IoCreateDevice
-  - IoIsWdmVersionAvailable
-  - IoCreateSymbolicLink
-  - IoDeleteDevice
-  - IoDeleteSymbolicLink
-  - IoDetachDevice
-  - IoInitializeRemoveLockEx
-  - IoOpenDeviceRegistryKey
-  - PoSetPowerState
-  - ZwClose
-  - ZwCreateKey
-  - KeInitializeEvent
-  - ZwQueryValueKey
-  - ZwSetValueKey
-  - swprintf
-  - _snwprintf
-  - atoi
-  - KeGetCurrentIrql
-  - IoAcquireRemoveLockEx
-  - IoReleaseRemoveLockEx
-  - IoReleaseRemoveLockAndWaitEx
-  - IoGetDeviceProperty
-  - ObfReferenceObject
-  - ZwCreateFile
-  - ZwReadFile
-  - KeDelayExecutionThread
-  - IoAllocateIrp
-  - IoBuildSynchronousFsdRequest
-  - IoFreeIrp
-  - IoGetAttachedDeviceReference
-  - ObfDereferenceObject
-  - ExQueueWorkItem
-  - PoRequestPowerIrp
-  - PoCallDriver
-  - PoStartNextPowerIrp
-  - IoWMIRegistrationControl
-  - RtlFreeUnicodeString
-  - RtlAppendUnicodeToString
-  - RtlCopyUnicodeString
-  - ZwOpenKey
-  - RtlInitUnicodeString
-  - KeStallExecutionProcessor
-  - WmiSystemControl
-  - WmiCompleteRequest
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
-        EV Root CA
-      ValidFrom: '2011-04-15 19:45:33'
-      ValidTo: '2021-04-15 19:55:33'
-      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 61204db4000000000027
-      Version: 3
-      TBS:
-        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
-        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
-        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
-        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-    - Subject: ??=TW, ??=Private Organization, serialNumber=80333472, C=TW, L=Zhubei
-        City, O=Feature Integration Technology Inc., CN=Feature Integration Technology
-        Inc.
-      ValidFrom: '2020-05-18 00:00:00'
-      ValidTo: '2023-07-07 12:00:00'
-      Signature: 99ee78ec6e1fe71d32ee9a363441763f18bd1d43f94602e40e5fcd88db4081320c546941635210dd77ab1cc463e78155fbf6e46e18c9e835830a711d4deda38cf42a149d011bbbc065cf48bf511d759bfddd6424c3305706b688448f3cbc94ed432b92d6f0af70c9d8cbb9c3805fef1e409b3994bf7d11b9e0d2890fb8b9aa10e58a7cf5777851122293f5f4514797ba2d4416fe058ece0a42d2eadf871a57406e89990f237beb06a99989320b8898992ae21b50c8c71d535013636e66a22268613c32d8ca64fcf610f4e35f59b5e5935243f6eaf1503b38bc54194b244828a55ad3b5d23fc0912c568e81d166b5fee1e8823614c2fc14ae080da6ae347b33bb
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 03829816b04a1318528ff1c4cc820cbe
-      Version: 3
-      TBS:
-        MD5: 52811f961a802901aa7ba924b71f9ca8
-        SHA1: 36cfa3cd654e77c4c2dff091b4761a49bc852087
-        SHA256: 857e282813a570fead4ebce75d19f74ef2437ddc73253e9361a99cdb78b8d06a
-        SHA384: af17ec816c8fed617099707c53f28891cd0cd1794f070261d5bf76fcc32c61f82a4a4bc69cab170829f082712e035d21
-    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
-        CA (SHA2)
-      ValidFrom: '2012-04-18 12:00:00'
-      ValidTo: '2027-04-18 12:00:00'
-      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
-      Version: 3
-      TBS:
-        MD5: 83f5de89f641d0fbf60248e10a7b9534
-        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
-        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
-        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
-    Signer:
-    - SerialNumber: 03829816b04a1318528ff1c4cc820cbe
-      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
-        CA (SHA2)
-      Version: 1
-  LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Tags:
 - FPCIE2COM.sys
 Verified: 'TRUE'
+Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+    Command: sc.exe create FPCIE2COMsys binPath= C:\windows\temp\FPCIE2COMsys.sys
+        type=kernel && sc.exe start FPCIE2COMsys
+    Description: The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique
+        vulnerable drivers (237 file hashes) accepting firmware access. Six allow
+        kernel memory access. All give full control of the devices to non-admin users.
+        By exploiting the vulnerable drivers, an attacker without the system privilege
+        may erase/alter firmware, and/or elevate privileges. As of the time of writing
+        in October 2023, the filenames of the vulnerable drivers have not been made
+        public until now.
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+Detection:
+-   type: yara_signature
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+-   type: sigma_hash
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+-   type: sigma_names
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+-   type: sysmon_hash_detect
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+-   type: sysmon_hash_block
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
+KnownVulnerableSamples:
+-   Company: Fintek Corp.
+    Date: ''
+    Description: Fintek Pcie2Uart Adapter
+    FileVersion: 1, 0, 0, 0
+    Filename: ''
+    MD5: c552dae8eaadd708a38704e8d62cf64d
+    MachineType: I386
+    OriginalFilename: FPCIE2COM.sys
+    Product: Fintek Corp. Fintek Pcie2Uart
+    ProductVersion: 1, 0, 0, 0
+    Publisher: ''
+    SHA1: 59b0b8e3478f3d21213a8afda84181c4ed0a79a7
+    SHA256: 17942865680bd3d6e6633c90cc4bd692ae0951a8589dbe103c1e293b3067344d
+    Signature: ''
+    Imphash: 3ca448454c33a5c72ad5e774de47930a
+    Authentihash:
+        MD5: 3145cb38dd53aca44d7e050667782858
+        SHA1: 532b0d04fe8f2302932988a4161f7fb327d46e46
+        SHA256: 65cf1a886b3e3ec8070bde31cb8e254cd623de1e8c7dd71248b84e6de77a08e6
+    RichPEHeaderHash:
+        MD5: 560c4546e7cd8f033e7a83b8263b0b78
+        SHA1: 268cae1f912917f8f8c247af338a1975395eef9f
+        SHA256: 6a61fd1183e0e57a3475b5b0ee2187c789b2fc3faa2ca60a022aac44f744395e
+    Sections:
+        .text:
+            Entropy: 6.194550115167728
+            Virtual Size: '0x388d'
+        .rdata:
+            Entropy: 4.949802156051865
+            Virtual Size: '0x1c8'
+        .data:
+            Entropy: 3.2192145041934057
+            Virtual Size: '0x238'
+        PAGE:
+            Entropy: 6.0803456106377975
+            Virtual Size: '0x174c'
+        INIT:
+            Entropy: 5.411740050770134
+            Virtual Size: '0x6ce'
+        .rsrc:
+            Entropy: 5.793269376326418
+            Virtual Size: '0x808'
+        .reloc:
+            Entropy: 5.998696043406143
+            Virtual Size: '0x3fc'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2015-12-10 18:49:33'
+    InternalName: ''
+    Copyright: Copyright @ Fintek Corp. 2002-2013
+    Imports:
+    - NTOSKRNL.EXE
+    - HAL.DLL
+    - WMILIB.SYS
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - ExAllocatePoolWithTag
+    - IoInitializeRemoveLockEx
+    - IoCreateDevice
+    - RtlInitUnicodeString
+    - _snwprintf
+    - InterlockedIncrement
+    - MmUnmapIoSpace
+    - WRITE_REGISTER_BUFFER_UCHAR
+    - MmMapIoSpace
+    - READ_REGISTER_BUFFER_ULONG
+    - RtlCopyUnicodeString
+    - IoAttachDeviceToDeviceStack
+    - KeSetEvent
+    - PoSetPowerState
+    - IoCreateSymbolicLink
+    - IoDeleteSymbolicLink
+    - ZwQueryValueKey
+    - ExAllocatePool
+    - memcpy
+    - ZwSetValueKey
+    - RtlAppendUnicodeToString
+    - ExFreePoolWithTag
+    - ZwClose
+    - ZwOpenKey
+    - IoIsWdmVersionAvailable
+    - swprintf
+    - atoi
+    - IoOpenDeviceRegistryKey
+    - IoDetachDevice
+    - IoDeleteDevice
+    - KeWaitForSingleObject
+    - IofCallDriver
+    - KeInitializeEvent
+    - ObfReferenceObject
+    - IoReleaseRemoveLockAndWaitEx
+    - IoReleaseRemoveLockEx
+    - IoAcquireRemoveLockEx
+    - RtlFreeUnicodeString
+    - ExFreePool
+    - memset
+    - IoFreeIrp
+    - ObfDereferenceObject
+    - IoAllocateIrp
+    - IoGetAttachedDeviceReference
+    - InterlockedDecrement
+    - IoBuildSynchronousFsdRequest
+    - PoCallDriver
+    - PoStartNextPowerIrp
+    - PoRequestPowerIrp
+    - ExQueueWorkItem
+    - IoWMIRegistrationControl
+    - KeTickCount
+    - KeBugCheckEx
+    - IofCompleteRequest
+    - KfAcquireSpinLock
+    - KfReleaseSpinLock
+    - KeGetCurrentIrql
+    - WRITE_PORT_ULONG
+    - READ_PORT_ULONG
+    - READ_PORT_UCHAR
+    - WRITE_PORT_UCHAR
+    - WmiCompleteRequest
+    - WmiSystemControl
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                CA , G2
+            ValidFrom: '2012-12-21 00:00:00'
+            ValidTo: '2020-12-30 23:59:59'
+            Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+            Version: 3
+            TBS:
+                MD5: d0785ad36e427c92b19f6826ab1e8020
+                SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+                SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+                SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                Signer , G4
+            ValidFrom: '2012-10-18 00:00:00'
+            ValidTo: '2020-12-29 23:59:59'
+            Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+            Version: 3
+            TBS:
+                MD5: e9d38360b914c8863f6cba3ee58764d3
+                SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+                SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+                SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+        -   Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+                Class 3 Extended Validation Code Signing CA , G2
+            ValidFrom: '2014-03-04 00:00:00'
+            ValidTo: '2024-03-03 23:59:59'
+            Signature: 3f5b19f3fa13d575382a5aee9f5aa04ca91dc5cc94eede15fef5106ea41ba56483541858c40b28a185c34e74e5ff897cfed5ed3cba719f5602268f162a88feb0a32722ce4be2388e00a63a865f9de53ea8de644941744121fd07c88417da1d653082cb264f39d60427a481b14b49c3238b7e02321827b7ab0bf31872b6a4ee67066f38a6588de0f17e5da460c6a8e5505fe0e8bae28f9958b6b5a0a876f1a2f11c8841727e52979b0a36998d50f701eb3ce7f0226ae5358c63368a1ab1d967665f971aefa8209df02fba6cced9948500f158f17dc97c22b5075d02c6e60bbfab9393ff27188e33367e5734f1c3af04c184f156b3e8878336f8d30a31dc6e2c6d
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 191a32cb759c97b8cfac118dd5127f49
+            Version: 3
+            TBS:
+                MD5: 788b61bd26da89253179e3de2cdb527f
+                SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
+                SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
+                SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
+        -   Subject: ??=TW, ??=Private Organization, serialNumber=80333472, C=TW,
+                ST=Hsinchu, L=Chupei City, O=Feature Integration Technology Inc, CN=Feature
+                Integration Technology Inc
+            ValidFrom: '2015-05-14 00:00:00'
+            ValidTo: '2017-05-13 23:59:59'
+            Signature: 297893e8612cdccf2bc5ff2cb810dc2a868aa1675d1598bb6a27f22010570e39e89167285c8dbba0abfeaa41a4329e1f21e62ef9a15bc94954e259e0292d9315670097fe51d0778cb97dbb990e7bcb9cfd894bf7e4289e8ec8f3fe1882d2cd1a8261a494537202c3c53e82cc96c3eddc00e2e611c21a9ad7564c13c72eef27d3b479b031a64d8afc84a3bdb76d85fa40f6bdf3f307733bcfee0e9d23e423a97162317cdff0f47e1a083c3d145ad574c54ef4e701d7e868da22b2e16149dc53a9451ce9cd46dc5e0a7b036d04fd73f601406b722fde98fe4f2acfadc670feb885f7e57d0d9e376cd967deb3998b966a57f79f5c49a68920c52ed74368379c1ad2
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 1b0403aaa7d4b40ea3c691a11217f378
+            Version: 3
+            TBS:
+                MD5: b0d42f7686780a7cbd4e531dd96d18fb
+                SHA1: e0d0c6dd0804554232caee87297decab44169257
+                SHA256: 804da934d7c2508775d1c74452b0305f76af5bc4139ca251af3ce55b4be41651
+                SHA384: e761d349002b37019e26ae9dbae64e1c055fe833e57984491987ec0b1e64dc79abaf150cbf1db76a41c192b1c98f46e4
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006
+                VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public
+                Primary Certification Authority , G5
+            ValidFrom: '2011-02-22 19:25:17'
+            ValidTo: '2021-02-22 19:35:17'
+            Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 611993e400000000001c
+            Version: 3
+            TBS:
+                MD5: 78a717e082dcc1cda3458d917e677d14
+                SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+                SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+                SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+        Signer:
+        -   SerialNumber: 1b0403aaa7d4b40ea3c691a11217f378
+            Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+                Class 3 Extended Validation Code Signing CA , G2
+            Version: 1
+    LoadsDespiteHVCI: 'FALSE'
+-   Company: Fintek Corp.
+    Date: ''
+    Description: Fintek Pcie2Uart Adapter
+    FileVersion: 1, 0, 0, 0
+    Filename: ''
+    MD5: ecccbf1e7c727f923c9d709707800e6c
+    MachineType: AMD64
+    OriginalFilename: FPCIE2COM.sys
+    Product: Fintek Corp. Fintek Pcie2Uart
+    ProductVersion: 1, 0, 0, 0
+    Publisher: ''
+    SHA1: cfcecf6207d16aeb0af29aac8a4a2f104483018e
+    SHA256: 32bd0edb9daa60175b1dc054f30e28e8dbfa293a32e6c86bfd06bc046eaa2f9e
+    Signature: ''
+    Imphash: 8d616e68080def2200312de80392efa7
+    Authentihash:
+        MD5: f31b7135682f2657dbe7dfffd065ff53
+        SHA1: bcb3a8484cf837a1874c5eca94d05fa4c295d9ee
+        SHA256: 4ea2a3a6edb3c772f9d358a720f9106260ef22d339bd3c7895e7b5cda03e424d
+    RichPEHeaderHash:
+        MD5: 0131d804ea86a1a0f91c701b4b77854f
+        SHA1: fa3de710100580bd027b4778c2788eb34b078ac5
+        SHA256: 584d6891aaca937da93db4d3125bbb436fbfc5364afae8e399711736429183ce
+    Sections:
+        .text:
+            Entropy: 6.079455671694147
+            Virtual Size: '0x4621'
+        .rdata:
+            Entropy: 4.707304057250705
+            Virtual Size: '0x4c4'
+        .data:
+            Entropy: 1.9479545968141223
+            Virtual Size: '0x464'
+        .pdata:
+            Entropy: 4.154780308135963
+            Virtual Size: '0x2e8'
+        PAGE:
+            Entropy: 5.997687300254138
+            Virtual Size: '0x1ca8'
+        INIT:
+            Entropy: 4.925204557389073
+            Virtual Size: '0x6a2'
+        .rsrc:
+            Entropy: 5.796000589033034
+            Virtual Size: '0x808'
+        .reloc:
+            Entropy: 3.4303212434984744
+            Virtual Size: '0xd6'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2015-12-10 18:49:25'
+    InternalName: ''
+    Copyright: Copyright @ Fintek Corp. 2002-2013
+    Imports:
+    - ntoskrnl.exe
+    - WMILIB.SYS
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - IoDeleteDevice
+    - KeSetEvent
+    - swprintf
+    - RtlAppendUnicodeToString
+    - KeInitializeEvent
+    - atoi
+    - ZwSetValueKey
+    - KeReleaseSpinLock
+    - IoDetachDevice
+    - MmUnmapIoSpace
+    - PoSetPowerState
+    - RtlFreeUnicodeString
+    - ZwQueryValueKey
+    - ExAllocatePool
+    - ExFreePool
+    - MmMapIoSpace
+    - ZwClose
+    - IofCompleteRequest
+    - KeWaitForSingleObject
+    - IoAttachDeviceToDeviceStack
+    - IoIsWdmVersionAvailable
+    - IoCreateSymbolicLink
+    - RtlInitUnicodeString
+    - IoInitializeRemoveLockEx
+    - IoOpenDeviceRegistryKey
+    - IoCreateDevice
+    - IofCallDriver
+    - ZwOpenKey
+    - KeAcquireSpinLockRaiseToDpc
+    - IoAcquireRemoveLockEx
+    - IoReleaseRemoveLockEx
+    - IoReleaseRemoveLockAndWaitEx
+    - ObfReferenceObject
+    - _snwprintf
+    - IoBuildSynchronousFsdRequest
+    - IoFreeIrp
+    - IoGetAttachedDeviceReference
+    - IoAllocateIrp
+    - ObfDereferenceObject
+    - ExQueueWorkItem
+    - PoRequestPowerIrp
+    - PoStartNextPowerIrp
+    - PoCallDriver
+    - IoWMIRegistrationControl
+    - KeBugCheckEx
+    - ExFreePoolWithTag
+    - IoDeleteSymbolicLink
+    - RtlCopyUnicodeString
+    - ExAllocatePoolWithTag
+    - WmiSystemControl
+    - WmiCompleteRequest
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                CA , G2
+            ValidFrom: '2012-12-21 00:00:00'
+            ValidTo: '2020-12-30 23:59:59'
+            Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+            Version: 3
+            TBS:
+                MD5: d0785ad36e427c92b19f6826ab1e8020
+                SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+                SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+                SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                Signer , G4
+            ValidFrom: '2012-10-18 00:00:00'
+            ValidTo: '2020-12-29 23:59:59'
+            Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+            Version: 3
+            TBS:
+                MD5: e9d38360b914c8863f6cba3ee58764d3
+                SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+                SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+                SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+        -   Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+                Class 3 Extended Validation Code Signing CA , G2
+            ValidFrom: '2014-03-04 00:00:00'
+            ValidTo: '2024-03-03 23:59:59'
+            Signature: 3f5b19f3fa13d575382a5aee9f5aa04ca91dc5cc94eede15fef5106ea41ba56483541858c40b28a185c34e74e5ff897cfed5ed3cba719f5602268f162a88feb0a32722ce4be2388e00a63a865f9de53ea8de644941744121fd07c88417da1d653082cb264f39d60427a481b14b49c3238b7e02321827b7ab0bf31872b6a4ee67066f38a6588de0f17e5da460c6a8e5505fe0e8bae28f9958b6b5a0a876f1a2f11c8841727e52979b0a36998d50f701eb3ce7f0226ae5358c63368a1ab1d967665f971aefa8209df02fba6cced9948500f158f17dc97c22b5075d02c6e60bbfab9393ff27188e33367e5734f1c3af04c184f156b3e8878336f8d30a31dc6e2c6d
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 191a32cb759c97b8cfac118dd5127f49
+            Version: 3
+            TBS:
+                MD5: 788b61bd26da89253179e3de2cdb527f
+                SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
+                SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
+                SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
+        -   Subject: ??=TW, ??=Private Organization, serialNumber=80333472, C=TW,
+                ST=Hsinchu, L=Chupei City, O=Feature Integration Technology Inc, CN=Feature
+                Integration Technology Inc
+            ValidFrom: '2015-05-14 00:00:00'
+            ValidTo: '2017-05-13 23:59:59'
+            Signature: 297893e8612cdccf2bc5ff2cb810dc2a868aa1675d1598bb6a27f22010570e39e89167285c8dbba0abfeaa41a4329e1f21e62ef9a15bc94954e259e0292d9315670097fe51d0778cb97dbb990e7bcb9cfd894bf7e4289e8ec8f3fe1882d2cd1a8261a494537202c3c53e82cc96c3eddc00e2e611c21a9ad7564c13c72eef27d3b479b031a64d8afc84a3bdb76d85fa40f6bdf3f307733bcfee0e9d23e423a97162317cdff0f47e1a083c3d145ad574c54ef4e701d7e868da22b2e16149dc53a9451ce9cd46dc5e0a7b036d04fd73f601406b722fde98fe4f2acfadc670feb885f7e57d0d9e376cd967deb3998b966a57f79f5c49a68920c52ed74368379c1ad2
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 1b0403aaa7d4b40ea3c691a11217f378
+            Version: 3
+            TBS:
+                MD5: b0d42f7686780a7cbd4e531dd96d18fb
+                SHA1: e0d0c6dd0804554232caee87297decab44169257
+                SHA256: 804da934d7c2508775d1c74452b0305f76af5bc4139ca251af3ce55b4be41651
+                SHA384: e761d349002b37019e26ae9dbae64e1c055fe833e57984491987ec0b1e64dc79abaf150cbf1db76a41c192b1c98f46e4
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006
+                VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public
+                Primary Certification Authority , G5
+            ValidFrom: '2011-02-22 19:25:17'
+            ValidTo: '2021-02-22 19:35:17'
+            Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 611993e400000000001c
+            Version: 3
+            TBS:
+                MD5: 78a717e082dcc1cda3458d917e677d14
+                SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+                SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+                SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+        Signer:
+        -   SerialNumber: 1b0403aaa7d4b40ea3c691a11217f378
+            Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+                Class 3 Extended Validation Code Signing CA , G2
+            Version: 1
+    LoadsDespiteHVCI: 'FALSE'
+-   Company: Feature Integration Technology Inc.
+    Date: ''
+    Description: FINTEK PCIECOM Adapter
+    FileVersion: 22,12,5,0
+    Filename: ''
+    MD5: cafbf85b902f189ba35f3d7823aad195
+    MachineType: I386
+    OriginalFilename: FPCIE2COM.sys
+    Product: 'FINTEK PCIECOM '
+    ProductVersion: 22,12,5,0
+    Publisher: ''
+    SHA1: f70eb454c0e9ea67a18c625faf7a666665801035
+    SHA256: 81fbc9d02ef9e05602ea9c0804d423043d0ea5a06393c7ece3be03459f76a41d
+    Signature: ''
+    Imphash: 799c9c020c6fcfd11a4172bc861f74af
+    Authentihash:
+        MD5: 6c193ad2e2b576f5c410cc4cf75475c0
+        SHA1: 772d1324df82b2fcf33a86d96d1267854695c962
+        SHA256: 1970400679c3ae7000f1ba3e0f12c2d5443df7fbb8947cabe45c7ae977806efb
+    RichPEHeaderHash:
+        MD5: 4d2a279f87a57838bb49ad62fe981940
+        SHA1: a744f529856b0ea75953f2f6228b94cf46d9f0d9
+        SHA256: e603397d41c6d4244e3f05ab451c41f8cdb8e8bf891874d7ac9a52a60be8c25d
+    Sections:
+        .text:
+            Entropy: 6.204197473497571
+            Virtual Size: '0x3ecb'
+        .rdata:
+            Entropy: 4.364891658422532
+            Virtual Size: '0x508'
+        .data:
+            Entropy: 2.74269782750115
+            Virtual Size: '0x1ec'
+        PAGE:
+            Entropy: 6.1616664882521865
+            Virtual Size: '0x266c'
+        INIT:
+            Entropy: 5.520089305549897
+            Virtual Size: '0x6ee'
+        .rsrc:
+            Entropy: 5.949694402837037
+            Virtual Size: '0x790'
+        .reloc:
+            Entropy: 6.3808996505064695
+            Virtual Size: '0x420'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2022-12-05 01:30:27'
+    InternalName: ''
+    Copyright: Copyright (C) 2022 Feature Integration Technology Inc.
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    - WMILIB.SYS
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - ExFreePoolWithTag
+    - MmMapIoSpace
+    - MmUnmapIoSpace
+    - IoAttachDeviceToDeviceStack
+    - IofCallDriver
+    - IofCompleteRequest
+    - IoCreateDevice
+    - IoIsWdmVersionAvailable
+    - IoCreateSymbolicLink
+    - IoDeleteDevice
+    - IoDeleteSymbolicLink
+    - IoDetachDevice
+    - IoInitializeRemoveLockEx
+    - IoOpenDeviceRegistryKey
+    - PoSetPowerState
+    - ZwClose
+    - ZwCreateKey
+    - ZwOpenKey
+    - ZwQueryValueKey
+    - ZwSetValueKey
+    - swprintf
+    - ExFreePool
+    - atoi
+    - memcpy
+    - IoAcquireRemoveLockEx
+    - IoReleaseRemoveLockEx
+    - IoReleaseRemoveLockAndWaitEx
+    - IoGetDeviceProperty
+    - ObfReferenceObject
+    - ZwCreateFile
+    - ZwReadFile
+    - memset
+    - KeDelayExecutionThread
+    - IoAllocateIrp
+    - IoBuildSynchronousFsdRequest
+    - IoFreeIrp
+    - IoGetAttachedDeviceReference
+    - ObfDereferenceObject
+    - _allmul
+    - ExQueueWorkItem
+    - PoRequestPowerIrp
+    - PoCallDriver
+    - PoStartNextPowerIrp
+    - IoWMIRegistrationControl
+    - ExAllocatePoolWithTag
+    - ExAllocatePool
+    - KeWaitForSingleObject
+    - KeSetEvent
+    - KeInitializeEvent
+    - WRITE_REGISTER_BUFFER_UCHAR
+    - READ_REGISTER_BUFFER_ULONG
+    - RtlFreeUnicodeString
+    - RtlAppendUnicodeToString
+    - RtlCopyUnicodeString
+    - _snwprintf
+    - RtlInitUnicodeString
+    - KfAcquireSpinLock
+    - READ_PORT_ULONG
+    - KeStallExecutionProcessor
+    - KeGetCurrentIrql
+    - KfReleaseSpinLock
+    - READ_PORT_UCHAR
+    - WRITE_PORT_ULONG
+    - WRITE_PORT_UCHAR
+    - WmiCompleteRequest
+    - WmiSystemControl
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+                EV Root CA
+            ValidFrom: '2011-04-15 19:45:33'
+            ValidTo: '2021-04-15 19:55:33'
+            Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 61204db4000000000027
+            Version: 3
+            TBS:
+                MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+                SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+                SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+                SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+        -   Subject: ??=TW, ??=Private Organization, serialNumber=80333472, C=TW,
+                L=Zhubei City, O=Feature Integration Technology Inc., CN=Feature Integration
+                Technology Inc.
+            ValidFrom: '2020-05-18 00:00:00'
+            ValidTo: '2023-07-07 12:00:00'
+            Signature: 99ee78ec6e1fe71d32ee9a363441763f18bd1d43f94602e40e5fcd88db4081320c546941635210dd77ab1cc463e78155fbf6e46e18c9e835830a711d4deda38cf42a149d011bbbc065cf48bf511d759bfddd6424c3305706b688448f3cbc94ed432b92d6f0af70c9d8cbb9c3805fef1e409b3994bf7d11b9e0d2890fb8b9aa10e58a7cf5777851122293f5f4514797ba2d4416fe058ece0a42d2eadf871a57406e89990f237beb06a99989320b8898992ae21b50c8c71d535013636e66a22268613c32d8ca64fcf610f4e35f59b5e5935243f6eaf1503b38bc54194b244828a55ad3b5d23fc0912c568e81d166b5fee1e8823614c2fc14ae080da6ae347b33bb
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 03829816b04a1318528ff1c4cc820cbe
+            Version: 3
+            TBS:
+                MD5: 52811f961a802901aa7ba924b71f9ca8
+                SHA1: 36cfa3cd654e77c4c2dff091b4761a49bc852087
+                SHA256: 857e282813a570fead4ebce75d19f74ef2437ddc73253e9361a99cdb78b8d06a
+                SHA384: af17ec816c8fed617099707c53f28891cd0cd1794f070261d5bf76fcc32c61f82a4a4bc69cab170829f082712e035d21
+        -   Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code
+                Signing CA (SHA2)
+            ValidFrom: '2012-04-18 12:00:00'
+            ValidTo: '2027-04-18 12:00:00'
+            Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+            Version: 3
+            TBS:
+                MD5: 83f5de89f641d0fbf60248e10a7b9534
+                SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+                SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+                SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+        Signer:
+        -   SerialNumber: 03829816b04a1318528ff1c4cc820cbe
+            Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code
+                Signing CA (SHA2)
+            Version: 1
+    LoadsDespiteHVCI: 'FALSE'
+-   Company: Fintek Corp.
+    Date: ''
+    Description: Fintek Pcie2Uart Adapter
+    FileVersion: 1, 0, 0, 0
+    Filename: ''
+    MD5: 9fdcd543574a712a80d62da8bfd8331c
+    MachineType: I386
+    OriginalFilename: FPCIE2COM.sys
+    Product: Fintek Corp. Fintek Pcie2Uart
+    ProductVersion: 1, 0, 0, 0
+    Publisher: ''
+    SHA1: a0c7c913d7b5724a46581b6e00dd72c26c37794d
+    SHA256: b1920889466cd5054e3ab6433a618e76c6671c3e806af8b3084c77c0e7648cbe
+    Signature: ''
+    Imphash: ecf8495ba751a7e38d6be4c5c80f2bef
+    Authentihash:
+        MD5: fb1ece9e1203b6e2edd8a86e6c26f912
+        SHA1: b86c9e4c3d4f1e6be76f0a35351416854dd3f180
+        SHA256: 3f36bc2327a34da59c59e3fd4cb920a26f2db1c6a5f8eb17b00dc6e2a4ff71dc
+    RichPEHeaderHash:
+        MD5: 01a6cd8ec98b1707ae77683d666fc4eb
+        SHA1: 487f1824788f902cf5cf0bca4df1ecdfca9d582a
+        SHA256: b9ae362e9dd61922ababdaadcd28fad80b4a2056db587765b288e4540481aad4
+    Sections:
+        .text:
+            Entropy: 6.194411471241169
+            Virtual Size: '0x388d'
+        .rdata:
+            Entropy: 4.9515326941403
+            Virtual Size: '0x1c9'
+        .data:
+            Entropy: 3.2192145041934057
+            Virtual Size: '0x238'
+        PAGE:
+            Entropy: 6.082627566879683
+            Virtual Size: '0x174c'
+        INIT:
+            Entropy: 5.4251827355770565
+            Virtual Size: '0x6ce'
+        .rsrc:
+            Entropy: 5.793269376326418
+            Virtual Size: '0x808'
+        .reloc:
+            Entropy: 5.998696043406143
+            Virtual Size: '0x3fc'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2015-12-10 18:49:12'
+    InternalName: ''
+    Copyright: Copyright @ Fintek Corp. 2002-2013
+    Imports:
+    - ntoskrnl.exe
+    - HAL.DLL
+    - WMILIB.SYS
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - RtlInitUnicodeString
+    - _snwprintf
+    - InterlockedIncrement
+    - MmUnmapIoSpace
+    - WRITE_REGISTER_BUFFER_UCHAR
+    - MmMapIoSpace
+    - READ_REGISTER_BUFFER_ULONG
+    - IoCreateDevice
+    - IoInitializeRemoveLockEx
+    - KeSetEvent
+    - ExAllocatePoolWithTag
+    - RtlCopyUnicodeString
+    - ExFreePool
+    - ZwQueryValueKey
+    - ExAllocatePool
+    - memcpy
+    - ZwSetValueKey
+    - RtlAppendUnicodeToString
+    - ExFreePoolWithTag
+    - ZwClose
+    - ZwOpenKey
+    - IoAttachDeviceToDeviceStack
+    - swprintf
+    - atoi
+    - IoOpenDeviceRegistryKey
+    - PoSetPowerState
+    - IoCreateSymbolicLink
+    - KeWaitForSingleObject
+    - IofCallDriver
+    - KeInitializeEvent
+    - ObfReferenceObject
+    - IoReleaseRemoveLockAndWaitEx
+    - IoReleaseRemoveLockEx
+    - IoAcquireRemoveLockEx
+    - IoDeleteSymbolicLink
+    - IoDetachDevice
+    - memset
+    - IoFreeIrp
+    - ObfDereferenceObject
+    - IoAllocateIrp
+    - IoGetAttachedDeviceReference
+    - InterlockedDecrement
+    - IoBuildSynchronousFsdRequest
+    - PoCallDriver
+    - PoStartNextPowerIrp
+    - PoRequestPowerIrp
+    - ExQueueWorkItem
+    - IoWMIRegistrationControl
+    - KeTickCount
+    - KeBugCheckEx
+    - IoDeleteDevice
+    - RtlFreeUnicodeString
+    - IoIsWdmVersionAvailable
+    - IofCompleteRequest
+    - KfReleaseSpinLock
+    - READ_PORT_UCHAR
+    - KeGetCurrentIrql
+    - KfAcquireSpinLock
+    - WRITE_PORT_UCHAR
+    - READ_PORT_ULONG
+    - WRITE_PORT_ULONG
+    - WmiSystemControl
+    - WmiCompleteRequest
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                CA , G2
+            ValidFrom: '2012-12-21 00:00:00'
+            ValidTo: '2020-12-30 23:59:59'
+            Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+            Version: 3
+            TBS:
+                MD5: d0785ad36e427c92b19f6826ab1e8020
+                SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+                SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+                SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                Signer , G4
+            ValidFrom: '2012-10-18 00:00:00'
+            ValidTo: '2020-12-29 23:59:59'
+            Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+            Version: 3
+            TBS:
+                MD5: e9d38360b914c8863f6cba3ee58764d3
+                SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+                SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+                SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+        -   Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+                Class 3 Extended Validation Code Signing CA , G2
+            ValidFrom: '2014-03-04 00:00:00'
+            ValidTo: '2024-03-03 23:59:59'
+            Signature: 3f5b19f3fa13d575382a5aee9f5aa04ca91dc5cc94eede15fef5106ea41ba56483541858c40b28a185c34e74e5ff897cfed5ed3cba719f5602268f162a88feb0a32722ce4be2388e00a63a865f9de53ea8de644941744121fd07c88417da1d653082cb264f39d60427a481b14b49c3238b7e02321827b7ab0bf31872b6a4ee67066f38a6588de0f17e5da460c6a8e5505fe0e8bae28f9958b6b5a0a876f1a2f11c8841727e52979b0a36998d50f701eb3ce7f0226ae5358c63368a1ab1d967665f971aefa8209df02fba6cced9948500f158f17dc97c22b5075d02c6e60bbfab9393ff27188e33367e5734f1c3af04c184f156b3e8878336f8d30a31dc6e2c6d
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 191a32cb759c97b8cfac118dd5127f49
+            Version: 3
+            TBS:
+                MD5: 788b61bd26da89253179e3de2cdb527f
+                SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
+                SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
+                SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
+        -   Subject: ??=TW, ??=Private Organization, serialNumber=80333472, C=TW,
+                ST=Hsinchu, L=Chupei City, O=Feature Integration Technology Inc, CN=Feature
+                Integration Technology Inc
+            ValidFrom: '2015-05-14 00:00:00'
+            ValidTo: '2017-05-13 23:59:59'
+            Signature: 297893e8612cdccf2bc5ff2cb810dc2a868aa1675d1598bb6a27f22010570e39e89167285c8dbba0abfeaa41a4329e1f21e62ef9a15bc94954e259e0292d9315670097fe51d0778cb97dbb990e7bcb9cfd894bf7e4289e8ec8f3fe1882d2cd1a8261a494537202c3c53e82cc96c3eddc00e2e611c21a9ad7564c13c72eef27d3b479b031a64d8afc84a3bdb76d85fa40f6bdf3f307733bcfee0e9d23e423a97162317cdff0f47e1a083c3d145ad574c54ef4e701d7e868da22b2e16149dc53a9451ce9cd46dc5e0a7b036d04fd73f601406b722fde98fe4f2acfadc670feb885f7e57d0d9e376cd967deb3998b966a57f79f5c49a68920c52ed74368379c1ad2
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 1b0403aaa7d4b40ea3c691a11217f378
+            Version: 3
+            TBS:
+                MD5: b0d42f7686780a7cbd4e531dd96d18fb
+                SHA1: e0d0c6dd0804554232caee87297decab44169257
+                SHA256: 804da934d7c2508775d1c74452b0305f76af5bc4139ca251af3ce55b4be41651
+                SHA384: e761d349002b37019e26ae9dbae64e1c055fe833e57984491987ec0b1e64dc79abaf150cbf1db76a41c192b1c98f46e4
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006
+                VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public
+                Primary Certification Authority , G5
+            ValidFrom: '2011-02-22 19:25:17'
+            ValidTo: '2021-02-22 19:35:17'
+            Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 611993e400000000001c
+            Version: 3
+            TBS:
+                MD5: 78a717e082dcc1cda3458d917e677d14
+                SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+                SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+                SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+        Signer:
+        -   SerialNumber: 1b0403aaa7d4b40ea3c691a11217f378
+            Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+                Class 3 Extended Validation Code Signing CA , G2
+            Version: 1
+    LoadsDespiteHVCI: 'FALSE'
+-   Company: Feature Integration Technology Inc.
+    Date: ''
+    Description: FINTEK PCIECOM Adapter
+    FileVersion: 22,12,5,0
+    Filename: ''
+    MD5: 05369fa594a033e48b7921018b3263fb
+    MachineType: AMD64
+    OriginalFilename: FPCIE2COM.sys
+    Product: 'FINTEK PCIECOM '
+    ProductVersion: 22,12,5,0
+    Publisher: ''
+    SHA1: 340ce5d8859f923222bea5917f40c4259cce1bbc
+    SHA256: ebf0e56a1941e3a6583aab4a735f1b04d4750228c18666925945ed9d7c9007e1
+    Signature: ''
+    Imphash: c91146dfe120f6e8fbed2150d9e020ca
+    Authentihash:
+        MD5: 34d9b3d02be97274e320bc946b0084cb
+        SHA1: 833a2dd7ac07ea34332173a2ca402d062af3a7b1
+        SHA256: 52478f3ddd3d0b9eb098e66049d132cc5c7e05720bfc78b6550ce5a40306d993
+    RichPEHeaderHash:
+        MD5: c8768793371ae4f9181875f108ee5fa2
+        SHA1: ebb852ab695113b1d914e8378b34e3a80a43f2c4
+        SHA256: 99ba56cb0b2be4c616466a63268242d16f30843d141becd8f0880b6865f14dab
+    Sections:
+        .text:
+            Entropy: 6.189965072283548
+            Virtual Size: '0x4cc1'
+        .rdata:
+            Entropy: 4.48017109840031
+            Virtual Size: '0xa28'
+        .data:
+            Entropy: 2.3499275679722134
+            Virtual Size: '0x330'
+        .pdata:
+            Entropy: 4.041740299789936
+            Virtual Size: '0x2c4'
+        PAGE:
+            Entropy: 6.1847773888411215
+            Virtual Size: '0x2c28'
+        INIT:
+            Entropy: 5.118835844237064
+            Virtual Size: '0x74e'
+        .rsrc:
+            Entropy: 5.949569622403056
+            Virtual Size: '0x790'
+        .reloc:
+            Entropy: 4.431474633150634
+            Virtual Size: '0xa4'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2022-12-05 01:30:48'
+    InternalName: ''
+    Copyright: Copyright (C) 2022 Feature Integration Technology Inc.
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    - WMILIB.SYS
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - KeSetEvent
+    - KeWaitForSingleObject
+    - KeAcquireSpinLockRaiseToDpc
+    - KeReleaseSpinLock
+    - ExAllocatePool
+    - ExAllocatePoolWithTag
+    - ExFreePool
+    - ExFreePoolWithTag
+    - MmMapIoSpace
+    - MmUnmapIoSpace
+    - IoAttachDeviceToDeviceStack
+    - IofCallDriver
+    - IofCompleteRequest
+    - IoCreateDevice
+    - IoIsWdmVersionAvailable
+    - IoCreateSymbolicLink
+    - IoDeleteDevice
+    - IoDeleteSymbolicLink
+    - IoDetachDevice
+    - IoInitializeRemoveLockEx
+    - IoOpenDeviceRegistryKey
+    - PoSetPowerState
+    - ZwClose
+    - ZwCreateKey
+    - KeInitializeEvent
+    - ZwQueryValueKey
+    - ZwSetValueKey
+    - swprintf
+    - _snwprintf
+    - atoi
+    - KeGetCurrentIrql
+    - IoAcquireRemoveLockEx
+    - IoReleaseRemoveLockEx
+    - IoReleaseRemoveLockAndWaitEx
+    - IoGetDeviceProperty
+    - ObfReferenceObject
+    - ZwCreateFile
+    - ZwReadFile
+    - KeDelayExecutionThread
+    - IoAllocateIrp
+    - IoBuildSynchronousFsdRequest
+    - IoFreeIrp
+    - IoGetAttachedDeviceReference
+    - ObfDereferenceObject
+    - ExQueueWorkItem
+    - PoRequestPowerIrp
+    - PoCallDriver
+    - PoStartNextPowerIrp
+    - IoWMIRegistrationControl
+    - RtlFreeUnicodeString
+    - RtlAppendUnicodeToString
+    - RtlCopyUnicodeString
+    - ZwOpenKey
+    - RtlInitUnicodeString
+    - KeStallExecutionProcessor
+    - WmiSystemControl
+    - WmiCompleteRequest
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+                EV Root CA
+            ValidFrom: '2011-04-15 19:45:33'
+            ValidTo: '2021-04-15 19:55:33'
+            Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 61204db4000000000027
+            Version: 3
+            TBS:
+                MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+                SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+                SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+                SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+        -   Subject: ??=TW, ??=Private Organization, serialNumber=80333472, C=TW,
+                L=Zhubei City, O=Feature Integration Technology Inc., CN=Feature Integration
+                Technology Inc.
+            ValidFrom: '2020-05-18 00:00:00'
+            ValidTo: '2023-07-07 12:00:00'
+            Signature: 99ee78ec6e1fe71d32ee9a363441763f18bd1d43f94602e40e5fcd88db4081320c546941635210dd77ab1cc463e78155fbf6e46e18c9e835830a711d4deda38cf42a149d011bbbc065cf48bf511d759bfddd6424c3305706b688448f3cbc94ed432b92d6f0af70c9d8cbb9c3805fef1e409b3994bf7d11b9e0d2890fb8b9aa10e58a7cf5777851122293f5f4514797ba2d4416fe058ece0a42d2eadf871a57406e89990f237beb06a99989320b8898992ae21b50c8c71d535013636e66a22268613c32d8ca64fcf610f4e35f59b5e5935243f6eaf1503b38bc54194b244828a55ad3b5d23fc0912c568e81d166b5fee1e8823614c2fc14ae080da6ae347b33bb
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 03829816b04a1318528ff1c4cc820cbe
+            Version: 3
+            TBS:
+                MD5: 52811f961a802901aa7ba924b71f9ca8
+                SHA1: 36cfa3cd654e77c4c2dff091b4761a49bc852087
+                SHA256: 857e282813a570fead4ebce75d19f74ef2437ddc73253e9361a99cdb78b8d06a
+                SHA384: af17ec816c8fed617099707c53f28891cd0cd1794f070261d5bf76fcc32c61f82a4a4bc69cab170829f082712e035d21
+        -   Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code
+                Signing CA (SHA2)
+            ValidFrom: '2012-04-18 12:00:00'
+            ValidTo: '2027-04-18 12:00:00'
+            Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+            Version: 3
+            TBS:
+                MD5: 83f5de89f641d0fbf60248e10a7b9534
+                SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+                SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+                SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+        Signer:
+        -   SerialNumber: 03829816b04a1318528ff1c4cc820cbe
+            Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code
+                Signing CA (SHA2)
+            Version: 1
+    LoadsDespiteHVCI: 'FALSE'

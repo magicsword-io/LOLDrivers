@@ -1,242 +1,242 @@
-Acknowledgement:
-  Handle: ''
-  Person: "Martin Smol\xE1r, ESET"
-Author: Michael Haag
-Category: malicious
-Commands:
-  Command: sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sys
-    type=kernel && sc.exe start blacklotus_driver.sys
-  Description: The first in-the-wild UEFI bootkit bypassing UEFI Secure Boot on fully
-    updated UEFI systems is now a reality. Once the persistence is configured, the
-    BlackLotus bootkit is executed on every system start. The bootkits goal is to
-    deploy a kernel driver and a final user-mode component.
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
-Created: '2023-04-05'
-Detection: []
 Id: 8750b245-af35-4bc6-9af3-dc858f9db64f
-KnownVulnerableSamples:
-- Authentihash:
-    MD5: f5742f4fb216979627236a799f614c43
-    SHA1: 5aba7fa2330d68a679c18cfa2c652ac8b3b4770d
-    SHA256: 83ac9bf01c2d2ab0f66782fade462864f42b86e53dc455e1441c2a16d0ec2847
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2022-10-10 13:11:06'
-  Date: ''
-  Description: ''
-  ExportedFunctions:
-  - restore
-  FileVersion: ''
-  Filename: 0x3440_blacklotus_v2_driver.sys
-  ImportedFunctions: ''
-  Imports: []
-  InternalName: ''
-  MD5: 4ad8fd9e83d7200bd7f8d0d4a9abfb11
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: ffdf660eb1ebf020a1d0a55a90712dfb
-    SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
-    SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
-  SHA1: 17fa047c1f979b180644906fe9265f21af5b0509
-  SHA256: 749b0e8c8c8b7dda8c2063c708047cfe95afa0a4d86886b31a12f3018396e67c
-  Sections:
-    .text:
-      Entropy: 6.261203394144865
-      Virtual Size: '0x3b3a'
-    .rdata:
-      Entropy: 4.233695689323557
-      Virtual Size: '0x718'
-    .data:
-      Entropy: 7.984550623960864
-      Virtual Size: '0xc5d0'
-    .pdata:
-      Entropy: 4.188923701028426
-      Virtual Size: '0x234'
-    .00cfg:
-      Entropy: 2.0728769534576146
-      Virtual Size: '0x30'
-    .edata:
-      Entropy: 2.8457622013064974
-      Virtual Size: '0x4f'
-    .reloc:
-      Entropy: 3.326879484051224
-      Virtual Size: '0x2c'
-  Signature: []
-  Signatures: {}
-  Imphash: ''
-  LoadsDespiteHVCI: 'TRUE'
-- Authentihash:
-    MD5: 188d812252f224a8ea618f8e9f1fdadb
-    SHA1: ede3868d6bb27bee5c0b9a71fef486e405d59816
-    SHA256: 265010deb10af80885726edc450867fa69acbde449b51d13bf891322ff5c1c2d
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2022-08-21 14:40:09'
-  Date: ''
-  Description: ''
-  ExportedFunctions:
-  - restore
-  FileVersion: ''
-  Filename: 0x3040_blacklotus_beta_driver.sys
-  ImportedFunctions: ''
-  Imports: []
-  InternalName: ''
-  MD5: a42249a046182aaaf3a7a7db98bfa69d
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: be07bc61b7ccf659c7b3dde871f25be9
-    SHA1: 393952208c038e8e3d3298276d21539496e34b13
-    SHA256: c361d85cea6b483b3c88e99d1a0139069e7b2e6a4382e3c14563027e6712db20
-  SHA1: 1f3799fed3cf43254fe30dcdfdb8dc02d82e662b
-  SHA256: f8236fc01d4efaa48f032e301be2ebba4036b2cd945982a29046eca03944d2ae
-  Sections:
-    .text:
-      Entropy: 6.207903166992804
-      Virtual Size: '0x2fda'
-    .rdata:
-      Entropy: 4.06302777043616
-      Virtual Size: '0x608'
-    .data:
-      Entropy: 7.977732267872434
-      Virtual Size: '0xa1a0'
-    .pdata:
-      Entropy: 4.076640402204788
-      Virtual Size: '0x1d4'
-    .00cfg:
-      Entropy: 2.072876953457614
-      Virtual Size: '0x30'
-    .edata:
-      Entropy: 3.69345697232837
-      Virtual Size: '0x4f'
-    .reloc:
-      Entropy: 3.2814249385966785
-      Virtual Size: '0x2c'
-  Signature: []
-  Signatures: {}
-  Imphash: ''
-  LoadsDespiteHVCI: 'TRUE'
-- Authentihash:
-    MD5: 188d812252f224a8ea618f8e9f1fdadb
-    SHA1: ede3868d6bb27bee5c0b9a71fef486e405d59816
-    SHA256: 265010deb10af80885726edc450867fa69acbde449b51d13bf891322ff5c1c2d
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2022-08-21 14:40:09'
-  Date: ''
-  Description: ''
-  ExportedFunctions:
-  - restore
-  FileVersion: ''
-  Filename: 0x3040_blacklotus_beta_driver.sys
-  ImportedFunctions: ''
-  Imports: []
-  InternalName: ''
-  MD5: a42249a046182aaaf3a7a7db98bfa69d
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: be07bc61b7ccf659c7b3dde871f25be9
-    SHA1: 393952208c038e8e3d3298276d21539496e34b13
-    SHA256: c361d85cea6b483b3c88e99d1a0139069e7b2e6a4382e3c14563027e6712db20
-  SHA1: 1f3799fed3cf43254fe30dcdfdb8dc02d82e662b
-  SHA256: f8236fc01d4efaa48f032e301be2ebba4036b2cd945982a29046eca03944d2ae
-  Sections:
-    .text:
-      Entropy: 6.207903166992804
-      Virtual Size: '0x2fda'
-    .rdata:
-      Entropy: 4.06302777043616
-      Virtual Size: '0x608'
-    .data:
-      Entropy: 7.977732267872434
-      Virtual Size: '0xa1a0'
-    .pdata:
-      Entropy: 4.076640402204788
-      Virtual Size: '0x1d4'
-    .00cfg:
-      Entropy: 2.072876953457614
-      Virtual Size: '0x30'
-    .edata:
-      Entropy: 3.69345697232837
-      Virtual Size: '0x4f'
-    .reloc:
-      Entropy: 3.2814249385966785
-      Virtual Size: '0x2c'
-  Signature: []
-  Signatures: {}
-  Imphash: ''
-  LoadsDespiteHVCI: 'TRUE'
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: blacklotus_beta_driver.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 4B882748FAF2C6C360884C6812DD5BCBCE75EBFF
-  Signature: []
-  LoadsDespiteHVCI: 'TRUE'
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: blacklotus_beta_driver_2.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 91F832F46E4C38ECC9335460D46F6F71352CFFED
-  Signature: []
-  LoadsDespiteHVCI: 'TRUE'
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: blacklotus_beta_driver_3.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 994DC79255AEB662A672A1814280DE73D405617A
-  Signature: []
-  LoadsDespiteHVCI: 'TRUE'
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: blacklotus_beta_driver_4.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: FFF4F28287677CAABC60C8AB36786C370226588D
-  Signature: []
-  LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/
 Tags:
 - blacklotus_driver.sys
 Verified: 'TRUE'
+Author: Michael Haag
+Created: '2023-04-05'
+MitreID: T1068
+Category: malicious
+Commands:
+    Command: sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sys
+        type=kernel && sc.exe start blacklotus_driver.sys
+    Description: The first in-the-wild UEFI bootkit bypassing UEFI Secure Boot on
+        fully updated UEFI systems is now a reality. Once the persistence is configured,
+        the BlackLotus bootkit is executed on every system start. The bootkits goal
+        is to deploy a kernel driver and a final user-mode component.
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
+Resources:
+- https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/
+Detection: []
+Acknowledgement:
+    Handle: ''
+    Person: "Martin Smol\xE1r, ESET"
+KnownVulnerableSamples:
+-   Authentihash:
+        MD5: f5742f4fb216979627236a799f614c43
+        SHA1: 5aba7fa2330d68a679c18cfa2c652ac8b3b4770d
+        SHA256: 83ac9bf01c2d2ab0f66782fade462864f42b86e53dc455e1441c2a16d0ec2847
+    Company: ''
+    Copyright: ''
+    CreationTimestamp: '2022-10-10 13:11:06'
+    Date: ''
+    Description: ''
+    ExportedFunctions:
+    - restore
+    FileVersion: ''
+    Filename: 0x3440_blacklotus_v2_driver.sys
+    ImportedFunctions: ''
+    Imports: []
+    InternalName: ''
+    MD5: 4ad8fd9e83d7200bd7f8d0d4a9abfb11
+    MachineType: AMD64
+    MagicHeader: 50 45 0 0
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: ffdf660eb1ebf020a1d0a55a90712dfb
+        SHA1: 3e905e3d061d0d59de61fcf39c994fcb0ec1bab3
+        SHA256: 2b3f99a94b7a7132854be769e27b331419c53989ef42f686d6f5ba09ddefefd6
+    SHA1: 17fa047c1f979b180644906fe9265f21af5b0509
+    SHA256: 749b0e8c8c8b7dda8c2063c708047cfe95afa0a4d86886b31a12f3018396e67c
+    Sections:
+        .text:
+            Entropy: 6.261203394144865
+            Virtual Size: '0x3b3a'
+        .rdata:
+            Entropy: 4.233695689323557
+            Virtual Size: '0x718'
+        .data:
+            Entropy: 7.984550623960864
+            Virtual Size: '0xc5d0'
+        .pdata:
+            Entropy: 4.188923701028426
+            Virtual Size: '0x234'
+        .00cfg:
+            Entropy: 2.0728769534576146
+            Virtual Size: '0x30'
+        .edata:
+            Entropy: 2.8457622013064974
+            Virtual Size: '0x4f'
+        .reloc:
+            Entropy: 3.326879484051224
+            Virtual Size: '0x2c'
+    Signature: []
+    Signatures: {}
+    Imphash: ''
+    LoadsDespiteHVCI: 'TRUE'
+-   Authentihash:
+        MD5: 188d812252f224a8ea618f8e9f1fdadb
+        SHA1: ede3868d6bb27bee5c0b9a71fef486e405d59816
+        SHA256: 265010deb10af80885726edc450867fa69acbde449b51d13bf891322ff5c1c2d
+    Company: ''
+    Copyright: ''
+    CreationTimestamp: '2022-08-21 14:40:09'
+    Date: ''
+    Description: ''
+    ExportedFunctions:
+    - restore
+    FileVersion: ''
+    Filename: 0x3040_blacklotus_beta_driver.sys
+    ImportedFunctions: ''
+    Imports: []
+    InternalName: ''
+    MD5: a42249a046182aaaf3a7a7db98bfa69d
+    MachineType: AMD64
+    MagicHeader: 50 45 0 0
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: be07bc61b7ccf659c7b3dde871f25be9
+        SHA1: 393952208c038e8e3d3298276d21539496e34b13
+        SHA256: c361d85cea6b483b3c88e99d1a0139069e7b2e6a4382e3c14563027e6712db20
+    SHA1: 1f3799fed3cf43254fe30dcdfdb8dc02d82e662b
+    SHA256: f8236fc01d4efaa48f032e301be2ebba4036b2cd945982a29046eca03944d2ae
+    Sections:
+        .text:
+            Entropy: 6.207903166992804
+            Virtual Size: '0x2fda'
+        .rdata:
+            Entropy: 4.06302777043616
+            Virtual Size: '0x608'
+        .data:
+            Entropy: 7.977732267872434
+            Virtual Size: '0xa1a0'
+        .pdata:
+            Entropy: 4.076640402204788
+            Virtual Size: '0x1d4'
+        .00cfg:
+            Entropy: 2.072876953457614
+            Virtual Size: '0x30'
+        .edata:
+            Entropy: 3.69345697232837
+            Virtual Size: '0x4f'
+        .reloc:
+            Entropy: 3.2814249385966785
+            Virtual Size: '0x2c'
+    Signature: []
+    Signatures: {}
+    Imphash: ''
+    LoadsDespiteHVCI: 'TRUE'
+-   Authentihash:
+        MD5: 188d812252f224a8ea618f8e9f1fdadb
+        SHA1: ede3868d6bb27bee5c0b9a71fef486e405d59816
+        SHA256: 265010deb10af80885726edc450867fa69acbde449b51d13bf891322ff5c1c2d
+    Company: ''
+    Copyright: ''
+    CreationTimestamp: '2022-08-21 14:40:09'
+    Date: ''
+    Description: ''
+    ExportedFunctions:
+    - restore
+    FileVersion: ''
+    Filename: 0x3040_blacklotus_beta_driver.sys
+    ImportedFunctions: ''
+    Imports: []
+    InternalName: ''
+    MD5: a42249a046182aaaf3a7a7db98bfa69d
+    MachineType: AMD64
+    MagicHeader: 50 45 0 0
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: be07bc61b7ccf659c7b3dde871f25be9
+        SHA1: 393952208c038e8e3d3298276d21539496e34b13
+        SHA256: c361d85cea6b483b3c88e99d1a0139069e7b2e6a4382e3c14563027e6712db20
+    SHA1: 1f3799fed3cf43254fe30dcdfdb8dc02d82e662b
+    SHA256: f8236fc01d4efaa48f032e301be2ebba4036b2cd945982a29046eca03944d2ae
+    Sections:
+        .text:
+            Entropy: 6.207903166992804
+            Virtual Size: '0x2fda'
+        .rdata:
+            Entropy: 4.06302777043616
+            Virtual Size: '0x608'
+        .data:
+            Entropy: 7.977732267872434
+            Virtual Size: '0xa1a0'
+        .pdata:
+            Entropy: 4.076640402204788
+            Virtual Size: '0x1d4'
+        .00cfg:
+            Entropy: 2.072876953457614
+            Virtual Size: '0x30'
+        .edata:
+            Entropy: 3.69345697232837
+            Virtual Size: '0x4f'
+        .reloc:
+            Entropy: 3.2814249385966785
+            Virtual Size: '0x2c'
+    Signature: []
+    Signatures: {}
+    Imphash: ''
+    LoadsDespiteHVCI: 'TRUE'
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: blacklotus_beta_driver.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: 4B882748FAF2C6C360884C6812DD5BCBCE75EBFF
+    Signature: []
+    LoadsDespiteHVCI: 'TRUE'
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: blacklotus_beta_driver_2.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: 91F832F46E4C38ECC9335460D46F6F71352CFFED
+    Signature: []
+    LoadsDespiteHVCI: 'TRUE'
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: blacklotus_beta_driver_3.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: 994DC79255AEB662A672A1814280DE73D405617A
+    Signature: []
+    LoadsDespiteHVCI: 'TRUE'
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: blacklotus_beta_driver_4.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: FFF4F28287677CAABC60C8AB36786C370226588D
+    Signature: []
+    LoadsDespiteHVCI: 'TRUE'

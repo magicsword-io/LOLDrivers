@@ -1,35 +1,35 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
-Author: Michael Haag
-Category: vulnerable driver
-Commands:
-  Command: sc.exe create My.sys binPath=C:\windows\temp\My.sys type=kernel && sc.exe
-    start My.sys
-  Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
 Id: b7ec29c6-e151-4a9f-a293-e61f04ee6489
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: My.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA256: d25904fbf907e19f366d54962ff543d9f53b8fdfd2416c8b9796b6a8dd430e26
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - My.sys
 Verified: 'FALSE'
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+    Command: sc.exe create My.sys binPath=C:\windows\temp\My.sys type=kernel && sc.exe
+        start My.sys
+    Description: ''
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Detection: []
+Acknowledgement:
+    Handle: ''
+    Person: ''
+KnownVulnerableSamples:
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: My.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA256: d25904fbf907e19f366d54962ff543d9f53b8fdfd2416c8b9796b6a8dd430e26
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'

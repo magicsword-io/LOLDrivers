@@ -1,521 +1,523 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
-Author: Michael Haag
-Category: vulnerable driver
-Commands:
-  Command: sc.exe create viragt.sys binPath=C:\windows\temp\viragt.sys type=kernel
-    && sc.exe start viragt.sys
-  Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e05eeb2b8c18ad2cb2d1038c043d770a0d51b96b748bc34be3e7fc6f3790ce53.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Id: 39742f99-2180-46d7-8538-56667c935cc3
-KnownVulnerableSamples:
-- Authentihash:
-    MD5: 333822355a23fbdfb2599a909b3bbc60
-    SHA1: 72886a692656ebe64592a43273d3f59432cfbf9a
-    SHA256: 9f86fc8a6eaa3b38f33be4a0d552c184e575afa50a60df7383c06a394e3926d8
-  Company: TG Soft S.a.s.
-  Copyright: Copyright (C) TG Soft S.a.s. 2006, 2013 - www.tgsoft.it
-  CreationTimestamp: '2013-01-23 01:38:45'
-  Date: ''
-  Description: VirIT Agent System
-  ExportedFunctions: ''
-  FileVersion: 1, 72, 0, 0
-  Filename: viragt.sys
-  ImportedFunctions:
-  - RtlInitAnsiString
-  - wcstombs
-  - ZwOpenKey
-  - ZwSetValueKey
-  - ZwDeleteKey
-  - RtlFormatCurrentUserKeyPath
-  - ZwEnumerateKey
-  - ZwEnumerateValueKey
-  - ZwCreateFile
-  - KeWaitForSingleObject
-  - IofCallDriver
-  - IoBuildSynchronousFsdRequest
-  - KeInitializeEvent
-  - ObfDereferenceObject
-  - IoGetRelatedDeviceObject
-  - ObReferenceObjectByHandle
-  - ZwReadFile
-  - ZwWriteFile
-  - ZwSetInformationFile
-  - ZwOpenProcess
-  - ZwTerminateProcess
-  - _strupr
-  - ZwQuerySystemInformation
-  - IoFreeMdl
-  - MmUnlockPages
-  - MmIsAddressValid
-  - MmProbeAndLockPages
-  - MmMapLockedPagesSpecifyCache
-  - MmBuildMdlForNonPagedPool
-  - IoAllocateMdl
-  - MmIsNonPagedSystemAddressValid
-  - IoGetCurrentProcess
-  - PsLookupProcessByProcessId
-  - IoDeleteDevice
-  - IoDeleteSymbolicLink
-  - RtlInitUnicodeString
-  - sprintf
-  - RtlTimeToTimeFields
-  - ExSystemTimeToLocalTime
-  - KeQuerySystemTime
-  - strstr
-  - KeServiceDescriptorTable
-  - KeReleaseMutex
-  - KeDelayExecutionThread
-  - RtlAnsiStringToUnicodeString
-  - ExQueueWorkItem
-  - KeInsertQueueDpc
-  - KeSetTargetProcessorDpc
-  - KeInitializeDpc
-  - KeNumberProcessors
-  - IofCompleteRequest
-  - memcpy
-  - IoCreateSymbolicLink
-  - IoCreateDevice
-  - PsCreateSystemThread
-  - KeInitializeMutex
-  - ObOpenObjectByName
-  - IoDriverObjectType
-  - ZwOpenDirectoryObject
-  - RtlUnicodeStringToAnsiString
-  - ZwQueryDirectoryObject
-  - IoFileObjectType
-  - swprintf
-  - DbgPrint
-  - IoFreeIrp
-  - MmUnmapLockedPages
-  - KeSetEvent
-  - MmLockPagableSectionByHandle
-  - MmLockPagableDataSection
-  - IoAllocateIrp
-  - _wcsnicmp
-  - RtlCompareMemory
-  - IoBuildDeviceIoControlRequest
-  - _alldiv
-  - wcsrchr
-  - ZwQueryVolumeInformationFile
-  - ZwDeviceIoControlFile
-  - _strnicmp
-  - ZwFsControlFile
-  - _allmul
-  - ObfReferenceObject
-  - _allrem
-  - _stricmp
-  - strrchr
-  - KeQueryActiveProcessors
-  - KeTickCount
-  - KeBugCheckEx
-  - ZwCreateKey
-  - ZwQueryValueKey
-  - ExAllocatePoolWithTag
-  - ExFreePoolWithTag
-  - mbstowcs
-  - ZwClose
-  - memset
-  - PsTerminateSystemThread
-  - ZwQueryInformationFile
-  - RtlUnwind
-  - KeRaiseIrqlToDpcLevel
-  - KfRaiseIrql
-  - KfLowerIrql
-  - KeGetCurrentIrql
-  - READ_PORT_ULONG
-  - WRITE_PORT_UCHAR
-  - READ_PORT_UCHAR
-  - READ_PORT_BUFFER_UCHAR
-  - KeStallExecutionProcessor
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  InternalName: viragt.sys
-  MD5: e79c91c27df3eaf82fb7bd1280172517
-  MachineType: I386
-  MagicHeader: 50 45 0 0
-  OriginalFilename: viragt.sys
-  Product: VirIT Agent System
-  ProductVersion: 1, 72, 0, 0
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: fd47e50698bf05f04850340b52ac1853
-    SHA1: ee25f84fd5c60f82580743dfaab31e2e5e1fbe30
-    SHA256: 44490b82f96dcb06373c259b6532d209604916c484dccba49970a77732bd9906
-  SHA1: cb22723faa5ae2809476e5c5e9b9a597b26cab9b
-  SHA256: e05eeb2b8c18ad2cb2d1038c043d770a0d51b96b748bc34be3e7fc6f3790ce53
-  Sections:
-    .text:
-      Entropy: 6.747532035906447
-      Virtual Size: '0xdbb5'
-    NonPaged:
-      Entropy: 6.71406382908674
-      Virtual Size: '0x7ad'
-    .rdata:
-      Entropy: 5.092975260562714
-      Virtual Size: '0x5d4'
-    .data:
-      Entropy: 0.04519006846517909
-      Virtual Size: '0x364c'
-    INIT:
-      Entropy: 5.662214565720019
-      Virtual Size: '0xa84'
-    .rsrc:
-      Entropy: 3.3233696108191855
-      Virtual Size: '0x430'
-    .reloc:
-      Entropy: 6.276829324907502
-      Virtual Size: '0xf58'
-  Signature:
-  - TG Soft S.a.s. Di Tonello Gianfranco e C.
-  - VeriSign Class 3 Code Signing 2010 CA
-  - VeriSign
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
-        , G2
-      ValidFrom: '2012-12-21 00:00:00'
-      ValidTo: '2020-12-30 23:59:59'
-      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
-      Version: 3
-      TBS:
-        MD5: d0785ad36e427c92b19f6826ab1e8020
-        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
-        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
-        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
-        , G4
-      ValidFrom: '2012-10-18 00:00:00'
-      ValidTo: '2020-12-29 23:59:59'
-      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
-      Version: 3
-      TBS:
-        MD5: e9d38360b914c8863f6cba3ee58764d3
-        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
-        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
-        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
-        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
-        Authority , G5
-      ValidFrom: '2006-11-08 00:00:00'
-      ValidTo: '2021-11-07 23:59:59'
-      Signature: 1302ddf8e88600f25af8f8200c59886207cecef74ef9bb59a198e5e138dd4ebc6618d3adeb18f20dc96d3e4a9420c33cbabd6554c6af44b310ad2c6b3eabd707b6b88163c5f95e2ee52a67cecd330c2ad7895603231fb3bee83a0859b4ec4535f78a5bff66cf50afc66d578d1978b7b9a2d157ea1f9a4bafbac98e127ec6bdff
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
-      Version: 3
-      TBS:
-        MD5: 918d9eb6a6cd36c531eceb926170a7e1
-        SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
-        SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
-        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
-    - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
-      ValidFrom: '2006-05-23 17:01:29'
-      ValidTo: '2016-05-23 17:11:29'
-      Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 610c120600000000001b
-      Version: 3
-      TBS:
-        MD5: 53c41bc1164e09e0cd1617a5bf913efd
-        SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
-        SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
-        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
-    - Subject: C=IT, ST=Padova, L=Rubano, O=TG Soft S.a.s. Di Tonello Gianfranco e
-        C., OU=Digital ID Class 3 , Microsoft Software Validation v2, CN=TG Soft S.a.s.
-        Di Tonello Gianfranco e C.
-      ValidFrom: '2012-12-31 00:00:00'
-      ValidTo: '2016-02-29 23:59:59'
-      Signature: c7c9efc50350a4c32f6dacc513ba6ac9fe5fd749bd74dcb912bdc41655a751ecd628c0d94677c4bc71424ba27a3b82680532cb0fa85f6d7ae2a5a9b5a0f2c87059ce4c5c80c426bafe6fa0713e23787b5fe5274c659c221a58a376d27d9866a1843d21788bc53012b5af4b9a8787b5a6dd2d41498e60967e5248c6cc8b08ccafc5f39006f0597ae03b91f0aed26337f40550dc1fe4490df7258d2f0bdf0448d5a68c3bb8222007b91f9f83e4813edfb134738bfdd5c5cd9f8413b360231472ec5a22d32e7c6e15b127a34f84edea31ce625a0c87aaa07e31a14221dc51689e68e5a0e13bd563475134ee102e1a86788dc909dbdb4c7a370e0d418c8424e88a14
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 4cccaccf48f6d93fb37178d7fce6209c
-      Version: 3
-      TBS:
-        MD5: 1f0b47e6661a3261d4c982b2eb35b0ec
-        SHA1: 8320a06969446f33184f8a25a91942870a5a54d5
-        SHA256: 15e095f260d9ceca3f947817c1f53ddf687e32438d55a51be1b66785183e9840
-        SHA384: 184afc72b02ad7f852cdc9db26f294ce37ac12ec9ed3375d34acf6918a1662c0afd7d1cc39ecf1decc7e667645a3fc67
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
-        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
-        CA
-      ValidFrom: '2010-02-08 00:00:00'
-      ValidTo: '2020-02-07 23:59:59'
-      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
-      Version: 3
-      TBS:
-        MD5: b30c31a572b0409383ed3fbe17e56e81
-        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
-        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
-        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
-    Signer:
-    - SerialNumber: 4cccaccf48f6d93fb37178d7fce6209c
-      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
-        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
-        CA
-      Version: 1
-  Imphash: 0b663530751cc11f34273fee7921c431
-  LoadsDespiteHVCI: 'FALSE'
-- Authentihash:
-    MD5: b6d013002983064089233685b9bde66b
-    SHA1: 6db4ed2d751cc8ae376f2dd69e702e9e469ad8c9
-    SHA256: 554bf34bde5e7c86fc463496d19a4369d911ccad90e3c684855192cd677641c4
-  Company: TG Soft S.a.s.
-  Copyright: Copyright (C) TG Soft S.a.s. 2011, 2013 - www.tgsoft.it
-  CreationTimestamp: '2013-11-29 05:03:41'
-  Date: ''
-  Description: VirIT Agent System
-  ExportedFunctions: ''
-  FileVersion: 1, 0, 0, 5
-  Filename: ''
-  ImportedFunctions:
-  - mbstowcs
-  - ExAllocatePoolWithTag
-  - KeSetTargetProcessorDpc
-  - ZwCreateKey
-  - IoDeleteSymbolicLink
-  - ExFreePoolWithTag
-  - KeInitializeMutex
-  - RtlAnsiStringToUnicodeString
-  - ZwReadFile
-  - strstr
-  - RtlInitUnicodeString
-  - IoDeleteDevice
-  - RtlInitAnsiString
-  - ZwSetValueKey
-  - _strupr
-  - KeInitializeDpc
-  - ZwQuerySystemInformation
-  - MmBuildMdlForNonPagedPool
-  - IoFreeMdl
-  - ZwSetInformationFile
-  - KeReleaseMutex
-  - KeDelayExecutionThread
-  - ZwCreateFile
-  - PsCreateSystemThread
-  - MmMapLockedPagesSpecifyCache
-  - ExSystemTimeToLocalTime
-  - ZwQueryValueKey
-  - PsTerminateSystemThread
-  - KeInsertQueueDpc
-  - ZwEnumerateValueKey
-  - ZwClose
-  - sprintf
-  - ObReferenceObjectByHandle
-  - KeWaitForSingleObject
-  - RtlTimeToTimeFields
-  - MmProbeAndLockPages
-  - ZwOpenProcess
-  - MmUnlockPages
-  - IoCreateSymbolicLink
-  - MmIsAddressValid
-  - ObfDereferenceObject
-  - IoCreateDevice
-  - ZwTerminateProcess
-  - KeNumberProcessors
-  - ZwQueryInformationFile
-  - MmIsNonPagedSystemAddressValid
-  - ZwWriteFile
-  - ZwDeleteKey
-  - RtlFormatCurrentUserKeyPath
-  - ZwEnumerateKey
-  - IoAllocateMdl
-  - ZwOpenKey
-  - ObOpenObjectByName
-  - swprintf
-  - RtlUnicodeStringToAnsiString
-  - ZwOpenDirectoryObject
-  - IoFileObjectType
-  - IoDriverObjectType
-  - ZwQueryDirectoryObject
-  - wcstombs
-  - KeQueryActiveProcessors
-  - KeBugCheckEx
-  - IofCompleteRequest
-  - ExQueueWorkItem
-  - __C_specific_handler
-  - __chkstk
-  - KeStallExecutionProcessor
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  InternalName: viragt.sys
-  MD5: ab7b28b532beba6a6c0217bc406b80ee
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: viragt64.sys
-  PDBPath: ''
-  Product: VirIT Agent System
-  ProductVersion: 1, 0, 0, 5
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: a93c261e407f22e8e9e11096ef7669a4
-    SHA1: 579ea1a06578ca54a9b86ccfa3c06b3be01831bf
-    SHA256: b566c96b0a5ca93fe5cdd066966b85657108a1cc6eadb0b683932c781d3a3510
-  SHA1: f7b3457a6fd008656e7216b1f09db2ff062f1ca4
-  SHA256: a2096b460e31451659b0dde752264c362f47254c8191930bc921ff16a4311641
-  Sections:
-    .text:
-      Entropy: 6.3652977072668016
-      Virtual Size: '0xb1da'
-    .rdata:
-      Entropy: 4.99053189312109
-      Virtual Size: '0xc04'
-    .data:
-      Entropy: 0.9258397206248276
-      Virtual Size: '0x3878'
-    .pdata:
-      Entropy: 4.342028159341795
-      Virtual Size: '0x318'
-    INIT:
-      Entropy: 5.227110365700928
-      Virtual Size: '0x842'
-    .rsrc:
-      Entropy: 3.311386289808379
-      Virtual Size: '0x438'
-    .reloc:
-      Entropy: 2.4073102722120714
-      Virtual Size: '0x138'
-  Signature: ''
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
-        , G2
-      ValidFrom: '2012-12-21 00:00:00'
-      ValidTo: '2020-12-30 23:59:59'
-      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
-      Version: 3
-      TBS:
-        MD5: d0785ad36e427c92b19f6826ab1e8020
-        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
-        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
-        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
-        , G4
-      ValidFrom: '2012-10-18 00:00:00'
-      ValidTo: '2020-12-29 23:59:59'
-      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
-      Version: 3
-      TBS:
-        MD5: e9d38360b914c8863f6cba3ee58764d3
-        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
-        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
-        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
-        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
-        Authority , G5
-      ValidFrom: '2006-11-08 00:00:00'
-      ValidTo: '2021-11-07 23:59:59'
-      Signature: 1302ddf8e88600f25af8f8200c59886207cecef74ef9bb59a198e5e138dd4ebc6618d3adeb18f20dc96d3e4a9420c33cbabd6554c6af44b310ad2c6b3eabd707b6b88163c5f95e2ee52a67cecd330c2ad7895603231fb3bee83a0859b4ec4535f78a5bff66cf50afc66d578d1978b7b9a2d157ea1f9a4bafbac98e127ec6bdff
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
-      Version: 3
-      TBS:
-        MD5: 918d9eb6a6cd36c531eceb926170a7e1
-        SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
-        SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
-        SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
-    - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
-      ValidFrom: '2006-05-23 17:01:29'
-      ValidTo: '2016-05-23 17:11:29'
-      Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 610c120600000000001b
-      Version: 3
-      TBS:
-        MD5: 53c41bc1164e09e0cd1617a5bf913efd
-        SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
-        SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
-        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
-    - Subject: C=IT, ST=Padova, L=Rubano, O=TG Soft S.a.s. Di Tonello Gianfranco e
-        C., OU=Digital ID Class 3 , Microsoft Software Validation v2, CN=TG Soft S.a.s.
-        Di Tonello Gianfranco e C.
-      ValidFrom: '2012-12-31 00:00:00'
-      ValidTo: '2016-02-29 23:59:59'
-      Signature: c7c9efc50350a4c32f6dacc513ba6ac9fe5fd749bd74dcb912bdc41655a751ecd628c0d94677c4bc71424ba27a3b82680532cb0fa85f6d7ae2a5a9b5a0f2c87059ce4c5c80c426bafe6fa0713e23787b5fe5274c659c221a58a376d27d9866a1843d21788bc53012b5af4b9a8787b5a6dd2d41498e60967e5248c6cc8b08ccafc5f39006f0597ae03b91f0aed26337f40550dc1fe4490df7258d2f0bdf0448d5a68c3bb8222007b91f9f83e4813edfb134738bfdd5c5cd9f8413b360231472ec5a22d32e7c6e15b127a34f84edea31ce625a0c87aaa07e31a14221dc51689e68e5a0e13bd563475134ee102e1a86788dc909dbdb4c7a370e0d418c8424e88a14
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 4cccaccf48f6d93fb37178d7fce6209c
-      Version: 3
-      TBS:
-        MD5: 1f0b47e6661a3261d4c982b2eb35b0ec
-        SHA1: 8320a06969446f33184f8a25a91942870a5a54d5
-        SHA256: 15e095f260d9ceca3f947817c1f53ddf687e32438d55a51be1b66785183e9840
-        SHA384: 184afc72b02ad7f852cdc9db26f294ce37ac12ec9ed3375d34acf6918a1662c0afd7d1cc39ecf1decc7e667645a3fc67
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
-        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
-        CA
-      ValidFrom: '2010-02-08 00:00:00'
-      ValidTo: '2020-02-07 23:59:59'
-      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
-      Version: 3
-      TBS:
-        MD5: b30c31a572b0409383ed3fbe17e56e81
-        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
-        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
-        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
-    Signer:
-    - SerialNumber: 4cccaccf48f6d93fb37178d7fce6209c
-      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
-        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
-        CA
-      Version: 1
-  Imphash: 85fd19df117fbc21efbcb1d587063e12
-  LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Tags:
 - viragt.sys
 Verified: 'TRUE'
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+    Command: sc.exe create viragt.sys binPath=C:\windows\temp\viragt.sys type=kernel
+        && sc.exe start viragt.sys
+    Description: ''
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
+Resources:
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+Detection:
+-   type: yara_signature
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e05eeb2b8c18ad2cb2d1038c043d770a0d51b96b748bc34be3e7fc6f3790ce53.yara
+-   type: sigma_hash
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+-   type: sigma_names
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+-   type: sysmon_hash_detect
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+-   type: sysmon_hash_block
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+-   type: yara_signature
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+-   type: sigma_hash
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+-   type: sigma_names
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+-   type: sysmon_hash_detect
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+-   type: sysmon_hash_block
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: ''
+    Person: ''
+KnownVulnerableSamples:
+-   Authentihash:
+        MD5: 333822355a23fbdfb2599a909b3bbc60
+        SHA1: 72886a692656ebe64592a43273d3f59432cfbf9a
+        SHA256: 9f86fc8a6eaa3b38f33be4a0d552c184e575afa50a60df7383c06a394e3926d8
+    Company: TG Soft S.a.s.
+    Copyright: Copyright (C) TG Soft S.a.s. 2006, 2013 - www.tgsoft.it
+    CreationTimestamp: '2013-01-23 01:38:45'
+    Date: ''
+    Description: VirIT Agent System
+    ExportedFunctions: ''
+    FileVersion: 1, 72, 0, 0
+    Filename: viragt.sys
+    ImportedFunctions:
+    - RtlInitAnsiString
+    - wcstombs
+    - ZwOpenKey
+    - ZwSetValueKey
+    - ZwDeleteKey
+    - RtlFormatCurrentUserKeyPath
+    - ZwEnumerateKey
+    - ZwEnumerateValueKey
+    - ZwCreateFile
+    - KeWaitForSingleObject
+    - IofCallDriver
+    - IoBuildSynchronousFsdRequest
+    - KeInitializeEvent
+    - ObfDereferenceObject
+    - IoGetRelatedDeviceObject
+    - ObReferenceObjectByHandle
+    - ZwReadFile
+    - ZwWriteFile
+    - ZwSetInformationFile
+    - ZwOpenProcess
+    - ZwTerminateProcess
+    - _strupr
+    - ZwQuerySystemInformation
+    - IoFreeMdl
+    - MmUnlockPages
+    - MmIsAddressValid
+    - MmProbeAndLockPages
+    - MmMapLockedPagesSpecifyCache
+    - MmBuildMdlForNonPagedPool
+    - IoAllocateMdl
+    - MmIsNonPagedSystemAddressValid
+    - IoGetCurrentProcess
+    - PsLookupProcessByProcessId
+    - IoDeleteDevice
+    - IoDeleteSymbolicLink
+    - RtlInitUnicodeString
+    - sprintf
+    - RtlTimeToTimeFields
+    - ExSystemTimeToLocalTime
+    - KeQuerySystemTime
+    - strstr
+    - KeServiceDescriptorTable
+    - KeReleaseMutex
+    - KeDelayExecutionThread
+    - RtlAnsiStringToUnicodeString
+    - ExQueueWorkItem
+    - KeInsertQueueDpc
+    - KeSetTargetProcessorDpc
+    - KeInitializeDpc
+    - KeNumberProcessors
+    - IofCompleteRequest
+    - memcpy
+    - IoCreateSymbolicLink
+    - IoCreateDevice
+    - PsCreateSystemThread
+    - KeInitializeMutex
+    - ObOpenObjectByName
+    - IoDriverObjectType
+    - ZwOpenDirectoryObject
+    - RtlUnicodeStringToAnsiString
+    - ZwQueryDirectoryObject
+    - IoFileObjectType
+    - swprintf
+    - DbgPrint
+    - IoFreeIrp
+    - MmUnmapLockedPages
+    - KeSetEvent
+    - MmLockPagableSectionByHandle
+    - MmLockPagableDataSection
+    - IoAllocateIrp
+    - _wcsnicmp
+    - RtlCompareMemory
+    - IoBuildDeviceIoControlRequest
+    - _alldiv
+    - wcsrchr
+    - ZwQueryVolumeInformationFile
+    - ZwDeviceIoControlFile
+    - _strnicmp
+    - ZwFsControlFile
+    - _allmul
+    - ObfReferenceObject
+    - _allrem
+    - _stricmp
+    - strrchr
+    - KeQueryActiveProcessors
+    - KeTickCount
+    - KeBugCheckEx
+    - ZwCreateKey
+    - ZwQueryValueKey
+    - ExAllocatePoolWithTag
+    - ExFreePoolWithTag
+    - mbstowcs
+    - ZwClose
+    - memset
+    - PsTerminateSystemThread
+    - ZwQueryInformationFile
+    - RtlUnwind
+    - KeRaiseIrqlToDpcLevel
+    - KfRaiseIrql
+    - KfLowerIrql
+    - KeGetCurrentIrql
+    - READ_PORT_ULONG
+    - WRITE_PORT_UCHAR
+    - READ_PORT_UCHAR
+    - READ_PORT_BUFFER_UCHAR
+    - KeStallExecutionProcessor
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    InternalName: viragt.sys
+    MD5: e79c91c27df3eaf82fb7bd1280172517
+    MachineType: I386
+    MagicHeader: 50 45 0 0
+    OriginalFilename: viragt.sys
+    Product: VirIT Agent System
+    ProductVersion: 1, 72, 0, 0
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: fd47e50698bf05f04850340b52ac1853
+        SHA1: ee25f84fd5c60f82580743dfaab31e2e5e1fbe30
+        SHA256: 44490b82f96dcb06373c259b6532d209604916c484dccba49970a77732bd9906
+    SHA1: cb22723faa5ae2809476e5c5e9b9a597b26cab9b
+    SHA256: e05eeb2b8c18ad2cb2d1038c043d770a0d51b96b748bc34be3e7fc6f3790ce53
+    Sections:
+        .text:
+            Entropy: 6.747532035906447
+            Virtual Size: '0xdbb5'
+        NonPaged:
+            Entropy: 6.71406382908674
+            Virtual Size: '0x7ad'
+        .rdata:
+            Entropy: 5.092975260562714
+            Virtual Size: '0x5d4'
+        .data:
+            Entropy: 0.04519006846517909
+            Virtual Size: '0x364c'
+        INIT:
+            Entropy: 5.662214565720019
+            Virtual Size: '0xa84'
+        .rsrc:
+            Entropy: 3.3233696108191855
+            Virtual Size: '0x430'
+        .reloc:
+            Entropy: 6.276829324907502
+            Virtual Size: '0xf58'
+    Signature:
+    - TG Soft S.a.s. Di Tonello Gianfranco e C.
+    - VeriSign Class 3 Code Signing 2010 CA
+    - VeriSign
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                CA , G2
+            ValidFrom: '2012-12-21 00:00:00'
+            ValidTo: '2020-12-30 23:59:59'
+            Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+            Version: 3
+            TBS:
+                MD5: d0785ad36e427c92b19f6826ab1e8020
+                SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+                SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+                SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                Signer , G4
+            ValidFrom: '2012-10-18 00:00:00'
+            ValidTo: '2020-12-29 23:59:59'
+            Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+            Version: 3
+            TBS:
+                MD5: e9d38360b914c8863f6cba3ee58764d3
+                SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+                SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+                SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006
+                VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public
+                Primary Certification Authority , G5
+            ValidFrom: '2006-11-08 00:00:00'
+            ValidTo: '2021-11-07 23:59:59'
+            Signature: 1302ddf8e88600f25af8f8200c59886207cecef74ef9bb59a198e5e138dd4ebc6618d3adeb18f20dc96d3e4a9420c33cbabd6554c6af44b310ad2c6b3eabd707b6b88163c5f95e2ee52a67cecd330c2ad7895603231fb3bee83a0859b4ec4535f78a5bff66cf50afc66d578d1978b7b9a2d157ea1f9a4bafbac98e127ec6bdff
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
+            Version: 3
+            TBS:
+                MD5: 918d9eb6a6cd36c531eceb926170a7e1
+                SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
+                SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+                SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
+        -   Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification
+                Authority
+            ValidFrom: '2006-05-23 17:01:29'
+            ValidTo: '2016-05-23 17:11:29'
+            Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 610c120600000000001b
+            Version: 3
+            TBS:
+                MD5: 53c41bc1164e09e0cd1617a5bf913efd
+                SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
+                SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+                SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
+        -   Subject: C=IT, ST=Padova, L=Rubano, O=TG Soft S.a.s. Di Tonello Gianfranco
+                e C., OU=Digital ID Class 3 , Microsoft Software Validation v2, CN=TG
+                Soft S.a.s. Di Tonello Gianfranco e C.
+            ValidFrom: '2012-12-31 00:00:00'
+            ValidTo: '2016-02-29 23:59:59'
+            Signature: c7c9efc50350a4c32f6dacc513ba6ac9fe5fd749bd74dcb912bdc41655a751ecd628c0d94677c4bc71424ba27a3b82680532cb0fa85f6d7ae2a5a9b5a0f2c87059ce4c5c80c426bafe6fa0713e23787b5fe5274c659c221a58a376d27d9866a1843d21788bc53012b5af4b9a8787b5a6dd2d41498e60967e5248c6cc8b08ccafc5f39006f0597ae03b91f0aed26337f40550dc1fe4490df7258d2f0bdf0448d5a68c3bb8222007b91f9f83e4813edfb134738bfdd5c5cd9f8413b360231472ec5a22d32e7c6e15b127a34f84edea31ce625a0c87aaa07e31a14221dc51689e68e5a0e13bd563475134ee102e1a86788dc909dbdb4c7a370e0d418c8424e88a14
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 4cccaccf48f6d93fb37178d7fce6209c
+            Version: 3
+            TBS:
+                MD5: 1f0b47e6661a3261d4c982b2eb35b0ec
+                SHA1: 8320a06969446f33184f8a25a91942870a5a54d5
+                SHA256: 15e095f260d9ceca3f947817c1f53ddf687e32438d55a51be1b66785183e9840
+                SHA384: 184afc72b02ad7f852cdc9db26f294ce37ac12ec9ed3375d34acf6918a1662c0afd7d1cc39ecf1decc7e667645a3fc67
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
+                Signing 2010 CA
+            ValidFrom: '2010-02-08 00:00:00'
+            ValidTo: '2020-02-07 23:59:59'
+            Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+            Version: 3
+            TBS:
+                MD5: b30c31a572b0409383ed3fbe17e56e81
+                SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+                SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+                SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
+        Signer:
+        -   SerialNumber: 4cccaccf48f6d93fb37178d7fce6209c
+            Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
+                Signing 2010 CA
+            Version: 1
+    Imphash: 0b663530751cc11f34273fee7921c431
+    LoadsDespiteHVCI: 'FALSE'
+-   Authentihash:
+        MD5: b6d013002983064089233685b9bde66b
+        SHA1: 6db4ed2d751cc8ae376f2dd69e702e9e469ad8c9
+        SHA256: 554bf34bde5e7c86fc463496d19a4369d911ccad90e3c684855192cd677641c4
+    Company: TG Soft S.a.s.
+    Copyright: Copyright (C) TG Soft S.a.s. 2011, 2013 - www.tgsoft.it
+    CreationTimestamp: '2013-11-29 05:03:41'
+    Date: ''
+    Description: VirIT Agent System
+    ExportedFunctions: ''
+    FileVersion: 1, 0, 0, 5
+    Filename: ''
+    ImportedFunctions:
+    - mbstowcs
+    - ExAllocatePoolWithTag
+    - KeSetTargetProcessorDpc
+    - ZwCreateKey
+    - IoDeleteSymbolicLink
+    - ExFreePoolWithTag
+    - KeInitializeMutex
+    - RtlAnsiStringToUnicodeString
+    - ZwReadFile
+    - strstr
+    - RtlInitUnicodeString
+    - IoDeleteDevice
+    - RtlInitAnsiString
+    - ZwSetValueKey
+    - _strupr
+    - KeInitializeDpc
+    - ZwQuerySystemInformation
+    - MmBuildMdlForNonPagedPool
+    - IoFreeMdl
+    - ZwSetInformationFile
+    - KeReleaseMutex
+    - KeDelayExecutionThread
+    - ZwCreateFile
+    - PsCreateSystemThread
+    - MmMapLockedPagesSpecifyCache
+    - ExSystemTimeToLocalTime
+    - ZwQueryValueKey
+    - PsTerminateSystemThread
+    - KeInsertQueueDpc
+    - ZwEnumerateValueKey
+    - ZwClose
+    - sprintf
+    - ObReferenceObjectByHandle
+    - KeWaitForSingleObject
+    - RtlTimeToTimeFields
+    - MmProbeAndLockPages
+    - ZwOpenProcess
+    - MmUnlockPages
+    - IoCreateSymbolicLink
+    - MmIsAddressValid
+    - ObfDereferenceObject
+    - IoCreateDevice
+    - ZwTerminateProcess
+    - KeNumberProcessors
+    - ZwQueryInformationFile
+    - MmIsNonPagedSystemAddressValid
+    - ZwWriteFile
+    - ZwDeleteKey
+    - RtlFormatCurrentUserKeyPath
+    - ZwEnumerateKey
+    - IoAllocateMdl
+    - ZwOpenKey
+    - ObOpenObjectByName
+    - swprintf
+    - RtlUnicodeStringToAnsiString
+    - ZwOpenDirectoryObject
+    - IoFileObjectType
+    - IoDriverObjectType
+    - ZwQueryDirectoryObject
+    - wcstombs
+    - KeQueryActiveProcessors
+    - KeBugCheckEx
+    - IofCompleteRequest
+    - ExQueueWorkItem
+    - __C_specific_handler
+    - __chkstk
+    - KeStallExecutionProcessor
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    InternalName: viragt.sys
+    MD5: ab7b28b532beba6a6c0217bc406b80ee
+    MachineType: AMD64
+    MagicHeader: 50 45 0 0
+    OriginalFilename: viragt64.sys
+    PDBPath: ''
+    Product: VirIT Agent System
+    ProductVersion: 1, 0, 0, 5
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: a93c261e407f22e8e9e11096ef7669a4
+        SHA1: 579ea1a06578ca54a9b86ccfa3c06b3be01831bf
+        SHA256: b566c96b0a5ca93fe5cdd066966b85657108a1cc6eadb0b683932c781d3a3510
+    SHA1: f7b3457a6fd008656e7216b1f09db2ff062f1ca4
+    SHA256: a2096b460e31451659b0dde752264c362f47254c8191930bc921ff16a4311641
+    Sections:
+        .text:
+            Entropy: 6.3652977072668016
+            Virtual Size: '0xb1da'
+        .rdata:
+            Entropy: 4.99053189312109
+            Virtual Size: '0xc04'
+        .data:
+            Entropy: 0.9258397206248276
+            Virtual Size: '0x3878'
+        .pdata:
+            Entropy: 4.342028159341795
+            Virtual Size: '0x318'
+        INIT:
+            Entropy: 5.227110365700928
+            Virtual Size: '0x842'
+        .rsrc:
+            Entropy: 3.311386289808379
+            Virtual Size: '0x438'
+        .reloc:
+            Entropy: 2.4073102722120714
+            Virtual Size: '0x138'
+    Signature: ''
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                CA , G2
+            ValidFrom: '2012-12-21 00:00:00'
+            ValidTo: '2020-12-30 23:59:59'
+            Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+            Version: 3
+            TBS:
+                MD5: d0785ad36e427c92b19f6826ab1e8020
+                SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+                SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+                SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                Signer , G4
+            ValidFrom: '2012-10-18 00:00:00'
+            ValidTo: '2020-12-29 23:59:59'
+            Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+            Version: 3
+            TBS:
+                MD5: e9d38360b914c8863f6cba3ee58764d3
+                SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+                SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+                SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006
+                VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public
+                Primary Certification Authority , G5
+            ValidFrom: '2006-11-08 00:00:00'
+            ValidTo: '2021-11-07 23:59:59'
+            Signature: 1302ddf8e88600f25af8f8200c59886207cecef74ef9bb59a198e5e138dd4ebc6618d3adeb18f20dc96d3e4a9420c33cbabd6554c6af44b310ad2c6b3eabd707b6b88163c5f95e2ee52a67cecd330c2ad7895603231fb3bee83a0859b4ec4535f78a5bff66cf50afc66d578d1978b7b9a2d157ea1f9a4bafbac98e127ec6bdff
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
+            Version: 3
+            TBS:
+                MD5: 918d9eb6a6cd36c531eceb926170a7e1
+                SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
+                SHA256: 47c46e6eaa3780eace3d0d891346cd373359d246b21a957219dbab4c8f37c166
+                SHA384: e54017c93ba52f012cc15aeb3bcbce1e90a0006ff8dca231a24fc572926770f63213343f538003407bed3463fa9c4a85
+        -   Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification
+                Authority
+            ValidFrom: '2006-05-23 17:01:29'
+            ValidTo: '2016-05-23 17:11:29'
+            Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 610c120600000000001b
+            Version: 3
+            TBS:
+                MD5: 53c41bc1164e09e0cd1617a5bf913efd
+                SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
+                SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+                SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
+        -   Subject: C=IT, ST=Padova, L=Rubano, O=TG Soft S.a.s. Di Tonello Gianfranco
+                e C., OU=Digital ID Class 3 , Microsoft Software Validation v2, CN=TG
+                Soft S.a.s. Di Tonello Gianfranco e C.
+            ValidFrom: '2012-12-31 00:00:00'
+            ValidTo: '2016-02-29 23:59:59'
+            Signature: c7c9efc50350a4c32f6dacc513ba6ac9fe5fd749bd74dcb912bdc41655a751ecd628c0d94677c4bc71424ba27a3b82680532cb0fa85f6d7ae2a5a9b5a0f2c87059ce4c5c80c426bafe6fa0713e23787b5fe5274c659c221a58a376d27d9866a1843d21788bc53012b5af4b9a8787b5a6dd2d41498e60967e5248c6cc8b08ccafc5f39006f0597ae03b91f0aed26337f40550dc1fe4490df7258d2f0bdf0448d5a68c3bb8222007b91f9f83e4813edfb134738bfdd5c5cd9f8413b360231472ec5a22d32e7c6e15b127a34f84edea31ce625a0c87aaa07e31a14221dc51689e68e5a0e13bd563475134ee102e1a86788dc909dbdb4c7a370e0d418c8424e88a14
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 4cccaccf48f6d93fb37178d7fce6209c
+            Version: 3
+            TBS:
+                MD5: 1f0b47e6661a3261d4c982b2eb35b0ec
+                SHA1: 8320a06969446f33184f8a25a91942870a5a54d5
+                SHA256: 15e095f260d9ceca3f947817c1f53ddf687e32438d55a51be1b66785183e9840
+                SHA384: 184afc72b02ad7f852cdc9db26f294ce37ac12ec9ed3375d34acf6918a1662c0afd7d1cc39ecf1decc7e667645a3fc67
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
+                Signing 2010 CA
+            ValidFrom: '2010-02-08 00:00:00'
+            ValidTo: '2020-02-07 23:59:59'
+            Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+            Version: 3
+            TBS:
+                MD5: b30c31a572b0409383ed3fbe17e56e81
+                SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+                SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+                SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
+        Signer:
+        -   SerialNumber: 4cccaccf48f6d93fb37178d7fce6209c
+            Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
+                Signing 2010 CA
+            Version: 1
+    Imphash: 85fd19df117fbc21efbcb1d587063e12
+    LoadsDespiteHVCI: 'FALSE'

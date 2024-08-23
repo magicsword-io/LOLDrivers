@@ -1,229 +1,230 @@
-Acknowledgement:
-  Handle: hfiref0x
-  Person: hfiref0x
+Id: f4c22f4d-eff8-40c5-8b31-146abe5f17b7
+Tags:
+- physmem.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: sc.exe create physmem.sys binPath=C:\windows\temp\physmem.sys type=kernel
-    && sc.exe start physmem.sys
-  Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c299063e3eae8ddc15839767e83b9808fd43418dc5a1af7e4f44b97ba53fbd3d.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: f4c22f4d-eff8-40c5-8b31-146abe5f17b7
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: physmem.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 589a7d4df869395601ba7538a65afae8c4616385
-  Signature: []
-  LoadsDespiteHVCI: 'TRUE'
-- Authentihash:
-    MD5: f2cd816e7f899442730b832a2e03797e
-    SHA1: fd0cb3ea1deb4fdb22536a7c15669eb53315e5c8
-    SHA256: 03a831e18d933954d432187835e0d6aea8bf10fd84dfbe36a23366e2b0538a11
-  Company: "Hilscher Gesellschaft f\xFCr Systemaoutomation mbH"
-  Copyright: "\xA9 Hilscher Gesellschaft f\xFCr Systemaoutomation mbH. All rights\
-    \ reserved."
-  CreationTimestamp: '2015-03-03 03:41:21'
-  Date: ''
-  Description: Physical Memory Access Driver
-  ExportedFunctions: ''
-  FileVersion: 1.0.0.0
-  Filename: physmem.sys
-  ImportedFunctions:
-  - IoDeleteSymbolicLink
-  - ExFreePoolWithTag
-  - RtlInitUnicodeString
-  - IoDeleteDevice
-  - MmUnmapIoSpace
-  - MmMapIoSpace
-  - IofCompleteRequest
-  - IoCreateSymbolicLink
-  - ExAllocatePoolWithQuotaTag
-  - KeBugCheckEx
-  - MmGetSystemRoutineAddress
-  - IoCreateDevice
-  - ZwClose
-  - ObOpenObjectByPointer
-  - ZwSetSecurityObject
-  - IoDeviceObjectType
-  - _snwprintf
-  - RtlLengthSecurityDescriptor
-  - SeCaptureSecurityDescriptor
-  - RtlCreateSecurityDescriptor
-  - RtlSetDaclSecurityDescriptor
-  - RtlAbsoluteToSelfRelativeSD
-  - IoIsWdmVersionAvailable
-  - SeExports
-  - wcschr
-  - _wcsnicmp
-  - ExAllocatePoolWithTag
-  - RtlLengthSid
-  - RtlAddAccessAllowedAce
-  - RtlGetSaclSecurityDescriptor
-  - RtlGetDaclSecurityDescriptor
-  - RtlGetGroupSecurityDescriptor
-  - RtlGetOwnerSecurityDescriptor
-  - ZwOpenKey
-  - ZwCreateKey
-  - ZwQueryValueKey
-  - ZwSetValueKey
-  - RtlFreeUnicodeString
-  Imports:
-  - ntoskrnl.exe
-  InternalName: physmem.sys
-  MD5: a0e2223868b6133c5712ba5ed20c3e8a
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: physmem.sys
-  Product: Physical Memory Access Driver
-  ProductVersion: 1.0.0.0
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: e6cc56ca27c747f0eac9bf069c3fa6bd
-    SHA1: fbccb687d26acddde11a3bdffffc25f203c5e2c5
-    SHA256: 2587386d839f45995acd720c0492f5cd11a36b6ad2ec4c4e43d7b2a4abfe38f2
-  SHA1: 17614fdee3b89272e99758983b99111cbb1b312c
-  SHA256: c299063e3eae8ddc15839767e83b9808fd43418dc5a1af7e4f44b97ba53fbd3d
-  Sections:
-    .text:
-      Entropy: 6.027791363175618
-      Virtual Size: '0x9a4'
-    .rdata:
-      Entropy: 4.406909342132945
-      Virtual Size: '0x6a4'
-    .data:
-      Entropy: 1.4415102248217193
-      Virtual Size: '0x2fc'
-    .pdata:
-      Entropy: 4.084260584440838
-      Virtual Size: '0x234'
-    PAGE:
-      Entropy: 6.207000209026155
-      Virtual Size: '0x1b74'
-    INIT:
-      Entropy: 5.390231391811294
-      Virtual Size: '0x72e'
-    .rsrc:
-      Entropy: 3.2825157034395094
-      Virtual Size: '0x410'
-    .reloc:
-      Entropy: 1.2280731978955797
-      Virtual Size: '0x60'
-  Signature: []
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Timestamping CA , G2
-      ValidFrom: '2011-04-13 10:00:00'
-      ValidTo: '2028-01-28 12:00:00'
-      Signature: 4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 0400000000012f4ee152d7
-      Version: 3
-      TBS:
-        MD5: e140543fe3256027cfa79fc3c19c1776
-        SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
-        SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
-        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
-    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-      ValidFrom: '2011-04-13 10:00:00'
-      ValidTo: '2019-04-13 10:00:00'
-      Signature: 225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 0400000000012f4ee1355c
-      Version: 3
-      TBS:
-        MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
-        SHA1: 589a7d4df869395601ba7538a65afae8c4616385
-        SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
-        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
-    - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
-        , G1
-      ValidFrom: '2013-08-23 00:00:00'
-      ValidTo: '2024-09-23 00:00:00'
-      Signature: 0231142e5857644185e8af12753c881cc35eec2ce9a13cf5baaa531db9d12963dc436786d439dadec6c9ffbe4585f4a4d7c151ea18ee40585ee67bcca241291338c8ea21169cce90a62efba6cad994df401df902182bbef65d4f9fff9a48dbc50509ca80cea0f9dc4bc323e6038fb4b4af5b71296191181a6b7af2fd0dd1cd7d5e98ebba705ee5f4ea43de353dc514818adb3e105ebb72faa1a093ab031cc1653c91138b045d2bc4b9161bcc55c50ce8abe743c9b28328a5531347ab3964b91cea3430b176009521f1d43da8fda00032d76e983ca69c3b0b83becbb8bb2a268c59b8b9aeaf26ace234a2dc210d810b3813f745a3e3dbc4aca16d1bb7e5615cd7
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 1121405c1f0ed258882be54d8686ba11ea45
-      Version: 3
-      TBS:
-        MD5: b95cbc184d388718612d5933f7b36770
-        SHA1: ff124c5d160710720108616ffee99bbe090ed363
-        SHA256: 13027620255363f07bbf85ae7d0dc06c07d8b0f4368b12f983ee3f4fce605733
-        SHA384: f42ed00f615f2822dcd3d33794477428afb52ddab932ebcde3586f92a27e18f9faba6b3334ca4e59e0cb24bdbf8395a6
-    - Subject: C=DE, ST=Hessen, L=Hattersheim, O=Hilscher Gesellschaft fuer Systemautomation
-        mbH, OU=Entwicklung, CN=Hilscher Gesellschaft fuer Systemautomation mbH
-      ValidFrom: '2012-10-16 17:12:03'
-      ValidTo: '2015-10-17 17:12:03'
-      Signature: a36a6ca0e8d7a5e3bdcde809e45422bdebd5f09b9a38ed003a7ceeb21a000268ccdd35e5887ed196c4a6d0994d557138e23bd2591e6e2e09008f3e8c62983609f12c4b910b4a17c32a772bc473321142415fd35003967debc7c029460615ed66fd427d1b440fa7ed2190ff6afd85e35bb9879b9b76959d9ebd661cd87b15e38b030610b1c88f9f36b4515a0b085c56cb9fd04623de00fe27d3ae86138c9c6ac9170f26314bad5c9225d7d27ab80a1f767d8db55ef55ccc8b544e465ff5243059f7e9af7d50b8493cbdb0f5a178669b870c1dc0e7cfdc6ed902837c94a0b972f273c3e8b3f3142aab2bd9f4c29e671a8f5655e39579d015488d50b5ed23a5b687
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 1121d48f27abe17574473e4066a863792d46
-      Version: 3
-      TBS:
-        MD5: a0b38273556ad764038918e68194eec5
-        SHA1: d56fdcc2f77abef441098296982738c5ee38a581
-        SHA256: a05023adb30251cf5d067da276c9cbac05e6c6effcd4af6afbc7f0da0b028c36
-        SHA384: 22132b899076c26e5398232e59454abe49d2a22eb701dca9924da4bc7da6eb18c677c4d4a980bb6b1b0fb0e8cad2fd2a
-    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
-      ValidFrom: '2011-04-15 19:55:08'
-      ValidTo: '2021-04-15 20:05:08'
-      Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 6129152700000000002a
-      Version: 3
-      TBS:
-        MD5: 0bb058d116f02817737920f112d9fd3b
-        SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
-        SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
-        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
-    Signer:
-    - SerialNumber: 1121d48f27abe17574473e4066a863792d46
-      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-      Version: 1
-  Imphash: e5af2438da6df2aa9750aa632c80cfa4
-  LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
+    Command: sc.exe create physmem.sys binPath=C:\windows\temp\physmem.sys type=kernel
+        && sc.exe start physmem.sys
+    Description: ''
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
 Resources:
 - https://github.com/jbaines-r7/dellicious
 - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
 - https://github.com/magicsword-io/LOLDrivers/issues/55
 - https://github.com/hfiref0x/KDU
-Tags:
-- physmem.sys
-Verified: 'TRUE'
+Detection:
+-   type: yara_signature
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c299063e3eae8ddc15839767e83b9808fd43418dc5a1af7e4f44b97ba53fbd3d.yara
+-   type: sigma_hash
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+-   type: sigma_names
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+-   type: sysmon_hash_detect
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+-   type: sysmon_hash_block
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+-   type: yara_signature
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+-   type: sigma_hash
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+-   type: sigma_names
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+-   type: sysmon_hash_detect
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+-   type: sysmon_hash_block
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Handle: hfiref0x
+    Person: hfiref0x
+KnownVulnerableSamples:
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: physmem.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: 589a7d4df869395601ba7538a65afae8c4616385
+    Signature: []
+    LoadsDespiteHVCI: 'TRUE'
+-   Authentihash:
+        MD5: f2cd816e7f899442730b832a2e03797e
+        SHA1: fd0cb3ea1deb4fdb22536a7c15669eb53315e5c8
+        SHA256: 03a831e18d933954d432187835e0d6aea8bf10fd84dfbe36a23366e2b0538a11
+    Company: "Hilscher Gesellschaft f\xFCr Systemaoutomation mbH"
+    Copyright: "\xA9 Hilscher Gesellschaft f\xFCr Systemaoutomation mbH. All rights\
+        \ reserved."
+    CreationTimestamp: '2015-03-03 03:41:21'
+    Date: ''
+    Description: Physical Memory Access Driver
+    ExportedFunctions: ''
+    FileVersion: 1.0.0.0
+    Filename: physmem.sys
+    ImportedFunctions:
+    - IoDeleteSymbolicLink
+    - ExFreePoolWithTag
+    - RtlInitUnicodeString
+    - IoDeleteDevice
+    - MmUnmapIoSpace
+    - MmMapIoSpace
+    - IofCompleteRequest
+    - IoCreateSymbolicLink
+    - ExAllocatePoolWithQuotaTag
+    - KeBugCheckEx
+    - MmGetSystemRoutineAddress
+    - IoCreateDevice
+    - ZwClose
+    - ObOpenObjectByPointer
+    - ZwSetSecurityObject
+    - IoDeviceObjectType
+    - _snwprintf
+    - RtlLengthSecurityDescriptor
+    - SeCaptureSecurityDescriptor
+    - RtlCreateSecurityDescriptor
+    - RtlSetDaclSecurityDescriptor
+    - RtlAbsoluteToSelfRelativeSD
+    - IoIsWdmVersionAvailable
+    - SeExports
+    - wcschr
+    - _wcsnicmp
+    - ExAllocatePoolWithTag
+    - RtlLengthSid
+    - RtlAddAccessAllowedAce
+    - RtlGetSaclSecurityDescriptor
+    - RtlGetDaclSecurityDescriptor
+    - RtlGetGroupSecurityDescriptor
+    - RtlGetOwnerSecurityDescriptor
+    - ZwOpenKey
+    - ZwCreateKey
+    - ZwQueryValueKey
+    - ZwSetValueKey
+    - RtlFreeUnicodeString
+    Imports:
+    - ntoskrnl.exe
+    InternalName: physmem.sys
+    MD5: a0e2223868b6133c5712ba5ed20c3e8a
+    MachineType: AMD64
+    MagicHeader: 50 45 0 0
+    OriginalFilename: physmem.sys
+    Product: Physical Memory Access Driver
+    ProductVersion: 1.0.0.0
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: e6cc56ca27c747f0eac9bf069c3fa6bd
+        SHA1: fbccb687d26acddde11a3bdffffc25f203c5e2c5
+        SHA256: 2587386d839f45995acd720c0492f5cd11a36b6ad2ec4c4e43d7b2a4abfe38f2
+    SHA1: 17614fdee3b89272e99758983b99111cbb1b312c
+    SHA256: c299063e3eae8ddc15839767e83b9808fd43418dc5a1af7e4f44b97ba53fbd3d
+    Sections:
+        .text:
+            Entropy: 6.027791363175618
+            Virtual Size: '0x9a4'
+        .rdata:
+            Entropy: 4.406909342132945
+            Virtual Size: '0x6a4'
+        .data:
+            Entropy: 1.4415102248217193
+            Virtual Size: '0x2fc'
+        .pdata:
+            Entropy: 4.084260584440838
+            Virtual Size: '0x234'
+        PAGE:
+            Entropy: 6.207000209026155
+            Virtual Size: '0x1b74'
+        INIT:
+            Entropy: 5.390231391811294
+            Virtual Size: '0x72e'
+        .rsrc:
+            Entropy: 3.2825157034395094
+            Virtual Size: '0x410'
+        .reloc:
+            Entropy: 1.2280731978955797
+            Virtual Size: '0x60'
+    Signature: []
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Timestamping CA , G2
+            ValidFrom: '2011-04-13 10:00:00'
+            ValidTo: '2028-01-28 12:00:00'
+            Signature: 4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 0400000000012f4ee152d7
+            Version: 3
+            TBS:
+                MD5: e140543fe3256027cfa79fc3c19c1776
+                SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
+                SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+                SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
+        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
+            ValidFrom: '2011-04-13 10:00:00'
+            ValidTo: '2019-04-13 10:00:00'
+            Signature: 225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 0400000000012f4ee1355c
+            Version: 3
+            TBS:
+                MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
+                SHA1: 589a7d4df869395601ba7538a65afae8c4616385
+                SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+                SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
+        -   Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
+                , G1
+            ValidFrom: '2013-08-23 00:00:00'
+            ValidTo: '2024-09-23 00:00:00'
+            Signature: 0231142e5857644185e8af12753c881cc35eec2ce9a13cf5baaa531db9d12963dc436786d439dadec6c9ffbe4585f4a4d7c151ea18ee40585ee67bcca241291338c8ea21169cce90a62efba6cad994df401df902182bbef65d4f9fff9a48dbc50509ca80cea0f9dc4bc323e6038fb4b4af5b71296191181a6b7af2fd0dd1cd7d5e98ebba705ee5f4ea43de353dc514818adb3e105ebb72faa1a093ab031cc1653c91138b045d2bc4b9161bcc55c50ce8abe743c9b28328a5531347ab3964b91cea3430b176009521f1d43da8fda00032d76e983ca69c3b0b83becbb8bb2a268c59b8b9aeaf26ace234a2dc210d810b3813f745a3e3dbc4aca16d1bb7e5615cd7
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 1121405c1f0ed258882be54d8686ba11ea45
+            Version: 3
+            TBS:
+                MD5: b95cbc184d388718612d5933f7b36770
+                SHA1: ff124c5d160710720108616ffee99bbe090ed363
+                SHA256: 13027620255363f07bbf85ae7d0dc06c07d8b0f4368b12f983ee3f4fce605733
+                SHA384: f42ed00f615f2822dcd3d33794477428afb52ddab932ebcde3586f92a27e18f9faba6b3334ca4e59e0cb24bdbf8395a6
+        -   Subject: C=DE, ST=Hessen, L=Hattersheim, O=Hilscher Gesellschaft fuer
+                Systemautomation mbH, OU=Entwicklung, CN=Hilscher Gesellschaft fuer
+                Systemautomation mbH
+            ValidFrom: '2012-10-16 17:12:03'
+            ValidTo: '2015-10-17 17:12:03'
+            Signature: a36a6ca0e8d7a5e3bdcde809e45422bdebd5f09b9a38ed003a7ceeb21a000268ccdd35e5887ed196c4a6d0994d557138e23bd2591e6e2e09008f3e8c62983609f12c4b910b4a17c32a772bc473321142415fd35003967debc7c029460615ed66fd427d1b440fa7ed2190ff6afd85e35bb9879b9b76959d9ebd661cd87b15e38b030610b1c88f9f36b4515a0b085c56cb9fd04623de00fe27d3ae86138c9c6ac9170f26314bad5c9225d7d27ab80a1f767d8db55ef55ccc8b544e465ff5243059f7e9af7d50b8493cbdb0f5a178669b870c1dc0e7cfdc6ed902837c94a0b972f273c3e8b3f3142aab2bd9f4c29e671a8f5655e39579d015488d50b5ed23a5b687
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 1121d48f27abe17574473e4066a863792d46
+            Version: 3
+            TBS:
+                MD5: a0b38273556ad764038918e68194eec5
+                SHA1: d56fdcc2f77abef441098296982738c5ee38a581
+                SHA256: a05023adb30251cf5d067da276c9cbac05e6c6effcd4af6afbc7f0da0b028c36
+                SHA384: 22132b899076c26e5398232e59454abe49d2a22eb701dca9924da4bc7da6eb18c677c4d4a980bb6b1b0fb0e8cad2fd2a
+        -   Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+            ValidFrom: '2011-04-15 19:55:08'
+            ValidTo: '2021-04-15 20:05:08'
+            Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 6129152700000000002a
+            Version: 3
+            TBS:
+                MD5: 0bb058d116f02817737920f112d9fd3b
+                SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
+                SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+                SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
+        Signer:
+        -   SerialNumber: 1121d48f27abe17574473e4066a863792d46
+            Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
+            Version: 1
+    Imphash: e5af2438da6df2aa9750aa632c80cfa4
+    LoadsDespiteHVCI: 'FALSE'

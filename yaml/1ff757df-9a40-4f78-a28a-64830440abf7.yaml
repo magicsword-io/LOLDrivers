@@ -1,318 +1,318 @@
 Id: 1ff757df-9a40-4f78-a28a-64830440abf7
+Tags:
+- winio64.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
-  Command: sc.exe create winio64.sys binPath=C:\windows\temp\winio64.sys type=kernel
-    && sc.exe start winio64.sys
-  Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
-  OperatingSystem: Windows 10
+    Command: sc.exe create winio64.sys binPath=C:\windows\temp\winio64.sys type=kernel
+        && sc.exe start winio64.sys
+    Description: ''
+    Usecase: Elevate privileges
+    Privileges: kernel
+    OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection: []
+Acknowledgement:
+    Person: ''
+    Handle: ''
 KnownVulnerableSamples:
-- Filename: winio64.sys
-  MD5: 8fc6cafd4e63a3271edf6a1897a892ae
-  SHA1: f8d7369527cc6976283cc73cd761f93bd1cec49d
-  SHA256: 15fb486b6b8c2a2f1b067f48fba10c2f164638fe5e6cee618fb84463578ecac9
-  Authentihash:
-    MD5: 241252e4ebe7b4fdf6fd5a34ece5b127
-    SHA1: eaba3ed3a83a8ef75db88c1f0def5160c3835a8c
-    SHA256: cb5ebba562c33ef2ed93558913792726c8c2e5898531923589122ae31db64ebb
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
-  MachineType: AMD64
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  - WDFLDR.SYS
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - ObfDereferenceObject
-  - ZwClose
-  - ZwOpenSection
-  - ObReferenceObjectByHandle
-  - ZwUnmapViewOfSection
-  - KeBugCheckEx
-  - IoDeleteSymbolicLink
-  - IoDeleteDevice
-  - RtlCopyUnicodeString
-  - IoCreateSymbolicLink
-  - IoCreateDevice
-  - IofCompleteRequest
-  - ZwMapViewOfSection
-  - RtlInitUnicodeString
-  - HalTranslateBusAddress
-  - WdfVersionUnbind
-  - WdfVersionBind
-  - WdfVersionBindClass
-  - WdfVersionUnbindClass
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
-        , G2
-      ValidFrom: '2012-12-21 00:00:00'
-      ValidTo: '2020-12-30 23:59:59'
-      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
-      Version: 3
-      TBS:
-        MD5: d0785ad36e427c92b19f6826ab1e8020
-        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
-        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
-        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
-        , G4
-      ValidFrom: '2012-10-18 00:00:00'
-      ValidTo: '2020-12-29 23:59:59'
-      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
-      Version: 3
-      TBS:
-        MD5: e9d38360b914c8863f6cba3ee58764d3
-        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
-        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
-        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
-    - Subject: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom
-        Certification Authority
-      ValidFrom: '2011-04-15 20:13:19'
-      ValidTo: '2021-04-15 20:23:19'
-      Signature: 375933ca5e487d489a5be42fdbdb59a8c61f77c0a58747e86508c6672688d95c58e2c631ac0c32b96f7cc58748db2c0a23484d0dcf1116ef60577ed5326e22de373cc7dc16f3c9ce2939fb37daf5e4e741d8a2f82db3498a601f64ef9c1364b3469a82cc650f18550776c9e9337790a644daefa64d551038316f3a58ed31486190c04615b4c0a64e5493c00db524e55017c6d62392226992e0abab297508255399959f50b65b6753aaa2ba905a6ea3e35b5c830e54426dbdb917a8205284b51a4fb24d68d2c28ff8f9ae837c24a6e6c17f9a932f2e550df87bc1be336fab0cd934585c9c40ce284a015529655d5bfd525a54591171470b3eff2c9ae931d9046a33871d2f880fc99aab14a8c20b4f8589ac25490dff54395513d6b84d6bf44aad1833bc8e0052b476c2eccd8beb60d57880844a0eb93d4d560d1b17176f60fcdbd867cd3d4082b55c567f8d274cc76d5da410b57c410c39912f41d2c6310686eb405087d8131e852f10448b7a0361693b29fedfcdd3e07d19ba3b84e34e9ad78c7cd73d9dd7fd50108f06683bd8be3bbbaa284552eadde83a334caf38c715e3e97cee83eb2a1cbdd8fdf5394e7c5f25b39349ca88e56152f0dd14f8394ead47182aefcc6b29493fd7a48e7abd6f6bee675db7b167a60055014532b842fe96fc06b9cecfcff9fb6eab728718451afce3846a414f36714c77eea3191ab87d098c01
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 6139bb9c000000000033
-      Version: 3
-      TBS:
-        MD5: 5b3304180221a8328ce477b1fd93898f
-        SHA1: 9b7f1e1653a52d801387f1e51d17fabb8d435d0c
-        SHA256: 67070bcf2ee304cedd252a1dd8a7222c1be50fd2d5eabef9446cb633e133d264
-        SHA384: be36b1ba9a006afb9eb53263634cb8ca38dd6ca7f95ec56f943324f3a26f9c34c2dff1a3a5c72c88513e23e1f20c8824
-    - Subject: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom
-        Class 3 Primary Intermediate Object CA
-      ValidFrom: '2007-10-24 22:03:55'
-      ValidTo: '2017-10-24 22:03:55'
-      Signature: b8eba5382cab9038cfbe906919952f964e48103545b043712eb90e670f618458ed651ae0d8515c96c4df69cafb62bf35ea4a6923f2f67f60db652925e8ba5ef9485920745c9998fa7ed74eaf43963b88880e81f1d0a6a9af1df5e73e045be8927b624a531d3b7aaf94a20502da0fada1a732166a1d5d88f1ddc5da7e91b00a53124ddbefcdea9f48dfbfb27c0192f9816379a06f0e97d99044a550b8874b5cd89ca27aad4b91f31174e6a82342d4265ca83d85a035ec5308ddb62d1c21c8484ac4c83ab06e2f43e6df64097586fe0e68d26354a066e49eefdb5c74a0a8dc40e97b67d63b3ed286d31621d1e13252a3e6c2e1637e74431abeec29ae56e11811fa650b37340eb44799f86fb4994ed235b04764b5fee9afb69a23c282c838b6d4a42e3421ce03ef4c3841502f0dad40c82827e9eb7c2bd1704e2c8818c87c3f24505dcb5354679fd7a109980b0b8b2169ba72a6127bb05a0e697cc706ba2c7a950f079463235657a5382a63c4206a9e84438fdad8d03fd07d9592132916c0d868cae5fe7598b6f410e17c309eb990292035e31c56b30afd86717cfbbc0b2e8c94e35469c4784d1e0af80f33b9e256d789841c9cdf6fc50b8f998351066b441d6f30bcbef93a190bccfae6bc223f3d5475b80a647f7f65bba29049c3f227f7bbb97eb7688782cd43ec6cacab29c7d040e2bb3a0218315077ae33b1a9a8c62d4570ff
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: '26'
-      Version: 3
-      TBS:
-        MD5: 40b719dc6e7a16f1672333943daca04b
-        SHA1: fbb05f9486d50f8f35013e531f1504e9f62cb3df
-        SHA256: 4997f6bbc707da19c7897e17a916d35dfbd8112bb671ac5d2d9397c690b7ba5c
-        SHA384: f73bf1c578a221661f96516389fd512e150551bab68487c981a2dfbb172419e2d2e5b00f52b50a251b9ff5dcb0be83df
-    - Subject: ??=Hdgwyqp6jNS97z8P, C=US, ST=Indiana, L=Fishers, O=Exacq Technologies,
-        Inc., CN=Exacq Technologies, Inc., emailAddress=info@exacq.com
-      ValidFrom: '2014-07-24 18:00:20'
-      ValidTo: '2017-07-24 09:00:56'
-      Signature: b4fea6e9fcf641e617b115ceca7bf10bbdcce8ed5a6644fe006af7a42a7e67ce269bef720dc937e258a7df51c342f9b00a5202ee5d651f76a3d1a7729cacb3db6a811d17df6042f447a26544de87b59d9d241a7446af330bd89fae3f9a07f8ea86ae276fb5f0c325ac0b7ba62c7e58a551e319daf55bfb4a1cde484b9519fb07f7f4801afe43ed99b6275cc66d36c23d0b1aebf05bebd79a1f16f7084c5bc1b2d935e6868ed0e1ca7100a6ef14af0194439e0e33de20ab71e5fe453c632c6686dbc5ecb969619e8519fd5f79da2ddf35936daa73c0c6216661e290de4d6473b3a1a964917567692568e8365de7ed1e4801749a004b915e58755de83a0e23f2e3
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 0f69
-      Version: 3
-      TBS:
-        MD5: f5497dbe7af27561736a3ba6935044e8
-        SHA1: 50728ba20d7ee0726bb8aa4a9d9659f7c938830f
-        SHA256: e468a80174391ca98a6720033afaec1f31468ac2aeee5938ff0350977ec443fe
-        SHA384: 5b5ae06ffc6250a52e3085bc0c8da4f74d722ff772535cb5f14588218b3dcad60f5b09c79afb2e189b4f60a11e286f63
-    Signer:
-    - SerialNumber: 0f69
-      Issuer: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom
-        Class 3 Primary Intermediate Object CA
-      Version: 1
-  RichPEHeaderHash:
-    MD5: 01fa87d3ec80d5af5f5d299a66795493
-    SHA1: 5957eeee532c4f376ed95fb03784c5051dd8c097
-    SHA256: 39f1dcdc4eeab157c00e38de7f5f1aff3b162318d5c9e33e8f63becae1850eb2
-  Sections:
-    .text:
-      Entropy: 6.0566282345703675
-      Virtual Size: '0xdbe'
-    .rdata:
-      Entropy: 3.918940983915505
-      Virtual Size: '0x2b4'
-    .data:
-      Entropy: 0.632570099181397
-      Virtual Size: '0x1028'
-    .pdata:
-      Entropy: 3.595150149062291
-      Virtual Size: '0xc0'
-    INIT:
-      Entropy: 4.92328698169394
-      Virtual Size: '0x326'
-    .reloc:
-      Entropy: 1.4575187496394217
-      Virtual Size: '0x30'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-05-19 09:29:34'
-  Imphash: 9e15ce38f071c916bea830247f1241bb
-  LoadsDespiteHVCI: 'TRUE'
-- Filename: WinIo64.sys
-  MD5: 7c0b186d1912686cfcb8cd9cdebabe58
-  SHA1: 6bb68e1894bfbc1ac86bcdc048f7fe7743de2f92
-  SHA256: dbe9f17313e1164f06401234b875fbc7f71d41dc7271de643865af1358841fef
-  Authentihash:
-    MD5: 241252e4ebe7b4fdf6fd5a34ece5b127
-    SHA1: eaba3ed3a83a8ef75db88c1f0def5160c3835a8c
-    SHA256: cb5ebba562c33ef2ed93558913792726c8c2e5898531923589122ae31db64ebb
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
-  MachineType: AMD64
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  - WDFLDR.SYS
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - ObfDereferenceObject
-  - ZwClose
-  - ZwOpenSection
-  - ObReferenceObjectByHandle
-  - ZwUnmapViewOfSection
-  - KeBugCheckEx
-  - IoDeleteSymbolicLink
-  - IoDeleteDevice
-  - RtlCopyUnicodeString
-  - IoCreateSymbolicLink
-  - IoCreateDevice
-  - IofCompleteRequest
-  - ZwMapViewOfSection
-  - RtlInitUnicodeString
-  - HalTranslateBusAddress
-  - WdfVersionUnbind
-  - WdfVersionBind
-  - WdfVersionBindClass
-  - WdfVersionUnbindClass
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
-        , G2
-      ValidFrom: '2012-12-21 00:00:00'
-      ValidTo: '2020-12-30 23:59:59'
-      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
-      Version: 3
-      TBS:
-        MD5: d0785ad36e427c92b19f6826ab1e8020
-        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
-        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
-        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
-        , G4
-      ValidFrom: '2012-10-18 00:00:00'
-      ValidTo: '2020-12-29 23:59:59'
-      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
-      Version: 3
-      TBS:
-        MD5: e9d38360b914c8863f6cba3ee58764d3
-        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
-        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
-        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
-    - Subject: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom
-        Certification Authority
-      ValidFrom: '2011-04-15 20:13:19'
-      ValidTo: '2021-04-15 20:23:19'
-      Signature: 375933ca5e487d489a5be42fdbdb59a8c61f77c0a58747e86508c6672688d95c58e2c631ac0c32b96f7cc58748db2c0a23484d0dcf1116ef60577ed5326e22de373cc7dc16f3c9ce2939fb37daf5e4e741d8a2f82db3498a601f64ef9c1364b3469a82cc650f18550776c9e9337790a644daefa64d551038316f3a58ed31486190c04615b4c0a64e5493c00db524e55017c6d62392226992e0abab297508255399959f50b65b6753aaa2ba905a6ea3e35b5c830e54426dbdb917a8205284b51a4fb24d68d2c28ff8f9ae837c24a6e6c17f9a932f2e550df87bc1be336fab0cd934585c9c40ce284a015529655d5bfd525a54591171470b3eff2c9ae931d9046a33871d2f880fc99aab14a8c20b4f8589ac25490dff54395513d6b84d6bf44aad1833bc8e0052b476c2eccd8beb60d57880844a0eb93d4d560d1b17176f60fcdbd867cd3d4082b55c567f8d274cc76d5da410b57c410c39912f41d2c6310686eb405087d8131e852f10448b7a0361693b29fedfcdd3e07d19ba3b84e34e9ad78c7cd73d9dd7fd50108f06683bd8be3bbbaa284552eadde83a334caf38c715e3e97cee83eb2a1cbdd8fdf5394e7c5f25b39349ca88e56152f0dd14f8394ead47182aefcc6b29493fd7a48e7abd6f6bee675db7b167a60055014532b842fe96fc06b9cecfcff9fb6eab728718451afce3846a414f36714c77eea3191ab87d098c01
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 6139bb9c000000000033
-      Version: 3
-      TBS:
-        MD5: 5b3304180221a8328ce477b1fd93898f
-        SHA1: 9b7f1e1653a52d801387f1e51d17fabb8d435d0c
-        SHA256: 67070bcf2ee304cedd252a1dd8a7222c1be50fd2d5eabef9446cb633e133d264
-        SHA384: be36b1ba9a006afb9eb53263634cb8ca38dd6ca7f95ec56f943324f3a26f9c34c2dff1a3a5c72c88513e23e1f20c8824
-    - Subject: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom
-        Class 3 Primary Intermediate Object CA
-      ValidFrom: '2007-10-24 22:03:55'
-      ValidTo: '2017-10-24 22:03:55'
-      Signature: b8eba5382cab9038cfbe906919952f964e48103545b043712eb90e670f618458ed651ae0d8515c96c4df69cafb62bf35ea4a6923f2f67f60db652925e8ba5ef9485920745c9998fa7ed74eaf43963b88880e81f1d0a6a9af1df5e73e045be8927b624a531d3b7aaf94a20502da0fada1a732166a1d5d88f1ddc5da7e91b00a53124ddbefcdea9f48dfbfb27c0192f9816379a06f0e97d99044a550b8874b5cd89ca27aad4b91f31174e6a82342d4265ca83d85a035ec5308ddb62d1c21c8484ac4c83ab06e2f43e6df64097586fe0e68d26354a066e49eefdb5c74a0a8dc40e97b67d63b3ed286d31621d1e13252a3e6c2e1637e74431abeec29ae56e11811fa650b37340eb44799f86fb4994ed235b04764b5fee9afb69a23c282c838b6d4a42e3421ce03ef4c3841502f0dad40c82827e9eb7c2bd1704e2c8818c87c3f24505dcb5354679fd7a109980b0b8b2169ba72a6127bb05a0e697cc706ba2c7a950f079463235657a5382a63c4206a9e84438fdad8d03fd07d9592132916c0d868cae5fe7598b6f410e17c309eb990292035e31c56b30afd86717cfbbc0b2e8c94e35469c4784d1e0af80f33b9e256d789841c9cdf6fc50b8f998351066b441d6f30bcbef93a190bccfae6bc223f3d5475b80a647f7f65bba29049c3f227f7bbb97eb7688782cd43ec6cacab29c7d040e2bb3a0218315077ae33b1a9a8c62d4570ff
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: '26'
-      Version: 3
-      TBS:
-        MD5: 40b719dc6e7a16f1672333943daca04b
-        SHA1: fbb05f9486d50f8f35013e531f1504e9f62cb3df
-        SHA256: 4997f6bbc707da19c7897e17a916d35dfbd8112bb671ac5d2d9397c690b7ba5c
-        SHA384: f73bf1c578a221661f96516389fd512e150551bab68487c981a2dfbb172419e2d2e5b00f52b50a251b9ff5dcb0be83df
-    - Subject: ??=Hdgwyqp6jNS97z8P, C=US, ST=Indiana, L=Fishers, O=Exacq Technologies,
-        Inc., CN=Exacq Technologies, Inc., emailAddress=info@exacq.com
-      ValidFrom: '2014-07-24 18:00:20'
-      ValidTo: '2017-07-24 09:00:56'
-      Signature: b4fea6e9fcf641e617b115ceca7bf10bbdcce8ed5a6644fe006af7a42a7e67ce269bef720dc937e258a7df51c342f9b00a5202ee5d651f76a3d1a7729cacb3db6a811d17df6042f447a26544de87b59d9d241a7446af330bd89fae3f9a07f8ea86ae276fb5f0c325ac0b7ba62c7e58a551e319daf55bfb4a1cde484b9519fb07f7f4801afe43ed99b6275cc66d36c23d0b1aebf05bebd79a1f16f7084c5bc1b2d935e6868ed0e1ca7100a6ef14af0194439e0e33de20ab71e5fe453c632c6686dbc5ecb969619e8519fd5f79da2ddf35936daa73c0c6216661e290de4d6473b3a1a964917567692568e8365de7ed1e4801749a004b915e58755de83a0e23f2e3
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 0f69
-      Version: 3
-      TBS:
-        MD5: f5497dbe7af27561736a3ba6935044e8
-        SHA1: 50728ba20d7ee0726bb8aa4a9d9659f7c938830f
-        SHA256: e468a80174391ca98a6720033afaec1f31468ac2aeee5938ff0350977ec443fe
-        SHA384: 5b5ae06ffc6250a52e3085bc0c8da4f74d722ff772535cb5f14588218b3dcad60f5b09c79afb2e189b4f60a11e286f63
-    Signer:
-    - SerialNumber: 0f69
-      Issuer: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom
-        Class 3 Primary Intermediate Object CA
-      Version: 1
-  RichPEHeaderHash:
-    MD5: 01fa87d3ec80d5af5f5d299a66795493
-    SHA1: 5957eeee532c4f376ed95fb03784c5051dd8c097
-    SHA256: 39f1dcdc4eeab157c00e38de7f5f1aff3b162318d5c9e33e8f63becae1850eb2
-  Sections:
-    .text:
-      Entropy: 6.0566282345703675
-      Virtual Size: '0xdbe'
-    .rdata:
-      Entropy: 3.918940983915505
-      Virtual Size: '0x2b4'
-    .data:
-      Entropy: 0.632570099181397
-      Virtual Size: '0x1028'
-    .pdata:
-      Entropy: 3.595150149062291
-      Virtual Size: '0xc0'
-    INIT:
-      Entropy: 4.92328698169394
-      Virtual Size: '0x326'
-    .reloc:
-      Entropy: 1.4575187496394217
-      Virtual Size: '0x30'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-05-19 09:29:34'
-  Imphash: 9e15ce38f071c916bea830247f1241bb
-  LoadsDespiteHVCI: 'TRUE'
-Tags:
-- winio64.sys
+-   Filename: winio64.sys
+    MD5: 8fc6cafd4e63a3271edf6a1897a892ae
+    SHA1: f8d7369527cc6976283cc73cd761f93bd1cec49d
+    SHA256: 15fb486b6b8c2a2f1b067f48fba10c2f164638fe5e6cee618fb84463578ecac9
+    Authentihash:
+        MD5: 241252e4ebe7b4fdf6fd5a34ece5b127
+        SHA1: eaba3ed3a83a8ef75db88c1f0def5160c3835a8c
+        SHA256: cb5ebba562c33ef2ed93558913792726c8c2e5898531923589122ae31db64ebb
+    Description: ''
+    Company: ''
+    InternalName: ''
+    OriginalFilename: ''
+    FileVersion: ''
+    Product: ''
+    ProductVersion: ''
+    Copyright: ''
+    MachineType: AMD64
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    - WDFLDR.SYS
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - ObfDereferenceObject
+    - ZwClose
+    - ZwOpenSection
+    - ObReferenceObjectByHandle
+    - ZwUnmapViewOfSection
+    - KeBugCheckEx
+    - IoDeleteSymbolicLink
+    - IoDeleteDevice
+    - RtlCopyUnicodeString
+    - IoCreateSymbolicLink
+    - IoCreateDevice
+    - IofCompleteRequest
+    - ZwMapViewOfSection
+    - RtlInitUnicodeString
+    - HalTranslateBusAddress
+    - WdfVersionUnbind
+    - WdfVersionBind
+    - WdfVersionBindClass
+    - WdfVersionUnbindClass
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                CA , G2
+            ValidFrom: '2012-12-21 00:00:00'
+            ValidTo: '2020-12-30 23:59:59'
+            Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+            Version: 3
+            TBS:
+                MD5: d0785ad36e427c92b19f6826ab1e8020
+                SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+                SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+                SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                Signer , G4
+            ValidFrom: '2012-10-18 00:00:00'
+            ValidTo: '2020-12-29 23:59:59'
+            Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+            Version: 3
+            TBS:
+                MD5: e9d38360b914c8863f6cba3ee58764d3
+                SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+                SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+                SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+        -   Subject: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing,
+                CN=StartCom Certification Authority
+            ValidFrom: '2011-04-15 20:13:19'
+            ValidTo: '2021-04-15 20:23:19'
+            Signature: 375933ca5e487d489a5be42fdbdb59a8c61f77c0a58747e86508c6672688d95c58e2c631ac0c32b96f7cc58748db2c0a23484d0dcf1116ef60577ed5326e22de373cc7dc16f3c9ce2939fb37daf5e4e741d8a2f82db3498a601f64ef9c1364b3469a82cc650f18550776c9e9337790a644daefa64d551038316f3a58ed31486190c04615b4c0a64e5493c00db524e55017c6d62392226992e0abab297508255399959f50b65b6753aaa2ba905a6ea3e35b5c830e54426dbdb917a8205284b51a4fb24d68d2c28ff8f9ae837c24a6e6c17f9a932f2e550df87bc1be336fab0cd934585c9c40ce284a015529655d5bfd525a54591171470b3eff2c9ae931d9046a33871d2f880fc99aab14a8c20b4f8589ac25490dff54395513d6b84d6bf44aad1833bc8e0052b476c2eccd8beb60d57880844a0eb93d4d560d1b17176f60fcdbd867cd3d4082b55c567f8d274cc76d5da410b57c410c39912f41d2c6310686eb405087d8131e852f10448b7a0361693b29fedfcdd3e07d19ba3b84e34e9ad78c7cd73d9dd7fd50108f06683bd8be3bbbaa284552eadde83a334caf38c715e3e97cee83eb2a1cbdd8fdf5394e7c5f25b39349ca88e56152f0dd14f8394ead47182aefcc6b29493fd7a48e7abd6f6bee675db7b167a60055014532b842fe96fc06b9cecfcff9fb6eab728718451afce3846a414f36714c77eea3191ab87d098c01
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 6139bb9c000000000033
+            Version: 3
+            TBS:
+                MD5: 5b3304180221a8328ce477b1fd93898f
+                SHA1: 9b7f1e1653a52d801387f1e51d17fabb8d435d0c
+                SHA256: 67070bcf2ee304cedd252a1dd8a7222c1be50fd2d5eabef9446cb633e133d264
+                SHA384: be36b1ba9a006afb9eb53263634cb8ca38dd6ca7f95ec56f943324f3a26f9c34c2dff1a3a5c72c88513e23e1f20c8824
+        -   Subject: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing,
+                CN=StartCom Class 3 Primary Intermediate Object CA
+            ValidFrom: '2007-10-24 22:03:55'
+            ValidTo: '2017-10-24 22:03:55'
+            Signature: b8eba5382cab9038cfbe906919952f964e48103545b043712eb90e670f618458ed651ae0d8515c96c4df69cafb62bf35ea4a6923f2f67f60db652925e8ba5ef9485920745c9998fa7ed74eaf43963b88880e81f1d0a6a9af1df5e73e045be8927b624a531d3b7aaf94a20502da0fada1a732166a1d5d88f1ddc5da7e91b00a53124ddbefcdea9f48dfbfb27c0192f9816379a06f0e97d99044a550b8874b5cd89ca27aad4b91f31174e6a82342d4265ca83d85a035ec5308ddb62d1c21c8484ac4c83ab06e2f43e6df64097586fe0e68d26354a066e49eefdb5c74a0a8dc40e97b67d63b3ed286d31621d1e13252a3e6c2e1637e74431abeec29ae56e11811fa650b37340eb44799f86fb4994ed235b04764b5fee9afb69a23c282c838b6d4a42e3421ce03ef4c3841502f0dad40c82827e9eb7c2bd1704e2c8818c87c3f24505dcb5354679fd7a109980b0b8b2169ba72a6127bb05a0e697cc706ba2c7a950f079463235657a5382a63c4206a9e84438fdad8d03fd07d9592132916c0d868cae5fe7598b6f410e17c309eb990292035e31c56b30afd86717cfbbc0b2e8c94e35469c4784d1e0af80f33b9e256d789841c9cdf6fc50b8f998351066b441d6f30bcbef93a190bccfae6bc223f3d5475b80a647f7f65bba29049c3f227f7bbb97eb7688782cd43ec6cacab29c7d040e2bb3a0218315077ae33b1a9a8c62d4570ff
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: '26'
+            Version: 3
+            TBS:
+                MD5: 40b719dc6e7a16f1672333943daca04b
+                SHA1: fbb05f9486d50f8f35013e531f1504e9f62cb3df
+                SHA256: 4997f6bbc707da19c7897e17a916d35dfbd8112bb671ac5d2d9397c690b7ba5c
+                SHA384: f73bf1c578a221661f96516389fd512e150551bab68487c981a2dfbb172419e2d2e5b00f52b50a251b9ff5dcb0be83df
+        -   Subject: ??=Hdgwyqp6jNS97z8P, C=US, ST=Indiana, L=Fishers, O=Exacq Technologies,
+                Inc., CN=Exacq Technologies, Inc., emailAddress=info@exacq.com
+            ValidFrom: '2014-07-24 18:00:20'
+            ValidTo: '2017-07-24 09:00:56'
+            Signature: b4fea6e9fcf641e617b115ceca7bf10bbdcce8ed5a6644fe006af7a42a7e67ce269bef720dc937e258a7df51c342f9b00a5202ee5d651f76a3d1a7729cacb3db6a811d17df6042f447a26544de87b59d9d241a7446af330bd89fae3f9a07f8ea86ae276fb5f0c325ac0b7ba62c7e58a551e319daf55bfb4a1cde484b9519fb07f7f4801afe43ed99b6275cc66d36c23d0b1aebf05bebd79a1f16f7084c5bc1b2d935e6868ed0e1ca7100a6ef14af0194439e0e33de20ab71e5fe453c632c6686dbc5ecb969619e8519fd5f79da2ddf35936daa73c0c6216661e290de4d6473b3a1a964917567692568e8365de7ed1e4801749a004b915e58755de83a0e23f2e3
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 0f69
+            Version: 3
+            TBS:
+                MD5: f5497dbe7af27561736a3ba6935044e8
+                SHA1: 50728ba20d7ee0726bb8aa4a9d9659f7c938830f
+                SHA256: e468a80174391ca98a6720033afaec1f31468ac2aeee5938ff0350977ec443fe
+                SHA384: 5b5ae06ffc6250a52e3085bc0c8da4f74d722ff772535cb5f14588218b3dcad60f5b09c79afb2e189b4f60a11e286f63
+        Signer:
+        -   SerialNumber: 0f69
+            Issuer: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing,
+                CN=StartCom Class 3 Primary Intermediate Object CA
+            Version: 1
+    RichPEHeaderHash:
+        MD5: 01fa87d3ec80d5af5f5d299a66795493
+        SHA1: 5957eeee532c4f376ed95fb03784c5051dd8c097
+        SHA256: 39f1dcdc4eeab157c00e38de7f5f1aff3b162318d5c9e33e8f63becae1850eb2
+    Sections:
+        .text:
+            Entropy: 6.0566282345703675
+            Virtual Size: '0xdbe'
+        .rdata:
+            Entropy: 3.918940983915505
+            Virtual Size: '0x2b4'
+        .data:
+            Entropy: 0.632570099181397
+            Virtual Size: '0x1028'
+        .pdata:
+            Entropy: 3.595150149062291
+            Virtual Size: '0xc0'
+        INIT:
+            Entropy: 4.92328698169394
+            Virtual Size: '0x326'
+        .reloc:
+            Entropy: 1.4575187496394217
+            Virtual Size: '0x30'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2014-05-19 09:29:34'
+    Imphash: 9e15ce38f071c916bea830247f1241bb
+    LoadsDespiteHVCI: 'TRUE'
+-   Filename: WinIo64.sys
+    MD5: 7c0b186d1912686cfcb8cd9cdebabe58
+    SHA1: 6bb68e1894bfbc1ac86bcdc048f7fe7743de2f92
+    SHA256: dbe9f17313e1164f06401234b875fbc7f71d41dc7271de643865af1358841fef
+    Authentihash:
+        MD5: 241252e4ebe7b4fdf6fd5a34ece5b127
+        SHA1: eaba3ed3a83a8ef75db88c1f0def5160c3835a8c
+        SHA256: cb5ebba562c33ef2ed93558913792726c8c2e5898531923589122ae31db64ebb
+    Description: ''
+    Company: ''
+    InternalName: ''
+    OriginalFilename: ''
+    FileVersion: ''
+    Product: ''
+    ProductVersion: ''
+    Copyright: ''
+    MachineType: AMD64
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    - WDFLDR.SYS
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - ObfDereferenceObject
+    - ZwClose
+    - ZwOpenSection
+    - ObReferenceObjectByHandle
+    - ZwUnmapViewOfSection
+    - KeBugCheckEx
+    - IoDeleteSymbolicLink
+    - IoDeleteDevice
+    - RtlCopyUnicodeString
+    - IoCreateSymbolicLink
+    - IoCreateDevice
+    - IofCompleteRequest
+    - ZwMapViewOfSection
+    - RtlInitUnicodeString
+    - HalTranslateBusAddress
+    - WdfVersionUnbind
+    - WdfVersionBind
+    - WdfVersionBindClass
+    - WdfVersionUnbindClass
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                CA , G2
+            ValidFrom: '2012-12-21 00:00:00'
+            ValidTo: '2020-12-30 23:59:59'
+            Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+            Version: 3
+            TBS:
+                MD5: d0785ad36e427c92b19f6826ab1e8020
+                SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+                SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+                SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                Signer , G4
+            ValidFrom: '2012-10-18 00:00:00'
+            ValidTo: '2020-12-29 23:59:59'
+            Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+            Version: 3
+            TBS:
+                MD5: e9d38360b914c8863f6cba3ee58764d3
+                SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+                SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+                SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+        -   Subject: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing,
+                CN=StartCom Certification Authority
+            ValidFrom: '2011-04-15 20:13:19'
+            ValidTo: '2021-04-15 20:23:19'
+            Signature: 375933ca5e487d489a5be42fdbdb59a8c61f77c0a58747e86508c6672688d95c58e2c631ac0c32b96f7cc58748db2c0a23484d0dcf1116ef60577ed5326e22de373cc7dc16f3c9ce2939fb37daf5e4e741d8a2f82db3498a601f64ef9c1364b3469a82cc650f18550776c9e9337790a644daefa64d551038316f3a58ed31486190c04615b4c0a64e5493c00db524e55017c6d62392226992e0abab297508255399959f50b65b6753aaa2ba905a6ea3e35b5c830e54426dbdb917a8205284b51a4fb24d68d2c28ff8f9ae837c24a6e6c17f9a932f2e550df87bc1be336fab0cd934585c9c40ce284a015529655d5bfd525a54591171470b3eff2c9ae931d9046a33871d2f880fc99aab14a8c20b4f8589ac25490dff54395513d6b84d6bf44aad1833bc8e0052b476c2eccd8beb60d57880844a0eb93d4d560d1b17176f60fcdbd867cd3d4082b55c567f8d274cc76d5da410b57c410c39912f41d2c6310686eb405087d8131e852f10448b7a0361693b29fedfcdd3e07d19ba3b84e34e9ad78c7cd73d9dd7fd50108f06683bd8be3bbbaa284552eadde83a334caf38c715e3e97cee83eb2a1cbdd8fdf5394e7c5f25b39349ca88e56152f0dd14f8394ead47182aefcc6b29493fd7a48e7abd6f6bee675db7b167a60055014532b842fe96fc06b9cecfcff9fb6eab728718451afce3846a414f36714c77eea3191ab87d098c01
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 6139bb9c000000000033
+            Version: 3
+            TBS:
+                MD5: 5b3304180221a8328ce477b1fd93898f
+                SHA1: 9b7f1e1653a52d801387f1e51d17fabb8d435d0c
+                SHA256: 67070bcf2ee304cedd252a1dd8a7222c1be50fd2d5eabef9446cb633e133d264
+                SHA384: be36b1ba9a006afb9eb53263634cb8ca38dd6ca7f95ec56f943324f3a26f9c34c2dff1a3a5c72c88513e23e1f20c8824
+        -   Subject: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing,
+                CN=StartCom Class 3 Primary Intermediate Object CA
+            ValidFrom: '2007-10-24 22:03:55'
+            ValidTo: '2017-10-24 22:03:55'
+            Signature: b8eba5382cab9038cfbe906919952f964e48103545b043712eb90e670f618458ed651ae0d8515c96c4df69cafb62bf35ea4a6923f2f67f60db652925e8ba5ef9485920745c9998fa7ed74eaf43963b88880e81f1d0a6a9af1df5e73e045be8927b624a531d3b7aaf94a20502da0fada1a732166a1d5d88f1ddc5da7e91b00a53124ddbefcdea9f48dfbfb27c0192f9816379a06f0e97d99044a550b8874b5cd89ca27aad4b91f31174e6a82342d4265ca83d85a035ec5308ddb62d1c21c8484ac4c83ab06e2f43e6df64097586fe0e68d26354a066e49eefdb5c74a0a8dc40e97b67d63b3ed286d31621d1e13252a3e6c2e1637e74431abeec29ae56e11811fa650b37340eb44799f86fb4994ed235b04764b5fee9afb69a23c282c838b6d4a42e3421ce03ef4c3841502f0dad40c82827e9eb7c2bd1704e2c8818c87c3f24505dcb5354679fd7a109980b0b8b2169ba72a6127bb05a0e697cc706ba2c7a950f079463235657a5382a63c4206a9e84438fdad8d03fd07d9592132916c0d868cae5fe7598b6f410e17c309eb990292035e31c56b30afd86717cfbbc0b2e8c94e35469c4784d1e0af80f33b9e256d789841c9cdf6fc50b8f998351066b441d6f30bcbef93a190bccfae6bc223f3d5475b80a647f7f65bba29049c3f227f7bbb97eb7688782cd43ec6cacab29c7d040e2bb3a0218315077ae33b1a9a8c62d4570ff
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: '26'
+            Version: 3
+            TBS:
+                MD5: 40b719dc6e7a16f1672333943daca04b
+                SHA1: fbb05f9486d50f8f35013e531f1504e9f62cb3df
+                SHA256: 4997f6bbc707da19c7897e17a916d35dfbd8112bb671ac5d2d9397c690b7ba5c
+                SHA384: f73bf1c578a221661f96516389fd512e150551bab68487c981a2dfbb172419e2d2e5b00f52b50a251b9ff5dcb0be83df
+        -   Subject: ??=Hdgwyqp6jNS97z8P, C=US, ST=Indiana, L=Fishers, O=Exacq Technologies,
+                Inc., CN=Exacq Technologies, Inc., emailAddress=info@exacq.com
+            ValidFrom: '2014-07-24 18:00:20'
+            ValidTo: '2017-07-24 09:00:56'
+            Signature: b4fea6e9fcf641e617b115ceca7bf10bbdcce8ed5a6644fe006af7a42a7e67ce269bef720dc937e258a7df51c342f9b00a5202ee5d651f76a3d1a7729cacb3db6a811d17df6042f447a26544de87b59d9d241a7446af330bd89fae3f9a07f8ea86ae276fb5f0c325ac0b7ba62c7e58a551e319daf55bfb4a1cde484b9519fb07f7f4801afe43ed99b6275cc66d36c23d0b1aebf05bebd79a1f16f7084c5bc1b2d935e6868ed0e1ca7100a6ef14af0194439e0e33de20ab71e5fe453c632c6686dbc5ecb969619e8519fd5f79da2ddf35936daa73c0c6216661e290de4d6473b3a1a964917567692568e8365de7ed1e4801749a004b915e58755de83a0e23f2e3
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 0f69
+            Version: 3
+            TBS:
+                MD5: f5497dbe7af27561736a3ba6935044e8
+                SHA1: 50728ba20d7ee0726bb8aa4a9d9659f7c938830f
+                SHA256: e468a80174391ca98a6720033afaec1f31468ac2aeee5938ff0350977ec443fe
+                SHA384: 5b5ae06ffc6250a52e3085bc0c8da4f74d722ff772535cb5f14588218b3dcad60f5b09c79afb2e189b4f60a11e286f63
+        Signer:
+        -   SerialNumber: 0f69
+            Issuer: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing,
+                CN=StartCom Class 3 Primary Intermediate Object CA
+            Version: 1
+    RichPEHeaderHash:
+        MD5: 01fa87d3ec80d5af5f5d299a66795493
+        SHA1: 5957eeee532c4f376ed95fb03784c5051dd8c097
+        SHA256: 39f1dcdc4eeab157c00e38de7f5f1aff3b162318d5c9e33e8f63becae1850eb2
+    Sections:
+        .text:
+            Entropy: 6.0566282345703675
+            Virtual Size: '0xdbe'
+        .rdata:
+            Entropy: 3.918940983915505
+            Virtual Size: '0x2b4'
+        .data:
+            Entropy: 0.632570099181397
+            Virtual Size: '0x1028'
+        .pdata:
+            Entropy: 3.595150149062291
+            Virtual Size: '0xc0'
+        INIT:
+            Entropy: 4.92328698169394
+            Virtual Size: '0x326'
+        .reloc:
+            Entropy: 1.4575187496394217
+            Virtual Size: '0x30'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2014-05-19 09:29:34'
+    Imphash: 9e15ce38f071c916bea830247f1241bb
+    LoadsDespiteHVCI: 'TRUE'

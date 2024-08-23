@@ -1,852 +1,858 @@
 Id: 90afa27c-0f67-46a6-b4a9-809f55157c71
+Tags:
+- nscm.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
-  Command: sc.exe create nscm.sys binPath=C:\windows\temp\nscm.sys type=kernel &&
-    sc.exe start nscm.sys
-  Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
-  OperatingSystem: Windows 10
+    Command: sc.exe create nscm.sys binPath=C:\windows\temp\nscm.sys type=kernel &&
+        sc.exe start nscm.sys
+    Description: ''
+    Usecase: Elevate privileges
+    Privileges: kernel
+    OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+-   type: yara_signature
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+-   type: sigma_hash
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+-   type: sigma_names
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+-   type: sysmon_hash_detect
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+-   type: sysmon_hash_block
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+    Person: ''
+    Handle: ''
 KnownVulnerableSamples:
-- Filename: nscm.sys
-  MD5: ba2c0fa201c74621cddd8638497b3c70
-  SHA1: 8f540936f2484d020e270e41529624407b7e107e
-  SHA256: 28999af32b55ddb7dcfc26376a244aa2fe297233ce7abe4919a1aef2f7e2cee7
-  Authentihash:
-    MD5: 3a5b83215c9ea17f8d3ad3812c30a340
-    SHA1: 533e0690528ff3f0d59edeed9dd53b4f37c0a110
-    SHA256: 1622ac0c618a86be17e0f97daa061f9aaa0e721dc0fd30d76bbc5c958e9a9d92
-  Description: Novell XTier Session Manager
-  Company: Novell, Inc.
-  InternalName: ''
-  OriginalFilename: nscm.sys
-  FileVersion: 3.1.6.0
-  Product: Novell XTier
-  ProductVersion: 3.1.6
-  Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  MachineType: AMD64
-  Imports:
-  - ntoskrnl.exe
-  - nicm.sys
-  ExportedFunctions:
-  - DllGetClassObject
-  - XTCOM_Table
-  ImportedFunctions:
-  - IoCreateDevice
-  - SeUnregisterLogonSessionTerminatedRoutine
-  - KeInitializeMutex
-  - IoDeleteDevice
-  - SeRegisterLogonSessionTerminatedRoutine
-  - ZwOpenProcessTokenEx
-  - KeReleaseMutex
-  - ZwClose
-  - SeMarkLogonSessionForTerminationNotification
-  - ZwQueryInformationToken
-  - ZwOpenThreadTokenEx
-  - KeBugCheckEx
-  - KeWaitForSingleObject
-  - IoGetCurrentProcess
-  - DbgPrint
-  - NicmCreateInstance
-  - NicmDeregisterClassFactory
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer ,
-        G2
-      ValidFrom: '2007-06-15 00:00:00'
-      ValidTo: '2012-06-14 23:59:59'
-      Signature: 50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
-      Version: 3
-      TBS:
-        MD5: d6c7684e9aaa508cf268335f83afe040
-        SHA1: 18066d20ad92409c567cdfde745279ff71c75226
-        SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
-        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
-    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
-      ValidFrom: '2003-12-04 00:00:00'
-      ValidTo: '2013-12-03 23:59:59'
-      Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
-      Version: 3
-      TBS:
-        MD5: 518d2ea8a21e879c942d504824ac211c
-        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
-        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
-        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
-        at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
-        CA
-      ValidFrom: '2004-07-16 00:00:00'
-      ValidTo: '2014-07-15 23:59:59'
-      Signature: ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 4191a15a3978dfcf496566381d4c75c2
-      Version: 3
-      TBS:
-        MD5: 41011f8d0e7c7a6408334ca387914c61
-        SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
-        SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
-        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
-    - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
-        Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
-      ValidFrom: '2007-04-04 00:00:00'
-      ValidTo: '2010-04-27 23:59:59'
-      Signature: 267f71f6ee43755fd6395f85c34bb15a72a6f2a959c2074627d294395fb1aaa4c7bbeff369d735628b233bde7e5c95a0f1837e5ad03704270834ce9c1b07649a256027930f44e064568666b06e7f9dc3cd299b38b0a6766301200ab58434a05a34a369ab99bbbf2aaa6b3603481e0393a80ea09e78a7cf55317a9590c49887f02e1fd948c3b1f6d203e91782ce423d0569f45e7f074205df5f92be6ccd9836641439af4390022242e0ca84aedb0d71c5a50f2dbd1ed30e5ac9c1bda67c694f94f2fe4aa83945ed32e426afe26f44dcb6dcc8186728f86f1a1bddc1ea7dd82b76578a42d1e63bf5f8f348fbcd509094858978e375d277394529df1dd5d78abab2
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
-      Version: 3
-      TBS:
-        MD5: adddb65a3a360b3c1a55cb33e426f32a
-        SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
-        SHA256: d98d63f26125a94eb767fdd2526f6c74bfb40cb4d117a1d87ca3ed0d99bd6f0b
-        SHA384: cf20d9d6343b52b05ebaeace8a75ad950089e2d55508571cf5b153583fdf2d7b11bc61b8f38bfa70f09b2e7ac63d9ef5
-    - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
-      ValidFrom: '2006-05-23 17:01:29'
-      ValidTo: '2016-05-23 17:11:29'
-      Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 610c120600000000001b
-      Version: 3
-      TBS:
-        MD5: 53c41bc1164e09e0cd1617a5bf913efd
-        SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
-        SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
-        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
-    Signer:
-    - SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
-      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
-        https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
-        CA
-      Version: 1
-  RichPEHeaderHash:
-    MD5: 4a07178c85358a7450e421019955ccee
-    SHA1: 0e0b4edfb21b1a41b2f00f341bc1c6de6a650546
-    SHA256: dd7717af9d41e7c2d7c773f3e063d396ad8676b3d940732451acc1fc28ec9989
-  Sections:
-    .text:
-      Entropy: 5.981323117886685
-      Virtual Size: '0x4a25'
-    .rdata:
-      Entropy: 5.681127753509768
-      Virtual Size: '0x480'
-    .data:
-      Entropy: 0.8264834692004682
-      Virtual Size: '0x548'
-    .pdata:
-      Entropy: 4.218145333940637
-      Virtual Size: '0x3c0'
-    .edata:
-      Entropy: 3.983850316580165
-      Virtual Size: '0x63'
-    INIT:
-      Entropy: 5.26537545088398
-      Virtual Size: '0x360'
-    .rsrc:
-      Entropy: 3.289150653685818
-      Virtual Size: '0x350'
-    .reloc:
-      Entropy: 1.2454265871243133
-      Virtual Size: '0x3c'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-27 11:56:49'
-  Imphash: 7d004bbe0f546a91c93562d324307fa7
-  LoadsDespiteHVCI: 'FALSE'
-- Filename: nscm.sys
-  MD5: 4c76554d9a72653c6156ca0024d21a8e
-  SHA1: 6d3c760251d6e6ea7ff4f4fcac14876fac829cf9
-  SHA256: 2e665962c827ce0adbd29fe6bcf09bbb1d7a7022075d162ff9b65d0af9794ac0
-  Authentihash:
-    MD5: b546d6b223a9e1a42f8359dbf9d9737c
-    SHA1: 41f6704252efa14de0d72eeaf7475886ba7f3bdc
-    SHA256: 92ca1aec3afc90b44861c2e0be084a3db38d22d52f35e1697643d6477151392f
-  Description: Novell XTier Session Manager
-  Company: Novell, Inc.
-  InternalName: ''
-  OriginalFilename: nscm.sys
-  FileVersion: 3.1.11.0
-  Product: Novell XTier
-  ProductVersion: 3.1.11
-  Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  MachineType: AMD64
-  Imports:
-  - ntoskrnl.exe
-  - nicm.sys
-  ExportedFunctions:
-  - DllGetClassObject
-  - XTCOM_Table
-  ImportedFunctions:
-  - ExAllocatePoolWithTag
-  - ExFreePoolWithTag
-  - KeInitializeMutex
-  - IoQueueWorkItemEx
-  - IoDeleteDevice
-  - IoFreeWorkItem
-  - RtlEqualUnicodeString
-  - ZwOpenProcessTokenEx
-  - IoAllocateWorkItem
-  - ZwClose
-  - ZwOpenProcess
-  - DbgPrint
-  - PsGetCurrentProcessId
-  - IoCreateDevice
-  - ZwQueryInformationToken
-  - PsSetCreateProcessNotifyRoutine
-  - SeRegisterLogonSessionTerminatedRoutine
-  - SeUnregisterLogonSessionTerminatedRoutine
-  - ZwOpenThreadTokenEx
-  - IoGetCurrentProcess
-  - SeMarkLogonSessionForTerminationNotification
-  - KeBugCheckEx
-  - KeWaitForSingleObject
-  - ZwQueryInformationProcess
-  - KeReleaseMutex
-  - NicmCreateInstance
-  - NicmDeregisterClassFactory
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Publisher
-      ValidFrom: '2022-01-27 19:31:19'
-      ValidTo: '2023-01-26 19:31:19'
-      Signature: 941777115fcaf24c60c4a8c891758c491887aa5e9f0902a704191e75dd6f99be3d14a24aa35b1f2a1c1c42dde08da3fa75a73edbf7b5ae0fe94b3716e43b838ff30149e19c51b8b87cc53377ae08bfc0f54c7fafa398db43e839de108493510bc34d0fe998a44fcd0a11b0dc0c7315421dac79ab09ca47f847f9fa88e15d57a564f7b074664409c0ce01c697b2dcfd31676fc908fbc6bb928f82170f0b5a54f52f4327797278b78188b87e37b192b493d00eaf661e30f12b9e67fbd1df9cc5843e6a1c68b45d4f62423450cdc990fab2367d7f57719cb8272f59d4f300284a36d88adfc976cb08c6b0da33d5e988be0e1a3cef2a9669b5227a5b8d027f804908
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 330000036ce57eeb5d1cc2be1700000000036c
-      Version: 3
-      TBS:
-        MD5: 7ece739fdaa27d96b67f587db04186a7
-        SHA1: b8701efa0ab12b8fea2293c9cff8772ecca084d0
-        SHA256: c1392bdcbb0b50215fca8c78f25c2d857e515dce06c87ce86527c88c91d5d7e4
-        SHA384: 8d292e8db16824f3ac9d668816c4cf521a9eb251069694c92932683afcaa4e53d5fa3a1f58356749e655299ed83fe191
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Production PCA 2011
-      ValidFrom: '2011-10-19 18:41:42'
-      ValidTo: '2026-10-19 18:51:42'
-      Signature: 14fc7c7151a579c26eb2ef393ebc3c520f6e2b3f101373fea868d048a6344d8a960526ee3146906179d6ff382e456bf4c0e528b8da1d8f8adb09d71ac74c0a36666a8cec1bd70490a81817a49bb9e240323676c4c15ac6bfe404c0ea16d3acc368ef62acdd546c503058a6eb7cfe94a74e8ef4ec7c867357c2522173345af3a38a56c804da0709edf88be3cef47e8eaef0f60b8a08fb3fc91d727f53b8ebbe63e0e33d3165b081e5f2accd16a49f3da8b19bc242d090845f541dff89eaba1d47906fb0734e419f409f5fe5a12ab21191738a2128f0cede73395f3eab5c60ecdf0310a8d309e9f4f69685b67f51886647198da2b0123d812a680577bb914c627bb6c107c7ba7a8734030e4b627a99e9cafcce4a37c92da4577c1cfe3ddcb80f5afad6c4b30285023aeab3d96ee4692137de81d1f675190567d393575e291b39c8ee2de1cde445735bd0d2ce7aab1619824658d05e9d81b367af6c35f2bce53f24e235a20a7506f6185699d4782cd1051bebd088019daa10f105dfba7e2c63b7069b2321c4f9786ce2581706362b911203cca4d9f22dbaf9949d40ed1845f1ce8a5c6b3eab03d370182a0a6ae05f47d1d5630a32f2afd7361f2a705ae5425908714b57ba7e8381f0213cf41cc1c5b990930e88459386e9b12099be98cbc595a45d62d6a0630820bd7510777d3df345b99f979fcb57806f33a904cf77a4621c597e
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: '61077656000000000008'
-      Version: 3
-      TBS:
-        MD5: 30a3f0b64324ed7f465e7fc618cb69e7
-        SHA1: 002de3561519b662c5e3f5faba1b92c403fb7c41
-        SHA256: 4e80be107c860de896384b3eff50504dc2d76ac7151df3102a4450637a032146
-        SHA384: 4f9a02c3eac5e83c38074d54c0bf270e03a1d668e0001c9812c509eb08a19075ee778a7630e65598e4608fc66e2d1c66
-    Signer:
-    - SerialNumber: 330000036ce57eeb5d1cc2be1700000000036c
-      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Production PCA 2011
-      Version: 1
-  RichPEHeaderHash:
-    MD5: 0d646b28e804b652211b8f3e0feac906
-    SHA1: 1169ececb349b1d1a50626a2565e85cc6e9049ea
-    SHA256: 097828b6f5705aca00605777868f774f37fd5ecf705e958c6dbdb860c4934be4
-  Sections:
-    .text:
-      Entropy: 5.9944111351941185
-      Virtual Size: '0x5736'
-    .rdata:
-      Entropy: 5.542492779395016
-      Virtual Size: '0x570'
-    .data:
-      Entropy: 1.445115035315444
-      Virtual Size: '0x5a8'
-    .pdata:
-      Entropy: 4.268472946152158
-      Virtual Size: '0x42c'
-    .edata:
-      Entropy: 3.9636482963781448
-      Virtual Size: '0x63'
-    INIT:
-      Entropy: 5.429528792402954
-      Virtual Size: '0x4b6'
-    .rsrc:
-      Entropy: 6.472426446171854
-      Virtual Size: '0x14a24'
-    .reloc:
-      Entropy: 5.039009418592025
-      Virtual Size: '0x48'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-15 23:24:57'
-  Imphash: 8b7e7c20da6ca9ac4bdb3927fe2b266a
-  LoadsDespiteHVCI: 'TRUE'
-- Filename: nscm.sys
-  MD5: 5f4a232d92480a1bebbe025ef64dc760
-  SHA1: 0cb14c1049c0e81c8655ab7ee7d698c11758ea06
-  SHA256: 5351c81b4ec5a0d79c39d24bac7600d10eac30c13546fde43d23636b3f421e7c
-  Authentihash:
-    MD5: 5d62cae57be434a4d56924574498c4f2
-    SHA1: 1a99d3141d75a3ef1998944b2d107089ce3ef6e4
-    SHA256: a363deaf1790e9c0610e07a7203749aab8b60f5ededc944abc0ef3010f5e2105
-  Description: XTier Security Context Manager
-  Company: Micro Focus
-  InternalName: ''
-  OriginalFilename: nscm.sys
-  FileVersion: 3.1.12.0
-  Product: Micro Focus XTier
-  ProductVersion: 3.1.12
-  Copyright: (C) Copyright 2000-2017, Micro Focus. All Rights Reserved.
-  MachineType: AMD64
-  Imports:
-  - ntoskrnl.exe
-  - nicm.sys
-  ExportedFunctions:
-  - DllGetClassObject
-  - XTCOM_Table
-  ImportedFunctions:
-  - ExAllocatePoolWithTag
-  - ExFreePoolWithTag
-  - KeInitializeMutex
-  - PsLookupProcessByProcessId
-  - IoDeleteDevice
-  - RtlEqualUnicodeString
-  - ZwOpenProcessTokenEx
-  - _vsnwprintf
-  - ZwClose
-  - ZwOpenProcess
-  - ZwQueryInformationProcess
-  - DbgPrint
-  - IoCreateDevice
-  - ZwQueryInformationToken
-  - RtlDeleteRegistryValue
-  - PsSetCreateProcessNotifyRoutine
-  - SeRegisterLogonSessionTerminatedRoutine
-  - SeUnregisterLogonSessionTerminatedRoutine
-  - ZwOpenThreadTokenEx
-  - IoGetCurrentProcess
-  - SeMarkLogonSessionForTerminationNotification
-  - PsGetCurrentProcessId
-  - KeBugCheckEx
-  - KeWaitForSingleObject
-  - ObfDereferenceObject
-  - KeReleaseMutex
-  - NicmCreateInstance
-  - NicmDeregisterClassFactory
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Hardware Compatibility Publisher
-      ValidFrom: '2021-09-09 19:15:59'
-      ValidTo: '2022-09-01 19:15:59'
-      Signature: 1757782e797188079911866d54bd474a2432707984658c549a407e7fb4e5efa2ba72367a02b382d2116d4c4538836ddcd4616fcd231229df1ae5d0da6b3abe499ee5d8b47a7919940f6bbcbe2575018dca65eef4913e3d38410f2cd6cca3082d9ba2c061173cd828635665f76e8f0f685e03da24290b9d2cae7039da974de7b7e85798ba64cbe9ba34e0308c3bd6b4d68e9723fde74274fd3806fe799d04d6a3835f82d4fefc52088ccda4b4c817116f2f5a99445a3e952d78bc27753e65e97c6271c71ac7c9e3439b847e8984ab06a5904d150223f9ca92bbda86c02663c3f4964da5e106619b6eaff2768143cce9e5a8b0b2cba90e82cd87866d9fd6499c6cfbc96529a18b5653d12b54a6c928693a4e3d197ffbfcce7ed71a909b18d09b4345b24bc25eb8dfa1821a9cd0971ffc7d38a26580e2f118c4ac55bf926d0666b72ad7ba6ec20f0b54d694bc3b8a0dbddda27bd64194da085319841d1ebc9dc067ef72ea064a475bea865828b13077bc8e14e2f7544b90f0045f3cd84bcc0d5a80645a6fb65528e4f768ec775bdb0225399f3c81c0b667714676d0949f9ffaddc8549dc45e5ce4345c4ea7dc0aff4ac510f5527ad94a2181edc4b73bcfde813a83d81ca897854c98712346001a12e5d3bf9a45c807f9b3c7d3e0bb99c035ea54ee39e2c9af4147dbea7aabec85b47192b945e083ddf6061afb901e83b11135d24e
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 330000004de597a775e3157f7b00000000004d
-      Version: 3
-      TBS:
-        MD5: 9f0782e89bd41cdd96ec55357457478a
-        SHA1: 35c2180572baad19019acca1334e6c653699c389
-        SHA256: 50814710213afec410f26e573d25267a2e21d3d15f158be8a43a666c9cc6fa08
-        SHA384: 8d48f066b0284071d64bbc556e018824a8388ccd142a56c7b7b04ef6d27cade07da57ac82d8067e18ad64d35af11e2a7
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2014
-      ValidFrom: '2014-10-15 20:31:27'
-      ValidTo: '2029-10-15 20:41:27'
-      Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 330000000d690d5d7893d076df00000000000d
-      Version: 3
-      TBS:
-        MD5: 83f69422963f11c3c340b81712eef319
-        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
-        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
-        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
-    Signer:
-    - SerialNumber: 330000004de597a775e3157f7b00000000004d
-      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2014
-      Version: 1
-  RichPEHeaderHash:
-    MD5: 827395be6a60ed22c16a6eeea1843d8a
-    SHA1: 61171f78fedd9cc13cfa2fad18219d2aaf9ab83f
-    SHA256: d9b5607af39de0f2fc8d411d18fc86f6a1394c2b512b8876caef597f9c56dcad
-  Sections:
-    .text:
-      Entropy: 6.0164645838764494
-      Virtual Size: '0x5a66'
-    .rdata:
-      Entropy: 5.545815315316552
-      Virtual Size: '0x590'
-    .data:
-      Entropy: 1.445115035315444
-      Virtual Size: '0x5a8'
-    .pdata:
-      Entropy: 4.277709228070346
-      Virtual Size: '0x450'
-    .edata:
-      Entropy: 3.956023170093665
-      Virtual Size: '0x63'
-    INIT:
-      Entropy: 5.349379600291399
-      Virtual Size: '0x4e0'
-    .rsrc:
-      Entropy: 3.2835150258002495
-      Virtual Size: '0x360'
-    .reloc:
-      Entropy: 1.2355823247516717
-      Virtual Size: '0x48'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-03-03 03:52:58'
-  Imphash: 01aa65221a48929f0a34a27c4e3011b1
-  LoadsDespiteHVCI: 'FALSE'
-- Filename: nscm.sys
-  MD5: f56f30ac68c35dd4680054cdfd8f3f00
-  SHA1: fce3a95b222c810c56e7ed5a3d7fb059eb693682
-  SHA256: 8e88cb80328c3dbaa2752591692e74a2fae7e146d7d8aabc9b9ac9a6fe561e6c
-  Authentihash:
-    MD5: 3050ced748b80cc81892435fd0868bfc
-    SHA1: 579e23f2b6ce2221ba435abc20801e98ab91a360
-    SHA256: 34f36a59ecf6174eeac15994e54c41fe1e3e3b1eee8ed4c399ec8c63212373d7
-  Description: Novell XTier Session Manager
-  Company: Novell, Inc.
-  InternalName: ''
-  OriginalFilename: nscm.sys
-  FileVersion: 3.1.6.0
-  Product: Novell XTier
-  ProductVersion: 3.1.6
-  Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
-  MachineType: AMD64
-  Imports:
-  - ntoskrnl.exe
-  - nicm.sys
-  ExportedFunctions:
-  - DllGetClassObject
-  - XTCOM_Table
-  ImportedFunctions:
-  - IoCreateDevice
-  - SeUnregisterLogonSessionTerminatedRoutine
-  - KeInitializeMutex
-  - IoDeleteDevice
-  - SeRegisterLogonSessionTerminatedRoutine
-  - SeMarkLogonSessionForTerminationNotification
-  - KeReleaseMutex
-  - ZwOpenThreadTokenEx
-  - ZwOpenProcessTokenEx
-  - IoGetCurrentProcess
-  - ZwClose
-  - KeBugCheckEx
-  - KeWaitForSingleObject
-  - ZwQueryInformationToken
-  - DbgPrint
-  - NicmCreateInstance
-  - NicmDeregisterClassFactory
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer ,
-        G2
-      ValidFrom: '2007-06-15 00:00:00'
-      ValidTo: '2012-06-14 23:59:59'
-      Signature: 50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
-      Version: 3
-      TBS:
-        MD5: d6c7684e9aaa508cf268335f83afe040
-        SHA1: 18066d20ad92409c567cdfde745279ff71c75226
-        SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
-        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
-    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
-      ValidFrom: '2003-12-04 00:00:00'
-      ValidTo: '2013-12-03 23:59:59'
-      Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
-      Version: 3
-      TBS:
-        MD5: 518d2ea8a21e879c942d504824ac211c
-        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
-        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
-        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
-        at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
-        CA
-      ValidFrom: '2009-05-21 00:00:00'
-      ValidTo: '2019-05-20 23:59:59'
-      Signature: 8b03c0dd94d841a26169b015a878c730c6903c7e42f724b6e4837317047f04109ca1e2fa812febc0ca44e772e050b6551020836e9692e49a516ab43731dca52deb8c00c71d4fe74d32ba85f84ebefa675565f06abe7aca64381a101078457631f3867a030f60c2b35d9df68b6676821b59e183e5bd49a53856e5de41770e580f
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 655226e1b22e18e1590f2985ac22e75c
-      Version: 3
-      TBS:
-        MD5: 650704c342850095f3288eaf791147d4
-        SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
-        SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
-        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
-    - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
-        Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
-      ValidFrom: '2010-04-03 00:00:00'
-      ValidTo: '2013-04-26 23:59:59'
-      Signature: 2d2eec4636a0c1f359ef30a107e6c2301ad12c09ab9fdac02211aaef81323d1daee3a14a150bf9f4c7d0d788d5f486ea75e40abeb502a2267171be53030fe7614af7a2015eabd4c26e887ec9220beb3666fc68158d2b8dd659e3fe55245821c10e37ddeebac63eb1848512c64a543a13ba6735b156c6dc13395890e8003e03e7c2613e2c1de1dfadfe072cd7655e3b4166fe973233b4f81ecf810541382d67c92f29d76e220543a7179b606011b932cee250f99f260b29e79236cec10b67e0e0e48cb74593a7ce2e3cfafb6c58ac7ae5c10a591037c380b5f7516cac8f4ec695b020ca2445cb9bf97eb56c09d4a62618871b482ef97c5894349e10f62e2ee68b
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
-      Version: 3
-      TBS:
-        MD5: b1504f143b89a6080710bafcededb833
-        SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
-        SHA256: ae1dc09d08e93ace95fe203adfbfadcd4c029529d3f99ab381c368064b58d9a0
-        SHA384: 18c6db711578cfcd4bce87c63d053e242c7c196efc892c2d4a8733cb75bb7dc3cac3f702e0e1d4b7fa2c590acb53fdee
-    - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
-      ValidFrom: '2006-05-23 17:01:29'
-      ValidTo: '2016-05-23 17:11:29'
-      Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 610c120600000000001b
-      Version: 3
-      TBS:
-        MD5: 53c41bc1164e09e0cd1617a5bf913efd
-        SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
-        SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
-        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
-    Signer:
-    - SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
-      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
-        https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
-        CA
-      Version: 1
-  RichPEHeaderHash:
-    MD5: 4a07178c85358a7450e421019955ccee
-    SHA1: 0e0b4edfb21b1a41b2f00f341bc1c6de6a650546
-    SHA256: dd7717af9d41e7c2d7c773f3e063d396ad8676b3d940732451acc1fc28ec9989
-  Sections:
-    .text:
-      Entropy: 5.98589698052852
-      Virtual Size: '0x4c15'
-    .rdata:
-      Entropy: 5.645994240527473
-      Virtual Size: '0x4b8'
-    .data:
-      Entropy: 0.8264834692004682
-      Virtual Size: '0x568'
-    .pdata:
-      Entropy: 4.238276468304064
-      Virtual Size: '0x3d8'
-    .edata:
-      Entropy: 3.956023170093665
-      Virtual Size: '0x63'
-    INIT:
-      Entropy: 5.259964214601351
-      Virtual Size: '0x360'
-    .rsrc:
-      Entropy: 3.287931080812757
-      Virtual Size: '0x350'
-    .reloc:
-      Entropy: 1.2454265871243133
-      Virtual Size: '0x3c'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-04-01 19:18:14'
-  Imphash: b8d0a36d2b14d79dfa08fb2e121f0920
-  LoadsDespiteHVCI: 'FALSE'
-- Filename: nscm.sys
-  MD5: a1547e8b2ca0516d0d9191a55b8536c0
-  SHA1: 7cd4aea9c1f82111bf7f9d4934be95e9bb6f8ae0
-  SHA256: ce23c2dae4cca4771ea50ec737093dfafac06c64db0f924a1ccbbf687e33f5a2
-  Authentihash:
-    MD5: 7e245f8b1d1bddfd217d1cd060b91657
-    SHA1: 8c89db8dd4d7947cb5eb13c7a12907564576cb91
-    SHA256: 00dfeab446afecac7b44b0b1680d5ca7d421eda243e16db8c08706bb593a8391
-  Description: Novell XTier Session Manager
-  Company: Novell, Inc.
-  InternalName: ''
-  OriginalFilename: nscm.sys
-  FileVersion: 3.1.6.0
-  Product: Novell XTier
-  ProductVersion: 3.1.6
-  Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  MachineType: I386
-  Imports:
-  - ntoskrnl.exe
-  - nicm.sys
-  ExportedFunctions:
-  - DllGetClassObject
-  - XTCOM_Table
-  ImportedFunctions:
-  - IoDeleteDevice
-  - SeUnregisterLogonSessionTerminatedRoutine
-  - SeRegisterLogonSessionTerminatedRoutine
-  - KeInitializeMutex
-  - IoCreateDevice
-  - ZwClose
-  - KeWaitForSingleObject
-  - ZwOpenProcessTokenEx
-  - ZwOpenThreadTokenEx
-  - IoGetCurrentProcess
-  - SeMarkLogonSessionForTerminationNotification
-  - KeTickCount
-  - DbgPrint
-  - ZwQueryInformationToken
-  - KeReleaseMutex
-  - NicmCreateInstance
-  - NicmDeregisterClassFactory
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer ,
-        G2
-      ValidFrom: '2007-06-15 00:00:00'
-      ValidTo: '2012-06-14 23:59:59'
-      Signature: 50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
-      Version: 3
-      TBS:
-        MD5: d6c7684e9aaa508cf268335f83afe040
-        SHA1: 18066d20ad92409c567cdfde745279ff71c75226
-        SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
-        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
-    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
-      ValidFrom: '2003-12-04 00:00:00'
-      ValidTo: '2013-12-03 23:59:59'
-      Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
-      Version: 3
-      TBS:
-        MD5: 518d2ea8a21e879c942d504824ac211c
-        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
-        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
-        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
-        at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
-        CA
-      ValidFrom: '2004-07-16 00:00:00'
-      ValidTo: '2014-07-15 23:59:59'
-      Signature: ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 4191a15a3978dfcf496566381d4c75c2
-      Version: 3
-      TBS:
-        MD5: 41011f8d0e7c7a6408334ca387914c61
-        SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
-        SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
-        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
-    - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
-        Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
-      ValidFrom: '2007-04-04 00:00:00'
-      ValidTo: '2010-04-27 23:59:59'
-      Signature: 267f71f6ee43755fd6395f85c34bb15a72a6f2a959c2074627d294395fb1aaa4c7bbeff369d735628b233bde7e5c95a0f1837e5ad03704270834ce9c1b07649a256027930f44e064568666b06e7f9dc3cd299b38b0a6766301200ab58434a05a34a369ab99bbbf2aaa6b3603481e0393a80ea09e78a7cf55317a9590c49887f02e1fd948c3b1f6d203e91782ce423d0569f45e7f074205df5f92be6ccd9836641439af4390022242e0ca84aedb0d71c5a50f2dbd1ed30e5ac9c1bda67c694f94f2fe4aa83945ed32e426afe26f44dcb6dcc8186728f86f1a1bddc1ea7dd82b76578a42d1e63bf5f8f348fbcd509094858978e375d277394529df1dd5d78abab2
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
-      Version: 3
-      TBS:
-        MD5: adddb65a3a360b3c1a55cb33e426f32a
-        SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
-        SHA256: d98d63f26125a94eb767fdd2526f6c74bfb40cb4d117a1d87ca3ed0d99bd6f0b
-        SHA384: cf20d9d6343b52b05ebaeace8a75ad950089e2d55508571cf5b153583fdf2d7b11bc61b8f38bfa70f09b2e7ac63d9ef5
-    - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
-      ValidFrom: '2006-05-23 17:01:29'
-      ValidTo: '2016-05-23 17:11:29'
-      Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 610c120600000000001b
-      Version: 3
-      TBS:
-        MD5: 53c41bc1164e09e0cd1617a5bf913efd
-        SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
-        SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
-        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
-    Signer:
-    - SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
-      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
-        https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
-        CA
-      Version: 1
-  RichPEHeaderHash:
-    MD5: e92edbb3d49ed0e7c3de680c901221a8
-    SHA1: 17f6d8284edd12372405ea1e0edb59249d6d2a02
-    SHA256: 94fef4d39e3ffb29a749b7b8511c7ce76b9f824cb724eeef2529476a7b9af465
-  Sections:
-    .text:
-      Entropy: 6.133436661587974
-      Virtual Size: '0x337b'
-    .rdata:
-      Entropy: 5.95443123338063
-      Virtual Size: '0x2cc'
-    .data:
-      Entropy: 0.6992933847552781
-      Virtual Size: '0x294'
-    .edata:
-      Entropy: 3.88787733918592
-      Virtual Size: '0x63'
-    INIT:
-      Entropy: 5.407607088870612
-      Virtual Size: '0x2d6'
-    .rsrc:
-      Entropy: 3.289150653685818
-      Virtual Size: '0x350'
-    .reloc:
-      Entropy: 6.220983522762253
-      Virtual Size: '0x4f2'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-27 11:52:17'
-  Imphash: 65181bc89a1c2b5854548236269846c1
-  LoadsDespiteHVCI: 'FALSE'
-- Filename: nscm.sys
-  MD5: bd5d4d07ae09e9f418d6b4ac6d9f2ed5
-  SHA1: d61acd857242185a56e101642d15b9b5f0558c26
-  SHA256: fb81b5f8bf69637dbdf050181499088a67d24577587bc520de94b5ee8996240f
-  Authentihash:
-    MD5: 32265ccdfe3d7f66269cbee0d5555e5b
-    SHA1: 72e5f5f6f266410d827fef10dc82c7ec8541e036
-    SHA256: 253ed7f5c7115e957dfdb1f5c6c51592b491a70b27787903c8fd848e45b9cf22
-  Description: Novell XTier Session Manager
-  Company: Novell, Inc.
-  InternalName: ''
-  OriginalFilename: nscm.sys
-  FileVersion: 3.1.11.0
-  Product: Novell XTier
-  ProductVersion: 3.1.11
-  Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  MachineType: AMD64
-  Imports:
-  - ntoskrnl.exe
-  - nicm.sys
-  ExportedFunctions:
-  - DllGetClassObject
-  - XTCOM_Table
-  ImportedFunctions:
-  - ExAllocatePoolWithTag
-  - ExFreePoolWithTag
-  - KeInitializeMutex
-  - IoQueueWorkItemEx
-  - IoDeleteDevice
-  - IoFreeWorkItem
-  - RtlEqualUnicodeString
-  - ZwOpenProcessTokenEx
-  - IoAllocateWorkItem
-  - ZwClose
-  - ZwOpenProcess
-  - DbgPrint
-  - PsGetCurrentProcessId
-  - IoCreateDevice
-  - ZwQueryInformationToken
-  - PsSetCreateProcessNotifyRoutine
-  - SeRegisterLogonSessionTerminatedRoutine
-  - SeUnregisterLogonSessionTerminatedRoutine
-  - ZwOpenThreadTokenEx
-  - IoGetCurrentProcess
-  - SeMarkLogonSessionForTerminationNotification
-  - KeBugCheckEx
-  - KeWaitForSingleObject
-  - ZwQueryInformationProcess
-  - KeReleaseMutex
-  - NicmCreateInstance
-  - NicmDeregisterClassFactory
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Corporation
-      ValidFrom: '2021-09-02 18:32:59'
-      ValidTo: '2022-09-01 18:32:59'
-      Signature: 164937b92c644c4061d4db4097b062bc812c0167605f5a99f847593186d029ab18e888522d744cc45d41dce29d47d2bf91c72992f35c1a5f03ed8c984b89a109430147e54bae0ddff0f523dfc03d5796a2636fc9a24ed66453809a33d134d1a7c9e83b974953893845a84fb668eb3afa179e82a01d7a51a03492911cb591ba118ab8b230e65920c7d2b2f90bd9ae7fc3762f2e4c88162a9f8c186f3163a3c1bef8e0b7d8d04a19673eb677518f01bf0cbaaf29e15c1695d15d134cbd20131ede87f2b5a3c3226abbbab3fec5caa38b7944b8bd31e1f538012f90edc4262ead76d2055b4bd458f8e3e39dffa7260bd9a6bebb62c86ef4f58dd177761d263d9fdc626aed8eca756ab441885ab4a8417a0e1fc63860d32badda0e9a3359b18cd3eb138f33e87582346bbd80c2b966e765751c386b8e59d3a02892da1fd02a8ec9312bbead188e81385e96b4fbced3fcf5545cda9fed8faa494efef4bb4b42e318478c377123e3b8dbacbcb7fd8019dc87946a33b91a0ed6160e02f2078d847ecc5e32ac0a5b003e4d58b41eb591a9f4b1da895b139ea125c1243233922b3dec46eba91425f752ba3261fe762feda2553add6bc5d67ac3c6eb63279f74fc02e2dfcde245b806df392111c7b20564ef7650fa17135b848cbe6c925d724d907732e6e0380e05f0aa11361be21401124fe9c6f1cf2e22c6d979bd3c49e61032a8d51269
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 33000002528b33aaf895f339db000000000252
-      Version: 3
-      TBS:
-        MD5: 92b6022918bc02eb361b8a02fb1da57d
-        SHA1: 8ceb945fac0f6d623d464e21740ae6eb60351652
-        SHA256: c1446860a1cd9db490d3ea85e9df05df44af8d44e2bb803a2a2018f3b6c41bcb
-        SHA384: 322ed1a62a9f2ed7c7f601e99a8db15371e3ba1039a73c81801165ea987679023bc36f8c357f74354dce65532b71be3c
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Code Signing PCA 2011
-      ValidFrom: '2011-07-08 20:59:09'
-      ValidTo: '2026-07-08 21:09:09'
-      Signature: 67f286a598e054791a2ed3d87467229b0b9611e163929942967dd2790c90c1655f2e2c3ef8c372d16d83febe3fe80aca3bbf47a9a3f369db63bf2235a5975d6584907d8b465055d80c927cd21a4b1cf33c428b52d0b0fd6be33e072e299be63d1ba5d4b51d779439e2e964c9443d787a23f3137da69074838df4cb2602462ac28a10bba4a9050c9bed68fa682e95a02a3f2a6b5849631f09696e5a9896e483f4c08ff3462bdefc3bd0bd35ef6e25aee5af27edd0ddf30eaf992897984d0e3d0bf20889d61fc33218e2f0c52dce5b9eb449390ac60ac2c6adaee5b2d9db1588514558383271271a7fb1f427f8de2c3a206998b25989686e6fa7b774c3400506a6012a283e823f134d660bc0b34df5e18f7f1c6f157d45a776e5402a65a3c35d526286c31d63369786dfdaf3f8f216a19a27e1cda597d0ee5d6341e35b079c873e067706d106b1751f14be6161b5f0dcc61b04bedf41c70e28eede652fec97f6a15c96d800d6a146bd59f397a5094b481099801fd00029c5b19ba53f45771e35c6d2a2a29f7a7a22fa48951fabfb472380f59ef8bf6bb74b97e2eb75781aecea379979184bffd6b3236875e6affafc8beb0b80ea693baffc30ed044c8edfdf756d63913dd19d564e4fbf805722a1781132217aef410ab13ffba8cca45dc1a1889b5771564e4845c042c99b765b0a80486bfd799fc1bd6d6d6ac95273130d7a50cd
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 610e90d2000000000003
-      Version: 3
-      TBS:
-        MD5: b4ec95434f1d45b8055077cf90540a5f
-        SHA1: 71f74db41d045d6eaf81a849bbb3e21544edcff4
-        SHA256: f6f717a43ad9abddc8cefdde1c505462535e7d1307e630f9544a2d14fe8bf26e
-        SHA384: 25cbac323e740588a1ea3ca39ea907647440884ad75fc4bd99be6c82202aba42e95049fa7b66884977e60b819b21a2a5
-    Signer:
-    - SerialNumber: 33000002528b33aaf895f339db000000000252
-      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Code Signing PCA 2011
-      Version: 1
-  RichPEHeaderHash:
-    MD5: 0d646b28e804b652211b8f3e0feac906
-    SHA1: 1169ececb349b1d1a50626a2565e85cc6e9049ea
-    SHA256: 097828b6f5705aca00605777868f774f37fd5ecf705e958c6dbdb860c4934be4
-  Sections:
-    .text:
-      Entropy: 5.9944111351941185
-      Virtual Size: '0x5736'
-    .rdata:
-      Entropy: 5.542492779395016
-      Virtual Size: '0x570'
-    .data:
-      Entropy: 1.445115035315444
-      Virtual Size: '0x5a8'
-    .pdata:
-      Entropy: 4.268472946152158
-      Virtual Size: '0x42c'
-    .edata:
-      Entropy: 3.9636482963781448
-      Virtual Size: '0x63'
-    INIT:
-      Entropy: 5.324738401510091
-      Virtual Size: '0x4b6'
-    .rsrc:
-      Entropy: 3.275995301680775
-      Virtual Size: '0x358'
-    .reloc:
-      Entropy: 1.2355823247516717
-      Virtual Size: '0x48'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-15 23:24:57'
-  Imphash: 8b7e7c20da6ca9ac4bdb3927fe2b266a
-  LoadsDespiteHVCI: 'TRUE'
-Tags:
-- nscm.sys
+-   Filename: nscm.sys
+    MD5: ba2c0fa201c74621cddd8638497b3c70
+    SHA1: 8f540936f2484d020e270e41529624407b7e107e
+    SHA256: 28999af32b55ddb7dcfc26376a244aa2fe297233ce7abe4919a1aef2f7e2cee7
+    Authentihash:
+        MD5: 3a5b83215c9ea17f8d3ad3812c30a340
+        SHA1: 533e0690528ff3f0d59edeed9dd53b4f37c0a110
+        SHA256: 1622ac0c618a86be17e0f97daa061f9aaa0e721dc0fd30d76bbc5c958e9a9d92
+    Description: Novell XTier Session Manager
+    Company: Novell, Inc.
+    InternalName: ''
+    OriginalFilename: nscm.sys
+    FileVersion: 3.1.6.0
+    Product: Novell XTier
+    ProductVersion: 3.1.6
+    Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
+    MachineType: AMD64
+    Imports:
+    - ntoskrnl.exe
+    - nicm.sys
+    ExportedFunctions:
+    - DllGetClassObject
+    - XTCOM_Table
+    ImportedFunctions:
+    - IoCreateDevice
+    - SeUnregisterLogonSessionTerminatedRoutine
+    - KeInitializeMutex
+    - IoDeleteDevice
+    - SeRegisterLogonSessionTerminatedRoutine
+    - ZwOpenProcessTokenEx
+    - KeReleaseMutex
+    - ZwClose
+    - SeMarkLogonSessionForTerminationNotification
+    - ZwQueryInformationToken
+    - ZwOpenThreadTokenEx
+    - KeBugCheckEx
+    - KeWaitForSingleObject
+    - IoGetCurrentProcess
+    - DbgPrint
+    - NicmCreateInstance
+    - NicmDeregisterClassFactory
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
+                , G2
+            ValidFrom: '2007-06-15 00:00:00'
+            ValidTo: '2012-06-14 23:59:59'
+            Signature: 50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
+            Version: 3
+            TBS:
+                MD5: d6c7684e9aaa508cf268335f83afe040
+                SHA1: 18066d20ad92409c567cdfde745279ff71c75226
+                SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+                SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
+        -   Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
+            ValidFrom: '2003-12-04 00:00:00'
+            ValidTo: '2013-12-03 23:59:59'
+            Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+            Version: 3
+            TBS:
+                MD5: 518d2ea8a21e879c942d504824ac211c
+                SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+                SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+                SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code
+                Signing 2004 CA
+            ValidFrom: '2004-07-16 00:00:00'
+            ValidTo: '2014-07-15 23:59:59'
+            Signature: ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 4191a15a3978dfcf496566381d4c75c2
+            Version: 3
+            TBS:
+                MD5: 41011f8d0e7c7a6408334ca387914c61
+                SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
+                SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+                SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
+        -   Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3
+                , Microsoft Software Validation v2, OU=Novell Products Group, CN=Novell,
+                Inc.
+            ValidFrom: '2007-04-04 00:00:00'
+            ValidTo: '2010-04-27 23:59:59'
+            Signature: 267f71f6ee43755fd6395f85c34bb15a72a6f2a959c2074627d294395fb1aaa4c7bbeff369d735628b233bde7e5c95a0f1837e5ad03704270834ce9c1b07649a256027930f44e064568666b06e7f9dc3cd299b38b0a6766301200ab58434a05a34a369ab99bbbf2aaa6b3603481e0393a80ea09e78a7cf55317a9590c49887f02e1fd948c3b1f6d203e91782ce423d0569f45e7f074205df5f92be6ccd9836641439af4390022242e0ca84aedb0d71c5a50f2dbd1ed30e5ac9c1bda67c694f94f2fe4aa83945ed32e426afe26f44dcb6dcc8186728f86f1a1bddc1ea7dd82b76578a42d1e63bf5f8f348fbcd509094858978e375d277394529df1dd5d78abab2
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
+            Version: 3
+            TBS:
+                MD5: adddb65a3a360b3c1a55cb33e426f32a
+                SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
+                SHA256: d98d63f26125a94eb767fdd2526f6c74bfb40cb4d117a1d87ca3ed0d99bd6f0b
+                SHA384: cf20d9d6343b52b05ebaeace8a75ad950089e2d55508571cf5b153583fdf2d7b11bc61b8f38bfa70f09b2e7ac63d9ef5
+        -   Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification
+                Authority
+            ValidFrom: '2006-05-23 17:01:29'
+            ValidTo: '2016-05-23 17:11:29'
+            Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 610c120600000000001b
+            Version: 3
+            TBS:
+                MD5: 53c41bc1164e09e0cd1617a5bf913efd
+                SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
+                SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+                SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
+        Signer:
+        -   SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
+            Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code
+                Signing 2004 CA
+            Version: 1
+    RichPEHeaderHash:
+        MD5: 4a07178c85358a7450e421019955ccee
+        SHA1: 0e0b4edfb21b1a41b2f00f341bc1c6de6a650546
+        SHA256: dd7717af9d41e7c2d7c773f3e063d396ad8676b3d940732451acc1fc28ec9989
+    Sections:
+        .text:
+            Entropy: 5.981323117886685
+            Virtual Size: '0x4a25'
+        .rdata:
+            Entropy: 5.681127753509768
+            Virtual Size: '0x480'
+        .data:
+            Entropy: 0.8264834692004682
+            Virtual Size: '0x548'
+        .pdata:
+            Entropy: 4.218145333940637
+            Virtual Size: '0x3c0'
+        .edata:
+            Entropy: 3.983850316580165
+            Virtual Size: '0x63'
+        INIT:
+            Entropy: 5.26537545088398
+            Virtual Size: '0x360'
+        .rsrc:
+            Entropy: 3.289150653685818
+            Virtual Size: '0x350'
+        .reloc:
+            Entropy: 1.2454265871243133
+            Virtual Size: '0x3c'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2009-03-27 11:56:49'
+    Imphash: 7d004bbe0f546a91c93562d324307fa7
+    LoadsDespiteHVCI: 'FALSE'
+-   Filename: nscm.sys
+    MD5: 4c76554d9a72653c6156ca0024d21a8e
+    SHA1: 6d3c760251d6e6ea7ff4f4fcac14876fac829cf9
+    SHA256: 2e665962c827ce0adbd29fe6bcf09bbb1d7a7022075d162ff9b65d0af9794ac0
+    Authentihash:
+        MD5: b546d6b223a9e1a42f8359dbf9d9737c
+        SHA1: 41f6704252efa14de0d72eeaf7475886ba7f3bdc
+        SHA256: 92ca1aec3afc90b44861c2e0be084a3db38d22d52f35e1697643d6477151392f
+    Description: Novell XTier Session Manager
+    Company: Novell, Inc.
+    InternalName: ''
+    OriginalFilename: nscm.sys
+    FileVersion: 3.1.11.0
+    Product: Novell XTier
+    ProductVersion: 3.1.11
+    Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
+    MachineType: AMD64
+    Imports:
+    - ntoskrnl.exe
+    - nicm.sys
+    ExportedFunctions:
+    - DllGetClassObject
+    - XTCOM_Table
+    ImportedFunctions:
+    - ExAllocatePoolWithTag
+    - ExFreePoolWithTag
+    - KeInitializeMutex
+    - IoQueueWorkItemEx
+    - IoDeleteDevice
+    - IoFreeWorkItem
+    - RtlEqualUnicodeString
+    - ZwOpenProcessTokenEx
+    - IoAllocateWorkItem
+    - ZwClose
+    - ZwOpenProcess
+    - DbgPrint
+    - PsGetCurrentProcessId
+    - IoCreateDevice
+    - ZwQueryInformationToken
+    - PsSetCreateProcessNotifyRoutine
+    - SeRegisterLogonSessionTerminatedRoutine
+    - SeUnregisterLogonSessionTerminatedRoutine
+    - ZwOpenThreadTokenEx
+    - IoGetCurrentProcess
+    - SeMarkLogonSessionForTerminationNotification
+    - KeBugCheckEx
+    - KeWaitForSingleObject
+    - ZwQueryInformationProcess
+    - KeReleaseMutex
+    - NicmCreateInstance
+    - NicmDeregisterClassFactory
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Publisher
+            ValidFrom: '2022-01-27 19:31:19'
+            ValidTo: '2023-01-26 19:31:19'
+            Signature: 941777115fcaf24c60c4a8c891758c491887aa5e9f0902a704191e75dd6f99be3d14a24aa35b1f2a1c1c42dde08da3fa75a73edbf7b5ae0fe94b3716e43b838ff30149e19c51b8b87cc53377ae08bfc0f54c7fafa398db43e839de108493510bc34d0fe998a44fcd0a11b0dc0c7315421dac79ab09ca47f847f9fa88e15d57a564f7b074664409c0ce01c697b2dcfd31676fc908fbc6bb928f82170f0b5a54f52f4327797278b78188b87e37b192b493d00eaf661e30f12b9e67fbd1df9cc5843e6a1c68b45d4f62423450cdc990fab2367d7f57719cb8272f59d4f300284a36d88adfc976cb08c6b0da33d5e988be0e1a3cef2a9669b5227a5b8d027f804908
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 330000036ce57eeb5d1cc2be1700000000036c
+            Version: 3
+            TBS:
+                MD5: 7ece739fdaa27d96b67f587db04186a7
+                SHA1: b8701efa0ab12b8fea2293c9cff8772ecca084d0
+                SHA256: c1392bdcbb0b50215fca8c78f25c2d857e515dce06c87ce86527c88c91d5d7e4
+                SHA384: 8d292e8db16824f3ac9d668816c4cf521a9eb251069694c92932683afcaa4e53d5fa3a1f58356749e655299ed83fe191
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Production PCA 2011
+            ValidFrom: '2011-10-19 18:41:42'
+            ValidTo: '2026-10-19 18:51:42'
+            Signature: 14fc7c7151a579c26eb2ef393ebc3c520f6e2b3f101373fea868d048a6344d8a960526ee3146906179d6ff382e456bf4c0e528b8da1d8f8adb09d71ac74c0a36666a8cec1bd70490a81817a49bb9e240323676c4c15ac6bfe404c0ea16d3acc368ef62acdd546c503058a6eb7cfe94a74e8ef4ec7c867357c2522173345af3a38a56c804da0709edf88be3cef47e8eaef0f60b8a08fb3fc91d727f53b8ebbe63e0e33d3165b081e5f2accd16a49f3da8b19bc242d090845f541dff89eaba1d47906fb0734e419f409f5fe5a12ab21191738a2128f0cede73395f3eab5c60ecdf0310a8d309e9f4f69685b67f51886647198da2b0123d812a680577bb914c627bb6c107c7ba7a8734030e4b627a99e9cafcce4a37c92da4577c1cfe3ddcb80f5afad6c4b30285023aeab3d96ee4692137de81d1f675190567d393575e291b39c8ee2de1cde445735bd0d2ce7aab1619824658d05e9d81b367af6c35f2bce53f24e235a20a7506f6185699d4782cd1051bebd088019daa10f105dfba7e2c63b7069b2321c4f9786ce2581706362b911203cca4d9f22dbaf9949d40ed1845f1ce8a5c6b3eab03d370182a0a6ae05f47d1d5630a32f2afd7361f2a705ae5425908714b57ba7e8381f0213cf41cc1c5b990930e88459386e9b12099be98cbc595a45d62d6a0630820bd7510777d3df345b99f979fcb57806f33a904cf77a4621c597e
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: '61077656000000000008'
+            Version: 3
+            TBS:
+                MD5: 30a3f0b64324ed7f465e7fc618cb69e7
+                SHA1: 002de3561519b662c5e3f5faba1b92c403fb7c41
+                SHA256: 4e80be107c860de896384b3eff50504dc2d76ac7151df3102a4450637a032146
+                SHA384: 4f9a02c3eac5e83c38074d54c0bf270e03a1d668e0001c9812c509eb08a19075ee778a7630e65598e4608fc66e2d1c66
+        Signer:
+        -   SerialNumber: 330000036ce57eeb5d1cc2be1700000000036c
+            Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Production PCA 2011
+            Version: 1
+    RichPEHeaderHash:
+        MD5: 0d646b28e804b652211b8f3e0feac906
+        SHA1: 1169ececb349b1d1a50626a2565e85cc6e9049ea
+        SHA256: 097828b6f5705aca00605777868f774f37fd5ecf705e958c6dbdb860c4934be4
+    Sections:
+        .text:
+            Entropy: 5.9944111351941185
+            Virtual Size: '0x5736'
+        .rdata:
+            Entropy: 5.542492779395016
+            Virtual Size: '0x570'
+        .data:
+            Entropy: 1.445115035315444
+            Virtual Size: '0x5a8'
+        .pdata:
+            Entropy: 4.268472946152158
+            Virtual Size: '0x42c'
+        .edata:
+            Entropy: 3.9636482963781448
+            Virtual Size: '0x63'
+        INIT:
+            Entropy: 5.429528792402954
+            Virtual Size: '0x4b6'
+        .rsrc:
+            Entropy: 6.472426446171854
+            Virtual Size: '0x14a24'
+        .reloc:
+            Entropy: 5.039009418592025
+            Virtual Size: '0x48'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2013-01-15 23:24:57'
+    Imphash: 8b7e7c20da6ca9ac4bdb3927fe2b266a
+    LoadsDespiteHVCI: 'TRUE'
+-   Filename: nscm.sys
+    MD5: 5f4a232d92480a1bebbe025ef64dc760
+    SHA1: 0cb14c1049c0e81c8655ab7ee7d698c11758ea06
+    SHA256: 5351c81b4ec5a0d79c39d24bac7600d10eac30c13546fde43d23636b3f421e7c
+    Authentihash:
+        MD5: 5d62cae57be434a4d56924574498c4f2
+        SHA1: 1a99d3141d75a3ef1998944b2d107089ce3ef6e4
+        SHA256: a363deaf1790e9c0610e07a7203749aab8b60f5ededc944abc0ef3010f5e2105
+    Description: XTier Security Context Manager
+    Company: Micro Focus
+    InternalName: ''
+    OriginalFilename: nscm.sys
+    FileVersion: 3.1.12.0
+    Product: Micro Focus XTier
+    ProductVersion: 3.1.12
+    Copyright: (C) Copyright 2000-2017, Micro Focus. All Rights Reserved.
+    MachineType: AMD64
+    Imports:
+    - ntoskrnl.exe
+    - nicm.sys
+    ExportedFunctions:
+    - DllGetClassObject
+    - XTCOM_Table
+    ImportedFunctions:
+    - ExAllocatePoolWithTag
+    - ExFreePoolWithTag
+    - KeInitializeMutex
+    - PsLookupProcessByProcessId
+    - IoDeleteDevice
+    - RtlEqualUnicodeString
+    - ZwOpenProcessTokenEx
+    - _vsnwprintf
+    - ZwClose
+    - ZwOpenProcess
+    - ZwQueryInformationProcess
+    - DbgPrint
+    - IoCreateDevice
+    - ZwQueryInformationToken
+    - RtlDeleteRegistryValue
+    - PsSetCreateProcessNotifyRoutine
+    - SeRegisterLogonSessionTerminatedRoutine
+    - SeUnregisterLogonSessionTerminatedRoutine
+    - ZwOpenThreadTokenEx
+    - IoGetCurrentProcess
+    - SeMarkLogonSessionForTerminationNotification
+    - PsGetCurrentProcessId
+    - KeBugCheckEx
+    - KeWaitForSingleObject
+    - ObfDereferenceObject
+    - KeReleaseMutex
+    - NicmCreateInstance
+    - NicmDeregisterClassFactory
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Hardware Compatibility Publisher
+            ValidFrom: '2021-09-09 19:15:59'
+            ValidTo: '2022-09-01 19:15:59'
+            Signature: 1757782e797188079911866d54bd474a2432707984658c549a407e7fb4e5efa2ba72367a02b382d2116d4c4538836ddcd4616fcd231229df1ae5d0da6b3abe499ee5d8b47a7919940f6bbcbe2575018dca65eef4913e3d38410f2cd6cca3082d9ba2c061173cd828635665f76e8f0f685e03da24290b9d2cae7039da974de7b7e85798ba64cbe9ba34e0308c3bd6b4d68e9723fde74274fd3806fe799d04d6a3835f82d4fefc52088ccda4b4c817116f2f5a99445a3e952d78bc27753e65e97c6271c71ac7c9e3439b847e8984ab06a5904d150223f9ca92bbda86c02663c3f4964da5e106619b6eaff2768143cce9e5a8b0b2cba90e82cd87866d9fd6499c6cfbc96529a18b5653d12b54a6c928693a4e3d197ffbfcce7ed71a909b18d09b4345b24bc25eb8dfa1821a9cd0971ffc7d38a26580e2f118c4ac55bf926d0666b72ad7ba6ec20f0b54d694bc3b8a0dbddda27bd64194da085319841d1ebc9dc067ef72ea064a475bea865828b13077bc8e14e2f7544b90f0045f3cd84bcc0d5a80645a6fb65528e4f768ec775bdb0225399f3c81c0b667714676d0949f9ffaddc8549dc45e5ce4345c4ea7dc0aff4ac510f5527ad94a2181edc4b73bcfde813a83d81ca897854c98712346001a12e5d3bf9a45c807f9b3c7d3e0bb99c035ea54ee39e2c9af4147dbea7aabec85b47192b945e083ddf6061afb901e83b11135d24e
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 330000004de597a775e3157f7b00000000004d
+            Version: 3
+            TBS:
+                MD5: 9f0782e89bd41cdd96ec55357457478a
+                SHA1: 35c2180572baad19019acca1334e6c653699c389
+                SHA256: 50814710213afec410f26e573d25267a2e21d3d15f158be8a43a666c9cc6fa08
+                SHA384: 8d48f066b0284071d64bbc556e018824a8388ccd142a56c7b7b04ef6d27cade07da57ac82d8067e18ad64d35af11e2a7
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Third Party Component CA 2014
+            ValidFrom: '2014-10-15 20:31:27'
+            ValidTo: '2029-10-15 20:41:27'
+            Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 330000000d690d5d7893d076df00000000000d
+            Version: 3
+            TBS:
+                MD5: 83f69422963f11c3c340b81712eef319
+                SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+                SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+                SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
+        Signer:
+        -   SerialNumber: 330000004de597a775e3157f7b00000000004d
+            Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Third Party Component CA 2014
+            Version: 1
+    RichPEHeaderHash:
+        MD5: 827395be6a60ed22c16a6eeea1843d8a
+        SHA1: 61171f78fedd9cc13cfa2fad18219d2aaf9ab83f
+        SHA256: d9b5607af39de0f2fc8d411d18fc86f6a1394c2b512b8876caef597f9c56dcad
+    Sections:
+        .text:
+            Entropy: 6.0164645838764494
+            Virtual Size: '0x5a66'
+        .rdata:
+            Entropy: 5.545815315316552
+            Virtual Size: '0x590'
+        .data:
+            Entropy: 1.445115035315444
+            Virtual Size: '0x5a8'
+        .pdata:
+            Entropy: 4.277709228070346
+            Virtual Size: '0x450'
+        .edata:
+            Entropy: 3.956023170093665
+            Virtual Size: '0x63'
+        INIT:
+            Entropy: 5.349379600291399
+            Virtual Size: '0x4e0'
+        .rsrc:
+            Entropy: 3.2835150258002495
+            Virtual Size: '0x360'
+        .reloc:
+            Entropy: 1.2355823247516717
+            Virtual Size: '0x48'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2022-03-03 03:52:58'
+    Imphash: 01aa65221a48929f0a34a27c4e3011b1
+    LoadsDespiteHVCI: 'FALSE'
+-   Filename: nscm.sys
+    MD5: f56f30ac68c35dd4680054cdfd8f3f00
+    SHA1: fce3a95b222c810c56e7ed5a3d7fb059eb693682
+    SHA256: 8e88cb80328c3dbaa2752591692e74a2fae7e146d7d8aabc9b9ac9a6fe561e6c
+    Authentihash:
+        MD5: 3050ced748b80cc81892435fd0868bfc
+        SHA1: 579e23f2b6ce2221ba435abc20801e98ab91a360
+        SHA256: 34f36a59ecf6174eeac15994e54c41fe1e3e3b1eee8ed4c399ec8c63212373d7
+    Description: Novell XTier Session Manager
+    Company: Novell, Inc.
+    InternalName: ''
+    OriginalFilename: nscm.sys
+    FileVersion: 3.1.6.0
+    Product: Novell XTier
+    ProductVersion: 3.1.6
+    Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
+    MachineType: AMD64
+    Imports:
+    - ntoskrnl.exe
+    - nicm.sys
+    ExportedFunctions:
+    - DllGetClassObject
+    - XTCOM_Table
+    ImportedFunctions:
+    - IoCreateDevice
+    - SeUnregisterLogonSessionTerminatedRoutine
+    - KeInitializeMutex
+    - IoDeleteDevice
+    - SeRegisterLogonSessionTerminatedRoutine
+    - SeMarkLogonSessionForTerminationNotification
+    - KeReleaseMutex
+    - ZwOpenThreadTokenEx
+    - ZwOpenProcessTokenEx
+    - IoGetCurrentProcess
+    - ZwClose
+    - KeBugCheckEx
+    - KeWaitForSingleObject
+    - ZwQueryInformationToken
+    - DbgPrint
+    - NicmCreateInstance
+    - NicmDeregisterClassFactory
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
+                , G2
+            ValidFrom: '2007-06-15 00:00:00'
+            ValidTo: '2012-06-14 23:59:59'
+            Signature: 50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
+            Version: 3
+            TBS:
+                MD5: d6c7684e9aaa508cf268335f83afe040
+                SHA1: 18066d20ad92409c567cdfde745279ff71c75226
+                SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+                SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
+        -   Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
+            ValidFrom: '2003-12-04 00:00:00'
+            ValidTo: '2013-12-03 23:59:59'
+            Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+            Version: 3
+            TBS:
+                MD5: 518d2ea8a21e879c942d504824ac211c
+                SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+                SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+                SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code
+                Signing 2009,2 CA
+            ValidFrom: '2009-05-21 00:00:00'
+            ValidTo: '2019-05-20 23:59:59'
+            Signature: 8b03c0dd94d841a26169b015a878c730c6903c7e42f724b6e4837317047f04109ca1e2fa812febc0ca44e772e050b6551020836e9692e49a516ab43731dca52deb8c00c71d4fe74d32ba85f84ebefa675565f06abe7aca64381a101078457631f3867a030f60c2b35d9df68b6676821b59e183e5bd49a53856e5de41770e580f
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 655226e1b22e18e1590f2985ac22e75c
+            Version: 3
+            TBS:
+                MD5: 650704c342850095f3288eaf791147d4
+                SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
+                SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+                SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
+        -   Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3
+                , Microsoft Software Validation v2, OU=Novell Products Group, CN=Novell,
+                Inc.
+            ValidFrom: '2010-04-03 00:00:00'
+            ValidTo: '2013-04-26 23:59:59'
+            Signature: 2d2eec4636a0c1f359ef30a107e6c2301ad12c09ab9fdac02211aaef81323d1daee3a14a150bf9f4c7d0d788d5f486ea75e40abeb502a2267171be53030fe7614af7a2015eabd4c26e887ec9220beb3666fc68158d2b8dd659e3fe55245821c10e37ddeebac63eb1848512c64a543a13ba6735b156c6dc13395890e8003e03e7c2613e2c1de1dfadfe072cd7655e3b4166fe973233b4f81ecf810541382d67c92f29d76e220543a7179b606011b932cee250f99f260b29e79236cec10b67e0e0e48cb74593a7ce2e3cfafb6c58ac7ae5c10a591037c380b5f7516cac8f4ec695b020ca2445cb9bf97eb56c09d4a62618871b482ef97c5894349e10f62e2ee68b
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
+            Version: 3
+            TBS:
+                MD5: b1504f143b89a6080710bafcededb833
+                SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
+                SHA256: ae1dc09d08e93ace95fe203adfbfadcd4c029529d3f99ab381c368064b58d9a0
+                SHA384: 18c6db711578cfcd4bce87c63d053e242c7c196efc892c2d4a8733cb75bb7dc3cac3f702e0e1d4b7fa2c590acb53fdee
+        -   Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification
+                Authority
+            ValidFrom: '2006-05-23 17:01:29'
+            ValidTo: '2016-05-23 17:11:29'
+            Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 610c120600000000001b
+            Version: 3
+            TBS:
+                MD5: 53c41bc1164e09e0cd1617a5bf913efd
+                SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
+                SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+                SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
+        Signer:
+        -   SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
+            Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code
+                Signing 2009,2 CA
+            Version: 1
+    RichPEHeaderHash:
+        MD5: 4a07178c85358a7450e421019955ccee
+        SHA1: 0e0b4edfb21b1a41b2f00f341bc1c6de6a650546
+        SHA256: dd7717af9d41e7c2d7c773f3e063d396ad8676b3d940732451acc1fc28ec9989
+    Sections:
+        .text:
+            Entropy: 5.98589698052852
+            Virtual Size: '0x4c15'
+        .rdata:
+            Entropy: 5.645994240527473
+            Virtual Size: '0x4b8'
+        .data:
+            Entropy: 0.8264834692004682
+            Virtual Size: '0x568'
+        .pdata:
+            Entropy: 4.238276468304064
+            Virtual Size: '0x3d8'
+        .edata:
+            Entropy: 3.956023170093665
+            Virtual Size: '0x63'
+        INIT:
+            Entropy: 5.259964214601351
+            Virtual Size: '0x360'
+        .rsrc:
+            Entropy: 3.287931080812757
+            Virtual Size: '0x350'
+        .reloc:
+            Entropy: 1.2454265871243133
+            Virtual Size: '0x3c'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2011-04-01 19:18:14'
+    Imphash: b8d0a36d2b14d79dfa08fb2e121f0920
+    LoadsDespiteHVCI: 'FALSE'
+-   Filename: nscm.sys
+    MD5: a1547e8b2ca0516d0d9191a55b8536c0
+    SHA1: 7cd4aea9c1f82111bf7f9d4934be95e9bb6f8ae0
+    SHA256: ce23c2dae4cca4771ea50ec737093dfafac06c64db0f924a1ccbbf687e33f5a2
+    Authentihash:
+        MD5: 7e245f8b1d1bddfd217d1cd060b91657
+        SHA1: 8c89db8dd4d7947cb5eb13c7a12907564576cb91
+        SHA256: 00dfeab446afecac7b44b0b1680d5ca7d421eda243e16db8c08706bb593a8391
+    Description: Novell XTier Session Manager
+    Company: Novell, Inc.
+    InternalName: ''
+    OriginalFilename: nscm.sys
+    FileVersion: 3.1.6.0
+    Product: Novell XTier
+    ProductVersion: 3.1.6
+    Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
+    MachineType: I386
+    Imports:
+    - ntoskrnl.exe
+    - nicm.sys
+    ExportedFunctions:
+    - DllGetClassObject
+    - XTCOM_Table
+    ImportedFunctions:
+    - IoDeleteDevice
+    - SeUnregisterLogonSessionTerminatedRoutine
+    - SeRegisterLogonSessionTerminatedRoutine
+    - KeInitializeMutex
+    - IoCreateDevice
+    - ZwClose
+    - KeWaitForSingleObject
+    - ZwOpenProcessTokenEx
+    - ZwOpenThreadTokenEx
+    - IoGetCurrentProcess
+    - SeMarkLogonSessionForTerminationNotification
+    - KeTickCount
+    - DbgPrint
+    - ZwQueryInformationToken
+    - KeReleaseMutex
+    - NicmCreateInstance
+    - NicmDeregisterClassFactory
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
+                , G2
+            ValidFrom: '2007-06-15 00:00:00'
+            ValidTo: '2012-06-14 23:59:59'
+            Signature: 50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
+            Version: 3
+            TBS:
+                MD5: d6c7684e9aaa508cf268335f83afe040
+                SHA1: 18066d20ad92409c567cdfde745279ff71c75226
+                SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+                SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
+        -   Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
+            ValidFrom: '2003-12-04 00:00:00'
+            ValidTo: '2013-12-03 23:59:59'
+            Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+            Version: 3
+            TBS:
+                MD5: 518d2ea8a21e879c942d504824ac211c
+                SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+                SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+                SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code
+                Signing 2004 CA
+            ValidFrom: '2004-07-16 00:00:00'
+            ValidTo: '2014-07-15 23:59:59'
+            Signature: ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 4191a15a3978dfcf496566381d4c75c2
+            Version: 3
+            TBS:
+                MD5: 41011f8d0e7c7a6408334ca387914c61
+                SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
+                SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+                SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
+        -   Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3
+                , Microsoft Software Validation v2, OU=Novell Products Group, CN=Novell,
+                Inc.
+            ValidFrom: '2007-04-04 00:00:00'
+            ValidTo: '2010-04-27 23:59:59'
+            Signature: 267f71f6ee43755fd6395f85c34bb15a72a6f2a959c2074627d294395fb1aaa4c7bbeff369d735628b233bde7e5c95a0f1837e5ad03704270834ce9c1b07649a256027930f44e064568666b06e7f9dc3cd299b38b0a6766301200ab58434a05a34a369ab99bbbf2aaa6b3603481e0393a80ea09e78a7cf55317a9590c49887f02e1fd948c3b1f6d203e91782ce423d0569f45e7f074205df5f92be6ccd9836641439af4390022242e0ca84aedb0d71c5a50f2dbd1ed30e5ac9c1bda67c694f94f2fe4aa83945ed32e426afe26f44dcb6dcc8186728f86f1a1bddc1ea7dd82b76578a42d1e63bf5f8f348fbcd509094858978e375d277394529df1dd5d78abab2
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
+            Version: 3
+            TBS:
+                MD5: adddb65a3a360b3c1a55cb33e426f32a
+                SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
+                SHA256: d98d63f26125a94eb767fdd2526f6c74bfb40cb4d117a1d87ca3ed0d99bd6f0b
+                SHA384: cf20d9d6343b52b05ebaeace8a75ad950089e2d55508571cf5b153583fdf2d7b11bc61b8f38bfa70f09b2e7ac63d9ef5
+        -   Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification
+                Authority
+            ValidFrom: '2006-05-23 17:01:29'
+            ValidTo: '2016-05-23 17:11:29'
+            Signature: 01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 610c120600000000001b
+            Version: 3
+            TBS:
+                MD5: 53c41bc1164e09e0cd1617a5bf913efd
+                SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
+                SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+                SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
+        Signer:
+        -   SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
+            Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code
+                Signing 2004 CA
+            Version: 1
+    RichPEHeaderHash:
+        MD5: e92edbb3d49ed0e7c3de680c901221a8
+        SHA1: 17f6d8284edd12372405ea1e0edb59249d6d2a02
+        SHA256: 94fef4d39e3ffb29a749b7b8511c7ce76b9f824cb724eeef2529476a7b9af465
+    Sections:
+        .text:
+            Entropy: 6.133436661587974
+            Virtual Size: '0x337b'
+        .rdata:
+            Entropy: 5.95443123338063
+            Virtual Size: '0x2cc'
+        .data:
+            Entropy: 0.6992933847552781
+            Virtual Size: '0x294'
+        .edata:
+            Entropy: 3.88787733918592
+            Virtual Size: '0x63'
+        INIT:
+            Entropy: 5.407607088870612
+            Virtual Size: '0x2d6'
+        .rsrc:
+            Entropy: 3.289150653685818
+            Virtual Size: '0x350'
+        .reloc:
+            Entropy: 6.220983522762253
+            Virtual Size: '0x4f2'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2009-03-27 11:52:17'
+    Imphash: 65181bc89a1c2b5854548236269846c1
+    LoadsDespiteHVCI: 'FALSE'
+-   Filename: nscm.sys
+    MD5: bd5d4d07ae09e9f418d6b4ac6d9f2ed5
+    SHA1: d61acd857242185a56e101642d15b9b5f0558c26
+    SHA256: fb81b5f8bf69637dbdf050181499088a67d24577587bc520de94b5ee8996240f
+    Authentihash:
+        MD5: 32265ccdfe3d7f66269cbee0d5555e5b
+        SHA1: 72e5f5f6f266410d827fef10dc82c7ec8541e036
+        SHA256: 253ed7f5c7115e957dfdb1f5c6c51592b491a70b27787903c8fd848e45b9cf22
+    Description: Novell XTier Session Manager
+    Company: Novell, Inc.
+    InternalName: ''
+    OriginalFilename: nscm.sys
+    FileVersion: 3.1.11.0
+    Product: Novell XTier
+    ProductVersion: 3.1.11
+    Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
+    MachineType: AMD64
+    Imports:
+    - ntoskrnl.exe
+    - nicm.sys
+    ExportedFunctions:
+    - DllGetClassObject
+    - XTCOM_Table
+    ImportedFunctions:
+    - ExAllocatePoolWithTag
+    - ExFreePoolWithTag
+    - KeInitializeMutex
+    - IoQueueWorkItemEx
+    - IoDeleteDevice
+    - IoFreeWorkItem
+    - RtlEqualUnicodeString
+    - ZwOpenProcessTokenEx
+    - IoAllocateWorkItem
+    - ZwClose
+    - ZwOpenProcess
+    - DbgPrint
+    - PsGetCurrentProcessId
+    - IoCreateDevice
+    - ZwQueryInformationToken
+    - PsSetCreateProcessNotifyRoutine
+    - SeRegisterLogonSessionTerminatedRoutine
+    - SeUnregisterLogonSessionTerminatedRoutine
+    - ZwOpenThreadTokenEx
+    - IoGetCurrentProcess
+    - SeMarkLogonSessionForTerminationNotification
+    - KeBugCheckEx
+    - KeWaitForSingleObject
+    - ZwQueryInformationProcess
+    - KeReleaseMutex
+    - NicmCreateInstance
+    - NicmDeregisterClassFactory
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Corporation
+            ValidFrom: '2021-09-02 18:32:59'
+            ValidTo: '2022-09-01 18:32:59'
+            Signature: 164937b92c644c4061d4db4097b062bc812c0167605f5a99f847593186d029ab18e888522d744cc45d41dce29d47d2bf91c72992f35c1a5f03ed8c984b89a109430147e54bae0ddff0f523dfc03d5796a2636fc9a24ed66453809a33d134d1a7c9e83b974953893845a84fb668eb3afa179e82a01d7a51a03492911cb591ba118ab8b230e65920c7d2b2f90bd9ae7fc3762f2e4c88162a9f8c186f3163a3c1bef8e0b7d8d04a19673eb677518f01bf0cbaaf29e15c1695d15d134cbd20131ede87f2b5a3c3226abbbab3fec5caa38b7944b8bd31e1f538012f90edc4262ead76d2055b4bd458f8e3e39dffa7260bd9a6bebb62c86ef4f58dd177761d263d9fdc626aed8eca756ab441885ab4a8417a0e1fc63860d32badda0e9a3359b18cd3eb138f33e87582346bbd80c2b966e765751c386b8e59d3a02892da1fd02a8ec9312bbead188e81385e96b4fbced3fcf5545cda9fed8faa494efef4bb4b42e318478c377123e3b8dbacbcb7fd8019dc87946a33b91a0ed6160e02f2078d847ecc5e32ac0a5b003e4d58b41eb591a9f4b1da895b139ea125c1243233922b3dec46eba91425f752ba3261fe762feda2553add6bc5d67ac3c6eb63279f74fc02e2dfcde245b806df392111c7b20564ef7650fa17135b848cbe6c925d724d907732e6e0380e05f0aa11361be21401124fe9c6f1cf2e22c6d979bd3c49e61032a8d51269
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 33000002528b33aaf895f339db000000000252
+            Version: 3
+            TBS:
+                MD5: 92b6022918bc02eb361b8a02fb1da57d
+                SHA1: 8ceb945fac0f6d623d464e21740ae6eb60351652
+                SHA256: c1446860a1cd9db490d3ea85e9df05df44af8d44e2bb803a2a2018f3b6c41bcb
+                SHA384: 322ed1a62a9f2ed7c7f601e99a8db15371e3ba1039a73c81801165ea987679023bc36f8c357f74354dce65532b71be3c
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Code Signing PCA 2011
+            ValidFrom: '2011-07-08 20:59:09'
+            ValidTo: '2026-07-08 21:09:09'
+            Signature: 67f286a598e054791a2ed3d87467229b0b9611e163929942967dd2790c90c1655f2e2c3ef8c372d16d83febe3fe80aca3bbf47a9a3f369db63bf2235a5975d6584907d8b465055d80c927cd21a4b1cf33c428b52d0b0fd6be33e072e299be63d1ba5d4b51d779439e2e964c9443d787a23f3137da69074838df4cb2602462ac28a10bba4a9050c9bed68fa682e95a02a3f2a6b5849631f09696e5a9896e483f4c08ff3462bdefc3bd0bd35ef6e25aee5af27edd0ddf30eaf992897984d0e3d0bf20889d61fc33218e2f0c52dce5b9eb449390ac60ac2c6adaee5b2d9db1588514558383271271a7fb1f427f8de2c3a206998b25989686e6fa7b774c3400506a6012a283e823f134d660bc0b34df5e18f7f1c6f157d45a776e5402a65a3c35d526286c31d63369786dfdaf3f8f216a19a27e1cda597d0ee5d6341e35b079c873e067706d106b1751f14be6161b5f0dcc61b04bedf41c70e28eede652fec97f6a15c96d800d6a146bd59f397a5094b481099801fd00029c5b19ba53f45771e35c6d2a2a29f7a7a22fa48951fabfb472380f59ef8bf6bb74b97e2eb75781aecea379979184bffd6b3236875e6affafc8beb0b80ea693baffc30ed044c8edfdf756d63913dd19d564e4fbf805722a1781132217aef410ab13ffba8cca45dc1a1889b5771564e4845c042c99b765b0a80486bfd799fc1bd6d6d6ac95273130d7a50cd
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 610e90d2000000000003
+            Version: 3
+            TBS:
+                MD5: b4ec95434f1d45b8055077cf90540a5f
+                SHA1: 71f74db41d045d6eaf81a849bbb3e21544edcff4
+                SHA256: f6f717a43ad9abddc8cefdde1c505462535e7d1307e630f9544a2d14fe8bf26e
+                SHA384: 25cbac323e740588a1ea3ca39ea907647440884ad75fc4bd99be6c82202aba42e95049fa7b66884977e60b819b21a2a5
+        Signer:
+        -   SerialNumber: 33000002528b33aaf895f339db000000000252
+            Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Code Signing PCA 2011
+            Version: 1
+    RichPEHeaderHash:
+        MD5: 0d646b28e804b652211b8f3e0feac906
+        SHA1: 1169ececb349b1d1a50626a2565e85cc6e9049ea
+        SHA256: 097828b6f5705aca00605777868f774f37fd5ecf705e958c6dbdb860c4934be4
+    Sections:
+        .text:
+            Entropy: 5.9944111351941185
+            Virtual Size: '0x5736'
+        .rdata:
+            Entropy: 5.542492779395016
+            Virtual Size: '0x570'
+        .data:
+            Entropy: 1.445115035315444
+            Virtual Size: '0x5a8'
+        .pdata:
+            Entropy: 4.268472946152158
+            Virtual Size: '0x42c'
+        .edata:
+            Entropy: 3.9636482963781448
+            Virtual Size: '0x63'
+        INIT:
+            Entropy: 5.324738401510091
+            Virtual Size: '0x4b6'
+        .rsrc:
+            Entropy: 3.275995301680775
+            Virtual Size: '0x358'
+        .reloc:
+            Entropy: 1.2355823247516717
+            Virtual Size: '0x48'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2013-01-15 23:24:57'
+    Imphash: 8b7e7c20da6ca9ac4bdb3927fe2b266a
+    LoadsDespiteHVCI: 'TRUE'

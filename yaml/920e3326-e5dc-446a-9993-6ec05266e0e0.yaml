@@ -1,100 +1,100 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
-Author: Michael Haag
-Category: vulnerable driver
-Commands:
-  Command: sc.exe create ASIO32.sys binPath=C:\windows\temp\ASIO32.sys type=kernel
-    && sc.exe start ASIO32.sys
-  Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
-Created: '2023-01-09'
-Detection: []
 Id: 920e3326-e5dc-446a-9993-6ec05266e0e0
-KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: ASIO32.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: d569d4bab86e70efbcdfdac9d822139d6f477b7c
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: ASIO32.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 80fa962bdfb76dfcb9e5d13efc38bb3d392f2e77
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: ASIO32.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 5a7dd0da0aee0bdedc14c1b7831b9ce9178a0346
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: ASIO32.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 1acc7a486b52c5ee6619dbdc3b4210b5f48b936f
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: ASIO32.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 55ab7e27412eca433d76513edc7e6e03bcdd7eda
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: ASIO32.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 1e7c241b9a9ea79061b50fb19b3d141dee175c27
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Tags:
 - ASIO32.sys
 Verified: 'FALSE'
+Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+    Command: sc.exe create ASIO32.sys binPath=C:\windows\temp\ASIO32.sys type=kernel
+        && sc.exe start ASIO32.sys
+    Description: ''
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+Detection: []
+Acknowledgement:
+    Handle: ''
+    Person: ''
+KnownVulnerableSamples:
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: ASIO32.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: d569d4bab86e70efbcdfdac9d822139d6f477b7c
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: ASIO32.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: 80fa962bdfb76dfcb9e5d13efc38bb3d392f2e77
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: ASIO32.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: 5a7dd0da0aee0bdedc14c1b7831b9ce9178a0346
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: ASIO32.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: 1acc7a486b52c5ee6619dbdc3b4210b5f48b936f
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: ASIO32.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: 55ab7e27412eca433d76513edc7e6e03bcdd7eda
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: ASIO32.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: 1e7c241b9a9ea79061b50fb19b3d141dee175c27
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'
