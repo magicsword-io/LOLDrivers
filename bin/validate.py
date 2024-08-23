@@ -14,31 +14,12 @@ from pathlib import Path
 from os import path, walk
 
 
-def check_md5_length(object):
-    md5_len = 32
+def check_hash_length(object, hash_algo, hash_length):
     known_vulnerable_samples = object.get('KnownVulnerableSamples', [])
     for sample in known_vulnerable_samples:
-        md5 = sample.get('MD5', '')
-        if md5 and len(md5) != md5_len:
-            return f"ERROR: MD5 length is not {md5_len} characters for object: {object['Id']}"
-    return None
-
-def check_sha1_length(object):
-    sha1_len = 40
-    known_vulnerable_samples = object.get('KnownVulnerableSamples', [])
-    for sample in known_vulnerable_samples:
-        sha1 = sample.get('SHA1', '')
-        if sha1 and len(sha1) != sha1_len:
-            return f"ERROR: SHA1 length is not {sha1_len} characters for object: {object['Id']}"
-    return None
-
-def check_sha256_length(object):
-    sha256_len = 64
-    known_vulnerable_samples = object.get('KnownVulnerableSamples', [])
-    for sample in known_vulnerable_samples:
-        sha256 = sample.get('SHA256', '')
-        if sha256 and len(sha256) != sha256_len:
-            return f"ERROR: SHA256 length is not {sha256_len} characters for object: {object['Id']}"
+        hash_value = sample.get(hash_algo, '')
+        if hash_value and len(hash_value) != hash_length:
+            return f"ERROR: {hash_algo} length is not {hash_length} characters for object: {object['Id']}"
     return None
 
 
@@ -76,9 +57,9 @@ def validate_schema(yaml_dir, schema_file, verbose):
 
         # Additional YAML checks
         check_errors = [
-            check_md5_length(yaml_data),
-            check_sha1_length(yaml_data),
-            check_sha256_length(yaml_data),
+            check_hash_length(yaml_data, "MD5", 32),
+            check_hash_length(yaml_data, "SHA1", 40),
+            check_hash_length(yaml_data, "SHA256", 64),
         ]
 
         for check_error in check_errors:
