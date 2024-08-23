@@ -1,0 +1,384 @@
+Id: 1c92e1bf-103b-4545-b242-e5a9858ec9c8
+Tags:
+- CSC.sys
+Verified: 'TRUE'
+Author: Nasreddine Bencherchali
+Created: '2024-08-21'
+MitreID: T1068
+CVE:
+- CVE-2024-26229
+Category: vulnerable driver
+Commands:
+    Command: sc.exe create CSC.sys binPath=C:\windows\temp\CSC.sys type=kernel &&
+        sc.exe start CSC.sys
+    Description: Improper Address Validation in IOCTL with METHOD_NEITHER I/O Control
+        Code in the csc.sys driver
+    Usecase: Elevate privileges
+    Privileges: kernel
+    OperatingSystem: Windows 10
+Resources:
+- https://github.com/varwara/CVE-2024-26229/tree/main
+- https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-26229
+- https://github.com/zer0condition/ZeroHVCI
+Detection: []
+Acknowledgement:
+    Person: ''
+    Handle: ''
+KnownVulnerableSamples:
+-   Filename: CSC.sys
+    Libraries:
+    - ntoskrnl.exe
+    - rdbss.sys
+    - MUP.SYS
+    ImportedFunctions:
+    - ZwDuplicateObject
+    - ZwCreateFile
+    - KeEnterCriticalRegion
+    - ObfDereferenceObject
+    - FsRtlCancellableWaitForSingleObject
+    - RtlCopyUnicodeString
+    - SeQueryInformationToken
+    - ExAcquireResourceSharedLite
+    - RtlPrefixUnicodeString
+    - IoFileObjectType
+    - ExAllocatePool2
+    - ObReferenceObjectByHandle
+    - ExReleaseResourceLite
+    - SeReleaseSubjectContext
+    - KeReleaseGuardedMutex
+    - ExFreePoolWithTag
+    - KeInitializeEvent
+    - KeAcquireGuardedMutex
+    - ExEventObjectType
+    - ZwClose
+    - KeLeaveCriticalRegion
+    - SeCaptureSubjectContext
+    - RtlSetOwnerSecurityDescriptor
+    - KeBugCheckEx
+    - KeInitializeGuardedMutex
+    - SeAccessCheck
+    - ExDeleteResourceLite
+    - RtlSetDaclSecurityDescriptor
+    - ExDeleteNPagedLookasideList
+    - ExInitializePagedLookasideList
+    - RtlInitUnicodeString
+    - RtlLengthSid
+    - RtlAddAccessAllowedAce
+    - ExDeletePagedLookasideList
+    - ExFreePool
+    - IoRegisterShutdownNotification
+    - ExInitializeNPagedLookasideList
+    - MmGetSystemRoutineAddress
+    - ExAllocatePoolWithTag
+    - ZwQueryValueKey
+    - RtlCreateAcl
+    - IoWMIRegistrationControl
+    - IofCompleteRequest
+    - RtlSetGroupSecurityDescriptor
+    - RtlCreateSecurityDescriptor
+    - DbgPrint
+    - SeExports
+    - ExInitializeResourceLite
+    - ZwOpenKey
+    - SeTokenIsAdmin
+    - ExAllocateFromPagedLookasideList
+    - ExAcquireResourceExclusiveLite
+    - ExIsResourceAcquiredExclusiveLite
+    - ExFreeToPagedLookasideList
+    - KeWaitForSingleObject
+    - RtlCompareUnicodeString
+    - KeReadStateEvent
+    - IoCancelIrp
+    - RtlUpcaseUnicodeChar
+    - KeSetEvent
+    - IoGetTopLevelIrp
+    - IofCallDriver
+    - KeGetCurrentIrql
+    - MmBuildMdlForNonPagedPool
+    - IoAllocateMdl
+    - IoFreeMdl
+    - KeAreAllApcsDisabled
+    - __C_specific_handler
+    - ExIsResourceAcquiredSharedLite
+    - FsRtlDoesNameContainWildCards
+    - MmMapLockedPagesSpecifyCache
+    - FsRtlNotifyInitializeSync
+    - IoFreeIrp
+    - FsRtlNotifyCleanupAll
+    - FsRtlNotifyCleanup
+    - FsRtlNotifyUninitializeSync
+    - IoAllocateIrp
+    - FsRtlNotifyFilterChangeDirectory
+    - IoAcquireCancelSpinLock
+    - FsRtlNotifyFullReportChange
+    - IoReleaseCancelSpinLock
+    - RtlInitializeGenericTableAvl
+    - RtlDeleteElementGenericTableAvl
+    - RtlLookupElementGenericTableAvl
+    - RtlInsertElementGenericTableAvl
+    - RtlEnumerateGenericTableAvl
+    - RtlIsGenericTableEmptyAvl
+    - ZwQueryLicenseValue
+    - ExRegisterCallback
+    - ExCreateCallback
+    - ZwCreateKey
+    - RtlUnicodeStringToInteger
+    - ZwDeleteValueKey
+    - RtlIntegerToUnicodeString
+    - ZwSetValueKey
+    - ExUnregisterCallback
+    - RtlAppendUnicodeStringToString
+    - ExFreeToNPagedLookasideList
+    - ExWaitForRundownProtectionRelease
+    - ExReInitializeRundownProtection
+    - ExInitializeRundownProtection
+    - ExAcquireRundownProtection
+    - ExAllocateFromNPagedLookasideList
+    - KeResetEvent
+    - ExReleaseRundownProtection
+    - FsRtlFreeExtraCreateParameterList
+    - FsRtlInsertExtraCreateParameter
+    - FsRtlFindExtraCreateParameter
+    - FsRtlAllocateExtraCreateParameter
+    - FsRtlAllocateExtraCreateParameterList
+    - FsRtlFreeExtraCreateParameter
+    - IoSetIrpExtraCreateParameter
+    - FsRtlRemoveExtraCreateParameter
+    - IoGetIrpExtraCreateParameter
+    - RtlFreeUnicodeString
+    - RtlEqualSid
+    - RtlDuplicateUnicodeString
+    - KeSetTimer
+    - IoAllocateWorkItem
+    - ZwUpdateWnfStateData
+    - KeInitializeDpc
+    - ZwNotifyChangeKey
+    - KeInitializeTimer
+    - KeCancelTimer
+    - IoFreeWorkItem
+    - IoQueueWorkItem
+    - MmUnmapLockedPages
+    - ZwFreeVirtualMemory
+    - KeRundownQueue
+    - ZwAllocateVirtualMemory
+    - KeReleaseSpinLock
+    - MmSystemRangeStart
+    - KeInitializeSpinLock
+    - KeInitializeQueue
+    - KeRemoveQueue
+    - KeInsertQueue
+    - KeAcquireSpinLockRaiseToDpc
+    - ExGetPreviousMode
+    - __chkstk
+    - RtlValidSid
+    - RtlValidRelativeSecurityDescriptor
+    - IoGetRequestorProcessId
+    - IoGetRequestorProcess
+    - ProbeForWrite
+    - ProbeForRead
+    - MmUserProbeAddress
+    - IoIs32bitProcess
+    - CcSetDirtyPinnedData
+    - CcUnpinData
+    - CcPinRead
+    - ExUuidCreate
+    - RtlStringFromGUID
+    - KeDelayExecutionThread
+    - RtlTestBit
+    - RtlInitializeBitMap
+    - RtlSetBit
+    - SeTokenType
+    - SePrivilegeCheck
+    - RtlAbsoluteToSelfRelativeSD
+    - RtlLengthRequiredSid
+    - RtlSubAuthoritySid
+    - RtlInitializeSid
+    - KeSetKernelStackSwapEnable
+    - KeExpandKernelStackAndCalloutEx
+    - ZwQueryInformationFile
+    - SeDeleteClientSecurity
+    - ZwQueryEaFile
+    - IoCreateFile
+    - ZwSetInformationFile
+    - ZwFlushBuffersFile
+    - IoSetCompletionRoutineEx
+    - IoAllocateIrpEx
+    - ZwQueryDirectoryFile
+    - IoGetCurrentProcess
+    - PsIsThreadImpersonating
+    - SeCreateClientSecurity
+    - IoSetTopLevelIrp
+    - IoSetIoPriorityHint
+    - IoRetrievePriorityInfo
+    - ZwSetEaFile
+    - ZwQueryVolumeInformationFile
+    - MmProbeAndLockPages
+    - IoGetStackLimits
+    - SeImpersonateClientEx
+    - MmUnlockPages
+    - PsRevertToSelf
+    - IoGetRelatedDeviceObject
+    - _vsnwprintf
+    - PsCreateSystemThread
+    - KeWaitForMultipleObjects
+    - ZwWaitForSingleObject
+    - RtlEqualString
+    - RtlAssert
+    - RtlValidateUnicodeString
+    - RtlEqualUnicodeString
+    - ExReleaseFastMutexUnsafe
+    - ExAcquireFastMutex
+    - KeAreApcsDisabled
+    - ExReleaseFastMutex
+    - ZwDeleteKey
+    - ExAcquireFastMutexUnsafe
+    - RxRecreateVNetRoot
+    - RxAttachIrpToRxContext
+    - RxDetachIrpFromRxContext
+    - RxUnOrphanCredential
+    - RxOrphanCredential
+    - RxIsCompatibleSecurityContext
+    - RxReferenceCredential
+    - RxFinalizeConnection
+    - RxDeleteLinkedVNetRoot
+    - RxCreateLinkedVNetRoot
+    - RxCompleteRequestEx
+    - RxDowngradeFcbToSharedInMRx
+    - RxRemoveDollarDataSuffix
+    - RxLastComponentUnicodeString
+    - RxLowIoCompletion
+    - RxLowIoGetBufferAddress
+    - RxQueryDeepestLViewInPath
+    - RxFindRegisteredMiniRedir
+    - RxIsUserCredentialPresent
+    - RxIsCredentialOrphaned
+    - RxDereferenceCredential
+    - RxGetShareRights
+    - RxFindEa
+    - RxPrefixTableLookupNameEx
+    - RxNotifyBufferingManagerOfCompletedOpen
+    - RxDeregisterSrvOpenWithBufferingManager
+    - RxInitializeLowIoContext
+    - RxUpdateNetRootCachingMode
+    - RxCreateNetFobx
+    - RxFlushFcbInSystemCache
+    - RxCloseAndFreeMRxStateOnFcb
+    - RxSubjectContextFromRxContext
+    - RxFinishFcbInitialization
+    - RxIsFcbPagingInMRxAcquiredShared
+    - RxIsFcbPagingInMRxAcquiredExclusive
+    - RxSidFromRxContext
+    - RxUpdateOplockStateOnCreate
+    - RxLockEnumerator
+    - RxIterateOnFcbOpens
+    - RxSetBasicInfoInFcb
+    - RxSetFcbDispatchTable
+    - RxNotifyBufferingManagerOfPendingOpen
+    - RxOrphanFobx
+    - RxSetFcbNameTargetType
+    - RxFsdDispatch
+    - RxGetRDBSSProcess
+    - RxPostToWorkerThread
+    - RxUnregisterMinirdr
+    - RxRegisterMinirdr
+    - RxRegisterLogicalMinirdr
+    - RxScavengeRelatedFobxs
+    - RxDoesRedirSupportLogicalViews
+    - RxPrefixTableLookupNextObject
+    - RxIterateOnVNetRoots
+    - RxInitNetInfoFromFcb
+    - RxpTrackDereference
+    - RxPrefixTableUnwindLastEnum
+    - RxDereferenceAndDeleteRxContext_Real
+    - RxPrefixTableLookupFirstObject
+    - RxDoesOplockStateChangeOnSrvOpenClose
+    - RxUnmarkOrphanableFobx
+    - RxReleaseFcbPagingInMRx
+    - RxDereference
+    - RxAcquireLogicalViewRundownInMRx
+    - RxFindFirstPhysicalRdrVNetRootFromNetRoot
+    - RxAcquirePowerContextLock
+    - RxGetDeviceObjectOfInstance
+    - RxReleaseLViewRundownInMRx
+    - RxPurgeFcbInSystemCache
+    - RxFcbTableNameFromFcb
+    - RxAcquireExclusiveFcbPagingInMRx
+    - RxSetMinirdrCancelRoutine
+    - RxClearMinirdrCancelRoutine
+    - RxUpdateFcbPowerState
+    - RxClearLogicalRdrVNetRootCredential
+    - RxReleasePowerContextLock
+    - RxPrefixTableEndLookup
+    - RxCloseAndFreeMRxStateOnLogicalView
+    - RxCreateRxContext
+    - RxScavengeRelatedClosePendingFobxs
+    - RxIterateOnLViewFcbsInMRx
+    - RxpTrackReference
+    - RxQueryNetRootCachingMode
+    - RxAcquireSharedFcbResourceInMRx
+    - RxAcquireExclusiveFcbResourceInMRx
+    - RxReleaseFcbResourceInMRx
+    - RxReference
+    - MupSurrogateGetFileName
+    - MupSurrogateRegisterProvider
+    - MupSurrogateSetUndecoratedFileName
+    - MupSurrogateRestartIo
+    - MupSurrogateGetUncProviderDeviceObject
+    - MupSurrogateDeregisterProvider
+    ExportedFunctions: ''
+    MD5: e7a3db3fe70e8b0c4aaa1c5e9de8da5a
+    SHA1: 6bf3a21428eb51ecb84e41e9c1e0ac9105fd3079
+    SHA256: 828c54cfecb2a08863319544ac716aee3898dfe78a87d7757a0e92f1b1f1daf1
+    Imphash: 71686eb45898fe5283b523ecbc867eb5
+    Machine: AMD64
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2042-03-24 12:13:22'
+    RichPEHeaderMD5: fed2865b1ab6bb9b3f59d7294f4377a5
+    RichPEHeaderSHA1: 87c769274b3c6f69944f8294717875821006f610
+    RichPEHeaderSHA256: 8f7fc8ffaea73552b4fd84c7d463524bb34ed4abc1a8160d4348ffd49ecdd0da
+    AuthentihashMD5: 49d296e369fdb0311b7cfa16553641b1
+    AuthentihashSHA1: 29e642e49d553532fa34059a11fcf53458ae56b7
+    AuthentihashSHA256: 88f36fda7dcc6d5af2bcbef29d14fd4032247d4b45f5299944be31441ab53bc1
+    Sections:
+        .text:
+            Entropy: 6.2931005433784115
+            Virtual Size: '0x2c89c'
+        .rdata:
+            Entropy: 5.739641571757388
+            Virtual Size: '0x8734'
+        .data:
+            Entropy: 1.364648287091613
+            Virtual Size: '0x27a0'
+        .pdata:
+            Entropy: 5.785400449486784
+            Virtual Size: '0x4d64'
+        .idata:
+            Entropy: 5.00465871282793
+            Virtual Size: '0x2ffa'
+        PAGE:
+            Entropy: 6.5012337268616385
+            Virtual Size: '0x4883a'
+        fothk:
+            Entropy: 0.016408464515625623
+            Virtual Size: '0x1000'
+        INIT:
+            Entropy: 6.206758477940088
+            Virtual Size: '0x280d'
+        GFIDS:
+            Entropy: 4.7747271094438455
+            Virtual Size: '0x24c'
+        .rsrc:
+            Entropy: 3.326355357423571
+            Virtual Size: '0x408'
+        .reloc:
+            Entropy: 5.894738862675418
+            Virtual Size: '0x26d8'
+    CompanyName: Microsoft Corporation
+    FileDescription: Windows Client Side Caching Driver
+    InternalName: csc.sys
+    OriginalFilename: CSC.Sys
+    FileVersion: 10.0.22621.1 (WinBuild.160101.0800)
+    ProductName: "Microsoft\xAE Windows\xAE Operating System"
+    LegalCopyright: "\xA9 Microsoft Corporation. All rights reserved."
+    ProductVersion: 10.0.22621.1
+    Signatures: {}
