@@ -1,0 +1,650 @@
+Id: 45a31a17-f78d-48ec-beba-74f6bfc5f96e
+Author: Michael Haag
+Created: '2024-09-10'
+MitreID: T1068
+Category: malicious
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create windivert.sys binPath=C:\windows\temp\windivert.sys type=kernel
+    && sc.exe start windivert.sys
+  Description: WinDivert is a user-mode packet capture and network packet manipulation
+    utility designed for Windows. It provides a powerful and flexible framework for
+    intercepting, modifying, injecting, and dropping network packets at the network
+    stack level. It operates as a lightweight, high-performance driver that interfaces
+    directly with the network stack, allowing for detailed packet inspection and manipulation
+    in real time.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://www.3nailsinfosec.com/post/edrprison-borrow-a-legitimate-driver-to-mute-edr-agent
+- https://github.com/basil00/WinDivert
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: ''
+  MD5: 89ed5be7ea83c01d0de33d3519944aa5
+  SHA1: 4c9b9c74529399abacc2284de1dead5f2332ee9b
+  SHA256: 8da085332782708d8767bcace5327a6ec7283c17cfb85e40b03cd2323a90ddc2
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Basil
+  Description: 'The WinDivert 2.2 driver [URL: https://reqrypt.org/windivert.html]
+    [Bitcoin: 1C5vZVSbizPeZ8ydTYhUfm4LA2cNwBfcYh]'
+  Product: WinDivert 2.2 driver
+  ProductVersion: '2.2'
+  FileVersion: '2.2'
+  MachineType: AMD64
+  OriginalFilename: WinDivert.sys
+  Imphash: 5bfe3723089cbcfcc271ba6d7ab617aa
+  Authentihash:
+    MD5: 75982fa2a79981d94b5f765af01bf6f8
+    SHA1: f6062c27168815446f20ca398c24325eb72d87d6
+    SHA256: 5aded75d6beb315849f698a78f8033de26eb151955a1cbc01e3037320e2a0eb6
+  RichPEHeaderHash:
+    MD5: 4670da44c797eae476c7c4016b14a30f
+    SHA1: f48e88156fe7e675523a16460face5c18bd0d1e3
+    SHA256: 52b29a3981a021cd7e3dd0f8b37f79ed1ea92c8d039d04fc6f931e8e0432d609
+  Sections:
+    .text:
+      Entropy: 6.29987175348348
+      Virtual Size: '0xb2fa'
+    .rdata:
+      Entropy: 4.320971235313383
+      Virtual Size: '0x45f8'
+    .data:
+      Entropy: 1.0009925958108754
+      Virtual Size: '0x4038'
+    .pdata:
+      Entropy: 4.761128811315826
+      Virtual Size: '0x6b4'
+    .gfids:
+      Entropy: 0.8112781244591328
+      Virtual Size: '0x4'
+    INIT:
+      Entropy: 5.246295023097871
+      Virtual Size: '0x89a'
+    .rsrc:
+      Entropy: 3.420677426244852
+      Virtual Size: '0x478'
+    .reloc:
+      Entropy: 5.026645084048212
+      Virtual Size: '0x1a4'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2022-09-19 19:09:22'
+  InternalName: WinDivert.sys
+  Copyright: "Copyright \xA9 Basil 2011-2022"
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - NDIS.SYS
+  - fwpkclnt.sys
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlCopyUnicodeString
+  - KeBugCheckEx
+  - IoGetRequestorProcess
+  - PsGetProcessId
+  - ExUuidCreate
+  - ObfDereferenceObject
+  - ObfReferenceObject
+  - IoWriteErrorLogEntry
+  - IoGetCurrentProcess
+  - IoFreeMdl
+  - IoAllocateMdl
+  - IoAllocateErrorLogEntry
+  - MmMapLockedPagesSpecifyCache
+  - MmBuildMdlForNonPagedPool
+  - ExFreePoolWithTag
+  - ExAllocatePoolWithTag
+  - KeReleaseInStackQueuedSpinLock
+  - KeAcquireInStackQueuedSpinLock
+  - RtlGetVersion
+  - RtlIntegerToUnicodeString
+  - KeQueryPerformanceCounter
+  - NdisAllocateNetBufferPool
+  - NdisFreeNetBufferPool
+  - NdisAllocateNetBufferListPool
+  - NdisGetDataBuffer
+  - NdisAdvanceNetBufferDataStart
+  - NdisRetreatNetBufferDataStart
+  - NdisFreeNetBufferListPool
+  - FwpmTransactionAbort0
+  - FwpmTransactionBegin0
+  - FwpmEngineClose0
+  - FwpmEngineOpen0
+  - FwpsQueryPacketInjectionState0
+  - FwpmProviderAdd0
+  - FwpmProviderDeleteByKey0
+  - FwpsInjectNetworkReceiveAsync0
+  - FwpmSubLayerAdd0
+  - FwpmSubLayerDeleteByKey0
+  - FwpmCalloutAdd0
+  - FwpmCalloutDeleteByKey0
+  - FwpmFilterAdd0
+  - FwpmFilterDeleteByKey0
+  - FwpmTransactionCommit0
+  - FwpsCalloutRegister0
+  - FwpsCalloutUnregisterByKey0
+  - FwpsFlowAssociateContext0
+  - FwpsFlowRemoveContext0
+  - FwpsInjectionHandleCreate0
+  - FwpsInjectionHandleDestroy0
+  - FwpsAllocateNetBufferAndNetBufferList0
+  - FwpsFreeNetBufferList0
+  - FwpsInjectNetworkSendAsync0
+  - FwpsInjectForwardAsync0
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  - WdfVersionBind
+  - WdfVersionUnbind
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Comodo CA Limited, CN=AAA
+        Certificate Services
+      ValidFrom: '2004-01-01 00:00:00'
+      ValidTo: '2028-12-31 23:59:59'
+      Signature: 0856fc02f09be8ffa4fad67bc64480ce4fc4c5f60058cca6b6bc1449680476e8e6ee5dec020f60d68d50184f264e01e3e6b0a5eebfbc745441bffdfc12b8c74f5af48960057f60b7054af3f6f1c2bfc4b97486b62d7d6bccd2f346dd2fc6e06ac3c334032c7d96dd5ac20ea70a99c1058bab0c2ff35c3acf6c37550987de53406c58effcb6ab656e04f61bdc3ce05a15c69ed9f15948302165036cece92173ec9b03a1e037ada015188ffaba02cea72ca910132cd4e50826ab229760f8905e74d4a29a53bdf2a968e0a26ec2d76cb1a30f9ebfeb68e756f2aef2e32b383a0981b56b85d7be2ded3f1ab7b263e2f5622c82d46a004150f139839f95e93696986e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: '01'
+      Version: 3
+      TBS:
+        MD5: 93b601b98fc29a9e89a704048928b85f
+        SHA1: 3e8e6487f8fd27d322a269a71edaac5d57811286
+        SHA256: bedd4b1831f17c7ec1d507380f4c9836baa8ce20065a67db8b43acea14294ba4
+        SHA384: 5019d634bf6be7246128e117bfdf533f97aa574fae9080307b427fc77998fe9f280ba23b051cfbd6cf5d37c6e578d698
+    - Subject: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing Root R46
+      ValidFrom: '2021-05-25 00:00:00'
+      ValidTo: '2028-12-31 23:59:59'
+      Signature: 12bfa1ef8b749a9844b86946b5ab240a0ca48a67b83a81bf458a7d5207a88d1f4e218539a36b5e2d2086bf10b8ae793b53cdb4fbd844be06d95c6367d44016874486722ad63215f51283c2f9e15d114067f6422772c523e202381a4c20e2db01f7cd464f26a27c66c05136b6890254c7fc58fb6c00eefe98a62e95a10c53291f6fd819a64f9ef7ac09ea5d82c68baf80a7bd8148528431da32ec15e4a64c3d6c3973d40b853920e0851a68e1a74838a9d1362577c18d1916c5884c667d2f63ce98e869dfac3ca85d9dc91c5baed8f32f74cfb87ef6d7839d1196629aae4513da7fdc47fbdfc3529fe60655e99d8cf23a6251bcec240f29d4588084e4457b5ad8
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 48fc93b46055948d36a7c98a89d69416
+      Version: 3
+      TBS:
+        MD5: 207045ce7b7ab131e78e459b13825902
+        SHA1: bcf7530a1ab309fb1926cb720f9fd58cff1cb88f
+        SHA256: 0f31a4237992e1ea623baf4c29480afb6d913e10f1fb1d56bb56f5b03fbff13b
+        SHA384: a229d2722bc6091d73b1d979b81088c977cb028a6f7cbf264bb81d5cc8f099f87d7c296e48bf09d7ebe275f5498661a4
+    - Subject: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA EV R36
+      ValidFrom: '2021-03-22 00:00:00'
+      ValidTo: '2036-03-21 23:59:59'
+      Signature: 5f36acfbf9f6725a14b7f00b1dded8fd9701d2fd01ee992d86e8f6b7f039ffd6814a5aa7424a0a2d159de694fdc5694ab2d74bf116124cf6be9066658b2d74d4ab08f76a110308777cbe69e1b0db9f248903d6de5ca4e0b2d6b4cfe338d5b96dcc27d6ce6411e8107276d3f9e0e92c89e949d3b39796060ae1f60ac8419a915d81d8367798ca804197a8f8913f639faacd54544b80eaf51766d39471fd9efd4731e3e91a861dd3be20d23fb1525fb293bd8c950998728f9501f49843a54afb1426aa9d36bf72b0fcdcbd840deced34a85e952b3816630575d9f6312e156be294b22ad27435b5989aa3fef82b2fb6174b276c5ae6b9765eda86ddab64d66aea8318881b3182f588b39425c0212f086902e34cbb4c2a1130eb817906e141952ad420f60b93e47c760c9d1d266b5f8401f62a99cdafdec7f0e418a24e9b2f2a0c66a6927526bed94035136faea6371a7ae8ad1c5163072a56066ced7e18f6e3ec6473a66d08368baf0f99ae756b172bc24d6ac351464156e98fc28dff13719bdaed9ed39fabe545a612c5145a524197a3060008c5e61cea27823c3bdbe646c4ef2d003513cd367d9de5aa270805cccec0360e4b194fd0639a6dbfc529533122db75507786d0f2f86aee6b061b3e85232b97c87e7a99410cdd587f0ea8c3123d3a359be09d2c8c17815444a87a1d989d967f5958a65465ff51420bf847ebcff8e5bf
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 33d708a891405319e2a5bbd339b9ad6e
+      Version: 3
+      TBS:
+        MD5: b81404c775a2621debdb7825b87b8316
+        SHA1: 47ae94067c3c59b13605192288705db7b52f3685
+        SHA256: 9893b35b3dcefe53d8d24b887569dfe21f9aef27bd57b61c06fcf7438b89c33a
+        SHA384: f55821c081b58e86eaa202923e715e1524c422c7be0469b13a9e7a319e50d70cb5b67e864273029a79250f9dc3203cbd
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Time Stamping CA
+      ValidFrom: '2019-05-02 00:00:00'
+      ValidTo: '2038-01-18 23:59:59'
+      Signature: 6d5481a5335d16e1b553819175df037a320b2d258411b2b0db2a7d2a05f5bc3b27f45aa0b9495990296c61cbb550dbe27df99f00ef40c3add3e2e456f95841cff142e5107dffb0741f8fc65c09f9335eeaa01c26585cf3b4110fd5d5c3e2bcd55878bf4876e144676d8fb043100f8de4f93862bf1301c585a34cc5ccb2533095a4d6f4965608b8cd5c7f0196be72526a3b42377c1678399393949bb1dcb26d416d67cdc96f903d7f4572c11b23d6c2558466e4b3c56606f6f3d64b5eada32b428a2192fea86f5a2570628173635ea0bbd8dcd74ad33daf830638121d24872de4fc02d63e7704bc0436b5e777cb9c2e8d2318b9a3c2471df05dd6a1735705689aa7c937651dbeeabcd842834305a58ba609ffd1a194a64eaa3d09f5056cb7d2645ad82a22c24b9df1395e4cde483d9b34969a095f8efdf7b15291ce3f89f61ca1b5a9751f71bf5b435d653d50816eabf0d0d3fcb2b31fb6999626f43c798b5c64cccdee279ae5a0c00c7287c16e4d5ad31eeaf044e6326f1ceb174e94c37865203b0f41aa1fe9a1419dfeb1b8a0652a34e0dea8f93ce6c130bbc0a0632cfc5c1600a8d0c47fea119d1e06c6a66d325db438092b4907aafdec30daf1a72fcfb7fdfad0a384d9279efb016677b95610e1206ec6aeb1f9b6bac8355d33768ef17c200c2a77aeb5a20286ba29eeb45a00b18cabe3f90ac9545dd4b96a749ebd48ae98
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 300f6facdd6698747ca94636a7782db9
+      Version: 3
+      TBS:
+        MD5: 63499ed59a1293b786649470e4ce0bd7
+        SHA1: 7309d8eaa65da1f3da7030c08f00a3b0a20fa908
+        SHA256: 8c8d2046b29e792e71b28705fe67c435208a336dde074a75452d98e72c734937
+        SHA384: 5dbc5eae13908fee4c4e5216f87e3e87208fff0d1052f5fa9f0856a429d6a6c422c625f2318f2f29aea26ece09c1e811
+    - Subject: 'C=GB, ST=Manchester, O=Sectigo Limited, CN=Sectigo RSA Time Stamping
+        Signer #3'
+      ValidFrom: '2022-05-11 00:00:00'
+      ValidTo: '2033-08-10 23:59:59'
+      Signature: 73daed6872cbc2b940a131bbb403a32d147b24e7b45b157da8e9fdadd1920d7c3d36a069d9f39a30daac69d67457243f7e0f3cd9f5c379256c26e88d6893cef17789397fa80405da34c314ea9f0854abffc47e966c2bd394ebb46ce0454d2cb2f73b3b5ab5c1fbd789756d987272f6f70728f3d3b2d0eb19be152c78efcd45a000e4f80476bb57c590be775490749e0b4f4dc4aa138f97af01352bcb9b1178e9f2f989043c4ee3821262ebb4440c7541c20f34b8889dc822f1136adb182f6e78adc405b4e884089307f97d83fe689834e477e5b1ce8c946cdb036d2805477e9b2ef064fbdba40331107c1afb3c1980d10b70b9555f47be3964ceb7da235432e346b232d8d22986c9155d8095af02fbb4d12e9d387c35e00f1ced1b47489c226a5582d9f2ba086503e5f129f3488a09014ca679f2a2b61a9994eb9728e1be7d1ba17ced5680a6f4223390e48453fc2afac0a797a8eab58d7acee4e04ba133ab0b76a0d56916b78e66bf5ffa1fc4a87fa7a14814910d82fcbd4d99edc9e66c36fe774399b8692d7c612feda3b049fe5bbe692491ff93fc5769924bd9053f6d8672d3a2d0c064d23a42c11a03fbd0ed9a21b83fafa6b25154d54cc5ca1f128d57c639ed5cffec9f2676ad646667e8aa30e0d2adb77db16a41276e038aa374e08a09826ebfe3f6b7bc9e0b29186881a19c3f6e16594b1409099ae6aebf6015dd86f5
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: false
+      SerialNumber: 0090397f9ad24a3a13f2bd915f0838a943
+      Version: 3
+      TBS:
+        MD5: 26ec2c9bfcb06fdf8a6d95f2c616fd72
+        SHA1: 635466f1432046f6fd338624c068872ab6488b12
+        SHA256: 2219bd6adf84dc8f6f04833974d150f75f5ce79cbf85788a6f7efaa4a5205839
+        SHA384: 62d3259a3af5706e5bd6ca3f7ca35c0978253facbf7bee54f61d6afdd548e39e435fb55f952dbf8ed2bd6ee0c6b69660
+    - Subject: serialNumber=91510107MA7E8Y2876, ??=CN, ??=Private Organization, C=CN,
+        ST=, O=, CN=
+      ValidFrom: '2022-05-25 00:00:00'
+      ValidTo: '2023-05-25 23:59:59'
+      Signature: b75f493e19a27fd2fb38884a1c07997ab236a090a9299ad269b17a711f034b6b9b9686ecce7330d3ee9692c63be512b6c84ac3cca2b89606296226c512075251deca429743e7950038f9b5ee7f0d31e8b77e3f8aa11209fca096788a3679c9b68b2187e32ce6348c217e89066ac5758b87fe04e1e8a070194bcc034a8cc9e3e8e4cf67df553f3e4e55627971461eb011c4ee7ffdf1b3a388642ccfd7b7d272cd0d855ec7b9287d482a14c366f668a32c3daf404e9cda6296aff82fe45c7b1bfdc94ae6d0a08796685828dc250495e69b0c42daa45fb7dab634df7799c474b7c00da1104c5c7ce17c5587ccbcfa4949ee29c862a4482ee6e5cb5cc9871b4ce075974f6547e84d23eb494e831371f431c31d570daddec0988360a4023be17b2a8729d675aad81cdfd380738802d379131353dd22dae12912514e668ecda25b79888543e398bbd1e1d869131c9c5135ec75b7718537f69e2585363e0de3d42982f200ad88b2f9ce4f6abb2790771b638411013c80ce8055514c9351e403e438995f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 61501991b18f323804525137dc25005a
+      Version: 3
+      TBS:
+        MD5: 4e472f9ccab63d22f0b9a6dbeb4969f4
+        SHA1: 764f7c4f78d03485ef024a68a86370a43dca402e
+        SHA256: 5623801ef2108741513b5941be10dcf08095e4ee9f1aaf62ac9773cce497a8ad
+        SHA384: 576c29b57e4fb80ecb32810155daee135aa5f3541cc89bc84cf1e11ed58a8d2d63fa60a84d4f36e8003312891a2383c6
+    Signer:
+    - SerialNumber: 61501991b18f323804525137dc25005a
+      Issuer: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA EV R36
+      Version: 1
+- Filename: ''
+  MD5: 451ec31152318d1249f41aed387dd262
+  SHA1: d821fa0c9186a5f863528dc6a3e87b3ff40a1ac5
+  SHA256: 2f43f4251be4d72dd56c91bf6cce475d379eb9ba6c4dda2be3022ea633d5e807
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Basil
+  Description: 'The WinDivert 2.2 driver [URL: https://reqrypt.org/windivert.html]
+    [Bitcoin: 1C5vZVSbizPeZ8ydTYhUfm4LA2cNwBfcYh]'
+  Product: WinDivert 2.2 driver
+  ProductVersion: '2.2'
+  FileVersion: '2.2'
+  MachineType: I386
+  OriginalFilename: WinDivert.sys
+  Imphash: bb607f74958acb5ad3d1bbcb8a7407e3
+  Authentihash:
+    MD5: f1ec6b6ce86371c69fb627c10e93a71d
+    SHA1: 13863e4ed2485959237c156ecce5d54c62878c2a
+    SHA256: d35bc51acafab893698e6064d286541918a789ac7c06a6442bf4351dde842777
+  RichPEHeaderHash:
+    MD5: 6c08b25334aefe0d7226b6e2da879e3a
+    SHA1: 8a98a0b607c3e499aff99926e2bce5e8f006129f
+    SHA256: 8b4fccd1308ae7d2f3604a7a67491f9248e779f98c16e7ddc7df61fa5b12c437
+  Sections:
+    .text:
+      Entropy: 6.42558136369036
+      Virtual Size: '0x907a'
+    .rdata:
+      Entropy: 4.220007010565751
+      Virtual Size: '0x3390'
+    .data:
+      Entropy: 0.7426391039892202
+      Virtual Size: '0x3938'
+    INIT:
+      Entropy: 5.548566861515184
+      Virtual Size: '0x7ae'
+    .rsrc:
+      Entropy: 3.423085544690799
+      Virtual Size: '0x478'
+    .reloc:
+      Entropy: 6.5698896674213545
+      Virtual Size: '0x9b8'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2022-09-19 19:09:17'
+  InternalName: WinDivert.sys
+  Copyright: "Copyright \xA9 Basil 2011-2022"
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - NDIS.SYS
+  - fwpkclnt.sys
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmMapLockedPagesSpecifyCache
+  - IoAllocateErrorLogEntry
+  - IoAllocateMdl
+  - IoFreeMdl
+  - IoGetCurrentProcess
+  - IoWriteErrorLogEntry
+  - ObfReferenceObject
+  - ObfDereferenceObject
+  - RtlCopyUnicodeString
+  - ExUuidCreate
+  - PsGetProcessId
+  - IoGetRequestorProcess
+  - _alldiv
+  - KeBugCheckEx
+  - memset
+  - memcpy
+  - _allmul
+  - MmBuildMdlForNonPagedPool
+  - ExFreePoolWithTag
+  - ExAllocatePoolWithTag
+  - RtlGetVersion
+  - RtlIntegerToUnicodeString
+  - KeReleaseInStackQueuedSpinLock
+  - KeQueryPerformanceCounter
+  - KeAcquireInStackQueuedSpinLock
+  - NdisAllocateNetBufferPool
+  - NdisFreeNetBufferPool
+  - NdisAdvanceNetBufferDataStart
+  - NdisRetreatNetBufferDataStart
+  - NdisFreeNetBufferListPool
+  - NdisAllocateNetBufferListPool
+  - NdisGetDataBuffer
+  - FwpsAllocateNetBufferAndNetBufferList0
+  - FwpmFilterDeleteByKey0
+  - FwpmFilterAdd0
+  - FwpmCalloutDeleteByKey0
+  - FwpmCalloutAdd0
+  - FwpmSubLayerDeleteByKey0
+  - FwpmSubLayerAdd0
+  - FwpmProviderDeleteByKey0
+  - FwpmProviderAdd0
+  - FwpmTransactionAbort0
+  - FwpmTransactionCommit0
+  - FwpmTransactionBegin0
+  - FwpmEngineClose0
+  - FwpmEngineOpen0
+  - FwpsQueryPacketInjectionState0
+  - FwpsInjectNetworkReceiveAsync0
+  - FwpsInjectForwardAsync0
+  - FwpsInjectNetworkSendAsync0
+  - FwpsCalloutRegister0
+  - FwpsCalloutUnregisterByKey0
+  - FwpsFlowAssociateContext0
+  - FwpsFlowRemoveContext0
+  - FwpsInjectionHandleCreate0
+  - FwpsInjectionHandleDestroy0
+  - FwpsFreeNetBufferList0
+  - WdfVersionBind
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  - WdfVersionUnbind
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Comodo CA Limited, CN=AAA
+        Certificate Services
+      ValidFrom: '2004-01-01 00:00:00'
+      ValidTo: '2028-12-31 23:59:59'
+      Signature: 0856fc02f09be8ffa4fad67bc64480ce4fc4c5f60058cca6b6bc1449680476e8e6ee5dec020f60d68d50184f264e01e3e6b0a5eebfbc745441bffdfc12b8c74f5af48960057f60b7054af3f6f1c2bfc4b97486b62d7d6bccd2f346dd2fc6e06ac3c334032c7d96dd5ac20ea70a99c1058bab0c2ff35c3acf6c37550987de53406c58effcb6ab656e04f61bdc3ce05a15c69ed9f15948302165036cece92173ec9b03a1e037ada015188ffaba02cea72ca910132cd4e50826ab229760f8905e74d4a29a53bdf2a968e0a26ec2d76cb1a30f9ebfeb68e756f2aef2e32b383a0981b56b85d7be2ded3f1ab7b263e2f5622c82d46a004150f139839f95e93696986e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: '01'
+      Version: 3
+      TBS:
+        MD5: 93b601b98fc29a9e89a704048928b85f
+        SHA1: 3e8e6487f8fd27d322a269a71edaac5d57811286
+        SHA256: bedd4b1831f17c7ec1d507380f4c9836baa8ce20065a67db8b43acea14294ba4
+        SHA384: 5019d634bf6be7246128e117bfdf533f97aa574fae9080307b427fc77998fe9f280ba23b051cfbd6cf5d37c6e578d698
+    - Subject: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing Root R46
+      ValidFrom: '2021-05-25 00:00:00'
+      ValidTo: '2028-12-31 23:59:59'
+      Signature: 12bfa1ef8b749a9844b86946b5ab240a0ca48a67b83a81bf458a7d5207a88d1f4e218539a36b5e2d2086bf10b8ae793b53cdb4fbd844be06d95c6367d44016874486722ad63215f51283c2f9e15d114067f6422772c523e202381a4c20e2db01f7cd464f26a27c66c05136b6890254c7fc58fb6c00eefe98a62e95a10c53291f6fd819a64f9ef7ac09ea5d82c68baf80a7bd8148528431da32ec15e4a64c3d6c3973d40b853920e0851a68e1a74838a9d1362577c18d1916c5884c667d2f63ce98e869dfac3ca85d9dc91c5baed8f32f74cfb87ef6d7839d1196629aae4513da7fdc47fbdfc3529fe60655e99d8cf23a6251bcec240f29d4588084e4457b5ad8
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 48fc93b46055948d36a7c98a89d69416
+      Version: 3
+      TBS:
+        MD5: 207045ce7b7ab131e78e459b13825902
+        SHA1: bcf7530a1ab309fb1926cb720f9fd58cff1cb88f
+        SHA256: 0f31a4237992e1ea623baf4c29480afb6d913e10f1fb1d56bb56f5b03fbff13b
+        SHA384: a229d2722bc6091d73b1d979b81088c977cb028a6f7cbf264bb81d5cc8f099f87d7c296e48bf09d7ebe275f5498661a4
+    - Subject: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA EV R36
+      ValidFrom: '2021-03-22 00:00:00'
+      ValidTo: '2036-03-21 23:59:59'
+      Signature: 5f36acfbf9f6725a14b7f00b1dded8fd9701d2fd01ee992d86e8f6b7f039ffd6814a5aa7424a0a2d159de694fdc5694ab2d74bf116124cf6be9066658b2d74d4ab08f76a110308777cbe69e1b0db9f248903d6de5ca4e0b2d6b4cfe338d5b96dcc27d6ce6411e8107276d3f9e0e92c89e949d3b39796060ae1f60ac8419a915d81d8367798ca804197a8f8913f639faacd54544b80eaf51766d39471fd9efd4731e3e91a861dd3be20d23fb1525fb293bd8c950998728f9501f49843a54afb1426aa9d36bf72b0fcdcbd840deced34a85e952b3816630575d9f6312e156be294b22ad27435b5989aa3fef82b2fb6174b276c5ae6b9765eda86ddab64d66aea8318881b3182f588b39425c0212f086902e34cbb4c2a1130eb817906e141952ad420f60b93e47c760c9d1d266b5f8401f62a99cdafdec7f0e418a24e9b2f2a0c66a6927526bed94035136faea6371a7ae8ad1c5163072a56066ced7e18f6e3ec6473a66d08368baf0f99ae756b172bc24d6ac351464156e98fc28dff13719bdaed9ed39fabe545a612c5145a524197a3060008c5e61cea27823c3bdbe646c4ef2d003513cd367d9de5aa270805cccec0360e4b194fd0639a6dbfc529533122db75507786d0f2f86aee6b061b3e85232b97c87e7a99410cdd587f0ea8c3123d3a359be09d2c8c17815444a87a1d989d967f5958a65465ff51420bf847ebcff8e5bf
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 33d708a891405319e2a5bbd339b9ad6e
+      Version: 3
+      TBS:
+        MD5: b81404c775a2621debdb7825b87b8316
+        SHA1: 47ae94067c3c59b13605192288705db7b52f3685
+        SHA256: 9893b35b3dcefe53d8d24b887569dfe21f9aef27bd57b61c06fcf7438b89c33a
+        SHA384: f55821c081b58e86eaa202923e715e1524c422c7be0469b13a9e7a319e50d70cb5b67e864273029a79250f9dc3203cbd
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Time Stamping CA
+      ValidFrom: '2019-05-02 00:00:00'
+      ValidTo: '2038-01-18 23:59:59'
+      Signature: 6d5481a5335d16e1b553819175df037a320b2d258411b2b0db2a7d2a05f5bc3b27f45aa0b9495990296c61cbb550dbe27df99f00ef40c3add3e2e456f95841cff142e5107dffb0741f8fc65c09f9335eeaa01c26585cf3b4110fd5d5c3e2bcd55878bf4876e144676d8fb043100f8de4f93862bf1301c585a34cc5ccb2533095a4d6f4965608b8cd5c7f0196be72526a3b42377c1678399393949bb1dcb26d416d67cdc96f903d7f4572c11b23d6c2558466e4b3c56606f6f3d64b5eada32b428a2192fea86f5a2570628173635ea0bbd8dcd74ad33daf830638121d24872de4fc02d63e7704bc0436b5e777cb9c2e8d2318b9a3c2471df05dd6a1735705689aa7c937651dbeeabcd842834305a58ba609ffd1a194a64eaa3d09f5056cb7d2645ad82a22c24b9df1395e4cde483d9b34969a095f8efdf7b15291ce3f89f61ca1b5a9751f71bf5b435d653d50816eabf0d0d3fcb2b31fb6999626f43c798b5c64cccdee279ae5a0c00c7287c16e4d5ad31eeaf044e6326f1ceb174e94c37865203b0f41aa1fe9a1419dfeb1b8a0652a34e0dea8f93ce6c130bbc0a0632cfc5c1600a8d0c47fea119d1e06c6a66d325db438092b4907aafdec30daf1a72fcfb7fdfad0a384d9279efb016677b95610e1206ec6aeb1f9b6bac8355d33768ef17c200c2a77aeb5a20286ba29eeb45a00b18cabe3f90ac9545dd4b96a749ebd48ae98
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 300f6facdd6698747ca94636a7782db9
+      Version: 3
+      TBS:
+        MD5: 63499ed59a1293b786649470e4ce0bd7
+        SHA1: 7309d8eaa65da1f3da7030c08f00a3b0a20fa908
+        SHA256: 8c8d2046b29e792e71b28705fe67c435208a336dde074a75452d98e72c734937
+        SHA384: 5dbc5eae13908fee4c4e5216f87e3e87208fff0d1052f5fa9f0856a429d6a6c422c625f2318f2f29aea26ece09c1e811
+    - Subject: 'C=GB, ST=Manchester, O=Sectigo Limited, CN=Sectigo RSA Time Stamping
+        Signer #3'
+      ValidFrom: '2022-05-11 00:00:00'
+      ValidTo: '2033-08-10 23:59:59'
+      Signature: 73daed6872cbc2b940a131bbb403a32d147b24e7b45b157da8e9fdadd1920d7c3d36a069d9f39a30daac69d67457243f7e0f3cd9f5c379256c26e88d6893cef17789397fa80405da34c314ea9f0854abffc47e966c2bd394ebb46ce0454d2cb2f73b3b5ab5c1fbd789756d987272f6f70728f3d3b2d0eb19be152c78efcd45a000e4f80476bb57c590be775490749e0b4f4dc4aa138f97af01352bcb9b1178e9f2f989043c4ee3821262ebb4440c7541c20f34b8889dc822f1136adb182f6e78adc405b4e884089307f97d83fe689834e477e5b1ce8c946cdb036d2805477e9b2ef064fbdba40331107c1afb3c1980d10b70b9555f47be3964ceb7da235432e346b232d8d22986c9155d8095af02fbb4d12e9d387c35e00f1ced1b47489c226a5582d9f2ba086503e5f129f3488a09014ca679f2a2b61a9994eb9728e1be7d1ba17ced5680a6f4223390e48453fc2afac0a797a8eab58d7acee4e04ba133ab0b76a0d56916b78e66bf5ffa1fc4a87fa7a14814910d82fcbd4d99edc9e66c36fe774399b8692d7c612feda3b049fe5bbe692491ff93fc5769924bd9053f6d8672d3a2d0c064d23a42c11a03fbd0ed9a21b83fafa6b25154d54cc5ca1f128d57c639ed5cffec9f2676ad646667e8aa30e0d2adb77db16a41276e038aa374e08a09826ebfe3f6b7bc9e0b29186881a19c3f6e16594b1409099ae6aebf6015dd86f5
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: false
+      SerialNumber: 0090397f9ad24a3a13f2bd915f0838a943
+      Version: 3
+      TBS:
+        MD5: 26ec2c9bfcb06fdf8a6d95f2c616fd72
+        SHA1: 635466f1432046f6fd338624c068872ab6488b12
+        SHA256: 2219bd6adf84dc8f6f04833974d150f75f5ce79cbf85788a6f7efaa4a5205839
+        SHA384: 62d3259a3af5706e5bd6ca3f7ca35c0978253facbf7bee54f61d6afdd548e39e435fb55f952dbf8ed2bd6ee0c6b69660
+    - Subject: serialNumber=91510107MA7E8Y2876, ??=CN, ??=Private Organization, C=CN,
+        ST=, O=, CN=
+      ValidFrom: '2022-05-25 00:00:00'
+      ValidTo: '2023-05-25 23:59:59'
+      Signature: b75f493e19a27fd2fb38884a1c07997ab236a090a9299ad269b17a711f034b6b9b9686ecce7330d3ee9692c63be512b6c84ac3cca2b89606296226c512075251deca429743e7950038f9b5ee7f0d31e8b77e3f8aa11209fca096788a3679c9b68b2187e32ce6348c217e89066ac5758b87fe04e1e8a070194bcc034a8cc9e3e8e4cf67df553f3e4e55627971461eb011c4ee7ffdf1b3a388642ccfd7b7d272cd0d855ec7b9287d482a14c366f668a32c3daf404e9cda6296aff82fe45c7b1bfdc94ae6d0a08796685828dc250495e69b0c42daa45fb7dab634df7799c474b7c00da1104c5c7ce17c5587ccbcfa4949ee29c862a4482ee6e5cb5cc9871b4ce075974f6547e84d23eb494e831371f431c31d570daddec0988360a4023be17b2a8729d675aad81cdfd380738802d379131353dd22dae12912514e668ecda25b79888543e398bbd1e1d869131c9c5135ec75b7718537f69e2585363e0de3d42982f200ad88b2f9ce4f6abb2790771b638411013c80ce8055514c9351e403e438995f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 61501991b18f323804525137dc25005a
+      Version: 3
+      TBS:
+        MD5: 4e472f9ccab63d22f0b9a6dbeb4969f4
+        SHA1: 764f7c4f78d03485ef024a68a86370a43dca402e
+        SHA256: 5623801ef2108741513b5941be10dcf08095e4ee9f1aaf62ac9773cce497a8ad
+        SHA384: 576c29b57e4fb80ecb32810155daee135aa5f3541cc89bc84cf1e11ed58a8d2d63fa60a84d4f36e8003312891a2383c6
+    Signer:
+    - SerialNumber: 61501991b18f323804525137dc25005a
+      Issuer: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA EV R36
+      Version: 1
+- Filename: ''
+  MD5: eb187d171359a5bb1c754107f18cf8bb
+  SHA1: 96e6fce6833ea0f2c81bfe0363393aa3302d6916
+  SHA256: 8248306bcc5fae20fd4f3d5c44f962c85cddbe020b34a1799350ce2034154b7d
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Basil
+  Description: 'The WinDivert 2.2 driver [URL: https://reqrypt.org/windivert.html]
+    [Bitcoin: 1C5vZVSbizPeZ8ydTYhUfm4LA2cNwBfcYh]'
+  Product: WinDivert 2.2 driver
+  ProductVersion: '2.2'
+  FileVersion: '2.2'
+  MachineType: AMD64
+  OriginalFilename: WinDivert.sys
+  Imphash: 5bfe3723089cbcfcc271ba6d7ab617aa
+  Authentihash:
+    MD5: 98e59da805f38429d3a3ad15e0aa66ef
+    SHA1: 732fc0d9c44c96589a9ad8489c6c78e10deec99a
+    SHA256: 49373ea79d942e82873583a6515950acc04c578e75720593383ffb7ba4a28f3b
+  RichPEHeaderHash:
+    MD5: 4670da44c797eae476c7c4016b14a30f
+    SHA1: f48e88156fe7e675523a16460face5c18bd0d1e3
+    SHA256: 52b29a3981a021cd7e3dd0f8b37f79ed1ea92c8d039d04fc6f931e8e0432d609
+  Sections:
+    .text:
+      Entropy: 6.3017757141162605
+      Virtual Size: '0xb2fa'
+    .rdata:
+      Entropy: 4.318426453167154
+      Virtual Size: '0x4620'
+    .data:
+      Entropy: 1.0009925958108754
+      Virtual Size: '0x4038'
+    .pdata:
+      Entropy: 4.820469812262326
+      Virtual Size: '0x6cc'
+    .gfids:
+      Entropy: 0.8112781244591328
+      Virtual Size: '0x4'
+    INIT:
+      Entropy: 5.246295023097871
+      Virtual Size: '0x89a'
+    .rsrc:
+      Entropy: 3.420677426244852
+      Virtual Size: '0x478'
+    .reloc:
+      Entropy: 5.026645084048212
+      Virtual Size: '0x1a4'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2022-04-09 18:27:36'
+  InternalName: WinDivert.sys
+  Copyright: "Copyright \xA9 Basil 2011-2022"
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - NDIS.SYS
+  - fwpkclnt.sys
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlCopyUnicodeString
+  - KeBugCheckEx
+  - IoGetRequestorProcess
+  - PsGetProcessId
+  - ExUuidCreate
+  - ObfDereferenceObject
+  - ObfReferenceObject
+  - IoWriteErrorLogEntry
+  - IoGetCurrentProcess
+  - IoFreeMdl
+  - IoAllocateMdl
+  - IoAllocateErrorLogEntry
+  - MmMapLockedPagesSpecifyCache
+  - MmBuildMdlForNonPagedPool
+  - ExFreePoolWithTag
+  - ExAllocatePoolWithTag
+  - KeReleaseInStackQueuedSpinLock
+  - KeAcquireInStackQueuedSpinLock
+  - RtlGetVersion
+  - RtlIntegerToUnicodeString
+  - KeQueryPerformanceCounter
+  - NdisAllocateNetBufferPool
+  - NdisFreeNetBufferPool
+  - NdisAllocateNetBufferListPool
+  - NdisGetDataBuffer
+  - NdisAdvanceNetBufferDataStart
+  - NdisRetreatNetBufferDataStart
+  - NdisFreeNetBufferListPool
+  - FwpmTransactionAbort0
+  - FwpmTransactionBegin0
+  - FwpmEngineClose0
+  - FwpmEngineOpen0
+  - FwpsQueryPacketInjectionState0
+  - FwpmProviderAdd0
+  - FwpmProviderDeleteByKey0
+  - FwpsInjectNetworkReceiveAsync0
+  - FwpmSubLayerAdd0
+  - FwpmSubLayerDeleteByKey0
+  - FwpmCalloutAdd0
+  - FwpmCalloutDeleteByKey0
+  - FwpmFilterAdd0
+  - FwpmFilterDeleteByKey0
+  - FwpmTransactionCommit0
+  - FwpsCalloutRegister0
+  - FwpsCalloutUnregisterByKey0
+  - FwpsFlowAssociateContext0
+  - FwpsFlowRemoveContext0
+  - FwpsInjectionHandleCreate0
+  - FwpsInjectionHandleDestroy0
+  - FwpsAllocateNetBufferAndNetBufferList0
+  - FwpsFreeNetBufferList0
+  - FwpsInjectNetworkSendAsync0
+  - FwpsInjectForwardAsync0
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  - WdfVersionBind
+  - WdfVersionUnbind
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Comodo CA Limited, CN=AAA
+        Certificate Services
+      ValidFrom: '2004-01-01 00:00:00'
+      ValidTo: '2028-12-31 23:59:59'
+      Signature: 0856fc02f09be8ffa4fad67bc64480ce4fc4c5f60058cca6b6bc1449680476e8e6ee5dec020f60d68d50184f264e01e3e6b0a5eebfbc745441bffdfc12b8c74f5af48960057f60b7054af3f6f1c2bfc4b97486b62d7d6bccd2f346dd2fc6e06ac3c334032c7d96dd5ac20ea70a99c1058bab0c2ff35c3acf6c37550987de53406c58effcb6ab656e04f61bdc3ce05a15c69ed9f15948302165036cece92173ec9b03a1e037ada015188ffaba02cea72ca910132cd4e50826ab229760f8905e74d4a29a53bdf2a968e0a26ec2d76cb1a30f9ebfeb68e756f2aef2e32b383a0981b56b85d7be2ded3f1ab7b263e2f5622c82d46a004150f139839f95e93696986e
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: '01'
+      Version: 3
+      TBS:
+        MD5: 93b601b98fc29a9e89a704048928b85f
+        SHA1: 3e8e6487f8fd27d322a269a71edaac5d57811286
+        SHA256: bedd4b1831f17c7ec1d507380f4c9836baa8ce20065a67db8b43acea14294ba4
+        SHA384: 5019d634bf6be7246128e117bfdf533f97aa574fae9080307b427fc77998fe9f280ba23b051cfbd6cf5d37c6e578d698
+    - Subject: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing Root R46
+      ValidFrom: '2021-05-25 00:00:00'
+      ValidTo: '2028-12-31 23:59:59'
+      Signature: 12bfa1ef8b749a9844b86946b5ab240a0ca48a67b83a81bf458a7d5207a88d1f4e218539a36b5e2d2086bf10b8ae793b53cdb4fbd844be06d95c6367d44016874486722ad63215f51283c2f9e15d114067f6422772c523e202381a4c20e2db01f7cd464f26a27c66c05136b6890254c7fc58fb6c00eefe98a62e95a10c53291f6fd819a64f9ef7ac09ea5d82c68baf80a7bd8148528431da32ec15e4a64c3d6c3973d40b853920e0851a68e1a74838a9d1362577c18d1916c5884c667d2f63ce98e869dfac3ca85d9dc91c5baed8f32f74cfb87ef6d7839d1196629aae4513da7fdc47fbdfc3529fe60655e99d8cf23a6251bcec240f29d4588084e4457b5ad8
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 48fc93b46055948d36a7c98a89d69416
+      Version: 3
+      TBS:
+        MD5: 207045ce7b7ab131e78e459b13825902
+        SHA1: bcf7530a1ab309fb1926cb720f9fd58cff1cb88f
+        SHA256: 0f31a4237992e1ea623baf4c29480afb6d913e10f1fb1d56bb56f5b03fbff13b
+        SHA384: a229d2722bc6091d73b1d979b81088c977cb028a6f7cbf264bb81d5cc8f099f87d7c296e48bf09d7ebe275f5498661a4
+    - Subject: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA EV R36
+      ValidFrom: '2021-03-22 00:00:00'
+      ValidTo: '2036-03-21 23:59:59'
+      Signature: 5f36acfbf9f6725a14b7f00b1dded8fd9701d2fd01ee992d86e8f6b7f039ffd6814a5aa7424a0a2d159de694fdc5694ab2d74bf116124cf6be9066658b2d74d4ab08f76a110308777cbe69e1b0db9f248903d6de5ca4e0b2d6b4cfe338d5b96dcc27d6ce6411e8107276d3f9e0e92c89e949d3b39796060ae1f60ac8419a915d81d8367798ca804197a8f8913f639faacd54544b80eaf51766d39471fd9efd4731e3e91a861dd3be20d23fb1525fb293bd8c950998728f9501f49843a54afb1426aa9d36bf72b0fcdcbd840deced34a85e952b3816630575d9f6312e156be294b22ad27435b5989aa3fef82b2fb6174b276c5ae6b9765eda86ddab64d66aea8318881b3182f588b39425c0212f086902e34cbb4c2a1130eb817906e141952ad420f60b93e47c760c9d1d266b5f8401f62a99cdafdec7f0e418a24e9b2f2a0c66a6927526bed94035136faea6371a7ae8ad1c5163072a56066ced7e18f6e3ec6473a66d08368baf0f99ae756b172bc24d6ac351464156e98fc28dff13719bdaed9ed39fabe545a612c5145a524197a3060008c5e61cea27823c3bdbe646c4ef2d003513cd367d9de5aa270805cccec0360e4b194fd0639a6dbfc529533122db75507786d0f2f86aee6b061b3e85232b97c87e7a99410cdd587f0ea8c3123d3a359be09d2c8c17815444a87a1d989d967f5958a65465ff51420bf847ebcff8e5bf
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 33d708a891405319e2a5bbd339b9ad6e
+      Version: 3
+      TBS:
+        MD5: b81404c775a2621debdb7825b87b8316
+        SHA1: 47ae94067c3c59b13605192288705db7b52f3685
+        SHA256: 9893b35b3dcefe53d8d24b887569dfe21f9aef27bd57b61c06fcf7438b89c33a
+        SHA384: f55821c081b58e86eaa202923e715e1524c422c7be0469b13a9e7a319e50d70cb5b67e864273029a79250f9dc3203cbd
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Time Stamping CA
+      ValidFrom: '2019-05-02 00:00:00'
+      ValidTo: '2038-01-18 23:59:59'
+      Signature: 6d5481a5335d16e1b553819175df037a320b2d258411b2b0db2a7d2a05f5bc3b27f45aa0b9495990296c61cbb550dbe27df99f00ef40c3add3e2e456f95841cff142e5107dffb0741f8fc65c09f9335eeaa01c26585cf3b4110fd5d5c3e2bcd55878bf4876e144676d8fb043100f8de4f93862bf1301c585a34cc5ccb2533095a4d6f4965608b8cd5c7f0196be72526a3b42377c1678399393949bb1dcb26d416d67cdc96f903d7f4572c11b23d6c2558466e4b3c56606f6f3d64b5eada32b428a2192fea86f5a2570628173635ea0bbd8dcd74ad33daf830638121d24872de4fc02d63e7704bc0436b5e777cb9c2e8d2318b9a3c2471df05dd6a1735705689aa7c937651dbeeabcd842834305a58ba609ffd1a194a64eaa3d09f5056cb7d2645ad82a22c24b9df1395e4cde483d9b34969a095f8efdf7b15291ce3f89f61ca1b5a9751f71bf5b435d653d50816eabf0d0d3fcb2b31fb6999626f43c798b5c64cccdee279ae5a0c00c7287c16e4d5ad31eeaf044e6326f1ceb174e94c37865203b0f41aa1fe9a1419dfeb1b8a0652a34e0dea8f93ce6c130bbc0a0632cfc5c1600a8d0c47fea119d1e06c6a66d325db438092b4907aafdec30daf1a72fcfb7fdfad0a384d9279efb016677b95610e1206ec6aeb1f9b6bac8355d33768ef17c200c2a77aeb5a20286ba29eeb45a00b18cabe3f90ac9545dd4b96a749ebd48ae98
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 300f6facdd6698747ca94636a7782db9
+      Version: 3
+      TBS:
+        MD5: 63499ed59a1293b786649470e4ce0bd7
+        SHA1: 7309d8eaa65da1f3da7030c08f00a3b0a20fa908
+        SHA256: 8c8d2046b29e792e71b28705fe67c435208a336dde074a75452d98e72c734937
+        SHA384: 5dbc5eae13908fee4c4e5216f87e3e87208fff0d1052f5fa9f0856a429d6a6c422c625f2318f2f29aea26ece09c1e811
+    - Subject: 'C=GB, ST=Manchester, O=Sectigo Limited, CN=Sectigo RSA Time Stamping
+        Signer #3'
+      ValidFrom: '2022-05-11 00:00:00'
+      ValidTo: '2033-08-10 23:59:59'
+      Signature: 73daed6872cbc2b940a131bbb403a32d147b24e7b45b157da8e9fdadd1920d7c3d36a069d9f39a30daac69d67457243f7e0f3cd9f5c379256c26e88d6893cef17789397fa80405da34c314ea9f0854abffc47e966c2bd394ebb46ce0454d2cb2f73b3b5ab5c1fbd789756d987272f6f70728f3d3b2d0eb19be152c78efcd45a000e4f80476bb57c590be775490749e0b4f4dc4aa138f97af01352bcb9b1178e9f2f989043c4ee3821262ebb4440c7541c20f34b8889dc822f1136adb182f6e78adc405b4e884089307f97d83fe689834e477e5b1ce8c946cdb036d2805477e9b2ef064fbdba40331107c1afb3c1980d10b70b9555f47be3964ceb7da235432e346b232d8d22986c9155d8095af02fbb4d12e9d387c35e00f1ced1b47489c226a5582d9f2ba086503e5f129f3488a09014ca679f2a2b61a9994eb9728e1be7d1ba17ced5680a6f4223390e48453fc2afac0a797a8eab58d7acee4e04ba133ab0b76a0d56916b78e66bf5ffa1fc4a87fa7a14814910d82fcbd4d99edc9e66c36fe774399b8692d7c612feda3b049fe5bbe692491ff93fc5769924bd9053f6d8672d3a2d0c064d23a42c11a03fbd0ed9a21b83fafa6b25154d54cc5ca1f128d57c639ed5cffec9f2676ad646667e8aa30e0d2adb77db16a41276e038aa374e08a09826ebfe3f6b7bc9e0b29186881a19c3f6e16594b1409099ae6aebf6015dd86f5
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: false
+      SerialNumber: 0090397f9ad24a3a13f2bd915f0838a943
+      Version: 3
+      TBS:
+        MD5: 26ec2c9bfcb06fdf8a6d95f2c616fd72
+        SHA1: 635466f1432046f6fd338624c068872ab6488b12
+        SHA256: 2219bd6adf84dc8f6f04833974d150f75f5ce79cbf85788a6f7efaa4a5205839
+        SHA384: 62d3259a3af5706e5bd6ca3f7ca35c0978253facbf7bee54f61d6afdd548e39e435fb55f952dbf8ed2bd6ee0c6b69660
+    - Subject: serialNumber=91510107MA7E8Y2876, ??=CN, ??=Private Organization, C=CN,
+        ST=, O=, CN=
+      ValidFrom: '2022-05-25 00:00:00'
+      ValidTo: '2023-05-25 23:59:59'
+      Signature: b75f493e19a27fd2fb38884a1c07997ab236a090a9299ad269b17a711f034b6b9b9686ecce7330d3ee9692c63be512b6c84ac3cca2b89606296226c512075251deca429743e7950038f9b5ee7f0d31e8b77e3f8aa11209fca096788a3679c9b68b2187e32ce6348c217e89066ac5758b87fe04e1e8a070194bcc034a8cc9e3e8e4cf67df553f3e4e55627971461eb011c4ee7ffdf1b3a388642ccfd7b7d272cd0d855ec7b9287d482a14c366f668a32c3daf404e9cda6296aff82fe45c7b1bfdc94ae6d0a08796685828dc250495e69b0c42daa45fb7dab634df7799c474b7c00da1104c5c7ce17c5587ccbcfa4949ee29c862a4482ee6e5cb5cc9871b4ce075974f6547e84d23eb494e831371f431c31d570daddec0988360a4023be17b2a8729d675aad81cdfd380738802d379131353dd22dae12912514e668ecda25b79888543e398bbd1e1d869131c9c5135ec75b7718537f69e2585363e0de3d42982f200ad88b2f9ce4f6abb2790771b638411013c80ce8055514c9351e403e438995f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 61501991b18f323804525137dc25005a
+      Version: 3
+      TBS:
+        MD5: 4e472f9ccab63d22f0b9a6dbeb4969f4
+        SHA1: 764f7c4f78d03485ef024a68a86370a43dca402e
+        SHA256: 5623801ef2108741513b5941be10dcf08095e4ee9f1aaf62ac9773cce497a8ad
+        SHA384: 576c29b57e4fb80ecb32810155daee135aa5f3541cc89bc84cf1e11ed58a8d2d63fa60a84d4f36e8003312891a2383c6
+    Signer:
+    - SerialNumber: 61501991b18f323804525137dc25005a
+      Issuer: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA EV R36
+      Version: 1
+Tags:
+- windivert.sys

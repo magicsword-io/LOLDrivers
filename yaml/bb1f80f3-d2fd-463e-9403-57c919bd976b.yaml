@@ -1,0 +1,182 @@
+Id: bb1f80f3-d2fd-463e-9403-57c919bd976b
+Author: Michael Haag
+Created: '2024-09-10'
+MitreID: T1068
+Category: malicious
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create 2.sys binPath=C:\windows\temp\2.sys type=kernel && sc.exe
+    start 2.sys
+  Description: Sophos, from time to time, has observed a threat actor deploy variants
+    of Poortry on different machines within a single estate during an attack. These
+    variants contain the same payload, but signed with a different certificate than
+    the driver first seen used during the attack.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: ''
+  MD5: c1ade0fc97f6a774fd036892c8056907
+  SHA1: e23dff8959176dc17a1e37356a99c3333e75e8d3
+  SHA256: df72cb33a23ae8f6f9dc64bb738fcfaea959368ce05cf399f3c7db5e90104bd7
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Imphash: 8d5129d39204fcf88ffca488305e4480
+  Authentihash:
+    MD5: fd757ea1ff06f0e7dfd2b49d9597a2c8
+    SHA1: 627692c0cfb3cb52056d506928bda718f6177080
+    SHA256: 2a82a5b833cf03738f2d159e2912d2947f5216a4d2adf31a204f365d7ceab430
+  RichPEHeaderHash:
+    MD5: 9f5ea09cbe25b8d1bdb7059394b76407
+    SHA1: a653541628b9f0d4243eb2113d1dc3fc9c122022
+    SHA256: e902895912290d1eccdd20d80060af9c65b508cf02ebafed87b3c6691c062d7b
+  Sections:
+    .text:
+      Entropy: 2.2307274252136557
+      Virtual Size: '0x7000'
+    .sedata:
+      Entropy: 7.693720208028475
+      Virtual Size: '0x96000'
+    .idata:
+      Entropy: 3.5775984824855165
+      Virtual Size: '0x1000'
+    .reloc:
+      Entropy: 2.2552593842335233
+      Virtual Size: '0x1000'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2022-12-31 07:05:54'
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - RtlAnsiStringToUnicodeString
+  - RtlCompareUnicodeString
+  - RtlEqualUnicodeString
+  - RtlFreeUnicodeString
+  - DbgPrint
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - ProbeForRead
+  - ProbeForWrite
+  - MmProbeAndLockPages
+  - MmUnlockPages
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - IoAllocateMdl
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoFreeMdl
+  - ObfDereferenceObject
+  - MmIsAddressValid
+  - KeStackAttachProcess
+  - KeUnstackDetachProcess
+  - PsLookupProcessByProcessId
+  - ZwAllocateVirtualMemory
+  - ZwFreeVirtualMemory
+  - PsGetProcessPeb
+  - PsGetProcessWow64Process
+  - ObReferenceObjectByName
+  - IoDriverObjectType
+  - KeBugCheckEx
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Code Signing CA
+      ValidFrom: '2013-10-22 12:00:00'
+      ValidTo: '2028-10-22 12:00:00'
+      Signature: 3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0409181b5fd5bb66755343b56f955008
+      Version: 3
+      TBS:
+        MD5: 9359496ca4f021408b9d8923cab8b179
+        SHA1: 2aed40d7759997830870769be250199fd609e40e
+        SHA256: e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65
+        SHA384: 5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
+        CA
+      ValidFrom: '2011-04-15 19:41:37'
+      ValidTo: '2021-04-15 19:51:37'
+      Signature: 5cf5b22d02ceed01b53512d813f7aa4014c7a15ca08a55ed7e55ea6ac457176fd04722423658efc5ac61c5f62c52ce6ae6c80d85dab334420ea40225182672b92a4ea57e4b16f2a0e40c449ce24d9af474f0f927a6699031c244654348c74869d0fc8409f286140ac22996857f11eb8713176ed3ec6bff1d578ab17b1ea5a07ce9a27a68e5fac6b161d67263fa379163835599f81d614f0c6fa3f7bcb1152acc8d85e31417ef7e49443fb022c0f0acbe2fdbe10c86b0f4585c5a10a94bcdf3448a4652083e0a6210e9459504b78b8d4b074f500db7bbe7fb8ca27878c6c53b7663b2cfe521845a66fce04c79834ecfa8ee700586587cc29cd73ca3ad3c7e76625c87d0ed7cd5c55b1421f4be75a275d2e9e15ad020307841624d6b5e6e1b1710244ad8588775d015d762bbfd185665842561977faad49df4f35d6da031c2e19e02ac3e90c3327ee832903416d08b14cf95accee58c54a265b8bfed186a57073ed3e79a4a2f081a041c49871a8ae61b08a365d81c31c50d9cbab368ddf45076160675fec403e7d13edfdc862e10027e661296534e7af3365879b12042d8963f35be3f8ef2999743f5e40ce13c68728c8d49d75a52b573fb7a35943a61b08482c04885c19732d39b725fa0d2348f7ef0467cf28c7294c707b0d7b5b230b81965f09c8327b0a0abd0a2727e050fb3aeddb95b9b42bcc32663456b86f11d4643edc8
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611cb28a000000000026
+      Version: 3
+      TBS:
+        MD5: 983a0c315a50542362f2bd6a5d71c8d0
+        SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
+        SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
+    - Subject: C=CN, L=, O=Beijing Founder Apabi Technology Limited, CN=Beijing Founder
+        Apabi Technology Limited
+      ValidFrom: '2018-05-22 00:00:00'
+      ValidTo: '2019-05-29 12:00:00'
+      Signature: 4eba37e78041cfbe6dbc49ddf10929cf341efc23ac0ad76aca1f3154d40243081afc484e4d1d28ad92b956046096c8a98971ad4309f5dc24c695df8b04bb85c38e035cbd0f7c4f3b2f7d880cdd00fc7b5638735afe9ae34019366a4c1a08995f22b1fc1400eca2d79afd295e602566eaf214ccf3329924cf9ab7e6cf8824dfd2e95c7e54a14603308b7da150c28741a23bf5f169eee5f959fd21b1b4764f1574da5aacc7c9e79224bd62e997dcd48f95bcecaa810b4f1f65829f3fdcd05c1d455d5d550afd21e4cdc2d8dbceca612995918ef4db0a5bbf046c7ca788cacd4dab47004e21371f5d013ff094a8c5981bcd42155085e64c72193d61b767b54c6640
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 06b7aa2c37c0876ccb0378d895d71041
+      Version: 3
+      TBS:
+        MD5: 5c897d6080ce1a2501a5761f6da93f8d
+        SHA1: ee4ae00aaecf4576843a668247abbe2111a92a07
+        SHA256: 644f3629cad671e4442ffccbbed528310542acfa40bf6f3a390cd0494a16daf7
+        SHA384: a78f2bc2bdea838e9c1e8e48c416624f8cbe41a7017eca65fbda710748bc64150db3f94288f3b2fb466e5f5c539193cc
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
+        RSA Time Stamping CA
+      ValidFrom: '2019-05-02 00:00:00'
+      ValidTo: '2038-01-18 23:59:59'
+      Signature: 6d5481a5335d16e1b553819175df037a320b2d258411b2b0db2a7d2a05f5bc3b27f45aa0b9495990296c61cbb550dbe27df99f00ef40c3add3e2e456f95841cff142e5107dffb0741f8fc65c09f9335eeaa01c26585cf3b4110fd5d5c3e2bcd55878bf4876e144676d8fb043100f8de4f93862bf1301c585a34cc5ccb2533095a4d6f4965608b8cd5c7f0196be72526a3b42377c1678399393949bb1dcb26d416d67cdc96f903d7f4572c11b23d6c2558466e4b3c56606f6f3d64b5eada32b428a2192fea86f5a2570628173635ea0bbd8dcd74ad33daf830638121d24872de4fc02d63e7704bc0436b5e777cb9c2e8d2318b9a3c2471df05dd6a1735705689aa7c937651dbeeabcd842834305a58ba609ffd1a194a64eaa3d09f5056cb7d2645ad82a22c24b9df1395e4cde483d9b34969a095f8efdf7b15291ce3f89f61ca1b5a9751f71bf5b435d653d50816eabf0d0d3fcb2b31fb6999626f43c798b5c64cccdee279ae5a0c00c7287c16e4d5ad31eeaf044e6326f1ceb174e94c37865203b0f41aa1fe9a1419dfeb1b8a0652a34e0dea8f93ce6c130bbc0a0632cfc5c1600a8d0c47fea119d1e06c6a66d325db438092b4907aafdec30daf1a72fcfb7fdfad0a384d9279efb016677b95610e1206ec6aeb1f9b6bac8355d33768ef17c200c2a77aeb5a20286ba29eeb45a00b18cabe3f90ac9545dd4b96a749ebd48ae98
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 300f6facdd6698747ca94636a7782db9
+      Version: 3
+      TBS:
+        MD5: 63499ed59a1293b786649470e4ce0bd7
+        SHA1: 7309d8eaa65da1f3da7030c08f00a3b0a20fa908
+        SHA256: 8c8d2046b29e792e71b28705fe67c435208a336dde074a75452d98e72c734937
+        SHA384: 5dbc5eae13908fee4c4e5216f87e3e87208fff0d1052f5fa9f0856a429d6a6c422c625f2318f2f29aea26ece09c1e811
+    - Subject: 'C=GB, ST=Manchester, O=Sectigo Limited, CN=Sectigo RSA Time Stamping
+        Signer #4'
+      ValidFrom: '2023-05-03 00:00:00'
+      ValidTo: '2034-08-02 23:59:59'
+      Signature: 4c9b6558fae079cfef15c3326dde3391eb7758e2ebbdcb4a3c75de7e946dc322c70495df656961130cf60c9ef589205ec187c70324cac7a5f026dff8f831650de0eb6d5157a68c845208461c2ac2def2da8a45f3bef7f62ec47eedf8ed68bf7a5648e961e59a3977bcbeba91648875ff5d85163427d229cbffed2ddaffbe930cec6da20dccc3f16ebd21911a230052ad97d462782a8479a8d73dac218f70c324793a97f10da3a35b53d8ab00ba58fb35804f5f28716c195ec2837290aee0c6d8f299fbeab492657c077c35441dad58186b62fbde6cc40aa96cd3214670dc2f8d754c23c241d07a963bc34bddcd922674765c37a09a249e4e5f4ed38f0fe5134f5944654b4364cf48f86767b94dbfcc0db13a30d0a13d48ad7a65e4ecdfe001f0b32a4a39acc1a4f9a97d35d03240a0b1192a1821b2c87d05711a4b2736aae0981c8375e7c77e4b8443cd43fb9097762a12ac40c1705b990a40fa806d94617bc86eb9c86767245c508d0120de07f701d4f82e11cd9d83e5f8ca251c443d27e5b086472a0b1b84767d7b684f8db7f713b4eda02dee730fd910ba9d992c7cd7751f8f10c494e67e24e5954a888c27d685661df9ae647691e848fec8550aed29c31fde38a6c014fb323df8a9836236c8c3be00871cabfa4a421c8903dcf55c7c70d95d784eee9f5e20e6096a7c2b08a348f515fc044fdfcd211c7ae5f58e1ad4b940
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: false
+      SerialNumber: 394c25e17ca06d27a865e23bd91d22d4
+      Version: 3
+      TBS:
+        MD5: bfd81e8e88260bca0b92eb83b19c4b90
+        SHA1: 635f1c7e5a32b1737b13b921b0595b96c12095e5
+        SHA256: 4a9a7eb0683be1678d838f0fb353ba909e0c8bee5eea2c009cbb29010b72c3da
+        SHA384: 92206bb2db0d409db591f655b84021a34d74afc3bd8d12c3d49d56b9376d6ac94f27da5c34234d2a05a6c0dff5ee600e
+    Signer:
+    - SerialNumber: 06b7aa2c37c0876ccb0378d895d71041
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Code Signing CA
+      Version: 1
+Tags:
+- 2.sys
