@@ -1,0 +1,175 @@
+Id: 5076e737-6744-4266-bef7-bceda65050d6
+Author: Northwave Cyber Security
+Created: '2024-09-11'
+MitreID: T1068
+Category: vulnerable
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create hw binPath=C:\windows\temp\hw.sys type=kernel && sc.exe start
+    hw
+  Description: Northwave Cyber Security contributed this driver based on in-house
+    research. The driver has a CVSSv3 score of 8.8, indicating a privilege escalation
+    impact. This vulnerability could potentially be exploited for privilege escalation
+    or other malicious activities.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://northwave-cybersecurity.com/vulnerability-notice-hardware-access-driver-marvintest-solutions?hsLang=en
+Acknowledgement:
+  Person: Northwave Cyber Security
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: hw.sys
+  MD5: 9347fbeeaf917fc4a1d64a0b4d61187a
+  SHA1: 01e74172e10d8b5f589e26ee8e3e4aec485edc6f
+  SHA256: 0483b32f9544e9c3cc3f206e7bc983ea83f5a9ca44864f2af9b8fc10ff45949f
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Marvin Test Solutions, Inc.
+  Description: HW - Windows XP-11 (32/64 bit) kernel mode driver for PC ports/memory/PCI
+    access
+  Product: HW
+  ProductVersion: 5.0.2.0
+  FileVersion: 5.0.2.0
+  MachineType: AMD64
+  OriginalFilename: HW.sys
+  Imphash: a70bfdb391d295cb610248955a594dbd
+  Authentihash:
+    MD5: 61ecd10a6dab25d4627ec22f5a924180
+    SHA1: f65f4e4ae18e2497686d023fa42b7269c646f662
+    SHA256: b0ed869a98c4cc2fc84deacb91ab87ca7657f0aea3e1c23234263e99237712fb
+  RichPEHeaderHash:
+    MD5: 912d65c6401d878b08b3b1012e3c8223
+    SHA1: e921de8dd065ea1e2e0d4535e9fe364627eb457f
+    SHA256: d091bafb334f8fe79d95699a9d0005ba18b95a975041f02ea07118f777e8bcd5
+  Sections:
+    .text:
+      Entropy: 5.508300633197023
+      Virtual Size: '0x7909'
+    .rdata:
+      Entropy: 6.15933891418543
+      Virtual Size: '0x1ac6'
+    .data:
+      Entropy: 8.0
+      Virtual Size: '0x100'
+    .pdata:
+      Entropy: 4.191150051006193
+      Virtual Size: '0x438'
+    .rsrc:
+      Entropy: 3.3965602613717083
+      Virtual Size: '0x408'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-05-31 10:25:35'
+  InternalName: Hw.sys
+  Copyright: "Copyright \xA9 1996-2023 Marvin Test Solutions, Inc. All Rights Reserved."
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlIntegerToUnicodeString
+  - RtlInitUnicodeString
+  - RtlCompareUnicodeString
+  - RtlCopyUnicodeString
+  - RtlAppendUnicodeStringToString
+  - ExAllocatePool
+  - ExFreePoolWithTag
+  - IoAllocateErrorLogEntry
+  - IoWriteErrorLogEntry
+  - wcsstr
+  - RtlUnicodeStringToInteger
+  - DbgPrint
+  - KeInitializeDpc
+  - KeInsertQueueDpc
+  - KeFlushQueuedDpcs
+  - KeAcquireInterruptSpinLock
+  - KeReleaseInterruptSpinLock
+  - KeInitializeEvent
+  - KeClearEvent
+  - KeSetEvent
+  - KeInitializeMutex
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - KeQueryTimeIncrement
+  - ExAllocatePoolWithTag
+  - MmBuildMdlForNonPagedPool
+  - MmMapLockedPages
+  - MmGetSystemRoutineAddress
+  - MmUnmapLockedPages
+  - MmMapIoSpace
+  - RtlWriteRegistryValue
+  - IoAllocateMdl
+  - IoBuildSynchronousFsdRequest
+  - IofCallDriver
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateNotificationEvent
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoDisconnectInterrupt
+  - IoFreeMdl
+  - IoGetDeviceProperty
+  - ObReferenceObjectByHandle
+  - ObfDereferenceObject
+  - ZwClose
+  - ZwOpenSection
+  - ZwMapViewOfSection
+  - ZwUnmapViewOfSection
+  - ZwOpenKey
+  - ZwFlushKey
+  - ZwSetValueKey
+  - MmGetPhysicalAddress
+  - MmAllocateContiguousMemory
+  - MmFreeContiguousMemory
+  - PsGetCurrentProcessId
+  - PsGetVersion
+  - ZwOpenProcess
+  - ObReferenceObjectByName
+  - ExEventObjectType
+  - IoDriverObjectType
+  - MmUnmapIoSpace
+  - RtlQueryRegistryValues
+  - HalGetBusDataByOffset
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2023-04-06 19:16:28'
+      ValidTo: '2024-04-03 19:16:28'
+      Signature: 0449290d26112d6053cc65c76ab953df62d870517fec16470e3bef28a20b21c099f4609adc713af367ac47fe49cb0f22c001e774ca0c9b13e86c59ec4b03ccdff30a8d38960e09584a895e6a87b0a481a57dc0ef10819ce8b226667f6a646adff7bfa61981a31ed6890e65afa47e7f27991e13fe39a54544aff9116bf5a737a4c33c92c1659a58b33cf3aa94b997e0c636f30e90776eb343874c6e0c7efa3a2d135ec3dd781b97e6ad41fc21adc7bd9b2d9b49e504a32846f541349c64f41396b43622015916fe46907431768a58c24e3f8d46c5cd8276fa1d92ba7aab4ccd77c5f7778b3fa0f5afa6fe6bfdba544b5af0a8597a073b0c7eed8caa5a11cb9dc4c415c8119bd2545f77b93886c40842a9b28b3128bcd257a4365c1e7afa22a5a2d46b936ed7ff7fa1db7801f26552c3ebd7832cc9475390ecbf3898855d16f270652b7fcc319d2415e2b10e8f61f0f4b6c7187739ed7752978fe4870650f3cd838f19b9c43804324f093eba2591c09cdcd46f1f0f8ad10779eed7467030721563f4e810982b42f8c6dfcfd0401d4569a74ccc13df5a9d2347883e776e98ed7fb32bb3f99c688e30b92c78c756b5242c632e5692a5bf564060961f5d55cfb82f150a50714885b378ce803b505b52c99ee339d84f6b9a5e6b86819c525088d9785771e3d1ed24746abd12bd6348a11e5a1cb545228aa270d3ac67b9dcd93d19fdf4
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 3300000061c88b129c2a7f1d87000000000061
+      Version: 3
+      TBS:
+        MD5: 686c5dd3e6c0c4d6888c652ee9a76e0b
+        SHA1: 48c84f19d968d167bb3dad0bfeffcc659269aa03
+        SHA256: 1fe207964146bdf934dc0c17aefaa75e78aea3d6a3935cc96e64511d7d469b29
+        SHA384: 6a4750403abdcdb9a23184d3d5ccdb537c32933818740e3531afbc162d90bdee62592e16e7b920dba759938d469cbe49
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      ValidFrom: '2014-10-15 20:31:27'
+      ValidTo: '2029-10-15 20:41:27'
+      Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 330000000d690d5d7893d076df00000000000d
+      Version: 3
+      TBS:
+        MD5: 83f69422963f11c3c340b81712eef319
+        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
+    Signer:
+    - SerialNumber: 3300000061c88b129c2a7f1d87000000000061
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      Version: 1
+Tags:
+- hw.sys

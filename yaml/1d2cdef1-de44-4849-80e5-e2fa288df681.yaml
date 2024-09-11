@@ -54,6 +54,194 @@ Acknowledgement:
   Handle: ''
   Person: ''
 KnownVulnerableSamples:
+- Filename: iQVW64.SYS
+  MD5: 69ba501a268f09f694ff0e8e208aa20e
+  SHA1: 3d6d53b0f1cc908b898610227b9f1b9352137aba
+  SHA256: 37c637a74bf20d7630281581a8fae124200920df11ad7cd68c14c26cc12c5ec9
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: 'Intel Corporation '
+  Description: Intel(R) Network Adapter Diagnostic Driver
+  Product: Intel(R) iQVW64.SYS
+  ProductVersion: 1.3.2.17
+  FileVersion: '1.3.2.17 built by: WinDDK'
+  MachineType: AMD64
+  OriginalFilename: iQVW64.SYS
+  Imphash: 2cf48a541dc193e91bb2a831adcf278e
+  Authentihash:
+    MD5: 61c9bc2fd776b341f21b71fb1891eb5a
+    SHA1: 9af173db51828d2a3c64d34e9120f1fd129a2359
+    SHA256: ecd6e879e5521ca4053a59ef6682a95d97f6d9ba75f313b87bd133afe5267852
+  RichPEHeaderHash:
+    MD5: 84dfb7245aa6b7f3efec05cfa6559636
+    SHA1: 695bd45c0e89dcb58253e90c9a43400b03ae2202
+    SHA256: 3ff178ffbb2c17ce7c3a02ef5943ddf3b580e3e28f6cc59775c5369062a0b9ab
+  Sections:
+    .text:
+      Entropy: 6.2614381305981635
+      Virtual Size: '0x4945'
+    .rdata:
+      Entropy: 4.781156413274236
+      Virtual Size: '0xed0'
+    .data:
+      Entropy: 1.1262035268835313
+      Virtual Size: '0x5ca0a0'
+    .pdata:
+      Entropy: 4.658699009524359
+      Virtual Size: '0x678'
+    PAGE:
+      Entropy: 6.1261566082145595
+      Virtual Size: '0x1b71'
+    INIT:
+      Entropy: 5.7698100081018655
+      Virtual Size: '0xb4c'
+    .rsrc:
+      Entropy: 3.4436811351467087
+      Virtual Size: '0x3f8'
+    .reloc:
+      Entropy: 1.2072398645622464
+      Virtual Size: '0x60'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2018-09-17 03:18:08'
+  InternalName: iQVW64.SYS
+  Copyright: Copyright (C) 2002-2018 Intel Corporation All Rights Reserved.
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoCreateSymbolicLink
+  - IofCompleteRequest
+  - MmIsAddressValid
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - MmGetPhysicalAddress
+  - DbgPrint
+  - strncpy
+  - vsprintf
+  - IoFreeMdl
+  - MmMapLockedPagesSpecifyCache
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - MmUnmapIoSpace
+  - MmUnmapLockedPages
+  - MmAllocateContiguousMemory
+  - MmFreeContiguousMemory
+  - MmMapIoSpace
+  - RtlInitUnicodeString
+  - KeWaitForSingleObject
+  - IofCallDriver
+  - IoBuildSynchronousFsdRequest
+  - KeInitializeEvent
+  - ZwClose
+  - RtlFreeAnsiString
+  - strstr
+  - RtlUnicodeStringToAnsiString
+  - ZwEnumerateValueKey
+  - ZwOpenKey
+  - wcsncpy
+  - IoGetDeviceObjectPointer
+  - IoGetDeviceInterfaces
+  - ObReferenceObjectByPointer
+  - MmAllocateNonCachedMemory
+  - MmFreeNonCachedMemory
+  - KeBugCheckEx
+  - IoDeleteSymbolicLink
+  - ObfDereferenceObject
+  - IoDeleteDevice
+  - MmGetSystemRoutineAddress
+  - ZwSetSecurityObject
+  - ObOpenObjectByPointer
+  - IoDeviceObjectType
+  - IoCreateDevice
+  - RtlGetDaclSecurityDescriptor
+  - RtlGetSaclSecurityDescriptor
+  - RtlGetGroupSecurityDescriptor
+  - RtlGetOwnerSecurityDescriptor
+  - _snwprintf
+  - RtlLengthSecurityDescriptor
+  - SeCaptureSecurityDescriptor
+  - SeExports
+  - IoIsWdmVersionAvailable
+  - _wcsnicmp
+  - RtlAddAccessAllowedAce
+  - RtlLengthSid
+  - wcschr
+  - RtlAbsoluteToSelfRelativeSD
+  - RtlSetDaclSecurityDescriptor
+  - RtlCreateSecurityDescriptor
+  - ZwCreateKey
+  - ZwQueryValueKey
+  - ZwSetValueKey
+  - RtlFreeUnicodeString
+  - KeStallExecutionProcessor
+  - KeQueryPerformanceCounter
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=SE, O=AddTrust AB, OU=AddTrust External TTP Network, CN=AddTrust
+        External CA Root
+      ValidFrom: '2013-08-15 20:26:30'
+      ValidTo: '2023-08-15 20:36:30'
+      Signature: 362ba2f2e1331fe493f7f26985c6640ec99b632fe4703798fd94ec7bcff8a14246f9ed6a4e8d34693605557a1ebbad8c99429606e925a82684bec1bf16a97caa5b04b7fdd1c0f402be28edf577c79bfe3af6e8c17bd382abfa144ecf2bcfe5d5b54840b1a38f838bad2b2553aba634cef243f74f2ce9dd1e4e5ab6bae83b10992400bc50fd78f6e523a8899493f7b74130374a57b7e644d9c9df9905aa44fc74af8264cc07cb01b609c32ee3e832a7b49f4178c7a184365462f2ec150ac8ead084f8f1e06bf456125f95e0fcddb77693fe294a25e90400f1b4110ec9849edb177df51ea58e3629193a6d6c464bd7ab7024288d05a3d9d524f2f8a0d13c8239d4a8820e693a8109fc06f0c75933843693064191232c22a5a7012b50b428aedb46b0591b86b39b87e8494e390b6d14df4c03301e1f5f74aef55b590353ec9816e0d06235751b48b87d13e57a48b87752a40798253b069b7a4e6a6f44864f144f2779273d5073414c9c413edd290c73b1c7fb1f760c176504ebd25010924149ece4067d3615446f89bf697df94d40c13a98b6a07e31d2b5aecafb53d53f5086cd5e933b6d5d7c9a3f3ff7a9255884dd114900a2c7c89e37dd778e6d718be05b81345d54baccf59347886de7ef5be228e4801b40e40f2ad17f2315655aac9994433f465526d6c4fa8895e2919aa32d0b85deac8ce0f967709f71790231f761a229c4
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 3300000035d8d5595b0671412b000000000035
+      Version: 3
+      TBS:
+        MD5: 3d488d41aaeb5661974952080abef2fd
+        SHA1: df01e35e6befc7d65625319f17397b861e618d56
+        SHA256: 3d6ef38b5d26773dc77392e415e88b3a744b30ea9f2081e2a992b5818db2f0c4
+        SHA384: ac7c06916fe4a00307834b2499f12799d3fe463c2e63d1881df669a2786745beeee2b3a7d87cd6bc9e4fe293c22e5a59
+    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=COMODO CA Limited, CN=COMODO
+        RSA Certification Authority
+      ValidFrom: '2000-05-30 10:48:38'
+      ValidTo: '2020-05-30 10:48:38'
+      Signature: 64bf83f15f9a85d0cdb8a129570de85af7d1e93ef276046ef15270bb1e3cff4d0d746acc818225d3c3a02a5d4cf5ba8ba16dc4540975c7e3270e5d847937401377f5b4ac1cd03bab1712d6ef34187e2be979d3ab57450caf28fad0dbe5509588bbdf8557697d92d852ca7381bf1cf3e6b86e661105b31e942d7f91959259f14ccea391714c7c470c3b0b19f6a1b16c863e5caac42e82cbf90796ba484d90f294c8a973a2eb067b239ddea2f34d559f7a6145981868c75e406b23f5797aef8cb56b8bb76f46f47bf13d4b04d89380595ae041241db28f15605847dbef6e46fd15f5d95f9ab3dbd8b8e440b3cd9739ae85bb1d8ebcdc879bd1a6eff13b6f10386f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 2766ee56eb49f38eabd770a2fc84de22
+      Version: 3
+      TBS:
+        MD5: be5bfbe77379139ac5cdcbcc8d4d3b34
+        SHA1: 606b701bc9f448ddbfe6fa63ccb8061b838ee254
+        SHA256: 0d73a614eef7596cf5a34733f74daf2ccfe4df7b4a40069bf43c43e428264177
+        SHA384: 7ce102d63c57cb48f80a65d1a5e9b350a7a618482aa5a36775323ca933ddfcb00def83796a6340dec5ebf7596cfd8e5d
+    - Subject: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, OU=ND, CN=Intel(R)
+        INTELND1820
+      ValidFrom: '2018-08-09 21:34:08'
+      ValidTo: '2020-08-08 21:34:08'
+      Signature: 714c055fff1a2bd770c1b7103eb47360ca789a29c9e4a59a9050dd5f9b20d559fa927bd5a6a7bb8e90be3324862edbe148f96f164427cd86b7c99ef8e972368a3aad8789e77ad0787ca5361a940eceb6b575a78655040f4104ddc57610bb1045c9aa03f3044b67c067a57c1d2dcf6be9969ce946684d131c1f8e750ddde70bf6740ea6c912945b8aea873d8a2653180e02fa8cd0803d617f6bc1a432d3dd39ee49cb520959cffcab34bf6deba98ce8a8eba46eec31a34a075e1269c8cf68fe8d70b17e72c83206ca40797c51997ee0521ed3ebf4f20fb5a8c48c93722362f65ffb68f49325f479e30b398938d8b87a8adfe0d8c1e68b0be9de1d11dca8aca582ba3a568c0f94b344c0cc5acd6b13870baf515fe169110c33d54f5e475272e485e949bf8f6dd4c7306bc32859dbbcde89228d1f92a7b9a0b20dd88097f76a19e6149afa28fb25574f9885252460aadb51be7695a59f13fe307a8346f4cf54f36b94dd1d8d082747f9869da38daed9301a20e728f7562dd789b52e11d061800bf8eb5bfce47c114b939ed0787760bb530a86585de6b79927216dfadc3b6ab3234b94e3069feedfcac8adfa9ab3f910104f32fb18a44c90a8b9dab58915cccf8ce134bcb39a9eb4ddc158607cccbce0cfb7f23506fc40b99d3c79b6de258c7c1734e29abae3a2330cf45871fc0dd444abbe8057a27b67cb4467f5bfd199d4ddedb7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 560000077b478c76c9afcafcaf00000000077b
+      Version: 3
+      TBS:
+        MD5: f3eba8fe0d2dd1bc861e0b0e6e23d96e
+        SHA1: bce46695d618b69de8a4bb5ebede302378c1aebb
+        SHA256: 5de689926c95c269de72cd6edf9cad152c5ce41729dfc7835607b9b1182fe66e
+        SHA384: 348401b8898e24fd502451c161739c56eecd8f5a8159045b1fc312dd636174aba9627306025387736bf478ade2b773a0
+    - Subject: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External
+        Issuing CA 7B
+      ValidFrom: '2015-10-28 00:00:00'
+      ValidTo: '2021-06-17 23:59:59'
+      Signature: 35bb03eacc9b601a13d075528e8095454e9ebf6ec0bb64aac36eb1021d465e2fe82f48cc8410f7ad993bfffa856829b0d37c31e21ab47bc166e2a53bc729189835ae6301a845209561db104db90d6bd39964ce5f8bb86c1346a06e5a0d3ee790ebb731a121f58dde3b7b6936f10800b9aabf1c566156d7cc923f29d4d96bd8222f0e56f56ad146e8808f397a923c6748b7e2fa190f3767e2df292d02aa43282eae2c464224be6dbb6a8849a64c20dfe5654ffae1c1be71d5f85ef59d6692b23b64e1e8aeac995517bddb1bdfa0934f3f56f23b83d5d2b7c1085a524042e33e9120f735b491f04de134694879c0ed30c9931a84d572198f6d8039f459ab2016d8f9ff7026237becc50033227c3d203aedb428bc7a810ce70bc13f7c300c4e50b8670fd76417b7c3c52085ca8fced5262a1254b9ff22f8a8273cca0e853714ee02e52f66156263876a5ecf29d3b89178b76172177bc119a6180822dad09125f606090926b02dac808874335fc7e044c1309976d877b14701ef69922bedae582963a0358ee41db704f1da3ab23280b1c8bcf0e70f71007a333a06e8a4d879d9d953cd9bfeb2685b8884856b0771d04f930a0760033408d273bf141adfe3c7041b2d999e931c95b38798425a1c916352398a8f4a2ac24c7b70693a3cf1fb2fff0e0a8794e4016acf9bb41fa30ea9ea2adcaf2b8c4401fd3a587d3278a219d5c974c5
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+      IsCertificateAuthority: true
+      SerialNumber: 069b5e99277284c8767f1368a7deb0f3
+      Version: 3
+      TBS:
+        MD5: 5578c7331db18bb448db403ad32c94ee
+        SHA1: dfcfe5d6087cf830513d705aa701ff957d960298
+        SHA256: 5b619f82064ace7ecf48d26ce8ae6fa3b52671915fa81ee81cddbe740dd8698b
+        SHA384: 5fa042c979faba67de861093b4aca808ae4be0fcedf123cb8afe126856c0b6ac3451393048211db8993914c5ff410bd8
+    Signer:
+    - SerialNumber: 560000077b478c76c9afcafcaf00000000077b
+      Issuer: C=US, ST=CA, L=Santa Clara, O=Intel Corporation, CN=Intel External Issuing
+        CA 7B
+      Version: 1
 - Authentihash:
     MD5: 1789a16d20ca2b55f491ad71848166a2
     SHA1: 2cbfe4ad0e1231ff3e19c19ca9311d952ce170b7

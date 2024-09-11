@@ -1,0 +1,138 @@
+Id: c8619f49-8e23-489b-9878-53d27533da15
+Author: Northwave Cyber Security
+Created: '2024-09-11'
+MitreID: T1068
+Category: vulnerable
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create pxitrig64 binPath=C:\windows\temp\pxitrig64.sys type=kernel
+    && sc.exe start pxitrig64
+  Description: Northwave Cyber Security contributed this driver based on in-house
+    research. The driver has a CVSSv3 score of 5.5, indicating a local dos impact.
+    This vulnerability could potentially be exploited for privilege escalation or
+    other malicious activities.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources: []
+Acknowledgement:
+  Person: Northwave Cyber Security
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: pxitrig64.sys
+  MD5: 1ed1fe48caba92583b9ceef503af330f
+  SHA1: 4f0037ca1926e5b325643c99127f8b69cfd3f301
+  SHA256: 56ece6b6b1d2da18458c9d8edc586bd2b9f7c4b092a9745fbed659238b2b3157
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ADLink
+  Description: pxitrigio DeviceDriver
+  Product: PXI Trigger IO for Windows X64
+  ProductVersion: 3.9.301.0
+  FileVersion: 3.9.301.2023
+  MachineType: AMD64
+  OriginalFilename: pxitrig64.sys
+  Imphash: b929e534993a16951c472a00a009d096
+  Authentihash:
+    MD5: 7696550508de828f0897e5887a1b312c
+    SHA1: 4786ade09f2c05eeedfc6cbd92aea052a4a8c0d8
+    SHA256: 131e84e32dae6954247fc0699d5ba52bf2936b5a782c795ae9e708829a5c26d6
+  RichPEHeaderHash:
+    MD5: 65e02cd0bef3fdf9843259601c25ee63
+    SHA1: e5bc74a68461db1ed9561c0c79166eecf9536902
+    SHA256: 83fea1a05e277e8d37c5d676e33baf3b11fa8dc8eda27699387005f0815b0115
+  Sections:
+    .text:
+      Entropy: 6.459152377168553
+      Virtual Size: '0x32e2'
+    .rdata:
+      Entropy: 4.347214621386859
+      Virtual Size: '0x6fc'
+    .data:
+      Entropy: 2.128940879188685
+      Virtual Size: '0x620'
+    .pdata:
+      Entropy: 4.126479048441595
+      Virtual Size: '0x2e8'
+    INIT:
+      Entropy: 4.82951708858445
+      Virtual Size: '0x348'
+    .rsrc:
+      Entropy: 3.3885304034083865
+      Virtual Size: '0x3c0'
+    .reloc:
+      Entropy: 2.95693897684768
+      Virtual Size: '0x24'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-05-22 02:04:06'
+  InternalName: pxitrig64.sys
+  Copyright: Copyright (C) ADLink Corp. 1995-2023
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - IoWMIOpenBlock
+  - IoWMIQueryAllData
+  - ObfDereferenceObject
+  - RtlInitUnicodeString
+  - RtlGetVersion
+  - IoAssignResources
+  - IoDeleteSymbolicLink
+  - IoDeleteDevice
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - RtlCopyUnicodeString
+  - ExFreePoolWithTag
+  - ExAllocatePool
+  - IofCompleteRequest
+  - RtlIntegerToUnicodeString
+  - HalGetBusDataByOffset
+  - KeQueryPerformanceCounter
+  - WdfVersionBind
+  - WdfVersionUnbind
+  - WdfVersionUnbindClass
+  - WdfVersionBindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2023-04-06 19:16:30'
+      ValidTo: '2024-04-03 19:16:30'
+      Signature: 46265205ad9b6e72f93c97f9bf34c09a4a9f618fec8b7dd6ec24db2163c8b019835dab33b75917d152e60a82e374a0c824aabd01367487ae41dd80c6e98facf7ab35fb0e21b812444a0740d44e44c100b6edc2d3a5a243594b116a979fae9c2e5a0e8d8b9d3809064110d2427a911e520310562b1a3524d5b3767a94069e35c0a3df4f4e1d11f91c05e35bdcce15a12d0d0083f080b21de4d12c3cd428214ed47c21b2ecf546c3d258c90fc982530b04eb7b84fcad5c7898fb6ce95f8970d0d98ab02d730c33c75ced79ea3b9aa19938e719ad84889325a5de27e97c7715d7130926057292a83f09c89f0b5e3993f32de9f773016ba173520ae0d0559bfb4f78dc8564a66b619af0162abe1b02a812562d5517d681a5f096f73a8414bc414919c173240a48d5dd226caf91c1a7fc25b88d4d407af788d09452b324bdfecb7fbec11569e50dc596319701cdf5bd4e0d3714097054b84be6a9715cbf4d499a25a01114f02aa44973515379ebfa23bf8bbaf931f08fd998c4d63cbe8ca6b062145ba4379ad1fcd5749e226e14596ad99249c8c8009212f4a997cf6e4f4940c14a0d4733bc511189110958a9defce1668953a0ef3f17bd5d588af12fae2de418169c1ad1b3571584fcd7be4875ce8d4c10edfa60652327e39158c64eba0e1db8e85c8d07371603d60d2585a61f39f265d662240813567907809db37b3a38c50c1dab
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 3300000062f45cf99e58a96a89000000000062
+      Version: 3
+      TBS:
+        MD5: 93c79f426eb2f2a03b74a6275cac238f
+        SHA1: e3ae60577ad97b4113d71845e11bd33a1ef2bea8
+        SHA256: 0f06228de7bacfbf65d426df80c4e40c5abfe5a2a402e6221dea03b18897de2b
+        SHA384: 4fcbd8696874577fdeed02d6f1245fb7f45d477850cbfdac0db27f478ed500665247ca122157f2678949f85e5386aa71
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      ValidFrom: '2014-10-15 20:31:27'
+      ValidTo: '2029-10-15 20:41:27'
+      Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 330000000d690d5d7893d076df00000000000d
+      Version: 3
+      TBS:
+        MD5: 83f69422963f11c3c340b81712eef319
+        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
+    Signer:
+    - SerialNumber: 3300000062f45cf99e58a96a89000000000062
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      Version: 1
+Tags:
+- pxitrig64.sys

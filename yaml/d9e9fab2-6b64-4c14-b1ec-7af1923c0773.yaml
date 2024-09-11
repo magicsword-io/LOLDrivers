@@ -1,0 +1,38 @@
+Id: d9e9fab2-6b64-4c14-b1ec-7af1923c0773
+Author: Northwave Cyber Security
+Created: '2024-09-11'
+MitreID: T1068
+Category: vulnerable
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create AccelLid.sys binPath=C:\windows\temp\AccelLid.sys type=kernel
+    && sc.exe start AccelLid.sys
+  Description: Northwave Cyber Security contributed this driver based on in-house
+    research. The driver has a CVSSv3 score of 5.5, indicating a localdos impact.
+    This vulnerability could potentially be exploited for privilege escalation or
+    other malicious activities.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources: []
+Acknowledgement:
+  Person: Northwave Cyber Security
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: AccelLid.sys
+  MD5: 833becd0e4abc9cfff8c835694694f80
+  SHA1: ''
+  SHA256: ''
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+Tags:
+- AccelLid.sys
