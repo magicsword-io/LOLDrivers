@@ -7,200 +7,200 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-    Command: sc.exe create otipcibus.sys binPath=C:\windows\temp\otipcibus.sys type=kernel
-        && sc.exe start otipcibus.sys
-    Description: ''
-    OperatingSystem: Windows 10
-    Privileges: kernel
-    Usecase: Elevate privileges
+  Command: sc.exe create otipcibus.sys binPath=C:\windows\temp\otipcibus.sys type=kernel
+    && sc.exe start otipcibus.sys
+  Description: ''
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection:
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4e3eb5b9bce2fd9f6878ae36288211f0997f6149aa8c290ed91228ba4cdfae80.yara
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4e3eb5b9bce2fd9f6878ae36288211f0997f6149aa8c290ed91228ba4cdfae80.yara
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Acknowledgement:
-    Handle: ''
-    Person: ''
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
--   Authentihash:
-        MD5: 0fc8a346a333624a7b6645da7a1b6b8b
-        SHA1: fd172c7f8bdc81988fcf1642881078a8ca8415f6
-        SHA256: 1cda1a6e33d14d5dd06344425102bf840f8149e817ecfb01c59a2190d3367024
-    Company: OTi
-    Copyright: ''
-    CreationTimestamp: '2018-08-27 00:12:54'
-    Date: ''
-    Description: Hardware Access Driver
-    ExportedFunctions: ''
-    FileVersion: 1.1000.0.1
-    Filename: otipcibus.sys
-    ImportedFunctions:
-    - ExAllocatePool
-    - ExFreePoolWithTag
-    - MmBuildMdlForNonPagedPool
-    - MmMapLockedPages
-    - MmMapLockedPagesSpecifyCache
-    - MmUnmapLockedPages
-    - MmMapIoSpace
-    - MmUnmapIoSpace
-    - RtlInitUnicodeString
-    - IofCompleteRequest
-    - IoCreateDevice
-    - IoCreateSymbolicLink
-    - IoDeleteDevice
-    - IoDeleteSymbolicLink
-    - IoFreeMdl
-    - IoGetDeviceObjectPointer
-    - RtlCopyUnicodeString
-    - IofCallDriver
-    - IoBuildSynchronousFsdRequest
-    - KeWaitForSingleObject
-    - IoAllocateMdl
-    - KeInitializeEvent
-    - WdfVersionBindClass
-    - WdfVersionUnbind
-    - WdfVersionBind
-    - WdfVersionUnbindClass
-    Imports:
-    - ntoskrnl.exe
-    - WDFLDR.SYS
-    InternalName: otipcibus64.sys
-    MD5: d5a642329cce4df94b8dc1ba9660ae34
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: otipcibus64.sys
-    Product: Kernel Mode Driver To Access Physical Memory And Ports
-    ProductVersion: 1.1000.0.1
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: b34681d0b4e69df394a00475fc8b8e2b
-        SHA1: 610ef1c2343ce3e7b8fa2fe945b8d39c8c499db1
-        SHA256: 40b86a78a8cf7c02e7599b5a5c25ab085e206420923b6c718161c1fd248645fa
-    SHA1: ccdd3a1ebe9a1c8f8a72af20a05a10f11da1d308
-    SHA256: 4e3eb5b9bce2fd9f6878ae36288211f0997f6149aa8c290ed91228ba4cdfae80
-    Sections:
-        .text:
-            Entropy: 6.133933891984983
-            Virtual Size: '0xdf3'
-        .rdata:
-            Entropy: 4.417947833956902
-            Virtual Size: '0x6a2'
-        .data:
-            Entropy: 0.5780798803320499
-            Virtual Size: '0x1070'
-        .pdata:
-            Entropy: 3.42138799002103
-            Virtual Size: '0xa8'
-        INIT:
-            Entropy: 4.427979696753516
-            Virtual Size: '0x2d'
-        .rsrc:
-            Entropy: 3.272477164189334
-            Virtual Size: '0x3a8'
-        .reloc:
-            Entropy: 2.5625
-            Virtual Size: '0x20'
-    Signature:
-    - Ours Technology Inc.
-    - Symantec Class 3 SHA256 Code Signing CA
-    - VeriSign
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
-                CA , G2
-            ValidFrom: '2012-12-21 00:00:00'
-            ValidTo: '2020-12-30 23:59:59'
-            Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
-            Version: 3
-            TBS:
-                MD5: d0785ad36e427c92b19f6826ab1e8020
-                SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
-                SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
-                SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
-        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
-                Signer , G4
-            ValidFrom: '2012-10-18 00:00:00'
-            ValidTo: '2020-12-29 23:59:59'
-            Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 0ecff438c8febf356e04d86a981b1a50
-            Version: 3
-            TBS:
-                MD5: e9d38360b914c8863f6cba3ee58764d3
-                SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
-                SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
-                SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
-        -   Subject: C=TW, ST=Hsingchu Hsien, L=Hsinchu County, O=Ours Technology
-                Inc., CN=Ours Technology Inc.
-            ValidFrom: '2018-07-09 00:00:00'
-            ValidTo: '2019-09-05 23:59:59'
-            Signature: 157696d20704ca4a7504961b5edd290d72580ee3cf1fb6fff495f95bcb872f1e9f94af12457ea351b1614568e3e459272eca93ba547ffc241728838133fd3331e9093d8a2a05ac50bc5009881466cc8d341a040ac6bdc6c1a88244824d76db728fef05ecb04501018462f10eb1d347355c8e2aa0a9103b4fc92070d675142e04c03bffe65c590ec5e5089346f20706291a97e28e5bd7f821e5797227e2f8f087fd95533db374c5f220129966060e10d8536fc0a91506a4062245d07906f6792ea9b100d6f1c1d9de50c6991076867f9267d74d040524e6b79be78d5c59e1225da69cba23f9b9ef79a94aac0f83985261b7422d7505dea910e7ad4b98403e6dbb
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-            IsCertificateAuthority: false
-            SerialNumber: 3d5fc3a4d1a54cf40abf37864a5effe7
-            Version: 3
-            TBS:
-                MD5: fffa36e195b3b63a83d3c588f0ebe5b7
-                SHA1: 0219cae154eee07fccab0c807cc0981b42b8f308
-                SHA256: e9e9699300bba6891efc24952734dc2c67ca2bdf8acada0edb6125183b184149
-                SHA384: ee4823abcf9aa949263ad6afd913f19fd996d1328dbeda146dfbf3e1a1ca9458820ec99549360856f4bd6aa6e7d984ce
-        -   Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
-                Class 3 SHA256 Code Signing CA
-            ValidFrom: '2013-12-10 00:00:00'
-            ValidTo: '2023-12-09 23:59:59'
-            Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-            IsCertificateAuthority: true
-            SerialNumber: 3d78d7f9764960b2617df4f01eca862a
-            Version: 3
-            TBS:
-                MD5: 1f056ff7d5f874984dc605402b7cb042
-                SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
-                SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
-                SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
-        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006
-                VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public
-                Primary Certification Authority , G5
-            ValidFrom: '2011-02-22 19:25:17'
-            ValidTo: '2021-02-22 19:35:17'
-            Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 611993e400000000001c
-            Version: 3
-            TBS:
-                MD5: 78a717e082dcc1cda3458d917e677d14
-                SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
-                SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
-                SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
-        Signer:
-        -   SerialNumber: 3d5fc3a4d1a54cf40abf37864a5effe7
-            Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
-                Class 3 SHA256 Code Signing CA
-            Version: 1
-    Imphash: cf1a39b9408348cddaa4a2827283534c
-    LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: 0fc8a346a333624a7b6645da7a1b6b8b
+    SHA1: fd172c7f8bdc81988fcf1642881078a8ca8415f6
+    SHA256: 1cda1a6e33d14d5dd06344425102bf840f8149e817ecfb01c59a2190d3367024
+  Company: OTi
+  Copyright: ''
+  CreationTimestamp: '2018-08-27 00:12:54'
+  Date: ''
+  Description: Hardware Access Driver
+  ExportedFunctions: ''
+  FileVersion: 1.1000.0.1
+  Filename: otipcibus.sys
+  ImportedFunctions:
+  - ExAllocatePool
+  - ExFreePoolWithTag
+  - MmBuildMdlForNonPagedPool
+  - MmMapLockedPages
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - RtlInitUnicodeString
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoFreeMdl
+  - IoGetDeviceObjectPointer
+  - RtlCopyUnicodeString
+  - IofCallDriver
+  - IoBuildSynchronousFsdRequest
+  - KeWaitForSingleObject
+  - IoAllocateMdl
+  - KeInitializeEvent
+  - WdfVersionBindClass
+  - WdfVersionUnbind
+  - WdfVersionBind
+  - WdfVersionUnbindClass
+  Imports:
+  - ntoskrnl.exe
+  - WDFLDR.SYS
+  InternalName: otipcibus64.sys
+  MD5: d5a642329cce4df94b8dc1ba9660ae34
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: otipcibus64.sys
+  Product: Kernel Mode Driver To Access Physical Memory And Ports
+  ProductVersion: 1.1000.0.1
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: b34681d0b4e69df394a00475fc8b8e2b
+    SHA1: 610ef1c2343ce3e7b8fa2fe945b8d39c8c499db1
+    SHA256: 40b86a78a8cf7c02e7599b5a5c25ab085e206420923b6c718161c1fd248645fa
+  SHA1: ccdd3a1ebe9a1c8f8a72af20a05a10f11da1d308
+  SHA256: 4e3eb5b9bce2fd9f6878ae36288211f0997f6149aa8c290ed91228ba4cdfae80
+  Sections:
+    .text:
+      Entropy: 6.133933891984983
+      Virtual Size: '0xdf3'
+    .rdata:
+      Entropy: 4.417947833956902
+      Virtual Size: '0x6a2'
+    .data:
+      Entropy: 0.5780798803320499
+      Virtual Size: '0x1070'
+    .pdata:
+      Entropy: 3.42138799002103
+      Virtual Size: '0xa8'
+    INIT:
+      Entropy: 4.427979696753516
+      Virtual Size: '0x2d'
+    .rsrc:
+      Entropy: 3.272477164189334
+      Virtual Size: '0x3a8'
+    .reloc:
+      Entropy: 2.5625
+      Virtual Size: '0x20'
+  Signature:
+  - Ours Technology Inc.
+  - Symantec Class 3 SHA256 Code Signing CA
+  - VeriSign
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=TW, ST=Hsingchu Hsien, L=Hsinchu County, O=Ours Technology Inc.,
+        CN=Ours Technology Inc.
+      ValidFrom: '2018-07-09 00:00:00'
+      ValidTo: '2019-09-05 23:59:59'
+      Signature: 157696d20704ca4a7504961b5edd290d72580ee3cf1fb6fff495f95bcb872f1e9f94af12457ea351b1614568e3e459272eca93ba547ffc241728838133fd3331e9093d8a2a05ac50bc5009881466cc8d341a040ac6bdc6c1a88244824d76db728fef05ecb04501018462f10eb1d347355c8e2aa0a9103b4fc92070d675142e04c03bffe65c590ec5e5089346f20706291a97e28e5bd7f821e5797227e2f8f087fd95533db374c5f220129966060e10d8536fc0a91506a4062245d07906f6792ea9b100d6f1c1d9de50c6991076867f9267d74d040524e6b79be78d5c59e1225da69cba23f9b9ef79a94aac0f83985261b7422d7505dea910e7ad4b98403e6dbb
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 3d5fc3a4d1a54cf40abf37864a5effe7
+      Version: 3
+      TBS:
+        MD5: fffa36e195b3b63a83d3c588f0ebe5b7
+        SHA1: 0219cae154eee07fccab0c807cc0981b42b8f308
+        SHA256: e9e9699300bba6891efc24952734dc2c67ca2bdf8acada0edb6125183b184149
+        SHA384: ee4823abcf9aa949263ad6afd913f19fd996d1328dbeda146dfbf3e1a1ca9458820ec99549360856f4bd6aa6e7d984ce
+    - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      ValidFrom: '2013-12-10 00:00:00'
+      ValidTo: '2023-12-09 23:59:59'
+      Signature: 13851a1e69a937f7a0bda4af7e1d6153fe9d8c5e0ca6751e781723ddfdec1a035539fb7195c7655aa78e30d2445a61db706fda2105c22e73ba49f1d193fe5dc9cd5e03e0899e3f741ed7f7388ba9d6cfbb352f3358a89256d1c84d3b82e6798416fc28b0b147f31da23eee87d9a67fa456a53fad842e29de7cbca8aaa33d0401eaba93a20e502229174c87e43a115fd6a425899b056b2fb4c9014c277b0bac190522a060153fdac9fb4d4c8ffb726777fd2794c7ba350e8849fe8dfd28af4a12bd0db39705de440c15fa362b03dcc15001f1a1115d14e5e2bd274b54be2b845e0fa6c374050aef97c38922b11f77f3bdcd43d4f14ca93fb58b84af64f2d01421
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 3d78d7f9764960b2617df4f01eca862a
+      Version: 3
+      TBS:
+        MD5: 1f056ff7d5f874984dc605402b7cb042
+        SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
+        SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    Signer:
+    - SerialNumber: 3d5fc3a4d1a54cf40abf37864a5effe7
+      Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+        Class 3 SHA256 Code Signing CA
+      Version: 1
+  Imphash: cf1a39b9408348cddaa4a2827283534c
+  LoadsDespiteHVCI: 'FALSE'

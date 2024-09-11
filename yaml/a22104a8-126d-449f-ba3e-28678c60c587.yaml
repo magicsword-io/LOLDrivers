@@ -7,183 +7,183 @@ Created: '2023-02-28'
 MitreID: T1068
 Category: malicious
 Commands:
-    Command: sc.exe create wantd_3.sys binPath=C:\windows\temp\wantd_3.sys type=kernel
-        && sc.exe start wantd_3.sys
-    Description: Driver used in the Daxin malware campaign.
-    OperatingSystem: Windows 10
-    Privileges: kernel
-    Usecase: Elevate privileges
+  Command: sc.exe create wantd_3.sys binPath=C:\windows\temp\wantd_3.sys type=kernel
+    && sc.exe start wantd_3.sys
+  Description: Driver used in the Daxin malware campaign.
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
 Resources:
 - https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
 - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
 - ''
 Detection:
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1.yara
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_mal_drivers_strict.yar
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1.yara
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_mal_drivers_strict.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Acknowledgement:
-    Handle: ''
-    Person: ''
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
--   Authentihash:
-        MD5: cbb18883d7893156620f084ff40b2fbf
-        SHA1: df59532dbae676b3fb2653a1bbd9cd5f1cd3ba78
-        SHA256: a1ee0b8a7974f3d11c10241027c0e7171c798a28589aae9ff8c5a86228642af7
-    Company: Microsoft Corporation
-    Copyright: Microsoft Corporation. All rights reserved.
-    CreationTimestamp: '2014-04-30 01:52:21'
-    Date: ''
-    Description: WAN Transport Driver
-    ExportedFunctions: ''
-    FileVersion: 5.2.3790.938
-    Filename: wantd_3.sys
-    ImportedFunctions:
-    - IofCompleteRequest
-    - KeResetEvent
-    - InterlockedIncrement
-    - KeSetEvent
-    - InterlockedDecrement
-    - RtlUnicodeStringToInteger
-    - RtlInitUnicodeString
-    - KeInitializeEvent
-    - wcsncmp
-    - wcscat
-    - wcslen
-    - wcscpy
-    - MmBuildMdlForNonPagedPool
-    - IoAllocateMdl
-    - KeInsertQueueApc
-    - KeInitializeApc
-    - KeDetachProcess
-    - KeAttachProcess
-    - PsLookupThreadByThreadId
-    - ZwAllocateVirtualMemory
-    - RtlCompareUnicodeString
-    - PsLookupProcessByProcessId
-    - ZwFreeVirtualMemory
-    - _wcsnicmp
-    - ZwQuerySystemInformation
-    - ZwQueryInformationProcess
-    - RtlImageDirectoryEntryToData
-    - _stricmp
-    - NtQuerySystemInformation
-    - ZwOpenFile
-    - MmGetSystemRoutineAddress
-    - ZwQueryValueKey
-    - ZwOpenKey
-    - ZwTerminateProcess
-    - ZwOpenProcess
-    - IoCreateFile
-    - RtlSetDaclSecurityDescriptor
-    - RtlAddAccessAllowedAce
-    - RtlCreateAcl
-    - RtlLengthSid
-    - RtlCreateSecurityDescriptor
-    - NtWriteFile
-    - NtReadFile
-    - KeWaitForMultipleObjects
-    - NtFsControlFile
-    - ZwWaitForSingleObject
-    - RtlLengthRequiredSid
-    - IoCreateSymbolicLink
-    - DbgPrint
-    - IoCreateDevice
-    - IoDeleteDevice
-    - IoDeleteSymbolicLink
-    - sprintf
-    - ZwCreateFile
-    - RtlAnsiStringToUnicodeString
-    - ZwWriteFile
-    - ZwReadFile
-    - ZwQueryInformationFile
-    - vsprintf
-    - ZwDeviceIoControlFile
-    - MmMapLockedPagesSpecifyCache
-    - IoFreeMdl
-    - KeWaitForSingleObject
-    - ObfDereferenceObject
-    - KeDelayExecutionThread
-    - PsTerminateSystemThread
-    - PsCreateSystemThread
-    - PsThreadType
-    - ObReferenceObjectByHandle
-    - ZwClose
-    - KeQueryTimeIncrement
-    - KeTickCount
-    - KeInitializeSpinLock
-    - ExAllocatePoolWithTag
-    - PsGetVersion
-    - ExFreePool
-    - KfReleaseSpinLock
-    - KfAcquireSpinLock
-    - NdisAllocatePacketPool
-    - NdisAllocateBufferPool
-    - NdisRegisterProtocol
-    - NdisDeregisterProtocol
-    - NdisUnchainBufferAtFront
-    - NdisAllocatePacket
-    - NdisAllocateMemory
-    - NdisFreePacket
-    - NdisAllocateBuffer
-    - NdisFreeMemory
-    - NdisFreeBufferPool
-    - NdisCopyFromPacketToPacket
-    - NdisFreePacketPool
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    - NDIS.SYS
-    InternalName: wantd.sys
-    MD5: fb7c61ef427f9b2fdff3574ee6b1819b
-    MachineType: I386
-    MagicHeader: 50 45 0 0
-    OriginalFilename: wantd.sys
-    Product: Microsoft Windows Operating System
-    ProductVersion: 5.2.3790.938
-    Publisher: n/a
-    RichPEHeaderHash:
-        MD5: 7dac9e657681230dfe85b6e42aa5891e
-        SHA1: 02e8444b111e83edca1a07580800daf3e7e2453d
-        SHA256: 3e7f74d584bec768a7e4677b53f195737e86f319c4804790a13a2adbb38425a9
-    SHA1: 1f25f54e9b289f76604e81e98483309612c5a471
-    SHA256: 81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1
-    Sections:
-        .text:
-            Entropy: 6.502320391551188
-            Virtual Size: '0xb444'
-        .rdata:
-            Entropy: 4.059142627811111
-            Virtual Size: '0x178'
-        .data:
-            Entropy: 3.447893896844354
-            Virtual Size: '0xd70c0'
-        INIT:
-            Entropy: 5.35998649387063
-            Virtual Size: '0x952'
-        .rsrc:
-            Entropy: 3.272892553001117
-            Virtual Size: '0x3b0'
-        .reloc:
-            Entropy: 3.7078151277985745
-            Virtual Size: '0x10a2'
-    Signature: Unsigned
-    Signatures: {}
-    Imphash: 420625b024fba72a24025defdf95b303
-    LoadsDespiteHVCI: 'TRUE'
+- Authentihash:
+    MD5: cbb18883d7893156620f084ff40b2fbf
+    SHA1: df59532dbae676b3fb2653a1bbd9cd5f1cd3ba78
+    SHA256: a1ee0b8a7974f3d11c10241027c0e7171c798a28589aae9ff8c5a86228642af7
+  Company: Microsoft Corporation
+  Copyright: Microsoft Corporation. All rights reserved.
+  CreationTimestamp: '2014-04-30 01:52:21'
+  Date: ''
+  Description: WAN Transport Driver
+  ExportedFunctions: ''
+  FileVersion: 5.2.3790.938
+  Filename: wantd_3.sys
+  ImportedFunctions:
+  - IofCompleteRequest
+  - KeResetEvent
+  - InterlockedIncrement
+  - KeSetEvent
+  - InterlockedDecrement
+  - RtlUnicodeStringToInteger
+  - RtlInitUnicodeString
+  - KeInitializeEvent
+  - wcsncmp
+  - wcscat
+  - wcslen
+  - wcscpy
+  - MmBuildMdlForNonPagedPool
+  - IoAllocateMdl
+  - KeInsertQueueApc
+  - KeInitializeApc
+  - KeDetachProcess
+  - KeAttachProcess
+  - PsLookupThreadByThreadId
+  - ZwAllocateVirtualMemory
+  - RtlCompareUnicodeString
+  - PsLookupProcessByProcessId
+  - ZwFreeVirtualMemory
+  - _wcsnicmp
+  - ZwQuerySystemInformation
+  - ZwQueryInformationProcess
+  - RtlImageDirectoryEntryToData
+  - _stricmp
+  - NtQuerySystemInformation
+  - ZwOpenFile
+  - MmGetSystemRoutineAddress
+  - ZwQueryValueKey
+  - ZwOpenKey
+  - ZwTerminateProcess
+  - ZwOpenProcess
+  - IoCreateFile
+  - RtlSetDaclSecurityDescriptor
+  - RtlAddAccessAllowedAce
+  - RtlCreateAcl
+  - RtlLengthSid
+  - RtlCreateSecurityDescriptor
+  - NtWriteFile
+  - NtReadFile
+  - KeWaitForMultipleObjects
+  - NtFsControlFile
+  - ZwWaitForSingleObject
+  - RtlLengthRequiredSid
+  - IoCreateSymbolicLink
+  - DbgPrint
+  - IoCreateDevice
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - sprintf
+  - ZwCreateFile
+  - RtlAnsiStringToUnicodeString
+  - ZwWriteFile
+  - ZwReadFile
+  - ZwQueryInformationFile
+  - vsprintf
+  - ZwDeviceIoControlFile
+  - MmMapLockedPagesSpecifyCache
+  - IoFreeMdl
+  - KeWaitForSingleObject
+  - ObfDereferenceObject
+  - KeDelayExecutionThread
+  - PsTerminateSystemThread
+  - PsCreateSystemThread
+  - PsThreadType
+  - ObReferenceObjectByHandle
+  - ZwClose
+  - KeQueryTimeIncrement
+  - KeTickCount
+  - KeInitializeSpinLock
+  - ExAllocatePoolWithTag
+  - PsGetVersion
+  - ExFreePool
+  - KfReleaseSpinLock
+  - KfAcquireSpinLock
+  - NdisAllocatePacketPool
+  - NdisAllocateBufferPool
+  - NdisRegisterProtocol
+  - NdisDeregisterProtocol
+  - NdisUnchainBufferAtFront
+  - NdisAllocatePacket
+  - NdisAllocateMemory
+  - NdisFreePacket
+  - NdisAllocateBuffer
+  - NdisFreeMemory
+  - NdisFreeBufferPool
+  - NdisCopyFromPacketToPacket
+  - NdisFreePacketPool
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - NDIS.SYS
+  InternalName: wantd.sys
+  MD5: fb7c61ef427f9b2fdff3574ee6b1819b
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: wantd.sys
+  Product: Microsoft Windows Operating System
+  ProductVersion: 5.2.3790.938
+  Publisher: n/a
+  RichPEHeaderHash:
+    MD5: 7dac9e657681230dfe85b6e42aa5891e
+    SHA1: 02e8444b111e83edca1a07580800daf3e7e2453d
+    SHA256: 3e7f74d584bec768a7e4677b53f195737e86f319c4804790a13a2adbb38425a9
+  SHA1: 1f25f54e9b289f76604e81e98483309612c5a471
+  SHA256: 81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1
+  Sections:
+    .text:
+      Entropy: 6.502320391551188
+      Virtual Size: '0xb444'
+    .rdata:
+      Entropy: 4.059142627811111
+      Virtual Size: '0x178'
+    .data:
+      Entropy: 3.447893896844354
+      Virtual Size: '0xd70c0'
+    INIT:
+      Entropy: 5.35998649387063
+      Virtual Size: '0x952'
+    .rsrc:
+      Entropy: 3.272892553001117
+      Virtual Size: '0x3b0'
+    .reloc:
+      Entropy: 3.7078151277985745
+      Virtual Size: '0x10a2'
+  Signature: Unsigned
+  Signatures: {}
+  Imphash: 420625b024fba72a24025defdf95b303
+  LoadsDespiteHVCI: 'TRUE'

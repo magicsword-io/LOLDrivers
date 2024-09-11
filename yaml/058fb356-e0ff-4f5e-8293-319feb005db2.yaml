@@ -7,42 +7,42 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-    Command: sc.exe create bandai.sys binPath=C:\windows\temp\bandai.sys type=kernel
-        && sc.exe start bandai.sys
-    Description: ''
-    OperatingSystem: Windows 10
-    Privileges: kernel
-    Usecase: Elevate privileges
+  Command: sc.exe create bandai.sys binPath=C:\windows\temp\bandai.sys type=kernel
+    && sc.exe start bandai.sys
+  Description: ''
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection: []
 Acknowledgement:
-    Handle: ''
-    Person: ''
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
--   Company: ''
-    Date: ''
-    Description: ''
-    FileVersion: ''
-    Filename: bandai.sys
-    MachineType: ''
-    OriginalFilename: ''
-    Product: ''
-    ProductVersion: ''
-    Publisher: ''
-    SHA1: 0f780b7ada5dd8464d9f2cc537d973f5ac804e9c
-    Signature: []
-    LoadsDespiteHVCI: 'FALSE'
--   Company: ''
-    Date: ''
-    Description: ''
-    FileVersion: ''
-    Filename: bandai.sys
-    MachineType: ''
-    OriginalFilename: ''
-    Product: ''
-    ProductVersion: ''
-    Publisher: ''
-    SHA1: ea360a9f23bb7cf67f08b88e6a185a699f0c5410
-    Signature: []
-    LoadsDespiteHVCI: 'FALSE'
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: bandai.sys
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: 0f780b7ada5dd8464d9f2cc537d973f5ac804e9c
+  Signature: []
+  LoadsDespiteHVCI: 'FALSE'
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: bandai.sys
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: ea360a9f23bb7cf67f08b88e6a185a699f0c5410
+  Signature: []
+  LoadsDespiteHVCI: 'FALSE'

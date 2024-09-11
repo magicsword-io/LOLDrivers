@@ -232,6 +232,7 @@ KnownVulnerableSamples:
     - SerialNumber: 61501991b18f323804525137dc25005a
       Issuer: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA EV R36
       Version: 1
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: ''
   MD5: 451ec31152318d1249f41aed387dd262
   SHA1: d821fa0c9186a5f863528dc6a3e87b3ff40a1ac5
@@ -438,6 +439,7 @@ KnownVulnerableSamples:
     - SerialNumber: 61501991b18f323804525137dc25005a
       Issuer: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA EV R36
       Version: 1
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: ''
   MD5: eb187d171359a5bb1c754107f18cf8bb
   SHA1: 96e6fce6833ea0f2c81bfe0363393aa3302d6916
@@ -646,5 +648,6 @@ KnownVulnerableSamples:
     - SerialNumber: 61501991b18f323804525137dc25005a
       Issuer: C=GB, O=Sectigo Limited, CN=Sectigo Public Code Signing CA EV R36
       Version: 1
+  LoadsDespiteHVCI: 'TRUE'
 Tags:
 - windivert.sys

@@ -7,29 +7,29 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-    Command: sc.exe create nt6.sys binPath=C:\windows\temp \n \n \n  t6.sys type=kernel
-        && sc.exe start nt6.sys
-    Description: ''
-    OperatingSystem: Windows 10
-    Privileges: kernel
-    Usecase: Elevate privileges
+  Command: sc.exe create nt6.sys binPath=C:\windows\temp \n \n \n  t6.sys type=kernel
+    && sc.exe start nt6.sys
+  Description: ''
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection: []
 Acknowledgement:
-    Handle: ''
-    Person: ''
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
--   Company: ''
-    Date: ''
-    Description: ''
-    FileVersion: ''
-    Filename: nt6.sys
-    MachineType: ''
-    OriginalFilename: ''
-    Product: ''
-    ProductVersion: ''
-    Publisher: ''
-    SHA256: 15c53eb3a0ea44bbd2901a45a6ebeae29bb123f9c1115c38dfb2cdbec0642229
-    Signature: []
-    LoadsDespiteHVCI: 'FALSE'
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: nt6.sys
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA256: 15c53eb3a0ea44bbd2901a45a6ebeae29bb123f9c1115c38dfb2cdbec0642229
+  Signature: []
+  LoadsDespiteHVCI: 'FALSE'

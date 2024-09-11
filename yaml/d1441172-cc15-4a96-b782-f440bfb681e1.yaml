@@ -7,29 +7,29 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-    Command: sc.exe create b4.sys binPath=C:\windows\temp\b4.sys type=kernel && sc.exe
-        start b4.sys
-    Description: ''
-    OperatingSystem: Windows 10
-    Privileges: kernel
-    Usecase: Elevate privileges
+  Command: sc.exe create b4.sys binPath=C:\windows\temp\b4.sys type=kernel && sc.exe
+    start b4.sys
+  Description: ''
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection: []
 Acknowledgement:
-    Handle: ''
-    Person: ''
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
--   Company: ''
-    Date: ''
-    Description: ''
-    FileVersion: ''
-    Filename: b4.sys
-    MachineType: ''
-    OriginalFilename: ''
-    Product: ''
-    ProductVersion: ''
-    Publisher: ''
-    SHA256: dec8a933dba04463ed9bb7d53338ff87f2c23cfb79e0e988449fc631252c9dcc
-    Signature: []
-    LoadsDespiteHVCI: 'FALSE'
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: b4.sys
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA256: dec8a933dba04463ed9bb7d53338ff87f2c23cfb79e0e988449fc631252c9dcc
+  Signature: []
+  LoadsDespiteHVCI: 'FALSE'

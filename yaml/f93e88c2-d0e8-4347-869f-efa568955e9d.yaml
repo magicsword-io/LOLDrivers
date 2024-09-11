@@ -8,42 +8,42 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-    Command: sc.exe create WYProxy64.sys binPath=C:\windows\temp\WYProxy64.sys type=kernel
-        && sc.exe start WYProxy64.sys
-    Description: ''
-    OperatingSystem: Windows 10
-    Privileges: kernel
-    Usecase: Elevate privileges
+  Command: sc.exe create WYProxy64.sys binPath=C:\windows\temp\WYProxy64.sys type=kernel
+    && sc.exe start WYProxy64.sys
+  Description: ''
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection: []
 Acknowledgement:
-    Handle: ''
-    Person: ''
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
--   Company: ''
-    Date: ''
-    Description: ''
-    FileVersion: ''
-    Filename: WYProxy64.sys
-    MachineType: ''
-    OriginalFilename: ''
-    Product: ''
-    ProductVersion: ''
-    Publisher: ''
-    SHA256: fafa1bb36f0ac34b762a10e9f327dcab2152a6d0b16a19697362d49a31e7f566
-    Signature: []
-    LoadsDespiteHVCI: 'FALSE'
--   Company: ''
-    Date: ''
-    Description: ''
-    FileVersion: ''
-    Filename: WYProxy32.sys
-    MachineType: ''
-    OriginalFilename: ''
-    Product: ''
-    ProductVersion: ''
-    Publisher: ''
-    SHA256: de6bf572d39e2611773e7a01f0388f84fb25da6cba2f1f8b9b36ffba467de6fa
-    Signature: []
-    LoadsDespiteHVCI: 'FALSE'
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: WYProxy64.sys
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA256: fafa1bb36f0ac34b762a10e9f327dcab2152a6d0b16a19697362d49a31e7f566
+  Signature: []
+  LoadsDespiteHVCI: 'FALSE'
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: WYProxy32.sys
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA256: de6bf572d39e2611773e7a01f0388f84fb25da6cba2f1f8b9b36ffba467de6fa
+  Signature: []
+  LoadsDespiteHVCI: 'FALSE'

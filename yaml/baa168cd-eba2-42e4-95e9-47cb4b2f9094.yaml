@@ -7,153 +7,154 @@ Created: '2024-06-20'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-    Command: sc.exe create wnbios.sys binPath=C:\windows\temp\wnbios.sys type=kernel
-        && sc.exe start wnbios.sys
-    Description: 'Utilized in RealBlindingEDR. '
-    Usecase: Elevate privileges
-    Privileges: kernel
-    OperatingSystem: Windows 11
+  Command: sc.exe create wnbios.sys binPath=C:\windows\temp\wnbios.sys type=kernel
+    && sc.exe start wnbios.sys
+  Description: 'Utilized in RealBlindingEDR. '
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 11
 Resources:
 - https://github.com/myzxcg/RealBlindingEDR/
 Detection: []
 Acknowledgement:
-    Person: ''
-    Handle: ''
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
--   Filename: ''
-    MD5: a55bcd596643362ddb2ee558aa238baf
-    SHA1: aec96520e85330594d3165c86cb92eac34c1e095
-    SHA256: 530d9223ec7e4123532a403abef96dfd1af5291eb49497392ff5d14d18fccfbb
-    Signature: ''
-    Date: ''
-    Publisher: ''
-    Company: Windows (R) Win 7 DDK provider
-    Description: WnBios Driver
-    Product: Windows (R) Win 7 DDK driver
-    ProductVersion: 1.2.0.0
-    FileVersion: '1.2.0.0 built by: WinDDK'
-    MachineType: AMD64
-    OriginalFilename: wnbios.sys
-    Imphash: 72374a1c4c0e0db4efcb1386f470a2f3
-    Authentihash:
-        MD5: 760cdf1bc9ef54fd4673fb79e8bbc62b
-        SHA1: a7179d7cf5ee58276c3c42a16195a0b733f31b53
-        SHA256: f6a5ef968bd0e47e1ca9433f8e8d0b9bed0aa0a3baf982fdc27b1cc3b4b857b8
-    RichPEHeaderHash:
-        MD5: 4623b307991ab7283ca62a6da465587b
-        SHA1: 10545d5d7f846010e667812954664a5a891882e7
-        SHA256: 3dd173c4012ddb47bcb69b8569a8adb3723b4da08519cd8dc46c6341d7f0a0e2
-    Sections:
-        .text:
-            Entropy: 5.810121631777131
-            Virtual Size: '0xd0e'
-        .rdata:
-            Entropy: 3.97524004908524
-            Virtual Size: '0x184'
-        .data:
-            Entropy: 0.48412594890657823
-            Virtual Size: '0x138'
-        .pdata:
-            Entropy: 3.1437019023826336
-            Virtual Size: '0x54'
-        INIT:
-            Entropy: 5.145857968400233
-            Virtual Size: '0x32a'
-        .rsrc:
-            Entropy: 3.3128683395030833
-            Virtual Size: '0x3c0'
-    MagicHeader: 50 45 0 0
-    CreationTimestamp: '2015-05-27 23:23:10'
-    InternalName: wnbios.sys
-    Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    ExportedFunctions: ''
-    ImportedFunctions:
-    - RtlInitUnicodeString
-    - IoDeleteDevice
-    - MmFreeContiguousMemory
-    - MmFreeNonCachedMemory
-    - MmGetPhysicalAddress
-    - ZwUnmapViewOfSection
-    - ZwClose
-    - IofCompleteRequest
-    - ZwMapViewOfSection
-    - IoCreateSymbolicLink
-    - ObfDereferenceObject
-    - MmAllocateNonCachedMemory
-    - IoCreateDevice
-    - ZwOpenSection
-    - MmAllocateContiguousMemory
-    - KeBugCheckEx
-    - ObReferenceObjectByHandle
-    - IoDeleteSymbolicLink
-    - HalTranslateBusAddress
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
-                CA , G2
-            ValidFrom: '2012-12-21 00:00:00'
-            ValidTo: '2020-12-30 23:59:59'
-            Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
-            Version: 3
-            TBS:
-                MD5: d0785ad36e427c92b19f6826ab1e8020
-                SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
-                SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
-                SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
-        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
-                Signer , G4
-            ValidFrom: '2012-10-18 00:00:00'
-            ValidTo: '2020-12-29 23:59:59'
-            Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 0ecff438c8febf356e04d86a981b1a50
-            Version: 3
-            TBS:
-                MD5: e9d38360b914c8863f6cba3ee58764d3
-                SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
-                SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
-                SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
-        -   Subject: C=DE, ST=Germany, L=Paderborn, O=Wincor Nixdorf International
-                GmbH, CN=Wincor Nixdorf International GmbH
-            ValidFrom: '2014-08-25 00:00:00'
-            ValidTo: '2015-09-24 23:59:59'
-            Signature: ef78c372297a012b0027834afb6171c7b05eda7c3fa8bacde1b992e59586b90ffab40bcd11299b7e9b9c00ad0943157e8688020d603576073aca5fe52109ecc4e4fbaca3a296c522bc897c53fd458f843ab1995ee949140a83975c38564907c5850ae418d20c1ebcbdd4879f8a3a5913400b29bba09adbecfe4fadd3d7b02851195bcc9f25b46cf53c0a8152d26eb5fb46ab76630fdf5b15e15c91ebb075d373a208ca2b3ec15d6fb19e5a7d01da12f325d95570bd12282dc947ed35c3e3327fbb6a43fc13cb6abc7851545c8072666a73bffae4591765ae434f88bf60820745333d6c0dada9a1ab4cfdbccbaba9210375d8610130833497f7f6983c0cedea33
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 45b449e437675e5c92edfe601a2ad8e9
-            Version: 3
-            TBS:
-                MD5: 2c10903e4155d55f3e849f74517fe62f
-                SHA1: 5e9d7a729aeb3f96cf04d5a92f63e4b690acf23c
-                SHA256: afae36a576c67da835e73b191e86e6ce74005a4291ce913c0f62664fb9b07786
-                SHA384: 717c04227cb78e729c2749d81ed4aef72f5335d963c9d25946d2a22fd099443e63926100fa510988944ac7743cb92f96
-        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
-                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
-                Signing 2010 CA
-            ValidFrom: '2010-02-08 00:00:00'
-            ValidTo: '2020-02-07 23:59:59'
-            Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
-            Version: 3
-            TBS:
-                MD5: b30c31a572b0409383ed3fbe17e56e81
-                SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
-                SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
-                SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
-        Signer:
-        -   SerialNumber: 45b449e437675e5c92edfe601a2ad8e9
-            Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
-                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
-                Signing 2010 CA
-            Version: 1
+- Filename: ''
+  MD5: a55bcd596643362ddb2ee558aa238baf
+  SHA1: aec96520e85330594d3165c86cb92eac34c1e095
+  SHA256: 530d9223ec7e4123532a403abef96dfd1af5291eb49497392ff5d14d18fccfbb
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Windows (R) Win 7 DDK provider
+  Description: WnBios Driver
+  Product: Windows (R) Win 7 DDK driver
+  ProductVersion: 1.2.0.0
+  FileVersion: '1.2.0.0 built by: WinDDK'
+  MachineType: AMD64
+  OriginalFilename: wnbios.sys
+  Imphash: 72374a1c4c0e0db4efcb1386f470a2f3
+  Authentihash:
+    MD5: 760cdf1bc9ef54fd4673fb79e8bbc62b
+    SHA1: a7179d7cf5ee58276c3c42a16195a0b733f31b53
+    SHA256: f6a5ef968bd0e47e1ca9433f8e8d0b9bed0aa0a3baf982fdc27b1cc3b4b857b8
+  RichPEHeaderHash:
+    MD5: 4623b307991ab7283ca62a6da465587b
+    SHA1: 10545d5d7f846010e667812954664a5a891882e7
+    SHA256: 3dd173c4012ddb47bcb69b8569a8adb3723b4da08519cd8dc46c6341d7f0a0e2
+  Sections:
+    .text:
+      Entropy: 5.810121631777131
+      Virtual Size: '0xd0e'
+    .rdata:
+      Entropy: 3.97524004908524
+      Virtual Size: '0x184'
+    .data:
+      Entropy: 0.48412594890657823
+      Virtual Size: '0x138'
+    .pdata:
+      Entropy: 3.1437019023826336
+      Virtual Size: '0x54'
+    INIT:
+      Entropy: 5.145857968400233
+      Virtual Size: '0x32a'
+    .rsrc:
+      Entropy: 3.3128683395030833
+      Virtual Size: '0x3c0'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2015-05-27 23:23:10'
+  InternalName: wnbios.sys
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - MmFreeContiguousMemory
+  - MmFreeNonCachedMemory
+  - MmGetPhysicalAddress
+  - ZwUnmapViewOfSection
+  - ZwClose
+  - IofCompleteRequest
+  - ZwMapViewOfSection
+  - IoCreateSymbolicLink
+  - ObfDereferenceObject
+  - MmAllocateNonCachedMemory
+  - IoCreateDevice
+  - ZwOpenSection
+  - MmAllocateContiguousMemory
+  - KeBugCheckEx
+  - ObReferenceObjectByHandle
+  - IoDeleteSymbolicLink
+  - HalTranslateBusAddress
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=DE, ST=Germany, L=Paderborn, O=Wincor Nixdorf International GmbH,
+        CN=Wincor Nixdorf International GmbH
+      ValidFrom: '2014-08-25 00:00:00'
+      ValidTo: '2015-09-24 23:59:59'
+      Signature: ef78c372297a012b0027834afb6171c7b05eda7c3fa8bacde1b992e59586b90ffab40bcd11299b7e9b9c00ad0943157e8688020d603576073aca5fe52109ecc4e4fbaca3a296c522bc897c53fd458f843ab1995ee949140a83975c38564907c5850ae418d20c1ebcbdd4879f8a3a5913400b29bba09adbecfe4fadd3d7b02851195bcc9f25b46cf53c0a8152d26eb5fb46ab76630fdf5b15e15c91ebb075d373a208ca2b3ec15d6fb19e5a7d01da12f325d95570bd12282dc947ed35c3e3327fbb6a43fc13cb6abc7851545c8072666a73bffae4591765ae434f88bf60820745333d6c0dada9a1ab4cfdbccbaba9210375d8610130833497f7f6983c0cedea33
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 45b449e437675e5c92edfe601a2ad8e9
+      Version: 3
+      TBS:
+        MD5: 2c10903e4155d55f3e849f74517fe62f
+        SHA1: 5e9d7a729aeb3f96cf04d5a92f63e4b690acf23c
+        SHA256: afae36a576c67da835e73b191e86e6ce74005a4291ce913c0f62664fb9b07786
+        SHA384: 717c04227cb78e729c2749d81ed4aef72f5335d963c9d25946d2a22fd099443e63926100fa510988944ac7743cb92f96
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
+    Signer:
+    - SerialNumber: 45b449e437675e5c92edfe601a2ad8e9
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      Version: 1
+  LoadsDespiteHVCI: 'TRUE'

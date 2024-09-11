@@ -7,705 +7,705 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-    Command: sc.exe create rwdrv.sys binPath=C:\windows\temp\rwdrv.sys type=kernel
-        && sc.exe start rwdrv.sys
-    Description: This utility access almost all the computer hardware, including PCI
-        (PCI Express), PCI Index/Data, Memory, Memory Index/Data, I/O Space, I/O Index/Data,
-        Super I/O, Clock Generator, DIMM SPD, SMBus Device, CPU MSR Registers, ATA/ATAPI
-        Identify Data, Disk Read Write, ACPI Tables Dump (include AML decode), Embedded
-        Controller, USB Information, SMBIOS Structures, PCI Option ROMs, MP Configuration
-        Table, E820, EDID and Remote Access. And also a Command Window is provided
-        to access hardware manually.
-    OperatingSystem: Windows 10
-    Privileges: kernel
-    Usecase: Elevate privileges
+  Command: sc.exe create rwdrv.sys binPath=C:\windows\temp\rwdrv.sys type=kernel &&
+    sc.exe start rwdrv.sys
+  Description: This utility access almost all the computer hardware, including PCI
+    (PCI Express), PCI Index/Data, Memory, Memory Index/Data, I/O Space, I/O Index/Data,
+    Super I/O, Clock Generator, DIMM SPD, SMBus Device, CPU MSR Registers, ATA/ATAPI
+    Identify Data, Disk Read Write, ACPI Tables Dump (include AML decode), Embedded
+    Controller, USB Information, SMBIOS Structures, PCI Option ROMs, MP Configuration
+    Table, E820, EDID and Remote Access. And also a Command Window is provided to
+    access hardware manually.
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
 Resources:
 - https://github.com/jbaines-r7/dellicious
 - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
 - http://rweverything.com/
 Detection:
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3.yara
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3.yara
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Acknowledgement:
-    Handle: ''
-    Person: ''
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
--   Authentihash:
-        MD5: 3cd1454d2308cee5c59b45d5f952e70b
-        SHA1: 2c3b01ff8ce024f70f9daad31ea6c78de54f239b
-        SHA256: acb65f96f1d5c986b52d980a1c5ea009292ff472087fdd8a98a485404948f585
-    Company: RW-Everything
-    Copyright: Copyright (C) 2011 RW-Everything
-    CreationTimestamp: '2013-05-25 07:02:16'
-    Date: ''
-    Description: RwDrv Driver
-    ExportedFunctions: ''
-    FileVersion: '1.00.00.0000 built by: WinDDK'
-    Filename: rwdrv.sys
-    ImportedFunctions:
-    - ObfDereferenceObject
-    - IoUnregisterPlugPlayNotification
-    - ExFreePoolWithTag
-    - MmUnmapIoSpace
-    - MmMapIoSpace
-    - RtlCompareMemory
-    - ExAllocatePoolWithTag
-    - memcpy
-    - memset
-    - MmGetPhysicalAddress
-    - MmAllocateContiguousMemorySpecifyCache
-    - MmFreeContiguousMemorySpecifyCache
-    - IoFreeIrp
-    - IoFreeMdl
-    - MmUnlockPages
-    - RtlInitUnicodeString
-    - IoBuildAsynchronousFsdRequest
-    - KeWaitForSingleObject
-    - IoBuildDeviceIoControlRequest
-    - KeInitializeEvent
-    - RtlQueryRegistryValues
-    - IoFreeWorkItem
-    - IoGetDeviceObjectPointer
-    - ExfInterlockedInsertTailList
-    - IoQueueWorkItem
-    - IoAllocateWorkItem
-    - RtlCopyUnicodeString
-    - IoRegisterPlugPlayNotification
-    - IoCreateSymbolicLink
-    - IoCreateDevice
-    - KeTickCount
-    - IoDeleteSymbolicLink
-    - IoDeleteDevice
-    - IofCallDriver
-    - IofCompleteRequest
-    - KfReleaseSpinLock
-    - KeStallExecutionProcessor
-    - KfAcquireSpinLock
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    InternalName: RwDrv.sys
-    MD5: 257483d5d8b268d0d679956c7acdf02d
-    MachineType: I386
-    MagicHeader: 50 45 0 0
-    OriginalFilename: RwDrv.sys
-    Product: RwDrv Driver
-    ProductVersion: 1.00.00.0000
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: b46f1ecb6dd9d289467b472fef3765ec
-        SHA1: f8005ee6fa960fe7a35064b913dc3faee6733365
-        SHA256: 35e185403f7cb126f3ba88d9baa3bf19e4771fc1b7d2d2a6ce9793e6a5c9ad2e
-    SHA1: fbf8b0613a2f7039aeb9fa09bd3b40c8ff49ded2
-    SHA256: ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3
-    Sections:
-        .text:
-            Entropy: 6.340812423857232
-            Virtual Size: '0x18d2'
-        .rdata:
-            Entropy: 4.805264435636949
-            Virtual Size: '0x12d'
-        .data:
-            Entropy: 3.0
-            Virtual Size: '0x8'
-        INIT:
-            Entropy: 5.668933301784241
-            Virtual Size: '0x5b6'
-        .rsrc:
-            Entropy: 3.2720678524841276
-            Virtual Size: '0x370'
-        .reloc:
-            Entropy: 4.97566742449347
-            Virtual Size: '0x19a'
-    Signature:
-    - ChongKim Chan
-    - GlobalSign CodeSigning CA - G2
-    - GlobalSign Root CA - R1
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
-                CA , G2
-            ValidFrom: '2012-12-21 00:00:00'
-            ValidTo: '2020-12-30 23:59:59'
-            Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
-            Version: 3
-            TBS:
-                MD5: d0785ad36e427c92b19f6826ab1e8020
-                SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
-                SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
-                SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
-        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-            ValidFrom: '2011-04-13 10:00:00'
-            ValidTo: '2019-04-13 10:00:00'
-            Signature: 225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 0400000000012f4ee1355c
-            Version: 3
-            TBS:
-                MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
-                SHA1: 589a7d4df869395601ba7538a65afae8c4616385
-                SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
-                SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
-        -   Subject: C=TW, CN=ChongKim Chan
-            ValidFrom: '2012-07-31 20:41:59'
-            ValidTo: '2013-08-01 20:41:59'
-            Signature: 6b86336c2008e3d1a9cb42f4e323c36c782602b06948e63b7cc646ca61b5768677c2cdd5cf24f58d68844079cd6d8e9534b3170a0261fe64ea47971eecf4a84de8174a4a8b5c6ad87894cf5cc8a10ec522db9697504b208442ae34ec6e9a0e85d93470f66374f36c4f1ec3483c136497b2880d8ba4de0342b5aa2c0890ad80e010c8e34ae8792740e677952d3bc05a36a032ab7bbb64051d506f674e0232f66900c8c29dad2df6960012a8bb216f9e83157632545ead40db592c1e7de76f407601b111113e9b087db3e780f21a61e9f7593e96332f0c35162e0900a61c6ba3a88faee64d9fe94cad5705d6d16585603b5bb376161bdcf01b0bb9022bb360aceb
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
-            Version: 3
-            TBS:
-                MD5: b990c61c8edf9e8d0ac6504541be0b65
-                SHA1: 519e011f6cab88c812da20225dd37cc1808d5180
-                SHA256: 5b8b9e8e3ddd3ab7cc1f8531e88d83cb075539bb4473ed348d80a13dc1a4e065
-                SHA384: 98aa58231d0881595c83ab26289a982c0ff7f697e2a30eb1ff3bea3058897a722b67966a665b5a893cb0daa9dc88f93e
-        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
-                Signer , G4
-            ValidFrom: '2012-10-18 00:00:00'
-            ValidTo: '2020-12-29 23:59:59'
-            Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 0ecff438c8febf356e04d86a981b1a50
-            Version: 3
-            TBS:
-                MD5: e9d38360b914c8863f6cba3ee58764d3
-                SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
-                SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
-                SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
-        -   Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
-            ValidFrom: '2011-04-15 19:55:08'
-            ValidTo: '2021-04-15 20:05:08'
-            Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 6129152700000000002a
-            Version: 3
-            TBS:
-                MD5: 0bb058d116f02817737920f112d9fd3b
-                SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
-                SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
-                SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
-        Signer:
-        -   SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
-            Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-            Version: 1
-    Imphash: 176d8e75a27a45e2c6f5d4cceca4d869
-    LoadsDespiteHVCI: 'FALSE'
--   Authentihash:
-        MD5: 9c15e4f6f0e218cbaae27bf6952f6303
-        SHA1: e15698840eaa0d72abce8207b4e57966e8c064b2
-        SHA256: b1d0fdfddddfe520afc18b79b18b5eef730f7586639bd05857a41c0d09a9b9e6
-    Company: RW-Everything
-    Copyright: Copyright (C) 2011 RW-Everything
-    CreationTimestamp: '2012-12-26 00:59:05'
-    Date: ''
-    Description: RwDrv Driver
-    ExportedFunctions: ''
-    FileVersion: '1.00.00.0000 built by: WinDDK'
-    Filename: ''
-    ImportedFunctions:
-    - IoDeleteSymbolicLink
-    - ExFreePoolWithTag
-    - IoRegisterPlugPlayNotification
-    - MmFreeContiguousMemorySpecifyCache
-    - RtlInitUnicodeString
-    - IoDeleteDevice
-    - IoFreeWorkItem
-    - KeInitializeEvent
-    - RtlQueryRegistryValues
-    - KeReleaseSpinLock
-    - MmUnmapIoSpace
-    - IoFreeMdl
-    - MmGetPhysicalAddress
-    - IoGetDeviceObjectPointer
-    - IoBuildAsynchronousFsdRequest
-    - ExInterlockedInsertTailList
-    - IoBuildDeviceIoControlRequest
-    - MmMapIoSpace
-    - IoUnregisterPlugPlayNotification
-    - IofCompleteRequest
-    - KeWaitForSingleObject
-    - IoFreeIrp
-    - RtlCompareMemory
-    - MmUnlockPages
-    - IoCreateSymbolicLink
-    - RtlCopyUnicodeString
-    - ObfDereferenceObject
-    - IoCreateDevice
-    - IoQueueWorkItem
-    - MmAllocateContiguousMemorySpecifyCache
-    - IofCallDriver
-    - KeAcquireSpinLockRaiseToDpc
-    - KeBugCheckEx
-    - IoAllocateWorkItem
-    - ExAllocatePoolWithTag
-    - KeStallExecutionProcessor
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    InternalName: RwDrv.sys
-    MD5: f7a09ac4a91a6390f8d00bf09f53ae37
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: RwDrv.sys
-    PDBPath: ''
-    Product: RwDrv Driver
-    ProductVersion: 1.00.00.0000
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: 0b5c9cd3aba44e676db021ef2c00fc45
-        SHA1: 51cce8a4ba776bf947e796c39beed532e3e4bf87
-        SHA256: c2c9369065835fd61a176b79323fbd54eff3e8c28cb32aff70bc05afafe01ec3
-    SHA1: 8031ecbff95f299b53113ccd105582defad38d7b
-    SHA256: d15a0bc7a39bbeff10019496c1ed217b7c1b26da37b2bdd46820b35161ddb3c4
-    Sections:
-        .text:
-            Entropy: 6.335549562375017
-            Virtual Size: '0x2098'
-        .rdata:
-            Entropy: 4.537426592599987
-            Virtual Size: '0x30c'
-        .data:
-            Entropy: 0.46979092711892695
-            Virtual Size: '0x130'
-        .pdata:
-            Entropy: 3.743141584606769
-            Virtual Size: '0x120'
-        INIT:
-            Entropy: 5.458963819105193
-            Virtual Size: '0x6e8'
-        .rsrc:
-            Entropy: 3.2712100257771235
-            Virtual Size: '0x370'
-    Signature: ''
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-            ValidFrom: '2011-04-13 10:00:00'
-            ValidTo: '2019-04-13 10:00:00'
-            Signature: 225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 0400000000012f4ee1355c
-            Version: 3
-            TBS:
-                MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
-                SHA1: 589a7d4df869395601ba7538a65afae8c4616385
-                SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
-                SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
-        -   Subject: C=TW, CN=ChongKim Chan
-            ValidFrom: '2012-07-31 20:41:59'
-            ValidTo: '2013-08-01 20:41:59'
-            Signature: 6b86336c2008e3d1a9cb42f4e323c36c782602b06948e63b7cc646ca61b5768677c2cdd5cf24f58d68844079cd6d8e9534b3170a0261fe64ea47971eecf4a84de8174a4a8b5c6ad87894cf5cc8a10ec522db9697504b208442ae34ec6e9a0e85d93470f66374f36c4f1ec3483c136497b2880d8ba4de0342b5aa2c0890ad80e010c8e34ae8792740e677952d3bc05a36a032ab7bbb64051d506f674e0232f66900c8c29dad2df6960012a8bb216f9e83157632545ead40db592c1e7de76f407601b111113e9b087db3e780f21a61e9f7593e96332f0c35162e0900a61c6ba3a88faee64d9fe94cad5705d6d16585603b5bb376161bdcf01b0bb9022bb360aceb
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
-            Version: 3
-            TBS:
-                MD5: b990c61c8edf9e8d0ac6504541be0b65
-                SHA1: 519e011f6cab88c812da20225dd37cc1808d5180
-                SHA256: 5b8b9e8e3ddd3ab7cc1f8531e88d83cb075539bb4473ed348d80a13dc1a4e065
-                SHA384: 98aa58231d0881595c83ab26289a982c0ff7f697e2a30eb1ff3bea3058897a722b67966a665b5a893cb0daa9dc88f93e
-        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
-                CA , G2
-            ValidFrom: '2012-10-18 14:38:35'
-            ValidTo: '2022-05-20 14:38:35'
-            Signature: aa3e3f03412f35137f8c3f125c10cfee67557956600f01520f23877a412847e5d36672bb02cfc90c242941c2da2e99e02391efb133473cc2083a069573a21b0ebc3fb7e259f169bef0d3e1188f732de8a39c214040f3cd3ab7018ddc4d94b47a1005507f1b61c582158ae42c4ded3411eb5b6a8959c7def72c84c0b3bd3a98e145288a2195803fc90797f0ff42c11e4284e7b2c7e0a26a99d4f1d4c6fe57c0b93ae7f627700da9e07b4a1395c2c9b9ab6907d94dcc6647424a74a7a76db3a735e87e4baacebdbc939f7dc640a5fcaa1fa8d5d1f07e7fd2e34c56fd4064f0474c510430eaea942f24cae908c5785ba162c91d48879719fa4da578edec04790e36
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 023a64
-            Version: 3
-            TBS:
-                MD5: 1c4eabb6695c77091994554285e367d1
-                SHA1: 01ee4a5386a24a8b6805c4dfcbc5816c38583ce2
-                SHA256: e2ccfe68a71dc3bd439a8ba3934461748dacd7a9aaaa5358bed91a4e654829ad
-                SHA384: 23b294260204c6450aa7a05f438dea1c0974056755bbfc6e69760106e64a934b50b356d1ea2bdedf7562876cf8671c32
-        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
-                Signer , G4
-            ValidFrom: '2012-10-18 00:00:00'
-            ValidTo: '2022-05-19 23:59:59'
-            Signature: 6300328d171f28dc0479c9271984b83668a7751918b24f49ac5d612b8632d00d4dbab57c5eb6d237e8ed5b882cd22961be1f50294a22f91786bd87215bd13c4dbf64c0ba2e9ba610a1f1c48453b08d58f28eaf1219771fadf7bebe812d8e827e70f83996336559a84f7f8b22c9187e5e64e2b9306d06b4b7118c66ba2c2644b98adcb18791b5dcbf14a1dc83a360af295e668a2b0ded9dd03905b9b86f1eb9ba71cc68deb2793a03d688e11d29b334e721d8a30f2b721a42b59e45fadfa72b9dd7f2cd1dc856122f8d9d4dce32c9266164d09a78e52f126a4a440224d85785327fcd598c6b733300a55eabc3f022c0cb08c3e0f7b8b80414ec4aef39f9cfca25
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 7e1fdf7299e8d245a15d0ba8e5b159ba
-            Version: 3
-            TBS:
-                MD5: e451247dadf3cdbd75735f81335ede9a
-                SHA1: 6488fdef17121c59aba8e4d9ee03fed253995625
-                SHA256: 0428cd5afa2e236b4e6d5b767f16d696c3232ad4dae5d5d31800d084937879c3
-                SHA384: 763791c9569bbd8d6c83b1af674b9cac806fca862283d7a0bda0f033de9c9ede9f1ea163251749f9faa7f3ba01662831
-        -   Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
-            ValidFrom: '2011-04-15 19:55:08'
-            ValidTo: '2021-04-15 20:05:08'
-            Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 6129152700000000002a
-            Version: 3
-            TBS:
-                MD5: 0bb058d116f02817737920f112d9fd3b
-                SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
-                SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
-                SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
-        Signer:
-        -   SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
-            Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-            Version: 1
-    Imphash: 955e7b12a8fa06444c68e54026c45de1
-    LoadsDespiteHVCI: 'FALSE'
--   Authentihash:
-        MD5: 26e06bbacf3f202b0295342c22e71124
-        SHA1: 53aea389ddaba5c52c577a82e416c8c533d1cd1d
-        SHA256: 21e6d9229f380d5e9591beaa82bd93547f517af90707d7757f0e27ff4731b484
-    Company: RW-Everything
-    Copyright: Copyright (C) 2011 RW-Everything
-    CreationTimestamp: '2012-10-24 01:46:54'
-    Date: ''
-    Description: RwDrv Driver
-    ExportedFunctions: ''
-    FileVersion: '1.00.00.0000 built by: WinDDK'
-    Filename: ''
-    ImportedFunctions:
-    - IoDeleteSymbolicLink
-    - ExFreePoolWithTag
-    - IoRegisterPlugPlayNotification
-    - MmFreeContiguousMemorySpecifyCache
-    - RtlInitUnicodeString
-    - IoDeleteDevice
-    - IoFreeWorkItem
-    - KeInitializeEvent
-    - RtlQueryRegistryValues
-    - KeReleaseSpinLock
-    - MmUnmapIoSpace
-    - IoFreeMdl
-    - MmGetPhysicalAddress
-    - IoGetDeviceObjectPointer
-    - IoBuildAsynchronousFsdRequest
-    - ExInterlockedInsertTailList
-    - IoBuildDeviceIoControlRequest
-    - MmMapIoSpace
-    - IoUnregisterPlugPlayNotification
-    - IofCompleteRequest
-    - KeWaitForSingleObject
-    - IoFreeIrp
-    - RtlCompareMemory
-    - MmUnlockPages
-    - IoCreateSymbolicLink
-    - RtlCopyUnicodeString
-    - ObfDereferenceObject
-    - IoCreateDevice
-    - IoQueueWorkItem
-    - MmAllocateContiguousMemorySpecifyCache
-    - IofCallDriver
-    - KeAcquireSpinLockRaiseToDpc
-    - KeBugCheckEx
-    - IoAllocateWorkItem
-    - ExAllocatePoolWithTag
-    - KeStallExecutionProcessor
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    InternalName: RwDrv.sys
-    MD5: 1276f735d22cf04676a719edc6b0df18
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: RwDrv.sys
-    PDBPath: ''
-    Product: RwDrv Driver
-    ProductVersion: 1.00.00.0000
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: 0b5c9cd3aba44e676db021ef2c00fc45
-        SHA1: 51cce8a4ba776bf947e796c39beed532e3e4bf87
-        SHA256: c2c9369065835fd61a176b79323fbd54eff3e8c28cb32aff70bc05afafe01ec3
-    SHA1: 108575d8f0b98fed29514a54052f7bf5a8cb3ff0
-    SHA256: 83fbf5d46cff38dd1c0f83686708b3bd6a3a73fddd7a2da2b5a3acccd1d9359c
-    Sections:
-        .text:
-            Entropy: 6.339385586617087
-            Virtual Size: '0x1f68'
-        .rdata:
-            Entropy: 4.463483654720896
-            Virtual Size: '0x2f4'
-        .data:
-            Entropy: 0.46979092711892695
-            Virtual Size: '0x130'
-        .pdata:
-            Entropy: 3.7256744210297663
-            Virtual Size: '0x114'
-        INIT:
-            Entropy: 5.457431859650041
-            Virtual Size: '0x6e8'
-        .rsrc:
-            Entropy: 3.270238715581358
-            Virtual Size: '0x370'
-    Signature: ''
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
-                Signer , G3
-            ValidFrom: '2012-05-01 00:00:00'
-            ValidTo: '2012-12-31 23:59:59'
-            Signature: 1e98aa27b778b508b5c9726db7dfc00e98a635c488c9d2f66df14b1afbd5f92d99009ed1e79b8be13fbd39800c66cd07bc5c9854a694ba10d14e8babf56f65cc6709a2807c52e80e03d66b7ac60518ecc8ac427c072ca73d0866dc00edfd941d73f2729893b111d68fef8eeaacf496510cd08ddf31524f5eaf7da74a75e64ece2b9f292be7cf5d9f037e6e277b23ad622966af92e82ccebd9c7fdccd173c43c2093f7545c79ee4d7607f97c6e4aac769f5fccd74ac2cb048c1504e70561eb535d38ebeb1edacbdfe0cec857dd5bb856644195d9f93eb82ba639ed37c61ffc81bd923587f30a366a139265e92c33ccb3732faf5a38ddcd5b0a3e9253655d781fa
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
-            Version: 3
-            TBS:
-                MD5: e6d820afb23af20a65cf0b03247ea05e
-                SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
-                SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
-                SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
-        -   Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
-            ValidFrom: '2003-12-04 00:00:00'
-            ValidTo: '2013-12-03 23:59:59'
-            Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 47bf1995df8d524643f7db6d480d31a4
-            Version: 3
-            TBS:
-                MD5: 518d2ea8a21e879c942d504824ac211c
-                SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
-                SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
-                SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
-        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-            ValidFrom: '2011-04-13 10:00:00'
-            ValidTo: '2019-04-13 10:00:00'
-            Signature: 225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 0400000000012f4ee1355c
-            Version: 3
-            TBS:
-                MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
-                SHA1: 589a7d4df869395601ba7538a65afae8c4616385
-                SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
-                SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
-        -   Subject: C=TW, CN=ChongKim Chan
-            ValidFrom: '2012-07-31 20:41:59'
-            ValidTo: '2013-08-01 20:41:59'
-            Signature: 6b86336c2008e3d1a9cb42f4e323c36c782602b06948e63b7cc646ca61b5768677c2cdd5cf24f58d68844079cd6d8e9534b3170a0261fe64ea47971eecf4a84de8174a4a8b5c6ad87894cf5cc8a10ec522db9697504b208442ae34ec6e9a0e85d93470f66374f36c4f1ec3483c136497b2880d8ba4de0342b5aa2c0890ad80e010c8e34ae8792740e677952d3bc05a36a032ab7bbb64051d506f674e0232f66900c8c29dad2df6960012a8bb216f9e83157632545ead40db592c1e7de76f407601b111113e9b087db3e780f21a61e9f7593e96332f0c35162e0900a61c6ba3a88faee64d9fe94cad5705d6d16585603b5bb376161bdcf01b0bb9022bb360aceb
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
-            Version: 3
-            TBS:
-                MD5: b990c61c8edf9e8d0ac6504541be0b65
-                SHA1: 519e011f6cab88c812da20225dd37cc1808d5180
-                SHA256: 5b8b9e8e3ddd3ab7cc1f8531e88d83cb075539bb4473ed348d80a13dc1a4e065
-                SHA384: 98aa58231d0881595c83ab26289a982c0ff7f697e2a30eb1ff3bea3058897a722b67966a665b5a893cb0daa9dc88f93e
-        -   Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
-            ValidFrom: '2011-04-15 19:55:08'
-            ValidTo: '2021-04-15 20:05:08'
-            Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 6129152700000000002a
-            Version: 3
-            TBS:
-                MD5: 0bb058d116f02817737920f112d9fd3b
-                SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
-                SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
-                SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
-        Signer:
-        -   SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
-            Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-            Version: 1
-    Imphash: 955e7b12a8fa06444c68e54026c45de1
-    LoadsDespiteHVCI: 'FALSE'
--   Authentihash:
-        MD5: d82a89cc750ae680af9f463b1b4ec8d9
-        SHA1: 3b61791f361c785019347cff13712400198c9364
-        SHA256: 1997e2a6302f3196975f858fef63188a249f79b6c2982d31ae07405e8aada58f
-    Company: RW-Everything
-    Copyright: Copyright (C) 2011 RW-Everything
-    CreationTimestamp: '2013-05-01 21:59:34'
-    Date: ''
-    Description: RwDrv Driver
-    ExportedFunctions: ''
-    FileVersion: '1.00.00.0000 built by: WinDDK'
-    Filename: ''
-    ImportedFunctions:
-    - IoDeleteSymbolicLink
-    - ExFreePoolWithTag
-    - IoRegisterPlugPlayNotification
-    - MmFreeContiguousMemorySpecifyCache
-    - RtlInitUnicodeString
-    - IoDeleteDevice
-    - IoFreeWorkItem
-    - KeInitializeEvent
-    - RtlQueryRegistryValues
-    - KeReleaseSpinLock
-    - MmUnmapIoSpace
-    - IoFreeMdl
-    - MmGetPhysicalAddress
-    - IoGetDeviceObjectPointer
-    - IoBuildAsynchronousFsdRequest
-    - ExInterlockedInsertTailList
-    - IoAllocateWorkItem
-    - IoBuildDeviceIoControlRequest
-    - IoUnregisterPlugPlayNotification
-    - IofCompleteRequest
-    - KeWaitForSingleObject
-    - IoFreeIrp
-    - RtlCompareMemory
-    - MmUnlockPages
-    - IoCreateSymbolicLink
-    - RtlCopyUnicodeString
-    - ObfDereferenceObject
-    - IoCreateDevice
-    - IoQueueWorkItem
-    - RtlAssert
-    - MmAllocateContiguousMemorySpecifyCache
-    - DbgPrint
-    - IofCallDriver
-    - KeAcquireSpinLockRaiseToDpc
-    - KeBugCheckEx
-    - MmMapIoSpace
-    - ExAllocatePoolWithTag
-    - KeStallExecutionProcessor
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    InternalName: RwDrv.sys
-    MD5: 9650db2ef0a44984845841ab24972ced
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: RwDrv.sys
-    PDBPath: ''
-    Product: RwDrv Driver
-    ProductVersion: 1.00.00.0000
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: 34f9ee05d0625423a967fe59af07b3b7
-        SHA1: 977c80038c9a4ea1b19a46fbaf339efa52332028
-        SHA256: 7ab534cf1988576feaa977b3906d1f22777b8a1bbb0b27345834b4d37d1fabb8
-    SHA1: 9d191bee98f0af4969a26113098e3ea85483ae2d
-    SHA256: bdcacb9f373b017d0905845292bca2089feb0900ce80e78df1bcaae8328ce042
-    Sections:
-        .text:
-            Entropy: 5.5452107521100436
-            Virtual Size: '0x3948'
-        .rdata:
-            Entropy: 4.069864946156118
-            Virtual Size: '0x2bc'
-        .data:
-            Entropy: 0.46979092711892695
-            Virtual Size: '0x130'
-        .pdata:
-            Entropy: 3.8809705707794
-            Virtual Size: '0x1d4'
-        INIT:
-            Entropy: 5.490832644719796
-            Virtual Size: '0x790'
-        .rsrc:
-            Entropy: 3.271210025777123
-            Virtual Size: '0x370'
-    Signature: ''
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
-                CA , G2
-            ValidFrom: '2012-12-21 00:00:00'
-            ValidTo: '2020-12-30 23:59:59'
-            Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
-            Version: 3
-            TBS:
-                MD5: d0785ad36e427c92b19f6826ab1e8020
-                SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
-                SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
-                SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
-        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-            ValidFrom: '2011-04-13 10:00:00'
-            ValidTo: '2019-04-13 10:00:00'
-            Signature: 225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 0400000000012f4ee1355c
-            Version: 3
-            TBS:
-                MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
-                SHA1: 589a7d4df869395601ba7538a65afae8c4616385
-                SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
-                SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
-        -   Subject: C=TW, CN=ChongKim Chan
-            ValidFrom: '2012-07-31 20:41:59'
-            ValidTo: '2013-08-01 20:41:59'
-            Signature: 6b86336c2008e3d1a9cb42f4e323c36c782602b06948e63b7cc646ca61b5768677c2cdd5cf24f58d68844079cd6d8e9534b3170a0261fe64ea47971eecf4a84de8174a4a8b5c6ad87894cf5cc8a10ec522db9697504b208442ae34ec6e9a0e85d93470f66374f36c4f1ec3483c136497b2880d8ba4de0342b5aa2c0890ad80e010c8e34ae8792740e677952d3bc05a36a032ab7bbb64051d506f674e0232f66900c8c29dad2df6960012a8bb216f9e83157632545ead40db592c1e7de76f407601b111113e9b087db3e780f21a61e9f7593e96332f0c35162e0900a61c6ba3a88faee64d9fe94cad5705d6d16585603b5bb376161bdcf01b0bb9022bb360aceb
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
-            Version: 3
-            TBS:
-                MD5: b990c61c8edf9e8d0ac6504541be0b65
-                SHA1: 519e011f6cab88c812da20225dd37cc1808d5180
-                SHA256: 5b8b9e8e3ddd3ab7cc1f8531e88d83cb075539bb4473ed348d80a13dc1a4e065
-                SHA384: 98aa58231d0881595c83ab26289a982c0ff7f697e2a30eb1ff3bea3058897a722b67966a665b5a893cb0daa9dc88f93e
-        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
-                Signer , G4
-            ValidFrom: '2012-10-18 00:00:00'
-            ValidTo: '2020-12-29 23:59:59'
-            Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 0ecff438c8febf356e04d86a981b1a50
-            Version: 3
-            TBS:
-                MD5: e9d38360b914c8863f6cba3ee58764d3
-                SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
-                SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
-                SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
-        -   Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
-            ValidFrom: '2011-04-15 19:55:08'
-            ValidTo: '2021-04-15 20:05:08'
-            Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 6129152700000000002a
-            Version: 3
-            TBS:
-                MD5: 0bb058d116f02817737920f112d9fd3b
-                SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
-                SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
-                SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
-        Signer:
-        -   SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
-            Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-            Version: 1
-    Imphash: 6f0b9814da4da038669c47e77c2f268f
-    LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: 3cd1454d2308cee5c59b45d5f952e70b
+    SHA1: 2c3b01ff8ce024f70f9daad31ea6c78de54f239b
+    SHA256: acb65f96f1d5c986b52d980a1c5ea009292ff472087fdd8a98a485404948f585
+  Company: RW-Everything
+  Copyright: Copyright (C) 2011 RW-Everything
+  CreationTimestamp: '2013-05-25 07:02:16'
+  Date: ''
+  Description: RwDrv Driver
+  ExportedFunctions: ''
+  FileVersion: '1.00.00.0000 built by: WinDDK'
+  Filename: rwdrv.sys
+  ImportedFunctions:
+  - ObfDereferenceObject
+  - IoUnregisterPlugPlayNotification
+  - ExFreePoolWithTag
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - RtlCompareMemory
+  - ExAllocatePoolWithTag
+  - memcpy
+  - memset
+  - MmGetPhysicalAddress
+  - MmAllocateContiguousMemorySpecifyCache
+  - MmFreeContiguousMemorySpecifyCache
+  - IoFreeIrp
+  - IoFreeMdl
+  - MmUnlockPages
+  - RtlInitUnicodeString
+  - IoBuildAsynchronousFsdRequest
+  - KeWaitForSingleObject
+  - IoBuildDeviceIoControlRequest
+  - KeInitializeEvent
+  - RtlQueryRegistryValues
+  - IoFreeWorkItem
+  - IoGetDeviceObjectPointer
+  - ExfInterlockedInsertTailList
+  - IoQueueWorkItem
+  - IoAllocateWorkItem
+  - RtlCopyUnicodeString
+  - IoRegisterPlugPlayNotification
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - KeTickCount
+  - IoDeleteSymbolicLink
+  - IoDeleteDevice
+  - IofCallDriver
+  - IofCompleteRequest
+  - KfReleaseSpinLock
+  - KeStallExecutionProcessor
+  - KfAcquireSpinLock
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: RwDrv.sys
+  MD5: 257483d5d8b268d0d679956c7acdf02d
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: RwDrv.sys
+  Product: RwDrv Driver
+  ProductVersion: 1.00.00.0000
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: b46f1ecb6dd9d289467b472fef3765ec
+    SHA1: f8005ee6fa960fe7a35064b913dc3faee6733365
+    SHA256: 35e185403f7cb126f3ba88d9baa3bf19e4771fc1b7d2d2a6ce9793e6a5c9ad2e
+  SHA1: fbf8b0613a2f7039aeb9fa09bd3b40c8ff49ded2
+  SHA256: ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3
+  Sections:
+    .text:
+      Entropy: 6.340812423857232
+      Virtual Size: '0x18d2'
+    .rdata:
+      Entropy: 4.805264435636949
+      Virtual Size: '0x12d'
+    .data:
+      Entropy: 3.0
+      Virtual Size: '0x8'
+    INIT:
+      Entropy: 5.668933301784241
+      Virtual Size: '0x5b6'
+    .rsrc:
+      Entropy: 3.2720678524841276
+      Virtual Size: '0x370'
+    .reloc:
+      Entropy: 4.97566742449347
+      Virtual Size: '0x19a'
+  Signature:
+  - ChongKim Chan
+  - GlobalSign CodeSigning CA - G2
+  - GlobalSign Root CA - R1
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
+      ValidFrom: '2011-04-13 10:00:00'
+      ValidTo: '2019-04-13 10:00:00'
+      Signature: 225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0400000000012f4ee1355c
+      Version: 3
+      TBS:
+        MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
+        SHA1: 589a7d4df869395601ba7538a65afae8c4616385
+        SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
+    - Subject: C=TW, CN=ChongKim Chan
+      ValidFrom: '2012-07-31 20:41:59'
+      ValidTo: '2013-08-01 20:41:59'
+      Signature: 6b86336c2008e3d1a9cb42f4e323c36c782602b06948e63b7cc646ca61b5768677c2cdd5cf24f58d68844079cd6d8e9534b3170a0261fe64ea47971eecf4a84de8174a4a8b5c6ad87894cf5cc8a10ec522db9697504b208442ae34ec6e9a0e85d93470f66374f36c4f1ec3483c136497b2880d8ba4de0342b5aa2c0890ad80e010c8e34ae8792740e677952d3bc05a36a032ab7bbb64051d506f674e0232f66900c8c29dad2df6960012a8bb216f9e83157632545ead40db592c1e7de76f407601b111113e9b087db3e780f21a61e9f7593e96332f0c35162e0900a61c6ba3a88faee64d9fe94cad5705d6d16585603b5bb376161bdcf01b0bb9022bb360aceb
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
+      Version: 3
+      TBS:
+        MD5: b990c61c8edf9e8d0ac6504541be0b65
+        SHA1: 519e011f6cab88c812da20225dd37cc1808d5180
+        SHA256: 5b8b9e8e3ddd3ab7cc1f8531e88d83cb075539bb4473ed348d80a13dc1a4e065
+        SHA384: 98aa58231d0881595c83ab26289a982c0ff7f697e2a30eb1ff3bea3058897a722b67966a665b5a893cb0daa9dc88f93e
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      ValidFrom: '2011-04-15 19:55:08'
+      ValidTo: '2021-04-15 20:05:08'
+      Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 6129152700000000002a
+      Version: 3
+      TBS:
+        MD5: 0bb058d116f02817737920f112d9fd3b
+        SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
+        SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
+    Signer:
+    - SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
+      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
+      Version: 1
+  Imphash: 176d8e75a27a45e2c6f5d4cceca4d869
+  LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: 9c15e4f6f0e218cbaae27bf6952f6303
+    SHA1: e15698840eaa0d72abce8207b4e57966e8c064b2
+    SHA256: b1d0fdfddddfe520afc18b79b18b5eef730f7586639bd05857a41c0d09a9b9e6
+  Company: RW-Everything
+  Copyright: Copyright (C) 2011 RW-Everything
+  CreationTimestamp: '2012-12-26 00:59:05'
+  Date: ''
+  Description: RwDrv Driver
+  ExportedFunctions: ''
+  FileVersion: '1.00.00.0000 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - ExFreePoolWithTag
+  - IoRegisterPlugPlayNotification
+  - MmFreeContiguousMemorySpecifyCache
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IoFreeWorkItem
+  - KeInitializeEvent
+  - RtlQueryRegistryValues
+  - KeReleaseSpinLock
+  - MmUnmapIoSpace
+  - IoFreeMdl
+  - MmGetPhysicalAddress
+  - IoGetDeviceObjectPointer
+  - IoBuildAsynchronousFsdRequest
+  - ExInterlockedInsertTailList
+  - IoBuildDeviceIoControlRequest
+  - MmMapIoSpace
+  - IoUnregisterPlugPlayNotification
+  - IofCompleteRequest
+  - KeWaitForSingleObject
+  - IoFreeIrp
+  - RtlCompareMemory
+  - MmUnlockPages
+  - IoCreateSymbolicLink
+  - RtlCopyUnicodeString
+  - ObfDereferenceObject
+  - IoCreateDevice
+  - IoQueueWorkItem
+  - MmAllocateContiguousMemorySpecifyCache
+  - IofCallDriver
+  - KeAcquireSpinLockRaiseToDpc
+  - KeBugCheckEx
+  - IoAllocateWorkItem
+  - ExAllocatePoolWithTag
+  - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: RwDrv.sys
+  MD5: f7a09ac4a91a6390f8d00bf09f53ae37
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: RwDrv.sys
+  PDBPath: ''
+  Product: RwDrv Driver
+  ProductVersion: 1.00.00.0000
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 0b5c9cd3aba44e676db021ef2c00fc45
+    SHA1: 51cce8a4ba776bf947e796c39beed532e3e4bf87
+    SHA256: c2c9369065835fd61a176b79323fbd54eff3e8c28cb32aff70bc05afafe01ec3
+  SHA1: 8031ecbff95f299b53113ccd105582defad38d7b
+  SHA256: d15a0bc7a39bbeff10019496c1ed217b7c1b26da37b2bdd46820b35161ddb3c4
+  Sections:
+    .text:
+      Entropy: 6.335549562375017
+      Virtual Size: '0x2098'
+    .rdata:
+      Entropy: 4.537426592599987
+      Virtual Size: '0x30c'
+    .data:
+      Entropy: 0.46979092711892695
+      Virtual Size: '0x130'
+    .pdata:
+      Entropy: 3.743141584606769
+      Virtual Size: '0x120'
+    INIT:
+      Entropy: 5.458963819105193
+      Virtual Size: '0x6e8'
+    .rsrc:
+      Entropy: 3.2712100257771235
+      Virtual Size: '0x370'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
+      ValidFrom: '2011-04-13 10:00:00'
+      ValidTo: '2019-04-13 10:00:00'
+      Signature: 225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0400000000012f4ee1355c
+      Version: 3
+      TBS:
+        MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
+        SHA1: 589a7d4df869395601ba7538a65afae8c4616385
+        SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
+    - Subject: C=TW, CN=ChongKim Chan
+      ValidFrom: '2012-07-31 20:41:59'
+      ValidTo: '2013-08-01 20:41:59'
+      Signature: 6b86336c2008e3d1a9cb42f4e323c36c782602b06948e63b7cc646ca61b5768677c2cdd5cf24f58d68844079cd6d8e9534b3170a0261fe64ea47971eecf4a84de8174a4a8b5c6ad87894cf5cc8a10ec522db9697504b208442ae34ec6e9a0e85d93470f66374f36c4f1ec3483c136497b2880d8ba4de0342b5aa2c0890ad80e010c8e34ae8792740e677952d3bc05a36a032ab7bbb64051d506f674e0232f66900c8c29dad2df6960012a8bb216f9e83157632545ead40db592c1e7de76f407601b111113e9b087db3e780f21a61e9f7593e96332f0c35162e0900a61c6ba3a88faee64d9fe94cad5705d6d16585603b5bb376161bdcf01b0bb9022bb360aceb
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
+      Version: 3
+      TBS:
+        MD5: b990c61c8edf9e8d0ac6504541be0b65
+        SHA1: 519e011f6cab88c812da20225dd37cc1808d5180
+        SHA256: 5b8b9e8e3ddd3ab7cc1f8531e88d83cb075539bb4473ed348d80a13dc1a4e065
+        SHA384: 98aa58231d0881595c83ab26289a982c0ff7f697e2a30eb1ff3bea3058897a722b67966a665b5a893cb0daa9dc88f93e
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-10-18 14:38:35'
+      ValidTo: '2022-05-20 14:38:35'
+      Signature: aa3e3f03412f35137f8c3f125c10cfee67557956600f01520f23877a412847e5d36672bb02cfc90c242941c2da2e99e02391efb133473cc2083a069573a21b0ebc3fb7e259f169bef0d3e1188f732de8a39c214040f3cd3ab7018ddc4d94b47a1005507f1b61c582158ae42c4ded3411eb5b6a8959c7def72c84c0b3bd3a98e145288a2195803fc90797f0ff42c11e4284e7b2c7e0a26a99d4f1d4c6fe57c0b93ae7f627700da9e07b4a1395c2c9b9ab6907d94dcc6647424a74a7a76db3a735e87e4baacebdbc939f7dc640a5fcaa1fa8d5d1f07e7fd2e34c56fd4064f0474c510430eaea942f24cae908c5785ba162c91d48879719fa4da578edec04790e36
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 023a64
+      Version: 3
+      TBS:
+        MD5: 1c4eabb6695c77091994554285e367d1
+        SHA1: 01ee4a5386a24a8b6805c4dfcbc5816c38583ce2
+        SHA256: e2ccfe68a71dc3bd439a8ba3934461748dacd7a9aaaa5358bed91a4e654829ad
+        SHA384: 23b294260204c6450aa7a05f438dea1c0974056755bbfc6e69760106e64a934b50b356d1ea2bdedf7562876cf8671c32
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2022-05-19 23:59:59'
+      Signature: 6300328d171f28dc0479c9271984b83668a7751918b24f49ac5d612b8632d00d4dbab57c5eb6d237e8ed5b882cd22961be1f50294a22f91786bd87215bd13c4dbf64c0ba2e9ba610a1f1c48453b08d58f28eaf1219771fadf7bebe812d8e827e70f83996336559a84f7f8b22c9187e5e64e2b9306d06b4b7118c66ba2c2644b98adcb18791b5dcbf14a1dc83a360af295e668a2b0ded9dd03905b9b86f1eb9ba71cc68deb2793a03d688e11d29b334e721d8a30f2b721a42b59e45fadfa72b9dd7f2cd1dc856122f8d9d4dce32c9266164d09a78e52f126a4a440224d85785327fcd598c6b733300a55eabc3f022c0cb08c3e0f7b8b80414ec4aef39f9cfca25
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 7e1fdf7299e8d245a15d0ba8e5b159ba
+      Version: 3
+      TBS:
+        MD5: e451247dadf3cdbd75735f81335ede9a
+        SHA1: 6488fdef17121c59aba8e4d9ee03fed253995625
+        SHA256: 0428cd5afa2e236b4e6d5b767f16d696c3232ad4dae5d5d31800d084937879c3
+        SHA384: 763791c9569bbd8d6c83b1af674b9cac806fca862283d7a0bda0f033de9c9ede9f1ea163251749f9faa7f3ba01662831
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      ValidFrom: '2011-04-15 19:55:08'
+      ValidTo: '2021-04-15 20:05:08'
+      Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 6129152700000000002a
+      Version: 3
+      TBS:
+        MD5: 0bb058d116f02817737920f112d9fd3b
+        SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
+        SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
+    Signer:
+    - SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
+      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
+      Version: 1
+  Imphash: 955e7b12a8fa06444c68e54026c45de1
+  LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: 26e06bbacf3f202b0295342c22e71124
+    SHA1: 53aea389ddaba5c52c577a82e416c8c533d1cd1d
+    SHA256: 21e6d9229f380d5e9591beaa82bd93547f517af90707d7757f0e27ff4731b484
+  Company: RW-Everything
+  Copyright: Copyright (C) 2011 RW-Everything
+  CreationTimestamp: '2012-10-24 01:46:54'
+  Date: ''
+  Description: RwDrv Driver
+  ExportedFunctions: ''
+  FileVersion: '1.00.00.0000 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - ExFreePoolWithTag
+  - IoRegisterPlugPlayNotification
+  - MmFreeContiguousMemorySpecifyCache
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IoFreeWorkItem
+  - KeInitializeEvent
+  - RtlQueryRegistryValues
+  - KeReleaseSpinLock
+  - MmUnmapIoSpace
+  - IoFreeMdl
+  - MmGetPhysicalAddress
+  - IoGetDeviceObjectPointer
+  - IoBuildAsynchronousFsdRequest
+  - ExInterlockedInsertTailList
+  - IoBuildDeviceIoControlRequest
+  - MmMapIoSpace
+  - IoUnregisterPlugPlayNotification
+  - IofCompleteRequest
+  - KeWaitForSingleObject
+  - IoFreeIrp
+  - RtlCompareMemory
+  - MmUnlockPages
+  - IoCreateSymbolicLink
+  - RtlCopyUnicodeString
+  - ObfDereferenceObject
+  - IoCreateDevice
+  - IoQueueWorkItem
+  - MmAllocateContiguousMemorySpecifyCache
+  - IofCallDriver
+  - KeAcquireSpinLockRaiseToDpc
+  - KeBugCheckEx
+  - IoAllocateWorkItem
+  - ExAllocatePoolWithTag
+  - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: RwDrv.sys
+  MD5: 1276f735d22cf04676a719edc6b0df18
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: RwDrv.sys
+  PDBPath: ''
+  Product: RwDrv Driver
+  ProductVersion: 1.00.00.0000
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 0b5c9cd3aba44e676db021ef2c00fc45
+    SHA1: 51cce8a4ba776bf947e796c39beed532e3e4bf87
+    SHA256: c2c9369065835fd61a176b79323fbd54eff3e8c28cb32aff70bc05afafe01ec3
+  SHA1: 108575d8f0b98fed29514a54052f7bf5a8cb3ff0
+  SHA256: 83fbf5d46cff38dd1c0f83686708b3bd6a3a73fddd7a2da2b5a3acccd1d9359c
+  Sections:
+    .text:
+      Entropy: 6.339385586617087
+      Virtual Size: '0x1f68'
+    .rdata:
+      Entropy: 4.463483654720896
+      Virtual Size: '0x2f4'
+    .data:
+      Entropy: 0.46979092711892695
+      Virtual Size: '0x130'
+    .pdata:
+      Entropy: 3.7256744210297663
+      Virtual Size: '0x114'
+    INIT:
+      Entropy: 5.457431859650041
+      Virtual Size: '0x6e8'
+    .rsrc:
+      Entropy: 3.270238715581358
+      Virtual Size: '0x370'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G3
+      ValidFrom: '2012-05-01 00:00:00'
+      ValidTo: '2012-12-31 23:59:59'
+      Signature: 1e98aa27b778b508b5c9726db7dfc00e98a635c488c9d2f66df14b1afbd5f92d99009ed1e79b8be13fbd39800c66cd07bc5c9854a694ba10d14e8babf56f65cc6709a2807c52e80e03d66b7ac60518ecc8ac427c072ca73d0866dc00edfd941d73f2729893b111d68fef8eeaacf496510cd08ddf31524f5eaf7da74a75e64ece2b9f292be7cf5d9f037e6e277b23ad622966af92e82ccebd9c7fdccd173c43c2093f7545c79ee4d7607f97c6e4aac769f5fccd74ac2cb048c1504e70561eb535d38ebeb1edacbdfe0cec857dd5bb856644195d9f93eb82ba639ed37c61ffc81bd923587f30a366a139265e92c33ccb3732faf5a38ddcd5b0a3e9253655d781fa
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
+      Version: 3
+      TBS:
+        MD5: e6d820afb23af20a65cf0b03247ea05e
+        SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
+        SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
+    - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
+      ValidFrom: '2003-12-04 00:00:00'
+      ValidTo: '2013-12-03 23:59:59'
+      Signature: 4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47bf1995df8d524643f7db6d480d31a4
+      Version: 3
+      TBS:
+        MD5: 518d2ea8a21e879c942d504824ac211c
+        SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
+        SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
+      ValidFrom: '2011-04-13 10:00:00'
+      ValidTo: '2019-04-13 10:00:00'
+      Signature: 225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0400000000012f4ee1355c
+      Version: 3
+      TBS:
+        MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
+        SHA1: 589a7d4df869395601ba7538a65afae8c4616385
+        SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
+    - Subject: C=TW, CN=ChongKim Chan
+      ValidFrom: '2012-07-31 20:41:59'
+      ValidTo: '2013-08-01 20:41:59'
+      Signature: 6b86336c2008e3d1a9cb42f4e323c36c782602b06948e63b7cc646ca61b5768677c2cdd5cf24f58d68844079cd6d8e9534b3170a0261fe64ea47971eecf4a84de8174a4a8b5c6ad87894cf5cc8a10ec522db9697504b208442ae34ec6e9a0e85d93470f66374f36c4f1ec3483c136497b2880d8ba4de0342b5aa2c0890ad80e010c8e34ae8792740e677952d3bc05a36a032ab7bbb64051d506f674e0232f66900c8c29dad2df6960012a8bb216f9e83157632545ead40db592c1e7de76f407601b111113e9b087db3e780f21a61e9f7593e96332f0c35162e0900a61c6ba3a88faee64d9fe94cad5705d6d16585603b5bb376161bdcf01b0bb9022bb360aceb
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
+      Version: 3
+      TBS:
+        MD5: b990c61c8edf9e8d0ac6504541be0b65
+        SHA1: 519e011f6cab88c812da20225dd37cc1808d5180
+        SHA256: 5b8b9e8e3ddd3ab7cc1f8531e88d83cb075539bb4473ed348d80a13dc1a4e065
+        SHA384: 98aa58231d0881595c83ab26289a982c0ff7f697e2a30eb1ff3bea3058897a722b67966a665b5a893cb0daa9dc88f93e
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      ValidFrom: '2011-04-15 19:55:08'
+      ValidTo: '2021-04-15 20:05:08'
+      Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 6129152700000000002a
+      Version: 3
+      TBS:
+        MD5: 0bb058d116f02817737920f112d9fd3b
+        SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
+        SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
+    Signer:
+    - SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
+      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
+      Version: 1
+  Imphash: 955e7b12a8fa06444c68e54026c45de1
+  LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: d82a89cc750ae680af9f463b1b4ec8d9
+    SHA1: 3b61791f361c785019347cff13712400198c9364
+    SHA256: 1997e2a6302f3196975f858fef63188a249f79b6c2982d31ae07405e8aada58f
+  Company: RW-Everything
+  Copyright: Copyright (C) 2011 RW-Everything
+  CreationTimestamp: '2013-05-01 21:59:34'
+  Date: ''
+  Description: RwDrv Driver
+  ExportedFunctions: ''
+  FileVersion: '1.00.00.0000 built by: WinDDK'
+  Filename: ''
+  ImportedFunctions:
+  - IoDeleteSymbolicLink
+  - ExFreePoolWithTag
+  - IoRegisterPlugPlayNotification
+  - MmFreeContiguousMemorySpecifyCache
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IoFreeWorkItem
+  - KeInitializeEvent
+  - RtlQueryRegistryValues
+  - KeReleaseSpinLock
+  - MmUnmapIoSpace
+  - IoFreeMdl
+  - MmGetPhysicalAddress
+  - IoGetDeviceObjectPointer
+  - IoBuildAsynchronousFsdRequest
+  - ExInterlockedInsertTailList
+  - IoAllocateWorkItem
+  - IoBuildDeviceIoControlRequest
+  - IoUnregisterPlugPlayNotification
+  - IofCompleteRequest
+  - KeWaitForSingleObject
+  - IoFreeIrp
+  - RtlCompareMemory
+  - MmUnlockPages
+  - IoCreateSymbolicLink
+  - RtlCopyUnicodeString
+  - ObfDereferenceObject
+  - IoCreateDevice
+  - IoQueueWorkItem
+  - RtlAssert
+  - MmAllocateContiguousMemorySpecifyCache
+  - DbgPrint
+  - IofCallDriver
+  - KeAcquireSpinLockRaiseToDpc
+  - KeBugCheckEx
+  - MmMapIoSpace
+  - ExAllocatePoolWithTag
+  - KeStallExecutionProcessor
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: RwDrv.sys
+  MD5: 9650db2ef0a44984845841ab24972ced
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: RwDrv.sys
+  PDBPath: ''
+  Product: RwDrv Driver
+  ProductVersion: 1.00.00.0000
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 34f9ee05d0625423a967fe59af07b3b7
+    SHA1: 977c80038c9a4ea1b19a46fbaf339efa52332028
+    SHA256: 7ab534cf1988576feaa977b3906d1f22777b8a1bbb0b27345834b4d37d1fabb8
+  SHA1: 9d191bee98f0af4969a26113098e3ea85483ae2d
+  SHA256: bdcacb9f373b017d0905845292bca2089feb0900ce80e78df1bcaae8328ce042
+  Sections:
+    .text:
+      Entropy: 5.5452107521100436
+      Virtual Size: '0x3948'
+    .rdata:
+      Entropy: 4.069864946156118
+      Virtual Size: '0x2bc'
+    .data:
+      Entropy: 0.46979092711892695
+      Virtual Size: '0x130'
+    .pdata:
+      Entropy: 3.8809705707794
+      Virtual Size: '0x1d4'
+    INIT:
+      Entropy: 5.490832644719796
+      Virtual Size: '0x790'
+    .rsrc:
+      Entropy: 3.271210025777123
+      Virtual Size: '0x370'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
+        , G2
+      ValidFrom: '2012-12-21 00:00:00'
+      ValidTo: '2020-12-30 23:59:59'
+      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+      Version: 3
+      TBS:
+        MD5: d0785ad36e427c92b19f6826ab1e8020
+        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
+      ValidFrom: '2011-04-13 10:00:00'
+      ValidTo: '2019-04-13 10:00:00'
+      Signature: 225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0400000000012f4ee1355c
+      Version: 3
+      TBS:
+        MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
+        SHA1: 589a7d4df869395601ba7538a65afae8c4616385
+        SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
+    - Subject: C=TW, CN=ChongKim Chan
+      ValidFrom: '2012-07-31 20:41:59'
+      ValidTo: '2013-08-01 20:41:59'
+      Signature: 6b86336c2008e3d1a9cb42f4e323c36c782602b06948e63b7cc646ca61b5768677c2cdd5cf24f58d68844079cd6d8e9534b3170a0261fe64ea47971eecf4a84de8174a4a8b5c6ad87894cf5cc8a10ec522db9697504b208442ae34ec6e9a0e85d93470f66374f36c4f1ec3483c136497b2880d8ba4de0342b5aa2c0890ad80e010c8e34ae8792740e677952d3bc05a36a032ab7bbb64051d506f674e0232f66900c8c29dad2df6960012a8bb216f9e83157632545ead40db592c1e7de76f407601b111113e9b087db3e780f21a61e9f7593e96332f0c35162e0900a61c6ba3a88faee64d9fe94cad5705d6d16585603b5bb376161bdcf01b0bb9022bb360aceb
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
+      Version: 3
+      TBS:
+        MD5: b990c61c8edf9e8d0ac6504541be0b65
+        SHA1: 519e011f6cab88c812da20225dd37cc1808d5180
+        SHA256: 5b8b9e8e3ddd3ab7cc1f8531e88d83cb075539bb4473ed348d80a13dc1a4e065
+        SHA384: 98aa58231d0881595c83ab26289a982c0ff7f697e2a30eb1ff3bea3058897a722b67966a665b5a893cb0daa9dc88f93e
+    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
+        , G4
+      ValidFrom: '2012-10-18 00:00:00'
+      ValidTo: '2020-12-29 23:59:59'
+      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+      Version: 3
+      TBS:
+        MD5: e9d38360b914c8863f6cba3ee58764d3
+        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      ValidFrom: '2011-04-15 19:55:08'
+      ValidTo: '2021-04-15 20:05:08'
+      Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 6129152700000000002a
+      Version: 3
+      TBS:
+        MD5: 0bb058d116f02817737920f112d9fd3b
+        SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
+        SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
+    Signer:
+    - SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
+      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
+      Version: 1
+  Imphash: 6f0b9814da4da038669c47e77c2f268f
+  LoadsDespiteHVCI: 'FALSE'
