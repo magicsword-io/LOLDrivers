@@ -7,29 +7,29 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-    Command: sc.exe create WinIo64B.sys binPath=C:\windows\temp\WinIo64B.sys type=kernel
-        && sc.exe start WinIo64B.sys
-    Description: ''
-    OperatingSystem: Windows 10
-    Privileges: kernel
-    Usecase: Elevate privileges
+  Command: sc.exe create WinIo64B.sys binPath=C:\windows\temp\WinIo64B.sys type=kernel
+    && sc.exe start WinIo64B.sys
+  Description: ''
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection: []
 Acknowledgement:
-    Handle: ''
-    Person: ''
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
--   Company: ''
-    Date: ''
-    Description: ''
-    FileVersion: ''
-    Filename: WinIo64B.sys
-    MachineType: ''
-    OriginalFilename: ''
-    Product: ''
-    ProductVersion: ''
-    Publisher: ''
-    SHA1: f18e669127c041431cde8f2d03b15cfc20696056
-    Signature: []
-    LoadsDespiteHVCI: 'FALSE'
+- Company: ''
+  Date: ''
+  Description: ''
+  FileVersion: ''
+  Filename: WinIo64B.sys
+  MachineType: ''
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  SHA1: f18e669127c041431cde8f2d03b15cfc20696056
+  Signature: []
+  LoadsDespiteHVCI: 'FALSE'

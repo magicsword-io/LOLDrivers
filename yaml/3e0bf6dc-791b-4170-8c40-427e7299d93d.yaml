@@ -7,266 +7,264 @@ Created: '2023-05-12'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-    Command: sc.exe create KfeCo10X64.sys binPath=C:\windows\temp\KfeCo10X64.sys type=kernel
-        && sc.exe start KfeCo10X64.sys
-    Description: Killer exposes COM interfaces that allow non-privileged users 1)
-        to block network for any process 2) to manage any service in the OS. Killer
-        is preinstalled to laptops equipped with Intel Killer NICs (e.g. Dell). Since
-        Intel patched the vulnerability quietly, it's not clear which version is safe.
-        Also, it is unclear which OEMs are affected. Dell is definitely in the list,
-        but it is likely that other vendors with Killer NICs on board, such as Acer
-        and MSI, are affected too. Some users think that Killer suite is required
-        for the NIC to work properly, so they install it even after a fresh Windows
-        install. This version is confirmed vulnerable based on the script usage from
-        zwclose.
-    OperatingSystem: Windows 10
-    Privileges: kernel
-    Usecase: Elevate privileges
+  Command: sc.exe create KfeCo10X64.sys binPath=C:\windows\temp\KfeCo10X64.sys type=kernel
+    && sc.exe start KfeCo10X64.sys
+  Description: Killer exposes COM interfaces that allow non-privileged users 1) to
+    block network for any process 2) to manage any service in the OS. Killer is preinstalled
+    to laptops equipped with Intel Killer NICs (e.g. Dell). Since Intel patched the
+    vulnerability quietly, it's not clear which version is safe. Also, it is unclear
+    which OEMs are affected. Dell is definitely in the list, but it is likely that
+    other vendors with Killer NICs on board, such as Acer and MSI, are affected too.
+    Some users think that Killer suite is required for the NIC to work properly, so
+    they install it even after a fresh Windows install. This version is confirmed
+    vulnerable based on the script usage from zwclose.
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
 Resources:
 - https://zwclose.github.io/2023/04/18/killer2.html
 - https://twitter.com/zwclose/status/1648441215808049153
 - https://zwclose.github.io/2022/12/18/killer1.html
 Detection:
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/b583414fcee280128788f7b39451c511376fe821f455d4f3702795e96d560704.yara
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/b583414fcee280128788f7b39451c511376fe821f455d4f3702795e96d560704.yara
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Acknowledgement:
-    Handle: zwclose
-    Person: zwclose
+  Handle: zwclose
+  Person: zwclose
 KnownVulnerableSamples:
--   Authentihash:
-        MD5: 9085c42a59541dbd2e05fec9c247a189
-        SHA1: c46323ef4fd5f553003a92fdad0d3059564e481f
-        SHA256: 8bce4a327c9e77631c03057b0e45cdbb2e751194d42995c0310e3ccdd3d33b7c
-    Company: Rivet Networks, LLC.
-    Copyright: Copyright (C) 2015-2018 Rivet Networks, LLC.
-    CreationTimestamp: '2021-03-22 12:11:11'
-    Date: ''
-    Description: Killer Traffic Control Callout Driver
-    ExportedFunctions: ''
-    FileVersion: 9.7.4.11
-    Filename: KfeCo10X64.sys
-    ImportedFunctions:
-    - EtwRegister
-    - KeInitializeEvent
-    - EtwUnregister
-    - __C_specific_handler
-    - ExFreePoolWithTag
-    - ExAllocatePoolWithTag
-    - RtlCopyUnicodeString
-    - EtwSetInformation
-    - EtwWriteTransfer
-    - strstr
-    - RtlCompareMemory
-    - RtlIpv4StringToAddressA
-    - KeAcquireInStackQueuedSpinLock
-    - KeSetTimer
-    - KeCancelTimer
-    - KeInitializeTimer
-    - KeSetPriorityThread
-    - KeSetImportanceDpc
-    - KeInsertQueueDpc
-    - KeInitializeDpc
-    - IoQueueWorkItem
-    - IoFreeWorkItem
-    - IoAllocateWorkItem
-    - PsTerminateSystemThread
-    - KeWaitForMultipleObjects
-    - KeDelayExecutionThread
-    - KeClearEvent
-    - RtlEthernetAddressToStringW
-    - RtlRandomEx
-    - ZwClose
-    - PsCreateSystemThread
-    - KeWaitForSingleObject
-    - KeSetEvent
-    - KeQueryInterruptTimePrecise
-    - ExEventObjectType
-    - ObReferenceObjectByHandle
-    - MmMapLockedPagesSpecifyCache
-    - MmUnlockPages
-    - MmProbeAndLockPages
-    - ProbeForWrite
-    - ProbeForRead
-    - IoFreeMdl
-    - IoAllocateMdl
-    - MmBuildMdlForNonPagedPool
-    - ObfDereferenceObject
-    - memchr
-    - RtlIpv6StringToAddressA
-    - KeReleaseInStackQueuedSpinLockFromDpcLevel
-    - KeAcquireInStackQueuedSpinLockAtDpcLevel
-    - KeReleaseInStackQueuedSpinLock
-    - KeInitializeSpinLock
-    - NdisGetDataBuffer
-    - NdisRetreatNetBufferDataStart
-    - NdisAdvanceNetBufferDataStart
-    - NdisCopySendNetBufferListInfo
-    - NdisFreeNetBufferListPool
-    - NdisAllocateNetBufferListPool
-    - NdisFreeNetBufferPool
-    - NdisAllocateNetBufferPool
-    - NdisFreeGenericObject
-    - NdisCopyReceiveNetBufferListInfo
-    - NdisAllocateGenericObject
-    - FwpsInjectTransportReceiveAsync0
-    - FwpsQueryConnectionRedirectState0
-    - FwpsRedirectHandleDestroy0
-    - FwpsRedirectHandleCreate0
-    - FwpsApplyModifiedLayerData0
-    - FwpsAcquireWritableLayerDataPointer0
-    - FwpsCompleteClassify0
-    - FwpsPendClassify0
-    - FwpsReleaseClassifyHandle0
-    - FwpsAcquireClassifyHandle0
-    - FwpsCalloutUnregisterByKey0
-    - FwpsConstructIpHeaderForTransportPacket0
-    - FwpsDereferenceNetBufferList0
-    - FwpsReferenceNetBufferList0
-    - FwpsInjectMacSendAsync0
-    - FwpsInjectMacReceiveAsync0
-    - FwpsAllocateCloneNetBufferList0
-    - FwpsFreeNetBufferList0
-    - FwpsAllocateNetBufferAndNetBufferList0
-    - FwpmFilterDeleteById0
-    - FwpsCalloutRegister3
-    - FwpmFilterAdd0
-    - FwpmCalloutDeleteByKey0
-    - FwpmSubLayerDeleteByKey0
-    - FwpmProviderContextDeleteByKey0
-    - FwpsQueryPacketInjectionState0
-    - FwpsInjectTransportSendAsync1
-    - FwpsFreeCloneNetBufferList0
-    - FwpsGetPacketListSecurityInformation0
-    - FwpsFlowRemoveContext0
-    - FwpsFlowAssociateContext0
-    - FwpsCalloutUnregisterById0
-    - FwpmCalloutAdd0
-    - FwpmSubLayerAdd0
-    - FwpmProviderAdd0
-    - FwpmTransactionAbort0
-    - FwpmTransactionCommit0
-    - FwpmTransactionBegin0
-    - FwpmEngineClose0
-    - FwpmEngineOpen0
-    - FwpsInjectionHandleDestroy0
-    - FwpsInjectionHandleCreate0
-    - WdfVersionUnbind
-    - WdfVersionBindClass
-    - WdfVersionUnbindClass
-    - WdfVersionBind
-    Imports:
-    - ntoskrnl.exe
-    - NDIS.SYS
-    - fwpkclnt.sys
-    - WDFLDR.SYS
-    InternalName: KfeCoDrv.sys
-    MD5: 697f698b59f32f66cd8166e43a5c49c7
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: KfeCoDrv.sys
-    Product: Killer Traffic Control
-    ProductVersion: 9.7.4.11
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: b301b486d17ef17fe9acb03cf6ae3f6a
-        SHA1: ee057f4265cd4f04330043b3293b6ee0e459b633
-        SHA256: 49e01950af25f272bc33299d131748ef0fa66aa52ac039711082e9122d6f6d8c
-    SHA1: f5d58452620b55c2931cba75eb701f4cde90a9e4
-    SHA256: b583414fcee280128788f7b39451c511376fe821f455d4f3702795e96d560704
-    Sections:
-        .text:
-            Entropy: 6.357724164029769
-            Virtual Size: '0x20a36'
-        .rdata:
-            Entropy: 5.659188529377184
-            Virtual Size: '0x3694'
-        .data:
-            Entropy: 5.765325174395972
-            Virtual Size: '0x12b9e60'
-        .pdata:
-            Entropy: 5.3747108436250635
-            Virtual Size: '0x15b4'
-        PAGE:
-            Entropy: 5.469889141982762
-            Virtual Size: '0x120'
-        INIT:
-            Entropy: 5.3585580911922355
-            Virtual Size: '0xeea'
-        .rsrc:
-            Entropy: 3.6394619362630465
-            Virtual Size: '0xc40'
-        .reloc:
-            Entropy: 3.99391294150606
-            Virtual Size: '0x30'
-    Signature: ''
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=US, ST=Texas, L=Austin, O=Rivet Networks LLC, CN=Rivet Networks
-                LLC
-            ValidFrom: '2020-06-26 00:00:00'
-            ValidTo: '2021-07-01 12:00:00'
-            Signature: abf01f216d547fddd1906d605cee818c112ccb63b4102fe93cd215dcc3a619e51ac0cb95e094bd3f00091bd4c27de102be07fb3bf81da2ac84cecbd127bfa975a0cdf4f4e4b5ccc97a12613fe9c88c3cc71f9ce5e7142833e7ee728cacc9d28bde4c6533dd97f4083d884f5becfcde942a3934cd58f9590defaed7370382d7a318938b941d54b74a5015c1f6cbd69ce717a61e5171c3895ca5a5e5407e8f6aca5088caf373af711a575dc21995e949e2b8a32e91378a4f677a5ca39b6c3ccb2b95f8fe88e9c6437e37096adb5ccb67ac1270d155728de644876bc7571da01cad1b4df2cc3d7a4d4a14bf3082a48ed6feb7fc9180ad2df14aea246bf0bd8154cb
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-            IsCertificateAuthority: false
-            SerialNumber: 0824024fda0b4b1b496eeeddfcff6e16
-            Version: 3
-            TBS:
-                MD5: 442b1dbda48f9394d93cd7f179212f66
-                SHA1: 61311e42ae706d22a7e44fb2f99334fcdaa56f77
-                SHA256: 49384716c6fa94187600b02c48dda179ee50019c6160c23bb031169dc30bcb61
-                SHA384: 5f3c9d0c0a595c967418907dd5c5b05f3202a02e577cb55ae21d06384dc658d964d44a4ca3c7fb529c2a4a609a3486dc
-        -   Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
-                ID Code Signing CA
-            ValidFrom: '2013-10-22 12:00:00'
-            ValidTo: '2028-10-22 12:00:00'
-            Signature: 3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-            IsCertificateAuthority: true
-            SerialNumber: 0409181b5fd5bb66755343b56f955008
-            Version: 3
-            TBS:
-                MD5: 9359496ca4f021408b9d8923cab8b179
-                SHA1: 2aed40d7759997830870769be250199fd609e40e
-                SHA256: e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65
-                SHA384: 5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c
-        -   Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured
-                ID Root CA
-            ValidFrom: '2011-04-15 19:41:37'
-            ValidTo: '2021-04-15 19:51:37'
-            Signature: 5cf5b22d02ceed01b53512d813f7aa4014c7a15ca08a55ed7e55ea6ac457176fd04722423658efc5ac61c5f62c52ce6ae6c80d85dab334420ea40225182672b92a4ea57e4b16f2a0e40c449ce24d9af474f0f927a6699031c244654348c74869d0fc8409f286140ac22996857f11eb8713176ed3ec6bff1d578ab17b1ea5a07ce9a27a68e5fac6b161d67263fa379163835599f81d614f0c6fa3f7bcb1152acc8d85e31417ef7e49443fb022c0f0acbe2fdbe10c86b0f4585c5a10a94bcdf3448a4652083e0a6210e9459504b78b8d4b074f500db7bbe7fb8ca27878c6c53b7663b2cfe521845a66fce04c79834ecfa8ee700586587cc29cd73ca3ad3c7e76625c87d0ed7cd5c55b1421f4be75a275d2e9e15ad020307841624d6b5e6e1b1710244ad8588775d015d762bbfd185665842561977faad49df4f35d6da031c2e19e02ac3e90c3327ee832903416d08b14cf95accee58c54a265b8bfed186a57073ed3e79a4a2f081a041c49871a8ae61b08a365d81c31c50d9cbab368ddf45076160675fec403e7d13edfdc862e10027e661296534e7af3365879b12042d8963f35be3f8ef2999743f5e40ce13c68728c8d49d75a52b573fb7a35943a61b08482c04885c19732d39b725fa0d2348f7ef0467cf28c7294c707b0d7b5b230b81965f09c8327b0a0abd0a2727e050fb3aeddb95b9b42bcc32663456b86f11d4643edc8
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 611cb28a000000000026
-            Version: 3
-            TBS:
-                MD5: 983a0c315a50542362f2bd6a5d71c8d0
-                SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
-                SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
-                SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
-        Signer:
-        -   SerialNumber: 0824024fda0b4b1b496eeeddfcff6e16
-            Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
-                ID Code Signing CA
-            Version: 1
-    Imphash: 2df11474daf362b1b2fa3d3a89b6acbe
-    LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: 9085c42a59541dbd2e05fec9c247a189
+    SHA1: c46323ef4fd5f553003a92fdad0d3059564e481f
+    SHA256: 8bce4a327c9e77631c03057b0e45cdbb2e751194d42995c0310e3ccdd3d33b7c
+  Company: Rivet Networks, LLC.
+  Copyright: Copyright (C) 2015-2018 Rivet Networks, LLC.
+  CreationTimestamp: '2021-03-22 12:11:11'
+  Date: ''
+  Description: Killer Traffic Control Callout Driver
+  ExportedFunctions: ''
+  FileVersion: 9.7.4.11
+  Filename: KfeCo10X64.sys
+  ImportedFunctions:
+  - EtwRegister
+  - KeInitializeEvent
+  - EtwUnregister
+  - __C_specific_handler
+  - ExFreePoolWithTag
+  - ExAllocatePoolWithTag
+  - RtlCopyUnicodeString
+  - EtwSetInformation
+  - EtwWriteTransfer
+  - strstr
+  - RtlCompareMemory
+  - RtlIpv4StringToAddressA
+  - KeAcquireInStackQueuedSpinLock
+  - KeSetTimer
+  - KeCancelTimer
+  - KeInitializeTimer
+  - KeSetPriorityThread
+  - KeSetImportanceDpc
+  - KeInsertQueueDpc
+  - KeInitializeDpc
+  - IoQueueWorkItem
+  - IoFreeWorkItem
+  - IoAllocateWorkItem
+  - PsTerminateSystemThread
+  - KeWaitForMultipleObjects
+  - KeDelayExecutionThread
+  - KeClearEvent
+  - RtlEthernetAddressToStringW
+  - RtlRandomEx
+  - ZwClose
+  - PsCreateSystemThread
+  - KeWaitForSingleObject
+  - KeSetEvent
+  - KeQueryInterruptTimePrecise
+  - ExEventObjectType
+  - ObReferenceObjectByHandle
+  - MmMapLockedPagesSpecifyCache
+  - MmUnlockPages
+  - MmProbeAndLockPages
+  - ProbeForWrite
+  - ProbeForRead
+  - IoFreeMdl
+  - IoAllocateMdl
+  - MmBuildMdlForNonPagedPool
+  - ObfDereferenceObject
+  - memchr
+  - RtlIpv6StringToAddressA
+  - KeReleaseInStackQueuedSpinLockFromDpcLevel
+  - KeAcquireInStackQueuedSpinLockAtDpcLevel
+  - KeReleaseInStackQueuedSpinLock
+  - KeInitializeSpinLock
+  - NdisGetDataBuffer
+  - NdisRetreatNetBufferDataStart
+  - NdisAdvanceNetBufferDataStart
+  - NdisCopySendNetBufferListInfo
+  - NdisFreeNetBufferListPool
+  - NdisAllocateNetBufferListPool
+  - NdisFreeNetBufferPool
+  - NdisAllocateNetBufferPool
+  - NdisFreeGenericObject
+  - NdisCopyReceiveNetBufferListInfo
+  - NdisAllocateGenericObject
+  - FwpsInjectTransportReceiveAsync0
+  - FwpsQueryConnectionRedirectState0
+  - FwpsRedirectHandleDestroy0
+  - FwpsRedirectHandleCreate0
+  - FwpsApplyModifiedLayerData0
+  - FwpsAcquireWritableLayerDataPointer0
+  - FwpsCompleteClassify0
+  - FwpsPendClassify0
+  - FwpsReleaseClassifyHandle0
+  - FwpsAcquireClassifyHandle0
+  - FwpsCalloutUnregisterByKey0
+  - FwpsConstructIpHeaderForTransportPacket0
+  - FwpsDereferenceNetBufferList0
+  - FwpsReferenceNetBufferList0
+  - FwpsInjectMacSendAsync0
+  - FwpsInjectMacReceiveAsync0
+  - FwpsAllocateCloneNetBufferList0
+  - FwpsFreeNetBufferList0
+  - FwpsAllocateNetBufferAndNetBufferList0
+  - FwpmFilterDeleteById0
+  - FwpsCalloutRegister3
+  - FwpmFilterAdd0
+  - FwpmCalloutDeleteByKey0
+  - FwpmSubLayerDeleteByKey0
+  - FwpmProviderContextDeleteByKey0
+  - FwpsQueryPacketInjectionState0
+  - FwpsInjectTransportSendAsync1
+  - FwpsFreeCloneNetBufferList0
+  - FwpsGetPacketListSecurityInformation0
+  - FwpsFlowRemoveContext0
+  - FwpsFlowAssociateContext0
+  - FwpsCalloutUnregisterById0
+  - FwpmCalloutAdd0
+  - FwpmSubLayerAdd0
+  - FwpmProviderAdd0
+  - FwpmTransactionAbort0
+  - FwpmTransactionCommit0
+  - FwpmTransactionBegin0
+  - FwpmEngineClose0
+  - FwpmEngineOpen0
+  - FwpsInjectionHandleDestroy0
+  - FwpsInjectionHandleCreate0
+  - WdfVersionUnbind
+  - WdfVersionBindClass
+  - WdfVersionUnbindClass
+  - WdfVersionBind
+  Imports:
+  - ntoskrnl.exe
+  - NDIS.SYS
+  - fwpkclnt.sys
+  - WDFLDR.SYS
+  InternalName: KfeCoDrv.sys
+  MD5: 697f698b59f32f66cd8166e43a5c49c7
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: KfeCoDrv.sys
+  Product: Killer Traffic Control
+  ProductVersion: 9.7.4.11
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: b301b486d17ef17fe9acb03cf6ae3f6a
+    SHA1: ee057f4265cd4f04330043b3293b6ee0e459b633
+    SHA256: 49e01950af25f272bc33299d131748ef0fa66aa52ac039711082e9122d6f6d8c
+  SHA1: f5d58452620b55c2931cba75eb701f4cde90a9e4
+  SHA256: b583414fcee280128788f7b39451c511376fe821f455d4f3702795e96d560704
+  Sections:
+    .text:
+      Entropy: 6.357724164029769
+      Virtual Size: '0x20a36'
+    .rdata:
+      Entropy: 5.659188529377184
+      Virtual Size: '0x3694'
+    .data:
+      Entropy: 5.765325174395972
+      Virtual Size: '0x12b9e60'
+    .pdata:
+      Entropy: 5.3747108436250635
+      Virtual Size: '0x15b4'
+    PAGE:
+      Entropy: 5.469889141982762
+      Virtual Size: '0x120'
+    INIT:
+      Entropy: 5.3585580911922355
+      Virtual Size: '0xeea'
+    .rsrc:
+      Entropy: 3.6394619362630465
+      Virtual Size: '0xc40'
+    .reloc:
+      Entropy: 3.99391294150606
+      Virtual Size: '0x30'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Texas, L=Austin, O=Rivet Networks LLC, CN=Rivet Networks LLC
+      ValidFrom: '2020-06-26 00:00:00'
+      ValidTo: '2021-07-01 12:00:00'
+      Signature: abf01f216d547fddd1906d605cee818c112ccb63b4102fe93cd215dcc3a619e51ac0cb95e094bd3f00091bd4c27de102be07fb3bf81da2ac84cecbd127bfa975a0cdf4f4e4b5ccc97a12613fe9c88c3cc71f9ce5e7142833e7ee728cacc9d28bde4c6533dd97f4083d884f5becfcde942a3934cd58f9590defaed7370382d7a318938b941d54b74a5015c1f6cbd69ce717a61e5171c3895ca5a5e5407e8f6aca5088caf373af711a575dc21995e949e2b8a32e91378a4f677a5ca39b6c3ccb2b95f8fe88e9c6437e37096adb5ccb67ac1270d155728de644876bc7571da01cad1b4df2cc3d7a4d4a14bf3082a48ed6feb7fc9180ad2df14aea246bf0bd8154cb
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0824024fda0b4b1b496eeeddfcff6e16
+      Version: 3
+      TBS:
+        MD5: 442b1dbda48f9394d93cd7f179212f66
+        SHA1: 61311e42ae706d22a7e44fb2f99334fcdaa56f77
+        SHA256: 49384716c6fa94187600b02c48dda179ee50019c6160c23bb031169dc30bcb61
+        SHA384: 5f3c9d0c0a595c967418907dd5c5b05f3202a02e577cb55ae21d06384dc658d964d44a4ca3c7fb529c2a4a609a3486dc
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Code Signing CA
+      ValidFrom: '2013-10-22 12:00:00'
+      ValidTo: '2028-10-22 12:00:00'
+      Signature: 3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 0409181b5fd5bb66755343b56f955008
+      Version: 3
+      TBS:
+        MD5: 9359496ca4f021408b9d8923cab8b179
+        SHA1: 2aed40d7759997830870769be250199fd609e40e
+        SHA256: e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65
+        SHA384: 5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
+        CA
+      ValidFrom: '2011-04-15 19:41:37'
+      ValidTo: '2021-04-15 19:51:37'
+      Signature: 5cf5b22d02ceed01b53512d813f7aa4014c7a15ca08a55ed7e55ea6ac457176fd04722423658efc5ac61c5f62c52ce6ae6c80d85dab334420ea40225182672b92a4ea57e4b16f2a0e40c449ce24d9af474f0f927a6699031c244654348c74869d0fc8409f286140ac22996857f11eb8713176ed3ec6bff1d578ab17b1ea5a07ce9a27a68e5fac6b161d67263fa379163835599f81d614f0c6fa3f7bcb1152acc8d85e31417ef7e49443fb022c0f0acbe2fdbe10c86b0f4585c5a10a94bcdf3448a4652083e0a6210e9459504b78b8d4b074f500db7bbe7fb8ca27878c6c53b7663b2cfe521845a66fce04c79834ecfa8ee700586587cc29cd73ca3ad3c7e76625c87d0ed7cd5c55b1421f4be75a275d2e9e15ad020307841624d6b5e6e1b1710244ad8588775d015d762bbfd185665842561977faad49df4f35d6da031c2e19e02ac3e90c3327ee832903416d08b14cf95accee58c54a265b8bfed186a57073ed3e79a4a2f081a041c49871a8ae61b08a365d81c31c50d9cbab368ddf45076160675fec403e7d13edfdc862e10027e661296534e7af3365879b12042d8963f35be3f8ef2999743f5e40ce13c68728c8d49d75a52b573fb7a35943a61b08482c04885c19732d39b725fa0d2348f7ef0467cf28c7294c707b0d7b5b230b81965f09c8327b0a0abd0a2727e050fb3aeddb95b9b42bcc32663456b86f11d4643edc8
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611cb28a000000000026
+      Version: 3
+      TBS:
+        MD5: 983a0c315a50542362f2bd6a5d71c8d0
+        SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
+        SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
+    Signer:
+    - SerialNumber: 0824024fda0b4b1b496eeeddfcff6e16
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+        ID Code Signing CA
+      Version: 1
+  Imphash: 2df11474daf362b1b2fa3d3a89b6acbe
+  LoadsDespiteHVCI: 'FALSE'

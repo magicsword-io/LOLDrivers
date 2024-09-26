@@ -9,155 +9,153 @@ CVE:
 - CVE-2023-1453
 Category: vulnerable driver
 Commands:
-    Command: sc.exe create wsdkd.sys binPath=C:\windows\temp\wsdkd.sys type=kernel
-        && sc.exe start wsdkd.sys
-    Description: A vulnerability was found in Watchdog Anti-Virus 1.4.214.0. It has
-        been rated as critical. Affected by this issue is the function 0x80002008
-        in the library wsdk-driver.sys of the component IoControlCode Handler. The
-        manipulation leads to improper access controls. Attacking locally is a requirement.
-        The exploit has been disclosed to the public and may be used. VDB-223298 is
-        the identifier assigned to this vulnerability.
-    Usecase: Elevate privileges
-    Privileges: kernel
-    OperatingSystem: Windows 10
+  Command: sc.exe create wsdkd.sys binPath=C:\windows\temp\wsdkd.sys type=kernel &&
+    sc.exe start wsdkd.sys
+  Description: A vulnerability was found in Watchdog Anti-Virus 1.4.214.0. It has
+    been rated as critical. Affected by this issue is the function 0x80002008 in the
+    library wsdk-driver.sys of the component IoControlCode Handler. The manipulation
+    leads to improper access controls. Attacking locally is a requirement. The exploit
+    has been disclosed to the public and may be used. VDB-223298 is the identifier
+    assigned to this vulnerability.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
 Resources:
 - https://github.com/zeze-zeze/WindowsKernelVuln/tree/master/CVE-2023-1453
 - https://nvd.nist.gov/vuln/detail/CVE-2023-1453
 - https://avd.aquasec.com/nvd/2023/cve-2023-1453/
 Detection:
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Acknowledgement:
-    Person: Chris Beckett, Jon Petersen
-    Handle: '@cbecks_2'
+  Person: Chris Beckett, Jon Petersen
+  Handle: '@cbecks_2'
 KnownVulnerableSamples:
--   Filename: wsdkd.sys
-    MD5: eff3a9cc3e99ef3ddae57df72807f0c7
-    SHA1: 611411538b2bc9045d29bbd07e6845e918343e3c
-    SHA256: 6278bc785113831b2ec3368e2c9c9e89e8aca49085a59d8d38dac651471d6440
-    Signature: ''
-    Date: ''
-    Publisher: ''
-    Company: WatchDogDevelopment.com, LLC.
-    Description: WatchDog Antivirus Driver
-    Product: wsdkd
-    ProductVersion: 0.3.1.0
-    FileVersion: 0.3.1.0
-    MachineType: AMD64
-    OriginalFilename: wsdkd.sys
-    Authentihash:
-        MD5: 081783e6cad865b315ac1343a481aab6
-        SHA1: e7d2e9b79774d5fac9c9ce299c7f705f1305d781
-        SHA256: 0cb429e6daaba89111d2edb3e01ef1d8ac9b90813b9d80292fe8050287a63146
-    RichPEHeaderHash:
-        MD5: 686a72d8fbac43c8bb0da656a345ad4f
-        SHA1: f44975463e54efb7dca1197b53a2a12b340ab70b
-        SHA256: 2456319bd369f9090d42eddff4ffe2cc8c31fc20037e6582103bf1dfa82c0663
-    Sections:
-        .text:
-            Entropy: 6.120818274031121
-            Virtual Size: '0x12a9'
-        .rdata:
-            Entropy: 3.4807301528585097
-            Virtual Size: '0x79c'
-        .data:
-            Entropy: 2.068369848904217
-            Virtual Size: '0x2c'
-        .pdata:
-            Entropy: 3.816937391759435
-            Virtual Size: '0x18c'
-        INIT:
-            Entropy: 5.138280288562083
-            Virtual Size: '0x490'
-        .rsrc:
-            Entropy: 3.2936061601594235
-            Virtual Size: '0x340'
-        .reloc:
-            Entropy: 3.5339846406206146
-            Virtual Size: '0x24'
-    MagicHeader: 50 45 0 0
-    CreationTimestamp: '2022-02-22 05:33:30'
-    InternalName: wsdkd.sys
-    Copyright: Copyright (C) 2022
-    Imports:
-    - ntoskrnl.exe
-    - FLTMGR.SYS
-    ExportedFunctions: ''
-    ImportedFunctions:
-    - IoGetDeviceAttachmentBaseRef
-    - ZwDeleteFile
-    - IoFileObjectType
-    - RtlGetVersion
-    - IofCompleteRequest
-    - IoCreateDevice
-    - ObCloseHandle
-    - IoDeleteDevice
-    - IoDeleteSymbolicLink
-    - __C_specific_handler
-    - MmGetSystemRoutineAddress
-    - IoSetThreadHardErrorMode
-    - _local_unwind
-    - IoCreateFileSpecifyDeviceObjectHint
-    - ObReferenceObjectByHandle
-    - IoGetRelatedDeviceObject
-    - ExFreePoolWithTag
-    - ExAllocatePoolWithTag
-    - RtlInitUnicodeString
-    - IoCreateSymbolicLink
-    - RtlSetDaclSecurityDescriptor
-    - KeBugCheckEx
-    - FltStartFiltering
-    - FltRegisterFilter
-    - FltBuildDefaultSecurityDescriptor
-    - FltSendMessage
-    - FltCloseCommunicationPort
-    - FltCreateCommunicationPort
-    - FltUnregisterFilter
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: ??=Private Organization, serialNumber=460726, ??=US, ??=Idaho,
-                C=US, ST=Idaho, L=Boise, ??=702 W Idaho Street Suite 1100, O=WATCHDOGDEVELOPMENT.COM,
-                LLC, CN=WATCHDOGDEVELOPMENT.COM, LLC
-            ValidFrom: '2021-04-21 14:24:27'
-            ValidTo: '2022-03-25 19:57:48'
-            Signature: 9ba0d9eef89f4e9a41f5cf68ac4fe0f024dac877c639b288bae6c89bdbcb5ea6c81f1b8bd62f53be6a880bcd072c82ac2dc99f32f56bc6b02946d0bba3ebefe29dcf49e118dcfd966b4fa9ca56a4845e61910c077fe7fbbbf56daa73a82be2ceff3a9e84b397fe97dfb407c7d9160dd92a371fb76a2d35c8ba04c94e5028b2e3354fb09dc8974298b654f7a2ec4b703cf36aa5dada972d076a5685b5e292e2521c0d1b6ead53911bbe887e49916dca7913ee57cb16da99537f2addeb1cef02465db1b72b4ed09dc275230eec1aba61848a07d34b4d271619a5a6230b73fe406cf6aae6c2d20cbf2ff7d18eb662804680c96b8d390713c22d80e6e84b3933bd519d9ecc0af19282a5ab7d4886da8e0ca6947135691bd2f891258e8ef8f913de42229d87985c96da4b58de561afacaa99800ffcaa2d386fc88d8f6f82e7442cbd51ba9f3f4e8e9d2d1752d467e1d95a06cafd4438ad8648dc3d552126a589b205269b05be5b181c93fedf0a20caab8a185663f56be9e86287db166eb49493a5789e4e95f455d4f032274a63b6e8ad8bf8534aef7a8ab80c73ff24cf42db5d4293f6d5f5c6b7262c211e767e87cbe196ec28ec820eb1e5b138c3604329ed5d0139cc8f2e049c7d416fb7a0c5a55dcd0cc5fcf8e566d644b5583e557f24244296762139a4ee1fd70be0b15402c7193996b25223dd05e9206e0290aa6e1f52f3097b3
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-            IsCertificateAuthority: false
-            SerialNumber: 1f7b0de3090ee13a436315a6
-            Version: 3
-            TBS:
-                MD5: cf8f84376abaf814f76cb8332f32d76f
-                SHA1: 1103e907c83a85682befe4adba4d03b8f6c95543
-                SHA256: 8de6eae4e1479f02dc58281ad5c035e629345ff74a177e559192d03bd23e0f9f
-                SHA384: 6fba402fc6da63e224d7b775f3377322607bfda2e9f00ea3a22705921ff4a9ea40b28bc032799ca30fe000df3e429793
-        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning
-                CA 2020
-            ValidFrom: '2020-07-28 00:00:00'
-            ValidTo: '2030-07-28 00:00:00'
-            Signature: 2575a009c939bab7a139892f189fabd6eb1d4be8947c0d07689b1c9def71b6176a6b024fb33f864587cc659b4ce35806022266d56102c5638fd4a2f1b65e250b7796e9cd7140338829eceef3a26dbc4db53e064bc97333ca08142d3d4ce8b0ba75a6742da4583a6c1349f8a5150a149685b16a68342542af9656f410fa247df12b72c116e16bebe6a998c73e5af4d0189dfd74978677462a3d237d28738aaeef2b1b9abf6c53a7149e3c8771c05e8ec8fbd32a9233ea574d5e075ecac118ac812d1a21fa6ecf97617bdf717a3aca63f7d530443732febb4385dcbafca6ca33192b776ddbcb05f07e5f752ea2b6bf35aa3663c9ce64d9bdfcbc2cf3495600c8122bc627bb37af57efc4cf1e29c4f4e22dce2a61cf57edf50a40e2f518d61ee9902fcad3875f938a481a111de537859f2e66629a5e814e95ac555743dc538b257e3c610f8a0bbaf53fa6d78ef704565e21bb9fd76a7180bf96de7203d8d8222bf327164f38e851400cae92efbe3d7df780c64c36578495a7841548300e5227088d8ea2bd22c719c9a6ca0ea87a36db6aba615f112495a4e28e68ee19a949995ed0b434bdd6f940c710973152393529118724d3c4fba963cb7748d5fa62fc24e0047a4ed0e46edece9e385026f4217165d70925d4c907007ab8c7f377e8c5d4e255d0d31ef67f52e2498db911720c88442633660144dfe4330e21de62894807daf5
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-            IsCertificateAuthority: true
-            SerialNumber: 77bd0e05b7590bb61d4761531e3f75ed
-            Version: 3
-            TBS:
-                MD5: 65fd1dac1f115d9507f4e1840c8cb36a
-                SHA1: c7cf5607e19b22fe60c055e71d9b555d70f71f66
-                SHA256: d9c7db0b704f07089440c56e69a0f31d730edf77cfbf7514630e8b5390a270fe
-                SHA384: defe810317bd1215b4d1ee0ec8a5fb38b21d094ef1173cae670956cd899232638e4f9473fd947bd550a4a77300bbb2ab
-        Signer:
-        -   SerialNumber: 1f7b0de3090ee13a436315a6
-            Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning
-                CA 2020
-            Version: 1
-    Imphash: 1e13511288689b63b2e1348bf5eb567b
-    LoadsDespiteHVCI: 'FALSE'
+- Filename: wsdkd.sys
+  MD5: eff3a9cc3e99ef3ddae57df72807f0c7
+  SHA1: 611411538b2bc9045d29bbd07e6845e918343e3c
+  SHA256: 6278bc785113831b2ec3368e2c9c9e89e8aca49085a59d8d38dac651471d6440
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: WatchDogDevelopment.com, LLC.
+  Description: WatchDog Antivirus Driver
+  Product: wsdkd
+  ProductVersion: 0.3.1.0
+  FileVersion: 0.3.1.0
+  MachineType: AMD64
+  OriginalFilename: wsdkd.sys
+  Authentihash:
+    MD5: 081783e6cad865b315ac1343a481aab6
+    SHA1: e7d2e9b79774d5fac9c9ce299c7f705f1305d781
+    SHA256: 0cb429e6daaba89111d2edb3e01ef1d8ac9b90813b9d80292fe8050287a63146
+  RichPEHeaderHash:
+    MD5: 686a72d8fbac43c8bb0da656a345ad4f
+    SHA1: f44975463e54efb7dca1197b53a2a12b340ab70b
+    SHA256: 2456319bd369f9090d42eddff4ffe2cc8c31fc20037e6582103bf1dfa82c0663
+  Sections:
+    .text:
+      Entropy: 6.120818274031121
+      Virtual Size: '0x12a9'
+    .rdata:
+      Entropy: 3.4807301528585097
+      Virtual Size: '0x79c'
+    .data:
+      Entropy: 2.068369848904217
+      Virtual Size: '0x2c'
+    .pdata:
+      Entropy: 3.816937391759435
+      Virtual Size: '0x18c'
+    INIT:
+      Entropy: 5.138280288562083
+      Virtual Size: '0x490'
+    .rsrc:
+      Entropy: 3.2936061601594235
+      Virtual Size: '0x340'
+    .reloc:
+      Entropy: 3.5339846406206146
+      Virtual Size: '0x24'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2022-02-22 05:33:30'
+  InternalName: wsdkd.sys
+  Copyright: Copyright (C) 2022
+  Imports:
+  - ntoskrnl.exe
+  - FLTMGR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - IoGetDeviceAttachmentBaseRef
+  - ZwDeleteFile
+  - IoFileObjectType
+  - RtlGetVersion
+  - IofCompleteRequest
+  - IoCreateDevice
+  - ObCloseHandle
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - __C_specific_handler
+  - MmGetSystemRoutineAddress
+  - IoSetThreadHardErrorMode
+  - _local_unwind
+  - IoCreateFileSpecifyDeviceObjectHint
+  - ObReferenceObjectByHandle
+  - IoGetRelatedDeviceObject
+  - ExFreePoolWithTag
+  - ExAllocatePoolWithTag
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - RtlSetDaclSecurityDescriptor
+  - KeBugCheckEx
+  - FltStartFiltering
+  - FltRegisterFilter
+  - FltBuildDefaultSecurityDescriptor
+  - FltSendMessage
+  - FltCloseCommunicationPort
+  - FltCreateCommunicationPort
+  - FltUnregisterFilter
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: ??=Private Organization, serialNumber=460726, ??=US, ??=Idaho, C=US,
+        ST=Idaho, L=Boise, ??=702 W Idaho Street Suite 1100, O=WATCHDOGDEVELOPMENT.COM,
+        LLC, CN=WATCHDOGDEVELOPMENT.COM, LLC
+      ValidFrom: '2021-04-21 14:24:27'
+      ValidTo: '2022-03-25 19:57:48'
+      Signature: 9ba0d9eef89f4e9a41f5cf68ac4fe0f024dac877c639b288bae6c89bdbcb5ea6c81f1b8bd62f53be6a880bcd072c82ac2dc99f32f56bc6b02946d0bba3ebefe29dcf49e118dcfd966b4fa9ca56a4845e61910c077fe7fbbbf56daa73a82be2ceff3a9e84b397fe97dfb407c7d9160dd92a371fb76a2d35c8ba04c94e5028b2e3354fb09dc8974298b654f7a2ec4b703cf36aa5dada972d076a5685b5e292e2521c0d1b6ead53911bbe887e49916dca7913ee57cb16da99537f2addeb1cef02465db1b72b4ed09dc275230eec1aba61848a07d34b4d271619a5a6230b73fe406cf6aae6c2d20cbf2ff7d18eb662804680c96b8d390713c22d80e6e84b3933bd519d9ecc0af19282a5ab7d4886da8e0ca6947135691bd2f891258e8ef8f913de42229d87985c96da4b58de561afacaa99800ffcaa2d386fc88d8f6f82e7442cbd51ba9f3f4e8e9d2d1752d467e1d95a06cafd4438ad8648dc3d552126a589b205269b05be5b181c93fedf0a20caab8a185663f56be9e86287db166eb49493a5789e4e95f455d4f032274a63b6e8ad8bf8534aef7a8ab80c73ff24cf42db5d4293f6d5f5c6b7262c211e767e87cbe196ec28ec820eb1e5b138c3604329ed5d0139cc8f2e049c7d416fb7a0c5a55dcd0cc5fcf8e566d644b5583e557f24244296762139a4ee1fd70be0b15402c7193996b25223dd05e9206e0290aa6e1f52f3097b3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 1f7b0de3090ee13a436315a6
+      Version: 3
+      TBS:
+        MD5: cf8f84376abaf814f76cb8332f32d76f
+        SHA1: 1103e907c83a85682befe4adba4d03b8f6c95543
+        SHA256: 8de6eae4e1479f02dc58281ad5c035e629345ff74a177e559192d03bd23e0f9f
+        SHA384: 6fba402fc6da63e224d7b775f3377322607bfda2e9f00ea3a22705921ff4a9ea40b28bc032799ca30fe000df3e429793
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
+      ValidFrom: '2020-07-28 00:00:00'
+      ValidTo: '2030-07-28 00:00:00'
+      Signature: 2575a009c939bab7a139892f189fabd6eb1d4be8947c0d07689b1c9def71b6176a6b024fb33f864587cc659b4ce35806022266d56102c5638fd4a2f1b65e250b7796e9cd7140338829eceef3a26dbc4db53e064bc97333ca08142d3d4ce8b0ba75a6742da4583a6c1349f8a5150a149685b16a68342542af9656f410fa247df12b72c116e16bebe6a998c73e5af4d0189dfd74978677462a3d237d28738aaeef2b1b9abf6c53a7149e3c8771c05e8ec8fbd32a9233ea574d5e075ecac118ac812d1a21fa6ecf97617bdf717a3aca63f7d530443732febb4385dcbafca6ca33192b776ddbcb05f07e5f752ea2b6bf35aa3663c9ce64d9bdfcbc2cf3495600c8122bc627bb37af57efc4cf1e29c4f4e22dce2a61cf57edf50a40e2f518d61ee9902fcad3875f938a481a111de537859f2e66629a5e814e95ac555743dc538b257e3c610f8a0bbaf53fa6d78ef704565e21bb9fd76a7180bf96de7203d8d8222bf327164f38e851400cae92efbe3d7df780c64c36578495a7841548300e5227088d8ea2bd22c719c9a6ca0ea87a36db6aba615f112495a4e28e68ee19a949995ed0b434bdd6f940c710973152393529118724d3c4fba963cb7748d5fa62fc24e0047a4ed0e46edece9e385026f4217165d70925d4c907007ab8c7f377e8c5d4e255d0d31ef67f52e2498db911720c88442633660144dfe4330e21de62894807daf5
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 77bd0e05b7590bb61d4761531e3f75ed
+      Version: 3
+      TBS:
+        MD5: 65fd1dac1f115d9507f4e1840c8cb36a
+        SHA1: c7cf5607e19b22fe60c055e71d9b555d70f71f66
+        SHA256: d9c7db0b704f07089440c56e69a0f31d730edf77cfbf7514630e8b5390a270fe
+        SHA384: defe810317bd1215b4d1ee0ec8a5fb38b21d094ef1173cae670956cd899232638e4f9473fd947bd550a4a77300bbb2ab
+    Signer:
+    - SerialNumber: 1f7b0de3090ee13a436315a6
+      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
+      Version: 1
+  Imphash: 1e13511288689b63b2e1348bf5eb567b
+  LoadsDespiteHVCI: 'TRUE'

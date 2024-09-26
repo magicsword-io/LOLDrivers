@@ -7,418 +7,418 @@ Created: '2023-05-20'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-    Command: sc.exe create EIO.sys binPath=C:\windows\temp\EIO.sys type=kernel &&
-        sc.exe start EIO.sys
-    Description: This is a vulnerable driver per Microsoft.
-    OperatingSystem: Windows 10
-    Privileges: kernel
-    Usecase: Elevate privileges
+  Command: sc.exe create EIO.sys binPath=C:\windows\temp\EIO.sys type=kernel && sc.exe
+    start EIO.sys
+  Description: This is a vulnerable driver per Microsoft.
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection:
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/b17507a3246020fa0052a172485d7b3567e0161747927f2edf27c40e310852e0.yara
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/cf69704755ec2643dfd245ae1d4e15d77f306aeb1a576ffa159453de1a7345cb.yara
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/b17507a3246020fa0052a172485d7b3567e0161747927f2edf27c40e310852e0.yara
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/cf69704755ec2643dfd245ae1d4e15d77f306aeb1a576ffa159453de1a7345cb.yara
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Acknowledgement:
-    Handle: ''
-    Person: ''
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
--   Authentihash:
-        MD5: ff6c5b1f92372186d4f9879e00e42fcf
-        SHA1: 200be5a696990ee97b4c3176234cde46c3ebc2ce
-        SHA256: 72b36c64f0b349d7816c8e5e2d1a7f59807de0c87d3f071a04dbc56bec9c00db
-    Company: ASUSTeK Computer Inc.
-    Copyright: Copyright 2007 ASUSTeK Computer Inc.
-    CreationTimestamp: '2007-10-16 07:54:18'
-    Date: ''
-    Description: ASUS VGA Kernel Mode Driver
-    ExportedFunctions: ''
-    FileVersion: '1.96'
-    Filename: EIO.sys
-    ImportedFunctions:
-    - IoCreateSymbolicLink
-    - IoCreateDevice
-    - ExAllocatePoolWithTag
-    - IofCallDriver
-    - IoDeleteSymbolicLink
-    - KeInitializeMutex
-    - IoAttachDeviceToDeviceStack
-    - IoDeleteDevice
-    - IoDetachDevice
-    - MmUnmapIoSpace
-    - KeReleaseMutex
-    - KeWaitForSingleObject
-    - KeBugCheckEx
-    - IofCompleteRequest
-    - RtlInitUnicodeString
-    - MmMapIoSpace
-    - KeStallExecutionProcessor
-    - HalTranslateBusAddress
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    InternalName: EIO.sys
-    MD5: be9eeea2a8cac5f6cd92c97f234e2fe1
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: EIO.sys
-    Product: ASUS VGA Kernel Mode Driver
-    ProductVersion: '1.96'
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: 631b52d0fb39bc8beb7c0d3d3f514da3
-        SHA1: 5e80e96c8a5ad4e5dc7564392e3b173f48801a97
-        SHA256: bf9303b65e432a0cf45638587d9df6f824fe37ca3920f35cc3d5c3553d54556f
-    SHA1: 585df373a9c56072ab6074afee8f1ec3778d70f8
-    SHA256: b17507a3246020fa0052a172485d7b3567e0161747927f2edf27c40e310852e0
-    Sections:
-        .text:
-            Entropy: 6.372645817931939
-            Virtual Size: '0x2940'
-        .rdata:
-            Entropy: 4.601458654378137
-            Virtual Size: '0x238'
-        .data:
-            Entropy: 0.30140680731160896
-            Virtual Size: '0x268'
-        .pdata:
-            Entropy: 3.8604464008584847
-            Virtual Size: '0x150'
-        INIT:
-            Entropy: 4.888514779635871
-            Virtual Size: '0x2d6'
-        .rsrc:
-            Entropy: 3.312382528187867
-            Virtual Size: '0x3f8'
-    Signature: ''
-    Signatures: {}
-    Imphash: b8302791cd2edfe6dd562c4854ea495f
-    LoadsDespiteHVCI: 'FALSE'
--   Authentihash:
-        MD5: 5af6b25eec77fec510803a229944c8ad
-        SHA1: ed54e23998978f8124bd1f97c265f708ddba1de0
-        SHA256: d4e7335a177e47688d68ad89940c272f82728c882623f1630e7fd2e03e16f003
-    Company: ASUSTeK Computer Inc.
-    Copyright: Copyright 2004 ASUSTeK Computer Inc.
-    CreationTimestamp: '2009-07-21 20:34:42'
-    Date: ''
-    Description: ASUS VGA Kernel Mode Driver
-    ExportedFunctions: ''
-    FileVersion: '1.97'
-    Filename: EIO.sys
-    ImportedFunctions:
-    - KeInitializeMutex
-    - RtlInitUnicodeString
-    - IoDeleteDevice
-    - IoDetachDevice
-    - MmUnmapIoSpace
-    - MmMapIoSpace
-    - PoStartNextPowerIrp
-    - IofCompleteRequest
-    - ExFreePoolWithTag
-    - PoCallDriver
-    - IoCreateSymbolicLink
-    - IoCreateDevice
-    - IofCallDriver
-    - KeReleaseMutex
-    - KeWaitForSingleObject
-    - KeBugCheckEx
-    - IoDeleteSymbolicLink
-    - IoAttachDeviceToDeviceStack
-    - ExAllocatePoolWithTag
-    - KeStallExecutionProcessor
-    - HalTranslateBusAddress
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    InternalName: EIO.sys
-    MD5: 343ada10d948db29251f2d9c809af204
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: EIO.sys
-    Product: ASUS VGA Kernel Mode Driver
-    ProductVersion: '1.97'
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: 9e879414ec72529ec97c71019ff54ff0
-        SHA1: 9f70178044e7de72a85ee75901f03bacfd277c05
-        SHA256: 769dd395a70eb58e4a9b4bac925874290f3a688367a35aa5a392d93b0fc1fe47
-    SHA1: 3f17ff83dc8a5f875fb1b3a5d3b9fcbe407a99f0
-    SHA256: cf69704755ec2643dfd245ae1d4e15d77f306aeb1a576ffa159453de1a7345cb
-    Sections:
-        .text:
-            Entropy: 6.344394733228123
-            Virtual Size: '0x2af0'
-        .rdata:
-            Entropy: 4.547262034696364
-            Virtual Size: '0x28c'
-        .data:
-            Entropy: 0.30140680731160896
-            Virtual Size: '0x2e8'
-        .pdata:
-            Entropy: 3.922304177151045
-            Virtual Size: '0x18c'
-        INIT:
-            Entropy: 5.040059459826639
-            Virtual Size: '0x348'
-        .rsrc:
-            Entropy: 3.309188519823855
-            Virtual Size: '0x3f8'
-    Signature: ''
-    Signatures: {}
-    Imphash: a96a02cf5f7896a9a9f045d1986bd83c
-    LoadsDespiteHVCI: 'FALSE'
--   Authentihash:
-        MD5: 3fc7ad198c185c20a883e902a02b80f1
-        SHA1: 30a48418d07561c8df8aa4219734f0ded791e430
-        SHA256: 047c1d5bb80826a6f66c182fc8b5f66f59609a71e734117f20a4f98b9866bde5
-    Company: ASUSTeK Computer Inc.
-    Copyright: Copyright 2004 ASUSTeK Computer Inc.
-    CreationTimestamp: '2009-07-21 20:34:52'
-    Date: ''
-    Description: ASUS VGA Kernel Mode Driver
-    ExportedFunctions: ''
-    FileVersion: '1.97'
-    Filename: ''
-    ImportedFunctions:
-    - IoDetachDevice
-    - IofCallDriver
-    - PoCallDriver
-    - PoStartNextPowerIrp
-    - MmUnmapIoSpace
-    - MmMapIoSpace
-    - READ_REGISTER_UCHAR
-    - READ_REGISTER_USHORT
-    - READ_REGISTER_ULONG
-    - WRITE_REGISTER_UCHAR
-    - WRITE_REGISTER_USHORT
-    - RtlInitUnicodeString
-    - ExFreePoolWithTag
-    - IoDeleteSymbolicLink
-    - IofCompleteRequest
-    - KeQuerySystemTime
-    - memmove
-    - ExAllocatePoolWithTag
-    - memset
-    - KeWaitForSingleObject
-    - KeReleaseMutex
-    - KeTickCount
-    - KeBugCheckEx
-    - IoCreateDevice
-    - IoCreateSymbolicLink
-    - IoDeleteDevice
-    - IoAttachDeviceToDeviceStack
-    - WRITE_REGISTER_ULONG
-    - KeInitializeMutex
-    - KeStallExecutionProcessor
-    - WRITE_PORT_UCHAR
-    - READ_PORT_ULONG
-    - WRITE_PORT_ULONG
-    - HalTranslateBusAddress
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    InternalName: EIO.sys
-    MD5: 00143c457c8885fd935fc5d5a6ba07a4
-    MachineType: I386
-    MagicHeader: 50 45 0 0
-    OriginalFilename: EIO.sys
-    PDBPath: ''
-    Product: ASUS VGA Kernel Mode Driver
-    ProductVersion: '1.97'
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: ec621a5c93befc7894cf9e25fe8d8e5a
-        SHA1: 325b01f040538a3c52d4e228d2a12db399e0f3f1
-        SHA256: 2def42426b474ae4318a6b9ddb2295179989bf0418d8a0ab738f0d3225ba006b
-    SHA1: a92207062fb72e6e173b2ffdb12c76834455f5d3
-    SHA256: 1fac3fab8ea2137a7e81a26de121187bf72e7d16ffa3e9aec3886e2376d3c718
-    Sections:
-        .text:
-            Entropy: 6.197406818919454
-            Virtual Size: '0x2300'
-        .rdata:
-            Entropy: 4.397674780869272
-            Virtual Size: '0xf2'
-        .data:
-            Entropy: 0.26335818237546343
-            Virtual Size: '0x124'
-        INIT:
-            Entropy: 5.41898794187558
-            Virtual Size: '0x3e8'
-        .rsrc:
-            Entropy: 3.3076199882850426
-            Virtual Size: '0x3f8'
-        .reloc:
-            Entropy: 5.484189210185175
-            Virtual Size: '0x226'
-    Signature: ''
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW,
-                L=Taipei City, O=ASUSTEK COMPUTER INC., CN=ASUSTEK COMPUTER INC.
-            ValidFrom: '2019-03-18 00:00:00'
-            ValidTo: '2022-03-23 12:00:00'
-            Signature: 05ab2d8216108391cd6f6a64cecefc78936899f2c3d6144e5b457ee70ab001e557a55c07a40a6b5395045e43bf1a320e79e2c12e11446a1e1426530b434e778abc836198ecce68769fa499016f2883e65104cb36a976c4986263485b774f36522f50432ee823651a17d03787ff672db6689a10cb58d84bb7bacf5da54ee5ebe4bae7c9a1ed2d95ecd7e42bb354d375fe94661df0acb3a64aa6866822140a716049924aab891e4955d7321a25875331f5f8b744ad39bbba4c564711273ae5675afd06175243e5e5940afe9fac413170ef21ac125e698edadefea6026eb7117c506fe422867b6479c34ae0300caf99c75dbf5f60465d5677831a55e9fdc10d621b
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-            IsCertificateAuthority: false
-            SerialNumber: 0c5167c023b9adedf0f8918ee65712a1
-            Version: 3
-            TBS:
-                MD5: b9dcc79e9817431a597f16b483f5bab2
-                SHA1: fae5bf9779eed37708a44ba44f440c60174daa14
-                SHA256: e6d299f754eaa1c55b8485adf0eeefdde50a924207ff0e36333c4fe1729e2376
-                SHA384: dc752d4d6f75849adb9d446f5833354b22aca8ddbf8f104aec25d5a61ecfb4ead072ea8ea264d326e41b1313c29f040c
-        -   Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code
-                Signing CA (SHA2)
-            ValidFrom: '2012-04-18 12:00:00'
-            ValidTo: '2027-04-18 12:00:00'
-            Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-            IsCertificateAuthority: true
-            SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
-            Version: 3
-            TBS:
-                MD5: 83f5de89f641d0fbf60248e10a7b9534
-                SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
-                SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
-                SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
-        Signer:
-        -   SerialNumber: 0c5167c023b9adedf0f8918ee65712a1
-            Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code
-                Signing CA (SHA2)
-            Version: 1
-    Imphash: 6a47c957830ccce7ef43ed96aacf7c2c
-    LoadsDespiteHVCI: 'FALSE'
--   Authentihash:
-        MD5: 5af6b25eec77fec510803a229944c8ad
-        SHA1: ed54e23998978f8124bd1f97c265f708ddba1de0
-        SHA256: d4e7335a177e47688d68ad89940c272f82728c882623f1630e7fd2e03e16f003
-    Company: ASUSTeK Computer Inc.
-    Copyright: Copyright 2004 ASUSTeK Computer Inc.
-    CreationTimestamp: '2009-07-21 20:34:42'
-    Date: ''
-    Description: ASUS VGA Kernel Mode Driver
-    ExportedFunctions: ''
-    FileVersion: '1.97'
-    Filename: ''
-    ImportedFunctions:
-    - KeInitializeMutex
-    - RtlInitUnicodeString
-    - IoDeleteDevice
-    - IoDetachDevice
-    - MmUnmapIoSpace
-    - MmMapIoSpace
-    - PoStartNextPowerIrp
-    - IofCompleteRequest
-    - ExFreePoolWithTag
-    - PoCallDriver
-    - IoCreateSymbolicLink
-    - IoCreateDevice
-    - IofCallDriver
-    - KeReleaseMutex
-    - KeWaitForSingleObject
-    - KeBugCheckEx
-    - IoDeleteSymbolicLink
-    - IoAttachDeviceToDeviceStack
-    - ExAllocatePoolWithTag
-    - KeStallExecutionProcessor
-    - HalTranslateBusAddress
-    Imports:
-    - ntoskrnl.exe
-    - HAL.dll
-    InternalName: EIO.sys
-    MD5: 6dd82d91f981893be57ff90101a7f7f1
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: EIO.sys
-    PDBPath: ''
-    Product: ASUS VGA Kernel Mode Driver
-    ProductVersion: '1.97'
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: 9e879414ec72529ec97c71019ff54ff0
-        SHA1: 9f70178044e7de72a85ee75901f03bacfd277c05
-        SHA256: 769dd395a70eb58e4a9b4bac925874290f3a688367a35aa5a392d93b0fc1fe47
-    SHA1: 21ce232de0f306a162d6407fe1826aff435b2a04
-    SHA256: f4c7e94a7c2e49b130671b573a9e4ff4527a777978f371c659c3f97c14d126de
-    Sections:
-        .text:
-            Entropy: 6.344394733228123
-            Virtual Size: '0x2af0'
-        .rdata:
-            Entropy: 4.547262034696364
-            Virtual Size: '0x28c'
-        .data:
-            Entropy: 0.30140680731160896
-            Virtual Size: '0x2e8'
-        .pdata:
-            Entropy: 3.922304177151045
-            Virtual Size: '0x18c'
-        INIT:
-            Entropy: 5.040059459826639
-            Virtual Size: '0x348'
-        .rsrc:
-            Entropy: 3.309188519823855
-            Virtual Size: '0x3f8'
-    Signature: ''
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW,
-                L=Taipei City, O=ASUSTEK COMPUTER INC., CN=ASUSTEK COMPUTER INC.
-            ValidFrom: '2019-03-18 00:00:00'
-            ValidTo: '2022-03-23 12:00:00'
-            Signature: 05ab2d8216108391cd6f6a64cecefc78936899f2c3d6144e5b457ee70ab001e557a55c07a40a6b5395045e43bf1a320e79e2c12e11446a1e1426530b434e778abc836198ecce68769fa499016f2883e65104cb36a976c4986263485b774f36522f50432ee823651a17d03787ff672db6689a10cb58d84bb7bacf5da54ee5ebe4bae7c9a1ed2d95ecd7e42bb354d375fe94661df0acb3a64aa6866822140a716049924aab891e4955d7321a25875331f5f8b744ad39bbba4c564711273ae5675afd06175243e5e5940afe9fac413170ef21ac125e698edadefea6026eb7117c506fe422867b6479c34ae0300caf99c75dbf5f60465d5677831a55e9fdc10d621b
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-            IsCertificateAuthority: false
-            SerialNumber: 0c5167c023b9adedf0f8918ee65712a1
-            Version: 3
-            TBS:
-                MD5: b9dcc79e9817431a597f16b483f5bab2
-                SHA1: fae5bf9779eed37708a44ba44f440c60174daa14
-                SHA256: e6d299f754eaa1c55b8485adf0eeefdde50a924207ff0e36333c4fe1729e2376
-                SHA384: dc752d4d6f75849adb9d446f5833354b22aca8ddbf8f104aec25d5a61ecfb4ead072ea8ea264d326e41b1313c29f040c
-        -   Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code
-                Signing CA (SHA2)
-            ValidFrom: '2012-04-18 12:00:00'
-            ValidTo: '2027-04-18 12:00:00'
-            Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-            IsCertificateAuthority: true
-            SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
-            Version: 3
-            TBS:
-                MD5: 83f5de89f641d0fbf60248e10a7b9534
-                SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
-                SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
-                SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
-        Signer:
-        -   SerialNumber: 0c5167c023b9adedf0f8918ee65712a1
-            Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code
-                Signing CA (SHA2)
-            Version: 1
-    Imphash: a96a02cf5f7896a9a9f045d1986bd83c
-    LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: ff6c5b1f92372186d4f9879e00e42fcf
+    SHA1: 200be5a696990ee97b4c3176234cde46c3ebc2ce
+    SHA256: 72b36c64f0b349d7816c8e5e2d1a7f59807de0c87d3f071a04dbc56bec9c00db
+  Company: ASUSTeK Computer Inc.
+  Copyright: Copyright 2007 ASUSTeK Computer Inc.
+  CreationTimestamp: '2007-10-16 07:54:18'
+  Date: ''
+  Description: ASUS VGA Kernel Mode Driver
+  ExportedFunctions: ''
+  FileVersion: '1.96'
+  Filename: EIO.sys
+  ImportedFunctions:
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - ExAllocatePoolWithTag
+  - IofCallDriver
+  - IoDeleteSymbolicLink
+  - KeInitializeMutex
+  - IoAttachDeviceToDeviceStack
+  - IoDeleteDevice
+  - IoDetachDevice
+  - MmUnmapIoSpace
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - KeBugCheckEx
+  - IofCompleteRequest
+  - RtlInitUnicodeString
+  - MmMapIoSpace
+  - KeStallExecutionProcessor
+  - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: EIO.sys
+  MD5: be9eeea2a8cac5f6cd92c97f234e2fe1
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: EIO.sys
+  Product: ASUS VGA Kernel Mode Driver
+  ProductVersion: '1.96'
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 631b52d0fb39bc8beb7c0d3d3f514da3
+    SHA1: 5e80e96c8a5ad4e5dc7564392e3b173f48801a97
+    SHA256: bf9303b65e432a0cf45638587d9df6f824fe37ca3920f35cc3d5c3553d54556f
+  SHA1: 585df373a9c56072ab6074afee8f1ec3778d70f8
+  SHA256: b17507a3246020fa0052a172485d7b3567e0161747927f2edf27c40e310852e0
+  Sections:
+    .text:
+      Entropy: 6.372645817931939
+      Virtual Size: '0x2940'
+    .rdata:
+      Entropy: 4.601458654378137
+      Virtual Size: '0x238'
+    .data:
+      Entropy: 0.30140680731160896
+      Virtual Size: '0x268'
+    .pdata:
+      Entropy: 3.8604464008584847
+      Virtual Size: '0x150'
+    INIT:
+      Entropy: 4.888514779635871
+      Virtual Size: '0x2d6'
+    .rsrc:
+      Entropy: 3.312382528187867
+      Virtual Size: '0x3f8'
+  Signature: ''
+  Signatures: {}
+  Imphash: b8302791cd2edfe6dd562c4854ea495f
+  LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: 5af6b25eec77fec510803a229944c8ad
+    SHA1: ed54e23998978f8124bd1f97c265f708ddba1de0
+    SHA256: d4e7335a177e47688d68ad89940c272f82728c882623f1630e7fd2e03e16f003
+  Company: ASUSTeK Computer Inc.
+  Copyright: Copyright 2004 ASUSTeK Computer Inc.
+  CreationTimestamp: '2009-07-21 20:34:42'
+  Date: ''
+  Description: ASUS VGA Kernel Mode Driver
+  ExportedFunctions: ''
+  FileVersion: '1.97'
+  Filename: EIO.sys
+  ImportedFunctions:
+  - KeInitializeMutex
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IoDetachDevice
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - PoStartNextPowerIrp
+  - IofCompleteRequest
+  - ExFreePoolWithTag
+  - PoCallDriver
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - IofCallDriver
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - KeBugCheckEx
+  - IoDeleteSymbolicLink
+  - IoAttachDeviceToDeviceStack
+  - ExAllocatePoolWithTag
+  - KeStallExecutionProcessor
+  - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: EIO.sys
+  MD5: 343ada10d948db29251f2d9c809af204
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: EIO.sys
+  Product: ASUS VGA Kernel Mode Driver
+  ProductVersion: '1.97'
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 9e879414ec72529ec97c71019ff54ff0
+    SHA1: 9f70178044e7de72a85ee75901f03bacfd277c05
+    SHA256: 769dd395a70eb58e4a9b4bac925874290f3a688367a35aa5a392d93b0fc1fe47
+  SHA1: 3f17ff83dc8a5f875fb1b3a5d3b9fcbe407a99f0
+  SHA256: cf69704755ec2643dfd245ae1d4e15d77f306aeb1a576ffa159453de1a7345cb
+  Sections:
+    .text:
+      Entropy: 6.344394733228123
+      Virtual Size: '0x2af0'
+    .rdata:
+      Entropy: 4.547262034696364
+      Virtual Size: '0x28c'
+    .data:
+      Entropy: 0.30140680731160896
+      Virtual Size: '0x2e8'
+    .pdata:
+      Entropy: 3.922304177151045
+      Virtual Size: '0x18c'
+    INIT:
+      Entropy: 5.040059459826639
+      Virtual Size: '0x348'
+    .rsrc:
+      Entropy: 3.309188519823855
+      Virtual Size: '0x3f8'
+  Signature: ''
+  Signatures: {}
+  Imphash: a96a02cf5f7896a9a9f045d1986bd83c
+  LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: 3fc7ad198c185c20a883e902a02b80f1
+    SHA1: 30a48418d07561c8df8aa4219734f0ded791e430
+    SHA256: 047c1d5bb80826a6f66c182fc8b5f66f59609a71e734117f20a4f98b9866bde5
+  Company: ASUSTeK Computer Inc.
+  Copyright: Copyright 2004 ASUSTeK Computer Inc.
+  CreationTimestamp: '2009-07-21 20:34:52'
+  Date: ''
+  Description: ASUS VGA Kernel Mode Driver
+  ExportedFunctions: ''
+  FileVersion: '1.97'
+  Filename: ''
+  ImportedFunctions:
+  - IoDetachDevice
+  - IofCallDriver
+  - PoCallDriver
+  - PoStartNextPowerIrp
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - READ_REGISTER_UCHAR
+  - READ_REGISTER_USHORT
+  - READ_REGISTER_ULONG
+  - WRITE_REGISTER_UCHAR
+  - WRITE_REGISTER_USHORT
+  - RtlInitUnicodeString
+  - ExFreePoolWithTag
+  - IoDeleteSymbolicLink
+  - IofCompleteRequest
+  - KeQuerySystemTime
+  - memmove
+  - ExAllocatePoolWithTag
+  - memset
+  - KeWaitForSingleObject
+  - KeReleaseMutex
+  - KeTickCount
+  - KeBugCheckEx
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoAttachDeviceToDeviceStack
+  - WRITE_REGISTER_ULONG
+  - KeInitializeMutex
+  - KeStallExecutionProcessor
+  - WRITE_PORT_UCHAR
+  - READ_PORT_ULONG
+  - WRITE_PORT_ULONG
+  - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: EIO.sys
+  MD5: 00143c457c8885fd935fc5d5a6ba07a4
+  MachineType: I386
+  MagicHeader: 50 45 0 0
+  OriginalFilename: EIO.sys
+  PDBPath: ''
+  Product: ASUS VGA Kernel Mode Driver
+  ProductVersion: '1.97'
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: ec621a5c93befc7894cf9e25fe8d8e5a
+    SHA1: 325b01f040538a3c52d4e228d2a12db399e0f3f1
+    SHA256: 2def42426b474ae4318a6b9ddb2295179989bf0418d8a0ab738f0d3225ba006b
+  SHA1: a92207062fb72e6e173b2ffdb12c76834455f5d3
+  SHA256: 1fac3fab8ea2137a7e81a26de121187bf72e7d16ffa3e9aec3886e2376d3c718
+  Sections:
+    .text:
+      Entropy: 6.197406818919454
+      Virtual Size: '0x2300'
+    .rdata:
+      Entropy: 4.397674780869272
+      Virtual Size: '0xf2'
+    .data:
+      Entropy: 0.26335818237546343
+      Virtual Size: '0x124'
+    INIT:
+      Entropy: 5.41898794187558
+      Virtual Size: '0x3e8'
+    .rsrc:
+      Entropy: 3.3076199882850426
+      Virtual Size: '0x3f8'
+    .reloc:
+      Entropy: 5.484189210185175
+      Virtual Size: '0x226'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
+        City, O=ASUSTEK COMPUTER INC., CN=ASUSTEK COMPUTER INC.
+      ValidFrom: '2019-03-18 00:00:00'
+      ValidTo: '2022-03-23 12:00:00'
+      Signature: 05ab2d8216108391cd6f6a64cecefc78936899f2c3d6144e5b457ee70ab001e557a55c07a40a6b5395045e43bf1a320e79e2c12e11446a1e1426530b434e778abc836198ecce68769fa499016f2883e65104cb36a976c4986263485b774f36522f50432ee823651a17d03787ff672db6689a10cb58d84bb7bacf5da54ee5ebe4bae7c9a1ed2d95ecd7e42bb354d375fe94661df0acb3a64aa6866822140a716049924aab891e4955d7321a25875331f5f8b744ad39bbba4c564711273ae5675afd06175243e5e5940afe9fac413170ef21ac125e698edadefea6026eb7117c506fe422867b6479c34ae0300caf99c75dbf5f60465d5677831a55e9fdc10d621b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0c5167c023b9adedf0f8918ee65712a1
+      Version: 3
+      TBS:
+        MD5: b9dcc79e9817431a597f16b483f5bab2
+        SHA1: fae5bf9779eed37708a44ba44f440c60174daa14
+        SHA256: e6d299f754eaa1c55b8485adf0eeefdde50a924207ff0e36333c4fe1729e2376
+        SHA384: dc752d4d6f75849adb9d446f5833354b22aca8ddbf8f104aec25d5a61ecfb4ead072ea8ea264d326e41b1313c29f040c
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 0c5167c023b9adedf0f8918ee65712a1
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+  Imphash: 6a47c957830ccce7ef43ed96aacf7c2c
+  LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: 5af6b25eec77fec510803a229944c8ad
+    SHA1: ed54e23998978f8124bd1f97c265f708ddba1de0
+    SHA256: d4e7335a177e47688d68ad89940c272f82728c882623f1630e7fd2e03e16f003
+  Company: ASUSTeK Computer Inc.
+  Copyright: Copyright 2004 ASUSTeK Computer Inc.
+  CreationTimestamp: '2009-07-21 20:34:42'
+  Date: ''
+  Description: ASUS VGA Kernel Mode Driver
+  ExportedFunctions: ''
+  FileVersion: '1.97'
+  Filename: ''
+  ImportedFunctions:
+  - KeInitializeMutex
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - IoDetachDevice
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - PoStartNextPowerIrp
+  - IofCompleteRequest
+  - ExFreePoolWithTag
+  - PoCallDriver
+  - IoCreateSymbolicLink
+  - IoCreateDevice
+  - IofCallDriver
+  - KeReleaseMutex
+  - KeWaitForSingleObject
+  - KeBugCheckEx
+  - IoDeleteSymbolicLink
+  - IoAttachDeviceToDeviceStack
+  - ExAllocatePoolWithTag
+  - KeStallExecutionProcessor
+  - HalTranslateBusAddress
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: EIO.sys
+  MD5: 6dd82d91f981893be57ff90101a7f7f1
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: EIO.sys
+  PDBPath: ''
+  Product: ASUS VGA Kernel Mode Driver
+  ProductVersion: '1.97'
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: 9e879414ec72529ec97c71019ff54ff0
+    SHA1: 9f70178044e7de72a85ee75901f03bacfd277c05
+    SHA256: 769dd395a70eb58e4a9b4bac925874290f3a688367a35aa5a392d93b0fc1fe47
+  SHA1: 21ce232de0f306a162d6407fe1826aff435b2a04
+  SHA256: f4c7e94a7c2e49b130671b573a9e4ff4527a777978f371c659c3f97c14d126de
+  Sections:
+    .text:
+      Entropy: 6.344394733228123
+      Virtual Size: '0x2af0'
+    .rdata:
+      Entropy: 4.547262034696364
+      Virtual Size: '0x28c'
+    .data:
+      Entropy: 0.30140680731160896
+      Virtual Size: '0x2e8'
+    .pdata:
+      Entropy: 3.922304177151045
+      Virtual Size: '0x18c'
+    INIT:
+      Entropy: 5.040059459826639
+      Virtual Size: '0x348'
+    .rsrc:
+      Entropy: 3.309188519823855
+      Virtual Size: '0x3f8'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: ??=TW, ??=Private Organization, serialNumber=23638777, C=TW, L=Taipei
+        City, O=ASUSTEK COMPUTER INC., CN=ASUSTEK COMPUTER INC.
+      ValidFrom: '2019-03-18 00:00:00'
+      ValidTo: '2022-03-23 12:00:00'
+      Signature: 05ab2d8216108391cd6f6a64cecefc78936899f2c3d6144e5b457ee70ab001e557a55c07a40a6b5395045e43bf1a320e79e2c12e11446a1e1426530b434e778abc836198ecce68769fa499016f2883e65104cb36a976c4986263485b774f36522f50432ee823651a17d03787ff672db6689a10cb58d84bb7bacf5da54ee5ebe4bae7c9a1ed2d95ecd7e42bb354d375fe94661df0acb3a64aa6866822140a716049924aab891e4955d7321a25875331f5f8b744ad39bbba4c564711273ae5675afd06175243e5e5940afe9fac413170ef21ac125e698edadefea6026eb7117c506fe422867b6479c34ae0300caf99c75dbf5f60465d5677831a55e9fdc10d621b
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 0c5167c023b9adedf0f8918ee65712a1
+      Version: 3
+      TBS:
+        MD5: b9dcc79e9817431a597f16b483f5bab2
+        SHA1: fae5bf9779eed37708a44ba44f440c60174daa14
+        SHA256: e6d299f754eaa1c55b8485adf0eeefdde50a924207ff0e36333c4fe1729e2376
+        SHA384: dc752d4d6f75849adb9d446f5833354b22aca8ddbf8f104aec25d5a61ecfb4ead072ea8ea264d326e41b1313c29f040c
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    Signer:
+    - SerialNumber: 0c5167c023b9adedf0f8918ee65712a1
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+  Imphash: a96a02cf5f7896a9a9f045d1986bd83c
+  LoadsDespiteHVCI: 'FALSE'
