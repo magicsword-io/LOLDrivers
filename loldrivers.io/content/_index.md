@@ -35,7 +35,7 @@ title = "LOLDrivers"
 # Living Off The Land Drivers 
 Living Off The Land Drivers is a curated list of Windows drivers used by adversaries to bypass security controls and carry out attacks. The project helps security professionals stay informed and mitigate potential threats. 
 
-{{< tip "warning" >}}
+{{< tip  >}}
 Feel free to open a [PR](https://github.com/magicsword-io/LOLDrivers/pulls), raise an [issue](https://github.com/magicsword-io/LOLDrivers/issues/new/choose "Open a Github Issue")(s) or request new driver(s) be added.
 {{< /tip >}}
 
@@ -59,6 +59,14 @@ You can also get the malicious driver list via **API** using [CSV](api/drivers.c
 
 {{< /column >}}
 
+{{< /block >}}
+
+{{< block "grid-1" >}}
+{{< column >}}
+{{< tip "warning" >}}
+Interested in learning how to **<span style="color: red;">block</span>** these drivers natively on Windows? <a href="https://www.magicsword.io/premium"><img src="images/magicsword-logo.png" alt="MagicSword Logo" style="width:110px; height:110px; vertical-align:middle;">Explore MagicSword Premium</a>
+{{< /tip >}}
+{{< /column >}}
 {{< /block >}}
 
 {{< block "grid-1" >}}
