@@ -21,7 +21,7 @@ Confirmed vulnerable driver from Microsoft Block List
 - **Author**: Michael Haag
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/d04f5388e962cd21462bcc54180e84e0.bin" "Download" >}}
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/d04f5388e962cd21462bcc54180e84e0.bin" "Download" >}}{{< button "https://www.magicsword.io/premium" "Block" "red" >}}
 {{< tip "warning" >}}
 
 {{< /tip >}}
@@ -741,7 +741,7 @@ Confirmed vulnerable driver from Microsoft Block List
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/0baa833c-e4e1-449e-86ee-cafeb11f5fd5.yaml)
 
-*last_updated:* 2024-09-01
+*last_updated:* 2024-09-26
 
 {{< /column >}}
 {{< /block >}}
