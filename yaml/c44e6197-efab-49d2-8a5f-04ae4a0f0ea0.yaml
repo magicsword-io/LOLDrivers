@@ -1,0 +1,194 @@
+Id: c44e6197-efab-49d2-8a5f-04ae4a0f0ea0
+Tags:
+- jnprva.sys
+- neofltr.sys
+Verified: 'TRUE'
+Author: Northwave Cyber Security
+Created: '2024-09-11'
+MitreID: T1068
+Category: vulnerable
+Commands:
+    Command: sc.exe create jnprva binPath=C:\windows\temp\jnprva.sys type=kernel &&
+        sc.exe start jnprva
+    Description: Northwave Cyber Security contributed this driver based on in-house
+        research. The driver has a CVSSv3 score of 8.8, indicating a privilege escalation
+        impact. This vulnerability could potentially be exploited for privilege escalation
+        or other malicious activities.
+    Usecase: Elevate privileges
+    Privileges: kernel
+    OperatingSystem: Windows 10
+Resources:
+- https://northwave-cybersecurity.com/ivanti-pulse-vpn-privilege-escalation
+Detection: []
+Acknowledgement:
+    Person: Northwave Cyber Security
+    Handle: ''
+KnownVulnerableSamples:
+-   Filename: jnprva.sys
+    MD5: 7da16447a3d200c8c3ed056828a62e1e
+    SHA1: ea23c9bfc0ea0bfc5a915e1e11fc5ecfbdd7d078
+    SHA256: 8dbc28fefb8cf9377be55a7c6062988df5a24f0ff475f6dd65cf07fe5173f51d
+    Signature: ''
+    Date: ''
+    Publisher: ''
+    Company: Pulse Secure, LLC
+    Description: NetBIOS Redirector
+    Product: Secure Application Manager
+    ProductVersion: 8,3,3,1350
+    FileVersion: 8,3,3,1350
+    MachineType: AMD64
+    OriginalFilename: neofltr.sys
+    Imphash: 0263ef6f9d53671b4c652941a4446af0
+    Authentihash:
+        MD5: ea34afe10c540f4acca9afaead35175b
+        SHA1: 7faba76dc01e669d8f763fab0e5e668707f8b89c
+        SHA256: 9d06688123a9251aeb76ac8dad2af956566e2f1051550988611c7623dbebb3d3
+    RichPEHeaderHash:
+        MD5: fe969a6ea5dc1f0031ffa8337823dd14
+        SHA1: 57a8ffb6eff7483e62742f8cf71940bda7b36b73
+        SHA256: 8237323ee301e382c1852a4e75c157a8be4d23ba6bc2888144b19b5d3da234d8
+    Sections:
+        .text:
+            Entropy: 6.549797735549137
+            Virtual Size: '0x108c7'
+        .rdata:
+            Entropy: 4.889452466308478
+            Virtual Size: '0xc3c'
+        .data:
+            Entropy: 0.4704167924098869
+            Virtual Size: '0x390'
+        .pdata:
+            Entropy: 4.791663150177015
+            Virtual Size: '0x600'
+        PAGE:
+            Entropy: 5.986231695743232
+            Virtual Size: '0x49c'
+        INIT:
+            Entropy: 5.059700663703546
+            Virtual Size: '0x71a'
+        .rsrc:
+            Entropy: 3.3380350942380255
+            Virtual Size: '0x420'
+        .reloc:
+            Entropy: 2.307354922057604
+            Virtual Size: '0x1c'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2018-03-26 11:01:06'
+    InternalName: neofltr
+    Copyright: "\xA9 2014-2018 by Pulse Secure, LLC. All rights reserved"
+    Imports:
+    - ntoskrnl.exe
+    - TDI.SYS
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - IofCallDriver
+    - __C_specific_handler
+    - RtlInitString
+    - RtlInitUnicodeString
+    - MmGetSystemRoutineAddress
+    - RtlGetVersion
+    - RtlCompareMemory
+    - ExFreePoolWithTag
+    - ExInterlockedRemoveHeadList
+    - IofCompleteRequest
+    - IoWMIRegistrationControl
+    - ObfDereferenceObject
+    - ExInterlockedInsertTailList
+    - IoCsqInsertIrpEx
+    - ObReferenceObjectByHandle
+    - RtlQueryRegistryValues
+    - RtlWriteRegistryValue
+    - KeInitializeEvent
+    - IoAttachDeviceToDeviceStack
+    - IoCreateDevice
+    - IoDeleteDevice
+    - IoGetAttachedDeviceReference
+    - IoGetDeviceObjectPointer
+    - IoCsqInitializeEx
+    - ExAllocatePoolWithTag
+    - _strnicmp
+    - KeWaitForSingleObject
+    - MmProbeAndLockPages
+    - MmBuildMdlForNonPagedPool
+    - IoAllocateMdl
+    - IoBuildDeviceIoControlRequest
+    - IoFreeMdl
+    - IoAllocateWorkItem
+    - IoFreeWorkItem
+    - IoQueueWorkItem
+    - RtlCopyUnicodeString
+    - IoCreateSymbolicLink
+    - IoDeleteSymbolicLink
+    - IoCsqRemoveIrp
+    - strncmp
+    - strncpy
+    - MmUnlockPages
+    - IoAllocateIrp
+    - IoFreeIrp
+    - IoGetCurrentProcess
+    - IoGetRelatedDeviceObject
+    - ZwCreateFile
+    - ZwClose
+    - PsGetCurrentProcessId
+    - KeReleaseSpinLock
+    - KeAcquireSpinLockRaiseToDpc
+    - KeInitializeSpinLock
+    - KeSetEvent
+    - KeClearEvent
+    - MmMapLockedPagesSpecifyCache
+    - DbgPrint
+    - TdiMapUserRequest
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+                Class 3 Extended Validation Code Signing CA , G2
+            ValidFrom: '2014-03-04 00:00:00'
+            ValidTo: '2024-03-03 23:59:59'
+            Signature: 3f5b19f3fa13d575382a5aee9f5aa04ca91dc5cc94eede15fef5106ea41ba56483541858c40b28a185c34e74e5ff897cfed5ed3cba719f5602268f162a88feb0a32722ce4be2388e00a63a865f9de53ea8de644941744121fd07c88417da1d653082cb264f39d60427a481b14b49c3238b7e02321827b7ab0bf31872b6a4ee67066f38a6588de0f17e5da460c6a8e5505fe0e8bae28f9958b6b5a0a876f1a2f11c8841727e52979b0a36998d50f701eb3ce7f0226ae5358c63368a1ab1d967665f971aefa8209df02fba6cced9948500f158f17dc97c22b5075d02c6e60bbfab9393ff27188e33367e5734f1c3af04c184f156b3e8878336f8d30a31dc6e2c6d
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 191a32cb759c97b8cfac118dd5127f49
+            Version: 3
+            TBS:
+                MD5: 788b61bd26da89253179e3de2cdb527f
+                SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
+                SHA256: b3c925b4048c3f7c444d248a2b101186b57cba39596eb5dce0e17a4ee4b32f19
+                SHA384: 2955e28cb7ec0ea9730b499a0f189f9621eceb02591a9486b583f12bb845885a30d6a871826318a167cc5f06b274e58c
+        -   Subject: ??=US, ??=Delaware, ??=San Jose, ??=Private Organization, serialNumber=5567277,
+                C=US, ST=California, L=San Jose, O=Pulse Secure, LLC, CN=Pulse Secure,
+                LLC
+            ValidFrom: '2017-04-07 00:00:00'
+            ValidTo: '2018-05-17 23:59:59'
+            Signature: 20cac3370569f750bd4273b6886aa7b00e66be970814c161379a06eb1657f9a2fc1e0d9ceacc066f39c8cb4c20ea5ac29576aabf2d607cf9911aa6cc87c4d907533ec21939e13194414a78b668e837fd21f962c6980858b16aca7ce8f6d358f6149be27ccceae4eeb074c8db98d2a1d10042fa6d84de7cf75452c395b7f3e3c5ff88789a0d4c3cdf56a37757942b0dc092a3cdcb5f2d190da5aa12a84e88643a7502573ce0e2cbc421bef07b491f8132a40843e96719d4b943023d8380a9d0b1382a3adc6da099f2f1aa1feccff79cc8866787727579bf882768a91ea471b4e2a2e29d3af9bd048dee40f81fba9b89a3fef3ccc389c3f42e6e6d12a631f0674f
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 7c87a2e64443d7ab1aac6bb87b9fe237
+            Version: 3
+            TBS:
+                MD5: 747c254454378e1101f4a7b73bc80b24
+                SHA1: 1e6b0acf7f6c514f53728be4a1c58692cb4c32cc
+                SHA256: 924a35b5981eedfe0c832ae1928af1fc1cecc024adfc32174ce9775c58927d2d
+                SHA384: 6e0b0d213e4fd05f6bedf551ac7f58cb7c69406ef848cf7a0ba625f1eafc7d0dbeb61fc147fcf10fd2ac3ef62b156af9
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006
+                VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public
+                Primary Certification Authority , G5
+            ValidFrom: '2011-02-22 19:25:17'
+            ValidTo: '2021-02-22 19:35:17'
+            Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 611993e400000000001c
+            Version: 3
+            TBS:
+                MD5: 78a717e082dcc1cda3458d917e677d14
+                SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+                SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+                SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+        Signer:
+        -   SerialNumber: 7c87a2e64443d7ab1aac6bb87b9fe237
+            Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
+                Class 3 Extended Validation Code Signing CA , G2
+            Version: 1
+    LoadsDespiteHVCI: 'TRUE'

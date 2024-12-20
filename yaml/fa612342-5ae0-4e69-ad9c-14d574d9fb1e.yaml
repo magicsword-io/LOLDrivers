@@ -88,7 +88,7 @@ KnownVulnerableSamples:
     - RtlInitUnicodeString
     - KeBugCheckEx
     Signatures: {}
-    LoadsDespiteHVCI: 'FALSE'
+    LoadsDespiteHVCI: 'TRUE'
 -   Company: ''
     Date: ''
     Description: ''
@@ -302,7 +302,7 @@ KnownVulnerableSamples:
     - RtlInitUnicodeString
     - KeBugCheckEx
     Signatures: {}
-    LoadsDespiteHVCI: 'FALSE'
+    LoadsDespiteHVCI: 'TRUE'
 -   Company: ''
     Date: ''
     Description: ''
@@ -521,7 +521,7 @@ KnownVulnerableSamples:
     - KeTickCount
     - KeBugCheckEx
     Signatures: {}
-    LoadsDespiteHVCI: 'FALSE'
+    LoadsDespiteHVCI: 'TRUE'
 -   Company: ''
     Date: ''
     Description: ''
@@ -1032,7 +1032,7 @@ KnownVulnerableSamples:
     - KeTickCount
     - KeBugCheckEx
     Signatures: {}
-    LoadsDespiteHVCI: 'FALSE'
+    LoadsDespiteHVCI: 'TRUE'
 -   Company: ''
     Date: ''
     Description: ''
@@ -1170,4 +1170,4 @@ KnownVulnerableSamples:
     - IoCreateDevice
     - RtlInitUnicodeString
     Signatures: {}
-    LoadsDespiteHVCI: 'FALSE'
+    LoadsDespiteHVCI: 'TRUE'

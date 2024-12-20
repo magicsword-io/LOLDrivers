@@ -305,7 +305,7 @@ KnownVulnerableSamples:
     - HalSetBusDataByOffset
     - WRITE_PORT_ULONG
     Signatures: {}
-    LoadsDespiteHVCI: 'FALSE'
+    LoadsDespiteHVCI: 'TRUE'
 -   Company: Advanced Micro Devices
     Date: ''
     Description: AMD OverDrive Service Driver
@@ -684,7 +684,7 @@ KnownVulnerableSamples:
     - HalSetBusDataByOffset
     - HalGetBusDataByOffset
     Signatures: {}
-    LoadsDespiteHVCI: 'FALSE'
+    LoadsDespiteHVCI: 'TRUE'
 -   Company: ''
     Date: ''
     Description: ''
@@ -1251,7 +1251,7 @@ KnownVulnerableSamples:
     - READ_PORT_ULONG
     - WRITE_PORT_ULONG
     Signatures: {}
-    LoadsDespiteHVCI: 'FALSE'
+    LoadsDespiteHVCI: 'TRUE'
 -   Company: Advanced Micro Devices
     Date: ''
     Description: AMD OverDrive Service Driver
@@ -1367,7 +1367,7 @@ KnownVulnerableSamples:
     - WRITE_PORT_ULONG
     - READ_PORT_ULONG
     Signatures: {}
-    LoadsDespiteHVCI: 'FALSE'
+    LoadsDespiteHVCI: 'TRUE'
 -   Company: ''
     Date: ''
     Description: ''
@@ -1434,7 +1434,7 @@ KnownVulnerableSamples:
     - HalSetBusDataByOffset
     - HalGetBusDataByOffset
     Signatures: {}
-    LoadsDespiteHVCI: 'FALSE'
+    LoadsDespiteHVCI: 'TRUE'
 -   Company: ''
     Date: ''
     Description: ''
@@ -1513,7 +1513,7 @@ KnownVulnerableSamples:
     - HalSetBusDataByOffset
     - READ_PORT_UCHAR
     Signatures: {}
-    LoadsDespiteHVCI: 'FALSE'
+    LoadsDespiteHVCI: 'TRUE'
 -   Company: Advanced Micro Devices
     Date: ''
     Description: AMD OverDrive Service Driver

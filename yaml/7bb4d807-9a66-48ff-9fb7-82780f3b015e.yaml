@@ -141,7 +141,7 @@ KnownVulnerableSamples:
     - READ_PORT_ULONG
     - KeStallExecutionProcessor
     Signatures: {}
-    LoadsDespiteHVCI: 'FALSE'
+    LoadsDespiteHVCI: 'TRUE'
 -   Company: 'Radiant Systems, Inc. '
     Date: ''
     Description: Radiant Hardware Manager for P15xx Platform
@@ -471,7 +471,7 @@ KnownVulnerableSamples:
     - KeStallExecutionProcessor
     - HalTranslateBusAddress
     Signatures: {}
-    LoadsDespiteHVCI: 'FALSE'
+    LoadsDespiteHVCI: 'TRUE'
 -   Company: NCR Corporation
     Date: ''
     Description: Radiant Hardware Manager for P15xx Platform

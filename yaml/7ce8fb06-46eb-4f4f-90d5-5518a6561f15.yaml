@@ -235,6 +235,7 @@ KnownVulnerableSamples:
             Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
             Version: 1
     Imphash: a998fe47a44bfbf2399968e21cfdf7ca
+    LoadsDespiteHVCI: 'FALSE'
 -   Filename: ''
     Libraries:
     - ntoskrnl.exe
@@ -434,3 +435,4 @@ KnownVulnerableSamples:
     MachineType: AMD64
     Imports:
     - ntoskrnl.exe
+    LoadsDespiteHVCI: 'FALSE'

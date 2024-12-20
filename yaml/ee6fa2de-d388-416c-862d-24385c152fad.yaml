@@ -132,6 +132,7 @@ KnownVulnerableSamples:
     Imports:
     - ntoskrnl.exe
     - HAL.dll
+    LoadsDespiteHVCI: 'FALSE'
 -   Filename: msr.sys
     Libraries:
     - ntoskrnl.exe
@@ -249,3 +250,4 @@ KnownVulnerableSamples:
     Imports:
     - ntoskrnl.exe
     - HAL.dll
+    LoadsDespiteHVCI: 'FALSE'

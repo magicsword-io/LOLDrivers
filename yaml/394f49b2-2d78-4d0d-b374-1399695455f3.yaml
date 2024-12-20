@@ -24,7 +24,7 @@ Acknowledgement:
     Person: ''
     Handle: ''
 KnownVulnerableSamples:
--   Filename: 'Afd.sys'
+-   Filename: Afd.sys
     Libraries:
     - ntoskrnl.exe
     - TDI.SYS
@@ -338,7 +338,7 @@ KnownVulnerableSamples:
     Imphash: b74b53dd1f82c21aab079d727e517ba4
     Machine: AMD64
     MagicHeader: 50 45 0 0
-    CreationTimestamp: '2088-03-14 01:12:25'
+    CreationTimestamp: '2088-03-13 17:12:25'
     RichPEHeaderMD5: 65835e7484a7491a762f63b77a6bb191
     RichPEHeaderSHA1: 640b40f4d807a33bd8aafa91488fe88bb7cbf382
     RichPEHeaderSHA256: 2b22c51196bbb1e4bad252dd6aefaa37e413e8a397d89a3d73b033d8b1e76e88
@@ -436,7 +436,26 @@ KnownVulnerableSamples:
             Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
                 Windows Production PCA 2011
             Version: 1
--   Filename: 'Afd.sys'
+    LoadsDespiteHVCI: 'TRUE'
+    Authentihash:
+        MD5: 6775bbd47a793d793bcaf0b114b242da
+        SHA1: fb0b5d98d1add03004d612831b67353df994a189
+        SHA256: a490a57a8f57ae27571629197bb652b0f4c84f9414d09bf6cfe2ee1b175101b4
+    RichPEHeaderHash:
+        MD5: 65835e7484a7491a762f63b77a6bb191
+        SHA1: 640b40f4d807a33bd8aafa91488fe88bb7cbf382
+        SHA256: 2b22c51196bbb1e4bad252dd6aefaa37e413e8a397d89a3d73b033d8b1e76e88
+    Description: Ancillary Function Driver for WinSock
+    Company: Microsoft Corporation
+    Product: "Microsoft\xAE Windows\xAE Operating System"
+    Copyright: "\xA9 Microsoft Corporation. All rights reserved."
+    MachineType: AMD64
+    Imports:
+    - ntoskrnl.exe
+    - TDI.SYS
+    - NETIO.SYS
+    - msrpc.sys
+-   Filename: Afd.sys
     Libraries:
     - ntoskrnl.exe
     - TDI.SYS
@@ -750,7 +769,7 @@ KnownVulnerableSamples:
     Imphash: b74b53dd1f82c21aab079d727e517ba4
     Machine: AMD64
     MagicHeader: 50 45 0 0
-    CreationTimestamp: '1976-07-28 08:22:12'
+    CreationTimestamp: '1976-07-28 00:22:12'
     RichPEHeaderMD5: 65835e7484a7491a762f63b77a6bb191
     RichPEHeaderSHA1: 640b40f4d807a33bd8aafa91488fe88bb7cbf382
     RichPEHeaderSHA256: 2b22c51196bbb1e4bad252dd6aefaa37e413e8a397d89a3d73b033d8b1e76e88
@@ -848,3 +867,22 @@ KnownVulnerableSamples:
             Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
                 Windows Production PCA 2011
             Version: 1
+    LoadsDespiteHVCI: 'TRUE'
+    Authentihash:
+        MD5: 6c74f578d1222a9ab04e944b9cf7efbb
+        SHA1: 7aed7084ba413ec20e198af1e5d1c359e33ca87d
+        SHA256: 765869c7c04b49e77de313806398472ec90dce45206a6d71e448d4e2e499715d
+    RichPEHeaderHash:
+        MD5: 65835e7484a7491a762f63b77a6bb191
+        SHA1: 640b40f4d807a33bd8aafa91488fe88bb7cbf382
+        SHA256: 2b22c51196bbb1e4bad252dd6aefaa37e413e8a397d89a3d73b033d8b1e76e88
+    Description: Ancillary Function Driver for WinSock
+    Company: Microsoft Corporation
+    Product: "Microsoft\xAE Windows\xAE Operating System"
+    Copyright: "\xA9 Microsoft Corporation. All rights reserved."
+    MachineType: AMD64
+    Imports:
+    - ntoskrnl.exe
+    - TDI.SYS
+    - NETIO.SYS
+    - msrpc.sys

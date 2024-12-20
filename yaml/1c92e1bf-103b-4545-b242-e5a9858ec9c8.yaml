@@ -332,7 +332,7 @@ KnownVulnerableSamples:
     Imphash: 71686eb45898fe5283b523ecbc867eb5
     Machine: AMD64
     MagicHeader: 50 45 0 0
-    CreationTimestamp: '2042-03-24 12:13:22'
+    CreationTimestamp: '2042-03-24 05:13:22'
     RichPEHeaderMD5: fed2865b1ab6bb9b3f59d7294f4377a5
     RichPEHeaderSHA1: 87c769274b3c6f69944f8294717875821006f610
     RichPEHeaderSHA256: 8f7fc8ffaea73552b4fd84c7d463524bb34ed4abc1a8160d4348ffd49ecdd0da
@@ -382,3 +382,21 @@ KnownVulnerableSamples:
     LegalCopyright: "\xA9 Microsoft Corporation. All rights reserved."
     ProductVersion: 10.0.22621.1
     Signatures: {}
+    LoadsDespiteHVCI: 'TRUE'
+    Authentihash:
+        MD5: 49d296e369fdb0311b7cfa16553641b1
+        SHA1: 29e642e49d553532fa34059a11fcf53458ae56b7
+        SHA256: 88f36fda7dcc6d5af2bcbef29d14fd4032247d4b45f5299944be31441ab53bc1
+    RichPEHeaderHash:
+        MD5: fed2865b1ab6bb9b3f59d7294f4377a5
+        SHA1: 87c769274b3c6f69944f8294717875821006f610
+        SHA256: 8f7fc8ffaea73552b4fd84c7d463524bb34ed4abc1a8160d4348ffd49ecdd0da
+    Description: Windows Client Side Caching Driver
+    Company: Microsoft Corporation
+    Product: "Microsoft\xAE Windows\xAE Operating System"
+    Copyright: "\xA9 Microsoft Corporation. All rights reserved."
+    MachineType: AMD64
+    Imports:
+    - ntoskrnl.exe
+    - rdbss.sys
+    - MUP.SYS

@@ -1,0 +1,221 @@
+Id: 4cb95b41-43b4-4806-b536-ae5fd8c76b0e
+Tags:
+- ViveRRAudio.sys
+Verified: 'TRUE'
+Author: Northwave Cyber Security
+Created: '2024-09-11'
+MitreID: T1068
+Category: vulnerable
+Commands:
+    Command: sc.exe create ViveRRAudio binPath=C:\windows\temp\ViveRRAudio.sys type=kernel
+        && sc.exe start ViveRRAudio
+    Description: Northwave Cyber Security contributed this driver based on in-house
+        research. The driver has a CVSSv3 score of 5.5, indicating a information disclosure
+        / local dos impact. This vulnerability could potentially be exploited for
+        privilege escalation or other malicious activities.
+    Usecase: Elevate privileges
+    Privileges: kernel
+    OperatingSystem: Windows 10
+Resources:
+- https://northwave-cybersecurity.com/vive-vr-headset-kernel-driver-vulnerable-for-out-of-bounds-memory-read
+Detection: []
+Acknowledgement:
+    Person: Northwave Cyber Security
+    Handle: ''
+KnownVulnerableSamples:
+-   Filename: ViveRRAudio.sys
+    MD5: e548fef8b4c41ee672482dcc1af31aef
+    SHA1: 4e40f2245f62669949ead77fc56bdbaf1d77ce99
+    SHA256: 9d5e8700a434838eb63a0573178b4291f07a9d96dabfb4ead40253a3cd9edefd
+    Signature: ''
+    Date: ''
+    Publisher: ''
+    Company: HTC VIVE
+    Description: VIVE Virtual Audio Driver
+    Product: VIVE Virtual Audio Driver
+    ProductVersion: 0,1,11,7
+    FileVersion: 0,1,11,7
+    MachineType: AMD64
+    OriginalFilename: ViveRRAudio.sys
+    Imphash: 78eb92e96f5e824801f3284b813750ab
+    Authentihash:
+        MD5: 590a32adaae270a9fe5c51f37c595f0d
+        SHA1: d3ca88c4df0bd4e2ef3f438f9735897da7f9c6dc
+        SHA256: c4020e95f8a69522e400d3b14bf1be4fec2e7db0597626fbd8f8c3c1e85bffa0
+    RichPEHeaderHash:
+        MD5: 55ba2ce34c78c3f30e8cedcd8c0a1940
+        SHA1: 997ad01990649e11b013ed45c87b3ca01c55b6e2
+        SHA256: c43f387338789e42caaae6c27e296a296e1f5af8e5b050b08930edb68caa76d4
+    Sections:
+        .text:
+            Entropy: 5.979364048148924
+            Virtual Size: '0xbfcc'
+        .rdata:
+            Entropy: 4.489684395052677
+            Virtual Size: '0x2ca4'
+        .data:
+            Entropy: 3.2315609677619865
+            Virtual Size: '0xc2cc'
+        .pdata:
+            Entropy: 4.998134975071787
+            Virtual Size: '0x156c'
+        PAGE:
+            Entropy: 5.830476686625346
+            Virtual Size: '0x20c4f'
+        INIT:
+            Entropy: 5.872361716667388
+            Virtual Size: '0x142a'
+        .rsrc:
+            Entropy: 3.534869629471205
+            Virtual Size: '0x408'
+        .reloc:
+            Entropy: 5.415566703340568
+            Virtual Size: '0xa6c'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2022-04-20 00:50:27'
+    InternalName: ViveRRAudio.sys
+    Copyright: Copyright (C) HTC Corporation.2021
+    Imports:
+    - ntoskrnl.exe
+    - portcls.sys
+    - HAL.dll
+    - WDFLDR.SYS
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - KeInitializeSpinLock
+    - ExAllocatePoolWithTag
+    - ExFreePool
+    - ProbeForRead
+    - MmProbeAndLockPages
+    - MmUnlockPages
+    - MmMapLockedPagesSpecifyCache
+    - IoAllocateMdl
+    - IofCompleteRequest
+    - IoCreateDevice
+    - IoCreateSymbolicLink
+    - IoDeleteDevice
+    - IoDeleteSymbolicLink
+    - IoFreeMdl
+    - RtlFreeUnicodeString
+    - ExFreePoolWithTag
+    - IoRegisterDeviceInterface
+    - IoOpenDeviceInterfaceRegistryKey
+    - IoSetDeviceInterfacePropertyData
+    - DbgPrint
+    - ZwCreateKey
+    - ZwOpenKey
+    - ZwEnumerateKey
+    - ZwEnumerateValueKey
+    - ZwSetValueKey
+    - KeInitializeEvent
+    - KeResetEvent
+    - KeSetEvent
+    - KeInitializeMutex
+    - KeReleaseMutex
+    - KeWaitForSingleObject
+    - KeAcquireSpinLockRaiseToDpc
+    - KeReleaseSpinLock
+    - IoAllocateWorkItem
+    - IoFreeWorkItem
+    - IoQueueWorkItem
+    - ZwCreateFile
+    - ZwWriteFile
+    - _vsnwprintf
+    - __C_specific_handler
+    - RtlAppendUnicodeToString
+    - MmGetSystemRoutineAddress
+    - RtlQueryRegistryValues
+    - RtlInitUnicodeString
+    - RtlAssert
+    - ZwClose
+    - KeFlushQueuedDpcs
+    - RtlCompareMemory
+    - ExDeleteTimer
+    - ExCancelTimer
+    - ExSetTimer
+    - RtlCopyUnicodeString
+    - RtlRaiseException
+    - _purecall
+    - ExInterlockedInsertTailList
+    - ExInterlockedRemoveHeadList
+    - ExAllocateTimer
+    - strcpy_s
+    - PcNewPort
+    - PcRegisterPhysicalConnection
+    - PcRegisterSubdevice
+    - PcNewMiniport
+    - PcRegisterAdapterPowerManagement
+    - PcAddAdapterDevice
+    - PcDispatchIrp
+    - PcInitializeAdapterDriver
+    - PcGetPhysicalDeviceObject
+    - KeQueryPerformanceCounter
+    - WdfVersionUnbind
+    - WdfVersionBindClass
+    - WdfVersionUnbindClass
+    - WdfVersionBind
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 RSA4096 SHA256
+                TimeStamping CA
+            ValidFrom: '2022-03-23 00:00:00'
+            ValidTo: '2037-03-22 23:59:59'
+            Signature: 7d598ec093b66f98a94422017e66d6d82142e1b0182e104d13cf3053cebf18fbc7505de24b29fb708a0daa2969fc69c1cf1d07e93e60c8d80be55c5bd76d87fa842025343167cdb612966fc4504c621d0c0882a816bda956cf15738d012225ce95693f4777fb727414d7ffab4f8a2c7aab85cd435fed60b6aa4f91669e2c9ee08aace5fd8cbc6426876c92bd9d7cd0700a7cefa8bc754fba5af7a910b25de9ff285489f0d58a717665daccf072a323fac0278244ae99271bab241e26c1b7de2aebf69eb1799981a35686ab0a45c9dfc48da0e798fbfba69d72afc4c7c1c16a71d9c6138009c4b69fcd878724bb4fa349b9776691f1729ce94b0252a7377e9353ac3b1d08490f94cd397addff256399272c3d3f6ba7f166c341cd4fb6409b212140d0b71324cddc1d783ae49eade5347192d7266be43873aba6014fbd3f3b78ad4cadfbc4957bed0a5f33398741787a38e99ce1dd23fd1d28d3c7f9e8f1985ffb2bd87ef2469d752c1e272c26db6f157b1e198b36b893d4e6f2179959ca70f037bf9800df20164f27fb606716a166badd55c03a2986b098a02bed9541b73ad5159831b462090f0abd81d913febfa4d1f357d9bc04fa82de32df0489f000cd5dc2f9d0237f000be4760226d9f0657642a6298709472be67f1aa4850ffc9896f655542b1f80fac0f20e2be5d6fba92f44154ae7130e1ddb37381aa12bf6edd67cfc
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 073637b724547cd847acfd28662a5e5b
+            Version: 3
+            TBS:
+                MD5: e4b8ad9932ff9205f580cf8fb2afbb86
+                SHA1: 5301f7044d78bf94dd2b6e4871083a17fdba1dcc
+                SHA256: c3d01499a5d1d2f71e0f44e78fbfa4b8aadb43dd4f226401e0c1d7a6d53357fa
+                SHA384: 84b5f399da5a4f4387269adfd951ef7d2197c29552ed2d2e449060664c3825d6bdb2acc3e563d999e54652f7384f445e
+        -   Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+                SHA384 2021 CA1
+            ValidFrom: '2021-04-29 00:00:00'
+            ValidTo: '2036-04-28 23:59:59'
+            Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+            IsCertificateAuthority: true
+            SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+            Version: 3
+            TBS:
+                MD5: 5d8003a64dfa5a4d88365da1566038cb
+                SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+                SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+                SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+        -   Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2022 , 2
+            ValidFrom: '2022-03-29 00:00:00'
+            ValidTo: '2033-03-14 23:59:59'
+            Signature: 0d2d2374a6d1f5f8ea4b993f01e4f60ce4af169dd9b38c9782299c436f012dab38b57011bf84198b3f5de5864fbe933ade2a395a394ed88459a5bc1b98aae86cefd1486919385bcf89391d7070d94edf23226cd5dff659cba1c2ea4c76caa1dca12b96b89b55a91a6b7dd1f502094f82d6a57388c49880dfee4995b7b3ccc5a7ee0ee1ef1e388a9fef11c9314a58b6df387ccbfa5cf7e453bf6e0a7c7ed7de98d52965890fa29cc065f4012265c7ea5e74a65b3592507cf417a687644f3e46891663206bcbf27bd035e34a7048a9b6e71d60bd04221525700672a9443b694711d3eee9c7a03e4f10b93036e4f3aa6909a88b7e64a2659411fb6e32f1f5bb38adcdc09311d532784a4b372a4cf35cdcb685c0bb70305578d698fe546d7f71a9481a78dd46772e1b7ac0338af84a288c12a873cf2df9d323f29e19e00d9428a0ebdb1a51a095828e286ba4ce9d76dea973aa486a5943ae5feaf80f06429ddf066896fe2aa0745b6366de6b2cb878aa4d706df02cf107157e35b4e6b50ca299a5d7156b350e85d6e02ccce00c24b87c520b1e997cefc8c8c58c5869afab3de1cfcc7d15ae14bf8a71dfca97b1d847ea1c85e0454e121c142958cc6fd37fcbbec10e4a6f209caed973325908e72d92a11a11fe3298a65d2b97e08bd39ccc6db50dae47633847175b6f13da6a106e1f49b7445bb4080a875a59047611a1a77702131c
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 0a7a4a889ec99942900663384d86979d
+            Version: 3
+            TBS:
+                MD5: d49300b4e758e36a3832679763a83c58
+                SHA1: ec3075370fcea680e09497d44a4b246012f24160
+                SHA256: fa5e895ff2603de9e15939a00299836f73e5778058f22194f696d19e79a8b010
+                SHA384: 13ab2eedcd7e712f635ca1da3dc30cd8d8e22cedcf5a2c4994181509dddbf76867d07925b9a514d123bc1d5cab41fe9f
+        -   Subject: ??=Private Organization, ??=TW, serialNumber=16003518, C=TW,
+                ST=New Taipei City, O=HTC CORPORATION, CN=HTC CORPORATION
+            ValidFrom: '2021-07-22 00:00:00'
+            ValidTo: '2024-07-25 23:59:59'
+            Signature: 102beb128f071266a68b017cf64b35048c81fee8f813be89aaba4ce6281c8f070881cb784db3c397c1027bea2f9808692bb91511001e201fc0c363a7c3afec55379bcaa891bbcb16b0daba32af0a7025f758f1351d64e4764cfb5077e6a87d6e0349fedb863221a73449c96929d167de8696ac4ca34fa25addc420f3ab4c23bb9223dccc8b742c855bdb389375002bfb2a8eec132ce8162dde620e3a4b57bf75843d4b02372b14e674ff1a581de5d1d72db66a0d813f32e43cb5564697dbf45aaab0b7b5878c46cc2b440c6c5ce6c2a8098c7183f1e56da6731b5e60b6b470d68fdaa9bd5036f50bc7460ff44218d80eebfcae7dff288167923a0fe828fdaea24f857d49e9c8d86efebcf65c47b2048ab9e13854f0f591aeeb3168286095b4d69dff132df53a78cdf847b8233c229054f9dfb45100a0997f20d2d6e56b2c02779134a675371ca75eb4ac4406226c0b803949e63f3ca6b68220b84efb136507f7caef0607ff784674ea848936ba546647673c2fc91b3f869274a331019acfb0e4ba843d0029c2809a2dff082815da7b2d50b643c39c7611f62a7bede05cb1a7b2404afdfc78d3f56e9ab7d45104a120d47a261f67987bde51f662d1175b770a2822bca06e444e3e35decd4d50d4f0ccf0e96e8c24a8e784130f7c2cccfaddf3e93b9048ed7898e85dcc5215d141df7574b1d6d96c9c6a75dba92ac1e694900b82
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 04ba4a638fccf604bf8ed67f35bad6b8
+            Version: 3
+            TBS:
+                MD5: 7c217b780ff4dd8bacdae7e4b3283886
+                SHA1: 5acfa007b32043cea0c93f76b8db45b9d6846a8c
+                SHA256: 34d5a9a4f82f5b583c7e5c6b343cc63fd20bbf132bb9f8221c77a84066f6b210
+                SHA384: 18cf5fe798cbc2850fe2437b7de0d00121c5eae10a5938fd12ef26c74d9aecb69e82d533a490b65b956f2a5718add046
+        Signer:
+        -   SerialNumber: 04ba4a638fccf604bf8ed67f35bad6b8
+            Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+                SHA384 2021 CA1
+            Version: 1
+    LoadsDespiteHVCI: 'TRUE'

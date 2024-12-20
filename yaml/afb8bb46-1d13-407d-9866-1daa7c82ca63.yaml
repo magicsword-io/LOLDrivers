@@ -163,6 +163,7 @@ KnownVulnerableSamples:
                 Windows Third Party Component CA 2014
             Version: 1
     Imphash: a94892b77a6474429b9f692d9952a9d5
+    LoadsDespiteHVCI: 'FALSE'
 -   Filename: echodriver
     Libraries:
     - ntoskrnl.exe
@@ -281,6 +282,7 @@ KnownVulnerableSamples:
             Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
                 Windows Third Party Component CA 2014
             Version: 1
+    LoadsDespiteHVCI: 'FALSE'
 -   Filename: echodriver.sys
     Libraries:
     - cng.sys
@@ -422,6 +424,7 @@ KnownVulnerableSamples:
             Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
                 Windows Third Party Component CA 2014
             Version: 1
+    LoadsDespiteHVCI: 'FALSE'
 -   Filename: echo.sys
     Libraries:
     - ntoskrnl.exe
@@ -620,6 +623,7 @@ KnownVulnerableSamples:
     Imports:
     - ntoskrnl.exe
     - HAL.dll
+    LoadsDespiteHVCI: 'FALSE'
 -   Filename: rentdrv2.sys
     Libraries:
     - ntoskrnl.exe
@@ -773,3 +777,4 @@ KnownVulnerableSamples:
     MachineType: AMD64
     Imports:
     - ntoskrnl.exe
+    LoadsDespiteHVCI: 'FALSE'
