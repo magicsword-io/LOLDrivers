@@ -11,7 +11,7 @@ displayTitle = "GtcKmdfBs.sys"
 {{< column "mt-2 pt-1">}}
 
 
-# GtcKmdfBs.sys ![:inline](/images/twitter_verified.png) 
+# GtcKmdfBs.sys ![:inline](/images/twitter_verified.png)  ![:inline](/images/elmo.gif) 
 
 ### Description
 
@@ -1015,7 +1015,7 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/b0dedc3f-6e4b-497a-aade-390cbf4beebb.yaml)
 
-*last_updated:* 2024-09-26
+*last_updated:* 2024-12-20
 
 {{< /column >}}
 {{< /block >}}
