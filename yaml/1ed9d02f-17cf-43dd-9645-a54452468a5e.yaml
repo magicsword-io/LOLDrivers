@@ -7,43 +7,43 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: sc.exe create WinIo64C.sys binPath=C:\windows\temp\WinIo64C.sys type=kernel
-    && sc.exe start WinIo64C.sys
-  Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
+    Command: sc.exe create WinIo64C.sys binPath=C:\windows\temp\WinIo64C.sys type=kernel
+        && sc.exe start WinIo64C.sys
+    Description: ''
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
 Resources:
 - ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection: []
 Acknowledgement:
-  Handle: ''
-  Person: ''
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: WinIo64C.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: b242b0332b9c9e8e17ec27ef10d75503d20d97b6
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: WinIo64C.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: a65fabaf64aa1934314aae23f25cdf215cbaa4b6
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: WinIo64C.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: b242b0332b9c9e8e17ec27ef10d75503d20d97b6
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: WinIo64C.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: a65fabaf64aa1934314aae23f25cdf215cbaa4b6
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'

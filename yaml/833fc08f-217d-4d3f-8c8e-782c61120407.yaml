@@ -7,32 +7,32 @@ Created: '2023-06-05'
 MitreID: T1068
 Category: malicious
 Commands:
-  Command: sc.exe create kt2.sys binPath=C:\windows\temp\kt2.sys type=kernel && sc.exe
-    start kt2.sys
-  Description: BlackCat Ransomware Deploys New Signed Kernel Driver. BlackCat ransomware
-    incident that occurred in February 2023.
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
+    Command: sc.exe create kt2.sys binPath=C:\windows\temp\kt2.sys type=kernel &&
+        sc.exe start kt2.sys
+    Description: BlackCat Ransomware Deploys New Signed Kernel Driver. BlackCat ransomware
+        incident that occurred in February 2023.
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
 Resources:
 - https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
 Detection: []
 Acknowledgement:
-  Handle: ''
-  Person: ''
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: kt2.sys
-  MD5: ''
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: cb25a5125fb353496b59b910263209f273f3552d
-  SHA256: ''
-  Signature: ''
-  LoadsDespiteHVCI: 'TRUE'
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: kt2.sys
+    MD5: ''
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: cb25a5125fb353496b59b910263209f273f3552d
+    SHA256: ''
+    Signature: ''
+    LoadsDespiteHVCI: 'TRUE'

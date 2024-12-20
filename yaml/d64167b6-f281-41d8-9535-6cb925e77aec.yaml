@@ -7,124 +7,124 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: sc.exe create EneTechIo64.sys binPath=C:\windows\temp\EneTechIo64.sys     type=kernel
-    && sc.exe start EneTechIo64.sys
-  Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
+    Command: sc.exe create EneTechIo64.sys binPath=C:\windows\temp\EneTechIo64.sys     type=kernel
+        && sc.exe start EneTechIo64.sys
+    Description: ''
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
 Resources:
 - https://github.com/hfiref0x/KDU/releases/tag/v1.2.0
 - https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
 Detection: []
 Acknowledgement:
-  Handle: ''
-  Person: ''
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
-- Authentihash:
-    MD5: 0765c07a666231285972c3487acfc7b2
-    SHA1: 6b60825564b2dccff3a4f904b71541bfe94136c9
-    SHA256: 865e4bc7290fc3b380e266ccd98c2d4e965beb711d7efd090d052e8326accdd2
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2019-10-14 10:04:53'
-  Date: ''
-  Description: ''
-  ExportedFunctions: ''
-  FileVersion: ''
-  Filename: EneTechIo64.sys
-  ImportedFunctions:
-  - IoCreateDevice
-  - IoCreateSymbolicLink
-  - IoDeleteDevice
-  - IoDeleteSymbolicLink
-  - ObReferenceObjectByHandle
-  - IofCompleteRequest
-  - ZwClose
-  - ZwOpenSection
-  - ZwMapViewOfSection
-  - ZwUnmapViewOfSection
-  - RtlTimeToSecondsSince1970
-  - KeBugCheckEx
-  - ObfDereferenceObject
-  - RtlInitUnicodeString
-  - HalTranslateBusAddress
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  InternalName: ''
-  MD5: d6e9f6c67d9b3d790d592557a7d57c3c
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: 4a23d6ba4d088fbf637bb28fc6a99439
-    SHA1: 8f52c83c0f2612ced8898f1eb3f585c909d87254
-    SHA256: 7e972a6436525790aab04e43c9e149d9053d08e56ac404a93263b06c28664731
-  SHA1: a87d6eac2d70a3fbc04e59412326b28001c179de
-  SHA256: 06bda5a1594f7121acd2efe38ccb617fbc078bb9a70b665a5f5efd70e3013f50
-  Sections:
-    .text:
-      Entropy: 6.408882511640041
-      Virtual Size: '0x130e'
-    .rdata:
-      Entropy: 5.616144796481331
-      Virtual Size: '0x714'
-    .data:
-      Entropy: 3.75
-      Virtual Size: '0x10'
-    .pdata:
-      Entropy: 3.692470356444116
-      Virtual Size: '0x12c'
-    INIT:
-      Entropy: 5.223875821180386
-      Virtual Size: '0x2b2'
-    .reloc:
-      Entropy: 3.046439344671015
-      Virtual Size: '0x14'
-  Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  - Microsoft Windows Third Party Component CA 2014
-  - Microsoft Root Certificate Authority 2010
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Hardware Compatibility Publisher
-      ValidFrom: '2019-06-05 18:34:00'
-      ValidTo: '2020-06-03 18:34:00'
-      Signature: 312314217055afc1a5751181c7d2d7619b23ba17166e6ae6f358b16921c925c6e3b75c31b93035f357c154fe4d347019e927db1957193b741e3371b46f4d6212b3bec972d6ff2297e8b1f2391f840045471ee31c524d4f5bf1cae4a32b73f6e48f51f777bb5b8a726db2a387c7c8df42289540f4f3d27b37d4ab4854efba809021879f3257d5670d70003a51d62bbc68e345a769f37ccb3ad336b7b3c494f5d56ef8300228d29835e5129b070742a220f83b6c9d5e2589cf2e7a1f7b59cfc81cda3232fc2fa448d736db546dc4b274cad3da83433deaa3eb9919b23ad08dc4055a8026711adcfccdb47d7a7c1adb2671ecc7198a786973807699a0ee236a46771f88913b769693b0b8ce9b002a40c2aa426edfd9a98368f89817b0d174458a390e11628e21f77e751431fae13831228e0e357610a24d89806d85390e9b3831792f62688bf04f91ee9a854b252452de7e752f39e57765a09a4ff41ae96144593a8a99688c6c9ad6b9fcaba1189ef2372b99e96db3fe6402b0e125b17f36c6f70fc1eb83257ce639b6c691a9ec031dddb9fa6536bb8e6080c9db976533f4ddfb73309b6498543cc94d3283d43668d614dd60a4fe707eb3b871da3204c534c8cc73cbc66aeb36cefd765439eef68d7ee9c515eb617f051a72097d0a25003df2dceccc9a0c4be1fd27e473955cc83ee9dba626748b1cb723c3b1c8b8ebc59321a0f5
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 33000000319479a318f5522d06000000000031
-      Version: 3
-      TBS:
-        MD5: 5b81fd0f706522a8d7c9f2957283c0b4
-        SHA1: 84d894599653a8ed0e0b2802db3197dc177908cc
-        SHA256: 4fa629304df4287c97ae5b7e481974316e9daf776b0cdeffab1671e7dca68fb4
-        SHA384: 0b89dc122fc7ebf80881a5047ffbbcb0bec30636516aff4f43307e2a925a476cabfc26e2cc392ad748d655f6ec4c8b75
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2014
-      ValidFrom: '2014-10-15 20:31:27'
-      ValidTo: '2029-10-15 20:41:27'
-      Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 330000000d690d5d7893d076df00000000000d
-      Version: 3
-      TBS:
-        MD5: 83f69422963f11c3c340b81712eef319
-        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
-        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
-        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
-    Signer:
-    - SerialNumber: 33000000319479a318f5522d06000000000031
-      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2014
-      Version: 1
-  Imphash: 23eb5ffc060c6c52546d38e2b63019bd
-  LoadsDespiteHVCI: 'FALSE'
+-   Authentihash:
+        MD5: 0765c07a666231285972c3487acfc7b2
+        SHA1: 6b60825564b2dccff3a4f904b71541bfe94136c9
+        SHA256: 865e4bc7290fc3b380e266ccd98c2d4e965beb711d7efd090d052e8326accdd2
+    Company: ''
+    Copyright: ''
+    CreationTimestamp: '2019-10-14 10:04:53'
+    Date: ''
+    Description: ''
+    ExportedFunctions: ''
+    FileVersion: ''
+    Filename: EneTechIo64.sys
+    ImportedFunctions:
+    - IoCreateDevice
+    - IoCreateSymbolicLink
+    - IoDeleteDevice
+    - IoDeleteSymbolicLink
+    - ObReferenceObjectByHandle
+    - IofCompleteRequest
+    - ZwClose
+    - ZwOpenSection
+    - ZwMapViewOfSection
+    - ZwUnmapViewOfSection
+    - RtlTimeToSecondsSince1970
+    - KeBugCheckEx
+    - ObfDereferenceObject
+    - RtlInitUnicodeString
+    - HalTranslateBusAddress
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    InternalName: ''
+    MD5: d6e9f6c67d9b3d790d592557a7d57c3c
+    MachineType: AMD64
+    MagicHeader: 50 45 0 0
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: 4a23d6ba4d088fbf637bb28fc6a99439
+        SHA1: 8f52c83c0f2612ced8898f1eb3f585c909d87254
+        SHA256: 7e972a6436525790aab04e43c9e149d9053d08e56ac404a93263b06c28664731
+    SHA1: a87d6eac2d70a3fbc04e59412326b28001c179de
+    SHA256: 06bda5a1594f7121acd2efe38ccb617fbc078bb9a70b665a5f5efd70e3013f50
+    Sections:
+        .text:
+            Entropy: 6.408882511640041
+            Virtual Size: '0x130e'
+        .rdata:
+            Entropy: 5.616144796481331
+            Virtual Size: '0x714'
+        .data:
+            Entropy: 3.75
+            Virtual Size: '0x10'
+        .pdata:
+            Entropy: 3.692470356444116
+            Virtual Size: '0x12c'
+        INIT:
+            Entropy: 5.223875821180386
+            Virtual Size: '0x2b2'
+        .reloc:
+            Entropy: 3.046439344671015
+            Virtual Size: '0x14'
+    Signature:
+    - Microsoft Windows Hardware Compatibility Publisher
+    - Microsoft Windows Third Party Component CA 2014
+    - Microsoft Root Certificate Authority 2010
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Hardware Compatibility Publisher
+            ValidFrom: '2019-06-05 18:34:00'
+            ValidTo: '2020-06-03 18:34:00'
+            Signature: 312314217055afc1a5751181c7d2d7619b23ba17166e6ae6f358b16921c925c6e3b75c31b93035f357c154fe4d347019e927db1957193b741e3371b46f4d6212b3bec972d6ff2297e8b1f2391f840045471ee31c524d4f5bf1cae4a32b73f6e48f51f777bb5b8a726db2a387c7c8df42289540f4f3d27b37d4ab4854efba809021879f3257d5670d70003a51d62bbc68e345a769f37ccb3ad336b7b3c494f5d56ef8300228d29835e5129b070742a220f83b6c9d5e2589cf2e7a1f7b59cfc81cda3232fc2fa448d736db546dc4b274cad3da83433deaa3eb9919b23ad08dc4055a8026711adcfccdb47d7a7c1adb2671ecc7198a786973807699a0ee236a46771f88913b769693b0b8ce9b002a40c2aa426edfd9a98368f89817b0d174458a390e11628e21f77e751431fae13831228e0e357610a24d89806d85390e9b3831792f62688bf04f91ee9a854b252452de7e752f39e57765a09a4ff41ae96144593a8a99688c6c9ad6b9fcaba1189ef2372b99e96db3fe6402b0e125b17f36c6f70fc1eb83257ce639b6c691a9ec031dddb9fa6536bb8e6080c9db976533f4ddfb73309b6498543cc94d3283d43668d614dd60a4fe707eb3b871da3204c534c8cc73cbc66aeb36cefd765439eef68d7ee9c515eb617f051a72097d0a25003df2dceccc9a0c4be1fd27e473955cc83ee9dba626748b1cb723c3b1c8b8ebc59321a0f5
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 33000000319479a318f5522d06000000000031
+            Version: 3
+            TBS:
+                MD5: 5b81fd0f706522a8d7c9f2957283c0b4
+                SHA1: 84d894599653a8ed0e0b2802db3197dc177908cc
+                SHA256: 4fa629304df4287c97ae5b7e481974316e9daf776b0cdeffab1671e7dca68fb4
+                SHA384: 0b89dc122fc7ebf80881a5047ffbbcb0bec30636516aff4f43307e2a925a476cabfc26e2cc392ad748d655f6ec4c8b75
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Third Party Component CA 2014
+            ValidFrom: '2014-10-15 20:31:27'
+            ValidTo: '2029-10-15 20:41:27'
+            Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 330000000d690d5d7893d076df00000000000d
+            Version: 3
+            TBS:
+                MD5: 83f69422963f11c3c340b81712eef319
+                SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+                SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+                SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
+        Signer:
+        -   SerialNumber: 33000000319479a318f5522d06000000000031
+            Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Third Party Component CA 2014
+            Version: 1
+    Imphash: 23eb5ffc060c6c52546d38e2b63019bd
+    LoadsDespiteHVCI: 'FALSE'

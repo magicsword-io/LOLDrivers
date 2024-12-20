@@ -7,29 +7,29 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: sc.exe create bw.sys binPath=C:\windows\temp\bw.sys type=kernel && sc.exe
-    start bw.sys
-  Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
+    Command: sc.exe create bw.sys binPath=C:\windows\temp\bw.sys type=kernel && sc.exe
+        start bw.sys
+    Description: ''
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection: []
 Acknowledgement:
-  Handle: ''
-  Person: ''
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: bw.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA256: 0ebaef662b14410c198395b13347e1d175334ec67919709ad37d65eba013adff
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: bw.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA256: 0ebaef662b14410c198395b13347e1d175334ec67919709ad37d65eba013adff
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'

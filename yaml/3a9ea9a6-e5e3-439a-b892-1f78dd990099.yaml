@@ -1,156 +1,156 @@
 Id: 3a9ea9a6-e5e3-439a-b892-1f78dd990099
+Tags:
+- SeasunProtect.sys
+Verified: 'TRUE'
 Author: Northwave Cyber Security
 Created: '2024-09-11'
 MitreID: T1068
 Category: vulnerable
-Verified: 'TRUE'
 Commands:
-  Command: sc.exe create SeasunProtect binPath=C:\windows\temp\SeasunProtect.sys type=kernel
-    && sc.exe start SeasunProtect
-  Description: Northwave Cyber Security contributed this driver based on in-house
-    research. The driver has a CVSSv3 score of 8.8, indicating a privilege escalation
-    impact. This vulnerability could potentially be exploited for privilege escalation
-    or other malicious activities.
-  Usecase: Elevate privileges
-  Privileges: kernel
-  OperatingSystem: Windows 10
+    Command: sc.exe create SeasunProtect binPath=C:\windows\temp\SeasunProtect.sys
+        type=kernel && sc.exe start SeasunProtect
+    Description: Northwave Cyber Security contributed this driver based on in-house
+        research. The driver has a CVSSv3 score of 8.8, indicating a privilege escalation
+        impact. This vulnerability could potentially be exploited for privilege escalation
+        or other malicious activities.
+    Usecase: Elevate privileges
+    Privileges: kernel
+    OperatingSystem: Windows 10
 Resources: []
-Acknowledgement:
-  Person: Northwave Cyber Security
-  Handle: ''
 Detection: []
+Acknowledgement:
+    Person: Northwave Cyber Security
+    Handle: ''
 KnownVulnerableSamples:
-- Filename: SeasunProtect.sys
-  MD5: a360ec883ef5383157080b2e185802ef
-  SHA1: ba42182630cf033a1737af6ffee87b018fda0b91
-  SHA256: 507b07b0dc0e638b65b4a4d11a462b35439c746d42337b9888927bf994176102
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: Chengdu Westhouse Interactive Entertainment Ltd.
-  Description: Game Protect
-  Product: SeasunProtect
-  ProductVersion: 1.2.6.1
-  FileVersion: 1.2.6.1
-  MachineType: AMD64
-  OriginalFilename: SeasunProtect.sys
-  Imphash: e48d3385e8828a97aa6fa76d9fc4a9f1
-  Authentihash:
-    MD5: de6d51b3ddeef7764df31692de1b5f7c
-    SHA1: 0e91b087a250d7e91c2cb0431e6980ce4da59e51
-    SHA256: fdf15402013191f701086e188d88041481f1562aa43e4ca8a21f4d489e791a36
-  RichPEHeaderHash:
-    MD5: d933bdbf94f892e6f1ffb6b46c8db603
-    SHA1: 15f645d128350e5382b44e4b164d82507dfe9a43
-    SHA256: b7855e00697f7cd89ae82acd4afe6b87eee0cfe37abef94d4665ea31dd41b74c
-  Sections:
-    .text:
-      Entropy: 6.126473285260936
-      Virtual Size: '0x1a25'
-    .rdata:
-      Entropy: 4.088412845022573
-      Virtual Size: '0x930'
-    .data:
-      Entropy: 1.5150817200210467
-      Virtual Size: '0x224c'
-    .pdata:
-      Entropy: 3.8454693680987755
-      Virtual Size: '0x1bc'
-    INIT:
-      Entropy: 5.214580480100894
-      Virtual Size: '0x5a4'
-    .rsrc:
-      Entropy: 3.2640395533756847
-      Virtual Size: '0x378'
-    .reloc:
-      Entropy: 3.955544226629556
-      Virtual Size: '0x44'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-05-25 21:34:19'
-  InternalName: SeasunProtect
-  Copyright: Copyright (C) 2023
-  Imports:
-  - ksecdd.sys
-  - ntoskrnl.exe
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - GetSecurityUserInfo
-  - RtlInitAnsiString
-  - RtlInitUnicodeString
-  - RtlAnsiStringToUnicodeString
-  - RtlFreeUnicodeString
-  - IoGetCurrentProcess
-  - ObfDereferenceObject
-  - ObRegisterCallbacks
-  - ObUnRegisterCallbacks
-  - ObGetFilterVersion
-  - PsGetProcessId
-  - LsaFreeReturnBuffer
-  - SeQueryAuthenticationIdToken
-  - PsReferencePrimaryToken
-  - PsDereferencePrimaryToken
-  - PsLookupProcessByProcessId
-  - FsRtlIsNameInExpression
-  - PsGetProcessImageFileName
-  - __C_specific_handler
-  - PsProcessType
-  - RtlQueryRegistryValues
-  - RtlWriteRegistryValue
-  - DbgPrint
-  - IofCompleteRequest
-  - IoCreateDevice
-  - IoCreateSymbolicLink
-  - IoDeleteDevice
-  - IoDeleteSymbolicLink
-  - RtlGetVersion
-  - ProbeForRead
-  - MmGetSystemRoutineAddress
-  - ZwClose
-  - MmIsAddressValid
-  - ZwOpenProcess
-  - KeStackAttachProcess
-  - KeUnstackDetachProcess
-  - ZwQueryObject
-  - ZwDuplicateObject
-  - __chkstk
-  - KeBugCheckEx
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Hardware Compatibility Publisher
-      ValidFrom: '2023-01-12 19:14:52'
-      ValidTo: '2023-12-15 19:14:52'
-      Signature: 5548d9042f4a8d4776b5fccbacda2e58d5161fb7932287aa5da1c9afaca15c230908ed96adeb0f6a86dc3972a85de00fb4d4db0a52394116887998fd673f57a0520fa1e39806b348e555cfe5a419c501a0fbfbdb79e88d37656735fa6cd56d5c465fe3871f5157e357d73956d4586bd50508522be7e24d2357d7ab53e3ae46d2d168e52d0d15761eaab962c36ee0791cabd33869f11f9512772261cda6249f16f85772116cc0585975600e5fe949e1a2bb85820ddf901b9e48ee805aacd1c826a1304916e2180de5d3ecc2fc0375d3a877ab8a058dda7e05aa91727523e579d17ce0dce414612d9b638b1ff5ad74d654c5b7e638a3cca372c5f51db638794ed6
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 33000000f5e8773b206b1ccd610000000000f5
-      Version: 3
-      TBS:
-        MD5: bf6aed18e4c3fd6ac87330096df18117
-        SHA1: f96be504b875f1e63bf51eacc6768e4fdecddcc6
-        SHA256: 76c137a4dd29ebb1cb6a5d319d17e7049ad6d524f9de5d47c24c14b16a4f0720
-        SHA384: f1d9ab8315a45f1b96431b009f4b5c12cb4d05428d5b003a4100d4b31124799e8d70dbf72a47787657c42e198bbdff33
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2012
-      ValidFrom: '2012-04-18 23:48:38'
-      ValidTo: '2027-04-18 23:58:38'
-      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 610baac1000000000009
-      Version: 3
-      TBS:
-        MD5: a569061297e8e824767dbc3184a69bea
-        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
-        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
-        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
-    Signer:
-    - SerialNumber: 33000000f5e8773b206b1ccd610000000000f5
-      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2012
-      Version: 1
-  LoadsDespiteHVCI: 'TRUE'
-Tags:
-- SeasunProtect.sys
+-   Filename: SeasunProtect.sys
+    MD5: a360ec883ef5383157080b2e185802ef
+    SHA1: ba42182630cf033a1737af6ffee87b018fda0b91
+    SHA256: 507b07b0dc0e638b65b4a4d11a462b35439c746d42337b9888927bf994176102
+    Signature: ''
+    Date: ''
+    Publisher: ''
+    Company: Chengdu Westhouse Interactive Entertainment Ltd.
+    Description: Game Protect
+    Product: SeasunProtect
+    ProductVersion: 1.2.6.1
+    FileVersion: 1.2.6.1
+    MachineType: AMD64
+    OriginalFilename: SeasunProtect.sys
+    Imphash: e48d3385e8828a97aa6fa76d9fc4a9f1
+    Authentihash:
+        MD5: de6d51b3ddeef7764df31692de1b5f7c
+        SHA1: 0e91b087a250d7e91c2cb0431e6980ce4da59e51
+        SHA256: fdf15402013191f701086e188d88041481f1562aa43e4ca8a21f4d489e791a36
+    RichPEHeaderHash:
+        MD5: d933bdbf94f892e6f1ffb6b46c8db603
+        SHA1: 15f645d128350e5382b44e4b164d82507dfe9a43
+        SHA256: b7855e00697f7cd89ae82acd4afe6b87eee0cfe37abef94d4665ea31dd41b74c
+    Sections:
+        .text:
+            Entropy: 6.126473285260936
+            Virtual Size: '0x1a25'
+        .rdata:
+            Entropy: 4.088412845022573
+            Virtual Size: '0x930'
+        .data:
+            Entropy: 1.5150817200210467
+            Virtual Size: '0x224c'
+        .pdata:
+            Entropy: 3.8454693680987755
+            Virtual Size: '0x1bc'
+        INIT:
+            Entropy: 5.214580480100894
+            Virtual Size: '0x5a4'
+        .rsrc:
+            Entropy: 3.2640395533756847
+            Virtual Size: '0x378'
+        .reloc:
+            Entropy: 3.955544226629556
+            Virtual Size: '0x44'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2023-05-25 21:34:19'
+    InternalName: SeasunProtect
+    Copyright: Copyright (C) 2023
+    Imports:
+    - ksecdd.sys
+    - ntoskrnl.exe
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - GetSecurityUserInfo
+    - RtlInitAnsiString
+    - RtlInitUnicodeString
+    - RtlAnsiStringToUnicodeString
+    - RtlFreeUnicodeString
+    - IoGetCurrentProcess
+    - ObfDereferenceObject
+    - ObRegisterCallbacks
+    - ObUnRegisterCallbacks
+    - ObGetFilterVersion
+    - PsGetProcessId
+    - LsaFreeReturnBuffer
+    - SeQueryAuthenticationIdToken
+    - PsReferencePrimaryToken
+    - PsDereferencePrimaryToken
+    - PsLookupProcessByProcessId
+    - FsRtlIsNameInExpression
+    - PsGetProcessImageFileName
+    - __C_specific_handler
+    - PsProcessType
+    - RtlQueryRegistryValues
+    - RtlWriteRegistryValue
+    - DbgPrint
+    - IofCompleteRequest
+    - IoCreateDevice
+    - IoCreateSymbolicLink
+    - IoDeleteDevice
+    - IoDeleteSymbolicLink
+    - RtlGetVersion
+    - ProbeForRead
+    - MmGetSystemRoutineAddress
+    - ZwClose
+    - MmIsAddressValid
+    - ZwOpenProcess
+    - KeStackAttachProcess
+    - KeUnstackDetachProcess
+    - ZwQueryObject
+    - ZwDuplicateObject
+    - __chkstk
+    - KeBugCheckEx
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Hardware Compatibility Publisher
+            ValidFrom: '2023-01-12 19:14:52'
+            ValidTo: '2023-12-15 19:14:52'
+            Signature: 5548d9042f4a8d4776b5fccbacda2e58d5161fb7932287aa5da1c9afaca15c230908ed96adeb0f6a86dc3972a85de00fb4d4db0a52394116887998fd673f57a0520fa1e39806b348e555cfe5a419c501a0fbfbdb79e88d37656735fa6cd56d5c465fe3871f5157e357d73956d4586bd50508522be7e24d2357d7ab53e3ae46d2d168e52d0d15761eaab962c36ee0791cabd33869f11f9512772261cda6249f16f85772116cc0585975600e5fe949e1a2bb85820ddf901b9e48ee805aacd1c826a1304916e2180de5d3ecc2fc0375d3a877ab8a058dda7e05aa91727523e579d17ce0dce414612d9b638b1ff5ad74d654c5b7e638a3cca372c5f51db638794ed6
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 33000000f5e8773b206b1ccd610000000000f5
+            Version: 3
+            TBS:
+                MD5: bf6aed18e4c3fd6ac87330096df18117
+                SHA1: f96be504b875f1e63bf51eacc6768e4fdecddcc6
+                SHA256: 76c137a4dd29ebb1cb6a5d319d17e7049ad6d524f9de5d47c24c14b16a4f0720
+                SHA384: f1d9ab8315a45f1b96431b009f4b5c12cb4d05428d5b003a4100d4b31124799e8d70dbf72a47787657c42e198bbdff33
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Third Party Component CA 2012
+            ValidFrom: '2012-04-18 23:48:38'
+            ValidTo: '2027-04-18 23:58:38'
+            Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 610baac1000000000009
+            Version: 3
+            TBS:
+                MD5: a569061297e8e824767dbc3184a69bea
+                SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+                SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+                SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
+        Signer:
+        -   SerialNumber: 33000000f5e8773b206b1ccd610000000000f5
+            Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Third Party Component CA 2012
+            Version: 1
+    LoadsDespiteHVCI: 'TRUE'

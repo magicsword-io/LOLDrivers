@@ -7,205 +7,205 @@ Created: '2023-04-14'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: sc.exe create dcr.sys binPath=C:\windows\temp\dcr.sys type=kernel && sc.exe
-    start dcr.sys
-  Description: DriveCrypt Dcr.sys vulnerability exploit for bypassing x64 DSE
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
+    Command: sc.exe create dcr.sys binPath=C:\windows\temp\dcr.sys type=kernel &&
+        sc.exe start dcr.sys
+    Description: DriveCrypt Dcr.sys vulnerability exploit for bypassing x64 DSE
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
 Resources:
 - https://github.com/wjcsharp/DriveCrypt
 Detection: []
 Acknowledgement:
-  Handle: ''
-  Person: ''
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
-- Authentihash:
-    MD5: accf79b751fafb101c1ce17fb7611b70
-    SHA1: 8f2f1684a7305f32015d54c402790a47c6c7a0c9
-    SHA256: 2b60228db4f3092063e115537b5731ef3487ecf55c036e812605c5149071332c
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2009-04-03 06:12:33'
-  Date: ''
-  Description: ''
-  ExportedFunctions: ''
-  FileVersion: ''
-  Filename: dcr.sys
-  ImportedFunctions:
-  - ExFreePoolWithTag
-  - RtlInitAnsiString
-  - IoCreateSymbolicLink
-  - PsTerminateSystemThread
-  - PoStartNextPowerIrp
-  - ObfDereferenceObject
-  - KeInitializeMutex
-  - ZwClose
-  - RtlAnsiStringToUnicodeString
-  - IofCompleteRequest
-  - wcsncat
-  - IoCreateDevice
-  - KeInitializeSemaphore
-  - ZwReadFile
-  - ObReferenceObjectByHandle
-  - KeWaitForSingleObject
-  - ZwSetInformationFile
-  - IoSetHardErrorOrVerifyDevice
-  - ZwWriteFile
-  - sprintf
-  - KeSetPriorityThread
-  - RtlFreeUnicodeString
-  - IoInitializeTimer
-  - IoStartTimer
-  - RtlDeleteRegistryValue
-  - RtlWriteRegistryValue
-  - RtlCreateRegistryKey
-  - ExAllocatePoolWithTag
-  - RtlInitUnicodeString
-  - ZwCreateFile
-  - IoAttachDevice
-  - ProbeForRead
-  - IoDeleteDevice
-  - PoCallDriver
-  - KeSetEvent
-  - IofCallDriver
-  - KeClearEvent
-  - ProbeForWrite
-  - PsCreateSystemThread
-  - KeReleaseSemaphore
-  - ExInterlockedRemoveHeadList
-  - ExInterlockedInsertTailList
-  - KeInitializeEvent
-  - IoDeleteSymbolicLink
-  - RtlQueryRegistryValues
-  - IoGetRelatedDeviceObject
-  - IoSetThreadHardErrorMode
-  - MmBuildMdlForNonPagedPool
-  - IoFreeMdl
-  - KeReleaseMutex
-  - IoFileObjectType
-  - MmMapLockedPagesSpecifyCache
-  - IoGetDeviceObjectPointer
-  - IoFreeIrp
-  - MmUnlockPages
-  - ZwQueryInformationFile
-  - IoAllocateMdl
-  - MmUnmapLockedPages
-  - IoBuildDeviceIoControlRequest
-  - IoAllocateIrp
-  - ZwDeviceIoControlFile
-  - ZwFsControlFile
-  - __C_specific_handler
-  - __chkstk
-  Imports:
-  - ntoskrnl.exe
-  InternalName: ''
-  MD5: c24800c382b38707e556af957e9e94fd
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: 0173f40d754c5a013f4ca5651a62fbd0
-    SHA1: 680e2e28e9ce527689bc31a349ac87ead75b6826
-    SHA256: c523dbc32bc5ec4e966710432be7dc0d1c172b65bb3c42636c65f17cfde6196d
-  SHA1: b49ac8fefc6d1274d84fef44c1e5183cc7accba1
-  SHA256: 3c6f9917418e991ed41540d8d882c8ca51d582a82fd01bff6cdf26591454faf5
-  Sections:
-    .text:
-      Entropy: 6.401262967451807
-      Virtual Size: '0x2bf64'
-    .data:
-      Entropy: 1.268441553105141
-      Virtual Size: '0x22600'
-    .pdata:
-      Entropy: 5.321759404372387
-      Virtual Size: '0xc48'
-    INIT:
-      Entropy: 5.042298031844367
-      Virtual Size: '0x78a'
-    .reloc:
-      Entropy: 1.4128994326009754
-      Virtual Size: '0x384'
-  Signature: ''
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=DE, O=SecurStar GmbH, CN=SecurStar GmbH, emailAddress=contact@securstar.com
-      ValidFrom: '2007-04-13 10:29:04'
-      ValidTo: '2010-04-13 10:29:04'
-      Signature: 70ede326923eed24cf9fffcf121f86edcd8bcfa745f802c4fcc103bc1d14f7db3764a59088c51d10d9818c0cc5f096c90c3e69a0a96f5a1cb7e24f7af7e037d9750a6934e939cb6275aab2d5cde6c4368046624543e93cdc4f22993f130a09e0ac2b93e1cb7f84f67bd4ad1c1fc572d79b3ce6626fb9ae9bd36a2c5598629ac35ff3734387bd1984c0471e14f34f2142c8c958c2b71110995b5d672255bd12f49a9e9365dda42358ca9d80780df6095aead057d0632356da85501a92e0a610f8e247d0caa415939cf2f77a01dcc7ad79c265774c9f407b1e3c2715c99fd60ae370f891f232c7bc1228147a9d838ddec1878399b8590cd3f33c4cc3449151b751
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 01000000000111ea7d2e62
-      Version: 3
-      TBS:
-        MD5: 33218aaf2454a9863d9be77758790d24
-        SHA1: 7291c25764ff0ae63ab32a0cf3c20148a10ad6d7
-        SHA256: 5e5c742cb46466a1381c441851ddbc98e90f6f1fbe8023acac55a002f8b8ab9e
-        SHA384: 65153d4177c766a83f67d36dc427c05a70ce46f1372c6440ee772fbe2f3afc288adc83933cdeadbfcc6ebda84e7b0ded
-    - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
-        Primary Object Publishing CA
-      ValidFrom: '1999-01-28 12:00:00'
-      ValidTo: '2014-01-27 11:00:00'
-      Signature: a0422eb876a7427186404d464d5b26b0b074f93f89a87b7cb7f1c697e08239999d43fe60823642b55b878df55df4bbffa91044a871d3c7f12241f29aa4a5ec63fae5eb654a19309d8bc7b6fddc3fe16cfdd5521407fc6d24ccb3cc81a2c052f327b96d9e063dd8a849023269c7054294d0bbe3bba908c393501bdb846dc0ba1e5298659c1376bdb3d567292f1f7baa2c51a0fd854f263c48a38127a6feee7f7899c245cf9d1f527ed7958bfde1d020c3af7e51a22f663bab2dcf2d8e8c4d7d18392128fbdcae6d6581d0e0d7184be7b5f774d784e6522aac3b68fd3b4ab80154849132bb95d28e6330a69ece2396feab2eb86a8b74dcde21a114c2fbbf53af10
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 04000000000108d9611cd6
-      Version: 3
-      TBS:
-        MD5: 698f075151097d84c0b1f3e7bc3d6fca
-        SHA1: 041750993d7c9e063f02dfe74699598640911aab
-        SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
-        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
-    - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
-        CA
-      ValidFrom: '2004-01-22 09:00:00'
-      ValidTo: '2014-01-27 10:00:00'
-      Signature: 11d45d8af43d0d9d7e4fa70071610b56b34caa70e1b2d1dec7886d1d897c2ba946e58b1f8e4cc26695911fe34d394ae31b70b7446edc068a4d6d25e89812dcbca0dd864eae8f81130540905a542529944acaf165b4ef0679dae7cb86f004c918dcee72b320015748dfe333e12ccd9c077f9447278d888d340ca67c5c20c17d07b3736b648c26d29bd7e87965a6a891a174862a050282c1847cf279cd3c2a2b0f99291eea8c8a1ab16aeaa266380e65e1add8c6c91f888d3976ee1782c4138d97ce6341e77af5b4b66c15c33813b3930b620688dde1447f10a950248b60dc05f75ba514b27b56720b96eabffc057090659e051ca4dd07af4b57dec639673bc574
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 04000000000108d9612448
-      Version: 3
-      TBS:
-        MD5: 2fc76031fc24eec1ef3db2d246d21d6a
-        SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
-        SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
-        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
-    - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Comodo CA Limited, CN=Comodo
-        Time Stamping Signer
-      ValidFrom: '2005-05-17 00:00:00'
-      ValidTo: '2010-05-16 23:59:59'
-      Signature: 4a8ffc1e30a83c75e847e773aeb0697ab24dbc50d69a8f81b6602af702a5483a1e15c7186b1c18a4c9dffdf1cef7b82ad66da7cde57d213d1e3f74c8a2b8799628aee1fa7343f27abe802e6704da17fa9e5a96f59c6d7e7e8c6c8127507f68d889fa7d0459670f2d74e49987d7c1e15d114a26f726108067c2c3f7cf341bc47921cc6035bfa960779ecbbc5232226caddadf6dddf32e36cdc5a754e0f4a4cce3f5d4624f99060ce56f596f11c7cf5824bfaf251d4511779965ae31d45d489d8cc372722999e50af1b9cc5a3c48d3ff40cecd10033dbf339c08f310222a47b0772bee5b4e65e0d3233c03c4cf2e4562690e1bd20bf9f3200f531ad07c71f138d0
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 4f63d030f815a3a5b3446940063d1689
-      Version: 3
-      TBS:
-        MD5: 6ad2be2166fde7539b29744bae5182a8
-        SHA1: f5f184fe76ce3561f8c3355fd377b2d7c7583ba2
-        SHA256: bf722b2aaaeabc5df82b10e576182c06d59222bb3fa617f7401a529bff7fc1e5
-        SHA384: 23c5ae758c09afa24de394693fe5c2140220723e9df48a6bd41c7612f1c10daf7210bb3be237765879890ac3db2adbe8
-    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
-      ValidFrom: '2006-05-23 17:00:51'
-      ValidTo: '2016-05-23 17:10:51'
-      Signature: 13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 610b7f6b000000000019
-      Version: 3
-      TBS:
-        MD5: 4798d55be7663a75649cda4dedc686ef
-        SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
-        SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
-        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
-    Signer:
-    - SerialNumber: 01000000000111ea7d2e62
-      Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
-        CA
-      Version: 1
-  Imphash: 858ceae385cdcfcbc7814644564c23e6
-  LoadsDespiteHVCI: 'FALSE'
+-   Authentihash:
+        MD5: accf79b751fafb101c1ce17fb7611b70
+        SHA1: 8f2f1684a7305f32015d54c402790a47c6c7a0c9
+        SHA256: 2b60228db4f3092063e115537b5731ef3487ecf55c036e812605c5149071332c
+    Company: ''
+    Copyright: ''
+    CreationTimestamp: '2009-04-03 06:12:33'
+    Date: ''
+    Description: ''
+    ExportedFunctions: ''
+    FileVersion: ''
+    Filename: dcr.sys
+    ImportedFunctions:
+    - ExFreePoolWithTag
+    - RtlInitAnsiString
+    - IoCreateSymbolicLink
+    - PsTerminateSystemThread
+    - PoStartNextPowerIrp
+    - ObfDereferenceObject
+    - KeInitializeMutex
+    - ZwClose
+    - RtlAnsiStringToUnicodeString
+    - IofCompleteRequest
+    - wcsncat
+    - IoCreateDevice
+    - KeInitializeSemaphore
+    - ZwReadFile
+    - ObReferenceObjectByHandle
+    - KeWaitForSingleObject
+    - ZwSetInformationFile
+    - IoSetHardErrorOrVerifyDevice
+    - ZwWriteFile
+    - sprintf
+    - KeSetPriorityThread
+    - RtlFreeUnicodeString
+    - IoInitializeTimer
+    - IoStartTimer
+    - RtlDeleteRegistryValue
+    - RtlWriteRegistryValue
+    - RtlCreateRegistryKey
+    - ExAllocatePoolWithTag
+    - RtlInitUnicodeString
+    - ZwCreateFile
+    - IoAttachDevice
+    - ProbeForRead
+    - IoDeleteDevice
+    - PoCallDriver
+    - KeSetEvent
+    - IofCallDriver
+    - KeClearEvent
+    - ProbeForWrite
+    - PsCreateSystemThread
+    - KeReleaseSemaphore
+    - ExInterlockedRemoveHeadList
+    - ExInterlockedInsertTailList
+    - KeInitializeEvent
+    - IoDeleteSymbolicLink
+    - RtlQueryRegistryValues
+    - IoGetRelatedDeviceObject
+    - IoSetThreadHardErrorMode
+    - MmBuildMdlForNonPagedPool
+    - IoFreeMdl
+    - KeReleaseMutex
+    - IoFileObjectType
+    - MmMapLockedPagesSpecifyCache
+    - IoGetDeviceObjectPointer
+    - IoFreeIrp
+    - MmUnlockPages
+    - ZwQueryInformationFile
+    - IoAllocateMdl
+    - MmUnmapLockedPages
+    - IoBuildDeviceIoControlRequest
+    - IoAllocateIrp
+    - ZwDeviceIoControlFile
+    - ZwFsControlFile
+    - __C_specific_handler
+    - __chkstk
+    Imports:
+    - ntoskrnl.exe
+    InternalName: ''
+    MD5: c24800c382b38707e556af957e9e94fd
+    MachineType: AMD64
+    MagicHeader: 50 45 0 0
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: 0173f40d754c5a013f4ca5651a62fbd0
+        SHA1: 680e2e28e9ce527689bc31a349ac87ead75b6826
+        SHA256: c523dbc32bc5ec4e966710432be7dc0d1c172b65bb3c42636c65f17cfde6196d
+    SHA1: b49ac8fefc6d1274d84fef44c1e5183cc7accba1
+    SHA256: 3c6f9917418e991ed41540d8d882c8ca51d582a82fd01bff6cdf26591454faf5
+    Sections:
+        .text:
+            Entropy: 6.401262967451807
+            Virtual Size: '0x2bf64'
+        .data:
+            Entropy: 1.268441553105141
+            Virtual Size: '0x22600'
+        .pdata:
+            Entropy: 5.321759404372387
+            Virtual Size: '0xc48'
+        INIT:
+            Entropy: 5.042298031844367
+            Virtual Size: '0x78a'
+        .reloc:
+            Entropy: 1.4128994326009754
+            Virtual Size: '0x384'
+    Signature: ''
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=DE, O=SecurStar GmbH, CN=SecurStar GmbH, emailAddress=contact@securstar.com
+            ValidFrom: '2007-04-13 10:29:04'
+            ValidTo: '2010-04-13 10:29:04'
+            Signature: 70ede326923eed24cf9fffcf121f86edcd8bcfa745f802c4fcc103bc1d14f7db3764a59088c51d10d9818c0cc5f096c90c3e69a0a96f5a1cb7e24f7af7e037d9750a6934e939cb6275aab2d5cde6c4368046624543e93cdc4f22993f130a09e0ac2b93e1cb7f84f67bd4ad1c1fc572d79b3ce6626fb9ae9bd36a2c5598629ac35ff3734387bd1984c0471e14f34f2142c8c958c2b71110995b5d672255bd12f49a9e9365dda42358ca9d80780df6095aead057d0632356da85501a92e0a610f8e247d0caa415939cf2f77a01dcc7ad79c265774c9f407b1e3c2715c99fd60ae370f891f232c7bc1228147a9d838ddec1878399b8590cd3f33c4cc3449151b751
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 01000000000111ea7d2e62
+            Version: 3
+            TBS:
+                MD5: 33218aaf2454a9863d9be77758790d24
+                SHA1: 7291c25764ff0ae63ab32a0cf3c20148a10ad6d7
+                SHA256: 5e5c742cb46466a1381c441851ddbc98e90f6f1fbe8023acac55a002f8b8ab9e
+                SHA384: 65153d4177c766a83f67d36dc427c05a70ce46f1372c6440ee772fbe2f3afc288adc83933cdeadbfcc6ebda84e7b0ded
+        -   Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
+                Primary Object Publishing CA
+            ValidFrom: '1999-01-28 12:00:00'
+            ValidTo: '2014-01-27 11:00:00'
+            Signature: a0422eb876a7427186404d464d5b26b0b074f93f89a87b7cb7f1c697e08239999d43fe60823642b55b878df55df4bbffa91044a871d3c7f12241f29aa4a5ec63fae5eb654a19309d8bc7b6fddc3fe16cfdd5521407fc6d24ccb3cc81a2c052f327b96d9e063dd8a849023269c7054294d0bbe3bba908c393501bdb846dc0ba1e5298659c1376bdb3d567292f1f7baa2c51a0fd854f263c48a38127a6feee7f7899c245cf9d1f527ed7958bfde1d020c3af7e51a22f663bab2dcf2d8e8c4d7d18392128fbdcae6d6581d0e0d7184be7b5f774d784e6522aac3b68fd3b4ab80154849132bb95d28e6330a69ece2396feab2eb86a8b74dcde21a114c2fbbf53af10
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 04000000000108d9611cd6
+            Version: 3
+            TBS:
+                MD5: 698f075151097d84c0b1f3e7bc3d6fca
+                SHA1: 041750993d7c9e063f02dfe74699598640911aab
+                SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+                SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
+        -   Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
+                CA
+            ValidFrom: '2004-01-22 09:00:00'
+            ValidTo: '2014-01-27 10:00:00'
+            Signature: 11d45d8af43d0d9d7e4fa70071610b56b34caa70e1b2d1dec7886d1d897c2ba946e58b1f8e4cc26695911fe34d394ae31b70b7446edc068a4d6d25e89812dcbca0dd864eae8f81130540905a542529944acaf165b4ef0679dae7cb86f004c918dcee72b320015748dfe333e12ccd9c077f9447278d888d340ca67c5c20c17d07b3736b648c26d29bd7e87965a6a891a174862a050282c1847cf279cd3c2a2b0f99291eea8c8a1ab16aeaa266380e65e1add8c6c91f888d3976ee1782c4138d97ce6341e77af5b4b66c15c33813b3930b620688dde1447f10a950248b60dc05f75ba514b27b56720b96eabffc057090659e051ca4dd07af4b57dec639673bc574
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 04000000000108d9612448
+            Version: 3
+            TBS:
+                MD5: 2fc76031fc24eec1ef3db2d246d21d6a
+                SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
+                SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+                SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
+        -   Subject: C=GB, ST=Greater Manchester, L=Salford, O=Comodo CA Limited,
+                CN=Comodo Time Stamping Signer
+            ValidFrom: '2005-05-17 00:00:00'
+            ValidTo: '2010-05-16 23:59:59'
+            Signature: 4a8ffc1e30a83c75e847e773aeb0697ab24dbc50d69a8f81b6602af702a5483a1e15c7186b1c18a4c9dffdf1cef7b82ad66da7cde57d213d1e3f74c8a2b8799628aee1fa7343f27abe802e6704da17fa9e5a96f59c6d7e7e8c6c8127507f68d889fa7d0459670f2d74e49987d7c1e15d114a26f726108067c2c3f7cf341bc47921cc6035bfa960779ecbbc5232226caddadf6dddf32e36cdc5a754e0f4a4cce3f5d4624f99060ce56f596f11c7cf5824bfaf251d4511779965ae31d45d489d8cc372722999e50af1b9cc5a3c48d3ff40cecd10033dbf339c08f310222a47b0772bee5b4e65e0d3233c03c4cf2e4562690e1bd20bf9f3200f531ad07c71f138d0
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 4f63d030f815a3a5b3446940063d1689
+            Version: 3
+            TBS:
+                MD5: 6ad2be2166fde7539b29744bae5182a8
+                SHA1: f5f184fe76ce3561f8c3355fd377b2d7c7583ba2
+                SHA256: bf722b2aaaeabc5df82b10e576182c06d59222bb3fa617f7401a529bff7fc1e5
+                SHA384: 23c5ae758c09afa24de394693fe5c2140220723e9df48a6bd41c7612f1c10daf7210bb3be237765879890ac3db2adbe8
+        -   Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+            ValidFrom: '2006-05-23 17:00:51'
+            ValidTo: '2016-05-23 17:10:51'
+            Signature: 13c56c5e077f3c57ff9b315f3fbd955425c679f92c31034d64694b56d95b976f7cf3f0d024657538639813701613f7a701f1c623e085866c0bf080945a75e87ce41e92b473bfc1b3a7b00bd31884cbcc09a35c9c4f3eb03a9c2d1bc404ef9737966fe5ecbaac6ab3d4e23cdf8b25e7acbc624531dda40a72e41bf8784301ccba3914de5d90aed85acf5eca46815133d5a60e5867d3d8665888169beeb11acaad91138421da9a6e20efda007428bac95ff34d5dc3da25692554ea44bcc39b29331cd63c961f8781c553d72a2733d42e197c08586ddb4e1999a9ea5ff39a9d8c513a5a5cbd2fa908359b54a7db351a521633343aa380046afdb4838cad90cf0c3a6596ec334e1826b849bbeb8192ff134d324b23c733e7b6716b15f69c80e6bcb76cbe41d5033a7133150050743b0e5df996aaed903eab134c809926bc38a5eb0236891db620be83ab10f8199ed76379d4aeb12f6136f94a4ba833c70e7241f9f1b1907eae46efde397b75a0411459041d42bc4788b8130e05fa1df0808dff70c677d84bdc460e231a72d5bfdefeaaae69583cfc5c46e4d5819a8b6e6559771a32a590a6b6649364fd0753c9a0de28ad2a6cc638d181ce98f54019e92c1743a4265fd3443053e41d02baa40a2f16dd7a60275242bbad98372897e4b8d27911e3108c48d5305d0a0c52def588ea8d1a2d67c9f4801484b7850cd16628a5c66f2461
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 610b7f6b000000000019
+            Version: 3
+            TBS:
+                MD5: 4798d55be7663a75649cda4dedc686ef
+                SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
+                SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+                SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
+        Signer:
+        -   SerialNumber: 01000000000111ea7d2e62
+            Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
+                CA
+            Version: 1
+    Imphash: 858ceae385cdcfcbc7814644564c23e6
+    LoadsDespiteHVCI: 'FALSE'

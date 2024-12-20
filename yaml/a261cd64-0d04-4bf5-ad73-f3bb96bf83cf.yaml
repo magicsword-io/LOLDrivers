@@ -7,266 +7,266 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: sc.exe create PCHunter.sys binPath=C:\windows\temp\PCHunter.sys type=kernel
-    && sc.exe start PCHunter.sys
-  Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
+    Command: sc.exe create PCHunter.sys binPath=C:\windows\temp\PCHunter.sys type=kernel
+        && sc.exe start PCHunter.sys
+    Description: ''
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/1b7fb154a7b7903a3c81f12f4b094f24a3c60a6a8cffca894c67c264ab7545fa.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+-   type: yara_signature
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/1b7fb154a7b7903a3c81f12f4b094f24a3c60a6a8cffca894c67c264ab7545fa.yara
+-   type: sigma_hash
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+-   type: sigma_names
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+-   type: sysmon_hash_detect
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+-   type: sysmon_hash_block
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+-   type: yara_signature
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+-   type: sigma_hash
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+-   type: sigma_names
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+-   type: sysmon_hash_detect
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+-   type: sysmon_hash_block
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Acknowledgement:
-  Handle: ''
-  Person: ''
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
-- Authentihash:
-    MD5: 9655d43fd874e7a6720b36e7fd9fa6b7
-    SHA1: a14261c290339995b7430495f2dfdd1da64dcfc5
-    SHA256: c2d209ed240027608003f8d32b621f8baaf5601aaf348e64269e4457a594c7c3
-  Company: "\u4E00\u666E\u660E\u4E3A\uFF08\u5317\u4EAC\uFF09\u4FE1\u606F\u6280\u672F\
-    \u6709\u9650\u516C\u53F8"
-  Copyright: (C) 2013-2016 Epoolsoft Corporation. All Rights Reserved.
-  CreationTimestamp: '2016-04-10 08:17:05'
-  Date: ''
-  Description: Epoolsoft Windows Information View Tools
-  ExportedFunctions: ''
-  FileVersion: 1.0.0.4
-  Filename: PCHunter.sys
-  ImportedFunctions:
-  - ZwCreateKey
-  - RtlInitUnicodeString
-  - ZwSetValueKey
-  - ExGetPreviousMode
-  - PsGetCurrentProcessId
-  - KeInitializeEvent
-  - ExFreePoolWithTag
-  - ZwQuerySymbolicLinkObject
-  - SeCreateAccessState
-  - KeSetEvent
-  - IoGetFileObjectGenericMapping
-  - ObCreateObject
-  - IoCreateFile
-  - MmBuildMdlForNonPagedPool
-  - ZwOpenSymbolicLinkObject
-  - IoFreeMdl
-  - IoFileObjectType
-  - ExAllocatePool
-  - ObReferenceObjectByHandle
-  - KeWaitForSingleObject
-  - IoFreeIrp
-  - MmProbeAndLockPages
-  - ZwClose
-  - MmUnlockPages
-  - ObOpenObjectByPointer
-  - IoAllocateMdl
-  - MmSectionObjectType
-  - _wcsicmp
-  - NtDeviceIoControlFile
-  - NtFsControlFile
-  - swprintf
-  - MmGetSystemRoutineAddress
-  - ExAllocatePoolWithTag
-  - ObQueryNameString
-  - KeBugCheckEx
-  - PsLookupThreadByThreadId
-  - IoDeleteSymbolicLink
-  - IoDeleteDevice
-  - wcsncat
-  - KeDelayExecutionThread
-  - wcsrchr
-  - IofCompleteRequest
-  - IoCreateSymbolicLink
-  - IoCreateDevice
-  - MmUnmapLockedPages
-  - MmMapLockedPagesSpecifyCache
-  - KeStackAttachProcess
-  - ObfDereferenceObject
-  - MmIsAddressValid
-  - KeUnstackDetachProcess
-  - PsLookupProcessByProcessId
-  - ProbeForRead
-  - IoGetCurrentProcess
-  - MmUserProbeAddress
-  - ProbeForWrite
-  - NtBuildNumber
-  - IoAllocateIrp
-  - MmSystemRangeStart
-  - __C_specific_handler
-  - FltReleaseFileNameInformation
-  - FltClose
-  - FltStartFiltering
-  - FltParseFileNameInformation
-  - FltCreateFile
-  - FltRegisterFilter
-  - FltUnregisterFilter
-  - FltGetFileNameInformation
-  Imports:
-  - ntoskrnl.exe
-  - FLTMGR.SYS
-  InternalName: PCHunter.sys
-  MD5: c2c1b8c00b99e913d992a870ed478a24
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: PCHunter.sys
-  Product: PCHunter
-  ProductVersion: 1.0.0.4
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: 819db1bed1ee2ace0a19ce67f94dfc84
-    SHA1: 0dd604290ee6a8e102aa4964d90c99d1c8bc1332
-    SHA256: 608f08d51ee0c93ea049baae3b51084ac93c2453383d22aacfbcde896d4d398a
-  SHA1: a64354aac2d68b4fa74b5829a9d42d90d83b040c
-  SHA256: 1b7fb154a7b7903a3c81f12f4b094f24a3c60a6a8cffca894c67c264ab7545fa
-  Sections:
-    .text:
-      Entropy: 6.3553477241339005
-      Virtual Size: '0x81050'
-    .rdata:
-      Entropy: 5.552306001700414
-      Virtual Size: '0xcf7c'
-    .data:
-      Entropy: 2.831777228998586
-      Virtual Size: '0x2eda8'
-    .pdata:
-      Entropy: 5.938259413904041
-      Virtual Size: '0x7860'
-    INIT:
-      Entropy: 5.080110483782868
-      Virtual Size: '0x852'
-    .rsrc:
-      Entropy: 3.4546217154700916
-      Virtual Size: '0x3b0'
-    .pchunt0:
-      Entropy: 1.7563449969203195
-      Virtual Size: '0x780'
-    .pchunt1:
-      Entropy: 7.978022918434585
-      Virtual Size: '0x166bd'
-    .reloc:
-      Entropy: 4.690928622225438
-      Virtual Size: '0x180'
-  Signature: []
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=CN, ST=, L=, O=(), CN=()
-      ValidFrom: '2015-10-16 04:47:28'
-      ValidTo: '2016-11-16 04:47:28'
-      Signature: c87f8ed5e0c37da04f8f7b193aae1974b8712e6d9740a8dc55058a576301c1783919200b621b7d674954efe2689ee641cdd2609541eea9a633277af5e3ac84fc33b681d3737d54bd45bf9405947dbfe89338577c841b148dd745c742f19775cdb6f1f456500b439b79e350b41987c671ebd6bf05eb6832fb8bde7e4aaa42d7e26d8080b41cd6181f9a0ac62bce4cb9103907f279d6c18237b4744a745bcfa118f90bd2fa3f4eed5b059faffef0f8ae7c023f2e9e8788cd071b6ceb949a00b078591988a8ab7792cb11a545c7bb079687d2defdb88a6615e0d3204c29dae9a6f19fbb3ae4c3d338522648cb1bd5399f55fa7bd01ee9041330eb6a57edcd0fc455
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 5c5d0a336ba298b9695d2cfa5a181510
-      Version: 3
-      TBS:
-        MD5: 22abfcdb0a677a41a0e98019f629e785
-        SHA1: 3c68a9e0ba9434a54c9b731fed228bb0f662f6c5
-        SHA256: 5142ab5696ee82d72ca8fc8f622adffcdb73bf2e6d6a8531d5f86ce4f823ac23
-        SHA384: 94fb388bf7369e43f7824012505050758ff9c7fff41df4d869ed3d6780c7a8875b291ca9c1b89fb68fb7b51d2febae42
-    - Subject: C=CN, O=WoSign CA Limited, CN=WoSign Time Stamping Signer
-      ValidFrom: '2009-08-08 01:00:05'
-      ValidTo: '2024-08-08 01:00:05'
-      Signature: 7c982fbbc3d2aec22a8fa69776568632c4cd36688becd7801a3179b05e56b969ebb90b32a98326dc775d7a56b246a07d15d66df9acf835737836026022201cef188f7e66b24fe771935a2be6e58d3d5d2e274b46cb1d04f30b8c3f13a80dd4cde828e82a9c55c8e3ff9da922496ee8e7889237578060441827435818046d86c065470557555091e67350ee3f10a98f052fda6811536e1fad98f3763e85d057a3cfe4c11a4c6406a644ab4e1ee24bd5a46d71f86bcb6613a6471f212aa1ae4c89a47d2877174f888db1d15db1c4935abf22926cab678268edd721cb63bc93c4178e871925ad1754b479d2a59373bc7cbbe4800f8fccaa0ad0e49375aa6ccf497d75ec82285c73f042bf9ea6132ede6cee8003a6ee8836a01bb282e83dbba61ad511ae0a0b62d651369723175226edf1c5b62175391507e042f12a89047766ad1404d2c7d47c4f6cdd4edced8ea9f68617e7e15966bbd07ad09442ebafc154cae21aa4a9b6a5d481ca1526fa6fb4df7810048c4818bc2859669ab818f1d95e5b82fffe11d7d40436309f511d3cc86440757cd83583efb1e528760a053de9b81e70503a60e2a50188889c04cc6af21585d10cb74a6d934e82ca29e9750b42e43a4724086d805ce66a672cb61308c94fd86653b9b67fe2ea39956f71779603afb9e3cce3a1b9f101c66ebefc975cb2d1f17bfb33c665eae618f9ab3a271a2d206be6
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 251f5d988182172e3c419e014fb0404c
-      Version: 3
-      TBS:
-        MD5: 626797c449e52df71f4d81ad5be6d993
-        SHA1: 58672dea8f4352d39f2021436acf155a2dcbb224
-        SHA256: 21ee871c9b6d0fdb62f442f75f9f446f5cfece9c8ed5624f5691bfd704fa90e5
-        SHA384: 4568d42f64a1f6e61ed808fa82c4cfd12a63908ac2e5fa3cf2b413ea835250c245bfd38f781f91ccca94082edce253df
-    - Subject: C=CN, O=WoSign CA Limited, CN=WoSign Class 3 Code Signing CA
-      ValidFrom: '2009-08-08 01:00:05'
-      ValidTo: '2024-08-08 01:00:05'
-      Signature: 0e93a5712562a282627ab579eae1eaaccaa58bc7a14cdcccae1ce9ea2e88e251e5812276e9f6e06641c974e4de667ef9529912fdc59e6a85a45dc554f2221fbc786120c0fe1c1b24ff01e3dcad1379cbcc3daef43f6e35cacf5dc6053e431ea78d03dd6eabcd5c6ab8155085dab896530f557d19d9a374681a84d0c25809d6dd6ae785a5d4ac415edefda6ab798e24abed396f8f5f71990274fc427e3202202932c29006c27ed0ab065017c3acfba6b96bbeeebea41e188002ed449da2c6544dabe1b698197ee1b4ba7c2c3c4719cb4af76362665e5709a86c1eb84dec5394d781ff0c0bef080215aed8d49f5c3987d7246684a0d038904a4e994d936076f51ae28e465f5b1297b466d77c4f421623e80aed86460f6d9ae47baf37dcf380544b3b22dd902c07bdc097f2c3ec7f7cfbbe4699366e48c781e5f28c020dc07c3fc5439b700281f5b0aa7f0554c0c2309cc5c257f519b190bcd99dd62608d60c0eb268d091e3e73e274837475ed351b50e5959c9baa7cb846e0384cfec50bbeecd756d7c3a9b9afb151890b1c4a3e19819770896fcd548c455f7d3ac2058ff47c3d4fc7bae641855ab472d84e42453b000f47873cbcca622202e7ff5454d0a49aa6bae6e6624e2c40a7ea42b908e90621cf58bf14528f7614acbb48c48839ece01f3a584f4d26afd3a2568f208c5cf1c8d27c036db17136cc1da214035f866b32327
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 46bbb340fab9c17928938c93da108679
-      Version: 3
-      TBS:
-        MD5: 1a335fef744b698e4bde0dbe71df85ba
-        SHA1: 567c76a1da9fd89c9f8bc09fe4f1e8109b8794cd
-        SHA256: 86eaa893035f20d7480aba99d60c96cbe5aebb5490adef7b2d18f0da65efc238
-        SHA384: d752946329772337992b5ebd1193b60da7fee9c80d767c42c6833bbaeda23e41b4b0f156de8749f654e1a3a590a471e8
-    - Subject: C=CN, O=WoSign CA Limited, CN=Certification Authority of WoSign
-      ValidFrom: '2015-04-29 17:12:11'
-      ValidTo: '2025-04-29 17:12:11'
-      Signature: 0c9e907a381c3c94a5f76fb3989e6f52f9cac16e59ac5e76a96251971b98be114a421c5aec81972fd19436b91ea63e2a6ca219d2124b3924e36986125a2af5d8ca331725a69d3c8ba9beba6b956e04603ff9a84d77e874aa7b6776991b797f1f64dd62858ea09559332ff81c87f0f7f3060cd13c3e9b4f1b5b4a99dd8c62f1308ef8a4900f64c303f84ec232e2c18b71977d49aebdf6770e470bf36f182318e0a03071a49afd47ee0cf36e466274504a08bae15862143d40b6744d21c347520780632a4af199e5e71e7f20d87d04e34e528e712e08ab6ec4223c0d6b6d90f3b4d861c675c0ca26d5f01d9ced505558654ef637108d212938c3dfdb98b6a76663e65675bb166a4cbc9d516745008564555fbbcbff213c0833b59c8455e22497e5deefd15336710e7be432c58da0c54d976e7ff2c7e8c951ca325114d63771667ef0668107d84c50ee0497dc93916d1fb794c7cf710e011d66b4f64cce75a74ca754ffc83bea3711b414f1a609455b28ce7ebc5074ed934fbbcd48fe378a59a72b97a097eb4c59e0907698397d4b38125aa22c00def8f3f2f7ef3a05040a905c87d47accb70917a6d557c03a8f28b70782d7add8df43a7238c95be42e923abc9c7f033a890947f80cbe75f66a342592fa4776fee2956da0a091f16f0699018c41284bfa0b6e608ce46b893168fb7e04ecb38c25d2f1078fdbe0c41825b47049f64
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 330000003965c472e0dc2bd965000000000039
-      Version: 3
-      TBS:
-        MD5: ac25a5b7bc19804fd0911884d862f25c
-        SHA1: d474e0b87ecde20a8aeaa4fa25431a620cbd4b63
-        SHA256: 1fcf929a758d423c1466d3504642ec681de44f4d3b57dcca98c637f3a46d6f12
-        SHA384: 2e0a3138431b93f42f82b9ae193de6fd9f3b9abe286c3d65e442a8aa2f67a8d27027a8622859a05f3749c2cfc7f8c6be
-    - Subject: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom
-        Certification Authority
-      ValidFrom: '2011-04-15 20:13:19'
-      ValidTo: '2021-04-15 20:23:19'
-      Signature: 375933ca5e487d489a5be42fdbdb59a8c61f77c0a58747e86508c6672688d95c58e2c631ac0c32b96f7cc58748db2c0a23484d0dcf1116ef60577ed5326e22de373cc7dc16f3c9ce2939fb37daf5e4e741d8a2f82db3498a601f64ef9c1364b3469a82cc650f18550776c9e9337790a644daefa64d551038316f3a58ed31486190c04615b4c0a64e5493c00db524e55017c6d62392226992e0abab297508255399959f50b65b6753aaa2ba905a6ea3e35b5c830e54426dbdb917a8205284b51a4fb24d68d2c28ff8f9ae837c24a6e6c17f9a932f2e550df87bc1be336fab0cd934585c9c40ce284a015529655d5bfd525a54591171470b3eff2c9ae931d9046a33871d2f880fc99aab14a8c20b4f8589ac25490dff54395513d6b84d6bf44aad1833bc8e0052b476c2eccd8beb60d57880844a0eb93d4d560d1b17176f60fcdbd867cd3d4082b55c567f8d274cc76d5da410b57c410c39912f41d2c6310686eb405087d8131e852f10448b7a0361693b29fedfcdd3e07d19ba3b84e34e9ad78c7cd73d9dd7fd50108f06683bd8be3bbbaa284552eadde83a334caf38c715e3e97cee83eb2a1cbdd8fdf5394e7c5f25b39349ca88e56152f0dd14f8394ead47182aefcc6b29493fd7a48e7abd6f6bee675db7b167a60055014532b842fe96fc06b9cecfcff9fb6eab728718451afce3846a414f36714c77eea3191ab87d098c01
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 6139bb9c000000000033
-      Version: 3
-      TBS:
-        MD5: 5b3304180221a8328ce477b1fd93898f
-        SHA1: 9b7f1e1653a52d801387f1e51d17fabb8d435d0c
-        SHA256: 67070bcf2ee304cedd252a1dd8a7222c1be50fd2d5eabef9446cb633e133d264
-        SHA384: be36b1ba9a006afb9eb53263634cb8ca38dd6ca7f95ec56f943324f3a26f9c34c2dff1a3a5c72c88513e23e1f20c8824
-    - Subject: C=CN, O=WoSign CA Limited, CN=Certification Authority of WoSign
-      ValidFrom: '2006-09-17 22:46:36'
-      ValidTo: '2019-12-31 23:59:59'
-      Signature: b66df870fbe20d4c98b3074915f504c46ccacaf568a008fe126d9c0406c9ad9a91523e78c45cee9f541deee3f15e30c949e139e0a69d366c57fae6344f55e887a82cdd05f1581291e8cace28788fdf078501a5dc459605d480b22b059acb9aa58be03a67e67347be4afd27b188efe6cacf8d0e269ffa5f5778ad6dfeae9b3508b1c3bac1004a4b7d14bdf7f1d35518acd03370886dc4097114a62b4f8881e70b0037a9157d7ed701963f2faf7b62ae0a4abf4b392e35108bfe0439e43c3a0c0956403ab5f4c2680cb5f952cdee9df898fc78e758478f1c73586933abffdddf8e24017798193ab06679bce108a30e4fc104b3f301c8ebd3591c35d2931e7065827fdbcffbc8991260c3446f3a804bd7be21aa147a64cbdd3743455b322e45f0d9591f6b18f07ce9553619615fb57df18dbd88e4754b98dd27b0e484442a6184570582111faa3558f3200eaf59effa5572720d26d09b5349acce372e6561fff6ec1beaf6f1a6d3d1b57bbe35f422c1bc8d01bd685e830d2fecd6da630c27d1543ee4a8d3ce4b32b89194fffb5b492d7518a8ba719a3baed9c0a94f8791ed8b7b6b20988939834f80c469cc17c9c84ebee4a9a5817670060432cd8365f4bc7d3e13bcd2e86f63aab53bda8d863282789dd9ccffbf576474ed283d446215614bf794b00d2a671cf0cb9ba592bff8415ac13d60ed9fbbb86d9bcea96a163f7eea06f1
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 19c28530e93b36
-      Version: 3
-      TBS:
-        MD5: dd50ed7562bd4ce20df7b5c24d9f1446
-        SHA1: 188ce565932b1320e89f1c94e1b21eb49f714a6b
-        SHA256: e9c8df2dbd3edd63c701a9a6b71cf740eb8d54526dba56970712888237086691
-        SHA384: 3c0a92298ab549c53c98518786164baadde65fa06a197de4784bf34053752ce84ba6b943ae4dcc9944bb334c9e346c91
-    - Subject: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing, CN=StartCom
-        Certification Authority
-      ValidFrom: '2006-09-17 19:46:36'
-      ValidTo: '2036-09-17 19:46:36'
-      Signature: 166c99f4660c34f5d0855e7d0aecda104e381c5edfa625054b9132c1e83bf13ddd44095b07498a29cb6602b7b19af72598093c8e1be1dd36872b4bbb68d339663da026c7f239911d51ab827b7ed5ce5ae4e2035770699708f95e58a60adf8c069a451616380a5e57f662c77a0205e6bc1eb5f29ef4a92983f8b214e36e288744c3901ade38a93cac434d6445cedd28a95cf2737b04f817e8abb1f32e5c646e73313a12b8bcb311e47d8f81519a3b8d89f44d93667b3c03edd39a1d9af36550f5a0d0759f2faff0ea824398f8699c8979c4438e4672e3643612aff7251e388990777ec36b6ab9c3cb444bac78908be7c72c1e4b1144c8345227cd0a5d9f85c189d51a78f295105332dd80846675d9b56828fb612ebe84a838c0991286a51e6764ad062e2fa97085c7960f7c8965f58e43540eabdda580399460c034c996702ca312f51f487bbd1c7e6bb79d90f4223baef8fc2acafa8252a0efaf4b5593ebc1b5f0228bac344e262204a1872c754ab7e57d13d7b80c64c036d2c92f86128c2309c11b823b7349a36a578794e5d678c5994363e34de0772de165997269041a4709e60f015624fb1fbf0e79a9582eb9c409017e95ba6d00063eb2ea4a1039d8d02bf5bfec75bf9702c5091b08dc5537e281fb3784436220cae7564b65eafe6cc1249324a134eb05ff9a22ae9b7d3ff165510aa6306ab3f4881c800dfc728ae8835e
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: '01'
-      Version: 3
-      TBS:
-        MD5: 8df2b22eaf3cd2c53b65a50b1e9bb8aa
-        SHA1: 84e608dd4cc47c78e2de0f831405996c467fc35d
-        SHA256: e6f79754976245b19b33d66ba2fb76381e96c2fe296354e73d19ef9d177a5025
-        SHA384: a8ae434f73a057427e39a002e0fbfbdb402381e82cff6c472c836c6040af688e2afa61e13785b5c533dfff728e1cd9f3
-    Signer:
-    - SerialNumber: 5c5d0a336ba298b9695d2cfa5a181510
-      Issuer: C=CN, O=WoSign CA Limited, CN=WoSign Class 3 Code Signing CA
-      Version: 1
-  Imphash: f510a429c6ce5c8d414550518b3823d2
-  LoadsDespiteHVCI: 'FALSE'
+-   Authentihash:
+        MD5: 9655d43fd874e7a6720b36e7fd9fa6b7
+        SHA1: a14261c290339995b7430495f2dfdd1da64dcfc5
+        SHA256: c2d209ed240027608003f8d32b621f8baaf5601aaf348e64269e4457a594c7c3
+    Company: "\u4E00\u666E\u660E\u4E3A\uFF08\u5317\u4EAC\uFF09\u4FE1\u606F\u6280\u672F\
+        \u6709\u9650\u516C\u53F8"
+    Copyright: (C) 2013-2016 Epoolsoft Corporation. All Rights Reserved.
+    CreationTimestamp: '2016-04-10 08:17:05'
+    Date: ''
+    Description: Epoolsoft Windows Information View Tools
+    ExportedFunctions: ''
+    FileVersion: 1.0.0.4
+    Filename: PCHunter.sys
+    ImportedFunctions:
+    - ZwCreateKey
+    - RtlInitUnicodeString
+    - ZwSetValueKey
+    - ExGetPreviousMode
+    - PsGetCurrentProcessId
+    - KeInitializeEvent
+    - ExFreePoolWithTag
+    - ZwQuerySymbolicLinkObject
+    - SeCreateAccessState
+    - KeSetEvent
+    - IoGetFileObjectGenericMapping
+    - ObCreateObject
+    - IoCreateFile
+    - MmBuildMdlForNonPagedPool
+    - ZwOpenSymbolicLinkObject
+    - IoFreeMdl
+    - IoFileObjectType
+    - ExAllocatePool
+    - ObReferenceObjectByHandle
+    - KeWaitForSingleObject
+    - IoFreeIrp
+    - MmProbeAndLockPages
+    - ZwClose
+    - MmUnlockPages
+    - ObOpenObjectByPointer
+    - IoAllocateMdl
+    - MmSectionObjectType
+    - _wcsicmp
+    - NtDeviceIoControlFile
+    - NtFsControlFile
+    - swprintf
+    - MmGetSystemRoutineAddress
+    - ExAllocatePoolWithTag
+    - ObQueryNameString
+    - KeBugCheckEx
+    - PsLookupThreadByThreadId
+    - IoDeleteSymbolicLink
+    - IoDeleteDevice
+    - wcsncat
+    - KeDelayExecutionThread
+    - wcsrchr
+    - IofCompleteRequest
+    - IoCreateSymbolicLink
+    - IoCreateDevice
+    - MmUnmapLockedPages
+    - MmMapLockedPagesSpecifyCache
+    - KeStackAttachProcess
+    - ObfDereferenceObject
+    - MmIsAddressValid
+    - KeUnstackDetachProcess
+    - PsLookupProcessByProcessId
+    - ProbeForRead
+    - IoGetCurrentProcess
+    - MmUserProbeAddress
+    - ProbeForWrite
+    - NtBuildNumber
+    - IoAllocateIrp
+    - MmSystemRangeStart
+    - __C_specific_handler
+    - FltReleaseFileNameInformation
+    - FltClose
+    - FltStartFiltering
+    - FltParseFileNameInformation
+    - FltCreateFile
+    - FltRegisterFilter
+    - FltUnregisterFilter
+    - FltGetFileNameInformation
+    Imports:
+    - ntoskrnl.exe
+    - FLTMGR.SYS
+    InternalName: PCHunter.sys
+    MD5: c2c1b8c00b99e913d992a870ed478a24
+    MachineType: AMD64
+    MagicHeader: 50 45 0 0
+    OriginalFilename: PCHunter.sys
+    Product: PCHunter
+    ProductVersion: 1.0.0.4
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: 819db1bed1ee2ace0a19ce67f94dfc84
+        SHA1: 0dd604290ee6a8e102aa4964d90c99d1c8bc1332
+        SHA256: 608f08d51ee0c93ea049baae3b51084ac93c2453383d22aacfbcde896d4d398a
+    SHA1: a64354aac2d68b4fa74b5829a9d42d90d83b040c
+    SHA256: 1b7fb154a7b7903a3c81f12f4b094f24a3c60a6a8cffca894c67c264ab7545fa
+    Sections:
+        .text:
+            Entropy: 6.3553477241339005
+            Virtual Size: '0x81050'
+        .rdata:
+            Entropy: 5.552306001700414
+            Virtual Size: '0xcf7c'
+        .data:
+            Entropy: 2.831777228998586
+            Virtual Size: '0x2eda8'
+        .pdata:
+            Entropy: 5.938259413904041
+            Virtual Size: '0x7860'
+        INIT:
+            Entropy: 5.080110483782868
+            Virtual Size: '0x852'
+        .rsrc:
+            Entropy: 3.4546217154700916
+            Virtual Size: '0x3b0'
+        .pchunt0:
+            Entropy: 1.7563449969203195
+            Virtual Size: '0x780'
+        .pchunt1:
+            Entropy: 7.978022918434585
+            Virtual Size: '0x166bd'
+        .reloc:
+            Entropy: 4.690928622225438
+            Virtual Size: '0x180'
+    Signature: []
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=CN, ST=, L=, O=(), CN=()
+            ValidFrom: '2015-10-16 04:47:28'
+            ValidTo: '2016-11-16 04:47:28'
+            Signature: c87f8ed5e0c37da04f8f7b193aae1974b8712e6d9740a8dc55058a576301c1783919200b621b7d674954efe2689ee641cdd2609541eea9a633277af5e3ac84fc33b681d3737d54bd45bf9405947dbfe89338577c841b148dd745c742f19775cdb6f1f456500b439b79e350b41987c671ebd6bf05eb6832fb8bde7e4aaa42d7e26d8080b41cd6181f9a0ac62bce4cb9103907f279d6c18237b4744a745bcfa118f90bd2fa3f4eed5b059faffef0f8ae7c023f2e9e8788cd071b6ceb949a00b078591988a8ab7792cb11a545c7bb079687d2defdb88a6615e0d3204c29dae9a6f19fbb3ae4c3d338522648cb1bd5399f55fa7bd01ee9041330eb6a57edcd0fc455
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 5c5d0a336ba298b9695d2cfa5a181510
+            Version: 3
+            TBS:
+                MD5: 22abfcdb0a677a41a0e98019f629e785
+                SHA1: 3c68a9e0ba9434a54c9b731fed228bb0f662f6c5
+                SHA256: 5142ab5696ee82d72ca8fc8f622adffcdb73bf2e6d6a8531d5f86ce4f823ac23
+                SHA384: 94fb388bf7369e43f7824012505050758ff9c7fff41df4d869ed3d6780c7a8875b291ca9c1b89fb68fb7b51d2febae42
+        -   Subject: C=CN, O=WoSign CA Limited, CN=WoSign Time Stamping Signer
+            ValidFrom: '2009-08-08 01:00:05'
+            ValidTo: '2024-08-08 01:00:05'
+            Signature: 7c982fbbc3d2aec22a8fa69776568632c4cd36688becd7801a3179b05e56b969ebb90b32a98326dc775d7a56b246a07d15d66df9acf835737836026022201cef188f7e66b24fe771935a2be6e58d3d5d2e274b46cb1d04f30b8c3f13a80dd4cde828e82a9c55c8e3ff9da922496ee8e7889237578060441827435818046d86c065470557555091e67350ee3f10a98f052fda6811536e1fad98f3763e85d057a3cfe4c11a4c6406a644ab4e1ee24bd5a46d71f86bcb6613a6471f212aa1ae4c89a47d2877174f888db1d15db1c4935abf22926cab678268edd721cb63bc93c4178e871925ad1754b479d2a59373bc7cbbe4800f8fccaa0ad0e49375aa6ccf497d75ec82285c73f042bf9ea6132ede6cee8003a6ee8836a01bb282e83dbba61ad511ae0a0b62d651369723175226edf1c5b62175391507e042f12a89047766ad1404d2c7d47c4f6cdd4edced8ea9f68617e7e15966bbd07ad09442ebafc154cae21aa4a9b6a5d481ca1526fa6fb4df7810048c4818bc2859669ab818f1d95e5b82fffe11d7d40436309f511d3cc86440757cd83583efb1e528760a053de9b81e70503a60e2a50188889c04cc6af21585d10cb74a6d934e82ca29e9750b42e43a4724086d805ce66a672cb61308c94fd86653b9b67fe2ea39956f71779603afb9e3cce3a1b9f101c66ebefc975cb2d1f17bfb33c665eae618f9ab3a271a2d206be6
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 251f5d988182172e3c419e014fb0404c
+            Version: 3
+            TBS:
+                MD5: 626797c449e52df71f4d81ad5be6d993
+                SHA1: 58672dea8f4352d39f2021436acf155a2dcbb224
+                SHA256: 21ee871c9b6d0fdb62f442f75f9f446f5cfece9c8ed5624f5691bfd704fa90e5
+                SHA384: 4568d42f64a1f6e61ed808fa82c4cfd12a63908ac2e5fa3cf2b413ea835250c245bfd38f781f91ccca94082edce253df
+        -   Subject: C=CN, O=WoSign CA Limited, CN=WoSign Class 3 Code Signing CA
+            ValidFrom: '2009-08-08 01:00:05'
+            ValidTo: '2024-08-08 01:00:05'
+            Signature: 0e93a5712562a282627ab579eae1eaaccaa58bc7a14cdcccae1ce9ea2e88e251e5812276e9f6e06641c974e4de667ef9529912fdc59e6a85a45dc554f2221fbc786120c0fe1c1b24ff01e3dcad1379cbcc3daef43f6e35cacf5dc6053e431ea78d03dd6eabcd5c6ab8155085dab896530f557d19d9a374681a84d0c25809d6dd6ae785a5d4ac415edefda6ab798e24abed396f8f5f71990274fc427e3202202932c29006c27ed0ab065017c3acfba6b96bbeeebea41e188002ed449da2c6544dabe1b698197ee1b4ba7c2c3c4719cb4af76362665e5709a86c1eb84dec5394d781ff0c0bef080215aed8d49f5c3987d7246684a0d038904a4e994d936076f51ae28e465f5b1297b466d77c4f421623e80aed86460f6d9ae47baf37dcf380544b3b22dd902c07bdc097f2c3ec7f7cfbbe4699366e48c781e5f28c020dc07c3fc5439b700281f5b0aa7f0554c0c2309cc5c257f519b190bcd99dd62608d60c0eb268d091e3e73e274837475ed351b50e5959c9baa7cb846e0384cfec50bbeecd756d7c3a9b9afb151890b1c4a3e19819770896fcd548c455f7d3ac2058ff47c3d4fc7bae641855ab472d84e42453b000f47873cbcca622202e7ff5454d0a49aa6bae6e6624e2c40a7ea42b908e90621cf58bf14528f7614acbb48c48839ece01f3a584f4d26afd3a2568f208c5cf1c8d27c036db17136cc1da214035f866b32327
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 46bbb340fab9c17928938c93da108679
+            Version: 3
+            TBS:
+                MD5: 1a335fef744b698e4bde0dbe71df85ba
+                SHA1: 567c76a1da9fd89c9f8bc09fe4f1e8109b8794cd
+                SHA256: 86eaa893035f20d7480aba99d60c96cbe5aebb5490adef7b2d18f0da65efc238
+                SHA384: d752946329772337992b5ebd1193b60da7fee9c80d767c42c6833bbaeda23e41b4b0f156de8749f654e1a3a590a471e8
+        -   Subject: C=CN, O=WoSign CA Limited, CN=Certification Authority of WoSign
+            ValidFrom: '2015-04-29 17:12:11'
+            ValidTo: '2025-04-29 17:12:11'
+            Signature: 0c9e907a381c3c94a5f76fb3989e6f52f9cac16e59ac5e76a96251971b98be114a421c5aec81972fd19436b91ea63e2a6ca219d2124b3924e36986125a2af5d8ca331725a69d3c8ba9beba6b956e04603ff9a84d77e874aa7b6776991b797f1f64dd62858ea09559332ff81c87f0f7f3060cd13c3e9b4f1b5b4a99dd8c62f1308ef8a4900f64c303f84ec232e2c18b71977d49aebdf6770e470bf36f182318e0a03071a49afd47ee0cf36e466274504a08bae15862143d40b6744d21c347520780632a4af199e5e71e7f20d87d04e34e528e712e08ab6ec4223c0d6b6d90f3b4d861c675c0ca26d5f01d9ced505558654ef637108d212938c3dfdb98b6a76663e65675bb166a4cbc9d516745008564555fbbcbff213c0833b59c8455e22497e5deefd15336710e7be432c58da0c54d976e7ff2c7e8c951ca325114d63771667ef0668107d84c50ee0497dc93916d1fb794c7cf710e011d66b4f64cce75a74ca754ffc83bea3711b414f1a609455b28ce7ebc5074ed934fbbcd48fe378a59a72b97a097eb4c59e0907698397d4b38125aa22c00def8f3f2f7ef3a05040a905c87d47accb70917a6d557c03a8f28b70782d7add8df43a7238c95be42e923abc9c7f033a890947f80cbe75f66a342592fa4776fee2956da0a091f16f0699018c41284bfa0b6e608ce46b893168fb7e04ecb38c25d2f1078fdbe0c41825b47049f64
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 330000003965c472e0dc2bd965000000000039
+            Version: 3
+            TBS:
+                MD5: ac25a5b7bc19804fd0911884d862f25c
+                SHA1: d474e0b87ecde20a8aeaa4fa25431a620cbd4b63
+                SHA256: 1fcf929a758d423c1466d3504642ec681de44f4d3b57dcca98c637f3a46d6f12
+                SHA384: 2e0a3138431b93f42f82b9ae193de6fd9f3b9abe286c3d65e442a8aa2f67a8d27027a8622859a05f3749c2cfc7f8c6be
+        -   Subject: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing,
+                CN=StartCom Certification Authority
+            ValidFrom: '2011-04-15 20:13:19'
+            ValidTo: '2021-04-15 20:23:19'
+            Signature: 375933ca5e487d489a5be42fdbdb59a8c61f77c0a58747e86508c6672688d95c58e2c631ac0c32b96f7cc58748db2c0a23484d0dcf1116ef60577ed5326e22de373cc7dc16f3c9ce2939fb37daf5e4e741d8a2f82db3498a601f64ef9c1364b3469a82cc650f18550776c9e9337790a644daefa64d551038316f3a58ed31486190c04615b4c0a64e5493c00db524e55017c6d62392226992e0abab297508255399959f50b65b6753aaa2ba905a6ea3e35b5c830e54426dbdb917a8205284b51a4fb24d68d2c28ff8f9ae837c24a6e6c17f9a932f2e550df87bc1be336fab0cd934585c9c40ce284a015529655d5bfd525a54591171470b3eff2c9ae931d9046a33871d2f880fc99aab14a8c20b4f8589ac25490dff54395513d6b84d6bf44aad1833bc8e0052b476c2eccd8beb60d57880844a0eb93d4d560d1b17176f60fcdbd867cd3d4082b55c567f8d274cc76d5da410b57c410c39912f41d2c6310686eb405087d8131e852f10448b7a0361693b29fedfcdd3e07d19ba3b84e34e9ad78c7cd73d9dd7fd50108f06683bd8be3bbbaa284552eadde83a334caf38c715e3e97cee83eb2a1cbdd8fdf5394e7c5f25b39349ca88e56152f0dd14f8394ead47182aefcc6b29493fd7a48e7abd6f6bee675db7b167a60055014532b842fe96fc06b9cecfcff9fb6eab728718451afce3846a414f36714c77eea3191ab87d098c01
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 6139bb9c000000000033
+            Version: 3
+            TBS:
+                MD5: 5b3304180221a8328ce477b1fd93898f
+                SHA1: 9b7f1e1653a52d801387f1e51d17fabb8d435d0c
+                SHA256: 67070bcf2ee304cedd252a1dd8a7222c1be50fd2d5eabef9446cb633e133d264
+                SHA384: be36b1ba9a006afb9eb53263634cb8ca38dd6ca7f95ec56f943324f3a26f9c34c2dff1a3a5c72c88513e23e1f20c8824
+        -   Subject: C=CN, O=WoSign CA Limited, CN=Certification Authority of WoSign
+            ValidFrom: '2006-09-17 22:46:36'
+            ValidTo: '2019-12-31 23:59:59'
+            Signature: b66df870fbe20d4c98b3074915f504c46ccacaf568a008fe126d9c0406c9ad9a91523e78c45cee9f541deee3f15e30c949e139e0a69d366c57fae6344f55e887a82cdd05f1581291e8cace28788fdf078501a5dc459605d480b22b059acb9aa58be03a67e67347be4afd27b188efe6cacf8d0e269ffa5f5778ad6dfeae9b3508b1c3bac1004a4b7d14bdf7f1d35518acd03370886dc4097114a62b4f8881e70b0037a9157d7ed701963f2faf7b62ae0a4abf4b392e35108bfe0439e43c3a0c0956403ab5f4c2680cb5f952cdee9df898fc78e758478f1c73586933abffdddf8e24017798193ab06679bce108a30e4fc104b3f301c8ebd3591c35d2931e7065827fdbcffbc8991260c3446f3a804bd7be21aa147a64cbdd3743455b322e45f0d9591f6b18f07ce9553619615fb57df18dbd88e4754b98dd27b0e484442a6184570582111faa3558f3200eaf59effa5572720d26d09b5349acce372e6561fff6ec1beaf6f1a6d3d1b57bbe35f422c1bc8d01bd685e830d2fecd6da630c27d1543ee4a8d3ce4b32b89194fffb5b492d7518a8ba719a3baed9c0a94f8791ed8b7b6b20988939834f80c469cc17c9c84ebee4a9a5817670060432cd8365f4bc7d3e13bcd2e86f63aab53bda8d863282789dd9ccffbf576474ed283d446215614bf794b00d2a671cf0cb9ba592bff8415ac13d60ed9fbbb86d9bcea96a163f7eea06f1
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 19c28530e93b36
+            Version: 3
+            TBS:
+                MD5: dd50ed7562bd4ce20df7b5c24d9f1446
+                SHA1: 188ce565932b1320e89f1c94e1b21eb49f714a6b
+                SHA256: e9c8df2dbd3edd63c701a9a6b71cf740eb8d54526dba56970712888237086691
+                SHA384: 3c0a92298ab549c53c98518786164baadde65fa06a197de4784bf34053752ce84ba6b943ae4dcc9944bb334c9e346c91
+        -   Subject: C=IL, O=StartCom Ltd., OU=Secure Digital Certificate Signing,
+                CN=StartCom Certification Authority
+            ValidFrom: '2006-09-17 19:46:36'
+            ValidTo: '2036-09-17 19:46:36'
+            Signature: 166c99f4660c34f5d0855e7d0aecda104e381c5edfa625054b9132c1e83bf13ddd44095b07498a29cb6602b7b19af72598093c8e1be1dd36872b4bbb68d339663da026c7f239911d51ab827b7ed5ce5ae4e2035770699708f95e58a60adf8c069a451616380a5e57f662c77a0205e6bc1eb5f29ef4a92983f8b214e36e288744c3901ade38a93cac434d6445cedd28a95cf2737b04f817e8abb1f32e5c646e73313a12b8bcb311e47d8f81519a3b8d89f44d93667b3c03edd39a1d9af36550f5a0d0759f2faff0ea824398f8699c8979c4438e4672e3643612aff7251e388990777ec36b6ab9c3cb444bac78908be7c72c1e4b1144c8345227cd0a5d9f85c189d51a78f295105332dd80846675d9b56828fb612ebe84a838c0991286a51e6764ad062e2fa97085c7960f7c8965f58e43540eabdda580399460c034c996702ca312f51f487bbd1c7e6bb79d90f4223baef8fc2acafa8252a0efaf4b5593ebc1b5f0228bac344e262204a1872c754ab7e57d13d7b80c64c036d2c92f86128c2309c11b823b7349a36a578794e5d678c5994363e34de0772de165997269041a4709e60f015624fb1fbf0e79a9582eb9c409017e95ba6d00063eb2ea4a1039d8d02bf5bfec75bf9702c5091b08dc5537e281fb3784436220cae7564b65eafe6cc1249324a134eb05ff9a22ae9b7d3ff165510aa6306ab3f4881c800dfc728ae8835e
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: '01'
+            Version: 3
+            TBS:
+                MD5: 8df2b22eaf3cd2c53b65a50b1e9bb8aa
+                SHA1: 84e608dd4cc47c78e2de0f831405996c467fc35d
+                SHA256: e6f79754976245b19b33d66ba2fb76381e96c2fe296354e73d19ef9d177a5025
+                SHA384: a8ae434f73a057427e39a002e0fbfbdb402381e82cff6c472c836c6040af688e2afa61e13785b5c533dfff728e1cd9f3
+        Signer:
+        -   SerialNumber: 5c5d0a336ba298b9695d2cfa5a181510
+            Issuer: C=CN, O=WoSign CA Limited, CN=WoSign Class 3 Code Signing CA
+            Version: 1
+    Imphash: f510a429c6ce5c8d414550518b3823d2
+    LoadsDespiteHVCI: 'FALSE'

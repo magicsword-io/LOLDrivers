@@ -7,1031 +7,1032 @@ Created: '2023-11-02'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: sc.exe create RadHwMgrsys binPath= C:\windows\temp\RadHwMgrsys.sys type=kernel
-    && sc.exe start RadHwMgrsys
-  Description: The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable
-    drivers (237 file hashes) accepting firmware access. Six allow kernel memory access.
-    All give full control of the devices to non-admin users. By exploiting the vulnerable
-    drivers, an attacker without the system privilege may erase/alter firmware, and/or
-    elevate privileges. As of the time of writing in October 2023, the filenames of
-    the vulnerable drivers have not been made public until now.
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
+    Command: sc.exe create RadHwMgrsys binPath= C:\windows\temp\RadHwMgrsys.sys type=kernel
+        && sc.exe start RadHwMgrsys
+    Description: The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique
+        vulnerable drivers (237 file hashes) accepting firmware access. Six allow
+        kernel memory access. All give full control of the devices to non-admin users.
+        By exploiting the vulnerable drivers, an attacker without the system privilege
+        may erase/alter firmware, and/or elevate privileges. As of the time of writing
+        in October 2023, the filenames of the vulnerable drivers have not been made
+        public until now.
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
 Resources:
 - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+-   type: yara_signature
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+-   type: sigma_hash
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+-   type: sigma_names
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+-   type: sysmon_hash_detect
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+-   type: sysmon_hash_block
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Acknowledgement:
-  Handle: ''
-  Person: ''
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
-- Company: 'Radiant Systems, Inc. '
-  Date: ''
-  Description: Radiant Hardware Manager for P15xx Platform
-  FileVersion: '3.1.0.22 built by: WinDDK'
-  Filename: ''
-  MD5: 048549f7e9978aff602a24dea98ee48a
-  MachineType: I386
-  OriginalFilename: RadHwMgr.sys
-  Product: Radiant Systems, Inc.  Hardware Manager driver
-  ProductVersion: 3.1.0.22
-  Publisher: ''
-  SHA1: 472cc191937349a712aabcbc4d118c1c982ab7c9
-  SHA256: 00c3e86952eebb113d91d118629077b3370ebc41eeacb419762d2de30a43c09c
-  Signature: ''
-  Imphash: cc88330f6dca52a40e258f689d3e2db4
-  Authentihash:
-    MD5: baaf9c8dfdaf03f0e280ddf06061ba5b
-    SHA1: 8b460b62a12db011c7602f0d4a7145fa28c0b75c
-    SHA256: be62ed235421930c84ce9c7789f3beb6b7a48a6bca9065063b7ce78effde1db2
-  RichPEHeaderHash:
-    MD5: c9e0146dd1b319a2380b33fb0561f30c
-    SHA1: 4f0ee635ee13432c90ed6362762168d9f04dbfb3
-    SHA256: e0da52b20535227a0a083c55d2fafc9902ddc1ac81927838d22332eb03f6ccc8
-  Sections:
-    .text:
-      Entropy: 6.65394812892549
-      Virtual Size: '0x5b4e'
-    .rdata:
-      Entropy: 4.058685148042817
-      Virtual Size: '0x1d4'
-    .data:
-      Entropy: 2.5
-      Virtual Size: '0x8'
-    PAGE:
-      Entropy: 6.487068233986764
-      Virtual Size: '0x13f0'
-    INIT:
-      Entropy: 5.582365387106486
-      Virtual Size: '0x5ec'
-    .rsrc:
-      Entropy: 3.3754791300877836
-      Virtual Size: '0x420'
-    .reloc:
-      Entropy: 6.033927912538727
-      Virtual Size: '0x3a6'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-03-04 09:24:19'
-  InternalName: RadHwMgr.sys
-  Copyright: 'Copyright (c) 2002-2004 Radiant Systems, Inc. '
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - IoAttachDeviceToDeviceStack
-  - IoCreateDevice
-  - RtlInitUnicodeString
-  - IoReleaseRemoveLockEx
-  - KeWaitForSingleObject
-  - IoDetachDevice
-  - IoReleaseRemoveLockAndWaitEx
-  - KeDelayExecutionThread
-  - MmGetSystemRoutineAddress
-  - KeCancelTimer
-  - IoDeleteDevice
-  - IoAcquireRemoveLockEx
-  - _except_handler3
-  - MmUnmapIoSpace
-  - MmMapIoSpace
-  - MmGetPhysicalAddress
-  - KeReleaseMutex
-  - _vsnprintf
-  - strstr
-  - KeTickCount
-  - KeBugCheckEx
-  - KeInitializeDpc
-  - KeInitializeTimer
-  - IoInitializeRemoveLockEx
-  - KeInitializeMutex
-  - KeInitializeEvent
-  - IofCompleteRequest
-  - IofCallDriver
-  - PoStartNextPowerIrp
-  - PoCallDriver
-  - DbgPrint
-  - IoCreateSymbolicLink
-  - KeSetTimerEx
-  - IoDeleteSymbolicLink
-  - ExAllocatePoolWithTag
-  - ExFreePoolWithTag
-  - KeSetEvent
-  - KeGetCurrentIrql
-  - HalSetBusDataByOffset
-  - HalGetBusDataByOffset
-  - WRITE_PORT_ULONG
-  - WRITE_PORT_USHORT
-  - READ_PORT_USHORT
-  - ExAcquireFastMutex
-  - ExReleaseFastMutex
-  - WRITE_PORT_UCHAR
-  - READ_PORT_UCHAR
-  - HalTranslateBusAddress
-  - READ_PORT_ULONG
-  - KeStallExecutionProcessor
-  Signatures: {}
-  LoadsDespiteHVCI: 'TRUE'
-- Company: 'Radiant Systems, Inc. '
-  Date: ''
-  Description: Radiant Hardware Manager for P15xx Platform
-  FileVersion: '2.20.0.7 built by: WinDDK'
-  Filename: ''
-  MD5: 30550db8f400b1e11593dffd644abb67
-  MachineType: I386
-  OriginalFilename: RadHwMgr.sys
-  Product: Radiant Systems, Inc.  Hardware Manager driver
-  ProductVersion: 2.20.0.7
-  Publisher: ''
-  SHA1: c31049605f028a56ce939cd2f97c2e56c12d99f8
-  SHA256: 0f30ecd4faec147a2335a4fc031c8a1ac9310c35339ebeb651eb1429421951a0
-  Signature: ''
-  Imphash: 7abb0911ca4cc4697ee1e9897932d3ac
-  Authentihash:
-    MD5: 442c6809d9d2cfea4c12df554c21fa52
-    SHA1: 86e92cafe050d6ab258ddc828a3ffc3e0c5bec5f
-    SHA256: 5074f17c7cc4fdabec65b3b07132425ad0d9fefd993e896baba2f97f16277581
-  RichPEHeaderHash:
-    MD5: 86a1a5bbf18f32bffc685d21bbd86131
-    SHA1: ba315e2820f8076e881a26554dc68836154875ad
-    SHA256: ee752592c32cb1b737058c3bfd35b0acdc64c5ed04c74ff38ab8131ea0ee955e
-  Sections:
-    .text:
-      Entropy: 6.620755788028627
-      Virtual Size: '0x13088'
-    .rdata:
-      Entropy: 1.1080551934343312
-      Virtual Size: '0x8c24'
-    .data:
-      Entropy: 1.268183338204401
-      Virtual Size: '0x34'
-    PAGE:
-      Entropy: 6.445912359019107
-      Virtual Size: '0x1cd5'
-    INIT:
-      Entropy: 5.777203228017578
-      Virtual Size: '0x7f0'
-    .rsrc:
-      Entropy: 3.3725877356359955
-      Virtual Size: '0x400'
-    .reloc:
-      Entropy: 6.411381788361578
-      Virtual Size: '0xbb8'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-05-12 15:00:20'
-  InternalName: RadHwMgr.sys
-  Copyright: '2002-2009 Radiant Systems, Inc. '
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - IoCreateSymbolicLink
-  - _except_handler3
-  - IoReleaseRemoveLockEx
-  - KeWaitForSingleObject
-  - IoDetachDevice
-  - IoReleaseRemoveLockAndWaitEx
-  - KeDelayExecutionThread
-  - MmGetSystemRoutineAddress
-  - KeCancelTimer
-  - IoDeleteSymbolicLink
-  - IoAcquireRemoveLockEx
-  - MmUnmapIoSpace
-  - MmMapIoSpace
-  - MmGetPhysicalAddress
-  - KeReleaseMutex
-  - RtlRandom
-  - KeQuerySystemTime
-  - KeRestoreFloatingPointState
-  - KeSaveFloatingPointState
-  - KeSetTimerEx
-  - KeQueryActiveProcessors
-  - ZwSetInformationThread
-  - KeInitializeSpinLock
-  - KeClearEvent
-  - _allmul
-  - ZwClose
-  - ZwSetValueKey
-  - ZwCreateKey
-  - ExFreePoolWithTag
-  - ZwQueryValueKey
-  - ZwOpenKey
-  - ExAllocatePoolWithTag
-  - _vsnprintf
-  - PsTerminateSystemThread
-  - ObfDereferenceObject
-  - ObReferenceObjectByHandle
-  - PsCreateSystemThread
-  - KeTickCount
-  - KeBugCheckEx
-  - RtlInitUnicodeString
-  - IoCreateDevice
-  - IoAttachDeviceToDeviceStack
-  - IoDeleteDevice
-  - KeInitializeDpc
-  - KeInitializeTimer
-  - IoInitializeRemoveLockEx
-  - KeInitializeMutex
-  - KeInitializeEvent
-  - IofCompleteRequest
-  - IofCallDriver
-  - PoStartNextPowerIrp
-  - PoCallDriver
-  - KeSetEvent
-  - swprintf
-  - _stricmp
-  - strstr
-  - DbgPrint
-  - KeGetCurrentIrql
-  - KfAcquireSpinLock
-  - KfReleaseSpinLock
-  - HalSetBusDataByOffset
-  - HalGetBusDataByOffset
-  - WRITE_PORT_ULONG
-  - WRITE_PORT_USHORT
-  - READ_PORT_ULONG
-  - READ_PORT_USHORT
-  - ExAcquireFastMutex
-  - ExReleaseFastMutex
-  - KeStallExecutionProcessor
-  - WRITE_PORT_UCHAR
-  - READ_PORT_UCHAR
-  - HalTranslateBusAddress
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
-        , G2
-      ValidFrom: '2012-12-21 00:00:00'
-      ValidTo: '2020-12-30 23:59:59'
-      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
-      Version: 3
-      TBS:
-        MD5: d0785ad36e427c92b19f6826ab1e8020
-        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
-        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
-        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
-        , G4
-      ValidFrom: '2012-10-18 00:00:00'
-      ValidTo: '2020-12-29 23:59:59'
-      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
-      Version: 3
-      TBS:
-        MD5: e9d38360b914c8863f6cba3ee58764d3
-        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
-        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
-        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
-    - Subject: C=US, ST=Georgia, L=Duluth, O=NCR Corporation, CN=NCR Corporation
-      ValidFrom: '2014-10-21 00:00:00'
-      ValidTo: '2017-11-19 23:59:59'
-      Signature: b6ae0546b74d187046efd534e763f13a4db98af9802d0a6aaf8ee7907ed06e76a58dbdead745ce4a28aa3591f254170cbbfcab6949f873702387f338692e5ab622db1549930bd1077974f149d604716977e59fa6e580c5cba239d8d14dafe95a363b874b3c613f44e321ed3fb03da3c386bc59d597d17e8223d406d4021d721407918e32ac299f85b7ed14eccc5249a01a53e3864932d16099d2428a051dec6ad35c5b25bb11d7a0564e08603fd1dde05d22da9e993e172f753558084875975a63d6149b863248d9ea67fbb7d06c22b29b5c6b02f43da356f74659f58fee80dacd228110b0149df32bae7dbdd743bb9ea68d4f94c26c8981445e19432bde81be
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 052d77dc3058212fb02ee74e72ef1bf5
-      Version: 3
-      TBS:
-        MD5: 4ec91835fedc5ed3d50a9ae6947fd588
-        SHA1: 021ebc3c130aeea57308098aba78932d9a155dac
-        SHA256: 2e422275df3b5001343731714f189dff59e11f996cd8af9044445c9717bc4ed4
-        SHA384: 7db8d4d20695cdaf496250e4b8fd00db7b1046e6e34a903dd4e724cfc274a0a3505dae1c830b300b7c54c9d8f23d3675
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
-        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
-        Authority , G5
-      ValidFrom: '2011-02-22 19:25:17'
-      ValidTo: '2021-02-22 19:35:17'
-      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 611993e400000000001c
-      Version: 3
-      TBS:
-        MD5: 78a717e082dcc1cda3458d917e677d14
-        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
-        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
-        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
-        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
-        CA
-      ValidFrom: '2010-02-08 00:00:00'
-      ValidTo: '2020-02-07 23:59:59'
-      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
-      Version: 3
-      TBS:
-        MD5: b30c31a572b0409383ed3fbe17e56e81
-        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
-        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
-        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
-    Signer:
-    - SerialNumber: 052d77dc3058212fb02ee74e72ef1bf5
-      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
-        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
-        CA
-      Version: 1
-  LoadsDespiteHVCI: 'FALSE'
-- Company: 'Radiant Systems, Inc. '
-  Date: ''
-  Description: Radiant Hardware Manager for P15xx Platform
-  FileVersion: '9.9.0.1 built by: WinDDK'
-  Filename: ''
-  MD5: f80ceb0dbb889663f0bee058b109ce0e
-  MachineType: I386
-  OriginalFilename: RadHwMgr.sys
-  Product: Radiant Systems, Inc.  Hardware Manager driver
-  ProductVersion: 9.9.0.1
-  Publisher: ''
-  SHA1: a809831166a70700b59076e0dbc8975f57b14398
-  SHA256: 7c79e5196c2f51d2ab16e40b9d5725a8bf6ae0aaa70b02377aedc0f4e93ca37f
-  Signature: ''
-  Imphash: c1ab6741cd29de98a138f2bd639f620a
-  Authentihash:
-    MD5: 860d15f6aeb63343a73c093e4937303f
-    SHA1: 67d6ef20f45720baa689b80c289a2908a8b63d2d
-    SHA256: 66a9052d6b1d35147f581249f6b524d8cab0b7c6ff80f621a4481f43db462540
-  RichPEHeaderHash:
-    MD5: 62327ebcb89530154cbb776457ab5244
-    SHA1: d291944167ccb9e50b05c540feeaeae301a542b5
-    SHA256: 616d97d7a11a9860148d8c0d4814a3acc5d31a58ef12bce7343aacf935af2a17
-  Sections:
-    .text:
-      Entropy: 6.648546061933855
-      Virtual Size: '0xb318'
-    .rdata:
-      Entropy: 0.6537110501533921
-      Virtual Size: '0x3d84'
-    .data:
-      Entropy: 1.7573891057053235
-      Virtual Size: '0x24'
-    PAGE:
-      Entropy: 6.457364250090256
-      Virtual Size: '0x1421'
-    INIT:
-      Entropy: 5.7473511985559105
-      Virtual Size: '0x752'
-    .rsrc:
-      Entropy: 3.3458169332987127
-      Virtual Size: '0x400'
-    .reloc:
-      Entropy: 6.153106727619113
-      Virtual Size: '0x69c'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-09-15 14:56:51'
-  InternalName: RadHwMgr.sys
-  Copyright: '2002-2009 Radiant Systems, Inc. '
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - IoCreateDevice
-  - RtlInitUnicodeString
-  - IoReleaseRemoveLockEx
-  - KeWaitForSingleObject
-  - IoDetachDevice
-  - IoReleaseRemoveLockAndWaitEx
-  - KeDelayExecutionThread
-  - MmGetSystemRoutineAddress
-  - KeCancelTimer
-  - IoDeleteSymbolicLink
-  - IoAcquireRemoveLockEx
-  - _except_handler3
-  - MmUnmapIoSpace
-  - MmMapIoSpace
-  - MmGetPhysicalAddress
-  - KeReleaseMutex
-  - IoAttachDeviceToDeviceStack
-  - KeQueryActiveProcessors
-  - KeRestoreFloatingPointState
-  - KeSaveFloatingPointState
-  - ZwSetInformationThread
-  - KeClearEvent
-  - _allmul
-  - ZwClose
-  - ZwSetValueKey
-  - ZwCreateKey
-  - ExFreePoolWithTag
-  - ZwQueryValueKey
-  - ZwOpenKey
-  - ExAllocatePoolWithTag
-  - KeTickCount
-  - KeBugCheckEx
-  - IoDeleteDevice
-  - KeInitializeDpc
-  - KeInitializeTimer
-  - IoInitializeRemoveLockEx
-  - KeInitializeMutex
-  - KeInitializeEvent
-  - IofCompleteRequest
-  - IofCallDriver
-  - PoStartNextPowerIrp
-  - PoCallDriver
-  - KeInitializeSpinLock
-  - IoCreateSymbolicLink
-  - KeSetTimerEx
-  - KeSetEvent
-  - swprintf
-  - _vsnprintf
-  - strstr
-  - _stricmp
-  - DbgPrint
-  - KeGetCurrentIrql
-  - KfAcquireSpinLock
-  - KfReleaseSpinLock
-  - HalSetBusDataByOffset
-  - HalGetBusDataByOffset
-  - WRITE_PORT_ULONG
-  - WRITE_PORT_USHORT
-  - READ_PORT_ULONG
-  - READ_PORT_USHORT
-  - ExAcquireFastMutex
-  - ExReleaseFastMutex
-  - WRITE_PORT_UCHAR
-  - READ_PORT_UCHAR
-  - KeStallExecutionProcessor
-  - HalTranslateBusAddress
-  Signatures: {}
-  LoadsDespiteHVCI: 'TRUE'
-- Company: NCR Corporation
-  Date: ''
-  Description: Radiant Hardware Manager for P15xx Platform
-  FileVersion: '2.33.0.0 built by: WinDDK'
-  Filename: ''
-  MD5: d4a9f80ecb448da510e5bf82c4a699ee
-  MachineType: I386
-  OriginalFilename: RadHwMgr.sys
-  Product: NCR Corporation Hardware Manager driver
-  ProductVersion: 2.33.0.0
-  Publisher: ''
-  SHA1: 091a039f5f2ae1bb0fa0f83660f4c178fd3a5a10
-  SHA256: 7c8ad57b3a224fdc2aac9dd2d7c3624f1fcd3542d4db804de25a90155657e2cc
-  Signature: ''
-  Imphash: 0c959096cf4b3180530cc7865ef29157
-  Authentihash:
-    MD5: e0ed4c5de74ee4b3a3eb93ec1bec6641
-    SHA1: c4285308befc60b3f6500b34534b2d5fc253d38d
-    SHA256: da5e27b18d3c1403975a8e17431242f208621348264ebe770db8b07813a1a0f8
-  RichPEHeaderHash:
-    MD5: 7af0d8a4180cecad6b1ae0cd913e6e2d
-    SHA1: f9faafd76a0aaf2bce75c215a34493ca7d50f567
-    SHA256: 68906ebfb190e050a2a4b0852f8c16006cbf11a15b6eb1fea401d3811ae35b62
-  Sections:
-    .text:
-      Entropy: 6.607353322313261
-      Virtual Size: '0x16bc6'
-    .rdata:
-      Entropy: 1.04772282980368
-      Virtual Size: '0xc494'
-    .data:
-      Entropy: 4.226107835035677
-      Virtual Size: '0x54'
-    PAGE:
-      Entropy: 6.426747314335844
-      Virtual Size: '0x2296'
-    INIT:
-      Entropy: 5.755583765575611
-      Virtual Size: '0x844'
-    .rsrc:
-      Entropy: 3.343040206996372
-      Virtual Size: '0x3d0'
-    .reloc:
-      Entropy: 6.44725210281668
-      Virtual Size: '0xfac'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-02-10 14:57:04'
-  InternalName: RadHwMgr.sys
-  Copyright: 2002-2018NCR Corporation
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - IoCreateSymbolicLink
-  - _except_handler3
-  - IoReleaseRemoveLockEx
-  - KeWaitForSingleObject
-  - IoDetachDevice
-  - IoReleaseRemoveLockAndWaitEx
-  - KeDelayExecutionThread
-  - MmGetSystemRoutineAddress
-  - KeCancelTimer
-  - IoDeleteSymbolicLink
-  - IoAcquireRemoveLockEx
-  - MmGetPhysicalAddress
-  - KeReleaseMutex
-  - RtlRandom
-  - KeQuerySystemTime
-  - MmMapIoSpace
-  - KeRestoreFloatingPointState
-  - KeSaveFloatingPointState
-  - swprintf
-  - KeQueryActiveProcessors
-  - KeSetTimerEx
-  - ZwSetInformationThread
-  - KeInitializeSpinLock
-  - KeClearEvent
-  - _allmul
-  - ZwClose
-  - ZwWriteFile
-  - ZwCreateFile
-  - ZwSetValueKey
-  - ZwCreateKey
-  - ExFreePoolWithTag
-  - ZwQueryValueKey
-  - ZwOpenKey
-  - ExAllocatePoolWithTag
-  - PsTerminateSystemThread
-  - ObfDereferenceObject
-  - ObReferenceObjectByHandle
-  - PsCreateSystemThread
-  - KeTickCount
-  - KeBugCheckEx
-  - RtlInitUnicodeString
-  - IoCreateDevice
-  - IoAttachDeviceToDeviceStack
-  - IoDeleteDevice
-  - KeInitializeDpc
-  - KeInitializeTimer
-  - IoInitializeRemoveLockEx
-  - KeInitializeMutex
-  - KeInitializeEvent
-  - IofCompleteRequest
-  - IofCallDriver
-  - PoStartNextPowerIrp
-  - PoCallDriver
-  - KeSetEvent
-  - MmUnmapIoSpace
-  - _vsnprintf
-  - IoWMIQueryAllData
-  - IoWMIOpenBlock
-  - strstr
-  - _stricmp
-  - DbgPrint
-  - KeGetCurrentIrql
-  - KfAcquireSpinLock
-  - KfReleaseSpinLock
-  - HalSetBusDataByOffset
-  - HalGetBusDataByOffset
-  - WRITE_PORT_ULONG
-  - WRITE_PORT_USHORT
-  - READ_PORT_ULONG
-  - READ_PORT_USHORT
-  - ExAcquireFastMutex
-  - ExReleaseFastMutex
-  - KeStallExecutionProcessor
-  - WRITE_PORT_UCHAR
-  - READ_PORT_UCHAR
-  - HalTranslateBusAddress
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Hardware Compatibility Publisher
-      ValidFrom: '2022-06-07 18:08:06'
-      ValidTo: '2023-06-01 18:08:06'
-      Signature: 0a835e40cdb627d4f0a0d3dbbf64a46a05c132d0b5df9d11cd9c195d7037737057d57a342732ae68d67de47f460e7211c7c40dc29b0a079caff871c4834a9a2fc85e759de9b78659ad6fd79b7320e538e9ba5d52227ad67cc00b0a770ef662af3d743a558643ad89cfb015591709a69b6271a9b65db71898e7cb9964c6376dc474898301a6133198b486b518fdd9d7b9723dcffc441e026833f7c72e27986026c97b9184a0048b10d1fe6847ae467f02173f7a69120be780e5b6b9e6399402cc58735a31b537cc33578fbea443135a4a612359150bcf9ab316f6a9248bc71ef3f3480b9b3fa2341692bc3a121d80214688f7bd87d5ec56dcbd0ea61abf2c7ed2b739a07590adb596d401735d955f5f94c591d69ab4363a42f9fca549d439495711ff7990448c03724792ed4acf31f2b35b136c1b2f37aa82b1aabf7daf059dcb2e976e95311ec6e9cc53876dd09632cf512d39c801849a7c1088a565691953e07c7ff17b22518e982dd2dcc0feda8c834ca1f5e247aef1c3af5f13cd4b8cc1b6c0179bc876db88d677047c34366533e349796dbdea86389ad640710b7742ae8cc4ec88f10fa80ede4b1c93f81b55480fc8228216d54813df0327e74b3db9f3512a40c0568e4215827f9b7a2613deea72a7ec4df2def05e5559015049fe83edc83300526045cb128119e131b7d3573b268e24b0a25b9ad59f6301c8fc8f409322
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 3300000057ee4d659a923e7c10000000000057
-      Version: 3
-      TBS:
-        MD5: fdc11a5676aed4e9cc0c09eeb7450dfb
-        SHA1: 4902077d9a05d4231b791d3b05bafa4a79132f03
-        SHA256: 5db56c23d83bf67c7152e28ad4a684a7372b4ae4f52afe7a81ce91eef94caec3
-        SHA384: c952d7f0e0ea5216ce4400601fb7c0829f0f3fcd6eb2b5b9112fbe45d133e00c4abd660f8e1794f7ac4ef95123e2c0ab
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2014
-      ValidFrom: '2014-10-15 20:31:27'
-      ValidTo: '2029-10-15 20:41:27'
-      Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 330000000d690d5d7893d076df00000000000d
-      Version: 3
-      TBS:
-        MD5: 83f69422963f11c3c340b81712eef319
-        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
-        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
-        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
-    Signer:
-    - SerialNumber: 3300000057ee4d659a923e7c10000000000057
-      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2014
-      Version: 1
-  LoadsDespiteHVCI: 'FALSE'
-- Company: 'Radiant Systems, Inc. '
-  Date: ''
-  Description: Radiant Hardware Manager for P15xx Platform
-  FileVersion: '2.20.0.7 built by: WinDDK'
-  Filename: ''
-  MD5: f36b8094c2fbf57f99870bfaeeacb25c
-  MachineType: AMD64
-  OriginalFilename: RadHwMgr.sys
-  Product: Radiant Systems, Inc.  Hardware Manager driver
-  ProductVersion: 2.20.0.7
-  Publisher: ''
-  SHA1: c4454a3a4a95e6772acb8a3d998b78a329259566
-  SHA256: 903d6d71da64566b1d9c32d4fb1a1491e9f91006ad2281bb91d4f1ee9567ef7b
-  Signature: ''
-  Imphash: ced7ea67fdf3d89a48849e0062278f7d
-  Authentihash:
-    MD5: 750aee72c5954cc95d596310f814ada7
-    SHA1: ff9e5f196b16c49e9ac0e7004f815a39ef5e3397
-    SHA256: a60d45d46e5a3dda02f41d20e5782135dd0da42c75eb9c39307bd67a7c9152ea
-  RichPEHeaderHash:
-    MD5: 9604fd6a2485f7ffa9724e86b26d3baf
-    SHA1: 315d17ed8ae2b181503db0cc68deb3a57b8fb3e3
-    SHA256: 6d6185d80827f92609da61d4fb89a8a2a067713426f7b775fc60cf41912d1f61
-  Sections:
-    .text:
-      Entropy: 6.576618598040922
-      Virtual Size: '0x1454e'
-    .rdata:
-      Entropy: 1.3224464261275246
-      Virtual Size: '0x9714'
-    .data:
-      Entropy: 0.57686453185674
-      Virtual Size: '0x138'
-    .pdata:
-      Entropy: 4.90237047258828
-      Virtual Size: '0x870'
-    PAGE:
-      Entropy: 6.293595811886365
-      Virtual Size: '0x1fec'
-    INIT:
-      Entropy: 5.38119340478477
-      Virtual Size: '0x820'
-    .rsrc:
-      Entropy: 3.370895926409806
-      Virtual Size: '0x400'
-    .reloc:
-      Entropy: 2.893334805056936
-      Virtual Size: '0x250'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-05-12 15:00:29'
-  InternalName: RadHwMgr.sys
-  Copyright: '2002-2009 Radiant Systems, Inc. '
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - RtlInitUnicodeString
-  - IoDeleteDevice
-  - KeSetEvent
-  - MmGetSystemRoutineAddress
-  - KeInitializeEvent
-  - KeInitializeDpc
-  - IoReleaseRemoveLockEx
-  - IoDetachDevice
-  - KeInitializeTimer
-  - KeSetTimerEx
-  - KeDelayExecutionThread
-  - PoStartNextPowerIrp
-  - IofCompleteRequest
-  - IoReleaseRemoveLockAndWaitEx
-  - KeWaitForSingleObject
-  - IoAttachDeviceToDeviceStack
-  - PoCallDriver
-  - IoCreateSymbolicLink
-  - IoInitializeRemoveLockEx
-  - IoCreateDevice
-  - KeCancelTimer
-  - DbgPrint
-  - IofCallDriver
-  - ExAcquireFastMutex
-  - MmGetPhysicalAddress
-  - MmMapIoSpace
-  - KeReleaseMutex
-  - RtlRandom
-  - KeQueryActiveProcessors
-  - swprintf
-  - KeReleaseSpinLock
-  - ZwSetInformationThread
-  - KeAcquireSpinLockRaiseToDpc
-  - KeClearEvent
-  - ExAllocatePoolWithTag
-  - ZwCreateKey
-  - ExFreePoolWithTag
-  - ZwSetValueKey
-  - ZwQueryValueKey
-  - ZwClose
-  - ZwOpenKey
-  - _vsnprintf
-  - PsCreateSystemThread
-  - PsTerminateSystemThread
-  - ObReferenceObjectByHandle
-  - ObfDereferenceObject
-  - KeBugCheckEx
-  - KeInitializeMutex
-  - ExReleaseFastMutex
-  - IoDeleteSymbolicLink
-  - MmUnmapIoSpace
-  - IoAcquireRemoveLockEx
-  - _stricmp
-  - strstr
-  - __C_specific_handler
-  - HalSetBusDataByOffset
-  - HalTranslateBusAddress
-  - KeStallExecutionProcessor
-  - HalGetBusDataByOffset
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
-        , G2
-      ValidFrom: '2012-12-21 00:00:00'
-      ValidTo: '2020-12-30 23:59:59'
-      Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
-      Version: 3
-      TBS:
-        MD5: d0785ad36e427c92b19f6826ab1e8020
-        SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
-        SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
-        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
-    - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
-        , G4
-      ValidFrom: '2012-10-18 00:00:00'
-      ValidTo: '2020-12-29 23:59:59'
-      Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 0ecff438c8febf356e04d86a981b1a50
-      Version: 3
-      TBS:
-        MD5: e9d38360b914c8863f6cba3ee58764d3
-        SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
-        SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
-        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
-    - Subject: C=US, ST=Georgia, L=Duluth, O=NCR Corporation, CN=NCR Corporation
-      ValidFrom: '2014-10-21 00:00:00'
-      ValidTo: '2017-11-19 23:59:59'
-      Signature: b6ae0546b74d187046efd534e763f13a4db98af9802d0a6aaf8ee7907ed06e76a58dbdead745ce4a28aa3591f254170cbbfcab6949f873702387f338692e5ab622db1549930bd1077974f149d604716977e59fa6e580c5cba239d8d14dafe95a363b874b3c613f44e321ed3fb03da3c386bc59d597d17e8223d406d4021d721407918e32ac299f85b7ed14eccc5249a01a53e3864932d16099d2428a051dec6ad35c5b25bb11d7a0564e08603fd1dde05d22da9e993e172f753558084875975a63d6149b863248d9ea67fbb7d06c22b29b5c6b02f43da356f74659f58fee80dacd228110b0149df32bae7dbdd743bb9ea68d4f94c26c8981445e19432bde81be
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 052d77dc3058212fb02ee74e72ef1bf5
-      Version: 3
-      TBS:
-        MD5: 4ec91835fedc5ed3d50a9ae6947fd588
-        SHA1: 021ebc3c130aeea57308098aba78932d9a155dac
-        SHA256: 2e422275df3b5001343731714f189dff59e11f996cd8af9044445c9717bc4ed4
-        SHA384: 7db8d4d20695cdaf496250e4b8fd00db7b1046e6e34a903dd4e724cfc274a0a3505dae1c830b300b7c54c9d8f23d3675
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
-        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
-        Authority , G5
-      ValidFrom: '2011-02-22 19:25:17'
-      ValidTo: '2021-02-22 19:35:17'
-      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 611993e400000000001c
-      Version: 3
-      TBS:
-        MD5: 78a717e082dcc1cda3458d917e677d14
-        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
-        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
-        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
-        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
-        CA
-      ValidFrom: '2010-02-08 00:00:00'
-      ValidTo: '2020-02-07 23:59:59'
-      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
-      Version: 3
-      TBS:
-        MD5: b30c31a572b0409383ed3fbe17e56e81
-        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
-        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
-        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
-    Signer:
-    - SerialNumber: 052d77dc3058212fb02ee74e72ef1bf5
-      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
-        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
-        CA
-      Version: 1
-  LoadsDespiteHVCI: 'FALSE'
-- Company: NCR Corporation
-  Date: ''
-  Description: Radiant Hardware Manager for P15xx Platform
-  FileVersion: '0.0.0.2 Dev built by: WinDDK'
-  Filename: ''
-  MD5: 2580fb4131353ec417b0df59811f705c
-  MachineType: AMD64
-  OriginalFilename: RadHwMgr.sys
-  Product: NCR Corporation Hardware Manager driver
-  ProductVersion: 0.0.0.2 Dev
-  Publisher: ''
-  SHA1: de2c073c8b4db6ffd11a99784d307f880444e5d3
-  SHA256: df96d844b967d404e58a12fc57487abc24cd3bd1f8417acfe1ce1ee4a0b0b858
-  Signature: ''
-  Imphash: aca7bbc6be02770c50b07eb6f94d1d78
-  Authentihash:
-    MD5: 66109ba4eaff3279c0420053192bbdc7
-    SHA1: 21bc11d6fe4ecee29fe9c0d09717c230fef8bf5a
-    SHA256: ba386547523c5779e47c59ccb1b853918386cd398f054ac767a3a5b333e3fad3
-  RichPEHeaderHash:
-    MD5: db9bb181e841f689974bb185ac9fa2be
-    SHA1: 818b83369bc1318811f9e552896b6a8547576409
-    SHA256: 4e12bf194b5d9b32d9857e4c91beec52f4b936e6c625166993350f15221cb097
-  Sections:
-    .text:
-      Entropy: 6.5596978482501855
-      Virtual Size: '0x195ed'
-    .rdata:
-      Entropy: 1.1744707670381698
-      Virtual Size: '0xe0cc'
-    .data:
-      Entropy: 1.4822667005925465
-      Virtual Size: '0x19c'
-    .pdata:
-      Entropy: 4.891959904722085
-      Virtual Size: '0x9cc'
-    PAGE:
-      Entropy: 6.297270480417571
-      Virtual Size: '0x254c'
-    INIT:
-      Entropy: 5.443388294044633
-      Virtual Size: '0x884'
-    .rsrc:
-      Entropy: 3.3468218584482647
-      Virtual Size: '0x3f8'
-    .reloc:
-      Entropy: 4.065762782521356
-      Virtual Size: '0x450'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-03-10 10:26:21'
-  InternalName: RadHwMgr.sys
-  Copyright: Copyright (c) 2002-2017 NCR Corporation
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - RtlInitUnicodeString
-  - IoDeleteDevice
-  - KeSetEvent
-  - MmGetSystemRoutineAddress
-  - KeInitializeEvent
-  - KeInitializeDpc
-  - IoReleaseRemoveLockEx
-  - IoDetachDevice
-  - KeInitializeTimer
-  - KeSetTimerEx
-  - KeDelayExecutionThread
-  - PoStartNextPowerIrp
-  - IofCompleteRequest
-  - IoReleaseRemoveLockAndWaitEx
-  - KeWaitForSingleObject
-  - IoAttachDeviceToDeviceStack
-  - PoCallDriver
-  - IoCreateSymbolicLink
-  - IoInitializeRemoveLockEx
-  - IoCreateDevice
-  - KeCancelTimer
-  - DbgPrint
-  - IofCallDriver
-  - MmGetPhysicalAddress
-  - ExAcquireFastMutex
-  - RtlRandom
-  - KeQueryActiveProcessors
-  - swprintf
-  - KeReleaseSpinLock
-  - MmUnmapIoSpace
-  - MmMapIoSpace
-  - ZwSetInformationThread
-  - KeAcquireSpinLockRaiseToDpc
-  - KeClearEvent
-  - ZwCreateFile
-  - ZwClose
-  - ZwWriteFile
-  - ExAllocatePoolWithTag
-  - ZwCreateKey
-  - ExFreePoolWithTag
-  - ZwSetValueKey
-  - ZwQueryValueKey
-  - ZwOpenKey
-  - PsCreateSystemThread
-  - PsTerminateSystemThread
-  - ObReferenceObjectByHandle
-  - ObfDereferenceObject
-  - KeBugCheckEx
-  - KeInitializeMutex
-  - ExReleaseFastMutex
-  - IoDeleteSymbolicLink
-  - KeReleaseMutex
-  - IoAcquireRemoveLockEx
-  - _stricmp
-  - IoWMIQueryAllData
-  - strstr
-  - IoWMIOpenBlock
-  - _vsnprintf
-  - __C_specific_handler
-  - HalSetBusDataByOffset
-  - HalTranslateBusAddress
-  - KeStallExecutionProcessor
-  - HalGetBusDataByOffset
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2021
-      ValidFrom: '2021-01-01 00:00:00'
-      ValidTo: '2031-01-06 00:00:00'
-      Signature: 481cdcb5e99a23bce71ae7200e8e6746fd427251740a2347a3ab92d225c47059be14a0e52781a54d1415190779f0d104c386d93bbdfe4402664ded69a40ff6b870cf62e8f5514a7879367a27b7f3e7529f93a7ed439e7be7b4dd412289fb87a246034efcf4feb76477635f2352698382fa1a53ed90cc8da117730df4f36539704bf39cd67a7bda0cbc3d32d01bcbf561fc75080076bc810ef8c0e15ccfc41172e71b6449d8229a751542f52d323881daf460a2bab452fb5ce06124254fb2dfc929a8734351dabd63d61f5b9bf72e1b4f131df74a0d717e97b7f43f84ebc1e3a349a1facea7bf56cfba597661895f7ea7b48e6778f93698e1cb28da5b87a68a2f
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
-      Version: 3
-      TBS:
-        MD5: c0189c338449a42fe8358c2c1fbecc60
-        SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
-        SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
-        SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
-    - Subject: C=US, ST=Georgia, L=Atlanta, O=NCR Corporation, CN=NCR Corporation
-      ValidFrom: '2020-11-04 00:00:00'
-      ValidTo: '2023-12-12 23:59:59'
-      Signature: 4d55b7aeb5d2a5d0d57011d7737f9335b10f8a0c5dbd4df8ee165240aca58253c158eb39ff8c6de2d3581bf5223cbc8cafd41d644818a671357a801414ed8bfd7527ecc733e80dfb66591a8496da4b7c6eee9609edda6a68c0511cd58cdc7c632977bbaf0cd171bda99bfa32d8479efcdd7424b718a70fac3413019c98f1f47bd6bc9c96efd583ccb21c74b11ca06e1843336bd9bded749fd968d882e5b81c5418c7fc23e4a5fd53836819773310297d2c96193f0395b5fc45fb153eebf099c2c16600c146246de9d8d489807ab8faf0d81edbbb4410d67357f937a984eb458f832337c11aca1d3dd6305b607d173854e7a8e25e79d8220a621d62a3d1c1037b
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 0ccd588d98ef92c984668dd925028a5a
-      Version: 3
-      TBS:
-        MD5: 9cbe98d11c2841cb53918871ade1e650
-        SHA1: 40fedcc9e4ff9a555f8b2de0c3af80e6595832f3
-        SHA256: 46052421da2dfa5a2ebbd382dc55cec0ce68f0bc492aaad269256cf10996901b
-        SHA384: a5aa8d451be71c239e2828f733046ef3df030212889b09edc157daa83ee0278da5daee835db3745f82291efa1229f7f3
-    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
-        ID Code Signing CA
-      ValidFrom: '2013-10-22 12:00:00'
-      ValidTo: '2028-10-22 12:00:00'
-      Signature: 3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 0409181b5fd5bb66755343b56f955008
-      Version: 3
-      TBS:
-        MD5: 9359496ca4f021408b9d8923cab8b179
-        SHA1: 2aed40d7759997830870769be250199fd609e40e
-        SHA256: e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65
-        SHA384: 5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c
-    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
-        ID Timestamping CA
-      ValidFrom: '2016-01-07 12:00:00'
-      ValidTo: '2031-01-07 12:00:00'
-      Signature: 719512e951875669cdefddda7caa637ab378cf06374084ef4b84bfcacf0302fdc5a7c30e20422caf77f32b1f0c215a2ab705341d6aae99f827a266bf09aa60df76a43a930ff8b2d1d87c1962e85e82251ec4ba1c7b2c21e2d65b2c1435430468b2db7502e072c798d63c64e51f4810185f8938614d62462487638c91522caf2989e5781fd60b14a580d7124770b375d59385937eb69267fb536189a8f56b96c0f458690d7cc801b1b92875b7996385228c61ca79947e59fc8c0fe36fb50126b66ca5ee875121e458609bba0c2d2b6da2c47ebbc4252b4702087c49ae13b6e17c424228c61856cf4134b6665db6747bf55633222f2236b24ba24a95d8f5a68e52
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 0aa125d6d6321b7e41e405da3697c215
-      Version: 3
-      TBS:
-        MD5: 8d26184fc613f89aba1cefb30fce1b53
-        SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
-        SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
-        SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
-    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
-        CA
-      ValidFrom: '2011-04-15 19:41:37'
-      ValidTo: '2021-04-15 19:51:37'
-      Signature: 5cf5b22d02ceed01b53512d813f7aa4014c7a15ca08a55ed7e55ea6ac457176fd04722423658efc5ac61c5f62c52ce6ae6c80d85dab334420ea40225182672b92a4ea57e4b16f2a0e40c449ce24d9af474f0f927a6699031c244654348c74869d0fc8409f286140ac22996857f11eb8713176ed3ec6bff1d578ab17b1ea5a07ce9a27a68e5fac6b161d67263fa379163835599f81d614f0c6fa3f7bcb1152acc8d85e31417ef7e49443fb022c0f0acbe2fdbe10c86b0f4585c5a10a94bcdf3448a4652083e0a6210e9459504b78b8d4b074f500db7bbe7fb8ca27878c6c53b7663b2cfe521845a66fce04c79834ecfa8ee700586587cc29cd73ca3ad3c7e76625c87d0ed7cd5c55b1421f4be75a275d2e9e15ad020307841624d6b5e6e1b1710244ad8588775d015d762bbfd185665842561977faad49df4f35d6da031c2e19e02ac3e90c3327ee832903416d08b14cf95accee58c54a265b8bfed186a57073ed3e79a4a2f081a041c49871a8ae61b08a365d81c31c50d9cbab368ddf45076160675fec403e7d13edfdc862e10027e661296534e7af3365879b12042d8963f35be3f8ef2999743f5e40ce13c68728c8d49d75a52b573fb7a35943a61b08482c04885c19732d39b725fa0d2348f7ef0467cf28c7294c707b0d7b5b230b81965f09c8327b0a0abd0a2727e050fb3aeddb95b9b42bcc32663456b86f11d4643edc8
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 611cb28a000000000026
-      Version: 3
-      TBS:
-        MD5: 983a0c315a50542362f2bd6a5d71c8d0
-        SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
-        SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
-        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
-    Signer:
-    - SerialNumber: 0ccd588d98ef92c984668dd925028a5a
-      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
-        ID Code Signing CA
-      Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+-   Company: 'Radiant Systems, Inc. '
+    Date: ''
+    Description: Radiant Hardware Manager for P15xx Platform
+    FileVersion: '3.1.0.22 built by: WinDDK'
+    Filename: ''
+    MD5: 048549f7e9978aff602a24dea98ee48a
+    MachineType: I386
+    OriginalFilename: RadHwMgr.sys
+    Product: Radiant Systems, Inc.  Hardware Manager driver
+    ProductVersion: 3.1.0.22
+    Publisher: ''
+    SHA1: 472cc191937349a712aabcbc4d118c1c982ab7c9
+    SHA256: 00c3e86952eebb113d91d118629077b3370ebc41eeacb419762d2de30a43c09c
+    Signature: ''
+    Imphash: cc88330f6dca52a40e258f689d3e2db4
+    Authentihash:
+        MD5: baaf9c8dfdaf03f0e280ddf06061ba5b
+        SHA1: 8b460b62a12db011c7602f0d4a7145fa28c0b75c
+        SHA256: be62ed235421930c84ce9c7789f3beb6b7a48a6bca9065063b7ce78effde1db2
+    RichPEHeaderHash:
+        MD5: c9e0146dd1b319a2380b33fb0561f30c
+        SHA1: 4f0ee635ee13432c90ed6362762168d9f04dbfb3
+        SHA256: e0da52b20535227a0a083c55d2fafc9902ddc1ac81927838d22332eb03f6ccc8
+    Sections:
+        .text:
+            Entropy: 6.65394812892549
+            Virtual Size: '0x5b4e'
+        .rdata:
+            Entropy: 4.058685148042817
+            Virtual Size: '0x1d4'
+        .data:
+            Entropy: 2.5
+            Virtual Size: '0x8'
+        PAGE:
+            Entropy: 6.487068233986764
+            Virtual Size: '0x13f0'
+        INIT:
+            Entropy: 5.582365387106486
+            Virtual Size: '0x5ec'
+        .rsrc:
+            Entropy: 3.3754791300877836
+            Virtual Size: '0x420'
+        .reloc:
+            Entropy: 6.033927912538727
+            Virtual Size: '0x3a6'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2008-03-04 09:24:19'
+    InternalName: RadHwMgr.sys
+    Copyright: 'Copyright (c) 2002-2004 Radiant Systems, Inc. '
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - IoAttachDeviceToDeviceStack
+    - IoCreateDevice
+    - RtlInitUnicodeString
+    - IoReleaseRemoveLockEx
+    - KeWaitForSingleObject
+    - IoDetachDevice
+    - IoReleaseRemoveLockAndWaitEx
+    - KeDelayExecutionThread
+    - MmGetSystemRoutineAddress
+    - KeCancelTimer
+    - IoDeleteDevice
+    - IoAcquireRemoveLockEx
+    - _except_handler3
+    - MmUnmapIoSpace
+    - MmMapIoSpace
+    - MmGetPhysicalAddress
+    - KeReleaseMutex
+    - _vsnprintf
+    - strstr
+    - KeTickCount
+    - KeBugCheckEx
+    - KeInitializeDpc
+    - KeInitializeTimer
+    - IoInitializeRemoveLockEx
+    - KeInitializeMutex
+    - KeInitializeEvent
+    - IofCompleteRequest
+    - IofCallDriver
+    - PoStartNextPowerIrp
+    - PoCallDriver
+    - DbgPrint
+    - IoCreateSymbolicLink
+    - KeSetTimerEx
+    - IoDeleteSymbolicLink
+    - ExAllocatePoolWithTag
+    - ExFreePoolWithTag
+    - KeSetEvent
+    - KeGetCurrentIrql
+    - HalSetBusDataByOffset
+    - HalGetBusDataByOffset
+    - WRITE_PORT_ULONG
+    - WRITE_PORT_USHORT
+    - READ_PORT_USHORT
+    - ExAcquireFastMutex
+    - ExReleaseFastMutex
+    - WRITE_PORT_UCHAR
+    - READ_PORT_UCHAR
+    - HalTranslateBusAddress
+    - READ_PORT_ULONG
+    - KeStallExecutionProcessor
+    Signatures: {}
+    LoadsDespiteHVCI: 'TRUE'
+-   Company: 'Radiant Systems, Inc. '
+    Date: ''
+    Description: Radiant Hardware Manager for P15xx Platform
+    FileVersion: '2.20.0.7 built by: WinDDK'
+    Filename: ''
+    MD5: 30550db8f400b1e11593dffd644abb67
+    MachineType: I386
+    OriginalFilename: RadHwMgr.sys
+    Product: Radiant Systems, Inc.  Hardware Manager driver
+    ProductVersion: 2.20.0.7
+    Publisher: ''
+    SHA1: c31049605f028a56ce939cd2f97c2e56c12d99f8
+    SHA256: 0f30ecd4faec147a2335a4fc031c8a1ac9310c35339ebeb651eb1429421951a0
+    Signature: ''
+    Imphash: 7abb0911ca4cc4697ee1e9897932d3ac
+    Authentihash:
+        MD5: 442c6809d9d2cfea4c12df554c21fa52
+        SHA1: 86e92cafe050d6ab258ddc828a3ffc3e0c5bec5f
+        SHA256: 5074f17c7cc4fdabec65b3b07132425ad0d9fefd993e896baba2f97f16277581
+    RichPEHeaderHash:
+        MD5: 86a1a5bbf18f32bffc685d21bbd86131
+        SHA1: ba315e2820f8076e881a26554dc68836154875ad
+        SHA256: ee752592c32cb1b737058c3bfd35b0acdc64c5ed04c74ff38ab8131ea0ee955e
+    Sections:
+        .text:
+            Entropy: 6.620755788028627
+            Virtual Size: '0x13088'
+        .rdata:
+            Entropy: 1.1080551934343312
+            Virtual Size: '0x8c24'
+        .data:
+            Entropy: 1.268183338204401
+            Virtual Size: '0x34'
+        PAGE:
+            Entropy: 6.445912359019107
+            Virtual Size: '0x1cd5'
+        INIT:
+            Entropy: 5.777203228017578
+            Virtual Size: '0x7f0'
+        .rsrc:
+            Entropy: 3.3725877356359955
+            Virtual Size: '0x400'
+        .reloc:
+            Entropy: 6.411381788361578
+            Virtual Size: '0xbb8'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2016-05-12 15:00:20'
+    InternalName: RadHwMgr.sys
+    Copyright: '2002-2009 Radiant Systems, Inc. '
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - IoCreateSymbolicLink
+    - _except_handler3
+    - IoReleaseRemoveLockEx
+    - KeWaitForSingleObject
+    - IoDetachDevice
+    - IoReleaseRemoveLockAndWaitEx
+    - KeDelayExecutionThread
+    - MmGetSystemRoutineAddress
+    - KeCancelTimer
+    - IoDeleteSymbolicLink
+    - IoAcquireRemoveLockEx
+    - MmUnmapIoSpace
+    - MmMapIoSpace
+    - MmGetPhysicalAddress
+    - KeReleaseMutex
+    - RtlRandom
+    - KeQuerySystemTime
+    - KeRestoreFloatingPointState
+    - KeSaveFloatingPointState
+    - KeSetTimerEx
+    - KeQueryActiveProcessors
+    - ZwSetInformationThread
+    - KeInitializeSpinLock
+    - KeClearEvent
+    - _allmul
+    - ZwClose
+    - ZwSetValueKey
+    - ZwCreateKey
+    - ExFreePoolWithTag
+    - ZwQueryValueKey
+    - ZwOpenKey
+    - ExAllocatePoolWithTag
+    - _vsnprintf
+    - PsTerminateSystemThread
+    - ObfDereferenceObject
+    - ObReferenceObjectByHandle
+    - PsCreateSystemThread
+    - KeTickCount
+    - KeBugCheckEx
+    - RtlInitUnicodeString
+    - IoCreateDevice
+    - IoAttachDeviceToDeviceStack
+    - IoDeleteDevice
+    - KeInitializeDpc
+    - KeInitializeTimer
+    - IoInitializeRemoveLockEx
+    - KeInitializeMutex
+    - KeInitializeEvent
+    - IofCompleteRequest
+    - IofCallDriver
+    - PoStartNextPowerIrp
+    - PoCallDriver
+    - KeSetEvent
+    - swprintf
+    - _stricmp
+    - strstr
+    - DbgPrint
+    - KeGetCurrentIrql
+    - KfAcquireSpinLock
+    - KfReleaseSpinLock
+    - HalSetBusDataByOffset
+    - HalGetBusDataByOffset
+    - WRITE_PORT_ULONG
+    - WRITE_PORT_USHORT
+    - READ_PORT_ULONG
+    - READ_PORT_USHORT
+    - ExAcquireFastMutex
+    - ExReleaseFastMutex
+    - KeStallExecutionProcessor
+    - WRITE_PORT_UCHAR
+    - READ_PORT_UCHAR
+    - HalTranslateBusAddress
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                CA , G2
+            ValidFrom: '2012-12-21 00:00:00'
+            ValidTo: '2020-12-30 23:59:59'
+            Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+            Version: 3
+            TBS:
+                MD5: d0785ad36e427c92b19f6826ab1e8020
+                SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+                SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+                SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                Signer , G4
+            ValidFrom: '2012-10-18 00:00:00'
+            ValidTo: '2020-12-29 23:59:59'
+            Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+            Version: 3
+            TBS:
+                MD5: e9d38360b914c8863f6cba3ee58764d3
+                SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+                SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+                SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+        -   Subject: C=US, ST=Georgia, L=Duluth, O=NCR Corporation, CN=NCR Corporation
+            ValidFrom: '2014-10-21 00:00:00'
+            ValidTo: '2017-11-19 23:59:59'
+            Signature: b6ae0546b74d187046efd534e763f13a4db98af9802d0a6aaf8ee7907ed06e76a58dbdead745ce4a28aa3591f254170cbbfcab6949f873702387f338692e5ab622db1549930bd1077974f149d604716977e59fa6e580c5cba239d8d14dafe95a363b874b3c613f44e321ed3fb03da3c386bc59d597d17e8223d406d4021d721407918e32ac299f85b7ed14eccc5249a01a53e3864932d16099d2428a051dec6ad35c5b25bb11d7a0564e08603fd1dde05d22da9e993e172f753558084875975a63d6149b863248d9ea67fbb7d06c22b29b5c6b02f43da356f74659f58fee80dacd228110b0149df32bae7dbdd743bb9ea68d4f94c26c8981445e19432bde81be
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 052d77dc3058212fb02ee74e72ef1bf5
+            Version: 3
+            TBS:
+                MD5: 4ec91835fedc5ed3d50a9ae6947fd588
+                SHA1: 021ebc3c130aeea57308098aba78932d9a155dac
+                SHA256: 2e422275df3b5001343731714f189dff59e11f996cd8af9044445c9717bc4ed4
+                SHA384: 7db8d4d20695cdaf496250e4b8fd00db7b1046e6e34a903dd4e724cfc274a0a3505dae1c830b300b7c54c9d8f23d3675
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006
+                VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public
+                Primary Certification Authority , G5
+            ValidFrom: '2011-02-22 19:25:17'
+            ValidTo: '2021-02-22 19:35:17'
+            Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 611993e400000000001c
+            Version: 3
+            TBS:
+                MD5: 78a717e082dcc1cda3458d917e677d14
+                SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+                SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+                SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
+                Signing 2010 CA
+            ValidFrom: '2010-02-08 00:00:00'
+            ValidTo: '2020-02-07 23:59:59'
+            Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+            Version: 3
+            TBS:
+                MD5: b30c31a572b0409383ed3fbe17e56e81
+                SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+                SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+                SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
+        Signer:
+        -   SerialNumber: 052d77dc3058212fb02ee74e72ef1bf5
+            Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
+                Signing 2010 CA
+            Version: 1
+    LoadsDespiteHVCI: 'FALSE'
+-   Company: 'Radiant Systems, Inc. '
+    Date: ''
+    Description: Radiant Hardware Manager for P15xx Platform
+    FileVersion: '9.9.0.1 built by: WinDDK'
+    Filename: ''
+    MD5: f80ceb0dbb889663f0bee058b109ce0e
+    MachineType: I386
+    OriginalFilename: RadHwMgr.sys
+    Product: Radiant Systems, Inc.  Hardware Manager driver
+    ProductVersion: 9.9.0.1
+    Publisher: ''
+    SHA1: a809831166a70700b59076e0dbc8975f57b14398
+    SHA256: 7c79e5196c2f51d2ab16e40b9d5725a8bf6ae0aaa70b02377aedc0f4e93ca37f
+    Signature: ''
+    Imphash: c1ab6741cd29de98a138f2bd639f620a
+    Authentihash:
+        MD5: 860d15f6aeb63343a73c093e4937303f
+        SHA1: 67d6ef20f45720baa689b80c289a2908a8b63d2d
+        SHA256: 66a9052d6b1d35147f581249f6b524d8cab0b7c6ff80f621a4481f43db462540
+    RichPEHeaderHash:
+        MD5: 62327ebcb89530154cbb776457ab5244
+        SHA1: d291944167ccb9e50b05c540feeaeae301a542b5
+        SHA256: 616d97d7a11a9860148d8c0d4814a3acc5d31a58ef12bce7343aacf935af2a17
+    Sections:
+        .text:
+            Entropy: 6.648546061933855
+            Virtual Size: '0xb318'
+        .rdata:
+            Entropy: 0.6537110501533921
+            Virtual Size: '0x3d84'
+        .data:
+            Entropy: 1.7573891057053235
+            Virtual Size: '0x24'
+        PAGE:
+            Entropy: 6.457364250090256
+            Virtual Size: '0x1421'
+        INIT:
+            Entropy: 5.7473511985559105
+            Virtual Size: '0x752'
+        .rsrc:
+            Entropy: 3.3458169332987127
+            Virtual Size: '0x400'
+        .reloc:
+            Entropy: 6.153106727619113
+            Virtual Size: '0x69c'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2010-09-15 14:56:51'
+    InternalName: RadHwMgr.sys
+    Copyright: '2002-2009 Radiant Systems, Inc. '
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - IoCreateDevice
+    - RtlInitUnicodeString
+    - IoReleaseRemoveLockEx
+    - KeWaitForSingleObject
+    - IoDetachDevice
+    - IoReleaseRemoveLockAndWaitEx
+    - KeDelayExecutionThread
+    - MmGetSystemRoutineAddress
+    - KeCancelTimer
+    - IoDeleteSymbolicLink
+    - IoAcquireRemoveLockEx
+    - _except_handler3
+    - MmUnmapIoSpace
+    - MmMapIoSpace
+    - MmGetPhysicalAddress
+    - KeReleaseMutex
+    - IoAttachDeviceToDeviceStack
+    - KeQueryActiveProcessors
+    - KeRestoreFloatingPointState
+    - KeSaveFloatingPointState
+    - ZwSetInformationThread
+    - KeClearEvent
+    - _allmul
+    - ZwClose
+    - ZwSetValueKey
+    - ZwCreateKey
+    - ExFreePoolWithTag
+    - ZwQueryValueKey
+    - ZwOpenKey
+    - ExAllocatePoolWithTag
+    - KeTickCount
+    - KeBugCheckEx
+    - IoDeleteDevice
+    - KeInitializeDpc
+    - KeInitializeTimer
+    - IoInitializeRemoveLockEx
+    - KeInitializeMutex
+    - KeInitializeEvent
+    - IofCompleteRequest
+    - IofCallDriver
+    - PoStartNextPowerIrp
+    - PoCallDriver
+    - KeInitializeSpinLock
+    - IoCreateSymbolicLink
+    - KeSetTimerEx
+    - KeSetEvent
+    - swprintf
+    - _vsnprintf
+    - strstr
+    - _stricmp
+    - DbgPrint
+    - KeGetCurrentIrql
+    - KfAcquireSpinLock
+    - KfReleaseSpinLock
+    - HalSetBusDataByOffset
+    - HalGetBusDataByOffset
+    - WRITE_PORT_ULONG
+    - WRITE_PORT_USHORT
+    - READ_PORT_ULONG
+    - READ_PORT_USHORT
+    - ExAcquireFastMutex
+    - ExReleaseFastMutex
+    - WRITE_PORT_UCHAR
+    - READ_PORT_UCHAR
+    - KeStallExecutionProcessor
+    - HalTranslateBusAddress
+    Signatures: {}
+    LoadsDespiteHVCI: 'TRUE'
+-   Company: NCR Corporation
+    Date: ''
+    Description: Radiant Hardware Manager for P15xx Platform
+    FileVersion: '2.33.0.0 built by: WinDDK'
+    Filename: ''
+    MD5: d4a9f80ecb448da510e5bf82c4a699ee
+    MachineType: I386
+    OriginalFilename: RadHwMgr.sys
+    Product: NCR Corporation Hardware Manager driver
+    ProductVersion: 2.33.0.0
+    Publisher: ''
+    SHA1: 091a039f5f2ae1bb0fa0f83660f4c178fd3a5a10
+    SHA256: 7c8ad57b3a224fdc2aac9dd2d7c3624f1fcd3542d4db804de25a90155657e2cc
+    Signature: ''
+    Imphash: 0c959096cf4b3180530cc7865ef29157
+    Authentihash:
+        MD5: e0ed4c5de74ee4b3a3eb93ec1bec6641
+        SHA1: c4285308befc60b3f6500b34534b2d5fc253d38d
+        SHA256: da5e27b18d3c1403975a8e17431242f208621348264ebe770db8b07813a1a0f8
+    RichPEHeaderHash:
+        MD5: 7af0d8a4180cecad6b1ae0cd913e6e2d
+        SHA1: f9faafd76a0aaf2bce75c215a34493ca7d50f567
+        SHA256: 68906ebfb190e050a2a4b0852f8c16006cbf11a15b6eb1fea401d3811ae35b62
+    Sections:
+        .text:
+            Entropy: 6.607353322313261
+            Virtual Size: '0x16bc6'
+        .rdata:
+            Entropy: 1.04772282980368
+            Virtual Size: '0xc494'
+        .data:
+            Entropy: 4.226107835035677
+            Virtual Size: '0x54'
+        PAGE:
+            Entropy: 6.426747314335844
+            Virtual Size: '0x2296'
+        INIT:
+            Entropy: 5.755583765575611
+            Virtual Size: '0x844'
+        .rsrc:
+            Entropy: 3.343040206996372
+            Virtual Size: '0x3d0'
+        .reloc:
+            Entropy: 6.44725210281668
+            Virtual Size: '0xfac'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2022-02-10 14:57:04'
+    InternalName: RadHwMgr.sys
+    Copyright: 2002-2018NCR Corporation
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - IoCreateSymbolicLink
+    - _except_handler3
+    - IoReleaseRemoveLockEx
+    - KeWaitForSingleObject
+    - IoDetachDevice
+    - IoReleaseRemoveLockAndWaitEx
+    - KeDelayExecutionThread
+    - MmGetSystemRoutineAddress
+    - KeCancelTimer
+    - IoDeleteSymbolicLink
+    - IoAcquireRemoveLockEx
+    - MmGetPhysicalAddress
+    - KeReleaseMutex
+    - RtlRandom
+    - KeQuerySystemTime
+    - MmMapIoSpace
+    - KeRestoreFloatingPointState
+    - KeSaveFloatingPointState
+    - swprintf
+    - KeQueryActiveProcessors
+    - KeSetTimerEx
+    - ZwSetInformationThread
+    - KeInitializeSpinLock
+    - KeClearEvent
+    - _allmul
+    - ZwClose
+    - ZwWriteFile
+    - ZwCreateFile
+    - ZwSetValueKey
+    - ZwCreateKey
+    - ExFreePoolWithTag
+    - ZwQueryValueKey
+    - ZwOpenKey
+    - ExAllocatePoolWithTag
+    - PsTerminateSystemThread
+    - ObfDereferenceObject
+    - ObReferenceObjectByHandle
+    - PsCreateSystemThread
+    - KeTickCount
+    - KeBugCheckEx
+    - RtlInitUnicodeString
+    - IoCreateDevice
+    - IoAttachDeviceToDeviceStack
+    - IoDeleteDevice
+    - KeInitializeDpc
+    - KeInitializeTimer
+    - IoInitializeRemoveLockEx
+    - KeInitializeMutex
+    - KeInitializeEvent
+    - IofCompleteRequest
+    - IofCallDriver
+    - PoStartNextPowerIrp
+    - PoCallDriver
+    - KeSetEvent
+    - MmUnmapIoSpace
+    - _vsnprintf
+    - IoWMIQueryAllData
+    - IoWMIOpenBlock
+    - strstr
+    - _stricmp
+    - DbgPrint
+    - KeGetCurrentIrql
+    - KfAcquireSpinLock
+    - KfReleaseSpinLock
+    - HalSetBusDataByOffset
+    - HalGetBusDataByOffset
+    - WRITE_PORT_ULONG
+    - WRITE_PORT_USHORT
+    - READ_PORT_ULONG
+    - READ_PORT_USHORT
+    - ExAcquireFastMutex
+    - ExReleaseFastMutex
+    - KeStallExecutionProcessor
+    - WRITE_PORT_UCHAR
+    - READ_PORT_UCHAR
+    - HalTranslateBusAddress
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Hardware Compatibility Publisher
+            ValidFrom: '2022-06-07 18:08:06'
+            ValidTo: '2023-06-01 18:08:06'
+            Signature: 0a835e40cdb627d4f0a0d3dbbf64a46a05c132d0b5df9d11cd9c195d7037737057d57a342732ae68d67de47f460e7211c7c40dc29b0a079caff871c4834a9a2fc85e759de9b78659ad6fd79b7320e538e9ba5d52227ad67cc00b0a770ef662af3d743a558643ad89cfb015591709a69b6271a9b65db71898e7cb9964c6376dc474898301a6133198b486b518fdd9d7b9723dcffc441e026833f7c72e27986026c97b9184a0048b10d1fe6847ae467f02173f7a69120be780e5b6b9e6399402cc58735a31b537cc33578fbea443135a4a612359150bcf9ab316f6a9248bc71ef3f3480b9b3fa2341692bc3a121d80214688f7bd87d5ec56dcbd0ea61abf2c7ed2b739a07590adb596d401735d955f5f94c591d69ab4363a42f9fca549d439495711ff7990448c03724792ed4acf31f2b35b136c1b2f37aa82b1aabf7daf059dcb2e976e95311ec6e9cc53876dd09632cf512d39c801849a7c1088a565691953e07c7ff17b22518e982dd2dcc0feda8c834ca1f5e247aef1c3af5f13cd4b8cc1b6c0179bc876db88d677047c34366533e349796dbdea86389ad640710b7742ae8cc4ec88f10fa80ede4b1c93f81b55480fc8228216d54813df0327e74b3db9f3512a40c0568e4215827f9b7a2613deea72a7ec4df2def05e5559015049fe83edc83300526045cb128119e131b7d3573b268e24b0a25b9ad59f6301c8fc8f409322
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 3300000057ee4d659a923e7c10000000000057
+            Version: 3
+            TBS:
+                MD5: fdc11a5676aed4e9cc0c09eeb7450dfb
+                SHA1: 4902077d9a05d4231b791d3b05bafa4a79132f03
+                SHA256: 5db56c23d83bf67c7152e28ad4a684a7372b4ae4f52afe7a81ce91eef94caec3
+                SHA384: c952d7f0e0ea5216ce4400601fb7c0829f0f3fcd6eb2b5b9112fbe45d133e00c4abd660f8e1794f7ac4ef95123e2c0ab
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Third Party Component CA 2014
+            ValidFrom: '2014-10-15 20:31:27'
+            ValidTo: '2029-10-15 20:41:27'
+            Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 330000000d690d5d7893d076df00000000000d
+            Version: 3
+            TBS:
+                MD5: 83f69422963f11c3c340b81712eef319
+                SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+                SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+                SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
+        Signer:
+        -   SerialNumber: 3300000057ee4d659a923e7c10000000000057
+            Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Third Party Component CA 2014
+            Version: 1
+    LoadsDespiteHVCI: 'FALSE'
+-   Company: 'Radiant Systems, Inc. '
+    Date: ''
+    Description: Radiant Hardware Manager for P15xx Platform
+    FileVersion: '2.20.0.7 built by: WinDDK'
+    Filename: ''
+    MD5: f36b8094c2fbf57f99870bfaeeacb25c
+    MachineType: AMD64
+    OriginalFilename: RadHwMgr.sys
+    Product: Radiant Systems, Inc.  Hardware Manager driver
+    ProductVersion: 2.20.0.7
+    Publisher: ''
+    SHA1: c4454a3a4a95e6772acb8a3d998b78a329259566
+    SHA256: 903d6d71da64566b1d9c32d4fb1a1491e9f91006ad2281bb91d4f1ee9567ef7b
+    Signature: ''
+    Imphash: ced7ea67fdf3d89a48849e0062278f7d
+    Authentihash:
+        MD5: 750aee72c5954cc95d596310f814ada7
+        SHA1: ff9e5f196b16c49e9ac0e7004f815a39ef5e3397
+        SHA256: a60d45d46e5a3dda02f41d20e5782135dd0da42c75eb9c39307bd67a7c9152ea
+    RichPEHeaderHash:
+        MD5: 9604fd6a2485f7ffa9724e86b26d3baf
+        SHA1: 315d17ed8ae2b181503db0cc68deb3a57b8fb3e3
+        SHA256: 6d6185d80827f92609da61d4fb89a8a2a067713426f7b775fc60cf41912d1f61
+    Sections:
+        .text:
+            Entropy: 6.576618598040922
+            Virtual Size: '0x1454e'
+        .rdata:
+            Entropy: 1.3224464261275246
+            Virtual Size: '0x9714'
+        .data:
+            Entropy: 0.57686453185674
+            Virtual Size: '0x138'
+        .pdata:
+            Entropy: 4.90237047258828
+            Virtual Size: '0x870'
+        PAGE:
+            Entropy: 6.293595811886365
+            Virtual Size: '0x1fec'
+        INIT:
+            Entropy: 5.38119340478477
+            Virtual Size: '0x820'
+        .rsrc:
+            Entropy: 3.370895926409806
+            Virtual Size: '0x400'
+        .reloc:
+            Entropy: 2.893334805056936
+            Virtual Size: '0x250'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2016-05-12 15:00:29'
+    InternalName: RadHwMgr.sys
+    Copyright: '2002-2009 Radiant Systems, Inc. '
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - RtlInitUnicodeString
+    - IoDeleteDevice
+    - KeSetEvent
+    - MmGetSystemRoutineAddress
+    - KeInitializeEvent
+    - KeInitializeDpc
+    - IoReleaseRemoveLockEx
+    - IoDetachDevice
+    - KeInitializeTimer
+    - KeSetTimerEx
+    - KeDelayExecutionThread
+    - PoStartNextPowerIrp
+    - IofCompleteRequest
+    - IoReleaseRemoveLockAndWaitEx
+    - KeWaitForSingleObject
+    - IoAttachDeviceToDeviceStack
+    - PoCallDriver
+    - IoCreateSymbolicLink
+    - IoInitializeRemoveLockEx
+    - IoCreateDevice
+    - KeCancelTimer
+    - DbgPrint
+    - IofCallDriver
+    - ExAcquireFastMutex
+    - MmGetPhysicalAddress
+    - MmMapIoSpace
+    - KeReleaseMutex
+    - RtlRandom
+    - KeQueryActiveProcessors
+    - swprintf
+    - KeReleaseSpinLock
+    - ZwSetInformationThread
+    - KeAcquireSpinLockRaiseToDpc
+    - KeClearEvent
+    - ExAllocatePoolWithTag
+    - ZwCreateKey
+    - ExFreePoolWithTag
+    - ZwSetValueKey
+    - ZwQueryValueKey
+    - ZwClose
+    - ZwOpenKey
+    - _vsnprintf
+    - PsCreateSystemThread
+    - PsTerminateSystemThread
+    - ObReferenceObjectByHandle
+    - ObfDereferenceObject
+    - KeBugCheckEx
+    - KeInitializeMutex
+    - ExReleaseFastMutex
+    - IoDeleteSymbolicLink
+    - MmUnmapIoSpace
+    - IoAcquireRemoveLockEx
+    - _stricmp
+    - strstr
+    - __C_specific_handler
+    - HalSetBusDataByOffset
+    - HalTranslateBusAddress
+    - KeStallExecutionProcessor
+    - HalGetBusDataByOffset
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                CA , G2
+            ValidFrom: '2012-12-21 00:00:00'
+            ValidTo: '2020-12-30 23:59:59'
+            Signature: 03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
+            Version: 3
+            TBS:
+                MD5: d0785ad36e427c92b19f6826ab1e8020
+                SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
+                SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+                SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
+        -   Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services
+                Signer , G4
+            ValidFrom: '2012-10-18 00:00:00'
+            ValidTo: '2020-12-29 23:59:59'
+            Signature: 783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 0ecff438c8febf356e04d86a981b1a50
+            Version: 3
+            TBS:
+                MD5: e9d38360b914c8863f6cba3ee58764d3
+                SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
+                SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+                SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
+        -   Subject: C=US, ST=Georgia, L=Duluth, O=NCR Corporation, CN=NCR Corporation
+            ValidFrom: '2014-10-21 00:00:00'
+            ValidTo: '2017-11-19 23:59:59'
+            Signature: b6ae0546b74d187046efd534e763f13a4db98af9802d0a6aaf8ee7907ed06e76a58dbdead745ce4a28aa3591f254170cbbfcab6949f873702387f338692e5ab622db1549930bd1077974f149d604716977e59fa6e580c5cba239d8d14dafe95a363b874b3c613f44e321ed3fb03da3c386bc59d597d17e8223d406d4021d721407918e32ac299f85b7ed14eccc5249a01a53e3864932d16099d2428a051dec6ad35c5b25bb11d7a0564e08603fd1dde05d22da9e993e172f753558084875975a63d6149b863248d9ea67fbb7d06c22b29b5c6b02f43da356f74659f58fee80dacd228110b0149df32bae7dbdd743bb9ea68d4f94c26c8981445e19432bde81be
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 052d77dc3058212fb02ee74e72ef1bf5
+            Version: 3
+            TBS:
+                MD5: 4ec91835fedc5ed3d50a9ae6947fd588
+                SHA1: 021ebc3c130aeea57308098aba78932d9a155dac
+                SHA256: 2e422275df3b5001343731714f189dff59e11f996cd8af9044445c9717bc4ed4
+                SHA384: 7db8d4d20695cdaf496250e4b8fd00db7b1046e6e34a903dd4e724cfc274a0a3505dae1c830b300b7c54c9d8f23d3675
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006
+                VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public
+                Primary Certification Authority , G5
+            ValidFrom: '2011-02-22 19:25:17'
+            ValidTo: '2021-02-22 19:35:17'
+            Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 611993e400000000001c
+            Version: 3
+            TBS:
+                MD5: 78a717e082dcc1cda3458d917e677d14
+                SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+                SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+                SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
+                Signing 2010 CA
+            ValidFrom: '2010-02-08 00:00:00'
+            ValidTo: '2020-02-07 23:59:59'
+            Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+            Version: 3
+            TBS:
+                MD5: b30c31a572b0409383ed3fbe17e56e81
+                SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+                SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+                SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
+        Signer:
+        -   SerialNumber: 052d77dc3058212fb02ee74e72ef1bf5
+            Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
+                Signing 2010 CA
+            Version: 1
+    LoadsDespiteHVCI: 'FALSE'
+-   Company: NCR Corporation
+    Date: ''
+    Description: Radiant Hardware Manager for P15xx Platform
+    FileVersion: '0.0.0.2 Dev built by: WinDDK'
+    Filename: ''
+    MD5: 2580fb4131353ec417b0df59811f705c
+    MachineType: AMD64
+    OriginalFilename: RadHwMgr.sys
+    Product: NCR Corporation Hardware Manager driver
+    ProductVersion: 0.0.0.2 Dev
+    Publisher: ''
+    SHA1: de2c073c8b4db6ffd11a99784d307f880444e5d3
+    SHA256: df96d844b967d404e58a12fc57487abc24cd3bd1f8417acfe1ce1ee4a0b0b858
+    Signature: ''
+    Imphash: aca7bbc6be02770c50b07eb6f94d1d78
+    Authentihash:
+        MD5: 66109ba4eaff3279c0420053192bbdc7
+        SHA1: 21bc11d6fe4ecee29fe9c0d09717c230fef8bf5a
+        SHA256: ba386547523c5779e47c59ccb1b853918386cd398f054ac767a3a5b333e3fad3
+    RichPEHeaderHash:
+        MD5: db9bb181e841f689974bb185ac9fa2be
+        SHA1: 818b83369bc1318811f9e552896b6a8547576409
+        SHA256: 4e12bf194b5d9b32d9857e4c91beec52f4b936e6c625166993350f15221cb097
+    Sections:
+        .text:
+            Entropy: 6.5596978482501855
+            Virtual Size: '0x195ed'
+        .rdata:
+            Entropy: 1.1744707670381698
+            Virtual Size: '0xe0cc'
+        .data:
+            Entropy: 1.4822667005925465
+            Virtual Size: '0x19c'
+        .pdata:
+            Entropy: 4.891959904722085
+            Virtual Size: '0x9cc'
+        PAGE:
+            Entropy: 6.297270480417571
+            Virtual Size: '0x254c'
+        INIT:
+            Entropy: 5.443388294044633
+            Virtual Size: '0x884'
+        .rsrc:
+            Entropy: 3.3468218584482647
+            Virtual Size: '0x3f8'
+        .reloc:
+            Entropy: 4.065762782521356
+            Virtual Size: '0x450'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2022-03-10 10:26:21'
+    InternalName: RadHwMgr.sys
+    Copyright: Copyright (c) 2002-2017 NCR Corporation
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - RtlInitUnicodeString
+    - IoDeleteDevice
+    - KeSetEvent
+    - MmGetSystemRoutineAddress
+    - KeInitializeEvent
+    - KeInitializeDpc
+    - IoReleaseRemoveLockEx
+    - IoDetachDevice
+    - KeInitializeTimer
+    - KeSetTimerEx
+    - KeDelayExecutionThread
+    - PoStartNextPowerIrp
+    - IofCompleteRequest
+    - IoReleaseRemoveLockAndWaitEx
+    - KeWaitForSingleObject
+    - IoAttachDeviceToDeviceStack
+    - PoCallDriver
+    - IoCreateSymbolicLink
+    - IoInitializeRemoveLockEx
+    - IoCreateDevice
+    - KeCancelTimer
+    - DbgPrint
+    - IofCallDriver
+    - MmGetPhysicalAddress
+    - ExAcquireFastMutex
+    - RtlRandom
+    - KeQueryActiveProcessors
+    - swprintf
+    - KeReleaseSpinLock
+    - MmUnmapIoSpace
+    - MmMapIoSpace
+    - ZwSetInformationThread
+    - KeAcquireSpinLockRaiseToDpc
+    - KeClearEvent
+    - ZwCreateFile
+    - ZwClose
+    - ZwWriteFile
+    - ExAllocatePoolWithTag
+    - ZwCreateKey
+    - ExFreePoolWithTag
+    - ZwSetValueKey
+    - ZwQueryValueKey
+    - ZwOpenKey
+    - PsCreateSystemThread
+    - PsTerminateSystemThread
+    - ObReferenceObjectByHandle
+    - ObfDereferenceObject
+    - KeBugCheckEx
+    - KeInitializeMutex
+    - ExReleaseFastMutex
+    - IoDeleteSymbolicLink
+    - KeReleaseMutex
+    - IoAcquireRemoveLockEx
+    - _stricmp
+    - IoWMIQueryAllData
+    - strstr
+    - IoWMIOpenBlock
+    - _vsnprintf
+    - __C_specific_handler
+    - HalSetBusDataByOffset
+    - HalTranslateBusAddress
+    - KeStallExecutionProcessor
+    - HalGetBusDataByOffset
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=DigiCert, Inc., CN=DigiCert Timestamp 2021
+            ValidFrom: '2021-01-01 00:00:00'
+            ValidTo: '2031-01-06 00:00:00'
+            Signature: 481cdcb5e99a23bce71ae7200e8e6746fd427251740a2347a3ab92d225c47059be14a0e52781a54d1415190779f0d104c386d93bbdfe4402664ded69a40ff6b870cf62e8f5514a7879367a27b7f3e7529f93a7ed439e7be7b4dd412289fb87a246034efcf4feb76477635f2352698382fa1a53ed90cc8da117730df4f36539704bf39cd67a7bda0cbc3d32d01bcbf561fc75080076bc810ef8c0e15ccfc41172e71b6449d8229a751542f52d323881daf460a2bab452fb5ce06124254fb2dfc929a8734351dabd63d61f5b9bf72e1b4f131df74a0d717e97b7f43f84ebc1e3a349a1facea7bf56cfba597661895f7ea7b48e6778f93698e1cb28da5b87a68a2f
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
+            Version: 3
+            TBS:
+                MD5: c0189c338449a42fe8358c2c1fbecc60
+                SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
+                SHA256: a43de6baf968a942da017b70769fdb65b3cfb1bbca1f9174da26a7d8aae78ec5
+                SHA384: 76d3a316a5a106050298418cce3beea16100524723d9e3220b0de51bfb6f1c35a5d4c7cd10b358fef7bf94c3e3562150
+        -   Subject: C=US, ST=Georgia, L=Atlanta, O=NCR Corporation, CN=NCR Corporation
+            ValidFrom: '2020-11-04 00:00:00'
+            ValidTo: '2023-12-12 23:59:59'
+            Signature: 4d55b7aeb5d2a5d0d57011d7737f9335b10f8a0c5dbd4df8ee165240aca58253c158eb39ff8c6de2d3581bf5223cbc8cafd41d644818a671357a801414ed8bfd7527ecc733e80dfb66591a8496da4b7c6eee9609edda6a68c0511cd58cdc7c632977bbaf0cd171bda99bfa32d8479efcdd7424b718a70fac3413019c98f1f47bd6bc9c96efd583ccb21c74b11ca06e1843336bd9bded749fd968d882e5b81c5418c7fc23e4a5fd53836819773310297d2c96193f0395b5fc45fb153eebf099c2c16600c146246de9d8d489807ab8faf0d81edbbb4410d67357f937a984eb458f832337c11aca1d3dd6305b607d173854e7a8e25e79d8220a621d62a3d1c1037b
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 0ccd588d98ef92c984668dd925028a5a
+            Version: 3
+            TBS:
+                MD5: 9cbe98d11c2841cb53918871ade1e650
+                SHA1: 40fedcc9e4ff9a555f8b2de0c3af80e6595832f3
+                SHA256: 46052421da2dfa5a2ebbd382dc55cec0ce68f0bc492aaad269256cf10996901b
+                SHA384: a5aa8d451be71c239e2828f733046ef3df030212889b09edc157daa83ee0278da5daee835db3745f82291efa1229f7f3
+        -   Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+                ID Code Signing CA
+            ValidFrom: '2013-10-22 12:00:00'
+            ValidTo: '2028-10-22 12:00:00'
+            Signature: 3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 0409181b5fd5bb66755343b56f955008
+            Version: 3
+            TBS:
+                MD5: 9359496ca4f021408b9d8923cab8b179
+                SHA1: 2aed40d7759997830870769be250199fd609e40e
+                SHA256: e767799478f64a34b3f53ff3bb9057fe1768f4ab178041b0dcc0ff1e210cba65
+                SHA384: 5cb7e7b4f1dbccd48d10db7e71b6f8c05fcb4bcb0085a6fefcfa0c2148f9a594e59f56ac4304004f3b398e259035c40c
+        -   Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+                ID Timestamping CA
+            ValidFrom: '2016-01-07 12:00:00'
+            ValidTo: '2031-01-07 12:00:00'
+            Signature: 719512e951875669cdefddda7caa637ab378cf06374084ef4b84bfcacf0302fdc5a7c30e20422caf77f32b1f0c215a2ab705341d6aae99f827a266bf09aa60df76a43a930ff8b2d1d87c1962e85e82251ec4ba1c7b2c21e2d65b2c1435430468b2db7502e072c798d63c64e51f4810185f8938614d62462487638c91522caf2989e5781fd60b14a580d7124770b375d59385937eb69267fb536189a8f56b96c0f458690d7cc801b1b92875b7996385228c61ca79947e59fc8c0fe36fb50126b66ca5ee875121e458609bba0c2d2b6da2c47ebbc4252b4702087c49ae13b6e17c424228c61856cf4134b6665db6747bf55633222f2236b24ba24a95d8f5a68e52
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 0aa125d6d6321b7e41e405da3697c215
+            Version: 3
+            TBS:
+                MD5: 8d26184fc613f89aba1cefb30fce1b53
+                SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
+                SHA256: 56b5f0d9db578e3f142921daa387902722a76700375c7e1c4ae0ba004bacaa0c
+                SHA384: d8c9691fe9dbe182f07b49b07fbb4f589fa7b38b5c4d21f265d3a2e818f4b1bfb39e03faab2ec05bb10333a99914fb8a
+        -   Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured
+                ID Root CA
+            ValidFrom: '2011-04-15 19:41:37'
+            ValidTo: '2021-04-15 19:51:37'
+            Signature: 5cf5b22d02ceed01b53512d813f7aa4014c7a15ca08a55ed7e55ea6ac457176fd04722423658efc5ac61c5f62c52ce6ae6c80d85dab334420ea40225182672b92a4ea57e4b16f2a0e40c449ce24d9af474f0f927a6699031c244654348c74869d0fc8409f286140ac22996857f11eb8713176ed3ec6bff1d578ab17b1ea5a07ce9a27a68e5fac6b161d67263fa379163835599f81d614f0c6fa3f7bcb1152acc8d85e31417ef7e49443fb022c0f0acbe2fdbe10c86b0f4585c5a10a94bcdf3448a4652083e0a6210e9459504b78b8d4b074f500db7bbe7fb8ca27878c6c53b7663b2cfe521845a66fce04c79834ecfa8ee700586587cc29cd73ca3ad3c7e76625c87d0ed7cd5c55b1421f4be75a275d2e9e15ad020307841624d6b5e6e1b1710244ad8588775d015d762bbfd185665842561977faad49df4f35d6da031c2e19e02ac3e90c3327ee832903416d08b14cf95accee58c54a265b8bfed186a57073ed3e79a4a2f081a041c49871a8ae61b08a365d81c31c50d9cbab368ddf45076160675fec403e7d13edfdc862e10027e661296534e7af3365879b12042d8963f35be3f8ef2999743f5e40ce13c68728c8d49d75a52b573fb7a35943a61b08482c04885c19732d39b725fa0d2348f7ef0467cf28c7294c707b0d7b5b230b81965f09c8327b0a0abd0a2727e050fb3aeddb95b9b42bcc32663456b86f11d4643edc8
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 611cb28a000000000026
+            Version: 3
+            TBS:
+                MD5: 983a0c315a50542362f2bd6a5d71c8d0
+                SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
+                SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+                SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
+        Signer:
+        -   SerialNumber: 0ccd588d98ef92c984668dd925028a5a
+            Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 Assured
+                ID Code Signing CA
+            Version: 1
+    LoadsDespiteHVCI: 'FALSE'

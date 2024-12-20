@@ -1,229 +1,230 @@
 Id: 71d930a7-3465-4d27-90d4-2a1a08bebb92
+Tags:
+- RtsUer.sys
+Verified: 'TRUE'
 Author: Michael M.
 Created: '2024-09-10'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
-  Command: sc.exe create RtsUer.sys binPath=C:\windows\temp\RtsUer.sys type=kernel
-    && sc.exe start RtsUer.sys
-  Description: The Realtek SD card reader driver, RtsUer.sys, versions below or equal
-    to 10.0.22000.31273 contain multiple vulnerabilities that pose significant security
-    risks. These flaws allow non-privileged users to write to kernel memory and access
-    the DMA controller from unprivileged accounts, potentially enabling privilege
-    escalation and system compromise. The most severe issues include the ability to
-    write to kernel memory and access the DMA controller, which could lead to unauthorized
-    system modifications. These vulnerabilities affect various Realtek SD card reader
-    models used by major OEM laptop manufacturers. Due to the widespread use of this
-    driver, the impact is considerable, potentially affecting a large number of systems
-    across different brands. Users with laptops equipped with Realtek SD card readers
-    should ensure their drivers are updated to a version higher than 10.0.22000.31273
-    to mitigate these security risks.
-  Usecase: Elevate privileges
-  Privileges: kernel
-  OperatingSystem: Windows 10
+    Command: sc.exe create RtsUer.sys binPath=C:\windows\temp\RtsUer.sys type=kernel
+        && sc.exe start RtsUer.sys
+    Description: The Realtek SD card reader driver, RtsUer.sys, versions below or
+        equal to 10.0.22000.31273 contain multiple vulnerabilities that pose significant
+        security risks. These flaws allow non-privileged users to write to kernel
+        memory and access the DMA controller from unprivileged accounts, potentially
+        enabling privilege escalation and system compromise. The most severe issues
+        include the ability to write to kernel memory and access the DMA controller,
+        which could lead to unauthorized system modifications. These vulnerabilities
+        affect various Realtek SD card reader models used by major OEM laptop manufacturers.
+        Due to the widespread use of this driver, the impact is considerable, potentially
+        affecting a large number of systems across different brands. Users with laptops
+        equipped with Realtek SD card readers should ensure their drivers are updated
+        to a version higher than 10.0.22000.31273 to mitigate these security risks.
+    Usecase: Elevate privileges
+    Privileges: kernel
+    OperatingSystem: Windows 10
 Resources:
 - https://www.linkedin.com/pulse/vulnerabilities-realtek-sd-card-reader-driver-part-1-myngerbayev-czqmf,
-  https://github.com/zwclose/realteksd
-Acknowledgement:
-  Person: ''
-  Handle: ''
+    https://github.com/zwclose/realteksd
 Detection: []
+Acknowledgement:
+    Person: ''
+    Handle: ''
 KnownVulnerableSamples:
-- Filename: ''
-  MD5: 11966f98a92e039f1d14689538cccd99
-  SHA1: 9ae0c6d1612a84e664c9896fafcc50232831f630
-  SHA256: 39171fcaff172d6b38762acef3d3352f9a375e3db7e54a7b51261a53b3c94266
-  Signature: ''
-  Date: ''
-  Publisher: ''
-  Company: Realsil Semiconductor Corporation
-  Description: RTS USB READER Driver
-  Product: Windows (R) Win 7 DDK driver
-  ProductVersion: 10.0.10011.16384
-  FileVersion: 10.0.22000.31272
-  MachineType: AMD64
-  OriginalFilename: RTSUER.SYS
-  Imphash: 8a0175a5dcdc5c7e8ff577e9ac4e4ab1
-  Authentihash:
-    MD5: 63485bea17db891ce3c16c2b24e947b5
-    SHA1: f4f5efe24ab8119e1fe4a9d62c0f153b1fb6d42c
-    SHA256: 0f78dd64abcb5a3e1d60f9e9c92422f34a52e009770e6434d2d8aabb6d370737
-  RichPEHeaderHash:
-    MD5: 23a6d4678f3d9899c904995daa9e68b4
-    SHA1: 8b24c38e0d2cc16c82d987526815a41be61b414a
-    SHA256: 9bff0d505a98a035c3186285f9d347fe22240f0793217f0f1affba9a9d2718ac
-  Sections:
-    .text:
-      Entropy: 6.540827144257508
-      Virtual Size: '0xb0c9e'
-    .rdata:
-      Entropy: 5.500737817765308
-      Virtual Size: '0x46b4'
-    .data:
-      Entropy: 3.530798760265933
-      Virtual Size: '0xf00'
-    .pdata:
-      Entropy: 5.8369581105829065
-      Virtual Size: '0x1ff8'
-    PAGE:
-      Entropy: 5.8442359772872035
-      Virtual Size: '0x140'
-    INIT:
-      Entropy: 5.170875735332465
-      Virtual Size: '0xc36'
-    .rsrc:
-      Entropy: 3.6605778523846384
-      Virtual Size: '0x4a0'
-    .reloc:
-      Entropy: 5.273216802688426
-      Virtual Size: '0x2e8'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-12-17 02:20:30'
-  InternalName: RTS_USB10.0.22000.31272 (Windows 8 x64)
-  Copyright: "Copyright \xA9 Realtek Semiconductor Corporation 2013"
-  Imports:
-  - USBD.SYS
-  - ntoskrnl.exe
-  - HAL.DLL
-  ExportedFunctions: ''
-  ImportedFunctions:
-  - USBD_CreateConfigurationRequestEx
-  - USBD_ParseConfigurationDescriptorEx
-  - KeReleaseSemaphore
-  - KeWaitForSingleObject
-  - ExRaiseStatus
-  - ProbeForWrite
-  - MmProbeAndLockPages
-  - MmMapLockedPagesSpecifyCache
-  - IoAllocateMdl
-  - IofCallDriver
-  - IofCompleteRequest
-  - IoFreeMdl
-  - IoIs32bitProcess
-  - IoCsqInsertIrp
-  - __C_specific_handler
-  - KeAcquireSpinLockRaiseToDpc
-  - KeReleaseSpinLock
-  - _vsnprintf
-  - RtlInitUnicodeString
-  - MmGetSystemRoutineAddress
-  - KeInitializeEvent
-  - KeClearEvent
-  - KeSetEvent
-  - IoAllocateWorkItem
-  - IoFreeWorkItem
-  - IoQueueWorkItem
-  - PoRequestPowerIrp
-  - PoFxSetDeviceIdleTimeout
-  - RtlUnicodeStringToInteger
-  - RtlInitAnsiString
-  - RtlQueryRegistryValues
-  - RtlAnsiStringToUnicodeString
-  - RtlFreeUnicodeString
-  - RtlCompareMemory
-  - KeReleaseMutex
-  - KeDelayExecutionThread
-  - IoBuildSynchronousFsdRequest
-  - IoDeleteDevice
-  - IoGetDeviceProperty
-  - IoOpenDeviceRegistryKey
-  - ObReferenceObjectByHandle
-  - ObfDereferenceObject
-  - ZwClose
-  - ExAllocatePoolWithTag
-  - ZwOpenKey
-  - ZwDeleteKey
-  - ZwDeleteValueKey
-  - ZwEnumerateKey
-  - ZwFlushKey
-  - ZwQueryValueKey
-  - ZwSetValueKey
-  - memcmp
-  - wcscmp
-  - wcsstr
-  - KeInitializeMutex
-  - KeInitializeSemaphore
-  - IoAttachDeviceToDeviceStack
-  - IoCreateDevice
-  - IoDetachDevice
-  - IoRegisterShutdownNotification
-  - IoCsqInitialize
-  - IoRegisterDeviceInterface
-  - IoAllocateIrp
-  - IoBuildDeviceIoControlRequest
-  - IoFreeIrp
-  - IoGetAttachedDeviceReference
-  - IoUnregisterShutdownNotification
-  - IoSetDeviceInterfaceState
-  - PoSetPowerState
-  - ObfReferenceObject
-  - IoCancelIrp
-  - PoCallDriver
-  - PoStartNextPowerIrp
-  - KeWaitForMultipleObjects
-  - PsCreateSystemThread
-  - PsTerminateSystemThread
-  - IoCsqRemoveNextIrp
-  - IoInvalidateDeviceRelations
-  - MmUnlockPages
-  - MmBuildMdlForNonPagedPool
-  - IoWMIOpenBlock
-  - IoWMIQueryAllData
-  - RtlTimeToTimeFields
-  - ExSystemTimeToLocalTime
-  - ExFreePoolWithTag
-  - ZwCreateKey
-  - IoGetRequestorProcessId
-  - RtlGetVersion
-  - wcscat_s
-  - wcscpy_s
-  - ObQueryNameString
-  - swprintf_s
-  - _vsnwprintf
-  - ExUuidCreate
-  - strncpy_s
-  - PsGetVersion
-  - ExAllocatePoolWithQuotaTag
-  - ZwQuerySystemInformation
-  - KeStallExecutionProcessor
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
-        SHA384 2021 CA1
-      ValidFrom: '2021-04-29 00:00:00'
-      ValidTo: '2036-04-28 23:59:59'
-      Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.12
-      IsCertificateAuthority: true
-      SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
-      Version: 3
-      TBS:
-        MD5: 5d8003a64dfa5a4d88365da1566038cb
-        SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
-        SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
-        SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
-    - Subject: ??=Private Organization, ??=TW, serialNumber=22671299, C=TW, L=HSINCHU,
-        O=Realtek Semiconductor Corp., CN=Realtek Semiconductor Corp.
-      ValidFrom: '2021-07-15 00:00:00'
-      ValidTo: '2022-01-13 23:59:59'
-      Signature: 151048dc9ff0e31ea762d2448203360d71a4b8c54f7718b1e812acb6afef4975711bdbdc87425479d93554c9d8267c73511dd87d333c913c1236c1c757fdb3295f5d7c0c6170e3aceee359a99671d587b0b771966eec4f190ffe58941812dc269054705a599efcbdad02e1bbd3ba80f1e63008317dab04fc8acf431120e96a55de3fb7860e2aa49520abf426488f69754048b7bcdcf638b5a1d1c1f4cda2076c3068aefb40deec5ead04e57f1037b6d89ce205adeb4f3741dcb936ec195ffdcd9f8c95d2158784b2757b19ec6146d2f54e4d9dbe2e88df94d310413659b15e0a884c88371ff4f2c6378299994d2c081bfb49cb50fc36773f42d0808ba0aebd9f7f4d9b17e68f70bd30c8116c6f76cfabd23770abbe60a9b9d1d315f9f4f34f2636f73bd9451af7929621e36145fac35091d2653901cf5e578cd8a0295ef6ce25a6f7bc975a9b800712f75eef729ce0ab5ebe86668b5c80ea76ee9c74ce0ce1dc4f840d3a1299718ffc24077baa260298221fa9492fd8dbdf01ebd18e9cd7a44d0818bb38432624e6ce766334e5a6898352b096fb067a943df3f1921656bc33bbd91335e6419f5beb3e36afb826b3e76219554b819ae3f546e1da129f9aafa6ec3573594879a606f11be7bb739989c6ea797baebe7a39e9579404bdf1cb05ab93fefd0fde80057aefeaabe932e2cedfa14b9076f79027d4be8f863b4eae9713a4
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 05101d15d8f858ee5327dc9bf4b5e60b
-      Version: 3
-      TBS:
-        MD5: c1b9c90ceda4e9618acdd67d666e6e65
-        SHA1: 7eaa35bb031c66efb03060247524666adef774e4
-        SHA256: 6f3f9fd2fb30731e281c4bd92bb2e37119d4d8d10d34f6f260ae5481456bdfd4
-        SHA384: a59e3d9c053618b9081d72e4764a64b811d9927a35cb96f314ad19635405ac3c3a05e29fa592fa2b59db1fd1a16a09da
-    Signer:
-    - SerialNumber: 05101d15d8f858ee5327dc9bf4b5e60b
-      Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
-        SHA384 2021 CA1
-      Version: 1
-  LoadsDespiteHVCI: 'TRUE'
-Tags:
-- RtsUer.sys
+-   Filename: ''
+    MD5: 11966f98a92e039f1d14689538cccd99
+    SHA1: 9ae0c6d1612a84e664c9896fafcc50232831f630
+    SHA256: 39171fcaff172d6b38762acef3d3352f9a375e3db7e54a7b51261a53b3c94266
+    Signature: ''
+    Date: ''
+    Publisher: ''
+    Company: Realsil Semiconductor Corporation
+    Description: RTS USB READER Driver
+    Product: Windows (R) Win 7 DDK driver
+    ProductVersion: 10.0.10011.16384
+    FileVersion: 10.0.22000.31272
+    MachineType: AMD64
+    OriginalFilename: RTSUER.SYS
+    Imphash: 8a0175a5dcdc5c7e8ff577e9ac4e4ab1
+    Authentihash:
+        MD5: 63485bea17db891ce3c16c2b24e947b5
+        SHA1: f4f5efe24ab8119e1fe4a9d62c0f153b1fb6d42c
+        SHA256: 0f78dd64abcb5a3e1d60f9e9c92422f34a52e009770e6434d2d8aabb6d370737
+    RichPEHeaderHash:
+        MD5: 23a6d4678f3d9899c904995daa9e68b4
+        SHA1: 8b24c38e0d2cc16c82d987526815a41be61b414a
+        SHA256: 9bff0d505a98a035c3186285f9d347fe22240f0793217f0f1affba9a9d2718ac
+    Sections:
+        .text:
+            Entropy: 6.540827144257508
+            Virtual Size: '0xb0c9e'
+        .rdata:
+            Entropy: 5.500737817765308
+            Virtual Size: '0x46b4'
+        .data:
+            Entropy: 3.530798760265933
+            Virtual Size: '0xf00'
+        .pdata:
+            Entropy: 5.8369581105829065
+            Virtual Size: '0x1ff8'
+        PAGE:
+            Entropy: 5.8442359772872035
+            Virtual Size: '0x140'
+        INIT:
+            Entropy: 5.170875735332465
+            Virtual Size: '0xc36'
+        .rsrc:
+            Entropy: 3.6605778523846384
+            Virtual Size: '0x4a0'
+        .reloc:
+            Entropy: 5.273216802688426
+            Virtual Size: '0x2e8'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2021-12-17 02:20:30'
+    InternalName: RTS_USB10.0.22000.31272 (Windows 8 x64)
+    Copyright: "Copyright \xA9 Realtek Semiconductor Corporation 2013"
+    Imports:
+    - USBD.SYS
+    - ntoskrnl.exe
+    - HAL.DLL
+    ExportedFunctions: ''
+    ImportedFunctions:
+    - USBD_CreateConfigurationRequestEx
+    - USBD_ParseConfigurationDescriptorEx
+    - KeReleaseSemaphore
+    - KeWaitForSingleObject
+    - ExRaiseStatus
+    - ProbeForWrite
+    - MmProbeAndLockPages
+    - MmMapLockedPagesSpecifyCache
+    - IoAllocateMdl
+    - IofCallDriver
+    - IofCompleteRequest
+    - IoFreeMdl
+    - IoIs32bitProcess
+    - IoCsqInsertIrp
+    - __C_specific_handler
+    - KeAcquireSpinLockRaiseToDpc
+    - KeReleaseSpinLock
+    - _vsnprintf
+    - RtlInitUnicodeString
+    - MmGetSystemRoutineAddress
+    - KeInitializeEvent
+    - KeClearEvent
+    - KeSetEvent
+    - IoAllocateWorkItem
+    - IoFreeWorkItem
+    - IoQueueWorkItem
+    - PoRequestPowerIrp
+    - PoFxSetDeviceIdleTimeout
+    - RtlUnicodeStringToInteger
+    - RtlInitAnsiString
+    - RtlQueryRegistryValues
+    - RtlAnsiStringToUnicodeString
+    - RtlFreeUnicodeString
+    - RtlCompareMemory
+    - KeReleaseMutex
+    - KeDelayExecutionThread
+    - IoBuildSynchronousFsdRequest
+    - IoDeleteDevice
+    - IoGetDeviceProperty
+    - IoOpenDeviceRegistryKey
+    - ObReferenceObjectByHandle
+    - ObfDereferenceObject
+    - ZwClose
+    - ExAllocatePoolWithTag
+    - ZwOpenKey
+    - ZwDeleteKey
+    - ZwDeleteValueKey
+    - ZwEnumerateKey
+    - ZwFlushKey
+    - ZwQueryValueKey
+    - ZwSetValueKey
+    - memcmp
+    - wcscmp
+    - wcsstr
+    - KeInitializeMutex
+    - KeInitializeSemaphore
+    - IoAttachDeviceToDeviceStack
+    - IoCreateDevice
+    - IoDetachDevice
+    - IoRegisterShutdownNotification
+    - IoCsqInitialize
+    - IoRegisterDeviceInterface
+    - IoAllocateIrp
+    - IoBuildDeviceIoControlRequest
+    - IoFreeIrp
+    - IoGetAttachedDeviceReference
+    - IoUnregisterShutdownNotification
+    - IoSetDeviceInterfaceState
+    - PoSetPowerState
+    - ObfReferenceObject
+    - IoCancelIrp
+    - PoCallDriver
+    - PoStartNextPowerIrp
+    - KeWaitForMultipleObjects
+    - PsCreateSystemThread
+    - PsTerminateSystemThread
+    - IoCsqRemoveNextIrp
+    - IoInvalidateDeviceRelations
+    - MmUnlockPages
+    - MmBuildMdlForNonPagedPool
+    - IoWMIOpenBlock
+    - IoWMIQueryAllData
+    - RtlTimeToTimeFields
+    - ExSystemTimeToLocalTime
+    - ExFreePoolWithTag
+    - ZwCreateKey
+    - IoGetRequestorProcessId
+    - RtlGetVersion
+    - wcscat_s
+    - wcscpy_s
+    - ObQueryNameString
+    - swprintf_s
+    - _vsnwprintf
+    - ExUuidCreate
+    - strncpy_s
+    - PsGetVersion
+    - ExAllocatePoolWithQuotaTag
+    - ZwQuerySystemInformation
+    - KeStallExecutionProcessor
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+                SHA384 2021 CA1
+            ValidFrom: '2021-04-29 00:00:00'
+            ValidTo: '2036-04-28 23:59:59'
+            Signature: 3a23443d8d0876ee8fbc3a99d356e0021aa5f84834f32cb6e67466f79472b100caaf6c302713129e90449f4bfd9ea37c26d537bc3a5d486d95d53f49f427bb16814550fd9cbdb685e0767e3771cb22f75aaa90cff5936ae3eb20d1d55079889a8a8ac1b6bda148187edcd8801a111918cd61998156f6c9e376e7c4e41b5f43f83e94ff76393d9ed499cf4add28eb5f26a1955848d51afed7273ffd90d17686dd1cb0605cf30da8eee089a1bd39e1384eda6ebb369dfbe521535ac3cae96af1a23edb43b833c84f38149299f5ddce546dd95d02141f40337c03e295b2c221757352cb46d8c4341ca2a54b8dcd6f76372c853f1ace26e918be9007b0437f9588208270f0cccaeffd29355c1f893855f7378a8b09a1cb0be9311aff2e195c3971e1be9ca70a06d62667b792e64e5fde7aac49cf2ea47492addb3ca49c861fe3c1561b2b23ff8fb5ea887b706be6a0bafd3a3f45a6c4e81691528b41c048844b964dab4440e38df01528ceedf11856072a2f10c40c08643c338fae288c3ccb8f880b0dbf3bf4ce1e7b8eefb5ebcbb7f07713e6e7283fac12aea52f226c41f9825c1566cc6c0ecac586c3f626330c074ba0d307026a6a4030484b34a85120bbad1b8508e2590d6dca05502bea4a1c9ea5fda0a71f0674e7f2d65290fdaf854821f9573bb49c03ed8645f4b4616ebf68e2266086eac8afa9fe941de7631b3a8656784e
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.12
+            IsCertificateAuthority: true
+            SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
+            Version: 3
+            TBS:
+                MD5: 5d8003a64dfa5a4d88365da1566038cb
+                SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
+                SHA256: 84bdc82e2f2a7f7aaa782667dac556ffcb2b33240c1f9c0a00a3264526a98332
+                SHA384: 65b1d4076a89ae273f57e6eeedecb3eae129b4168f76fa7671914cdf461d542255c59d9b85b916ae0ca6fc0fcf7a8e64
+        -   Subject: ??=Private Organization, ??=TW, serialNumber=22671299, C=TW,
+                L=HSINCHU, O=Realtek Semiconductor Corp., CN=Realtek Semiconductor
+                Corp.
+            ValidFrom: '2021-07-15 00:00:00'
+            ValidTo: '2022-01-13 23:59:59'
+            Signature: 151048dc9ff0e31ea762d2448203360d71a4b8c54f7718b1e812acb6afef4975711bdbdc87425479d93554c9d8267c73511dd87d333c913c1236c1c757fdb3295f5d7c0c6170e3aceee359a99671d587b0b771966eec4f190ffe58941812dc269054705a599efcbdad02e1bbd3ba80f1e63008317dab04fc8acf431120e96a55de3fb7860e2aa49520abf426488f69754048b7bcdcf638b5a1d1c1f4cda2076c3068aefb40deec5ead04e57f1037b6d89ce205adeb4f3741dcb936ec195ffdcd9f8c95d2158784b2757b19ec6146d2f54e4d9dbe2e88df94d310413659b15e0a884c88371ff4f2c6378299994d2c081bfb49cb50fc36773f42d0808ba0aebd9f7f4d9b17e68f70bd30c8116c6f76cfabd23770abbe60a9b9d1d315f9f4f34f2636f73bd9451af7929621e36145fac35091d2653901cf5e578cd8a0295ef6ce25a6f7bc975a9b800712f75eef729ce0ab5ebe86668b5c80ea76ee9c74ce0ce1dc4f840d3a1299718ffc24077baa260298221fa9492fd8dbdf01ebd18e9cd7a44d0818bb38432624e6ce766334e5a6898352b096fb067a943df3f1921656bc33bbd91335e6419f5beb3e36afb826b3e76219554b819ae3f546e1da129f9aafa6ec3573594879a606f11be7bb739989c6ea797baebe7a39e9579404bdf1cb05ab93fefd0fde80057aefeaabe932e2cedfa14b9076f79027d4be8f863b4eae9713a4
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 05101d15d8f858ee5327dc9bf4b5e60b
+            Version: 3
+            TBS:
+                MD5: c1b9c90ceda4e9618acdd67d666e6e65
+                SHA1: 7eaa35bb031c66efb03060247524666adef774e4
+                SHA256: 6f3f9fd2fb30731e281c4bd92bb2e37119d4d8d10d34f6f260ae5481456bdfd4
+                SHA384: a59e3d9c053618b9081d72e4764a64b811d9927a35cb96f314ad19635405ac3c3a05e29fa592fa2b59db1fd1a16a09da
+        Signer:
+        -   SerialNumber: 05101d15d8f858ee5327dc9bf4b5e60b
+            Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
+                SHA384 2021 CA1
+            Version: 1
+    LoadsDespiteHVCI: 'TRUE'

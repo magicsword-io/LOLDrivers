@@ -8,162 +8,162 @@ Created: '2023-03-04'
 MitreID: T1068
 Category: malicious
 Commands:
-  Command: sc.exe create gftkyj64.sys binPath=C:\windows\temp\gftkyj64.sys type=kernel
-    && sc.exe start gftkyj64.sys
-  Description: "SentinelOne has observed prominent threat actors abusing legitimately\
-    \ signed Microsoft drivers in active intrusions into telecommunication, BPO, MSSP,\
-    \ and financial services businesses.\nInvestigations into these intrusions led\
-    \ to the discovery of POORTRY and STONESTOP malware, part of a small toolkit designed\
-    \ to terminate AV and EDR processes.\nWe first reported our discovery to Microsoft\u2019\
-    s Security Response Center (MSRC) in October 2022 and received an official case\
-    \ number (75361). Today, MSRC released an associated advisory under ADV220005.\n\
-    This research is being released alongside Mandiant, a SentinelOne technology and\
-    \ incident response partner. "
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
+    Command: sc.exe create gftkyj64.sys binPath=C:\windows\temp\gftkyj64.sys type=kernel
+        && sc.exe start gftkyj64.sys
+    Description: "SentinelOne has observed prominent threat actors abusing legitimately\
+        \ signed Microsoft drivers in active intrusions into telecommunication, BPO,\
+        \ MSSP, and financial services businesses.\nInvestigations into these intrusions\
+        \ led to the discovery of POORTRY and STONESTOP malware, part of a small toolkit\
+        \ designed to terminate AV and EDR processes.\nWe first reported our discovery\
+        \ to Microsoft\u2019s Security Response Center (MSRC) in October 2022 and\
+        \ received an official case number (75361). Today, MSRC released an associated\
+        \ advisory under ADV220005.\nThis research is being released alongside Mandiant,\
+        \ a SentinelOne technology and incident response partner. "
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
 Resources:
 - https://www.sentinelone.com/labs/driving-through-defenses-targeted-attacks-leverage-signed-malicious-microsoft-drivers/
 - ''
 Detection: []
 Acknowledgement:
-  Handle: ''
-  Person: ''
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
-- Authentihash:
-    MD5: 4252d83e18ad41f0cea7ac168218d95b
-    SHA1: cf9cb05c9b725efca68c4b7d6f53c8e233217ac4
-    SHA256: cd66e893300e7e59a749fe4e1b1706f8ccb5ae140254def9f5a614648e2da36f
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2022-06-02 04:09:08'
-  Date: ''
-  Description: ''
-  ExportedFunctions: ''
-  FileVersion: ''
-  Filename: gftkyj64.sys
-  ImportedFunctions:
-  - rand
-  - srand
-  - RtlInitUnicodeString
-  - RtlGetVersion
-  - KeDelayExecutionThread
-  - ExAllocatePoolWithTag
-  - ExFreePoolWithTag
-  - ExSystemTimeToLocalTime
-  - MmGetSystemRoutineAddress
-  - IofCompleteRequest
-  - IoCreateDevice
-  - IoCreateSymbolicLink
-  - IoDeleteDevice
-  - IoGetCurrentProcess
-  - ObReferenceObjectByHandleWithTag
-  - ObfDereferenceObject
-  - ObfDereferenceObjectWithTag
-  - MmIsAddressValid
-  - PsGetProcessExitStatus
-  - PsIsThreadTerminating
-  - PsLookupProcessByProcessId
-  - PsLookupThreadByThreadId
-  - PsGetThreadProcess
-  - PsIsSystemThread
-  - ObOpenObjectByPointerWithTag
-  - KeBugCheckEx
-  Imports:
-  - ntoskrnl.exe
-  InternalName: ''
-  MD5: 04a88f5974caa621cee18f34300fc08a
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: a7d4acb55095eb7efa7945ef805fcf8b
-    SHA1: 10103bfe4f9a5b22c45d64354f88be415249f384
-    SHA256: 58bcb1d3215317fc95d1b8ddef6945aead4de70049db273b0d4a82a7e22b38d8
-  SHA1: a804ebec7e341b4d98d9e94f6e4860a55ea1638d
-  SHA256: 9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c
-  Sections:
-    .text:
-      Entropy: 5.867789766876108
-      Virtual Size: '0x16a8'
-    .rdata:
-      Entropy: 3.699262445440139
-      Virtual Size: '0x5b0'
-    .data:
-      Entropy: 0.6050836155077387
-      Virtual Size: '0x110'
-    .pdata:
-      Entropy: 3.6860326615335524
-      Virtual Size: '0x15c'
-    INIT:
-      Entropy: 5.264965850546818
-      Virtual Size: '0x3ee'
-    .reloc:
-      Entropy: 3.566428031846024
-      Virtual Size: '0x20'
-  Signature:
-  - "\u5317\u4EAC\u4E1C\u65B9\u6D77\u8FBE\u7F51\u7EDC\u79D1\u6280\u6709\u9650\u8D23\
-    \u4EFB\u516C\u53F8"
-  - Sectigo Public Code Signing CA R36
-  - Sectigo Public Code Signing Root R46
-  - Sectigo (AAA)
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=CN, ST=guangdong, L=zhuhai, O=Zhuhai liancheng Technology Co., Ltd.,
-        OU=Digital ID Class 3 , Microsoft Software Validation v2, CN=Zhuhai liancheng
-        Technology Co., Ltd.
-      ValidFrom: '2013-02-04 00:00:00'
-      ValidTo: '2014-02-04 23:59:59'
-      Signature: 6eb0af9de955b9bd1bda967942685c5b630bf60dd0be149178bce893c7c32039076006dd75f9655b497470e44e7954cd89fe4ee04a580992f0ee9268e8129afcf0b58519158d6864e56caa6e78d66b0278a86083b751cf8a030ba0139969509259e5d1ea91dc593e1d093fb5e4ebabe1a38359d920acb85f9c02f6939096522b010158d086bc5ff52bbe2be1ab364ca496ed5a3ac72531274daf4e808d483686118d6132d2b98018074a0e989eed4f43fe28298363e05e9c3cace4a954525ac021e0b10445e09a3528eff35b525e7cca44332744aa81b41dd4244ec54da168b2f1026a23ca9b9929199f037689956b69c21ca77e6605483439670dcf9baf2991
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: false
-      SerialNumber: 627dfdf73a1455de5143a270799e6b7b
-      Version: 3
-      TBS:
-        MD5: b91ec3270e80aa93214c42d1eed66d36
-        SHA1: c27a40cbc754d2bb1f7b872a5a9fd385ff1c2b2f
-        SHA256: 7b4a9879162ce64e75cca2bcc675be06dacb6c9eeae4df6c929080b4db819cd4
-        SHA384: 394fa6e52375f53d18f79f1abb7b26b02bbb000784279547bd81d16c18fabe1b8156b64ad1c356e85e1829fa2ab3f870
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
-        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
-        Authority , G5
-      ValidFrom: '2011-02-22 19:25:17'
-      ValidTo: '2021-02-22 19:35:17'
-      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 611993e400000000001c
-      Version: 3
-      TBS:
-        MD5: 78a717e082dcc1cda3458d917e677d14
-        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
-        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
-        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
-    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
-        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
-        CA
-      ValidFrom: '2010-02-08 00:00:00'
-      ValidTo: '2020-02-07 23:59:59'
-      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-      IsCertificateAuthority: true
-      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
-      Version: 3
-      TBS:
-        MD5: b30c31a572b0409383ed3fbe17e56e81
-        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
-        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
-        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
-    Signer:
-    - SerialNumber: 627dfdf73a1455de5143a270799e6b7b
-      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
-        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
-        CA
-      Version: 1
-  Imphash: 832219eb71b8bdb771f1d29d27b0acf4
-  LoadsDespiteHVCI: 'TRUE'
+-   Authentihash:
+        MD5: 4252d83e18ad41f0cea7ac168218d95b
+        SHA1: cf9cb05c9b725efca68c4b7d6f53c8e233217ac4
+        SHA256: cd66e893300e7e59a749fe4e1b1706f8ccb5ae140254def9f5a614648e2da36f
+    Company: ''
+    Copyright: ''
+    CreationTimestamp: '2022-06-02 04:09:08'
+    Date: ''
+    Description: ''
+    ExportedFunctions: ''
+    FileVersion: ''
+    Filename: gftkyj64.sys
+    ImportedFunctions:
+    - rand
+    - srand
+    - RtlInitUnicodeString
+    - RtlGetVersion
+    - KeDelayExecutionThread
+    - ExAllocatePoolWithTag
+    - ExFreePoolWithTag
+    - ExSystemTimeToLocalTime
+    - MmGetSystemRoutineAddress
+    - IofCompleteRequest
+    - IoCreateDevice
+    - IoCreateSymbolicLink
+    - IoDeleteDevice
+    - IoGetCurrentProcess
+    - ObReferenceObjectByHandleWithTag
+    - ObfDereferenceObject
+    - ObfDereferenceObjectWithTag
+    - MmIsAddressValid
+    - PsGetProcessExitStatus
+    - PsIsThreadTerminating
+    - PsLookupProcessByProcessId
+    - PsLookupThreadByThreadId
+    - PsGetThreadProcess
+    - PsIsSystemThread
+    - ObOpenObjectByPointerWithTag
+    - KeBugCheckEx
+    Imports:
+    - ntoskrnl.exe
+    InternalName: ''
+    MD5: 04a88f5974caa621cee18f34300fc08a
+    MachineType: AMD64
+    MagicHeader: 50 45 0 0
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: a7d4acb55095eb7efa7945ef805fcf8b
+        SHA1: 10103bfe4f9a5b22c45d64354f88be415249f384
+        SHA256: 58bcb1d3215317fc95d1b8ddef6945aead4de70049db273b0d4a82a7e22b38d8
+    SHA1: a804ebec7e341b4d98d9e94f6e4860a55ea1638d
+    SHA256: 9b1b15a3aacb0e786a608726c3abfc94968915cedcbd239ddf903c4a54bfcf0c
+    Sections:
+        .text:
+            Entropy: 5.867789766876108
+            Virtual Size: '0x16a8'
+        .rdata:
+            Entropy: 3.699262445440139
+            Virtual Size: '0x5b0'
+        .data:
+            Entropy: 0.6050836155077387
+            Virtual Size: '0x110'
+        .pdata:
+            Entropy: 3.6860326615335524
+            Virtual Size: '0x15c'
+        INIT:
+            Entropy: 5.264965850546818
+            Virtual Size: '0x3ee'
+        .reloc:
+            Entropy: 3.566428031846024
+            Virtual Size: '0x20'
+    Signature:
+    - "\u5317\u4EAC\u4E1C\u65B9\u6D77\u8FBE\u7F51\u7EDC\u79D1\u6280\u6709\u9650\u8D23\
+        \u4EFB\u516C\u53F8"
+    - Sectigo Public Code Signing CA R36
+    - Sectigo Public Code Signing Root R46
+    - Sectigo (AAA)
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=CN, ST=guangdong, L=zhuhai, O=Zhuhai liancheng Technology Co.,
+                Ltd., OU=Digital ID Class 3 , Microsoft Software Validation v2, CN=Zhuhai
+                liancheng Technology Co., Ltd.
+            ValidFrom: '2013-02-04 00:00:00'
+            ValidTo: '2014-02-04 23:59:59'
+            Signature: 6eb0af9de955b9bd1bda967942685c5b630bf60dd0be149178bce893c7c32039076006dd75f9655b497470e44e7954cd89fe4ee04a580992f0ee9268e8129afcf0b58519158d6864e56caa6e78d66b0278a86083b751cf8a030ba0139969509259e5d1ea91dc593e1d093fb5e4ebabe1a38359d920acb85f9c02f6939096522b010158d086bc5ff52bbe2be1ab364ca496ed5a3ac72531274daf4e808d483686118d6132d2b98018074a0e989eed4f43fe28298363e05e9c3cace4a954525ac021e0b10445e09a3528eff35b525e7cca44332744aa81b41dd4244ec54da168b2f1026a23ca9b9929199f037689956b69c21ca77e6605483439670dcf9baf2991
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: false
+            SerialNumber: 627dfdf73a1455de5143a270799e6b7b
+            Version: 3
+            TBS:
+                MD5: b91ec3270e80aa93214c42d1eed66d36
+                SHA1: c27a40cbc754d2bb1f7b872a5a9fd385ff1c2b2f
+                SHA256: 7b4a9879162ce64e75cca2bcc675be06dacb6c9eeae4df6c929080b4db819cd4
+                SHA384: 394fa6e52375f53d18f79f1abb7b26b02bbb000784279547bd81d16c18fabe1b8156b64ad1c356e85e1829fa2ab3f870
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006
+                VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public
+                Primary Certification Authority , G5
+            ValidFrom: '2011-02-22 19:25:17'
+            ValidTo: '2021-02-22 19:35:17'
+            Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 611993e400000000001c
+            Version: 3
+            TBS:
+                MD5: 78a717e082dcc1cda3458d917e677d14
+                SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+                SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+                SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
+                Signing 2010 CA
+            ValidFrom: '2010-02-08 00:00:00'
+            ValidTo: '2020-02-07 23:59:59'
+            Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+            IsCertificateAuthority: true
+            SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+            Version: 3
+            TBS:
+                MD5: b30c31a572b0409383ed3fbe17e56e81
+                SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+                SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+                SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
+        Signer:
+        -   SerialNumber: 627dfdf73a1455de5143a270799e6b7b
+            Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
+                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
+                Signing 2010 CA
+            Version: 1
+    Imphash: 832219eb71b8bdb771f1d29d27b0acf4
+    LoadsDespiteHVCI: 'TRUE'

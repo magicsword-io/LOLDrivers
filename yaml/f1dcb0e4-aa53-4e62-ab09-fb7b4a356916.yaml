@@ -7,803 +7,803 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: sc.exe create netfilterdrv.sys binPath=C:\windows\temp \n \n \n  etfilterdrv.sys     type=kernel
-    type=kernel && sc.exe start netfilterdrv.sys
-  Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
+    Command: sc.exe create netfilterdrv.sys binPath=C:\windows\temp \n \n \n  etfilterdrv.sys     type=kernel
+        type=kernel && sc.exe start netfilterdrv.sys
+    Description: ''
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
 Resources:
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection: []
 Acknowledgement:
-  Handle: ''
-  Person: ''
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: netfilterdrv.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: e74b6dda8bc53bc687fc21218bd34062a78d8467
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-- Company: ''
-  Date: ''
-  Description: ''
-  FileVersion: ''
-  Filename: netfilterdrv.sys
-  MachineType: ''
-  OriginalFilename: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  SHA1: 2c27abbbbcf10dfb75ad79557e30ace5ed314df8
-  Signature: []
-  LoadsDespiteHVCI: 'FALSE'
-- Authentihash:
-    MD5: 66257018e5d6ab9266c67b93110b62d6
-    SHA1: fd8a340cd071bc98e6eeac9bbd4ac8a78688bc17
-    SHA256: 84df20b1d9d87e305c92e5ffae21b10b325609d59d835a954dbd8750ef5dabf4
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2021-05-15 01:03:51'
-  Date: ''
-  Description: ''
-  ExportedFunctions: ''
-  FileVersion: ''
-  Filename: ''
-  ImportedFunctions:
-  - ZwClose
-  - KeSetBasePriorityThread
-  - KeInitializeEvent
-  - PsTerminateSystemThread
-  - KeSetEvent
-  - KeInitializeTimerEx
-  - KeSetTimerEx
-  - KeWaitForSingleObject
-  - ExAllocatePoolWithTag
-  - ExFreePoolWithTag
-  - PsCreateSystemThread
-  - MmIsAddressValid
-  - KeLeaveCriticalRegion
-  - RtlCopyUnicodeString
-  - KeEnterCriticalRegion
-  - IoDeleteSymbolicLink
-  - RtlInitUnicodeString
-  - WdfVersionBind
-  - WdfVersionUnbind
-  - WdfVersionUnbindClass
-  - WdfVersionBindClass
-  Imports:
-  - ntoskrnl.exe
-  - WDFLDR.SYS
-  InternalName: ''
-  MD5: 6133e1008f8c6fc32d4b1a60941bab85
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  PDBPath: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: 18a0f8b968cb4f912598bef50726cda5
-    SHA1: 41e70a84e3eb08e4cc7f7369dd454dd63a3c4aec
-    SHA256: f2fa2e301684948585c5d62d695075ab8f33d2256621d54f262c375fd4a07e97
-  SHA1: 108439a4c4508e8dca659905128a4633d8851fd9
-  SHA256: 5bdba1561ec5b23b1d56ea8cee411147d1526595f03a9281166a563b3641fa2a
-  Sections:
-    .text:
-      Entropy: 5.848599003485273
-      Virtual Size: '0xb6c'
-    .rdata:
-      Entropy: 3.8445919290404915
-      Virtual Size: '0x5dc'
-    .data:
-      Entropy: 0.6185079451479871
-      Virtual Size: '0xf88'
-    .pdata:
-      Entropy: 3.4552362597357438
-      Virtual Size: '0xfc'
-    INIT:
-      Entropy: 5.06210191753448
-      Virtual Size: '0x334'
-    .reloc:
-      Entropy: 3.0816870830264413
-      Virtual Size: '0x28'
-  Signature: ''
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Hardware Compatibility Publisher
-      ValidFrom: '2020-12-15 22:15:33'
-      ValidTo: '2021-12-02 22:15:33'
-      Signature: 0d2d53cd15a8feddcb17e2df1bf7dc1aef21e98c6cd220f58b593824849c134a0f1add59ce42ef80ddf47860273013604d9568ec5894a797bd4e571432a9aaf10ab04dd1c038b26ab7c5ca3a9c88d009267fab56254525546a0a055fb37b9cd8029c7d501809fc8b11482c7a4347b3ad29f35427c9570e87117db52cc94864259274b9e2e758f918a3af1fdb9f9d40ffa3ae2e2ae012fb97a436258642a2a4223dc6690db88103a6e5220646bd8afb3d12eb894ac28b527396a1965408487f6ab878b3c474b8c960842861ae8e799a3d2a8d6f918f50f8e26bb1ed6ced47be36e447574e8568582964ff31cd288b9c7f8d7e6a46d6c3d92f5c101fe1522a720c
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
-      Version: 3
-      TBS:
-        MD5: a0dd89c33c4973bf6758331e200fb6de
-        SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
-        SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
-        SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2012
-      ValidFrom: '2012-04-18 23:48:38'
-      ValidTo: '2027-04-18 23:58:38'
-      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 610baac1000000000009
-      Version: 3
-      TBS:
-        MD5: a569061297e8e824767dbc3184a69bea
-        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
-        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
-        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
-    Signer:
-    - SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
-      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2012
-      Version: 1
-  Imphash: d14ea0e632fc8485d77e7eba3c4d4537
-  LoadsDespiteHVCI: 'FALSE'
-- Authentihash:
-    MD5: e03a070a426b0c2de53ea23bfc76086b
-    SHA1: 202d5a05e546740037f9a4dc2b21f71680c39d3b
-    SHA256: 0391107305d76eb9ddf1a5b3b3c50da361e8ab35b573dbd19bf9383436b9303e
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2021-04-09 00:29:46'
-  Date: ''
-  Description: ''
-  ExportedFunctions: ''
-  FileVersion: ''
-  Filename: ''
-  ImportedFunctions:
-  - FwpsAcquireClassifyHandle0
-  - FwpsReleaseClassifyHandle0
-  - FwpmFilterDeleteById0
-  - FwpsAcquireWritableLayerDataPointer0
-  - FwpsApplyModifiedLayerData0
-  - FwpmFilterAdd0
-  - FwpmCalloutAdd0
-  - FwpmSubLayerDeleteByKey0
-  - FwpmSubLayerAdd0
-  - FwpmTransactionAbort0
-  - FwpmTransactionCommit0
-  - FwpmTransactionBegin0
-  - FwpmEngineClose0
-  - FwpmEngineOpen0
-  - FwpsCalloutUnregisterById0
-  - FwpsCompleteClassify0
-  - FwpsCalloutRegister1
-  - memcpy
-  - KeGetCurrentThread
-  - KeInitializeEvent
-  - KeWaitForSingleObject
-  - IoAllocateIrp
-  - IofCallDriver
-  - IoCreateFile
-  - IoFreeIrp
-  - IoGetRelatedDeviceObject
-  - ObReferenceObjectByHandle
-  - ObfDereferenceObject
-  - ZwQueryInformationFile
-  - ZwSetInformationFile
-  - ZwReadFile
-  - ZwWriteFile
-  - ZwClose
-  - IoFileObjectType
-  - strchr
-  - strncat
-  - strncpy_s
-  - KeResetEvent
-  - MmProbeAndLockPages
-  - MmUnlockPages
-  - IoAllocateMdl
-  - IoFreeMdl
-  - IoReuseIrp
-  - memset
-  - sprintf
-  - KeEnterCriticalRegion
-  - KeLeaveCriticalRegion
-  - PsTerminateSystemThread
-  - KeSetBasePriorityThread
-  - CmUnRegisterCallback
-  - CmRegisterCallbackEx
-  - CmCallbackGetKeyObjectID
-  - strncmp
-  - strncpy
-  - wcsncmp
-  - ExAcquireSpinLockExclusive
-  - ExReleaseSpinLockExclusive
-  - RtlCreateSecurityDescriptor
-  - RtlSetDaclSecurityDescriptor
-  - KeInitializeTimerEx
-  - KeSetTimerEx
-  - PsCreateSystemThread
-  - ZwCreateKey
-  - ZwOpenKey
-  - ZwFlushKey
-  - ZwQueryValueKey
-  - ZwSetValueKey
-  - NtQueryInformationToken
-  - RtlLengthSid
-  - RtlConvertSidToUnicodeString
-  - RtlCreateAcl
-  - RtlAddAccessAllowedAce
-  - RtlSetOwnerSecurityDescriptor
-  - PsLookupProcessByProcessId
-  - ObOpenObjectByPointer
-  - ZwOpenProcessTokenEx
-  - ZwSetSecurityObject
-  - PsGetProcessImageFileName
-  - _allmul
-  - PsProcessType
-  - SeExports
-  - IoDeleteSymbolicLink
-  - RtlUnwind
-  - MmIsAddressValid
-  - ExFreePoolWithTag
-  - ExAllocatePoolWithTag
-  - KeSetEvent
-  - RtlFreeUnicodeString
-  - KeBugCheckEx
-  - RtlAnsiStringToUnicodeString
-  - RtlCopyUnicodeString
-  - RtlInitUnicodeString
-  - RtlInitAnsiString
-  - strstr
-  - WskDeregister
-  - WskReleaseProviderNPI
-  - WskCaptureProviderNPI
-  - WskRegister
-  - KeGetCurrentIrql
-  - WdfVersionBind
-  - WdfVersionBindClass
-  - WdfVersionUnbindClass
-  - WdfVersionUnbind
-  Imports:
-  - fwpkclnt.sys
-  - ntoskrnl.exe
-  - NETIO.SYS
-  - HAL.dll
-  - WDFLDR.SYS
-  InternalName: ''
-  MD5: e04ff937f6fd273b774f23aed5dd8c13
-  MachineType: I386
-  MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  PDBPath: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: 48c184eea90f0f9d8a01e83867866680
-    SHA1: fadd2ab2dd0e54dd2328f37e313b3a7f50f58391
-    SHA256: a918abac8859e89b8f2d620f60f54921e2f156a401cfe171a609326331f60635
-  SHA1: 655a9487d7a935322e19bb92d2465849055d029d
-  SHA256: c8926e31be2d1355e542793af8ff9ccc4d1d60cae40c9564b2400dd4e1090bda
-  Sections:
-    .text:
-      Entropy: 6.564030296364231
-      Virtual Size: '0x5b62'
-    .rdata:
-      Entropy: 4.44659940311796
-      Virtual Size: '0x8c4'
-    .data:
-      Entropy: 1.2415415090465123
-      Virtual Size: '0x6f40'
-    INIT:
-      Entropy: 5.541103554795583
-      Virtual Size: '0xae6'
-    .reloc:
-      Entropy: 6.652737807428317
-      Virtual Size: '0x5e4'
-  Signature: ''
-  Signatures: {}
-  Imphash: 518e77c070ae21af7c558962cd1854a3
-  LoadsDespiteHVCI: 'FALSE'
-- Authentihash:
-    MD5: 9ade8d34c15a3b675fbdb13522fb3607
-    SHA1: e5a152bb57060c2b27e825258698bd7ff67907ff
-    SHA256: 7113dee11925b346192f6ee5441974db7d1fe9b5be1497a6b295c06930fdd264
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2021-03-27 02:40:44'
-  Date: ''
-  Description: ''
-  ExportedFunctions: ''
-  FileVersion: ''
-  Filename: ''
-  ImportedFunctions:
-  - FwpsAcquireClassifyHandle0
-  - FwpsReleaseClassifyHandle0
-  - FwpmFilterDeleteById0
-  - FwpsAcquireWritableLayerDataPointer0
-  - FwpsApplyModifiedLayerData0
-  - FwpmFilterAdd0
-  - FwpmCalloutAdd0
-  - FwpmSubLayerDeleteByKey0
-  - FwpmSubLayerAdd0
-  - FwpmTransactionAbort0
-  - FwpmTransactionCommit0
-  - FwpmTransactionBegin0
-  - FwpmEngineClose0
-  - FwpmEngineOpen0
-  - FwpsCalloutUnregisterById0
-  - FwpsCompleteClassify0
-  - FwpsCalloutRegister1
-  - KeGetCurrentThread
-  - KeInitializeEvent
-  - KeWaitForSingleObject
-  - IoAllocateIrp
-  - IofCallDriver
-  - IoCreateFile
-  - IoFreeIrp
-  - IoGetRelatedDeviceObject
-  - ObReferenceObjectByHandle
-  - ObfDereferenceObject
-  - ZwQueryInformationFile
-  - ZwSetInformationFile
-  - ZwReadFile
-  - ZwWriteFile
-  - ZwClose
-  - IoFileObjectType
-  - strchr
-  - strncat
-  - strncpy_s
-  - strstr
-  - KeResetEvent
-  - MmProbeAndLockPages
-  - MmUnlockPages
-  - IoAllocateMdl
-  - IoFreeMdl
-  - IoReuseIrp
-  - IoDeleteSymbolicLink
-  - sprintf
-  - KeEnterCriticalRegion
-  - KeLeaveCriticalRegion
-  - PsTerminateSystemThread
-  - KeSetBasePriorityThread
-  - CmUnRegisterCallback
-  - CmRegisterCallbackEx
-  - CmCallbackGetKeyObjectID
-  - strncmp
-  - strncpy
-  - wcsncmp
-  - ExAcquireSpinLockExclusive
-  - ExReleaseSpinLockExclusive
-  - RtlCreateSecurityDescriptor
-  - RtlSetDaclSecurityDescriptor
-  - KeInitializeTimerEx
-  - KeSetTimerEx
-  - PsCreateSystemThread
-  - ZwCreateKey
-  - ZwOpenKey
-  - ZwFlushKey
-  - ZwQueryValueKey
-  - ZwSetValueKey
-  - NtQueryInformationToken
-  - RtlLengthSid
-  - RtlConvertSidToUnicodeString
-  - RtlCreateAcl
-  - RtlAddAccessAllowedAce
-  - RtlSetOwnerSecurityDescriptor
-  - PsLookupProcessByProcessId
-  - ObOpenObjectByPointer
-  - ZwOpenProcessTokenEx
-  - ZwSetSecurityObject
-  - PsGetProcessImageFileName
-  - _allmul
-  - PsProcessType
-  - SeExports
-  - memcpy
-  - RtlUnwind
-  - memset
-  - MmIsAddressValid
-  - ExFreePoolWithTag
-  - ExAllocatePoolWithTag
-  - KeSetEvent
-  - KeBugCheckEx
-  - RtlFreeUnicodeString
-  - RtlCopyUnicodeString
-  - RtlAnsiStringToUnicodeString
-  - RtlInitUnicodeString
-  - RtlInitAnsiString
-  - WskDeregister
-  - WskReleaseProviderNPI
-  - WskCaptureProviderNPI
-  - WskRegister
-  - KeGetCurrentIrql
-  - WdfVersionBind
-  - WdfVersionBindClass
-  - WdfVersionUnbindClass
-  - WdfVersionUnbind
-  Imports:
-  - fwpkclnt.sys
-  - ntoskrnl.exe
-  - NETIO.SYS
-  - HAL.dll
-  - WDFLDR.SYS
-  InternalName: ''
-  MD5: e65fa439efa9e5ad1d2c9aee40c7238e
-  MachineType: I386
-  MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  PDBPath: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: e78033e3940227ef529f8a8c84025c5c
-    SHA1: aef9cac4f326b7e9ddab651d1afe738e8f424e0d
-    SHA256: d32fce59ec211d0c8774e2778437271bfb431c68a6ff3d42b1d37219cce7e934
-  SHA1: 1c3f2579310ddd7ae09ce9ca1cc537a771b83c9f
-  SHA256: 70b63dfc3ed2b89a4eb8a0aa6c26885f460e5686d21c9d32413df0cdc5f962c7
-  Sections:
-    .text:
-      Entropy: 6.594332216216938
-      Virtual Size: '0x569e'
-    .rdata:
-      Entropy: 4.499737117203536
-      Virtual Size: '0x8dc'
-    .data:
-      Entropy: 1.2232140216567502
-      Virtual Size: '0x6d38'
-    INIT:
-      Entropy: 5.5462767634898
-      Virtual Size: '0xae6'
-    .reloc:
-      Entropy: 6.625214369147053
-      Virtual Size: '0x5e0'
-  Signature: ''
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Hardware Compatibility Publisher
-      ValidFrom: '2020-12-15 22:15:33'
-      ValidTo: '2021-12-02 22:15:33'
-      Signature: 0d2d53cd15a8feddcb17e2df1bf7dc1aef21e98c6cd220f58b593824849c134a0f1add59ce42ef80ddf47860273013604d9568ec5894a797bd4e571432a9aaf10ab04dd1c038b26ab7c5ca3a9c88d009267fab56254525546a0a055fb37b9cd8029c7d501809fc8b11482c7a4347b3ad29f35427c9570e87117db52cc94864259274b9e2e758f918a3af1fdb9f9d40ffa3ae2e2ae012fb97a436258642a2a4223dc6690db88103a6e5220646bd8afb3d12eb894ac28b527396a1965408487f6ab878b3c474b8c960842861ae8e799a3d2a8d6f918f50f8e26bb1ed6ced47be36e447574e8568582964ff31cd288b9c7f8d7e6a46d6c3d92f5c101fe1522a720c
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
-      Version: 3
-      TBS:
-        MD5: a0dd89c33c4973bf6758331e200fb6de
-        SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
-        SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
-        SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2012
-      ValidFrom: '2012-04-18 23:48:38'
-      ValidTo: '2027-04-18 23:58:38'
-      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 610baac1000000000009
-      Version: 3
-      TBS:
-        MD5: a569061297e8e824767dbc3184a69bea
-        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
-        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
-        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
-    Signer:
-    - SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
-      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2012
-      Version: 1
-  Imphash: 9321f9c47129fbc728ead2710e22f1a5
-  LoadsDespiteHVCI: 'FALSE'
-- Authentihash:
-    MD5: 1abe3c9e3bf2b93b6674b79f3ebabe7f
-    SHA1: 61258963d900c2a39408ef4b51f69f405f55e407
-    SHA256: 455bc98ba32adab8b47d2d89bdbadca4910f91c182ab2fc3211ba07d3784537b
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2021-04-18 05:19:48'
-  Date: ''
-  Description: ''
-  ExportedFunctions: ''
-  FileVersion: ''
-  Filename: ''
-  ImportedFunctions:
-  - KeSetBasePriorityThread
-  - KeInitializeEvent
-  - KeSetEvent
-  - KeInitializeTimerEx
-  - PsTerminateSystemThread
-  - KeWaitForSingleObject
-  - ExAllocatePoolWithTag
-  - ExFreePoolWithTag
-  - PsCreateSystemThread
-  - MmIsAddressValid
-  - KeLeaveCriticalRegion
-  - RtlCopyUnicodeString
-  - KeEnterCriticalRegion
-  - IoDeleteSymbolicLink
-  - KeSetTimerEx
-  - RtlInitUnicodeString
-  - WdfVersionBind
-  - WdfVersionUnbind
-  - WdfVersionUnbindClass
-  - WdfVersionBindClass
-  Imports:
-  - ntoskrnl.exe
-  - WDFLDR.SYS
-  InternalName: ''
-  MD5: 9258e3cb20e24a93d4afdee9f5a0299c
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  PDBPath: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: 260f7e40bc974c643148b68fb181b0a0
-    SHA1: 5a6e523683ebf8f68ca7bf77fb82f7a864f21ea6
-    SHA256: df6d0f8e6ee70e468e334dd4c5439fb941c9e212ace4401ce7c02e6137b0fd53
-  SHA1: 0cca79962d9af574169f5dec12b1f4ca8e5e1868
-  SHA256: 1aa8ba45f9524847e2a36c0dc6fd80162923e88dc1be217dde2fb5894c65ff43
-  Sections:
-    .text:
-      Entropy: 5.922660949600736
-      Virtual Size: '0xc69'
-    .rdata:
-      Entropy: 3.9806608014799743
-      Virtual Size: '0x5e4'
-    .data:
-      Entropy: 0.6711643044426095
-      Virtual Size: '0x3698'
-    .pdata:
-      Entropy: 3.6075972543972052
-      Virtual Size: '0xfc'
-    INIT:
-      Entropy: 5.090213816019943
-      Virtual Size: '0x322'
-    .reloc:
-      Entropy: 3.2030559073332747
-      Virtual Size: '0x28'
-  Signature: ''
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Hardware Compatibility Publisher
-      ValidFrom: '2020-12-15 22:15:33'
-      ValidTo: '2021-12-02 22:15:33'
-      Signature: 0d2d53cd15a8feddcb17e2df1bf7dc1aef21e98c6cd220f58b593824849c134a0f1add59ce42ef80ddf47860273013604d9568ec5894a797bd4e571432a9aaf10ab04dd1c038b26ab7c5ca3a9c88d009267fab56254525546a0a055fb37b9cd8029c7d501809fc8b11482c7a4347b3ad29f35427c9570e87117db52cc94864259274b9e2e758f918a3af1fdb9f9d40ffa3ae2e2ae012fb97a436258642a2a4223dc6690db88103a6e5220646bd8afb3d12eb894ac28b527396a1965408487f6ab878b3c474b8c960842861ae8e799a3d2a8d6f918f50f8e26bb1ed6ced47be36e447574e8568582964ff31cd288b9c7f8d7e6a46d6c3d92f5c101fe1522a720c
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
-      Version: 3
-      TBS:
-        MD5: a0dd89c33c4973bf6758331e200fb6de
-        SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
-        SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
-        SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2012
-      ValidFrom: '2012-04-18 23:48:38'
-      ValidTo: '2027-04-18 23:58:38'
-      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 610baac1000000000009
-      Version: 3
-      TBS:
-        MD5: a569061297e8e824767dbc3184a69bea
-        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
-        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
-        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
-    Signer:
-    - SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
-      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2012
-      Version: 1
-  Imphash: eac62dd0c27ed557fa4b641fa4050d04
-  LoadsDespiteHVCI: 'FALSE'
-- Authentihash:
-    MD5: c57bf5199b7e785e6d1ad348a5dda6b9
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: netfilterdrv.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
     SHA1: e74b6dda8bc53bc687fc21218bd34062a78d8467
-    SHA256: 12a636449a491ef3dc8688c5d25be9ebf785874f9c4573667eefd42139201aa4
-  Company: ''
-  Copyright: ''
-  CreationTimestamp: '2021-03-17 07:05:54'
-  Date: ''
-  Description: ''
-  ExportedFunctions: ''
-  FileVersion: ''
-  Filename: ''
-  ImportedFunctions:
-  - FwpmFilterAdd0
-  - FwpmFilterDeleteById0
-  - FwpsAcquireClassifyHandle0
-  - FwpmCalloutAdd0
-  - FwpsCompleteClassify0
-  - FwpsAcquireWritableLayerDataPointer0
-  - FwpsApplyModifiedLayerData0
-  - FwpmSubLayerDeleteByKey0
-  - FwpmSubLayerAdd0
-  - FwpmTransactionAbort0
-  - FwpmTransactionCommit0
-  - FwpmTransactionBegin0
-  - FwpmEngineClose0
-  - FwpmEngineOpen0
-  - FwpsCalloutUnregisterById0
-  - FwpsReleaseClassifyHandle0
-  - FwpsCalloutRegister1
-  - KeInitializeEvent
-  - KeWaitForSingleObject
-  - IoAllocateIrp
-  - IofCallDriver
-  - IoCreateFile
-  - IoFreeIrp
-  - IoGetRelatedDeviceObject
-  - ObReferenceObjectByHandle
-  - ObfDereferenceObject
-  - ZwQueryInformationFile
-  - ZwSetInformationFile
-  - ZwReadFile
-  - ZwWriteFile
-  - ZwClose
-  - IoFileObjectType
-  - strchr
-  - strncat
-  - strncpy_s
-  - strstr
-  - KeResetEvent
-  - MmProbeAndLockPages
-  - MmUnlockPages
-  - IoAllocateMdl
-  - IoFreeMdl
-  - IoReuseIrp
-  - __C_specific_handler
-  - MmIsAddressValid
-  - sprintf
-  - KeEnterCriticalRegion
-  - KeLeaveCriticalRegion
-  - PsTerminateSystemThread
-  - KeSetBasePriorityThread
-  - CmUnRegisterCallback
-  - CmRegisterCallbackEx
-  - CmCallbackGetKeyObjectID
-  - strncmp
-  - strncpy
-  - wcsncmp
-  - ExAcquireSpinLockExclusive
-  - ExReleaseSpinLockExclusive
-  - RtlCreateSecurityDescriptor
-  - RtlSetDaclSecurityDescriptor
-  - KeInitializeTimerEx
-  - KeSetTimerEx
-  - PsCreateSystemThread
-  - ZwCreateKey
-  - ZwOpenKey
-  - ZwFlushKey
-  - ZwQueryValueKey
-  - ZwSetValueKey
-  - NtQueryInformationToken
-  - RtlLengthSid
-  - RtlConvertSidToUnicodeString
-  - RtlCreateAcl
-  - RtlAddAccessAllowedAce
-  - RtlSetOwnerSecurityDescriptor
-  - PsLookupProcessByProcessId
-  - ObOpenObjectByPointer
-  - ZwOpenProcessTokenEx
-  - ZwSetSecurityObject
-  - PsGetProcessImageFileName
-  - PsProcessType
-  - SeExports
-  - IoDeleteSymbolicLink
-  - ExFreePoolWithTag
-  - ExAllocatePoolWithTag
-  - KeSetEvent
-  - RtlFreeUnicodeString
-  - KeBugCheckEx
-  - RtlCopyUnicodeString
-  - RtlAnsiStringToUnicodeString
-  - RtlInitUnicodeString
-  - RtlInitAnsiString
-  - WskCaptureProviderNPI
-  - WskReleaseProviderNPI
-  - WskDeregister
-  - WskRegister
-  - WdfVersionBind
-  - WdfVersionBindClass
-  - WdfVersionUnbindClass
-  - WdfVersionUnbind
-  Imports:
-  - fwpkclnt.sys
-  - ntoskrnl.exe
-  - NETIO.SYS
-  - WDFLDR.SYS
-  InternalName: ''
-  MD5: 916ba55fc004b85939ee0cc86a5191c5
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: ''
-  PDBPath: ''
-  Product: ''
-  ProductVersion: ''
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: a47d93f02dee54ad56542d814d001142
-    SHA1: 2d6f2588a47d00c1c29caf3788c526b269336c9f
-    SHA256: bbb6ea1f1094dc888e550580580a36bd7037614d3cd2e82f9ebbe8603b2ef205
-  SHA1: 8788f4b39cbf037270904bdb8118c8b037ee6562
-  SHA256: 115034373fc0ec8f75fb075b7a7011b603259ecc0aca271445e559b5404a1406
-  Sections:
-    .text:
-      Entropy: 6.344598891563977
-      Virtual Size: '0x67d8'
-    .rdata:
-      Entropy: 4.678454190583274
-      Virtual Size: '0x11ac'
-    .data:
-      Entropy: 1.4664164031598028
-      Virtual Size: '0x9468'
-    .pdata:
-      Entropy: 4.37900773562117
-      Virtual Size: '0x5f4'
-    INIT:
-      Entropy: 5.255249066470295
-      Virtual Size: '0xc3a'
-    .reloc:
-      Entropy: 3.7366309574076895
-      Virtual Size: '0x3c'
-  Signature: ''
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Hardware Compatibility Publisher
-      ValidFrom: '2020-12-15 22:15:33'
-      ValidTo: '2021-12-02 22:15:33'
-      Signature: 0d2d53cd15a8feddcb17e2df1bf7dc1aef21e98c6cd220f58b593824849c134a0f1add59ce42ef80ddf47860273013604d9568ec5894a797bd4e571432a9aaf10ab04dd1c038b26ab7c5ca3a9c88d009267fab56254525546a0a055fb37b9cd8029c7d501809fc8b11482c7a4347b3ad29f35427c9570e87117db52cc94864259274b9e2e758f918a3af1fdb9f9d40ffa3ae2e2ae012fb97a436258642a2a4223dc6690db88103a6e5220646bd8afb3d12eb894ac28b527396a1965408487f6ab878b3c474b8c960842861ae8e799a3d2a8d6f918f50f8e26bb1ed6ced47be36e447574e8568582964ff31cd288b9c7f8d7e6a46d6c3d92f5c101fe1522a720c
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
-      Version: 3
-      TBS:
-        MD5: a0dd89c33c4973bf6758331e200fb6de
-        SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
-        SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
-        SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2012
-      ValidFrom: '2012-04-18 23:48:38'
-      ValidTo: '2027-04-18 23:58:38'
-      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 610baac1000000000009
-      Version: 3
-      TBS:
-        MD5: a569061297e8e824767dbc3184a69bea
-        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
-        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
-        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
-    Signer:
-    - SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
-      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2012
-      Version: 1
-  Imphash: e938b727f5a033818337f7ba0584500f
-  LoadsDespiteHVCI: 'FALSE'
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'
+-   Company: ''
+    Date: ''
+    Description: ''
+    FileVersion: ''
+    Filename: netfilterdrv.sys
+    MachineType: ''
+    OriginalFilename: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    SHA1: 2c27abbbbcf10dfb75ad79557e30ace5ed314df8
+    Signature: []
+    LoadsDespiteHVCI: 'FALSE'
+-   Authentihash:
+        MD5: 66257018e5d6ab9266c67b93110b62d6
+        SHA1: fd8a340cd071bc98e6eeac9bbd4ac8a78688bc17
+        SHA256: 84df20b1d9d87e305c92e5ffae21b10b325609d59d835a954dbd8750ef5dabf4
+    Company: ''
+    Copyright: ''
+    CreationTimestamp: '2021-05-15 01:03:51'
+    Date: ''
+    Description: ''
+    ExportedFunctions: ''
+    FileVersion: ''
+    Filename: ''
+    ImportedFunctions:
+    - ZwClose
+    - KeSetBasePriorityThread
+    - KeInitializeEvent
+    - PsTerminateSystemThread
+    - KeSetEvent
+    - KeInitializeTimerEx
+    - KeSetTimerEx
+    - KeWaitForSingleObject
+    - ExAllocatePoolWithTag
+    - ExFreePoolWithTag
+    - PsCreateSystemThread
+    - MmIsAddressValid
+    - KeLeaveCriticalRegion
+    - RtlCopyUnicodeString
+    - KeEnterCriticalRegion
+    - IoDeleteSymbolicLink
+    - RtlInitUnicodeString
+    - WdfVersionBind
+    - WdfVersionUnbind
+    - WdfVersionUnbindClass
+    - WdfVersionBindClass
+    Imports:
+    - ntoskrnl.exe
+    - WDFLDR.SYS
+    InternalName: ''
+    MD5: 6133e1008f8c6fc32d4b1a60941bab85
+    MachineType: AMD64
+    MagicHeader: 50 45 0 0
+    OriginalFilename: ''
+    PDBPath: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: 18a0f8b968cb4f912598bef50726cda5
+        SHA1: 41e70a84e3eb08e4cc7f7369dd454dd63a3c4aec
+        SHA256: f2fa2e301684948585c5d62d695075ab8f33d2256621d54f262c375fd4a07e97
+    SHA1: 108439a4c4508e8dca659905128a4633d8851fd9
+    SHA256: 5bdba1561ec5b23b1d56ea8cee411147d1526595f03a9281166a563b3641fa2a
+    Sections:
+        .text:
+            Entropy: 5.848599003485273
+            Virtual Size: '0xb6c'
+        .rdata:
+            Entropy: 3.8445919290404915
+            Virtual Size: '0x5dc'
+        .data:
+            Entropy: 0.6185079451479871
+            Virtual Size: '0xf88'
+        .pdata:
+            Entropy: 3.4552362597357438
+            Virtual Size: '0xfc'
+        INIT:
+            Entropy: 5.06210191753448
+            Virtual Size: '0x334'
+        .reloc:
+            Entropy: 3.0816870830264413
+            Virtual Size: '0x28'
+    Signature: ''
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Hardware Compatibility Publisher
+            ValidFrom: '2020-12-15 22:15:33'
+            ValidTo: '2021-12-02 22:15:33'
+            Signature: 0d2d53cd15a8feddcb17e2df1bf7dc1aef21e98c6cd220f58b593824849c134a0f1add59ce42ef80ddf47860273013604d9568ec5894a797bd4e571432a9aaf10ab04dd1c038b26ab7c5ca3a9c88d009267fab56254525546a0a055fb37b9cd8029c7d501809fc8b11482c7a4347b3ad29f35427c9570e87117db52cc94864259274b9e2e758f918a3af1fdb9f9d40ffa3ae2e2ae012fb97a436258642a2a4223dc6690db88103a6e5220646bd8afb3d12eb894ac28b527396a1965408487f6ab878b3c474b8c960842861ae8e799a3d2a8d6f918f50f8e26bb1ed6ced47be36e447574e8568582964ff31cd288b9c7f8d7e6a46d6c3d92f5c101fe1522a720c
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
+            Version: 3
+            TBS:
+                MD5: a0dd89c33c4973bf6758331e200fb6de
+                SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
+                SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
+                SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Third Party Component CA 2012
+            ValidFrom: '2012-04-18 23:48:38'
+            ValidTo: '2027-04-18 23:58:38'
+            Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 610baac1000000000009
+            Version: 3
+            TBS:
+                MD5: a569061297e8e824767dbc3184a69bea
+                SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+                SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+                SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
+        Signer:
+        -   SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
+            Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Third Party Component CA 2012
+            Version: 1
+    Imphash: d14ea0e632fc8485d77e7eba3c4d4537
+    LoadsDespiteHVCI: 'FALSE'
+-   Authentihash:
+        MD5: e03a070a426b0c2de53ea23bfc76086b
+        SHA1: 202d5a05e546740037f9a4dc2b21f71680c39d3b
+        SHA256: 0391107305d76eb9ddf1a5b3b3c50da361e8ab35b573dbd19bf9383436b9303e
+    Company: ''
+    Copyright: ''
+    CreationTimestamp: '2021-04-09 00:29:46'
+    Date: ''
+    Description: ''
+    ExportedFunctions: ''
+    FileVersion: ''
+    Filename: ''
+    ImportedFunctions:
+    - FwpsAcquireClassifyHandle0
+    - FwpsReleaseClassifyHandle0
+    - FwpmFilterDeleteById0
+    - FwpsAcquireWritableLayerDataPointer0
+    - FwpsApplyModifiedLayerData0
+    - FwpmFilterAdd0
+    - FwpmCalloutAdd0
+    - FwpmSubLayerDeleteByKey0
+    - FwpmSubLayerAdd0
+    - FwpmTransactionAbort0
+    - FwpmTransactionCommit0
+    - FwpmTransactionBegin0
+    - FwpmEngineClose0
+    - FwpmEngineOpen0
+    - FwpsCalloutUnregisterById0
+    - FwpsCompleteClassify0
+    - FwpsCalloutRegister1
+    - memcpy
+    - KeGetCurrentThread
+    - KeInitializeEvent
+    - KeWaitForSingleObject
+    - IoAllocateIrp
+    - IofCallDriver
+    - IoCreateFile
+    - IoFreeIrp
+    - IoGetRelatedDeviceObject
+    - ObReferenceObjectByHandle
+    - ObfDereferenceObject
+    - ZwQueryInformationFile
+    - ZwSetInformationFile
+    - ZwReadFile
+    - ZwWriteFile
+    - ZwClose
+    - IoFileObjectType
+    - strchr
+    - strncat
+    - strncpy_s
+    - KeResetEvent
+    - MmProbeAndLockPages
+    - MmUnlockPages
+    - IoAllocateMdl
+    - IoFreeMdl
+    - IoReuseIrp
+    - memset
+    - sprintf
+    - KeEnterCriticalRegion
+    - KeLeaveCriticalRegion
+    - PsTerminateSystemThread
+    - KeSetBasePriorityThread
+    - CmUnRegisterCallback
+    - CmRegisterCallbackEx
+    - CmCallbackGetKeyObjectID
+    - strncmp
+    - strncpy
+    - wcsncmp
+    - ExAcquireSpinLockExclusive
+    - ExReleaseSpinLockExclusive
+    - RtlCreateSecurityDescriptor
+    - RtlSetDaclSecurityDescriptor
+    - KeInitializeTimerEx
+    - KeSetTimerEx
+    - PsCreateSystemThread
+    - ZwCreateKey
+    - ZwOpenKey
+    - ZwFlushKey
+    - ZwQueryValueKey
+    - ZwSetValueKey
+    - NtQueryInformationToken
+    - RtlLengthSid
+    - RtlConvertSidToUnicodeString
+    - RtlCreateAcl
+    - RtlAddAccessAllowedAce
+    - RtlSetOwnerSecurityDescriptor
+    - PsLookupProcessByProcessId
+    - ObOpenObjectByPointer
+    - ZwOpenProcessTokenEx
+    - ZwSetSecurityObject
+    - PsGetProcessImageFileName
+    - _allmul
+    - PsProcessType
+    - SeExports
+    - IoDeleteSymbolicLink
+    - RtlUnwind
+    - MmIsAddressValid
+    - ExFreePoolWithTag
+    - ExAllocatePoolWithTag
+    - KeSetEvent
+    - RtlFreeUnicodeString
+    - KeBugCheckEx
+    - RtlAnsiStringToUnicodeString
+    - RtlCopyUnicodeString
+    - RtlInitUnicodeString
+    - RtlInitAnsiString
+    - strstr
+    - WskDeregister
+    - WskReleaseProviderNPI
+    - WskCaptureProviderNPI
+    - WskRegister
+    - KeGetCurrentIrql
+    - WdfVersionBind
+    - WdfVersionBindClass
+    - WdfVersionUnbindClass
+    - WdfVersionUnbind
+    Imports:
+    - fwpkclnt.sys
+    - ntoskrnl.exe
+    - NETIO.SYS
+    - HAL.dll
+    - WDFLDR.SYS
+    InternalName: ''
+    MD5: e04ff937f6fd273b774f23aed5dd8c13
+    MachineType: I386
+    MagicHeader: 50 45 0 0
+    OriginalFilename: ''
+    PDBPath: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: 48c184eea90f0f9d8a01e83867866680
+        SHA1: fadd2ab2dd0e54dd2328f37e313b3a7f50f58391
+        SHA256: a918abac8859e89b8f2d620f60f54921e2f156a401cfe171a609326331f60635
+    SHA1: 655a9487d7a935322e19bb92d2465849055d029d
+    SHA256: c8926e31be2d1355e542793af8ff9ccc4d1d60cae40c9564b2400dd4e1090bda
+    Sections:
+        .text:
+            Entropy: 6.564030296364231
+            Virtual Size: '0x5b62'
+        .rdata:
+            Entropy: 4.44659940311796
+            Virtual Size: '0x8c4'
+        .data:
+            Entropy: 1.2415415090465123
+            Virtual Size: '0x6f40'
+        INIT:
+            Entropy: 5.541103554795583
+            Virtual Size: '0xae6'
+        .reloc:
+            Entropy: 6.652737807428317
+            Virtual Size: '0x5e4'
+    Signature: ''
+    Signatures: {}
+    Imphash: 518e77c070ae21af7c558962cd1854a3
+    LoadsDespiteHVCI: 'FALSE'
+-   Authentihash:
+        MD5: 9ade8d34c15a3b675fbdb13522fb3607
+        SHA1: e5a152bb57060c2b27e825258698bd7ff67907ff
+        SHA256: 7113dee11925b346192f6ee5441974db7d1fe9b5be1497a6b295c06930fdd264
+    Company: ''
+    Copyright: ''
+    CreationTimestamp: '2021-03-27 02:40:44'
+    Date: ''
+    Description: ''
+    ExportedFunctions: ''
+    FileVersion: ''
+    Filename: ''
+    ImportedFunctions:
+    - FwpsAcquireClassifyHandle0
+    - FwpsReleaseClassifyHandle0
+    - FwpmFilterDeleteById0
+    - FwpsAcquireWritableLayerDataPointer0
+    - FwpsApplyModifiedLayerData0
+    - FwpmFilterAdd0
+    - FwpmCalloutAdd0
+    - FwpmSubLayerDeleteByKey0
+    - FwpmSubLayerAdd0
+    - FwpmTransactionAbort0
+    - FwpmTransactionCommit0
+    - FwpmTransactionBegin0
+    - FwpmEngineClose0
+    - FwpmEngineOpen0
+    - FwpsCalloutUnregisterById0
+    - FwpsCompleteClassify0
+    - FwpsCalloutRegister1
+    - KeGetCurrentThread
+    - KeInitializeEvent
+    - KeWaitForSingleObject
+    - IoAllocateIrp
+    - IofCallDriver
+    - IoCreateFile
+    - IoFreeIrp
+    - IoGetRelatedDeviceObject
+    - ObReferenceObjectByHandle
+    - ObfDereferenceObject
+    - ZwQueryInformationFile
+    - ZwSetInformationFile
+    - ZwReadFile
+    - ZwWriteFile
+    - ZwClose
+    - IoFileObjectType
+    - strchr
+    - strncat
+    - strncpy_s
+    - strstr
+    - KeResetEvent
+    - MmProbeAndLockPages
+    - MmUnlockPages
+    - IoAllocateMdl
+    - IoFreeMdl
+    - IoReuseIrp
+    - IoDeleteSymbolicLink
+    - sprintf
+    - KeEnterCriticalRegion
+    - KeLeaveCriticalRegion
+    - PsTerminateSystemThread
+    - KeSetBasePriorityThread
+    - CmUnRegisterCallback
+    - CmRegisterCallbackEx
+    - CmCallbackGetKeyObjectID
+    - strncmp
+    - strncpy
+    - wcsncmp
+    - ExAcquireSpinLockExclusive
+    - ExReleaseSpinLockExclusive
+    - RtlCreateSecurityDescriptor
+    - RtlSetDaclSecurityDescriptor
+    - KeInitializeTimerEx
+    - KeSetTimerEx
+    - PsCreateSystemThread
+    - ZwCreateKey
+    - ZwOpenKey
+    - ZwFlushKey
+    - ZwQueryValueKey
+    - ZwSetValueKey
+    - NtQueryInformationToken
+    - RtlLengthSid
+    - RtlConvertSidToUnicodeString
+    - RtlCreateAcl
+    - RtlAddAccessAllowedAce
+    - RtlSetOwnerSecurityDescriptor
+    - PsLookupProcessByProcessId
+    - ObOpenObjectByPointer
+    - ZwOpenProcessTokenEx
+    - ZwSetSecurityObject
+    - PsGetProcessImageFileName
+    - _allmul
+    - PsProcessType
+    - SeExports
+    - memcpy
+    - RtlUnwind
+    - memset
+    - MmIsAddressValid
+    - ExFreePoolWithTag
+    - ExAllocatePoolWithTag
+    - KeSetEvent
+    - KeBugCheckEx
+    - RtlFreeUnicodeString
+    - RtlCopyUnicodeString
+    - RtlAnsiStringToUnicodeString
+    - RtlInitUnicodeString
+    - RtlInitAnsiString
+    - WskDeregister
+    - WskReleaseProviderNPI
+    - WskCaptureProviderNPI
+    - WskRegister
+    - KeGetCurrentIrql
+    - WdfVersionBind
+    - WdfVersionBindClass
+    - WdfVersionUnbindClass
+    - WdfVersionUnbind
+    Imports:
+    - fwpkclnt.sys
+    - ntoskrnl.exe
+    - NETIO.SYS
+    - HAL.dll
+    - WDFLDR.SYS
+    InternalName: ''
+    MD5: e65fa439efa9e5ad1d2c9aee40c7238e
+    MachineType: I386
+    MagicHeader: 50 45 0 0
+    OriginalFilename: ''
+    PDBPath: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: e78033e3940227ef529f8a8c84025c5c
+        SHA1: aef9cac4f326b7e9ddab651d1afe738e8f424e0d
+        SHA256: d32fce59ec211d0c8774e2778437271bfb431c68a6ff3d42b1d37219cce7e934
+    SHA1: 1c3f2579310ddd7ae09ce9ca1cc537a771b83c9f
+    SHA256: 70b63dfc3ed2b89a4eb8a0aa6c26885f460e5686d21c9d32413df0cdc5f962c7
+    Sections:
+        .text:
+            Entropy: 6.594332216216938
+            Virtual Size: '0x569e'
+        .rdata:
+            Entropy: 4.499737117203536
+            Virtual Size: '0x8dc'
+        .data:
+            Entropy: 1.2232140216567502
+            Virtual Size: '0x6d38'
+        INIT:
+            Entropy: 5.5462767634898
+            Virtual Size: '0xae6'
+        .reloc:
+            Entropy: 6.625214369147053
+            Virtual Size: '0x5e0'
+    Signature: ''
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Hardware Compatibility Publisher
+            ValidFrom: '2020-12-15 22:15:33'
+            ValidTo: '2021-12-02 22:15:33'
+            Signature: 0d2d53cd15a8feddcb17e2df1bf7dc1aef21e98c6cd220f58b593824849c134a0f1add59ce42ef80ddf47860273013604d9568ec5894a797bd4e571432a9aaf10ab04dd1c038b26ab7c5ca3a9c88d009267fab56254525546a0a055fb37b9cd8029c7d501809fc8b11482c7a4347b3ad29f35427c9570e87117db52cc94864259274b9e2e758f918a3af1fdb9f9d40ffa3ae2e2ae012fb97a436258642a2a4223dc6690db88103a6e5220646bd8afb3d12eb894ac28b527396a1965408487f6ab878b3c474b8c960842861ae8e799a3d2a8d6f918f50f8e26bb1ed6ced47be36e447574e8568582964ff31cd288b9c7f8d7e6a46d6c3d92f5c101fe1522a720c
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
+            Version: 3
+            TBS:
+                MD5: a0dd89c33c4973bf6758331e200fb6de
+                SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
+                SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
+                SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Third Party Component CA 2012
+            ValidFrom: '2012-04-18 23:48:38'
+            ValidTo: '2027-04-18 23:58:38'
+            Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 610baac1000000000009
+            Version: 3
+            TBS:
+                MD5: a569061297e8e824767dbc3184a69bea
+                SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+                SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+                SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
+        Signer:
+        -   SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
+            Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Third Party Component CA 2012
+            Version: 1
+    Imphash: 9321f9c47129fbc728ead2710e22f1a5
+    LoadsDespiteHVCI: 'FALSE'
+-   Authentihash:
+        MD5: 1abe3c9e3bf2b93b6674b79f3ebabe7f
+        SHA1: 61258963d900c2a39408ef4b51f69f405f55e407
+        SHA256: 455bc98ba32adab8b47d2d89bdbadca4910f91c182ab2fc3211ba07d3784537b
+    Company: ''
+    Copyright: ''
+    CreationTimestamp: '2021-04-18 05:19:48'
+    Date: ''
+    Description: ''
+    ExportedFunctions: ''
+    FileVersion: ''
+    Filename: ''
+    ImportedFunctions:
+    - KeSetBasePriorityThread
+    - KeInitializeEvent
+    - KeSetEvent
+    - KeInitializeTimerEx
+    - PsTerminateSystemThread
+    - KeWaitForSingleObject
+    - ExAllocatePoolWithTag
+    - ExFreePoolWithTag
+    - PsCreateSystemThread
+    - MmIsAddressValid
+    - KeLeaveCriticalRegion
+    - RtlCopyUnicodeString
+    - KeEnterCriticalRegion
+    - IoDeleteSymbolicLink
+    - KeSetTimerEx
+    - RtlInitUnicodeString
+    - WdfVersionBind
+    - WdfVersionUnbind
+    - WdfVersionUnbindClass
+    - WdfVersionBindClass
+    Imports:
+    - ntoskrnl.exe
+    - WDFLDR.SYS
+    InternalName: ''
+    MD5: 9258e3cb20e24a93d4afdee9f5a0299c
+    MachineType: AMD64
+    MagicHeader: 50 45 0 0
+    OriginalFilename: ''
+    PDBPath: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: 260f7e40bc974c643148b68fb181b0a0
+        SHA1: 5a6e523683ebf8f68ca7bf77fb82f7a864f21ea6
+        SHA256: df6d0f8e6ee70e468e334dd4c5439fb941c9e212ace4401ce7c02e6137b0fd53
+    SHA1: 0cca79962d9af574169f5dec12b1f4ca8e5e1868
+    SHA256: 1aa8ba45f9524847e2a36c0dc6fd80162923e88dc1be217dde2fb5894c65ff43
+    Sections:
+        .text:
+            Entropy: 5.922660949600736
+            Virtual Size: '0xc69'
+        .rdata:
+            Entropy: 3.9806608014799743
+            Virtual Size: '0x5e4'
+        .data:
+            Entropy: 0.6711643044426095
+            Virtual Size: '0x3698'
+        .pdata:
+            Entropy: 3.6075972543972052
+            Virtual Size: '0xfc'
+        INIT:
+            Entropy: 5.090213816019943
+            Virtual Size: '0x322'
+        .reloc:
+            Entropy: 3.2030559073332747
+            Virtual Size: '0x28'
+    Signature: ''
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Hardware Compatibility Publisher
+            ValidFrom: '2020-12-15 22:15:33'
+            ValidTo: '2021-12-02 22:15:33'
+            Signature: 0d2d53cd15a8feddcb17e2df1bf7dc1aef21e98c6cd220f58b593824849c134a0f1add59ce42ef80ddf47860273013604d9568ec5894a797bd4e571432a9aaf10ab04dd1c038b26ab7c5ca3a9c88d009267fab56254525546a0a055fb37b9cd8029c7d501809fc8b11482c7a4347b3ad29f35427c9570e87117db52cc94864259274b9e2e758f918a3af1fdb9f9d40ffa3ae2e2ae012fb97a436258642a2a4223dc6690db88103a6e5220646bd8afb3d12eb894ac28b527396a1965408487f6ab878b3c474b8c960842861ae8e799a3d2a8d6f918f50f8e26bb1ed6ced47be36e447574e8568582964ff31cd288b9c7f8d7e6a46d6c3d92f5c101fe1522a720c
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
+            Version: 3
+            TBS:
+                MD5: a0dd89c33c4973bf6758331e200fb6de
+                SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
+                SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
+                SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Third Party Component CA 2012
+            ValidFrom: '2012-04-18 23:48:38'
+            ValidTo: '2027-04-18 23:58:38'
+            Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 610baac1000000000009
+            Version: 3
+            TBS:
+                MD5: a569061297e8e824767dbc3184a69bea
+                SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+                SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+                SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
+        Signer:
+        -   SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
+            Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Third Party Component CA 2012
+            Version: 1
+    Imphash: eac62dd0c27ed557fa4b641fa4050d04
+    LoadsDespiteHVCI: 'FALSE'
+-   Authentihash:
+        MD5: c57bf5199b7e785e6d1ad348a5dda6b9
+        SHA1: e74b6dda8bc53bc687fc21218bd34062a78d8467
+        SHA256: 12a636449a491ef3dc8688c5d25be9ebf785874f9c4573667eefd42139201aa4
+    Company: ''
+    Copyright: ''
+    CreationTimestamp: '2021-03-17 07:05:54'
+    Date: ''
+    Description: ''
+    ExportedFunctions: ''
+    FileVersion: ''
+    Filename: ''
+    ImportedFunctions:
+    - FwpmFilterAdd0
+    - FwpmFilterDeleteById0
+    - FwpsAcquireClassifyHandle0
+    - FwpmCalloutAdd0
+    - FwpsCompleteClassify0
+    - FwpsAcquireWritableLayerDataPointer0
+    - FwpsApplyModifiedLayerData0
+    - FwpmSubLayerDeleteByKey0
+    - FwpmSubLayerAdd0
+    - FwpmTransactionAbort0
+    - FwpmTransactionCommit0
+    - FwpmTransactionBegin0
+    - FwpmEngineClose0
+    - FwpmEngineOpen0
+    - FwpsCalloutUnregisterById0
+    - FwpsReleaseClassifyHandle0
+    - FwpsCalloutRegister1
+    - KeInitializeEvent
+    - KeWaitForSingleObject
+    - IoAllocateIrp
+    - IofCallDriver
+    - IoCreateFile
+    - IoFreeIrp
+    - IoGetRelatedDeviceObject
+    - ObReferenceObjectByHandle
+    - ObfDereferenceObject
+    - ZwQueryInformationFile
+    - ZwSetInformationFile
+    - ZwReadFile
+    - ZwWriteFile
+    - ZwClose
+    - IoFileObjectType
+    - strchr
+    - strncat
+    - strncpy_s
+    - strstr
+    - KeResetEvent
+    - MmProbeAndLockPages
+    - MmUnlockPages
+    - IoAllocateMdl
+    - IoFreeMdl
+    - IoReuseIrp
+    - __C_specific_handler
+    - MmIsAddressValid
+    - sprintf
+    - KeEnterCriticalRegion
+    - KeLeaveCriticalRegion
+    - PsTerminateSystemThread
+    - KeSetBasePriorityThread
+    - CmUnRegisterCallback
+    - CmRegisterCallbackEx
+    - CmCallbackGetKeyObjectID
+    - strncmp
+    - strncpy
+    - wcsncmp
+    - ExAcquireSpinLockExclusive
+    - ExReleaseSpinLockExclusive
+    - RtlCreateSecurityDescriptor
+    - RtlSetDaclSecurityDescriptor
+    - KeInitializeTimerEx
+    - KeSetTimerEx
+    - PsCreateSystemThread
+    - ZwCreateKey
+    - ZwOpenKey
+    - ZwFlushKey
+    - ZwQueryValueKey
+    - ZwSetValueKey
+    - NtQueryInformationToken
+    - RtlLengthSid
+    - RtlConvertSidToUnicodeString
+    - RtlCreateAcl
+    - RtlAddAccessAllowedAce
+    - RtlSetOwnerSecurityDescriptor
+    - PsLookupProcessByProcessId
+    - ObOpenObjectByPointer
+    - ZwOpenProcessTokenEx
+    - ZwSetSecurityObject
+    - PsGetProcessImageFileName
+    - PsProcessType
+    - SeExports
+    - IoDeleteSymbolicLink
+    - ExFreePoolWithTag
+    - ExAllocatePoolWithTag
+    - KeSetEvent
+    - RtlFreeUnicodeString
+    - KeBugCheckEx
+    - RtlCopyUnicodeString
+    - RtlAnsiStringToUnicodeString
+    - RtlInitUnicodeString
+    - RtlInitAnsiString
+    - WskCaptureProviderNPI
+    - WskReleaseProviderNPI
+    - WskDeregister
+    - WskRegister
+    - WdfVersionBind
+    - WdfVersionBindClass
+    - WdfVersionUnbindClass
+    - WdfVersionUnbind
+    Imports:
+    - fwpkclnt.sys
+    - ntoskrnl.exe
+    - NETIO.SYS
+    - WDFLDR.SYS
+    InternalName: ''
+    MD5: 916ba55fc004b85939ee0cc86a5191c5
+    MachineType: AMD64
+    MagicHeader: 50 45 0 0
+    OriginalFilename: ''
+    PDBPath: ''
+    Product: ''
+    ProductVersion: ''
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: a47d93f02dee54ad56542d814d001142
+        SHA1: 2d6f2588a47d00c1c29caf3788c526b269336c9f
+        SHA256: bbb6ea1f1094dc888e550580580a36bd7037614d3cd2e82f9ebbe8603b2ef205
+    SHA1: 8788f4b39cbf037270904bdb8118c8b037ee6562
+    SHA256: 115034373fc0ec8f75fb075b7a7011b603259ecc0aca271445e559b5404a1406
+    Sections:
+        .text:
+            Entropy: 6.344598891563977
+            Virtual Size: '0x67d8'
+        .rdata:
+            Entropy: 4.678454190583274
+            Virtual Size: '0x11ac'
+        .data:
+            Entropy: 1.4664164031598028
+            Virtual Size: '0x9468'
+        .pdata:
+            Entropy: 4.37900773562117
+            Virtual Size: '0x5f4'
+        INIT:
+            Entropy: 5.255249066470295
+            Virtual Size: '0xc3a'
+        .reloc:
+            Entropy: 3.7366309574076895
+            Virtual Size: '0x3c'
+    Signature: ''
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Hardware Compatibility Publisher
+            ValidFrom: '2020-12-15 22:15:33'
+            ValidTo: '2021-12-02 22:15:33'
+            Signature: 0d2d53cd15a8feddcb17e2df1bf7dc1aef21e98c6cd220f58b593824849c134a0f1add59ce42ef80ddf47860273013604d9568ec5894a797bd4e571432a9aaf10ab04dd1c038b26ab7c5ca3a9c88d009267fab56254525546a0a055fb37b9cd8029c7d501809fc8b11482c7a4347b3ad29f35427c9570e87117db52cc94864259274b9e2e758f918a3af1fdb9f9d40ffa3ae2e2ae012fb97a436258642a2a4223dc6690db88103a6e5220646bd8afb3d12eb894ac28b527396a1965408487f6ab878b3c474b8c960842861ae8e799a3d2a8d6f918f50f8e26bb1ed6ced47be36e447574e8568582964ff31cd288b9c7f8d7e6a46d6c3d92f5c101fe1522a720c
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
+            Version: 3
+            TBS:
+                MD5: a0dd89c33c4973bf6758331e200fb6de
+                SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
+                SHA256: 29a7b646af062aee3bf37d1ba190211365116db7d7aa4cb87ba268843262ae47
+                SHA384: a7ac729302762483ea304ff2660a2ce2f5fa67cbbfc3f6df32a8feafa3852812c9bb8f7050140079aad1dec8119ee88e
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Third Party Component CA 2012
+            ValidFrom: '2012-04-18 23:48:38'
+            ValidTo: '2027-04-18 23:58:38'
+            Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 610baac1000000000009
+            Version: 3
+            TBS:
+                MD5: a569061297e8e824767dbc3184a69bea
+                SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+                SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+                SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
+        Signer:
+        -   SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
+            Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Third Party Component CA 2012
+            Version: 1
+    Imphash: e938b727f5a033818337f7ba0584500f
+    LoadsDespiteHVCI: 'FALSE'

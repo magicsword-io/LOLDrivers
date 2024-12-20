@@ -7,252 +7,252 @@ Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: sc.exe create VBoxUSB.sys binPath=C:\windows\temp\VBoxUSB.Sys type=kernel
-    && sc.exe start VBoxUSB.Sys
-  Description: ''
-  Usecase: Elevate privileges
-  Privileges: kernel
-  OperatingSystem: Windows 10
+    Command: sc.exe create VBoxUSB.sys binPath=C:\windows\temp\VBoxUSB.Sys type=kernel
+        && sc.exe start VBoxUSB.Sys
+    Description: ''
+    Usecase: Elevate privileges
+    Privileges: kernel
+    OperatingSystem: Windows 10
 Resources:
 - Internal Research
 Detection: []
 Acknowledgement:
-  Person: ''
-  Handle: ''
+    Person: ''
+    Handle: ''
 KnownVulnerableSamples:
-- Filename: VBoxUSB.Sys
-  MD5: 65b979bcab915c3922578fe77953d789
-  SHA1: 6a2912c8e2aa4373852585bc1134b83c637bc9fd
-  SHA256: 6071db01b50c658cf78665c24f1d21f21b4a12d16bfcfaa6813bf6bbc4d0a1e8
-  Authentihash:
-    MD5: 5e120bab075f0c78a1023bec63fb5ec6
-    SHA1: 36b030a7f80da09b8b80cdab325489d5a6d9698a
-    SHA256: dd09931d050a354b34731621191795483930bb5f00aa6fba5bb849ea2c89224c
-  Description: ''
-  Company: ''
-  InternalName: ''
-  OriginalFilename: ''
-  FileVersion: ''
-  Product: ''
-  ProductVersion: ''
-  Copyright: ''
-  MachineType: AMD64
-  Imports:
-  - ntoskrnl.exe
-  ExportedFunctions:
-  - AssertMsg1
-  - RTAssertDoBreakpoint
-  - RTErrConvertFromNtStatus
-  - RTLogDefaultInstance
-  - RTLogLogger
-  - RTLogLoggerEx
-  - RTLogLoggerExV
-  - RTLogPrintf
-  - RTLogPrintfV
-  - RTLogRelDefaultInstance
-  - RTLogSetDefaultInstanceThread
-  - RTMemAlloc
-  - RTMemAllocZ
-  - RTMemContAlloc
-  - RTMemContFree
-  - RTMemExecAlloc
-  - RTMemExecFree
-  - RTMemFree
-  - RTMemRealloc
-  - RTMemTmpAlloc
-  - RTMemTmpAllocZ
-  - RTMemTmpFree
-  - RTMpCpuId
-  - RTMpCpuIdFromSetIndex
-  - RTMpCpuIdToSetIndex
-  - RTMpDoesCpuExist
-  - RTMpGetCount
-  - RTMpGetMaxCpuId
-  - RTMpGetOnlineCount
-  - RTMpGetOnlineSet
-  - RTMpGetSet
-  - RTMpIsCpuOnline
-  - RTMpOnAll
-  - RTMpOnOthers
-  - RTMpOnSpecific
-  - RTProcSelf
-  - RTR0MemObjAddress
-  - RTR0MemObjAddressR3
-  - RTR0MemObjAllocCont
-  - RTR0MemObjAllocLow
-  - RTR0MemObjAllocPage
-  - RTR0MemObjAllocPhys
-  - RTR0MemObjAllocPhysNC
-  - RTR0MemObjEnterPhys
-  - RTR0MemObjFree
-  - RTR0MemObjGetPagePhysAddr
-  - RTR0MemObjIsMapping
-  - RTR0MemObjLockKernel
-  - RTR0MemObjLockUser
-  - RTR0MemObjMapKernel
-  - RTR0MemObjMapUser
-  - RTR0MemObjReserveKernel
-  - RTR0MemObjReserveUser
-  - RTR0MemObjSize
-  - RTR0ProcHandleSelf
-  - RTSemEventCreate
-  - RTSemEventDestroy
-  - RTSemEventMultiCreate
-  - RTSemEventMultiDestroy
-  - RTSemEventMultiReset
-  - RTSemEventMultiSignal
-  - RTSemEventMultiWait
-  - RTSemEventMultiWaitNoResume
-  - RTSemEventSignal
-  - RTSemEventWait
-  - RTSemEventWaitNoResume
-  - RTSemFastMutexCreate
-  - RTSemFastMutexDestroy
-  - RTSemFastMutexRelease
-  - RTSemFastMutexRequest
-  - RTSpinlockAcquire
-  - RTSpinlockAcquireNoInts
-  - RTSpinlockCreate
-  - RTSpinlockDestroy
-  - RTSpinlockRelease
-  - RTSpinlockReleaseNoInts
-  - RTThreadNativeSelf
-  - RTThreadSleep
-  - RTThreadYield
-  - SUPR0ContAlloc
-  - SUPR0ContFree
-  - SUPR0GipMap
-  - SUPR0GipUnmap
-  - SUPR0LockMem
-  - SUPR0LowAlloc
-  - SUPR0LowFree
-  - SUPR0MemAlloc
-  - SUPR0MemFree
-  - SUPR0MemGetPhys
-  - SUPR0ObjAddRef
-  - SUPR0ObjRegister
-  - SUPR0ObjRelease
-  - SUPR0ObjVerifyAccess
-  - SUPR0PageAlloc
-  - SUPR0PageFree
-  - SUPR0UnlockMem
-  ImportedFunctions:
-  - IofCompleteRequest
-  - DbgPrint
-  - IoIs32bitProcess
-  - MmFreeContiguousMemory
-  - IoFreeMdl
-  - MmGetSystemRoutineAddress
-  - RtlInitUnicodeString
-  - KeCancelTimer
-  - KeInsertQueueDpc
-  - __C_specific_handler
-  - MmMapLockedPagesSpecifyCache
-  - MmUnmapLockedPages
-  - KeSetTimerEx
-  - ExSetTimerResolution
-  - IoDeleteDevice
-  - IoDeleteSymbolicLink
-  - KeSetTargetProcessorDpc
-  - KeSetImportanceDpc
-  - KeInitializeDpc
-  - KeInitializeTimerEx
-  - MmGetPhysicalAddress
-  - KeQueryActiveProcessors
-  - MmBuildMdlForNonPagedPool
-  - IoAllocateMdl
-  - MmAllocateContiguousMemory
-  - IoCreateSymbolicLink
-  - IoCreateDevice
-  - memchr
-  - strncmp
-  - PsGetCurrentProcessId
-  - IoGetCurrentProcess
-  - ExFreePoolWithTag
-  - ExAllocatePoolWithTag
-  - KeDelayExecutionThread
-  - ZwYieldExecution
-  - KeAcquireSpinLockRaiseToDpc
-  - KeReleaseSpinLock
-  - KeInitializeEvent
-  - KeSetEvent
-  - KeResetEvent
-  - KeWaitForSingleObject
-  - ExAcquireFastMutex
-  - ExReleaseFastMutex
-  - MmUnmapIoSpace
-  - MmUnlockPages
-  - MmFreePagesFromMdl
-  - MmUnsecureVirtualMemory
-  - MmProtectMdlSystemAddress
-  - MmAllocatePagesForMdl
-  - MmSecureVirtualMemory
-  - MmProbeAndLockPages
-  - MmMapIoSpace
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows
-      ValidFrom: '2021-09-02 18:23:41'
-      ValidTo: '2022-09-01 18:23:41'
-      Signature: 699045742c403812de1bdf9ea2be22132e82a7c006ab278e0c9f460bd435386348031a6b5cbdf450ae5a243331dcb2cc7eace8371cf71ec35a6f663147bd211ea357614e6a611eeacca6486a778d4cd788106ade12d6625574e7a89ecab4eb0bb99295c498dd5f565680a2d26bf2545e727c4204023c48d8021b608fd901c6fefd16ce0c3a669fb0ce758dc671f2cdd7434c163f9de9453e5523d94a78205c828a4615e50330d9f52a8a77f7683d2b61ff1324382d40d31001c518b56b286fbb8c754f6940590c2071385ed0a9387b529c06bf71fff89c74634550fc331b389d558696ace05787144e5af53d20a75a84981bf8380ddac3743f407d8ff27c089e
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 330000033c89c66a7b45bb1fbd00000000033c
-      Version: 3
-      TBS:
-        MD5: 46f57c3b860b08484cb79066ac1014ad
-        SHA1: c1fe3ab97b834a98460e4ae92fe2468d16f61a92
-        SHA256: d78e6b22fec42de5200f6c56731dd6742c79fa2bf7c01c8dc04d3d5738474c9b
-        SHA384: d64e2d7f3cf0c23601d2d260f80e767d2e2a92fc43d93fdae6006987af96b6706d0c1e60e573e207a49334269e178e87
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Production PCA 2011
-      ValidFrom: '2011-10-19 18:41:42'
-      ValidTo: '2026-10-19 18:51:42'
-      Signature: 14fc7c7151a579c26eb2ef393ebc3c520f6e2b3f101373fea868d048a6344d8a960526ee3146906179d6ff382e456bf4c0e528b8da1d8f8adb09d71ac74c0a36666a8cec1bd70490a81817a49bb9e240323676c4c15ac6bfe404c0ea16d3acc368ef62acdd546c503058a6eb7cfe94a74e8ef4ec7c867357c2522173345af3a38a56c804da0709edf88be3cef47e8eaef0f60b8a08fb3fc91d727f53b8ebbe63e0e33d3165b081e5f2accd16a49f3da8b19bc242d090845f541dff89eaba1d47906fb0734e419f409f5fe5a12ab21191738a2128f0cede73395f3eab5c60ecdf0310a8d309e9f4f69685b67f51886647198da2b0123d812a680577bb914c627bb6c107c7ba7a8734030e4b627a99e9cafcce4a37c92da4577c1cfe3ddcb80f5afad6c4b30285023aeab3d96ee4692137de81d1f675190567d393575e291b39c8ee2de1cde445735bd0d2ce7aab1619824658d05e9d81b367af6c35f2bce53f24e235a20a7506f6185699d4782cd1051bebd088019daa10f105dfba7e2c63b7069b2321c4f9786ce2581706362b911203cca4d9f22dbaf9949d40ed1845f1ce8a5c6b3eab03d370182a0a6ae05f47d1d5630a32f2afd7361f2a705ae5425908714b57ba7e8381f0213cf41cc1c5b990930e88459386e9b12099be98cbc595a45d62d6a0630820bd7510777d3df345b99f979fcb57806f33a904cf77a4621c597e
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: '61077656000000000008'
-      Version: 3
-      TBS:
-        MD5: 30a3f0b64324ed7f465e7fc618cb69e7
-        SHA1: 002de3561519b662c5e3f5faba1b92c403fb7c41
-        SHA256: 4e80be107c860de896384b3eff50504dc2d76ac7151df3102a4450637a032146
-        SHA384: 4f9a02c3eac5e83c38074d54c0bf270e03a1d668e0001c9812c509eb08a19075ee778a7630e65598e4608fc66e2d1c66
-    Signer:
-    - SerialNumber: 330000033c89c66a7b45bb1fbd00000000033c
-      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Production PCA 2011
-      Version: 1
-  RichPEHeaderHash:
-    MD5: 3b563e832ffe657653773aabadea926a
-    SHA1: 910da2f8bdc0e1356a2a9f1b160740665b223894
-    SHA256: d782f2dfed49e4cd3b9496d9190619a0984ef2c034a6f866915323122f3a036f
-  Sections:
-    .text:
-      Entropy: 6.2039165195201695
-      Virtual Size: '0x856e'
-    .rdata:
-      Entropy: 5.607114485004288
-      Virtual Size: '0x2a58'
-    .data:
-      Entropy: 1.9666645281474864
-      Virtual Size: '0x1d00'
-    .pdata:
-      Entropy: 4.674336635214751
-      Virtual Size: '0xcf0'
-    .edata:
-      Entropy: 5.350712994836838
-      Virtual Size: '0xa72'
-    INIT:
-      Entropy: 4.871003292573194
-      Virtual Size: '0x638'
-    .reloc:
-      Entropy: 3.745971599596066
-      Virtual Size: '0x13c'
-  MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-05-30 20:18:53'
-  Imphash: b262e8d078ede007ebd0aa71b9152863
-  LoadsDespiteHVCI: 'TRUE'
+-   Filename: VBoxUSB.Sys
+    MD5: 65b979bcab915c3922578fe77953d789
+    SHA1: 6a2912c8e2aa4373852585bc1134b83c637bc9fd
+    SHA256: 6071db01b50c658cf78665c24f1d21f21b4a12d16bfcfaa6813bf6bbc4d0a1e8
+    Authentihash:
+        MD5: 5e120bab075f0c78a1023bec63fb5ec6
+        SHA1: 36b030a7f80da09b8b80cdab325489d5a6d9698a
+        SHA256: dd09931d050a354b34731621191795483930bb5f00aa6fba5bb849ea2c89224c
+    Description: ''
+    Company: ''
+    InternalName: ''
+    OriginalFilename: ''
+    FileVersion: ''
+    Product: ''
+    ProductVersion: ''
+    Copyright: ''
+    MachineType: AMD64
+    Imports:
+    - ntoskrnl.exe
+    ExportedFunctions:
+    - AssertMsg1
+    - RTAssertDoBreakpoint
+    - RTErrConvertFromNtStatus
+    - RTLogDefaultInstance
+    - RTLogLogger
+    - RTLogLoggerEx
+    - RTLogLoggerExV
+    - RTLogPrintf
+    - RTLogPrintfV
+    - RTLogRelDefaultInstance
+    - RTLogSetDefaultInstanceThread
+    - RTMemAlloc
+    - RTMemAllocZ
+    - RTMemContAlloc
+    - RTMemContFree
+    - RTMemExecAlloc
+    - RTMemExecFree
+    - RTMemFree
+    - RTMemRealloc
+    - RTMemTmpAlloc
+    - RTMemTmpAllocZ
+    - RTMemTmpFree
+    - RTMpCpuId
+    - RTMpCpuIdFromSetIndex
+    - RTMpCpuIdToSetIndex
+    - RTMpDoesCpuExist
+    - RTMpGetCount
+    - RTMpGetMaxCpuId
+    - RTMpGetOnlineCount
+    - RTMpGetOnlineSet
+    - RTMpGetSet
+    - RTMpIsCpuOnline
+    - RTMpOnAll
+    - RTMpOnOthers
+    - RTMpOnSpecific
+    - RTProcSelf
+    - RTR0MemObjAddress
+    - RTR0MemObjAddressR3
+    - RTR0MemObjAllocCont
+    - RTR0MemObjAllocLow
+    - RTR0MemObjAllocPage
+    - RTR0MemObjAllocPhys
+    - RTR0MemObjAllocPhysNC
+    - RTR0MemObjEnterPhys
+    - RTR0MemObjFree
+    - RTR0MemObjGetPagePhysAddr
+    - RTR0MemObjIsMapping
+    - RTR0MemObjLockKernel
+    - RTR0MemObjLockUser
+    - RTR0MemObjMapKernel
+    - RTR0MemObjMapUser
+    - RTR0MemObjReserveKernel
+    - RTR0MemObjReserveUser
+    - RTR0MemObjSize
+    - RTR0ProcHandleSelf
+    - RTSemEventCreate
+    - RTSemEventDestroy
+    - RTSemEventMultiCreate
+    - RTSemEventMultiDestroy
+    - RTSemEventMultiReset
+    - RTSemEventMultiSignal
+    - RTSemEventMultiWait
+    - RTSemEventMultiWaitNoResume
+    - RTSemEventSignal
+    - RTSemEventWait
+    - RTSemEventWaitNoResume
+    - RTSemFastMutexCreate
+    - RTSemFastMutexDestroy
+    - RTSemFastMutexRelease
+    - RTSemFastMutexRequest
+    - RTSpinlockAcquire
+    - RTSpinlockAcquireNoInts
+    - RTSpinlockCreate
+    - RTSpinlockDestroy
+    - RTSpinlockRelease
+    - RTSpinlockReleaseNoInts
+    - RTThreadNativeSelf
+    - RTThreadSleep
+    - RTThreadYield
+    - SUPR0ContAlloc
+    - SUPR0ContFree
+    - SUPR0GipMap
+    - SUPR0GipUnmap
+    - SUPR0LockMem
+    - SUPR0LowAlloc
+    - SUPR0LowFree
+    - SUPR0MemAlloc
+    - SUPR0MemFree
+    - SUPR0MemGetPhys
+    - SUPR0ObjAddRef
+    - SUPR0ObjRegister
+    - SUPR0ObjRelease
+    - SUPR0ObjVerifyAccess
+    - SUPR0PageAlloc
+    - SUPR0PageFree
+    - SUPR0UnlockMem
+    ImportedFunctions:
+    - IofCompleteRequest
+    - DbgPrint
+    - IoIs32bitProcess
+    - MmFreeContiguousMemory
+    - IoFreeMdl
+    - MmGetSystemRoutineAddress
+    - RtlInitUnicodeString
+    - KeCancelTimer
+    - KeInsertQueueDpc
+    - __C_specific_handler
+    - MmMapLockedPagesSpecifyCache
+    - MmUnmapLockedPages
+    - KeSetTimerEx
+    - ExSetTimerResolution
+    - IoDeleteDevice
+    - IoDeleteSymbolicLink
+    - KeSetTargetProcessorDpc
+    - KeSetImportanceDpc
+    - KeInitializeDpc
+    - KeInitializeTimerEx
+    - MmGetPhysicalAddress
+    - KeQueryActiveProcessors
+    - MmBuildMdlForNonPagedPool
+    - IoAllocateMdl
+    - MmAllocateContiguousMemory
+    - IoCreateSymbolicLink
+    - IoCreateDevice
+    - memchr
+    - strncmp
+    - PsGetCurrentProcessId
+    - IoGetCurrentProcess
+    - ExFreePoolWithTag
+    - ExAllocatePoolWithTag
+    - KeDelayExecutionThread
+    - ZwYieldExecution
+    - KeAcquireSpinLockRaiseToDpc
+    - KeReleaseSpinLock
+    - KeInitializeEvent
+    - KeSetEvent
+    - KeResetEvent
+    - KeWaitForSingleObject
+    - ExAcquireFastMutex
+    - ExReleaseFastMutex
+    - MmUnmapIoSpace
+    - MmUnlockPages
+    - MmFreePagesFromMdl
+    - MmUnsecureVirtualMemory
+    - MmProtectMdlSystemAddress
+    - MmAllocatePagesForMdl
+    - MmSecureVirtualMemory
+    - MmProbeAndLockPages
+    - MmMapIoSpace
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows
+            ValidFrom: '2021-09-02 18:23:41'
+            ValidTo: '2022-09-01 18:23:41'
+            Signature: 699045742c403812de1bdf9ea2be22132e82a7c006ab278e0c9f460bd435386348031a6b5cbdf450ae5a243331dcb2cc7eace8371cf71ec35a6f663147bd211ea357614e6a611eeacca6486a778d4cd788106ade12d6625574e7a89ecab4eb0bb99295c498dd5f565680a2d26bf2545e727c4204023c48d8021b608fd901c6fefd16ce0c3a669fb0ce758dc671f2cdd7434c163f9de9453e5523d94a78205c828a4615e50330d9f52a8a77f7683d2b61ff1324382d40d31001c518b56b286fbb8c754f6940590c2071385ed0a9387b529c06bf71fff89c74634550fc331b389d558696ace05787144e5af53d20a75a84981bf8380ddac3743f407d8ff27c089e
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 330000033c89c66a7b45bb1fbd00000000033c
+            Version: 3
+            TBS:
+                MD5: 46f57c3b860b08484cb79066ac1014ad
+                SHA1: c1fe3ab97b834a98460e4ae92fe2468d16f61a92
+                SHA256: d78e6b22fec42de5200f6c56731dd6742c79fa2bf7c01c8dc04d3d5738474c9b
+                SHA384: d64e2d7f3cf0c23601d2d260f80e767d2e2a92fc43d93fdae6006987af96b6706d0c1e60e573e207a49334269e178e87
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Production PCA 2011
+            ValidFrom: '2011-10-19 18:41:42'
+            ValidTo: '2026-10-19 18:51:42'
+            Signature: 14fc7c7151a579c26eb2ef393ebc3c520f6e2b3f101373fea868d048a6344d8a960526ee3146906179d6ff382e456bf4c0e528b8da1d8f8adb09d71ac74c0a36666a8cec1bd70490a81817a49bb9e240323676c4c15ac6bfe404c0ea16d3acc368ef62acdd546c503058a6eb7cfe94a74e8ef4ec7c867357c2522173345af3a38a56c804da0709edf88be3cef47e8eaef0f60b8a08fb3fc91d727f53b8ebbe63e0e33d3165b081e5f2accd16a49f3da8b19bc242d090845f541dff89eaba1d47906fb0734e419f409f5fe5a12ab21191738a2128f0cede73395f3eab5c60ecdf0310a8d309e9f4f69685b67f51886647198da2b0123d812a680577bb914c627bb6c107c7ba7a8734030e4b627a99e9cafcce4a37c92da4577c1cfe3ddcb80f5afad6c4b30285023aeab3d96ee4692137de81d1f675190567d393575e291b39c8ee2de1cde445735bd0d2ce7aab1619824658d05e9d81b367af6c35f2bce53f24e235a20a7506f6185699d4782cd1051bebd088019daa10f105dfba7e2c63b7069b2321c4f9786ce2581706362b911203cca4d9f22dbaf9949d40ed1845f1ce8a5c6b3eab03d370182a0a6ae05f47d1d5630a32f2afd7361f2a705ae5425908714b57ba7e8381f0213cf41cc1c5b990930e88459386e9b12099be98cbc595a45d62d6a0630820bd7510777d3df345b99f979fcb57806f33a904cf77a4621c597e
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: '61077656000000000008'
+            Version: 3
+            TBS:
+                MD5: 30a3f0b64324ed7f465e7fc618cb69e7
+                SHA1: 002de3561519b662c5e3f5faba1b92c403fb7c41
+                SHA256: 4e80be107c860de896384b3eff50504dc2d76ac7151df3102a4450637a032146
+                SHA384: 4f9a02c3eac5e83c38074d54c0bf270e03a1d668e0001c9812c509eb08a19075ee778a7630e65598e4608fc66e2d1c66
+        Signer:
+        -   SerialNumber: 330000033c89c66a7b45bb1fbd00000000033c
+            Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Production PCA 2011
+            Version: 1
+    RichPEHeaderHash:
+        MD5: 3b563e832ffe657653773aabadea926a
+        SHA1: 910da2f8bdc0e1356a2a9f1b160740665b223894
+        SHA256: d782f2dfed49e4cd3b9496d9190619a0984ef2c034a6f866915323122f3a036f
+    Sections:
+        .text:
+            Entropy: 6.2039165195201695
+            Virtual Size: '0x856e'
+        .rdata:
+            Entropy: 5.607114485004288
+            Virtual Size: '0x2a58'
+        .data:
+            Entropy: 1.9666645281474864
+            Virtual Size: '0x1d00'
+        .pdata:
+            Entropy: 4.674336635214751
+            Virtual Size: '0xcf0'
+        .edata:
+            Entropy: 5.350712994836838
+            Virtual Size: '0xa72'
+        INIT:
+            Entropy: 4.871003292573194
+            Virtual Size: '0x638'
+        .reloc:
+            Entropy: 3.745971599596066
+            Virtual Size: '0x13c'
+    MagicHeader: 50 45 0 0
+    CreationTimestamp: '2008-05-30 20:18:53'
+    Imphash: b262e8d078ede007ebd0aa71b9152863
+    LoadsDespiteHVCI: 'TRUE'

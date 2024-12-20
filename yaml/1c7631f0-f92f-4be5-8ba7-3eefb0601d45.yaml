@@ -7,187 +7,187 @@ Created: '2023-01-09'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-  Command: sc.exe create LHA.sys binPath=C:\windows\temp\LHA.sys type=kernel && sc.exe
-    start LHA.sys
-  Description: ''
-  OperatingSystem: Windows 10
-  Privileges: kernel
-  Usecase: Elevate privileges
+    Command: sc.exe create LHA.sys binPath=C:\windows\temp\LHA.sys type=kernel &&
+        sc.exe start LHA.sys
+    Description: ''
+    OperatingSystem: Windows 10
+    Privileges: kernel
+    Usecase: Elevate privileges
 Resources:
 - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Detection:
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e75714f8e0ff45605f6fc7689a1a89c7dcd34aab66c6131c63fefaca584539cf.yara
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-- type: yara_signature
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
-- type: sigma_hash
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
-- type: sigma_names
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
-- type: sysmon_hash_detect
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
-- type: sysmon_hash_block
-  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+-   type: yara_signature
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e75714f8e0ff45605f6fc7689a1a89c7dcd34aab66c6131c63fefaca584539cf.yara
+-   type: sigma_hash
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+-   type: sigma_names
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+-   type: sysmon_hash_detect
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+-   type: sysmon_hash_block
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+-   type: yara_signature
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+-   type: sigma_hash
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+-   type: sigma_names
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+-   type: sysmon_hash_detect
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+-   type: sysmon_hash_block
+    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Acknowledgement:
-  Handle: ''
-  Person: ''
+    Handle: ''
+    Person: ''
 KnownVulnerableSamples:
-- Authentihash:
-    MD5: 8a3fb969d6edfb9a860e13a556a9d64f
-    SHA1: d9cf173dd75bf410c2f7f35247cd4db186af9a41
-    SHA256: fe14940b5d3068b7ceffd28a529196811f1d0e175522f4dfab26573e7aca0bb4
-  Company: LG Electronics Inc.
-  Copyright: ultrabios@hotmail.com
-  CreationTimestamp: '2018-12-27 16:06:43'
-  Date: ''
-  Description: LHA
-  ExportedFunctions: ''
-  FileVersion: '6.1.7600.16385 built by: WinDDK'
-  Filename: LHA.sys
-  ImportedFunctions:
-  - ExFreePoolWithTag
-  - RtlInitUnicodeString
-  - IoDeleteDevice
-  - IoFreeWorkItem
-  - KeReleaseSpinLock
-  - MmUnmapIoSpace
-  - MmFreeNonCachedMemory
-  - MmGetPhysicalAddress
-  - IoAllocateWorkItem
-  - MmMapIoSpace
-  - IofCompleteRequest
-  - IoCreateSymbolicLink
-  - IoDeleteSymbolicLink
-  - KeAcquireSpinLockRaiseToDpc
-  - ExUnregisterCallback
-  - PoRegisterPowerSettingCallback
-  - ExRegisterCallback
-  - ObfDereferenceObject
-  - IoQueueWorkItem
-  - ExCreateCallback
-  - DbgPrint
-  - IoWMIQueryAllData
-  - MmGetSystemRoutineAddress
-  - KeBugCheckEx
-  - ExAllocatePoolWithTag
-  - MmAllocateNonCachedMemory
-  - IoCreateDevice
-  - ZwClose
-  - ObOpenObjectByPointer
-  - ZwSetSecurityObject
-  - IoDeviceObjectType
-  - _snwprintf
-  - RtlLengthSecurityDescriptor
-  - SeCaptureSecurityDescriptor
-  - RtlCreateSecurityDescriptor
-  - RtlSetDaclSecurityDescriptor
-  - RtlAbsoluteToSelfRelativeSD
-  - IoIsWdmVersionAvailable
-  - SeExports
-  - wcschr
-  - _wcsnicmp
-  - RtlLengthSid
-  - RtlAddAccessAllowedAce
-  - RtlGetSaclSecurityDescriptor
-  - RtlGetDaclSecurityDescriptor
-  - RtlGetGroupSecurityDescriptor
-  - RtlGetOwnerSecurityDescriptor
-  - ZwOpenKey
-  - ZwCreateKey
-  - ZwQueryValueKey
-  - ZwSetValueKey
-  - RtlFreeUnicodeString
-  - KeStallExecutionProcessor
-  Imports:
-  - ntoskrnl.exe
-  - HAL.dll
-  InternalName: LHA.sys
-  MD5: 748cf64b95ca83abc35762ad2c25458f
-  MachineType: AMD64
-  MagicHeader: 50 45 0 0
-  OriginalFilename: LHA.sys
-  Product: "Microsoft\xAE Windows\xAE Operating System"
-  ProductVersion: 6.1.7600.16385
-  Publisher: ''
-  RichPEHeaderHash:
-    MD5: 8de9ce6c09a8dc70b9c6399d53ed5752
-    SHA1: 28c10b23cbb09f205edb21dfabd65800df836b7e
-    SHA256: f662fa4a5aa3686ae214a0559bd422bc979b969f0f33abacc560c8b4af7d7a7d
-  SHA1: fcd615df88645d1f57ff5702bd6758b77efea6d0
-  SHA256: e75714f8e0ff45605f6fc7689a1a89c7dcd34aab66c6131c63fefaca584539cf
-  Sections:
-    .text:
-      Entropy: 6.3729713051901875
-      Virtual Size: '0x275e'
-    .rdata:
-      Entropy: 4.35894546013594
-      Virtual Size: '0x79c'
-    .data:
-      Entropy: 1.4282942392169038
-      Virtual Size: '0x381'
-    .pdata:
-      Entropy: 4.246697265407486
-      Virtual Size: '0x2b8'
-    PAGE:
-      Entropy: 6.214193657765831
-      Virtual Size: '0x1a47'
-    INIT:
-      Entropy: 5.174871630570359
-      Virtual Size: '0x728'
-    .rsrc:
-      Entropy: 3.40609004191681
-      Virtual Size: '0x380'
-    .reloc:
-      Entropy: 1.2280731978955797
-      Virtual Size: '0x60'
-  Signature:
-  - Microsoft Windows Hardware Compatibility Publisher
-  - Microsoft Windows Third Party Component CA 2014
-  - Microsoft Root Certificate Authority 2010
-  Signatures:
-  - CertificatesInfo: ''
-    SignerInfo: ''
-    Certificates:
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Hardware Compatibility Publisher
-      ValidFrom: '2018-09-06 21:30:32'
-      ValidTo: '2019-09-06 21:30:32'
-      Signature: a5a2a99a97df110e18898e98fd07aaa52616e13f9c681d0f99cbafcb2914dd7a56a8324ab1fa926b26b9c5c87fd653c193cac3773f7750425d2090034461012f476d77005a079f2883e4cfa8b1dbab735f086c9692b3f6f53efb5db881bd94cdbda4c4c9597026a8fbf1eed41bf628879156fcacae96e751d4fe117f0f6dc985ef3bd72a7bd299bd507633600c9df2f92306fe4833a8d784019dbe8baaaa06fddae1d5066677c9bcce6506e6ebe455cc9f46b1e6e9d77f2a82159b2aac861eeb400de3dcef2bdfa85e0dc51628945f14b3f44340ba9f2a3af7ef1bf24f372b3a0d0fef4baafb86cf3ba43f29030b891d4b46b4ccb29b00506dc0ee0e44959f8369fc9e0fd4bc5fa12159a4cd6db8f9af57353c132654278784509635cf5e020c43757525a4d3dcbbd532986b46b2efaa2b6b3a00aa8d44cd0546efddb6ab2e30ccf75aba4bc8d9249262e408516b89cdd58c55b9af18baeb0201f7732724b4d3ca0c74ebc4afa19bb5583f948e9619232ece825e09465fdab93f6fe6ed0590d08435879ac1ba3cf41a8c4a8f5fea6a50e84a21a5ca38414e85de3867f4bce967cb45b62335b7416a0fdc08c1e3c049e85ef944f438e5f1296a659ff8e01a170001751f92b395bd7c9b4f33106a708a005c16c2b5439bac392253e1bcfbcb545d5f6243466205655a2e496098b9045d605b632b8f98d29f51e27e62fe63a4e8f2
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: false
-      SerialNumber: 33000000253a2738690a3451c1000000000025
-      Version: 3
-      TBS:
-        MD5: 60cb2d8488f8724a67bf3254e6a57ff1
-        SHA1: 37aef77a1afaa33ac5787fc43a2c1e2509a19eb1
-        SHA256: 495a6ff7ace92f915eb1753c4c0b32612056e6d320bb17ff90346db3aa357432
-        SHA384: 2a90dcf67abc92f070775de78ecf066e7730ea57b4c4d6c64cfdd66c3eb0f639ac188b24571a9f600ef017737a71decf
-    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2014
-      ValidFrom: '2014-10-15 20:31:27'
-      ValidTo: '2029-10-15 20:41:27'
-      Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
-      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-      IsCertificateAuthority: true
-      SerialNumber: 330000000d690d5d7893d076df00000000000d
-      Version: 3
-      TBS:
-        MD5: 83f69422963f11c3c340b81712eef319
-        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
-        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
-        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
-    Signer:
-    - SerialNumber: 33000000253a2738690a3451c1000000000025
-      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
-        Windows Third Party Component CA 2014
-      Version: 1
-  Imphash: c3fd2e688276a184b2528ee590054e5a
-  LoadsDespiteHVCI: 'FALSE'
+-   Authentihash:
+        MD5: 8a3fb969d6edfb9a860e13a556a9d64f
+        SHA1: d9cf173dd75bf410c2f7f35247cd4db186af9a41
+        SHA256: fe14940b5d3068b7ceffd28a529196811f1d0e175522f4dfab26573e7aca0bb4
+    Company: LG Electronics Inc.
+    Copyright: ultrabios@hotmail.com
+    CreationTimestamp: '2018-12-27 16:06:43'
+    Date: ''
+    Description: LHA
+    ExportedFunctions: ''
+    FileVersion: '6.1.7600.16385 built by: WinDDK'
+    Filename: LHA.sys
+    ImportedFunctions:
+    - ExFreePoolWithTag
+    - RtlInitUnicodeString
+    - IoDeleteDevice
+    - IoFreeWorkItem
+    - KeReleaseSpinLock
+    - MmUnmapIoSpace
+    - MmFreeNonCachedMemory
+    - MmGetPhysicalAddress
+    - IoAllocateWorkItem
+    - MmMapIoSpace
+    - IofCompleteRequest
+    - IoCreateSymbolicLink
+    - IoDeleteSymbolicLink
+    - KeAcquireSpinLockRaiseToDpc
+    - ExUnregisterCallback
+    - PoRegisterPowerSettingCallback
+    - ExRegisterCallback
+    - ObfDereferenceObject
+    - IoQueueWorkItem
+    - ExCreateCallback
+    - DbgPrint
+    - IoWMIQueryAllData
+    - MmGetSystemRoutineAddress
+    - KeBugCheckEx
+    - ExAllocatePoolWithTag
+    - MmAllocateNonCachedMemory
+    - IoCreateDevice
+    - ZwClose
+    - ObOpenObjectByPointer
+    - ZwSetSecurityObject
+    - IoDeviceObjectType
+    - _snwprintf
+    - RtlLengthSecurityDescriptor
+    - SeCaptureSecurityDescriptor
+    - RtlCreateSecurityDescriptor
+    - RtlSetDaclSecurityDescriptor
+    - RtlAbsoluteToSelfRelativeSD
+    - IoIsWdmVersionAvailable
+    - SeExports
+    - wcschr
+    - _wcsnicmp
+    - RtlLengthSid
+    - RtlAddAccessAllowedAce
+    - RtlGetSaclSecurityDescriptor
+    - RtlGetDaclSecurityDescriptor
+    - RtlGetGroupSecurityDescriptor
+    - RtlGetOwnerSecurityDescriptor
+    - ZwOpenKey
+    - ZwCreateKey
+    - ZwQueryValueKey
+    - ZwSetValueKey
+    - RtlFreeUnicodeString
+    - KeStallExecutionProcessor
+    Imports:
+    - ntoskrnl.exe
+    - HAL.dll
+    InternalName: LHA.sys
+    MD5: 748cf64b95ca83abc35762ad2c25458f
+    MachineType: AMD64
+    MagicHeader: 50 45 0 0
+    OriginalFilename: LHA.sys
+    Product: "Microsoft\xAE Windows\xAE Operating System"
+    ProductVersion: 6.1.7600.16385
+    Publisher: ''
+    RichPEHeaderHash:
+        MD5: 8de9ce6c09a8dc70b9c6399d53ed5752
+        SHA1: 28c10b23cbb09f205edb21dfabd65800df836b7e
+        SHA256: f662fa4a5aa3686ae214a0559bd422bc979b969f0f33abacc560c8b4af7d7a7d
+    SHA1: fcd615df88645d1f57ff5702bd6758b77efea6d0
+    SHA256: e75714f8e0ff45605f6fc7689a1a89c7dcd34aab66c6131c63fefaca584539cf
+    Sections:
+        .text:
+            Entropy: 6.3729713051901875
+            Virtual Size: '0x275e'
+        .rdata:
+            Entropy: 4.35894546013594
+            Virtual Size: '0x79c'
+        .data:
+            Entropy: 1.4282942392169038
+            Virtual Size: '0x381'
+        .pdata:
+            Entropy: 4.246697265407486
+            Virtual Size: '0x2b8'
+        PAGE:
+            Entropy: 6.214193657765831
+            Virtual Size: '0x1a47'
+        INIT:
+            Entropy: 5.174871630570359
+            Virtual Size: '0x728'
+        .rsrc:
+            Entropy: 3.40609004191681
+            Virtual Size: '0x380'
+        .reloc:
+            Entropy: 1.2280731978955797
+            Virtual Size: '0x60'
+    Signature:
+    - Microsoft Windows Hardware Compatibility Publisher
+    - Microsoft Windows Third Party Component CA 2014
+    - Microsoft Root Certificate Authority 2010
+    Signatures:
+    -   CertificatesInfo: ''
+        SignerInfo: ''
+        Certificates:
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Hardware Compatibility Publisher
+            ValidFrom: '2018-09-06 21:30:32'
+            ValidTo: '2019-09-06 21:30:32'
+            Signature: a5a2a99a97df110e18898e98fd07aaa52616e13f9c681d0f99cbafcb2914dd7a56a8324ab1fa926b26b9c5c87fd653c193cac3773f7750425d2090034461012f476d77005a079f2883e4cfa8b1dbab735f086c9692b3f6f53efb5db881bd94cdbda4c4c9597026a8fbf1eed41bf628879156fcacae96e751d4fe117f0f6dc985ef3bd72a7bd299bd507633600c9df2f92306fe4833a8d784019dbe8baaaa06fddae1d5066677c9bcce6506e6ebe455cc9f46b1e6e9d77f2a82159b2aac861eeb400de3dcef2bdfa85e0dc51628945f14b3f44340ba9f2a3af7ef1bf24f372b3a0d0fef4baafb86cf3ba43f29030b891d4b46b4ccb29b00506dc0ee0e44959f8369fc9e0fd4bc5fa12159a4cd6db8f9af57353c132654278784509635cf5e020c43757525a4d3dcbbd532986b46b2efaa2b6b3a00aa8d44cd0546efddb6ab2e30ccf75aba4bc8d9249262e408516b89cdd58c55b9af18baeb0201f7732724b4d3ca0c74ebc4afa19bb5583f948e9619232ece825e09465fdab93f6fe6ed0590d08435879ac1ba3cf41a8c4a8f5fea6a50e84a21a5ca38414e85de3867f4bce967cb45b62335b7416a0fdc08c1e3c049e85ef944f438e5f1296a659ff8e01a170001751f92b395bd7c9b4f33106a708a005c16c2b5439bac392253e1bcfbcb545d5f6243466205655a2e496098b9045d605b632b8f98d29f51e27e62fe63a4e8f2
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: false
+            SerialNumber: 33000000253a2738690a3451c1000000000025
+            Version: 3
+            TBS:
+                MD5: 60cb2d8488f8724a67bf3254e6a57ff1
+                SHA1: 37aef77a1afaa33ac5787fc43a2c1e2509a19eb1
+                SHA256: 495a6ff7ace92f915eb1753c4c0b32612056e6d320bb17ff90346db3aa357432
+                SHA384: 2a90dcf67abc92f070775de78ecf066e7730ea57b4c4d6c64cfdd66c3eb0f639ac188b24571a9f600ef017737a71decf
+        -   Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Third Party Component CA 2014
+            ValidFrom: '2014-10-15 20:31:27'
+            ValidTo: '2029-10-15 20:41:27'
+            Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
+            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+            IsCertificateAuthority: true
+            SerialNumber: 330000000d690d5d7893d076df00000000000d
+            Version: 3
+            TBS:
+                MD5: 83f69422963f11c3c340b81712eef319
+                SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+                SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+                SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
+        Signer:
+        -   SerialNumber: 33000000253a2738690a3451c1000000000025
+            Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+                Windows Third Party Component CA 2014
+            Version: 1
+    Imphash: c3fd2e688276a184b2528ee590054e5a
+    LoadsDespiteHVCI: 'FALSE'
