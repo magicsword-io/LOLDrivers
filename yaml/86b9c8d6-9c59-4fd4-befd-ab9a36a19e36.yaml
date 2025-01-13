@@ -1,0 +1,156 @@
+Id: 86b9c8d6-9c59-4fd4-befd-ab9a36a19e36
+Author: Dor00tkit
+Created: '2025-01-13'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create dellinstrumentation.sys binPath=C:\windows\temp\dellinstrumentation.sys
+    type=kernel && sc.exe start dellinstrumentation.sys
+  Description: ''
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 11
+Resources:
+- ''
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: ''
+  MD5: 6f922907381ce439790ddf9132f23d74
+  SHA1: 6cf726ad47c47e01147645700233917619ea1714
+  SHA256: bc2606740e4648c3732541db929f2e02ea8567520d35de57c671e93c71e632f3
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: Dell
+  Description: DellInstrumentation
+  Product: DellInstrumentation
+  ProductVersion: 2.8.9.4
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Imphash: 03d4adbc48a8938a7a49def84a9887f1
+  Authentihash:
+    MD5: a6aba496a82a8fe8b7436e2d84ed1a32
+    SHA1: c3dd1152e3d98a113052ebbfc1b73791fe8830da
+    SHA256: 402318361c6069fc4c8a6f31b6f81921a1116426e9e4504ddb7363f26ff4d9c8
+  RichPEHeaderHash:
+    MD5: 18e8553d46944438b432175c732f469e
+    SHA1: 8f84713fc4ffe1734dedf7a6a4be8572bebb654d
+    SHA256: 9922ab3bdb77c39aaab06e848f8d9ddc1370ecd1c4321336166d863d04ececd9
+  Sections:
+    .text:
+      Entropy: 6.472070445810019
+      Virtual Size: '0x32ad'
+    .rdata:
+      Entropy: 5.184680871139366
+      Virtual Size: '0xe0c'
+    .data:
+      Entropy: 2.3217582605754736
+      Virtual Size: '0xfd8'
+    .pdata:
+      Entropy: 4.202891990281612
+      Virtual Size: '0x2d0'
+    PAGE:
+      Entropy: 6.3403725444049
+      Virtual Size: '0x2229'
+    INIT:
+      Entropy: 5.964040651773619
+      Virtual Size: '0xaf2'
+    .rsrc:
+      Entropy: 3.217663068080766
+      Virtual Size: '0x2f0'
+    .reloc:
+      Entropy: 4.021567004295789
+      Virtual Size: '0x3c'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2023-08-25 05:08:50'
+  InternalName: ''
+  Copyright: "\xA9 2023 Dell Inc. All Rights Reserved. "
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  - WppRecorder.sys
+  - WDFLDR.SYS
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - MmMapIoSpace
+  - MmUnmapIoSpace
+  - MmAllocateContiguousMemorySpecifyCache
+  - MmFreeContiguousMemorySpecifyCache
+  - MmGetPhysicalAddress
+  - RtlGetVersion
+  - ExAllocatePoolWithTag
+  - ExFreePool
+  - _vsnprintf
+  - KeWaitForSingleObject
+  - PsGetVersion
+  - ExAllocatePoolWithQuotaTag
+  - ZwQuerySystemInformation
+  - __C_specific_handler
+  - IoWMIRegistrationControl
+  - MmFreeContiguousMemory
+  - MmAllocateContiguousMemory
+  - KeInitializeMutex
+  - KeSetPriorityThread
+  - KeReleaseMutex
+  - KeInsertQueueDpc
+  - ExFreePoolWithTag
+  - strcmp
+  - RtlCopyUnicodeString
+  - DbgPrintEx
+  - MmGetSystemRoutineAddress
+  - MmMapIoSpaceEx
+  - RtlInitUnicodeString
+  - HalGetBusDataByOffset
+  - HalSetBusDataByOffset
+  - WppAutoLogStop
+  - WppAutoLogStart
+  - WppAutoLogTrace
+  - imp_WppRecorderReplay
+  - WdfVersionBind
+  - WdfVersionUnbind
+  - WdfVersionUnbindClass
+  - WdfVersionBindClass
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2023-01-12 19:14:51'
+      ValidTo: '2023-12-15 19:14:51'
+      Signature: 04d1261b735b38b551b427cf9a295d4eb18edd92de14079aa33a10511ee6d262938b29ae208f96be64a80e2967fb8d7aa5750613901a9da6a82935398175482096430c9acecb55ee2c5468d119f467378c18251a8fe01e9d7b79bce903ccb7afb227e2d0abee00bd9fd6bbbbd67c014888dc46f3efa912d4576f7ca9980957609cd21fbd51815cb11bee95fa780498d905e866bc1a604e407ee0d97a105bcc8e600200b19b9c3a56cb3918047f21ba9ee2228b46b8e5c8b456ba65e6f0c40d28294b654761660e9d14948866c3f0f65f028e47641059d3f195812e871362128bcefb901d5aeace862e3d683b291d65c138138ea1335fe3552f4c46a7f7b0c6e5
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 33000000f3158ea57d1c559f290000000000f3
+      Version: 3
+      TBS:
+        MD5: 8d4476692bcda36ed89244b94bd705f0
+        SHA1: ce72176d5cad611366e13a9a997ad7ecc7eb815f
+        SHA256: dd1db9c0e7e50040ac6c586c1b6fd479cef240c064473373f75fbeb3e04ff972
+        SHA384: 6f8e6245a2f817203781cc38a9463e5ac7a7db499aede35d3321b4848fc1389dd29831cdfc26984a691d5875c4eebf1a
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      ValidFrom: '2012-04-18 23:48:38'
+      ValidTo: '2027-04-18 23:58:38'
+      Signature: 5a8a67daccd5fd0d264177bf0a4678b4b3de12692b7723c2652f015fd203f461ba509d2e8c3972f36c3e6ab11e766decb7f382dcccbbc56970287366173f54ebee011648c446d91b80ae813a8d0f796d68b09eea2d3f39d3ca387ebd5e7c086e19dcc6c2f438336861e2524783e1000156d2bacb878205310a418b4ee77f5f5fed5fd3392d45eba213bffd1ec298417161165fc80a70257c59693124e471e70abb0417f79f721ec9d2bb1abe3d02fe090cb243b4591a99539396215fe0d6b72601429536ac27fdbef48577683d18bdf4be98882211865216f345ec0397107087a37043713cdbc98603170cf5735bc67de15c64edd7c548d7ed32e2d1aad3cfa7f6574e61f977eb67f288b3de00da038fd08a34373e1dd862b8d2b1f3e12f8b723b81967c6ffcec667672601b24f2a0896d5b6d002eef28dd868705c2b4b9e5be64c22af24a155c98e2c42785ff52e3627e0fb2020bd766c70ab2d33d200414503259830a7d9bed5a38120152ba2f5e20728e4af1fde771028c3be107bec973f4dd47d8b4efb4a4b330b9893e76cab90098567eabea8ab8a5d038ab6977130b142fe9aa411ff7babd3a2b348aee0aab63e663f788248e200d2b3b9de3c24952ac9f1f0e393b5dd46e506ae67d523aaa7c3315290d265e0158a74ea93d7a846f743f609fe4324f3600af6d71d33ea646655f8174f1fec171da4ca0415a82ddf11f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 610baac1000000000009
+      Version: 3
+      TBS:
+        MD5: a569061297e8e824767dbc3184a69bea
+        SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
+        SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
+    Signer:
+    - SerialNumber: 33000000f3158ea57d1c559f290000000000f3
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2012
+      Version: 1
+Tags:
+- dellinstrumentation.sys
