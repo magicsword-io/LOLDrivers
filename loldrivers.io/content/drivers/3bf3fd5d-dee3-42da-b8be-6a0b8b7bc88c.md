@@ -1,9 +1,9 @@
 +++
 
 description = ""
-title = "500e07cb-77c6-4e83-ae3f-73f70f1c10b5"
+title = "3bf3fd5d-dee3-42da-b8be-6a0b8b7bc88c"
 weight = 10
-displayTitle = "tfbfs3ped.sys"
+displayTitle = "probmon.sys"
 +++
 
 
@@ -11,26 +11,32 @@ displayTitle = "tfbfs3ped.sys"
 {{< column "mt-2 pt-1">}}
 
 
-# tfbfs3ped.sys ![:inline](/images/twitter_verified.png) 
+# probmon.sys ![:inline](/images/twitter_verified.png) 
 
 ### Description
 
-Confirmed vulnerable driver from Microsoft Block List
-- **UUID**: 500e07cb-77c6-4e83-ae3f-73f70f1c10b5
-- **Created**: 2023-07-22
-- **Author**: Michael Haag
+A vulnerable kernel driver that can be used to terminate arbitrary processes
+- **UUID**: 3bf3fd5d-dee3-42da-b8be-6a0b8b7bc88c
+- **Created**: 2025-01-29
+- **Author**: Antonio Parata, Andrea Monzani
 - **Acknowledgement**:  | [](https://twitter.com/)
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/59a48daa7dbdcb13bd0a11c71e1ad2f7.bin" "Download" >}}{{< button "https://www.magicsword.io/premium" "Block" "red" >}}
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/8c8c93a6b6c6d6e632a54877fc1a209e.bin" "Download" >}}{{< button "https://www.magicsword.io/premium" "Block" "red" >}}
 {{< tip "warning" >}}
+This download link contains the vulnerable driver!
 
 {{< /tip >}}
 
+### Commands
+
+```
+sc.exe create probmon.sys binPath=C:\windows\temp\probmon.sys type=kernel &amp;&amp; sc.exe start probmon.sys
+```
 
 
 | Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
-| Elevate privileges | kernel | Windows |
+| EDR Kill | Admin privileges | Windows 10 |
 
 
 
@@ -41,6 +47,13 @@ Confirmed vulnerable driver from Microsoft Block List
 {{< column >}}
 #### YARA 🏹
 {{< details "Expand" >}}
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict.yar" "Exact Match" >}}{{< tip >}}with header and size limitation{{< /tip >}} 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
+
 
 {{< /details >}}
 {{< /column >}}
@@ -77,30 +90,34 @@ Confirmed vulnerable driver from Microsoft Block List
 
 ### Resources
 <br>
-<li><a href="https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c">https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c</a></li>
+<li><a href="Internal Research">Internal Research</a></li>
+<li><a href="https://www.welivesecurity.com/en/eset-research/embargo-ransomware-rocknrust/">https://www.welivesecurity.com/en/eset-research/embargo-ransomware-rocknrust/</a></li>
 <br>
 
 ### CVE
 
-<li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name="></a></li>
+<li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-26506">CVE-2024-26506</a></li>
 
 ### Known Vulnerable Samples
 
 | Property           | Value |
 |:-------------------|:------|
-| Filename           |  |
-| Creation Timestamp           | 2005-05-25 00:39:12 |
-| MD5                | [59a48daa7dbdcb13bd0a11c71e1ad2f7](https://www.virustotal.com/gui/file/59a48daa7dbdcb13bd0a11c71e1ad2f7) |
-| SHA1               | [6c447a42e73d6feff09812abaf67af566d83eb3a](https://www.virustotal.com/gui/file/6c447a42e73d6feff09812abaf67af566d83eb3a) |
-| SHA256             | [0897935ff2e0e7cc23a036ec0791d587b4799a299c8d6d65f364a8bdff645760](https://www.virustotal.com/gui/file/0897935ff2e0e7cc23a036ec0791d587b4799a299c8d6d65f364a8bdff645760) |
-| Authentihash MD5   | [a17d227444e090ff69e24fcb6d43162b](https://www.virustotal.com/gui/search/authentihash%253Aa17d227444e090ff69e24fcb6d43162b) |
-| Authentihash SHA1  | [43d3a3c1f7b14cfcc051cae2534dbbbb4c7fc120](https://www.virustotal.com/gui/search/authentihash%253A43d3a3c1f7b14cfcc051cae2534dbbbb4c7fc120) |
-| Authentihash SHA256| [b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020](https://www.virustotal.com/gui/search/authentihash%253Ab8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020) |
-| RichPEHeaderHash MD5   | [deb9c1e252f598099d70d2b33a313da3](https://www.virustotal.com/gui/search/rich_pe_header_hash%253Adeb9c1e252f598099d70d2b33a313da3) |
-| RichPEHeaderHash SHA1  | [f0c2801e0091ed6f5e10ea7045e911aa90030290](https://www.virustotal.com/gui/search/rich_pe_header_hash%253Af0c2801e0091ed6f5e10ea7045e911aa90030290) |
-| RichPEHeaderHash SHA256| [914fb9761d50c3fa2ecf9fbd8af3735f9b8d6c4903e067c8af9546e79b6f22c7](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A914fb9761d50c3fa2ecf9fbd8af3735f9b8d6c4903e067c8af9546e79b6f22c7) |
+| Filename           | probmon.sys |
+| Creation Timestamp           | 2011-11-19 08:35:45 |
+| MD5                | [8c8c93a6b6c6d6e632a54877fc1a209e](https://www.virustotal.com/gui/file/8c8c93a6b6c6d6e632a54877fc1a209e) |
+| SHA1               | [7310d6399683ba3eb2f695a2071e0e45891d743b](https://www.virustotal.com/gui/file/7310d6399683ba3eb2f695a2071e0e45891d743b) |
+| SHA256             | [023d722cbbdd04e3db77de7e6e3cfeabcef21ba5b2f04c3f3a33691801dd45eb](https://www.virustotal.com/gui/file/023d722cbbdd04e3db77de7e6e3cfeabcef21ba5b2f04c3f3a33691801dd45eb) |
+| Authentihash MD5   | [9740e9ac3b5e4cdbd1a35d5032b94e1c](https://www.virustotal.com/gui/search/authentihash%253A9740e9ac3b5e4cdbd1a35d5032b94e1c) |
+| Authentihash SHA1  | [c250f8111b95a0cfd72a1b83c0dd08d8727a1038](https://www.virustotal.com/gui/search/authentihash%253Ac250f8111b95a0cfd72a1b83c0dd08d8727a1038) |
+| Authentihash SHA256| [e8bdfab9d5b5c37f6f23ddf9dddba2feb74261b61a80dee0c6aebffbf39948fb](https://www.virustotal.com/gui/search/authentihash%253Ae8bdfab9d5b5c37f6f23ddf9dddba2feb74261b61a80dee0c6aebffbf39948fb) |
+| RichPEHeaderHash MD5   | [3eac8823498d67797e199e1000b7fb3f](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A3eac8823498d67797e199e1000b7fb3f) |
+| RichPEHeaderHash SHA1  | [d96373e6faf669eba3eee38a1619da8ce5670863](https://www.virustotal.com/gui/search/rich_pe_header_hash%253Ad96373e6faf669eba3eee38a1619da8ce5670863) |
+| RichPEHeaderHash SHA256| [18fdcb1929dc4bb7cb78addfbcc4db6f93081b91e831c3bb33443d6a3d36ca98](https://www.virustotal.com/gui/search/rich_pe_header_hash%253A18fdcb1929dc4bb7cb78addfbcc4db6f93081b91e831c3bb33443d6a3d36ca98) |
+| Company           | ITM SYSTEM |
+| Description       | ITM SYSTEM File Filter Driver |
+| OriginalFilename  | probmon.sys |
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/59a48daa7dbdcb13bd0a11c71e1ad2f7.bin" "Download" >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/8c8c93a6b6c6d6e632a54877fc1a209e.bin" "Download" >}} 
 
 #### Certificates
 
@@ -133,47 +150,47 @@ Confirmed vulnerable driver from Microsoft Block List
 | IsCertificateAuthority            | True |
 | SerialNumber                      | 47bf1995df8d524643f7db6d480d31a4 |
 | Version                           | 3 |
-###### Certificate 04000000000108d9611cd6
+###### Certificate 040000000001239e0facb3
 | Field                             | Value                      |
 |-----------------------------------|----------------------------|
-| ToBeSigned (TBS) MD5              | 698f075151097d84c0b1f3e7bc3d6fca  |
-| ToBeSigned (TBS) SHA1             | 041750993d7c9e063f02dfe74699598640911aab |
-| ToBeSigned (TBS) SHA256           | a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8 |
+| ToBeSigned (TBS) MD5              | 5ccf05e4dec10d9d6fe15d8778325272  |
+| ToBeSigned (TBS) SHA1             | 79f0a648bd7f1184f86bff43ae47c9ecc3ed3cec |
+| ToBeSigned (TBS) SHA256           | 33ea31b892ba274a4aefe545de45c42c218b6dff78146655cdea892545c2cccc |
 | Subject                           | C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign Primary Object Publishing CA |
-| ValidFrom                         | 1999-01-28 12:00:00 |
-| ValidTo                           | 2014-01-27 11:00:00 |
-| Signature                         | a0422eb876a7427186404d464d5b26b0b074f93f89a87b7cb7f1c697e08239999d43fe60823642b55b878df55df4bbffa91044a871d3c7f12241f29aa4a5ec63fae5eb654a19309d8bc7b6fddc3fe16cfdd5521407fc6d24ccb3cc81a2c052f327b96d9e063dd8a849023269c7054294d0bbe3bba908c393501bdb846dc0ba1e5298659c1376bdb3d567292f1f7baa2c51a0fd854f263c48a38127a6feee7f7899c245cf9d1f527ed7958bfde1d020c3af7e51a22f663bab2dcf2d8e8c4d7d18392128fbdcae6d6581d0e0d7184be7b5f774d784e6522aac3b68fd3b4ab80154849132bb95d28e6330a69ece2396feab2eb86a8b74dcde21a114c2fbbf53af10 |
+| ValidFrom                         | 1999-01-28 13:00:00 |
+| ValidTo                           | 2017-01-27 12:00:00 |
+| Signature                         | b578a6a27c04b77fc97f7d6abc71fa293060c2f4621efe7f431e9b6ee2b21f730b85765b7df54e49062fd4fab79140efed6f8d8e138354c52a023d0aa4dc990b7abd772fcc40c18ff3c48c4e72ba107ce6ff642bc7ce6ca7fcd79a7c8e468d01834d423bdb9c3f9f326157d717b0b33666f0b3fd446f8137b1944ea7562589f58ad66d116262795c42900218d39c23fc08e86445b92d7e805b4eafc38a299283781f914134af85c5fd07994e2c5cfec7fd17bb2525314d72b5b5294b489a376f13c7114e4a451e7e2f319cabe852afd6679734885f0e276a6652d15ac7ac302c2038dd2bff3aebce104582a27b1ba12073569b2a93e60451066c1bdc2f899493 |
 | SignatureAlgorithmOID             | 1.2.840.113549.1.1.5 |
 | IsCertificateAuthority            | True |
-| SerialNumber                      | 04000000000108d9611cd6 |
+| SerialNumber                      | 040000000001239e0facb3 |
 | Version                           | 3 |
-###### Certificate 0100000000011c08b7f67e
+###### Certificate 010000000001306de166be
 | Field                             | Value                      |
 |-----------------------------------|----------------------------|
-| ToBeSigned (TBS) MD5              | 4566c37f56f951a0ce5b4ae966c0ea9f  |
-| ToBeSigned (TBS) SHA1             | a51cbf2834eb6f8535bc5e44913a9ec979379782 |
-| ToBeSigned (TBS) SHA256           | 88a8e9a799af515b9223e4cdf24d0ef1e72f12124be02786f026a3c26317b417 |
-| Subject                           | C=TW, O=Micro,Star Int&#39;l Co. Ltd., CN=Micro,Star Int&#39;l Co. Ltd. |
-| ValidFrom                         | 2008-08-28 09:49:45 |
-| ValidTo                           | 2011-08-28 09:49:45 |
-| Signature                         | 572df373e9b036711b3cf5ee882e5d75d8d50f012407cf0c1b554ff8f41c7b6477fa0b2ad579f2c1fe7b8b9d7374b690527c219eb979686fb67d0b4cf2885d8d7d1261f05cb72fe4c9f294c52aa05f3e5d1ceb0d77085dbd6af07978032505da666f353283a8982af26985e69c1599479945b591124183574b8a4cc34caa62e31b523dac3fedbd04951b3661399ed34f5c5868d9bbe3295fc09890d9521e1cdcae2ff129f547d4c8ce8aa08616107c555fac60e5b63c14ddfeb6962af3608b75d9c77c69260d8af9775b83afaa15b8ecef6840cb4ee87d451f9042b49735ea40931c0664c8c2bf6a139db6ac5b90edcea63a6bf5b54978f027b1046170d476d0 |
+| ToBeSigned (TBS) MD5              | c172176f170f45cab913afc7334dc549  |
+| ToBeSigned (TBS) SHA1             | 6390cd1cc7572283dbce9f3e9d8a02650e3c3553 |
+| ToBeSigned (TBS) SHA256           | 8f33d08c897c3e6f82ca2c673ba4a1781479521d22f45f73190899b41897b6ea |
+| Subject                           | C=KR, ST=Seoul, L=Guro,gu, O=ITM System Co.,LTD, OU=DevTeam, CN=ITM System Co.,LTD |
+| ValidFrom                         | 2011-06-08 06:01:39 |
+| ValidTo                           | 2014-06-07 08:32:23 |
+| Signature                         | 9da885a314dddadff944fb879c832ba9d12f7605af23e7be90725104587ad434c3fa67855cd1a57dfb288c77840b9a13c051a3af770890ee88142950276db8b29868e2f01784c153cb36f17cf2a3f37445671f57e182fce569e2048923dac0ad7172afc3d3410ae4d61245b673471387aaa408486289bd8dfda8d949e61a8ec1f6ee0c2acdf7fa6dda23f6b0d256e8876dd2a0db5fd39210ef81b65d1ee0b535352cd31195c8b14ee9811e07161ecac7030d8285da7ba243f2ecd14dfe911523c33065e1d2fb74970043c29620c5cfaf8bfaa8284960cec56e3354bd94a0767bdb389c24a37fe2eec444dc1f8752017fb58845061243cab98f8f757634bf1154 |
 | SignatureAlgorithmOID             | 1.2.840.113549.1.1.5 |
 | IsCertificateAuthority            | False |
-| SerialNumber                      | 0100000000011c08b7f67e |
+| SerialNumber                      | 010000000001306de166be |
 | Version                           | 3 |
-###### Certificate 04000000000117ab50b915
+###### Certificate 040000000001239e0faf24
 | Field                             | Value                      |
 |-----------------------------------|----------------------------|
-| ToBeSigned (TBS) MD5              | 5686b287d716c4d2428b092c4ef30f9c  |
-| ToBeSigned (TBS) SHA1             | 306fb5fbeb3d531510bb4b663c4fd48adc121e14 |
-| ToBeSigned (TBS) SHA256           | 60846fc990e271a707cd2d53d0bb21834a04f7652214aa0c12597ff6649d352d |
+| ToBeSigned (TBS) MD5              | 7dd2351a85d3665eeb6720a21f4f7dee  |
+| ToBeSigned (TBS) SHA1             | 77838c4d7f36958a581841d28f481d61ce0696ed |
+| ToBeSigned (TBS) SHA256           | 846725f4b0193468c1079d6127e9e6e420fc6ed66019ed02d732ba644decad57 |
 | Subject                           | C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign CA |
-| ValidFrom                         | 2004-01-22 09:00:00 |
-| ValidTo                           | 2014-01-27 10:00:00 |
-| Signature                         | 3c4a010267edf20a2e736e40252f1dccbc2db652141b27122cf1229e190a89b6ef352a29152b1a88c20f37168d2602d5e93080f608b9939ac0498f332c3035ff4ab9892aa75c38e761a778fe22851a07b4b9edcf21f25ddedff329c5d38d9e14c4285c88e590a300442912b23e759540244a6beee2d0ef862ddf6d741a4f1cc79424c443464f7b81015d23733cd9752e995361565e7ccd13e237d222e570f8a743f6154147fda24702c43651ca545da6cdcad61817533ff1d38e0f0aafda17941657a0991431c90e1611d2c04ca2a25978fbb6b933cff763c9d2c4c84953dd8a59525e7d3b385eed220360ac85cd58325dcdc31c07fa7ef67efbc8ac378be498 |
+| ValidFrom                         | 2004-01-22 10:00:00 |
+| ValidTo                           | 2017-01-27 10:00:00 |
+| Signature                         | 1e6af36df48ea922fe7008652ea15dab3330dd6c78fa4beaadc58dec107a6ac55897396b92f391e20ca7281cd15d768e8b077c136fadc43643b3c1bc3159cf1838d8a33bceffca6758bfe0f1ac613ea23b1ebc025b41ac446bf526f3ed5ea865f6ca65a63fcaf577eba5862a582956f8be161040e9d2fc572c636137662539202e0703a036032594bd7ceb7ed3a3c2c57616753092b9ff7641352168d10e5e5c8ec30360e68040fcc05da2546e6e9267a7811287a2a32bdbb74dffe4d5c7e505e6d5f1aefccd661821f33e47c9e59542612c9d2680b20fa83d0ec9a778df6e748c2c46f672e93c646b2855c44b6433cb78541338f0d57106d43e0d0a350ee0b3 |
 | SignatureAlgorithmOID             | 1.2.840.113549.1.1.5 |
 | IsCertificateAuthority            | True |
-| SerialNumber                      | 04000000000117ab50b915 |
+| SerialNumber                      | 040000000001239e0faf24 |
 | Version                           | 3 |
 ###### Certificate 610b7f6b000000000019
 | Field                             | Value                      |
@@ -194,25 +211,53 @@ Confirmed vulnerable driver from Microsoft Block List
 #### Imports
 {{< details "Expand" >}}
 * ntoskrnl.exe
-* HAL.dll
+* FLTMGR.SYS
 
 {{< /details >}}
 #### Imported Functions
 {{< details "Expand" >}}
 * RtlInitUnicodeString
+* KeInitializeEvent
+* ZwSetValueKey
+* PsSetCreateProcessNotifyRoutine
+* KeEnterCriticalRegion
+* KeDelayExecutionThread
+* ZwCreateFile
+* PsCreateSystemThread
+* ExSystemTimeToLocalTime
+* ExAcquireResourceSharedLite
+* IoGetCurrentProcess
+* ExReleaseResourceLite
 * ZwClose
-* ZwMapViewOfSection
+* RtlSetDaclSecurityDescriptor
+* KeWaitForSingleObject
+* KeBugCheckEx
+* ZwFlushKey
+* RtlTimeToTimeFields
+* ZwOpenProcess
+* ExInitializeResourceLite
+* ZwTerminateProcess
+* ZwQueryInformationFile
+* ZwWriteFile
+* DbgPrint
+* IofCallDriver
+* ZwReadFile
+* IoBuildSynchronousFsdRequest
+* KeLeaveCriticalRegion
+* ExFreePoolWithTag
+* ZwCreateKey
+* ExAllocatePoolWithTag
 * ObReferenceObjectByHandle
-* ZwOpenSection
-* IoDeleteSymbolicLink
-* IofCompleteRequest
-* MmIsAddressValid
-* ZwUnmapViewOfSection
-* IoCreateSymbolicLink
-* IoCreateDevice
+* ExAcquireResourceExclusiveLite
+* RtlAnsiCharToUnicodeChar
 * __C_specific_handler
-* IoDeleteDevice
-* HalTranslateBusAddress
+* FltBuildDefaultSecurityDescriptor
+* FltCloseCommunicationPort
+* FltUnregisterFilter
+* FltFreeSecurityDescriptor
+* FltCreateCommunicationPort
+* FltCloseClientPort
+* FltRegisterFilter
 
 {{< /details >}}
 #### Exported Functions
@@ -227,6 +272,8 @@ Confirmed vulnerable driver from Microsoft Block List
 * .data
 * .pdata
 * INIT
+* .rsrc
+* .reloc
 
 {{< /details >}}
 #### Signature
@@ -268,50 +315,50 @@ Confirmed vulnerable driver from Microsoft Block List
     },
     {
       "IsCertificateAuthority": true,
-      "SerialNumber": "04000000000108d9611cd6",
-      "Signature": "a0422eb876a7427186404d464d5b26b0b074f93f89a87b7cb7f1c697e08239999d43fe60823642b55b878df55df4bbffa91044a871d3c7f12241f29aa4a5ec63fae5eb654a19309d8bc7b6fddc3fe16cfdd5521407fc6d24ccb3cc81a2c052f327b96d9e063dd8a849023269c7054294d0bbe3bba908c393501bdb846dc0ba1e5298659c1376bdb3d567292f1f7baa2c51a0fd854f263c48a38127a6feee7f7899c245cf9d1f527ed7958bfde1d020c3af7e51a22f663bab2dcf2d8e8c4d7d18392128fbdcae6d6581d0e0d7184be7b5f774d784e6522aac3b68fd3b4ab80154849132bb95d28e6330a69ece2396feab2eb86a8b74dcde21a114c2fbbf53af10",
+      "SerialNumber": "040000000001239e0facb3",
+      "Signature": "b578a6a27c04b77fc97f7d6abc71fa293060c2f4621efe7f431e9b6ee2b21f730b85765b7df54e49062fd4fab79140efed6f8d8e138354c52a023d0aa4dc990b7abd772fcc40c18ff3c48c4e72ba107ce6ff642bc7ce6ca7fcd79a7c8e468d01834d423bdb9c3f9f326157d717b0b33666f0b3fd446f8137b1944ea7562589f58ad66d116262795c42900218d39c23fc08e86445b92d7e805b4eafc38a299283781f914134af85c5fd07994e2c5cfec7fd17bb2525314d72b5b5294b489a376f13c7114e4a451e7e2f319cabe852afd6679734885f0e276a6652d15ac7ac302c2038dd2bff3aebce104582a27b1ba12073569b2a93e60451066c1bdc2f899493",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
       "Subject": "C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign Primary Object Publishing CA",
       "TBS": {
-        "MD5": "698f075151097d84c0b1f3e7bc3d6fca",
-        "SHA1": "041750993d7c9e063f02dfe74699598640911aab",
-        "SHA256": "a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8",
-        "SHA384": "a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67"
+        "MD5": "5ccf05e4dec10d9d6fe15d8778325272",
+        "SHA1": "79f0a648bd7f1184f86bff43ae47c9ecc3ed3cec",
+        "SHA256": "33ea31b892ba274a4aefe545de45c42c218b6dff78146655cdea892545c2cccc",
+        "SHA384": "1350ebc11fd20f5f141bc545786506e6a154be054da7a6e603cb276a6d60a24f2a4016ecc2f5cabd1088e1905f60aabf"
       },
-      "ValidFrom": "1999-01-28 12:00:00",
-      "ValidTo": "2014-01-27 11:00:00",
+      "ValidFrom": "1999-01-28 13:00:00",
+      "ValidTo": "2017-01-27 12:00:00",
       "Version": 3
     },
     {
       "IsCertificateAuthority": false,
-      "SerialNumber": "0100000000011c08b7f67e",
-      "Signature": "572df373e9b036711b3cf5ee882e5d75d8d50f012407cf0c1b554ff8f41c7b6477fa0b2ad579f2c1fe7b8b9d7374b690527c219eb979686fb67d0b4cf2885d8d7d1261f05cb72fe4c9f294c52aa05f3e5d1ceb0d77085dbd6af07978032505da666f353283a8982af26985e69c1599479945b591124183574b8a4cc34caa62e31b523dac3fedbd04951b3661399ed34f5c5868d9bbe3295fc09890d9521e1cdcae2ff129f547d4c8ce8aa08616107c555fac60e5b63c14ddfeb6962af3608b75d9c77c69260d8af9775b83afaa15b8ecef6840cb4ee87d451f9042b49735ea40931c0664c8c2bf6a139db6ac5b90edcea63a6bf5b54978f027b1046170d476d0",
+      "SerialNumber": "010000000001306de166be",
+      "Signature": "9da885a314dddadff944fb879c832ba9d12f7605af23e7be90725104587ad434c3fa67855cd1a57dfb288c77840b9a13c051a3af770890ee88142950276db8b29868e2f01784c153cb36f17cf2a3f37445671f57e182fce569e2048923dac0ad7172afc3d3410ae4d61245b673471387aaa408486289bd8dfda8d949e61a8ec1f6ee0c2acdf7fa6dda23f6b0d256e8876dd2a0db5fd39210ef81b65d1ee0b535352cd31195c8b14ee9811e07161ecac7030d8285da7ba243f2ecd14dfe911523c33065e1d2fb74970043c29620c5cfaf8bfaa8284960cec56e3354bd94a0767bdb389c24a37fe2eec444dc1f8752017fb58845061243cab98f8f757634bf1154",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
-      "Subject": "C=TW, O=Micro,Star Int\u0027l Co. Ltd., CN=Micro,Star Int\u0027l Co. Ltd.",
+      "Subject": "C=KR, ST=Seoul, L=Guro,gu, O=ITM System Co.,LTD, OU=DevTeam, CN=ITM System Co.,LTD",
       "TBS": {
-        "MD5": "4566c37f56f951a0ce5b4ae966c0ea9f",
-        "SHA1": "a51cbf2834eb6f8535bc5e44913a9ec979379782",
-        "SHA256": "88a8e9a799af515b9223e4cdf24d0ef1e72f12124be02786f026a3c26317b417",
-        "SHA384": "d8d8769d5b6a0fe7c56fcde24c735475ee0e5d01c63dbf7690cdae5a3e251818bed42443d0c6424d39e81a19d6c83bdb"
+        "MD5": "c172176f170f45cab913afc7334dc549",
+        "SHA1": "6390cd1cc7572283dbce9f3e9d8a02650e3c3553",
+        "SHA256": "8f33d08c897c3e6f82ca2c673ba4a1781479521d22f45f73190899b41897b6ea",
+        "SHA384": "d856baef204f1eb7a945024acd9f1571fa4d37ac3879a467b6f1eb7c1a867bc80de74890691c86ee6e75d4a90b20180f"
       },
-      "ValidFrom": "2008-08-28 09:49:45",
-      "ValidTo": "2011-08-28 09:49:45",
+      "ValidFrom": "2011-06-08 06:01:39",
+      "ValidTo": "2014-06-07 08:32:23",
       "Version": 3
     },
     {
       "IsCertificateAuthority": true,
-      "SerialNumber": "04000000000117ab50b915",
-      "Signature": "3c4a010267edf20a2e736e40252f1dccbc2db652141b27122cf1229e190a89b6ef352a29152b1a88c20f37168d2602d5e93080f608b9939ac0498f332c3035ff4ab9892aa75c38e761a778fe22851a07b4b9edcf21f25ddedff329c5d38d9e14c4285c88e590a300442912b23e759540244a6beee2d0ef862ddf6d741a4f1cc79424c443464f7b81015d23733cd9752e995361565e7ccd13e237d222e570f8a743f6154147fda24702c43651ca545da6cdcad61817533ff1d38e0f0aafda17941657a0991431c90e1611d2c04ca2a25978fbb6b933cff763c9d2c4c84953dd8a59525e7d3b385eed220360ac85cd58325dcdc31c07fa7ef67efbc8ac378be498",
+      "SerialNumber": "040000000001239e0faf24",
+      "Signature": "1e6af36df48ea922fe7008652ea15dab3330dd6c78fa4beaadc58dec107a6ac55897396b92f391e20ca7281cd15d768e8b077c136fadc43643b3c1bc3159cf1838d8a33bceffca6758bfe0f1ac613ea23b1ebc025b41ac446bf526f3ed5ea865f6ca65a63fcaf577eba5862a582956f8be161040e9d2fc572c636137662539202e0703a036032594bd7ceb7ed3a3c2c57616753092b9ff7641352168d10e5e5c8ec30360e68040fcc05da2546e6e9267a7811287a2a32bdbb74dffe4d5c7e505e6d5f1aefccd661821f33e47c9e59542612c9d2680b20fa83d0ec9a778df6e748c2c46f672e93c646b2855c44b6433cb78541338f0d57106d43e0d0a350ee0b3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
       "Subject": "C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign CA",
       "TBS": {
-        "MD5": "5686b287d716c4d2428b092c4ef30f9c",
-        "SHA1": "306fb5fbeb3d531510bb4b663c4fd48adc121e14",
-        "SHA256": "60846fc990e271a707cd2d53d0bb21834a04f7652214aa0c12597ff6649d352d",
-        "SHA384": "6b37b28ca97b32a31b0fa53b5e961ae0f2d1aae2c5bf46de132e57834ee3968d9af7ad204821f9389cc4e0b5a8481fe8"
+        "MD5": "7dd2351a85d3665eeb6720a21f4f7dee",
+        "SHA1": "77838c4d7f36958a581841d28f481d61ce0696ed",
+        "SHA256": "846725f4b0193468c1079d6127e9e6e420fc6ed66019ed02d732ba644decad57",
+        "SHA384": "aaa45fe704bc66bb1842a2123c6e45e016dfbc7ba2ce07d7d2ee0b5d488a39c68bc6db582cb45d51f5fa52e60be8efd6"
       },
-      "ValidFrom": "2004-01-22 09:00:00",
-      "ValidTo": "2014-01-27 10:00:00",
+      "ValidFrom": "2004-01-22 10:00:00",
+      "ValidTo": "2017-01-27 10:00:00",
       "Version": 3
     },
     {
@@ -335,7 +382,7 @@ Confirmed vulnerable driver from Microsoft Block List
   "Signer": [
     {
       "Issuer": "C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign CA",
-      "SerialNumber": "0100000000011c08b7f67e",
+      "SerialNumber": "010000000001306de166be",
       "Version": 1
     }
   ],
@@ -348,7 +395,7 @@ Confirmed vulnerable driver from Microsoft Block List
 
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/500e07cb-77c6-4e83-ae3f-73f70f1c10b5.yaml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/3bf3fd5d-dee3-42da-b8be-6a0b8b7bc88c.yaml)
 
 *last_updated:* 2025-01-29
 
