@@ -1,0 +1,37 @@
+Id: c0634ed7-840e-4a7e-8b34-33efe50405c2
+Author: Robel Campbell
+Created: '2025-01-31'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create TPwSav.sys binPath=C:\windows\temp\TPwSav.sys type=kernel
+    && sc.exe start TPwSav.sys
+  Description: A driver associated with Toshiba laptops power saving functionality
+    allows arbitary one byte reading and writing mapped physical addresses. Blackpoint Cyber's SOC observed this driver being used as part of a custom EDRSandblast malware to blind EDR prior to Qilin ransomware deployment.
+  Usecase: Elevate privileges, Blind EDR
+  Privileges: kernel
+  OperatingSystem: Windows
+Resources:
+- Coming soon...
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: 'TPwSav.sys'
+  MD5: b0caa4f3ac2841be683933a6af9bee0e
+  SHA1: c1130e09831c7a2e0cc8ba7335e702910b25f526
+  SHA256: 011df46e94218cbb2f0b8da13ab3cec397246fdc63436e58b1bf597550a647f6
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+Tags:
+- TPwSav.sys
