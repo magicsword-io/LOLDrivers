@@ -7927,7 +7927,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/3aa6e630-59be-4a15-a30c-aaed4c1edaf0.yaml)
 
-*last_updated:* 2025-01-29
+*last_updated:* 2025-03-03
 
 {{< /column >}}
 {{< /block >}}
