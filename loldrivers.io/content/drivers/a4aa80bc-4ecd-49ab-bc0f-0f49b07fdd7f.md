@@ -2045,7 +2045,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/a4aa80bc-4ecd-49ab-bc0f-0f49b07fdd7f.yaml)
 
-*last_updated:* 2025-01-29
+*last_updated:* 2025-03-03
 
 {{< /column >}}
 {{< /block >}}

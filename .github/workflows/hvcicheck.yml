@@ -17,7 +17,7 @@ jobs:
         Invoke-WebRequest -Uri "https://gist.github.com/MHaggis/8d6de45b883b338e47de08b3cb4c9819" -OutFile "script.ps1"
         ./script.ps1
     - name: Upload CSV
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: hvci_drivers
         path: bin/hvci_drivers.csv
@@ -29,7 +29,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3.3.0
     - name: Download CSV
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4
       with:
         name: hvci_drivers
         path: bin/

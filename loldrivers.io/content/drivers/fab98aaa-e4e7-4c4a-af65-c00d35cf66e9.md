@@ -319,7 +319,7 @@ sc.exe create cpuz141.sys binPath=C:\windows\temp\cpuz141.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fab98aaa-e4e7-4c4a-af65-c00d35cf66e9.yaml)
 
-*last_updated:* 2025-01-29
+*last_updated:* 2025-03-03
 
 {{< /column >}}
 {{< /block >}}

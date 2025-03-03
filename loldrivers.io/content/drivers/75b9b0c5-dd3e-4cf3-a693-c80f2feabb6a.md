@@ -342,7 +342,7 @@ sc.exe create 5a4fe297c7d42539303137b6d75b150d.sys binPath=C:\windows\temp\5a4fe
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/75b9b0c5-dd3e-4cf3-a693-c80f2feabb6a.yaml)
 
-*last_updated:* 2025-01-29
+*last_updated:* 2025-03-03
 
 {{< /column >}}
 {{< /block >}}

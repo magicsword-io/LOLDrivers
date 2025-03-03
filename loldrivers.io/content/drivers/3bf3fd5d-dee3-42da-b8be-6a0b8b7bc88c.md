@@ -397,7 +397,7 @@ sc.exe create probmon.sys binPath=C:\windows\temp\probmon.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/3bf3fd5d-dee3-42da-b8be-6a0b8b7bc88c.yaml)
 
-*last_updated:* 2025-01-29
+*last_updated:* 2025-03-03
 
 {{< /column >}}
 {{< /block >}}
