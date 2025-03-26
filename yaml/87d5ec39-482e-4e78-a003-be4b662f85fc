@@ -1,0 +1,34 @@
+Id: 87d5ec39-482e-4e78-a003-be4b662f85fc
+Tags:
+    - vsdatant.sys 
+Author: Kyaw Pyiyt Htet
+Created: '2025-03-22' 
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+    Command: 'sc.exe create gdrv.sys binPath=C:\windows\temp\vsdatant.sys type=kernel &&
+        sc.exe start vsdatant.sys'
+    Description: 'Create and start vsdatant.sys' 
+    Usecase: Elevate privileges
+    Privileges: kernel 
+    OperatingSystem: Windows 10
+Resources:
+    - 'https://venaksecurity.com/2025/03/20/cybercriminals-exploit-checkpoints-driver-in-a-byovd-attack/' 
+Acknowledgement:
+    Person: '' 
+    Handle: '' 
+KnownVulnerableSamples:
+-   Filename: vsdatant.sys
+    MD5: 190fe0ce4d43ad8eed97aaa68827e2c6
+    SHA1: f16d24ed98bcc35ecae902474abfc4820db541da
+    SHA256: 1c43f33573a0815c5edc5e18ba1038afdd11f55a7cd8b08ba59b8f7357117e4c
+    Company: Check Point, LTD
+    Description: ZoneAlarm
+    Product: ZoneAlarm
+    ProductVersion: "14.1.32.0"
+    Authentihash:
+        SHA256: 9b2bb2385b742eef4f614cd6b2e714444f3e983e8643e673c6f3e917618260d4
+    InternalName: VSDATANT.SYS
+    Copyright: Copyright © 1998-2016, Check Point, LTD
+    Imports:
+        - ntoskrnl.exe
