@@ -1,0 +1,43 @@
+Id: fd6c52b1-aeaa-4d89-8051-91acc68c3270
+Author: Michael Haag
+Created: '2025-03-26'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create ACPIx86.sys binPath=C:\windows\temp\ACPIx86.sys type=kernel
+    && sc.exe start ACPIx86.sys
+  Description: ABYSSWORKER is a malicious driver used in MEDUSA ransomware attacks
+    to disable EDR systems. The driver masquerades as a legitimate CrowdStrike Falcon
+    driver and provides extensive capabilities to terminate processes, remove security
+    callbacks, manipulate files, and disable security tools. It uses stolen certificates
+    from Chinese companies and requires a specific password for activation. The driver
+    was observed being deployed alongside HEARTCRYPT-packed loaders and provides attackers
+    with kernel-level capabilities to blind EDR products by removing notification
+    callbacks, detaching mini-filter devices, and replacing driver major functions.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://www.elastic.co/security-labs/abyssworker
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: ''
+  MD5: 608f9ef01086e9a8bdb373925a878c3a
+  SHA1: 3bb535e63c8cf3fe20b188a01062e72d19dabb63
+  SHA256: c5400ae731464079590aad494bcf2e0799bb4281ea49baa9580ab2f1ee207861
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+Tags:
+- ACPIx86.sys

@@ -1,0 +1,43 @@
+Id: ca6455d1-b06e-496c-be33-f89c41b27540
+Author: Michael Haag
+Created: '2025-03-26'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create 8492937_2_Driver.sys binPath=C:\windows\temp\8492937_2_Driver.sys
+    type=kernel && sc.exe start 8492937_2_Driver.sys
+  Description: ABYSSWORKER is a malicious driver used in MEDUSA ransomware attacks
+    to disable EDR systems. The driver masquerades as a legitimate CrowdStrike Falcon
+    driver and provides extensive capabilities to terminate processes, remove security
+    callbacks, manipulate files, and disable security tools. It uses stolen certificates
+    from Chinese companies and requires a specific password for activation. The driver
+    was observed being deployed alongside HEARTCRYPT-packed loaders and provides attackers
+    with kernel-level capabilities to blind EDR products by removing notification
+    callbacks, detaching mini-filter devices, and replacing driver major functions.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://www.elastic.co/security-labs/abyssworker
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: ''
+  MD5: 84414d0f2ab10d509580dd84d24e6708
+  SHA1: db76d3e42e3785cb166a758ebe41d0c739440c70
+  SHA256: b2ff9ef50ae037bb003d7157ea8da008a48f715a78c644b5f027b070bf5eb049
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+Tags:
+- CSAgent.sys

@@ -1,0 +1,43 @@
+Id: bd6490c2-20ea-441e-803c-bc3b957dae4c
+Author: Michael Haag
+Created: '2025-03-26'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create isodrivep64.sys binPath=C:\windows\temp\isodrivep64.sys type=kernel
+    && sc.exe start isodrivep64.sys
+  Description: ABYSSWORKER is a malicious driver used in MEDUSA ransomware attacks
+    to disable EDR systems. The driver masquerades as a legitimate CrowdStrike Falcon
+    driver and provides extensive capabilities to terminate processes, remove security
+    callbacks, manipulate files, and disable security tools. It uses stolen certificates
+    from Chinese companies and requires a specific password for activation. The driver
+    was observed being deployed alongside HEARTCRYPT-packed loaders and provides attackers
+    with kernel-level capabilities to blind EDR products by removing notification
+    callbacks, detaching mini-filter devices, and replacing driver major functions.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://www.elastic.co/security-labs/abyssworker
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: ''
+  MD5: 1c9c646cf39c9e3ecd0e061bf5f21551
+  SHA1: 789812435106cca7b3b76773a067b1ae892cf862
+  SHA256: c619a7fbb27940428b80129e0fa2d976fce52f93ab37667d2ca01330c6c561a5
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: ''
+  OriginalFilename: ''
+Tags:
+- isodrivep64.sys
