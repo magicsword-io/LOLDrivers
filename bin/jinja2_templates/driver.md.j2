@@ -84,22 +84,22 @@ This download link contains the malicious driver!
 
 {% if driver.Category == 'malicious' %}
 
-{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_mal_drivers_strict.yar" "Exact Match" >}}{% endraw %}
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/other/yara-rules_mal_drivers_strict.yar" "Exact Match" >}}{% endraw %}
 {% raw %}{{< tip >}}with header and size limitation{{< /tip >}}{% endraw %} 
 
-{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_mal_drivers.yar" "Threat Hunting" >}}{% endraw %}
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_mal_drivers.yar" "Threat Hunting" >}}{% endraw %}
 {% raw %}{{< tip >}}without header and size limitation{{< /tip >}}{% endraw %} 
 
 
 {% elif driver.Category == 'vulnerable driver' %}
 
-{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict.yar" "Exact Match" >}}{% endraw %}
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict.yar" "Exact Match" >}}{% endraw %}
 {% raw %}{{< tip >}}with header and size limitation{{< /tip >}}{% endraw %} 
 
-{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{% endraw %}
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/other/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{% endraw %}
 {% raw %}{{< tip >}}without header and size limitation{{< /tip >}}{% endraw %} 
 
-{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar" "Renamed" >}}{% endraw %}
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/other/yara-rules_vuln_drivers_strict_renamed.yar" "Renamed" >}}{% endraw %}
 {% raw %}{{< tip >}}for renamed driver files{{< /tip >}}{% endraw %} 
 
 {% endif %}
@@ -117,11 +117,11 @@ This download link contains the malicious driver!
 #### Sigma 🛡️
 {% raw %}{{< details "Expand" >}}{% endraw %}
 
-{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{% endraw %}
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{% endraw %}
 {% raw %}{{< tip >}}detects loading using name only{{< /tip >}}{% endraw %} 
 
 
-{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{% endraw %}
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{% endraw %}
 {% raw %}{{< tip >}}detects loading using hashes only{{< /tip >}}{% endraw %} 
 
 {% raw %}{{< /details >}}{% endraw %}
@@ -137,10 +137,10 @@ This download link contains the malicious driver!
 #### Sysmon 🔎
 {% raw %}{{< details "Expand" >}}{% endraw %}
 
-{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{% endraw %}
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{% endraw %}
 {% raw %}{{< tip >}}on hashes{{< /tip >}}{% endraw %} 
 
-{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{% endraw %}
+{% raw %}{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{% endraw %}
 {% raw %}{{< tip >}}on hashes{{< /tip >}}{% endraw %} 
 
 {% raw %}{{< /details >}}{% endraw %}
@@ -295,7 +295,7 @@ This download link contains the malicious driver!
 {% endif %}
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml{{driver.kind}}/{{ driver.Id }}.yaml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml{{driver.kind}}/{{ driver.Id }}.yaml)
 
 *last_updated:* {{ time }}
 {% raw %}
