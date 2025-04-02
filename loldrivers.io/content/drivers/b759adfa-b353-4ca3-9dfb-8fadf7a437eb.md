@@ -52,9 +52,9 @@ sc.exe create spwizimgVT.sys binPath=C:\windows\temp\spwizimgVT.sys type=kernel 
 #### YARA 🏹
 {{< details "Expand" >}}
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_mal_drivers_strict.yar" "Exact Match" >}}{{< tip >}}with header and size limitation{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/other/yara-rules_mal_drivers_strict.yar" "Exact Match" >}}{{< tip >}}with header and size limitation{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_mal_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_mal_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
 
 
 
@@ -67,10 +67,10 @@ sc.exe create spwizimgVT.sys binPath=C:\windows\temp\spwizimgVT.sys type=kernel 
 
 #### Sigma 🛡️
 {{< details "Expand" >}}
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{{< tip >}}detects loading using name only{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{{< tip >}}detects loading using name only{{< /tip >}} 
 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{{< tip >}}detects loading using hashes only{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{{< tip >}}detects loading using hashes only{{< /tip >}} 
 
 {{< /details >}}
 
@@ -81,9 +81,9 @@ sc.exe create spwizimgVT.sys binPath=C:\windows\temp\spwizimgVT.sys type=kernel 
 
 #### Sysmon 🔎
 {{< details "Expand" >}}
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
 
 {{< /details >}}
 
@@ -340,9 +340,9 @@ sc.exe create spwizimgVT.sys binPath=C:\windows\temp\spwizimgVT.sys type=kernel 
 
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/b759adfa-b353-4ca3-9dfb-8fadf7a437eb.yaml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/b759adfa-b353-4ca3-9dfb-8fadf7a437eb.yaml)
 
-*last_updated:* 2025-03-26
+*last_updated:* 2025-04-02
 
 {{< /column >}}
 {{< /block >}}

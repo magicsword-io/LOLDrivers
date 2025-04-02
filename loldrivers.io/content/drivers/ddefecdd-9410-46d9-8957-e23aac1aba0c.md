@@ -48,9 +48,9 @@ sc.exe create c94f405c5929cfcccc8ad00b42c95083.sys binPath=C:\windows\temp\c94f4
 #### YARA 🏹
 {{< details "Expand" >}}
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_mal_drivers_strict.yar" "Exact Match" >}}{{< tip >}}with header and size limitation{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/other/yara-rules_mal_drivers_strict.yar" "Exact Match" >}}{{< tip >}}with header and size limitation{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_mal_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_mal_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
 
 
 
@@ -63,10 +63,10 @@ sc.exe create c94f405c5929cfcccc8ad00b42c95083.sys binPath=C:\windows\temp\c94f4
 
 #### Sigma 🛡️
 {{< details "Expand" >}}
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{{< tip >}}detects loading using name only{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{{< tip >}}detects loading using name only{{< /tip >}} 
 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{{< tip >}}detects loading using hashes only{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{{< tip >}}detects loading using hashes only{{< /tip >}} 
 
 {{< /details >}}
 
@@ -77,9 +77,9 @@ sc.exe create c94f405c5929cfcccc8ad00b42c95083.sys binPath=C:\windows\temp\c94f4
 
 #### Sysmon 🔎
 {{< details "Expand" >}}
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
 
 {{< /details >}}
 
@@ -340,9 +340,9 @@ sc.exe create c94f405c5929cfcccc8ad00b42c95083.sys binPath=C:\windows\temp\c94f4
 
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/ddefecdd-9410-46d9-8957-e23aac1aba0c.yaml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/ddefecdd-9410-46d9-8957-e23aac1aba0c.yaml)
 
-*last_updated:* 2025-03-26
+*last_updated:* 2025-04-02
 
 {{< /column >}}
 {{< /block >}}
