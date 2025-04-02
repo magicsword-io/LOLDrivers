@@ -1,0 +1,155 @@
+Id: bd6490c2-20ea-441e-803c-bc3b957dae4c
+Author: Michael Haag
+Created: '2025-03-26'
+MitreID: T1068
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create isodrivep64.sys binPath=C:\windows\temp\isodrivep64.sys type=kernel
+    && sc.exe start isodrivep64.sys
+  Description: ABYSSWORKER is a malicious driver used in MEDUSA ransomware attacks
+    to disable EDR systems. The driver masquerades as a legitimate CrowdStrike Falcon
+    driver and provides extensive capabilities to terminate processes, remove security
+    callbacks, manipulate files, and disable security tools. It uses stolen certificates
+    from Chinese companies and requires a specific password for activation. The driver
+    was observed being deployed alongside HEARTCRYPT-packed loaders and provides attackers
+    with kernel-level capabilities to blind EDR products by removing notification
+    callbacks, detaching mini-filter devices, and replacing driver major functions.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://www.elastic.co/security-labs/abyssworker
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: ''
+  MD5: 1c9c646cf39c9e3ecd0e061bf5f21551
+  SHA1: 789812435106cca7b3b76773a067b1ae892cf862
+  SHA256: c619a7fbb27940428b80129e0fa2d976fce52f93ab37667d2ca01330c6c561a5
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: 1.0.0.1
+  FileVersion: 1.0.0.1
+  MachineType: AMD64
+  OriginalFilename: ''
+  Imphash: f8796f0896e30bbe6f84e32eac7bc5f3
+  Authentihash:
+    MD5: 78f86c3fece63613c69e10cb5c322fb3
+    SHA1: 2ed4d5b6c23c3a12d6846fadd8f7136e93e5a5c3
+    SHA256: b87085d408c250bdaf933642aa64975a7127cbe393023aaf53d918cd8bf0e3ae
+  RichPEHeaderHash:
+    MD5: cfa89a681ebef15a8678442d8d4a0aed
+    SHA1: 5b938ced5d86d753077fc1202c5eb19a3ac274a5
+    SHA256: 7c6f1bc776d17fef13eeaf2083606087448982240254907019088d4ef80d5fcd
+  Sections:
+    .text:
+      Entropy: 0.0
+      Virtual Size: '0x5984a'
+    .rdata:
+      Entropy: 0.0
+      Virtual Size: '0x1e410'
+    .data:
+      Entropy: 0.0
+      Virtual Size: '0x11b38'
+    .pdata:
+      Entropy: 0.0
+      Virtual Size: '0x4e9c'
+    PAGE:
+      Entropy: 0.0
+      Virtual Size: '0x1987'
+    INIT:
+      Entropy: 0.0
+      Virtual Size: '0xbee'
+    .vmp0:
+      Entropy: 0.0
+      Virtual Size: '0x1552c'
+    .vmp1:
+      Entropy: 7.92322355142432
+      Virtual Size: '0x5fa9c'
+    .reloc:
+      Entropy: 2.749389675512395
+      Virtual Size: '0x18'
+    .rsrc:
+      Entropy: 2.807578361522151
+      Virtual Size: '0x198'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2022-05-10 22:14:49'
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - NETIO.SYS
+  - ntoskrnl.exe
+  - HAL.dll
+  - ntoskrnl.exe
+  - HAL.dll
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - WskRegister
+  - KeSetPriorityThread
+  - KeQueryPerformanceCounter
+  - IoAllocateMdl
+  - MmProbeAndLockPages
+  - MmMapLockedPagesSpecifyCache
+  - MmUnlockPages
+  - IoFreeMdl
+  - ExAllocatePool
+  - ExFreePool
+  - NtQuerySystemInformation
+  - HalMakeBeep
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: CN=FEI XIAO,OU=Individual Developer,O=No Organization Affiliation,L=Jiaonan,ST=Shandong,C=CN
+      ValidFrom: '2013-04-09 00:00:00'
+      ValidTo: '2014-04-09 23:59:59'
+      Signature: b5b7c561721afb2d9309e5d841a18f9bbf7099e9f5b91c949dc4527c998204ccaac2824ec8a00ffedb51f4113001531b4715ddf89ad4379f5b3521bb1fba0b432ea35ca930e3869ec27ece21f2415ac9add420f3fa3be8bc64657002134f5d2f7b534d9341548eab7773b4ba53dd441eae8a2418624b66fa6c4a4744e4439c6604ebfe0a7a0892392955697213c3b75e7082af156fcb3169da196161b7c6f588a01909b076d26ef7344ae33ab9e461575f690f5407d05385962baaa8850b3af5fe1e14456c990e656327010b12bda0f8be86a4bdd55c296e13e9895fd91df1bb3beb96719d9b9f53432034f9a6462e993c16fe71374c8ae229c8c642379686dd
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 7f67150fbb0d254e474284c7f7819c4f
+      Version: 3
+      TBS:
+        MD5: 37f3c75288f06dcd39025a0b2a947217
+        SHA1: 03f6b4f0c154fd95079939c2be18e9c1b4629ad6
+        SHA256: fc3c47fa96efad0037b5bba251953c084e5dd0959408b55367ed37bf5cf418d1
+        SHA384: 5c5a2a0e3ee8a01b814dee1d9db8d03dd0c9bcd14649c8b87c6f1139d31e80cffcb8d9bfed219ba592dd19141aacd990
+    - Subject: CN=Thawte Code Signing CA , G2,O=Thawte, Inc.,C=US
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: 56fe535ce1c79ebca7ed7e536d6a144b518c405e805faaa4e82fef38c804c9ca3ecfdf3a584eb0d4b663c52957fa02059a454d68db2a1bd4343d9f00c35acb9549a56ee1b0c5fc414d414a6fd377c8d7388de419de18f31f1565836d450c53f90a9a2ea55dbf6f32811892196a5500ad631c52067e55d92968ae4a7c189a79886b2323d827382a298776cafbc7b662231fed7a564cdd9c325bf53d0c4618953b2a2368836441d9006d0f1924156872bdc571676eac4cdb90eb51a51a6207d0be6a00473c722fec4f613e7385ce5a0ab7bac01c1375e3223928dd6d1d09469d4fbae8408191c6a4ce94721b01cf2a6e15679589ae7db7b7cdf90a3d75b66b3c25
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 47974d7873a5bcab0d2fb370192fce5e
+      Version: 3
+      TBS:
+        MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
+        SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
+        SHA256: d8844186775bddbccaf3dc017064df7d760fd4b85c5d07561a3efd7da950f89e
+        SHA384: 78d972495720b43a6470b18ae1226bcca20707628087717a9364c14ca053ba264e6d149718b103542d9942200138a69d
+    - Subject: CN=thawte Primary Root CA,OU=(c) 2006 thawte, Inc. , For authorized
+        use only,OU=Certification Services Division,O=thawte, Inc.,C=US
+      ValidFrom: '2011-02-22 19:31:57'
+      ValidTo: '2021-02-22 19:41:57'
+      Signature: 2dcc71b5e8ba94ff5ee64467007b6afc412c3ee70e41855ab12a932ba95b89f2f72b499c8003f297b8e760a80ed7fd5de545467594f4ed1c9de166228b61fb29f2c6a8bdf387c98f7f47e1c058b64a1aa2e7f718606969e083069e26c775c40c0d79da746b52b9fae8ea3359b9bb18dd291a14dfd36a37277a9da0dacffffc22c4faf009ff33e93e17ba1cc742cfce2743d30c0c5581303db96060ce02ece19ee81ddc852ce0a18d966d95ac17a4713ea16741b6281d2ce3b615e5b7e5a2f6256d86e320acf9f8314f8e629b9833376d6af735523e90feb03b5fc5b852a9e06ea0479a279e97aea24a9e531939ec357ec659de3ae0aaf533f06abda0821812dea18c4570ca2bd62e959145995a5c240049bd23b30ceca43df5b9e1d1b1825a38eea3fba1ab483a8c5dffa065223fd3d3fe4990db1446a3852e8a554b09ab38b2ab63a008d1fdad48e273d812bcc26ca516fad09ac05e38383a2b718e553aac42197a1f0d4220e7ab5d8c6880524ca1c0d488d02321fb901309007b4937afa9df486022abf4f6c2363bf8513c34bbc586e43ae19f4b90fe5461024b159c34176aa94b8d4cb69d2326c83af1d6b805cdda1d6240183a2f1b41cd3a993a0aa9d1d77eb8c4aff7b8c980105ed55df6ce7a9a02c50f6381efb564e9fc5bd8d2619a68c37cf9c78df91e87d5fa2cf816ae9dab068fc86dc741cda14e84e3dac26ebcfb
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611fb0a400000000001d
+      Version: 3
+      TBS:
+        MD5: a3f222107d4e1085e73b5b589c2f480b
+        SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
+        SHA256: a39ed0d6fd4eb1a6f7fed60f726e23eae668b7591bc004644625d22c701213fa
+        SHA384: 64b7643e4146016cbf83c911eb67e4601b6bb8d66f8ee8dcee67b815f91770d86ab23678b984430f22a963e5484881b7
+    Signer:
+    - SerialNumber: 7f67150fbb0d254e474284c7f7819c4f
+      Issuer: CN=Thawte Code Signing CA , G2,O=Thawte, Inc.,C=US
+      Version: 1
+Tags:
+- isodrivep64.sys
