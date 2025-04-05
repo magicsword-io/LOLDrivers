@@ -252,3 +252,188 @@ KnownVulnerableSamples:
                 Signing 2004 CA
             Version: 1
     LoadsDespiteHVCI: 'FALSE'
+- Filename: amdi2c.sys
+  SHA256: 15e84d040c2756b2d1b6c3f99d5a1079dc8854844d3c24d740fafd8c668e5fb9
+  MD5: b4eaacce30f51eaf2a36cea680b45a66
+  SHA1: 94493d7739c5ee7346da31d9523404d62682b195
+  Imphash: 9e7c36ff0dc8862002283773ace05f9e
+  Authentihash:
+    MD5: 5dc807d139dd6bfaa485cc32b65c5677
+    SHA1: 47e517f8a5cf5259f3a35c7c4000d4cf07f288d5
+    SHA256: 37d07c39dc10ae82a9d292c74f7c5f93c7bc133a0225402dafc21f664af079b6
+  RichPEHeaderHash:
+    MD5: 7401835ee57bfad89c8355b1bd87ef20
+    SHA1: 5467c4177559d5b83ce52dd4c8f1366c7ad5ca20
+    SHA256: b40447d856fa680f34064911a1f0285f58dac4ec40e90b306c546ce11615a005
+  Sections:
+    .text:
+      Entropy: 6.326690300828168
+      Virtual Size: '0xa0b8'
+    .rdata:
+      Entropy: 5.328583885941854
+      Virtual Size: '0xca0'
+    .data:
+      Entropy: 0.6238885848006501
+      Virtual Size: '0x7e0'
+    .pdata:
+      Entropy: 4.439637717036265
+      Virtual Size: '0x480'
+    INIT:
+      Entropy: 5.125170195862426
+      Virtual Size: '0xcc4'
+    .rsrc:
+      Entropy: 3.309535713036311
+      Virtual Size: '0x3a8'
+    .reloc:
+      Entropy: 1.2636865525783176
+      Virtual Size: '0x30'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2010-02-01 20:16:19'
+  Description: AMD I2C Controller Driver
+  Company: Advanced Micro Devices, Inc
+  InternalName: amdi2c.sys
+  OriginalFilename: amdi2c.sys
+  FileVersion: 1.2.0.124
+  Product: AMD I2C Controller Driver
+  ProductVersion: 1.2.0.124
+  Copyright: "Copyright \xA9 2014-2023 Advanced Micro Devices, Inc"
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - PsLookupProcessByProcessId
+  - RtlDowncaseUnicodeString
+  - RtlInitUnicodeString
+  - KeSetEvent
+  - MmGetSystemRoutineAddress
+  - KeInitializeEvent
+  - ZwQuerySystemInformation
+  - KeReleaseSpinLock
+  - KeUnstackDetachProcess
+  - KeInitializeTimer
+  - PsCreateSystemThread
+  - DbgBreakPoint
+  - ZwQueryValueKey
+  - ExAllocatePool
+  - ExInterlockedInsertTailList
+  - PsTerminateSystemThread
+  - KeQueryTimeIncrement
+  - ZwClose
+  - ObReferenceObjectByHandle
+  - KeWaitForSingleObject
+  - KeSetTimer
+  - PsGetVersion
+  - ExInterlockedRemoveHeadList
+  - ZwQueryInformationProcess
+  - PsGetCurrentProcessId
+  - ObfDereferenceObject
+  - KeCancelTimer
+  - ZwQueryInformationFile
+  - KeWaitForMultipleObjects
+  - RtlUpcaseUnicodeChar
+  - ObOpenObjectByPointer
+  - KeStackAttachProcess
+  - PsLookupThreadByThreadId
+  - ZwAllocateVirtualMemory
+  - ZwOpenKey
+  - KeAcquireSpinLockRaiseToDpc
+  - ExReleaseFastMutex
+  - RtlAnsiStringToUnicodeString
+  - ExAcquireFastMutex
+  - PsSetLoadImageNotifyRoutine
+  - IoFreeWorkItem
+  - RtlInitAnsiString
+  - PsSetCreateThreadNotifyRoutine
+  - RtlUnicodeStringToAnsiString
+  - PsSetCreateProcessNotifyRoutine
+  - RtlEqualUnicodeString
+  - RtlFreeUnicodeString
+  - IoAllocateWorkItem
+  - ZwOpenProcess
+  - RtlCompareMemory
+  - FsRtlDissectName
+  - PsGetCurrentThreadId
+  - IoQueueWorkItem
+  - ExAcquireResourceExclusiveLite
+  - KeLeaveCriticalRegion
+  - RtlAppendUnicodeToString
+  - ZwDeleteValueKey
+  - ZwSetValueKey
+  - RtlDeleteNoSplay
+  - KeEnterCriticalRegion
+  - ObQueryNameString
+  - ExReleaseResourceLite
+  - ZwEnumerateValueKey
+  - RtlAppendUnicodeStringToString
+  - RtlCompareUnicodeString
+  - RtlCopyUnicodeString
+  - ExInitializeResourceLite
+  - ZwDeleteKey
+  - RtlSplay
+  - ZwEnumerateKey
+  - ZwQueryKey
+  - IoBuildDeviceIoControlRequest
+  - IoDeleteDevice
+  - IoGetDeviceObjectPointer
+  - InitSafeBootMode
+  - IofCompleteRequest
+  - IoGetRequestorProcessId
+  - IoCreateSymbolicLink
+  - MmIsAddressValid
+  - IoCreateDevice
+  - ZwTerminateProcess
+  - IofCallDriver
+  - ZwOpenThread
+  - RtlDeleteElementGenericTableAvl
+  - RtlInsertElementGenericTableAvl
+  - ZwReadFile
+  - RtlGetElementGenericTableAvl
+  - IoCreateFile
+  - RtlIsGenericTableEmptyAvl
+  - ExAcquireResourceSharedLite
+  - RtlInitializeGenericTableAvl
+  - RtlUnicodeStringToInteger
+  - RtlLookupElementGenericTableAvl
+  - RtlEnumerateGenericTableWithoutSplayingAvl
+  - KeBugCheckEx
+  - __C_specific_handler
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Hardware Compatibility Publisher
+      ValidFrom: '2024-10-10 19:04:53'
+      ValidTo: '2025-10-08 19:04:53'
+      Signature: 3870e583035a72db64856d80e17833cd3badd24f19abf9a3d7c7485743dd875f69102820df4992d74f8fba0529be4e16f4234910064a3a1863299a29b82d3fac869915a368ec0e5d0127282221bce84db444d2e9974dc2761a2080a7bc7508d7064f32b2d97b0263d0d937527a8af95f18bcb54ec21a453ba35e55869791416a2a8813fcf95e889e65158dbb5b4cba653c989179947d286051ef6b0d56f41da479db08c6b93c44fa5c8399e126594cc53dfa756180607a1dd29559061d828b0ce2c5a462245ed0995a196ad96223b6eb1a787b4d10b5a7d4e3a130750103bc9c713fc8f32015273bb238b15aae25e4765d7ab81c5d3df82ef6a7d3c2e7a61dab024ff02df6876a86ec7198aa6e28c8e69a015129a717b1036113911f0aeefa8d05081974d026196f24bc1e4ef942599fafbd1b2c316bda73237f1822296888df2344c92b08c363976beb7020242b3069e6691f19e715e1d1a19ddc03235263c9bb7b8390145af57603105ced358f394547e3be96718835917234eb7fd7134d9fb605656717ed6b15f0583068c84c6c01abf31cc1df1fe7c4d2935590e6017cf8cc5635e1cd7054240fd0059f168e90ec1a49f24e0f050034d99e4aa6599a64d280d00ea8af57d3125caddb342a0b2c160a2f95d97e6045e69dc1c1b3fa56dfd40380ce60536a59750edf0069dc7c27f8ccc8f073b46d169b8fed1fd40ac6f00c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 330000006e1229856f0ade6cfc00000000006e
+      Version: 3
+      TBS:
+        MD5: 3066a9830894e57ce6e47f7a6b58b84f
+        SHA1: ce441ecd2f11e400515a85d5a592da38f950f3dc
+        SHA256: 3e30a731a3b620db0971ecd743ecd312bcdf14c82b9bdc9918102bacbf70520d
+        SHA384: 68c6537d64e3a4f02a2c1d04257c13ab1def23c9c54bafc434176be50a411a75c118c9f8edc81f97b8a1db2dc1d009e3
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      ValidFrom: '2014-10-15 20:31:27'
+      ValidTo: '2029-10-15 20:41:27'
+      Signature: 96b5c33b31f27b6ba11f59dd742c3764b1bca093f9f33347e9f95df21d89f4579ee33f10a3595018053b142941b6a70e5b81a2ccbd8442c1c4bed184c2c4bd0c8c47bcbd8886fb5a0896ae2c2fdfbf9366a32b20ca848a6945273f732332936a23e9fffdd918edceffbd6b41738d579cf8b46d499805e6a335a9f07e6e86c06ba8086725afc0998cdba7064d4093188ba959e69914b912178144ac57c3ae8eae947bcb3b8edd7ab4715bba2bc3c7d085234b371277a54a2f7f1ab763b94459ed9230cce47c099212111f52f51e0291a4d7d7e58f8047ff189b7fd19c0671dcf376197790d52a0fbc6c12c4c50c2066f50e2f5093d8cafb7fe556ed09d8a753b1c72a6978dcf05fe74b20b6af63b5e1b15c804e9c7aa91d4df72846782106954d32dd6042e4b61ac4f24636de357302c1b5e55fb92b59457a9243d7c4e963dd368f76c728caa8441be8321a66cde5485c4a0a602b469206609698dcd933d721777f886dac4772daa2466eab64682bd24e98fb35cc7fec3f136d11e5db77edc1c37e1f6a4a14f8b4a721c671866770cdd819a35d1fa09b9a7cc55d4d728e74077fa74d00fcdd682412772a557527cda92c1d8e7c19ee692c9f7425338208db38cc7cc74f6c3a6bc237117872fe55596460333e2edfc42de72cd7fb0a82256fb8d70c84a5e1c4746e2a95329ea0fecdb4188fd33bad32b2b19ab86d0543fbff0d0f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 330000000d690d5d7893d076df00000000000d
+      Version: 3
+      TBS:
+        MD5: 83f69422963f11c3c340b81712eef319
+        SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
+        SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
+    Signer:
+    - SerialNumber: 330000006e1229856f0ade6cfc00000000006e
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Third Party Component CA 2014
+      Version: 1
