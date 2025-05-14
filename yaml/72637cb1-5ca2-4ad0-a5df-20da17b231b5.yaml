@@ -7,228 +7,237 @@ Created: '2023-02-28'
 MitreID: T1068
 Category: malicious
 Commands:
-    Command: sc.exe create wantd_4.sys binPath=C:\windows\temp\wantd_4.sys type=kernel
-        && sc.exe start wantd_4.sys
-    Description: Driver used in the Daxin malware campaign.
-    OperatingSystem: Windows 10
-    Privileges: kernel
-    Usecase: Elevate privileges
+  Command: sc.exe create wantd_4.sys binPath=C:\windows\temp\wantd_4.sys type=kernel
+    && sc.exe start wantd_4.sys
+  Description: Driver used in the Daxin malware campaign.
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
 Resources:
 - https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
 - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
 - ''
 Detection:
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/8d9a2363b757d3f127b9c6ed8f7b8b018e652369bc070aa3500b3a978feaa6ce.yara
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_mal_drivers_strict.yar
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/8d9a2363b757d3f127b9c6ed8f7b8b018e652369bc070aa3500b3a978feaa6ce.yara
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_mal_drivers_strict.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Acknowledgement:
-    Handle: ''
-    Person: ''
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
--   Authentihash:
-        MD5: 00a677b8d21de4be1c7c16f2f105dbc6
-        SHA1: a10f5c6c4d5ae78f0ca771328c74eb9fc51e593d
-        SHA256: 3f55375fb70cb355fe7de7f59904b12ef996447cbc7113fefa379995e040d678
-    Company: Microsoft Corporation
-    Copyright: Microsoft Corporation. All rights reserved.
-    CreationTimestamp: '2013-11-27 16:59:02'
-    Date: ''
-    Description: WAN Transport Driver
-    ExportedFunctions: ''
-    FileVersion: 6.1.7600.1172
-    Filename: wantd_4.sys
-    ImportedFunctions:
-    - wcsncmp
-    - IoAllocateMdl
-    - _stricmp
-    - sprintf
-    - RtlLengthRequiredSid
-    - _strnicmp
-    - ExAllocatePoolWithTag
-    - vsprintf
-    - IoDeleteSymbolicLink
-    - ExFreePoolWithTag
-    - RtlAnsiStringToUnicodeString
-    - NtWriteFile
-    - RtlCreateAcl
-    - PsLookupProcessByProcessId
-    - NtQuerySystemInformation
-    - _wcsnicmp
-    - ZwReadFile
-    - RtlSetDaclSecurityDescriptor
-    - KeInitializeApc
-    - IoDeleteDevice
-    - NtFsControlFile
-    - KeInsertQueueApc
-    - MmGetSystemRoutineAddress
-    - IoCreateFile
-    - atoi
-    - _snprintf
-    - ZwQuerySystemInformation
-    - KeReleaseSpinLock
-    - RtlAddAccessAllowedAce
-    - RtlImageDirectoryEntryToData
-    - KeDetachProcess
-    - ZwOpenFile
-    - ZwCreateFile
-    - PsCreateSystemThread
-    - ZwQueryValueKey
-    - PsTerminateSystemThread
-    - ZwFreeVirtualMemory
-    - KeQueryTimeIncrement
-    - ObReferenceObjectByHandle
-    - KeWaitForSingleObject
-    - KeAttachProcess
-    - PsGetVersion
-    - PsThreadType
-    - RtlCompareUnicodeString
-    - ZwOpenProcess
-    - ZwQueryInformationProcess
-    - IoCreateSymbolicLink
-    - ObfDereferenceObject
-    - IoCreateDevice
-    - ZwTerminateProcess
-    - ZwQueryInformationFile
-    - KeWaitForMultipleObjects
-    - ZwWriteFile
-    - NtReadFile
-    - PsLookupThreadByThreadId
-    - RtlLengthSid
-    - RtlCreateSecurityDescriptor
-    - ZwAllocateVirtualMemory
-    - ZwOpenKey
-    - KeAcquireSpinLockRaiseToDpc
-    - RtlUnicodeStringToInteger
-    - MmIsAddressValid
-    - ZwDeviceIoControlFile
-    - IofCompleteRequest
-    - ZwClose
-    - MmMapLockedPagesSpecifyCache
-    - KeDelayExecutionThread
-    - MmUserProbeAddress
-    - MmBuildMdlForNonPagedPool
-    - memchr
-    - ZwWaitForSingleObject
-    - RtlInitUnicodeString
-    - NdisAllocateMemoryWithTag
-    - NdisAllocateNetBufferAndNetBufferList
-    - NdisMSendNetBufferListsComplete
-    - NdisReturnNetBufferLists
-    - NdisAllocateNetBufferListPool
-    - NdisFreeMemory
-    - NdisMIndicateStatus
-    - NdisFreeMdl
-    - NdisFreeNetBufferListPool
-    - NdisFreeNetBufferList
-    - NdisSendNetBufferLists
-    Imports:
-    - ntoskrnl.exe
-    - NDIS.SYS
-    InternalName: wantd.sys
-    MD5: 79df0eabbf2895e4e2dae15a4772868c
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: wantd.sys
-    Product: Microsoft Windows Operating System
-    ProductVersion: 6.1.7600.1172
-    Publisher: Anhua Xinda (Beijing) Technology Co., Ltd.
-    RichPEHeaderHash:
-        MD5: 8cdd468850a9084b109fb26005e28d1f
-        SHA1: abee83f631fc7792dc07a572a003c103903f305e
-        SHA256: aa49c3910540c2edd0e4a9154e5741d5cc65662a1364616e057ca3fc74243755
-    SHA1: d02403f85be6f243054395a873b41ef8a17ea279
-    SHA256: 8d9a2363b757d3f127b9c6ed8f7b8b018e652369bc070aa3500b3a978feaa6ce
-    Sections:
-        .text:
-            Entropy: 6.377924141957717
-            Virtual Size: '0xd88c'
-        .rdata:
-            Entropy: 4.702371843577182
-            Virtual Size: '0x84c'
-        .data:
-            Entropy: 1.0571423331776753
-            Virtual Size: '0x12590'
-        .pdata:
-            Entropy: 4.5393227380510455
-            Virtual Size: '0x8c4'
-        INIT:
-            Entropy: 5.794638723454717
-            Virtual Size: '0xd8c'
-        .rsrc:
-            Entropy: 3.262685485179719
-            Virtual Size: '0x3b0'
-    Signature: The digital signature of the object did not verify.
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=CN, ST=Beijing, L=Beijing, O=Anhua Xinda (Beijing) Technology
-                Co., Ltd., OU=Digital ID Class 3 , Microsoft Software Validation v2,
-                CN=Anhua Xinda (Beijing) Technology Co., Ltd.
-            ValidFrom: '2011-06-28 00:00:00'
-            ValidTo: '2014-06-27 23:59:59'
-            Signature: 75446640570a5790bb9af0f472df1738c47e362aedd568599f66a121e1c27b51008ca2e0d72ed727e61ee0c76a578dc56de22c5ee58136db144fc68aca0fd0196d70716bd8c9d19b5fdd8a147d749367a953604b24502efdd039577033df13b8d20a8cc7ca4829a303c11e7f6bf3c370d98b64b875ca3745546285bb70c204467968b1c4a416b0636c590dff6f7a3091ed00351c626e32e859bdd58d363940a5ed33d121e423d2ba1b8ad85c5c1296e23d627e0aafe9268945bce9567c38719621eecdde83a74139fb3e0920a32e558fd64c0149cfec10f4b82fdcc8cdaed4011977c2169035b71edc68fabaf43d59f989ee5d97ec94eaa05ef2a62bfc480fa9
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 387c9476e28320264594846317d46540
-            Version: 3
-            TBS:
-                MD5: ce372214eabe9d311e4a156fe2044327
-                SHA1: 7f7eb1a547c9b0b2e41b0f44515dfd20c16edceb
-                SHA256: 03d59cc81c6960a93ab4b02e5521aa9fb349e8d7df9dfdf675201e48c23b5a34
-                SHA384: 4b8829bc6980e82affeb7ad29efb59fc3ca9b02d015e6c0f385b9f2cf275609cd45936659f41fce579c073e34c2ca308
-        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006
-                VeriSign, Inc. , For authorized use only, CN=VeriSign Class 3 Public
-                Primary Certification Authority , G5
-            ValidFrom: '2011-02-22 19:25:17'
-            ValidTo: '2021-02-22 19:35:17'
-            Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 611993e400000000001c
-            Version: 3
-            TBS:
-                MD5: 78a717e082dcc1cda3458d917e677d14
-                SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
-                SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
-                SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
-        -   Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
-                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
-                Signing 2010 CA
-            ValidFrom: '2010-02-08 00:00:00'
-            ValidTo: '2020-02-07 23:59:59'
-            Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
-            Version: 3
-            TBS:
-                MD5: b30c31a572b0409383ed3fbe17e56e81
-                SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
-                SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
-                SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
-        Signer:
-        -   SerialNumber: 387c9476e28320264594846317d46540
-            Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of
-                use at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code
-                Signing 2010 CA
-            Version: 1
-    Imphash: c32d9a9af7f702814e1368c689877f3a
-    LoadsDespiteHVCI: 'TRUE'
+- Authentihash:
+    MD5: 00a677b8d21de4be1c7c16f2f105dbc6
+    SHA1: a10f5c6c4d5ae78f0ca771328c74eb9fc51e593d
+    SHA256: 3f55375fb70cb355fe7de7f59904b12ef996447cbc7113fefa379995e040d678
+  Company: Microsoft Corporation
+  Copyright: Microsoft Corporation. All rights reserved.
+  CreationTimestamp: '2013-11-27 18:59:02'
+  Date: ''
+  Description: WAN Transport Driver
+  ExportedFunctions: ''
+  FileVersion: 6.1.7600.1172
+  Filename: wantd_4.sys
+  ImportedFunctions:
+  - wcsncmp
+  - IoAllocateMdl
+  - _stricmp
+  - sprintf
+  - RtlLengthRequiredSid
+  - _strnicmp
+  - ExAllocatePoolWithTag
+  - vsprintf
+  - IoDeleteSymbolicLink
+  - ExFreePoolWithTag
+  - RtlAnsiStringToUnicodeString
+  - NtWriteFile
+  - RtlCreateAcl
+  - PsLookupProcessByProcessId
+  - NtQuerySystemInformation
+  - _wcsnicmp
+  - ZwReadFile
+  - RtlSetDaclSecurityDescriptor
+  - KeInitializeApc
+  - IoDeleteDevice
+  - NtFsControlFile
+  - KeInsertQueueApc
+  - MmGetSystemRoutineAddress
+  - IoCreateFile
+  - atoi
+  - _snprintf
+  - ZwQuerySystemInformation
+  - KeReleaseSpinLock
+  - RtlAddAccessAllowedAce
+  - RtlImageDirectoryEntryToData
+  - KeDetachProcess
+  - ZwOpenFile
+  - ZwCreateFile
+  - PsCreateSystemThread
+  - ZwQueryValueKey
+  - PsTerminateSystemThread
+  - ZwFreeVirtualMemory
+  - KeQueryTimeIncrement
+  - ObReferenceObjectByHandle
+  - KeWaitForSingleObject
+  - KeAttachProcess
+  - PsGetVersion
+  - PsThreadType
+  - RtlCompareUnicodeString
+  - ZwOpenProcess
+  - ZwQueryInformationProcess
+  - IoCreateSymbolicLink
+  - ObfDereferenceObject
+  - IoCreateDevice
+  - ZwTerminateProcess
+  - ZwQueryInformationFile
+  - KeWaitForMultipleObjects
+  - ZwWriteFile
+  - NtReadFile
+  - PsLookupThreadByThreadId
+  - RtlLengthSid
+  - RtlCreateSecurityDescriptor
+  - ZwAllocateVirtualMemory
+  - ZwOpenKey
+  - KeAcquireSpinLockRaiseToDpc
+  - RtlUnicodeStringToInteger
+  - MmIsAddressValid
+  - ZwDeviceIoControlFile
+  - IofCompleteRequest
+  - ZwClose
+  - MmMapLockedPagesSpecifyCache
+  - KeDelayExecutionThread
+  - MmUserProbeAddress
+  - MmBuildMdlForNonPagedPool
+  - memchr
+  - ZwWaitForSingleObject
+  - RtlInitUnicodeString
+  - NdisAllocateMemoryWithTag
+  - NdisAllocateNetBufferAndNetBufferList
+  - NdisMSendNetBufferListsComplete
+  - NdisReturnNetBufferLists
+  - NdisAllocateNetBufferListPool
+  - NdisFreeMemory
+  - NdisMIndicateStatus
+  - NdisFreeMdl
+  - NdisFreeNetBufferListPool
+  - NdisFreeNetBufferList
+  - NdisSendNetBufferLists
+  Imports:
+  - ntoskrnl.exe
+  - NDIS.SYS
+  InternalName: wantd.sys
+  MD5: 79df0eabbf2895e4e2dae15a4772868c
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: wantd.sys
+  Product: Microsoft Windows Operating System
+  ProductVersion: 6.1.7600.1172
+  Publisher: Anhua Xinda (Beijing) Technology Co., Ltd.
+  RichPEHeaderHash:
+    MD5: 8cdd468850a9084b109fb26005e28d1f
+    SHA1: abee83f631fc7792dc07a572a003c103903f305e
+    SHA256: aa49c3910540c2edd0e4a9154e5741d5cc65662a1364616e057ca3fc74243755
+  SHA1: d02403f85be6f243054395a873b41ef8a17ea279
+  SHA256: 8d9a2363b757d3f127b9c6ed8f7b8b018e652369bc070aa3500b3a978feaa6ce
+  Sections:
+    .text:
+      Entropy: 6.377924141957717
+      Virtual Size: '0xd88c'
+    .rdata:
+      Entropy: 4.702371843577182
+      Virtual Size: '0x84c'
+    .data:
+      Entropy: 1.0571423331776753
+      Virtual Size: '0x12590'
+    .pdata:
+      Entropy: 4.5393227380510455
+      Virtual Size: '0x8c4'
+    INIT:
+      Entropy: 5.794638723454717
+      Virtual Size: '0xd8c'
+    .rsrc:
+      Entropy: 3.262685485179719
+      Virtual Size: '0x3b0'
+  Signature: The digital signature of the object did not verify.
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=CN, ST=Beijing, L=Beijing, O=Anhua Xinda (Beijing) Technology Co.,
+        Ltd., OU=Digital ID Class 3 , Microsoft Software Validation v2, CN=Anhua Xinda
+        (Beijing) Technology Co., Ltd.
+      ValidFrom: '2011-06-28 00:00:00'
+      ValidTo: '2014-06-27 23:59:59'
+      Signature: 75446640570a5790bb9af0f472df1738c47e362aedd568599f66a121e1c27b51008ca2e0d72ed727e61ee0c76a578dc56de22c5ee58136db144fc68aca0fd0196d70716bd8c9d19b5fdd8a147d749367a953604b24502efdd039577033df13b8d20a8cc7ca4829a303c11e7f6bf3c370d98b64b875ca3745546285bb70c204467968b1c4a416b0636c590dff6f7a3091ed00351c626e32e859bdd58d363940a5ed33d121e423d2ba1b8ad85c5c1296e23d627e0aafe9268945bce9567c38719621eecdde83a74139fb3e0920a32e558fd64c0149cfec10f4b82fdcc8cdaed4011977c2169035b71edc68fabaf43d59f989ee5d97ec94eaa05ef2a62bfc480fa9
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 387c9476e28320264594846317d46540
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: ce372214eabe9d311e4a156fe2044327
+        SHA1: 7f7eb1a547c9b0b2e41b0f44515dfd20c16edceb
+        SHA256: 03d59cc81c6960a93ab4b02e5521aa9fb349e8d7df9dfdf675201e48c23b5a34
+        SHA384: 4b8829bc6980e82affeb7ad29efb59fc3ca9b02d015e6c0f385b9f2cf275609cd45936659f41fce579c073e34c2ca308
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
+        Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
+        Authority , G5
+      ValidFrom: '2011-02-22 19:25:17'
+      ValidTo: '2021-02-22 19:35:17'
+      Signature: 812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611993e400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 78a717e082dcc1cda3458d917e677d14
+        SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
+        SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
+    - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
+        at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      ValidFrom: '2010-02-08 00:00:00'
+      ValidTo: '2020-02-07 23:59:59'
+      Signature: 5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: b30c31a572b0409383ed3fbe17e56e81
+        SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
+        SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
+    Signer:
+    - SerialNumber: 387c9476e28320264594846317d46540
+      Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
+        https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
+        CA
+      Version: 1
+  Imphash: c32d9a9af7f702814e1368c689877f3a
+  LoadsDespiteHVCI: 'TRUE'

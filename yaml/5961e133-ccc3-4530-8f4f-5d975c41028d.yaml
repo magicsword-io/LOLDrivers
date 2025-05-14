@@ -9,766 +9,812 @@ CVE:
 - ''
 Category: vulnerable drivers
 Commands:
-    Command: ''
-    Description: Confirmed vulnerable driver from Microsoft Block List
-    OperatingSystem: Windows
-    Privileges: kernel
-    Usecase: Elevate privileges
+  Command: ''
+  Description: Confirmed vulnerable driver from Microsoft Block List
+  OperatingSystem: Windows
+  Privileges: kernel
+  Usecase: Elevate privileges
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Acknowledgement:
-    Handle: ''
-    Person: ''
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
--   Authentihash:
-        MD5: 26cbbcf09fcbba64d93342c273c480d2
-        SHA1: 7aa2c4c51afc1c82beae55ab9ca7ba0bb588b5c0
-        SHA256: df4e25990742fc8d3aed70f6cb4d402e111e7ed08fa5f76aca685b8c03b98b93
-    Company: Windows (R) Win 7 DDK provider
-    Copyright: Copyright  2020 nn.com
-    CreationTimestamp: '2020-05-12 20:43:44'
-    Date: ''
-    Description: Leigod net data catcher.
-    ExportedFunctions: ''
-    FileVersion: 1.0.0.0
-    Filename: ''
-    ImportedFunctions:
-    - FwpmFreeMemory0
-    - FwpmEngineOpen0
-    - FwpmEngineClose0
-    - FwpmTransactionBegin0
-    - FwpmTransactionCommit0
-    - FwpmTransactionAbort0
-    - FwpmProviderAdd0
-    - FwpmProviderContextDeleteByKey0
-    - FwpmSubLayerAdd0
-    - FwpmSubLayerDeleteByKey0
-    - FwpmSubLayerCreateEnumHandle0
-    - FwpmSubLayerEnum0
-    - FwpmSubLayerDestroyEnumHandle0
-    - FwpmCalloutAdd0
-    - FwpmFilterAdd0
-    - FwpsFlowAbort0
-    - FwpsInjectionHandleCreate0
-    - FwpsQueryPacketInjectionState0
-    - FwpsAllocateNetBufferAndNetBufferList0
-    - FwpsFreeNetBufferList0
-    - FwpsFreeCloneNetBufferList0
-    - FwpsInjectNetworkSendAsync0
-    - FwpsConstructIpHeaderForTransportPacket0
-    - FwpsInjectTransportSendAsync0
-    - FwpsInjectTransportReceiveAsync0
-    - FwpsInjectNetworkReceiveAsync0
-    - FwpsStreamInjectAsync0
-    - FwpsCopyStreamDataToBuffer0
-    - FwpmBfeStateGet0
-    - FwpmBfeStateSubscribeChanges0
-    - FwpmBfeStateUnsubscribeChanges0
-    - FwpsFlowRemoveContext0
-    - FwpsCompleteClassify0
-    - FwpsRedirectHandleDestroy0
-    - FwpsCloneStreamData0
-    - FwpsDiscardClonedStreamData0
-    - FwpsRedirectHandleCreate0
-    - FwpsApplyModifiedLayerData0
-    - FwpsAcquireWritableLayerDataPointer0
-    - FwpsReleaseClassifyHandle0
-    - FwpsAcquireClassifyHandle0
-    - FwpsFlowAssociateContext0
-    - FwpsCalloutUnregisterByKey0
-    - FwpsCalloutRegister1
-    - FwpsInjectionHandleDestroy0
-    - FwpsPendClassify0
-    - NdisFreeNetBufferListPool
-    - NdisWaitEvent
-    - NdisInitializeEvent
-    - NdisFreeGenericObject
-    - NdisAllocateGenericObject
-    - NdisGetDataBuffer
-    - NdisAdvanceNetBufferDataStart
-    - NdisRetreatNetBufferDataStart
-    - NdisAllocateNetBufferListPool
-    - KeAcquireInStackQueuedSpinLock
-    - KeReleaseInStackQueuedSpinLock
-    - ExAllocatePoolWithTag
-    - ExUuidCreate
-    - swprintf_s
-    - RtlInitUnicodeString
-    - MmGetSystemRoutineAddress
-    - RtlAppendUnicodeToString
-    - RtlCreateSecurityDescriptor
-    - RtlSetDaclSecurityDescriptor
-    - KeInitializeEvent
-    - KeSetEvent
-    - KeWaitForSingleObject
-    - KeInitializeSpinLock
-    - ExFreePoolWithTag
-    - ExQueryDepthSList
-    - ExpInterlockedPopEntrySList
-    - ExpInterlockedPushEntrySList
-    - ExInitializeNPagedLookasideList
-    - ExDeleteNPagedLookasideList
-    - MmBuildMdlForNonPagedPool
-    - MmMapLockedPagesSpecifyCache
-    - MmUnmapLockedPages
-    - MmAllocatePagesForMdl
-    - MmFreePagesFromMdl
-    - PsCreateSystemThread
-    - PsTerminateSystemThread
-    - IoAllocateMdl
-    - IofCompleteRequest
-    - IoCreateDevice
-    - IoCreateSymbolicLink
-    - IoDeleteDevice
-    - IoDeleteSymbolicLink
-    - IoFreeMdl
-    - IoReleaseCancelSpinLock
-    - ObReferenceObjectByHandle
-    - ObfDereferenceObject
-    - ZwClose
-    - ZwOpenKey
-    - ZwQueryValueKey
-    - PsGetCurrentProcessId
-    - ZwSetInformationThread
-    - RtlLengthSid
-    - RtlCreateAcl
-    - RtlAddAccessAllowedAce
-    - PsLookupProcessByProcessId
-    - ObOpenObjectByPointer
-    - ZwSetSecurityObject
-    - __C_specific_handler
-    - SeExports
-    - RtlGetVersion
-    - RtlCompareMemory
-    - RtlValidSid
-    Imports:
-    - fwpkclnt.sys
-    - NDIS.SYS
-    - ntoskrnl.exe
-    InternalName: LgDataCatcher.sys
-    MD5: 58e6c458409f748711353beb9acfc8ed
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: LgDataCatcher.sys
-    PDBPath: ''
-    Product: GameAcc
-    ProductVersion: 1.0.0.0
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: f40ea159736b62f8895bbfc28c0dfa09
-        SHA1: 2be491e3b182f5df0605c27ed0d26fb08c6b4cf6
-        SHA256: c5bd76e06c3bde6fd6494e77255dcfc2c35d59c7ebbf84df420b83198dbc16e1
-    SHA1: cc78c9c5871ab6b9d9ec9f9ffec122c109e4c5fe
-    SHA256: 45b07a2f387e047a6bb0e59b7f22fb56182d57b50e84e386a38c2dbb7e773837
-    Sections:
-        .text:
-            Entropy: 6.194279179648036
-            Virtual Size: '0xfb3a'
-        .rdata:
-            Entropy: 5.19122124724292
-            Virtual Size: '0x1a04'
-        .data:
-            Entropy: 2.0214134184014134
-            Virtual Size: '0x1680'
-        .pdata:
-            Entropy: 4.952698187604174
-            Virtual Size: '0xc24'
-        INIT:
-            Entropy: 5.174414715416575
-            Virtual Size: '0xef2'
-        .rsrc:
-            Entropy: 3.499847177522211
-            Virtual Size: '0x3f8'
-        .reloc:
-            Entropy: 4.8522168041142235
-            Virtual Size: '0x144'
-    Signature: ''
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
-                EV Root CA
-            ValidFrom: '2011-04-15 19:45:33'
-            ValidTo: '2021-04-15 19:55:33'
-            Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 61204db4000000000027
-            Version: 3
-            TBS:
-                MD5: 8e3ffc222fbcebdbb8b23115ab259be7
-                SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
-                SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
-                SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
-        -   Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420106MA4KYGE00T,
-                C=CN, ST=Hubei, L=Wuhan, O=Wuhan Qimiao Technology Co., Ltd., CN=Wuhan
-                Qimiao Technology Co., Ltd.
-            ValidFrom: '2018-07-24 00:00:00'
-            ValidTo: '2021-07-27 12:00:00'
-            Signature: 7226f288fbeeca8f44035b0a08ce0dba5c96e989be8cd1c7ca8e21f4a721593728ee9e33a3bbc12424653b879b3ecf05b0929ea0579dffcb82b96e70a489428443d9a8387eb53581b31e2416ac5bfaf954e427ac54cd7eebb3c7d05cbfe751386bd54bcb9143cef6b552eff691f02057142709947fb4d76ffbcef98d4467bfd65b2ede6bfc1c9d7a3a03ecbe2f8be3374a0c4c82840362c656232d4e55f8a585bd85a9e94c5b019a76d3209558430c826712da1ab372c9d9fcb33f4adaee80b52e1d11f5b940ee0f73960109c4a4cf93f567281ef975cf3585707861561c0a814310984ca24eaae1c579df601f946052f3e96b5df4aa78fb0f1577ed66d7ccbb
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-            IsCertificateAuthority: false
-            SerialNumber: 04bb87e2d35b4b14bbfe76ae0f8f4372
-            Version: 3
-            TBS:
-                MD5: 93c8be246fe6a0584a07029f191006d3
-                SHA1: 21d94ebf6e46aff340c81db886845b67bc6df8c8
-                SHA256: 2f41d6e23cb86fc3825e1be65beaff32271d81c0902ad3696fd4745def3c15ce
-                SHA384: a887e08bddfb2ba00e88d8cef40d7c45d0594766b786a901708bee54c11ce7b4b206648efb4cf3e1f62d26de7ab77495
-        -   Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
-            ValidFrom: '2014-10-22 00:00:00'
-            ValidTo: '2024-10-22 00:00:00'
-            Signature: 9d257e1b334db226815c9b86ce23200f8087e588ffffb1d46a2c31ed3a17197117cda91bbc5a1639009de36c84e45a40fbde06018c37fa9bb19d247efe20a457ad5bb79ab06026ea6957215d342f1f71b0839419056b359010a07b97c7f63fe7e21141a6bd62d9f0273d381d286f3a5209f0ec7062d3624bb0e073a692c0d38e31d82fe36d171306eee403b614abf38f43a7719d21dd14ca155d9241daf90f81d199740d26c40e7f1bb5f5a0f1c677062815e9d893e55516f0bb0aab1cdb5c482766c8a38b0a1ce595daaec42e59a061dddaf36da261e98a0b6dec1218bdf755544003922b6bc251c20a48afb0d46ee0f4140a3a1be38f3dcaaf6a8d7bdcd844
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 03019a023aff58b16bd6d5eae617f066
-            Version: 3
-            TBS:
-                MD5: a752afee44f017e8d74e3f3eb7914ae3
-                SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
-                SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
-                SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
-        -   Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code
-                Signing CA (SHA2)
-            ValidFrom: '2012-04-18 12:00:00'
-            ValidTo: '2027-04-18 12:00:00'
-            Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-            IsCertificateAuthority: true
-            SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
-            Version: 3
-            TBS:
-                MD5: 83f5de89f641d0fbf60248e10a7b9534
-                SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
-                SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
-                SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
-        -   Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured
-                ID CA,1
-            ValidFrom: '2006-11-10 00:00:00'
-            ValidTo: '2021-11-10 00:00:00'
-            Signature: 46503ec9b72824a7381db65b29af52cf52e93147ab565c7bd50d0b41b3efec751f7438f2b25c61a29c95c350e482b923d1ba3a8672ad3878ac755d1717347247859456d1ebbb368477cc24a5f3041955a9e7e3e7ab62cdfb8b2d90c2c0d2b594bd5e4fb105d20e3d1aa9145ba6863162a8a833e49b39a7c4f5ce1d7876942573e42aabcf9c764bed5fc24b16e44b704c00891efcc579bc4c1257fe5fe11ebc025da8fefb07384f0dc65d91b90f6745cdd683ede7920d8db1698c4ffb59e0230fd2aaae007cee9c420ecf91d727b716ee0fc3bd7c0aa0ee2c08558522b8eb181a4dfc2a21ad49318347957771dcb11b4b4b1c109c7714c19d4f2f5a9508291026
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
-            Version: 3
-            TBS:
-                MD5: 4e5ad189638cf52ba9cd881d4d44668c
-                SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
-                SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
-                SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
-        Signer:
-        -   SerialNumber: 04bb87e2d35b4b14bbfe76ae0f8f4372
-            Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code
-                Signing CA (SHA2)
-            Version: 1
-    Imphash: 8902d821cdfd8e73ca10c00a3ce66731
-    LoadsDespiteHVCI: 'FALSE'
--   Authentihash:
-        MD5: 26cbbcf09fcbba64d93342c273c480d2
-        SHA1: 7aa2c4c51afc1c82beae55ab9ca7ba0bb588b5c0
-        SHA256: df4e25990742fc8d3aed70f6cb4d402e111e7ed08fa5f76aca685b8c03b98b93
-    Company: Windows (R) Win 7 DDK provider
-    Copyright: Copyright  2020 nn.com
-    CreationTimestamp: '2020-05-12 20:43:44'
-    Date: ''
-    Description: Leigod net data catcher.
-    ExportedFunctions: ''
-    FileVersion: 1.0.0.0
-    Filename: ''
-    ImportedFunctions:
-    - FwpmFreeMemory0
-    - FwpmEngineOpen0
-    - FwpmEngineClose0
-    - FwpmTransactionBegin0
-    - FwpmTransactionCommit0
-    - FwpmTransactionAbort0
-    - FwpmProviderAdd0
-    - FwpmProviderContextDeleteByKey0
-    - FwpmSubLayerAdd0
-    - FwpmSubLayerDeleteByKey0
-    - FwpmSubLayerCreateEnumHandle0
-    - FwpmSubLayerEnum0
-    - FwpmSubLayerDestroyEnumHandle0
-    - FwpmCalloutAdd0
-    - FwpmFilterAdd0
-    - FwpsFlowAbort0
-    - FwpsInjectionHandleCreate0
-    - FwpsQueryPacketInjectionState0
-    - FwpsAllocateNetBufferAndNetBufferList0
-    - FwpsFreeNetBufferList0
-    - FwpsFreeCloneNetBufferList0
-    - FwpsInjectNetworkSendAsync0
-    - FwpsConstructIpHeaderForTransportPacket0
-    - FwpsInjectTransportSendAsync0
-    - FwpsInjectTransportReceiveAsync0
-    - FwpsInjectNetworkReceiveAsync0
-    - FwpsStreamInjectAsync0
-    - FwpsCopyStreamDataToBuffer0
-    - FwpmBfeStateGet0
-    - FwpmBfeStateSubscribeChanges0
-    - FwpmBfeStateUnsubscribeChanges0
-    - FwpsFlowRemoveContext0
-    - FwpsCompleteClassify0
-    - FwpsRedirectHandleDestroy0
-    - FwpsCloneStreamData0
-    - FwpsDiscardClonedStreamData0
-    - FwpsRedirectHandleCreate0
-    - FwpsApplyModifiedLayerData0
-    - FwpsAcquireWritableLayerDataPointer0
-    - FwpsReleaseClassifyHandle0
-    - FwpsAcquireClassifyHandle0
-    - FwpsFlowAssociateContext0
-    - FwpsCalloutUnregisterByKey0
-    - FwpsCalloutRegister1
-    - FwpsInjectionHandleDestroy0
-    - FwpsPendClassify0
-    - NdisFreeNetBufferListPool
-    - NdisWaitEvent
-    - NdisInitializeEvent
-    - NdisFreeGenericObject
-    - NdisAllocateGenericObject
-    - NdisGetDataBuffer
-    - NdisAdvanceNetBufferDataStart
-    - NdisRetreatNetBufferDataStart
-    - NdisAllocateNetBufferListPool
-    - KeAcquireInStackQueuedSpinLock
-    - KeReleaseInStackQueuedSpinLock
-    - ExAllocatePoolWithTag
-    - ExUuidCreate
-    - swprintf_s
-    - RtlInitUnicodeString
-    - MmGetSystemRoutineAddress
-    - RtlAppendUnicodeToString
-    - RtlCreateSecurityDescriptor
-    - RtlSetDaclSecurityDescriptor
-    - KeInitializeEvent
-    - KeSetEvent
-    - KeWaitForSingleObject
-    - KeInitializeSpinLock
-    - ExFreePoolWithTag
-    - ExQueryDepthSList
-    - ExpInterlockedPopEntrySList
-    - ExpInterlockedPushEntrySList
-    - ExInitializeNPagedLookasideList
-    - ExDeleteNPagedLookasideList
-    - MmBuildMdlForNonPagedPool
-    - MmMapLockedPagesSpecifyCache
-    - MmUnmapLockedPages
-    - MmAllocatePagesForMdl
-    - MmFreePagesFromMdl
-    - PsCreateSystemThread
-    - PsTerminateSystemThread
-    - IoAllocateMdl
-    - IofCompleteRequest
-    - IoCreateDevice
-    - IoCreateSymbolicLink
-    - IoDeleteDevice
-    - IoDeleteSymbolicLink
-    - IoFreeMdl
-    - IoReleaseCancelSpinLock
-    - ObReferenceObjectByHandle
-    - ObfDereferenceObject
-    - ZwClose
-    - ZwOpenKey
-    - ZwQueryValueKey
-    - PsGetCurrentProcessId
-    - ZwSetInformationThread
-    - RtlLengthSid
-    - RtlCreateAcl
-    - RtlAddAccessAllowedAce
-    - PsLookupProcessByProcessId
-    - ObOpenObjectByPointer
-    - ZwSetSecurityObject
-    - __C_specific_handler
-    - SeExports
-    - RtlGetVersion
-    - RtlCompareMemory
-    - RtlValidSid
-    Imports:
-    - fwpkclnt.sys
-    - NDIS.SYS
-    - ntoskrnl.exe
-    InternalName: LgDataCatcher.sys
-    MD5: aca70899d834124fa02dc52f098cad05
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: LgDataCatcher.sys
-    PDBPath: ''
-    Product: GameAcc
-    ProductVersion: 1.0.0.0
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: f40ea159736b62f8895bbfc28c0dfa09
-        SHA1: 2be491e3b182f5df0605c27ed0d26fb08c6b4cf6
-        SHA256: c5bd76e06c3bde6fd6494e77255dcfc2c35d59c7ebbf84df420b83198dbc16e1
-    SHA1: 0c10ff27f2ab76bbe6ddece8c1b2cff05e5483cc
-    SHA256: 07fb2bb6c852f6a6fe982b2232f047e167be39738bac26806ffe0927ba873756
-    Sections:
-        .text:
-            Entropy: 6.194279179648036
-            Virtual Size: '0xfb3a'
-        .rdata:
-            Entropy: 5.19122124724292
-            Virtual Size: '0x1a04'
-        .data:
-            Entropy: 2.0214134184014134
-            Virtual Size: '0x1680'
-        .pdata:
-            Entropy: 4.952698187604174
-            Virtual Size: '0xc24'
-        INIT:
-            Entropy: 5.174414715416575
-            Virtual Size: '0xef2'
-        .rsrc:
-            Entropy: 3.499847177522211
-            Virtual Size: '0x3f8'
-        .reloc:
-            Entropy: 4.8522168041142235
-            Virtual Size: '0x144'
-    Signature: ''
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured
-                ID Root CA
-            ValidFrom: '2011-04-15 19:41:37'
-            ValidTo: '2021-04-15 19:51:37'
-            Signature: 5cf5b22d02ceed01b53512d813f7aa4014c7a15ca08a55ed7e55ea6ac457176fd04722423658efc5ac61c5f62c52ce6ae6c80d85dab334420ea40225182672b92a4ea57e4b16f2a0e40c449ce24d9af474f0f927a6699031c244654348c74869d0fc8409f286140ac22996857f11eb8713176ed3ec6bff1d578ab17b1ea5a07ce9a27a68e5fac6b161d67263fa379163835599f81d614f0c6fa3f7bcb1152acc8d85e31417ef7e49443fb022c0f0acbe2fdbe10c86b0f4585c5a10a94bcdf3448a4652083e0a6210e9459504b78b8d4b074f500db7bbe7fb8ca27878c6c53b7663b2cfe521845a66fce04c79834ecfa8ee700586587cc29cd73ca3ad3c7e76625c87d0ed7cd5c55b1421f4be75a275d2e9e15ad020307841624d6b5e6e1b1710244ad8588775d015d762bbfd185665842561977faad49df4f35d6da031c2e19e02ac3e90c3327ee832903416d08b14cf95accee58c54a265b8bfed186a57073ed3e79a4a2f081a041c49871a8ae61b08a365d81c31c50d9cbab368ddf45076160675fec403e7d13edfdc862e10027e661296534e7af3365879b12042d8963f35be3f8ef2999743f5e40ce13c68728c8d49d75a52b573fb7a35943a61b08482c04885c19732d39b725fa0d2348f7ef0467cf28c7294c707b0d7b5b230b81965f09c8327b0a0abd0a2727e050fb3aeddb95b9b42bcc32663456b86f11d4643edc8
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 611cb28a000000000026
-            Version: 3
-            TBS:
-                MD5: 983a0c315a50542362f2bd6a5d71c8d0
-                SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
-                SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
-                SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
-        -   Subject: C=CN, ST=, L=, O=, CN=
-            ValidFrom: '2020-04-07 00:00:00'
-            ValidTo: '2023-04-12 12:00:00'
-            Signature: 056b54cd71b6206297f5e781cbdd5fd3e1d00efd8902ba8fa5e88fa99f3e4de7f620d29685cd48f2e229845102cae6eeaf3dd16087873576b35af8bde8b369baf14d6956c881d4d55c730734db3029c84b83eabed46aeaf79daacc1821220e82886a9b499923225ac471a3df7389ab99693d7a950c07f7fcb4da549ed53c462676b259c867b31f317552cbdbeb331b537ec9b3ca4ab68c26a47aede38fd3a33253655442c4a6113cd16669660e55088a03650dc6c1c5fe52aabd613651e5f0a45096bfc3baeafc386bbe75b53909d4974cc360a491cb19090b681bca3dda039ee52b5bd5fdf1ff157625ad1f54db0e14b571e00d7119bfbd667df0cd517e77bd
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 0dd7d4a785990584d8c0837659173272
-            Version: 3
-            TBS:
-                MD5: 559c170b8f735dd1ba8c3946354c4fa5
-                SHA1: e7432e65001ca5e56478ee25ae9906981432ee75
-                SHA256: 1c6140780d5210fb89e1dd3005184e03dc52740266a921035b1f836b5af0d32a
-                SHA384: 545ad02c12154f939f80b6f4b9d7ae888550220af82ec3f0a42805c8f6e6d7e57dbe62c80a8f8ec35a894acce2f68d9f
-        -   Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
-            ValidFrom: '2014-10-22 00:00:00'
-            ValidTo: '2024-10-22 00:00:00'
-            Signature: 9d257e1b334db226815c9b86ce23200f8087e588ffffb1d46a2c31ed3a17197117cda91bbc5a1639009de36c84e45a40fbde06018c37fa9bb19d247efe20a457ad5bb79ab06026ea6957215d342f1f71b0839419056b359010a07b97c7f63fe7e21141a6bd62d9f0273d381d286f3a5209f0ec7062d3624bb0e073a692c0d38e31d82fe36d171306eee403b614abf38f43a7719d21dd14ca155d9241daf90f81d199740d26c40e7f1bb5f5a0f1c677062815e9d893e55516f0bb0aab1cdb5c482766c8a38b0a1ce595daaec42e59a061dddaf36da261e98a0b6dec1218bdf755544003922b6bc251c20a48afb0d46ee0f4140a3a1be38f3dcaaf6a8d7bdcd844
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 03019a023aff58b16bd6d5eae617f066
-            Version: 3
-            TBS:
-                MD5: a752afee44f017e8d74e3f3eb7914ae3
-                SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
-                SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
-                SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
-        -   Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured
-                ID Code Signing CA,1
-            ValidFrom: '2011-02-11 12:00:00'
-            ValidTo: '2026-02-10 12:00:00'
-            Signature: 7b721d64ff88c83ac1b7e9e7a9c487bbdb9492d7905933fa2b87dea85b80253f138f9b831b7c43c4e68cdf393ec315ecb0da3b21257b24c1725db84791811346fa9c3f6a5138deb425cbf0abdfc528015479104624d1380f26a161904dbabd28e63ff1c4aa9bf6da35534fc9f23dd36cdc23edaaa04d6709f33a803d3cfb364c90e776a4ddf23abf56352fa24c65e8e0d4dad1c7c8916a2d234f373b199418d4d59c103cd5b11c19ff8fc86b9b9ef8ae9c999678d1cd9c51155b4226725a8d0a4a239240e886de22c2933ad49b68a6df297f06b93c0ebd9fc4869c82474271328609997209794b9d7169f541ff7f397764f1848dbe8b1eb27d68a3a590b10cff
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
-            Version: 3
-            TBS:
-                MD5: a9a31555bbc92b6033975c5428fb3679
-                SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
-                SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
-                SHA384: 86f49574f368a561914a52d7ae043ec6784ef8c718960700f834e123594605d25d39f1ad45f1eb5052c9567f3edd0e16
-        -   Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured
-                ID CA,1
-            ValidFrom: '2006-11-10 00:00:00'
-            ValidTo: '2021-11-10 00:00:00'
-            Signature: 46503ec9b72824a7381db65b29af52cf52e93147ab565c7bd50d0b41b3efec751f7438f2b25c61a29c95c350e482b923d1ba3a8672ad3878ac755d1717347247859456d1ebbb368477cc24a5f3041955a9e7e3e7ab62cdfb8b2d90c2c0d2b594bd5e4fb105d20e3d1aa9145ba6863162a8a833e49b39a7c4f5ce1d7876942573e42aabcf9c764bed5fc24b16e44b704c00891efcc579bc4c1257fe5fe11ebc025da8fefb07384f0dc65d91b90f6745cdd683ede7920d8db1698c4ffb59e0230fd2aaae007cee9c420ecf91d727b716ee0fc3bd7c0aa0ee2c08558522b8eb181a4dfc2a21ad49318347957771dcb11b4b4b1c109c7714c19d4f2f5a9508291026
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
-            Version: 3
-            TBS:
-                MD5: 4e5ad189638cf52ba9cd881d4d44668c
-                SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
-                SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
-                SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
-        Signer:
-        -   SerialNumber: 0dd7d4a785990584d8c0837659173272
-            Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured
-                ID Code Signing CA,1
-            Version: 1
-    Imphash: 8902d821cdfd8e73ca10c00a3ce66731
-    LoadsDespiteHVCI: 'FALSE'
--   Authentihash:
-        MD5: 26cbbcf09fcbba64d93342c273c480d2
-        SHA1: 7aa2c4c51afc1c82beae55ab9ca7ba0bb588b5c0
-        SHA256: df4e25990742fc8d3aed70f6cb4d402e111e7ed08fa5f76aca685b8c03b98b93
-    Company: Windows (R) Win 7 DDK provider
-    Copyright: Copyright  2020 nn.com
-    CreationTimestamp: '2020-05-12 20:43:44'
-    Date: ''
-    Description: Leigod net data catcher.
-    ExportedFunctions: ''
-    FileVersion: 1.0.0.0
-    Filename: ''
-    ImportedFunctions:
-    - FwpmFreeMemory0
-    - FwpmEngineOpen0
-    - FwpmEngineClose0
-    - FwpmTransactionBegin0
-    - FwpmTransactionCommit0
-    - FwpmTransactionAbort0
-    - FwpmProviderAdd0
-    - FwpmProviderContextDeleteByKey0
-    - FwpmSubLayerAdd0
-    - FwpmSubLayerDeleteByKey0
-    - FwpmSubLayerCreateEnumHandle0
-    - FwpmSubLayerEnum0
-    - FwpmSubLayerDestroyEnumHandle0
-    - FwpmCalloutAdd0
-    - FwpmFilterAdd0
-    - FwpsFlowAbort0
-    - FwpsInjectionHandleCreate0
-    - FwpsQueryPacketInjectionState0
-    - FwpsAllocateNetBufferAndNetBufferList0
-    - FwpsFreeNetBufferList0
-    - FwpsFreeCloneNetBufferList0
-    - FwpsInjectNetworkSendAsync0
-    - FwpsConstructIpHeaderForTransportPacket0
-    - FwpsInjectTransportSendAsync0
-    - FwpsInjectTransportReceiveAsync0
-    - FwpsInjectNetworkReceiveAsync0
-    - FwpsStreamInjectAsync0
-    - FwpsCopyStreamDataToBuffer0
-    - FwpmBfeStateGet0
-    - FwpmBfeStateSubscribeChanges0
-    - FwpmBfeStateUnsubscribeChanges0
-    - FwpsFlowRemoveContext0
-    - FwpsCompleteClassify0
-    - FwpsRedirectHandleDestroy0
-    - FwpsCloneStreamData0
-    - FwpsDiscardClonedStreamData0
-    - FwpsRedirectHandleCreate0
-    - FwpsApplyModifiedLayerData0
-    - FwpsAcquireWritableLayerDataPointer0
-    - FwpsReleaseClassifyHandle0
-    - FwpsAcquireClassifyHandle0
-    - FwpsFlowAssociateContext0
-    - FwpsCalloutUnregisterByKey0
-    - FwpsCalloutRegister1
-    - FwpsInjectionHandleDestroy0
-    - FwpsPendClassify0
-    - NdisFreeNetBufferListPool
-    - NdisWaitEvent
-    - NdisInitializeEvent
-    - NdisFreeGenericObject
-    - NdisAllocateGenericObject
-    - NdisGetDataBuffer
-    - NdisAdvanceNetBufferDataStart
-    - NdisRetreatNetBufferDataStart
-    - NdisAllocateNetBufferListPool
-    - KeAcquireInStackQueuedSpinLock
-    - KeReleaseInStackQueuedSpinLock
-    - ExAllocatePoolWithTag
-    - ExUuidCreate
-    - swprintf_s
-    - RtlInitUnicodeString
-    - MmGetSystemRoutineAddress
-    - RtlAppendUnicodeToString
-    - RtlCreateSecurityDescriptor
-    - RtlSetDaclSecurityDescriptor
-    - KeInitializeEvent
-    - KeSetEvent
-    - KeWaitForSingleObject
-    - KeInitializeSpinLock
-    - ExFreePoolWithTag
-    - ExQueryDepthSList
-    - ExpInterlockedPopEntrySList
-    - ExpInterlockedPushEntrySList
-    - ExInitializeNPagedLookasideList
-    - ExDeleteNPagedLookasideList
-    - MmBuildMdlForNonPagedPool
-    - MmMapLockedPagesSpecifyCache
-    - MmUnmapLockedPages
-    - MmAllocatePagesForMdl
-    - MmFreePagesFromMdl
-    - PsCreateSystemThread
-    - PsTerminateSystemThread
-    - IoAllocateMdl
-    - IofCompleteRequest
-    - IoCreateDevice
-    - IoCreateSymbolicLink
-    - IoDeleteDevice
-    - IoDeleteSymbolicLink
-    - IoFreeMdl
-    - IoReleaseCancelSpinLock
-    - ObReferenceObjectByHandle
-    - ObfDereferenceObject
-    - ZwClose
-    - ZwOpenKey
-    - ZwQueryValueKey
-    - PsGetCurrentProcessId
-    - ZwSetInformationThread
-    - RtlLengthSid
-    - RtlCreateAcl
-    - RtlAddAccessAllowedAce
-    - PsLookupProcessByProcessId
-    - ObOpenObjectByPointer
-    - ZwSetSecurityObject
-    - __C_specific_handler
-    - SeExports
-    - RtlGetVersion
-    - RtlCompareMemory
-    - RtlValidSid
-    Imports:
-    - fwpkclnt.sys
-    - NDIS.SYS
-    - ntoskrnl.exe
-    InternalName: LgDataCatcher.sys
-    MD5: 3f87df040c35ea45dfd4ae371b9641ae
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: LgDataCatcher.sys
-    PDBPath: ''
-    Product: GameAcc
-    ProductVersion: 1.0.0.0
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: f40ea159736b62f8895bbfc28c0dfa09
-        SHA1: 2be491e3b182f5df0605c27ed0d26fb08c6b4cf6
-        SHA256: c5bd76e06c3bde6fd6494e77255dcfc2c35d59c7ebbf84df420b83198dbc16e1
-    SHA1: 3864dfc19c8479a491bc3b0637cf0e789a6d53d8
-    SHA256: 516159871730b18c2bddedb1a9da110577112d4835606ee79bb80e7a58784a13
-    Sections:
-        .text:
-            Entropy: 6.194279179648036
-            Virtual Size: '0xfb3a'
-        .rdata:
-            Entropy: 5.19122124724292
-            Virtual Size: '0x1a04'
-        .data:
-            Entropy: 2.0214134184014134
-            Virtual Size: '0x1680'
-        .pdata:
-            Entropy: 4.952698187604174
-            Virtual Size: '0xc24'
-        INIT:
-            Entropy: 5.174414715416575
-            Virtual Size: '0xef2'
-        .rsrc:
-            Entropy: 3.499847177522211
-            Virtual Size: '0x3f8'
-        .reloc:
-            Entropy: 4.8522168041142235
-            Virtual Size: '0x144'
-    Signature: ''
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Timestamping CA , G2
-            ValidFrom: '2011-04-13 10:00:00'
-            ValidTo: '2028-01-28 12:00:00'
-            Signature: 4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 0400000000012f4ee152d7
-            Version: 3
-            TBS:
-                MD5: e140543fe3256027cfa79fc3c19c1776
-                SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
-                SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
-                SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
-        -   Subject: OU=GlobalSign Root CA , R3, O=GlobalSign, CN=GlobalSign
-            ValidFrom: '2009-11-18 10:00:00'
-            ValidTo: '2019-03-18 10:00:00'
-            Signature: 4252a97ea2cf5b3bcb4bddbaf85759d324a47772ef62443782ed06ee04d5165f24a314dc6c54056ab09b3dda8139daad28db956f8183f5cd62b14524b1dd29e5085495958cf01d065f1ad6463f1340174811169b474dd13ab50f571c9230d0f8b2253b0acdf687f9c7b257d33f7da58c14ce9ca8c79f4693da59fa795d652035445a4fc1909dc1549256dc34c8f5c103d05dc059489c00fc95a0f1d176f71636c813927f2d2bc0b880f126261f414d52bf1e97bb018208e715f6c1d5342accf5e4c3877a5781e1d6d74286620177e2a9c47a86f404387a076a7d00ec73f7a80b3478c59eb3efb838400e8c3353c875ec5f3eea755eff820e7415dc1905f3ba31
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-            IsCertificateAuthority: true
-            SerialNumber: 04000000000125071df9af
-            Version: 3
-            TBS:
-                MD5: f47739306d14722e670d9436eadb8e4f
-                SHA1: 457d9df00a652cb4c3356d00145d9528fc309172
-                SHA256: bd1765c56594221373893ef26d97f88c144fb0e5a0111215b45d7239c3444df7
-                SHA384: b8b268a1bdf388be66a1c969b7b353cb2bbc9fad446049b7efa05a9ab3b714494e97f4d1ee1c0bae35bfd9bf6ef275b3
-        -   Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
-                , G2
-            ValidFrom: '2016-05-24 00:00:00'
-            ValidTo: '2027-06-24 00:00:00'
-            Signature: 8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 1121d699a764973ef1f8427ee919cc534114
-            Version: 3
-            TBS:
-                MD5: acb5170547d76873f1e4ff18ed5de2eb
-                SHA1: bd6e261e75b807381bada7287de04d259258a5fa
-                SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
-                SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
-        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
-                CA , SHA256 , G3
-            ValidFrom: '2016-06-15 00:00:00'
-            ValidTo: '2024-06-15 00:00:00'
-            Signature: 7609c4cc2fd9ef1e4ba9f857f3403921ca4c3c1d9e292b20d42b44d288ce1a0d05cf8381bbeb69bc318d2ac4c744cc6060941ccfa1e102240ead5bbe2cc2271e67b7e8281f3251e339f398dfb89f2e8b2ab47b0a03bcbd36048fc9d09c4fa3022799b0f045e934dfe43aa3b70637d86f2a7990d4d44e5871ec53a96198f73969e0129c575872862729a51de532f32b99975abf2bb03cb406ea0e64ecb7cd65802417c2d937f5b1261035477b9a02ba54a24593ff79bf1a8cc59fb59fdf78e76b50f14794694b24b8da05e80c9d4f06ec4a31207e4f5d86842f35a3cd9cc184571f1fadc0e2a4b1ef296b2197a6d4feed0337b0fcf58d2abcdc8483e3dec3e75f
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-            IsCertificateAuthority: true
-            SerialNumber: 481b6a07a9424c1eaafef3cdf10f
-            Version: 3
-            TBS:
-                MD5: fd8cfeea06be14fa89689909e1fc72dc
-                SHA1: 8bc3cd2f70abe543e0dbe721065a4076c8521f36
-                SHA256: 15e7050789df807f3e3174294a01b637a1239f603e42f4b5db9398efa9da9996
-                SHA384: 8b9f95e6d3dd45e4ef38e2f12fb893d7d1bb1ba867e152e4a73c49b3d51dd52bc83a05982deac29af90436061248546d
-        -   Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
-            ValidFrom: '2011-04-15 19:55:08'
-            ValidTo: '2021-04-15 20:05:08'
-            Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 6129152700000000002a
-            Version: 3
-            TBS:
-                MD5: 0bb058d116f02817737920f112d9fd3b
-                SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
-                SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
-                SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
-        -   Subject: ??=Private Organization, serialNumber=91420106MA4L0NHE9U, ??=CN,
-                ??=HEBEI, ??=WUHAN, C=CN, ST=, L=, ??=397, O=, CN=
-            ValidFrom: '2018-11-15 10:01:02'
-            ValidTo: '2021-11-15 10:01:02'
-            Signature: 00a4726dbfb611464678aaab7dfa3c9231d9c2c7690387c38601f064858035833f3b8473055e9d96d7dc6e35198c613bdb13ea5578842d80f194f21635d13ccf399f1996c929843783fd6d905506eba15f821bfcabf3a01ab67d25ab315c1eaae244d4fd779a45aaf0854ea46d0bcc3d97879314324c8176d283b83657f12ba7dc62209f9e365522f791f41ee263df2c978cac7676a04e2505a3d3fe698ec2e7287e0c479a9f43ca526cbea8050a859080e3198c47e958d3ea3f61a0901760263eaf8897c143167b2d973638eb4eb925b4de9452d83f850b683567c68979d40d339f200e20bfff8f852d6a716836af2f6cd18f861ad54667398ef197766db86c
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.11
-            IsCertificateAuthority: false
-            SerialNumber: 1ae9d4b848b34ca82bcf623a
-            Version: 3
-            TBS:
-                MD5: dc1fd334ac7950329ff4fa45a3bde8da
-                SHA1: f58e04e6dd1954a2fd06e5fedd1408a9c765dd18
-                SHA256: 9ed1944c1abbe6ed081eb71a3da83e72f758c6dea4e009088a41cba22870bec3
-                SHA384: 320f2d5b300f34214eee049c2171e85ef6061833a5726a73e183e41d500fd03c536479cd220322db81a6b73512d6537e
-        Signer:
-        -   SerialNumber: 1ae9d4b848b34ca82bcf623a
-            Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
-                CA , SHA256 , G3
-            Version: 1
-    Imphash: 8902d821cdfd8e73ca10c00a3ce66731
-    LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: 26cbbcf09fcbba64d93342c273c480d2
+    SHA1: 7aa2c4c51afc1c82beae55ab9ca7ba0bb588b5c0
+    SHA256: df4e25990742fc8d3aed70f6cb4d402e111e7ed08fa5f76aca685b8c03b98b93
+  Company: Windows (R) Win 7 DDK provider
+  Copyright: Copyright  2020 nn.com
+  CreationTimestamp: '2020-05-12 22:43:44'
+  Date: ''
+  Description: Leigod net data catcher.
+  ExportedFunctions: ''
+  FileVersion: 1.0.0.0
+  Filename: ''
+  ImportedFunctions:
+  - FwpmFreeMemory0
+  - FwpmEngineOpen0
+  - FwpmEngineClose0
+  - FwpmTransactionBegin0
+  - FwpmTransactionCommit0
+  - FwpmTransactionAbort0
+  - FwpmProviderAdd0
+  - FwpmProviderContextDeleteByKey0
+  - FwpmSubLayerAdd0
+  - FwpmSubLayerDeleteByKey0
+  - FwpmSubLayerCreateEnumHandle0
+  - FwpmSubLayerEnum0
+  - FwpmSubLayerDestroyEnumHandle0
+  - FwpmCalloutAdd0
+  - FwpmFilterAdd0
+  - FwpsFlowAbort0
+  - FwpsInjectionHandleCreate0
+  - FwpsQueryPacketInjectionState0
+  - FwpsAllocateNetBufferAndNetBufferList0
+  - FwpsFreeNetBufferList0
+  - FwpsFreeCloneNetBufferList0
+  - FwpsInjectNetworkSendAsync0
+  - FwpsConstructIpHeaderForTransportPacket0
+  - FwpsInjectTransportSendAsync0
+  - FwpsInjectTransportReceiveAsync0
+  - FwpsInjectNetworkReceiveAsync0
+  - FwpsStreamInjectAsync0
+  - FwpsCopyStreamDataToBuffer0
+  - FwpmBfeStateGet0
+  - FwpmBfeStateSubscribeChanges0
+  - FwpmBfeStateUnsubscribeChanges0
+  - FwpsFlowRemoveContext0
+  - FwpsCompleteClassify0
+  - FwpsRedirectHandleDestroy0
+  - FwpsCloneStreamData0
+  - FwpsDiscardClonedStreamData0
+  - FwpsRedirectHandleCreate0
+  - FwpsApplyModifiedLayerData0
+  - FwpsAcquireWritableLayerDataPointer0
+  - FwpsReleaseClassifyHandle0
+  - FwpsAcquireClassifyHandle0
+  - FwpsFlowAssociateContext0
+  - FwpsCalloutUnregisterByKey0
+  - FwpsCalloutRegister1
+  - FwpsInjectionHandleDestroy0
+  - FwpsPendClassify0
+  - NdisFreeNetBufferListPool
+  - NdisWaitEvent
+  - NdisInitializeEvent
+  - NdisFreeGenericObject
+  - NdisAllocateGenericObject
+  - NdisGetDataBuffer
+  - NdisAdvanceNetBufferDataStart
+  - NdisRetreatNetBufferDataStart
+  - NdisAllocateNetBufferListPool
+  - KeAcquireInStackQueuedSpinLock
+  - KeReleaseInStackQueuedSpinLock
+  - ExAllocatePoolWithTag
+  - ExUuidCreate
+  - swprintf_s
+  - RtlInitUnicodeString
+  - MmGetSystemRoutineAddress
+  - RtlAppendUnicodeToString
+  - RtlCreateSecurityDescriptor
+  - RtlSetDaclSecurityDescriptor
+  - KeInitializeEvent
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - KeInitializeSpinLock
+  - ExFreePoolWithTag
+  - ExQueryDepthSList
+  - ExpInterlockedPopEntrySList
+  - ExpInterlockedPushEntrySList
+  - ExInitializeNPagedLookasideList
+  - ExDeleteNPagedLookasideList
+  - MmBuildMdlForNonPagedPool
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - MmAllocatePagesForMdl
+  - MmFreePagesFromMdl
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - IoAllocateMdl
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoFreeMdl
+  - IoReleaseCancelSpinLock
+  - ObReferenceObjectByHandle
+  - ObfDereferenceObject
+  - ZwClose
+  - ZwOpenKey
+  - ZwQueryValueKey
+  - PsGetCurrentProcessId
+  - ZwSetInformationThread
+  - RtlLengthSid
+  - RtlCreateAcl
+  - RtlAddAccessAllowedAce
+  - PsLookupProcessByProcessId
+  - ObOpenObjectByPointer
+  - ZwSetSecurityObject
+  - __C_specific_handler
+  - SeExports
+  - RtlGetVersion
+  - RtlCompareMemory
+  - RtlValidSid
+  Imports:
+  - fwpkclnt.sys
+  - NDIS.SYS
+  - ntoskrnl.exe
+  InternalName: LgDataCatcher.sys
+  MD5: 58e6c458409f748711353beb9acfc8ed
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: LgDataCatcher.sys
+  PDBPath: ''
+  Product: GameAcc
+  ProductVersion: 1.0.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: f40ea159736b62f8895bbfc28c0dfa09
+    SHA1: 2be491e3b182f5df0605c27ed0d26fb08c6b4cf6
+    SHA256: c5bd76e06c3bde6fd6494e77255dcfc2c35d59c7ebbf84df420b83198dbc16e1
+  SHA1: cc78c9c5871ab6b9d9ec9f9ffec122c109e4c5fe
+  SHA256: 45b07a2f387e047a6bb0e59b7f22fb56182d57b50e84e386a38c2dbb7e773837
+  Sections:
+    .text:
+      Entropy: 6.194279179648036
+      Virtual Size: '0xfb3a'
+    .rdata:
+      Entropy: 5.19122124724292
+      Virtual Size: '0x1a04'
+    .data:
+      Entropy: 2.0214134184014134
+      Virtual Size: '0x1680'
+    .pdata:
+      Entropy: 4.952698187604174
+      Virtual Size: '0xc24'
+    INIT:
+      Entropy: 5.174414715416575
+      Virtual Size: '0xef2'
+    .rsrc:
+      Entropy: 3.499847177522211
+      Virtual Size: '0x3f8'
+    .reloc:
+      Entropy: 4.8522168041142235
+      Virtual Size: '0x144'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
+        EV Root CA
+      ValidFrom: '2011-04-15 19:45:33'
+      ValidTo: '2021-04-15 19:55:33'
+      Signature: 208cc159ed6f9c6b2dc14a3e751d454c41501cbd80ead9b0928b062a133f53169e56396a8a63b6782479f57db8b947a10a96c2f6cbbda2669f06e1acd279090efd3cdcac020c70af3f1bec787ed4eb4b056026d973619121edb06863e09712ab6fa012edd99fd2da273cb3e456f9d1d4810f71bd427ca689dccdd5bd95a2abf193117de8ac3129a85d6670419dfc75c9d5b31a392ad08505508bac91cac493cb71a59da4946f580cfa6e20c40831b5859d7e81f9d23dca5b18856c0a86ec22091ba574344f7f28bc954aab1db698b05d09a477767eefa78e5d84f61824cbd16da6c3a19cc2107580ff9d32fde6cf433a82f7ce8fe1722a9b62b75fed951a395c2f946d48b7015f332fbbdc2d73348904420a1c8b79f9a3fa17effaa11a10dfe0b2c195eb5c0c05973b353e18884ddb6cbf24898dc8bdd89f7b393a24a0d5dfd1f34a1a97f6a66f7a1fb090a9b3ac013991d361b764f13e573803afce7ad2b590f5aedc3999d5b63c97eda6cb16c77d6b2a4c9094e64c54fd1ecd20ecce689c8758e96160beeb0ec9d5197d9fe978bd0eac2175078fa96ee08c6a2a6b9ce3e765bcbc2d3c6ddc04dc67453632af0481bca8006e614c95c55cd48e8e9f2fc13274bdbd11650307cdefb75e0257da86d41a2834af8849b2cfa5dd82566f68aa14e25954feffeaeeefea9270226081e32523c09fcc0f49b235aa58c33ac3d9169410
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 61204db4000000000027
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 8e3ffc222fbcebdbb8b23115ab259be7
+        SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
+        SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
+    - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420106MA4KYGE00T,
+        C=CN, ST=Hubei, L=Wuhan, O=Wuhan Qimiao Technology Co., Ltd., CN=Wuhan Qimiao
+        Technology Co., Ltd.
+      ValidFrom: '2018-07-24 00:00:00'
+      ValidTo: '2021-07-27 12:00:00'
+      Signature: 7226f288fbeeca8f44035b0a08ce0dba5c96e989be8cd1c7ca8e21f4a721593728ee9e33a3bbc12424653b879b3ecf05b0929ea0579dffcb82b96e70a489428443d9a8387eb53581b31e2416ac5bfaf954e427ac54cd7eebb3c7d05cbfe751386bd54bcb9143cef6b552eff691f02057142709947fb4d76ffbcef98d4467bfd65b2ede6bfc1c9d7a3a03ecbe2f8be3374a0c4c82840362c656232d4e55f8a585bd85a9e94c5b019a76d3209558430c826712da1ab372c9d9fcb33f4adaee80b52e1d11f5b940ee0f73960109c4a4cf93f567281ef975cf3585707861561c0a814310984ca24eaae1c579df601f946052f3e96b5df4aa78fb0f1577ed66d7ccbb
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 04bb87e2d35b4b14bbfe76ae0f8f4372
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 93c8be246fe6a0584a07029f191006d3
+        SHA1: 21d94ebf6e46aff340c81db886845b67bc6df8c8
+        SHA256: 2f41d6e23cb86fc3825e1be65beaff32271d81c0902ad3696fd4745def3c15ce
+        SHA384: a887e08bddfb2ba00e88d8cef40d7c45d0594766b786a901708bee54c11ce7b4b206648efb4cf3e1f62d26de7ab77495
+    - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
+      ValidFrom: '2014-10-22 00:00:00'
+      ValidTo: '2024-10-22 00:00:00'
+      Signature: 9d257e1b334db226815c9b86ce23200f8087e588ffffb1d46a2c31ed3a17197117cda91bbc5a1639009de36c84e45a40fbde06018c37fa9bb19d247efe20a457ad5bb79ab06026ea6957215d342f1f71b0839419056b359010a07b97c7f63fe7e21141a6bd62d9f0273d381d286f3a5209f0ec7062d3624bb0e073a692c0d38e31d82fe36d171306eee403b614abf38f43a7719d21dd14ca155d9241daf90f81d199740d26c40e7f1bb5f5a0f1c677062815e9d893e55516f0bb0aab1cdb5c482766c8a38b0a1ce595daaec42e59a061dddaf36da261e98a0b6dec1218bdf755544003922b6bc251c20a48afb0d46ee0f4140a3a1be38f3dcaaf6a8d7bdcd844
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 03019a023aff58b16bd6d5eae617f066
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: a752afee44f017e8d74e3f3eb7914ae3
+        SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
+        SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      ValidFrom: '2012-04-18 12:00:00'
+      ValidTo: '2027-04-18 12:00:00'
+      Signature: 19334a0c813337dbad36c9e4c93abbb51b2e7aa2e2f44342179ebf4ea14de1b1dbe981dd9f01f2e488d5e9fe09fd21c1ec5d80d2f0d6c143c2fe772bdbf9d79133ce6cd5b2193be62ed6c9934f88408ecde1f57ef10fc6595672e8eb6a41bd1cd546d57c49ca663815c1bfe091707787dcc98d31c90c29a233ed8de287cd898d3f1bffd5e01a978b7cda6dfba8c6b23a666b7b01b3cdd8a634ec1201ab9558a5c45357a860e6e70212a0b92364a24dbb7c81256421becfee42184397bba53706af4dff26a54d614bec4641b865ceb8799e08960b818c8a3b8fc7998ca32a6e986d5e61c696b78ab9612d93b8eb0e0443d7f5fea6f062d4996aa5c1c1f0649480
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 83f5de89f641d0fbf60248e10a7b9534
+        SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
+        SHA256: eec58131dc11cd7f512501b15fdbc6074c603b68ca91f7162d5a042054edb0cf
+        SHA384: 4a25018683cabfb8ec2cad136334f37f33c89aa8540326322991d997c8adfb7faf06ab602ebd46630fe75fe3d2edc6b1
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
+      ValidFrom: '2006-11-10 00:00:00'
+      ValidTo: '2021-11-10 00:00:00'
+      Signature: 46503ec9b72824a7381db65b29af52cf52e93147ab565c7bd50d0b41b3efec751f7438f2b25c61a29c95c350e482b923d1ba3a8672ad3878ac755d1717347247859456d1ebbb368477cc24a5f3041955a9e7e3e7ab62cdfb8b2d90c2c0d2b594bd5e4fb105d20e3d1aa9145ba6863162a8a833e49b39a7c4f5ce1d7876942573e42aabcf9c764bed5fc24b16e44b704c00891efcc579bc4c1257fe5fe11ebc025da8fefb07384f0dc65d91b90f6745cdd683ede7920d8db1698c4ffb59e0230fd2aaae007cee9c420ecf91d727b716ee0fc3bd7c0aa0ee2c08558522b8eb181a4dfc2a21ad49318347957771dcb11b4b4b1c109c7714c19d4f2f5a9508291026
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 4e5ad189638cf52ba9cd881d4d44668c
+        SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
+        SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
+    Signer:
+    - SerialNumber: 04bb87e2d35b4b14bbfe76ae0f8f4372
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
+        CA (SHA2)
+      Version: 1
+  Imphash: 8902d821cdfd8e73ca10c00a3ce66731
+  LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: 26cbbcf09fcbba64d93342c273c480d2
+    SHA1: 7aa2c4c51afc1c82beae55ab9ca7ba0bb588b5c0
+    SHA256: df4e25990742fc8d3aed70f6cb4d402e111e7ed08fa5f76aca685b8c03b98b93
+  Company: Windows (R) Win 7 DDK provider
+  Copyright: Copyright  2020 nn.com
+  CreationTimestamp: '2020-05-12 22:43:44'
+  Date: ''
+  Description: Leigod net data catcher.
+  ExportedFunctions: ''
+  FileVersion: 1.0.0.0
+  Filename: ''
+  ImportedFunctions:
+  - FwpmFreeMemory0
+  - FwpmEngineOpen0
+  - FwpmEngineClose0
+  - FwpmTransactionBegin0
+  - FwpmTransactionCommit0
+  - FwpmTransactionAbort0
+  - FwpmProviderAdd0
+  - FwpmProviderContextDeleteByKey0
+  - FwpmSubLayerAdd0
+  - FwpmSubLayerDeleteByKey0
+  - FwpmSubLayerCreateEnumHandle0
+  - FwpmSubLayerEnum0
+  - FwpmSubLayerDestroyEnumHandle0
+  - FwpmCalloutAdd0
+  - FwpmFilterAdd0
+  - FwpsFlowAbort0
+  - FwpsInjectionHandleCreate0
+  - FwpsQueryPacketInjectionState0
+  - FwpsAllocateNetBufferAndNetBufferList0
+  - FwpsFreeNetBufferList0
+  - FwpsFreeCloneNetBufferList0
+  - FwpsInjectNetworkSendAsync0
+  - FwpsConstructIpHeaderForTransportPacket0
+  - FwpsInjectTransportSendAsync0
+  - FwpsInjectTransportReceiveAsync0
+  - FwpsInjectNetworkReceiveAsync0
+  - FwpsStreamInjectAsync0
+  - FwpsCopyStreamDataToBuffer0
+  - FwpmBfeStateGet0
+  - FwpmBfeStateSubscribeChanges0
+  - FwpmBfeStateUnsubscribeChanges0
+  - FwpsFlowRemoveContext0
+  - FwpsCompleteClassify0
+  - FwpsRedirectHandleDestroy0
+  - FwpsCloneStreamData0
+  - FwpsDiscardClonedStreamData0
+  - FwpsRedirectHandleCreate0
+  - FwpsApplyModifiedLayerData0
+  - FwpsAcquireWritableLayerDataPointer0
+  - FwpsReleaseClassifyHandle0
+  - FwpsAcquireClassifyHandle0
+  - FwpsFlowAssociateContext0
+  - FwpsCalloutUnregisterByKey0
+  - FwpsCalloutRegister1
+  - FwpsInjectionHandleDestroy0
+  - FwpsPendClassify0
+  - NdisFreeNetBufferListPool
+  - NdisWaitEvent
+  - NdisInitializeEvent
+  - NdisFreeGenericObject
+  - NdisAllocateGenericObject
+  - NdisGetDataBuffer
+  - NdisAdvanceNetBufferDataStart
+  - NdisRetreatNetBufferDataStart
+  - NdisAllocateNetBufferListPool
+  - KeAcquireInStackQueuedSpinLock
+  - KeReleaseInStackQueuedSpinLock
+  - ExAllocatePoolWithTag
+  - ExUuidCreate
+  - swprintf_s
+  - RtlInitUnicodeString
+  - MmGetSystemRoutineAddress
+  - RtlAppendUnicodeToString
+  - RtlCreateSecurityDescriptor
+  - RtlSetDaclSecurityDescriptor
+  - KeInitializeEvent
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - KeInitializeSpinLock
+  - ExFreePoolWithTag
+  - ExQueryDepthSList
+  - ExpInterlockedPopEntrySList
+  - ExpInterlockedPushEntrySList
+  - ExInitializeNPagedLookasideList
+  - ExDeleteNPagedLookasideList
+  - MmBuildMdlForNonPagedPool
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - MmAllocatePagesForMdl
+  - MmFreePagesFromMdl
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - IoAllocateMdl
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoFreeMdl
+  - IoReleaseCancelSpinLock
+  - ObReferenceObjectByHandle
+  - ObfDereferenceObject
+  - ZwClose
+  - ZwOpenKey
+  - ZwQueryValueKey
+  - PsGetCurrentProcessId
+  - ZwSetInformationThread
+  - RtlLengthSid
+  - RtlCreateAcl
+  - RtlAddAccessAllowedAce
+  - PsLookupProcessByProcessId
+  - ObOpenObjectByPointer
+  - ZwSetSecurityObject
+  - __C_specific_handler
+  - SeExports
+  - RtlGetVersion
+  - RtlCompareMemory
+  - RtlValidSid
+  Imports:
+  - fwpkclnt.sys
+  - NDIS.SYS
+  - ntoskrnl.exe
+  InternalName: LgDataCatcher.sys
+  MD5: aca70899d834124fa02dc52f098cad05
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: LgDataCatcher.sys
+  PDBPath: ''
+  Product: GameAcc
+  ProductVersion: 1.0.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: f40ea159736b62f8895bbfc28c0dfa09
+    SHA1: 2be491e3b182f5df0605c27ed0d26fb08c6b4cf6
+    SHA256: c5bd76e06c3bde6fd6494e77255dcfc2c35d59c7ebbf84df420b83198dbc16e1
+  SHA1: 0c10ff27f2ab76bbe6ddece8c1b2cff05e5483cc
+  SHA256: 07fb2bb6c852f6a6fe982b2232f047e167be39738bac26806ffe0927ba873756
+  Sections:
+    .text:
+      Entropy: 6.194279179648036
+      Virtual Size: '0xfb3a'
+    .rdata:
+      Entropy: 5.19122124724292
+      Virtual Size: '0x1a04'
+    .data:
+      Entropy: 2.0214134184014134
+      Virtual Size: '0x1680'
+    .pdata:
+      Entropy: 4.952698187604174
+      Virtual Size: '0xc24'
+    INIT:
+      Entropy: 5.174414715416575
+      Virtual Size: '0xef2'
+    .rsrc:
+      Entropy: 3.499847177522211
+      Virtual Size: '0x3f8'
+    .reloc:
+      Entropy: 4.8522168041142235
+      Virtual Size: '0x144'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
+        CA
+      ValidFrom: '2011-04-15 19:41:37'
+      ValidTo: '2021-04-15 19:51:37'
+      Signature: 5cf5b22d02ceed01b53512d813f7aa4014c7a15ca08a55ed7e55ea6ac457176fd04722423658efc5ac61c5f62c52ce6ae6c80d85dab334420ea40225182672b92a4ea57e4b16f2a0e40c449ce24d9af474f0f927a6699031c244654348c74869d0fc8409f286140ac22996857f11eb8713176ed3ec6bff1d578ab17b1ea5a07ce9a27a68e5fac6b161d67263fa379163835599f81d614f0c6fa3f7bcb1152acc8d85e31417ef7e49443fb022c0f0acbe2fdbe10c86b0f4585c5a10a94bcdf3448a4652083e0a6210e9459504b78b8d4b074f500db7bbe7fb8ca27878c6c53b7663b2cfe521845a66fce04c79834ecfa8ee700586587cc29cd73ca3ad3c7e76625c87d0ed7cd5c55b1421f4be75a275d2e9e15ad020307841624d6b5e6e1b1710244ad8588775d015d762bbfd185665842561977faad49df4f35d6da031c2e19e02ac3e90c3327ee832903416d08b14cf95accee58c54a265b8bfed186a57073ed3e79a4a2f081a041c49871a8ae61b08a365d81c31c50d9cbab368ddf45076160675fec403e7d13edfdc862e10027e661296534e7af3365879b12042d8963f35be3f8ef2999743f5e40ce13c68728c8d49d75a52b573fb7a35943a61b08482c04885c19732d39b725fa0d2348f7ef0467cf28c7294c707b0d7b5b230b81965f09c8327b0a0abd0a2727e050fb3aeddb95b9b42bcc32663456b86f11d4643edc8
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 611cb28a000000000026
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 983a0c315a50542362f2bd6a5d71c8d0
+        SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
+        SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
+    - Subject: C=CN, ST=, L=, O=, CN=
+      ValidFrom: '2020-04-07 00:00:00'
+      ValidTo: '2023-04-12 12:00:00'
+      Signature: 056b54cd71b6206297f5e781cbdd5fd3e1d00efd8902ba8fa5e88fa99f3e4de7f620d29685cd48f2e229845102cae6eeaf3dd16087873576b35af8bde8b369baf14d6956c881d4d55c730734db3029c84b83eabed46aeaf79daacc1821220e82886a9b499923225ac471a3df7389ab99693d7a950c07f7fcb4da549ed53c462676b259c867b31f317552cbdbeb331b537ec9b3ca4ab68c26a47aede38fd3a33253655442c4a6113cd16669660e55088a03650dc6c1c5fe52aabd613651e5f0a45096bfc3baeafc386bbe75b53909d4974cc360a491cb19090b681bca3dda039ee52b5bd5fdf1ff157625ad1f54db0e14b571e00d7119bfbd667df0cd517e77bd
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 0dd7d4a785990584d8c0837659173272
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 559c170b8f735dd1ba8c3946354c4fa5
+        SHA1: e7432e65001ca5e56478ee25ae9906981432ee75
+        SHA256: 1c6140780d5210fb89e1dd3005184e03dc52740266a921035b1f836b5af0d32a
+        SHA384: 545ad02c12154f939f80b6f4b9d7ae888550220af82ec3f0a42805c8f6e6d7e57dbe62c80a8f8ec35a894acce2f68d9f
+    - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
+      ValidFrom: '2014-10-22 00:00:00'
+      ValidTo: '2024-10-22 00:00:00'
+      Signature: 9d257e1b334db226815c9b86ce23200f8087e588ffffb1d46a2c31ed3a17197117cda91bbc5a1639009de36c84e45a40fbde06018c37fa9bb19d247efe20a457ad5bb79ab06026ea6957215d342f1f71b0839419056b359010a07b97c7f63fe7e21141a6bd62d9f0273d381d286f3a5209f0ec7062d3624bb0e073a692c0d38e31d82fe36d171306eee403b614abf38f43a7719d21dd14ca155d9241daf90f81d199740d26c40e7f1bb5f5a0f1c677062815e9d893e55516f0bb0aab1cdb5c482766c8a38b0a1ce595daaec42e59a061dddaf36da261e98a0b6dec1218bdf755544003922b6bc251c20a48afb0d46ee0f4140a3a1be38f3dcaaf6a8d7bdcd844
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 03019a023aff58b16bd6d5eae617f066
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: a752afee44f017e8d74e3f3eb7914ae3
+        SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
+        SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
+        Signing CA,1
+      ValidFrom: '2011-02-11 12:00:00'
+      ValidTo: '2026-02-10 12:00:00'
+      Signature: 7b721d64ff88c83ac1b7e9e7a9c487bbdb9492d7905933fa2b87dea85b80253f138f9b831b7c43c4e68cdf393ec315ecb0da3b21257b24c1725db84791811346fa9c3f6a5138deb425cbf0abdfc528015479104624d1380f26a161904dbabd28e63ff1c4aa9bf6da35534fc9f23dd36cdc23edaaa04d6709f33a803d3cfb364c90e776a4ddf23abf56352fa24c65e8e0d4dad1c7c8916a2d234f373b199418d4d59c103cd5b11c19ff8fc86b9b9ef8ae9c999678d1cd9c51155b4226725a8d0a4a239240e886de22c2933ad49b68a6df297f06b93c0ebd9fc4869c82474271328609997209794b9d7169f541ff7f397764f1848dbe8b1eb27d68a3a590b10cff
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: a9a31555bbc92b6033975c5428fb3679
+        SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
+        SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
+        SHA384: 86f49574f368a561914a52d7ae043ec6784ef8c718960700f834e123594605d25d39f1ad45f1eb5052c9567f3edd0e16
+    - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
+      ValidFrom: '2006-11-10 00:00:00'
+      ValidTo: '2021-11-10 00:00:00'
+      Signature: 46503ec9b72824a7381db65b29af52cf52e93147ab565c7bd50d0b41b3efec751f7438f2b25c61a29c95c350e482b923d1ba3a8672ad3878ac755d1717347247859456d1ebbb368477cc24a5f3041955a9e7e3e7ab62cdfb8b2d90c2c0d2b594bd5e4fb105d20e3d1aa9145ba6863162a8a833e49b39a7c4f5ce1d7876942573e42aabcf9c764bed5fc24b16e44b704c00891efcc579bc4c1257fe5fe11ebc025da8fefb07384f0dc65d91b90f6745cdd683ede7920d8db1698c4ffb59e0230fd2aaae007cee9c420ecf91d727b716ee0fc3bd7c0aa0ee2c08558522b8eb181a4dfc2a21ad49318347957771dcb11b4b4b1c109c7714c19d4f2f5a9508291026
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: 4e5ad189638cf52ba9cd881d4d44668c
+        SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
+        SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
+    Signer:
+    - SerialNumber: 0dd7d4a785990584d8c0837659173272
+      Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
+        Signing CA,1
+      Version: 1
+  Imphash: 8902d821cdfd8e73ca10c00a3ce66731
+  LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: 26cbbcf09fcbba64d93342c273c480d2
+    SHA1: 7aa2c4c51afc1c82beae55ab9ca7ba0bb588b5c0
+    SHA256: df4e25990742fc8d3aed70f6cb4d402e111e7ed08fa5f76aca685b8c03b98b93
+  Company: Windows (R) Win 7 DDK provider
+  Copyright: Copyright  2020 nn.com
+  CreationTimestamp: '2020-05-12 22:43:44'
+  Date: ''
+  Description: Leigod net data catcher.
+  ExportedFunctions: ''
+  FileVersion: 1.0.0.0
+  Filename: ''
+  ImportedFunctions:
+  - FwpmFreeMemory0
+  - FwpmEngineOpen0
+  - FwpmEngineClose0
+  - FwpmTransactionBegin0
+  - FwpmTransactionCommit0
+  - FwpmTransactionAbort0
+  - FwpmProviderAdd0
+  - FwpmProviderContextDeleteByKey0
+  - FwpmSubLayerAdd0
+  - FwpmSubLayerDeleteByKey0
+  - FwpmSubLayerCreateEnumHandle0
+  - FwpmSubLayerEnum0
+  - FwpmSubLayerDestroyEnumHandle0
+  - FwpmCalloutAdd0
+  - FwpmFilterAdd0
+  - FwpsFlowAbort0
+  - FwpsInjectionHandleCreate0
+  - FwpsQueryPacketInjectionState0
+  - FwpsAllocateNetBufferAndNetBufferList0
+  - FwpsFreeNetBufferList0
+  - FwpsFreeCloneNetBufferList0
+  - FwpsInjectNetworkSendAsync0
+  - FwpsConstructIpHeaderForTransportPacket0
+  - FwpsInjectTransportSendAsync0
+  - FwpsInjectTransportReceiveAsync0
+  - FwpsInjectNetworkReceiveAsync0
+  - FwpsStreamInjectAsync0
+  - FwpsCopyStreamDataToBuffer0
+  - FwpmBfeStateGet0
+  - FwpmBfeStateSubscribeChanges0
+  - FwpmBfeStateUnsubscribeChanges0
+  - FwpsFlowRemoveContext0
+  - FwpsCompleteClassify0
+  - FwpsRedirectHandleDestroy0
+  - FwpsCloneStreamData0
+  - FwpsDiscardClonedStreamData0
+  - FwpsRedirectHandleCreate0
+  - FwpsApplyModifiedLayerData0
+  - FwpsAcquireWritableLayerDataPointer0
+  - FwpsReleaseClassifyHandle0
+  - FwpsAcquireClassifyHandle0
+  - FwpsFlowAssociateContext0
+  - FwpsCalloutUnregisterByKey0
+  - FwpsCalloutRegister1
+  - FwpsInjectionHandleDestroy0
+  - FwpsPendClassify0
+  - NdisFreeNetBufferListPool
+  - NdisWaitEvent
+  - NdisInitializeEvent
+  - NdisFreeGenericObject
+  - NdisAllocateGenericObject
+  - NdisGetDataBuffer
+  - NdisAdvanceNetBufferDataStart
+  - NdisRetreatNetBufferDataStart
+  - NdisAllocateNetBufferListPool
+  - KeAcquireInStackQueuedSpinLock
+  - KeReleaseInStackQueuedSpinLock
+  - ExAllocatePoolWithTag
+  - ExUuidCreate
+  - swprintf_s
+  - RtlInitUnicodeString
+  - MmGetSystemRoutineAddress
+  - RtlAppendUnicodeToString
+  - RtlCreateSecurityDescriptor
+  - RtlSetDaclSecurityDescriptor
+  - KeInitializeEvent
+  - KeSetEvent
+  - KeWaitForSingleObject
+  - KeInitializeSpinLock
+  - ExFreePoolWithTag
+  - ExQueryDepthSList
+  - ExpInterlockedPopEntrySList
+  - ExpInterlockedPushEntrySList
+  - ExInitializeNPagedLookasideList
+  - ExDeleteNPagedLookasideList
+  - MmBuildMdlForNonPagedPool
+  - MmMapLockedPagesSpecifyCache
+  - MmUnmapLockedPages
+  - MmAllocatePagesForMdl
+  - MmFreePagesFromMdl
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - IoAllocateMdl
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - IoFreeMdl
+  - IoReleaseCancelSpinLock
+  - ObReferenceObjectByHandle
+  - ObfDereferenceObject
+  - ZwClose
+  - ZwOpenKey
+  - ZwQueryValueKey
+  - PsGetCurrentProcessId
+  - ZwSetInformationThread
+  - RtlLengthSid
+  - RtlCreateAcl
+  - RtlAddAccessAllowedAce
+  - PsLookupProcessByProcessId
+  - ObOpenObjectByPointer
+  - ZwSetSecurityObject
+  - __C_specific_handler
+  - SeExports
+  - RtlGetVersion
+  - RtlCompareMemory
+  - RtlValidSid
+  Imports:
+  - fwpkclnt.sys
+  - NDIS.SYS
+  - ntoskrnl.exe
+  InternalName: LgDataCatcher.sys
+  MD5: 3f87df040c35ea45dfd4ae371b9641ae
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: LgDataCatcher.sys
+  PDBPath: ''
+  Product: GameAcc
+  ProductVersion: 1.0.0.0
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: f40ea159736b62f8895bbfc28c0dfa09
+    SHA1: 2be491e3b182f5df0605c27ed0d26fb08c6b4cf6
+    SHA256: c5bd76e06c3bde6fd6494e77255dcfc2c35d59c7ebbf84df420b83198dbc16e1
+  SHA1: 3864dfc19c8479a491bc3b0637cf0e789a6d53d8
+  SHA256: 516159871730b18c2bddedb1a9da110577112d4835606ee79bb80e7a58784a13
+  Sections:
+    .text:
+      Entropy: 6.194279179648036
+      Virtual Size: '0xfb3a'
+    .rdata:
+      Entropy: 5.19122124724292
+      Virtual Size: '0x1a04'
+    .data:
+      Entropy: 2.0214134184014134
+      Virtual Size: '0x1680'
+    .pdata:
+      Entropy: 4.952698187604174
+      Virtual Size: '0xc24'
+    INIT:
+      Entropy: 5.174414715416575
+      Virtual Size: '0xef2'
+    .rsrc:
+      Entropy: 3.499847177522211
+      Virtual Size: '0x3f8'
+    .reloc:
+      Entropy: 4.8522168041142235
+      Virtual Size: '0x144'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Timestamping CA , G2
+      ValidFrom: '2011-04-13 10:00:00'
+      ValidTo: '2028-01-28 12:00:00'
+      Signature: 4e5e56901e46b4d94931f3bb1739281bc216ddfd41dc0905049b6fb2a29ad6992e40990055b5ea3fa52076d38634d417cc553ac782eeefa8babcd8069f1550dfcd167b523a02d7191afdaff0785ce04bc518df3a241edaacb8a95804020730dbb0125efe31bef00448f4f070f83a5e5683cf3dfb0dbcf4c5ed979db9d4dba52784e3389b8ba735864420a43b6da46a0ba183fd28ebdaef28f6cc885dfb0a3b00abe021ebe22f356c0f8e344597eba2f79933357ecb9a8abb454de73f9fc2d98afa65b26ec77e65ffe892e12c31a2f7b02736488f266f3bee4d761f79c3e57f9635bc2d0ecc01b08e7fff518080a792d4b34446648c874f166307314b63b0dff3
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0400000000012f4ee152d7
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: e140543fe3256027cfa79fc3c19c1776
+        SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
+        SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
+    - Subject: OU=GlobalSign Root CA , R3, O=GlobalSign, CN=GlobalSign
+      ValidFrom: '2009-11-18 10:00:00'
+      ValidTo: '2019-03-18 10:00:00'
+      Signature: 4252a97ea2cf5b3bcb4bddbaf85759d324a47772ef62443782ed06ee04d5165f24a314dc6c54056ab09b3dda8139daad28db956f8183f5cd62b14524b1dd29e5085495958cf01d065f1ad6463f1340174811169b474dd13ab50f571c9230d0f8b2253b0acdf687f9c7b257d33f7da58c14ce9ca8c79f4693da59fa795d652035445a4fc1909dc1549256dc34c8f5c103d05dc059489c00fc95a0f1d176f71636c813927f2d2bc0b880f126261f414d52bf1e97bb018208e715f6c1d5342accf5e4c3877a5781e1d6d74286620177e2a9c47a86f404387a076a7d00ec73f7a80b3478c59eb3efb838400e8c3353c875ec5f3eea755eff820e7415dc1905f3ba31
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 04000000000125071df9af
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: f47739306d14722e670d9436eadb8e4f
+        SHA1: 457d9df00a652cb4c3356d00145d9528fc309172
+        SHA256: bd1765c56594221373893ef26d97f88c144fb0e5a0111215b45d7239c3444df7
+        SHA384: b8b268a1bdf388be66a1c969b7b353cb2bbc9fad446049b7efa05a9ab3b714494e97f4d1ee1c0bae35bfd9bf6ef275b3
+    - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
+        , G2
+      ValidFrom: '2016-05-24 00:00:00'
+      ValidTo: '2027-06-24 00:00:00'
+      Signature: 8fa91a916d04a637200e8396de23d36b6e1f6edd643d682122b5f84736698ee1a545c724a222b72909cc545aaec6bccd638eb33d5048e5b4ccaecd928d9e288b134a11aabda3efd3b236fcb4a172bf6d9763798c44bc702f7ef3bcdd8253ab1af6ebfa1c97bcb6379ca41c30bcabbc2d4736df922003e871c658f675059a34f00b595a824434aa80e42f84f6475d96c9b6caca9db7a6bae450d3d437b8ba200ed0d3922a5bc459bba16ddb3cce449dc1382aade38dbdcd09771a10be670a02366488b9b31b26eee79e60c446a8bc61336ccf4eb99cb96af09f37feb53d4f9ad34dffde208e4e97a6fd9f09bc4dca1876c9b04d8550f280d21d06f5580407b118
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 1121d699a764973ef1f8427ee919cc534114
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: acb5170547d76873f1e4ff18ed5de2eb
+        SHA1: bd6e261e75b807381bada7287de04d259258a5fa
+        SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
+        SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
+        CA , SHA256 , G3
+      ValidFrom: '2016-06-15 00:00:00'
+      ValidTo: '2024-06-15 00:00:00'
+      Signature: 7609c4cc2fd9ef1e4ba9f857f3403921ca4c3c1d9e292b20d42b44d288ce1a0d05cf8381bbeb69bc318d2ac4c744cc6060941ccfa1e102240ead5bbe2cc2271e67b7e8281f3251e339f398dfb89f2e8b2ab47b0a03bcbd36048fc9d09c4fa3022799b0f045e934dfe43aa3b70637d86f2a7990d4d44e5871ec53a96198f73969e0129c575872862729a51de532f32b99975abf2bb03cb406ea0e64ecb7cd65802417c2d937f5b1261035477b9a02ba54a24593ff79bf1a8cc59fb59fdf78e76b50f14794694b24b8da05e80c9d4f06ec4a31207e4f5d86842f35a3cd9cc184571f1fadc0e2a4b1ef296b2197a6d4feed0337b0fcf58d2abcdc8483e3dec3e75f
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: true
+      SerialNumber: 481b6a07a9424c1eaafef3cdf10f
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: fd8cfeea06be14fa89689909e1fc72dc
+        SHA1: 8bc3cd2f70abe543e0dbe721065a4076c8521f36
+        SHA256: 15e7050789df807f3e3174294a01b637a1239f603e42f4b5db9398efa9da9996
+        SHA384: 8b9f95e6d3dd45e4ef38e2f12fb893d7d1bb1ba867e152e4a73c49b3d51dd52bc83a05982deac29af90436061248546d
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      ValidFrom: '2011-04-15 19:55:08'
+      ValidTo: '2021-04-15 20:05:08'
+      Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 6129152700000000002a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 0bb058d116f02817737920f112d9fd3b
+        SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
+        SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
+    - Subject: ??=Private Organization, serialNumber=91420106MA4L0NHE9U, ??=CN, ??=HEBEI,
+        ??=WUHAN, C=CN, ST=, L=, ??=397, O=, CN=
+      ValidFrom: '2018-11-15 10:01:02'
+      ValidTo: '2021-11-15 10:01:02'
+      Signature: 00a4726dbfb611464678aaab7dfa3c9231d9c2c7690387c38601f064858035833f3b8473055e9d96d7dc6e35198c613bdb13ea5578842d80f194f21635d13ccf399f1996c929843783fd6d905506eba15f821bfcabf3a01ab67d25ab315c1eaae244d4fd779a45aaf0854ea46d0bcc3d97879314324c8176d283b83657f12ba7dc62209f9e365522f791f41ee263df2c978cac7676a04e2505a3d3fe698ec2e7287e0c479a9f43ca526cbea8050a859080e3198c47e958d3ea3f61a0901760263eaf8897c143167b2d973638eb4eb925b4de9452d83f850b683567c68979d40d339f200e20bfff8f852d6a716836af2f6cd18f861ad54667398ef197766db86c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.11
+      IsCertificateAuthority: false
+      SerialNumber: 1ae9d4b848b34ca82bcf623a
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: dc1fd334ac7950329ff4fa45a3bde8da
+        SHA1: f58e04e6dd1954a2fd06e5fedd1408a9c765dd18
+        SHA256: 9ed1944c1abbe6ed081eb71a3da83e72f758c6dea4e009088a41cba22870bec3
+        SHA384: 320f2d5b300f34214eee049c2171e85ef6061833a5726a73e183e41d500fd03c536479cd220322db81a6b73512d6537e
+    Signer:
+    - SerialNumber: 1ae9d4b848b34ca82bcf623a
+      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign Extended Validation CodeSigning
+        CA , SHA256 , G3
+      Version: 1
+  Imphash: 8902d821cdfd8e73ca10c00a3ce66731
+  LoadsDespiteHVCI: 'FALSE'

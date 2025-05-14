@@ -8,13 +8,13 @@ Created: '2023-05-22'
 MitreID: T1068
 Category: malicious
 Commands:
-    Command: sc.exe create gmer64.sys binPath=C:\windows\temp\gmer64.sys type=kernel
-        && sc.exe start gmer64.sys
-    Description: Driver used by the GMER application. Which is an application that
-        detects and removes rootkits
-    OperatingSystem: Windows 10
-    Privileges: kernel
-    Usecase: Elevate privileges
+  Command: sc.exe create gmer64.sys binPath=C:\windows\temp\gmer64.sys type=kernel
+    && sc.exe start gmer64.sys
+  Description: Driver used by the GMER application. Which is an application that detects
+    and removes rootkits
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
 - http://www.gmer.net/
@@ -22,417 +22,435 @@ Resources:
 - https://github.com/ZeroMemoryEx/Blackout
 - https://github.com/b1-team/superman
 Detection:
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/18c909a2b8c5e16821d6ef908f56881aa0ecceeaccb5fa1e54995935fcfd12f7.yara
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
--   type: yara_signature
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_mal_drivers_strict.yar
--   type: sigma_hash
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
--   type: sigma_names
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
--   type: sysmon_hash_detect
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
--   type: sysmon_hash_block
-    value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/18c909a2b8c5e16821d6ef908f56881aa0ecceeaccb5fa1e54995935fcfd12f7.yara
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_mal_drivers_strict.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Acknowledgement:
-    Handle: hfiref0x
-    Person: hfiref0x
+  Handle: hfiref0x
+  Person: hfiref0x
 KnownVulnerableSamples:
--   Authentihash:
-        MD5: 7514f440c5b9e5c4a0498e4489b76d62
-        SHA1: 0bca6c35159282fd64615abc4d398399b061847b
-        SHA256: 3913d9754b78182aa25d38fbd7ea02502bdf1d81e6525ab4b5ffe5f543200478
-    Company: GMER
-    Copyright: Copyright (C) GMER 2003-2013
-    CreationTimestamp: '2016-03-09 00:28:57'
-    Date: ''
-    Description: GMER Driver http://www.gmer.net
-    ExportedFunctions: ''
-    FileVersion: '2, 0, 6983 built by: WinDDK'
-    Filename: gmer64.sys
-    ImportedFunctions:
-    - PsProcessType
-    - IoDeleteSymbolicLink
-    - ExFreePoolWithTag
-    - strncmp
-    - _snwprintf
-    - PsLookupProcessByProcessId
-    - RtlInitUnicodeString
-    - IoDeleteDevice
-    - KeUnstackDetachProcess
-    - KeDetachProcess
-    - IoDriverObjectType
-    - wcsrchr
-    - ExAllocatePool
-    - ZwClose
-    - KeBugCheck
-    - IofCompleteRequest
-    - ObReferenceObjectByHandle
-    - KeAttachProcess
-    - PsGetVersion
-    - PsThreadType
-    - IoCreateSymbolicLink
-    - MmIsAddressValid
-    - ObfDereferenceObject
-    - ObReferenceObjectByName
-    - IoCreateDevice
-    - ObOpenObjectByPointer
-    - KeStackAttachProcess
-    - PsLookupThreadByThreadId
-    - KeClearEvent
-    - IoGetBaseFileSystemDeviceObject
-    - IoBuildSynchronousFsdRequest
-    - _wcsnicmp
-    - ZwReadFile
-    - wcsncpy
-    - KeInitializeEvent
-    - ZwSetInformationFile
-    - strncpy
-    - IoGetDeviceObjectPointer
-    - NtClose
-    - KeWaitForSingleObject
-    - ZwDeleteFile
-    - RtlCompareUnicodeString
-    - ObfReferenceObject
-    - ZwOpenFile
-    - ZwQueryInformationFile
-    - ZwWriteFile
-    - IofCallDriver
-    - wcschr
-    - MmUnmapLockedPages
-    - _stricmp
-    - _strnicmp
-    - RtlVolumeDeviceToDosName
-    - ZwMapViewOfSection
-    - MmGetSystemRoutineAddress
-    - ZwQuerySystemInformation
-    - KeReleaseSpinLock
-    - ZwOpenThread
-    - IoFreeMdl
-    - KeDelayExecutionThread
-    - MmMapLockedPagesSpecifyCache
-    - ZwUnmapViewOfSection
-    - IoGetCurrentProcess
-    - MmProbeAndLockPages
-    - ZwOpenProcess
-    - MmUnlockPages
-    - ZwQueryInformationProcess
-    - ZwCreateSection
-    - wcsncmp
-    - ZwTerminateProcess
-    - ZwQueryInformationThread
-    - IoAllocateMdl
-    - KeAcquireSpinLockRaiseToDpc
-    - ZwQuerySymbolicLinkObject
-    - KeSetEvent
-    - RtlEqualUnicodeString
-    - ZwOpenSymbolicLinkObject
-    - ZwOpenDirectoryObject
-    - ZwQueryDirectoryObject
-    - IoFreeIrp
-    - IoAllocateIrp
-    - IoGetDeviceInterfaces
-    - IoCreateNotificationEvent
-    - ObQueryNameString
-    - ZwWaitForSingleObject
-    - ZwQueryDirectoryFile
-    - KeResetEvent
-    - KdDebuggerNotPresent
-    - PsCreateSystemThread
-    - PsTerminateSystemThread
-    - KeBugCheckEx
-    - __C_specific_handler
-    Imports:
-    - ntoskrnl.exe
-    InternalName: gmer64.sys
-    MD5: a822b9e6eedf69211013e192967bf523
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: gmer64.sys
-    Product: GMER
-    ProductVersion: 2, 0, 6983
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: ae0016968883c7b6d9bf26bf6adcb454
-        SHA1: ae1e456ae17f0bce4cb62e8cc3a76e5b83c53caa
-        SHA256: 9c178663dffdd9f9429f961711da30f4c966a2437d235785d182a6e5afb40fbc
-    SHA1: 83506de48bd0c50ea00c9e889fe980f56e6c6e1b
-    SHA256: 18c909a2b8c5e16821d6ef908f56881aa0ecceeaccb5fa1e54995935fcfd12f7
-    Sections:
-        .text:
-            Entropy: 6.190031082489791
-            Virtual Size: '0x9ed1'
-        .rdata:
-            Entropy: 4.557929170549758
-            Virtual Size: '0xe44'
-        .data:
-            Entropy: 0.30140680731160896
-            Virtual Size: '0xf50'
-        .pdata:
-            Entropy: 4.428217198958577
-            Virtual Size: '0x468'
-        INIT:
-            Entropy: 5.165565402631577
-            Virtual Size: '0xace'
-        .rsrc:
-            Entropy: 3.389674147151622
-            Virtual Size: '0x368'
-    Signature: ''
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-            ValidFrom: '2011-04-13 10:00:00'
-            ValidTo: '2019-04-13 10:00:00'
-            Signature: 225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 0400000000012f4ee1355c
-            Version: 3
-            TBS:
-                MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
-                SHA1: 589a7d4df869395601ba7538a65afae8c4616385
-                SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
-                SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
-        -   Subject: C=PL, ST=Katowice, L=Katowice, O=GMEREK Systemy Komputerowe Przemyslaw
-                Gmerek, CN=GMEREK Systemy Komputerowe Przemyslaw Gmerek
-            ValidFrom: '2014-01-02 07:01:46'
-            ValidTo: '2015-02-04 15:04:09'
-            Signature: ad49289aa50c6f87bd70af8712f5c8bf00f5e44e58d92f3e0429b2179e6368a89ba4d6a35a08a6bb271dbaa454a1ffeaa1e774eb5e3b564d08998c930453ce3db67186fe7797ebf4aeb2b3f693ff919ce7ffe24ad3715ed12a2838ffd6b3a43d79b6771dd89e5b076fae811e8aca865f6ed5475a5316ee5ab85888101e65671416a1afb6fee3ac3d70a45090331e481e2bbbbe8c48f0fe31e44cc172c45c563897e70cd1c7d5afb602735b7160cb4853b6ec4b61efee01be7408f6a00214bd9381b173531fd1c903839906b8eb104a1684084a30f9618774ef23ecfbc7b6f5c7e53ed59e4be74fe4e18ceec5cb4ea9561bf8827e8bce6d30299ec8d5d5df62d2
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 1121c5bcad73319ee0131e328a2b814e164a
-            Version: 3
-            TBS:
-                MD5: 6f0e4c627d045bd81b94ec79fd4b371d
-                SHA1: a624238b100a59ac8722559c4d1e75aa4f7d99a4
-                SHA256: f0f8a64560267f1ff198c83420155851c8b91ae9eeb6227c9d1833b29b504e83
-                SHA384: 3f63878ac97adadd93ed3e316d703f25459441d2d9847dd8caec36af8c904906aaf96b55cde8cefda3d3c8031c722dd1
-        -   Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
-            ValidFrom: '2011-04-15 19:55:08'
-            ValidTo: '2021-04-15 20:05:08'
-            Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 6129152700000000002a
-            Version: 3
-            TBS:
-                MD5: 0bb058d116f02817737920f112d9fd3b
-                SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
-                SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
-                SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
-        Signer:
-        -   SerialNumber: 1121c5bcad73319ee0131e328a2b814e164a
-            Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-            Version: 1
-    Imphash: a998fe47a44bfbf2399968e21cfdf7ca
-    LoadsDespiteHVCI: 'FALSE'
--   Filename: ''
-    Libraries:
-    - ntoskrnl.exe
-    ImportedFunctions:
-    - PsProcessType
-    - IoDeleteSymbolicLink
-    - ExFreePoolWithTag
-    - strncmp
-    - _snwprintf
-    - PsLookupProcessByProcessId
-    - RtlInitUnicodeString
-    - IoDeleteDevice
-    - KeUnstackDetachProcess
-    - KeDetachProcess
-    - IoDriverObjectType
-    - wcsrchr
-    - ExAllocatePool
-    - ZwClose
-    - KeBugCheck
-    - IofCompleteRequest
-    - ObReferenceObjectByHandle
-    - KeAttachProcess
-    - PsGetVersion
-    - PsThreadType
-    - IoCreateSymbolicLink
-    - MmIsAddressValid
-    - ObfDereferenceObject
-    - ObReferenceObjectByName
-    - IoCreateDevice
-    - ObOpenObjectByPointer
-    - KeStackAttachProcess
-    - PsLookupThreadByThreadId
-    - KeClearEvent
-    - IoGetBaseFileSystemDeviceObject
-    - IoBuildSynchronousFsdRequest
-    - _wcsnicmp
-    - ZwReadFile
-    - wcsncpy
-    - KeInitializeEvent
-    - ZwSetInformationFile
-    - strncpy
-    - IoGetDeviceObjectPointer
-    - NtClose
-    - KeWaitForSingleObject
-    - ZwDeleteFile
-    - RtlCompareUnicodeString
-    - ObfReferenceObject
-    - ZwOpenFile
-    - ZwQueryInformationFile
-    - ZwWriteFile
-    - IofCallDriver
-    - wcschr
-    - MmUnmapLockedPages
-    - _stricmp
-    - _strnicmp
-    - RtlVolumeDeviceToDosName
-    - ZwMapViewOfSection
-    - MmGetSystemRoutineAddress
-    - ZwQuerySystemInformation
-    - KeReleaseSpinLock
-    - ZwOpenThread
-    - IoFreeMdl
-    - KeDelayExecutionThread
-    - MmMapLockedPagesSpecifyCache
-    - ZwUnmapViewOfSection
-    - IoGetCurrentProcess
-    - MmProbeAndLockPages
-    - ZwOpenProcess
-    - MmUnlockPages
-    - ZwQueryInformationProcess
-    - ZwCreateSection
-    - wcsncmp
-    - ZwTerminateProcess
-    - ZwQueryInformationThread
-    - IoAllocateMdl
-    - KeAcquireSpinLockRaiseToDpc
-    - ZwQuerySymbolicLinkObject
-    - KeSetEvent
-    - RtlEqualUnicodeString
-    - ZwOpenSymbolicLinkObject
-    - ZwOpenDirectoryObject
-    - ZwQueryDirectoryObject
-    - IoFreeIrp
-    - IoAllocateIrp
-    - IoGetDeviceInterfaces
-    - IoCreateNotificationEvent
-    - ObQueryNameString
-    - ZwWaitForSingleObject
-    - ZwQueryDirectoryFile
-    - KeResetEvent
-    - KdDebuggerNotPresent
-    - PsCreateSystemThread
-    - PsTerminateSystemThread
-    - KeBugCheckEx
-    - __C_specific_handler
-    ExportedFunctions: ''
-    MD5: 98b8507e725b3d28537fc374eb2de72d
-    SHA1: c80d7fe8279ddfd466505a24b9c8cc7a68b9d0e4
-    SHA256: 0052aa88e42055a2eed5ddd17c3499c692360155e5e031a211edfcef577acce3
-    Imphash: a998fe47a44bfbf2399968e21cfdf7ca
-    Machine: AMD64
-    MagicHeader: 50 45 0 0
-    CreationTimestamp: '2016-03-09 00:28:57'
-    RichPEHeaderMD5: ae0016968883c7b6d9bf26bf6adcb454
-    RichPEHeaderSHA1: ae1e456ae17f0bce4cb62e8cc3a76e5b83c53caa
-    RichPEHeaderSHA256: 9c178663dffdd9f9429f961711da30f4c966a2437d235785d182a6e5afb40fbc
-    AuthentihashMD5: 7514f440c5b9e5c4a0498e4489b76d62
-    AuthentihashSHA1: 0bca6c35159282fd64615abc4d398399b061847b
-    AuthentihashSHA256: 3913d9754b78182aa25d38fbd7ea02502bdf1d81e6525ab4b5ffe5f543200478
-    Sections:
-        .text:
-            Entropy: 6.190031082489791
-            Virtual Size: '0x9ed1'
-        .rdata:
-            Entropy: 4.557929170549758
-            Virtual Size: '0xe44'
-        .data:
-            Entropy: 0.30140680731160896
-            Virtual Size: '0xf50'
-        .pdata:
-            Entropy: 4.428217198958577
-            Virtual Size: '0x468'
-        INIT:
-            Entropy: 5.165565402631577
-            Virtual Size: '0xace'
-        .rsrc:
-            Entropy: 3.389674147151622
-            Virtual Size: '0x368'
-    CompanyName: GMER
-    FileDescription: GMER Driver http://www.gmer.net
-    InternalName: gmer64.sys
-    OriginalFilename: gmer64.sys
-    FileVersion: '2, 0, 6983 built by: WinDDK'
-    ProductName: GMER
-    LegalCopyright: Copyright (C) GMER 2003-2013
-    ProductVersion: 2, 0, 6983
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-            ValidFrom: '2011-04-13 10:00:00'
-            ValidTo: '2019-04-13 10:00:00'
-            Signature: 225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 0400000000012f4ee1355c
-            Version: 3
-            TBS:
-                MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
-                SHA1: 589a7d4df869395601ba7538a65afae8c4616385
-                SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
-                SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
-        -   Subject: C=PL, ST=Katowice, L=Katowice, O=GMEREK Systemy Komputerowe Przemyslaw
-                Gmerek, CN=GMEREK Systemy Komputerowe Przemyslaw Gmerek
-            ValidFrom: '2014-01-02 07:01:46'
-            ValidTo: '2015-02-04 15:04:09'
-            Signature: ad49289aa50c6f87bd70af8712f5c8bf00f5e44e58d92f3e0429b2179e6368a89ba4d6a35a08a6bb271dbaa454a1ffeaa1e774eb5e3b564d08998c930453ce3db67186fe7797ebf4aeb2b3f693ff919ce7ffe24ad3715ed12a2838ffd6b3a43d79b6771dd89e5b076fae811e8aca865f6ed5475a5316ee5ab85888101e65671416a1afb6fee3ac3d70a45090331e481e2bbbbe8c48f0fe31e44cc172c45c563897e70cd1c7d5afb602735b7160cb4853b6ec4b61efee01be7408f6a00214bd9381b173531fd1c903839906b8eb104a1684084a30f9618774ef23ecfbc7b6f5c7e53ed59e4be74fe4e18ceec5cb4ea9561bf8827e8bce6d30299ec8d5d5df62d2
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: false
-            SerialNumber: 1121c5bcad73319ee0131e328a2b814e164a
-            Version: 3
-            TBS:
-                MD5: 6f0e4c627d045bd81b94ec79fd4b371d
-                SHA1: a624238b100a59ac8722559c4d1e75aa4f7d99a4
-                SHA256: f0f8a64560267f1ff198c83420155851c8b91ae9eeb6227c9d1833b29b504e83
-                SHA384: 3f63878ac97adadd93ed3e316d703f25459441d2d9847dd8caec36af8c904906aaf96b55cde8cefda3d3c8031c722dd1
-        -   Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
-            ValidFrom: '2011-04-15 19:55:08'
-            ValidTo: '2021-04-15 20:05:08'
-            Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 6129152700000000002a
-            Version: 3
-            TBS:
-                MD5: 0bb058d116f02817737920f112d9fd3b
-                SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
-                SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
-                SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
-        Signer:
-        -   SerialNumber: 1121c5bcad73319ee0131e328a2b814e164a
-            Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
-            Version: 1
-    Authentihash:
-        MD5: 7514f440c5b9e5c4a0498e4489b76d62
-        SHA1: 0bca6c35159282fd64615abc4d398399b061847b
-        SHA256: 3913d9754b78182aa25d38fbd7ea02502bdf1d81e6525ab4b5ffe5f543200478
-    RichPEHeaderHash:
-        MD5: ae0016968883c7b6d9bf26bf6adcb454
-        SHA1: ae1e456ae17f0bce4cb62e8cc3a76e5b83c53caa
-        SHA256: 9c178663dffdd9f9429f961711da30f4c966a2437d235785d182a6e5afb40fbc
-    Description: GMER Driver http://www.gmer.net
-    Company: GMER
-    Product: GMER
-    Copyright: Copyright (C) GMER 2003-2013
-    MachineType: AMD64
-    Imports:
-    - ntoskrnl.exe
-    LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
+    MD5: 7514f440c5b9e5c4a0498e4489b76d62
+    SHA1: 0bca6c35159282fd64615abc4d398399b061847b
+    SHA256: 3913d9754b78182aa25d38fbd7ea02502bdf1d81e6525ab4b5ffe5f543200478
+  Company: GMER
+  Copyright: Copyright (C) GMER 2003-2013
+  CreationTimestamp: '2016-03-09 02:28:57'
+  Date: ''
+  Description: GMER Driver http://www.gmer.net
+  ExportedFunctions: ''
+  FileVersion: '2, 0, 6983 built by: WinDDK'
+  Filename: gmer64.sys
+  ImportedFunctions:
+  - PsProcessType
+  - IoDeleteSymbolicLink
+  - ExFreePoolWithTag
+  - strncmp
+  - _snwprintf
+  - PsLookupProcessByProcessId
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - KeUnstackDetachProcess
+  - KeDetachProcess
+  - IoDriverObjectType
+  - wcsrchr
+  - ExAllocatePool
+  - ZwClose
+  - KeBugCheck
+  - IofCompleteRequest
+  - ObReferenceObjectByHandle
+  - KeAttachProcess
+  - PsGetVersion
+  - PsThreadType
+  - IoCreateSymbolicLink
+  - MmIsAddressValid
+  - ObfDereferenceObject
+  - ObReferenceObjectByName
+  - IoCreateDevice
+  - ObOpenObjectByPointer
+  - KeStackAttachProcess
+  - PsLookupThreadByThreadId
+  - KeClearEvent
+  - IoGetBaseFileSystemDeviceObject
+  - IoBuildSynchronousFsdRequest
+  - _wcsnicmp
+  - ZwReadFile
+  - wcsncpy
+  - KeInitializeEvent
+  - ZwSetInformationFile
+  - strncpy
+  - IoGetDeviceObjectPointer
+  - NtClose
+  - KeWaitForSingleObject
+  - ZwDeleteFile
+  - RtlCompareUnicodeString
+  - ObfReferenceObject
+  - ZwOpenFile
+  - ZwQueryInformationFile
+  - ZwWriteFile
+  - IofCallDriver
+  - wcschr
+  - MmUnmapLockedPages
+  - _stricmp
+  - _strnicmp
+  - RtlVolumeDeviceToDosName
+  - ZwMapViewOfSection
+  - MmGetSystemRoutineAddress
+  - ZwQuerySystemInformation
+  - KeReleaseSpinLock
+  - ZwOpenThread
+  - IoFreeMdl
+  - KeDelayExecutionThread
+  - MmMapLockedPagesSpecifyCache
+  - ZwUnmapViewOfSection
+  - IoGetCurrentProcess
+  - MmProbeAndLockPages
+  - ZwOpenProcess
+  - MmUnlockPages
+  - ZwQueryInformationProcess
+  - ZwCreateSection
+  - wcsncmp
+  - ZwTerminateProcess
+  - ZwQueryInformationThread
+  - IoAllocateMdl
+  - KeAcquireSpinLockRaiseToDpc
+  - ZwQuerySymbolicLinkObject
+  - KeSetEvent
+  - RtlEqualUnicodeString
+  - ZwOpenSymbolicLinkObject
+  - ZwOpenDirectoryObject
+  - ZwQueryDirectoryObject
+  - IoFreeIrp
+  - IoAllocateIrp
+  - IoGetDeviceInterfaces
+  - IoCreateNotificationEvent
+  - ObQueryNameString
+  - ZwWaitForSingleObject
+  - ZwQueryDirectoryFile
+  - KeResetEvent
+  - KdDebuggerNotPresent
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - KeBugCheckEx
+  - __C_specific_handler
+  Imports:
+  - ntoskrnl.exe
+  InternalName: gmer64.sys
+  MD5: a822b9e6eedf69211013e192967bf523
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: gmer64.sys
+  Product: GMER
+  ProductVersion: 2, 0, 6983
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: ae0016968883c7b6d9bf26bf6adcb454
+    SHA1: ae1e456ae17f0bce4cb62e8cc3a76e5b83c53caa
+    SHA256: 9c178663dffdd9f9429f961711da30f4c966a2437d235785d182a6e5afb40fbc
+  SHA1: 83506de48bd0c50ea00c9e889fe980f56e6c6e1b
+  SHA256: 18c909a2b8c5e16821d6ef908f56881aa0ecceeaccb5fa1e54995935fcfd12f7
+  Sections:
+    .text:
+      Entropy: 6.190031082489791
+      Virtual Size: '0x9ed1'
+    .rdata:
+      Entropy: 4.557929170549758
+      Virtual Size: '0xe44'
+    .data:
+      Entropy: 0.30140680731160896
+      Virtual Size: '0xf50'
+    .pdata:
+      Entropy: 4.428217198958577
+      Virtual Size: '0x468'
+    INIT:
+      Entropy: 5.165565402631577
+      Virtual Size: '0xace'
+    .rsrc:
+      Entropy: 3.389674147151622
+      Virtual Size: '0x368'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
+      ValidFrom: '2011-04-13 10:00:00'
+      ValidTo: '2019-04-13 10:00:00'
+      Signature: 225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0400000000012f4ee1355c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
+        SHA1: 589a7d4df869395601ba7538a65afae8c4616385
+        SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
+    - Subject: C=PL, ST=Katowice, L=Katowice, O=GMEREK Systemy Komputerowe Przemyslaw
+        Gmerek, CN=GMEREK Systemy Komputerowe Przemyslaw Gmerek
+      ValidFrom: '2014-01-02 07:01:46'
+      ValidTo: '2015-02-04 15:04:09'
+      Signature: ad49289aa50c6f87bd70af8712f5c8bf00f5e44e58d92f3e0429b2179e6368a89ba4d6a35a08a6bb271dbaa454a1ffeaa1e774eb5e3b564d08998c930453ce3db67186fe7797ebf4aeb2b3f693ff919ce7ffe24ad3715ed12a2838ffd6b3a43d79b6771dd89e5b076fae811e8aca865f6ed5475a5316ee5ab85888101e65671416a1afb6fee3ac3d70a45090331e481e2bbbbe8c48f0fe31e44cc172c45c563897e70cd1c7d5afb602735b7160cb4853b6ec4b61efee01be7408f6a00214bd9381b173531fd1c903839906b8eb104a1684084a30f9618774ef23ecfbc7b6f5c7e53ed59e4be74fe4e18ceec5cb4ea9561bf8827e8bce6d30299ec8d5d5df62d2
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 1121c5bcad73319ee0131e328a2b814e164a
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 6f0e4c627d045bd81b94ec79fd4b371d
+        SHA1: a624238b100a59ac8722559c4d1e75aa4f7d99a4
+        SHA256: f0f8a64560267f1ff198c83420155851c8b91ae9eeb6227c9d1833b29b504e83
+        SHA384: 3f63878ac97adadd93ed3e316d703f25459441d2d9847dd8caec36af8c904906aaf96b55cde8cefda3d3c8031c722dd1
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      ValidFrom: '2011-04-15 19:55:08'
+      ValidTo: '2021-04-15 20:05:08'
+      Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 6129152700000000002a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 0bb058d116f02817737920f112d9fd3b
+        SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
+        SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
+    Signer:
+    - SerialNumber: 1121c5bcad73319ee0131e328a2b814e164a
+      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
+      Version: 1
+  Imphash: a998fe47a44bfbf2399968e21cfdf7ca
+  LoadsDespiteHVCI: 'FALSE'
+- Filename: ''
+  Libraries:
+  - ntoskrnl.exe
+  ImportedFunctions:
+  - PsProcessType
+  - IoDeleteSymbolicLink
+  - ExFreePoolWithTag
+  - strncmp
+  - _snwprintf
+  - PsLookupProcessByProcessId
+  - RtlInitUnicodeString
+  - IoDeleteDevice
+  - KeUnstackDetachProcess
+  - KeDetachProcess
+  - IoDriverObjectType
+  - wcsrchr
+  - ExAllocatePool
+  - ZwClose
+  - KeBugCheck
+  - IofCompleteRequest
+  - ObReferenceObjectByHandle
+  - KeAttachProcess
+  - PsGetVersion
+  - PsThreadType
+  - IoCreateSymbolicLink
+  - MmIsAddressValid
+  - ObfDereferenceObject
+  - ObReferenceObjectByName
+  - IoCreateDevice
+  - ObOpenObjectByPointer
+  - KeStackAttachProcess
+  - PsLookupThreadByThreadId
+  - KeClearEvent
+  - IoGetBaseFileSystemDeviceObject
+  - IoBuildSynchronousFsdRequest
+  - _wcsnicmp
+  - ZwReadFile
+  - wcsncpy
+  - KeInitializeEvent
+  - ZwSetInformationFile
+  - strncpy
+  - IoGetDeviceObjectPointer
+  - NtClose
+  - KeWaitForSingleObject
+  - ZwDeleteFile
+  - RtlCompareUnicodeString
+  - ObfReferenceObject
+  - ZwOpenFile
+  - ZwQueryInformationFile
+  - ZwWriteFile
+  - IofCallDriver
+  - wcschr
+  - MmUnmapLockedPages
+  - _stricmp
+  - _strnicmp
+  - RtlVolumeDeviceToDosName
+  - ZwMapViewOfSection
+  - MmGetSystemRoutineAddress
+  - ZwQuerySystemInformation
+  - KeReleaseSpinLock
+  - ZwOpenThread
+  - IoFreeMdl
+  - KeDelayExecutionThread
+  - MmMapLockedPagesSpecifyCache
+  - ZwUnmapViewOfSection
+  - IoGetCurrentProcess
+  - MmProbeAndLockPages
+  - ZwOpenProcess
+  - MmUnlockPages
+  - ZwQueryInformationProcess
+  - ZwCreateSection
+  - wcsncmp
+  - ZwTerminateProcess
+  - ZwQueryInformationThread
+  - IoAllocateMdl
+  - KeAcquireSpinLockRaiseToDpc
+  - ZwQuerySymbolicLinkObject
+  - KeSetEvent
+  - RtlEqualUnicodeString
+  - ZwOpenSymbolicLinkObject
+  - ZwOpenDirectoryObject
+  - ZwQueryDirectoryObject
+  - IoFreeIrp
+  - IoAllocateIrp
+  - IoGetDeviceInterfaces
+  - IoCreateNotificationEvent
+  - ObQueryNameString
+  - ZwWaitForSingleObject
+  - ZwQueryDirectoryFile
+  - KeResetEvent
+  - KdDebuggerNotPresent
+  - PsCreateSystemThread
+  - PsTerminateSystemThread
+  - KeBugCheckEx
+  - __C_specific_handler
+  ExportedFunctions: ''
+  MD5: 98b8507e725b3d28537fc374eb2de72d
+  SHA1: c80d7fe8279ddfd466505a24b9c8cc7a68b9d0e4
+  SHA256: 0052aa88e42055a2eed5ddd17c3499c692360155e5e031a211edfcef577acce3
+  Imphash: a998fe47a44bfbf2399968e21cfdf7ca
+  Machine: AMD64
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2016-03-09 02:28:57'
+  RichPEHeaderMD5: ae0016968883c7b6d9bf26bf6adcb454
+  RichPEHeaderSHA1: ae1e456ae17f0bce4cb62e8cc3a76e5b83c53caa
+  RichPEHeaderSHA256: 9c178663dffdd9f9429f961711da30f4c966a2437d235785d182a6e5afb40fbc
+  AuthentihashMD5: 7514f440c5b9e5c4a0498e4489b76d62
+  AuthentihashSHA1: 0bca6c35159282fd64615abc4d398399b061847b
+  AuthentihashSHA256: 3913d9754b78182aa25d38fbd7ea02502bdf1d81e6525ab4b5ffe5f543200478
+  Sections:
+    .text:
+      Entropy: 6.190031082489791
+      Virtual Size: '0x9ed1'
+    .rdata:
+      Entropy: 4.557929170549758
+      Virtual Size: '0xe44'
+    .data:
+      Entropy: 0.30140680731160896
+      Virtual Size: '0xf50'
+    .pdata:
+      Entropy: 4.428217198958577
+      Virtual Size: '0x468'
+    INIT:
+      Entropy: 5.165565402631577
+      Virtual Size: '0xace'
+    .rsrc:
+      Entropy: 3.389674147151622
+      Virtual Size: '0x368'
+  CompanyName: GMER
+  FileDescription: GMER Driver http://www.gmer.net
+  InternalName: gmer64.sys
+  OriginalFilename: gmer64.sys
+  FileVersion: '2, 0, 6983 built by: WinDDK'
+  ProductName: GMER
+  LegalCopyright: Copyright (C) GMER 2003-2013
+  ProductVersion: 2, 0, 6983
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
+      ValidFrom: '2011-04-13 10:00:00'
+      ValidTo: '2019-04-13 10:00:00'
+      Signature: 225cc5dd3df40b70d8e3f5e7c58e0901bbb196365c5a07adc7a8444951257aae0da4193b929ccfb94226bb3b6c97e7c7ce116d6891da8d6df1534d54388c61f3c8827669be81320b31c36cc99e200a582ff048fe7e4807aad743589473540431a9780d3b8cb070c13d7ed7bd2f2ac3e2f58f0c90dc6ba5c8be685e5d6df878d2be49951e15780891fb34c8be84adbce0c6dd18dbf3caf07bc2143c18b803ba953e211e3f60697a7f6a039e8d4af9f0282c30845eec267242b16dcb64c3128cd6844b67417cb103177809e3ada8b6962da47e80034f88f7c16b5a4615cd2c198bd8709ce52d49886072a8a4195270435edad64603b0680e24ef4af60b2524ef24
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 0400000000012f4ee1355c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
+        SHA1: 589a7d4df869395601ba7538a65afae8c4616385
+        SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
+    - Subject: C=PL, ST=Katowice, L=Katowice, O=GMEREK Systemy Komputerowe Przemyslaw
+        Gmerek, CN=GMEREK Systemy Komputerowe Przemyslaw Gmerek
+      ValidFrom: '2014-01-02 07:01:46'
+      ValidTo: '2015-02-04 15:04:09'
+      Signature: ad49289aa50c6f87bd70af8712f5c8bf00f5e44e58d92f3e0429b2179e6368a89ba4d6a35a08a6bb271dbaa454a1ffeaa1e774eb5e3b564d08998c930453ce3db67186fe7797ebf4aeb2b3f693ff919ce7ffe24ad3715ed12a2838ffd6b3a43d79b6771dd89e5b076fae811e8aca865f6ed5475a5316ee5ab85888101e65671416a1afb6fee3ac3d70a45090331e481e2bbbbe8c48f0fe31e44cc172c45c563897e70cd1c7d5afb602735b7160cb4853b6ec4b61efee01be7408f6a00214bd9381b173531fd1c903839906b8eb104a1684084a30f9618774ef23ecfbc7b6f5c7e53ed59e4be74fe4e18ceec5cb4ea9561bf8827e8bce6d30299ec8d5d5df62d2
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: false
+      SerialNumber: 1121c5bcad73319ee0131e328a2b814e164a
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 6f0e4c627d045bd81b94ec79fd4b371d
+        SHA1: a624238b100a59ac8722559c4d1e75aa4f7d99a4
+        SHA256: f0f8a64560267f1ff198c83420155851c8b91ae9eeb6227c9d1833b29b504e83
+        SHA384: 3f63878ac97adadd93ed3e316d703f25459441d2d9847dd8caec36af8c904906aaf96b55cde8cefda3d3c8031c722dd1
+    - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
+      ValidFrom: '2011-04-15 19:55:08'
+      ValidTo: '2021-04-15 20:05:08'
+      Signature: 5ff8d065746a81c6a6ca5b03b6914ae84bbdef2ba142f0efb4a5adcd3389ec0b9585ac62501108aa58d25aa08310e5a6337af25af2c5fe787cf09c83df190ad97396002dd62ccde914d41d9de83f3c1a76f7904efb01350a6c9313a0c356eb67a0e4d17a96dec267f190f80a7bf5321b94ec5f751f8d1b34da6c58a7cb2d279e2226b7c9aa30cc0777b836e38201b5393ccc8dd9a75f7f23b3877fdb5798918bd7ce2520e39d644fdd87f72b68490318e0a5df7c5f68644d36838d4781f2e9e0a869abfa7b163c05a449ea8830190a6c73055178dfd41ddd3ad47f2de44e54be83431e7a7433b4a4ebd77073bc2a02988966eef6bc8f749378e329025a5a43e258ce7ccf9acad236893be25fda26054ec8d4e72c910e1797c5beee8b13112323294ffa83d050f6bafad53db3173df4ff034aa325dce67561d1fa35086bd62744d068b78d45e0eb852cc8a15d614474160e5958aed2b5eea5bcd6d7076ab62978fd976767dd8d4f17944fd2ed0caf972437c3a29c81da6be143b6577b4cecbf791319e79fe844e94781b75e701e91f83dd17b27f50b7056434805dda92fab86101d0b12e31ad04c6e75ded645b30b748887935c564a41029af7aeb799d8b67f88fa11f2457cf4d71b91c01cf1a0fbd4080a411a142acef4eb34486e66879ed54b7a397fbb0e3d3861cf735706e412066bd96b5308cd7018c22d4f974691bca9f0
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 6129152700000000002a
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 0bb058d116f02817737920f112d9fd3b
+        SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
+        SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
+    Signer:
+    - SerialNumber: 1121c5bcad73319ee0131e328a2b814e164a
+      Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
+      Version: 1
+  Authentihash:
+    MD5: 7514f440c5b9e5c4a0498e4489b76d62
+    SHA1: 0bca6c35159282fd64615abc4d398399b061847b
+    SHA256: 3913d9754b78182aa25d38fbd7ea02502bdf1d81e6525ab4b5ffe5f543200478
+  RichPEHeaderHash:
+    MD5: ae0016968883c7b6d9bf26bf6adcb454
+    SHA1: ae1e456ae17f0bce4cb62e8cc3a76e5b83c53caa
+    SHA256: 9c178663dffdd9f9429f961711da30f4c966a2437d235785d182a6e5afb40fbc
+  Description: GMER Driver http://www.gmer.net
+  Company: GMER
+  Product: GMER
+  Copyright: Copyright (C) GMER 2003-2013
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  LoadsDespiteHVCI: 'FALSE'
