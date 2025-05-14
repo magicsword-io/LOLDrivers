@@ -99,7 +99,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2010-06-17 15:13:48 |
+| Creation Timestamp           | 2010-06-17 17:13:48 |
 | MD5                | [7575b35fee4ec8dbd0a61dbca3b972e3](https://www.virustotal.com/gui/file/7575b35fee4ec8dbd0a61dbca3b972e3) |
 | SHA1               | [76a756cc61653abcadd63db4a74c48d92607a861](https://www.virustotal.com/gui/file/76a756cc61653abcadd63db4a74c48d92607a861) |
 | SHA256             | [065a34b786b0ccf6f88c136408943c3d2bd3da14357ee1e55e81e05d67a4c9bc](https://www.virustotal.com/gui/file/065a34b786b0ccf6f88c136408943c3d2bd3da14357ee1e55e81e05d67a4c9bc) |
@@ -244,7 +244,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -260,7 +263,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -276,7 +282,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -292,7 +301,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -308,7 +320,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -341,7 +356,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-11-20 09:21:24 |
+| Creation Timestamp           | 2005-11-20 11:21:24 |
 | MD5                | [397580c24c544d477688fcfca9c9b542](https://www.virustotal.com/gui/file/397580c24c544d477688fcfca9c9b542) |
 | SHA1               | [4a1a499857accc04b4d586df3f0e0c2b3546e825](https://www.virustotal.com/gui/file/4a1a499857accc04b4d586df3f0e0c2b3546e825) |
 | SHA256             | [0c018eaa293c03febe2aef1e868fca782a06b49d7d2f9f388ae5fb57604c5250](https://www.virustotal.com/gui/file/0c018eaa293c03febe2aef1e868fca782a06b49d7d2f9f388ae5fb57604c5250) |
@@ -393,7 +408,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -409,7 +427,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -425,7 +446,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -441,7 +465,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -457,7 +484,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -490,7 +520,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2010-02-17 11:47:03 |
+| Creation Timestamp           | 2010-02-17 13:47:03 |
 | MD5                | [13a2b915f6d93e52505656773d53096f](https://www.virustotal.com/gui/file/13a2b915f6d93e52505656773d53096f) |
 | SHA1               | [336ed563ef96c40eece92a4d13de9f9b69991c8a](https://www.virustotal.com/gui/file/336ed563ef96c40eece92a4d13de9f9b69991c8a) |
 | SHA256             | [125e4475a5437634cab529da9ea2ef0f4f65f89fb25a06349d731f283c27d9fe](https://www.virustotal.com/gui/file/125e4475a5437634cab529da9ea2ef0f4f65f89fb25a06349d731f283c27d9fe) |
@@ -632,7 +662,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -648,7 +681,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -664,7 +700,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -680,7 +719,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -696,7 +738,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -729,7 +774,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2006-12-14 15:42:31 |
+| Creation Timestamp           | 2006-12-14 17:42:31 |
 | MD5                | [723381977ce7df57ec623db52b84f426](https://www.virustotal.com/gui/file/723381977ce7df57ec623db52b84f426) |
 | SHA1               | [64879accdb4dbbaac55d91185c82f2b193f0c869](https://www.virustotal.com/gui/file/64879accdb4dbbaac55d91185c82f2b193f0c869) |
 | SHA256             | [1336469ec0711736e742b730d356af23f8139da6038979cfe4de282de1365d3b](https://www.virustotal.com/gui/file/1336469ec0711736e742b730d356af23f8139da6038979cfe4de282de1365d3b) |
@@ -866,7 +911,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -882,7 +930,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -898,7 +949,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -914,7 +968,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -930,7 +987,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -963,7 +1023,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2009-02-09 15:09:02 |
+| Creation Timestamp           | 2009-02-09 17:09:02 |
 | MD5                | [eb7f6d01c97783013115ad1a2833401a](https://www.virustotal.com/gui/file/eb7f6d01c97783013115ad1a2833401a) |
 | SHA1               | [fb4ce6de14f2be00a137e8dde2c68bb5b137ab9c](https://www.virustotal.com/gui/file/fb4ce6de14f2be00a137e8dde2c68bb5b137ab9c) |
 | SHA256             | [18047c2d45758a43d6b7e56bcd4aa90354c899795baf944f037850c48d8e892a](https://www.virustotal.com/gui/file/18047c2d45758a43d6b7e56bcd4aa90354c899795baf944f037850c48d8e892a) |
@@ -1102,7 +1162,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1118,7 +1181,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1134,7 +1200,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1150,7 +1219,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1166,7 +1238,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1199,7 +1274,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2006-10-18 12:56:31 |
+| Creation Timestamp           | 2006-10-18 14:56:31 |
 | MD5                | [b62e2371158a082e239f5883bd6000d1](https://www.virustotal.com/gui/file/b62e2371158a082e239f5883bd6000d1) |
 | SHA1               | [820d339fd3dbb632a790d6506ddf6aee925fcffe](https://www.virustotal.com/gui/file/820d339fd3dbb632a790d6506ddf6aee925fcffe) |
 | SHA256             | [212c05b487cd4e64de2a1077b789e47e9ac3361efa24d9aab3cc6ad4bd3bd76a](https://www.virustotal.com/gui/file/212c05b487cd4e64de2a1077b789e47e9ac3361efa24d9aab3cc6ad4bd3bd76a) |
@@ -1336,7 +1411,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1352,7 +1430,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1368,7 +1449,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1384,7 +1468,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1400,7 +1487,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1433,7 +1523,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2010-08-29 05:38:31 |
+| Creation Timestamp           | 2010-08-29 07:38:31 |
 | MD5                | [09e77d71d626574e6142894caca6e6dd](https://www.virustotal.com/gui/file/09e77d71d626574e6142894caca6e6dd) |
 | SHA1               | [6b90a6eeef66bb9302665081e30bf9802ca956cc](https://www.virustotal.com/gui/file/6b90a6eeef66bb9302665081e30bf9802ca956cc) |
 | SHA256             | [33bc9a17a0909e32a3ae7e6f089b7f050591dd6f3f7a8172575606bec01889ef](https://www.virustotal.com/gui/file/33bc9a17a0909e32a3ae7e6f089b7f050591dd6f3f7a8172575606bec01889ef) |
@@ -1578,7 +1668,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1594,7 +1687,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1610,7 +1706,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1626,7 +1725,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1642,7 +1744,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1675,7 +1780,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-07-25 09:31:43 |
+| Creation Timestamp           | 2005-07-25 11:31:43 |
 | MD5                | [24589081b827989b52d954dcd88035d0](https://www.virustotal.com/gui/file/24589081b827989b52d954dcd88035d0) |
 | SHA1               | [3aba6dd15260875eb290e9d67992066141aa0bb0](https://www.virustotal.com/gui/file/3aba6dd15260875eb290e9d67992066141aa0bb0) |
 | SHA256             | [38535a0e9fc0684308eb5d6aa6284669bc9743f11cb605b79883b8c13ef906ad](https://www.virustotal.com/gui/file/38535a0e9fc0684308eb5d6aa6284669bc9743f11cb605b79883b8c13ef906ad) |
@@ -1726,7 +1831,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1742,7 +1850,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1758,7 +1869,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1774,7 +1888,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1790,7 +1907,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1823,7 +1943,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2008-03-09 05:46:25 |
+| Creation Timestamp           | 2008-03-09 07:46:25 |
 | MD5                | [8f1255efd2ed0d3b03a02c6b236c06d6](https://www.virustotal.com/gui/file/8f1255efd2ed0d3b03a02c6b236c06d6) |
 | SHA1               | [9d44260558807daff61a0cc0c6a8719c3adacd2d](https://www.virustotal.com/gui/file/9d44260558807daff61a0cc0c6a8719c3adacd2d) |
 | SHA256             | [442f12adebf7cb166b19e8aead2b0440450fd1f33f5db384a39776bb2656474a](https://www.virustotal.com/gui/file/442f12adebf7cb166b19e8aead2b0440450fd1f33f5db384a39776bb2656474a) |
@@ -1961,7 +2081,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1977,7 +2100,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1993,7 +2119,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2009,7 +2138,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2025,7 +2157,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2058,7 +2193,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2008-09-20 15:09:05 |
+| Creation Timestamp           | 2008-09-20 17:09:05 |
 | MD5                | [f0e21ababe63668fb3fbd02e90cd1fa9](https://www.virustotal.com/gui/file/f0e21ababe63668fb3fbd02e90cd1fa9) |
 | SHA1               | [b394f84e093cb144568e18aaf5b857dff77091fa](https://www.virustotal.com/gui/file/b394f84e093cb144568e18aaf5b857dff77091fa) |
 | SHA256             | [51f002ee44e46889cf5b99a724dd10cc2bd3e22545e2a2cb3bd6b1dd3af5ba11](https://www.virustotal.com/gui/file/51f002ee44e46889cf5b99a724dd10cc2bd3e22545e2a2cb3bd6b1dd3af5ba11) |
@@ -2196,7 +2331,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2212,7 +2350,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2228,7 +2369,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2244,7 +2388,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2260,7 +2407,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2293,7 +2443,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2009-05-04 06:24:01 |
+| Creation Timestamp           | 2009-05-04 08:24:01 |
 | MD5                | [648adec580746afbbf59904c1e150c73](https://www.virustotal.com/gui/file/648adec580746afbbf59904c1e150c73) |
 | SHA1               | [52ea274e399df8706067fdc5ac52af0480461887](https://www.virustotal.com/gui/file/52ea274e399df8706067fdc5ac52af0480461887) |
 | SHA256             | [53b9e423baf946983d03ce309ec5e006ba18c9956dcd97c68a8b714d18c8ffcf](https://www.virustotal.com/gui/file/53b9e423baf946983d03ce309ec5e006ba18c9956dcd97c68a8b714d18c8ffcf) |
@@ -2432,7 +2582,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2448,7 +2601,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2464,7 +2620,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2480,7 +2639,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2496,7 +2658,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2529,7 +2694,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2010-07-30 08:50:06 |
+| Creation Timestamp           | 2010-07-30 10:50:06 |
 | MD5                | [5c5973d2caf86e96311f6399513ab8df](https://www.virustotal.com/gui/file/5c5973d2caf86e96311f6399513ab8df) |
 | SHA1               | [b82c034e41d463f4e68b0a7d334f2d7611049bcb](https://www.virustotal.com/gui/file/b82c034e41d463f4e68b0a7d334f2d7611049bcb) |
 | SHA256             | [582b62ffbcbcdd62c0fc624cdf106545af71078f1edfe1129401d64f3eefaa3a](https://www.virustotal.com/gui/file/582b62ffbcbcdd62c0fc624cdf106545af71078f1edfe1129401d64f3eefaa3a) |
@@ -2674,7 +2839,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2690,7 +2858,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2706,7 +2877,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2722,7 +2896,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2738,7 +2915,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2771,7 +2951,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2008-12-24 06:50:50 |
+| Creation Timestamp           | 2008-12-24 08:50:50 |
 | MD5                | [009876ab9cf3a3d4e3fc3afe13ae839e](https://www.virustotal.com/gui/file/009876ab9cf3a3d4e3fc3afe13ae839e) |
 | SHA1               | [f85f5e5d747433b274e53c8377bf24fbc08758b6](https://www.virustotal.com/gui/file/f85f5e5d747433b274e53c8377bf24fbc08758b6) |
 | SHA256             | [6297556f66cd6619057f3a5b216b314f8a27eebb5fa575ee07a1944aca71ae80](https://www.virustotal.com/gui/file/6297556f66cd6619057f3a5b216b314f8a27eebb5fa575ee07a1944aca71ae80) |
@@ -2910,7 +3090,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2926,7 +3109,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2942,7 +3128,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2958,7 +3147,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2974,7 +3166,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3007,7 +3202,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2007-08-19 06:38:38 |
+| Creation Timestamp           | 2007-08-19 08:38:38 |
 | MD5                | [7c887f2b1a56b84d86828529604957db](https://www.virustotal.com/gui/file/7c887f2b1a56b84d86828529604957db) |
 | SHA1               | [d6b61c685cfaa36c85f1672ac95844f8293c70d0](https://www.virustotal.com/gui/file/d6b61c685cfaa36c85f1672ac95844f8293c70d0) |
 | SHA256             | [680ddece32fe99f056e770cb08641f5b585550798dfdf723441a11364637c7e6](https://www.virustotal.com/gui/file/680ddece32fe99f056e770cb08641f5b585550798dfdf723441a11364637c7e6) |
@@ -3144,7 +3339,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3160,7 +3358,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3176,7 +3377,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3192,7 +3396,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3208,7 +3415,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3241,7 +3451,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2010-05-20 14:55:04 |
+| Creation Timestamp           | 2010-05-20 16:55:04 |
 | MD5                | [1caf5070493459ba029d988dbb2c7422](https://www.virustotal.com/gui/file/1caf5070493459ba029d988dbb2c7422) |
 | SHA1               | [8d3be83cf3bb36dbce974654b5330adb38792c2d](https://www.virustotal.com/gui/file/8d3be83cf3bb36dbce974654b5330adb38792c2d) |
 | SHA256             | [6ef0b34649186fb98a7431b606e77ee35e755894b038755ba98e577bd51b2c72](https://www.virustotal.com/gui/file/6ef0b34649186fb98a7431b606e77ee35e755894b038755ba98e577bd51b2c72) |
@@ -3386,7 +3596,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3402,7 +3615,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3418,7 +3634,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3434,7 +3653,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3450,7 +3672,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3483,7 +3708,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2009-05-21 08:26:14 |
+| Creation Timestamp           | 2009-05-21 10:26:14 |
 | MD5                | [a730b97ab977aa444fa261902822a905](https://www.virustotal.com/gui/file/a730b97ab977aa444fa261902822a905) |
 | SHA1               | [9f6883e59fd6c136cfc556b7b388a4c363dc0516](https://www.virustotal.com/gui/file/9f6883e59fd6c136cfc556b7b388a4c363dc0516) |
 | SHA256             | [748ccadb6bf6cdf4c5a5a1bb9950ee167d8b27c5817da71d38e2bc922ffce73d](https://www.virustotal.com/gui/file/748ccadb6bf6cdf4c5a5a1bb9950ee167d8b27c5817da71d38e2bc922ffce73d) |
@@ -3622,7 +3847,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3638,7 +3866,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3654,7 +3885,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3670,7 +3904,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3686,7 +3923,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3719,7 +3959,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2009-09-05 11:27:16 |
+| Creation Timestamp           | 2009-09-05 13:27:16 |
 | MD5                | [17c7bcae7ebabb95af2f7c91b19c361c](https://www.virustotal.com/gui/file/17c7bcae7ebabb95af2f7c91b19c361c) |
 | SHA1               | [5ca6a52230507b1dffab7acd501540bc10f1ab81](https://www.virustotal.com/gui/file/5ca6a52230507b1dffab7acd501540bc10f1ab81) |
 | SHA256             | [76940e313c27c7ff692051fbf1fbdec19c8c31a6723a9de7e15c3c1bec8186f6](https://www.virustotal.com/gui/file/76940e313c27c7ff692051fbf1fbdec19c8c31a6723a9de7e15c3c1bec8186f6) |
@@ -3858,7 +4098,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3874,7 +4117,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3890,7 +4136,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3906,7 +4155,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3922,7 +4174,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -3955,7 +4210,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2007-12-13 18:09:23 |
+| Creation Timestamp           | 2007-12-13 20:09:23 |
 | MD5                | [7ffdd78d63ca7307a96843cfe806799e](https://www.virustotal.com/gui/file/7ffdd78d63ca7307a96843cfe806799e) |
 | SHA1               | [64ff172bafc33f14ca5f2e35f9753d41e239a5e4](https://www.virustotal.com/gui/file/64ff172bafc33f14ca5f2e35f9753d41e239a5e4) |
 | SHA256             | [8edab185e765f9806fa57153db1ede00e68270d2351443ee1de30674eca8d9b6](https://www.virustotal.com/gui/file/8edab185e765f9806fa57153db1ede00e68270d2351443ee1de30674eca8d9b6) |
@@ -4093,7 +4348,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4109,7 +4367,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4125,7 +4386,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4141,7 +4405,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4157,7 +4424,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4190,7 +4460,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2010-08-29 05:38:31 |
+| Creation Timestamp           | 2010-08-29 07:38:31 |
 | MD5                | [192519661fe6d132f233d0355c3f4a6d](https://www.virustotal.com/gui/file/192519661fe6d132f233d0355c3f4a6d) |
 | SHA1               | [adab368ed3c17b8f2dc0b2173076668b6153e03a](https://www.virustotal.com/gui/file/adab368ed3c17b8f2dc0b2173076668b6153e03a) |
 | SHA256             | [90574d2c406b9738aae8fc629c3983c5e47a6282a43b052f38b5dd313380c30a](https://www.virustotal.com/gui/file/90574d2c406b9738aae8fc629c3983c5e47a6282a43b052f38b5dd313380c30a) |
@@ -4335,7 +4605,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4351,7 +4624,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4367,7 +4643,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4383,7 +4662,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4399,7 +4681,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4432,7 +4717,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2004-10-13 15:37:45 |
+| Creation Timestamp           | 2004-10-13 17:37:45 |
 | MD5                | [ab4656d1ec4d4cc83c76f639a5340e84](https://www.virustotal.com/gui/file/ab4656d1ec4d4cc83c76f639a5340e84) |
 | SHA1               | [6f8b0e1c7d7bd7beed853e0d51ca03f143e5b703](https://www.virustotal.com/gui/file/6f8b0e1c7d7bd7beed853e0d51ca03f143e5b703) |
 | SHA256             | [9917144b7240b1ce0cadb1210fd26182744fbbdf145943037c4b93e44aced207](https://www.virustotal.com/gui/file/9917144b7240b1ce0cadb1210fd26182744fbbdf145943037c4b93e44aced207) |
@@ -4482,7 +4767,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4498,7 +4786,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4514,7 +4805,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4530,7 +4824,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4546,7 +4843,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4579,7 +4879,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2009-05-31 08:07:11 |
+| Creation Timestamp           | 2009-05-31 10:07:11 |
 | MD5                | [b41dcdb2e710dffba2d8ea1defb0f087](https://www.virustotal.com/gui/file/b41dcdb2e710dffba2d8ea1defb0f087) |
 | SHA1               | [11fcaeda49848474cee9989a00d8f29cb727acb7](https://www.virustotal.com/gui/file/11fcaeda49848474cee9989a00d8f29cb727acb7) |
 | SHA256             | [a188760f1bf36584a2720014ca982252c6bcd824e7619a98580e28be6090dccc](https://www.virustotal.com/gui/file/a188760f1bf36584a2720014ca982252c6bcd824e7619a98580e28be6090dccc) |
@@ -4718,7 +5018,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4734,7 +5037,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4750,7 +5056,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4766,7 +5075,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4782,7 +5094,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4815,7 +5130,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2010-02-17 11:47:03 |
+| Creation Timestamp           | 2010-02-17 13:47:03 |
 | MD5                | [e99e86480d4206beb898dda82b71ca44](https://www.virustotal.com/gui/file/e99e86480d4206beb898dda82b71ca44) |
 | SHA1               | [c41ff2067634a1cce6b8ec657cdfd87e7f6974e3](https://www.virustotal.com/gui/file/c41ff2067634a1cce6b8ec657cdfd87e7f6974e3) |
 | SHA256             | [b074caef2fbf7e1dc8870edccb65254858d95836f466b4e9e6ca398bf7a27aa3](https://www.virustotal.com/gui/file/b074caef2fbf7e1dc8870edccb65254858d95836f466b4e9e6ca398bf7a27aa3) |
@@ -4957,7 +5272,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4973,7 +5291,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -4989,7 +5310,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5005,7 +5329,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5021,7 +5348,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5054,7 +5384,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2008-11-14 08:36:07 |
+| Creation Timestamp           | 2008-11-14 10:36:07 |
 | MD5                | [3af19d325f9dcdf360276ae5e7c136ea](https://www.virustotal.com/gui/file/3af19d325f9dcdf360276ae5e7c136ea) |
 | SHA1               | [9ec6f54c74bcc48e355226c26513a7240fd9462d](https://www.virustotal.com/gui/file/9ec6f54c74bcc48e355226c26513a7240fd9462d) |
 | SHA256             | [b1e4455499c6a90ba9a861120a015a6b6f17e64479462b869ad0f05edf6552de](https://www.virustotal.com/gui/file/b1e4455499c6a90ba9a861120a015a6b6f17e64479462b869ad0f05edf6552de) |
@@ -5192,7 +5522,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5208,7 +5541,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5224,7 +5560,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5240,7 +5579,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5256,7 +5598,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5289,7 +5634,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2007-10-13 22:44:15 |
+| Creation Timestamp           | 2007-10-14 00:44:15 |
 | MD5                | [4a829b8cf1f8fdb69e1d58ae04e6106e](https://www.virustotal.com/gui/file/4a829b8cf1f8fdb69e1d58ae04e6106e) |
 | SHA1               | [43f53a739eda1e58f470e8e9ff9aa1437e5d9546](https://www.virustotal.com/gui/file/43f53a739eda1e58f470e8e9ff9aa1437e5d9546) |
 | SHA256             | [bac7e75745d0cb8819de738b73edded02a07111587c4531383dccd4562922b65](https://www.virustotal.com/gui/file/bac7e75745d0cb8819de738b73edded02a07111587c4531383dccd4562922b65) |
@@ -5427,7 +5772,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5443,7 +5791,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5459,7 +5810,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5475,7 +5829,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5491,7 +5848,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5524,7 +5884,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2004-04-08 00:20:27 |
+| Creation Timestamp           | 2004-04-08 02:20:27 |
 | MD5                | [8a212a246b3c41f3ddce5888aaaaacd6](https://www.virustotal.com/gui/file/8a212a246b3c41f3ddce5888aaaaacd6) |
 | SHA1               | [1b25fbab2dbee5504dc94fbcc298cd8669c097a8](https://www.virustotal.com/gui/file/1b25fbab2dbee5504dc94fbcc298cd8669c097a8) |
 | SHA256             | [bae4372a9284db52dedc1c1100cefa758b3ec8d9d4f0e5588a8db34ded5edb1f](https://www.virustotal.com/gui/file/bae4372a9284db52dedc1c1100cefa758b3ec8d9d4f0e5588a8db34ded5edb1f) |
@@ -5574,7 +5934,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5590,7 +5953,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5606,7 +5972,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5622,7 +5991,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5638,7 +6010,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5671,7 +6046,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2008-12-13 11:32:27 |
+| Creation Timestamp           | 2008-12-13 13:32:27 |
 | MD5                | [198b723e13a270bb664dcb9fb6ed42e6](https://www.virustotal.com/gui/file/198b723e13a270bb664dcb9fb6ed42e6) |
 | SHA1               | [297fdf58e60d54bcddf2694c21ceb9da9ec17915](https://www.virustotal.com/gui/file/297fdf58e60d54bcddf2694c21ceb9da9ec17915) |
 | SHA256             | [bd3cf8b9af255b5d4735782d3653be38578ff5be18846b13d05867a6159aaa53](https://www.virustotal.com/gui/file/bd3cf8b9af255b5d4735782d3653be38578ff5be18846b13d05867a6159aaa53) |
@@ -5809,7 +6184,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5825,7 +6203,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5841,7 +6222,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5857,7 +6241,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5873,7 +6260,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5906,7 +6296,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2006-06-24 06:26:46 |
+| Creation Timestamp           | 2006-06-24 08:26:46 |
 | MD5                | [5bbe4e52bd33f1cdd4cf38c7c65f80ae](https://www.virustotal.com/gui/file/5bbe4e52bd33f1cdd4cf38c7c65f80ae) |
 | SHA1               | [d11659145d6627f3d93975528d92fb6814171f91](https://www.virustotal.com/gui/file/d11659145d6627f3d93975528d92fb6814171f91) |
 | SHA256             | [c6db7f2750e7438196ec906cc9eba540ef49ceca6dbd981038cef1dc50662a73](https://www.virustotal.com/gui/file/c6db7f2750e7438196ec906cc9eba540ef49ceca6dbd981038cef1dc50662a73) |
@@ -5958,7 +6348,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5974,7 +6367,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -5990,7 +6386,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6006,7 +6405,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6022,7 +6424,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6055,7 +6460,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2007-09-14 16:20:59 |
+| Creation Timestamp           | 2007-09-14 18:20:59 |
 | MD5                | [25ede0fd525a30d31998ea62876961ec](https://www.virustotal.com/gui/file/25ede0fd525a30d31998ea62876961ec) |
 | SHA1               | [f9cced7ccdc1f149ad8ad13a264c4425aee89b8e](https://www.virustotal.com/gui/file/f9cced7ccdc1f149ad8ad13a264c4425aee89b8e) |
 | SHA256             | [cb59a641adb623a65a9b5af1db2ffd921fd1ca1bc046a6df85d5f2e00fd0b5a5](https://www.virustotal.com/gui/file/cb59a641adb623a65a9b5af1db2ffd921fd1ca1bc046a6df85d5f2e00fd0b5a5) |
@@ -6192,7 +6597,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6208,7 +6616,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6224,7 +6635,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6240,7 +6654,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6256,7 +6673,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6289,7 +6709,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2010-10-05 02:21:07 |
+| Creation Timestamp           | 2010-10-05 04:21:07 |
 | MD5                | [03ca3b1cff154ab8855043abadd07956](https://www.virustotal.com/gui/file/03ca3b1cff154ab8855043abadd07956) |
 | SHA1               | [96047b280e0d6ddde9df1c79ca5f561219a0370d](https://www.virustotal.com/gui/file/96047b280e0d6ddde9df1c79ca5f561219a0370d) |
 | SHA256             | [d330ab003206ce5e9828607562790aa8dd0453f6b7452f5c6053e3c6b6761d25](https://www.virustotal.com/gui/file/d330ab003206ce5e9828607562790aa8dd0453f6b7452f5c6053e3c6b6761d25) |
@@ -6434,7 +6854,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6450,7 +6873,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6466,7 +6892,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6482,7 +6911,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6498,7 +6930,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6531,7 +6966,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2007-07-09 18:15:14 |
+| Creation Timestamp           | 2007-07-09 20:15:14 |
 | MD5                | [2b6a17ec50d3a21e030ed78f7acbd2af](https://www.virustotal.com/gui/file/2b6a17ec50d3a21e030ed78f7acbd2af) |
 | SHA1               | [cd7b0c6b6ef809e7fb1f68ba36150eceabe500f7](https://www.virustotal.com/gui/file/cd7b0c6b6ef809e7fb1f68ba36150eceabe500f7) |
 | SHA256             | [d3b5fd13a53eee5c468c8bfde4bfa7b968c761f9b781bb80ccd5637ee052ee7d](https://www.virustotal.com/gui/file/d3b5fd13a53eee5c468c8bfde4bfa7b968c761f9b781bb80ccd5637ee052ee7d) |
@@ -6668,7 +7103,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6684,7 +7122,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6700,7 +7141,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6716,7 +7160,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6732,7 +7179,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6765,7 +7215,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2009-10-09 14:49:06 |
+| Creation Timestamp           | 2009-10-09 16:49:06 |
 | MD5                | [2d854c6772f0daa8d1fde4168d26c36b](https://www.virustotal.com/gui/file/2d854c6772f0daa8d1fde4168d26c36b) |
 | SHA1               | [0b3836d5d98bc8862a380aae19caa3e77a2d93ef](https://www.virustotal.com/gui/file/0b3836d5d98bc8862a380aae19caa3e77a2d93ef) |
 | SHA256             | [db0d425708ba908aedf5f8762d6fdca7636ae3a537372889446176c0237a2836](https://www.virustotal.com/gui/file/db0d425708ba908aedf5f8762d6fdca7636ae3a537372889446176c0237a2836) |
@@ -6907,7 +7357,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6923,7 +7376,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6939,7 +7395,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6955,7 +7414,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -6971,7 +7433,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7004,7 +7469,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2008-08-29 08:41:55 |
+| Creation Timestamp           | 2008-08-29 10:41:55 |
 | MD5                | [1ad400766530669d14a077514599e7f3](https://www.virustotal.com/gui/file/1ad400766530669d14a077514599e7f3) |
 | SHA1               | [1b84abffd814b9f4595296b3e5ede0c44e630967](https://www.virustotal.com/gui/file/1b84abffd814b9f4595296b3e5ede0c44e630967) |
 | SHA256             | [dfe57c6a4ef4d2491be325d67428698a61d9c5d2a24dbada10043d313be2c8cc](https://www.virustotal.com/gui/file/dfe57c6a4ef4d2491be325d67428698a61d9c5d2a24dbada10043d313be2c8cc) |
@@ -7142,7 +7607,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7158,7 +7626,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7174,7 +7645,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7190,7 +7664,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7206,7 +7683,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7239,7 +7719,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2005-12-15 17:15:51 |
+| Creation Timestamp           | 2005-12-15 19:15:51 |
 | MD5                | [0ec31f45e2e698a83131b4443f9a6dd7](https://www.virustotal.com/gui/file/0ec31f45e2e698a83131b4443f9a6dd7) |
 | SHA1               | [d43b2ac1221f2eaf2c170788280255cfef3edd72](https://www.virustotal.com/gui/file/d43b2ac1221f2eaf2c170788280255cfef3edd72) |
 | SHA256             | [e8b51ab681714e491ab1a59a7c9419db39db04b0dd7be11293f3a0951afe740e](https://www.virustotal.com/gui/file/e8b51ab681714e491ab1a59a7c9419db39db04b0dd7be11293f3a0951afe740e) |
@@ -7291,7 +7771,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7307,7 +7790,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7323,7 +7809,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7339,7 +7828,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7355,7 +7847,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7388,7 +7883,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2010-01-09 15:48:06 |
+| Creation Timestamp           | 2010-01-09 17:48:06 |
 | MD5                | [96fb2101f85fa81871256107bdd25169](https://www.virustotal.com/gui/file/96fb2101f85fa81871256107bdd25169) |
 | SHA1               | [ba63502aaf8c5a7c2464e83295948447e938a844](https://www.virustotal.com/gui/file/ba63502aaf8c5a7c2464e83295948447e938a844) |
 | SHA256             | [e9919d1546c7dfef62ff01b87f739812de0a57463611c12012013ae689023ce1](https://www.virustotal.com/gui/file/e9919d1546c7dfef62ff01b87f739812de0a57463611c12012013ae689023ce1) |
@@ -7530,7 +8025,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7546,7 +8044,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7562,7 +8063,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7578,7 +8082,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7594,7 +8101,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7627,7 +8137,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2006-01-14 09:24:35 |
+| Creation Timestamp           | 2006-01-14 11:24:35 |
 | MD5                | [b3d6378185356326fd8ee4329b0b7698](https://www.virustotal.com/gui/file/b3d6378185356326fd8ee4329b0b7698) |
 | SHA1               | [f7330a6a4d9df2f35ab93a28c8ee1eb14a74be6e](https://www.virustotal.com/gui/file/f7330a6a4d9df2f35ab93a28c8ee1eb14a74be6e) |
 | SHA256             | [f13f6a4bf7711216c9e911f18dfa2735222551fb1f8c1a645a8674c1983ccea6](https://www.virustotal.com/gui/file/f13f6a4bf7711216c9e911f18dfa2735222551fb1f8c1a645a8674c1983ccea6) |
@@ -7679,7 +8189,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7695,7 +8208,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7711,7 +8227,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7727,7 +8246,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7743,7 +8265,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7776,7 +8301,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2006-08-09 16:44:56 |
+| Creation Timestamp           | 2006-08-09 18:44:56 |
 | MD5                | [0c7f66cd219817eaab41f36d4bc0d4cd](https://www.virustotal.com/gui/file/0c7f66cd219817eaab41f36d4bc0d4cd) |
 | SHA1               | [9d0b824892fbfb0b943911326f95cd0264c60f7d](https://www.virustotal.com/gui/file/9d0b824892fbfb0b943911326f95cd0264c60f7d) |
 | SHA256             | [f64a78b1294e6837f12f171a663d8831f232b1012fd8bae3c2c6368fbf71219b](https://www.virustotal.com/gui/file/f64a78b1294e6837f12f171a663d8831f232b1012fd8bae3c2c6368fbf71219b) |
@@ -7828,7 +8353,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7844,7 +8372,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7860,7 +8391,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "4191a15a3978dfcf496566381d4c75c2",
       "Signature": "ae3a17b84a7b55fa6455ec40a4ed494190999c89bcaf2e1dca7823f91c190f7feb68bc32d98838dedc3fd389b43fb18296f1a45abaed2e26d3de7c016e000a00a4069211480940f91c1879672324e0bbd5e150ae1bf50edde02e81cd80a36c524f9175558aba22f2d2ea4175882f63557d1e545a9559cad93481c05f5ef67ab5",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7876,7 +8410,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "739a73c1864ae27d7d9cdcf7055888e4",
       "Signature": "6cd0fe216b27c908f3d444ef0428c76bbc25f74beb7f2027a497499ea5b5c61f99c4e455341bdab5f26b3cc920a9e8224eb79a95ebb81e3fef374f992255d7a997e43f5b497be9bbfe7d28c6791d0e2c93e72668d8c18e08f3329dde27f8a587a59202d9ff6db84fbb56ea4d37b702d80ef4fcdc49bc636351e3ab2043db01b4312c653e830819cf8c44ce3da714dc73933f242b035ef6ef8dc486b5a8aece6e4061138a7e2f6916d527b5a3a6cfeb6475cba7b0afa08a5b6e8590e02758428b217a288d29f641cd493f34f251739b8b529fe0d30182ad5f4fb461caf7f6447598bc5b6833fb8be5884ee329413c4550c8715929c6767bb0fa5c101de989f5ee",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7892,7 +8429,10 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -7927,7 +8467,7 @@ sc.exe create kerneldamd64 binPath= C:\windows\temp\kerneldamd64.sys type=kernel
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/3aa6e630-59be-4a15-a30c-aaed4c1edaf0.yaml)
 
-*last_updated:* 2025-04-02
+*last_updated:* 2025-05-14
 
 {{< /column >}}
 {{< /block >}}
