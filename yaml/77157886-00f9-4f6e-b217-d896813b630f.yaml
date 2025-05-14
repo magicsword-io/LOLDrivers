@@ -8,7 +8,7 @@ Category: malicious
 Verified: 'TRUE'
 Commands:
   Command: sc.exe create kavservice.sys binPath=C:\windows\temp\kavservice.sys type=kernel
-        && sc.exe start kavservice.sys
+    && sc.exe start kavservice.sys
   Description: ''
   Usecase: EDR Kill
   Privileges: Admin privileges
@@ -50,13 +50,13 @@ KnownVulnerableSamples:
     SHA256: 07e0929beef742f928795323120927c11f3dc2b8574568815c1511e7d799b526
   Sections:
     .text:
-      Entropy: 5.671995621688122
+      Entropy: 5.671995621688121
       Virtual Size: '0x424'
     .rdata:
-      Entropy: 3.3729426324531606
+      Entropy: 3.372942632453161
       Virtual Size: '0x38c'
     .data:
-      Entropy: 1.727402569259248
+      Entropy: 1.7274025692592478
       Virtual Size: '0x38'
     .pdata:
       Entropy: 2.880580623335807
@@ -68,7 +68,7 @@ KnownVulnerableSamples:
       Entropy: 3.046439344671015
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-07-30 06:40:12'
+  CreationTimestamp: '2023-07-30 00:40:12'
   ImportedFunctions:
   - RtlInitUnicodeString
   - DbgPrint
@@ -92,6 +92,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 01ee5f169dff97352b6465d66a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 51c3959a45cecf3d21a3effb05762573
         SHA1: ecfcd25fd0525448a74875ba271566bc0bfbf061
@@ -105,6 +108,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -119,6 +125,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0e9b188ef9d02de7efdb50e20840185a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 21a266bd49f2778b24d13d95641ea6ac
         SHA1: 21319f341fdf06bf6a104427afa8b7823b1ea7f3
@@ -132,6 +141,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7803184245708a41cf6f01b8eeb4a954
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a33260428269bc902bc1cd280e4b1837
         SHA1: 254209ca172cffcc67bd2a88996556d2f09538f0
@@ -146,6 +158,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 073637b724547cd847acfd28662a5e5b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e4b8ad9932ff9205f580cf8fb2afbb86
         SHA1: 5301f7044d78bf94dd2b6e4871083a17fdba1dcc
@@ -159,6 +174,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0c4d69724b94fa3c2a4a3d2907803d5a
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 812cb8ca0c79b318780ec5128ad13c1d
         SHA1: 3f8047d078307123301e50a25e9afb0dc4b6843d
@@ -172,6 +190,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 77bd0e05b7590bb61d4761531e3f75ed
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 65fd1dac1f115d9507f4e1840c8cb36a
         SHA1: c7cf5607e19b22fe60c055e71d9b555d70f71f66
@@ -187,6 +208,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 5b3b40442fc61bf39d4ad414
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 69e097228223b745d14e726062ecbd27
         SHA1: aebee16d3f77ca075ede3e4896b6e46e2a9274f0
