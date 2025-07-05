@@ -4,9 +4,9 @@
 #
 # Generates YARA rules for a usable subset of the known vulnerable / malicious drivers
 # Florian Roth
-# june 2023
+# July 2025
 
-__version__ = "0.4.1"
+__version__ = "0.4.2"
 __author__ = "Florian Roth"
 
 import sys
@@ -43,6 +43,10 @@ rule $$$RULENAME$$$ {
 }
 '''
 
+SKIP_DRIVERS = [
+	"3748096bd604a91bc26b2aa1c6883fce.bin" # driver_290bc782.sys - see https://magicswordio.slack.com/archives/C0533A7USGM/p1751462576699979
+	]
+
 def process_folders(input_folders, debug):
 	input_files = []
 	print(input_folders)
@@ -52,6 +56,12 @@ def process_folders(input_folders, debug):
 		else:
 			for dirpath, dirnames, files in os.walk(d):
 				for f in files:
+					# Print processed file in debug mode
+					Log.debug("Processing file: %s" % f)
+					# Skip files that are in the SKIP_DRIVERS list
+					if f in SKIP_DRIVERS:
+						Log.debug("Skipping file %s as it is in the SKIP_DRIVERS list" % f)
+						continue
 					# if ".sys" in f:
 					input_files.append(os.path.join(dirpath, f))
 	return input_files

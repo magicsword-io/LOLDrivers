@@ -13,7 +13,7 @@ rule PUA_VULN_Driver_Cpuid_Cpuzsys_Cpuidservice_34BE {
 		hash = "572c545b5a95d3f4d8c9808ebeff23f3c62ed41910eb162343dd5338e2d6b0b4"
 		hash = "bac709c49ddee363c8e59e515f2f632324a0359e932b7d8cb1ce2d52a95981aa"
 		hash = "da617fe914a5f86dc9d657ef891bbbceb393c8a6fea2313c84923f3630255cdb"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUIDDriver */
@@ -44,7 +44,7 @@ rule PUA_VULN_Driver_Cpuid_Cpuzsys_Cpuidservice_0E85 {
 		hash = "405a99028c99f36ab0f84a1fd810a167b8f0597725e37513d7430617106501f1"
 		hash = "ded2927f9a4e64eefd09d0caba78e94f309e3a6292841ae81d5528cab109f95d"
 		hash = "78d49094913526340d8d0ef952e8fe9ada9e8b20726b77fb88c9fb5d54510663"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUIDDriver */
@@ -70,7 +70,7 @@ rule PUA_VULN_Driver_Wisecleanercom_Wiseunlosys_Wiseunlo_786F {
 		hash = "daf549a7080d384ba99d1b5bd2383dbb1aa640f7ea3a216df1f08981508155f5"
 		hash = "48b1344e45e4de4dfb74ef918af5e0e403001c9061018e703261bbd72dc30548"
 		hash = "358ac54be252673841a1d65bfc2fb6d549c1a4c877fa7f5e1bfa188f30375d69"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069007300650055006e006c006f } /* FileDescription WiseUnlo */
@@ -106,7 +106,7 @@ rule PUA_VULN_Driver_Cpuid_Cpuzsys_Cpuidservice_A397 {
 		hash = "deecbcd260849178de421d8e2f177dce5c63cf67a48abb23a0e3cf3aa3e00578"
 		hash = "955dac77a0148e9f9ed744f5d341cb9c9118261e52fe622ac6213965f2bc4cad"
 		hash = "f8d6ce1c86cbd616bb821698037f60a41e129d282a8d6f1f5ecdd37a9688f585"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUIDDriver */
@@ -128,7 +128,7 @@ rule PUA_VULN_Driver_Zemanaltd_Zam_D7E0 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d7e091e0d478c34232e8479b950c5513077b3a69309885cee4c61063e5f74ac0"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -154,7 +154,7 @@ rule PUA_VULN_Driver_Cpuid_Cpuzsys_Cpuidservice_2298 {
 		hash = "68671b735716ffc168addc052c5dc3d635e63e71c1e78815e7874286c3fcc248"
 		hash = "3813c1aab1760acb963bcc10d6ea3fddc2976b9e291710756408de392bc9e5d5"
 		hash = "aebcbfca180e372a048b682a4859fd520c98b5b63f6e3a627c626cb35adc0399"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUIDDriver */
@@ -186,7 +186,7 @@ rule PUA_VULN_Driver_Asrockincorporation_Asrdrvsys_Asrockiodriver_4D03 {
 		hash = "53bb076e81f6104f41bc284eedae36bd99b53e42719573fa5960932720ebc854"
 		hash = "f40435488389b4fb3b945ca21a8325a51e1b5f80f045ab019748d0ec66056a8b"
 		hash = "a7c2e7910942dd5e43e2f4eb159bcd2b4e71366e34a68109548b9fb12ac0f7cc"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100530052006f0063006b00200049004f0020004400720069007600650072 } /* FileDescription ASRockIODriver */
@@ -208,7 +208,7 @@ rule PUA_VULN_Driver_Getactechnologycorporation_Mtcbsvsys_Getacsystemserviceprov
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0abca92512fc98fe6c2e7d0a33935686fc3acbd0a4c68b51f4a70ece828c0664"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00470065007400610063002000530079007300740065006d00200053006500720076006900630065002000500072006f00760069006400650072 } /* FileDescription GetacSystemServiceProvider */
@@ -233,7 +233,7 @@ rule PUA_VULN_Driver_Razerinc_Rzpnk_Rzpnk_D7B7 {
 		hash = "567809308cfb72d59b89364a6475f34a912d03889aa50866803ac3d0bf2c3270"
 		hash = "93d873cdf23d5edc622b74f9544cac7fe247d7a68e1e2a7bf2879fad97a3ae63"
 		hash = "2665d3127ddd9411af38a255787a4e2483d720aa021be8d6418e071da52ed266"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520061007a006500720020004f007600650072006c0061007900200053007500700070006f00720074 } /* FileDescription RazerOverlaySupport */
@@ -261,7 +261,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Netfiltersys_Windowsrwinddkdriver_9D
 		hash = "1a0f57a4d7c8137baf24c65d542729547b876979273df7a245aaeea87280c090"
 		hash = "62b14bb308c99132d90646e85bc7d6eb593f38e225c8232f69f24b74a019c176"
 		hash = "0f3e7bf7b103613844a38afb574817ddaecd00e4d206d891660dbb0e5dfee04e"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e0065007400460069006c007400650072002000530044004b00200057004600500020004400720069007600650072002000280057005000500029 } /* FileDescription NetFilterSDKWFPDriverWPP */
@@ -285,7 +285,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Lgdatacatchersys_Gameacc_07FB {
 		hash = "07fb2bb6c852f6a6fe982b2232f047e167be39738bac26806ffe0927ba873756"
 		hash = "516159871730b18c2bddedb1a9da110577112d4835606ee79bb80e7a58784a13"
 		hash = "45b07a2f387e047a6bb0e59b7f22fb56182d57b50e84e386a38c2dbb7e773837"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c006500690067006f00640020006e006500740020006400610074006100200063006100740063006800650072002e } /* FileDescription Leigodnetdatacatcher */
@@ -307,7 +307,7 @@ rule PUA_VULN_Driver_Innotekgmbh_Vboxguest_Virtualboxguestadditions_D53F {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d53f9111a5e6c94b37e3f39c5860897405cb250dd11aa91c3814a98b1759c055"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f00780020004700750065007300740020004400720069007600650072 } /* FileDescription VirtualBoxGuestDriver */
@@ -330,7 +330,7 @@ rule PUA_VULN_Driver_Eldoscorporation_Elrawdsksys_Rawdisk_4744 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6"
 		hash = "5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200610077004400690073006b0020004400720069007600650072002e00200041006c006c006f00770073002000770072006900740065002000610063006300650073007300200074006f002000660069006c0065007300200061006e006400200072006100770020006400690073006b00200073006500630074006f0072007300200066006f0072002000750073006500720020006d006f006400650020006100700070006c00690063006100740069006f006e007300200069006e002000570069006e0064006f007700730020003200300030003000200061006e00640020006c0061007400650072002e } /* FileDescription RawDiskDriverAllowswriteaccesstofilesandrawdisksectorsforusermodeapplicationsinWindowsandlater */
@@ -352,7 +352,7 @@ rule PUA_VULN_Driver_Gigabytetechnologycoltd_Gdrvsys_Gigabytesoftwaredriver_81AA
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "81aafae4c4158d0b9a6431aff0410745a0f6a43fb20a9ab316ffeb8c2e2ccac0"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041002d00420059005400450020004e006f006e0050006e00500020004400720069007600650072 } /* FileDescription GIGABYTENonPnPDriver */
@@ -374,7 +374,7 @@ rule PUA_VULN_Driver_Advancedmicrodevices_Amdryzenmasterdriversys_Amdryzenmaster
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f6cd7353cb6e86e98d387473ed6340f9b44241867508e209e944f548b9db1d5f"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d0044002000520079007a0065006e0020004d00610073007400650072002000530065007200760069006300650020004400720069007600650072 } /* FileDescription AMDRyzenMasterServiceDriver */
@@ -396,7 +396,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpotsys_Avginternetsecuritysystem_
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2594b3ef3675ca3a7b465b8ed4962e3251364bab13b12af00ebba7fa2211abb2"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVGantirootkit */
@@ -422,7 +422,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtier_8473 {
 		hash = "e279e425d906ba77784fb5b2738913f5065a567d03abe4fd5571695d418c1c0f"
 		hash = "3a65d14fd3b1b5981084cdbd293dc6f4558911ea18dd80177d1e5b54d85bcaa0"
 		hash = "8b688dd055ead2c915a139598c8db7962b42cb6e744eaacfcb338c093fc1f4e7"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c00200043006c00690065006e007400200050006f00720074006100620069006c0069007400790020004c0061007900650072 } /* FileDescription NovellClientPortabilityLayer */
@@ -447,7 +447,7 @@ rule PUA_VULN_Driver_Highresolutionenterpriseswwwhighrezcouk_Inpoutsys_Inpoutdri
 		hash = "7db320e49139f636c8b6d12b6c78b666a62599e9d59587ba87c6b89b0a34b18d"
 		hash = "16360ead229b13deb47bc2bef40f282474c9f18c213c636cdfb8cc2495168251"
 		hash = "b8ded5e10dfc997482ba4377c60e7902e6f755674be51b0e181ae465529fb2f2"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004b00650072006e0065006c0020006c006500760065006c00200070006f0072007400200061006300630065007300730020006400720069007600650072 } /* FileDescription Kernellevelportaccessdriver */
@@ -471,7 +471,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtier_4CD8 {
 		hash = "4cd80f4e33b713570f6a16b9f77679efa45a466737e41db45b41924e7d7caef4"
 		hash = "00c02901472d74e8276743c847b8148be3799b0e3037c1dfdca21fa81ad4b922"
 		hash = "66a20fc2658c70facd420f5437a73fa07a5175998e569255cfb16c2f14c5e796"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c0020005800540043004f004d0020005300650072007600690063006500730020004400720069007600650072 } /* FileDescription NovellXTCOMServicesDriver */
@@ -492,7 +492,7 @@ rule PUA_VULN_Driver_Innotekgmbh_Vboxguest_Virtualboxguestadditions_9833 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "983310cdce8397c016bfcfcc9c3a8abbb5c928b235bc3c3ae3a3cc10ef24dfbd"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f00780020004700750065007300740020004400720069007600650072 } /* FileDescription VirtualBoxGuestDriver */
@@ -521,7 +521,7 @@ rule PUA_VULN_Driver_Rweverything_Rwdrvsys_Rwdrvdriver_45BA {
 		hash = "1e0eb0811a7cf1bdaf29d3d2cab373ca51eb8d8b58889ab7728e2d3aed244abe"
 		hash = "d15a0bc7a39bbeff10019496c1ed217b7c1b26da37b2bdd46820b35161ddb3c4"
 		hash = "ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200770044007200760020004400720069007600650072 } /* FileDescription RwDrvDriver */
@@ -545,7 +545,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Vmdrvsys_Windowsrwinddkdriver_5C0B {
 		hash = "5c0b429e5935814457934fa9c10ac7a88e19068fa1bd152879e4e9b89c103921"
 		hash = "32cccc4f249499061c0afa18f534c825d01034a1f6815f5506bf4c4ff55d1351"
 		hash = "d884ca8cc4ef1826ca3ab03eb3c2d8f356ba25f2d20db0a7d9fc251c565be7f3"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0056006f006900630065006d006f00640020005600690072007400750061006c00200041007500640069006f00200044006500760069006300650020002800570044004d0029 } /* FileDescription VoicemodVirtualAudioDeviceWDM */
@@ -568,7 +568,7 @@ rule PUA_VULN_Driver_Advancedmicrodevices_Amdryzenmasterdriversys_Amdryzenmaster
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a13054f349b7baa8c8a3fcbd31789807a493cc52224bbff5e412eb2bd52a6433"
 		hash = "7e81beae78e1ddbf6c150e15667e1f18783f9b0ab7fbe52c7ab63e754135948d"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d0044002000520079007a0065006e0020004d00610073007400650072002000530065007200760069006300650020004400720069007600650072 } /* FileDescription AMDRyzenMasterServiceDriver */
@@ -590,7 +590,7 @@ rule PUA_VULN_Driver_Realixtm_Hwinfoisys_Hwinfoiakerneldriver_33C6 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "33c6c622464f80a8d8017a03ff3aa196840da8bb03bfb5212b51612b5cf953dc"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570069004e0046004f002000490041003600340020004b00650072006e0065006c0020004400720069007600650072 } /* FileDescription HWiNFOIAKernelDriver */
@@ -612,7 +612,7 @@ rule PUA_VULN_Driver_Advancedmicrodevicesinc_Pdfwkrnlsys_Usbcpowerdeliveryfirmwa
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6945077a6846af3e4e2f6a2f533702f57e993c5b156b6965a552d6a5d63b7402"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005500530042002d004300200050006f007700650072002000440065006c006900760065007200790020004600690072006d007700610072006500200055007000640061007400650020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription USBCPowerDeliveryFirmwareUpdateUtilityDriver */
@@ -636,7 +636,7 @@ rule PUA_VULN_Driver_Fintekcorp_Fintekcorpfintekpcieuart_32BD {
 		hash = "32bd0edb9daa60175b1dc054f30e28e8dbfa293a32e6c86bfd06bc046eaa2f9e"
 		hash = "17942865680bd3d6e6633c90cc4bd692ae0951a8589dbe103c1e293b3067344d"
 		hash = "b1920889466cd5054e3ab6433a618e76c6671c3e806af8b3084c77c0e7648cbe"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00460069006e00740065006b002000500063006900650032005500610072007400200041006400610070007400650072 } /* FileDescription FintekPcieUartAdapter */
@@ -658,7 +658,7 @@ rule PUA_VULN_Driver_Avastsoftware_Ngiodriversys_Avastng_42B3 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "42b31b850894bf917372ff50fbe1aff3990331e8bd03840d75e29dcc1026c180"
 		hash = "c0c52425dd90f36d110952c665e5b644bb1092f952942c07bb4da998c9ce6e5b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0061007600610073007400210020004e0047002000730065007400750070002000680065006c0070006500720020006400720069007600650072 } /* FileDescription avastNGsetuphelperdriver */
@@ -680,7 +680,7 @@ rule PUA_VULN_Driver_Microsoftcorporation_Afdsys_Microsoftwindowsoperatingsystem
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ebf6be42d39fd5d9361afa43479f883ff8eba97d72f313ece289f78cb51c22f2"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041006e00630069006c006c006100720079002000460075006e006300740069006f006e002000440072006900760065007200200066006f0072002000570069006e0053006f0063006b } /* FileDescription AncillaryFunctionDriverforWinSock */
@@ -702,7 +702,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpot_Avginternetsecuritysystem_5BD
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5bd41a29cbba0d24e639f49d1f201b9bd119b11f5e3b8a5fefa3a5c6f1e7692c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AVGAntiRootkit */
@@ -724,7 +724,7 @@ rule PUA_VULN_Driver_Innotekgmbh_Vboxusbsys_Virtualboxusbdriver_C509 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c509935f3812ad9b363754216561e0a529fc2d5b8e86bfa7302b8d149b7d04aa"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200055005300420020006400720069007600650072 } /* FileDescription VirtualBoxUSBdriver */
@@ -746,7 +746,7 @@ rule PUA_VULN_Driver_Netfiltersys_F171 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f1718a005232d1261894b798a60c73d971416359b70d0e545d7e7a40ed742b71"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570059004a0053005100200057004600500020004400720069007600650072002000280057005000500029 } /* FileDescription WYJSQWFPDriverWPP */
@@ -772,7 +772,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtier_DD4F {
 		hash = "1c2f1e2b0cc4da128feb73a6b9dd040df8495fefe861d69c9f44778c6ddb9b9b"
 		hash = "cf3180f5308af002ac5d6fd5b75d1340878c375f0aebc3157e3bcad6322b7190"
 		hash = "6b71b7f86e41540a82d7750a698e0386b74f52962b879cbb46f17935183cd2c7"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c00200043006c00690065006e007400200050006f00720074006100620069006c0069007400790020004c0061007900650072 } /* FileDescription NovellClientPortabilityLayer */
@@ -794,7 +794,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtier_7627 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "76276c87617b836dd6f31b73d2bb0e756d4b3d133bddfe169cb4225124ca6bfb"
 		hash = "1e9c236ed39507661ec32731033c4a9b9c97a6221def69200e03685c08e0bfa7"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c00200043006c00690065006e007400200050006f00720074006100620069006c0069007400790020004c0061007900650072 } /* FileDescription NovellClientPortabilityLayer */
@@ -816,7 +816,7 @@ rule PUA_VULN_Driver_Nvidiacorp_Nvoclocksys_Nvidiasystemutilitydriver_16AE {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "16ae28284c09839900b99c0bdf6ce4ffcd7fe666cfd5cfb0d54a3ad9bea9aa9c"
 		hash = "d54ac69c438ba77cde88c6efd6a423491996d4e8a235666644b1db954eb1da9c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00560069006400690061002000530079007300740065006d0020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription NVidiaSystemUtilityDriver */
@@ -838,7 +838,7 @@ rule PUA_VULN_Driver_Computerz_Computerzsys_Computerzsystemdriver_61F3 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "61f3b1c026d203ce94fab514e3d15090222c0eedc2a768cc2d073ec658671874"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0043006f006d00700075007400650072005a002000530079007300740065006d0020004400720069007600650072 } /* FileDescription ComputerZSystemDriver */
@@ -870,7 +870,7 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_Procexpsys_Processexplorer_8
 		hash = "59b09bd69923c0b3de3239e73205b1846a5f69043546d471b259887bb141d879"
 		hash = "e3f2ee22dec15061919583e4beb8abb3b29b283e2bcb46badf2bfde65f5ea8dd"
 		hash = "9d5ebd0f4585ec20a5fe3c5276df13ece5a2645d3d6f70cedcda979bd1248fc2"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription ProcessExplorer */
@@ -903,7 +903,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Cpuzsys_Windowsrwinddkdriver_1F4D {
 		hash = "b7aa4c17afdaff1603ef9b5cc8981bed535555f8185b59d5ae13f342f27ca6c5"
 		hash = "65deb5dca18ee846e7272894f74d84d9391bbe260c22f24a65ab37d48bd85377"
 		hash = "60b163776e7b95e0c2280d04476304d0c943b484909131f340e3ce6045a49289"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUIDDriver */
@@ -925,7 +925,7 @@ rule PUA_VULN_Driver_Mitactechnologycorporation_Vdbsvsys_Mitacsystemserviceprovi
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "91afa3de4b70ee26a4be68587d58b154c7b32b50b504ff0dc0babc4eb56578f4"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d0069005400410043002000530079007300740065006d00200053006500720076006900630065002000500072006f00760069006400650072 } /* FileDescription MiTACSystemServiceProvider */
@@ -951,7 +951,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtier_00B3 {
 		hash = "18f306b6edcfacd33b7b244eaecdd0986ef342f0d381158844d1f0ee1ac5c8d7"
 		hash = "94c226a530dd3cd8d911901f702f3dab8200d1d4fdc73fcb269f7001f4e66915"
 		hash = "c08581e3e444849729c5b956d0d6030080553d0bc6e5ae7e9a348d45617b9746"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c00200043006c00690065006e007400200050006f00720074006100620069006c0069007400790020004c0061007900650072 } /* FileDescription NovellClientPortabilityLayer */
@@ -976,7 +976,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtier_B50F {
 		hash = "b37b3c6877b70289c0f43aeb71349f7344b06063996e6347c3c18d8c5de77f3b"
 		hash = "0cfb7ea2cc515a7fe913ab3619cbfcf1ca96d8cf72dc350905634a5782907a49"
 		hash = "d1c78c8ba70368e96515fb0596598938a8f9efa8f9f5d9e068ee008f03020fee"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c0020005800540043004f004d0020005300650072007600690063006500730020004400720069007600650072 } /* FileDescription NovellXTCOMServicesDriver */
@@ -998,7 +998,7 @@ rule PUA_VULN_Driver_Openlibsysorg_Winringsys_Winring_11BD {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5"
 		hash = "a7b000abbcc344444a9b00cfade7aa22ab92ce0cadec196c30eb1851ae4fa062"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069006e00520069006e00670030 } /* FileDescription WinRing */
@@ -1020,7 +1020,7 @@ rule PUA_VULN_Driver_Windowswinowsdriverkitsprovider_Hwrwdrvsys_Hardwarereadwrit
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "21ccdd306b5183c00ecfd0475b3152e7d94b921e858e59b68a03e925d1715f21"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0048006100720064007700610072006500200072006500610064002000260020007700720069007400650020006400720069007600650072 } /* FileDescription Hardwarereadwritedriver */
@@ -1042,7 +1042,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpot_Avastantivirus_AD8F {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ad8ffccfde782bc287241152cf24245a8bf21c2530d81c57e17631b3c4adb833"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AvastAntiRootkit */
@@ -1064,7 +1064,7 @@ rule PUA_VULN_Driver_Msi_Ntiolibsys_Ntiolib_3124 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3124b0411b8077605db2a9b7909d8240e0d554496600e2706e531c93c931e1b5"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c0069006200200066006f00720020004d00530049004600720065007100750065006e00630079005f00430043 } /* FileDescription NTIOLibforMSIFrequencyCC */
@@ -1086,7 +1086,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Dcprotectsys_Dcprotectrwinxdriver_FF
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ff55c1f308a5694eb66a3e9ba326266c826c5341c44958831a7a59a23ed5ecc8"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0044006300500072006f00740065006300740020004400720069007600650072 } /* FileDescription DcProtectDriver */
@@ -1110,7 +1110,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtier_A855 {
 		hash = "a855b6ec385b3369c547a3c54e88a013dd028865aba0f3f08be84cdcbaa9a0f6"
 		hash = "49ef680510e3dac6979a20629d10f06822c78f45b9a62ec209b71827a526be94"
 		hash = "653f6a65e0e608cae217bea2f90f05d8125cf23f83ba01a60de0f5659cfa5d4d"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c002000580054006900650072002000530065007300730069006f006e0020004d0061006e0061006700650072 } /* FileDescription NovellXTierSessionManager */
@@ -1131,7 +1131,7 @@ rule PUA_VULN_Driver_Realtek_Rtkiosys_Realtekiodriver_DB71 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "db711ec3f4c96b60e4ed674d60c20ff7212d80e34b7aa171ad626eaa8399e8c7"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f0020004400720069007600650072 } /* FileDescription RealtekIODriver */
@@ -1153,7 +1153,7 @@ rule PUA_VULN_Driver_Iobit_Monitorsys_Advancedsystemcare_E4A7 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e4a7da2cf59a4a21fc42b611df1d59cae75051925a7ddf42bf216cc1a026eadb"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049004f006200690074002000540065006d007000650072006100740075007200650020004d006f006e00690074006f0072 } /* FileDescription IObitTemperatureMonitor */
@@ -1187,7 +1187,7 @@ rule PUA_VULN_Driver_Iobit_Iobitunlockersys_Iobitunlocker_2B33 {
 		hash = "a92d2736c8cd99195a1ef4d0d9a3412bee481acf585944e3b5946b465361a3e7"
 		hash = "0209934453e9ce60b1a5e4b85412e6faf29127987505bfb1185fc9296c578b09"
 		hash = "969f73a1da331e43777a3c1f08ec0734e7cf8c8136e5d469cbad8035fbfe3b47"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049004f0062006900740055006e006c006f0063006b006500720020004400720069007600650072 } /* FileDescription IObitUnlockerDriver */
@@ -1209,7 +1209,7 @@ rule PUA_VULN_Driver_Phoenixtechnologiesltd_Phlashnt_Winphlash_65DB {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "65db1b259e305a52042e07e111f4fa4af16542c8bacd33655f753ef642228890"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005300570069006e0046006c006100730068002000440072006900760065007200200066006f0072002000570069006e0064006f007700730020004e0054 } /* FileDescription SWinFlashDriverforWindowsNT */
@@ -1231,7 +1231,7 @@ rule PUA_VULN_Driver_Arthurliberman_Alsysiosys_Alsysio_7196 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7196187fb1ef8d108b380d37b2af8efdeb3ca1f6eefd37b5dc114c609147216d"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004c0053007900730049004f } /* FileDescription ALSysIO */
@@ -1254,7 +1254,7 @@ rule PUA_VULN_Driver_Advancedmicrodevices_Aoddriversys_Amdoverdriveservicedriver
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f4dc11b7922bf2674ca9673638e7fe4e26aceb0ebdc528e6d10c8676e555d7b2"
 		hash = "070ff602cccaaef9e2b094e03983fd7f1bf0c0326612eb76593eabbf1bda9103"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d00440020004f00760065007200440072006900760065002000530065007200760069006300650020004400720069007600650072 } /* FileDescription AMDOverDriveServiceDriver */
@@ -1277,7 +1277,7 @@ rule PUA_VULN_Driver_Windowsrddkprovider_Rtportsys_Windowsrddkprovider_8FE4 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8fe429c46fedbab8f06e5396056adabbb84a31efef7f9523eb745fc60144db65"
 		hash = "71423a66165782efb4db7be6ce48ddb463d9f65fd0f266d333a6558791d158e5"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00470065006e006500720069006300200050006f0072007400200049002f004f00200066006f0072002000570069006e00360034 } /* FileDescription GenericPortIOforWin */
@@ -1299,7 +1299,7 @@ rule PUA_VULN_Driver_Anticheatexpertcom_Acebase_Anticheatexpert_7326 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7326aefff9ea3a32286b423a62baebe33b73251348666c1ee569afe62dd60e11"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100430045002d0042004100530045003600340020004e00540020004400720069007600650072 } /* FileDescription ACEBASENTDriver */
@@ -1320,7 +1320,7 @@ rule PUA_VULN_Driver_Gigabytetechnologycoltd_Gdrvsys_Gigabytesoftwaredriver_133E
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "133e542842656197c5d22429bd56d57aa33c9522897fdf29853a6d321033c743"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041002d00420059005400450020004e006f006e0050006e00500020004400720069007600650072 } /* FileDescription GIGABYTENonPnPDriver */
@@ -1343,7 +1343,7 @@ rule PUA_VULN_Driver_Avastsoftware_Ngiodriversys_Avastng_1072 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1072beb3ff6b191b3df1a339e3a8c87a8dc5eae727f2b993ea51b448e837636a"
 		hash = "e8eb1c821dbf56bde05c0c49f6d560021628df89c29192058ce68907e7048994"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0061007600610073007400210020004e0047002000730065007400750070002000680065006c0070006500720020006400720069007600650072 } /* FileDescription avastNGsetuphelperdriver */
@@ -1375,7 +1375,7 @@ rule PUA_VULN_Driver_Cpuid_Cpuzsys_Cpuidservice_8A07 {
 		hash = "c50f8ab8538c557963252b702c1bd3cee4604b5fc2497705d2a6a3fd87e3cc26"
 		hash = "53bd8e8d3542fcf02d09c34282ebf97aee9515ee6b9a01cefd81baa45c6fd3d6"
 		hash = "0484defcf1b5afbe573472753dc2395e528608b688e5c7d1d178164e48e7bed7"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUIDDriver */
@@ -1415,7 +1415,7 @@ rule PUA_VULN_Driver_Cpuid_Cpuzsys_Cpuidservice_0D37 {
 		hash = "19696fb0db3fcae22f705ae1eb1e9f1151c823f3ff5d8857e90f2a4a6fdc5758"
 		hash = "e58bbf3251906ff722aa63415bf169618e78be85cb92c8263d3715c260491e90"
 		hash = "11d258e05b850dcc9ecfacccc9486e54bd928aaa3d5e9942696c323fdbd3481b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUIDDriver */
@@ -1437,7 +1437,7 @@ rule PUA_VULN_Driver_Proxydrvsys_Nn_C0E7 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c0e74f565237c32989cb81234f4b5ad85f9dd731c112847c0a143d771021cb99"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]96f7795e004e004e52a0901f5668002d9a7152a87a0b5e8f65874ef6 } /* FileDescription NN */
@@ -1461,7 +1461,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtier_5381 {
 		hash = "53810ca98e07a567bb082628d95d796f14c218762cbbaa79704740284dccda4b"
 		hash = "8e88cb80328c3dbaa2752591692e74a2fae7e146d7d8aabc9b9ac9a6fe561e6c"
 		hash = "003e61358878c7e49e18420ee0b4a37b51880be40929a76e529c7b3fb18e81b4"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c002000580054006900650072002000530065007300730069006f006e0020004d0061006e0061006700650072 } /* FileDescription NovellXTierSessionManager */
@@ -1484,7 +1484,7 @@ rule PUA_VULN_Driver_Netfiltersys_26D6 {
 		hash = "26d67d479dafe6b33c980bd1eed0b6d749f43d05d001c5dcaaf5fcddb9b899fe"
 		hash = "6a234a2b8eb3844f7b5831ee048f88e8a76e9d38e753cc82f61b234c79fe1660"
 		hash = "2fa78c2988f9580b0c18822b117d065fb419f9c476f4cfa43925ba6cd2dffac3"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570059004a00530051002000540044004900200048006f006f006b0020004400720069007600650072002000280057005000500029 } /* FileDescription WYJSQTDIHookDriverWPP */
@@ -1509,7 +1509,7 @@ rule PUA_VULN_Driver_Asustek_Driversys_Ectool_927C {
 		hash = "42851a01469ba97cdc38939b10cf9ea13237aa1f6c37b1ac84904c5a12a81fa0"
 		hash = "1beb15c90dcf7a5234ed077833a0a3e900969b60be1d04fcebce0a9f8994bdbb"
 		hash = "771a8d05f1af6214e0ef0886662be500ee910ab99f0154227067fddcfe08a3dd"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400680065002000640072006900760065007200200066006f007200200074006800650020004500430074006f006f006c0020006400720069007600650072002d0062006100730065006400200074006f006f006c0073 } /* FileDescription ThedriverfortheECtooldriverbasedtools */
@@ -1531,7 +1531,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmelsys_Trendmicroearlylaunchantimalwaredrive
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "dd628061d6e53f3f0b44f409ad914b3494c5d7b5ff6ff0e8fc3161aacec93e96"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200045004c0041004d0020004400720069007600650072 } /* FileDescription TrendMicroELAMDriver */
@@ -1553,7 +1553,7 @@ rule PUA_VULN_Driver_Intelcorp_Stdcdrvwssys_Selftestdatacollectordriverforwindow
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "70afdc0e11db840d5367afe53c35d9642c1cf616c7832ab283781d085988e505"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530065006c006600540065007300740020004400610074006100200043006f006c006c006500630074006f00720020004400720069007600650072 } /* FileDescription SelfTestDataCollectorDriver */
@@ -1575,7 +1575,7 @@ rule PUA_VULN_Driver_Realteksemiconductorcorp_Rtportsys_Realtekportio_FF32 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ff322cd0cc30976f9dbdb7a3681529aeab0de7b7f5c5763362b02c15da9657a1"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200450041004c00540045004b00200050006f0072007400200049002f004f } /* FileDescription REALTEKPortIO */
@@ -1597,7 +1597,7 @@ rule PUA_VULN_Driver_Realtek_Rtkiosys_Realtekiodriver_A6F7 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a6f7897cd08fe9de5e902bb204ff87215584a008f458357d019a50d6139ca4af"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f004400720069007600650072 } /* FileDescription RealtekIODriver */
@@ -1620,7 +1620,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtier_834A {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "834a3d755b5ae798561f8e5fbb18cf28dfcae7a111dc6a03967888e9d10f6d78"
 		hash = "e89cb7217ec1568b43ad9ca35bf059b17c3e26f093e373ab6ebdeee24272db21"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c0020005800540043004f004d0020005300650072007600690063006500730020004400720069007600650072 } /* FileDescription NovellXTCOMServicesDriver */
@@ -1643,7 +1643,7 @@ rule PUA_VULN_Driver_Asustekcomputerinc_Eiosys_Asusvgakernelmodedriver_F4C7 {
 		hash = "f4c7e94a7c2e49b130671b573a9e4ff4527a777978f371c659c3f97c14d126de"
 		hash = "cf69704755ec2643dfd245ae1d4e15d77f306aeb1a576ffa159453de1a7345cb"
 		hash = "1fac3fab8ea2137a7e81a26de121187bf72e7d16ffa3e9aec3886e2376d3c718"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100530055005300200056004700410020004b00650072006e0065006c0020004d006f006400650020004400720069007600650072 } /* FileDescription ASUSVGAKernelModeDriver */
@@ -1665,7 +1665,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_F42E {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f42eb29f5b2bcb2a70d796fd71fd1b259d5380b216ee672cf46dcdd4604b87ad"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f00770073002000780036003400200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsxIOdriver */
@@ -1687,7 +1687,7 @@ rule PUA_VULN_Driver_Msi_Ntiolibsys_Ntiolib_CF4B {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cf4b5fa853ce809f1924df3a3ae3c4e191878c4ea5248d8785dc7e51807a512b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c0069006200200066006f00720020004d005300490043006c006f0063006b005f00430043 } /* FileDescription NTIOLibforMSIClockCC */
@@ -1710,7 +1710,7 @@ rule PUA_VULN_Driver_Computerzsys_Ludashisystemdriver_3867 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "386745d23a841e1c768b5bdf052e0c79bb47245f9713ee64e2a63f330697f0c8"
 		hash = "5aee1bae73d056960b3a2d2e24ea07c44358dc7bc3f8ac58cc015cccc8f8d89c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -1732,7 +1732,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_D783 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d783ace822f8fe4e25d5387e5dd249cb72e62f62079023216dc436f1853a150f"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -1754,7 +1754,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpot_Avastantivirus_4B52 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AvastAntiRootkit */
@@ -1776,7 +1776,7 @@ rule PUA_VULN_Driver_Insydesoftwarecorp_Segwindrvxsys_Segwindowsdriverx_38D6 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "38d6d90d543bf6037023c1b1b14212b4fa07731cbbb44bdb17e8faffc12b22e8"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005300450047002000570069006e0064006f0077007300200044007200690076006500720020007800360034 } /* FileDescription SEGWindowsDriverx */
@@ -1800,7 +1800,7 @@ rule PUA_VULN_Driver_Biostargroup_Iodriver_Biostariodriverfle_42E1 {
 		hash = "42e170a7ab1d2c160d60abfc906872f9cfd0c2ee169ed76f6acb3f83b3eeefdb"
 		hash = "f929bead59e9424ab90427b379dcdd63fbfe0c4fb5e1792e3a1685541cd5ec65"
 		hash = "55fee54c0d0d873724864dc0b2a10b38b7f40300ee9cae4d9baaf8a202c4049a"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049002f004f00200049006e00740065007200660061006300650020006400720069007600650072002000660069006c0065 } /* FileDescription IOInterfacedriverfile */
@@ -1822,7 +1822,7 @@ rule PUA_VULN_Driver_Elaboratebytes_Elbycdio_Cdrtools_07AF {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "07af8c5659ad293214364789df270c0e6d03d90f4f4495da76abc2d534c64d88"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f003200300030003000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsNTIOdriver */
@@ -1844,7 +1844,7 @@ rule PUA_VULN_Driver_Mitactechnologycorporation_Mtcbsvsys_Mitacsystemserviceprov
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c9cf1d627078f63a36bbde364cd0d5f2be1714124d186c06db5bcdf549a109f8"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d0069005400410043002000530079007300740065006d00200053006500720076006900630065002000500072006f00760069006400650072 } /* FileDescription MiTACSystemServiceProvider */
@@ -1866,7 +1866,7 @@ rule PUA_VULN_Driver_Realixtm_Hwinfosys_Hwinfokerneldriver_7125 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7125c9831a52d89d3d59fb28043b67fbe0068d69732da006fabb95550d1fa730"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570069004e0046004f00330032002f003600340020004b00650072006e0065006c0020004400720069007600650072 } /* FileDescription HWiNFOKernelDriver */
@@ -1888,7 +1888,7 @@ rule PUA_VULN_Driver_Intelcorporation_Iqvwsys_Intelriqvwsys_5F65 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5f6547e9823f94c5b94af1fb69a967c4902f72b6e0c783804835e6ce27f887b0"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription IntelRNetworkAdapterDiagnosticDriver */
@@ -1910,7 +1910,7 @@ rule PUA_VULN_Driver_Tgsoftsas_Viragtsys_Viritagentsystem_58A7 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "58a74dceb2022cd8a358b92acd1b48a5e01c524c3b0195d7033e4bd55eff4495"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirITAgentSystem */
@@ -1932,7 +1932,7 @@ rule PUA_VULN_Driver_Panyazilimbilisimteknolojileriticltdsti_Panmonfltxsys_Panca
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "06508aacb4ed0a1398a2b0da5fa2dbf7da435b56da76fd83c759a50a51c75caf"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500061006e00430061006600650020004d0061006e0061006700650072002000460069006c00650020004d006f006e00690074006f0072 } /* FileDescription PanCafeManagerFileMonitor */
@@ -1955,7 +1955,7 @@ rule PUA_VULN_Driver_Nvidiacorp_Nvoclocksys_Nvidiasystemutilitydriver_D633 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d633055c7eda26dacfc30109eb790625519fc7b0a3a601ceed9e21918aad8a1b"
 		hash = "29f449fca0a41deccef5b0dccd22af18259222f69ed6389beafe8d5168c59e36"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00560069006400690061002000530079007300740065006d0020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription NVidiaSystemUtilityDriver */
@@ -1977,7 +1977,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpotsys_Avastantivirus_0F17 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0f17e5cfc5bdd74aff91bfb1a836071345ba2b5d1b47b0d5bf8e7e0d4d5e2dbf"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avastantirootkit */
@@ -2000,7 +2000,7 @@ rule PUA_VULN_Driver_Bsmisys_5962 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "59626cac380d8fe0b80a6d4c4406d62ba0683a2f0f68d50ad506ca1b1cf25347"
 		hash = "552f70374715e70c4ade591d65177be2539ec60f751223680dfaccb9e0be0ed9"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0053004d00490020004400720069007600650072 } /* FileDescription SMIDriver */
@@ -2023,7 +2023,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtier_C6FE {
 		hash = "e7b79fe1377b3da749590c080d4d96e59e622b1013b2183b98c81baa8bf2fffe"
 		hash = "f77fe6b1e0e913ac109335a8fa2ac4961d35cbbd50729936059aba8700690a9e"
 		hash = "1675eedd4c7f2ec47002d623bb4ec689ca9683020e0fdb0729a9047c8fb953dd"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c002000580054006900650072002000530065007300730069006f006e0020004d0061006e0061006700650072 } /* FileDescription NovellXTierSessionManager */
@@ -2044,7 +2044,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_AF16 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "af16c36480d806adca881e4073dcd41acb20c35ed0b1a8f9bd4331de655036e1"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsNTXPIOdriver */
@@ -2096,7 +2096,7 @@ rule PUA_VULN_Driver_Msi_Ntiolibsys_Ntiolib_99F4 {
 		hash = "47f0cdaa2359a63ad1389ef4a635f1f6eee1f63bdf6ef177f114bdcdadc2e005"
 		hash = "38fa0c663c8689048726666f1c5e019feaa9da8278f1df6ff62da33961891d2a"
 		hash = "ef86c4e5ee1dbc4f81cd864e8cd2f4a2a85ee4475b9a9ab698a4ae1cc71fbeb0"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
@@ -2118,7 +2118,7 @@ rule PUA_VULN_Driver_Ncrcorporation_Radhwmgrsys_Ncrcorporationhardwaremanagerdri
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7c8ad57b3a224fdc2aac9dd2d7c3624f1fcd3542d4db804de25a90155657e2cc"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520061006400690061006e00740020004800610072006400770061007200650020004d0061006e006100670065007200200066006f007200200050003100350078007800200050006c006100740066006f0072006d } /* FileDescription RadiantHardwareManagerforPxxPlatform */
@@ -2141,7 +2141,7 @@ rule PUA_VULN_Driver_Avaluetechnologyinc_Avalueio_Avalueio_A5A4 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a5a4a3c3d3d5a79f3ed703fc56d45011c21f9913001fcbcc43a3f7572cff44ec"
 		hash = "defde359045213ae6ae278e2a92c5b4a46a74119902364c7957a38138e9c9bbd"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100760061006c007500650049004f0020004400720069007600650072 } /* FileDescription AvalueIODriver */
@@ -2166,7 +2166,7 @@ rule PUA_VULN_Driver_Asustekcomputerinc_Bsdefsys_Supportsstsfssteeatftatcamfntam
 		hash = "3326e2d32bbabd69feb6024809afc56c7e39241ebe70a53728c77e80995422a5"
 		hash = "0040153302b88bee27eb4f1eca6855039e1a057370f5e8c615724fa5215bada3"
 		hash = "36b9e31240ab0341873c7092b63e2e0f2cab2962ebf9b25271c3a1216b7669eb"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00440065006600610075006c0074002000420049004f005300200046006c0061007300680020004400720069007600650072 } /* FileDescription DefaultBIOSFlashDriver */
@@ -2193,7 +2193,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtier_F27F {
 		hash = "e6056443537d4d2314dabca1b9168f1eaaf17a14eb41f6f5741b6b82b3119790"
 		hash = "ab0925398f3fa69a67eacee2bbb7b34ac395bb309df7fc7a9a9b8103ef41ed7a"
 		hash = "da11e9598eef033722b97873d1c046270dd039d0e3ee6cd37911e2dc2eb2608d"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c0020005800540043004f004d0020005300650072007600690063006500730020004400720069007600650072 } /* FileDescription NovellXTCOMServicesDriver */
@@ -2214,7 +2214,7 @@ rule PUA_VULN_Driver_Almicosoftware_Sfdrvxsys_Speedfan_X_965D {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "965d4f981b54669a96c5ab02d09bf0a9850d13862425b8981f1a9271350f28bb"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0053007000650065006400460061006e00200078003600340020004400720069007600650072 } /* FileDescription SpeedFanxDriver */
@@ -2241,7 +2241,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtier_5A66 {
 		hash = "76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22"
 		hash = "2e665962c827ce0adbd29fe6bcf09bbb1d7a7022075d162ff9b65d0af9794ac0"
 		hash = "b0b6a410c22cc36f478ff874d4a23d2e4b4e37c6e55f2a095fc4c3ef32bcb763"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c002000580054006900650072002000530065007300730069006f006e0020004d0061006e0061006700650072 } /* FileDescription NovellXTierSessionManager */
@@ -2262,7 +2262,7 @@ rule PUA_VULN_Driver_Microsoftcorporation_Cscsys_Microsoftwindowsoperatingsystem
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "828c54cfecb2a08863319544ac716aee3898dfe78a87d7757a0e92f1b1f1daf1"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069006e0064006f0077007300200043006c00690065006e007400200053006900640065002000430061006300680069006e00670020004400720069007600650072 } /* FileDescription WindowsClientSideCachingDriver */
@@ -2284,7 +2284,7 @@ rule PUA_VULN_Driver_Panyazilimbilisimteknolojileriticltdsti_Panioxsys_Paniolibr
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6b830ea0db6546a044c9900d3f335e7820c2a80e147b0751641899d1a5aa8f74"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00540065006d0070006500720061007400750072006500200061006e0064002000730079007300740065006d00200069006e0066006f0072006d006100740069006f006e0020006400720069007600650072 } /* FileDescription Temperatureandsysteminformationdriver */
@@ -2306,7 +2306,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_82FB {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "82fbcb371d53b8a76a25fbbafaae31147c0d1f6b9f26b3ea45262c2267386989"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsNTXPIOdriver */
@@ -2328,7 +2328,7 @@ rule PUA_VULN_Driver_Entechtaiwan_Seasys_Softenginex_6CB5 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6cb51ae871fbd5d07c5aad6ff8eea43d34063089528603ca9ceb8b4f52f68ddc"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006e005400650063006800200073006f006600740045006e00670069006e006500200078003600340020006b00650072006e0065006c002d006d006f006400650020006400720069007600650072 } /* FileDescription EnTechsoftEnginexkernelmodedriver */
@@ -2350,7 +2350,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpot_Avginternetsecuritysystem_0B5
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0b542e47248611a1895018ec4f4033ea53464f259c74eb014d018b19ad818917"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AVGAntiRootkit */
@@ -2375,7 +2375,7 @@ rule PUA_VULN_Driver_Razerinc_Rzpnk_Rzpnk_F159 {
 		hash = "9fa120bda98633e30480d8475c9ac6637470c4ca7c63763560bf869138091b01"
 		hash = "0b547368c03e0a584ae3c5e62af3728426c68b316a15f3290316844d193ad182"
 		hash = "9eba5d1545fdbf37cf053ac3f3ba45bcb651b8abb7805cbfdfb5f91ea294fb95"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520061007a006500720020004f007600650072006c0061007900200053007500700070006f00720074 } /* FileDescription RazerOverlaySupport */
@@ -2397,7 +2397,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpotsys_Avastantivirus_1273 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1273b74c3c1553eaa92e844fbd51f716356cc19cf77c2c780d4899ec7738fbd1"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avastantirootkit */
@@ -2420,7 +2420,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_3854 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "385485e643aa611e97ceae6590c6a8c47155886123dbb9de1e704d0d1624d039"
 		hash = "b773511fdb2e370dec042530910a905472fcc2558eb108b246fd3200171b04d3"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -2444,7 +2444,7 @@ rule PUA_VULN_Driver_Advancedmicrodevices_Aoddriversys_Amdoverdriveservicedriver
 		hash = "3c11dec1571253594d64619d8efc8c0212897be84a75a8646c578e665f58bf5d"
 		hash = "5a0b10a9e662a0b0eeb951ffd2a82cc71d30939a78daebd26b3f58bb24351ac9"
 		hash = "7a1105548bfc4b0a1b7b891cde0356d39b6633975cbcd0f2e2d8e31b3646d2ca"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d00440020004f00760065007200440072006900760065002000530065007200760069006300650020004400720069007600650072 } /* FileDescription AMDOverDriveServiceDriver */
@@ -2466,7 +2466,7 @@ rule PUA_VULN_Driver_Windowsrcodenamelonghornddkprovider_Cpuzsys_Windowsrcodenam
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "eaa5dae373553024d7294105e4e07d996f3a8bd47c770cdf8df79bf57619a8cd"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055002d005a0020004400720069007600650072 } /* FileDescription CPUZDriver */
@@ -2488,7 +2488,7 @@ rule PUA_VULN_Driver_Zemanaltd_Zam_8FE9 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8fe9828bea83adc8b1429394db7a556a17f79846ad0bfb7f242084a5c96edf2a"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -2515,7 +2515,7 @@ rule PUA_VULN_Driver_Windowsrcodenamelonghornddkprovider_Cpuzsys_Windowsrcodenam
 		hash = "8e5aef7c66c0e92dfc037ee29ade1c8484b8d7fadebdcf521d2763b1d8215126"
 		hash = "79440da6b8178998bdda5ebde90491c124b1967d295db1449ec820a85dc246dd"
 		hash = "6001c6acae09d2a91f8773bbdfd52654c99bc672a9756dc4cb53dc2e3efeb097"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUIDDriver */
@@ -2537,7 +2537,7 @@ rule PUA_VULN_Driver_Msi_Ntiolibsys_Ntiolib_3D9E {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3d9e83b189fcf5c3541c62d1f54a0da0a4e5b62c3243d2989afc46644056c8e3"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c0069006200200046006f00720020004e00540049004f004c00690062005f00450043004f } /* FileDescription NTIOLibForNTIOLibECO */
@@ -2559,7 +2559,7 @@ rule PUA_VULN_Driver_Logitech_Lgcoretempsys_Lgcoretemp_E0CB {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e0cb07a0624ddfacaa882af49e3783ae02c9fbd0ab232541a05a95b4a8abd8ef"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00430050005500200043006f00720065002000540065006d007000650072006100740075007200650020004d006f006e00690074006f0072 } /* FileDescription CPUCoreTemperatureMonitor */
@@ -2581,7 +2581,7 @@ rule PUA_VULN_Driver_Intelcorporation_Stdcdrvsys_Selftestdatacollector_3702 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "37022838c4327e2a5805e8479330d8ff6f8cd3495079905e867811906c98ea20"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530065006c006600540065007300740020004400610074006100200043006f006c006c006500630074006f0072 } /* FileDescription SelfTestDataCollector */
@@ -2604,7 +2604,7 @@ rule PUA_VULN_Driver_Msi_Ntiolibsys_Ntiolib_2BBE {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2bbe65cbec3bb069e92233924f7ee1f95ffa16173fceb932c34f68d862781250"
 		hash = "e68d453d333854787f8470c8baef3e0d082f26df5aa19c0493898bcf3401e39a"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c0069006200200046006f00720020004d0053004900530069006d0070006c0065005f004f0043 } /* FileDescription NTIOLibForMSISimpleOC */
@@ -2627,7 +2627,7 @@ rule PUA_VULN_Driver_Gigabytetechnologycoltd_Gdrvsys_Gigabytesoftwaredriver_092D
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "092d04284fdeb6762e65e6ac5b813920d6c69a5e99d110769c5c1a78e11c5ba0"
 		hash = "0ce40a2cdd3f45c7632b858e8089ddfdd12d9acb286f2015a4b1b0c0346a572c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041002d00420059005400450020004e006f006e0050006e00500020004400720069007600650072 } /* FileDescription GIGABYTENonPnPDriver */
@@ -2649,7 +2649,7 @@ rule PUA_VULN_Driver_Windowsrddkprovider_Rtportsys_Windowsrddkprovider_3C0A {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3c0a36990f7eef89b2d5f454b6452b6df1304609903f31f475502e4050241dd8"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00470065006e006500720069006300200050006f0072007400200049002f004f00200066006f0072002000570069006e00330032 } /* FileDescription GenericPortIOforWin */
@@ -2671,7 +2671,7 @@ rule PUA_VULN_Driver_Avastsoftware_Ngiodriversys_Avastng_5FAE {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5fae7e491b0d919f0b551e15e0942ac7772f2889722684aea32cff369e975879"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0061007600610073007400210020004e0047002000730065007400750070002000680065006c0070006500720020006400720069007600650072 } /* FileDescription avastNGsetuphelperdriver */
@@ -2693,7 +2693,7 @@ rule PUA_VULN_Driver_Innotekgmbh_Vboxusbmonsys_Virtualboxusbmonitordriver_3D05 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3d055be2671e136c937f361cef905e295ddb6983526341f1d5f80a16b7655b40"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200055005300420020004d006f006e00690074006f00720020004400720069007600650072 } /* FileDescription VirtualBoxUSBMonitorDriver */
@@ -2715,7 +2715,7 @@ rule PUA_VULN_Driver_Avastsoftware_Ngiodriversys_Avastng_1A45 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1a450ae0c9258ab0ae64f126f876b5feed63498db729ec61d06ed280e6c46f67"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0061007600610073007400210020004e0047002000730065007400750070002000680065006c0070006500720020006400720069007600650072 } /* FileDescription avastNGsetuphelperdriver */
@@ -2738,7 +2738,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_62F5 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "62f5e13b2edc00128716cb93e6a9eddffea67ce83d2bb426f18f5be08ead89e0"
 		hash = "ee3ff12943ced401e2b6df9e66e8a0be8e449fa9326cab241f471b2d8ffefdd7"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -2761,7 +2761,7 @@ rule PUA_VULN_Driver_Yyinc_Dianhu_80CB {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "80cbba9f404df3e642f22c476664d63d7c229d45d34f5cd0e19c65eb41becec3"
 		hash = "bb50818a07b0eb1bd317467139b7eb4bad6cd89053fecdabfeae111689825955"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]006400690061006e00680075 } /* FileDescription dianhu */
@@ -2784,7 +2784,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_8F68 {
 		hash = "7227377a47204f8e2ff167eee54b4b3545c0a19e3727f0ec59974e1a904f4a96"
 		hash = "c8eaa5e6d3230b93c126d2d58e32409e4aeeb23ccf0dd047a17f1ef552f92fe9"
 		hash = "b11e109f6b3dbc8aa82cd7da0b7ba93d07d9809ee2a4b21ec014f6a676a53027"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsNTXPIOdriver */
@@ -2806,7 +2806,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpotsys_Avastantivirus_A5A5 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a5a50449e2cc4d0dbc80496f757935ae38bf8a1bebdd6555a3495d8c219df2ad"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avastantirootkit */
@@ -2828,7 +2828,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Wnbiossys_Windowsrwinddkdriver_530D 
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "530d9223ec7e4123532a403abef96dfd1af5291eb49497392ff5d14d18fccfbb"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0057006e00420069006f00730020004400720069007600650072 } /* FileDescription WnBiosDriver */
@@ -2850,7 +2850,7 @@ rule PUA_VULN_Driver_Elaboratebytes_Elbycdio_Cdrtools_98EC {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "98ec7cc994d26699f5d26103a0aeb361128cff3c2c4d624fc99126540e23e97e"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f003200300030003000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsNTIOdriver */
@@ -2872,7 +2872,7 @@ rule PUA_VULN_Driver_Msi_Ntiolibsys_Ntiolib_591B {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "591bd5e92dfa0117b3daa29750e73e2db25baa717c31217539d30ffb1f7f3a52"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c0069006200200046006f00720020004d005300490052006100740069006f005f00430043 } /* FileDescription NTIOLibForMSIRatioCC */
@@ -2895,7 +2895,7 @@ rule PUA_VULN_Driver_Openlibsysorg_Winringsys_Winring_47EA {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "47eaebc920ccf99e09fc9924feb6b19b8a28589f52783327067c9b09754b5e84"
 		hash = "3ec5ad51e6879464dfbccb9f4ed76c6325056a42548d5994ba869da9c4c039a8"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069006e00520069006e00670030 } /* FileDescription WinRing */
@@ -2917,7 +2917,7 @@ rule PUA_VULN_Driver_Insydesoftwarecorp_Segwindrvxsys_Segwindowsdriverx_6532 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "65329dad28e92f4bcc64de15c552b6ef424494028b18875b7dba840053bc0cdd"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005300450047002000570069006e0064006f0077007300200044007200690076006500720020007800360034 } /* FileDescription SEGWindowsDriverx */
@@ -2939,7 +2939,7 @@ rule PUA_VULN_Driver_Advancedmicrodevices_Amdryzenmasterdriversys_Amdryzenmaster
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "909de5f21837ea2b13fdc4e5763589e6bdedb903f7c04e1d0b08776639774880"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d0044002000520079007a0065006e0020004d00610073007400650072002000530065007200760069006300650020004400720069007600650072 } /* FileDescription AMDRyzenMasterServiceDriver */
@@ -2966,7 +2966,7 @@ rule PUA_VULN_Driver_Atitechnologiesinc_Atillksys_Atidiagnostics_AD40 {
 		hash = "c825a47817399e988912bb75106befaefae0babc0743a7e32b46f17469c78cad"
 		hash = "be66f3bbfed7d648cfd110853ddb8cef561f94a45405afc6be06e846b697d2b0"
 		hash = "5c04c274a708c9a7d993e33be3ea9e6119dc29527a767410dbaf93996f87369a"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410054004900200044006900610067006e006f007300740069006300730020004800610072006400770061007200650020004100620073007400720061006300740069006f006e0020005300790073 } /* FileDescription ATIDiagnosticsHardwareAbstractionSys */
@@ -2991,7 +2991,7 @@ rule PUA_VULN_Driver_Computerzsys_Ludashisystemdriver_E502 {
 		hash = "5c80dc051c4b0c62b9284211f71e5567c0c0187e466591eacb93e7dc10e4b9ab"
 		hash = "d6801e845d380c809d0da8c7a5d3cd2faa382875ae72f5f7af667a34df25fbf7"
 		hash = "d474ea066d416ded9ed8501c285ca6b1c26a1d1c813c8f6bd5523eeb66c5d01e"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -3013,7 +3013,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpot_Avginternetsecuritysystem_0CD
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0cd4ca335155062182608cad9ef5c8351a715bce92049719dd09c76422cd7b0c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AVGAntiRootkit */
@@ -3035,7 +3035,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroaegis_3FA6 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3fa6379951f08ed3cb87eeba9cf0c5f5e1d0317dcfcf003b810df9d795eeb73e"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -3057,7 +3057,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_3E1D {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3e1d47a497babbfd1c83905777b517ec87c65742bee7eb57a2273eca825d2272"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -3079,7 +3079,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpotsys_Avginternetsecuritysystem_
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6fb5bc9c51f6872de116c7db8a2134461743908efc306373f6de59a0646c4f5d"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVGantirootkit */
@@ -3104,7 +3104,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtier_3B71 {
 		hash = "72b67b6b38f5e5447880447a55fead7f1de51ca37ae4a0c2b2f23a4cb7455f35"
 		hash = "d04c72fd31e7d36b101ad30e119e14f6df9cbc7a761526da9b77f9e0b9888bc4"
 		hash = "87e094214feb56a482cd8ae7ee7c7882b5a8dccce7947fdaa04a660fa19f41e5"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c0020005800540043004f004d0020005300650072007600690063006500730020004400720069007600650072 } /* FileDescription NovellXTCOMServicesDriver */
@@ -3125,7 +3125,7 @@ rule PUA_VULN_Driver_Almicosoftware_Sfdrvxsys_Speedfan_X_0BD1 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0bd1523a68900b80ed1bccb967643525cca55d4ff4622d0128913690e6bb619e"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0053007000650065006400460061006e00200078003300320020004400720069007600650072 } /* FileDescription SpeedFanxDriver */
@@ -3147,7 +3147,7 @@ rule PUA_VULN_Driver_Almicosoftware_Sfdrvxsys_Speedfan_X_1E94 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1e94d4e6d903e98f60c240dc841dcace5f9e8bbb0802e6648a49ab80c23318cb"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0053007000650065006400460061006e00200078003300320020004400720069007600650072 } /* FileDescription SpeedFanxDriver */
@@ -3169,7 +3169,7 @@ rule PUA_VULN_Driver_Hpdevelopmentcompany_Etdsuppsys_Hpetdidriverdll_F744 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f744abb99c97d98e4cd08072a897107829d6d8481aee96c22443f626d00f4145"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004500540044006900200053007500700070006f007200740020004400720069007600650072 } /* FileDescription ETDiSupportDriver */
@@ -3198,7 +3198,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Netfiltersys_Windowsrwinddkdriver_DB
 		hash = "639ff79f13e40d47b90ecd709699edd10e740cb41451acb95590a68b6352de2b"
 		hash = "f488500be4eaafba74b644be95d4c0523297770fb9bb78c449f643ab8d4a05d9"
 		hash = "8017e618b5a7aa608cc4bce16e4defd6b4e99138c4ba1bdd6ad78e39f035cf59"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e0065007400460069006c007400650072002000530044004b00200057004600500020004400720069007600650072002000280057005000500029 } /* FileDescription NetFilterSDKWFPDriverWPP */
@@ -3220,7 +3220,7 @@ rule PUA_VULN_Driver_Realtek_Rtkiosys_Realtekiodriver_4ED2 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4ed2d2c1b00e87b926fb58b4ea43d2db35e5912975f4400aa7bd9f8c239d08b7"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f0020004400720069007600650072 } /* FileDescription RealtekIODriver */
@@ -3244,7 +3244,7 @@ rule PUA_VULN_Driver_Netfiltersys_1265 {
 		hash = "12656fc113b178fa3e6bfffc6473897766c44120082483eb8059ebff29b5d2df"
 		hash = "7ff8fe4c220cf6416984b70a7e272006a018e5662da3cedc2a88efeb6411b4a4"
 		hash = "1cd75de5f54b799b60789696587b56a4a793cf60775b81f236f0e65189d863af"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570059004a0053005100200057004600500020004400720069007600650072002000280057005000500029 } /* FileDescription WYJSQWFPDriverWPP */
@@ -3266,7 +3266,7 @@ rule PUA_VULN_Driver_Intelcorporation_Iqvwsys_Intelriqvwsys_1F81 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1f8168036d636aad1680dd0f577ef9532dbb2dad3591d63e752b0ba3ee6fd501"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription IntelRNetworkAdapterDiagnosticDriver */
@@ -3288,7 +3288,7 @@ rule PUA_VULN_Driver_Iobit_Iobitunlockersys_Iobitunlocker_C79A {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c79a2bb050af6436b10b58ef04dbc7082df1513cec5934432004eb56fba05e66"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049004f0062006900740055006e006c006f0063006b006500720020004400720069007600650072 } /* FileDescription IObitUnlockerDriver */
@@ -3310,7 +3310,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_16B5 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "16b591cf5dc1e7282fdb25e45497fe3efc8095cbe31c05f6d97c5221a9a547e1"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsNTXPIOdriver */
@@ -3337,7 +3337,7 @@ rule PUA_VULN_Driver_Phoenixtechnologies_Agentsys_Driveragent_4045 {
 		hash = "b1d96233235a62dbb21b8dbe2d1ae333199669f67664b107bff1ad49b41d9414"
 		hash = "05f052c64d192cf69a462a5ec16dda0d43ca5d0245900c9fcb9201685a2e7748"
 		hash = "4db1e0fdc9e6cefeb1d588668ea6161a977c372d841e7b87098cf90aa679abfb"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004400720069007600650072004100670065006e0074002000440069007200650063007400200049002f004f00200066006f0072002000360034002d006200690074002000570069006e0064006f00770073 } /* FileDescription DriverAgentDirectIOforbitWindows */
@@ -3360,7 +3360,7 @@ rule PUA_VULN_Driver_Ludashicom_Computerzsys_FA77 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fa77a472e95c4d0a2271e5d7253a85af25c07719df26941b39082cfc0733071a"
 		hash = "423f052690b6b523502931151dfcc63530e3bd9d79680f9b5ac033b23b5c6f18"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -3382,7 +3382,7 @@ rule PUA_VULN_Driver_Tgsoftsas_Viragtsys_Viritagentsystem_D0E2 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d0e25b879d830e4f867b09d6540a664b6f88bad353cd14494c33b31a8091f605"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirITAgentSystem */
@@ -3404,7 +3404,7 @@ rule PUA_VULN_Driver_Openlibsysorg_Openlibsyssys_Openlibsys_F060 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f0605dda1def240dc7e14efa73927d6c6d89988c01ea8647b671667b2b167008"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004f00700065006e004c00690062005300790073 } /* FileDescription OpenLibSys */
@@ -3426,7 +3426,7 @@ rule PUA_VULN_Driver_Realixtm_Hwinfosys_Hwinfokerneldriver_4AC0 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4ac08a6035cfcafdac712d7c3cf2eef6e10258f14cee6e80e1ef2f71f5045173"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570069004e0046004f003300320020004b00650072006e0065006c0020004400720069007600650072 } /* FileDescription HWiNFOKernelDriver */
@@ -3453,7 +3453,7 @@ rule PUA_VULN_Driver_Rweverything_Rwdrvsys_Rweverythingreadwritedriver_2A65 {
 		hash = "47f08f7d30d824a8f4bb8a98916401a37c0fd8502db308aba91fe3112b892dcc"
 		hash = "0aafa9f47acf69d46c9542985994ff5321f00842a28df2396d4a3076776a83cb"
 		hash = "2bf29a2df52110ed463d51376562afceac0e80fbb1033284cf50edd86c406b14"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520057002d00450076006500720079007400680069006e006700200052006500610064002000260020005700720069007400650020004400720069007600650072 } /* FileDescription RWEverythingReadWriteDriver */
@@ -3475,7 +3475,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_5027 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5027fce41ed60906a0e76b97c95c2a5a83d57a2d1cd42de232a21f26c0d58e48"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -3497,7 +3497,7 @@ rule PUA_VULN_Driver_Nvidiacorp_Nvoclocksys_Nvidiasystemutilitydriver_2203 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2203bd4731a8fdc2a1c60e975fd79fd5985369e98a117df7ee43c528d3c85958"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00560069006400690061002000530079007300740065006d0020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription NVidiaSystemUtilityDriver */
@@ -3520,7 +3520,7 @@ rule PUA_VULN_Driver_Realtek_Rtkiosys_Realtekiodriver_442C {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "442c18aeb09556bb779b21185c4f7e152b892410429c123c86fc209a802bff3c"
 		hash = "3e1f592533625bf794e0184485a4407782018718ae797103f9e968ff6f0973a1"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f0020004400720069007600650072 } /* FileDescription RealtekIODriver */
@@ -3543,7 +3543,7 @@ rule PUA_VULN_Driver_Ludashicom_Computerzsys_468B {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "468b087a0901d7bd971ab564b03ded48c508840b1f9e5d233a7916d1da6d9bd5"
 		hash = "f93e0d776481c4ded177d5e4aebb27f30f0d47dcb4a1448aee8b66099ac686e1"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -3565,7 +3565,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpot_Avginternetsecuritysystem_19D
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "19d0fc91b70d7a719f7a28b4ad929f114bf1de94a4c7cba5ad821285a4485da0"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AVGAntiRootkit */
@@ -3587,7 +3587,7 @@ rule PUA_VULN_Driver_Advancedmicrodevices_Amdryzenmasterdriversys_Amdryzenmaster
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9b1ac756e35f795dd91adbc841e78db23cb7165280f8d4a01df663128b66d194"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d0044002000520079007a0065006e0020004d00610073007400650072002000530065007200760069006300650020004400720069007600650072 } /* FileDescription AMDRyzenMasterServiceDriver */
@@ -3603,13 +3603,31 @@ rule PUA_VULN_Driver_Advancedmicrodevices_Amdryzenmasterdriversys_Amdryzenmaster
 }
 
 
+rule PUA_VULN_Driver_Compalelectronicinc_011D {
+	meta:
+		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TPwSav.sys"
+		author = "Florian Roth"
+		reference = "https://github.com/magicsword-io/LOLDrivers"
+		hash = "011df46e94218cbb2f0b8da13ab3cec397246fdc63436e58b1bf597550a647f6"
+		date = "2025-07-03"
+		score = 40
+	strings:
+		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049004f0020004400720069007600650072 } /* FileDescription IODriver */
+		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]0043006f006d00700061006c00200045006c0065006300740072006f006e00690063002c00200049006e0063002e0020 } /* CompanyName CompalElectronicInc */
+		$ = { 00460069006c006500560065007200730069006f006e[1-8]0032002c00200030002c00200030002c00200032 } /* FileVersion  */
+		$ = { 004c006500670061006c0043006f0070007900720069006700680074[1-8]0043006f007000790072006900670068007400200032003000300035002d00320030003100350020002c0041006c006c0020005200690067006800740073002000520065007300650072007600650064002e } /* LegalCopyright CopyrightAllRightsReserved */
+	condition:
+		all of them
+}
+
+
 rule PUA_VULN_Driver_Panyazilimbilisimteknolojileriticltdsti_Panmonfltsys_Pancafemanager_7E01 {
 	meta:
 		description = "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PanMonFlt.sys"
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7e0124fcc7c95fdc34408cf154cb41e654dade8b898c71ad587b2090b1da30d7"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500061006e00430061006600650020004d0061006e0061006700650072002000460069006c00650020004d006f006e00690074006f0072 } /* FileDescription PanCafeManagerFileMonitor */
@@ -3632,7 +3650,7 @@ rule PUA_VULN_Driver_Nvidiacorp_Nvoclocksys_Nvidiasystemutilitydriver_F4E5 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f4e500a9ac5991da5bf114fa80e66456a2cde3458a3d41c14e127ac09240c114"
 		hash = "642857fc8d737e92db8771e46e8638a37d9743928c959ed056c15427c6197a54"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00560049004400490041002000530079007300740065006d0020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription NVIDIASystemUtilityDriver */
@@ -3654,7 +3672,7 @@ rule PUA_VULN_Driver_Lenovogrouplimitedr_Lenovodiagnosticsdriversys_Lenovodiagno
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f05b1ee9e2f6ab704b8919d5071becbce6f9d0f9d0ba32a460c41d5272134abe"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c0065006e006f0076006f00200044006900610067006e006f00730074006900630073002000440072006900760065007200200066006f0072002000570069006e0064006f0077007300200031003000200061006e00640020006c0061007400650072002e } /* FileDescription LenovoDiagnosticsDriverforWindowsandlater */
@@ -3676,7 +3694,7 @@ rule PUA_VULN_Driver_3F20 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3f20ac5dac9171857fc5791865458fdb6eac4fab837d7eabc42cb0a83cb522fc"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]7cfb7edf4fe1606f67e5770b5de55177 } /* FileDescription  */
@@ -3695,7 +3713,7 @@ rule PUA_VULN_Driver_Toshibacorporation_Nchgbiosxsys_Toshibabiospackage_7D4C {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7d4ca5760b6ad2e4152080e115f040f9d42608d2c7d7f074a579f911d06c8cf8"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00420049004f00530020005500700064006100740065002000440072006900760065007200200046006f0072002000570069006e0064006f007700730020007800360034002000450064006900740069006f006e } /* FileDescription BIOSUpdateDriverForWindowsxEdition */
@@ -3717,7 +3735,7 @@ rule PUA_VULN_Driver_Dell_Dbutil_71FE {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "71fe5af0f1564dc187eea8d59c0fbc897712afa07d18316d2080330ba17cf009"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00440042005500740069006c } /* FileDescription DBUtil */
@@ -3737,7 +3755,7 @@ rule PUA_VULN_Driver_Cn_Computerzsys_6D2C {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6d2cc7e1d95bb752d79613d0ea287ea48a63fb643dcb88c12b516055da56a11d"
 		hash = "8047859a7a886bcf4e666494bd03a6be9ce18e20dc72df0e5b418d180efef250"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -3760,7 +3778,7 @@ rule PUA_VULN_Driver_Atszio_Atsziodriver_673B {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "673bcec3d53fab5efd6e3bac25ac9d6cc51f6bbdf8336e38aade2713dc1ae11b"
 		hash = "31d8fc6f5fb837d5eb29db828d13ba8ee11867d86a90b2c2483a578e1d0ec43a"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100540053005a0049004f0020004400720069007600650072 } /* FileDescription ATSZIODriver */
@@ -3781,7 +3799,7 @@ rule PUA_VULN_Driver_Asus_Asmmapsys_Atkgenericfunctionservice_025E {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "025e7be9fcefd6a83f4471bba0c11f1c11bd5047047d26626da24ee9a419cdc4"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d0065006d006f007200790020006d0061007000700069006e00670020004400720069007600650072 } /* FileDescription MemorymappingDriver */
@@ -3806,7 +3824,7 @@ rule PUA_VULN_Driver_Razerinc_Rzpnk_Rzpnk_9724 {
 		hash = "a66d2fb7ef7350ea74d4290c57fb62bc59c6ea93f759d4ca93c3febca7aeb512"
 		hash = "e77786b21dbe73e9619ac9aac5e7e92989333d559aa22b4b65c97f0a42ff2e21"
 		hash = "8ed0c00920ce76e832701d45117ed00b12e20588cb6fe8039fbccdfef9841047"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520061007a006500720020004f007600650072006c0061007900200053007500700070006f00720074 } /* FileDescription RazerOverlaySupport */
@@ -3828,7 +3846,7 @@ rule PUA_VULN_Driver_Realtek_Rtkiosys_Realtekiodriver_7133 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7133a461aeb03b4d69d43f3d26cd1a9e3ee01694e97a0645a3d8aa1a44c39129"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f0020004400720069007600650072 } /* FileDescription RealtekIODriver */
@@ -3851,7 +3869,7 @@ rule PUA_VULN_Driver_Lgelectronicsinc_Lhasys_Microsoftwindowsoperatingsystem_23B
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "23ba19352b1e71a965260bf4d5120f0200709ee8657ed381043bec9a938a1ade"
 		hash = "e75714f8e0ff45605f6fc7689a1a89c7dcd34aab66c6131c63fefaca584539cf"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c00480041 } /* FileDescription LHA */
@@ -3873,7 +3891,7 @@ rule PUA_VULN_Driver_Elitegroupcomputersystems_Ecsiodriversys_Ecsiodriver_2705 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "270547552060c6f4f5b2ebd57a636d5e71d5f8a9d4305c2b0fe5db0aa2f389cc"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045004300530049006f004400720069007600650072 } /* FileDescription ECSIoDriver */
@@ -3896,7 +3914,7 @@ rule PUA_VULN_Driver_Cn_Computerzsys_8D33 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8d3347c93dff62eecdde22ccc6ba3ce8c0446874738488527ea76d0645341409"
 		hash = "31ffc8218a52c3276bece1e5bac7fcb638dca0bc95c2d385511958abdbe4e4a5"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -3919,7 +3937,7 @@ rule PUA_VULN_Driver_Computerzsys_Ludashisystemdriver_C586 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c586befc3fd561fcbf1cf706214ae2adaa43ce9ba760efd548d581f60deafc65"
 		hash = "dda2a604bb94a274e23f0005f0aa330d45ca1ea25111746fb46fa5ef6d155b1d"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -3941,7 +3959,7 @@ rule PUA_VULN_Driver_Logmeininc_Lmiinfosys_Logmein_453B {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "453be8f63cc6b116e2049659e081d896491cf1a426e3d5f029f98146a3f44233"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c006f0067004d00650049006e0020004b00650072006e0065006c00200049006e0066006f0072006d006100740069006f006e002000500072006f00760069006400650072 } /* FileDescription LogMeInKernelInformationProvider */
@@ -3963,7 +3981,7 @@ rule PUA_VULN_Driver_Realixtm_Hwinfosys_Hwinfokerneldriver_76AF {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "76af3f9fa111d694e37058606f2636430bdd378c85b94f426fbfcd6666ebe6cc"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570069004e0046004f003300320020004b00650072006e0065006c0020004400720069007600650072 } /* FileDescription HWiNFOKernelDriver */
@@ -3985,7 +4003,7 @@ rule PUA_VULN_Driver_Sisoftware_Sandra_Sisoftwaresandra_1284 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1284a1462a5270833ec7719f768cdb381e7d0a9c475041f9f3c74fa8eea83590"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530061006e006400720061002000440065007600690063006500200044007200690076006500720020002800570069006e003300320020007800380036002900280055006e00690063006f006400650029 } /* FileDescription SandraDeviceDriverWinxUnicode */
@@ -4008,7 +4026,7 @@ rule PUA_VULN_Driver_Rweverything_Asrsetupdrvsys_Asrsetupdrvdriver_9D93 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9d9346e6f46f831e263385a9bd32428e01919cca26a035bbb8e9cb00bf410bc3"
 		hash = "a0728184caead84f2e88777d833765f2d8af6a20aad77b426e07e76ef91f5c3f"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100730072005300650074007500700044007200760031003000330020004400720069007600650072 } /* FileDescription AsrSetupDrvDriver */
@@ -4032,7 +4050,7 @@ rule PUA_VULN_Driver_Insydesoftwarecorp_Segwindrvxsys_Segwindowsdriverx_C628 {
 		hash = "c628cda1ef43defc00af45b79949675a8422490d32b080b3a8bb9434242bdbf2"
 		hash = "7164aaff86b3b7c588fc7ae7839cc09c5c8c6ae29d1aff5325adaf5bedd7c9f5"
 		hash = "0d30c6c4fa0216d0637b4049142bc275814fd674859373bd4af520ce173a1c75"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005300450047002000570069006e0064006f0077007300200044007200690076006500720020007800360034 } /* FileDescription SEGWindowsDriverx */
@@ -4054,7 +4072,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmelsys_Trendmicroearlylaunchantimalwaredrive
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d0eb3ba0aff471d19260192784bf9f056d669b779b6eaff84e732b7124ce1d11"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200045004c0041004d00200044007200690076006500720020002800360034002d0042006900740029 } /* FileDescription TrendMicroELAMDriverBit */
@@ -4077,7 +4095,7 @@ rule PUA_VULN_Driver_Getactechnologycorporation_Mtcbsvsys_Getacsystemserviceprov
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "edbb23e74562e98b849e5d0eefde3af056ec6e272802a04b61bebd12395754e5"
 		hash = "4b465faf013929edf2f605c8cd1ac7a278ddc9a536c4c34096965e6852cbfb51"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00470065007400610063002000530079007300740065006d00200053006500720076006900630065002000500072006f00760069006400650072 } /* FileDescription GetacSystemServiceProvider */
@@ -4099,7 +4117,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_2FBB {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2fbbc276737047cb9b3ba5396756d28c1737342d89dce1b64c23a9c4513ae445"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsNTXPIOdriver */
@@ -4121,7 +4139,7 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_Procexpsys_Processexplorer_B
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "bced04bdefad6a08c763265d6993f07aa2feb57d33ed057f162a947cf0e6668f"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription ProcessExplorer */
@@ -4143,7 +4161,7 @@ rule PUA_VULN_Driver_Realtek_Rtkiowxsys_Realtekiodriver_082C {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "082c39fe2e3217004206535e271ebd45c11eb072efde4cc9885b25ba5c39f91d"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f0020004400720069007600650072 } /* FileDescription RealtekIODriver */
@@ -4170,7 +4188,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtier_1493 {
 		hash = "a495ffa623a5220179b0dd519935e255dd6910b7b7bc3d68906528496561ff53"
 		hash = "e4cf438838dc10b188b3d4a318fd9ba2479abb078458d7f97591c723e2d637ce"
 		hash = "ce23c2dae4cca4771ea50ec737093dfafac06c64db0f924a1ccbbf687e33f5a2"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c002000580054006900650072002000530065007300730069006f006e0020004d0061006e0061006700650072 } /* FileDescription NovellXTierSessionManager */
@@ -4199,7 +4217,7 @@ rule PUA_VULN_Driver_Powertool_Kevpsys_Powertool_7C0F {
 		hash = "7462b7ae48ae9469474222d4df2f0c4f72cdef7f3a69a524d4fccc5ed0fd343f"
 		hash = "97363f377aaf3c01641ac04a15714acbec978afb1219ac8f22c7e5df7f2b2d56"
 		hash = "1aaa9aef39cb3c0a854ecb4ca7d3b213458f302025e0ec5bfbdef973cca9111c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0050006f0077006500720054006f006f006c } /* FileDescription PowerTool */
@@ -4221,7 +4239,7 @@ rule PUA_VULN_Driver_Intelcorporation_Iqvwsys_Intelriqvwsys_D1F4 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d1f4949f76d8ac9f2fa844d16b1b45fb1375d149d46e414e4a4c9424dc66c91f"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription IntelRNetworkAdapterDiagnosticDriver */
@@ -4244,7 +4262,7 @@ rule PUA_VULN_Driver_Cn_Computerzsys_BC45 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "bc453d428fc224960fa8cbbaf90c86ce9b4c8c30916ad56e525ab19b6516424e"
 		hash = "182bbdb9ecd3932e0f0c986b779c2b2b3997a7ca9375caa2ec59b4b08f4e9714"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -4266,7 +4284,7 @@ rule PUA_VULN_Driver_Intelcorporation_Iqvwsys_Intelriqvwsys_7CB4 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7cb497abc44aad09a38160d6a071db499e05ff5871802ccc45d565d242026ee7"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription IntelRNetworkAdapterDiagnosticDriver */
@@ -4288,7 +4306,7 @@ rule PUA_VULN_Driver_Safenetinc_Hostnt_Hostnt_07B6 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "07b6d69bafcfd767f1b63a490a8843c3bb1f8e1bbea56176109b5743c8f7d357"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0048006f00730074006e0074002000360034002d0062006900740020006400720069007600650072 } /* FileDescription Hostntbitdriver */
@@ -4310,7 +4328,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Psmounterexsys_Psmounterex_V_4E99 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4e99d454a56845bb0e622cfd68b895b7868ef7e8a43424e5b7b803f5a2d25eca"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0050006100720061006d006f0075006e007400200053006f00660074007700610072006500200049006d0061006700650020004d006f0075006e00740069006e00670020004400720069007600650072 } /* FileDescription ParamountSoftwareImageMountingDriver */
@@ -4332,7 +4350,7 @@ rule PUA_VULN_Driver_Rivetnetworksllc_Kfecodrvsys_Killertrafficcontrol_9A91 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9a91d6e83b8fdec536580f6617f10dfc64eedf14ead29a6a644eb154426622ba"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004b0069006c006c006500720020005400720061006600660069006300200043006f006e00740072006f006c002000430061006c006c006f007500740020004400720069007600650072 } /* FileDescription KillerTrafficControlCalloutDriver */
@@ -4354,7 +4372,7 @@ rule PUA_VULN_Driver_Nvidiacorp_Nvoclocksys_Nvidiasystemutilitydriver_848B {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "848b150ffcf1301b26634a41f28deacb5ccdd3117d79b590d515ed49849b8891"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00560049004400490041002000530079007300740065006d0020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription NVIDIASystemUtilityDriver */
@@ -4376,7 +4394,7 @@ rule PUA_VULN_Driver_Zemanaltd_Zam_7CB5 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7cb594af6a3655daebc9fad9c8abf2417b00ba31dcd118707824e5316fc0cc21"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -4396,7 +4414,7 @@ rule PUA_VULN_Driver_Asrockincorporation_Asrautochkupddrvsys_Asrautochkupddrvdri
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2aa1b08f47fbb1e2bd2e4a492f5d616968e703e1359a921f62b38b8e4662f0c4"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100730072004100750074006f00430068006b0055007000640044007200760020004400720069007600650072 } /* FileDescription AsrAutoChkUpdDrvDriver */
@@ -4419,7 +4437,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_97B3 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "97b32ddf83f75637e3ba934df117081dd6a1c57d47a4c9700d35e736da11d5bd"
 		hash = "89108a15f009b285db4ef94250b889d5b11b96b4aa7b190784a6d1396e893e10"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -4441,7 +4459,7 @@ rule PUA_VULN_Driver_Sisoftware_Sandra_Sisoftwaresandra_0EAB {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0eab16c7f54b61620277977f8c332737081a46bc6bbde50742b6904bdd54f502"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530061006e0064007200610020004400650076006900630065002000440072006900760065007200200028007800360034002900280055006e00690063006f006400650029 } /* FileDescription SandraDeviceDriverxUnicode */
@@ -4463,7 +4481,7 @@ rule PUA_VULN_Driver_Realtek_Rtkiosys_Realtekiodriver_8EF5 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8ef59605ebb2cb259f19aba1a8c122629c224c58e603f270eaa72f516277620c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f004400720069007600650072 } /* FileDescription RealtekIODriver */
@@ -4485,7 +4503,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_1F15 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1f15fd9b81092a98fabcc4ac95e45cec2d9ff3874d2e3faac482f3e86edad441"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f00770073002000780036003400200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsxIOdriver */
@@ -4507,7 +4525,7 @@ rule PUA_VULN_Driver_Insydesoftwarecorp_Segwindrvxsys_Segwindowsdriverx_0452 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0452a6e8f00bae0b79335c1799a26b2b77d603451f2e6cc3b137ad91996d4dec"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005300450047002000570069006e0064006f0077007300200044007200690076006500720020007800360034 } /* FileDescription SEGWindowsDriverx */
@@ -4529,7 +4547,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_818E {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "818e396595d08d724666803cd29dac566dc7db23bf50e9919d04b33afa988c01"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -4551,7 +4569,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_6FFD {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6ffdde6bc6784c13c601442e47157062941c47015891e7139c2aaba676ab59cc"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c00650020004e006f00540072006100700020004200750069006c0064 } /* FileDescription TrendMicroCommonModuleNoTrapBuild */
@@ -4578,7 +4596,7 @@ rule PUA_VULN_Driver_Cpuid_Cpuzsys_Cpuidservice_7710 {
 		hash = "900dd68ccc72d73774a347b3290c4b6153ae496a81de722ebb043e2e99496f88"
 		hash = "f74ffd6916333662900cbecb90aca2d6475a714ce410adf9c5c3264abbe5732c"
 		hash = "b8ffe83919afc08a430c017a98e6ace3d9cbd7258c16c09c4f3a4e06746fc80a"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUIDDriver */
@@ -4601,7 +4619,7 @@ rule PUA_VULN_Driver_Razerinc_Rzpnk_Rzpnk_AD8F {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ad8fd8300ed375e22463cea8767f68857d9a3b0ff8585fbeb60acef89bf4a7d7"
 		hash = "0507d893e3fd2917c81c1dc13ccb22ae5402ab6ca9fb8d89485010838050d08d"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520061007a006500720020004f007600650072006c0061007900200053007500700070006f00720074 } /* FileDescription RazerOverlaySupport */
@@ -4628,7 +4646,7 @@ rule PUA_VULN_Driver_Ludashicom_Computerzsys_71C0 {
 		hash = "e642d82c5cde2bc40a204736b5b8d6578e8e2b893877ae0508cfa3371fc254dc"
 		hash = "ed3448152bcacf20d7c33e9194c89d5304dee3fba16034dd0cc03a3374e63c91"
 		hash = "5c9e257c9740561b5744812e1343815e7972c362c8993d972b96a56e18c712f3"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -4650,7 +4668,7 @@ rule PUA_VULN_Driver_Windowsrserverddkprovider_Speedfansys_Windowsrserverddkdriv
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "22be050955347661685a4343c51f11c7811674e030386d2264cd12ecbf544b7c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0053007000650065006400460061006e00200044006500760069006300650020004400720069007600650072 } /* FileDescription SpeedFanDeviceDriver */
@@ -4672,7 +4690,7 @@ rule PUA_VULN_Driver_Openlibsysorg_Openlibsyssys_Openlibsys_9131 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "91314768da140999e682d2a290d48b78bb25a35525ea12c1b1f9634d14602b2c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004f00700065006e004c00690062005300790073 } /* FileDescription OpenLibSys */
@@ -4694,7 +4712,7 @@ rule PUA_VULN_Driver_Isinc_Avenger_Stopzilla_6BC0 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6bc0e1c104fac4a8caa4237c7ae181ca11a043a3ee26426aeb7a90dc40281fad"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0073007a006b006700200044006500760069006300650020004400720069007600650072 } /* FileDescription szkgDeviceDriver */
@@ -4716,7 +4734,7 @@ rule PUA_VULN_Driver_Tgsoftsas_Viragtsys_Viritagentsystem_E4EC {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e4eca7db365929ff7c5c785e2eab04ef8ec67ea9edcf7392f2b74eccd9449148"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirITAgentSystem */
@@ -4738,7 +4756,7 @@ rule PUA_VULN_Driver_Asustekcomputerinc_Atsziosys_Atsziodriver_FB6B {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fb6b0d304433bf88cc7d57728683dbb4b9833459dc33528918ead09b3907ff22"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100540053005a0049004f0020004400720069007600650072 } /* FileDescription ATSZIODriver */
@@ -4761,7 +4779,7 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_Procexpsys_Processexplorer_0
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "075de997497262a9d105afeadaaefc6348b25ce0e0126505c24aa9396c251e85"
 		hash = "cdfbe62ef515546f1728189260d0bdf77167063b6dbb77f1db6ed8b61145a2bc"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription ProcessExplorer */
@@ -4785,7 +4803,7 @@ rule PUA_VULN_Driver_Micsystechnologycoltd_Msiosys_Msiodriverversion_X_AE42 {
 		hash = "ae42afa9be9aa6f6a5ae09fa9c05cd2dfb7861dc72d4fd8e0130e5843756c471"
 		hash = "d636c011b8b2896572f5de260eb997182cc6955449b044a739bd19cbe6fdabd2"
 		hash = "0f035948848432bc243704041739e49b528f35c82a5be922d9e3b8a4c44398ff"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d0049004300530059005300200049004f0020006400720069007600650072 } /* FileDescription MICSYSIOdriver */
@@ -4807,7 +4825,7 @@ rule PUA_VULN_Driver_Vektortsecurityservice_Vboxdrv_Antidetectpublic_3724 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3724b39e97936bb20ada51c6119aded04530ed86f6b8d6b45fbfb2f3b9a4114b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200053007500700070006f007200740020004400720069007600650072 } /* FileDescription VirtualBoxSupportDriver */
@@ -4829,7 +4847,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_2380 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "238046cfe126a1f8ab96d8b62f6aa5ec97bab830e2bae5b1b6ab2d31894c79e4"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f00770073002000780036003400200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsxIOdriver */
@@ -4852,7 +4870,7 @@ rule PUA_VULN_Driver_Nvidiacorp_Nvoclocksys_Nvidiasystemutilitydriver_D7C9 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d7c90cf3fdbbd2f40fe6a39ad0bb2a9a97a0416354ea84db3aeff6d925d14df8"
 		hash = "64a8e00570c68574b091ebdd5734b87f544fa59b75a4377966c661d0475d69a5"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00560069006400690061002000530079007300740065006d0020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription NVidiaSystemUtilityDriver */
@@ -4875,7 +4893,7 @@ rule PUA_VULN_Driver_Cn_Computerzsys_A97B {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a97b404aae301048e0600693457c3320d33f395e9312938831bc5a0e808f2e67"
 		hash = "47c490cc83a17ff36a1a92e08d63e76edffba49c9577865315a6c9be6ba80a7d"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -4898,7 +4916,7 @@ rule PUA_VULN_Driver_Msi_Ntiolibxsys_Ntiolibx_1E8B {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1e8b0c1966e566a523d652e00f7727d8b0663f1dfdce3b9a09b9adfaef48d8ee"
 		hash = "5d530e111400785d183057113d70623e17af32931668ab7c7fc826f0fd4f91a3"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062005f005800360034 } /* FileDescription NTIOLibX */
@@ -4921,7 +4939,7 @@ rule PUA_VULN_Driver_Featureintegrationtechnologyinc_Fintekpciecom_81FB {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "81fbc9d02ef9e05602ea9c0804d423043d0ea5a06393c7ece3be03459f76a41d"
 		hash = "ebf0e56a1941e3a6583aab4a735f1b04d4750228c18666925945ed9d7c9007e1"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00460049004e00540045004b002000500043004900450043004f004d00200041006400610070007400650072 } /* FileDescription FINTEKPCIECOMAdapter */
@@ -4944,7 +4962,7 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_Procexpsys_Processexplorer_6
 		hash = "6bfc0f425de9f4e7480aa2d1f2e08892d0553ed0df1c31e9bf3d8d702f38fa2e"
 		hash = "3c7e5b25a33a7805c999d318a9523fcae46695a89f55bbdb8bb9087360323dfc"
 		hash = "46621554728bc55438c7c241137af401250f062edef6e7efecf1a6f0f6d0c1f7"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription ProcessExplorer */
@@ -4966,7 +4984,7 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_Procexpsys_Processexplorer_7
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7a48f92a9c2d95a72e18055cac28c1e7e6cad5f47aa735cbea5c3b82813ccfaf"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription ProcessExplorer */
@@ -4988,7 +5006,7 @@ rule PUA_VULN_Driver_Zemanaltd_Zam_45F4 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "45f42c5d874369d6be270ea27a5511efcca512aeac7977f83a51b7c4dee6b5ef"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -5014,7 +5032,7 @@ rule PUA_VULN_Driver_Intelcorporation_Iqvwsys_Intelriqvwsys_4D05 {
 		hash = "a566af57d88f37fa033e64b1d8abbd3ffdacaba260475fbbc8dab846a824eff5"
 		hash = "57a389da784269bb2cc0a258500f6dfbf4f6269276e1192619ce439ec77f4572"
 		hash = "d74755311d127d0eb7454e56babc2db8dbaa814bc4ba8e2a7754d3e0224778e1"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription IntelRNetworkAdapterDiagnosticDriver */
@@ -5036,7 +5054,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpotsys_Avastantivirus_86A1 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "86a1b1bacc0c51332c9979e6aad84b5fba335df6b9a096ccb7681ab0779a8882"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avastantirootkit */
@@ -5058,7 +5076,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Aegis_61BE {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "61befeef14783eb0fed679fca179d2f5c33eb2dcbd40980669ca2ebeb3bf11cf"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -5083,7 +5101,7 @@ rule PUA_VULN_Driver_Windowsrserverddkprovider_Gdrvsys_Windowsrserverddkdriver_8
 		hash = "31f4cfb4c71da44120752721103a16512444c13c2ac2d857a7e6f13cb679b427"
 		hash = "6f1fc8287dd8d724972d7a165683f2b2ad6837e16f09fe292714e8e38ecd1e38"
 		hash = "17927b93b2d6ab4271c158f039cae2d60591d6a14458f5a5690aec86f5d54229"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041004200590054004500200054006f006f006c0073 } /* FileDescription GIGABYTETools */
@@ -5105,7 +5123,7 @@ rule PUA_VULN_Driver_Filseclabcorporation_Fildds_Filseclabdynamicdefensesystem_F
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f8c07b6e2066a5a22a92d9f521ecdeb8c68698c400e4b83e0501b9f340957c22"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00460069006c007300650063006c00610062002000440079006e0061006d0069006300200044006500660065006e00730065002000530079007300740065006d0020004400720076 } /* FileDescription FilseclabDynamicDefenseSystemDrv */
@@ -5127,7 +5145,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpotsys_Avastantivirus_BE8D {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "be8dd2d39a527649e34dc77ef8bc07193a4234b38597b8f51e519dadc5479ec2"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avastantirootkit */
@@ -5149,7 +5167,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_3E85 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3e85cf32562a47d51827b21ab1e7f8c26c0dbd1cd86272f3cc64caae61a7e5fb"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f00770073002000780036003400200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsxIOdriver */
@@ -5171,7 +5189,7 @@ rule PUA_VULN_Driver_Msi_Ntiolibsys_Ntiolib_3070 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "30706f110725199e338e9cc1c940d9a644d19a14f0eb8847712cba4cacda67ab"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d0053004900200043006f006d00430065006e00530065007200760069006300650020004400720069007600650072 } /* FileDescription MSIComCenServiceDriver */
@@ -5193,7 +5211,7 @@ rule PUA_VULN_Driver_Msi_Ntiolibsys_Ntiolib_CC58 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cc586254e9e89e88334adee44e332166119307e79c2f18f6c2ab90ce8ba7fc9b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
@@ -5217,7 +5235,7 @@ rule PUA_VULN_Driver_Windowsrcodenamelonghornddkprovider_Rtkiosys_Windowsrcodena
 		hash = "916c535957a3b8cbf3336b63b2260ea4055163a9e6b214f2a7005d6d36a4a677"
 		hash = "caa85c44eb511377ea7426ff10df00a701c07ffb384eef8287636a4bca0b53ab"
 		hash = "478917514be37b32d5ccf76e4009f6f952f39f5553953544f1b0688befd95e82"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f004400720069007600650072 } /* FileDescription RealtekIODriver */
@@ -5239,7 +5257,7 @@ rule PUA_VULN_Driver_Pctools_Tfsysmon_Threatfire_1C1A {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1c1a4ca2cbac9fe5954763a20aeb82da9b10d028824f42fff071503dcbe15856"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0054006800720065006100740046006900720065002000530079007300740065006d0020004d006f006e00690074006f0072 } /* FileDescription ThreatFireSystemMonitor */
@@ -5261,7 +5279,7 @@ rule PUA_VULN_Driver_Nmscommunications_Cgkwinksys_Ctaccess_223F {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "223f61c3f443c5047d1aeb905b0551005a426f084b7a50384905e7e4ecb761a1"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00430047002f004d0047002000660061006d0069006c00790020006400720069007600650072 } /* FileDescription CGMGfamilydriver */
@@ -5283,7 +5301,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_E4D9 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e4d9f037411284e996a002b15b49bc227d085ee869ae1cd91ba54ff7c244f036"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -5305,7 +5323,7 @@ rule PUA_VULN_Driver_Insydesoftwarecorp_Segwindrvxsys_Segwindowsdriverx_B9AE {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b9ae1d53a464bc9bb86782ab6c55e2da8804c80a361139a82a6c8eef30fddd7c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005300450047002000570069006e0064006f0077007300200044007200690076006500720020007800360034 } /* FileDescription SEGWindowsDriverx */
@@ -5327,7 +5345,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Cupfixerxsys_Windowsrwinddkdriver_8C
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8c748ae5dcc10614cc134064c99367d28f3131d1f1dda0c9c29e99279dc1bdd9"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530069006e0063006500790020004300750070002000460069007800650072 } /* FileDescription SinceyCupFixer */
@@ -5350,7 +5368,7 @@ rule PUA_VULN_Driver_Advancedmicrodevicesinc_Pdfwkrnlsys_Usbcpowerdeliveryfirmwa
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0cf84400c09582ee2911a5b1582332c992d1cd29fcf811cb1dc00fcd61757db0"
 		hash = "f190919f1668652249fa23d8c0455acbde9d344089fde96566239b1a18b91da2"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005500530042002d004300200050006f007700650072002000440065006c006900760065007200790020004600690072006d0077006100720065002000550070006400610074006500200054006f006f006c0020004b00650072006e0065006c0020004400720069007600650072 } /* FileDescription USBCPowerDeliveryFirmwareUpdateToolKernelDriver */
@@ -5372,7 +5390,7 @@ rule PUA_VULN_Driver_Asustekcomputerinc_Eiosys_Asusvgakernelmodedriver_B175 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b17507a3246020fa0052a172485d7b3567e0161747927f2edf27c40e310852e0"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100530055005300200056004700410020004b00650072006e0065006c0020004d006f006400650020004400720069007600650072 } /* FileDescription ASUSVGAKernelModeDriver */
@@ -5394,7 +5412,7 @@ rule PUA_VULN_Driver_Nvidiacorp_Nvoclocksys_Nvidiasystemutilitydriver_4D77 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4d777a9e2c61e8b55b3c34c5265b301454bb080abe7ffb373e7800bd6a498f8d"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00560069006400690061002000530079007300740065006d0020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription NVidiaSystemUtilityDriver */
@@ -5416,7 +5434,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_2AFD {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2afdb3278a7b57466a103024aef9ff7f41c73a19bab843a8ebf3d3c4d4e82b30"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -5438,7 +5456,7 @@ rule PUA_VULN_Driver_Cn_Computerzsys_00D9 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "00d9781d0823ab49505ef9c877aa6fa674e19ecc8b02c39ee2728f298bc92b03"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -5460,7 +5478,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Dcprotectsys_Dcprotectrwinxdriver_C3
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c35cab244bd88bf0b1e7fc89c587d82763f66cf1108084713f867f72cc6f3633"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0044006300500072006f00740065006300740020004400720069007600650072 } /* FileDescription DcProtectDriver */
@@ -5482,7 +5500,7 @@ rule PUA_VULN_Driver_Asustekcomputerinc_Iomapsys_Asuskernelmodedriverfornt_EA85 
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410053005500530020004b00650072006e0065006c0020004d006f00640065002000440072006900760065007200200066006f00720020004e00540020 } /* FileDescription ASUSKernelModeDriverforNT */
@@ -5504,7 +5522,7 @@ rule PUA_VULN_Driver_Tgsoftsas_Viragtsys_Viritagentsystem_E05E {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e05eeb2b8c18ad2cb2d1038c043d770a0d51b96b748bc34be3e7fc6f3790ce53"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirITAgentSystem */
@@ -5526,7 +5544,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpotsys_Avginternetsecuritysystem_
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e4522e2cfa0b1f5d258a3cf85b87681d6969e0572f668024c465d635c236b5d9"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVGantirootkit */
@@ -5549,7 +5567,7 @@ rule PUA_VULN_Driver_Marvintestsolutionsinc_Hwsys_Hw_5596 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "55963284bbd5a3297f39f12f0d8a01ed99fe59d008561e3537bcd4db4b4268fa"
 		hash = "4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570020002d002000570069006e0064006f007700730020004e0054002d003100300020002800330032002f00360034002000620069007400290020006b00650072006e0065006c0020006d006f00640065002000640072006900760065007200200066006f007200200050004300200070006f007200740073002f006d0065006d006f00720079002f0050004300490020006100630063006500730073 } /* FileDescription HWWindowsNTbitkernelmodedriverforPCportsmemoryPCIaccess */
@@ -5571,7 +5589,7 @@ rule PUA_VULN_Driver_Getactechnologycorporation_Mtcbsvsys_Getacsystemserviceprov
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e6023b8fd2ce4ad2f3005a53aa160772e43fe58da8e467bd05ab71f3335fb822"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00470065007400610063002000530079007300740065006d00200053006500720076006900630065002000500072006f00760069006400650072 } /* FileDescription GetacSystemServiceProvider */
@@ -5593,7 +5611,7 @@ rule PUA_VULN_Driver_Genitlkiwibenjaminxxxxx_Titidrv_Titidrvtiticatz_208E {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "208ea38734979aa2c86332eba1ea5269999227077ff110ac0a0d411073165f85"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]007400690074006900640072007600200066006f0072002000570069006e0064006f00770073002000280074006900740069006300610074007a0029 } /* FileDescription titidrvforWindowstiticatz */
@@ -5615,7 +5633,7 @@ rule PUA_VULN_Driver_Advancedmicrodevicesinc_Pdfwkrnlsys_Usbcpowerdeliveryfirmwa
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5df689a62003d26df4aefbaed41ec1205abbf3a2e18e1f1d51b97711e8fcdf00"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005500530042002d004300200050006f007700650072002000440065006c006900760065007200790020004600690072006d007700610072006500200055007000640061007400650020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription USBCPowerDeliveryFirmwareUpdateUtilityDriver */
@@ -5637,7 +5655,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_B9AD {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b9ad7199c00d477ebbc15f2dcf78a6ba60c2670dad0ef0994cebccb19111f890"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsNTXPIOdriver */
@@ -5660,7 +5678,7 @@ rule PUA_VULN_Driver_Cn_Computerzsys_348D {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "348dc502ac57d7362c7f222e656c52e630c90bef92217a3bd20e49193b5a69f1"
 		hash = "c186967cc4f2a0cb853c9796d3ea416d233e48e735f02b1bb013967964e89778"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -5682,7 +5700,7 @@ rule PUA_VULN_Driver_Mydriverscom_Hwm_Drivergenius_08EB {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00440072006900760065007200470065006e0069007500730020004800610072006400770061007200650020006d006f006e00690074006f0072 } /* FileDescription DriverGeniusHardwaremonitor */
@@ -5704,7 +5722,7 @@ rule PUA_VULN_Driver_Sisoftware_Sandra_Sisoftwaresandra_3E27 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3e274df646f191d2705c0beaa35eeea84808593c3b333809f13632782e27ad75"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530061006e006400720061002000440065007600690063006500200044007200690076006500720020002800570069006e003600340020007800360034002900280055006e00690063006f006400650029 } /* FileDescription SandraDeviceDriverWinxUnicode */
@@ -5726,7 +5744,7 @@ rule PUA_VULN_Driver_Evgatechnologyinc_Windowsvistasmartiodevice_Windowsvistasma
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3c95ebf3f1a87f67d2861dbd1c85dc26c118610af0c9fbf4180428e653ac3e50"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069006e0064006f007700730020005600690073007400610036003400200053006d00610072007400200049004f0020004400650076006900630065 } /* FileDescription WindowsVistaSmartIODevice */
@@ -5748,7 +5766,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_033C {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "033c4634ab1a43bc3247384864f3380401d3b4006a383312193799dded0de4c7"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f00770073002000780036003400200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsxIOdriver */
@@ -5770,7 +5788,7 @@ rule PUA_VULN_Driver_Sunmicrosystemsinc_Vboxusbsys_Virtualboxusbdriver_5B26 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5b26c4678ecd37d1829513f41ff9e9df9ef1d1d6fea9e3d477353c90cc915291"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200055005300420020006400720069007600650072 } /* FileDescription VirtualBoxUSBdriver */
@@ -5792,7 +5810,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpot_Avastantivirus_3B6E {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3b6e85c8fed9e39b21b2eab0b69bc464272b2c92961510c36e2e2df7aa39861b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AvastAntiRootkit */
@@ -5815,7 +5833,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_7C73 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7c731c0ea7f28671ab7787800db69739ea5cd6be16ea21045b4580cf95cbf73b"
 		hash = "fca10cde7d331b7f614118682d834d46125a65888e97bd9fda2df3f15797166c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -5837,7 +5855,7 @@ rule PUA_VULN_Driver_Wistroncorporation_Wirwadrvsys_Wistronrwadriver_D8FC {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d8fc8e3a1348393c5d7c3a84bcbae383d85a4721a751ad7afac5428e5e579b4e"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069007300740072006f006e00200052005700410020004400720069007600650072 } /* FileDescription WistronRWADriver */
@@ -5859,7 +5877,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpotsys_Avastantivirus_1A42 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1a42ebde59e8f63804eaa404f79ee93a16bb33d27fb158c6bfbe6143226899a0"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avastantirootkit */
@@ -5882,7 +5900,7 @@ rule PUA_VULN_Driver_Ludashicom_Computerzsys_F14D {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f14da8aa5c8eea8df63cf935481d673fdf3847f5701c310abf4023f9d80ad57d"
 		hash = "c6a5663f20e5cee2c92dee43a0f2868fb0af299f842410f4473dcde7abcb6413"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -5904,7 +5922,7 @@ rule PUA_VULN_Driver_Toolhouseentwicklungskg_Tsdrvxsys_Toolstardriverforbitwindo
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9bf84b41789b3d5d5622732b5c4f5630da189ede2098b0ce166fcae331178377"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0054006f006f006c0073007400610072002000440072006900760065007200200066006f00720020003600340020004200690074002000570069006e0064006f00770073002000760065007200730069006f006e0073 } /* FileDescription ToolstarDriverforBitWindowsversions */
@@ -5926,7 +5944,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_EC5F {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ec5fac0b6bb267a2bd10fc80c8cca6718439d56e82e053d3ff799ce5f3475db5"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -5948,7 +5966,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpot_Avginternetsecuritysystem_34E
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "34e0364a4952d914f23f271d36e11161fb6bb7b64aea22ff965a967825a4a4bf"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AVGAntiRootkit */
@@ -5970,7 +5988,7 @@ rule PUA_VULN_Driver_Msi_Ntiolibsys_Ntiolib_D0BD {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d0bd1ae72aeb5f3eabf1531a635f990e5eaae7fdd560342f915f723766c80889"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
@@ -5992,7 +6010,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Atlaccesssys_Windowsrwinddkdriver_0B
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0b57569aaa0f4789d9642dd2189b0a82466b80ad32ff35f88127210ed105fe57"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530069006d0070006c0065002000500043004900200061006300630065007300730020006400720069007600650072 } /* FileDescription SimplePCIaccessdriver */
@@ -6014,7 +6032,7 @@ rule PUA_VULN_Driver_Nvidiacorp_Nvoclocksys_Nvidiasystemutilitydriver_909F {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "909f6c4b8f779df01ef91e549679aa4600223ac75bc7f3a3a79a37cee2326e77"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00560049004400490041002000530079007300740065006d0020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription NVIDIASystemUtilityDriver */
@@ -6036,7 +6054,7 @@ rule PUA_VULN_Driver_Zemanaltd_Zam_3C18 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3c18ae965fba56d09a65770b4d8da54ccd7801f979d3ebd283397bc99646004b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -6055,7 +6073,7 @@ rule PUA_VULN_Driver_Tgsoftsas_Viragtsys_Viritagentsystem_2B4C {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2b4c7d3820fe08400a7791e2556132b902a9bbadc1942de57077ecb9d21bf47a"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirITAgentSystem */
@@ -6077,7 +6095,7 @@ rule PUA_VULN_Driver_Innotekgmbh_Iprt_Virtualboxguestadditions_BBF5 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "bbf564a02784d53b8006333406807c3539ee4a594585b1f3713325904cb730ec"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200069003800300034003200200050006f007200740020004400720069007600650072 } /* FileDescription VirtualBoxiPortDriver */
@@ -6099,7 +6117,7 @@ rule PUA_VULN_Driver_Cpuid_Cpuzsys_Cpuidservice_58CB {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "58cb5439e34be4ede6d93c463cb0433c99a100a1c06fca777eda751fd72c07bf"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUIDDriver */
@@ -6122,7 +6140,7 @@ rule PUA_VULN_Driver_Tenasyscorporation_Rtifsys_Intime_9399 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9399f35b90f09b41f9eeda55c8e37f6d1cb22de6e224e54567d1f0865a718727"
 		hash = "a66b4420fa1df81a517e2bbea1a414b57721c67a4aa1df1967894f77e81d036e"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049004e00740069006d006500200050006e00500020005200540020004b00650072006e0065006c00200049006e00740065007200660061006300650020004400720069007600650072 } /* FileDescription INtimePnPRTKernelInterfaceDriver */
@@ -6144,7 +6162,7 @@ rule PUA_VULN_Driver_Dtresearchinc_Iomemsys_Iomemsys_3D23 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3d23bdbaf9905259d858df5bf991eb23d2dc9f4ecda7f9f77839691acef1b8c4"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0044005400520020004b00650072006e0065006c0020006d006f006400650020006400720069007600650072 } /* FileDescription DTRKernelmodedriver */
@@ -6166,7 +6184,7 @@ rule PUA_VULN_Driver_Sisoftware_Sandra_Sisoftwaresandra_496F {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "496f4a4021226fb0f1b5f71a7634c84114c29faa308746a12c2414adb6b2a40b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530061006e006400720061002000440065007600690063006500200044007200690076006500720020002800570069006e003600340020007800360034002900280055006e00690063006f006400650029 } /* FileDescription SandraDeviceDriverWinxUnicode */
@@ -6189,7 +6207,7 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_Procexpsys_Processexplorer_1
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1b00d6e5d40b1b84ca63da0e99246574cdd2a533122bc83746f06c0d66e63a6e"
 		hash = "51e91dd108d974ae809e5fc23f6fbd16e13f672f86aa594dae4a5c4bc629b0b5"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription ProcessExplorer */
@@ -6211,7 +6229,7 @@ rule PUA_VULN_Driver_Multitheftauto_Mtasanandreas_9F4C {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9f4ce6ab5e8d44f355426d9a6ab79833709f39b300733b5b251a0766e895e0e5"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d0075006c007400690020005400680065006600740020004100750074006f0020007000610074006300680020006400720069007600650072 } /* FileDescription MultiTheftAutopatchdriver */
@@ -6231,7 +6249,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpotsys_Avastantivirus_2732 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2732050a7d836ae0bdc5c0aea4cdf8ce205618c3e7f613b8139c176e86476d0c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avastantirootkit */
@@ -6255,7 +6273,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtier_A153 {
 		hash = "a15325e9e6b8e4192291deb56c20c558dde3f96eb682c6e90952844edb984a00"
 		hash = "e728b259113d772b4e96466ab8fe18980f37c36f187b286361c852bd88101717"
 		hash = "4c859b3d11d2ff0049b644a19f3a316a8ca1a4995aa9c39991a7bde8d4f426a4"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c00200043006c00690065006e007400200050006f00720074006100620069006c0069007400790020004c0061007900650072 } /* FileDescription NovellClientPortabilityLayer */
@@ -6277,7 +6295,7 @@ rule PUA_VULN_Driver_Ludashicom_Computerzsys_3F36 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3f3684a37b2645fa6827943d9812ffc2d83e89e962935b29874bec7c3714a06f"
 		hash = "37d999df20c1a0b8ffaef9484c213a97b9987ed308b4ba07316a6013fbd31c60"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -6299,7 +6317,7 @@ rule PUA_VULN_Driver_Realixtm_Hwinfosys_Hwinfokerneldriver_7702 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7702f240800528d8186e3e6a26e2680486fed65a6fb5a2a000ad12c1fb61a398"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570069004e0046004f003300320020004b00650072006e0065006c0020004400720069007600650072 } /* FileDescription HWiNFOKernelDriver */
@@ -6321,7 +6339,7 @@ rule PUA_VULN_Driver_Tgsoftsas_Viragtsys_Viritagentsystem_EF6D {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ef6d3c00f9d0aa31a218094480299ef73fc85146adf62fd0c2f4f88972c5c850"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirITAgentSystem */
@@ -6343,7 +6361,7 @@ rule PUA_VULN_Driver_Microfocus_Microfocusxtier_95D5 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "95d50c69cdbf10c9c9d61e64fe864ac91e6f6caa637d128eb20e1d3510e776d3"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0058005400690065007200200043004f004d0020005300650072007600690063006500730020004400720069007600650072 } /* FileDescription XTierCOMServicesDriver */
@@ -6364,7 +6382,7 @@ rule PUA_VULN_Driver_Z_Computerzsys_Zwuqisystemdriver_61E7 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "61e7f9a91ef25529d85b22c39e830078b96f40b94d00756595dded9d1a8f6629"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0077007500710069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription ZwuqiSystemDriver */
@@ -6386,7 +6404,7 @@ rule PUA_VULN_Driver_Realixtm_Hwinfosys_Hwinfokerneldriver_8DCE {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8dcec67a1f4903981c3e0ab938784c2f241e041e26748e1c22059e0e507cfb37"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570069004e0046004f003300320020004b00650072006e0065006c0020004400720069007600650072 } /* FileDescription HWiNFOKernelDriver */
@@ -6408,7 +6426,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_E3EF {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e3eff841ea0f2786e5e0fed2744c0829719ad711fc9258eeaf81ed65a52a8918"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -6430,7 +6448,7 @@ rule PUA_VULN_Driver_Arthurliberman_Alsysiosys_Alsysio_7F37 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7f375639a0df7fe51e5518cf87c3f513c55bc117db47d28da8c615642eb18bfa"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004c0053007900730049004f } /* FileDescription ALSysIO */
@@ -6452,7 +6470,7 @@ rule PUA_VULN_Driver_Panyazilimbilisimteknolojileriticltdsti_Paniosys_Paniolibra
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f596e64f4c5d7c37a00493728d8756b243cfdc11e3372d6d6dfeffc13c9ab960"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00540065006d0070006500720061007400750072006500200061006e0064002000730079007300740065006d00200069006e0066006f0072006d006100740069006f006e0020006400720069007600650072 } /* FileDescription Temperatureandsysteminformationdriver */
@@ -6475,7 +6493,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtier_6C5A {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6c5aef14613b8471f5f4fdeb9f25b5907c2335a4bc18b3c2266fb1ffd8f1741d"
 		hash = "ec1307356828426d60eab78ffb5fc48a06a389dea6e7cc13621f1fa82858a613"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c00200043006c00690065006e007400200050006f00720074006100620069006c0069007400790020004c0061007900650072 } /* FileDescription NovellClientPortabilityLayer */
@@ -6496,7 +6514,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpot_Avastantivirus_1768 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "17687cba00ec2c9036dd3cb5430aa1f4851e64990dafb4c8f06d88de5283d6ca"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AvastAntiRootkit */
@@ -6520,7 +6538,7 @@ rule PUA_VULN_Driver_Cn_Computerzsys_3913 {
 		hash = "39134750f909987f6ebb46cf37519bb80707be0ca2017f3735018bac795a3f8d"
 		hash = "a34e45e5bbec861e937aefb3cbb7c8818f72df2082029e43264c2b361424cbb1"
 		hash = "3e758221506628b116e88c14e71be99940894663013df3cf1a9e0b6fb18852b9"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -6543,7 +6561,7 @@ rule PUA_VULN_Driver_Cn_Computerzsys_767E {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "767ef5c831f92d92f2bfc3e6ea7fd76d11999eeea24cb464fd62e73132ed564b"
 		hash = "d9a73df5ac5c68ef5b37a67e5e649332da0f649c3bb6828f70b65c0a2e7d3a23"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -6565,7 +6583,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpotsys_Avginternetsecuritysystem_
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9a54ef5cfbe6db599322967ee2c84db7daabcb468be10a3ccfcaa0f64d9173c7"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVGantirootkit */
@@ -6587,7 +6605,7 @@ rule PUA_VULN_Driver_Oti_Otipcibussys_Kernelmodedrivertoaccessphysicalmemoryandp
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4e3eb5b9bce2fd9f6878ae36288211f0997f6149aa8c290ed91228ba4cdfae80"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0048006100720064007700610072006500200041006300630065007300730020004400720069007600650072 } /* FileDescription HardwareAccessDriver */
@@ -6608,7 +6626,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpotsys_Avastantivirus_DCB8 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "dcb815eb8e9016608d0d917101b6af8c84b96fb709dc0344bceed02cbc4ed258"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avastantirootkit */
@@ -6630,7 +6648,7 @@ rule PUA_VULN_Driver_Micsystechnologycoltd_Msiosys_Msiodriverversion_X_CFCF {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cfcf32f5662791f1f22a77acb6dddfbc970fe6e99506969b3ea67c03f67687ab"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d0049004300530059005300200049004f0020006400720069007600650072 } /* FileDescription MICSYSIOdriver */
@@ -6652,7 +6670,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Dcprotectsys_Dcprotectrwinxdriver_F8
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f8d45fa03f56e2ea14920b902856666b8d44f1f1b16644baf8c1ae9a61851fb6"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0044006300500072006f00740065006300740020004400720069007600650072 } /* FileDescription DcProtectDriver */
@@ -6674,7 +6692,7 @@ rule PUA_VULN_Driver_Topazofd_Wsddprmsys_Wsddprm_FF5D {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ff5dbdcf6d7ae5d97b6f3ef412df0b977ba4a844c45b30ca78c0eeb2653d69a8"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0054006f00700061007a0020004f004600440020002d00200050004d } /* FileDescription TopazOFDPM */
@@ -6697,7 +6715,7 @@ rule PUA_VULN_Driver_Avastsoftware_Ngiodriversys_Avastng_D0E4 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d0e4d3e1f5d5942aaf2c72631e9490eecc4d295ee78c323d8fe05092e5b788eb"
 		hash = "2ad8c38f6e0ca6c93abe3228c8a5d4299430ce0a2eeb80c914326c75ba8a33f9"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0061007600610073007400210020004e0047002000730065007400750070002000680065006c0070006500720020006400720069007600650072 } /* FileDescription avastNGsetuphelperdriver */
@@ -6720,7 +6738,7 @@ rule PUA_VULN_Driver_Nvidiacorp_Nvoclocksys_Nvidiasystemutilitydriver_77DA {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "77da3e8c5d70978b287d433ae1e1236c895b530a8e1475a9a190cdcc06711d2f"
 		hash = "837d3b67d3e66ef1674c9f1a47046e1617ed13f73ee08441d95a6de3d73ee9f2"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00560069006400690061002000530079007300740065006d0020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription NVidiaSystemUtilityDriver */
@@ -6743,7 +6761,7 @@ rule PUA_VULN_Driver_Ludashicom_Computerzsys_0368 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "03680068ec41bbe725e1ed2042b63b82391f792e8e21e45dc114618641611d5d"
 		hash = "66f851b309bada6d3e4b211baa23b534165b29ba16b5cbf5e8f44eaeb3ca86ea"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -6765,7 +6783,7 @@ rule PUA_VULN_Driver_Nvidiacorp_Nvoclocksys_Nvidiasystemutilitydriver_B0DC {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b0dcdbdc62949c981c4fc04ccea64be008676d23506fc05637d9686151a4b77f"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00560069006400690061002000530079007300740065006d0020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription NVidiaSystemUtilityDriver */
@@ -6787,7 +6805,7 @@ rule PUA_VULN_Driver_Radiantsystemsinc_Radhwmgrsys_Radiantsystemsinchardwaremana
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7c79e5196c2f51d2ab16e40b9d5725a8bf6ae0aaa70b02377aedc0f4e93ca37f"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520061006400690061006e00740020004800610072006400770061007200650020004d0061006e006100670065007200200066006f007200200050003100350078007800200050006c006100740066006f0072006d } /* FileDescription RadiantHardwareManagerforPxxPlatform */
@@ -6809,7 +6827,7 @@ rule PUA_VULN_Driver_Dtresearchinc_Iomemsys_Iomemsys_DD4A {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "dd4a1253d47de14ef83f1bc8b40816a86ccf90d1e624c5adf9203ae9d51d4097"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0044005400520020004b00650072006e0065006c0020006d006f006400650020006400720069007600650072 } /* FileDescription DTRKernelmodedriver */
@@ -6831,7 +6849,7 @@ rule PUA_VULN_Driver_Pchuntersys_Pchunter_1B7F {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1b7fb154a7b7903a3c81f12f4b094f24a3c60a6a8cffca894c67c264ab7545fa"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00450070006f006f006c0073006f00660074002000570069006e0064006f0077007300200049006e0066006f0072006d006100740069006f006e0020005600690065007700200054006f006f006c0073 } /* FileDescription EpoolsoftWindowsInformationViewTools */
@@ -6853,7 +6871,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpotsys_Avastantivirus_6500 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "65008817eb97635826a8708a6411d7b50f762bab81304e457119d669382944c3"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avastantirootkit */
@@ -6876,7 +6894,7 @@ rule PUA_VULN_Driver_Cn_Computerzsys_0FC3 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0fc3bc6e81b04dcaa349f59f04d6c85c55a2fea5db8fa0ba53d3096a040ce5a7"
 		hash = "40eef1f52c7b81750cee2b74b5d2f4155d4e58bdde5e18ea612ab09ed0864554"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -6900,7 +6918,7 @@ rule PUA_VULN_Driver_Netfiltersys_EDC6 {
 		hash = "edc6e32e3545f859e5b49ece1cabd13623122c1f03a2f7454a61034b3ff577ed"
 		hash = "79e7165e626c7bde546cd1bea4b9ec206de8bed7821479856bdb0a2adc3e3617"
 		hash = "18b923b169b2c3c7db5cbfda0db0999f04adb2cf6c917e5b1fb2ff04714ecac1"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570059004a00530051002000540044004900200048006f006f006b0020004400720069007600650072002000280057005000500029 } /* FileDescription WYJSQTDIHookDriverWPP */
@@ -6922,7 +6940,7 @@ rule PUA_VULN_Driver_Zemanaltd_Zam_E428 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e428ddf9afc9b2d11e2271f0a67a2d6638b860c2c12d4b8cc63d33f3349ee93f"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -6941,7 +6959,7 @@ rule PUA_VULN_Driver_Windowsrserverddkprovider_Cpuzsys_Windowsrserverddkdriver_B
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "be683cd38e64280567c59f7dc0a45570abcb8a75f1d894853bbbd25675b4adf7"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055002d005a0020004400720069007600650072 } /* FileDescription CPUZDriver */
@@ -6963,7 +6981,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_0909 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0909005d625866ef8ccd8ae8af5745a469f4f70561b644d6e38b80bccb53eb06"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -6986,7 +7004,7 @@ rule PUA_VULN_Driver_Nvidiacorp_Nvoclocksys_Nvidiasystemutilitydriver_3CB1 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3cb111fdedc32f2f253aacde4372b710035c8652eb3586553652477a521c9284"
 		hash = "9bfd24947052bfe9f2979113a7941e40bd7e3a82eaa081a32ad4064159f07c91"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00560069006400690061002000530079007300740065006d0020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription NVidiaSystemUtilityDriver */
@@ -7008,7 +7026,7 @@ rule PUA_VULN_Driver_Watchdogdevelopmentcomllc_Wsdkdsys_Wsdkd_6278 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6278bc785113831b2ec3368e2c9c9e89e8aca49085a59d8d38dac651471d6440"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005700610074006300680044006f006700200041006e00740069007600690072007500730020004400720069007600650072 } /* FileDescription WatchDogAntivirusDriver */
@@ -7031,7 +7049,7 @@ rule PUA_VULN_Driver_Huawei_Hwosec_Huaweimatebook_B179 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b179e1ab6dc0b1aee783adbcad4ad6bb75a8a64cb798f30c0dd2ee8aaf43e6de"
 		hash = "bb1135b51acca8348d285dc5461d10e8f57260e7d0c8cc4a092734d53fc40cbc"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00480077004f0073003200450063 } /* FileDescription HwOsEc */
@@ -7053,7 +7071,7 @@ rule PUA_VULN_Driver_Hpinc_Hpportioxsys_Hpportio_A468 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a4680fabf606d6580893434e81c130ff7ec9467a15e6534692443465f264d3c9"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800700050006f007200740049006f } /* FileDescription HpPortIo */
@@ -7074,7 +7092,7 @@ rule PUA_VULN_Driver_Zemanaltd_Zam_7661 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "76614f2e372f33100a8d92bf372cdbc1e183930ca747eed0b0cf2501293b990a"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -7093,7 +7111,7 @@ rule PUA_VULN_Driver_Gigabytetechnologycoltd_Gdrvsys_Gigabytesoftwaredriver_8B92
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8b92cdb91a2e2fab3881d54f5862e723826b759749f837a11c9e9d85d52095a2"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041002d00420059005400450020004e006f006e0050006e00500020004400720069007600650072 } /* FileDescription GIGABYTENonPnPDriver */
@@ -7115,7 +7133,7 @@ rule PUA_VULN_Driver_Sisoftware_Sandra_Sisoftwaresandra_881B {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "881bca6dc2dafe1ae18aeb59216af939a3ac37248c13ed42ad0e1048a3855461"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530061006e006400720061002000440065007600690063006500200044007200690076006500720020002800570069006e003600340020007800360034002900280055006e00690063006f006400650029 } /* FileDescription SandraDeviceDriverWinxUnicode */
@@ -7137,7 +7155,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_5192 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5192ec4501d0fe0b1c8f7bf9b778f7524a7a70a26bbbb66e5dab8480f6fdbb8b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -7159,7 +7177,7 @@ rule PUA_VULN_Driver_Terabyteinc_Tboflhelper_AA20 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "aa20aa2316cd6d203146bd2bc5b7466ba7b83a8500654a688172bcafa82ab168"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00540065007200610042007900740065002c00200049006e0063002e } /* CompanyName TeraByteInc */
@@ -7180,7 +7198,7 @@ rule PUA_VULN_Driver_Radiantsystemsinc_Radhwmgrsys_Radiantsystemsinchardwaremana
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0f30ecd4faec147a2335a4fc031c8a1ac9310c35339ebeb651eb1429421951a0"
 		hash = "903d6d71da64566b1d9c32d4fb1a1491e9f91006ad2281bb91d4f1ee9567ef7b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520061006400690061006e00740020004800610072006400770061007200650020004d0061006e006100670065007200200066006f007200200050003100350078007800200050006c006100740066006f0072006d } /* FileDescription RadiantHardwareManagerforPxxPlatform */
@@ -7202,7 +7220,7 @@ rule PUA_VULN_Driver_Insydesoftware_Insydeflash_Insydeflashutilitybitdriver_CE0A
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ce0a4430d090ba2f1b46abeaae0cb5fd176ac39a236888fa363bf6f9fd6036d9"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0069007300630066006c006100730068007800360034002e007300790073 } /* FileDescription iscflashxsys */
@@ -7224,7 +7242,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_80A5 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "80a59ca71fc20961ccafc0686051e86ae4afbbd4578cb26ad4570b9207651085"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -7246,7 +7264,7 @@ rule PUA_VULN_Driver_Microfocus_Microfocusxtier_5351 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5351c81b4ec5a0d79c39d24bac7600d10eac30c13546fde43d23636b3f421e7c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0058005400690065007200200053006500630075007200690074007900200043006f006e00740065007800740020004d0061006e0061006700650072 } /* FileDescription XTierSecurityContextManager */
@@ -7268,7 +7286,7 @@ rule PUA_VULN_Driver_Sunmicrosystemsinc_Vboxdrvsys_Sunvirtualbox_R_7882 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "78827fa00ea48d96ac9af8d1c1e317d02ce11793e7f7f6e4c7aac7b5d7dd490f"
 		hash = "c26b51b4c37330800cff8519252e110116c3aaade94ceb9894ec5bfb1b8f9924"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200053007500700070006f007200740020004400720069007600650072 } /* FileDescription VirtualBoxSupportDriver */
@@ -7291,7 +7309,7 @@ rule PUA_VULN_Driver_Corsairmemoryinc_Corsairllaccess_Corsairllaccess_5FAD {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5fad3775feb8b6f6dcbd1642ae6b6a565ff7b64eadfc9bf9777918b51696ab36"
 		hash = "29a90ae1dcee66335ece4287a06482716530509912be863c85a2a03a6450a5b6"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0043006f007200730061006900720020004c004c0020004100630063006500730073 } /* FileDescription CorsairLLAccess */
@@ -7314,7 +7332,7 @@ rule PUA_VULN_Driver_Razerinc_Rzpnk_Rzpnk_16E2 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "16e2b071991b470a76dff4b6312d3c7e2133ad9ac4b6a62dda4e32281952fb23"
 		hash = "0c925468c3376458d0e1ec65e097bd1a81a03901035c0195e8f6ef904ef3f901"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520061007a006500720020004f007600650072006c0061007900200053007500700070006f00720074 } /* FileDescription RazerOverlaySupport */
@@ -7337,7 +7355,7 @@ rule PUA_VULN_Driver_Nvidiacorp_Nvoclocksys_Nvidiasystemutilitydriver_060D {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "060d25126e45309414b380ee29f900840b689eae4217a8e621563f130c1d457f"
 		hash = "b8321471be85dc8a67ac18a2460cab50e7c41cb47252f9a7278b1e69d6970f25"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00560049004400490041002000530079007300740065006d0020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription NVIDIASystemUtilityDriver */
@@ -7360,7 +7378,7 @@ rule PUA_VULN_Driver_Ludashicom_Computerzsys_7553 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7553c76b006bd2c75af4e4ee00a02279d3f1f5d691e7dbdc955eac46fd3614c3"
 		hash = "64dddd5ac53fe2c9de2b317c09034d1bccaf21d6c03ccfde3518e5aa3623dd66"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -7383,7 +7401,7 @@ rule PUA_VULN_Driver_Overclockingtool_Atillksys_Overclockingtool_11A9 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "11a9787831ac4f0657aeb5e7019c23acc39d8833faf28f85bd10d7590ea4cc5f"
 		hash = "d2182b6ef3255c7c1a69223cd3c2d68eb8ba3112ce433cd49cd803dc76412d4b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004f0076006500720063006c006f0063006b0069006e00670020004800610072006400770061007200650020004100620073007400720061006300740069006f006e0020005300790073 } /* FileDescription OverclockingHardwareAbstractionSys */
@@ -7405,7 +7423,7 @@ rule PUA_VULN_Driver_Tgsoftsas_Viragtsys_Viritagentsystem_2A62 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2a6212f3b68a6f263e96420b3607b31cfdfe51afff516f3c87d27bf8a89721e8"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirITAgentSystem */
@@ -7427,7 +7445,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpotsys_Avastantivirus_AAA3 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "aaa3459bcac25423f78ed72dbae4d7ef19e7c5c65770cbe5210b14e33cd1816c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avastantirootkit */
@@ -7449,7 +7467,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswvmmsys_Avastantivirus_3650 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "36505921af5a09175395ebaea29c72b2a69a3a9204384a767a5be8a721f31b10"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00610076006100730074002100200056004d0020004d006f006e00690074006f0072 } /* FileDescription avastVMMonitor */
@@ -7471,7 +7489,7 @@ rule PUA_VULN_Driver_Gigabytetechnologycoltd_Gdrvsys_Gdrv_FF67 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ff6729518a380bf57f1bc6f1ec0aa7f3012e1618b8d9b0f31a61d299ee2b4339"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041002d00420059005400450020004e006f006e0050004e00500020004400720069007600650072 } /* FileDescription GIGABYTENonPNPDriver */
@@ -7493,7 +7511,7 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_Procexpsys_Processexplorer_4
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "440883cd9d6a76db5e53517d0ec7fe13d5a50d2f6a7f91ecfc863bc3490e4f5c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription ProcessExplorer */
@@ -7515,7 +7533,7 @@ rule PUA_VULN_Driver_Rivetnetworksllc_Kfecodrvsys_Killertrafficcontrol_B583 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b583414fcee280128788f7b39451c511376fe821f455d4f3702795e96d560704"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004b0069006c006c006500720020005400720061006600660069006300200043006f006e00740072006f006c002000430061006c006c006f007500740020004400720069007600650072 } /* FileDescription KillerTrafficControlCalloutDriver */
@@ -7537,7 +7555,7 @@ rule PUA_VULN_Driver_Nvidiacorp_Nvoclocksys_Nvidiasystemutilitydriver_3D00 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3d008e636e74c846fe7c00f90089ff725561cb3d49ce3253f2bbfbc939bbfcb2"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00560069006400690061002000530079007300740065006d0020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription NVidiaSystemUtilityDriver */
@@ -7559,7 +7577,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroaegis_ED2F {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ed2f33452ec32830ffef2d5dc832985db9600c306ed890c47f3f33ccbb335c39"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -7581,7 +7599,7 @@ rule PUA_VULN_Driver_Msi_Ntiolibxsys_Ntiolib_09BE {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "09bedbf7a41e0f8dabe4f41d331db58373ce15b2e9204540873a1884f38bdde1"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
@@ -7603,7 +7621,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Aegis_A802 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a8027daa6facf1ff81405daf6763249e9acf232a1a191b6bf106711630e6188e"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -7625,7 +7643,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpotsys_Avginternetsecuritysystem_
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0f016c80c4938fbcd47a47409969b3925f54292eba2ce01a8e45222ce8615eb8"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVGantirootkit */
@@ -7647,7 +7665,7 @@ rule PUA_VULN_Driver_Sunmicrosystemsinc_Vboxdrvsys_Sunvirtualbox_R_7539 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7539157df91923d4575f7f57c8eb8b0fd87f064c919c1db85e73eebb2910b60c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200053007500700070006f007200740020004400720069007600650072 } /* FileDescription VirtualBoxSupportDriver */
@@ -7669,7 +7687,7 @@ rule PUA_VULN_Driver_Interfacecorporation_Cpxcsys_Gpcxc_1183 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "11832c345e9898c4f74d3bf8f126cf84b4b1a66ad36135e15d103dbf2ac17359"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004700500043002d003200580037003200430020004b00650072006e0065006c0020004400650076006900630065002000440072006900760065007200280053005900530029002000570069006e0064006f00770073004e0054 } /* FileDescription GPCXCKernelDeviceDriverSYSWindowsNT */
@@ -7691,7 +7709,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_478D {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "478d855b648ef4501d3b08b3b10e94076ac67546b0ce86b454324f1bf9a78aa0"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -7713,7 +7731,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Activeclean_A903 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a903f329b70f0078197cb7683aae1bb432eaf58572fe572f7cb4bc2080042d7e"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -7736,7 +7754,7 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_Procexpsys_Processexplorer_3
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3ff39728f1c11d1108f65ec5eb3d722fd1a1279c530d79712e0d32b34880baaa"
 		hash = "86721ee8161096348ed3dbe1ccbf933ae004c315b1691745a8af4a0df9fed675"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription ProcessExplorer */
@@ -7758,7 +7776,7 @@ rule PUA_VULN_Driver_Realixtm_Hwinfosys_Hwinfokerneldriver_1B17 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1b17d12076d047e74d15e6e51e10497ad49419bec7fbe93386c57d3efbaadc0b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570069004e0046004f003300320020004b00650072006e0065006c0020004400720069007600650072 } /* FileDescription HWiNFOKernelDriver */
@@ -7780,7 +7798,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtier_6CF1 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6cf1cac0e97d30bb445b710fd8513879678a8b07be95d309cbf29e9b328ff259"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c0020005800540043004f004d0020005300650072007600690063006500730020004400720069007600650072 } /* FileDescription NovellXTCOMServicesDriver */
@@ -7801,7 +7819,7 @@ rule PUA_VULN_Driver_Tenasyscorporation_Rtifsys_Intime_EAE5 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "eae5c993b250dcc5fee01deeb30045b0e5ee7cf9306ef6edd8c58e4dc743a8ed"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049004e00740069006d006500200050006e00500020005200540020004b00650072006e0065006c00200049006e00740065007200660061006300650020004400720069007600650072 } /* FileDescription INtimePnPRTKernelInterfaceDriver */
@@ -7823,7 +7841,7 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_Procexpsys_Processexplorer_B
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "bdbceca41e576841cad2f2b38ee6dbf92fd77fbbfdfe6ecf99f0623d44ef182c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription ProcessExplorer */
@@ -7845,7 +7863,7 @@ rule PUA_VULN_Driver_Databaseharborsoftware_Sysinfodetectorxsys_Sysinfodetector_
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "45e5977b8d5baec776eb2e62a84981a8e46f6ce17947c9a76fa1f955dc547271"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00440072006900760065007200200066006f007200200053007900730049006e0066006f0020004400650074006500630074006f0072 } /* FileDescription DriverforSysInfoDetector */
@@ -7869,7 +7887,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_7048 {
 		hash = "7048d90ed4c83ad52eb9c677f615627b32815066e34230c3b407ebb01279bae6"
 		hash = "d80714d87529bb0bc7abcc12d768c43a697fbca59741c38fa0b46900da4db30e"
 		hash = "fed0fe2489ae807913be33827b3b11359652a127e33b64464cc570c05abd0d17"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f00770073002000780036003400200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsxIOdriver */
@@ -7891,7 +7909,7 @@ rule PUA_VULN_Driver_Arthurliberman_Alsysiosys_Alsysio_7A20 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7a20ca8f9361eb892257b3693095ffeee61457dc4e22d9b119e3a9f3a1507069"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004c0053007900730049004f00360034 } /* FileDescription ALSysIO */
@@ -7913,7 +7931,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_7837 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7837cb350338c4958968d06b105466da6518f5bb522a6e70e87c0cad85128408"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -7935,7 +7953,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmelsys_Trendmicroearlylaunchantimalwaredrive
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e505569892551b2ba79d8792badff0a41faea033e8d8f85c3afea33463c70bd9"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200045004c0041004d00200044007200690076006500720020002800360034002d0042006900740029 } /* FileDescription TrendMicroELAMDriverBit */
@@ -7957,7 +7975,7 @@ rule PUA_VULN_Driver_Ncrcorporation_Radhwmgrsys_Ncrcorporationhardwaremanagerdri
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "df96d844b967d404e58a12fc57487abc24cd3bd1f8417acfe1ce1ee4a0b0b858"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520061006400690061006e00740020004800610072006400770061007200650020004d0061006e006100670065007200200066006f007200200050003100350078007800200050006c006100740066006f0072006d } /* FileDescription RadiantHardwareManagerforPxxPlatform */
@@ -7979,7 +7997,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpotsys_Avginternetsecuritysystem_
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0b2ad05939b0aabbdc011082fad7960baa0c459ec16a2b29f37c1fa31795a46d"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVGantirootkit */
@@ -8001,7 +8019,7 @@ rule PUA_VULN_Driver_Tenasyscorporation_Rtifsys_Intime_BA40 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ba40b1fc798c2f78165e78997b4baf3d99858ee39a372ca6fbc303057793e50d"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049004e00740069006d006500200050006e00500020005200540020004b00650072006e0065006c00200049006e00740065007200660061006300650020004400720069007600650072 } /* FileDescription INtimePnPRTKernelInterfaceDriver */
@@ -8023,7 +8041,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_828A {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "828a18b16418c021b6c4aa8c6d54cef4e815efca0d48b9ff14822f9ccb69dff2"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f00770073002000780036003400200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsxIOdriver */
@@ -8045,7 +8063,7 @@ rule PUA_VULN_Driver_Sunmicrosystemsinc_Vboxusbmonsys_Virtualboxusbmonitordriver
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8a2482e19040d591c7cec5dfc35865596ce0154350b5c4e1c9eecc86e7752145"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200055005300420020004d006f006e00690074006f00720020004400720069007600650072 } /* FileDescription VirtualBoxUSBMonitorDriver */
@@ -8067,7 +8085,7 @@ rule PUA_VULN_Driver_Copyright_Advancedmalwareprotection_6F55 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6f55c148bb27c14408cf0f16f344abcd63539174ac855e510a42d78cfaec451c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041006400760061006e0063006500640020004d0061006c0077006100720065002000500072006f00740065006300740069006f006e } /* FileDescription AdvancedMalwareProtection */
@@ -8088,7 +8106,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_0DC4 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0dc4ff96d7e7db696e0391c5a1dda92a0b0aedbf1b0535bf5d62ebeec5b2311c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsNTXPIOdriver */
@@ -8111,7 +8129,7 @@ rule PUA_VULN_Driver_Tenasyscorporation_Rtifsys_Intime_3670 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3670ccd9515d529bb31751fcd613066348057741adeaf0bffd1b9a54eb8baa76"
 		hash = "0d133ced666c798ea63b6d8026ec507d429e834daa7c74e4e091e462e5815180"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049004e00740069006d006500200050006e00500020005200540020004b00650072006e0065006c00200049006e00740065007200660061006300650020004400720069007600650072 } /* FileDescription INtimePnPRTKernelInterfaceDriver */
@@ -8133,7 +8151,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_EEA5 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "eea53103e7a5a55dc1df79797395a2a3e96123ebd71cdd2db4b1be80e7b3f02b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsNTXPIOdriver */
@@ -8155,7 +8173,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_9CA5 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9ca586b49135166eea00c6f83329a2d134152e0e9423822a51c13394265b6340"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f00770073002000780036003400200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsxIOdriver */
@@ -8177,7 +8195,7 @@ rule PUA_VULN_Driver_Realixtm_Hwinfosys_Hwinfokerneldriver_4E54 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4e54e98df13110aac41f3207e400cce2a00df29ce18c32186e536c1de25a75ce"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570069004e0046004f003300320020004b00650072006e0065006c0020004400720069007600650072 } /* FileDescription HWiNFOKernelDriver */
@@ -8199,7 +8217,7 @@ rule PUA_VULN_Driver_Intelcorporation_Iqvwsys_Intelriqvwsys_2D2C {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2d2c7ee9547738a8a676ab785c151e8b48ed40fe7cf6174650814c7f5f58513b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription IntelRNetworkAdapterDiagnosticDriver */
@@ -8221,7 +8239,7 @@ rule PUA_VULN_Driver_Almicosoftware_Sfdrvxsys_Speedfan_X_F4EE {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f4ee803eefdb4eaeedb3024c3516f1f9a202c77f4870d6b74356bbde32b3b560"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0053007000650065006400460061006e00200078003600340020004400720069007600650072 } /* FileDescription SpeedFanxDriver */
@@ -8243,7 +8261,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_5CFA {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5cfad3d473961763306d72c12bd5ae14183a1a5778325c9acacca764b79ca185"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsNTXPIOdriver */
@@ -8266,7 +8284,7 @@ rule PUA_VULN_Driver_Computerzsys_Ludashisystemdriver_898E {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "898e07cf276ec2090b3e7ca7c192cc0fa10d6f13d989ef1cb5826ca9ce25b289"
 		hash = "07d0090c76155318e78a676e2f8af1500c20aaa1e84f047c674d5f990f5a09c8"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -8289,7 +8307,7 @@ rule PUA_VULN_Driver_Nvidiacorp_Nvoclocksys_Nvidiasystemutilitydriver_AFDA {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "afda5af5f210336061bff0fab0ed93ee495312bed639ec5db56fbac0ea8247d3"
 		hash = "b2364c3cf230648dad30952701aef90acfc9891541c7e154e30c9750da213ed1"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00560069006400690061002000530079007300740065006d0020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription NVidiaSystemUtilityDriver */
@@ -8312,7 +8330,7 @@ rule PUA_VULN_Driver_Interfacecorporation_Cpxcsys_Gpcxcdiobmpcicpci_6386 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "63865f04c1150655817ed4c9f56ad9f637d41ebd2965b6127fc7c02757a7800e"
 		hash = "9c8ed1506b3e35f5eea6ac539e286d46ef76ddbfdfc5406390fd2157c762ce91"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004700500043002d0032005800370032004300200049002f004f0020004d006f00640075006c006500200044006500760069006300650020004400720069007600650072 } /* FileDescription GPCXCIOModuleDeviceDriver */
@@ -8336,7 +8354,7 @@ rule PUA_VULN_Driver_Windowsrddkprovider_Rtportsys_Windowsrddkdriver_C490 {
 		hash = "c490d6c0844f59fdb4aa850a06e283fbf5e5b6ac20ff42ead03d549d8ae1c01b"
 		hash = "a29093d4d708185ba8be35709113fb42e402bbfbf2960d3e00fd7c759ef0b94e"
 		hash = "e3dbafce5ad2bf17446d0f853aeedf58cc25aa1080ab97e22375a1022d6acb16"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00470065006e006500720069006300200050006f0072007400200049002f004f } /* FileDescription GenericPortIO */
@@ -8358,7 +8376,7 @@ rule PUA_VULN_Driver_Arthurliberman_Alsysiosys_Alsysio_119C {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "119c48b79735fda0ecd973d77d9bdc6b329960caed09b38ab454236ca039d280"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004c0053007900730049004f00360034 } /* FileDescription ALSysIO */
@@ -8380,7 +8398,7 @@ rule PUA_VULN_Driver_Tgsoftsas_Viragtsys_Viritagentsystem_263E {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "263e8f1e20612849aea95272da85773f577fd962a7a6d525b53f43407aa7ad24"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirITAgentSystem */
@@ -8402,7 +8420,7 @@ rule PUA_VULN_Driver_Almicosoftware_Sfdrvxsys_Speedfan_X_88FB {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "88fb0a846f52c3b680c695cd349bf56151a53a75a07b8b0b4fe026ab8aa0a9af"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530070006500650064002000460061006e00200078003600340020004400720069007600650072 } /* FileDescription SpeedFanxDriver */
@@ -8424,7 +8442,7 @@ rule PUA_VULN_Driver_Msi_Ntiolibsys_Ntiolib_E839 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e83908eba2501a00ef9e74e7d1c8b4ff1279f1cd6051707fd51824f87e4378fa"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c0069006200200066006f00720020004d00530049004300500055005f00430043 } /* FileDescription NTIOLibforMSICPUCC */
@@ -8446,7 +8464,7 @@ rule PUA_VULN_Driver_Hilschergesellschaftfrsystemaoutomationmbh_Physmemsys_Physi
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c299063e3eae8ddc15839767e83b9808fd43418dc5a1af7e4f44b97ba53fbd3d"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0050006800790073006900630061006c0020004d0065006d006f0072007900200041006300630065007300730020004400720069007600650072 } /* FileDescription PhysicalMemoryAccessDriver */
@@ -8468,7 +8486,7 @@ rule PUA_VULN_Driver_Tenasyscorporation_Rtifsys_Intime_4CE8 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4ce8583768720be90fae66eed3b6b4a8c7c64e033be53d4cd98246d6e06086d0"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049004e00740069006d006500200050006e00500020005200540020004b00650072006e0065006c00200049006e00740065007200660061006300650020004400720069007600650072 } /* FileDescription INtimePnPRTKernelInterfaceDriver */
@@ -8490,7 +8508,7 @@ rule PUA_VULN_Driver_Advancedmicrodevices_Amdryzenmasterdriversys_Amdryzenmaster
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "af1011c76a22af7be97a0b3e0ce11aca0509820c59fa7c8eeaaa1b2c0225f75a"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d0044002000520079007a0065006e0020004d00610073007400650072002000530065007200760069006300650020004400720069007600650072 } /* FileDescription AMDRyzenMasterServiceDriver */
@@ -8512,7 +8530,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_ADA4 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ada4e42bf5ef58ef1aad94435441003b1cc1fcaa5d38bfdbe1a3d736dc451d47"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsNTXPIOdriver */
@@ -8534,7 +8552,7 @@ rule PUA_VULN_Driver_Tgsoftsas_Viragtsys_Viritagentsystem_9B2F {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9b2f051ac901ab47d0012a1002cb8b2db28c14e9480c0dd55e1ac11c81ba9285"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirITAgentSystem */
@@ -8556,7 +8574,7 @@ rule PUA_VULN_Driver_Dell_Dellinstrumentation_BC26 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "bc2606740e4648c3732541db929f2e02ea8567520d35de57c671e93c71e632f3"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00440065006c006c0049006e0073007400720075006d0065006e0074006100740069006f006e } /* FileDescription DellInstrumentation */
@@ -8576,7 +8594,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtier_F629 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f62911334068c9edd44b9c3e8dee8155a0097aa331dd4566a61afa3549f35f65"
 		hash = "0cf91e8f64a7c98dbeab21597bd76723aee892ed8fa4ee44b09f9e75089308e2"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c002000580054006900650072002000530065007300730069006f006e0020004d0061006e0061006700650072 } /* FileDescription NovellXTierSessionManager */
@@ -8597,7 +8615,7 @@ rule PUA_VULN_Driver_Cyreninc_Amp_Cyrenamp_CBB8 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cbb8239a765bf5b2c1b6a5c8832d2cab8fef5deacadfb65d8ed43ef56d291ab6"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d00500020004d0069006e006900660069006c007400650072 } /* FileDescription AMPMinifilter */
@@ -8619,7 +8637,7 @@ rule PUA_VULN_Driver_Netfiltersdkcom_Lgdcatchersys_Netfiltersdk_0C42 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0c42fe45ffa9a9c36c87a7f01510a077da6340ffd86bf8509f02c6939da133c5"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e0065007400460069006c007400650072002000530044004b002000540044004900200048006f006f006b0020004400720069007600650072002000280057005000500029 } /* FileDescription NetFilterSDKTDIHookDriverWPP */
@@ -8641,7 +8659,7 @@ rule PUA_VULN_Driver_Supermicrocomputerinc_Superbmc_Superbmc_F843 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f8430bdc6fd01f42217d66d87a3ef6f66cb2700ebb39c4f25c8b851858cc4b35"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]007300750070006500720062006d0063 } /* FileDescription superbmc */
@@ -8663,7 +8681,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpotsys_Avginternetsecuritysystem_
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1023dcd4c80db19e9f82f95b1c5e1ddb60db7ac034848dd5cc1c78104a6350f4"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVGantirootkit */
@@ -8686,7 +8704,7 @@ rule PUA_VULN_Driver_Intelcorporation_Iqvwsys_Intelriqvwsys_F877 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f877296e8506e6a1acbdacdc5085b18c6842320a2775a329d286bac796f08d54"
 		hash = "de3597ae7196ca8c0750dce296a8a4f58893774f764455a125464766fcc9b3b5"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription IntelRNetworkAdapterDiagnosticDriver */
@@ -8708,7 +8726,7 @@ rule PUA_VULN_Driver_Nvidiacorp_Nvoclocksys_Nvidiasystemutilitydriver_AE3A {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ae3a6a0726f667658fc3e3180980609dcb31bdbf833d7cb76ba5d405058d5156"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00560049004400490041002000530079007300740065006d0020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription NVIDIASystemUtilityDriver */
@@ -8730,7 +8748,7 @@ rule PUA_VULN_Driver_Almicosoftware_Sfdrvxsys_Speedfan_X_AD23 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ad23d77a38655acb71216824e363df8ac41a48a1a0080f35a0d23aa14b54460b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530070006500650064002000460061006e00200078003300320020004400720069007600650072 } /* FileDescription SpeedFanxDriver */
@@ -8752,7 +8770,7 @@ rule PUA_VULN_Driver_Windowsrddkprovider_Rtportsys_Windowsrddkdriver_6F80 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6f806a9de79ac2886613c20758546f7e9597db5a20744f7dd82d310b7d6457d0"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00470065006e006500720069006300200050006f0072007400200049002f004f } /* FileDescription GenericPortIO */
@@ -8774,7 +8792,7 @@ rule PUA_VULN_Driver_Realtek_Rtkiowxsys_Realtekiodriver_B205 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b205835b818d8a50903cf76936fcf8160060762725bd74a523320cfbd091c038"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f0020004400720069007600650072 } /* FileDescription RealtekIODriver */
@@ -8796,7 +8814,7 @@ rule PUA_VULN_Driver_Filseclabcorporation_Filnk_Filseclabdynamicdefensesystem_AE
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ae55a0e93e5ef3948adecf20fa55b0f555dcf40589917a5bfbaa732075f0cc12"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00460069006c007300650063006c00610062002000440079006e0061006d0069006300200044006500660065006e00730065002000530079007300740065006d0020004400720076 } /* FileDescription FilseclabDynamicDefenseSystemDrv */
@@ -8818,7 +8836,7 @@ rule PUA_VULN_Driver_Sisoftware_Sandra_Sisoftwaresandra_CBF7 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cbf74bed1a4d3d5819b7c50e9d91e5760db1562d8032122edac6f0970f427183"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530061006e00640072006100200044006500760069006300650020004400720069007600650072002000280049004100360034002900280055006e00690063006f006400650029 } /* FileDescription SandraDeviceDriverIAUnicode */
@@ -8840,7 +8858,7 @@ rule PUA_VULN_Driver_Nvidiacorp_Nvoclocksys_Nvidiasystemutilitydriver_A475 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a47555d04b375f844073fdcc71e5ccaa1bbb201e24dcdebe2399e055e15c849f"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00560069006400690061002000530079007300740065006d0020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription NVidiaSystemUtilityDriver */
@@ -8863,7 +8881,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtier_66F8 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "66f8bd2b29763acfbb7423f4c3c9c3af9f3ca4113bd580ab32f6e3ee4a4fc64e"
 		hash = "7f84f009704bc36f0e97c7be3de90648a5e7c21b4f870e4f210514d4418079a0"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c0020005800540043004f004d0020005300650072007600690063006500730020004400720069007600650072 } /* FileDescription NovellXTCOMServicesDriver */
@@ -8884,7 +8902,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Dcprotectsys_Dcprotectrwinxdriver_55
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "55b5bcbf8fb4e1ce99d201d3903d785888c928aa26e947ce2cdb99eefd0dae03"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0044006300500072006f00740065006300740020004400720069007600650072 } /* FileDescription DcProtectDriver */
@@ -8910,7 +8928,7 @@ rule PUA_VULN_Driver_Asustekcomputerinc_Atsziosys_Atsziodriver_1A4F {
 		hash = "e32ab30d01dcff6418544d93f99ae812d2ce6396e809686620547bea05074f6f"
 		hash = "01e024cb14b34b6d525c642a710bfa14497ea20fd287c39ba404b10a8b143ece"
 		hash = "ecfc52a22e4a41bf53865b0e28309411c60af34a44e31a5c53cdc8c5733e8282"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100540053005a0049004f0020004400720069007600650072 } /* FileDescription ATSZIODriver */
@@ -8932,7 +8950,7 @@ rule PUA_VULN_Driver_Filseclabcorporation_Filwfp_Filseclabfirewall_490C {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "490cfbb540dcd70b7bff4fdd62e7ed7400bbfebaf5083523d49f7184670f7b9a"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00460069006c007300650063006c006100620020004600690072006500770061006c006c } /* FileDescription FilseclabFirewall */
@@ -8954,7 +8972,7 @@ rule PUA_VULN_Driver_Asrockincorporation_Asrautochkupddrvsys_Asrautochkupddrvdri
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4ae42c1f11a98dee07a0d7199f611699511f1fb95120fabc4c3c349c485467fe"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100730072004100750074006f00430068006b005500700064004400720076005f0031005f0030005f003300320020004400720069007600650072 } /* FileDescription AsrAutoChkUpdDrvDriver */
@@ -8976,7 +8994,7 @@ rule PUA_VULN_Driver_Razerinc_Rzpnk_Rzpnk_9E34 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9e3430d5e0e93bc4a5dccc985053912065e65722bfc2eaf431bc1da91410434c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520061007a006500720020004f007600650072006c0061007900200053007500700070006f00720074 } /* FileDescription RazerOverlaySupport */
@@ -8999,7 +9017,7 @@ rule PUA_VULN_Driver_Wisecleanercom_Wiseunlosys_Wiseunlo_9D53 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9d530642aeb6524691d06b9e02a84e3487c9cdd86c264b105035d925c984823a"
 		hash = "5e27fe26110d2b9f6c2bad407d3d0611356576b531564f75ff96f9f72d5fcae4"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00570069007300650055006e006c006f } /* FileDescription WiseUnlo */
@@ -9021,7 +9039,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_BCFC {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "bcfc2c9883e6c1b8429be44cc4db988a9eecb544988fbd756d18cfca6201876f"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -9044,7 +9062,7 @@ rule PUA_VULN_Driver_Windowsrddkprovider_Gdrvsys_Windowsrddkdriver_F4FF {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f4ff679066269392f6b7c3ba6257fc60dd609e4f9c491b00e1a16e4c405b0b9b"
 		hash = "cfc5c585dd4e592dd1a08887ded28b92d9a5820587b6f4f8fa4f56d60289259b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041004200590054004500200054006f006f006c0073 } /* FileDescription GIGABYTETools */
@@ -9066,7 +9084,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_DBC6 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "dbc604b4e01362a3e51357af4a87686834fe913852a4e0a8c0d4c1a0f7d076ed"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -9088,7 +9106,7 @@ rule PUA_VULN_Driver_Corsairmemoryinc_Corsairllaccess_Corsairllaccess_F15A {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f15ae970e222ce06dbf3752b223270d0e726fb78ebec3598b4f8225b5a0880b1"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0043006f007200730061006900720020004c004c0020004100630063006500730073 } /* FileDescription CorsairLLAccess */
@@ -9110,7 +9128,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_4E37 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4e37592a2a415f520438330c32cfbdbd6af594deef5290b2fa4b9722b898ff69"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -9132,7 +9150,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_ECD0 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ecd07df7ad6fee9269a9e9429eb199bf3e24cf672aa1d013b7e8d90d75324566"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -9154,7 +9172,7 @@ rule PUA_VULN_Driver_Realixtm_Hwinfosys_Hwinfokerneldriver_6701 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6701433861742c08eb50f1e785962378143ad5b6c374ac29118168599f8a0f1c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570069004e0046004f003300320020004b00650072006e0065006c0020004400720069007600650072 } /* FileDescription HWiNFOKernelDriver */
@@ -9176,7 +9194,7 @@ rule PUA_VULN_Driver_Radiantsystemsinc_Radhwmgrsys_Radiantsystemsinchardwaremana
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "00c3e86952eebb113d91d118629077b3370ebc41eeacb419762d2de30a43c09c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520061006400690061006e00740020004800610072006400770061007200650020004d0061006e006100670065007200200066006f007200200050003100350078007800200050006c006100740066006f0072006d } /* FileDescription RadiantHardwareManagerforPxxPlatform */
@@ -9199,7 +9217,7 @@ rule PUA_VULN_Driver_Cn_Computerzsys_DEE3 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "dee384604d2d0018473941acbefe553711ded7344a4932daeffb876fe2fa0233"
 		hash = "26ecd3cea139218120a9f168c8c0c3b856e0dd8fb2205c2a4bcb398f5f35d8dd"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c007500640061007300680069002000530079007300740065006d0020004400720069007600650072 } /* FileDescription LudashiSystemDriver */
@@ -9221,7 +9239,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpot_Avastantivirus_36E3 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "36e3127f045ef1fa7426a3ff8c441092d3b66923d2b69826034e48306609e289"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AvastAntiRootkit */
@@ -9243,7 +9261,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_FDA9 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fda93c6e41212e86af07f57ca95db841161f00b08dae6304a51b467056e56280"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -9265,7 +9283,7 @@ rule PUA_VULN_Driver_Realixtm_Hwinfosys_Hwinfokerneldriver_6E9E {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6e9e9e0b9a23deec5f28dc45f0bbe7423565f037f74be2957e82e5f72c886094"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570069004e0046004f003300320020004b00650072006e0065006c0020004400720069007600650072 } /* FileDescription HWiNFOKernelDriver */
@@ -9287,7 +9305,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_1228 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1228d0b6b4f907384346f64e918cc28021fe1cd7d4e39687bca34a708998261a"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsNTXPIOdriver */
@@ -9309,7 +9327,7 @@ rule PUA_VULN_Driver_Htcvive_Viverraudiosys_Vivevirtualaudiodriver_9D5E {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9d5e8700a434838eb63a0573178b4291f07a9d96dabfb4ead40253a3cd9edefd"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00560049005600450020005600690072007400750061006c00200041007500640069006f0020004400720069007600650072 } /* FileDescription VIVEVirtualAudioDriver */
@@ -9331,7 +9349,7 @@ rule PUA_VULN_Driver_Biostargroup_Iodriver_Biostariodriver_D205 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d205286bffdf09bc033c09e95c519c1c267b40c2ee8bab703c6a2d86741ccd3e"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049002f004f00200049006e00740065007200660061006300650020006400720069007600650072002000660069006c0065 } /* FileDescription IOInterfacedriverfile */
@@ -9354,7 +9372,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Amifldrvsys_Windowsrwinddkdriver_38D
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "38d87b51f4b69ba2dae1477684a1415f1a3b578eee5e1126673b1beaefee9a20"
 		hash = "ffc72f0bde21ba20aa97bee99d9e96870e5aa40cce9884e44c612757f939494f"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d0049002000470065006e00650072006900630020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription AMIGenericUtilityDriver */
@@ -9378,7 +9396,7 @@ rule PUA_VULN_Driver_Inferre_Hwdetectngsys_Hwdetectngsys_D456 {
 		hash = "d45600f3015a54fa2c9baa7897edbd821aeea2532e6aadb8065415ed0a23d0c2"
 		hash = "43136de6b77ef85bc661d401723f38624e93c4408d758bc9f27987f2b4511fee"
 		hash = "2f8b68de1e541093f2d4525a0d02f36d361cd69ee8b1db18e6dd064af3856f4f"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00480057004400650074006500630074004e0047 } /* FileDescription HWDetectNG */
@@ -9400,7 +9418,7 @@ rule PUA_VULN_Driver_Adlicesoftware_Truesight_Truesight_BFC2 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "bfc2ef3b404294fe2fa05a8b71c7f786b58519175b7202a69fe30f45e607ff1c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0052006f006700750065004b0069006c006c0065007200200041006e007400690072006f006f0074006b006900740020004400720069007600650072 } /* FileDescription RogueKillerAntirootkitDriver */
@@ -9422,7 +9440,7 @@ rule PUA_VULN_Driver_Nvidiacorp_Nvoclocksys_Nvidiasystemutilitydriver_87B4 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "87b4c5b7f653b47c9c3bed833f4d65648db22481e9fc54aa4a8c6549fa31712b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00560069006400690061002000530079007300740065006d0020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription NVidiaSystemUtilityDriver */
@@ -9446,7 +9464,7 @@ rule PUA_VULN_Driver_Highresolutionenterpriseswwwhighrezcouk_Inpoutxsys_Inpoutxd
 		hash = "f581decc2888ef27ee1ea85ea23bbb5fb2fe6a554266ff5a1476acd1d29d53af"
 		hash = "f8965fdce668692c3785afa3559159f9a18287bc0d53abb21902895a8ecf221b"
 		hash = "2d83ccb1ad9839c9f5b3f10b1f856177df1594c66cbbc7661677d4b462ebf44d"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004b00650072006e0065006c0020006c006500760065006c00200070006f0072007400200061006300630065007300730020006400720069007600650072 } /* FileDescription Kernellevelportaccessdriver */
@@ -9468,7 +9486,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_12ED {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "12eda8b65ed8c1d80464a0c535ea099dffdb4981c134294cb0fa424efc85ee56"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -9490,7 +9508,7 @@ rule PUA_VULN_Driver_Realixtm_Hwinfosys_Hwinfokerneldriver_FF1C {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ff1ccef7374a1a5054a6f4437e3e0504b14ed76e17090cc6b1a4ec0e2da427a5"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570069004e0046004f00330032002f003600340020004b00650072006e0065006c0020004400720069007600650072 } /* FileDescription HWiNFOKernelDriver */
@@ -9512,7 +9530,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpotsys_Avastantivirus_EBE2 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ebe2e9ec6d5d94c2d58fbcc9d78c5f0ee7a2f2c1aed6d1b309f383186d11dfa3"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avastantirootkit */
@@ -9534,7 +9552,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtierforwindows_V_CA34 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ca34f945117ec853a713183fa4e8cf85ea0c2c49ca26e73d869fee021f7b491d"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c002000580054006900650072002000530065007300730069006f006e0020004d0061006e0061006700650072 } /* FileDescription NovellXTierSessionManager */
@@ -9555,7 +9573,7 @@ rule PUA_VULN_Driver_Adlinktechnologyinc_Adrmdrvsys_Adlinkresourcemanagerkenerls
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a1f79a2e1441970bb3e7c838f8c14a8f3d39a46b0ff9648614e922ac475c743d"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410044004c0049004e004b0020005200650073006f00750072006300650020004d0061006e00610067006500720020004b0065006e00650072006c00200053006500720076006900630065002e } /* FileDescription ADLINKResourceManagerKenerlService */
@@ -9577,7 +9595,7 @@ rule PUA_VULN_Driver_Adlink_Pxitrigsys_Pxitriggerioforwindowsx_56EC {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "56ece6b6b1d2da18458c9d8edc586bd2b9f7c4b092a9745fbed659238b2b3157"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00700078006900740072006900670069006f0020004400650076006900630065004400720069007600650072 } /* FileDescription pxitrigioDeviceDriver */
@@ -9602,7 +9620,7 @@ rule PUA_VULN_Driver_Razerinc_Rzpnk_Rzpnk_46D1 {
 		hash = "dafa4459d88a8ab738b003b70953e0780f6b8f09344ce3cd631af70c78310b53"
 		hash = "4c2d2122ef7a100e1651f2ec50528c0d1a2b8a71c075461f0dc58a1aca36bc61"
 		hash = "d59cc3765a2a9fa510273dded5a9f9ac5190f1edf24a00ffd6a1bbd1cb34c757"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00520061007a006500720020004f007600650072006c0061007900200053007500700070006f00720074 } /* FileDescription RazerOverlaySupport */
@@ -9625,7 +9643,7 @@ rule PUA_VULN_Driver_Corsairmemoryinc_Corsairllaccess_Corsairllaccess_A334 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a334bdf0c0ab07803380eb6ef83eefe7c147d6962595dd9c943a6a76f2200b0d"
 		hash = "000547560fea0dd4b477eb28bf781ea67bf83c748945ce8923f90fdd14eb7a4b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0043006f007200730061006900720020004c004c0020004100630063006500730073 } /* FileDescription CorsairLLAccess */
@@ -9647,7 +9665,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_1C12 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1c1251784e6f61525d0082882a969cb8a0c5d5359be22f5a73e3b0cd38b51687"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -9669,7 +9687,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroaegis_4BC0 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4bc0921ffd4acc865525d3faf98961e8decc5aec4974552cbbf2ae8d5a569de4"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -9691,7 +9709,7 @@ rule PUA_VULN_Driver_Iobitinformationtechnology_Iobitunlockersys_Unlocker_F85C {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f85cca4badff17d1aa90752153ccec77a68ad282b69e3985fdc4743eaea85004"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0055006e006c006f0063006b006500720020004400720069007600650072 } /* FileDescription UnlockerDriver */
@@ -9713,7 +9731,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtierforwindows_V_C190 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c190e4a7f1781ec9fa8c17506b4745a1369dcdf174ce07f85de1a66cf4b5ed8a"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c0020005800540043004f004d0020005300650072007600690063006500730020004400720069007600650072 } /* FileDescription NovellXTCOMServicesDriver */
@@ -9734,7 +9752,7 @@ rule PUA_VULN_Driver_Chengduwesthouseinteractiveentertainmentltd_Seasunprotect_S
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "507b07b0dc0e638b65b4a4d11a462b35439c746d42337b9888927bf994176102"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00470061006d0065002000500072006f0074006500630074 } /* FileDescription GameProtect */
@@ -9756,7 +9774,7 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_Procexpsys_Processexplorer_9
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9b6a84f7c40ea51c38cc4d2e93efb3375e9d98d4894a85941190d94fbe73a4e4"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription ProcessExplorer */
@@ -9778,7 +9796,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpotsys_Avginternetsecuritysystem_
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7d43769b353d63093228a59eb19bba87ce6b552d7e1a99bf34a54eee641aa0ea"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVGantirootkit */
@@ -9801,7 +9819,7 @@ rule PUA_VULN_Driver_Avastsoftware_Ngiodriversys_Avastng_7337 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "733789d0a253e8d80cc3240e365b8d4274e510e36007f6e4b5fd13b07b084c3e"
 		hash = "d1463b7fec911c10a8c96d84eb7c0f9e95fa488d826647a591a38c0593f812a4"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0061007600610073007400210020004e0047002000730065007400750070002000680065006c0070006500720020006400720069007600650072 } /* FileDescription avastNGsetuphelperdriver */
@@ -9823,7 +9841,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Aegis_ADC1 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "adc10de960f40fa9f6e28449748250fa9ddfd331115b77a79809a50c606753ee"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -9846,7 +9864,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Sbiosiosys_Samsungrbiosiodriver_1E24
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1e24c45ce2672ee403db34077c88e8b7d7797d113c6fd161906dce3784da627d"
 		hash = "39336e2ce105901ab65021d6fdc3932d3d6aab665fe4bd55aa1aa66eb0de32f0"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005300420049004f00530049004f0020004400720069007600650072 } /* FileDescription SBIOSIODriver */
@@ -9868,7 +9886,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpot_Avginternetsecuritysystem_949
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "94911fe6f2aba9683b10353094caf71ee4a882de63b4620797629d79f18feec5"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AVGAntiRootkit */
@@ -9890,7 +9908,7 @@ rule PUA_VULN_Driver_Fujitsulimited_Advdrvsys_Microsoftrwindowsroperatingsystem_
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "04a85e359525d662338cae86c1e59b1d7aa9bd12b920e8067503723dc1e03162"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 0043006f006d00700061006e0079004e0061006d0065[1-8]00460055004a00490054005300550020004c0049004d0049005400450044002e } /* CompanyName FUJITSULIMITED */
@@ -9911,7 +9929,7 @@ rule PUA_VULN_Driver_Microworldtechnologiesinc_Procobsrvesx_Escaneconceal_3720 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "37206b758eac2c7775ef881c1dc9a96129a517069bdf47049afc3b29e328408e"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f0063004f0062007300720076006500730078 } /* FileDescription ProcObsrvesx */
@@ -9933,7 +9951,7 @@ rule PUA_VULN_Driver_Advancedmicrodevices_Amdryzenmasterdriversys_Amdryzenmaster
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ff9623317287358440ec67da9ba79994d9b17b99ffdd709ec836478fe1fc22a5"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d0044002000520079007a0065006e0020004d00610073007400650072002000530065007200760069006300650020004400720069007600650072 } /* FileDescription AMDRyzenMasterServiceDriver */
@@ -9955,7 +9973,7 @@ rule PUA_VULN_Driver_Sunmicrosystemsinc_Vboxtapsys_Virtualboxhostinterfacenetwor
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cfa28e2f624f927d4cbd2952306570d86901d2f24e3d07cc6277e98289d09783"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200048006f0073007400200049006e00740065007200660061006300650020004e006500740077006f0072006b0069006e00670020004400720069007600650072 } /* FileDescription VirtualBoxHostInterfaceNetworkingDriver */
@@ -9978,7 +9996,7 @@ rule PUA_VULN_Driver_Generalelectriccompany_Gedevicedriver_Proficymachineedition
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a369942ce8d4b70ebf664981e12c736ec980dbe5a74585dd826553c4723b1bce"
 		hash = "ae73dd357e5950face9c956570088f334d18464cd49f00c56420e3d6ff47e8dc"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004500200044006500760069006300650020004400720069007600650072 } /* FileDescription GEDeviceDriver */
@@ -10000,7 +10018,7 @@ rule PUA_VULN_Driver_Avastsoftware_Ngiodriversys_Avastng_85FD {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "85fdd255c5d7add25fd7cd502221387a5e11f02144753890218dd31a8333a1a3"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0061007600610073007400210020004e0047002000730065007400750070002000680065006c0070006500720020006400720069007600650072 } /* FileDescription avastNGsetuphelperdriver */
@@ -10022,7 +10040,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_7CF7 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7cf756afcaf2ce4f8fb479fdede152a17eabf4c5c7c329699dab026a4c1d4fd0"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f00770073002000780036003400200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsxIOdriver */
@@ -10044,7 +10062,7 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_Procexpsys_7795 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "77950e2a40ac0447ae7ee1ee3ef1242ce22796a157074e6f04e345b1956e143c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0020002000200020002000200020002000200020002000200020002000200020 } /* FileDescription  */
@@ -10066,7 +10084,7 @@ rule PUA_VULN_Driver_Sisoftware_Sandra_Sisoftwaresandra_B019 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b019ebd77ac19cdd72bba3318032752649bd56a7576723a8ae1cccd70ee1e61a"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530061006e006400720061002000440065007600690063006500200044007200690076006500720020002800570069006e003300320020007800380036002900280055006e00690063006f006400650029 } /* FileDescription SandraDeviceDriverWinxUnicode */
@@ -10088,7 +10106,7 @@ rule PUA_VULN_Driver_Advancedmicrodevicesinc_Amdpowerprofilersys_Amduprof_0AF5 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0af5ccb3d33a9ba92071c9637be6254030d61998733a5eb3583e865e17844e05"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d004400200050006f007700650072002000500072006f00660069006c0069006e00670020004400720069007600650072 } /* FileDescription AMDPowerProfilingDriver */
@@ -10110,7 +10128,7 @@ rule PUA_VULN_Driver_Realtek_Rtkiosys_Realtekiodriver_074A {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "074ae477c8c7ae76c6f2b0bf77ac17935a8e8ee51b52155d2821d93ab30f3761"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f0020004400720069007600650072 } /* FileDescription RealtekIODriver */
@@ -10132,7 +10150,7 @@ rule PUA_VULN_Driver_Msi_Ntiolibsys_Ntiolib_98B7 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "98b734dda78c16ebcaa4afeb31007926542b63b2f163b2f733fa0d00dbb344d8"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c0069006200200066006f0072002000440065006200750067004c00450044 } /* FileDescription NTIOLibforDebugLED */
@@ -10154,7 +10172,7 @@ rule PUA_VULN_Driver_Novellinc_Novellxtierforwindows_V_7A2C {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7a2cd1dc110d014165c001ce65578da0c0c8d7d41cc1fa44f974e8a82296fc25"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e006f00760065006c006c00200043006c00690065006e007400200050006f00720074006100620069006c0069007400790020004c0061007900650072 } /* FileDescription NovellClientPortabilityLayer */
@@ -10175,7 +10193,7 @@ rule PUA_VULN_Driver_Zemanaltd_Zam_9A95 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9a95a70f68144980f2d684e96c79bdc93ebca1587f46afae6962478631e85d0c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -10194,7 +10212,7 @@ rule PUA_VULN_Driver_Microsoftcorporation_Afdsys_Microsoftwindowsoperatingsystem
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "95fd266cc454177901cb58f4d30417c4a7caf29be62bb8649e5b8fca58823600"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041006e00630069006c006c006100720079002000460075006e006300740069006f006e002000440072006900760065007200200066006f0072002000570069006e0053006f0063006b } /* FileDescription AncillaryFunctionDriverforWinSock */
@@ -10216,7 +10234,7 @@ rule PUA_VULN_Driver_Intelcorporation_Iqvwsys_Intelriqvwsys_19BF {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "19bf0d0f55d2ad33ef2d105520bde8fb4286f00e9d7a721e3c9587b9408a0775"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription IntelRNetworkAdapterDiagnosticDriver */
@@ -10238,7 +10256,7 @@ rule PUA_VULN_Driver_Itmsystem_023D {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "023d722cbbdd04e3db77de7e6e3cfeabcef21ba5b2f04c3f3a33691801dd45eb"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00490054004d002000530059005300540045004d002000460069006c0065002000460069006c0074006500720020004400720069007600650072 } /* FileDescription ITMSYSTEMFileFilterDriver */
@@ -10258,7 +10276,7 @@ rule PUA_VULN_Driver_Zemanaltd_Zam_2BBC {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2bbc6b9dd5e6d0327250b32305be20c89b19b56d33a096522ee33f22d8c82ff1"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -10277,7 +10295,7 @@ rule PUA_VULN_Driver_Logitechinc_Lvavsys_Logitechwebcamsoftware_E86C {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e86cb77de7b6a8025f9a546f6c45d135f471e664963cf70b381bee2dfd0fdef4"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c006f00670069007400650063006800200056006900640065006f0020004400720069007600650072 } /* FileDescription LogitechVideoDriver */
@@ -10299,7 +10317,7 @@ rule PUA_VULN_Driver_Getactechnologycorporation_Mtcbsvsys_Getacsystemserviceprov
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e6d1ee0455068b74cf537388c874acb335382876aa9d74586efb05d6cc362ae5"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00470065007400610063002000530079007300740065006d00200053006500720076006900630065002000500072006f00760069006400650072 } /* FileDescription GetacSystemServiceProvider */
@@ -10321,7 +10339,7 @@ rule PUA_VULN_Driver_Hpinc_Hpportioxsys_Hpportio_C505 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c5050a2017490fff7aa53c73755982b339ddb0fd7cef2cde32c81bc9834331c5"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800700050006f007200740049006f } /* FileDescription HpPortIo */
@@ -10343,7 +10361,7 @@ rule PUA_VULN_Driver_Realtek_Rtkiowxsys_Realtekiodriver_AB8F {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ab8f2217e59319b88080e052782e559a706fa4fb7b8b708f709ff3617124da89"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f0020004400720069007600650072 } /* FileDescription RealtekIODriver */
@@ -10365,7 +10383,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpot_Avginternetsecuritysystem_2CE
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2ce81759bfa236913bbbb9b2cbc093140b099486fd002910b18e2c6e31fdc4f1"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AVGAntiRootkit */
@@ -10387,7 +10405,7 @@ rule PUA_VULN_Driver_Innotekgmbh_Vboxtapsys_Virtualboxhostinterfacenetworkingdri
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "994f322def98c99aec7ea0036ef5f4b802120458782ae3867d116d55215c56e4"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200048006f0073007400200049006e00740065007200660061006300650020004e006500740077006f0072006b0069006e00670020004400720069007600650072 } /* FileDescription VirtualBoxHostInterfaceNetworkingDriver */
@@ -10409,7 +10427,7 @@ rule PUA_VULN_Driver_Msi_Ntiolibsys_Ntiolib_9254 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9254f012009d55f555418ff85f7d93b184ab7cb0e37aecdfdab62cfe94dea96b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c0069006200200066006f00720020004d00530049004400440052005f00430043 } /* FileDescription NTIOLibforMSIDDRCC */
@@ -10431,7 +10449,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Dcprotectsys_Dcprotectrwinxdriver_3A
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3af9c376d43321e813057ecd0403e71cafc3302139e2409ab41e254386c33ecb"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0044006300500072006f00740065006300740020004400720069007600650072 } /* FileDescription DcProtectDriver */
@@ -10454,7 +10472,7 @@ rule PUA_VULN_Driver_Intelcorporation_Iqvwsys_Intelriqvwsys_4429 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4429f32db1cc70567919d7d47b844a91cf1329a6cd116f582305f3b7b60cd60b"
 		hash = "a59c40e7470b7003e8adfee37c77606663e78d7e3f2ebb8d60910af19924d8df"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription IntelRNetworkAdapterDiagnosticDriver */
@@ -10476,7 +10494,7 @@ rule PUA_VULN_Driver_Realtek_Rtkiowxsys_Realtekiodriver_32E1 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "32e1a8513eee746d17eb5402fb9d8ff9507fb6e1238e7ff06f7a5c50ff3df993"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200650061006c00740065006b00200049004f0020004400720069007600650072 } /* FileDescription RealtekIODriver */
@@ -10498,7 +10516,7 @@ rule PUA_VULN_Driver_Micsystechnologycoltd_Msiosys_Msiodriverversion_X_43BA {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004d004900430053005900530020006400720069007600650072 } /* FileDescription MICSYSdriver */
@@ -10520,7 +10538,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpotsys_Avginternetsecuritysystem_
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1078af0c70e03ac17c7b8aa5ee03593f5decfef2f536716646a4ded1e98c153c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVGantirootkit */
@@ -10542,7 +10560,7 @@ rule PUA_VULN_Driver_Gigabytetechnologycoltd_Gdrvsys_Gigabytesoftwaredriver_26C2
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "26c28746e947389856543837aa59a5b1f4697e5721a04d00aa28151a2659b097"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004900470041002d00420059005400450020004e006f006e0050006e00500020004400720069007600650072 } /* FileDescription GIGABYTENonPnPDriver */
@@ -10565,7 +10583,7 @@ rule PUA_VULN_Driver_Interfacecorporation_Cpxcsys_Gpcxcdiobmpcicpci_05C1 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "05c15a75d183301382a082f6d76bf3ab4c520bf158abca4433d9881134461686"
 		hash = "4b4ea21da21a1167c00b903c05a4e3af6c514ea3dfe0b5f371f6a06305e1d27f"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004700500043002d0032005800370032004300200049002f004f0020004d006f00640075006c006500200044006500760069006300650020004400720069007600650072 } /* FileDescription GPCXCIOModuleDeviceDriver */
@@ -10587,7 +10605,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_CC68 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cc687fe3741bbde1dd142eac0ef59fd1d4457daee43cdde23bb162ef28d04e64"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -10609,7 +10627,7 @@ rule PUA_VULN_Driver_Tgsoftsas_Viragtsys_Viritagentsystem_A209 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a2096b460e31451659b0dde752264c362f47254c8191930bc921ff16a4311641"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirITAgentSystem */
@@ -10631,7 +10649,7 @@ rule PUA_VULN_Driver_Windowsrcodenamelonghornddkprovider_Cpudriver_Windowsrcoden
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "159e7c5a12157af92e0d14a0d3ea116f91c09e21a9831486e6dc592c93c10980"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041005300550053002000540044004500200043005000550020004400720069007600650072 } /* FileDescription ASUSTDECPUDriver */
@@ -10653,7 +10671,7 @@ rule PUA_VULN_Driver_Proxydrvsys_Nn_0B20 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0b205838a8271daea89656b1ec7c5bb7244c42a8b8000d7697e92095da6b9b94"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]96f7795e004e004e52a0901f5668002d9a7152a87a0b5e8f65874ef6 } /* FileDescription NN */
@@ -10675,7 +10693,7 @@ rule PUA_VULN_Driver_Msi_Ntiolibsys_Ntiolib_1DDF {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1ddfe4756f5db9fb319d6c6da9c41c588a729d9e7817190b027b38e9c076d219"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00540049004f004c00690062 } /* FileDescription NTIOLib */
@@ -10697,7 +10715,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_654C {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "654c5ba47f74008c8f49cbb97988017eec8c898adc3bb851bc6e1fdf9dcf54ad"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -10720,7 +10738,7 @@ rule PUA_VULN_Driver_Marvintestsolutionsinc_Hwsys_Hw_FD38 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fd388cf1df06d419b14dedbeb24c6f4dff37bea26018775f09d56b3067f0de2c"
 		hash = "6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570020002d002000570069006e0064006f007700730020004e0054002d00380020002800330032002f00360034002000620069007400290020006b00650072006e0065006c0020006d006f00640065002000640072006900760065007200200066006f007200200050004300200070006f007200740073002f006d0065006d006f00720079002f0050004300490020006100630063006500730073 } /* FileDescription HWWindowsNTbitkernelmodedriverforPCportsmemoryPCIaccess */
@@ -10742,7 +10760,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpotsys_Avginternetsecuritysystem_
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "6e0aa67cfdbe27a059cbd066443337f81c5b6d37444d14792d1c765d9d122dcf"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVGantirootkit */
@@ -10764,7 +10782,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpotsys_Avginternetsecuritysystem_
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a2f45d95d54f4e110b577e621fefa0483fa0e3dcca14c500c298fb9209e491c1"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVGantirootkit */
@@ -10786,7 +10804,7 @@ rule PUA_VULN_Driver_Realteksemiconductorcorporation_Rtspciewindowsx_Windowsrwin
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "a1fa7d8275ccd14a6adc438ef4b950e7de4ed26fcbe4b3e184243663b03c83d6"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0052005400530020005000430049004500200052004500410044004500520020004400720069007600650072 } /* FileDescription RTSPCIEREADERDriver */
@@ -10808,7 +10826,7 @@ rule PUA_VULN_Driver_Advancedmicrodevices_Aoddriversys_Amdoverdriveservicedriver
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "81d54ebef1716e195955046ffded498a5a7e325bf83e7847893aa3b0b3776d05"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041004d00440020004f00760065007200440072006900760065002000530065007200760069006300650020004400720069007600650072 } /* FileDescription AMDOverDriveServiceDriver */
@@ -10830,7 +10848,7 @@ rule PUA_VULN_Driver_Realsilsemiconductorcorporation_Rtsusbwindowsx_Windowsrwind
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "39171fcaff172d6b38762acef3d3352f9a375e3db7e54a7b51261a53b3c94266"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005200540053002000550053004200200052004500410044004500520020004400720069007600650072 } /* FileDescription RTSUSBREADERDriver */
@@ -10852,7 +10870,7 @@ rule PUA_VULN_Driver_Realixtm_Hwinfosys_Hwinfokerneldriver_EC9B {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "ec9bd7fb90c3a2aa4605bd73fe1f74399e2cda75fd4c5fff84660ad4f797c4fe"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570069004e0046004f003300320020004b00650072006e0065006c0020004400720069007600650072 } /* FileDescription HWiNFOKernelDriver */
@@ -10874,7 +10892,7 @@ rule PUA_VULN_Driver_Sisoftware_Sandra_Sisoftwaresandra_D7C7 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d7c79238f862b471740aff4cc3982658d1339795e9ec884a8921efe2e547d7c3"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530061006e0064007200610020004400650076006900630065002000440072006900760065007200200028007800380036002900280055006e00690063006f006400650029 } /* FileDescription SandraDeviceDriverxUnicode */
@@ -10896,7 +10914,7 @@ rule PUA_VULN_Driver_Nvidiacorporation_Nvflash_Nvidiaflashdriver_AFDD {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "afdd66562dea51001c3a9de300f91fc3eb965d6848dfce92ccb9b75853e02508"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e0056004900440049004100200046006c0061007300680020004400720069007600650072002c002000560065007200730069006f006e00200031002e0038002e0030 } /* FileDescription NVIDIAFlashDriverVersion */
@@ -10918,7 +10936,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_F85E {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f85eb576acb5db0d2f48e5f09a7244165a876fa1ca8697ebb773e4d7071d4439"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsNTXPIOdriver */
@@ -10940,7 +10958,7 @@ rule PUA_VULN_Driver_Vektortsecurityservice_Vboxdrv_Antidetectpublicbyvektortrev
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "26f41e4268be59f5de07552b51fa52d18d88be94f8895eb4a16de0f3940cf712"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200053007500700070006f007200740020004400720069007600650072 } /* FileDescription VirtualBoxSupportDriver */
@@ -10962,7 +10980,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_3C42 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3c4207c90c97733fae2a08679d63fbbe94dfcf96fdfdf88406aa7ab3f80ea78f"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -10985,7 +11003,7 @@ rule PUA_VULN_Driver_Asustekcomputerinc_Atsziosys_Atsziodriver_55A1 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "55a1535e173c998fbbc978009b02d36ca0c737340d84ac2a8da73dfc2f450ef9"
 		hash = "c64d4ac416363c7a1aa828929544d1c1d78cf032b39769943b851cfc4c0faafc"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004100540053005a0049004f0020004400720069007600650072 } /* FileDescription ATSZIODriver */
@@ -11008,7 +11026,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Sbiosiosys_Samsungrbiosiodriver_B3D1
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b3d1bdd4ad819b99870b6e2ed3527dfc0e3ce27b929ad64382b9c3d4e332315c"
 		hash = "442d506c1ac1f48f6224f0cdd64590779aee9c88bdda2f2cc3169b862cba1243"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005300420049004f00530049004f0020004400720069007600650072 } /* FileDescription SBIOSIODriver */
@@ -11030,7 +11048,7 @@ rule PUA_VULN_Driver_Sisoftware_Sandra_Sisoftwaresandra_1AAF {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1aaf4c1e3cb6774857e2eef27c17e68dc1ae577112e4769665f516c2e8c4e27b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530061006e006400720061002000440065007600690063006500200044007200690076006500720020002800570069006e003600340020007800360034002900280055006e00690063006f006400650029 } /* FileDescription SandraDeviceDriverWinxUnicode */
@@ -11052,7 +11070,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Dcprotectsys_Dcprotectrwinxdriver_16
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1698ba7eeee6ff9272cc25b242af89190ff23fd9530f21aa8f0f3792412594f3"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0044006300500072006f00740065006300740020004400720069007600650072 } /* FileDescription DcProtectDriver */
@@ -11074,7 +11092,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Aegis_C901 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c9014b03866bf37faa8fdb16b6af7cfec976aaef179fd5797d0c0bf8079d3a8c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -11096,7 +11114,7 @@ rule PUA_VULN_Driver_Symanteccorporation_Vproeventmonitorsys_Symanteceventmonito
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7877c1b0e7429453b750218ca491c2825dae684ad9616642eff7b41715c70aca"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600500072006f004500760065006e0074004d006f006e00690074006f0072002e0053007900730020002d0020004500760065006e00740020004d006f006e00690074006f00720069006e00670020006400720069007600650072 } /* FileDescription VProEventMonitorSysEventMonitoringdriver */
@@ -11118,7 +11136,7 @@ rule PUA_VULN_Driver_Wj_Kprocesshacker_C725 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c725919e6357126d512c638f993cf572112f323da359645e4088f789eb4c7b8c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004b00500072006f0063006500730073004800610063006b00650072 } /* FileDescription KProcessHacker */
@@ -11139,7 +11157,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpot_Avastantivirus_7AD0 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "7ad0ab23023bc500c3b46f414a8b363c5f8700861bc4745cecc14dd34bcee9ed"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200041006e0074006900200052006f006f0074006b00690074 } /* FileDescription AvastAntiRootkit */
@@ -11161,7 +11179,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_83A1 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "83a1fabf782d5f041132d7c7281525f6610207b38f33ff3c5e44eb9444dd0cbc"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsNTXPIOdriver */
@@ -11183,7 +11201,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_C082 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c082514317bf80a2f5129d84a5a55e411a95e32d03a4df1274537704c80e41dd"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -11205,7 +11223,7 @@ rule PUA_VULN_Driver_Creativetechnologyinnovationcoltd_Ctiiosys_Ctiiodriverversi
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "2121a2bb8ebbf2e6e82c782b6f3c6b7904f686aa495def25cf1cf52a42e16109"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00430054004900200049004f0020006400720069007600650072 } /* FileDescription CTIIOdriver */
@@ -11227,7 +11245,7 @@ rule PUA_VULN_Driver_Ssmartsoftwaresolutionsgmbh_Sysdrvs_Sysdrvs_0E53 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0e53b58415fa68552928622118d5b8a3a851b2fc512709a90b63ba46acda8b6b"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00530079007300440072007600330053 } /* FileDescription SysDrvS */
@@ -11249,7 +11267,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpotsys_Avastantivirus_14AD {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "14adbf0bc43414a7700e5403100cff7fc6ade50bebfab16a17acf2fdda5a9da8"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avastantirootkit */
@@ -11271,7 +11289,7 @@ rule PUA_VULN_Driver_Marvintestsolutionsinc_Hwsys_Hw_0483 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0483b32f9544e9c3cc3f206e7bc983ea83f5a9ca44864f2af9b8fc10ff45949f"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004800570020002d002000570069006e0064006f00770073002000580050002d003100310020002800330032002f00360034002000620069007400290020006b00650072006e0065006c0020006d006f00640065002000640072006900760065007200200066006f007200200050004300200070006f007200740073002f006d0065006d006f00720079002f0050004300490020006100630063006500730073 } /* FileDescription HWWindowsXPbitkernelmodedriverforPCportsmemoryPCIaccess */
@@ -11294,7 +11312,7 @@ rule PUA_VULN_Driver_Geintelligentplatformsinc_Gedevicedriver_Proficymachineedit
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cac5dc7c3da69b682097144f12a816530091d4708ca432a7ce39f6abe6616461"
 		hash = "51145a3fa8258aac106f65f34159d23c54b48b6d54ec0421748b3939ab6778eb"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0047004500200044006500760069006300650020004400720069007600650072 } /* FileDescription GEDeviceDriver */
@@ -11316,7 +11334,7 @@ rule PUA_VULN_Driver_Windowsrserverddkprovider_Cpuzsys_Windowsrserverddkdriver_3
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "3871e16758a1778907667f78589359734f7f62f9dc953ec558946dcdbe6951e3"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004300500055004900440020004400720069007600650072 } /* FileDescription CPUIDDriver */
@@ -11338,7 +11356,7 @@ rule PUA_VULN_Driver_Lowleveldriver_F941 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "f9418b5e90a235339a4a1a889490faca39cd117a51ba4446daa1011da06c7ecd"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004c006f0077002d004c006500760065006c0020004400720069007600650072 } /* FileDescription LowLevelDriver */
@@ -11357,7 +11375,7 @@ rule PUA_VULN_Driver_Intelcorporation_Iqvwsys_Intelriqvwsys_37C6 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "37c637a74bf20d7630281581a8fae124200920df11ad7cd68c14c26cc12c5ec9"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription IntelRNetworkAdapterDiagnosticDriver */
@@ -11379,7 +11397,7 @@ rule PUA_VULN_Driver_Toshibacorporation_Nchgbiosxsys_Toshibabiospackage_3143 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "314384b40626800b1cde6fbc51ebc7d13e91398be2688c2a58354aa08d00b073"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00420049004f00530020005500700064006100740065002000440072006900760065007200200046006f0072002000570069006e0064006f007700730020007800360034002000450064006900740069006f006e } /* FileDescription BIOSUpdateDriverForWindowsxEdition */
@@ -11402,7 +11420,7 @@ rule PUA_VULN_Driver_Zemanaltd_Zam_5439 {
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "543991ca8d1c65113dff039b85ae3f9a87f503daec30f46929fd454bc57e5a91"
 		hash = "ab2632a4d93a7f3b7598c06a9fdc773a1b1b69a7dd926bdb7cf578992628e9dd"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -11421,7 +11439,7 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_Procexpsys_Processexplorer_3
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "30abc0cc700fdebc74e62d574addc08f6227f9c7177d9eaa8cbc37d5c017c9bb"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription ProcessExplorer */
@@ -11443,7 +11461,7 @@ rule PUA_VULN_Driver_Zemanaltd_Zam_DE8F {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "de8f8006d8ee429b5f333503defa54b25447f4ed6aeade5e4219e23f3473ef1c"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005a0041004d } /* FileDescription ZAM */
@@ -11462,7 +11480,7 @@ rule PUA_VULN_Driver_Nvidiacorp_Nvoclocksys_Nvidiasystemutilitydriver_0FC0 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "0fc0644085f956706ea892563309ba72f0986b7a3d4aa9ae81c1fa1c35e3e2d3"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e00560069006400690061002000530079007300740065006d0020005500740069006c0069007400790020004400720069007600650072 } /* FileDescription NVidiaSystemUtilityDriver */
@@ -11484,7 +11502,7 @@ rule PUA_VULN_Driver_Supermicrocomputerinc_Phymem_Phymem_1963 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1963d5a0e512b72353953aadbe694f73a9a576f0241a988378fa40bf574eda52"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]007000680079006d0065006d0020004100700070006c00690063006100740069006f006e } /* FileDescription phymemApplication */
@@ -11507,7 +11525,7 @@ rule PUA_VULN_Driver_Sysinternalswwwsysinternalscom_Procexpsys_Processexplorer_1
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "16a2e578bc8683f17a175480fea4f53c838cfae965f1d4caa47eaf9e0b3415c1"
 		hash = "98a123b314cba2de65f899cdbfa386532f178333389e0f0fbd544aff85be02eb"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00500072006f00630065007300730020004500780070006c006f007200650072 } /* FileDescription ProcessExplorer */
@@ -11529,7 +11547,7 @@ rule PUA_VULN_Driver_Vektortsecurityservice_Vboxdrv_Antidetectpublic_CFB7 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "cfb7af8ac67a379e7869289aeee21837c448ea6f8ab6c93988e7aa423653bd40"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200053007500700070006f007200740020004400720069007600650072 } /* FileDescription VirtualBoxSupportDriver */
@@ -11551,7 +11569,7 @@ rule PUA_VULN_Driver_Sunmicrosystemsinc_Vboxdrvsys_Sunvirtualbox_R_C894 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "c8940e2e9b069ec94f9f711150b313b437f8429f78d522810601b6ee8b52bada"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200053007500700070006f007200740020004400720069007600650072 } /* FileDescription VirtualBoxSupportDriver */
@@ -11573,7 +11591,7 @@ rule PUA_VULN_Driver_Pinduoduoltdcorp_Vboxdrv_Pinduoduosecurevdi_9DAB {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9dab4b6fddc8e1ec0a186aa8382b184a5d52cfcabaaf04ff9e3767021eb09cf4"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072007400750061006c0042006f007800200053007500700070006f007200740020004400720069007600650072 } /* FileDescription VirtualBoxSupportDriver */
@@ -11595,7 +11613,7 @@ rule PUA_VULN_Driver_Tgsoftsas_Viragtsys_Viritagentsystem_18DE {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "18deed37f60b6aa8634dda2565a0485452487d7bce88afb49301a7352db4e506"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005600690072004900540020004100670065006e0074002000530079007300740065006d } /* FileDescription VirITAgentSystem */
@@ -11617,7 +11635,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpotsys_Avginternetsecuritysystem_
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8cfd5b2102fbc77018c7fe6019ec15f07da497f6d73c32a31f4ba07e67ec85d9"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVGantirootkit */
@@ -11639,7 +11657,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpotsys_Avastantivirus_D5C4 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "d5c4ff35eaa74ccdb80c7197d3d113c9cd38561070f2aa69c0affe8ed84a77c9"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avastantirootkit */
@@ -11661,7 +11679,7 @@ rule PUA_VULN_Driver_Wj_Kprocesshacker_7021 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "70211a3f90376bbc61f49c22a63075d1d4ddd53f0aefa976216c46e6ba39a9f4"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004b00500072006f0063006500730073004800610063006b00650072 } /* FileDescription KProcessHacker */
@@ -11682,7 +11700,7 @@ rule PUA_VULN_Driver_Trendmicroinc_Tmcommsys_Trendmicroeyes_76E8 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "76e807b6c0214e66455f09a8de8faad40b738982ca84470f0043de0290449524"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]005400720065006e0064004d006900630072006f00200043006f006d006d006f006e0020004d006f00640075006c0065 } /* FileDescription TrendMicroCommonModule */
@@ -11704,7 +11722,7 @@ rule PUA_VULN_Driver_Paragonsoftwaregmbh_Biontdrv_Paragonsystemutilities_174C {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "174c8d771d31d70fc95448e961a395f5ceb7658f0cc381a718fb3b854cde4efe"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041002000700061007200740020006f0066002000500061007200610067006f006e002000530079007300740065006d0020005500740069006c00690074006900650073 } /* FileDescription ApartofParagonSystemUtilities */
@@ -11725,7 +11743,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_5148 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "51480eebbbfb684149842c3e19a8ffbd3f71183c017e0c4bc6cf06aacf9c0292"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsNTXPIOdriver */
@@ -11747,7 +11765,7 @@ rule PUA_VULN_Driver_Biostargroup_Iodriver_Biostariodriver_1D03 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "1d0397c263d51e9fc95bcc8baf98d1a853e1c0401cd0e27c7bf5da3fba1c93a8"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049002f004f00200049006e00740065007200660061006300650020006400720069007600650072002000660069006c0065 } /* FileDescription IOInterfacedriverfile */
@@ -11769,7 +11787,7 @@ rule PUA_VULN_Driver_Avgtechnologiesczsro_Aswarpotsys_Avginternetsecuritysystem_
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e2e79f1e696f27fa70d72f97e448081b1fa14d59cbb89bb4a40428534dd5c6f6"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410056004700200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription AVGantirootkit */
@@ -11791,7 +11809,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Dcprotectsys_Dcprotectrwinxdriver_B2
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "b2247e68386c1bdfd48687105c3728ebbad672daffa91b57845b4e49693ffd71"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0044006300500072006f00740065006300740020004400720069007600650072 } /* FileDescription DcProtectDriver */
@@ -11813,7 +11831,7 @@ rule PUA_VULN_Driver_Intelcorporation_Iqvwsys_Intelriqvwsys_5F69 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5f69d6b167a1eeca3f6ac64785c3c01976ee7303171faf998d65852056988683"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0049006e00740065006c0028005200290020004e006500740077006f0072006b0020004100640061007000740065007200200044006900610067006e006f00730074006900630020004400720069007600650072 } /* FileDescription IntelRNetworkAdapterDiagnosticDriver */
@@ -11835,7 +11853,7 @@ rule PUA_VULN_Driver_Avastsoftware_Ngiodriversys_Avastng_5E3B {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "5e3bc2d7bc56971457d642458563435c7e5c9c3c7c079ef5abeb6a61fb4d52ea"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0061007600610073007400210020004e0047002000730065007400750070002000680065006c0070006500720020006400720069007600650072 } /* FileDescription avastNGsetuphelperdriver */
@@ -11857,7 +11875,7 @@ rule PUA_VULN_Driver_Windowsrwinddkprovider_Dcprotectsys_Dcprotectrwinxdriver_9D
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9dee9c925f7ea84f56d4a2ad4cf9a88c4dac27380887bf9ac73e7c8108066504"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0044006300500072006f00740065006300740020004400720069007600650072 } /* FileDescription DcProtectDriver */
@@ -11879,7 +11897,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_9679 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "9679758455c69877fce866267d60c39d108b495dca183954e4af869902965b3d"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f00770073002000780036003400200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsxIOdriver */
@@ -11901,7 +11919,7 @@ rule PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_8137 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8137ce22d0d0fc5ea5b174d6ad3506a4949506477b1325da2ccb76511f4c4f60"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0045006c0062007900430044002000570069006e0064006f007700730020004e0054002f0032003000300030002f0058005000200049002f004f0020006400720069007600650072 } /* FileDescription ElbyCDWindowsNTXPIOdriver */
@@ -11923,7 +11941,7 @@ rule PUA_VULN_Driver_Asmediatechnologyinc_Asmiosys_Asmediapcidriver_E465 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "e4658d93544f69f5cb9aa6d9fec420fecc8750cb57e1e9798da38c139d44f2eb"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]00410073006d006500640069006100200050004300490020004400720069007600650072 } /* FileDescription AsmediaPCIDriver */
@@ -11945,7 +11963,7 @@ rule PUA_VULN_Driver_Paragonsoftwaregmbh_Biontdrv_Paragonsystemutilities_FB0D {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "fb0dbc3b9c897b7571b94fb2203ffb1ac0facfe366b2cb1f91904ea5335018f0"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041002000700061007200740020006f0066002000500061007200610067006f006e002000530079007300740065006d0020005500740069006c00690074006900650073 } /* FileDescription ApartofParagonSystemUtilities */
@@ -11966,7 +11984,7 @@ rule PUA_VULN_Driver_Pulsesecurellc_Neofltr_Secureapplicationmanager_8DBC {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "8dbc28fefb8cf9377be55a7c6062988df5a24f0ff475f6dd65cf07fe5173f51d"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]004e0065007400420049004f0053002000520065006400690072006500630074006f0072 } /* FileDescription NetBIOSRedirector */
@@ -11988,7 +12006,7 @@ rule PUA_VULN_Driver_Avastsoftware_Aswarpotsys_Avastantivirus_4DA0 {
 		author = "Florian Roth"
 		reference = "https://github.com/magicsword-io/LOLDrivers"
 		hash = "4da08c0681fbe028b60a1eaf5cb8890bd3eba4d0e6a8b976495ddcd315e147ba"
-		date = "2025-03-07"
+		date = "2025-07-03"
 		score = 40
 	strings:
 		$ = { 00460069006c0065004400650073006300720069007000740069006f006e[1-8]0041007600610073007400200061006e0074006900200072006f006f0074006b00690074 } /* FileDescription Avastantirootkit */
