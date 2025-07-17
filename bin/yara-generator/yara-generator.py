@@ -150,12 +150,18 @@ def process_files(input_files, debug):
 		#pprint(header_infos)
 		if not is_duplicate:
 			header_infos.append(yara_rule_infos)
-	
+
+	# Sort lists to get the same order across different Python versions and operating systems
+	for hi in header_infos:
+		for key, value in hi.items():
+			if isinstance(value, list):
+				hi[key] = sorted(value)
+
 	return header_infos
 
 
 def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, renamed):
-    rules = list()
+    rules = dict()
 
     # Loop over the header infos 
     for hi in header_infos:
@@ -254,8 +260,9 @@ def generate_yara_rules(header_infos, yaml_infos, debug, driver_filter, strict, 
 
         Log.debug(new_rule)
         # Append rule to the list
-        rules.append(new_rule)
-    return rules
+        rules[rule_name] = new_rule
+		
+    return [rules[rule_name] for rule_name in sorted(rules)]
 
 
 
