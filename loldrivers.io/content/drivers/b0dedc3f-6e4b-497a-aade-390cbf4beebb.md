@@ -1045,7 +1045,7 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/b0dedc3f-6e4b-497a-aade-390cbf4beebb.yaml)
 
-*last_updated:* 2025-05-14
+*last_updated:* 2025-07-05
 
 {{< /column >}}
 {{< /block >}}
