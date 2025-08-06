@@ -17,7 +17,8 @@ Commands:
   Privileges: kernel
   Usecase: Elevate privileges
 Resources:
-- Research to be published
+- https://securelist.com/av-killer-exploiting-throttlestop-sys/117026/
+- https://www.cve.org/CVERecord?id=CVE-2025-7771
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
