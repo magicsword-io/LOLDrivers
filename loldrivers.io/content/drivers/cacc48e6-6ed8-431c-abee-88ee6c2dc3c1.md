@@ -134,7 +134,7 @@ sc.exe create nt2.sys binPath=C:\windows\temp \n \n \n  t2.sys type=kernel &amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/cacc48e6-6ed8-431c-abee-88ee6c2dc3c1.yaml)
 
-*last_updated:* 2025-07-05
+*last_updated:* 2025-08-13
 
 {{< /column >}}
 {{< /block >}}
