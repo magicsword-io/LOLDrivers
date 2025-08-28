@@ -278,8 +278,8 @@ def generate_string_values(version_info):
 	string_values = []
 	for field, value in version_info.items():
 		if value: # if not empty
-			field_hex = binascii.hexlify(field.encode('utf-16-be')).decode()
-			value_hex = binascii.hexlify(value.encode('utf-16-be')).decode()
+			field_hex = binascii.hexlify(field.encode('utf-16-le')).decode()
+			value_hex = binascii.hexlify(value.encode('utf-16-le')).decode()
 			search_value = "{ %s[1-8]%s } /* %s %s */" % (field_hex, value_hex, field, removeNonAsciiDrop(value))
 			string_values.append(search_value)
 	return string_values
