@@ -48,11 +48,11 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 #### YARA 🏹
 {{< details "Expand" >}}
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict.yar" "Exact Match" >}}{{< tip >}}with header and size limitation{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict.yar" "Exact Match" >}}{{< tip >}}with header and size limitation{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/other/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/other/yara-rules_vuln_drivers_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
 
 
 {{< /details >}}
@@ -64,10 +64,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 
 #### Sigma 🛡️
 {{< details "Expand" >}}
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{{< tip >}}detects loading using name only{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{{< tip >}}detects loading using name only{{< /tip >}} 
 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{{< tip >}}detects loading using hashes only{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{{< tip >}}detects loading using hashes only{{< /tip >}} 
 
 {{< /details >}}
 
@@ -78,9 +78,9 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 
 #### Sysmon 🔎
 {{< details "Expand" >}}
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
 
 {{< /details >}}
 
@@ -99,7 +99,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | mhyprot3.sys |
-| Creation Timestamp           | 2022-02-28 06:09:58 |
+| Creation Timestamp           | 2022-02-28 08:09:58 |
 | MD5                | [5cc5c26fc99175997d84fe95c61ab2c2](https://www.virustotal.com/gui/file/5cc5c26fc99175997d84fe95c61ab2c2) |
 | SHA1               | [a197a02025946aca96d6e74746f84774df31249e](https://www.virustotal.com/gui/file/a197a02025946aca96d6e74746f84774df31249e) |
 | SHA256             | [475e5016c9c0f5a127896f9179a1b1577a67b357f399ab5a1e68aab07134729a](https://www.virustotal.com/gui/file/475e5016c9c0f5a127896f9179a1b1577a67b357f399ab5a1e68aab07134729a) |
@@ -327,7 +327,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "0d424ae0be3a88ff604021ce1400f0dd",
       "Signature": "481cdcb5e99a23bce71ae7200e8e6746fd427251740a2347a3ab92d225c47059be14a0e52781a54d1415190779f0d104c386d93bbdfe4402664ded69a40ff6b870cf62e8f5514a7879367a27b7f3e7529f93a7ed439e7be7b4dd412289fb87a246034efcf4feb76477635f2352698382fa1a53ed90cc8da117730df4f36539704bf39cd67a7bda0cbc3d32d01bcbf561fc75080076bc810ef8c0e15ccfc41172e71b6449d8229a751542f52d323881daf460a2bab452fb5ce06124254fb2dfc929a8734351dabd63d61f5b9bf72e1b4f131df74a0d717e97b7f43f84ebc1e3a349a1facea7bf56cfba597661895f7ea7b48e6778f93698e1cb28da5b87a68a2f",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -343,7 +346,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "053ad4f9ee8438ef1662ab8d599213ba",
       "Signature": "6a8b477edd819b3441be8cab0c2a07d82780ad3a65ff8064c039d44788740835910a4fa5e612987547bdc39e5d61b3204a3463be9dcb5ed1ad060c89943f8471c2960f8a80faae2b2731d5a37434e47f7eeffd43d8493ad2774e3550deb0e741389d22fe70f59e343a38ed2bb62163100055042797203364fcf94121ea5be8f8a20f85b7bc2b52efd87c1b4048c154c7c5a3a40d597c4cb99780f4378d25bff9ad5a1bc5e1f0bb57249efd238973b27f3a4ca6cffa37da752eba7734e3cee24036584b4317ef7ed61e486d8a7959275d2fa28cac8980333a5e2bf5ab6e7de2adcfe2f880972405fb10dad5a67a344e97d6da961c4fd0a1ad8299fbefdc5ebe10",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -359,7 +365,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0409181b5fd5bb66755343b56f955008",
       "Signature": "3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -375,7 +384,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0aa125d6d6321b7e41e405da3697c215",
       "Signature": "719512e951875669cdefddda7caa637ab378cf06374084ef4b84bfcacf0302fdc5a7c30e20422caf77f32b1f0c215a2ab705341d6aae99f827a266bf09aa60df76a43a930ff8b2d1d87c1962e85e82251ec4ba1c7b2c21e2d65b2c1435430468b2db7502e072c798d63c64e51f4810185f8938614d62462487638c91522caf2989e5781fd60b14a580d7124770b375d59385937eb69267fb536189a8f56b96c0f458690d7cc801b1b92875b7996385228c61ca79947e59fc8c0fe36fb50126b66ca5ee875121e458609bba0c2d2b6da2c47ebbc4252b4702087c49ae13b6e17c424228c61856cf4134b6665db6747bf55633222f2236b24ba24a95d8f5a68e52",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -391,7 +403,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "611cb28a000000000026",
       "Signature": "5cf5b22d02ceed01b53512d813f7aa4014c7a15ca08a55ed7e55ea6ac457176fd04722423658efc5ac61c5f62c52ce6ae6c80d85dab334420ea40225182672b92a4ea57e4b16f2a0e40c449ce24d9af474f0f927a6699031c244654348c74869d0fc8409f286140ac22996857f11eb8713176ed3ec6bff1d578ab17b1ea5a07ce9a27a68e5fac6b161d67263fa379163835599f81d614f0c6fa3f7bcb1152acc8d85e31417ef7e49443fb022c0f0acbe2fdbe10c86b0f4585c5a10a94bcdf3448a4652083e0a6210e9459504b78b8d4b074f500db7bbe7fb8ca27878c6c53b7663b2cfe521845a66fce04c79834ecfa8ee700586587cc29cd73ca3ad3c7e76625c87d0ed7cd5c55b1421f4be75a275d2e9e15ad020307841624d6b5e6e1b1710244ad8588775d015d762bbfd185665842561977faad49df4f35d6da031c2e19e02ac3e90c3327ee832903416d08b14cf95accee58c54a265b8bfed186a57073ed3e79a4a2f081a041c49871a8ae61b08a365d81c31c50d9cbab368ddf45076160675fec403e7d13edfdc862e10027e661296534e7af3365879b12042d8963f35be3f8ef2999743f5e40ce13c68728c8d49d75a52b573fb7a35943a61b08482c04885c19732d39b725fa0d2348f7ef0467cf28c7294c707b0d7b5b230b81965f09c8327b0a0abd0a2727e050fb3aeddb95b9b42bcc32663456b86f11d4643edc8",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -424,7 +439,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2021-12-13 23:25:51 |
+| Creation Timestamp           | 2021-12-14 01:25:51 |
 | MD5                | [fa63a634189bd4d6570964e2161426b0](https://www.virustotal.com/gui/file/fa63a634189bd4d6570964e2161426b0) |
 | SHA1               | [190ec384e6eb1dafca80df05055ead620b2502ba](https://www.virustotal.com/gui/file/190ec384e6eb1dafca80df05055ead620b2502ba) |
 | SHA256             | [7fd90500b57f9ac959c87f713fe9ca59e669e6e1512f77fccb6a75cdc0dfee8e](https://www.virustotal.com/gui/file/7fd90500b57f9ac959c87f713fe9ca59e669e6e1512f77fccb6a75cdc0dfee8e) |
@@ -608,7 +623,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "0d424ae0be3a88ff604021ce1400f0dd",
       "Signature": "481cdcb5e99a23bce71ae7200e8e6746fd427251740a2347a3ab92d225c47059be14a0e52781a54d1415190779f0d104c386d93bbdfe4402664ded69a40ff6b870cf62e8f5514a7879367a27b7f3e7529f93a7ed439e7be7b4dd412289fb87a246034efcf4feb76477635f2352698382fa1a53ed90cc8da117730df4f36539704bf39cd67a7bda0cbc3d32d01bcbf561fc75080076bc810ef8c0e15ccfc41172e71b6449d8229a751542f52d323881daf460a2bab452fb5ce06124254fb2dfc929a8734351dabd63d61f5b9bf72e1b4f131df74a0d717e97b7f43f84ebc1e3a349a1facea7bf56cfba597661895f7ea7b48e6778f93698e1cb28da5b87a68a2f",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -624,7 +642,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "053ad4f9ee8438ef1662ab8d599213ba",
       "Signature": "6a8b477edd819b3441be8cab0c2a07d82780ad3a65ff8064c039d44788740835910a4fa5e612987547bdc39e5d61b3204a3463be9dcb5ed1ad060c89943f8471c2960f8a80faae2b2731d5a37434e47f7eeffd43d8493ad2774e3550deb0e741389d22fe70f59e343a38ed2bb62163100055042797203364fcf94121ea5be8f8a20f85b7bc2b52efd87c1b4048c154c7c5a3a40d597c4cb99780f4378d25bff9ad5a1bc5e1f0bb57249efd238973b27f3a4ca6cffa37da752eba7734e3cee24036584b4317ef7ed61e486d8a7959275d2fa28cac8980333a5e2bf5ab6e7de2adcfe2f880972405fb10dad5a67a344e97d6da961c4fd0a1ad8299fbefdc5ebe10",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -640,7 +661,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0409181b5fd5bb66755343b56f955008",
       "Signature": "3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -656,7 +680,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0aa125d6d6321b7e41e405da3697c215",
       "Signature": "719512e951875669cdefddda7caa637ab378cf06374084ef4b84bfcacf0302fdc5a7c30e20422caf77f32b1f0c215a2ab705341d6aae99f827a266bf09aa60df76a43a930ff8b2d1d87c1962e85e82251ec4ba1c7b2c21e2d65b2c1435430468b2db7502e072c798d63c64e51f4810185f8938614d62462487638c91522caf2989e5781fd60b14a580d7124770b375d59385937eb69267fb536189a8f56b96c0f458690d7cc801b1b92875b7996385228c61ca79947e59fc8c0fe36fb50126b66ca5ee875121e458609bba0c2d2b6da2c47ebbc4252b4702087c49ae13b6e17c424228c61856cf4134b6665db6747bf55633222f2236b24ba24a95d8f5a68e52",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -672,7 +699,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "611cb28a000000000026",
       "Signature": "5cf5b22d02ceed01b53512d813f7aa4014c7a15ca08a55ed7e55ea6ac457176fd04722423658efc5ac61c5f62c52ce6ae6c80d85dab334420ea40225182672b92a4ea57e4b16f2a0e40c449ce24d9af474f0f927a6699031c244654348c74869d0fc8409f286140ac22996857f11eb8713176ed3ec6bff1d578ab17b1ea5a07ce9a27a68e5fac6b161d67263fa379163835599f81d614f0c6fa3f7bcb1152acc8d85e31417ef7e49443fb022c0f0acbe2fdbe10c86b0f4585c5a10a94bcdf3448a4652083e0a6210e9459504b78b8d4b074f500db7bbe7fb8ca27878c6c53b7663b2cfe521845a66fce04c79834ecfa8ee700586587cc29cd73ca3ad3c7e76625c87d0ed7cd5c55b1421f4be75a275d2e9e15ad020307841624d6b5e6e1b1710244ad8588775d015d762bbfd185665842561977faad49df4f35d6da031c2e19e02ac3e90c3327ee832903416d08b14cf95accee58c54a265b8bfed186a57073ed3e79a4a2f081a041c49871a8ae61b08a365d81c31c50d9cbab368ddf45076160675fec403e7d13edfdc862e10027e661296534e7af3365879b12042d8963f35be3f8ef2999743f5e40ce13c68728c8d49d75a52b573fb7a35943a61b08482c04885c19732d39b725fa0d2348f7ef0467cf28c7294c707b0d7b5b230b81965f09c8327b0a0abd0a2727e050fb3aeddb95b9b42bcc32663456b86f11d4643edc8",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -705,7 +735,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2022-02-28 06:09:58 |
+| Creation Timestamp           | 2022-02-28 08:09:58 |
 | MD5                | [fbf729350ca08a7673b115ce9c9eb7e5](https://www.virustotal.com/gui/file/fbf729350ca08a7673b115ce9c9eb7e5) |
 | SHA1               | [5bdd44eb321557c5d3ab056959397f0048ac90e6](https://www.virustotal.com/gui/file/5bdd44eb321557c5d3ab056959397f0048ac90e6) |
 | SHA256             | [c3d479d7efd0f6b502d6829b893711bdd51aac07d66326b41ef5451bafdfcb29](https://www.virustotal.com/gui/file/c3d479d7efd0f6b502d6829b893711bdd51aac07d66326b41ef5451bafdfcb29) |
@@ -891,7 +921,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "0d424ae0be3a88ff604021ce1400f0dd",
       "Signature": "481cdcb5e99a23bce71ae7200e8e6746fd427251740a2347a3ab92d225c47059be14a0e52781a54d1415190779f0d104c386d93bbdfe4402664ded69a40ff6b870cf62e8f5514a7879367a27b7f3e7529f93a7ed439e7be7b4dd412289fb87a246034efcf4feb76477635f2352698382fa1a53ed90cc8da117730df4f36539704bf39cd67a7bda0cbc3d32d01bcbf561fc75080076bc810ef8c0e15ccfc41172e71b6449d8229a751542f52d323881daf460a2bab452fb5ce06124254fb2dfc929a8734351dabd63d61f5b9bf72e1b4f131df74a0d717e97b7f43f84ebc1e3a349a1facea7bf56cfba597661895f7ea7b48e6778f93698e1cb28da5b87a68a2f",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -907,7 +940,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "053ad4f9ee8438ef1662ab8d599213ba",
       "Signature": "6a8b477edd819b3441be8cab0c2a07d82780ad3a65ff8064c039d44788740835910a4fa5e612987547bdc39e5d61b3204a3463be9dcb5ed1ad060c89943f8471c2960f8a80faae2b2731d5a37434e47f7eeffd43d8493ad2774e3550deb0e741389d22fe70f59e343a38ed2bb62163100055042797203364fcf94121ea5be8f8a20f85b7bc2b52efd87c1b4048c154c7c5a3a40d597c4cb99780f4378d25bff9ad5a1bc5e1f0bb57249efd238973b27f3a4ca6cffa37da752eba7734e3cee24036584b4317ef7ed61e486d8a7959275d2fa28cac8980333a5e2bf5ab6e7de2adcfe2f880972405fb10dad5a67a344e97d6da961c4fd0a1ad8299fbefdc5ebe10",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -923,7 +959,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0409181b5fd5bb66755343b56f955008",
       "Signature": "3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -939,7 +978,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0aa125d6d6321b7e41e405da3697c215",
       "Signature": "719512e951875669cdefddda7caa637ab378cf06374084ef4b84bfcacf0302fdc5a7c30e20422caf77f32b1f0c215a2ab705341d6aae99f827a266bf09aa60df76a43a930ff8b2d1d87c1962e85e82251ec4ba1c7b2c21e2d65b2c1435430468b2db7502e072c798d63c64e51f4810185f8938614d62462487638c91522caf2989e5781fd60b14a580d7124770b375d59385937eb69267fb536189a8f56b96c0f458690d7cc801b1b92875b7996385228c61ca79947e59fc8c0fe36fb50126b66ca5ee875121e458609bba0c2d2b6da2c47ebbc4252b4702087c49ae13b6e17c424228c61856cf4134b6665db6747bf55633222f2236b24ba24a95d8f5a68e52",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -955,7 +997,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "611cb28a000000000026",
       "Signature": "5cf5b22d02ceed01b53512d813f7aa4014c7a15ca08a55ed7e55ea6ac457176fd04722423658efc5ac61c5f62c52ce6ae6c80d85dab334420ea40225182672b92a4ea57e4b16f2a0e40c449ce24d9af474f0f927a6699031c244654348c74869d0fc8409f286140ac22996857f11eb8713176ed3ec6bff1d578ab17b1ea5a07ce9a27a68e5fac6b161d67263fa379163835599f81d614f0c6fa3f7bcb1152acc8d85e31417ef7e49443fb022c0f0acbe2fdbe10c86b0f4585c5a10a94bcdf3448a4652083e0a6210e9459504b78b8d4b074f500db7bbe7fb8ca27878c6c53b7663b2cfe521845a66fce04c79834ecfa8ee700586587cc29cd73ca3ad3c7e76625c87d0ed7cd5c55b1421f4be75a275d2e9e15ad020307841624d6b5e6e1b1710244ad8588775d015d762bbfd185665842561977faad49df4f35d6da031c2e19e02ac3e90c3327ee832903416d08b14cf95accee58c54a265b8bfed186a57073ed3e79a4a2f081a041c49871a8ae61b08a365d81c31c50d9cbab368ddf45076160675fec403e7d13edfdc862e10027e661296534e7af3365879b12042d8963f35be3f8ef2999743f5e40ce13c68728c8d49d75a52b573fb7a35943a61b08482c04885c19732d39b725fa0d2348f7ef0467cf28c7294c707b0d7b5b230b81965f09c8327b0a0abd0a2727e050fb3aeddb95b9b42bcc32663456b86f11d4643edc8",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -988,7 +1033,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2022-05-30 11:28:46 |
+| Creation Timestamp           | 2022-05-30 13:28:46 |
 | MD5                | [766f9ea38918827df59a6aed204d2b09](https://www.virustotal.com/gui/file/766f9ea38918827df59a6aed204d2b09) |
 | SHA1               | [12154f58b68902a40a7165035d37974128deb902](https://www.virustotal.com/gui/file/12154f58b68902a40a7165035d37974128deb902) |
 | SHA256             | [24e70c87d58fa5771f02b9ddf0d8870cba6b26e35c6455a2c77f482e2080d3e9](https://www.virustotal.com/gui/file/24e70c87d58fa5771f02b9ddf0d8870cba6b26e35c6455a2c77f482e2080d3e9) |
@@ -1174,7 +1219,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "0d424ae0be3a88ff604021ce1400f0dd",
       "Signature": "481cdcb5e99a23bce71ae7200e8e6746fd427251740a2347a3ab92d225c47059be14a0e52781a54d1415190779f0d104c386d93bbdfe4402664ded69a40ff6b870cf62e8f5514a7879367a27b7f3e7529f93a7ed439e7be7b4dd412289fb87a246034efcf4feb76477635f2352698382fa1a53ed90cc8da117730df4f36539704bf39cd67a7bda0cbc3d32d01bcbf561fc75080076bc810ef8c0e15ccfc41172e71b6449d8229a751542f52d323881daf460a2bab452fb5ce06124254fb2dfc929a8734351dabd63d61f5b9bf72e1b4f131df74a0d717e97b7f43f84ebc1e3a349a1facea7bf56cfba597661895f7ea7b48e6778f93698e1cb28da5b87a68a2f",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -1190,7 +1238,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "053ad4f9ee8438ef1662ab8d599213ba",
       "Signature": "6a8b477edd819b3441be8cab0c2a07d82780ad3a65ff8064c039d44788740835910a4fa5e612987547bdc39e5d61b3204a3463be9dcb5ed1ad060c89943f8471c2960f8a80faae2b2731d5a37434e47f7eeffd43d8493ad2774e3550deb0e741389d22fe70f59e343a38ed2bb62163100055042797203364fcf94121ea5be8f8a20f85b7bc2b52efd87c1b4048c154c7c5a3a40d597c4cb99780f4378d25bff9ad5a1bc5e1f0bb57249efd238973b27f3a4ca6cffa37da752eba7734e3cee24036584b4317ef7ed61e486d8a7959275d2fa28cac8980333a5e2bf5ab6e7de2adcfe2f880972405fb10dad5a67a344e97d6da961c4fd0a1ad8299fbefdc5ebe10",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -1206,7 +1257,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0409181b5fd5bb66755343b56f955008",
       "Signature": "3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -1222,7 +1276,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0aa125d6d6321b7e41e405da3697c215",
       "Signature": "719512e951875669cdefddda7caa637ab378cf06374084ef4b84bfcacf0302fdc5a7c30e20422caf77f32b1f0c215a2ab705341d6aae99f827a266bf09aa60df76a43a930ff8b2d1d87c1962e85e82251ec4ba1c7b2c21e2d65b2c1435430468b2db7502e072c798d63c64e51f4810185f8938614d62462487638c91522caf2989e5781fd60b14a580d7124770b375d59385937eb69267fb536189a8f56b96c0f458690d7cc801b1b92875b7996385228c61ca79947e59fc8c0fe36fb50126b66ca5ee875121e458609bba0c2d2b6da2c47ebbc4252b4702087c49ae13b6e17c424228c61856cf4134b6665db6747bf55633222f2236b24ba24a95d8f5a68e52",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -1238,7 +1295,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "611cb28a000000000026",
       "Signature": "5cf5b22d02ceed01b53512d813f7aa4014c7a15ca08a55ed7e55ea6ac457176fd04722423658efc5ac61c5f62c52ce6ae6c80d85dab334420ea40225182672b92a4ea57e4b16f2a0e40c449ce24d9af474f0f927a6699031c244654348c74869d0fc8409f286140ac22996857f11eb8713176ed3ec6bff1d578ab17b1ea5a07ce9a27a68e5fac6b161d67263fa379163835599f81d614f0c6fa3f7bcb1152acc8d85e31417ef7e49443fb022c0f0acbe2fdbe10c86b0f4585c5a10a94bcdf3448a4652083e0a6210e9459504b78b8d4b074f500db7bbe7fb8ca27878c6c53b7663b2cfe521845a66fce04c79834ecfa8ee700586587cc29cd73ca3ad3c7e76625c87d0ed7cd5c55b1421f4be75a275d2e9e15ad020307841624d6b5e6e1b1710244ad8588775d015d762bbfd185665842561977faad49df4f35d6da031c2e19e02ac3e90c3327ee832903416d08b14cf95accee58c54a265b8bfed186a57073ed3e79a4a2f081a041c49871a8ae61b08a365d81c31c50d9cbab368ddf45076160675fec403e7d13edfdc862e10027e661296534e7af3365879b12042d8963f35be3f8ef2999743f5e40ce13c68728c8d49d75a52b573fb7a35943a61b08482c04885c19732d39b725fa0d2348f7ef0467cf28c7294c707b0d7b5b230b81965f09c8327b0a0abd0a2727e050fb3aeddb95b9b42bcc32663456b86f11d4643edc8",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1271,7 +1331,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2021-12-03 02:33:16 |
+| Creation Timestamp           | 2021-12-03 04:33:16 |
 | MD5                | [00f887e74faad40e6e97d9d0e9c71370](https://www.virustotal.com/gui/file/00f887e74faad40e6e97d9d0e9c71370) |
 | SHA1               | [6e58421e37c022410455b1c7b01f1e3c949df1cd](https://www.virustotal.com/gui/file/6e58421e37c022410455b1c7b01f1e3c949df1cd) |
 | SHA256             | [b617a072c578cea38c460e2851f3d122ba1b7cfa1f5ee3e9f5927663ac37af61](https://www.virustotal.com/gui/file/b617a072c578cea38c460e2851f3d122ba1b7cfa1f5ee3e9f5927663ac37af61) |
@@ -1497,7 +1557,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "0d424ae0be3a88ff604021ce1400f0dd",
       "Signature": "481cdcb5e99a23bce71ae7200e8e6746fd427251740a2347a3ab92d225c47059be14a0e52781a54d1415190779f0d104c386d93bbdfe4402664ded69a40ff6b870cf62e8f5514a7879367a27b7f3e7529f93a7ed439e7be7b4dd412289fb87a246034efcf4feb76477635f2352698382fa1a53ed90cc8da117730df4f36539704bf39cd67a7bda0cbc3d32d01bcbf561fc75080076bc810ef8c0e15ccfc41172e71b6449d8229a751542f52d323881daf460a2bab452fb5ce06124254fb2dfc929a8734351dabd63d61f5b9bf72e1b4f131df74a0d717e97b7f43f84ebc1e3a349a1facea7bf56cfba597661895f7ea7b48e6778f93698e1cb28da5b87a68a2f",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -1513,7 +1576,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "053ad4f9ee8438ef1662ab8d599213ba",
       "Signature": "6a8b477edd819b3441be8cab0c2a07d82780ad3a65ff8064c039d44788740835910a4fa5e612987547bdc39e5d61b3204a3463be9dcb5ed1ad060c89943f8471c2960f8a80faae2b2731d5a37434e47f7eeffd43d8493ad2774e3550deb0e741389d22fe70f59e343a38ed2bb62163100055042797203364fcf94121ea5be8f8a20f85b7bc2b52efd87c1b4048c154c7c5a3a40d597c4cb99780f4378d25bff9ad5a1bc5e1f0bb57249efd238973b27f3a4ca6cffa37da752eba7734e3cee24036584b4317ef7ed61e486d8a7959275d2fa28cac8980333a5e2bf5ab6e7de2adcfe2f880972405fb10dad5a67a344e97d6da961c4fd0a1ad8299fbefdc5ebe10",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -1529,7 +1595,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0409181b5fd5bb66755343b56f955008",
       "Signature": "3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -1545,7 +1614,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0aa125d6d6321b7e41e405da3697c215",
       "Signature": "719512e951875669cdefddda7caa637ab378cf06374084ef4b84bfcacf0302fdc5a7c30e20422caf77f32b1f0c215a2ab705341d6aae99f827a266bf09aa60df76a43a930ff8b2d1d87c1962e85e82251ec4ba1c7b2c21e2d65b2c1435430468b2db7502e072c798d63c64e51f4810185f8938614d62462487638c91522caf2989e5781fd60b14a580d7124770b375d59385937eb69267fb536189a8f56b96c0f458690d7cc801b1b92875b7996385228c61ca79947e59fc8c0fe36fb50126b66ca5ee875121e458609bba0c2d2b6da2c47ebbc4252b4702087c49ae13b6e17c424228c61856cf4134b6665db6747bf55633222f2236b24ba24a95d8f5a68e52",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -1561,7 +1633,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "611cb28a000000000026",
       "Signature": "5cf5b22d02ceed01b53512d813f7aa4014c7a15ca08a55ed7e55ea6ac457176fd04722423658efc5ac61c5f62c52ce6ae6c80d85dab334420ea40225182672b92a4ea57e4b16f2a0e40c449ce24d9af474f0f927a6699031c244654348c74869d0fc8409f286140ac22996857f11eb8713176ed3ec6bff1d578ab17b1ea5a07ce9a27a68e5fac6b161d67263fa379163835599f81d614f0c6fa3f7bcb1152acc8d85e31417ef7e49443fb022c0f0acbe2fdbe10c86b0f4585c5a10a94bcdf3448a4652083e0a6210e9459504b78b8d4b074f500db7bbe7fb8ca27878c6c53b7663b2cfe521845a66fce04c79834ecfa8ee700586587cc29cd73ca3ad3c7e76625c87d0ed7cd5c55b1421f4be75a275d2e9e15ad020307841624d6b5e6e1b1710244ad8588775d015d762bbfd185665842561977faad49df4f35d6da031c2e19e02ac3e90c3327ee832903416d08b14cf95accee58c54a265b8bfed186a57073ed3e79a4a2f081a041c49871a8ae61b08a365d81c31c50d9cbab368ddf45076160675fec403e7d13edfdc862e10027e661296534e7af3365879b12042d8963f35be3f8ef2999743f5e40ce13c68728c8d49d75a52b573fb7a35943a61b08482c04885c19732d39b725fa0d2348f7ef0467cf28c7294c707b0d7b5b230b81965f09c8327b0a0abd0a2727e050fb3aeddb95b9b42bcc32663456b86f11d4643edc8",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1594,7 +1669,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2022-05-30 11:28:46 |
+| Creation Timestamp           | 2022-05-30 13:28:46 |
 | MD5                | [5c9f240e0b83df758993837d18859cbe](https://www.virustotal.com/gui/file/5c9f240e0b83df758993837d18859cbe) |
 | SHA1               | [4075de7d7d2169d650c5ccede8251463913511e6](https://www.virustotal.com/gui/file/4075de7d7d2169d650c5ccede8251463913511e6) |
 | SHA256             | [b531f0a11ca481d5125c93c977325e135a04058019f939169ce3cdedaddd422d](https://www.virustotal.com/gui/file/b531f0a11ca481d5125c93c977325e135a04058019f939169ce3cdedaddd422d) |
@@ -1780,7 +1855,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "0d424ae0be3a88ff604021ce1400f0dd",
       "Signature": "481cdcb5e99a23bce71ae7200e8e6746fd427251740a2347a3ab92d225c47059be14a0e52781a54d1415190779f0d104c386d93bbdfe4402664ded69a40ff6b870cf62e8f5514a7879367a27b7f3e7529f93a7ed439e7be7b4dd412289fb87a246034efcf4feb76477635f2352698382fa1a53ed90cc8da117730df4f36539704bf39cd67a7bda0cbc3d32d01bcbf561fc75080076bc810ef8c0e15ccfc41172e71b6449d8229a751542f52d323881daf460a2bab452fb5ce06124254fb2dfc929a8734351dabd63d61f5b9bf72e1b4f131df74a0d717e97b7f43f84ebc1e3a349a1facea7bf56cfba597661895f7ea7b48e6778f93698e1cb28da5b87a68a2f",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -1796,7 +1874,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "053ad4f9ee8438ef1662ab8d599213ba",
       "Signature": "6a8b477edd819b3441be8cab0c2a07d82780ad3a65ff8064c039d44788740835910a4fa5e612987547bdc39e5d61b3204a3463be9dcb5ed1ad060c89943f8471c2960f8a80faae2b2731d5a37434e47f7eeffd43d8493ad2774e3550deb0e741389d22fe70f59e343a38ed2bb62163100055042797203364fcf94121ea5be8f8a20f85b7bc2b52efd87c1b4048c154c7c5a3a40d597c4cb99780f4378d25bff9ad5a1bc5e1f0bb57249efd238973b27f3a4ca6cffa37da752eba7734e3cee24036584b4317ef7ed61e486d8a7959275d2fa28cac8980333a5e2bf5ab6e7de2adcfe2f880972405fb10dad5a67a344e97d6da961c4fd0a1ad8299fbefdc5ebe10",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -1812,7 +1893,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "0409181b5fd5bb66755343b56f955008",
       "Signature": "3eec0d5a24b3f322d115c82c7c252976a81d5d1c2d3a1ac4ef3061d77e0b60fdc33d0fc4af8bfdef2adf205537b0e1f6d192750f51b46ea58e5ae25e24814e10a4ee3f718e630e134badd75f4479f33614068af79c464e5cff90b11b070e9115fbbaafb551c28d24ae24c6c7272aa129281a3a7128023c2e91a3c02511e29c1447a17a6868af9ba75c205cd971b10c8fbba8f8c512689fcf40cb4044a513f0e6640c25084232b2368a2402fe2f727e1cd7494596e8591de9fa74646bb2eb6643dab3b08cd5e90dddf60120ce9931633d081a18b3819b4fc6931006fc0781fa8bdaf98249f7626ea153fa129418852e9291ea686c4432b266a1e718a49a6451ef",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -1828,7 +1912,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0aa125d6d6321b7e41e405da3697c215",
       "Signature": "719512e951875669cdefddda7caa637ab378cf06374084ef4b84bfcacf0302fdc5a7c30e20422caf77f32b1f0c215a2ab705341d6aae99f827a266bf09aa60df76a43a930ff8b2d1d87c1962e85e82251ec4ba1c7b2c21e2d65b2c1435430468b2db7502e072c798d63c64e51f4810185f8938614d62462487638c91522caf2989e5781fd60b14a580d7124770b375d59385937eb69267fb536189a8f56b96c0f458690d7cc801b1b92875b7996385228c61ca79947e59fc8c0fe36fb50126b66ca5ee875121e458609bba0c2d2b6da2c47ebbc4252b4702087c49ae13b6e17c424228c61856cf4134b6665db6747bf55633222f2236b24ba24a95d8f5a68e52",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -1844,7 +1931,10 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "611cb28a000000000026",
       "Signature": "5cf5b22d02ceed01b53512d813f7aa4014c7a15ca08a55ed7e55ea6ac457176fd04722423658efc5ac61c5f62c52ce6ae6c80d85dab334420ea40225182672b92a4ea57e4b16f2a0e40c449ce24d9af474f0f927a6699031c244654348c74869d0fc8409f286140ac22996857f11eb8713176ed3ec6bff1d578ab17b1ea5a07ce9a27a68e5fac6b161d67263fa379163835599f81d614f0c6fa3f7bcb1152acc8d85e31417ef7e49443fb022c0f0acbe2fdbe10c86b0f4585c5a10a94bcdf3448a4652083e0a6210e9459504b78b8d4b074f500db7bbe7fb8ca27878c6c53b7663b2cfe521845a66fce04c79834ecfa8ee700586587cc29cd73ca3ad3c7e76625c87d0ed7cd5c55b1421f4be75a275d2e9e15ad020307841624d6b5e6e1b1710244ad8588775d015d762bbfd185665842561977faad49df4f35d6da031c2e19e02ac3e90c3327ee832903416d08b14cf95accee58c54a265b8bfed186a57073ed3e79a4a2f081a041c49871a8ae61b08a365d81c31c50d9cbab368ddf45076160675fec403e7d13edfdc862e10027e661296534e7af3365879b12042d8963f35be3f8ef2999743f5e40ce13c68728c8d49d75a52b573fb7a35943a61b08482c04885c19732d39b725fa0d2348f7ef0467cf28c7294c707b0d7b5b230b81965f09c8327b0a0abd0a2727e050fb3aeddb95b9b42bcc32663456b86f11d4643edc8",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1877,9 +1967,9 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/2aa003cd-5f36-46a6-ae3d-f5afc2c8baa3.yaml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/2aa003cd-5f36-46a6-ae3d-f5afc2c8baa3.yaml)
 
-*last_updated:* 2025-03-26
+*last_updated:* 2025-08-28
 
 {{< /column >}}
 {{< /block >}}

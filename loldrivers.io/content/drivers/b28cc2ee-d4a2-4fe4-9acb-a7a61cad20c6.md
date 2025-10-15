@@ -48,11 +48,11 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 #### YARA 🏹
 {{< details "Expand" >}}
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict.yar" "Exact Match" >}}{{< tip >}}with header and size limitation{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict.yar" "Exact Match" >}}{{< tip >}}with header and size limitation{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/other/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/other/yara-rules_vuln_drivers_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
 
 
 {{< /details >}}
@@ -64,10 +64,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 
 #### Sigma 🛡️
 {{< details "Expand" >}}
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{{< tip >}}detects loading using name only{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{{< tip >}}detects loading using name only{{< /tip >}} 
 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{{< tip >}}detects loading using hashes only{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{{< tip >}}detects loading using hashes only{{< /tip >}} 
 
 {{< /details >}}
 
@@ -78,9 +78,9 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 
 #### Sysmon 🔎
 {{< details "Expand" >}}
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
 
 {{< /details >}}
 
@@ -99,7 +99,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2015-05-11 01:36:47 |
+| Creation Timestamp           | 2015-05-11 03:36:47 |
 | MD5                | [33b3842172f21ba22982bfb6bffbda27](https://www.virustotal.com/gui/file/33b3842172f21ba22982bfb6bffbda27) |
 | SHA1               | [c201d5d0ab945095c3b1a356b3b228af1aa652fc](https://www.virustotal.com/gui/file/c201d5d0ab945095c3b1a356b3b228af1aa652fc) |
 | SHA256             | [9d530642aeb6524691d06b9e02a84e3487c9cdd86c264b105035d925c984823a](https://www.virustotal.com/gui/file/9d530642aeb6524691d06b9e02a84e3487c9cdd86c264b105035d925c984823a) |
@@ -213,7 +213,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "57c76f616cbd9aeb18b22862a09d94dc",
       "Signature": "a13032767aa0a7cf1bc7a580da80f4d20642b0b4b8160fc23d16d38d05fb4f65e792f2e47e29b3c720e247248144275fb0b63e8cfde47b3e15019edb71e9c59f88f2455bbf111dae971157ac862767d607307491183199c65837c588ca898d4019d0b5cc09c34c73ed5500f4158a5522b7f53d4e334d6af3d69915f55b688f5d8956d7048b19a7cf20c571e79df0e13af35b33796d0bff926814d3e8d984b9228db9b3ef9be929d62a1cca4c1e0c50e5bc8525d5431f0e380a7b46166def3b594ea0f73e2e8bb3f9af2a044ccf888e6b23185047d87fd349ed4a93a9d1a639c4122714c4046b4c6f2eb8cc667ae78ecbee2e477affffcb16f5e4a34a72dc1946",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -229,7 +232,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "611993e400000000001c",
       "Signature": "812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -245,7 +251,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "5200e5aa2556fc1a86ed96c9d44b33c7",
       "Signature": "5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -278,7 +287,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2017-06-29 01:22:02 |
+| Creation Timestamp           | 2017-06-29 03:22:02 |
 | MD5                | [e626956c883c7ff3aeb0414570135a58](https://www.virustotal.com/gui/file/e626956c883c7ff3aeb0414570135a58) |
 | SHA1               | [70bb3b831880e058524735b14f2a0f1a72916a4c](https://www.virustotal.com/gui/file/70bb3b831880e058524735b14f2a0f1a72916a4c) |
 | SHA256             | [786f0ba14567a7e19192645ad4e40bee6df259abf2fbdfda35b6a38f8493d6cc](https://www.virustotal.com/gui/file/786f0ba14567a7e19192645ad4e40bee6df259abf2fbdfda35b6a38f8493d6cc) |
@@ -393,7 +402,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "57c76f616cbd9aeb18b22862a09d94dc",
       "Signature": "a13032767aa0a7cf1bc7a580da80f4d20642b0b4b8160fc23d16d38d05fb4f65e792f2e47e29b3c720e247248144275fb0b63e8cfde47b3e15019edb71e9c59f88f2455bbf111dae971157ac862767d607307491183199c65837c588ca898d4019d0b5cc09c34c73ed5500f4158a5522b7f53d4e334d6af3d69915f55b688f5d8956d7048b19a7cf20c571e79df0e13af35b33796d0bff926814d3e8d984b9228db9b3ef9be929d62a1cca4c1e0c50e5bc8525d5431f0e380a7b46166def3b594ea0f73e2e8bb3f9af2a044ccf888e6b23185047d87fd349ed4a93a9d1a639c4122714c4046b4c6f2eb8cc667ae78ecbee2e477affffcb16f5e4a34a72dc1946",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -409,7 +421,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "611993e400000000001c",
       "Signature": "812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -425,7 +440,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "5200e5aa2556fc1a86ed96c9d44b33c7",
       "Signature": "5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -458,7 +476,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2017-06-29 01:21:54 |
+| Creation Timestamp           | 2017-06-29 03:21:54 |
 | MD5                | [9e0af1fe4d6dd2ca4721810ed1c930d6](https://www.virustotal.com/gui/file/9e0af1fe4d6dd2ca4721810ed1c930d6) |
 | SHA1               | [5b4619596c89ed17ccbe92fd5c0a823033f2f1e1](https://www.virustotal.com/gui/file/5b4619596c89ed17ccbe92fd5c0a823033f2f1e1) |
 | SHA256             | [48b1344e45e4de4dfb74ef918af5e0e403001c9061018e703261bbd72dc30548](https://www.virustotal.com/gui/file/48b1344e45e4de4dfb74ef918af5e0e403001c9061018e703261bbd72dc30548) |
@@ -598,7 +616,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "57c76f616cbd9aeb18b22862a09d94dc",
       "Signature": "a13032767aa0a7cf1bc7a580da80f4d20642b0b4b8160fc23d16d38d05fb4f65e792f2e47e29b3c720e247248144275fb0b63e8cfde47b3e15019edb71e9c59f88f2455bbf111dae971157ac862767d607307491183199c65837c588ca898d4019d0b5cc09c34c73ed5500f4158a5522b7f53d4e334d6af3d69915f55b688f5d8956d7048b19a7cf20c571e79df0e13af35b33796d0bff926814d3e8d984b9228db9b3ef9be929d62a1cca4c1e0c50e5bc8525d5431f0e380a7b46166def3b594ea0f73e2e8bb3f9af2a044ccf888e6b23185047d87fd349ed4a93a9d1a639c4122714c4046b4c6f2eb8cc667ae78ecbee2e477affffcb16f5e4a34a72dc1946",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -614,7 +635,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "611993e400000000001c",
       "Signature": "812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -630,7 +654,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "5200e5aa2556fc1a86ed96c9d44b33c7",
       "Signature": "5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -663,7 +690,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2017-06-29 01:22:02 |
+| Creation Timestamp           | 2017-06-29 03:22:02 |
 | MD5                | [da8437200af5f3f790e301b9958993d2](https://www.virustotal.com/gui/file/da8437200af5f3f790e301b9958993d2) |
 | SHA1               | [ce31292b05c0ae1dc639a6ee95bb3bc7350f2aaf](https://www.virustotal.com/gui/file/ce31292b05c0ae1dc639a6ee95bb3bc7350f2aaf) |
 | SHA256             | [87aae726bf7104aac8c8f566ea98f2b51a2bfb6097b6fc8aa1f70adeb4681e1b](https://www.virustotal.com/gui/file/87aae726bf7104aac8c8f566ea98f2b51a2bfb6097b6fc8aa1f70adeb4681e1b) |
@@ -806,7 +833,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "57c76f616cbd9aeb18b22862a09d94dc",
       "Signature": "a13032767aa0a7cf1bc7a580da80f4d20642b0b4b8160fc23d16d38d05fb4f65e792f2e47e29b3c720e247248144275fb0b63e8cfde47b3e15019edb71e9c59f88f2455bbf111dae971157ac862767d607307491183199c65837c588ca898d4019d0b5cc09c34c73ed5500f4158a5522b7f53d4e334d6af3d69915f55b688f5d8956d7048b19a7cf20c571e79df0e13af35b33796d0bff926814d3e8d984b9228db9b3ef9be929d62a1cca4c1e0c50e5bc8525d5431f0e380a7b46166def3b594ea0f73e2e8bb3f9af2a044ccf888e6b23185047d87fd349ed4a93a9d1a639c4122714c4046b4c6f2eb8cc667ae78ecbee2e477affffcb16f5e4a34a72dc1946",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -822,7 +852,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "611993e400000000001c",
       "Signature": "812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -838,7 +871,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "5200e5aa2556fc1a86ed96c9d44b33c7",
       "Signature": "5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -871,7 +907,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2015-05-11 01:36:54 |
+| Creation Timestamp           | 2015-05-11 03:36:54 |
 | MD5                | [4cee9945f9a3e8f2433f5aa8c58671fb](https://www.virustotal.com/gui/file/4cee9945f9a3e8f2433f5aa8c58671fb) |
 | SHA1               | [b314742af197a786218c6dd704b438469445eefa](https://www.virustotal.com/gui/file/b314742af197a786218c6dd704b438469445eefa) |
 | SHA256             | [5e27fe26110d2b9f6c2bad407d3d0611356576b531564f75ff96f9f72d5fcae4](https://www.virustotal.com/gui/file/5e27fe26110d2b9f6c2bad407d3d0611356576b531564f75ff96f9f72d5fcae4) |
@@ -988,7 +1024,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "57c76f616cbd9aeb18b22862a09d94dc",
       "Signature": "a13032767aa0a7cf1bc7a580da80f4d20642b0b4b8160fc23d16d38d05fb4f65e792f2e47e29b3c720e247248144275fb0b63e8cfde47b3e15019edb71e9c59f88f2455bbf111dae971157ac862767d607307491183199c65837c588ca898d4019d0b5cc09c34c73ed5500f4158a5522b7f53d4e334d6af3d69915f55b688f5d8956d7048b19a7cf20c571e79df0e13af35b33796d0bff926814d3e8d984b9228db9b3ef9be929d62a1cca4c1e0c50e5bc8525d5431f0e380a7b46166def3b594ea0f73e2e8bb3f9af2a044ccf888e6b23185047d87fd349ed4a93a9d1a639c4122714c4046b4c6f2eb8cc667ae78ecbee2e477affffcb16f5e4a34a72dc1946",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1004,7 +1043,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "611993e400000000001c",
       "Signature": "812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1020,7 +1062,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "5200e5aa2556fc1a86ed96c9d44b33c7",
       "Signature": "5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1053,7 +1098,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2017-06-29 01:21:54 |
+| Creation Timestamp           | 2017-06-29 03:21:54 |
 | MD5                | [1762105b28eb90d19e9ab3acde16ead6](https://www.virustotal.com/gui/file/1762105b28eb90d19e9ab3acde16ead6) |
 | SHA1               | [20cf02c95e329cf2fd4563cddcbd434aad81ccb4](https://www.virustotal.com/gui/file/20cf02c95e329cf2fd4563cddcbd434aad81ccb4) |
 | SHA256             | [daf549a7080d384ba99d1b5bd2383dbb1aa640f7ea3a216df1f08981508155f5](https://www.virustotal.com/gui/file/daf549a7080d384ba99d1b5bd2383dbb1aa640f7ea3a216df1f08981508155f5) |
@@ -1165,7 +1210,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "57c76f616cbd9aeb18b22862a09d94dc",
       "Signature": "a13032767aa0a7cf1bc7a580da80f4d20642b0b4b8160fc23d16d38d05fb4f65e792f2e47e29b3c720e247248144275fb0b63e8cfde47b3e15019edb71e9c59f88f2455bbf111dae971157ac862767d607307491183199c65837c588ca898d4019d0b5cc09c34c73ed5500f4158a5522b7f53d4e334d6af3d69915f55b688f5d8956d7048b19a7cf20c571e79df0e13af35b33796d0bff926814d3e8d984b9228db9b3ef9be929d62a1cca4c1e0c50e5bc8525d5431f0e380a7b46166def3b594ea0f73e2e8bb3f9af2a044ccf888e6b23185047d87fd349ed4a93a9d1a639c4122714c4046b4c6f2eb8cc667ae78ecbee2e477affffcb16f5e4a34a72dc1946",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1181,7 +1229,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "611993e400000000001c",
       "Signature": "812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1197,7 +1248,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "5200e5aa2556fc1a86ed96c9d44b33c7",
       "Signature": "5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1230,7 +1284,7 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | WiseUnlo.sys |
-| Creation Timestamp           | 2017-06-29 01:21:54 |
+| Creation Timestamp           | 2017-06-29 03:21:54 |
 | MD5                | [356bda2bf0f6899a2c08b2da3ec69f13](https://www.virustotal.com/gui/file/356bda2bf0f6899a2c08b2da3ec69f13) |
 | SHA1               | [b9807b8840327c6d7fbdde45fc27de921f1f1a82](https://www.virustotal.com/gui/file/b9807b8840327c6d7fbdde45fc27de921f1f1a82) |
 | SHA256             | [358ac54be252673841a1d65bfc2fb6d549c1a4c877fa7f5e1bfa188f30375d69](https://www.virustotal.com/gui/file/358ac54be252673841a1d65bfc2fb6d549c1a4c877fa7f5e1bfa188f30375d69) |
@@ -1342,7 +1396,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 {
   "Certificates": [
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "57c76f616cbd9aeb18b22862a09d94dc",
       "Signature": "a13032767aa0a7cf1bc7a580da80f4d20642b0b4b8160fc23d16d38d05fb4f65e792f2e47e29b3c720e247248144275fb0b63e8cfde47b3e15019edb71e9c59f88f2455bbf111dae971157ac862767d607307491183199c65837c588ca898d4019d0b5cc09c34c73ed5500f4158a5522b7f53d4e334d6af3d69915f55b688f5d8956d7048b19a7cf20c571e79df0e13af35b33796d0bff926814d3e8d984b9228db9b3ef9be929d62a1cca4c1e0c50e5bc8525d5431f0e380a7b46166def3b594ea0f73e2e8bb3f9af2a044ccf888e6b23185047d87fd349ed4a93a9d1a639c4122714c4046b4c6f2eb8cc667ae78ecbee2e477affffcb16f5e4a34a72dc1946",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1358,7 +1415,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "611993e400000000001c",
       "Signature": "812a82168c34672be503eb347b8ca2a3508af45586f11e8c8eae7dee0319ce72951848ad6211fd20fd3f4706015ae2e06f8c152c4e3c6a506c0b36a3cf7a0d9c42bc5cf819d560e369e6e22341678c6883762b8f93a32ab57fbe59fba9c9b2268fcaa2f3821b983e919527978661ee5b5d076bcd86a8e26580a8e215e2b2be23056aba0cf347934daca48c077939c061123a050d89a3ec9f578984fbecca7c47661491d8b60f195de6b84aacbc47c8714396e63220a5dc7786fd3ce38b71db7b9b03fcb71d3264eb1652a043a3fa2ead59924e7cc7f233424838513a7c38c71b242228401e1a461f17db18f7f027356cb863d9cdb9645d2ba55eefc629b4f2c7f821cc04ba57fd01b6abc667f9e7d3997ff4f522fa72f5fdff3a1c423aa1f98018a5ee8d1cd4669e4501feaaeefffb178f30f7f1cd29c59decb5d549003d85b8cbbb933a276a49c030ae66c9f723283276f9a48356c848ce5a96aaa0cc0cc47fb48e97af6de35427c39f86c0d6e473089705dbd054625e0348c2d59f7fa7668cd09db04fd4d3985f4b7ac97fb22952d01280c70f54b61e67cdc6a06c110384d34875e72afeb03b6e0a3aa66b769905a3f177686133144706fc537f52bd92145c4a246a678caf8d90aad0f679211b93267cc3ce1ebd883892ae45c6196a4950b305f8ae59378a6a250394b1598150e8ba8380b72335f476b9671d5918ad208d94",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1374,7 +1434,10 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "5200e5aa2556fc1a86ed96c9d44b33c7",
       "Signature": "5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1407,9 +1470,9 @@ sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel &amp
 
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/b28cc2ee-d4a2-4fe4-9acb-a7a61cad20c6.yaml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/b28cc2ee-d4a2-4fe4-9acb-a7a61cad20c6.yaml)
 
-*last_updated:* 2025-03-26
+*last_updated:* 2025-08-28
 
 {{< /column >}}
 {{< /block >}}

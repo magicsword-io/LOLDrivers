@@ -48,11 +48,11 @@ sc.exe create stdcdrvws64sys binPath= C:\windows\temp\stdcdrvws64sys.sys type=ke
 #### YARA 🏹
 {{< details "Expand" >}}
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict.yar" "Exact Match" >}}{{< tip >}}with header and size limitation{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict.yar" "Exact Match" >}}{{< tip >}}with header and size limitation{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/other/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/other/yara-rules_vuln_drivers_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
 
 
 {{< /details >}}
@@ -64,10 +64,10 @@ sc.exe create stdcdrvws64sys binPath= C:\windows\temp\stdcdrvws64sys.sys type=ke
 
 #### Sigma 🛡️
 {{< details "Expand" >}}
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{{< tip >}}detects loading using name only{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{{< tip >}}detects loading using name only{{< /tip >}} 
 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{{< tip >}}detects loading using hashes only{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{{< tip >}}detects loading using hashes only{{< /tip >}} 
 
 {{< /details >}}
 
@@ -78,9 +78,9 @@ sc.exe create stdcdrvws64sys binPath= C:\windows\temp\stdcdrvws64sys.sys type=ke
 
 #### Sysmon 🔎
 {{< details "Expand" >}}
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
 
-{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
 
 {{< /details >}}
 
@@ -99,7 +99,7 @@ sc.exe create stdcdrvws64sys binPath= C:\windows\temp\stdcdrvws64sys.sys type=ke
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2010-11-10 17:06:03 |
+| Creation Timestamp           | 2010-11-10 19:06:03 |
 | MD5                | [003dc41d148ec3286dc7df404ba3f2aa](https://www.virustotal.com/gui/file/003dc41d148ec3286dc7df404ba3f2aa) |
 | SHA1               | [948fa3149742f73bf3089893407df1b20f78a563](https://www.virustotal.com/gui/file/948fa3149742f73bf3089893407df1b20f78a563) |
 | SHA256             | [70afdc0e11db840d5367afe53c35d9642c1cf616c7832ab283781d085988e505](https://www.virustotal.com/gui/file/70afdc0e11db840d5367afe53c35d9642c1cf616c7832ab283781d085988e505) |
@@ -253,7 +253,10 @@ sc.exe create stdcdrvws64sys binPath= C:\windows\temp\stdcdrvws64sys.sys type=ke
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "05b0ff",
       "Signature": "131038ada454a5489545b02d3772c09f9ed8ef8f0bfb9096d2b6177951cab3df067ebdb4e9083f84a00c939fb31ca86c8acf2deef99012f0f83a26d773810e9fc4319259d4282541f555f1ca3d993dda64c8d21864223209092d1de331fafdd347d764a8f95dea8227e24fd2612124611d54263e145964b098d5f3a7c3aead50",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -269,7 +272,10 @@ sc.exe create stdcdrvws64sys binPath= C:\windows\temp\stdcdrvws64sys.sys type=ke
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "3825d7faf861af9ef490e726b5d65ad5",
       "Signature": "50c54bc82480dfe40d24c2de1ab1a102a1a6822d0c831581370a820e2cb05a1761b5d805fe88dbf19191b3561a40a6eb92be3839b07536743a984fe437ba9989ca95421db0b9c7a08d57e0fad5640442354e01d133a217c84daa27c7f2e1864c02384d8378c6fc53e0ebe00687dda4969e5e0c98e2a5bebf8285c360e1dfad28d8c7a54b64dac71b5bbdac3908d53822a1338b2f8a9aebbc07213f44410907b5651c24bc48d34480eba1cfc902b414cf54c716a3805cf9793e5d727d88179e2c43a2ca53ce7d3df62a3ab84f9400a56d0a835df95e53f418b3570f70c3fbf5ad95a00e17dec4168060c90f2b6e8604f1ebf47827d105c5ee345b5eb94932f233",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -285,7 +291,10 @@ sc.exe create stdcdrvws64sys binPath= C:\windows\temp\stdcdrvws64sys.sys type=ke
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "47bf1995df8d524643f7db6d480d31a4",
       "Signature": "4a6bf9ea58c2441c318979992b96bf82ac01d61c4ccdb08a586edf0829a35ec8ca9313e704520def47272f0038b0e4c9934e9ad4226215f73f37214f703180f18b3887b3e8e89700fecf55964e24d2a9274e7aaeb76141f32acee7c9d95eddbb2b853eb59db5d9e157ffbeb4c57ef5cf0c9ef097fe2bd33b521b1b3827f73f4a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -301,7 +310,10 @@ sc.exe create stdcdrvws64sys binPath= C:\windows\temp\stdcdrvws64sys.sys type=ke
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610bdc8f00000000001a",
       "Signature": "87a40f6b55916248ff54811ccf5db6c5a514aa671df485f6860d38b31c8d22ce7c867946fb71e16114d0ed4e46a48bca64654094f92ad7870ca9b7bedcc40bbd09c106eb9530841b9d8de7bc70c6f86539c4e5c4e65c8fcda130baef065e555290edd8587f15142ecc21a593dab8508d805e6e22a70fde8093add71d24b02aa2f4f20b98750131cc69bc359b3d13662f21bde54ec3639cc8518d59f5b600937ef10c35b0f4180dbfa7bdb2aae16b9f3ce6bb41b5d904e7c8a63abf8a5bdcaa9a3cd2c8dfcb1774163d78470b4c108e406616a0f300ede034998af0f9460ff27fbf202c972616d59e81da94a6dc61c8f18e092d4e32d03df682267d91d7a6c67bc1311d210ed4a342c1b4dfc0446b4f2aeebb29d62787b0a450ae1a9ab5f996f4ccabe52b3df166e2d5e1c3f0c687b659536638026e6194df1563aa415052f9bb64dc95e05b6c2aacfed6e603c21ff65557fe7e813fcb5a0bc1029cac84e47cd3f4c25a17c312706009ec82e5eccdd0b2106d69868c8da60e0416c57164ebd95bb8b08cfc32427e60846f655b7244272b846181f461d50fd51dbc05a27a5f937f26d1c8b3afa0190723e43e225d32d14a0fcee7b72a5c7b6e1c57126864e8337e8c501340a487b0d3a69b1eacbd3d7812bc52af09e0bab0508e5c81f98383af1482f50a6d035721bb9ac32e66fb04215b0a120fc1c907d63cecabf9a52f90883a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -317,7 +329,10 @@ sc.exe create stdcdrvws64sys binPath= C:\windows\temp\stdcdrvws64sys.sys type=ke
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "292cfc6e000100005eb6",
       "Signature": "757255ea1e69c1cfe215f84e34a2c1081855b9bcea4dda8e7bde4ad32c4e8a2ff39a72d2a5526ab1d78a05a853fd1dafc421d1ae9458fa32ece72f28b95e00b1a12c95692122857adcb3a8b16de609c0f52bd70bc2f2bb999f57f9cecd82ce43d89c8fcea47d5c418d32d77c3df300ebf8823c6a6c6543f3b5b2159dca614c0d6fd3bcedd53e541479925ce71689397f7e69078d3ee1697bee9224507e7e21ee3f80cf44668538220f4c0dac90125ff3d7f4c02335bf0fde1d2a6c81a3480abbc4a57bc6ddfcd2821bc09c5198a5cc6c972427e740b82bceb91eef73b6e8f0dbe9c532eeaeb53efe09fbb47dd208e3ac3fb8414bbdd793f77bd1a783ee3edc3a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -333,7 +348,10 @@ sc.exe create stdcdrvws64sys binPath= C:\windows\temp\stdcdrvws64sys.sys type=ke
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "61208a62000000000008",
       "Signature": "b1b50107721550857ca312ab4c55431eea09263ec21ccc7c527aa35ba3d76c0feeb16d3eb9253fa8620a4802d7c4b185de509bb570286aa5bdb65396cc033ede690716e5bcde7ee7d6bc0ea5836d38f01f28733063feafb93f936962b50ef233a63788d38df26adc4959ef2156a72eeb077566fda37a01362a59f31b4bfc5f87e242c661f776ba1498c248d3f699247b0bb636e316736c1c336b2595f5bf194cefc2dbd618ec91310d3e685b55b7d38f98bf6469e1bf8b6623c4193c236d71e81726b7e1465d83f5b5a975338fad688b0d4ab3cb567a28bed370e4bf3c297c4470895e43dabbfb614d00a92280dadbe73edd703efa04537c0438b2f4cedbad0d",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -366,9 +384,9 @@ sc.exe create stdcdrvws64sys binPath= C:\windows\temp\stdcdrvws64sys.sys type=ke
 
 
 
-[*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/dc3fdbd3-601a-4d2a-bf34-d2e84c6ff1d3.yaml)
+[*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/dc3fdbd3-601a-4d2a-bf34-d2e84c6ff1d3.yaml)
 
-*last_updated:* 2025-03-26
+*last_updated:* 2025-08-28
 
 {{< /column >}}
 {{< /block >}}

@@ -9,12 +9,12 @@ Verified: 'TRUE'
 Commands:
   Command: sc.exe create BioNTdrv.sys binPath=C:\windows\temp\BioNTdrv.sys type=kernel
     && sc.exe start BioNTdrv.sys
-  Description: "Microsoft has identified five security flaws in the Paragon Partition\
-    \ Manager BioNTdrv.sys driver, one of which was exploited by ransomware gangs\
-    \ in zero-day attacks to gain SYSTEM privileges on Windows systems. These vulnerabilities,\
-    \ found in BioNTdrv.sys versions 1.3.0 and 1.5.1, enable attackers to escalate\
-    \ their privileges to SYSTEM level to a higher access level than standard\
-    \ administrator permissions."
+  Description: Microsoft has identified five security flaws in the Paragon Partition
+    Manager BioNTdrv.sys driver, one of which was exploited by ransomware gangs in
+    zero-day attacks to gain SYSTEM privileges on Windows systems. These vulnerabilities,
+    found in BioNTdrv.sys versions 1.3.0 and 1.5.1, enable attackers to escalate their
+    privileges to SYSTEM level to a higher access level than standard administrator
+    permissions.
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
@@ -72,7 +72,7 @@ KnownVulnerableSamples:
   Imphash: 1014dd148858e163ab9a4d27d0e3594a
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-01-30 18:32:16'
+  CreationTimestamp: '2018-01-30 13:32:16'
   RichPEHeaderMD5: 1e7257fad0156a8620120920a4eba3d1
   RichPEHeaderSHA1: 81c0a25338b94e6f37fd4b008a96ec206578ae8c
   RichPEHeaderSHA256: 28b974fe883d1f49b63303afa89877013459bc739b2443009f34bf3f7206140e
@@ -93,7 +93,7 @@ KnownVulnerableSamples:
       Entropy: 4.38491485631637
       Virtual Size: '0x574'
     .rsrc:
-      Entropy: 3.2117782408379956
+      Entropy: 3.211778240837995
       Virtual Size: '0x370'
     .reloc:
       Entropy: 2.1258145836939115
@@ -119,6 +119,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 247d157352d5671a5e44263793df43d2
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 1a2e03e5b6dc284e5d998e6158740a72
         SHA1: 1d0ed63f8c96e325d1ffb31c332f8596c305793d
@@ -134,6 +137,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -149,6 +155,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -160,6 +169,22 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Authentihash:
+    MD5: 8d1f5412cc6e58af2bdbff2e179f298d
+    SHA1: 5d01cd9701213f7fd4073507cdbe18f4b742baf7
+    SHA256: efde1a896c24055780aefb6f1c5fee097b8dffbe79b7e2c26320f6fe7ea3b74d
+  RichPEHeaderHash:
+    MD5: 1e7257fad0156a8620120920a4eba3d1
+    SHA1: 81c0a25338b94e6f37fd4b008a96ec206578ae8c
+    SHA256: 28b974fe883d1f49b63303afa89877013459bc739b2443009f34bf3f7206140e
+  Description: A part of Paragon System Utilities
+  Company: Paragon Software GmbH
+  Product: Paragon System Utilities
+  Copyright: Copyright 1994-2017 Paragon Software GmbH
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
 - Filename: ''
   Libraries:
   - ntoskrnl.exe
@@ -222,7 +247,7 @@ KnownVulnerableSamples:
   Imphash: f4f462bcde0472cb6202214475f889b1
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-08-11 12:04:23'
+  CreationTimestamp: '2022-08-11 08:04:23'
   RichPEHeaderMD5: 103ed1ac1ea56c3cc7db32fa7d2eae72
   RichPEHeaderSHA1: 4888504201b2e54209e2098252644cf9c7dac7ba
   RichPEHeaderSHA256: 180e1ac2cc854b49c7afdf2bd752147097fb55f5a5199a831885db6a4957ec10
@@ -231,7 +256,7 @@ KnownVulnerableSamples:
   AuthentihashSHA256: 015956494226d4cbb89283c7b915a46353670c7d41e02f0f2ba741c0d2c73615
   Sections:
     .text:
-      Entropy: 6.063036948579727
+      Entropy: 6.063036948579726
       Virtual Size: '0x16ac'
     .data:
       Entropy: 0.261554002666683
@@ -243,7 +268,7 @@ KnownVulnerableSamples:
       Entropy: 4.476341518700635
       Virtual Size: '0x7e2'
     .rsrc:
-      Entropy: 3.2186875698193145
+      Entropy: 3.218687569819314
       Virtual Size: '0x370'
     .reloc:
       Entropy: 2.1258145836939115
@@ -269,6 +294,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 5d8003a64dfa5a4d88365da1566038cb
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
@@ -283,6 +311,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 046a6191017da49a025dd21aa76934f7
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c7f1b7cbb054ecb1a659ffeafd5975fa
         SHA1: 6b17d9dd7483829600f8e94e6134ad87fb667a78
@@ -293,3 +324,19 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
         SHA384 2021 CA1
       Version: 1
+  Authentihash:
+    MD5: 778ca6c522c672bdd509cd37339916c8
+    SHA1: 66f199e8edc9580a33c81d056b34b590481a7f01
+    SHA256: 015956494226d4cbb89283c7b915a46353670c7d41e02f0f2ba741c0d2c73615
+  RichPEHeaderHash:
+    MD5: 103ed1ac1ea56c3cc7db32fa7d2eae72
+    SHA1: 4888504201b2e54209e2098252644cf9c7dac7ba
+    SHA256: 180e1ac2cc854b49c7afdf2bd752147097fb55f5a5199a831885db6a4957ec10
+  Description: A part of Paragon System Utilities
+  Company: Paragon Software GmbH
+  Product: Paragon System Utilities
+  Copyright: Copyright 1994-2022 Paragon Software GmbH
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
