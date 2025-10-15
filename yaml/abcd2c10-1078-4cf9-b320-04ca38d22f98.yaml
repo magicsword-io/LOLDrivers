@@ -7,112 +7,115 @@ Created: '2023-06-05'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-    Command: sc.exe create Chaos-Rootkit.sys binPath=C:\windows\temp\Chaos-Rootkit.sys
-        type=kernel && sc.exe start Chaos-Rootkit.sys
-    Description: Chaos-Rootkit is a x64 ring0 rootkit with process hiding, privilege
-        escalation, and capabilities for protecting and unprotecting processes, work
-        on the latest Windows versions.
-    OperatingSystem: Windows 10
-    Privileges: kernel
-    Usecase: Elevate privileges
+  Command: sc.exe create Chaos-Rootkit.sys binPath=C:\windows\temp\Chaos-Rootkit.sys
+    type=kernel && sc.exe start Chaos-Rootkit.sys
+  Description: Chaos-Rootkit is a x64 ring0 rootkit with process hiding, privilege
+    escalation, and capabilities for protecting and unprotecting processes, work on
+    the latest Windows versions.
+  OperatingSystem: Windows 10
+  Privileges: kernel
+  Usecase: Elevate privileges
 Resources:
 - https://github.com/ZeroMemoryEx/Chaos-Rootkit
 Detection: []
 Acknowledgement:
-    Handle: ''
-    Person: ''
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
--   Authentihash:
-        MD5: 7f41d82fd2f02bb6e2d621bc225c34b2
-        SHA1: 3b78b68280429db35d224cb4d32033e6c01b8011
-        SHA256: 60fb851ce3da03c319a423979b47a95dd231085d89b26516f3e25164a1a14dfb
-    Company: ''
-    Copyright: ''
-    CreationTimestamp: '2023-05-21 06:19:33'
-    Date: ''
-    Description: ''
-    ExportedFunctions: ''
-    FileVersion: ''
-    Filename: Chaos-Rootkit.sys
-    ImportedFunctions:
-    - IoCreateSymbolicLink
-    - IoDeleteDevice
-    - IoDeleteSymbolicLink
-    - ObfDereferenceObject
-    - IoCreateDevice
-    - PsLookupProcessByProcessId
-    - PsGetProcessImageFileName
-    - __C_specific_handler
-    - IofCompleteRequest
-    - RtlCopyUnicodeString
-    - DbgPrintEx
-    - ExReleasePushLockExclusiveEx
-    - ExAcquirePushLockExclusiveEx
-    - ExInitializePushLock
-    - PsReferencePrimaryToken
-    - DbgPrint
-    - WdfVersionUnbind
-    - WdfLdrQueryInterface
-    - WdfVersionBind
-    - WdfVersionUnbindClass
-    - WdfVersionBindClass
-    Imports:
-    - ntoskrnl.exe
-    - WDFLDR.SYS
-    InternalName: ''
-    MD5: 9532893c1d358188d66b0d7b0784bb6b
-    MachineType: AMD64
-    MagicHeader: 50 45 0 0
-    OriginalFilename: ''
-    Product: ''
-    ProductVersion: ''
-    Publisher: ''
-    RichPEHeaderHash:
-        MD5: a0fa124e7a2c5f9aaacbb1ca24b36629
-        SHA1: 5be22e273d55ccd22c76a09844780399fd8e9f64
-        SHA256: f810290edf657960bade7beb246ab62f6f5d9caa01685a249ac4ad4c36255896
-    SHA1: d022f5e3c1bba43871af254a16ab0e378ea66184
-    SHA256: 0ae8d1dd56a8a000ced74a627052933d2e9bff31d251de185b3c0c5fc94a44db
-    Sections:
-        .text:
-            Entropy: 5.8460744196686925
-            Virtual Size: '0x15d5'
-        .rdata:
-            Entropy: 4.55099880214042
-            Virtual Size: '0x97c'
-        .data:
-            Entropy: 0.9568619474743305
-            Virtual Size: '0x300'
-        .pdata:
-            Entropy: 3.671187470457645
-            Virtual Size: '0x108'
-        INIT:
-            Entropy: 4.824674172237123
-            Virtual Size: '0x326'
-        .reloc:
-            Entropy: 3.6427249051134334
-            Virtual Size: '0x38'
-    Signature: ''
-    Signatures:
-    -   CertificatesInfo: ''
-        SignerInfo: ''
-        Certificates:
-        -   Subject: CN=WDKTestCert anash,133231280654008727
-            ValidFrom: '2023-03-12 20:54:25'
-            ValidTo: '2033-03-12 00:00:00'
-            Signature: 2877c0544f97abe3532296be49983e1e9b7f4c99ef327222c4b2b6d70194c8d97db7140a51dc6a18a009549aabe1bcb8c95d089917b9fed893b52f0518b649680aab7fdb5af9098de934aede339cee3d3c271ffc25c8d1b188fee3ff9a8b6591ac9f6e21934467db0d7d6595edcc98f3bbaf303202fab533ae82372da8d8b8dee1dcb80312e8ebe140ea9edfac35bf59e909b49edad358761784ffafb590665a6426e9b3fae943864a0484002555a654647e1495e92d9e8dafd00b0e36e30a921ec424e2d4a70d579879bdaaab9bc21824479b905e710ae1269e3fc3695c50811805f163e23590e53c173a79adda0fe1deb674f34fc0adf3cbcf93a4955907f7
-            SignatureAlgorithmOID: 1.2.840.113549.1.1.5
-            IsCertificateAuthority: true
-            SerialNumber: 13d597c6ebaaaf994d4463d3387c0dd2
-            Version: 3
-            TBS:
-                MD5: 6b552c6f192fd7c811a7f292b41dd282
-                SHA1: fbd054373b922c03cad87c948c29ed2ed0883910
-                SHA256: e9098f46ff7e02093422a6e4745f420d41fc08c66a95b6f62f09b44297bf35af
-                SHA384: 4b008e59d2ea4c49427250d7da08075c183e7759d91b9defaf47873d9dab76f2b9e17cd95aeee7ca99ea0967a3ceeb0f
-        Signer:
-        -   SerialNumber: 13d597c6ebaaaf994d4463d3387c0dd2
-            Issuer: CN=WDKTestCert anash,133231280654008727
-            Version: 1
-    Imphash: 3415f704b3149ea9a3d3a54036b208dd
-    LoadsDespiteHVCI: 'TRUE'
+- Authentihash:
+    MD5: 7f41d82fd2f02bb6e2d621bc225c34b2
+    SHA1: 3b78b68280429db35d224cb4d32033e6c01b8011
+    SHA256: 60fb851ce3da03c319a423979b47a95dd231085d89b26516f3e25164a1a14dfb
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: '2023-05-21 08:19:33'
+  Date: ''
+  Description: ''
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: Chaos-Rootkit.sys
+  ImportedFunctions:
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - ObfDereferenceObject
+  - IoCreateDevice
+  - PsLookupProcessByProcessId
+  - PsGetProcessImageFileName
+  - __C_specific_handler
+  - IofCompleteRequest
+  - RtlCopyUnicodeString
+  - DbgPrintEx
+  - ExReleasePushLockExclusiveEx
+  - ExAcquirePushLockExclusiveEx
+  - ExInitializePushLock
+  - PsReferencePrimaryToken
+  - DbgPrint
+  - WdfVersionUnbind
+  - WdfLdrQueryInterface
+  - WdfVersionBind
+  - WdfVersionUnbindClass
+  - WdfVersionBindClass
+  Imports:
+  - ntoskrnl.exe
+  - WDFLDR.SYS
+  InternalName: ''
+  MD5: 9532893c1d358188d66b0d7b0784bb6b
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: ''
+  Product: ''
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: a0fa124e7a2c5f9aaacbb1ca24b36629
+    SHA1: 5be22e273d55ccd22c76a09844780399fd8e9f64
+    SHA256: f810290edf657960bade7beb246ab62f6f5d9caa01685a249ac4ad4c36255896
+  SHA1: d022f5e3c1bba43871af254a16ab0e378ea66184
+  SHA256: 0ae8d1dd56a8a000ced74a627052933d2e9bff31d251de185b3c0c5fc94a44db
+  Sections:
+    .text:
+      Entropy: 5.8460744196686925
+      Virtual Size: '0x15d5'
+    .rdata:
+      Entropy: 4.55099880214042
+      Virtual Size: '0x97c'
+    .data:
+      Entropy: 0.9568619474743305
+      Virtual Size: '0x300'
+    .pdata:
+      Entropy: 3.671187470457645
+      Virtual Size: '0x108'
+    INIT:
+      Entropy: 4.824674172237123
+      Virtual Size: '0x326'
+    .reloc:
+      Entropy: 3.6427249051134334
+      Virtual Size: '0x38'
+  Signature: ''
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: CN=WDKTestCert anash,133231280654008727
+      ValidFrom: '2023-03-12 20:54:25'
+      ValidTo: '2033-03-12 00:00:00'
+      Signature: 2877c0544f97abe3532296be49983e1e9b7f4c99ef327222c4b2b6d70194c8d97db7140a51dc6a18a009549aabe1bcb8c95d089917b9fed893b52f0518b649680aab7fdb5af9098de934aede339cee3d3c271ffc25c8d1b188fee3ff9a8b6591ac9f6e21934467db0d7d6595edcc98f3bbaf303202fab533ae82372da8d8b8dee1dcb80312e8ebe140ea9edfac35bf59e909b49edad358761784ffafb590665a6426e9b3fae943864a0484002555a654647e1495e92d9e8dafd00b0e36e30a921ec424e2d4a70d579879bdaaab9bc21824479b905e710ae1269e3fc3695c50811805f163e23590e53c173a79adda0fe1deb674f34fc0adf3cbcf93a4955907f7
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 13d597c6ebaaaf994d4463d3387c0dd2
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 6b552c6f192fd7c811a7f292b41dd282
+        SHA1: fbd054373b922c03cad87c948c29ed2ed0883910
+        SHA256: e9098f46ff7e02093422a6e4745f420d41fc08c66a95b6f62f09b44297bf35af
+        SHA384: 4b008e59d2ea4c49427250d7da08075c183e7759d91b9defaf47873d9dab76f2b9e17cd95aeee7ca99ea0967a3ceeb0f
+    Signer:
+    - SerialNumber: 13d597c6ebaaaf994d4463d3387c0dd2
+      Issuer: CN=WDKTestCert anash,133231280654008727
+      Version: 1
+  Imphash: 3415f704b3149ea9a3d3a54036b208dd
+  LoadsDespiteHVCI: 'TRUE'

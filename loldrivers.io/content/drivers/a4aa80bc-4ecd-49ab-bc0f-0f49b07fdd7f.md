@@ -99,7 +99,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2014-03-25 23:49:03 |
+| Creation Timestamp           | 2014-03-26 01:49:03 |
 | MD5                | [9cbdb5fb6dc63cb13f10b6333407cbb9](https://www.virustotal.com/gui/file/9cbdb5fb6dc63cb13f10b6333407cbb9) |
 | SHA1               | [fc62b746e0e726537bf848b48212f46db585af6d](https://www.virustotal.com/gui/file/fc62b746e0e726537bf848b48212f46db585af6d) |
 | SHA256             | [0d30c6c4fa0216d0637b4049142bc275814fd674859373bd4af520ce173a1c75](https://www.virustotal.com/gui/file/0d30c6c4fa0216d0637b4049142bc275814fd674859373bd4af520ce173a1c75) |
@@ -267,7 +267,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "7e93ebfb7cc64e59ea4b9a77d406fc3b",
       "Signature": "03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -283,7 +286,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "0ecff438c8febf356e04d86a981b1a50",
       "Signature": "783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -299,7 +305,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "250ce8e030612e9f2b89f7054d7cf8fd",
       "Signature": "1302ddf8e88600f25af8f8200c59886207cecef74ef9bb59a198e5e138dd4ebc6618d3adeb18f20dc96d3e4a9420c33cbabd6554c6af44b310ad2c6b3eabd707b6b88163c5f95e2ee52a67cecd330c2ad7895603231fb3bee83a0859b4ec4535f78a5bff66cf50afc66d578d1978b7b9a2d157ea1f9a4bafbac98e127ec6bdff",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -315,7 +324,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -331,7 +343,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "0355af7ef9418e476d877eecd9f9e9e2",
       "Signature": "19cf4cfe8a901a2d50614d496664fcdaaa80098ec50cec3e3f56a3d08a399d96d13046789c8281a1a9bf1054c79351f73e091664da593dcd39ec4ad7077513b01270666042cb743d4cd2387b61067384d5ed20ee0773e7e61fc1a8a750c3882c6e64ad0f8819b91c19c50708510467ee34ac845fb0a68259e90c7dbef65dcc4b75c72fde8d954ef37d53bba6f00a40e1c85deeb81531772b07232f8e8fe791eac42ab152b5e970c008f14bdec7a7e1ac114bae73ae1ba4f3a525a169f37de670a9447f65653426abb77c6a8b7f91c2d5428a63059129ba94818d3f6cceac0e0790ddb23d56f598e0a9083fc8b92a3b100c0dc1729290ba44fb1538ac4cedf926",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -347,7 +362,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "5200e5aa2556fc1a86ed96c9d44b33c7",
       "Signature": "5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -380,7 +398,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | segwindrvx64.sys |
-| Creation Timestamp           | 2015-04-01 03:39:09 |
+| Creation Timestamp           | 2015-04-01 05:39:09 |
 | MD5                | [4ae55080ec8aed49343e40d08370195c](https://www.virustotal.com/gui/file/4ae55080ec8aed49343e40d08370195c) |
 | SHA1               | [d702d88b12233be9413446c445f22fda4a92a1d9](https://www.virustotal.com/gui/file/d702d88b12233be9413446c445f22fda4a92a1d9) |
 | SHA256             | [65329dad28e92f4bcc64de15c552b6ef424494028b18875b7dba840053bc0cdd](https://www.virustotal.com/gui/file/65329dad28e92f4bcc64de15c552b6ef424494028b18875b7dba840053bc0cdd) |
@@ -534,7 +552,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "7e93ebfb7cc64e59ea4b9a77d406fc3b",
       "Signature": "03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -550,7 +571,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "0ecff438c8febf356e04d86a981b1a50",
       "Signature": "783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -566,7 +590,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "250ce8e030612e9f2b89f7054d7cf8fd",
       "Signature": "1302ddf8e88600f25af8f8200c59886207cecef74ef9bb59a198e5e138dd4ebc6618d3adeb18f20dc96d3e4a9420c33cbabd6554c6af44b310ad2c6b3eabd707b6b88163c5f95e2ee52a67cecd330c2ad7895603231fb3bee83a0859b4ec4535f78a5bff66cf50afc66d578d1978b7b9a2d157ea1f9a4bafbac98e127ec6bdff",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -582,7 +609,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -598,7 +628,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "0355af7ef9418e476d877eecd9f9e9e2",
       "Signature": "19cf4cfe8a901a2d50614d496664fcdaaa80098ec50cec3e3f56a3d08a399d96d13046789c8281a1a9bf1054c79351f73e091664da593dcd39ec4ad7077513b01270666042cb743d4cd2387b61067384d5ed20ee0773e7e61fc1a8a750c3882c6e64ad0f8819b91c19c50708510467ee34ac845fb0a68259e90c7dbef65dcc4b75c72fde8d954ef37d53bba6f00a40e1c85deeb81531772b07232f8e8fe791eac42ab152b5e970c008f14bdec7a7e1ac114bae73ae1ba4f3a525a169f37de670a9447f65653426abb77c6a8b7f91c2d5428a63059129ba94818d3f6cceac0e0790ddb23d56f598e0a9083fc8b92a3b100c0dc1729290ba44fb1538ac4cedf926",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -614,7 +647,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "5200e5aa2556fc1a86ed96c9d44b33c7",
       "Signature": "5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -647,7 +683,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | segwindrvx64.sys |
-| Creation Timestamp           | 2014-03-18 14:20:01 |
+| Creation Timestamp           | 2014-03-18 16:20:01 |
 | MD5                | [bdc3b6b83dde7111d5d6b9a2aadf233f](https://www.virustotal.com/gui/file/bdc3b6b83dde7111d5d6b9a2aadf233f) |
 | SHA1               | [2ade3347df84d6707f39d9b821890440bcfdb5e9](https://www.virustotal.com/gui/file/2ade3347df84d6707f39d9b821890440bcfdb5e9) |
 | SHA256             | [c628cda1ef43defc00af45b79949675a8422490d32b080b3a8bb9434242bdbf2](https://www.virustotal.com/gui/file/c628cda1ef43defc00af45b79949675a8422490d32b080b3a8bb9434242bdbf2) |
@@ -815,7 +851,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "7e93ebfb7cc64e59ea4b9a77d406fc3b",
       "Signature": "03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -831,7 +870,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "0ecff438c8febf356e04d86a981b1a50",
       "Signature": "783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -847,7 +889,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "250ce8e030612e9f2b89f7054d7cf8fd",
       "Signature": "1302ddf8e88600f25af8f8200c59886207cecef74ef9bb59a198e5e138dd4ebc6618d3adeb18f20dc96d3e4a9420c33cbabd6554c6af44b310ad2c6b3eabd707b6b88163c5f95e2ee52a67cecd330c2ad7895603231fb3bee83a0859b4ec4535f78a5bff66cf50afc66d578d1978b7b9a2d157ea1f9a4bafbac98e127ec6bdff",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -863,7 +908,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -879,7 +927,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "0355af7ef9418e476d877eecd9f9e9e2",
       "Signature": "19cf4cfe8a901a2d50614d496664fcdaaa80098ec50cec3e3f56a3d08a399d96d13046789c8281a1a9bf1054c79351f73e091664da593dcd39ec4ad7077513b01270666042cb743d4cd2387b61067384d5ed20ee0773e7e61fc1a8a750c3882c6e64ad0f8819b91c19c50708510467ee34ac845fb0a68259e90c7dbef65dcc4b75c72fde8d954ef37d53bba6f00a40e1c85deeb81531772b07232f8e8fe791eac42ab152b5e970c008f14bdec7a7e1ac114bae73ae1ba4f3a525a169f37de670a9447f65653426abb77c6a8b7f91c2d5428a63059129ba94818d3f6cceac0e0790ddb23d56f598e0a9083fc8b92a3b100c0dc1729290ba44fb1538ac4cedf926",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -895,7 +946,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "5200e5aa2556fc1a86ed96c9d44b33c7",
       "Signature": "5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -928,7 +982,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2014-03-18 14:27:12 |
+| Creation Timestamp           | 2014-03-18 16:27:12 |
 | MD5                | [31a331a88c6280555859455518a95c35](https://www.virustotal.com/gui/file/31a331a88c6280555859455518a95c35) |
 | SHA1               | [c3be2bbd9b3f696bc9d51d5973cc00ca059fb172](https://www.virustotal.com/gui/file/c3be2bbd9b3f696bc9d51d5973cc00ca059fb172) |
 | SHA256             | [7164aaff86b3b7c588fc7ae7839cc09c5c8c6ae29d1aff5325adaf5bedd7c9f5](https://www.virustotal.com/gui/file/7164aaff86b3b7c588fc7ae7839cc09c5c8c6ae29d1aff5325adaf5bedd7c9f5) |
@@ -1113,7 +1167,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "7e93ebfb7cc64e59ea4b9a77d406fc3b",
       "Signature": "03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1129,7 +1186,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "0ecff438c8febf356e04d86a981b1a50",
       "Signature": "783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1145,7 +1205,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "250ce8e030612e9f2b89f7054d7cf8fd",
       "Signature": "1302ddf8e88600f25af8f8200c59886207cecef74ef9bb59a198e5e138dd4ebc6618d3adeb18f20dc96d3e4a9420c33cbabd6554c6af44b310ad2c6b3eabd707b6b88163c5f95e2ee52a67cecd330c2ad7895603231fb3bee83a0859b4ec4535f78a5bff66cf50afc66d578d1978b7b9a2d157ea1f9a4bafbac98e127ec6bdff",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1161,7 +1224,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1177,7 +1243,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "0355af7ef9418e476d877eecd9f9e9e2",
       "Signature": "19cf4cfe8a901a2d50614d496664fcdaaa80098ec50cec3e3f56a3d08a399d96d13046789c8281a1a9bf1054c79351f73e091664da593dcd39ec4ad7077513b01270666042cb743d4cd2387b61067384d5ed20ee0773e7e61fc1a8a750c3882c6e64ad0f8819b91c19c50708510467ee34ac845fb0a68259e90c7dbef65dcc4b75c72fde8d954ef37d53bba6f00a40e1c85deeb81531772b07232f8e8fe791eac42ab152b5e970c008f14bdec7a7e1ac114bae73ae1ba4f3a525a169f37de670a9447f65653426abb77c6a8b7f91c2d5428a63059129ba94818d3f6cceac0e0790ddb23d56f598e0a9083fc8b92a3b100c0dc1729290ba44fb1538ac4cedf926",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1193,7 +1262,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "5200e5aa2556fc1a86ed96c9d44b33c7",
       "Signature": "5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1226,7 +1298,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2014-09-19 00:42:51 |
+| Creation Timestamp           | 2014-09-19 02:42:51 |
 | MD5                | [875c44411674b75feb07592aeffa09c1](https://www.virustotal.com/gui/file/875c44411674b75feb07592aeffa09c1) |
 | SHA1               | [dc69a6cdf048e2c4a370d4b5cafd717d236374ea](https://www.virustotal.com/gui/file/dc69a6cdf048e2c4a370d4b5cafd717d236374ea) |
 | SHA256             | [b9ae1d53a464bc9bb86782ab6c55e2da8804c80a361139a82a6c8eef30fddd7c](https://www.virustotal.com/gui/file/b9ae1d53a464bc9bb86782ab6c55e2da8804c80a361139a82a6c8eef30fddd7c) |
@@ -1380,7 +1452,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "7e93ebfb7cc64e59ea4b9a77d406fc3b",
       "Signature": "03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1396,7 +1471,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "0ecff438c8febf356e04d86a981b1a50",
       "Signature": "783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1412,7 +1490,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "250ce8e030612e9f2b89f7054d7cf8fd",
       "Signature": "1302ddf8e88600f25af8f8200c59886207cecef74ef9bb59a198e5e138dd4ebc6618d3adeb18f20dc96d3e4a9420c33cbabd6554c6af44b310ad2c6b3eabd707b6b88163c5f95e2ee52a67cecd330c2ad7895603231fb3bee83a0859b4ec4535f78a5bff66cf50afc66d578d1978b7b9a2d157ea1f9a4bafbac98e127ec6bdff",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1428,7 +1509,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1444,7 +1528,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "0355af7ef9418e476d877eecd9f9e9e2",
       "Signature": "19cf4cfe8a901a2d50614d496664fcdaaa80098ec50cec3e3f56a3d08a399d96d13046789c8281a1a9bf1054c79351f73e091664da593dcd39ec4ad7077513b01270666042cb743d4cd2387b61067384d5ed20ee0773e7e61fc1a8a750c3882c6e64ad0f8819b91c19c50708510467ee34ac845fb0a68259e90c7dbef65dcc4b75c72fde8d954ef37d53bba6f00a40e1c85deeb81531772b07232f8e8fe791eac42ab152b5e970c008f14bdec7a7e1ac114bae73ae1ba4f3a525a169f37de670a9447f65653426abb77c6a8b7f91c2d5428a63059129ba94818d3f6cceac0e0790ddb23d56f598e0a9083fc8b92a3b100c0dc1729290ba44fb1538ac4cedf926",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1460,7 +1547,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "5200e5aa2556fc1a86ed96c9d44b33c7",
       "Signature": "5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1493,7 +1583,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2013-11-15 00:50:12 |
+| Creation Timestamp           | 2013-11-15 02:50:12 |
 | MD5                | [dad8f40626ed4702e0e8502562d93d7c](https://www.virustotal.com/gui/file/dad8f40626ed4702e0e8502562d93d7c) |
 | SHA1               | [b4f1877156bf3157bff1170ba878848b2f22d2d5](https://www.virustotal.com/gui/file/b4f1877156bf3157bff1170ba878848b2f22d2d5) |
 | SHA256             | [38d6d90d543bf6037023c1b1b14212b4fa07731cbbb44bdb17e8faffc12b22e8](https://www.virustotal.com/gui/file/38d6d90d543bf6037023c1b1b14212b4fa07731cbbb44bdb17e8faffc12b22e8) |
@@ -1655,7 +1745,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "7e93ebfb7cc64e59ea4b9a77d406fc3b",
       "Signature": "03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1671,7 +1764,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "0ecff438c8febf356e04d86a981b1a50",
       "Signature": "783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1687,7 +1783,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "250ce8e030612e9f2b89f7054d7cf8fd",
       "Signature": "1302ddf8e88600f25af8f8200c59886207cecef74ef9bb59a198e5e138dd4ebc6618d3adeb18f20dc96d3e4a9420c33cbabd6554c6af44b310ad2c6b3eabd707b6b88163c5f95e2ee52a67cecd330c2ad7895603231fb3bee83a0859b4ec4535f78a5bff66cf50afc66d578d1978b7b9a2d157ea1f9a4bafbac98e127ec6bdff",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1703,7 +1802,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1719,7 +1821,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "0355af7ef9418e476d877eecd9f9e9e2",
       "Signature": "19cf4cfe8a901a2d50614d496664fcdaaa80098ec50cec3e3f56a3d08a399d96d13046789c8281a1a9bf1054c79351f73e091664da593dcd39ec4ad7077513b01270666042cb743d4cd2387b61067384d5ed20ee0773e7e61fc1a8a750c3882c6e64ad0f8819b91c19c50708510467ee34ac845fb0a68259e90c7dbef65dcc4b75c72fde8d954ef37d53bba6f00a40e1c85deeb81531772b07232f8e8fe791eac42ab152b5e970c008f14bdec7a7e1ac114bae73ae1ba4f3a525a169f37de670a9447f65653426abb77c6a8b7f91c2d5428a63059129ba94818d3f6cceac0e0790ddb23d56f598e0a9083fc8b92a3b100c0dc1729290ba44fb1538ac4cedf926",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1735,7 +1840,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "5200e5aa2556fc1a86ed96c9d44b33c7",
       "Signature": "5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1768,7 +1876,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2013-02-21 22:35:02 |
+| Creation Timestamp           | 2013-02-22 00:35:02 |
 | MD5                | [f14359ceb3705d77353b244bb795b552](https://www.virustotal.com/gui/file/f14359ceb3705d77353b244bb795b552) |
 | SHA1               | [a09334489fb18443c8793cb0395860518193cc3c](https://www.virustotal.com/gui/file/a09334489fb18443c8793cb0395860518193cc3c) |
 | SHA256             | [0452a6e8f00bae0b79335c1799a26b2b77d603451f2e6cc3b137ad91996d4dec](https://www.virustotal.com/gui/file/0452a6e8f00bae0b79335c1799a26b2b77d603451f2e6cc3b137ad91996d4dec) |
@@ -1930,7 +2038,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "7e93ebfb7cc64e59ea4b9a77d406fc3b",
       "Signature": "03099b8f79ef7f5930aaef68b5fae3091dbb4f82065d375fa6529f168dea1c9209446ef56deb587c30e8f9698d23730b126f47a9ae3911f82ab19bb01ac38eeb599600adce0c4db2d031a6085c2a7afce27a1d574ca86518e979406225966ec7c7376a8321088e41eaddd9573f1d7749872a16065ea6386a2212a35119837eb6",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1946,7 +2057,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "0ecff438c8febf356e04d86a981b1a50",
       "Signature": "783bb4912a004cf08f62303778a38427076f18b2de25dca0d49403aa864e259f9a40031cddcee379cb216806dab632b46dbff42c266333e449646d0de6c3670ef705a4356c7c8916c6e9b2dfb2e9dd20c6710fcd9574dcb65cdebd371f4378e678b5cd280420a3aaf14bc48829910e80d111fcdd5c766e4f5e0e4546416e0db0ea389ab13ada097110fc1c79b4807bac69f4fd9cb60c162bf17f5b093d9b5be216ca13816d002e380da8298f2ce1b2f45aa901af159c2c2f491bdb22bbc3fe789451c386b182885df03db451a179332b2e7bb9dc20091371eb6a195bcfe8a530572c89493fb9cf7fc9bf3e226863539abd6974acc51d3c7f92e0c3bc1cd80475",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1962,7 +2076,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "250ce8e030612e9f2b89f7054d7cf8fd",
       "Signature": "1302ddf8e88600f25af8f8200c59886207cecef74ef9bb59a198e5e138dd4ebc6618d3adeb18f20dc96d3e4a9420c33cbabd6554c6af44b310ad2c6b3eabd707b6b88163c5f95e2ee52a67cecd330c2ad7895603231fb3bee83a0859b4ec4535f78a5bff66cf50afc66d578d1978b7b9a2d157ea1f9a4bafbac98e127ec6bdff",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1978,7 +2095,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "610c120600000000001b",
       "Signature": "01e446b33b457f7513877e5f43de468ecb8abdb64741bccccc7491d8ce395195a4a6b547c0efd2da7b8f5711f4328c7ccd3fee42da04214af7c843884a6f5cca14fc4bd19f4cbdd4556ecc02be0da6888f8609baa425bde8b0f0fa8b714e67b0cb82a8d78e55f737ebf03e88efe4e08afd1c6e2e61414875b4b02c1d28d8490fd715f02473253ccc880cde284c6554fe5eae8cea19ad2c51b29b3a47f53c80350117e24987d6544afb4bab07bcbf7d79cfbf35005cbb9ecffc82891b39a05197b6dec0b307ff449644c0342a195cabeef03bec294eb513c537857e75d5b4d60d066eb5d26c237167eaf1718eaf4e74aa0cf9ecbf4c58fa5e909b6d39cb86883f8b1ca81632d5fe6db9f1f8b3ead791f6364778c0272a15c768d6f4c5fc4f4ec8673f102d409ff11ec96148e7a703fc31730cf04688fe56da492995ef09daa3e5beef60ecd954a0599c28bd54ef66157f874c84dba60e95672e517b3439b641c28c846826dc240209e7818e0a972defeea7b998a60f818dc710b5e1ed982f486f53854964789bec5dac970b5526c3efba8dc8d1a52f5a7f936b611a339b18b8a26210de24ea76e12f43ebecdd7c12342489da2855aee5754e312b6763b6a8d7ab730a03cec5ea593fc7eb2a45aea8625b2f009939abb45f73c308ec80118f470e8f2a1343e191066255bbffba3da9a93d260faeca7d628b155589d694344dd665",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -1994,7 +2114,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "0355af7ef9418e476d877eecd9f9e9e2",
       "Signature": "19cf4cfe8a901a2d50614d496664fcdaaa80098ec50cec3e3f56a3d08a399d96d13046789c8281a1a9bf1054c79351f73e091664da593dcd39ec4ad7077513b01270666042cb743d4cd2387b61067384d5ed20ee0773e7e61fc1a8a750c3882c6e64ad0f8819b91c19c50708510467ee34ac845fb0a68259e90c7dbef65dcc4b75c72fde8d954ef37d53bba6f00a40e1c85deeb81531772b07232f8e8fe791eac42ab152b5e970c008f14bdec7a7e1ac114bae73ae1ba4f3a525a169f37de670a9447f65653426abb77c6a8b7f91c2d5428a63059129ba94818d3f6cceac0e0790ddb23d56f598e0a9083fc8b92a3b100c0dc1729290ba44fb1538ac4cedf926",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2010,7 +2133,10 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "5200e5aa2556fc1a86ed96c9d44b33c7",
       "Signature": "5622e634a4c461cb48b901ad56a8640fd98c91c4bbcc0ce5ad7aa0227fdf47384a2d6cd17f711a7cec70a9b1f04fe40f0c53fa155efe749849248581261c911447b04c638cbba134d4c645e80d85267303d0a98c646ddc7192e645056015595139fc58146bfed4a4ed796b080c4172e737220609be23e93f449a1ee9619dccb1905cfc3dd28dac423d6536d4b43d40288f9b10cf2326cc4b20cb901f5d8c4c34ca3cd8e537d66fa520bd34eb26d9ae0de7c59af7a1b42191336f86e858bb257c740e58fe751b633fce317c9b8f1b969ec55376845b9cad91faaced93ba5dc82153c2825363af120d5087111b3d5452968a2c9c3d921a089a052ec793a54891d3",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -2045,7 +2171,7 @@ sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/a4aa80bc-4ecd-49ab-bc0f-0f49b07fdd7f.yaml)
 
-*last_updated:* 2025-04-02
+*last_updated:* 2025-08-28
 
 {{< /column >}}
 {{< /block >}}

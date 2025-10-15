@@ -98,7 +98,7 @@ sc.exe create driver_bfcbc010.sys binPath=C:\windows\temp\driver_bfcbc010.sys ty
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2023-12-13 14:38:41 |
+| Creation Timestamp           | 2023-12-13 16:38:41 |
 | MD5                | [cf42cc217c139298641901aad4e5db08](https://www.virustotal.com/gui/file/cf42cc217c139298641901aad4e5db08) |
 | SHA1               | [01a606df49cc2ea19242519b51f7f17d2ba38be2](https://www.virustotal.com/gui/file/01a606df49cc2ea19242519b51f7f17d2ba38be2) |
 | SHA256             | [4d8bc539ca7c72e552b7065d2a84fef43b75a46a53c82b50556c2984e0a86a9e](https://www.virustotal.com/gui/file/4d8bc539ca7c72e552b7065d2a84fef43b75a46a53c82b50556c2984e0a86a9e) |
@@ -253,7 +253,10 @@ sc.exe create driver_bfcbc010.sys binPath=C:\windows\temp\driver_bfcbc010.sys ty
 {
   "Certificates": [
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "1cb2d523a6bf7a066642c578de1c9be4",
       "Signature": "453f89c72c0f43e9a0bea7aee4cc94137f22b1eed4c9970976ba0a64af4f248e9ed746472c54431e740ade4be5d3cf00a1b0e2138a54a137e2c5ca5d1485acfd4ce5deaf6bb98c4da4b98ed3f68123044bafa8fca57eecbe17acf2299a4c79ed76673280a7f930381406ecce5afad5aa28af71d68f48fff2b8f5944687e941ed507bfbe4b9b1a5075aa9493c083cabcad2e564e52fed0427eebce1880094f83c8a049638b826dbc9ab313354e9fc7938e6c57ad7450514abec83f28229b6ff7a208e6b3e9b059f2c439e2ecb0e143858a7748bcfc7750111a5a7dbb30f32906cafabd4f23c80f3752296e54b3aebef6b381ad065e070a271876ee77bad0d42e0",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -269,7 +272,10 @@ sc.exe create driver_bfcbc010.sys binPath=C:\windows\temp\driver_bfcbc010.sys ty
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "47974d7873a5bcab0d2fb370192fce5e",
       "Signature": "56fe535ce1c79ebca7ed7e536d6a144b518c405e805faaa4e82fef38c804c9ca3ecfdf3a584eb0d4b663c52957fa02059a454d68db2a1bd4343d9f00c35acb9549a56ee1b0c5fc414d414a6fd377c8d7388de419de18f31f1565836d450c53f90a9a2ea55dbf6f32811892196a5500ad631c52067e55d92968ae4a7c189a79886b2323d827382a298776cafbc7b662231fed7a564cdd9c325bf53d0c4618953b2a2368836441d9006d0f1924156872bdc571676eac4cdb90eb51a51a6207d0be6a00473c722fec4f613e7385ce5a0ab7bac01c1375e3223928dd6d1d09469d4fbae8408191c6a4ce94721b01cf2a6e15679589ae7db7b7cdf90a3d75b66b3c25",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -285,7 +291,10 @@ sc.exe create driver_bfcbc010.sys binPath=C:\windows\temp\driver_bfcbc010.sys ty
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "611fb0a400000000001d",
       "Signature": "2dcc71b5e8ba94ff5ee64467007b6afc412c3ee70e41855ab12a932ba95b89f2f72b499c8003f297b8e760a80ed7fd5de545467594f4ed1c9de166228b61fb29f2c6a8bdf387c98f7f47e1c058b64a1aa2e7f718606969e083069e26c775c40c0d79da746b52b9fae8ea3359b9bb18dd291a14dfd36a37277a9da0dacffffc22c4faf009ff33e93e17ba1cc742cfce2743d30c0c5581303db96060ce02ece19ee81ddc852ce0a18d966d95ac17a4713ea16741b6281d2ce3b615e5b7e5a2f6256d86e320acf9f8314f8e629b9833376d6af735523e90feb03b5fc5b852a9e06ea0479a279e97aea24a9e531939ec357ec659de3ae0aaf533f06abda0821812dea18c4570ca2bd62e959145995a5c240049bd23b30ceca43df5b9e1d1b1825a38eea3fba1ab483a8c5dffa065223fd3d3fe4990db1446a3852e8a554b09ab38b2ab63a008d1fdad48e273d812bcc26ca516fad09ac05e38383a2b718e553aac42197a1f0d4220e7ab5d8c6880524ca1c0d488d02321fb901309007b4937afa9df486022abf4f6c2363bf8513c34bbc586e43ae19f4b90fe5461024b159c34176aa94b8d4cb69d2326c83af1d6b805cdda1d6240183a2f1b41cd3a993a0aa9d1d77eb8c4aff7b8c980105ed55df6ce7a9a02c50f6381efb564e9fc5bd8d2619a68c37cf9c78df91e87d5fa2cf816ae9dab068fc86dc741cda14e84e3dac26ebcfb",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.5",
@@ -301,7 +310,10 @@ sc.exe create driver_bfcbc010.sys binPath=C:\windows\temp\driver_bfcbc010.sys ty
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "0e9b188ef9d02de7efdb50e20840185a",
       "Signature": "70a0bf435c55e7385fa0a3741b3db616d7f7bf5707bd9aaca1872cec855ea91abb22f8871a695422eda488776dbd1a14f4134a7a2f2db738eff4ff80b9f8a1f7f272de24bc5203c84ed02adefa2d56cff9f4f7ac307a9a8bb25ed4cfd143449b4321eb9672a148b499cb9d4fa7060313772744d4e77fe859a8f0bf2f0ba6e9f2343cecf703c787a8d24c401935466a6954b0b8a1568eeca4d53de8b1dcfd1cd8f4775a5c548c6fefa1503dfc760968849f6fcadb208d35601c0203cb20b0ac58a00e4063c59822c1b259f5556bcf27ab6c76ce6f232df47e716a236b22ff12b8542d277ed83ad9f0b68796fd5bd15cac18c34d9f73b701a99f57aa5e28e2b994",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.12",
@@ -317,7 +329,10 @@ sc.exe create driver_bfcbc010.sys binPath=C:\windows\temp\driver_bfcbc010.sys ty
       "Version": 3
     },
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": false,
       "SerialNumber": "073637b724547cd847acfd28662a5e5b",
       "Signature": "7d598ec093b66f98a94422017e66d6d82142e1b0182e104d13cf3053cebf18fbc7505de24b29fb708a0daa2969fc69c1cf1d07e93e60c8d80be55c5bd76d87fa842025343167cdb612966fc4504c621d0c0882a816bda956cf15738d012225ce95693f4777fb727414d7ffab4f8a2c7aab85cd435fed60b6aa4f91669e2c9ee08aace5fd8cbc6426876c92bd9d7cd0700a7cefa8bc754fba5af7a910b25de9ff285489f0d58a717665daccf072a323fac0278244ae99271bab241e26c1b7de2aebf69eb1799981a35686ab0a45c9dfc48da0e798fbfba69d72afc4c7c1c16a71d9c6138009c4b69fcd878724bb4fa349b9776691f1729ce94b0252a7377e9353ac3b1d08490f94cd397addff256399272c3d3f6ba7f166c341cd4fb6409b212140d0b71324cddc1d783ae49eade5347192d7266be43873aba6014fbd3f3b78ad4cadfbc4957bed0a5f33398741787a38e99ce1dd23fd1d28d3c7f9e8f1985ffb2bd87ef2469d752c1e272c26db6f157b1e198b36b893d4e6f2179959ca70f037bf9800df20164f27fb606716a166badd55c03a2986b098a02bed9541b73ad5159831b462090f0abd81d913febfa4d1f357d9bc04fa82de32df0489f000cd5dc2f9d0237f000be4760226d9f0657642a6298709472be67f1aa4850ffc9896f655542b1f80fac0f20e2be5d6fba92f44154ae7130e1ddb37381aa12bf6edd67cfc",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -333,7 +348,10 @@ sc.exe create driver_bfcbc010.sys binPath=C:\windows\temp\driver_bfcbc010.sys ty
       "Version": 3
     },
     {
+      "CertificateType": "Intermediate",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": false,
       "SerialNumber": "0544aff3949d0839a6bfdb3f5fe56116",
       "Signature": "811ad6dea0a9b59817bc708d4f8a3c689cd825ffcb2ce4cdea5d2292ec8c2202a9b8cf80a8d9e7e3c5ed26828a712f18dd4eb6de6cd7e1609c2beded3d488eb86bba7c5dbdc26137684977a3eb90aa12d72785f38e1e92dac240389f5dc8a02e2578259d2a057a842998b657798fdb26562bb0f3a7bd370cd898764f56b952c2b69d38a981e76d415c8c69d1b92bc4c67bcf9cfa78e2931a76a26975d350e44412be200d9ea944d0f8e54977085a21c5b4cf98951a54bab9bcc16919bacf16f28337346eb04126ddde5a974f338dd48d777d7545a1a558266a0345ded950b5508caf56bd4cc5e146c528d3ade7430070decc989e198903ead49137ef4d52f3c96021c45647edda114b8c32c388e658e2b6db3ef95fb042d68fe31791d1aac055e386bfac272c41d09a334aa836d4b972967e977938485fcac2dc3d32df75d636675a89f8f6a7c7e54f353c00bdbe9c2a6c7901dcda44e63ade383b075e3958f47c733155a08011cb140c7eaebcfea4eb7965aa68d622ca3beb9a8235572816cb69f2329ab2d2d83ab8b146866bba17fdc4776c156caeabaf733ae84946b7d57fccb638c0d8ec1cf5b6a1b8432cdf4e4c7d1e6870c0770ad402e05c60bb28ff38e5525ad6ac1722234ef4ecd317fb506bff07771f71974441c9b846d36c327c582f674765e51b73b699f96b2c0646ef411ef0f05fe0dbd9ad908044af8010418a",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -368,7 +386,7 @@ sc.exe create driver_bfcbc010.sys binPath=C:\windows\temp\driver_bfcbc010.sys ty
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/e7fd8ffc-ab37-4a7b-8dc9-fc7432fbacae.yaml)
 
-*last_updated:* 2025-04-02
+*last_updated:* 2025-08-28
 
 {{< /column >}}
 {{< /block >}}

@@ -99,7 +99,7 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2021-02-22 23:31:41 |
+| Creation Timestamp           | 2021-02-23 01:31:41 |
 | MD5                | [e4ea7ebfa142d20a92fbe468a77eafa6](https://www.virustotal.com/gui/file/e4ea7ebfa142d20a92fbe468a77eafa6) |
 | SHA1               | [31529d0e73f7fbfbe8c28367466c404c0e3e1d5a](https://www.virustotal.com/gui/file/31529d0e73f7fbfbe8c28367466c404c0e3e1d5a) |
 | SHA256             | [0abca92512fc98fe6c2e7d0a33935686fc3acbd0a4c68b51f4a70ece828c0664](https://www.virustotal.com/gui/file/0abca92512fc98fe6c2e7d0a33935686fc3acbd0a4c68b51f4a70ece828c0664) |
@@ -209,7 +209,10 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "191a32cb759c97b8cfac118dd5127f49",
       "Signature": "3f5b19f3fa13d575382a5aee9f5aa04ca91dc5cc94eede15fef5106ea41ba56483541858c40b28a185c34e74e5ff897cfed5ed3cba719f5602268f162a88feb0a32722ce4be2388e00a63a865f9de53ea8de644941744121fd07c88417da1d653082cb264f39d60427a481b14b49c3238b7e02321827b7ab0bf31872b6a4ee67066f38a6588de0f17e5da460c6a8e5505fe0e8bae28f9958b6b5a0a876f1a2f11c8841727e52979b0a36998d50f701eb3ce7f0226ae5358c63368a1ab1d967665f971aefa8209df02fba6cced9948500f158f17dc97c22b5075d02c6e60bbfab9393ff27188e33367e5734f1c3af04c184f156b3e8878336f8d30a31dc6e2c6d",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -225,7 +228,10 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "3ace4ace02076b0bd6bb6ed06cbb540e",
       "Signature": "c6d7c068ee995750afcde9392916cb31b300864a35a41e0eaf4f2da79218c1baf1b5ed4b579470ef8996679aabd86ac8e7562b0b4bb74780ab483fda4c30d0e94ef2f8e117a3a5c0c27630e8c0803feb493b55d686e3ed918faab1bc756a6a7ad1e2516e05f98fc950679f32c60d74f954ee6adcef2ee2dcb5bcdca54732b22317f2d232ff0a81373efbe9c95471b69bb3dd9b0f500d37e9e31addf551ce7f849d8a8c9a67eca7eb6d83ebbcbd2253448f671254866b68f3c23b4529a91696666f3f32a081852045ebb792e8f037acd4eba8559d8d1e6a575072b8b2727f28d698b2291c57f100a9ace0d803f62401e75b572aa73c3c5aeb7d4554bc9814c5e7",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -258,7 +264,7 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2019-09-26 20:08:13 |
+| Creation Timestamp           | 2019-09-26 22:08:13 |
 | MD5                | [449bb1c656fa30de7702f17e35b11cd3](https://www.virustotal.com/gui/file/449bb1c656fa30de7702f17e35b11cd3) |
 | SHA1               | [273634ac170d1a6abd32e0db597376a6f62eb59e](https://www.virustotal.com/gui/file/273634ac170d1a6abd32e0db597376a6f62eb59e) |
 | SHA256             | [4b465faf013929edf2f605c8cd1ac7a278ddc9a536c4c34096965e6852cbfb51](https://www.virustotal.com/gui/file/4b465faf013929edf2f605c8cd1ac7a278ddc9a536c4c34096965e6852cbfb51) |
@@ -394,7 +400,10 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "191a32cb759c97b8cfac118dd5127f49",
       "Signature": "3f5b19f3fa13d575382a5aee9f5aa04ca91dc5cc94eede15fef5106ea41ba56483541858c40b28a185c34e74e5ff897cfed5ed3cba719f5602268f162a88feb0a32722ce4be2388e00a63a865f9de53ea8de644941744121fd07c88417da1d653082cb264f39d60427a481b14b49c3238b7e02321827b7ab0bf31872b6a4ee67066f38a6588de0f17e5da460c6a8e5505fe0e8bae28f9958b6b5a0a876f1a2f11c8841727e52979b0a36998d50f701eb3ce7f0226ae5358c63368a1ab1d967665f971aefa8209df02fba6cced9948500f158f17dc97c22b5075d02c6e60bbfab9393ff27188e33367e5734f1c3af04c184f156b3e8878336f8d30a31dc6e2c6d",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -410,7 +419,10 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "3ace4ace02076b0bd6bb6ed06cbb540e",
       "Signature": "c6d7c068ee995750afcde9392916cb31b300864a35a41e0eaf4f2da79218c1baf1b5ed4b579470ef8996679aabd86ac8e7562b0b4bb74780ab483fda4c30d0e94ef2f8e117a3a5c0c27630e8c0803feb493b55d686e3ed918faab1bc756a6a7ad1e2516e05f98fc950679f32c60d74f954ee6adcef2ee2dcb5bcdca54732b22317f2d232ff0a81373efbe9c95471b69bb3dd9b0f500d37e9e31addf551ce7f849d8a8c9a67eca7eb6d83ebbcbd2253448f671254866b68f3c23b4529a91696666f3f32a081852045ebb792e8f037acd4eba8559d8d1e6a575072b8b2727f28d698b2291c57f100a9ace0d803f62401e75b572aa73c3c5aeb7d4554bc9814c5e7",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -443,7 +455,7 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2019-07-09 01:12:34 |
+| Creation Timestamp           | 2019-07-09 03:12:34 |
 | MD5                | [4ec08e0bcdf3e880e7f5a7d78a73440c](https://www.virustotal.com/gui/file/4ec08e0bcdf3e880e7f5a7d78a73440c) |
 | SHA1               | [a22c111045b4358f8279190e50851c443534fc24](https://www.virustotal.com/gui/file/a22c111045b4358f8279190e50851c443534fc24) |
 | SHA256             | [e6023b8fd2ce4ad2f3005a53aa160772e43fe58da8e467bd05ab71f3335fb822](https://www.virustotal.com/gui/file/e6023b8fd2ce4ad2f3005a53aa160772e43fe58da8e467bd05ab71f3335fb822) |
@@ -580,7 +592,10 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "191a32cb759c97b8cfac118dd5127f49",
       "Signature": "3f5b19f3fa13d575382a5aee9f5aa04ca91dc5cc94eede15fef5106ea41ba56483541858c40b28a185c34e74e5ff897cfed5ed3cba719f5602268f162a88feb0a32722ce4be2388e00a63a865f9de53ea8de644941744121fd07c88417da1d653082cb264f39d60427a481b14b49c3238b7e02321827b7ab0bf31872b6a4ee67066f38a6588de0f17e5da460c6a8e5505fe0e8bae28f9958b6b5a0a876f1a2f11c8841727e52979b0a36998d50f701eb3ce7f0226ae5358c63368a1ab1d967665f971aefa8209df02fba6cced9948500f158f17dc97c22b5075d02c6e60bbfab9393ff27188e33367e5734f1c3af04c184f156b3e8878336f8d30a31dc6e2c6d",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -596,7 +611,10 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "3ace4ace02076b0bd6bb6ed06cbb540e",
       "Signature": "c6d7c068ee995750afcde9392916cb31b300864a35a41e0eaf4f2da79218c1baf1b5ed4b579470ef8996679aabd86ac8e7562b0b4bb74780ab483fda4c30d0e94ef2f8e117a3a5c0c27630e8c0803feb493b55d686e3ed918faab1bc756a6a7ad1e2516e05f98fc950679f32c60d74f954ee6adcef2ee2dcb5bcdca54732b22317f2d232ff0a81373efbe9c95471b69bb3dd9b0f500d37e9e31addf551ce7f849d8a8c9a67eca7eb6d83ebbcbd2253448f671254866b68f3c23b4529a91696666f3f32a081852045ebb792e8f037acd4eba8559d8d1e6a575072b8b2727f28d698b2291c57f100a9ace0d803f62401e75b572aa73c3c5aeb7d4554bc9814c5e7",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -629,7 +647,7 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2019-09-26 20:07:44 |
+| Creation Timestamp           | 2019-09-26 22:07:44 |
 | MD5                | [cc35379f0421b907004a9099611ee2cd](https://www.virustotal.com/gui/file/cc35379f0421b907004a9099611ee2cd) |
 | SHA1               | [2e9466d5a814c20403be7c7a5811039ca833bd5d](https://www.virustotal.com/gui/file/2e9466d5a814c20403be7c7a5811039ca833bd5d) |
 | SHA256             | [e6d1ee0455068b74cf537388c874acb335382876aa9d74586efb05d6cc362ae5](https://www.virustotal.com/gui/file/e6d1ee0455068b74cf537388c874acb335382876aa9d74586efb05d6cc362ae5) |
@@ -779,7 +797,10 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "191a32cb759c97b8cfac118dd5127f49",
       "Signature": "3f5b19f3fa13d575382a5aee9f5aa04ca91dc5cc94eede15fef5106ea41ba56483541858c40b28a185c34e74e5ff897cfed5ed3cba719f5602268f162a88feb0a32722ce4be2388e00a63a865f9de53ea8de644941744121fd07c88417da1d653082cb264f39d60427a481b14b49c3238b7e02321827b7ab0bf31872b6a4ee67066f38a6588de0f17e5da460c6a8e5505fe0e8bae28f9958b6b5a0a876f1a2f11c8841727e52979b0a36998d50f701eb3ce7f0226ae5358c63368a1ab1d967665f971aefa8209df02fba6cced9948500f158f17dc97c22b5075d02c6e60bbfab9393ff27188e33367e5734f1c3af04c184f156b3e8878336f8d30a31dc6e2c6d",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -795,7 +816,10 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "3ace4ace02076b0bd6bb6ed06cbb540e",
       "Signature": "c6d7c068ee995750afcde9392916cb31b300864a35a41e0eaf4f2da79218c1baf1b5ed4b579470ef8996679aabd86ac8e7562b0b4bb74780ab483fda4c30d0e94ef2f8e117a3a5c0c27630e8c0803feb493b55d686e3ed918faab1bc756a6a7ad1e2516e05f98fc950679f32c60d74f954ee6adcef2ee2dcb5bcdca54732b22317f2d232ff0a81373efbe9c95471b69bb3dd9b0f500d37e9e31addf551ce7f849d8a8c9a67eca7eb6d83ebbcbd2253448f671254866b68f3c23b4529a91696666f3f32a081852045ebb792e8f037acd4eba8559d8d1e6a575072b8b2727f28d698b2291c57f100a9ace0d803f62401e75b572aa73c3c5aeb7d4554bc9814c5e7",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -828,7 +852,7 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 | Property           | Value |
 |:-------------------|:------|
 | Filename           |  |
-| Creation Timestamp           | 2019-09-26 20:08:13 |
+| Creation Timestamp           | 2019-09-26 22:08:13 |
 | MD5                | [9993a2a45c745bb0139bf3e8decd626c](https://www.virustotal.com/gui/file/9993a2a45c745bb0139bf3e8decd626c) |
 | SHA1               | [68b97bfaf61294743ba15ef36357cdb8e963b56e](https://www.virustotal.com/gui/file/68b97bfaf61294743ba15ef36357cdb8e963b56e) |
 | SHA256             | [edbb23e74562e98b849e5d0eefde3af056ec6e272802a04b61bebd12395754e5](https://www.virustotal.com/gui/file/edbb23e74562e98b849e5d0eefde3af056ec6e272802a04b61bebd12395754e5) |
@@ -964,7 +988,10 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 {
   "Certificates": [
     {
+      "CertificateType": "CA",
+      "IsCA": true,
       "IsCertificateAuthority": true,
+      "IsCodeSigning": true,
       "SerialNumber": "191a32cb759c97b8cfac118dd5127f49",
       "Signature": "3f5b19f3fa13d575382a5aee9f5aa04ca91dc5cc94eede15fef5106ea41ba56483541858c40b28a185c34e74e5ff897cfed5ed3cba719f5602268f162a88feb0a32722ce4be2388e00a63a865f9de53ea8de644941744121fd07c88417da1d653082cb264f39d60427a481b14b49c3238b7e02321827b7ab0bf31872b6a4ee67066f38a6588de0f17e5da460c6a8e5505fe0e8bae28f9958b6b5a0a876f1a2f11c8841727e52979b0a36998d50f701eb3ce7f0226ae5358c63368a1ab1d967665f971aefa8209df02fba6cced9948500f158f17dc97c22b5075d02c6e60bbfab9393ff27188e33367e5734f1c3af04c184f156b3e8878336f8d30a31dc6e2c6d",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -980,7 +1007,10 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
       "Version": 3
     },
     {
+      "CertificateType": "Leaf (Code Signing)",
+      "IsCA": false,
       "IsCertificateAuthority": false,
+      "IsCodeSigning": true,
       "SerialNumber": "3ace4ace02076b0bd6bb6ed06cbb540e",
       "Signature": "c6d7c068ee995750afcde9392916cb31b300864a35a41e0eaf4f2da79218c1baf1b5ed4b579470ef8996679aabd86ac8e7562b0b4bb74780ab483fda4c30d0e94ef2f8e117a3a5c0c27630e8c0803feb493b55d686e3ed918faab1bc756a6a7ad1e2516e05f98fc950679f32c60d74f954ee6adcef2ee2dcb5bcdca54732b22317f2d232ff0a81373efbe9c95471b69bb3dd9b0f500d37e9e31addf551ce7f849d8a8c9a67eca7eb6d83ebbcbd2253448f671254866b68f3c23b4529a91696666f3f32a081852045ebb792e8f037acd4eba8559d8d1e6a575072b8b2727f28d698b2291c57f100a9ace0d803f62401e75b572aa73c3c5aeb7d4554bc9814c5e7",
       "SignatureAlgorithmOID": "1.2.840.113549.1.1.11",
@@ -1015,7 +1045,7 @@ sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/b0dedc3f-6e4b-497a-aade-390cbf4beebb.yaml)
 
-*last_updated:* 2025-04-02
+*last_updated:* 2025-08-28
 
 {{< /column >}}
 {{< /block >}}

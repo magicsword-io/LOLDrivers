@@ -7,26 +7,25 @@ Created: '2023-11-10'
 MitreID: T1068
 Category: vulnerable driver
 Commands:
-    Command: sc.exe create truesight.sys binPath=C:\windows\temp\truesight.sys type=kernel
-        && sc.exe start truesight.sys
-    Description: This is a C# AV/EDR Killer using Rogue Anti-Malware Driver 3.3. This
-        driver is not present in the loldrivers or Windows blocklist at the time of
-        this writing. The only reason I'm making this public is because the company
-        has already published a fix in version 3.4, and Microsoft will likely block
-        this driver soon. This driver can be used in Windows 23H2 with HVCI enabled,
-        loldrivers blocklist, or WDAC enabled. HVCI is designed to ensure the integrity
-        of code executed in the kernel, but it cannot protect against all possible
-        vulnerabilities or actions that can be performed through drivers or system
-        interfaces.
-    Usecase: Elevate privileges
-    Privileges: kernel
-    OperatingSystem: Windows 11
+  Command: sc.exe create truesight.sys binPath=C:\windows\temp\truesight.sys type=kernel
+    && sc.exe start truesight.sys
+  Description: This is a C# AV/EDR Killer using Rogue Anti-Malware Driver 3.3. This
+    driver is not present in the loldrivers or Windows blocklist at the time of this
+    writing. The only reason I'm making this public is because the company has already
+    published a fix in version 3.4, and Microsoft will likely block this driver soon.
+    This driver can be used in Windows 23H2 with HVCI enabled, loldrivers blocklist,
+    or WDAC enabled. HVCI is designed to ensure the integrity of code executed in
+    the kernel, but it cannot protect against all possible vulnerabilities or actions
+    that can be performed through drivers or system interfaces.
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 11
 Resources:
 - https://github.com/ph4nt0mbyt3/Darkside
 Detection: []
 Acknowledgement:
-    Person: ''
-    Handle: ''
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 -   Filename: Truesight
     Libraries:
