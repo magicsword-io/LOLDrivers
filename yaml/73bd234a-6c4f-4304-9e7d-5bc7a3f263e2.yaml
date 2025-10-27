@@ -1,0 +1,104 @@
+Id: 73bd234a-6c4f-4304-9e7d-5bc7a3f263e2
+Tags:
+- hlpdrv.sys
+Author: Michael Haag
+Created: '2025-10-27'
+MitreID: T1068
+Category: malicious driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create KMHLPSVC binPath=C:\windows\temp\hlpdrv.sys type=kernel
+    && sc.exe start KMHLPSVC
+  Description: 'hlpdrv.sys is a malicious driver used to disable Windows Defender
+    by modifying registry settings. This driver has been observed in Akira ransomware
+    campaigns, where it is deployed to facilitate AV/EDR evasion or disablement through
+    a Bring Your Own Vulnerable Driver (BYOVD) exploitation chain. The malware modifies
+    the DisableAntiSpyware registry key via regedit.exe execution.'
+  Usecase: Elevate privileges
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+- https://www.guidepointsecurity.com/blog/gritrep-akira-sonicwall/
+- https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/cf7cad39407d8cd93135be42b6bd258f.bin
+Acknowledgement:
+  Person: GuidePoint Research and Intelligence Team (GRIT)
+  Handle: '@GuidepointSec'
+Detection:
+- type: yara_signature
+  value: https://www.guidepointsecurity.com/blog/gritrep-akira-sonicwall/
+KnownVulnerableSamples:
+- Filename: hlpdrv.sys
+  MD5: cf7cad39407d8cd93135be42b6bd258f
+  SHA1: ce1b9909cef820e5281618a7a0099a27a70643dc
+  SHA256: bd1f381e5a3db22e88776b7873d4d2835e9a1ec620571d2b1da0c58f81c84a56
+  Filesize: 9216
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  InternalName: ''
+  Copyright: ''
+  Imports:
+  - ntoskrnl.exe
+  ExportedFunctions: ''
+  ImportedFunctions:
+  - RtlInitUnicodeString
+  - DbgPrint
+  - RtlCreateSecurityDescriptor
+  - RtlSetDaclSecurityDescriptor
+  - ExAllocatePoolWithTag
+  - ExFreePoolWithTag
+  - IofCompleteRequest
+  - IoCreateDevice
+  - IoCreateSymbolicLink
+  - IoDeleteDevice
+  - IoDeleteSymbolicLink
+  - ZwCreateFile
+  - ZwClose
+  - ZwTerminateProcess
+  - RtlCreateAcl
+  - SeLocateProcessImageName
+  - PsLookupProcessByProcessId
+  - ObOpenObjectByPointer
+  - ZwSetSecurityObject
+  - PsProcessType
+  PDBPath: ''
+  Authentihash:
+    MD5: 3e1467f89f1d0e6ff341afd460b61997
+    SHA1: 7be5524927a472e0d6fbb80767fdf1ff1aa4dffc
+    SHA256: a22d5d42dd0cdae016b536799ab9c384c23b42f5662f0b115b3b85ccb9e23242
+  Imphash: bb62d5bfbc06bfc0791bfc589467b350
+  RichPEHeaderHash:
+    MD5: fddfc403cd9bf71fe6619635b05aac6e
+    SHA1: 350c2cbd34cb87b6e06a25c63b3e48ce30a71f15
+    SHA256: b78be3efd3d5c31d858ac832f0ee71fdb7e04a4628f2c0d897e838fa3e8f3866
+  Sections:
+    .text:
+      Entropy: 6.09734513358123
+      Virtual Size: '0xef2'
+    .rdata:
+      Entropy: 1.6982016121596026
+      Virtual Size: '0x4f0'
+    .data:
+      Entropy: 3.75
+      Virtual Size: '0x10'
+    .pdata:
+      Entropy: 3.34275631688717
+      Virtual Size: '0xa8'
+    INIT:
+      Entropy: 5.030768435516171
+      Virtual Size: '0x2ee'
+    .reloc:
+      Entropy: 3.680768321596844
+      Virtual Size: '0x24'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2025-03-03 04:11:32'
+  Signatures: {}
+Tags:
+- bd1f381e5a3db22e88776b7873d4d2835e9a1ec620571d2b1da0c58f81c84a56
