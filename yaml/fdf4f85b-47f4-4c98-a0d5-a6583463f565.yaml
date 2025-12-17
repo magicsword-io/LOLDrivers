@@ -15,6 +15,9 @@ Commands:
   Usecase: Elevate privileges
 Resources:
 - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+Acknowledgement:
+  Person: ''
+  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/32cccc4f249499061c0afa18f534c825d01034a1f6815f5506bf4c4ff55d1351.yara
