@@ -1,0 +1,283 @@
+Id: ef848b1c-e197-4f98-aa19-4580f41a98b8
+Tags:
+- termdd.sys
+Author: Andrea Monzani, Antonio Parata
+Created: '2025-11-07'
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create termdd.sys binPath=C:\windows\temp\termdd.sys type=kernel
+    && sc.exe start termdd.sys
+  Description: A vulnerable kernel driver that can be used to disable Code Integrity
+  Usecase: Code Integrity Tampering
+  Privileges: Admin privileges
+  OperatingSystem: Windows 10
+Resources:
+- Internal Research
+- https://kat.lua.cz/posts/Some_fun_with_vintage_bugs_and_driver_signing_enforcement/
+Acknowledgement:
+  Person: ''
+  Handle: ''
+Detection: []
+KnownVulnerableSamples:
+- Filename: termdd.sys
+  MD5: 561e7e1f06895d78de991e01dd0fb6e5
+  SHA1: f7089f6d7bb2b386e932aec5211689ea85fde9cc
+  SHA256: 83bfa50a528762ec52a011302ac3874636fb7e26628cd7acfbf2bdc9faa8110d
+  Imphash: 41d9c23e4e5fb4ef7e7c2e595a30251b
+  Authentihash:
+    MD5: 9e1202c1932c71f3c2f09f57ac80e74d
+    SHA1: e91d27a2a039ca8f55cc01ae81b285a99d6d6420
+    SHA256: ba75dd2c8f585b327086b1e8104093a41ccd2b8a87f08b1c43027baa2e3a0ded
+  RichPEHeaderHash:
+    MD5: 8f708792900f6f6392c1748efb549526
+    SHA1: 7472cb6c92dc7cd52ed44f400b40814bb6335457
+    SHA256: d13d3c514405a240adf1d3326f6733715ae61846393c62b65806e63e2a7ed78e
+  Sections:
+    .text:
+      Entropy: 6.195790125600839
+      Virtual Size: '0x8d2b'
+    .rdata:
+      Entropy: 4.500461296093337
+      Virtual Size: '0xa34'
+    .data:
+      Entropy: 0.9276599203322529
+      Virtual Size: '0x714'
+    .pdata:
+      Entropy: 4.558613162498789
+      Virtual Size: '0x624'
+    PAGE:
+      Entropy: 6.061848538846005
+      Virtual Size: '0x1162'
+    .edata:
+      Entropy: 5.182831336872692
+      Virtual Size: '0x44c'
+    INIT:
+      Entropy: 5.906555247612266
+      Virtual Size: '0x11a2'
+    .rsrc:
+      Entropy: 3.4047762438970683
+      Virtual Size: '0x408'
+    .reloc:
+      Entropy: 1.3232366756449623
+      Virtual Size: '0xa8'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2010-11-20 12:03:40'
+  Description: Remote Desktop Server Driver
+  Company: Microsoft Corporation
+  InternalName: termdd.sys
+  OriginalFilename: termdd.sys
+  FileVersion: 6.1.7601.17514 (win7sp1_rtm.101119-1850)
+  Product: "Microsoft\xAE Windows\xAE Operating System"
+  ProductVersion: 6.1.7601.17514
+  Copyright: "\xA9 Microsoft Corporation. All rights reserved."
+  MachineType: AMD64
+  Imports:
+  - ntoskrnl.exe
+  - WMILIB.SYS
+  ExportedFunctions:
+  - IcaAllocateWorkItem
+  - IcaAssertStackLockedExclusive
+  - IcaBreakOnDebugger
+  - IcaBufferAlloc
+  - IcaBufferAllocEx
+  - IcaBufferError
+  - IcaBufferFree
+  - IcaBufferGetUsableSpace
+  - IcaCallNextDriver
+  - IcaChannelInput
+  - IcaCloseHandle
+  - IcaCreateHandle
+  - IcaCreateThread
+  - IcaFlowControlSleep
+  - IcaFlowControlWait
+  - IcaGetSizeForNoLowWaterMark
+  - IcaLogError
+  - IcaLogErrorEx
+  - IcaQueueWorkItem
+  - IcaQueueWorkItemEx
+  - IcaRawInput
+  - IcaReturnHandle
+  - IcaSleep
+  - IcaStackAllocatePool
+  - IcaStackAllocatePoolWithTag
+  - IcaStackFreePool
+  - IcaStackTrace
+  - IcaStackTraceBuffer
+  - IcaSystemTrace
+  - IcaSystemTraceBuffer
+  - IcaTimerCancel
+  - IcaTimerClose
+  - IcaTimerCreate
+  - IcaTimerStart
+  - IcaWaitForMultipleObjects
+  - IcaWaitForSingleObject
+  - IcaZwClose
+  - OutBufTracker
+  ImportedFunctions:
+  - KeInitializeEvent
+  - ZwLoadDriver
+  - IoGetDeviceObjectPointer
+  - ZwUnloadDriver
+  - IoBuildDeviceIoControlRequest
+  - ObfDereferenceObject
+  - ObfReferenceObject
+  - IofCallDriver
+  - KeWaitForSingleObject
+  - ExEnterCriticalRegionAndAcquireResourceExclusive
+  - ExReleaseResourceAndLeaveCriticalRegion
+  - MmSizeOfMdl
+  - KeAcquireSpinLockRaiseToDpc
+  - KeReleaseSpinLock
+  - IoInitializeIrp
+  - memchr
+  - IofCompleteRequest
+  - ProbeForWrite
+  - ExIsResourceAcquiredExclusiveLite
+  - IoAcquireCancelSpinLock
+  - IoReleaseCancelSpinLock
+  - IoGetRequestorProcess
+  - IoGetCurrentProcess
+  - MmMapLockedPagesSpecifyCache
+  - KeSetEvent
+  - PsGetCurrentProcessId
+  - _stricmp
+  - ExInitializeResourceLite
+  - ExDeleteResourceLite
+  - ZwDeviceIoControlFile
+  - ObReferenceObjectByHandle
+  - IoFileObjectType
+  - RtlLengthRequiredSid
+  - RtlSubAuthoritySid
+  - RtlInitializeSid
+  - SeQueryInformationToken
+  - RtlEqualSid
+  - ExAllocatePoolWithQuotaTag
+  - MmUserProbeAddress
+  - IoCreateDevice
+  - _vsnwprintf
+  - RtlInitUnicodeString
+  - RtlQueryRegistryValues
+  - KeClearEvent
+  - IoGetRequestorProcessId
+  - ExEnterCriticalRegionAndAcquireResourceShared
+  - ExReleaseResourceLite
+  - ExAcquireResourceExclusiveLite
+  - KeDelayExecutionThread
+  - KeWaitForMultipleObjects
+  - IoAllocateErrorLogEntry
+  - IoWriteErrorLogEntry
+  - PsCreateSystemThread
+  - ExQueueWorkItem
+  - DbgPrint
+  - ZwQuerySystemInformation
+  - ExEventObjectType
+  - ZwClose
+  - KeInitializeTimer
+  - KeInitializeDpc
+  - KeSetTimer
+  - KeCancelTimer
+  - RtlInitializeGenericTable
+  - RtlEnumerateGenericTable
+  - RtlDeleteElementGenericTable
+  - RtlInsertElementGenericTable
+  - RtlLookupElementGenericTable
+  - IoStartPacket
+  - IoSetStartIoAttributes
+  - IoStartNextPacket
+  - IoCreateController
+  - IoDeleteController
+  - IoAttachDeviceToDeviceStack
+  - ExAcquireFastMutexUnsafe
+  - ExReleaseFastMutexUnsafe
+  - IoWMIRegistrationControl
+  - IoDetachDevice
+  - IoInvalidateDeviceState
+  - PoStartNextPowerIrp
+  - PoCallDriver
+  - PoSetPowerState
+  - KeReadStateEvent
+  - KeBugCheckEx
+  - ExFreePoolWithTag
+  - IoDeleteDevice
+  - ExAllocatePoolWithTag
+  - __C_specific_handler
+  - WmiSystemControl
+  - WmiCompleteRequest
+  Signatures:
+  - CertificatesInfo: ''
+    SignerInfo: ''
+    Certificates:
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, OU=MOPR, OU=nCipher
+        DSE ESN:9E78,864B,039D, CN=Microsoft Time,Stamp Service
+      ValidFrom: '2008-07-25 19:13:45'
+      ValidTo: '2011-07-25 19:23:45'
+      Signature: 47714fb64845c008eb9c2fd3255bdb67511192a6d9d9b2149a26c2fd06c1ccd788f5a635b5cd2bb66b586acdf99df35aeb462fa1faa71f7d7a42b2b0d11a0928546c6f998b38fc3ae4c124aa724c12042ff1d47a763bc5cf71270b6dfc3867a7c522622b7b7fc176aca7c5264ca9af98dd8a385dcf65a4812ea9ef56024cb908be65c41e8b212d6ea7f27564b4dc1a6bd0f125e5c2e7804439d42f0a797e012aa7785ba36b5bce09ef393a39b7c46753b9aaf361ff9d79e3cf4867ffabc8c62b620994d01fa278f773493b5853c109ab4c060bd540287ef6b166c5bf52c4be3e3be0f98e748de6220cc1c63398b579e80cf7007ceab24ecc809a162dc8a41005
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 6104b3f500000000000d
+      Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
+      TBS:
+        MD5: 345553592b206b618a776b3a20ca32fa
+        SHA1: ef39da7ff9382ce5935a2631f6e29d849f98a9b4
+        SHA256: e24487e4c1b48bc6be371a65a854f228001b2d424c6a990a93cbfb06cc65cbe0
+        SHA384: 60a1ef547225adc2516f8c498fafd1be70aa038dc18d603e548cdc7c73559ce73f81fc62f0095474bf79aeec2ea6dc9d
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, OU=MOPR, CN=Microsoft
+        Windows
+      ValidFrom: '2009-12-07 21:57:40'
+      ValidTo: '2011-03-07 21:57:40'
+      Signature: 3135c29969a697b608d05d5e7f76c2dc1335956f261b9fdd2d6100376d67cb01a554ec2cd4b564fcd495f5be0fd4a2311e7e34ca2aed0130dc2f00f6918870977ed471fb626c6c46ed9433a899d182c141d25cefd46e0d6d5bb3477f807e8c8273b7e95f562263736f5b113cffdedb9aff968c7417f5e08454d16d64642c9347394b9e04e17ac3fd9f077bf8faf76ef1d5135a95fed5b03d7ace87664969152da5c53c3a7b0862452f5672ed006cd45075c5ec5ecacf330a36c734fbe143493ae913b0c335ff57f5734e7740b995d04890888b3cc1c810fd0ff7877701cc8930e934c535e83f78156a4590d0e8d7e3032b5aac89b2fa528a30486d066d2c121c
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 6115230f00000000000a
+      Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
+      TBS:
+        MD5: 811122ed0d11eb31f623287624f4f42f
+        SHA1: 9f1ca6f65169bf7b34e7257f6b8c1201430ce72d
+        SHA256: 96bde30925408b4971fc03df169db93b2d54d683ec563782d288a06270dfb552
+        SHA384: 396981d1b3a3b6844160523d4c08ba6d00ab2e3c55b9d1f1c8b099d62e63a50b541a6ce333e633cbab4f37366f6d8fca
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Time,Stamp PCA
+      ValidFrom: '2007-04-03 12:53:09'
+      ValidTo: '2021-04-03 13:03:09'
+      Signature: 10978ac35c034436dde9b4ad77dbce79514d01b12e74715b6d0c13abcebe7b8fb82ed412a28c6d62b85702cb4e20135099dd7a40e257bbaf589a1ce11d0186acbb78f28bd0ec3b01eee2be8f0a05c88d48e2f05315dd4fab92e4e78d6ad580c1e694f2062f8503e9912a242270fbf6fce478992e0df707e270bc184e9d8e6b0a7295b8a1399c672dc5510eea625c3f16988b203fe2071a32f9cc314a76313d2b720bc8ea703dff850a13dfc20a618ef0d7b817eb4e8b7fc5352b5ea3bfebbc7d0b427bd4537221ee30cabb78655c5b01170a140ed2da1498f53cb96658b32d2fe7f98586cc5156e89d70946cac394cd4f679bfaa187a6229efa29b293406771a62c93d1e6d1f82f00bc72cbbcf43b3e5f9ec7db5e3a4a87435b84ec571231226760b3c528c715a464314bcb3b3b04d67c89f42ff807921809e153066e842125e1ac89e2221d043e92be9bbf448cc2cd4d832804c262a48245f5aea56efa6de999dca3a6fbd8127740611ee7621bf9b82c12754b6b16a3d89a17661b46ea113a6bfaa47f0126ffd8a326cb2fedf51c88c23c966bd9d1d871264023d2daf598fb8e421e5b5b0ca63b4785405d4412e50ac94b0a578abb3a096751ad992871375222f32a8086ea05b8c25bfa0ef84ca21d6eb1e4fc99aee49e0f701656f890b7dc869c8e66eeaa797ce3129ff0ec55b5cd84d1ba1d8fa2f9e3f2e55166bc913a3fd
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 6116683400000000001c
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
+      TBS:
+        MD5: 335713f62536c68d0acc82df3dceb932
+        SHA1: 023cf1c5e99dc2f24133dae6937145bb481306e6
+        SHA256: 65d585d6bf2b0aa4f798b9af69be08c6f1c3d01a754f989768b722a145df5312
+        SHA384: f7dd00644994985c518f70c060386448dd0c3a13f5eff12a0dd31bf8333f24b781928d323acca27e04633e71a7f22e71
+    - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Verification PCA
+      ValidFrom: '2005-09-15 21:55:41'
+      ValidTo: '2016-03-15 22:05:41'
+      Signature: 2531a158ea52e5e1170ce6f13f78a33f72afa757105389105e329cb670c3152b4d153034e8c06ae41cd32e206548d71b986221ba459f4aecdb2f091951e5ed3219512fe1ddfbc652fdebc68225420309a638b6361fccc980bb5a691831c3b3a0b36747be9dc7e23f96b388f819be39b9e995cefc7cafa8cdd04190e0d5b31c2f68bbdb0f6c6addf2afdef2b5de0db6a65af0860ab96d994b3f7b2d01846c8f87dc7f8fab1488d0069134be1b8222a4bc558aad9bfc731410c4c9191e077d9b0ec095265dc61facb4f27eba25704a7bd78ed19da013497ab002525224f4afdd402de53e3258b34a6add1159aa2dbca4a07338f940776b341957cd38682782f8d16feb23c03f52f34ed5023e6a9a2bc1f53171db414d3bdeefadaf1f8865431b51b79a75ca8e6949108f788a7445b9098e737707324a4bd7682b98c5ba54ea3fcba2008cbbd81058f2dbdc9bcdd8ea4843e24a7e65b2dcf52d4e2567a8e0b5baa7dd7e5ec14c0274c9b36ee3f8f00bedfcb929c55bc9365190db787db9320f5e76d2155c3b3721c6dbc9196eed742a5c2c0b51494553b0b2b323d4a1b05f0d19cd14a7e33c9b97729414dfffc1901ba5dff5a9f31b17dab5fc44e0e8e23ca27abbbb65e64db1b515a1d9673bb00c7d3be9ee512a47f5150f8cad5d2e35dff4a42ef613375a2be8559a492c97ce9d019e97465cd92dbc245a95596f4dca9dd65726
+      SignatureAlgorithmOID: 1.2.840.113549.1.1.5
+      IsCertificateAuthority: true
+      SerialNumber: 610702dc00000000000b
+      Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
+      TBS:
+        MD5: dacf907e8a071c8e674bcd2103b01d76
+        SHA1: b1a2d28695b6b41b0a496afb1ee9e5ed3247c4a9
+        SHA256: 8598ae248596c6fc1ea1bcb1c484c19dffc7542e98ac1278d5b56fb03e887a24
+        SHA384: 8a52cce2a0c4d7d8f797f739ecbcec8bc824cffb0013af8401b18b2146c6e99fe26d45318ec97dfad7a69abeab958aea
+    Signer:
+    - SerialNumber: 6115230f00000000000a
+      Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
+        Windows Verification PCA
+      Version: 1
