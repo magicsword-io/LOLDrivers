@@ -36,7 +36,9 @@ We were not able to verify the hash of this driver successfully, it has not been
 - **UUID**: {{ driver.Id }}
 - **Created**: {{driver.Created}}
 - **Author**: {{driver.Author}}
+{% if driver.Acknowledgement and (driver.Acknowledgement.Person or driver.Acknowledgement.Handle) %}
 - **Acknowledgement**: {{driver.Acknowledgement.Person}} | [{{ driver.Acknowledgement.Handle }}](https://twitter.com/{{driver.Acknowledgement.Handle}})
+{% endif %}
 
 {% if driver.KnownVulnerableSamples %}
 {% if driver.KnownVulnerableSamples[0].MD5 %}
