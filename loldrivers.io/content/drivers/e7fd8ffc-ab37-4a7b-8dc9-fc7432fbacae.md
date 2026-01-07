@@ -19,7 +19,6 @@ Sophos, from time to time, has observed a threat actor deploy variants of Poortr
 - **UUID**: e7fd8ffc-ab37-4a7b-8dc9-fc7432fbacae
 - **Created**: 2024-09-10
 - **Author**: Michael Haag
-- **Acknowledgement**:  | [](https://twitter.com/)
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/cf42cc217c139298641901aad4e5db08.bin" "Download" >}}{{< button "https://www.magicsword.io/premium" "Block" "red" >}}
 {{< tip "warning" >}}
@@ -386,7 +385,7 @@ sc.exe create driver_bfcbc010.sys binPath=C:\windows\temp\driver_bfcbc010.sys ty
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/e7fd8ffc-ab37-4a7b-8dc9-fc7432fbacae.yaml)
 
-*last_updated:* 2025-08-28
+*last_updated:* 2026-01-07
 
 {{< /column >}}
 {{< /block >}}

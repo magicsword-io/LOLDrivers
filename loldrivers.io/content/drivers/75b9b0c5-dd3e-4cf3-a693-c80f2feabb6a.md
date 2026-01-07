@@ -19,7 +19,6 @@ Cisco Talos has identified multiple versions of an undocumented malicious driver
 - **UUID**: 75b9b0c5-dd3e-4cf3-a693-c80f2feabb6a
 - **Created**: 2023-07-31
 - **Author**: Alice Climent-Pommeret
-- **Acknowledgement**:  | [](https://twitter.com/)
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/5a4fe297c7d42539303137b6d75b150d.bin" "Download" >}}{{< button "https://www.magicsword.io/premium" "Block" "red" >}}
 {{< tip "warning" >}}
@@ -351,7 +350,7 @@ sc.exe create 5a4fe297c7d42539303137b6d75b150d.sys binPath=C:\windows\temp\5a4fe
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/75b9b0c5-dd3e-4cf3-a693-c80f2feabb6a.yaml)
 
-*last_updated:* 2025-08-28
+*last_updated:* 2026-01-07
 
 {{< /column >}}
 {{< /block >}}

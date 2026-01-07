@@ -25,7 +25,6 @@ nt2.sys is a vulnerable driver and more information will be added as found.
 - **UUID**: cacc48e6-6ed8-431c-abee-88ee6c2dc3c1
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
-- **Acknowledgement**:  | [](https://twitter.com/)
 
 
 ### Commands
@@ -134,7 +133,7 @@ sc.exe create nt2.sys binPath=C:\windows\temp \n \n \n  t2.sys type=kernel &amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/cacc48e6-6ed8-431c-abee-88ee6c2dc3c1.yaml)
 
-*last_updated:* 2025-08-28
+*last_updated:* 2026-01-07
 
 {{< /column >}}
 {{< /block >}}

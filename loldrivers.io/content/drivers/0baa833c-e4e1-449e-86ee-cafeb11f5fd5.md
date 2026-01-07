@@ -19,10 +19,10 @@ Confirmed vulnerable driver from Microsoft Block List
 - **UUID**: 0baa833c-e4e1-449e-86ee-cafeb11f5fd5
 - **Created**: 2023-07-22
 - **Author**: Michael Haag
-- **Acknowledgement**:  | [](https://twitter.com/)
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/d04f5388e962cd21462bcc54180e84e0.bin" "Download" >}}{{< button "https://www.magicsword.io/premium" "Block" "red" >}}
 {{< tip "warning" >}}
+This download link contains the vulnerable driver!
 
 {{< /tip >}}
 
@@ -41,6 +41,13 @@ Confirmed vulnerable driver from Microsoft Block List
 {{< column >}}
 #### YARA 🏹
 {{< details "Expand" >}}
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict.yar" "Exact Match" >}}{{< tip >}}with header and size limitation{{< /tip >}} 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/other/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/other/yara-rules_vuln_drivers_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
+
 
 {{< /details >}}
 {{< /column >}}
@@ -777,7 +784,7 @@ Confirmed vulnerable driver from Microsoft Block List
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/0baa833c-e4e1-449e-86ee-cafeb11f5fd5.yaml)
 
-*last_updated:* 2025-08-28
+*last_updated:* 2026-01-07
 
 {{< /column >}}
 {{< /block >}}
