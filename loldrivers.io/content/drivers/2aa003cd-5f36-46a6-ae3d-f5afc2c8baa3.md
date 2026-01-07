@@ -19,7 +19,6 @@ mhyprot3.sys is a vulnerable driver and more information will be added as found.
 - **UUID**: 2aa003cd-5f36-46a6-ae3d-f5afc2c8baa3
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
-- **Acknowledgement**:  | [](https://twitter.com/)
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/5cc5c26fc99175997d84fe95c61ab2c2.bin" "Download" >}}{{< button "https://www.magicsword.io/premium" "Block" "red" >}}
 {{< tip "warning" >}}
@@ -1969,7 +1968,7 @@ sc.exe create mhyprot3.sys binPath=C:\windows\temp\mhyprot3.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/2aa003cd-5f36-46a6-ae3d-f5afc2c8baa3.yaml)
 
-*last_updated:* 2025-08-28
+*last_updated:* 2026-01-07
 
 {{< /column >}}
 {{< /block >}}

@@ -23,7 +23,6 @@ This threat appears to target native Chinese speakers, as it searches for Chines
 - **UUID**: b759adfa-b353-4ca3-9dfb-8fadf7a437eb
 - **Created**: 2023-07-12
 - **Author**: Michael Haag
-- **Acknowledgement**:  | [](https://twitter.com/)
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/5917e415a5bf30b3fcbcbcb8a4f20ee0.bin" "Download" >}}{{< button "https://www.magicsword.io/premium" "Block" "red" >}}
 {{< tip "warning" >}}
@@ -351,7 +350,7 @@ sc.exe create spwizimgVT.sys binPath=C:\windows\temp\spwizimgVT.sys type=kernel 
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/b759adfa-b353-4ca3-9dfb-8fadf7a437eb.yaml)
 
-*last_updated:* 2025-08-28
+*last_updated:* 2026-01-07
 
 {{< /column >}}
 {{< /block >}}

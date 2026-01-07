@@ -19,7 +19,6 @@ The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable driv
 - **UUID**: dc3fdbd3-601a-4d2a-bf34-d2e84c6ff1d3
 - **Created**: 2023-11-02
 - **Author**: Takahiro Haruyama
-- **Acknowledgement**:  | [](https://twitter.com/)
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/003dc41d148ec3286dc7df404ba3f2aa.bin" "Download" >}}{{< button "https://www.magicsword.io/premium" "Block" "red" >}}
 {{< tip "warning" >}}
@@ -386,7 +385,7 @@ sc.exe create stdcdrvws64sys binPath= C:\windows\temp\stdcdrvws64sys.sys type=ke
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/dc3fdbd3-601a-4d2a-bf34-d2e84c6ff1d3.yaml)
 
-*last_updated:* 2025-08-28
+*last_updated:* 2026-01-07
 
 {{< /column >}}
 {{< /block >}}

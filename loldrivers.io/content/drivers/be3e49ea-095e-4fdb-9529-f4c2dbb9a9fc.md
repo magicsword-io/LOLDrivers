@@ -19,7 +19,6 @@ PhlashNT.sys is a vulnerable driver and more information will be added as found.
 - **UUID**: be3e49ea-095e-4fdb-9529-f4c2dbb9a9fc
 - **Created**: 2023-01-09
 - **Author**: Michael Haag
-- **Acknowledgement**:  | [](https://twitter.com/)
 
 {{< button "https://github.com/magicsword-io/LOLDrivers/raw/main/drivers/e9e786bdba458b8b4f9e93d034f73d00.bin" "Download" >}}{{< button "https://www.magicsword.io/premium" "Block" "red" >}}
 {{< tip "warning" >}}
@@ -349,7 +348,7 @@ sc.exe create PhlashNT.sys binPath=C:\windows\temp\PhlashNT.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/be3e49ea-095e-4fdb-9529-f4c2dbb9a9fc.yaml)
 
-*last_updated:* 2025-08-28
+*last_updated:* 2026-01-07
 
 {{< /column >}}
 {{< /block >}}
