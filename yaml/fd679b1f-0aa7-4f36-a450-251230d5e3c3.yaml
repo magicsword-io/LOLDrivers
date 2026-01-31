@@ -1,0 +1,45 @@
+Id: fd679b1f-0aa7-4f36-a450-251230d5e3c3
+Tags:
+- LnvMSRIO.sys
+Verified: 'FALSE'
+Author: Security Research
+Created: '2025-01-31'
+MitreID: T1068
+Category: vulnerable driver
+CVE:
+- CVE-2025-8061
+Description: Lenovo MSR direct access vulnerability
+Commands:
+  Command: 'Load driver with sc.exe'
+  Description: 'Load and execute driver'
+  Usecase: 'Privilege escalation'
+  Privileges: admin
+  OperatingSystem: Windows
+Resources: []
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: ''
+KnownVulnerableSamples:
+- Filename: LnvMSRIO.sys
+  MD5: ''
+  SHA1: ''
+  SHA256: ''
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: LnvMSRIO.sys
+  Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  InternalName: ''
+  Copyright: ''
+  Imports: []
+  ExportedFunctions: ''

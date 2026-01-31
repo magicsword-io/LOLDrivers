@@ -1,0 +1,54 @@
+name: Validate PR YAMLs Against Schema
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'yaml/**/*.yaml'
+      - 'bin/spec/drivers.spec.json'
+
+jobs:
+  validate-yaml:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install Poetry
+        run: curl -sSL https://install.python-poetry.org | python3 -
+      
+      - name: Install dependencies
+        run: poetry install
+      
+      - name: Get changed YAML files
+        id: changed-files
+        uses: tj-actions/changed-files@v40
+        with:
+          files: yaml/**/*.yaml
+      
+      - name: Validate changed YAML files
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          poetry run python bin/validate.py -v $(echo "${{ steps.changed-files.outputs.all_changed_files }}" | tr '\n' ' ')
+      
+      - name: Validate all YAMLs (on schema change)
+        if: contains(steps.changed-files.outputs.all_changed_files, 'bin/spec/drivers.spec.json')
+        run: poetry run python bin/validate.py -v
+      
+      - name: Comment on PR if validation fails
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '❌ YAML validation failed. Please check the action logs for details.'
+            })

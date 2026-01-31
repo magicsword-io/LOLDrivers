@@ -1,0 +1,62 @@
+name: Auto-tag PRs with Linked Issues
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  auto-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Extract linked issues from PR body
+        id: extract-issues
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const body = pr.body || '';
+            
+            // Match patterns: Closes #123, Fixes #456, Resolves #789, Related to #101
+            const issuePattern = /(?:closes|fixes|resolves|related to|ref|refs)\s+#(\d+)/gi;
+            const matches = [...body.matchAll(issuePattern)];
+            const issueNumbers = [...new Set(matches.map(m => m[1]))];
+            
+            return issueNumbers;
+      
+      - name: Get issue labels from linked issues
+        if: steps.extract-issues.outputs.result != '[]'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueNumbers = JSON.parse('${{ steps.extract-issues.outputs.result }}');
+            const labels = new Set();
+            
+            for (const issueNum of issueNumbers) {
+              try {
+                const issue = await github.rest.issues.get({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: parseInt(issueNum)
+                });
+                
+                issue.data.labels.forEach(label => {
+                  labels.add(label.name);
+                });
+              } catch (err) {
+                console.log(`Could not fetch issue #${issueNum}`);
+              }
+            }
+            
+            if (labels.size > 0) {
+              const labelArray = Array.from(labels);
+              console.log(`Adding labels: ${labelArray.join(', ')}`);
+              
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                labels: labelArray
+              });
+            }

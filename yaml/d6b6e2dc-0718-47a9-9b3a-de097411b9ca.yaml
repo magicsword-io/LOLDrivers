@@ -1,0 +1,47 @@
+Id: d6b6e2dc-0718-47a9-9b3a-de097411b9ca
+Tags:
+- ksapi64.sys
+Verified: 'FALSE'
+Author: Security Research
+Created: '2025-01-31'
+MitreID: T1068
+Category: vulnerable driver
+Description: Vulnerable driver for BYOVD exploits - Killer/Rivet driver
+Commands:
+  Command: 'Load driver with sc.exe'
+  Description: 'Load and execute driver'
+  Usecase: 'Privilege escalation'
+  Privileges: admin
+  OperatingSystem: Windows
+Resources: []
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: ''
+KnownVulnerableSamples:
+- Filename: ksapi64.sys
+  MD5: 
+  SHA1: 
+  SHA256: 1CD219F58B249A2E4F86553BDD649C73785093E22C87170798DAE90F193240AF
+- Filename: ksapi64.sys
+  MD5: 
+  SHA1: 
+  SHA256: 26ED45461E62D733F33671BFD0724399D866EE7606F3F112C90896CE8355392E
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ksapi64.sys
+  Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  InternalName: ''
+  Copyright: ''
+  Imports: []
+  ExportedFunctions: ''

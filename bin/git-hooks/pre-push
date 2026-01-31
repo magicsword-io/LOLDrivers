@@ -1,0 +1,57 @@
+#!/usr/bin/env python3
+"""
+Pre-push hook: Run full YAML validation before pushing to origin.
+
+This hook validates all YAML files in the yaml/ directory to ensure
+data integrity and consistency before pushing to the remote repository.
+
+Exit codes:
+    0: All checks passed
+    1: Validation errors found
+    2: Hook setup error
+"""
+
+import subprocess
+import sys
+import os
+from pathlib import Path
+
+def run_command(cmd):
+    """Execute a shell command and return exit code."""
+    try:
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+        print(result.stdout, file=sys.stdout, end='')
+        print(result.stderr, file=sys.stderr, end='')
+        return result.returncode
+    except Exception as e:
+        print(f"ERROR: Failed to execute command: {e}", file=sys.stderr)
+        return 2
+
+def main():
+    """Main hook logic."""
+    repo_root = subprocess.check_output(
+        ['git', 'rev-parse', '--show-toplevel'],
+        text=True
+    ).strip()
+    
+    os.chdir(repo_root)
+    
+    print("Running full YAML validation before push...")
+    print("=" * 60)
+    
+    # Run full validation
+    validation_cmd = "poetry run python bin/validate.py -v"
+    exit_code = run_command(validation_cmd)
+    
+    print("=" * 60)
+    
+    if exit_code == 0:
+        print("✓ All validation checks passed. Safe to push.")
+    else:
+        print("\n❌ Validation failed. Please fix errors before pushing.")
+        print("To bypass this hook: git push --no-verify")
+    
+    return exit_code
+
+if __name__ == '__main__':
+    sys.exit(main())

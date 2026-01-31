@@ -1,0 +1,37 @@
+Id: d5c77c5c-83ce-4e81-8b08-5c5c1c5c5c5c
+Tags:
+  - athpexnt.sys
+Author: Security Researcher
+Created: '2024-01-27'
+MitreID: T1068
+CVE:
+  - CVE-XXXX-XXXXX
+Category: vulnerable driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create athpexnt.sys binPath=C:\windows\temp\athpexnt.sys type=kernel && sc.exe start athpexnt.sys
+  Description: Qualcomm Atheros driver vulnerable to physical memory write via unprivileged IOCTL access
+  Usecase: Physical memory write enables privilege escalation and arbitrary kernel code execution
+  Privileges: user
+  OperatingSystem: Windows 10
+Resources:
+  - https://github.com/krispybyte/CVE-Athpexnt-Analysis
+Detection: []
+Acknowledgement:
+  Person: krispybyte
+  Handle: '@krispybyte'
+KnownVulnerableSamples:
+  - Filename: athpexnt.sys
+    MD5: bf77a19e1396d6d36e32ff8d23eb5d3f
+    SHA1: ''
+    SHA256: fa0902daefbd9e716faaac8e854144ea0573e2a41192796f3b3138fe7a1d19f1
+    Signature: ''
+    Date: ''
+    Publisher: Qualcomm Atheros Communications Inc.
+    Company: Qualcomm Atheros Communications Inc.
+    Description: Qualcomm Atheros device driver
+    Product: Qualcomm Atheros driver
+    ProductVersion: ''
+    FileVersion: ''
+    MachineType: AMD64
+    OriginalFilename: athpexnt.sys

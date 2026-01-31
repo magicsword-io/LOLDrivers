@@ -1,0 +1,49 @@
+Id: fae7f1c1-91db-468c-8930-aebd33985b19
+Tags:
+- SonixDeviceMFT.dll
+Verified: 'FALSE'
+Author: Security Research
+Created: '2025-01-31'
+MitreID: T1068
+Category: vulnerable driver
+CVE:
+- CVE-2023-51715
+Description: Registry COM object permission weakness enabling LPE in webcam driver installation
+Commands:
+  Command: 'Load driver with sc.exe'
+  Description: 'Load and execute driver'
+  Usecase: 'Privilege escalation'
+  Privileges: admin
+  OperatingSystem: Windows
+Resources: []
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: ''
+KnownVulnerableSamples:
+- Filename: SonixDeviceMFT.dll
+  MD5: 7627850eebde72a991e2fe1eb7c0f7dc
+  SHA1: de59320c2fdc90b24fab5bd70252759ba34e7d2e
+  SHA256: e181006d410cce00ff1303a359c23612d0506b5c04988696cc5ff685e30fb789
+- Filename: SonixDeviceMFT.dll
+  MD5: e087e30b3568b1de1e5a70520c3ba0dc
+  SHA1: 409d1fe5e9008a2238050cf6b346ae81ddce741f
+  SHA256: c2bdcd4bd5b0b4257cd7d04861a5aba30cc4e3146c82b153d0abfbf1f4f1ada2
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: SonixDeviceMFT.dll
+  Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  InternalName: ''
+  Copyright: ''
+  Imports: []
+  ExportedFunctions: ''
