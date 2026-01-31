@@ -1,0 +1,86 @@
+name: Update Driver Versions
+
+on:
+  push:
+    paths:
+      - 'yaml/*.yaml'
+      - 'drivers.json'
+      - 'bin/update-versions.py'
+  pull_request:
+    paths:
+      - 'yaml/*.yaml'
+  schedule:
+    # Run weekly on Sunday at midnight UTC
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  update-versions:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install PyYAML
+      
+      - name: Run version update script
+        run: |
+          python bin/update-versions.py --verbose
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet drivers.json; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "### Version Updates" >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`diff" >> $GITHUB_STEP_SUMMARY
+            git diff drivers.json >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          fi
+      
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config user.name "LOLDrivers Bot"
+          git config user.email "loldrivers+bot@magicsword.io"
+          git add drivers.json
+          git commit -m "chore(data): Auto-update driver versions
+
+- Update ProductVersion, FileVersion, and timestamps from YAML sources
+- Synchronized by: bin/update-versions.py
+- Timestamp: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          git push
+      
+      - name: Comment on PR
+        if: github.event_name == 'pull_request' && steps.check_changes.outputs.has_changes == 'true'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✓ Driver version information synchronized. See changes in drivers.json.'
+            })
+      
+      - name: Upload version log
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: version-update-log
+          path: |
+            drivers.json
+          retention-days: 7

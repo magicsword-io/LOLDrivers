@@ -10,7 +10,7 @@ Category: vulnerable driver
 Commands:
   Command: sc.exe create WinRing0.sys binPath=C:\windows\temp\WinRing0.sys type=kernel
     && sc.exe start WinRing0.sys
-  Description: ''
+  Description: WinRing0 is a hardware access driver that allows direct access to IO ports and memory, which can be abused to elevate privileges and gain kernel-level code execution.
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
