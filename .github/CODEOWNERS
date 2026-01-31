@@ -1,0 +1,22 @@
+# CODEOWNERS
+# Auto-assign reviews for pull requests targeting specific paths
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in repo
+* @magicsword-io/LOLDrivers
+
+# Validation and tooling scripts
+/bin/validate.py @magicsword-io/LOLDrivers
+/bin/*.py @magicsword-io/LOLDrivers
+
+# GitHub Actions workflows
+/.github/workflows/ @magicsword-io/LOLDrivers
+
+# Documentation
+/CONTRIBUTING.md @magicsword-io/LOLDrivers
+/DEVELOPERS.md @magicsword-io/LOLDrivers
+/README.md @magicsword-io/LOLDrivers
+
+# Issue and PR templates
+/.github/ISSUE_TEMPLATE/ @magicsword-io/LOLDrivers
+/.github/PULL_REQUEST_TEMPLATE.md @magicsword-io/LOLDrivers
