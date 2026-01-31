@@ -1,0 +1,37 @@
+Id: e2d88d8d-94cf-4f82-9c09-6d6d2d6d2d6d
+Tags:
+  - hlpdrv.sys
+  - KMHLPDRV
+Author: Dylan Deane
+Created: '2024-01-26'
+MitreID: T1562
+CVE: []
+Category: malicious driver
+Verified: 'TRUE'
+Commands:
+  Command: sc.exe create KMHLPDRV binPath=C:\windows\temp\hlpdrv.sys type=kernel && sc.exe start KMHLPDRV
+  Description: Purpose-built EDR killer driver that terminates arbitrary processes and removes code signing trust to bypass PPL (Protected Process Light)
+  Usecase: EDR evasion, process termination, code signing bypass for defense evasion
+  Privileges: kernel
+  OperatingSystem: Windows 10
+Resources:
+  - https://www.virustotal.com/gui/file/bd1f381e5a3db22e88776b7873d4d2835e9a1ec620571d2b1da0c58f81c84a56
+Detection: []
+Acknowledgement:
+  Person: Dylan Deane
+  Handle: '@DylanDeane'
+KnownVulnerableSamples:
+  - Filename: hlpdrv.sys
+    MD5: ''
+    SHA1: ''
+    SHA256: bd1f381e5a3db22e88776b7873d4d2835e9a1ec620571d2b1da0c58f81c84a56
+    Signature: ''
+    Date: ''
+    Publisher: ''
+    Company: ''
+    Description: EDR Killer kernel driver
+    Product: KMHLPDRV
+    ProductVersion: ''
+    FileVersion: ''
+    MachineType: AMD64
+    OriginalFilename: hlpdrv.sys
