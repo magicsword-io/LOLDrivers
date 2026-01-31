@@ -5,7 +5,7 @@ Verified: 'TRUE'
 Author: Northwave Cyber Security
 Created: '2024-09-11'
 MitreID: T1068
-Category: vulnerable
+Category: vulnerable driver
 Commands:
   Command: sc.exe create ampa binPath=C:\windows\temp\ampa.sys type=kernel && sc.exe
     start ampa
