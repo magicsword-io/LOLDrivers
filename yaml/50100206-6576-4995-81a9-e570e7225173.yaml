@@ -8,14 +8,16 @@ MitreID: T1068
 Category: vulnerable driver
 CVE:
 - CVE-2024-51324
-Description: Arbitrary process termination vulnerability
+Description: Arbitrary process termination vulnerability. Can also be used as BYOVD driver.
 Commands:
   Command: 'Load driver with sc.exe'
   Description: 'Load and execute driver'
-  Usecase: 'Privilege escalation'
+  Usecase: 'Privilege escalation or process termination from low integrity'
   Privileges: admin
   OperatingSystem: Windows
-Resources: []
+Resources:
+- https://github.com/RainbowDynamix/GoodBaiii
+- https://www.virustotal.com/gui/file/d8ce0a5866178495a66d23c9587822164966111fcd34764011e907951c599711
 Detection: []
 Acknowledgement:
   Person: ''
@@ -24,7 +26,7 @@ KnownVulnerableSamples:
 - Filename: BdApiUtil.sys
   MD5: ''
   SHA1: ''
-  SHA256: ''
+  SHA256: D8CE0A5866178495A66D23C9587822164966111FCD34764011E907951C599711
   Signature: ''
   Date: ''
   Publisher: ''
