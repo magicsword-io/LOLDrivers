@@ -1,0 +1,49 @@
+name: Mark Stale Issues
+
+on:
+  schedule:
+    # Run daily at 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          
+          # Issues
+          days-before-issue-stale: 90
+          days-before-issue-close: 120
+          
+          stale-issue-label: 'stale'
+          close-issue-label: 'wontfix'
+          stale-issue-message: |
+            This issue has been inactive for 90 days. If this is still relevant, please comment to keep it open.
+            Otherwise, it will be closed in 30 days.
+          close-issue-message: |
+            This issue was closed due to inactivity (120+ days without response).
+            If you believe this should be reopened, please comment with additional context.
+          
+          # Pull requests
+          days-before-pr-stale: 60
+          days-before-pr-close: 90
+          
+          stale-pr-label: 'stale'
+          close-pr-label: 'wontfix'
+          stale-pr-message: |
+            This PR has been inactive for 60 days. Please update it or mark as draft if no longer needed.
+            It will be closed in 30 days if not updated.
+          close-pr-message: |
+            This PR was closed due to inactivity (90+ days without updates).
+            Feel free to reopen if you'd like to continue this work.
+          
+          # Exemptions
+          exempt-issue-labels: 'pinned,help-wanted,discussion'
+          exempt-pr-labels: 'pinned,wip'
+          
+          # Don't remove labels when marking stale
+          remove-stale-when-updated: true
+          remove-stale-when-commented: true

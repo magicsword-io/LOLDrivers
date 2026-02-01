@@ -1,0 +1,43 @@
+Id: 3bc476c7-cf21-451c-b285-e4cd596d888a
+Tags:
+- tm_filter.sys
+Verified: 'FALSE'
+Author: Security Research
+Created: '2025-01-31'
+MitreID: T1068
+Category: vulnerable driver
+Description: Teramind employee monitoring driver used in malicious campaigns
+Commands:
+  Command: 'Load driver with sc.exe'
+  Description: 'Load and execute driver'
+  Usecase: 'Privilege escalation'
+  Privileges: admin
+  OperatingSystem: Windows
+Resources: []
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: ''
+KnownVulnerableSamples:
+- Filename: tm_filter.sys
+  MD5: 3f9829071109fc051bd7f6b01a35ed46
+  SHA1: b2c1222c96221e031e9e3b64cf3ae00de5cdcff6
+  SHA256: 
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: tm_filter.sys
+  Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  InternalName: ''
+  Copyright: ''
+  Imports: []
+  ExportedFunctions: ''

@@ -1,0 +1,43 @@
+Id: 407e207d-c8a9-40af-9bb0-0a8a334bce7c
+Tags:
+- NSecKrnl64.sys
+Verified: 'FALSE'
+Author: Security Research
+Created: '2025-01-31'
+MitreID: T1068
+Category: vulnerable driver
+Description: Kernel driver vulnerability
+Commands:
+  Command: 'Load driver with sc.exe'
+  Description: 'Load and execute driver'
+  Usecase: 'Privilege escalation'
+  Privileges: admin
+  OperatingSystem: Windows
+Resources: []
+Detection: []
+Acknowledgement:
+  Person: ''
+  Handle: ''
+KnownVulnerableSamples:
+- Filename: NSecKrnl64.sys
+  MD5: 80961850786d6531f075b8a6f9a756ad
+  SHA1: b0b912a3fd1c05d72080848ec4c92880004021a1
+  SHA256: 206f27ae820783b7755bca89f83a0fe096dbb510018dd65b63fc80bd20c03261
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: NSecKrnl64.sys
+  Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  InternalName: ''
+  Copyright: ''
+  Imports: []
+  ExportedFunctions: ''
