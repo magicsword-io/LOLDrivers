@@ -5,6 +5,7 @@ Verified: 'TRUE'
 Author: Northwave Cyber Security
 Created: '2024-09-11'
 MitreID: T1068
+CVE: CVE-2023-52271
 Category: vulnerable
 Commands:
   Command: sc.exe create wsftprm binPath=C:\windows\temp\wsftprm.sys type=kernel &&
@@ -18,6 +19,7 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - https://northwave-cybersecurity.com/vulnerability-notice-topaz-antifraud
+- https://github.com/xM0kht4r/AV-EDR-Killer
 Detection: []
 Acknowledgement:
   Person: Northwave Cyber Security
