@@ -1,0 +1,43 @@
+Id: 4d7c8e9f-2a1b-4c5d-9e3f-8f7a6b5c4d3a
+Tags:
+    - athpexnt.sys
+    - Atheros
+Author: krispy (krispybyte)
+Created: '2026-01-27'
+MitreID: T1068
+Category: vulnerable driver
+Commands:
+    Command: 'sc.exe create athpexnt binPath=C:\windows\temp\athpexnt.sys type=kernel && sc.exe start athpexnt'
+    Description: 'Create and start athpexnt.sys kernel driver'
+    Usecase: Arbitrary Physical Memory Read/Write Access
+    Privileges: kernel
+    OperatingSystem: Windows
+Resources:
+    - 'https://www.virustotal.com/gui/file/fa0902daefbd9e716faaac8e854144ea0573e2a41192796f3b3138fe7a1d19f1'
+Acknowledgement:
+    Person: krispy
+    Handle: krispybyte
+KnownVulnerableSamples:
+    - Filename: athpexnt.sys
+      MD5: bf77a19e1396d6d36e32ff8d23eb5d3f
+      SHA1: ''
+      SHA256: fa0902daefbd9e716faaac8e854144ea0573e2a41192796f3b3138fe7a1d19f1
+      Company: Atheros
+      Description: Atheros HID over I2C driver - vulnerable to physical memory manipulation
+      Product: Atheros
+      ProductVersion: ''
+      Authentihash:
+          MD5: ''
+          SHA1: ''
+          SHA256: ''
+      InternalName: ATH_HID_CONTROL
+      Copyright: ''
+      Imports: []
+Detection:
+    - Description: Vulnerable to arbitrary physical memory read/write via IOCTL 0x81000000
+    - Device: \\.\ATHpEx
+    - IOCTL: 0x81000000 (physical memory write primitive)
+    - Capabilities: No input validation, arbitrary kernel memory read/write
+References:
+    - 'https://www.virustotal.com/gui/file/fa0902daefbd9e716faaac8e854144ea0573e2a41192796f3b3138fe7a1d19f1'
+Acknowledgement: []
