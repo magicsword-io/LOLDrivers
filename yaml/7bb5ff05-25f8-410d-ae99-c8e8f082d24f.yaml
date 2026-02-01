@@ -533,6 +533,53 @@ KnownVulnerableSamples:
   Imphash: d6f977640d4810a784d152e4d3c63a6b
   LoadsDespiteHVCI: 'TRUE'
 - Authentihash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  Company: ''
+  Copyright: ''
+  CreationTimestamp: ''
+  Date: ''
+  Description: WinRing0 (32-bit variant, often deployed as OpenHardwareMonitorLib.sys)
+  ExportedFunctions: ''
+  FileVersion: ''
+  Filename: WinRing0.sys
+  ImportedFunctions:
+  - MmUnmapIoSpace
+  - MmMapIoSpace
+  - IofCompleteRequest
+  - IoDeleteDevice
+  - IoCreateDevice
+  - KeBugCheckEx
+  - RtlInitUnicodeString
+  - IoCreateSymbolicLink
+  - IoDeleteSymbolicLink
+  - __C_specific_handler
+  - HalSetBusDataByOffset
+  - HalGetBusDataByOffset
+  Imports:
+  - ntoskrnl.exe
+  - HAL.dll
+  InternalName: WinRing0.sys
+  MD5: 845af1ba23c8d5e64def61bcc441604c
+  MachineType: AMD64
+  MagicHeader: 50 45 0 0
+  OriginalFilename: WinRing0.sys
+  Product: WinRing0
+  ProductVersion: ''
+  Publisher: ''
+  RichPEHeaderHash:
+    MD5: ''
+    SHA1: ''
+    SHA256: ''
+  SHA1: 8ac34eb21b9b38f67cd29684c45696c20ab2e75a
+  SHA256: 206ee7a7c3f4d9496f742ccb84718f556ecb4ba2a95fe7e0cdf3a003ffbe4597
+  Sections: []
+  Signature: []
+  Signatures: []
+  Imphash: ''
+  LoadsDespiteHVCI: 'FALSE'
+- Authentihash:
     MD5: 2bab314d894a026ac6073efe43c14a3d
     SHA1: 266821a39174d29f6f8791cf9f44f1a1f3439dda
     SHA256: 1b845e5e43ce9e9b645ac198549e81f45c08197aad69708d96cdb9a719eb0e29
@@ -540,7 +587,7 @@ KnownVulnerableSamples:
   Copyright: Copyright (C) 2007-2008 OpenLibSys.org. All rights reserved.
   CreationTimestamp: '2008-07-26 09:29:37'
   Date: ''
-  Description: WinRing0
+  Description: WinRing0 (64-bit variant, often deployed as OpenHardwareMonitorLib.sys - alternate filename)
   ExportedFunctions: ''
   FileVersion: 1.2.0.5
   Filename: WinRing0x64.sys
