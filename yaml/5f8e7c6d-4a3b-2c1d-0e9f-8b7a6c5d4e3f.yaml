@@ -1,0 +1,60 @@
+Id: 5f8e7c6d-4a3b-2c1d-0e9f-8b7a6c5d4e3f
+Tags:
+    - SonixDeviceMFT.dll
+    - Sonix
+    - CVE-2023-51715
+Author: USD/Herosecurity
+Created: '2025-12-09'
+MitreID: T1547.010
+Category: vulnerable driver
+Commands:
+    Command: 'N/A - Registry permission exploitation during driver installation'
+    Description: 'Webcam driver installer sets weak registry permissions enabling privilege escalation'
+    Usecase: Privilege Escalation via Registry Permission Weakness
+    Privileges: kernel
+    OperatingSystem: Windows
+Resources:
+    - 'https://herolab.usd.de/security-advisories/usd-2023-0029/'
+Acknowledgement:
+    Person: USD/Herosecurity Lab
+    Handle: ''
+KnownVulnerableSamples:
+    - Filename: SonixDeviceMFT.dll
+      MD5: 7627850eebde72a991e2fe1eb7c0f7dc
+      SHA1: de59320c2fdc90b24fab5bd70252759ba34e7d2e
+      SHA256: e181006d410cce00ff1303a359c23612d0506b5c04988696cc5ff685e30fb789
+      Company: Sonix
+      Description: Sonix Media Foundation Transform DLL - registry permissions LPE
+      Product: Sonix
+      ProductVersion: ''
+      Authentihash:
+          MD5: ''
+          SHA1: ''
+          SHA256: ''
+      InternalName: SonixDeviceMFT.dll
+      Copyright: ''
+      Imports: []
+    - Filename: SonixDeviceMFT.dll
+      MD5: e087e30b3568b1de1e5a70520c3ba0dc
+      SHA1: 409d1fe5e9008a2238050cf6b346ae81ddce741f
+      SHA256: c2bdcd4bd5b0b4257cd7d04861a5aba30cc4e3146c82b153d0abfbf1f4f1ada2
+      Company: Sonix
+      Description: Sonix Media Foundation Transform DLL - registry permissions LPE (alternate version)
+      Product: Sonix
+      ProductVersion: ''
+      Authentihash:
+          MD5: ''
+          SHA1: ''
+          SHA256: ''
+      InternalName: SonixDeviceMFT.dll
+      Copyright: ''
+      Imports: []
+Detection:
+    - Description: Sonix webcam driver installer creates weak registry ACLs on COM objects
+    - Vulnerability: Registry permission escalation (not file-based)
+    - Impact: Unprivileged user elevation to SYSTEM
+    - Note: DLL files themselves are legitimate; vulnerability is in installation registry permissions
+References:
+    - 'https://herolab.usd.de/security-advisories/usd-2023-0029/'
+    - 'CVE-2023-51715'
+Acknowledgement: []
