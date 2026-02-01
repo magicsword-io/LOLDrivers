@@ -16,19 +16,20 @@ jobs:
           fetch-depth: 0
       
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
+          cache: 'pip'
       
       - name: Install Poetry
-        run: curl -sSL https://install.python-poetry.org | python3 -
+        run: pip install poetry
       
       - name: Install dependencies
         run: poetry install
       
       - name: Get changed YAML files
         id: changed-files
-        uses: tj-actions/changed-files@v40
+        uses: tj-actions/changed-files@v41
         with:
           files: yaml/**/*.yaml
       
