@@ -408,7 +408,7 @@ sc.exe create K7RKScan.sys binPath=C:\windows\temp\K7RKScan.sys type=kernel &amp
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/bd580aba-a804-4afc-adb3-b8ce342c78f6.yaml)
 
-*last_updated:* 2026-01-07
+*last_updated:* 2026-02-01
 
 {{< /column >}}
 {{< /block >}}

@@ -468,7 +468,7 @@ sc.exe create ksapi.sys binPath=C:\windows\temp\ksapi.sys type=kernel &amp;&amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/fb36ebc6-fdc5-42eb-929b-a07e00c5b9db.yaml)
 
-*last_updated:* 2026-01-07
+*last_updated:* 2026-02-01
 
 {{< /column >}}
 {{< /block >}}

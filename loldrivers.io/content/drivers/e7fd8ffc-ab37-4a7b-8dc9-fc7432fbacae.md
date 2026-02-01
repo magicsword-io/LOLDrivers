@@ -385,7 +385,7 @@ sc.exe create driver_bfcbc010.sys binPath=C:\windows\temp\driver_bfcbc010.sys ty
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/e7fd8ffc-ab37-4a7b-8dc9-fc7432fbacae.yaml)
 
-*last_updated:* 2026-01-07
+*last_updated:* 2026-02-01
 
 {{< /column >}}
 {{< /block >}}

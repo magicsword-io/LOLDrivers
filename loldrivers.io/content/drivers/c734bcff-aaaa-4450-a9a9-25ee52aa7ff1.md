@@ -132,7 +132,7 @@ sc.exe create ktes.sys binPath=C:\windows\temp\ktes.sys type=kernel &amp;&amp; s
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/c734bcff-aaaa-4450-a9a9-25ee52aa7ff1.yaml)
 
-*last_updated:* 2026-01-07
+*last_updated:* 2026-02-01
 
 {{< /column >}}
 {{< /block >}}

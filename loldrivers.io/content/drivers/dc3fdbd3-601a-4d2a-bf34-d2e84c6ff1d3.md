@@ -385,7 +385,7 @@ sc.exe create stdcdrvws64sys binPath= C:\windows\temp\stdcdrvws64sys.sys type=ke
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/blob/main/yaml/dc3fdbd3-601a-4d2a-bf34-d2e84c6ff1d3.yaml)
 
-*last_updated:* 2026-01-07
+*last_updated:* 2026-02-01
 
 {{< /column >}}
 {{< /block >}}
