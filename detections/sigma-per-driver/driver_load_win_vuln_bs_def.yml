@@ -1,0 +1,31 @@
+title: Driver Load - Bs_Def.sys
+id: 547b6368-3fd3-529b-8640-4185a19c08cc
+status: experimental
+description: |
+    Detects loading of driver Bs_Def.sys via hash.
+    Default BIOS Flash Driver
+references:
+    - https://www.loldrivers.io/drivers/3ac0eda2-a844-4a9d-9cfa-c25a9e05d678/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a9f220b1507a3c9a327a99995ff99c82'
+            - 'SHA1=2c5ff272bd345962ed41ab8869aef41da0dfe697'
+            - 'SHA256=5f5e5f1c93d961985624768b7c676d488c7c7c1d4c043f6fc1ea1904fefb75be'
+            - 'IMPHASH=e5fd4339e7b94543b16624a27ba1c872'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

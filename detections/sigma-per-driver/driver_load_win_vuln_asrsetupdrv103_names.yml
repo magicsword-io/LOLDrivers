@@ -1,0 +1,28 @@
+title: Driver Load - AsrSetupDrv103.sys
+id: a0140d80-2552-5e3d-bc30-49225b3f7bd9
+status: experimental
+description: |
+    Detects loading of driver AsrSetupDrv103.sys via name.
+    AsrSetupDrv103 Driver
+references:
+    - https://www.loldrivers.io/drivers/19003e00-d42d-4cbe-91f3-756451bdd7da/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag, Guus Verbeek
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\asrsetupdrv103.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

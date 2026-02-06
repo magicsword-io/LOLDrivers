@@ -1,0 +1,31 @@
+title: Driver Load - driver_ab811ca5.sys
+id: 45bd08ff-4d4c-5d8f-add3-402e93d23b7a
+status: experimental
+description: |
+    Detects loading of driver driver_ab811ca5.sys via hash.
+    Sophos, from time to time, has observed a threat actor deploy variants of Poortry on different machines within a single estate during an attack. These variants contain the same payload, but signed with a different certificate than the driver first seen used during the attack.
+references:
+    - https://www.loldrivers.io/drivers/09d2e61d-e041-4ec8-ab7b-385848456a36/
+    - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+author: Michael Haag
+date: 2024/09/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a5fae487dc0d0919eae60638eabd1c85'
+            - 'SHA1=903934206ee381baf097edba6217029085601a1f'
+            - 'SHA256=ab811ca59a8a8e92fff3eca9d359a8ed5482e781c97e63dbece046d929d0a79c'
+            - 'IMPHASH=ce10082e1aa4c1c2bd953b4a7208e56a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

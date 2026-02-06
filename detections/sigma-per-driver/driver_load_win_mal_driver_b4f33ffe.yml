@@ -1,0 +1,31 @@
+title: Driver Load - driver_b4f33ffe.sys
+id: 29ceb642-4880-5b35-ae21-c1e6d7740245
+status: experimental
+description: |
+    Detects loading of driver driver_b4f33ffe.sys via hash.
+    Sophos, from time to time, has observed a threat actor deploy variants of Poortry on different machines within a single estate during an attack. These variants contain the same payload, but signed with a different certificate than the driver first seen used during the attack.
+references:
+    - https://www.loldrivers.io/drivers/51a44484-8bcc-4150-8b94-4a755cff0af8/
+    - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+author: Michael Haag
+date: 2024/09/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=1010d96b7682e1f9c92666df47864e82'
+            - 'SHA1=aaac157478d24bb6225b489e3b6bad6de5d8d704'
+            - 'SHA256=b4f33ffef069c18e8a8834eb448dd1f1dbdaae93b140cfff5a1db015eb3ada2f'
+            - 'IMPHASH=f0c41590bbc46e6d23dd089a0ef51dd4'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

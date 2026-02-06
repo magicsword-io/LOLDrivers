@@ -1,0 +1,28 @@
+title: Driver Load - NTIOLib.sys
+id: 11882b7c-22ca-5e11-9abf-d2cbb8e955eb
+status: experimental
+description: |
+    Detects loading of driver NTIOLib.sys via name.
+    NTIOLib
+references:
+    - https://www.loldrivers.io/drivers/a7bba474-815f-49be-bddc-4d76a64c866c/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\ntiolib.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

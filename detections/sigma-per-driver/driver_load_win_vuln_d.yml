@@ -1,0 +1,30 @@
+title: Driver Load - d.sys
+id: 3fd677fe-ac6b-50c5-8ddb-d5cdcad2fbbe
+status: experimental
+description: |
+    Detects loading of driver d.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/7a7630d6-d007-4d84-a17d-81236d9693e1/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a60c9173563b940203cf4ad38ccf2082'
+            - 'SHA1=a3636986cdcd1d1cb8ab540f3d5c29dcc90bb8f0'
+            - 'SHA256=c1c4310e5d467d24e864177bdbfc57cb5d29aac697481bfa9c11ddbeebfd4cc8'
+            - 'IMPHASH=56307b5227183c002e4231320a72b961'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

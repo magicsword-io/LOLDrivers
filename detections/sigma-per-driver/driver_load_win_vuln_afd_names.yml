@@ -1,0 +1,29 @@
+title: Driver Load - Afd.sys
+id: 3f2d4cd1-b62f-5a0a-9c00-a018ae6cf209
+status: experimental
+description: |
+    Detects loading of driver Afd.sys via name.
+    Windows Ancillary Function Driver (Afd.sys) for WinSock is vulnerable to an Elevation of Privilege Vulnerability.
+references:
+    - https://www.loldrivers.io/drivers/394f49b2-2d78-4d0d-b374-1399695455f3/
+    - https://securityintelligence.com/x-force/patch-tuesday-exploit-wednesday-pwning-windows-ancillary-function-driver-winsock/
+    - https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-21768
+author: Nasreddine Bencherchali
+date: 2024/08/21
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\afd.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

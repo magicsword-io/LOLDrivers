@@ -1,0 +1,27 @@
+title: Driver Load - nt6.sys
+id: ac0c64af-acaa-585a-b449-c535f444cca5
+status: experimental
+description: |
+    Detects loading of driver nt6.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/e71f0866-e317-44d4-a456-d6f0c555aa73/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA256=15c53eb3a0ea44bbd2901a45a6ebeae29bb123f9c1115c38dfb2cdbec0642229'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

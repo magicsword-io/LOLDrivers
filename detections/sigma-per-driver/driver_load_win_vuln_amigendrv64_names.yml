@@ -1,0 +1,27 @@
+title: Driver Load - amigendrv64.sys
+id: 6068e189-52c0-5c81-ab47-c7bdde522bf1
+status: experimental
+description: |
+    Detects loading of driver amigendrv64.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/5c45ae9e-cb6f-4eab-a070-b0187202e080/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\amigendrv64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

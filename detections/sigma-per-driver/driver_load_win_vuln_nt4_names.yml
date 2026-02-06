@@ -1,0 +1,27 @@
+title: Driver Load - nt4.sys
+id: fc29fbcd-313a-54c6-9c43-ca1b4dc9816b
+status: experimental
+description: |
+    Detects loading of driver nt4.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/1d4f7a3a-786b-4a74-b34f-14d44343de9e/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\nt4.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

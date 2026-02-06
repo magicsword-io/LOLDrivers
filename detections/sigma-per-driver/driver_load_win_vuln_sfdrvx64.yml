@@ -1,0 +1,38 @@
+title: Driver Load - sfdrvx64.sys
+id: 9147949b-e74f-5d41-aeb7-14da40229e55
+status: experimental
+description: |
+    Detects loading of driver sfdrvx64.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/5a03dc5a-115d-4d6f-b5b5-685f4c014a69/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=7455ed832a33fef453407f5411c3342d'
+            - 'MD5=0ffe35f0b0cd5a324bbe22f02569ae3b'
+            - 'MD5=12583af6cbe0050651eaf2723b3ad7b3'
+            - 'SHA1=25789f290feba14f53d48f4d1a5003ec130f7d95'
+            - 'SHA1=a5d7ea909df5ad14a0e6241c4036c1c97ec30aa9'
+            - 'SHA1=74bb900754636b5f2d519a41a3b5505bc6201789'
+            - 'SHA256=965d4f981b54669a96c5ab02d09bf0a9850d13862425b8981f1a9271350f28bb'
+            - 'SHA256=f4ee803eefdb4eaeedb3024c3516f1f9a202c77f4870d6b74356bbde32b3b560'
+            - 'SHA256=88fb0a846f52c3b680c695cd349bf56151a53a75a07b8b0b4fe026ab8aa0a9af'
+            - 'IMPHASH=9833f7dab4a59d51b04d2cf31656a0f6'
+            - 'IMPHASH=0b19304edb04d5b178dd763d7cd04167'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

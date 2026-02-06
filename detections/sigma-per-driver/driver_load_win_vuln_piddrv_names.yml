@@ -1,0 +1,27 @@
+title: Driver Load - piddrv.sys
+id: 6d32df3d-4a09-5bbe-b5f8-d4fdbea7d8c3
+status: experimental
+description: |
+    Detects loading of driver piddrv.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/354a9fcf-acf1-4151-94d2-af88116f605c/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\piddrv.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

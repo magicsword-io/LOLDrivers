@@ -1,0 +1,28 @@
+title: Driver Load - GPU-Z.sys
+id: c7c39d47-5a45-5d84-8db1-549cb4f42882
+status: experimental
+description: |
+    Detects loading of driver GPU-Z.sys via name.
+    Utilized in RealBlindingEDR.
+references:
+    - https://www.loldrivers.io/drivers/0d6f1b0f-b94d-4254-b3bb-49de61246260/
+    - https://github.com/myzxcg/RealBlindingEDR/
+author: goosvorbook
+date: 2024/06/20
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\gpu-z.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

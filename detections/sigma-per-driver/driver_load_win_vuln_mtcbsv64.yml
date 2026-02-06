@@ -1,0 +1,31 @@
+title: Driver Load - mtcBSv64.sys
+id: d0d2b53e-fe50-59de-856a-539dc6499e34
+status: experimental
+description: |
+    Detects loading of driver mtcBSv64.sys via hash.
+    MiTAC System Service Provider
+references:
+    - https://www.loldrivers.io/drivers/3bc629e8-7bf8-40c2-965b-87eb155e0065/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=9dfd73dadb2f1c7e9c9d2542981aaa63'
+            - 'SHA1=29a190727140f40cea9514a6420f5a195e36386b'
+            - 'SHA256=c9cf1d627078f63a36bbde364cd0d5f2be1714124d186c06db5bcdf549a109f8'
+            - 'IMPHASH=71e84092e69114f0792419cb8b2b0fd1'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

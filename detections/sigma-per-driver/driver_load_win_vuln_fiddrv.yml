@@ -1,0 +1,28 @@
+title: Driver Load - fiddrv.sys
+id: d533949a-6562-5ebb-a96a-bcff84ce6181
+status: experimental
+description: |
+    Detects loading of driver fiddrv.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/75a933b4-82d8-4eb8-8ed5-a0a2178630a3/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA1=282bb241bda5c4c1b8eb9bf56d018896649ca0e1'
+            - 'SHA1=8cc8974a05e81678e3d28acfe434e7804abd019c'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

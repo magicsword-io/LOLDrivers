@@ -1,0 +1,31 @@
+title: Driver Load - AsrOmgDrv.sys
+id: 932f723c-f397-5269-8408-5af399f4d219
+status: experimental
+description: |
+    Detects loading of driver AsrOmgDrv.sys via hash.
+    ASRock IO Driver
+references:
+    - https://www.loldrivers.io/drivers/3f39af20-802a-4909-a5de-7f6fe7aab350/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=4f27c09cc8680e06b04d6a9c34ca1e08'
+            - 'SHA1=400f833dcc2ef0a122dd0e0b1ec4ec929340d90e'
+            - 'SHA256=950a4c0c772021cee26011a92194f0e58d61588f77f2873aa0599dff52a160c9'
+            - 'IMPHASH=9d7183c1d8107495354c4fad9dae3452'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

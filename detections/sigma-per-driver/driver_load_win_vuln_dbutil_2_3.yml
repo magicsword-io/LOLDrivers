@@ -1,0 +1,38 @@
+title: Driver Load - dbutil_2_3.sys
+id: e7dcb85b-abe9-535b-84ea-ec028ce9fc3f
+status: experimental
+description: |
+    Detects loading of driver dbutil_2_3.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/a4eabc75-edf6-4b74-9a24-6a26187adabf/
+    - https://github.com/namazso/physmem_drivers
+    - https://www.sentinelone.com/labs/cve-2021-21551-hundreds-of-millions-of-dell-computers-at-risk-due-to-multiple-bios-driver-privilege-escalation-flaws/
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=084bd27e151fef55b5d80025c3114d35'
+            - 'MD5=c996d7971c49252c582171d9380360f2'
+            - 'MD5=d2fd132ab7bbc6bbb87a84f026fa0244'
+            - 'SHA1=c948ae14761095e4d76b55d9de86412258be7afd'
+            - 'SHA1=c6920171fa6dff2c17eb83befb5fd28e8dddf5f0'
+            - 'SHA1=10b30bdee43b3a2ec4aa63375577ade650269d25'
+            - 'SHA256=ddbf5ecca5c8086afde1fb4f551e9e6400e94f4428fe7fb5559da5cffa654cc1'
+            - 'SHA256=0296e2ce999e67c76352613a718e11516fe1b0efc3ffdb8918fc999dd76a73a5'
+            - 'SHA256=87e38e7aeaaaa96efe1a74f59fca8371de93544b7af22862eb0e574cec49c7c3'
+            - 'IMPHASH=7e1327419d10a7eeece5579526f75d9f'
+            - 'IMPHASH=473c3773ca11aa7371dbf350919c5724'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

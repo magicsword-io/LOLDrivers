@@ -1,0 +1,31 @@
+title: Driver Load - rtcoremini64.sys
+id: 1486347d-d0a5-507d-bfc1-61713db1df51
+status: experimental
+description: |
+    Detects loading of driver rtcoremini64.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/b9e01a11-6395-4837-a202-0c777d717a43/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=52cb7756bb236b966f75089edb309920'
+            - 'SHA1=06a9248df99bd3cb106a6f0b21a782240c1929d4'
+            - 'SHA256=bea8c6728d57d4b075f372ac82b8134ac8044fe13f533696a58e8864fa3efee3'
+            - 'IMPHASH=3a0b4122e41bf6973f2e7c1b5eee9c5b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

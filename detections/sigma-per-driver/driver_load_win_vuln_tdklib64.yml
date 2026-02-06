@@ -1,0 +1,87 @@
+title: Driver Load - TdkLib64.sys
+id: d3e70978-a7b5-5211-ae83-274e806c0f37
+status: experimental
+description: |
+    Detects loading of driver TdkLib64.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/933f5671-e995-4976-8392-52d34dcd4e05/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=97580157f65612f765f39af594b86697'
+            - 'MD5=2a8662e91a51d8e04a94fa580c7d3828'
+            - 'MD5=278761b706276f9b49e1e2fd21b9cb07'
+            - 'MD5=d6c2e061b21c32c585aca5f38335c21c'
+            - 'MD5=555446a3ca8d9237403471d4744e39f4'
+            - 'MD5=d7cf689e6c63d37bc071499f687300dd'
+            - 'MD5=dc9be271f403e2278071d6ece408ff28'
+            - 'MD5=67b5b8607234bf63ce1e6a52b4a05f87'
+            - 'MD5=4124de3cb72f5dfd7288389862b03f2a'
+            - 'MD5=fdf975524d4cdb4f127d79aac571ae9e'
+            - 'MD5=c6b5a3ae07b165a6e5fff7e31ff91016'
+            - 'MD5=2b653950483196f0d175ba6bc35f1125'
+            - 'MD5=9bcb97a1697a70f59405786759af63b8'
+            - 'MD5=0a4e6bd5cc2e9172e461408be47c3149'
+            - 'MD5=7314c2bc19c6608d511ef36e17a12c98'
+            - 'MD5=251e1ce4e8e9b9418830ed3dc8edd5e3'
+            - 'MD5=fcc5de75c1837b631ed77ea4638704b9'
+            - 'SHA1=42f6bfcf558ef6da9254ed263a89abf4e909b5d5'
+            - 'SHA1=1a40773dc430d7cb102710812b8c61fc51dfb79b'
+            - 'SHA1=8e2511ae90643584ceb0d98f0f780cd6b7290604'
+            - 'SHA1=c00ad2a252b53cf2d0dc74b53d1af987982e1ad1'
+            - 'SHA1=bfd8568f19d4273a1288726342d7620cc9070ae5'
+            - 'SHA1=5a69d921926ef0abf03757edf22c0d8d30c15d4b'
+            - 'SHA1=190c20e130a9156442eebcf913746c69b9485eec'
+            - 'SHA1=0cac0dbaa7adb7bba6e92c7cd2d514be7e86a914'
+            - 'SHA1=64d0447cbb0d6a45010b94eb9d5b0b90296edcbf'
+            - 'SHA1=c32e6cddc7731408c747fd47af3d62861719fd7b'
+            - 'SHA1=488b20ed53c2060c41b9a0cac1efb39a888df7c5'
+            - 'SHA1=6b25acbcb41a593aca6314885572fc22d16582a2'
+            - 'SHA1=b6543d006cb2579fb768205c479524e432c04204'
+            - 'SHA1=91d026cd98de124d281fd6a8e7c54ddf6b913804'
+            - 'SHA1=e83fc2331ae1ea792b6cff7e970f607fee7346be'
+            - 'SHA1=c40ff3ebf6b5579108165be63250634823db32ec'
+            - 'SHA1=b62c5bae9c6541620379115a7ba0036ecfa19537'
+            - 'SHA256=5be106b92424b12865338b3f541b3c244dce9693fe15f763316f0c6d6fc073ee'
+            - 'SHA256=e34afe0a8c5459d13e7a11f20d62c7762b2a55613aaf6dbeb887e014b5f19295'
+            - 'SHA256=5fbfd7c4ea3db1197ad38d5a945acf6f2f42cb350380cf8ae276bc80b0dedb77'
+            - 'SHA256=89bc3cb4522f9b0bf467a93a4123ef623c28244e25a9c34d4aae11f705d187e7'
+            - 'SHA256=aa0c52cebd64a0115c0e7faf4316a52208f738f66a54b4871bd4162eb83dc41a'
+            - 'SHA256=39f137083e6c0200543e1f8d3c074f857d141bdb8c8f09338d48520537b881aa'
+            - 'SHA256=cbd4f66ae09797fcd1dc943261a526710acc8dd4b24e6f67ed4a1fce8b0ae31c'
+            - 'SHA256=2695390a8a7448390fe383beb1eee06d582202683f0273d6e72ef39a8cf709e1'
+            - 'SHA256=bfc121e93fcbf9bd42736cfe7675ae2cc805be9a58f1a0d8cc3aa5b42e49a13f'
+            - 'SHA256=797c1f883d90d25e7fd553624bb16bfd5db24c2658aa0c3c51c715d5833c10fd'
+            - 'SHA256=31e2e5c3290989e8624820cf5af886fd778ee8187fed593f33a6178f65103f37'
+            - 'SHA256=7277130afa0b1506998d7bc58567b0d83f52a27175f4c7c4a7186347095fceed'
+            - 'SHA256=506f56996fbcd34ff8a27e6948a2e2e21e6dbf42dab6e3a6438402000b969fd1'
+            - 'SHA256=bef87650c29faf421e7ad666bf47d7a78a45f291b438c8d1c4b6a66e5b54c6fc'
+            - 'SHA256=4c807bacfcf5c30686e26812ec8d5581a824b82fee7434260c27c33eee2dfbe2'
+            - 'SHA256=dd0bd7b8fae8e8835ba09118a02a06a51e111fccbe16916414844aab91cfeed4'
+            - 'SHA256=38e6d7c2787b6289629c72b1ec87655392267044b4e4b830c0232243657ee8f9'
+            - 'IMPHASH=08ab07a2bc35aea02cd6d1efbb954cb3'
+            - 'IMPHASH=304c4fcf70cfc8299a3b6eed8e7bbb31'
+            - 'IMPHASH=a8633e68c2ad9f3dc83775d8d5b21c5b'
+            - 'IMPHASH=7687d0eba49315582228ef660f61b471'
+            - 'IMPHASH=91387ac37086b9b519f945b58095f38d'
+            - 'IMPHASH=8e89024d2c0ef0451c12b956a2b55b91'
+            - 'IMPHASH=ca07de87d444c1d2d10e16e9dcc2dc19'
+            - 'IMPHASH=c0f234205c50cc713673353c9653eea1'
+            - 'IMPHASH=c314c92b5c25c6f4323e3efaf8bde47a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

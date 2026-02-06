@@ -1,0 +1,28 @@
+title: Driver Load - fgme.sys
+id: 50bb731e-4c85-5124-97ac-85ac4c297286
+status: experimental
+description: |
+    Detects loading of driver fgme.sys via hash.
+    BlackCat Ransomware Deploys New Signed Kernel Driver. BlackCat ransomware incident that occurred in February 2023.
+references:
+    - https://www.loldrivers.io/drivers/d3111e83-52eb-4a8c-817d-761ea72d37e2/
+    - https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
+author: Guus Verbeek
+date: 2023/06/05
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA1=0bec69c1b22603e9a385495fbe94700ac36b28e5'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

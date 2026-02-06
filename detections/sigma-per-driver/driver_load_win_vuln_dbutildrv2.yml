@@ -1,0 +1,36 @@
+title: Driver Load - DBUtilDrv2.sys
+id: bc3c5752-8d21-52b5-95a2-15d22a5a0689
+status: experimental
+description: |
+    Detects loading of driver DBUtilDrv2.sys via hash.
+    DBUtil
+references:
+    - https://www.loldrivers.io/drivers/bb808089-5857-4df2-8998-753a7106cb44/
+    - https://github.com/jbaines-r7/dellicious
+    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=dacb62578b3ea191ea37486d15f4f83c'
+            - 'MD5=d104621c93213942b7b43d65b5d8d33e'
+            - 'SHA1=b03b1996a40bfea72e4584b82f6b845c503a9748'
+            - 'SHA1=90a76945fd2fa45fab2b7bcfdaf6563595f94891'
+            - 'SHA256=71fe5af0f1564dc187eea8d59c0fbc897712afa07d18316d2080330ba17cf009'
+            - 'SHA256=2e6b339597a89e875f175023ed952aaac64e9d20d457bbc07acf1586e7fe2df8'
+            - 'IMPHASH=506a31d768aec26b297c45b50026c820'
+            - 'IMPHASH=f138fdbc6c7fbf73e135717c7d7eac27'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

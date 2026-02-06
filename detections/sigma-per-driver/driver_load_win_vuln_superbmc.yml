@@ -1,0 +1,49 @@
+title: Driver Load - superbmc.sys
+id: 4d4309f7-c4ce-5ce7-a8bf-c9ef8128a620
+status: experimental
+description: |
+    Detects loading of driver superbmc.sys via hash.
+    superbmc
+references:
+    - https://www.loldrivers.io/drivers/9074a02a-b1ca-4bfb-8918-5b88e91c04a2/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=3473faea65fba5d4fbe54c0898a3c044'
+            - 'MD5=aad4fb47cb39a9ab4159662a29e1ee88'
+            - 'MD5=7e3a6f880486a4782b896e6dbd9cc26f'
+            - 'MD5=a7d3ebfb3843ee28d9ca18b496bd0eb2'
+            - 'MD5=7f258c0161e9edca8e7f85ac0dd68e46'
+            - 'MD5=2927eac51c46944ab69ba81462fb9045'
+            - 'SHA1=62fdb0b43c56530a6a0ba434037d131f236d1266'
+            - 'SHA1=f544f25104fe997ec873f5cec64c7aa722263fb4'
+            - 'SHA1=1d5d2c5853619c25518ba0c55fd7477050e708fb'
+            - 'SHA1=97f668aa01ebbbf2f5f93419d146e6608d203efd'
+            - 'SHA1=910cb12aa49e9f35ecc4907e8304adf0dcca8cf1'
+            - 'SHA1=0d9c77aca860a43cca87a0c00f69e2ab07ab0b67'
+            - 'SHA256=a6f8aa3de5b4aea58eddd45807d722c864d4bc4a38ad573174af864e21f0d526'
+            - 'SHA256=c9c60f560440ff16ad3c767ff5b7658d5bda61ea1166efe9b7f450447557136e'
+            - 'SHA256=f8430bdc6fd01f42217d66d87a3ef6f66cb2700ebb39c4f25c8b851858cc4b35'
+            - 'SHA256=1deae340bf619319adce00701de887f7434deab4d5547a1742aeedb5634d23c6'
+            - 'SHA256=326b53365f8486c78608139cac84619eff90be361f7ade9db70f9867dd94dcc9'
+            - 'SHA256=1d804efc9a1a012e1f68288c0a2833b13d00eecd4a6e93258ba100aa07e3406f'
+            - 'IMPHASH=587191d77c08023e6e95463153e45463'
+            - 'IMPHASH=1a0d0d460994cfde55ee908d62330ee0'
+            - 'IMPHASH=82b2288ac7f842e42de15c5bc96f1772'
+            - 'IMPHASH=d57ef6278dcd7049063e8fb6ade9effc'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

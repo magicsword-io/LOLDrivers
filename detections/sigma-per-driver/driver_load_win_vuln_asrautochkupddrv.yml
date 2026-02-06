@@ -1,0 +1,31 @@
+title: Driver Load - AsrAutoChkUpdDrv.sys
+id: d7dcf1cc-c05a-5f63-810f-54e71a4d77fd
+status: experimental
+description: |
+    Detects loading of driver AsrAutoChkUpdDrv.sys via hash.
+    AsrAutoChkUpdDrv Driver
+references:
+    - https://www.loldrivers.io/drivers/b72f7335-6f27-42c5-85f5-ed7eb9016eac/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=75d6c3469347de1cdfa3b1b9f1544208'
+            - 'SHA1=6523b3fd87de39eb5db1332e4523ce99556077dc'
+            - 'SHA256=2aa1b08f47fbb1e2bd2e4a492f5d616968e703e1359a921f62b38b8e4662f0c4'
+            - 'IMPHASH=9d7183c1d8107495354c4fad9dae3452'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,28 @@
+title: Driver Load - capcom2.sys
+id: 5069af9e-1443-5541-8edc-992d39fc84d1
+status: experimental
+description: |
+    Detects loading of driver capcom2.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/45c42e32-6261-43c1-bdbd-cab58da729d8/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\capcom2.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

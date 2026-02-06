@@ -1,0 +1,42 @@
+title: Driver Load - WinRing0.sys
+id: f5c82d9e-73b0-54a1-8989-c8747a70a248
+status: experimental
+description: |
+    Detects loading of driver WinRing0.sys via hash.
+    WinRing0
+references:
+    - https://www.loldrivers.io/drivers/7bb5ff05-25f8-410d-ae99-c8e8f082d24f/
+    - https://github.com/namazso/physmem_drivers
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=0c0195c48b6b8582fa6f6373032118da'
+            - 'MD5=828bb9cb1dd449cd65a29b18ec46055f'
+            - 'MD5=12cecc3c14160f32b21279c1a36b8338'
+            - 'MD5=27bcbeec8a466178a6057b64bef66512'
+            - 'SHA1=012db3a80faf1f7f727b538cbe5d94064e7159de'
+            - 'SHA1=558aad879b6a47d94a968f39d0a4e3a3aaef1ef1'
+            - 'SHA1=d25340ae8e92a6d29f599fef426a2bc1b5217299'
+            - 'SHA1=7fb52290883a6b69a96d480f2867643396727e83'
+            - 'SHA256=11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5'
+            - 'SHA256=47eaebc920ccf99e09fc9924feb6b19b8a28589f52783327067c9b09754b5e84'
+            - 'SHA256=a7b000abbcc344444a9b00cfade7aa22ab92ce0cadec196c30eb1851ae4fa062'
+            - 'SHA256=3ec5ad51e6879464dfbccb9f4ed76c6325056a42548d5994ba869da9c4c039a8'
+            - 'IMPHASH=d6f977640d4810a784d152e4d3c63a6b'
+            - 'IMPHASH=d41fa95d4642dc981f10de36f4dc8cd7'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

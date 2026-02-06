@@ -1,0 +1,42 @@
+title: Driver Load - ALSysIO64.sys
+id: 60b2fb8a-83c5-564d-be08-82b4da288883
+status: experimental
+description: |
+    Detects loading of driver ALSysIO64.sys via hash.
+    ALSysIO64
+references:
+    - https://www.loldrivers.io/drivers/4d365dd0-34c3-492e-a2bd-c16266796ae5/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=13dda15ef67eb265869fc371c72d6ef0'
+            - 'MD5=ba5f0f6347780c2ed911bbf888e75bef'
+            - 'MD5=d9aafc513be1c4c57b9f9827e986039c'
+            - 'MD5=afc2448b4080f695e76e059a96958cab'
+            - 'SHA1=256d285347acd715ed8920e41e5ec928ae9201a8'
+            - 'SHA1=f02af84393e9627ba808d4159841854a6601cf80'
+            - 'SHA1=2f991435a6f58e25c103a657d24ed892b99690b8'
+            - 'SHA1=2c688a6e881d35df958cb8ff2e2bd8e21b8461bc'
+            - 'SHA256=119c48b79735fda0ecd973d77d9bdc6b329960caed09b38ab454236ca039d280'
+            - 'SHA256=7196187fb1ef8d108b380d37b2af8efdeb3ca1f6eefd37b5dc114c609147216d'
+            - 'SHA256=7f375639a0df7fe51e5518cf87c3f513c55bc117db47d28da8c615642eb18bfa'
+            - 'SHA256=7a20ca8f9361eb892257b3693095ffeee61457dc4e22d9b119e3a9f3a1507069'
+            - 'IMPHASH=3a277d9c3f9238195ba009d38793f1c9'
+            - 'IMPHASH=2f7ea575cf15da16c8f117eee37046d8'
+            - 'IMPHASH=82f5b92ccd99d13f4dd6ed6aaf0441bc'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,30 @@
+title: Driver Load - SeasunProtect.sys
+id: de74d61e-47dd-5d76-855a-d28cf995baa5
+status: experimental
+description: |
+    Detects loading of driver SeasunProtect.sys via hash.
+    Northwave Cyber Security contributed this driver based on in-house research. The driver has a CVSSv3 score of 8.8, indicating a privilege escalation impact. This vulnerability could potentially be exploited for privilege escalation or other malicious activities.
+references:
+    - https://www.loldrivers.io/drivers/3a9ea9a6-e5e3-439a-b892-1f78dd990099/
+author: Northwave Cyber Security
+date: 2024/09/11
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a360ec883ef5383157080b2e185802ef'
+            - 'SHA1=ba42182630cf033a1737af6ffee87b018fda0b91'
+            - 'SHA256=507b07b0dc0e638b65b4a4d11a462b35439c746d42337b9888927bf994176102'
+            - 'IMPHASH=e48d3385e8828a97aa6fa76d9fc4a9f1'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

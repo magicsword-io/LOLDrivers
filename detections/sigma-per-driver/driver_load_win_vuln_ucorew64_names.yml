@@ -1,0 +1,27 @@
+title: Driver Load - UCOREW64.SYS
+id: ba388246-42fd-54d9-a101-0f28304d3c3a
+status: experimental
+description: |
+    Detects loading of driver UCOREW64.SYS via name.
+references:
+    - https://www.loldrivers.io/drivers/a338a9fc-9fe3-400c-9fe4-69bb7892602d/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\ucorew64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

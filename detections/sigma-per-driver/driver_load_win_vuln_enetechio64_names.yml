@@ -1,0 +1,28 @@
+title: Driver Load - EneTechIo64.sys
+id: 540454af-8c27-5fb4-bf18-338b38cf3335
+status: experimental
+description: |
+    Detects loading of driver EneTechIo64.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/d64167b6-f281-41d8-9535-6cb925e77aec/
+    - https://github.com/hfiref0x/KDU/releases/tag/v1.2.0
+    - https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\enetechio64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

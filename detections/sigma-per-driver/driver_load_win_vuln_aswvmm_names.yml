@@ -1,0 +1,29 @@
+title: Driver Load - aswVmm.sys
+id: d658f99f-0102-5e23-a9ae-cef0556e20e3
+status: experimental
+description: |
+    Detects loading of driver aswVmm.sys via name.
+    avast! VM Monitor
+references:
+    - https://www.loldrivers.io/drivers/a845a05c-5357-4b78-9783-16b4d34b2cb0/
+    - https://github.com/tanduRE/AvastHV
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\aswvmm.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,31 @@
+title: Driver Load - PcieCubed.sys
+id: 64d74bf7-621b-51f3-8cc7-9e96307efa4f
+status: experimental
+description: |
+    Detects loading of driver PcieCubed.sys via hash.
+    Driver categorized as POORTRY by Mandiant.
+references:
+    - https://www.loldrivers.io/drivers/a5ebba11-5a31-48d2-9c6d-78bba397edf1/
+    - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+author: Michael Haag
+date: 2023/03/04
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=22949977ce5cd96ba674b403a9c81285'
+            - 'SHA1=745335bcdf02fb42df7d890a24858e16094f48fd'
+            - 'SHA256=fd223833abffa9cd6cc1848d77599673643585925a7ee51259d67c44d361cce8'
+            - 'IMPHASH=3c5d2ffd06074f1b09c89465cc8bfbf7'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

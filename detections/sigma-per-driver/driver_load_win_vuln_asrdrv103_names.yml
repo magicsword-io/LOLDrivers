@@ -1,0 +1,28 @@
+title: Driver Load - AsrDrv103.sys
+id: 5fa825c8-3c1c-5d5f-b673-b0964c35be19
+status: experimental
+description: |
+    Detects loading of driver AsrDrv103.sys via name.
+    ASRock IO Driver
+references:
+    - https://www.loldrivers.io/drivers/32ccd436-eb13-4ab3-83d4-3e5471f4e364/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\asrdrv103.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

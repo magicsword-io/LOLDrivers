@@ -1,0 +1,27 @@
+title: Driver Load - AccelLid.sys
+id: a4d7490c-2202-5519-9f36-9681f7325012
+status: experimental
+description: |
+    Detects loading of driver AccelLid.sys via hash.
+    Northwave Cyber Security contributed this driver based on in-house research. The driver has a CVSSv3 score of 5.5, indicating a localdos impact. This vulnerability could potentially be exploited for privilege escalation or other malicious activities.
+references:
+    - https://www.loldrivers.io/drivers/d9e9fab2-6b64-4c14-b1ec-7af1923c0773/
+author: Northwave Cyber Security
+date: 2024/09/11
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=833becd0e4abc9cfff8c835694694f80'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

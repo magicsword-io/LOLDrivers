@@ -1,0 +1,28 @@
+title: Driver Load - RtsUer.sys
+id: 832139a9-4591-5d2a-9cfb-113f92f71fad
+status: experimental
+description: |
+    Detects loading of driver RtsUer.sys via name.
+    The Realtek SD card reader driver, RtsUer.sys, versions below or equal to 10.0.22000.31273 contain multiple vulnerabilities that pose significant security risks. These flaws allow non-privileged users to write to kernel memory and access the DMA controller from unprivileged accounts, potentially enabling privilege escalation and system compromise. The most severe issues include the ability to write to kernel memory and access the DMA controller, which could lead to unauthorized system modifications. These vulnerabilities affect various Realtek SD card reader models used by major OEM laptop manufacturers. Due to the widespread use of this driver, the impact is considerable, potentially affecting a large number of systems across different brands. Users with laptops equipped with Realtek SD card readers should ensure their drivers are updated to a version higher than 10.0.22000.31273 to mitigate these security risks.
+references:
+    - https://www.loldrivers.io/drivers/71d930a7-3465-4d27-90d4-2a1a08bebb92/
+    - https://www.linkedin.com/pulse/vulnerabilities-realtek-sd-card-reader-driver-part-1-myngerbayev-czqmf, https://github.com/zwclose/realteksd
+author: Michael M.
+date: 2024/09/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\rtsuer.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

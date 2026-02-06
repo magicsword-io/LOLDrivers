@@ -1,0 +1,28 @@
+title: Driver Load - mJj0ge.sys
+id: 5936a34e-dad1-5276-a19a-b5e3ee458092
+status: experimental
+description: |
+    Detects loading of driver mJj0ge.sys via name.
+    The criminals signed their AV-killer malware, closely related to one known as BURNTCIGAR, with a legitimate WHCP certificate
+references:
+    - https://www.loldrivers.io/drivers/412f4aaf-5525-458c-b87e-311e504b856d/
+    - https://news.sophos.com/en-us/2022/12/13/signed-driver-malware-moves-up-the-software-trust-chain/
+author: Guus Verbeek
+date: 2023/05/07
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\mjj0ge.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

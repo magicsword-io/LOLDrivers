@@ -1,0 +1,31 @@
+title: Driver Load - vmdrv.sys
+id: 500d97fe-8420-506f-96fc-c82583fc3291
+status: experimental
+description: |
+    Detects loading of driver vmdrv.sys via hash.
+    Voicemod Virtual Audio Device (WDM)
+references:
+    - https://www.loldrivers.io/drivers/fdf4f85b-47f4-4c98-a0d5-a6583463f565/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=d5db81974ffda566fa821400419f59be'
+            - 'SHA1=4c18754dca481f107f0923fb8ef5e149d128525d'
+            - 'SHA256=32cccc4f249499061c0afa18f534c825d01034a1f6815f5506bf4c4ff55d1351'
+            - 'IMPHASH=7c24141cdcfc23f5eb0e2b6792d80740'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

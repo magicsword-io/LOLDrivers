@@ -1,0 +1,31 @@
+title: Driver Load - titidrv.sys
+id: 31e37bc5-4acb-5294-ae51-a62124f90900
+status: experimental
+description: |
+    Detects loading of driver titidrv.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/705facba-b595-41dd-86a6-93aefe6a6234/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=79e368a81e3a7ae8a5d2db97dd5138e2'
+            - 'SHA1=c8d520d4ce717c17f4d9aaedc5b0070f94955c12'
+            - 'SHA256=208ea38734979aa2c86332eba1ea5269999227077ff110ac0a0d411073165f85'
+            - 'IMPHASH=059c6bd84285f4960e767f032b33f19b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

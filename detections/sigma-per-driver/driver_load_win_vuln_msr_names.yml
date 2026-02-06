@@ -1,0 +1,29 @@
+title: Driver Load - msr.sys
+id: 690b0837-8517-50b5-b1c0-4902e6f4abc4
+status: experimental
+description: |
+    Detects loading of driver msr.sys via name.
+    Identified on the MSFT Driver Block list, non-admin can write MSR.
+references:
+    - https://www.loldrivers.io/drivers/ee6fa2de-d388-416c-862d-24385c152fad/
+    - https://twitter.com/wdormann/status/1699878227261411699
+    - https://learn.microsoft.com/en-us/windows/security/application-security/application-control/windows-defender-application-control/design/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/12/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\msr.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

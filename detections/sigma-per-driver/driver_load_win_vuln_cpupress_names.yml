@@ -1,0 +1,27 @@
+title: Driver Load - cpupress.sys
+id: 7887104d-2a27-581e-a7d5-7ec848fe4d81
+status: experimental
+description: |
+    Detects loading of driver cpupress.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/c0645f0f-9b97-4fe9-811e-2e45c250c9ef/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\cpupress.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

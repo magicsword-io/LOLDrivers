@@ -1,0 +1,41 @@
+title: Driver Load - PDFWKRNL.sys
+id: 8a764382-ada7-59ec-b8d9-cf4314c3b8d0
+status: experimental
+description: |
+    Detects loading of driver PDFWKRNL.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/fded7e63-0470-40fe-97ed-aa83fd027bad/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=057ec65bac5e786affeb97c0a0d1db15'
+            - 'MD5=f0db5af13c457a299a64cf524c64b042'
+            - 'MD5=19c0c18384d6a6d65462be891692df9c'
+            - 'MD5=0b0447072ada1636a14087574a512c82'
+            - 'SHA1=e28b754d4d332ea57349110c019d841cf4d27356'
+            - 'SHA1=2ee7b3f6bcc9e95a9ae60bcb9bbc483b0400077d'
+            - 'SHA1=16a091bfd1fd616d4607cac367782b1d2ab07491'
+            - 'SHA1=a24840e32071e0f64e1dff8ca540604896811587'
+            - 'SHA256=f190919f1668652249fa23d8c0455acbde9d344089fde96566239b1a18b91da2'
+            - 'SHA256=6945077a6846af3e4e2f6a2f533702f57e993c5b156b6965a552d6a5d63b7402'
+            - 'SHA256=0cf84400c09582ee2911a5b1582332c992d1cd29fcf811cb1dc00fcd61757db0'
+            - 'SHA256=5df689a62003d26df4aefbaed41ec1205abbf3a2e18e1f1d51b97711e8fcdf00'
+            - 'IMPHASH=3f4c9025125027e307b7e52dd577303b'
+            - 'IMPHASH=f5df2479285c7b593b3630b8357032e3'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

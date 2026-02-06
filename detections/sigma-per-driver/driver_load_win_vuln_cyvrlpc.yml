@@ -1,0 +1,38 @@
+title: Driver Load - cyvrlpc.sys
+id: c7022eb1-e39f-5864-9392-727c8d888edd
+status: experimental
+description: |
+    Detects loading of driver cyvrlpc.sys via hash.
+    Per Sophos X-Ops research
+    (Aug 06, 2025), threat actors deploy an EDR-killer that loads a malicious
+    kernel driver (often with a random five-letter name) signed with
+    compromised or revoked code-signing certificates (e.g., Changsha Hengxiang
+    Information Technology; Fuzhou Dingxin Trade). The tool targets many
+    security products by killing their services and processes and is frequently
+    distributed packed with HeartCrypt by ransomware groups (e.g., RansomHub,
+    INC). Driver names are hard-coded per sample (e.g., mraml.sys, noedt.sys).
+references:
+    - https://www.loldrivers.io/drivers/85f8ad5b-c5aa-468b-99f3-4b0aacfaa724/
+    - https://news.sophos.com/en-us/2025/08/06/shared-secret-edr-killer-in-the-kill-chain/
+author: Michael Haag
+date: 2025/08/08
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=43e12d7695fb568b5fce049341ae9175'
+            - 'SHA1=6b76184d186d93cef98df43f1e307eb2ab866c1b'
+            - 'SHA256=05f8f514d1367aca856564af5443a75f47d22a30ce63f0b024a41e6b9553a527'
+            - 'IMPHASH=ce10082e1aa4c1c2bd953b4a7208e56a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

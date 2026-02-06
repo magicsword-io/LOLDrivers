@@ -1,0 +1,28 @@
+title: Driver Load - cpuz141.sys
+id: eb2c8261-732e-5797-9fc6-15024adf1c0d
+status: experimental
+description: |
+    Detects loading of driver cpuz141.sys via name.
+    CPUID Driver
+references:
+    - https://www.loldrivers.io/drivers/fab98aaa-e4e7-4c4a-af65-c00d35cf66e9/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\cpuz141.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

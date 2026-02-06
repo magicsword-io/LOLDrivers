@@ -1,0 +1,30 @@
+title: Driver Load - kprocesshacker.sys
+id: f134b1dc-102a-5de7-a10e-8f853c15b595
+status: experimental
+description: |
+    Detects loading of driver kprocesshacker.sys via name.
+    KProcessHacker
+references:
+    - https://www.loldrivers.io/drivers/edd29861-6984-4dbe-8e7c-22e9b6cf68d0/
+    - https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html
+    - https://www.unknowncheats.me/forum/anti-cheat-bypass/312791-bypaph-process-hackers-bypass-read-write-process-virtual-memory-kernel-mem.html#post2315763
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\kprocesshacker.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

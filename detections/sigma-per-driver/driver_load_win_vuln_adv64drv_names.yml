@@ -1,0 +1,27 @@
+title: Driver Load - ADV64DRV.sys
+id: 80710caf-cfed-58ae-aa67-b57ac0924a94
+status: experimental
+description: |
+    Detects loading of driver ADV64DRV.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/24fb7bab-b8c3-46ea-a370-c84d2f0ff614/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\adv64drv.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

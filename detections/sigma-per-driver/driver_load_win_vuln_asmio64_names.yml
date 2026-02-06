@@ -1,0 +1,28 @@
+title: Driver Load - AsmIo64.sys
+id: 73ebb339-4199-54ca-be2c-6200ea81fd27
+status: experimental
+description: |
+    Detects loading of driver AsmIo64.sys via name.
+    Asmedia PCI Driver
+references:
+    - https://www.loldrivers.io/drivers/257d425f-f660-466c-8bee-c24cccf06daa/
+    - https://github.com/ucsb-seclab/popkorn-artifact/tree/main/evaluation
+author: Takahiro Haruyama
+date: 2023/10/12
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\asmio64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

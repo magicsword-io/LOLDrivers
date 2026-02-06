@@ -1,0 +1,28 @@
+title: Driver Load - LgCoreTemp.sys
+id: eee01c80-65d7-5bf4-b441-90d699954480
+status: experimental
+description: |
+    Detects loading of driver LgCoreTemp.sys via name.
+    CPU Core Temperature Monitor
+references:
+    - https://www.loldrivers.io/drivers/2c3884d3-9e4f-4519-b18b-0969612621bc/
+    - https://github.com/VoidSec/Exploit-Development/tree/b82b6d3ac1cce66221101d3e0f4634aa64cb4ca7/windows/x64/kernel/logitech_v.9.02.65_DoS
+author: Nasreddine Bencherchali
+date: 2023/04/15
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\lgcoretemp.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

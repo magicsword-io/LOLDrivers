@@ -1,0 +1,27 @@
+title: Driver Load - b1.sys
+id: 0542dd06-1fce-5fb6-870f-68a7b25b2bc4
+status: experimental
+description: |
+    Detects loading of driver b1.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/69b924ab-2e4a-4eae-8091-4151c238136e/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\b1.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

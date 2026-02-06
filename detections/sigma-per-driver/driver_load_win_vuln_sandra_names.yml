@@ -1,0 +1,29 @@
+title: Driver Load - sandra.sys
+id: 27b8303a-2158-5edb-800f-7243c612f807
+status: experimental
+description: |
+    Detects loading of driver sandra.sys via name.
+    Sandra Device Driver (Win64 x64)(Unicode)
+references:
+    - https://www.loldrivers.io/drivers/bc5e020a-ecff-43c8-b57b-ee17b5f65b21/
+    - https://github.com/jbaines-r7/dellicious
+    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\sandra.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,31 @@
+title: Driver Load - driver_930da474.sys
+id: 3b157dba-c5a0-504e-a289-078f9933df02
+status: experimental
+description: |
+    Detects loading of driver driver_930da474.sys via hash.
+    Sophos, from time to time, has observed a threat actor deploy variants of Poortry on different machines within a single estate during an attack. These variants contain the same payload, but signed with a different certificate than the driver first seen used during the attack.
+references:
+    - https://www.loldrivers.io/drivers/4c4e7664-af86-4483-858a-f59346f3d304/
+    - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+author: Michael Haag
+date: 2024/09/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=475f33ff28ba2c8007f39602c5f7ecf1'
+            - 'SHA1=011954de4094ae7e4562db7e749d5c66b268f1b4'
+            - 'SHA256=930da474a6d1be97b54f2c81e883e14d62897aa58622e5b040e412bd36cee0a7'
+            - 'IMPHASH=b72d2bef646e421c7a0789881378490f'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

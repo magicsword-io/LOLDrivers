@@ -1,0 +1,28 @@
+title: Driver Load - ktes.sys
+id: 305a548f-c1ec-5403-9510-1f0af41742af
+status: experimental
+description: |
+    Detects loading of driver ktes.sys via hash.
+    BlackCat Ransomware Deploys New Signed Kernel Driver. BlackCat ransomware incident that occurred in February 2023.
+references:
+    - https://www.loldrivers.io/drivers/c734bcff-aaaa-4450-a9a9-25ee52aa7ff1/
+    - https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
+author: Guus Verbeek
+date: 2023/06/05
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA1=5ed22c0033aed380aa154e672e8db3a2d4c195c4'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

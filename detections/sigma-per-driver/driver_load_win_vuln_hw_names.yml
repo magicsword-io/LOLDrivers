@@ -1,0 +1,30 @@
+title: Driver Load - hw.sys
+id: fc8a48bd-f33f-516a-95e1-dd749937d7cb
+status: experimental
+description: |
+    Detects loading of driver hw.sys via name.
+    HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI access
+references:
+    - https://www.loldrivers.io/drivers/5969b6dc-b136-480e-a527-3cb2ea2f0da9/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+    - https://decoded.avast.io/janvojtesek/the-return-of-candiru-zero-days-in-the-middle-east/
+    - https://www.virustotal.com/gui/file/6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5/detection
+author: Guus Verbeek
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\hw.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

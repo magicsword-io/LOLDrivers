@@ -1,0 +1,31 @@
+title: Driver Load - Blackbone.sys
+id: 2a8b44c0-e63a-5cd9-931b-82004cdd2ddd
+status: experimental
+description: |
+    Detects loading of driver Blackbone.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/b9b835bd-b720-424b-9160-2442bc4d6e58/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a42d87de65d7136620b63d5c4ee017ea'
+            - 'SHA1=b76c3ea60293dae12076ebe5812f53ff85370b78'
+            - 'SHA256=0856a1da15b2b3e8999bf9fc51bbdedd4051e21fab1302e2ce766180b4931d86'
+            - 'IMPHASH=3fb8602cf4f6f47b09a3a3259de6786b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

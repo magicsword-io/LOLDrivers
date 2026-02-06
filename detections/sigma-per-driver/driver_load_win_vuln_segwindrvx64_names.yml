@@ -1,0 +1,28 @@
+title: Driver Load - segwindrvx64.sys
+id: 39b0f98b-8576-5470-9909-5c7b65a975f7
+status: experimental
+description: |
+    Detects loading of driver segwindrvx64.sys via name.
+    SEG Windows Driver x64
+references:
+    - https://www.loldrivers.io/drivers/a4aa80bc-4ecd-49ab-bc0f-0f49b07fdd7f/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag, Nasreddine Bencherchali
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\segwindrvx64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

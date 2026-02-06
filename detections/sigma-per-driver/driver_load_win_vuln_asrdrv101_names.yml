@@ -1,0 +1,28 @@
+title: Driver Load - AsrDrv101.sys
+id: b8c46283-1b8a-5ce2-998a-68cf41a3007a
+status: experimental
+description: |
+    Detects loading of driver AsrDrv101.sys via name.
+    ASRock IO Driver
+references:
+    - https://www.loldrivers.io/drivers/51c342f3-0b91-4674-8f81-bc016855f30f/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\asrdrv101.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

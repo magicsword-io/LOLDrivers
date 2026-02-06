@@ -1,0 +1,31 @@
+title: Driver Load - spf.sys
+id: 092b0d7b-677a-5a10-af6f-88e34f4d7a11
+status: experimental
+description: |
+    Detects loading of driver spf.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/56b320b3-5b12-4ec6-81e2-5a16c56c7478/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=c4bacbaea0b1ae94c6c9583ba27b2fbe'
+            - 'SHA1=7f5e6f6518f4997fc6f9a17f8f411c5147c7c14d'
+            - 'SHA256=321cc3f24a518c70fb537ee9472b1777d05727c649d5b6538082a971c40ddcbe'
+            - 'IMPHASH=8464f3f6600ee4eccbbfe08f3a2a53e0'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

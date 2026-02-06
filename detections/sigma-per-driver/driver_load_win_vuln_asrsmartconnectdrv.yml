@@ -1,0 +1,31 @@
+title: Driver Load - AsrSmartConnectDrv.sys
+id: 656d3854-b674-5733-8ba4-d54eea7e3c5f
+status: experimental
+description: |
+    Detects loading of driver AsrSmartConnectDrv.sys via hash.
+    RW-Everything Read & Write Driver
+references:
+    - https://www.loldrivers.io/drivers/57f63efb-dc43-4dba-9413-173e3e4be750/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=56a515173b211832e20fbc64e5a0447c'
+            - 'SHA1=1d0df45ee3fa758f0470e055915004e6eae54c95'
+            - 'SHA256=47f08f7d30d824a8f4bb8a98916401a37c0fd8502db308aba91fe3112b892dcc'
+            - 'IMPHASH=9d7183c1d8107495354c4fad9dae3452'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,33 @@
+title: Driver Load - BS_RCIO64.sys
+id: 13fb2695-b390-5c5b-b5bf-439614121efc
+status: experimental
+description: |
+    Detects loading of driver BS_RCIO64.sys via hash.
+    I/O Interface driver file
+references:
+    - https://www.loldrivers.io/drivers/e7c958da-fd5d-40d6-975e-582c6fee7f69/
+    - https://github.com/jbaines-r7/dellicious
+    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+    - https://github.com/elastic/protections-artifacts/blob/932baf346cc8a743f1963ad3d4565b42ed17bebe/yara/rules/Windows_VulnDriver_Biostar.yar#L54
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=b10b210c5944965d0dc85e70a0b19a42'
+            - 'SHA1=5db61d00a001fd493591dc919f69b14713889fc5'
+            - 'SHA256=d205286bffdf09bc033c09e95c519c1c267b40c2ee8bab703c6a2d86741ccd3e'
+            - 'IMPHASH=095c0cdb9c0421da216371c1f4e8790e'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

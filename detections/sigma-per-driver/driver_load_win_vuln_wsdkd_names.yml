@@ -1,0 +1,30 @@
+title: Driver Load - wsdkd.sys
+id: 86dd3ef7-9882-5211-9d64-a0fb74b14f2a
+status: experimental
+description: |
+    Detects loading of driver wsdkd.sys via name.
+    A vulnerability was found in Watchdog Anti-Virus 1.4.214.0. It has been rated as critical. Affected by this issue is the function 0x80002008 in the library wsdk-driver.sys of the component IoControlCode Handler. The manipulation leads to improper access controls. Attacking locally is a requirement. The exploit has been disclosed to the public and may be used. VDB-223298 is the identifier assigned to this vulnerability.
+references:
+    - https://www.loldrivers.io/drivers/a8f2da2a-369c-4b4d-9a00-d7a892b9f7c3/
+    - https://github.com/zeze-zeze/WindowsKernelVuln/tree/master/CVE-2023-1453
+    - https://nvd.nist.gov/vuln/detail/CVE-2023-1453
+    - https://avd.aquasec.com/nvd/2023/cve-2023-1453/
+author: Chris Beckett, Jon Petersen
+date: 2023/09/12
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\wsdkd.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

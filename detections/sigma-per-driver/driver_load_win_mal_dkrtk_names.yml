@@ -1,0 +1,29 @@
+title: Driver Load - dkrTK.sys
+id: e5d9ec2d-10b0-54a3-868b-c90e1c4f40fc
+status: experimental
+description: |
+    Detects loading of driver dkrTK.sys via name.
+    The User Agent tjr.exe, which is protected via a virtual machine, drops the kernel driver to the user temporary directory C:\%User%\AppData\Local\Temp\Ktgn.sys. It then installs the dropped driver with the name ktgn and the start value = System (to start when the system restarts). From our analysis of what occurs when a user interfaces with this driver, we observed that it only uses one of the exposed Device Input and Output Control (IOCTL) code — Kill Process, which is used to kill security agent processes installed on the system.
+references:
+    - https://www.loldrivers.io/drivers/8a162702-b043-4108-bb6c-1488751a4a32/
+    - https://www.trendmicro.com/content/dam/trendmicro/global/en/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver/indicators-blackcat-ransomware-deploys-new-signed-kernel-driver.txt
+    - https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
+author: Will BushidoToken
+date: 2023/05/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\dkrtk.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

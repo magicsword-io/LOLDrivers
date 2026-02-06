@@ -1,0 +1,33 @@
+title: Driver Load - wsdkd.sys
+id: 709d799e-ec7c-5cfd-be4e-f364ce79bba6
+status: experimental
+description: |
+    Detects loading of driver wsdkd.sys via hash.
+    A vulnerability was found in Watchdog Anti-Virus 1.4.214.0. It has been rated as critical. Affected by this issue is the function 0x80002008 in the library wsdk-driver.sys of the component IoControlCode Handler. The manipulation leads to improper access controls. Attacking locally is a requirement. The exploit has been disclosed to the public and may be used. VDB-223298 is the identifier assigned to this vulnerability.
+references:
+    - https://www.loldrivers.io/drivers/a8f2da2a-369c-4b4d-9a00-d7a892b9f7c3/
+    - https://github.com/zeze-zeze/WindowsKernelVuln/tree/master/CVE-2023-1453
+    - https://nvd.nist.gov/vuln/detail/CVE-2023-1453
+    - https://avd.aquasec.com/nvd/2023/cve-2023-1453/
+author: Chris Beckett, Jon Petersen
+date: 2023/09/12
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=eff3a9cc3e99ef3ddae57df72807f0c7'
+            - 'SHA1=611411538b2bc9045d29bbd07e6845e918343e3c'
+            - 'SHA256=6278bc785113831b2ec3368e2c9c9e89e8aca49085a59d8d38dac651471d6440'
+            - 'IMPHASH=1e13511288689b63b2e1348bf5eb567b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,37 @@
+title: Driver Load - LgDataCatcher.sys
+id: 13594c50-363e-501e-a37a-264f22ae2033
+status: experimental
+description: |
+    Detects loading of driver LgDataCatcher.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/5961e133-ccc3-4530-8f4f-5d975c41028d/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=58e6c458409f748711353beb9acfc8ed'
+            - 'MD5=3f87df040c35ea45dfd4ae371b9641ae'
+            - 'MD5=aca70899d834124fa02dc52f098cad05'
+            - 'SHA1=3864dfc19c8479a491bc3b0637cf0e789a6d53d8'
+            - 'SHA1=0c10ff27f2ab76bbe6ddece8c1b2cff05e5483cc'
+            - 'SHA1=cc78c9c5871ab6b9d9ec9f9ffec122c109e4c5fe'
+            - 'SHA256=516159871730b18c2bddedb1a9da110577112d4835606ee79bb80e7a58784a13'
+            - 'SHA256=07fb2bb6c852f6a6fe982b2232f047e167be39738bac26806ffe0927ba873756'
+            - 'SHA256=45b07a2f387e047a6bb0e59b7f22fb56182d57b50e84e386a38c2dbb7e773837'
+            - 'IMPHASH=8902d821cdfd8e73ca10c00a3ce66731'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

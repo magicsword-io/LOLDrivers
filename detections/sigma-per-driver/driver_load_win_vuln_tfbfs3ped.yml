@@ -1,0 +1,31 @@
+title: Driver Load - tfbfs3ped.sys
+id: 4ec38235-c899-52f5-ac1b-605347ef8d65
+status: experimental
+description: |
+    Detects loading of driver tfbfs3ped.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/500e07cb-77c6-4e83-ae3f-73f70f1c10b5/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=59a48daa7dbdcb13bd0a11c71e1ad2f7'
+            - 'SHA1=6c447a42e73d6feff09812abaf67af566d83eb3a'
+            - 'SHA256=0897935ff2e0e7cc23a036ec0791d587b4799a299c8d6d65f364a8bdff645760'
+            - 'IMPHASH=543f80399f79401471523d335ea61642'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

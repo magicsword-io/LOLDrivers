@@ -1,0 +1,32 @@
+title: Driver Load - prokiller64.sys
+id: 450c1837-cd4a-5118-959f-6f684dc27de8
+status: experimental
+description: |
+    Detects loading of driver prokiller64.sys via hash.
+    Signed POORTRY Samples
+references:
+    - https://www.loldrivers.io/drivers/6fe10a55-7fb8-4a9d-9ebc-1b27b6e5b833/
+    - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+    - https://news.sophos.com/en-us/2022/12/13/signed-driver-malware-moves-up-the-software-trust-chain/
+author: Guus Verbeek
+date: 2023/05/07
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=10f3679384a03cb487bda9621ceb5f90'
+            - 'SHA1=31cc8718894d6e6ce8c132f68b8caaba39b5ba7a'
+            - 'SHA256=0440ef40c46fdd2b5d86e7feef8577a8591de862cfd7928cdbcc8f47b8fa3ffc'
+            - 'IMPHASH=832219eb71b8bdb771f1d29d27b0acf4'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

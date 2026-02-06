@@ -1,0 +1,33 @@
+title: Driver Load - gvcidrv64.sys
+id: 2792cc5d-d2a1-5c8c-b20c-f60657bdcad0
+status: experimental
+description: |
+    Detects loading of driver gvcidrv64.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/56cdac8e-d87d-49c8-b281-6e096c2390d1/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=acd221ff7cf10b6117fd609929cde395'
+            - 'MD5=1a22a85489a94db6ff68cd624ef43bad'
+            - 'SHA1=d302ae7f016299af323a3542d840004888ab91ff'
+            - 'SHA1=1586f121d38cc42e5d04fe2f56091e91c6cdd8fa'
+            - 'SHA256=f85784fa8e7a7ec86cb3fe76435802f6bb82256e1824ed7b5d61bf075f054573'
+            - 'SHA256=a2353030d4ea3ad9e874a0f7ff35bbfa10562c98c949d88cabab27102bbb8e48'
+            - 'IMPHASH=ad374977f06fefefbb9c77155f7a0733'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,28 @@
+title: Driver Load - KApcHelper_x64.sys
+id: 87db108a-666d-5074-9d42-3afbafdc44bc
+status: experimental
+description: |
+    Detects loading of driver KApcHelper_x64.sys via name.
+    Vulnerable driving using the stolen Nvidia Certificate.
+references:
+    - https://www.loldrivers.io/drivers/5261cacf-380c-4573-85ff-a643cbdf009a/
+    - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+author: Guus Verbeek
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\kapchelper_x64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

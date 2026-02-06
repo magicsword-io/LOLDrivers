@@ -1,0 +1,28 @@
+title: Driver Load - kt2.sys
+id: 1de5d313-7889-541c-9d68-87b72e969549
+status: experimental
+description: |
+    Detects loading of driver kt2.sys via name.
+    BlackCat Ransomware Deploys New Signed Kernel Driver. BlackCat ransomware incident that occurred in February 2023.
+references:
+    - https://www.loldrivers.io/drivers/833fc08f-217d-4d3f-8c8e-782c61120407/
+    - https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
+author: Guus Verbeek
+date: 2023/06/05
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\kt2.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

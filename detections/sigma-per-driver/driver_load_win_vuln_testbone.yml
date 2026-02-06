@@ -1,0 +1,27 @@
+title: Driver Load - TestBone.sys
+id: 3ec32e49-2bfa-500d-9824-c68f3e35fb69
+status: experimental
+description: |
+    Detects loading of driver TestBone.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/be4843ef-a2a8-4a0d-91c6-42e165800bb0/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA256=0de4247e72d378713bcf22d5c5d3874d079203bb4364e25f67a90d5570bdcce8'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

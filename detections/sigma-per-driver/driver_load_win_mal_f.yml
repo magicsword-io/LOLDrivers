@@ -1,0 +1,34 @@
+title: Driver Load - f.sys
+id: 4e606c4e-8c23-5e08-8776-fd70e815f0c0
+status: experimental
+description: |
+    Detects loading of driver f.sys via hash.
+    Sophos, from time to time, has observed a threat actor deploy variants
+        of Poortry on different machines within a single estate during an attack. These
+        variants contain the same payload, but signed with a different certificate than
+        the driver first seen used during the attack.
+references:
+    - https://www.loldrivers.io/drivers/17a1ad58-ecf3-4dea-b1ca-336880d15256/
+    - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+author: Michael Haag
+date: 2024/09/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=7190f99ecf8bc3f4c496443ff1f9ee83'
+            - 'SHA1=6ec298a9aff2708c3e28a8510e3735e841b14e06'
+            - 'SHA256=54942b92790dc0b84c56d4a00f3ac419b0a506344ca7e9f1fb666a86dbc4117f'
+            - 'IMPHASH=9050905feaae8f52f58d56b3fdb862de'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

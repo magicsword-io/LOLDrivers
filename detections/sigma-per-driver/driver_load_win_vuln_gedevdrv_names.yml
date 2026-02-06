@@ -1,0 +1,28 @@
+title: Driver Load - GEDevDrv.SYS
+id: 423029d4-cb85-588c-b753-5765f31c2045
+status: experimental
+description: |
+    Detects loading of driver GEDevDrv.SYS via name.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/e769d1f6-8a38-426f-b5e7-447241204ee1/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\gedevdrv.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

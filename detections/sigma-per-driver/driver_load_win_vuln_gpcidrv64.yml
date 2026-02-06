@@ -1,0 +1,30 @@
+title: Driver Load - gpcidrv64.sys
+id: 05815e70-3fb2-5911-857f-b2b17fbda1b9
+status: experimental
+description: |
+    Detects loading of driver gpcidrv64.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/6736cbe7-33ea-4488-b464-231c0b8d1049/
+    - https://github.com/ucsb-seclab/popkorn-artifact/tree/main/evaluation
+author: Takahiro Haruyama
+date: 2023/10/12
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=5d4df0bac74e9ac62af6bc99440b050b'
+            - 'SHA1=1743b073cccf44368dc83ed3659057eb5f644b06'
+            - 'SHA256=655110646bff890c448c0951e11132dc3592bda6e080696341b930d090224723'
+            - 'IMPHASH=4aaef0105216f062a5f3ee071a72770c'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,40 @@
+title: Driver Load - phymem_ext64.sys
+id: 9b03dc00-1447-5006-8db8-8336b9a48329
+status: experimental
+description: |
+    Detects loading of driver phymem_ext64.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/2b918b1a-badb-4a85-9214-961607b21219/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a664904f69756834049e9e272abb6fea'
+            - 'MD5=affe4764d880e78b2afb2643b15b8d41'
+            - 'MD5=0c55128c301921ce71991a6d546756ad'
+            - 'MD5=a125390293d50091b643cfa096c2148c'
+            - 'SHA1=ef8de780cfe839ecf6dc0dc161ae645bff9b853c'
+            - 'SHA1=ff9887cfd695916a06319b3a96f7ab2e6343a20e'
+            - 'SHA1=c45d03076fa6e66c1b8b74b020ad84712755e3df'
+            - 'SHA1=928d26cce64ad458e1f602cc2aea848e0b04eaaf'
+            - 'SHA256=e26a21e1b79ecaee7033e05edb0bd72aca463c23bd6fdf5835916ce2dfdf1a63'
+            - 'SHA256=793a26c5c4c154a40f84c3d3165deb807062b26796acaae94b72f453e95230d5'
+            - 'SHA256=4ec7af309a9359c332d300861655faeceb68bb1cd836dd66d10dd4fac9c01a28'
+            - 'SHA256=fc3e8554602c476e2edfa92ba4f6fb2e5ba0db433b9fbd7d8be1036e454d2584'
+            - 'IMPHASH=05d3de62beab8e88de1dafd3b24a16f6'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

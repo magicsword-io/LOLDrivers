@@ -1,0 +1,27 @@
+title: Driver Load - bwrsh.sys
+id: 03617b3d-008d-5a7f-a744-62951ad008ae
+status: experimental
+description: |
+    Detects loading of driver bwrsh.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/974de971-1f78-47b9-8049-6c34f294acd5/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\bwrsh.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

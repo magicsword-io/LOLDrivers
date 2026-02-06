@@ -1,0 +1,27 @@
+title: Driver Load - gpcidrv64.sys
+id: c68b83e7-ca9c-5323-82e1-b123f8e971b1
+status: experimental
+description: |
+    Detects loading of driver gpcidrv64.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/6736cbe7-33ea-4488-b464-231c0b8d1049/
+    - https://github.com/ucsb-seclab/popkorn-artifact/tree/main/evaluation
+author: Takahiro Haruyama
+date: 2023/10/12
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\gpcidrv64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

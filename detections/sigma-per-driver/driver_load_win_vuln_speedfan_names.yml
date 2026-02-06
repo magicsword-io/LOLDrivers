@@ -1,0 +1,29 @@
+title: Driver Load - speedfan.sys
+id: bcfe1ee7-537c-54d4-a84e-844bd27331ed
+status: experimental
+description: |
+    Detects loading of driver speedfan.sys via name.
+    speedfan.sys is a vulnerable driver. CVE-2007-5633.
+references:
+    - https://www.loldrivers.io/drivers/137daca4-0d7b-48aa-8574-f7eb6ad02526/
+    - https://github.com/jbaines-r7/dellicious
+    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\speedfan.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

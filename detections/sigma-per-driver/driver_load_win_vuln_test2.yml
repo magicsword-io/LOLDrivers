@@ -1,0 +1,31 @@
+title: Driver Load - test2.sys
+id: 04a13056-5e0b-5ad9-a363-d259ac9689ae
+status: experimental
+description: |
+    Detects loading of driver test2.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/6356d7d9-3b82-4731-9d5f-cc9bc37558fc/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=665a059e07c388eaf57dc04aec0c8552'
+            - 'SHA1=aaa066705016399e8fa11d71df937fd089550064'
+            - 'SHA256=6709a2d7925248fe172e9bc5495f45b9bb74060c43e1c58e671f0e6c434fd82b'
+            - 'IMPHASH=a74f61fdcea718cb9579907b2caf54ab'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

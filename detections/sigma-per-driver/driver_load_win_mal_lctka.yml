@@ -1,0 +1,34 @@
+title: Driver Load - LcTkA.sys
+id: 38f6cfbe-d713-5f8a-8040-b8d7a2fe8759
+status: experimental
+description: |
+    Detects loading of driver LcTkA.sys via hash.
+    SentinelOne has observed prominent threat actors abusing legitimately signed Microsoft drivers in active intrusions into telecommunication, BPO, MSSP, and financial services businesses.
+    Investigations into these intrusions led to the discovery of POORTRY and STONESTOP malware, part of a small toolkit designed to terminate AV and EDR processes.
+    We first reported our discovery to Microsoft’s Security Response Center (MSRC) in October 2022 and received an official case number (75361). Today, MSRC released an associated advisory under ADV220005.
+    This research is being released alongside Mandiant, a SentinelOne technology and incident response partner.
+references:
+    - https://www.loldrivers.io/drivers/d827f7a6-1832-4ddb-90dd-7a8cf1c7f25e/
+    - https://www.sentinelone.com/labs/driving-through-defenses-targeted-attacks-leverage-signed-malicious-microsoft-drivers/
+author: Michael Haag
+date: 2023/03/04
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=909f3fc221acbe999483c87d9ead024a'
+            - 'SHA1=b2f955b3e6107f831ebe67997f8586d4fe9f3e98'
+            - 'SHA256=c8f9e1ad7b8cce62fba349a00bc168c849d42cfb2ca5b2c6cc4b51d054e0c497'
+            - 'IMPHASH=ce10082e1aa4c1c2bd953b4a7208e56a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

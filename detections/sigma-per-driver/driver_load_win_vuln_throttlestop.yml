@@ -1,0 +1,32 @@
+title: Driver Load - throttlestop.sys
+id: 5f7dcf4c-630e-53d2-9e76-258c653fbde7
+status: experimental
+description: |
+    Detects loading of driver throttlestop.sys via hash.
+    ThrottleStop is developed by TechPowerUp and is designed to monitor for and correct CPU throttling issues. However, Kaspersky researchers from the Global Emergency Response Team (GERT) found out that it is being abused by attackers to terminate defense mechanisms.
+references:
+    - https://www.loldrivers.io/drivers/6e0786f5-2168-40a8-a068-e261c4eb10e7/
+    - https://securelist.com/av-killer-exploiting-throttlestop-sys/117026/
+    - https://www.cve.org/CVERecord?id=CVE-2025-7771
+author: Cristian Souza
+date: 2025/05/29
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=6bc8e3505d9f51368ddf323acb6abc49'
+            - 'SHA1=82ed942a52cdcf120a8919730e00ba37619661a3'
+            - 'SHA256=16f83f056177c4ec24c7e99d01ca9d9d6713bd0497eeedb777a3ffefa99c97f0'
+            - 'IMPHASH=bed949fc01017d391d1b5808755a7fd1'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

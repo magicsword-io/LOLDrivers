@@ -1,0 +1,28 @@
+title: Driver Load - dellinstrumentation.sys
+id: c11f4be8-e701-5f91-8afe-652a42876546
+status: experimental
+description: |
+    Detects loading of driver dellinstrumentation.sys via name.
+    DellInstrumentation
+references:
+    - https://www.loldrivers.io/drivers/86b9c8d6-9c59-4fd4-befd-ab9a36a19e36/
+    - https://dor00tkit.github.io/Dor00tkit/posts/from-admin-to-kernel-one-year-one-driver-zero-attention/
+author: Dor00tkit
+date: 2025/01/13
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\dellinstrumentation.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

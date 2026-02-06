@@ -1,0 +1,28 @@
+title: Driver Load - mhyprotnap.sys
+id: 080fdad9-ae5b-5ebd-a3d4-1a8ac775f237
+status: experimental
+description: |
+    Detects loading of driver mhyprotnap.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/75a66604-f024-4f11-8ba7-fdd64a0df3bf/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\mhyprotnap.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

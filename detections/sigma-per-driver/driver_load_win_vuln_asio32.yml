@@ -1,0 +1,32 @@
+title: Driver Load - ASIO32.sys
+id: 00242643-2a9d-510d-acdf-ee8f809f9848
+status: experimental
+description: |
+    Detects loading of driver ASIO32.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/920e3326-e5dc-446a-9993-6ec05266e0e0/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA1=1acc7a486b52c5ee6619dbdc3b4210b5f48b936f'
+            - 'SHA1=5a7dd0da0aee0bdedc14c1b7831b9ce9178a0346'
+            - 'SHA1=80fa962bdfb76dfcb9e5d13efc38bb3d392f2e77'
+            - 'SHA1=55ab7e27412eca433d76513edc7e6e03bcdd7eda'
+            - 'SHA1=1e7c241b9a9ea79061b50fb19b3d141dee175c27'
+            - 'SHA1=d569d4bab86e70efbcdfdac9d822139d6f477b7c'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

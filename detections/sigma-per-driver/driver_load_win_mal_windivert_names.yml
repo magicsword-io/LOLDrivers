@@ -1,0 +1,29 @@
+title: Driver Load - windivert.sys
+id: e7022fcb-8daa-51a6-9c98-2f20d0cfd712
+status: experimental
+description: |
+    Detects loading of driver windivert.sys via name.
+    WinDivert is a user-mode packet capture and network packet manipulation utility designed for Windows. It provides a powerful and flexible framework for intercepting, modifying, injecting, and dropping network packets at the network stack level. It operates as a lightweight, high-performance driver that interfaces directly with the network stack, allowing for detailed packet inspection and manipulation in real time.
+references:
+    - https://www.loldrivers.io/drivers/45a31a17-f78d-48ec-beba-74f6bfc5f96e/
+    - https://www.3nailsinfosec.com/post/edrprison-borrow-a-legitimate-driver-to-mute-edr-agent
+    - https://github.com/basil00/WinDivert
+author: Michael Haag
+date: 2024/09/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\windivert.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

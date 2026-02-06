@@ -1,0 +1,28 @@
+title: Driver Load - psmounterex.sys
+id: b54add06-2cf0-5dfd-b2fe-b5131d6736b0
+status: experimental
+description: |
+    Detects loading of driver psmounterex.sys via name.
+    Northwave Cyber Security contributed this driver based on in-house research. The driver has a CVSSv3 score of 8.8, indicating a privelege escalation impact. This vulnerability could potentially be exploited for privilege escalation or other malicious activities.
+references:
+    - https://www.loldrivers.io/drivers/0f64bf7a-2ef2-45ea-af7d-4e7c87d98777/
+    - https://northwave-cybersecurity.com/exploiting-enterprise-backup-software-for-privilege-escalation-part-one
+author: Northwave Cyber Security
+date: 2024/09/11
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\psmounterex.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

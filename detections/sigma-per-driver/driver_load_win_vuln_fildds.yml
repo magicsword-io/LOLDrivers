@@ -1,0 +1,33 @@
+title: Driver Load - fildds.sys
+id: 650e3e62-b241-5e33-beed-dc617edc26c8
+status: experimental
+description: |
+    Detects loading of driver fildds.sys via hash.
+    Twister Antivirus, fildds.sys, DoS2
+    CVE-2023-1444
+    From IoControlCode 0x8011206B, a normal user can cause DoS due to writing into null address.
+references:
+    - https://www.loldrivers.io/drivers/af98f6e6-f19e-4705-a7b9-e7ee7377447b/
+    - https://github.com/zeze-zeze/WindowsKernelVuln/tree/master/CVE-2023-1444
+author: VirarK
+date: 2024/06/20
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=afdb17f38361130453ea1098c7ddb754'
+            - 'SHA1=538bcb13cc8de64f7115429dbd9917a5a96f9bcd'
+            - 'SHA256=f8c07b6e2066a5a22a92d9f521ecdeb8c68698c400e4b83e0501b9f340957c22'
+            - 'IMPHASH=8a83e9dfc88f971a2dfc34e277724d28'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

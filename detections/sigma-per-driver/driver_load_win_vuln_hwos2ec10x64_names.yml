@@ -1,0 +1,28 @@
+title: Driver Load - HwOs2Ec10x64.sys
+id: 4039909d-3fe8-5508-a1ec-b7fbc00788a7
+status: experimental
+description: |
+    Detects loading of driver HwOs2Ec10x64.sys via name.
+    HwOs2Ec
+references:
+    - https://www.loldrivers.io/drivers/3ab0d182-6365-47a7-89f4-34121e889503/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\hwos2ec10x64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

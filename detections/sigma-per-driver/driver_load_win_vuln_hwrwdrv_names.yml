@@ -1,0 +1,28 @@
+title: Driver Load - HwRwDrv.sys
+id: 715d5d64-fcba-5c64-9cac-dc183a701a03
+status: experimental
+description: |
+    Detects loading of driver HwRwDrv.sys via name.
+    Hardware read & write driver
+references:
+    - https://www.loldrivers.io/drivers/e4609b54-cb25-4433-a75a-7a17f43cec00/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\hwrwdrv.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

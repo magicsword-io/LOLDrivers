@@ -1,0 +1,28 @@
+title: Driver Load - iQVW64.SYS
+id: 5b19923e-0fee-5fbb-890b-577638752b49
+status: experimental
+description: |
+    Detects loading of driver iQVW64.SYS via name.
+    Intel(R) Network Adapter Diagnostic Driver
+references:
+    - https://www.loldrivers.io/drivers/4dd3289c-522c-4fce-b48e-5370efc90fa1/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\iqvw64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

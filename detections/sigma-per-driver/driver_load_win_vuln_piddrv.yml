@@ -1,0 +1,28 @@
+title: Driver Load - piddrv.sys
+id: fad3f524-25d0-58ba-a23f-c5950b371b20
+status: experimental
+description: |
+    Detects loading of driver piddrv.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/354a9fcf-acf1-4151-94d2-af88116f605c/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA1=a7d827a41b2c4b7638495cd1d77926f1ba902978'
+            - 'SHA1=877c6c36a155109888fe1f9797b93cb30b4957ef'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,35 @@
+title: Driver Load - physmem.sys
+id: 15b65e75-9bef-59e9-85e6-02a3029fb44e
+status: experimental
+description: |
+    Detects loading of driver physmem.sys via hash.
+    Physical Memory Access Driver
+references:
+    - https://www.loldrivers.io/drivers/f4c22f4d-eff8-40c5-8b31-146abe5f17b7/
+    - https://github.com/jbaines-r7/dellicious
+    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+    - https://github.com/magicsword-io/LOLDrivers/issues/55
+    - https://github.com/hfiref0x/KDU
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a0e2223868b6133c5712ba5ed20c3e8a'
+            - 'SHA1=17614fdee3b89272e99758983b99111cbb1b312c'
+            - 'SHA1=589a7d4df869395601ba7538a65afae8c4616385'
+            - 'SHA256=c299063e3eae8ddc15839767e83b9808fd43418dc5a1af7e4f44b97ba53fbd3d'
+            - 'IMPHASH=e5af2438da6df2aa9750aa632c80cfa4'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

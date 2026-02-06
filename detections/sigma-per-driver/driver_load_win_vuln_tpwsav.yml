@@ -1,0 +1,31 @@
+title: Driver Load - TPwSav.sys
+id: cc26bd67-89b2-5187-afad-bce20724830a
+status: experimental
+description: |
+    Detects loading of driver TPwSav.sys via hash.
+    A driver associated with Toshiba laptops power saving functionality allows arbitary one byte reading and writing mapped physical addresses. Blackpoint Cyber's SOC observed this driver being used as part of a custom EDRSandblast malware to blind EDR prior to Qilin ransomware deployment.
+references:
+    - https://www.loldrivers.io/drivers/c0634ed7-840e-4a7e-8b34-33efe50405c2/
+    - https://blackpointcyber.com/resources/blog/qilin-ransomware-and-the-hidden-dangers-of-byovd/
+author: Robel Campbell
+date: 2025/01/31
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=b0caa4f3ac2841be683933a6af9bee0e'
+            - 'SHA1=c1130e09831c7a2e0cc8ba7335e702910b25f526'
+            - 'SHA256=011df46e94218cbb2f0b8da13ab3cec397246fdc63436e58b1bf597550a647f6'
+            - 'IMPHASH=7ac4904ded1efd522ece72259cf28a46'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,31 @@
+title: Driver Load - SysInfoDetectorX64.sys
+id: e0a9372a-bfbf-5e66-bf90-8a059952fc0a
+status: experimental
+description: |
+    Detects loading of driver SysInfoDetectorX64.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/c4eab0c0-caf2-42b9-84f1-b4690d3db0d4/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=33fc573c0e8bedfe3614e17219273429'
+            - 'SHA1=258f1cdc79bd20c2e6630a0865abfe60473b98d5'
+            - 'SHA256=45e5977b8d5baec776eb2e62a84981a8e46f6ce17947c9a76fa1f955dc547271'
+            - 'IMPHASH=d16f507665603095c26147a7adcb93b8'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

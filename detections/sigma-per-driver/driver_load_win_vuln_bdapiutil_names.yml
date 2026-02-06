@@ -1,0 +1,31 @@
+title: Driver Load - BdApiUtil.sys
+id: 5d5157a9-cea8-54da-9b9c-e19c976d7264
+status: experimental
+description: |
+    Detects loading of driver BdApiUtil.sys via name.
+    Driver can be used to load unsigned drivers. IOCTL code which takes a PID and terminates it (arbitrary process termination). Admin privileges required to install the driver, but if it's already installed, can be called by any user (non admin).
+references:
+    - https://www.loldrivers.io/drivers/708650ed-c497-48be-97bc-9edd48cf2a1a/
+    - https://github.com/magicsword-io/LOLDrivers/issues/204
+    - https://github.com/magicsword-io/LOLDrivers/issues/231
+    - https://github.com/RainbowDynamix/GoodBaiii
+    - https://blog.talosintelligence.com/byovd-loader-deadlock-ransomware/
+author: christopher-ellis-workday, plisskien, Julian Pena
+date: 2025/12/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\bdapiutil.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

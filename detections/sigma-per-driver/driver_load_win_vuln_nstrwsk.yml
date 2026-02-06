@@ -1,0 +1,27 @@
+title: Driver Load - nstrwsk.sys
+id: acd96e09-b8b0-5ab0-9246-11e76c577958
+status: experimental
+description: |
+    Detects loading of driver nstrwsk.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/e9b099f6-8a12-46f0-a540-40e88cf0ce17/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA256=3390919bb28d5c36cc348f9ef23be5fa49bfd81263eb7740826e4437cbe904cd'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

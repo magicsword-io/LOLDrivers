@@ -1,0 +1,45 @@
+title: Driver Load - CP2X72C.SYS
+id: ed20bc91-a58f-5f95-b93a-a3fe21c4f3de
+status: experimental
+description: |
+    Detects loading of driver CP2X72C.SYS via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/a08ee79f-801d-4b98-996f-55f6a72ac5f7/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=c8d3784a3ab7a04ad34ea0aba32289ca'
+            - 'MD5=2601cf769ad6ffee727997679693f774'
+            - 'MD5=ad612a7eb913b5f7d25703cd44953c35'
+            - 'MD5=de2aac9468158c73880e31509924d7e0'
+            - 'MD5=e98f4cc2cbf9ec23fd84da30c0625884'
+            - 'SHA1=8b63eb0f5dbb844ee5f6682f0badef872ae569bf'
+            - 'SHA1=67e87ca093da64a23cf0fc0be2b35e03d1bf1543'
+            - 'SHA1=0536c9f15094ca8ddeef6dec75d93dc35366d8a9'
+            - 'SHA1=2ba0db7465cf4ffb272f803a9d77292b79c1e6df'
+            - 'SHA1=d9b05c5ffc5eddf65186ba802bb1ece0249cab05'
+            - 'SHA256=9c8ed1506b3e35f5eea6ac539e286d46ef76ddbfdfc5406390fd2157c762ce91'
+            - 'SHA256=11832c345e9898c4f74d3bf8f126cf84b4b1a66ad36135e15d103dbf2ac17359'
+            - 'SHA256=63865f04c1150655817ed4c9f56ad9f637d41ebd2965b6127fc7c02757a7800e'
+            - 'SHA256=05c15a75d183301382a082f6d76bf3ab4c520bf158abca4433d9881134461686'
+            - 'SHA256=4b4ea21da21a1167c00b903c05a4e3af6c514ea3dfe0b5f371f6a06305e1d27f'
+            - 'IMPHASH=7a286ef4179598007a8afe9e5af95a48'
+            - 'IMPHASH=e08b2d7c450761f01ec9ed4ef0ca56a4'
+            - 'IMPHASH=787e32b3fd816479fb93f9af0b6d0da3'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

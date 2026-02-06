@@ -1,0 +1,28 @@
+title: Driver Load - ComputerZ.Sys
+id: be5f289e-9899-5c3b-9fb6-0e455ed9e475
+status: experimental
+description: |
+    Detects loading of driver ComputerZ.Sys via name.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/9bf033e4-7295-4b63-8772-638b76851741/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\computerz.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

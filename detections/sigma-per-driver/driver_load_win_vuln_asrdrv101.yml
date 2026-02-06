@@ -1,0 +1,31 @@
+title: Driver Load - AsrDrv101.sys
+id: ca79702d-69f8-5521-aecd-c9237cbbc399
+status: experimental
+description: |
+    Detects loading of driver AsrDrv101.sys via hash.
+    ASRock IO Driver
+references:
+    - https://www.loldrivers.io/drivers/51c342f3-0b91-4674-8f81-bc016855f30f/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=1a234f4643f5658bab07bfa611282267'
+            - 'SHA1=57511ef5ff8162a9d793071b5bf7ebe8371759de'
+            - 'SHA256=f40435488389b4fb3b945ca21a8325a51e1b5f80f045ab019748d0ec66056a8b'
+            - 'IMPHASH=9d7183c1d8107495354c4fad9dae3452'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

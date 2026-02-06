@@ -1,0 +1,27 @@
+title: Driver Load - t8.sys
+id: 153d8696-de0b-5449-b4fb-801a1beb21ae
+status: experimental
+description: |
+    Detects loading of driver t8.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/8c2fa9d1-b2b1-4ba1-bad9-60c44c2c20eb/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\t8.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

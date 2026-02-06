@@ -1,0 +1,27 @@
+title: Driver Load - full.sys
+id: 731c9769-a2ce-58a4-98e0-4448dd42b147
+status: experimental
+description: |
+    Detects loading of driver full.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/ddbd60c3-0611-4a59-894d-aec84203906f/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA1=4b8c0445075f09aeef542ab1c86e5de6b06e91a3'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

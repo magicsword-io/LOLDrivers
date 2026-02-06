@@ -1,0 +1,43 @@
+title: Driver Load - SBIOSIO64.sys
+id: e09e870a-e7cc-5332-a5a0-ca970dfdadb5
+status: experimental
+description: |
+    Detects loading of driver SBIOSIO64.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/cf805b21-4611-4983-a8b6-271373a45057/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=d98d2f80b94f70780b46d1f079a38d93'
+            - 'MD5=b7946feaeae34d51f045c4f986fa62ce'
+            - 'MD5=3c9c537167923723429c86ab38743e7d'
+            - 'MD5=942c6a8332d5dd06d8f4b2a9cb386ff4'
+            - 'SHA1=06ec56736c2fc070066079bb628c17b089b58f6c'
+            - 'SHA1=0e47bd9b67500a67ce18c24328d6d0db8ae2c493'
+            - 'SHA1=fc69138b9365fa60e21243369940c8dcfcca5db1'
+            - 'SHA1=ee877b496777763e853dd81fefd0924509bc5be0'
+            - 'SHA256=39336e2ce105901ab65021d6fdc3932d3d6aab665fe4bd55aa1aa66eb0de32f0'
+            - 'SHA256=b3d1bdd4ad819b99870b6e2ed3527dfc0e3ce27b929ad64382b9c3d4e332315c'
+            - 'SHA256=1e24c45ce2672ee403db34077c88e8b7d7797d113c6fd161906dce3784da627d'
+            - 'SHA256=442d506c1ac1f48f6224f0cdd64590779aee9c88bdda2f2cc3169b862cba1243'
+            - 'IMPHASH=e586fd1c5af87b43696b9d29b09bf1b1'
+            - 'IMPHASH=a5fd3b0143c8db98017ec1b2b2528360'
+            - 'IMPHASH=16b23f4c6ea47d01340a2cce4bf613f7'
+            - 'IMPHASH=8f4588156ea7d9af8e4c162ce4c3ff23'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

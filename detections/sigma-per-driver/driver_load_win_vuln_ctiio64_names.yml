@@ -1,0 +1,28 @@
+title: Driver Load - CtiIo64.sys
+id: 66140ea8-048d-5c01-89ee-d5c5fdd6d1b9
+status: experimental
+description: |
+    Detects loading of driver CtiIo64.sys via name.
+    The driver is part of Dragon Center (or MSI Center?) from MSI. It creates \Device\CtiIo ACLless DO and provides access to memory and IO. The driver is signed with WHQL cert.
+references:
+    - https://www.loldrivers.io/drivers/de365e80-45cb-48fb-af6e-0a96a5ad7777/
+    - https://github.com/magicsword-io/LOLDrivers/pull/81
+author: zwclose
+date: 2023/05/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\ctiio64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

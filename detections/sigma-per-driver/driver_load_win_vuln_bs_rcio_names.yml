@@ -1,0 +1,28 @@
+title: Driver Load - BS_RCIO.sys
+id: 1fe90dac-d887-52c6-8ad3-0cd2e8dec58a
+status: experimental
+description: |
+    Detects loading of driver BS_RCIO.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/0a2f2700-97b5-42b6-b121-38e5f03e9957/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\bs_rcio.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

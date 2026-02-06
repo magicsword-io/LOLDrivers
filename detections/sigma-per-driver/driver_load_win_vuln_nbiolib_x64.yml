@@ -1,0 +1,31 @@
+title: Driver Load - NBIOLib_X64.sys
+id: 6de40d77-9587-5047-acab-e7a6572e2d3a
+status: experimental
+description: |
+    Detects loading of driver NBIOLib_X64.sys via hash.
+    NTIOLib
+references:
+    - https://www.loldrivers.io/drivers/6fc3034f-8b40-44ef-807a-f61d3ea2dece/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=f2f728d2f69765f5dfda913d407783d2'
+            - 'SHA1=35829e096a15e559fcbabf3441d99e580ca3b26e'
+            - 'SHA256=3f2fda9a7a9c57b7138687bbce49a2e156d6095dddabb3454ea09737e02c3fa5'
+            - 'IMPHASH=d6f977640d4810a784d152e4d3c63a6b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

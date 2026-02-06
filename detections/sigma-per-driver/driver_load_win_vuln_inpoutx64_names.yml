@@ -1,0 +1,28 @@
+title: Driver Load - inpoutx64.sys
+id: e0103da4-7b32-58a2-ac0e-dd42fd98efeb
+status: experimental
+description: |
+    Detects loading of driver inpoutx64.sys via name.
+    Kernel level port access driver
+references:
+    - https://www.loldrivers.io/drivers/91ff1575-9ff2-46fd-8bfe-0bb3e3457b7f/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\inpoutx64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

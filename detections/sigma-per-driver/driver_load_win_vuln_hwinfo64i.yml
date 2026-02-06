@@ -1,0 +1,31 @@
+title: Driver Load - HWiNFO64I.SYS
+id: f3286e46-f151-5ba3-9e0a-31a1d7be5782
+status: experimental
+description: |
+    Detects loading of driver HWiNFO64I.SYS via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/080a834f-3e19-4cae-b940-a4ecf901db28/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=31e8d7b070dcc6cd92cec9d6d2254afe'
+            - 'SHA1=2ea7907525b8375457235c3d85a928dcd5354df2'
+            - 'SHA256=33c6c622464f80a8d8017a03ff3aa196840da8bb03bfb5212b51612b5cf953dc'
+            - 'IMPHASH=7bf7d94570a80fb38c22341013531b14'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

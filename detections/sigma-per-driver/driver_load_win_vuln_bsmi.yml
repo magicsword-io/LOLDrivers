@@ -1,0 +1,32 @@
+title: Driver Load - BSMI.sys
+id: f90af370-2d7d-5d6f-afaa-71ca4624b4de
+status: experimental
+description: |
+    Detects loading of driver BSMI.sys via hash.
+    SMI Driver
+references:
+    - https://www.loldrivers.io/drivers/bf01915d-045f-442c-a74e-25c56182123f/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=fac8eb49e2fd541b81fcbdeb98a199cb'
+            - 'SHA1=9a35ae9a1f95ce4be64adc604c80079173e4a676'
+            - 'SHA256=59626cac380d8fe0b80a6d4c4406d62ba0683a2f0f68d50ad506ca1b1cf25347'
+            - 'IMPHASH=bc5c06a7fa9555f3f34043d828d9b123'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

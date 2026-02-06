@@ -1,0 +1,32 @@
+title: Driver Load - dkrTK.sys
+id: e59b1f0f-5ce7-54f1-be41-46571f20c485
+status: experimental
+description: |
+    Detects loading of driver dkrTK.sys via hash.
+    The User Agent tjr.exe, which is protected via a virtual machine, drops the kernel driver to the user temporary directory C:\%User%\AppData\Local\Temp\Ktgn.sys. It then installs the dropped driver with the name ktgn and the start value = System (to start when the system restarts). From our analysis of what occurs when a user interfaces with this driver, we observed that it only uses one of the exposed Device Input and Output Control (IOCTL) code — Kill Process, which is used to kill security agent processes installed on the system.
+references:
+    - https://www.loldrivers.io/drivers/8a162702-b043-4108-bb6c-1488751a4a32/
+    - https://www.trendmicro.com/content/dam/trendmicro/global/en/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver/indicators-blackcat-ransomware-deploys-new-signed-kernel-driver.txt
+    - https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
+author: Will BushidoToken
+date: 2023/05/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a837302307dace2a00d07202b661bce2'
+            - 'SHA1=91568d7a82cc7677f6b13f11bea5c40cf12d281b'
+            - 'SHA256=52d5c35325ce701516f8b04380c9fbdb78ec6bcc13b444f758fdb03d545b0677'
+            - 'IMPHASH=26ceec6572c630bdad60c984e51b7da4'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

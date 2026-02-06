@@ -1,0 +1,31 @@
+title: Driver Load - ViveRRAudio.sys
+id: ac163e81-c14a-5337-8e62-39f14fb5e0fc
+status: experimental
+description: |
+    Detects loading of driver ViveRRAudio.sys via hash.
+    Northwave Cyber Security contributed this driver based on in-house research. The driver has a CVSSv3 score of 5.5, indicating a information disclosure / local dos impact. This vulnerability could potentially be exploited for privilege escalation or other malicious activities.
+references:
+    - https://www.loldrivers.io/drivers/4cb95b41-43b4-4806-b536-ae5fd8c76b0e/
+    - https://northwave-cybersecurity.com/vive-vr-headset-kernel-driver-vulnerable-for-out-of-bounds-memory-read
+author: Northwave Cyber Security
+date: 2024/09/11
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=e548fef8b4c41ee672482dcc1af31aef'
+            - 'SHA1=4e40f2245f62669949ead77fc56bdbaf1d77ce99'
+            - 'SHA256=9d5e8700a434838eb63a0573178b4291f07a9d96dabfb4ead40253a3cd9edefd'
+            - 'IMPHASH=78eb92e96f5e824801f3284b813750ab'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

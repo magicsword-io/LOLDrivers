@@ -1,0 +1,28 @@
+title: Driver Load - AsrRapidStartDrv.sys
+id: 0b495d48-651f-50b5-87c0-2593dea4a3ab
+status: experimental
+description: |
+    Detects loading of driver AsrRapidStartDrv.sys via name.
+    RW-Everything Read & Write Driver
+references:
+    - https://www.loldrivers.io/drivers/19d16518-4aee-4983-ba89-dbbe0fa8a3e7/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\asrrapidstartdrv.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

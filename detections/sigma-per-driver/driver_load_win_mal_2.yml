@@ -1,0 +1,31 @@
+title: Driver Load - 2.sys
+id: cfa1146f-6357-5526-b1aa-391ccb36b94b
+status: experimental
+description: |
+    Detects loading of driver 2.sys via hash.
+    Sophos, from time to time, has observed a threat actor deploy variants of Poortry on different machines within a single estate during an attack. These variants contain the same payload, but signed with a different certificate than the driver first seen used during the attack.
+references:
+    - https://www.loldrivers.io/drivers/bb1f80f3-d2fd-463e-9403-57c919bd976b/
+    - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+author: Michael Haag
+date: 2024/09/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=c1ade0fc97f6a774fd036892c8056907'
+            - 'SHA1=e23dff8959176dc17a1e37356a99c3333e75e8d3'
+            - 'SHA256=df72cb33a23ae8f6f9dc64bb738fcfaea959368ce05cf399f3c7db5e90104bd7'
+            - 'IMPHASH=8d5129d39204fcf88ffca488305e4480'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

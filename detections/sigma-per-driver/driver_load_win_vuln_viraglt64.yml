@@ -1,0 +1,32 @@
+title: Driver Load - viraglt64.sys
+id: d6411af7-d612-50c3-a97b-90424796e1a6
+status: experimental
+description: |
+    Detects loading of driver viraglt64.sys via hash.
+    VirIT Agent System
+references:
+    - https://www.loldrivers.io/drivers/c3cca618-5a7f-4a51-8785-cb328fbfb0df/
+    - https://github.com/jbaines-r7/dellicious
+    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=43830326cd5fae66f5508e27cbec39a0'
+            - 'SHA1=05c0c49e8bcf11b883d41441ce87a2ee7a3aba1d'
+            - 'SHA256=58a74dceb2022cd8a358b92acd1b48a5e01c524c3b0195d7033e4bd55eff4495'
+            - 'IMPHASH=85fd19df117fbc21efbcb1d587063e12'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

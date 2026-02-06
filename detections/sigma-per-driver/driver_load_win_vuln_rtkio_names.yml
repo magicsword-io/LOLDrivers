@@ -1,0 +1,30 @@
+title: Driver Load - rtkio.sys
+id: 871bf1ef-64f0-5f62-8bae-c4a9aa51bc5b
+status: experimental
+description: |
+    Detects loading of driver rtkio.sys via name.
+    Realtek IO Driver
+references:
+    - https://www.loldrivers.io/drivers/8d3f27bd-c3fd-48d0-913a-e2caa6fbd025/
+    - Internal Research
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+    - https://github.com/elastic/protections-artifacts/search?q=rtkio
+author: Michael Haag, Nasreddine Bencherchali
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\rtkio.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

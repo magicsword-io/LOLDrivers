@@ -1,0 +1,28 @@
+title: Driver Load - ProxyDrv.sys
+id: 3f0ac4fc-09f8-5a23-ba5c-d8320cb91a49
+status: experimental
+description: |
+    Detects loading of driver ProxyDrv.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/0e3b0052-18c7-4c8b-a064-a1332df07af2/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\proxydrv.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

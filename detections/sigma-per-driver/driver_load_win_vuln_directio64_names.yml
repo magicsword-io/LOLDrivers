@@ -1,0 +1,28 @@
+title: Driver Load - directio64.sys
+id: 11968ecf-38b8-5d54-927e-ba7c0c7e07aa
+status: experimental
+description: |
+    Detects loading of driver directio64.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/a254e684-f6eb-40c4-a50a-7b76feb6cc02/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\directio64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

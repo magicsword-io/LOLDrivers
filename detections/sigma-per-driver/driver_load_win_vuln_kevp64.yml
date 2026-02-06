@@ -1,0 +1,34 @@
+title: Driver Load - kEvP64.sys
+id: 6e82c8d8-0c2f-525f-af7b-aebf099bd93d
+status: experimental
+description: |
+    Detects loading of driver kEvP64.sys via hash.
+    PowerTool
+references:
+    - https://www.loldrivers.io/drivers/73196456-40ae-4b6d-8562-07cf99458a7d/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=4ff880566f22919ed94ffae215d39da5'
+            - 'MD5=7e7e3f5532b6af24dcc252ac4b240311'
+            - 'SHA1=755349d56cdd668ca22eebc4fc89f0cccef47327'
+            - 'SHA1=3ccf1f3ac636a5e21b39ede48ff49fa23e05413f'
+            - 'SHA256=8e6363a6393eb4234667c6f614b2072e33512866b3204f8395bbe01530d63f2f'
+            - 'SHA256=09b0e07af8b17db1d896b78da4dd3f55db76738ee1f4ced083a97d737334a184'
+            - 'IMPHASH=f5030145594c486434040aa2636a5dde'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

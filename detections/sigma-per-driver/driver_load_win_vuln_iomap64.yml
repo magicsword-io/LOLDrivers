@@ -1,0 +1,31 @@
+title: Driver Load - IOMap64.sys
+id: 8ea60bf3-20da-599f-afed-6e988c5cbbea
+status: experimental
+description: |
+    Detects loading of driver IOMap64.sys via hash.
+    ASUS Kernel Mode Driver for NT
+references:
+    - https://www.loldrivers.io/drivers/f4990bdd-8821-4a3c-a11a-4651e645810c/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a01c412699b6f21645b2885c2bae4454'
+            - 'SHA1=2fc6845047abcf2a918fce89ab99e4955d08e72c'
+            - 'SHA256=ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41'
+            - 'IMPHASH=9928d53dbe860aba1b7c891831680629'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

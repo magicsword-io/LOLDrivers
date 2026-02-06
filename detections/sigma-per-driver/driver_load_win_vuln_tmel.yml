@@ -1,0 +1,39 @@
+title: Driver Load - Tmel.sys
+id: 1e5dbcbb-b809-5b2a-9ff1-010282b7f633
+status: experimental
+description: |
+    Detects loading of driver Tmel.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/1aeb1205-8b02-42b6-a563-b953ea337c19/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=e58491b5aec097f17e310f83e82ae0c8'
+            - 'MD5=4064a81b6339992cbb4171b43b9a69dc'
+            - 'MD5=d052dc4ac3c5bfe34f04abc62a153847'
+            - 'SHA1=b667f48f5518632f3159f51e5e1f6332627c4fd8'
+            - 'SHA1=6cf7db611a351dbbf4e8cfde5b9912ddc329e43d'
+            - 'SHA1=6eece018896c250f15f778f0ccae667f315b8bd1'
+            - 'SHA256=d0eb3ba0aff471d19260192784bf9f056d669b779b6eaff84e732b7124ce1d11'
+            - 'SHA256=e505569892551b2ba79d8792badff0a41faea033e8d8f85c3afea33463c70bd9'
+            - 'SHA256=dd628061d6e53f3f0b44f409ad914b3494c5d7b5ff6ff0e8fc3161aacec93e96'
+            - 'IMPHASH=f6aeb7d666f83d90492fb76d8af4e15b'
+            - 'IMPHASH=e54f28e331d8e2b722551f3b280cc686'
+            - 'IMPHASH=e53133e314605f61696ede9f23dbc14e'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

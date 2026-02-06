@@ -1,0 +1,27 @@
+title: Driver Load - ni.sys
+id: af304c65-1698-59fc-addd-ed05b8c57137
+status: experimental
+description: |
+    Detects loading of driver ni.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/4f93e19c-4600-4e2e-943f-a986875fd7d2/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA256=ae79e760c739d6214c1e314728a78a6cb6060cce206fde2440a69735d639a0a2'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,28 @@
+title: Driver Load - BSMIx64.sys
+id: e1dd54d9-36df-5a85-8af8-c7ad2e621998
+status: experimental
+description: |
+    Detects loading of driver BSMIx64.sys via name.
+    SMI Driver
+references:
+    - https://www.loldrivers.io/drivers/47724cc1-bf75-4ab7-a47a-355a9aa30de1/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\bsmix64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

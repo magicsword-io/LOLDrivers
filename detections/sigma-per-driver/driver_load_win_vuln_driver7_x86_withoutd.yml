@@ -1,0 +1,31 @@
+title: Driver Load - driver7-x86-withoutdbg.sys
+id: bafb9701-d70b-509c-a7d1-8bb94c1dd9f3
+status: experimental
+description: |
+    Detects loading of driver driver7-x86-withoutdbg.sys via hash.
+    The driver for the ECtool driver-based tools
+references:
+    - https://www.loldrivers.io/drivers/d9f2c3d6-160c-4eb3-8547-894fcf810342/
+    - https://github.com/Chigusa0w0/AsusDriversPrivEscala
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=4f191abc652d8f7442ca2636725e1ed6'
+            - 'SHA1=4243dbbf6e5719d723f24d0f862afd0fcb40bc35'
+            - 'SHA256=927c2a580d51a598177fa54c65e9d2610f5f212f1b6cb2fbf2740b64368f010a'
+            - 'IMPHASH=10cb3185e13390f8931a50a131448cdf'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

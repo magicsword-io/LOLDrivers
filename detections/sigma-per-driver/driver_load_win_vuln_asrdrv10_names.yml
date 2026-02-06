@@ -1,0 +1,28 @@
+title: Driver Load - AsrDrv10.sys
+id: ef975d0c-c58c-5cd7-9fe5-945e833c8c12
+status: experimental
+description: |
+    Detects loading of driver AsrDrv10.sys via name.
+    ASRock IO Driver
+references:
+    - https://www.loldrivers.io/drivers/0258df5c-c3c1-4ed5-ba8f-846d91526ffe/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\asrdrv10.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

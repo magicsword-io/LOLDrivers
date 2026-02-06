@@ -1,0 +1,31 @@
+title: Driver Load - AsrDrv106.sys
+id: 03799a60-fa68-5563-a346-61d43b56d392
+status: experimental
+description: |
+    Detects loading of driver AsrDrv106.sys via hash.
+    ASRock IO Driver
+references:
+    - https://www.loldrivers.io/drivers/6a50e368-1120-434b-9232-1a0702c80437/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=12908c285b9d68ee1f39186110df0f1e'
+            - 'SHA1=b0032b8d8e6f4bd19a31619ce38d8e010f29a816'
+            - 'SHA256=3943a796cc7c5352aa57ccf544295bfd6fb69aae147bc8235a00202dc6ed6838'
+            - 'IMPHASH=88e21ed9e717781eaf87209acbdbb567'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

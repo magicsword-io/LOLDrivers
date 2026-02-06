@@ -1,0 +1,28 @@
+title: Driver Load - AMDPowerProfiler.sys
+id: 30e61fb7-05d3-5f00-b5b9-be23d33b8b8c
+status: experimental
+description: |
+    Detects loading of driver AMDPowerProfiler.sys via name.
+    AMD Power Profiling Driver
+references:
+    - https://www.loldrivers.io/drivers/9a4fb66e-9084-4b21-9d76-a7afbe330606/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\amdpowerprofiler.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

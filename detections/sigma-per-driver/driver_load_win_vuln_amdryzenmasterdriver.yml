@@ -1,0 +1,52 @@
+title: Driver Load - AMDRyzenMasterDriver.sys
+id: e7b72bb7-80cd-5eac-9199-042fa3c467ed
+status: experimental
+description: |
+    Detects loading of driver AMDRyzenMasterDriver.sys via hash.
+    AMD Ryzen Master Service Driver
+references:
+    - https://www.loldrivers.io/drivers/13973a71-412f-4a18-a2a6-476d3853f8de/
+    - Internal Research
+    - https://github.com/elastic/protections-artifacts/search?q=AMDRyzenMasterDriver
+author: Michael Haag, Nasreddine Bencherchali
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=130c5aec46bdec8d534df7222d160fdb'
+            - 'MD5=13ee349c15ee5d6cf640b3d0111ffc0e'
+            - 'MD5=013719e840e955c2e4cd9d18c94a2625'
+            - 'MD5=f16b44cca74d3c3645e4c0a6bb5c0cb9'
+            - 'MD5=0490f5961e0980792f5cb5aedf081dd7'
+            - 'MD5=0be5c6476dd58072c93af4fca62ee4b3'
+            - 'MD5=aa12c1cb47c443c6108bfe7fc1a34d98'
+            - 'SHA1=4786253daac6c60ffc0d2871fdd68023ec93dfb3'
+            - 'SHA1=eceb51233f013e04406da11482324d45e70281c7'
+            - 'SHA1=5f8ae70b25b664433c6942d5963acadf2042cfe8'
+            - 'SHA1=b74338c91c6effabc02ae0ced180428ab1024c7d'
+            - 'SHA1=fac870d438bf62ecd5d5c8c58cc9bfda6f246b8b'
+            - 'SHA1=4f7a8e26a97980544be634b26899afbefb0a833c'
+            - 'SHA1=88d00eff21221f95a0307da229bc9fe1afb6861b'
+            - 'SHA256=af1011c76a22af7be97a0b3e0ce11aca0509820c59fa7c8eeaaa1b2c0225f75a'
+            - 'SHA256=a13054f349b7baa8c8a3fcbd31789807a493cc52224bbff5e412eb2bd52a6433'
+            - 'SHA256=909de5f21837ea2b13fdc4e5763589e6bdedb903f7c04e1d0b08776639774880'
+            - 'SHA256=9b1ac756e35f795dd91adbc841e78db23cb7165280f8d4a01df663128b66d194'
+            - 'SHA256=ff9623317287358440ec67da9ba79994d9b17b99ffdd709ec836478fe1fc22a5'
+            - 'SHA256=f6cd7353cb6e86e98d387473ed6340f9b44241867508e209e944f548b9db1d5f'
+            - 'SHA256=7e81beae78e1ddbf6c150e15667e1f18783f9b0ab7fbe52c7ab63e754135948d'
+            - 'IMPHASH=32b632f6379bfaac9f4f3a030a694f55'
+            - 'IMPHASH=8bbc742eaed888736a715757f0584fb6'
+            - 'IMPHASH=bb437241f56020db0fcbf8f8629bdb07'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

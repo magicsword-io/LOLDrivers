@@ -1,0 +1,51 @@
+title: Driver Load - RadHwMgr.sys
+id: 774eec00-0b38-5b64-869e-a5a13a630c58
+status: experimental
+description: |
+    Detects loading of driver RadHwMgr.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/7bb4d807-9a66-48ff-9fb7-82780f3b015e/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=048549f7e9978aff602a24dea98ee48a'
+            - 'MD5=f80ceb0dbb889663f0bee058b109ce0e'
+            - 'MD5=d4a9f80ecb448da510e5bf82c4a699ee'
+            - 'MD5=2580fb4131353ec417b0df59811f705c'
+            - 'MD5=30550db8f400b1e11593dffd644abb67'
+            - 'MD5=f36b8094c2fbf57f99870bfaeeacb25c'
+            - 'SHA1=c4454a3a4a95e6772acb8a3d998b78a329259566'
+            - 'SHA1=a809831166a70700b59076e0dbc8975f57b14398'
+            - 'SHA1=c31049605f028a56ce939cd2f97c2e56c12d99f8'
+            - 'SHA1=091a039f5f2ae1bb0fa0f83660f4c178fd3a5a10'
+            - 'SHA1=de2c073c8b4db6ffd11a99784d307f880444e5d3'
+            - 'SHA1=472cc191937349a712aabcbc4d118c1c982ab7c9'
+            - 'SHA256=0f30ecd4faec147a2335a4fc031c8a1ac9310c35339ebeb651eb1429421951a0'
+            - 'SHA256=7c8ad57b3a224fdc2aac9dd2d7c3624f1fcd3542d4db804de25a90155657e2cc'
+            - 'SHA256=903d6d71da64566b1d9c32d4fb1a1491e9f91006ad2281bb91d4f1ee9567ef7b'
+            - 'SHA256=7c79e5196c2f51d2ab16e40b9d5725a8bf6ae0aaa70b02377aedc0f4e93ca37f'
+            - 'SHA256=00c3e86952eebb113d91d118629077b3370ebc41eeacb419762d2de30a43c09c'
+            - 'SHA256=df96d844b967d404e58a12fc57487abc24cd3bd1f8417acfe1ce1ee4a0b0b858'
+            - 'IMPHASH=7abb0911ca4cc4697ee1e9897932d3ac'
+            - 'IMPHASH=0c959096cf4b3180530cc7865ef29157'
+            - 'IMPHASH=aca7bbc6be02770c50b07eb6f94d1d78'
+            - 'IMPHASH=ced7ea67fdf3d89a48849e0062278f7d'
+            - 'IMPHASH=cc88330f6dca52a40e258f689d3e2db4'
+            - 'IMPHASH=c1ab6741cd29de98a138f2bd639f620a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

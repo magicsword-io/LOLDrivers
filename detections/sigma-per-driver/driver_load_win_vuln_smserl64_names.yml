@@ -1,0 +1,29 @@
+title: Driver Load - SmSerl64.sys
+id: da262dff-d36b-5dc1-bf5d-f52688a86f20
+status: experimental
+description: |
+    Detects loading of driver SmSerl64.sys via name.
+    A vulnerability exits in driver SmSerl64.sys in Motorola SM56 Modem WDM Driver v6.12.23.0, which allows low-privileged users to mapping physical memory via specially crafted IOCTL requests . This can be exploited for privilege escalation, code execution under high privileges, and information disclosure. These signed drivers can also be used to bypass the Microsoft driver-signing policy to deploy malicious code.
+references:
+    - https://www.loldrivers.io/drivers/09c46890-5aa1-4122-962e-7ed94754e710/
+    - https://nvd.nist.gov/vuln/detail/CVE-2024-55414
+    - https://github.com/heyheysky/vulnerable-driver/blob/master/CVE-2024-55414/CVE-2024-55414_SmSerl64.sys_README.md
+author: valium
+date: 2025/05/28
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\smserl64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,32 @@
+title: Driver Load - daxin_blank3.sys
+id: df2f7cc6-a685-5df6-8243-915af176dee1
+status: experimental
+description: |
+    Detects loading of driver daxin_blank3.sys via hash.
+    Driver used in the Daxin malware campaign.
+references:
+    - https://www.loldrivers.io/drivers/9748d5c8-62dd-474b-a336-0aadb49e5ff9/
+    - https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+    - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+author: Michael Haag
+date: 2023/02/28
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=bd5b0514f3b40f139d8079138d01b5f6'
+            - 'SHA1=73bac306292b4e9107147db94d0d836fdb071e33'
+            - 'SHA256=7a7e8df7173387aec593e4fe2b45520ea3156c5f810d2bb1b2784efd1c922376'
+            - 'IMPHASH=6c8d5c79a850eecc2fb0291cebda618d'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

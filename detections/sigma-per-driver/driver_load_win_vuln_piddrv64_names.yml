@@ -1,0 +1,27 @@
+title: Driver Load - piddrv64.sys
+id: adfc3178-9497-5d9d-9b77-11c854e0dfcc
+status: experimental
+description: |
+    Detects loading of driver piddrv64.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/aaa92ef1-5728-4e15-9fca-b054b02f0fb0/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\piddrv64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,31 @@
+title: Driver Load - NSecKrnl.sys
+id: b032914c-040e-5d7c-92ee-d5423d722c73
+status: experimental
+description: |
+    Detects loading of driver NSecKrnl.sys via hash.
+    Driver used by ValleyRAT malware to terminate security processes via IOCTL 0x2248E0
+references:
+    - https://www.loldrivers.io/drivers/c1143cd9-a709-4323-9678-2117285d1b47/
+    - https://hexastrike.com/resources/blog/threat-intelligence/valleyrat-exploiting-byovd-to-kill-endpoint-security/
+author: Michael Haag
+date: 2025/09/18
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=80961850786d6531f075b8a6f9a756ad'
+            - 'SHA1=b0b912a3fd1c05d72080848ec4c92880004021a1'
+            - 'SHA256=206f27ae820783b7755bca89f83a0fe096dbb510018dd65b63fc80bd20c03261'
+            - 'IMPHASH=fdbdf8ea09a9af32d54979c574260475'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

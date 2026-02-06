@@ -1,0 +1,27 @@
+title: Driver Load - mhyprot3.sys
+id: dc771a47-1f6c-5ce6-9a51-3a5b78abdad9
+status: experimental
+description: |
+    Detects loading of driver mhyprot3.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/2aa003cd-5f36-46a6-ae3d-f5afc2c8baa3/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\mhyprot3.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

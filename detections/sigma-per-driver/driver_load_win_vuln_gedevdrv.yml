@@ -1,0 +1,41 @@
+title: Driver Load - GEDevDrv.SYS
+id: 485cc3df-4b56-5412-b94d-6d2ebf3fb811
+status: experimental
+description: |
+    Detects loading of driver GEDevDrv.SYS via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/e769d1f6-8a38-426f-b5e7-447241204ee1/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=62f8d7f884366df6100c7e892e3d70bf'
+            - 'MD5=4514a0e8bcab7de4cff55999cdf00cd1'
+            - 'MD5=1793e1d4247b29313325d1462dec81e2'
+            - 'MD5=328a2cb2da464b0c2beb898ff9ae9f3a'
+            - 'SHA1=faa61346430aedc952d820f7b16b973c9bf133c3'
+            - 'SHA1=8589a284f1a087ad5b548fb1a933289781b4cedc'
+            - 'SHA1=adf9328e60c714ff0b98083bcf2f4ee2d58b960b'
+            - 'SHA1=cc3186debacb98e0b0fb40ad82816bea10741099'
+            - 'SHA256=a369942ce8d4b70ebf664981e12c736ec980dbe5a74585dd826553c4723b1bce'
+            - 'SHA256=51145a3fa8258aac106f65f34159d23c54b48b6d54ec0421748b3939ab6778eb'
+            - 'SHA256=ae73dd357e5950face9c956570088f334d18464cd49f00c56420e3d6ff47e8dc'
+            - 'SHA256=cac5dc7c3da69b682097144f12a816530091d4708ca432a7ce39f6abe6616461'
+            - 'IMPHASH=5f9cf5b0511f3c1129b467d273b921f2'
+            - 'IMPHASH=c7912c850407aa93c979d95c4f593507'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

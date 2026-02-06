@@ -1,0 +1,31 @@
+title: Driver Load - directio.sys
+id: 45f8fb80-425d-5f33-b0ce-c119856a3158
+status: experimental
+description: |
+    Detects loading of driver directio.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/a2c3f6e9-25a5-4b75-8c6b-ad2d4e155822/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=6ba44f6ab055d6827a3ba43b215a7e13'
+            - 'SHA1=750f1e91d04c25aff8825fb2e3b8341212a431f0'
+            - 'SHA256=e6a7a497010579fde69cd52bed8de28db610c33bbc5ce0774459dcf64657b802'
+            - 'IMPHASH=81b3081f25ad1a83f2f6dc05c8e83aec'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high
