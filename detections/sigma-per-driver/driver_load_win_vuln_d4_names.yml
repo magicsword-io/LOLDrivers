@@ -1,0 +1,27 @@
+title: Driver Load - d4.sys
+id: 4c00e267-c30d-57e3-be91-3fd1f61de860
+status: experimental
+description: |
+    Detects loading of driver d4.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/c2e70ee6-2f13-4d43-ad5a-c2bf033cc457/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\d4.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

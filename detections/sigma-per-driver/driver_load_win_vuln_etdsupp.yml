@@ -1,0 +1,31 @@
+title: Driver Load - etdsupp.sys
+id: d0a5a27a-eb33-5740-9b17-aef6682ab6b0
+status: experimental
+description: |
+    Detects loading of driver etdsupp.sys via hash.
+    ETDi Support Driver
+references:
+    - https://www.loldrivers.io/drivers/0e8da43d-92e0-43f9-bc34-50a7d15b34bd/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/11
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a92bf3c219a5fa82087b6c31bdf36ff3'
+            - 'SHA1=a57eefa0c653b49bd60b6f46d7c441a78063b682'
+            - 'SHA256=f744abb99c97d98e4cd08072a897107829d6d8481aee96c22443f626d00f4145'
+            - 'IMPHASH=3552d8a0022e7f3136b667e6d1e402f2'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,49 @@
+title: Driver Load - echo_driver.sys
+id: 3d5d8231-aafc-50dc-9eba-d52d96b669c8
+status: experimental
+description: |
+    Detects loading of driver echo_driver.sys via hash.
+    Bad access controls in Inspect Element Ltd.'s echo_driver.sys allows attacker to gain arbitrary memory read and write, which allows for easy Privilege Escalation via Token Theft.
+references:
+    - https://www.loldrivers.io/drivers/afb8bb46-1d13-407d-9866-1daa7c82ca63/
+    - https://ioctl.fail/echo-ac-writeup/
+    - https://github.com/kite03/echoac-poc/tree/main/PoC
+    - https://github.com/pseuxide/kur
+author: Protocol & Zach
+date: 2023/07/14
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=410b44dc8ec9e756e2abdbb406aa42ad'
+            - 'MD5=187ddca26d119573223cf0a32ba55a61'
+            - 'MD5=69fd73a83df164d7fe5d89e006e945dc'
+            - 'MD5=1585d3eda733dfe42202bb98f95f7f5d'
+            - 'MD5=5fea22f442e7fd34a54008e363446d13'
+            - 'SHA1=2fcfb50b5c91dd3e3b48d91a60acc26138f406b6'
+            - 'SHA1=a93197c8c1897a95c4fb0367d7451019ae9f3054'
+            - 'SHA1=8a0d8b31fc2cdc44cb5a8547b7a63600307dd2d4'
+            - 'SHA1=04fd5eb356f63e2afc218a32aa7c27c9e9a5c42a'
+            - 'SHA1=67d17ca90880b448d5c3b40f69cec04d3649f170'
+            - 'SHA256=ea3c5569405ed02ec24298534a983bcb5de113c18bc3fd01a4dd0b5839cd17b9'
+            - 'SHA256=1aed62a63b4802e599bbd33162319129501d603cceeb5e1eb22fd4733b3018a3'
+            - 'SHA256=ada2b855757c9062231f5ed4e80365b8d8094e9adbce8f26d1ff5ea0b7a70c77'
+            - 'SHA256=a41e9bb037cf1dc2237659b1158f0ed4e49b752b2f9dae4cc310933a9d1f1e47'
+            - 'SHA256=9165d4f3036919a96b86d24b64d75d692802c7513f2b3054b20be40c212240a5'
+            - 'IMPHASH=8b9e0d788c2eaf2c7f14613be96a14ef'
+            - 'IMPHASH=a94892b77a6474429b9f692d9952a9d5'
+            - 'IMPHASH=a2180e353b7db3ab59bab0bbbd09962b'
+            - 'IMPHASH=d5b8227536ae03b96e542a52b80aab47'
+            - 'IMPHASH=1fb8e85267a70537d661f9df2fc215ac'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

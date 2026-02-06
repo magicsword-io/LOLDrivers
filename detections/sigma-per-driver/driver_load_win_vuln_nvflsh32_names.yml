@@ -1,0 +1,28 @@
+title: Driver Load - nvflsh32.sys
+id: 651f31c0-952c-58dc-8eac-4432d3b9bd4a
+status: experimental
+description: |
+    Detects loading of driver nvflsh32.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/c33648d7-6473-4e2b-92f6-93f195bc183f/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\nvflsh32.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

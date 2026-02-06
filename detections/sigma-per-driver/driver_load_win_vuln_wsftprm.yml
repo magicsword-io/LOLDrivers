@@ -1,0 +1,32 @@
+title: Driver Load - wsftprm.sys
+id: 16395fc9-a613-501b-83e0-6bd7d37a75b2
+status: experimental
+description: |
+    Detects loading of driver wsftprm.sys via hash.
+    Northwave Cyber Security contributed this driver based on in-house research. The driver has a CVSSv3 score of 6.1, indicating a antivirus killer impact. This vulnerability could potentially be exploited for privilege escalation or other malicious activities.
+references:
+    - https://www.loldrivers.io/drivers/30e8d598-2c60-49e4-953b-a6f620da1371/
+    - https://northwave-cybersecurity.com/vulnerability-notice-topaz-antifraud
+    - https://github.com/xM0kht4r/AV-EDR-Killer
+author: Northwave Cyber Security
+date: 2024/09/11
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=2f4b5a0d98bc4e5616f2dd04337ae674'
+            - 'SHA1=f8a3f28ecbd0b08ecab73ef571f16c3d0bd5e009'
+            - 'SHA256=ff5dbdcf6d7ae5d97b6f3ef412df0b977ba4a844c45b30ca78c0eeb2653d69a8'
+            - 'IMPHASH=70d95d244db4c9ba22a801a149570551'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

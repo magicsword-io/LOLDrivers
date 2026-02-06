@@ -1,0 +1,28 @@
+title: Driver Load - dcr.sys
+id: e20dcf04-4a0f-5f30-9873-f48be690e71a
+status: experimental
+description: |
+    Detects loading of driver dcr.sys via name.
+    DriveCrypt Dcr.sys vulnerability exploit for bypassing x64 DSE
+references:
+    - https://www.loldrivers.io/drivers/b1dd91b1-9ba3-4d68-a2d1-919039e18430/
+    - https://github.com/wjcsharp/DriveCrypt
+author: Michael Haag
+date: 2023/04/14
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\dcr.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

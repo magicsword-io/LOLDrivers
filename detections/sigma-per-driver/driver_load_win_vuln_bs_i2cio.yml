@@ -1,0 +1,31 @@
+title: Driver Load - BS_I2cIo.sys
+id: a0c1c726-6619-5caf-9ad3-4433caf841be
+status: experimental
+description: |
+    Detects loading of driver BS_I2cIo.sys via hash.
+    I/O Interface driver file
+references:
+    - https://www.loldrivers.io/drivers/66be9e0a-9246-4404-b5b5-7fbde351668f/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=3c4154866f3d483fdc9f4f64ef868888'
+            - 'SHA1=f7ce71891738a976cd8d4b516c8d7a8e2f6b0ad6'
+            - 'SHA256=42e170a7ab1d2c160d60abfc906872f9cfd0c2ee169ed76f6acb3f83b3eeefdb'
+            - 'IMPHASH=f939ef0b7f792672866386600f82aa04'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

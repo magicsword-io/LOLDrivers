@@ -1,0 +1,27 @@
+title: Driver Load - CITMDRV_AMD64.sys
+id: 0f43858e-7cc3-5299-9b87-34cc6e364388
+status: experimental
+description: |
+    Detects loading of driver CITMDRV_AMD64.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/f3215c19-8053-458c-81a5-90a74c5d2e6d/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\citmdrv_amd64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

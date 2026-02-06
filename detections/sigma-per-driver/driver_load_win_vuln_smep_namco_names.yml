@@ -1,0 +1,27 @@
+title: Driver Load - smep_namco.sys
+id: 3a4fb394-be00-55de-b3bb-2f7ec310442b
+status: experimental
+description: |
+    Detects loading of driver smep_namco.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/cce291c8-4534-4362-af45-5f45cd32bd92/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\smep_namco.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

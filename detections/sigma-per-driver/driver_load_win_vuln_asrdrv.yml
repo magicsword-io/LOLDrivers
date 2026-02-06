@@ -1,0 +1,42 @@
+title: Driver Load - AsrDrv.sys
+id: 1d25037d-a95b-546c-acc6-5bf96f40742c
+status: experimental
+description: |
+    Detects loading of driver AsrDrv.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/213676bb-ffb9-4d0d-a442-8cefee63acc1/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=ab859723016484790c87b2218931d55f'
+            - 'MD5=9c56e390589ceb75d773229567924dcd'
+            - 'MD5=e4f8cab9d478d892ab076f182a951d0d'
+            - 'MD5=dbdac970026703dfa5ccaf69b04086ec'
+            - 'SHA1=46b479cec57aa09a582591726b10c30222b7d91d'
+            - 'SHA1=187efbdbbb085ed8e268a3e31b5b39a51ff5c90c'
+            - 'SHA1=f42453c6a062bdc95d84e3c7cf1521a94ae615e5'
+            - 'SHA1=b41fe1d44e2b3d562166e698d732a1ef1b2372df'
+            - 'SHA256=d20d8bf80017e98b6dfc9f6c3960271fa792a908758bef49a390e2692a2a4341'
+            - 'SHA256=4d03a01257e156a3a018230059052791c3cde556e5cec7a4dd2f55f65c06e146'
+            - 'SHA256=53bb076e81f6104f41bc284eedae36bd99b53e42719573fa5960932720ebc854'
+            - 'SHA256=4bf974f5d3489638a48ee508b4a8cfa0f0262909778ccdd2e871172b71654d89'
+            - 'IMPHASH=88e21ed9e717781eaf87209acbdbb567'
+            - 'IMPHASH=3edc8a0f9cf180b3687025e17be537cc'
+            - 'IMPHASH=7c8c655791b5c853e45aa174e5cc1333'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

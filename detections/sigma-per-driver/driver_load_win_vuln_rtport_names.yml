@@ -1,0 +1,28 @@
+title: Driver Load - rtport.sys
+id: 3543e7bc-994a-5266-a7f3-6c3b726a2eaa
+status: experimental
+description: |
+    Detects loading of driver rtport.sys via name.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/8ecc8439-0554-40d0-9130-c02941deadbe/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\rtport.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,34 @@
+title: Driver Load - wamsdk.sys
+id: 88a48c9c-bb48-5ac9-b4b5-930488ddb9ab
+status: experimental
+description: |
+    Detects loading of driver wamsdk.sys via hash.
+    Vulnerable WatchDog Antimalware driver used by Silver Fox APT group to load unsigned drivers and execute malicious code in kernel mode
+references:
+    - https://www.loldrivers.io/drivers/9cb4b2fa-67fb-4415-a064-7da7bc47e105/
+    - https://research.checkpoint.com/2025/silver-fox-apt-vulnerable-drivers/
+author: The Haag
+date: 2025/08/28
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=b6b51508ad6f462c45fe102c85d246c8'
+            - 'MD5=68def3004db45cb974e789241472fd59'
+            - 'SHA1=3cfad07bdf8006047a78b8234cc6c3c2f35b24ed'
+            - 'SHA1=96f0dbf52aed0afd43e44500116b04b674f7358e'
+            - 'SHA256=0be8483c2ea42f1ce4c90e84ac474a4e7017bc6d682e06f96dc1e31922a07b10'
+            - 'SHA256=5af1dae21425dda8311a2044209c308525135e1733eeff5dd20649946c6e054c'
+            - 'IMPHASH=e504668ae8fd87fe157662fab1e99cb1'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

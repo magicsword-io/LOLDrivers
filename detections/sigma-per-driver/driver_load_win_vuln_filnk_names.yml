@@ -1,0 +1,33 @@
+title: Driver Load - filnk.sys
+id: 24356b36-4ad9-58d2-ab50-b0ae77a2fc04
+status: experimental
+description: |
+    Detects loading of driver filnk.sys via name.
+    Twister Antivirus, fildds.sys, DoS2
+    
+        CVE-2023-1444
+    
+        From IoControlCode 0x8011206B, a normal user can cause DoS due to writing into
+        null address.
+references:
+    - https://www.loldrivers.io/drivers/ba91bce3-2cf9-4c44-bbd8-1170a44d23db/
+    - https://github.com/zeze-zeze/WindowsKernelVuln/tree/master/CVE-2023-1444
+author: VirarK
+date: 2024/06/20
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\filnk.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

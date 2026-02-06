@@ -1,0 +1,27 @@
+title: Driver Load - GLCKIO2.sys
+id: c9da5c23-c5bb-56a2-ba57-12433008b624
+status: experimental
+description: |
+    Detects loading of driver GLCKIO2.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/52ded752-2708-499e-8f37-98e4a9adc23c/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\glckio2.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

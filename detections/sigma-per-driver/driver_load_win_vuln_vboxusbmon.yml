@@ -1,0 +1,35 @@
+title: Driver Load - VBoxUSBMon.sys
+id: 1b50db5a-9615-5410-b53b-f4f974e3be89
+status: experimental
+description: |
+    Detects loading of driver VBoxUSBMon.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/babe348d-f160-41ec-9db9-2413b989c1f0/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=7ed45f56d809eed09a805402a7b92a49'
+            - 'MD5=0f651c53a63cef2d96be95c1638fa5bc'
+            - 'SHA1=98c9cbbdb106ae708d4c5f752fb88340e91d9b2c'
+            - 'SHA1=4dfb6be34833e5d7989ffdae8869333cf5abd1b1'
+            - 'SHA256=3d055be2671e136c937f361cef905e295ddb6983526341f1d5f80a16b7655b40'
+            - 'SHA256=8a2482e19040d591c7cec5dfc35865596ce0154350b5c4e1c9eecc86e7752145'
+            - 'IMPHASH=89f4cf2f8ccc4562dacd065d5f3bfe55'
+            - 'IMPHASH=d4e3a701b28792a37c553b9675e40b27'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

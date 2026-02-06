@@ -1,0 +1,29 @@
+title: Driver Load - WinRing0.sys
+id: 33a0925b-cb71-5957-9833-b95f3728f5c5
+status: experimental
+description: |
+    Detects loading of driver WinRing0.sys via name.
+    WinRing0
+references:
+    - https://www.loldrivers.io/drivers/7bb5ff05-25f8-410d-ae99-c8e8f082d24f/
+    - https://github.com/namazso/physmem_drivers
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\winring0.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

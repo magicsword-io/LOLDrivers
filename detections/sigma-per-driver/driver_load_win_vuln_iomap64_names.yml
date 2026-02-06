@@ -1,0 +1,28 @@
+title: Driver Load - IOMap64.sys
+id: 8f148caa-0bb9-5095-ac14-ec75d1cdc4c2
+status: experimental
+description: |
+    Detects loading of driver IOMap64.sys via name.
+    ASUS Kernel Mode Driver for NT
+references:
+    - https://www.loldrivers.io/drivers/f4990bdd-8821-4a3c-a11a-4651e645810c/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\iomap64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

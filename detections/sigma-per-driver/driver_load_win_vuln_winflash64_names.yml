@@ -1,0 +1,27 @@
+title: Driver Load - WinFlash64.sys
+id: 91a356d5-6251-5b62-b64a-11954ca979bb
+status: experimental
+description: |
+    Detects loading of driver WinFlash64.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/902249eb-87cb-4c01-8da7-17675d743cd7/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\winflash64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

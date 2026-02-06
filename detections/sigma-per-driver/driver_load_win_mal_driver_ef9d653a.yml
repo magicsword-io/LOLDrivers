@@ -1,0 +1,31 @@
+title: Driver Load - driver_ef9d653a.sys
+id: 13f22061-649b-586a-8379-7d628787b2c7
+status: experimental
+description: |
+    Detects loading of driver driver_ef9d653a.sys via hash.
+    Sophos, from time to time, has observed a threat actor deploy variants of Poortry on different machines within a single estate during an attack. These variants contain the same payload, but signed with a different certificate than the driver first seen used during the attack.
+references:
+    - https://www.loldrivers.io/drivers/14e51012-5429-483e-9423-49778c3bd1c2/
+    - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+author: Michael Haag
+date: 2024/09/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=61ecbe0670717bb544ab4e3e0fe67a90'
+            - 'SHA1=a3c7d629e3db0d9716acaf58132757e17efd8166'
+            - 'SHA256=ef9d653aaa2e629b211cd367a32c381eba694ba85682b987497c287d7dbc0082'
+            - 'IMPHASH=d64782c3afa48a2c32e43633d44dd9a9'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

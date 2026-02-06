@@ -1,0 +1,28 @@
+title: Driver Load - asas.sys
+id: 947e715b-aaa5-5a49-9f36-d5116cc6e217
+status: experimental
+description: |
+    Detects loading of driver asas.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/dbb58de1-a1e5-4c7f-8fe0-4033502b1c63/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\asas.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

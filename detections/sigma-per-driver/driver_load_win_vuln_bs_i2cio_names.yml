@@ -1,0 +1,28 @@
+title: Driver Load - BS_I2cIo.sys
+id: a99fe3e9-7cf9-5f92-95ea-ae599badb96d
+status: experimental
+description: |
+    Detects loading of driver BS_I2cIo.sys via name.
+    I/O Interface driver file
+references:
+    - https://www.loldrivers.io/drivers/66be9e0a-9246-4404-b5b5-7fbde351668f/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\bs_i2cio.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

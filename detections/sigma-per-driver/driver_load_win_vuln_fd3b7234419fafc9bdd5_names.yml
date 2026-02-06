@@ -1,0 +1,29 @@
+title: Driver Load - fd3b7234419fafc9bdd533f48896ed73_b816c5cd.sys
+id: 4a08f0ac-ddd9-505c-9dae-115b55111b8b
+status: experimental
+description: |
+    Detects loading of driver fd3b7234419fafc9bdd533f48896ed73_b816c5cd.sys via name.
+    The criminals signed their AV-killer malware, closely related to one known as BURNTCIGAR, with a legitimate WHCP certificate
+references:
+    - https://www.loldrivers.io/drivers/c7f76931-e24c-4d94-9e1f-5a083da581b4/
+    - https://news.sophos.com/en-us/2022/12/13/signed-driver-malware-moves-up-the-software-trust-chain/
+    - https://github.com/magicsword-io/LOLDrivers/issues/114
+author: Viral Maniar
+date: 2023/07/25
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\fd3b7234419fafc9bdd533f48896ed73_b816c5cd.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

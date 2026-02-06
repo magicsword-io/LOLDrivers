@@ -1,0 +1,28 @@
+title: Driver Load - iobitunlocker.sys
+id: 2a858d96-8dfb-576c-85c7-883e03bcc44e
+status: experimental
+description: |
+    Detects loading of driver iobitunlocker.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/e368efc7-cf69-47ae-8204-f69dac000b22/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\iobitunlocker.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

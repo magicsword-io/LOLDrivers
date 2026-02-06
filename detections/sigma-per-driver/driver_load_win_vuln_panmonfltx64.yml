@@ -1,0 +1,31 @@
+title: Driver Load - PanMonFltX64.sys
+id: 4c883260-9322-5889-ad51-74d00184dfd9
+status: experimental
+description: |
+    Detects loading of driver PanMonFltX64.sys via hash.
+    PanCafe Manager File Monitor
+references:
+    - https://www.loldrivers.io/drivers/40bfb01b-d251-4c2c-952e-052a89a76f5b/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=0067c788e1cb174f008c325ebde56c22'
+            - 'SHA1=12d38abbc5391369a4c14f3431715b5b76ac5a2a'
+            - 'SHA256=06508aacb4ed0a1398a2b0da5fa2dbf7da435b56da76fd83c759a50a51c75caf'
+            - 'IMPHASH=175c5711f3c49a0d929e9e2314b21c6b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,27 @@
+title: Driver Load - full.sys
+id: 55715d4c-1890-5aaf-87c1-24c17950d6c9
+status: experimental
+description: |
+    Detects loading of driver full.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/ddbd60c3-0611-4a59-894d-aec84203906f/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\full.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

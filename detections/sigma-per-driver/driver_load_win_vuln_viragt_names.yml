@@ -1,0 +1,28 @@
+title: Driver Load - viragt.sys
+id: db9ff727-4ee9-5c14-8813-5a26289ae9e1
+status: experimental
+description: |
+    Detects loading of driver viragt.sys via name.
+    VirIT Agent System
+references:
+    - https://www.loldrivers.io/drivers/39742f99-2180-46d7-8538-56667c935cc3/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\viragt.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,31 @@
+title: Driver Load - HwRwDrv.sys
+id: 9dad7b92-79a6-5da9-998b-6db14daa5e84
+status: experimental
+description: |
+    Detects loading of driver HwRwDrv.sys via hash.
+    Hardware read & write driver
+references:
+    - https://www.loldrivers.io/drivers/e4609b54-cb25-4433-a75a-7a17f43cec00/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=dbc415304403be25ac83047c170b0ec2'
+            - 'SHA1=2b0bb408ff0e66bcdf6574f1ca52cbf4015b257b'
+            - 'SHA256=21ccdd306b5183c00ecfd0475b3152e7d94b921e858e59b68a03e925d1715f21'
+            - 'IMPHASH=d6f977640d4810a784d152e4d3c63a6b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,27 @@
+title: Driver Load - winio64.sys
+id: b649bd06-1d26-5013-8269-5b0d79d6786d
+status: experimental
+description: |
+    Detects loading of driver winio64.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/94eb0694-29ba-4f8e-b763-86c6371db6cc/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\winio64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

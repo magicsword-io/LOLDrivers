@@ -1,0 +1,30 @@
+title: Driver Load - GLCKIO2.sys
+id: 51148219-f1c6-502e-bfaf-92dab8b07b57
+status: experimental
+description: |
+    Detects loading of driver GLCKIO2.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/52ded752-2708-499e-8f37-98e4a9adc23c/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=dedd07993780d973c22c93e77ab69fa3'
+            - 'SHA1=83b5e60943a92050fccb8acef7aa464c8f81d38e'
+            - 'SHA256=e5b0772be02e2bc807804874cf669e97aa36f5aff1f12fa0a631a3c7b4dd0dc8'
+            - 'IMPHASH=531d2392dbdd314fb1d9318fe9e5c4d2'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

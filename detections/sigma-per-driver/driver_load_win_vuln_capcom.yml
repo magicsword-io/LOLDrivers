@@ -1,0 +1,48 @@
+title: Driver Load - capcom.sys
+id: 21044fda-c0ba-50eb-8562-cd5a45c28744
+status: experimental
+description: |
+    Detects loading of driver capcom.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/b51c441a-12c7-407d-9517-559cc0030cf6/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a346417e9ae2c17a8fbf73302eeb611d'
+            - 'MD5=394e290aff9d4e78e504cedfb2d99350'
+            - 'MD5=73c98438ac64a68e88b7b0afd11ba140'
+            - 'MD5=524cd77f4c100cf20af4004f740b0268'
+            - 'MD5=002a58b90a589913a07012253662c98c'
+            - 'MD5=d4119a5cb07ce945c6549eae74e39731'
+            - 'MD5=1f15a513abc039533ca996552ba27e51'
+            - 'SHA1=756fd2b82bf92538786b1bd283c6ef2f9794761e'
+            - 'SHA1=59e6effdb23644ca03e60618095dc172a28f846e'
+            - 'SHA1=91530e1e1fb25a26f3e0d6587200ddbaecb45c74'
+            - 'SHA1=723fd9dd0957403ed131c72340e1996648f77a48'
+            - 'SHA1=b70321d078f2e9c9826303bdc87ba9b7be290807'
+            - 'SHA1=cfdb2085eaf729c7967f5d4efe16da3d50d07a23'
+            - 'SHA1=c1d5cf8c43e7679b782630e93f5e6420ca1749a7'
+            - 'SHA256=54488a8c7da53222f25b6ed74b0dedc55d00f5fa80f4eaf6daac28f7c3528876'
+            - 'SHA256=2b188ae51ec3be082e4d08f7483777ec5e66d30e393a4e9b5b9dc9af93d1f09b'
+            - 'SHA256=c2562e0101cb39906c73b96fc15a6e6e3edd710b19858f6bbd0c90f1561b6038'
+            - 'SHA256=d9e8be11a19699903016f39f95c9c5bf1a39774ecea73670f2c3ed5385ebfe4c'
+            - 'SHA256=da6ca1fb539f825ca0f012ed6976baf57ef9c70143b7a1e88b4650bf7a925e24'
+            - 'SHA256=ac26150bc98ee0419a8b23e4cda3566e0eba94718ba8059346a9696401e9793d'
+            - 'SHA256=2a11b4f125d8537e69af7b684494e49ef2a30a219634988e278177fa36c934eb'
+            - 'IMPHASH=45bfe170e0cd654bc1e2ae3fca3ac3f4'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

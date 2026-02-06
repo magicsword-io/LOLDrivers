@@ -1,0 +1,28 @@
+title: Driver Load - BdApiUtil64.sys
+id: 1cd4c32f-fdec-5efb-a737-2afedbe95f3b
+status: experimental
+description: |
+    Detects loading of driver BdApiUtil64.sys via name.
+    Driver can be used to load unsigned drivers
+references:
+    - https://www.loldrivers.io/drivers/f8ed41ef-18f0-441c-99b8-def062214d0e/
+    - https://github.com/BlackSnufkin/BYOVD
+author: Michael Haag
+date: 2025/09/18
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\bdapiutil64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

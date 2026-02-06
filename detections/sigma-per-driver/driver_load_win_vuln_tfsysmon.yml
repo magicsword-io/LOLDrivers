@@ -1,0 +1,31 @@
+title: Driver Load - TfSysMon.sys
+id: 65d17897-286c-5e47-bf1f-a3e3a6a57fa7
+status: experimental
+description: |
+    Detects loading of driver TfSysMon.sys via hash.
+    ThreatFire System Monitor
+references:
+    - https://www.loldrivers.io/drivers/bd9f084e-b235-4978-bf2a-5f1dc02937df/
+    - https://github.com/BlackSnufkin/BYOVD/tree/main/TfSysMon-Killer
+author: rahulwt
+date: 2024/08/15
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=761f2e2b759389a472bd3d94141742b9'
+            - 'SHA1=c881f43c7fe94a6f056a84da8e9a32fe56d8dd9c'
+            - 'SHA256=1c1a4ca2cbac9fe5954763a20aeb82da9b10d028824f42fff071503dcbe15856'
+            - 'IMPHASH=9e7c36ff0dc8862002283773ace05f9e'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

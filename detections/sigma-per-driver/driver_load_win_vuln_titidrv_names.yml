@@ -1,0 +1,28 @@
+title: Driver Load - titidrv.sys
+id: 3af11c07-4fdc-51b9-aee4-7d7098246787
+status: experimental
+description: |
+    Detects loading of driver titidrv.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/705facba-b595-41dd-86a6-93aefe6a6234/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\titidrv.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,28 @@
+title: Driver Load - rtkiow8x64.sys 
+id: 204f6d09-9b2f-5f17-a554-200b4b1f50fe
+status: experimental
+description: |
+    Detects loading of driver rtkiow8x64.sys  via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/998ed67c-9c20-46ef-a6ba-abc606b540b9/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\rtkiow8x64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

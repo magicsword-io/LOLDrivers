@@ -1,0 +1,31 @@
+title: Driver Load - HpPortIox64.sys
+id: 562f7df9-c169-503a-836a-008af6cd921a
+status: experimental
+description: |
+    Detects loading of driver HpPortIox64.sys via hash.
+    HpPortIo
+references:
+    - https://www.loldrivers.io/drivers/080ff223-f8e0-49c0-a7b5-e97349cf81a0/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a641e3dccba765a10718c9cb0da7879e'
+            - 'SHA1=8c377ab4eebc5f4d8dd7bb3f90c0187dfdd3349f'
+            - 'SHA256=c5050a2017490fff7aa53c73755982b339ddb0fd7cef2cde32c81bc9834331c5'
+            - 'IMPHASH=75018719e85e67b75e73c57d682dbcbf'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

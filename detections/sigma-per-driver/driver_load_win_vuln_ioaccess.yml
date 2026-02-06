@@ -1,0 +1,35 @@
+title: Driver Load - IoAccess.sys
+id: 7a82121a-dc0f-54f3-9ac8-009a86e6f804
+status: experimental
+description: |
+    Detects loading of driver IoAccess.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/c08c03ff-a7b7-4282-a9fc-265ae88dc244/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=c15eb30e806ad5e771b23423fd2040b0'
+            - 'MD5=9c3c250646e11052b1e38500ee0e467b'
+            - 'SHA1=e0d12e44db3f57ee7ea723683a6fd346dacf2e3e'
+            - 'SHA1=03257294ee74f69881002c4bf764b9cb83b759d6'
+            - 'SHA256=b78eb7f12ba718183313cf336655996756411b7dcc8648157aaa4c891ca9dbee'
+            - 'SHA256=b9e0c2a569ab02742fa3a37846310a1d4e46ba2bfd4f80e16f00865fc62690cb'
+            - 'IMPHASH=2b9471e7bb8c05dc55d0a2ff0591ea98'
+            - 'IMPHASH=c83f076c00d2b0a6ba9dc82f56a97631'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

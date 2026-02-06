@@ -1,0 +1,27 @@
+title: Driver Load - gameink.sys
+id: b9b11e48-f7c6-5537-a20e-0eec7a277806
+status: experimental
+description: |
+    Detects loading of driver gameink.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/86b520f6-cc90-4488-b343-168cad88010d/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\gameink.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

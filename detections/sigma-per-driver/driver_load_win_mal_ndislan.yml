@@ -1,0 +1,32 @@
+title: Driver Load - ndislan.sys
+id: 6cb4b53b-8a16-514a-ad27-2a425b1dd6b0
+status: experimental
+description: |
+    Detects loading of driver ndislan.sys via hash.
+    Driver used in the Daxin malware campaign.
+references:
+    - https://www.loldrivers.io/drivers/ca1e8664-841f-4e4b-9e67-3f515cc249c6/
+    - https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+    - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+author: Michael Haag
+date: 2023/02/28
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=47e6ac52431ca47da17248d80bf71389'
+            - 'SHA1=d417c0be261b0c6f44afdec3d5432100e420c3ed'
+            - 'SHA256=b0eb4d999e4e0e7c2e33ff081e847c87b49940eb24a9e0794c6aa9516832c427'
+            - 'IMPHASH=70e1caa5a322b56fd7951f1b2caacb0d'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

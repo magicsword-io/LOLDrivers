@@ -1,0 +1,48 @@
+title: Driver Load - netfilterdrv.sys
+id: 936b001a-c37f-53f5-bfbe-d840f233ad64
+status: experimental
+description: |
+    Detects loading of driver netfilterdrv.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/f1dcb0e4-aa53-4e62-ab09-fb7b4a356916/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=6133e1008f8c6fc32d4b1a60941bab85'
+            - 'MD5=9258e3cb20e24a93d4afdee9f5a0299c'
+            - 'MD5=916ba55fc004b85939ee0cc86a5191c5'
+            - 'MD5=e65fa439efa9e5ad1d2c9aee40c7238e'
+            - 'MD5=e04ff937f6fd273b774f23aed5dd8c13'
+            - 'SHA1=655a9487d7a935322e19bb92d2465849055d029d'
+            - 'SHA1=e74b6dda8bc53bc687fc21218bd34062a78d8467'
+            - 'SHA1=8788f4b39cbf037270904bdb8118c8b037ee6562'
+            - 'SHA1=0cca79962d9af574169f5dec12b1f4ca8e5e1868'
+            - 'SHA1=108439a4c4508e8dca659905128a4633d8851fd9'
+            - 'SHA1=1c3f2579310ddd7ae09ce9ca1cc537a771b83c9f'
+            - 'SHA1=2c27abbbbcf10dfb75ad79557e30ace5ed314df8'
+            - 'SHA256=5bdba1561ec5b23b1d56ea8cee411147d1526595f03a9281166a563b3641fa2a'
+            - 'SHA256=c8926e31be2d1355e542793af8ff9ccc4d1d60cae40c9564b2400dd4e1090bda'
+            - 'SHA256=70b63dfc3ed2b89a4eb8a0aa6c26885f460e5686d21c9d32413df0cdc5f962c7'
+            - 'SHA256=1aa8ba45f9524847e2a36c0dc6fd80162923e88dc1be217dde2fb5894c65ff43'
+            - 'SHA256=115034373fc0ec8f75fb075b7a7011b603259ecc0aca271445e559b5404a1406'
+            - 'IMPHASH=e938b727f5a033818337f7ba0584500f'
+            - 'IMPHASH=d14ea0e632fc8485d77e7eba3c4d4537'
+            - 'IMPHASH=eac62dd0c27ed557fa4b641fa4050d04'
+            - 'IMPHASH=9321f9c47129fbc728ead2710e22f1a5'
+            - 'IMPHASH=518e77c070ae21af7c558962cd1854a3'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

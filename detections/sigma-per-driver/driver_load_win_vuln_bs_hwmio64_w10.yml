@@ -1,0 +1,31 @@
+title: Driver Load - BS_HWMIO64_W10.sys
+id: 185b8cde-a4d8-5d7f-a75a-978f0a76f018
+status: experimental
+description: |
+    Detects loading of driver BS_HWMIO64_W10.sys via hash.
+    I/O Interface driver file
+references:
+    - https://www.loldrivers.io/drivers/a66d0413-cc82-4f1e-bcf1-0dcf9d79f6c0/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=d2588631d8aae2a3e54410eaf54f0679'
+            - 'SHA1=cb3de54667548a5c9abf5d8fa47db4097fcee9f1'
+            - 'SHA256=1d0397c263d51e9fc95bcc8baf98d1a853e1c0401cd0e27c7bf5da3fba1c93a8'
+            - 'IMPHASH=095c0cdb9c0421da216371c1f4e8790e'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

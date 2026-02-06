@@ -1,0 +1,28 @@
+title: Driver Load - nvflash.sys
+id: 7321e7d3-372f-5a14-bff6-0c54a4fd2239
+status: experimental
+description: |
+    Detects loading of driver nvflash.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/2a6a38ca-f2e6-456e-9ccf-db59d8c80c9e/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\nvflash.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

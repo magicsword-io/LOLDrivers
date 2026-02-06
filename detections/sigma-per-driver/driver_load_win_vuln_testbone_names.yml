@@ -1,0 +1,27 @@
+title: Driver Load - TestBone.sys
+id: ab69ba71-11ab-52db-9e5c-f398ce1f2d21
+status: experimental
+description: |
+    Detects loading of driver TestBone.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/be4843ef-a2a8-4a0d-91c6-42e165800bb0/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\testbone.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

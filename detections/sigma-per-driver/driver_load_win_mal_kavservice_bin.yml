@@ -1,0 +1,31 @@
+title: Driver Load - kavservice.bin
+id: c76835f0-af41-57ce-ae50-05d6329e1445
+status: experimental
+description: |
+    Detects loading of driver kavservice.bin via hash.
+references:
+    - https://www.loldrivers.io/drivers/77157886-00f9-4f6e-b217-d896813b630f/
+    - Internal Research
+    - https://www.52pojie.cn/thread-1823439-1-1.html
+author: Antonio Parata, Andrea Monzani
+date: 2024/01/24
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=c419d7a8bc1cd5fe0af3ce4637c4d8a3'
+            - 'SHA1=be80f4d2a669f60354703a21daffb7b2128de190'
+            - 'SHA256=e055fdfb914e3da936eb7745acb665f50346df9abac597cf43d487262a6a12d5'
+            - 'IMPHASH=2b12d7329b1917ae49f22618cc3316ec'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

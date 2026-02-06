@@ -1,0 +1,30 @@
+title: Driver Load - irec.sys
+id: 08364b02-6ea0-59c8-8151-836ea28e62e0
+status: experimental
+description: |
+    Detects loading of driver irec.sys via name.
+    The driver in question, identified as \\.\IREC, provides an interface for external programs to directly interact with system processes. Its key functionality is encapsulated in the OPENPROCESS function which, upon receiving a Process ID (PID), returns a handle to that specific process operating within the kernels domain. The vulnerability emerges from the indiscriminate nature of this functionality. An ill-intentioned actor can exploit this to obtain handles to critical processes like LSASS. With a hardcoded access mask of 0x410, this driver essentially grants PROCESS_QUERY_INFORMATION and PROCESS_VM_READ permissions, enabling unauthorized memory dumps from privileged processes, all from an unprivileged context.
+references:
+    - https://www.loldrivers.io/drivers/d74fdf19-b4b0-4ec2-9c29-4213b064138b/
+    - https://blog.dru1d.ninja/windows-driver-exploit-development-irec-sys-a5eb45093945
+    - https://gist.github.com/dru1d-foofus/1af21179f253879f101c3a8d4f718bf0
+    - https://www.binalyze.com/irec
+author: Nasreddine Bencherchali
+date: 2023/05/11
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\irec.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

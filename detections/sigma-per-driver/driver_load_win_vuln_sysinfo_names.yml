@@ -1,0 +1,27 @@
+title: Driver Load - SysInfo.sys
+id: 171820bf-a23c-53fa-bc21-bcca58100408
+status: experimental
+description: |
+    Detects loading of driver SysInfo.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/84ccb68d-ce34-4aa2-98d5-7f473c2e1b07/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\sysinfo.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,42 @@
+title: Driver Load - EIO.sys
+id: e6333cb2-a13c-502f-b038-5684fc1d5094
+status: experimental
+description: |
+    Detects loading of driver EIO.sys via hash.
+    This is a vulnerable driver per Microsoft.
+references:
+    - https://www.loldrivers.io/drivers/f654ad84-c61d-477c-a0b2-d153b927dfcc/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/05/20
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=343ada10d948db29251f2d9c809af204'
+            - 'MD5=00143c457c8885fd935fc5d5a6ba07a4'
+            - 'MD5=be9eeea2a8cac5f6cd92c97f234e2fe1'
+            - 'MD5=6dd82d91f981893be57ff90101a7f7f1'
+            - 'SHA1=3f17ff83dc8a5f875fb1b3a5d3b9fcbe407a99f0'
+            - 'SHA1=21ce232de0f306a162d6407fe1826aff435b2a04'
+            - 'SHA1=a92207062fb72e6e173b2ffdb12c76834455f5d3'
+            - 'SHA1=585df373a9c56072ab6074afee8f1ec3778d70f8'
+            - 'SHA256=f4c7e94a7c2e49b130671b573a9e4ff4527a777978f371c659c3f97c14d126de'
+            - 'SHA256=b17507a3246020fa0052a172485d7b3567e0161747927f2edf27c40e310852e0'
+            - 'SHA256=cf69704755ec2643dfd245ae1d4e15d77f306aeb1a576ffa159453de1a7345cb'
+            - 'SHA256=1fac3fab8ea2137a7e81a26de121187bf72e7d16ffa3e9aec3886e2376d3c718'
+            - 'IMPHASH=b8302791cd2edfe6dd562c4854ea495f'
+            - 'IMPHASH=6a47c957830ccce7ef43ed96aacf7c2c'
+            - 'IMPHASH=a96a02cf5f7896a9a9f045d1986bd83c'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

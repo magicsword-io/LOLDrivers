@@ -1,0 +1,28 @@
+title: Driver Load - NBIOLib_X64.sys
+id: b8ac5abc-f898-58e6-a7ef-f12fd38b5cc5
+status: experimental
+description: |
+    Detects loading of driver NBIOLib_X64.sys via name.
+    NTIOLib
+references:
+    - https://www.loldrivers.io/drivers/6fc3034f-8b40-44ef-807a-f61d3ea2dece/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\nbiolib_x64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

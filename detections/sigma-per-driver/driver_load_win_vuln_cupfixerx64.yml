@@ -1,0 +1,31 @@
+title: Driver Load - CupFixerx64.sys
+id: ec65fec3-8caf-524c-9705-68cc71a102d1
+status: experimental
+description: |
+    Detects loading of driver CupFixerx64.sys via hash.
+    Sincey Cup Fixer
+references:
+    - https://www.loldrivers.io/drivers/c98af16e-197f-4e66-bf94-14646bde32dd/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=2b3e0db4f00d4b3d0b4d178234b02e72'
+            - 'SHA1=622e7bffda8c80997e149ac11492625572e386e0'
+            - 'SHA256=8c748ae5dcc10614cc134064c99367d28f3131d1f1dda0c9c29e99279dc1bdd9'
+            - 'IMPHASH=f9141c3df8f7ec7b3f2d46265a3b5528'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

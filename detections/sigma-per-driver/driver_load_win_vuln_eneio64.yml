@@ -1,0 +1,34 @@
+title: Driver Load - eneio64.sys
+id: 8f51bf3e-747d-58f0-9ce3-54a6cbec705f
+status: experimental
+description: |
+    Detects loading of driver eneio64.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/90ecbbf7-b02f-424d-8b7d-56cc9e3b5873/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=66066d9852bc65988fb4777f0ff3fbb4'
+            - 'MD5=86fd54c56dcafe2de918c36f8dfda67e'
+            - 'SHA1=0b01c4c1f18d72eb622be2553114f32edfe7b7aa'
+            - 'SHA1=24343ec4dfec11796a8800a3059b630e8be89070'
+            - 'SHA256=9ee33ffd80611a13779df6286c1e04d3c151f1e2f65e3d664a08997fcd098ef3'
+            - 'SHA256=38c18db050b0b2b07f657c03db1c9595febae0319c746c3eede677e21cd238b0'
+            - 'IMPHASH=baa420e9d4e3baf0d65d4fc2bf497708'
+            - 'IMPHASH=b3204707f6e489cd5a2484881eaf78ca'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

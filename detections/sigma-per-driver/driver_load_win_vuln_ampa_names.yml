@@ -1,0 +1,27 @@
+title: Driver Load - ampa.sys
+id: 97372b42-ff48-5df1-b238-f5f65a7ebab9
+status: experimental
+description: |
+    Detects loading of driver ampa.sys via name.
+    Northwave Cyber Security contributed this driver based on in-house research. The driver has a CVSSv3 score of 8.8, indicating a privilege escalation impact. This vulnerability could potentially be exploited for privilege escalation or other malicious activities.
+references:
+    - https://www.loldrivers.io/drivers/ea0e7351-b65c-4c5a-9863-83b9d5efcec3/
+author: Northwave Cyber Security
+date: 2024/09/11
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\ampa.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

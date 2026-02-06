@@ -1,0 +1,31 @@
+title: Driver Load - POORTRY1.sys
+id: f84747e5-ef2c-5e09-9479-04209a02ccf8
+status: experimental
+description: |
+    Detects loading of driver POORTRY1.sys via hash.
+    Driver categorized as POORTRY by Mandiant.
+references:
+    - https://www.loldrivers.io/drivers/2740a074-1e06-4f75-9c6a-dc57a3f85189/
+    - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+author: Michael Haag
+date: 2023/03/04
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=acac842a46f3501fe407b1db1b247a0b'
+            - 'SHA1=31fac347aa26e92db4d8c9e1ba37a7c7a2234f08'
+            - 'SHA256=575e58b62afab094c20c296604dc3b7dd2e1a50f5978d8ee24b7dca028e97316'
+            - 'IMPHASH=3fd33d5b3b52e2db91983ac4b1d7a3c4'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

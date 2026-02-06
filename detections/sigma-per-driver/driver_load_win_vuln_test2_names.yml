@@ -1,0 +1,28 @@
+title: Driver Load - test2.sys
+id: 4e4ad5f3-2695-513f-9fbd-032012fbda95
+status: experimental
+description: |
+    Detects loading of driver test2.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/6356d7d9-3b82-4731-9d5f-cc9bc37558fc/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\test2.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,28 @@
+title: Driver Load - HWiNFO32.SYS
+id: 8d1bf75c-4733-5646-b8eb-34aa64d45d91
+status: experimental
+description: |
+    Detects loading of driver HWiNFO32.SYS via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/2225128d-a23f-434a-aaee-69a88ea64fbd/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\hwinfo32.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

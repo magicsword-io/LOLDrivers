@@ -1,0 +1,28 @@
+title: Driver Load - WYProxy64.sys
+id: 36de741a-1017-5124-b4fe-64f725189362
+status: experimental
+description: |
+    Detects loading of driver WYProxy64.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/f93e88c2-d0e8-4347-869f-efa568955e9d/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA256=fafa1bb36f0ac34b762a10e9f327dcab2152a6d0b16a19697362d49a31e7f566'
+            - 'SHA256=de6bf572d39e2611773e7a01f0388f84fb25da6cba2f1f8b9b36ffba467de6fa'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

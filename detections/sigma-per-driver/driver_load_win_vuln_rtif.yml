@@ -1,0 +1,54 @@
+title: Driver Load - rtif.sys
+id: 961a4ea2-f164-5711-ac47-18fb62770599
+status: experimental
+description: |
+    Detects loading of driver rtif.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/36227ce7-2bf6-4963-bfae-c399000a1079/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=1873a2ce2df273d409c47094bc269285'
+            - 'MD5=ff795e4f387c3e22291083b7d6b92ffb'
+            - 'MD5=4b42a7a6327827a8dbdecf367832c0cd'
+            - 'MD5=a15235fcec1c9b65d736661d4bec0d38'
+            - 'MD5=6c5e50ef2069896f408cdaaddd307893'
+            - 'MD5=35fbc4c04c31c1a40e666be6529c6321'
+            - 'MD5=112b4a6d8c205c1287c66ad0009c3226'
+            - 'SHA1=0caf4e86b14aaab7e10815389fcd635988bc6637'
+            - 'SHA1=8d676504c2680cf71c0c91afb18af40ea83b6c22'
+            - 'SHA1=5eb693c9cc49c7d6a03f7960ddcfd8f468e5656b'
+            - 'SHA1=3c956b524e73586195d704b874e36d49fe42cb6a'
+            - 'SHA1=f049e68720a5f377a5c529ca82d1147fe21b4c33'
+            - 'SHA1=ce1d0ebaeaa4fe3ecb49242f1e80bc7a4e43fd8c'
+            - 'SHA1=f130e82524d8f5af403c3b0e0ffa4b64fedeec92'
+            - 'SHA256=eae5c993b250dcc5fee01deeb30045b0e5ee7cf9306ef6edd8c58e4dc743a8ed'
+            - 'SHA256=0d133ced666c798ea63b6d8026ec507d429e834daa7c74e4e091e462e5815180'
+            - 'SHA256=3670ccd9515d529bb31751fcd613066348057741adeaf0bffd1b9a54eb8baa76'
+            - 'SHA256=4ce8583768720be90fae66eed3b6b4a8c7c64e033be53d4cd98246d6e06086d0'
+            - 'SHA256=9399f35b90f09b41f9eeda55c8e37f6d1cb22de6e224e54567d1f0865a718727'
+            - 'SHA256=ba40b1fc798c2f78165e78997b4baf3d99858ee39a372ca6fbc303057793e50d'
+            - 'SHA256=a66b4420fa1df81a517e2bbea1a414b57721c67a4aa1df1967894f77e81d036e'
+            - 'IMPHASH=3e8e7e5e779c7064e6bab177167e9e7a'
+            - 'IMPHASH=e1d88d0526dfa369c3661355dbd8773d'
+            - 'IMPHASH=c12f7aec6ebe84a8390c82720adfc237'
+            - 'IMPHASH=d61d30746681d0fda9bfd9e8af061b2a'
+            - 'IMPHASH=3d42ff70269b824dd9d4a8cb905669f9'
+            - 'IMPHASH=c61a46ffe79d3f7d6307c0d2ae5f391e'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

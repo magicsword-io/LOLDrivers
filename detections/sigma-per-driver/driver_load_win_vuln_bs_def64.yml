@@ -1,0 +1,37 @@
+title: Driver Load - BS_Def64.sys
+id: 21e1020d-be91-5af4-bc70-651897152123
+status: experimental
+description: |
+    Detects loading of driver BS_Def64.sys via hash.
+    Default BIOS Flash Driver
+references:
+    - https://www.loldrivers.io/drivers/4a80da66-f8f1-4af9-ba56-696cfe6c1e10/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=120b5bbb9d2eb35ff4f62d79507ea63a'
+            - 'MD5=c9a293762319d73c8ee84bcaaf81b7b3'
+            - 'MD5=8abbb12e61045984eda19e2dc77b235e'
+            - 'SHA1=f9519d033d75e1ab6b82b2e156eafe9607edbcfb'
+            - 'SHA1=609fa1efcf61e26d64a5ceb13b044175ab2b3a13'
+            - 'SHA1=7d7c03e22049a725ace2a9812c72b53a66c2548b'
+            - 'SHA256=0040153302b88bee27eb4f1eca6855039e1a057370f5e8c615724fa5215bada3'
+            - 'SHA256=3326e2d32bbabd69feb6024809afc56c7e39241ebe70a53728c77e80995422a5'
+            - 'SHA256=36b9e31240ab0341873c7092b63e2e0f2cab2962ebf9b25271c3a1216b7669eb'
+            - 'IMPHASH=3aa0ceb8fcd07cf2514d1cb0b9bccf4b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,31 @@
+title: Driver Load - driver_82d928c5.sys
+id: 823ab859-240a-536f-85c8-4988fe33755e
+status: experimental
+description: |
+    Detects loading of driver driver_82d928c5.sys via hash.
+    Sophos, from time to time, has observed a threat actor deploy variants of Poortry on different machines within a single estate during an attack. These variants contain the same payload, but signed with a different certificate than the driver first seen used during the attack.
+references:
+    - https://www.loldrivers.io/drivers/af8ef3c0-8686-4112-992b-86587a4a9060/
+    - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+author: Michael Haag
+date: 2024/09/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=cfe59d68df1eaa4f33852a60c81f4fd0'
+            - 'SHA1=33a9b4f127141c7995c870a604420c0e770fd81c'
+            - 'SHA256=82d928c586159342837cb457f45619f49db38bb91631a82e4f1b373fb994cd73'
+            - 'IMPHASH=cbda50455881775aa63196aa112c08c5'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

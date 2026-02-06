@@ -1,0 +1,27 @@
+title: Driver Load - bw.sys
+id: ef808d62-8e9c-586a-b2bf-4c2bc869ef05
+status: experimental
+description: |
+    Detects loading of driver bw.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/578d4909-c2ba-4363-b6e3-98fb62d5e55c/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA256=0ebaef662b14410c198395b13347e1d175334ec67919709ad37d65eba013adff'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

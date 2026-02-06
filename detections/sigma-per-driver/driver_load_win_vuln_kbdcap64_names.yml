@@ -1,0 +1,27 @@
+title: Driver Load - kbdcap64.sys
+id: a4b5d9a7-6130-5df7-881f-823e3fe89a07
+status: experimental
+description: |
+    Detects loading of driver kbdcap64.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/6a7d882b-3d9d-4334-be5f-2e29c6bf9ff8/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\kbdcap64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

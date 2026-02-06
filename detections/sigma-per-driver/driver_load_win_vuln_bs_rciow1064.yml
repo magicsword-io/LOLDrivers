@@ -1,0 +1,30 @@
+title: Driver Load - BS_RCIOW1064.sys
+id: 522d4af9-b50b-5a21-b7a1-095b43a8e144
+status: experimental
+description: |
+    Detects loading of driver BS_RCIOW1064.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/39f427b6-aad3-4cb8-b363-9113a6d53b07/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=6b6dfb6d952a2e36efd4a387fdb94637'
+            - 'SHA1=42eb220fdfb76c6e0649a3e36acccbdf36e287f1'
+            - 'SHA256=6191c20426dd9b131122fb97e45be64a4d6ce98cc583406f38473434636ddedc'
+            - 'IMPHASH=095c0cdb9c0421da216371c1f4e8790e'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

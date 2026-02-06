@@ -1,0 +1,27 @@
+title: Driver Load - ene.sys
+id: c060c46e-379f-50fe-8e11-337fa6d9a882
+status: experimental
+description: |
+    Detects loading of driver ene.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/3bec7340-bd8b-43ae-8569-d81a66f01dda/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\ene.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

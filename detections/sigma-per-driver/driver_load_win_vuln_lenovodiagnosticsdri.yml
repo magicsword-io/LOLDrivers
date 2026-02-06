@@ -1,0 +1,34 @@
+title: Driver Load - LenovoDiagnosticsDriver.sys
+id: 2b19e8c7-6935-55c9-ac16-d6c6c2ac35ef
+status: experimental
+description: |
+    Detects loading of driver LenovoDiagnosticsDriver.sys via hash.
+    The aforementioned driver has been identified as vulnerable to CVE-2022-3699
+references:
+    - https://www.loldrivers.io/drivers/81a73e57-2e92-4d21-97d3-1c21eb4c3aea/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+    - https://nephosec.com/cve-2022-3699-lenovo-diagnostics-driver-eop-arbitrary-r-w/
+    - https://github.com/alfarom256/CVE-2022-3699
+    - https://support.lenovo.com/us/en/product_security/LEN-94532
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=b941c8364308990ee4cc6eadf7214e0f'
+            - 'SHA1=b89a8eef5aeae806af5ba212a8068845cafdab6f'
+            - 'SHA256=f05b1ee9e2f6ab704b8919d5071becbce6f9d0f9d0ba32a460c41d5272134abe'
+            - 'IMPHASH=225e24ee3c4081a16ef32831b70bf8ef'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

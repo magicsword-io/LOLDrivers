@@ -1,0 +1,28 @@
+title: Driver Load - phymem64.sys
+id: 4afd56d9-86da-5bad-8bc1-af3c53c11e2f
+status: experimental
+description: |
+    Detects loading of driver phymem64.sys via name.
+    phymem Application
+references:
+    - https://www.loldrivers.io/drivers/47fe1aaf-02cd-4a41-8bf5-0047015a2a6e/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\phymem64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

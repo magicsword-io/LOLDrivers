@@ -1,0 +1,37 @@
+title: Driver Load - asrdrv104.sys
+id: 2329bb85-1826-57cd-b6ff-e0d05ccaf331
+status: experimental
+description: |
+    Detects loading of driver asrdrv104.sys via hash.
+    ASRock IO Driver
+references:
+    - https://www.loldrivers.io/drivers/9889da50-3908-4499-a729-187295a60a0e/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=de1cc5c266140bff9d964fab87a29421'
+            - 'SHA1=4a7d66874a0472a47087fabaa033a85d47413379'
+            - 'SHA1=e5021a98e55d514e2376aa573d143631e5ee1c13'
+            - 'SHA1=2b4d0dead4c1a7cc95543748b3565cfa802e5256'
+            - 'SHA1=e039c9dd21494dbd073b4823fc3a17fbb951ec6c'
+            - 'SHA1=7eec3a1edf3b021883a4b5da450db63f7c0afeeb'
+            - 'SHA1=729a8675665c61824f22f06c7b954be4d14b52c4'
+            - 'SHA1=6c1bb3a72ebfb5359b9e22ca44d0a1ff825a68f2'
+            - 'SHA256=6ed35f310c96920a271c59a097b382da07856e40179c2a4239f8daa04eef38e7'
+            - 'IMPHASH=7c8c655791b5c853e45aa174e5cc1333'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

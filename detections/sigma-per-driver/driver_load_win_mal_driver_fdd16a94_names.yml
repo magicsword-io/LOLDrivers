@@ -1,0 +1,28 @@
+title: Driver Load - driver_fdd16a94.sys
+id: 476f8a3a-41ad-5441-932d-fd207b0bca5e
+status: experimental
+description: |
+    Detects loading of driver driver_fdd16a94.sys via name.
+    Sophos, from time to time, has observed a threat actor deploy variants of Poortry on different machines within a single estate during an attack. These variants contain the same payload, but signed with a different certificate than the driver first seen used during the attack.
+references:
+    - https://www.loldrivers.io/drivers/da066835-f37c-40bf-86bb-d77ad45c7f30/
+    - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+author: Michael Haag
+date: 2024/09/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\driver_fdd16a94.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

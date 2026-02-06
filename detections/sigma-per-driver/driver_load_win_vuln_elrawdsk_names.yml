@@ -1,0 +1,31 @@
+title: Driver Load - elrawdsk.sys
+id: 3a415763-927b-5a55-bb7d-e52a908cf307
+status: experimental
+description: |
+    Detects loading of driver elrawdsk.sys via name.
+    RawDisk Driver. Allows write access to files and raw disk sectors for user mode applications in Windows 2000 and later.
+references:
+    - https://www.loldrivers.io/drivers/205721b7-b83b-414a-b4b5-8bacb4a37777/
+    - https://github.com/jbaines-r7/dellicious
+    - https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+    - https://securelist.com/shamoon-the-wiper-further-details-part-ii/57784/
+    - https://github.com/Yara-Rules/rules/blob/master/malware/MALW_Shamoon.yar
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\elrawdsk.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

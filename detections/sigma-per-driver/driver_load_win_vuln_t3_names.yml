@@ -1,0 +1,27 @@
+title: Driver Load - t3.sys
+id: b6790ff2-f236-5be9-a5b6-bdd107f3c14c
+status: experimental
+description: |
+    Detects loading of driver t3.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/31a962ce-43ef-410f-873a-7ccc8f00332b/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\t3.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,28 @@
+title: Driver Load - gdrv.sys
+id: 3cee4b0c-c6d3-5a54-a119-f6b17a7d97d5
+status: experimental
+description: |
+    Detects loading of driver gdrv.sys via name.
+    GIGA-BYTE NonPnP Driver
+references:
+    - https://www.loldrivers.io/drivers/613b8509-18c0-4720-b489-736776b6713e/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\gdrv.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

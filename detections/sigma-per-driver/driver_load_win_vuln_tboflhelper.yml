@@ -1,0 +1,31 @@
+title: Driver Load - tboflhelper.sys
+id: 76a58367-4efc-53ba-a3c9-554e9af46434
+status: experimental
+description: |
+    Detects loading of driver tboflhelper.sys via hash.
+    Northwave Cyber Security contributed this driver based on in-house research. The driver has a CVSSv3 score of 8.8, indicating a privelege escalation impact. This vulnerability could potentially be exploited for privilege escalation or other malicious activities.
+references:
+    - https://www.loldrivers.io/drivers/07c57c69-c8d7-40cf-8bcc-612671427044/
+    - https://northwave-cybersecurity.com/vulnerability-notice-terabyte-image-for-windows?hsLang=en
+author: Northwave Cyber Security
+date: 2024/09/11
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=6d810fbf251792ec3bfb5aeef2462914'
+            - 'SHA1=a7bd1f9db3bf90d2c9e55b344a0b60de1598ec21'
+            - 'SHA256=aa20aa2316cd6d203146bd2bc5b7466ba7b83a8500654a688172bcafa82ab168'
+            - 'IMPHASH=d93807b520bd3b5df509f43a0e8cda9e'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

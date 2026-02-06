@@ -1,0 +1,34 @@
+title: Driver Load - 927e3aef03a8355d236230cace376b3023480a40c5ac08453c07dab343dd1f11
+id: 8805e137-5fe0-5c47-a5ec-764dd23cba0d
+status: experimental
+description: |
+    Detects loading of driver 927e3aef03a8355d236230cace376b3023480a40c5ac08453c07dab343dd1f11 via name.
+    According to Sophos X-Ops
+    (Aug 06, 2025), a widely shared EDR-killer toolkit drops/loads a malicious
+    kernel driver signed with compromised or revoked certificates to disable
+    endpoint protections. Variants target many vendors, and are commonly
+    HeartCrypt-packed and used by ransomware groups (e.g., RansomHub, INC).
+    The payload uses hard-coded driver names (e.g., mraml.sys, noedt.sys) and
+    kills security services/processes.
+references:
+    - https://www.loldrivers.io/drivers/9c4e45c8-8f99-40b4-bb73-2e1cfa813034/
+    - https://news.sophos.com/en-us/2025/08/06/shared-secret-edr-killer-in-the-kill-chain/
+author: Michael Haag
+date: 2025/08/08
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\927e3aef03a8355d236230cace376b3023480a40c5ac08453c07dab343dd1f11'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

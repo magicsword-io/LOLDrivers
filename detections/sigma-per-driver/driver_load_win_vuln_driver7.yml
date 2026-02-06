@@ -1,0 +1,31 @@
+title: Driver Load - Driver7.sys
+id: bbf50b01-8f5e-5417-8758-23240c391cb1
+status: experimental
+description: |
+    Detects loading of driver Driver7.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/9ca73d04-3349-4c16-9384-94c43335a031/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=4ad13cdb6330cede4b2c4e1be3ee267f'
+            - 'SHA1=8a4aec02fb728786cdecbb29c82db2463d4717f1'
+            - 'SHA256=1beb15c90dcf7a5234ed077833a0a3e900969b60be1d04fcebce0a9f8994bdbb'
+            - 'IMPHASH=83153e4562f92801f14f1b21f712cb46'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,31 @@
+title: Driver Load - HOSTNT.sys
+id: a79b50aa-a278-55a0-8611-c12b1c1b98ba
+status: experimental
+description: |
+    Detects loading of driver HOSTNT.sys via hash.
+    Hostnt 64-bit driver
+references:
+    - https://www.loldrivers.io/drivers/e42cd285-4dda-4086-a696-93ab1d6f17ca/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=e8ebba56ea799e1e62748c59e1a4c586'
+            - 'SHA1=ac13941f436139b909d105ad55637e1308f49d9a'
+            - 'SHA256=07b6d69bafcfd767f1b63a490a8843c3bb1f8e1bbea56176109b5743c8f7d357'
+            - 'IMPHASH=b4c562c2c654abd2cc71658646314976'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

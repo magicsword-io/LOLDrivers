@@ -1,0 +1,34 @@
+title: Driver Load - Sense5Ext.sys
+id: 9b4807fc-3f1c-5c14-8d95-7489a8ec0b65
+status: experimental
+description: |
+    Detects loading of driver Sense5Ext.sys via hash.
+    Driver categorized as POORTRY by Mandiant.
+references:
+    - https://www.loldrivers.io/drivers/70acea34-7ed2-42d5-885c-eca3c2de640c/
+    - https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+author: Michael Haag, Guus Verbeek
+date: 2023/03/04
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=4e1f656001af3677856f664e96282a6f'
+            - 'MD5=f9844524fb0009e5b784c21c7bad4220'
+            - 'SHA1=bc62fe2b38008f154fc9ea65d851947581b52f49'
+            - 'SHA1=e6765d8866cad6193df1507c18f31fa7f723ca3e'
+            - 'SHA256=42b22faa489b5de936db33f12184f6233198bdf851a18264d31210207827ba25'
+            - 'SHA256=7f4555a940ce1156c9bcea9a2a0b801f9a5e44ec9400b61b14a7b1a6404ffdf6'
+            - 'IMPHASH=c214aac08575c139e48d04f5aee21585'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

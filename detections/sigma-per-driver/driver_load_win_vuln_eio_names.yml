@@ -1,0 +1,28 @@
+title: Driver Load - EIO.sys
+id: a7252b75-dced-5c8a-8275-ead0772e9d2a
+status: experimental
+description: |
+    Detects loading of driver EIO.sys via name.
+    This is a vulnerable driver per Microsoft.
+references:
+    - https://www.loldrivers.io/drivers/f654ad84-c61d-477c-a0b2-d153b927dfcc/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/05/20
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\eio.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

@@ -1,0 +1,27 @@
+title: Driver Load - gvcidrv64.sys
+id: 229fb01c-3b3a-5cc0-addb-43b4b46e967f
+status: experimental
+description: |
+    Detects loading of driver gvcidrv64.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/56cdac8e-d87d-49c8-b281-6e096c2390d1/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\gvcidrv64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

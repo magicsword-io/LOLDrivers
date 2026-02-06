@@ -1,0 +1,35 @@
+title: Driver Load - Afd.sys
+id: a1ec3215-41cd-537e-99d3-d38a853f564c
+status: experimental
+description: |
+    Detects loading of driver Afd.sys via hash.
+    Windows Ancillary Function Driver (Afd.sys) for WinSock is vulnerable to an Elevation of Privilege Vulnerability.
+references:
+    - https://www.loldrivers.io/drivers/394f49b2-2d78-4d0d-b374-1399695455f3/
+    - https://securityintelligence.com/x-force/patch-tuesday-exploit-wednesday-pwning-windows-ancillary-function-driver-winsock/
+    - https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-21768
+author: Nasreddine Bencherchali
+date: 2024/08/21
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=e2db558c3996bb34fbf21017f0ce5591'
+            - 'MD5=d9afa784f62d5a2c282074c90f220e35'
+            - 'SHA1=52e287860e0459362e4b655a75795e260eae2964'
+            - 'SHA1=479120a6b5ef38787d6929b3b3edcd3a46d34bd8'
+            - 'SHA256=95fd266cc454177901cb58f4d30417c4a7caf29be62bb8649e5b8fca58823600'
+            - 'SHA256=ebf6be42d39fd5d9361afa43479f883ff8eba97d72f313ece289f78cb51c22f2'
+            - 'IMPHASH=b74b53dd1f82c21aab079d727e517ba4'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

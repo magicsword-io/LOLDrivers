@@ -1,0 +1,28 @@
+title: Driver Load - sfdrvx64.sys
+id: fa1d286c-ec26-592e-ba70-565643c0acd1
+status: experimental
+description: |
+    Detects loading of driver sfdrvx64.sys via name.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/5a03dc5a-115d-4d6f-b5b5-685f4c014a69/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\sfdrvx64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

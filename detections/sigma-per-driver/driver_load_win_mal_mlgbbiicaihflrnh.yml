@@ -1,0 +1,31 @@
+title: Driver Load - mlgbbiicaihflrnh.sys
+id: a149e721-b110-593c-b0ad-26b66bb3acb5
+status: experimental
+description: |
+    Detects loading of driver mlgbbiicaihflrnh.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/b074dcb5-b278-4434-bdd9-14a055d724f3/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=5fec28e8f4f76e5ede24beb32a32b9d7'
+            - 'SHA1=fcf9978cf1af2e9b1e2eaf509513664dfcc1847b'
+            - 'SHA256=7433f14b40c674c5e87b6210c330d5bcaf2f6f52d632ae29e9b7cf3ca405665b'
+            - 'IMPHASH=45bfe170e0cd654bc1e2ae3fca3ac3f4'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

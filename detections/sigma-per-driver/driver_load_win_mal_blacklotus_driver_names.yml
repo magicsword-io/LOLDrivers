@@ -1,0 +1,28 @@
+title: Driver Load - blacklotus_driver.sys
+id: 37d0f5a1-a35e-52e5-906a-179e439cee44
+status: experimental
+description: |
+    Detects loading of driver blacklotus_driver.sys via name.
+    The first in-the-wild UEFI bootkit bypassing UEFI Secure Boot on fully updated UEFI systems is now a reality. Once the persistence is configured, the BlackLotus bootkit is executed on every system start. The bootkits goal is to deploy a kernel driver and a final user-mode component.
+references:
+    - https://www.loldrivers.io/drivers/8750b245-af35-4bc6-9af3-dc858f9db64f/
+    - https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/
+author: Michael Haag
+date: 2023/04/05
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\blacklotus_driver.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

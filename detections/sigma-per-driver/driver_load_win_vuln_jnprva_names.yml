@@ -1,0 +1,28 @@
+title: Driver Load - jnprva.sys
+id: 7db63614-81a8-5a88-8d0b-7f41e634759a
+status: experimental
+description: |
+    Detects loading of driver jnprva.sys via name.
+    Northwave Cyber Security contributed this driver based on in-house research. The driver has a CVSSv3 score of 8.8, indicating a privilege escalation impact. This vulnerability could potentially be exploited for privilege escalation or other malicious activities.
+references:
+    - https://www.loldrivers.io/drivers/c44e6197-efab-49d2-8a5f-04ae4a0f0ea0/
+    - https://northwave-cybersecurity.com/ivanti-pulse-vpn-privilege-escalation
+author: Northwave Cyber Security
+date: 2024/09/11
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\jnprva.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

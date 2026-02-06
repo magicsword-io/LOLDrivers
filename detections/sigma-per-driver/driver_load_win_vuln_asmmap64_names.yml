@@ -1,0 +1,28 @@
+title: Driver Load - asmmap64.sys
+id: e296eb1e-47b0-52a6-b63e-b3feaf158a16
+status: experimental
+description: |
+    Detects loading of driver asmmap64.sys via name.
+    Memory mapping Driver
+references:
+    - https://www.loldrivers.io/drivers/d0048840-970f-4ad5-9a07-1d39469d721f/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\asmmap64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

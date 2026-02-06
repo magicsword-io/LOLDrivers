@@ -1,0 +1,36 @@
+title: Driver Load - msr.sys
+id: ffb914c3-08b0-564c-892e-495dad9aff16
+status: experimental
+description: |
+    Detects loading of driver msr.sys via hash.
+    Identified on the MSFT Driver Block list, non-admin can write MSR.
+references:
+    - https://www.loldrivers.io/drivers/ee6fa2de-d388-416c-862d-24385c152fad/
+    - https://twitter.com/wdormann/status/1699878227261411699
+    - https://learn.microsoft.com/en-us/windows/security/application-security/application-control/windows-defender-application-control/design/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/12/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=d90251456195433abcb63ff579a8dda8'
+            - 'MD5=808d2bcad62afa82a2b4fdd0fec6d9c6'
+            - 'SHA1=0a02625927613c9a492a9eac3ea943ddf6f64028'
+            - 'SHA1=14c6e52e1ed19cdaac5a82da6051de89be06c334'
+            - 'SHA256=ede9a3858a12d5ddea21a310e5721bf86c2248539f42c9e0c3c29ae5b0148ba5'
+            - 'SHA256=6c6a4d07e95ab4212c2afefcb0ce37dc485fa56120b0419b636bd8bd326038c1'
+            - 'IMPHASH=90862ed3cb06642744e5aff0d881f694'
+            - 'IMPHASH=ddffac000a9ce8309fadca5939bd6b19'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

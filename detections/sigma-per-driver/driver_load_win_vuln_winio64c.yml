@@ -1,0 +1,29 @@
+title: Driver Load - WinIo64C.sys
+id: 4c6c3ea0-eeec-5c85-97a6-d95df3224732
+status: experimental
+description: |
+    Detects loading of driver WinIo64C.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/1ed9d02f-17cf-43dd-9645-a54452468a5e/
+    -  https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA1=b242b0332b9c9e8e17ec27ef10d75503d20d97b6'
+            - 'SHA1=a65fabaf64aa1934314aae23f25cdf215cbaa4b6'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

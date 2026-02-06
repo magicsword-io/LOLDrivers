@@ -1,0 +1,28 @@
+title: Driver Load - cpuz_x64.sys
+id: f1176c41-4ce0-502b-bcea-f7d80d1ae17e
+status: experimental
+description: |
+    Detects loading of driver cpuz_x64.sys via name.
+    CPUID Driver
+references:
+    - https://www.loldrivers.io/drivers/de003542-80e1-4aa0-9b99-ed8647a93a6e/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\cpuz_x64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

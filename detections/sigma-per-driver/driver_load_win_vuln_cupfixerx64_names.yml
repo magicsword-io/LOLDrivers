@@ -1,0 +1,28 @@
+title: Driver Load - CupFixerx64.sys
+id: abac014f-9fea-5670-8ec4-4dcfbf00990f
+status: experimental
+description: |
+    Detects loading of driver CupFixerx64.sys via name.
+    Sincey Cup Fixer
+references:
+    - https://www.loldrivers.io/drivers/c98af16e-197f-4e66-bf94-14646bde32dd/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\cupfixerx64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

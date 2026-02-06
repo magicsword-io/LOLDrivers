@@ -1,0 +1,27 @@
+title: Driver Load - TSDRVX64.sys
+id: 8910b90f-9071-591f-83b3-6d291e7b815d
+status: experimental
+description: |
+    Detects loading of driver TSDRVX64.sys via name.
+    Northwave Cyber Security contributed this driver based on in-house research. The driver has a CVSSv3 score of 8.8, indicating a privilege escalation impact. This vulnerability could potentially be exploited for privilege escalation or other malicious activities.
+references:
+    - https://www.loldrivers.io/drivers/424a387e-735e-49d1-99de-f067dcf1c3e9/
+author: Northwave Cyber Security
+date: 2024/09/11
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\tsdrvx64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

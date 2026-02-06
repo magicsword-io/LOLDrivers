@@ -1,0 +1,27 @@
+title: Driver Load - b3.sys
+id: ae2f4849-e4a8-5f6c-97a9-3cce564459c0
+status: experimental
+description: |
+    Detects loading of driver b3.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/adfb015a-f453-4b9e-a247-50f146209eb0/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\b3.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

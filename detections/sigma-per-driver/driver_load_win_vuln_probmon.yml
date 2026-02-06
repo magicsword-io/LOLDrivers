@@ -1,0 +1,32 @@
+title: Driver Load - probmon.sys
+id: fec53864-a479-586a-ab68-2cd16bf8f7c0
+status: experimental
+description: |
+    Detects loading of driver probmon.sys via hash.
+    A vulnerable kernel driver that can be used to terminate arbitrary processes
+references:
+    - https://www.loldrivers.io/drivers/3bf3fd5d-dee3-42da-b8be-6a0b8b7bc88c/
+    - Internal Research
+    - https://www.welivesecurity.com/en/eset-research/embargo-ransomware-rocknrust/
+author: Antonio Parata, Andrea Monzani
+date: 2025/01/29
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=8c8c93a6b6c6d6e632a54877fc1a209e'
+            - 'SHA1=7310d6399683ba3eb2f695a2071e0e45891d743b'
+            - 'SHA256=023d722cbbdd04e3db77de7e6e3cfeabcef21ba5b2f04c3f3a33691801dd45eb'
+            - 'IMPHASH=6ebc02245b720f105b7087c78b8f3a6e'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

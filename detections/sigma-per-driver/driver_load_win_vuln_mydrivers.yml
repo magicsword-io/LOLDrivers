@@ -1,0 +1,31 @@
+title: Driver Load - mydrivers.sys
+id: 4b5c2327-3f45-55d6-b52e-715b1b0249d1
+status: experimental
+description: |
+    Detects loading of driver mydrivers.sys via hash.
+    DriverGenius Hardware monitor
+references:
+    - https://www.loldrivers.io/drivers/d9e00cc7-a8f4-4390-a6dc-0f5423e97da4/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=507a649eb585d8d0447eab0532ef0c73'
+            - 'SHA1=7859e75580570e23a1ef7208b9a76f81738043d5'
+            - 'SHA256=08eb2d2aa25c5f0af4e72a7e0126735536f6c2c05e9c7437282171afe5e322c6'
+            - 'IMPHASH=a1d29a3af6402793ec9d23883512938a'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

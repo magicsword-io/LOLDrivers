@@ -1,0 +1,27 @@
+title: Driver Load - magdrvamd64.sys
+id: 5d93b173-11c0-5e9c-a355-28912c66d53d
+status: experimental
+description: |
+    Detects loading of driver magdrvamd64.sys via name.
+references:
+    - https://www.loldrivers.io/drivers/cfd36b2e-cf96-498e-aeb6-ee20e7b33bbb/
+    - https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\magdrvamd64.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

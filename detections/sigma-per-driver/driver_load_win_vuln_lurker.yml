@@ -1,0 +1,27 @@
+title: Driver Load - Lurker.sys
+id: a2fa02fc-0532-50d5-8f97-577ab94ec26c
+status: experimental
+description: |
+    Detects loading of driver Lurker.sys via hash.
+references:
+    - https://www.loldrivers.io/drivers/3fb743b8-d3ed-4873-9c95-e212720dde21/
+    - https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'SHA256=0fd2df82341bf5ebb8a53682e60d08978100c01acb0bed7b6ce2876ada80f670'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

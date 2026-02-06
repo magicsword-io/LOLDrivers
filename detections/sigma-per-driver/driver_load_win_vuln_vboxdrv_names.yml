@@ -1,0 +1,30 @@
+title: Driver Load - vboxdrv.sys
+id: 60f4af6e-79ab-5be9-9516-6ff052411e49
+status: experimental
+description: |
+    Detects loading of driver vboxdrv.sys via name.
+    Used by unknown actor in Acid Rain malware. vboxdrv.sys is a vulnerable driver.
+references:
+    - https://www.loldrivers.io/drivers/2da3a276-9e38-4ee6-903d-d15f7c355e7c/
+    - https://unit42.paloaltonetworks.com/acidbox-rare-malware/
+    - https://www.coresecurity.com/core-labs/advisories/virtualbox-privilege-escalation-vulnerability
+    - https://unit42.paloaltonetworks.com/acidbox-rare-malware/
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\vboxdrv.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

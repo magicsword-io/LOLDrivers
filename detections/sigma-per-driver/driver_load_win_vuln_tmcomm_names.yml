@@ -1,0 +1,28 @@
+title: Driver Load - TmComm.sys
+id: a93de28c-e834-5bd2-93ad-7204648a3567
+status: experimental
+description: |
+    Detects loading of driver TmComm.sys via name.
+    TrendMicro Common Module
+references:
+    - https://www.loldrivers.io/drivers/d35cb48d-2aca-4d7d-a194-f4566183bcd9/
+    - Internal Research
+author: Nasreddine Bencherchali
+date: 2023/05/06
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\tmcomm.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

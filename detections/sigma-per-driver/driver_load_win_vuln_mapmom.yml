@@ -1,0 +1,31 @@
+title: Driver Load - mapmom.sys
+id: 1bfd2dfe-fb86-5e6a-b108-47f8eea560b4
+status: experimental
+description: |
+    Detects loading of driver mapmom.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/cf94939a-703f-46a4-917b-d6af7e0685ef/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=d988f9a62b8a4936a47aa70d6bc52c27'
+            - 'SHA1=bb1a15843d376690f9224c957ca030fbde9b5bad'
+            - 'SHA256=18b12a09448244180344d7e5f8028a0ca53ca0f3bddfec06d00f995619c3fc0b'
+            - 'IMPHASH=45bfe170e0cd654bc1e2ae3fca3ac3f4'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

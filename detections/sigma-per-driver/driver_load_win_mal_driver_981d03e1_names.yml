@@ -1,0 +1,28 @@
+title: Driver Load - driver_981d03e1.sys
+id: 9c97c303-acdc-57f9-ac05-eae727393bd2
+status: experimental
+description: |
+    Detects loading of driver driver_981d03e1.sys via name.
+    Sophos, from time to time, has observed a threat actor deploy variants of Poortry on different machines within a single estate during an attack. These variants contain the same payload, but signed with a different certificate than the driver first seen used during the attack.
+references:
+    - https://www.loldrivers.io/drivers/1106fe7a-b78b-4edf-85c0-6208979f380b/
+    - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+author: Michael Haag
+date: 2024/09/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\driver_981d03e1.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

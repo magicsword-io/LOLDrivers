@@ -1,0 +1,31 @@
+title: Driver Load - amp.sys
+id: d190e797-20a4-5ddc-8cb5-2f04dc5a6d77
+status: experimental
+description: |
+    Detects loading of driver amp.sys via hash.
+    AMP Minifilter
+references:
+    - https://www.loldrivers.io/drivers/ca768fc5-9b5c-4ced-90ab-fd6be9a70199/
+    - https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=c533d6d64b474ffc3169a0e0fc0a701a'
+            - 'SHA1=3f223581409492172a1e875f130f3485b90fbe5f'
+            - 'SHA256=cbb8239a765bf5b2c1b6a5c8832d2cab8fef5deacadfb65d8ed43ef56d291ab6'
+            - 'IMPHASH=d8752c1d5954bea175ac00df5acebb09'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

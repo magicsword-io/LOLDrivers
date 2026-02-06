@@ -1,0 +1,32 @@
+title: Driver Load - ntbios.sys
+id: e61a1ab1-b862-513c-83d9-c670760dbe8f
+status: experimental
+description: |
+    Detects loading of driver ntbios.sys via hash.
+    Driver used in the Daxin malware campaign.
+references:
+    - https://www.loldrivers.io/drivers/eef1fcf4-8c54-420b-8d38-9c5f95129dcc/
+    - https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+    - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+author: Michael Haag
+date: 2023/02/28
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=14580bd59c55185115fd3abe73b016a2'
+            - 'SHA1=71469dce9c2f38d0e0243a289f915131bf6dd2a8'
+            - 'SHA256=96bf3ee7c6673b69c6aa173bb44e21fa636b1c2c73f4356a7599c121284a51cc'
+            - 'IMPHASH=a7bd820fa5b895fab06f20739c9f24b8'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,28 @@
+title: Driver Load - dellbios.sys
+id: 4a323e89-f11b-5fd7-bab1-6d3971c5d001
+status: experimental
+description: |
+    Detects loading of driver dellbios.sys via name.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/fa612342-5ae0-4e69-ad9c-14d574d9fb1e/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\dellbios.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

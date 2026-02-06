@@ -1,0 +1,31 @@
+title: Driver Load - driver7-x64.sys
+id: ea00d7ee-3e53-5890-8652-81138752ed78
+status: experimental
+description: |
+    Detects loading of driver driver7-x64.sys via hash.
+    The driver for the ECtool driver-based tools
+references:
+    - https://www.loldrivers.io/drivers/48bc2815-85ec-4436-a51a-69810c8cb171/
+    - https://github.com/Chigusa0w0/AsusDriversPrivEscala
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=715f8efab1d1c660e4188055c4b28eed'
+            - 'SHA1=7ba19a701c8af76988006d616a5f77484c13cb0a'
+            - 'SHA256=771a8d05f1af6214e0ef0886662be500ee910ab99f0154227067fddcfe08a3dd'
+            - 'IMPHASH=1bef18e9dda6f1e7bbf7eb76e9ccf16b'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

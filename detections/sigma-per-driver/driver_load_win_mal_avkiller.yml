@@ -1,0 +1,34 @@
+title: Driver Load - avkiller.sys
+id: c0c87492-7991-5123-b6d8-355c8e1e0f11
+status: experimental
+description: |
+    Detects loading of driver avkiller.sys via hash.
+    Sophos, from time to time, has observed a threat actor deploy variants
+        of Poortry on different machines within a single estate during an attack. These
+        variants contain the same payload, but signed with a different certificate than
+        the driver first seen used during the attack.
+references:
+    - https://www.loldrivers.io/drivers/7a9d34e4-c660-4388-ab61-4fd6f6bf1ad4/
+    - https://news.sophos.com/en-us/2024/08/27/burnt-cigar-2/
+author: Michael Haag
+date: 2024/09/10
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=a8480c3b63db47212041042685afd753'
+            - 'SHA1=009328378ad988c7bc5b1e0f29837f52663b55d6'
+            - 'SHA256=b6cb163089f665c05d607a465f1b6272cdd5c949772ab9ce7227120cf61f971a'
+            - 'IMPHASH=acfd876a8d041c6baf407a21a36cf484'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

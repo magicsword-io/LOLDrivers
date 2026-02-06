@@ -1,0 +1,31 @@
+title: Driver Load - gametersafe.sys
+id: ff14f531-6111-5f83-a542-f724188b8579
+status: experimental
+description: |
+    Detects loading of driver gametersafe.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/1ab1ec8c-1231-4ba4-8804-4a2cda103bb8/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=7d0b8d03f0c985e27e5dc7263fa3f0ae'
+            - 'SHA1=d057e709ae69b3bbb66e199b0e0858429790f995'
+            - 'SHA256=e2ec3b2a93c473d88bfdf2deb1969d15ab61737acc1ee8e08234bc5513ee87ea'
+            - 'IMPHASH=120ea3462d2c279afe9f2bc72643da04'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

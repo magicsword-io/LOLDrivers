@@ -1,0 +1,34 @@
+title: Driver Load - tdeio64.sys
+id: 4804bebb-6cc6-5841-aed5-51817f92dce3
+status: experimental
+description: |
+    Detects loading of driver tdeio64.sys via hash.
+    The Carbon Black Threat Analysis Unit (TAU) discovered 34 unique vulnerable drivers (237 file hashes) accepting firmware access. Six allow kernel memory access. All give full control of the devices to non-admin users. By exploiting the vulnerable drivers, an attacker without the system privilege may erase/alter firmware, and/or elevate privileges. As of the time of writing in October 2023, the filenames of the vulnerable drivers have not been made public until now.
+references:
+    - https://www.loldrivers.io/drivers/4f47c65e-2e73-4855-813a-5a823ae845a8/
+    - https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
+author: Takahiro Haruyama
+date: 2023/11/02
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=f766a9bb7cd46ba8c871484058f908f0'
+            - 'MD5=97e90c869b5b0f493b833710931c39ed'
+            - 'SHA1=f1b3bdc3beb2dca19940d53eb5a0aed85b807e30'
+            - 'SHA1=24b3f962587b0062ac9a1ec71bcc3836b12306d2'
+            - 'SHA256=13ae4d9dcacba8133d8189e59d9352272e15629e6bca580c32aff9810bd96e44'
+            - 'SHA256=1076504a145810dfe331324007569b95d0310ac1e08951077ac3baf668b2a486'
+            - 'IMPHASH=8211bd4f00a3d9928a11a6ac3329fc46'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

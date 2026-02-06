@@ -1,0 +1,28 @@
+title: Driver Load - CSAgent.sys
+id: bea09ca4-42c0-5bc4-af04-ac9312efb52a
+status: experimental
+description: |
+    Detects loading of driver CSAgent.sys via name.
+    ABYSSWORKER is a malicious driver used in MEDUSA ransomware attacks to disable EDR systems. The driver masquerades as a legitimate CrowdStrike Falcon driver and provides extensive capabilities to terminate processes, remove security callbacks, manipulate files, and disable security tools. It uses stolen certificates from Chinese companies and requires a specific password for activation. The driver was observed being deployed alongside HEARTCRYPT-packed loaders and provides attackers with kernel-level capabilities to blind EDR products by removing notification callbacks, detaching mini-filter devices, and replacing driver major functions.
+references:
+    - https://www.loldrivers.io/drivers/ca6455d1-b06e-496c-be33-f89c41b27540/
+    - https://www.elastic.co/security-labs/abyssworker
+author: Michael Haag
+date: 2025/03/26
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\csagent.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

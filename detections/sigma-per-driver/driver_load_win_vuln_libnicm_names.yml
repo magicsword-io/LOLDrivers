@@ -1,0 +1,29 @@
+title: Driver Load - libnicm.sys
+id: e221404f-5def-5111-a291-7fb2ebe542a0
+status: experimental
+description: |
+    Detects loading of driver libnicm.sys via name.
+    Novell XTCOM Services Driver
+references:
+    - https://www.loldrivers.io/drivers/2b949a0d-939f-456a-a34f-4589d7712227/
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+    - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\libnicm.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

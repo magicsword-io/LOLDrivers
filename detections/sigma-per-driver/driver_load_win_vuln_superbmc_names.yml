@@ -1,0 +1,28 @@
+title: Driver Load - superbmc.sys
+id: 8204bddb-cf11-5223-8590-0a41e93a6425
+status: experimental
+description: |
+    Detects loading of driver superbmc.sys via name.
+    superbmc
+references:
+    - https://www.loldrivers.io/drivers/9074a02a-b1ca-4bfb-8918-5b88e91c04a2/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\superbmc.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: low

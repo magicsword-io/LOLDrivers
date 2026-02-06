@@ -1,0 +1,28 @@
+title: Driver Load - WinTapix.sys
+id: 30a3bb8b-d170-5862-b4da-9aee986fc5f2
+status: experimental
+description: |
+    Detects loading of driver WinTapix.sys via name.
+    Wintapix.sys is partially protected by VMProtect, a software protection tool that uses virtualization to protect software applications from reverse engineering and unauthorized usage. It transforms the original executable file into a virtualized code executed in a protected environment, making it difficult to analyze and tamper with.
+references:
+    - https://www.loldrivers.io/drivers/93740202-930c-4ab4-8603-8ec9532c5415/
+    - https://www.fortinet.com/blog/threat-research/wintapix-kernal-driver-middle-east-countries
+author: Guus Verbeek
+date: 2023/06/05
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_name:
+        ImageLoaded|endswith:
+            - '\wintapix.sys'
+    condition: selection_name
+falsepositives:
+    - Unknown
+level: medium

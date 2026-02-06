@@ -1,0 +1,31 @@
+title: Driver Load - atomicredteamcapcom.sys
+id: b6ec23e3-cad1-59d1-8288-2afcf5f56410
+status: experimental
+description: |
+    Detects loading of driver atomicredteamcapcom.sys via hash.
+    Confirmed vulnerable driver from Microsoft Block List
+references:
+    - https://www.loldrivers.io/drivers/a02e1801-f6fb-41c3-a782-05fdbed44a3c/
+    - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
+author: Michael Haag
+date: 2023/07/22
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=ce59e4ab8405192dd47be9a762c197d8'
+            - 'SHA1=9f08fef63861cfccea29134e12d0ef8055de3d34'
+            - 'SHA256=33bdaf3ab141db0f4c6a2c1f9fb047b4e5c6fa6ddc709d905efdd24c2b43041c'
+            - 'IMPHASH=45bfe170e0cd654bc1e2ae3fca3ac3f4'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

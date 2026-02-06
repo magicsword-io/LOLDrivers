@@ -1,0 +1,31 @@
+title: Driver Load - VProEventMonitor.sys
+id: 114b9f0e-042c-53b5-bcdb-414bdfaa1d41
+status: experimental
+description: |
+    Detects loading of driver VProEventMonitor.sys via hash.
+    VProEventMonitor.Sys - Event Monitoring driver
+references:
+    - https://www.loldrivers.io/drivers/4db827b1-325b-444d-9f23-171285a4d12f/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=cd9f0fcecf1664facb3671c0130dc8bb'
+            - 'SHA1=0c26ab1299adcd9a385b541ef1653728270aa23e'
+            - 'SHA256=7877c1b0e7429453b750218ca491c2825dae684ad9616642eff7b41715c70aca'
+            - 'IMPHASH=c7f08aed5725fe6a53a62ebe354ff135'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

@@ -1,0 +1,31 @@
+title: Driver Load - HwOs2Ec7x64.sys
+id: 1b6e231a-38d0-51f0-b69b-a5b38425967d
+status: experimental
+description: |
+    Detects loading of driver HwOs2Ec7x64.sys via hash.
+    HwOs2Ec
+references:
+    - https://www.loldrivers.io/drivers/e4098d7e-78b3-4da1-96cb-68b27f245e02/
+    - https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=bae1f127c4ff21d8fe45e2bbfc59c180'
+            - 'SHA1=26c4a7b392d7e7bd7f0a2a758534e45c0d9a56ab'
+            - 'SHA256=b179e1ab6dc0b1aee783adbcad4ad6bb75a8a64cb798f30c0dd2ee8aaf43e6de'
+            - 'IMPHASH=0f371a913e9fa3ba3a923718e489debb'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

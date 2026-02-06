@@ -1,0 +1,31 @@
+title: Driver Load - WCPU.sys
+id: d839bf69-7788-556b-91bc-4c80df9c5eef
+status: experimental
+description: |
+    Detects loading of driver WCPU.sys via hash.
+    ASUS TDE CPU Driver
+references:
+    - https://www.loldrivers.io/drivers/7f645b95-4374-47ae-be1a-e4415308b550/
+    - https://github.com/namazso/physmem_drivers
+author: Michael Haag
+date: 2023/01/09
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.vulnerable
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=c1d063c9422a19944cdaa6714623f2ec'
+            - 'SHA1=f36a47edfacd85e0c6d4d22133dd386aee4eec15'
+            - 'SHA256=159e7c5a12157af92e0d14a0d3ea116f91c09e21a9831486e6dc592c93c10980'
+            - 'IMPHASH=d169b0949781ca2a6efea5a106266a02'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high

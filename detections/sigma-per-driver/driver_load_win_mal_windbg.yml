@@ -1,0 +1,84 @@
+title: Driver Load - windbg.sys
+id: a8b6435e-7054-5625-8c08-bc8085a577f4
+status: experimental
+description: |
+    Detects loading of driver windbg.sys via hash.
+    These samples are related to CopperStealth campaign found by TrendMicro. CopperStealth’s infection chain involves dropping and loading a rootkit, which later injects its payload into explorer.exe and another system process. These payloads are responsible for downloading and running additional tasks. The rootkit also blocks access to blocklisted registry keys and prevents certain executables and drivers from running.
+references:
+    - https://www.loldrivers.io/drivers/da7314dc-6cf1-4d74-a0d1-796fc08944f8/
+    - https://www.trendmicro.com/en_us/research/23/e/water-orthrus-new-campaigns-deliver-rootkit-and-phishing-modules.html
+author: Michael Haag
+date: 2023/05/20
+modified: 2026/02/06
+tags:
+    - attack.privilege_escalation
+    - attack.t1543.003
+    - attack.t1068
+    - loldrivers.malicious
+logsource:
+    product: windows
+    category: driver_load
+detection:
+    selection_hashes:
+        Hashes|contains:
+            - 'MD5=2ec877e425bd7eddb663627216e3491e'
+            - 'MD5=844af8c877f5da723c1b82cf6e213fc1'
+            - 'MD5=c71be7b112059d2dc84c0f952e04e6cc'
+            - 'MD5=77a7ed4798d02ef6636cd0fd07fc382a'
+            - 'MD5=3f11a94f1ac5efdd19767c6976da9ba4'
+            - 'MD5=40b968ecdbe9e967d92c5da51c390eee'
+            - 'MD5=88bea56ae9257b40063785cf47546024'
+            - 'MD5=b6b530dd25c5eb66499968ec82e8791e'
+            - 'MD5=f69b06ca7c34d16f26ea1c6861edf62a'
+            - 'MD5=e8eac6642b882a6196555539149c73f2'
+            - 'MD5=19bdd9b799e3c2c54c0d7fff68b31c20'
+            - 'MD5=0bdd51cc33e88b5265dfb7d88c5dc8d6'
+            - 'MD5=0023ca0ca16a62d93ef51f3df98b2f94'
+            - 'MD5=5ebfc0af031130ba9de1d5d3275734b3'
+            - 'MD5=40f35792e7565aa047796758a3ce1b77'
+            - 'MD5=093a2a635c3a27aac50efd6463f4efa1'
+            - 'MD5=0ea8389589c603a8b05146bd06020597'
+            - 'SHA1=9c1c9032aa1e33461f35dbf79b6f2d061bfc6774'
+            - 'SHA1=6df35a0c2f6d7d39d24277137ea840078dafb812'
+            - 'SHA1=97812f334a077c40e8e642bb9872ac2c49ddb9a2'
+            - 'SHA1=d4f5323da704ff2f25d6b97f38763c147f2a0e6f'
+            - 'SHA1=fdbcebb6cafda927d384d7be2e8063a4377d884f'
+            - 'SHA1=f92faed3ef92fa5bc88ebc1725221be5d7425528'
+            - 'SHA1=9ee31f1f25f675a12b7bad386244a9fbfa786a87'
+            - 'SHA1=76789196eebfd4203f477a5a6c75eefc12d9a837'
+            - 'SHA1=6a6fe0d69e0ea34d695c3b525e6db639f9ad6ac5'
+            - 'SHA1=4f2d9a70ea24121ae01df8a76ffba1f9cc0fde4a'
+            - 'SHA1=b8b123a413b7bccfa8433deba4f88669c969b543'
+            - 'SHA1=3825ebb0b0664b5f0789371240f65231693be37d'
+            - 'SHA1=48f03a13b0f6d3d929a86514ce48a9352ffef5ad'
+            - 'SHA1=3c1c3f5f5081127229ba0019fbf0efc2a9c1d677'
+            - 'SHA1=ea4a405445bb6e58c16b81f6d5d2c9a9edde419b'
+            - 'SHA1=b34a012887ddab761b2298f882858fa1ff4d99f1'
+            - 'SHA1=b5a8e2104d76dbb04cd9ffe86784113585822375'
+            - 'SHA256=e1cb86386757b947b39086cc8639da988f6e8018ca9995dd669bdc03c8d39d7d'
+            - 'SHA256=f936ec4c8164cbd31add659b61c16cb3a717eac90e74d89c47afb96b60120280'
+            - 'SHA256=e6f764c3b5580cd1675cbf184938ad5a201a8c096607857869bd7c3399df0d12'
+            - 'SHA256=f9f2091fccb289bcf6a945f6b38676ec71dedb32f3674262928ccaf840ca131a'
+            - 'SHA256=32882949ea084434a376451ff8364243a50485a3b4af2f2240bb5f20c164543d'
+            - 'SHA256=139f8412a7c6fdc43dcfbbcdba256ee55654eb36a40f338249d5162a1f69b988'
+            - 'SHA256=770f33259d6fb10f4a32d8a57d0d12953e8455c72bb7b60cb39ce505c507013a'
+            - 'SHA256=6994b32e3f3357f4a1d0abe81e8b62dd54e36b17816f2f1a80018584200a1b77'
+            - 'SHA256=bb2422e96ea993007f25c71d55b2eddfa1e940c89e895abb50dd07d7c17ca1df'
+            - 'SHA256=ea50f22daade04d3ca06dedb497b905215cba31aae7b4cab4b533fda0c5be620'
+            - 'SHA256=50819a1add4c81c0d53203592d6803f022443440935ff8260ff3b6d5253c0c76'
+            - 'SHA256=4734a0a5d88f44a4939b8d812364cab6ca5f611b9b8ceebe27df6c1ed3a6d8a4'
+            - 'SHA256=6661320f779337b95bbbe1943ee64afb2101c92f92f3d1571c1bf4201c38c724'
+            - 'SHA256=86047bb1969d1db455493955fd450d18c62a3f36294d0a6c3732c88dfbcc4f62'
+            - 'SHA256=fa9abb3e7e06f857be191a1e049dd37642ec41fb2520c105df2227fcac3de5d5'
+            - 'SHA256=5b932eab6c67f62f097a3249477ac46d80ddccdc52654f8674060b4ddf638e5d'
+            - 'SHA256=06c5ebd0371342d18bc81a96f5e5ce28de64101e3c2fd0161d0b54d8368d2f1f'
+            - 'IMPHASH=6b387c029257f024a43a73f38afb2629'
+            - 'IMPHASH=63fd1582ac2edee50f7ec7eedde38ee8'
+            - 'IMPHASH=f8e4844312e81dbdb4e8e95e2ad2c127'
+            - 'IMPHASH=514298d18002920ee5a917fc34426417'
+            - 'IMPHASH=3db9de43d5d530c10d0cd2d43c7a0771'
+            - 'IMPHASH=cf0eb2dce2ba2c9ff5dd0da794b8b372'
+    condition: selection_hashes
+falsepositives:
+    - Unknown
+level: high
